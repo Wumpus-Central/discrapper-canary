@@ -96,7 +96,7 @@ function z(e) {
             [c, t, R, b, U, k]
         );
     if (m === O.OYC.ONLY_WHILE_SPEAKING && l && !z) return null;
-    let { mute: B, suppress: G, deaf: Y } = E,
+    let { mute: G, suppress: B, deaf: Y } = E,
         H = v === O.ipw.LARGE ? 32 : 24;
     return (0, i.jsxs)(s.Clickable, {
         className: o()(M.voiceUser, {
@@ -148,9 +148,9 @@ function z(e) {
                                       isWatching: W,
                                       localMute: S && !L,
                                       localVideoDisabled: T,
-                                      mute: B || S,
+                                      mute: G || S,
                                       deaf: Y || y,
-                                      serverMute: B || G,
+                                      serverMute: G || B,
                                       serverDeaf: Y,
                                       disabled: !1
                                   })

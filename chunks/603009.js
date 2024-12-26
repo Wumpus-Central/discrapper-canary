@@ -48,7 +48,7 @@ function A(e) {
             [g.default],
             () => {
                 var e;
-                return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan;
+                return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild;
             },
             []
         );
@@ -137,8 +137,8 @@ function A(e) {
                                         className: j.guildTagContainer,
                                         children: (0, i.jsx)(Z.aG, {
                                             guildId: n.id,
-                                            clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
-                                            clanBadge: null === (r = n.clan) || void 0 === r ? void 0 : r.badge,
+                                            clanTag: null === (l = n.profile) || void 0 === l ? void 0 : l.tag,
+                                            clanBadge: null === (r = n.profile) || void 0 === r ? void 0 : r.badge,
                                             className: j.guildClanTag
                                         })
                                     })

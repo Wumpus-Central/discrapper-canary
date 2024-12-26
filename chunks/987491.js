@@ -134,7 +134,7 @@ let L = i.memo(function (e) {
                             children: [
                                 t.globalName,
                                 (0, l.jsx)(x.ZP, {
-                                    clan: null == t ? void 0 : t.clan,
+                                    primaryGuild: null == t ? void 0 : t.primaryGuild,
                                     userId: null == t ? void 0 : t.id,
                                     contextGuildId: a,
                                     containerClassName: A.memberClanTag

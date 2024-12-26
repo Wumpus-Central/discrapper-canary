@@ -137,7 +137,7 @@ function k(e) {
         d = (0, t.e7)([j.Z], () => j.Z.getCompletedActions(l)),
         m = (0, t.e7)([g.ZP], () => g.ZP.getSelfMember(l)),
         f = (0, t.e7)([x.Z], () => x.Z.getGuild(l)),
-        C = null != f ? (0, c.ky)(f.id, null === (n = f.clan) || void 0 === n ? void 0 : n.badge, b.NC.SIZE_16) : null,
+        C = null != f ? (0, c.ky)(f.id, null === (n = f.profile) || void 0 === n ? void 0 : n.badge, b.NC.SIZE_16) : null,
         v = (0, t.e7)([h.Z], () => h.Z.getRequest(l));
     i.useEffect(() => {
         var e;

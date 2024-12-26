@@ -91,7 +91,7 @@ function p(e) {
                                         })
                                     }),
                                     (0, l.jsx)(d.ZP, {
-                                        clan: null == n ? void 0 : n.clan,
+                                        primaryGuild: null == n ? void 0 : n.primaryGuild,
                                         userId: null == n ? void 0 : n.id,
                                         contextGuildId: t,
                                         badgeSize: _.NC.SIZE_16,

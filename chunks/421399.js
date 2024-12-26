@@ -85,14 +85,14 @@ function A(e) {
         () =>
             N
                 ? (0, a.jsx)(m.ZP, {
-                      clan: i.clan,
+                      primaryGuild: i.primaryGuild,
                       userId: o.author.id,
                       contextGuildId: U,
                       className: y.clanTagChiplet,
                       profileViewedAnalytics: z
                   })
                 : null,
-        [N, z, i.clan, U, o.author.id]
+        [N, z, i.primaryGuild, U, o.author.id]
     );
     r =
         null != w && null != R
@@ -147,7 +147,7 @@ function A(e) {
             !N &&
                 (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(m.ZP, {
-                        clan: i.clan,
+                        primaryGuild: i.primaryGuild,
                         userId: o.author.id,
                         contextGuildId: U,
                         className: y.clanTagChiplet,

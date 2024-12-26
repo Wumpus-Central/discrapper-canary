@@ -62,8 +62,8 @@ var i = n(200651),
     W = n(199902),
     U = n(430824),
     F = n(131951),
-    B = n(19780),
-    G = n(944486),
+    G = n(19780),
+    B = n(944486),
     Y = n(594174),
     H = n(979651),
     K = n(388627),
@@ -426,7 +426,7 @@ function el(e) {
 }
 function eo(e) {
     let { voiceChannel: t, locked: n } = e,
-        r = (0, a.e7)([G.Z], () => G.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
+        r = (0, a.e7)([B.Z], () => B.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
         l = () => {
             r && x.default.disconnect();
         },
@@ -552,11 +552,11 @@ function es(e) {
 function ec(e) {
     let { voiceChannel: t } = e,
         n = null == t ? void 0 : t.id,
-        r = (0, a.cj)([B.Z], () => ({
-            channelId: B.Z.getChannelId(),
-            quality: B.Z.getQuality(),
-            state: B.Z.getState(),
-            lastPing: B.Z.getLastPing()
+        r = (0, a.cj)([G.Z], () => ({
+            channelId: G.Z.getChannelId(),
+            quality: G.Z.getQuality(),
+            state: G.Z.getState(),
+            lastPing: G.Z.getLastPing()
         })),
         l = null != n,
         o = (0, a.e7)([H.Z], () => null != n && H.Z.hasVideo(n), [n]);

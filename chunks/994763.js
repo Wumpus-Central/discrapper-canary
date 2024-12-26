@@ -157,7 +157,7 @@ function eX(e) {
                       }),
                       ariaLabel: eV.intl.string(eV.t['KzCF//'])
                   },
-        eJ = (null === (t = r.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, f.ky)(r.id, r.clan.badge, eH.NC.SIZE_16) : null,
+        eJ = (null === (t = r.profile) || void 0 === t ? void 0 : t.badge) != null ? (0, f.ky)(r.id, r.profile.badge, eH.NC.SIZE_16) : null,
         e$ = {
             section: eF.pNK.DELETE,
             onClick() {

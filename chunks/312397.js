@@ -129,7 +129,7 @@ let ef = () => {
                 publicUpdatesChannelId: e.publicUpdatesChannelId,
                 premiumProgressBarEnabled: e.premiumProgressBarEnabled,
                 homeHeader: e.homeHeader,
-                clan: e.clan
+                profile: e.profile
             };
             !(0, Y.OL)(new Set(e.features), new Set(t.features)) && (n.features = e.features), q.Z.saveGuild(e.id, n);
         }, [e, t]),

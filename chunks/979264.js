@@ -65,9 +65,9 @@ let v = s.memo(function (e) {
     }),
     T = s.memo(function (e) {
         var n, r;
-        let { clan: i, userId: o, className: h, children: m, profileViewedAnalytics: g } = e,
+        let { primaryGuild: i, userId: o, className: h, children: m, profileViewedAnalytics: g } = e,
             v = (0, u.e7)([f.default], () => f.default.getUser(o), [o]),
-            I = null !== (n = null == v ? void 0 : v.clan) && void 0 !== n ? n : i,
+            I = null !== (n = null == v ? void 0 : v.primaryGuild) && void 0 !== n ? n : i,
             [T, b] = (0, _.L_)(null !== (r = null == I ? void 0 : I.identityGuildId) && void 0 !== r ? r : null),
             y = s.useCallback(() => {
                 b();
@@ -109,10 +109,10 @@ let v = s.memo(function (e) {
     });
 n.ZP = s.memo(function (e) {
     var n;
-    let { clan: r, userId: i, contextGuildId: s, className: o, containerClassName: c, textVariant: d, textColor: _, badgeSize: p, disableGuildProfile: m = !1, inline: g = !0, profileViewedAnalytics: v } = e,
+    let { primaryGuild: r, userId: i, contextGuildId: s, className: o, containerClassName: c, textVariant: d, textColor: _, badgeSize: p, disableGuildProfile: m = !1, inline: g = !0, profileViewedAnalytics: v } = e,
         b = (0, u.e7)([f.default], () => f.default.getUser(i), [i]),
-        y = null !== (n = null == b ? void 0 : b.clan) && void 0 !== n ? n : r,
-        { tag: S, badge: A, guildId: N } = (0, h.vh)(y);
+        y = null !== (n = null == b ? void 0 : b.primaryGuild) && void 0 !== n ? n : r,
+        { tag: S, badge: A, guildId: N } = (0, h.Pb)(y);
     return (0, h.p0)(i, s) && null != N
         ? m
             ? (0, a.jsx)(I, {
@@ -126,7 +126,7 @@ n.ZP = s.memo(function (e) {
                   inline: g
               })
             : (0, a.jsx)(T, {
-                  clan: y,
+                  primaryGuild: y,
                   userId: i,
                   profileViewedAnalytics: v,
                   className: c,

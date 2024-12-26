@@ -40,7 +40,7 @@ function p(e) {
                   ),
                   null != r.terms_of_service_url
                       ? (0, i.jsx)(f, {
-                            icon: o.LinkIcon,
+                            icon: o.FileIcon,
                             url: r.terms_of_service_url,
                             children: h.intl.string(h.t.s7STcX)
                         })

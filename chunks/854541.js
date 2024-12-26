@@ -77,7 +77,7 @@ function C(e) {
                 ...p,
                 children: [
                     i
-                        ? (0, a.jsx)(m.EyeDropperIcon, {
+                        ? (0, a.jsx)(m.PencilIcon, {
                               size: 'custom',
                               className: y.colorPickerDropper,
                               colorClass: y.colorPickerDropperFg,

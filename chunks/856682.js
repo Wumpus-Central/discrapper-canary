@@ -162,9 +162,9 @@ function f(e) {
 function v(e) {
     let { children: t, fullHeight: l = !1 } = e,
         [a, v] = i.useState(!1),
-        { height: C, ref: p } = (0, c.Z)(),
+        { height: p, ref: C } = (0, c.Z)(),
         { height: j, ref: N } = (0, c.Z)(),
-        Z = l ? j : 59 + (null != C ? C : 100) + 101,
+        Z = l ? j : 59 + (null != p ? p : 100) + 101,
         T = (0, o.useSpring)({
             from: { height: 0 },
             to: { height: Z },
@@ -200,7 +200,7 @@ function v(e) {
                 }),
                 (0, n.jsx)('div', {
                     className: s()(x.content, l && x.fullHeight),
-                    ref: p,
+                    ref: C,
                     children: (0, n.jsx)('div', {
                         className: s()(x.innerContent, l && x.fullHeight),
                         style: { backgroundColor: H },

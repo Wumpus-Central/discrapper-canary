@@ -175,7 +175,7 @@ function M(e) {
                         className: x.name
                     }),
                     (0, a.jsx)(h.ZP, {
-                        clan: null == U ? void 0 : U.clan,
+                        primaryGuild: null == U ? void 0 : U.primaryGuild,
                         userId: null == U ? void 0 : U.id,
                         contextGuildId: W,
                         disableGuildProfile: !0,

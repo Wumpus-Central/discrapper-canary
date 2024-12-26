@@ -176,7 +176,7 @@ function S(e) {
                         ),
                         null != l.terms_of_service_url
                             ? (0, i.jsx)(C, {
-                                  icon: s.LinkIcon,
+                                  icon: s.FileIcon,
                                   onClick: y,
                                   url: l.terms_of_service_url,
                                   type: 'tos',

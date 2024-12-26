@@ -143,6 +143,6 @@ function v(e) {
                   iconRoleId: c.iconRoleId,
                   guildMemberAvatar: c.avatar,
                   guildMemberAvatarDecoration: c.avatarDecoration,
-                  clan: null !== (a = s.clan) && void 0 !== a ? a : void 0
+                  primaryGuild: null !== (a = s.primaryGuild) && void 0 !== a ? a : void 0
               };
 }

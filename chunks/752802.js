@@ -138,7 +138,7 @@ function T(e) {
                                     children: w.ZP.getName(r.stream.guildId, r.stream.channelId, u)
                                 }),
                                 (0, i.jsx)(x.ZP, {
-                                    clan: h.clan,
+                                    primaryGuild: h.primaryGuild,
                                     userId: u.id
                                 })
                             ]

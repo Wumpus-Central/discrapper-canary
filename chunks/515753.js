@@ -296,7 +296,7 @@ function ee(e) {
         eb = r.isSystemDM(),
         eS = (0, A.Q)(),
         eN = !e_ && !eb && r.type === F.d4z.DM,
-        eE = eN && (null == y ? void 0 : y.clan) != null,
+        eE = eN && (null == y ? void 0 : y.primaryGuild) != null,
         ey = eN && eo,
         ej = eN && es,
         eT = eE
@@ -304,7 +304,7 @@ function ee(e) {
                   children: [
                       eu,
                       (0, i.jsx)(b.ZP, {
-                          clan: null == y ? void 0 : y.clan,
+                          primaryGuild: null == y ? void 0 : y.primaryGuild,
                           userId: null == y ? void 0 : y.id,
                           inline: !0,
                           disableGuildProfile: !0,

@@ -143,12 +143,12 @@ let S = new l.Z('GuildSettingsActionCreators'),
             });
         },
         updateGuild(e) {
-            let { safetyAlertsChannelId: n, clan: r, ...i } = e,
+            let { safetyAlertsChannelId: n, profile: r, ...i } = e,
                 a = { ...i };
             if (null != r) {
                 var o;
-                a.clan = {
-                    ...(null !== (o = a.clan) && void 0 !== o ? o : {}),
+                a.profile = {
+                    ...(null !== (o = a.profile) && void 0 !== o ? o : {}),
                     ...r
                 };
             }
@@ -159,7 +159,7 @@ let S = new l.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, n) {
-            let { name: r, description: i, icon: o, splash: l, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: h, verificationLevel: p, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: v, preferredLocale: I, rulesChannelId: y, safetyAlertsChannelId: A, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: R, clan: O } = n,
+            let { name: r, description: i, icon: o, splash: l, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: h, verificationLevel: p, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: v, preferredLocale: I, rulesChannelId: y, safetyAlertsChannelId: A, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: R, profile: O } = n,
                 D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 L = {
                     name: r,
@@ -182,7 +182,7 @@ let S = new l.Z('GuildSettingsActionCreators'),
                     public_updates_channel_id: C,
                     safety_alerts_channel_id: A,
                     ...(null != R ? { premium_progress_bar_enabled: R } : null),
-                    clan: null != O ? (0, b.A9)(O) : O
+                    profile: null != O ? (0, b.n1)(O) : O
                 };
             return (
                 s.Z.dispatch({ type: 'GUILD_SETTINGS_SUBMIT' }),

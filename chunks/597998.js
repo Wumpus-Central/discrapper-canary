@@ -286,7 +286,7 @@ class w extends (i = a.Component) {
                 ]
             }),
             p = {
-                clan: t.clan,
+                primaryGuild: t.primaryGuild,
                 userId: t.id,
                 contextGuildId: d,
                 isOverlay: u,

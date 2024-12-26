@@ -60,7 +60,7 @@ n.Z = s.memo(function (e) {
         ee = null != G && G.memberCount >= O.Du,
         et = (0, l.e7)([v.default], () => v.default.getUser(X), [X]),
         en = (null == J ? void 0 : J.joinedAt) != null,
-        er = (0, A.Z4)(B, null == et ? void 0 : et.clan),
+        er = (0, A.Z4)(B, null == et ? void 0 : et.primaryGuild),
         ei = null != (0, h.Z)(B),
         ea = (0, b.i)('ClanGuildProfile');
     s.useEffect(() => {

@@ -2,6 +2,9 @@ r.d(n, {
     EJ: function () {
         return m;
     },
+    Pb: function () {
+        return p;
+    },
     XV: function () {
         return h;
     },
@@ -22,9 +25,6 @@ r.d(n, {
     },
     pY: function () {
         return b;
-    },
-    vh: function () {
-        return p;
     }
 });
 var i = r(108131),
@@ -61,7 +61,7 @@ function m(e) {
 }
 function g(e, n) {
     var r, i;
-    return null != n && n.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) != null && (null == e ? void 0 : null === (i = e.clan) || void 0 === i ? void 0 : i.tag) !== n.tag) || null == n.identityEnabled);
+    return null != n && n.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (r = e.profile) || void 0 === r ? void 0 : r.tag) != null && (null == e ? void 0 : null === (i = e.profile) || void 0 === i ? void 0 : i.tag) !== n.tag) || null == n.identityEnabled);
 }
 function E(e, n) {
     return (null != e && null != n && null != n.identityGuildId && n.identityGuildId === e && !!n.identityEnabled) || !1;
@@ -124,6 +124,6 @@ function y(e, n) {
             },
             [n, e]
         ),
-        { tag: d, guildId: f } = p(null == i ? void 0 : i.clan);
+        { tag: d, guildId: f } = p(null == i ? void 0 : i.primaryGuild);
     return !r && null != f && null != d && !a && !0;
 }

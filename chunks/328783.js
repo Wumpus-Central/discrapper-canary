@@ -18,14 +18,14 @@ t.Z = s.memo(function (e) {
         n = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
         a = (0, r.e7)([c.default], () => {
             var e;
-            return (0, u.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+            return (0, u.Pb)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.primaryGuild).guildId;
         }),
         S = s.useMemo(
             () =>
                 t.reduce((e, t) => {
                     var n;
                     return (
-                        (null === (n = t.clan) || void 0 === n ? void 0 : n.tag) != null &&
+                        (null === (n = t.profile) || void 0 === n ? void 0 : n.tag) != null &&
                             e.push({
                                 label: t.name,
                                 value: t.id
@@ -41,12 +41,12 @@ t.Z = s.memo(function (e) {
                 if (null == e) return null;
                 let r = n.get(e.value);
                 if (null == r) return null;
-                let l = null === (t = r.clan) || void 0 === t ? void 0 : t.tag;
+                let l = null === (t = r.profile) || void 0 === t ? void 0 : t.tag;
                 return null == l
                     ? null
                     : (0, i.jsx)(m.Z, {
                           clanTag: l,
-                          clanBadge: null === (s = r.clan) || void 0 === s ? void 0 : s.badge,
+                          clanBadge: null === (s = r.profile) || void 0 === s ? void 0 : s.badge,
                           guildId: r.id,
                           guildName: e.label,
                           guildIcon: r.icon,

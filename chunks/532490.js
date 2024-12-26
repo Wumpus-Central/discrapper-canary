@@ -19,8 +19,8 @@ var n,
     g = l(594174),
     f = l(5192),
     v = l(603368),
-    C = l(856682),
-    p = l(284019),
+    p = l(856682),
+    C = l(284019),
     j = l(388032),
     N = l(577076);
 ((i = n || (n = {})).LEFT = 'left'), (i.RIGHT = 'right');
@@ -121,7 +121,7 @@ t.Z = s.memo(function (e) {
     return (0, a.jsx)('div', {
         className: o()(N.container, w),
         ref: L,
-        children: (0, a.jsx)(C.Z, {
+        children: (0, a.jsx)(p.Z, {
             fullHeight: b,
             children: (0, a.jsxs)('div', {
                 className: o()(N.overviewSidebarWrapper, b && N.fullHeight),
@@ -157,7 +157,7 @@ t.Z = s.memo(function (e) {
                                                     children: [
                                                         (0, a.jsx)('div', {
                                                             className: N.signContainerButton,
-                                                            children: (0, a.jsxs)(p.Z, {
+                                                            children: (0, a.jsxs)(C.Z, {
                                                                 themeColor: q,
                                                                 className: N.signButton,
                                                                 size: u.Button.Sizes.SMALL,

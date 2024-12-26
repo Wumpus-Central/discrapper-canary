@@ -220,7 +220,7 @@ function x(e) {
     if (U === y.Q.NONE) return null;
     if (U === y.Q.CLAN) {
         var G;
-        let e = (0, f.ky)(s.id, null === (G = s.clan) || void 0 === G ? void 0 : G.badge, D);
+        let e = (0, f.ky)(s.id, null === (G = s.profile) || void 0 === G ? void 0 : G.badge, D);
         return null == e
             ? null
             : (0, i.jsx)(d.Tooltip, {

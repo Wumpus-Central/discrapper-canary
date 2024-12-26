@@ -81,7 +81,7 @@ function d(e, n) {
         nsfwLevel: null !== (v = e.properties.nsfw_level) && void 0 !== v ? v : c.V_K.DEFAULT,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
-        clan: e.properties.clan
+        profile: e.properties.profile
     };
     return null == n ? (0, o.gh)(b, l.ZP) : n.merge(b);
 }
@@ -127,7 +127,7 @@ function _(e, n) {
             nsfwLevel: null !== (g = E.nsfw_level) && void 0 !== g ? g : c.V_K.DEFAULT,
             hubType: E.hub_type,
             latestOnboardingQuestionId: E.latest_onboarding_question_id,
-            clan: E.clan
+            profile: E.profile
         };
     return n.merge(v);
 }
@@ -168,7 +168,7 @@ function h(e, n) {
         nsfwLevel: e.nsfw_level,
         hubType: e.hub_type,
         latestOnboardingQuestionId: e.latest_onboarding_question_id,
-        clan: e.clan
+        profile: e.profile
     };
     return null == n ? new l.ZP(r) : n.merge(r);
 }
@@ -224,7 +224,7 @@ function m(e) {
         nsfw_level: e.nsfwLevel,
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
-        clan: e.clan
+        profile: e.profile
     };
 }
 function g(e) {

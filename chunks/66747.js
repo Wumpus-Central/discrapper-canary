@@ -206,7 +206,7 @@ let F = o.memo(function (e) {
                                           className: a()(P.memberNameText)
                                       }),
                                       (0, l.jsx)(b.ZP, {
-                                          clan: null == i ? void 0 : i.clan,
+                                          primaryGuild: null == i ? void 0 : i.primaryGuild,
                                           userId: null == i ? void 0 : i.id,
                                           contextGuildId: n.guildId,
                                           containerClassName: P.memberClanTag

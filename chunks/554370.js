@@ -46,8 +46,8 @@ var i = n(200651),
     W = n(319414),
     U = n(561064),
     F = n(987650),
-    B = n(501787),
-    G = n(981631),
+    G = n(501787),
+    B = n(981631),
     Y = n(206583),
     H = n(388032),
     K = n(167566);
@@ -71,7 +71,7 @@ function $(e) {
         return (t) =>
             (0, i.jsx)(e, {
                 ...t,
-                layoutId: B.OVERLAY_V3_LAYOUT_ID,
+                layoutId: G.OVERLAY_V3_LAYOUT_ID,
                 version: 1
             });
     });
@@ -85,7 +85,7 @@ let ee = r.memo(function (e) {
             }),
             onMouseDown: (e) => {
                 let { currentTarget: t, target: i, button: r } = e;
-                r === G.AeJ.PRIMARY && t === i && n();
+                r === B.AeJ.PRIMARY && t === i && n();
             },
             onContextMenu: $,
             children: r
@@ -127,7 +127,7 @@ function er() {
 }
 function el(e) {
     let t = N.Z.isLocked((0, T.QF)());
-    'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? L.S.dispatch(G.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && L.S.dispatch(G.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
+    'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? L.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && L.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function eo(e) {
     var t, n;
@@ -152,7 +152,7 @@ function eo(e) {
                 keybind: null != t ? (0, y.BB)(t.shortcut, !0) : '???'
             };
         }),
-        { analyticsLocations: B } = (0, m.ZP)(f.Z.OVERLAY);
+        { analyticsLocations: G } = (0, m.ZP)(f.Z.OVERLAY);
     return (
         !(function (e, t) {
             let n = r.useRef({
@@ -199,7 +199,7 @@ function eo(e) {
                 var i;
                 if (!m || e.current) return;
                 (e.current = !0),
-                    d.Z.track(G.rMx.OVERLAY_INITIALIZED, {
+                    d.Z.track(B.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: s,
                         text_widget_connected: !1,
                         overlay_render_method: h.gl[h.gl.OutOfProcess]
@@ -238,22 +238,22 @@ function eo(e) {
             if (t) {
                 if (((0, s.Ay)(c.POPOUT_MODAL_CONTEXT), n.addEventListener('contextmenu', J, !1), null != q)) {
                     let e = Date.now() - q;
-                    d.Z.track(G.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (q = null);
+                    d.Z.track(B.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (q = null);
                 }
                 return () => {
                     n.removeEventListener('contextmenu', J, !1);
                 };
             }
-            n.removeEventListener('contextmenu', J, !1), null == q && ((q = Date.now()), d.Z.track(G.rMx.OVERLAY_UNLOCKED));
+            n.removeEventListener('contextmenu', J, !1), null == q && ((q = Date.now()), d.Z.track(B.rMx.OVERLAY_UNLOCKED));
         }, [t, n]),
         (0, i.jsx)(m.Gt, {
-            value: B,
+            value: G,
             children: (0, i.jsx)(c.RedesignIconContextProvider, {
                 children:
                     M || L
                         ? null
                         : (0, i.jsx)(c.ThemeProvider, {
-                              theme: G.BRd.DARK,
+                              theme: B.BRd.DARK,
                               children: (e) =>
                                   (0, i.jsxs)('div', {
                                       className: o()(K.overlay, e),

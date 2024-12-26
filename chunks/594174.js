@@ -57,18 +57,18 @@ function N(e, n, r) {
 }
 function C(e, n) {
     let r = y[e];
-    return !(null == r || (0, I.Dd)(r.clan, n.clan)) && (null == r.clan || null != n.clan) && ((r.clan = (0, I.yi)(n.clan)), (y[r.id] = r), S++, !0);
+    return !(null == r || (0, I.dM)(r.primaryGuild, n.primary_guild)) && (null == r.primaryGuild || null != n.primary_guild) && ((r.primaryGuild = (0, I.lt)(n.primary_guild)), (y[r.id] = r), S++, !0);
 }
 function R(e, n) {
     switch (!0) {
-        case null == e.clan && null == n.clan:
+        case null == e.primaryGuild && null == n.primary_guild:
             break;
-        case null != e.clan && null == n.clan:
-        case (0, I.Dd)(e.clan, n.clan):
-            n.clan = e.clan;
+        case null != e.primaryGuild && null == n.primary_guild:
+        case (0, I.dM)(e.primaryGuild, n.primary_guild):
+            n.primary_guild = e.primaryGuild;
             break;
         default:
-            n.clan = (0, I.yi)(n.clan);
+            n.primary_guild = (0, I.lt)(n.primary_guild);
     }
     return n;
 }
@@ -89,8 +89,8 @@ function O(e) {
     void 0 !== l && ((e.avatarDecorationData = (0, d.FG)(l)), delete e.avatar_decoration_data);
     let u = e.global_name;
     void 0 !== u && ((e.globalName = u), delete e.global_name);
-    let c = e.clan;
-    return void 0 !== c && (e.clan = (0, I.yi)(c)), e;
+    let c = e.primary_guild;
+    return void 0 !== c && (e.primary_guild = (0, I.lt)(c)), e;
 }
 function D(e) {
     return e.id !== g.default.getId();
@@ -279,7 +279,7 @@ function $(e) {
     for (let { rawRecipients: e } of n) null != e && e.forEach((e) => L(e));
     return !1;
 }
-let ee = ['username', 'avatar', 'global_name', 'discriminator', 'bot', 'clan'];
+let ee = ['username', 'avatar', 'global_name', 'discriminator', 'bot', 'primary_guild'];
 function et(e) {
     let { updates: n } = e;
     return n
