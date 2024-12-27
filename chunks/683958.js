@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         ApplicationCommandShareModal: function () {
-            return N;
+            return _;
         },
         useQueryForAppCommands: function () {
-            return y;
+            return N;
         }
     }),
     n(47120);
@@ -26,10 +26,11 @@ var l = n(200651),
     x = n(388032),
     v = n(5859),
     C = n(621054);
-let S = () => {
-    (0, i.closeModal)(b.s);
-};
-function Z(e) {
+let S = [a.yU.CHAT],
+    Z = () => {
+        (0, i.closeModal)(b.s);
+    };
+function y(e) {
     let { sendLabel: t, canSend: n, isSending: a, onSend: s } = e,
         o = r.useCallback(() => {
             s();
@@ -48,10 +49,10 @@ function Z(e) {
         })
     });
 }
-function y(e, t) {
+function N(e, t) {
     return (0, f.v1)(
         e,
-        { commandTypes: [a.yU.CHAT] },
+        { commandTypes: S },
         {
             applicationId: t,
             allowFetch: !1,
@@ -59,11 +60,11 @@ function y(e, t) {
         }
     );
 }
-function N(e) {
-    let { applicationId: t, channel: n, command: a, onClose: f, onRequestSent: b, previewMessage: N, ..._ } = e,
+function _(e) {
+    let { applicationId: t, channel: n, command: a, onClose: f, onRequestSent: b, previewMessage: S, ..._ } = e,
         j = r.useMemo(() => (0, o.dL)(n.id), [n]),
         [E, M] = r.useState(!1),
-        { commands: L, loading: T } = y(n, t),
+        { commands: L, loading: T } = N(n, t),
         P = r.useRef(0),
         [w, A] = r.useState([j]),
         R = w.length,
@@ -119,7 +120,7 @@ function N(e) {
                 if (null === G) return;
                 M(!0);
                 let n = (await Promise.all(e.map(o.qx))).filter(h.lm);
-                t && S(),
+                t && Z(),
                     null == b || b(),
                     n.forEach(async (e) => {
                         let t = c.Z.getChannel(e);
@@ -135,7 +136,7 @@ function N(e) {
                                 }
                             })) && (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
-                    S();
+                    Z();
             },
             [b, G]
         ),
@@ -216,7 +217,7 @@ function N(e) {
                             })
                         ]
                     }),
-                    void 0 !== N ? (0, l.jsx)(g.z, { previewMessage: N }) : null,
+                    void 0 !== S ? (0, l.jsx)(g.z, { previewMessage: S }) : null,
                     (0, l.jsx)(i.SearchBar, {
                         className: v.search,
                         ref: O,
@@ -231,7 +232,7 @@ function N(e) {
                 ]
             }),
             Q,
-            (0, l.jsx)(Z, {
+            (0, l.jsx)(y, {
                 sendLabel: x.intl.string(x.t.TXNS7e),
                 canSend: R > 0,
                 isSending: E,

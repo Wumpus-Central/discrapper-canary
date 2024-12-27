@@ -1,15 +1,15 @@
 r.d(n, {
     Fs: function () {
-        return m;
+        return g;
     },
     Xu: function () {
-        return p;
+        return m;
     },
     ZP: function () {
-        return h;
+        return p;
     },
     ms: function () {
-        return E;
+        return v;
     },
     sV: function () {
         return _;
@@ -24,24 +24,25 @@ var a = r(192379),
     c = r(963456),
     d = r(213459),
     f = r(367790);
-let _ = 'no primary app command for application';
-async function h(e, n) {
+let _ = 'no primary app command for application',
+    h = [o.yU.PRIMARY_ENTRY_POINT];
+async function p(e, n) {
     let r,
         i = u.Z.getChannel(e);
     if (
         (null != i &&
-            null == (r = p(i, n)) &&
+            null == (r = m(i, n)) &&
             (await (0, d.FN)({
                 type: 'application',
                 applicationId: n
             }),
-            (r = p(i, n))),
+            (r = m(i, n))),
         null != r)
     )
         return r;
     throw Error(_);
 }
-function p(e, n) {
+function m(e, n) {
     return d.ZP.query(
         e,
         { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
@@ -54,8 +55,8 @@ function p(e, n) {
         }
     ).commands[0];
 }
-function m(e, n) {
-    let { commands: r, loading: i } = g(e, n),
+function g(e, n) {
+    let { commands: r, loading: i } = E(e, n),
         s = r[0],
         o = null != s;
     return (
@@ -70,10 +71,10 @@ function m(e, n) {
         s
     );
 }
-function g(e, n) {
+function E(e, n) {
     return (0, d.v1)(
         e,
-        { commandTypes: [o.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: h },
         {
             placeholderCount: 1,
             scoreMethod: f.p.COMMAND_ONLY,
@@ -83,9 +84,9 @@ function g(e, n) {
         }
     );
 }
-function E(e) {
+function v(e) {
     let { channel: n, applicationId: r, botUserId: i } = e,
-        a = m(n, r),
+        a = g(n, r),
         u = (0, l.bG)('useIsPrimaryAppCommandUsableInAppDM');
     if (null == a) return !1;
     let c = null != a.integration_types && a.integration_types.includes(s.Y.USER_INSTALL),
