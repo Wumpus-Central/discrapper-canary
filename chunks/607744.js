@@ -121,7 +121,7 @@ class D extends (i = l.ZP.Store) {
     }
     getCheck(e) {
         var n;
-        return !v.has(e) && T(e), null !== (n = I[e]) && void 0 !== n ? n : E;
+        return null == e ? E : (!v.has(e) && T(e), null !== (n = I[e]) && void 0 !== n ? n : E);
     }
     canChatInGuild(e) {
         return this.getCheck(e).canChat;
