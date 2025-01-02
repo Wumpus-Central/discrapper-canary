@@ -25,7 +25,7 @@ function C() {
     return e
         ? (0, i.jsxs)(x.Z, {
               title: E.intl.string(E.t.WWaFn5),
-              description: E.intl.formatToPlainString(E.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
+              description: E.intl.format(E.t['/6sFWV'], { helpArticle: (0, a.uV)() }),
               webSetting: T.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
               children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(S.Z, {})]
           })
