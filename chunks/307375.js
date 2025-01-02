@@ -19,8 +19,7 @@ function h(e) {
         x = g.id,
         p = null !== (t = (0, o.A)({ guildId: x })) && void 0 !== t ? t : 0,
         f = g.hasFeature(d.oNc.COMMUNITY),
-        C = g.hasFeature(d.oNc.DISCOVERABLE),
-        v = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 if (l === c.A.APPLY && l !== e && p > 0) {
                     (0, a.openModalLazy)(async () => {
@@ -39,7 +38,7 @@ function h(e) {
             },
             [l, x, h, p]
         ),
-        _ = r.useMemo(
+        v = r.useMemo(
             () => [
                 {
                     id: c.A.INVITE,
@@ -54,8 +53,8 @@ function h(e) {
                     title: u.intl.string(u.t.LrFEYW),
                     body: u.intl.string(u.t.kJj2oK),
                     icon: a.EnvelopeIcon,
-                    enabled: !C,
-                    ineligibleText: u.intl.string(u.t.dUXCFh)
+                    enabled: !0,
+                    ineligibleText: null
                 },
                 {
                     id: c.A.DISCOVERABLE,
@@ -66,7 +65,7 @@ function h(e) {
                     ineligibleText: u.intl.string(u.t['5TQ+eH'])
                 }
             ],
-            [f, C]
+            [f]
         );
     return (0, i.jsxs)('div', {
         children: [
@@ -83,10 +82,10 @@ function h(e) {
             }),
             (0, i.jsx)(a.TabBar, {
                 selectedItem: l,
-                onItemSelect: v,
+                onItemSelect: C,
                 orientation: 'horizontal',
                 className: m.joinOptions,
-                children: _.map((e) => {
+                children: v.map((e) => {
                     let t = e.id === l;
                     return (0, i.jsx)(
                         a.TabBar.Item,
