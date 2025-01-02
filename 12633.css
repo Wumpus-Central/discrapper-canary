@@ -5801,7 +5801,8 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .container_acae5d {
-    word-wrap: break-word
+    word-wrap: break-word;
+    width: 440px
 }
 
 .form_acae5d {
