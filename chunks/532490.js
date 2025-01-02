@@ -14,13 +14,13 @@ var n,
     d = l(442837),
     u = l(481060),
     x = l(393238),
-    h = l(434650),
-    m = l(607070),
+    m = l(434650),
+    h = l(607070),
     g = l(594174),
     f = l(5192),
     v = l(603368),
-    p = l(856682),
-    C = l(284019),
+    C = l(856682),
+    p = l(284019),
     j = l(388032),
     N = l(577076);
 ((i = n || (n = {})).LEFT = 'left'), (i.RIGHT = 'right');
@@ -45,8 +45,8 @@ t.Z = s.memo(function (e) {
             },
             [T]
         ),
-        L = (0, h.O)(D),
-        P = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        L = (0, m.O)(D),
+        P = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         V = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
         [G, F] = (0, u.useSpring)(() => {
             var e, t;
@@ -107,7 +107,7 @@ t.Z = s.memo(function (e) {
         q = null != l ? l : W.hex(),
         J = (0, v.j1)(q, O.hex()),
         { height: K = 87, ref: Q } = (0, x.Z)(i),
-        $ = (0, u.useTransition)(i, {
+        X = (0, u.useTransition)(i, {
             from: {
                 opacity: 0,
                 translateY: K
@@ -121,7 +121,7 @@ t.Z = s.memo(function (e) {
     return (0, a.jsx)('div', {
         className: o()(N.container, w),
         ref: L,
-        children: (0, a.jsx)(p.Z, {
+        children: (0, a.jsx)(C.Z, {
             fullHeight: b,
             children: (0, a.jsxs)('div', {
                 className: o()(N.overviewSidebarWrapper, b && N.fullHeight),
@@ -134,7 +134,7 @@ t.Z = s.memo(function (e) {
                             children: n
                         })
                     }),
-                    $(
+                    X(
                         (e, l) =>
                             l &&
                             (0, a.jsx)(c.animated.div, {
@@ -157,7 +157,7 @@ t.Z = s.memo(function (e) {
                                                     children: [
                                                         (0, a.jsx)('div', {
                                                             className: N.signContainerButton,
-                                                            children: (0, a.jsxs)(C.Z, {
+                                                            children: (0, a.jsxs)(p.Z, {
                                                                 themeColor: q,
                                                                 className: N.signButton,
                                                                 size: u.Button.Sizes.SMALL,

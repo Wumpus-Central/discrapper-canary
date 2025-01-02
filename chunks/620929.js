@@ -18,21 +18,21 @@ var c = l(308083),
 function x(e) {
     let { applicationIds: t, playstyle: l, className: a } = e,
         x = i.useMemo(() => Array.from(t), [t]),
-        h = (0, o.i)(x),
-        m = i.useMemo(() => {
-            if (null == h) return null;
+        m = (0, o.i)(x),
+        h = i.useMemo(() => {
+            if (null == m) return null;
             let e = (0, c.mv)(l);
             return null == e
-                ? d.intl.format(d.t.dlplKi, { games: h })
+                ? d.intl.format(d.t.dlplKi, { games: m })
                 : d.intl.format(d.t['+qicDA'], {
                       playstyle: e,
-                      games: h
+                      games: m
                   });
-        }, [h, l]);
+        }, [m, l]);
     return (0, n.jsx)(r.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
         className: s()(u.overviewText, a),
-        children: null == m ? d.intl.string(d.t.AIp7Hx) : m
+        children: null == h ? d.intl.string(d.t.AIp7Hx) : h
     });
 }

@@ -16,26 +16,26 @@ e.d(n, {
     }
 });
 var i = e(544891),
-    o = e(570140),
-    r = e(981631);
+    r = e(570140),
+    o = e(981631);
 function a() {
-    o.Z.dispatch({ type: 'VIBING_WUMPUS_PLAY_MUSIC' });
+    r.Z.dispatch({ type: 'VIBING_WUMPUS_PLAY_MUSIC' });
 }
 function c() {
-    o.Z.dispatch({ type: 'VIBING_WUMPUS_STOP_MUSIC' });
+    r.Z.dispatch({ type: 'VIBING_WUMPUS_STOP_MUSIC' });
 }
 function s() {
-    o.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
+    r.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
 }
 function u(t) {
     return i.tn.del({
-        url: r.ANM.DELETE_SAFETY_WARNINGS(t),
+        url: o.ANM.DELETE_SAFETY_WARNINGS(t),
         rejectWithError: !1
     });
 }
 function l(t, n) {
     return i.tn.post({
-        url: r.ANM.ADD_SAFETY_WARNING(t),
+        url: o.ANM.ADD_SAFETY_WARNING(t),
         body: { safety_warning_type: n },
         rejectWithError: !1
     });

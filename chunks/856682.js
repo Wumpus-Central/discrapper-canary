@@ -14,13 +14,13 @@ var n = l(200651),
     d = l(410030),
     u = l(231338),
     x = l(601751);
-let h = {
+let m = {
         mass: 1,
         tension: 400,
         friction: 60,
         clamp: !0
     },
-    m = {
+    h = {
         mass: 1,
         tension: 600,
         friction: 60,
@@ -162,20 +162,20 @@ function f(e) {
 function v(e) {
     let { children: t, fullHeight: l = !1 } = e,
         [a, v] = i.useState(!1),
-        { height: p, ref: C } = (0, c.Z)(),
+        { height: C, ref: p } = (0, c.Z)(),
         { height: j, ref: N } = (0, c.Z)(),
-        Z = l ? j : 59 + (null != p ? p : 100) + 101,
+        Z = l ? j : 59 + (null != C ? C : 100) + 101,
         T = (0, o.useSpring)({
             from: { height: 0 },
             to: { height: Z },
-            config: h,
+            config: m,
             delay: a ? 0 : 800,
             onRest: () => v(!0)
         }),
         S = (0, o.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
-            config: m,
+            config: h,
             delay: 1000
         }),
         y = (0, d.Fg)(),
@@ -200,7 +200,7 @@ function v(e) {
                 }),
                 (0, n.jsx)('div', {
                     className: s()(x.content, l && x.fullHeight),
-                    ref: C,
+                    ref: p,
                     children: (0, n.jsx)('div', {
                         className: s()(x.innerContent, l && x.fullHeight),
                         style: { backgroundColor: H },

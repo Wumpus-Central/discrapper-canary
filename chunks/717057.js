@@ -15,13 +15,13 @@ var n = l(200651),
     d = l(481060),
     u = l(410030),
     x = l(313201),
-    h = l(271383),
-    m = l(430824),
+    m = l(271383),
+    h = l(430824),
     g = l(594174),
     f = l(709054),
     v = l(931240),
-    p = l(645896),
-    C = l(603368),
+    C = l(645896),
+    p = l(603368),
     j = l(532490),
     N = l(380365),
     Z = l(979264),
@@ -97,8 +97,8 @@ function _(e) {
     var t;
     let { guildId: l, onClose: a, onAccept: r, ...o } = e,
         f = (0, x.Dt)(),
-        j = (0, p.Cc)(l),
-        Z = (0, p.E8)(l),
+        j = (0, C.Cc)(l),
+        Z = (0, C.E8)(l),
         [T, y] = i.useState(!0),
         [_, A] = i.useState(!1),
         B = i.useCallback(() => {
@@ -110,16 +110,16 @@ function _(e) {
     let k = i.useCallback(() => {
             T && (0, v.nE)(l, T, H.Sbl.CREATE_JOIN_GUILD_MODAL), B();
         }, [l, B, T]),
-        R = (0, c.e7)([m.Z], () => m.Z.getGuild(l)),
+        R = (0, c.e7)([h.Z], () => h.Z.getGuild(l)),
         I = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-        E = (0, c.e7)([h.ZP], () => (null != I ? h.ZP.getMember(l, I.id) : null)),
+        E = (0, c.e7)([m.ZP], () => (null != I ? m.ZP.getMember(l, I.id) : null)),
         D = (0, u.ZP)(),
-        L = (0, C.nP)(null == j ? void 0 : null === (t = j.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, 0.7]),
+        L = (0, p.nP)(null == j ? void 0 : null === (t = j.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, 0.7]),
         P = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: D,
             saturation: 1
         }).hex(),
-        V = (0, C.nj)(L, P, 'top center');
+        V = (0, p.nj)(L, P, 'top center');
     return null == R || null == I || null == E || null == j
         ? null
         : (0, n.jsx)(d.ModalRoot, {
@@ -186,7 +186,7 @@ function _(e) {
                                       size: 'custom',
                                       width: 20,
                                       height: 20,
-                                      color: null == L ? void 0 : (0, C.$0)(L).hex()
+                                      color: 'currentColor'
                                   })
                               ]
                           })
