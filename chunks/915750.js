@@ -5,8 +5,11 @@ r.d(n, {
     PI: function () {
         return g;
     },
-    ui: function () {
+    WD: function () {
         return b;
+    },
+    ui: function () {
+        return y;
     }
 });
 var i = r(200651),
@@ -170,7 +173,11 @@ let v = (e, n) => {
         return n !== r;
     },
     T = a.createContext(void 0);
-function b(e) {
+function b() {
+    let e = a.useContext(T);
+    return void 0 === e && console.log('useQuestImpression called outside of QuestContentImpressionTracker'), null == e ? void 0 : e.current;
+}
+function y(e) {
     let { visible: n, visibleChanged: r, reference: s, focused: o, focusedChanged: l, impression: u } = e,
         c = I(e.questOrQuests);
     return (
