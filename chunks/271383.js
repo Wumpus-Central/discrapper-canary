@@ -114,40 +114,41 @@ function W(e, n) {
     };
 }
 function K(e) {
-    let { userId: n, nick: r, guildId: i, avatar: a, avatarDecoration: s, guildRoles: o, roles: l, premiumSince: u, isPending: c, joinedAt: d, communicationDisabledUntil: f, unusualDMActivityUntil: _, fullProfileLoadedTimestamp: h, flags: p } = e,
-        { colorString: m, colorRoleId: g, iconRoleId: E, hoistRoleId: I, highestRoleId: T } = W(o, l),
-        S = {
-            userId: n,
-            nick: r,
-            guildId: i,
-            avatar: a,
-            avatarDecoration: s,
-            roles: l,
-            colorString: m,
-            colorRoleId: g,
-            iconRoleId: E,
-            hoistRoleId: I,
-            highestRoleId: T,
-            premiumSince: u,
-            isPending: c,
-            joinedAt: d,
-            communicationDisabledUntil: f,
-            unusualDMActivityUntil: _,
-            fullProfileLoadedTimestamp: h,
-            flags: p
+    var n, r;
+    let { userId: i, nick: a, guildId: s, avatar: o, avatarDecoration: l, guildRoles: u, roles: c, premiumSince: d, isPending: f, joinedAt: _, communicationDisabledUntil: h, unusualDMActivityUntil: p, fullProfileLoadedTimestamp: m, flags: g } = e,
+        { colorString: E, colorRoleId: T, iconRoleId: S, hoistRoleId: A, highestRoleId: C } = W(u, c),
+        R = {
+            userId: i,
+            nick: a,
+            guildId: s,
+            avatar: o,
+            avatarDecoration: l,
+            roles: c,
+            colorString: E,
+            colorRoleId: T,
+            iconRoleId: S,
+            hoistRoleId: A,
+            highestRoleId: C,
+            premiumSince: d,
+            isPending: f,
+            joinedAt: _,
+            communicationDisabledUntil: h,
+            unusualDMActivityUntil: p,
+            fullProfileLoadedTimestamp: m,
+            flags: g
         };
-    if (null == O[i]) return S;
-    if (n === y.default.getId()) {
-        if (v.Z.isViewingRoles(i) || v.Z.isFullServerPreview(i)) {
-            let e = v.Z.getViewingRoles(i);
-            D[i] = {
-                ...S,
-                ...v.Z.getMemberOptions(i),
+    if (((0, I.yE)(null !== (n = R.flags) && void 0 !== n ? n : 0, N.q.IS_GUEST) && (R.flags = (0, I.pj)(null !== (r = R.flags) && void 0 !== r ? r : 0, N.q.BYPASSES_VERIFICATION)), null == O[s])) return R;
+    if (i === y.default.getId()) {
+        if (v.Z.isViewingRoles(s) || v.Z.isFullServerPreview(s)) {
+            let e = v.Z.getViewingRoles(s);
+            D[s] = {
+                ...R,
+                ...v.Z.getMemberOptions(s),
                 roles: null != e ? b.default.keys(e) : []
             };
-        } else null != D[i] && delete D[i];
+        } else null != D[s] && delete D[s];
     }
-    return S;
+    return R;
 }
 function z(e) {
     w ? (w = !1) : (O = {}), (x = {}), Q(e);
