@@ -2,8 +2,9 @@ var i = n(664081),
     r = n(570140),
     l = n(317770),
     a = n(863750),
-    o = n(335131);
-class s extends l.Z {
+    o = n(960048),
+    s = n(335131);
+class c extends l.Z {
     _initialize() {
         r.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
@@ -12,7 +13,11 @@ class s extends l.Z {
     }
     handlePostConnectionOpen() {
         let e = a.Z.get('shop_include_unpublished');
-        (0, o.R2)({ release: e ? i.P.BETA : i.P.PROD });
+        try {
+            (0, s.R2)({ release: e ? i.P.BETA : i.P.PROD });
+        } catch (e) {
+            o.Z.captureException(e);
+        }
     }
 }
-t.Z = new s();
+t.Z = new c();
