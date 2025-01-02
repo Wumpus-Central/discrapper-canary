@@ -538,8 +538,7 @@ function eg(e) {
             quest: e,
             taskDetails: i,
             location: U.dr.QUEST_HOME_DESKTOP,
-            questContent: O.jn.QUEST_HOME_DESKTOP,
-            useV2Variants: !0
+            questContent: O.jn.QUEST_HOME_DESKTOP
         }),
         o = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
         l = X(null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt);
@@ -708,8 +707,7 @@ function eA(e, n, r) {
             quest: e,
             location: U.dr.QUESTS_BAR,
             questContent: O.jn.QUEST_BAR_V2,
-            taskDetails: s,
-            useV2Variants: !0
+            taskDetails: s
         });
     if (o) return G.intl.formatToPlainString(G.t.APddvL, { expirationDate: a });
     if (n) return r === O.LI.SELECT ? G.intl.string(G.t.sWUpNz) : u;
