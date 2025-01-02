@@ -7,9 +7,6 @@ r.d(n, {
     },
     cB: function () {
         return s;
-    },
-    ym: function () {
-        return d;
     }
 });
 var i = r(818083);
@@ -56,20 +53,3 @@ function u(e) {
     let { location: n } = e;
     return l.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
 }
-let c = (0, i.B)({
-        id: '2024-11_disable_quest_decision_fallback',
-        kind: 'user',
-        label: 'Disable Quest Decision Fallback',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Decision fallback disabled',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    d = (e) => {
-        let { location: n } = e;
-        return c.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
-    };
