@@ -5079,6 +5079,7 @@ let oc = Object.freeze({
     (aS.FORWARD_BREADCRUMB_CLICKED = 'forward_breadcrumb_clicked'),
     (aS.CDM_LOAD_STATUS = 'cdm_load_status'),
     (aS.CDM_READY_COMPLETE = 'cdm_ready_complete'),
+    (aS.DESKTOP_TTI = 'desktop_tti'),
     (aS.RTC_PANEL_VIEWED = 'rtc_panel_viewed'),
     (aS.E2EE_USER_VERIFICATION_VIEWED = 'e2ee_user_verification_viewed'),
     (aS.E2EE_USER_VERIFIED = 'e2ee_user_verified'),

@@ -22,7 +22,7 @@ class u extends i.Z {
     _handleEventResponse(e) {
         if (null != e)
             e.forEach((e) => {
-                'cdm' === e.type && (e.name === l.rMx.CDM_LOAD_STATUS || e.name === l.rMx.CDM_READY_COMPLETE ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name)));
+                'cdm' === e.type ? (e.name === l.rMx.CDM_LOAD_STATUS || e.name === l.rMx.CDM_READY_COMPLETE ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name))) : 'desktop_tti' === e.type && (e.name === l.rMx.DESKTOP_TTI ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown desktop_tti analytic event '.concat(e.name)));
             });
     }
 }

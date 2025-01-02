@@ -1,14 +1,15 @@
 n.d(t, {
     e: function () {
-        return c;
+        return d;
     }
 }),
     n(47120);
 var r = n(772848),
     i = n(579806),
     s = n(626135),
-    l = n(981631);
-function o(e, t, n) {
+    l = n(998502),
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function o(e, t, n) {
         e
     );
 }
-let a = new (class e {
+let c = new (class e {
     trackEvent(e, t) {
         let n = Date.now();
         requestIdleCallback(() => {
@@ -64,12 +65,18 @@ let a = new (class e {
         });
     }
     trackAppUIViewed(e) {
-        if (!this.appUIViewed) this.trackEvent(l.rMx.APP_UI_VIEWED, e), (this.appUIViewed = !0);
+        if (!this.appUIViewed) {
+            this.trackEvent(o.rMx.APP_UI_VIEWED, e);
+            try {
+                l.ZP.appViewed();
+            } catch (e) {}
+            this.appUIViewed = !0;
+        }
     }
     constructor() {
-        o(this, 'loadId', (0, r.Z)()), o(this, 'appUIViewed', !1);
+        a(this, 'loadId', (0, r.Z)()), a(this, 'appUIViewed', !1);
     }
 })();
-function c(e) {
-    a.trackAppUIViewed(e);
+function d(e) {
+    c.trackAppUIViewed(e);
 }

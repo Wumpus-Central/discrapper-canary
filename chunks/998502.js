@@ -542,5 +542,8 @@ function M(e) {
             }
             return !0;
         },
-        fetchRiotGamesLiveClientData: (e, n) => (T.isPlatformEmbedded ? (null == A.riotGames ? Promise.reject(Error('Riot Games module not available')) : A.riotGames.fetchLiveClientData(e, n)) : Promise.reject(Error('Not embedded!')))
+        fetchRiotGamesLiveClientData: (e, n) => (T.isPlatformEmbedded ? (null == A.riotGames ? Promise.reject(Error('Riot Games module not available')) : A.riotGames.fetchLiveClientData(e, n)) : Promise.reject(Error('Not embedded!'))),
+        appViewed() {
+            if (!!(0, T.isDesktop)()) this.send('APP_VIEWED');
+        }
     });
