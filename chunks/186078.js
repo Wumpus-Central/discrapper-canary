@@ -12,8 +12,8 @@ t.d(n, {
 var r = t(200651),
     i = t(192379),
     l = t(120356),
-    o = t.n(l),
-    u = t(481060),
+    u = t.n(l),
+    o = t(481060),
     s = t(489813),
     a = t(707592),
     c = t(119866);
@@ -25,11 +25,11 @@ function d(e) {
                 I.map((e, n) => ({
                     name: e,
                     value: n,
-                    radioItemIconClassName: o()(c.multipleChoiceIcon, a)
+                    radioItemIconClassName: u()(c.multipleChoiceIcon, a)
                 })),
             [I, a]
         );
-    return (0, r.jsx)(u.RadioGroup, {
+    return (0, r.jsx)(o.RadioGroup, {
         disabled: n,
         options: E,
         value: l,

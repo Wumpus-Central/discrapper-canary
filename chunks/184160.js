@@ -1,6 +1,6 @@
 n.d(t, {
     x: function () {
-        return h;
+        return f;
     }
 });
 var i = n(200651);
@@ -16,19 +16,19 @@ var l = n(512722),
     c = n(563132),
     p = n(409813),
     x = n(614223),
-    _ = n(388032),
-    f = n(475536);
-function h(e) {
+    h = n(388032),
+    _ = n(475536);
+function f(e) {
     let { handleStepChange: t, handleClose: n } = e,
         l = (0, o.ZP)(),
-        { activeSubscription: h, selectedSkuId: j, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, c.usePaymentContext)(),
-        { isGift: E } = (0, u.wD)(),
-        S = null != h ? (0, d.Af)(h) : null,
-        g = null != S ? (0, d.gq)(S.planId) : null,
-        I = null != S ? (0, d.Rd)(S.planId) : null,
+        { activeSubscription: f, selectedSkuId: j, setSelectedPlanId: m, startedPaymentFlowWithPaymentSourcesRef: L } = (0, c.usePaymentContext)(),
+        { isGift: S } = (0, u.wD)(),
+        g = null != f ? (0, d.Af)(f) : null,
+        E = null != g ? (0, d.gq)(g.planId) : null,
+        I = null != g ? (0, d.Rd)(g.planId) : null,
         M = (0, x.Kp)({
             isTrial: !1,
-            isGift: E,
+            isGift: S,
             selectedSkuId: j,
             startedPaymentFlowWithPaymentSources: L.current
         });
@@ -36,22 +36,22 @@ function h(e) {
         s()(null != I, 'Expected premium type'),
         (0, i.jsx)(C.Z, {
             premiumType: I,
-            titleText: _.intl.string(_.t['7VcWW1']),
-            subtitleText: _.intl.format(_.t.Qk34Ii, { subscriptionName: g }),
+            titleText: h.intl.string(h.t['7VcWW1']),
+            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: E }),
             footer: (0, i.jsxs)('div', {
-                className: f.whatYouLoseButtonContainer,
+                className: _.whatYouLoseButtonContainer,
                 children: [
                     (0, i.jsx)(a.Button, {
                         onClick: () => {
-                            M ? (m((0, x.nA)(j, h)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
+                            M ? (m((0, x.nA)(j, f)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
-                        children: _.intl.string(_.t['3PatS0'])
+                        children: h.intl.string(h.t['3PatS0'])
                     }),
                     (0, i.jsx)(a.Button, {
                         look: a.Button.Looks.LINK,
                         color: (0, r.wj)(l) ? a.Button.Colors.WHITE : a.Button.Colors.PRIMARY,
                         onClick: n,
-                        children: _.intl.string(_.t.h9tkAA)
+                        children: h.intl.string(h.t.h9tkAA)
                     })
                 ]
             }),

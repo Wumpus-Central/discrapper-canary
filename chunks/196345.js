@@ -17,8 +17,8 @@ var r = t(200651);
 t(192379);
 var i = t(120356),
     l = t.n(i),
-    o = t(481060),
-    u = t(454585),
+    u = t(481060),
+    o = t(454585),
     s = t(489813),
     a = t(388032),
     c = t(119866);
@@ -32,15 +32,15 @@ function d(e) {
                 {
                     className: c.termsRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: ''.concat(n + 1, '.')
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             className: c.termsRowContent,
-                            children: u.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
+                            children: o.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
                         })
                     ]
                 },
@@ -51,15 +51,15 @@ function d(e) {
 }
 function I(e) {
     let { onChange: n, checked: t, disabled: i } = e;
-    return (0, r.jsx)(o.Checkbox, {
+    return (0, r.jsx)(u.Checkbox, {
         size: 20,
-        type: o.Checkbox.Types.INVERTED,
+        type: u.Checkbox.Types.INVERTED,
         value: t,
         onChange: n,
         disabled: i,
         style: { borderWidth: 2 },
         className: c.checkbox,
-        children: (0, r.jsx)(o.Text, {
+        children: (0, r.jsx)(u.Text, {
             variant: 'text-sm/normal',
             children: a.intl.string(a.t['2EXfGB'])
         })
@@ -68,7 +68,7 @@ function I(e) {
 function E(e) {
     let { formField: n } = e;
     return (0, r.jsx)(s.Ih, {
-        icon: o.BookCheckIcon,
+        icon: u.BookCheckIcon,
         text: a.intl.string(a.t['2xbmoK']),
         meetsRequirement: !!n.response
     });

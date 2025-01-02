@@ -26,17 +26,17 @@ var i = n(200651),
 function g(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: g } = e,
-        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: P, purchaseType: x, selectedSku: M } = (0, S.usePaymentContext)(),
-        { isGift: I, selectedGiftStyle: b, giftRecipient: y } = (0, L.wD)(),
-        O = I && (0, m.pO)(y) && v === p.h8.CONFIRM && null != b && (null == M ? void 0 : M.productLine) !== T.POd.COLLECTIBLES,
+        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: P, purchaseType: x, selectedSku: I } = (0, S.usePaymentContext)(),
+        { isGift: M, selectedGiftStyle: b, giftRecipient: y } = (0, L.wD)(),
+        O = M && (0, m.pO)(y) && v === p.h8.CONFIRM && null != b && (null == I ? void 0 : I.productLine) !== T.POd.COLLECTIBLES,
         D = null != n && null != v,
         Z = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
         w = null != v && !Z.includes(v) && null != A,
         k = (0, d.N)(a),
-        F = !I && null != k && null != A && E.nG[k.trial_id].skus.includes(A),
+        F = !M && null != k && null != A && E.nG[k.trial_id].skus.includes(A),
         j = (0, c.Ng)(),
-        H = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => E.GP[e].skuId === A),
-        U = !I && null != j && null != A && H,
+        U = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => E.GP[e].skuId === A),
+        H = !M && null != j && null != A && U,
         { enabled: B } = s.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         Y = (0, s.rK)(),
         V = B && Y;
@@ -72,11 +72,11 @@ function g(e) {
                     premiumType: E.y7[A],
                     onClose: g,
                     showTrialBadge: F,
-                    showDiscountBadge: U,
-                    isGift: I,
+                    showDiscountBadge: H,
+                    isGift: M,
                     giftRecipient: y,
                     useWinterTheme: V
                 }));
         return e;
-    }, [b, g, P, n, R, A, v, F, U, O, w, D, x, I, y, V]);
+    }, [b, g, P, n, R, A, v, F, H, O, w, D, x, M, y, V]);
 }

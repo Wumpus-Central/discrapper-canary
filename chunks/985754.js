@@ -48,71 +48,71 @@ let u = new Set([o.pK.ARS, o.pK.CLP, o.pK.COP]),
     },
     A = (e) => {
         let { localizedPricingPromo: t, subscription: n, forceSingleLine: a = !1, userLocale: h } = e,
-            { countryCode: A, amount: N, currency: y, paymentSourceTypes: f } = t,
-            P = 0 !== f.length,
-            _ = E(A),
-            b = (0, s.T4)(N, y, {
+            { countryCode: A, amount: N, currency: f, paymentSourceTypes: y } = t,
+            _ = 0 !== y.length,
+            P = E(A),
+            b = (0, s.T4)(N, f, {
                 style: 'currency',
-                currency: y,
+                currency: f,
                 currencyDisplay: 'symbol',
-                localeOverride: _
+                localeOverride: P
             }),
-            g = c.intl.format(c.t['4cHbQ0'], {
+            C = c.intl.format(c.t['4cHbQ0'], {
                 helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
-                currencyISOCode: y.toUpperCase(),
+                currencyISOCode: f.toUpperCase(),
                 localizedPriceWithCurrencySymbol: b
             });
         if (
-            (d.has(y) &&
-                (g = c.intl.format(c.t['5kvQMz'], {
+            (d.has(f) &&
+                (C = c.intl.format(c.t['5kvQMz'], {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                     localizedPriceWithCurrencySymbol: b
                 })),
-            u.has(y) &&
-                (g = c.intl.format(c.t.BrYPGh, {
+            u.has(f) &&
+                (C = c.intl.format(c.t.BrYPGh, {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: y.toUpperCase(),
+                    currencyISOCode: f.toUpperCase(),
                     localizedPriceWithCurrencySymbol: b
                 })),
             null != n &&
                 !n.hasPremiumNitroMonthly &&
-                (g = c.intl.format(c.t.xnD0NT, {
+                (C = c.intl.format(c.t.xnD0NT, {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: y.toUpperCase()
+                    currencyISOCode: f.toUpperCase()
                 })),
-            y === o.pK.EUR &&
-                (g = a
+            f === o.pK.EUR &&
+                (C = a
                     ? c.intl.format(c.t.o60rUF, {
                           country: (0, r.q9)(A),
-                          currencyISOCode: y.toUpperCase(),
+                          currencyISOCode: f.toUpperCase(),
                           helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING)
                       })
                     : c.intl.format(c.t['N1xw/f'], {
-                          currencyISOCode: y.toUpperCase(),
+                          currencyISOCode: f.toUpperCase(),
                           helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING)
                       })),
-            P)
+            _)
         ) {
-            let e = m.filter((e) => f.includes(e)),
-                t = [...e, ...f.filter((e) => !m.includes(e))].slice(0, 2).map((e) => {
+            let e = m.filter((e) => y.includes(e)),
+                t = [...e, ...y.filter((e) => !m.includes(e))].slice(0, 2).map((e) => {
                     var t, n;
                     return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.call(p)) && void 0 !== n ? n : c.intl.string(c.t.jdPblp);
                 });
-            f.length >= 3 && t.push(c.intl.string(c.t.Tp5NkZ));
+            y.length >= 3 && t.push(c.intl.string(c.t.Tp5NkZ));
             let n = new Intl.ListFormat(h, {
                 style: 'short',
                 type: 'conjunction'
             });
-            g = c.intl.format(c.t.QqRQPj, {
+            C = c.intl.format(c.t.QqRQPj, {
                 helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                 paymentMethods: n.format(t)
             });
         }
         return {
             localizedPricingBannerHeader: c.intl.formatToPlainString(c.t.BuFSam, { country: (0, r.q9)(A) }),
-            localizedPricingBannerBody: g,
+            localizedPricingBannerBody: C,
             localizedPricingBannerLinkOnly: c.intl.format(c.t.XufWPj, { helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING) }),
-            localizedPricingBannerSubNotif: P ? void 0 : c.intl.string(c.t.YDdBe3)
+            localizedPricingBannerSubNotif: _ ? void 0 : c.intl.string(c.t.YDdBe3)
         };
     },
     E = (e) => {

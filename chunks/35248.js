@@ -1,9 +1,9 @@
 n.d(t, {
     M: function () {
-        return g;
+        return C;
     },
     a: function () {
-        return C;
+        return g;
     }
 }),
     n(315314),
@@ -27,17 +27,17 @@ var a = n(200651),
     A = n(409813),
     E = n(737143),
     N = n(926841),
-    y = n(362755),
-    f = n(981631),
-    P = n(474936),
-    _ = n(388032),
+    f = n(362755),
+    y = n(981631),
+    _ = n(474936),
+    P = n(388032),
     b = n(13926);
-let g = (e) => {
+let C = (e) => {
         let { step: t, onPurchaseComplete: n, onHandoffFailure: u } = e,
-            { selectedPlan: d, setSelectedPlanId: g, setSelectedSkuId: C, browserCheckoutState: T, browserCheckoutStateLoadId: I, browserCheckoutStateSkuId: S, browserCheckoutStatePlanId: v, contextMetadata: x } = (0, h.usePaymentContext)(),
+            { selectedPlan: d, setSelectedPlanId: C, setSelectedSkuId: g, browserCheckoutState: T, browserCheckoutStateLoadId: I, browserCheckoutStateSkuId: S, browserCheckoutStatePlanId: v, contextMetadata: x } = (0, h.usePaymentContext)(),
             { isGift: R } = (0, m.wD)(),
             [L, M] = r.useState(!1),
-            O = t === A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? f.i$l.GOOGLE_PAY : void 0,
+            O = t === A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? y.i$l.GOOGLE_PAY : void 0,
             D = t === A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (0, N.a)() : (0, E.q1)();
         return (
             r.useEffect(() => {
@@ -48,14 +48,14 @@ let g = (e) => {
                             M(!0),
                                 (0, o.r5)(x.loadId),
                                 !(function (e, t, n, a, r) {
-                                    let i = f.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
-                                        o = new URL(p.Z.makeUrl(f.Z5c.BILLING_LOGIN_HANDOFF)),
+                                    let i = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
+                                        o = new URL(p.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
                                         c = (0, l.Z)();
                                     o.searchParams.append('handoff_key', c),
                                         o.searchParams.append('redirect_to', i),
                                         s.tn
                                             .post({
-                                                url: f.ANM.HANDOFF,
+                                                url: y.ANM.HANDOFF,
                                                 body: { key: c },
                                                 oldFormErrors: !0,
                                                 rejectWithError: !1
@@ -68,32 +68,32 @@ let g = (e) => {
                                                     a();
                                                 }
                                             );
-                                })(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : P.Xh.PREMIUM_MONTH_TIER_2, R, x.loadId, u, O);
+                                })(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : _.Xh.PREMIUM_MONTH_TIER_2, R, x.loadId, u, O);
                     },
                     D.delay ? 1000 : 0
                 );
                 return () => clearTimeout(e);
             }, [d, R, x, u, M, L, O, D.delay]),
             r.useEffect(() => {
-                null !== S && (P.YQ.includes(S) && ((0, c.GZ)(S), (0, o.jg)()), C(S)), null !== v && g(v), I === x.loadId && T === y.Y.DONE && n();
-            }, [C, g, T, I, S, v, x, n]),
+                null !== S && (_.YQ.includes(S) && ((0, c.GZ)(S), (0, o.jg)()), g(S)), null !== v && C(v), I === x.loadId && T === f.Y.DONE && n();
+            }, [g, C, T, I, S, v, x, n]),
             (0, a.jsxs)('div', {
                 className: b.body,
                 children: [
                     (0, a.jsx)(i.Heading, {
                         variant: 'heading-xl/bold',
-                        children: _.intl.string(_.t.C4HYf3)
+                        children: P.intl.string(P.t.C4HYf3)
                     }),
                     (0, a.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         className: b.description,
-                        children: _.intl.string(_.t.xfG7Ji)
+                        children: P.intl.string(P.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    C = (e) => {
+    g = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, a.jsx)('div', {
             children: (0, a.jsxs)(i.ModalFooter, {
@@ -102,7 +102,7 @@ let g = (e) => {
                 children: [
                     (0, a.jsx)(d.y, {
                         onClick: t,
-                        children: _.intl.string(_.t['4Qvmmp'])
+                        children: P.intl.string(P.t['4Qvmmp'])
                     }),
                     (0, a.jsx)(d.Z, { onClick: n })
                 ]

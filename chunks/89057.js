@@ -1,12 +1,12 @@
 n.d(t, {
     Vq: function () {
-        return P;
+        return _;
     },
     c8: function () {
-        return f;
+        return y;
     },
     oQ: function () {
-        return _;
+        return P;
     }
 });
 var a = n(200651);
@@ -25,7 +25,7 @@ var r = n(120356),
     A = n(792776),
     E = n(51125),
     N = n(47268);
-function y(e) {
+function f(e) {
     let { className: t } = e,
         n = (0, c.ZP)(),
         r = (0, i.wj)(n) ? E : N;
@@ -51,10 +51,10 @@ function y(e) {
         ]
     });
 }
-function f() {
-    return (0, a.jsx)(y, { className: A.settings });
+function y() {
+    return (0, a.jsx)(f, { className: A.settings });
 }
-function P(e) {
+function _(e) {
     let { onClose: t } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -65,12 +65,12 @@ function P(e) {
             }),
             (0, a.jsx)(o.ModalContent, {
                 className: A.blockedPaymentsModalContent,
-                children: (0, a.jsx)(y, { className: A.modal })
+                children: (0, a.jsx)(f, { className: A.modal })
             })
         ]
     });
 }
-function _(e) {
+function P(e) {
     let { className: t } = e;
     return (0, p.Q)()
         ? (0, a.jsxs)(o.Card, {

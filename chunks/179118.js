@@ -44,8 +44,8 @@ function O(e) {
         M = (0, x.Z)(),
         { selectedGiftingPromotionReward: G } = (0, P.wD)(),
         D = null == M ? void 0 : M.giftPurchaseConfirmation,
-        H = (0, g.tK)(null == G ? void 0 : G.skuId),
-        U = (0, g.a5)(s) && null != H && null != D,
+        U = (0, g.tK)(null == G ? void 0 : G.skuId),
+        H = (0, g.a5)(s) && null != U && null != D,
         W = () => (null != s ? s.skuId : null != r ? r.id : null),
         F = () => {
             let e;
@@ -53,7 +53,7 @@ function O(e) {
                 ? w.intl.string(w.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === N.rV.MONTH ? (R ? (U ? D.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : R ? (U ? D.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
+                  : ((e = s.interval === N.rV.MONTH ? (R ? (H ? D.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : R ? (H ? D.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
                     w.intl.format(e, {
                         skuName: (0, B.aq)(s.id),
                         intervalCount: s.intervalCount
@@ -129,7 +129,7 @@ function O(e) {
               ]
           })
         : (0, n.jsxs)('div', {
-              className: o()(A.confirmation, { [A.seasonalConfirmationPadding]: U }),
+              className: o()(A.confirmation, { [A.seasonalConfirmationPadding]: H }),
               children: [
                   null != t
                       ? (0, n.jsx)(_.Z, {

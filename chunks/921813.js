@@ -25,7 +25,7 @@ var a = t(120356),
 function C(e) {
     let { user: i, guild: t, canUsePremiumCustomization: a, onUpsellClick: C, pendingBanner: I, pendingBio: S, pendingPronouns: k, pendingAvatar: y, pendingAvatarDecoration: T, pendingNickname: B, pendingGlobalName: j, pendingThemeColors: P, pendingProfileEffectId: E, avatarClassName: N, containerClassName: w, isTryItOutFlow: A = !1, disabledInputs: O = !1, hideCustomStatus: Z = !1, hideBioSection: R = !1, hideMessageInput: L = !0, hideExampleButton: M = !1 } = e,
         G = (0, l.ZP)(i.id, null == t ? void 0 : t.id),
-        { avatarSrc: D, avatarDecorationSrc: H } = (0, d.Z)({
+        { avatarSrc: D, avatarDecorationSrc: U } = (0, d.Z)({
             user: i,
             guildId: null == t ? void 0 : t.id,
             avatarDecorationOverride: T,
@@ -33,7 +33,7 @@ function C(e) {
             size: o.AvatarSizes.SIZE_80,
             showPending: !0
         }),
-        U = (0, p.ZT)({
+        H = (0, p.ZT)({
             pendingProfileEffectId: E,
             displayProfile: G
         }),
@@ -70,7 +70,7 @@ function C(e) {
                         displayProfile: G,
                         canUsePremiumCustomization: a,
                         previewAvatar: D,
-                        previewAvatarDecoration: H,
+                        previewAvatarDecoration: U,
                         previewTheme: W,
                         previewPrimaryColor: F,
                         className: N,
@@ -103,7 +103,7 @@ function C(e) {
                 hideMessageInput: L,
                 hideExampleButton: M
             }),
-            null != U && (0, n.jsx)(s.Z, { profileEffectId: U })
+            null != H && (0, n.jsx)(s.Z, { profileEffectId: H })
         ]
     });
 }

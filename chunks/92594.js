@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return E;
+        return S;
     }
 }),
     n(47120);
@@ -16,25 +16,25 @@ var i = n(200651),
     c = n(45595),
     p = n(823188),
     x = n(626135),
-    _ = n(987209),
-    f = n(563132),
-    h = n(981631),
+    h = n(987209),
+    _ = n(563132),
+    f = n(981631),
     j = n(474936),
     m = n(388032),
     L = n(988113);
-function E() {
-    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: E, selectedPlan: S, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, f.usePaymentContext)(),
-        { isGift: v } = (0, _.wD)(),
+function S() {
+    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: S, selectedPlan: g, setSelectedSkuId: E, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, _.usePaymentContext)(),
+        { isGift: v } = (0, h.wD)(),
         [y, T] = l.useState(!1),
         [N, P] = l.useState(!1),
         [Z, A] = l.useState(!1);
     return (
         l.useEffect(() => {
             let i = setTimeout(() => {
-                if (E === j.Si.TIER_2 && (null == e ? !void 0 : !e.isPremium) && !v) ((null == t ? void 0 : t.code) === d.SM.BILLING_INSUFFICIENT_FUNDS || (null == n ? void 0 : n.code) === d.SM.BILLING_INSUFFICIENT_FUNDS) && A(!0);
+                if (S === j.Si.TIER_2 && (null == e ? !void 0 : !e.isPremium) && !v) ((null == t ? void 0 : t.code) === d.SM.BILLING_INSUFFICIENT_FUNDS || (null == n ? void 0 : n.code) === d.SM.BILLING_INSUFFICIENT_FUNDS) && A(!0);
             }, 1500);
             return () => clearTimeout(i);
-        }, [e, v, n, t, E, A]),
+        }, [e, v, n, t, S, A]),
         (0, i.jsxs)('div', {
             className: r()(L.upsellContainer, Z ? L.interactable : null),
             hidden: N,
@@ -49,7 +49,7 @@ function E() {
                                     'span',
                                     {
                                         onMouseEnter: () => {
-                                            x.default.track(h.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
+                                            x.default.track(f.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
                                         },
                                         onMouseLeave: () => T(!1),
                                         children: e
@@ -58,9 +58,9 @@ function E() {
                                 )
                         }),
                         handleClick: () => {
-                            s(null), a.Z.wait(C.pB), a.Z.wait(o.fw), M(m.intl.string(m.t['/5p4ws'])), g(j.Si.TIER_0);
+                            s(null), a.Z.wait(C.pB), a.Z.wait(o.fw), M(m.intl.string(m.t['/5p4ws'])), E(j.Si.TIER_0);
                             let e = j.Xh.PREMIUM_MONTH_TIER_0;
-                            (null == S ? void 0 : S.id) === j.Xh.PREMIUM_YEAR_TIER_2 && (e = j.Xh.PREMIUM_YEAR_TIER_0), I(e), P(!0);
+                            (null == g ? void 0 : g.id) === j.Xh.PREMIUM_YEAR_TIER_2 && (e = j.Xh.PREMIUM_YEAR_TIER_0), I(e), P(!0);
                         },
                         handleClose: () => P(!0),
                         handleImageClick: () => {},
@@ -69,7 +69,7 @@ function E() {
                         useGlowOnHover: !0,
                         upsellType: 'post-failure-nitro-basic-upsell',
                         themeOverride: u.T.NITRO_BASIC,
-                        analyticsLocations: h.Sbl.NITRO_BASIC_UPSELL
+                        analyticsLocations: f.Sbl.NITRO_BASIC_UPSELL
                     })
                 }),
                 y &&

@@ -14,9 +14,9 @@ var a = n(200651),
     A = n(351402),
     E = n(981631),
     N = n(388032),
-    y = n(742415),
-    f = n(652849);
-let P = {
+    f = n(742415),
+    y = n(652849);
+let _ = {
         [E.HeQ.CARD]: m.ZP.Types.UNKNOWN,
         [E.HeQ.PAYPAL]: m.ZP.Types.PAYPAL,
         [E.HeQ.SOFORT]: m.ZP.Types.SOFORT,
@@ -34,9 +34,9 @@ let P = {
         [E.HeQ.IDEAL]: m.ZP.Types.IDEAL,
         [E.HeQ.CASH_APP]: m.ZP.Types.CASH_APP
     },
-    _ = [E.HeQ.CARD, E.HeQ.PAYPAL],
+    P = [E.HeQ.CARD, E.HeQ.PAYPAL],
     b = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    g = new Map([
+    C = new Map([
         [E.HeQ.SOFORT, new Set([])],
         [E.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
         [E.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
@@ -52,7 +52,7 @@ let P = {
         [E.HeQ.IDEAL, new Set(['ALL', 'NL'])],
         [E.HeQ.CASH_APP, new Set(['ALL', 'US'])]
     ]),
-    C = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
+    g = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
 function T(e) {
     let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: a } = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
         r = null != e ? e : 'ALL';
@@ -60,14 +60,14 @@ function T(e) {
     let l = new Set(),
         s = [];
     return (
-        g.forEach((e, n) => {
+        C.forEach((e, n) => {
             t.includes(n) && (e.has(r) ? l.add(n) : s.push(n));
         }),
-        C.forEach((e, t) => {
+        g.forEach((e, t) => {
             e.has(r) && l.add(t);
         }),
         {
-            countryPaymentMethods: [..._, ...Array.from(l)],
+            countryPaymentMethods: [...P, ...Array.from(l)],
             remainingPaymentMethods: s
         }
     );
@@ -83,26 +83,26 @@ class I extends r.PureComponent {
     createPaymentButtons(e) {
         return e.map((e) => {
             var t;
-            let n = P[e],
+            let n = _[e],
                 r = h.Wo[e](),
                 l = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
             return (0, a.jsx)(
                 o.Button,
                 {
                     onClick: () => this.props.onChooseType(e),
-                    className: y.button,
+                    className: f.button,
                     children: (0, a.jsxs)('div', {
-                        className: s()(f.flex, f.alignCenter),
+                        className: s()(y.flex, y.alignCenter),
                         children: [
                             (0, a.jsx)(m.ZP, {
-                                className: y.buttonIcon,
+                                className: f.buttonIcon,
                                 type: n
                             }),
                             r,
                             l &&
                                 (0, a.jsx)(o.TextBadge, {
                                     text: N.intl.string(N.t.y2b7CA),
-                                    className: y.newPaymentBadge,
+                                    className: f.newPaymentBadge,
                                     disableColor: !0
                                 })
                         ]
@@ -117,8 +117,8 @@ class I extends r.PureComponent {
             { onChooseType: t, className: n, onStripePaymentMethodReceived: r, allowStripeRequestPayments: l, ipCountryCode: i, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
             m = l
                 ? (0, a.jsx)(p.Tr, {
-                      className: y.button,
-                      iconClassName: y.buttonIcon,
+                      className: f.button,
+                      iconClassName: f.buttonIcon,
                       paymentLabel: N.intl.string(N.t.ZURqX1),
                       onStripePaymentMethodReceived: r,
                       onChooseType: t
@@ -132,40 +132,40 @@ class I extends r.PureComponent {
             let { countryPaymentMethods: e, remainingPaymentMethods: t } = T(i);
             h.push(...this.createPaymentButtons(e)), A.push(...this.createPaymentButtons(t));
         }
-        let P = (0, a.jsxs)('div', {
+        let _ = (0, a.jsxs)('div', {
             children: [
                 (0, a.jsxs)('div', {
-                    className: s()(f.wrap, f.horizontal),
+                    className: s()(y.wrap, y.horizontal),
                     children: [h, m]
                 }),
                 (0, a.jsx)('div', {
-                    className: A.length > 0 ? f.flex : y.hidden,
+                    className: A.length > 0 ? y.flex : f.hidden,
                     children: (0, a.jsxs)(o.Clickable, {
                         onClick: () => this.toggleAllPayments(),
-                        className: s()(f.flex, y.allPaymentsToggleButton),
+                        className: s()(y.flex, f.allPaymentsToggleButton),
                         children: [N.intl.string(N.t['4uiQm5']), (0, a.jsx)(u.Z, { open: e })]
                     })
                 }),
                 (0, a.jsx)('div', {
-                    className: s()(f.wrap, f.horizontal, y.allPaymentsSection, {
-                        [y.hidden]: !e,
-                        [f.flex]: e
+                    className: s()(y.wrap, y.horizontal, f.allPaymentsSection, {
+                        [f.hidden]: !e,
+                        [y.flex]: e
                     }),
                     children: A
                 })
             ]
         });
         return (
-            E && !c && (P = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
+            E && !c && (_ = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
             (0, a.jsxs)('div', {
                 children: [
-                    d && (0, a.jsx)('hr', { className: y.SeparatorUpper }),
+                    d && (0, a.jsx)('hr', { className: f.SeparatorUpper }),
                     (0, a.jsx)(o.FormSection, {
                         title: d ? N.intl.string(N.t.tywMsb) : N.intl.string(N.t['8lqkf3']),
                         className: n,
-                        children: P
+                        children: _
                     }),
-                    d && (0, a.jsx)('hr', { className: y.SeparatorLower })
+                    d && (0, a.jsx)('hr', { className: f.SeparatorLower })
                 ]
             })
         );

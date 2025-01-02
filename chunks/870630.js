@@ -17,7 +17,7 @@ var a = n(200651),
 t.Z = function (e) {
     let t = (0, o.ZP)(),
         n = r.useRef(null),
-        [y, f] = r.useState({});
+        [f, y] = r.useState({});
     switch (
         (r.useLayoutEffect(() => {
             let { current: e } = n;
@@ -28,7 +28,7 @@ t.Z = function (e) {
                 l = t.getPropertyValue('font-weight'),
                 s = t.getPropertyValue('color'),
                 i = t.getPropertyValue('font-size');
-            f({
+            y({
                 base: {
                     fontFamily: r,
                     fontWeight: l,
@@ -75,7 +75,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.P24BankElement, {
                                 options: {
                                     value: m,
-                                    style: y
+                                    style: f
                                 },
                                 onChange: (e) => p(e.value)
                             }),
@@ -114,7 +114,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.EpsBankElement, {
                                 options: {
                                     value: c,
-                                    style: y
+                                    style: f
                                 },
                                 onChange: (e) => o(e.value)
                             }),
@@ -153,7 +153,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.IdealBankElement, {
                                 options: {
                                     value: c,
-                                    style: y
+                                    style: f
                                 },
                                 onChange: (e) => o(e.value)
                             }),

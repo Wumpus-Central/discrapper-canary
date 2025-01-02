@@ -19,8 +19,8 @@ function p() {
         n = (0, a.ZP)(),
         p = (0, s.wj)(n),
         x = null === (e = (0, d.Z)()) || void 0 === e ? void 0 : e.planSelectionBanner,
-        { claimableRewards: _ } = (0, C.wD)();
-    return null == x || null == _
+        { claimableRewards: h } = (0, C.wD)();
+    return null == x || null == h
         ? null
         : (0, i.jsxs)('div', {
               className: c.promotionalFooterBanner,
@@ -28,7 +28,7 @@ function p() {
                   (0, i.jsx)('div', {
                       className: c.promotionalAvatars,
                       children: (0, i.jsx)(u.Z, {
-                          claimableRewards: _,
+                          claimableRewards: h,
                           maxRewardImageSrc: x.getImageUrl(p, t),
                           size: r.AvatarSizes.SIZE_32
                       })
@@ -36,7 +36,7 @@ function p() {
                   (0, i.jsx)(r.Text, {
                       variant: 'text-md/normal',
                       className: c.bannerText,
-                      children: x.body(_.length)
+                      children: x.body(h.length)
                   })
               ]
           });

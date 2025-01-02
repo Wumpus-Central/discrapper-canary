@@ -18,13 +18,13 @@ n.d(t, {
         return m;
     },
     i0: function () {
-        return y;
+        return f;
     },
     ib: function () {
         return d;
     },
     og: function () {
-        return f;
+        return y;
     }
 }),
     n(411104),
@@ -189,10 +189,10 @@ function E() {
 function N() {
     return A(l.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
 }
-function y() {
+function f() {
     let e = l.Z.getLastURL();
     null == e ? m() : (r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' }), window.open(e));
 }
-function f() {
+function y() {
     h();
 }

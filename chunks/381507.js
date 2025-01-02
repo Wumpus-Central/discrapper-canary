@@ -18,10 +18,10 @@ t.Z = () => {
             size: c.EF.SIZE_32,
             animateOnHover: !0
         }),
-        _ = (0, r.Fg)(),
-        f = (0, l.ap)(_),
-        h = o.ZP.getName(e),
-        j = f ? d.Z : u.Z;
+        h = (0, r.Fg)(),
+        _ = (0, l.ap)(h),
+        f = o.ZP.getName(e),
+        j = _ ? d.Z : u.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {
@@ -39,7 +39,7 @@ t.Z = () => {
                   (0, i.jsx)(s.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: h })
+                      children: p.intl.format(p.t.oxhCOj, { userName: f })
                   }),
                   (0, i.jsx)(j, { className: x.bannerIcon })
               ]

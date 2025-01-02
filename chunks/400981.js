@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var i = n(200651);
@@ -16,16 +16,16 @@ var l = n(442837),
     c = n(594174),
     p = n(614277),
     x = n(648102);
-function _(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: _ } = e,
-        f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        h = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
+function h(e) {
+    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: h } = e,
+        _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        f = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: j } = (0, a.ZP)(),
         m = s.AvatarSizes.SIZE_32,
-        L = (0, o.Z)(null == _ ? void 0 : _.assetId, m, !h),
-        E = (0, u.Z)(),
-        S = null == E ? void 0 : E.giftPurchaseConfirmation;
-    return null == n || null == S
+        L = (0, o.Z)(null == h ? void 0 : h.assetId, m, !f),
+        S = (0, u.Z)(),
+        g = null == S ? void 0 : S.giftPurchaseConfirmation;
+    return null == n || null == g
         ? null
         : (0, i.jsx)(p.O3, {
               children: (0, i.jsx)(s.ModalFooter, {
@@ -34,9 +34,9 @@ function _(e) {
                       className: x.promotionalFooter,
                       children: [
                           (0, i.jsx)(s.AnimatedAvatar, {
-                              'aria-label': null == f ? void 0 : f.username,
+                              'aria-label': null == _ ? void 0 : _.username,
                               size: m,
-                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !h),
+                              src: null == _ ? void 0 : _.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !f),
                               avatarDecoration: L
                           }),
                           (0, i.jsx)(s.Button, {
@@ -48,7 +48,7 @@ function _(e) {
                                           analyticsLocations: j
                                       });
                               },
-                              children: S.collectRewardButtonText()
+                              children: g.collectRewardButtonText()
                           })
                       ]
                   })
