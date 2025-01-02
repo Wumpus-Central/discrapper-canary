@@ -301,6 +301,7 @@ function B(e) {
                               children: U.intl.format(U.t['7ZS2m5'], { trialEnd: null == ep ? void 0 : ep.currentPeriodEnd })
                           }),
                       !eo &&
+                          '' !== e4 &&
                           (0, i.jsx)(u.FormTitle, {
                               tag: u.FormTitleTags.H5,
                               children: e4
