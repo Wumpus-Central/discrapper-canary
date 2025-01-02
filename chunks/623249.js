@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return E;
+            return N;
         },
         openConsoleConnectionErrorsModal: function () {
             return B;
@@ -28,10 +28,10 @@ var o = n(200651),
     j = n(388032),
     _ = n(506430),
     b = n(708901);
-function E(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: E } = e,
+function N(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: N } = e,
         B = (0, x.B4)(t);
-    null == B && E();
+    null == B && N();
     let [T, S] = (0, r.useState)(n),
         A = (0, x.KX)(),
         y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -80,7 +80,7 @@ function E(e) {
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
                                 className: _.closeBtn,
-                                onClick: E
+                                onClick: N
                             })
                         ]
                     }),
@@ -125,11 +125,11 @@ function E(e) {
                     (0, o.jsxs)('div', {
                         className: _.accountsWrapper,
                         children: [
-                            (0, o.jsx)(N, {
+                            (0, o.jsx)(E, {
                                 icon: (0, o.jsx)(c.ScreenIcon, { size: 'sm' }),
                                 text: j.intl.string(j.t.br3uIi)
                             }),
-                            (0, o.jsx)(N, {
+                            (0, o.jsx)(E, {
                                 icon: (0, o.jsx)(c.GameControllerIcon, { size: 'sm' }),
                                 text: j.intl.string(j.t.XF4wuL),
                                 errors: I ? void 0 : w.map((e) => e.message),
@@ -170,7 +170,7 @@ function E(e) {
                 children: [
                     (0, o.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: E,
+                        onClick: N,
                         className: _.footerCloseButton,
                         children: j.intl.string(j.t.cpT0Cg)
                     }),
@@ -178,7 +178,7 @@ function E(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            E(),
+                            N(),
                                 (0, f.V$)(
                                     { quest: B },
                                     {
@@ -194,7 +194,7 @@ function E(e) {
         ]
     });
 }
-function N(e) {
+function E(e) {
     let { icon: t, text: n, errors: r = [], gameTile: s } = e,
         i = r.length > 0,
         l = i ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;

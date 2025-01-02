@@ -15,13 +15,13 @@ var o = n(200651),
     h = n(626094);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: v, useReducedMotion: j, isExpanded: _, isExpansionAnimationComplete: b } = e,
-        E = r.useCallback(() => {
+        N = r.useCallback(() => {
             (0, x.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        N = r.useCallback(() => {
+        E = r.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
@@ -29,7 +29,7 @@ t.Z = (e) => {
         }, [t]),
         B = _ && b,
         T = (0, o.jsx)(l.Clickable, {
-            onClick: N,
+            onClick: E,
             className: a()(h.clickable, { [h.logo]: B }),
             children: (0, o.jsx)(p.ZP, {
                 quest: t,
@@ -79,7 +79,7 @@ t.Z = (e) => {
                 children: [
                     (0, o.jsxs)(l.Clickable, {
                         className: h.promotedBadge,
-                        onClick: E,
+                        onClick: N,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',

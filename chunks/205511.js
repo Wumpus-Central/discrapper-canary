@@ -51,7 +51,7 @@ function b(e) {
         children: e.children
     });
 }
-function E(e) {
+function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, m.n)(),
         l = (0, h.k3)(t.id, g.jn.QUEST_BAR_V2),
@@ -59,7 +59,7 @@ function E(e) {
         {
             errorHints: C,
             startingConsoleQuest: _,
-            startConsoleQuest: E
+            startConsoleQuest: N
         } = (0, x.GI)({
             questId: t.id,
             beforeRequest: () => {
@@ -72,7 +72,7 @@ function E(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: N, renderBody: B } = r.useMemo(() => {
+        { header: E, renderBody: B } = r.useMemo(() => {
             let e = C.length > 0,
                 n = t.config.messages.gameTitle;
             return {
@@ -134,11 +134,11 @@ function E(e) {
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: N
+                        children: E
                     }),
                     (0, o.jsx)(c.Clickable, {
                         className: a()(j.microphoneUnitRefreshIconWrapper, { [j.disabled]: _ }),
-                        onClick: () => E(),
+                        onClick: () => N(),
                         children: d.render()
                     })
                 ]
@@ -150,7 +150,7 @@ function E(e) {
         ]
     });
 }
-function N(e) {
+function E(e) {
     let { text: t } = e;
     return (0, o.jsx)(c.Text, {
         color: 'text-muted',
@@ -184,11 +184,11 @@ t.Z = function (e) {
                         isComplete: r || s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(N, { text: v.intl.formatToPlainString(v.t['+8JB6e'], { gameTitle: i }) }),
+                        renderContent: () => (0, o.jsx)(E, { text: v.intl.formatToPlainString(v.t['+8JB6e'], { gameTitle: i }) }),
                         isComplete: s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(N, { text: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, o.jsx)(E, { text: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: l
                     }
                 ],
@@ -227,7 +227,7 @@ t.Z = function (e) {
                     u &&
                         !p &&
                         !m &&
-                        (0, o.jsx)(E, {
+                        (0, o.jsx)(N, {
                             useReducedMotion: s,
                             quest: t
                         })

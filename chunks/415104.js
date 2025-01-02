@@ -29,7 +29,7 @@ function g(e) {
                     properties: (0, i.mH)(s)
                 });
         }, [C, s, t.id]),
-        E = r.useCallback(() => {
+        N = r.useCallback(() => {
             C(!1),
                 (0, i.dA)({
                     questId: t.id,
@@ -51,7 +51,7 @@ function g(e) {
                 },
                 className: a()(x.container, n),
                 onMouseEnter: b,
-                onMouseLeave: E,
+                onMouseLeave: N,
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,

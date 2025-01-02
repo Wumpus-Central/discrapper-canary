@@ -24,7 +24,7 @@ var o = n(200651),
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function b(e) {
     var t, n, s;
-    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: T, onReceiveErrorHints: S } = e,
+    let { quest: b, questContent: N, isHovering: E, contentPosition: B, rowIndex: T, onReceiveErrorHints: S } = e,
         A = m.r.build(b.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
@@ -32,7 +32,7 @@ function b(e) {
         { ref: I, scrollHeight: k } = (0, d.Z)(),
         q = 104 !== k,
         { expansionSpring: P } = (0, c.useSpring)({
-            expansionSpring: N ? 1 : 0,
+            expansionSpring: E ? 1 : 0,
             config: {
                 ...C.Y,
                 clamp: !0
@@ -41,8 +41,8 @@ function b(e) {
         M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         O = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
         { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(b),
-        Q = (0, p.Bd)(b),
-        Z = r.useCallback(
+        Z = (0, p.Bd)(b),
+        Q = r.useCallback(
             (e) =>
                 (0, o.jsx)(
                     c.Text,
@@ -57,17 +57,17 @@ function b(e) {
                 ),
             [b.id]
         ),
-        D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
-        V = r.useMemo(() => {
-            if (null != Q)
+        D = r.useMemo(() => (O ? Q(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Q(R) })), [y, R, O, Q]),
+        H = r.useMemo(() => {
+            if (null != Z)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
                     className: a()(j.description),
-                    children: Q
+                    children: Z
                 });
-        }, [Q]),
-        H = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        }, [Z]),
+        V = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
@@ -91,18 +91,18 @@ function b(e) {
                                                   className: j.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !H
+                                                  shouldAnimate: !V
                                               }),
                                           (0, o.jsx)(x.Z, {
                                               quest: b,
                                               size: 76,
                                               percentComplete: W,
-                                              percentCompleteText: N ? L : void 0,
+                                              percentCompleteText: E ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
                                                   children: (0, o.jsx)(g.Z, {
                                                       quest: b,
-                                                      questContent: E,
+                                                      questContent: N,
                                                       className: j.circularQuestRewardTileAsset,
                                                       location: h.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -112,8 +112,8 @@ function b(e) {
                                   })
                                 : (0, o.jsx)(g.Z, {
                                       quest: b,
-                                      autoplay: N,
-                                      questContent: E,
+                                      autoplay: E,
+                                      questContent: N,
                                       className: j.questRewardTileAsset,
                                       location: h.dr.QUEST_HOME_DESKTOP
                                   })
@@ -135,7 +135,7 @@ function b(e) {
                                 className: j.header,
                                 children: D
                             }),
-                            V
+                            H
                         ]
                     }),
                     q &&
@@ -149,7 +149,7 @@ function b(e) {
             }),
             (0, o.jsx)(f.Z, {
                 quest: b,
-                location: E,
+                location: N,
                 contentPosition: B,
                 rowIndex: T,
                 onReceiveErrorHints: S

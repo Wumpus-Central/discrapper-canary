@@ -160,7 +160,7 @@ function L(e) {
                     s = c ? h.jZ.START_QUEST : h.jZ.ACCEPT_QUEST;
                 return {
                     text: e,
-                    tooltipText: N.intl.string(N.t['+MW4lJ']),
+                    tooltipText: e,
                     onClick: () => {
                         (0, p.AH)(n.id, {
                             questContent: a,

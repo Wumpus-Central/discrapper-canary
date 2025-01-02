@@ -42,7 +42,7 @@ function R(e) {
         y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [q, w] = i.useState(k.progressSeconds),
         [B, U] = i.useState(!1),
-        { completedRatio: Z, completedRatioDisplay: F } = (0, v.I)(E),
+        { completedRatio: F, completedRatioDisplay: Z } = (0, v.I)(E),
         [V, Y] = (0, T.G6)(b.intl.string(b.t.RDE0SU), b.intl.string(b.t['+5kSoa']), 1700),
         G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? b.intl.string(b.t.vTgCW1) : b.intl.string(b.t.cfY4PD),
         z = i.useCallback(() => {
@@ -129,8 +129,8 @@ function R(e) {
                                                     children: (0, r.jsx)(x.Z, {
                                                         quest: E,
                                                         size: 48,
-                                                        percentComplete: Z,
-                                                        percentCompleteText: B ? F : void 0,
+                                                        percentComplete: F,
+                                                        percentCompleteText: B ? Z : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(_.Z, {
                                                             className: L.questProgressRewardTile,
