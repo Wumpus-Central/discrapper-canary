@@ -133,7 +133,7 @@ function H(e) {
         let a = new m.A({
             streamRegion: i,
             streamApplication: D[n],
-            streamSourceType: et(x[n]),
+            streamSourceType: en(x[n]),
             actionContext: O[n],
             numViewers: null != s ? s.length : 0
         });
@@ -180,6 +180,12 @@ function J(e) {
     });
 }
 function $(e) {
+    let { streamId: n, width: r, height: i } = e;
+    d().forEach(P, (e) => {
+        null == e || e.setVideoSize(n, r, i);
+    });
+}
+function ee(e) {
     var n, r, i, a, s;
     let o = e.find((e) => 'video' === e.type);
     return null != o && 'video' === o.type
@@ -193,7 +199,7 @@ function $(e) {
           }
         : null;
 }
-function ee(e) {
+function et(e) {
     var n, r, i, a, s, o;
     if (null == e) return null;
     let l = e.find((e) => 'video' === e.type);
@@ -208,7 +214,7 @@ function ee(e) {
           }
         : null;
 }
-function et(e) {
+function en(e) {
     var n, r, i;
     if (null == e) return 'unknown';
     if (I.isPlatformEmbedded || (null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Chrome') {
@@ -219,7 +225,7 @@ function et(e) {
     else if ((null === (i = platform) || void 0 === i ? void 0 : i.name) === 'Safari') return 'window';
     return 'unknown';
 }
-class en extends (s = f.ZP.Store) {
+class er extends (s = f.ZP.Store) {
     getActiveStreamKey() {
         return (0, v.Z)(y.Z) ? a : null;
     }
@@ -238,7 +244,7 @@ class en extends (s = f.ZP.Store) {
             let r = T.Z.getActiveStreamForUser(n, e);
             if (null == r || 0 === T.Z.getViewerIds(r).length) return null;
         }
-        return M.map((e) => (r ? $(e.rtp.outbound) : ee(e.rtp.inbound[n])));
+        return M.map((e) => (r ? ee(e.rtp.outbound) : et(e.rtp.inbound[n])));
     }
     getQuality() {
         if (!(0, v.Z)(y.Z)) return N.IE4.UNKNOWN;
@@ -297,8 +303,8 @@ class en extends (s = f.ZP.Store) {
         return null == i ? void 0 : i.get(n);
     }
 }
-R(en, 'displayName', 'StreamRTCConnectionStore'),
-    (n.Z = new en(
+R(er, 'displayName', 'StreamRTCConnectionStore'),
+    (n.Z = new er(
         h.Z,
         !y.Z.isSupported() || __OVERLAY__
             ? {}
@@ -318,6 +324,7 @@ R(en, 'displayName', 'StreamRTCConnectionStore'),
                   STREAM_DELETE: z,
                   STREAM_STATS_UPDATE: W,
                   STREAM_LAYOUT_UPDATE: q,
-                  RTC_DEBUG_SET_SIMULCAST_OVERRIDE: J
+                  RTC_DEBUG_SET_SIMULCAST_OVERRIDE: J,
+                  VIDEO_SIZE_UPDATE: $
               }
     ));

@@ -579,7 +579,8 @@ function tT() {
                 A.Z.dispatch({
                     type: 'VIDEO_SIZE_UPDATE',
                     streamId: e,
-                    pixelCount: n * r
+                    width: n,
+                    height: r
                 })
             );
         }),
