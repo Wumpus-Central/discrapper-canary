@@ -12,25 +12,24 @@ var n = t(374470),
 function o(e, l, t) {
     let o = {};
     for (let [s, d] of e.entries())
-        'IMAGE' === d.type &&
-            (o[
-                (0, r.q)({
-                    proxyURL: d.proxyUrl,
-                    url: d.url
-                })
-            ] = (r) =>
-                (function (e, l, t) {
-                    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                        o = arguments.length > 4 ? arguments[4] : void 0;
-                    e.preventDefault(),
-                        (0, n.k)(e.currentTarget) && e.currentTarget.blur(),
-                        (0, i.K)({
-                            ...r,
-                            className: a.forcedTransparency,
-                            items: l,
-                            startingIndex: t,
-                            location: null != o ? o : 'zoomedMediaModalHelper'
-                        });
-                })(r, e, s, l, t));
+        o[
+            (0, r.q)({
+                proxyURL: d.proxyUrl,
+                url: d.url
+            })
+        ] = (r) =>
+            (function (e, l, t) {
+                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    o = arguments.length > 4 ? arguments[4] : void 0;
+                e.preventDefault(),
+                    (0, n.k)(e.currentTarget) && e.currentTarget.blur(),
+                    (0, i.K)({
+                        ...r,
+                        className: a.forcedTransparency,
+                        items: l,
+                        startingIndex: t,
+                        location: null != o ? o : 'zoomedMediaModalHelper'
+                    });
+            })(r, e, s, l, t);
     return o;
 }
