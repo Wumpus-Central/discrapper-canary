@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return E;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    r = t(120356),
-    l = t.n(r),
+    r = t(192379),
+    l = t(120356),
+    a = t.n(l),
     o = t(442837),
     s = t(481060),
     u = t(700582),
@@ -14,16 +14,16 @@ var i = t(200651),
     d = t(318713),
     h = t(123145),
     m = t(592125),
-    p = t(212459),
-    f = t(795938);
-let _ = a.memo(function (e) {
+    f = t(369171),
+    p = t(795938);
+let _ = r.memo(function (e) {
     let { message: n } = e,
         t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsx)('div', {
-                  className: f.messageContents,
+                  className: p.messageContents,
                   children: (0, i.jsxs)(c.Z.Provider, {
                       value: t.guild_id,
                       children: [
@@ -36,34 +36,33 @@ let _ = a.memo(function (e) {
                           }),
                           (0, i.jsx)(d.Z, {
                               timestamp: n.timestamp,
-                              className: f.timestamp
+                              className: p.timestamp
                           })
                       ]
                   })
               })
           });
 });
-function g(e) {
+function E(e) {
     var n;
-    let { item: t, onClose: a } = e,
-        { zoomed: r, topBarVisible: o } = (0, p.Y)(),
-        u = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
-    return (0, i.jsx)('div', {
-        className: 'fadeInWrapper',
-        children: (0, i.jsxs)('div', {
-            className: l()(f.topBar, { [f.hidden]: r && !o }),
-            children: [
-                (0, i.jsx)(s.Button, {
-                    look: s.ButtonLooks.BLANK,
-                    color: s.ButtonColors.CUSTOM,
-                    size: s.ButtonSizes.ICON,
-                    className: f.closeButton,
-                    innerClassName: f.closeButtonInner,
-                    onClick: a,
-                    children: (0, i.jsx)(s.XSmallIcon, {})
-                }),
-                null != u && (0, i.jsx)(_, { message: u })
-            ]
-        })
+    let { item: t, onClose: r } = e,
+        l = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
+    return (0, i.jsx)(f.ZP, {
+        children: (e) =>
+            (0, i.jsxs)('div', {
+                className: a()(p.topBar, e),
+                children: [
+                    (0, i.jsx)(s.Button, {
+                        look: s.ButtonLooks.BLANK,
+                        color: s.ButtonColors.CUSTOM,
+                        size: s.ButtonSizes.ICON,
+                        className: p.closeButton,
+                        innerClassName: p.closeButtonInner,
+                        onClick: r,
+                        children: (0, i.jsx)(s.XSmallIcon, {})
+                    }),
+                    null != l && (0, i.jsx)(_, { message: l })
+                ]
+            })
     });
 }

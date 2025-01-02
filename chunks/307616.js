@@ -42,20 +42,16 @@ let S = [m.ZP, g.ZP];
 class A extends l.PureComponent {
     render() {
         let { render: e, LayerComponent: n, isTopModal: r, instant: i } = this.props,
-            { transitionState: a } = this.state;
-        return (
-            (a === I.Dv.ENTERING || a === I.Dv.ENTERED) && !r && (a = I.Dv.HIDDEN),
-            i && (a = I.Dv.ENTERED),
-            (0, o.jsx)(n, {
-                children: (0, o.jsx)('div', {
-                    className: c()(b.layer, !r && b.hidden),
-                    children: e({
-                        transitionState: a,
-                        onClose: this.close
-                    })
+            a = i ? I.Dv.ENTERED : this.state.transitionState;
+        return (0, o.jsx)(n, {
+            children: (0, o.jsx)('div', {
+                className: c()(b.layer, !r && b.hidden),
+                children: e({
+                    transitionState: a,
+                    onClose: this.close
                 })
             })
-        );
+        });
     }
     constructor(...e) {
         super(...e),
@@ -68,7 +64,7 @@ class A extends l.PureComponent {
                 this.setState({ transitionState: I.Dv.ENTERING }),
                     setTimeout(
                         () => {
-                            this.setState({ transitionState: I.Dv.ENTERED }), e();
+                            this.setState({ transitionState: I.Dv.ENTERED }), null == e || e();
                         },
                         n ? 0 : I.CT
                     );
@@ -82,6 +78,12 @@ class A extends l.PureComponent {
                         },
                         n ? 0 : I.CT
                     );
+            }),
+            y(this, 'componentDidUpdate', (e) => {
+                if (e.isTopModal !== this.props.isTopModal) {
+                    let { transitionState: e } = this.state;
+                    e === I.Dv.HIDDEN && this.props.isTopModal && this.componentWillEnter(), !this.props.isTopModal && (e === I.Dv.ENTERING || e === I.Dv.ENTERED) && this.setState({ transitionState: I.Dv.HIDDEN });
+                }
             }),
             y(
                 this,
