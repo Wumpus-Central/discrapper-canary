@@ -319,7 +319,8 @@ function ee(e) {
         name: e.name,
         nameWithArticle: e.name_with_article,
         asset: e.asset,
-        assetVideo: e.asset_video
+        assetVideo: e.asset_video,
+        collectibleProduct: e.collectible_product
     };
 }
 function et(e) {
