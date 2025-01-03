@@ -1,11 +1,14 @@
 r.d(n, {
     L: function () {
-        return i;
+        return s;
     }
 });
-let i = (0, r(818083).B)({
+var i = r(818083),
+    a = r(987338);
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-12_uplift_trial_nux',
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     label: 'Uplift Trial NUX',
     defaultConfig: { enabled: !1 },
     treatments: [
