@@ -22,9 +22,10 @@ function _(e) {
               icon: r,
               text: f.intl.formatToPlainString(f.t.XWSHTU, { platform: s.Z.get(n).name }),
               fullWidth: !0,
-              onClick: () => {
-                  let e = n === d.ABu.XBOX;
-                  null == _ || _({ action: e ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+              onClick: (e) => {
+                  e.stopPropagation();
+                  let r = n === d.ABu.XBOX;
+                  null == _ || _({ action: r ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
                       (0, l.Z)({
                           platformType: n,
                           location: h

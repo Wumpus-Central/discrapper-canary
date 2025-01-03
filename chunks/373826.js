@@ -29,7 +29,9 @@ function c(e) {
               });
     return null != r
         ? (0, i.jsx)(a.Clickable, {
-              onClick: r,
+              onClick: (e) => {
+                  e.stopPropagation(), r(e);
+              },
               className: u.clickableText,
               children: _()
           })

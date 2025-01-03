@@ -42,8 +42,9 @@ function _(e) {
                     text: o ? c.intl.string(c.t['I6JG4+']) : e,
                     className: d.customButton,
                     fullWidth: !0,
-                    onClick: () => {
-                        null == a || a({ action: o ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
+                    onClick: (e) => {
+                        e.stopPropagation(),
+                            null == a || a({ action: o ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
                             f({
                                 user: n,
                                 activity: r,

@@ -99,8 +99,8 @@ function q(e) {
     if (null == ei || null == ea || ($ && !1 === i.discoverable)) return null;
     let em = () => {
             let e = l()(W.preview, J),
-                n = () => {
-                    en({ action: 'PRESS_IMAGE' }), d.default.selectVoiceChannel(i.channelId), (0, f.iV)(i), null == q || q();
+                n = (e) => {
+                    e.stopPropagation(), en({ action: 'PRESS_IMAGE' }), d.default.selectVoiceChannel(i.channelId), (0, f.iV)(i), null == q || q();
                 };
             return null == ep && ed
                 ? (0, a.jsx)('div', {
@@ -165,11 +165,11 @@ function q(e) {
             if (Q !== V.y0.FULL_SIZE) return null;
             let e = ea.isGuildStageVoice(),
                 r = e ? c.StageIcon : c.VoiceNormalIcon,
-                i = () => {
-                    null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, A.Cq)(ea) : (d.default.selectVoiceChannel(ea.id), (0, y.Kh)(ea.id)), null == q || q();
+                i = (n) => {
+                    n.stopPropagation(), null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, A.Cq)(ea) : (d.default.selectVoiceChannel(ea.id), (0, y.Kh)(ea.id)), null == q || q();
                 },
-                s = () => {
-                    en({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ei.id), null == q || q();
+                s = (e) => {
+                    e.stopPropagation(), en({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ei.id), null == q || q();
                 };
             return (0, a.jsxs)('div', {
                 className: Y.details,
@@ -206,6 +206,9 @@ function q(e) {
                         channelId: ea.id,
                         maxUsers: G.W,
                         size: c.AvatarSizes.SIZE_16,
+                        onClick: (e) => {
+                            e.stopPropagation(), null == en || en({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                        },
                         disableUserPopout: (e) => e === n.id,
                         overflowCountVariant: 'text-xxs/semibold',
                         overflowCountColor: 'text-muted'

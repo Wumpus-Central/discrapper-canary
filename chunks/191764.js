@@ -29,8 +29,9 @@ function p(e) {
               text: h.intl.string(h.t['9C444u']),
               disabled: v,
               fullWidth: !0,
-              onClick: () => {
-                  null == p || p({ action: 'PRESS_HANG_STATUS_BUTTON' }),
+              onClick: (e) => {
+                  e.stopPropagation(),
+                      null == p || p({ action: 'PRESS_HANG_STATUS_BUTTON' }),
                       s.default.selectVoiceChannel(E.id),
                       d.default.track(_.rMx.HANG_STATUS_CTA_CLICKED, {
                           channel_id: E.id,

@@ -32,25 +32,32 @@ function v(e) {
             })
         );
     if (!(0, a.e7)([f.Z], () => f.Z.can(m.Plq.VIEW_CHANNEL, v))) return null;
-    let S = () => {
-            o.default.selectVoiceChannel(v.id), (0, d.X)(r.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T();
+    let S = (e) => {
+            e.stopPropagation(), (0, d.X)(r.id), null == I || I({ action: 'OPEN_VOICE_GUILD' }), null == T || T();
         },
-        A = v.isGuildStageVoice(),
-        N = f.Z.can(m.Plq.CONNECT, v) ? (A ? s.StageIcon : s.VoiceNormalIcon) : s.LockIcon,
-        C = b === p.y0.FULL_SIZE,
-        R = b === p.y0.PANEL,
-        O = !C && !R;
+        A = (e) => {
+            e.stopPropagation(), o.default.selectVoiceChannel(v.id), (0, d.X)(r.id), null == I || I({ action: 'OPEN_VOICE_CHANNEL' }), null == T || T();
+        },
+        N = v.isGuildStageVoice(),
+        C = f.Z.can(m.Plq.CONNECT, v) ? (N ? s.StageIcon : s.VoiceNormalIcon) : s.LockIcon,
+        R = b === p.y0.FULL_SIZE,
+        O = b === p.y0.PANEL,
+        D = !R && !O;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: g.voiceChannelDivider }),
             (0, i.jsxs)('div', {
                 className: g.voiceChannel,
                 children: [
-                    (0, i.jsx)(c.Z, {
-                        showTooltip: !0,
-                        guild: r,
-                        size: c.Z.Sizes.SMOL,
-                        className: g.guildIcon
+                    (0, i.jsx)(s.TooltipContainer, {
+                        text: r.name,
+                        'aria-label': !1,
+                        children: (0, i.jsx)(c.Z, {
+                            guild: r,
+                            size: c.Z.Sizes.SMOL,
+                            className: g.guildIcon,
+                            onClick: S
+                        })
                     }),
                     (0, i.jsx)(s.ChevronSmallRightIcon, {
                         size: 'xxs',
@@ -59,13 +66,13 @@ function v(e) {
                     (0, i.jsxs)('div', {
                         className: g.voiceChannelText,
                         children: [
-                            (0, i.jsx)(N, {
+                            (0, i.jsx)(C, {
                                 size: 'xxs',
                                 color: s.tokens.colors.INTERACTIVE_NORMAL,
                                 className: g.voiceIcon
                             }),
                             (0, i.jsx)(s.Clickable, {
-                                onClick: S,
+                                onClick: A,
                                 className: g.clickableText,
                                 children: (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/normal',
@@ -82,8 +89,10 @@ function v(e) {
                         channelId: v.id,
                         maxUsers: E,
                         size: s.AvatarSizes.SIZE_16,
-                        onClick: () => (null == I ? void 0 : I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                        disableUserPopout: !!O || ((e) => e === n.id),
+                        onClick: (e) => {
+                            e.stopPropagation(), null == I || I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
+                        },
+                        disableUserPopout: !!D || ((e) => e === n.id),
                         overflowCountVariant: 'text-xs/normal'
                     })
                 ]
