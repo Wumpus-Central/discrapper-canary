@@ -35,6 +35,7 @@ function f(e) {
             }),
             (0, i.jsx)(s.ModalContent, {
                 className: u.content,
+                scrollbarType: 'none',
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: l.intl.string(l.t.JNQRU1)

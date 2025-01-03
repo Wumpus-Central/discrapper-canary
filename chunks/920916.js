@@ -95,20 +95,24 @@ function G(e) {
                     size: _.ModalSize.DYNAMIC,
                     className: u()(k.rootContainer, { [k.rootContainerLoading]: G }),
                     hideShadow: !0,
-                    children: G
-                        ? (0, s.jsx)(_.Spinner, { type: _.Spinner.Type.SPINNING_CIRCLE })
-                        : 'error' === L
-                          ? (0, s.jsx)(x.Z, { onClose: i })
-                          : (0, s.jsx)(F, {
-                                quest: a,
-                                user: S,
-                                decoration: h,
-                                decorationName: d.messages.name,
-                                backgroundUrl: N.url,
-                                isSaving: 'applying' === L,
-                                onClose: i,
-                                onConfirm: M
-                            })
+                    children:
+                        'error' === L
+                            ? (0, s.jsx)(x.Z, { onClose: i })
+                            : G
+                              ? (0, s.jsx)('div', {
+                                    className: k.loadingIndicatorWrapper,
+                                    children: (0, s.jsx)(_.Spinner, { type: _.Spinner.Type.SPINNING_CIRCLE })
+                                })
+                              : (0, s.jsx)(F, {
+                                    quest: a,
+                                    user: S,
+                                    decoration: h,
+                                    decorationName: d.messages.name,
+                                    backgroundUrl: N.url,
+                                    isSaving: 'applying' === L,
+                                    onClose: i,
+                                    onConfirm: M
+                                })
                 })
             }),
             Z &&
