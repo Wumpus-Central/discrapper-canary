@@ -56,6 +56,7 @@ n.Z = function (e) {
                             (0, a.jsx)(l.Heading, {
                                 variant: 'heading-xxl/bold',
                                 color: 'header-primary',
+                                lineClamp: 1,
                                 children: n.name
                             }),
                             (0, a.jsx)('div', {

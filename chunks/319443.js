@@ -15,15 +15,15 @@ var a = t(200651),
     v = t(88693),
     f = t(611928),
     C = t(922122),
-    h = t(680180),
-    x = t(726115),
+    x = t(680180),
+    h = t(726115),
     b = t(703656),
     I = t(314897),
-    S = t(594174),
-    j = t(626135),
-    E = t(31569),
-    y = t(881294),
-    N = t(975907),
+    j = t(594174),
+    S = t(626135),
+    N = t(31569),
+    E = t(881294),
+    y = t(975907),
     A = t(119014),
     T = t(258971),
     P = t(133743),
@@ -32,8 +32,8 @@ var a = t(200651),
     L = t(548514),
     O = t(370648),
     D = t(569527),
-    M = t(979007),
-    k = t(981631),
+    k = t(979007),
+    M = t(981631),
     B = t(388032),
     G = t(544973);
 function w(e) {
@@ -80,10 +80,10 @@ function w(e) {
 }
 function H() {
     let e = i.useCallback(() => {
-            (0, y.qF)();
+            (0, E.qF)();
         }, []),
         n = i.useCallback(() => {
-            (0, y.rf)();
+            (0, E.rf)();
         }, []);
     return (0, a.jsxs)(c.Notice, {
         color: c.NoticeColors.BRAND,
@@ -94,18 +94,23 @@ function H() {
                 color: 'white',
                 className: G.logo
             }),
-            B.intl.string(B.t.Ol3MIi),
+            (0, a.jsx)(c.Text, {
+                tag: 'span',
+                color: 'always-white',
+                variant: 'text-md/normal',
+                children: B.intl.string(B.t.Ol3MIi)
+            }),
             (0, a.jsxs)('div', {
                 className: G.nagbarActionContainer,
                 children: [
                     (0, a.jsx)(c.PrimaryCTANoticeButton, {
                         onClick: e,
-                        noticeType: k.kVF.LOGIN,
+                        noticeType: M.kVF.LOGIN,
                         children: B.intl.string(B.t['825cFx'])
                     }),
                     (0, a.jsx)(c.PrimaryCTANoticeButton, {
                         onClick: n,
-                        noticeType: k.kVF.REGISTER,
+                        noticeType: M.kVF.REGISTER,
                         minor: !0,
                         children: B.intl.string(B.t.HAkXzs)
                     })
@@ -119,22 +124,22 @@ n.default = function () {
     let n = (0, s.e7)([I.default], () => !I.default.isAuthenticated()),
         { onScroll: t, scrollPosition: r, resetScrollPosition: l } = (0, g.M)(),
         u = (0, T.Xh)(),
-        L = (0, y.nu)(),
+        L = (0, E.nu)(),
         F = (null == u ? void 0 : u.type) === T.m_.CATEGORY ? u.categoryId : void 0,
         { applicationId: z, section: U } = (null == u ? void 0 : u.type) === T.m_.APPLICATION ? u : {},
         { query: Y, categoryId: V } = (null == u ? void 0 : u.type) === T.m_.SEARCH ? u : {},
         K = (0, s.e7)([m.Z], () => m.Z.getCategories()),
-        W = i.useMemo(() => [(0, p.KQ)(), ...K], [K]),
-        X = i.useMemo(() => W.find((e) => e.id === Number(V)), [W, V]),
+        X = i.useMemo(() => [(0, p.KQ)(), ...K], [K]),
+        W = i.useMemo(() => X.find((e) => e.id === Number(V)), [X, V]),
         { tabs: q, selectedTab: Q, onSelectTab: J } = (0, A.i)(null == F ? void 0 : F.toString()),
         [$, ee] = i.useState(!0),
         en = T.z8.useField('trackedOpenedFromExternalEntrypoint'),
         et = T.z8.useField('sessionId'),
-        ea = (0, s.e7)([S.default], () => S.default.getCurrentUser());
+        ea = (0, s.e7)([j.default], () => j.default.getCurrentUser());
     i.useEffect(() => {
         if (!en && null == et) {
-            let e = (0, x.PM)();
-            j.default.track(k.rMx.APP_DIRECTORY_OPENED, {
+            let e = (0, h.PM)();
+            S.default.track(M.rMx.APP_DIRECTORY_OPENED, {
                 source: _.ApplicationDirectoryEntrypointNames.EXTERNAL,
                 session_id: e,
                 user_id: null == ea ? void 0 : ea.id
@@ -156,8 +161,8 @@ n.default = function () {
         i.useEffect(() => T.aQ.setState({ lastItem: u }), [u]);
     let ei = null != z,
         er = (null == u ? void 0 : u.type) === T.m_.SEARCH,
-        { searchQuery: el, onSearchTextChange: eo, onClearSearch: es, onSearchSubmit: ec } = (0, N.M)({ initialQuery: null != Y ? Y : '' }),
-        ed = E.Z.useField('searchBarState'),
+        { searchQuery: el, onSearchTextChange: eo, onClearSearch: es, onSearchSubmit: ec } = (0, y.M)({ initialQuery: null != Y ? Y : '' }),
+        ed = N.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: eu,
             onCollapsedSearchBarClick: em,
@@ -166,7 +171,7 @@ n.default = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === el.trim(),
             searchBarState: ed,
-            setSearchBarState: (e) => E.Z.setState({ searchBarState: e })
+            setSearchBarState: (e) => N.Z.setState({ searchBarState: e })
         }),
         e_ = i.useCallback(
             (e) => {
@@ -182,12 +187,12 @@ n.default = function () {
         eC = (0, o.debounce)((e) => {
             let { scrollTop: n, offsetHeight: t, scrollHeight: a, location: i } = e;
             n > 0 &&
-                (0, y.zZ)(k.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+                (0, E.zZ)(M.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (n + t) / a,
                     current_page: i
                 });
         }, 200),
-        eh = i.useCallback(
+        ex = i.useCallback(
             (e, n) => {
                 t(e),
                     eC({
@@ -229,7 +234,7 @@ n.default = function () {
                                                     variant: 'heading-lg/semibold',
                                                     color: 'header-primary',
                                                     className: G.searchHeader,
-                                                    children: null != Y && '' !== Y ? B.intl.formatToPlainString(B.t.zHdzqa, { query: Y }) : B.intl.formatToPlainString(B.t.Qhj5Bg, { categoryName: null !== (e = null == X ? void 0 : X.name) && void 0 !== e ? e : B.intl.string(B.t.E407b2) })
+                                                    children: null != Y && '' !== Y ? B.intl.formatToPlainString(B.t.zHdzqa, { query: Y }) : B.intl.formatToPlainString(B.t.Qhj5Bg, { categoryName: null !== (e = null == W ? void 0 : W.name) && void 0 !== e ? e : B.intl.string(B.t.E407b2) })
                                                 })
                                               : (0, a.jsx)(C.Z, {
                                                     tabs: q,
@@ -237,7 +242,7 @@ n.default = function () {
                                                     onTabSelect: e_,
                                                     onAvailableWidthChange: eu
                                                 }),
-                                          (0, a.jsx)(h.Z, {
+                                          (0, a.jsx)(x.Z, {
                                               query: el,
                                               placeholder: B.intl.string(B.t.HPQXEB),
                                               onTextChange: eo,
@@ -253,7 +258,7 @@ n.default = function () {
                     }),
                     ei
                         ? (0, a.jsx)(Z.Z, {
-                              onScroll: (e) => eh(e, T.m_.APPLICATION),
+                              onScroll: (e) => ex(e, T.m_.APPLICATION),
                               onSelectApplication: eg,
                               applicationId: z,
                               initialTab: U,
@@ -262,16 +267,16 @@ n.default = function () {
                         : er
                           ? (0, a.jsx)(D.Z, {
                                 onSelectApplication: eg,
-                                onScroll: (e) => eh(e, T.m_.SEARCH)
+                                onScroll: (e) => ex(e, T.m_.SEARCH)
                             })
-                          : Q === M.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                          : Q === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                             ? (0, a.jsx)(O.Z, {
-                                  onScroll: (e) => eh(e, T.m_.HOME),
+                                  onScroll: (e) => ex(e, T.m_.HOME),
                                   onSelectApplication: eg
                               })
                             : (0, a.jsx)(R.Z, {
                                   tabId: Number(Q),
-                                  onScroll: (e) => eh(e, T.m_.CATEGORY),
+                                  onScroll: (e) => ex(e, T.m_.CATEGORY),
                                   onSelectApplication: eg
                               })
                 ]

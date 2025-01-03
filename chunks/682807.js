@@ -17,41 +17,46 @@ var i = t(120356),
     p = t(140577);
 function _(e) {
     var n, t;
-    let { application: i, className: l } = e,
-        s = null !== (t = null === (n = i.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
-    return null != i.terms_of_service_url || null != i.privacy_policy_url || s.length > 0
+    let { application: i, className: l, innerClassName: s } = e,
+        c = null !== (t = null === (n = i.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+    return null != i.terms_of_service_url || null != i.privacy_policy_url || c.length > 0
         ? (0, a.jsxs)('div', {
-              className: r()(p.list, l),
+              className: r()(p.container, l),
               children: [
                   (0, a.jsx)(o.Heading, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       children: m.intl.string(m.t.l6DP2t)
                   }),
-                  s.map((e, n) =>
-                      (0, a.jsx)(
-                          g,
-                          {
-                              url: e.url,
-                              children: e.name
-                          },
-                          n
-                      )
-                  ),
-                  null != i.terms_of_service_url
-                      ? (0, a.jsx)(v, {
-                            icon: o.FileIcon,
-                            url: i.terms_of_service_url,
-                            children: m.intl.string(m.t.s7STcX)
-                        })
-                      : null,
-                  null != i.privacy_policy_url
-                      ? (0, a.jsx)(v, {
-                            icon: o.LockIcon,
-                            url: i.privacy_policy_url,
-                            children: m.intl.string(m.t.kH3JR0)
-                        })
-                      : null
+                  (0, a.jsxs)('div', {
+                      className: r()(p.list, s),
+                      children: [
+                          c.map((e, n) =>
+                              (0, a.jsx)(
+                                  g,
+                                  {
+                                      url: e.url,
+                                      children: e.name
+                                  },
+                                  n
+                              )
+                          ),
+                          null != i.terms_of_service_url
+                              ? (0, a.jsx)(v, {
+                                    icon: o.FileIcon,
+                                    url: i.terms_of_service_url,
+                                    children: m.intl.string(m.t.s7STcX)
+                                })
+                              : null,
+                          null != i.privacy_policy_url
+                              ? (0, a.jsx)(v, {
+                                    icon: o.LockIcon,
+                                    url: i.privacy_policy_url,
+                                    children: m.intl.string(m.t.kH3JR0)
+                                })
+                              : null
+                      ]
+                  })
               ]
           })
         : null;
