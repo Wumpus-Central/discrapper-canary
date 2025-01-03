@@ -1,114 +1,116 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(512969),
-    a = n(209173),
-    o = n(288385),
-    s = n(442837),
-    c = n(481060),
-    d = n(110924),
-    u = n(674588),
-    h = n(264043),
-    m = n(894653),
-    p = n(809547),
-    g = n(34674),
-    f = n(125909),
-    _ = n(374939),
-    E = n(283293),
-    I = n(493646),
-    C = n(881294),
-    v = n(797908),
-    S = n(258971),
-    N = n(133743),
-    T = n(120549),
-    b = n(753511),
-    x = n(979007),
-    A = n(981631),
-    Z = n(378105);
-function L(e) {
-    var t;
-    let { onSelectApplication: n, onScroll: L } = e,
-        P = r.useRef(null),
-        y = (0, l.TH)(),
-        O = r.useRef(null),
+    t(610138),
+    t(216116),
+    t(78328),
+    t(815648),
+    t(47120);
+var a = t(200651),
+    i = t(192379),
+    r = t(512969),
+    l = t(209173),
+    o = t(288385),
+    s = t(442837),
+    c = t(481060),
+    d = t(110924),
+    u = t(674588),
+    m = t(264043),
+    p = t(894653),
+    _ = t(809547),
+    g = t(34674),
+    v = t(125909),
+    f = t(374939),
+    C = t(283293),
+    h = t(314897),
+    x = t(493646),
+    b = t(881294),
+    I = t(797908),
+    S = t(258971),
+    j = t(133743),
+    E = t(120549),
+    y = t(753511),
+    N = t(979007),
+    A = t(981631),
+    T = t(378105);
+function P(e) {
+    var n;
+    let { onSelectApplication: t, onScroll: P } = e,
+        R = (0, s.e7)([h.default], () => h.default.isAuthenticated()),
+        Z = i.useRef(null),
+        L = (0, r.TH)(),
+        O = i.useRef(null),
         {
-            query: R,
-            page: j,
-            categoryId: D
-        } = r.useMemo(() => {
-            var e, t;
-            let n = new URLSearchParams(y.search),
-                i = n.get('page'),
-                r = null != i ? Number(i) : 1;
+            query: D,
+            page: M,
+            categoryId: k
+        } = i.useMemo(() => {
+            var e, n;
+            let t = new URLSearchParams(L.search),
+                a = t.get('page'),
+                i = null != a ? Number(a) : 1;
             return {
-                query: null !== (e = n.get('q')) && void 0 !== e ? e : '',
-                page: r,
-                categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : x.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                query: null !== (e = t.get('q')) && void 0 !== e ? e : '',
+                page: i,
+                categoryId: null !== (n = Number(t.get('category_id'))) && void 0 !== n ? n : N.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
             };
-        }, [y.search]),
-        M = (0, s.e7)([m.Z], () => m.Z.getCategories()),
-        w = r.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
-        k = r.useCallback(
+        }, [L.search]),
+        B = (0, s.e7)([p.Z], () => p.Z.getCategories()),
+        G = i.useMemo(() => (null == B ? void 0 : B.find((e) => e.id === k)), [B, k]),
+        w = i.useCallback(
             (e) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_SEARCHED, {
-                    search_term: R,
+                (0, b.zZ)(A.rMx.APP_DIRECTORY_SEARCHED, {
+                    search_term: D,
                     num_results: e,
                     current_page: S.m_.SEARCH,
-                    result_page: j,
-                    category: null == w ? void 0 : w.name,
-                    category_id: null == w ? void 0 : w.id
+                    result_page: M,
+                    category: null == G ? void 0 : G.name,
+                    category_id: null == G ? void 0 : G.id
                 });
             },
-            [R, j, null == w ? void 0 : w.name, null == w ? void 0 : w.id]
+            [D, M, null == G ? void 0 : G.name, null == G ? void 0 : G.id]
         );
-    r.useEffect(() => {
+    i.useEffect(() => {
         var e;
-        null === (e = P.current) || void 0 === e || e.scrollTo({ to: 0 }),
-            R !== O.current &&
-                ((O.current = R),
+        null === (e = Z.current) || void 0 === e || e.scrollTo({ to: 0 }),
+            D !== O.current &&
+                ((O.current = D),
                 u.yC({
-                    query: R,
+                    query: D,
                     options: { source: o.F.APP_DIRECTORY }
                 })),
             u.yC({
-                query: R,
+                query: D,
                 options: {
-                    categoryId: D,
-                    page: j,
-                    pageSize: x.PAGE_SIZE,
+                    categoryId: k,
+                    page: M,
+                    pageSize: N.PAGE_SIZE,
                     source: o.F.APP_DIRECTORY
                 },
-                onSuccessCallback: k
+                onSuccessCallback: w
             });
-    }, [D, j, R, k]);
-    let { fetchState: U, searchResults: G } = (0, s.cj)([p.Z], () => ({
-            fetchState: p.Z.getFetchState({
-                query: R,
-                categoryId: D,
-                page: j,
-                pageSize: x.PAGE_SIZE,
+    }, [k, M, D, w]);
+    let { fetchState: H, searchResults: F } = (0, s.cj)([_.Z], () => ({
+            fetchState: _.Z.getFetchState({
+                query: D,
+                categoryId: k,
+                page: M,
+                pageSize: N.PAGE_SIZE,
                 source: o.F.APP_DIRECTORY
             }),
-            searchResults: p.Z.getSearchResults({
-                query: R,
-                categoryId: D,
-                page: j,
-                pageSize: x.PAGE_SIZE,
+            searchResults: _.Z.getSearchResults({
+                query: D,
+                categoryId: k,
+                page: M,
+                pageSize: N.PAGE_SIZE,
                 source: o.F.APP_DIRECTORY
             })
         })),
-        B = (0, s.cj)([p.Z], () => {
-            let e = p.Z.getSearchResults({
-                query: R,
+        z = (0, s.cj)([_.Z], () => {
+            let e = _.Z.getSearchResults({
+                query: D,
                 source: o.F.APP_DIRECTORY
             });
             return null != e
@@ -118,115 +120,121 @@ function L(e) {
                   }
                 : {};
         }),
-        H = (0, d.Z)(G),
-        V = r.useMemo(() => (U === h.M.FETCHING ? H : G), [U, H, G]),
-        F = r.useCallback(
+        U = (0, d.Z)(F),
+        Y = i.useMemo(() => (H === m.M.FETCHING ? U : F), [H, U, F]),
+        V = i.useCallback(
             (e) => {
-                (0, N.pR)({
-                    query: R,
-                    categoryId: D,
+                (0, j.pR)({
+                    query: D,
+                    categoryId: k,
                     page: e
                 });
             },
-            [D, R]
+            [k, D]
         ),
-        z = r.useCallback(
+        K = i.useCallback(
             (e) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                (0, b.zZ)(A.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
                     category_id: e.id,
                     current_page: S.m_.SEARCH
                 }),
-                    (0, N.pR)({
-                        query: R,
+                    (0, j.pR)({
+                        query: D,
                         categoryId: e.id
                     });
             },
-            [R]
+            [D]
         ),
-        W = r.useCallback(
-            (e, t) => {
-                (0, C.z)(A.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+        W = i.useCallback(
+            (e, n) => {
+                (0, b.zZ)(A.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: S.m_.SEARCH,
                     application_id: e,
-                    load_id: null == V ? void 0 : V.loadId,
-                    search_term: R,
-                    position: t
+                    load_id: null == Y ? void 0 : Y.loadId,
+                    search_term: D,
+                    position: n
                 }),
-                    n(e);
+                    t(e);
             },
-            [null == V ? void 0 : V.loadId, n, R]
+            [null == Y ? void 0 : Y.loadId, t, D]
         ),
-        Y = (0, I.K)();
-    return (0, i.jsxs)('div', {
-        className: Z.container,
+        X = (0, x.K)();
+    return (0, a.jsxs)('div', {
+        className: T.container,
         children: [
-            (0, i.jsx)(E.Z, {
-                ref: P,
-                onScroll: L,
-                children: (0, i.jsx)(_.Z, {
-                    children: (0, i.jsxs)('div', {
-                        className: Z.contentContainer,
-                        children: [
-                            (0, i.jsx)('div', {
-                                className: Z.topFilterContainer,
-                                children: (0, i.jsx)(T.V, {
-                                    countsByCategory: B,
-                                    selectedCategoryId: D,
-                                    onSelectCategory: z
-                                })
-                            }),
-                            (0, i.jsx)(f.Z, {
-                                loading: U === h.M.FETCHING,
-                                children:
-                                    U === h.M.FETCHED && (null == V || (null == V ? void 0 : V.results.length) === 0)
-                                        ? (0, i.jsx)(b.Z, {
-                                              selectedCategoryId: null != D ? D : Y.id,
-                                              searchAllCategories: () => z(Y)
-                                          })
-                                        : (0, i.jsx)('div', {
-                                              className: Z.content,
-                                              children:
-                                                  null == V
-                                                      ? void 0
-                                                      : V.results.map((e, t) => {
-                                                            if (e.type === a.s.APPLICATION) {
-                                                                let n = e.data;
-                                                                return (0, i.jsx)(
-                                                                    v.Z,
-                                                                    {
-                                                                        application: n,
-                                                                        onSelectApplication: (e) => W(e, t),
-                                                                        showCategory: !0
-                                                                    },
-                                                                    n.id
-                                                                );
-                                                            }
-                                                            return null;
-                                                        })
-                                          })
-                            }),
-                            (0, i.jsx)(c.Paginator, {
-                                className: Z.paginationInput,
-                                totalCount: Math.min((null !== (t = null == V ? void 0 : V.totalPages) && void 0 !== t ? t : 0) * x.PAGE_SIZE, x.MAX_PAGES * x.PAGE_SIZE),
-                                pageSize: x.PAGE_SIZE,
-                                disablePaginationGap: !0,
-                                hideMaxPage: !0,
-                                currentPage: j,
-                                onPageChange: F
+            (0, a.jsx)(C.Z, {
+                ref: Z,
+                onScroll: P,
+                children: (0, a.jsxs)('div', {
+                    className: T.innerContainer,
+                    children: [
+                        R ? null : (0, a.jsx)('div', { className: T.centeringBuffer }),
+                        (0, a.jsx)(f.Z, {
+                            children: (0, a.jsxs)('div', {
+                                className: T.contentContainer,
+                                children: [
+                                    (0, a.jsx)('div', {
+                                        className: T.topFilterContainer,
+                                        children: (0, a.jsx)(E.V, {
+                                            countsByCategory: z,
+                                            selectedCategoryId: k,
+                                            onSelectCategory: K
+                                        })
+                                    }),
+                                    (0, a.jsx)(v.Z, {
+                                        loading: H === m.M.FETCHING,
+                                        children:
+                                            H === m.M.FETCHED && (null == Y || (null == Y ? void 0 : Y.results.length) === 0)
+                                                ? (0, a.jsx)(y.Z, {
+                                                      selectedCategoryId: null != k ? k : X.id,
+                                                      searchAllCategories: () => K(X)
+                                                  })
+                                                : (0, a.jsx)('div', {
+                                                      className: T.content,
+                                                      children:
+                                                          null == Y
+                                                              ? void 0
+                                                              : Y.results.map((e, n) => {
+                                                                    if (e.type === l.s.APPLICATION) {
+                                                                        let t = e.data;
+                                                                        return (0, a.jsx)(
+                                                                            I.Z,
+                                                                            {
+                                                                                application: t,
+                                                                                onSelectApplication: (e) => W(e, n),
+                                                                                showCategory: !0
+                                                                            },
+                                                                            t.id
+                                                                        );
+                                                                    }
+                                                                    return null;
+                                                                })
+                                                  })
+                                    }),
+                                    (0, a.jsx)(c.Paginator, {
+                                        className: T.paginationInput,
+                                        totalCount: Math.min((null !== (n = null == Y ? void 0 : Y.totalPages) && void 0 !== n ? n : 0) * N.PAGE_SIZE, N.MAX_PAGES * N.PAGE_SIZE),
+                                        pageSize: N.PAGE_SIZE,
+                                        disablePaginationGap: !0,
+                                        hideMaxPage: !0,
+                                        currentPage: M,
+                                        onPageChange: V
+                                    })
+                                ]
                             })
-                        ]
-                    })
+                        })
+                    ]
                 })
             }),
-            (0, i.jsx)('div', {
-                className: Z.sideFilterContainer,
-                children: (0, i.jsx)('div', {
-                    className: Z.sideFilterContent,
-                    children: (0, i.jsx)(T.Z, {
-                        countsByCategory: B,
-                        selectedCategoryId: D,
-                        onSelectCategory: z
+            (0, a.jsx)('div', {
+                className: T.sideFilterContainer,
+                children: (0, a.jsx)('div', {
+                    className: T.sideFilterContent,
+                    children: (0, a.jsx)(E.Z, {
+                        countsByCategory: z,
+                        selectedCategoryId: k,
+                        onSelectCategory: K
                     })
                 })
             })
