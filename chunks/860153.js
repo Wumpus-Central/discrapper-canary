@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(442837),
     s = t(481060),
     u = t(700582),
@@ -46,11 +46,11 @@ let _ = r.memo(function (e) {
 function E(e) {
     var n;
     let { item: t, onClose: r } = e,
-        l = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
+        a = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
     return (0, i.jsx)(m.ZP, {
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: a()(p.topBar, e),
+                className: l()(p.topBar, e),
                 children: [
                     (0, i.jsx)(s.Button, {
                         look: s.ButtonLooks.BLANK,
@@ -61,7 +61,7 @@ function E(e) {
                         onClick: r,
                         children: (0, i.jsx)(s.XSmallIcon, {})
                     }),
-                    null != l && (0, i.jsx)(_, { message: l })
+                    null != a && (0, i.jsx)(_, { message: a })
                 ]
             })
     });

@@ -32,8 +32,8 @@ function v(e) {
                 }),
             [r, t]
         ),
-        [C, h] = i.useState(!1),
-        x = (function (e) {
+        [C, x] = i.useState(!1),
+        h = (function (e) {
             let { selected: n, isVisualRefreshEnabled: t, isDarkTheme: a, isHovered: i } = e;
             if (t) return i ? 'text-primary' : n ? 'text-brand' : 'text-normal';
             return !n && i ? 'interactive-hover' : n ? 'header-primary' : a ? 'interactive-normal' : 'header-primary';
@@ -53,8 +53,8 @@ function v(e) {
             isDarkTheme: m,
             isHovered: C
         }),
-        I = i.useCallback(() => h(!0), []),
-        S = i.useCallback(() => h(!1), []);
+        I = i.useCallback(() => x(!0), []),
+        j = i.useCallback(() => x(!1), []);
     return (0, a.jsx)(c.Popout, {
         renderPopout: (e) => {
             let { closePopout: i } = e;
@@ -79,11 +79,11 @@ function v(e) {
                 children: (0, a.jsxs)('div', {
                     className: g.more,
                     onMouseEnter: I,
-                    onMouseLeave: S,
+                    onMouseLeave: j,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: v ? 'text-sm/semibold' : 'text-md/medium',
-                            color: x,
+                            color: h,
                             children: _.intl.string(_.t.UKOtz8)
                         }),
                         t
@@ -107,8 +107,8 @@ function f(e) {
         f = i.useRef(p),
         {
             lastVisibleIndex: C,
-            onItemLayout: h,
-            overflowItemsRef: x,
+            onItemLayout: x,
+            overflowItemsRef: h,
             itemWidthsRef: b
         } = (0, o.zP)({
             items: r,
@@ -117,11 +117,11 @@ function f(e) {
             containerWidth: p
         }),
         I = i.useMemo(() => r.slice(0, C + 1), [C, r]),
-        S = i.useMemo(() => r.slice(C + 1), [C, r]),
-        j = i.useRef(null),
-        E = i.useCallback(() => {
+        j = i.useMemo(() => r.slice(C + 1), [C, r]),
+        S = i.useRef(null),
+        N = i.useCallback(() => {
             var e;
-            let n = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let n = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == n || f.current === n.width) return;
             _(n.width), (f.current = n.width);
             let t = b.current.reduce((e, n, t) => e + n + (0 === t ? 0 : 20)),
@@ -129,14 +129,14 @@ function f(e) {
             null == d || d(a);
         }, [b, d]);
     i.useEffect(() => {
-        let e = (0, m.pP)(E);
+        let e = (0, m.pP)(N);
         return (0, m.YP)(e, document.body), () => (0, m.UC)(e, document.body);
-    }, [E]);
-    let y = 0 !== p,
-        N = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
+    }, [N]);
+    let E = 0 !== p,
+        y = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, a.jsxs)('div', {
         className: l()(g.container, n),
-        ref: j,
+        ref: S,
         children: [
             (0, a.jsxs)('div', {
                 className: g.measurements,
@@ -146,7 +146,7 @@ function f(e) {
                             o.AJ,
                             {
                                 index: n,
-                                onItemLayout: h,
+                                onItemLayout: x,
                                 children: (0, a.jsx)(c.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
@@ -161,16 +161,16 @@ function f(e) {
                         )
                     ),
                     (0, a.jsx)('div', {
-                        ref: x,
+                        ref: h,
                         children: (0, a.jsx)(v, {
-                            tabs: S,
+                            tabs: j,
                             onTabSelect: s,
                             selectedTab: t
                         })
                     })
                 ]
             }),
-            y &&
+            E &&
                 (0, a.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',
@@ -185,15 +185,15 @@ function f(e) {
                                     id: e.id,
                                     look: 'brand',
                                     'aria-label': e.label,
-                                    className: l()(g.tab, { [g.selected]: !N && t === e.id }),
+                                    className: l()(g.tab, { [g.selected]: !y && t === e.id }),
                                     children: e.label
                                 },
                                 e.id
                             )
                         ),
-                        0 !== S.length
+                        0 !== j.length
                             ? (0, a.jsx)(v, {
-                                  tabs: S,
+                                  tabs: j,
                                   onTabSelect: s,
                                   selectedTab: t
                               })

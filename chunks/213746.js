@@ -20,31 +20,31 @@ var a = t(200651),
     v = t(133743),
     f = t(979007),
     C = t(981631),
-    h = t(388032),
-    x = t(272680);
+    x = t(388032),
+    h = t(272680);
 function b(e) {
     let { application: n } = e;
     return (0, a.jsxs)('div', {
-        className: x.storeContainer,
-        children: [(0, a.jsx)(I, { application: n }), (0, a.jsx)(j, { application: n })]
+        className: h.storeContainer,
+        children: [(0, a.jsx)(I, { application: n }), (0, a.jsx)(S, { application: n })]
     });
 }
 function I(e) {
     let { application: n } = e,
         { subscriptions: t, otps: i } = (0, d.q)(n.id);
     return (0, a.jsxs)('div', {
-        className: x.storeContainer,
+        className: h.storeContainer,
         children: [
             t.length > 0 &&
                 (0, a.jsxs)('div', {
-                    className: x.productSection,
+                    className: h.productSection,
                     children: [
                         (0, a.jsx)(m.r, {
                             subscriptions: t,
                             color: 'header-primary'
                         }),
                         (0, a.jsx)('div', {
-                            className: x.products,
+                            className: h.products,
                             children: t.map((e) => {
                                 let t = (0, p.KW)(e.skuFlags) ? 'user' : 'guild';
                                 return (0, a.jsx)(
@@ -63,15 +63,15 @@ function I(e) {
                 }),
             i.length > 0 &&
                 (0, a.jsxs)('div', {
-                    className: x.productSection,
+                    className: h.productSection,
                     children: [
                         (0, a.jsx)(r.X6, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            children: h.intl.string(h.t.yUGTs7)
+                            children: x.intl.string(x.t.yUGTs7)
                         }),
                         (0, a.jsx)('div', {
-                            className: x.products,
+                            className: h.products,
                             children: i.map((e) =>
                                 (0, a.jsx)(
                                     u.hd,
@@ -89,12 +89,12 @@ function I(e) {
             (0, a.jsx)(c.Z, {
                 path: C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, a.jsx)(S, { ...e })
+                render: (e) => (0, a.jsx)(j, { ...e })
             })
         ]
     });
 }
-function S(e) {
+function j(e) {
     let {
             match: {
                 params: { applicationId: n, skuId: r }
@@ -127,7 +127,7 @@ function S(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback: () => {
-                                    !E() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, f.GlobalDiscoveryAppsSections.STORE));
+                                    !N() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, f.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -154,7 +154,7 @@ function S(e) {
                             {
                                 modalKey: u,
                                 onCloseCallback: () => {
-                                    !E() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, f.GlobalDiscoveryAppsSections.STORE));
+                                    !N() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, f.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -170,7 +170,7 @@ function S(e) {
         null
     );
 }
-function j(e) {
+function S(e) {
     let { application: n } = e,
         t = (0, g.nu)(),
         i = n.terms_of_service_url,
@@ -183,24 +183,24 @@ function j(e) {
             children: e
         });
     return (0, a.jsx)('div', {
-        className: x.legalContainer,
+        className: h.legalContainer,
         children: (0, a.jsx)(r.xv, {
             color: 'header-primary',
             variant: 'text-sm/normal',
             children:
                 null != i && null != l
-                    ? h.intl.format(h.t.nylPOT, {
+                    ? x.intl.format(x.t.nylPOT, {
                           termsHook: (e) => o(e, i),
                           privacyHook: (e) => o(e, l)
                       })
                     : null != i
-                      ? h.intl.format(h.t['0cPyDw'], { termsHook: (e) => o(e, i) })
+                      ? x.intl.format(x.t['0cPyDw'], { termsHook: (e) => o(e, i) })
                       : null != l
-                        ? h.intl.format(h.t.loYGCw, { privacyHook: (e) => o(e, l) })
+                        ? x.intl.format(x.t.loYGCw, { privacyHook: (e) => o(e, l) })
                         : null
         })
     });
 }
-function E() {
+function N() {
     return window.location.pathname.startsWith('/login');
 }

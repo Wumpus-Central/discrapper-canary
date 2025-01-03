@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(481060),
     s = t(607070),
     u = t(124347),
@@ -43,7 +43,7 @@ let _ = r.memo(function (e) {
           });
 });
 function E(e) {
-    let { items: n, currentIndex: t, onGalleryItemClick: l, className: u } = e,
+    let { items: n, currentIndex: t, onGalleryItemClick: a, className: u } = e,
         c = r.useRef(null);
     return (
         r.useLayoutEffect(() => {
@@ -57,7 +57,7 @@ function E(e) {
                 });
         }, [t]),
         (0, i.jsx)('div', {
-            className: a()(m.galleryContainer, u),
+            className: l()(m.galleryContainer, u),
             children: (0, i.jsx)(o.AdvancedScrollerThin, {
                 orientation: 'horizontal',
                 className: m.gallery,
@@ -75,8 +75,8 @@ function E(e) {
                                 pageNumber: r + 1,
                                 totalPages: n.length
                             }),
-                            onClick: () => l(r),
-                            children: [(0, i.jsx)('div', { className: a()(m.galleryItemOverlay, { [m.selected]: s }) }), (0, i.jsx)(_, { item: e })]
+                            onClick: () => a(r),
+                            children: [(0, i.jsx)('div', { className: l()(m.galleryItemOverlay, { [m.selected]: s }) }), (0, i.jsx)(_, { item: e })]
                         },
                         r
                     );

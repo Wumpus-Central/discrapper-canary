@@ -15,8 +15,8 @@ var a = t(200651),
     v = t(258971),
     f = t(979007),
     C = t(981631),
-    h = t(76413);
-let x = {
+    x = t(76413);
+let h = {
     results: [],
     totalPages: 0,
     loadId: ''
@@ -24,36 +24,36 @@ let x = {
 n.Z = function (e) {
     var n;
     let { categoryId: t, onSelectApplication: b, resetScroll: I } = e,
-        [S, j] = i.useState(1),
-        E = i.useCallback((e) => {
-            j(e);
+        [j, S] = i.useState(1),
+        N = i.useCallback((e) => {
+            S(e);
         }, []);
     i.useEffect(() => {
-        j(1);
+        S(1);
     }, [t]);
-    let y = i.useMemo(
+    let E = i.useMemo(
             () => ({
                 query: f.EMPTY_QUERY,
-                page: S,
+                page: j,
                 pageSize: f.PAGE_SIZE,
                 categoryId: t
             }),
-            [S, t]
+            [j, t]
         ),
-        N = (0, l.e7)([u.Z], () =>
+        y = (0, l.e7)([u.Z], () =>
             u.Z.getFetchState({
                 query: f.EMPTY_QUERY,
-                page: S,
+                page: j,
                 pageSize: f.PAGE_SIZE,
                 categoryId: t
             })
         ),
         A = (0, l.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(y)) && void 0 !== e ? e : x;
+            return null !== (e = u.Z.getSearchResults(E)) && void 0 !== e ? e : h;
         }),
-        T = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : x,
-        { results: P, totalPages: R, loadId: Z } = i.useMemo(() => (N === d.M.FETCHING ? T : A), [N, T, A]),
+        T = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : h,
+        { results: P, totalPages: R, loadId: Z } = i.useMemo(() => (y === d.M.FETCHING ? T : A), [y, T, A]),
         L = i.useMemo(() => (null == P ? void 0 : P.filter((e) => !(e.type !== r.s.APPLICATION))), [P]),
         O = i.useCallback((e) => {
             let { page: n, activeCategoryId: t, onSuccessCallback: a, guildId: i, fetchCounts: r } = e;
@@ -76,11 +76,11 @@ n.Z = function (e) {
     i.useEffect(() => {
         I(),
             O({
-                page: S,
+                page: j,
                 activeCategoryId: t,
                 onSuccessCallback: () => {}
             });
-    }, [t, I, O, S]);
+    }, [t, I, O, j]);
     let D = i.useCallback(
         (e, n) => {
             (0, p.zZ)(C.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
@@ -93,16 +93,16 @@ n.Z = function (e) {
         },
         [Z, b]
     );
-    return N === d.M.ERROR
+    return y === d.M.ERROR
         ? (0, a.jsx)('div', {
-              className: h.errorContainer,
-              children: (0, a.jsx)(g.Z, { className: h.error })
+              className: x.errorContainer,
+              children: (0, a.jsx)(g.Z, { className: x.error })
           })
         : (0, a.jsxs)(m.Z, {
-              loading: N === d.M.FETCHING,
+              loading: y === d.M.FETCHING,
               children: [
                   (0, a.jsx)('div', {
-                      className: h.content,
+                      className: x.content,
                       children:
                           null == L
                               ? void 0
@@ -122,13 +122,13 @@ n.Z = function (e) {
                                 })
                   }),
                   (0, a.jsx)(o.Paginator, {
-                      className: h.paginationInput,
+                      className: x.paginationInput,
                       totalCount: Math.min(R * f.PAGE_SIZE, f.MAX_PAGES * f.PAGE_SIZE),
                       pageSize: f.PAGE_SIZE,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
-                      currentPage: S,
-                      onPageChange: E
+                      currentPage: j,
+                      onPageChange: N
                   })
               ]
           });

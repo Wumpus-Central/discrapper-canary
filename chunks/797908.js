@@ -14,41 +14,41 @@ var a = t(200651),
 let g = 28;
 n.Z = function (e) {
     var n, t, v, f, C;
-    let { application: h, onSelectApplication: x, showCategory: b = !1 } = e,
-        I = (0, c.Z)({ application: h }),
-        S = null === (n = h.categories) || void 0 === n ? void 0 : n[0],
-        [j, E] = i.useState(!1),
-        y = i.useCallback((e) => {
-            e && E(!0);
+    let { application: x, onSelectApplication: h, showCategory: b = !1 } = e,
+        I = (0, c.Z)({ application: x }),
+        j = null === (n = x.categories) || void 0 === n ? void 0 : n[0],
+        [S, N] = i.useState(!1),
+        E = i.useCallback((e) => {
+            e && N(!0);
         }, []),
-        N = (0, o.lf)(h),
+        y = (0, o.lf)(x),
         A = i.useCallback(() => {
-            x(h.id);
-        }, [x, h.id]),
+            h(x.id);
+        }, [h, x.id]),
         T = i.useMemo(
             () =>
-                j
+                S
                     ? u.ZP.getApplicationIconURL({
-                          id: h.id,
-                          icon: h.icon,
+                          id: x.id,
+                          icon: x.icon,
                           size: 48
                       })
                     : void 0,
-            [j, h]
+            [S, x]
         ),
-        P = (null !== (f = null === (t = h.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== f ? f : 0) > 0 || I.length > 0,
+        P = (null !== (f = null === (t = x.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== f ? f : 0) > 0 || I.length > 0,
         R = (0, a.jsx)(s.Z, {
-            application: h,
+            application: x,
             textVariant: 'text-xs/medium',
             mutualGuilds: I,
             mutualGuildShownMax: 3,
             guildIconSize: s.x.SMALL,
             compact: !0
         }),
-        Z = b && null != S;
+        Z = b && null != j;
     return (0, a.jsx)(r.$, {
-        onChange: y,
-        active: !j,
+        onChange: E,
+        active: !S,
         children: (0, a.jsx)('div', {
             className: _.container,
             children: (0, a.jsxs)(d.Z, {
@@ -65,9 +65,9 @@ n.Z = function (e) {
                                     display: 'block',
                                     aspectRatio: 16 / 9
                                 },
-                                children: j
+                                children: S
                                     ? (0, a.jsx)(m.Z, {
-                                          application: h,
+                                          application: x,
                                           bannerType: 'card',
                                           iconURL: T
                                       })
@@ -76,7 +76,7 @@ n.Z = function (e) {
                             (0, a.jsx)('div', {
                                 className: _.avatarContainer,
                                 style: { height: g },
-                                children: j
+                                children: S
                                     ? (0, a.jsx)('img', {
                                           src: T,
                                           alt: '',
@@ -103,11 +103,11 @@ n.Z = function (e) {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
                                         className: _.appName,
-                                        children: h.name
+                                        children: x.name
                                     })
                                 })
                             }),
-                            Z || N
+                            Z || y
                                 ? (0, a.jsxs)('div', {
                                       className: _.infoContainer,
                                       children: [
@@ -116,17 +116,17 @@ n.Z = function (e) {
                                                     className: _.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: S.name
+                                                    children: j.name
                                                 })
                                               : null,
-                                          Z && N
+                                          Z && y
                                               ? (0, a.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
                                                     children: '\u2022'
                                                 })
                                               : null,
-                                          N
+                                          y
                                               ? (0, a.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -140,8 +140,8 @@ n.Z = function (e) {
                                 className: _.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: Z || N ? 2 : 3,
-                                children: null !== (C = null === (v = h.directory_entry) || void 0 === v ? void 0 : v.short_description) && void 0 !== C ? C : h.description
+                                lineClamp: Z || y ? 2 : 3,
+                                children: null !== (C = null === (v = x.directory_entry) || void 0 === v ? void 0 : v.short_description) && void 0 !== C ? C : x.description
                             }),
                             P
                                 ? (0, a.jsx)('div', {

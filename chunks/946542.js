@@ -56,8 +56,8 @@ function f(e) {
     var n, t, l;
     let { applicationId: o, similarApplication: c, onSelectApplication: _, position: v, similarLoadId: f } = e,
         C = (0, d.Z)({ application: c }),
-        h = null === (n = c.categories) || void 0 === n ? void 0 : n[0],
-        x = i.useMemo(
+        x = null === (n = c.categories) || void 0 === n ? void 0 : n[0],
+        h = i.useMemo(
             () =>
                 u.ZP.getApplicationIconURL({
                     id: c.id,
@@ -85,7 +85,7 @@ function f(e) {
                 className: g.appHeader,
                 children: [
                     (0, a.jsx)('img', {
-                        src: x,
+                        src: h,
                         alt: '',
                         className: g.avatar,
                         height: 48,
@@ -107,12 +107,12 @@ function f(e) {
                                     children: c.name
                                 })
                             }),
-                            null != h
+                            null != x
                                 ? (0, a.jsx)(r.Text, {
                                       className: g.appCategory,
                                       variant: 'text-xs/medium',
                                       color: 'text-muted',
-                                      children: h.name
+                                      children: x.name
                                   })
                                 : null
                         ]

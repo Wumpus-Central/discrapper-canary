@@ -43,7 +43,7 @@ function C(e) {
           ? (0, a.jsxs)(a.Fragment, {
                 children: [
                     C
-                        ? (0, a.jsx)(h, {
+                        ? (0, a.jsx)(x, {
                               isHovered: t,
                               url: v,
                               animatedUrl: void 0
@@ -53,7 +53,7 @@ function C(e) {
                               className: l()(g.bannerImage, g.bannerContent),
                               muted: !0
                           }),
-                    (0, a.jsx)(x, {
+                    (0, a.jsx)(h, {
                         isHovered: t,
                         url: _,
                         isVideo: !0
@@ -61,14 +61,14 @@ function C(e) {
                 ]
             })
           : C
-            ? (0, a.jsx)(h, {
+            ? (0, a.jsx)(x, {
                   isHovered: t,
                   url: v,
                   animatedUrl: f
               })
             : (0, a.jsx)(b, { iconURL: s });
 }
-function h(e) {
+function x(e) {
     let { isHovered: n, url: t, animatedUrl: r } = e,
         [o, s] = i.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
@@ -80,7 +80,7 @@ function h(e) {
                 onLoad: () => s(!0)
             }),
             null != r
-                ? (0, a.jsx)(x, {
+                ? (0, a.jsx)(h, {
                       isHovered: n,
                       url: r,
                       isVideo: !1
@@ -89,7 +89,7 @@ function h(e) {
         ]
     });
 }
-function x(e) {
+function h(e) {
     let { isHovered: n, url: t, isVideo: r } = e,
         [o, s] = i.useState(!1),
         [c, d] = i.useState(n);
@@ -137,9 +137,9 @@ n.Z = function (e) {
             d(!0);
         }, []),
         _ = i.useCallback(() => d(!1), []),
-        x = (0, u.ye)(n),
+        h = (0, u.ye)(n),
         I = n.bot,
-        { botBannerUrl: S, botBannerUrlAnimated: j } = i.useMemo(
+        { botBannerUrl: j, botBannerUrlAnimated: S } = i.useMemo(
             () =>
                 (null == I ? void 0 : I.id) == null || (null == I ? void 0 : I.banner) == null
                     ? {}
@@ -169,18 +169,18 @@ n.Z = function (e) {
         onMouseLeave: _,
         onBlur: _,
         children:
-            'card' === t && x
+            'card' === t && h
                 ? (0, a.jsx)(C, {
                       application: n,
                       isHovered: c,
-                      botBannerUrl: null == S ? void 0 : S,
-                      botBannerUrlAnimated: null == j ? void 0 : j
+                      botBannerUrl: null == j ? void 0 : j,
+                      botBannerUrlAnimated: null == S ? void 0 : S
                   })
-                : null != S
-                  ? (0, a.jsx)(h, {
+                : null != j
+                  ? (0, a.jsx)(x, {
                         isHovered: c,
-                        url: S,
-                        animatedUrl: j
+                        url: j,
+                        animatedUrl: S
                     })
                   : (0, a.jsx)(b, { iconURL: r })
     });

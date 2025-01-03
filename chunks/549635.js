@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(378409),
     s = t(124347),
     u = t(80966),
@@ -25,7 +25,7 @@ function S(e) {
 }
 n.Z = r.memo(function (e) {
     let n,
-        { media: t, obscured: r = !1, onContextMenu: l } = e,
+        { media: t, obscured: r = !1, onContextMenu: a } = e,
         { width: p, height: x, url: C, proxyUrl: I, alt: y, type: v, maxWidth: O, maxHeight: b, ...M } = t,
         { zoomed: L, setZoomed: A } = (0, E.Y)(),
         T = (function (e, n, t) {
@@ -60,7 +60,7 @@ n.Z = r.memo(function (e) {
             renderLinkComponent: n,
             autoPlay: !r,
             alt: y,
-            onContextMenu: l
+            onContextMenu: a
         });
     }
     return (
@@ -79,12 +79,12 @@ n.Z = r.memo(function (e) {
                       autoPlay: !r,
                       alt: y,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
-                      onContextMenu: l
+                      onContextMenu: a
                   })
                 : (0, i.jsx)('img', {
                       src: T,
                       alt: y,
-                      onContextMenu: l,
+                      onContextMenu: a,
                       className: g.dimensionlessImage
                   })),
         null != n
@@ -94,7 +94,7 @@ n.Z = r.memo(function (e) {
                   maxWidth: R,
                   maxHeight: j,
                   active: L,
-                  className: a()(g.wrapper, { [g.zoomed]: L }),
+                  className: l()(g.wrapper, { [g.zoomed]: L }),
                   onClick: () => {
                       A(!L), (0, _.yg)(L ? _.uG.ZOOM_OUT_IMAGE_PRESSED : _.uG.ZOOM_IN_IMAGE_PRESSED);
                   },

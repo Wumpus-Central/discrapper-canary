@@ -15,8 +15,8 @@ var a = t(200651),
     v = t(797908),
     f = t(292191),
     C = t(981631),
-    h = t(318708);
-function x(e) {
+    x = t(318708);
+function h(e) {
     let { collection: n, index: t, onSelectApplication: r } = e,
         o = (function (e) {
             let { collectionId: n, index: t } = e,
@@ -54,13 +54,13 @@ function x(e) {
         ref: o,
         children: [
             (0, a.jsx)(c.Heading, {
-                className: l()(h.sectionTitle, { [h.titleExtraPadding]: 0 === t }),
+                className: l()(x.sectionTitle, { [x.titleExtraPadding]: 0 === t }),
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: n.title
             }),
             (0, a.jsx)('div', {
-                className: h.content,
+                className: x.content,
                 children: n.application_directory_collection_items.map((e, n) => {
                     let { id: t, application: i } = e;
                     return null == i
@@ -90,8 +90,8 @@ n.Z = function (e) {
     let c = i.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== o.o.GALLERY)), [l]);
     return r === m.M.ERROR
         ? (0, a.jsx)('div', {
-              className: h.errorContainer,
-              children: (0, a.jsx)(f.Z, { className: h.error })
+              className: x.errorContainer,
+              children: (0, a.jsx)(f.Z, { className: x.error })
           })
         : (0, a.jsx)(p.Z, {
               loading: r === m.M.FETCHING,
@@ -100,7 +100,7 @@ n.Z = function (e) {
                       ? void 0
                       : c.map((e, t) =>
                             (0, a.jsx)(
-                                x,
+                                h,
                                 {
                                     collection: e,
                                     index: t,

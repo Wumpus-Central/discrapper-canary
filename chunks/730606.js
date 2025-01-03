@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(299608),
     s = t.n(o),
     u = t(484957),
@@ -33,7 +33,7 @@ function O(e) {
     return null == n || 0 === n || null == t || 0 === t;
 }
 function b(e) {
-    let { children: n, isObscured: t, src: l } = e,
+    let { children: n, isObscured: t, src: a } = e,
         [o, s] = r.useState(!1),
         u = r.useCallback(() => {
             s((e) => !e);
@@ -52,20 +52,20 @@ function b(e) {
                       children: (e) =>
                           (0, i.jsx)(i.Fragment, {
                               children: (0, i.jsx)('div', {
-                                  className: a()(y.obscureWrapper, { [y.obscure]: e }),
+                                  className: l()(y.obscureWrapper, { [y.obscure]: e }),
                                   children: n(e)
                               })
                           })
                   },
-                  l
+                  a
               )
           })
         : (0, i.jsx)(i.Fragment, { children: n(!1) });
 }
 function M(e) {
-    let { items: n, onIndexChange: t, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: d = !1 } = e,
-        [m, v] = r.useState(l),
-        M = r.useRef(l),
+    let { items: n, onIndexChange: t, startIndex: a = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: d = !1 } = e,
+        [m, v] = r.useState(a),
+        M = r.useRef(a),
         { zoomed: L, setZoomed: A } = (0, E.Y)();
     r.useEffect(() => {
         var e, t;
@@ -117,7 +117,7 @@ function M(e) {
                     ? (0, i.jsx)(g.ZP, {
                           children: (e) =>
                               (0, i.jsx)(c.CircleIconButton, {
-                                  className: a()(y.navPrev, e),
+                                  className: l()(y.navPrev, e),
                                   size: c.CircleIconButtonSizes.SIZE_36,
                                   onClick: (e) => {
                                       e.stopPropagation(), p.S.dispatch(C.CkL.MODAL_CAROUSEL_PREV);
@@ -141,7 +141,7 @@ function M(e) {
                                     (0, i.jsx)(i.Fragment, {
                                         children: (0, i.jsx)('div', {
                                             onClick: (e) => e.stopPropagation(),
-                                            className: a()(y.innerWrapper, { [y.shifted]: L && D }),
+                                            className: l()(y.innerWrapper, { [y.shifted]: L && D }),
                                             children: (0, i.jsx)(x.Z, {
                                                 media: R,
                                                 obscured: e,
@@ -166,7 +166,7 @@ function M(e) {
                                           className: e
                                       }),
                                       (0, i.jsx)(c.CircleIconButton, {
-                                          className: a()(y.navNext, e),
+                                          className: l()(y.navNext, e),
                                           size: c.CircleIconButtonSizes.SIZE_36,
                                           onClick: (e) => {
                                               e.stopPropagation(), p.S.dispatch(C.CkL.MODAL_CAROUSEL_NEXT);

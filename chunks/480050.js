@@ -1,12 +1,12 @@
 t(47120);
 var i = t(200651),
     r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(956664),
     s = t(981656);
 n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: l, className: u, style: c, width: d, height: h, maxWidth: f, maxHeight: m } = e,
+    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: f, maxHeight: m } = e,
         p = (0, r.useRef)(null),
         [_, E] = (0, r.useState)(!1),
         [g, S] = (0, r.useState)({
@@ -52,12 +52,12 @@ n.Z = r.memo(function (e) {
         O = (0, r.useCallback)(
             (e) => {
                 if (!t) {
-                    0 === e.button && (null == l || l(e));
+                    0 === e.button && (null == a || a(e));
                     return;
                 }
-                (e.clientX - g.x) ** 2 + (e.clientY - g.y) ** 2 < 400 && (null == l || l(e)), E(!1);
+                (e.clientX - g.x) ** 2 + (e.clientY - g.y) ** 2 < 400 && (null == a || a(e)), E(!1);
             },
-            [t, l, g]
+            [t, a, g]
         ),
         b = (0, r.useCallback)(
             (e) => {
@@ -67,13 +67,13 @@ n.Z = r.memo(function (e) {
                 if (null == t) return;
                 let [i, r] = [t.width > window.innerWidth, t.height > window.innerHeight];
                 if (!i && !r) return;
-                let { x: l, y: a } = I,
+                let { x: a, y: l } = I,
                     [o, s] = [i ? e.clientX - x.x : 0, r ? e.clientY - x.y : 0],
-                    [u, c] = [o - l, s - a];
+                    [u, c] = [o - a, s - l];
                 i && u + t.x >= 0 && (o -= u + t.x), r && c + t.y >= 0 && (s -= c + t.y);
                 let [d, h] = [t.x + t.width, t.y + t.height];
-                i && u + d <= window.innerWidth && (o = window.innerWidth + l - d),
-                    r && c + h <= window.innerHeight && (s = window.innerHeight + a - h),
+                i && u + d <= window.innerWidth && (o = window.innerWidth + a - d),
+                    r && c + h <= window.innerHeight && (s = window.innerHeight + l - h),
                     y({
                         x: o,
                         y: s
@@ -94,7 +94,7 @@ n.Z = r.memo(function (e) {
         onMouseUp: O,
         onMouseMove: b,
         onMouseLeave: () => E(!1),
-        className: a()(u, s.wrapper, {
+        className: l()(u, s.wrapper, {
             [s.panning]: t && _,
             [s.pannable]: t && L()
         }),
