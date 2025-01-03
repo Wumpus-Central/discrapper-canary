@@ -136,7 +136,7 @@ class m extends p {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var n, r, i, a, s, o, l, u, c, d, f, _, h, p, g, E, v, I, T, b, y, S, A, N, C, R, O, D, L, x, w, P, M, k, U, B, G, Z, F;
+        var n, r, i, a, s, o, l, u, c, d, f, _, h, p, g, E, v, I, T, b, y, S, A, N, C, R, O, D, L, x, w, P, M, k, U, B, G, Z, F, V;
         return new m({
             id: null !== (n = e.id) && void 0 !== n ? n : this.id,
             name: null !== (r = e.name) && void 0 !== r ? r : this.name,
@@ -176,7 +176,8 @@ class m extends p {
             privacyPolicyUrl: null !== (B = e.privacyPolicyUrl) && void 0 !== B ? B : this.privacyPolicyUrl,
             isVerified: null !== (G = e.isVerified) && void 0 !== G ? G : this.isVerified,
             customInstallUrl: null !== (Z = e.customInstallUrl) && void 0 !== Z ? Z : this.customInstallUrl,
-            installParams: null !== (F = e.installParams) && void 0 !== F ? F : this.installParams
+            installParams: null !== (F = e.installParams) && void 0 !== F ? F : this.installParams,
+            isDiscoverable: null !== (V = e.isDiscoverable) && void 0 !== V ? V : this.isDiscoverable
         });
     }
     getMaxParticipants() {
