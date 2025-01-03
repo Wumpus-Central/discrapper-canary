@@ -20,11 +20,11 @@ var a = r(200651),
     E = r(750881),
     v = r(194082),
     I = r(318374),
-    T = r(102172),
-    b = r(359110),
-    y = r(769654),
-    S = r(922482),
-    A = r(543882),
+    T = r(449605),
+    b = r(102172),
+    y = r(359110),
+    S = r(769654),
+    A = r(922482),
     N = r(592125),
     C = r(430824),
     R = r(496675),
@@ -78,25 +78,9 @@ function q(e) {
                 : []
         ),
         eo = (0, u.e7)([O.Z], () => O.Z.findActivity(n.id, (e) => (0, h.Z)(e) && !(0, p.Z)(e))),
-        [el, eu] = (0, T.wq)(ea),
-        {
-            url: ec,
-            isLoading: ed,
-            canSeePreview: ef
-        } = (0, u.cj)([R.Z, A.Z], () => {
-            let e = null != ea && R.Z.canBasicChannel(j.S7T.CONNECT, ea);
-            return e
-                ? {
-                      url: A.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
-                      isLoading: A.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
-                      canSeePreview: e
-                  }
-                : {
-                      url: null,
-                      isLoading: !1,
-                      canSeePreview: e
-                  };
-        }),
+        [el, eu] = (0, b.wq)(ea),
+        { previewUrl: ec, isLoading: ed } = (0, T.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
+        ef = (0, u.e7)([R.Z], () => null != ea && R.Z.canBasicChannel(j.S7T.CONNECT, ea)),
         e_ = (0, u.e7)([D.Z], () => D.Z.getRelationshipType(n.id));
     s.useEffect(() => {
         if (ee) {
@@ -139,7 +123,7 @@ function q(e) {
                                             className: W.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, T.P9)(eu)
+                                            children: (0, b.P9)(eu)
                                         }),
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
@@ -165,7 +149,7 @@ function q(e) {
                                             className: W.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, T.P9)(eu)
+                                            children: (0, b.P9)(eu)
                                         }),
                                         (0, a.jsx)(c.ClydeIcon, {
                                             size: 'xs',
@@ -182,10 +166,10 @@ function q(e) {
             let e = ea.isGuildStageVoice(),
                 r = e ? c.StageIcon : c.VoiceNormalIcon,
                 i = () => {
-                    null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(ea) : (d.default.selectVoiceChannel(ea.id), (0, b.Kh)(ea.id)), null == q || q();
+                    null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, A.Cq)(ea) : (d.default.selectVoiceChannel(ea.id), (0, y.Kh)(ea.id)), null == q || q();
                 },
                 s = () => {
-                    en({ action: 'OPEN_VOICE_GUILD' }), (0, y.X)(ei.id), null == q || q();
+                    en({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ei.id), null == q || q();
                 };
             return (0, a.jsxs)('div', {
                 className: Y.details,

@@ -9,9 +9,9 @@ var l = t(200651),
     o = t.n(r),
     a = t(442837),
     u = t(481060),
-    d = t(543882),
     s = t(592125),
-    c = t(496675),
+    d = t(496675),
+    c = t(449605),
     p = t(981631),
     f = t(388032),
     v = t(680809);
@@ -39,17 +39,14 @@ function m(e) {
 function h(e) {
     let { stream: n, className: t, noText: r = !1 } = e,
         o = (0, a.e7)([s.Z], () => s.Z.getBasicChannel(n.channelId)),
-        u = (0, a.e7)([c.Z], () => null != o && c.Z.canBasicChannel(p.S7T.CONNECT, o)),
-        { url: h, isLoading: g } = (0, a.cj)([d.Z], () => ({
-            url: u ? d.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
-            isLoading: u && d.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
-        })),
+        u = (0, a.e7)([d.Z], () => null != o && d.Z.canBasicChannel(p.S7T.CONNECT, o)),
+        { previewUrl: h, isLoading: g } = (0, c.Z)(n.guildId, n.channelId, n.ownerId),
         Z = i.useRef(g ? null : h);
     i.useEffect(() => {
         !g && (Z.current = h);
     }, [h, g]);
-    let P = null == h || g ? Z.current : h;
-    return null == P
+    let x = null == h || g ? Z.current : h;
+    return null == x
         ? (0, l.jsx)(m, {
               className: t,
               isLoading: g,
@@ -59,7 +56,7 @@ function h(e) {
         : (0, l.jsx)('div', {
               className: t,
               children: (0, l.jsx)('img', {
-                  src: P,
+                  src: x,
                   alt: '',
                   className: v.image
               })

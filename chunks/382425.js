@@ -20,11 +20,11 @@ var a = r(200651),
     E = r(750881),
     v = r(194082),
     I = r(318374),
-    T = r(102172),
-    b = r(359110),
-    y = r(769654),
-    S = r(922482),
-    A = r(543882),
+    T = r(449605),
+    b = r(102172),
+    y = r(359110),
+    S = r(769654),
+    A = r(922482),
     N = r(592125),
     C = r(430824),
     R = r(496675),
@@ -83,25 +83,9 @@ function $(e) {
                 : []
         ),
         eh = (0, u.e7)([O.Z], () => O.Z.findActivity(n.id, (e) => (0, h.Z)(e) && !(0, p.Z)(e))),
-        [ep, em] = (0, T.wq)(ef),
-        {
-            url: eg,
-            isLoading: eE,
-            canSeePreview: ev
-        } = (0, u.cj)([R.Z, A.Z], () => {
-            let e = null != ef && R.Z.canBasicChannel(K.S7T.CONNECT, ef);
-            return e
-                ? {
-                      url: A.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
-                      isLoading: A.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
-                      canSeePreview: e
-                  }
-                : {
-                      url: null,
-                      isLoading: !1,
-                      canSeePreview: e
-                  };
-        }),
+        [ep, em] = (0, b.wq)(ef),
+        { previewUrl: eg, isLoading: eE } = (0, T.Z)(i.guildId, i.channelId, i.ownerId),
+        ev = (0, u.e7)([R.Z], () => null != ef && R.Z.canBasicChannel(K.S7T.CONNECT, ef)),
         eI = (0, u.e7)([D.Z], () => D.Z.getRelationshipType(n.id));
     s.useEffect(() => {
         if (eo) {
@@ -144,7 +128,7 @@ function $(e) {
                                             className: Q.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, T.P9)(em)
+                                            children: (0, b.P9)(em)
                                         }),
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
@@ -170,7 +154,7 @@ function $(e) {
                                             className: Q.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: (0, T.P9)(em)
+                                            children: (0, b.P9)(em)
                                         }),
                                         (0, a.jsx)(c.ClydeIcon, {
                                             size: 'xs',
@@ -187,10 +171,10 @@ function $(e) {
             let e = ef.isGuildStageVoice(),
                 r = e ? c.StageIcon : c.VoiceNormalIcon,
                 i = () => {
-                    null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(ef) : (d.default.selectVoiceChannel(ef.id), (0, b.Kh)(ef.id)), null == $ || $();
+                    null == eu || eu({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, A.Cq)(ef) : (d.default.selectVoiceChannel(ef.id), (0, y.Kh)(ef.id)), null == $ || $();
                 },
                 s = () => {
-                    eu({ action: 'OPEN_VOICE_GUILD' }), (0, y.X)(ed.id), null == $ || $();
+                    eu({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ed.id), null == $ || $();
                 };
             return (0, a.jsxs)('div', {
                 className: q.details,

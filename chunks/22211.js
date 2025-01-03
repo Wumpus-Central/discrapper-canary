@@ -1,20 +1,19 @@
 r.d(n, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var i = r(442837),
     a = r(661869),
     s = r(387343),
-    o = r(543882),
+    o = r(449605),
     l = r(199902),
     u = r(592125),
     c = r(496675),
     d = r(158776),
     f = r(979651),
-    _ = r(561308),
-    h = r(231338);
-function p(e) {
+    _ = r(561308);
+function h(e) {
     let n = (0, i.e7)(
             [f.Z, u.Z, c.Z],
             () => {
@@ -27,26 +26,19 @@ function p(e) {
             [e]
         ),
         r = (0, i.e7)([d.Z], () => d.Z.getPrimaryActivity(e.author_id, null == n ? void 0 : n.guild_id), [n, e]),
-        { streamPreviewUrl: p, stream: m } = (0, i.cj)(
-            [l.Z, c.Z, o.Z],
+        h = (0, i.e7)(
+            [l.Z],
             () => {
-                let r;
-                if (null == n) return {};
-                let i = l.Z.getAnyStreamForUser(e.author_id);
-                return null == i
-                    ? {}
-                    : (c.Z.canBasicChannel(h.S7.CONNECT, n) && (null == i ? void 0 : i.channelId) === n.id && (r = o.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId)),
-                      {
-                          stream: i,
-                          streamPreviewUrl: r
-                      });
+                var n;
+                return null !== (n = l.Z.getAnyStreamForUser(e.author_id)) && void 0 !== n ? n : void 0;
             },
-            [n, e]
-        );
+            [e]
+        ),
+        { previewUrl: p } = (0, o.Z)(null == h ? void 0 : h.guildId, null == h ? void 0 : h.channelId, null == h ? void 0 : h.ownerId);
     return {
         channel: n,
         activity: r,
         streamPreviewUrl: p,
-        stream: m
+        stream: h
     };
 }
