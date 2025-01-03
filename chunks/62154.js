@@ -62,7 +62,10 @@ function j(e) {
                         className: g.friendRequestBanner
                     })
                 }),
-            (0, i.jsx)(m.Z, { user: t }),
+            (0, i.jsx)(m.Z, {
+                user: t,
+                source: m.t.MODAL
+            }),
             L &&
                 A &&
                 (0, i.jsx)(d.Z, {

@@ -77,7 +77,10 @@ function O(e) {
                         channelId: w
                     })
                 }),
-            (0, i.jsx)(E.Z, { user: n }),
+            (0, i.jsx)(E.Z, {
+                user: n,
+                source: E.t.POPOUT
+            }),
             !B &&
                 (0, i.jsx)(A.Z, {
                     user: n,

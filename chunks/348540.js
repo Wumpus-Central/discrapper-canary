@@ -66,7 +66,10 @@ function S(e) {
                         channelId: T.id
                     })
                 }),
-            (0, i.jsx)(C.Z, { user: t }),
+            (0, i.jsx)(C.Z, {
+                user: t,
+                source: C.t.PANEL
+            }),
             t.isProvisional && (0, i.jsx)(r.Z, { look: 'profile' }),
             (0, i.jsx)(p.Z, {
                 user: t,

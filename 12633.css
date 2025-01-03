@@ -32456,11 +32456,15 @@ img.thumbnail_c64476 {
 }
 
 .container_effd71 {
-    padding: var(--spacing-12);
+    padding: var(--spacing-16);
     gap: var(--spacing-8);
     display: flex;
     flex-direction: row;
     align-items: center
+}
+
+.panel_effd71 {
+    padding: var(--spacing-12)
 }
 
 .baseAvatar_e3a0ec {
