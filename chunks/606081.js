@@ -3,8 +3,8 @@ var i,
     r,
     l,
     a,
-    o,
     s,
+    o,
     c,
     d,
     u,
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-((s = i || (i = {})).THING = 'Thing'), (s.PERSON = 'Person'), (s.PRODUCT = 'Product'), (s.OFFER = 'Offer'), (s.AGGREGATE_OFFER = 'AggregateOffer'), (s.RATING = 'Rating'), (s.AGGREGATE_RATING = 'AggregateRating'), (s.ORGANIZATION = 'Organization'), (s.ITEM_PAGE = 'ItemPage'), (s.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification'), (s.QUANTITATIVE_VALUE = 'QuantitativeValue');
+((o = i || (i = {})).THING = 'Thing'), (o.PERSON = 'Person'), (o.PRODUCT = 'Product'), (o.OFFER = 'Offer'), (o.AGGREGATE_OFFER = 'AggregateOffer'), (o.RATING = 'Rating'), (o.AGGREGATE_RATING = 'AggregateRating'), (o.ORGANIZATION = 'Organization'), (o.ITEM_PAGE = 'ItemPage'), (o.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification'), (o.QUANTITATIVE_VALUE = 'QuantitativeValue');
 function g(e, t) {
     return {
         '@type': e,
@@ -65,7 +65,7 @@ function I(e) {
     return g('QuantitativeValue', e);
 }
 ((c = r || (r = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = l || (l = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (E.ItemConditions = r), (E.ItemAvailability = l), ((u = a || (a = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (I.UnitCodes = a);
-class C extends (o = m.Component) {
+class C extends (s = m.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify({

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(481060),
     l = n(570140),
     a = n(317770),
-    o = n(19780),
-    s = n(594174),
+    s = n(19780),
+    o = n(594174),
     c = n(979651),
     d = n(960048),
     u = n(699910),
@@ -35,15 +35,15 @@ class g extends a.Z {
             m(this, 'timeout', null),
             m(this, 'handleMaybeOpenModal', () => {
                 var e, t;
-                let n = s.default.getCurrentUser(),
+                let n = o.default.getCurrentUser(),
                     i = null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
                     r = null == n ? void 0 : null === (t = n.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
                 if ((('1251324401459265537' === i || '1252353273256480818' === i) && (r = 1726106879), null != r && !!(0, u.v)('CollectiblesExpiryManager'))) !this.maybeOpenModal() && (null != this.timeout && clearTimeout(this.timeout), (this.timeout = setTimeout(this.maybeOpenModal, 1000 * r - Date.now() + 1000)));
             }),
             m(this, 'maybeOpenModal', () => {
                 var e, t, l, a, u;
-                let m = s.default.getCurrentUser(),
-                    g = o.Z.getState(),
+                let m = o.default.getCurrentUser(),
+                    g = s.Z.getState(),
                     f = null == m ? void 0 : null === (e = m.avatarDecoration) || void 0 === e ? void 0 : e.skuId,
                     _ = null == m ? void 0 : null === (t = m.avatarDecoration) || void 0 === t ? void 0 : t.expiresAt;
                 if ((('1251324401459265537' === f || '1252353273256480818' === f) && (_ = 1726106879), null == m)) return !1;

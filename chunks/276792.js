@@ -8,8 +8,8 @@ n(192379);
 var r = n(704215),
     l = n(740111),
     a = n(481060),
-    o = n(963249),
-    s = n(703656),
+    s = n(963249),
+    o = n(703656),
     c = n(626135),
     d = n(63063),
     u = n(823188),
@@ -20,18 +20,18 @@ var r = n(704215),
     f = n(74316);
 function _(e) {
     var t, n;
-    let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
-        S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
-        { onClose: N } = E,
+    let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: N } = e,
+        v = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
+        { onClose: S } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        x =
+        A =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
-                      (0, s.uL)(m.Z5c.APPLICATION_STORE), N();
+                      (0, o.uL)(m.Z5c.APPLICATION_STORE), S();
                   }
                 : () =>
-                      (0, o.Z)({
+                      (0, s.Z)({
                           subscriptionTier: h.Si.TIER_2,
                           analyticsLocations: I,
                           analyticsObject: {
@@ -40,10 +40,10 @@ function _(e) {
                               objectType: m.Qqv.TIER_2
                           },
                           onClose: (e) => {
-                              e && N();
+                              e && S();
                           }
                       }),
-        A =
+        Z =
             '' !== _.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
@@ -57,22 +57,22 @@ function _(e) {
                           ]
                       })
                 : void 0,
-        Z = {
+        x = {
             type: 'video',
-            src: v ? _.heroArtVideoLinkLightTheme : _.videoLink
+            src: N ? _.heroArtVideoLinkLightTheme : _.videoLink
         };
     null != _.heroArtVideoSubtitles &&
-        (Z.subtitles = _.heroArtVideoSubtitles.map((e) => ({
+        (x.subtitles = _.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
         ('' !== _.heroArtImageLinkDarkTheme || '' !== _.heroArtImageLinkLightTheme) &&
-            (Z = {
+            (x = {
                 type: 'image',
-                src: v ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
+                src: N ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
             });
-    let L = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let L = N ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         P =
             '' !== _.modalTopPill
                 ? () =>
@@ -87,16 +87,16 @@ function _(e) {
         header: _.header,
         modalTopExtra: P,
         subHeader: _.subheader,
-        subHeaderExtra: A,
+        subHeaderExtra: Z,
         body: _.body,
-        heroArt: Z,
+        heroArt: x,
         featureCards: _.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: v ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: S,
+        changeLogId: v,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(a.ShinyButton, {
@@ -106,12 +106,12 @@ function _(e) {
                 size: a.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: S,
+                        change_log_id: v,
                         cta_type: b,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: S
+                        target: v
                     }),
-                        x();
+                        A();
                 },
                 children: [
                     (0, i.jsx)('img', {

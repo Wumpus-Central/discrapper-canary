@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(55935),
+    s = n(481060),
+    o = n(55935),
     c = n(981631),
     d = n(388032),
     u = n(409367);
@@ -52,39 +52,39 @@ class p extends r.Component {
         if (e.type === c.AzA.RECENT_RELEASE_DATE)
             return (0, i.jsx)(m, {
                 className: t,
-                circle: (0, i.jsx)(h, { IconComponent: o.CalendarIcon }),
+                circle: (0, i.jsx)(h, { IconComponent: s.CalendarIcon }),
                 smallHeader: d.intl.string(d.t.u81aYW),
-                text: (0, s.vc)(e.releaseDate, 'LL')
+                text: (0, o.vc)(e.releaseDate, 'LL')
             });
         if (e.type === c.AzA.RELEASE_DATE)
             return (0, i.jsx)(m, {
                 className: t,
-                circle: (0, i.jsx)(h, { IconComponent: o.CalendarIcon }),
+                circle: (0, i.jsx)(h, { IconComponent: s.CalendarIcon }),
                 smallHeader: d.intl.string(d.t.qpwaNT),
-                text: (0, s.vc)(e.releaseDate, 'LL')
+                text: (0, o.vc)(e.releaseDate, 'LL')
             });
         if (e.type === c.AzA.EARLY_ACCESS)
             return null != e.releaseDate
                 ? (0, i.jsx)(m, {
                       className: t,
                       circle: (0, i.jsx)(h, {
-                          IconComponent: o.LockUnlockedIcon,
+                          IconComponent: s.LockUnlockedIcon,
                           className: u.earlyAccess
                       }),
                       smallHeader: d.intl.string(d.t.HYys0t),
-                      text: (0, s.vc)(e.releaseDate, 'LL')
+                      text: (0, o.vc)(e.releaseDate, 'LL')
                   })
                 : (0, i.jsx)(m, {
                       className: t,
                       circle: (0, i.jsx)(h, {
-                          IconComponent: o.LockUnlockedIcon,
+                          IconComponent: s.LockUnlockedIcon,
                           className: u.earlyAccess
                       }),
                       text: d.intl.string(d.t.HYys0t)
                   });
         return e.type === c.AzA.FLAVOR_TEXT
             ? (0, i.jsx)(m, {
-                  circle: (0, i.jsx)(h, { IconComponent: o.CheckmarkLargeIcon }),
+                  circle: (0, i.jsx)(h, { IconComponent: s.CheckmarkLargeIcon }),
                   text: e.flavorText,
                   className: t
               })
@@ -92,7 +92,7 @@ class p extends r.Component {
               ? (0, i.jsx)(m, {
                     className: t,
                     circle: (0, i.jsx)(h, {
-                        IconComponent: o.NitroWheelIcon,
+                        IconComponent: s.NitroWheelIcon,
                         className: u.premiumCircle
                     }),
                     text: d.intl.string(d.t.R9SwVl)

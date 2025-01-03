@@ -2,8 +2,8 @@ var i,
     r = n(442837),
     l = n(570140),
     a = n(267642),
-    o = n(981631);
-function s(e, t, n) {
+    s = n(981631);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,9 +35,9 @@ class d extends (i = r.ZP.PersistedStore) {
         return c;
     }
 }
-s(d, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
-    s(d, 'persistKey', 'PremiumGuildGracePeriodNoticeStore'),
-    s(d, 'migrations', [
+o(d, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
+    o(d, 'persistKey', 'PremiumGuildGracePeriodNoticeStore'),
+    o(d, 'migrations', [
         (e) => ({
             ...e,
             lastDismissedGracePeriods: null != e ? { ...e.lastDismissedGracePeriods } : {},
@@ -48,7 +48,7 @@ s(d, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
         GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
             let { guildId: t, appliedBoosts: n } = e,
                 i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null,
-                r = null != i && Date.now() - i <= o.Dge,
+                r = null != i && Date.now() - i <= s.Dge,
                 l = null != n && !r && (0, a.Vx)(n, t);
             c = {
                 ...c,

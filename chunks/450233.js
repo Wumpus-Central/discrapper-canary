@@ -1,14 +1,14 @@
 n.d(t, {
     G: function () {
-        return o;
+        return s;
     }
 });
 var i,
     r,
     l,
     a,
-    o,
     s,
+    o,
     c = n(200651),
     d = n(192379),
     u = n(442837),
@@ -16,8 +16,8 @@ var i,
     m = n(16084),
     p = n(855775),
     g = n(388032);
-((i = o || (o = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
-class f extends (s = d.PureComponent) {
+((i = s || (s = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
+class f extends (o = d.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(512969),
     a = n(442837),
-    o = n(493683),
-    s = n(112724),
+    s = n(493683),
+    o = n(112724),
     c = n(108427),
     d = n(184107),
     u = n(410575),
@@ -48,7 +48,7 @@ class _ extends r.Component {
         super(...e),
             f(this, 'fetchStoreListing', (e) => {
                 let { channel: t, inputSkuId: n } = this.props;
-                return null != e ? o.Z.fetchChannelStoreListing(t.id, e) : null != n ? o.Z.fetchChannelStoreListing(t.id, n) : o.Z.fetchChannelStoreListing(t.id);
+                return null != e ? s.Z.fetchChannelStoreListing(t.id, e) : null != n ? s.Z.fetchChannelStoreListing(t.id, n) : s.Z.fetchChannelStoreListing(t.id);
             }),
             f(this, 'renderApplicationListing', (e) => {
                 let { location: t } = e,
@@ -63,7 +63,7 @@ class _ extends r.Component {
             });
     }
 }
-t.Z = (0, s.Z)(
+t.Z = (0, o.Z)(
     a.ZP.connectStores([d.Z], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : d.Z.getSkuIdForChannel(t.id) };

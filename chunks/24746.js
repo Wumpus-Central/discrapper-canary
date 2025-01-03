@@ -1,127 +1,127 @@
-n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(477660),
-    s = n.n(o),
-    c = n(481060),
-    d = n(939893),
-    u = n(241209),
-    h = n(388032),
-    m = n(285136);
-let p = s().parserFor(d.Z),
+t(47120);
+var a = t(200651),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
+    o = t(477660),
+    s = t.n(o),
+    c = t(481060),
+    d = t(939893),
+    u = t(241209),
+    m = t(388032),
+    p = t(285136);
+let _ = s().parserFor(d.Z),
     g = s().reactFor(s().ruleOutput(d.Z, 'react'));
-function f(e) {
-    let { description: t, supportsMarkdown: n } = e,
-        [l, o] = r.useState(!1),
-        s = r.useRef(null);
-    r.useEffect(() => {
+function v(e) {
+    let { description: n, supportsMarkdown: t } = e,
+        [r, o] = i.useState(!1),
+        s = i.useRef(null);
+    i.useEffect(() => {
         if (null == s.current) return;
         let e = new ResizeObserver(() => {
-            var e, t, n, i;
-            let r = null !== (n = null === (e = s.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== n ? n : 0;
-            o(r - (null !== (i = null === (t = s.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== i ? i : 0) > 1);
+            var e, n, t, a;
+            let i = null !== (t = null === (e = s.current) || void 0 === e ? void 0 : e.scrollHeight) && void 0 !== t ? t : 0;
+            o(i - (null !== (a = null === (n = s.current) || void 0 === n ? void 0 : n.clientHeight) && void 0 !== a ? a : 0) > 1);
         });
         return e.observe(s.current), () => e.disconnect();
     }, []);
-    let [d, h] = r.useState(!1),
-        f = r.useCallback(() => {
-            h((e) => !e);
+    let [d, m] = i.useState(!1),
+        v = i.useCallback(() => {
+            m((e) => !e);
         }, []);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 ref: s,
-                className: a()({
-                    [m.descriptionClamp]: !d,
-                    [m.descriptionClampSafari]: !d && 'Safari' === platform.name
+                className: l()({
+                    [p.descriptionClamp]: !d,
+                    [p.descriptionClampSafari]: !d && 'Safari' === platform.name
                 }),
-                children: n
-                    ? (0, i.jsx)(u.Z, {
-                          className: m.detailedDescription,
-                          parser: p,
+                children: t
+                    ? (0, a.jsx)(u.Z, {
+                          className: p.detailedDescription,
+                          parser: _,
                           output: g,
                           state: { allowLinks: !0 },
-                          children: t
+                          children: n
                       })
-                    : (0, i.jsx)(c.Text, {
+                    : (0, a.jsx)(c.Text, {
                           variant: 'text-md/normal',
                           color: 'text-normal',
-                          children: t
+                          children: n
                       })
             }),
-            l || d
-                ? (0, i.jsx)(_, {
+            r || d
+                ? (0, a.jsx)(f, {
                       isShowingMore: d,
-                      onToggle: f
+                      onToggle: v
                   })
                 : null
         ]
     });
 }
-function _(e) {
-    let { onToggle: t, isShowingMore: n } = e,
-        l = r.useMemo(
+function f(e) {
+    let { onToggle: n, isShowingMore: t } = e,
+        r = i.useMemo(
             () =>
-                (0, i.jsxs)('div', {
-                    className: m.showMoreContent,
+                (0, a.jsxs)('div', {
+                    className: p.showMoreContent,
                     children: [
-                        (0, i.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: 'text-md/semibold',
                             color: 'interactive-normal',
-                            children: n ? h.intl.string(h.t['vtfc4+']) : h.intl.string(h.t.ZDRyur)
+                            children: t ? m.intl.string(m.t['vtfc4+']) : m.intl.string(m.t.ZDRyur)
                         }),
-                        n
-                            ? (0, i.jsx)(c.ChevronSmallUpIcon, {
+                        t
+                            ? (0, a.jsx)(c.ChevronSmallUpIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: m.showMoreButtonIcon
+                                  className: p.showMoreButtonIcon
                               })
-                            : (0, i.jsx)(c.ChevronSmallDownIcon, {
+                            : (0, a.jsx)(c.ChevronSmallDownIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: m.showMoreButtonIcon
+                                  className: p.showMoreButtonIcon
                               })
                     ]
                 }),
-            [n]
+            [t]
         );
-    return (0, i.jsxs)(c.Clickable, {
-        className: m.showMoreButton,
-        onClick: t,
-        children: [(0, i.jsx)('div', { className: m.divider }), l, (0, i.jsx)('div', { className: m.divider })]
+    return (0, a.jsxs)(c.Clickable, {
+        className: p.showMoreButton,
+        onClick: n,
+        children: [(0, a.jsx)('div', { className: p.divider }), r, (0, a.jsx)('div', { className: p.divider })]
     });
 }
-t.Z = function (e) {
-    var t, n;
-    let { application: l } = e,
-        a = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.detailed_description,
-        o = null === (n = l.directory_entry) || void 0 === n ? void 0 : n.short_description,
-        s = r.useMemo(
+n.Z = function (e) {
+    var n, t;
+    let { application: r } = e,
+        l = null === (n = r.directory_entry) || void 0 === n ? void 0 : n.detailed_description,
+        o = null === (t = r.directory_entry) || void 0 === t ? void 0 : t.short_description,
+        s = i.useMemo(
             () =>
-                null != a && a.length > 0
-                    ? (0, i.jsx)(f, {
-                          description: a,
+                null != l && l.length > 0
+                    ? (0, a.jsx)(v, {
+                          description: l,
                           supportsMarkdown: !0
                       })
                     : null != o && o.length > 0
-                      ? (0, i.jsx)(f, {
+                      ? (0, a.jsx)(v, {
                             description: o,
                             supportsMarkdown: !1
                         })
                       : null,
-            [a, o]
+            [l, o]
         );
     return null == s
         ? null
-        : (0, i.jsxs)('div', {
-              className: m.overviewContainer,
+        : (0, a.jsxs)('div', {
+              className: p.overviewContainer,
               children: [
-                  (0, i.jsx)(c.Heading, {
+                  (0, a.jsx)(c.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: h.intl.string(h.t.txraKS)
+                      children: m.intl.string(m.t.txraKS)
                   }),
                   s
               ]

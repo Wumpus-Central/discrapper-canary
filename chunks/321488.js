@@ -3,8 +3,8 @@ var i,
     l = n(200651);
 n(192379);
 var a = n(120356),
-    o = n.n(a),
-    s = n(873546),
+    s = n.n(a),
+    o = n(873546),
     c = n(481060),
     d = n(423360);
 function u(e) {
@@ -16,11 +16,11 @@ function u(e) {
                 ...e,
                 'aria-label': n,
                 onClick: i,
-                className: o()(d.actionButton, {
+                className: s()(d.actionButton, {
                     [d.actionAccept]: 0 === r,
                     [d.actionDeny]: 1 === r,
                     [d.highlight]: a,
-                    [d.actionButtonMobile]: s.tq
+                    [d.actionButtonMobile]: o.tq
                 }),
                 children: (0, l.jsx)(t, {
                     className: d.icon,

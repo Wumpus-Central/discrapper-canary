@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(325432),
-    s = n(570928),
+    s = n(325432),
+    o = n(570928),
     c = n(600164),
     d = n(579022),
     u = n(391690),
@@ -39,7 +39,7 @@ class I extends r.PureComponent {
     }
     renderViewing() {
         let e, t;
-        let { path: n, label: r, editingPath: l, isDefault: o, metadata: d } = this.props;
+        let { path: n, label: r, editingPath: l, isDefault: s, metadata: d } = this.props;
         return (
             null != d && ((e = null != d.availableKB ? (0, h.BU)(d.availableKB, { useKibibytes: !0 }) : null), (t = null != d.totalKB ? (0, h.BU)(d.totalKB, { useKibibytes: !0 }) : null)),
             (0, i.jsxs)(c.Z, {
@@ -59,7 +59,7 @@ class I extends r.PureComponent {
                                         variant: 'heading-md/semibold',
                                         children: null != r ? r : u.Z.getLabelFromPath(n)
                                     }),
-                                    o
+                                    s
                                         ? (0, i.jsx)('span', {
                                               className: f.defaultIndicator,
                                               children: g.intl.string(g.t.bBvAEB)
@@ -68,7 +68,7 @@ class I extends r.PureComponent {
                                 ]
                             }),
                             null != d && null != e && null != t
-                                ? (0, i.jsx)(s.Z, {
+                                ? (0, i.jsx)(o.Z, {
                                       className: f.rowBody,
                                       hoverText: g.intl.formatToPlainString(g.t.Fxo9e3, {
                                           available: e,
@@ -200,7 +200,7 @@ class I extends r.PureComponent {
                         confirmText: g.intl.string(g.t.iBUzS0),
                         cancelText: g.intl.string(g.t['ETE/oK']),
                         onConfirm: () => {
-                            this.handleStopEditing(), (0, o.iD)(this.props.path);
+                            this.handleStopEditing(), (0, s.iD)(this.props.path);
                         },
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-md/normal',
@@ -210,7 +210,7 @@ class I extends r.PureComponent {
                 );
             }),
             E(this, 'handleSaveChanges', () => {
-                (0, o.Tb)(this.props.path, {
+                (0, s.Tb)(this.props.path, {
                     label: null != this.state.label ? this.state.label : this.props.label,
                     isDefault: null != this.state.isDefault ? this.state.isDefault : this.props.isDefault
                 }),
@@ -226,7 +226,7 @@ class I extends r.PureComponent {
 }
 class C extends r.PureComponent {
     componentDidMount() {
-        (0, o.ec)(
+        (0, s.ec)(
             this.props.installationPaths.map((e) => {
                 let { path: t } = e;
                 return t;
@@ -273,7 +273,7 @@ class C extends r.PureComponent {
             E(this, 'state', { editingPath: null }),
             E(this, 'handleAddInstallationLocation', () => {
                 p.ZP.showOpenDialog(['openDirectory']).then((e) => {
-                    if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, o.RY)(e[0]);
+                    if (null != e && 0 !== e.length && null != e[0] && 'undefined' !== e[0]) (0, s.RY)(e[0]);
                 });
             }),
             E(this, 'handleToggleEditing', (e) => {

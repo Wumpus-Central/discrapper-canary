@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(497505),
+    s = n(481060),
+    o = n(497505),
     c = n(415104),
     d = n(86675);
 function u(e) {
@@ -51,7 +51,7 @@ function u(e) {
     }, []);
     let g = (t = m) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
     return l && 0 === n.length
-        ? (0, i.jsx)(o.Spinner, { className: d.spinner })
+        ? (0, i.jsx)(s.Spinner, { className: d.spinner })
         : (0, i.jsx)(
               'div',
               {
@@ -62,7 +62,7 @@ function u(e) {
                           c.Z,
                           {
                               quest: e,
-                              questContent: s.jn.QUEST_HOME_DESKTOP,
+                              questContent: o.jn.QUEST_HOME_DESKTOP,
                               contentPosition: t,
                               rowIndex: n,
                               className: a()(d.questTile, {

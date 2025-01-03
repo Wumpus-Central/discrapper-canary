@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(692547),
     a = n(481060),
-    o = n(194359),
-    s = n(906732),
+    s = n(194359),
+    o = n(906732),
     c = n(171368),
     d = n(594174),
     u = n(626135),
@@ -21,13 +21,13 @@ var i = n(200651),
 function E(e) {
     let { user: t, type: n, status: E, isFocused: I } = e,
         C = r.useContext(u.AnalyticsContext),
-        { analyticsLocations: v } = (0, s.ZP)(),
-        S = (e) => {
-            e.stopPropagation(), o.Z.cancelFriendRequest(t.id, { location: 'Friends' });
+        { analyticsLocations: N } = (0, o.ZP)(),
+        v = (e) => {
+            e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
-        N = (e) => {
+        S = (e) => {
             e.stopPropagation(),
-                o.Z.addRelationship({
+                s.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' }
                 });
@@ -40,12 +40,12 @@ function E(e) {
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: v,
+                sourceAnalyticsLocations: N,
                 analyticsLocation: C.location
             }),
         children: (e) => {
             var r;
-            let o =
+            let s =
                 n === g.OGo.PENDING_INCOMING
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -62,14 +62,14 @@ function E(e) {
                                   icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
-                                  onClick: N,
+                                  onClick: S,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
                                   icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
-                                  onClick: S,
+                                  onClick: v,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function E(e) {
                           icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
-                          onClick: S,
+                          onClick: v,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
@@ -93,7 +93,7 @@ function E(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: _.actions,
-                        children: o
+                        children: s
                     })
                 ]
             });

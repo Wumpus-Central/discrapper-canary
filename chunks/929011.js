@@ -20,8 +20,8 @@ var i = e(200651),
     f = e(689011),
     p = e(981631);
 async function m(n) {
-    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: m, initialSubscribeForGuild: v, analyticsLocations: S, analyticsLocation: I, disableGuildSelector: h = !1 } = n,
-        { promise: g, resolve: E } = Promise.withResolvers();
+    let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: m, initialSubscribeForGuild: v, analyticsLocations: I, analyticsLocation: S, disableGuildSelector: h = !1 } = n,
+        { promise: g, resolve: Z } = Promise.withResolvers();
     if ((0, d.KK)(u.flags) && !1 === h) {
         let { promise: n, resolve: t } = Promise.withResolvers();
         (0, l.openModalLazy)(async () => {
@@ -37,12 +37,12 @@ async function m(n) {
         }),
             (v = await n);
     }
-    let Z = s.Z.getParentSKU(u.id),
-        A = null;
+    let A = s.Z.getParentSKU(u.id),
+        N = null;
     return (
-        null != Z &&
-            ([A] = (0, c.E8)({
-                groupSku: Z,
+        null != A &&
+            ([N] = (0, c.E8)({
+                groupSku: A,
                 SubscriptionStore: o.ZP,
                 SubscriptionPlanStore: a.Z,
                 mapSubscriptionItems: c.ec,
@@ -51,7 +51,7 @@ async function m(n) {
         (0, r.h)({
             initialPlanId: t,
             skuId: u.id,
-            activeSubscription: A,
+            activeSubscription: N,
             applicationId: u.applicationId,
             planGroup: m,
             guildId: v,
@@ -61,9 +61,9 @@ async function m(n) {
                     onClose: () => t(!1)
                 }),
             analyticsSubscriptionType: p.NYc.APPLICATION,
-            analyticsLocations: S,
-            analyticsLocation: I,
-            onComplete: E,
+            analyticsLocations: I,
+            analyticsLocation: S,
+            onComplete: Z,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
         }),

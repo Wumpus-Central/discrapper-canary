@@ -8,8 +8,8 @@ n(192379);
 var r = n(685072),
     l = n(287734),
     a = n(15274),
-    o = n(389303),
-    s = n(881824),
+    s = n(389303),
+    o = n(881824),
     c = n(719100),
     d = n(870569),
     u = n(388032);
@@ -29,7 +29,7 @@ function m(e) {
         tooltipText: u.intl.string(u.t.SMKyio),
         onClick: () => {
             if ((0, c.Z)(t)) {
-                (0, s.Us)(t);
+                (0, o.Us)(t);
                 return;
             }
             l.default.disconnect();
@@ -41,7 +41,7 @@ function p(e) {
     return (0, i.jsx)(h, {
         tooltipText: u.intl.string(u.t['6vrfgo']),
         onClick: () => {
-            if ((0, o.Z)(t)) {
+            if ((0, s.Z)(t)) {
                 (0, a.lC)(t);
                 return;
             }

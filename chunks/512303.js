@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return v;
     }
 });
 var i = t(200651),
@@ -16,19 +16,19 @@ var i = t(200651),
     f = t(430824),
     m = t(594174),
     h = t(388032),
-    v = t(500054);
-function E(e) {
-    var n, t, E, I;
-    let M = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
-        p = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
-        Z = null === (E = e.interactionMetadata) || void 0 === E ? void 0 : E.user.id,
-        x = (0, a.e7)([m.default], () => m.default.getUser(M)),
-        S = (0, a.e7)([f.Z], () => f.Z.getGuild(p)),
+    E = t(500054);
+function v(e) {
+    var n, t, v, I;
+    let p = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
+        M = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
+        Z = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
+        x = (0, a.e7)([m.default], () => m.default.getUser(p)),
+        S = (0, a.e7)([f.Z], () => f.Z.getGuild(M)),
         j = (0, a.e7)([m.default], () => m.default.getUser(Z));
     if (
         (l.useEffect(() => {
-            null == x && null != M && (0, s.PR)(M);
-        }, [x, M]),
+            null == x && null != p && (0, s.PR)(p);
+        }, [x, p]),
         !(0, d.a)(e))
     )
         return null;
@@ -37,7 +37,7 @@ function E(e) {
     return (
         null != S
             ? (_ = (0, i.jsx)(o.MenuItem, {
-                  className: v.interactionInfoMenuItem,
+                  className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(c.Z, {
@@ -50,7 +50,7 @@ function E(e) {
               }))
             : null != x &&
               (_ = (0, i.jsx)(o.MenuItem, {
-                  className: v.interactionInfoMenuItem,
+                  className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(u.Z, {
@@ -68,7 +68,7 @@ function E(e) {
                 _,
                 null != j
                     ? (0, i.jsx)(o.MenuItem, {
-                          className: v.interactionInfoMenuItem,
+                          className: E.interactionInfoMenuItem,
                           disabled: !0,
                           iconLeft: () =>
                               (0, i.jsx)(u.Z, {

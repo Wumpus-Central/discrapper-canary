@@ -14,11 +14,11 @@ var l = t(200651),
 function u(e) {
     let n;
     let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: p, required: h, value: x } = e,
-        [v, C] = i.useState(null != x ? x : ''),
+        [v, g] = i.useState(null != x ? x : ''),
         {
-            state: g,
+            state: C,
             executeStateUpdate: _,
-            error: I
+            error: b
         } = (0, o.Ee)(
             e,
             null != x
@@ -28,11 +28,11 @@ function u(e) {
                   }
                 : void 0
         ),
-        b = (0, s.hz)(e.id);
+        I = (0, s.hz)(e.id);
     i.useEffect(() => {
-        (null == g ? void 0 : g.type) === t && C(g.value);
-    }, [t, g]);
-    let j = {
+        (null == C ? void 0 : C.type) === t && g(C.value);
+    }, [t, C]);
+    let S = {
         name: d,
         value: v,
         placeholder: m,
@@ -40,29 +40,29 @@ function u(e) {
         maxLength: p,
         required: h,
         onChange: (e) => {
-            C(e),
+            g(e),
                 _({
                     type: t,
                     value: e
                 });
         },
-        autoFocus: b
+        autoFocus: I
     };
     switch (u) {
         case a.PT.SMALL:
-            n = (0, l.jsx)(r.TextInput, { ...j });
+            n = (0, l.jsx)(r.TextInput, { ...S });
             break;
         case a.PT.PARAGRAPH:
             n = (0, l.jsx)(r.TextArea, {
                 autosize: !0,
-                ...j
+                ...S
             });
     }
     return (0, l.jsx)(r.FormItem, {
         title: d,
         required: h,
         className: c.formItem,
-        error: I,
+        error: b,
         children: n
     });
 }

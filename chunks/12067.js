@@ -20,19 +20,19 @@ var i = t(442837),
 function x(e) {
     let { message: n } = (0, p.CJ)(),
         t = (0, i.e7)([m.Z], () => m.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: x, shouldRedactExplicitContent: v, gifAutoPlay: C, getGifFavButton: g, getOnMediaItemContextMenu: _ } = (0, c.c)();
+        { shouldHideMediaOptions: x, shouldRedactExplicitContent: v, gifAutoPlay: g, getGifFavButton: C, getOnMediaItemContextMenu: _ } = (0, c.c)();
     if (null == n || null == t) return null;
-    let I = e.items
+    let b = e.items
             .map((e) => ({
                 ...(0, r.y_)(e.media),
                 original: e.media.url,
                 srcIsAnimated: e.media.srcIsAnimated
             }))
             .filter((e) => 'INVALID' !== e.type),
-        b =
-            I.length > 1
+        I =
+            b.length > 1
                 ? (0, d._)(
-                      I,
+                      b,
                       {
                           shouldHideMediaOptions: x,
                           shouldRedactExplicitContent: v
@@ -40,11 +40,11 @@ function x(e) {
                       'Media Mosaic'
                   )
                 : {};
-    function j(e, n) {
+    function S(e, n) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let S = e.items.map((e, t) => {
+    let j = e.items.map((e, t) => {
         let l = e.media,
             i = null == _ ? void 0 : _(l),
             r = {
@@ -61,8 +61,8 @@ function x(e) {
                     srcIsAnimated: l.srcIsAnimated
                 },
                 onContextMenu: i,
-                autoPlayGif: C,
-                getObscureReason: j,
+                autoPlayGif: g,
+                getObscureReason: S,
                 renderImageComponent: s.aB,
                 renderVideoComponent: s.rJ,
                 renderVisualPlaceholderComponent: s.yF,
@@ -70,7 +70,7 @@ function x(e) {
                 renderPlaintextFilePreview: h.dG4,
                 renderGenericFileComponent: h.dG4,
                 renderMosaicItemFooter: h.dG4,
-                gifFavoriteButton: g(l),
+                gifFavoriteButton: C(l),
                 onPlay: (e, n, t) => {},
                 canRemoveItem: !1,
                 onRemoveItem: h.dG4
@@ -79,7 +79,7 @@ function x(e) {
                 proxyURL: l.proxyUrl,
                 url: l.url
             });
-        return a in b && (r.onClick = b[a]), r;
+        return a in I && (r.onClick = I[a]), r;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: S }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: j }) });
 }

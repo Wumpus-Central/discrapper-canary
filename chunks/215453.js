@@ -1,72 +1,72 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
-    n(789020);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    a = n(860719),
-    o = n(63063),
-    s = n(49012),
-    c = n(981631),
-    d = n(388032),
-    u = n(349778);
-let h = o.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
-function m(e) {
-    let { application: t } = e,
-        { hasMessageContent: n, hasGuildPresences: o, hasGuildMembers: c, hasIntents: m } = (0, a.w)({ flags: null == t ? void 0 : t.flags }),
-        g = r.useCallback(() => {
-            null != t.privacy_policy_url && (0, s.q)({ href: t.privacy_policy_url });
-        }, [t.privacy_policy_url]);
-    return (0, i.jsxs)('div', {
+    t(789020);
+var a = t(200651),
+    i = t(192379),
+    r = t(481060),
+    l = t(860719),
+    o = t(63063),
+    s = t(49012),
+    c = t(981631),
+    d = t(388032),
+    u = t(349778);
+let m = o.Z.getArticleURL(c.BhN.BOT_DATA_ACCESS);
+function p(e) {
+    let { application: n } = e,
+        { hasMessageContent: t, hasGuildPresences: o, hasGuildMembers: c, hasIntents: p } = (0, l.w)({ flags: null == n ? void 0 : n.flags }),
+        g = i.useCallback(() => {
+            null != n.privacy_policy_url && (0, s.q)({ href: n.privacy_policy_url });
+        }, [n.privacy_policy_url]);
+    return (0, a.jsxs)('div', {
         className: u.sectionContainer,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, a.jsx)(r.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: d.intl.string(d.t.QzDgMj)
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: u.contentContainer,
                 children: [
-                    m &&
-                        (0, i.jsxs)('ul', {
+                    p &&
+                        (0, a.jsxs)('ul', {
                             className: u.intentsList,
                             children: [
-                                (0, i.jsx)(l.Heading, {
+                                (0, a.jsx)(r.Heading, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-secondary',
                                     children: d.intl.string(d.t.U6KH5e)
                                 }),
-                                n &&
-                                    (0, i.jsx)(p, {
-                                        icon: l.ChatIcon,
+                                t &&
+                                    (0, a.jsx)(_, {
+                                        icon: r.ChatIcon,
                                         heading: d.intl.string(d.t.gJpBOz),
                                         body: d.intl.string(d.t['L+QVbm'])
                                     }),
                                 o &&
-                                    (0, i.jsx)(p, {
-                                        icon: l.UserCircleStatusIcon,
+                                    (0, a.jsx)(_, {
+                                        icon: r.UserCircleStatusIcon,
                                         heading: d.intl.string(d.t.jo0oj4),
                                         body: d.intl.string(d.t.Dm0jq6)
                                     }),
                                 c &&
-                                    (0, i.jsx)(p, {
-                                        icon: l.GroupIcon,
+                                    (0, a.jsx)(_, {
+                                        icon: r.GroupIcon,
                                         heading: d.intl.string(d.t.QZql7O),
                                         body: d.intl.string(d.t['ez/N/f'])
                                     })
                             ]
                         }),
-                    (0, i.jsx)(l.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: h })
+                        children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: m })
                     }),
-                    null != t.privacy_policy_url &&
-                        (0, i.jsx)(l.Text, {
+                    null != n.privacy_policy_url &&
+                        (0, a.jsx)(r.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
                             className: u.privacyPolicy,
@@ -77,27 +77,27 @@ function m(e) {
         ]
     });
 }
-function p(e) {
-    let { icon: t, heading: n, body: r } = e;
-    return (0, i.jsxs)('li', {
+function _(e) {
+    let { icon: n, heading: t, body: i } = e;
+    return (0, a.jsxs)('li', {
         className: u.intentContainer,
         children: [
-            (0, i.jsx)(t, {
+            (0, a.jsx)(n, {
                 color: 'currentColor',
                 size: 'md'
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: u.intentTextContainer,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, a.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-secondary',
-                        children: n
+                        children: t
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: r
+                        children: i
                     })
                 ]
             })

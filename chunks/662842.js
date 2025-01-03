@@ -8,8 +8,8 @@ var i,
     r,
     l = n(200651),
     a = n(192379),
-    o = n(120356),
-    s = n.n(o),
+    s = n(120356),
+    o = n.n(s),
     c = n(442837),
     d = n(692547),
     u = n(481060),
@@ -22,18 +22,18 @@ var i,
     E = n(151864),
     I = n(725436),
     C = n(497656),
-    v = n(554747),
-    S = n(230900),
-    N = n(854698),
+    N = n(554747),
+    v = n(230900),
+    S = n(854698),
     T = n(703656),
     b = n(922482),
-    x = n(565799),
-    A = n(501655),
-    Z = n(427679),
+    A = n(565799),
+    Z = n(501655),
+    x = n(427679),
     L = n(448206),
     P = n(184301),
-    y = n(347475),
-    O = n(496675),
+    O = n(347475),
+    y = n(496675),
     R = n(594174),
     j = n(662868),
     D = n(981631),
@@ -44,20 +44,20 @@ var i,
 function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, C.y)(t.id),
-        r = (0, v.k5)(t.id),
-        o = (0, c.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+        r = (0, N.k5)(t.id),
+        s = (0, c.e7)([x.Z], () => x.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
             [E.Z],
             () => ({
-                isStageNoticeHidden: E.Z.isLiveChannelNoticeHidden({ stageId: null == o ? void 0 : o.id }),
+                isStageNoticeHidden: E.Z.isLiveChannelNoticeHidden({ stageId: null == s ? void 0 : s.id }),
                 isEventNoticeHidden: E.Z.isLiveChannelNoticeHidden({ eventId: null == r ? void 0 : r.id })
             }),
-            [o, r]
+            [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([x.Z], () => [...new Set(x.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([x.Z], () => (null != B ? x.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
+        H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([y.Z], () => y.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,
         Y = (0, c.e7)([R.default], () => R.default.getUser(W), [W]);
@@ -77,9 +77,9 @@ function U(e) {
     } = a.useMemo(
         () =>
             (function (e) {
-                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: o, speakers: s, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
+                let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    E = null != t ? (0, N.DK)(t) : null;
+                    E = null != t ? (0, S.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -119,7 +119,7 @@ function U(e) {
                                 canListenIn: r,
                                 buttonText: e,
                                 onClose: () => (0, _.ji)({ stageId: null == n ? void 0 : n.id }),
-                                users: s.length > 5 ? s.slice(0, 5) : s,
+                                users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
                                         ? null
@@ -163,7 +163,7 @@ function U(e) {
                                 canListenIn: r,
                                 buttonText: e,
                                 onClose: () => (0, _.ji)({ stageId: null == n ? void 0 : n.id }),
-                                users: s.length > 5 ? s.slice(0, 5) : s,
+                                users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     c < 1
                                         ? null
@@ -189,7 +189,7 @@ function U(e) {
                         );
                     }
                     if (t.entity_type === M.WX.EXTERNAL) {
-                        let e = (0, S.cS)(t);
+                        let e = (0, v.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
                         return {
@@ -206,7 +206,7 @@ function U(e) {
                             canListenIn: !1,
                             buttonText: w.intl.string(w.t.iW6Xur),
                             onClose: () => (0, _.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == o ? [] : [o],
+                            users: null == s ? [] : [s],
                             overflowUsers:
                                 n < 1
                                     ? null
@@ -247,7 +247,7 @@ function U(e) {
                             canListenIn: r,
                             buttonText: w.intl.string(w.t.nxUtoa),
                             onClose: () => (0, _.ji)({ eventId: null == t ? void 0 : t.id }),
-                            users: null == o ? [] : [o],
+                            users: null == s ? [] : [s],
                             overflowUsers:
                                 n < 1
                                     ? null
@@ -275,7 +275,7 @@ function U(e) {
                 return { noticeType: null };
             })({
                 guildEvent: r,
-                stageInstance: o,
+                stageInstance: s,
                 activeChannel: i,
                 canConnect: F,
                 myRole: z,
@@ -286,7 +286,7 @@ function U(e) {
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [r, o, i, F, z, Y, H, V, G, U, n]
+        [r, s, i, F, z, Y, H, V, G, U, n]
     );
     return null == K
         ? null
@@ -330,7 +330,7 @@ function U(e) {
                                       {
                                           preload: () => (0, P.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, l.jsx)(y.Z, {
+                                              (0, l.jsx)(O.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
@@ -355,7 +355,7 @@ function U(e) {
                   (0, l.jsx)(u.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      className: s()(k.title, k.live),
+                      className: o()(k.title, k.live),
                       children: q
                   }),
                   (0, l.jsxs)('div', {

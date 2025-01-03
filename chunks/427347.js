@@ -8,8 +8,8 @@ n(192379);
 var r = n(704215),
     l = n(481060),
     a = n(230711),
-    o = n(100527),
-    s = n(906732),
+    s = n(100527),
+    o = n(906732),
     c = n(605236),
     d = n(314910),
     u = n(378364),
@@ -23,7 +23,7 @@ function E(e) {
     let { dismissibleContent: t } = e,
         n = h.Z.useIsEligible(),
         u = (0, c.wE)(t),
-        { analyticsLocations: E } = (0, s.ZP)(o.Z.HOLIDAY_COACHMARK),
+        { analyticsLocations: E } = (0, o.ZP)(s.Z.HOLIDAY_COACHMARK),
         I = (e) => {
             (0, c.EW)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },

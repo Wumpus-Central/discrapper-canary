@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(91192),
-    s = n(286379),
+    s = n(91192),
+    o = n(286379),
     c = n(442837),
     d = n(704215),
     u = n(481060),
@@ -17,18 +17,18 @@ var i = n(200651),
     E = n(325708),
     I = n(320149),
     C = n(82295),
-    v = n(252618),
-    S = n(605236),
-    N = n(243778),
+    N = n(252618),
+    v = n(605236),
+    S = n(243778),
     T = n(984370),
     b = n(797614),
-    x = n(359110),
-    A = n(6025),
-    Z = n(897473),
+    A = n(359110),
+    Z = n(6025),
+    x = n(897473),
     L = n(108427),
     P = n(970731),
-    y = n(187819),
-    O = n(210887),
+    O = n(187819),
+    y = n(210887),
     R = n(433355),
     j = n(592125),
     D = n(819640),
@@ -70,20 +70,20 @@ function en() {
         E = r.useCallback(
             (e) => {
                 var t, r;
-                let { row: o } = e,
-                    s = n[o],
-                    c = null === (r = n[o + 1]) || void 0 === r ? void 0 : null === (t = r.channel) || void 0 === t ? void 0 : t.id,
-                    d = s.channel.id;
+                let { row: s } = e,
+                    o = n[s],
+                    c = null === (r = n[s + 1]) || void 0 === r ? void 0 : null === (t = r.channel) || void 0 === t ? void 0 : t.id,
+                    d = o.channel.id;
                 return (0, i.jsx)(
                     Y.Z,
                     {
-                        index: o,
+                        index: s,
                         className: a()({
                             [ee.selected]: null != p && p === d,
                             [ee.siblingSelected]: null != p && p === c
                         }),
-                        channel: s.channel,
-                        user: s.user,
+                        channel: o.channel,
+                        user: o.user,
                         hasSingleMessageRequest: l
                     },
                     d
@@ -127,11 +127,11 @@ function en() {
                 ),
             [t, f, c]
         );
-    return (n.length !== t && b.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
-        : (0, i.jsx)(o.bG, {
+        : (0, i.jsx)(s.bG, {
               navigator: m,
-              children: (0, i.jsx)(o.SJ, {
+              children: (0, i.jsx)(s.SJ, {
                   children: (t) => {
                       let { ref: r, role: l, ...a } = t;
                       return (0, i.jsx)(
@@ -165,7 +165,7 @@ function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         r = (0, c.e7)([R.ZP], () => R.ZP.getSidebarState(R.uZ)),
         l = (0, c.e7)([j.Z], () => j.Z.getChannel(null == r ? void 0 : r.channelId));
-    if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    if (null == r || r.type !== x.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - X.R7I;
     return (0, i.jsx)(E.Z, {
         sidebarType: E.y.MessageRequestSidebar,
@@ -194,20 +194,20 @@ let er = function (e) {
         let t = (0, U.Z)(),
             n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
             l = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-            a = (0, y._p)({ location: 'message-request-coachmark' });
+            a = (0, O._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
-                (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, v.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(N.ZP, {
+            (0, i.jsx)(S.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (r) => {
-                    let { visibleContent: o, markAsDismissed: s } = r;
-                    if (o === d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+                    let { visibleContent: s, markAsDismissed: o } = r;
+                    if (s === d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
                         return (0, i.jsx)(u.Popout, {
                             renderPopout: () =>
                                 t
-                                    ? (0, i.jsx)(er, { markAsDismissed: s })
+                                    ? (0, i.jsx)(er, { markAsDismissed: o })
                                     : (0, i.jsx)(P.ZP, {
                                           header: $.intl.string($.t.hRT8tb),
                                           content: $.intl.string($.t['8JWodn']),
@@ -217,7 +217,7 @@ let er = function (e) {
                                           onClick: (e) => {
                                               e.stopPropagation(), a ? m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : m.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
                                           },
-                                          markAsDismissed: s,
+                                          markAsDismissed: o,
                                           caretPosition: P.DF.TOP_CENTER,
                                           headerClassName: ee.__invalid_header
                                       }),
@@ -237,32 +237,32 @@ function ea(e) {
     let { section: t } = e;
     return t === q.pS.SPAM ? (0, i.jsx)(K.Z, {}) : (0, i.jsx)(en, {});
 }
-let eo = (0, p.Z)(function (e) {
+let es = (0, p.Z)(function (e) {
     let { width: t } = e,
         n = (0, V.q)();
     r.useEffect(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let l = (0, c.e7)([O.Z], () => O.Z.theme),
-        o = (0, z.w)(),
+    let l = (0, c.e7)([y.Z], () => y.Z.theme),
+        s = (0, z.w)(),
         [d, m] = r.useState(!1),
         p = (0, c.e7)([R.ZP], () => {
             let e = R.ZP.getSidebarState(R.uZ);
-            return null != e && e.type === Z.tI.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === x.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == p ? void 0 : p.channelId,
         f = null != p,
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, x.Kh)(g), A.Z.closeChannelSidebar(R.uZ));
+        null != g && !_ && E && f && ((0, A.Kh)(g), Z.Z.closeChannelSidebar(R.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
-        S = (e) => {
+        v = (e) => {
             C(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
+        (0, N.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -288,7 +288,7 @@ let eo = (0, p.Z)(function (e) {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: I,
                                             type: 'top-pill',
-                                            onItemSelect: S,
+                                            onItemSelect: v,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.REQUESTS,
@@ -296,7 +296,7 @@ let eo = (0, p.Z)(function (e) {
                                                 }),
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.SPAM,
-                                                    children: 0 === o ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: o })
+                                                    children: 0 === s ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: s })
                                                 })
                                             ]
                                         })
@@ -320,4 +320,4 @@ let eo = (0, p.Z)(function (e) {
         })
     );
 });
-t.Z = eo;
+t.Z = es;

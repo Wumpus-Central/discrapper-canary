@@ -3,8 +3,8 @@ var i,
     r,
     l,
     a,
-    o = n(392711),
-    s = n.n(o),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(570140),
     u = n(598077),
@@ -20,7 +20,7 @@ function I(e) {
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
-        name: null === (t = s().first(e.reasons)) || void 0 === t ? void 0 : t.name,
+        name: null === (t = o().first(e.reasons)) || void 0 === t ? void 0 : t.name,
         user: new u.Z(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: n
@@ -72,12 +72,12 @@ class C extends (i = c.ZP.Store) {
             var t;
             (_ = !1),
                 (t = e.suggestions),
-                (g = s()
+                (g = o()
                     .chain(t)
                     .map((e) => I(e))
                     .keyBy((e) => e.key)
                     .value()),
-                (f = s().keys(g).length);
+                (f = o().keys(g).length);
         },
         LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
             (_ = !1), (g = {});

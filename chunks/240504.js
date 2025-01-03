@@ -14,19 +14,19 @@ function a(e, t, n) {
         e
     );
 }
-let o = 12 * n(70956).Z.Millis.HOUR,
-    s = {
+let s = 12 * n(70956).Z.Millis.HOUR,
+    o = {
         profileThemesRelevanceExceeded: null,
         savedAt: null
     },
     c = { hasFetchedRelevance: !1 },
-    d = s,
+    d = o,
     u = c;
 class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        (u = c), (d = s);
+        (u = c), (d = o);
         let t = new Date();
-        null != e && null != e.savedAt && t.getTime() - e.savedAt < o && (d = e);
+        null != e && null != e.savedAt && t.getTime() - e.savedAt < s && (d = e);
     }
     get hasFetchedRelevance() {
         return u.hasFetchedRelevance;
@@ -50,6 +50,6 @@ a(h, 'displayName', 'PerksRelevanceStore'),
         },
         BILLING_PERKS_RELEVANCE_FETCH_FAIL: function () {},
         LOGOUT: function () {
-            (u = c), (d = s);
+            (u = c), (d = o);
         }
     }));

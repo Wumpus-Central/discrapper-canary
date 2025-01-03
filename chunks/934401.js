@@ -2,19 +2,19 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(353926),
     d = n(160462);
 function u() {
     d.W.trigger();
 }
-class h extends (a = o.ZP.Store) {
+class h extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
     constructor() {
-        super(s.Z, { CONNECTION_OPEN: u }, s.c.Early);
+        super(o.Z, { CONNECTION_OPEN: u }, o.c.Early);
     }
 }
 (l = 'ExperimentTriggerPointStore'),

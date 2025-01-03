@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(239091),
-    s = n(585237),
+    s = n(239091),
+    o = n(585237),
     c = n(551428),
     d = n(388032);
 function u(e, t, n) {
@@ -26,18 +26,18 @@ function u(e, t, n) {
     );
 }
 let h = {
-    DropdownSizes: s.Z.DropdownSizes,
-    Sizes: s.Z.Sizes,
-    Colors: s.Z.Colors,
-    Looks: s.Z.Looks
+    DropdownSizes: o.Z.DropdownSizes,
+    Sizes: o.Z.Sizes,
+    Colors: o.Z.Colors,
+    Looks: o.Z.Looks
 };
 class m extends r.PureComponent {
     render() {
         let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: r, currentStoreListingId: l, ...a } = this.props,
-            o = null != t ? 1 : 0;
-        return (o += e.length) < 2
+            s = null != t ? 1 : 0;
+        return (s += e.length) < 2
             ? null
-            : (0, i.jsx)(s.Z, {
+            : (0, i.jsx)(o.Z, {
                   onClick: this.handleContextMenu,
                   onDropdownClick: this.handleContextMenu,
                   onContextMenu: this.handleContextMenu,
@@ -55,7 +55,7 @@ class m extends r.PureComponent {
                                   id: ''.concat(e.id),
                                   label: e.id,
                                   action: () => {
-                                      o.Zy(), null == t || t(e);
+                                      s.Zy(), null == t || t(e);
                                   }
                               })
                             : null
@@ -64,12 +64,12 @@ class m extends r.PureComponent {
                     onSelect: r,
                     navId: 'test-store-listing',
                     'aria-label': d.intl.string(d.t.ogxXGh),
-                    onClose: o.Zy,
+                    onClose: s.Zy,
                     children: l
                 });
             }),
             u(this, 'handleContextMenu', (e) => {
-                e.stopPropagation(), o.vq(e, this.renderContextMenu);
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             });
     }
 }

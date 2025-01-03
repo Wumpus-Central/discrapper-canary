@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(512969),
-    s = n(990547),
+    s = n(512969),
+    o = n(990547),
     c = n(608787),
     d = n(873546),
     u = n(442837),
@@ -22,18 +22,18 @@ var i = n(200651),
     E = n(279240),
     I = n(765717),
     C = n(358221),
-    v = n(823748),
-    S = n(626421),
-    N = n(118379),
+    N = n(823748),
+    v = n(626421),
+    S = n(118379),
     T = n(267161),
     b = n(652515),
-    x = n(544978),
-    A = n(540059),
-    Z = n(724383),
+    A = n(544978),
+    Z = n(540059),
+    x = n(724383),
     L = n(135864),
     P = n(372900),
-    y = n(63568),
-    O = n(6039),
+    O = n(63568),
+    y = n(6039),
     R = n(637853),
     j = n(326145),
     D = n(269675),
@@ -62,8 +62,8 @@ var i = n(200651),
     er = n(709054),
     el = n(374005),
     ea = n(409292),
-    eo = n(316173),
-    es = n(256638),
+    es = n(316173),
+    eo = n(256638),
     ec = n(663701),
     ed = n(697309),
     eu = n(425369),
@@ -93,19 +93,19 @@ let e_ = (0, c.Un)({
         name: 'GuildMemberApplicationReview',
         renderLoader: eE
     }),
-    ev = (0, c.Un)({
+    eN = (0, c.Un)({
         createPromise: () => n.e('60493').then(n.bind(n, 231588)),
         webpackId: 231588,
         name: 'GuildHomePage',
         renderLoader: eE
     }),
-    eS = (0, c.Un)({
+    ev = (0, c.Un)({
         createPromise: () => Promise.all([n.e('60696'), n.e('44400')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: eE
     }),
-    eN = (0, c.Un)({
+    eS = (0, c.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('98479'), n.e('58227'), n.e('38359'), n.e('35566')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -124,7 +124,7 @@ let e_ = (0, c.Un)({
                 return J.Z.getChannel(e);
             }),
             { guildId: r, channelId: l, messageId: a } = t.params,
-            s = (0, u.e7)([ee.Z], () => ee.Z.getGuild(r)),
+            o = (0, u.e7)([ee.Z], () => ee.Z.getGuild(r)),
             c = (0, u.e7)([$.ZP], () => (null == r ? null : $.ZP.getSelfMember(r))),
             d = (0, u.e7)([U.Z], () => {
                 if (null == r) return;
@@ -132,22 +132,22 @@ let e_ = (0, c.Un)({
                 if ((null == e ? void 0 : e.type) === G.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return x.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return A.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return x.y.GUILD_PRODUCTS;
+                            return A.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
             }),
             h = (0, b.C4)(r, 'channel_renderer'),
-            m = (0, y.jS)(r, 'ChannelRenderer');
+            m = (0, O.jS)(r, 'ChannelRenderer');
         if (null != r && null != l && (0, ep.AB)(l))
             switch (l) {
                 case ep.oC.ROLE_SUBSCRIPTIONS:
                     return h
                         ? (0, i.jsx)(eI, {
                               guildId: r,
-                              initialTab: x.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(D.Z, { guildId: r });
                 case ep.oC.GUILD_SHOP:
@@ -157,27 +157,27 @@ let e_ = (0, c.Un)({
                         initialTab: d
                     });
                 case ep.oC.MEMBER_APPLICATIONS:
-                    return m ? (0, i.jsx)(o.l_, { to: em.Z5c.CHANNEL(r, ep.oC.MEMBER_SAFETY) }) : (0, i.jsx)(eC, { guildId: r });
+                    return m ? (0, i.jsx)(s.l_, { to: em.Z5c.CHANNEL(r, ep.oC.MEMBER_SAFETY) }) : (0, i.jsx)(eC, { guildId: r });
                 case ep.oC.GUILD_HOME:
-                    return (0, i.jsx)(ev, { guildId: r });
+                    return (0, i.jsx)(eN, { guildId: r });
                 case ep.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eN, {
+                    return (0, i.jsx)(eS, {
                         guildId: r,
                         selectedSection: eg.l7.BROWSE
                     });
                 case ep.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eT, { guildId: r });
                 case ep.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eN, {
+                    return (0, i.jsx)(eS, {
                         guildId: r,
                         selectedSection: eg.l7.CUSTOMIZE
                     });
                 case ep.oC.MEMBER_SAFETY:
-                    return (0, i.jsx)(eS, { guildId: r });
+                    return (0, i.jsx)(ev, { guildId: r });
                 default:
                     (0, ei.vE)(l);
             }
-        if ((0, R.p3)(s, c))
+        if ((0, R.p3)(o, c))
             return (0, i.jsx)(j.Z, {
                 guildId: r,
                 channelId: l
@@ -193,9 +193,9 @@ let e_ = (0, c.Un)({
                 n.id
             );
         }
-        return (0, i.jsx)(v.Z, {});
+        return (0, i.jsx)(N.Z, {});
     },
-    ex = r.memo(function () {
+    eA = r.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e)));
         return (function () {
@@ -216,12 +216,12 @@ let e_ = (0, c.Un)({
                 )
               : (0, i.jsx)(ec.Z, {});
     }),
-    eA = (e) => (0, i.jsx)(eb, { ...e }),
-    eZ = () => (0, i.jsx)(Z.Z, {}),
+    eZ = (e) => (0, i.jsx)(eb, { ...e }),
+    ex = () => (0, i.jsx)(x.Z, {}),
     eL = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(O.Z, {
+            ? (0, i.jsx)(y.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -236,12 +236,12 @@ let e_ = (0, c.Un)({
               })
             : null;
     },
-    ey = () => (0, i.jsx)(eu.Z, {}),
-    eO = () => (0, i.jsx)(eh.Z, {}),
+    eO = () => (0, i.jsx)(eu.Z, {}),
+    ey = () => (0, i.jsx)(eh.Z, {}),
     eR = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(N.Z, {
+            return (0, i.jsx)(S.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -261,44 +261,44 @@ let e_ = (0, c.Un)({
             case 'pendingFriends':
                 return (0, i.jsx)(z.Z, { initialSection: em.pJs.PENDING });
             case 'sessionManagement':
-                return (0, i.jsx)(o.l_, { to: em.Z5c.SETTINGS('sessions') });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.SETTINGS('sessions') });
             case 'connections':
-                return (0, i.jsx)(o.l_, {
+                return (0, i.jsx)(s.l_, {
                     to: {
                         pathname: em.Z5c.SETTINGS('connections'),
                         search: e.location.search
                     }
                 });
             case 'family-center':
-                return (0, i.jsx)(o.l_, { to: em.Z5c.FAMILY_CENTER });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.FAMILY_CENTER });
             case 'account-standing':
-                if ((0, X.sp)({ location: 'app view user trigger debugging' })) return (0, i.jsx)(o.l_, { to: em.Z5c.SETTINGS('account', 'account-standing') });
-                return (0, i.jsx)(o.l_, { to: em.Z5c.SETTINGS('privacy-and-safety', 'account-standing') });
+                if ((0, X.sp)({ location: 'app view user trigger debugging' })) return (0, i.jsx)(s.l_, { to: em.Z5c.SETTINGS('account', 'account-standing') });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.SETTINGS('privacy-and-safety', 'account-standing') });
             case 'authorized-apps':
-                return (0, i.jsx)(o.l_, { to: em.Z5c.SETTINGS('authorized-apps') });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.SETTINGS('authorized-apps') });
             case 'open-shop':
-                return (0, i.jsx)(o.l_, { to: em.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.COLLECTIBLES_SHOP_FULLSCREEN });
             case 'editProfile':
-                return (0, i.jsx)(o.l_, { to: { pathname: em.Z5c.SETTINGS('profile-customization') } });
+                return (0, i.jsx)(s.l_, { to: { pathname: em.Z5c.SETTINGS('profile-customization') } });
             case 'gift':
             case 'store':
-                return (0, i.jsx)(o.l_, { to: { pathname: em.Z5c.NITRO_HOME } });
+                return (0, i.jsx)(s.l_, { to: { pathname: em.Z5c.NITRO_HOME } });
             default:
-                return (0, i.jsx)(o.l_, { to: em.Z5c.ME });
+                return (0, i.jsx)(s.l_, { to: em.Z5c.ME });
         }
     };
 function eU(e) {
     document.body.style.setProperty('--custom-guild-sidebar-width', ''.concat(e, 'px'));
 }
 function eG(e) {
-    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: o, isSidebarOpen: s, isOnFullScreenCollectiblesShopRoute: c } = e;
+    let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: s, isSidebarOpen: o, isOnFullScreenCollectiblesShopRoute: c } = e;
     (0, g.t)(!0);
     let _ = 'app view user trigger debugging';
     p.R6.useExperiment({ location: _ }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: _ });
     let E = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        I = (0, A.TH)('ChannelSidebar'),
-        v = (0, A.Q3)('ChannelSidebar'),
-        S = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
+        I = (0, Z.TH)('ChannelSidebar'),
+        N = (0, Z.Q3)('ChannelSidebar'),
+        v = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
     r.useLayoutEffect(() => {
         if (I) {
             var e;
@@ -316,14 +316,14 @@ function eG(e) {
         }
     }, [I]),
         r.useLayoutEffect(() => {
-            if (S) eU(ed.p8);
+            if (v) eU(ed.p8);
             else {
                 var e;
                 let t = parseInt(null !== (e = h.K.get(ed.nT)) && void 0 !== e ? e : '');
                 Number.isNaN(t) && (t = ed.qO), eU(t);
             }
-        }, [S]);
-    let N = r.useRef(null),
+        }, [v]);
+    let S = r.useRef(null),
         b = r.useCallback(
             (e, t) => {
                 var n;
@@ -331,24 +331,24 @@ function eG(e) {
                 let i = t < ed.li / 3;
                 t <= ed.li ? document.body.classList.add(ef.draggingMin) : document.body.classList.remove(ef.draggingMin), t >= ed.zx ? document.body.classList.add(ef.draggingMax) : document.body.classList.remove(ef.draggingMax);
                 let r = t - e;
-                null === (n = N.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / ed.p8), 0.25))), I && (T.useAppSidebarState.setState({ isOpen: !i }), i && eU(ed.p8));
+                null === (n = S.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / ed.p8), 0.25))), I && (T.useAppSidebarState.setState({ isOpen: !i }), i && eU(ed.p8));
             },
             [I]
         ),
-        x = r.useCallback(() => {
+        A = r.useCallback(() => {
             document.body.classList.add(ef.dragging);
         }, []),
-        Z = r.useCallback((e) => {
+        x = r.useCallback((e) => {
             var t;
-            document.body.classList.remove(ef.dragging), document.body.classList.remove(ef.draggingMin), document.body.classList.remove(ef.draggingMax), document.body.classList.remove(ef.collapsing), null === (t = N.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(ed.nT, e);
+            document.body.classList.remove(ef.dragging), document.body.classList.remove(ef.draggingMin), document.body.classList.remove(ef.draggingMax), document.body.classList.remove(ef.collapsing), null === (t = S.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(ed.nT, e);
         }, []),
         L = (0, f.Z)({
             minDimension: ed.li,
             maxDimension: ed.zx,
-            resizableDomNodeRef: N,
+            resizableDomNodeRef: S,
             onElementResize: b,
-            onElementResizeStart: x,
-            onElementResizeEnd: Z,
+            onElementResizeStart: A,
+            onElementResizeEnd: x,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
@@ -357,38 +357,38 @@ function eG(e) {
         }, []);
     if (
         (r.useLayoutEffect(() => {
-            S && eU(ed.p8);
-        }, [S]),
-        l || (!v && o))
+            v && eU(ed.p8);
+        }, [v]),
+        l || (!N && s))
     )
         return null;
-    let y = v ? 'div' : r.Fragment,
-        O = v ? { className: a()(ef.sidebarList, { [ef.sidebarListRounded]: !t }) } : {};
+    let O = N ? 'div' : r.Fragment,
+        y = N ? { className: a()(ef.sidebarList, { [ef.sidebarListRounded]: !t }) } : {};
     return (0, i.jsx)(m.ThemeProvider, {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: v ? N : void 0,
-                'data-collapsed': S,
+                ref: N ? S : void 0,
+                'data-collapsed': v,
                 className: a()(ef.sidebar, e, {
                     [ef.hasNotice]: t,
                     [ef.fullWidth]: d.tq,
                     [ef.hidden]: E
                 }),
                 children: [
-                    v &&
-                        s &&
+                    N &&
+                        o &&
                         !c &&
                         (0, i.jsx)(w.Z, {
                             className: ef.guilds,
                             themeOverride: n
                         }),
-                    !o &&
-                        (0, i.jsx)(y, {
-                            ...O,
-                            children: (0, i.jsx)(ex, {})
+                    !s &&
+                        (0, i.jsx)(O, {
+                            ...y,
+                            children: (0, i.jsx)(eA, {})
                         }),
-                    v
+                    N
                         ? (0, i.jsx)(m.Clickable, {
                               onClick: P,
                               'aria-label': 'Resize Sidebar',
@@ -397,7 +397,7 @@ function eG(e) {
                           })
                         : null,
                     (0, i.jsx)(el.b, {}),
-                    !v && (0, i.jsx)(eo.Z, {})
+                    !N && (0, i.jsx)(es.Z, {})
                 ]
             })
     });
@@ -434,22 +434,22 @@ function eB() {
         })(),
         c = (function () {
             var e;
-            let t = (0, o.TH)();
-            return (null === (e = (0, o.LX)(t.pathname, em.Z5c.GUILD_BOOSTING_MARKETING(q.Hw.guildId()))) || void 0 === e ? void 0 : e.isExact) === !0;
+            let t = (0, s.TH)();
+            return (null === (e = (0, s.LX)(t.pathname, em.Z5c.GUILD_BOOSTING_MARKETING(q.Hw.guildId()))) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
         h = (function () {
             var e;
-            let t = (0, o.TH)();
-            return (null === (e = (0, o.LX)(t.pathname, em.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
+            let t = (0, s.TH)();
+            return (null === (e = (0, s.LX)(t.pathname, em.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
         m = (0, u.e7)([V.Z], () => V.Z.getIsOpen()),
-        p = (0, o.$B)([em.Z5c.CHANNEL(em.ME, q.Hw.channelId()), em.Z5c.CHANNEL(q.Hw.guildId(), q.Hw.channelId({ optional: !0 }), ':messageId?')]),
+        p = (0, s.$B)([em.Z5c.CHANNEL(em.ME, q.Hw.channelId()), em.Z5c.CHANNEL(q.Hw.guildId(), q.Hw.channelId({ optional: !0 }), ':messageId?')]),
         g = (null == p ? void 0 : null === (e = p.params) || void 0 === e ? void 0 : e.channelId) === ep.oC.GUILD_ONBOARDING,
         f = l || a || c || h || g,
         E = r.useCallback(() => H.Z.openSidebar(), []),
-        C = (0, A.Q3)('AppView'),
-        v = (0, A.TH)('AppView'),
-        N = C ? 'div' : r.Fragment,
+        C = (0, Z.Q3)('AppView'),
+        N = (0, Z.TH)('AppView'),
+        S = C ? 'div' : r.Fragment,
         b = (0, T.useAppSidebarState)((e) => !e.isOpen);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -468,11 +468,11 @@ function eB() {
                         className: ef.base,
                         children: [
                             C && (0, i.jsx)(e_, {}),
-                            d.tq ? null : (0, i.jsx)(es.Z, {}),
+                            d.tq ? null : (0, i.jsx)(eo.Z, {}),
                             (0, i.jsxs)('div', {
                                 className: ef.content,
                                 children: [
-                                    (0, i.jsx)(S.Z, {}),
+                                    (0, i.jsx)(v.Z, {}),
                                     (0, i.jsx)(eG, {
                                         isOnFullScreenCollectiblesShopRoute: h,
                                         isSidebarOpen: m,
@@ -481,22 +481,22 @@ function eB() {
                                         hideChannelList: f,
                                         hideSidebar: !m || h
                                     }),
-                                    (0, i.jsx)(N, {
+                                    (0, i.jsx)(S, {
                                         className: ef.page,
-                                        'data-collapsed': !!v && b,
+                                        'data-collapsed': !!N && b,
                                         children: (0, i.jsx)(_.Z.Provider, {
                                             value: E,
-                                            children: (0, i.jsxs)(o.rs, {
+                                            children: (0, i.jsxs)(s.rs, {
                                                 children: [
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.ACTIVITY,
                                                         disableTrack: !0,
-                                                        children: (0, i.jsx)(o.l_, { to: em.Z5c.ME })
+                                                        children: (0, i.jsx)(s.l_, { to: em.Z5c.ME })
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.ACTIVITY_DETAILS(':applicationId'),
                                                         render: ej,
-                                                        impressionName: s.ImpressionNames.ACTIVITY_DETAILS,
+                                                        impressionName: o.ImpressionNames.ACTIVITY_DETAILS,
                                                         impressionProperties: (e) => {
                                                             let { computedMatch: t } = e;
                                                             return { application_id: t.params.applicationId };
@@ -504,14 +504,14 @@ function eB() {
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.APPLICATION_LIBRARY,
-                                                        render: ey,
-                                                        impressionName: s.ImpressionNames.APPLICATION_LIBRARY,
+                                                        render: eO,
+                                                        impressionName: o.ImpressionNames.APPLICATION_LIBRARY,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.APPLICATION_STORE,
-                                                        render: eO,
-                                                        impressionName: s.ImpressionNames.APPLICATION_STORE,
+                                                        render: ey,
+                                                        impressionName: o.ImpressionNames.APPLICATION_STORE,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
@@ -543,56 +543,56 @@ function eB() {
                                                         path: em.Z5c.ME,
                                                         exact: !0,
                                                         render: eD,
-                                                        impressionName: s.ImpressionNames.FRIENDS,
+                                                        impressionName: o.ImpressionNames.FRIENDS,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: [em.Z5c.CHANNEL_THREAD_VIEW(q.Hw.guildId(), q.Hw.channelId(), ':threadId', ':messageId?'), em.Z5c.CHANNEL(em.ME, q.Hw.channelId()), em.Z5c.CHANNEL(q.Hw.guildId(), q.Hw.channelId({ optional: !0 }), ':messageId?')],
-                                                        render: eA,
-                                                        impressionName: s.ImpressionNames.GUILD_CHANNEL,
+                                                        render: eZ,
+                                                        impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GLOBAL_DISCOVERY,
-                                                        render: eZ,
-                                                        impressionName: s.ImpressionNames.GLOBAL_DISCOVERY,
+                                                        render: ex,
+                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0,
                                                         exact: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                                                        render: eZ,
-                                                        impressionName: s.ImpressionNames.GLOBAL_DISCOVERY,
+                                                        render: ex,
+                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GLOBAL_DISCOVERY_APPS,
-                                                        render: eZ,
-                                                        impressionName: s.ImpressionNames.GLOBAL_DISCOVERY_APPS,
+                                                        render: ex,
+                                                        impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.QUEST_HOME,
-                                                        render: eZ,
-                                                        impressionName: s.ImpressionNames.QUEST_HOME,
+                                                        render: ex,
+                                                        impressionName: o.ImpressionNames.QUEST_HOME,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GUILD_DISCOVERY,
-                                                        render: eZ,
-                                                        impressionName: s.ImpressionNames.GUILD_DISCOVERY,
+                                                        render: ex,
+                                                        impressionName: o.ImpressionNames.GUILD_DISCOVERY,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GUILD_MEMBER_VERIFICATION(q.Hw.guildId(), ':inviteCode?'),
                                                         render: eL,
-                                                        impressionName: s.ImpressionNames.GUILD_MEMBER_VERIFICATION,
+                                                        impressionName: o.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                         disableTrack: !0
                                                     }),
                                                     (0, i.jsx)(I.Z, {
                                                         path: em.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(q.Hw.guildId(), ':inviteCode?'),
                                                         render: eP,
-                                                        impressionName: s.ImpressionNames.HUB_EMAIL_SIGNUP,
+                                                        impressionName: o.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                         impressionProperties: (e) => {
                                                             let { computedMatch: t } = e;
                                                             return { has_invite: void 0 !== t.params.inviteCode };

@@ -19,8 +19,8 @@ var l = t(200651),
     h = t(147496),
     x = t(519896),
     v = t(981631),
-    C = t(388032);
-let g = (0, r.Kb)([d.Z, u.Z, m.Z], {
+    g = t(388032);
+let C = (0, r.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -65,7 +65,7 @@ let g = (0, r.Kb)([d.Z, u.Z, m.Z], {
     useStateHook: r.cj
 });
 function _(e) {
-    let { data: n } = g(e),
+    let { data: n } = C(e),
         t = null == n ? void 0 : n.parentSku,
         r = null == n ? void 0 : n.sku,
         a = null == n ? void 0 : n.storeListing,
@@ -100,19 +100,19 @@ function _(e) {
         if (null == e || (null != r && !r.available))
             return {
                 disabled: !0,
-                label: C.intl.string(C.t.CHa0vL)
+                label: g.intl.string(g.t.CHa0vL)
             };
         if (r.type === v.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: C.intl.string(C.t.CHa0vL)
+                    label: g.intl.string(g.t.CHa0vL)
                 };
             let e = s[0],
                 n = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
+                label: g.intl.formatToPlainString(g.t['c6Q+Bw'], {
                     skuName: r.name,
                     price: (0, p.T4)(n.amount, n.currency)
                 }),
@@ -122,11 +122,11 @@ function _(e) {
         return null == r.price
             ? {
                   disabled: !0,
-                  label: C.intl.string(C.t.CHa0vL)
+                  label: g.intl.string(g.t.CHa0vL)
               }
             : {
                   disabled: !1,
-                  label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
+                  label: g.intl.formatToPlainString(g.t['c6Q+Bw'], {
                       skuName: r.name,
                       price: (0, p.T4)(r.price.amount, r.price.currency)
                   }),

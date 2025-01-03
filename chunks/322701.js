@@ -3,8 +3,8 @@ n(192379);
 var r = n(924826),
     l = n(91192),
     a = n(442837),
-    o = n(215569),
-    s = n(481060),
+    s = n(215569),
+    o = n(481060),
     c = n(607070),
     d = n(981631),
     u = n(732144);
@@ -23,7 +23,7 @@ t.Z = function (e) {
             I
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)
                 : (0, i.jsx)(
-                      o.W,
+                      s.W,
                       {
                           transitionAppear: !1,
                           component: 'div',
@@ -37,7 +37,7 @@ t.Z = function (e) {
         children: (0, i.jsx)(l.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsxs)(s.ScrollerAuto, {
+                return (0, i.jsxs)(o.ScrollerAuto, {
                     ref: t,
                     className: u.peopleList,
                     ...n,

@@ -8,8 +8,8 @@ n(192379);
 var r = n(442837),
     l = n(481060),
     a = n(210887),
-    o = n(687683),
-    s = n(388032),
+    s = n(687683),
+    o = n(388032),
     c = n(283863),
     d = n(138715),
     u = n(979770);
@@ -26,7 +26,7 @@ function h(e) {
                 lightSrc: u,
                 darkSrc: d
             }),
-            (0, i.jsx)(l.EmptyStateText, { note: t === o.pS.SPAM ? s.intl.string(s.t.hasFPT) : s.intl.string(s.t.SXrqTU) })
+            (0, i.jsx)(l.EmptyStateText, { note: t === s.pS.SPAM ? o.intl.string(o.t.hasFPT) : o.intl.string(o.t.SXrqTU) })
         ]
     });
 }

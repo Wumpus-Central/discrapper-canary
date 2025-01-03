@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(512722),
     a = n.n(l),
-    o = n(481060),
-    s = n(176299),
+    s = n(481060),
+    o = n(176299),
     c = n(512847),
     d = n(612226),
     u = n(714338),
@@ -16,7 +16,7 @@ var i = n(200651),
     E = n(145604),
     I = n(718813),
     C = n(981631),
-    v = n(224239);
+    N = n(224239);
 t.Z = r.memo(function () {
     let e = r.useRef(null),
         t = r.useCallback((t) => {
@@ -37,19 +37,19 @@ t.Z = r.memo(function () {
             [t]
         ),
         (0, m.Z)(),
-        (0, i.jsxs)(o.Shakeable, {
+        (0, i.jsxs)(s.Shakeable, {
             ref: e,
-            className: v.app,
+            className: N.app,
             children: [
                 (0, i.jsx)(I.Z, {
-                    className: v.layers,
-                    children: (0, i.jsx)(s.Z, {})
+                    className: N.layers,
+                    children: (0, i.jsx)(o.Z, {})
                 }),
                 (0, i.jsx)(p.Z, {}),
                 (0, i.jsx)(c.Z, {}),
                 (0, i.jsx)(E.Z, {}),
                 (0, i.jsx)(g.Z, {}),
-                (0, i.jsx)(o.DnDKeyboardHelpBar, {})
+                (0, i.jsx)(s.DnDKeyboardHelpBar, {})
             ]
         })
     );

@@ -1,21 +1,21 @@
 i.d(t, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var n = i(200651);
 i(192379);
-var a = i(481060),
-    r = i(782568),
+var r = i(481060),
+    a = i(782568),
     o = i(626135),
     l = i(63063),
-    s = i(132871),
-    c = i(981631),
+    c = i(132871),
+    s = i(981631),
     d = i(388032),
     u = i(62567),
     h = i(820305);
-function p() {
-    let e = (0, s.useApplicationDirectoryHistory)((e) => e.guildId);
+function _() {
+    let e = (0, c.useApplicationDirectoryHistory)((e) => e.guildId);
     return (0, n.jsxs)('div', {
         className: u.container,
         role: 'contentinfo',
@@ -28,26 +28,26 @@ function p() {
             (0, n.jsxs)('div', {
                 className: u.content,
                 children: [
-                    (0, n.jsx)(a.Heading, {
+                    (0, n.jsx)(r.Heading, {
                         variant: 'heading-md/semibold',
                         children: d.intl.string(d.t['kw8/ER'])
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: d.intl.string(d.t.GZoV1N)
                     })
                 ]
             }),
-            (0, n.jsx)(a.Button, {
-                size: a.Button.Sizes.SMALL,
+            (0, n.jsx)(r.Button, {
+                size: r.Button.Sizes.SMALL,
                 onClick: function () {
-                    o.default.track(c.rMx.APP_DIRECTORY_CTA_CLICKED, {
+                    o.default.track(s.rMx.APP_DIRECTORY_CTA_CLICKED, {
                         cta: 'new_to_apps',
-                        current_page: s.ApplicationDirectoryViews.HOME,
+                        current_page: c.ApplicationDirectoryViews.HOME,
                         guild_id: e
                     }),
-                        (0, r.Z)(l.Z.getAppsSupportURL(c.BhN.APPS_LEARN_MORE));
+                        (0, a.Z)(l.Z.getAppsSupportURL(s.BhN.APPS_LEARN_MORE));
                 },
                 className: u.button,
                 children: d.intl.string(d.t['B90I9/'])

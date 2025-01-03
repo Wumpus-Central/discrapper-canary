@@ -9,8 +9,8 @@ n(192379);
 var r = n(442837),
     l = n(481060),
     a = n(44315),
-    o = n(598077),
-    s = n(246946),
+    s = n(598077),
+    o = n(246946),
     c = n(594174),
     d = n(626135),
     u = n(51144),
@@ -23,20 +23,20 @@ var r = n(442837),
     E = n(543395);
 function I(e) {
     let t = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        n = (0, r.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        n = (0, r.e7)([o.Z], () => o.Z.hidePersonalInformation),
         { multiAccountUsers: I } = (0, p.L)(),
         C = (e) => {
             if (e !== (null == t ? void 0 : t.id)) d.default.track(f.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: f.jXE.USER_PROFILE } }), h.yD(e);
         },
-        v = I.map((r) => {
-            let s = new o.Z(r),
-                c = s.id === (null == t ? void 0 : t.id),
+        N = I.map((r) => {
+            let o = new s.Z(r),
+                c = o.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === m.q.INVALID,
-                h = n ? null : '#'.concat(s.discriminator);
+                h = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
                 l.MenuItem,
                 {
-                    id: s.id,
+                    id: o.id,
                     focusedClassName: E.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
@@ -44,7 +44,7 @@ function I(e) {
                             className: E.userMenuItem,
                             children: [
                                 (0, i.jsx)(l.Avatar, {
-                                    src: s.getAvatarURL(void 0, 40),
+                                    src: o.getAvatarURL(void 0, 40),
                                     size: l.AvatarSizes.SIZE_24,
                                     'aria-label': r.username
                                 }),
@@ -54,12 +54,12 @@ function I(e) {
                                         (0, i.jsx)(l.Text, {
                                             className: E.userMenuText,
                                             variant: 'text-sm/normal',
-                                            children: u.ZP.getUserTag(s, {
+                                            children: u.ZP.getUserTag(o, {
                                                 mode: 'username',
                                                 identifiable: n ? 'never' : 'always'
                                             })
                                         }),
-                                        !s.isPomelo() &&
+                                        !o.isPomelo() &&
                                             (0, i.jsx)(l.Text, {
                                                 className: E.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
@@ -85,14 +85,14 @@ function I(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), d ? (0, g.Z)() : C(s.id);
+                        null == e || e(), d ? (0, g.Z)() : C(o.id);
                     }
                 },
-                s.id
+                o.id
             );
         });
     return (
-        v.push(
+        N.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(l.MenuSeparator, {}),
@@ -106,6 +106,6 @@ function I(e) {
                 ]
             })
         ),
-        v
+        N
     );
 }

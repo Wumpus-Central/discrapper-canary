@@ -1,6 +1,6 @@
 n.d(t, {
     J_: function () {
-        return o;
+        return s;
     },
     R6: function () {
         return l;
@@ -34,7 +34,7 @@ let l = (0, i.B)({
             }
         ]
     }),
-    o = (e) => {
+    s = (e) => {
         let t = 'guild trigger debug',
             n = 'user trigger debug';
         a.useExperiment(

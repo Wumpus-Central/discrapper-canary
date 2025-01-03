@@ -11,8 +11,8 @@ var i = n(512722),
     r = n.n(i),
     l = n(46973),
     a = n(304809),
-    o = n(131951),
-    s = n(747071);
+    s = n(131951),
+    o = n(747071);
 let c = null;
 try {
     c = (0, a.N)();
@@ -28,13 +28,13 @@ async function u(e) {
 function h(e) {
     let { soundKey: t, soundURL: n, soundVolume: i, reportSoundStartedPlaying: a } = e;
     return new Promise(async (e) => {
-        let s = await u(n);
-        null == s && e(),
-            o.Z.getMediaEngine().eachConnection((n) => {
+        let o = await u(n);
+        null == o && e(),
+            s.Z.getMediaEngine().eachConnection((n) => {
                 n.context === l.Yn.DEFAULT &&
                     (a(),
-                    r()(null != s, 'audioBuffer cannot be null here'),
-                    n.startSamplesLocalPlayback(t, s, i, () => {
+                    r()(null != o, 'audioBuffer cannot be null here'),
+                    n.startSamplesLocalPlayback(t, o, i, () => {
                         e();
                     }));
             });
@@ -49,7 +49,7 @@ function m(e, t) {
     }
     return new Promise((e) => {
         let a = new Audio(i);
-        (a.volume = (0, s.Z)(r)),
+        (a.volume = (0, o.Z)(r)),
             a.addEventListener('canplaythrough', () => {
                 l(), t.set(n, a), a.play();
             }),

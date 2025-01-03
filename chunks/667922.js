@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return p;
     }
 });
 var i = t(200651),
@@ -16,21 +16,21 @@ var i = t(200651),
     f = t(768581),
     m = t(585483),
     h = t(176354),
-    v = t(981631),
-    E = t(185923),
+    E = t(981631),
+    v = t(185923),
     I = t(388032);
-function M(e, n) {
+function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         f = (0, d.$R)(n),
-        M = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(v.Plq.ADD_REACTIONS, n)) && f, [n, f]),
+        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)) && f, [n, f]),
         Z = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !M || e.type === v.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
     let x = Z.filter(
         (e) =>
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
                 channel: n,
-                intention: E.Hz.REACTION
+                intention: v.Hz.REACTION
             })
     )
         .slice(0, 12)
@@ -43,7 +43,7 @@ function M(e, n) {
                     id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(M, {
                             ...e,
                             reducedMotionEnabled: t.enabled,
                             emoji: l
@@ -60,7 +60,7 @@ function M(e, n) {
         id: 'add-reaction',
         label: I.intl.string(I.t.lfIHs7),
         action: () => {
-            m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
@@ -73,14 +73,14 @@ function M(e, n) {
                     label: I.intl.string(I.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
-                        m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
         })
     });
 }
-function p(e) {
+function M(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

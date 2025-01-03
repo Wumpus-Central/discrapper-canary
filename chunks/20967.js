@@ -11,8 +11,8 @@ var i,
     l = n(200651);
 n(192379);
 var a = n(990547),
-    o = n(481060),
-    s = n(213609),
+    s = n(481060),
+    o = n(213609),
     c = n(388032),
     d = n(818754),
     u = n(837753);
@@ -20,7 +20,7 @@ var a = n(990547),
 let h = (e) => {
     let { errorType: t } = e;
     return (
-        (0, s.Z)({
+        (0, o.Z)({
             type: a.ImpressionTypes.PAGE,
             name: a.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
             properties: { error_page_type: t }
@@ -35,12 +35,12 @@ let h = (e) => {
                         alt: '',
                         className: d.errorPageIllo
                     }),
-                    (0, l.jsx)(o.Heading, {
+                    (0, l.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
                         className: d.errorPageTitle,
                         children: 'guild_not_eligible' === t ? c.intl.string(c.t.atZQVV) : c.intl.string(c.t.gAdWBg)
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: d.errorPagSubtitle,
                         children: 'guild_not_eligible' === t ? c.intl.string(c.t.teWe5O) : c.intl.string(c.t['X/yMrK'])

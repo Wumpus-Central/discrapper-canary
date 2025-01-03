@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return s;
+        return o;
     }
 });
 var i = n(317381),
@@ -8,14 +8,14 @@ var i = n(317381),
 n(817938);
 var l = n(238679),
     a = n(981631),
-    o = n(701488);
-function s(e, t, n) {
-    var s, c;
+    s = n(701488);
+function o(e, t, n) {
+    var o, c;
     switch (t) {
         case a.zMe.ACTIVITY_PIP_MODE_UPDATE: {
-            let t = null === (s = e.application) || void 0 === s ? void 0 : s.id,
+            let t = null === (o = e.application) || void 0 === o ? void 0 : o.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
-            return null != n ? { is_pip_mode: n !== o.cE.FOCUSED } : null;
+            return null != n ? { is_pip_mode: n !== s.cE.FOCUSED } : null;
         }
         case a.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
             let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,

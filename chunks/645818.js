@@ -3,21 +3,21 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(846519),
-    o = n(481060),
-    s = n(293245),
+    s = n(481060),
+    o = n(293245),
     c = n(863969),
     d = n(563593),
     u = n(981631),
     h = n(388032);
-let m = (0, o.makeIconCompat)(c.Z),
-    p = (0, o.makeIconCompat)(d.Z),
+let m = (0, s.makeIconCompat)(c.Z),
+    p = (0, s.makeIconCompat)(d.Z),
     g = new Set([u.TzF.PUSHING, u.TzF.PULLING]),
     f = Object.freeze({
         [u.TzF.DONE]: m,
         [u.TzF.PLANNING]: m,
         [u.TzF.PREPARING]: m,
-        [u.TzF.PUSHING]: o.UploadIcon,
-        [u.TzF.PULLING]: o.DownloadIcon,
+        [u.TzF.PUSHING]: s.UploadIcon,
+        [u.TzF.PULLING]: s.DownloadIcon,
         [u.TzF.CONFLICT]: m,
         [u.TzF.ERROR]: m
     });
@@ -82,11 +82,11 @@ class _ extends r.PureComponent {
                 stopColor: 'rgba(114, 137, 218, 1)',
                 stop: this.getStop(r, l)
             });
-        let s = l ? p : f[r.type];
-        return (0, i.jsx)(o.Tooltip, {
+        let o = l ? p : f[r.type];
+        return (0, i.jsx)(s.Tooltip, {
             text: this.getTooltip(r, l),
             children: (e) =>
-                (0, i.jsx)(s, {
+                (0, i.jsx)(o, {
                     className: n,
                     ...a,
                     ...e
@@ -109,7 +109,7 @@ class _ extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = l.ZP.connectStores([s.Z], (e) => {
+t.Z = l.ZP.connectStores([o.Z], (e) => {
     let { libraryApplication: t } = e;
-    return { cloudSyncState: s.Z.getState(t.id, t.branchId) };
+    return { cloudSyncState: o.Z.getState(t.id, t.branchId) };
 })(_);

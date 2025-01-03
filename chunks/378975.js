@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return g;
     }
 }),
     t(47120);
@@ -112,50 +112,50 @@ function v(e) {
         })
     });
 }
-function C(e) {
-    let { type: n, options: t, id: r, placeholder: a, maxValues: s, minValues: C, disabled: g } = e,
+function g(e) {
+    let { type: n, options: t, id: r, placeholder: a, maxValues: s, minValues: g, disabled: C } = e,
         _ = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
         {
-            state: I,
-            executeStateUpdate: b,
-            visualState: j,
-            isDisabled: S,
-            error: N
+            state: b,
+            executeStateUpdate: I,
+            visualState: S,
+            isDisabled: j,
+            error: y
         } = (0, d.Ee)(e, {
             type: n,
             values: _
         }),
         T = s > 1,
-        y = j === m.gH.LOADING,
+        N = S === m.gH.LOADING,
         [E, Z] = i.useState(!1),
         [k, L] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
-        [R, O] = i.useState(k),
-        M = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
+        [O, M] = i.useState(k),
+        P = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
     i.useEffect(() => {
-        if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
-            let e = new Set(I.values);
-            L(e), O(e);
+        if ((null == b ? void 0 : b.type) === c.re.STRING_SELECT) {
+            let e = new Set(b.values);
+            L(e), M(e);
         } else {
             let e = new Set(_);
-            L(e), O(e);
+            L(e), M(e);
         }
-    }, [r, _, I]);
-    let A = i.useCallback(() => {
-        if (R !== k)
-            b({
+    }, [r, _, b]);
+    let R = i.useCallback(() => {
+        if (O !== k)
+            I({
                 type: c.re.STRING_SELECT,
                 values: Array.from(k)
-            }) && O(k);
-    }, [k, R, O, b]);
+            }) && M(k);
+    }, [k, O, M, I]);
     i.useEffect(() => {
-        if (!(E || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) A();
-    }, [E, k, R, A]);
-    let P = o.singleSelect;
-    T ? (P = o.multiSelect) : 0 === C && (P = o.toggleSelect);
-    let B = (0, o.useVariableSelect)({
+        if (!(E || (k.size === O.size && Array.from(O).every((e) => k.has(e))))) R();
+    }, [E, k, O, R]);
+    let A = o.singleSelect;
+    T ? (A = o.multiSelect) : 0 === g && (A = o.toggleSelect);
+    let w = (0, o.useVariableSelect)({
         value: k,
         onChange: (e) => L(e),
-        onSelectInteraction: P
+        onSelectInteraction: A
     });
     return (0, l.jsxs)(i.Fragment, {
         children: [
@@ -163,7 +163,7 @@ function C(e) {
                 className: p.container,
                 children: [
                     (0, l.jsx)(o.Select, {
-                        isDisabled: g || S,
+                        isDisabled: C || j,
                         className: p.select,
                         options: t.map((e) => ({
                             ...e,
@@ -179,12 +179,12 @@ function C(e) {
                             (0, l.jsx)(h, {
                                 ...e,
                                 isDisabled: T && !k.has(e.value) && k.size === s,
-                                isOffset: M
+                                isOffset: P
                             }),
                         renderOptionValue: (e) => (T ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
-                        ...B
+                        ...w
                     }),
-                    y
+                    N
                         ? (0, l.jsx)('div', {
                               className: p.__invalid_loading,
                               children: (0, l.jsx)(o.Dots, {
@@ -195,9 +195,9 @@ function C(e) {
                         : null
                 ]
             }),
-            null != N
+            null != y
                 ? (0, l.jsx)(u.st, {
-                      ...(0, u.c4)(N),
+                      ...(0, u.c4)(y),
                       className: p.error
                   })
                 : null

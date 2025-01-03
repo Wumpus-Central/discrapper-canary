@@ -11,20 +11,20 @@ var r = n(427679),
 n(199902);
 var a = n(592125);
 n(496675), n(938475);
-var o = n(151864);
+var s = n(151864);
 n(497656);
-var s = n(554747);
+var o = n(554747);
 function c(e) {
     var t;
     let n = (0, l.ZP)(e),
         c = a.Z.getChannel(null === (t = n[0]) || void 0 === t ? void 0 : t.id),
         d = (0, i.e7)([r.Z], () => r.Z.getStageInstanceByChannel(null == c ? void 0 : c.id), [c]),
-        u = (0, s.k5)(e),
+        u = (0, o.k5)(e),
         { isStageNoticeHidden: h, isEventNoticeHidden: m } = (0, i.cj)(
-            [o.Z],
+            [s.Z],
             () => ({
-                isStageNoticeHidden: o.Z.isLiveChannelNoticeHidden({ stageId: null == d ? void 0 : d.id }),
-                isEventNoticeHidden: o.Z.isLiveChannelNoticeHidden({ eventId: null == u ? void 0 : u.id })
+                isStageNoticeHidden: s.Z.isLiveChannelNoticeHidden({ stageId: null == d ? void 0 : d.id }),
+                isEventNoticeHidden: s.Z.isLiveChannelNoticeHidden({ eventId: null == u ? void 0 : u.id })
             }),
             [d, u]
         );

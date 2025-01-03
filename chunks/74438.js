@@ -5,40 +5,40 @@ i.r(t),
         }
     });
 var n = i(200651),
-    a = i(192379),
-    r = i(399606),
+    r = i(192379),
+    a = i(399606),
     o = i(626135),
     l = i(894653),
-    s = i(738130),
-    c = i(132871),
+    c = i(738130),
+    s = i(132871),
     d = i(961106),
     u = i(62413),
     h = i(603406),
-    p = i(165209),
-    m = i(981631),
-    _ = i(400435);
+    _ = i(165209),
+    p = i(981631),
+    m = i(400435);
 function f() {
-    let e = (0, c.useApplicationDirectoryHistory)((e) => e.guildId),
-        t = (0, r.e7)([l.Z], () => l.Z.getCategories()),
-        i = (0, c.getPreviousView)();
+    let e = (0, s.useApplicationDirectoryHistory)((e) => e.guildId),
+        t = (0, a.e7)([l.Z], () => l.Z.getCategories()),
+        i = (0, s.getPreviousView)();
     return (
-        a.useEffect(() => {
-            o.default.track(m.rMx.APP_DIRECTORY_PAGE_VIEWED, {
-                current_page: c.ApplicationDirectoryViews.HOME,
+        r.useEffect(() => {
+            o.default.track(p.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+                current_page: s.ApplicationDirectoryViews.HOME,
                 previous_page: null == i ? void 0 : i.type,
                 guild_id: e,
                 referrer: document.referrer
             });
         }, [e, i]),
-        (0, n.jsxs)(s.Z, {
+        (0, n.jsxs)(c.Z, {
             children: [
                 (0, n.jsx)(h.Z, {}),
-                null != t && t.length > 0 && (0, n.jsx)(d.Z, { className: _.categoryList }),
+                null != t && t.length > 0 && (0, n.jsx)(d.Z, { className: m.categoryList }),
                 (0, n.jsx)('main', {
-                    className: _.collectionsContainer,
+                    className: m.collectionsContainer,
                     children: (0, n.jsx)(u.Z, {})
                 }),
-                (0, n.jsx)(p.Z, {})
+                (0, n.jsx)(_.Z, {})
             ]
         })
     );

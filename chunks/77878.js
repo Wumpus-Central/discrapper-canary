@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(981631),
-    o = n(368043);
-let s = {
+    s = n(368043);
+let o = {
         EVERYONE: '1',
         EVERYONE_TEN_PLUS: '2',
         TEEN: '3',
@@ -21,23 +21,23 @@ let s = {
     },
     d = {
         [a.aIt.ESRB]: {
-            [s.EVERYONE]: o.esrbEveryone,
-            [s.EVERYONE_TEN_PLUS]: o.esrbEveryoneTenPlus,
-            [s.TEEN]: o.esrbTeen,
-            [s.MATURE]: o.esrbMature,
-            [s.ADULT]: o.esrbAdult,
-            [s.RATING_PENDING]: o.esrbRatingPending
+            [o.EVERYONE]: s.esrbEveryone,
+            [o.EVERYONE_TEN_PLUS]: s.esrbEveryoneTenPlus,
+            [o.TEEN]: s.esrbTeen,
+            [o.MATURE]: s.esrbMature,
+            [o.ADULT]: s.esrbAdult,
+            [o.RATING_PENDING]: s.esrbRatingPending
         },
         [a.aIt.PEGI]: {
-            [c.THREE]: o.pegiThree,
-            [c.SEVEN]: o.pegiSeven,
-            [c.TWELVE]: o.pegiTwelve,
-            [c.SIXTEEN]: o.pegiSixteen,
-            [c.EIGHTEEN]: o.pegiEighteen
+            [c.THREE]: s.pegiThree,
+            [c.SEVEN]: s.pegiSeven,
+            [c.TWELVE]: s.pegiTwelve,
+            [c.SIXTEEN]: s.pegiSixteen,
+            [c.EIGHTEEN]: s.pegiEighteen
         }
     };
 t.Z = (e) => {
     let { agency: t, rating: n, className: r } = e,
         a = d[t][n];
-    return null == a ? null : (0, i.jsx)('div', { className: l()(o.contentRating, a, r) });
+    return null == a ? null : (0, i.jsx)('div', { className: l()(s.contentRating, a, r) });
 };

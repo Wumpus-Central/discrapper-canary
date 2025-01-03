@@ -1,12 +1,12 @@
-n.d(e, {
+e.d(n, {
     v: function () {
         return i;
     }
 });
-var r = n(944486),
-    l = n(176505);
+var r = e(944486),
+    l = e(176505);
 function i() {
     var t;
-    let e = null !== (t = r.Z.getCurrentlySelectedChannelId()) && void 0 !== t ? t : void 0;
-    return null != e && (0, l.AB)(e) ? { channel_static_route: e } : { channel_id: e };
+    let n = null !== (t = r.Z.getCurrentlySelectedChannelId()) && void 0 !== t ? t : void 0;
+    return null != n && (0, l.AB)(n) ? { channel_static_route: n } : { channel_id: n };
 }

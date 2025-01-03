@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return A;
     }
 }),
     n(47120),
@@ -14,8 +14,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(607070),
     d = n(446411),
     u = n(468846),
@@ -28,41 +28,41 @@ var i = n(200651),
     E = n(565216),
     I = n(981631),
     C = n(921944),
-    v = n(388032),
-    S = n(966156);
-let N = [],
+    N = n(388032),
+    v = n(966156);
+let S = [],
     T = (e) => {
         let { tagText: t, className: n } = e;
-        return (0, i.jsx)(s.TextBadge, {
-            className: a()(S.tag, n),
+        return (0, i.jsx)(o.TextBadge, {
+            className: a()(v.tag, n),
             text: t
         });
     },
     b = (e) => {
-        let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: o } = e;
+        let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
-            className: a()(S.featureCard, { [S.wideStyle]: o }),
+            className: a()(v.featureCard, { [v.wideStyle]: s }),
             children: [
                 null != l
                     ? (0, i.jsx)(T, {
                           tagText: l,
-                          className: S.featureCardTag
+                          className: v.featureCardTag
                       })
                     : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: a()(S.featureCardImg, { [S.wideStyle]: o }),
+                    className: a()(v.featureCardImg, { [v.wideStyle]: s }),
                     src: r
                 }),
                 (0, i.jsxs)('div', {
-                    className: S.featureCardTextGroup,
+                    className: v.featureCardTextGroup,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: S.featureCardTextHeader,
+                            className: v.featureCardTextHeader,
                             children: t
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             children: n
                         })
@@ -71,12 +71,12 @@ let N = [],
             ]
         });
     };
-function x(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: x, modalTopExtra: A, header: Z, headerClassName: L, subHeader: P, subHeaderExtra: y, featureCards: O, changeLogId: R, button: j, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: Z, header: x, headerClassName: L, subHeader: P, subHeaderExtra: O, featureCards: y, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
-        U = O.length % 2 == 0,
-        G = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        U = y.length % 2 == 0,
+        G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = r.useState(Date.now()),
         [V, F] = r.useState(0),
         [z, W] = r.useState(0),
@@ -87,7 +87,7 @@ function x(e) {
         $ = r.useRef(z),
         ee = r.useRef(Y),
         et = r.useRef(q),
-        [en, ei] = r.useState(N),
+        [en, ei] = r.useState(S),
         er = r.useRef(!1);
     function el() {
         let e = Date.now(),
@@ -118,7 +118,7 @@ function x(e) {
                               });
                     ei(await Promise.all(t));
                 } catch (e) {
-                    _.Z.captureException(e), ei(N);
+                    _.Z.captureException(e), ei(S);
                 }
             };
             !0 !== er.current && e(), (er.current = !0);
@@ -152,7 +152,7 @@ function x(e) {
             [R, l.type]
         ),
         r.useEffect(() => {
-            null != x && (0, p.kk)(x);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
                 f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -161,32 +161,32 @@ function x(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != x && (0, p.EW)(x, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [x, R]),
-        (0, i.jsxs)(s.ModalRoot, {
-            className: a()(S.root, t),
+        }, [A, R]),
+        (0, i.jsxs)(o.ModalRoot, {
+            className: a()(v.root, t),
             transitionState: w,
             'aria-labelledby': k,
             children: [
-                (0, i.jsx)(s.ModalCloseButton, {
-                    className: S.closeButton,
+                (0, i.jsx)(o.ModalCloseButton, {
+                    className: v.closeButton,
                     onClick: M
                 }),
-                (0, i.jsx)(E.Z, { className: S.splash }),
-                null == A ? void 0 : A(),
-                (0, i.jsxs)(s.ModalContent, {
-                    className: S.content,
+                (0, i.jsx)(E.Z, { className: v.splash }),
+                null == Z ? void 0 : Z(),
+                (0, i.jsxs)(o.ModalContent, {
+                    className: v.content,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'display-md',
-                            className: a()(S.headerText, L),
-                            children: Z
+                            className: a()(v.headerText, L),
+                            children: x
                         }),
                         'video' === l.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(S.video, T),
+                                  className: a()(v.video, T),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -211,7 +211,7 @@ function x(e) {
                                       null == en
                                           ? void 0
                                           : en.map((e) => {
-                                                let t = (0, v.getLanguages)().find((t) => t.code === e.locale);
+                                                let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, i.jsx)(
@@ -229,7 +229,7 @@ function x(e) {
                               })
                             : 'embed' === l.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(S.video, T),
+                                    className: a()(v.video, T),
                                     allowFullScreen: !1,
                                     href: l.href,
                                     thumbnail: l.thumbnail,
@@ -247,25 +247,25 @@ function x(e) {
                               : 'image' === l.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(S.video, T),
+                                      className: a()(v.video, T),
                                       src: l.src
                                   })
                                 : null,
-                        (0, i.jsxs)(s.Heading, {
+                        (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: S.subHeader,
-                            children: [P, null == y ? void 0 : y()]
+                            className: v.subHeader,
+                            children: [P, null == O ? void 0 : O()]
                         }),
                         null != D &&
-                            (0, i.jsx)(s.Heading, {
+                            (0, i.jsx)(o.Heading, {
                                 variant: 'heading-md/medium',
-                                className: S.bodyText,
+                                className: v.bodyText,
                                 children: D
                             }),
-                        O.length > 0 &&
+                        y.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
-                                children: O.map((e, t) =>
+                                className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
+                                children: y.map((e, t) =>
                                     (0, i.jsx)(
                                         b,
                                         {

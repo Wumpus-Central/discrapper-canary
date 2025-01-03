@@ -8,8 +8,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(442837),
-    o = n(481060),
-    s = n(797258),
+    s = n(481060),
+    o = n(797258),
     c = n(374129),
     d = n(639351),
     u = n(565473),
@@ -23,9 +23,9 @@ function g(e) {
 function f(e) {
     let { voiceState: t, awaitingRemoteSessionInfo: n } = e,
         r = null != n ? (0, u.y)(n.type) : null,
-        c = (0, a.e7)([s.Z], () => {
+        c = (0, a.e7)([o.Z], () => {
             var e, n;
-            return null === (e = s.Z.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = o.Z.getSessionById(null !== (n = null == t ? void 0 : t.sessionId) && void 0 !== n ? n : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         d = null != r ? r : c;
     if (null == d || !h.al.has(d)) return null;
@@ -35,7 +35,7 @@ function f(e) {
         className: l()(p.root, f ? p.connecting : p.connected),
         children: [
             (0, i.jsx)(g, { platform: d }),
-            (0, i.jsx)(o.Text, {
+            (0, i.jsx)(s.Text, {
                 color: f ? 'header-primary' : 'always-white',
                 variant: 'text-xs/medium',
                 children: _

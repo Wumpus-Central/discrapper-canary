@@ -6,7 +6,7 @@ var i = t(200651),
     o = t(956664),
     s = t(981656);
 n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: l, className: u, style: c, width: d, height: h, maxWidth: m, maxHeight: f } = e,
+    let { children: n, active: t, onClick: l, className: u, style: c, width: d, height: h, maxWidth: f, maxHeight: m } = e,
         p = (0, r.useRef)(null),
         [_, E] = (0, r.useState)(!1),
         [g, S] = (0, r.useState)({
@@ -81,7 +81,7 @@ n.Z = r.memo(function (e) {
             },
             [_, I, x.x, x.y]
         ),
-        M = t ? (0, o.vV)(d, h, m, f) : 1,
+        M = t ? (0, o.vV)(d, h, f, m) : 1,
         L = (0, r.useCallback)(() => {
             let e = p.current;
             if (null == e) return !1;

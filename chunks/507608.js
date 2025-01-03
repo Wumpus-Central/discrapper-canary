@@ -30,8 +30,8 @@ var l = e(200651),
     b = e(430824),
     k = e(55563),
     f = e(551428),
-    S = e(626135),
-    P = e(768581),
+    P = e(626135),
+    S = e(768581),
     N = e(73346),
     Z = e(624138),
     y = e(591759),
@@ -54,7 +54,7 @@ function L(n) {
         p = t.useMemo(() => {
             var n;
             if ((null == v ? void 0 : v.banner) == null) return;
-            let i = (0, P.aN)({
+            let i = (0, S.aN)({
                 id: v.id,
                 banner: v.banner,
                 size: 1024,
@@ -65,7 +65,7 @@ function L(n) {
         x = t.useMemo(() => {
             var n;
             if ((null == v ? void 0 : v.banner) == null) return;
-            let i = (0, P.aN)({
+            let i = (0, S.aN)({
                 id: v.id,
                 banner: v.banner,
                 size: 1024,
@@ -79,7 +79,7 @@ function L(n) {
     return (
         t.useEffect(() => {
             0 !== g.length &&
-                S.default.track(w.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
+                P.default.track(w.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
                     application_id: i.id,
                     sku_ids: g,
                     location_stack: I
@@ -160,14 +160,14 @@ function O(n) {
     var i, r;
     let { appId: s, guildId: o, listing: c, subscriptionType: m, onDetails: g } = n,
         { data: f } = (0, h.H)(c.skuId),
-        S = null == f ? void 0 : f[0],
-        P = (0, a.e7)([k.Z], () => k.Z.get(c.skuId), [c.skuId]),
+        P = null == f ? void 0 : f[0],
+        S = (0, a.e7)([k.Z], () => k.Z.get(c.skuId), [c.skuId]),
         N = (0, a.e7)([b.Z], () => b.Z.getGuild(o), [o]),
         Z = (0, a.e7)([k.Z], () => k.Z.getParentSKU(c.skuId), [c.skuId]),
         y = (0, p.Ev)(Z, o),
         M = null == y ? void 0 : y.subscription,
         T = (0, p.cr)(Z, o),
-        _ = null != M && (0, x.Jf)(M, P),
+        _ = null != M && (0, x.Jf)(M, S),
         L = null != T && (null == y ? void 0 : null === (i = y.subscriptionPlan) || void 0 === i ? void 0 : i.id) !== (null == T ? void 0 : T.subscriptionPlan.id),
         U = !1 === _ && (null == T ? void 0 : T.subscriptionPlan.skuId) === c.skuId,
         O = (null == y ? void 0 : y.subscriptionPlan.skuId) === c.skuId,
@@ -199,10 +199,10 @@ function O(n) {
                     appId: s,
                     subscriptionType: m,
                     skuId: c.skuId,
-                    subscriptionPlan: S,
+                    subscriptionPlan: P,
                     state: B
                 }),
-            [s, m, c.skuId, S, B]
+            [s, m, c.skuId, P, B]
         ),
         K = t.useMemo(() => {
             if (L && (null == M ? void 0 : M.currentPeriodEnd) != null) {
@@ -258,7 +258,7 @@ function O(n) {
                 : null != G
                   ? () => {
                         (0, u.openModalLazy)(async () => {
-                            let { SubscriptionDetailsModal: n } = await e.e('86282').then(e.bind(e, 519896));
+                            let { SubscriptionDetailsModal: n } = await Promise.all([e.e('86282'), e.e('97319')]).then(e.bind(e, 519896));
                             return (i) =>
                                 (0, l.jsx)(n, {
                                     appId: s,
@@ -281,8 +281,8 @@ function z(n) {
         j = (0, T.M)(o);
     if (null == I) return null;
     let b = null !== (t = I.name) && void 0 !== t ? t : '',
-        S = null !== (r = null == h ? void 0 : null === (i = h.description) || void 0 === i ? void 0 : i.trim()) && void 0 !== r ? r : void 0,
-        P = (null == h ? void 0 : h.headerBackground) != null && null !== (d = y.Z.toURLSafe((0, N._W)(v, h.headerBackground, 256))) && void 0 !== d ? d : void 0,
+        P = null !== (r = null == h ? void 0 : null === (i = h.description) || void 0 === i ? void 0 : i.trim()) && void 0 !== r ? r : void 0,
+        S = (null == h ? void 0 : h.headerBackground) != null && null !== (d = y.Z.toURLSafe((0, N._W)(v, h.headerBackground, 256))) && void 0 !== d ? d : void 0,
         M = I.type === w.epS.DURABLE && j,
         R = I.type === w.epS.DURABLE ? (M ? A.intl.string(A.t.bm82mp) : A.intl.string(A.t['6gprwc'])) : void 0,
         { price: _ } = I;
@@ -290,13 +290,13 @@ function z(n) {
         ? null
         : (0, l.jsx)(s.I, {
               title: b,
-              description: S,
-              headerImage: P,
+              description: P,
+              headerImage: S,
               availabilityLabel: R,
               onDetails:
                   null != p
                       ? p
-                      : (0, Z.Ew)(S)
+                      : (0, Z.Ew)(P)
                         ? void 0
                         : () => {
                               (0, u.openModalLazy)(async () => {

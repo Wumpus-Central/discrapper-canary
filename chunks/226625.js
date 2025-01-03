@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(392711),
-    s = n.n(o),
+    s = n(392711),
+    o = n.n(s),
     c = n(752877),
     d = n(442837),
     u = n(481060),
@@ -23,13 +23,13 @@ let p = {
 function g(e) {
     let { className: t, pageMultiplier: n } = e,
         l = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        [o, g] = r.useState({
+        [s, g] = r.useState({
             x: 0,
             y: 0
         }),
         f = r.useMemo(
             () =>
-                s().throttle((e) => {
+                o().throttle((e) => {
                     if (l) return;
                     let t = (window.innerWidth - e.pageX * n) / 90;
                     g({
@@ -48,10 +48,10 @@ function g(e) {
     return (
         r.useEffect(() => {
             E({
-                x: o.x,
-                y: o.y
+                x: s.x,
+                y: s.y
             });
-        }, [o.x, o.y, E]),
+        }, [s.x, s.y, E]),
         (0, i.jsx)(c.animated.div, {
             style: {
                 transform: (0, c.to)([_.x, _.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))

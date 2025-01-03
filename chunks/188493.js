@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(89182),
-    o = n(706454),
-    s = n(762692),
+    s = n(706454),
+    o = n(762692),
     c = n(959165),
     d = n(164991),
     u = n(726115),
@@ -16,14 +16,14 @@ var i = n(200651),
     m = n(388032);
 function p(e) {
     let { loadId: t } = e,
-        n = (0, l.e7)([o.default], () => (0, u.Xp)([o.default])),
+        n = (0, l.e7)([s.default], () => (0, u.Xp)([s.default])),
         p = d.Z.useField('languageCode'),
         g = null != p ? p : n,
         f = r.useCallback(
             (e) => {
                 d.Z.setState({ languageCode: e });
                 let n = d.Z.getField('fetchedQuery');
-                s.Z.clearSearchResults({ ignoreQueries: [n] }),
+                o.Z.clearSearchResults({ ignoreQueries: [n] }),
                     c.Z.loadCategoryResults({
                         loadId: t,
                         categoryId: d.Z.getField('categoryId'),

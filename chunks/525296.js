@@ -7,10 +7,10 @@ var i = n(200651),
     r = n(192379),
     l = n(493683),
     a = n(239091),
-    o = n(730749),
-    s = n(430824);
+    s = n(730749),
+    o = n(430824);
 function c(e) {
-    return (0, o.Z)(
+    return (0, s.Z)(
         class extends r.Component {
             render() {
                 return (0, i.jsx)(e, {
@@ -49,7 +49,7 @@ function c(e) {
                 });
             }
             handleChannelContextMenu(e, t) {
-                let r = s.Z.getGuild(t.getGuildId());
+                let r = o.Z.getGuild(t.getGuildId());
                 if (null == r) return null;
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('40283').then(n.bind(n, 428108));

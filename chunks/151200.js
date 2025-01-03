@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return C;
     }
 });
 var l = t(200651);
@@ -57,7 +57,7 @@ function v(e) {
         ]
     });
 }
-function C(e) {
+function g(e) {
     let { clickable: n, ...t } = e;
     return (0, l.jsx)(v, {
         ...t,
@@ -68,28 +68,28 @@ function C(e) {
         clickableClassName: x.clickable
     });
 }
-function g(e) {
-    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: g, titleClickable: _, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
-        N = (0, m.Dt)(),
-        { primaryColor: T, secondaryColor: y } = (0, u.Z)(g);
+function C(e) {
+    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: C, titleClickable: _, subtitleClickable: b, thumbnailClickable: I, providerIconProps: S, style: j = {} } = e,
+        y = (0, m.Dt)(),
+        { primaryColor: T, secondaryColor: N } = (0, u.Z)(C);
     return (
-        null != g && (S.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(y, ')')),
+        null != C && (j.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(N, ')')),
         (0, l.jsx)(a.ThemeProvider, {
             theme: f.BR.DARK,
             children: (e) =>
                 (0, l.jsxs)('figure', {
                     'aria-roledescription': p.intl.string(p.t.zFfUhI),
-                    'aria-labelledby': N,
+                    'aria-labelledby': y,
                     'data-disable-adaptive-theme': !0,
                     className: r()(h.container, e),
-                    style: S,
+                    style: j,
                     children: [
                         (0, l.jsx)(v, {
                             className: h.thumbnailContainer,
                             clickableClassName: h.clickable,
-                            clickable: b,
+                            clickable: I,
                             children: (0, l.jsx)(s.f, {
-                                src: g,
+                                src: C,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -104,11 +104,11 @@ function g(e) {
                                     className: h.users
                                 }),
                                 (0, l.jsx)(a.Spacer, { size: 2 }),
-                                (0, l.jsx)(C, {
+                                (0, l.jsx)(g, {
                                     clickable: _,
                                     className: h.clickableText,
                                     children: (0, l.jsx)(a.Heading, {
-                                        id: N,
+                                        id: y,
                                         variant: 'heading-md/medium',
                                         lineClamp: 1,
                                         className: r()(h.textPrimary, h.truncatedText),
@@ -120,8 +120,8 @@ function g(e) {
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)(a.Spacer, { size: 2 }),
-                                              (0, l.jsx)(C, {
-                                                  clickable: I,
+                                              (0, l.jsx)(g, {
+                                                  clickable: b,
                                                   className: h.clickableText,
                                                   children: (0, l.jsx)(a.Text, {
                                                       variant: 'text-sm/normal',
@@ -143,7 +143,7 @@ function g(e) {
                         }),
                         (0, l.jsx)('div', {
                             className: h.headerIcons,
-                            children: null != j ? (0, l.jsx)(c.Z, { ...j }) : null
+                            children: null != S ? (0, l.jsx)(c.Z, { ...S }) : null
                         })
                     ]
                 })

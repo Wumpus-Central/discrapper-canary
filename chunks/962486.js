@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(322665),
-    o = n(17845),
-    s = n(374939),
+    s = n(17845),
+    o = n(374939),
     c = n(283293),
     d = n(726115),
     u = n(294330),
@@ -25,8 +25,8 @@ function g(e) {
         E = (0, d.Mf)(t),
         I = (0, d.a$)(t),
         C = (0, d.QW)(t),
-        v = (0, d.lg)(t),
-        S = r.useMemo(() => {
+        N = (0, d.lg)(t),
+        v = r.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
@@ -37,24 +37,24 @@ function g(e) {
                         {
                             guildId: null !== (r = n[a]) && void 0 !== r ? r : null,
                             index: a,
-                            onClick: (e) => f(e, a, v, p),
-                            onView: (e) => _(e, v)
+                            onClick: (e) => f(e, a, N, p),
+                            onView: (e) => _(e, N)
                         },
                         null !== (l = n[a]) && void 0 !== l ? l : a
                     )
                 );
             }
             return t;
-        }, [v, n, h, f, _]);
+        }, [N, n, h, f, _]);
     return (0, i.jsxs)(c.Z, {
         onScroll: g,
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(s.Z, {
                 title: E,
                 description: I,
                 children: (0, i.jsx)(a.Z, {})
             }),
-            (0, i.jsxs)(s.Z, {
+            (0, i.jsxs)(o.Z, {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         className: m.sectionTitle,
@@ -64,7 +64,7 @@ function g(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: m.content,
-                        children: S
+                        children: v
                     })
                 ]
             })

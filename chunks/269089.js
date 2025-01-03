@@ -4,27 +4,27 @@ n(192379);
 var r = n(570140),
     l = n(765250),
     a = n(317770),
-    o = n(663993),
-    s = n(355863),
+    s = n(663993),
+    o = n(355863),
     c = n(788983),
     d = n(981631);
 n(378481);
-let u = (0, o.Un)({
+let u = (0, s.Un)({
         createPromise: () => n.e('58621').then(n.bind(n, 223455)),
         webpackId: 223455,
         name: 'PopoutWindowChannelCall'
     }),
-    h = (0, o.Un)({
+    h = (0, s.Un)({
         createPromise: () => n.e('91032').then(n.bind(n, 432472)),
         webpackId: 432472,
         name: 'PopoutWindowStageChannelCall'
     }),
-    m = (0, o.Un)({
+    m = (0, s.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('75714')]).then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),
-    p = (0, o.Un)({
+    p = (0, s.Un)({
         createPromise: () => Promise.all([n.e('93382'), n.e('19578'), n.e('72884'), n.e('14797')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
@@ -81,7 +81,7 @@ class g extends a.Z {
     }
     async handleOpenActivityPopout() {
         let { OVERLAY_V3_LAYOUT_ID: e } = await Promise.resolve().then(n.bind(n, 501787));
-        (0, l.te)(e, s.Z.getDefaultLayout(e, 1), 1),
+        (0, l.te)(e, o.Z.getDefaultLayout(e, 1), 1),
             c.bA(d.KJ3.ACTIVITY_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480

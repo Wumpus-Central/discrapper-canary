@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(428548),
+    s = n(481060),
+    o = n(428548),
     c = n(679219),
     d = n(939039),
     u = n(358085),
@@ -22,21 +22,21 @@ let g = (e) => h.ZP.close(e),
     };
 function E(e) {
     let { windowKey: t, showDivider: n } = e,
-        r = (0, i.jsx)(o.Clickable, {
+        r = (0, i.jsx)(s.Clickable, {
             className: a()(p.winButton, p.winButtonClose),
             onClick: () => g(t),
             'aria-label': m.intl.string(m.t.ZdNUj4),
             tabIndex: -1,
-            children: (0, i.jsx)(s.Z, {})
+            children: (0, i.jsx)(o.Z, {})
         }),
-        l = (0, i.jsx)(o.Clickable, {
+        l = (0, i.jsx)(s.Clickable, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: (e) => _(t, e),
             'aria-label': m.intl.string(m.t.G1u0hI),
             tabIndex: -1,
             children: (0, i.jsx)(c.Z, {})
         }),
-        u = (0, i.jsx)(o.Clickable, {
+        u = (0, i.jsx)(s.Clickable, {
             className: a()(p.winButton, p.winButtonMinMax),
             onClick: () => f(t),
             'aria-label': m.intl.string(m.t.CxOC4e),
@@ -50,8 +50,8 @@ function E(e) {
 }
 function I(e) {
     let { leading: t, title: n, trailing: l, windowKey: a } = e,
-        o = (0, u.getPlatform)() === u.PlatformTypes.WINDOWS,
-        s = r.useCallback(() => {
+        s = (0, u.getPlatform)() === u.PlatformTypes.WINDOWS,
+        o = r.useCallback(() => {
             (0, u.isMac)() && h.ZP.maximize();
         }, []);
     function c(e) {
@@ -59,7 +59,7 @@ function I(e) {
     }
     return (0, i.jsxs)('div', {
         className: p.bar,
-        onDoubleClick: s,
+        onDoubleClick: o,
         children: [
             (0, i.jsx)('div', {
                 className: p.title,
@@ -75,7 +75,7 @@ function I(e) {
                 onDoubleClick: c,
                 children: [
                     l,
-                    o &&
+                    s &&
                         (0, i.jsx)(E, {
                             windowKey: a,
                             showDivider: null != l

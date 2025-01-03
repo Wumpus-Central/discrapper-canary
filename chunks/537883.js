@@ -2,15 +2,15 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(331114),
     d = n(356164);
 let u = [];
 function h() {
     u = [];
 }
-class m extends (a = o.ZP.Store) {
+class m extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.Z);
     }
@@ -27,7 +27,7 @@ class m extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new m(s.Z, {
+    (t.Z = new m(o.Z, {
         CONNECTION_OPEN: h,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: h,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {

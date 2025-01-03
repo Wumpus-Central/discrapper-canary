@@ -8,22 +8,22 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(399606),
-    s = n(243778),
+    s = n(399606),
+    o = n(243778),
     c = n(914010),
     d = n(566840),
     u = n(921944),
     h = n(913208);
 let m = r.memo(function (e) {
     var t, n, l;
-    let { state: o, markAsDismissed: s } = e,
-        { name: c, guildId: d, boundingRect: u } = o,
+    let { state: s, markAsDismissed: o } = e,
+        { name: c, guildId: d, boundingRect: u } = s,
         m = r.useMemo(
             () =>
                 (function (e, t, n) {
                     return null;
                 })(c, 0, 0),
-            [c, d, s]
+            [c, d, o]
         );
     if (null == m) return null;
     return (0, i.jsx)('div', {
@@ -40,9 +40,9 @@ let m = r.memo(function (e) {
     });
 });
 function p() {
-    let e = (0, o.e7)([c.Z], () => c.Z.getGuildId()),
+    let e = (0, s.e7)([c.Z], () => c.Z.getGuildId()),
         t = (0, d.Eg)(e),
-        [n, r] = (0, s.US)(
+        [n, r] = (0, o.US)(
             Object.values(t)
                 .filter((e) => {
                     let { disabled: t } = e;

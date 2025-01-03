@@ -3,7 +3,7 @@ var i,
     r = n(442837),
     l = n(570140),
     a = n(881052);
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-let s = new Map();
+let o = new Map();
 class c {
     handleSearchCountStart() {
         (this.error = null), (this.isFetching = !0);
@@ -28,16 +28,16 @@ class c {
         (this.error = new a.Hx(e)), (this.isFetching = !1);
     }
     constructor() {
-        o(this, 'isInitialFetchComplete', !1), o(this, 'isFetching', !1), o(this, 'error', null), o(this, 'counts', null);
+        s(this, 'isInitialFetchComplete', !1), s(this, 'isFetching', !1), s(this, 'error', null), s(this, 'counts', null);
     }
 }
 function d(e) {
     var t;
-    let n = null !== (t = s.get(e)) && void 0 !== t ? t : new c();
-    return s.set(e, n), n;
+    let n = null !== (t = o.get(e)) && void 0 !== t ? t : new c();
+    return o.set(e, n), n;
 }
 function u(e, t) {
-    let n = s.get(e);
+    let n = o.get(e);
     return null != n ? t(n) : null;
 }
 class h extends (i = r.ZP.Store) {
@@ -51,10 +51,10 @@ class h extends (i = r.ZP.Store) {
         return u(e, (e) => e.counts);
     }
 }
-o(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
+s(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
     (t.Z = new h(l.Z, {
         CONNECTION_OPEN: function () {
-            s.clear();
+            o.clear();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
             let { query: t } = e;
@@ -71,8 +71,8 @@ o(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
         GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
             let { ignoreQueries: t } = e,
                 n = new Set(t);
-            s.forEach((e, t) => {
-                !n.has(t) && s.delete(t);
+            o.forEach((e, t) => {
+                !n.has(t) && o.delete(t);
             });
         }
     }));

@@ -22,12 +22,12 @@ var i = n(200651),
     m = n(463571),
     _ = n(887706),
     f = n(214912),
-    h = n(290247),
-    g = n(981631),
+    g = n(290247),
+    h = n(981631),
     I = n(388032),
-    v = n(755257);
-let x = (0, I.getAvailableLocales)();
-function b(e) {
+    b = n(755257);
+let v = (0, I.getAvailableLocales)();
+function x(e) {
     var t, n, a;
     let { onClick: r, url: o, children: c } = e,
         p = (0, d.ZP)(),
@@ -48,7 +48,7 @@ function C(e) {
         m = null;
     null != t
         ? (m = (0, i.jsx)(t, {
-              className: v.listIcon,
+              className: b.listIcon,
               color: null != a ? a : 'currentColor',
               width: 20,
               height: 20,
@@ -56,7 +56,7 @@ function C(e) {
           }))
         : null != n &&
           (m = (0, i.jsx)('img', {
-              className: v.listImage,
+              className: b.listImage,
               src: n,
               alt: ''
           }));
@@ -64,7 +64,7 @@ function C(e) {
         children: [
             m,
             (0, i.jsx)(s.Text, {
-                className: v.listText,
+                className: b.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
                 children: d
@@ -73,7 +73,7 @@ function C(e) {
     });
     return (0, i.jsx)(c.Z, {
         href: r,
-        className: o()(v.listItem, v.linkItem),
+        className: o()(b.listItem, b.linkItem),
         onClick: () => (u(r, l), !1),
         trusted: !p,
         useDefaultUnderlineStyles: !1,
@@ -84,17 +84,17 @@ function S(e) {
     var t, n, r;
     let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: _ } = e,
         [S, N] = a.useState(null),
-        j = [],
-        T = null !== (n = null == l ? void 0 : null === (t = l.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== n ? n : [];
+        T = [],
+        y = null !== (n = null == l ? void 0 : null === (t = l.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== n ? n : [];
     a.useEffect(() => {
         var e;
         if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
             let e = new Set(l.directory_entry.supported_locales);
-            N(x.filter((t) => e.has(t.value)).map((e) => I.intl.string(e.localizedName)));
+            N(v.filter((t) => e.has(t.value)).map((e) => I.intl.string(e.localizedName)));
         }
     }, [l.directory_entry]);
-    let y = (e, t) => {
-        p.default.track(g.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
+    let j = (e, t) => {
+        p.default.track(h.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
             application_id: l.id,
             guild_id: c,
             type: t,
@@ -104,16 +104,16 @@ function S(e) {
     return (
         null != l.categories &&
             l.categories.length > 0 &&
-            j.push(
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: b.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.s7ialZ)
                         }),
                         (0, i.jsx)('div', {
-                            className: v.categories,
+                            className: b.categories,
                             children: (null !== (r = l.categories) && void 0 !== r ? r : []).map((e) => {
                                 let t = new URLSearchParams();
                                 return (
@@ -121,9 +121,9 @@ function S(e) {
                                     (0, i.jsx)(
                                         m.Z,
                                         {
-                                            href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(t),
+                                            href: ''.concat(h.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(t),
                                             children: (0, i.jsx)(s.Clickable, {
-                                                className: v.category,
+                                                className: b.category,
                                                 onClick: () => u(e),
                                                 children: (0, i.jsx)(s.Text, {
                                                     variant: 'text-sm/normal',
@@ -142,33 +142,33 @@ function S(e) {
             ),
         null != S &&
             S.length > 0 &&
-            j.push(
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: b.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.Fbjlu7)
                         }),
-                        (0, i.jsx)(h.Z, { supportedLanguages: S })
+                        (0, i.jsx)(g.Z, { supportedLanguages: S })
                     ]
                 })
             ),
-        (null != l.terms_of_service_url || null != l.privacy_policy_url || T.length > 0) &&
-            j.push(
+        (null != l.terms_of_service_url || null != l.privacy_policy_url || y.length > 0) &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: b.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.l6DP2t)
                         }),
-                        T.map((e, t) =>
+                        y.map((e, t) =>
                             (0, i.jsx)(
-                                b,
+                                x,
                                 {
                                     url: e.url,
-                                    onClick: y,
+                                    onClick: j,
                                     children: e.name
                                 },
                                 t
@@ -177,7 +177,7 @@ function S(e) {
                         null != l.terms_of_service_url
                             ? (0, i.jsx)(C, {
                                   icon: s.FileIcon,
-                                  onClick: y,
+                                  onClick: j,
                                   url: l.terms_of_service_url,
                                   type: 'tos',
                                   children: I.intl.string(I.t.s7STcX)
@@ -186,7 +186,7 @@ function S(e) {
                         null != l.privacy_policy_url
                             ? (0, i.jsx)(C, {
                                   icon: s.LockIcon,
-                                  onClick: y,
+                                  onClick: j,
                                   url: l.privacy_policy_url,
                                   type: 'policy',
                                   children: I.intl.string(I.t.kH3JR0)
@@ -196,12 +196,12 @@ function S(e) {
                 })
             ),
         null != l.guild &&
-            l.guild.features.includes(g.oNc.DISCOVERABLE) &&
-            j.push(
+            l.guild.features.includes(h.oNc.DISCOVERABLE) &&
+            T.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Heading, {
-                            className: v.sectionHeader,
+                            className: b.sectionHeader,
                             variant: 'eyebrow',
                             children: I.intl.string(I.t.KJEO29)
                         }),
@@ -213,15 +213,15 @@ function S(e) {
                 })
             ),
         (0, i.jsx)('div', {
-            className: o()(v.sidebar, d),
+            className: o()(b.sidebar, d),
             children:
-                j.length > 0
+                T.length > 0
                     ? (0, i.jsx)(i.Fragment, {
-                          children: j.map((e, t) =>
+                          children: T.map((e, t) =>
                               (0, i.jsx)(
                                   'div',
                                   {
-                                      className: v.section,
+                                      className: b.section,
                                       children: e
                                   },
                                   t

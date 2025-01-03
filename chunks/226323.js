@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(653041),
@@ -9,8 +9,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(239091),
     d = n(586902),
     u = n(512384),
@@ -23,72 +23,72 @@ var i = n(200651),
     E = n(388032),
     I = n(525270);
 let C = { offset: 2 },
-    v = {
+    N = {
         serverDeaf: {
-            icon: s.HeadphonesDenyIcon,
+            icon: o.HeadphonesDenyIcon,
             colorize: !0,
             getStatus: () => E.intl.string(E.t.btxSdH)
         },
         serverMute: {
-            icon: s.MicrophoneDenyIcon,
+            icon: o.MicrophoneDenyIcon,
             colorize: !0,
             getStatus: () => E.intl.string(E.t.uLddbW)
         },
         deaf: {
-            icon: s.HeadphonesSlashIcon,
+            icon: o.HeadphonesSlashIcon,
             colorize: !1,
             getStatus: () => E.intl.string(E.t.NjmiOD)
         },
         mute: {
-            icon: s.MicrophoneSlashIcon,
+            icon: o.MicrophoneSlashIcon,
             colorize: !1,
             getStatus: () => E.intl.string(E.t.tjtv3N)
         },
         localMute: {
-            icon: s.MicrophoneDenyIcon,
+            icon: o.MicrophoneDenyIcon,
             colorize: !1,
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function S(e) {
+function v(e) {
     var t, r;
-    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: b, serverDeaf: x } = e,
-        A = (0, o.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
-        Z = (0, d.Z)({
+    let { channel: l, user: p, nick: v, mute: S, deaf: T, serverMute: b, serverDeaf: A } = e,
+        Z = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+        x = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         P = p.getAvatarURL(l.guild_id, 24),
-        y = null != S ? S : f.ZP.getName(p),
+        O = null != v ? v : f.ZP.getName(p),
         {
-            icon: O,
+            icon: y,
             colorize: R,
             getStatus: j
         } = null !==
             (r = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: l } = e;
-                if (t) return v.serverDeaf;
-                if (n) return v.deaf;
-                if (i) return v.serverMute;
-                else if (l) return v.localMute;
-                else if (r) return v.mute;
+                if (t) return N.serverDeaf;
+                if (n) return N.deaf;
+                if (i) return N.serverMute;
+                else if (l) return N.localMute;
+                else if (r) return N.mute;
             })({
-                serverDeaf: x,
+                serverDeaf: A,
                 deaf: T,
                 serverMute: b,
-                mute: N,
-                localMute: A
+                mute: S,
+                localMute: Z
             })) && void 0 !== r
             ? r
             : {},
         D =
             null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
-                      userName: y,
+                      userName: O,
                       status: j()
                   })
-                : y;
+                : O;
     function M(e) {
         null != L
             ? (0, c.jW)(e, async () => {
@@ -112,7 +112,7 @@ function S(e) {
                       });
               });
     }
-    return (0, i.jsx)(s.Popout, {
+    return (0, i.jsx)(o.Popout, {
         preload: () =>
             (0, h.Z)(p.id, p.getAvatarURL(L, 80), {
                 guildId: L,
@@ -127,10 +127,10 @@ function S(e) {
                 ...e
             }),
         children: (e) =>
-            (0, i.jsx)(s.Tooltip, {
+            (0, i.jsx)(o.Tooltip, {
                 text: D,
                 children: (t) =>
-                    (0, i.jsx)(s.Clickable, {
+                    (0, i.jsx)(o.Clickable, {
                         ...t,
                         ...e,
                         className: I.avatarContainer,
@@ -138,13 +138,13 @@ function S(e) {
                         focusProps: C,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: _.oZ.VOICE_USER,
-                            isShaking: Z,
+                            isShaking: x,
                             children: (0, i.jsx)('div', {
-                                className: a()(I.avatar, { [I.speaking]: Z }),
+                                className: a()(I.avatar, { [I.speaking]: x }),
                                 style: { backgroundImage: 'url('.concat(P, ')') },
                                 children:
-                                    null != O
-                                        ? (0, i.jsx)(O, {
+                                    null != y
+                                        ? (0, i.jsx)(y, {
                                               className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'
@@ -156,15 +156,15 @@ function S(e) {
             })
     });
 }
-function N(e) {
+function S(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, d] = r.useState(!1),
-        u = c ? s.MinusIcon : s.PlusSmallIcon,
-        h = (0, i.jsx)(s.CircleIconButton, {
+        u = c ? o.MinusIcon : o.PlusSmallIcon,
+        h = (0, i.jsx)(o.CircleIconButton, {
             className: I.expandButton,
             onClick: () => d(!c),
-            color: s.CircleIconButtonColors.PRIMARY,
-            size: s.CircleIconButtonSizes.SIZE_24,
+            color: o.CircleIconButtonColors.PRIMARY,
+            size: o.CircleIconButtonSizes.SIZE_24,
             tooltip: c ? E.intl.string(E.t['Z/Tya2']) : E.intl.string(E.t.XR5BAQ),
             icon: (0, i.jsx)(u, {
                 size: 'xs',
@@ -172,7 +172,7 @@ function N(e) {
             }),
             focusProps: C
         }),
-        m = (0, o.e7)([p.default], () => p.default.getId(), []),
+        m = (0, s.e7)([p.default], () => p.default.getId(), []),
         [g, f] = (function (e, t) {
             let n = [];
             for (let i of e) {
@@ -186,7 +186,7 @@ function N(e) {
         _ = f && c ? t : g;
     return _.length <= 0
         ? null
-        : (0, i.jsx)(s.ScrollerThin, {
+        : (0, i.jsx)(o.ScrollerThin, {
               className: a()(I.scroller, l),
               fade: !0,
               children: (0, i.jsxs)('div', {
@@ -198,7 +198,7 @@ function N(e) {
                           let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    S,
+                                    v,
                                     {
                                         channel: n,
                                         user: t,

@@ -1,9 +1,9 @@
 t.d(n, {
     ZP: function () {
-        return j;
+        return S;
     },
     xX: function () {
-        return b;
+        return I;
     }
 });
 var l = t(200651);
@@ -22,20 +22,20 @@ var i = t(120356),
     h = t(676149),
     x = t(861529),
     v = t(568248),
-    C = t(770009),
-    g = t(889515),
+    g = t(770009),
+    C = t(889515),
     _ = t(892519),
-    I = t(785225);
-function b(e) {
+    b = t(785225);
+function I(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
                     return (0, l.jsx)(
-                        g.Z,
+                        C.Z,
                         {
                             ...e,
-                            renderComponents: b
+                            renderComponents: I
                         },
                         n
                     );
@@ -64,21 +64,21 @@ function b(e) {
                 case a.re.SEPARATOR:
                     return (0, l.jsx)(h.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(C.Z, { ...e }, n);
+                    return (0, l.jsx)(g.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
 }
-function j(e) {
+function S(e) {
     let { message: n } = e,
         { components: t } = n;
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: r()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
+              className: r()([b.container, { [b.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: b(t)
+                  children: I(t)
               })
           });
 }

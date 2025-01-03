@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return x;
+        return I;
     }
 }),
     n(47120);
@@ -10,12 +10,12 @@ var s = n(200651),
     r = n.n(a),
     l = n(477660),
     o = n.n(l),
-    h = n(481060),
-    d = n(770146),
-    c = n(241209),
-    u = n(73346),
-    p = n(388032),
-    m = n(797844);
+    d = n(481060),
+    h = n(770146),
+    u = n(241209),
+    c = n(73346),
+    m = n(388032),
+    p = n(797844);
 function g(e, t, n) {
     return (
         t in e
@@ -30,14 +30,14 @@ function g(e, t, n) {
     );
 }
 let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    x = {
-        ...c.Z.rules,
+    I = {
+        ...u.Z.rules,
         heading: {
-            ...c.Z.rules.heading,
+            ...u.Z.rules.heading,
             react(e, t, n) {
                 let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
                 return (0, s.jsx)(
-                    d.Z,
+                    h.Z,
                     {
                         tag: i,
                         children: t(e.content, n)
@@ -66,19 +66,19 @@ let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 (0, s.jsx)(
                     'div',
                     {
-                        className: m.assetWrapper,
+                        className: p.assetWrapper,
                         children: (0, s.jsx)('img', {
                             alt: e.alt,
-                            src: (0, u._W)(e.applicationId, e.asset, 800),
-                            className: m.asset
+                            src: (0, c._W)(e.applicationId, e.asset, 800),
+                            className: p.asset
                         })
                     },
                     n.key
                 )
         }
     },
-    I = o().parserFor(x),
-    v = o().reactFor(o().ruleOutput(x, 'react'));
+    x = o().parserFor(I),
+    v = o().reactFor(o().ruleOutput(I, 'react'));
 class f extends i.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -93,17 +93,17 @@ class f extends i.PureComponent {
             className: i,
             children: [
                 (0, s.jsx)('div', {
-                    className: r()({ [m.collapsed]: o && l }),
+                    className: r()({ [p.collapsed]: o && l }),
                     children: (0, s.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
                             (0, s.jsx)('div', {
-                                className: m.blurb,
+                                className: p.blurb,
                                 children: n
                             }),
-                            (0, s.jsx)(c.Z, {
-                                className: m.description,
-                                parser: I,
+                            (0, s.jsx)(u.Z, {
+                                className: p.description,
+                                parser: x,
                                 output: v,
                                 state: {
                                     assets: a,
@@ -115,11 +115,11 @@ class f extends i.PureComponent {
                     })
                 }),
                 o
-                    ? (0, s.jsx)(h.Button, {
-                          className: m.toggleCollapseButton,
+                    ? (0, s.jsx)(d.Button, {
+                          className: p.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
-                          color: h.Button.Colors.PRIMARY,
-                          children: l ? p.intl.string(p.t.DxcOXF) : p.intl.string(p.t.rD6EaG)
+                          color: d.Button.Colors.PRIMARY,
+                          children: l ? m.intl.string(m.t.DxcOXF) : m.intl.string(m.t.rD6EaG)
                       })
                     : null
             ]

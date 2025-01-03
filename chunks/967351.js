@@ -3,14 +3,14 @@ var i = n(413135),
     r = n(836560),
     l = n(392711),
     a = n.n(l),
-    o = n(710845),
-    s = n(998502),
+    s = n(710845),
+    o = n(998502),
     c = n(901077),
     d = n(76238),
     u = n(852926),
     h = n(981631);
-let m = s.ZP.requireModule('discord_rpc').RPCIPC,
-    p = new o.Z('RPCServer:IPC'),
+let m = o.ZP.requireModule('discord_rpc').RPCIPC,
+    p = new s.Z('RPCServer:IPC'),
     g = {
         HANDSHAKE: 0,
         FRAME: 1,
@@ -101,7 +101,7 @@ function C(e) {
     }
     C(e);
 }
-class v extends d.Z {
+class N extends d.Z {
     send(e) {
         p.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(I(g.FRAME, e));
     }
@@ -130,7 +130,7 @@ class v extends d.Z {
             (this.socket = e);
     }
 }
-class S extends r.EventEmitter {
+class v extends r.EventEmitter {
     handleConnection(e) {
         f(e, !1),
             e.pause(),
@@ -152,7 +152,7 @@ class S extends r.EventEmitter {
                 let i = t.client_id,
                     r = +t.v;
                 try {
-                    n = new v(e, r, 'json');
+                    n = new N(e, r, 'json');
                 } catch (t) {
                     e.end(
                         I(g.CLOSE, {
@@ -192,4 +192,4 @@ class S extends r.EventEmitter {
             });
     }
 }
-t.Z = new S();
+t.Z = new v();

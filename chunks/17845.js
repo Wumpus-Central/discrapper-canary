@@ -1,55 +1,55 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return h;
+        return m;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(780384),
-    s = n(481060),
-    c = n(410030),
-    d = n(358459);
+var a = t(200651),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
+    o = t(780384),
+    s = t(481060),
+    c = t(410030),
+    d = t(358459);
 function u(e) {
-    let { title: t } = e;
-    return (0, i.jsx)(s.Heading, {
-        className: a()(d.title, d.uppercase),
+    let { title: n } = e;
+    return (0, a.jsx)(s.Heading, {
+        className: l()(d.title, d.uppercase),
         variant: 'display-lg',
         color: 'header-primary',
-        children: t
+        children: n
     });
 }
-function h(e) {
-    let { title: t, description: n, button: l, className: h, children: m } = e,
-        p = (0, c.ZP)(),
-        g = (0, o.wj)(p),
-        f = r.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, i.jsx)(u, { title: e }, t)) : (0, i.jsx)(u, { title: t })), [t]);
-    return (0, i.jsxs)('div', {
-        className: a()(d.container, h),
+function m(e) {
+    let { title: n, description: t, button: r, className: m, children: p } = e,
+        _ = (0, c.ZP)(),
+        g = (0, o.wj)(_),
+        v = i.useMemo(() => (Array.isArray(n) ? n.map((e, n) => (0, a.jsx)(u, { title: e }, n)) : (0, a.jsx)(u, { title: n })), [n]);
+    return (0, a.jsxs)('div', {
+        className: l()(d.container, m),
         children: [
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: d.content,
-                children: (0, i.jsxs)('div', {
+                children: (0, a.jsxs)('div', {
                     className: d.textContainer,
                     children: [
-                        f,
-                        null != n &&
-                            (0, i.jsx)(s.Text, {
+                        v,
+                        null != t &&
+                            (0, a.jsx)(s.Text, {
                                 className: d.description,
                                 variant: 'text-md/medium',
                                 color: g ? 'text-muted' : 'header-primary',
-                                children: n
+                                children: t
                             }),
-                        null != l &&
-                            (0, i.jsx)('div', {
+                        null != r &&
+                            (0, a.jsx)('div', {
                                 className: d.buttonContainer,
-                                children: l
+                                children: r
                             })
                     ]
                 })
             }),
-            m
+            p
         ]
     });
 }

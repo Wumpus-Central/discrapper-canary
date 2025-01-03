@@ -163,7 +163,7 @@ function T(e) {
             }
         ],
         B = (0, p.ZP)(n.id, C ? L : void 0),
-        F = l.createRef();
+        D = l.createRef();
     return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsx)(x.Mt, {
@@ -177,7 +177,7 @@ function T(e) {
                     user: n,
                     displayProfile: B,
                     profileType: _.y0.FULL_SIZE,
-                    ref: F,
+                    ref: D,
                     children: (0, i.jsxs)('div', {
                         className: N.container,
                         children: [

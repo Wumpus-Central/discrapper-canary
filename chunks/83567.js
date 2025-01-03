@@ -3,8 +3,8 @@ var i = n(570140),
     r = n(457330),
     l = n(726542),
     a = n(231757),
-    o = n(553795),
-    s = n(585483),
+    s = n(553795),
+    o = n(585483),
     c = n(996106),
     d = n(914946),
     u = n(452426),
@@ -34,7 +34,7 @@ t.Z = {
                 if (!f.has(h)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             return new Promise(async (e, t) => {
-                let l = o.Z.getAccount(null, n);
+                let l = s.Z.getAccount(null, n);
                 if (null == l) {
                     function d(t) {
                         var n;
@@ -46,10 +46,10 @@ t.Z = {
                         t(new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'OAuth2 setup for "'.concat(n, '" failed'))), f();
                     }
                     function f() {
-                        i.Z.unsubscribe('USER_CONNECTIONS_UPDATE', d), s.S.unsubscribe(m.CkL.CONNECTIONS_CALLBACK_ERROR, h);
+                        i.Z.unsubscribe('USER_CONNECTIONS_UPDATE', d), o.S.unsubscribe(m.CkL.CONNECTIONS_CALLBACK_ERROR, h);
                     }
                     i.Z.subscribe('USER_CONNECTIONS_UPDATE', d),
-                        s.S.subscribe(m.CkL.CONNECTIONS_CALLBACK_ERROR, h),
+                        o.S.subscribe(m.CkL.CONNECTIONS_CALLBACK_ERROR, h),
                         (0, a.Z)({
                             platformType: p.type,
                             location: m.Sbl.ACTIVITY_RPC,
@@ -81,9 +81,9 @@ t.Z = {
             if (n === m.ABu.AMAZON_MUSIC) {
                 if (!f.has(i)) throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
             } else throw new c.Z({ errorCode: g.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-            let s = o.Z.getAccount(null, n);
-            if (null == s) throw new c.Z({ errorCode: g.lT.NO_CONNECTION_FOUND }, 'No connection found');
-            let u = await r.Z.refreshAccessToken(a.type, s.id);
+            let o = s.Z.getAccount(null, n);
+            if (null == o) throw new c.Z({ errorCode: g.lT.NO_CONNECTION_FOUND }, 'No connection found');
+            let u = await r.Z.refreshAccessToken(a.type, o.id);
             if (null == u) throw new c.Z({ errorCode: g.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
             return { access_token: u };
         }

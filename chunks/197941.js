@@ -4,8 +4,8 @@ n(192379);
 var r = n(243814),
     l = n(481060),
     a = n(846027),
-    o = n(872810),
-    s = n(594190),
+    s = n(872810),
+    o = n(594190),
     c = n(989941),
     d = n(173507),
     u = n(199902),
@@ -40,17 +40,17 @@ t.Z = {
                 } = e,
                 r = u.Z.getCurrentUserActiveStream(),
                 a = u.Z.getStreamerActiveStreamMetadata(),
-                d = (0, c.Z)(s.ZP, m.Z),
+                d = (0, c.Z)(o.ZP, m.Z),
                 h = (0, f.Z)();
             if (null != h)
                 null != t && null != a && a.pid !== t && (0, p.isWindows)()
-                    ? (0, o.WH)(h.guild_id, h.id, { pid: t })
+                    ? (0, s.WH)(h.guild_id, h.id, { pid: t })
                     : null != r
-                      ? (0, o.L6)(!1)
+                      ? (0, s.L6)(!1)
                       : null != t && (0, p.isWindows)()
-                        ? (0, o.WH)(h.guild_id, h.id, { pid: t })
+                        ? (0, s.WH)(h.guild_id, h.id, { pid: t })
                         : null != d
-                          ? (0, o.WH)(h.guild_id, h.id, { pid: d.pid })
+                          ? (0, s.WH)(h.guild_id, h.id, { pid: d.pid })
                           : (0, l.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('38454')]).then(n.bind(n, 60594));
                                 return (t) =>

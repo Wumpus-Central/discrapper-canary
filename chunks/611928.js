@@ -1,70 +1,70 @@
-n.d(t, {
+t.d(n, {
     Cm: function () {
-        return p;
+        return _;
     },
     ZP: function () {
         return g;
     },
     _6: function () {
-        return r;
+        return i;
     },
     aV: function () {
-        return m;
+        return p;
     },
     z6: function () {
-        return h;
+        return m;
     }
 });
-var i,
-    r,
-    l = n(200651),
-    a = n(192379),
-    o = n(120356),
-    s = n.n(o),
-    c = n(752877),
-    d = n(481060),
-    u = n(406014);
-function h(e) {
-    let { scrollPosition: t } = e;
-    return (0, l.jsx)(c.animated.div, {
+var a,
+    i,
+    r = t(200651),
+    l = t(192379),
+    o = t(120356),
+    s = t.n(o),
+    c = t(752877),
+    d = t(481060),
+    u = t(406014);
+function m(e) {
+    let { scrollPosition: n } = e;
+    return (0, r.jsx)(c.animated.div, {
         className: u.backdrop,
         style: {
-            opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
+            opacity: null == n ? void 0 : n.to([0, 100], [0, 1])
         }
     });
 }
-function m(e) {
-    let { icon: t } = e;
-    return (0, l.jsx)(t, {
+function p(e) {
+    let { icon: n } = e;
+    return (0, r.jsx)(n, {
         className: u.icon,
         color: d.tokens.colors.HEADER_PRIMARY,
         size: 'md'
     });
 }
-function p(e) {
-    let { onClick: t, icon: n } = e;
-    return (0, l.jsx)(d.Clickable, {
+function _(e) {
+    let { onClick: n, icon: t } = e;
+    return (0, r.jsx)(d.Clickable, {
         className: u.iconButton,
-        onClick: t,
-        children: (0, l.jsx)(n, {
+        onClick: n,
+        children: (0, r.jsx)(t, {
             color: 'currentColor',
             size: 'sm'
         })
     });
 }
-((i = r || (r = {})).OVERLAY = 'overlay'), (i.RELATIVE = 'relative');
+((a = i || (i = {})).OVERLAY = 'overlay'), (a.RELATIVE = 'relative');
 function g(e) {
-    let { className: t, variant: n, children: i } = e,
-        r = a.useMemo(
+    let { className: n, variant: t, children: a } = e,
+        i = l.useMemo(
             () =>
                 (function (e) {
                     if ('overlay' === e) return u.overlay;
                     return u.relative;
-                })(n),
-            [n]
+                })(t),
+            [t]
         );
-    return (0, l.jsx)('div', {
-        className: s()(u.headerBar, r, t),
-        children: i
+    return (0, r.jsx)('div', {
+        className: s()(u.headerBar, i, n),
+        children: a
     });
 }

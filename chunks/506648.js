@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(770146),
-    o = n(863969),
-    s = n(38761),
+    s = n(863969),
+    o = n(38761),
     c = n(6074),
     d = n(39377),
     u = n(981631),
@@ -62,7 +62,7 @@ let p = [
             feature: u.Qa3.DISCORD_GAME_INVITES,
             getText: () => h.intl.string(h.t.agm68P),
             getTooltip: () => h.intl.string(h.t.kS2vFB),
-            IconComponent: s.Z
+            IconComponent: o.Z
         },
         {
             feature: u.Qa3.SPECTATOR_MODE,
@@ -80,7 +80,7 @@ let p = [
             feature: u.Qa3.CLOUD_SAVES,
             getText: () => h.intl.string(h.t.rOcNrK),
             getTooltip: () => h.intl.string(h.t.kvw18P),
-            IconComponent: o.Z
+            IconComponent: s.Z
         },
         {
             feature: u.Qa3.SECURE_NETWORKING,

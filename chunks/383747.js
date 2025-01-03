@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651),
     r = n(481060),
     l = n(410030),
     a = n(388032);
-function o(e) {
+function s(e) {
     let { onClick: t } = e,
-        o = (0, l.ZP)();
+        s = (0, l.ZP)();
     return (0, i.jsxs)(r.EmptyState, {
-        theme: o,
+        theme: s,
         children: [
             (0, i.jsx)(r.EmptyStateImage, {
                 lightSrc: n(979770),

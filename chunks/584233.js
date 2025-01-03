@@ -19,6 +19,6 @@ async function a(e) {
         null == l.Z.getGuild(a.guild.id))
     )
         return;
-    let { default: o } = await Promise.resolve().then(n.bind(n, 17181));
-    await o({ guildId: a.guild.id }), i.Z.transitionToInvite(a);
+    let { default: s } = await Promise.resolve().then(n.bind(n, 17181));
+    await s({ guildId: a.guild.id }), i.Z.transitionToInvite(a);
 }

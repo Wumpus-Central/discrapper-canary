@@ -3,21 +3,21 @@ n.d(t, {
         return d;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(29978),
-    a = n(780384),
+var r = n(200651),
+    i = n(192379),
+    a = n(29978),
+    c = n(780384),
     o = n(481060),
     s = n(756148),
-    c = n(981631);
+    p = n(981631);
 function d(e) {
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             s.I.loadRecaptchaScript(e.sitekey, () => {
-                var t, n, i;
-                return null === (i = window) || void 0 === i
+                var t, n, r;
+                return null === (r = window) || void 0 === r
                     ? void 0
-                    : null === (n = i.grecaptcha) || void 0 === n
+                    : null === (n = r.grecaptcha) || void 0 === n
                       ? void 0
                       : null === (t = n.enterprise) || void 0 === t
                         ? void 0
@@ -28,25 +28,25 @@ function d(e) {
                           });
             });
         }, [e]),
-        (0, i.jsx)(o.Spinner, {})
+        (0, r.jsx)(o.Spinner, {})
     );
 }
-let u = (e) => {
+let l = (e) => {
     let { theme: t, ...n } = e,
-        r = (0, a.wj)(t) ? 'dark' : 'light';
-    return (0, i.jsx)(l.Z, {
-        sitekey: c.OL7,
+        i = (0, c.wj)(t) ? 'dark' : 'light';
+    return (0, r.jsx)(a.Z, {
+        sitekey: p.OL7,
         ...n,
-        theme: r
+        theme: i
     });
 };
-(u.Themes = {
+(l.Themes = {
     LIGHT: 'light',
     DARK: 'dark'
 }),
-    (u.Sizes = {
+    (l.Sizes = {
         COMPACT: 'compact',
         NORMAL: 'normal',
         INVISIBLE: 'invisible'
     }),
-    (t.Z = u);
+    (t.Z = 12633 == n.j ? l : null);

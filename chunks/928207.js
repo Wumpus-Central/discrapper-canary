@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(512969),
-    o = n(674746),
-    s = n(442837),
+    s = n(674746),
+    o = n(442837),
     c = n(780384),
     d = n(481060),
     u = n(410575),
@@ -17,38 +17,38 @@ var r = n(120356),
     E = n(984370),
     I = n(278605),
     C = n(299657),
-    v = n(594174),
-    S = n(74538),
-    N = n(981631),
+    N = n(594174),
+    v = n(74538),
+    S = n(981631),
     T = n(474936),
     b = n(388032),
-    x = n(707858);
-let A = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
+    A = n(707858);
+let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
                 { analyticsLocations: r } = (0, f.ZP)(g.Z.HOME_PAGE_PREMIUM_TAB),
-                s = (0, I.xP)('ApplicationStoreHome'),
-                h = (0, S.I5)(n),
-                m = s && !h,
-                v = (0, p.ZP)();
+                o = (0, I.xP)('ApplicationStoreHome'),
+                h = (0, v.I5)(n),
+                m = o && !h,
+                N = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
-                      className: x.homeWrapperNormal,
+                      className: A.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              section: N.jXE.NAVIGATION,
+                              section: S.jXE.NAVIGATION,
                               children: (0, i.jsxs)(E.Z, {
                                   isAuthenticated: t,
-                                  className: l()(x.headerBar, {
-                                      [x.headerBarV2LightBackground]: m && !(0, c.wj)(v),
-                                      [x.headerBarV2DarkBackground]: m && (0, c.wj)(v)
+                                  className: l()(A.headerBar, {
+                                      [A.headerBarV2LightBackground]: m && !(0, c.wj)(N),
+                                      [A.headerBarV2DarkBackground]: m && (0, c.wj)(N)
                                   }),
                                   children: [
                                       (0, i.jsx)(E.Z.Icon, {
                                           icon: d.NitroWheelIcon,
                                           'aria-hidden': !0,
-                                          color: m ? o.Z.PREMIUM_TIER_2_PINK : void 0
+                                          color: m ? s.Z.PREMIUM_TIER_2_PINK : void 0
                                       }),
                                       (0, i.jsx)(E.Z.Title, { children: b.intl.string(b.t.Ipxkoq) })
                                   ]
@@ -61,14 +61,14 @@ let A = s.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                       ? (0, i.jsx)(_.Z, {
                                             align: _.Z.Align.CENTER,
                                             justify: _.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.Spinner, { className: x.spinner })
+                                            children: (0, i.jsx)(d.Spinner, { className: A.spinner })
                                         })
                                       : (0, i.jsx)(C.Z, { entrypoint: T.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, i.jsx)(a.l_, { to: N.Z5c.LOGIN });
+                : (0, i.jsx)(a.l_, { to: S.Z5c.LOGIN });
         })
     )
 );
-t.Z = A;
+t.Z = Z;

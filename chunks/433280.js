@@ -8,8 +8,8 @@ n(192379);
 var r = n(990547),
     l = n(399606),
     a = n(213609),
-    o = n(434404),
-    s = n(970731),
+    s = n(434404),
+    o = n(970731),
     c = n(430824),
     d = n(594174),
     u = n(981631),
@@ -34,7 +34,7 @@ function g(e) {
         }),
         (0, i.jsx)('div', {
             className: m.container,
-            children: (0, i.jsx)(s.ZP, {
+            children: (0, i.jsx)(o.ZP, {
                 header: h.intl.string(h.t.C0m4ra),
                 content: h.intl.string(h.t.zOHfER),
                 asset: (0, i.jsx)('div', {
@@ -47,7 +47,7 @@ function g(e) {
                 }),
                 buttonCTA: h.intl.string(h.t.OgQQbG),
                 onClick: () => {
-                    o.Z.open(t, u.pNK.ROLE_SUBSCRIPTIONS);
+                    s.Z.open(t, u.pNK.ROLE_SUBSCRIPTIONS);
                 },
                 secondaryButtonCTA: h.intl.string(h.t.WAI6xs),
                 markAsDismissed: n

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 }),
     n(47120);
@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(58642),
-    s = n(600164),
+    s = n(58642),
+    o = n(600164),
     c = n(695346),
     d = n(490983),
     u = n(626135),
@@ -30,8 +30,8 @@ function I(e) {
             {
                 className: E.hiddenLibraryApplication,
                 children: [
-                    (0, i.jsxs)(s.Z, {
-                        direction: s.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(o.Z, {
+                        direction: o.Z.Direction.VERTICAL,
                         className: E.hiddenLibraryApplicationContent,
                         children: [
                             (0, i.jsx)('div', {
@@ -133,7 +133,7 @@ class C extends r.PureComponent {
             (n = 'handleRestoreHiddenLibraryApplication'),
             (i = (e) => {
                 let t = h.x9(e.getFlags(), f.eHb.HIDDEN);
-                o.h(e.id, e.branchId, t), this.trackRestoreApplication(e, h.yE(t, f.eHb.HIDDEN));
+                s.h(e.id, e.branchId, t), this.trackRestoreApplication(e, h.yE(t, f.eHb.HIDDEN));
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -145,7 +145,7 @@ class C extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-function v() {
+function N() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),

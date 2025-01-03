@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(194359),
-    o = n(906732),
-    s = n(171368),
+    s = n(906732),
+    o = n(171368),
     c = n(626135),
     d = n(321488),
     u = n(417183),
@@ -19,7 +19,7 @@ var i = n(200651),
 function f(e) {
     let { user: t, key: n, isFocused: f } = e,
         _ = r.useContext(c.AnalyticsContext),
-        { analyticsLocations: E } = (0, o.ZP)(),
+        { analyticsLocations: E } = (0, s.ZP)(),
         I = (e) => {
             e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
         };
@@ -28,7 +28,7 @@ function f(e) {
         {
             isFocused: f,
             onClick: () =>
-                (0, s.openUserProfileModal)({
+                (0, o.openUserProfileModal)({
                     userId: t.id,
                     sourceAnalyticsLocations: E,
                     analyticsLocation: _.location

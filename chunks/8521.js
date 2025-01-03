@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(949389),
     a = n(63063),
-    o = n(324262),
-    s = n(981631),
+    s = n(324262),
+    o = n(981631),
     c = n(388032),
     d = n(511189);
 t.Z = (e) => {
@@ -11,14 +11,14 @@ t.Z = (e) => {
         n = r.useCallback(() => {
             (0, l.xm)(t.id);
         }, [t.id]);
-    return (0, i.jsx)(o.Z, {
+    return (0, i.jsx)(s.Z, {
         guild: t,
         onDismissed: n,
         message: c.intl.format(c.t['+QqO3d'], {
             maxMemberCount: t.maxMembers,
-            maxMembersUrl: a.Z.getArticleURL(s.BhN.MAX_MEMBERS)
+            maxMembersUrl: a.Z.getArticleURL(o.BhN.MAX_MEMBERS)
         }),
-        type: s.vID.MAX_MEMBER_COUNT,
+        type: o.vID.MAX_MEMBER_COUNT,
         image: d,
         imageMarginX: 61
     });

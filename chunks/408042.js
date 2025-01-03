@@ -3,8 +3,8 @@ var i,
     r = n(442837),
     l = n(570140),
     a = n(314897),
-    o = n(592125),
-    s = n(430824),
+    s = n(592125),
+    o = n(430824),
     c = n(709054),
     d = n(231873);
 function u(e, t, n) {
@@ -27,7 +27,7 @@ function m(e, t) {
 }
 class p extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.default, s.Z),
+        this.waitFor(a.default, o.Z),
             (h = {}),
             null != e &&
                 c.default.keys(e).forEach((t) => {
@@ -73,7 +73,7 @@ u(p, 'displayName', 'GuildProgressStore'),
             let {
                     guild: { id: t, member_count: n }
                 } = e,
-                i = s.Z.getGuild(t);
+                i = o.Z.getGuild(t);
             if (null == i) return !1;
             i.ownerId === a.default.getId() && null != h[i.id] && (null != i.icon && h[i.id].add(d.Rg.AVATAR), n > 1 && h[i.id].add(d.Rg.INVITE));
         },
@@ -94,7 +94,7 @@ u(p, 'displayName', 'GuildProgressStore'),
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: i } = e,
-                r = o.Z.getChannel(n);
+                r = s.Z.getChannel(n);
             return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === a.default.getId() && null != r && null != h[r.guild_id] && m(r.guild_id, d.Rg.MESSAGE);
         },
         GUILD_MEMBER_LIST_UPDATE: function (e) {

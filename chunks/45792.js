@@ -11,12 +11,12 @@ function r(e, t) {
             scope: r,
             handler: l
         },
-        o = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
-        s = null;
+        s = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
+        o = null;
     return (
-        null != o &&
+        null != s &&
             (a.validation = function (e) {
-                return null == s && (s = o(e)), s;
+                return null == o && (o = s(e)), o;
             }),
         a
     );

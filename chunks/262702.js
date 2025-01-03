@@ -3,8 +3,8 @@ var i = n(570140),
     r = n(846027),
     l = n(872810),
     a = n(317770),
-    o = n(569545),
-    s = n(199902),
+    s = n(569545),
+    o = n(199902),
     c = n(314897),
     d = n(592125),
     u = n(131951),
@@ -40,8 +40,8 @@ class p extends a.Z {
                 });
             }),
             m(this, 'handleStopStream', (e) => {
-                let t = s.Z.getActiveStreamForUser(e.userId, e.guildId);
-                if (null != t) (0, l.g)((0, o.V9)(t), !1);
+                let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
+                if (null != t) (0, l.g)((0, s.V9)(t), !1);
             }),
             m(this, 'handleStopUserVideo', () => {
                 u.Z.isVideoEnabled() && r.Z.setVideoEnabled(!1);

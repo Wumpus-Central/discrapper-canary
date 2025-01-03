@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(392711),
     r = n.n(i),
     l = n(996106),
     a = n(981631);
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,15 +20,15 @@ function o(e, t, n) {
         e
     );
 }
-class s {
+class o {
     constructor(e, t, n) {
         if (
-            (o(this, 'transport', void 0),
-            o(this, 'version', void 0),
-            o(this, 'encoding', void 0),
-            o(this, 'id', void 0),
-            o(this, 'authorization', void 0),
-            o(this, 'application', void 0),
+            (s(this, 'transport', void 0),
+            s(this, 'version', void 0),
+            s(this, 'encoding', void 0),
+            s(this, 'id', void 0),
+            s(this, 'authorization', void 0),
+            s(this, 'application', void 0),
             (this.transport = e),
             (this.version = t),
             (this.encoding = n),

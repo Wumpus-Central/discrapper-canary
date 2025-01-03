@@ -1,35 +1,35 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(34674),
-    a = n(823379),
-    o = n(448021),
-    s = n(405411),
-    c = n(215453),
-    d = n(24746),
-    u = n(669401),
-    h = n(609396);
-function m(e) {
-    let { application: t } = e,
-        n = r.useMemo(() => {
-            var e, n, i;
-            return null !== (i = (null !== (n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(l.RF).filter(a.lm)) && void 0 !== i ? i : [];
-        }, [t]);
-    return (0, i.jsxs)('div', {
-        className: h.aboutContainer,
+var a = t(200651),
+    i = t(192379),
+    r = t(34674),
+    l = t(823379),
+    o = t(448021),
+    s = t(405411),
+    c = t(215453),
+    d = t(24746),
+    u = t(669401),
+    m = t(609396);
+function p(e) {
+    let { application: n } = e,
+        t = i.useMemo(() => {
+            var e, t, a;
+            return null !== (a = (null !== (t = null === (e = n.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(r.RF).filter(l.lm)) && void 0 !== a ? a : [];
+        }, [n]);
+    return (0, a.jsxs)('div', {
+        className: m.aboutContainer,
         children: [
-            (0, i.jsx)(o.Z, {
-                application: t,
-                carouselItems: n
+            (0, a.jsx)(o.Z, {
+                application: n,
+                carouselItems: t
             }),
-            (0, i.jsx)(d.Z, { application: t }),
-            (0, i.jsx)(s.Z, { application: t }),
-            (0, i.jsx)(u.Z, { application: t }),
-            (0, i.jsx)(c.Z, { application: t })
+            (0, a.jsx)(d.Z, { application: n }),
+            (0, a.jsx)(s.Z, { application: n }),
+            (0, a.jsx)(u.Z, { application: n }),
+            (0, a.jsx)(c.Z, { application: n })
         ]
     });
 }

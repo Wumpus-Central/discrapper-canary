@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return h;
     }
 }),
     n(47120),
@@ -17,16 +17,16 @@ var i = n(200651),
     s = n(626135),
     d = n(463571),
     u = n(894653),
-    g = n(34674),
-    m = n(132871),
+    m = n(34674),
+    g = n(132871),
     f = n(981631),
     p = n(533232);
-function _(e) {
-    let { currentCategoryId: t, className: n, countsByCategory: l, onView: _ } = e,
-        h = (0, m.useApplicationDirectoryHistory)((e) => e.guildId),
+function h(e) {
+    let { currentCategoryId: t, className: n, countsByCategory: l, onView: h } = e,
+        _ = (0, g.useApplicationDirectoryHistory)((e) => e.guildId),
         x = (0, c.e7)([u.Z], () => u.Z.getCategories()),
-        C = a.useMemo(() => [(0, g.KQ)(), ...x], [x]),
-        b = (0, m.getCurrentView)();
+        C = a.useMemo(() => [(0, m.KQ)(), ...x], [x]),
+        v = (0, g.getCurrentView)();
     return (0, i.jsx)(o.TabBar, {
         className: r()(p.container, n),
         selectedItem: t,
@@ -37,21 +37,21 @@ function _(e) {
             s.default.track(f.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: n.name,
                 category_id: n.id,
-                current_page: null == b ? void 0 : b.type,
-                guild_id: h
+                current_page: null == v ? void 0 : v.type,
+                guild_id: _
             }),
-                _(n);
+                h(n);
         },
         orientation: 'vertical',
         children: C.map((e) => {
             var n;
             let a = e.id,
                 c = e.name,
-                s = (0, g.tu)(e),
+                s = (0, m.tu)(e),
                 u = r()(p.category, { [p.activeCategory]: t === a }),
-                m = new URLSearchParams();
+                g = new URLSearchParams();
             return (
-                m.set('category_id', a.toString()),
+                g.set('category_id', a.toString()),
                 (0, i.jsx)(
                     o.TabBar.Item,
                     {
@@ -59,7 +59,7 @@ function _(e) {
                         'aria-label': c,
                         disableItemStyles: !0,
                         children: (0, i.jsxs)(d.Z, {
-                            href: ''.concat(f.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(m),
+                            href: ''.concat(f.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(g),
                             className: u,
                             children: [
                                 (0, i.jsx)(s, {

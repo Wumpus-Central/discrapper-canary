@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(984370),
-    o = n(703656),
-    s = n(626135),
+    s = n(703656),
+    o = n(626135),
     c = n(804739),
     d = n(981631),
     u = n(388032),
@@ -11,7 +11,7 @@ var i = n(200651),
 let m = (0, c.Q)() || !1;
 t.Z = r.memo(function (e) {
     let { currentRoute: t, renderToolbar: n } = e,
-        c = r.useContext(s.AnalyticsContext),
+        c = r.useContext(o.AnalyticsContext),
         p = m || t === d.Z5c.APPLICATION_LIBRARY_SETTINGS;
     return (0, i.jsxs)(a.Z, {
         className: h.libraryHeader,
@@ -28,7 +28,7 @@ t.Z = r.memo(function (e) {
                 selectedItem: t,
                 onItemSelect: function (e) {
                     e !== t &&
-                        (0, o.uL)(e, {
+                        (0, s.uL)(e, {
                             state: {
                                 analyticsSource: {
                                     ...c.location,

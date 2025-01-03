@@ -9,8 +9,8 @@ var i,
     r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    s = n(512969),
+    s = n.n(a),
+    o = n(512969),
     c = n(442837),
     d = n(846519),
     u = n(477690),
@@ -23,14 +23,14 @@ var i,
     E = n(167533),
     I = n(925329),
     C = n(707409),
-    v = n(490983),
-    S = n(799777),
-    N = n(626135),
+    N = n(490983),
+    v = n(799777),
+    S = n(626135),
     T = n(780570),
     b = n(624138),
-    x = n(645818),
-    A = n(981631),
-    Z = n(388032),
+    A = n(645818),
+    Z = n(981631),
+    x = n(388032),
     L = n(399210);
 function P(e, t, n) {
     return (
@@ -45,12 +45,12 @@ function P(e, t, n) {
         e
     );
 }
-let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    O = (0, b.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let O = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    y = (0, b.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
-        [A.iEv.PLATFORM]: 'Platform',
-        [A.iEv.LAST_PLAYED]: 'Last Played',
-        [A.iEv.NAME]: 'Name'
+        [Z.iEv.PLATFORM]: 'Platform',
+        [Z.iEv.LAST_PLAYED]: 'Last Played',
+        [Z.iEv.NAME]: 'Name'
     }),
     j = (e) => {
         let { flag: t, icon: n, item: i, tooltip: l } = e,
@@ -59,15 +59,15 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             text: l,
             children: (e) =>
                 (0, r.jsx)(n, {
-                    className: o()(L.settingIcon, { [L.hidden]: !a }),
+                    className: s()(L.settingIcon, { [L.hidden]: !a }),
                     ...e
                 })
         });
     },
     D = [
         {
-            key: A.iEv.NAME,
-            renderHeader: () => Z.intl.string(Z.t.dBfWfX),
+            key: Z.iEv.NAME,
+            renderHeader: () => x.intl.string(x.t.dBfWfX),
             sort: !0,
             cellClassName: L.nameCell,
             bodyCellClassName: L.nameBodyCell,
@@ -87,9 +87,9 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     className: L.nameCellText,
                                     children: e.libraryApplication.getBranchedName(e.application)
                                 }),
-                                e.libraryApplication.hasFlag(A.eHb.PREMIUM)
+                                e.libraryApplication.hasFlag(Z.eHb.PREMIUM)
                                     ? (0, r.jsx)(h.Tooltip, {
-                                          text: Z.intl.string(Z.t.tG2SzM),
+                                          text: x.intl.string(x.t.tG2SzM),
                                           children: (e) =>
                                               (0, r.jsx)(h.NitroWheelIcon, {
                                                   size: 'md',
@@ -105,8 +105,8 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 })
         },
         {
-            key: A.iEv.PLATFORM,
-            renderHeader: () => Z.intl.string(Z.t.YR4cHB),
+            key: Z.iEv.PLATFORM,
+            renderHeader: () => x.intl.string(x.t.YR4cHB),
             sort: !0,
             cellClassName: L.platformCell,
             bodyCellClassName: L.textCell,
@@ -114,13 +114,13 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t = e.libraryApplication.getDistributor();
                 return (0, r.jsx)(_.Z, {
                     align: _.Z.Align.CENTER,
-                    children: null != t ? A.EOG[t] : Z.intl.string(Z.t['F+l3Ji'])
+                    children: null != t ? Z.EOG[t] : x.intl.string(x.t['F+l3Ji'])
                 });
             }
         },
         {
-            key: A.iEv.LAST_PLAYED,
-            renderHeader: () => Z.intl.string(Z.t.FDDyjY),
+            key: Z.iEv.LAST_PLAYED,
+            renderHeader: () => x.intl.string(x.t.FDDyjY),
             sort: !0,
             cellClassName: L.lastPlayedCell,
             bodyCellClassName: L.textCell,
@@ -128,62 +128,62 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t;
                 return (
                     (t = e.isRunning
-                        ? Z.intl.string(Z.t.Md326u)
+                        ? x.intl.string(x.t.Md326u)
                         : e.isNew
-                          ? Z.intl.string(Z.t['+F0Tho'])
+                          ? x.intl.string(x.t['+F0Tho'])
                           : 0 !== e.lastPlayed
                             ? (0, r.jsx)(C.ZP, {
                                   end: e.lastPlayed,
                                   location: C.ZP.Locations.GAME_LIBRARY_LAST_PLAYED
                               })
-                            : Z.intl.string(Z.t.EoWLrq)),
+                            : x.intl.string(x.t.EoWLrq)),
                     (0, r.jsx)(_.Z, {
                         align: _.Z.Align.CENTER,
-                        className: o()({ [L.lastPlayedCellNew]: e.isNew }),
+                        className: s()({ [L.lastPlayedCellNew]: e.isNew }),
                         children: t
                     })
                 );
             }
         },
         {
-            key: A.iEv.ACTIONS,
+            key: Z.iEv.ACTIONS,
             renderHeader: () => null,
             cellClassName: L.actionsCell,
             render(e, t, n) {
                 var i, a;
                 if (null == t) throw Error('No cell props defined.');
-                let s = e.key === t.activeRowKey;
+                let o = e.key === t.activeRowKey;
                 return (0, r.jsxs)(l.Fragment, {
                     children: [
                         (0, r.jsxs)('div', {
                             className: L.settingIcons,
                             children: [
                                 (0, r.jsx)(j, {
-                                    flag: A.eHb.PRIVATE,
+                                    flag: Z.eHb.PRIVATE,
                                     item: e,
                                     icon: h.EyeSlashIcon,
-                                    tooltip: Z.intl.string(Z.t.NozAoq)
+                                    tooltip: x.intl.string(x.t.NozAoq)
                                 }),
                                 (0, r.jsx)(j, {
-                                    flag: A.eHb.OVERLAY_DISABLED,
+                                    flag: Z.eHb.OVERLAY_DISABLED,
                                     item: e,
                                     icon: h.ScreenSlashIcon,
-                                    tooltip: Z.intl.string(Z.t.Az9eqq)
+                                    tooltip: x.intl.string(x.t.Az9eqq)
                                 }),
-                                (0, r.jsx)(x.Z, {
-                                    className: o()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
+                                (0, r.jsx)(A.Z, {
+                                    className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
                             ]
                         }),
                         (0, T.Je)(e.libraryApplication)
                             ? (0, r.jsx)(f.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === A.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === Z.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
-                                  source: A.Sbl.APPLICATION_LIBRARY,
+                                  source: Z.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
-                                  color: s ? h.Button.Colors.GREEN : h.Button.Colors.PRIMARY,
-                                  isPlayShiny: s && e.defaultAction === A.apO.PLAY,
+                                  color: o ? h.Button.Colors.GREEN : h.Button.Colors.PRIMARY,
+                                  isPlayShiny: o && e.defaultAction === Z.apO.PLAY,
                                   size: L.actionButtonSize,
                                   hideProgress: null != e.defaultAction,
                                   onDropdownOpen: () => null != t && t.setActiveRowKey(e),
@@ -196,11 +196,11 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
         }
     ],
     M = (e) => {
-        let { item: t, activeRowKey: n, highlightedApplicationKey: i, onMouseEnter: l, onMouseLeave: a, onContextMenu: s, setRef: c, ...d } = e,
+        let { item: t, activeRowKey: n, highlightedApplicationKey: i, onMouseEnter: l, onMouseLeave: a, onContextMenu: o, setRef: c, ...d } = e,
             u = t.key === n,
             h = t.key === i;
         return (0, r.jsx)('div', {
-            className: o()({
+            className: s()({
                 [L.rowWrapperActive]: u && !h,
                 [L.rowWrapperGlow]: h,
                 [L.rowWrapper]: !u && !h,
@@ -209,7 +209,7 @@ let y = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             ref: (e) => c(e, t.key),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
-            onContextMenu: (e) => s(e, t),
+            onContextMenu: (e) => o(e, t),
             children: (0, r.jsx)('div', { ...d })
         });
     };
@@ -226,15 +226,15 @@ class w extends (i = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, y));
+            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, O));
         }
     }
     handleHighlightedApplicationKey() {
         let { highlightedApplicationKey: e } = this.state;
         null != e &&
             null != this._rowRefs[e] &&
-            (this.props.scrollToRow(this._rowRefs[e], y),
-            new d.V7().start(O, () => {
+            (this.props.scrollToRow(this._rowRefs[e], O),
+            new d.V7().start(y, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
     }
@@ -253,33 +253,33 @@ class w extends (i = l.PureComponent) {
             { analyticsContext: t, applicationViewItems: n } = this.props;
         for (let t of n) {
             switch (t.libraryApplication.getDistributor()) {
-                case A.GQo.DISCORD:
+                case Z.GQo.DISCORD:
                     e.num_applications_discord++;
                     break;
-                case A.GQo.STEAM:
+                case Z.GQo.STEAM:
                     e.num_applications_steam++;
                     break;
-                case A.GQo.BATTLENET:
+                case Z.GQo.BATTLENET:
                     e.num_applications_battlenet++;
                     break;
-                case A.GQo.TWITCH:
+                case Z.GQo.TWITCH:
                     e.num_applications_twitch++;
                     break;
-                case A.GQo.UPLAY:
+                case Z.GQo.UPLAY:
                     e.num_applications_uplay++;
                     break;
-                case A.GQo.ORIGIN:
+                case Z.GQo.ORIGIN:
                     e.num_applications_origin++;
                     break;
-                case A.GQo.GOG:
+                case Z.GQo.GOG:
                     e.num_applications_gog++;
                     break;
-                case A.GQo.EPIC:
+                case Z.GQo.EPIC:
                     e.num_applications_epic++;
             }
             e.num_applications_total++;
         }
-        N.default.track(A.rMx.LIBRARY_VIEWED, {
+        S.default.track(Z.rMx.LIBRARY_VIEWED, {
             ...e,
             load_id: t.loadId
         });
@@ -293,7 +293,7 @@ class w extends (i = l.PureComponent) {
             i = t.length > 0;
         return i
             ? null
-            : ((e = '' !== n ? Z.intl.format(Z.t['4Q1TAg'], { query: n }) : Z.intl.string(Z.t['0Y+0PT'])),
+            : ((e = '' !== n ? x.intl.format(x.t['4Q1TAg'], { query: n }) : x.intl.string(x.t['0Y+0PT'])),
               (0, r.jsxs)('div', {
                   className: i ? L.emptyStateSmall : L.emptyStateLarge,
                   children: [
@@ -307,7 +307,7 @@ class w extends (i = l.PureComponent) {
                               children: [
                                   (0, r.jsx)('div', {
                                       className: L.emptyStateHeader,
-                                      children: Z.intl.string(Z.t.Lw8X2t)
+                                      children: x.intl.string(x.t.Lw8X2t)
                                   }),
                                   (0, r.jsx)('div', {
                                       className: L.emptyStateDescription,
@@ -321,7 +321,7 @@ class w extends (i = l.PureComponent) {
     }
     render() {
         let { sortKey: e, sortDirection: t, applicationViewItems: n, activeRowKey: i, stickyHeader: a } = this.props,
-            { overflowMenuRowKey: o, highlightedApplicationKey: s } = this.state;
+            { overflowMenuRowKey: s, highlightedApplicationKey: o } = this.state;
         return (0, r.jsxs)(l.Fragment, {
             children: [
                 n.length > 0
@@ -340,15 +340,15 @@ class w extends (i = l.PureComponent) {
                           sortDirection: t,
                           stickyHeader: a,
                           rowProps: {
-                              activeRowKey: null != o ? o : i,
-                              highlightedApplicationKey: s,
+                              activeRowKey: null != s ? s : i,
+                              highlightedApplicationKey: o,
                               onMouseEnter: this.handleRowMouseEnter,
                               onMouseLeave: this.handleRowMouseLeave,
                               onContextMenu: this.handleApplicationContextMenu,
                               setRef: this.setRowRef
                           },
                           cellProps: {
-                              activeRowKey: null != o ? o : i,
+                              activeRowKey: null != s ? s : i,
                               onContextMenu: this.handleApplicationContextMenu,
                               setActiveRowKey: this.setActiveRowKey,
                               clearActiveRowKey: this.clearActiveRowKey,
@@ -406,27 +406,27 @@ class w extends (i = l.PureComponent) {
     }
 }
 function k(e) {
-    let t = l.useContext(N.AnalyticsContext),
-        n = (0, s.TH)(),
+    let t = l.useContext(S.AnalyticsContext),
+        n = (0, o.TH)(),
         {
             applicationViewItems: i,
             filterQuery: a,
-            fetched: o
-        } = (0, c.cj)([v.Z], () => ({
-            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: v.Z.applicationFilterQuery,
-            fetched: v.Z.hasFetchedApplications
+            fetched: s
+        } = (0, c.cj)([N.Z], () => ({
+            applicationViewItems: N.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: N.Z.applicationFilterQuery,
+            fetched: N.Z.hasFetchedApplications
         })),
         {
             sortKey: d,
             sortDirection: u,
             activeRowKey: h,
             isNavigatingByKeyboard: m
-        } = (0, c.cj)([S.Z], () => ({
-            sortKey: S.Z.sortKey,
-            sortDirection: S.Z.sortDirection,
-            activeRowKey: S.Z.activeRowKey,
-            isNavigatingByKeyboard: S.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([v.Z], () => ({
+            sortKey: v.Z.sortKey,
+            sortDirection: v.Z.sortDirection,
+            activeRowKey: v.Z.activeRowKey,
+            isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
         }));
     return (0, r.jsx)(w, {
         ...e,
@@ -434,7 +434,7 @@ function k(e) {
         location: n,
         applicationViewItems: i,
         filterQuery: a,
-        fetched: o,
+        fetched: s,
         sortKey: d,
         sortDirection: u,
         activeRowKey: h,

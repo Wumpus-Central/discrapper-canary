@@ -3,11 +3,11 @@ n(192379);
 var r = n(481060),
     l = n(388032),
     a = n(278495);
-let o = Math.ceil(2 * Math.PI * 20);
+let s = Math.ceil(2 * Math.PI * 20);
 t.Z = (e) => {
     let { total: t, used: n } = e,
-        s = Math.max(0, Math.min(1, n / t)),
-        c = ''.concat(Math.floor(100 * s), '%');
+        o = Math.max(0, Math.min(1, n / t)),
+        c = ''.concat(Math.floor(100 * o), '%');
     return (0, i.jsx)(r.Tooltip, {
         text: l.intl.formatToPlainString(l.t['2eoRMj'], { used: c }),
         children: (e) =>
@@ -38,11 +38,11 @@ t.Z = (e) => {
                                         n = Math.round(-71 * e + 208),
                                         i = Math.round(-22 * e + 240);
                                     return 'rgb('.concat(t, ', ').concat(n, ', ').concat(i, ')');
-                                })(s),
+                                })(o),
                                 strokeDasharray: (function (e) {
-                                    let t = Math.floor(o * e);
-                                    return ''.concat(t, ', ').concat(o);
-                                })(s)
+                                    let t = Math.floor(s * e);
+                                    return ''.concat(t, ', ').concat(s);
+                                })(o)
                             })
                         ]
                     }),

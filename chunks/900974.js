@@ -3,15 +3,15 @@ n(192379);
 var r = n(481060),
     l = n(570140);
 let a = !1,
-    o = null;
+    s = null;
 t.Z = {
     init() {
         l.Z.subscribe('CONNECTION_OPEN', (e) => {
             let { pendingPayments: t } = e;
             if (null != t && t.length > 0) {
                 var l;
-                if (o === t[0] || null == (o = t[0])) return;
-                (l = o),
+                if (s === t[0] || null == (s = t[0])) return;
+                (l = s),
                     a ||
                         ((a = !0),
                         (0, r.openModalLazy)(async () => {

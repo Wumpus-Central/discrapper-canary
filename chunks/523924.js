@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(565138),
-    s = n(693546),
+    s = n(565138),
+    o = n(693546),
     c = n(937111),
     d = n(388032),
     u = n(832311),
@@ -15,7 +15,7 @@ t.Z = (e) => {
             return c.Z.getCooldown(null !== (e = null == _ ? void 0 : _.id) && void 0 !== e ? e : '0');
         });
     r.useEffect(() => {
-        null == E && null != _ && s.Z.fetchJoinRequestCooldown(_.id);
+        null == E && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
     }, [E, _]);
     let I = (null != E ? E : 0) > 0,
         C = I && null != E ? Math.ceil((1000 * E - Date.now()) / 86400000) : 0;
@@ -26,8 +26,8 @@ t.Z = (e) => {
                 className: u.confirmationContent,
                 children: [
                     null !== _
-                        ? (0, i.jsx)(o.Z, {
-                              size: o.Z.Sizes.LARGER,
+                        ? (0, i.jsx)(s.Z, {
+                              size: s.Z.Sizes.LARGER,
                               guild: _,
                               className: u.guildIcon
                           })

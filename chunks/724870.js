@@ -1,6 +1,6 @@
 e.d(t, {
     h: function () {
-        return I;
+        return S;
     },
     m: function () {
         return g;
@@ -21,11 +21,11 @@ var l = e(512722),
     p = e(55563),
     m = e(626135),
     v = e(987209),
-    S = e(981631);
-function I(n) {
-    let { initialPlanId: t, activeSubscription: l, analyticsObject: r, analyticsLocation: o, analyticsLocations: d, analyticsSubscriptionType: f, renderHeader: p, planGroup: I, skuId: h, guildId: g, reviewWarningMessage: E, applicationId: Z, showBenefitsFirst: A, onComplete: N, forcesTransitionToGuild: b } = n,
-        x = (0, u.Z)(),
-        T = !1;
+    I = e(981631);
+function S(n) {
+    let { initialPlanId: t, activeSubscription: l, analyticsObject: r, analyticsLocation: o, analyticsLocations: d, analyticsSubscriptionType: f, renderHeader: p, planGroup: S, skuId: h, guildId: g, reviewWarningMessage: Z, applicationId: A, showBenefitsFirst: N, onComplete: b, forcesTransitionToGuild: E } = n,
+        P = (0, u.Z)(),
+        C = !1;
     (0, a.openModalLazy)(
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
@@ -33,12 +33,12 @@ function I(n) {
                 { getApplicationPaymentSteps: a } = await Promise.all([e.e('77298'), e.e('23357'), e.e('12013'), e.e('68956'), e.e('26182'), e.e('95900'), e.e('34958')]).then(e.bind(e, 759386)),
                 s = a({
                     guildId: g,
-                    showBenefitsFirst: A
+                    showBenefitsFirst: N
                 });
             return (e) =>
                 (0, i.jsx)(n, {
-                    loadId: x,
-                    applicationId: Z,
+                    loadId: P,
+                    applicationId: A,
                     activeSubscription: l,
                     stepConfigs: s,
                     skuIDs: [h],
@@ -52,34 +52,34 @@ function I(n) {
                             analyticsLocation: o,
                             analyticsSubscriptionType: f,
                             renderHeader: p,
-                            planGroup: I,
-                            reviewWarningMessage: E,
-                            applicationId: Z,
+                            planGroup: S,
+                            reviewWarningMessage: Z,
+                            applicationId: A,
                             guildId: null != g ? g : void 0,
                             onComplete: () => {
-                                (T = !0), null == N || N();
+                                (C = !0), null == b || b();
                             },
-                            forcesTransitionToGuild: b
+                            forcesTransitionToGuild: E
                         })
                     })
                 });
         },
         {
             onCloseCallback: () => {
-                !T &&
-                    (m.default.track(S.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: x,
-                        payment_type: S.Zuq[S.GZQ.SUBSCRIPTION],
+                !C &&
+                    (m.default.track(I.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: P,
+                        payment_type: I.Zuq[I.GZQ.SUBSCRIPTION],
                         location: null != o ? o : r,
                         is_gift: !1,
                         sku_id: h,
-                        application_id: Z,
+                        application_id: A,
                         location_stack: d
                     }),
                     (0, s.fw)(),
                     (0, c.p)());
             },
-            onCloseRequest: S.dG4
+            onCloseRequest: I.dG4
         }
     );
 }
@@ -96,12 +96,12 @@ async function g(n) {
     let m = (0, d.KW)(s.flags);
     r()(m, 'Guild application subscriptions unsupported!'),
         await h(e, i),
-        I({
+        S({
             initialPlanId: null != l ? l : null === (t = c[0]) || void 0 === t ? void 0 : t.id,
             activeSubscription: null,
             analyticsLocations: a,
             analyticsLocationObject: u,
-            analyticsSubscriptionType: S.NYc.APPLICATION,
+            analyticsSubscriptionType: I.NYc.APPLICATION,
             renderHeader: o,
             planGroup: [],
             skuId: i,

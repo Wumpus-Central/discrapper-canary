@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(770146),
+    s = n(481060),
+    o = n(770146),
     c = n(600164),
     d = n(424218),
     u = n(823379),
@@ -22,8 +22,8 @@ class E extends r.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: r } = this.props,
             l = n === m.b.LARGE;
-        return (0, i.jsx)(o.Button, {
-            size: l ? o.Button.Sizes.MIN : o.Button.Sizes.LARGE,
+        return (0, i.jsx)(s.Button, {
+            size: l ? s.Button.Sizes.MIN : s.Button.Sizes.LARGE,
             fullWidth: !l,
             color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
             className: a()({
@@ -138,7 +138,7 @@ class C extends r.PureComponent {
         return (0, i.jsxs)('div', {
             className: f.requirements,
             children: [
-                (0, i.jsx)(s.Z, {
+                (0, i.jsx)(o.Z, {
                     tag: 'h4',
                     children: t
                 }),
@@ -156,7 +156,7 @@ class C extends r.PureComponent {
     render() {
         return (0, i.jsxs)('div', {
             className: this.props.className,
-            children: [(0, i.jsx)(s.Z, { children: g.intl.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
+            children: [(0, i.jsx)(o.Z, { children: g.intl.string(g.t.IkOAoq) }), this.renderTabs(), this.renderBody()]
         });
     }
     constructor(e) {

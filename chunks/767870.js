@@ -9,8 +9,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(704215),
-    o = n(927359),
-    s = n(243778),
+    s = n(927359),
+    o = n(243778),
     c = n(325767),
     d = n(823188),
     u = n(664358);
@@ -78,8 +78,8 @@ function p(e) {
 }
 function g(e) {
     let { className: t, endsAt: n, messageStyle: r, upperCase: c, showSparkles: g, currentEntitlementId: f } = e,
-        [_] = (0, s.XR)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(f)),
-        E = (0, o.Z)(n, r);
+        [_] = (0, o.XR)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(f)),
+        E = (0, s.Z)(n, r);
     return (
         c && (E = E.toUpperCase()),
         (0, i.jsxs)('div', {

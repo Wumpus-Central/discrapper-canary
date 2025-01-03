@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     n(789020);
@@ -50,10 +50,10 @@ function f(e) {
         ]
     });
 }
-function h(e) {
+function g(e) {
     let { application: t } = e,
         { hasMessageContent: n, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, s.w)({ flags: null == t ? void 0 : t.flags }),
-        h = a.useCallback(() => {
+        g = a.useCallback(() => {
             (null == t ? void 0 : t.privacy_policy_url) != null && (0, d.q)({ href: t.privacy_policy_url });
         }, [null == t ? void 0 : t.privacy_policy_url]);
     return (0, i.jsxs)(i.Fragment, {
@@ -106,7 +106,7 @@ function h(e) {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     className: m.privacyPolicy,
-                                    children: p.intl.format(p.t.agYVY2, { onClick: h })
+                                    children: p.intl.format(p.t.agYVY2, { onClick: g })
                                 })
                         ]
                     })

@@ -3,8 +3,8 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(433517),
+    s = n(442837),
+    o = n(433517),
     c = n(570140),
     d = n(650774),
     u = n(430824),
@@ -13,10 +13,10 @@ var i,
     p = n(981631);
 let g = 'publicUpsellChannelNoticeGuilds',
     f = new Set();
-class _ extends (i = o.ZP.Store) {
+class _ extends (i = s.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(h.Z, u.Z, d.Z), this.syncWith([h.Z, u.Z, d.Z], p.dG4), (f = ((e = new Set(s.K.get(g))), e));
+        this.waitFor(h.Z, u.Z, d.Z), this.syncWith([h.Z, u.Z, d.Z], p.dG4), (f = ((e = new Set(o.K.get(g))), e));
     }
     isVisible(e) {
         if (null == e) return;
@@ -36,6 +36,6 @@ class _ extends (i = o.ZP.Store) {
     (t.Z = new _(c.Z, {
         PUBLIC_UPSELL_NOTICE_DISMISS: function (e) {
             let t = e.guildId;
-            if (!f.has(t)) return f.add(t), s.K.set(g, f), !0;
+            if (!f.has(t)) return f.add(t), o.K.set(g, f), !0;
         }
     }));

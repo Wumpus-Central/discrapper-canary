@@ -3,8 +3,8 @@ var i,
     r = n(200651),
     l = n(192379),
     a = n(392711),
-    o = n.n(a),
-    s = n(302221),
+    s = n.n(a),
+    o = n(302221),
     c = n(911785);
 function d(e, t, n) {
     return (
@@ -22,9 +22,9 @@ function d(e, t, n) {
 class u extends (i = l.PureComponent) {
     onDataUpdate(e, t) {
         let { maxValue: n, data: i, animate: r } = this.props,
-            l = null == e || (e.data !== t.data && !o().isEqual(e.data, t.data));
+            l = null == e || (e.data !== t.data && !s().isEqual(e.data, t.data));
         if ((l && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))), l || null == e || (!e.animate && r) || e.color !== this.props.color)) {
-            let e = s.oo(this.props.color);
+            let e = o.oo(this.props.color);
             (this.fillColor = 'rgba('.concat(e.r, ', ').concat(e.g, ', ').concat(e.b, ', 0.5)')), window.cancelAnimationFrame(this.animationFrameRequestId), (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
         }
     }
@@ -60,7 +60,7 @@ class u extends (i = l.PureComponent) {
                 let t, n;
                 let i = this.canvas.current;
                 if (null == i) return;
-                let { data: r, updateInterval: l, color: a, numUpdatesToShow: o, lineWidth: c, animate: d, gradientStopColor: u } = this.props;
+                let { data: r, updateInterval: l, color: a, numUpdatesToShow: s, lineWidth: c, animate: d, gradientStopColor: u } = this.props;
                 if (r.length < 2) return;
                 let h = Math.max(Math.min((e - this.dataChangedAt) / l, 1), 0),
                     m = i.getContext('2d'),
@@ -70,11 +70,11 @@ class u extends (i = l.PureComponent) {
                     f = m.createLinearGradient(0, 0, 0, g);
                 if (null != u) f.addColorStop(0, u);
                 else {
-                    let { r: e, g: t, b: n } = s.oo(a);
+                    let { r: e, g: t, b: n } = o.oo(a);
                     f.addColorStop(0, 'rgba('.concat(e, ', ').concat(t, ', ').concat(n, ', 0)'));
                 }
                 f.addColorStop(1, this.fillColor), (m.fillStyle = f);
-                let _ = r.length >= o ? o : r.length;
+                let _ = r.length >= s ? s : r.length;
                 m.setTransform(1, 0, 0, -1, 0, i.height), m.clearRect(0, 0, i.width, i.height), m.translate(0, 0.5 * m.lineWidth);
                 let E = Math.floor(i.width / (_ - 3)),
                     I = 0.5 * E;

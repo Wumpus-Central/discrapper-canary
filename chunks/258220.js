@@ -12,8 +12,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(153867),
-    o = n(835473),
-    s = n(600164),
+    s = n(835473),
+    o = n(600164),
     c = n(626135),
     d = n(998502),
     u = n(981631),
@@ -24,7 +24,7 @@ function g(e) {
     var t;
     let { applicationId: n, ...g } = e,
         [f, _] = r.useState(!1),
-        [E] = (0, o.Z)([n]),
+        [E] = (0, s.Z)([n]),
         I = null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : 'This Activity';
     r.useEffect(() => {
         c.default.track(u.rMx.OPEN_MODAL, { type: p });
@@ -67,7 +67,7 @@ function g(e) {
             }),
             (0, i.jsxs)(l.ModalFooter, {
                 className: m.footer,
-                direction: s.Z.Direction.HORIZONTAL,
+                direction: o.Z.Direction.HORIZONTAL,
                 children: [
                     (0, i.jsx)(l.Checkbox, {
                         type: l.Checkbox.Types.INVERTED,

@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(442837),
     a = n(377108),
-    o = n(433517),
-    s = n(709054),
+    s = n(433517),
+    o = n(709054),
     c = n(48481),
     d = n(526761),
     u = n(981631);
@@ -77,19 +77,19 @@ let p = [
             return n.favorites.length > 0 && ((e.favoriteStickers = a.Lt.create()), (e.favoriteStickers.stickerIds = r().uniq(n.favorites).slice(0, d.oX)), (i = !0)), r().size(n.usageHistory) > 0 && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, c.tU)(n.usageHistory, 100)), (i = !0)), i;
         },
         cleanup() {
-            o.K.remove('StickersPersistedStore');
+            s.K.remove('StickersPersistedStore');
         }
     },
     {
         version: 4,
         run(e) {
-            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: o.K.get('EmojiUsageHistory') || {} })]);
+            let { state: t } = l.ZP.PersistedStore.migrateAndReadStoreState('EmojiStore', [() => ({ usageHistory: s.K.get('EmojiUsageHistory') || {} })]);
             if (null == t) return !1;
             let n = !1;
             return null != t.favorites && t.favorites.length > 0 && ((e.favoriteEmojis = a.ND.create()), (e.favoriteEmojis.emojis = r().uniq(t.favorites).slice(0, d.oX)), (n = !0)), r().size(t.usageHistory) > 0 && ((e.emojiFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, c.tU)(t.usageHistory, 100)), (n = !0)), n;
         },
         cleanup() {
-            o.K.remove('EmojiStore'), o.K.remove('EmojiUsageHistory'), o.K.remove('EmojiDiversitySurrogate');
+            s.K.remove('EmojiStore'), s.K.remove('EmojiUsageHistory'), s.K.remove('EmojiDiversitySurrogate');
         }
     },
     {
@@ -109,8 +109,8 @@ let p = [
                     e.favoriteGifs.gifs[r].order = l.order;
                     continue;
                 }
-                let o = a.JM.toBinary(l).length + r.length + 7;
-                !(n + o > d.vY) && ((n += o), (e.favoriteGifs.gifs[r] = l));
+                let s = a.JM.toBinary(l).length + r.length + 7;
+                !(n + s > d.vY) && ((n += s), (e.favoriteGifs.gifs[r] = l));
             }
             for (n = a.wK.toBinary(e.favoriteGifs).length; n > d.vY; ) {
                 let t = 0;
@@ -130,7 +130,7 @@ let p = [
             return r().size(t.usageHistory) > 0 && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, c.tU)(t.usageHistory, 500)), (n = !0)), n;
         },
         cleanup() {
-            o.K.remove('ApplicationCommandFrecency');
+            s.K.remove('ApplicationCommandFrecency');
         }
     },
     {
@@ -142,7 +142,7 @@ let p = [
             return (
                 r().size(t.favoriteSounds) > 0 &&
                     ((e.favoriteSoundboardSounds = a.h_.create()),
-                    s.default.keys(t.favoriteSounds).forEach((n) => {
+                    o.default.keys(t.favoriteSounds).forEach((n) => {
                         new Set(t.favoriteSounds[n]).forEach((t) => {
                             var n;
                             null === (n = e.favoriteSoundboardSounds) || void 0 === n || n.soundIds.push(t);
@@ -153,19 +153,19 @@ let p = [
             );
         },
         cleanup() {
-            o.K.remove('SoundboardFavoriteStore');
+            s.K.remove('SoundboardFavoriteStore');
         }
     },
     {
         version: 9,
         run(e) {
-            let t = o.K.get(h);
+            let t = s.K.get(h);
             if (null == t) return !1;
             for (let e in t) !u.Xyh.test(e) && delete t[e];
             return (e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, c.tU)(t, 100)), !0;
         },
         cleanup() {
-            o.K.remove(h);
+            s.K.remove(h);
         }
     },
     {

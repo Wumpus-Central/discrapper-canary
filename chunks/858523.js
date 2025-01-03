@@ -11,13 +11,13 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(239091),
-    o = n(299206),
-    s = n(388032);
+    s = n(299206),
+    o = n(388032);
 function c(e) {
     let { guild: t, shiftId: n, onSelect: c, closePopout: d, 'aria-label': u } = e,
-        h = (0, o.Z)({
+        h = (0, s.Z)({
             id: t.id,
-            label: s.intl.string(s.t['94lLDw']),
+            label: o.intl.string(o.t['94lLDw']),
             shiftId: n,
             onSuccess: d
         }),
@@ -29,7 +29,7 @@ function c(e) {
         children: (0, i.jsx)(l.Menu, {
             onSelect: c,
             navId: 'guild-discovery-context-menu',
-            'aria-label': null != u ? u : s.intl.string(s.t.ogxXGh),
+            'aria-label': null != u ? u : o.intl.string(o.t.ogxXGh),
             onClose: a.Zy,
             children: (0, i.jsx)(l.MenuGroup, { children: h })
         })

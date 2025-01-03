@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(493683),
-    o = n(367907),
-    s = n(205129),
+    s = n(367907),
+    o = n(205129),
     c = n(626135),
     d = n(981631),
     u = n(388032);
@@ -27,7 +27,7 @@ function h(e) {
               id: 'message',
               action: function () {
                   a.Z.openPrivateChannel(p).then((t) =>
-                      o.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {
+                      s.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {
                           source: {
                               ...m.location,
                               object: d.qAy.LIST_ITEM
@@ -35,7 +35,7 @@ function h(e) {
                           channel_id: t,
                           recipient_id: 'string' == typeof p ? p : p[0],
                           af_recently_played: !1,
-                          ...(0, s.y)(e)
+                          ...(0, o.y)(e)
                       })
                   );
               },

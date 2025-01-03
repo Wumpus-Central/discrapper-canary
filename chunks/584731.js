@@ -3,8 +3,8 @@ var i = n(442837),
     r = n(570140),
     l = n(513418),
     a = n(710845),
-    o = n(592125),
-    s = n(375954),
+    s = n(592125),
+    o = n(375954),
     c = n(625236);
 function d(e, t, n) {
     return (
@@ -61,7 +61,7 @@ class m extends i.ZP.Store {
         var t, n;
         let i = null !== (n = e.guildId) && void 0 !== n ? n : null;
         if ((null === (t = this.data(i)) || void 0 === t ? void 0 : t.messageId(e.channelId)) === e.id) {
-            let t = s.Z.getMessages(e.channelId),
+            let t = o.Z.getMessages(e.channelId),
                 n = t.hasMoreAfter ? null : t.last();
             null != n ? this.data(i).put(e.channelId, n, this.generation) : this.data(i).delete(e.channelId);
         }
@@ -82,12 +82,12 @@ class m extends i.ZP.Store {
     }
     handleLoadMessagesSuccess(e) {
         var t, n;
-        let i = o.Z.getBasicChannel(e.channelId);
+        let i = s.Z.getBasicChannel(e.channelId);
         if (null == i) return !1;
         (0, l.Z)(e.messages), e.isAfter || e.isBefore || e.hasMoreAfter ? this.data(i.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation) : this.data(i.guild_id).put(e.channelId, null !== (t = e.messages[0]) && void 0 !== t ? t : null, this.generation);
     }
     handleLocalMessagesLoaded(e) {
-        let t = o.Z.getBasicChannel(e.channelId);
+        let t = s.Z.getBasicChannel(e.channelId);
         if (null != t) {
             var n;
             (0, l.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, u);

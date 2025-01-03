@@ -5,21 +5,21 @@ var i = n(477660),
     r = n(481060),
     l = n(447543),
     o = n(15470),
-    h = n(960904),
-    d = n(830121),
-    c = n(746878),
-    u = n(241209);
-let p = /^discord.gg\/[a-zA-Z0-9-]+/,
-    m = {
-        ...u.Z.rules,
+    d = n(960904),
+    h = n(830121),
+    u = n(746878),
+    c = n(241209);
+let m = /^discord.gg\/[a-zA-Z0-9-]+/,
+    p = {
+        ...c.Z.rules,
         heading: { ...o.i.heading },
         image: { ...a().defaultRules.image },
         inviteLink: {
-            order: u.Z.rules.link.order + 1,
-            match: (e, t) => (t.inline ? p.exec(e) : null),
+            order: c.Z.rules.link.order + 1,
+            match: (e, t) => (t.inline ? m.exec(e) : null),
             parse: (e, t, n) => {
-                let s = (0, d.zO)(e[0]);
-                return null == s || s.type !== h.g.INVITE
+                let s = (0, h.zO)(e[0]);
+                return null == s || s.type !== d.g.INVITE
                     ? {
                           type: 'text',
                           content: e[0]
@@ -49,10 +49,10 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
                         onClick: (t) => {
                             t.preventDefault(), e.onClick();
                         },
-                        children: (0, c.S)(e, t, n)
+                        children: (0, u.S)(e, t, n)
                     },
                     n.key
                 )
         }
     };
-t.Z = m;
+t.Z = p;

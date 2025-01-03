@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(904245),
-    o = n(944486),
-    s = n(324262),
+    s = n(944486),
+    o = n(324262),
     c = n(981631),
     d = n(921944),
     u = n(388032),
@@ -25,7 +25,7 @@ function m(e, t, n) {
 class p extends r.PureComponent {
     render() {
         let e = ''.concat(u.intl.string(u.t.VWqWZW), '\n').concat(u.intl.string(u.t['0Lgb/P']));
-        return (0, i.jsx)(s.Z, {
+        return (0, i.jsx)(o.Z, {
             guild: this.props.guild,
             onDismissed: this.handleClose,
             onClick: this.handleInvite,
@@ -52,7 +52,7 @@ class p extends r.PureComponent {
                 });
             }),
             m(this, 'handleClose', () => {
-                let e = o.Z.getChannelId();
+                let e = s.Z.getChannelId();
                 this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
             });
     }

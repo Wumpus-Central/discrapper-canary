@@ -4,8 +4,8 @@ n(192379);
 var r = n(243814),
     l = n(45792),
     a = n(481060),
-    o = n(278323),
-    s = n(988298),
+    s = n(278323),
+    o = n(988298),
     c = n(224706),
     d = n(45114),
     u = n(479531),
@@ -18,18 +18,18 @@ var r = n(243814),
     E = n(928518),
     I = n(23750),
     C = n(592125),
-    v = n(293273),
-    S = n(885110),
-    N = n(451478),
+    N = n(293273),
+    v = n(885110),
+    S = n(451478),
     T = n(630388),
     b = n(823379),
-    x = n(709054),
-    A = n(591759),
-    Z = n(228488),
+    A = n(709054),
+    Z = n(591759),
+    x = n(228488),
     L = n(996106),
     P = n(914946),
-    y = n(452426),
-    O = n(561205),
+    O = n(452426),
+    y = n(561205),
     R = n(600027),
     j = n(852926),
     D = n(186901),
@@ -37,16 +37,16 @@ var r = n(243814),
     w = n(701488);
 async function k(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
-        l = v.Z.getApplicationActivity(t);
+        l = N.Z.getApplicationActivity(t);
     if (null == l || null == l.secrets || !(0, P.t9)(i, l.party, l.secrets)) throw new L.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-    let a = (0, g.Z)(l, S.Z);
+    let a = (0, g.Z)(l, v.Z);
     if (a) {
         let { lock: t } = (0, j.jU)(e);
-        return (0, s.h7)(l, a).then(() => {
+        return (0, o.h7)(l, a).then(() => {
             throw (t(), new L.Z({ errorCode: M.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.'));
         });
     }
-    await o.Z.sendActivityInviteUser({
+    await s.Z.sendActivityInviteUser({
         userId: n,
         type: i,
         activity: l,
@@ -86,7 +86,7 @@ t.Z = {
             [D.Gp.ANY]: [r.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, y.Z)(e)
+            (0, O.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -109,7 +109,7 @@ t.Z = {
             [D.Gp.ANY]: [r.x.RPC, D.lH]
         },
         validation: (e) =>
-            (0, y.Z)(e)
+            (0, O.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([M.mFx.JOIN]),
@@ -123,18 +123,18 @@ t.Z = {
                     socket: t,
                     args: { type: n, user_id: i, session_id: r, channel_id: l, message_id: a }
                 } = e,
-                o = t.application.id;
-            if (null == o) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            let s = Promise.resolve(!1);
+                s = t.application.id;
+            if (null == s) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
+            let o = Promise.resolve(!1);
             if (n === M.mFx.JOIN)
-                s = c.Z.join({
+                o = c.Z.join({
                     userId: i,
                     sessionId: r,
-                    applicationId: o,
+                    applicationId: s,
                     channelId: l,
                     messageId: a
                 });
-            return s.then((e) => {
+            return o.then((e) => {
                 if (!e) throw new L.Z({ errorCode: M.lTL.INVALID_INVITE }, 'Invite is expired or invalid.');
             });
         }
@@ -146,14 +146,14 @@ t.Z = {
         handler(e) {
             let { socket: t } = e,
                 { channel: r, guild: l } = (0, R.T)(),
-                o = (0, p.ZP)({
+                s = (0, p.ZP)({
                     application: t.application,
                     channelId: r.id
                 }),
-                s = null != o ? E.Z.getWindow(o) : void 0;
-            (null == s ? void 0 : s.closed) && (s = void 0);
-            let c = null != s ? M.IlC.POPOUT : M.IlC.APP;
-            (0, Z.Pr)({}, null == s ? void 0 : s.document),
+                o = null != s ? E.Z.getWindow(s) : void 0;
+            (null == o ? void 0 : o.closed) && (o = void 0);
+            let c = null != o ? M.IlC.POPOUT : M.IlC.APP;
+            (0, x.Pr)({}, null == o ? void 0 : o.document),
                 (0, a.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
@@ -180,12 +180,12 @@ t.Z = {
             let { socket: n } = e,
                 i = n.application.id;
             if (null == i) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            let r = null === (t = (0, O.Z)()) || void 0 === t ? void 0 : t.id;
+            let r = null === (t = (0, y.Z)()) || void 0 === t ? void 0 : t.id;
             if (null == r) throw new L.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'Unable to find selected channel');
             return new Promise((e, t) => {
                 !(function (e, t) {
                     var n;
-                    let i = N.Z.getLastFocusedWindowId(),
+                    let i = S.Z.getLastFocusedWindowId(),
                         r = null == i ? null : null === (n = (0, h.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
                     if (null == r) throw new L.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'No valid window found');
                     let l = r.document.createElement('input');
@@ -231,9 +231,9 @@ t.Z = {
             let r = n.application.id;
             if (null == r) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, T.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let l = (0, O.Z)();
+            let l = (0, y.Z)();
             if (null == l) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
-            if (!A.Z.isDiscordCdnUrl(i)) throw new L.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
+            if (!Z.Z.isDiscordCdnUrl(i)) throw new L.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, f.Z)({
                 applicationId: r,
                 channelId: l.id,
@@ -248,21 +248,21 @@ t.Z = {
             let n,
                 {
                     socket: i,
-                    args: { command: r, preview_image: l, components: a, content: o }
+                    args: { command: r, preview_image: l, components: a, content: s }
                 } = e;
             (0, P.bu)(i.transport);
-            let s = i.application.id;
-            if (null == s) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            if (!w.Cr.includes(s)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
+            let o = i.application.id;
+            if (null == o) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
+            if (!w.Cr.includes(o)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, T.yE)(null !== (t = i.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let c = (0, O.Z)();
+            let c = (0, y.Z)();
             if (null == c) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
-            if (null !== l || null !== a || null !== o) {
+            if (null !== l || null !== a || null !== s) {
                 let e = [];
                 void 0 !== l &&
                     (e = [
                         {
-                            id: x.default.cast(x.default.fromTimestamp(Date.now())),
+                            id: A.default.cast(A.default.fromTimestamp(Date.now())),
                             size: 0,
                             proxy_url: l.url,
                             filename: 'preview',
@@ -272,15 +272,15 @@ t.Z = {
                         }
                     ]),
                     (n = new I.ZP({
-                        id: x.default.cast(x.default.fromTimestamp(Date.now())),
-                        applicationId: s,
-                        content: o,
+                        id: A.default.cast(A.default.fromTimestamp(Date.now())),
+                        applicationId: o,
+                        content: s,
                         components: a,
                         attachments: e
                     }));
             }
             (0, _.M)({
-                applicationId: s,
+                applicationId: o,
                 channel: c,
                 command: r,
                 previewMessage: n

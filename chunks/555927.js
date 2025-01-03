@@ -10,8 +10,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(906732),
-    o = n(171368),
-    s = n(841710),
+    s = n(171368),
+    o = n(841710),
     c = n(981631),
     d = n(388032);
 function u(e) {
@@ -23,14 +23,14 @@ function u(e) {
                 id: e.id,
                 keepItemStyles: !0,
                 render: (t) =>
-                    (0, i.jsx)(s.Z, {
+                    (0, i.jsx)(o.Z, {
                         ...t,
                         user: e,
                         status: n,
                         guildId: u
                     }),
                 action: () =>
-                    (0, o.openUserProfileModal)({
+                    (0, s.openUserProfileModal)({
                         userId: e.id,
                         guildId: u,
                         sourceAnalyticsLocations: h,
@@ -44,13 +44,13 @@ function u(e) {
                 id: e.id,
                 keepItemStyles: !0,
                 render: (t) =>
-                    (0, i.jsx)(s.Z, {
+                    (0, i.jsx)(o.Z, {
                         ...t,
                         user: e,
                         guildId: u
                     }),
                 action: () =>
-                    (0, o.openUserProfileModal)({
+                    (0, s.openUserProfileModal)({
                         userId: e.id,
                         guildId: u,
                         sourceAnalyticsLocations: h,
@@ -65,7 +65,7 @@ function u(e) {
                 (0, i.jsx)(l.MenuItem, {
                     id: 'unknown-members-'.concat(null == a ? void 0 : a.session_id),
                     render: (e) =>
-                        (0, i.jsx)(s.Y, {
+                        (0, i.jsx)(o.Y, {
                             ...e,
                             label: d.intl.formatToPlainString(d.t['6Kqn9P'], { count: p })
                         })
@@ -75,7 +75,7 @@ function u(e) {
     );
 }
 function h(e) {
-    let { priorityMembers: t, partiedMembers: n, currentActivities: o, guildContext: s } = e,
+    let { priorityMembers: t, partiedMembers: n, currentActivities: s, guildContext: o } = e,
         c = new Set(
             t.map((e) => {
                 let { user: t } = e;
@@ -85,15 +85,15 @@ function h(e) {
         h = n.filter((e) => !c.has(e.id)),
         { analyticsLocations: m } = (0, a.ZP)(),
         p = r.useMemo(() => {
-            let e = o
+            let e = s
                 .flatMap((e) => {
                     let { playingMembers: t } = e;
                     return t;
                 })
                 .map((e) => e.id);
             return n.filter((t) => !e.includes(t.id));
-        }, [n, o]);
-    if (o.length <= 1 && 0 === p.length) {
+        }, [n, s]);
+    if (s.length <= 1 && 0 === p.length) {
         var g, f;
         return (0, i.jsx)(l.MenuGroup, {
             label: n.length > 1 ? d.intl.formatToPlainString(d.t.C4WXvb, { memberCount: n.length }) : void 0,
@@ -101,14 +101,14 @@ function h(e) {
                 priorityMembers: t,
                 otherMembers: h,
                 totalMembers: n.length,
-                activity: null !== (f = null === (g = o[0]) || void 0 === g ? void 0 : g.activity) && void 0 !== f ? f : void 0,
-                guildId: null == s ? void 0 : s.id,
+                activity: null !== (f = null === (g = s[0]) || void 0 === g ? void 0 : g.activity) && void 0 !== f ? f : void 0,
+                guildId: null == o ? void 0 : o.id,
                 sourceAnalyticsLocations: m
             })
         });
     }
-    let _ = o.map((e, n) => {
-            let { playingMembers: r, game: a, activity: o } = e,
+    let _ = s.map((e, n) => {
+            let { playingMembers: r, game: a, activity: s } = e,
                 d = new Set(r.map((e) => e.id));
             return (0, i.jsx)(
                 l.MenuGroup,
@@ -121,8 +121,8 @@ function h(e) {
                         }),
                         otherMembers: r.filter((e) => !c.has(e.id)),
                         totalMembers: r.length,
-                        activity: null != o ? o : void 0,
-                        guildId: null == s ? void 0 : s.id,
+                        activity: null != s ? s : void 0,
+                        guildId: null == o ? void 0 : o.id,
                         sourceAnalyticsLocations: m
                     })
                 },
@@ -141,7 +141,7 @@ function h(e) {
                 }),
                 otherMembers: p.filter((e) => !c.has(e.id)),
                 totalMembers: p.length,
-                guildId: null == s ? void 0 : s.id,
+                guildId: null == o ? void 0 : o.id,
                 sourceAnalyticsLocations: m
             })
         })

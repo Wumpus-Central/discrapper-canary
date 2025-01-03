@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(512722),
-    s = n.n(o),
+    s = n(512722),
+    o = n.n(s),
     c = n(481060),
     d = n(194359),
     u = n(313201),
@@ -27,8 +27,8 @@ let E = {
     },
     I = (0, u.hQ)(),
     C = ''.concat(I, '-decription'),
-    v = ''.concat(I, '-error');
-function S(e, t) {
+    N = ''.concat(I, '-error');
+function v(e, t) {
     switch (t.type) {
         case 'RESET':
             return E;
@@ -51,18 +51,18 @@ function S(e, t) {
             };
     }
 }
-function N() {
+function S() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(S, E),
-        { canSend: o, hint: u, success: N, error: T } = n;
+        [n, l] = r.useReducer(v, E),
+        { canSend: s, hint: u, success: S, error: T } = n;
     return (
         r.useEffect(() => {
-            null != N && (s()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [N, e]),
+            null != S && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [S, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
-                t.preventDefault(), s()(null != e.current, 'Input is submitted when not mounted');
+                t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
                 let n = e.current.value.trim();
                 !n.includes('#') && n.startsWith('@') && (n = n.substring(1));
                 let i = (0, h.Zy)(n);
@@ -105,7 +105,7 @@ function N() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: N,
+                            [f.success]: S,
                             [f.error]: T
                         }),
                         children: [
@@ -118,7 +118,7 @@ function N() {
                                     let n = t.currentTarget.value;
                                     if (t.key !== p.mR.Enter) {
                                         if (n.includes('#')) {
-                                            s()(null != e.current, 'Input is handling keypress when not mounted');
+                                            o()(null != e.current, 'Input is handling keypress when not mounted');
                                             let i = n.indexOf('#'),
                                                 r = e.current.selectionStart,
                                                 l = t.key === p.mR.Backspace || t.key === p.mR.ArrowRight || t.key === p.mR.ArrowLeft,
@@ -150,7 +150,7 @@ function N() {
                                 placeholder: g.intl.string(g.t['Rn/sLi']),
                                 'aria-label': g.intl.string(g.t['Rn/sLi']),
                                 'aria-invalid': null != T || void 0,
-                                'aria-describedby': null != T ? v : C
+                                'aria-describedby': null != T ? N : C
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -160,7 +160,7 @@ function N() {
                                 }),
                             (0, i.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
-                                disabled: !o,
+                                disabled: !s,
                                 type: 'submit',
                                 children: g.intl.string(g.t['PMsq/f'])
                             })
@@ -170,17 +170,17 @@ function N() {
                 null != T &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
-                        id: v,
+                        id: N,
                         type: c.FormText.Types.ERROR,
                         className: _.marginTop8,
                         children: T
                     }),
-                null != N &&
+                null != S &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: N
+                        children: S
                     })
             ]
         })

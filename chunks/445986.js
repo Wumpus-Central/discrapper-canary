@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return u;
+        return c;
     }
 }),
     n(653041),
@@ -11,23 +11,23 @@ var s = n(200651),
     r = n(33122),
     l = n(761705),
     o = n(9807),
-    h = n(843445),
-    d = n(981631),
-    c = n(388032);
-function u(e) {
+    d = n(843445),
+    h = n(981631),
+    u = n(388032);
+function c(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
-let p = (e) => {
+let m = (e) => {
     let { index: t, items: n, ...i } = e,
         a = n[t],
         r = 0,
         o = [];
     for (let e of n)
-        if (e.type === d.s9s.IMG) {
+        if (e.type === h.s9s.IMG) {
             let { width: t, height: n, src: s } = e;
             e === a && (r = o.length),
                 o.push({
-                    src: u(s),
+                    src: c(s),
                     width: t,
                     height: n
                 });
@@ -38,10 +38,10 @@ let p = (e) => {
         startWith: r
     });
 };
-class m extends i.Component {
+class p extends i.Component {
     render() {
         let { pageSize: e, ...t } = this.props,
-            n = e === h.b.SMALL ? o.Z : r.Z;
+            n = e === d.b.SMALL ? o.Z : r.Z;
         return (0, s.jsx)(n, {
             ...t,
             onCurrentItemClick: this.handleCurrentItemClick
@@ -53,14 +53,14 @@ class m extends i.Component {
             (t = this),
             (n = 'handleCurrentItemClick'),
             (i = (e, t) => {
-                e.type === d.s9s.IMG &&
+                e.type === h.s9s.IMG &&
                     !(0, a.hasAnyModalOpen)() &&
                     (0, a.openModal)((e) =>
                         (0, s.jsx)(a.ModalRoot, {
                             size: a.ModalSize.DYNAMIC,
-                            'aria-label': c.intl.string(c.t.X4IxWF),
+                            'aria-label': u.intl.string(u.t.X4IxWF),
                             ...e,
-                            children: (0, s.jsx)(p, {
+                            children: (0, s.jsx)(m, {
                                 ...e,
                                 index: t,
                                 items: this.props.items
@@ -78,4 +78,4 @@ class m extends i.Component {
                 : (t[n] = i);
     }
 }
-t.Z = m;
+t.Z = p;

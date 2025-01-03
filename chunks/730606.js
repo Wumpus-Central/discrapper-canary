@@ -14,8 +14,8 @@ var i = t(200651),
     c = t(481060),
     d = t(95398),
     h = t(247206),
-    m = t(134432),
-    f = t(169525),
+    f = t(134432),
+    m = t(169525),
     p = t(585483),
     _ = t(254109),
     E = t(212459),
@@ -45,7 +45,7 @@ function b(e) {
                   d.Z,
                   {
                       type: d.Z.Types.ATTACHMENT,
-                      reason: f.wk.EXPLICIT_CONTENT,
+                      reason: m.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
@@ -64,15 +64,15 @@ function b(e) {
 }
 function M(e) {
     let { items: n, onIndexChange: t, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: d = !1 } = e,
-        [f, v] = r.useState(l),
+        [m, v] = r.useState(l),
         M = r.useRef(l),
         { zoomed: L, setZoomed: A } = (0, E.Y)();
     r.useEffect(() => {
         var e, t;
-        let i = (((f + 1) % (e = n.length)) + e) % e;
-        let r = (((f - 1) % (t = n.length)) + t) % t;
-        O(n[i]) && (0, m.po)(n[i].url), O(n[r]) && (0, m.po)(n[r].url);
-    }, [f, n]);
+        let i = (((m + 1) % (e = n.length)) + e) % e;
+        let r = (((m - 1) % (t = n.length)) + t) % t;
+        O(n[i]) && (0, f.po)(n[i].url), O(n[r]) && (0, f.po)(n[r].url);
+    }, [m, n]);
     let T = r.useCallback(
         (e) => {
             var i;
@@ -95,7 +95,7 @@ function M(e) {
             }
         );
     }, [T, A]);
-    let R = n[f],
+    let R = n[m],
         j = (0, h.KP)(
             {
                 type: h.lJ.GenericMedia,
@@ -161,7 +161,7 @@ function M(e) {
                                   children: [
                                       (0, i.jsx)(S.Z, {
                                           items: n,
-                                          currentIndex: f,
+                                          currentIndex: m,
                                           onGalleryItemClick: v,
                                           className: e
                                       }),

@@ -1,7 +1,7 @@
 function i(e) {
     return new ResizeObserver(e);
 }
-function l(e, t) {
+function r(e, t) {
     e.observe(t);
 }
 function a(e, t) {
@@ -12,7 +12,7 @@ n.d(t, {
         return a;
     },
     YP: function () {
-        return l;
+        return r;
     },
     pP: function () {
         return i;

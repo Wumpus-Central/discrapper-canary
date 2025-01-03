@@ -3,8 +3,8 @@ var i = n(570140),
     r = n(317770),
     l = n(314897),
     a = n(57562),
-    o = n(882029),
-    s = n(955204),
+    s = n(882029),
+    o = n(955204),
     c = n(351780),
     d = n(843693);
 function u(e, t, n) {
@@ -32,7 +32,7 @@ class m extends r.Z {
         super(...e),
             u(this, 'handleSettingsUpdate', (e) => {
                 let { settings: t } = e;
-                t.enabled ? (0, a.T)(s.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, a.T)(s.hn.DISABLE_POGGERMODE), Object.keys(t).some((e) => e.startsWith('confetti')) && (0, a.T)(s.hn.CUSTOMIZE_CONFETTI);
+                t.enabled ? (0, a.T)(o.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, a.T)(o.hn.DISABLE_POGGERMODE), Object.keys(t).some((e) => e.startsWith('confetti')) && (0, a.T)(o.hn.CUSTOMIZE_CONFETTI);
             }),
             u(this, 'handleMessageCreate', (e) => {
                 var t;
@@ -42,13 +42,13 @@ class m extends r.Z {
                 } = e;
                 if (!c.Z.isEnabled()) return !1;
                 let m = l.default.getId();
-                if (((null == u ? void 0 : u.find((e) => e.id === m)) != null ? (0, a.T)(s.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === m && (0, a.T)(s.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, m, r, h))) return !1;
+                if (((null == u ? void 0 : u.find((e) => e.id === m)) != null ? (0, a.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === m && (0, a.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, m, r, h))) return !1;
                 let p = d.ZP.getMostRecentMessageCombo(n),
                     { combo: g } = null != p ? p : {};
                 if (null == g) return !1;
-                Object.values(s.hn).forEach((e) => {
-                    if (null != o.Z.getUnlocked(e)) return;
-                    let t = (0, s.oX)(e),
+                Object.values(o.hn).forEach((e) => {
+                    if (null != s.Z.getUnlocked(e)) return;
+                    let t = (0, o.oX)(e),
                         n = null == t ? void 0 : t.checkUnlock;
                     if (null != n && !1 !== n(g)) (0, a.T)(e);
                 });

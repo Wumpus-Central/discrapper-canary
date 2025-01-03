@@ -3,8 +3,8 @@ var i = n(230711),
     r = n(782568),
     l = n(636449),
     a = n(317381),
-    o = n(611577),
-    s = n(16609),
+    s = n(611577),
+    o = n(16609),
     c = n(812206),
     d = n(12647),
     u = n(49012),
@@ -36,7 +36,7 @@ t.Z = {
                 }
                 let t = a.ZP.getCurrentEmbeddedActivity(),
                     i = c.Z.getApplication(null == t ? void 0 : t.applicationId),
-                    m = (0, s.p)(null == t ? void 0 : t.location);
+                    m = (0, o.p)(null == t ? void 0 : t.location);
                 return new Promise((t) =>
                     (0, u.q)(
                         {
@@ -51,7 +51,7 @@ t.Z = {
                         },
                         void 0,
                         void 0,
-                        (0, o.z)({
+                        (0, s.z)({
                             application: i,
                             channelId: m
                         })

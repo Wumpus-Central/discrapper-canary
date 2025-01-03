@@ -1,10 +1,10 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });
-var i = n(752877);
-class r {
+var a = t(752877);
+class i {
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
     }
@@ -12,17 +12,17 @@ class r {
         return this.top;
     }
     constructor() {
-        var e, t, n;
+        var e, n, t;
         (e = this),
-            (t = 'top'),
-            (n = new i.SpringValue(0)),
+            (n = 'top'),
+            (t = new a.SpringValue(0)),
             'top' in e
-                ? Object.defineProperty(e, t, {
-                      value: n,
+                ? Object.defineProperty(e, n, {
+                      value: t,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (e[t] = n);
+                : (e[n] = t);
     }
 }

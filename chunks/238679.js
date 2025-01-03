@@ -16,8 +16,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(570140),
     a = n(317381),
-    o = n(16609),
-    s = n(594174),
+    s = n(16609),
+    o = n(594174),
     c = n(823379),
     d = n(5192),
     u = n(863141),
@@ -25,11 +25,11 @@ var i = n(392711),
 function m() {
     let e = a.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
-    let t = (0, o.j)(e.location),
-        n = (0, o.p)(e.location);
+    let t = (0, s.j)(e.location),
+        n = (0, s.p)(e.location);
     return {
         participants: Array.from(e.userIds, (e) => {
-            let i = s.default.getUser(e);
+            let i = o.default.getUser(e);
             if (null == i) return;
             let r = (0, d.y)(t, n, i);
             return {

@@ -3,10 +3,10 @@ n.d(t, {
         return l;
     },
     Tb: function () {
-        return o;
+        return s;
     },
     ec: function () {
-        return s;
+        return o;
     },
     iD: function () {
         return a;
@@ -31,7 +31,7 @@ function a(e) {
         path: e
     });
 }
-function o(e, t) {
+function s(e, t) {
     let { label: n, isDefault: r } = t;
     i.Z.dispatch({
         type: 'INSTALLATION_LOCATION_UPDATE',
@@ -40,7 +40,7 @@ function o(e, t) {
         isDefault: r
     });
 }
-function s(e) {
+function o(e) {
     let t = {},
         n = 0;
     for (let l of e) {

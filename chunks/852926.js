@@ -16,8 +16,8 @@ var i = n(13245),
     r = n(371651),
     l = n(808506),
     a = n(998502),
-    o = n(13140),
-    s = n(996106),
+    s = n(13140),
+    o = n(996106),
     c = n(914946),
     d = n(186901),
     u = n(981631);
@@ -47,7 +47,7 @@ function m(e) {
 }
 let p = async (e, t, n) => {
         if (((0, c.YK)(e, t), (null == n || '' === n) && (0, c.s9)(t))) return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
-        if (null == n || '' === n) return Promise.reject(new s.Z({ closeCode: u.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
+        if (null == n || '' === n) return Promise.reject(new o.Z({ closeCode: u.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
         let i = a.ZP.releaseChannel !== u.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
         return await (0, c.vv)(n, i), (0, c.fy)(e, n, t);
     },
@@ -60,7 +60,7 @@ let p = async (e, t, n) => {
                     return {
                         type: e[0],
                         code: e[1],
-                        name: null !== (t = (0, o.H9)(e)) && void 0 !== t ? t : 'unknown'
+                        name: null !== (t = (0, s.H9)(e)) && void 0 !== t ? t : 'unknown'
                     };
                 });
             return t;
@@ -68,5 +68,5 @@ let p = async (e, t, n) => {
     f = (e) =>
         (0, c.FJ)(e, (e) => {
             let t = '';
-            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, o.BB)(e.modeOptions.shortcut)), t;
+            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, s.BB)(e.modeOptions.shortcut)), t;
         });

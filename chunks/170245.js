@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(442837),
-    o = n(129861),
-    s = n(700582),
+    s = n(129861),
+    o = n(700582),
     c = n(699516),
     d = n(757338);
 t.Z = function (e) {
@@ -13,7 +13,7 @@ t.Z = function (e) {
     return (0, i.jsxs)('div', {
         className: l()(d.userInfo, p, { [d.hovered]: n }),
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 user: t,
                 className: d.avatar,
                 animate: n,
@@ -23,7 +23,7 @@ t.Z = function (e) {
             (0, i.jsxs)('div', {
                 className: d.text,
                 children: [
-                    (0, i.jsx)(o.Z, {
+                    (0, i.jsx)(s.Z, {
                         user: t,
                         nick: g,
                         botClass: d.botTag,

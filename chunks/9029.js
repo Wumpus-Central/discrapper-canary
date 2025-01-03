@@ -2,8 +2,8 @@ var i = n(481060),
     r = n(570140),
     l = n(317770),
     a = n(507294),
-    o = n(458034);
-class s extends l.Z {
+    s = n(458034);
+class o extends l.Z {
     _initialize() {
         r.Z.subscribe('GUILD_ROLE_CONNECTIONS_MODAL_SHOW', this.handleShow);
     }
@@ -14,8 +14,8 @@ class s extends l.Z {
         let { role: t, guildId: n } = e;
         if (!(0, i.hasModalOpen)('GUILD_ROLE_CONNECTIONS_MODAL_KEY')) {
             var r;
-            null != t && (null === (r = t.tags) || void 0 === r ? void 0 : r.guild_connections) === null ? (0, a.openGuildRoleConnectionsConnectAccountModal)(t, n) : (0, o.Am)(n);
+            null != t && (null === (r = t.tags) || void 0 === r ? void 0 : r.guild_connections) === null ? (0, a.openGuildRoleConnectionsConnectAccountModal)(t, n) : (0, s.Am)(n);
         }
     }
 }
-t.Z = new s();
+t.Z = new o();

@@ -3,8 +3,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(317770),
-    o = n(592125),
-    s = n(944486),
+    s = n(592125),
+    o = n(944486),
     c = n(914010),
     d = n(594174),
     u = n(758119),
@@ -16,7 +16,7 @@ function f(e, t) {
     var n;
     if (null == e) return;
     let i = d.default.getCurrentUser();
-    (null === (n = o.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
+    (null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW()) && null != i && null == i.nsfwAllowed && (0, u.mN)(p.L0.NSFW_CHANNEL);
 }
 class _ extends a.Z {
     _initialize() {
@@ -31,7 +31,7 @@ class _ extends a.Z {
     }
     handleConnectionOpen() {
         let e = c.Z.getGuildId();
-        f(e, s.Z.getChannelId());
+        f(e, o.Z.getChannelId());
     }
     handleAgeGateModalOpen(e) {
         let { source: t } = e;

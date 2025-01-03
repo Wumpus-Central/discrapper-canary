@@ -13,8 +13,8 @@ var i = t(200651),
     c = t(52824),
     d = t(549635),
     h = t(217702),
-    m = t(388032),
-    f = t(52131);
+    f = t(388032),
+    m = t(52131);
 function p(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
@@ -57,26 +57,26 @@ function E(e) {
                 });
         }, [t]),
         (0, i.jsx)('div', {
-            className: a()(f.galleryContainer, u),
+            className: a()(m.galleryContainer, u),
             children: (0, i.jsx)(o.AdvancedScrollerThin, {
                 orientation: 'horizontal',
-                className: f.gallery,
+                className: m.gallery,
                 ref: c,
                 onClick: (e) => e.stopPropagation(),
                 children: n.map((e, r) => {
                     let s = r === t,
-                        u = s ? m.t['qv/U5e'] : m.t.zviMAA;
+                        u = s ? f.t['qv/U5e'] : f.t.zviMAA;
                     return (0, i.jsxs)(
                         o.Clickable,
                         {
                             id: p(r),
-                            className: f.galleryItem,
-                            'aria-label': m.intl.formatToPlainString(u, {
+                            className: m.galleryItem,
+                            'aria-label': f.intl.formatToPlainString(u, {
                                 pageNumber: r + 1,
                                 totalPages: n.length
                             }),
                             onClick: () => l(r),
-                            children: [(0, i.jsx)('div', { className: a()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, i.jsx)(_, { item: e })]
+                            children: [(0, i.jsx)('div', { className: a()(m.galleryItemOverlay, { [m.selected]: s }) }), (0, i.jsx)(_, { item: e })]
                         },
                         r
                     );

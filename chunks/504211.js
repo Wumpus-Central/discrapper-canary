@@ -1,20 +1,20 @@
-e.d(t, {
+l.d(e, {
     B: function () {
-        return l;
+        return i;
     },
     X: function () {
-        return a;
+        return s;
     }
 });
-var i,
-    l,
-    r = e(626135),
-    u = e(981631);
-function a(n, t, e) {
-    r.default.track(u.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+var t,
+    i,
+    o = l(626135),
+    r = l(981631);
+function s(n, e, l) {
+    o.default.track(r.rMx.STOREFRONT_COPY_LINK_CLICKED, {
         application_id: n,
-        area: t,
-        sku_id: e
+        area: e,
+        sku_id: l
     });
 }
-((i = l || (l = {})).STORE_MODAL = 'store_modal'), (i.DETAILS_MODAL = 'details_modal'), (i.STORE_EMBED = 'store_embed'), (i.SKU_EMBED = 'sku_embed');
+((t = i || (i = {})).STORE_MODAL = 'store_modal'), (t.DETAILS_MODAL = 'details_modal'), (t.STORE_EMBED = 'store_embed'), (t.SKU_EMBED = 'sku_embed');

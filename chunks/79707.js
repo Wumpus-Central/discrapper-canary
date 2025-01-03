@@ -1,34 +1,34 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(388032);
-function a(e) {
-    let { tabs: t, selectedTab: n, onTabSelect: a, onClose: o } = e;
-    return (0, i.jsx)(r.Menu, {
+var a = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(388032);
+function l(e) {
+    let { tabs: n, selectedTab: t, onTabSelect: l, onClose: o } = e;
+    return (0, a.jsx)(i.Menu, {
         navId: 'global-discovery-tabs-overflow-menu',
-        'aria-label': l.intl.string(l.t.riPnr6),
+        'aria-label': r.intl.string(r.t.riPnr6),
         hideScroller: !0,
         onClose: o,
         onSelect: o,
-        children: (0, i.jsx)(
-            r.MenuGroup,
+        children: (0, a.jsx)(
+            i.MenuGroup,
             {
-                children: t.map((e) => {
-                    let { id: t, label: l } = e;
-                    return (0, i.jsx)(
-                        r.MenuItem,
+                children: n.map((e) => {
+                    let { id: n, label: r } = e;
+                    return (0, a.jsx)(
+                        i.MenuItem,
                         {
-                            id: t,
-                            label: l,
-                            icon: t === n ? r.CircleCheckIcon : void 0,
-                            action: () => a(t)
+                            id: n,
+                            label: r,
+                            icon: n === t ? i.CircleCheckIcon : void 0,
+                            action: () => l(n)
                         },
-                        t
+                        n
                     );
                 })
             },

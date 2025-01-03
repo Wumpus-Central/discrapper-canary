@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return x;
     }
 });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(752877),
-    s = n(990547),
+    s = n(752877),
+    o = n(990547),
     c = n(873546),
     d = n(481060),
     u = n(906732),
@@ -21,26 +21,26 @@ var i = n(200651),
     E = n(522558),
     I = n(441623),
     C = n(317271),
-    v = n(674701),
-    S = n(474936),
-    N = n(981631),
+    N = n(674701),
+    v = n(474936),
+    S = n(981631),
     T = n(388032),
     b = n(378480),
-    x = n(423360);
-let A = {
+    A = n(423360);
+let Z = {
     width: 14,
     height: 14
 };
-function Z(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
+function x(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: x } = e,
         { analyticsLocations: L } = (0, u.ZP)(),
-        { isHovered: P, setIsHovered: y, onMouseEnter: O, onMouseLeave: R } = (0, p.Z)(200, 300),
+        { isHovered: P, setIsHovered: O, onMouseEnter: y, onMouseLeave: R } = (0, p.Z)(200, 300),
         { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, h.h)({
-            name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
-            type: s.ImpressionTypes.VIEW,
+            name: o.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
+            type: o.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: n,
                 affinity: null == e ? void 0 : e.affinity
@@ -49,14 +49,14 @@ function Z(e) {
     }, [t, n]);
     let D = r.useCallback(
             (e) => {
-                'focus' !== e.type && O();
+                'focus' !== e.type && y();
             },
-            [O]
+            [y]
         ),
         M = (e) => {
             e.stopPropagation();
             let i = g.Z.getUserAffinity(t.id);
-            f.default.track(N.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            f.default.track(S.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == i ? void 0 : i.affinity
             }),
@@ -68,19 +68,19 @@ function Z(e) {
                     analyticsLocations: L,
                     analyticsObject: {
                         page: l,
-                        section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
-                        object: N.qAy.BUTTON_CTA,
-                        objectType: N.Qqv.GIFT
+                        section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
+                        object: S.qAy.BUTTON_CTA,
+                        objectType: S.Qqv.GIFT
                     },
                     giftMessage: w()
                 });
         },
         w = () => {
-            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
+            if (n === v.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
             return (0, _.Ou)(n);
         },
         k = () => {
-            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
+            if (n === v.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
             return (0, _.Ou)(n);
         },
         U = () =>
@@ -88,13 +88,13 @@ function Z(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(x.actionButton, b.popoutButton, {
-                          [x.highlight]: Z,
-                          [x.actionButtonMobile]: c.tq
+                      className: a()(A.actionButton, b.popoutButton, {
+                          [A.highlight]: x,
+                          [A.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
-                      children: (0, i.jsx)(o.animated.div, {
+                      children: (0, i.jsx)(s.animated.div, {
                           className: b.spriteContainer,
                           children: (0, i.jsx)('div', { className: b.sprite })
                       })
@@ -108,8 +108,8 @@ function Z(e) {
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: A.width,
-                                  height: A.height,
+                                  width: Z.width,
+                                  height: Z.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
@@ -130,19 +130,19 @@ function Z(e) {
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            y(!1);
+            O(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(N.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: v.U.COACHMARK,
+                premiumGiftIntentCardType: N.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: O,
+                onMouseEnter: y,
                 onMouseLeave: R,
                 popoutPosition: e.position,
                 analyticsPage: l,
-                analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
-                giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
+                analyticsSection: S.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                giftIntentSecondaryAction: v.X2.SEND_MESSAGE,
                 glow: !0
             }),
         children: () => U()

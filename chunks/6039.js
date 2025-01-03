@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(568154),
-    s = n(703656),
+    s = n(568154),
+    o = n(703656),
     c = n(430824),
     d = n(449934),
     u = n(768581),
@@ -17,29 +17,29 @@ var i = n(200651),
     E = n(390500),
     I = n(200305),
     C = n(981631),
-    v = n(898625),
-    S = n(388032),
-    N = n(301219);
+    N = n(898625),
+    v = n(388032),
+    S = n(301219);
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: b, inviteCode: x } = e,
-        [A, Z] = r.useState(v.hO.INITIAL),
+    let { guildId: b, inviteCode: A } = e,
+        [Z, x] = r.useState(N.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(b)),
         P = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
-        y = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
-        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
+        O = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
+        { hasFetchedRequestToJoinGuilds: y, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(b)
         }));
     r.useEffect(() => {
-        null != y && (0, s.uL)(C.Z5c.CHANNEL(b));
-    }, [y, b]),
+        null != O && (0, o.uL)(C.Z5c.CHANNEL(b));
+    }, [O, b]),
         r.useEffect(() => {
-            !O && h.Z.fetchRequestToJoinGuilds();
-        }, [O]);
+            !y && h.Z.fetchRequestToJoinGuilds();
+        }, [y]);
     let j = r.useCallback((e) => {
-            Z((t) => Math.max(t, e));
+            x((t) => Math.max(t, e));
         }, []),
         D = async (e) => {
             await m.ZP.submitVerificationForm(b, e);
@@ -48,17 +48,17 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(b);
         };
     let w =
-            ((n = S.intl.format(S.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
+            ((n = v.intl.format(v.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
             (T = () => {
-                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, s.uL)(C.Z5c.ME);
+                x(Math.max(Z, N.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
-                        header: S.intl.string(S.t.y0CVen),
-                        cancelText: S.intl.string(S.t.oEAioK),
+                        header: v.intl.string(v.t.y0CVen),
+                        cancelText: v.intl.string(v.t.oEAioK),
                         onConfirm: T,
-                        confirmText: S.intl.string(S.t.p89ACg),
+                        confirmText: v.intl.string(v.t.p89ACg),
                         confirmButtonColor: a.Button.Colors.RED,
                         ...e,
                         children: (0, i.jsx)(a.Text, {
@@ -77,17 +77,17 @@ t.Z = (e) => {
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {
-        className: N.page,
-        children: (0, i.jsxs)(o.Z, {
+        className: S.page,
+        children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
-            waveState: A,
+            waveState: Z,
             showLogo: !1,
             updateWaveState: j,
             children: [
-                (0, i.jsx)('div', { className: N.dragRegion }),
+                (0, i.jsx)('div', { className: S.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: N.contentWrapper,
+                    className: S.contentWrapper,
                     children: (() => {
                         switch (null == P ? void 0 : P.applicationStatus) {
                             case g.wB.SUBMITTED:
@@ -97,9 +97,9 @@ t.Z = (e) => {
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
-                                    reapplyText: S.intl.string(S.t.I1LYVl),
+                                    reapplyText: v.intl.string(v.t.I1LYVl),
                                     onReapply: M,
-                                    confirmText: S.intl.string(S.t.mqtdmZ),
+                                    confirmText: v.intl.string(v.t.mqtdmZ),
                                     onWithdrawApplication: w,
                                     rejectionReason: null == P ? void 0 : P.rejectionReason,
                                     guild: R
@@ -107,7 +107,7 @@ t.Z = (e) => {
                             default:
                                 return (0, i.jsx)(I.Z, {
                                     guildId: b,
-                                    inviteCode: x,
+                                    inviteCode: A,
                                     onComplete: D
                                 });
                         }

@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(749210),
-    o = n(322665),
-    s = n(17845),
+    s = n(322665),
+    o = n(17845),
     c = n(374939),
     d = n(283293),
     u = n(469988),
@@ -29,10 +29,10 @@ t.Z = function (e) {
     return (0, i.jsxs)(d.Z, {
         onScroll: t,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(o.Z, {
                 title: p.intl.string(p.t.X5xPlZ),
                 description: p.intl.string(p.t['F/IQCA']),
-                children: (0, i.jsx)(o.Z, {})
+                children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsxs)(c.Z, {
                 children: [

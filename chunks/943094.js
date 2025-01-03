@@ -1,13 +1,13 @@
 n.d(t, {
     W: function () {
-        return o;
+        return s;
     }
 });
 var i = n(481060),
     r = n(812206),
     l = n(710845),
     a = n(51025);
-function o(e, t, o) {
+function s(e, t, s) {
     !(function (e, t) {
         let a = r.Z.getApplication(e);
         if (null == a) {
@@ -23,5 +23,5 @@ function o(e, t, o) {
                     ...n
                 });
         });
-    })(e, () => (0, a.pC)(e, t, o));
+    })(e, () => (0, a.pC)(e, t, s));
 }

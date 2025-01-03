@@ -2,8 +2,8 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(656063),
     d = n(814443),
     u = n(158776),
@@ -39,13 +39,13 @@ function I(e) {
                 var n, i, r, l;
                 let a = (0, c.Z)(e);
                 if (null == a) return E(t.id);
-                let o = f[t.id];
-                null != o && o.gameId !== a && E(t.id);
-                let s = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
+                let s = f[t.id];
+                null != s && s.gameId !== a && E(t.id);
+                let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
                     d = {
                         userId: t.id,
                         activity: e,
-                        startedPlaying: s
+                        startedPlaying: o
                     };
                 return (
                     (r = a),
@@ -91,7 +91,7 @@ function C() {
     }
     return (p = !d.Z.needsRefresh()), e;
 }
-class v extends (a = o.ZP.Store) {
+class N extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z), this.syncWith([d.Z], C);
     }
@@ -112,7 +112,7 @@ class v extends (a = o.ZP.Store) {
     }
 }
 (l = 'NowPlayingStore'),
-    (r = 'displayName') in (i = v)
+    (r = 'displayName') in (i = N)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -120,7 +120,7 @@ class v extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new v(s.Z, {
+    (t.Z = new N(o.Z, {
         CONNECTION_OPEN: function () {
             (g = {}), (f = {});
         },

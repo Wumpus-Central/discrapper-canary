@@ -3,11 +3,11 @@ n(192379);
 var r = n(692547),
     l = n(780384),
     a = n(481060),
-    o = n(410030);
+    s = n(410030);
 t.Z = (e) => {
     let { className: t } = e,
-        n = (0, o.ZP)(),
-        s = (0, a.useToken)(r.Z.colors.BACKGROUND_ACCENT).hex();
+        n = (0, s.ZP)(),
+        o = (0, a.useToken)(r.Z.colors.BACKGROUND_ACCENT).hex();
     return (0, i.jsx)('svg', {
         width: '700',
         height: '120',
@@ -15,7 +15,7 @@ t.Z = (e) => {
         className: t,
         xmlns: 'http://www.w3.org/2000/svg',
         children: (0, i.jsx)('path', {
-            fill: (0, l.wj)(n) ? s : 'white',
+            fill: (0, l.wj)(n) ? o : 'white',
             opacity: '1',
             d: 'M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z'
         })

@@ -3,25 +3,25 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(748780),
-    s = n(91192),
+    s = n(748780),
+    o = n(91192),
     c = n(481060),
     d = n(239091),
     u = n(687683),
     h = n(262755);
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
-        [C, v] = r.useState(!1),
-        [S, N] = r.useState(!1),
+        [C, N] = r.useState(!1),
+        [v, S] = r.useState(!1),
         T = () => {
-            v(!0), f && !_ && !S && (null == E || E());
+            N(!0), f && !_ && !v && (null == E || E());
         },
         b = () => {
-            v(!1);
+            N(!1);
         },
-        x = (e, t) => {
+        A = (e, t) => {
             if (null != t)
-                N(!0),
+                S(!0),
                     (0, d.jW)(
                         e,
                         async () => {
@@ -34,12 +34,12 @@ t.Z = function (e) {
                         },
                         {
                             onClose: () => {
-                                N(!1);
+                                S(!1);
                             }
                         }
                     );
         };
-    return (0, i.jsx)(s.mh, {
+    return (0, i.jsx)(o.mh, {
         id: p.id,
         children: (e) =>
             (0, i.jsx)(c.FocusRing, {
@@ -47,12 +47,12 @@ t.Z = function (e) {
                     left: -8,
                     right: -8
                 },
-                children: (0, i.jsx)(o.Z.div, {
+                children: (0, i.jsx)(s.Z.div, {
                     className: a()(h.messageRequestItem, I, {
-                        [h.active]: _ || S,
+                        [h.active]: _ || v,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => x(e, m),
+                    onContextMenu: (e) => A(e, m),
                     onMouseEnter: T,
                     onMouseLeave: b,
                     onClick: null != g ? g : void 0,
@@ -61,7 +61,7 @@ t.Z = function (e) {
                         opacity: 1
                     },
                     ...e,
-                    children: l(C || _ || S)
+                    children: l(C || _ || v)
                 })
             })
     });

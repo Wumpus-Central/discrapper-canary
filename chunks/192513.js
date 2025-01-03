@@ -2,8 +2,8 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(984933),
     d = n(594174),
     u = n(981631);
@@ -13,7 +13,7 @@ function m() {
     if (null == e || e.mfaEnabled === h) return !1;
     h = e.mfaEnabled;
 }
-class p extends (a = o.ZP.Store) {
+class p extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(d.default, c.ZP), this.syncWith([d.default, c.ZP], m);
     }
@@ -30,7 +30,7 @@ class p extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new p(s.Z, {
+    (t.Z = new p(o.Z, {
         CONNECTION_OPEN: m,
         GUILD_UPDATE: function () {
             return !0;

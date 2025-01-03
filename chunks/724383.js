@@ -1,10 +1,10 @@
 var i = n(200651),
     r = n(192379),
     l = n(512969),
-    a = n(509451),
-    o = n(252618),
+    a = n(252618),
     s = n(926061),
-    c = n(319443),
+    o = n(319443),
+    c = n(8991),
     d = n(106075),
     u = n(121711),
     h = n(823379),
@@ -21,7 +21,7 @@ t.Z = function () {
                 case f.GlobalDiscoveryTab.SERVERS:
                     return (0, i.jsx)(d.Z, {});
                 case f.GlobalDiscoveryTab.APPS:
-                    return (0, i.jsx)(c.Z, {});
+                    return (0, i.jsx)(o.default, {});
                 case f.GlobalDiscoveryTab.QUESTS:
                     return (0, i.jsx)(u.Z, {});
                 default:
@@ -39,9 +39,9 @@ t.Z = function () {
         I || (0, m.RI)({ selectedTab: t });
     }, [I, t]),
     I)
-        ? (0, i.jsx)(a.default, {})
+        ? (0, i.jsx)(c.p, {})
         : (0, i.jsxs)('section', {
               className: _.container,
-              children: [(0, i.jsx)(o.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: _.dragRegion }), n]
+              children: [(0, i.jsx)(a.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: _.dragRegion }), n]
           });
 };

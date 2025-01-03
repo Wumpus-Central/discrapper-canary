@@ -3,9 +3,9 @@ var i = n(570140),
     r = n(996106),
     l = n(452426),
     a = n(701488),
-    o = n(231338);
+    s = n(231338);
 t.Z = {
-    [o.Et.SET_ORIENTATION_LOCK_STATE]: {
+    [s.Et.SET_ORIENTATION_LOCK_STATE]: {
         validation: (e) =>
             (0, l.Z)(e)
                 .required()
@@ -19,16 +19,16 @@ t.Z = {
                     socket: t,
                     args: { lock_state: n, picture_in_picture_lock_state: l, grid_lock_state: a }
                 } = e,
-                s = t.application.id;
-            if (null != s)
+                o = t.application.id;
+            if (null != o)
                 i.Z.dispatch({
                     type: 'EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE',
-                    applicationId: s,
+                    applicationId: o,
                     lockState: n,
                     pictureInPictureLockState: l,
                     gridLockState: a
                 });
-            else throw new r.Z({ errorCode: o.lT.INVALID_COMMAND }, 'No application.');
+            else throw new r.Z({ errorCode: s.lT.INVALID_COMMAND }, 'No application.');
         }
     }
 };

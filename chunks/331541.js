@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(722770),
     a = n(873546),
-    o = n(852229),
-    s = n(442837),
+    s = n(852229),
+    o = n(442837),
     c = n(481060),
     d = n(393238),
     u = n(727637),
@@ -21,18 +21,18 @@ var i = n(200651),
     E = n(680295),
     I = n(785717),
     C = n(816988),
-    v = n(687158),
-    S = n(899007),
-    N = n(648052),
+    N = n(687158),
+    v = n(899007),
+    S = n(648052),
     T = n(867176),
     b = n(537006),
-    x = n(483424),
-    A = n(681837),
-    Z = n(502762),
+    A = n(483424),
+    Z = n(681837),
+    x = n(502762),
     L = n(530),
     P = n(309494),
-    y = n(495804),
-    O = n(171368),
+    O = n(495804),
+    y = n(171368),
     R = n(420654),
     j = n(695346),
     D = n(158776),
@@ -161,7 +161,7 @@ function ee(e) {
     var t;
     let { currentUser: n, onClose: k, setPopoutRef: H } = e,
         ee = __OVERLAY__,
-        et = (0, v.ZP)(n.id),
+        et = (0, N.ZP)(n.id),
         { analyticsLocations: en } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         ei = (0, I.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
@@ -172,17 +172,17 @@ function ee(e) {
     r.useEffect(() => {
         null == H || H(er.current);
     }, [er, H]);
-    let ea = (0, s.e7)([D.Z], () => D.Z.getStatus(n.id)),
-        eo = (0, s.e7)([M.Z], () => M.Z.hidePersonalInformation),
-        es = (0, g.p)(),
+    let ea = (0, o.e7)([D.Z], () => D.Z.getStatus(n.id)),
+        es = (0, o.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        eo = (0, g.p)(),
         ec = j.Sb.useSetting(),
         ed = (function (e) {
             let t = p.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = j.Cr.useSetting(),
                 r = (0, g.p)(),
                 a = f.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
-                o = j.fv.useSetting(),
-                s = e === W.Skl.DND,
+                s = j.fv.useSetting(),
+                o = e === W.Skl.DND,
                 d = (t) => {
                     let i =
                         null != n && '0' !== n
@@ -254,17 +254,17 @@ function ee(e) {
                                                           children: [
                                                               K.intl.string(K.t.gJRnwM),
                                                               (0, i.jsx)(c.TextBadge, {
-                                                                  text: r ? K.intl.string(K.t.ApAu9f) : s ? K.intl.string(K.t.gH3Fra) : K.intl.string(K.t['64pl8/']),
-                                                                  color: r ? l.Z.BRAND_500 : s ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                                  text: r ? K.intl.string(K.t.ApAu9f) : o ? K.intl.string(K.t.gH3Fra) : K.intl.string(K.t['64pl8/']),
+                                                                  color: r ? l.Z.BRAND_500 : o ? l.Z.RED_400 : l.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
                                                       (0, i.jsx)('div', {
                                                           className: q.description,
                                                           children:
-                                                              r && null != o && '0' !== o
+                                                              r && null != s && '0' !== s
                                                                   ? K.intl.formatToPlainString(K.t.BWD8fn, {
-                                                                        endTime: new Date(Number(o)).toLocaleString(K.intl.currentLocale, {
+                                                                        endTime: new Date(Number(s)).toLocaleString(K.intl.currentLocale, {
                                                                             month: 'numeric',
                                                                             day: 'numeric',
                                                                             hour: 'numeric',
@@ -295,7 +295,7 @@ function ee(e) {
         ep = (0, G.I5)(n),
         eg = (e) => {
             null == k || k(),
-                (0, O.openUserProfileModal)({
+                (0, y.openUserProfileModal)({
                     sourceAnalyticsLocations: en,
                     ...ei,
                     ...e
@@ -308,7 +308,7 @@ function ee(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: er,
                 'aria-label': n.username,
-                children: (0, i.jsxs)(Z.Z, {
+                children: (0, i.jsxs)(x.Z, {
                     className: q.themeContainer,
                     user: n,
                     displayProfile: et,
@@ -322,13 +322,13 @@ function ee(e) {
                                     displayProfile: et,
                                     profileType: Y.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(S.Z, {
+                                (0, i.jsx)(v.Z, {
                                     user: n,
                                     displayProfile: et,
                                     profileType: Y.y0.BITE_SIZE,
                                     onOpenProfile: ee ? void 0 : eg
                                 }),
-                                (0, i.jsx)(y.Z, {
+                                (0, i.jsx)(O.Z, {
                                     location: 'AccountProfilePopout',
                                     user: n,
                                     profileType: Y.y0.BITE_SIZE,
@@ -351,14 +351,14 @@ function ee(e) {
                                     nickname: U.ZP.getName(null, null, n),
                                     onOpenProfile: ee ? void 0 : eg,
                                     pronouns: null == et ? void 0 : et.pronouns,
-                                    tags: (0, i.jsx)(N.Z, {
+                                    tags: (0, i.jsx)(S.Z, {
                                         displayProfile: et,
                                         profileType: Y.y0.BITE_SIZE,
                                         onClose: k
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(A.Z, { userId: n.id }),
+                                            (0, i.jsx)(Z.Z, { userId: n.id }),
                                             (0, i.jsx)(P.Z, {
                                                 user: n,
                                                 isHovering: el
@@ -369,7 +369,7 @@ function ee(e) {
                                 (0, i.jsx)(R.Z, {
                                     user: n,
                                     bio: null == et ? void 0 : et.bio,
-                                    hidePersonalInformation: eo,
+                                    hidePersonalInformation: es,
                                     onClose: k
                                 }),
                                 em &&
@@ -377,7 +377,7 @@ function ee(e) {
                                         isPremiumUser: ep,
                                         onInteraction: k
                                     }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: n,
                                     currentUser: n,
                                     onClose: k
@@ -385,7 +385,7 @@ function ee(e) {
                                 (0, i.jsxs)('div', {
                                     className: q.menus,
                                     children: [
-                                        (0, i.jsx)(Z.Z.Overlay, {
+                                        (0, i.jsx)(x.Z.Overlay, {
                                             className: q.menuOverlay,
                                             children: (0, i.jsxs)(F.PB, {
                                                 id: 'profile-'.concat(n.id),
@@ -409,7 +409,7 @@ function ee(e) {
                                                                 status: ea,
                                                                 size: 12
                                                             }),
-                                                        hint: (es || ea === W.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        hint: (eo || ea === W.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
                                                         renderSubmenu: a.tq
                                                             ? void 0
                                                             : (e) => {
@@ -455,7 +455,7 @@ function ee(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(Z.Z.Overlay, {
+                                        (0, i.jsx)(x.Z.Overlay, {
                                             className: q.menuOverlay,
                                             children: (0, i.jsxs)(F.PB, {
                                                 id: 'account-'.concat(n.id),
@@ -490,7 +490,7 @@ function ee(e) {
                                                                     icon: c.IdIcon,
                                                                     label: K.intl.string(K.t['/AXYnJ']),
                                                                     onClick: () => {
-                                                                        (0, o.J)(n.id), k();
+                                                                        (0, s.J)(n.id), k();
                                                                     }
                                                                 })
                                                             ]

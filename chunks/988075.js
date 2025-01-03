@@ -20,7 +20,7 @@ function h(e) {
     let { file: n, name: t, size: r, spoiler: h } = e,
         x = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         v = i.useMemo(() => (null != n.contentType && -1 !== n.contentType.indexOf('/') ? n.contentType.split('/') : ['unknown', 'unknown']), [n.contentType]),
-        [C, g] = i.useState(h),
+        [g, C] = i.useState(h),
         _ = i.useMemo(
             () => () =>
                 (0, l.jsx)(d.mz, {
@@ -33,7 +33,7 @@ function h(e) {
                 }),
             [n, v, x]
         ),
-        I = (e) =>
+        b = (e) =>
             (0, l.jsx)(s.Z, {
                 className: a()({ [p.fileHidden]: e }),
                 url: n.url,
@@ -47,10 +47,10 @@ function h(e) {
             ? (0, l.jsx)(c.Z, {
                   type: c.Z.Types.ATTACHMENT,
                   reason: u.wk.SPOILER,
-                  obscured: C,
-                  onToggleObscurity: () => g((e) => !e),
-                  children: (e) => I(e)
+                  obscured: g,
+                  onToggleObscurity: () => C((e) => !e),
+                  children: (e) => b(e)
               })
-            : I(!1)
+            : b(!1)
     });
 }

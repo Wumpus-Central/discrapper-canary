@@ -73,7 +73,7 @@ let l = {
                             url: e.string().required(),
                             width: e.number().required()
                         }),
-                        components: e.array().items(o(e))
+                        components: e.array().items(s(e))
                     })
                 ),
             response: void 0
@@ -99,12 +99,12 @@ let l = {
                 premium_type: e.number().allow(null).description('Nitro premium type')
             })
             .description('Discord User'),
-    o = (e) =>
+    s = (e) =>
         e.object({
             type: e.number().valid(1).required(),
-            components: e.array().max(5).items(s(e))
+            components: e.array().max(5).items(o(e))
         }),
-    s = (e) =>
+    o = (e) =>
         e.object({
             type: e.number().valid(2).required(),
             style: e.number().min(1).max(5).required(),

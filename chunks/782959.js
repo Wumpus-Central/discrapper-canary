@@ -8,8 +8,8 @@ n(192379);
 var r = n(481060),
     l = n(367907),
     a = n(70097),
-    o = n(970731),
-    s = n(626135),
+    s = n(970731),
+    o = n(626135),
     c = n(63063),
     d = n(981631),
     u = n(388032),
@@ -31,7 +31,7 @@ function m(e) {
                 })
             ]
         });
-    return (0, i.jsx)(o.ZP, {
+    return (0, i.jsx)(s.ZP, {
         header: u.intl.string(u.t.fW7UqK),
         content: p,
         asset: (0, i.jsx)(a.Z, {
@@ -42,7 +42,7 @@ function m(e) {
         }),
         buttonCTA: u.intl.string(u.t.JzJpg4),
         onClick: () => {
-            s.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
+            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('45094'), n.e('5506')]).then(n.bind(n, 218613));
                     return (n) =>

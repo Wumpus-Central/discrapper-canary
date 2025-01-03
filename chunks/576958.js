@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(388032),
     m = n(535040);
 function _(e) {
-    let { applicationId: t, applications: n, className: c, listingClassName: _, title: h, showViewAll: g, onViewOne: I, onViewAll: v } = e,
-        x = (function (e) {
+    let { applicationId: t, applications: n, className: c, listingClassName: _, title: g, showViewAll: h, onViewOne: I, onViewAll: b } = e,
+        v = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
                 i = (0, d.useApplicationDirectoryHistory)((e) => e.guildId),
                 [r, s] = a.useState(),
@@ -41,21 +41,21 @@ function _(e) {
         });
     return (0, i.jsxs)('div', {
         className: c,
-        ref: x,
+        ref: v,
         children: [
-            null != h
+            null != g
                 ? (0, i.jsxs)('div', {
                       className: m.header,
                       children: [
                           (0, i.jsx)(r.Heading, {
                               variant: 'heading-lg/semibold',
-                              children: h
+                              children: g
                           }),
-                          g
+                          h
                               ? (0, i.jsx)(r.Button, {
                                     look: r.Button.Looks.LINK,
                                     color: r.Button.Colors.LINK,
-                                    onClick: v,
+                                    onClick: b,
                                     children: p.intl.string(p.t['e+T3go'])
                                 })
                               : null

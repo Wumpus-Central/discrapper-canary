@@ -3,14 +3,14 @@ var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(430824),
-    o = n(996106),
-    s = n(452426),
+    s = n(996106),
+    o = n(452426),
     c = n(981631);
 t.Z = {
     [c.Etm.GET_GUILD]: {
         scope: l.x.RPC,
         validation: (e) =>
-            (0, s.Z)(e)
+            (0, o.Z)(e)
                 .required()
                 .keys({
                     guild_id: e.string(),
@@ -25,11 +25,11 @@ t.Z = {
             return n
                 .storeWait(t, () => a.Z.getGuild(i), r)
                 .catch(() => {
-                    throw new o.Z({ errorCode: c.lTL.GET_GUILD_TIMED_OUT }, 'Request to get guild timed out.');
+                    throw new s.Z({ errorCode: c.lTL.GET_GUILD_TIMED_OUT }, 'Request to get guild timed out.');
                 })
                 .then((e) => {
                     var t;
-                    if (null == e) throw new o.Z({ errorCode: c.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(i));
+                    if (null == e) throw new s.Z({ errorCode: c.lTL.INVALID_GUILD }, 'Invalid guild id: '.concat(i));
                     return {
                         id: e.id,
                         name: e.name,

@@ -2,12 +2,12 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(433517),
+    s = n(442837),
+    o = n(433517),
     c = n(570140);
 let d = 'hasSeenGuildTemplatePromotionTooltip',
     u = {},
-    h = !0 === s.K.get(d);
+    h = !0 === o.K.get(d);
 function m(e) {
     let { guildId: t } = e;
     u = {
@@ -15,7 +15,7 @@ function m(e) {
         [t]: !1
     };
 }
-class p extends (a = o.ZP.Store) {
+class p extends (a = s.ZP.Store) {
     shouldShowGuildTemplateDirtyTooltip(e) {
         var t;
         return null !== (t = u[e]) && void 0 !== t && t;
@@ -42,7 +42,7 @@ class p extends (a = o.ZP.Store) {
             };
         },
         GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function () {
-            s.K.set(d, !0), (h = !0);
+            o.K.set(d, !0), (h = !0);
         },
         GUILD_TEMPLATE_SYNC_SUCCESS: function (e) {
             u = {

@@ -14,8 +14,8 @@ var i = n(200651),
     r = n(192379),
     l = n(25441),
     a = n(91192),
-    o = n(657707),
-    s = n(481060),
+    s = n(657707),
+    o = n(481060),
     c = n(209613),
     d = n(475413),
     u = n(602654);
@@ -31,13 +31,13 @@ function h(e) {
                 I(e === t);
             });
     }, [t, _, C]);
-    let v = (e) =>
+    let N = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ...f,
             ...p,
             role: 'button',
-            look: s.Button.Looks.BLANK,
+            look: o.Button.Looks.BLANK,
             innerClassName: u.menuItemInner,
             color: u.menuItemColor,
             themeColor: 'none',
@@ -56,21 +56,21 @@ function h(e) {
                     children: [n, h]
                 }),
                 C &&
-                    (0, i.jsx)(o.Fbu, {
+                    (0, i.jsx)(s.Fbu, {
                         size: 'xs',
                         color: 'currentColor'
                     })
             ]
         });
     return C
-        ? (0, i.jsx)(s.Popout, {
+        ? (0, i.jsx)(o.Popout, {
               spacing: 0,
               renderPopout: m,
               shouldShow: E,
               onRequestClose: () => I(!1),
-              children: v
+              children: N
           })
-        : v();
+        : N();
 }
 function m(e) {
     let { id: t, children: n } = e,
@@ -93,7 +93,7 @@ function m(e) {
 function p(e) {
     return (0, i.jsx)('div', {
         className: u.submenuPaddingContainer,
-        children: (0, i.jsx)(s.Menu, {
+        children: (0, i.jsx)(o.Menu, {
             variant: 'fixed',
             hideScroller: !0,
             onSelect: void 0,

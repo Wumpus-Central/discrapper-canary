@@ -1,112 +1,112 @@
-n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(873199),
-    s = n(442837),
-    c = n(481060),
-    d = n(434650),
-    u = n(674588),
-    h = n(368862),
-    m = n(125909),
-    p = n(857192),
-    g = n(881294),
-    f = n(797908),
-    _ = n(292191),
-    E = n(981631),
-    I = n(318708);
-function C(e) {
-    let { collection: t, index: n, onSelectApplication: l } = e,
+t(47120);
+var a = t(200651),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
+    o = t(873199),
+    s = t(442837),
+    c = t(481060),
+    d = t(434650),
+    u = t(674588),
+    m = t(368862),
+    p = t(125909),
+    _ = t(857192),
+    g = t(881294),
+    v = t(797908),
+    f = t(292191),
+    C = t(981631),
+    h = t(318708);
+function x(e) {
+    let { collection: n, index: t, onSelectApplication: r } = e,
         o = (function (e) {
-            let { collectionId: t, index: n } = e,
-                [i, l] = r.useState(!1),
-                a = (0, d.O)((e) => {
-                    e && l(!0);
+            let { collectionId: n, index: t } = e,
+                [a, r] = i.useState(!1),
+                l = (0, d.O)((e) => {
+                    e && r(!0);
                 });
             return (
-                r.useEffect(() => {
-                    i &&
-                        (0, g.z)(E.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
-                            collection_id: t,
-                            collection_position: n
+                i.useEffect(() => {
+                    a &&
+                        (0, g.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
+                            collection_id: n,
+                            collection_position: t
                         });
-                }, [i, t, n]),
-                a
+                }, [a, n, t]),
+                l
             );
         })({
-            collectionId: t.id,
-            index: n
+            collectionId: n.id,
+            index: t
         }),
-        s = r.useCallback(
-            (e, i) => {
-                (0, g.z)(E.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                    collection_id: t.id,
-                    item_position: i,
-                    collection_position: n,
+        s = i.useCallback(
+            (e, a) => {
+                (0, g.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                    collection_id: n.id,
+                    item_position: a,
+                    collection_position: t,
                     application_id: e
                 }),
-                    l(e);
+                    r(e);
             },
-            [t.id, n, l]
+            [n.id, t, r]
         );
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         ref: o,
         children: [
-            (0, i.jsx)(c.Heading, {
-                className: a()(I.sectionTitle, { [I.titleExtraPadding]: 0 === n }),
+            (0, a.jsx)(c.Heading, {
+                className: l()(h.sectionTitle, { [h.titleExtraPadding]: 0 === t }),
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                children: t.title
+                children: n.title
             }),
-            (0, i.jsx)('div', {
-                className: I.content,
-                children: t.application_directory_collection_items.map((e, t) => {
-                    let { id: n, application: r } = e;
-                    return null == r
+            (0, a.jsx)('div', {
+                className: h.content,
+                children: n.application_directory_collection_items.map((e, n) => {
+                    let { id: t, application: i } = e;
+                    return null == i
                         ? null
-                        : (0, i.jsx)(
-                              f.Z,
+                        : (0, a.jsx)(
+                              v.Z,
                               {
-                                  application: r,
-                                  onSelectApplication: () => s(r.id, t),
+                                  application: i,
+                                  onSelectApplication: () => s(i.id, n),
                                   showCategory: !0
                               },
-                              n
+                              t
                           );
                 })
             })
         ]
     });
 }
-t.Z = function (e) {
-    let { onSelectApplication: t } = e,
-        n = (0, s.e7)([p.default], () => p.default.appDirectoryIncludesInactiveCollections),
-        l = (0, s.e7)([h.Z], () => h.Z.getFetchState({ includesInactive: n })),
-        a = (0, s.e7)([h.Z], () => h.Z.getCollections({ includesInactive: n }));
-    r.useEffect(() => {
-        u.bG({ includesInactive: n });
-    }, [n]);
-    let c = r.useMemo(() => (null == a ? void 0 : a.filter((e) => e.type !== o.o.GALLERY)), [a]);
-    return l === h.M.ERROR
-        ? (0, i.jsx)('div', {
-              className: I.errorContainer,
-              children: (0, i.jsx)(_.Z, { className: I.error })
+n.Z = function (e) {
+    let { onSelectApplication: n } = e,
+        t = (0, s.e7)([_.default], () => _.default.appDirectoryIncludesInactiveCollections),
+        r = (0, s.e7)([m.Z], () => m.Z.getFetchState({ includesInactive: t })),
+        l = (0, s.e7)([m.Z], () => m.Z.getCollections({ includesInactive: t }));
+    i.useEffect(() => {
+        u.bG({ includesInactive: t });
+    }, [t]);
+    let c = i.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== o.o.GALLERY)), [l]);
+    return r === m.M.ERROR
+        ? (0, a.jsx)('div', {
+              className: h.errorContainer,
+              children: (0, a.jsx)(f.Z, { className: h.error })
           })
-        : (0, i.jsx)(m.Z, {
-              loading: l === h.M.FETCHING,
+        : (0, a.jsx)(p.Z, {
+              loading: r === m.M.FETCHING,
               children:
                   null == c
                       ? void 0
-                      : c.map((e, n) =>
-                            (0, i.jsx)(
-                                C,
+                      : c.map((e, t) =>
+                            (0, a.jsx)(
+                                x,
                                 {
                                     collection: e,
-                                    index: n,
-                                    onSelectApplication: t
+                                    index: t,
+                                    onSelectApplication: n
                                 },
-                                n
+                                t
                             )
                         )
           });

@@ -8,8 +8,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(481060),
-    o = n(924628),
-    s = n(230711),
+    s = n(924628),
+    o = n(230711),
     c = n(548816),
     d = n(187819),
     u = n(981631),
@@ -31,7 +31,7 @@ function g(e) {
                 variant: 'text-sm/normal',
                 children: m.intl.format(m.t.NkFrzM, {
                     onPrivacyClick: () => {
-                        r ? s.Z.open(u.oAB.DATA_AND_PRIVACY) : s.Z.open(u.oAB.PRIVACY_AND_SAFETY);
+                        r ? o.Z.open(u.oAB.DATA_AND_PRIVACY) : o.Z.open(u.oAB.PRIVACY_AND_SAFETY);
                     }
                 })
             }),
@@ -40,7 +40,7 @@ function g(e) {
                 children: [
                     (0, i.jsx)(a.Button, {
                         size: a.Button.Sizes.SMALL,
-                        onClick: () => (0, o.g)([u.pjP.PERSONALIZATION], []),
+                        onClick: () => (0, s.g)([u.pjP.PERSONALIZATION], []),
                         children: m.intl.string(m.t.ebojgI)
                     }),
                     (0, i.jsx)(a.Button, {

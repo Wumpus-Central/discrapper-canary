@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return s;
+        return o;
     }
 }),
     n(47120);
@@ -8,7 +8,7 @@ var i = n(786761),
     r = n(23750),
     l = n(306680),
     a = n(709054);
-function o(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function o(e, t, n) {
         e
     );
 }
-class s {
+class o {
     isLatest(e, t) {
         return this.messageGeneration(e, t) === t;
     }
@@ -84,6 +84,6 @@ class s {
         this.messages.delete(e);
     }
     constructor() {
-        o(this, 'localNeeded', !0), o(this, 'messages', new Map());
+        s(this, 'localNeeded', !0), s(this, 'messages', new Map());
     }
 }

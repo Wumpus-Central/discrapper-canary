@@ -3,8 +3,8 @@ var i,
     r,
     l,
     a,
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(810788),
     d = n(430824),
     u = n(981631);
@@ -16,7 +16,7 @@ function m(e) {
 function p() {
     return !0;
 }
-class g extends (i = o.ZP.Store) {
+class g extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z), this.syncWith([c.Z], p);
     }
@@ -33,7 +33,7 @@ class g extends (i = o.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new g(s.Z, {
+    (t.Z = new g(o.Z, {
         CONNECTION_OPEN: function (e) {
             for (let t of e.guilds) if (m(t.id)) return !0;
             return !1;

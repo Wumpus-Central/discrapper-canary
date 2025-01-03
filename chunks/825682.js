@@ -3,8 +3,8 @@ n(192379);
 var r = n(788307),
     l = n(588688),
     a = n(565640),
-    o = n(51144),
-    s = n(388032),
+    s = n(51144),
+    o = n(388032),
     c = n(542745);
 t.Z = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: u, user: h, userIgnored: m } = e,
@@ -12,7 +12,7 @@ t.Z = function (e) {
     return m
         ? (0, i.jsx)('div', {
               className: c.text,
-              children: s.intl.string(s.t.tFY5ZW)
+              children: o.intl.string(o.t.tFY5ZW)
           })
         : n.length > 0
           ? (0, i.jsx)(r.ZP, {
@@ -32,6 +32,6 @@ t.Z = function (e) {
               })
             : (0, i.jsx)('div', {
                   className: c.text,
-                  children: (0, o.u5)(u)
+                  children: (0, s.u5)(u)
               });
 };

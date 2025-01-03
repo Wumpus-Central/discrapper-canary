@@ -1,14 +1,14 @@
-n.d(t, {
+t.d(n, {
     C: function () {
         return s;
     }
 });
-var i = n(120356),
-    r = n.n(i),
-    l = n(442837),
-    a = n(514361),
-    o = n(358459);
+var a = t(120356),
+    i = t.n(a),
+    r = t(442837),
+    l = t(514361),
+    o = t(358459);
 function s(e) {
-    let t = (0, l.e7)([a.Z], () => null != a.Z.gradientPreset);
-    return r()(o.gradient, e, { [o.clientThemes]: t });
+    let n = (0, r.e7)([l.Z], () => null != l.Z.gradientPreset);
+    return i()(o.gradient, e, { [o.clientThemes]: n });
 }

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(447543),
-    o = n(568154),
-    s = n(703656),
+    s = n(568154),
+    o = n(703656),
     c = n(430824),
     d = n(701190),
     u = n(449934),
@@ -20,22 +20,22 @@ t.Z = (e) => {
         null != n && a.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
     }, [n]);
     let C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
-        v = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
+        N = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
     r.useEffect(() => {
-        null != v && (0, s.uL)(m.Z5c.CHANNEL(t));
-    }, [v, t]);
-    let S = r.useCallback((e) => {
+        null != N && (0, o.uL)(m.Z5c.CHANNEL(t));
+    }, [N, t]);
+    let v = r.useCallback((e) => {
             _((t) => Math.max(t, e));
         }, []),
-        N = (0, u.gK)();
+        S = (0, u.gK)();
     return (0, i.jsx)('div', {
         className: g.page,
-        children: (0, i.jsxs)(o.Z, {
+        children: (0, i.jsxs)(s.Z, {
             embedded: !0,
-            splash: N,
+            splash: S,
             waveState: f,
             showLogo: !1,
-            updateWaveState: S,
+            updateWaveState: v,
             children: [
                 (0, i.jsx)('div', { className: g.dragRegion }),
                 (0, i.jsx)('div', {

@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(704215),
     a = n(481060),
-    o = n(785697),
-    s = n(626135),
+    s = n(785697),
+    o = n(626135),
     c = n(700785),
     d = n(645041),
     u = n(981631),
@@ -17,7 +17,7 @@ var i = n(200651),
     p = n(135899);
 function g(e) {
     var t;
-    let g = (0, o.SE)(e),
+    let g = (0, s.SE)(e),
         f = p.$X.some((t) => (null == e ? void 0 : e.id) !== m._ && c.oz(t, e)),
         _ = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
         E = (0, d.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
@@ -26,9 +26,9 @@ function g(e) {
             var t;
             (0, d.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, h.L.DISMISS);
         }, [e]),
-        v = r.useRef(!1);
+        N = r.useRef(!1);
     r.useEffect(() => {
-        if (I && !v.current) {
+        if (I && !N.current) {
             var t;
             (0, a.openModalLazy)(
                 async () => {
@@ -43,11 +43,11 @@ function g(e) {
                 },
                 { onCloseCallback: C }
             ),
-                s.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                o.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
                 }),
-                (v.current = !0);
+                (N.current = !0);
         }
     }, [f, e, C, _, I]);
 }

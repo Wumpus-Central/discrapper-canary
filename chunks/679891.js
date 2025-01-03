@@ -3,8 +3,8 @@ var i = n(570140),
     r = n(846027),
     l = n(317770),
     a = n(594190),
-    o = n(928518),
-    s = n(131951),
+    s = n(928518),
+    o = n(131951),
     c = n(451478),
     d = n(981631),
     u = n(65154);
@@ -30,18 +30,18 @@ function f() {
 }
 class _ extends l.Z {
     _initialize() {
-        i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.addChangeListener(this.handlePopoutChange);
+        i.Z.subscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), s.Z.addChangeListener(this.handlePopoutChange);
     }
     _terminate() {
-        i.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), o.Z.removeChangeListener(this.handlePopoutChange), f(), (g = null);
+        i.Z.unsubscribe('RTC_CONNECTION_VIDEO', this.handleIncomingVideo), i.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleManualLocalVideoToggle), i.Z.unsubscribe('WINDOW_VISIBILITY_CHANGE', this.handleWindowVisibilityChange), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), s.Z.removeChangeListener(this.handlePopoutChange), f(), (g = null);
     }
     handleIncomingVideo(e) {
         let { userId: t, context: n, streamId: i } = e;
         if (n !== u.Yn.DEFAULT || null == i) return;
         let l = null != a.ZP.getVisibleGame(),
             h = c.Z.isVisible(),
-            g = o.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
-            f = s.Z.isLocalVideoDisabled(t, n),
+            g = s.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT),
+            f = o.Z.isLocalVideoDisabled(t, n),
             _ = p.has(t);
         l && !h && !g && !f && !_ && (m.add(t), r.Z.setDisableLocalVideo(t, d.ZUi.DISABLED, n, !1));
     }
@@ -60,7 +60,7 @@ class _ extends l.Z {
                 t !== g && (f(), (g = t));
             }),
             h(this, 'handlePopoutChange', () => {
-                o.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT) && f();
+                s.Z.getWindowVisible(d.KJ3.CHANNEL_CALL_POPOUT) && f();
             });
     }
 }

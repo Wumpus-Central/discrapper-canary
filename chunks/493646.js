@@ -1,31 +1,31 @@
-n.d(t, {
+t.d(n, {
     K: function () {
-        return a;
+        return l;
     },
     v: function () {
-        return l;
+        return r;
     }
 });
-var i = n(979007),
-    r = n(388032);
-function l(e) {
+var a = t(979007),
+    i = t(388032);
+function r(e) {
     switch (e.id) {
         case 4:
-            return r.intl.string(r.t['3m9EgY']);
+            return i.intl.string(i.t['3m9EgY']);
         case 6:
-            return r.intl.string(r.t.VJRr3d);
+            return i.intl.string(i.t.VJRr3d);
         case 8:
-            return r.intl.string(r.t.Uv7mFR);
+            return i.intl.string(i.t.Uv7mFR);
         case 9:
-            return r.intl.string(r.t.TEK9Aw);
+            return i.intl.string(i.t.TEK9Aw);
         case 10:
-            return r.intl.string(r.t.lfBt2d);
+            return i.intl.string(i.t.lfBt2d);
     }
     return '';
 }
-function a() {
+function l() {
     return {
-        id: i.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
-        name: r.intl.string(r.t.ijDDw8)
+        id: a.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
+        name: i.intl.string(i.t.ijDDw8)
     };
 }

@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(317770),
-    o = n(314897),
-    s = n(592125),
+    s = n(314897),
+    o = n(592125),
     c = n(797258),
     d = n(590415),
     u = n(981631);
@@ -25,7 +25,7 @@ class m extends a.Z {
             (a = (e) => {
                 var t;
                 let { voiceStates: l } = e,
-                    a = o.default.getId(),
+                    a = s.default.getId(),
                     m = null === (t = c.Z.getSession()) || void 0 === t ? void 0 : t.sessionId,
                     p = l.find((e) => e.userId === a && e.sessionId === m);
                 if (null == p) return;
@@ -34,7 +34,7 @@ class m extends a.Z {
                     (0, r.hasModalOpen)(h) && (0, r.closeModal)(h);
                     return;
                 }
-                let f = s.Z.getChannel(g);
+                let f = o.Z.getChannel(g);
                 if (!(null == f ? void 0 : f.isGuildStageVoice())) return;
                 let _ = (0, d.gf)(p) === d.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
                 if (null != f && _) {

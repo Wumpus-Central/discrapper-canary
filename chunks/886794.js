@@ -34,8 +34,8 @@ function P(e) {
     let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: M, onClose: R, sourceAnalyticsLocations: O = [] } = e,
         U = t === E.ME ? void 0 : t,
         B = (0, f.ZP)(n.id, U),
-        { analyticsLocations: F } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
-        D = (0, u.ZB)({
+        { analyticsLocations: D } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
+        F = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: L,
@@ -47,9 +47,9 @@ function P(e) {
         G = l.createRef(),
         w = (0, r.Z)(G);
     return (0, i.jsx)(c.Gt, {
-        value: F,
+        value: D,
         children: (0, i.jsx)(u.Mt, {
-            value: D,
+            value: F,
             children: (0, i.jsxs)(o.ModalRoot, {
                 transitionState: M,
                 className: S.root,

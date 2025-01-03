@@ -7,7 +7,7 @@ function a(e) {
     } = e;
     (0, l.oC)(t);
 }
-class o extends r.Z {
+class s extends r.Z {
     _initialize() {
         i.Z.subscribe('CHANNEL_DELETE', a);
     }
@@ -15,4 +15,4 @@ class o extends r.Z {
         i.Z.unsubscribe('CHANNEL_DELETE', a);
     }
 }
-t.Z = new o();
+t.Z = new s();

@@ -2,29 +2,29 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(392711),
-    s = n(481060),
+    s = n(392711),
+    o = n(481060),
     c = n(367907),
     d = n(626135),
     u = n(981631),
     h = n(388032),
     m = n(173549);
-let p = (0, o.debounce)(c.ZP.trackWithMetadata, 500);
+let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: o, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: S, cta: N, ctaColor: T, centerText: b, className: x } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: N, onClick: v, cta: S, ctaColor: T, centerText: b, className: A } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let A = null;
-    'function' == typeof N
-        ? (A = N())
-        : null != N &&
-          (A = (0, i.jsx)(s.Button, {
+    let Z = null;
+    'function' == typeof S
+        ? (Z = S())
+        : null != S &&
+          (Z = (0, i.jsx)(o.Button, {
               className: m.button,
-              size: s.Button.Sizes.SMALL,
+              size: o.Button.Sizes.SMALL,
               onClick: () => {
                   null != g &&
                       d.default.track(u.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
@@ -32,27 +32,27 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: g
                       }),
-                      null == S || S();
+                      null == v || v();
               },
               fullWidth: !0,
               color: T,
-              children: N
+              children: S
           }));
-    let Z = null;
+    let x = null;
     'function' == typeof n
-        ? (Z = n())
+        ? (x = n())
         : null != n &&
-          (Z = (0, i.jsx)(s.Text, {
+          (x = (0, i.jsx)(o.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
-              className: a()(m.title, { [m.noImageTitle]: null == o }, { [m.center]: b }),
+              className: a()(m.title, { [m.noImageTitle]: null == s }, { [m.center]: b }),
               children: n
           }));
     let L = null;
     'function' == typeof l
         ? (L = l())
         : null != l &&
-          (L = (0, i.jsx)(s.Text, {
+          (L = (0, i.jsx)(o.Text, {
               className: a()({ [m.center]: b }),
               variant: 'text-sm/normal',
               color: 'text-muted',
@@ -60,23 +60,23 @@ t.Z = function (e) {
           }));
     let P = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(m.container, x),
+        className: a()(m.container, A),
         children: [
             !0 === C
                 ? null
-                : (0, i.jsx)(s.Clickable, {
+                : (0, i.jsx)(o.Clickable, {
                       onClick: () => {
-                          c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == v || v();
+                          c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == N || N();
                       },
                       className: m.close,
                       'aria-label': h.intl.string(h.t.WAI6xs),
-                      children: (0, i.jsx)(s.XSmallIcon, {
+                      children: (0, i.jsx)(o.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
                           className: m.closeIcon
                       })
                   }),
-            null != o &&
+            null != s &&
                 (0, i.jsx)('div', {
                     className: m.imageContainer,
                     style: {
@@ -87,13 +87,13 @@ t.Z = function (e) {
                     children: (0, i.jsx)('img', {
                         className: m.image,
                         style: f,
-                        src: o,
+                        src: s,
                         alt: ''
                     })
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, A]
+                children: [x, L, Z]
             })
         ]
     });

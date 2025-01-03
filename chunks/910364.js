@@ -39,8 +39,8 @@ var i = t(200651),
     O = t(412317),
     U = t(228168),
     B = t(981631),
-    F = t(388032),
-    D = t(171865);
+    D = t(388032),
+    F = t(171865);
 function G(e) {
     let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: H, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
@@ -79,8 +79,8 @@ function G(e) {
                 : (null == ei ? void 0 : ei.guildId) != null
                   ? (0, i.jsx)(s.MenuItem, {
                         id: 'view-main-profile',
-                        label: F.intl.string(F.t.GISTtb),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: x.ZP.getName(void 0, void 0, n) }),
+                        label: D.intl.string(D.t.GISTtb),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: x.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -98,8 +98,8 @@ function G(e) {
                     })
                   : (0, i.jsx)(s.MenuItem, {
                         id: 'view-server-profile',
-                        label: F.intl.string(F.t.DisZzM),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: x.ZP.getName(G, w, n) }),
+                        label: D.intl.string(D.t.DisZzM),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: x.ZP.getName(G, w, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -123,9 +123,9 @@ function G(e) {
                 value: en,
                 children: (0, i.jsxs)(s.ModalRoot, {
                     transitionState: H,
-                    className: D.root,
+                    className: F.root,
                     hideShadow: !0,
-                    'aria-label': F.intl.string(F.t['3N/J2t']),
+                    'aria-label': D.intl.string(D.t['3N/J2t']),
                     children: [
                         (0, i.jsxs)(E.Z, {
                             user: n,
@@ -177,15 +177,15 @@ function G(e) {
                                         (0, i.jsx)(b.Z, {
                                             userId: n.id,
                                             onClose: J,
-                                            className: D.toast
+                                            className: F.toast
                                         }),
                                         null != en.interactionType &&
                                             (0, i.jsx)(o.animated.div, {
                                                 style: et,
-                                                className: D.backdrop
+                                                className: F.backdrop
                                             }),
                                         (0, i.jsxs)('div', {
-                                            className: D.headerInner,
+                                            className: F.headerInner,
                                             children: [
                                                 (0, i.jsx)(j.Z, {
                                                     location: 'UserProfileModal',
@@ -206,7 +206,7 @@ function G(e) {
                                                     onCloseProfile: J
                                                 }),
                                                 (0, i.jsxs)('div', {
-                                                    className: D.headerButtons,
+                                                    className: F.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(O.Z, {
                                                             isCurrentUser: er,

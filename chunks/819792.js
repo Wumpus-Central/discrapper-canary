@@ -3,8 +3,8 @@ n(192379);
 var r = n(752877),
     l = n(442837),
     a = n(481060),
-    o = n(536442),
-    s = n(984933),
+    s = n(536442),
+    o = n(984933),
     c = n(496675),
     d = n(51382),
     u = n(91326),
@@ -12,7 +12,7 @@ var r = n(752877),
     m = n(981631);
 function p(e) {
     let { channel: t, guild: n } = e,
-        s = (0, l.e7)([o.qc], () => o.qc.hasHotspot(o.v6.HUB_STUDY_ROOM_NOTICE)),
+        o = (0, l.e7)([s.qc], () => s.qc.hasHotspot(s.v6.HUB_STUDY_ROOM_NOTICE)),
         c = (0, h.r)(t.guild_id),
         m = (0, a.useSpring)({
             maxHeight: c ? 0 : 300,
@@ -21,7 +21,7 @@ function p(e) {
         });
     return (0, i.jsx)(r.animated.div, {
         style: m,
-        children: s
+        children: o
             ? (0, i.jsx)(d.Z, {
                   channel: t,
                   guild: n
@@ -34,7 +34,7 @@ function p(e) {
 }
 t.Z = function (e) {
     let { guild: t } = e,
-        n = (0, l.e7)([s.ZP], () => s.ZP.getChannels(t.id)[s.Zb][0]),
+        n = (0, l.e7)([o.ZP], () => o.ZP.getChannels(t.id)[o.Zb][0]),
         r = (0, l.e7)([c.Z], () => null != n && c.Z.can(m.Plq.CONNECT, n.channel));
     return t.hasFeature(m.oNc.HUB) && null != n && r
         ? (0, i.jsx)(p, {

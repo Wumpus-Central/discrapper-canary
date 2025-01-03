@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(392711),
     a = n.n(l),
-    o = n(954955),
-    s = n.n(o),
+    s = n(954955),
+    o = n.n(s),
     c = n(442837),
     d = n(481060),
     u = n(570140),
@@ -22,23 +22,23 @@ var i = n(200651),
     E = n(626135),
     I = n(70956),
     C = n(225559),
-    v = n(910436),
-    S = n(203028),
-    N = n(358924),
+    N = n(910436),
+    v = n(203028),
+    S = n(358924),
     T = n(292140),
     b = n(525296),
-    x = n(981631),
-    A = n(674563),
-    Z = n(388032),
+    A = n(981631),
+    Z = n(674563),
+    x = n(388032),
     L = n(721925);
 let P = 15 * I.Z.Millis.MINUTE,
-    y = (0, b.Z)(function (e) {
+    O = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            o = (0, i.jsx)(S.Z, {
+            s = (0, i.jsx)(v.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
-            c = (0, i.jsx)(v.Z, {
+            c = (0, i.jsx)(N.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a
@@ -52,10 +52,10 @@ let P = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === Z.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -63,8 +63,8 @@ let P = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, f, _, I, m]),
-            b = s()(C, P);
-        return null != o || null != c
+            b = o()(C, P);
+        return null != s || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
                   renderPopout: (e) => {
@@ -77,21 +77,21 @@ let P = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(N.Z, {
+                      return (0, i.jsx)(S.Z, {
                           ...e,
                           onMouseEnter: b,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,
                           children: (0, i.jsxs)('div', {
-                              children: [o, c]
+                              children: [s, c]
                           })
                       });
                   }
               })
             : null;
     }),
-    O = a().throttle(() => p.W(!1), 300000);
+    y = a().throttle(() => p.W(!1), 300000);
 function R() {
     let {
             nowPlayingCards: e,
@@ -106,24 +106,24 @@ function R() {
             fetching: g.Z.getFetching(),
             currentUser: f.default.getCurrentUser()
         })),
-        o = (0, c.e7)([h.Z], () => h.Z.quests);
+        s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && O();
+            n && !l && y();
         }, [n, l]);
-    let s = r.useMemo(() => {
+    let o = r.useMemo(() => {
             let t = new Map(),
                 n = new Set();
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: r } = e;
                     if (null != r) {
-                        let e = (0, m.ZZ)(o, r);
+                        let e = (0, m.ZZ)(s, r);
                         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
                     }
                 });
             return t;
-        }, [e, o]),
+        }, [e, s]),
         p = null;
     return t
         ? ((p =
@@ -131,10 +131,10 @@ function R() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, i.jsx)(
-                            y,
+                            O,
                             {
                                 party: t,
-                                quest: s.get(t.id)
+                                quest: o.get(t.id)
                             },
                             t.id
                         );
@@ -145,13 +145,13 @@ function R() {
                             (0, i.jsx)(d.Heading, {
                                 variant: 'heading-md/semibold',
                                 className: L.emptyHeader,
-                                children: Z.intl.string(Z.t['ngJ/5u'])
+                                children: x.intl.string(x.t['ngJ/5u'])
                             }),
                             (0, i.jsx)(d.Text, {
                                 color: 'none',
                                 className: L.emptyText,
                                 variant: 'text-sm/normal',
-                                children: Z.intl.string(Z.t['99ZWxc'])
+                                children: x.intl.string(x.t['99ZWxc'])
                             })
                         ]
                     })),

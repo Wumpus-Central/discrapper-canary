@@ -1,119 +1,119 @@
-n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(442837),
-    s = n(607070),
-    c = n(361213),
-    d = n(778569),
-    u = n(783097),
-    h = n(70097),
-    m = n(768581),
-    p = n(829409),
-    g = n(226944);
-let f = 16 / 9,
-    _ = 325 / 72;
-function E(e) {
-    let { application: t, isHovered: n, botBannerUrl: l, botBannerUrlAnimated: o, iconURL: s } = e,
-        m = (0, d.Z)({
-            applicationId: t.id,
+t(47120);
+var a = t(200651),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
+    o = t(442837),
+    s = t(607070),
+    c = t(361213),
+    d = t(778569),
+    u = t(783097),
+    m = t(70097),
+    p = t(768581),
+    _ = t(829409),
+    g = t(226944);
+let v = 16 / 9,
+    f = 325 / 72;
+function C(e) {
+    let { application: n, isHovered: t, botBannerUrl: r, botBannerUrlAnimated: o, iconURL: s } = e,
+        p = (0, d.Z)({
+            applicationId: n.id,
             size: 600,
             names: ['embedded_cover']
         }),
-        p = r.useMemo(() => {
-            let e = (0, u.yJ)(t);
-            return null != e && null != e.activity_preview_video_asset_id ? (0, c.Z)(t.id, e.activity_preview_video_asset_id) : null;
-        }, [t]),
-        { imageUrl: f, imageUrlAnimated: _ } = r.useMemo(
+        _ = i.useMemo(() => {
+            let e = (0, u.yJ)(n);
+            return null != e && null != e.activity_preview_video_asset_id ? (0, c.Z)(n.id, e.activity_preview_video_asset_id) : null;
+        }, [n]),
+        { imageUrl: v, imageUrlAnimated: f } = i.useMemo(
             () =>
-                'fetched' === m.state && null != m.url
-                    ? { imageUrl: m.url }
+                'fetched' === p.state && null != p.url
+                    ? { imageUrl: p.url }
                     : {
-                          imageUrl: l,
+                          imageUrl: r,
                           imageUrlAnimated: o
                       },
-            [m.state, m.url, l, o]
+            [p.state, p.url, r, o]
         ),
-        E = null != f,
-        S = null != p;
-    return 'loading' === m.state
+        C = null != v,
+        I = null != _;
+    return 'loading' === p.state
         ? null
-        : S
-          ? (0, i.jsxs)(i.Fragment, {
+        : I
+          ? (0, a.jsxs)(a.Fragment, {
                 children: [
-                    E
-                        ? (0, i.jsx)(I, {
-                              isHovered: n,
-                              url: f,
+                    C
+                        ? (0, a.jsx)(h, {
+                              isHovered: t,
+                              url: v,
                               animatedUrl: void 0
                           })
-                        : (0, i.jsx)(h.Z, {
-                              src: p,
-                              className: a()(g.bannerImage, g.bannerContent),
+                        : (0, a.jsx)(m.Z, {
+                              src: _,
+                              className: l()(g.bannerImage, g.bannerContent),
                               muted: !0
                           }),
-                    (0, i.jsx)(C, {
-                        isHovered: n,
-                        url: p,
+                    (0, a.jsx)(x, {
+                        isHovered: t,
+                        url: _,
                         isVideo: !0
                     })
                 ]
             })
-          : E
-            ? (0, i.jsx)(I, {
-                  isHovered: n,
-                  url: f,
-                  animatedUrl: _
+          : C
+            ? (0, a.jsx)(h, {
+                  isHovered: t,
+                  url: v,
+                  animatedUrl: f
               })
-            : (0, i.jsx)(v, { iconURL: s });
+            : (0, a.jsx)(b, { iconURL: s });
 }
-function I(e) {
-    let { isHovered: t, url: n, animatedUrl: l } = e,
-        [o, s] = r.useState(!1);
-    return (0, i.jsxs)(i.Fragment, {
+function h(e) {
+    let { isHovered: n, url: t, animatedUrl: r } = e,
+        [o, s] = i.useState(!1);
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, i.jsx)('img', {
-                src: n,
+            (0, a.jsx)('img', {
+                src: t,
                 alt: '',
-                className: a()(g.bannerImage, g.bannerContent, { [g.loaded]: o }),
+                className: l()(g.bannerImage, g.bannerContent, { [g.loaded]: o }),
                 onLoad: () => s(!0)
             }),
-            null != l
-                ? (0, i.jsx)(C, {
-                      isHovered: t,
-                      url: l,
+            null != r
+                ? (0, a.jsx)(x, {
+                      isHovered: n,
+                      url: r,
                       isVideo: !1
                   })
                 : null
         ]
     });
 }
-function C(e) {
-    let { isHovered: t, url: n, isVideo: l } = e,
-        [o, s] = r.useState(!1),
-        [c, d] = r.useState(t);
-    return (r.useEffect(() => {
-        t && d(!0);
-    }, [t]),
+function x(e) {
+    let { isHovered: n, url: t, isVideo: r } = e,
+        [o, s] = i.useState(!1),
+        [c, d] = i.useState(n);
+    return (i.useEffect(() => {
+        n && d(!0);
+    }, [n]),
     c)
-        ? (0, i.jsx)('div', {
-              className: a()(g.bannerAnimatedContainer, {
-                  [g.videoFadeOut]: !t,
-                  [g.videoFadeIn]: t && o
+        ? (0, a.jsx)('div', {
+              className: l()(g.bannerAnimatedContainer, {
+                  [g.videoFadeOut]: !n,
+                  [g.videoFadeIn]: n && o
               }),
-              onAnimationEnd: () => (t ? null : d(!1)),
-              children: l
-                  ? (0, i.jsx)(h.Z, {
-                        src: n,
+              onAnimationEnd: () => (n ? null : d(!1)),
+              children: r
+                  ? (0, a.jsx)(m.Z, {
+                        src: t,
                         loop: !0,
                         autoPlay: !0,
                         muted: !0,
                         className: g.bannerContent,
                         onLoadedData: () => s(!0)
                     })
-                  : (0, i.jsx)('img', {
-                        src: n,
+                  : (0, a.jsx)('img', {
+                        src: t,
                         alt: '',
                         className: g.bannerContent,
                         onLoad: () => s(!0)
@@ -121,67 +121,67 @@ function C(e) {
           })
         : null;
 }
-function v(e) {
-    let { iconURL: t } = e,
-        { backgroundGradient: n, hasFetchedColors: r } = (0, p.u)(t);
-    return (0, i.jsx)('div', {
-        className: a()(g.bannerContent, g.bannerGradient, { [g.loaded]: r }),
-        style: { backgroundImage: n }
+function b(e) {
+    let { iconURL: n } = e,
+        { backgroundGradient: t, hasFetchedColors: i } = (0, _.u)(n);
+    return (0, a.jsx)('div', {
+        className: l()(g.bannerContent, g.bannerGradient, { [g.loaded]: i }),
+        style: { backgroundImage: t }
     });
 }
-t.Z = function (e) {
-    let { application: t, bannerType: n, iconURL: l } = e,
-        a = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        [c, d] = r.useState(!1),
-        h = r.useCallback(() => {
+n.Z = function (e) {
+    let { application: n, bannerType: t, iconURL: r } = e,
+        l = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        [c, d] = i.useState(!1),
+        m = i.useCallback(() => {
             d(!0);
         }, []),
-        p = r.useCallback(() => d(!1), []),
-        C = (0, u.ye)(t),
-        S = t.bot,
-        { botBannerUrl: N, botBannerUrlAnimated: T } = r.useMemo(
+        _ = i.useCallback(() => d(!1), []),
+        x = (0, u.ye)(n),
+        I = n.bot,
+        { botBannerUrl: S, botBannerUrlAnimated: j } = i.useMemo(
             () =>
-                (null == S ? void 0 : S.id) == null || (null == S ? void 0 : S.banner) == null
+                (null == I ? void 0 : I.id) == null || (null == I ? void 0 : I.banner) == null
                     ? {}
                     : {
-                          botBannerUrl: (0, m.aN)({
-                              id: S.id,
-                              banner: S.banner,
+                          botBannerUrl: (0, p.aN)({
+                              id: I.id,
+                              banner: I.banner,
                               canAnimate: !1,
                               size: 600
                           }),
-                          botBannerUrlAnimated: a
+                          botBannerUrlAnimated: l
                               ? void 0
-                              : (0, m.aN)({
-                                    id: S.id,
-                                    banner: S.banner,
+                              : (0, p.aN)({
+                                    id: I.id,
+                                    banner: I.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == S ? void 0 : S.id, null == S ? void 0 : S.banner, a]
+            [null == I ? void 0 : I.id, null == I ? void 0 : I.banner, l]
         );
-    return (0, i.jsx)('div', {
+    return (0, a.jsx)('div', {
         className: g.bannerContainer,
-        style: { aspectRatio: 'card' === n ? f : _ },
-        onMouseEnter: h,
-        onFocus: h,
-        onMouseLeave: p,
-        onBlur: p,
+        style: { aspectRatio: 'card' === t ? v : f },
+        onMouseEnter: m,
+        onFocus: m,
+        onMouseLeave: _,
+        onBlur: _,
         children:
-            'card' === n && C
-                ? (0, i.jsx)(E, {
-                      application: t,
+            'card' === t && x
+                ? (0, a.jsx)(C, {
+                      application: n,
                       isHovered: c,
-                      botBannerUrl: null == N ? void 0 : N,
-                      botBannerUrlAnimated: null == T ? void 0 : T
+                      botBannerUrl: null == S ? void 0 : S,
+                      botBannerUrlAnimated: null == j ? void 0 : j
                   })
-                : null != N
-                  ? (0, i.jsx)(I, {
+                : null != S
+                  ? (0, a.jsx)(h, {
                         isHovered: c,
-                        url: N,
-                        animatedUrl: T
+                        url: S,
+                        animatedUrl: j
                     })
-                  : (0, i.jsx)(v, { iconURL: l })
+                  : (0, a.jsx)(b, { iconURL: r })
     });
 };

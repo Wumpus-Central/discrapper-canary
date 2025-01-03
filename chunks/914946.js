@@ -60,8 +60,8 @@ var i,
     r,
     l = n(729594),
     a = n(243814),
-    o = n(544891),
-    s = n(63023),
+    s = n(544891),
+    o = n(63023),
     c = n(433517),
     d = n(904245),
     u = n(155268),
@@ -74,26 +74,26 @@ var i,
     E = n(430824),
     I = n(131951),
     C = n(375954),
-    v = n(158776),
-    S = n(594174),
-    N = n(979651),
+    N = n(158776),
+    v = n(594174),
+    S = n(979651),
     T = n(70956),
     b = n(5192),
-    x = n(226951),
-    A = n(591759),
-    Z = n(996106),
+    A = n(226951),
+    Z = n(591759),
+    x = n(996106),
     L = n(863141),
     P = n(186901),
-    y = n(981631);
-let O = null !== (r = null === (i = A.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
+    O = n(981631);
+let y = null !== (r = null === (i = Z.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
     R = (function () {
-        let e = O.split(':')[0];
+        let e = y.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * T.Z.Millis.MINUTE,
     M = {};
 function w(e) {
@@ -116,20 +116,20 @@ function G(e, t) {
     let n = [],
         i = e.getGuildId();
     return (
-        ![y.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) &&
+        ![O.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) &&
             n.push(
                 new Promise((t) => {
                     C.Z.whenReady(e.id, () => t()),
                         d.Z.fetchMessages({
                             channelId: e.id,
-                            limit: y.AQB
+                            limit: O.AQB
                         });
                 })
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(N.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
+            let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => H(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -172,9 +172,9 @@ function B(e) {
     };
 }
 function H(e, t, n) {
-    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: o, userId: s } = n,
-        c = S.default.getUser(s);
-    if (null == c) throw Error('Invalid user id: '.concat(s));
+    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
+        c = v.default.getUser(o);
+    if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: b.ZP.getName(e, t, c),
         mute: I.Z.isLocalMute(c.id),
@@ -185,20 +185,20 @@ function H(e, t, n) {
             deaf: r,
             self_mute: l,
             self_deaf: a,
-            suppress: o
+            suppress: s
         },
         user: (0, L.Z)(c)
     };
 }
 function V(e, t, n) {
     let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = S.default.getUser(t);
+        a = v.default.getUser(t);
     return {
         type: e,
         user: null != a ? (0, L.Z)(a) : null,
         presence: {
-            status: v.Z.getStatus(t),
-            activity: null != r ? v.Z.getApplicationActivity(t, r) : v.Z.getPrimaryActivity(t)
+            status: N.Z.getStatus(t),
+            activity: null != r ? N.Z.getApplicationActivity(t, r) : N.Z.getPrimaryActivity(t)
         },
         isSpamRequest: i,
         userIgnored: l
@@ -222,9 +222,9 @@ function z(e, t, n) {
 }
 function W(e) {
     switch (e) {
-        case y.hes.RTC_CONNECTED:
-        case y.hes.RTC_CONNECTING:
-        case y.hes.RTC_DISCONNECTED:
+        case O.hes.RTC_CONNECTED:
+        case O.hes.RTC_CONNECTING:
+        case O.hes.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, 'VOICE_');
         default:
             return e;
@@ -234,16 +234,16 @@ function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;
-    return (n && (l |= y.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= y.xjy.JOIN), t) ? ((l |= y.xjy.EMBEDDED), (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === y.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (p.cP.getSetting() && (l |= y.xjy.PARTY_PRIVACY_FRIENDS), p.Ou.getSetting() && (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
+    return (n && (l |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= O.xjy.JOIN), t) ? ((l |= O.xjy.EMBEDDED), (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === O.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (p.cP.getSetting() && (l |= O.xjy.PARTY_PRIVACY_FRIENDS), p.Ou.getSetting() && (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
 }
 function K(e, t, n) {
-    if (e === y.mFx.JOIN) return null != t && null != t.id && null != n.join;
+    if (e === O.mFx.JOIN) return null != t && null != t.id && null != n.join;
     return !1;
 }
 function q(e, t, n) {
-    return o.tn
+    return s.tn
         .get({
-            url: y.ANM.APPLICATION_RPC(t),
+            url: O.ANM.APPLICATION_RPC(t),
             oldFormErrors: !0,
             retries: 3,
             rejectWithError: !0
@@ -251,30 +251,30 @@ function q(e, t, n) {
         .then(
             (i) => {
                 let {
-                    body: { rpc_origins: r, id: l, name: a, icon: o, cover_image: s, flags: c }
+                    body: { rpc_origins: r, id: l, name: a, icon: s, cover_image: o, flags: c }
                 } = i;
                 if ('string' == typeof n) {
                     if (e.transport === P.He.POST_MESSAGE) {
                         let e = (0, u.Z)(t);
-                        if (null == e || !U(n, [e])) throw new Z.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!U(n, r)) throw new Z.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !U(n, [e])) throw new x.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!U(n, r)) throw new x.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
                     name: a,
-                    icon: o,
-                    coverImage: s,
+                    icon: s,
+                    coverImage: o,
                     flags: c
                 };
             },
             () => {
-                throw new Z.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new x.Z({ closeCode: O.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function X(e, t) {
     let n = M[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, D)), (M[e] = n)), await n.process();
+    null == n && ((n = new o.Z(t ? 2 : 60, D)), (M[e] = n)), await n.process();
 }
 function Q(e, t) {
     null == t && (e.authorization.scopes = [P.lH]);
@@ -331,9 +331,9 @@ function $(e, t) {
     };
 }
 function ee(e) {
-    if (e !== P.He.POST_MESSAGE) throw new Z.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== P.He.POST_MESSAGE) throw new x.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function et(e) {
-    if (null == e.id) throw new Z.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new x.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

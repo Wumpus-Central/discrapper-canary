@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return C;
+        return g;
     },
     tE: function () {
         return l;
@@ -32,60 +32,60 @@ function v(e) {
         children: n
     });
 }
-function C(e) {
+function g(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: C, placeholder: g, maxValues: _, disabled: I } = n,
-        [b, j] = a.useState(!1),
-        [S, N] = a.useState(!1),
-        [T, y] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
+        { type: g, placeholder: C, maxValues: _, disabled: b } = n,
+        [I, S] = a.useState(!1),
+        [j, y] = a.useState(!1),
+        [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [E, Z] = a.useState(new Set(T.keys())),
         [k, L] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [R, O] = a.useState(0);
+        [O, M] = a.useState(0);
     a.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
         if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
         L(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        y(n), Z(new Set(n.keys())), O((e) => e + 1);
+        N(n), Z(new Set(n.keys())), M((e) => e + 1);
     }, [o, k]);
     let {
-            state: M,
-            executeStateUpdate: A,
-            visualState: P,
-            isDisabled: B,
-            error: w
+            state: P,
+            executeStateUpdate: R,
+            visualState: A,
+            isDisabled: w,
+            error: B
         } = (0, m.Ee)(n, {
-            type: C,
+            type: g,
             selectedOptions: Array.from(T.values())
         }),
-        U = P === f.gH.LOADING;
+        U = A === f.gH.LOADING;
     a.useEffect(() => {
-        if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
-            y(e), Z(new Set(e.keys()));
+        if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
+            N(e), Z(new Set(e.keys()));
         }
-    }, [M]);
+    }, [P]);
     let G = a.useCallback(() => {
-        A({
-            type: C,
+        R({
+            type: g,
             selectedOptions: Array.from(T.values())
         }) && Z(new Set(T.keys()));
-    }, [A, C, T]);
+    }, [R, g, T]);
     a.useEffect(() => {
-        if (!(b || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
-    }, [b, S, E, T, G]);
-    let H = 0 === T.size || b,
+        if (!(I || j || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
+    }, [I, j, E, T, G]);
+    let H = 0 === T.size || I,
         D = {
-            isDisabled: I || B,
+            isDisabled: b || w,
             wrapperClassName: h.select,
             options: (e) =>
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: H ? (null != g ? g : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => j(!1),
-            onOpen: () => j(!0),
-            onBlur: () => N(!1),
+            placeholder: H ? (null != C ? C : p.intl.string(p.t.Otr6W1)) : void 0,
+            onClose: () => S(!1),
+            onOpen: () => S(!0),
+            onBlur: () => y(!1),
             maxVisibleItems: 5,
             optionClassName: h.__invalid_selectOption,
             renderOptionPrefix: (e, n) => {
@@ -113,7 +113,7 @@ function C(e) {
                                   className: h.badges,
                                   value: Array.from(T.values()),
                                   onChange: (e) => {
-                                      !b && N(!0), y(new Map(e.map((e) => [e.value, e])));
+                                      !I && y(!0), N(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
@@ -125,19 +125,19 @@ function C(e) {
                                   centerCaret: !0,
                                   ...D
                               },
-                              R
+                              O
                           )
                         : (0, r.jsx)(
                               c.SearchableSelect,
                               {
                                   className: (h.badges, h.singleSelect),
                                   value: [...T.values()][0],
-                                  onChange: (e) => y(null != e ? new Map([[e.value, e]]) : new Map()),
+                                  onChange: (e) => N(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
                                   centerCaret: !0,
                                   ...D
                               },
-                              R
+                              O
                           ),
                     U
                         ? (0, r.jsx)('div', {
@@ -150,9 +150,9 @@ function C(e) {
                         : null
                 ]
             }),
-            null != w
+            null != B
                 ? (0, r.jsx)(d.st, {
-                      ...(0, d.c4)(w),
+                      ...(0, d.c4)(B),
                       className: x.error
                   })
                 : null

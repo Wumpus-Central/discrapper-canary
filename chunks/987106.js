@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return C;
     }
 });
 var l = t(200651);
@@ -19,7 +19,7 @@ var i = t(120356),
     h = t(280501),
     x = t(388032),
     v = t(647927);
-function C(e) {
+function g(e) {
     let { url: n, onSelect: t } = e;
     return m.wS && null != n
         ? (0, l.jsx)(o.Menu, {
@@ -37,31 +37,31 @@ function C(e) {
           })
         : null;
 }
-function g(e) {
+function C(e) {
     let n;
-    let { label: t, style: i, disabled: m, emoji: x, url: g, skuId: _ } = e,
-        { executeStateUpdate: I, visualState: b, isDisabled: j } = (0, p.Ee)(e),
-        S = (0, d.s)(_),
-        N = null != _ && i === u.ZJ.PREMIUM,
-        T = N && (null == S ? void 0 : S.disabled),
-        y = N ? (null == S ? void 0 : S.label) : t,
+    let { label: t, style: i, disabled: m, emoji: x, url: C, skuId: _ } = e,
+        { executeStateUpdate: b, visualState: I, isDisabled: S } = (0, p.Ee)(e),
+        j = (0, d.s)(_),
+        y = null != _ && i === u.ZJ.PREMIUM,
+        T = y && (null == j ? void 0 : j.disabled),
+        N = y ? (null == j ? void 0 : j.label) : t,
         E = null != x,
-        Z = null != y && y.length > 0,
-        k = i === u.ZJ.LINK && null != g && g.length > 0,
-        L = b === h.gH.LOADING || (N && null == S);
+        Z = null != N && N.length > 0,
+        k = i === u.ZJ.LINK && null != C && C.length > 0,
+        L = I === h.gH.LOADING || (y && null == j);
     return (
         (n = k
             ? () => {
                   (0, f.q)({
-                      href: null != g ? g : '',
+                      href: null != C ? C : '',
                       shouldConfirm: !0
                   });
               }
-            : N
-              ? null != S && !1 === S.disabled
-                  ? S.onClick
+            : y
+              ? null != j && !1 === j.disabled
+                  ? j.onClick
                   : a.noop
-              : () => I()),
+              : () => b()),
         (0, l.jsxs)(o.Button, {
             color: (function (e) {
                 switch (e) {
@@ -77,14 +77,14 @@ function g(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || b === h.gH.DISABLED || j || T,
+            disabled: m || I === h.gH.DISABLED || S || T,
             onClick: n,
             onContextMenu: (e) => {
                 k &&
                     (0, s.vq)(e, (e) =>
-                        (0, l.jsx)(C, {
+                        (0, l.jsx)(g, {
                             ...e,
-                            url: g
+                            url: C
                         })
                     );
             },
@@ -93,11 +93,11 @@ function g(e) {
                 (0, l.jsxs)('div', {
                     className: r()(v.content, {
                         [v.hidden]: L,
-                        [v.premium]: N
+                        [v.premium]: y
                     }),
                     'aria-hidden': L,
                     children: [
-                        N
+                        y
                             ? (0, l.jsx)('div', {
                                   className: v.shopIcon,
                                   children: (0, l.jsx)(o.ShopIcon, {
@@ -118,7 +118,7 @@ function g(e) {
                         Z
                             ? (0, l.jsx)('div', {
                                   className: v.label,
-                                  children: y
+                                  children: N
                               })
                             : null,
                         k

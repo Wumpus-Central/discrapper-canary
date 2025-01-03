@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(359110),
-    o = n(6025),
-    s = n(433355),
+    s = n(6025),
+    o = n(433355),
     c = n(26373),
     d = n(486622),
     u = n(376191),
@@ -21,17 +21,17 @@ function p(e) {
             (0, l.showToast)((0, l.createToast)(h.intl.string(h.t.EDYbS0), l.ToastType.FAILURE));
         }, []),
         _ = r.useCallback(() => {
-            o.Z.closeChannelSidebar(s.uZ);
+            s.Z.closeChannelSidebar(o.uZ);
         }, []),
         E = r.useCallback(() => {
-            o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(p.id);
+            s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(p.id);
         }, [p.id, g]),
         {
             acceptMessageRequest: I,
             rejectMessageRequest: C,
-            isAcceptLoading: v,
-            isRejectLoading: S,
-            isUserProfileLoading: N,
+            isAcceptLoading: N,
+            isRejectLoading: v,
+            isUserProfileLoading: S,
             isOptimisticAccepted: T,
             isOptimisticRejected: b
         } = (0, d.m)({
@@ -40,7 +40,7 @@ function p(e) {
             onRejectSuccess: _,
             onError: f
         }),
-        x = v || S || N || T || b;
+        A = N || v || S || T || b;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -59,8 +59,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: x,
-                        submitting: S || b,
+                        disabled: A,
+                        submitting: v || b,
                         children: h.intl.string(h.t.B2nygY)
                     }),
                     (0, i.jsx)(l.Button, {
@@ -70,8 +70,8 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: x,
-                        submitting: v || N || T,
+                        disabled: A,
+                        submitting: N || S || T,
                         children: h.intl.string(h.t.Kz8Pws)
                     })
                 ]

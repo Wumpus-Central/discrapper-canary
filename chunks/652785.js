@@ -13,8 +13,8 @@ var i = n(704215),
     r = n(823385),
     l = n(327689),
     a = n(421176),
-    o = n(456065),
-    s = n(683743),
+    s = n(456065),
+    o = n(683743),
     c = n(823379),
     d = n(981631);
 let u = 'lastHiddenChannelNotice',
@@ -35,12 +35,12 @@ let u = 'lastHiddenChannelNotice',
         },
         {
             type: d.vID.INVITE,
-            store: s.Z,
+            store: o.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_INVITE
         },
         {
             type: d.vID.HUB_LINK,
-            store: o.Z,
+            store: s.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_HUBLINK
         },
         {

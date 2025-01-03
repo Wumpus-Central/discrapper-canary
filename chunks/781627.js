@@ -9,8 +9,8 @@ var a = n(481060),
     l = n(388032),
     r = n(526906);
 function c(e) {
-    let { imageSrc: t, header: n, description: c, secondaryInfo: o, mutualGuildCount: s, ctaLabel: d, onCtaClick: u, children: g } = e,
-        m = (0, i.jsx)(i.Fragment, {
+    let { imageSrc: t, header: n, description: c, secondaryInfo: o, mutualGuildCount: s, ctaLabel: d, onCtaClick: u, children: m } = e,
+        g = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: r.topWrapper,
                 children: [
@@ -91,7 +91,7 @@ function c(e) {
                                 : null,
                             (0, i.jsx)('div', {
                                 className: r.children,
-                                children: g
+                                children: m
                             })
                         ]
                     })
@@ -101,7 +101,7 @@ function c(e) {
     return (0, i.jsx)(a.FocusRing, {
         children: (0, i.jsx)('div', {
             className: r.listing,
-            children: m
+            children: g
         })
     });
 }

@@ -1,29 +1,29 @@
-var i = n(200651),
-    r = n(192379),
-    l = n(149765),
-    a = n(481060),
-    o = n(995648),
-    s = n(422559),
-    c = n(388032),
-    d = n(878744);
-t.Z = function (e) {
-    var t;
-    let { application: n } = e,
-        u = r.useMemo(() => {
+var a = t(200651),
+    i = t(192379),
+    r = t(149765),
+    l = t(481060),
+    o = t(995648),
+    s = t(422559),
+    c = t(388032),
+    d = t(878744);
+n.Z = function (e) {
+    var n;
+    let { application: t } = e,
+        u = i.useMemo(() => {
             var e;
-            let t = null == n ? void 0 : null === (e = n.install_params) || void 0 === e ? void 0 : e.permissions;
-            if (null != t) return s.VY.filter((e) => l.e$(l.vB(t), e));
-        }, [null == n ? void 0 : null === (t = n.install_params) || void 0 === t ? void 0 : t.permissions]);
+            let n = null == t ? void 0 : null === (e = t.install_params) || void 0 === e ? void 0 : e.permissions;
+            if (null != n) return s.VY.filter((e) => r.e$(r.vB(n), e));
+        }, [null == t ? void 0 : null === (n = t.install_params) || void 0 === n ? void 0 : n.permissions]);
     return null != u && u.length > 0
-        ? (0, i.jsxs)('div', {
+        ? (0, a.jsxs)('div', {
               className: d.sectionContainer,
               children: [
-                  (0, i.jsx)(a.Heading, {
+                  (0, a.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
                       children: c.intl.string(c.t.runNFx)
                   }),
-                  (0, i.jsx)(o.Z, {
+                  (0, a.jsx)(o.Z, {
                       className: d.contentContainer,
                       grantedPermissions: u,
                       grantedPermissionsHeader: c.intl.string(c.t.SLgiND)

@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(970606),
-    o = n(565138),
-    s = n(388032),
+    s = n(565138),
+    o = n(388032),
     c = n(832311),
     d = n(586522);
 t.Z = function (e) {
@@ -20,24 +20,24 @@ t.Z = function (e) {
                     className: c.confirmationContent,
                     children: [
                         null !== n
-                            ? (0, i.jsx)(o.Z, {
-                                  size: o.Z.Sizes.LARGER,
+                            ? (0, i.jsx)(s.Z, {
+                                  size: s.Z.Sizes.LARGER,
                                   guild: n,
                                   className: c.guildIcon
                               })
                             : (0, i.jsx)('img', {
-                                  alt: s.intl.string(s.t.SXZrBw),
+                                  alt: o.intl.string(o.t.SXZrBw),
                                   src: d
                               }),
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
                             className: c.header,
-                            children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
+                            children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: s.intl.string(s.t.FdsK4u)
+                            children: o.intl.string(o.t.FdsK4u)
                         })
                     ]
                 }),
@@ -48,7 +48,7 @@ t.Z = function (e) {
                         look: l.Button.Looks.LINK,
                         color: l.Button.Colors.LINK,
                         size: l.Button.Sizes.SMALL,
-                        children: s.intl.string(s.t.mqtdmZ)
+                        children: o.intl.string(o.t.mqtdmZ)
                     })
                 })
             ]

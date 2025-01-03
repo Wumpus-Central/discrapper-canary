@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getPageSize: function () {
-            return Z;
+            return x;
         }
     }),
     n(47120);
@@ -9,8 +9,8 @@ var i = n(200651),
     r = n(192379),
     l = n(593473),
     a = n(512969),
-    o = n(442837),
-    s = n(930118),
+    s = n(442837),
+    o = n(930118),
     c = n(355467),
     d = n(410575),
     u = n(666743),
@@ -23,12 +23,12 @@ var i = n(200651),
     E = n(703656),
     I = n(108427),
     C = n(911314),
-    v = n(429899),
-    S = n(843445),
-    N = n(981631),
+    N = n(429899),
+    v = n(843445),
+    S = n(981631),
     T = n(388032),
     b = n(32304);
-function x(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,19 +41,19 @@ function x(e, t, n) {
         e
     );
 }
-let A = (0, f.Un)({
+let Z = (0, f.Un)({
     createPromise: () => Promise.all([n.e('1868'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
-function Z(e) {
-    return e < S.x ? S.b.SMALL : S.b.LARGE;
+function x(e) {
+    return e < v.x ? v.b.SMALL : v.b.LARGE;
 }
-o.ZP.initialize();
+s.ZP.initialize();
 class L extends r.PureComponent {
     componentDidMount() {
-        (0, s.Y)(this.props.location),
+        (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
-                e.pathname.startsWith(N.Z5c.APPLICATION_STORE) && (0, s.Y)(e);
+                e.pathname.startsWith(S.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
@@ -76,7 +76,7 @@ class L extends r.PureComponent {
                       className: b.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(A, {
+                : (0, i.jsx)(Z, {
                       className: b.applicationStore,
                       location: t,
                       render: this.renderContent
@@ -88,59 +88,59 @@ class L extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'stopListeningToHistory', void 0),
-            x(this, 'renderStoreListing', (e) => {
+            A(this, 'stopListeningToHistory', void 0),
+            A(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
                         },
                         location: a
                     } = e,
-                    { width: o } = this.props,
-                    s = (0, l.parse)(a.search);
+                    { width: s } = this.props,
+                    o = (0, l.parse)(a.search);
                 return (0, i.jsx)(d.Z, {
-                    page: N.ZY5.STORE_LISTING,
+                    page: S.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(v.Z, {
+                    children: (0, i.jsx)(N.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: r,
                         location: a,
-                        storeListingId: s.store_listing_id,
-                        pageSize: Z(o)
+                        storeListingId: o.store_listing_id,
+                        pageSize: x(s)
                     })
                 });
             }),
-            x(this, 'renderContent', () =>
+            A(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
-                            path: N.Z5c.APPLICATION_STORE,
+                            path: S.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
                                 (0, i.jsx)(d.Z, {
-                                    page: N.ZY5.STORE_DIRECTORY_HOME,
+                                    page: S.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
                                     children: (0, i.jsx)(C.Z, {})
                                 })
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
+                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
+                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
+                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
+                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.l_, { to: N.Z5c.APP })
+                        (0, i.jsx)(a.l_, { to: S.Z5c.APP })
                     ]
                 })
             );

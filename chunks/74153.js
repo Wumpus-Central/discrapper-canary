@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(16084),
-    s = n(730749),
+    s = n(16084),
+    o = n(730749),
     c = n(812206),
     d = n(984370),
     u = n(703656),
@@ -27,7 +27,7 @@ function g(e, t, n) {
 class f extends r.PureComponent {
     componentDidMount() {
         let { sku: e, primarySkuId: t, isFetchingPrimarySku: n } = this.props;
-        null != t && !n && null != e && (0, o.$N)(e.applicationId, t);
+        null != t && !n && null != e && (0, s.$N)(e.applicationId, t);
     }
     render() {
         let { sku: e, primarySku: t } = this.props,
@@ -76,7 +76,7 @@ class f extends r.PureComponent {
             );
     }
 }
-t.Z = (0, s.Z)(
+t.Z = (0, o.Z)(
     l.ZP.connectStores([c.Z, h.Z], (e) => {
         let { sku: t } = e,
             n = null != t ? c.Z.getApplication(t.applicationId) : null,

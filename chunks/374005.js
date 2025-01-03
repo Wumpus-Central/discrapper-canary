@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(393238),
     a = n(540059),
-    o = n(720734),
-    s = n(840780),
+    s = n(720734),
+    o = n(840780),
     c = n(235555),
     d = n(746508),
     u = n(210724),
@@ -23,7 +23,7 @@ function E(e) {
         let { guildId: t } = e;
         return t;
     });
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(o.Z, {
         ...e,
         guildId: t
     });
@@ -58,7 +58,7 @@ function I() {
                 }),
                 (0, i.jsx)(p.Z, {
                     section: g.jXE.ACCOUNT_PANEL,
-                    children: (0, i.jsx)(o.Z, {})
+                    children: (0, i.jsx)(s.Z, {})
                 })
             ]
         })

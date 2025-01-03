@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(902704),
-    o = n(812206),
-    s = n(594190),
+    s = n(812206),
+    o = n(594190),
     c = n(199902),
     d = n(592125),
     u = n(271383),
@@ -17,13 +17,13 @@ var i = n(392711),
     E = n(914946),
     I = n(238679),
     C = n(452426),
-    v = n(295424),
-    S = n(277272),
-    N = n(863141),
+    N = n(295424),
+    v = n(277272),
+    S = n(863141),
     T = n(186901),
     b = n(981631);
-let x = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
-function A(e) {
+let A = (e) => (0, C.Z)(e).required().keys({ channel_id: e.string().required() });
+function Z(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -33,7 +33,7 @@ function A(e) {
     if (null == r || !(0, E.zM)(r, i.application.id, i.authorization.scopes)) throw new _.Z({ errorCode: b.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
     if (r.isNSFW() && (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new _.Z({ errorCode: b.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(r.id));
 }
-let Z = (e) => (0, C.Z)(e).keys({ channel_id: e.string().allow(null) });
+let x = (e) => (0, C.Z)(e).keys({ channel_id: e.string().allow(null) });
 function L(e) {
     let {
         args: { channel_id: t }
@@ -54,7 +54,7 @@ let P = {
                 let { prevState: i, dispatch: l } = e,
                     a = h.Z.getGuild(t);
                 if (null == a) return;
-                let o = {
+                let s = {
                     guild: {
                         id: a.id,
                         name: a.name,
@@ -62,7 +62,7 @@ let P = {
                     },
                     online: 0
                 };
-                return !r().isEqual(i, o) && l(o), o;
+                return !r().isEqual(i, s) && l(s), s;
             };
         }
     },
@@ -81,16 +81,16 @@ let P = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id));
+                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id));
                 return (
                     n &&
                         r()
-                            .differenceBy(o, n, (e) => {
+                            .differenceBy(s, n, (e) => {
                                 let { userId: t } = e;
                                 return t;
                             })
                             .forEach((e) => i((0, E.aE)(a, l.id, e))),
-                    o
+                    s
                 );
             };
         }
@@ -110,15 +110,15 @@ let P = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id));
+                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id));
                 return (
                     r()
-                        .differenceBy(n, o, (e) => {
+                        .differenceBy(n, s, (e) => {
                             let { userId: t } = e;
                             return t;
                         })
                         .forEach((e) => i((0, E.aE)(a, l.id, e))),
-                    o
+                    s
                 );
             };
         }
@@ -138,12 +138,12 @@ let P = {
                     l = d.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    o = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
+                    s = Object.values(f.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, E.aE)(a, l.id, e));
                 return (
                     r()
-                        .differenceWith(o, n, r().isEqual)
+                        .differenceWith(s, n, r().isEqual)
                         .forEach((e) => i(e)),
-                    o
+                    s
                 );
             };
         }
@@ -166,31 +166,31 @@ let P = {
     },
     [b.zMe.MESSAGE_CREATE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: Z
     },
     [b.zMe.MESSAGE_UPDATE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: Z
     },
     [b.zMe.MESSAGE_DELETE]: {
         scope: l.x.RPC,
-        validation: x,
-        handler: A
+        validation: A,
+        handler: Z
     },
     [b.zMe.SPEAKING_START]: {
         scope: {
             [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH]
         },
-        validation: Z,
+        validation: x,
         handler: L
     },
     [b.zMe.SPEAKING_STOP]: {
         scope: {
             [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH]
         },
-        validation: Z,
+        validation: x,
         handler: L
     },
     [b.zMe.GUILD_CREATE]: {
@@ -279,7 +279,7 @@ let P = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = { currentUser: g.default.getCurrentUser() };
-            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, N.Z)(i.currentUser)), i;
+            return null != i.currentUser && (null == t || !(0, a.Z)(i, t)) && n((0, S.Z)(i.currentUser)), i;
         }
     },
     [b.zMe.CURRENT_GUILD_MEMBER_UPDATE]: {
@@ -293,7 +293,7 @@ let P = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, S.Z)(r.currentGuildMember)), r;
+                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, v.Z)(r.currentGuildMember)), r;
             };
         }
     },
@@ -317,9 +317,9 @@ let P = {
             var t, n;
             let { prevState: i, dispatch: l } = e,
                 a = c.Z.getStreamerActiveStreamMetadata(),
-                d = (null == a ? void 0 : a.pid) != null ? s.ZP.getGameForPID(a.pid) : null,
-                u = (null == d ? void 0 : d.id) != null ? o.Z.getApplication(d.id) : null,
-                h = null != u ? (0, v.Z)(u) : null,
+                d = (null == a ? void 0 : a.pid) != null ? o.ZP.getGameForPID(a.pid) : null,
+                u = (null == d ? void 0 : d.id) != null ? s.Z.getApplication(d.id) : null,
+                h = null != u ? (0, N.Z)(u) : null,
                 m = null == a ? void 0 : a.sourceName,
                 p = {
                     active: null != a,

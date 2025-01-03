@@ -3,8 +3,8 @@ var i,
     r = n(200651),
     l = n(192379),
     a = n(120356),
-    o = n.n(a),
-    s = n(873546),
+    s = n.n(a),
+    o = n(873546),
     c = n(481060),
     d = n(599857),
     u = n(600164),
@@ -45,7 +45,7 @@ class C extends (i = l.PureComponent) {
                     : (0, r.jsx)(
                           c.Button,
                           {
-                              className: o()(_.marginBottom20),
+                              className: s()(_.marginBottom20),
                               onClick: () => this.handleClick(e),
                               children: m.Z.getButtonTitle(e)
                           },
@@ -61,18 +61,18 @@ class C extends (i = l.PureComponent) {
             direction: u.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsxs)(u.Z, {
-                    className: o()(f.container, { [f.isMobile]: s.tq }),
+                    className: s()(f.container, { [f.isMobile]: o.tq }),
                     direction: u.Z.Direction.VERTICAL,
                     align: u.Z.Align.CENTER,
                     justify: u.Z.Justify.CENTER,
                     children: [
                         (0, r.jsx)('div', { className: f.image }),
                         (0, r.jsx)('div', {
-                            className: o()(f.title, _.marginTop20),
+                            className: s()(f.title, _.marginTop20),
                             children: g.intl.string(g.t.Iz0kDg)
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(f.body, _.marginTop4, _.marginBottom20),
+                            className: s()(f.body, _.marginTop4, _.marginBottom20),
                             children: g.intl.format(g.t['//ppOD'], { helpCenterURL: I })
                         }),
                         (0, r.jsx)(u.Z, {
@@ -84,23 +84,23 @@ class C extends (i = l.PureComponent) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: o()(f.footer, _.marginTop20),
+                    className: s()(f.footer, _.marginTop20),
                     children: g.intl.string(g.t.qqYun5)
                 }),
                 (0, r.jsxs)(u.Z, {
-                    className: o()(_.marginTop4, _.marginBottom20),
+                    className: s()(_.marginTop4, _.marginBottom20),
                     grow: 0,
                     children: [
                         (0, r.jsx)('div', {
-                            className: o()(f.footer, f.footerAction),
+                            className: s()(f.footer, f.footerAction),
                             children: g.intl.format(g.t.WL51ZW, { supportURL: h.Z.getSubmitRequestURL() })
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(f.footer, f.footerBullet),
+                            className: s()(f.footer, f.footerBullet),
                             children: '\u2022'
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(f.footer, f.footerAction),
+                            className: s()(f.footer, f.footerAction),
                             children: g.intl.format(g.t.Hv7ztb, { logoutOnClick: this.props.onLogout })
                         })
                     ]

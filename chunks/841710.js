@@ -11,22 +11,22 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(481060),
-    o = n(129861),
-    s = n(617927);
+    s = n(129861),
+    o = n(617927);
 function c(e) {
     let { user: t, status: n, isFocused: r, guildId: l } = e;
     return (0, i.jsxs)('div', {
-        className: s.memberItem,
+        className: o.memberItem,
         children: [
             (0, i.jsx)(a.Avatar, {
                 src: t.getAvatarURL(l, 24),
-                className: s.avatar,
+                className: o.avatar,
                 'aria-label': t.username,
                 size: a.AvatarSizes.SIZE_24,
                 status: n,
                 statusColor: r ? 'currentColor' : void 0
             }),
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(s.Z, {
                 user: t,
                 hideDiscriminator: !0
             })
@@ -36,7 +36,7 @@ function c(e) {
 function d(e) {
     let { label: t } = e;
     return (0, i.jsxs)('div', {
-        className: s.memberItem,
-        children: [(0, i.jsx)('div', { className: l()(s.avatar, s.unknown) }), (0, i.jsx)('div', { children: t })]
+        className: o.memberItem,
+        children: [(0, i.jsx)('div', { className: l()(o.avatar, o.unknown) }), (0, i.jsx)('div', { children: t })]
     });
 }

@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     l = n(570140),
     a = n(988298),
-    o = n(447543),
-    s = n(13245),
+    s = n(447543),
+    o = n(13245),
     c = n(596223),
     d = n(710845),
     u = n(293273),
@@ -40,7 +40,7 @@ t.Z = {
                 null == i.id)
             )
                 throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-            s.Z.setInputLocked(t, n);
+            o.Z.setInputLocked(t, n);
         }
     },
     [E.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
@@ -61,10 +61,10 @@ t.Z = {
             if (null == r) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
             let l = u.Z.getApplicationActivity(r);
             if (null == l || null == l.secrets || !(0, p.t9)(n, l.party, l.secrets)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-            let { lock: o, context: s } = (0, f.jU)(i),
+            let { lock: s, context: o } = (0, f.jU)(i),
                 d = (0, c.Z)(l, h.Z);
-            return (0, a.h7)(l, d, s).then(() => {
-                if ((o(), d)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
+            return (0, a.h7)(l, d, o).then(() => {
+                if ((s(), d)) throw new m.Z({ errorCode: E.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
             });
         }
     },
@@ -83,7 +83,7 @@ t.Z = {
                 socket: i
             } = e;
             if (null == i.application.id) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-            return o.Z.resolveInvite(t, 'Game SDK').then((e) => {
+            return s.Z.resolveInvite(t, 'Game SDK').then((e) => {
                 let { invite: t, code: i } = e;
                 if (null == t) throw new m.Z({ errorCode: E.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
                 let { context: r, lock: a } = (0, f.jU)(n);
@@ -112,7 +112,7 @@ t.Z = {
                 } = e,
                 a = l.application.id;
             if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: o } = (0, f.jU)(t);
+            let { lock: s } = (0, f.jU)(t);
             return new Promise((e) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: t } = await n.e('66063').then(n.bind(n, 344516));
@@ -122,7 +122,7 @@ t.Z = {
                             mediaEngineContext: a,
                             title: l.application.name,
                             onClose: () => {
-                                n.onClose(), o(), e();
+                                n.onClose(), s(), e();
                             }
                         });
                 });

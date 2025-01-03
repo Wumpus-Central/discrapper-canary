@@ -1,52 +1,52 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return f;
+        return v;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(793030),
-    a = n(442837),
-    o = n(445986),
-    s = n(9807),
-    c = n(341176),
-    d = n(312097),
-    u = n(451478),
-    h = n(981631),
-    m = n(388032),
-    p = n(520432),
-    g = n(902294);
-function f(e) {
-    let { application: t, carouselItems: n } = e,
-        f = (0, a.e7)([u.Z], () => u.Z.isFocused()),
-        _ = (0, i.jsxs)(i.Fragment, {
+var a = t(200651),
+    i = t(192379),
+    r = t(793030),
+    l = t(442837),
+    o = t(445986),
+    s = t(9807),
+    c = t(341176),
+    d = t(312097),
+    u = t(451478),
+    m = t(981631),
+    p = t(388032),
+    _ = t(520432),
+    g = t(902294);
+function v(e) {
+    let { application: n, carouselItems: t } = e,
+        v = (0, l.e7)([u.Z], () => u.Z.isFocused()),
+        f = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, i.jsx)('img', {
-                    className: p.errorImage,
+                (0, a.jsx)('img', {
+                    className: _.errorImage,
                     src: g,
                     'aria-hidden': !0,
                     alt: ''
                 }),
-                (0, i.jsx)(l.X6, {
+                (0, a.jsx)(r.X6, {
                     variant: 'heading-xl/semibold',
-                    children: m.intl.string(m.t.UvDfMz)
+                    children: p.intl.string(p.t.UvDfMz)
                 })
             ]
         });
-    n.forEach((e, i) => {
-        e.alt = m.intl.formatToPlainString(m.t.sSEhHR, {
-            index: i + 1,
-            totalImages: n.length,
-            name: t.name
+    t.forEach((e, a) => {
+        e.alt = p.intl.formatToPlainString(p.t.sSEhHR, {
+            index: a + 1,
+            totalImages: t.length,
+            name: n.name
         });
     });
-    let E = r.useCallback(
-        (e, t) => {
-            if (e.type === h.s9s.IMG) {
-                let t = n.filter((e) => e.type === h.s9s.IMG),
-                    i = t.findIndex((t) => t === e);
-                if (i < 0) return;
-                let r = t.map((e) => ({
+    let C = i.useCallback(
+        (e, n) => {
+            if (e.type === m.s9s.IMG) {
+                let n = t.filter((e) => e.type === m.s9s.IMG),
+                    a = n.findIndex((n) => n === e);
+                if (a < 0) return;
+                let i = n.map((e) => ({
                     url: (0, o.Q)(e.src),
                     original: e.src,
                     width: e.width,
@@ -54,8 +54,8 @@ function f(e) {
                     type: 'IMAGE'
                 }));
                 (0, d.K)({
-                    items: r,
-                    startingIndex: i,
+                    items: i,
+                    startingIndex: a,
                     fit: c.D.CONTAIN,
                     shouldHideMediaOptions: !0,
                     shouldAnimateCarousel: !0,
@@ -63,18 +63,18 @@ function f(e) {
                 });
             }
         },
-        [n]
+        [t]
     );
-    return 0 === n.length
+    return 0 === t.length
         ? null
-        : (0, i.jsx)(s.Z, {
-              className: p.carousel,
+        : (0, a.jsx)(s.Z, {
+              className: _.carousel,
               themedPagination: !0,
-              items: n,
+              items: t,
               autoplayInterval: 8000,
-              paused: !f,
+              paused: !v,
               videoAutoPlay: !0,
-              onCurrentItemClick: E,
-              errorComponent: _
+              onCurrentItemClick: C,
+              errorComponent: f
           });
 }

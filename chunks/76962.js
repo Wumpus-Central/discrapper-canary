@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     container: 'container_a3545a',
     header: 'header_a3545a',
     divider: 'divider_a3545a',

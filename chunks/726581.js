@@ -2,8 +2,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(304106),
+    s = n(442837),
+    o = n(304106),
     c = n(649974),
     d = n(246946),
     u = n(594174),
@@ -42,7 +42,7 @@ class C extends r.Component {
                                   'div',
                                   {
                                       className: I.unit,
-                                      children: (0, i.jsx)(s.Z, { reason: e })
+                                      children: (0, i.jsx)(o.Z, { reason: e })
                                   },
                                   e.type
                               )
@@ -63,7 +63,7 @@ class C extends r.Component {
     render() {
         let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: r, className: l } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
-        let o = this.getReviewToRender();
+        let s = this.getReviewToRender();
         return (0, i.jsxs)('div', {
             className: a()(I.root, l),
             children: [
@@ -72,9 +72,9 @@ class C extends r.Component {
                     children: E.intl.string(E.t.qABFpa)
                 }),
                 this.renderReasons(e, t, r),
-                null != o
+                null != s
                     ? (0, i.jsx)(_.Z, {
-                          data: o,
+                          data: s,
                           className: I.review
                       })
                     : null
@@ -82,7 +82,7 @@ class C extends r.Component {
         });
     }
 }
-t.Z = o.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
+t.Z = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, g.Gg)(t.id, m.Z, u.default, c.Z, h.Z),

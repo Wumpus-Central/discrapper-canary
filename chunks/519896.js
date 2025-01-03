@@ -1,85 +1,85 @@
-t.r(n),
-    t.d(n, {
+l.r(e),
+    l.d(e, {
         SubscriptionDetailsModal: function () {
-            return p;
+            return j;
         }
     });
-var l = t(200651),
-    o = t(192379),
-    i = t(269210),
-    a = t(752843),
-    r = t(481060),
-    s = t(757746),
-    c = t(930155),
-    d = t(889989),
-    u = t(263519),
-    m = t(73346),
-    x = t(591759),
-    h = t(886253),
-    f = t(680005),
-    v = t(938337);
-function p(e) {
-    var n, t;
-    let { appId: p, subscriptionType: _, onClose: j, skuId: N, guildId: I, transitionState: S, onHeaderTitleClick: C } = e,
-        { data: b } = (0, c.H)(N),
-        B = b[0],
-        { data: T } = (0, s.Z)(N),
-        g = o.useMemo(() => {
-            var e;
-            return (null == T ? void 0 : T.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(p, T.thumbnail, 256))) && void 0 !== e ? e : void 0;
-        }, [p, null == T ? void 0 : T.thumbnail]),
-        k = o.useMemo(() => {
-            let e = null == T ? void 0 : T.benefits;
-            if (null != e && 0 !== e.length)
-                return e.map((e) => ({
-                    id: e.id,
-                    title: e.name,
-                    description: e.description,
-                    icon: (0, d.n)(p, e.icon)
+var t = l(200651),
+    i = l(192379),
+    o = l(269210),
+    r = l(752843),
+    s = l(481060),
+    a = l(757746),
+    c = l(930155),
+    d = l(889989),
+    u = l(263519),
+    m = l(73346),
+    x = l(591759),
+    h = l(886253),
+    v = l(680005),
+    f = l(938337);
+function j(n) {
+    var e, l;
+    let { appId: j, subscriptionType: p, onClose: S, skuId: N, guildId: _, transitionState: I, onHeaderTitleClick: R } = n,
+        { data: T } = (0, c.H)(N),
+        C = T[0],
+        { data: E } = (0, a.Z)(N),
+        g = i.useMemo(() => {
+            var n;
+            return (null == E ? void 0 : E.thumbnail) != null && null !== (n = x.Z.toURLSafe((0, m._W)(j, E.thumbnail, 256))) && void 0 !== n ? n : void 0;
+        }, [j, null == E ? void 0 : E.thumbnail]),
+        k = i.useMemo(() => {
+            let n = null == E ? void 0 : E.benefits;
+            if (null != n && 0 !== n.length)
+                return n.map((n) => ({
+                    id: n.id,
+                    title: n.name,
+                    description: n.description,
+                    icon: (0, d.n)(j, n.icon)
                 }));
-        }, [p, null == T ? void 0 : T.benefits]),
-        { openModal: R, subscriptionPurchaseButtonState: E } = (0, u.Z)({
+        }, [j, null == E ? void 0 : E.benefits]),
+        { openModal: M, subscriptionPurchaseButtonState: Z } = (0, u.Z)({
             skuId: N,
-            initialSubscribeForGuild: null != I ? I : void 0
+            initialSubscribeForGuild: null != _ ? _ : void 0
         });
-    return null == T
+    return null == E
         ? null
-        : (0, l.jsx)(h.A, {
-              appId: p,
+        : (0, t.jsx)(h.A, {
+              appId: j,
               skuId: N,
-              transitionState: S,
-              onHeaderTitleClick: null != C ? C : j,
-              onClose: j,
-              footer: (0, l.jsx)(f.pV, {
-                  onClick: R,
-                  appId: p,
-                  subscriptionType: _,
+              transitionState: I,
+              onHeaderTitleClick: null != R ? R : S,
+              onClose: S,
+              footer: (0, t.jsx)(v.pV, {
+                  onClick: M,
+                  appId: j,
+                  subscriptionType: p,
                   skuId: N,
-                  subscriptionPlan: B,
-                  state: E
+                  subscriptionPlan: C,
+                  state: Z
               }),
-              children: (0, l.jsx)(v.i, {
-                  appId: p,
+              children: (0, t.jsx)(f.i, {
+                  appId: j,
                   skuId: N,
                   benefits:
                       null != k
-                          ? k.map((e) =>
-                                (0, l.jsx)(
-                                    i.Gm,
+                          ? k.map((n) =>
+                                (0, t.jsx)(
+                                    o.Gm,
                                     {
-                                        header: e.title,
-                                        icon: e.icon,
-                                        description: e.description
+                                        header: n.title,
+                                        icon: n.icon,
+                                        description: n.description
                                     },
-                                    e.id
+                                    n.id
                                 )
                             )
                           : void 0,
-                  description: null !== (n = T.description) && void 0 !== n ? n : void 0,
+                  description: null !== (e = E.description) && void 0 !== e ? e : void 0,
                   imgSrc: g,
-                  title: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : T.summary,
-                  tag: (0, l.jsx)(a.Z, { type: _ }),
-                  FallbackIcon: r.BadgeIcon
+                  title: null !== (l = null == C ? void 0 : C.name) && void 0 !== l ? l : E.summary,
+                  tag: (0, t.jsx)(r.Z, { type: p }),
+                  FallbackIcon: s.BadgeIcon
               })
           });
 }

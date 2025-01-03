@@ -13,12 +13,12 @@ var i = t(200651),
     c = t(372900),
     d = t(318713),
     h = t(123145),
-    m = t(592125),
-    f = t(369171),
+    f = t(592125),
+    m = t(369171),
     p = t(795938);
 let _ = r.memo(function (e) {
     let { message: n } = e,
-        t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));
+        t = (0, o.e7)([f.Z], () => f.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -47,7 +47,7 @@ function E(e) {
     var n;
     let { item: t, onClose: r } = e,
         l = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
-    return (0, i.jsx)(f.ZP, {
+    return (0, i.jsx)(m.ZP, {
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: a()(p.topBar, e),

@@ -10,12 +10,12 @@ var i = n(192379),
     r = n(442837),
     l = n(537883),
     a = n(356164),
-    o = n(164991),
-    s = n(128449);
+    s = n(164991),
+    o = n(128449);
 function c() {
-    let e = o.Z.useField('fetchedQuery'),
-        t = o.Z.useField('resultsInitialCategoryId'),
-        n = o.Z.useField('languageCode'),
+    let e = s.Z.useField('fetchedQuery'),
+        t = s.Z.useField('resultsInitialCategoryId'),
+        n = s.Z.useField('languageCode'),
         c = (0, r.e7)([a.Z], () => {
             if (null == t) return 0;
             let i = a.Z.getTotal({
@@ -27,7 +27,7 @@ function c() {
         }),
         d = (0, r.e7)([a.Z], () => {
             let t = a.Z.getTotal({
-                categoryId: s.Hk,
+                categoryId: o.Hk,
                 query: e,
                 languageCode: n
             });
@@ -41,6 +41,6 @@ function c() {
             n = new Set();
         for (let [t, i] of u) n.add(t), e.push([t, i]);
         let i = !1;
-        return !n.has(s.Hk) && (n.add(s.Hk), e.unshift([s.Hk, d]), (i = !0)), !n.has(t) && (n.add(t), e.push([t, c]), (i = !0)), i ? e : u;
+        return !n.has(o.Hk) && (n.add(o.Hk), e.unshift([o.Hk, d]), (i = !0)), !n.has(t) && (n.add(t), e.push([t, c]), (i = !0)), i ? e : u;
     }, [u, t, d, c]);
 }

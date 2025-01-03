@@ -3,16 +3,16 @@ n(192379);
 var r = n(399606),
     l = n(607070),
     a = n(70097),
-    o = n(970731),
-    s = n(19199),
+    s = n(970731),
+    o = n(19199),
     c = n(921944),
     d = n(388032),
     u = n(236363);
 t.Z = (e) => {
     let { markAsDismissed: t } = e,
         n = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
-    return (0, s.D)()
-        ? (0, i.jsx)(o.ZP, {
+    return (0, o.D)()
+        ? (0, i.jsx)(s.ZP, {
               asset: (0, i.jsx)(a.Z, {
                   className: u.video,
                   src: 'https://cdn.discordapp.com/attachments/1067194967979733053/1067195118026772480/Safety_MUTE_Coachmark.mp4',
@@ -28,7 +28,7 @@ t.Z = (e) => {
                   e.stopPropagation(), t(c.L.UNKNOWN);
               },
               markAsDismissed: t,
-              caretPosition: o.DF.BOTTOM_CENTER,
+              caretPosition: s.DF.BOTTOM_CENTER,
               headerClassName: u.header
           })
         : null;

@@ -6,31 +6,31 @@ n.r(e),
     }),
     n(47120);
 var i,
-    o,
+    r,
     a = n(200651),
-    r = n(192379),
+    o = n(192379),
     c = n(541822),
     s = n(442837),
     l = n(481060),
     d = n(728345),
     u = n(812206),
     _ = n(600164),
-    p = n(886176),
-    C = n(572004),
-    f = n(504211),
+    f = n(886176),
+    p = n(572004),
+    C = n(504211),
     S = n(283836),
     I = n(507608),
     T = n(533159),
     b = n(981631),
     m = n(272242),
     N = n(388032),
-    L = n(671702);
+    h = n(671702);
 function E(t) {
-    let { onClose: e, transitionState: n, appId: i, guildId: o } = t,
+    let { onClose: e, transitionState: n, appId: i, guildId: r } = t,
         E = (0, s.e7)([u.Z], () => u.Z.getApplication(i), [i]),
-        [h, g] = r.useState(() => (u.Z.isFetchingApplication(i) ? { status: 1 } : { status: 0 }));
-    r.useEffect(() => {
-        0 === h.status &&
+        [L, g] = o.useState(() => (u.Z.isFetchingApplication(i) ? { status: 1 } : { status: 0 }));
+    o.useEffect(() => {
+        0 === L.status &&
             (g({ status: 1 }),
             d.ZP.fetchApplication(i)
                 .then(() => {
@@ -42,33 +42,33 @@ function E(t) {
                         error: t.message
                     });
                 }));
-    }, [i, h.status]);
+    }, [i, L.status]);
     let { subscriptions: P, otps: O } = (0, S.q)(i);
     if (null == E) return null;
-    let A = N.intl.formatToPlainString(N.t.XDRjs7, { appName: E.name });
+    let v = N.intl.formatToPlainString(N.t.XDRjs7, { appName: E.name });
     return (0, a.jsxs)(l.ModalRoot, {
         transitionState: n,
-        'aria-label': A,
+        'aria-label': v,
         size: l.ModalSize.DYNAMIC,
-        className: L.modal,
+        className: h.modal,
         children: [
             (0, a.jsxs)(l.ModalHeader, {
-                className: L.modalHeader,
+                className: h.modalHeader,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: L.modalTitle,
+                        className: h.modalTitle,
                         children: [
-                            (0, a.jsx)(p.Z, {}),
+                            (0, a.jsx)(f.Z, {}),
                             (0, a.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: A
+                                children: v
                             })
                         ]
                     }),
                     (0, a.jsxs)('div', {
-                        className: L.modalHeaderLinks,
+                        className: h.modalHeaderLinks,
                         children: [
-                            C.wS &&
+                            p.wS &&
                                 (0, a.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
@@ -76,25 +76,25 @@ function E(t) {
                                     'aria-label': N.intl.string(N.t.WqhZsr),
                                     onClick: () => {
                                         let t = ''.concat(location.protocol, '//').concat(location.host).concat(b.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(i, m.ApplicationDirectoryProfileSections.STORE));
-                                        (0, C.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, f.X)(i, f.B.STORE_MODAL);
+                                        (0, p.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, C.X)(i, C.B.STORE_MODAL);
                                     },
                                     children: (0, a.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),
                             (0, a.jsx)(l.ModalCloseButton, {
                                 onClick: e,
-                                className: L.modalCloseBtn
+                                className: h.modalCloseBtn
                             })
                         ]
                     })
                 ]
             }),
             (0, a.jsx)('div', {
-                className: L.scrollerWrapper,
+                className: h.scrollerWrapper,
                 children: (0, a.jsx)(c.Z, {
-                    className: L.scroller,
+                    className: h.scroller,
                     children: (0, a.jsx)(I.AF, {
                         app: E,
-                        guildId: o,
+                        guildId: r,
                         subscriptions: P,
                         otps: O
                     })
@@ -116,4 +116,4 @@ function E(t) {
         ]
     });
 }
-((o = i || (i = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');

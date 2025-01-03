@@ -3,8 +3,8 @@ var i = n(846519),
     r = n(570140),
     l = n(287734),
     a = n(317770),
-    o = n(199902),
-    s = n(592125),
+    s = n(199902),
+    o = n(592125),
     c = n(430824),
     d = n(517100),
     u = n(19780),
@@ -23,7 +23,7 @@ class _ extends a.Z {
     handleIdleUpdate() {
         let e = d.Z.getIdleSince();
         if (!m.isPlatformEmbedded) return;
-        for (let e of (g.stop(), f.stop(), o.Z.getAllActiveStreams())) if (e.state !== p.jm8.ENDED) return;
+        for (let e of (g.stop(), f.stop(), s.Z.getAllActiveStreams())) if (e.state !== p.jm8.ENDED) return;
         if (null == e) return;
         let t = u.Z.getChannelId();
         if (null == t) return;
@@ -32,7 +32,7 @@ class _ extends a.Z {
         });
         let n = c.Z.getGuild(u.Z.getGuildId());
         if (null == n || null == n.afkChannelId || n.afkChannelId === t || null == n.afkTimeout) return;
-        let i = s.Z.getChannel(t);
+        let i = o.Z.getChannel(t);
         if (null != i)
             !i.isGuildStageVoice() &&
                 g.start(e + n.afkTimeout * h.Z.Millis.SECOND - Date.now(), () => {

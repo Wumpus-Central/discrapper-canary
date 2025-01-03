@@ -7,8 +7,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(283595),
     a = n(808506),
-    o = n(237997),
-    s = n(996106),
+    s = n(237997),
+    o = n(996106),
     c = n(186901),
     d = n(981631);
 let u = {
@@ -19,21 +19,21 @@ let u = {
                 args: { pid: t },
                 socket: n
             } = e;
-            if ('number' != typeof t || t < 10) throw new s.Z({ errorCode: d.lTL.INVALID_EVENT }, 'Invalid pid');
+            if ('number' != typeof t || t < 10) throw new o.Z({ errorCode: d.lTL.INVALID_EVENT }, 'Invalid pid');
             return (e) => {
-                let { prevState: i, dispatch: s } = e,
+                let { prevState: i, dispatch: o } = e,
                     c = a.Z.enabled,
                     d = !0,
                     u = n.application.id;
                 if (null != u) {
                     let e = l.Z.getActiveLibraryApplication(u);
-                    null != e && (c = c && e.isOverlayEnabled()), (d = o.Z.isLocked(t));
+                    null != e && (c = c && e.isOverlayEnabled()), (d = s.Z.isLocked(t));
                 }
                 let h = {
                     enabled: c,
                     locked: d
                 };
-                return !r().isEqual(h, i) && s(h), h;
+                return !r().isEqual(h, i) && o(h), h;
             };
         }
     }

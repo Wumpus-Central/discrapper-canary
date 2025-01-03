@@ -4,8 +4,8 @@ n(192379);
 var r = n(544891),
     l = n(846519),
     a = n(481060),
-    o = n(496929),
-    s = n(115130),
+    s = n(496929),
+    o = n(115130),
     c = n(812206),
     d = n(594174),
     u = n(580130),
@@ -31,7 +31,7 @@ t.Z = {
                 return Promise.race([
                     (function (e, t) {
                         let n = u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t);
-                        return null != n ? Promise.resolve(n) : (0, o.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t));
+                        return null != n ? Promise.resolve(n) : (0, s.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t));
                     })(t, e.id).then((e) => {
                         if (!e) throw new g.Z({ errorCode: _.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
                     }),
@@ -65,7 +65,7 @@ t.Z = {
             return r.tn
                 .post({
                     url: _.ANM.ENTITLEMENT_TICKET(l),
-                    body: { test_mode: h.Z.inTestModeForApplication(l) || s.Z.inDevModeForApplication(l) },
+                    body: { test_mode: h.Z.inTestModeForApplication(l) || o.Z.inDevModeForApplication(l) },
                     retries: 3,
                     oldFormErrors: !0,
                     rejectWithError: !1

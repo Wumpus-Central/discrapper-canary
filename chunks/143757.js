@@ -11,8 +11,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(493683),
     d = n(239091),
     u = n(317381),
@@ -25,32 +25,32 @@ var i = n(200651),
     E = n(895924),
     I = n(812236),
     C = n(82295),
-    v = n(740492),
-    S = n(973616),
-    N = n(592125),
+    N = n(740492),
+    v = n(973616),
+    S = n(592125),
     T = n(626135),
     b = n(823379),
-    x = n(404295),
-    A = n(728345),
-    Z = n(812206),
+    A = n(404295),
+    Z = n(728345),
+    x = n(812206),
     L = n(981631),
     P = n(388032),
-    y = n(914333),
-    O = n(312565);
+    O = n(914333),
+    y = n(312565);
 async function R(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = Z.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = S.ZP.createFromServer(await (0, A.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.ZP.createFromServer(await (0, Z.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == N.Z.getDMFromUserId(i.id);
+            l = null == S.Z.getDMFromUserId(i.id);
         try {
             r = await c.Z.openPrivateChannel([i.id], !1, !1, p.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
@@ -88,38 +88,38 @@ async function R(e, t, n) {
 }
 function j(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, o.e7)([N.Z], () => N.Z.getDMFromUserId(l)),
-        h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
+        d = (0, s.e7)([S.Z], () => S.Z.getDMFromUserId(l)),
+        h = (0, s.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
         p = null != h && h.applicationId === t.id && (0, m.p)(h.location) === d,
         g = n === t.id,
         f = null != n;
-    return (0, i.jsx)(s.Clickable, {
-        className: a()(y.clickable, { [y.disabledClickable]: f }),
+    return (0, i.jsx)(o.Clickable, {
+        className: a()(O.clickable, { [O.disabledClickable]: f }),
         onClick: () => (p || f ? null : R(t, r, c)),
         'aria-label': P.intl.formatToPlainString(P.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
-        children: (0, i.jsx)(s.Tooltip, {
-            tooltipContentClassName: y.tooltipContent,
+        children: (0, i.jsx)(o.Tooltip, {
+            tooltipContentClassName: O.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: y.iconContainer,
+                    className: O.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(_.Z, {
                             application: t,
-                            className: y.iconCard,
+                            className: O.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         g || p
-                            ? (0, i.jsx)(s.Spinner, {
-                                  type: s.Spinner.Type.PULSING_ELLIPSIS,
-                                  className: y.spinner,
-                                  itemClassName: p ? y.spinnerInnerRunning : void 0
+                            ? (0, i.jsx)(o.Spinner, {
+                                  type: o.Spinner.Type.PULSING_ELLIPSIS,
+                                  className: O.spinner,
+                                  itemClassName: p ? O.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -131,7 +131,7 @@ function j(e) {
 function D(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
-        className: y.itemContainer,
+        className: O.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -155,8 +155,8 @@ let M = (e) => {
     });
 };
 function w() {
-    let e = (0, x.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
-        t = (0, o.e7)([v.ZP], () => v.ZP.showPlayAgain),
+    let e = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        t = (0, s.e7)([N.ZP], () => N.ZP.showPlayAgain),
         { frecentApps: n } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -167,14 +167,14 @@ function w() {
 }
 function k(e) {
     let { bottomDivider: t } = e,
-        n = (0, x.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        n = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: l } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
             allowCommandFetch: n,
             includeAuthorizedAppsAndFetch: !1
         }),
-        [o, s] = r.useState(void 0),
+        [s, o] = r.useState(void 0),
         { analyticsLocations: c } = (0, g.ZP)(p.Z.APP_DMS_QUICK_LAUNCHER),
         d = w(),
         [u, h] = r.useState(!1),
@@ -194,23 +194,23 @@ function k(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: y.container,
+                    className: O.container,
                     onContextMenu: M,
                     children: [
                         (0, i.jsx)(C.Z, {
-                            className: a()(y.headerContainer, O.privateChannelsHeaderContainer),
+                            className: a()(O.headerContainer, y.privateChannelsHeaderContainer),
                             children: (0, i.jsx)('div', {
-                                className: y.textContainer,
+                                className: O.textContainer,
                                 children: (0, i.jsx)('span', {
-                                    className: O.headerText,
+                                    className: y.headerText,
                                     children: P.intl.string(P.t.vayAzs)
                                 })
                             })
                         }),
                         (0, i.jsx)(D, {
                             frecentApps: m,
-                            loadingAppId: o,
-                            setLoadingAppId: s,
+                            loadingAppId: s,
+                            setLoadingAppId: o,
                             analyticsLocations: c
                         })
                     ]

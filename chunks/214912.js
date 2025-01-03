@@ -10,40 +10,40 @@ var i = n(120356),
     r = n(481060),
     l = n(410030),
     o = n(686546),
-    h = n(565138),
-    d = n(372769),
-    c = n(134432),
-    u = n(601964),
-    p = n(768581),
-    m = n(981631),
+    d = n(565138),
+    h = n(372769),
+    u = n(134432),
+    c = n(601964),
+    m = n(768581),
+    p = n(981631),
     g = n(388032),
     C = n(892528),
-    x = n(129512),
-    I = n(330065);
+    I = n(129512),
+    x = n(330065);
 function v(e) {
     let { guild: t, className: n, onClick: i } = e,
         v = (0, l.ZP)(),
-        f = new u.ZP({
+        f = new c.ZP({
             name: t.name,
             icon: t.icon
         }),
-        N = p.ZP.getGuildDiscoverySplashURL({
+        E = m.ZP.getGuildDiscoverySplashURL({
             id: t.id,
             splash: t.discovery_splash,
-            size: 192 * (0, c.x_)()
+            size: 192 * (0, u.x_)()
         }),
-        E =
-            null != N
-                ? N
+        N =
+            null != E
+                ? E
                 : (function (e) {
                       switch (e) {
-                          case m.BRd.DARK:
-                              return x;
-                          case m.BRd.LIGHT:
+                          case p.BRd.DARK:
                               return I;
+                          case p.BRd.LIGHT:
+                              return x;
                       }
                   })(v),
-        b = p.ZP.getGuildIconURL({
+        b = m.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 50
@@ -57,7 +57,7 @@ function v(e) {
                 className: C.cardHeader,
                 children: [
                     (0, s.jsx)('img', {
-                        src: E,
+                        src: N,
                         alt: '',
                         className: C.splashImage
                     }),
@@ -69,11 +69,11 @@ function v(e) {
                             height: 58,
                             children: (0, s.jsx)('div', {
                                 className: C.iconMask,
-                                children: (0, s.jsx)(h.Z, {
+                                children: (0, s.jsx)(d.Z, {
                                     className: C.__invalid_icon,
                                     iconSrc: b,
                                     guild: f,
-                                    size: h.Z.Sizes.LARGE
+                                    size: d.Z.Sizes.LARGE
                                 })
                             })
                         })
@@ -86,7 +86,7 @@ function v(e) {
                     (0, s.jsxs)('div', {
                         className: C.guildNameWrapper,
                         children: [
-                            (0, s.jsx)(d.Z, {
+                            (0, s.jsx)(h.Z, {
                                 className: C.guildBadge,
                                 guild: t,
                                 tooltipColor: r.Tooltip.Colors.PRIMARY

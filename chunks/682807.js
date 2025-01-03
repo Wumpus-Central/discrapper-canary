@@ -1,55 +1,55 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(780384),
-    o = n(481060),
-    s = n(794295),
-    c = n(410030),
-    d = n(726542),
-    u = n(887706),
-    h = n(388032),
-    m = n(140577);
-function p(e) {
-    var t, n;
-    let { application: r, className: a } = e,
-        s = null !== (n = null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== n ? n : [];
-    return null != r.terms_of_service_url || null != r.privacy_policy_url || s.length > 0
-        ? (0, i.jsxs)('div', {
-              className: l()(m.list, a),
+var a = t(200651);
+t(192379);
+var i = t(120356),
+    r = t.n(i),
+    l = t(780384),
+    o = t(481060),
+    s = t(794295),
+    c = t(410030),
+    d = t(726542),
+    u = t(881294),
+    m = t(388032),
+    p = t(140577);
+function _(e) {
+    var n, t;
+    let { application: i, className: l } = e,
+        s = null !== (t = null === (n = i.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+    return null != i.terms_of_service_url || null != i.privacy_policy_url || s.length > 0
+        ? (0, a.jsxs)('div', {
+              className: r()(p.list, l),
               children: [
-                  (0, i.jsx)(o.Heading, {
+                  (0, a.jsx)(o.Heading, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
-                      children: h.intl.string(h.t.l6DP2t)
+                      children: m.intl.string(m.t.l6DP2t)
                   }),
-                  s.map((e, t) =>
-                      (0, i.jsx)(
+                  s.map((e, n) =>
+                      (0, a.jsx)(
                           g,
                           {
                               url: e.url,
                               children: e.name
                           },
-                          t
+                          n
                       )
                   ),
-                  null != r.terms_of_service_url
-                      ? (0, i.jsx)(f, {
+                  null != i.terms_of_service_url
+                      ? (0, a.jsx)(v, {
                             icon: o.FileIcon,
-                            url: r.terms_of_service_url,
-                            children: h.intl.string(h.t.s7STcX)
+                            url: i.terms_of_service_url,
+                            children: m.intl.string(m.t.s7STcX)
                         })
                       : null,
-                  null != r.privacy_policy_url
-                      ? (0, i.jsx)(f, {
+                  null != i.privacy_policy_url
+                      ? (0, a.jsx)(v, {
                             icon: o.LockIcon,
-                            url: r.privacy_policy_url,
-                            children: h.intl.string(h.t.kH3JR0)
+                            url: i.privacy_policy_url,
+                            children: m.intl.string(m.t.kH3JR0)
                         })
                       : null
               ]
@@ -57,52 +57,52 @@ function p(e) {
         : null;
 }
 function g(e) {
-    var t, n;
-    let { url: r, children: l } = e,
+    var n, t;
+    let { url: i, children: r } = e,
         s = (0, c.ZP)(),
-        u = d.Z.getByUrl(r),
-        h = (0, a.wj)(s) ? (null == u ? void 0 : null === (t = u.icon) || void 0 === t ? void 0 : t.darkSVG) : null == u ? void 0 : null === (n = u.icon) || void 0 === n ? void 0 : n.lightSVG;
-    return (0, i.jsx)(f, {
-        icon: void 0 === h ? o.LinkIcon : void 0,
-        imageSrc: h,
-        url: r,
-        children: l
+        u = d.Z.getByUrl(i),
+        m = (0, l.wj)(s) ? (null == u ? void 0 : null === (n = u.icon) || void 0 === n ? void 0 : n.darkSVG) : null == u ? void 0 : null === (t = u.icon) || void 0 === t ? void 0 : t.lightSVG;
+    return (0, a.jsx)(v, {
+        icon: void 0 === m ? o.LinkIcon : void 0,
+        imageSrc: m,
+        url: i,
+        children: r
     });
 }
-function f(e) {
-    let { icon: t, imageSrc: n, iconColor: r, url: a, children: c } = e,
-        d = (0, u.Z)(),
-        h = null;
-    null != t
-        ? (h = (0, i.jsx)(t, {
-              className: m.listIcon,
-              color: null != r ? r : 'currentColor',
+function v(e) {
+    let { icon: n, imageSrc: t, iconColor: i, url: l, children: c } = e,
+        d = (0, u.nu)(),
+        m = null;
+    null != n
+        ? (m = (0, a.jsx)(n, {
+              className: p.listIcon,
+              color: null != i ? i : 'currentColor',
               width: 20,
               height: 20,
               size: 'custom'
           }))
-        : null != n &&
-          (h = (0, i.jsx)('img', {
-              className: m.listImage,
-              src: n,
+        : null != t &&
+          (m = (0, a.jsx)('img', {
+              className: p.listImage,
+              src: t,
               alt: ''
           }));
-    let p = (0, i.jsxs)(i.Fragment, {
+    let _ = (0, a.jsxs)(a.Fragment, {
         children: [
-            h,
-            (0, i.jsx)(o.Text, {
-                className: m.listText,
+            m,
+            (0, a.jsx)(o.Text, {
+                className: p.listText,
                 variant: 'text-sm/medium',
                 selectable: !0,
                 children: c
             })
         ]
     });
-    return (0, i.jsx)(s.Z, {
-        href: a,
-        className: l()(m.listItem, m.linkItem),
+    return (0, a.jsx)(s.Z, {
+        href: l,
+        className: r()(p.listItem, p.linkItem),
         trusted: !d,
         useDefaultUnderlineStyles: !1,
-        children: p
+        children: _
     });
 }

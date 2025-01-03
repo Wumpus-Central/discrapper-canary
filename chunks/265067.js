@@ -3,8 +3,8 @@ var i = n(243814),
     r = n(100527),
     l = n(208049),
     a = n(763296),
-    o = n(697426),
-    s = n(242291),
+    s = n(697426),
+    o = n(242291),
     c = n(641015),
     d = n(594174),
     u = n(996106),
@@ -21,7 +21,7 @@ t.Z = {
             await (0, l.w)();
             let e = a.Z.getSounds(),
                 t = [];
-            return e.forEach((e) => e.forEach((e) => t.push((0, o.QL)(e)))), t;
+            return e.forEach((e) => e.forEach((e) => t.push((0, s.QL)(e)))), t;
         }
     },
     [g.Et.PLAY_SOUNDBOARD_SOUND]: {
@@ -39,12 +39,12 @@ t.Z = {
             } = e;
             await (0, l.w)();
             let i = d.default.getCurrentUser(),
-                o = a.Z.getSound(t, n),
+                s = a.Z.getSound(t, n),
                 h = (0, m.Z)(),
-                p = null != o && null != i && (0, s.Nq)(i, o, h);
+                p = null != s && null != i && (0, o.Nq)(i, s, h);
             if (null == h) throw new u.Z({ errorCode: g.lT.INVALID_CHANNEL }, 'Invalid Channel.');
             if (p) {
-                if ((0, c.Z)(h)) null != o && (0, s.GN)(o, h.id, [r.Z.RPC]);
+                if ((0, c.Z)(h)) null != s && (0, o.GN)(s, h.id, [r.Z.RPC]);
                 else throw new u.Z({ errorCode: g.lT.INVALID_PERMISSIONS }, 'Invalid Permissions.');
             } else throw new u.Z({ errorCode: g.lT.INVALID_SOUND }, 'Invalid Sound.');
         }

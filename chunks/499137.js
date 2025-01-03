@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return o;
+        return s;
     }
 });
 var i = n(192379),
@@ -19,7 +19,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = (e) => {
+    s = (e) => {
         var t;
         return (
             i.useEffect(() => {

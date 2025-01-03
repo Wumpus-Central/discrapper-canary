@@ -8,8 +8,8 @@ var i = n(192379),
     r = n(166516),
     l = n.n(r),
     a = n(525654),
-    o = n.n(a),
-    s = n(442837),
+    s = n.n(a),
+    o = n(442837),
     c = n(888369),
     d = n(292959),
     u = n(699516),
@@ -22,7 +22,7 @@ var i = n(192379),
 let E = new Set(['Blink', 'Gecko', 'WebKit']),
     I = f.dG4;
 if (m.isPlatformEmbedded) I = (e) => p.ZP.setBadge(e);
-else if (E.has(o().layout)) {
+else if (E.has(s().layout)) {
     let e = new (l())({ animation: 'none' });
     I = (t) => {
         try {
@@ -31,8 +31,8 @@ else if (E.has(o().layout)) {
     };
 }
 function C() {
-    let e = (0, s.e7)([h.Z], () => h.Z.hasIncomingCalls()),
-        t = (0, s.e7)([c.default, u.Z, d.Z], () => {
+    let e = (0, o.e7)([h.Z], () => h.Z.hasIncomingCalls()),
+        t = (0, o.e7)([c.default, u.Z, d.Z], () => {
             let e = c.default.getTotalMentionCount(),
                 t = u.Z.getPendingCount(),
                 n = c.default.hasAnyUnread(),

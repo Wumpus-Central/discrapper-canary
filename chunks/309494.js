@@ -8,8 +8,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(481060),
-    o = n(320161),
-    s = n(572004),
+    s = n(320161),
+    o = n(572004),
     c = n(51144),
     d = n(785717),
     u = n(475413),
@@ -18,8 +18,8 @@ var r = n(120356),
 function p(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
-    return s.wS
-        ? (0, i.jsx)(o.Z, {
+    return o.wS
+        ? (0, i.jsx)(s.Z, {
               text: h.intl.string(h.t.y5MwJy),
               delay: 0,
               'aria-label': !1,

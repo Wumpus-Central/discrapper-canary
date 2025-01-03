@@ -7,8 +7,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(481060),
-    o = n(287734),
-    s = n(367907),
+    s = n(287734),
+    o = n(367907),
     c = n(769654),
     d = n(496675),
     u = n(205129),
@@ -28,8 +28,8 @@ function g(e) {
                       id: 'join-voice',
                       action: function () {
                           (0, c.X)(n.guild.id),
-                              o.default.selectVoiceChannel(n.channel.id),
-                              s.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
+                              s.default.selectVoiceChannel(n.channel.id),
+                              o.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
                                   source: {
                                       ...t.location,
                                       object: m.qAy.LIST_ITEM
@@ -50,7 +50,7 @@ function g(e) {
                       id: 'goto-server',
                       action: function () {
                           (0, c.X)(n.guild.id),
-                              s.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_GUILD_VISITED, {
+                              o.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_GUILD_VISITED, {
                                   source: {
                                       ...t.location,
                                       object: m.qAy.LIST_ITEM

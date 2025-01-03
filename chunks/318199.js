@@ -12,8 +12,8 @@ n(192379);
 var r = n(581282),
     l = n(8853),
     a = n(663002),
-    o = n(2052),
-    s = n(410030),
+    s = n(2052),
+    o = n(410030),
     c = n(100527),
     d = n(906732),
     u = n(605236),
@@ -27,9 +27,9 @@ function g(e) {
 }
 function f(e) {
     let { renderModalProps: t, properties: n } = e,
-        { location: r } = (0, o.O)(),
+        { location: r } = (0, s.O)(),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        u = (0, s.ZP)(),
+        u = (0, o.ZP)(),
         g = (0, a.ap)(u);
     if ('announcementModalVariant1' === n.properties.oneofKind) {
         let e = (0, m.N)({

@@ -17,11 +17,11 @@ var l = t(120356),
     f = t(496675),
     m = t(768581),
     h = t(176354),
-    v = t(981631),
-    E = t(185923),
+    E = t(981631),
+    v = t(185923),
     I = t(388032),
-    M = t(953568);
-let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+    p = t(953568);
+let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function Z(e) {
     var n;
     let { emoji: t, isFocused: l } = e,
@@ -44,17 +44,17 @@ function Z(e) {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         'aria-label': I.intl.formatToPlainString(I.t['/iYSo6'], { emojiName: t.name }),
-                        className: r()(M.button, { [M.focused]: l }),
+                        className: r()(p.button, { [p.focused]: l }),
                         ...e,
                         children:
                             null == s || '' === s.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: r()('emoji', 'emoji-text', M.icon),
+                                      className: r()('emoji', 'emoji-text', p.icon),
                                       ...e,
                                       children: u
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: M.icon,
+                                      className: p.icon,
                                       src: s,
                                       alt: ''
                                   })
@@ -68,24 +68,24 @@ function x(e, n) {
     let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && p.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: E.Hz.REACTION
+                intention: v.Hz.REACTION
             })
         );
     });
     t.length > 4 && (t.length = 4);
     let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(v.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
         I = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return m && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {
-              className: M.wrapper,
+              className: p.wrapper,
               children: t.map((e, n) => {
                   var t;
                   return (0, i.jsx)(

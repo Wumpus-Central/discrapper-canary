@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(512969),
-    s = n(873546),
+    s = n(512969),
+    o = n(873546),
     c = n(442837),
     d = n(481060),
     u = n(570140),
@@ -17,43 +17,43 @@ var i = n(200651),
     E = n(518311),
     I = n(199104),
     C = n(922611),
-    v = n(108427),
-    S = n(210887),
-    N = n(974042),
+    N = n(108427),
+    v = n(210887),
+    S = n(974042),
     T = n(666286),
     b = n(596957),
-    x = n(981631),
-    A = n(723359),
-    Z = n(388032),
+    A = n(981631),
+    Z = n(723359),
+    x = n(388032),
     L = n(224602);
 function P() {
     return (0, i.jsx)('div', {
         className: L.inviteToolbar,
-        children: (0, i.jsx)(E.Z, { tooltip: Z.intl.string(Z.t.HfOgAw) })
+        children: (0, i.jsx)(E.Z, { tooltip: x.intl.string(x.t.HfOgAw) })
     });
 }
 t.Z = function (e) {
     let { initialSection: t } = e,
         n = (0, C.Do)({ location: 'PeoplePage' }),
-        l = (0, o.TH)(),
-        E = (0, o.k6)();
+        l = (0, s.TH)(),
+        E = (0, s.k6)();
     r.useEffect(() => {
         'true' === new URLSearchParams(l.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: A.L0.DEEP_LINK_PROMPT
+                source: Z.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                E.replace(x.Z5c.ME);
+                E.replace(A.Z5c.ME);
             });
     }, [E, l]),
         r.useEffect(() => {
-            h.Y(x.Z5c.FRIENDS), (0, v.e)('friends');
+            h.Y(A.Z5c.FRIENDS), (0, N.e)('friends');
         }, []),
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let y = (0, c.e7)([S.Z], () => S.Z.theme),
-        { section: O, pendingCount: R } = (0, c.cj)([N.ZP], () => N.ZP.getState()),
+    let O = (0, c.e7)([v.Z], () => v.Z.theme),
+        { section: y, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
         j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);
@@ -62,16 +62,16 @@ t.Z = function (e) {
         w = (0, g.Dt)();
     return (0, i.jsxs)('main', {
         className: L.container,
-        'aria-label': Z.intl.string(Z.t.TdEu5e),
+        'aria-label': x.intl.string(x.t.TdEu5e),
         children: [
-            (0, i.jsx)(p.yY, { location: Z.intl.string(Z.t.TdEu5e) }),
+            (0, i.jsx)(p.yY, { location: x.intl.string(x.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
-                theme: y,
+                theme: O,
                 children: (e) =>
                     (0, i.jsxs)(_.Z, {
                         className: e,
                         toolbar: (0, i.jsx)(P, {}),
-                        scrollable: s.tq,
+                        scrollable: o.tq,
                         role: 'navigation',
                         'aria-labelledby': M,
                         children: [
@@ -81,32 +81,32 @@ t.Z = function (e) {
                             }),
                             (0, i.jsx)(_.Z.Title, {
                                 id: M,
-                                children: Z.intl.string(Z.t.TdEu5e)
+                                children: x.intl.string(x.t.TdEu5e)
                             }),
                             (0, i.jsx)(_.Z.Divider, {}),
                             (0, i.jsxs)(d.TabBar, {
-                                'aria-label': Z.intl.string(Z.t.TdEu5e),
-                                selectedItem: O,
+                                'aria-label': x.intl.string(x.t.TdEu5e),
+                                selectedItem: y,
                                 type: 'top-pill',
                                 onItemSelect: D,
                                 className: L.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: x.pJs.ONLINE,
+                                        id: A.pJs.ONLINE,
                                         className: L.item,
-                                        children: Z.intl.string(Z.t.b9w3bG)
+                                        children: x.intl.string(x.t.b9w3bG)
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: x.pJs.ALL,
+                                        id: A.pJs.ALL,
                                         className: L.item,
-                                        children: Z.intl.string(Z.t.PfjFjY)
+                                        children: x.intl.string(x.t.PfjFjY)
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
-                                        id: x.pJs.PENDING,
+                                        id: A.pJs.PENDING,
                                         className: L.item,
-                                        'aria-label': Z.intl.string(Z.t.p6IHGB),
+                                        'aria-label': x.intl.string(x.t.p6IHGB),
                                         children: [
-                                            Z.intl.string(Z.t.p6IHGB),
+                                            x.intl.string(x.t.p6IHGB),
                                             R > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
                                                       count: R,
@@ -117,11 +117,11 @@ t.Z = function (e) {
                                     }),
                                     j > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
-                                              id: x.pJs.SUGGESTIONS,
+                                              id: A.pJs.SUGGESTIONS,
                                               className: L.item,
-                                              'aria-label': Z.intl.string(Z.t['8rSi19']),
+                                              'aria-label': x.intl.string(x.t['8rSi19']),
                                               children: [
-                                                  Z.intl.string(Z.t['8rSi19']),
+                                                  x.intl.string(x.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
                                                       count: j,
                                                       className: L.badge
@@ -132,15 +132,15 @@ t.Z = function (e) {
                                     n
                                         ? null
                                         : (0, i.jsx)(d.TabBar.Item, {
-                                              id: x.pJs.BLOCKED,
+                                              id: A.pJs.BLOCKED,
                                               className: L.item,
-                                              children: Z.intl.string(Z.t['4bDptL'])
+                                              children: x.intl.string(x.t['4bDptL'])
                                           }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        'aria-label': Z.intl.string(Z.t.j0wbEx),
+                                        'aria-label': x.intl.string(x.t.j0wbEx),
                                         className: a()(L.item, L.addFriend),
-                                        id: x.pJs.ADD_FRIEND,
-                                        children: (0, i.jsx)('span', { children: Z.intl.string(Z.t.j0wbEx) })
+                                        id: A.pJs.ADD_FRIEND,
+                                        children: (0, i.jsx)('span', { children: x.intl.string(x.t.j0wbEx) })
                                     })
                                 ]
                             })
@@ -151,15 +151,15 @@ t.Z = function (e) {
                 className: L.tabBody,
                 children: [
                     (0, i.jsx)(d.TabBar.Panel, {
-                        id: O,
+                        id: y,
                         className: L.peopleColumn,
                         'aria-labelledby': w,
                         children:
-                            O === x.pJs.ADD_FRIEND
+                            y === A.pJs.ADD_FRIEND
                                 ? (0, i.jsx)(T.Z, {})
                                 : (0, i.jsx)(b.Z, {
                                       titleId: w,
-                                      sectionFilter: O
+                                      sectionFilter: y
                                   })
                     }),
                     (0, i.jsx)('div', {

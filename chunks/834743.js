@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(324262),
-    o = n(623624),
-    s = n(650774),
+    s = n(623624),
+    o = n(650774),
     c = n(981631),
     d = n(921944),
     u = n(388032),
@@ -31,7 +31,7 @@ class m extends r.PureComponent {
             (n = 'handleButtonClick'),
             (i = () => {
                 let { guild: e } = this.props;
-                (0, o.f)({
+                (0, s.f)({
                     guildId: e.id,
                     location: {
                         section: c.jXE.CHANNEL_NOTICE,
@@ -49,7 +49,7 @@ class m extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = l.ZP.connectStores([s.Z], (e) => {
+t.Z = l.ZP.connectStores([o.Z], (e) => {
     let { guild: t } = e;
-    return { memberCount: s.Z.getMemberCount(t.id) };
+    return { memberCount: o.Z.getMemberCount(t.id) };
 })(m);

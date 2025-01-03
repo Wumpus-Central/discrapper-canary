@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return o;
+        return s;
     },
     s: function () {
         return a;
@@ -21,7 +21,7 @@ function a(e) {
             (0, i.vE)(e);
     }
 }
-function o(e) {
+function s(e) {
     if (e.startsWith('/discovery/applications')) return r.GlobalDiscoveryTab.APPS;
     switch (e) {
         case '/discovery/quests':

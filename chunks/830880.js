@@ -9,8 +9,8 @@ n(192379);
 var r = n(704215),
     l = n(481060),
     a = n(230711),
-    o = n(243778),
-    s = n(187819),
+    s = n(243778),
+    o = n(187819),
     c = n(981631),
     d = n(921944),
     u = n(526761),
@@ -18,9 +18,9 @@ var r = n(704215),
     m = n(388032),
     p = n(962479);
 function g() {
-    let [e, t] = (0, o.US)([r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
+    let [e, t] = (0, s.US)([r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
         n = e === r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
-        g = (0, s._p)({ location: 'PeopleList' }),
+        g = (0, o._p)({ location: 'PeopleList' }),
         f = () => {
             a.Z.open(g ? c.oAB.CONTENT_AND_SOCIAL : c.oAB.ACCOUNT, h.s6.RESTRICTED_USERS, { scrollPosition: u.FY.RESTRICTED_ACCOUNTS });
         };

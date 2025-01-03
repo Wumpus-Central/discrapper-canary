@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(748780),
-    s = n(91192),
+    s = n(748780),
+    o = n(91192),
     c = n(481060),
     d = n(239091),
     u = n(617015),
@@ -24,12 +24,12 @@ function m(e, t, n) {
 }
 class p extends r.PureComponent {
     componentWillLeave(e) {
-        o.Z.parallel([
-            o.Z.timing(this.state.opacity, {
+        s.Z.parallel([
+            s.Z.timing(this.state.opacity, {
                 toValue: 0,
                 duration: 200
             }),
-            o.Z.timing(this.state.height, {
+            s.Z.timing(this.state.height, {
                 toValue: 0,
                 duration: 200
             })
@@ -38,12 +38,12 @@ class p extends r.PureComponent {
     componentWillEnter(e) {
         this.state.opacity.setValue(0),
             this.state.height.setValue(0),
-            o.Z.parallel([
-                o.Z.timing(this.state.opacity, {
+            s.Z.parallel([
+                s.Z.timing(this.state.opacity, {
                     toValue: 1,
                     duration: 200
                 }),
-                o.Z.timing(this.state.height, {
+                s.Z.timing(this.state.height, {
                     toValue: u.NV,
                     duration: 200
                 })
@@ -52,15 +52,15 @@ class p extends r.PureComponent {
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: r } = this.state,
             { children: l, user: d, onClick: u, isActive: m, className: p, activeClassName: g } = this.props;
-        return (0, i.jsx)(s.mh, {
+        return (0, i.jsx)(o.mh, {
             id: d.id,
-            children: (s) =>
+            children: (o) =>
                 (0, i.jsx)(c.FocusRing, {
                     offset: {
                         left: -8,
                         right: -8
                     },
-                    children: (0, i.jsx)(o.Z.div, {
+                    children: (0, i.jsx)(s.Z.div, {
                         className: a()(p, h.peopleListItem, null != g ? { [g]: m || r } : null, { [h.active]: m || r }),
                         onContextMenu: (e) => this.handleContextMenu(e, d),
                         onMouseEnter: this.handleMouseEnter,
@@ -70,7 +70,7 @@ class p extends r.PureComponent {
                             height: e,
                             opacity: t
                         },
-                        ...s,
+                        ...o,
                         children: l(n || m || r)
                     })
                 })
@@ -79,8 +79,8 @@ class p extends r.PureComponent {
     constructor(...e) {
         super(...e),
             m(this, 'state', {
-                height: new o.Z.Value(u.NV),
-                opacity: new o.Z.Value(1),
+                height: new s.Z.Value(u.NV),
+                opacity: new s.Z.Value(1),
                 hovered: !1,
                 isContextMenuActive: !1
             }),

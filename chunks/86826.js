@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(44315),
-    o = n(600164),
-    s = n(120998),
+    s = n(600164),
+    o = n(120998),
     c = n(353042),
     d = n(388032),
     u = n(717242);
@@ -19,12 +19,12 @@ t.Z = function (e) {
             var c;
             return (0, i.jsx)('div', {
                 className: l()(u.monitor, r),
-                children: (0, i.jsxs)(o.Z, {
-                    align: o.Z.Align.CENTER,
+                children: (0, i.jsxs)(s.Z, {
+                    align: s.Z.Align.CENTER,
                     children: [
-                        (0, i.jsxs)(o.Z, {
+                        (0, i.jsxs)(s.Z, {
                             className: u.text,
-                            direction: o.Z.Direction.VERTICAL,
+                            direction: s.Z.Direction.VERTICAL,
                             children: [
                                 (0, i.jsx)('div', {
                                     className: u.title,
@@ -38,7 +38,7 @@ t.Z = function (e) {
                         }),
                         (0, i.jsx)('div', {
                             className: u.overflowContainer,
-                            children: (0, i.jsx)(s.Z, {
+                            children: (0, i.jsx)(o.Z, {
                                 data: e,
                                 maxValue: Math.max(Math.max.apply(null, e), 1000),
                                 className: u.sparkChart,

@@ -7,18 +7,18 @@ var i = n(192379),
     r = n(442837),
     l = n(592125),
     a = n(594174),
-    o = n(355298),
-    s = n(900255);
+    s = n(355298),
+    o = n(900255);
 function c() {
     let e = (0, r.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
         t = (0, r.Wu)(
-            [l.Z, o.Z],
+            [l.Z, s.Z],
             () => {
                 let e = l.Z.getMutablePrivateChannels(),
-                    t = Array.from(o.Z.getMessageRequestChannelIds())
+                    t = Array.from(s.Z.getMessageRequestChannelIds())
                         .map((t) => e[t])
                         .filter((e) => null != e);
-                return (0, s.x)(t);
+                return (0, o.x)(t);
             },
             [e]
         ),

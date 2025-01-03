@@ -1,34 +1,34 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var l = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(392681);
-function a(e) {
-    let { onClick: n, Icon: t, 'aria-label': a } = e,
+var r = n(200651);
+n(192379);
+var i = n(481060),
+    a = n(392681);
+function l(e) {
+    let { onClick: t, Icon: n, 'aria-label': l } = e,
         o = (0, i.useToken)(i.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY),
-        s = (0, l.jsx)(t, {
+        s = (0, r.jsx)(n, {
             color: o.hex(),
             size: 'custom',
             width: 16,
             height: 16
         });
-    return null == n
-        ? (0, l.jsx)('div', {
-              className: r.container,
-              'aria-label': a,
+    return null == t
+        ? (0, r.jsx)('div', {
+              className: a.container,
+              'aria-label': l,
               children: s
           })
-        : (0, l.jsx)(i.Tooltip, {
-              text: a,
+        : (0, r.jsx)(i.Tooltip, {
+              text: l,
               children: (e) =>
-                  (0, l.jsx)(i.Clickable, {
-                      className: r.container,
+                  (0, r.jsx)(i.Clickable, {
+                      className: a.container,
                       ...e,
-                      onClick: n,
+                      onClick: t,
                       children: s
                   })
           });

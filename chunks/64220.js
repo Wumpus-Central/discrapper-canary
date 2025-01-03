@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(481060),
     a = n(921944),
-    o = n(388032),
-    s = n(760312);
+    s = n(388032),
+    o = n(760312);
 function c(e) {
     let { markAsDismissed: t } = e;
     return (
@@ -22,7 +22,7 @@ function c(e) {
             };
         }, [t]),
         (0, i.jsxs)(l.Clickable, {
-            className: s.container,
+            className: o.container,
             onClick: () => {
                 t(a.L.USER_DISMISS);
             },
@@ -30,25 +30,25 @@ function c(e) {
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: o.intl.string(o.t.fJNqJi)
+                    children: s.intl.string(s.t.fJNqJi)
                 }),
-                (0, i.jsx)('div', { className: s.pointer })
+                (0, i.jsx)('div', { className: o.pointer })
             ]
         })
     );
 }
 function d(e) {
     let { children: t, markAsDismissed: n } = e,
-        [a, o] = r.useState(!1);
+        [a, s] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e = setTimeout(() => {
-                o(!0);
+                s(!0);
             }, 1000);
             return () => {
                 clearTimeout(e);
             };
-        }, [o]),
+        }, [s]),
         (0, i.jsx)(l.Popout, {
             position: 'top',
             align: 'left',

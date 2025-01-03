@@ -15,8 +15,8 @@ var i = t(200651),
     c = t(714338),
     d = t(585483),
     h = t(254109),
-    m = t(212459),
-    f = t(73249),
+    f = t(212459),
+    m = t(73249),
     p = t(730606),
     _ = t(369171),
     E = t(860153),
@@ -82,7 +82,7 @@ function C(e) {
                 onMouseMove: P,
                 onClick: w,
                 'aria-label': S.intl.string(S.t.AMTX3t),
-                children: (0, i.jsxs)(m.z.Provider, {
+                children: (0, i.jsxs)(f.z.Provider, {
                     value: D,
                     children: [
                         (0, i.jsx)(E.Z, {
@@ -98,7 +98,7 @@ function C(e) {
                                     shouldRedactExplicitContent: C,
                                     shouldHideMediaOptions: I
                                 }),
-                                (0, i.jsx)(f.Z, {
+                                (0, i.jsx)(m.Z, {
                                     item: k,
                                     hideMediaOptions: I
                                 })

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(100527),
+    s = n(481060),
+    o = n(100527),
     c = n(707409),
     d = n(184301),
     u = n(347475),
@@ -80,14 +80,14 @@ class I extends r.PureComponent {
     }
     renderActivityDiscordTag(e) {
         return (0, i.jsx)(
-            o.Popout,
+            s.Popout,
             {
                 preload: () => (0, d.Z)(e),
                 renderPopout: (t) =>
                     (0, i.jsx)(u.Z, {
                         ...t,
                         userId: e.id,
-                        newAnalyticsLocations: [s.Z.USERNAME]
+                        newAnalyticsLocations: [o.Z.USERNAME]
                     }),
                 position: 'right',
                 children: (t) =>
@@ -147,26 +147,26 @@ class I extends r.PureComponent {
                 return null == l
                     ? null
                     : (0, i.jsx)(
-                          o.Popout,
+                          s.Popout,
                           {
                               preload: () => (0, d.Z)(e),
                               renderPopout: (t) =>
                                   (0, i.jsx)(u.Z, {
                                       ...t,
                                       userId: e.id,
-                                      newAnalyticsLocations: [s.Z.AVATAR]
+                                      newAnalyticsLocations: [o.Z.AVATAR]
                                   }),
                               position: 'right',
                               children: (t) =>
-                                  (0, i.jsx)(o.Tooltip, {
+                                  (0, i.jsx)(s.Tooltip, {
                                       text: this.renderUserTooltip(e, l.startTime, l.endTime),
                                       'aria-label': (0, m.W5)(e, { decoration: 'never' }),
                                       children: (n) =>
-                                          (0, i.jsx)(o.Avatar, {
+                                          (0, i.jsx)(s.Avatar, {
                                               className: a()(f.playerAvatar, { [f.avatarMasked]: !r }),
                                               src: e.getAvatarURL(void 0, 32),
                                               'aria-label': e.username,
-                                              size: o.AvatarSizes.SIZE_32,
+                                              size: s.AvatarSizes.SIZE_32,
                                               ...n,
                                               ...t
                                           })

@@ -3,8 +3,8 @@ var i,
     r,
     l = n(200651),
     a = n(192379),
-    o = n(120356),
-    s = n.n(o),
+    s = n(120356),
+    o = n.n(s),
     c = n(442837),
     d = n(692547),
     u = n(481060),
@@ -17,18 +17,18 @@ var i,
     E = n(833664),
     I = n(503438),
     C = n(420660),
-    v = n(74433),
-    S = n(906732),
-    N = n(812206),
+    N = n(74433),
+    v = n(906732),
+    S = n(812206),
     T = n(933557),
     b = n(194082),
-    x = n(264165),
-    A = n(548816),
-    Z = n(925329),
+    A = n(264165),
+    Z = n(548816),
+    x = n(925329),
     L = n(102172),
     P = n(871118),
-    y = n(707409),
-    O = n(849171),
+    O = n(707409),
+    y = n(849171),
     R = n(314897),
     j = n(592125),
     D = n(594174),
@@ -49,7 +49,7 @@ let z = {
     Y = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, l.jsx)(u.Text, {
-            className: s()(F.textContent, t),
+            className: o()(F.textContent, t),
             variant: 'text-sm/semibold',
             children: e
         });
@@ -57,7 +57,7 @@ let z = {
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return (0, l.jsx)(u.Text, {
-            className: s()(F.textContent, t),
+            className: o()(F.textContent, t),
             variant: 'text-xs/normal',
             children: e
         });
@@ -86,10 +86,10 @@ class Q extends a.Component {
             : K(
                   (e = (0, _.Z)(t)
                       ? (0, l.jsx)(q, { timestamps: n })
-                      : (0, l.jsx)(y.ZP, {
+                      : (0, l.jsx)(O.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: y.ZP.Locations.USER_ACTIVITY,
+                            location: O.ZP.Locations.USER_ACTIVITY,
                             className: F.__invalid_playTime
                         }))
               );
@@ -97,7 +97,7 @@ class Q extends a.Component {
     render() {
         var e, t;
         let {
-            activity: { assets: i, details: r, state: a, application_id: o },
+            activity: { assets: i, details: r, state: a, application_id: s },
             getAssetImage: c
         } = this.props;
         return (0, l.jsx)(X, {
@@ -110,13 +110,13 @@ class Q extends a.Component {
                               children: [
                                   (0, l.jsx)('img', {
                                       alt: null !== (e = i.large_text) && void 0 !== e ? e : '',
-                                      src: c(o, i.large_image, [z.LARGE, z.LARGE]),
-                                      className: s()(F.largeImage, { [F.largeImageMask]: null != i.small_image })
+                                      src: c(s, i.large_image, [z.LARGE, z.LARGE]),
+                                      className: o()(F.largeImage, { [F.largeImageMask]: null != i.small_image })
                                   }),
                                   null != i.small_image
                                       ? (0, l.jsx)('img', {
                                             alt: null !== (t = i.small_text) && void 0 !== t ? t : '',
-                                            src: c(o, i.small_image, [z.SMALL, z.SMALL]),
+                                            src: c(s, i.small_image, [z.SMALL, z.SMALL]),
                                             className: F.smallImage
                                         })
                                       : null
@@ -160,7 +160,7 @@ let J = (e) => {
                 className: F.multipleIconWrapper,
                 children: (0, l.jsx)(u.GameControllerIcon, {
                     size: 'md',
-                    className: s()(F.headerIcon, F.multipleIcon),
+                    className: o()(F.headerIcon, F.multipleIcon),
                     color: d.Z.unsafe_rawColors.PRIMARY_300.css
                 })
             });
@@ -175,7 +175,7 @@ let J = (e) => {
     return null != i || null != r
         ? (0, l.jsx)(u.Clickable, {
               onClick: i,
-              className: s()(null != i ? F.clickable : ''),
+              className: o()(null != i ? F.clickable : ''),
               onContextMenu: r,
               children: t
           })
@@ -183,7 +183,7 @@ let J = (e) => {
 };
 J.Src = i;
 let $ = (e) => {
-    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: o, onContextMenu: c, guildId: d } = e,
+    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: s, onContextMenu: c, guildId: d } = e,
         h = (0, l.jsx)(u.Text, {
             color: 'header-secondary',
             className: F.textContent,
@@ -205,7 +205,7 @@ let $ = (e) => {
                 className: F.__invalid_headerDetails,
                 children: [
                     (0, l.jsx)(u.Text, {
-                        className: s()(F.textContent),
+                        className: o()(F.textContent),
                         variant: 'text-md/semibold',
                         children: n
                     }),
@@ -218,10 +218,10 @@ let $ = (e) => {
                         : h
                 ]
             }),
-            null != r && null != o
+            null != r && null != s
                 ? (0, l.jsx)(u.Clickable, {
                       className: F.clickable,
-                      onClick: o,
+                      onClick: s,
                       children: r
                   })
                 : r
@@ -232,8 +232,8 @@ $.Icon = J;
 let ee = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(u.FocusRing, {
-        children: (0, l.jsx)(A.Z, {
-            className: s()(n, F.wrapper),
+        children: (0, l.jsx)(Z.Z, {
+            className: o()(n, F.wrapper),
             padded: !0,
             ...i,
             children: t
@@ -243,7 +243,7 @@ let ee = (e) => {
 (ee.Header = $),
     (ee.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(A.Z, {
+        return (0, l.jsx)(Z.Z, {
             inset: !0,
             padded: !1,
             className: F.body,
@@ -252,11 +252,11 @@ let ee = (e) => {
     }),
     (ee.Separator = (e) => {
         let { inset: t, className: n } = e;
-        return (0, l.jsx)('div', { className: s()(F.separator, { [F.inset]: t }, n) });
+        return (0, l.jsx)('div', { className: o()(F.separator, { [F.inset]: t }, n) });
     }),
     (ee.VoiceSection = (e) => {
         var t, n;
-        let { guild: i, channel: r, onGuildClick: o, partySize: c, members: d, onChannelContextMenu: h } = e,
+        let { guild: i, channel: r, onGuildClick: s, partySize: c, members: d, onChannelContextMenu: h } = e,
             m = a.useRef(null),
             p = (0, T.ZP)(r, !0);
         return (0, l.jsx)(X, {
@@ -266,7 +266,7 @@ let ee = (e) => {
                 onContextMenu: (e) => h(e, r),
                 children: [
                     (0, l.jsx)(u.Clickable, {
-                        onClick: o,
+                        onClick: s,
                         'aria-hidden': !0,
                         tabIndex: -1,
                         children: (0, l.jsxs)('div', {
@@ -276,7 +276,7 @@ let ee = (e) => {
                                     ? (0, l.jsx)('img', {
                                           alt: '',
                                           src: null !== (t = i.getIconURL(32)) && void 0 !== t ? t : void 0,
-                                          className: s()(F.voiceSectionGuildImage, F.largeImageMask)
+                                          className: o()(F.voiceSectionGuildImage, F.largeImageMask)
                                       })
                                     : (0, l.jsx)('div', {
                                           className: F.voiceSectionNoGuildImageWrapper,
@@ -298,7 +298,7 @@ let ee = (e) => {
                         })
                     }),
                     (0, l.jsx)(u.Clickable, {
-                        onClick: o,
+                        onClick: s,
                         focusProps: { ringTarget: m },
                         children: (0, l.jsxs)('div', {
                             className: F.voiceSectionDetails,
@@ -358,7 +358,7 @@ let ee = (e) => {
         var t;
         let {
             activity: { assets: n, details: i, state: r, application_id: a },
-            partySize: o,
+            partySize: s,
             members: c,
             isSolo: u,
             getAssetImage: h
@@ -374,7 +374,7 @@ let ee = (e) => {
                                   (0, l.jsx)('img', {
                                       alt: null !== (t = n.large_text) && void 0 !== t ? t : '',
                                       src: h(a, n.large_image, [z.LARGE, z.LARGE]),
-                                      className: s()(F.largeImage, F.borderRadius0, { [F.largeImageMask]: null != n.small_image })
+                                      className: o()(F.largeImage, F.borderRadius0, { [F.largeImageMask]: null != n.small_image })
                                   }),
                                   u
                                       ? null
@@ -390,7 +390,7 @@ let ee = (e) => {
                     }),
                     (0, l.jsx)(B.Z, {
                         minAvatarsShown: u ? 2 : 1,
-                        partySize: o,
+                        partySize: s,
                         members: c
                     })
                 ]
@@ -399,11 +399,11 @@ let ee = (e) => {
     }),
     (ee.TwitchSection = (e) => {
         let t,
-            { activity: i, user: r, getAssetImage: a, guildId: o } = e,
+            { activity: i, user: r, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(x.Z, {
+            t = (0, l.jsx)(A.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
@@ -428,7 +428,7 @@ let ee = (e) => {
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: s()({
+                    className: o()({
                         [F.twitchSectionSimple]: null == r,
                         [F.twitchSectionFull]: null != r
                     }),
@@ -443,7 +443,7 @@ let ee = (e) => {
                         }),
                         null != r
                             ? (0, l.jsx)(u.Avatar, {
-                                  src: r.getAvatarURL(o, 24),
+                                  src: r.getAvatarURL(s, 24),
                                   'aria-label': r.username,
                                   className: F.twitchSectionAvatar,
                                   size: u.AvatarSizes.SIZE_24
@@ -457,11 +457,11 @@ let ee = (e) => {
     }),
     (ee.ApplicationStreamingSection = (e) => {
         var t, n;
-        let { activity: i, user: r, applicationStream: a, onPreviewClick: o, guildId: s } = e,
+        let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: o } = e,
             d = (0, c.e7)([j.Z], () => j.Z.getChannel(a.channelId)),
             [h, m] = (0, L.wq)(d),
             p = (0, l.jsxs)(u.Clickable, {
-                onClick: h ? o : void 0,
+                onClick: h ? s : void 0,
                 className: F.applicationStreamingPreviewWrapper,
                 children: [
                     (0, l.jsx)(P.Z, {
@@ -476,7 +476,7 @@ let ee = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.intl.string(V.t.eXan7O);
+            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.intl.string(V.t.eXan7O);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
@@ -484,7 +484,7 @@ let ee = (e) => {
                     children: [
                         (0, l.jsx)(u.Avatar, {
                             size: u.AvatarSizes.SIZE_32,
-                            src: r.getAvatarURL(s, 32),
+                            src: r.getAvatarURL(o, 32),
                             'aria-label': r.username,
                             className: F.applicationStreamingAvatar
                         }),
@@ -500,13 +500,13 @@ let ee = (e) => {
     }),
     (ee.EmbeddedActivitySection = (e) => {
         let { activity: t, channel: n, guildId: i, participants: r } = e,
-            [o, s] = a.useState(null),
+            [s, o] = a.useState(null),
             d = t.application_id;
         a.useEffect(() => {
             if (null != d)
                 (0, k.fetchAssetIds)(d, ['embedded_background']).then((e) => {
                     let [t] = e;
-                    return s(t);
+                    return o(t);
                 });
         }, [d]);
         let h = (0, c.Wu)([D.default, R.default], () =>
@@ -515,20 +515,20 @@ let ee = (e) => {
                     .filter(U.lm)
             ),
             p = (0, m.O)(),
-            { analyticsLocations: f } = (0, S.ZP)();
+            { analyticsLocations: f } = (0, v.ZP)();
         if (null == d) return null;
-        let _ = N.Z.getApplication(d);
+        let _ = S.Z.getApplication(d);
         if (null == _) return null;
         let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            I = (0, k.getAssetImage)(_.id, o, 300);
+            I = (0, k.getAssetImage)(_.id, s, 300);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
                     className: F.embeddedActivityTopRow,
                     children: [
-                        (0, l.jsx)(Z.Z, {
+                        (0, l.jsx)(x.Z, {
                             game: _,
-                            size: Z.Z.Sizes.XSMALL,
+                            size: x.Z.Sizes.XSMALL,
                             className: F.embeddedActivityIcon
                         }),
                         (0, l.jsx)('div', {
@@ -563,7 +563,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(O.OV, {
+                                (0, l.jsx)(y.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id

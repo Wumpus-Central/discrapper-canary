@@ -3,8 +3,8 @@ var i = n(392711),
     r = n.n(i),
     l = n(243814),
     a = n(570140),
-    o = n(626135),
-    s = n(81063),
+    s = n(626135),
+    o = n(81063),
     c = n(70956),
     d = n(996106),
     u = n(914946),
@@ -86,25 +86,25 @@ t.Z = {
             let _ = i.transport === m.He.POST_MESSAGE,
                 E = (0, u.S5)(h, _);
             E > 0 && (h.flags = E), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
-            let { assets: I, party: C, secrets: v, timestamps: S, buttons: N, type: T } = h;
-            if ((null == T && (h.type = p.IIU.PLAYING), null != v)) {
+            let { assets: I, party: C, secrets: N, timestamps: v, buttons: S, type: T } = h;
+            if ((null == T && (h.type = p.IIU.PLAYING), null != N)) {
                 let e = r()
-                    .values(v)
+                    .values(N)
                     .filter((e) => !!e);
                 if (null != C && r().intersection(e, [C.id]).length > 0 && !g.includes(i.application.id)) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (r().uniq(e).length < e.length) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
-                if (null != N) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
+                if (null != S) throw new d.Z({ errorCode: p.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
-            if ((null != N && ((h.metadata = { button_urls: N.map((e) => e.url) }), (h.buttons = N.map((e) => e.label))), null != S)) for (let e of Object.keys(S)) Date.now().toString().length - S[e].toString().length > 2 && (S[e] = Math.floor(S[e] * c.Z.Millis.SECOND));
+            if ((null != S && ((h.metadata = { button_urls: S.map((e) => e.url) }), (h.buttons = S.map((e) => e.label))), null != v)) for (let e of Object.keys(v)) Date.now().toString().length - v[e].toString().length > 2 && (v[e] = Math.floor(v[e] * c.Z.Millis.SECOND));
             if (null == I) n = Promise.resolve([]);
             else {
                 if (null == i.application || null == i.application.id) throw Error();
-                n = (0, s.fetchAssetIds)(i.application.id, [I.large_image, I.small_image]);
+                n = (0, o.fetchAssetIds)(i.application.id, [I.large_image, I.small_image]);
             }
             return n.then((e) => {
                 var t, n;
-                let [r, s] = e;
-                if ((null != I && (null != r ? (I.large_image = r) : delete I.large_image, null != s ? (I.small_image = s) : delete I.small_image), !f())) return;
+                let [r, o] = e;
+                if ((null != I && (null != r ? (I.large_image = r) : delete I.large_image, null != o ? (I.small_image = o) : delete I.small_image), !f())) return;
                 a.Z.dispatch({
                     type: 'LOCAL_ACTIVITY_UPDATE',
                     socketId: i.id,
@@ -119,7 +119,7 @@ t.Z = {
                         details: null !== (t = h.details) && void 0 !== t ? t : '',
                         state: null !== (n = h.state) && void 0 !== n ? n : ''
                     };
-                return null != c && ((u.has_match_secret = !!c.match), (u.has_join_secret = !!c.join)), null != I && (u.has_images = !!(I.large_image || I.small_image)), null != d && ((u.party_max = null != d.size ? d.size[1] : void 0), (u.party_id = d.id)), o.default.track(p.rMx.ACTIVITY_UPDATED, u), h;
+                return null != c && ((u.has_match_secret = !!c.match), (u.has_join_secret = !!c.join)), null != I && (u.has_images = !!(I.large_image || I.small_image)), null != d && ((u.party_max = null != d.size ? d.size[1] : void 0), (u.party_id = d.id)), s.default.track(p.rMx.ACTIVITY_UPDATED, u), h;
             });
         }
     }

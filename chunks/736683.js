@@ -11,16 +11,16 @@ n(192379);
 var r = n(481060),
     l = n(113434),
     a = n(786089),
-    o = n(383747),
-    s = n(710914),
+    s = n(383747),
+    o = n(710914),
     c = n(308470);
 function d(e) {
     let { onSelectTab: t } = e,
-        { claimedQuests: n, isFetchingClaimedQuests: s } = (0, l.eN)();
-    return s && 0 === n.length
+        { claimedQuests: n, isFetchingClaimedQuests: o } = (0, l.eN)();
+    return o && 0 === n.length
         ? (0, i.jsx)(r.Spinner, { className: c.spinner })
         : 0 === n.length
-          ? (0, i.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
+          ? (0, i.jsx)(s.Z, { onClick: () => t(l.e5.ALL) })
           : (0, i.jsx)('div', {
                 className: c.gridContainer,
                 children: n.map((e) => (0, i.jsx)(a.Z, { quest: e }, e.id))
@@ -32,8 +32,8 @@ function u(e) {
     return a && 0 === n.length
         ? (0, i.jsx)(r.Spinner, { className: c.spinner })
         : 0 === n.length
-          ? (0, i.jsx)(o.Z, { onClick: () => t(l.e5.ALL) })
-          : (0, i.jsx)(s.Z, {
+          ? (0, i.jsx)(s.Z, { onClick: () => t(l.e5.ALL) })
+          : (0, i.jsx)(o.Z, {
                 quests: n,
                 isFetching: a
             });

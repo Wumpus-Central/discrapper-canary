@@ -17,7 +17,7 @@ t.Z = (0, i.B)({
             }
         },
         {
-            id: 1,
+            id: 2,
             label: 'Enables the report button in App DMs on desktop and mobile',
             config: {
                 enabledDesktop: !0,

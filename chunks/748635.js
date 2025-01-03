@@ -3,12 +3,12 @@ var i = n(857192),
     l = n(915357),
     a = n(981631);
 t.Z = (e) => {
-    let { origin: t, postMessageToRPCClient: n, frameId: o, version: s, encoding: c, logger: d, postClose: u } = e;
+    let { origin: t, postMessageToRPCClient: n, frameId: s, version: o, encoding: c, logger: d, postClose: u } = e;
     return new l.Z({
         origin: t,
         postMessageToRPCClient: n,
-        frameId: o,
-        version: s,
+        frameId: s,
+        version: o,
         encoding: c,
         logger: d,
         postClose: u,

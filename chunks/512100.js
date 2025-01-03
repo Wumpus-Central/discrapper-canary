@@ -1,41 +1,41 @@
-t.d(n, {
+l.d(e, {
     u: function () {
         return c;
     }
 });
-var l = t(200651);
-t(192379);
-var o = t(409794),
-    i = t(777207),
-    a = t(541822),
-    r = t(330711),
-    s = t(189090);
-function c(e) {
-    let { benefits: n, description: t, imgSrc: c, title: d, tag: u, FallbackIcon: m } = e,
+var t = l(200651);
+l(192379);
+var i = l(409794),
+    o = l(777207),
+    r = l(541822),
+    s = l(330711),
+    a = l(189090);
+function c(n) {
+    let { benefits: e, description: l, imgSrc: c, title: d, tag: u, FallbackIcon: m } = n,
         x = null != c ? { '--custom-background-url': 'url('.concat(c.toString(), ')') } : void 0;
-    return (0, l.jsx)('div', {
-        className: s.container,
-        children: (0, l.jsx)(a.Z, {
-            className: s.scroller,
-            children: (0, l.jsxs)('div', {
-                className: s.scrollContent,
+    return (0, t.jsx)('div', {
+        className: a.container,
+        children: (0, t.jsx)(r.Z, {
+            className: a.scroller,
+            children: (0, t.jsxs)('div', {
+                className: a.scrollContent,
                 children: [
-                    (0, l.jsxs)('div', {
-                        className: s.header,
+                    (0, t.jsxs)('div', {
+                        className: a.header,
                         children: [
-                            (0, l.jsx)('div', {
-                                className: s.headerBackground,
+                            (0, t.jsx)('div', {
+                                className: a.headerBackground,
                                 style: x
                             }),
-                            (0, l.jsx)('div', {
-                                className: s.headerImage,
+                            (0, t.jsx)('div', {
+                                className: a.headerImage,
                                 children:
                                     null != c
-                                        ? (0, l.jsx)('img', {
+                                        ? (0, t.jsx)('img', {
                                               src: c.toString(),
                                               alt: ''
                                           })
-                                        : (0, l.jsx)(m, {
+                                        : (0, t.jsx)(m, {
                                               size: 'custom',
                                               color: 'var(--text-muted)',
                                               height: 96,
@@ -44,38 +44,38 @@ function c(e) {
                             })
                         ]
                     }),
-                    (0, l.jsxs)('div', {
-                        className: s.content,
+                    (0, t.jsxs)('div', {
+                        className: a.content,
                         children: [
-                            (0, l.jsxs)('div', {
-                                className: s.details,
+                            (0, t.jsxs)('div', {
+                                className: a.details,
                                 children: [
-                                    null != u && (0, l.jsx)('div', { children: u }),
-                                    (0, l.jsx)(o.X, {
+                                    null != u && (0, t.jsx)('div', { children: u }),
+                                    (0, t.jsx)(i.X, {
                                         color: 'header-primary',
                                         variant: 'heading-xl/semibold',
                                         children: d
                                     }),
-                                    null != t &&
-                                        '' !== t &&
-                                        (0, l.jsx)(i.x, {
+                                    null != l &&
+                                        '' !== l &&
+                                        (0, t.jsx)(o.x, {
                                             color: 'text-normal',
                                             variant: 'text-md/normal',
-                                            className: s.description,
-                                            children: t
+                                            className: a.description,
+                                            children: l
                                         })
                                 ]
                             }),
-                            null != n &&
-                                (0, l.jsxs)('div', {
-                                    className: s.benefits,
+                            null != e &&
+                                (0, t.jsxs)('div', {
+                                    className: a.benefits,
                                     children: [
-                                        (0, l.jsx)(i.x, {
+                                        (0, t.jsx)(o.x, {
                                             color: 'header-secondary',
                                             variant: 'eyebrow',
-                                            children: r.Z.Messages.STOREFRONT_BENEFITS_TITLE
+                                            children: s.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                         }),
-                                        n
+                                        e
                                     ]
                                 })
                         ]

@@ -1,20 +1,20 @@
-n.d(t, {
+t.d(n, {
     M: function () {
-        return l;
+        return r;
     }
 });
-var i = n(192379),
-    r = n(397341);
-function l() {
-    let e = i.useRef(new r.Z()),
-        t = i.useCallback((t) => {
-            e.current.handleScroll(t);
+var a = t(192379),
+    i = t(397341);
+function r() {
+    let e = a.useRef(new i.Z()),
+        n = a.useCallback((n) => {
+            e.current.handleScroll(n);
         }, []);
     return {
-        resetScrollPosition: i.useCallback(() => {
+        resetScrollPosition: a.useCallback(() => {
             e.current.scrollPosition.set(0);
         }, []),
         scrollPosition: e.current.scrollPosition,
-        onScroll: t
+        onScroll: n
     };
 }

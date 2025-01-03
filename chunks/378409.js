@@ -1,4 +1,4 @@
-e.d(t, {
+e.d(n, {
     Jj: function () {
         return h;
     },
@@ -19,37 +19,37 @@ e.d(t, {
 var r = e(829883),
     l = e(378233),
     i = e(591759);
-let u = /^.*\.discordapp\.net$/,
-    a = 'cdn.discordapp.com',
+let a = /^.*\.discordapp\.net$/,
+    u = 'cdn.discordapp.com',
     o = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    d = new Set(['jpg', 'jpeg', 'png']),
-    s = (n) => {
-        var t, e, r, l;
-        return null === (l = i.Z.toURLSafe(n)) || void 0 === l ? void 0 : null === (r = l.pathname) || void 0 === r ? void 0 : null === (e = r.split('.')) || void 0 === e ? void 0 : null === (t = e.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+    s = new Set(['jpg', 'jpeg', 'png']),
+    d = (t) => {
+        var n, e, r, l;
+        return null === (l = i.Z.toURLSafe(t)) || void 0 === l ? void 0 : null === (r = l.pathname) || void 0 === r ? void 0 : null === (e = r.split('.')) || void 0 === e ? void 0 : null === (n = e.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function c(n) {
-    return n.host === a || u.test(n.hostname);
+function c(t) {
+    return t.host === u || a.test(t.hostname);
 }
-function f(n) {
-    let t = i.Z.toURLSafe(n);
-    return null != t && c(t);
+function f(t) {
+    let n = i.Z.toURLSafe(t);
+    return null != n && c(n);
 }
-function h(n) {
-    return !((0, l.B0)(n) || (0, r.zt)(n)) && !0;
+function h(t) {
+    return !((0, l.B0)(t) || (0, r.zt)(t)) && !0;
 }
-function p(n) {
-    let t = i.Z.toURLSafe(n);
-    if (null == t) return !1;
-    let e = s(n);
-    return null != e && o.has(e) && c(t) && h(n);
+function p(t) {
+    let n = i.Z.toURLSafe(t);
+    if (null == n) return !1;
+    let e = d(t);
+    return null != e && o.has(e) && c(n) && h(t);
 }
-function v(n) {
-    let t = i.Z.toURLSafe(n);
-    if (null == t) return !1;
-    let e = s(n);
-    return null != e && d.has(e) && c(t) && h(n);
+function v(t) {
+    let n = i.Z.toURLSafe(t);
+    if (null == n) return !1;
+    let e = d(t);
+    return null != e && s.has(e) && c(n) && h(t);
 }
-function m(n) {
-    let t = i.Z.toURLSafe(n);
-    return null == t || t.host === a ? n : 'https://media.discordapp.net' === t.origin ? ((t.host = a), t.searchParams.delete('size'), t.searchParams.delete('width'), t.searchParams.delete('height'), t.searchParams.delete('quality'), t.searchParams.delete('format'), t.toString()) : (t.searchParams.delete('width'), t.searchParams.delete('height'), t.searchParams.set('quality', 'lossless'), t.searchParams.delete('format'), t.toString());
+function m(t) {
+    let n = i.Z.toURLSafe(t);
+    return null == n || n.host === u ? t : 'https://media.discordapp.net' === n.origin ? ((n.host = u), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.searchParams.delete('format'), n.toString());
 }

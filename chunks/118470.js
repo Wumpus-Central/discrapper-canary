@@ -9,8 +9,8 @@ var i = n(200651),
     r = n(192379),
     l = n(442837),
     a = n(812206),
-    o = n(324262),
-    s = n(434404),
+    s = n(324262),
+    o = n(434404),
     c = n(106976),
     d = n(270144),
     u = n(981631),
@@ -51,14 +51,14 @@ function p(e) {
                             c: _[2].name
                         })
                       : h.intl.string(h.t.MvfowM)),
-          (0, i.jsx)(o.Z, {
+          (0, i.jsx)(s.Z, {
               guild: n,
               onDismissed: g,
               message: t,
               type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
               image: m,
               onClick: () => {
-                  g(), s.Z.open(n.id, u.pNK.INTEGRATIONS);
+                  g(), o.Z.open(n.id, u.pNK.INTEGRATIONS);
               },
               imageMarginTop: 6,
               imageMarginX: 46,

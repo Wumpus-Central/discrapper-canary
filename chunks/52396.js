@@ -3,7 +3,7 @@ t.d(n, {
         return x;
     },
     r: function () {
-        return C;
+        return g;
     }
 }),
     t(411104);
@@ -40,27 +40,27 @@ function v(e) {
                 ...i
             });
         case o.s.TOP_GAME:
-            return (0, l.jsx)(I, {
-                entry: n,
-                ...i
-            });
-        case o.s.PLAYED_GAME:
             return (0, l.jsx)(b, {
                 entry: n,
                 ...i
             });
-        case o.s.WATCHED_MEDIA:
-            return (0, l.jsx)(j, {
+        case o.s.PLAYED_GAME:
+            return (0, l.jsx)(I, {
                 entry: n,
                 ...i
             });
-        case o.s.LISTENED_SESSION:
+        case o.s.WATCHED_MEDIA:
             return (0, l.jsx)(S, {
                 entry: n,
                 ...i
             });
+        case o.s.LISTENED_SESSION:
+            return (0, l.jsx)(j, {
+                entry: n,
+                ...i
+            });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(g, {
+            return (0, l.jsx)(C, {
                 entry: n,
                 ...i
             });
@@ -68,14 +68,14 @@ function v(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function C(e) {
+function g(e) {
     let { errorFallback: n, ...t } = e;
     return (0, l.jsx)(s.S, {
         fallback: n,
         children: (0, l.jsx)(v, { ...t })
     });
 }
-function g(e) {
+function C(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, c.Z)({
             entry: n,
@@ -103,20 +103,6 @@ function _(e) {
         children: t
     });
 }
-function I(e) {
-    let { entry: n, children: t, ...i } = e,
-        r = (0, d.Z)({
-            entry: n,
-            ...i
-        });
-    return (0, l.jsx)(h.Provider, {
-        value: {
-            parsedEntry: r,
-            ...i
-        },
-        children: t
-    });
-}
 function b(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, d.Z)({
@@ -131,7 +117,21 @@ function b(e) {
         children: t
     });
 }
-function j(e) {
+function I(e) {
+    let { entry: n, children: t, ...i } = e,
+        r = (0, d.Z)({
+            entry: n,
+            ...i
+        });
+    return (0, l.jsx)(h.Provider, {
+        value: {
+            parsedEntry: r,
+            ...i
+        },
+        children: t
+    });
+}
+function S(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, p.Z)({
             entry: n,
@@ -145,7 +145,7 @@ function j(e) {
         children: t
     });
 }
-function S(e) {
+function j(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, m.Z)({
             entry: n,

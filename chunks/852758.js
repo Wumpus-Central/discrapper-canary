@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     l = n(990547),
     a = n(442837),
-    o = n(544891),
-    s = n(481060),
+    s = n(544891),
+    o = n(481060),
     c = n(893776),
     d = n(37234),
     u = n(809206),
@@ -22,9 +22,9 @@ var i = n(200651),
     E = n(23434),
     I = n(1964),
     C = n(762756),
-    v = n(308569),
-    S = n(981631),
-    N = n(815660),
+    N = n(308569),
+    v = n(981631),
+    S = n(815660),
     T = n(388032);
 function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
@@ -32,8 +32,8 @@ function b() {
             theme: _.Z.theme
         })),
         b = I.Z.getVerificationTypes(e),
-        [x, A] = r.useState(0),
-        Z = (0, h.Z)(b);
+        [A, Z] = r.useState(0),
+        x = (0, h.Z)(b);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
@@ -48,19 +48,19 @@ function b() {
     );
     let L = () => {
             (0, u.FD)(),
-                (0, s.openModalLazy)(
+                (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await n.e('35401').then(n.bind(n, 284549));
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: v.F0,
+                        modalKey: N.F0,
                         Layer: g.ZP
                     }
                 );
         },
         P = () => {
-            (0, s.openModalLazy)(
+            (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('76540'), n.e('75970')]).then(n.bind(n, 607018));
                     return (t) =>
@@ -70,7 +70,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: N.M,
+                    modalKey: S.M,
                     Layer: g.ZP
                 }
             );
@@ -86,9 +86,9 @@ function b() {
             []
         ),
         r.useEffect(() => {
-            (null == Z ? void 0 : Z[0]) === S.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === S.PUi.EMAIL &&
-                (0, s.openModalLazy)(
+            (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
+                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
+                (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
@@ -100,33 +100,33 @@ function b() {
                             });
                     },
                     {
-                        modalKey: v.HR,
+                        modalKey: N.HR,
                         Layer: g.ZP,
                         onCloseCallback: L
                     }
                 );
-        }, [b, Z]),
+        }, [b, x]),
         (0, i.jsx)(C.Z, {
             types: b,
-            captchaKey: x,
+            captchaKey: A,
             onCaptchaVerify: (e) => {
-                o.tn
+                s.tn
                     .post({
-                        url: S.ANM.CAPTCHA,
+                        url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(d.xf, () => {
-                        A((e) => e + 1);
+                        Z((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === S.PUi.EMAIL_OR_PHONE || e === S.PUi.EMAIL || e === S.PUi.REVERIFY_EMAIL ? L() : P();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : P();
             },
             onLogout: () => {
-                (0, s.openModalLazy)(
+                (0, o.openModalLazy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>

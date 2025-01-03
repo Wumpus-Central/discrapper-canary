@@ -3,8 +3,8 @@ var i,
     r,
     l = n(192379),
     a = n(442837),
-    o = n(846027),
-    s = n(230711),
+    s = n(846027),
+    o = n(230711),
     c = n(888369),
     d = n(131951),
     u = n(292959),
@@ -51,10 +51,10 @@ class I extends l.PureComponent {
 }
 let C = () => null;
 g.isPlatformEmbedded &&
-    (f.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => o.Z.toggleSelfMute({ location: 'System Tray' })),
-    f.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => o.Z.toggleSelfDeaf()),
+    (f.ZP.on('SYSTEM_TRAY_TOGGLE_MUTE', () => s.Z.toggleSelfMute({ location: 'System Tray' })),
+    f.ZP.on('SYSTEM_TRAY_TOGGLE_DEAFEN', () => s.Z.toggleSelfDeaf()),
     f.ZP.on('SYSTEM_TRAY_OPEN_VOICE_SETTINGS', () => {
-        s.Z.open(_.oAB.VOICE);
+        o.Z.open(_.oAB.VOICE);
     }),
     (C = a.ZP.connectStores([h.Z, d.Z, p.Z, c.default, m.Z, u.Z], () => {
         let e = c.default.getTotalMentionCount(),

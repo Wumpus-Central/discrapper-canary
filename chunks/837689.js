@@ -4,8 +4,8 @@ n(192379);
 var r = n(873546),
     l = n(704215),
     a = n(481060),
-    o = n(570140),
-    s = n(317770),
+    s = n(570140),
+    o = n(317770),
     c = n(605236),
     d = n(594174),
     u = n(431),
@@ -18,9 +18,9 @@ var r = n(873546),
     E = n(29920),
     I = n(346497),
     C = n(278945),
-    v = n(727310),
-    S = n(318199),
-    N = n(474936);
+    N = n(727310),
+    v = n(318199),
+    S = n(474936);
 function T(e, t, n) {
     return (
         t in e
@@ -35,17 +35,17 @@ function T(e, t, n) {
     );
 }
 let b = 'PremiumServerDriveAnnouncementModal';
-class x extends s.Z {
+class A extends o.Z {
     _initialize() {
-        o.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
     _terminate() {
-        o.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        s.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
     constructor(...e) {
         super(...e),
             T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let r = (0, S.extractAnnouncementModalContent)({
+                let r = (0, v.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
@@ -75,7 +75,7 @@ class x extends s.Z {
             T(this, 'getOfferFromStore', () => {
                 let e = d.default.getCurrentUser();
                 if ((0, h.I5)(e)) return {};
-                let t = [N.hs, N.RU, N.rB, N.ih]
+                let t = [S.hs, S.RU, S.rB, S.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();
@@ -91,7 +91,7 @@ class x extends s.Z {
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, a.hasAnyModalOpen)() && !(0, h.I5)(i)) {
                     let t = await (0, C.r)(e.userTrialOffer);
-                    null != t && (0, v.Z)({ upsellType: t });
+                    null != t && (0, N.Z)({ upsellType: t });
                 }
                 if (null == i || !!i.verified) {
                     if (!(0, a.hasAnyModalOpen)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !r.tq) {
@@ -101,4 +101,4 @@ class x extends s.Z {
             });
     }
 }
-t.Z = new x();
+t.Z = new A();

@@ -38,7 +38,7 @@ function _(e) {
     if (null == _ || !h) return null;
     let p = () => {
         (0, s.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([r.e('73503'), r.e('74891'), r.e('77803'), r.e('92566')]).then(r.bind(r, 7225));
+            let { default: e } = await Promise.all([r.e('73503'), r.e('66711'), r.e('77803'), r.e('19598')]).then(r.bind(r, 7225));
             return (n) =>
                 (0, i.jsx)(e, {
                     appId: _.id,

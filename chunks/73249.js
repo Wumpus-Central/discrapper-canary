@@ -9,8 +9,8 @@ var i = t(200651),
     c = t(912332),
     d = t(378409),
     h = t(49012),
-    m = t(358085),
-    f = t(998502),
+    f = t(358085),
+    m = t(998502),
     p = t(254109),
     _ = t(212459),
     E = t(369171),
@@ -78,8 +78,8 @@ function v(e) {
                 });
             }
         }, [a, d]),
-        { canForwardMessages: m } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return null != a && m && (0, u.h)(a)
+        { canForwardMessages: f } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return null != a && f && (0, u.h)(a)
         ? (0, i.jsx)(I, {
               onClick: h,
               tooltipText: S.intl.string(S.t.I3ltXF),
@@ -90,13 +90,13 @@ function v(e) {
 function O(e) {
     let { item: n } = e,
         [t, l] = r.useState(!1);
-    if (!('VIDEO' === n.type || (m.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
+    if (!('VIDEO' === n.type || (f.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
     let a = (0, d.s$)(n.url);
     async function s() {
         if (((0, p.yg)(p.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === n.type && (0, h.q)({ href: a }), 'IMAGE' === n.type)) {
             l(!0);
             try {
-                await f.ZP.saveImage(a), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.cqpdJS), o.ToastType.SUCCESS));
+                await m.ZP.saveImage(a), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.cqpdJS), o.ToastType.SUCCESS));
             } catch (e) {
                 (0, o.showToast)((0, o.createToast)(S.intl.string(S.t['8Ve/S0']), o.ToastType.FAILURE));
             } finally {
@@ -130,7 +130,7 @@ function M(e) {
         (0, p.yg)(p.uG.COPY_IMAGE_PRESSED);
         let e = (0, d.s$)(n.url);
         try {
-            await f.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.bhUpvL), o.ToastType.SUCCESS));
+            await m.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.bhUpvL), o.ToastType.SUCCESS));
         } catch (e) {
             (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.PTPbj4), o.ToastType.FAILURE));
         }
@@ -162,7 +162,7 @@ function M(e) {
                                 var e;
                                 (0, p.yg)(p.uG.COPY_LINK_PRESSED);
                                 let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
-                                m.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t['L/PwZW']), o.ToastType.SUCCESS));
+                                f.isPlatformEmbedded ? m.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t['L/PwZW']), o.ToastType.SUCCESS));
                             }
                         },
                         'media-viewer-copy-link'
@@ -174,7 +174,7 @@ function M(e) {
 function L(e) {
     let { item: n } = e,
         [t, l] = r.useState(!1),
-        a = 'IMAGE' === n.type && m.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        a = 'IMAGE' === n.type && f.isPlatformEmbedded && null == n.children && m.ZP.canCopyImage() && (0, d.Lz)(n.url),
         s = (0, d.Jj)(n.url);
     return a || s
         ? (0, i.jsx)(o.Popout, {
