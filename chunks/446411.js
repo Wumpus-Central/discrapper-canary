@@ -35,8 +35,8 @@ var n,
     N = t(55935),
     S = t(408433),
     A = t(956664),
-    M = t(468846),
-    j = t(401419),
+    j = t(468846),
+    M = t(401419),
     H = t(249458),
     F = t(981631),
     k = t(217702),
@@ -60,7 +60,7 @@ function W(e, l, t) {
 }
 function G(e) {
     var l, t;
-    let { className: n, iframeWrapperClassName: a, maxWidth: s, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: y, volume: _, onPlay: w, onPause: T, onEnded: N, onControlsHide: S, onControlsShow: j, onVolumeChange: H, onMute: k, href: L, placeholder: B, placeholderVersion: R, sourceMetadata: P } = e,
+    let { className: n, iframeWrapperClassName: a, maxWidth: s, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: y, volume: _, onPlay: w, onPause: T, onEnded: N, onControlsHide: S, onControlsShow: M, onVolumeChange: H, onMute: k, href: L, placeholder: B, placeholderVersion: R, sourceMetadata: P } = e,
         [W, G] = r.useState(I),
         D = null != m && null == m.proxyURL,
         O = r.useCallback(() => G(!1), [G]),
@@ -106,7 +106,7 @@ function G(e) {
                 onPause: T,
                 onMute: k,
                 onControlsHide: S,
-                onControlsShow: j,
+                onControlsShow: M,
                 sourceMetadata: P
             })
         });
@@ -147,7 +147,7 @@ function G(e) {
             children: (0, i.jsx)('div', {
                 className: o()(V.embedVideo, a),
                 style: r,
-                children: (0, i.jsx)(M.ZP, {
+                children: (0, i.jsx)(j.ZP, {
                     provider: h,
                     src: m.url,
                     style: e,
@@ -824,8 +824,8 @@ class O extends (n = r.PureComponent) {
     render() {
         var e;
         let { embed: l, obscureReason: t, className: n } = this.props;
-        return null != l.provider && j.j.includes(l.provider.name)
-            ? (0, i.jsx)(j.Z, {
+        return null != l.provider && M.j.includes(l.provider.name)
+            ? (0, i.jsx)(M.Z, {
                   embed: l,
                   className: n
               })

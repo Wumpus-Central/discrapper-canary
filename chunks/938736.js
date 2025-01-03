@@ -1,6 +1,6 @@
 s.d(t, {
     $s: function () {
-        return E;
+        return j;
     },
     AV: function () {
         return x;
@@ -9,7 +9,7 @@ s.d(t, {
         return O;
     },
     Kn: function () {
-        return j;
+        return E;
     },
     Nq: function () {
         return f;
@@ -37,8 +37,8 @@ var n = s(442837),
     o = s(822070),
     l = s(520540),
     c = s(533525),
-    d = s(796634),
-    u = s(981631),
+    u = s(796634),
+    d = s(981631),
     p = s(388032);
 let f = '40%',
     x = 8,
@@ -48,17 +48,17 @@ let f = '40%',
             ? p.intl.format(p.t['3OYZMT'], { helpdeskArticle: r })
             : s
               ? p.intl.format(p.t.EkWiZm, {
-                    numFriends: d.Q - n,
+                    numFriends: u.Q - n,
                     helpdeskArticle: r
                 })
               : p.intl.format(p.t.FjrXCg, {
-                    numFriends: d.Q,
+                    numFriends: u.Q,
                     helpdeskArticle: r
                 });
     },
     C = (e) => {
         let t = v(e);
-        return null != t && t !== u.g2L.NOT_ELIGIBLE;
+        return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
     _ = (e) => {
         let t = C(e),
@@ -84,49 +84,49 @@ let f = '40%',
             { enabled: s } = o.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             r = (0, n.e7)([a.Z], () => a.Z.getIsFetchingReferralIncentiveEligibility()),
             i = (0, n.e7)([a.Z], () => a.Z.getSenderIncentiveState());
-        return r ? u.g2L.NOT_ELIGIBLE : s && t ? i : u.g2L.NOT_ELIGIBLE;
+        return r ? d.g2L.NOT_ELIGIBLE : s && t ? i : d.g2L.NOT_ELIGIBLE;
     },
     L = (e) => {
         let t = v(e);
-        return t === u.g2L.COOLDOWN || t === u.g2L.UNAPPLIED || t === u.g2L.QUALIFIED;
+        return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
     A = (e) => {
         let t = L(e),
             s = (0, i.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !s;
     },
-    j = (e) => {
+    E = (e) => {
         let t = C(e),
             s = (0, c.b)(e),
             n = (0, i.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && s && !n;
     },
-    E = (e) => {
+    j = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: s, referralsStatuses: n } = e;
         switch (t) {
-            case u.g2L.NOT_ELIGIBLE:
+            case d.g2L.NOT_ELIGIBLE:
                 return s ? p.intl.string(p.t.M47CJS) : p.intl.string(p.t.USo4s7);
-            case u.g2L.ELIGIBLE:
+            case d.g2L.ELIGIBLE:
                 if (n.sent < 2) return p.intl.formatToPlainString(p.t.md2GU1, { discountRate: f });
-                if (n.redeemed === d.Q) return p.intl.string(p.t.SRJkUV);
+                if (n.redeemed === u.Q) return p.intl.string(p.t.SRJkUV);
                 return p.intl.formatToPlainString(p.t.O8mswM, { discountRate: f });
-            case u.g2L.QUALIFIED:
-            case u.g2L.COOLDOWN:
-            case u.g2L.UNAPPLIED:
-                return n.redeemed === d.Q ? p.intl.string(p.t.SRJkUV) : p.intl.string(p.t.MoKnzc);
+            case d.g2L.QUALIFIED:
+            case d.g2L.COOLDOWN:
+            case d.g2L.UNAPPLIED:
+                return n.redeemed === u.Q ? p.intl.string(p.t.SRJkUV) : p.intl.string(p.t.MoKnzc);
         }
     },
     O = (e) => {
         let { helpdeskArticle: t, referralIncentiveLifecycleState: s, referralsStatuses: n, isWithinCountdownRange: r } = e;
         switch (s) {
-            case u.g2L.NOT_ELIGIBLE:
+            case d.g2L.NOT_ELIGIBLE:
                 return g({
-                    hasSentAll: n.sent >= d.Q,
+                    hasSentAll: n.sent >= u.Q,
                     hasSentAtLeastOne: n.sent >= 1,
                     numSentUsers: n.sent,
                     helpdeskArticle: t
                 });
-            case u.g2L.ELIGIBLE:
+            case d.g2L.ELIGIBLE:
                 let i = {
                     discountRate: f,
                     learnMoreLink: t,
@@ -134,10 +134,10 @@ let f = '40%',
                 };
                 if (n.redeemed <= 1) return p.intl.format(p.t.nysttb, i);
                 return p.intl.format(p.t.nHuzUF, i);
-            case u.g2L.QUALIFIED:
-            case u.g2L.COOLDOWN:
-            case u.g2L.UNAPPLIED:
-                if (n.redeemed < d.Q) return p.intl.format(p.t.HGO89v, { learnMoreLink: t });
+            case d.g2L.QUALIFIED:
+            case d.g2L.COOLDOWN:
+            case d.g2L.UNAPPLIED:
+                if (n.redeemed < u.Q) return p.intl.format(p.t.HGO89v, { learnMoreLink: t });
                 if (!r)
                     return p.intl.format(p.t.iGlQKi, {
                         learnMoreLink: t,

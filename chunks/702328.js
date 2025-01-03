@@ -129,7 +129,7 @@ t.Z = (e) => {
         ef = (0, c.wj)(X),
         ep = b.default.getCurrentUser(),
         e_ = (0, v.I5)(ep),
-        eh = (0, I.xP)('PremiumMarketingHome', U) && !e_ && U,
+        eh = (0, I.xP)('PremiumMarketingHome') && !e_ && U,
         [eE, eb] = r.useState(!1),
         [ex, eC] = r.useState(!1),
         [eT, ev] = r.useState(!1),

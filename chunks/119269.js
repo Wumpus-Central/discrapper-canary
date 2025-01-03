@@ -10,8 +10,8 @@ var n,
     o = s(120356),
     l = s.n(o),
     c = s(442837),
-    d = s(481060),
-    u = s(607070),
+    u = s(481060),
+    d = s(607070),
     p = s(821982),
     f = s(967538),
     x = s(885302),
@@ -20,7 +20,7 @@ var n,
 ((n = r || (r = {}))[(n.NITRO_GEM = 0)] = 'NITRO_GEM'), (n[(n.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (n[(n.AVATAR_DECO = 2)] = 'AVATAR_DECO');
 let _ = (e) => {
     let { avatarDecoAssetId: t, avatarDecoAssetDescription: s } = e,
-        n = a.useMemo(() => (0, p.Z)(t, d.AvatarSizes.SIZE_120, !1), [t]);
+        n = a.useMemo(() => (0, p.Z)(t, u.AvatarSizes.SIZE_120, !1), [t]);
     return (0, i.jsx)('div', {
         className: C.avatarDecoContainer,
         children: (0, i.jsx)('div', {
@@ -34,8 +34,8 @@ let _ = (e) => {
     });
 };
 t.ZP = (e) => {
-    let { showAnimations: t = !0, iconClassName: s, staticPercentage: n, innerCircleClassName: r, progressCircleStrokeSize: a, backgroundCircleSize: o, percentage: d, initialPercentage: p, progressCircleVariation: m = 0, avatarDecoAssetId: h, avatarDecoAssetDescription: v, ellipseOpacity: L, customAnimationClassName: A, circleColor: j, circleStroke: E } = e,
-        O = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
+    let { showAnimations: t = !0, iconClassName: s, staticPercentage: n, innerCircleClassName: r, progressCircleStrokeSize: a, backgroundCircleSize: o, percentage: u, initialPercentage: p, progressCircleVariation: m = 0, avatarDecoAssetId: h, avatarDecoAssetDescription: v, ellipseOpacity: L, customAnimationClassName: A, circleColor: E, circleStroke: j } = e,
+        O = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         T = t && !O;
     return (0, i.jsx)('div', {
         className: l()(C.progressCircle, s),
@@ -44,9 +44,9 @@ t.ZP = (e) => {
                 [C.activeProgressCircleAnimation]: T,
                 [null != A ? A : '']: T
             }),
-            progressCircleStroke: E,
+            progressCircleStroke: j,
             progressCircleStrokeSize: a,
-            percentage: null != n ? n : d,
+            percentage: null != n ? n : u,
             initialPercentage: null != n ? n : p,
             progressCircleVariation: m,
             children: (() => {
@@ -59,7 +59,7 @@ t.ZP = (e) => {
                         });
                     case 1:
                         return (0, i.jsx)(x.Z, {
-                            circleColor: j,
+                            circleColor: E,
                             ellipseOpacity: L
                         });
                     case 2:

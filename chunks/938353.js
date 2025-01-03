@@ -432,7 +432,7 @@ class e3 extends (i = l.Component) {
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
-                return c in f && (p && (s.onClick = f[c]), (s.onViewItem = f[c])), s;
+                return c in f && (p && (s.onClick = f[c]), 'IMAGE' === s.item.type && (s.onViewItem = f[c])), s;
             }),
             C = n
                 ? (0, r.jsx)(y.Z, {

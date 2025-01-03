@@ -266,9 +266,9 @@ class eI extends g.Z {
         var i, a;
         if (n === this.context) n === el.Yn.DEFAULT ? null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.setSimulcastDebugOverride(e, r) : null === (a = this._goLiveQualityManager) || void 0 === a || a.setSimulcastDebugOverride(r);
     }
-    setVideoSize(e, n) {
-        var r;
-        if (this.context === el.Yn.DEFAULT) null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.setVideoSize(e, n);
+    setVideoSize(e, n, r) {
+        var i, a;
+        null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.setVideoSize(e, n * r), null === (a = this._goLiveQualityManager) || void 0 === a || a.setVideoSize(e, n, r);
     }
     set channelId(e) {
         (this._channelId = e), this.channelIds.add(e);
@@ -702,7 +702,7 @@ class eI extends g.Z {
             let e = 0 === l && null === o;
             (!e || (e && (null === (n = this._videoQuality) || void 0 === n ? void 0 : n.getInboundParticipants().includes(s)))) && (null === (r = this._videoQuality) || void 0 === r || r.setInboundUser(s, l), null === (i = this._videoHealthManager) || void 0 === i || i.createUser(s));
         }
-        null != this._connection && this.userId !== s && (null === (a = this._localMediaSinkWantsManager) || void 0 === a || a.setStreamId(s, o));
+        null != this._connection && this.userId !== s && (null != this._localMediaSinkWantsManager ? this._localMediaSinkWantsManager.setStreamId(s, o) : null != this._goLiveQualityManager && this._goLiveQualityManager.getUserID() === s && (null === (a = this._goLiveQualityManager) || void 0 === a || a.setStreamId(o)));
     }
     _handleLocalVideoDisabled(e, n) {
         if (this.userId !== e) {

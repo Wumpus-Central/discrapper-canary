@@ -219,8 +219,8 @@ function j(e) {
     null == i || i.setSimulcastDebugOverride(n, r, a);
 }
 function H(e) {
-    let { streamId: n, pixelCount: r } = e;
-    null == i || i.setVideoSize(n, r);
+    let { streamId: n, width: r, height: a } = e;
+    null == i || i.setVideoSize(n, r, a);
 }
 class Y extends (s = u.ZP.Store) {
     initialize() {
