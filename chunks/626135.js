@@ -272,11 +272,13 @@ let P = {
         throttlePeriod: 1000,
         throttleKeys: (e) => [e.channel_id]
     },
-    [g.rMx.OPEN_MODAL]: {
-        throttlePeriod: S,
-        throttleKeys: () => [],
-        throttleFilter: (e) => e.type === g.jXE.MEDIA_VIEWER
-    }
+    [g.rMx.OPEN_MODAL]: (e) =>
+        e.type === g.jXE.MEDIA_VIEWER
+            ? {
+                  throttlePeriod: S,
+                  throttleKeys: (e) => [e.type]
+              }
+            : void 0
 };
 function M(e) {
     return 'string' == typeof e
