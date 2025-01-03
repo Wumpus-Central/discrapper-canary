@@ -7,10 +7,10 @@ t.d(n, {
         return r;
     },
     Nv: function () {
-        return s;
+        return d;
     },
     SG: function () {
-        return d;
+        return s;
     },
     W3: function () {
         return l;
@@ -42,8 +42,8 @@ let r = 348,
 ((i = l || (l = {})).AssetImage = 'AssetImage'), (i.ApplicationImage = 'ApplicationImage'), (i.Platform = 'Platform'), (i.StreamPreview = 'StreamPreview'), (i.HangStatus = 'HangStatus');
 let a = 12,
     u = 12,
-    d = 24,
-    s = 16,
+    s = 24,
+    d = 16,
     c = 24,
     p = 64,
     f = 335,

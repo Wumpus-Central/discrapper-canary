@@ -16,8 +16,8 @@ function c(e) {
         ? (0, i.jsx)(o.tG, {
               text: u.intl.string(u.t.vwl1PD),
               fullWidth: !0,
-              onClick: () => {
-                  null == c || c({ action: 'PRESS_NOTIFY_BUTTON' }), new s.Z('UserActivityActions').log('notify', n.id, r);
+              onClick: (e) => {
+                  e.stopPropagation(), null == c || c({ action: 'PRESS_NOTIFY_BUTTON' }), new s.Z('UserActivityActions').log('notify', n.id, r);
               }
           })
         : null;

@@ -1,6 +1,6 @@
 t.d(n, {
     A7: function () {
-        return I;
+        return E;
     },
     dE: function () {
         return C;
@@ -13,8 +13,8 @@ var l = t(200651),
     o = t.n(r),
     a = t(481060),
     u = t(410030),
-    d = t(541716),
-    s = t(752305),
+    s = t(541716),
+    d = t(752305),
     c = t(893718),
     p = t(318766),
     f = t(931651),
@@ -23,17 +23,17 @@ var l = t(200651),
     h = t(981631),
     g = t(388032),
     Z = t(26858);
-let P = (0, v.kt)({
+let x = (0, v.kt)({
         id: '1',
         type: h.d4z.DM
     }),
-    x = i.forwardRef(function (e, n) {
-        let { placeholder: t, headerText: i, onEnter: r, showPopout: d, children: s, body: c, hide: p } = e,
+    P = i.forwardRef(function (e, n) {
+        let { placeholder: t, headerText: i, onEnter: r, showPopout: s, children: d, body: c, hide: p } = e,
             f = (0, u.ZP)();
         return (0, l.jsx)(a.Popout, {
             align: 'right',
             position: 'bottom',
-            shouldShow: d,
+            shouldShow: s,
             disablePointerEvents: !1,
             renderPopout: () =>
                 (0, l.jsx)(a.ThemeProvider, {
@@ -52,7 +52,7 @@ let P = (0, v.kt)({
                                             children: null != i ? i : g.intl.string(g.t['/VQax8'])
                                         }),
                                         c,
-                                        (0, l.jsx)(I, {
+                                        (0, l.jsx)(E, {
                                             onEnter: (e) => {
                                                 r(e), p();
                                             },
@@ -63,17 +63,17 @@ let P = (0, v.kt)({
                             })
                         })
                 }),
-            children: () => s
+            children: () => d
         });
     });
-function I(e) {
+function E(e) {
     let { placeholder: n, onEnter: t, setEditorRef: r, showEmojiButton: a = !1, renderAttachButton: u, autoFocus: p = !0, onFocus: f, channel: v, className: h } = e,
-        [g, x] = i.useState(''),
-        [I, E] = i.useState((0, s.JM)('')),
+        [g, P] = i.useState(''),
+        [E, I] = i.useState((0, d.JM)('')),
         C = () => {
-            x(''), E((0, s.JM)(''));
+            P(''), I((0, d.JM)(''));
         },
-        S = d.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        S = s.Ie.ATOMIC_REACTOR_REPLY_INPUT,
         b = i.useRef(null);
     return (0, l.jsx)(c.Z, {
         ref: b,
@@ -83,9 +83,9 @@ function I(e) {
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: m.z,
-        channel: null != v ? v : P,
+        channel: null != v ? v : x,
         onChange: (e, n, t) => {
-            x(n), E(t);
+            P(n), I(t);
         },
         type: a
             ? {
@@ -94,7 +94,7 @@ function I(e) {
               }
             : S,
         textValue: g,
-        richValue: I,
+        richValue: E,
         onSubmit: (e) => {
             let { value: n } = e;
             return n.length > m.z
@@ -124,7 +124,7 @@ function I(e) {
         renderAttachButton: u
     });
 }
-let E = (e, n) => {
+let I = (e, n) => {
         i.useEffect(() => {
             let t = (n) => {
                     'Escape' === n.key && e();
@@ -145,10 +145,10 @@ let E = (e, n) => {
     C = (e) => {
         let { onSelectEmoji: n, onClick: t } = e,
             r = (0, u.ZP)(),
-            [o, d] = i.useState(!1),
-            s = i.useRef(null);
+            [o, s] = i.useState(!1),
+            d = i.useRef(null);
         return (
-            E(() => d(!1), s),
+            I(() => s(!1), d),
             (0, l.jsx)(a.Popout, {
                 align: 'right',
                 position: 'top',
@@ -160,15 +160,15 @@ let E = (e, n) => {
                         children: (e) =>
                             (0, l.jsx)('div', {
                                 className: e,
-                                ref: s,
+                                ref: d,
                                 children: (0, l.jsx)(f.$, {
                                     messageId: h.lds,
-                                    channel: P,
+                                    channel: x,
                                     closePopout: () => {
-                                        d(!1);
+                                        s(!1);
                                     },
                                     onSelectEmoji: (e, t, l) => {
-                                        null != e && (n(e, t, l), d(!1));
+                                        null != e && (n(e, t, l), s(!1));
                                     }
                                 })
                             })
@@ -184,7 +184,7 @@ let E = (e, n) => {
                                     active: !1,
                                     tabIndex: 0,
                                     onClick: () => {
-                                        null == t || t(), d(!0);
+                                        null == t || t(), s(!0);
                                     }
                                 })
                             })
@@ -194,11 +194,11 @@ let E = (e, n) => {
     };
 n.ZP = (e) => {
     let { onInteraction: n, showReact: t = !0, showReply: r = !0, popoutProps: u = {} } = e,
-        { replyHeaderText: d, replyPlaceholder: s, popoutBody: c } = u,
+        { replyHeaderText: s, replyPlaceholder: d, popoutBody: c } = u,
         [p, f] = i.useState(!1),
         v = i.useRef(null);
     return (
-        E(() => f(!1), v),
+        I(() => f(!1), v),
         (0, l.jsx)(l.Fragment, {
             children: (0, l.jsxs)('div', {
                 className: Z.reactions,
@@ -223,11 +223,11 @@ n.ZP = (e) => {
                             }
                         }),
                     r &&
-                        (0, l.jsx)(x, {
+                        (0, l.jsx)(P, {
                             hide: () => f(!1),
                             ref: v,
-                            headerText: d,
-                            placeholder: s,
+                            headerText: s,
+                            placeholder: d,
                             showPopout: p,
                             body: c,
                             onEnter: (e) => {

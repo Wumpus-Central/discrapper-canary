@@ -119,7 +119,7 @@ function U(e) {
                                   size: g.J.SIZE_60,
                                   className: k.clickableImage,
                                   onClick: (e) => {
-                                      T({ action: 'PRESS_IMAGE' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
+                                      e.stopPropagation(), T({ action: 'PRESS_IMAGE' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
                                   }
                               }),
                               (0, a.jsxs)('div', {
@@ -128,7 +128,7 @@ function U(e) {
                                       (0, a.jsx)(c.Clickable, {
                                           className: k.clickableText,
                                           onClick: (e) => {
-                                              T({ action: 'PRESS_TEXT' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
+                                              e.stopPropagation(), T({ action: 'PRESS_TEXT' }), E(e), f !== P.y0.FULL_SIZE && (null == l || l());
                                           },
                                           children: (0, a.jsx)(w.Z, {
                                               variant: 'heading-sm/semibold',
@@ -177,8 +177,8 @@ function B(e) {
                       image: _,
                       size: g.J.SIZE_60,
                       className: k.clickableImage,
-                      onClick: () => {
-                          v({ action: 'PRESS_IMAGE' }), (0, E.Y)(h);
+                      onClick: (e) => {
+                          e.stopPropagation(), v({ action: 'PRESS_IMAGE' }), (0, E.Y)(h);
                       }
                   }),
         b = () =>
@@ -197,8 +197,8 @@ function B(e) {
                   })
                 : (0, a.jsxs)(c.Clickable, {
                       className: k.clickableText,
-                      onClick: () => {
-                          v({ action: 'PRESS_TEXT' }), (0, E.Y)(h);
+                      onClick: (e) => {
+                          e.stopPropagation(), v({ action: 'PRESS_TEXT' }), (0, E.Y)(h);
                       },
                       children: [
                           (0, a.jsx)(w.Z, {
@@ -279,8 +279,8 @@ function G(e) {
                                   image: h,
                                   size: g.J.SIZE_60,
                                   className: k.clickableImage,
-                                  onClick: () => {
-                                      v({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, E.o)(M.Hw.ALBUM, b.external_parent_id);
+                                  onClick: (e) => {
+                                      e.stopPropagation(), v({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, E.o)(M.Hw.ALBUM, b.external_parent_id);
                                   }
                               }),
                               (0, a.jsxs)('div', {
@@ -357,8 +357,8 @@ function Z(e) {
                             image: m,
                             size: g.J.SIZE_60,
                             className: k.clickableImage,
-                            onClick: () => {
-                                I({ action: 'PRESS_IMAGE' }), b();
+                            onClick: (e) => {
+                                e.stopPropagation(), I({ action: 'PRESS_IMAGE' }), b();
                             }
                         }),
                         (0, a.jsxs)('div', {

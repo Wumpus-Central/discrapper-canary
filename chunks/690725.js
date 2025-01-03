@@ -15,10 +15,10 @@ async function r(e) {
             n = t(97008).Z,
             l = document.createElement('canvas'),
             u = new e(l, a),
-            d = new n(),
-            s = new i.Z(u, d);
-        r(s.canvas);
-        let c = await s.export(o);
+            s = new n(),
+            d = new i.Z(u, s);
+        r(d.canvas);
+        let c = await d.export(o);
         return l.remove(), c;
     }
 }

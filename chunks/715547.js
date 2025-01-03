@@ -16,7 +16,7 @@ function u(e) {
         ? (0, i.jsx)(o.tG, {
               text: l.intl.string(l.t['I6JG4+']),
               fullWidth: !0,
-              onClick: () => (null == r || r({ action: 'PRESS_WATCH_BUTTON' }), window.open(u))
+              onClick: (e) => (e.stopPropagation(), null == r || r({ action: 'PRESS_WATCH_BUTTON' }), window.open(u))
           })
         : null;
 }

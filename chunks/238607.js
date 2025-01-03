@@ -159,8 +159,8 @@ function Z(e) {
                       disabled: et,
                       submitting: X,
                       fullWidth: !0,
-                      onClick: () => {
-                          null == Z || Z({ action: 'PRESS_JOIN_BUTTON' }), en();
+                      onClick: (e) => {
+                          e.stopPropagation(), null == Z || Z({ action: 'PRESS_JOIN_BUTTON' }), en();
                       }
                   })
           })
@@ -174,8 +174,8 @@ function Z(e) {
                       disabled: et,
                       submitting: X,
                       fullWidth: !0,
-                      onClick: () => {
-                          null == Z || Z({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), en();
+                      onClick: (e) => {
+                          e.stopPropagation(), null == Z || Z({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), en();
                       }
                   })
           });

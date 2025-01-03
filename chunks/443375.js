@@ -109,7 +109,7 @@ function K(e) {
                       className: W.clickableImage,
                       aspectRatio: e,
                       onClick: (e) => {
-                          eo({ action: 'PRESS_IMAGE' }), ef(e);
+                          e.stopPropagation(), eo({ action: 'PRESS_IMAGE' }), ef(e);
                       }
                   });
         },
@@ -235,7 +235,7 @@ function K(e) {
                 : (0, i.jsxs)(l.Clickable, {
                       className: W.clickableText,
                       onClick: (e) => {
-                          eo({ action: 'PRESS_TEXT' }), ef(e);
+                          e.stopPropagation(), eo({ action: 'PRESS_TEXT' }), ef(e);
                       },
                       children: [eh(), ep(), em()]
                   }),

@@ -78,8 +78,8 @@ function M(e) {
                                     children: [
                                         (0, i.jsx)(l.Clickable, {
                                             className: o()(P.clickableText, P.inline),
-                                            onClick: () => {
-                                                q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(M, r.id, n);
+                                            onClick: (e) => {
+                                                e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(M, r.id, n);
                                             },
                                             children: e
                                         }),
@@ -174,8 +174,8 @@ function M(e) {
                                                     image: K,
                                                     size: _.J.SIZE_60,
                                                     className: P.clickableImage,
-                                                    onClick: () => {
-                                                        q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(M, r.id);
+                                                    onClick: (e) => {
+                                                        e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(M, r.id);
                                                     }
                                                 }),
                                                 (0, i.jsxs)('div', {
