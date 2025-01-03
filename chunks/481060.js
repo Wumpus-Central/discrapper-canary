@@ -2001,6 +2001,9 @@ r.r(n),
         UserMinusIcon: function () {
             return tO.I9k;
         },
+        UserPlatformIcon: function () {
+            return tO.KED;
+        },
         UserPlayIcon: function () {
             return tO.iOO;
         },
