@@ -44,6 +44,7 @@ function T(e) {
                 (0, i.jsx)(o.Z, {
                     'aria-describedby': S,
                     'aria-labelledby': p,
+                    className: g.bioTextAreaContainer,
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
