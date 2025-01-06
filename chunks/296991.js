@@ -27,11 +27,11 @@ var i = n(200651),
     T = n(163537);
 let b = 'RULE';
 function j(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: I } = e,
-        j = r.useRef(null),
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: I, isDragEnabled: j } = e,
         S = r.useRef(null),
-        [{ textValue: E, richValue: R }, y] = r.useState((0, g.eK)(t.value)),
-        [, Z, A] = (0, c.c)({
+        E = r.useRef(null),
+        [{ textValue: R, richValue: y }, Z] = r.useState((0, g.eK)(t.value)),
+        [, A, L] = (0, c.c)({
             type: b,
             item: {
                 rule: t,
@@ -41,12 +41,12 @@ function j(e) {
                 null != e && !t.didDrop() && p(e.rule, null, !0);
             }
         }),
-        [, L] = (0, d.L)({
+        [, D] = (0, d.L)({
             accept: b,
             hover: (e, t) => {
                 var n;
                 let { index: i } = e,
-                    r = null === (n = j.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
+                    r = null === (n = S.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
                     s = t.getClientOffset();
                 if (null == r || null == s) return;
                 let a = (r.bottom - r.top) / 2,
@@ -59,26 +59,26 @@ function j(e) {
         });
     r.useLayoutEffect(
         () => (
-            Z(S),
-            A(L(j)),
+            A(E),
+            L(D(S)),
             () => {
-                Z(null), L(null);
+                A(null), D(null);
             }
         ),
-        [Z, L, A]
+        [A, D, L]
     );
     if (
         (r.useEffect(() => {
-            '' !== t.value && '' === E && y((0, g.eK)(t.value));
-        }, [t.value, E]),
+            '' !== t.value && '' === R && Z((0, g.eK)(t.value));
+        }, [t.value, R]),
         null == n)
     )
         return null;
-    let D = '' !== t.value ? t.value : t.id;
+    let O = '' !== t.value ? t.value : t.id;
     return (0, i.jsx)('div', {
-        ref: j,
+        ref: S,
         className: s()(T.draggableInputContainer, { [T.dragging]: f }),
-        'data-dnd-name': D,
+        'data-dnd-name': O,
         children: (0, i.jsxs)('div', {
             className: T.inputWrapper,
             children: [
@@ -87,8 +87,8 @@ function j(e) {
                     children: (0, i.jsx)(x.Z, {
                         innerClassName: T.rulesTextAreaInput,
                         type: h.Ie.RULES_INPUT,
-                        textValue: E,
-                        richValue: R,
+                        textValue: R,
+                        richValue: y,
                         channel: n,
                         placeholder: N.intl.string(N.t['BRkD4+']),
                         focused: C,
@@ -97,7 +97,7 @@ function j(e) {
                             i.length > _.fn && (i = i.slice(0, _.fn)),
                                 t !== i && ((t = i), (n = (0, g.JM)(i))),
                                 a(t),
-                                y({
+                                Z({
                                     textValue: t,
                                     richValue: n
                                 });
@@ -125,14 +125,16 @@ function j(e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    ref: S,
+                    ref: E,
                     className: T.dragContainer,
-                    'data-dnd-name': D,
-                    children: (0, i.jsx)(m.DragIcon, {
-                        size: 'xs',
-                        color: 'currentColor',
-                        className: T.dragIcon
-                    })
+                    'data-dnd-name': O,
+                    children:
+                        j &&
+                        (0, i.jsx)(m.DragIcon, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            className: T.dragIcon
+                        })
                 })
             ]
         })
@@ -240,20 +242,21 @@ function S(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.rulesContainer,
-                children: t.map((e, t) =>
+                children: t.map((e, n) =>
                     (0, i.jsx)(
                         j,
                         {
                             rulesChannel: null != c ? c : d,
                             rule: e,
-                            index: t,
-                            onChange: (e) => R(e, t),
-                            onClear: () => y(t),
+                            index: n,
+                            onChange: (e) => R(e, n),
+                            onClear: () => y(n),
                             onRuleReorder: Z,
-                            isDropHovered: t === h,
-                            focused: t === x,
+                            isDropHovered: n === h,
+                            focused: n === x,
                             onFocus: b,
-                            previewEnabled: null == a || a
+                            previewEnabled: null == a || a,
+                            isDragEnabled: t.length > 1
                         },
                         e.id
                     )
