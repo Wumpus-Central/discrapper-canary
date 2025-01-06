@@ -5,86 +5,83 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var l = t(442837),
-    a = t(481060),
-    s = t(40851),
-    u = t(132871),
+var l = t(481060),
+    a = t(40851),
+    s = t(132871),
     r = t(147890),
-    o = t(593128),
-    d = t(434404),
-    c = t(956324),
-    g = t(994763),
-    E = t(84615),
-    h = t(984933),
-    M = t(981631),
-    _ = t(308083),
-    N = t(388032);
+    u = t(593128),
+    o = t(434404),
+    d = t(956324),
+    c = t(640678),
+    g = t(84615),
+    E = t(981631),
+    h = t(308083),
+    M = t(388032);
 function f(e) {
-    let n = (0, s.Aq)(),
-        t = (0, c.Z)(e),
-        f = (0, l.Wu)([h.ZP], () => h.ZP.getChannels(e.id).SELECTABLE, [e]);
+    let n = (0, a.Aq)(),
+        t = (0, d.Z)(e);
     if (__OVERLAY__ || !t) return null;
-    let S = (t) => {
-        d.Z.open(e.id, t), n.dispatch(M.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
+    let f = (t) => {
+        o.Z.open(e.id, t), n.dispatch(E.CkL.POPOUT_CLOSE), (0, l.closeAllModals)();
     };
-    return (0, i.jsx)(a.MenuItem, {
+    return (0, i.jsx)(l.MenuItem, {
         id: 'guild-settings',
-        label: N.intl.string(N.t['154/bG']),
-        action: () => S(),
-        children: (0, g.getGuildSettingsSections)(e, f).map((n) => {
-            let { section: t, label: l } = n;
-            if (null == l) return null;
+        label: M.intl.string(M.t['154/bG']),
+        action: () => f(),
+        children: (0, c.t)(e).map((n) => {
+            let { section: t, label: a } = n;
+            if (null == a) return null;
             switch (t) {
-                case M.pNK.DELETE:
+                case E.pNK.DELETE:
                     return null;
-                case M.pNK.COMMUNITY:
+                case E.pNK.COMMUNITY:
                     return (0, i.jsx)(
-                        a.MenuItem,
+                        l.MenuItem,
                         {
                             id: t,
-                            action: () => S(t),
-                            label: N.intl.string(N.t.nRtNqq)
+                            action: () => f(t),
+                            label: M.intl.string(M.t.nRtNqq)
                         },
                         t
                     );
-                case M.pNK.APP_DIRECTORY:
+                case E.pNK.APP_DIRECTORY:
                     return (0, i.jsx)(
-                        a.MenuItem,
+                        l.MenuItem,
                         {
                             id: t,
                             action: () => {
                                 (0, r.goToAppDirectory)({
                                     guildId: e.id,
-                                    entrypoint: { name: u.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU }
+                                    entrypoint: { name: s.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU }
                                 });
                             },
-                            label: l
+                            label: a
                         },
                         t
                     );
-                case M.pNK.CLAN:
-                    return (0, i.jsx)(a.MenuItem, {
+                case E.pNK.CLAN:
+                    return (0, i.jsx)(l.MenuItem, {
                         id: 'guild-settings',
-                        label: N.intl.string(N.t['6g8uHB']),
+                        label: M.intl.string(M.t['6g8uHB']),
                         action: () =>
-                            (0, E.q4)(
+                            (0, g.q4)(
                                 (n) => {
                                     let { closeLayer: t } = n;
-                                    return (0, i.jsx)(o.Z, {
+                                    return (0, i.jsx)(u.Z, {
                                         onClose: t,
                                         guildId: e.id
                                     });
                                 },
-                                { layerKey: _.q2 }
+                                { layerKey: h.q2 }
                             )
                     });
                 default:
                     return (0, i.jsx)(
-                        a.MenuItem,
+                        l.MenuItem,
                         {
                             id: t,
-                            action: () => S(t),
-                            label: l
+                            action: () => f(t),
+                            label: a
                         },
                         t
                     );
