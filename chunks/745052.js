@@ -292,10 +292,12 @@ let es = (0, p.Z)(function (e) {
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.REQUESTS,
+                                                    className: ee.item,
                                                     children: $.intl.string($.t['7RFcXV'])
                                                 }),
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.SPAM,
+                                                    className: ee.item,
                                                     children: 0 === s ? $.intl.string($.t.ulKXHh) : $.intl.formatToPlainString($.t['5jtrlZ'], { count: s })
                                                 })
                                             ]
