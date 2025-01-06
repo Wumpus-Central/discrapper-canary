@@ -3,72 +3,74 @@ t.d(n, {
         return u;
     }
 });
-var l = t(192379),
-    i = t(731965),
+var i = t(192379),
+    l = t(731965),
     r = t(881052),
     a = t(972959),
     s = t(699553);
-let o = {},
-    c = (0, a.H)((e, n) => ({
+let c = {},
+    o = (0, a.H)((e, n) => ({
         profiles: {},
         isFetchingGuild: (e) => null != n().fetchPromises[e],
         error: null,
         fetchPromises: {},
-        fetchGuildProfile: async (t) => {
-            let l = n().fetchPromises[t];
+        fetchGuildProfile: async function (t) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                a = n().fetchPromises[t];
             if (
                 !(function (e) {
                     var n;
                     let t = Date.now(),
-                        l = null !== (n = o[e]) && void 0 !== n ? n : 0;
-                    return t - l > 60000;
-                })(t)
+                        i = null !== (n = c[e]) && void 0 !== n ? n : 0;
+                    return t - i > 60000;
+                })(t) &&
+                !i
             ) {
-                var a;
-                return null != l ? await l : Promise.resolve(null !== (a = n().profiles[t]) && void 0 !== a ? a : null);
+                var o;
+                return null != a ? await a : Promise.resolve(null !== (o = n().profiles[t]) && void 0 !== o ? o : null);
             }
-            o[t] = Date.now();
+            c[t] = Date.now();
             try {
-                if (null != l) return await l;
+                if (null != a) return await a;
                 {
-                    let l = (async () => {
-                        let l = await (0, s.C)(t),
+                    let i = (async () => {
+                        let i = await (0, s.C)(t),
                             r = n().profiles,
                             a = n().fetchPromises;
                         return null == a[t]
-                            ? l
+                            ? i
                             : (delete a[t],
-                              (0, i.j)(() => {
+                              (0, l.j)(() => {
                                   e({
                                       profiles: {
                                           ...r,
-                                          [t]: l
+                                          [t]: i
                                       },
                                       error: null,
                                       fetchPromises: a
                                   });
                               }),
-                              l);
+                              i);
                     })();
                     return (
-                        (0, i.j)(() => {
+                        (0, l.j)(() => {
                             e({
                                 fetchPromises: {
                                     ...n().fetchPromises,
-                                    [t]: l
+                                    [t]: i
                                 }
                             });
                         }),
-                        await l
+                        await i
                     );
                 }
             } catch (s) {
-                let l = new r.Hx(s),
+                let i = new r.Hx(s),
                     a = n().fetchPromises;
                 null != a[t] && delete a[t],
-                    (0, i.j)(() => {
+                    (0, l.j)(() => {
                         e({
-                            error: l,
+                            error: i,
                             fetchPromises: a
                         });
                     });
@@ -77,17 +79,23 @@ let o = {},
         }
     }));
 function u(e) {
-    let n = c.useState((n) => (null != e ? n.profiles[e] : null), Object.is),
-        t = c.useField('fetchGuildProfile');
+    let n = o.useState((n) => (null != e ? n.profiles[e] : null), Object.is),
+        t = o.useState((n) => null != e && null != n.fetchPromises[e], Object.is),
+        l = o.useField('fetchGuildProfile');
     return {
         guildProfile: n,
-        fetchGuildProfile: l.useCallback(async () => {
-            if (null == e) return null;
-            try {
-                return await t(e);
-            } catch (e) {
-                return null;
-            }
-        }, [e, t])
+        fetchGuildProfile: i.useCallback(
+            async function () {
+                let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                if (null == e) return null;
+                try {
+                    return await l(e, n);
+                } catch (e) {
+                    return null;
+                }
+            },
+            [e, l]
+        ),
+        isFetching: t
     };
 }

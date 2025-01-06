@@ -11,15 +11,16 @@ var r = n(481060),
     o = n(834129),
     s = n(388032);
 function c(e) {
-    let { children: t, messageReference: n } = e;
+    let { children: t, messageReference: n, guildName: a } = e;
     if (null == n) return (0, i.jsx)(r.Anchor, { children: t });
-    let { guild_id: a, channel_id: o, message_id: s } = n;
-    return null == a
+    let { guild_id: o, channel_id: s, message_id: c } = n;
+    return null == o
         ? (0, i.jsx)(r.Anchor, { children: t })
         : (0, i.jsx)(l.Z, {
-              guildId: a,
-              channelId: o,
-              messageId: s,
+              guildId: o,
+              channelId: s,
+              messageId: c,
+              name: a,
               children: (e) => {
                   let { 'aria-controls': n, 'aria-expanded': l, ...a } = e;
                   return (0, i.jsx)(r.Anchor, {
@@ -34,7 +35,8 @@ function u(e) {
         { content: u, timestamp: d, messageReference: m } = r,
         h = (0, a.ZP)(r),
         f = t(h),
-        p = s.intl.format(s.t['47CZc3'], {
+        p = (null != u ? u : '').split(' ').slice(0, -1).join(' '),
+        _ = s.intl.format(s.t['47CZc3'], {
             username: h.nick,
             usernameHook: f,
             webhookName: u,
@@ -43,6 +45,7 @@ function u(e) {
                     c,
                     {
                         messageReference: m,
+                        guildName: p,
                         children: e
                     },
                     t
@@ -52,6 +55,6 @@ function u(e) {
         icon: n(570111),
         timestamp: d,
         compact: l,
-        children: p
+        children: _
     });
 }

@@ -9,5 +9,6 @@ e.exports = {
     dot: 'dot_f798f8',
     dotOnline: 'dotOnline_f798f8',
     established: 'established_f798f8',
-    body: 'body_f798f8'
+    body: 'body_f798f8',
+    error: 'error_f798f8'
 };
