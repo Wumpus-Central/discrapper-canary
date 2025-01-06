@@ -1,82 +1,104 @@
 n.d(t, {
     w: function () {
-        return p;
+        return v;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(852860),
-    a = n(881052),
-    o = n(863249),
-    c = n(246364),
-    d = n(983736),
-    u = n(245762),
-    m = n(894376),
-    h = n(446495),
-    g = n(999382),
-    x = n(388032);
-function p() {
-    let [e, t] = r.useState(!1),
-        [n, p] = r.useState(null),
-        f = (0, l.e7)([g.Z], () => {
-            var e;
-            return null === (e = g.Z.getProps().guild) || void 0 === e ? void 0 : e.id;
-        }),
-        C = (0, l.e7)([m.Z], () => m.Z.pendingState),
-        v = r.useCallback(() => {
-            p(null), u.Z.reset();
+    s = n(481060),
+    a = n(852860),
+    o = n(881052),
+    c = n(863249),
+    d = n(246364),
+    u = n(983736),
+    m = n(571728),
+    h = n(245762),
+    g = n(894376),
+    x = n(446495),
+    p = n(999382),
+    f = n(981631),
+    C = n(388032);
+function v() {
+    var e;
+    let [t, v] = r.useState(!1),
+        [_, I] = r.useState(null),
+        N = (0, l.e7)([p.Z], () => p.Z.getProps().guild),
+        T = null == N ? void 0 : N.id,
+        b = null == N ? void 0 : N.hasFeature(f.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        j = null !== (e = (0, m.A)({ guildId: T })) && void 0 !== e ? e : 0,
+        S = (0, l.e7)([g.Z], () => g.Z.pendingState),
+        E = r.useCallback(() => {
+            I(null), h.Z.reset();
         }, []),
-        _ = r.useCallback(async (e) => {
+        R = r.useCallback(async (e) => {
             try {
-                t(!0), await e(), p(null);
+                v(!0), await e(), I(null);
             } catch (e) {
-                p(new a.Hx(e).getAnyErrorMessage());
+                I(new o.Hx(e).getAnyErrorMessage());
             } finally {
-                t(!1);
+                v(!1);
             }
         }, []),
-        I = r.useCallback(() => {
-            if (null != f && null != C) {
-                if (C.joinType === h.A.INVITE) {
-                    let { requireTerms: e, termRules: t = [] } = C,
+        y = r.useCallback(() => {
+            if (null != T && null != S) {
+                if (S.joinType === x.A.INVITE) {
+                    let { requireTerms: e, termRules: t = [] } = S,
                         n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
                     if (n.length < 1 && e) {
-                        p(x.intl.string(x.t.TCHkcX));
+                        I(C.intl.string(C.t.TCHkcX));
                         return;
                     }
                     let i =
                         n.length > 0
                             ? [
                                   {
-                                      field_type: c.QJ.TERMS,
-                                      label: x.intl.string(x.t['9suSIC']),
+                                      field_type: d.QJ.TERMS,
+                                      label: C.intl.string(C.t['9suSIC']),
                                       values: n,
                                       required: !0
                                   }
                               ]
                             : [];
-                    _(async () => {
-                        await o.ZP.updateVerificationForm(f, i, e);
+                    R(async () => {
+                        await c.ZP.updateVerificationForm(T, i, e);
                     });
-                } else if (C.joinType === h.A.APPLY) {
-                    let { pendingVerificationFields: e } = C;
+                } else if (S.joinType === x.A.APPLY) {
+                    let { pendingVerificationFields: e } = S;
                     if (null == e) return;
-                    if (!e.some((e) => (0, d._C)(e))) {
-                        p(x.intl.string(x.t.HGVrIy));
+                    if (!e.some((e) => (0, u._C)(e))) {
+                        I(C.intl.string(C.t.HGVrIy));
                         return;
                     }
-                    _(async () => {
-                        await o.ZP.updateVerificationForm(f, [...e], !0);
+                    R(async () => {
+                        await c.ZP.updateVerificationForm(T, [...e], !0);
                     });
                 }
             }
-        }, [_, C, f]);
-    return (0, i.jsx)(s.Z, {
-        submitting: e,
-        errorMessage: n,
-        onReset: v,
-        onSave: I
+        }, [T, S, R]),
+        Z = r.useCallback(() => {
+            if (null != T && null != S) {
+                if (b && j > 0 && (null == S ? void 0 : S.joinType) !== x.A.APPLY) {
+                    (0, s.openModalLazy)(async () => {
+                        let { default: e } = await n.e('55009').then(n.bind(n, 826390));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                ...t,
+                                guildId: T,
+                                submittedGuildJoinRequestsCount: j,
+                                onConfirm: () => y()
+                            });
+                    });
+                    return;
+                }
+                y();
+            }
+        }, [T, S, b, j, y]);
+    return (0, i.jsx)(a.Z, {
+        submitting: t,
+        errorMessage: _,
+        onReset: E,
+        onSave: Z
     });
 }
