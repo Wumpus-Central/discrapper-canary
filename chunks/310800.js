@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(852229),
     l = n(481060),
-    s = n(724598),
-    a = n(674180),
+    a = n(724598),
+    s = n(674180),
     o = n(495437),
     c = n(267101),
     d = n(863663),
@@ -21,7 +21,7 @@ let p = 'guild-product-listings-header';
 function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         f = (0, c.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, s.gX)(t),
         v = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
@@ -76,7 +76,7 @@ function f(e) {
                           )
                       )
                   })
-                : (0, i.jsx)(s.Z, {
+                : (0, i.jsx)(a.Z, {
                       guildId: t,
                       showCTA: !1,
                       responsive: !1
@@ -86,7 +86,7 @@ function f(e) {
 }
 function C(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, s.gX)(t),
         r = (e) => {
             u.h(t, e);
         };

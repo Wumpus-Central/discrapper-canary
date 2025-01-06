@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(304445),
     G = n(344185),
     B = n(155409),
-    H = n(10401),
-    V = n(970731),
+    V = n(10401),
+    H = n(970731),
     F = n(210887),
     z = n(592125),
     W = n(796974),
@@ -153,7 +153,7 @@ class ev extends r.PureComponent {
                       renderPopout: () =>
                           (0, i.jsx)('div', {
                               onClick: (e) => e.stopPropagation(),
-                              children: (0, i.jsx)(V.ZP, {
+                              children: (0, i.jsx)(H.ZP, {
                                   header: ep.intl.string(ep.t['Q3qa4+']),
                                   content: ep.intl.string(ep.t.UyHD4O),
                                   buttonCTA: ep.intl.string(ep.t.U9PrMz),
@@ -316,7 +316,7 @@ class ev extends r.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, p.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('62278'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('15669'), n.e('7654'), n.e('98479'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('4604'), n.e('33213'), n.e('43954')]).then(n.bind(n, 545135));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -416,7 +416,7 @@ function eS(e) {
         M = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
-        { enableStudyGroup: V } = (0, D.s)(u),
+        { enableStudyGroup: H } = (0, D.s)(u),
         K = (0, b.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [er, el] = r.useState(!K),
         ea = (0, _.Z)(n),
@@ -429,7 +429,7 @@ function eS(e) {
         ep = (0, N.Z)(u),
         eg = (0, h.useModalsStore)(h.hasAnyModalOpenSelector),
         ef = (0, c.e7)([Q.Z], () => Q.Z.hasLayers()),
-        e_ = (0, c.e7)([H.Z], () => H.Z.shouldShow(eC)),
+        e_ = (0, c.e7)([V.Z], () => V.Z.shouldShow(eC)),
         eE = v && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eI = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
         eN = v && null != eI && eI >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
@@ -453,8 +453,8 @@ function eS(e) {
         eU = (0, O.Z)(n),
         eG = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
         eB = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
-        eH = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
-        eV = (0, T.Q3)('GuildSidebar');
+        eV = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
+        eH = (0, T.Q3)('GuildSidebar');
     return (0, i.jsx)(ev, {
         guildId: n,
         hideSelectedChannel: l,
@@ -485,7 +485,7 @@ function eS(e) {
         showMediaChannelUpsell: ek,
         showTierTemplatesUpsell: eU,
         isHeaderPopoutOpen: eO,
-        enableStudyGroup: V,
+        enableStudyGroup: H,
         isGuildHeaderDismissibleTooltipShown: em,
         canShowCoachMarkAtBottom: er,
         headerAnalyticsLocations: es,
@@ -493,7 +493,7 @@ function eS(e) {
         shouldRenderClipsEducation: eM,
         isTutorialHighlightDismissed: ew,
         shouldRenderBurstCoachmark: eD,
-        shouldRenderCustomNotificationSoundsCoachmark: eH,
-        isRefreshEnabled: eV
+        shouldRenderCustomNotificationSoundsCoachmark: eV,
+        isRefreshEnabled: eH
     });
 }

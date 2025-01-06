@@ -42,8 +42,8 @@ function T(e) {
             }),
                 (0, r.showToast)((0, r.createToast)(j.intl.string(j.t['+5kSoa']), r.ToastType.SUCCESS));
         }, [e.quest, e.questContent, e.questContentPosition]),
-        M = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
-        I = () => (0, d.is)(e.quest.id).catch(M),
+        I = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
+        M = () => (0, d.is)(e.quest.id).catch(I),
         L = s.useMemo(() => (T ? j.t.lwQdjI : j.t.hvVgAQ), [T]);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
@@ -149,7 +149,7 @@ function T(e) {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    _(), I();
+                                    _(), M();
                                 }
                             }),
                             (0, i.jsx)(r.MenuItem, {
@@ -177,12 +177,12 @@ function T(e) {
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, d.CS)(e.quest.id, !0).catch(M)
+                                            action: () => (0, d.CS)(e.quest.id, !0).catch(I)
                                         }),
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: I
+                                            action: M
                                         })
                                     ]
                                 })

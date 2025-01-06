@@ -33,12 +33,12 @@ function f(e) {
             [f]
         ),
         { iconURL: N, name: g, description: A } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
-        b = l.useMemo(() => {
+        E = l.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
             return null == n ? null : (0, c.ae)(n, void 0);
         }, [A, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: E } = (0, m.Z)({
+        { trackSearchResultsItemImpressionRef: b } = (0, m.Z)({
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: v,
@@ -46,7 +46,7 @@ function f(e) {
         });
     return (0, i.jsx)(a.Clickable, {
         className: p.clickable,
-        innerRef: (e) => (E.current = e),
+        innerRef: (e) => (b.current = e),
         onClick: C,
         onContextMenu: _,
         children: (0, i.jsxs)(a.FocusBlock, {
@@ -71,7 +71,7 @@ function f(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: b
+                            children: E
                         })
                     ]
                 }),

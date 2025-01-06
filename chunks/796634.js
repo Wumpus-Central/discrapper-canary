@@ -1,9 +1,9 @@
 s.d(t, {
     G: function () {
-        return c;
+        return l;
     },
     Q: function () {
-        return l;
+        return c;
     }
 });
 var n = s(192379),
@@ -11,8 +11,8 @@ var n = s(192379),
     i = s(232567),
     a = s(594174),
     o = s(276444);
-let l = 3;
-function c() {
+let c = 3;
+function l() {
     let e = (0, r.Wu)([o.Z], () => o.Z.getSentUserIds()),
         t = (0, r.Wu)([a.default], () => e.map((e) => a.default.getUser(e)).filter((e) => null != e));
     n.useEffect(() => {
@@ -20,7 +20,7 @@ function c() {
             (0, i.PR)(e);
         });
     }, [e]);
-    let s = e.length === l;
+    let s = e.length === c;
     return {
         referralSentUsers: t,
         hasSentAllReferrals: s,

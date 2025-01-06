@@ -49,7 +49,7 @@ t.Z = function (e) {
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         },
-        H = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 G({
                     ...U,
@@ -58,7 +58,7 @@ t.Z = function (e) {
             },
             [U, t]
         ),
-        V = r.useCallback(() => {
+        H = r.useCallback(() => {
             G({
                 ...U,
                 [t]: ''
@@ -102,8 +102,8 @@ t.Z = function (e) {
                 (0, i.jsx)(o.SearchBar, {
                     className: a()(O.searchBar, Y ? O.searchEmptyState : null),
                     query: U[t],
-                    onChange: H,
-                    onClear: V,
+                    onChange: V,
+                    onClear: H,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsxs)('div', {

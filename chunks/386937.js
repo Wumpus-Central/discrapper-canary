@@ -2,9 +2,9 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(477690),
     u = n(481060),
@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(624138),
     N = n(981631),
     T = n(388032),
-    b = n(534560);
-function j(e, t, n) {
+    j = n(534560);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,27 +61,27 @@ class E extends r.Component {
                 y: 0,
                 key: x.x
             },
-            s = (0, _.vn)(n),
-            a = e.map((e) => {
+            a = (0, _.vn)(n),
+            s = e.map((e) => {
                 var n;
                 return {
-                    numRequired: s[e.tier],
+                    numRequired: a[e.tier],
                     name: (0, _.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
             });
         return (0, i.jsx)(x.Z, {
-            className: r > 0 ? b.progressWithSubscriptions : b.progress,
+            className: r > 0 ? j.progressWithSubscriptions : j.progress,
             progress: r,
-            tiers: [l, ...a],
+            tiers: [l, ...s],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier
         });
     }
     renderTierNone() {
         return (0, i.jsxs)('div', {
-            className: b.tierDefaultUnlocked,
+            className: j.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
                 (0, i.jsx)(u.FormText, {
@@ -90,7 +90,7 @@ class E extends r.Component {
                 }),
                 (0, i.jsx)(u.FormText, {
                     type: u.FormText.Types.DESCRIPTION,
-                    className: b.tierDefaultUnlockedDescription,
+                    className: j.tierDefaultUnlockedDescription,
                     children: T.intl.string(T.t.DaYNQU)
                 })
             ]
@@ -100,7 +100,7 @@ class E extends r.Component {
         let { subscribers: e, subscriberCount: t, guildId: n } = this.props;
         return (0, i.jsxs)('div', {
             ref: this.defaultTierRef,
-            className: b.subscribers,
+            className: j.subscribers,
             children: [
                 (0, i.jsx)(p.Z, {
                     guildId: null != n ? n : void 0,
@@ -110,7 +110,7 @@ class E extends r.Component {
                     max: 5
                 }),
                 (0, i.jsx)('div', {
-                    className: b.subscriberCount,
+                    className: j.subscriberCount,
                     children: T.intl.format(T.t['0r7snZ'], { count: t })
                 })
             ]
@@ -120,14 +120,14 @@ class E extends r.Component {
         let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: r, tiers: l } = this.props;
         if (null == n) return (0, i.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let s = (0, _.vn)(e);
+        let a = (0, _.vn)(e);
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
-                className: b.content,
+                className: j.content,
                 children: [
                     this.renderProgressBar(l),
                     (0, i.jsxs)('div', {
-                        className: b.tiers,
+                        className: j.tiers,
                         children: [
                             0 === r ? this.renderTierNone() : this.renderSubscribers(),
                             l.map((n, i, r) =>
@@ -136,7 +136,7 @@ class E extends r.Component {
                                     tiers: r,
                                     tierIndex: i,
                                     onSetRef: this.setTierRef,
-                                    isAnimatedTo: s[this.state.animatedTier] >= s[n.tier],
+                                    isAnimatedTo: a[this.state.animatedTier] >= a[n.tier],
                                     subscriptionCount: this.getSubscriptionCount(),
                                     guildId: e
                                 })
@@ -149,13 +149,13 @@ class E extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'tierRefs', {}),
-            j(this, 'defaultTierRef', r.createRef()),
-            j(this, 'state', {
+            b(this, 'tierRefs', {}),
+            b(this, 'defaultTierRef', r.createRef()),
+            b(this, 'state', {
                 tierPositions: null,
                 animatedTier: N.Eu4.NONE
             }),
-            j(this, 'measure', () => {
+            b(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,
                     t = this.defaultTierRef.current;
                 if (null == t) return;
@@ -164,18 +164,18 @@ class E extends r.Component {
                 for (let [t, r] of Object.entries(this.tierRefs)) {
                     if (null == r) return;
                     let { top: l } = r.getBoundingClientRect(),
-                        s = e > 0 ? S : 0;
-                    i[t] = l - n + 32 - s;
+                        a = e > 0 ? S : 0;
+                    i[t] = l - n + 32 - a;
                 }
                 this.setState({ tierPositions: i });
             }),
-            j(this, 'setTierRef', (e, t) => {
+            b(this, 'setTierRef', (e, t) => {
                 this.tierRefs[t.tier] = e;
             }),
-            j(this, 'handleAnimatedTier', (e) => {
+            b(this, 'handleAnimatedTier', (e) => {
                 this.setState({ animatedTier: e.key });
             }),
-            j(this, 'renderSubscriber', (e, t, n) => {
+            b(this, 'renderSubscriber', (e, t, n) => {
                 var r;
                 return null == e
                     ? null
@@ -192,30 +192,30 @@ class E extends r.Component {
                                       ...n,
                                       tabIndex: -1,
                                       src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                      className: s()(b.avatar, t, null != t ? b.subscriberMask : null),
+                                      className: a()(j.avatar, t, null != t ? j.subscriberMask : null),
                                       size: u.AvatarSizes.SIZE_32
                                   })
                           },
                           n
                       );
             }),
-            j(this, 'renderSubscribersPopout', () =>
+            b(this, 'renderSubscribersPopout', () =>
                 (0, i.jsx)(u.Scroller, {
-                    className: b.subscribersPopout,
+                    className: j.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
                         (0, i.jsxs)(
                             'div',
                             {
-                                className: b.subscribersPopoutUser,
+                                className: j.subscribersPopoutUser,
                                 children: [
                                     (0, i.jsx)(u.Avatar, {
                                         src: e.user.getAvatarURL(this.props.guildId, 32),
                                         'aria-label': e.user.username,
                                         size: u.AvatarSizes.SIZE_32,
-                                        className: b.avatar
+                                        className: j.avatar
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: b.subscribersPopoutUsername,
+                                        className: j.subscribersPopoutUsername,
                                         children: (0, i.jsx)(h.Z, {
                                             user: e.user,
                                             nick: e.nick
@@ -228,7 +228,7 @@ class E extends r.Component {
                     )
                 })
             ),
-            j(this, 'renderMoreSubscribers', (e, t, n) =>
+            b(this, 'renderMoreSubscribers', (e, t, n) =>
                 (0, i.jsx)(
                     u.Popout,
                     {
@@ -237,7 +237,7 @@ class E extends r.Component {
                         autoInvert: !1,
                         children: (t) =>
                             (0, i.jsx)('div', {
-                                className: b.moreSubscribers,
+                                className: j.moreSubscribers,
                                 ...t,
                                 children: e
                             })

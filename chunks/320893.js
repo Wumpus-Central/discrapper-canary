@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return b;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(780384),
     l = n(481060),
-    s = n(410030),
-    a = n(293810),
+    a = n(410030),
+    s = n(293810),
     o = n(388032),
     c = n(552091),
     d = n(934961),
@@ -24,7 +24,7 @@ function v(e) {
     return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
 function _() {
-    let e = (0, s.ZP)(),
+    let e = (0, a.ZP)(),
         t = { backgroundColor: (0, r.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
     return (0, i.jsxs)('div', {
         className: c.earningsPreviewContainer,
@@ -54,7 +54,7 @@ function _() {
     });
 }
 function I() {
-    let e = (0, s.ZP)();
+    let e = (0, a.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
         return (0, i.jsx)('div', {
@@ -163,8 +163,8 @@ function T() {
         ]
     });
 }
-function b() {
-    let e = (0, s.ZP)();
+function j() {
+    let e = (0, a.ZP)();
     return (0, i.jsxs)('div', {
         className: c.revenueShareBenefitCard,
         children: [
@@ -177,7 +177,7 @@ function b() {
                             lineHeight: '52px'
                         },
                         variant: 'heading-xxl/extrabold',
-                        children: [a.NT, '%']
+                        children: [s.NT, '%']
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
@@ -194,7 +194,7 @@ function b() {
         ]
     });
 }
-function j() {
+function b() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -205,7 +205,7 @@ function j() {
             (0, i.jsx)(l.Spacer, { size: 24 }),
             (0, i.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(b, {})]
+                children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
             })
         ]
     });

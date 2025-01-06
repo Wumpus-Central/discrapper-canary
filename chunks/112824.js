@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    s = n(149765),
-    a = n(442837),
+    a = n(149765),
+    s = n(442837),
     o = n(481060),
     c = n(430824),
     d = n(496675),
@@ -25,7 +25,7 @@ function p(e) {
 }
 function f(e) {
     let { guild: t } = e,
-        r = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
+        r = (0, s.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
         u = p(t),
         m = u.length > 0,
         f = h.$X.some(
@@ -33,7 +33,7 @@ function f(e) {
                 !d.Z.can(e, t, null, {
                     [r.id]: {
                         ...r,
-                        permissions: s.Od(r.permissions, e)
+                        permissions: a.Od(r.permissions, e)
                     }
                 })
         ),

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(192379),
     r = n(782568),
     l = n(635142),
-    s = n(63063),
-    a = n(500047),
+    a = n(63063),
+    s = n(500047),
     o = n(431516),
     c = n(981631),
     d = n(388032);
@@ -19,20 +19,20 @@ function u(e) {
             var e, i;
             m ? !h && (await (null == n ? void 0 : null === (i = n.onRequireModeratorMFAClick) || void 0 === i ? void 0 : i.call(n))) : await (null == n ? void 0 : null === (e = n.onEnableMFAClick) || void 0 === e ? void 0 : e.call(n)), null == t || t();
         }, [m, h, t, n]),
-        x = (0, a.R)({ onEnableMFAClick: g });
+        x = (0, s.R)({ onEnableMFAClick: g });
     return i.useMemo(() => {
         if (null == e) return null;
         let { minimumOwnerAgeInYears: t, minimumSize: i } = e,
-            a = !e.noRecentViolations,
+            s = !e.noRecentViolations,
             o = [
                 {
                     key: 'no_violations_requirement',
                     checkedLabel: d.intl.string(d.t['1lGNPT']),
                     uncheckedLabel: d.intl.string(d.t['D+gTJi']),
-                    description: d.intl.format(d.t.HFY0m5, { communityGuidelinesUrl: s.Z.getArticleURL(c.BhN.PUBLIC_GUILD_GUILDLINES) }),
+                    description: d.intl.format(d.t.HFY0m5, { communityGuidelinesUrl: a.Z.getArticleURL(c.BhN.PUBLIC_GUILD_GUILDLINES) }),
                     checked: e.noRecentViolations,
-                    actionLabel: a ? d.intl.string(d.t.xU2fl5) : void 0,
-                    actionHandler: a ? () => (0, r.Z)(s.Z.getSubmitRequestURL()) : void 0
+                    actionLabel: s ? d.intl.string(d.t.xU2fl5) : void 0,
+                    actionHandler: s ? () => (0, r.Z)(a.Z.getSubmitRequestURL()) : void 0
                 }
             ];
         if (

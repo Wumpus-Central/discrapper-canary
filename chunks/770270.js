@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     p: function () {
-        return s;
+        return a;
     }
 });
 var i = n(981631),
@@ -26,6 +26,6 @@ function l(e) {
             return r.intl.string(r.t.ckQidX);
     }
 }
-function s(e) {
+function a(e) {
     return e.hasFeature(i.oNc.VANITY_URL) || (e.hasFeature(i.oNc.GUILD_WEB_PAGE_VANITY_URL) && null != e.vanityURLCode);
 }

@@ -2,8 +2,8 @@ n(47120), n(733860);
 var i = n(200651),
     r = n(192379),
     l = n(392711),
-    s = n.n(l),
-    a = n(149765),
+    a = n.n(l),
+    s = n(149765),
     o = n(442837),
     c = n(481060),
     d = n(497321),
@@ -32,8 +32,8 @@ function T(e, t, n) {
         e
     );
 }
-let b = 'NO_INSTANT_INVITE',
-    j = a.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
+let j = 'NO_INSTANT_INVITE',
+    b = s.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
 class S extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
@@ -48,14 +48,14 @@ class S extends r.PureComponent {
     renderChannelSelect(e) {
         let { widgetChannelId: t } = this.props,
             n = h.ZP.getChannels(e.id),
-            r = s()([...n[h.sH], ...n[h.Zb]])
+            r = a()([...n[h.sH], ...n[h.Zb]])
                 .filter((t) => {
                     let { channel: n } = t;
                     return n.guild_id === e.id;
                 })
                 .filter((e) => {
                     let { channel: n } = e;
-                    return n.id === t || g.Z.can(j, n);
+                    return n.id === t || g.Z.can(b, n);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -67,7 +67,7 @@ class S extends r.PureComponent {
                 .value();
         return (
             r.unshift({
-                value: b,
+                value: j,
                 label: I.intl.string(I.t.u197b2)
             }),
             (0, i.jsxs)(c.FormItem, {
@@ -164,7 +164,7 @@ class S extends r.PureComponent {
             }),
             T(this, 'handleChannelSelect', (e) => {
                 let { guild: t, widgetEnabled: n } = this.props;
-                if (null != t) C.Z.updateEmbed(t.id, n, e !== b ? e : null);
+                if (null != t) C.Z.updateEmbed(t.id, n, e !== j ? e : null);
             });
     }
 }

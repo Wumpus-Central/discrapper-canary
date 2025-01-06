@@ -3,19 +3,19 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(496675),
-    a = n(434404),
+    a = n(496675),
+    s = n(434404),
     o = n(845377),
     c = n(981631),
     d = n(388032),
     u = n(941851);
 t.Z = (e) => {
     let { guild: t } = e,
-        n = (0, r.e7)([s.Z], () => s.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
+        n = (0, r.e7)([a.Z], () => a.Z.can(c.Plq.ADMINISTRATOR, t), [t]),
         m = t.hasFeature(c.oNc.DISCOVERABLE),
         h = () => {
             let e = new Set(t.features);
-            t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), a.Z.updateGuild({ features: e });
+            t.hasFeature(c.oNc.DISCOVERABLE) && e.delete(c.oNc.DISCOVERABLE), s.Z.updateGuild({ features: e });
         };
     return (0, i.jsxs)(l.FormSection, {
         title: d.intl.string(d.t.oGaVGx),

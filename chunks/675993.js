@@ -24,8 +24,8 @@ var i = t(200651),
     N = t(783097),
     g = t(695676),
     A = t(520315),
-    b = t(29380),
-    E = t(783685),
+    E = t(29380),
+    b = t(783685),
     I = t(388032),
     P = t(580062),
     j = t(665162);
@@ -249,7 +249,7 @@ function M(e) {
               children: [
                   (0, i.jsx)('div', {
                       className: P.entryPointContainerFlexChild,
-                      children: (0, i.jsx)(b.Z, {
+                      children: (0, i.jsx)(E.Z, {
                           channel: t,
                           application: l,
                           sectionName: a,
@@ -260,7 +260,7 @@ function M(e) {
                   v && null != u
                       ? (0, i.jsx)('div', {
                             className: P.entryPointContainerFlexChild,
-                            children: (0, i.jsx)(E.Z, {
+                            children: (0, i.jsx)(b.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
                                 buttonSize: g,

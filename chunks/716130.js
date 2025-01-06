@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -22,7 +22,7 @@ var i = n(200651),
     C = n(554205);
 function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
-        c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        c = (0, s.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
@@ -48,7 +48,7 @@ function v(e) {
         }, [x, v, N]),
         (0, i.jsxs)('div', {
             ref: N,
-            className: s()(C.separatorSection, {
+            className: a()(C.separatorSection, {
                 [C.dropIndicatorBefore]: null != _ && m < _,
                 [C.dropIndicatorAfter]: null != _ && m > _
             }),
@@ -95,9 +95,9 @@ function v(e) {
     );
 }
 function _(e) {
-    let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
-        d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
-        _ = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+    let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: a } = e,
+        d = (0, s.e7)([m.Z], () => m.Z.getGuild(t)),
+        _ = (0, s.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         I = _.filter((e) => e.inOnboarding),
         N = _.filter((e) => !0 !== e.inOnboarding),
         T = [
@@ -115,8 +115,8 @@ function _(e) {
             }))
         ],
         {
-            handleDragStart: b,
-            handleDragReset: j,
+            handleDragStart: j,
+            handleDragReset: b,
             handleDragComplete: S
         } = (0, u.Z)(T, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
@@ -170,11 +170,11 @@ function _(e) {
                                             prompt: e,
                                             disableAutofocus: n,
                                             includeCount: l,
-                                            singleColumn: s,
+                                            singleColumn: a,
                                             promptIndex: t,
                                             dragIndex: t,
-                                            onPromptDragStart: b,
-                                            onPromptDragReset: j,
+                                            onPromptDragStart: j,
+                                            onPromptDragReset: b,
                                             onPromptDragComplete: S
                                         },
                                         e.id
@@ -199,8 +199,8 @@ function _(e) {
                                             prompt: e,
                                             promptIndex: t + I.length,
                                             dragIndex: t + I.length + 1,
-                                            onPromptDragStart: b,
-                                            onPromptDragReset: j,
+                                            onPromptDragStart: j,
+                                            onPromptDragReset: b,
                                             onPromptDragComplete: S
                                         },
                                         e.id

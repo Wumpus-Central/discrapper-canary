@@ -7,14 +7,14 @@ var i = n(200651);
 n(192379);
 var r = n(399606),
     l = n(481060),
-    s = n(430824),
-    a = n(594174),
+    a = n(430824),
+    s = n(594174),
     o = n(723047),
     c = n(388032);
 function d(e) {
     let { guildId: t, application: d } = e,
-        u = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
-        m = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        u = (0, r.e7)([a.Z], () => a.Z.getGuild(t)),
+        m = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         h = (0, o.mY)();
     if (null == u || !u.isOwner(m)) return null;
     let g = d.team;

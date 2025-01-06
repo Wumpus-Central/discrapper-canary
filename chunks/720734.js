@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(243778),
     G = n(258609),
     B = n(427347),
-    H = n(443669),
-    V = n(332473),
+    V = n(443669),
+    H = n(332473),
     F = n(240504),
     z = n(637906),
     W = n(39370),
@@ -118,7 +118,7 @@ function eR(e) {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, i.jsx)('div', {
                           className: ex.accountProfilePopoutWrapper,
-                          children: (0, i.jsx)(H.Z, {
+                          children: (0, i.jsx)(V.Z, {
                               currentUser: r,
                               setPopoutRef: n,
                               onClose: () => {
@@ -382,7 +382,7 @@ class ej extends r.PureComponent {
                 let { currentUser: t } = this.props;
                 null != t &&
                     (0, g.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('17298'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('3940'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('44889')]).then(n.bind(n, 923422));
+                        let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('15669'), n.e('76540'), n.e('17938'), n.e('22646'), n.e('3940'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('44889')]).then(n.bind(n, 923422));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -517,13 +517,13 @@ function eD() {
         P = (0, s.e7)([eo.Z], () => eo.Z.getSpeakingWhileMuted()),
         O = (0, s.e7)([es.Z], () => es.Z.hasLayers()),
         y = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || O || eI.s.isDisallowPopupsSet(),
-        R = (0, V.b)(),
+        R = (0, H.b)(),
         j = (0, s.e7)([G.Z], () => null != G.Z.getAwaitingRemoteSessionInfo()),
         M = (0, Y.D)(),
         w = (0, E.u)(),
         U = (0, K.t)(),
         B = eE.ZP.canUsePremiumGuildMemberProfile(t),
-        H = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eA.rL,
+        V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eA.rL,
         W = 'account';
     (0, I.j)({
         location: W + ' auto on',
@@ -563,7 +563,7 @@ function eD() {
             settings: []
         };
     return (
-        !y && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === w ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), U && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), H && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !y && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === w ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), U && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(S.Gt, {
             value: Q,
             children: (0, i.jsx)(ej, {

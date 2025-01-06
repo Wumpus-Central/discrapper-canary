@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(962086),
-    s = n(225675),
-    a = n(671533),
+    a = n(225675),
+    s = n(671533),
     o = n(434404),
     c = n(981631),
     d = n(388032),
@@ -32,17 +32,17 @@ function m(e) {
                     onClick: () => {
                         o.Z.close(),
                             (0, l.iD)(t, {
-                                type: s.z.ROLES,
+                                type: a.z.ROLES,
                                 roles: { [n.id]: n },
                                 returnToSection: c.pNK.ROLES
                             });
                     },
                     children: [
                         d.intl.string(d.t.arFPfH),
-                        (0, i.jsx)(a.Z, {
+                        (0, i.jsx)(s.Z, {
                             width: 16,
                             height: 16,
-                            direction: a.Z.Directions.RIGHT,
+                            direction: s.Z.Directions.RIGHT,
                             className: u.arrowIcon
                         })
                     ]

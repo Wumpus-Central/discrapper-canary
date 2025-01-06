@@ -1,54 +1,54 @@
-s.d(n, {
+e.d(n, {
     E: function () {
-        return p;
+        return g;
     },
     Z: function () {
-        return f;
+        return E;
     }
 });
-var e = s(200651);
-s(192379);
-var i = s(120356),
-    r = s.n(i),
-    o = s(780384),
-    c = s(481060),
-    a = s(410030),
-    l = s(696936),
-    u = s(903773),
-    d = s(529819);
-let p = {
+var i = e(200651);
+e(192379);
+var s = e(120356),
+    r = e.n(s),
+    l = e(780384),
+    o = e(481060),
+    a = e(410030),
+    c = e(696936),
+    u = e(903773),
+    d = e(529819);
+let g = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock
 };
-function f(t) {
-    let { className: n, color: s = l.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: g, ctaLoading: x, ctaDisabled: E, ctaClassName: h, onClick: b } = t,
-        m = (0, a.ZP)();
-    return (0, e.jsx)(u.Z, {
-        className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, n),
-        color: (0, o.wj)(m) ? s : l.W.BROWN,
-        children: (0, e.jsxs)('div', {
-            className: i,
+function E(t) {
+    let { className: n, color: e = c.W.YELLOW, buttonPosition: s = g.BOTTOM, notice: E, ctaLabel: f, ctaLoading: h, ctaDisabled: m, ctaClassName: p, onClick: x } = t,
+        N = (0, a.ZP)();
+    return (0, i.jsx)(u.Z, {
+        className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != f }, n),
+        color: (0, l.wj)(N) ? e : c.W.BROWN,
+        children: (0, i.jsxs)('div', {
+            className: s,
             children: [
-                (0, e.jsx)(c.Text, {
+                (0, i.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'interactive-active',
-                    children: f
+                    children: E
                 }),
-                null != g &&
-                    null != b &&
-                    (0, e.jsx)('div', {
+                null != f &&
+                    null != x &&
+                    (0, i.jsx)('div', {
                         className: d.ctaButtonContainer,
-                        children: (0, e.jsx)(c.Button, {
-                            className: r()(d.ctaButton, (0, o.wj)(m) ? void 0 : d.ctaBlackButton, h),
-                            color: (0, o.wj)(m) ? c.Button.Colors.WHITE : c.Button.Colors.CUSTOM,
-                            size: c.ButtonSizes.MEDIUM,
-                            onClick: b,
-                            disabled: E,
-                            submitting: x,
-                            children: (0, e.jsx)(c.Text, {
+                        children: (0, i.jsx)(o.Button, {
+                            className: r()(d.ctaButton, (0, l.wj)(N) ? void 0 : d.ctaBlackButton, p),
+                            color: (0, l.wj)(N) ? o.Button.Colors.WHITE : o.Button.Colors.CUSTOM,
+                            size: o.ButtonSizes.MEDIUM,
+                            onClick: x,
+                            disabled: m,
+                            submitting: h,
+                            children: (0, i.jsx)(o.Text, {
                                 className: d.ctaButtonText,
                                 variant: 'text-sm/medium',
-                                children: g
+                                children: f
                             })
                         })
                     })

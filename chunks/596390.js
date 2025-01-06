@@ -6,10 +6,10 @@ n.d(t, {
         return l;
     },
     tq: function () {
-        return s;
+        return a;
     },
     uz: function () {
-        return a;
+        return s;
     },
     ye: function () {
         return i;
@@ -19,5 +19,5 @@ n.d(t, {
 let i = new Set(['Enter', 'Tab']),
     r = new Set(['z', 'y']),
     l = 5000,
-    s = 100,
-    a = /[\n\t\r\f\v\x10]/;
+    a = 100,
+    s = /[\n\t\r\f\v\x10]/;

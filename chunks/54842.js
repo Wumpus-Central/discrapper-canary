@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(142497),
@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(518513),
     N = n(168179),
     T = n(348986),
-    b = n(930065),
-    j = n(345669);
+    j = n(930065),
+    b = n(345669);
 let S = () => [
         {
             icon: c.AnalyticsIcon,
@@ -81,7 +81,7 @@ let S = () => [
             position: [-230, -100]
         },
         {
-            iconSrc: b,
+            iconSrc: j,
             name: 'Python',
             position: [-180, -100],
             faded: !0,
@@ -100,7 +100,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: j,
+            iconSrc: b,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -113,7 +113,7 @@ let S = () => [
         }
     ],
     R = (e) => {
-        let { icon: t, color: n, size: r = 24, header: l, body: s } = e;
+        let { icon: t, color: n, size: r = 24, header: l, body: a } = e;
         return (0, i.jsxs)('div', {
             className: f.featureCard,
             children: [
@@ -134,19 +134,19 @@ let S = () => [
                 (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: s
+                    children: a
                 })
             ]
         });
     },
     y = (e) => {
-        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: a, imageCoordinates: o } = e,
+        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: s, imageCoordinates: o } = e,
             d = {
-                [a ? 'right' : 'left']: o[0] + r[0],
+                [s ? 'right' : 'left']: o[0] + r[0],
                 top: o[1] + r[1]
             };
         return (0, i.jsxs)('div', {
-            className: s()(f.guildDetails, { [f.faded]: l }),
+            className: a()(f.guildDetails, { [f.faded]: l }),
             style: d,
             children: [
                 (0, i.jsx)('div', {
@@ -168,18 +168,18 @@ let S = () => [
 t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
-        [s, o] = r.useState(0),
+        [a, o] = r.useState(0),
         [_, I] = r.useState(),
-        N = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+        N = (0, s.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
         T = null == _ ? void 0 : _.offsetWidth,
-        b = null == _ ? void 0 : _.offsetHeight;
+        j = null == _ ? void 0 : _.offsetHeight;
     r.useEffect(() => {
-        null != T && l(T / 2), null != b && o(b / 2);
-    }, [T, b, l, o]),
+        null != T && l(T / 2), null != j && o(j / 2);
+    }, [T, j, l, o]),
         r.useEffect(() => {
             (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let j = () => {
+    let b = () => {
         u.Z.open();
     };
     return (0, i.jsxs)('div', {
@@ -194,7 +194,7 @@ t.Z = (e) => {
                             y,
                             {
                                 ...e,
-                                imageCoordinates: [n, s]
+                                imageCoordinates: [n, a]
                             },
                             e.name
                         )
@@ -227,7 +227,7 @@ t.Z = (e) => {
                 'aria-label': N ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
                     (0, i.jsx)(c.Button, {
-                        onClick: j,
+                        onClick: b,
                         className: f.button,
                         disabled: !N,
                         ...e,

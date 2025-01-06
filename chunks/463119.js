@@ -151,7 +151,7 @@ let y = (e) => {
             B = r.useCallback((e) => {
                 D(!1), null == e || e();
             }, []),
-            H = A.title();
+            V = A.title();
         return (0, i.jsx)(d.Tooltip, {
             text: (0, i.jsx)(M, {
                 displayOptions: A,
@@ -163,7 +163,7 @@ let y = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof H ? H : P.intl.string(P.t.rSXaxc),
+            'aria-label': 'string' == typeof V ? V : P.intl.string(P.t.rSXaxc),
             children: (e) =>
                 (0, i.jsxs)(j, {
                     className: null != A.entryPointClassName ? (0, C.l)(O, A.entryPointClassName) : void 0,

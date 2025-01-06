@@ -7,7 +7,7 @@ n.d(t, {
 var i = n(999153),
     r = n(584922);
 function l(e, t, n, l) {
-    let [{ isDragging: s }, a, o] = (0, i.c)({
+    let [{ isDragging: a }, s, o] = (0, i.c)({
             type: t,
             item: () => ({ index: n }),
             collect: (e) => ({ isDragging: e.isDragging() })
@@ -18,16 +18,16 @@ function l(e, t, n, l) {
                 if (null == e.current) return;
                 let r = t.index;
                 if (r === n) return;
-                let s = e.current.getBoundingClientRect(),
-                    a = (s.bottom - s.top) / 2,
-                    o = i.getClientOffset().y - s.top;
-                if ((!(r < n) || !(o < a)) && (!(r > n) || !(o > a))) l(r, n), (t.index = n);
+                let a = e.current.getBoundingClientRect(),
+                    s = (a.bottom - a.top) / 2,
+                    o = i.getClientOffset().y - a.top;
+                if ((!(r < n) || !(o < s)) && (!(r > n) || !(o > s))) l(r, n), (t.index = n);
             }
         });
     return {
-        drag: a,
+        drag: s,
         dragPreview: o,
         drop: c,
-        isDragging: s
+        isDragging: a
     };
 }

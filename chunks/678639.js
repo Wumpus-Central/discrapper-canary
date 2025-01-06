@@ -13,14 +13,14 @@ var r = n(200651),
     c = n(665149),
     d = n(428530),
     u = n(484036),
-    h = n(681619),
-    m = n(621060),
+    m = n(681619),
+    h = n(621060),
     x = n(941469),
-    p = n(668055);
-function f(e, t) {
+    f = n(668055);
+function p(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function g(e) {
+function b(e) {
     let { store: t, dataGetter: n } = e,
         [l, i] = a.useState(n(t));
     return (
@@ -35,15 +35,15 @@ function g(e) {
             );
         }, [t, n]),
         (0, r.jsx)(s.ScrollerThin, {
-            className: p.inspectorContainer,
+            className: f.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
     );
 }
-let b = [
+let g = [
         {
             key: 'name',
-            cellClassName: p.__invalid_eventColumn,
+            cellClassName: f.__invalid_eventColumn,
             render(e) {
                 let { store: t } = e;
                 return t.getName();
@@ -58,10 +58,10 @@ let b = [
                 let { store: t } = e;
                 return null == t.__getLocalVars
                     ? (0, r.jsxs)('div', {
-                          className: p.inspectorContainer,
+                          className: f.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, r.jsx)(g, {
+                    : (0, r.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -72,7 +72,7 @@ let b = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, r.jsx)(g, {
+                return (0, r.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -81,15 +81,15 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
+        { TabBar: a, renderSelectedTab: l } = (0, h.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
-        className: p.subPanel,
+        className: f.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
             (0, r.jsxs)(c.ZP, {
-                className: i()(x.headerBar, p.subPanelHeaderBar),
+                className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
                     (0, r.jsx)(c.ZP.Icon, {
                         icon: s.TagIcon,
@@ -114,7 +114,7 @@ function C() {
                             key: e._dispatchToken,
                             store: e
                         }))
-                        .sort(f),
+                        .sort(p),
                 [l]
             )
             .filter((e) =>
@@ -124,15 +124,15 @@ function C() {
                 })(e, t)
             ),
         [d, u] = a.useState(),
-        m = l.find((e) => e._dispatchToken === d);
+        h = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(x.panel, p.panel),
+        className: i()(x.panel, f.panel),
         children: [
             (0, r.jsx)('div', {
-                className: p.toolbar,
+                className: f.toolbar,
                 children: (0, r.jsx)(s.SearchBar, {
-                    className: p.searchBar,
+                    className: f.searchBar,
                     size: s.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,
@@ -141,15 +141,15 @@ function C() {
                     'aria-label': 'Search stores'
                 })
             }),
-            (0, r.jsx)(h.Z, {
-                columns: b,
+            (0, r.jsx)(m.Z, {
+                columns: g,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
-            null != m &&
+            null != h &&
                 (0, r.jsx)(j, {
-                    store: m,
+                    store: h,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
         ]

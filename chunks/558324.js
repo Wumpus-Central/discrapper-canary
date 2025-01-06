@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(981631),
     c = n(524910);
 t.Z = (e) => {
@@ -13,14 +13,14 @@ t.Z = (e) => {
             (0, i.jsxs)(
                 'span',
                 {
-                    className: s()(c.tag, { [c.__invalid_disabledTag]: g }),
+                    className: a()(c.tag, { [c.__invalid_disabledTag]: g }),
                     children: [
                         e,
                         !g &&
-                            (0, i.jsx)(a.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 className: c.closeWrapper,
                                 onClick: () => d(t),
-                                children: (0, i.jsx)(a.XSmallIcon, {
+                                children: (0, i.jsx)(s.XSmallIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: c.close
@@ -50,10 +50,10 @@ t.Z = (e) => {
             [_, f.length, d, n.length]
         );
     return (0, i.jsxs)('div', {
-        className: s()(t, c.inputWrapper, { [c.disabled]: g }),
+        className: a()(t, c.inputWrapper, { [c.disabled]: g }),
         children: [
             v,
-            (0, i.jsx)(a.TextInput, {
+            (0, i.jsx)(s.TextInput, {
                 className: c.inputOuter,
                 inputClassName: c.inputInner,
                 ...p,

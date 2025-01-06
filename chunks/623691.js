@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(749210),
     c = n(63063),
     d = n(714939),
@@ -17,23 +17,23 @@ var i = n(200651),
     h = n(388032),
     g = n(147465);
 function x(e) {
-    let { guild: t, everyoneRole: n, filteredRoles: l, setEditRoleId: s, query: o, setQuery: c, setHeaderHeight: d } = e,
+    let { guild: t, everyoneRole: n, filteredRoles: l, setEditRoleId: a, query: o, setQuery: c, setHeaderHeight: d } = e,
         m = r.useRef(null);
     r.useEffect(() => {
         var e, t;
         d(null !== (t = null === (e = m.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : u.Cl);
     }, [d]);
     let x = r.useCallback(() => {
-        s(n.id);
-    }, [s, n.id]);
+        a(n.id);
+    }, [a, n.id]);
     return (0, i.jsxs)('div', {
         ref: m,
         children: [
-            (0, i.jsx)(a.FormTitle, {
-                tag: a.FormTitleTags.H1,
+            (0, i.jsx)(s.FormTitle, {
+                tag: s.FormTitleTags.H1,
                 children: h.intl.string(h.t.LPJmLy)
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 className: g.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
@@ -63,7 +63,7 @@ function p(e) {
                 query: l,
                 setQuery: o
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 className: g.helpText,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
@@ -75,13 +75,13 @@ function p(e) {
                     className: g.tableHeader,
                     children: [
                         (0, i.jsx)('div', { className: g.dragSpacing }),
-                        (0, i.jsx)(a.Text, {
-                            className: s()(g.tableTitle, g.roleNameSpacing),
+                        (0, i.jsx)(s.Text, {
+                            className: a()(g.tableTitle, g.roleNameSpacing),
                             variant: 'text-sm/normal',
                             children: h.intl.format(h.t['38N3V1'], { numRoles: String(r.length) })
                         }),
-                        (0, i.jsx)(a.Text, {
-                            className: s()(g.tableTitle, g.memberSpacing),
+                        (0, i.jsx)(s.Text, {
+                            className: a()(g.tableTitle, g.memberSpacing),
                             variant: 'text-sm/normal',
                             children: h.intl.string(h.t['9Oq93t'])
                         }),
@@ -94,7 +94,7 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, query: n, setQuery: l } = e,
-        [s, c] = r.useState(!1),
+        [a, c] = r.useState(!1),
         d = r.useCallback(
             (e) => {
                 l(e);
@@ -112,19 +112,19 @@ function f(e) {
         children: (0, i.jsxs)('div', {
             className: g.searchContainer,
             children: [
-                (0, i.jsx)(a.SearchBar, {
-                    size: a.SearchBar.Sizes.MEDIUM,
+                (0, i.jsx)(s.SearchBar, {
+                    size: s.SearchBar.Sizes.MEDIUM,
                     query: n,
                     onChange: d,
                     onClear: u,
                     placeholder: h.intl.string(h.t.Sojqsr),
                     'aria-label': h.intl.string(h.t.Sojqsr)
                 }),
-                (0, i.jsx)(a.Button, {
+                (0, i.jsx)(s.Button, {
                     className: g.createButton,
-                    size: a.Button.Sizes.SMALL,
+                    size: s.Button.Sizes.SMALL,
                     onClick: m,
-                    submitting: s,
+                    submitting: a,
                     children: h.intl.string(h.t.JZZjQE)
                 })
             ]

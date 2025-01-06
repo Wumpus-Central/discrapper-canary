@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(730671),
     c = n(388032),
     d = n(865552);
@@ -18,15 +18,15 @@ function u(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: s()(d.keywordsContainer, l),
+                className: a()(d.keywordsContainer, l),
                 children: [
-                    (0, i.jsx)(a.TextAreaAutosize, {
-                        className: s()(d.keywordsTextArea, u),
+                    (0, i.jsx)(s.TextAreaAutosize, {
+                        className: a()(d.keywordsTextArea, u),
                         value: x,
                         onChange: p,
                         placeholder: c.intl.string(c.t.UyaxJy)
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: d.keywordsCounter,
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -35,13 +35,13 @@ function u(e) {
                 ]
             }),
             null != f
-                ? (0, i.jsx)(a.Text, {
-                      className: s()(d.paddingTop, d.errorText),
+                ? (0, i.jsx)(s.Text, {
+                      className: a()(d.paddingTop, d.errorText),
                       variant: 'text-xs/medium',
                       color: 'text-danger',
                       children: f
                   })
-                : (0, i.jsx)(a.Text, {
+                : (0, i.jsx)(s.Text, {
                       className: d.paddingTop,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',

@@ -1,30 +1,30 @@
 n.d(t, {
     j: function () {
-        return o;
+        return s;
     }
 });
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(481060),
-    a = n(538537);
-function o(e) {
+var a = n(120356),
+    i = n.n(a),
+    r = n(481060),
+    o = n(538537);
+function s(e) {
     let { pills: t, pillClassName: n } = e;
-    return (0, i.jsx)('div', {
-        className: a.container,
+    return (0, l.jsx)('div', {
+        className: o.container,
         children: t.map((e) =>
-            (0, i.jsx)(
-                s.Tooltip,
+            (0, l.jsx)(
+                r.Tooltip,
                 {
                     text: e.tooltipText,
                     shouldShow: null != e.tooltipText,
                     children: (t) =>
-                        (0, i.jsx)(s.Clickable, {
+                        (0, l.jsx)(r.Clickable, {
                             ...t,
-                            className: l()(a.pill, { [a.disabled]: e.disabled }, n),
+                            className: i()(o.pill, { [o.disabled]: e.disabled }, n),
                             onClick: e.onClick,
-                            children: (0, i.jsx)(s.Text, {
+                            children: (0, l.jsx)(r.Text, {
                                 tag: 'span',
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',

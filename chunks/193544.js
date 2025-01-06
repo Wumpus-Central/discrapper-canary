@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(186523),
     c = n(553826),
     d = n(2150),
@@ -21,7 +21,7 @@ function x(e) {
     let { changeTitle: x, value: p, options: f, className: C, onChange: v } = e,
         [_, I] = r.useState(p),
         [N, T] = r.useState(!1),
-        [b, j] = r.useState(!1),
+        [j, b] = r.useState(!1),
         S = r.useRef(null);
     r.useEffect(() => {
         I(p);
@@ -35,24 +35,24 @@ function x(e) {
     let E = f.find((e) => e.value === _),
         R = (e) => {
             if (!e.disabled && e.value !== _)
-                j(!0),
+                b(!0),
                     null == v || v(e),
                     I(e.value),
                     (S.current = setTimeout(() => {
-                        j(!1), T(!1);
+                        b(!1), T(!1);
                     }, 1000));
         };
     return (0, i.jsx)(u.Z, {
         title: N ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
         description: N ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
         highlightColor: N ? d.q.NONE : null == E ? void 0 : E.highlightColor,
-        action: (0, i.jsx)(a.Button, {
-            look: a.Button.Looks.LINK,
-            size: a.Button.Sizes.MIN,
-            color: a.Button.Colors.LINK,
+        action: (0, i.jsx)(s.Button, {
+            look: s.Button.Looks.LINK,
+            size: s.Button.Sizes.MIN,
+            color: s.Button.Colors.LINK,
             children: h.intl.string(h.t.GEgsAw)
         }),
-        loading: b,
+        loading: j,
         className: C,
         children: f.map((e, t) =>
             (0, i.jsx)(
@@ -61,7 +61,7 @@ function x(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: s()(g.groupCollapsedRow, _ === e.value && g.selected),
+                    className: a()(g.groupCollapsedRow, _ === e.value && g.selected),
                     selected: _ === e.value,
                     action: _ === e.value ? (0, i.jsx)(c.Z, { className: g.radioItem }) : (0, i.jsx)(o.Z, { className: g.radioItem }),
                     onClick: () => R(e),

@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(752877),
+    a = n.n(l),
+    s = n(752877),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -30,14 +30,14 @@ function m(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(u.rowIcon, u.rowIconChecked)
+                      className: a()(u.rowIcon, u.rowIconChecked)
                   })
-                : (0, i.jsx)('div', { className: s()(u.rowIcon, u.rowIconEmpty) })
+                : (0, i.jsx)('div', { className: a()(u.rowIcon, u.rowIconEmpty) })
         ]
     });
 }
 function h(e) {
-    let { title: t, children: n, buttonLabel: l, buttonCallback: s, disabled: o } = e,
+    let { title: t, children: n, buttonLabel: l, buttonCallback: a, disabled: o } = e,
         [h, g] = r.useState(!1),
         x = n.flatMap((e) => e.items.map((e) => e.completed)),
         p = x.filter((e) => e).length / x.length,
@@ -62,7 +62,7 @@ function h(e) {
             }),
             (0, i.jsx)('div', {
                 className: u.progressBarOuter,
-                children: (0, i.jsx)(a.animated.div, {
+                children: (0, i.jsx)(s.animated.div, {
                     className: u.progressBarInner,
                     style: f
                 })
@@ -96,7 +96,7 @@ function h(e) {
                 }),
             null !== l &&
                 '' !== l &&
-                null !== s &&
+                null !== a &&
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(c.FormDivider, { className: u.divider }),
@@ -104,7 +104,7 @@ function h(e) {
                             className: u.button,
                             size: c.Button.Sizes.SMALL,
                             color: c.Button.Colors.BRAND,
-                            onClick: s,
+                            onClick: a,
                             disabled: 1 !== p || o,
                             children: l
                         })

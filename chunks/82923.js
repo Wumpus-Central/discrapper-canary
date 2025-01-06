@@ -28,7 +28,7 @@ class l {
         r(this, 'animation', void 0), (this.animation = e);
     }
 }
-class s {
+class a {
     _map(e) {
         return this.animations.map(e);
     }
@@ -42,7 +42,7 @@ class s {
         r(this, 'animations', void 0), (this.animations = e);
     }
 }
-class a {
+class s {
     async start() {
         for (let e of ((this.stopped = !1), this.animations)) {
             if (this.stopped) return;
@@ -68,9 +68,9 @@ t.Z = {
         return o(e, t, i.Z.spring);
     },
     parallel: function (e) {
-        return new s(e);
+        return new a(e);
     },
     sequence: function (e) {
-        return new a(e);
+        return new s(e);
     }
 };

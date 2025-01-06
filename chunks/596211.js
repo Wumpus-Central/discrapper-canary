@@ -1,20 +1,20 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(406877);
-function a(e) {
-    let { guildId: t, productId: n, attachmentId: a, ...o } = e,
-        { isLoading: s, downloadAttachment: c } = (0, l.Z)(t, n);
-    return (0, i.jsx)(r.Button, {
-        ...o,
-        submitting: s,
+var a = e(200651);
+e(192379);
+var i = e(481060),
+    r = e(406877);
+function o(t) {
+    let { guildId: n, productId: e, attachmentId: o, ...l } = t,
+        { isLoading: c, downloadAttachment: s } = (0, r.Z)(n, e);
+    return (0, a.jsx)(i.Button, {
+        ...l,
+        submitting: c,
         onClick: function () {
-            c(a);
+            s(o);
         }
     });
 }

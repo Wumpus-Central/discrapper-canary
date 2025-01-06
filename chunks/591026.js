@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(467319),
-    a = n(456677),
+    a = n(467319),
+    s = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
@@ -19,7 +19,7 @@ function g(e) {
     var t, n;
     let { rule: g, onChangeRule: x } = e,
         [p, f] = r.useState(null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit),
-        C = (0, s.a)(g.guildId, !1);
+        C = (0, a.a)(g.guildId, !1);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: h.cardContentsContainer,
@@ -127,7 +127,7 @@ function g(e) {
                 (0, i.jsx)(c.Z, {
                     step: 2,
                     header: m.intl.string(m.t['18TOiY']),
-                    children: (0, i.jsx)(a.Z, {
+                    children: (0, i.jsx)(s.Z, {
                         rule: g,
                         onChangeRule: x
                     })

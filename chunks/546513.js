@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(85960),
     l = n(489776),
-    s = n(252121),
-    a = n(564488);
+    a = n(252121),
+    s = n(564488);
 function o(e) {
     let { guildId: t, rules: n, triggerType: o, initWithEdit: c } = e,
         { perGuildMaxCount: d } = r.I6[o],
@@ -17,13 +17,13 @@ function o(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u &&
-                (0, i.jsx)(s.Z, {
+                (0, i.jsx)(a.Z, {
                     guildId: t,
                     triggerType: o
                 }),
             n.map((e) =>
                 (0, i.jsx)(
-                    a.Z,
+                    s.Z,
                     {
                         rule: e,
                         initWithEdit: c

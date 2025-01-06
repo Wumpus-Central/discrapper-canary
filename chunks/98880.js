@@ -34,8 +34,8 @@ var i,
     N = t(367907),
     g = t(220082),
     A = t(70097),
-    b = t(973616),
-    E = t(695103),
+    E = t(973616),
+    b = t(695103),
     I = t(880448),
     P = t(768581),
     j = t(541099),
@@ -86,7 +86,7 @@ function H(e) {
         C = o.useCallback(
             (e) => {
                 if ((0, y.BQ)(n)) {
-                    let t = n instanceof b.ZP ? n : b.ZP.createFromServer(n);
+                    let t = n instanceof E.ZP ? n : E.ZP.createFromServer(n);
                     (0, u.vq)(e, (e) =>
                         (0, a.jsx)(R.Z, {
                             application: t,
@@ -168,9 +168,9 @@ function W(e) {
             !0 === l && _(!0);
         }, [l]),
         A = (0, y.lf)(n),
-        b = 'large_banner' === t || 'medium_banner' === t,
+        E = 'large_banner' === t || 'medium_banner' === t,
         I = o.useCallback(() => _(!1), []),
-        P = (0, c.e7)([h.Z, E.Z], () => h.Z.inDevModeForApplication(n.id) || E.Z.inTestModeForApplication(n.id), [n.id]);
+        P = (0, c.e7)([h.Z, b.Z], () => h.Z.inDevModeForApplication(n.id) || b.Z.inTestModeForApplication(n.id), [n.id]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)('div', {
@@ -192,7 +192,7 @@ function W(e) {
                             disableFadeIn: r
                         })
                     }),
-                    b
+                    E
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
                                   P || A
@@ -242,7 +242,7 @@ function W(e) {
                                         lineClamp: 1,
                                         children: p
                                     }),
-                                    !b && A
+                                    !E && A
                                         ? (0, a.jsx)('div', {
                                               className: U.promotedLabelWrapperNonBanner,
                                               children: (0, a.jsx)(d.Text, {

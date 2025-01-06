@@ -1,15 +1,15 @@
-n.d(t, {
+n.d(e, {
     I3: function () {
         return c;
     },
     Ic: function () {
-        return h;
+        return S;
     },
     Lg: function () {
         return I;
     },
     OU: function () {
-        return E;
+        return m;
     },
     RH: function () {
         return a;
@@ -21,19 +21,19 @@ n.d(t, {
         return d;
     },
     Vg: function () {
-        return m;
+        return g;
     },
     Vk: function () {
         return _;
     },
     _6: function () {
-        return C;
+        return h;
     },
     aj: function () {
-        return g;
+        return p;
     },
     dc: function () {
-        return S;
+        return C;
     },
     fX: function () {
         return u.f;
@@ -42,22 +42,22 @@ n.d(t, {
         return f;
     },
     jj: function () {
-        return o.j;
+        return l.j;
     },
     n4: function () {
         return s;
     },
     q4: function () {
-        return l.q;
+        return o.q;
     },
     uE: function () {
-        return p;
+        return E;
     }
 });
 var i,
     r,
-    o = n(401653),
-    l = n(95930),
+    l = n(401653),
+    o = n(95930),
     u = n(41381);
 ((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
 let a = 1000,
@@ -66,11 +66,11 @@ let a = 1000,
     d = 10,
     f = 60,
     _ = 1,
-    p = 1,
-    g = 260,
-    E = 100,
-    m = 1,
+    E = 1,
+    p = 260,
+    m = 100,
+    g = 1,
     I = 50,
-    h = 20,
-    C = 150,
-    S = 'automod-profile-quarantine-alert';
+    S = 20,
+    h = 150,
+    C = 'automod-profile-quarantine-alert';

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return j;
     }
 }),
     t(653041);
@@ -47,7 +47,7 @@ function _(e) {
         ]
     });
 }
-function j(e) {
+function I(e) {
     var n;
     let { guild: t, channel: a, stageData: o } = e,
         s = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
@@ -91,13 +91,13 @@ function j(e) {
         })
     );
 }
-function I(e) {
+function j(e) {
     let { guild: n, channel: t, stageData: i, headerId: r, loading: c, onNext: d, onCancel: u, onBack: m } = e;
     return null == n || null == t || null == i
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(j, {
+                  (0, l.jsx)(I, {
                       guild: n,
                       channel: t,
                       stageData: i

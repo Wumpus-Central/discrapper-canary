@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(457414),
-    a = n(311173),
+    a = n(457414),
+    s = n(311173),
     o = n(388032),
     c = n(91378);
 function d(e) {
@@ -30,10 +30,10 @@ function d(e) {
             },
             [d, n]
         );
-    return (0, s.S)(n.triggerType)
+    return (0, a.S)(n.triggerType)
         ? (0, i.jsx)(l.Collapsible, {
               isExpanded: m,
-              collapsibleContent: (0, i.jsx)(a.Z, {
+              collapsibleContent: (0, i.jsx)(s.Z, {
                   rule: n,
                   onChangeText: x,
                   className: c.textAreaContainer,

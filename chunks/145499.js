@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(274136),
     d = n(2052),
@@ -20,12 +20,12 @@ var i = n(200651),
     I = n(863562),
     N = n(981631),
     T = n(388032),
-    b = n(744488);
-let j = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.TIER_1) ? N.Eu4.TIER_1 : e < (0, p.A3)(N.Eu4.TIER_2) ? N.Eu4.TIER_2 : e < (0, p.A3)(N.Eu4.TIER_3) || (null != t && t.hasFeature(N.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? N.Eu4.TIER_3 : N.Eu4.NONE),
+    j = n(744488);
+let b = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.TIER_1) ? N.Eu4.TIER_1 : e < (0, p.A3)(N.Eu4.TIER_2) ? N.Eu4.TIER_2 : e < (0, p.A3)(N.Eu4.TIER_3) || (null != t && t.hasFeature(N.oNc.MORE_STICKERS) && e < c.D.MAX_STICKER_SLOTS) ? N.Eu4.TIER_3 : N.Eu4.NONE),
     S = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: r, tier: l } = e,
-            s = n < l,
-            a = (0, p.ig)(l);
+            a = n < l,
+            s = (0, p.ig)(l);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Heading, {
@@ -33,11 +33,11 @@ let j = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.
                     variant: 'heading-md/semibold',
                     children: t
                 }),
-                !s &&
+                !a &&
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         children: T.intl.format(T.t.ZLoNtr, {
-                            numTotal: a,
+                            numTotal: s,
                             numAvailable: (0, p.Qi)(r, l)
                         })
                     })
@@ -57,9 +57,9 @@ let j = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.
     },
     R = () =>
         (0, i.jsx)('div', {
-            className: b.placeholderCard,
+            className: j.placeholderCard,
             children: (0, i.jsx)('img', {
-                className: b.placeholderImg,
+                className: j.placeholderImg,
                 alt: T.intl.string(T.t.wl4ntL),
                 src: n(872732)
             })
@@ -85,7 +85,7 @@ let j = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.
 t.Z = (e) => {
     let { guild: t } = e,
         [l, c] = r.useState(!0),
-        d = (0, a.e7)(
+        d = (0, s.e7)(
             [C.Z],
             () => {
                 var e;
@@ -95,7 +95,7 @@ t.Z = (e) => {
         ),
         { analyticsLocations: x } = (0, u.ZP)(),
         E = t.hasFeature(N.oNc.MORE_STICKERS) ? N.Eu4.TIER_3 : t.premiumTier,
-        Z = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
+        A = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (
         (r.useEffect(() => {
             let e = !1;
@@ -114,7 +114,7 @@ t.Z = (e) => {
         l)
     )
         return (0, i.jsx)(o.Spinner, {});
-    let A = (e, n) => {
+    let Z = (e, n) => {
             let i = null;
             n === N.Eu4.TIER_1 ? (i = N.Qqv.TIER_1) : n === N.Eu4.TIER_2 ? (i = N.Qqv.TIER_2) : n === N.Eu4.TIER_3 && (i = N.Qqv.TIER_3),
                 (0, h.Z)({
@@ -171,7 +171,7 @@ t.Z = (e) => {
         tiers: L,
         renderTier: (e) => {
             let r,
-                { isAnimatedTo: l, onSetRef: a, tier: c, tiers: u, tierIndex: h } = e,
+                { isAnimatedTo: l, onSetRef: s, tier: c, tiers: u, tierIndex: h } = e,
                 { canCreateExpressions: x, canManageGuildExpression: f } = (0, g.Gw)(t),
                 C = u[h - 1],
                 v = null != C ? (0, p.A3)(C.tier) : 0,
@@ -179,9 +179,9 @@ t.Z = (e) => {
                 L = (0, p.ig)(c.tier),
                 D = d.slice(v, S),
                 O = D.length > 0,
-                k = E < c.tier,
-                P = j(d.length, t),
-                M = x && !k && P === c.tier && S !== D.length,
+                P = E < c.tier,
+                k = b(d.length, t),
+                M = x && !P && k === c.tier && S !== D.length,
                 w = M || D.length > 0,
                 B = S - v,
                 U = n(872732),
@@ -189,7 +189,7 @@ t.Z = (e) => {
                 F = M ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
                 H = [];
             for (let e = 0; e < F; e++) H.push((0, i.jsx)(R, {}, 'placeholder-'.concat(e)));
-            let z = P === h + 1 && P > E,
+            let z = k === h + 1 && k > E,
                 W = M || z || h > E;
             return (
                 z
@@ -210,9 +210,9 @@ t.Z = (e) => {
                 (0, i.jsxs)(
                     _.Z,
                     {
-                        subscriptionCount: Z,
+                        subscriptionCount: A,
                         tier: c,
-                        onSetRef: a,
+                        onSetRef: s,
                         isAnimatedTo: l,
                         hasBottomMargin: h !== u.length - 1,
                         withCardBody: !w,
@@ -222,13 +222,13 @@ t.Z = (e) => {
                         children: [
                             w &&
                                 (0, i.jsxs)('div', {
-                                    className: b.grid,
+                                    className: j.grid,
                                     children: [
                                         D.map((e) =>
                                             (0, i.jsx)(
                                                 I.Z,
                                                 {
-                                                    isDisabled: k,
+                                                    isDisabled: P,
                                                     sticker: e,
                                                     canManageSticker: f(e)
                                                 },
@@ -238,29 +238,29 @@ t.Z = (e) => {
                                         H
                                     ]
                                 }),
-                            !k &&
+                            !P &&
                                 !M &&
                                 0 === D.length &&
                                 (0, i.jsx)('div', {
-                                    className: s()(b.emptyTierWrapper, b.unusedTierWrapper),
+                                    className: a()(j.emptyTierWrapper, j.unusedTierWrapper),
                                     children: (0, i.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
                                         children: T.intl.string(T.t.lqwv0N)
                                     })
                                 }),
-                            k &&
+                            P &&
                                 !O &&
                                 (0, i.jsxs)('div', {
-                                    className: b.emptyTierWrapper,
+                                    className: j.emptyTierWrapper,
                                     children: [
                                         (0, i.jsx)('img', {
                                             alt: T.intl.string(T.t.BAhsws),
-                                            className: b.emptyTierImage,
+                                            className: j.emptyTierImage,
                                             src: U
                                         }),
                                         (0, i.jsx)(o.Text, {
-                                            className: b.unlockTierCtaHeading,
+                                            className: j.unlockTierCtaHeading,
                                             variant: 'text-md/normal',
                                             color: 'header-secondary',
                                             children:
@@ -273,7 +273,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)(o.Button, {
                                             color: o.Button.Colors.GREEN,
-                                            onClick: () => A((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
+                                            onClick: () => Z((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
                                             children: T.intl.string(T.t.dtFw5e)
                                         })
                                     ]

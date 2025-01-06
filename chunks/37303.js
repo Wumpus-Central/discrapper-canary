@@ -31,7 +31,7 @@ function p(e) {
             expansionSpring: A,
             isAnimating: R,
             isExpanded: b,
-            toggleExpanded: M
+            toggleExpanded: I
         } = (0, x.O)({
             initiallyExpanded:
                 !_ ||
@@ -41,7 +41,7 @@ function p(e) {
                     quest: t
                 })
         }),
-        I = null != q ? q : c.U0;
+        M = null != q ? q : c.U0;
     return (0, i.jsx)(u.A, {
         questOrQuests: t,
         questContent: n,
@@ -56,7 +56,7 @@ function p(e) {
                                 ? void 0
                                 : A.to({
                                       range: [0, 1],
-                                      output: [c.DJ, I]
+                                      output: [c.DJ, M]
                                   })
                     },
                     className: C.questsCard,
@@ -80,7 +80,7 @@ function p(e) {
                                 isExpanded: b,
                                 isInConcurrentQuestExperiment: _,
                                 contentPosition: g,
-                                toggleExpanded: M
+                                toggleExpanded: I
                             }),
                             (0, i.jsx)(d.Z, {
                                 quest: t,

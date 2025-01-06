@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(n, {
     Fv: function () {
-        return o;
+        return u;
     },
     eA: function () {
-        return c;
+        return d;
     }
 });
-var i = n(192379),
-    r = n(818083),
-    l = n(594174),
-    s = n(981631);
-let a = (0, r.B)({
+var i = t(192379),
+    l = t(818083),
+    a = t(594174),
+    r = t(981631);
+let o = (0, l.B)({
     kind: 'guild',
     id: '2022-03_guild_access_rate_insight_experiment',
     label: 'Guild Access Rate Insight Experiment',
@@ -23,35 +23,35 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
-    var t;
+function u(e) {
+    var n;
     return (
-        (null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) &&
-        a.getCurrentConfig({
+        (null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) &&
+        o.getCurrentConfig({
             guildId: e,
             location: '77b4b2_1'
         }).showAccessRate
     );
 }
-function c(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+function d(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
         i.useEffect(() => {
-            !t &&
+            !n &&
                 null != e &&
-                a.trackExposure({
+                o.trackExposure({
                     guildId: e,
                     location: '77b4b2_2'
                 });
-        }, [e, t]),
-        a.useExperiment(
+        }, [e, n]),
+        o.useExperiment(
             {
-                guildId: null != e ? e : s.lds,
+                guildId: null != e ? e : r.lds,
                 location: '77b4b2_3'
             },
             {
                 autoTrackExposure: !1,
-                disable: t || null == e
+                disable: n || null == e
             }
         )
     );

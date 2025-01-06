@@ -13,8 +13,8 @@ n.d(t, {
 var i,
     r = n(200651),
     l = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     o = n(512722),
     c = n.n(o),
     d = n(442837),
@@ -31,8 +31,8 @@ var i,
     I = n(58346),
     N = n(388032),
     T = n(434881),
-    b = n(232186);
-function j(e, t, n) {
+    j = n(232186);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,10 +58,10 @@ class S extends (i = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'name', ''),
-            j(this, 'description', ''),
-            j(this, 'error', null),
-            j(this, 'reset', () => {
+            b(this, 'name', ''),
+            b(this, 'description', ''),
+            b(this, 'error', null),
+            b(this, 'reset', () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,21 +69,21 @@ class S extends (i = d.ZP.Store) {
                 } else (this.name = ''), (this.description = '');
                 this.emitChange();
             }),
-            j(this, 'setName', (e) => {
+            b(this, 'setName', (e) => {
                 (this.name = e), this.emitChange();
             }),
-            j(this, 'setDescription', (e) => {
+            b(this, 'setDescription', (e) => {
                 (this.description = e), this.emitChange();
             }),
-            j(this, 'setError', (e) => {
+            b(this, 'setError', (e) => {
                 (this.error = e), this.emitChange();
             }),
-            j(this, 'save', async () => {
+            b(this, 'save', async () => {
                 await f.Z.updateGuildTemplate(_.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
-j(S, 'displayName', 'GuildSettingsTemplateMetadataStore_');
+b(S, 'displayName', 'GuildSettingsTemplateMetadataStore_');
 let E = new S(h.Z);
 function R() {
     let [e, t] = l.useState(!1),
@@ -98,7 +98,7 @@ function R() {
 }
 function y() {
     return (0, r.jsx)(m.FormSection, {
-        className: b.marginBottom4,
+        className: j.marginBottom4,
         children: (0, r.jsxs)(m.HeadingLevel, {
             component: (0, r.jsx)(m.FormTitle, {
                 tag: m.FormTitleTags.H1,
@@ -106,23 +106,23 @@ function y() {
             }),
             children: [
                 (0, r.jsx)(m.FormText, {
-                    className: b.marginBottom20,
+                    className: j.marginBottom20,
                     type: m.FormTextTypes.DESCRIPTION,
                     children: N.intl.format(N.t.c0m8bG, {})
                 }),
-                (0, r.jsx)(A, {}),
+                (0, r.jsx)(Z, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
-                (0, r.jsx)(Z, {})
+                (0, r.jsx)(A, {})
             ]
         })
     });
 }
-function Z() {
+function A() {
     let { guild: e } = _.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),
         [n, i] = l.useState(!0),
-        { loading: s, guildTemplate: a } = (function (e) {
+        { loading: a, guildTemplate: s } = (function (e) {
             let [t, n] = l.useState(!0);
             return (
                 l.useEffect(() => {
@@ -143,14 +143,14 @@ function Z() {
         })(e.id);
     if (
         (l.useEffect(() => {
-            if (!!n && !s) {
-                if (null != a) {
+            if (!!n && !a) {
+                if (null != s) {
                     var e, t;
-                    E.setName(null !== (e = a.name) && void 0 !== e ? e : ''), E.setDescription(null !== (t = a.description) && void 0 !== t ? t : '');
+                    E.setName(null !== (e = s.name) && void 0 !== e ? e : ''), E.setDescription(null !== (t = s.description) && void 0 !== t ? t : '');
                 }
                 i(!1);
             }
-        }, [n, a, s]),
+        }, [n, s, a]),
         l.useEffect(
             () => () => {
                 E.reset(), E.setError(null);
@@ -165,18 +165,18 @@ function Z() {
                   variant: 'text-sm/normal',
                   children: t.message
               })
-            : (0, r.jsx)(m.Spinner, { className: b.marginTop40 });
+            : (0, r.jsx)(m.Spinner, { className: j.marginTop40 });
     let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(D, {}),
             (0, r.jsx)(O, {
                 guild: e,
-                guildTemplate: a
+                guildTemplate: s
             }),
             o
                 ? (0, r.jsx)(m.Text, {
-                      className: b.marginTop8,
+                      className: j.marginTop8,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: t.getAnyErrorMessage()
@@ -185,7 +185,7 @@ function Z() {
         ]
     });
 }
-function A() {
+function Z() {
     return (0, r.jsxs)('div', {
         className: T.descriptionBox,
         children: [
@@ -305,7 +305,7 @@ function D() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(m.FormItem, {
-                className: b.marginBottom20,
+                className: j.marginBottom20,
                 title: N.intl.string(N.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, r.jsx)(m.TextInput, {
@@ -316,7 +316,7 @@ function D() {
                 })
             }),
             (0, r.jsx)(m.FormItem, {
-                className: b.marginBottom20,
+                className: j.marginBottom20,
                 title: N.intl.string(N.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, r.jsx)(m.TextArea, {
@@ -332,7 +332,7 @@ function D() {
 function O(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, r.jsx)(k, { guild: t })
+        ? (0, r.jsx)(P, { guild: t })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.FormItem, {
@@ -346,15 +346,15 @@ function O(e) {
                   n.isDirty &&
                       (0, r.jsx)(m.Text, {
                           color: 'text-warning',
-                          className: b.marginTop8,
+                          className: j.marginTop8,
                           variant: 'text-sm/normal',
                           children: N.intl.string(N.t.aWsjtL)
                       }),
                   (0, r.jsxs)('div', {
-                      className: a()(b.marginTop20, T.buttonContainer),
+                      className: s()(j.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, r.jsx)(P, {
+                              (0, r.jsx)(k, {
                                   guild: t,
                                   guildTemplate: n
                               }),
@@ -378,58 +378,58 @@ function O(e) {
               ]
           });
 }
-function k(e) {
+function P(e) {
     var t;
     let { guild: n } = e,
         i = (0, d.e7)([E], () => E.name),
-        [s, a] = l.useState(!1),
+        [a, s] = l.useState(!1),
         o = async () => {
-            E.setError(null), a(!0);
+            E.setError(null), s(!0);
             try {
                 await f.Z.createGuildTemplate(n.id, E.name, E.description);
             } catch (e) {
                 E.setError(new p.Hx(e));
             }
-            a(!1);
+            s(!1);
         };
     return (0, r.jsx)(m.Button, {
-        submitting: s,
+        submitting: a,
         disabled: !(null != (t = i) && t.trim().length >= 2),
         color: m.Button.Colors.BRAND,
         onClick: o,
         children: N.intl.string(N.t.Wxdi8P)
     });
 }
-function P(e) {
+function k(e) {
     let { guild: t, guildTemplate: n } = e,
-        [i, s] = l.useState(!1),
-        a = async () => {
-            E.setError(null), s(!0);
+        [i, a] = l.useState(!1),
+        s = async () => {
+            E.setError(null), a(!0);
             try {
                 await f.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
                 E.setError(new p.Hx(e));
             }
-            s(!1);
+            a(!1);
         };
     return (0, r.jsx)(m.Button, {
         submitting: i,
         className: T.button,
-        onClick: a,
+        onClick: s,
         children: N.intl.string(N.t['Nw+0Y2'])
     });
 }
 function M(e) {
     let { guild: t, guildTemplate: n } = e,
-        [i, s] = l.useState(!1),
-        a = async () => {
+        [i, a] = l.useState(!1),
+        s = async () => {
             E.setError(null);
             try {
                 await f.Z.deleteGuildTemplate(t.id, n.code), E.setName(''), E.setDescription('');
             } catch (e) {
                 E.setError(new p.Hx(e));
             }
-            s(!1);
+            a(!1);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -437,13 +437,13 @@ function M(e) {
                 look: m.Button.Looks.OUTLINED,
                 className: T.button,
                 color: m.Button.Colors.RED,
-                onClick: () => s(!0),
+                onClick: () => a(!0),
                 children: N.intl.string(N.t['cN/RFB'])
             }),
             i
                 ? (0, r.jsx)(L, {
-                      confirm: a,
-                      cancel: () => s(!1)
+                      confirm: s,
+                      cancel: () => a(!1)
                   })
                 : null
         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
@@ -26,8 +26,8 @@ function u(e) {
     for (let [n, r] of Object.entries(e)) t[n] = r;
     return t;
 }
-let h = u(d),
-    m = u(d);
+let m = u(d),
+    h = u(d);
 function x(e) {
     return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {
@@ -36,14 +36,14 @@ function x(e) {
           })
         : e;
 }
-function p(e) {
+function f(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, r.jsx)('div', {
         className: c.inspectorWrapper,
         children: (0, r.jsx)(a.L, {
             data: t,
-            theme: 'light' === n ? m : h,
+            theme: 'light' === n ? h : m,
             invertTheme: !1,
             valueRenderer: x,
             shouldExpandNode: () => !0

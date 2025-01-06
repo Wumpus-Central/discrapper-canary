@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return Z;
+        return A;
     },
     Z: function () {
         return L;
@@ -11,8 +11,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(497321),
     d = n(852860),
@@ -29,8 +29,8 @@ var i = n(200651),
     I = n(999382),
     N = n(621319),
     T = n(44550),
-    b = n(770270),
-    j = n(981631),
+    j = n(770270),
+    b = n(981631),
     S = n(30513),
     E = n(388032),
     R = n(445744);
@@ -47,7 +47,7 @@ function y(e, t, n) {
         e
     );
 }
-let Z = a.ZP.connectStores([I.Z, T.Z], () => {
+let A = s.ZP.connectStores([I.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
         t = I.Z.getGuildId();
     return {
@@ -61,15 +61,15 @@ let Z = a.ZP.connectStores([I.Z, T.Z], () => {
         }
     };
 })(d.Z);
-class A extends r.PureComponent {
+class Z extends r.PureComponent {
     componentWillUnmount() {
         (0, N.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
-            { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
+            { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: a } = this.props;
         if (null == r) return (0, i.jsx)(o.Spinner, {});
-        let a = (null == s ? void 0 : s.hasFeature(j.oNc.VANITY_URL)) === !0;
+        let s = (null == a ? void 0 : a.hasFeature(b.oNc.VANITY_URL)) === !0;
         return (0, i.jsxs)(o.Card, {
             editable: !0,
             className: R.editVanityUrlCard,
@@ -91,7 +91,7 @@ class A extends r.PureComponent {
                     maxLength: 25,
                     autoFocus: !0,
                     error: t,
-                    disabled: !a
+                    disabled: !s
                 }),
                 null != n && n.length > 0
                     ? (0, i.jsx)(o.Button, {
@@ -110,7 +110,7 @@ class A extends r.PureComponent {
     renderUpsellButton() {
         return (0, i.jsxs)(o.ShinyButton, {
             color: o.Button.Colors.GREEN,
-            className: s()(R.marginTop16),
+            className: a()(R.marginTop16),
             innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
@@ -131,7 +131,7 @@ class A extends r.PureComponent {
                 variant: 'text-md/normal',
                 color: 'text-danger',
                 className: R.__invalid_marginTop20,
-                children: (0, b.i)(null == t ? void 0 : t.code)
+                children: (0, j.i)(null == t ? void 0 : t.code)
             });
         if (null != n && n.length > 0) {
             let e = (0, f.Z)(n);
@@ -166,7 +166,7 @@ class A extends r.PureComponent {
                                 (0, i.jsx)('div', { children: E.intl.string(E.t['5XZKy8']) }),
                                 (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: j.oNc.VANITY_URL,
+                                    guildFeature: b.oNc.VANITY_URL,
                                     className: R.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
@@ -187,7 +187,7 @@ class A extends r.PureComponent {
                             className: R.__invalid_marginBottom20,
                             children: E.intl.string(E.t['eH/HMz'])
                         }),
-                        (0, b.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
+                        (0, j.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
                         this.renderInfo()
                     ]
                 });
@@ -197,50 +197,50 @@ class A extends r.PureComponent {
             y(this, 'state', { isRemoving: !1 }),
             y(this, 'handleShowModalUpsell', (e, t, n, i, r) => {
                 e.preventDefault(), e.stopPropagation();
-                let { guild: l, analyticsLocations: s } = this.props;
+                let { guild: l, analyticsLocations: a } = this.props;
                 null != l &&
-                    ((0, m.yw)(j.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, m.yw)(b.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: j.qAy.LEARN_MORE,
+                            object: b.qAy.LEARN_MORE,
                             objectType: (0, _.ge)(t),
-                            location_stack: s
+                            location_stack: a
                         },
                         guild_id: null == l ? void 0 : l.id
                     }),
                     (0, p.Z)({
-                        analyticsLocations: s,
+                        analyticsLocations: a,
                         analyticsSourceLocation: {
                             section: n,
                             object: i,
-                            page: j.ZY5.GUILD_SETTINGS
+                            page: b.ZY5.GUILD_SETTINGS
                         },
                         guild: l,
                         perks: r
                     }));
             }),
             y(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, j.Eu4.TIER_3, j.jXE.GUILD_SETTINGS_VANITY_URL, j.qAy.BADGE, (0, S.WW)());
+                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BADGE, (0, S.WW)());
             }),
             y(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, j.Eu4.TIER_3, j.jXE.GUILD_SETTINGS_VANITY_URL, j.qAy.BUTTON_CTA, (0, S.WW)());
+                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }
 }
 function L() {
-    let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
-        t = (0, a.cj)([T.Z], () => ({
+    let e = (0, s.e7)([I.Z], () => I.Z.getGuild()),
+        t = (0, s.cj)([T.Z], () => ({
             vanityURLCode: T.Z.vanityURLCode,
             vanityURLUses: T.Z.vanityURLUses,
             originalVanityURLCode: T.Z.originalVanityURLCode,
             hasError: T.Z.hasError(),
             errorDetails: T.Z.errorDetails
         })),
-        n = (0, a.e7)([C.Z], () => C.Z.hideInstantInvites),
+        n = (0, s.e7)([C.Z], () => C.Z.hideInstantInvites),
         { analyticsLocations: r } = (0, h.ZP)(u.Z.VANITY_URL);
     return (0, i.jsx)(h.Gt, {
         value: r,
-        children: (0, i.jsx)(A, {
+        children: (0, i.jsx)(Z, {
             guild: e,
             ...t,
             hide: n,

@@ -2,8 +2,8 @@ n(47120), n(773603);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(368343),
     c = n(364083),
     d = n(92373),
@@ -32,14 +32,14 @@ function x(e) {
         I = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
-        children: (0, i.jsxs)(a.FormItem, {
+        children: (0, i.jsxs)(s.FormItem, {
             error: x,
             children: [
-                (0, i.jsx)(a.SearchableSelect, {
+                (0, i.jsx)(s.SearchableSelect, {
                     multi: !0,
                     hidePills: !0,
                     autoFocus: !0,
-                    wrapperClassName: s()(g.input, h.input),
+                    wrapperClassName: a()(g.input, h.input),
                     options: p,
                     value: C,
                     placeholder: m.intl.string(m.t.acyezc),
@@ -54,7 +54,7 @@ function x(e) {
                     (0, i.jsxs)('div', {
                         className: h.gamesContainer,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
                                 children: m.intl.string(m.t.PgOVsL)
@@ -63,7 +63,7 @@ function x(e) {
                                 className: h.gamesList,
                                 children: C.map((e) =>
                                     (0, i.jsx)(
-                                        a.Tooltip,
+                                        s.Tooltip,
                                         {
                                             text: m.intl.string(m.t.C1K2XV),
                                             shouldShow: n,
@@ -96,8 +96,8 @@ function x(e) {
 }
 function p(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: l } = e,
-        { topGames: s, tryFetchTopGames: c } = (0, o.B)(),
-        u = s.get(t),
+        { topGames: a, tryFetchTopGames: c } = (0, o.B)(),
+        u = a.get(t),
         [g, x] = r.useState(!1);
     r.useEffect(() => {
         x(!0),
@@ -114,7 +114,7 @@ function p(e) {
             [l, n]
         );
     return g && null == u
-        ? (0, i.jsx)(a.Spinner, { className: h.loadingSpinner })
+        ? (0, i.jsx)(s.Spinner, { className: h.loadingSpinner })
         : null == p || 0 === p.length
           ? null
           : (0, i.jsxs)(i.Fragment, {
@@ -123,7 +123,7 @@ function p(e) {
                     (0, i.jsxs)('div', {
                         className: h.gamesContainer,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
                                 children: m.intl.string(m.t['0wEQQ0'])
@@ -152,14 +152,14 @@ t.Z = (e) => {
     let { title: t, description: n, onUpdateGames: r, gameApplicationIds: l, minGames: o = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
         m = l.size <= o;
     return (0, i.jsxs)('div', {
-        className: s()(g.slideContent, h.container),
+        className: a()(g.slideContent, h.container),
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: 'heading-xxl/medium',
                 className: g.title,
                 children: t
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: g.subtitle,

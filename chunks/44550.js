@@ -1,14 +1,14 @@
 var i,
     r,
     l,
-    s,
-    a = n(442837),
+    a,
+    s = n(442837),
     o = n(570140);
 let c = null,
     d = 0,
     u = null,
     m = null;
-class h extends (s = a.ZP.Store) {
+class h extends (a = s.ZP.Store) {
     showNotice() {
         return c !== u;
     }

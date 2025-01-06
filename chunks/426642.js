@@ -7,8 +7,8 @@ var i,
     r,
     l = n(200651);
 n(192379);
-var s = n(692547),
-    a = n(481060),
+var a = n(692547),
+    s = n(481060),
     o = n(752657),
     c = n(388032),
     d = n(668398);
@@ -23,39 +23,39 @@ t.Z = (e) => {
             tooltip: h
         } = {
             0: {
-                icon: a.FileWarningIcon,
+                icon: s.FileWarningIcon,
                 description: c.intl.string(c.t.YbdEFB),
-                color: s.Z.unsafe_rawColors.RED_400.css,
+                color: a.Z.unsafe_rawColors.RED_400.css,
                 tooltip: c.intl.string(c.t.PanA4O)
             },
             4: {
-                icon: a.FileDenyIcon,
+                icon: s.FileDenyIcon,
                 description: c.intl.string(c.t['01Papq']),
-                color: s.Z.unsafe_rawColors.RED_400.css,
+                color: a.Z.unsafe_rawColors.RED_400.css,
                 tooltip: c.intl.string(c.t.PanA4O)
             },
             5: {
                 icon: o.Z,
                 description: c.intl.string(c.t.sp16MT),
-                color: s.Z.unsafe_rawColors.RED_400.css,
+                color: a.Z.unsafe_rawColors.RED_400.css,
                 tooltip: c.intl.string(c.t.PanA4O)
             },
             1: {
-                icon: a.SpeedometerIcon,
+                icon: s.SpeedometerIcon,
                 description: c.intl.string(c.t['4rjikp']),
-                color: s.Z.unsafe_rawColors.ORANGE_345.css,
+                color: a.Z.unsafe_rawColors.ORANGE_345.css,
                 tooltip: c.intl.string(c.t.dq9aTk)
             },
             2: {
-                icon: a.CircleInformationIcon,
+                icon: s.CircleInformationIcon,
                 description: c.intl.string(c.t['5VmbbG']),
-                color: s.Z.unsafe_rawColors.RED_400.css,
+                color: a.Z.unsafe_rawColors.RED_400.css,
                 tooltip: c.intl.string(c.t.PanA4O)
             },
             3: {
-                icon: a.CircleInformationIcon,
+                icon: s.CircleInformationIcon,
                 description: c.intl.string(c.t.rjFOZ2),
-                color: s.Z.unsafe_rawColors.RED_400.css,
+                color: a.Z.unsafe_rawColors.RED_400.css,
                 tooltip: c.intl.string(c.t.PanA4O)
             }
         }[n];
@@ -64,25 +64,25 @@ t.Z = (e) => {
         children: [
             (0, l.jsx)(r, {
                 className: d.fileIcon,
-                color: s.Z.unsafe_rawColors.PRIMARY_300.css
+                color: a.Z.unsafe_rawColors.PRIMARY_300.css
             }),
-            (0, l.jsxs)(a.FormSection, {
+            (0, l.jsxs)(s.FormSection, {
                 className: d.fileInfo,
                 children: [
-                    (0, l.jsx)(a.FormTitle, {
+                    (0, l.jsx)(s.FormTitle, {
                         className: d.fileName,
                         children: i
                     }),
-                    (0, l.jsx)(a.FormText, {
-                        type: a.FormTextTypes.DESCRIPTION,
+                    (0, l.jsx)(s.FormText, {
+                        type: s.FormTextTypes.DESCRIPTION,
                         children: u
                     })
                 ]
             }),
-            (0, l.jsx)(a.TooltipContainer, {
+            (0, l.jsx)(s.TooltipContainer, {
                 position: 'right',
                 text: h,
-                children: (0, l.jsx)(a.CircleWarningIcon, {
+                children: (0, l.jsx)(s.CircleWarningIcon, {
                     size: 'custom',
                     width: 20,
                     height: 20,

@@ -1,7 +1,7 @@
-var i, r, l, s, a, o, c, d;
+var i, r, l, a, s, o, c, d;
 n.d(t, {
     XL: function () {
-        return s;
+        return a;
     },
     jw: function () {
         return l;
@@ -13,10 +13,10 @@ n.d(t, {
         return i;
     }
 }),
-    ((a = i || (i = {}))[(a.OPEN = 1)] = 'OPEN'),
-    (a[(a.PAYOUT_CREATED = 2)] = 'PAYOUT_CREATED'),
-    (a[(a.CANCELED = 3)] = 'CANCELED'),
-    (a[(a.PAYOUT_DEFERRED = 4)] = 'PAYOUT_DEFERRED'),
+    ((s = i || (i = {}))[(s.OPEN = 1)] = 'OPEN'),
+    (s[(s.PAYOUT_CREATED = 2)] = 'PAYOUT_CREATED'),
+    (s[(s.CANCELED = 3)] = 'CANCELED'),
+    (s[(s.PAYOUT_DEFERRED = 4)] = 'PAYOUT_DEFERRED'),
     ((o = r || (r = {})).MARKETPLACE = 'marketplace'),
     (o.STAGE_EVENT_SKU = 'stage_event_sku'),
     (o.SERVER_ROLE_SUBSCRIPTION = 'server_role_subscription'),
@@ -34,7 +34,7 @@ n.d(t, {
     (c[(c.RISK_REVIEW = 11)] = 'RISK_REVIEW'),
     (c[(c.SUBMITTED = 12)] = 'SUBMITTED'),
     (c[(c.PENDING_FUNDS = 13)] = 'PENDING_FUNDS'),
-    ((d = s || (s = {}))[(d.MINIMUM_NOT_REACHED = 1)] = 'MINIMUM_NOT_REACHED'),
+    ((d = a || (a = {}))[(d.MINIMUM_NOT_REACHED = 1)] = 'MINIMUM_NOT_REACHED'),
     (d[(d.BILLING_PROFILE_INACTIVE = 2)] = 'BILLING_PROFILE_INACTIVE'),
     (d[(d.PAYOUT_FAILED = 3)] = 'PAYOUT_FAILED'),
     (d[(d.APPLICATION_NOT_APPROVED = 4)] = 'APPLICATION_NOT_APPROVED'),

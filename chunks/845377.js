@@ -2,9 +2,9 @@ n(47120), n(724458);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(498607),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(498607),
+    o = n.n(s),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
@@ -19,19 +19,19 @@ var i = n(200651),
     _ = n(388032),
     I = n(555437);
 let N = (e) => {
-    let { name: t, failingName: n, description: r, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
+    let { name: t, failingName: n, description: r, checked: l, pending: a, pendingDescription: s, failingDescription: o } = e,
         c = t,
         d = null,
         u = null;
     return (
-        s
+        a
             ? ((d = (0, i.jsx)(h.CircleWarningIcon, {
                   size: 'custom',
                   color: m.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20
               })),
-              (u = null != a ? a : r))
+              (u = null != s ? s : r))
             : l
               ? ((d = (0, i.jsx)(h.Checkbox, {
                     readOnly: !0,
@@ -91,11 +91,11 @@ function T(e, t) {
     );
 }
 t.Z = (e) => {
-    let { guild: t, guildId: l, className: a, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
-        [m, b] = (0, u.Wu)([C.ZP], () => [C.ZP.getDiscoveryChecklist(l), C.ZP.isLoading()], [l]),
-        { nsfwProperties: j } = null != m ? m : {},
+    let { guild: t, guildId: l, className: s, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
+        [m, j] = (0, u.Wu)([C.ZP], () => [C.ZP.getDiscoveryChecklist(l), C.ZP.isLoading()], [l]),
+        { nsfwProperties: b } = null != m ? m : {},
         S = null == t ? void 0 : t.hasFeature(v.oNc.PARTNERED),
-        E = null == j ? void 0 : j.channels_banned_keywords,
+        E = null == b ? void 0 : b.channels_banned_keywords,
         R = (0, u.e7)(
             [g.ZP],
             () => {
@@ -128,9 +128,9 @@ t.Z = (e) => {
             [t.id, E],
             T
         );
-    if (b || null == m)
+    if (j || null == m)
         return (0, i.jsxs)('div', {
-            className: s()(I.container, I.loaderContainer, a),
+            className: a()(I.container, I.loaderContainer, s),
             children: [
                 (0, i.jsx)(h.Heading, {
                     className: I.loadingText,
@@ -142,7 +142,7 @@ t.Z = (e) => {
             ]
         });
     let y = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
-        Z = [
+        A = [
             {
                 name: _.intl.string(_.t.yvk9p6),
                 failingName: _.intl.string(_.t['IY/UT0']),
@@ -242,7 +242,7 @@ t.Z = (e) => {
                 description: _.intl.string(_.t.Pbu9AQ),
                 failingDescription: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (null == j ? void 0 : j.channels) != null
+                        (null == b ? void 0 : b.channels) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == j ? void 0 : j.name) != null
+                        (null == b ? void 0 : b.name) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -295,7 +295,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == j ? void 0 : j.description) != null
+                        (null == b ? void 0 : b.description) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -314,7 +314,7 @@ t.Z = (e) => {
                             : null
                     ]
                 }),
-                checked: null == j || 0 === Object.keys(j).length
+                checked: null == b || 0 === Object.keys(b).length
             },
             {
                 name: _.intl.string(_.t.lSXnLy),
@@ -325,7 +325,7 @@ t.Z = (e) => {
             }
         ];
     return (0, i.jsxs)('div', {
-        className: s()(I.container, a),
+        className: a()(I.container, s),
         children: [
             (() => {
                 let e = _.t['+6Hylp'],
@@ -360,11 +360,11 @@ t.Z = (e) => {
                           ]
                       });
             })(),
-            Z.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
+            A.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
                 (0, i.jsxs)(
                     r.Fragment,
                     {
-                        children: [(0, i.jsx)(N, { ...e }), t < Z.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
+                        children: [(0, i.jsx)(N, { ...e }), t < A.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(110924),
     c = n(347469),
     d = n(853276),
@@ -32,19 +32,19 @@ function g(e) {
     });
 }
 let x = r.forwardRef(function (e, t) {
-    let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
+    let { children: n, onFocus: l, onBlur: a, onClick: o } = e,
         c = r.useRef(null),
         [d, m] = r.useState(u.tq);
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(s.Clickable, {
         className: h.textArea,
         onFocus: l,
-        onBlur: s,
+        onBlur: a,
         onClick: o,
         innerRef: c,
         ignoreKeyPress: !0,
         style: { minHeight: d },
         children: [
-            (0, i.jsx)(a.AdvancedScroller, {
+            (0, i.jsx)(s.AdvancedScroller, {
                 className: h.innerScroller,
                 style: { minHeight: d - 2 },
                 ref: t,
@@ -70,31 +70,31 @@ function p(e) {
         {
             handlePasteEvent: N,
             handleInputChange: T,
-            handleKeyDown: b,
-            handleContainerKeyUp: j,
+            handleKeyDown: j,
+            handleContainerKeyUp: b,
             handleRemoveTag: S,
             handleTagChangeEvent: E,
             handleSelectTag: R,
             handleUnselectTag: y,
-            handleResetTagSelections: Z,
-            handleInputBlurEvent: A
+            handleResetTagSelections: A,
+            handleInputBlurEvent: Z
         } = (0, m.Q)(I, {
             scrollerRef: _,
             mainInputRef: C,
             mainContainerRef: v
         }),
         {
-            state: { value: L, tags: D, selections: O, isSelecting: k }
+            state: { value: L, tags: D, selections: O, isSelecting: P }
         } = I,
-        P = (0, o.Z)(D),
+        k = (0, o.Z)(D),
         [M, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
-            w(!1), Z(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [Z]);
+            w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [A]);
     r.useEffect(() => {
-        if (!M && P !== D) l(D);
-    }, [l, P, D, M]),
+        if (!M && k !== D) l(D);
+    }, [l, k, D, M]),
         r.useEffect(() => {
             if (!M) c(L);
         }, [c, L, M]);
@@ -127,10 +127,10 @@ function p(e) {
             [R, y, O, D]
         );
     return (0, i.jsxs)('div', {
-        className: s()(h.mainContainer, p),
+        className: a()(h.mainContainer, p),
         ref: v,
         tabIndex: 0,
-        onKeyUp: j,
+        onKeyUp: b,
         children: [
             (0, i.jsxs)(x, {
                 ref: _,
@@ -146,7 +146,7 @@ function p(e) {
                                 onFocus: G(t),
                                 onRemove: () => S(t),
                                 isSelected: O.includes(e),
-                                isSelecting: k,
+                                isSelecting: P,
                                 error: u[e],
                                 forceShowErrorTooltip: !M && t === D.length - 1
                             },
@@ -154,19 +154,19 @@ function p(e) {
                         )
                     ),
                     (0, i.jsx)('input', {
-                        className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: M }),
+                        className: a()(h.mainTextInput, { [h.isEditingOtherNodes]: M }),
                         ref: C,
                         onChange: T,
-                        onKeyDownCapture: b,
+                        onKeyDownCapture: j,
                         onPaste: N,
-                        onBlur: A,
+                        onBlur: Z,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L
                     })
                 ]
             }),
             null != f &&
-                (0, i.jsxs)(a.Text, {
+                (0, i.jsxs)(s.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: h.maxTags,

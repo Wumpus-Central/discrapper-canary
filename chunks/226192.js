@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     UV: function () {
         return c;
     },
@@ -15,103 +15,103 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    o = n(273504),
-    l = n(388032);
-function u(e) {
+    l = n(273504),
+    o = n(388032);
+function u(t) {
     return {
-        [o.jj.BLOCK_MESSAGE]: (e, t) =>
-            new Promise((e) => {
+        [l.jj.BLOCK_MESSAGE]: (t, e) =>
+            new Promise((t) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('94005').then(n.bind(n, 144462));
                     return (n) => {
-                        var o;
+                        var l;
                         return (0, i.jsx)(r, {
-                            initialCustomMessage: null !== (o = t.metadata.customMessage) && void 0 !== o ? o : '',
+                            initialCustomMessage: null !== (l = e.metadata.customMessage) && void 0 !== l ? l : '',
                             onSubmit: (i) => {
-                                (t.metadata.customMessage = i), e(t), n.onClose();
+                                (e.metadata.customMessage = i), t(e), n.onClose();
                             },
                             ...n,
-                            onClose: () => (e(null), n.onClose())
+                            onClose: () => (t(null), n.onClose())
                         });
                     };
                 });
             }),
-        [o.jj.FLAG_TO_CHANNEL]: (t, l) =>
+        [l.jj.FLAG_TO_CHANNEL]: (e, o) =>
             new Promise((u) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('74543').then(n.bind(n, 643611)),
-                        a = t.actions.find((e) => e.type === o.jj.FLAG_TO_CHANNEL);
+                        a = e.actions.find((t) => t.type === l.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, i.jsx)(r, {
-                            action: l,
+                            action: o,
                             isEdit: null != a,
-                            triggerType: t.triggerType,
-                            guildId: e,
-                            onEditChannel: (e) => {
-                                (l.metadata.channelId = e), t.exemptChannels.add(e), u(l), n.onClose();
+                            triggerType: e.triggerType,
+                            guildId: t,
+                            onEditChannel: (t) => {
+                                (o.metadata.channelId = t), e.exemptChannels.add(t), u(o), n.onClose();
                             },
                             ...n,
                             onClose: () => (u(null), n.onClose())
                         });
                 });
             }),
-        [o.jj.USER_COMMUNICATION_DISABLED]: (e, t) =>
-            new Promise((l) => {
+        [l.jj.USER_COMMUNICATION_DISABLED]: (t, e) =>
+            new Promise((o) => {
                 (0, r.openModalLazy)(async () => {
                     let { default: r } = await n.e('78273').then(n.bind(n, 41767)),
-                        u = e.actions.find((e) => e.type === o.jj.USER_COMMUNICATION_DISABLED);
+                        u = t.actions.find((t) => t.type === l.jj.USER_COMMUNICATION_DISABLED);
                     return (n) =>
                         (0, i.jsx)(r, {
-                            action: t,
+                            action: e,
                             isEdit: null != u,
-                            triggerType: e.triggerType,
-                            onUpdateDuration: (e) => {
-                                null != e && (t.metadata.durationSeconds = e), l(t), n.onClose();
+                            triggerType: t.triggerType,
+                            onUpdateDuration: (t) => {
+                                null != t && (e.metadata.durationSeconds = t), o(e), n.onClose();
                             },
                             ...n,
-                            onClose: () => (l(null), n.onClose())
+                            onClose: () => (o(null), n.onClose())
                         });
                 });
             })
     };
 }
-function a(e, t, o, l) {
+function a(t, e, l, o) {
     (0, r.openModalLazy)(async () => {
         let { default: r } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
             (0, i.jsx)(r, {
                 ...n,
                 automodDecision: {
-                    messageId: e,
-                    messageContent: t,
-                    decisionId: o,
-                    channel: l
+                    messageId: t,
+                    messageContent: e,
+                    decisionId: l,
+                    channel: o
                 }
             });
     });
 }
-function s(e, t) {
+function s(t, e) {
     (0, r.openModalLazy)(async () => {
         let { default: r } = await n.e('28382').then(n.bind(n, 537623));
         return (n) =>
             (0, i.jsx)(r, {
                 ...n,
-                messageId: e,
-                guildId: t
+                messageId: t,
+                guildId: e
             });
     });
 }
-function c(e) {
-    (0, r.openModal)((t) =>
+function c(t) {
+    (0, r.openModal)((e) =>
         (0, i.jsx)(r.ConfirmModal, {
-            header: l.intl.string(l.t.wLGrjI),
-            confirmText: l.intl.string(l.t['cY+Ooa']),
-            onConfirm: e,
-            cancelText: l.intl.string(l.t['ETE/oK']),
-            ...t,
+            header: o.intl.string(o.t.wLGrjI),
+            confirmText: o.intl.string(o.t['cY+Ooa']),
+            onConfirm: t,
+            cancelText: o.intl.string(o.t['ETE/oK']),
+            ...e,
             children: (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                children: l.intl.string(l.t.arYQ2d)
+                children: o.intl.string(o.t.arYQ2d)
             })
         })
     );

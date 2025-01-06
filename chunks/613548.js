@@ -222,8 +222,8 @@ function q(e) {
                           'select-participant'
                       )
             ),
-        !t && ed.push((0, i.jsx)(m.Z, { className: K.button }, 'clips')),
         !es &&
+            (!t && ed.push((0, i.jsx)(m.Z, { className: K.button }, 'clips')),
             ed.push(
                 (0, i.jsx)(
                     b.Z,
@@ -234,7 +234,7 @@ function q(e) {
                     },
                     'recents'
                 )
-            ),
+            )),
         er && !ea && ed.push((0, i.jsx)(N.Z, { className: K.button }, 'for-later')),
         ed.push(
             (0, i.jsx)(

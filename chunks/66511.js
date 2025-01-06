@@ -24,7 +24,7 @@ n.Z = {
         };
         (0, a.ZD)(
             async () => {
-                let { default: n } = await Promise.all([r.e('72514'), r.e('80026'), r.e('50732')]).then(r.bind(r, 645264));
+                let { default: n } = await Promise.all([r.e('53967'), r.e('80026'), r.e('77514')]).then(r.bind(r, 645264));
                 return (r) =>
                     (0, i.jsx)(n, {
                         ...r,

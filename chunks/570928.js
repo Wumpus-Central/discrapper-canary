@@ -1,28 +1,28 @@
-var r,
-    a,
+var i,
+    r,
     l,
-    i,
-    o = n(200651),
+    u,
+    a = n(200651),
     s = n(192379),
-    c = n(120356),
-    d = n.n(c),
-    u = n(971139);
-class h extends (i = s.PureComponent) {
+    o = n(120356),
+    h = n.n(o),
+    d = n(971139);
+class c extends (u = s.PureComponent) {
     render() {
-        let { tag: e, children: t, hoverText: n, className: r, forceHover: a, ...l } = this.props;
-        return (0, o.jsxs)('div', {
+        let { tag: e, children: t, hoverText: n, className: i, forceHover: r, ...l } = this.props;
+        return (0, a.jsxs)('div', {
             ...l,
-            className: d()(r, u.hoverRoll, {
-                [u.disabled]: null == n,
-                [u.forceHover]: a
+            className: h()(i, d.hoverRoll, {
+                [d.disabled]: null == n,
+                [d.forceHover]: r
             }),
             children: [
-                (0, o.jsx)(e, {
-                    className: u.hovered,
+                (0, a.jsx)(e, {
+                    className: d.hovered,
                     children: n
                 }),
-                (0, o.jsx)(e, {
-                    className: u.default,
+                (0, a.jsx)(e, {
+                    className: d.default,
                     children: t
                 })
             ]
@@ -33,12 +33,12 @@ class h extends (i = s.PureComponent) {
     tag: 'div',
     forceHover: !1
 }),
-    (a = 'defaultProps') in (r = h)
-        ? Object.defineProperty(r, a, {
+    (r = 'defaultProps') in (i = c)
+        ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = l),
-    (t.Z = h);
+        : (i[r] = l),
+    (t.Z = c);

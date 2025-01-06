@@ -78,25 +78,25 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    h = n(694626),
-    m = n(855930),
+    m = n(694626),
+    h = n(855930),
     x = n(385787),
-    p = n(566162),
-    f = n(567027),
-    g = n(552952),
-    b = n(857702),
+    f = n(566162),
+    p = n(567027),
+    b = n(552952),
+    g = n(857702),
     v = n(20450),
     j = n(312976),
     C = n(147591),
-    T = n(135164),
-    _ = n(940172),
+    _ = n(135164),
+    T = n(940172),
     S = n(81011),
     N = n(981613),
     y = n(762399),
     k = n(232112),
-    E = n(53796),
-    w = n(402332),
-    I = n(375924),
+    I = n(53796),
+    E = n(402332),
+    w = n(375924),
     Z = n(596136),
     R = n(341901),
     O = n(856308),
@@ -112,25 +112,25 @@ let H = {
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: h.Z,
-        HSL: m.Z,
+        HPLuv: m.Z,
+        HSL: h.Z,
         HSLuv: x.Z,
-        HSV: p.Z,
-        HWB: f.Z,
-        ICTCP: g.Z,
-        JzCzHz: b.Z,
+        HSV: f.Z,
+        HWB: p.Z,
+        ICTCP: b.Z,
+        JzCzHz: g.Z,
         Jzazbz: v.Z,
         LCH: j.Z,
         LCHuv: C.Z,
-        Lab: T.Z,
-        Lab_D65: _.Z,
+        Lab: _.Z,
+        Lab_D65: T.Z,
         Luv: S.Z,
         OKLCH: N.Z,
         OKLab: y.Z,
         P3: k.Z,
-        ProPhoto: E.Z,
-        REC_2020: w.Z,
-        REC_2100_HLG: I.Z,
+        ProPhoto: I.Z,
+        REC_2020: E.Z,
+        REC_2100_HLG: w.Z,
         REC_2100_PQ: Z.Z,
         XYZ_D50: R.Z,
         XYZ_D65: O.Z
@@ -248,31 +248,31 @@ function en(e) {
             space: o,
             outputSpace: s.Z
         }),
-        h = Math.floor(r / 2),
-        m = r - h,
+        m = Math.floor(r / 2),
+        h = r - m,
         x = (0, L.w6)(d, c, {
-            steps: h,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        p = (0, L.w6)(u, c, {
             steps: m,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
-        f = [];
-    for (let e = 0; e < h; e++) {
-        let t = x(e / h);
-        f.push(t);
+        f = (0, L.w6)(u, c, {
+            steps: h,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
+        p = [];
+    for (let e = 0; e < m; e++) {
+        let t = x(e / m);
+        p.push(t);
     }
-    f.push(c);
-    for (let e = 1; e < m; e++) {
-        let t = p(1 - e / m);
-        f.push(t);
+    p.push(c);
+    for (let e = 1; e < h; e++) {
+        let t = f(1 - e / h);
+        p.push(t);
     }
-    return Object.fromEntries(f.map((e, n) => [''.concat(t, '-').concat(n), e]));
+    return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));
 }
 function er(e, t, n) {
     n((n) =>

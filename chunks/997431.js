@@ -1,9 +1,9 @@
 t.d(n, {
     M: function () {
-        return l;
+        return i;
     }
 });
-function l(e, n) {
+function i(e, n) {
     if (null == e || '' === e) return null;
     let t = new Date(e);
     return !(t instanceof Date) || isNaN(t.getTime())

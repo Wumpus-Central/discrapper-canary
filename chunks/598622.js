@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(983736),
     l = n(740903),
-    s = n(426434),
-    a = n(112824),
+    a = n(426434),
+    s = n(112824),
     o = n(181339),
     c = n(195189),
     d = n(122051),
@@ -74,12 +74,12 @@ let g = (e) => ({
     ],
     [l.u.PERMISSIONS]: [
         {
-            renderComponent: () => (0, i.jsx)(s.Z, { guild: e }, 'guild-mfa'),
+            renderComponent: () => (0, i.jsx)(a.Z, { guild: e }, 'guild-mfa'),
             enabled: e.mfaLevel === m.BpS.ELEVATED
         },
         {
-            renderComponent: () => (0, i.jsx)(a.Z, { guild: e }, 'disable-risky-perms'),
-            enabled: 0 === (0, a.R)(e).length
+            renderComponent: () => (0, i.jsx)(s.Z, { guild: e }, 'disable-risky-perms'),
+            enabled: 0 === (0, s.R)(e).length
         }
     ]
 });

@@ -24,8 +24,8 @@ var i = t(200651),
     N = t(541099),
     g = t(827498),
     A = t(496158),
-    b = t(676161),
-    E = t(660090),
+    E = t(676161),
+    b = t(660090),
     I = t(783097),
     P = t(46332),
     j = t(176412),
@@ -268,14 +268,14 @@ function D(e) {
             setSortOrder: v,
             commands: x,
             canSort: _
-        } = (0, E.Z)({
+        } = (0, b.Z)({
             sectionId: a.id,
             commandsByActiveSection: d
         });
     l.useEffect(() => {
         c(a.id);
     }, [a.id, c]);
-    let N = (0, b.Z)({
+    let N = (0, E.Z)({
         channel: t,
         commands: x,
         limit: 5

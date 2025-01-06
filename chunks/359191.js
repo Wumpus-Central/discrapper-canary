@@ -2,8 +2,8 @@ n(47120);
 var i,
     r,
     l,
-    s,
-    a = n(442837),
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(45966),
     d = n(734893),
@@ -24,7 +24,7 @@ function T(e) {
     if (u.Z.getGuildId() === N) return !1;
     (I = t === v.KsC.SERVER_GUIDE ? f.PG.HOME_SETTINGS : f.PG.LANDING), (N = u.Z.getGuildId());
 }
-class b extends (i = a.ZP.Store) {
+class j extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, g.Z, p.Z, x.Z, m.Z), this.syncWith([c.Z, g.Z, p.Z, x.Z, m.Z], () => !0);
     }
@@ -63,16 +63,16 @@ class b extends (i = a.ZP.Store) {
         return null == N || (!this.hasErrors() && (!(0, C.C)(N) || !this.hasChanges()));
     }
 }
-(s = 'GuildSettingsOnboardingStore'),
-    (l = 'displayName') in (r = b)
+(a = 'GuildSettingsOnboardingStore'),
+    (l = 'displayName') in (r = j)
         ? Object.defineProperty(r, l, {
-              value: s,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = s),
-    (t.Z = new b(o.Z, {
+        : (r[l] = a),
+    (t.Z = new j(o.Z, {
         GUILD_SETTINGS_INIT: T,
         GUILD_SETTINGS_SET_SECTION: T,
         GUILD_SETTINGS_ONBOARDING_STEP: function (e) {

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(536982),
-    s = n(456677),
-    a = n(951665),
+    a = n(456677),
+    s = n(951665),
     o = n(428760),
     c = n(55889),
     d = n(300453),
@@ -55,7 +55,7 @@ function x(e) {
                             maxWordCount: m.RH,
                             initialValue: null === (t = v.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
-                        (0, i.jsx)(a.Z, {
+                        (0, i.jsx)(s.Z, {
                             rule: v,
                             onChangeRule: _,
                             collapsed: (null == v ? void 0 : null === (n = v.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == v ? void 0 : null === (x = v.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
@@ -72,7 +72,7 @@ function x(e) {
                 (0, i.jsx)(d.Z, {
                     step: 2,
                     header: h.intl.string(h.t['18TOiY']),
-                    children: (0, i.jsx)(s.Z, {
+                    children: (0, i.jsx)(a.Z, {
                         rule: v,
                         onChangeRule: _
                     })

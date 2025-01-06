@@ -13,8 +13,8 @@ n.d(t, {
 var i = n(570140),
     r = n(668781),
     l = n(881052),
-    s = n(45966),
-    a = n(637853),
+    a = n(45966),
+    s = n(637853),
     o = n(592125),
     c = n(823379),
     d = n(889369),
@@ -34,10 +34,10 @@ function p(e) {
 async function f(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
-        [x, p] = (0, a.d9)(e.id, [...t]),
-        f = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
-        C = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (s.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (f.length < h.md || C.length < h.X)))) {
+        [x, p] = (0, s.d9)(e.id, [...t]),
+        f = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        C = (0, s.kl)(e.id, t, m.Z.editedOnboardingPrompts, s.V7);
+    if (a.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (f.length < h.md || C.length < h.X)))) {
         r.Z.show({
             title: g.intl.string(g.t.iLdiqa),
             body: g.intl.string(g.t.JOT74e)

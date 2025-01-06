@@ -7,13 +7,13 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(933557),
-    a = n(592125),
+    a = n(933557),
+    s = n(592125),
     o = n(388032);
 function c(e) {
     let { onConfirm: t, onCancel: n, channelId: c } = e,
-        d = (0, r.e7)([a.Z], () => (null != c ? a.Z.getChannel(c) : null)),
-        u = (0, s.ZP)(d, !0);
+        d = (0, r.e7)([s.Z], () => (null != c ? s.Z.getChannel(c) : null)),
+        u = (0, a.ZP)(d, !0);
     return (0, i.jsx)(l.DeclarativeConfirmModal, {
         dismissable: !0,
         header: o.intl.string(o.t.S2eoq6),

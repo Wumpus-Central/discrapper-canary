@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(236413),
     l = n(961926),
-    s = n(314224),
-    a = n(849715),
+    a = n(314224),
+    s = n(849715),
     o = n(591026),
     c = n(813922);
 function d(e) {
@@ -16,13 +16,13 @@ function d(e) {
     return null == t
         ? null
         : (0, r.DO)(t)
-          ? (0, i.jsx)(s.Z, {
+          ? (0, i.jsx)(a.Z, {
                 rule: t,
                 isLoading: n,
                 onChangeRule: d
             })
           : (0, r.vo)(t)
-            ? (0, i.jsx)(a.Z, {
+            ? (0, i.jsx)(s.Z, {
                   rule: t,
                   isLoading: n,
                   onChangeRule: d

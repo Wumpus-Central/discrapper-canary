@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(704215),
-    a = n(481060),
+    a = n(704215),
+    s = n(481060),
     o = n(725803),
     c = n(605236),
     d = n(999382),
@@ -26,13 +26,13 @@ function v() {
         _ = r.useRef(null),
         I = (0, u.Z)(null != t ? t : void 0);
     r.useEffect(() => {
-        null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
+        null != t && (0, m.sO)(t) && (0, c.EW)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
     let N = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || v
-                ? (0, i.jsx)(a.Spinner, {})
+                ? (0, i.jsx)(s.Spinner, {})
                 : null != I
                   ? (0, i.jsx)(g.Z, {
                         guild: t,
@@ -48,12 +48,12 @@ function v() {
             className: C.settingsColumn,
             children: (0, i.jsx)('div', {
                 className: C.settingsContainer,
-                children: (0, i.jsx)(a.ScrollerAuto, {
+                children: (0, i.jsx)(s.ScrollerAuto, {
                     className: C.settingsScroller,
                     children: (0, i.jsx)('main', {
                         ref: _,
                         className: C.settingsContent,
-                        children: (0, i.jsx)(a.FocusRingScope, {
+                        children: (0, i.jsx)(s.FocusRingScope, {
                             containerRef: _,
                             children: e
                         })

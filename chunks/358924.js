@@ -38,8 +38,8 @@ var i,
     U = n(823379),
     G = n(51144),
     B = n(599706),
-    H = n(981631),
-    V = n(388032),
+    V = n(981631),
+    H = n(388032),
     F = n(303790);
 let z = {
         SMALL: 64,
@@ -131,7 +131,7 @@ class Q extends a.Component {
                               })
                           }),
                     (0, l.jsxs)('div', {
-                        children: [Y(null != r && '' !== r ? r : V.intl.string(V.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
+                        children: [Y(null != r && '' !== r ? r : H.intl.string(H.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -328,7 +328,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        children: [Y(n), K(V.intl.formatToPlainString(V.t.C4WXvb, { memberCount: i.totalSize }))]
+                        children: [Y(n), K(H.intl.formatToPlainString(H.t.C4WXvb, { memberCount: i.totalSize }))]
                     }),
                     (0, l.jsx)(B.Z, {
                         partySize: i,
@@ -348,7 +348,7 @@ let ee = (e) => {
                     (0, l.jsx)(w.Z, { className: F.xboxSectionIcon }),
                     (0, l.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [Y(t), K(V.intl.string(V.t['JG9r+/']))]
+                        children: [Y(t), K(H.intl.string(H.t['JG9r+/']))]
                     })
                 ]
             })
@@ -435,7 +435,7 @@ let ee = (e) => {
                     children: [
                         (0, l.jsx)('img', {
                             alt: '',
-                            src: p.Z.get(H.ABu.TWITCH).icon.lightSVG,
+                            src: p.Z.get(V.ABu.TWITCH).icon.lightSVG,
                             className: F.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
@@ -476,7 +476,7 @@ let ee = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.intl.string(V.t.eXan7O);
+            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.intl.string(H.t.eXan7O);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
@@ -581,7 +581,7 @@ let ee = (e) => {
                                                     analyticsLocations: f
                                                 });
                                         },
-                                        children: V.intl.string(V.t.VJlc0d)
+                                        children: H.intl.string(H.t.VJlc0d)
                                     })
                                 })
                             ]

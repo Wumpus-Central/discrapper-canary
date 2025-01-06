@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return s;
     }
 });
-var i = n(192379),
-    r = n(924826),
-    o = n(442837),
-    l = n(607070);
-function u(e, t, n) {
-    let u = (0, o.e7)([l.Z], () => l.Z.keyboardModeEnabled),
-        a = i.useCallback(
+var l = n(192379),
+    i = n(924826),
+    a = n(442837),
+    r = n(607070);
+function s(e, t, n) {
+    let s = (0, a.e7)([r.Z], () => r.Z.keyboardModeEnabled),
+        o = l.useCallback(
             (e) => {
                 let n = document.querySelector(e),
-                    i = t.current;
+                    l = t.current;
                 null != n &&
-                    null != i &&
+                    null != l &&
                     (n.focus(),
-                    i.scrollIntoViewNode({
+                    l.scrollIntoViewNode({
                         node: n,
                         padding: 80
                     }));
             },
             [t]
         ),
-        s = i.useCallback(
+        c = l.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -35,7 +35,7 @@ function u(e, t, n) {
                 }),
             [t]
         ),
-        c = i.useCallback(
+        u = l.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -47,12 +47,12 @@ function u(e, t, n) {
                 }),
             [t]
         );
-    return (0, r.ZP)({
+    return (0, i.ZP)({
         id: e,
-        isEnabled: u,
-        setFocus: a,
-        scrollToStart: s,
-        scrollToEnd: c,
+        isEnabled: s,
+        setFocus: o,
+        scrollToStart: c,
+        scrollToEnd: u,
         orientation: null == n ? void 0 : n.orientation
     });
 }

@@ -25,7 +25,7 @@ function x(e) {
         A = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: b, wasSubmitting: E } = (0, p.Z)({
+        { submitting: E, wasSubmitting: b } = (0, p.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: g,
@@ -49,7 +49,7 @@ function x(e) {
             commandName: y,
             autoDismissOnClick: j === o.JS.LEAVE,
             launchingComponentId: g,
-            submitting: null != E ? E : b
+            submitting: null != b ? b : E
         }),
         { disabled: R, reason: M } = (0, u.Z)({
             channelId: n.id,

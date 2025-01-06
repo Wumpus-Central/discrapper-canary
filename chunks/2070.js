@@ -1,28 +1,28 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
     n(47120);
 var i = n(192379),
     r = n(881052),
     l = n(728345);
-function s() {
+function a() {
     let [e, t] = i.useState(!1),
-        [n, s] = i.useState(),
-        a = i.useRef();
+        [n, a] = i.useState(),
+        s = i.useRef();
     return {
         createGuildApplication: async (e, n, i, o) => {
-            s(void 0);
+            a(void 0);
             try {
-                if ((t(!0), null == a.current)) {
+                if ((t(!0), null == s.current)) {
                     let t = await l.ZP.createApplication({
                         name: o,
                         guildId: e.id,
                         type: i,
                         teamId: n
                     });
-                    a.current = t;
+                    s.current = t;
                 }
                 return (
                     await l.ZP.getApplicationsForGuild(e.id, {
@@ -32,7 +32,7 @@ function s() {
                     !0
                 );
             } catch (e) {
-                return s(new r.Hx(e)), !1;
+                return a(new r.Hx(e)), !1;
             } finally {
                 t(!1);
             }

@@ -10,15 +10,15 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(957011),
-    a = n(587431),
+    a = n(957011),
+    s = n(587431),
     o = n(756066),
     c = n(388032),
     d = n(364232),
     u = n(270395);
 let m = 'role_subscriptions_eligibility_modal';
 function h(e) {
-    let { guild: t, eligibility: r, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
+    let { guild: t, eligibility: r, eligibilityLoading: a, eligibilityError: s, refreshEligibility: o } = e;
     return (0, i.jsxs)(l.Button, {
         color: l.ButtonColors.CUSTOM,
         className: d.ineligibleButton,
@@ -32,8 +32,8 @@ function h(e) {
                         (0, i.jsx)(e, {
                             ...n,
                             eligibility: r,
-                            eligibilityLoading: s,
-                            eligibilityError: a,
+                            eligibilityLoading: a,
+                            eligibilityError: s,
                             refreshEligibility: o,
                             guildId: t.id
                         });
@@ -53,7 +53,7 @@ function h(e) {
 }
 function g(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: h } = (0, s.Z)(t.id),
+        { canSubmitAcceptance: o, error: u, loading: m, submitAcceptTermsRequest: h } = (0, a.Z)(t.id),
         [g, x] = r.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -82,14 +82,14 @@ function g(e) {
             }),
             null != u &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(l.Spacer, { size: 24 }), (0, i.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
+                    children: [(0, i.jsx)(l.Spacer, { size: 24 }), (0, i.jsx)(s.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
 }
 function x(e) {
     let { guild: t, monetizationEligibility: n } = e,
-        { eligibilityLoading: r, eligibilityError: l, refreshEligibility: s, eligibility: a, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
+        { eligibilityLoading: r, eligibilityError: l, refreshEligibility: a, eligibility: s, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
     return c
         ? u
             ? (0, i.jsx)(o.Z, { ...n })
@@ -99,10 +99,10 @@ function x(e) {
               })
         : (0, i.jsx)(h, {
               guild: t,
-              eligibility: a,
+              eligibility: s,
               eligibilityLoading: r,
               eligibilityError: l,
-              refreshEligibility: s
+              refreshEligibility: a
           });
 }
 function p(e) {

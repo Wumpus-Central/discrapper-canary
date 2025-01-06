@@ -33,8 +33,8 @@ function x(e) {
     let { application: n, channel: t, name: C, iconURL: x, scrollerRef: _, sectionName: N } = e,
         g = (0, o.ap)((0, s.ZP)()),
         A = l.useRef(null),
-        b = l.useRef(null),
         E = l.useRef(null),
+        b = l.useRef(null),
         I = l.useRef(null),
         P = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
         j = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
@@ -55,12 +55,12 @@ function x(e) {
                 : j;
         }, [j, g]),
         S = v(A),
-        T = v(b),
+        T = v(E),
         L = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
             let u = _.current,
                 m = A.current,
-                p = E.current,
+                p = b.current,
                 h = null == I ? void 0 : I.current,
                 f = parseInt(null !== (e = null == S ? void 0 : S.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
@@ -120,7 +120,7 @@ function x(e) {
                         (0, i.jsx)('div', {
                             className: f.nameContainer,
                             children: (0, i.jsx)(r.Heading, {
-                                ref: E,
+                                ref: b,
                                 className: f.textApplicationName,
                                 variant: 'heading-lg/extrabold',
                                 children: C
@@ -141,7 +141,7 @@ function x(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    ref: b,
+                    ref: E,
                     className: f.bannerBackground,
                     style: { backgroundColor: j }
                 })

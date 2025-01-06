@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return _;
     }
@@ -6,21 +6,21 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    o = n(201895),
-    l = n(471445),
+    l = n(201895),
+    o = n(471445),
     u = n(823379),
     a = n(303737),
     s = n(293810),
     c = n(388032),
     d = n(507641);
-function f(e) {
-    let { channelId: t } = e,
-        n = (0, a.m7)(t);
+function f(t) {
+    let { channelId: e } = t,
+        n = (0, a.m7)(e);
     if (null == n) return (0, i.jsx)(i.Fragment, { children: '['.concat(c.intl.string(c.t.bz1PZW), ']') });
-    let u = n.isMediaChannel() ? r.ImageIcon : (0, l.Th)(n.type);
+    let u = n.isMediaChannel() ? r.ImageIcon : (0, o.Th)(n.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.HiddenVisually, { children: (0, o.ZP)({ channel: n }) }),
+            (0, i.jsx)(r.HiddenVisually, { children: (0, l.ZP)({ channel: n }) }),
             (0, i.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [
@@ -35,13 +35,13 @@ function f(e) {
         ]
     });
 }
-function _(e) {
-    switch (e.ref_type) {
+function _(t) {
+    switch (t.ref_type) {
         case s.Qs.CHANNEL:
-            return (0, i.jsx)(f, { channelId: e.ref_id });
+            return (0, i.jsx)(f, { channelId: t.ref_id });
         case s.Qs.INTANGIBLE:
-            return e.name;
+            return t.name;
         default:
-            (0, u.vE)(e);
+            (0, u.vE)(t);
     }
 }

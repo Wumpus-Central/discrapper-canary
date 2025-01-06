@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    s = n(392711),
     o = n(481060),
     c = n(442837),
     d = n(314897),
@@ -19,16 +19,16 @@ t.Z = (e) => {
         { interests: v } = l,
         [_, I] = r.useState(''),
         [N, T] = r.useState(0),
-        b = (0, c.e7)([d.default], () => d.default.getId()),
-        j = r.useMemo(() => (0, a.chunk)((0, u.XV)(g.i6, b), 9), [b]),
-        S = [...j[N], ...j[(N + 1) % j.length]],
+        j = (0, c.e7)([d.default], () => d.default.getId()),
+        b = r.useMemo(() => (0, s.chunk)((0, u.XV)(g.i6, j), 9), [j]),
+        S = [...b[N], ...b[(N + 1) % b.length]],
         E = r.useMemo(() => Array.from(v), [v]),
         R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
         y = (e) => {
             let t = new Set(v);
             t.delete(e), n({ interests: t });
         },
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 if (v.size === g.c4) return;
                 let t = null != e ? e : _.trim();
@@ -38,19 +38,19 @@ t.Z = (e) => {
             },
             [n, _, v]
         ),
-        A = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), Z();
+                        e.preventDefault(), e.stopPropagation(), A();
                 }
             },
-            [Z]
+            [A]
         ),
         L = r.useCallback(() => {
-            T((e) => (e + 1) % j.length);
-        }, [T, j]);
+            T((e) => (e + 1) % b.length);
+        }, [T, b]);
     return (0, i.jsxs)('div', {
         className: f.slideContent,
         children: [
@@ -91,7 +91,7 @@ t.Z = (e) => {
                                         autoFocus: !0,
                                         inputClassName: f.input,
                                         value: _,
-                                        onKeyDown: A,
+                                        onKeyDown: Z,
                                         onChange: I,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
@@ -99,8 +99,8 @@ t.Z = (e) => {
                                     }),
                                     _.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => Z(_.trim()),
-                                            className: s()(f.plusIcon, f.clickable),
+                                            onClick: () => A(_.trim()),
+                                            className: a()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -132,7 +132,7 @@ t.Z = (e) => {
                                             color: 'interactive-normal',
                                             text: e,
                                             selected: v.has(e),
-                                            onClick: v.has(e) ? y : Z
+                                            onClick: v.has(e) ? y : A
                                         },
                                         e
                                     ),

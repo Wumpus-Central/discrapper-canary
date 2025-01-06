@@ -2,9 +2,9 @@ n(47120);
 var i,
     r,
     l,
-    s,
-    a = n(392711),
-    o = n.n(a),
+    a,
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(570140),
     u = n(314897),
@@ -42,15 +42,15 @@ class p extends (i = c.ZP.Store) {
         return e.map((e) => g[e]).filter(m.lm);
     }
 }
-(s = 'DiscoverGuildsStore'),
+(a = 'DiscoverGuildsStore'),
     (l = 'displayName') in (r = p)
         ? Object.defineProperty(r, l, {
-              value: s,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = s),
+        : (r[l] = a),
     (t.Z = new p(d.Z, {
         DISCOVER_GUILDS_FETCH_START: function (e) {
             x += 1;

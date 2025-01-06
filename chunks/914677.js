@@ -4,8 +4,8 @@ var n = s(200651),
     i = s(780384),
     a = s(410030),
     o = s(119269),
-    l = s(697303);
-let c = 'url(#gradient)',
+    c = s(697303);
+let l = 'url(#gradient)',
     u = (e, t) => {
         switch (e) {
             case o.Qo.NITRO_LOGO:
@@ -31,18 +31,18 @@ let c = 'url(#gradient)',
         switch (t) {
             case o.Qo.NITRO_GEM:
             case o.Qo.AVATAR_DECO:
-                return c;
+                return l;
             case o.Qo.NITRO_LOGO:
-                return e ? 'url(#gradient_nitro_logo)' : c;
+                return e ? 'url(#gradient_nitro_logo)' : l;
             default:
                 return;
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: s, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: x = 2, progressCircleVariation: g, progressCircleStroke: C } = e,
-        _ = 43 + x / 2,
-        m = 2 * Math.PI * _,
-        [h, v] = r.useState(f);
+    let { percentage: t = 0, children: s, animationClassName: l, initialPercentage: f = 0, progressCircleStrokeSize: g = 2, progressCircleVariation: x, progressCircleStroke: C } = e,
+        _ = 43 + g / 2,
+        h = 2 * Math.PI * _,
+        [m, v] = r.useState(f);
     r.useEffect(() => {
         let e = setTimeout(() => {
             v(t);
@@ -50,34 +50,34 @@ t.Z = (e) => {
         return () => clearTimeout(e);
     }, [t]);
     let L = (0, a.ZP)(),
-        A = (0, i.ap)(L),
-        E = d(g),
-        j = u(g, A),
-        O = null != C ? C : p(A, g);
+        b = (0, i.ap)(L),
+        E = d(x),
+        A = u(x, b),
+        j = null != C ? C : p(b, x);
     return (0, n.jsxs)('div', {
-        className: l.circleContainer,
+        className: c.circleContainer,
         children: [
             (0, n.jsxs)('svg', {
                 viewBox: '0 0 100 100',
-                className: l.circleSVG,
+                className: c.circleSVG,
                 children: [
                     (0, n.jsx)('circle', {
-                        className: g === o.Qo.NITRO_GEM || g === o.Qo.AVATAR_DECO ? l.baseProgressCircle : void 0,
+                        className: x === o.Qo.NITRO_GEM || x === o.Qo.AVATAR_DECO ? c.baseProgressCircle : void 0,
                         fill: 'transparent',
-                        strokeWidth: x,
+                        strokeWidth: g,
                         r: ''.concat(_),
                         cx: '50%',
                         cy: '50%',
                         stroke: E,
-                        strokeOpacity: j
+                        strokeOpacity: A
                     }),
                     (0, n.jsx)('circle', {
-                        stroke: O,
-                        strokeWidth: x,
+                        stroke: j,
+                        strokeWidth: g,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(m, ' ').concat(m),
-                        className: c,
-                        style: { strokeDashoffset: (1 - h / 100) * m },
+                        strokeDasharray: ''.concat(h, ' ').concat(h),
+                        className: l,
+                        style: { strokeDashoffset: (1 - m / 100) * h },
                         r: ''.concat(_),
                         cx: '50%',
                         cy: '50%'
@@ -146,7 +146,7 @@ t.Z = (e) => {
                 ]
             }),
             (0, n.jsx)('div', {
-                className: l.childrenContainer,
+                className: c.childrenContainer,
                 children: s
             })
         ]

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(130341),
-    s = n(34112),
-    a = n(623691),
+    a = n(34112),
+    s = n(623691),
     o = n(494831);
 function c(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: c, otherRoles: d, setSelectedSection: u } = e,
@@ -19,7 +19,7 @@ function c(e) {
         C = r.useCallback(
             () =>
                 (0, i.jsx)(
-                    a.Z,
+                    s.Z,
                     {
                         guild: n,
                         everyoneRole: c,
@@ -33,7 +33,7 @@ function c(e) {
                 ),
             [n, c, f, t, m]
         );
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(a.Z, {
         setEditRoleId: t,
         guild: n,
         everyoneRole: c,

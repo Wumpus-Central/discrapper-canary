@@ -102,10 +102,10 @@ t.Z = function (e) {
         U = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         G = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
         B = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
-        H = (0, m.Rf)(o),
-        V = (0, _.D)({
+        V = (0, m.Rf)(o),
+        H = (0, _.D)({
             quest: o,
-            taskDetails: H,
+            taskDetails: V,
             location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
@@ -158,7 +158,7 @@ t.Z = function (e) {
                                           className: L.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: V
+                                          children: H
                                       })
                                   ]
                               }),
@@ -170,7 +170,7 @@ t.Z = function (e) {
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
                                   location: A.dr.ACTIVITY_PANEL,
-                                  taskDetails: H
+                                  taskDetails: V
                               }),
                           (0, i.jsxs)('div', {
                               className: L.ctas,

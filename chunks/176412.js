@@ -29,14 +29,14 @@ var i = t(192379),
     N = t(346683),
     g = t(981631),
     A = t(388032);
-let b = {
+let E = {
         ...f.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: f.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    E = a().pick(
+    b = a().pick(
         (0, C.Z)([
             f.Z.RULES,
-            { commandMention: b },
+            { commandMention: E },
             (0, h.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
@@ -44,22 +44,22 @@ let b = {
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    I = r.w4(E);
+    I = r.w4(b);
 function P(e) {
     let { channel: n, application: t, location: i, sectionName: l, commandName: a, autoDismissOnClick: r = !0, launchingComponentId: h, submitting: f = !1, fetchesApplication: C = !0 } = e,
-        b = (0, c.O)(),
-        E = (0, d.Qv)({
+        E = (0, c.O)(),
+        b = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id,
             fetchesApplication: C
         }),
-        I = (0, N.Q)(E),
+        I = (0, N.Q)(b),
         P = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
         j = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: b.location,
+            locationObject: E.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
                 r && v.yT(_.ti.ACTIVITY),

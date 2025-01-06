@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var r = n(392711),
     l = n(442837),
-    s = n(481060),
-    a = n(63568),
+    a = n(481060),
+    s = n(63568),
     o = n(241559),
     c = n(527379),
     d = n(313364),
@@ -24,9 +24,9 @@ function p() {
     var e, t;
     let n = (0, l.e7)([m.Z], () => m.Z.getProps().guild, []),
         r = null !== (e = null == n ? void 0 : n.isCommunity()) && void 0 !== e && e,
-        o = (0, a.K2)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : h.lds, 'GuildSettingsMembersRow') && (null == n ? void 0 : n.hasFeature(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)),
+        o = (0, s.K2)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : h.lds, 'GuildSettingsMembersRow') && (null == n ? void 0 : n.hasFeature(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)),
         d = r || o;
-    return (0, i.jsxs)(s.Clickable, {
+    return (0, i.jsxs)(a.Clickable, {
         onClick: (e) => {
             if (null != n) d ? (e.preventDefault(), u.Z.close(), (0, c._X)(n.id)) : u.Z.open(n.id, h.pNK.MEMBERS);
         },
@@ -34,7 +34,7 @@ function p() {
         children: [
             (0, i.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
             d &&
-                (0, i.jsx)(s.WindowLaunchIcon, {
+                (0, i.jsx)(a.WindowLaunchIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     className: x.linkIcon,

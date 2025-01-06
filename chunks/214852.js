@@ -1,15 +1,15 @@
 n.d(t, {
     z: function () {
-        return i;
+        return u;
     }
 }),
     n(47120);
-var r = n(192379),
-    a = n(442837),
+var i = n(192379),
+    r = n(442837),
     l = n(353926);
-function i(e) {
-    let [t, n] = (0, a.Wu)([l.Z], () => [l.Z.getAllUserExperimentDescriptors(), l.Z.getGuildExperiments()]);
-    r.useEffect(() => {
+function u(e) {
+    let [t, n] = (0, r.Wu)([l.Z], () => [l.Z.getAllUserExperimentDescriptors(), l.Z.getGuildExperiments()]);
+    i.useEffect(() => {
         e.trigger();
     }, [e, t, n]);
 }

@@ -26,7 +26,7 @@ var s = n(120356),
     A = n(388032),
     R = n(441347);
 let b = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
-function M(e) {
+function I(e) {
     let { containerSize: t, onClick: n, children: s, tabIndex: l } = e;
     return 'xs' === t
         ? (0, i.jsx)(o.Clickable, {
@@ -48,7 +48,7 @@ function M(e) {
               children: s
           });
 }
-function I(e) {
+function M(e) {
     let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: c } = e,
         d = n >= x.OH.COMPLETED,
         m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
@@ -89,36 +89,36 @@ function I(e) {
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: y } = e,
-        Z = (0, x._Q)(t),
-        B = Z >= x.OH.ACCEPTED,
-        P = Z >= x.OH.COMPLETED,
-        D = Z >= x.OH.CLAIMED,
-        U = (0, p.Xv)(t.config),
-        w = (0, S.uq)(n),
-        Q = n === C.jn.QUESTS_EMBED,
-        O = T || L,
-        k = B && !D && w,
+    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: Z } = e,
+        y = (0, x._Q)(t),
+        P = y >= x.OH.ACCEPTED,
+        B = y >= x.OH.COMPLETED,
+        D = y >= x.OH.CLAIMED,
+        w = (0, p.Xv)(t.config),
+        U = (0, S.uq)(n),
+        O = n === C.jn.QUESTS_EMBED,
+        Q = T || L,
+        k = P && !D && U,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
         z = (0, x.z)(t),
-        F = w && U,
-        V = h && !P,
-        X = W.length > 0 && w && (0, p.$J)(t) && B && !P && !z,
+        F = U && w,
+        V = h && !B,
+        X = W.length > 0 && U && (0, p.$J)(t) && P && !B && !z,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
-                [R.questRewardGiftInventory]: w && 'lg' === s,
-                [R.questRewardEmbed]: Q && 'lg' === s,
+                [R.questRewardGiftInventory]: U && 'lg' === s,
+                [R.questRewardEmbed]: O && 'lg' === s,
                 [R.questRewardEmbedSm]: 'sm' === s,
                 [R.questRewardEmbedXs]: 'xs' === s
             }),
-            learnMoreStyle: w ? null : 'text',
+            learnMoreStyle: U ? null : 'text',
             location: q.dr.QUESTS_CARD,
             quest: t,
             questContent: n,
-            questContentPosition: y
+            questContentPosition: Z
         });
     return (0, i.jsxs)('div', {
         className: R.root,
@@ -129,8 +129,8 @@ t.Z = (e) => {
                     [R.outerContainerXs]: 'xs' === s,
                     [R.outerContainerNoProgress]: !k
                 }),
-                style: { visibility: O ? 'inherit' : 'hidden' },
-                'aria-hidden': !O,
+                style: { visibility: Q ? 'inherit' : 'hidden' },
+                'aria-hidden': !Q,
                 children: [
                     (0, i.jsx)(o.Tooltip, {
                         text: V ? A.intl.string(A.t['04MTGR']) : null,
@@ -160,7 +160,7 @@ t.Z = (e) => {
                         className: l()(R.gridText, R.taskDetails),
                         children: [
                             (0, i.jsx)(o.Text, {
-                                variant: b(n, s, B),
+                                variant: b(n, s, P),
                                 className: R.taskInstructions,
                                 children: h ? A.intl.formatToPlainString(A.t['ge+AJi'], { questName: t.config.messages.questName }) : H
                             }),
@@ -239,37 +239,37 @@ t.Z = (e) => {
                     (0, i.jsxs)('div', {
                         className: l()(R.ctaButtonContainer, R.gridCtaButtons),
                         children: [
-                            !w &&
-                                (0, i.jsx)(M, {
+                            !U &&
+                                (0, i.jsx)(I, {
                                     containerSize: s,
                                     onClick: () => {
                                         (0, f.navigateToQuestHome)(q.dr.QUESTS_CARD, n, t.id),
                                             (0, m._3)({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: y,
+                                                questContentPosition: Z,
                                                 questContentCTA: m.jZ.LEARN_MORE
                                             });
                                     },
                                     children: A.intl.string(A.t.LLLLPD)
                                 }),
-                            h && !P
+                            h && !B
                                 ? null
-                                : (0, i.jsx)(I, {
+                                : (0, i.jsx)(M, {
                                       quest: t,
-                                      progressState: Z,
-                                      isCollectibleQuest: U,
+                                      progressState: y,
+                                      isCollectibleQuest: w,
                                       location: n,
-                                      inGiftInventory: w
+                                      inGiftInventory: U
                                   })
                         ]
                     }),
                     k &&
                         (0, i.jsx)(E.Z, {
                             className: R.gridProgressBar,
-                            color: P ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+                            color: B ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
                             quest: t,
-                            isInventory: w
+                            isInventory: U
                         })
                 ]
             }),

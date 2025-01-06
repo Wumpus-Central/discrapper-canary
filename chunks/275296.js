@@ -3,14 +3,14 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(630388),
-    s = n(402148),
-    a = n(981631),
+    a = n(402148),
+    s = n(981631),
     o = n(388032),
     c = n(54572);
 t.Z = (e) => {
     let { role: t } = e;
-    return (0, l.yE)(t.flags, a.aO5.IN_PROMPT)
-        ? (0, s.F)(t)
+    return (0, l.yE)(t.flags, s.aO5.IN_PROMPT)
+        ? (0, a.F)(t)
             ? (0, i.jsxs)('div', {
                   className: c.notice,
                   children: [

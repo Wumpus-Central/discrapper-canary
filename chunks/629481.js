@@ -1,5 +1,5 @@
-var i, r, o, l;
-n.d(t, {
+var i, r, l, o;
+n.d(e, {
     Hr: function () {
         return u;
     },
@@ -19,12 +19,12 @@ n.d(t, {
         return r;
     }
 }),
-    ((o = i || (i = {})).GET_STARTED_CLICK = 'get_started_click'),
-    (o.DISMISS_FULL_PREVIEW = 'dismiss_full_preview'),
-    (o.DISMISS_TAB_PREVIEW = 'dismiss_tab_preview'),
-    (o.DISMISS_CHANNEL_ROW = 'dismiss_channel_row'),
-    ((l = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
-    (l.SHOP_HEADER_BUTTON = 'shop_header_button');
+    ((l = i || (i = {})).GET_STARTED_CLICK = 'get_started_click'),
+    (l.DISMISS_FULL_PREVIEW = 'dismiss_full_preview'),
+    (l.DISMISS_TAB_PREVIEW = 'dismiss_tab_preview'),
+    (l.DISMISS_CHANNEL_ROW = 'dismiss_channel_row'),
+    ((o = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
+    (o.SHOP_HEADER_BUTTON = 'shop_header_button');
 let u = 'hasClickedGuildShopProductPreviewTab',
     a = 'hasClickedGuildShopChannelRow',
     s = 'https://discord.com/servershop',

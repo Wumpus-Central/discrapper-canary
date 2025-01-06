@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(990547),
     l = n(481060),
-    s = n(213609),
-    a = n(787051),
+    a = n(213609),
+    s = n(787051),
     o = n(696936),
     c = n(539290),
     d = n(975464),
@@ -17,7 +17,7 @@ var r = n(990547),
     h = n(270395);
 function g(e) {
     let { config: t } = e,
-        { noticeText: n, ctaLabel: r, ctaClickable: s, onCtaClicked: a } = t;
+        { noticeText: n, ctaLabel: r, ctaClickable: a, onCtaClicked: s } = t;
     return (0, i.jsxs)('div', {
         className: m.__invalid_ctaContainer,
         children: [
@@ -47,9 +47,9 @@ function g(e) {
                         buttonPosition: c.E.RIGHT,
                         notice: n,
                         ctaLabel: r,
-                        ctaDisabled: !s,
+                        ctaDisabled: !a,
                         ctaClassName: m.waitlistCtaButton,
-                        onClick: a
+                        onClick: s
                     })
                 ]
             })
@@ -58,8 +58,8 @@ function g(e) {
 }
 function x(e) {
     let { guild: t, config: n } = e,
-        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, a.Z)(t.id);
-    return ((0, s.Z)({
+        { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: u } = (0, s.Z)(t.id);
+    return ((0, a.Z)({
         type: r.ImpressionTypes.PANE,
         name: r.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
         properties: { guild_id: t.id }

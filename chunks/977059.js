@@ -3,10 +3,10 @@ n.d(t, {
         return l;
     },
     S: function () {
-        return a;
+        return r;
     }
 });
-let r = (0, n(987170).Z)({
+let i = (0, n(987170).Z)({
     kind: 'user',
     id: '2024-05_secure_frames_ui_rollout',
     label: 'Secure Frames Rollout',
@@ -19,11 +19,11 @@ let r = (0, n(987170).Z)({
         }
     ]
 });
-function a(e) {
+function r(e) {
     let { location: t } = e;
-    return r.useExperiment({ location: t }, { autoTrackExposure: !0 });
+    return i.useExperiment({ location: t }, { autoTrackExposure: !0 });
 }
 function l(e) {
     let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
 }

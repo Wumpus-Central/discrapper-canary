@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120),
@@ -14,17 +14,17 @@ var r = n(200651),
     c = n(719247),
     d = n(71585),
     u = n(146282),
-    h = n(897674),
-    m = n(561308),
+    m = n(897674),
+    h = n(561308),
     x = n(206583),
-    p = n(44529);
-function f(e) {
+    f = n(44529);
+function p(e) {
     let { id: t } = e,
         n = (0, a.e7)([s.default], () => s.default.getUser(t));
     return null == n
         ? null
         : (0, r.jsx)(l.Clickable, {
-              className: p.entryAuthor,
+              className: f.entryAuthor,
               onClick: function () {
                   (0, o.openUserProfileModal)({
                       sourceAnalyticsLocations: [i.Z.DEV_TOOLS],
@@ -37,7 +37,7 @@ function f(e) {
               })
           });
 }
-function g() {
+function b() {
     var e;
     let t = (0, a.e7)([u.Z], () => u.Z.getFeed(x.YN.GLOBAL_FEED)),
         n = (0, a.e7)([u.Z], () => u.Z.getFilters()),
@@ -60,14 +60,14 @@ function g() {
               ? void 0
               : e.flatMap((e) => {
                     let { content: t } = e;
-                    if (!(0, h.g)(n, t)) return [];
+                    if (!(0, m.g)(n, t)) return [];
                     let a = i[(0, c.T)(t)];
                     return (0, r.jsxs)(
                         'li',
                         {
-                            className: p.locatorEntry,
+                            className: f.locatorEntry,
                             children: [
-                                (0, r.jsx)(f, {
+                                (0, r.jsx)(p, {
                                     type: t.author_type,
                                     id: t.author_id
                                 }),
@@ -76,7 +76,7 @@ function g() {
                                         variant: 'text-md/normal',
                                         children: 'Expired or no matching presence'
                                     }),
-                                (0, m.n2)(t) &&
+                                (0, h.n2)(t) &&
                                     (0, r.jsxs)(l.Text, {
                                         variant: 'text-md/normal',
                                         children: ['Expired at ', t.expires_at]

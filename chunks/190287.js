@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(596454),
     d = n(318766),
@@ -17,9 +17,9 @@ let f = (e) => {
     var t;
     let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: _, position: I } = e,
         [N, T] = r.useState(!1),
-        b = (0, a.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
+        j = (0, s.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
     return (0, i.jsxs)('div', {
-        className: s()(p.reasonContainer),
+        className: a()(p.reasonContainer),
         children: [
             (0, i.jsx)(o.Popout, {
                 onRequestClose: () => {
@@ -75,7 +75,7 @@ let f = (e) => {
                             },
                             defaultDirty: (null == n ? void 0 : n.length) > 0
                         },
-                        'text-input-'.concat(I, '-').concat(b)
+                        'text-input-'.concat(I, '-').concat(j)
                     ),
                     (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0 || null != l
                         ? (0, i.jsx)(o.Button, {
@@ -99,15 +99,15 @@ let f = (e) => {
 };
 t.Z = (e) => {
     let { reasonMinLength: t, reasonMaxLength: n, guildId: r, reasons: l } = e,
-        s = [x.intl.string(x.t['9dhBGh']), x.intl.string(x.t['8RmhKC']), x.intl.string(x.t['2t0V8/']), x.intl.string(x.t.l8WqCQ)],
-        a = [];
+        a = [x.intl.string(x.t['9dhBGh']), x.intl.string(x.t['8RmhKC']), x.intl.string(x.t['2t0V8/']), x.intl.string(x.t.l8WqCQ)],
+        s = [];
     for (let e = 0; e < 4; e++)
-        a.push(
+        s.push(
             (0, i.jsx)(
                 f,
                 {
                     position: e,
-                    placeholder: s[e],
+                    placeholder: a[e],
                     ...l[e],
                     onSetReason: (t) => {
                         let n = [...l],
@@ -133,5 +133,5 @@ t.Z = (e) => {
                 'reasonListItem-' + e
             )
         );
-    return (0, i.jsx)('div', { children: a });
+    return (0, i.jsx)('div', { children: s });
 };

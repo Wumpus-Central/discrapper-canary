@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(313201),
-    a = n(723047),
+    a = n(313201),
+    s = n(723047),
     o = n(727843),
     c = n(290348),
     d = n(164000),
@@ -25,11 +25,11 @@ function _(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: _ } = (0, o.N)(),
         [I, N] = c.UE(n),
-        [T, b] = c.R7(n),
-        j = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        [T, j] = c.R7(n),
+        b = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
         { isFullServerGating: S } = (0, d.Z)(_),
-        E = (0, s.Dt)(),
-        R = (0, a.mY)();
+        E = (0, a.Dt)(),
+        R = (0, s.mY)();
     return (0, i.jsxs)(u.Z, {
         title: C.intl.string(C.t.YNw2Sk),
         description: C.intl.string(C.t.zMW5r6),
@@ -47,9 +47,9 @@ function _(e) {
                     (0, i.jsx)(m.Z, {
                         channelBenefits: I,
                         intangibleBenefits: T,
-                        subscriptionListings: j,
+                        subscriptionListings: b,
                         onImport: function (e, t) {
-                            N((t) => t.concat(e)), b((e) => e.concat(t));
+                            N((t) => t.concat(e)), j((e) => e.concat(t));
                         }
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),

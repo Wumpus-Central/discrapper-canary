@@ -1,21 +1,21 @@
-n.d(t, {
+n.d(e, {
     C: function () {
-        return function e(t) {
-            return null == t
-                ? t
-                : Object.keys(t).reduce((n, r) => {
-                      let o = (0, i.camelCase)(r);
-                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[o] = t[r]) : (n[o] = e(t[r])), n;
+        return function t(e) {
+            return null == e
+                ? e
+                : Object.keys(e).reduce((n, r) => {
+                      let l = (0, i.camelCase)(r);
+                      return 'object' != typeof e[r] || Array.isArray(e[r]) ? (n[l] = e[r]) : (n[l] = t(e[r])), n;
                   }, {});
         };
     },
     X: function () {
-        return function e(t) {
-            return null == t
-                ? t
-                : Object.keys(t).reduce((n, r) => {
-                      let o = (0, i.snakeCase)(r);
-                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[o] = t[r]) : (n[o] = e(t[r])), (n[o] = t[r]), n;
+        return function t(e) {
+            return null == e
+                ? e
+                : Object.keys(e).reduce((n, r) => {
+                      let l = (0, i.snakeCase)(r);
+                      return 'object' != typeof e[r] || Array.isArray(e[r]) ? (n[l] = e[r]) : (n[l] = t(e[r])), (n[l] = e[r]), n;
                   }, {});
         };
     }

@@ -1,8 +1,8 @@
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(600164),
+    a = n.n(l),
+    s = n(600164),
     o = n(585548),
     c = n(232186);
 function d(e, t, n) {
@@ -22,21 +22,21 @@ class u extends r.PureComponent {
     render() {
         let { focused: e } = this.state,
             { value: t, placeholder: n, error: r, className: l, maxLength: d, autoFocus: u, prefix: m, disabled: h } = this.props;
-        return (0, i.jsxs)(a.Z, {
-            align: a.Z.Align.CENTER,
-            justify: a.Z.Justify.START,
-            className: s()(o.prefixInput, l, {
+        return (0, i.jsxs)(s.Z, {
+            align: s.Z.Align.CENTER,
+            justify: s.Z.Justify.START,
+            className: a()(o.prefixInput, l, {
                 [o.focused]: e,
                 [o.error]: r
             }),
             onClick: this.handleFocusInput,
             children: [
-                (0, i.jsx)(a.Z.Child, {
+                (0, i.jsx)(s.Z.Child, {
                     grow: 0,
                     className: o.prefixInputPrefix,
                     children: m
                 }),
-                (0, i.jsx)(a.Z.Child, {
+                (0, i.jsx)(s.Z.Child, {
                     className: c.marginReset,
                     children: (0, i.jsx)('input', {
                         ref: this.setInputRef,

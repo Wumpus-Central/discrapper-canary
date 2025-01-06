@@ -1,17 +1,17 @@
-n.d(t, {
+n.d(e, {
     U: function () {
-        return o;
+        return l;
     }
 });
 var i = n(990547),
     r = n(213609);
-function o(e, t) {
+function l(t, e) {
     (0, r.Z)({
         type: i.ImpressionTypes.VIEW,
         name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
         properties: {
-            country_code: t,
-            action_location: e
+            country_code: e,
+            action_location: t
         }
     });
 }

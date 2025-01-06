@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(727843),
-    s = n(944537),
-    a = n(290348),
+    a = n(944537),
+    s = n(290348),
     o = n(91354),
     c = n(662961),
     d = n(388032),
@@ -17,7 +17,7 @@ var r = n(481060),
 function m(e) {
     let { 'aria-labelledby': t, disabled: n = !1 } = e,
         { editStateId: m, guildId: h } = (0, l.N)(),
-        [g, x] = a.GP(m, h);
+        [g, x] = s.GP(m, h);
     return (0, i.jsx)(r.RadioGroup, {
         className: u.__invalid_channelAccessSelect,
         radioItemClassName: u.__invalid_channelAccessSelectRadioButton,
@@ -30,13 +30,13 @@ function m(e) {
         options: [
             {
                 name: d.intl.string(d.t['vs2T+P']),
-                value: s.I.SOME_CHANNELS_ACCESS,
+                value: a.I.SOME_CHANNELS_ACCESS,
                 icon: (0, r.makeIconCompat)(c.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             },
             {
                 name: d.intl.string(d.t.l4Tr7e),
-                value: s.I.ALL_CHANNELS_ACCESS,
+                value: a.I.ALL_CHANNELS_ACCESS,
                 icon: (0, r.makeIconCompat)(o.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             }

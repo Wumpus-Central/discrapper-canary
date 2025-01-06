@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(512722),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(780384),
     d = n(481060),
     u = n(99690),
@@ -22,7 +22,7 @@ var i = n(200651),
 function C(e) {
     var t, n;
     let r,
-        { theme: l, platform: a, integration: m, onRemove: h, locked: g } = e;
+        { theme: l, platform: s, integration: m, onRemove: h, locked: g } = e;
     if ((null == m ? void 0 : m.application) != null)
         o()(null != m.application.bot, 'bot is null'),
             (r = (0, i.jsx)(u.Z, {
@@ -30,22 +30,22 @@ function C(e) {
                 user: m.application.bot,
                 className: f.verifiedIcon
             }));
-    else if (null != a) {
-        let e = (0, c.ap)(l) ? a.icon.lightSVG : a.icon.darkSVG;
+    else if (null != s) {
+        let e = (0, c.ap)(l) ? s.icon.lightSVG : s.icon.darkSVG;
         r = (0, i.jsx)('img', {
             className: f.verifiedIcon,
             src: e,
-            alt: p.intl.formatToPlainString(p.t.rtm15O, { name: a.name })
+            alt: p.intl.formatToPlainString(p.t.rtm15O, { name: s.name })
         });
     }
     return (0, i.jsxs)('div', {
-        className: s()(f.verifiedRow, (null == a ? void 0 : a.hasMetadata) === !0 || ((null == m ? void 0 : m.role_connections_metadata) != null && (null == m ? void 0 : m.role_connections_metadata.length) > 0) ? f.verifiedRowWithMetadata : null),
+        className: a()(f.verifiedRow, (null == s ? void 0 : s.hasMetadata) === !0 || ((null == m ? void 0 : m.role_connections_metadata) != null && (null == m ? void 0 : m.role_connections_metadata.length) > 0) ? f.verifiedRowWithMetadata : null),
         children: [
             r,
             (0, i.jsx)(d.Text, {
                 variant: 'text-md/medium',
                 className: f.verifiedText,
-                children: p.intl.format(p.t.Nj0a3t, { platformName: null !== (n = null == a ? void 0 : a.name) && void 0 !== n ? n : null == m ? void 0 : null === (t = m.application) || void 0 === t ? void 0 : t.name })
+                children: p.intl.format(p.t.Nj0a3t, { platformName: null !== (n = null == s ? void 0 : s.name) && void 0 !== n ? n : null == m ? void 0 : null === (t = m.application) || void 0 === t ? void 0 : t.name })
             }),
             (0, i.jsx)(d.Button, {
                 'aria-label': p.intl.string(p.t.N86XcH),
@@ -70,10 +70,10 @@ function C(e) {
 }
 function v(e) {
     var t, n, l;
-    let { inputRef: s, existingPendingConfiguration: a, locked: o, onConfigurationChange: c, platform: u, applicationId: m, metadataField: h, operator: g } = e,
-        p = null !== (n = null == a ? void 0 : a.index) && void 0 !== n ? n : -1,
+    let { inputRef: a, existingPendingConfiguration: s, locked: o, onConfigurationChange: c, platform: u, applicationId: m, metadataField: h, operator: g } = e,
+        p = null !== (n = null == s ? void 0 : s.index) && void 0 !== n ? n : -1,
         C = null != g ? g : x.iO.GREATER_THAN,
-        v = Math.round(Number(null !== (l = null == a ? void 0 : null === (t = a.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
+        v = Math.round(Number(null !== (l = null == s ? void 0 : null === (t = s.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
     C === x.iO.GREATER_THAN ? (v = Math.max(1, v + 1)) : C === x.iO.LESS_THAN && (v = Math.max(0, v - 1));
     let [_, I] = r.useState(v.toString());
     return (
@@ -83,13 +83,13 @@ function v(e) {
         (0, i.jsx)(
             d.TextInput,
             {
-                inputRef: s,
+                inputRef: a,
                 type: 'number',
                 className: f.numericalRuleInput,
                 size: d.TextInput.Sizes.MINI,
                 value: _,
                 onChange: (e) => {
-                    if (null != a) {
+                    if (null != s) {
                         if ('' !== e) {
                             var t;
                             let n = Math.round(Number(e));
@@ -115,7 +115,7 @@ function v(e) {
     );
 }
 function _(e) {
-    let { titleText: t, fieldText: n, metadataField: r, existingPendingConfiguration: l, platform: s, applicationId: a, onConfigurationChange: o, locked: c } = e;
+    let { titleText: t, fieldText: n, metadataField: r, existingPendingConfiguration: l, platform: a, applicationId: s, onConfigurationChange: o, locked: c } = e;
     return (0, i.jsxs)(
         'div',
         {
@@ -146,8 +146,8 @@ function _(e) {
                         let i = null;
                         e &&
                             (i = {
-                                connectionType: null !== (t = null == s ? void 0 : s.type) && void 0 !== t ? t : x.Kt,
-                                applicationId: a,
+                                connectionType: null !== (t = null == a ? void 0 : a.type) && void 0 !== t ? t : x.Kt,
+                                applicationId: s,
                                 connectionMetadataField: r,
                                 operator: x.iO.EQUAL,
                                 value: '1'
@@ -162,22 +162,22 @@ function _(e) {
     );
 }
 function I(e) {
-    let { titleText: t, fieldText: n, fieldTextHook: l, metadataField: s, existingPendingConfiguration: a, platform: o, applicationId: c, onConfigurationChange: u, locked: m, operator: h } = e,
+    let { titleText: t, fieldText: n, fieldTextHook: l, metadataField: a, existingPendingConfiguration: s, platform: o, applicationId: c, onConfigurationChange: u, locked: m, operator: h } = e,
         g = r.createRef(),
-        C = (null == a ? void 0 : a.configuration) != null,
+        C = (null == s ? void 0 : s.configuration) != null,
         _ = (0, i.jsx)(
             v,
             {
                 inputRef: g,
-                metadataField: s,
-                existingPendingConfiguration: a,
+                metadataField: a,
+                existingPendingConfiguration: s,
                 locked: m || !C,
                 onConfigurationChange: u,
                 platform: o,
                 operator: h,
                 applicationId: c
             },
-            s
+            a
         ),
         I =
             null != l
@@ -227,18 +227,18 @@ function I(e) {
                                 (r = {
                                     connectionType: null !== (n = null == o ? void 0 : o.type) && void 0 !== n ? n : x.Kt,
                                     applicationId: c,
-                                    connectionMetadataField: s,
+                                    connectionMetadataField: a,
                                     operator: e,
                                     value: i.toString()
                                 });
                         }
-                        u(r, null !== (i = null == a ? void 0 : a.index) && void 0 !== i ? i : -1);
+                        u(r, null !== (i = null == s ? void 0 : s.index) && void 0 !== i ? i : -1);
                     },
                     disabled: m
                 })
             ]
         },
-        s
+        a
     );
 }
 function N(e) {
@@ -329,7 +329,7 @@ function T(e) {
         ]
     });
 }
-function b(e) {
+function j(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.REDDIT);
     return (0, i.jsxs)(i.Fragment, {
@@ -373,7 +373,7 @@ function b(e) {
         ]
     });
 }
-function j(e) {
+function b(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.PAYPAL);
     return (0, i.jsxs)(i.Fragment, {
@@ -500,8 +500,8 @@ function E(e) {
 function R(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r, integration: l } = e;
     if (null == l || null == l.role_connections_metadata) return null;
-    let s = l.role_connections_metadata.map((e) => {
-        var s, a;
+    let a = l.role_connections_metadata.map((e) => {
+        var a, s;
         let o;
         switch (e.type) {
             case x.xn.INTEGER_LESS_THAN_EQUAL:
@@ -541,7 +541,7 @@ function R(e) {
                         onConfigurationChange: n,
                         locked: r,
                         operator: o,
-                        applicationId: null === (s = l.application) || void 0 === s ? void 0 : s.id
+                        applicationId: null === (a = l.application) || void 0 === a ? void 0 : a.id
                     },
                     e.key
                 );
@@ -558,25 +558,25 @@ function R(e) {
                         onConfigurationChange: n,
                         locked: r,
                         operator: o,
-                        applicationId: null === (a = l.application) || void 0 === a ? void 0 : a.id
+                        applicationId: null === (s = l.application) || void 0 === s ? void 0 : s.id
                     },
                     e.key
                 );
         }
     });
-    return (0, i.jsx)(i.Fragment, { children: s });
+    return (0, i.jsx)(i.Fragment, { children: a });
 }
 function y(e) {
     let t,
-        { configurationItems: n, onConfigurationChange: r, locked: l, integrations: s } = e,
-        a = (0, m.ZP)();
+        { configurationItems: n, onConfigurationChange: r, locked: l, integrations: a } = e,
+        s = (0, m.ZP)();
     if (n.length < 1) return null;
     let o = n[0].configuration.applicationId,
         c =
             null != o
-                ? null == s
+                ? null == a
                     ? void 0
-                    : s.find((e) => {
+                    : a.find((e) => {
                           var t;
                           return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === o;
                       })
@@ -604,10 +604,10 @@ function y(e) {
             p = (0, i.jsx)(T, { ...x });
             break;
         case g.ABu.REDDIT:
-            p = (0, i.jsx)(b, { ...x });
+            p = (0, i.jsx)(j, { ...x });
             break;
         case g.ABu.PAYPAL:
-            p = (0, i.jsx)(j, { ...x });
+            p = (0, i.jsx)(b, { ...x });
             break;
         case g.ABu.EBAY:
             p = (0, i.jsx)(S, { ...x });
@@ -625,7 +625,7 @@ function y(e) {
         className: f.container,
         children: [
             (0, i.jsx)(C, {
-                theme: a,
+                theme: s,
                 platform: d,
                 integration: c,
                 onRemove: () => r(null, t.index),

@@ -9,12 +9,12 @@ t.d(n, {
         return r;
     }
 });
-var l = t(544891),
-    i = t(981631);
+var i = t(544891),
+    l = t(981631);
 async function r(e, n, t, r, a) {
     return (
-        await l.tn.post({
-            url: i.ANM.STAGE_INSTANCES,
+        await i.tn.post({
+            url: l.ANM.STAGE_INSTANCES,
             body: {
                 channel_id: e,
                 topic: n,
@@ -28,8 +28,8 @@ async function r(e, n, t, r, a) {
 }
 async function a(e, n, t) {
     return (
-        await l.tn.patch({
-            url: i.ANM.STAGE_INSTANCE(e),
+        await i.tn.patch({
+            url: l.ANM.STAGE_INSTANCE(e),
             body: {
                 topic: n,
                 privacy_level: t
@@ -39,8 +39,8 @@ async function a(e, n, t) {
     ).body;
 }
 function s(e) {
-    return l.tn.del({
-        url: i.ANM.STAGE_INSTANCE(e),
+    return i.tn.del({
+        url: l.ANM.STAGE_INSTANCE(e),
         rejectWithError: !1
     });
 }

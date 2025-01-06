@@ -1,4 +1,4 @@
-var i, r, l, s;
+var i, r, l, a;
 n.d(t, {
     X: function () {
         return i;
@@ -11,6 +11,6 @@ n.d(t, {
     (l.REJECTED = 'REJECTED'),
     (l.APPROVED = 'APPROVED'),
     (l.ACTION_REQUIRED = 'ACTION_REQUIRED'),
-    ((s = r || (r = {})).HOW_IT_WORKS = 'HOW_IT_WORKS'),
-    (s.BENEFITS = 'BENEFITS'),
-    (s.OTHER_CREATORS = 'OTHER_CREATORS');
+    ((a = r || (r = {})).HOW_IT_WORKS = 'HOW_IT_WORKS'),
+    (a.BENEFITS = 'BENEFITS'),
+    (a.OTHER_CREATORS = 'OTHER_CREATORS');

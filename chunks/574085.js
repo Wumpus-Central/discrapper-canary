@@ -9,27 +9,27 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(723047),
-    s = n(727843),
-    a = n(290348),
+    a = n(727843),
+    s = n(290348),
     o = n(764163),
     c = n(155758),
     d = n(293810),
     u = n(388032);
 function m() {
-    let { editStateId: e, guildId: t } = (0, s.N)(),
-        [n, m] = a.R7(e);
+    let { editStateId: e, guildId: t } = (0, a.N)(),
+        [n, m] = s.R7(e);
     function h(e, t) {
-        let { name: i, description: r, emojiId: l, emojiName: s } = e,
-            a = [...n],
+        let { name: i, description: r, emojiId: l, emojiName: a } = e,
+            s = [...n],
             o = {
                 name: i,
                 description: r,
                 emoji_id: l,
-                emoji_name: s,
+                emoji_name: a,
                 ref_type: d.Qs.INTANGIBLE,
                 ref_id: void 0
             };
-        null != t ? (a[t] = o) : a.push(o), m(a);
+        null != t ? (s[t] = o) : s.push(o), m(s);
     }
     let g = (0, l.mY)();
     return (0, i.jsxs)(i.Fragment, {

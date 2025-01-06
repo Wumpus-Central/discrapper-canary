@@ -9,31 +9,31 @@ var i = n(200651),
     r = n(192379),
     l = n(481060);
 n(674180);
-var s = n(723047),
-    a = n(727843),
+var a = n(723047),
+    s = n(727843),
     o = n(290348),
     c = n(764163),
     d = n(155758),
     u = n(293810),
     m = n(388032);
 function h() {
-    let { editStateId: e, guildId: t } = (0, a.N)(),
+    let { editStateId: e, guildId: t } = (0, s.N)(),
         [n, h] = o.UE(e),
         g = r.useMemo(() => new Set(n.map((e) => e.ref_id)), [n]);
     function x(e, t) {
-        let { channelId: i, description: r, emojiId: l, emojiName: s } = e,
-            a = [...n],
+        let { channelId: i, description: r, emojiId: l, emojiName: a } = e,
+            s = [...n],
             o = {
                 name: '',
                 description: r,
                 emoji_id: l,
-                emoji_name: s,
+                emoji_name: a,
                 ref_type: u.Qs.CHANNEL,
                 ref_id: i
             };
-        null != t ? (a[t] = o) : a.push(o), h(a);
+        null != t ? (s[t] = o) : s.push(o), h(s);
     }
-    let p = (0, s.mY)();
+    let p = (0, a.mY)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(d.p, {

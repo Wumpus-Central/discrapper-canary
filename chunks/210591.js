@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(752877),
+    a = n.n(l),
+    s = n(752877),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -32,17 +32,17 @@ function g(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(h.rowIcon, h.rowIconChecked)
+                      className: a()(h.rowIcon, h.rowIconChecked)
                   })
-                : (0, i.jsx)('div', { className: s()(h.rowIcon, h.rowIconEmpty) })
+                : (0, i.jsx)('div', { className: a()(h.rowIcon, h.rowIconEmpty) })
         ]
     });
 }
 function x(e) {
     let { children: t } = e,
         [n, l] = r.useState(!1),
-        s = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = s.filter((e) => e).length / s.length,
+        a = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = a.filter((e) => e).length / a.length,
         x = 1 === o,
         p = (0, c.useSpring)({ width: ''.concat(100 * o, '%') }),
         f = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: u.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
@@ -120,7 +120,7 @@ function x(e) {
                 !x &&
                     (0, i.jsx)('div', {
                         className: h.progressBarOuter,
-                        children: (0, i.jsx)(a.animated.div, {
+                        children: (0, i.jsx)(s.animated.div, {
                             className: h.progressBarInner,
                             style: p
                         })

@@ -1,22 +1,22 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(692547),
-    o = n(313201);
-function l(e) {
-    let { isSelected: t, ...n } = e,
-        l = (0, o.Dt)();
+    l = n(313201);
+function o(t) {
+    let { isSelected: e, ...n } = t,
+        o = (0, l.Dt)();
     return (0, i.jsxs)('svg', {
         ...n,
         width: '16',
         height: '16',
         viewBox: '0 0 16 16',
         xmlns: 'http://www.w3.org/2000/svg',
-        fill: 'url(#'.concat(l, ')'),
+        fill: 'url(#'.concat(o, ')'),
         children: [
             (0, i.jsx)('path', {
                 d: 'M10 9.33332C10.7364 9.33332 11.3334 8.73637 11.3334 7.99999C11.3334 7.26361 10.7364 6.66666 10 6.66666C9.26364 6.66666 8.66669 7.26361 8.66669 7.99999C8.66669 8.73637 9.26364 9.33332 10 9.33332Z',
@@ -41,14 +41,14 @@ function l(e) {
                     y2: '0.127441',
                     gradientUnits: 'userSpaceOnUse',
                     children: [
-                        (0, i.jsx)('stop', { stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
+                        (0, i.jsx)('stop', { stopColor: e ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
                         (0, i.jsx)('stop', {
                             offset: '0.502368',
-                            stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
+                            stopColor: e ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
                         }),
                         (0, i.jsx)('stop', {
                             offset: '1',
-                            stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
+                            stopColor: e ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
                         })
                     ]
                 })

@@ -1,6 +1,6 @@
 n.d(t, {
     Zo: function () {
-        return s;
+        return a;
     },
     m5: function () {
         return l;
@@ -20,6 +20,6 @@ function l(e, t) {
         }
     );
 }
-function s(e, t) {
+function a(e, t) {
     return null != e ? r()(e).format(t) : '-';
 }

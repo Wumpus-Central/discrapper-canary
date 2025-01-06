@@ -8,15 +8,15 @@ var i = n(192379),
     r = n(295141);
 function l(e) {
     let [t, n] = i.useState(!0),
-        [l, s] = i.useState(),
-        [a, o] = i.useState(),
+        [l, a] = i.useState(),
+        [s, o] = i.useState(),
         c = i.useCallback(async (e) => {
-            n(!0), s(void 0);
+            n(!0), a(void 0);
             try {
                 let t = await r.HT(e);
                 o(t);
             } catch (e) {
-                s(e);
+                a(e);
             } finally {
                 n(!1);
             }
@@ -28,7 +28,7 @@ function l(e) {
         {
             isLoading: t,
             error: l,
-            highlightedCreatorDetails: a
+            highlightedCreatorDetails: s
         }
     );
 }

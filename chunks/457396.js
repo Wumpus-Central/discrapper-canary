@@ -46,8 +46,8 @@ var i,
     U = n(976465),
     G = n(701910),
     B = n(938736),
-    H = n(227140),
-    V = n(474936),
+    V = n(227140),
+    H = n(474936),
     F = n(981631),
     z = n(921944),
     W = n(388032),
@@ -92,7 +92,7 @@ let ee = (e) => {
             ed = (0, y.N)(),
             eu = (0, O.Ng)(),
             eh = (0, d.e7)([T.ZP], () => T.ZP.inReverseTrial()),
-            em = (null == ed ? void 0 : ed.trial_id) === V.jz,
+            em = (null == ed ? void 0 : ed.trial_id) === H.jz,
             ep = (0, d.e7)([S.Z], () => S.Z.isLocalizedPromoEnabled) && null == ed,
             eg = (0, M.Vi)(),
             ef = (0, j.$_)(),
@@ -102,7 +102,7 @@ let ee = (e) => {
             eC = (0, B.wG)(J),
             eN = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
             { fractionalState: ev, endsAt: eS, currentEntitlementId: eT } = (0, E.Z)({ forceFetch: !0 }),
-            [eb, eA] = (0, C.XR)(ev !== V.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ev !== V.a$.NONE ? Number(eT) : 0),
+            [eb, eA] = (0, C.XR)(ev !== H.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ev !== H.a$.NONE ? Number(eT) : 0),
             { enabled: eZ } = L._.useExperiment({ location: J }, { autoTrackExposure: !1 }),
             { enabled: ex } = x.Z.useExperiment(
                 { location: J },
@@ -111,11 +111,11 @@ let ee = (e) => {
                     disable: !em
                 }
             ),
-            eL = eZ && (null == ed ? void 0 : ed.trial_id) === V.a7,
+            eL = eZ && (null == ed ? void 0 : ed.trial_id) === H.a7,
             [eP, eO] = (0, C.US)(eh ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
         if (!ee({ selected: s })) return null;
         if (
-            (ev !== V.a$.NONE &&
+            (ev !== H.a$.NONE &&
                 ((r = 9),
                 (i = (0, l.jsx)(P.Z, {
                     className: '',
@@ -155,19 +155,19 @@ let ee = (e) => {
                   : eg
                     ? ((i = (0, l.jsx)(R.Z, {})), (r = 0))
                     : null != eP && eP === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
-                      ? ((i = (0, l.jsx)(H.Z, {
+                      ? ((i = (0, l.jsx)(V.Z, {
                             copy: W.intl.string(W.t.HwUCnp),
                             showStars: !1
                         })),
                         (r = 4))
                       : null != ef
-                        ? ((i = (0, l.jsx)(H.Z, {
+                        ? ((i = (0, l.jsx)(V.Z, {
                               copy: ef,
                               showStars: !1
                           })),
                           (r = 1))
                         : null != e_
-                          ? ((i = (0, l.jsx)(H.Z, {
+                          ? ((i = (0, l.jsx)(V.Z, {
                                 copy: e_,
                                 showStars: !1
                             })),

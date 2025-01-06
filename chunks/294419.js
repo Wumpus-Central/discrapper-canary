@@ -1,4 +1,4 @@
-s.r(
+a.r(
     (e.exports = {
         divider: 'divider_b1698d',
         moreList: 'moreList_b1698d',

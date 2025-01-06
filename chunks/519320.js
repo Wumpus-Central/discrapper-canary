@@ -1,39 +1,39 @@
-n.d(t, {
+n.d(i, {
     EW: function () {
-        return s;
+        return l;
     },
     Np: function () {
-        return c;
+        return s;
     },
     tb: function () {
-        return o;
+        return r;
     }
 });
-var i,
-    r,
-    l = n(626135),
-    a = n(981631);
-function o(e, t, n, i) {
-    l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
+var t,
+    o,
+    a = n(626135),
+    c = n(981631);
+function r(e, i, n, t) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_STARTED, {
         message_id: e,
-        total_duration_secs: t,
-        start_duration_secs: Math.min(null != t ? t : n, n),
-        sender_user_id: i
+        total_duration_secs: i,
+        start_duration_secs: Math.min(null != i ? i : n, n),
+        sender_user_id: t
     });
 }
-function s(e, t, n, i, r) {
-    l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
+function l(e, i, n, t, o) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_ENDED, {
         message_id: e,
-        total_duration_secs: t,
-        end_duration_secs: Math.min(null != t ? t : n, n),
-        sender_user_id: i,
-        duration_listening_secs: r
+        total_duration_secs: i,
+        end_duration_secs: Math.min(null != i ? i : n, n),
+        sender_user_id: t,
+        duration_listening_secs: o
     });
 }
-function c(e, t) {
-    l.default.track(a.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function s(e, i) {
+    a.default.track(c.rMx.VOICE_MESSAGE_PLAYBACK_FAILED, {
         message_id: e,
-        error_message: t
+        error_message: i
     });
 }
-((i = r || (r = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+((t = o || (o = {})).SENT = 'sent'), (t.CANCELLED_DURATION = 'cancelled_duration'), (t.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (t.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (t.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');

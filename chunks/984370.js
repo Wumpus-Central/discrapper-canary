@@ -62,7 +62,7 @@ function L(e) {
                           e ? (0, i.jsx)(C.Z, { className: Z.search }, null != c ? c : r) : null,
                           B && (0, i.jsx)(T.ZP.Divider, {}),
                           !W && (0, i.jsx)(b.Z, {}),
-                          (0, i.jsx)(f.Z, { canShowReminder: !0 }),
+                          !W && (0, i.jsx)(f.Z, { canShowReminder: !0 }),
                           !W && (0, i.jsx)(_.Z, {}),
                           V && !H ? (0, i.jsx)(E.Z, {}) : null,
                           !W && (G ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(S.Z, {})),

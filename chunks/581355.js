@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return j;
+            return I;
         }
     });
 var l = t(200651),
@@ -66,11 +66,11 @@ function _(e) {
         ]
     });
 }
-function j(e) {
+function I(e) {
     let { channel: n, onClose: t, transitionState: d, ...m } = e,
         g = (0, o.Dt)(),
-        j = (0, a.e7)([s.Z], () => s.Z.getGuild(n.guild_id)),
-        I = i.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
+        I = (0, a.e7)([s.Z], () => s.Z.getGuild(n.guild_id)),
+        j = i.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
         { loading: N, error: C, onSave: p } = (0, x.Z)(n, t),
         {
             modalStep: S,
@@ -81,15 +81,15 @@ function j(e) {
             handleSettingsSave: Z,
             handleDelayedSave: B
         } = (0, h.Z)({
-            stageInstance: I,
+            stageInstance: j,
             defaultStep: f.lv.STAGE_CHANNEL_SETTINGS,
             error: C,
             onSave: p
         });
     return (i.useEffect(() => {
-        null == j && t();
-    }, [j, t]),
-    null == j)
+        null == I && t();
+    }, [I, t]),
+    null == I)
         ? null
         : (0, l.jsx)(r.ModalRoot, {
               transitionState: d,
@@ -106,9 +106,9 @@ function j(e) {
                           children: (0, l.jsx)('div', {
                               className: v.slideContainer,
                               children: (0, l.jsx)(_, {
-                                  guild: j,
+                                  guild: I,
                                   channel: n,
-                                  stageInstance: I,
+                                  stageInstance: j,
                                   headerId: g,
                                   onClose: t,
                                   loading: N,
@@ -125,7 +125,7 @@ function j(e) {
                               className: v.slideContainer,
                               children: (0, l.jsx)(u.Z, {
                                   headerId: g,
-                                  guild: j,
+                                  guild: I,
                                   channel: n,
                                   stageData: E,
                                   loading: N,

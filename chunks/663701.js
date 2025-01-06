@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(283595),
     G = n(699516),
     B = n(923834),
-    H = n(55563),
-    V = n(774343),
+    V = n(55563),
+    H = n(774343),
     F = n(626135),
     z = n(814225),
     W = n(515753),
@@ -320,15 +320,15 @@ function ec() {
     return (0, i.jsx)('div', { className: $.sectionDivider });
 }
 function ed() {
-    let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
+    let e = (0, u.e7)([H.Z], () => H.Z.getHomeLink()),
         t = (0, u.e7)(
-            [H.Z],
+            [V.Z],
             () => {
                 if (e === q.Z5c.APPLICATION_STORE) return !0;
                 let t = (0, z.ZK)(e);
                 if (null != t) {
                     var n, i;
-                    return null !== (i = null === (n = H.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
+                    return null !== (i = null === (n = V.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
                 }
                 return !1;
             },

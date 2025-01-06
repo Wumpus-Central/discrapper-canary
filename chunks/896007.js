@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(223892),
     r = n(738774),
     l = n(676317),
-    s = n(637853),
-    a = n(923726),
+    a = n(637853),
+    s = n(923726),
     o = n(144507),
     c = n(823379),
     d = n(600553),
@@ -35,7 +35,7 @@ function f(e) {
                 isOwner: N,
                 canManageGuildRoleSubscriptions: (0, o.H2)(t),
                 isMonetizationWaitlistEnabledForGuild: (0, i.mG)(t.id),
-                isGuildEligibleForRoleSubscriptions: (0, a.kT)(t.id),
+                isGuildEligibleForRoleSubscriptions: (0, s.kT)(t.id),
                 isExpeditedMonetizationOnboardingGuild: (0, i.Rw)(t),
                 isUserInCreatorMonetizationEligibleCountry: (0, i.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, r.cu)(t.id)
@@ -72,9 +72,9 @@ function f(e) {
                       ]
                     : [],
             r = t.hasFeature(m.oNc.COMMUNITY),
-            a = !r && ((0, l.Nb)(t.id) || (0, l.ze)(t.id)),
+            s = !r && ((0, l.Nb)(t.id) || (0, l.ze)(t.id)),
             o =
-                (n && r) || (n && !r) || a || u || v
+                (n && r) || (n && !r) || s || u || v
                     ? [
                           { section: x.DIVIDER },
                           {
@@ -88,7 +88,7 @@ function f(e) {
                           g(m.pNK.BANS, y)
                       ]
                     : [],
-            d = (0, s.wC)(t.id),
+            d = (0, a.wC)(t.id),
             C = n && (t.hasFeature(m.oNc.DISCOVERABLE) || !!(null == b ? void 0 : b.isPublished)),
             N = n && !j && !t.hasFeature(m.oNc.GUILD_SERVER_GUIDE),
             E =

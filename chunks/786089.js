@@ -33,8 +33,8 @@ t.Z = (0, r.memo)(function (e) {
         k = (0, r.useRef)(null),
         U = (0, r.useRef)(null),
         G = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        { ref: B, height: H = 0 } = (0, h.Z)(),
-        V = (0, m.ZP)(),
+        { ref: B, height: V = 0 } = (0, h.Z)(),
+        H = (0, m.ZP)(),
         F = (0, I.B6)(null === (t = P.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
@@ -53,10 +53,10 @@ t.Z = (0, r.memo)(function (e) {
             r = U.current.getBoundingClientRect();
         j((i.top - n.top - r.height) / 2);
     });
-    let Q = (0, d.wj)(V),
+    let Q = (0, d.wj)(H),
         J = (0, r.useMemo)(() => null != P.config.cosponsorMetadata, [P]),
         $ = (0, r.useMemo)(() => (0, N.fh)(P, N.eC.REWARD), [P]),
-        ee = O ? H + 8 : 0,
+        ee = O ? V + 8 : 0,
         et = () => {
             y(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {

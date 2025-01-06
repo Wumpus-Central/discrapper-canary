@@ -1,137 +1,137 @@
-i.r(t),
-    i.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return D;
+            return x;
         }
     }),
-    i(47120),
-    i(653041);
-var n = i(200651),
-    a = i(192379),
-    l = i(990547),
-    s = i(442837),
-    r = i(481060),
-    o = i(493683),
-    c = i(247272),
-    d = i(904245),
-    u = i(100527),
-    m = i(906732),
-    p = i(213609),
-    I = i(43267),
-    h = i(933557),
-    f = i(430824),
-    x = i(751771),
-    g = i(699516),
-    N = i(594174),
-    C = i(626135),
-    S = i(768581),
-    v = i(572004),
-    T = i(971130),
-    A = i(624138),
-    E = i(51144),
-    _ = i(778569),
-    Z = i(981631),
-    b = i(245335),
-    j = i(388032),
-    y = i(411362);
-function D(e) {
-    let { activityItem: t, analyticsLocations: i, ...I } = e,
-        h = (0, s.e7)([N.default], () => N.default.getCurrentUser()),
-        { analyticsLocations: f } = (0, m.ZP)(i);
-    (0, p.Z)({
-        type: l.ImpressionTypes.MODAL,
-        name: l.ImpressionNames.ACTIVITY_BOOKMARK_SHARE_MODAL,
+    n(47120),
+    n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(990547),
+    l = n(442837),
+    s = n(481060),
+    o = n(493683),
+    u = n(247272),
+    I = n(904245),
+    c = n(100527),
+    d = n(906732),
+    _ = n(213609),
+    T = n(43267),
+    N = n(933557),
+    m = n(430824),
+    S = n(751771),
+    f = n(699516),
+    O = n(594174),
+    E = n(626135),
+    g = n(768581),
+    p = n(572004),
+    P = n(971130),
+    h = n(624138),
+    D = n(51144),
+    C = n(778569),
+    v = n(981631),
+    A = n(245335),
+    M = n(388032),
+    y = n(411362);
+function x(e) {
+    let { activityItem: t, analyticsLocations: n, ...T } = e,
+        N = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
+        { analyticsLocations: m } = (0, d.ZP)(n);
+    (0, _.Z)({
+        type: a.ImpressionTypes.MODAL,
+        name: a.ImpressionNames.ACTIVITY_BOOKMARK_SHARE_MODAL,
         properties: {
             application_id: t.application.id,
-            location_stack: f
+            location_stack: m
         }
     });
-    let [g, S] = a.useState(''),
-        [v, A] = a.useState([]),
-        E = (0, _.Z)({
+    let [f, g] = r.useState(''),
+        [p, h] = r.useState([]),
+        D = (0, C.Z)({
             applicationId: t.application.id,
             size: 256
         }),
-        D = ''.concat(window.location.origin).concat(Z.Z5c.ACTIVITY_DETAILS(t.application.id)),
-        O = (0, s.Wu)([x.Z], () => x.Z.getInviteSuggestionRows());
-    a.useEffect(() => {
-        (0, c.x)({
+        x = ''.concat(window.location.origin).concat(v.Z5c.ACTIVITY_DETAILS(t.application.id)),
+        V = (0, l.Wu)([S.Z], () => S.Z.getInviteSuggestionRows());
+    r.useEffect(() => {
+        (0, u.x)({
             omitUserIds: new Set(),
             applicationId: t.application.id,
-            inviteTargetType: b.Iq.EMBEDDED_APPLICATION
+            inviteTargetType: A.Iq.EMBEDDED_APPLICATION
         });
     }, [t.application.id]),
-        a.useEffect(() => (0, c.C)(g), [g]);
-    let M = a.useCallback(async () => {
+        r.useEffect(() => (0, u.C)(f), [f]);
+    let R = r.useCallback(async () => {
         let e = 0,
-            i = 0,
             n = 0,
-            a = x.Z.getInviteSuggestionRows()
-                .filter((e) => v.includes(e.item.id))
+            i = 0,
+            r = S.Z.getInviteSuggestionRows()
+                .filter((e) => p.includes(e.item.id))
                 .map((t) =>
-                    (function (t, a) {
+                    (function (t, r) {
                         switch (t.type) {
-                            case T.bm.DM:
-                            case T.bm.FRIEND:
+                            case P.bm.DM:
+                            case P.bm.FRIEND:
                                 e++;
                                 break;
-                            case T.bm.GROUP_DM:
-                                i++;
-                                break;
-                            case T.bm.CHANNEL:
+                            case P.bm.GROUP_DM:
                                 n++;
+                                break;
+                            case P.bm.CHANNEL:
+                                i++;
                         }
-                        return t.type === T.bm.GROUP_DM || t.type === T.bm.CHANNEL ? d.Z.sendActivityBookmark(t.item.id, a, u.Z.ACTIVITY_DETAIL_PAGE, null) : t.type === T.bm.DM || t.type === T.bm.FRIEND ? o.Z.ensurePrivateChannel(t.item.id).then((e) => d.Z.sendActivityBookmark(e, D, u.Z.ACTIVITY_DETAIL_PAGE, null)) : Promise.resolve();
-                    })(t, D)
+                        return t.type === P.bm.GROUP_DM || t.type === P.bm.CHANNEL ? I.Z.sendActivityBookmark(t.item.id, r, c.Z.ACTIVITY_DETAIL_PAGE, null) : t.type === P.bm.DM || t.type === P.bm.FRIEND ? o.Z.ensurePrivateChannel(t.item.id).then((e) => I.Z.sendActivityBookmark(e, x, c.Z.ACTIVITY_DETAIL_PAGE, null)) : Promise.resolve();
+                    })(t, x)
                 );
-        await a,
-            C.default.track(Z.rMx.ACTIVITY_BOOKMARK_SHARED, {
-                user_id: null == h ? void 0 : h.id,
+        await r,
+            E.default.track(v.rMx.ACTIVITY_BOOKMARK_SHARED, {
+                user_id: null == N ? void 0 : N.id,
                 application_id: t.application.id,
                 n_users: e,
-                n_gdms: i,
-                n_channels: n
+                n_gdms: n,
+                n_channels: i
             }),
-            I.onClose();
-    }, [t, v, I, D, h]);
-    return (0, n.jsxs)(r.ModalRoot, {
-        ...I,
+            T.onClose();
+    }, [t, p, T, x, N]);
+    return (0, i.jsxs)(s.ModalRoot, {
+        ...T,
         className: y.modalRoot,
         children: [
-            (0, n.jsxs)(r.ModalHeader, {
+            (0, i.jsxs)(s.ModalHeader, {
                 className: y.header,
                 children: [
-                    (0, n.jsx)(r.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
-                        children: j.intl.format(j.t.tOVbbG, { activityName: t.application.name })
+                        children: M.intl.format(M.t.tOVbbG, { activityName: t.application.name })
                     }),
-                    (0, n.jsx)(r.ModalCloseButton, { onClick: I.onClose })
+                    (0, i.jsx)(s.ModalCloseButton, { onClick: T.onClose })
                 ]
             }),
-            (0, n.jsxs)(r.ModalContent, {
+            (0, i.jsxs)(s.ModalContent, {
                 className: y.modalContent,
                 children: [
-                    (0, n.jsx)(r.SearchBox, {
+                    (0, i.jsx)(s.SearchBox, {
                         className: y.searchBar,
-                        placeholder: j.intl.string(j.t['5h0QOD']),
-                        label: j.intl.string(j.t['5h0QOD']),
-                        searchTerm: g,
-                        onChange: (e) => S(e),
-                        onClear: () => S('')
+                        placeholder: M.intl.string(M.t['5h0QOD']),
+                        label: M.intl.string(M.t['5h0QOD']),
+                        searchTerm: f,
+                        onChange: (e) => g(e),
+                        onClear: () => g('')
                     }),
-                    O.map((e, t) =>
-                        (0, n.jsxs)(
-                            a.Fragment,
+                    V.map((e, t) =>
+                        (0, i.jsxs)(
+                            r.Fragment,
                             {
                                 children: [
-                                    0 === t ? null : (0, n.jsx)('div', { className: y.rowDivider }),
-                                    (0, n.jsx)(k, {
+                                    0 === t ? null : (0, i.jsx)('div', { className: y.rowDivider }),
+                                    (0, i.jsx)(b, {
                                         row: e,
                                         onClick: () => {
-                                            let t = [...v];
-                                            t.includes(e.item.id) ? (t = t.filter((t) => t !== e.item.id)) : t.push(e.item.id), A(t);
+                                            let t = [...p];
+                                            t.includes(e.item.id) ? (t = t.filter((t) => t !== e.item.id)) : t.push(e.item.id), h(t);
                                         },
-                                        checked: v.includes(e.item.id)
+                                        checked: p.includes(e.item.id)
                                     })
                                 ]
                             },
@@ -140,38 +140,38 @@ function D(e) {
                     )
                 ]
             }),
-            (0, n.jsxs)(r.ModalFooter, {
+            (0, i.jsxs)(s.ModalFooter, {
                 className: y.footer,
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: y.activityInfoOuterContainer,
-                        children: (0, n.jsxs)('div', {
+                        children: (0, i.jsxs)('div', {
                             className: y.activityInfoInnerContainer,
                             children: [
-                                (0, n.jsx)('img', {
-                                    src: E.url,
+                                (0, i.jsx)('img', {
+                                    src: D.url,
                                     className: y.activityInfoImage,
                                     alt: t.application.name
                                 }),
-                                (0, n.jsxs)('div', {
+                                (0, i.jsxs)('div', {
                                     className: y.activityInfoText,
                                     children: [
-                                        (0, n.jsx)(r.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-md/semibold',
                                             className: y.ellipsis,
                                             children: t.application.name
                                         }),
-                                        (0, n.jsx)(r.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
                                             className: y.ellipsis,
                                             children: t.application.description
                                         }),
-                                        (0, n.jsx)(r.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-xs/medium',
                                             className: y.ellipsis,
-                                            children: (0, n.jsx)(r.Anchor, {
-                                                href: D,
-                                                children: D
+                                            children: (0, i.jsx)(s.Anchor, {
+                                                href: x,
+                                                children: x
                                             })
                                         })
                                     ]
@@ -179,18 +179,18 @@ function D(e) {
                             ]
                         })
                     }),
-                    (0, n.jsx)('div', { className: y.footerDivider }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsx)('div', { className: y.footerDivider }),
+                    (0, i.jsxs)('div', {
                         className: y.copySendBar,
                         children: [
-                            (0, n.jsx)(w, {
-                                link: D,
+                            (0, i.jsx)(U, {
+                                link: x,
                                 applicationId: t.application.id
                             }),
-                            (0, n.jsx)(r.Button, {
-                                onClick: M,
-                                disabled: v.length <= 0,
-                                children: j.intl.string(j.t.TXNS7e)
+                            (0, i.jsx)(s.Button, {
+                                onClick: R,
+                                disabled: p.length <= 0,
+                                children: M.intl.string(M.t.TXNS7e)
                             })
                         ]
                     })
@@ -199,51 +199,51 @@ function D(e) {
         ]
     });
 }
-function k(e) {
-    let { row: t, onClick: i, checked: a } = e,
+function b(e) {
+    let { row: t, onClick: n, checked: r } = e,
+        a = null,
         l = null,
-        s = null,
         o = null;
     switch (t.type) {
-        case T.bm.DM:
-        case T.bm.FRIEND:
-            (l = (0, n.jsx)(r.Avatar, {
-                size: r.AvatarSizes.SIZE_40,
+        case P.bm.DM:
+        case P.bm.FRIEND:
+            (a = (0, i.jsx)(s.Avatar, {
+                size: s.AvatarSizes.SIZE_40,
                 src: t.item.getAvatarURL(null, 128, !1),
                 'aria-label': t.item.username
             })),
-                (s = E.ZP.getName(t.item)),
-                (o = E.ZP.getUserTag(t.item));
+                (l = D.ZP.getName(t.item)),
+                (o = D.ZP.getUserTag(t.item));
             break;
-        case T.bm.GROUP_DM: {
-            let e = (0, I.x)(t.item),
-                i = (0, h.F6)(t.item, N.default, g.Z);
-            (l = (0, n.jsx)(r.Avatar, {
+        case P.bm.GROUP_DM: {
+            let e = (0, T.x)(t.item),
+                n = (0, N.F6)(t.item, O.default, f.Z);
+            (a = (0, i.jsx)(s.Avatar, {
                 src: e,
-                'aria-label': i,
-                size: r.AvatarSizes.SIZE_40
+                'aria-label': n,
+                size: s.AvatarSizes.SIZE_40
             })),
-                (s = (0, h.F6)(t.item, N.default, g.Z));
+                (l = (0, N.F6)(t.item, O.default, f.Z));
             break;
         }
-        case T.bm.CHANNEL: {
+        case P.bm.CHANNEL: {
             let e = t.item,
-                i = f.Z.getGuild(e.guild_id);
-            if (null == i) return null;
-            if (((s = '#'.concat((0, h.F6)(e, N.default, g.Z))), (o = i.name), null != i.icon)) {
-                let t = S.ZP.getGuildIconURL({
+                n = m.Z.getGuild(e.guild_id);
+            if (null == n) return null;
+            if (((l = '#'.concat((0, N.F6)(e, O.default, f.Z))), (o = n.name), null != n.icon)) {
+                let t = g.ZP.getGuildIconURL({
                     id: e.guild_id,
-                    icon: i.icon,
+                    icon: n.icon,
                     size: 40
                 });
-                l = (0, n.jsx)(r.Avatar, {
+                a = (0, i.jsx)(s.Avatar, {
                     src: t,
-                    'aria-label': s,
-                    size: r.AvatarSizes.SIZE_40
+                    'aria-label': l,
+                    size: s.AvatarSizes.SIZE_40
                 });
             } else {
-                let e = (0, A.Zg)(i.name);
-                l = (0, n.jsx)('div', {
+                let e = (0, h.Zg)(n.name);
+                a = (0, i.jsx)('div', {
                     className: y.acronym,
                     'aria-hidden': !0,
                     children: e
@@ -251,26 +251,26 @@ function k(e) {
             }
         }
     }
-    return (0, n.jsxs)(r.Clickable, {
-        onClick: i,
+    return (0, i.jsxs)(s.Clickable, {
+        onClick: n,
         className: y.rowContainer,
         children: [
-            (0, n.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: y.rowLeft,
                 children: [
-                    (0, n.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: y.rowAvatar,
-                        children: l
+                        children: a
                     }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: y.rowNameContainer,
                         children: [
-                            (0, n.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-md/semibold',
                                 className: y.rowName,
-                                children: s
+                                children: l
                             }),
-                            (0, n.jsx)(r.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 className: y.rowSubName,
                                 children: o
@@ -279,55 +279,55 @@ function k(e) {
                     })
                 ]
             }),
-            (0, n.jsx)(r.Checkbox, {
-                value: a,
-                type: r.Checkbox.Types.INVERTED,
+            (0, i.jsx)(s.Checkbox, {
+                value: r,
+                type: s.Checkbox.Types.INVERTED,
                 displayOnly: !0,
                 className: y.rowRight
             })
         ]
     });
 }
-function w(e) {
-    let { applicationId: t, link: i } = e,
-        l = (0, s.e7)([N.default], () => N.default.getCurrentUser()),
-        [o, c] = a.useState(!1);
+function U(e) {
+    let { applicationId: t, link: n } = e,
+        a = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
+        [o, u] = r.useState(!1);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             let e;
             return (
                 o &&
                     (e = setTimeout(() => {
-                        c(!1);
+                        u(!1);
                     }, 1000)),
                 () => {
                     null != e && clearTimeout(e);
                 }
             );
         }, [o]),
-        (0, n.jsxs)(r.Button, {
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.LINK,
+        (0, i.jsxs)(s.Button, {
+            look: s.Button.Looks.LINK,
+            color: s.Button.Colors.LINK,
             onClick: function () {
-                C.default.track(Z.rMx.ACTIVITY_BOOKMARK_COPY_URL, {
-                    user_id: null == l ? void 0 : l.id,
+                E.default.track(v.rMx.ACTIVITY_BOOKMARK_COPY_URL, {
+                    user_id: null == a ? void 0 : a.id,
                     application_id: t
                 }),
-                    (0, v.JG)(i),
-                    c(!0);
+                    (0, p.JG)(n),
+                    u(!0);
             },
             innerClassName: y.copyButton,
             children: [
                 o
-                    ? (0, n.jsx)(r.CircleCheckIcon, {
+                    ? (0, i.jsx)(s.CircleCheckIcon, {
                           size: 'md',
                           color: 'currentColor'
                       })
-                    : (0, n.jsx)(r.LinkIcon, {
+                    : (0, i.jsx)(s.LinkIcon, {
                           size: 'md',
                           color: 'currentColor'
                       }),
-                o ? j.intl.string(j.t['t5VZ8/']) : j.intl.string(j.t.WqhZsr)
+                o ? M.intl.string(M.t['t5VZ8/']) : M.intl.string(M.t.WqhZsr)
             ]
         })
     );

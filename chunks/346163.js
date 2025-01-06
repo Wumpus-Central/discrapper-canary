@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     r = n(399606),
     l = n(674180),
-    s = n(594174),
-    a = n(63063),
+    a = n(594174),
+    s = n(63063),
     o = n(223892),
     c = n(58259),
     d = n(158992),
@@ -20,34 +20,34 @@ function x(e) {
     let n = (0, o.Ob)(e),
         x = null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
         p = null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE),
-        f = (0, r.e7)([s.default], () => {
-            let t = s.default.getCurrentUser();
+        f = (0, r.e7)([a.default], () => {
+            let t = a.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
         { error: C, loading: v, createEnableRequest: _, submittedRequest: I } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: N, error: T, refresh: b, eligibility: j } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(j),
+        { loading: N, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(b),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
-        Z = I || (null == j ? void 0 : j.isApplicationPending) === !0,
-        A = (null == j ? void 0 : j.canApply) === !0,
-        L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
+        A = I || (null == b ? void 0 : b.isApplicationPending) === !0,
+        Z = (null == b ? void 0 : b.canApply) === !0,
+        L = g.intl.format(g.t.aJUdOj, { faqUrl: s.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
     S && y
         ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
         : S &&
           null != E &&
           (t = g.intl.format(g.t.TvX209, {
               requestCooldownDuration: E,
-              creatorRevenuePolicyUrl: a.Z.getArticleURL(h.BhN.CREATOR_POLICY)
+              creatorRevenuePolicyUrl: s.Z.getArticleURL(h.BhN.CREATOR_POLICY)
           }));
     let D = n && f && !1 === p,
         O = n && !1 === x,
-        k = (0, m.f)(),
-        P = S && A && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        P = (0, m.f)(),
+        k = S && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
-            D && b();
-        }, [b, D]),
+            D && j();
+        }, [j, D]),
         {
             resubmittingEnableRequest: v,
             resubmissionError: C,
@@ -56,17 +56,17 @@ function x(e) {
             resubmittedRequest: I,
             eligibilityLoading: N,
             eligibilityError: T,
-            refreshEligibility: b,
-            eligibility: j,
-            eligibleForMonetization: A,
-            isApplicationPending: Z,
+            refreshEligibility: j,
+            eligibility: b,
+            eligibleForMonetization: Z,
+            isApplicationPending: A,
             hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: P,
+            reapplyNoticeText: k,
             showAcceptTermsFlow: O,
             wasRejectedInV1: O && (R || S),
             requirementsFinePrintText: L,
-            acceptTermsCheckboxText: k
+            acceptTermsCheckboxText: P
         }
     );
 }

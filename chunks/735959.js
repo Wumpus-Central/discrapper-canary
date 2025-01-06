@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120);
@@ -13,58 +13,58 @@ var r = n(200651),
     c = n(442837),
     d = n(481060),
     u = n(424395),
-    h = n(665149),
-    m = n(706454),
+    m = n(665149),
+    h = n(706454),
     x = n(428530),
-    p = n(257785),
-    f = n(388032);
-function g() {
-    let e = (0, c.e7)([m.default], () => m.default.locale),
+    f = n(257785),
+    p = n(388032);
+function b() {
+    let e = (0, c.e7)([h.default], () => h.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        g = a.useMemo(() => f.t[i], [i]);
+        b = a.useMemo(() => p.t[i], [i]);
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsxs)(h.ZP, {
+            (0, r.jsxs)(m.ZP, {
                 children: [
-                    (0, r.jsx)(h.ZP.Icon, {
+                    (0, r.jsx)(m.ZP.Icon, {
                         icon: d.LanguageIcon,
                         tooltip: 'Locale'
                     }),
-                    (0, r.jsx)(h.ZP.Title, { children: 'Locale' })
+                    (0, r.jsx)(m.ZP.Title, { children: 'Locale' })
                 ]
             }),
-            (0, r.jsxs)(p.E, {
+            (0, r.jsxs)(f.E, {
                 children: [
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'Active System',
                         children: u.vJ ? '@discord/intl' : '@discordapp/i18n'
                     }),
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'App',
                         children: e
                     }),
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: '@discord/intl',
-                        children: f.intl.currentLocale
+                        children: p.intl.currentLocale
                     }),
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'common i18n',
                         children: s.Z.getLocale()
                     }),
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'Moment',
                         children: o().locale()
                     })
                 ]
             }),
-            (0, r.jsxs)(h.ZP, {
+            (0, r.jsxs)(m.ZP, {
                 children: [
-                    (0, r.jsx)(h.ZP.Icon, {
+                    (0, r.jsx)(m.ZP.Icon, {
                         icon: d.LanguageIcon,
                         tooltip: 'Messages'
                     }),
-                    (0, r.jsx)(h.ZP.Title, { children: 'New System Messages' })
+                    (0, r.jsx)(m.ZP.Title, { children: 'New System Messages' })
                 ]
             }),
             (0, r.jsx)(d.TextInput, {
@@ -75,19 +75,19 @@ function g() {
                 style: { margin: 16 },
                 placeholder: 'Find a message'
             }),
-            (0, r.jsxs)(p.E, {
+            (0, r.jsxs)(f.E, {
                 children: [
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'Hashed key',
                         children: i
                     }),
-                    (0, r.jsx)(p.Z9, {
+                    (0, r.jsx)(f.Z9, {
                         name: 'Exists?',
-                        children: null != g ? 'yes' : 'no'
+                        children: null != b ? 'yes' : 'no'
                     })
                 ]
             }),
-            (0, r.jsx)(x.Z, { data: null == g ? void 0 : g(e) })
+            (0, r.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
         ]
     });
 }

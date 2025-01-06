@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(249849),
     l = n(907561),
-    s = n(388032),
-    a = n(114266);
+    a = n(388032),
+    s = n(114266);
 let o = ['#0089d9'],
     c = ['#ff9e32', '#b4eefc', '#ffffff', '#804f19'],
     d = [0.2],
@@ -52,14 +52,14 @@ function g(e) {
         { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
     return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': s.intl.string(s.t.nH6S2d),
+        'aria-label': a.intl.string(a.t.nH6S2d),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
         children: [
             (0, i.jsx)('defs', { children: (0, i.jsx)('style', { children: v }) }),
             (0, i.jsx)('use', {
-                href: ''.concat(a, '#wrapper-layer'),
+                href: ''.concat(s, '#wrapper-layer'),
                 id: _
             })
         ]

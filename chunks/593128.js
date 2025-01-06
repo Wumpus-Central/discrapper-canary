@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(752877),
-    s = n(442837),
-    a = n(215569),
+    a = n(442837),
+    s = n(215569),
     o = n(481060),
     c = n(224706),
     d = n(425493),
@@ -20,14 +20,14 @@ var i = n(200651),
     I = n(796918),
     N = n(513532),
     T = n(741595),
-    b = n(974842),
-    j = n(359380),
+    j = n(974842),
+    b = n(359380),
     S = n(308083),
     E = n(981631),
     R = n(231338),
     y = n(388032),
-    Z = n(131800);
-let A = (e) => [
+    A = n(131800);
+let Z = (e) => [
         {
             section: m.ID.HEADER,
             label: y.intl.string(y.t['7r0U+/'])
@@ -90,8 +90,8 @@ let A = (e) => [
         }
     ],
     L = (e) => {
-        let { guildId: t, onClose: l, dirty: s } = e,
-            [a, c] = r.useState(!1),
+        let { guildId: t, onClose: l, dirty: a } = e,
+            [s, c] = r.useState(!1),
             d = async () => {
                 c(!0);
                 try {
@@ -102,10 +102,10 @@ let A = (e) => [
             };
         return (0, i.jsxs)(o.TabBar.Item, {
             selectedItem: !1,
-            className: Z.deleteItem,
+            className: A.deleteItem,
             'aria-label': y.intl.string(y.t.vc5h39),
             onClick: () => {
-                if (s) {
+                if (a) {
                     h.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
                     return;
                 }
@@ -117,7 +117,7 @@ let A = (e) => [
                             header: y.intl.string(y.t.EXskgI),
                             confirmText: y.intl.string(y.t['cY+Ooa']),
                             cancelText: y.intl.string(y.t['ETE/oK']),
-                            loading: a,
+                            loading: s,
                             onConfirm: d,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
@@ -130,7 +130,7 @@ let A = (e) => [
                 (0, i.jsx)(o.TrashIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: Z.statusDanger
+                    className: A.statusDanger
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
@@ -146,12 +146,12 @@ let A = (e) => [
             r = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, R.BR.DARK);
         return t
             ? (0, i.jsxs)('div', {
-                  className: Z.tooltipContents,
+                  className: A.tooltipContents,
                   children: [
                       (0, i.jsx)(o.WarningIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: Z.errorIconTooltip
+                          className: A.errorIconTooltip
                       }),
                       (0, i.jsxs)('div', {
                           children: [
@@ -176,11 +176,11 @@ t.Z = (e) => {
         [R, L] = r.useState(S.Wy.GAMES),
         {
             initialSettings: O,
-            settings: k,
-            errors: P,
+            settings: P,
+            errors: k,
             submitting: M,
             dirty: w
-        } = (0, s.cj)([p.Z], () => {
+        } = (0, a.cj)([p.Z], () => {
             var e;
             let t = p.Z.getState();
             return {
@@ -230,18 +230,18 @@ t.Z = (e) => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
-            await (0, g.Ii)(t, k), (0, x.Af)(t);
+            await (0, g.Ii)(t, P), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
-    if (null == k) return null;
-    let q = A(P);
+        K = r.useMemo(() => null != k && Object.values(k).some((e) => null != e), [k]);
+    if (null == P) return null;
+    let q = Z(k);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
-        className: Z.modal,
+        className: A.modal,
         children: [
             (0, i.jsx)(o.Tooltip, {
                 color: o.Tooltip.Colors.GREY,
-                tooltipClassName: Z.tooltip,
+                tooltipClassName: A.tooltip,
                 text: (0, i.jsx)(D, { isErrorVisible: K }),
                 position: 'left',
                 'aria-label': null != K ? y.intl.string(y.t.M6w76e) : void 0,
@@ -250,18 +250,18 @@ t.Z = (e) => {
                 children: (e) =>
                     (0, i.jsx)(d.Z, {
                         ...e,
-                        className: Z.closeButton,
+                        className: A.closeButton,
                         closeAction: V,
                         keybind: 'ESC'
                     })
             }),
             (0, i.jsxs)('div', {
-                className: Z.modalContents,
+                className: A.modalContents,
                 children: [
                     (0, i.jsx)('div', {
-                        className: Z.sidebarWrapper,
+                        className: A.sidebarWrapper,
                         children: (0, i.jsx)(o.TabBar, {
-                            className: Z.sidebar,
+                            className: A.sidebar,
                             selectedItem: R,
                             onItemSelect: B,
                             orientation: 'vertical',
@@ -286,7 +286,7 @@ t.Z = (e) => {
                                         return (0, i.jsx)(
                                             o.TabBar.Item,
                                             {
-                                                className: Z.settingsTab,
+                                                className: A.settingsTab,
                                                 'aria-label': e.label,
                                                 id: e.section,
                                                 children: (0, i.jsxs)(i.Fragment, {
@@ -302,7 +302,7 @@ t.Z = (e) => {
                                                                         size: 'xs',
                                                                         color: 'currentColor',
                                                                         ...e,
-                                                                        className: Z.errorIcon
+                                                                        className: A.errorIcon
                                                                     })
                                                             })
                                                     ]
@@ -315,7 +315,7 @@ t.Z = (e) => {
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.mainContent,
+                        className: A.mainContent,
                         children: [
                             (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
@@ -326,8 +326,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
-                                                gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: P.gameApplicationIds,
+                                                gameApplicationIds: null !== (e = P.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: k.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
@@ -336,39 +336,39 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.W0h7pa),
                                                 description: y.intl.string(y.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: k.playstyle,
-                                                error: P.playstyle
+                                                playstyle: P.playstyle,
+                                                error: k.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
-                                            return (0, i.jsx)(j.Z, {
+                                            return (0, i.jsx)(b.Z, {
                                                 guildId: t,
                                                 title: y.intl.string(y.t.G4tP09),
                                                 description: y.intl.string(y.t['6Eos19']),
                                                 onUpdateTraits: z,
-                                                progress: k
+                                                progress: P
                                             });
                                         case S.Wy.INTERESTS:
                                             return (0, i.jsx)(I.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: k,
-                                                error: P.interests
+                                                progress: P,
+                                                error: k.interests
                                             });
                                         case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: k,
-                                                errors: P
+                                                progress: P,
+                                                errors: k
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
-                                            return (0, i.jsx)(b.Z, {
+                                            return (0, i.jsx)(j.Z, {
                                                 handleUpdate: W,
-                                                tag: k.tag,
-                                                error: P.tag,
-                                                badge: k.badgeKind,
-                                                primaryColor: k.badgePrimaryColor,
-                                                secondaryColor: k.badgeSecondaryColor,
+                                                tag: P.tag,
+                                                error: k.tag,
+                                                badge: P.badgeKind,
+                                                primaryColor: P.badgePrimaryColor,
+                                                secondaryColor: P.badgeSecondaryColor,
                                                 furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
@@ -376,32 +376,32 @@ t.Z = (e) => {
                                             return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: P.verificationForm
+                                                error: k.verificationForm
                                             });
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: k
+                                                progress: P
                                             });
                                         default:
                                             return null;
                                     }
                                 })()
                             }),
-                            (0, i.jsx)(a.W, {
+                            (0, i.jsx)(s.W, {
                                 component: 'div',
                                 children:
                                     w &&
                                     (0, i.jsx)(o.SlideIn, {
-                                        className: Z.noticeRegion,
+                                        className: A.noticeRegion,
                                         children: (0, i.jsx)(u.Z, {
                                             onSave: Y,
                                             submitting: M,
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(P).find((e) => null != e)
+                                            errorMessage: Object.values(k).find((e) => null != e)
                                         })
                                     })
                             })

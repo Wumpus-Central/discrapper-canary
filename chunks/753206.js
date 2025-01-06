@@ -1,37 +1,37 @@
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     u = n(628238),
     a = n(492593),
     s = n(25015),
     c = n(963550),
     d = n(845080),
     f = n(46124);
-t.Z = r.memo(function (e) {
-    var t;
-    let { message: n, channel: r, compact: o, className: _, isGroupStart: p, hideSimpleEmbedContent: g = !0, disableInteraction: E } = e,
-        m = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+e.Z = r.memo(function (t) {
+    var e;
+    let { message: n, channel: r, compact: l, className: _, isGroupStart: E, hideSimpleEmbedContent: p = !0, disableInteraction: m } = t,
+        g = (0, u.A)((null !== (e = n.editedTimestamp) && void 0 !== e ? e : n.timestamp).valueOf()),
         { content: I } = (0, s.Z)(n, {
-            hideSimpleEmbedContent: g,
-            allowList: m,
-            allowHeading: m,
+            hideSimpleEmbedContent: p,
+            allowList: g,
+            allowHeading: g,
             allowLinks: !0,
             previewLinkTarget: !0
         });
     return (0, i.jsx)(a.Z, {
-        compact: o,
-        className: l()(_, {
+        compact: l,
+        className: o()(_, {
             [f.message]: !0,
-            [f.cozyMessage]: !o,
-            [f.groupStart]: p
+            [f.cozyMessage]: !l,
+            [f.groupStart]: E
         }),
         childrenHeader: (0, d.Z)({
-            ...e,
+            ...t,
             channel: r,
             guildId: void 0
         }),
-        childrenMessageContent: (0, c.Z)(e, I),
-        disableInteraction: E
+        childrenMessageContent: (0, c.Z)(t, I),
+        disableInteraction: m
     });
 });

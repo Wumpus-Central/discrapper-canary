@@ -2,8 +2,8 @@ n(47120);
 var i,
     r = n(392711),
     l = n.n(r),
-    s = n(442837),
-    a = n(570140),
+    a = n(442837),
+    s = n(570140),
     o = n(563534),
     c = n(999382);
 function d(e, t, n) {
@@ -46,7 +46,7 @@ function C(e, t) {
 function v() {
     (g = !1), (h = l().cloneDeep(Object.assign({}, o.Z.getSettings(m))));
 }
-class _ extends (i = s.ZP.PersistedStore) {
+class _ extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (x = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z);
     }
@@ -81,7 +81,7 @@ class _ extends (i = s.ZP.PersistedStore) {
 }
 d(_, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
     d(_, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore'),
-    (t.Z = new _(a.Z, {
+    (t.Z = new _(s.Z, {
         GUILD_SETTINGS_INIT: p,
         GUILD_SETTINGS_SET_SECTION: p,
         GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: p,
@@ -105,10 +105,10 @@ d(_, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
             let { welcomeMessage: t } = e;
             if (null == t) h.welcomeMessage = void 0;
             else {
-                var n, i, r, l, s, a;
+                var n, i, r, l, a, s;
                 h.welcomeMessage = {
                     authorIds: null !== (l = null !== (r = t.authorIds) && void 0 !== r ? r : null === (n = h.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== l ? l : [],
-                    message: null !== (a = null !== (s = t.message) && void 0 !== s ? s : null === (i = h.welcomeMessage) || void 0 === i ? void 0 : i.message) && void 0 !== a ? a : ''
+                    message: null !== (s = null !== (a = t.message) && void 0 !== a ? a : null === (i = h.welcomeMessage) || void 0 === i ? void 0 : i.message) && void 0 !== s ? s : ''
                 };
             }
         },

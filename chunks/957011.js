@@ -7,19 +7,19 @@ n.d(t, {
 var i = n(192379),
     r = n(442837),
     l = n(479531),
-    s = n(430824),
-    a = n(594174),
+    a = n(430824),
+    s = n(594174),
     o = n(53365),
     c = n(223892);
 function d(e, t) {
-    let n = (0, r.e7)([s.Z], () => s.Z.getGuild(e)),
+    let n = (0, r.e7)([a.Z], () => a.Z.getGuild(e)),
         [d, u] = i.useState(),
         [m, h] = i.useState(!1),
         g = (0, c.Ob)(n),
         x = (0, r.e7)(
-            [a.default],
+            [s.default],
             () => {
-                let e = a.default.getCurrentUser();
+                let e = s.default.getCurrentUser();
                 return (null == n ? void 0 : n.isOwner(e)) === !0;
             },
             [n]

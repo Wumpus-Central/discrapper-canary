@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(449226),
-    s = n(231338),
-    a = n(388032),
+    a = n(231338),
+    s = n(388032),
     o = n(232203);
 function c(e) {
     let { title: t, details: n } = e;
@@ -34,12 +34,12 @@ function c(e) {
             }),
             (0, i.jsx)(r.Tooltip, {
                 tooltipContentClassName: o.tooltip,
-                text: a.intl.string(a.t.NQ4nCg),
+                text: s.intl.string(s.t.NQ4nCg),
                 children: (e) =>
                     (0, i.jsx)(l.Z, {
                         checked: !0,
                         disabled: !0,
-                        onChange: s.dG,
+                        onChange: a.dG,
                         className: o.bringToFront,
                         tooltipProps: e
                     })

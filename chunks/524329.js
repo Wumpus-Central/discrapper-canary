@@ -1,12 +1,12 @@
 n.d(t, {
     Es: function () {
-        return c;
+        return u;
     },
     RM: function () {
-        return a;
+        return s;
     },
     VP: function () {
-        return u;
+        return c;
     },
     Xb: function () {
         return o;
@@ -15,13 +15,13 @@ n.d(t, {
         return E;
     },
     y0: function () {
-        return s;
+        return a;
     }
 });
 var r = n(544891),
     l = n(570140),
     i = n(981631);
-let s = function (e) {
+let a = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_VIEW',
@@ -29,7 +29,7 @@ let s = function (e) {
             isLurking: t
         });
     },
-    a = async (e) => {
+    s = async (e) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_FETCH_START' });
         try {
             let t = await r.tn.get({
@@ -55,13 +55,13 @@ let s = function (e) {
     E = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    u = (e) => {
+    c = (e) => {
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    c = async (e, t) => {
+    u = async (e, t) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let n = await r.tn.patch({

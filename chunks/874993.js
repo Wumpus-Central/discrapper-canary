@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return j;
     }
 }),
     n(47120),
@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     o = n(999382),
     c = n(279542),
     d = n(823379),
@@ -26,20 +26,20 @@ var i = n(200651),
     I = n(981631),
     N = n(388032),
     T = n(925144);
-function b(e) {
+function j(e) {
     var t, n;
-    let { guildId: b, setPreventNavigation: j = () => {} } = e,
+    let { guildId: j, setPreventNavigation: b = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : b) && void 0 !== n ? n : I.lds,
-        A = null != S,
-        [L] = (0, h.RD)(Z),
-        { rulesByTriggerType: D } = (0, h.pH)(Z),
+        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : I.lds,
+        Z = null != S,
+        [L] = (0, h.RD)(A),
+        { rulesByTriggerType: D } = (0, h.pH)(A),
         O = {
             [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
             [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
         },
-        k = r.useMemo(
+        P = r.useMemo(
             () =>
                 Object.values(null != D ? D : {})
                     .flat()
@@ -47,16 +47,16 @@ function b(e) {
             [D]
         );
     r.useEffect(() => {
-        A && E(null);
-    }, [Z]);
-    let P = r.useCallback(
+        Z && E(null);
+    }, [A]);
+    let k = r.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, i;
                     return null !==
                         (i =
                             null ===
-                                (n = k.find((t) => {
+                                (n = P.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
@@ -67,16 +67,16 @@ function b(e) {
                 }
                 return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [k]
+            [P]
         ),
         M = r.useMemo(() => {
             var e, t;
-            return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
-        }, [P, S]);
+            return k(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [k, S]);
     r.useEffect(() => {
-        j(A, (0, v.af)(M));
-    }, [j, A, M]);
-    let w = (0, g.Z6)(Z),
+        b(Z, (0, v.af)(M));
+    }, [b, Z, M]);
+    let w = (0, g.Z6)(A),
         B = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
@@ -84,7 +84,7 @@ function b(e) {
                     return (0, i.jsx)(
                         C.Z,
                         {
-                            guildId: Z,
+                            guildId: A,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
                             initWithEdit: y === I.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
@@ -93,24 +93,24 @@ function b(e) {
                     );
                 })
             });
-    return (0, i.jsxs)(a.FormSection, {
+    return (0, i.jsxs)(s.FormSection, {
         title: N.intl.string(N.t.uRelg4),
         tag: 'h1',
         children: [
             (0, i.jsxs)('div', {
                 className: T.descriptionContainer,
                 children: [
-                    (0, i.jsxs)(a.FormSection, {
+                    (0, i.jsxs)(s.FormSection, {
                         tag: 'h3',
                         className: T.description,
                         titleClassName: T.descriptionHeader,
                         children: [
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
                                 children: N.intl.string(N.t.EwuSCQ)
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 className: T.helpUrl,
                                 children: N.intl.format(N.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(I.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
@@ -120,28 +120,28 @@ function b(e) {
                     (0, i.jsxs)('div', {
                         className: T.descriptionAvatarContainer,
                         children: [
-                            (0, i.jsx)(a.Avatar, {
+                            (0, i.jsx)(s.Avatar, {
                                 src: (0, m.j)(),
-                                size: a.AvatarSizes.SIZE_80,
+                                size: s.AvatarSizes.SIZE_80,
                                 'aria-label': N.intl.string(N.t.hG1StL)
                             }),
-                            (0, i.jsx)(a.TextBadge, {
+                            (0, i.jsx)(s.TextBadge, {
                                 text: (0, i.jsxs)('div', {
                                     className: T.automodBadgeText,
                                     children: [
-                                        (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
+                                        (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
                                             size: 'xxs',
                                             color: 'currentColor',
                                             className: T.checkmarkIcon
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
                                             className: T.automodText,
                                             children: N.intl.string(N.t.hG1StL)
                                         })
                                     ]
                                 }),
-                                color: s.Z.unsafe_rawColors.BRAND_500.css,
+                                color: a.Z.unsafe_rawColors.BRAND_500.css,
                                 className: T.textBadge
                             })
                         ]
@@ -155,10 +155,10 @@ function b(e) {
                       if (0 === n.length) return (0, i.jsx)(r.Fragment, {}, t);
                       let l =
                           null != O[t]
-                              ? (0, i.jsx)(a.FormSection, {
+                              ? (0, i.jsx)(s.FormSection, {
                                     tag: 'h3',
                                     className: T.categoryHeader,
-                                    children: (0, i.jsx)(a.Text, {
+                                    children: (0, i.jsx)(s.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
                                         children: O[t]
@@ -181,10 +181,10 @@ function b(e) {
                     className: T.explicitContentFilterSection
                 }),
             (0, i.jsx)(f.Z, {
-                guildId: Z,
-                existingRules: k
+                guildId: A,
+                existingRules: P
             }),
-            A && (0, i.jsx)('div', { className: T.endSpacer })
+            Z && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

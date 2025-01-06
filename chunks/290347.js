@@ -77,13 +77,13 @@ function A(e) {
         k = (0, h.Dt)(),
         U = y.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, H] = r.useState(Date.now()),
-        [V, F] = r.useState(0),
+        [B, V] = r.useState(Date.now()),
+        [H, F] = r.useState(0),
         [z, W] = r.useState(0),
         [Y, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
-        J = r.useRef(V),
+        J = r.useRef(H),
         $ = r.useRef(z),
         ee = r.useRef(Y),
         et = r.useRef(q),
@@ -94,7 +94,7 @@ function A(e) {
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && W((i += t))), V(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -133,8 +133,8 @@ function A(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = V), ($.current = z), (ee.current = Y), (et.current = q);
-        }, [B, V, z, Y, q]),
+            (Q.current = B), (J.current = H), ($.current = z), (ee.current = Y), (et.current = q);
+        }, [B, H, z, Y, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -195,7 +195,7 @@ function A(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), H(Date.now()), K(!0), X(e.currentTarget.muted);
+                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), V(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       el(), X(e.currentTarget.muted), K(!1);

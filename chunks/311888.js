@@ -1,28 +1,28 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return r;
+        return a;
     }
 });
-var i = n(200651);
-n(192379);
-var l = n(325767);
-function r(e) {
-    let { width: t = 32, height: n = 32, color: r = 'currentColor', foreground: a, ...s } = e;
-    return (0, i.jsxs)('svg', {
-        ...(0, l.Z)(s),
-        width: t,
-        height: n,
+var l = t(200651);
+t(192379);
+var i = t(325767);
+function a(e) {
+    let { width: n = 32, height: t = 32, color: a = 'currentColor', foreground: r, ...o } = e;
+    return (0, l.jsxs)('svg', {
+        ...(0, i.Z)(o),
+        width: n,
+        height: t,
         viewBox: '0 0 32 32',
         children: [
-            (0, i.jsx)('rect', {
+            (0, l.jsx)('rect', {
                 width: '32',
                 height: '32',
                 rx: '16',
-                fill: r
+                fill: a
             }),
-            (0, i.jsx)('path', {
+            (0, l.jsx)('path', {
                 d: 'M23 9.99995C19.56 9.99995 16.826 6.43495 16.799 6.39795C16.421 5.89795 15.579 5.89795 15.201 6.39795C15.174 6.43495 12.44 9.99995 9 9.99995C8.447 9.99995 8 10.4479 8 10.9999V17.9999C8 21.8069 14.764 25.4779 15.534 25.8839C15.68 25.9609 15.84 25.9979 16 25.9979C16.16 25.9979 16.32 25.9599 16.466 25.8839C17.236 25.4779 24 21.8069 24 17.9999V10.9999C24 10.4479 23.553 9.99995 23 9.99995ZM19 19.9999L16 17.9999L13 19.9999L14 16.9999L12 14.9999H15L16 11.9999L17 14.9999H20L18 16.9999L19 19.9999Z',
-                className: a
+                className: r
             })
         ]
     });

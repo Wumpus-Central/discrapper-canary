@@ -1,45 +1,45 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var i = n(200651);
+var A = n(200651);
 n(192379);
 var r = n(866442),
-    l = n(481060),
-    a = n(388032),
-    o = n(399178);
-function s(e) {
-    let { locked: t, role: n, textVariant: s = 'text-xs/medium' } = e,
-        c = (0, l.useToken)(l.tokens.colors.INTERACTIVE_NORMAL).hex();
-    return (0, i.jsx)('div', {
-        className: o.roleTagContainer,
-        children: (0, i.jsxs)('div', {
-            className: o.roleTag,
+    a = n(481060),
+    l = n(388032),
+    i = n(399178);
+function o(e) {
+    let { locked: t, role: n, textVariant: o = 'text-xs/medium' } = e,
+        s = (0, a.useToken)(a.tokens.colors.INTERACTIVE_NORMAL).hex();
+    return (0, A.jsx)('div', {
+        className: i.roleTagContainer,
+        children: (0, A.jsxs)('div', {
+            className: i.roleTag,
             children: [
-                (0, i.jsx)('div', {
-                    className: o.roleColor,
+                (0, A.jsx)('div', {
+                    className: i.roleColor,
                     style: { backgroundColor: (0, r.Rf)(n.color) }
                 }),
-                (0, i.jsx)(l.Spacer, {
+                (0, A.jsx)(a.Spacer, {
                     size: 8,
                     horizontal: !0
                 }),
-                (0, i.jsxs)(l.Text, {
-                    variant: s,
+                (0, A.jsxs)(a.Text, {
+                    variant: o,
                     color: 'text-normal',
-                    children: [(0, i.jsx)(l.HiddenVisually, { children: a.intl.string(a.t.RnyseH) }), n.name]
+                    children: [(0, A.jsx)(a.HiddenVisually, { children: l.intl.string(l.t.RnyseH) }), n.name]
                 }),
                 !0 === t &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, A.jsxs)(A.Fragment, {
                         children: [
-                            (0, i.jsx)(l.Spacer, {
+                            (0, A.jsx)(a.Spacer, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, i.jsx)(l.LockIcon, {
+                            (0, A.jsx)(a.LockIcon, {
                                 size: 'md',
-                                color: c
+                                color: s
                             })
                         ]
                     })

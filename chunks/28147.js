@@ -24,8 +24,8 @@ var i = t(200651),
     N = t(804307),
     g = t(520315),
     A = t(532309),
-    b = t(561160),
-    E = t(41558),
+    E = t(561160),
+    b = t(41558),
     I = t(106771),
     P = t(79984),
     j = t(314734),
@@ -72,7 +72,7 @@ function k(e) {
         s && _ === m.M.FETCHED && g();
     }, [g, _, s]);
     let A = null == _ || _ === m.M.FETCHING,
-        E = l.useMemo(() => {
+        b = l.useMemo(() => {
             let e = C.map((e) => ({
                     application: e,
                     installOnDemand: !0
@@ -97,12 +97,12 @@ function k(e) {
                 )
             ];
         }, [N, C]),
-        I = E.length > 0,
+        I = b.length > 0,
         P = p && !I && !A;
     return u
         ? (0, i.jsx)(D, {})
         : P
-          ? (0, i.jsx)(b.A, {
+          ? (0, i.jsx)(E.A, {
                 type: v.LG.SEARCH_EMPTY,
                 searchQuery: t,
                 textContent: a === v._b.TEXT ? S.intl.string(S.t.LSNOYW) : S.intl.string(S.t.Clu7Qk)
@@ -117,7 +117,7 @@ function k(e) {
                         }),
                     (I || A) &&
                         (0, i.jsx)(B, {
-                            applicationResults: E,
+                            applicationResults: b,
                             includePlaceholder: A,
                             query: t,
                             searchesBots: d
@@ -132,7 +132,7 @@ function O(e) {
         x = l.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
         [_, N] = l.useState(!1),
         A = null !== (n = (0, s.Z)(_)) && void 0 !== n ? n : _,
-        b = l.useCallback(() => N((e) => !e), []),
+        E = l.useCallback(() => N((e) => !e), []),
         P = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
         L = _ && !P;
     l.useLayoutEffect(() => N(!1), [P]);
@@ -156,14 +156,14 @@ function O(e) {
             });
     }, [o.length, A, _]);
     let k = L || M,
-        O = L ? E.Z.buttonTypes.VIEW_LESS : E.Z.buttonTypes.VIEW_MORE,
+        O = L ? b.Z.buttonTypes.VIEW_LESS : b.Z.buttonTypes.VIEW_MORE,
         U = k ? o : x;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(b.Z, {
                 title: S.intl.string(S.t['0hKkS0']),
                 buttonType: O,
-                onClickViewButton: m ? b : void 0
+                onClickViewButton: m ? E : void 0
             }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
@@ -229,7 +229,7 @@ function B(e) {
     return a
         ? (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(E.Z, { title: S.intl.string(S.t.PHjkRE) }),
+                  (0, i.jsx)(b.Z, { title: S.intl.string(S.t.PHjkRE) }),
                   (0, i.jsxs)('div', {
                       className: T.sectionContentContainer,
                       children: [
@@ -255,7 +255,7 @@ function B(e) {
           })
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(E.Z, { title: S.intl.string(S.t.shUONj) }),
+                  (0, i.jsx)(b.Z, { title: S.intl.string(S.t.shUONj) }),
                   (0, i.jsxs)('div', {
                       className: T.sectionActivitiesContentContainer,
                       children: [
@@ -293,12 +293,12 @@ function w(e) {
 function D() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(E.Z, { title: S.intl.string(S.t['0hKkS0']) }),
+            (0, i.jsx)(b.Z, { title: S.intl.string(S.t['0hKkS0']) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 children: L.map((e) => (0, i.jsx)(P.Z, {}, e))
             }),
-            (0, i.jsx)(E.Z, { title: S.intl.string(S.t.PHjkRE) }),
+            (0, i.jsx)(b.Z, { title: S.intl.string(S.t.PHjkRE) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 children: R.map((e) => (0, i.jsx)(P.Z, {}, e))

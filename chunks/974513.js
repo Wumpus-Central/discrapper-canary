@@ -13,8 +13,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(399606),
-    s = n(481060),
-    a = n(312913),
+    a = n(481060),
+    s = n(312913),
     o = n(45966),
     c = n(637853),
     d = n(983135),
@@ -35,34 +35,34 @@ function x(e) {
 }
 function p(e) {
     let { guildId: t, className: n } = e,
-        c = (0, a.UQ)(t).advancedModeAllowed,
+        c = (0, s.UQ)(t).advancedModeAllowed,
         u = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         g = r.useCallback(() => {
             let e = u ? m.Un.ONBOARDING_DEFAULT : m.Un.ONBOARDING_ADVANCED;
             u
-                ? (0, s.openModal)((n) =>
-                      (0, i.jsx)(s.ConfirmModal, {
+                ? (0, a.openModal)((n) =>
+                      (0, i.jsx)(a.ConfirmModal, {
                           header: h.intl.string(h.t['49+ONj']),
                           confirmText: h.intl.string(h.t.R9GHyc),
                           cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmButtonColor: s.Button.Colors.BRAND,
+                          confirmButtonColor: a.Button.Colors.BRAND,
                           onConfirm: () => (0, d.Ts)(t, e),
                           ...n,
-                          children: (0, i.jsx)(s.Text, {
+                          children: (0, i.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               children: h.intl.string(h.t.TLkoOj)
                           })
                       })
                   )
-                : (0, s.openModal)((n) =>
-                      (0, i.jsx)(s.ConfirmModal, {
+                : (0, a.openModal)((n) =>
+                      (0, i.jsx)(a.ConfirmModal, {
                           header: h.intl.string(h.t.YB9xUF),
                           confirmText: h.intl.string(h.t.ts6u6u),
                           cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmButtonColor: s.Button.Colors.BRAND,
+                          confirmButtonColor: a.Button.Colors.BRAND,
                           onConfirm: () => (0, d.Ts)(t, e),
                           ...n,
-                          children: (0, i.jsx)(s.Text, {
+                          children: (0, i.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               children: h.intl.string(h.t.BcGGVl)
                           })
@@ -72,9 +72,9 @@ function p(e) {
     return c
         ? (0, i.jsx)('div', {
               className: n,
-              children: (0, i.jsx)(s.Anchor, {
+              children: (0, i.jsx)(a.Anchor, {
                   onClick: g,
-                  children: (0, i.jsx)(s.Text, {
+                  children: (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-link',
                       children: u ? h.intl.string(h.t.OmpxW1) : h.intl.string(h.t.ozsQBA)

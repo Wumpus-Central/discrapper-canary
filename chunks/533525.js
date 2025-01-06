@@ -11,6 +11,6 @@ let o = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { enabled: s, eligibleToFetch: o } = (0, i.N)(e);
     (0, a.B)(e, !o || t);
-    let l = (0, n.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
-    return s && l;
+    let c = (0, n.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
+    return s && c;
 };

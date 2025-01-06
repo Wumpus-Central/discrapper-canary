@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(752877),
-    s = n(722770),
-    a = n(481060),
+    a = n(722770),
+    s = n(481060),
     o = n(236413),
     c = n(85960),
     d = n(65912),
@@ -24,7 +24,7 @@ function g(e) {
         { getDefaultRuleName: _ } = c.I6[n],
         I = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
         [N, T] = r.useState(I ? C : x),
-        b = (0, a.useSpring)({
+        j = (0, s.useSpring)({
             opacity: I ? 0 : 1,
             pointerEvents: I ? 'none' : 'all',
             config: {
@@ -32,7 +32,7 @@ function g(e) {
                 clamp: !0
             }
         }),
-        j = (0, a.useSpring)({
+        b = (0, s.useSpring)({
             opacity: I ? 1 : 0,
             pointerEvents: I ? 'all' : 'none',
             config: {
@@ -53,7 +53,7 @@ function g(e) {
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
-                      style: j,
+                      style: b,
                       children: (0, i.jsx)(u.Z, {
                           rule: N,
                           persistEdit: p
@@ -61,21 +61,21 @@ function g(e) {
                   }),
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedNewRuleContainer,
-                      style: b,
-                      children: (0, i.jsxs)(a.Clickable, {
+                      style: j,
+                      children: (0, i.jsxs)(s.Clickable, {
                           className: h.addAnotherRuleCardContainer,
                           onClick: () => {
                               v(t, n);
                           },
                           children: [
-                              (0, i.jsx)(a.CirclePlusIcon, {
+                              (0, i.jsx)(s.CirclePlusIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
-                                  color: s.Z.BLUE_345,
+                                  color: a.Z.BLUE_345,
                                   className: h.plusIcon
                               }),
-                              (0, i.jsx)(a.Text, {
+                              (0, i.jsx)(s.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
                                   children: m.intl.format(m.t.dNjRAQ, { ruleName: _() })

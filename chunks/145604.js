@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(594174),
     G = n(774343),
     B = n(974042),
-    H = n(808506),
-    V = n(237997),
+    V = n(808506),
+    H = n(237997),
     F = n(626135),
     z = n(630388),
     W = n(823379),
@@ -88,8 +88,8 @@ class K extends r.PureComponent {
                 i = N.ZP.getActiveEventByChannel(r);
             (0, d.yw)(Y.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let a = null,
-                o = V.Z.getFocusedPID();
-            null != o && T.Z.getOverlayMethod(o) !== s.gl.Disabled && (V.Z.isInstanceLocked() ? (a = Y.ADE.OVERLAY_LOCKED_ACTIVATED) : !V.Z.isInstanceLocked() && (a = V.Z.isPinned(Y.Odu.TEXT) ? Y.ADE.OVERLAY_UNLOCKED_PINNED : Y.ADE.OVERLAY_UNLOCKED)),
+                o = H.Z.getFocusedPID();
+            null != o && T.Z.getOverlayMethod(o) !== s.gl.Disabled && (H.Z.isInstanceLocked() ? (a = Y.ADE.OVERLAY_LOCKED_ACTIVATED) : !H.Z.isInstanceLocked() && (a = H.Z.isPinned(Y.Odu.TEXT) ? Y.ADE.OVERLAY_UNLOCKED_PINNED : Y.ADE.OVERLAY_UNLOCKED)),
                 F.default.track(Y.rMx.JOIN_VOICE_CHANNEL, {
                     location: a,
                     channel_id: r,
@@ -128,7 +128,7 @@ class K extends r.PureComponent {
                         game_platform: Y.M7m.DESKTOP,
                         detection_method: u,
                         distributor: p,
-                        is_overlay_enabled: H.Z.enabled,
+                        is_overlay_enabled: V.Z.enabled,
                         is_overlay_game_enabled: h.enabled,
                         is_overlay_game_source: h.source,
                         fullscreen_type: null != n ? o.Jx[n] : o.Jx.UNKNOWN.toString(),

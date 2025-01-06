@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(430824),
-    a = n(496675),
+    a = n(430824),
+    s = n(496675),
     o = n(556012),
     c = n(273504),
     d = n(981631),
@@ -22,15 +22,15 @@ function g(e) {
         v = (0, o.c)(n.type, n, g),
         _ = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
         I = null != _ ? (0, u.L9)(_) : null,
-        N = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
+        N = (0, r.e7)([s.Z, a.Z], () => s.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(x)), [x]);
     if (null == v) return null;
-    let { headerText: T, descriptionText: b, icon: j } = v;
+    let { headerText: T, descriptionText: j, icon: b } = v;
     return (0, i.jsxs)('div', {
         className: h.actionContainer,
         children: [
             (0, i.jsx)('div', {
                 className: h.actionIconContainer,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(b, {
                     size: 'md',
                     color: 'currentColor',
                     className: h.actionIcon
@@ -46,7 +46,7 @@ function g(e) {
                     (0, i.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: b
+                        children: j
                     }),
                     p &&
                         (0, i.jsxs)(l.Text, {

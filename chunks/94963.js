@@ -2,9 +2,9 @@ n(47120), n(724458);
 var i = n(200651),
     r = n(192379),
     l = n(688619),
-    s = n.n(l),
-    a = n(120356),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(120356),
+    o = n.n(s),
     c = n(97028),
     d = n(866442),
     u = n(442837),
@@ -20,7 +20,7 @@ var i = n(200651),
     I = n(388032),
     N = n(463297),
     T = n(240938);
-let b = [
+let j = [
         {
             name: 'Night Sky',
             bannerKind: _.qC.NIGHT_SKY,
@@ -67,7 +67,7 @@ let b = [
             icon: m.PaintbrushThickIcon
         }
     ],
-    j = (e) => {
+    b = (e) => {
         let { name: t, primaryColor: n, secondaryColor: r, isCustom: l } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -88,10 +88,10 @@ let b = [
     };
 t.Z = (e) => {
     var t;
-    let { handleUpdate: n, progress: l, guildId: a } = e,
-        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: Z } = l,
-        A = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
-        L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
+    let { handleUpdate: n, progress: l, guildId: s } = e,
+        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: A } = l,
+        Z = (0, u.e7)([g.Z], () => g.Z.getGuild(s)),
+        L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(s))) && void 0 !== t ? t : 0,
         D = r.useMemo(
             () => ({
                 primary: null != E ? E : _.OH,
@@ -100,11 +100,11 @@ t.Z = (e) => {
             [E, R]
         ),
         O = r.useMemo(() => {
-            if (E === y && R === Z) return 1;
+            if (E === y && R === A) return 1;
             for (let e = 0; e < _.ym.length; e++) if (_.ym[e].primary === l.brandPrimaryColor && _.ym[e].secondary === l.brandSecondaryColor) return 2 + e;
             return 0;
-        }, [E, R, y, Z, l.brandPrimaryColor, l.brandSecondaryColor]),
-        [k, P] = r.useState(!1),
+        }, [E, R, y, A, l.brandPrimaryColor, l.brandSecondaryColor]),
+        [P, k] = r.useState(!1),
         M = 0 === O,
         w = 1 === O,
         B = r.useMemo(() => {
@@ -112,7 +112,7 @@ t.Z = (e) => {
             if (w)
                 return {
                     primary: null != y ? y : v.Nh,
-                    secondary: null != Z ? Z : v.vY
+                    secondary: null != A ? A : v.vY
                 };
             {
                 let e = _.ym[O - 2];
@@ -121,14 +121,14 @@ t.Z = (e) => {
                     secondary: e.secondary
                 };
             }
-        }, [D, w, M, y, Z, O]),
+        }, [D, w, M, y, A, O]),
         U = r.useCallback(() => {
-            let e = b[Math.floor(Math.random() * b.length)].bannerKind,
-                t = s().random().hex();
+            let e = j[Math.floor(Math.random() * j.length)].bannerKind,
+                t = a().random().hex();
             n({
                 banner: e,
                 brandPrimaryColor: t,
-                brandSecondaryColor: s().random().hex()
+                brandSecondaryColor: a().random().hex()
             });
         }, [n]);
     r.useEffect(() => {
@@ -142,9 +142,9 @@ t.Z = (e) => {
         var e, t, n;
         return {
             ...l,
-            id: a,
-            name: null !== (e = null == A ? void 0 : A.name) && void 0 !== e ? e : '',
-            icon: null == A ? void 0 : A.icon,
+            id: s,
+            name: null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : '',
+            icon: null == Z ? void 0 : Z.icon,
             memberCount: L,
             games: Array.from(l.gameApplicationIds),
             traits: Array.from(l.interests),
@@ -152,7 +152,7 @@ t.Z = (e) => {
             badge: {
                 badgeKind: l.badgeKind,
                 primaryColor: null != y ? y : _.OH,
-                secondaryColor: null != Z ? Z : _.K_
+                secondaryColor: null != A ? A : _.K_
             },
             branding: {
                 primaryColor: null !== (t = B.primary) && void 0 !== t ? t : _.OH,
@@ -169,7 +169,7 @@ t.Z = (e) => {
                 {}
             )
         };
-    }, [l, a, A, L, S, y, Z, B]);
+    }, [l, s, Z, L, S, y, A, B]);
     return (0, i.jsxs)('div', {
         className: T.slideContent,
         children: [
@@ -213,16 +213,16 @@ t.Z = (e) => {
                                                     onSecondaryColorChange: (e) => {
                                                         n({ brandSecondaryColor: (0, d.Rf)(e) });
                                                     },
-                                                    shouldShow: k,
-                                                    onRequestClose: () => P(!1),
+                                                    shouldShow: P,
+                                                    onRequestClose: () => k(!1),
                                                     children: (e) =>
                                                         (0, i.jsx)(m.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                P((e) => !e);
+                                                                k((e) => !e);
                                                             },
                                                             className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 0 === O }),
-                                                            children: (0, i.jsx)(j, {
+                                                            children: (0, i.jsx)(b, {
                                                                 name: I.intl.string(I.t.AemVoa),
                                                                 isCustom: !0
                                                             })
@@ -232,14 +232,14 @@ t.Z = (e) => {
                                                     onClick: () => {
                                                         n({
                                                             brandPrimaryColor: null != y ? y : _.OH,
-                                                            brandSecondaryColor: null != Z ? Z : _.K_
+                                                            brandSecondaryColor: null != A ? A : _.K_
                                                         });
                                                     },
                                                     className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 1 === O }),
-                                                    children: (0, i.jsx)(j, {
+                                                    children: (0, i.jsx)(b, {
                                                         name: I.intl.string(I.t['1Pvr/v']),
                                                         primaryColor: y,
-                                                        secondaryColor: Z
+                                                        secondaryColor: A
                                                     })
                                                 }),
                                                 _.ym.map((e, t) =>
@@ -254,7 +254,7 @@ t.Z = (e) => {
                                                                 });
                                                             },
                                                             className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: O === t + 2 }),
-                                                            children: (0, i.jsx)(j, {
+                                                            children: (0, i.jsx)(b, {
                                                                 name: e.name,
                                                                 primaryColor: e.primary,
                                                                 secondaryColor: e.secondary
@@ -277,7 +277,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)('div', {
                                             className: N.bannerPickerGrid,
-                                            children: b.map((e, t) =>
+                                            children: j.map((e, t) =>
                                                 (0, i.jsxs)(
                                                     m.Clickable,
                                                     {

@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(98278),
-    a = n(823188),
+    a = n(98278),
+    s = n(823188),
     o = n(594174),
     c = n(74538),
     d = n(474936),
@@ -15,7 +15,7 @@ let h = (e) => {
             className: m.tier0Button,
             color: l.Button.Colors.BRAND_INVERTED,
             onClick: () => {
-                (0, s.z)(), null != t && t();
+                (0, a.z)(), null != t && t();
             },
             children: u.intl.string(u.t.hvVgAQ)
         });
@@ -27,10 +27,10 @@ let h = (e) => {
                 variant: 'heading-xxl/extrabold',
                 children: u.intl.string(u.t['qUl+Ky'])
             }),
-            (0, i.jsx)(a.wp, {
+            (0, i.jsx)(s.wp, {
                 className: m.tier0Card,
                 ctaButton: n,
-                featureSet: a.uZ.BOOSTING,
+                featureSet: s.uZ.BOOSTING,
                 showWumpus: !0,
                 showYearlyPrice: !0
             })

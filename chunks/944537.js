@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     I: function () {
         return r;
     },
@@ -8,27 +8,27 @@ n.d(t, {
 });
 var i,
     r,
-    o = n(15729),
-    l = n(731965);
+    l = n(15729),
+    o = n(731965);
 ((i = r || (r = {}))[(i.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (i[(i.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS');
-let u = (0, o.U)((e) => ({
+let u = (0, l.U)((t) => ({
     listings: {},
-    setListing: (t, n) =>
-        (0, l.j)(() =>
-            e((e) => ({
+    setListing: (e, n) =>
+        (0, o.j)(() =>
+            t((t) => ({
                 listings: {
-                    ...e.listings,
-                    [t]: n(e.listings[t])
+                    ...t.listings,
+                    [e]: n(t.listings[e])
                 }
             }))
         ),
     editStateIdsForGroup: {},
-    setEditStateIdsForGroup: (t, n) =>
-        (0, l.j)(() => {
-            e((e) => ({
+    setEditStateIdsForGroup: (e, n) =>
+        (0, o.j)(() => {
+            t((t) => ({
                 editStateIdsForGroup: {
-                    ...e.editStateIdsForGroup,
-                    [t]: n(e.editStateIdsForGroup[t])
+                    ...t.editStateIdsForGroup,
+                    [e]: n(t.editStateIdsForGroup[e])
                 }
             }));
         })

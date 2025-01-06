@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    s = n(481060),
-    a = n(100527),
+    a = n(481060),
+    s = n(100527),
     o = n(906732),
     c = n(678558),
     d = n(388032),
@@ -19,14 +19,14 @@ let m = (e) => {
             analyticsLocation: n,
             className: r,
             buttonProps: l = {
-                color: s.ButtonColors.BRAND_INVERTED,
+                color: a.ButtonColors.BRAND_INVERTED,
                 text: d.intl.string(d.t.oqweNz)
             }
         } = e,
-        { color: a, text: o } = l,
+        { color: s, text: o } = l,
         u = t.premiumTier + 1;
     return (0, i.jsx)(c.Z, {
-        color: a,
+        color: s,
         analyticsLocation: n,
         guild: t,
         buttonText: o,
@@ -36,7 +36,7 @@ let m = (e) => {
 };
 function h(e) {
     let { header: t, text: r, analyticsLocation: c, guild: d, className: h, textColor: g, headerColor: x, buttonProps: p } = e,
-        { analyticsLocations: f } = (0, o.ZP)(a.Z.GUILD_BOOSTING_UPSELL_BANNER);
+        { analyticsLocations: f } = (0, o.ZP)(s.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, i.jsx)(o.Gt, {
         value: f,
         children: (0, i.jsxs)('div', {
@@ -50,13 +50,13 @@ function h(e) {
                 (0, i.jsxs)('div', {
                     className: u.content,
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-lg/semibold',
                             color: null != x ? x : 'always-white',
                             className: u.header,
                             children: t
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: null != g ? g : 'always-white',
                             children: r

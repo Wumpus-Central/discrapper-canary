@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(676062),
+    a = n.n(l),
+    s = n(676062),
     o = n(481060),
     c = n(313201),
     d = n(817460),
@@ -22,17 +22,17 @@ var i = n(200651),
     p = n(388032),
     f = n(290803);
 function C(e) {
-    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
+    let { guildId: t, emojiId: n, emojiName: l, title: s, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
         _ = r.useRef(null),
         I = r.useRef(null),
-        { drag: N, dragPreview: T, drop: b, isDragging: j } = (0, x.Z)(_, d, u, C);
+        { drag: N, dragPreview: T, drop: j, isDragging: b } = (0, x.Z)(_, d, u, C);
     return (
         N(I),
-        T(b(_)),
+        T(j(_)),
         (0, i.jsxs)('div', {
             ref: _,
-            className: s()(f.card, {
-                [f.cardDragging]: j,
+            className: a()(f.card, {
+                [f.cardDragging]: b,
                 [f.disabled]: v
             }),
             children: [
@@ -64,7 +64,7 @@ function C(e) {
                         (0, i.jsx)(o.Text, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: a
+                            children: s
                         }),
                         (0, i.jsx)(o.Text, {
                             color: 'interactive-normal',
@@ -96,12 +96,12 @@ function C(e) {
 function v(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
-        { isDragging: x } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
+        { isDragging: x } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
         p = (0, u.mY)();
     return 0 === t.length
         ? null
         : (0, i.jsx)('div', {
-              className: s()(f.container, { [f.isDragging]: x }),
+              className: a()(f.container, { [f.isDragging]: x }),
               children: t.map((e, t) =>
                   (0, i.jsxs)(
                       r.Fragment,
@@ -135,7 +135,7 @@ function _(e) {
         onClick: r ? void 0 : t,
         'aria-disabled': r,
         children: (0, i.jsxs)('div', {
-            className: s()(f.card, f.addBenefit, { [f.disabled]: r }),
+            className: a()(f.card, f.addBenefit, { [f.disabled]: r }),
             children: [
                 (0, i.jsx)('div', {
                     className: f.emojiWrapper,

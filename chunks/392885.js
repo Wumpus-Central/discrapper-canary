@@ -1,8 +1,8 @@
 var i,
     r,
     l,
-    s,
-    a = n(442837),
+    a,
+    s = n(442837),
     o = n(570140),
     c = n(999382),
     d = n(740903),
@@ -29,7 +29,7 @@ function g(e) {
             m = d.u.OVERVIEW;
     }
 }
-class x extends (s = a.ZP.Store) {
+class x extends (a = s.ZP.Store) {
     getCurrentPage() {
         return m;
     }

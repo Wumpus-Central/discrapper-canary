@@ -2,8 +2,8 @@ n(47120);
 var i,
     r,
     l,
-    s = n(200651),
-    a = n(192379),
+    a = n(200651),
+    s = n(192379),
     o = n(120356),
     c = n.n(o),
     d = n(392711),
@@ -72,7 +72,7 @@ function p(e, t, n, i) {
         )
     );
 }
-class f extends (r = a.Component) {
+class f extends (r = s.Component) {
     componentDidMount() {
         this.startAnimation();
     }
@@ -106,12 +106,12 @@ class f extends (r = a.Component) {
             i = n ? x.HOVERING.FIRE_MIN_INTENSITY_FALLING : x.HOVERING.FIRE_MIN_INTENSITY_RISING,
             r = n ? x.HOVERING.FIRE_MAX_INTENSITY_FALLING : x.HOVERING.FIRE_MAX_INTENSITY_RISING,
             l = this.createFireAnimation(x.HOVERING.FIRE_COUNT, x.HOVERING.Y_DURATION, i, r),
-            s = m.Z.timing(this.y, {
+            a = m.Z.timing(this.y, {
                 toValue: e,
                 duration: x.HOVERING.Y_DURATION,
                 easing: m.Z.Easing.inOut(m.Z.Easing.ease)
             });
-        (this.currentAnimation = m.Z.parallel([s, l])), await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()), this.hoverAnimate(e * x.HOVERING.Y_VALUE_MODIFIER);
+        (this.currentAnimation = m.Z.parallel([a, l])), await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()), this.hoverAnimate(e * x.HOVERING.Y_VALUE_MODIFIER);
     }
     createShakeAnimation(e, t, n) {
         return p(this.x, e, t, (e) => u().random(1, n) * (e % 2 == 0 ? 1 : -1));
@@ -132,8 +132,8 @@ class f extends (r = a.Component) {
                 duration: x.STAGING.DURATION
             }),
             l = this.createShakeAnimation(x.STAGING.SHAKE_COUNT, x.STAGING.DURATION, x.STAGING.SHAKE_INTENSITY),
-            s = this.createFireAnimation(x.STAGING.FIRE_COUNT, x.STAGING.DURATION, x.STAGING.FIRE_MIN_INTENSITY, x.STAGING.FIRE_MAX_INTENSITY),
-            a = m.Z.parallel([r, l, s]),
+            a = this.createFireAnimation(x.STAGING.FIRE_COUNT, x.STAGING.DURATION, x.STAGING.FIRE_MIN_INTENSITY, x.STAGING.FIRE_MAX_INTENSITY),
+            s = m.Z.parallel([r, l, a]),
             o = m.Z.timing(this.y, {
                 toValue: x.FLYING.Y_VALUE,
                 duration: x.FLYING.DURATION,
@@ -151,7 +151,7 @@ class f extends (r = a.Component) {
             }),
             u = this.createFireAnimation(x.FLYING.FIRE_COUNT, x.FLYING.DURATION, x.FLYING.FIRE_MIN_INTENSITY, x.FLYING.FIRE_MAX_INTENSITY),
             h = m.Z.parallel([o, c, d, u]);
-        if (((this.currentAnimation = m.Z.sequence([i, a, h])), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted)) {
+        if (((this.currentAnimation = m.Z.sequence([i, s, h])), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted)) {
             let { onFlyingComplete: e } = this.props;
             null != e && e();
         }
@@ -180,28 +180,28 @@ class f extends (r = a.Component) {
     }
     render() {
         let { className: e, style: t } = this.props;
-        return (0, s.jsxs)(m.Z.div, {
+        return (0, a.jsxs)(m.Z.div, {
             className: c()(h.animation, e),
             style: {
                 ...t,
                 ...this.getWumpusStyle()
             },
             children: [
-                (0, s.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: h.fireTopWrapper,
-                    children: (0, s.jsx)(m.Z.div, {
+                    children: (0, a.jsx)(m.Z.div, {
                         className: h.fire,
                         style: this.getFireStyle()
                     })
                 }),
-                (0, s.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: h.fireBottomWrapper,
-                    children: (0, s.jsx)(m.Z.div, {
+                    children: (0, a.jsx)(m.Z.div, {
                         className: h.fire,
                         style: this.getFireStyle()
                     })
                 }),
-                (0, s.jsx)('div', { className: h.wumpus })
+                (0, a.jsx)('div', { className: h.wumpus })
             ]
         });
     }

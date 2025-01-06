@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(772848),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(852860),
     c = n(558324),
     d = n(933557),
@@ -26,19 +26,19 @@ var i = n(200651),
     I = n(496675),
     N = n(699516),
     T = n(594174),
-    b = n(768581),
-    j = n(900849),
+    j = n(768581),
+    b = n(900849),
     S = n(434404),
     E = n(999382),
     R = n(450474),
     y = n(209054),
-    Z = n(118215),
-    A = n(166184),
+    A = n(118215),
+    Z = n(166184),
     L = n(96788),
     D = n(654351),
     O = n(354051),
-    k = n(347604),
-    P = n(203377),
+    P = n(347604),
+    k = n(203377),
     M = n(929834),
     w = n(981631),
     B = n(128449),
@@ -57,7 +57,7 @@ function F(e, t, n) {
         e
     );
 }
-let H = s.ZP.connectStores([E.Z], () => {
+let H = a.ZP.connectStores([E.Z], () => {
     let { guild: e, originalGuild: t, submitting: n, guildMetadata: i } = E.Z.getProps();
     return {
         guild: e,
@@ -100,7 +100,7 @@ class z extends r.PureComponent {
             }),
                 (0, g.le)(),
                 (0, g.aC)(e.id);
-            let t = await (0, j.Eg)(e.id);
+            let t = await (0, b.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t });
         }
     }
@@ -108,32 +108,32 @@ class z extends r.PureComponent {
         let { guild: e, isGuildAdmin: t } = this.props;
         if (null == e) return;
         let n = e.hasFeature(w.oNc.DISCOVERABLE);
-        return (0, i.jsxs)(a.FormSection, {
+        return (0, i.jsxs)(s.FormSection, {
             className: G.twoColumnFormSection,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(a.FormTitle, {
+                        (0, i.jsx)(s.FormTitle, {
                             className: G.formTitle,
                             children: U.intl.string(U.t.XU0S6u)
                         }),
-                        (0, i.jsx)(a.FormText, {
-                            type: a.FormTextTypes.DESCRIPTION,
+                        (0, i.jsx)(s.FormText, {
+                            type: s.FormTextTypes.DESCRIPTION,
                             className: G.formDescription,
                             children: U.intl.string(U.t['IIiV/P'])
                         }),
-                        (0, i.jsx)(a.FormText, {
-                            type: a.FormTextTypes.DESCRIPTION,
+                        (0, i.jsx)(s.FormText, {
+                            type: s.FormTextTypes.DESCRIPTION,
                             className: G.formDescription,
                             children: U.intl.string(U.t.rSHA09)
                         }),
-                        (0, i.jsx)(a.Tooltip, {
+                        (0, i.jsx)(s.Tooltip, {
                             text: t ? null : U.intl.string(U.t['5VbUBw']),
                             children: (e) =>
-                                (0, i.jsx)(a.Button, {
-                                    size: a.Button.Sizes.SMALL,
+                                (0, i.jsx)(s.Button, {
+                                    size: s.Button.Sizes.SMALL,
                                     onClick: this.handleToggleDiscovery,
-                                    color: n ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+                                    color: n ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
                                     disabled: !t,
                                     ...e,
                                     children: n ? U.intl.string(U.t.VHHyFR) : U.intl.string(U.t.XU0S6u)
@@ -141,7 +141,7 @@ class z extends r.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(Z.Z, {
                     className: G.guildCard,
                     loading: null == e,
                     guild: e
@@ -154,23 +154,23 @@ class z extends r.PureComponent {
         if (null != e)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsxs)(a.FormSection, {
+                    (0, i.jsxs)(s.FormSection, {
                         className: G.twoColumnFormSection,
                         children: [
                             (0, i.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(a.FormTitle, {
+                                    (0, i.jsx)(s.FormTitle, {
                                         className: G.formTitle,
                                         children: U.intl.string(U.t['8bT/Cg'])
                                     }),
-                                    (0, i.jsx)(a.FormText, {
-                                        type: a.FormTextTypes.DESCRIPTION,
+                                    (0, i.jsx)(s.FormText, {
+                                        type: s.FormTextTypes.DESCRIPTION,
                                         className: G.formDescription,
                                         children: U.intl.string(U.t.Ltsutr)
                                     }),
-                                    (0, i.jsxs)(a.Button, {
-                                        size: a.Button.Sizes.SMALL,
-                                        color: a.Button.Colors.PRIMARY,
+                                    (0, i.jsxs)(s.Button, {
+                                        size: s.Button.Sizes.SMALL,
+                                        color: s.Button.Colors.PRIMARY,
                                         children: [
                                             U.intl.string(U.t.yG2pUl),
                                             (0, i.jsx)(f.ZP, {
@@ -186,7 +186,7 @@ class z extends r.PureComponent {
                                 children: (0, i.jsx)(C.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        b.ZP.getGuildDiscoverySplashURL({
+                                        j.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
                                             size: 512 * (0, p.x_)()
@@ -201,7 +201,7 @@ class z extends r.PureComponent {
                         ]
                     }),
                     (null == t ? void 0 : t.discovery_splash) != null
-                        ? (0, i.jsx)(a.Text, {
+                        ? (0, i.jsx)(s.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
                               children: t.discovery_splash
@@ -213,9 +213,9 @@ class z extends r.PureComponent {
     renderEmojiDiscoverabilitySection() {
         var e;
         let { canManageGuild: t, guildMetadata: n, guild: r } = this.props,
-            { discoverableGuild: s } = this.state,
+            { discoverableGuild: a } = this.state,
             { emojiDiscoverabilityEnabled: o } = n,
-            c = s;
+            c = a;
         if (null == c && null != r) {
             let e = u.ZP.getGuildEmoji(r.id);
             c = {
@@ -238,24 +238,24 @@ class z extends r.PureComponent {
                           jumboable: !0
                       }
                     : {};
-        return (0, i.jsxs)(a.FormSection, {
+        return (0, i.jsxs)(s.FormSection, {
             className: G.twoColumnFormSection,
             children: [
                 (0, i.jsxs)('div', {
                     className: G.formColumnLeft,
                     children: [
-                        (0, i.jsx)(a.FormTitle, {
+                        (0, i.jsx)(s.FormTitle, {
                             className: G.formTitle,
                             children: U.intl.string(U.t.DhJ8ur)
                         }),
-                        (0, i.jsx)(a.FormText, {
+                        (0, i.jsx)(s.FormText, {
                             className: G.description,
-                            type: a.FormTextTypes.DESCRIPTION,
+                            type: s.FormTextTypes.DESCRIPTION,
                             children: U.intl.string(U.t['/RSSlZ'])
                         }),
-                        (0, i.jsx)(a.Button, {
-                            size: a.Button.Sizes.SMALL,
-                            color: o ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
+                        (0, i.jsx)(s.Button, {
+                            size: s.Button.Sizes.SMALL,
+                            color: o ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
                             disabled: !t,
                             onClick: this.handleToggleEmojiDiscoverability,
                             children: o ? U.intl.string(U.t.XnrNLi) : U.intl.string(U.t.bHbZLC)
@@ -279,17 +279,17 @@ class z extends r.PureComponent {
     renderLocaleSelector() {
         let { guild: e, canManageGuild: t, localeOptions: n } = this.props;
         if (null != e)
-            return (0, i.jsxs)(a.FormSection, {
+            return (0, i.jsxs)(s.FormSection, {
                 className: G.twoColumnFormSection,
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(a.FormTitle, {
+                            (0, i.jsx)(s.FormTitle, {
                                 className: G.formTitle,
                                 children: U.intl.string(U.t.pO60f3)
                             }),
-                            (0, i.jsx)(a.FormText, {
-                                type: a.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(s.FormText, {
+                                type: s.FormTextTypes.DESCRIPTION,
                                 className: G.formDescription,
                                 children: U.intl.string(U.t['SF/GRk'])
                             })
@@ -297,7 +297,7 @@ class z extends r.PureComponent {
                     }),
                     (0, i.jsx)('div', {
                         className: G.formSelect,
-                        children: (0, i.jsx)(a.SingleSelect, {
+                        children: (0, i.jsx)(s.SingleSelect, {
                             value: e.preferredLocale,
                             options: n,
                             onChange: this.handleLocaleChange,
@@ -312,14 +312,14 @@ class z extends r.PureComponent {
         if (null != l)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsxs)(a.FormSection, {
+                    (0, i.jsxs)(s.FormSection, {
                         children: [
-                            (0, i.jsx)(a.FormTitle, {
+                            (0, i.jsx)(s.FormTitle, {
                                 className: G.formTitle,
                                 children: U.intl.string(U.t['5b4VCQ'])
                             }),
-                            (0, i.jsx)(a.FormText, {
-                                type: a.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(s.FormText, {
+                                type: s.FormTextTypes.DESCRIPTION,
                                 className: G.description,
                                 children: U.intl.string(U.t.MSfJlZ)
                             })
@@ -334,10 +334,10 @@ class z extends r.PureComponent {
                         searchable: !0,
                         clearable: !0
                     }),
-                    (0, i.jsxs)(a.FormSection, {
+                    (0, i.jsxs)(s.FormSection, {
                         className: G.noDividerFormSection,
                         children: [
-                            (0, i.jsx)(a.FormTitle, {
+                            (0, i.jsx)(s.FormTitle, {
                                 className: G.formTitle,
                                 children: U.intl.string(U.t.oOPlPD)
                             }),
@@ -348,7 +348,7 @@ class z extends r.PureComponent {
                         ]
                     }),
                     (null == r ? void 0 : r.category) != null
-                        ? (0, i.jsx)(a.Text, {
+                        ? (0, i.jsx)(s.Text, {
                               color: 'text-danger',
                               className: G.error,
                               variant: 'text-sm/normal',
@@ -360,27 +360,27 @@ class z extends r.PureComponent {
     }
     renderKeywordsSection() {
         let { canManageGuild: e, guildMetadata: t, errors: n } = this.props;
-        return (0, i.jsxs)(a.FormSection, {
+        return (0, i.jsxs)(s.FormSection, {
             children: [
-                (0, i.jsx)(a.FormTitle, {
+                (0, i.jsx)(s.FormTitle, {
                     className: G.formTitle,
                     children: U.intl.string(U.t.V5pXNT)
                 }),
-                (0, i.jsx)(a.FormText, {
+                (0, i.jsx)(s.FormText, {
                     className: G.description,
-                    type: a.FormTextTypes.DESCRIPTION,
+                    type: s.FormTextTypes.DESCRIPTION,
                     children: U.intl.format(U.t.FLMb5O, {})
                 }),
                 (0, i.jsx)(c.Z, {
                     tags: t.keywords,
                     onRemoveTag: this.handleRemoveKeyword,
                     onAddTag: this.handleAddKeyword,
-                    maxTags: P.G7,
-                    maxTaxLength: P._0,
+                    maxTags: k.G7,
+                    maxTaxLength: k._0,
                     disabled: !e
                 }),
                 (null == n ? void 0 : n.keywords) != null
-                    ? (0, i.jsx)(a.Text, {
+                    ? (0, i.jsx)(s.Text, {
                           color: 'text-danger',
                           className: G.error,
                           variant: 'text-sm/normal',
@@ -395,7 +395,7 @@ class z extends r.PureComponent {
         if (null == e || null == t) return null;
         switch ((0, D.TJ)(e, t)) {
             case D.d5.INTRO:
-                return (0, i.jsx)(k.Z, {
+                return (0, i.jsx)(P.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
@@ -403,11 +403,11 @@ class z extends r.PureComponent {
             case D.d5.DISQUALIFIED:
                 return (0, i.jsx)(O.Z, { guild: e });
             case D.d5.SETTINGS:
-                return (0, i.jsxs)(a.FormSection, {
+                return (0, i.jsxs)(s.FormSection, {
                     className: G.__invalid_discoverySettings,
                     title: U.intl.string(U.t.oGaVGx),
-                    tag: a.FormTitleTags.H1,
-                    children: [this.renderDiscoverableSection(), (0, i.jsx)(a.FormDivider, { className: G.divider }), this.renderCoverImageSection(), (0, i.jsx)(a.FormDivider, { className: G.divider }), this.renderEmojiDiscoverabilitySection(), (0, i.jsx)(a.FormDivider, { className: G.divider }), this.renderCategoriesSection(), (0, i.jsx)(a.FormDivider, { className: G.divider }), this.renderKeywordsSection(), (0, i.jsx)(a.FormDivider, { className: G.divider }), this.renderLocaleSelector()]
+                    tag: s.FormTitleTags.H1,
+                    children: [this.renderDiscoverableSection(), (0, i.jsx)(s.FormDivider, { className: G.divider }), this.renderCoverImageSection(), (0, i.jsx)(s.FormDivider, { className: G.divider }), this.renderEmojiDiscoverabilitySection(), (0, i.jsx)(s.FormDivider, { className: G.divider }), this.renderCategoriesSection(), (0, i.jsx)(s.FormDivider, { className: G.divider }), this.renderKeywordsSection(), (0, i.jsx)(s.FormDivider, { className: G.divider }), this.renderLocaleSelector()]
                 });
             default:
                 return null;
@@ -423,7 +423,7 @@ class z extends r.PureComponent {
                 e.hasFeature(w.oNc.DISCOVERABLE) ? t.delete(w.oNc.DISCOVERABLE) : t.add(w.oNc.DISCOVERABLE), S.Z.updateGuild({ features: t });
             }),
             F(this, 'handleEnableDiscovery', async () => {
-                let e = await (0, a.openModalLazy)(
+                let e = await (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await n.e('50721').then(n.bind(n, 210172));
                         return (t) => {
@@ -433,7 +433,7 @@ class z extends r.PureComponent {
                     },
                     {
                         onCloseRequest: () => {
-                            null != e && (0, a.closeModal)(e);
+                            null != e && (0, s.closeModal)(e);
                         }
                     }
                 );
@@ -458,7 +458,7 @@ class z extends r.PureComponent {
             F(this, 'handleAddKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props,
                     { keywords: i } = n;
-                if ((null == t ? void 0 : t.id) != null) !(i.length >= P.G7) && (0, g.zH)(t.id, [...i, e]);
+                if ((null == t ? void 0 : t.id) != null) !(i.length >= k.G7) && (0, g.zH)(t.id, [...i, e]);
             }),
             F(this, 'handleToggleEmojiDiscoverability', () => {
                 let { guild: e, guildMetadata: t } = this.props,
@@ -467,15 +467,15 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([E.Z, I.Z, Z.ZP, _.ZP, x.Z, T.default, N.Z], () => {
+t.Z = a.ZP.connectStores([E.Z, I.Z, A.ZP, _.ZP, x.Z, T.default, N.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: i } = E.Z.getProps(),
         r = I.Z.can(w.Plq.MANAGE_GUILD, e),
         l = I.Z.can(w.Plq.ADMINISTRATOR, e),
-        s = null != e ? Z.ZP.getDiscoveryChecklist(e.id) : null,
-        a = null != e ? _.ZP.getChannels(e.id) : null,
+        a = null != e ? A.ZP.getDiscoveryChecklist(e.id) : null,
+        s = null != e ? _.ZP.getChannels(e.id) : null,
         o = [];
-    null != a &&
-        a[_.sH].forEach((e) => {
+    null != s &&
+        s[_.sH].forEach((e) => {
             let { channel: t } = e;
             t.type === w.d4z.GUILD_TEXT &&
                 o.push({
@@ -494,7 +494,7 @@ t.Z = s.ZP.connectStores([E.Z, I.Z, Z.ZP, _.ZP, x.Z, T.default, N.Z], () => {
         guild: e,
         errors: t,
         submitting: n,
-        discoveryChecklist: s,
+        discoveryChecklist: a,
         selectableChannels: o,
         canManageGuild: r,
         isGuildAdmin: l,

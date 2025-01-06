@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(933557),
-    a = n(592125),
+    a = n(933557),
+    s = n(592125),
     o = n(699516),
     c = n(594174),
     d = n(556012),
@@ -21,10 +21,10 @@ function h(e) {
         f = (0, d.c)(n.type, n, h),
         C = null === (t = n.metadata) || void 0 === t ? void 0 : t.channelId,
         v = (0, r.e7)(
-            [c.default, o.Z, a.Z],
+            [c.default, o.Z, s.Z],
             () => {
-                let e = a.Z.getChannel(C);
-                return null == e ? null : (0, s.F6)(e, c.default, o.Z);
+                let e = s.Z.getChannel(C);
+                return null == e ? null : (0, a.F6)(e, c.default, o.Z);
             },
             [C]
         );

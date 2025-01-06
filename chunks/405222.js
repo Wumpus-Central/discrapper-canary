@@ -1,9 +1,9 @@
 t.d(n, {
     x: function () {
-        return l;
+        return i;
     }
 });
-function l(e) {
+function i(e) {
     return {
         id: e.id,
         name: e.name,

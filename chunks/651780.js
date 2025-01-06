@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     o = n(355467),
     c = n(821849),
     d = n(774078),
@@ -24,49 +24,49 @@ var i = n(200651),
     I = n(981631),
     N = n(388032),
     T = n(981004);
-function b(e) {
+function j(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
-        { days: l, hours: s } = (0, d.Z)(t);
+        { days: l, hours: a } = (0, d.Z)(t);
     return n <= 0
         ? null
         : (0, i.jsx)(i.Fragment, {
               children:
-                  0 === l && 0 === s
+                  0 === l && 0 === a
                       ? N.intl.format(N.t.kF0HER, {
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
                       : N.intl.format(N.t.neDJho, {
                             days: l,
-                            hours: s,
+                            hours: a,
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
           });
 }
-function j(e) {
+function b(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
         r = (0, C.gZ)(t, n),
         l = (0, C.nW)((0, C.rF)(t.length, n));
     if (null == r || null == l) return null;
-    let a = (0, C._k)(t, n);
-    return (0, i.jsxs)(s.HelpMessage, {
-        messageType: s.HelpMessageTypes.WARNING,
+    let s = (0, C._k)(t, n);
+    return (0, i.jsxs)(a.HelpMessage, {
+        messageType: a.HelpMessageTypes.WARNING,
         children: [
             (0, i.jsx)('div', {
                 className: T.guildBoostingGracePeriodTitle,
                 children: N.intl.format(N.t.LG7vvr, {})
             }),
-            (0, i.jsx)(b, {
+            (0, i.jsx)(j, {
                 endsAt: r,
-                appliedGuildBoostsToMaintain: a,
+                appliedGuildBoostsToMaintain: s,
                 tierName: l
             })
         ]
     });
 }
 let S = (e) => {
-    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: r, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
+    let { isAnimatedTo: t, onSetRef: n, subscriptionCount: r, tier: l, tiers: a, tierIndex: s, guildId: o } = e;
     return (0, i.jsx)(
         x.Z,
         {
@@ -74,7 +74,7 @@ let S = (e) => {
             tier: l,
             onSetRef: n,
             isAnimatedTo: t,
-            hasBottomMargin: a !== s.length - 1,
+            hasBottomMargin: s !== a.length - 1,
             guildId: o
         },
         l.tier
@@ -82,7 +82,7 @@ let S = (e) => {
 };
 function E() {
     r.useEffect(() => {
-        a.Z.wait(() => {
+        s.Z.wait(() => {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
@@ -93,18 +93,18 @@ function E() {
         children: [
             (0, i.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(s.FormTitle, {
-                        tag: s.FormTitleTags.H1,
+                    (0, i.jsx)(a.FormTitle, {
+                        tag: a.FormTitleTags.H1,
                         children: N.intl.string(N.t.nLovSU)
                     }),
                     null != t && null != e
-                        ? (0, i.jsx)(j, {
+                        ? (0, i.jsx)(b, {
                               appliedGuildBoosts: t,
                               guildId: e.id
                           })
                         : null,
-                    (0, i.jsx)(s.FormText, {
-                        type: s.FormText.Types.DESCRIPTION,
+                    (0, i.jsx)(a.FormText, {
+                        type: a.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
                         children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
                     })

@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return g;
+        return b;
     }
 }),
     n(724458),
@@ -14,14 +14,14 @@ var r = n(200651),
     c = n(203165),
     d = n(481060),
     u = n(789654),
-    h = n(246992),
-    m = n(500949),
+    m = n(246992),
+    h = n(500949),
     x = n(833999);
-let p = Object.keys(m.jQ).map((e) => ({
+let f = Object.keys(h.jQ).map((e) => ({
         value: e,
         label: e
     })),
-    f = Array.from(
+    p = Array.from(
         Array.from(
             Object.keys(c.b).reduce((e, t) => {
                 let [n] = t.split('.');
@@ -32,7 +32,7 @@ let p = Object.keys(m.jQ).map((e) => ({
         value: e,
         label: e
     }));
-function g(e) {
+function b(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
         [i, o] = a.useState(null),
@@ -40,7 +40,7 @@ function g(e) {
             className: x.section,
             children: [
                 (0, r.jsx)(d.SearchableSelect, {
-                    options: f,
+                    options: p,
                     placeholder: 'Select a scale to edit...',
                     value: void 0,
                     onChange: (e) => {
@@ -49,12 +49,12 @@ function g(e) {
                             (r = {
                                 name: e,
                                 base: 'plum' === e ? c.b['plum.10'].hex : c.b[''.concat(e, '.500')].hex,
-                                colorSpace: m.jQ.ICTCP,
+                                colorSpace: h.jQ.ICTCP,
                                 showColumnarPalettePreview: !1,
                                 useP3ColorSpace: !1,
                                 darkness: 0,
                                 lightness: 0,
-                                easing: m.iw.LINEAR,
+                                easing: h.iw.LINEAR,
                                 easingStrength: 1,
                                 steps: 26
                             }),
@@ -63,7 +63,7 @@ function g(e) {
                                     scales: [...t.scales, r]
                                 });
                     },
-                    popoutLayerContext: h.O$
+                    popoutLayerContext: m.O$
                 }),
                 (0, r.jsx)('ul', {
                     className: x.overrides,
@@ -91,21 +91,21 @@ function g(e) {
             ]
         }),
         u = l.find((e) => e.name === i),
-        p =
+        f =
             null != u
-                ? (0, r.jsx)(b, {
+                ? (0, r.jsx)(g, {
                       onClose: () => o(null),
                       scale: u,
                       setState: n
                   })
                 : s;
-    return (0, r.jsx)('div', { children: p });
+    return (0, r.jsx)('div', { children: f });
 }
-function b(e) {
+function g(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: c, base: f, darkness: g, lightness: b, showColumnarPalettePreview: v, colorSpace: C, easingStrength: T = 1, useP3ColorSpace: _, steps: S = 26 } = t,
-        N = (0, m.XM)(t),
-        y = (0, m.W6)(N, c);
+        { name: c, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: C, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        N = (0, h.XM)(t),
+        y = (0, h.W6)(N, c);
     return (0, r.jsxs)(d.FormSection, {
         className: x.paletteSettings,
         children: [
@@ -127,7 +127,7 @@ function b(e) {
                                 let [n, r] = t;
                                 return (
                                     (e[n] = {
-                                        value: (0, l.Z)((0, i.Z)(r, m.HW.sRGB), { format: 'hex' }),
+                                        value: (0, l.Z)((0, i.Z)(r, h.HW.sRGB), { format: 'hex' }),
                                         type: 'color'
                                     }),
                                     e
@@ -151,8 +151,8 @@ function b(e) {
                     }),
                     (0, r.jsx)('input', {
                         type: 'color',
-                        value: f,
-                        onChange: (e) => (0, m.Ib)(c, e.target.value, n)
+                        value: p,
+                        onChange: (e) => (0, h.Ib)(c, e.target.value, n)
                     })
                 ]
             }),
@@ -164,10 +164,10 @@ function b(e) {
                         children: 'The color space used to generate the palette. Different color spaces will produce different results.'
                     }),
                     (0, r.jsx)(d.SingleSelect, {
-                        options: p,
+                        options: f,
                         value: C,
-                        onChange: (e) => (0, m.t4)(c, e, n),
-                        popoutLayerContext: h.O$
+                        onChange: (e) => (0, h.t4)(c, e, n),
+                        popoutLayerContext: m.O$
                     })
                 ]
             }),
@@ -176,7 +176,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)(d.FormItem, {}),
                     (0, r.jsxs)(d.FormItem, {
-                        title: 'Lighten ('.concat((100 * b).toFixed(), '%)'),
+                        title: 'Lighten ('.concat((100 * g).toFixed(), '%)'),
                         children: [
                             (0, r.jsx)(d.FormText, {
                                 type: d.FormTextTypes.DESCRIPTION,
@@ -184,18 +184,18 @@ function b(e) {
                             }),
                             (0, r.jsx)(d.Slider, {
                                 onValueRender: () => null,
-                                initialValue: b,
+                                initialValue: g,
                                 stickToMarkers: !0,
                                 markers: Array.from({ length: 21 }, (e, t) => t / 10),
                                 minValue: 0,
                                 maxValue: 2,
-                                onValueChange: (e) => (0, m.h9)(c, e, n),
+                                onValueChange: (e) => (0, h.h9)(c, e, n),
                                 onMarkerRender: () => null
                             })
                         ]
                     }),
                     (0, r.jsxs)(d.FormItem, {
-                        title: 'Darken ('.concat((100 * g).toFixed(), '%)'),
+                        title: 'Darken ('.concat((100 * b).toFixed(), '%)'),
                         children: [
                             (0, r.jsx)(d.FormText, {
                                 type: d.FormTextTypes.DESCRIPTION,
@@ -208,7 +208,7 @@ function b(e) {
                                 markers: Array.from({ length: 21 }, (e, t) => t / 10),
                                 minValue: 0,
                                 maxValue: 2,
-                                onValueChange: (e) => (0, m.YE)(c, e, n),
+                                onValueChange: (e) => (0, h.YE)(c, e, n),
                                 onMarkerRender: () => null
                             })
                         ]
@@ -218,7 +218,7 @@ function b(e) {
             (0, r.jsx)(d.FormSection, {
                 title: 'Easing',
                 children: (0, r.jsxs)(d.FormItem, {
-                    title: 'Easing Strength ('.concat(T.toFixed(2), ')'),
+                    title: 'Easing Strength ('.concat(_.toFixed(2), ')'),
                     children: [
                         (0, r.jsx)(d.FormText, {
                             type: d.FormTextTypes.DESCRIPTION,
@@ -226,10 +226,10 @@ function b(e) {
                         }),
                         (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: T,
+                            initialValue: _,
                             minValue: 1,
                             maxValue: 5,
-                            onValueChange: (e) => (0, m.rd)(c, e, n),
+                            onValueChange: (e) => (0, h.rd)(c, e, n),
                             onMarkerRender: () => null
                         })
                     ]
@@ -242,16 +242,16 @@ function b(e) {
                         children: (0, r.jsx)(d.FormSwitch, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
                             value: v,
-                            onChange: (e) => (0, m.KB)(c, e, n),
+                            onChange: (e) => (0, h.KB)(c, e, n),
                             children: 'Show columnar palette preview'
                         })
                     }),
                     (0, r.jsx)(d.FormItem, {
                         children: (0, r.jsx)(d.FormSwitch, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: _,
-                            disabled: !m.S2,
-                            onChange: (e) => (0, m.uF)(c, e, n),
+                            value: T,
+                            disabled: !h.S2,
+                            onChange: (e) => (0, h.uF)(c, e, n),
                             children: 'Use P3 Color Space'
                         })
                     }),
@@ -260,9 +260,9 @@ function b(e) {
                         children: (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
                             initialValue: S,
-                            minValue: (0, m.A0)(c).length,
+                            minValue: (0, h.A0)(c).length,
                             maxValue: 100,
-                            onValueChange: (e) => (0, m.YC)(c, Math.round(e), n),
+                            onValueChange: (e) => (0, h.YC)(c, Math.round(e), n),
                             onMarkerRender: () => null
                         })
                     }),
@@ -273,8 +273,8 @@ function b(e) {
                             'data-columnar': v,
                             children: Object.entries(N).map((e, n) => {
                                 let [a, c] = e,
-                                    u = (0, m.HI)(c),
-                                    h = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
+                                    u = (0, h.HI)(c),
+                                    m = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
                                     x = y[a];
                                 return (0, r.jsxs)(
                                     'div',
@@ -283,7 +283,7 @@ function b(e) {
                                         children: [
                                             (0, r.jsxs)(d.Text, {
                                                 variant: v ? 'text-sm/medium' : 'text-xs/medium',
-                                                style: { color: h },
+                                                style: { color: m },
                                                 children: [t.name, '.', n + 1, v && null != x ? (0, r.jsx)('strong', { children: ' - '.concat(x) }) : '']
                                             }),
                                             v &&
@@ -291,9 +291,9 @@ function b(e) {
                                                     variant: 'text-xxs/medium',
                                                     style: {
                                                         opacity: 0.75,
-                                                        color: h
+                                                        color: m
                                                     },
-                                                    children: [(0, l.Z)((0, i.Z)(c, m.HW.sRGB), { format: 'hex' }).toUpperCase(), ' - ', u]
+                                                    children: [(0, l.Z)((0, i.Z)(c, h.HW.sRGB), { format: 'hex' }).toUpperCase(), ' - ', u]
                                                 })
                                         ]
                                     },
@@ -309,7 +309,7 @@ function b(e) {
 }
 function v(e) {
     let { scale: t, onRemove: n } = e,
-        o = a.useMemo(() => Object.values((0, m.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, m.HW.sRGB), { format: 'hex' })), [t]);
+        o = a.useMemo(() => Object.values((0, h.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, h.HW.sRGB), { format: 'hex' })), [t]);
     return (0, r.jsxs)('li', {
         className: x.override,
         children: [

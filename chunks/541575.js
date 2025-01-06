@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var r = n(780384),
     l = n(481060),
-    s = n(410030),
-    a = n(367907),
+    a = n(410030),
+    s = n(367907),
     o = n(906732),
     c = n(91218),
     d = n(807582),
@@ -16,7 +16,7 @@ var r = n(780384),
     f = n(792464);
 t.Z = function (e) {
     let { guild: t, disabled: C, role: v } = e,
-        _ = (0, s.ZP)(),
+        _ = (0, a.ZP)(),
         I = (0, u.oC)(t.id, v),
         { analyticsLocations: N } = (0, o.ZP)(),
         T = () => {
@@ -31,10 +31,10 @@ t.Z = function (e) {
                     });
             });
         },
-        b = t.features.has(g.oNc.ROLE_ICONS),
-        j = (e) => {
-            !b &&
-                ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+        j = t.features.has(g.oNc.ROLE_ICONS),
+        b = (e) => {
+            !j &&
+                ((0, s.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         ...e,
                         section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
@@ -58,9 +58,9 @@ t.Z = function (e) {
             guild: t,
             guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
-            hideTooltip: b,
+            hideTooltip: j,
             onClick: () =>
-                j({
+                b({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.Qqv.TIER_2
                 })
@@ -100,7 +100,7 @@ t.Z = function (e) {
                         className: f.button,
                         color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                         look: l.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : j({ object: g.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : b({ object: g.qAy.UPLOAD_IMAGE })),
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),

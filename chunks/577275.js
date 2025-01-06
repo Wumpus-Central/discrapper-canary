@@ -5,14 +5,14 @@ t.Z = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
         [n, l] = i.useState([]),
-        [s, a] = i.useState(!0),
+        [a, s] = i.useState(!0),
         o = async () => {
-            a(!0);
+            s(!0);
             try {
                 let e = await r.Z.fetchTeams(!0);
                 l(e.body);
             } catch (e) {}
-            a(!1);
+            s(!1);
         },
         c = i.useRef(!0);
     return (
@@ -21,7 +21,7 @@ t.Z = function () {
         }, [t]),
         {
             teams: n,
-            loading: s,
+            loading: a,
             refresh: o
         }
     );

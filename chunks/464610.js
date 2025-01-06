@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    s = n(727072),
-    a = n(85960),
+    a = n(727072),
+    s = n(85960),
     o = n(676317),
     c = n(823379),
     d = n(84613),
@@ -72,7 +72,7 @@ function x() {
     });
 }
 function p(e) {
-    let { title: t, subtitle: n, icon: r, page: s } = e;
+    let { title: t, subtitle: n, icon: r, page: a } = e;
     return (0, i.jsxs)('div', {
         className: g.safetyStepRow,
         children: [
@@ -105,7 +105,7 @@ function p(e) {
                 size: l.Button.Sizes.SMALL,
                 color: l.Button.Colors.PRIMARY,
                 look: l.Button.Looks.OUTLINED,
-                onClick: () => (0, d.K)(s),
+                onClick: () => (0, d.K)(a),
                 children: h.intl.string(h.t.bt75u7)
             })
         ]
@@ -113,9 +113,9 @@ function p(e) {
 }
 function f(e) {
     let { guild: t, hideChangelog: d } = e;
-    (0, s.RD)(t.id);
-    let f = (0, a.Z6)(t.id),
-        { rulesByTriggerType: C } = (0, s.pH)(t.id),
+    (0, a.RD)(t.id);
+    let f = (0, s.Z6)(t.id),
+        { rulesByTriggerType: C } = (0, a.pH)(t.id),
         { numEnabledRules: v, numRules: _ } = r.useMemo(() => {
             let e = 0,
                 t = 0;
@@ -145,8 +145,8 @@ function f(e) {
         I = (0, m.Q)(t),
         N = I[u.u.CAPTCHA_AND_RAID_PROTECTION],
         T = I[u.u.DM_AND_SPAM_PROTECTION],
-        b = I[u.u.PERMISSIONS],
-        j = (0, o.pr)(t.id);
+        j = I[u.u.PERMISSIONS],
+        b = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -179,7 +179,7 @@ function f(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, i.jsx)('div', { className: g.divider }),
-                    j &&
+                    b &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p, {
@@ -198,8 +198,8 @@ function f(e) {
                         icon: n(913414),
                         title: h.intl.string(h.t.xrmhRU),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: b.filter((e) => e.enabled).length,
-                            total: b.length
+                            enabled: j.filter((e) => e.enabled).length,
+                            total: j.length
                         }),
                         page: u.u.PERMISSIONS
                     })

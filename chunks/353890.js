@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(471445),
     c = n(977258),
     d = n(637853),
@@ -20,7 +20,7 @@ var r = n(120356),
     p = n(531840);
 function f(e) {
     let { guild: t, scrollToQuestions: n } = e,
-        r = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
+        r = (0, a.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, r).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
     return (0, i.jsxs)('div', {
         className: p.container,
@@ -45,12 +45,12 @@ function C() {
         children: [
             (0, i.jsx)('div', {
                 className: p.emptyStateIcon,
-                children: (0, i.jsx)(a.TextIcon, {
+                children: (0, i.jsx)(s.TextIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 className: p.channelName,
                 variant: 'text-md/normal',
                 color: 'text-muted',
@@ -77,7 +77,7 @@ function I(e) {
                 height: 12,
                 direction: m.Z.Directions.DOWN
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
                 lineClamp: 1,
@@ -90,16 +90,16 @@ function N(e) {
     var t;
     let { channel: n } = e,
         r = (0, d.iF)(n),
-        s = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : a.TextIcon;
+        a = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : s.TextIcon;
     return (0, i.jsxs)('div', {
         className: p.channel,
         children: [
-            (0, i.jsx)(s, {
+            (0, i.jsx)(a, {
                 className: p.channelIcon,
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 className: p.channelName,
                 variant: 'text-md/normal',
                 color: 'text-muted',

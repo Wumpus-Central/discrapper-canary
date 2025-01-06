@@ -20,8 +20,8 @@ var r = t(120356),
     x = t(38981),
     h = t(820331);
 function f(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: f, speakers: g, speakerCount: v, audienceCount: _, channelName: j } = e,
-        I = n.id;
+    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: f, speakers: g, speakerCount: v, audienceCount: _, channelName: I } = e,
+        j = n.id;
     return (0, a.jsx)('div', {
         className: h.contentContainer,
         children: (0, a.jsxs)('div', {
@@ -31,7 +31,7 @@ function f(e) {
                     className: h.guildInfoContainer,
                     children: [
                         (0, a.jsx)(u.Z, {
-                            guildId: I,
+                            guildId: j,
                             shouldShow: l,
                             onRequestClose: () => i(!1),
                             children: () =>
@@ -97,7 +97,7 @@ function f(e) {
                     speakerCount: v,
                     className: h.speakers
                 }),
-                null != j &&
+                null != I &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)('hr', { className: h.divider }),
@@ -115,7 +115,7 @@ function f(e) {
                                         color: 'header-secondary',
                                         className: h.__invalid_label,
                                         variant: 'text-sm/normal',
-                                        children: j
+                                        children: I
                                     })
                                 ]
                             })

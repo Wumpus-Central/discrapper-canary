@@ -16,8 +16,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(481060),
-    a = n(45966),
+    a = n(481060),
+    s = n(45966),
     o = n(637853),
     c = n(734893),
     d = n(8426),
@@ -28,17 +28,17 @@ var i = n(200651),
     x = n(15832);
 function p(e) {
     let t,
-        { title: n, description: r, icon: l, hasStarted: a, status: o, onEdit: c, extra: d } = e;
+        { title: n, description: r, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
     switch (o) {
         case 'good':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.CheckmarkLargeIcon, {
+                    (0, i.jsx)(a.CheckmarkLargeIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.checkmark
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-positive',
                         className: x.statusText,
@@ -50,12 +50,12 @@ function p(e) {
         case 'warning':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.CircleWarningIcon, {
+                    (0, i.jsx)(a.CircleWarningIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.warning
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-warning',
                         className: x.statusText,
@@ -67,12 +67,12 @@ function p(e) {
         case 'required':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.CircleWarningIcon, {
+                    (0, i.jsx)(a.CircleWarningIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.danger
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-danger',
                         className: x.statusText,
@@ -94,13 +94,13 @@ function p(e) {
                     (0, i.jsxs)('div', {
                         className: x.onboardingStepText,
                         children: [
-                            (0, i.jsx)(s.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-xs/normal',
-                                color: a && 'required' === o ? 'status-danger' : 'text-normal',
+                                color: s && 'required' === o ? 'status-danger' : 'text-normal',
                                 children: r
                             })
                         ]
@@ -112,24 +112,24 @@ function p(e) {
                 children: [
                     t,
                     d,
-                    a
-                        ? (0, i.jsx)(s.Button, {
+                    s
+                        ? (0, i.jsx)(a.Button, {
                               className: x.cta,
-                              size: s.Button.Sizes.SMALL,
-                              color: s.Button.Colors.PRIMARY,
-                              look: s.Button.Looks.OUTLINED,
+                              size: a.Button.Sizes.SMALL,
+                              color: a.Button.Colors.PRIMARY,
+                              look: a.Button.Looks.OUTLINED,
                               onClick: c,
                               children: g.intl.string(g.t.bt75u7)
                           })
-                        : (0, i.jsxs)(s.Button, {
+                        : (0, i.jsxs)(a.Button, {
                               className: x.cta,
                               innerClassName: x.ctaInner,
-                              size: s.Button.Sizes.SMALL,
-                              color: s.Button.Colors.PRIMARY,
+                              size: a.Button.Sizes.SMALL,
+                              color: a.Button.Colors.PRIMARY,
                               onClick: c,
                               children: [
                                   g.intl.string(g.t['0GWElZ']),
-                                  (0, i.jsx)(s.ArrowSmallRightIcon, {
+                                  (0, i.jsx)(a.ArrowSmallRightIcon, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   })
@@ -141,10 +141,10 @@ function p(e) {
     });
 }
 function f(e) {
-    let t = (0, l.e7)([a.Z], () => a.Z.getDefaultChannelIds(e)),
+    let t = (0, l.e7)([s.Z], () => s.Z.getDefaultChannelIds(e)),
         n = r.useMemo(() => new Set(t), [t]),
-        [i, s] = (0, o.VF)(e, n);
-    return s.length >= h.md && i.length >= h.X;
+        [i, a] = (0, o.VF)(e, n);
+    return a.length >= h.md && i.length >= h.X;
 }
 function C(e) {
     let t = f(e),
@@ -154,18 +154,18 @@ function C(e) {
 function v(e) {
     var t, n, c, d;
     let { guildId: u, onEdit: C, disableGoodStatus: v } = e,
-        _ = (0, l.Wu)([a.Z], () => a.Z.getDefaultChannelIds(u)),
-        I = (0, l.e7)([a.Z], () => (0, o.kl)(u, a.Z.getDefaultChannelIds(u), a.Z.getOnboardingPrompts(u)).length),
+        _ = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(u)),
+        I = (0, l.e7)([s.Z], () => (0, o.kl)(u, s.Z.getDefaultChannelIds(u), s.Z.getOnboardingPrompts(u)).length),
         N = r.useMemo(() => new Set(_), [_]),
         [, T] = (0, o.VF)(u, N),
-        b = T.length,
-        j = f(u),
+        j = T.length,
+        b = f(u),
         S = (0, m.O4)(u),
-        E = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(u));
+        E = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(u));
     let R =
-        ((t = j),
+        ((t = b),
         (n = E),
-        (c = b),
+        (c = j),
         (d = I),
         n
             ? g.intl.formatToPlainString(g.t.nHwnLC, {
@@ -181,26 +181,26 @@ function v(e) {
     return (0, i.jsx)(p, {
         title: E ? g.intl.string(g.t.YZookZ) : g.intl.string(g.t['4GSygo']),
         description: R,
-        icon: (0, i.jsx)(s.TextIcon, {
+        icon: (0, i.jsx)(a.TextIcon, {
             size: 'md',
             color: 'currentColor',
             className: x.channelIcon
         }),
-        hasStarted: b > 0 || E,
-        status: j || S ? (v ? 'none' : 'good') : 'required',
+        hasStarted: j > 0 || E,
+        status: b || S ? (v ? 'none' : 'good') : 'required',
         onEdit: C
     });
 }
 function _(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: r } = e,
-        c = (0, l.Wu)([a.Z], () => a.Z.getDefaultChannelIds(t)),
-        d = (0, l.Wu)([a.Z], () => a.Z.getOnboardingPrompts(t)),
+        c = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
+        d = (0, l.Wu)([s.Z], () => s.Z.getOnboardingPrompts(t)),
         u = d.length,
         [m, h] = (0, o.dF)(t, d, c),
         f = m.length,
         C = m.length + h.length,
         v = (f / C) * 100,
-        _ = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
+        _ = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
         I = u > 0,
         N = 'none';
     return (
@@ -220,7 +220,7 @@ function _(e) {
                         t
                     )
             }),
-            icon: (0, i.jsx)(s.FriendsIcon, {
+            icon: (0, i.jsx)(a.FriendsIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: x.channelIcon
@@ -234,7 +234,7 @@ function _(e) {
 function I(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         m = (0, l.e7)([u.Z], () => u.Z.getSettings()),
-        h = (0, l.e7)([a.Z], () => a.Z.getEnabled(t)),
+        h = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
         f = (0, c.uo)(m),
         C = m.enabled,
         v = r.useCallback(() => {
@@ -249,7 +249,7 @@ function I(e) {
     return (
         _ &&
             h &&
-            (T = (0, i.jsx)(s.Switch, {
+            (T = (0, i.jsx)(a.Switch, {
                 className: x.inlineSwitch,
                 checked: C,
                 onChange: v,
@@ -258,7 +258,7 @@ function I(e) {
         (0, i.jsx)(p, {
             title: g.intl.string(g.t.mRHqsr),
             description: N,
-            icon: (0, i.jsx)(s.SignPostIcon, {
+            icon: (0, i.jsx)(a.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: x.channelIcon

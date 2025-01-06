@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(603211),
     d = n(710344),
@@ -26,14 +26,14 @@ var i = n(200651),
 let N = { optionErrors: [] };
 function T(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: Z } = e,
-        { dropdownsAllowed: A } = (0, m.Ug)(n.id),
-        L = (0, a.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
-        D = A ? v.qm : v.M$,
+    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: A } = e,
+        { dropdownsAllowed: Z } = (0, m.Ug)(n.id),
+        L = (0, s.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
+        D = Z ? v.qm : v.M$,
         {
             drag: O,
-            dragSourcePosition: k,
-            drop: P,
+            dragSourcePosition: P,
+            drop: k,
             setIsDraggable: M
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
@@ -41,9 +41,9 @@ function T(e) {
             optionId: l.id,
             onDragStart: y,
             onDragComplete: R,
-            onDragReset: Z
+            onDragReset: A
         }),
-        w = (0, a.cj)([f.Z], () => {
+        w = (0, s.cj)([f.Z], () => {
             var e;
             return null !== (e = f.Z.errors[C]) && void 0 !== e ? e : N;
         }),
@@ -51,7 +51,7 @@ function T(e) {
         [G, F] = r.useState(!1),
         H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
         z = w.config,
-        W = A && l.options.length >= v.fY,
+        W = Z && l.options.length >= v.fY,
         V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
         Y = r.useRef(null);
     return (r.useLayoutEffect(() => {
@@ -69,12 +69,12 @@ function T(e) {
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
                   onMouseLeave: () => F(!1),
-                  className: s()(I.container, {
-                      [I.dropIndicatorBefore]: null != k && C < k,
-                      [I.dropIndicatorAfter]: null != k && C > k,
+                  className: a()(I.container, {
+                      [I.dropIndicatorBefore]: null != P && C < P,
+                      [I.dropIndicatorAfter]: null != P && C > P,
                       [I.containerFocused]: G
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => O(k(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: I.dragContainer,
@@ -126,12 +126,12 @@ function T(e) {
                   tabIndex: 0,
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
-                  className: s()(I.container, {
-                      [I.dropIndicatorBefore]: null != k && C < k,
-                      [I.dropIndicatorAfter]: null != k && C > k,
+                  className: a()(I.container, {
+                      [I.dropIndicatorBefore]: null != P && C < P,
+                      [I.dropIndicatorAfter]: null != P && C > P,
                       [I.containerFocused]: G
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => O(k(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: I.dragContainer,
@@ -159,7 +159,7 @@ function T(e) {
                           maxLength: v.iU,
                           error: w.title
                       }),
-                      (0, i.jsx)(b, {
+                      (0, i.jsx)(j, {
                           prompt: l,
                           guild: n
                       }),
@@ -177,7 +177,7 @@ function T(e) {
                                     total: D
                                 })
                       }),
-                      (0, i.jsx)(j, {
+                      (0, i.jsx)(b, {
                           guild: n,
                           prompt: l,
                           promptIndex: C,
@@ -246,17 +246,17 @@ function T(e) {
               })
           });
 }
-function b(e) {
+function j(e) {
     let { prompt: t, guild: n } = e,
-        [l, s] = r.useState(!1);
+        [l, a] = r.useState(!1);
     if (
         (r.useEffect(() => {
-            !l && t.title.length > 0 && s(!0);
+            !l && t.title.length > 0 && a(!0);
         }, [l, t]),
         l)
     )
         return null;
-    function a(e) {
+    function s(e) {
         return (0, i.jsx)(o.Clickable, {
             className: I.example,
             onClick: () => (0, p.Kk)(n, t.id, { title: e }),
@@ -276,20 +276,20 @@ function b(e) {
             }),
             (0, i.jsxs)('div', {
                 className: I.examples,
-                children: [a(_.intl.string(_.t['7GZMJS'])), a(_.intl.string(_.t.nItydn)), a(_.intl.string(_.t.evuYbm)), a(_.intl.string(_.t.XWRuOj))]
+                children: [s(_.intl.string(_.t['7GZMJS'])), s(_.intl.string(_.t.nItydn)), s(_.intl.string(_.t.evuYbm)), s(_.intl.string(_.t.XWRuOj))]
             })
         ]
     });
 }
-function j(e) {
-    let { guild: t, prompt: n, promptIndex: r, singleColumn: l, errors: s } = e,
-        { dropdownsAllowed: a } = (0, m.Ug)(t.id),
-        o = a ? v.qm : v.M$,
+function b(e) {
+    let { guild: t, prompt: n, promptIndex: r, singleColumn: l, errors: a } = e,
+        { dropdownsAllowed: s } = (0, m.Ug)(t.id),
+        o = s ? v.qm : v.M$,
         { handleDragStart: c, handleDragReset: u, handleDragComplete: h } = (0, d.Z)(n.options, (e) => (0, p.Kk)(t, n.id, { options: e }));
     return (0, i.jsxs)('div', {
         className: I.options,
         children: [
-            n.options.map((e, a) =>
+            n.options.map((e, s) =>
                 (0, i.jsx)(
                     C.Z,
                     {
@@ -301,7 +301,7 @@ function j(e) {
                         onDragStart: c,
                         onDragComplete: h,
                         onDragReset: u,
-                        hasError: null != s.optionErrors[a]
+                        hasError: null != a.optionErrors[s]
                     },
                     e.id
                 )

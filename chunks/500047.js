@@ -6,13 +6,13 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(690221),
-    s = n(431516);
-function a(e) {
+    a = n(431516);
+function s(e) {
     return e;
 }
 function o(e) {
     let { onEnableMFAClick: t, onMFAEnabled: n } = e,
-        { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, s.N)(),
+        { isUserMFAEnabled: o, isModerationMFAEnabled: c } = (0, a.N)(),
         d = r.useCallback(async () => {
             await t(), null == n || n();
         }, [t, n]),
@@ -24,5 +24,5 @@ function o(e) {
                 }),
             [d]
         );
-    return o && c ? a : u;
+    return o && c ? s : u;
 }

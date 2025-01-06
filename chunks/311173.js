@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(63063),
     c = n(256569),
     d = n(858457),
@@ -22,15 +22,15 @@ function p(e) {
     let { hasErrors: t, text: n, errorText: r } = e;
     return t
         ? (0, i.jsx)('div', {
-              className: s()(g.subtext),
-              children: (0, i.jsx)(a.Text, {
-                  className: s()(g.errorSpan),
+              className: a()(g.subtext),
+              children: (0, i.jsx)(s.Text, {
+                  className: a()(g.errorSpan),
                   variant: 'text-xs/medium',
                   color: 'text-danger',
                   children: null != r ? r : h.intl.format(h.t.jKYAPj, { helpArticle: x })
               })
           })
-        : (0, i.jsx)(a.Text, {
+        : (0, i.jsx)(s.Text, {
               className: g.subtext,
               variant: 'text-xs/medium',
               color: 'text-muted',
@@ -39,8 +39,8 @@ function p(e) {
 }
 function f(e) {
     var t, n;
-    let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
+    let { rule: l, onChangeText: s, className: o } = e,
+        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: _ } = (0, d.Z)(l, s),
         [I] = r.useState(() => ({
             tags: m,
             value: '',
@@ -50,14 +50,14 @@ function f(e) {
         N = r.useMemo(
             () =>
                 C.reduce((e, t) => {
-                    let { pattern: n, message: i, description: r, erroringCharacterLength: l = n.length, erroringCharacterOffset: s = 0 } = t;
+                    let { pattern: n, message: i, description: r, erroringCharacterLength: l = n.length, erroringCharacterOffset: a = 0 } = t;
                     return null == m.find((e) => e === n)
                         ? e
                         : ((e[n] = {
                               value: n,
                               message: null != r ? r : i,
                               erroringCharacterLength: l,
-                              erroringCharacterOffset: s
+                              erroringCharacterOffset: a
                           }),
                           e);
                 }, {}),
@@ -69,20 +69,20 @@ function f(e) {
             },
             [v, m]
         ),
-        b = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 _(e);
             },
             [_]
         );
     return (0, i.jsxs)('div', {
-        className: s()(g.keywordsContainer, o),
+        className: a()(g.keywordsContainer, o),
         children: [
             (0, i.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
                 initialValue: I,
                 onChangeTags: T,
-                onChangeNewTagValue: b,
+                onChangeNewTagValue: j,
                 tagErrors: N,
                 maxTags: u.VW
             }),

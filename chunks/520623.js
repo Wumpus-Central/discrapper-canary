@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return s;
+        return a;
     }
 }),
     n(724458);
@@ -17,7 +17,7 @@ let l = (e) =>
         ),
         {}
     );
-async function s(e) {
+async function a(e) {
     return l(
         (
             await i.tn.get({

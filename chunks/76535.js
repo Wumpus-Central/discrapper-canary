@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     H: function () {
         return s;
     },
@@ -8,31 +8,31 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(442837),
-    o = n(584825),
-    l = n(17079),
+    l = n(584825),
+    o = n(17079),
     u = n(281320);
-function a(e, t) {
-    let n = (0, r.e7)([u.Z], () => u.Z.getPriceTiersForGuildAndType(e, t)),
-        o = (0, r.e7)([u.Z], () => u.Z.getPriceTiersFetchStateForGuildAndType(e, t));
+function a(t, e) {
+    let n = (0, r.e7)([u.Z], () => u.Z.getPriceTiersForGuildAndType(t, e)),
+        l = (0, r.e7)([u.Z], () => u.Z.getPriceTiersFetchStateForGuildAndType(t, e));
     return (
         i.useEffect(() => {
-            o === u.M.NOT_FETCHED && (0, l.T)(e, t);
-        }, [e, o, t]),
+            l === u.M.NOT_FETCHED && (0, o.T)(t, e);
+        }, [t, l, e]),
         {
-            loading: o === u.M.FETCHING,
+            loading: l === u.M.FETCHING,
             priceTiers: n
         }
     );
 }
-function s(e) {
-    let { fetchSubscriptionsSettings: t, loading: n, error: r } = (0, o.JH)();
+function s(t) {
+    let { fetchSubscriptionsSettings: e, loading: n, error: r } = (0, l.JH)();
     i.useEffect(() => {
-        t(e);
-    }, [t, e]);
-    let l = (0, o.YB)(e);
+        e(t);
+    }, [e, t]);
+    let o = (0, l.YB)(t);
     return {
-        loaded: null != l && !n,
-        subscriptionsSettings: l,
+        loaded: null != o && !n,
+        subscriptionsSettings: o,
         loading: n,
         error: r
     };

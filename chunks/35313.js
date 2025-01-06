@@ -1,14 +1,14 @@
 n.d(t, {
     f: function () {
-        return a;
+        return s;
     }
 });
 var i = n(748780),
     r = n(442837),
     l = n(481060),
-    s = n(607070);
-function a() {
-    let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
+    a = n(607070);
+function s() {
+    let e = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, l.useSpring)(
         {
             from: {

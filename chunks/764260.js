@@ -1,12 +1,12 @@
 n.d(t, {
     Gf: function () {
-        return x;
+        return I;
     },
     OW: function () {
         return u;
     },
     S1: function () {
-        return a;
+        return r;
     },
     TY: function () {
         return c;
@@ -15,35 +15,35 @@ n.d(t, {
         return d;
     },
     _l: function () {
-        return h;
+        return m;
     },
     d_: function () {
-        return g;
+        return p;
     },
     lO: function () {
-        return o;
-    },
-    sI: function () {
         return s;
     },
+    sI: function () {
+        return l;
+    },
     we: function () {
-        return m;
+        return _;
     }
 }),
     n(47120);
 var i = n(570140),
-    r = n(749210),
-    l = n(228643);
-function s(e) {
+    o = n(749210),
+    a = n(228643);
+function l(e) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_SORT_UPDATE',
         roles: e
     });
 }
-function a() {
+function r() {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_INIT' });
 }
-function o(e, t, n) {
+function s(e, t, n) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS',
         id: e,
@@ -71,7 +71,7 @@ function u(e, t) {
         color: t
     });
 }
-function m(e, t, n) {
+function _(e, t, n) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_SETTINGS',
         id: e,
@@ -79,7 +79,7 @@ function m(e, t, n) {
         mentionable: n
     });
 }
-function h(e, t, n) {
+function m(e, t, n) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON',
         id: e,
@@ -87,21 +87,21 @@ function h(e, t, n) {
         unicodeEmoji: n
     });
 }
-function g(e, t) {
+function p(e, t) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS',
         roleId: e,
         roleConnectionConfigurations: t
     });
 }
-async function x(e, t, n, s, a) {
+async function I(e, t, n, l, r) {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
         let i = async () => {
             if (null == t || 0 === t.length) return;
             let n = t.pop();
             if (null == n || '' === n.name) return i();
-            await r.Z.updateRole(e, n.id, {
+            await o.Z.updateRole(e, n.id, {
                 name: n.name,
                 description: n.description,
                 permissions: n.permissions,
@@ -112,16 +112,16 @@ async function x(e, t, n, s, a) {
                 unicodeEmoji: n.unicodeEmoji
             }).then(i, i);
         };
-        if ((null != n && n.length > 0 ? await r.Z.batchRoleUpdate(e, n).then(i, i) : await i(), null != a && null != s))
-            for await (let t of s) {
-                let n = a.get(t);
-                await (0, l.L_)(e, t, null != n ? n : []);
+        if ((null != n && n.length > 0 ? await o.Z.batchRoleUpdate(e, n).then(i, i) : await i(), null != r && null != l))
+            for await (let t of l) {
+                let n = r.get(t);
+                await (0, a.L_)(e, t, null != n ? n : []);
             }
     } catch (e) {
-        var o, c;
+        var s, c;
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_ROLES_SAVE_FAIL',
-            message: null !== (c = null === (o = e.body) || void 0 === o ? void 0 : o.message) && void 0 !== c ? c : Object.values(e.body)[0]
+            message: null !== (c = null === (s = e.body) || void 0 === s ? void 0 : s.message) && void 0 !== c ? c : Object.values(e.body)[0]
         });
         return;
     }

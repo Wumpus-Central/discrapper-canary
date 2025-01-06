@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return j;
     }
 }),
     n(653041),
@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(933557),
     d = n(471445),
@@ -27,7 +27,7 @@ function v(e) {
 function _(e) {
     let { icon: t, title: n, subtitle: r, className: l } = e;
     return (0, i.jsxs)('div', {
-        className: s()(C.label, l),
+        className: a()(C.label, l),
         children: [
             t,
             (0, i.jsxs)('div', {
@@ -69,12 +69,12 @@ function N(e) {
         r = (0, x.m7)(n),
         l = (0, x.m7)(null !== (t = null == r ? void 0 : r.parent_id) && void 0 !== t ? t : p.lds);
     if (null == r) return null;
-    let s = (0, d.KS)(r),
-        a = (0, c.F6)(r, g.default, h.Z),
+    let a = (0, d.KS)(r),
+        s = (0, c.F6)(r, g.default, h.Z),
         o = null != l ? (0, c.F6)(l, g.default, h.Z) : void 0;
     return (0, i.jsx)(_, {
-        icon: null != s && (0, i.jsx)(s, { className: C.labelIcon }),
-        title: a,
+        icon: null != a && (0, i.jsx)(a, { className: C.labelIcon }),
+        title: s,
         subtitle: o
     });
 }
@@ -82,12 +82,12 @@ function T(e) {
     let { value: t } = e;
     return null != t ? (0, i.jsx)(N, { channelId: t }) : (0, i.jsx)(I, {});
 }
-function b(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: _ } = e,
+function j(e) {
+    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, 'aria-labelledby': C, onChange: _ } = e,
         I = f.intl.string(f.t.d7YJMD),
-        N = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
-        b = (0, x.m7)(null != l ? l : p.lds),
-        j = r.useMemo(() => {
+        N = (0, s.e7)([m.Z], () => m.Z.getCategories(t), [t]),
+        j = (0, x.m7)(null != l ? l : p.lds),
+        b = r.useMemo(() => {
             let e = [
                     {
                         value: null,
@@ -98,7 +98,7 @@ function b(e) {
             for (let n of N._categories)
                 for (let { channel: i } of N[n.channel.id]) {
                     if (!!(0, u.r8)(i.type) || !!(0, u.bw)(i.type))
-                        (!(i.id !== l && (null == d ? void 0 : d.has(i.id))) || (i.id === s && l !== s)) &&
+                        (!(i.id !== l && (null == d ? void 0 : d.has(i.id))) || (i.id === a && l !== a)) &&
                             (l === i.id && (t = !0),
                             e.push({
                                 value: i.id,
@@ -108,17 +108,17 @@ function b(e) {
             return (
                 null != l &&
                     !t &&
-                    null != b &&
+                    null != j &&
                     e.push({
                         value: l,
-                        label: b.name
+                        label: j.name
                     }),
                 e
             );
-        }, [I, l, b, N, d, s]);
+        }, [I, l, j, N, d, a]);
     return (0, i.jsx)(o.Select, {
         placeholder: f.intl.string(f.t.r2pts7),
-        options: j,
+        options: b,
         select: function (e) {
             null == e
                 ? (0, o.openModalLazy)(async () => {

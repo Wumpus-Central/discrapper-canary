@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, P.BU)(e, { useKibibytes: !0 });
     }
 }
-let H = {
+let V = {
     [j.vxO.INSTALLING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
@@ -175,8 +175,8 @@ let H = {
             })
     }
 };
-function V(e, t, n, i, r) {
-    let l = H[t],
+function H(e, t, n, i, r) {
+    let l = V[t],
         a = null != l ? Object.keys(l) : [],
         { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return V(a, t, i, o, s);
+            return H(a, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,

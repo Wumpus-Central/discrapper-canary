@@ -8,8 +8,8 @@ t(192379);
 var l = t(442837),
     a = t(481060),
     s = t(87051),
-    u = t(778123),
-    r = t(122074),
+    r = t(778123),
+    u = t(122074),
     o = t(9156),
     d = t(621600),
     c = t(981631),
@@ -38,7 +38,7 @@ function h(e) {
                     suppressRoles: t,
                     mobilePush: h,
                     messageNotifications: M,
-                    notifyHighlights: _
+                    notifyHighlights: f
                 } = (0, l.cj)(
                     [o.ZP],
                     () => ({
@@ -50,12 +50,12 @@ function h(e) {
                     }),
                     [e.id]
                 ),
-                N = _ === c.gLR.DISABLED,
-                f = (0, u.Z)(e.id);
+                _ = f === c.gLR.DISABLED,
+                N = (0, r.Z)(e.id);
             function S(n, t) {
                 s.Z.updateGuildNotificationSettings(e.id, n, t);
             }
-            let I = (0, r.ng)(e.id, !0);
+            let I = (0, u.ng)(e.id, !0);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(a.MenuGroup, {
@@ -93,11 +93,11 @@ function h(e) {
                                 id: 'suppress-highlights',
                                 label: g.intl.string(g.t.gPuteH),
                                 action: () => {
-                                    S({ notify_highlights: N ? c.gLR.ENABLED : c.gLR.DISABLED }, d.UE.highlights(N));
+                                    S({ notify_highlights: _ ? c.gLR.ENABLED : c.gLR.DISABLED }, d.UE.highlights(_));
                                 },
-                                checked: N
+                                checked: _
                             }),
-                            f
+                            N
                         ]
                     }),
                     (0, i.jsx)(a.MenuGroup, {
@@ -111,25 +111,25 @@ function h(e) {
                 ]
             });
         })(e),
-        _ = (0, l.e7)([o.ZP], () => o.ZP.getMessageNotifications(e.id), [e.id]),
-        N =
+        f = (0, l.e7)([o.ZP], () => o.ZP.getMessageNotifications(e.id), [e.id]),
+        _ =
             null === (h = E()) || void 0 === h
                 ? void 0
                 : null ===
                         (n = h.find((e) => {
                             let { setting: n } = e;
-                            return n === _;
+                            return n === f;
                         })) || void 0 === n
                   ? void 0
                   : n.label,
-        f = (0, r.U)();
+        N = (0, u.U)();
     return null != M
         ? (0, i.jsx)(a.MenuItem, {
               id: 'guild-notifications',
               label: (0, i.jsxs)(i.Fragment, {
-                  children: [f, g.intl.string(g.t.h850Sk)]
+                  children: [N, g.intl.string(g.t.h850Sk)]
               }),
-              subtext: N,
+              subtext: _,
               action: () =>
                   (0, a.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([t.e('5863'), t.e('67913')]).then(t.bind(t, 751212));

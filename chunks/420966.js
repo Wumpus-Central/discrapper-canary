@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    s = n(481060),
-    a = n(239091),
+    a = n(481060),
+    s = n(239091),
     o = n(605436),
     c = n(741247),
     d = n(243730),
@@ -55,17 +55,17 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: g.titleContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: g.titleText,
                         color: 'header-primary',
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.BUdGkJ, { roleName: x.name })
                     }),
                     N
-                        ? (0, i.jsx)(s.Clickable, {
+                        ? (0, i.jsx)(a.Clickable, {
                               className: g.menu,
                               onClick: function (e) {
-                                  (0, a.jW)(e, async () => {
+                                  (0, s.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
                                       return (n) =>
                                           (0, i.jsx)(e, {
@@ -76,7 +76,7 @@ function p(e) {
                                   });
                               },
                               'aria-label': h.intl.string(h.t.PdRCRk),
-                              children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                              children: (0, i.jsx)(a.MoreHorizontalIcon, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
@@ -85,12 +85,12 @@ function p(e) {
                 ]
             }),
             null != I
-                ? (0, i.jsx)(s.HelpMessage, {
-                      messageType: s.HelpMessageTypes.WARNING,
+                ? (0, i.jsx)(a.HelpMessage, {
+                      messageType: a.HelpMessageTypes.WARNING,
                       children: I
                   })
                 : null,
-            (0, i.jsxs)(s.TabBar, {
+            (0, i.jsxs)(a.TabBar, {
                 className: g.tabBar,
                 'aria-label': h.intl.string(h.t['+1H47u']),
                 selectedItem: p,
@@ -98,24 +98,24 @@ function p(e) {
                 look: 'brand',
                 onItemSelect: C,
                 children: [
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(a.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.DISPLAY,
                         disabled: _,
                         children: h.intl.string(h.t.hmdom5)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(a.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.PERMISSIONS,
                         children: h.intl.string(h.t.WIDE1N)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(a.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
                         disabled: _,
                         children: h.intl.string(h.t['5//Mur'])
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(a.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
                         disabled: _,

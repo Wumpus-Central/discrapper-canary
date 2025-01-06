@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(313201),
     c = n(259580),
     d = n(404203),
@@ -23,17 +23,17 @@ function h(e) {
         className: m.container,
         children: [
             (0, i.jsx)(d.Z, {
-                className: s()(m.header, { [m.headerWithDescription]: g && null != l }),
+                className: a()(m.header, { [m.headerWithDescription]: g && null != l }),
                 onClick: p,
                 children: (e) => {
                     let { areaRef: t, handleStopPropagation: r } = e;
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(a.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, i.jsx)(a.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 onClick: r(p),
                                 'aria-label': u.intl.string(u.t.e5eQOz),
                                 'aria-controls': f,
@@ -53,8 +53,8 @@ function h(e) {
                     id: f,
                     children: [
                         null != l &&
-                            (0, i.jsx)(a.FormText, {
-                                type: a.FormText.Types.DESCRIPTION,
+                            (0, i.jsx)(s.FormText, {
+                                type: s.FormText.Types.DESCRIPTION,
                                 className: m.description,
                                 children: l
                             }),

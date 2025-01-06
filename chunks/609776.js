@@ -20,8 +20,8 @@ var l = t(200651),
     g = t(594174),
     v = t(626135),
     _ = t(570188),
-    j = t(427679),
-    I = t(930180),
+    I = t(427679),
+    j = t(930180),
     N = t(46920),
     C = t(157925),
     p = t(981631),
@@ -60,8 +60,8 @@ function E(e) {
 }
 function Z(e) {
     var n, t, a, f, g, Z, B, D;
-    let { channel: R, guild: A, header: L, error: y, loading: P, onSave: G, onEventSave: w, onClose: F, onSelectChannel: M, isEvent: z = !1, defaultOptions: U, isSlideReady: O = !0 } = e,
-        H = i.useMemo(() => j.Z.getStageInstanceByChannel(R.id), [R.id]),
+    let { channel: R, guild: A, header: y, error: L, loading: P, onSave: G, onEventSave: w, onClose: F, onSelectChannel: M, isEvent: z = !1, defaultOptions: U, isSlideReady: O = !0 } = e,
+        H = i.useMemo(() => I.Z.getStageInstanceByChannel(R.id), [R.id]),
         [V, q] = i.useState(null !== (t = null !== (n = null == U ? void 0 : U.topic) && void 0 !== n ? n : null == H ? void 0 : H.topic) && void 0 !== t ? t : ''),
         [W, K] = i.useState(null !== (a = null == U ? void 0 : U.description) && void 0 !== a ? a : ''),
         [Y] = i.useState(z),
@@ -75,8 +75,8 @@ function Z(e) {
         er = S.j8.GUILD_ONLY,
         [eo] = i.useState(null !== (Z = null !== (g = null == U ? void 0 : U.privacyLevel) && void 0 !== g ? g : null == H ? void 0 : H.privacy_level) && void 0 !== Z ? Z : er),
         [es, ec] = i.useState(null == U ? void 0 : U.recurrenceRule),
-        ed = (0, I._d)(R.id),
-        eu = (0, I.K3)(R.id),
+        ed = (0, j._d)(R.id),
+        eu = (0, j.K3)(R.id),
         [em, ex] = i.useState(!1),
         eh = (0, c.ZP)(R),
         ef = (0, d.q)(A),
@@ -112,7 +112,7 @@ function Z(e) {
         }
         null == G || G(n);
     };
-    let { color: ej, text: eI } =
+    let { color: eI, text: ej } =
             ((B = H),
             (D = eo),
             Y
@@ -145,7 +145,7 @@ function Z(e) {
             (0, l.jsxs)(s.ModalContent, {
                 className: k.modalContent,
                 children: [
-                    L,
+                    y,
                     (0, l.jsx)('div', {
                         className: k.blockedUsersContainer,
                         children: null == H && (ed > 0 || eu > 0) && (0, l.jsx)(N.mv, { channelId: R.id })
@@ -175,12 +175,12 @@ function Z(e) {
                                             className: k.warning,
                                             children: T.intl.string(T.t.AqTyaW)
                                         }),
-                                    null != y
+                                    null != L
                                         ? (0, l.jsx)(s.Text, {
                                               color: 'text-danger',
                                               variant: 'text-xs/normal',
                                               className: k.warning,
-                                              children: y.getAnyErrorMessage()
+                                              children: L.getAnyErrorMessage()
                                           })
                                         : null
                                 ]
@@ -261,11 +261,11 @@ function Z(e) {
             (0, l.jsxs)(s.ModalFooter, {
                 children: [
                     (0, l.jsx)(s.Button, {
-                        color: ej,
+                        color: eI,
                         onClick: e_,
                         disabled: '' === V || null == eo || (z && !eC),
                         submitting: P,
-                        children: eI
+                        children: ej
                     }),
                     (0, l.jsx)(s.Button, {
                         color: s.Button.Colors.PRIMARY,

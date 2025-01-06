@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    s = n(430824),
-    a = n(723047),
+    a = n(430824),
+    s = n(723047),
     o = n(727843),
     c = n(290348),
     d = n(971792),
@@ -24,24 +24,24 @@ function p() {
         C = (0, d.Z)(t, e),
         { setCurrentTab: v } = (0, h.dw)(),
         _ = () => v(h.ue.EMOJIS),
-        I = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
+        I = (0, r.e7)([a.Z], () => a.Z.getGuild(t)),
         N = null == I ? void 0 : I.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
         null == p ? f(new Set(e)) : f(new Set([...p, ...e]));
     }
-    function b(e) {
+    function j(e) {
         let t = new Set(p);
         t.delete(e), f(t);
     }
-    let j = (0, a.mY)();
+    let b = (0, s.mY)();
     return (0, i.jsxs)(l.FormSection, {
         title: g.intl.string(g.t.D0qeOz),
-        disabled: j,
+        disabled: b,
         children: [
             (0, i.jsxs)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
-                disabled: j,
+                disabled: b,
                 children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, i.jsx)(m.E, {
@@ -49,14 +49,14 @@ function p() {
                 guildId: t,
                 onRemoveEmoji: function (e) {
                     e.roles.filter((e) => e !== (null == C ? void 0 : C.id)).length > 0
-                        ? b(e.id)
+                        ? j(e.id)
                         : (0, l.openModalLazy)(async () => {
                               let { default: t } = await n.e('59128').then(n.bind(n, 28564));
                               return (n) =>
                                   (0, i.jsx)(t, {
                                       ...n,
                                       onConfirmDelete: () => {
-                                          b(e.id), n.onClose();
+                                          j(e.id), n.onClose();
                                       }
                                   });
                           });
@@ -79,7 +79,7 @@ function p() {
                             });
                     });
                 },
-                disabled: j,
+                disabled: b,
                 children: g.intl.string(g.t.ouOOV1)
             })
         ]

@@ -1,16 +1,16 @@
-var l,
-    i,
+var i,
+    l,
     r,
     a,
     s,
-    o,
-    c = t(442837),
+    c,
+    o = t(442837),
     u = t(570140),
     d = t(314897),
     h = t(900849);
-((l = s || (s = {})).UNSET = 'unset'), (l.FETCHING = 'fetching'), (l.FAILED = 'failed'), (l.SUCCEEDED = 'succeeded');
+((i = s || (s = {})).UNSET = 'unset'), (i.FETCHING = 'fetching'), (i.FAILED = 'failed'), (i.SUCCEEDED = 'succeeded');
 let m = {};
-class f extends (o = c.ZP.Store) {
+class f extends (c = o.ZP.Store) {
     initialize() {
         this.waitFor(d.default);
     }
@@ -28,14 +28,14 @@ class f extends (o = c.ZP.Store) {
     }
 }
 (a = 'GuildPopoutStore'),
-    (r = 'displayName') in (i = f)
-        ? Object.defineProperty(i, r, {
+    (r = 'displayName') in (l = f)
+        ? Object.defineProperty(l, r, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = a),
+        : (l[r] = a),
     (n.Z = new f(u.Z, {
         GUILD_POPOUT_FETCH_START: function (e) {
             let { guildId: n } = e;
@@ -46,10 +46,10 @@ class f extends (o = c.ZP.Store) {
         },
         GUILD_POPOUT_FETCH_SUCCESS: function (e) {
             let { guildId: n, guild: t } = e,
-                l = (0, h.PP)(t);
+                i = (0, h.PP)(t);
             m[n] = {
                 ...m[n],
-                guild: l,
+                guild: i,
                 fetchState: 'succeeded'
             };
         },

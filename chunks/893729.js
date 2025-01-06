@@ -1,12 +1,12 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return I;
     }
 });
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     u = n(442837),
     a = n(481060),
     s = n(518738),
@@ -14,47 +14,47 @@ var i = n(200651),
     d = n(3148),
     f = n(753206),
     _ = n(594174),
-    p = n(5192),
-    g = n(981631),
-    E = n(388032),
-    m = n(674055);
-function I(e) {
-    var t;
-    let { guildId: n, role: o, theme: I, content: h = E.intl.string(E.t['6OSasb']), className: C } = e,
-        S = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
-        T = p.ZP.useName(n, null, S),
-        v = (0, s.Kz)(o),
-        b = r.useMemo(
+    E = n(5192),
+    p = n(981631),
+    m = n(388032),
+    g = n(674055);
+function I(t) {
+    var e;
+    let { guildId: n, role: l, theme: I, content: S = m.intl.string(m.t['6OSasb']), className: h } = t,
+        C = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
+        T = E.ZP.useName(n, null, C),
+        v = (0, s.Kz)(l),
+        N = r.useMemo(
             () =>
                 (0, c.e5)({
                     ...(0, d.ZP)({
                         channelId: '0',
-                        content: h,
+                        content: S,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: S
+                        author: C
                     }),
-                    state: g.yb.SENT,
+                    state: p.yb.SENT,
                     id: '0'
                 }),
-            [S, h]
+            [C, S]
         ),
-        N = {
+        A = {
             nick: T,
-            colorString: null !== (t = o.colorString) && void 0 !== t ? t : void 0
+            colorString: null !== (e = l.colorString) && void 0 !== e ? e : void 0
         };
     return (0, i.jsx)(a.ThemeProvider, {
         theme: I,
-        children: (e) =>
+        children: (t) =>
             (0, i.jsx)('div', {
-                className: l()(e, m.container, C),
+                className: o()(t, g.container, h),
                 children: (0, i.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: N,
+                    author: A,
                     roleIcon: v,
-                    message: b,
+                    message: N,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

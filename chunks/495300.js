@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(704215),
     c = n(481060),
     d = n(605236),
@@ -24,19 +24,19 @@ var i = n(200651),
     I = n(850864),
     N = n(729995),
     T = n(966301),
-    b = n(707076),
-    j = n(213956),
+    j = n(707076),
+    b = n(213956),
     S = n(388032),
     E = n(646231);
 function R() {
-    let e = (0, a.e7)([m.Z], () => m.Z.getGuildId());
+    let e = (0, s.e7)([m.Z], () => m.Z.getGuildId());
     return null == e ? null : (0, i.jsx)(y, { guildId: e });
 }
 function y(e) {
     let t,
         { guildId: n } = e,
-        l = (0, a.e7)([f.Z], () => f.Z.getCurrentPage()),
-        m = (0, a.e7)([f.Z], () => {
+        l = (0, s.e7)([f.Z], () => f.Z.getCurrentPage()),
+        m = (0, s.e7)([f.Z], () => {
             let e = (0, C.lg)(l);
             return null != e && !f.Z.isEducationUpsellDismissed(e);
         }),
@@ -54,10 +54,10 @@ function y(e) {
                       completed: !0,
                       guildId: n
                   })
-                : (0, i.jsx)(b.Z, {});
+                : (0, i.jsx)(j.Z, {});
             break;
         case C.PG.SAFETY_CHECK:
-            t = (0, i.jsx)(j.Z, { hideChangelog: !0 });
+            t = (0, i.jsx)(b.Z, { hideChangelog: !0 });
             break;
         case C.PG.DEFAULT_CHANNELS:
             t = (0, i.jsx)(_.Z, { saveOnClose: !p });
@@ -75,11 +75,11 @@ function y(e) {
             });
     }
     return (0, i.jsxs)('div', {
-        className: s()(E.onboardingContainer, { [E.upsellOnTop]: R }),
+        className: a()(E.onboardingContainer, { [E.upsellOnTop]: R }),
         children: [
             !p &&
                 l !== C.PG.LANDING &&
-                (0, i.jsx)(Z, {
+                (0, i.jsx)(A, {
                     setOnboardingStep: g.$K,
                     page: l,
                     homeSettingsEnabled: !0
@@ -111,21 +111,21 @@ function y(e) {
         ]
     });
 }
-function Z(e) {
+function A(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: r } = e,
-        l = (0, a.e7)([f.Z], () => f.Z.hasErrors()),
+        l = (0, s.e7)([f.Z], () => f.Z.hasErrors()),
         o = (e) => {
             if (!l) return () => n(e);
         },
-        d = (0, a.e7)([p.Z], () => p.Z.advancedMode);
+        d = (0, s.e7)([p.Z], () => p.Z.advancedMode);
     return (0, i.jsxs)('div', {
         className: E.progressContainer,
         children: [
             (0, i.jsxs)(c.Clickable, {
-                className: s()(E.progressBarContainer, E.clickableProgressBar),
+                className: a()(E.progressBarContainer, E.clickableProgressBar),
                 onClick: o(C.PG.SAFETY_CHECK),
                 children: [
-                    (0, i.jsx)('div', { className: s()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.SAFETY_CHECK }) }),
+                    (0, i.jsx)('div', { className: a()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.SAFETY_CHECK }) }),
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
@@ -134,10 +134,10 @@ function Z(e) {
                 ]
             }),
             (0, i.jsxs)(c.Clickable, {
-                className: s()(E.progressBarContainer, E.clickableProgressBar),
+                className: a()(E.progressBarContainer, E.clickableProgressBar),
                 onClick: o(C.PG.DEFAULT_CHANNELS),
                 children: [
-                    (0, i.jsx)('div', { className: s()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.DEFAULT_CHANNELS }) }),
+                    (0, i.jsx)('div', { className: a()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.DEFAULT_CHANNELS }) }),
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
@@ -146,10 +146,10 @@ function Z(e) {
                 ]
             }),
             (0, i.jsxs)(c.Clickable, {
-                className: s()(E.progressBarContainer, E.clickableProgressBar),
+                className: a()(E.progressBarContainer, E.clickableProgressBar),
                 onClick: o(C.PG.CUSTOMIZATION_QUESTIONS),
                 children: [
-                    (0, i.jsx)('div', { className: s()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.CUSTOMIZATION_QUESTIONS }) }),
+                    (0, i.jsx)('div', { className: a()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.CUSTOMIZATION_QUESTIONS }) }),
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
@@ -159,10 +159,10 @@ function Z(e) {
             }),
             r &&
                 (0, i.jsxs)(c.Clickable, {
-                    className: s()(E.progressBarContainer, E.clickableProgressBar),
+                    className: a()(E.progressBarContainer, E.clickableProgressBar),
                     onClick: o(C.PG.HOME_SETTINGS),
                     children: [
-                        (0, i.jsx)('div', { className: s()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.HOME_SETTINGS }) }),
+                        (0, i.jsx)('div', { className: a()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.HOME_SETTINGS }) }),
                         (0, i.jsx)(c.Text, {
                             color: t === C.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
                             variant: 'text-xs/medium',
@@ -173,7 +173,7 @@ function Z(e) {
             (0, i.jsxs)('div', {
                 className: E.progressBarContainer,
                 children: [
-                    (0, i.jsx)('div', { className: s()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.REVIEW }) }),
+                    (0, i.jsx)('div', { className: a()(E.progressBar, { [E.progressBarCurrent]: t === C.PG.REVIEW }) }),
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.REVIEW ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',

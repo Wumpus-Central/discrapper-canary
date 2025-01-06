@@ -1,6 +1,6 @@
-n.d(t, {
+n.d(e, {
     C: function () {
-        return l;
+        return o;
     },
     k: function () {
         return u;
@@ -8,21 +8,21 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(937615),
-    o = n(388032);
-function l(e) {
+    l = n(388032);
+function o(t) {
     return i.useMemo(() => {
-        if (null == e) return;
-        let t = null != e.role_id,
-            n = e.attachments_count > 0;
-        if (t && n) return o.intl.string(o.t.ih4QMT);
-        if (t) return o.intl.string(o.t.o9xphY);
-        if (n) return o.intl.string(o.t.DWYJub);
-    }, [e]);
+        if (null == t) return;
+        let e = null != t.role_id,
+            n = t.attachments_count > 0;
+        if (e && n) return l.intl.string(l.t.ih4QMT);
+        if (e) return l.intl.string(l.t.o9xphY);
+        if (n) return l.intl.string(l.t.DWYJub);
+    }, [t]);
 }
-function u(e) {
+function u(t) {
     return i.useMemo(() => {
-        if ((null == e ? void 0 : e.price) == null) return;
-        let { amount: t, currency: n } = e.price;
-        return (0, r.T4)(t, n);
-    }, [e]);
+        if ((null == t ? void 0 : t.price) == null) return;
+        let { amount: e, currency: n } = t.price;
+        return (0, r.T4)(e, n);
+    }, [t]);
 }

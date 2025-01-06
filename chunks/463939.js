@@ -6,9 +6,9 @@ n.d(t, {
 var i,
     r,
     l = n(200651),
-    s = n(192379),
-    a = n(512722),
-    o = n.n(a),
+    a = n(192379),
+    s = n(512722),
+    o = n.n(s),
     c = n(913527),
     d = n.n(c),
     u = n(481060),
@@ -33,9 +33,9 @@ let N = (e) => {
 };
 function T(e) {
     let { item: t } = e,
-        { ppgStatus: n, payoutStatus: i, ppgDeferralReasons: r, periodEndDate: s } = (0, p.j0)(t),
-        a = null != s ? d()(s).add(15, 'days').toISOString() : void 0,
-        o = (0, m.Zo)(a, 'MMM D');
+        { ppgStatus: n, payoutStatus: i, ppgDeferralReasons: r, periodEndDate: a } = (0, p.j0)(t),
+        s = null != a ? d()(a).add(15, 'days').toISOString() : void 0,
+        o = (0, m.Zo)(s, 'MMM D');
     switch (n) {
         case v.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
@@ -108,7 +108,7 @@ function T(e) {
     }
     return null;
 }
-let b = (0, f.i$)({
+let j = (0, f.i$)({
         key: 'AMOUNT ',
         cellClassName: I.amountColumn,
         renderHeader() {
@@ -128,7 +128,7 @@ let b = (0, f.i$)({
         },
         getAmount: (e) => e.amount
     }),
-    j = (0, C.rM)(
+    b = (0, C.rM)(
         [
             (0, C.Fd)({
                 key: 'PERIOD',
@@ -142,9 +142,9 @@ let b = (0, f.i$)({
                 }
             }),
             (0, C.Fd)({
-                ...b,
-                renderContent: b.render,
-                renderExpandedContent: (e, t) => b.render(e, t)
+                ...j,
+                renderContent: j.render,
+                renderExpandedContent: (e, t) => j.render(e, t)
             }),
             (0, f.wy)({
                 key: 'STATUS ',
@@ -186,7 +186,7 @@ function S(e) {
                     };
                 })
         }),
-        a = s.useMemo(
+        s = a.useMemo(
             () => ({
                 ListingIdLabel: t,
                 ...i
@@ -194,8 +194,8 @@ function S(e) {
             [i, t]
         );
     return (0, l.jsx)(f.ZP, {
-        columns: j,
+        columns: b,
         data: r,
-        cellProps: a
+        cellProps: s
     });
 }

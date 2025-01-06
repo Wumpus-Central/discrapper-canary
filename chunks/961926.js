@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(536982),
-    s = n(285318),
-    a = n(456677),
+    a = n(285318),
+    s = n(456677),
     o = n(55889),
     c = n(300453),
     d = n(620436),
@@ -37,7 +37,7 @@ function g(e) {
                     step: 1,
                     header: m.intl.string(m.t.CX5YfX),
                     children: [
-                        (0, i.jsx)(s.Z, {
+                        (0, i.jsx)(a.Z, {
                             rule: x,
                             onChangeRule: p
                         }),
@@ -53,7 +53,7 @@ function g(e) {
                 (0, i.jsx)(c.Z, {
                     step: 2,
                     header: m.intl.string(m.t['18TOiY']),
-                    children: (0, i.jsx)(a.Z, {
+                    children: (0, i.jsx)(s.Z, {
                         rule: x,
                         onChangeRule: p
                     })

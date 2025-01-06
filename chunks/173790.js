@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return E;
     }
 }),
     t(47120);
@@ -24,12 +24,12 @@ var i = t(200651),
     N = t(388032),
     g = t(370913),
     A = t(413097);
-function b(e) {
+function E(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
-        b = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
+        E = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         I = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        P = (0, h.ye)(I) ? E : x.Z,
+        P = (0, h.ye)(I) ? b : x.Z,
         j = l.useRef(null),
         [y, S] = l.useState(!1),
         { iconURL: T, name: L } = l.useMemo(
@@ -75,7 +75,7 @@ function b(e) {
                     sectionName: c,
                     hasCommands: y
                 }),
-                b === p._b.TEXT
+                E === p._b.TEXT
                     ? (0, i.jsx)(C.Z, {
                           channel: t,
                           application: I,
@@ -88,7 +88,7 @@ function b(e) {
         })
     );
 }
-function E(e) {
+function b(e) {
     let { channel: n, application: t, sectionName: l, hasCommands: a } = e,
         o = (0, c.Z)({
             applicationId: t.id,

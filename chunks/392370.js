@@ -29,11 +29,11 @@ var i = t(192379),
     N = t(783097),
     g = t(689079),
     A = t(665692);
-function b(e, n) {
+function E(e, n) {
     let t = v.Z.getScoreWithoutLoadingLatest(e.id);
     return v.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
-function E(e, n) {
+function b(e, n) {
     let t = (0, N.$d)(e),
         i = (0, N.$d)(n);
     return (0, m.un)(t, i);
@@ -296,7 +296,7 @@ function P(e) {
                         };
                     })(e)
                 ],
-                sortComparers: [b, E]
+                sortComparers: [E, b]
             });
         }, [s, f, o, n, t, P, j]),
         L = S.length > 0,

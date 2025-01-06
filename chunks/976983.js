@@ -11,8 +11,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    s = n(392711),
-    a = n.n(s),
+    a = n(392711),
+    s = n.n(a),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -24,22 +24,22 @@ var r = n(120356),
     p = n(388032),
     f = n(439217);
 function C(e) {
-    var t, r, s, c;
-    let { guild: u, prompt: C, singleColumn: v, promptIndex: _, option: I, hasError: N, onDragStart: T, onDragComplete: b, onDragReset: j } = e,
+    var t, r, a, c;
+    let { guild: u, prompt: C, singleColumn: v, promptIndex: _, option: I, hasError: N, onDragStart: T, onDragComplete: j, onDragReset: b } = e,
         S = null,
-        E = a().findIndex(C.options, (e) => e.id === I.id),
+        E = s().findIndex(C.options, (e) => e.id === I.id),
         {
             drag: R,
             dragSourcePosition: y,
-            drop: Z,
-            setIsDraggable: A
+            drop: A,
+            setIsDraggable: Z
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
             index: E,
             optionId: I.id,
             onDragStart: T,
-            onDragComplete: b,
-            onDragReset: j
+            onDragComplete: j,
+            onDragReset: b
         }),
         { customEmoji: L, unicodeEmoji: D } = (0, m.Z)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (r = I.emoji) || void 0 === r ? void 0 : r.name);
     return (
@@ -69,9 +69,9 @@ function C(e) {
                             }
                         });
                 }),
-            onMouseEnter: () => A(!0),
-            onMouseLeave: () => A(!1),
-            innerRef: (e) => R(Z(e)),
+            onMouseEnter: () => Z(!0),
+            onMouseLeave: () => Z(!1),
+            innerRef: (e) => R(A(e)),
             children: [
                 (0, i.jsx)('div', {
                     className: f.dragContainer,
@@ -87,7 +87,7 @@ function C(e) {
                         (0, i.jsx)('div', {
                             className: f.emoji,
                             children: (0, i.jsx)(h.Z, {
-                                emojiId: null === (s = I.emoji) || void 0 === s ? void 0 : s.id,
+                                emojiId: null === (a = I.emoji) || void 0 === a ? void 0 : a.id,
                                 emojiName: null === (c = I.emoji) || void 0 === c ? void 0 : c.name,
                                 defaultComponent: null
                             })
@@ -123,7 +123,7 @@ function C(e) {
     );
 }
 function v(e) {
-    let { guild: t, prompt: r, promptIndex: s, singleColumn: a } = e,
+    let { guild: t, prompt: r, promptIndex: a, singleColumn: s } = e,
         { dropdownsAllowed: d } = (0, u.Ug)(t.id),
         m = () => {
             (0, o.openModalLazy)(async () => {
@@ -138,14 +138,14 @@ function v(e) {
                                 options: [...r.options, e]
                             }),
                         onDelete: () => {},
-                        index: s
+                        index: a
                     });
             });
         };
     return (0, i.jsx)(o.Clickable, {
         className: l()(f.optionCard, f.addOptionCard, {
             [f.addFirstOptionCard]: 0 === r.options.length,
-            [f.singleColumn]: a
+            [f.singleColumn]: s
         }),
         onClick: () => {
             d && r.options.length + 1 === x.fY

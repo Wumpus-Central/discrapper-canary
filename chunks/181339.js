@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(106351),
+    a = n.n(l),
+    s = n(106351),
     o = n(442837),
     c = n(481060),
     d = n(367907),
@@ -28,10 +28,10 @@ var i = n(200651),
     I = n(434404),
     N = n(449226),
     T = n(981631),
-    b = n(388032),
-    j = n(232203);
+    j = n(388032),
+    b = n(232203);
 function S(e) {
-    let { guild: t, isExpanded: n, selectedChannelId: l, className: a } = e,
+    let { guild: t, isExpanded: n, selectedChannelId: l, className: s } = e,
         x = (0, h.BT)(t),
         f = t.canHaveRaidActivityAlerts(),
         [C, v] = r.useState(f),
@@ -54,31 +54,31 @@ function S(e) {
                     (0, d.yw)(T.rMx.GUILD_RAID_ALERTS_SETUP, e);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), v(!f);
+                (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE)), v(!f);
             }
         };
     return (0, i.jsxs)('div', {
-        className: s()(j.itemWrapper, a),
+        className: a()(b.itemWrapper, s),
         children: [
             (0, i.jsxs)('div', {
-                className: j.itemContent,
+                className: b.itemContent,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: b.intl.string(b.t.Qp98s7)
+                        children: j.intl.string(j.t.Qp98s7)
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: b.intl.string(b.t.Mg843t)
+                        children: j.intl.string(j.t.Mg843t)
                     }),
                     n || null == l
                         ? null
                         : (0, i.jsxs)(c.Text, {
                               color: 'interactive-normal',
                               variant: 'text-xs/medium',
-                              className: j.valuePill,
+                              className: b.valuePill,
                               children: [
                                   (0, i.jsx)(c.TextIcon, {
                                       size: 'xxs',
@@ -108,7 +108,7 @@ function E(e) {
                 let e = f.ZP.getChannels(n.id)
                     [f.sH].filter((e) => {
                         let { channel: t } = e;
-                        return t.type === a.d.GUILD_TEXT && C.Z.can(T.Plq.SEND_MESSAGES, t);
+                        return t.type === s.d.GUILD_TEXT && C.Z.can(T.Plq.SEND_MESSAGES, t);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -135,17 +135,17 @@ function E(e) {
                     (0, d.yw)(T.rMx.GUILD_RAID_ALERTS_SETUP, t);
                 }
             } catch (e) {
-                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t['46Rs3t']), c.ToastType.FAILURE)), l(h);
+                (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE)), l(h);
             }
         };
     return (0, i.jsx)('div', {
-        className: s()(j.itemBodyContainer, m),
+        className: a()(b.itemBodyContainer, m),
         children: (0, i.jsxs)('div', {
-            className: j.itemBodyInner,
+            className: b.itemBodyInner,
             children: [
-                (0, i.jsx)(c.FormTitle, { children: b.intl.string(b.t.sMkYEx) }),
+                (0, i.jsx)(c.FormTitle, { children: j.intl.string(j.t.sMkYEx) }),
                 (0, i.jsx)(c.SearchableSelect, {
-                    wrapperClassName: j.bringToFront,
+                    wrapperClassName: b.bringToFront,
                     options: x,
                     onChange: p,
                     value: r,
@@ -154,7 +154,7 @@ function E(e) {
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'interactive-normal',
-                    children: b.intl.string(b.t['1QxN9P'])
+                    children: j.intl.string(j.t['1QxN9P'])
                 })
             ]
         })
@@ -163,17 +163,17 @@ function E(e) {
 function R(e) {
     var t, n;
     let { guild: l } = e,
-        [s, a] = r.useState(!1),
+        [a, s] = r.useState(!1),
         o = null !== (t = l.safetyAlertsChannelId) && void 0 !== t ? t : null,
         [c, d] = r.useState(null != o ? o : null !== (n = null == l ? void 0 : l.publicUpdatesChannelId) && void 0 !== n ? n : null);
     return (0, i.jsx)(x.Z, {
         renderHeader: (0, i.jsx)(S, {
-            isExpanded: s,
+            isExpanded: a,
             guild: l,
             selectedChannelId: c
         }),
-        isExpanded: s,
-        onExpand: () => a(!s),
+        isExpanded: a,
+        onExpand: () => s(!a),
         children: (0, i.jsx)(E, {
             guild: l,
             selectedChannelId: c,
@@ -184,21 +184,21 @@ function R(e) {
 function y(e) {
     var t, n;
     let { guild: l } = e,
-        s = null !== (t = l.safetyAlertsChannelId) && void 0 !== t ? t : null,
-        [a, o] = r.useState(null != s ? s : null !== (n = null == l ? void 0 : l.publicUpdatesChannelId) && void 0 !== n ? n : null);
+        a = null !== (t = l.safetyAlertsChannelId) && void 0 !== t ? t : null,
+        [s, o] = r.useState(null != a ? a : null !== (n = null == l ? void 0 : l.publicUpdatesChannelId) && void 0 !== n ? n : null);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(S, {
                 isExpanded: !0,
                 guild: l,
-                selectedChannelId: a,
-                className: j.noPadding
+                selectedChannelId: s,
+                className: b.noPadding
             }),
             (0, i.jsx)(E, {
                 guild: l,
-                selectedChannelId: a,
+                selectedChannelId: s,
                 setSelectedChannelId: o,
-                className: j.noPadding
+                className: b.noPadding
             })
         ]
     });

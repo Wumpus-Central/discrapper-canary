@@ -1,9 +1,9 @@
-n.d(t, {
+n.d(e, {
     JE: function () {
         return u;
     },
     ab: function () {
-        return l;
+        return o;
     },
     iG: function () {
         return a;
@@ -17,41 +17,41 @@ n.d(t, {
 });
 var i = n(293810),
     r = n(474936),
-    o = n(388032);
-function l(e) {
-    return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
+    l = n(388032);
+function o(t) {
+    return 'roles' in t ? 'emoji-'.concat(t.id) : ''.concat(t.ref_type, '-').concat(t.emoji_id, '-').concat(t.name, '-').concat(t.ref_id);
 }
-function u(e) {
-    let { interval: t, interval_count: n } = e;
-    return o.intl.format(
-        (function (e) {
-            switch (e) {
+function u(t) {
+    let { interval: e, interval_count: n } = t;
+    return l.intl.format(
+        (function (t) {
+            switch (t) {
                 case r.rV.DAY:
-                    return o.t['3rUmPT'];
+                    return l.t['3rUmPT'];
                 case r.rV.MONTH:
-                    return o.t['zuN54+'];
+                    return l.t['zuN54+'];
                 case r.rV.YEAR:
-                    return o.t.cuSp8f;
+                    return l.t.cuSp8f;
             }
-        })(t),
+        })(e),
         { count: n }
     );
 }
-function a(e) {
-    let { interval: t, interval_count: n } = e;
-    switch (t) {
+function a(t) {
+    let { interval: e, interval_count: n } = t;
+    switch (e) {
         case r.rV.DAY:
-            if (n > 0 && n % 7 == 0) return o.intl.formatToPlainString(o.t.iVZYys, { weeks: n / 7 });
-            return o.intl.formatToPlainString(o.t.jzH70d, { days: n });
+            if (n > 0 && n % 7 == 0) return l.intl.formatToPlainString(l.t.iVZYys, { weeks: n / 7 });
+            return l.intl.formatToPlainString(l.t.jzH70d, { days: n });
         case r.rV.MONTH:
-            return o.intl.formatToPlainString(o.t.erUSmJ, { months: n });
+            return l.intl.formatToPlainString(l.t.erUSmJ, { months: n });
         case r.rV.YEAR:
-            return o.intl.formatToPlainString(o.t.IfYQVF, { years: n });
+            return l.intl.formatToPlainString(l.t.IfYQVF, { years: n });
     }
 }
-function s(e) {
-    return e.ref_type === i.Qs.CHANNEL;
+function s(t) {
+    return t.ref_type === i.Qs.CHANNEL;
 }
-function c(e) {
-    return e.ref_type === i.Qs.INTANGIBLE;
+function c(t) {
+    return t.ref_type === i.Qs.INTANGIBLE;
 }

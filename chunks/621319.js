@@ -3,22 +3,22 @@ n.d(t, {
         return o;
     },
     H7: function () {
-        return a;
+        return s;
     },
     en: function () {
         return c;
     },
     xv: function () {
-        return s;
+        return a;
     }
 });
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-function s() {
+function a() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_CLOSE' });
 }
-function a() {
+function s() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_VANITY_URL_RESET' });
 }
 function o(e) {

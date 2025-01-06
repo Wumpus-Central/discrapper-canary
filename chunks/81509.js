@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    s = n(481060),
-    a = n(596454),
+    a = n(481060),
+    s = n(596454),
     o = n(782568),
     c = n(377171),
     d = n(565138),
@@ -25,7 +25,7 @@ function f(e) {
         children: [
             (0, i.jsx)('div', {
                 className: p.subscriberCountValue,
-                children: (0, i.jsx)(s.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     color: 'always-white',
                     children: t
@@ -35,7 +35,7 @@ function f(e) {
                 className: p.subscriberCountText,
                 children: [
                     (0, i.jsx)(g.Z, { color: c.Z.WHITE }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'always-white',
                         children: x.intl.string(x.t['3NNXPT'])
@@ -47,7 +47,7 @@ function f(e) {
 }
 function C(e) {
     let { guildName: t, guildIcon: n, guildAvatarUrl: r, subscriberCount: l } = e,
-        a = new u.ZP({
+        s = new u.ZP({
             name: t,
             icon: n
         });
@@ -57,13 +57,13 @@ function C(e) {
             (0, i.jsx)(d.Z, {
                 className: p.guildCardHeaderAvatar,
                 iconSrc: r,
-                guild: a,
+                guild: s,
                 size: d.Z.Sizes.LARGE
             }),
             (0, i.jsxs)('div', {
                 className: p.guildCardHeaderTitle,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
                         children: t
@@ -79,12 +79,12 @@ function v(e) {
     return (0, i.jsxs)('div', {
         className: p.guildCardQuote,
         children: [
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-lg/normal',
                 color: 'interactive-active',
                 children: t
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'interactive-active',
                 children: x.intl.format(x.t.m0b6Ki, {
@@ -106,7 +106,7 @@ function _(e) {
         children: c
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(s.Text, {
+                      (0, i.jsx)(a.Text, {
                           variant: 'text-xs/semibold',
                           color: 'header-primary',
                           className: p.premiumEmojisTitle,
@@ -120,7 +120,7 @@ function _(e) {
                                   children: [
                                       t.map((e) =>
                                           (0, i.jsx)(
-                                              a.Z,
+                                              s.Z,
                                               {
                                                   className: p.emoji,
                                                   emojiId: e.id,
@@ -133,7 +133,7 @@ function _(e) {
                                       null != n &&
                                           (0, i.jsx)('div', {
                                               className: p.extraEmojiCount,
-                                              children: (0, i.jsxs)(s.Text, {
+                                              children: (0, i.jsxs)(a.Text, {
                                                   variant: 'text-md/semibold',
                                                   color: 'text-normal',
                                                   children: ['+', n]
@@ -142,10 +142,10 @@ function _(e) {
                                   ]
                               }),
                               (0, i.jsx)('div', {
-                                  children: (0, i.jsx)(s.Button, {
+                                  children: (0, i.jsx)(a.Button, {
                                       className: p.viewServerButton,
                                       innerClassName: p.viewServerButtonText,
-                                      color: s.Button.Colors.CUSTOM,
+                                      color: a.Button.Colors.CUSTOM,
                                       disabled: null == r,
                                       onClick: d,
                                       children: x.intl.string(x.t.mQ2IGR)
@@ -155,10 +155,10 @@ function _(e) {
                       })
                   ]
               })
-            : (0, i.jsx)(s.Button, {
+            : (0, i.jsx)(a.Button, {
                   className: l()(p.viewServerButton, p.roundedEdges),
                   innerClassName: p.viewServerButtonText,
-                  color: s.Button.Colors.CUSTOM,
+                  color: a.Button.Colors.CUSTOM,
                   disabled: null == r,
                   onClick: d,
                   children: x.intl.string(x.t.mQ2IGR)
@@ -167,13 +167,13 @@ function _(e) {
 }
 function I(e) {
     let { highlightedCreatorGuild: t } = e,
-        { guild_id: n, quote: r, quote_attribution: l, quote_attribution_title: a } = t,
+        { guild_id: n, quote: r, quote_attribution: l, quote_attribution_title: s } = t,
         o = (0, m.Z)(n, 4, 60),
         { isLoading: c, hasAllImperativeDetails: d } = o;
     if (c)
         return (0, i.jsx)('div', {
             className: p.guildCard,
-            children: (0, i.jsx)(s.Spinner, {})
+            children: (0, i.jsx)(a.Spinner, {})
         });
     if (!d) return null;
     let { guildIcon: u, guildName: h, guildAvatarUrl: g, subscriberCount: x, emojisToShow: f, notShownEmojiCount: I, storePageUrl: N } = o.details;
@@ -189,7 +189,7 @@ function I(e) {
             (0, i.jsx)(v, {
                 quote: r,
                 quoteAttribution: l,
-                quoteAttributionTitle: a
+                quoteAttributionTitle: s
             }),
             (0, i.jsx)(_, {
                 emojisToShow: f,
@@ -203,12 +203,12 @@ function N(e) {
     let { highlightedCreators: t } = e;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: x.intl.string(x.t['tJp+QU'])
             }),
-            (0, i.jsx)(s.Spacer, { size: 24 }),
+            (0, i.jsx)(a.Spacer, { size: 24 }),
             (0, i.jsx)(h.Z, {
                 carouselClassName: p.creatorGuildCarousel,
                 items: t,

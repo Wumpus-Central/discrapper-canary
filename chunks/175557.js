@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(108930),
     l = n(86406),
-    s = n(146068),
-    a = n(308545),
+    a = n(146068),
+    s = n(308545),
     o = n(397697),
     c = n(129871),
     d = n(206851),
@@ -29,11 +29,11 @@ function g(e) {
         case h.qC.WARP_TUNNEL:
             return (0, i.jsx)(u.Z, { ...n });
         case h.qC.HOUSE:
-            return (0, i.jsx)(s.Z, { ...n });
+            return (0, i.jsx)(a.Z, { ...n });
         case h.qC.HEIGHTMAP:
             return (0, i.jsx)(l.Z, { ...n });
         case h.qC.MESH:
-            return (0, i.jsx)(a.Z, { ...n });
+            return (0, i.jsx)(s.Z, { ...n });
         case h.qC.SPATTER:
             return (0, i.jsx)(d.Z, { ...n });
     }

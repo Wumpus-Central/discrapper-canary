@@ -1,9 +1,9 @@
 n(47120);
 var i,
     r = n(200651),
-    l = n(192379),
-    a = n(846519);
-function o(e, t, n) {
+    a = n(192379),
+    o = n(846519);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-class s extends (i = l.Component) {
+class l extends (i = a.Component) {
     static getDerivedStateFromProps(e) {
         return e.disable ? { hovered: !1 } : null;
     }
@@ -32,11 +32,11 @@ class s extends (i = l.Component) {
         let n,
             i,
             r,
-            l,
-            { props: a } = this;
-        let o = ((n = a), (i = this.state), !n.disable && !(i.hovered && n.pauseOnHover));
-        let s = ((r = e), (l = t), !r.disable && !(l.hovered && r.pauseOnHover));
-        (o && !s) || e.interval !== a.interval ? this.startTimer() : !o && s && this.stopTimer();
+            a,
+            { props: o } = this;
+        let s = ((n = o), (i = this.state), !n.disable && !(i.hovered && n.pauseOnHover));
+        let l = ((r = e), (a = t), !r.disable && !(a.hovered && r.pauseOnHover));
+        (s && !l) || e.interval !== o.interval ? this.startTimer() : !s && l && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -66,18 +66,18 @@ class s extends (i = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'timer', new a.Xp()),
-            o(this, 'state', { hovered: !1 }),
-            o(this, 'handlePause', () => {
+            s(this, 'timer', new o.Xp()),
+            s(this, 'state', { hovered: !1 }),
+            s(this, 'handlePause', () => {
                 !this.state.hovered && this.setState({ hovered: !0 });
             }),
-            o(this, 'handleResume', () => {
+            s(this, 'handleResume', () => {
                 this.setState({ hovered: !1 });
             });
     }
 }
-o(s, 'defaultProps', {
+s(l, 'defaultProps', {
     disable: !1,
     pauseOnHover: !1
 }),
-    (t.Z = s);
+    (t.Z = l);

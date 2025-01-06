@@ -1,38 +1,38 @@
-s.d(n, {
+e.d(n, {
     Z: function () {
-        return l;
+        return c;
     }
 });
-var e = s(200651);
-s(192379);
-var i = s(120356),
-    r = s.n(i),
-    o = s(776394),
-    c = s(742795),
-    a = s(200289);
-function l(t) {
-    let { Icon: n, className: s } = t;
-    return (0, e.jsx)('div', {
-        className: r()(o.container, s),
-        children: (0, e.jsxs)('div', {
-            className: o.innerContainer,
+var i = e(200651);
+e(192379);
+var s = e(120356),
+    r = e.n(s),
+    l = e(776394),
+    o = e(742795),
+    a = e(200289);
+function c(t) {
+    let { Icon: n, className: e } = t;
+    return (0, i.jsx)('div', {
+        className: r()(l.container, e),
+        children: (0, i.jsxs)('div', {
+            className: l.innerContainer,
             children: [
-                (0, e.jsx)('img', {
+                (0, i.jsx)('img', {
                     src: a,
                     alt: '',
-                    className: o.star
+                    className: l.star
                 }),
-                (0, e.jsx)('div', {
-                    className: o.iconWrapper,
-                    children: (0, e.jsx)(n, {
+                (0, i.jsx)('div', {
+                    className: l.iconWrapper,
+                    children: (0, i.jsx)(n, {
                         width: 40,
                         height: 40
                     })
                 }),
-                (0, e.jsx)('img', {
-                    src: c,
+                (0, i.jsx)('img', {
+                    src: o,
                     alt: '',
-                    className: o.sparkle
+                    className: l.sparkle
                 })
             ]
         })

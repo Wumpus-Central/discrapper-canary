@@ -15,10 +15,10 @@ n.d(t, {
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-let s = 3628800000;
-function a(e, t) {
+let a = 3628800000;
+function s(e, t) {
     let n = new Date(),
-        r = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - s);
+        r = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - a);
     return i.tn.get({
         url: t(e),
         query: {
@@ -31,7 +31,7 @@ function a(e, t) {
     });
 }
 function o(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             r.Z.dispatch({
@@ -49,7 +49,7 @@ function o(e) {
     );
 }
 function c(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             r.Z.dispatch({
@@ -67,7 +67,7 @@ function c(e) {
     );
 }
 function d(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {
             let { body: n } = t,
                 i = n

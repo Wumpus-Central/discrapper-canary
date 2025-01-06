@@ -14,21 +14,21 @@ n.d(t, {
 var i,
     r,
     l = n(200651),
-    s = n(192379);
+    a = n(192379);
 ((r = i || (i = {}))[(r.BASIC_INFO = 0)] = 'BASIC_INFO'), (r[(r.TIERS = 1)] = 'TIERS'), (r[(r.PAYMENT = 2)] = 'PAYMENT'), (r[(r.EMOJIS = 3)] = 'EMOJIS');
-let a = s.createContext({
+let s = a.createContext({
     currentTab: 0,
     setCurrentTab: () => {
         throw Error('useTabBarState must be used within TabBarContextProvider');
     }
 });
 function o() {
-    return s.useContext(a);
+    return a.useContext(s);
 }
 function c(e) {
     let { initialTab: t, children: n } = e,
-        [i, r] = s.useState(t);
-    return (0, l.jsx)(a.Provider, {
+        [i, r] = a.useState(t);
+    return (0, l.jsx)(s.Provider, {
         value: {
             currentTab: i,
             setCurrentTab: r
