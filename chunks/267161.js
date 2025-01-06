@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return A;
+            return Z;
         },
         useAppSidebarState: function () {
-            return T;
+            return b;
         }
     });
 var i = n(200651),
@@ -14,35 +14,36 @@ var i = n(200651),
     s = n(481060),
     o = n(230711),
     c = n(174556),
-    d = n(540059),
-    u = n(565138),
-    h = n(300986),
-    m = n(314451),
-    p = n(35583),
-    g = n(141321),
-    f = n(592125),
-    _ = n(430824),
-    E = n(944486),
-    I = n(998502),
-    C = n(950796),
-    N = n(981631),
-    v = n(741764),
-    S = n(553512);
-let T = (0, l.U)(() => ({ isOpen: !0 }));
-function b() {
-    let e = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
-        t = (0, a.e7)([f.Z], () => f.Z.getChannel(e), [e]),
-        n = _.Z.getGuild(null == t ? void 0 : t.guild_id);
+    d = n(320007),
+    u = n(540059),
+    h = n(565138),
+    m = n(300986),
+    p = n(314451),
+    g = n(35583),
+    f = n(141321),
+    _ = n(592125),
+    E = n(430824),
+    I = n(944486),
+    C = n(998502),
+    N = n(950796),
+    v = n(981631),
+    S = n(741764),
+    T = n(553512);
+let b = (0, l.U)(() => ({ isOpen: !0 }));
+function A() {
+    let e = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
+        t = (0, a.e7)([_.Z], () => _.Z.getChannel(e), [e]),
+        n = E.Z.getGuild(null == t ? void 0 : t.guild_id);
     return (
         null != n &&
         (0, i.jsxs)('div', {
-            className: S.guild,
+            className: T.guild,
             children: [
-                (0, i.jsx)(u.Z, {
+                (0, i.jsx)(h.Z, {
                     guild: n,
-                    size: u.Z.Sizes.SMALLER,
+                    size: h.Z.Sizes.SMALLER,
                     active: !0,
-                    className: S.guildIcon
+                    className: T.guildIcon
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
@@ -52,34 +53,34 @@ function b() {
         })
     );
 }
-function A() {
+function Z() {
     r.useLayoutEffect(() => {
-        I.ZP.setMinimumSize(v.J, v.N);
+        C.ZP.setMinimumSize(S.J, S.N);
     }, []);
-    let e = (0, d.TH)('AppTitleBar'),
-        t = T((e) => e.isOpen),
+    let e = (0, u.TH)('AppTitleBar'),
+        t = b((e) => e.isOpen),
         { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
-            I.ZP.setMinimumSize(v.J, v.N);
+            C.ZP.setMinimumSize(S.J, S.N);
         }, []),
-        (0, i.jsx)(C.T, {
+        (0, i.jsx)(N.T, {
             leading:
                 !t &&
                 e &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Clickable, {
-                            className: S.button,
+                            className: T.button,
                             onClick: () => {
-                                T.setState({ isOpen: !T.getState().isOpen });
+                                b.setState({ isOpen: !b.getState().isOpen });
                             },
-                            children: (0, i.jsx)(Z, {})
+                            children: (0, i.jsx)(x, {})
                         }),
                         (0, i.jsx)(s.Clickable, {
-                            className: S.button,
+                            className: T.button,
                             onClick: () => {
-                                o.Z.open(N.oAB.ACCOUNT);
+                                o.Z.open(v.oAB.ACCOUNT);
                             },
                             children: (0, i.jsx)(s.SettingsIcon, {
                                 size: 'xs',
@@ -90,15 +91,23 @@ function A() {
                 }),
             title: !1,
             trailing: (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(g.Z, { className: S.button }), n ? (0, i.jsx)(m.Z, { className: S.button }) : (0, i.jsx)(h.Z, { className: S.button }), (0, i.jsx)(p.Z, { className: S.button })]
+                children: [
+                    (0, i.jsx)(d.Z, {
+                        canShowReminder: !0,
+                        className: T.button
+                    }),
+                    (0, i.jsx)(f.Z, { className: T.button }),
+                    n ? (0, i.jsx)(p.Z, { className: T.button }) : (0, i.jsx)(m.Z, { className: T.button }),
+                    (0, i.jsx)(g.Z, { className: T.button })
+                ]
             })
         })
     );
 }
-function Z() {
+function x() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: S.icon,
+        className: T.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
