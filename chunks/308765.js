@@ -57,10 +57,6 @@ let a = {
         actions: ['EMOJI_INTERACTION_INITIATED'],
         inlineRequire: () => r(496207).Z
     },
-    EmojiCaptionsDataManager: {
-        actions: ['EMOJI_INTERACTION_INITIATED'],
-        inlineRequire: () => r(570310).Z
-    },
     EntityVersionsManager: {
         actions: ['GUILD_CREATE', 'DELETED_ENTITY_IDS'],
         inlineRequire: () => r(992713).Z,

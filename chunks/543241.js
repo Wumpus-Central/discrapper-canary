@@ -3,7 +3,7 @@ r.d(n, {
         return k;
     },
     C1: function () {
-        return X;
+        return Q;
     },
     DV: function () {
         return W;
@@ -12,13 +12,13 @@ r.d(n, {
         return F;
     },
     IP: function () {
-        return $;
+        return J;
     },
     J1: function () {
         return j;
     },
     MZ: function () {
-        return J;
+        return X;
     },
     NJ: function () {
         return q;
@@ -42,7 +42,7 @@ r.d(n, {
         return M;
     },
     nV: function () {
-        return ee;
+        return $;
     },
     q5: function () {
         return z;
@@ -70,9 +70,8 @@ var f = r(278074),
     h = r(367907),
     p = r(339085),
     m = r(689789),
-    g = r(407477);
-r(353842);
-var E = r(558217),
+    g = r(407477),
+    E = r(558217),
     v = r(675478),
     I = r(430824),
     T = r(771845),
@@ -80,9 +79,8 @@ var E = r(558217),
     y = r(626135),
     S = r(70956),
     A = r(176354),
-    N = r(111361);
-r(709054);
-var C = r(304852),
+    N = r(111361),
+    C = r(304852),
     R = r(199257),
     O = r(149203),
     D = r(981631),
@@ -419,45 +417,7 @@ function q(e) {
         (0, _.Wu)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
     );
 }
-let Q = (e) => {
-    let { emoji: n, channel: r, guildId: i } = e;
-    if (
-        !EmojiUtils.isEmojiPremiumLocked({
-            emoji: n,
-            channel: r,
-            intention: EmojiIntention.CHAT,
-            guildId: i
-        })
-    )
-        return {
-            emoji: n,
-            nitroLocked: !1,
-            roleSubscriptionLocked: !1
-        };
-    let a = EmojiUtils.getEmojiUnavailableReason({
-        emoji: n,
-        channel: r,
-        intention: EmojiIntention.CHAT
-    });
-    return null == a
-        ? {
-              emoji: n,
-              nitroLocked: !1,
-              roleSubscriptionLocked: !1
-          }
-        : a === EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED
-          ? {
-                emoji: n,
-                nitroLocked: !1,
-                roleSubscriptionLocked: !0
-            }
-          : {
-                emoji: n,
-                nitroLocked: !0,
-                roleSubscriptionLocked: !1
-            };
-};
-function X(e, n) {
+function Q(e, n) {
     return (
         c.useEffect(() => {
             v.DZ.loadIfNecessary();
@@ -465,7 +425,7 @@ function X(e, n) {
         (0, _.e7)([p.ZP], () => null != n && p.ZP.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(n))
     );
 }
-function J(e) {
+function X(e) {
     return (
         c.useEffect(() => {
             v.DZ.loadIfNecessary();
@@ -473,7 +433,7 @@ function J(e) {
         (0, _.Wu)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function $(e, n, r) {
+function J(e, n, r) {
     if (null == r) return O.t0.NONE;
     let i = e.map((e) => {
             var n, r;
@@ -482,6 +442,6 @@ function $(e, n, r) {
         a = n.map((e) => e.id);
     return i.includes(r) ? O.t0.TOP_GUILD_EMOJI : a.includes(r) ? O.t0.NEWLY_ADDED_EMOJI : O.t0.NONE;
 }
-function ee(e, n) {
+function $(e, n) {
     return e === L.Hz.REACTION ? (n ? P.intl.string(P.t['h7ES+v']) : P.intl.string(P.t['6any2N'])) : P.intl.string(P.t.KgK5qq);
 }
