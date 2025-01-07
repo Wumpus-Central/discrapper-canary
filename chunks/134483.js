@@ -41,8 +41,8 @@ t.Z = function (e) {
         [k, H] = s.useState(!1),
         W = s.useCallback(() => H(!0), []),
         G = s.useCallback(() => H(!1), []),
-        z = s.useContext(h.h9),
-        F = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        F = s.useContext(h.h9),
+        z = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         V = (0, o.e7)([x.Z], () => x.Z.getState().theme),
         X = (0, a.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT,
         {
@@ -77,10 +77,10 @@ t.Z = function (e) {
                               })(s, T.Z.quests, C.Z);
                 let r =
                         null != l &&
-                        null != F &&
+                        null != z &&
                         ((e = s),
                         (t = l),
-                        (n = F),
+                        (n = z),
                         (i = C.Z),
                         e.some((e) => {
                             if (e.type !== B.fO.STREAM || e.user.id !== n.id) return !1;
@@ -94,7 +94,7 @@ t.Z = function (e) {
                     isQuestInQuestBar: (null == o ? void 0 : o.id) === (null == l ? void 0 : l.id)
                 };
             },
-            [U, F, O]
+            [U, z, O]
         ),
         $ = null != K ? q.r.build(K.config) : null,
         ee = null == $ ? void 0 : $.application.id,
@@ -104,14 +104,14 @@ t.Z = function (e) {
                 if (null == K) return !1;
                 let e = d.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(K) && e.includes(ee)) return !0;
-                let t = null != F ? C.Z.findActivity(F.id, (e) => e.type !== P.IIU.CUSTOM_STATUS) : null;
+                let t = null != z ? C.Z.findActivity(z.id, (e) => e.type !== P.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(K) && (0, v._D)(t, K)) || !1;
             },
-            [K, ee, F]
+            [K, ee, z]
         ),
         en = !0 === Q || Y || et,
         ei = (0, o.e7)([T.Z], () => null != K && T.Z.isEnrolling(K.id), [K]),
-        es = (0, o.e7)([c.Z], () => ((null == F ? void 0 : F.id) == null ? null : c.Z.getParticipant(U, F.id)) != null, [U, F]),
+        es = (0, o.e7)([c.Z], () => ((null == z ? void 0 : z.id) == null ? null : c.Z.getParticipant(U, z.id)) != null, [U, z]),
         el = (0, j.B6)(null == K ? void 0 : K.config.expiresAt),
         er = (0, j.B6)(null == $ ? void 0 : $.rewardsExpireAt),
         eo = s.useCallback(() => {
@@ -176,7 +176,7 @@ t.Z = function (e) {
         });
     return (0, i.jsx)(_.A, {
         questOrQuests: K,
-        overrideVisibility: !z,
+        overrideVisibility: !F,
         questContent: f.jn.QUEST_LIVE_STREAM,
         children: () => {
             var e;

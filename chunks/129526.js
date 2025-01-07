@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return c;
     }
 });
 var l = t(913527),
@@ -9,7 +9,7 @@ var l = t(913527),
     a = t(854698),
     s = t(765305),
     o = t(388032);
-function d(e, n) {
+function c(e, n) {
     return {
         entity: (function (e) {
             let { entityType: n, channelId: t } = e,
@@ -20,8 +20,8 @@ function d(e, n) {
             let t = (0, a.v1)(e),
                 { entityType: l } = e;
             if (null == t || (null == t ? void 0 : t.startDate) == null) return o.intl.string(o.t.M73YyM);
-            let { startDate: r, endDate: d } = t;
-            return l === s.WX.EXTERNAL && null == d ? o.intl.string(o.t['H16p//']) : !n && r.isBefore(i()()) ? o.intl.string(o.t.AXR5Sk) : null != d && null != r && d.isBefore(r) ? o.intl.string(o.t.LpjF4O) : null != d && d.isBefore(i()()) ? o.intl.string(o.t.ViDcm5) : void 0;
+            let { startDate: r, endDate: c } = t;
+            return l === s.WX.EXTERNAL && null == c ? o.intl.string(o.t['H16p//']) : !n && r.isBefore(i()()) ? o.intl.string(o.t.AXR5Sk) : null != c && null != r && c.isBefore(r) ? o.intl.string(o.t.LpjF4O) : null != c && c.isBefore(i()()) ? o.intl.string(o.t.ViDcm5) : void 0;
         })(e, n),
         topic: (function (e) {
             let { name: n } = e;

@@ -134,7 +134,7 @@ function M(e) {
             },
             [t, D]
         ),
-        w = o.useCallback(s()(T, 300), [T]),
+        w = o.useMemo(() => s()(T, 300), [T]),
         A = o.useCallback(
             (e) => {
                 w(e);

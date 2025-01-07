@@ -17,7 +17,7 @@ function c(e) {
         x = l.useCallback(() => {
             var e;
             null === (e = v.current) || void 0 === e || e.seek(f.start), n();
-        }, [n, f.start]);
+        }, [n, f.start, v]);
     return (
         l.useEffect(() => {
             function e(e) {

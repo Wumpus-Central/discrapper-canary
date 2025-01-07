@@ -81,7 +81,7 @@ function L(e) {
             },
             [t, i]
         ),
-        Z = o.useCallback(C()(M, 300), [M]),
+        Z = o.useMemo(() => C()(M, 300), [M]),
         R = o.useCallback(
             (e) => {
                 let t;

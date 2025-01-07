@@ -12,8 +12,8 @@ var a = t(200651),
     p = t(34674),
     _ = t(132871),
     g = t(979233),
-    v = t(88693),
-    f = t(611928),
+    f = t(88693),
+    v = t(611928),
     C = t(922122),
     x = t(680180),
     h = t(726115),
@@ -48,7 +48,7 @@ function w(e) {
         children: [
             (0, a.jsx)('div', {
                 className: G.detailHeaderSection,
-                children: (0, a.jsx)(f.Cm, {
+                children: (0, a.jsx)(v.Cm, {
                     icon: c.ArrowLargeLeftIcon,
                     onClick: r
                 })
@@ -167,7 +167,7 @@ n.default = function () {
             onTabsAvailableWidthChange: eu,
             onCollapsedSearchBarClick: em,
             onSearchBarBlur: ep
-        } = (0, v.U)({
+        } = (0, f.U)({
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === el.trim(),
             searchBarState: ed,
@@ -180,8 +180,8 @@ n.default = function () {
             [er, es, J, l]
         ),
         eg = i.useCallback((e) => (0, P.ph)({ applicationId: e }), []),
-        ev = ei || er,
-        ef = i.useCallback(() => {
+        ef = ei || er,
+        ev = i.useCallback(() => {
             null != (0, T.Uc)() ? (0, b.op)() : (0, P.Yp)();
         }, []),
         eC = (0, o.debounce)((e) => {
@@ -211,24 +211,24 @@ n.default = function () {
             (0, a.jsxs)('div', {
                 className: G.innerContainer,
                 children: [
-                    (0, a.jsxs)(f.ZP, {
-                        variant: ev ? f._6.RELATIVE : f._6.OVERLAY,
+                    (0, a.jsxs)(v.ZP, {
+                        variant: ef ? v._6.RELATIVE : v._6.OVERLAY,
                         children: [
-                            !ev && (0, a.jsx)(f.z6, { scrollPosition: r }),
+                            !ef && (0, a.jsx)(v.z6, { scrollPosition: r }),
                             ei
                                 ? (0, a.jsx)(w, {
                                       applicationId: z,
                                       hideDetailHeaderButtons: $,
-                                      onClickBack: ef
+                                      onClickBack: ev
                                   })
                                 : (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           er
-                                              ? (0, a.jsx)(f.Cm, {
+                                              ? (0, a.jsx)(v.Cm, {
                                                     icon: c.ArrowLargeLeftIcon,
-                                                    onClick: ef
+                                                    onClick: ev
                                                 })
-                                              : (0, a.jsx)(f.aV, { icon: c.AppsIcon }),
+                                              : (0, a.jsx)(v.aV, { icon: c.AppsIcon }),
                                           er
                                               ? (0, a.jsx)(c.Heading, {
                                                     variant: 'heading-lg/semibold',

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return f;
     }
 });
 var l = t(200651),
@@ -9,8 +9,8 @@ var l = t(200651),
     a = t(481060),
     s = t(471445),
     o = t(41776),
-    d = t(592125),
-    c = t(430824),
+    c = t(592125),
+    d = t(430824),
     u = t(594174),
     m = t(236373),
     x = t(230900),
@@ -18,29 +18,29 @@ var l = t(200651),
     g = t(460838),
     v = t(388032),
     j = t(959320);
-function p(e) {
-    var n, t, p;
-    let { guildId: f, guildEvent: I, guildEventId: N, error: C } = e,
-        E = i.useMemo(() => (0, m.Gb)(I, f), [I, f]),
+function f(e) {
+    var n, t, f;
+    let { guildId: p, guildEvent: I, guildEventId: N, error: C } = e,
+        E = i.useMemo(() => (0, m.Gb)(I, p), [I, p]),
         { channel_id: S, name: T, image: y, description: b } = E,
-        Z = (0, r.e7)([d.Z], () => d.Z.getChannel(S), [S]),
-        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(f), [f]),
-        R = (0, x.cS)(E),
+        Z = (0, r.e7)([c.Z], () => c.Z.getChannel(S), [S]),
+        R = (0, r.e7)([d.Z], () => d.Z.getGuild(p), [p]),
+        _ = (0, x.cS)(E),
         k = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
-        A = (0, r.e7)([o.Z], () => o.Z.isLurking(f), [f]),
-        D = (0, s.KS)(Z, _);
+        A = (0, r.e7)([o.Z], () => o.Z.isLurking(p), [p]),
+        D = (0, s.KS)(Z, R);
     return (0, l.jsxs)('div', {
         className: j.content,
         children: [
             (0, l.jsx)(g.Z, {
                 className: j.previewCard,
-                guild: _,
+                guild: R,
                 channel: Z,
-                location: null != R ? R : void 0,
+                location: null != _ ? _ : void 0,
                 creator: k,
                 name: T,
                 description: b,
-                imageSource: ((t = (0, m.Gb)(I, f, N)), null == (p = y) && null == t.image ? null : null != p && /^data:/.test(p) ? p : (0, h.Z)(t)),
+                imageSource: ((t = (0, m.Gb)(I, p, N)), null == (f = y) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
                 isActive: !1,
                 isUserLurking: A,
                 speakers: [],
@@ -85,7 +85,7 @@ function p(e) {
                                                             width: 18,
                                                             className: j.locationIcon
                                                         }),
-                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : R
+                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : _
                                               ]
                                           });
                                       }

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return f;
     }
 });
 var a = t(200651),
@@ -16,10 +16,10 @@ var a = t(200651),
     p = t(388032),
     _ = t(520432),
     g = t(902294);
-function v(e) {
+function f(e) {
     let { application: n, carouselItems: t } = e,
-        v = (0, l.e7)([u.Z], () => u.Z.isFocused()),
-        f = (0, a.jsxs)(a.Fragment, {
+        f = (0, l.e7)([u.Z], () => u.Z.isFocused()),
+        v = (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)('img', {
                     className: _.errorImage,
@@ -72,9 +72,9 @@ function v(e) {
               themedPagination: !0,
               items: t,
               autoplayInterval: 8000,
-              paused: !v,
+              paused: !f,
               videoAutoPlay: !0,
               onCurrentItemClick: C,
-              errorComponent: f
+              errorComponent: v
           });
 }

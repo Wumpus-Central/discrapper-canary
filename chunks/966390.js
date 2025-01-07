@@ -16,8 +16,8 @@ var r = n(481060),
     x = n(3148),
     _ = n(48854),
     E = n(785359),
-    v = n(79390),
-    I = n(623292),
+    I = n(79390),
+    v = n(623292),
     C = n(807092),
     A = n(467798),
     S = n(703558),
@@ -40,7 +40,7 @@ async function M(e) {
             sticker_ids: null == O ? void 0 : O.stickerIds,
             poll: null == O ? void 0 : O.poll
         };
-    null != L && (D.content = null == L ? void 0 : L.content), null != C.Z.getPendingReply(m) && ((D.type = N.uaV.REPLY), (D.message_reference = O.messageReference), (D.allowed_mentions = O.allowedMentions), (0, I.A6)(m));
+    null != L && (D.content = null == L ? void 0 : L.content), null != C.Z.getPendingReply(m) && ((D.type = N.uaV.REPLY), (D.message_reference = O.messageReference), (D.allowed_mentions = O.allowedMentions), (0, v.A6)(m));
     let [G, Z] = (0, A.Z)(D.content);
     G && ((D.content = Z), (D.flags = (0, j.pj)(null !== (t = D.flags) && void 0 !== t ? t : 0, N.iLy.SUPPRESS_NOTIFICATIONS)));
     let K = null !== (n = O.nonce) && void 0 !== n ? n : (0, _.r)(),
@@ -52,7 +52,7 @@ async function M(e) {
             messageReference: D.message_reference,
             flags: D.flags,
             nonce: K,
-            poll: (0, v.x9)(O.poll)
+            poll: (0, I.x9)(O.poll)
         });
     return (
         ((D.nonce = K),
@@ -190,7 +190,7 @@ t.Z = {
             let e = C.Z.getPendingReply(n);
             if (null != e) {
                 let t = l.Z.getSendMessageOptionsForReply(e);
-                (f.type = N.uaV.REPLY), (f.message_reference = t.messageReference), (f.allowed_mentions = t.allowedMentions), (0, I.A6)(n);
+                (f.type = N.uaV.REPLY), (f.message_reference = t.messageReference), (f.allowed_mentions = t.allowedMentions), (0, v.A6)(n);
             }
         }
         let h = new p.Z(N.ANM.MESSAGES(n));

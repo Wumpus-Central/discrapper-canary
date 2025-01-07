@@ -20,7 +20,7 @@ function u(e, n) {
             let n = i.current,
                 a = c.current;
             if (null != n && null != a) (0, o.YP)(a, n, e);
-        }, [r, e]),
+        }, [r, e, u]),
         (0, a.useEffect)(() => {
             if (!r) return;
             let e = i.current,

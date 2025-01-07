@@ -4,10 +4,10 @@ var l = t(200651),
     r = t(990792);
 n.Z = a.memo(function (e) {
     let { fineTuning: n, fineTuningResolution: t, duration: a } = e,
-        { file: s, audio: u } = (0, i.p)();
+        { file: s, audio: o } = (0, i.p)();
     return (0, l.jsx)(r.Z, {
         file: s,
-        audio: u,
+        audio: o,
         waveformSettings: {
             fineTuning: n,
             fineTuningResolution: t,

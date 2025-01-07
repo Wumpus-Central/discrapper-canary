@@ -13,13 +13,13 @@ var a = t(200651),
 function d(e) {
     let { state: n, query: t, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: p, onSubmit: _ } = e,
         g = i.useRef(null),
-        v = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 'Enter' === e.key && _();
             },
             [_]
         ),
-        f = i.useCallback(() => {
+        v = i.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
@@ -29,7 +29,7 @@ function d(e) {
     return n === s.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, a.jsx)(o.Clickable, {
               className: c.searchIcon,
-              onClick: f,
+              onClick: v,
               children: (0, a.jsx)(o.MagnifyingGlassIcon, {
                   size: 'md',
                   color: o.tokens.colors.INTERACTIVE_NORMAL
@@ -43,7 +43,7 @@ function d(e) {
               placeholder: r,
               onChange: d,
               onClear: m,
-              onKeyDown: v,
+              onKeyDown: f,
               onBlur: p
           });
 }

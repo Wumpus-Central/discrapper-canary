@@ -1,9 +1,9 @@
 t.d(n, {
     V: function () {
-        return f;
+        return v;
     },
     Z: function () {
-        return v;
+        return f;
     }
 }),
     t(47120);
@@ -44,7 +44,7 @@ function g(e) {
         ]
     });
 }
-function v(e) {
+function f(e) {
     let { countsByCategory: n, onSelectCategory: t, selectedCategoryId: r } = e,
         l = (0, o.e7)([c.Z], () => c.Z.getCategories()),
         s = i.useMemo(
@@ -78,7 +78,7 @@ function v(e) {
               })
           });
 }
-function f(e) {
+function v(e) {
     var n;
     let { countsByCategory: t, onSelectCategory: r, selectedCategoryId: l } = e,
         m = (0, o.e7)([c.Z], () => c.Z.getCategories()),
@@ -92,7 +92,7 @@ function f(e) {
             ],
             [m, t]
         ),
-        v = i.useMemo(
+        f = i.useMemo(
             () =>
                 g.map((e) => ({
                     id: ''.concat(e.id),
@@ -103,7 +103,7 @@ function f(e) {
                 })),
             [g, t]
         ),
-        f = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 let n = g.find((n) => n.id === Number(e));
                 null != n && r(n);
@@ -111,7 +111,7 @@ function f(e) {
             [r, g]
         ),
         C = i.useMemo(() => g.find((e) => e.id === l), [l, g]);
-    return 0 === v.length
+    return 0 === f.length
         ? null
         : (0, a.jsxs)('div', {
               className: _.container,
@@ -122,9 +122,9 @@ function f(e) {
                       children: p.intl.string(p.t.f09BQE)
                   }),
                   (0, a.jsx)(u.ZP, {
-                      items: v,
+                      items: f,
                       title: null !== (n = null == C ? void 0 : C.name) && void 0 !== n ? n : '',
-                      onSelect: f,
+                      onSelect: v,
                       selected: ''.concat(l),
                       'aria-label': p.intl.string(p.t.WHdCwc),
                       variant: u.PA.FILLED

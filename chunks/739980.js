@@ -6,13 +6,13 @@ n.d(t, {
 var l = n(200651),
     r = n(192379),
     i = n(954654),
-    a = n(937889),
-    s = n(930282),
+    s = n(937889),
+    a = n(930282),
     o = n(524444),
     u = n(315971);
 function c(e) {
     let { previewMessage: t } = e,
-        { content: n } = (0, a.ZP)(t, {
+        { content: n } = (0, s.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0
         }),
@@ -36,7 +36,7 @@ function c(e) {
             (0, l.jsxs)('div', {
                 className: u.content,
                 children: [
-                    (0, l.jsx)(s.ZP, {
+                    (0, l.jsx)(a.ZP, {
                         message: t,
                         content: n
                     }),

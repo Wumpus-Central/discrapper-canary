@@ -29,13 +29,13 @@ var l = t(200651),
     v = t(216306),
     Z = t(163),
     j = t(753540),
-    E = t(70297),
-    B = t(981631),
+    B = t(70297),
+    E = t(981631),
     S = t(176505),
     T = t(388032),
     w = t(397405);
-let A = new Set([B.d4z.GUILD_FORUM, B.d4z.GUILD_MEDIA]),
-    y = new Set([B.d4z.GUILD_VOICE, B.d4z.GUILD_STAGE_VOICE]);
+let A = new Set([E.d4z.GUILD_FORUM, E.d4z.GUILD_MEDIA]),
+    y = new Set([E.d4z.GUILD_VOICE, E.d4z.GUILD_STAGE_VOICE]);
 function L(e) {
     let { guild: n, channel: a, onCategoryClick: i } = e,
         o = (0, j.Mf)(n.id, a.id, a.id),
@@ -103,7 +103,7 @@ let k = a.memo(function () {
         );
     }),
     P = a.memo(function (e) {
-        let { channel: n, category: a, guild: i, isFirstChannel: s, isLastChannel: m, onChannelClick: Z, tooltipDirection: E = 'right' } = e,
+        let { channel: n, category: a, guild: i, isFirstChannel: s, isLastChannel: m, onChannelClick: Z, tooltipDirection: B = 'right' } = e,
             { isSubscriptionGated: L } = (0, f.Z)(n.id),
             P = (0, j.Mf)(i.id, n.id, a.id),
             R = (0, j.t4)(i.id, n.id, a.id),
@@ -137,7 +137,7 @@ let k = a.memo(function () {
             W = (function (e, n) {
                 let t = [];
                 return (
-                    B.TPd.GUILD_THREADS_ONLY.has(e.type) &&
+                    E.TPd.GUILD_THREADS_ONLY.has(e.type) &&
                         n >= 1 &&
                         t.push(
                             (0, l.jsx)(
@@ -200,7 +200,7 @@ let k = a.memo(function () {
                 (0, l.jsx)(d.Tooltip, {
                     text: M,
                     delay: 500,
-                    position: E,
+                    position: B,
                     children: (e) =>
                         (0, l.jsxs)(d.Clickable, {
                             className: r()(w.channelRow, {
@@ -305,7 +305,7 @@ function R(e) {
         p = a.useCallback(
             (e) => {
                 let { section: a, row: i } = e;
-                if (0 === a && -1 === h) return (0, l.jsx)(E.Z, { guild: t });
+                if (0 === a && -1 === h) return (0, l.jsx)(B.Z, { guild: t });
                 let r = n._categories[a + h],
                     o = n[r.channel.id][i];
                 return null == o
@@ -326,7 +326,7 @@ function R(e) {
             },
             [n, t, h, c, u]
         ),
-        x = (0, E.q)(t.id),
+        x = (0, B.q)(t.id),
         C = (0, v.tn)(t.id, n, 64, x);
     return (0, l.jsx)(
         d.ListAuto,

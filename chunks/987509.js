@@ -20,8 +20,8 @@ n.d(t, {
 var l = n(392711),
     r = n(493683),
     i = n(212819),
-    a = n(938078),
-    s = n(823385),
+    s = n(938078),
+    a = n(823385),
     o = n(592125),
     u = n(496675),
     c = n(594174),
@@ -60,7 +60,7 @@ async function b(e) {
         }
 }
 function x(e) {
-    if ('user' !== e.type) return (0, a.Z)(e.id);
+    if ('user' !== e.type) return (0, s.Z)(e.id);
     {
         let t = c.default.getUser(e.id);
         return null != t
@@ -97,11 +97,11 @@ function S(e) {
     let { results: t, hasQuery: n, queryMode: r, frequentChannels: i, targetDestination: o, selectedDestinations: u, pinnedDestinations: c, originDestination: d, includeMissingDMs: h } = e;
     if (n) return v(C(t, h));
     let f = null != c && c.length > 0 ? c.map((e) => x(e)) : [],
-        m = s.Z.getChannelHistory(),
-        g = m.length > 0 ? m.map((e) => (0, a.Z)(e)) : [],
-        p = i.length > 0 ? i.map((e) => (0, a.Z)(e.id)) : [],
+        m = a.Z.getChannelHistory(),
+        g = m.length > 0 ? m.map((e) => (0, s.Z)(e)) : [],
+        p = i.length > 0 ? i.map((e) => (0, s.Z)(e.id)) : [],
         b = C([...f, null != o ? x(o) : null, ...g, ...p], h),
         S = (null == u ? void 0 : u.find((e) => (0, l.isEqual)(e, d))) != null,
-        Z = null == d || S ? [] : [d.id];
-    return null != r ? v(b.filter((e) => e.type === r)) : v(b, Z).slice(0, 15);
+        y = null == d || S ? [] : [d.id];
+    return null != r ? v(b.filter((e) => e.type === r)) : v(b, y).slice(0, 15);
 }

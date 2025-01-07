@@ -129,7 +129,7 @@ function k(e) {
                     T(n.roleId);
                 }
             }),
-            [d, I, N, T, k, M]
+            [d, I, N, T, k, M, C]
         ),
         [{ isDragging: U }, G] = (0, s.c)(B),
         F = r.useMemo(

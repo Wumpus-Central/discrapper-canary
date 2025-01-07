@@ -66,7 +66,7 @@ n.Z = s.forwardRef(function (e, n) {
             },
             [P]
         ),
-        q = s.useMemo(() => (null == K ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
+        q = s.useMemo(() => ((null == K ? void 0 : K.top) == null && (null == K ? void 0 : K.left) == null && (null == K ? void 0 : K.bottom) == null && (null == K ? void 0 : K.right) == null ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
     if (
         (s.useEffect(() => {
             U(F.isVisible);

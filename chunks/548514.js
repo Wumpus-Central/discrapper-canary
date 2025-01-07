@@ -12,8 +12,8 @@ var a = t(200651),
     p = t(703656),
     _ = t(706454),
     g = t(572004),
-    v = t(135431),
-    f = t(881294),
+    f = t(135431),
+    v = t(881294),
     C = t(981631),
     x = t(388032),
     h = t(914045);
@@ -47,9 +47,9 @@ function I(e) {
 function j(e) {
     let { application: n, variant: t, size: r } = e,
         { onClickInstallApplication: s, canInstall: d } = (function (e) {
-            let n = (0, f.nu)(),
+            let n = (0, v.nu)(),
                 t = i.useCallback(() => {
-                    (0, v.LO)({
+                    (0, f.LO)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -67,8 +67,8 @@ function j(e) {
                 }
             }, [n, t]);
             let a = i.useCallback(() => {
-                if (((0, f.zZ)(C.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
-                    let n = (0, v.Er)({
+                if (((0, v.zZ)(C.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (o.tq || o.Em) && null == e.custom_install_url)) {
+                    let n = (0, f.Er)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -79,13 +79,13 @@ function j(e) {
                         return;
                     }
                 }
-                n ? t() : (0, f.rf)({ [b]: 'true' });
+                n ? t() : (0, v.rf)({ [b]: 'true' });
             }, [e, t, n]);
             return {
                 onClickInstallApplication: a,
                 canInstall: i.useMemo(
                     () =>
-                        (0, v.Eb)({
+                        (0, f.Eb)({
                             customInstallUrl: e.custom_install_url,
                             installParams: e.install_params,
                             integrationTypesConfig: e.integration_types_config
@@ -120,10 +120,10 @@ n.Z = function (e) {
     let { application: n, size: t } = e,
         r = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         o = i.useCallback(() => {
-            (0, f.zZ)(C.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, g.JG)(r(n.id)), (0, c.showToast)((0, c.createToast)(x.intl.string(x.t['L/PwZW']), c.ToastType.SUCCESS));
+            (0, v.zZ)(C.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, g.JG)(r(n.id)), (0, c.showToast)((0, c.createToast)(x.intl.string(x.t['L/PwZW']), c.ToastType.SUCCESS));
         }, [n.id]),
         p = (0, s.e7)([_.default], () => _.default.locale),
-        v = i.useCallback(() => {
+        f = i.useCallback(() => {
             (0, d.Z)(
                 (0, u.G)({
                     id: n.id,
@@ -160,13 +160,13 @@ n.Z = function (e) {
                                 id: 'report',
                                 label: x.intl.string(x.t.NgA5vr),
                                 color: 'danger',
-                                action: v
+                                action: f
                             })
                         }),
                         null != b ? (0, a.jsx)(c.MenuGroup, { children: b }) : null
                     ]
                 }),
-            [b, v, o]
+            [b, f, o]
         );
     return (0, a.jsxs)('div', {
         children: [

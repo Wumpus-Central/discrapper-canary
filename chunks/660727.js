@@ -5,8 +5,8 @@ var a,
     l = o(192379),
     r = o(120356),
     s = o.n(r),
-    d = o(75124),
-    c = o(481060),
+    d = o(481060),
+    c = o(211266),
     u = o(313201),
     p = o(907040),
     v = o(906411),
@@ -44,15 +44,15 @@ n.default = function (e) {
         I = b.ZP.getDefaultChannel(n),
         [g, C] = l.useState('tab-id-role-icon-file-upload'),
         [S, k] = l.useState(!1),
-        z = (0, d.Z)(B);
+        z = (0, c.Z)(B);
     return (
         l.useEffect(() => {
             k(!1);
         }, [g]),
-        (0, i.jsx)(c.ModalRoot, {
+        (0, i.jsx)(d.ModalRoot, {
             transitionState: r,
             'aria-labelledby': m,
-            size: c.ModalSize.MEDIUM,
+            size: d.ModalSize.MEDIUM,
             className: h.modalRoot,
             children: (0, i.jsxs)('div', {
                 className: h.contentWrapper,
@@ -69,14 +69,14 @@ n.default = function (e) {
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-file-upload',
                                     'aria-selected': 'tab-id-role-icon-file-upload' === g,
-                                    children: (0, i.jsx)(c.Button, {
+                                    children: (0, i.jsx)(d.Button, {
                                         onClick: () => {
                                             C('tab-id-role-icon-file-upload');
                                         },
                                         'aria-current': 'page',
                                         className: s()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-file-upload' === g }),
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.NONE,
+                                        look: d.Button.Looks.BLANK,
+                                        size: d.Button.Sizes.NONE,
                                         children: x.intl.string(x.t.royWSE)
                                     })
                                 }),
@@ -85,14 +85,14 @@ n.default = function (e) {
                                     role: 'tab',
                                     'aria-controls': 'tab-id-role-icon-emoji',
                                     'aria-selected': 'tab-id-role-icon-emoji' === g,
-                                    children: (0, i.jsx)(c.Button, {
+                                    children: (0, i.jsx)(d.Button, {
                                         onClick: () => {
                                             C('tab-id-role-icon-emoji');
                                         },
                                         'aria-current': 'page',
                                         className: s()(h.navButton, { [h.navButtonActive]: 'tab-id-role-icon-emoji' === g }),
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.NONE,
+                                        look: d.Button.Looks.BLANK,
+                                        size: d.Button.Sizes.NONE,
                                         children: x.intl.string(x.t['/Ny2wc'])
                                     })
                                 })
@@ -100,7 +100,7 @@ n.default = function (e) {
                         })
                     }),
                     'tab-id-role-icon-file-upload' === g
-                        ? (0, i.jsx)(c.ModalContent, {
+                        ? (0, i.jsx)(d.ModalContent, {
                               children: (0, i.jsxs)('div', {
                                   className: h.uploadContainer,
                                   children: [
@@ -113,7 +113,7 @@ n.default = function (e) {
                                               }),
                                               (0, i.jsx)('div', {
                                                   className: h.uploadIconInnerContainer,
-                                                  children: (0, i.jsx)(c.ImagePlusIcon, {
+                                                  children: (0, i.jsx)(d.ImagePlusIcon, {
                                                       size: 'md',
                                                       color: 'currentColor',
                                                       className: h.uploadIcon
@@ -125,8 +125,8 @@ n.default = function (e) {
                                           className: h.uploadInfo,
                                           children: x.intl.string(x.t['mz++Qk'])
                                       }),
-                                      (0, i.jsxs)(c.Button, {
-                                          size: c.Button.Sizes.SMALL,
+                                      (0, i.jsxs)(d.Button, {
+                                          size: d.Button.Sizes.SMALL,
                                           children: [
                                               x.intl.string(x.t.sdCQY2),
                                               (0, i.jsx)(f.ZP, {
@@ -143,7 +143,7 @@ n.default = function (e) {
                                           ]
                                       }),
                                       S
-                                          ? (0, i.jsx)(c.Text, {
+                                          ? (0, i.jsx)(d.Text, {
                                                 className: h.uploadError,
                                                 color: 'text-danger',
                                                 variant: 'text-sm/normal',

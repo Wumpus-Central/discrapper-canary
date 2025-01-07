@@ -42,7 +42,7 @@ function d(e, n) {
                 };
             }
         }
-    }, [n]);
+    }, [n, e, i]);
 }
 function f(e) {
     let { children: n, className: r, enabled: i = !0 } = e,

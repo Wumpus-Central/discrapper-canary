@@ -21,8 +21,8 @@ var r = n(200651),
     x = n(426482),
     _ = n(644941),
     E = n(388032),
-    v = n(561526),
-    I = n(230707);
+    I = n(561526),
+    v = n(230707);
 let C = (e) => {
     let { game: t, onClose: n, trackClick: i } = e,
         a = (0, c.e7)([m.Z], () => m.Z.getApplication(t.applicationId));
@@ -31,7 +31,7 @@ let C = (e) => {
         children: (e) =>
             (0, r.jsx)(d.Clickable, {
                 ...e,
-                className: I.similarGameImageClickable,
+                className: v.similarGameImageClickable,
                 onClick: async () => {
                     i(g.as.ClickSimilarGame, t.applicationId),
                         (0, d.openModalLazy)(() =>
@@ -49,7 +49,7 @@ let C = (e) => {
                 children: (0, r.jsx)(x.C, {
                     game: t,
                     application: a,
-                    className: I.similarGameImage,
+                    className: v.similarGameImage,
                     size: x.Z.SMALL
                 })
             })
@@ -75,12 +75,12 @@ function A(e) {
     g && null == m)
         ? (0, r.jsxs)('div', {
               children: [
-                  (0, r.jsx)('div', { className: l()(I.loadingHeading, v.sectionHeader) }),
+                  (0, r.jsx)('div', { className: l()(v.loadingHeading, I.sectionHeader) }),
                   (0, r.jsx)('div', {
-                      className: l()(v.row, v.gapLg),
+                      className: l()(I.row, I.gapLg),
                       children: s()
                           .range(0, 5)
-                          .map((e) => (0, r.jsx)('div', { className: I.loadingArtwork }, e))
+                          .map((e) => (0, r.jsx)('div', { className: v.loadingArtwork }, e))
                   })
               ]
           })
@@ -88,13 +88,13 @@ function A(e) {
           ? (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsx)(d.Heading, {
-                        className: v.sectionHeader,
+                        className: I.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: E.intl.string(E.t['6rLyQE'])
                     }),
                     (0, r.jsx)('div', {
-                        className: I.similarGames,
+                        className: v.similarGames,
                         style: {},
                         children: x.map((e) =>
                             (0, r.jsx)(

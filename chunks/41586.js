@@ -48,7 +48,7 @@ let _ = o.forwardRef(function (e, t) {
             },
             [n.id, Z]
         ),
-        T = o.useCallback(s()(V, 300), [V]),
+        T = o.useMemo(() => s()(V, 300), [V]),
         E = o.useCallback(
             (e) => {
                 D(e), T(e);

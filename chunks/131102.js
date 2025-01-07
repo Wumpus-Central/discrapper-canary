@@ -6,9 +6,9 @@ n.r(t),
     });
 var o = n(200651),
     l = n(192379),
-    a = n(75124),
-    r = n(704215),
-    i = n(481060),
+    a = n(704215),
+    r = n(481060),
+    i = n(211266),
     s = n(605236),
     c = n(624659),
     u = n(626135),
@@ -18,7 +18,7 @@ var o = n(200651),
     f = n(388032);
 function h(e) {
     let { transitionState: t, onClose: h, guildId: x, guildName: C } = e,
-        E = (0, a.Z)(b.S);
+        E = (0, i.Z)(b.S);
     return (
         l.useEffect(() => {
             u.default.track(m.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
@@ -28,12 +28,12 @@ function h(e) {
             body: f.intl.formatToPlainString(f.t.xpn2vL, { server: C }),
             problems: E,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: l, feedback: a } = e;
-                l && (0, s.EW)(r.z.GUILD_LEAVE_FEEDBACK);
+                let { problem: t, dontShowAgain: l, feedback: i } = e;
+                l && (0, s.EW)(a.z.GUILD_LEAVE_FEEDBACK);
                 let c = null == t;
-                (0, d.Z)(x, t, a, c),
+                (0, d.Z)(x, t, i, c),
                     !c &&
-                        (0, i.openModalLazy)(async () => {
+                        (0, r.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
                                 (0, o.jsx)(e, {

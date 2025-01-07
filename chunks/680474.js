@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return f;
     }
 });
 var a = t(200651),
@@ -16,7 +16,7 @@ var a = t(200651),
     p = t(669401),
     _ = t(388032),
     g = t(609396);
-function v(e) {
+function f(e) {
     let { application: n } = e,
         t = i.useMemo(() => {
             var e, t, a;

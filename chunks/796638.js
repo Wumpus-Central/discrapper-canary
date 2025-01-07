@@ -115,7 +115,7 @@ function v(e, t) {
                     participantTileWidth: E
                 }
             );
-        }, [e, t, v, f]);
+        }, [e, t, v, f, m, u, o, s, i]);
     return {
         visibleParticipants: _,
         participantTileWidth: x

@@ -107,12 +107,12 @@ function _(e) {
     i.useEffect(() => {
         null == j && !Z && B();
     }, [j, B, Z]);
-    let k = i.useCallback(() => {
+    let R = i.useCallback(() => {
             T && (0, v.nE)(l, T, H.Sbl.CREATE_JOIN_GUILD_MODAL), B();
         }, [l, B, T]),
-        R = (0, c.e7)([h.Z], () => h.Z.getGuild(l)),
-        I = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-        E = (0, c.e7)([m.ZP], () => (null != I ? m.ZP.getMember(l, I.id) : null)),
+        k = (0, c.e7)([h.Z], () => h.Z.getGuild(l)),
+        E = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+        I = (0, c.e7)([m.ZP], () => (null != E ? m.ZP.getMember(l, E.id) : null)),
         D = (0, u.ZP)(),
         L = (0, p.nP)(null == j ? void 0 : null === (t = j.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, 0.7]),
         P = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
@@ -120,7 +120,7 @@ function _(e) {
             saturation: 1
         }).hex(),
         V = (0, p.nj)(L, P, 'top center');
-    return null == R || null == I || null == E || null == j
+    return null == k || null == E || null == I || null == j
         ? null
         : (0, n.jsx)(d.ModalRoot, {
               ...o,
@@ -142,7 +142,7 @@ function _(e) {
                                           className: b.title,
                                           children: (0, n.jsx)(d.Heading, {
                                               variant: 'heading-xxl/medium',
-                                              children: w.intl.format(w.t.orbR8f, { name: R.name })
+                                              children: w.intl.format(w.t.orbR8f, { name: k.name })
                                           })
                                       }),
                                       (0, n.jsx)(d.Text, {
@@ -169,7 +169,7 @@ function _(e) {
                           })
                       }),
                       (0, n.jsx)(S.Z, {
-                          onClick: k,
+                          onClick: R,
                           color: d.Button.Colors.BRAND,
                           themeColor: L,
                           fullWidth: !1,

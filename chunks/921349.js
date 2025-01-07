@@ -215,7 +215,7 @@ let B = s.forwardRef(function (e, n) {
                         row: i
                     });
             });
-    }, [eI, eO]),
+    }, [eI, eO, eW, eP]),
         s.useEffect(() => {
             let e = eY.current;
             if (eI && !eO) {
@@ -232,7 +232,7 @@ let B = s.forwardRef(function (e, n) {
                     r = null != n ? String(n.value) : null;
                 e.setFocus(r), ev(null);
             }
-        }, [eI, eO]),
+        }, [eI, eO, eY, eP]),
         s.useLayoutEffect(() => {
             !eI && (_ ? ey('') : null != ew && ey(ew.label));
         }, [_, ew, eI]),
@@ -289,7 +289,7 @@ let B = s.forwardRef(function (e, n) {
         }, [eb]),
         s.useEffect(() => {
             !eO && eS && null !== eb && requestAnimationFrame(() => eH.focusFirstVisibleItem());
-        }, [eO, eS, eb]);
+        }, [eO, eS, eb, eH]);
     let eX = _ ? W : Y,
         eJ = s.useRef(null),
         { focusPreviousItem: e$, focusNextItem: e0 } = F(eJ, eg, eL);
@@ -567,7 +567,7 @@ function F(e, n, r) {
                         return null == e ? void 0 : null === (r = e.current) || void 0 === r ? void 0 : null === (n = r.ownerDocument) || void 0 === n ? void 0 : n.activeElement;
                     }
                 }),
-            [r]
+            [r, e]
         ),
         a = s.useCallback(
             (n) => {

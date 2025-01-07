@@ -20,29 +20,29 @@ var i = e(120356),
     x = e(388032),
     v = e(37232);
 function k(t) {
-    let { recurrenceId: n, originalScheduledStartTime: i, guildEventId: k, onClick: p, isActive: f } = t,
-        B = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(k)),
-        N = (0, h.Z)(n, null == B ? void 0 : B.id),
-        j = (0, s.e7)([a.Z], () => a.Z.getGuild(null == B ? void 0 : B.guild_id)),
-        L = (0, s.e7)([c.Z], () => c.Z.getChannel(null == B ? void 0 : B.channel_id));
-    if (null == B) return null;
-    let { is_canceled: _ = !1 } = null != N ? N : {},
-        E = (null == N ? void 0 : N.scheduled_start_time) != null ? new Date(null == N ? void 0 : N.scheduled_start_time) : i,
-        S = (0, m.DK)(B),
+    let { recurrenceId: n, originalScheduledStartTime: i, guildEventId: k, onClick: p, isActive: B } = t,
+        N = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(k)),
+        j = (0, h.Z)(n, null == N ? void 0 : N.id),
+        f = (0, s.e7)([a.Z], () => a.Z.getGuild(null == N ? void 0 : N.guild_id)),
+        L = (0, s.e7)([c.Z], () => c.Z.getChannel(null == N ? void 0 : N.channel_id));
+    if (null == N) return null;
+    let { is_canceled: _ = !1 } = null != j ? j : {},
+        S = (null == j ? void 0 : j.scheduled_start_time) != null ? new Date(null == j ? void 0 : j.scheduled_start_time) : i,
+        E = (0, m.DK)(N),
         z = _ ? g.p1.CANCELED : g.p1.SCHEDULED;
-    S === n && (z = B.status);
-    let I = (null == B ? void 0 : B.scheduled_start_time) != null ? (0, m.lh)(N, E, new Date(null == B ? void 0 : B.scheduled_start_time)) : null,
+    E === n && (z = N.status);
+    let I = (null == N ? void 0 : N.scheduled_start_time) != null ? (0, m.lh)(j, S, new Date(null == N ? void 0 : N.scheduled_start_time)) : null,
         b = (t) => {
             t.stopPropagation(),
-                null != j &&
+                null != f &&
                     (0, u.jW)(t, async () => {
                         let { default: t } = await Promise.all([e.e('15450'), e.e('37133'), e.e('62318')]).then(e.bind(e, 215269));
                         return (e) =>
                             (0, l.jsx)(t, {
-                                guildEventId: B.id,
+                                guildEventId: N.id,
                                 recurrenceId: n,
                                 channel: L,
-                                guild: j,
+                                guild: f,
                                 isRecurrenceItem: !0,
                                 ...e
                             });
@@ -52,7 +52,7 @@ function k(t) {
         className: o()(v.container, {
             [v.canceled]: _,
             [v.clickable]: null != p,
-            [v.active]: f
+            [v.active]: B
         }),
         onClick: (t) => {
             t.stopPropagation(), !_ && (null == p || p(n));
@@ -61,10 +61,10 @@ function k(t) {
         'aria-label': '',
         children: [
             (0, l.jsx)(C.z, {
-                startTime: E.toISOString(),
+                startTime: S.toISOString(),
                 status: null != I ? I : z,
-                eventType: B.entity_type,
-                guildEventId: B.id,
+                eventType: N.entity_type,
+                guildEventId: N.id,
                 recurrenceId: n,
                 className: v.timeStatus
             }),

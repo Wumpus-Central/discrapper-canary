@@ -47,9 +47,9 @@ function Z(n) {
         { analyticsLocations: D } = (0, s.ZP)(),
         F = (0, I.Ev)(L, null != l ? l : void 0),
         M = null == F ? void 0 : F.subscription,
-        G = null == F ? void 0 : F.subscriptionPlan,
-        U = (0, I.cr)(L, null != l ? l : void 0),
-        w = null == U ? void 0 : U.subscriptionPlan,
+        U = null == F ? void 0 : F.subscriptionPlan,
+        G = (0, I.cr)(L, null != l ? l : void 0),
+        w = null == G ? void 0 : G.subscriptionPlan,
         { entitlementsLoaded: B } = (0, I.LM)({ guildId: l });
     null == l && (B = !0);
     let K = (0, c.Z)(),
@@ -58,11 +58,11 @@ function Z(n) {
             if (!B || null == j || null == A) return d.rf.LOADING;
             if (!R) return d.rf.UNAVAILABLE;
             if (!O) {
-                if ((null == G ? void 0 : G.skuId) === A) return d.rf.SUBSCRIBED;
+                if ((null == U ? void 0 : U.skuId) === A) return d.rf.SUBSCRIBED;
                 if ((null == w ? void 0 : w.skuId) === A && !1 === H) return d.rf.UPCOMING_PLAN;
             }
             return d.rf.AVAILABLE;
-        }, [null == G ? void 0 : G.skuId, R, j, B, H, O, null == w ? void 0 : w.skuId, A]);
+        }, [null == U ? void 0 : U.skuId, R, j, B, H, O, null == w ? void 0 : w.skuId, A]);
     return (
         i.useEffect(() => {
             R &&

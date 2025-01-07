@@ -72,8 +72,8 @@ t.Z = (e) => {
         { ref: O, height: Q } = (0, m.Z)(),
         { ref: k, width: H, scrollWidth: W } = (0, m.Z)(),
         G = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
-        z = s.useMemo(() => (0, T.fh)(h, T.eC.HERO), [h]),
-        F = s.useRef(null),
+        F = s.useMemo(() => (0, T.fh)(h, T.eC.HERO), [h]),
+        z = s.useRef(null),
         V = (0, _.uq)(C),
         X = C === E.jn.QUESTS_EMBED,
         Y = (0, g.t5)(h, A.dr.QUESTS_CARD, C),
@@ -101,8 +101,8 @@ t.Z = (e) => {
                 });
         };
     s.useEffect(() => {
-        z.isAnimated && null != F.current && (l ? F.current.play() : !l && (F.current.pause(), (F.current.currentTime = 0)));
-    }, [l, z]);
+        F.isAnimated && null != z.current && (l ? z.current.play() : !l && (z.current.pause(), (z.current.currentTime = 0)));
+    }, [l, F]);
     let en = (0, i.jsx)(v.ZP, {
         className: I.partnerBranding,
         logotypeClassName: ee ? I.partnerBrandingLogotypes : void 0,
@@ -134,14 +134,14 @@ t.Z = (e) => {
                 playsInline: !0,
                 className: I.questSplash,
                 controls: !1,
-                poster: z.url,
-                ref: F,
+                poster: F.url,
+                ref: z,
                 children:
                     !G &&
-                    z.isAnimated &&
+                    F.isAnimated &&
                     (0, i.jsx)('source', {
-                        src: z.url,
-                        type: null !== (n = z.mimetype) && void 0 !== n ? n : void 0
+                        src: F.url,
+                        type: null !== (n = F.mimetype) && void 0 !== n ? n : void 0
                     })
             }),
             (0, i.jsxs)('div', {

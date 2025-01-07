@@ -6,8 +6,8 @@ var r,
     o = n(192379),
     d = n(120356),
     a = n.n(d),
-    E = n(481060),
-    c = n(388032),
+    c = n(481060),
+    E = n(388032),
     f = n(323822);
 let S = {
     BLOCK: f.block,
@@ -20,14 +20,14 @@ class _ extends (l = o.PureComponent) {
             className: a()(t, r),
             style: i,
             children: [
-                (0, s.jsxs)(E.Text, {
+                (0, s.jsxs)(c.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
                     className: f.pro,
-                    children: [c.intl.string(c.t['8tvIiI']), ':']
+                    children: [E.intl.string(E.t['8tvIiI']), ':']
                 }),
-                (0, s.jsx)(E.Text, {
+                (0, s.jsx)(c.Text, {
                     className: a()(f.tip, n),
                     variant: 'text-sm/normal',
                     children: e

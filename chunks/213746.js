@@ -17,8 +17,8 @@ var a = t(200651),
     p = t(171246),
     _ = t(55563),
     g = t(881294),
-    v = t(133743),
-    f = t(979007),
+    f = t(133743),
+    v = t(979007),
     C = t(981631),
     x = t(388032),
     h = t(272680);
@@ -53,7 +53,7 @@ function I(e) {
                                         appId: n.id,
                                         listing: e,
                                         subscriptionType: t,
-                                        onDetails: () => (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n.id, e.skuId))
+                                        onDetails: () => (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n.id, e.skuId))
                                     },
                                     e.id
                                 );
@@ -78,7 +78,7 @@ function I(e) {
                                     {
                                         skuId: e.skuId,
                                         appId: n.id,
-                                        onDetails: () => (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n.id, e.skuId))
+                                        onDetails: () => (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n.id, e.skuId))
                                     },
                                     e.id
                                 )
@@ -103,7 +103,7 @@ function j(e) {
         s = (0, l.e7)([_.Z], () => _.Z.get(r), [r]),
         c = (0, l.e7)([_.Z], () => (null != r ? _.Z.getParentSKU(r) : void 0), [r]),
         d = i.useId(),
-        u = i.useCallback(() => (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, f.GlobalDiscoveryAppsSections.STORE)), [n]);
+        u = i.useCallback(() => (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, v.GlobalDiscoveryAppsSections.STORE)), [n]);
     return (
         i.useLayoutEffect(() => {
             var e, i, l, u, m, _, g;
@@ -127,7 +127,7 @@ function j(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback: () => {
-                                    !N() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, f.GlobalDiscoveryAppsSections.STORE));
+                                    !N() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, v.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -154,7 +154,7 @@ function j(e) {
                             {
                                 modalKey: u,
                                 onCloseCallback: () => {
-                                    !N() && (0, v.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, f.GlobalDiscoveryAppsSections.STORE));
+                                    !N() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, v.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )

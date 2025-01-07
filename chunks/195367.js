@@ -10,8 +10,8 @@ var l = t(200651),
     a = t.n(r),
     s = t(481060),
     o = t(516129),
-    d = t(813197),
-    c = t(930180),
+    c = t(813197),
+    d = t(930180),
     u = t(46920),
     m = t(924301),
     x = t(236373),
@@ -19,24 +19,24 @@ var l = t(200651),
     g = t(405613),
     v = t(440371),
     j = t(765305),
-    p = t(486324),
-    f = t(388032),
+    f = t(486324),
+    p = t(388032),
     I = t(378816);
 function N(e) {
     let { editBroadcastInfoData: n } = e,
         { broadcastInfo: t, broadcastToDirectoryChannels: i, setBroadcastToDirectoryChannels: r, canEveryoneRoleViewEvent: a } = n;
     return t.can_broadcast
         ? (0, l.jsxs)(s.FormItem, {
-              title: f.intl.string(f.t.BgAW29),
+              title: p.intl.string(p.t.BgAW29),
               className: I.formItem,
               children: [
                   (0, l.jsx)(s.Tooltip, {
                       text: (0, l.jsx)(s.Text, {
                           className: I.broadcastInfoTooltip,
                           variant: 'text-sm/normal',
-                          children: f.intl.string(f.t.gTgUmZ)
+                          children: p.intl.string(p.t.gTgUmZ)
                       }),
-                      'aria-label': f.intl.string(f.t.gTgUmZ),
+                      'aria-label': p.intl.string(p.t.gTgUmZ),
                       shouldShow: !a,
                       children: (e) =>
                           (0, l.jsx)('div', {
@@ -49,7 +49,7 @@ function N(e) {
                                   children: (0, l.jsx)(s.Text, {
                                       variant: 'text-md/normal',
                                       color: 'interactive-active',
-                                      children: f.intl.string(f.t['8GW68/'])
+                                      children: p.intl.string(p.t['8GW68/'])
                                   })
                               })
                           })
@@ -58,7 +58,7 @@ function N(e) {
                       className: I.broadcastInfoDescription,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: f.intl.string(f.t.V8Oq8P)
+                      children: p.intl.string(p.t.V8Oq8P)
                   })
               ]
           })
@@ -66,9 +66,9 @@ function N(e) {
 }
 function C(e) {
     let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: S, validationErrorMessage: T, onChange: y, canSetFocus: b = !1 } = e,
-        { entityType: Z, channelId: _, description: R, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
-        M = (0, c._d)(_),
-        z = (0, c.K3)(_),
+        { entityType: Z, channelId: R, description: _, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
+        M = (0, d._d)(R),
+        z = (0, d.K3)(R),
         U = null != n && (0, m.xt)(n),
         P = i.useMemo(() => {
             let e = (0, h.v1)(n);
@@ -97,7 +97,7 @@ function C(e) {
                         imgURI: e,
                         file: n,
                         onCrop: F,
-                        uploadType: p.pC.SCHEDULED_EVENT_IMAGE,
+                        uploadType: f.pC.SCHEDULED_EVENT_IMAGE,
                         allowSkip: !0,
                         ...t
                     });
@@ -107,13 +107,13 @@ function C(e) {
         children: [
             (0, l.jsx)('div', {
                 className: I.blockedUsersContainer,
-                children: null != _ && !U && (M > 0 || z > 0) && (0, l.jsx)(u.mv, { channelId: _ })
+                children: null != R && !U && (M > 0 || z > 0) && (0, l.jsx)(u.mv, { channelId: R })
             }),
             (0, l.jsxs)('div', {
                 className: I.form,
                 children: [
                     (0, l.jsxs)(s.FormItem, {
-                        title: f.intl.string(f.t['0HbEQ0']),
+                        title: p.intl.string(p.t['0HbEQ0']),
                         className: I.topicFormItem,
                         required: !0,
                         children: [
@@ -122,7 +122,7 @@ function C(e) {
                                 onChange: (e) => {
                                     y({ name: e });
                                 },
-                                placeholder: f.intl.string(f.t['6/yarq']),
+                                placeholder: p.intl.string(p.t['6/yarq']),
                                 maxLength: j.p,
                                 value: k,
                                 autoComplete: 'off',
@@ -168,12 +168,12 @@ function C(e) {
                           })
                         : null,
                     (0, l.jsx)(s.FormItem, {
-                        title: f.intl.string(f.t['+gRCCw']),
+                        title: p.intl.string(p.t['+gRCCw']),
                         className: I.formItem,
                         children: (0, l.jsx)(s.TextArea, {
                             className: I.__invalid_descriptionInput,
-                            placeholder: f.intl.string(f.t['kWO/Ex']),
-                            value: R,
+                            placeholder: p.intl.string(p.t['kWO/Ex']),
+                            value: _,
                             onChange: (e) => {
                                 y({ description: e });
                             },
@@ -182,14 +182,14 @@ function C(e) {
                         })
                     }),
                     (0, l.jsxs)(s.FormItem, {
-                        title: f.intl.string(f.t.Ly121d),
+                        title: p.intl.string(p.t.Ly121d),
                         className: I.formItem,
                         children: [
                             (0, l.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 className: I.addImageHint,
-                                children: f.intl.string(f.t.B9C9bW)
+                                children: p.intl.string(p.t.B9C9bW)
                             }),
                             null != A
                                 ? (0, l.jsxs)(l.Fragment, {
@@ -206,20 +206,20 @@ function C(e) {
                                                   }
                                               },
                                               onChange: O,
-                                              hint: f.intl.string(f.t.G44Xmp),
+                                              hint: p.intl.string(p.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
                                           }),
                                           (0, l.jsx)(s.Button, {
                                               size: s.Button.Sizes.SMALL,
                                               onClick: () => F(null),
-                                              children: f.intl.string(f.t.gmUvOz)
+                                              children: p.intl.string(p.t.gmUvOz)
                                           })
                                       ]
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [f.intl.string(f.t.vKCGYW), (0, l.jsx)(d.ZP, { onChange: O })]
+                                      children: [p.intl.string(p.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: O })]
                                   })
                         ]
                     }),

@@ -30,7 +30,7 @@ function h() {
 }
 function p(e) {
     let { applicationId: n, skuIDs: r, currentPaymentSourceId: i, isGift: p } = e,
-        m = a.useMemo(() => r.filter((e) => !_.YQ.includes(e)), [JSON.stringify(r)]),
+        m = a.useMemo(() => r.filter((e) => !_.YQ.includes(e)), [r]),
         g = (0, s.e7)([f.Z], () => m.every((e) => !f.Z.isFetching(e) && null != f.Z.get(e))),
         { previewErrorsById: E, setErrorById: v } = h(),
         I = (0, s.cj)(

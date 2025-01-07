@@ -182,7 +182,7 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                     let r = null === (n = i.current) || void 0 === n ? void 0 : n.getListDimensions();
                     if (null != r) u(e + r.height - x < o);
                 },
-                [o]
+                [o, i, u]
             )
         };
     },

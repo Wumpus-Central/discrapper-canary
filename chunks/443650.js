@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return i;
+        return s;
     }
 });
 var r = t(200651);
@@ -10,7 +10,7 @@ var o = t(120356),
     a = t(481060),
     c = t(809086),
     l = t(274348);
-function s(e) {
+function i(e) {
     let { className: n, onClose: t } = e;
     return (0, r.jsx)(a.Clickable, {
         className: u()(l.closeButtonContainer, n),
@@ -22,7 +22,7 @@ function s(e) {
         })
     });
 }
-function i(e) {
+function s(e) {
     let { guildProductListing: n, onClose: t, className: o } = e;
     return (0, r.jsxs)(a.ModalHeader, {
         className: u()(l.header, o),
@@ -34,7 +34,7 @@ function i(e) {
                 imageSize: 500,
                 alt: ''
             }),
-            (0, r.jsx)(s, {
+            (0, r.jsx)(i, {
                 className: l.closeButton,
                 onClose: t
             })

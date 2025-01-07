@@ -14,16 +14,16 @@ var i = t(200651),
     c = t(100527),
     u = t(906732),
     h = t(597688),
-    f = t(987209),
-    x = t(563132),
+    x = t(987209),
+    f = t(563132),
     C = t(409813),
     m = t(791785),
     g = t(961830),
     p = t(742956),
     S = t(346790),
     j = t(49308),
-    E = t(117652),
-    v = t(126982),
+    v = t(117652),
+    E = t(126982),
     I = t(981631),
     T = t(302800),
     N = t(215023),
@@ -58,7 +58,7 @@ function y(e) {
         Q = l.useMemo(
             () => [
                 g.WA,
-                ...(P ? [E.Dd] : []),
+                ...(P ? [v.Dd] : []),
                 S.n,
                 ...g.yp,
                 g.wo,
@@ -95,7 +95,7 @@ function y(e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, i.jsx)(x.PaymentContextProvider, {
+            (0, i.jsx)(f.PaymentContextProvider, {
                 loadId: A,
                 stepConfigs: Q,
                 applicationId: I.XAJ,
@@ -103,7 +103,7 @@ function y(e) {
                 isGift: P,
                 activeSubscription: null,
                 purchaseType: _.GZ.ONE_TIME,
-                children: (0, i.jsx)(f.KB, {
+                children: (0, i.jsx)(x.KB, {
                     isGift: P,
                     giftRecipient: k,
                     giftMessage: b,
@@ -123,7 +123,7 @@ function y(e) {
                                       onClose: () => n(!1),
                                       giftingOrigin: L
                                   })
-                                : (0, i.jsx)(v.Z, {
+                                : (0, i.jsx)(E.Z, {
                                       step: t,
                                       onClose: () => n(!1)
                                   }),

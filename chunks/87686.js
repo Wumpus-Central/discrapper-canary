@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(120356),
     r = t.n(i),
     s = t(481060),
-    u = t(70956),
-    o = t(747071),
+    o = t(70956),
+    u = t(747071),
     c = t(586826),
     d = t(622594),
     f = t(174727),
@@ -13,7 +13,7 @@ var l = t(200651),
     h = t(308508);
 let g = {
     startPositionMs: 0,
-    endPositionMs: 2 * (10 * u.Z.Millis.SECOND),
+    endPositionMs: 2 * (10 * o.Z.Millis.SECOND),
     playheadPositionMs: 0
 };
 n.Z = a.memo(function (e) {
@@ -25,12 +25,12 @@ n.Z = a.memo(function (e) {
         { playheadPositionMs: C, endPositionMs: w, startPositionMs: S } = b,
         I = null != x,
         E = w - S,
-        M = E > m.YW * u.Z.Millis.SECOND;
+        M = E > m.YW * o.Z.Millis.SECOND;
     a.useEffect(() => {
         null != x &&
             j({
                 playheadPositionMs: 0,
-                endPositionMs: x.duration * u.Z.Millis.SECOND,
+                endPositionMs: x.duration * o.Z.Millis.SECOND,
                 startPositionMs: 0
             });
     }, [x]);
@@ -46,7 +46,7 @@ n.Z = a.memo(function (e) {
                     Z();
                     return;
                 }
-                C >= w ? (x.currentTime = (0, f.my)(S)) : (x.currentTime = (0, f.my)(C)), (x.volume = (0, o.Z)(i)), x.play(), y(!0);
+                C >= w ? (x.currentTime = (0, f.my)(S)) : (x.currentTime = (0, f.my)(C)), (x.volume = (0, u.Z)(i)), x.play(), y(!0);
             }
         }, [x, w, Z, C, N, S, i]),
         _ = a.useCallback(

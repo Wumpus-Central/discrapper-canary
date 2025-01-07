@@ -28,8 +28,8 @@ var l = t(200651),
     v = t(944486),
     Z = t(31445),
     j = t(59350),
-    E = t(290511),
-    B = t(176505),
+    B = t(290511),
+    E = t(176505),
     S = t(921944),
     T = t(388032),
     w = t(824104),
@@ -48,7 +48,7 @@ function y(e) {
             className: w.header,
             innerClassname: w.innerHeader,
             hideSearch: !0,
-            channelId: B.oC.CUSTOMIZE_COMMUNITY,
+            channelId: E.oC.CUSTOMIZE_COMMUNITY,
             guildId: n.id,
             toolbar:
                 null != t
@@ -106,13 +106,13 @@ function L(e) {
     let { guildId: n, selectedSection: t } = e,
         i = (0, o.e7)([N.Z], () => N.Z.getGuild(n)),
         s = (0, Z.Z)(i),
-        [u, h] = a.useState(null != t ? t : E.l7.CUSTOMIZE);
+        [u, h] = a.useState(null != t ? t : B.l7.CUSTOMIZE);
     a.useEffect(() => {
         null != t && h(t);
     }, [t]);
     let m = (0, o.e7)([v.Z], () => v.Z.getLastSelectedChannelId(n)),
-        f = (0, o.e7)([b.ZP], () => b.ZP.getCurrentSidebarChannelId(B.oC.CHANNEL_BROWSER)),
-        p = null != f && u === E.l7.BROWSE,
+        f = (0, o.e7)([b.ZP], () => b.ZP.getCurrentSidebarChannelId(E.oC.CHANNEL_BROWSER)),
+        p = null != f && u === B.l7.BROWSE,
         _ = (0, o.e7)([I.Z], () => I.Z.getChannel(m)),
         S = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
         L = (0, x.fU)(n);
@@ -142,16 +142,16 @@ function L(e) {
                                                   d.TabBar.Item,
                                                   {
                                                       className: w.tabBarItem,
-                                                      id: E.l7.CUSTOMIZE,
+                                                      id: B.l7.CUSTOMIZE,
                                                       children: T.intl.string(T.t.H2cICQ)
                                                   },
-                                                  E.l7.CUSTOMIZE
+                                                  B.l7.CUSTOMIZE
                                               ),
                                               (0, l.jsxs)(
                                                   d.TabBar.Item,
                                                   {
                                                       className: w.tabBarItem,
-                                                      id: E.l7.BROWSE,
+                                                      id: B.l7.BROWSE,
                                                       'aria-label': T.intl.string(T.t.et6wam),
                                                       children: [
                                                           T.intl.string(T.t.et6wam),
@@ -162,18 +162,18 @@ function L(e) {
                                                           })
                                                       ]
                                                   },
-                                                  E.l7.BROWSE
+                                                  B.l7.BROWSE
                                               )
                                           ]
                                       }),
                                   (() => {
                                       switch (u) {
-                                          case E.l7.CUSTOMIZE:
+                                          case B.l7.CUSTOMIZE:
                                               return (0, l.jsx)(j.Z, {
                                                   guildId: n,
-                                                  onBrowseChannels: () => h(E.l7.BROWSE)
+                                                  onBrowseChannels: () => h(B.l7.BROWSE)
                                               });
-                                          case E.l7.BROWSE:
+                                          case B.l7.BROWSE:
                                           default:
                                               return (0, l.jsx)(C.Z, { guildId: n });
                                       }

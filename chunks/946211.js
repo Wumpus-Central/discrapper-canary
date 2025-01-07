@@ -1,6 +1,6 @@
 t.d(n, {
     L: function () {
-        return s;
+        return i;
     }
 });
 var r = t(200651);
@@ -18,4 +18,4 @@ function l(e) {
         onClose: n
     });
 }
-let s = (e, n, t) => (t === o.h8.CONFIRM ? null : (0, r.jsx)(l, { onClose: () => n(!1) }));
+let i = (e, n, t) => (t === o.h8.CONFIRM ? null : (0, r.jsx)(l, { onClose: () => n(!1) }));

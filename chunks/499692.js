@@ -12,8 +12,8 @@ var a = t(200651),
     p = t(125909),
     _ = t(857192),
     g = t(881294),
-    v = t(797908),
-    f = t(292191),
+    f = t(797908),
+    v = t(292191),
     C = t(981631),
     x = t(318708);
 function h(e) {
@@ -66,7 +66,7 @@ function h(e) {
                     return null == i
                         ? null
                         : (0, a.jsx)(
-                              v.Z,
+                              f.Z,
                               {
                                   application: i,
                                   onSelectApplication: () => s(i.id, n),
@@ -91,7 +91,7 @@ n.Z = function (e) {
     return r === m.M.ERROR
         ? (0, a.jsx)('div', {
               className: x.errorContainer,
-              children: (0, a.jsx)(f.Z, { className: x.error })
+              children: (0, a.jsx)(v.Z, { className: x.error })
           })
         : (0, a.jsx)(p.Z, {
               loading: r === m.M.FETCHING,

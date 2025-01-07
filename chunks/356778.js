@@ -153,7 +153,7 @@ function I(e, t, n) {
                         });
                 }
                 return () => {};
-            }, [e, t, o, s, n, l]),
+            }, [e, t, o, s, n, l, C, a]),
             null != o ? o : g
         );
     })(e, t, 'messages', n);

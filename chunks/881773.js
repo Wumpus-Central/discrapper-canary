@@ -17,15 +17,15 @@ var r = n(200651),
     v = n(617136),
     E = n(184299),
     p = n(902749),
-    f = n(957099),
-    C = n(312729),
+    C = n(957099),
+    f = n(312729),
     S = n(223418),
     g = n(604162),
     x = n(981631),
     h = n(388032),
     _ = n(451680);
 let T = '-:--',
-    D = {
+    N = {
         [S.rq.PLAYING]: {
             icon: d.PauseIcon,
             label: h.intl.string(h.t.ZcgDJS)
@@ -39,7 +39,7 @@ let T = '-:--',
             label: h.intl.string(h.t.hsvh0t)
         }
     },
-    N = (e, t) => {
+    D = (e, t) => {
         (0, v.dA)({
             questId: e,
             event: x.rMx.QUEST_VIDEO_VOLUME_CHANGED,
@@ -75,11 +75,11 @@ function I(e) {
     );
 }
 let A = i.forwardRef(function (e, t) {
-    let { iconComponent: n, animationTime: i, visible: l, ariaLabel: a, active: c, disabled: m, tooltipLabel: v, tooltipDelayMs: E = 1500, shortcut: p, onClick: f } = e,
-        C = (e) =>
+    let { iconComponent: n, animationTime: i, visible: l, ariaLabel: a, active: c, disabled: m, tooltipLabel: v, tooltipDelayMs: E = 1500, shortcut: p, onClick: C } = e,
+        f = (e) =>
             (0, r.jsx)(d.Clickable, {
                 ...e,
-                onClick: !0 === m ? void 0 : f,
+                onClick: !0 === m ? void 0 : C,
                 className: o()(_.videoControlsBtnCont, { [_.videoControlsBtnContDisabled]: m }),
                 'aria-label': a,
                 'aria-disabled': m,
@@ -106,7 +106,7 @@ let A = i.forwardRef(function (e, t) {
                     })
                 })
             });
-    if (null == v) return C();
+    if (null == v) return f();
     {
         let e = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -123,13 +123,13 @@ let A = i.forwardRef(function (e, t) {
             'aria-label': v,
             tooltipContentClassName: _.videoControlsBtnTooltip,
             delay: E,
-            children: (e) => C(e)
+            children: (e) => f(e)
         });
     }
 });
 function j(e) {
     var t, n;
-    let { videoRef: l, quest: v, playerState: g, animSpring: x, visible: T, seekForwardEnabled: j, hideCaptionBtn: b, handlePlaybackBtnClick: L, handleTranscriptBtnClick: R, handleCaptionBtnClick: O, handleFullScreenBtnClick: k, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: y } = e,
+    let { videoRef: l, quest: v, playerState: g, animSpring: x, visible: T, seekForwardEnabled: j, hideCaptionBtn: b, handlePlaybackBtnClick: R, handleTranscriptBtnClick: L, handleCaptionBtnClick: O, handleFullScreenBtnClick: k, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: y } = e,
         q = (0, E.km)((e) => e.volume),
         w = (0, E.km)((e) => e.setVolume),
         B = (0, E.km)((e) => e.muted),
@@ -158,7 +158,7 @@ function j(e) {
             [l, z]
         ),
         en = i.useCallback(() => {
-            if (null != l.current) 0 === z ? (et(q), U(!1), N(v.id, q)) : (w(z), et(0), U(!0), N(v.id, 0));
+            if (null != l.current) 0 === z ? (et(q), U(!1), D(v.id, q)) : (w(z), et(0), U(!0), D(v.id, 0));
         }, [l, z, q, U, w, et, v.id]),
         er = () => {
             Q(!0);
@@ -170,10 +170,10 @@ function j(e) {
             (e) => {
                 switch (e.key) {
                     case S.Y1.PLAYBACK:
-                        L();
+                        R();
                         break;
                     case S.Y1.SPACE:
-                        !G && (e.preventDefault(), L());
+                        !G && (e.preventDefault(), R());
                         break;
                     case S.Y1.SEEK_BACK:
                         M();
@@ -191,7 +191,7 @@ function j(e) {
                         en();
                 }
             },
-            [O, k, L, M, P, en, G]
+            [O, k, R, M, P, en, G]
         );
     i.useEffect(() => {
         null != ee.current && ee.current.focus();
@@ -218,7 +218,7 @@ function j(e) {
             [el]
         );
     let eo = 0 === z ? d.VoiceXIcon : z < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
-        { icon: es, label: ea } = D[g];
+        { icon: es, label: ea } = N[g];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -231,11 +231,11 @@ function j(e) {
                         ariaLabel: ea,
                         tooltipLabel: ea,
                         shortcut: S.Y1.PLAYBACK,
-                        onClick: L,
+                        onClick: R,
                         ref: ee
                     }),
                     (0, r.jsx)(A, {
-                        iconComponent: f.d,
+                        iconComponent: C.d,
                         animationTime: x,
                         visible: T,
                         onClick: M,
@@ -244,7 +244,7 @@ function j(e) {
                         shortcut: S.Y1.SEEK_BACK
                     }),
                     (0, r.jsx)(A, {
-                        iconComponent: C.o,
+                        iconComponent: f.o,
                         animationTime: x,
                         visible: T,
                         onClick: P,
@@ -324,7 +324,7 @@ function j(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        et(e), w(e), N(v.id, e), W && (X(!1), y(!1)), B && e > 0 && U(!1);
+                                        et(e), w(e), D(v.id, e), W && (X(!1), y(!1)), B && e > 0 && U(!1);
                                     },
                                     asValueChanges: (e) => {
                                         et(e), !W && (X(!0), y(!0));
@@ -349,7 +349,7 @@ function j(e) {
                         iconComponent: d.PaperIcon,
                         animationTime: x,
                         visible: T,
-                        onClick: R,
+                        onClick: L,
                         active: F && g !== S.rq.ENDED,
                         disabled: g === S.rq.ENDED,
                         ariaLabel: h.intl.string(h.t.KCzjTk),

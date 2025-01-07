@@ -21,8 +21,8 @@ var a = t(200651),
     p = t(894653),
     _ = t(809547),
     g = t(34674),
-    v = t(125909),
-    f = t(374939),
+    f = t(125909),
+    v = t(374939),
     C = t(283293),
     x = t(314897),
     h = t(493646),
@@ -170,7 +170,7 @@ function P(e) {
                     className: T.innerContainer,
                     children: [
                         R ? null : (0, a.jsx)('div', { className: T.centeringBuffer }),
-                        (0, a.jsx)(f.Z, {
+                        (0, a.jsx)(v.Z, {
                             children: (0, a.jsxs)('div', {
                                 className: T.contentContainer,
                                 children: [
@@ -182,7 +182,7 @@ function P(e) {
                                             onSelectCategory: K
                                         })
                                     }),
-                                    (0, a.jsx)(v.Z, {
+                                    (0, a.jsx)(f.Z, {
                                         loading: H === m.M.FETCHING,
                                         children:
                                             H === m.M.FETCHED && (null == Y || (null == Y ? void 0 : Y.results.length) === 0)

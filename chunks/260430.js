@@ -8,11 +8,11 @@ var a = r(200651);
 r(192379);
 var s = r(120356),
     o = r.n(s),
-    l = r(75124),
-    u = r(373793),
-    c = r(243814),
-    d = r(993365),
-    f = r(481060),
+    l = r(373793),
+    u = r(243814),
+    c = r(993365),
+    d = r(481060),
+    f = r(211266),
     _ = r(713938),
     h = r(388032),
     p = r(436741);
@@ -22,12 +22,12 @@ function m(e) {
         className: p.scope,
         children: [
             i
-                ? (0, a.jsx)(f.CircleXIcon, {
+                ? (0, a.jsx)(d.CircleXIcon, {
                       size: 'md',
                       color: 'currentColor',
                       className: o()(p.icon, p.fakeScopeIcon)
                   })
-                : (0, a.jsx)(f.CircleCheckIcon, {
+                : (0, a.jsx)(d.CircleCheckIcon, {
                       size: 'md',
                       color: 'currentColor',
                       className: o()(p.icon, p.scopeIcon)
@@ -35,13 +35,13 @@ function m(e) {
             (0, a.jsxs)('div', {
                 className: p.scopeInner,
                 children: [
-                    (0, a.jsx)(d.x, {
+                    (0, a.jsx)(c.x, {
                         variant: 'text-md/normal',
                         color: i ? 'text-muted' : void 0,
                         children: n
                     }),
                     null != r
-                        ? (0, a.jsx)(d.x, {
+                        ? (0, a.jsx)(c.x, {
                               variant: 'text-xs/normal',
                               color: 'text-danger',
                               children: r
@@ -54,16 +54,16 @@ function m(e) {
 }
 function g(e) {
     var n;
-    let { application: r, accountScopes: i, requestedScopes: s, integrationType: o, errors: d, isTrustedName: g = !1 } = e,
-        E = (0, l.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+    let { application: r, accountScopes: i, requestedScopes: s, integrationType: o, errors: c, isTrustedName: g = !1 } = e,
+        E = (0, f.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
     if (0 === i.length) return null;
     let v = E(),
         I = g ? h.t.PZpY9f : h.t['1Hz+Sk'],
-        T = o === u.Y.USER_INSTALL && s.includes(c.x.APPLICATIONS_COMMANDS);
+        T = o === l.Y.USER_INSTALL && s.includes(u.x.APPLICATIONS_COMMANDS);
     return (0, a.jsxs)('div', {
         className: p.scopes,
         children: [
-            (0, a.jsx)(f.Heading, {
+            (0, a.jsx)(d.Heading, {
                 variant: 'heading-sm/normal',
                 className: p.sectionLabel,
                 children: h.intl.format(I, { application: null !== (n = null == r ? void 0 : r.name) && void 0 !== n ? n : '' })
@@ -76,7 +76,7 @@ function g(e) {
                             m,
                             {
                                 text: n,
-                                error: 0 === r ? (null == d ? void 0 : null === (i = d[e]) || void 0 === i ? void 0 : i[0]) : void 0
+                                error: 0 === r ? (null == c ? void 0 : null === (i = c[e]) || void 0 === i ? void 0 : i[0]) : void 0
                             },
                             ''.concat(e, '-').concat(r)
                         );

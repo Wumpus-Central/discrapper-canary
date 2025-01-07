@@ -1,28 +1,28 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return i;
     }
 });
-var r = t(192379),
-    o = t(512722),
-    u = t.n(o),
+var r = t(512722),
+    o = t.n(r),
+    u = t(493773),
     a = t(563132),
     c = t(390917),
     l = t(464797);
-function s(e) {
+function i(e) {
     let { handleClose: n } = e,
-        { guildProductListing: t, guildId: o } = (0, l._)(),
-        { selectedSkuPricePreview: s } = (0, a.usePaymentContext)();
+        { guildProductListing: t, guildId: r } = (0, l._)(),
+        { selectedSkuPricePreview: i } = (0, a.usePaymentContext)();
     return (
-        r.useEffect(() => {
-            u()(null != s, 'selectedSkuPricePreview cannot be null'),
+        (0, u.Z)(() => {
+            o()(null != i, 'selectedSkuPricePreview cannot be null'),
                 (0, c.u)({
-                    guildId: o,
+                    guildId: r,
                     guildProductListingId: t.id,
-                    skuPricePreview: s
+                    skuPricePreview: i
                 }),
                 n();
-        }, []),
+        }),
         null
     );
 }

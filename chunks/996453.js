@@ -26,21 +26,21 @@ function L(e) {
     var t;
     let { guildTemplate: n, onClose: s, onBack: L, onHubGuildInfoSet: p, onGuildCreated: b, isSlideReady: j, hasFooter: _ = !0, isCommunity: I = !1 } = e,
         [N, B] = l.useState(C.Z.getGuildNameSuggestion()),
-        [T, S] = l.useState(null),
-        [Z, E] = l.useState(!1),
-        [M, v] = l.useState(null),
+        [T, Z] = l.useState(null),
+        [S, M] = l.useState(!1),
+        [E, v] = l.useState(null),
         H = !!(null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()),
         [y, A] = l.useState(H),
-        k = (0, u.Dt)(),
-        D = l.useRef(null);
+        D = (0, u.Dt)(),
+        k = l.useRef(null);
     l.useEffect(() => {
         var e;
-        j && (null === (e = D.current) || void 0 === e || e.focus());
+        j && (null === (e = k.current) || void 0 === e || e.focus());
     }, [j]);
     let R = l.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
-                    E(!0), v(null);
+                    M(!0), v(null);
                     try {
                         if (null != p) p(N, T);
                         else {
@@ -50,7 +50,7 @@ function L(e) {
                     } catch (e) {
                         v(e);
                     }
-                    E(!1);
+                    M(!1);
                 }
             },
             [n, p, N, T, I, y, b]
@@ -61,7 +61,7 @@ function L(e) {
                     color: o.Button.Colors.BRAND,
                     onClick: R,
                     disabled: 0 === N.length,
-                    submitting: Z,
+                    submitting: S,
                     children: null != p ? h.intl.string(h.t.PDTjLC) : h.intl.string(h.t.CumH4u)
                 }),
                 (0, i.jsx)(o.Button, {
@@ -106,7 +106,7 @@ function L(e) {
                             className: g.uploadIcon,
                             children: (0, i.jsx)(c.Z, {
                                 icon: T,
-                                onChange: S
+                                onChange: Z
                             })
                         }),
                         (0, i.jsxs)('form', {
@@ -114,11 +114,11 @@ function L(e) {
                             children: [
                                 (0, i.jsxs)(o.FormItem, {
                                     className: g.nameInput,
-                                    error: null == M ? void 0 : M.getFirstFieldErrorMessage('name'),
+                                    error: null == E ? void 0 : E.getFirstFieldErrorMessage('name'),
                                     children: [
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'label',
-                                            htmlFor: k,
+                                            htmlFor: D,
                                             children: h.intl.string(h.t.dBih7e)
                                         }),
                                         (0, i.jsx)(o.TextInput, {
@@ -126,8 +126,8 @@ function L(e) {
                                             value: N,
                                             maxLength: 100,
                                             onChange: B,
-                                            inputRef: D,
-                                            id: k
+                                            inputRef: k,
+                                            id: D
                                         })
                                     ]
                                 }),
@@ -151,12 +151,12 @@ function L(e) {
                                 })
                             ]
                         }),
-                        null == M || M.hasFieldErrors()
+                        null == E || E.hasFieldErrors()
                             ? null
                             : (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-danger',
-                                  children: M.message
+                                  children: E.message
                               })
                     ]
                 }),

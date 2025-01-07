@@ -22,7 +22,7 @@ function r(e) {
                             }
                         }));
             },
-            [n]
+            [n, t]
         ),
         o = a.useCallback(
             () =>
@@ -30,7 +30,7 @@ function r(e) {
                     let n = t.current;
                     null == n || n.scrollToTop({ callback: () => requestAnimationFrame(e) });
                 }),
-            []
+            [t]
         ),
         c = a.useCallback(
             () =>
@@ -38,7 +38,7 @@ function r(e) {
                     let n = t.current;
                     null == n || n.scrollToBottom({ callback: () => requestAnimationFrame(e) });
                 }),
-            []
+            [t]
         );
     return (0, i.ZP)({
         id: 'forum-channel-list-'.concat(r.id),

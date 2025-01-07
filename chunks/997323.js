@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     },
     SN: function () {
-        return E;
+        return c;
     },
     Zu: function () {
         return a;
@@ -12,7 +12,7 @@ n.d(t, {
         return d;
     },
     x8: function () {
-        return c;
+        return E;
     }
 }),
     n(411104);
@@ -106,13 +106,13 @@ let o = async (e) => {
             throw new i.Hx(e);
         }
     },
-    E = (e) => {
+    c = (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
-    c = (e) => {
+    E = (e) => {
         u.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e

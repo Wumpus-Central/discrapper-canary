@@ -47,12 +47,12 @@ t.Z = l.forwardRef(function (e, t) {
             }
         }, [f, b]);
     (0, r.Z)(() => {
-        j.current && C() && y();
+        j.current && C() && w();
     });
-    let y = l.useCallback(() => {
+    let w = l.useCallback(() => {
             for (let e of ((j.current = !0), C(), Object.values(h.current))) null != e && e.play();
         }, [C]),
-        w = l.useCallback(() => {
+        y = l.useCallback(() => {
             for (let e of Object.values(h.current)) null != e && e.pause();
         }, []),
         _ = l.useCallback((e) => {
@@ -61,8 +61,8 @@ t.Z = l.forwardRef(function (e, t) {
         }, []),
         k = l.useCallback(() => {
             var e;
-            (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? y() : w();
-        }, [y, w]),
+            (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? w() : y();
+        }, [w, y]),
         S = l.useCallback((e) => {
             h.current.main = e;
         }, []),
@@ -75,9 +75,9 @@ t.Z = l.forwardRef(function (e, t) {
             h.current[t] = e;
         }, []);
     return (l.useImperativeHandle(t, () => ({
-        play: y,
+        play: w,
         seek: _,
-        pause: w,
+        pause: y,
         videoElement: h.current.main
     })),
     null == n)

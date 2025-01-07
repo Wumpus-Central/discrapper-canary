@@ -18,7 +18,7 @@ function r(e) {
             let e = n.current,
                 i = r.current;
             if (null != e && null != i) (0, a.YP)(i, e);
-        }, [t, e]),
+        }, [t, e, s]),
         (0, i.useEffect)(() => {
             if (!t) return;
             let e = n.current,

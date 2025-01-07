@@ -4,8 +4,8 @@ var l = t(200651),
     i = t(120356),
     r = t.n(i),
     s = t(392711),
-    u = t(780384),
-    o = t(481060),
+    o = t(780384),
+    u = t(481060),
     c = t(410030),
     d = t(44315),
     f = t(293501),
@@ -32,7 +32,7 @@ n.Z = a.memo(function (e) {
         b = (0, f.b1)(n),
         j = (0, f.NN)(b, N.current, y),
         C = (0, c.ZP)(),
-        w = (0, d.Sl)((0, u.wj)(C) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
+        w = (0, d.Sl)((0, o.wj)(C) ? h.Il.PRIMARY_300 : h.Il.PRIMARY_700),
         S = null == b || null == j,
         I = (0 === v.width || 0 === v.height || S) && null != n,
         E = a.useCallback(() => {
@@ -86,7 +86,7 @@ n.Z = a.memo(function (e) {
                 I &&
                     (0, l.jsx)('div', {
                         className: g.loading,
-                        children: (0, l.jsx)(o.Spinner, { type: o.SpinnerTypes.SPINNING_CIRCLE })
+                        children: (0, l.jsx)(u.Spinner, { type: u.SpinnerTypes.SPINNING_CIRCLE })
                     })
             ]
         })

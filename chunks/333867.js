@@ -15,11 +15,11 @@ var l = t(772848),
     c = t(409813),
     u = t(608579),
     h = t(981631);
-let f = 'payment-modal',
-    x = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
+let x = 'payment-modal',
+    f = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
 function C(e) {
     let n;
-    let { skuId: t, isGift: c = !1, giftMessage: C, giftingOrigin: m, onClose: g, onComplete: p, analyticsLocations: S, analyticsObject: j, giftRecipient: E, variantsReturnStyle: v } = e,
+    let { skuId: t, isGift: c = !1, giftMessage: C, giftingOrigin: m, onClose: g, onComplete: p, analyticsLocations: S, analyticsObject: j, giftRecipient: v, variantsReturnStyle: E } = e,
         I = !1,
         T = (0, l.Z)(),
         N = (e) => {
@@ -36,7 +36,7 @@ function C(e) {
                 giftMessage: C,
                 giftingOrigin: m,
                 analyticsLocations: S,
-                giftRecipient: E,
+                giftRecipient: v,
                 onClose: (e) => {
                     n(), null == g || g(e);
                 },
@@ -48,7 +48,7 @@ function C(e) {
             });
         },
         {
-            modalKey: f,
+            modalKey: x,
             onCloseCallback: () => {
                 !I &&
                     d.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
@@ -64,12 +64,12 @@ function C(e) {
                     null == g || g(I),
                     I &&
                         (0, o.qg)({
-                            variantsReturnStyle: v,
+                            variantsReturnStyle: E,
                             location: 'openCollectiblesPaymentModal'
                         });
             },
             onCloseRequest: () => {
-                null != n && x.has(n) && (0, s.closeModal)(f);
+                null != n && f.has(n) && (0, s.closeModal)(x);
             }
         }
     );

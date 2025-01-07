@@ -3,7 +3,7 @@ t.d(n, {
         return T;
     },
     c: function () {
-        return N;
+        return I;
     }
 });
 var l = t(200651),
@@ -45,7 +45,7 @@ function p(e) {
         ...t
     });
 }
-function I() {
+function N() {
     let e = (0, h.Z)();
     return (0, l.jsxs)('div', {
         className: j.extendedDemoContainer,
@@ -80,7 +80,7 @@ function I() {
         ]
     });
 }
-function N() {
+function I() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
         className: r()(j.reverseTrialEducationBannerContainer, { [j.reducedMotion]: e }),
@@ -113,7 +113,7 @@ function T(e) {
         className: r()(j.upsellBanner, j.enhancedBanner, { [j.gradientGlow]: s }),
         children:
             c && h
-                ? (0, l.jsx)(I, {})
+                ? (0, l.jsx)(N, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {

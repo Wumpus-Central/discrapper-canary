@@ -12,7 +12,7 @@ var a = t(200651),
     p = t(981631),
     _ = t(388032),
     g = t(69812);
-function v(e) {
+function f(e) {
     let { applicationId: n, similarApplications: t, onSelectApplication: r, similarLoadId: o } = e,
         s = (function (e) {
             let { applicationId: n, similarAppIds: t } = e,
@@ -39,7 +39,7 @@ function v(e) {
         ref: s,
         children: t.map((e, t) =>
             (0, a.jsx)(
-                f,
+                v,
                 {
                     applicationId: n,
                     similarApplication: e,
@@ -52,9 +52,9 @@ function v(e) {
         )
     });
 }
-function f(e) {
+function v(e) {
     var n, t, l;
-    let { applicationId: o, similarApplication: c, onSelectApplication: _, position: v, similarLoadId: f } = e,
+    let { applicationId: o, similarApplication: c, onSelectApplication: _, position: f, similarLoadId: v } = e,
         C = (0, d.Z)({ application: c }),
         x = null === (n = c.categories) || void 0 === n ? void 0 : n[0],
         h = i.useMemo(
@@ -71,12 +71,12 @@ function f(e) {
                 current_page: 'product',
                 application_id: o,
                 suggested_application_id: c.id,
-                position: v,
-                load_id: f,
+                position: f,
+                load_id: v,
                 shown_mutual_guilds_count: C.length
             }),
                 _(c.id);
-        }, [_, c.id, o, C.length, f, v]);
+        }, [_, c.id, o, C.length, v, f]);
     return (0, a.jsxs)(r.Clickable, {
         onClick: b,
         className: g.appContainer,
@@ -155,7 +155,7 @@ n.Z = function (e) {
                       loading: t === o.M.FETCHING,
                       children:
                           null != i
-                              ? (0, a.jsx)(v, {
+                              ? (0, a.jsx)(f, {
                                     applicationId: n,
                                     similarApplications: i,
                                     onSelectApplication: l,

@@ -4,15 +4,15 @@ n.r(t),
             return _;
         },
         useQueryForAppCommands: function () {
-            return N;
+            return Z;
         }
     }),
     n(47120);
 var l = n(200651),
     r = n(192379),
     i = n(481060),
-    a = n(911969),
-    s = n(835473),
+    s = n(911969),
+    a = n(835473),
     o = n(987509),
     u = n(72214),
     c = n(592125),
@@ -26,22 +26,22 @@ var l = n(200651),
     x = n(388032),
     v = n(5859),
     C = n(621054);
-let S = [a.yU.CHAT],
-    Z = () => {
+let S = [s.yU.CHAT],
+    y = () => {
         (0, i.closeModal)(b.s);
     };
-function y(e) {
-    let { sendLabel: t, canSend: n, isSending: a, onSend: s } = e,
+function N(e) {
+    let { sendLabel: t, canSend: n, isSending: s, onSend: a } = e,
         o = r.useCallback(() => {
-            s();
-        }, [s]);
+            a();
+        }, [a]);
     return (0, l.jsx)(i.ModalFooter, {
         className: v.footerWithMessage,
         children: (0, l.jsx)('div', {
             className: v.footerButtons,
             children: (0, l.jsx)(i.Button, {
                 className: v.sendWithMessage,
-                submitting: a,
+                submitting: s,
                 disabled: !n,
                 onClick: o,
                 children: t
@@ -49,7 +49,7 @@ function y(e) {
         })
     });
 }
-function N(e, t) {
+function Z(e, t) {
     return (0, f.v1)(
         e,
         { commandTypes: S },
@@ -61,10 +61,10 @@ function N(e, t) {
     );
 }
 function _(e) {
-    let { applicationId: t, channel: n, command: a, onClose: f, requireLaunchChannel: b, onShareResult: S, previewMessage: _, ...j } = e,
+    let { applicationId: t, channel: n, command: s, onClose: f, requireLaunchChannel: b, onShareResult: S, previewMessage: _, ...j } = e,
         E = r.useMemo(() => (0, o.dL)(n.id), [n]),
         [M, L] = r.useState(!1),
-        { commands: T, loading: P } = N(n, t),
+        { commands: T, loading: P } = Z(n, t),
         w = r.useRef(0),
         [A, R] = r.useState(b ? [E] : []),
         k = A.length,
@@ -84,7 +84,7 @@ function _(e) {
         W = r.useCallback(() => {
             S(!1), f();
         }, [S, f]),
-        [z] = (0, s.Z)([t]),
+        [z] = (0, a.Z)([t]),
         O = r.useCallback(() => {
             F('');
         }, [F]),
@@ -111,16 +111,16 @@ function _(e) {
         ),
         [V, X] = r.useMemo(() => {
             if (P) return [null, !1];
-            let e = T.find((e) => e.untranslatedName === a);
+            let e = T.find((e) => e.untranslatedName === s);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [a, T, P]),
+        }, [s, T, P]),
         J = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 if (null === V) return;
                 L(!0);
                 let n = (await Promise.all(e.map(o.qx))).filter(h.lm);
-                t && (S(!0), Z()),
+                t && (S(!0), y()),
                     n.forEach(async (e) => {
                         let t = c.Z.getChannel(e);
                         if (null == t) return;
@@ -136,7 +136,7 @@ function _(e) {
                             })) && (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
                     S(!0),
-                    Z();
+                    y();
             },
             [S, V]
         ),
@@ -232,7 +232,7 @@ function _(e) {
                 ]
             }),
             Y,
-            (0, l.jsx)(y, {
+            (0, l.jsx)(N, {
                 sendLabel: x.intl.string(x.t.TXNS7e),
                 canSend: k > 0,
                 isSending: M,

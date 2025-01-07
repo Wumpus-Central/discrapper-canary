@@ -18,13 +18,13 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: S, isGift: g, baseAnalyticsData: E, analyticsLocation: j, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: Z, metadata: R, sku: w, skuPricePreview: M, purchaseType: L, referralCode: k, loadId: F, giftInfoOptions: D, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: v, setHasRedirectURL: E, isGift: S, baseAnalyticsData: g, analyticsLocation: j, analyticsLocations: y, flowStartTime: I, subscriptionPlan: P, planGroup: T, trialId: N, priceOptions: b, paymentSource: C, isPrepaidPaymentPastDue: _, openInvoiceId: O, premiumSubscription: A, onNext: Z, metadata: R, sku: w, skuPricePreview: M, purchaseType: L, referralCode: k, loadId: F, giftInfoOptions: D, invoicePreview: U } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(a.fw), f(null);
     try {
         let e, t, i;
         if (
             (d.default.track(x.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...E,
+                ...g,
                 subtotal: null == U ? void 0 : U.subtotal,
                 tax: null == U ? void 0 : U.tax,
                 expected_amount: null == U ? void 0 : U.total,
@@ -40,12 +40,12 @@ async function f(e) {
                 (e = await (0, o.ZZ)(w.applicationId, w.id, {
                     expectedAmount: M.amount,
                     expectedCurrency: M.currency,
-                    isGift: g,
+                    isGift: S,
                     paymentSource: C,
                     loadId: F,
                     giftInfoOptions: D
                 }));
-        else if ((l()(null != P, 'Missing subscriptionPlan'), g)) {
+        else if ((l()(null != P, 'Missing subscriptionPlan'), S)) {
             l()(null != U, 'Missing invoicePreview');
             let n = U.total,
                 t = U.currency;
@@ -89,7 +89,7 @@ async function f(e) {
                 loadId: F
             });
         if (e.redirectConfirmation) {
-            S(null != e.redirectURL);
+            E(null != e.redirectURL);
             return;
         }
         n(p.A.COMPLETED), 'subscription' in e ? (t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0), Z(t, i);
@@ -97,7 +97,7 @@ async function f(e) {
         n(p.A.FAIL),
             f(e),
             d.default.track(x.rMx.PAYMENT_FLOW_FAILED, {
-                ...E,
+                ...g,
                 payment_error_code: null == e ? void 0 : e.code,
                 payment_source_id: null == C ? void 0 : C.id,
                 payment_source_type: null == C ? void 0 : C.type,

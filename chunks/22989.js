@@ -28,7 +28,7 @@ var a = n(200651),
     x = n(388032),
     g = n(927932);
 function j(e) {
-    var t, n, j, C, y, w, _, k;
+    var t, n, j, C, w, y, _, k;
     let { clip: S, channelId: N, transitionState: T, onClose: L } = e,
         [F, R] = l.useState(!0),
         [E, I] = l.useState(null),
@@ -66,8 +66,8 @@ function j(e) {
             },
             [P]
         );
-    let [A, Z] = l.useState(null === (y = null === (t = S.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === y || y),
-        [D, z] = l.useState(null === (w = null === (n = S.editMetadata) || void 0 === n ? void 0 : n.applicationAudio) || void 0 === w || w),
+    let [A, Z] = l.useState(null === (w = null === (t = S.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === w || w),
+        [D, z] = l.useState(null === (y = null === (n = S.editMetadata) || void 0 === n ? void 0 : n.applicationAudio) || void 0 === y || y),
         [O, H] = l.useState({
             start: null !== (_ = null === (j = S.editMetadata) || void 0 === j ? void 0 : j.start) && void 0 !== _ ? _ : 0,
             end: null !== (k = null === (C = S.editMetadata) || void 0 === C ? void 0 : C.end) && void 0 !== k ? k : 0

@@ -11,68 +11,69 @@ var i = n(200651),
     m = n(481060),
     h = n(239091),
     g = n(596454),
-    x = n(607070),
-    p = n(933557),
-    f = n(471445),
-    C = n(339085),
-    v = n(565138),
-    _ = n(372769),
-    I = n(690221),
-    N = n(524329),
-    T = n(575258),
-    j = n(514698),
-    b = n(592125),
-    S = n(4912),
-    E = n(626135),
-    R = n(700785),
-    y = n(434404),
-    A = n(92160),
-    Z = n(981631),
-    L = n(231338),
-    D = n(388032),
-    O = n(86592);
-let k = 'WELCOME_CHANNEL',
-    P = (e) => {
+    x = n(493773),
+    p = n(607070),
+    f = n(933557),
+    C = n(471445),
+    v = n(339085),
+    _ = n(565138),
+    I = n(372769),
+    N = n(690221),
+    T = n(524329),
+    j = n(575258),
+    b = n(514698),
+    S = n(592125),
+    E = n(4912),
+    R = n(626135),
+    y = n(700785),
+    A = n(434404),
+    Z = n(92160),
+    L = n(981631),
+    D = n(231338),
+    O = n(388032),
+    k = n(86592);
+let P = 'WELCOME_CHANNEL',
+    M = (e) => {
         var t;
         let l,
-            { guildId: s, welcomeChannel: o, onEdit: x, onChannelReorder: v, isDropHovered: _, index: I } = e,
+            { guildId: s, welcomeChannel: o, onEdit: x, onChannelReorder: p, isDropHovered: _, index: I } = e,
             [N, T] = r.useState(!1),
-            E = r.useRef(null),
-            y = (0, u.e7)([b.Z], () => b.Z.getChannel(o.channel_id)),
-            A = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            P = null != y && R.Uu(Z.Plq.VIEW_CHANNEL, y),
-            M = null !== (t = (0, f.KS)(y)) && void 0 !== t ? t : m.TextIcon,
-            w = (0, p.ZP)(y, !1),
+            j = r.useRef(null),
+            R = (0, u.e7)([S.Z], () => S.Z.getChannel(o.channel_id)),
+            A = (0, u.e7)([v.ZP], () => (null != o.emoji_id ? v.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
+            Z = null != R && y.Uu(L.Plq.VIEW_CHANNEL, R),
+            M = null !== (t = (0, C.KS)(R)) && void 0 !== t ? t : m.TextIcon,
+            w = (0, f.ZP)(R, !1),
             [, B] = (0, c.c)({
-                type: k,
+                type: P,
                 item: {
                     channel: o,
                     index: I
                 },
                 end: (e, t) => {
-                    null != e && !t.didDrop() && v(e.channel, null, !0);
+                    null != e && !t.didDrop() && p(e.channel, null, !0);
                 }
             }),
             [, U] = (0, d.L)({
-                accept: k,
+                accept: P,
                 hover: (e) => {
-                    v(e.channel, I, !1);
+                    p(e.channel, I, !1);
                 },
                 drop: (e) => {
-                    v(e.channel, I, !0);
+                    p(e.channel, I, !0);
                 }
             });
         return (
             r.useLayoutEffect(
                 () => (
-                    B(U(E)),
+                    B(U(j)),
                     () => {
                         B(null), U(null);
                     }
                 ),
                 [B, U]
             ),
-            (l = P
+            (l = Z
                 ? null != A || null != o.emoji_name
                     ? (0, i.jsx)(g.Z, {
                           emojiId: null == A ? void 0 : A.id,
@@ -82,16 +83,16 @@ let k = 'WELCOME_CHANNEL',
                     : (0, i.jsx)(M, {
                           size: 'md',
                           color: 'currentColor',
-                          className: O.channelIcon
+                          className: k.channelIcon
                       })
-                : (0, i.jsx)(S.Z, {
+                : (0, i.jsx)(E.Z, {
                       width: 24,
                       height: 24,
-                      className: O.warningIcon
+                      className: k.warningIcon
                   })),
             (0, i.jsxs)('div', {
-                className: a()(O.welcomeChannel, { [O.dragging]: _ }),
-                ref: E,
+                className: a()(k.welcomeChannel, { [k.dragging]: _ }),
+                ref: j,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
                     (0, h.jW)(e, async () => {
@@ -101,7 +102,7 @@ let k = 'WELCOME_CHANNEL',
                                 ...t,
                                 guildId: s,
                                 welcomeChannel: o,
-                                onChannelReorder: v,
+                                onChannelReorder: p,
                                 setShowConfirmModal: T,
                                 onEdit: x,
                                 index: I
@@ -111,7 +112,7 @@ let k = 'WELCOME_CHANNEL',
                 children: [
                     l,
                     (0, i.jsxs)('div', {
-                        className: O.channelDescriptionWrapper,
+                        className: k.channelDescriptionWrapper,
                         children: [
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-md/semibold',
@@ -119,16 +120,16 @@ let k = 'WELCOME_CHANNEL',
                                 children: o.description
                             }),
                             (0, i.jsxs)(m.Text, {
-                                className: P ? void 0 : O.channelWarning,
+                                className: Z ? void 0 : k.channelWarning,
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
                                     (0, i.jsx)(M, {
-                                        className: O.channelTitleIcon,
+                                        className: k.channelTitleIcon,
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, i.jsx)('span', { children: P ? w : D.intl.string(D.t.zFuCsL) })
+                                    (0, i.jsx)('span', { children: Z ? w : O.intl.string(O.t.zFuCsL) })
                                 ]
                             })
                         ]
@@ -149,12 +150,12 @@ let k = 'WELCOME_CHANNEL',
                                             onSave: x
                                         });
                                 },
-                                { onCloseRequest: () => L.Vq }
+                                { onCloseRequest: () => D.Vq }
                             ),
-                        children: D.intl.string(D.t.bt75u7)
+                        children: O.intl.string(O.t.bt75u7)
                     }),
                     N &&
-                        (0, i.jsx)(j.Z, {
+                        (0, i.jsx)(b.Z, {
                             onConfirm: () => x(),
                             onCancel: () => T(!1),
                             channelId: o.channel_id
@@ -165,38 +166,38 @@ let k = 'WELCOME_CHANNEL',
     };
 t.Z = (e) => {
     let { guild: t, showCreateModal: l } = e,
-        { welcomeSettings: a, originalWelcomeSettings: s } = (0, u.e7)([T.Z], () => T.Z.getSettingsProps()),
-        c = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
+        { welcomeSettings: a, originalWelcomeSettings: s } = (0, u.e7)([j.Z], () => j.Z.getSettingsProps()),
+        c = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
         [d, h] = r.useState(null),
-        [g, p] = r.useState(!1),
-        [f, C] = r.useState(!1),
-        { description: j, channels: b, enabled: R } = a,
-        k = () => {
-            if (null != t) j !== s.description && ((0, N.Es)(t.id, { description: null == j ? void 0 : j.trim() }), p(!0));
-        },
-        M = (e) => {
-            if (null != t) !o()(e, s.channels) && ((0, N.Es)(t.id, { channels: e }), p(!0));
+        [g, f] = r.useState(!1),
+        [C, v] = r.useState(!1),
+        { description: b, channels: S, enabled: y } = a,
+        P = () => {
+            if (null != t) b !== s.description && ((0, T.Es)(t.id, { description: null == b ? void 0 : b.trim() }), f(!0));
         },
         w = (e) => {
-            if (null != t) e !== s.enabled && ((0, N.Es)(t.id, { enabled: e }), C(!c), p(!0));
+            if (null != t) !o()(e, s.channels) && ((0, T.Es)(t.id, { channels: e }), f(!0));
         },
         B = (e) => {
+            if (null != t) e !== s.enabled && ((0, T.Es)(t.id, { enabled: e }), v(!c), f(!0));
+        },
+        U = (e) => {
             if (null == e) return;
-            let t = [...(null != b ? b : []), e];
-            (0, N.VP)({ channels: t }), M(t);
+            let t = [...(null != S ? S : []), e];
+            (0, T.VP)({ channels: t }), w(t);
         },
-        U = (e) => (t) => {
-            let n = [...(null != b ? b : [])];
-            null == t ? n.splice(e, 1) : (n[e] = t), (0, N.VP)({ channels: n }), M(n), 0 === n.length && R && ((0, N.VP)({ enabled: !1 }), w(!1));
+        G = (e) => (t) => {
+            let n = [...(null != S ? S : [])];
+            null == t ? n.splice(e, 1) : (n[e] = t), (0, T.VP)({ channels: n }), w(n), 0 === n.length && y && ((0, T.VP)({ enabled: !1 }), B(!1));
         },
-        G = (e, t, n) => {
-            if (null == b) return;
-            let i = b.indexOf(e),
-                r = [...b];
-            null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), (0, N.VP)({ channels: r })), n ? (M(r), h(null)) : h(t);
+        F = (e, t, n) => {
+            if (null == S) return;
+            let i = S.indexOf(e),
+                r = [...S];
+            null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), (0, T.VP)({ channels: r })), n ? (w(r), h(null)) : h(t);
         },
-        F = r.useRef(!1);
-    r.useEffect(
+        H = r.useRef(!1);
+    (0, x.Z)(
         () => (
             null != t &&
                 l &&
@@ -207,60 +208,59 @@ t.Z = (e) => {
                             (0, i.jsx)(e, {
                                 ...n,
                                 guildId: t.id,
-                                onSave: B
+                                onSave: U
                             });
                     },
-                    { onCloseRequest: () => L.Vq }
+                    { onCloseRequest: () => D.Vq }
                 ),
             () => {
-                F.current = !0;
+                H.current = !0;
             }
-        ),
-        []
+        )
     ),
         r.useEffect(
             () => () => {
-                if (F.current && g) {
+                if (H.current && g) {
                     let e = [],
                         n = [],
                         i = !1;
-                    null == b ||
-                        b.forEach((t) => {
+                    null == S ||
+                        S.forEach((t) => {
                             e.push(t.description), n.push(t.channel_id), null != t.emoji_id && (i = !0);
                         }),
-                        E.default.track(Z.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
+                        R.default.track(L.rMx.GUILD_WELCOME_SCREEN_SETTINGS_UPDATED, {
                             guild_id: null == t ? void 0 : t.id,
                             options: e,
                             options_channel_ids: n,
-                            guild_description: j,
+                            guild_description: b,
                             has_custom_emojis: i,
-                            is_enabled: R
+                            is_enabled: y
                         });
                 }
             },
-            [g, b, j, R, t, F]
+            [g, S, b, y, t, H]
         ),
-        r.useEffect(() => () => (0, N.sm)(), []);
-    let H = r.useCallback(() => {
-        null != t && y.Z.open(t.id, Z.pNK.ONBOARDING);
+        r.useEffect(() => () => (0, T.sm)(), []);
+    let z = r.useCallback(() => {
+        null != t && A.Z.open(t.id, L.pNK.ONBOARDING);
     }, [t]);
     return null == t
         ? null
         : (0, i.jsxs)(m.FormSection, {
-              title: D.intl.string(D.t['2rkmDg']),
+              title: O.intl.string(O.t['2rkmDg']),
               tag: m.FormTitleTags.H1,
               children: [
                   (0, i.jsx)(i.Fragment, {
                       children: (0, i.jsx)('div', {
-                          className: O.notice,
+                          className: k.notice,
                           children: (0, i.jsxs)(m.Text, {
                               variant: 'text-md/normal',
                               children: [
-                                  (0, i.jsx)(S.Z, { className: O.noticeIcon }),
-                                  D.intl.format(D.t.oj2vi4, {
+                                  (0, i.jsx)(E.Z, { className: k.noticeIcon }),
+                                  O.intl.format(O.t.oj2vi4, {
                                       onboardingLink: (e) =>
-                                          (0, i.jsx)(I.Z, {
-                                              onClick: H,
+                                          (0, i.jsx)(N.Z, {
+                                              onClick: z,
                                               children: e
                                           })
                                   })
@@ -269,14 +269,14 @@ t.Z = (e) => {
                       })
                   }),
                   (0, i.jsx)(m.Text, {
-                      className: O.__invalid_description,
+                      className: k.__invalid_description,
                       variant: 'text-sm/normal',
-                      children: D.intl.string(D.t['w2d74+'])
+                      children: O.intl.string(O.t['w2d74+'])
                   }),
-                  (0, i.jsx)(A.Z, {
-                      enabled: R,
+                  (0, i.jsx)(Z.Z, {
+                      enabled: y,
                       onPreview:
-                          (null == b ? void 0 : b.length) === 0
+                          (null == S ? void 0 : S.length) === 0
                               ? void 0
                               : () => {
                                     null != t &&
@@ -291,42 +291,42 @@ t.Z = (e) => {
                                         });
                                 },
                       onToggle:
-                          R || (null == b ? void 0 : b.length) !== 0
+                          y || (null == S ? void 0 : S.length) !== 0
                               ? () => {
-                                    w(!R);
+                                    B(!y);
                                 }
                               : void 0,
-                      animateStatus: f,
-                      firstLine: R ? D.intl.string(D.t.JbB7Qk) : D.intl.string(D.t['/bd0Qk']),
-                      secondLine: R ? D.intl.string(D.t['TA1g7+']) : D.intl.string(D.t.nc6r1N)
+                      animateStatus: C,
+                      firstLine: y ? O.intl.string(O.t.JbB7Qk) : O.intl.string(O.t['/bd0Qk']),
+                      secondLine: y ? O.intl.string(O.t['TA1g7+']) : O.intl.string(O.t.nc6r1N)
                   }),
                   (0, i.jsxs)('div', {
-                      className: O.previewContainer,
+                      className: k.previewContainer,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: O.welcomeHeader,
+                              className: k.welcomeHeader,
                               children: [
-                                  (0, i.jsx)(v.Z, {
-                                      size: v.Z.Sizes.LARGER,
-                                      className: O.icon,
+                                  (0, i.jsx)(_.Z, {
+                                      size: _.Z.Sizes.LARGER,
+                                      className: k.icon,
                                       guild: t,
                                       animate: !0,
                                       tabIndex: -1
                                   }),
                                   (0, i.jsx)(m.Heading, {
-                                      className: O.welcomeTitle,
+                                      className: k.welcomeTitle,
                                       variant: 'heading-xl/semibold',
-                                      children: D.intl.format(D.t['0aydCA'], {
+                                      children: O.intl.format(O.t['0aydCA'], {
                                           guildName: t.name,
                                           guildNameHook: (e, n) =>
                                               (0, i.jsxs)(
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, i.jsx)(_.Z, {
+                                                          (0, i.jsx)(I.Z, {
                                                               guild: t,
-                                                              className: O.headerGuildBadge,
-                                                              flowerStarClassName: O.flowerStar
+                                                              className: k.headerGuildBadge,
+                                                              flowerStarClassName: k.flowerStar
                                                           }),
                                                           (0, i.jsx)('strong', { children: e })
                                                       ]
@@ -336,53 +336,53 @@ t.Z = (e) => {
                                       })
                                   }),
                                   (0, i.jsx)('div', {
-                                      className: O.descriptionWrapper,
+                                      className: k.descriptionWrapper,
                                       children: (0, i.jsx)(m.TextArea, {
-                                          className: O.descriptionInput,
-                                          placeholder: D.intl.string(D.t.qzZHaW),
+                                          className: k.descriptionInput,
+                                          placeholder: O.intl.string(O.t.qzZHaW),
                                           onChange: (e) => {
-                                              (0, N.VP)({ description: e });
+                                              (0, T.VP)({ description: e });
                                           },
                                           onBlur: () => {
-                                              k();
+                                              P();
                                           },
                                           onKeyDown: (e) => {
-                                              e.keyCode === Z.yXg.ENTER && e.preventDefault();
+                                              e.keyCode === L.yXg.ENTER && e.preventDefault();
                                           },
-                                          value: j,
+                                          value: b,
                                           maxLength: 140,
                                           disabled: !0
                                       })
                                   })
                               ]
                           }),
-                          (0, i.jsx)(m.FormDivider, { className: O.divider }),
+                          (0, i.jsx)(m.FormDivider, { className: k.divider }),
                           (0, i.jsxs)('div', {
-                              className: O.welcomeChannels,
+                              className: k.welcomeChannels,
                               children: [
-                                  (0, i.jsx)(m.FormTitle, { children: D.intl.string(D.t.euJXzc) }),
+                                  (0, i.jsx)(m.FormTitle, { children: O.intl.string(O.t.euJXzc) }),
                                   (0, i.jsx)(m.Text, {
                                       variant: 'text-sm/normal',
-                                      className: O.addChannelSubtext,
-                                      children: D.intl.string(D.t.VOnnn5)
+                                      className: k.addChannelSubtext,
+                                      children: O.intl.string(O.t.VOnnn5)
                                   }),
-                                  null == b
+                                  null == S
                                       ? void 0
-                                      : b.map((e, n) =>
+                                      : S.map((e, n) =>
                                             (0, i.jsx)(
-                                                P,
+                                                M,
                                                 {
                                                     guildId: t.id,
                                                     welcomeChannel: e,
-                                                    onEdit: U(n),
-                                                    onChannelReorder: G,
+                                                    onEdit: G(n),
+                                                    onChannelReorder: F,
                                                     isDropHovered: n === d,
                                                     index: n
                                                 },
                                                 n
                                             )
                                         ),
-                                  (null == b || b.length < 5) &&
+                                  (null == S || S.length < 5) &&
                                       (0, i.jsx)(m.Button, {
                                           onClick: () =>
                                               (0, m.openModalLazy)(
@@ -392,15 +392,15 @@ t.Z = (e) => {
                                                           (0, i.jsx)(e, {
                                                               ...n,
                                                               guildId: t.id,
-                                                              onSave: B
+                                                              onSave: U
                                                           });
                                                   },
-                                                  { onCloseRequest: () => L.Vq }
+                                                  { onCloseRequest: () => D.Vq }
                                               ),
-                                          className: O.addChannelButton,
+                                          className: k.addChannelButton,
                                           disabled: !0,
                                           color: m.Button.Colors.PRIMARY,
-                                          children: D.intl.string(D.t.U1BDe3)
+                                          children: O.intl.string(O.t.U1BDe3)
                                       })
                               ]
                           })

@@ -6,10 +6,10 @@ n.r(t),
     });
 var o = n(200651),
     a = n(192379),
-    l = n(75124),
-    r = n(442837),
-    i = n(704215),
-    s = n(481060),
+    l = n(442837),
+    r = n(704215),
+    i = n(481060),
+    s = n(211266),
     c = n(605236),
     u = n(624659),
     d = n(594174),
@@ -20,8 +20,8 @@ var o = n(200651),
     _ = n(388032);
 function x(e) {
     let { transitionState: t, onClose: x, channel: p } = e,
-        g = (0, l.Z)(f.TL),
-        k = (0, r.e7)([d.default], () => d.default.getUser(p.getRecipientId()));
+        g = (0, s.Z)(f.TL),
+        k = (0, l.e7)([d.default], () => d.default.getUser(p.getRecipientId()));
     return (
         a.useEffect(() => {
             b.default.track(h.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
@@ -38,12 +38,12 @@ function x(e) {
                 }
             },
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: a, feedback: l, closeClicked: r } = e;
-                a && (0, c.EW)(i.z.USER_DM_MUTE_FEEDBACK);
-                let u = null == t || r;
+                let { problem: t, dontShowAgain: a, feedback: l, closeClicked: s } = e;
+                a && (0, c.EW)(r.z.USER_DM_MUTE_FEEDBACK);
+                let u = null == t || s;
                 (0, m.Z)(t, l, u, a),
                     !u &&
-                        (0, s.openModalLazy)(async () => {
+                        (0, i.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
                                 (0, o.jsx)(e, {

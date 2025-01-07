@@ -36,7 +36,7 @@ function h() {
     return (
         s.useEffect(() => {
             !l()(r, a) && o(r);
-        }, [r]),
+        }, [r, a]),
         {
             analyticsLocations: c,
             sourceAnalyticsLocations: f,

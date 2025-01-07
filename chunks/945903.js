@@ -6,9 +6,9 @@ n.r(t),
     });
 var o = n(200651),
     r = n(192379),
-    a = n(75124),
-    l = n(704215),
-    i = n(481060),
+    a = n(704215),
+    l = n(481060),
+    i = n(211266),
     s = n(605236),
     c = n(624659),
     u = n(626135),
@@ -19,7 +19,7 @@ var o = n(200651),
 let f = { [b.U.OTHER]: {} };
 function x(e) {
     let { transitionState: t, onClose: x, guildId: p } = e,
-        v = (0, a.Z)(b.e);
+        v = (0, i.Z)(b.e);
     return (
         r.useEffect(() => {
             u.default.track(m.rMx.OPEN_MODAL, { type: 'Guild Delete Report' });
@@ -30,12 +30,12 @@ function x(e) {
             problems: v,
             feedbackProblems: f,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: r, feedback: a } = e;
-                r && (0, s.EW)(l.z.GUILD_DELETE_FEEDBACK);
+                let { problem: t, dontShowAgain: r, feedback: i } = e;
+                r && (0, s.EW)(a.z.GUILD_DELETE_FEEDBACK);
                 let c = null == t;
-                (0, d.Z)(p, t, a, c),
+                (0, d.Z)(p, t, i, c),
                     !c &&
-                        (0, i.openModalLazy)(async () => {
+                        (0, l.openModalLazy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
                                 (0, o.jsx)(e, {

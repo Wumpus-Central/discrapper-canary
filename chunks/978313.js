@@ -22,12 +22,12 @@ function x(e) {
     let { detectedGame: t, trackAction: n } = e,
         [a, x] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
         [_, E] = i.useState(!0),
-        [v, I] = i.useState(!1),
+        [I, v] = i.useState(!1),
         C = i.useRef(null),
         { width: A, height: S } = (0, u.Z)();
     return (i.useEffect(() => {
         let e = C.current;
-        null != e && I(e.scrollHeight - e.clientHeight > 1 || !_);
+        null != e && v(e.scrollHeight - e.clientHeight > 1 || !_);
     }, [C, A, S, _]),
     null == t.summary)
         ? null
@@ -55,7 +55,7 @@ function x(e) {
                       variant: 'text-sm/normal',
                       children: a ? t.summaryLocalized : t.summary
                   }),
-                  v &&
+                  I &&
                       (0, r.jsx)(d.Clickable, {
                           className: f.clickable,
                           onClick: () => {

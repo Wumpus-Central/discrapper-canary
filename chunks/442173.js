@@ -14,8 +14,8 @@ var l = n(200651),
     u = n(798733),
     d = n(559187),
     b = n(981631),
-    f = n(190378),
-    m = n(388032);
+    m = n(190378),
+    f = n(388032);
 function h(e) {
     let { reportId: t, reportType: h, ...x } = e;
     r.useEffect(() => {
@@ -27,15 +27,15 @@ function h(e) {
     let g = (0, o.I)('CALL_FEEDBACK_OPTION_OTHER');
     return (0, l.jsx)(i.Z, {
         modalType: 'in_app_report',
-        header: m.intl.string(m.t.MP5lDg),
-        body: m.intl.string(m.t['7Ct0Dg']),
-        problemTitle: m.intl.string(m.t.FJmoxM),
+        header: f.intl.string(f.t.MP5lDg),
+        body: f.intl.string(f.t['7Ct0Dg']),
+        problemTitle: f.intl.string(f.t.FJmoxM),
         problems: (0, u.Z)(),
         feedbackProblems: [g],
         onSubmit: function (e) {
             let { rating: r, problem: o, dontShowAgain: i, feedback: c } = e;
             if (
-                (i && (0, s.Kw)(f.v.IN_APP_REPORTS_FEEDBACK),
+                (i && (0, s.Kw)(m.v.IN_APP_REPORTS_FEEDBACK),
                 (0, d.Z)({
                     rating: r,
                     problem: o,
@@ -50,7 +50,7 @@ function h(e) {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                     return (t) =>
                         (0, l.jsx)(e, {
-                            body: m.intl.string(m.t['d9+vQ0']),
+                            body: f.intl.string(f.t['d9+vQ0']),
                             ...t
                         });
                 });

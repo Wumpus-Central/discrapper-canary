@@ -29,9 +29,9 @@ function g(e) {
         { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: P, purchaseType: x, selectedSku: I } = (0, S.usePaymentContext)(),
         { isGift: M, selectedGiftStyle: b, giftRecipient: y } = (0, L.wD)(),
         O = M && (0, m.pO)(y) && v === p.h8.CONFIRM && null != b && (null == I ? void 0 : I.productLine) !== T.POd.COLLECTIBLES,
-        D = null != n && null != v,
-        Z = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
-        w = null != v && !Z.includes(v) && null != A,
+        Z = null != n && null != v,
+        D = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
+        w = null != v && !D.includes(v) && null != A,
         k = (0, d.N)(a),
         F = !M && null != k && null != A && E.nG[k.trial_id].skus.includes(A),
         j = (0, c.Ng)(),
@@ -58,7 +58,7 @@ function g(e) {
                     })
                 ]
             });
-        else if (D) e = n(null != R ? R : null, g, v);
+        else if (Z) e = n(null != R ? R : null, g, v);
         else if (x === N.GZ.ONE_TIME)
             e = (0, i.jsx)(_.t, {
                 step: v,
@@ -78,5 +78,5 @@ function g(e) {
                     useWinterTheme: V
                 }));
         return e;
-    }, [b, g, P, n, R, A, v, F, H, O, w, D, x, M, y, V]);
+    }, [b, g, P, n, R, A, v, F, H, O, w, Z, x, M, y, V]);
 }

@@ -45,6 +45,6 @@ function _(e, n) {
                             shouldFilterKeywords: b,
                             viewingChannelId: T
                         }),
-        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, r, _, h, p, m, g, E, I, b]
+        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, r, _, h, p, m, g, E, I, b, v, T]
     );
 }

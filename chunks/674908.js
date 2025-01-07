@@ -23,8 +23,8 @@ var a = n(200651),
     g = n(678651),
     j = n(445229),
     C = n(20437),
-    y = n(356659),
-    w = n(710111),
+    w = n(356659),
+    y = n(710111),
     _ = n(388032),
     k = n(249861),
     S = n(413135).Buffer;
@@ -50,8 +50,8 @@ function N(e) {
                 let { default: i } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961)),
                     r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null,
                     o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions,
-                    s = null == N || '' === N ? (0, y.yl)(b.default.extractTimestamp(t.id)) : N,
-                    u = s.slice(0, w.Ek);
+                    s = null == N || '' === N ? (0, w.yl)(b.default.extractTimestamp(t.id)) : N,
+                    u = s.slice(0, y.Ek);
                 return (t) =>
                     (0, a.jsx)(i, {
                         ...t,
@@ -78,7 +78,7 @@ function N(e) {
                     voiceAudio: E
                 }),
                 n = await e.arrayBuffer();
-            await d.Z.fileManager.saveWithDialog(S.from(n), (0, y.EF)(t.id));
+            await d.Z.fileManager.saveWithDialog(S.from(n), (0, w.EF)(t.id));
         } catch (e) {
         } finally {
             A(null);
@@ -116,8 +116,8 @@ function N(e) {
                                 '' === e ? T(void 0) : T(e);
                             },
                             value: N,
-                            minLength: y.XH,
-                            maxLength: y.MG,
+                            minLength: w.XH,
+                            maxLength: w.MG,
                             placeholder: _.intl.string(_.t.Cyxddn)
                         })
                     }),
@@ -168,7 +168,7 @@ function N(e) {
                                 applicationAudioEnabled: P,
                                 voiceAudioEnabled: E,
                                 onShareComplete: () => {
-                                    o.Mr(y.Ut), o.Mr(y.Qr);
+                                    o.Mr(w.Ut), o.Mr(w.Qr);
                                 }
                             }),
                         children: _.intl.string(_.t.I8lglZ)

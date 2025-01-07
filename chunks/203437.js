@@ -9,8 +9,8 @@ var l = t(200651),
     i = t(120356),
     r = t.n(i),
     s = t(442837),
-    u = t(481060),
-    o = t(565138),
+    o = t(481060),
+    u = t(565138),
     c = t(357156),
     d = t(430824),
     f = t(496675),
@@ -26,12 +26,12 @@ var l = t(200651),
     j = t(693793);
 function C(e) {
     let { availableSlots: n, className: t } = e;
-    return (0, l.jsxs)(u.Text, {
+    return (0, l.jsxs)(o.Text, {
         className: r()(j.suffixNode, t),
         variant: 'text-sm/medium',
         color: 'text-primary',
         children: [
-            (0, l.jsx)(u.VoiceNormalIcon, {
+            (0, l.jsx)(o.VoiceNormalIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: j.speakerIcon
@@ -82,10 +82,10 @@ function w(e) {
             (e) =>
                 null == e || '' === e.value
                     ? null
-                    : (0, l.jsx)(o.Z, {
+                    : (0, l.jsx)(u.Z, {
                           className: r()(j.guildSelectOptionIcon, { [j.disabledOption]: e.disabled }),
                           guild: w[e.value],
-                          size: o.Z.Sizes.SMOL,
+                          size: u.Z.Sizes.SMOL,
                           active: !0
                       }),
             [w]
@@ -120,7 +120,7 @@ function w(e) {
             let e = S[null != n ? n : y.lds];
             return null == e || e > 0 ? n : void 0;
         })();
-    return (0, l.jsx)(u.SearchableSelect, {
+    return (0, l.jsx)(o.SearchableSelect, {
         className: t,
         onChange: T,
         value: _,

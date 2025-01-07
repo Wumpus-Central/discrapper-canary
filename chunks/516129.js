@@ -10,8 +10,8 @@ var i = t(120356),
     a = t(780384),
     s = t(481060),
     o = t(410030),
-    d = t(44315),
-    c = t(208567),
+    c = t(44315),
+    d = t(208567),
     u = t(981631),
     m = t(351079);
 let x = u.Ilk.PRIMARY_400,
@@ -23,9 +23,9 @@ function g(e) {
         j = {
             height: 18,
             width: 18,
-            color: (0, d.Lq)(v)
+            color: (0, c.Lq)(v)
         };
-    return (0, l.jsx)(c.Z, {
+    return (0, l.jsx)(d.Z, {
         className: r()({
             [m.avatarUploader]: n,
             [m.avatarUploaderDisabled]: !n

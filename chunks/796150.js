@@ -19,7 +19,7 @@ var i = t(120356),
 function g(e) {
     let { className: n, view: t, application: i } = e,
         g = 'embedded' === t,
-        v = (0, s.Z)({ application: i });
+        f = (0, s.Z)({ application: i });
     return (0, a.jsxs)('div', {
         className: r()(n, {
             [_.sideContainer]: !g,
@@ -39,7 +39,7 @@ function g(e) {
                             }),
                             (0, a.jsx)(o.Z, {
                                 application: i,
-                                mutualGuilds: v,
+                                mutualGuilds: f,
                                 mutualGuildShownMax: 3,
                                 className: _.guildCountContainer,
                                 guildIconSize: o.x.SMALL,

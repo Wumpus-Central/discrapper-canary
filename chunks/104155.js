@@ -44,8 +44,8 @@ function N(e) {
         v = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
         Z = (0, p.Fo)(n, v, N, o),
         j = (0, i.e7)([m.Z], () => m.Z.canWithPartialContext(C.Plq.MANAGE_CHANNELS, { guildId: n })),
-        E = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(g.oC.CHANNEL_BROWSER)),
-        B = a.useCallback(() => s(''), [s]),
+        B = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(g.oC.CHANNEL_BROWSER)),
+        E = a.useCallback(() => s(''), [s]),
         S = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([t.e('45094'), t.e('5506')]).then(t.bind(t, 218613));
@@ -72,7 +72,7 @@ function N(e) {
                               onChange: (e) => {
                                   '' === o && '' !== e && f.default.track(C.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), s(e.toLowerCase());
                               },
-                              onClear: B,
+                              onClear: E,
                               placeholder: _.intl.string(_.t.s5MnmJ)
                           }),
                           j
@@ -97,7 +97,7 @@ function N(e) {
                       channels: N,
                       categories: Z,
                       guild: I,
-                      hasSidebar: E
+                      hasSidebar: B
                   })
               ]
           });

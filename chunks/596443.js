@@ -192,7 +192,7 @@ function A(e) {
         P = l.useMemo(() => (null != p ? _.Z.generateGuildPermissionSpec(p) : null), [p]),
         [M, R] = l.useState(''),
         [L, k] = l.useState(''),
-        O = l.useCallback(o()(k, 300), []),
+        O = l.useMemo(() => o()(k, 300), []),
         D = l.useCallback(
             (e) => {
                 R(e), O(e);

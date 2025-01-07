@@ -14,7 +14,7 @@ function s(e, n, t) {
 }
 t.d(n, {
     Z: function () {
-        return o;
+        return u;
     }
 }),
     t(518263),
@@ -33,7 +33,7 @@ t.d(n, {
     t(242167),
     t(653041);
 ((i = l || (l = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.CONTINUATION = 1)] = 'CONTINUATION'), (i[(i.BEGINNING_OF_STREAM = 2)] = 'BEGINNING_OF_STREAM'), (i[(i.END_OF_STREAM = 4)] = 'END_OF_STREAM');
-class u {
+class o {
     appendBytes(e) {
         if (this._offset + e.length > this._buffer.length) {
             let n = this._offset + e.length,
@@ -82,10 +82,10 @@ class u {
         s(this, '_buffer', new Uint8Array(4096)), s(this, '_pageSequenceNumber', 0), s(this, '_offset', 0);
     }
 }
-function o(e, n) {
+function u(e, n) {
     let t = new Uint8Array([79, 112, 117, 115, 72, 101, 97, 100, 1, n.channelCount, 0, 0, 255 & n.inputSampleRate, (n.inputSampleRate >> 8) & 255, (n.inputSampleRate >> 16) & 255, (n.inputSampleRate >> 24) & 255, 255 & n.outputGain, (n.outputGain >> 8) & 255, n.channelMappingFamily]),
         l = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-        a = new u();
+        a = new o();
     a.addPage({
         pageType: 2,
         granulePosition: 0,

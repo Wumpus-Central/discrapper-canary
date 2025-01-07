@@ -6,8 +6,8 @@ n.r(t),
     }),
     n(47120);
 var a = n(200651),
-    s = n(192379),
-    o = n(481060),
+    o = n(192379),
+    s = n(481060),
     l = n(313201),
     i = n(332664),
     r = n(429506),
@@ -28,30 +28,30 @@ let b = [
     }
 ];
 function x(e) {
-    let [t, d] = s.useState(null),
+    let [t, d] = o.useState(null),
         x = (0, l.Dt)();
-    return (0, a.jsxs)(o.ModalRoot, {
+    return (0, a.jsxs)(s.ModalRoot, {
         transitionState: e.transitionState,
         'aria-labelledby': x,
         children: [
-            (0, a.jsxs)(o.ModalHeader, {
+            (0, a.jsxs)(s.ModalHeader, {
                 separator: !1,
                 className: m.headerContainer,
                 children: [
-                    (0, a.jsx)(o.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         id: x,
                         variant: 'heading-xl/extrabold',
                         color: 'none',
                         children: u.intl.string(u.t.BIbnR0)
                     }),
-                    (0, a.jsx)(o.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: m.ratingBody,
                         children: u.intl.string(u.t.j2kf2t)
                     })
                 ]
             }),
-            (0, a.jsx)(o.ModalContent, {
+            (0, a.jsx)(s.ModalContent, {
                 className: m.modalBody,
                 children: (0, a.jsx)(i.L, {
                     ratingConfigs: b,
@@ -63,7 +63,7 @@ function x(e) {
                                 if (null != t)
                                     (0, r.Z)({ rating: t }),
                                         e.onClose(),
-                                        (0, o.openModalLazy)(async () => {
+                                        (0, s.openModalLazy)(async () => {
                                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                             return (t) =>
                                                 (0, a.jsx)(e, {
@@ -75,9 +75,9 @@ function x(e) {
                     }
                 })
             }),
-            (0, a.jsx)(o.ModalFooter, {
+            (0, a.jsx)(s.ModalFooter, {
                 className: m.ratingsFooter,
-                children: (0, a.jsx)(o.Text, {
+                children: (0, a.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: u.intl.format(u.t.zru1Ky, { safetyCenterUrl: c.EYA.SAFETY_CENTER })
                 })

@@ -12,8 +12,8 @@ var i = r(200651),
     c = r(557298);
 function d(e) {
     let { themeColor: n, color: r, className: s, ...d } = e,
-        f = (0, l.useToken)(l.tokens.colors.BG_SURFACE_OVERLAY),
-        _ = a.useMemo(() => (0, u.j1)(n, f.hex()), [n]);
+        f = (0, l.useToken)(l.tokens.colors.BG_SURFACE_OVERLAY).hex(),
+        _ = a.useMemo(() => (0, u.j1)(n, f), [n, f]);
     return (0, i.jsx)(l.Button, {
         ...d,
         style: _,

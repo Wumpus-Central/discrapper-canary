@@ -16,16 +16,16 @@ var r = n(200651),
     _ = n(444354),
     E = n(561526);
 t.Z = (e) => {
-    let { entry: t, viewId: n, officialGuildId: a, onClose: v } = e,
-        I = (0, o.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
+    let { entry: t, viewId: n, officialGuildId: a, onClose: I } = e,
+        v = (0, o.e7)([p.Z, m.Z], () => m.Z.getChannel(p.Z.getChannelId())),
         C = (0, o.e7)([g.default], () => g.default.getUser(t.author_id)),
         { nick: A, avatar: S } = i.useMemo(() => {
-            let e = null == C ? void 0 : C.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
+            let e = null == C ? void 0 : C.getAvatarURL(null == v ? void 0 : v.guild_id, 48, !1);
             return {
-                nick: f.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, C),
+                nick: f.ZP.getName(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, C),
                 avatar: e
             };
-        }, [C, I]);
+        }, [C, v]);
     return null == C
         ? null
         : (0, r.jsx)(s.Popout, {
@@ -45,7 +45,7 @@ t.Z = (e) => {
                               viewId: n,
                               officialGuildId: a
                           }),
-                              v(),
+                              I(),
                               i();
                       },
                       onUserPopoutClosed: () => i(),

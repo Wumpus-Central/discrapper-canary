@@ -24,7 +24,7 @@ function m(e) {
     let { title: n, description: t, button: r, className: m, children: p } = e,
         _ = (0, c.ZP)(),
         g = (0, o.wj)(_),
-        v = i.useMemo(() => (Array.isArray(n) ? n.map((e, n) => (0, a.jsx)(u, { title: e }, n)) : (0, a.jsx)(u, { title: n })), [n]);
+        f = i.useMemo(() => (Array.isArray(n) ? n.map((e, n) => (0, a.jsx)(u, { title: e }, n)) : (0, a.jsx)(u, { title: n })), [n]);
     return (0, a.jsxs)('div', {
         className: l()(d.container, m),
         children: [
@@ -33,7 +33,7 @@ function m(e) {
                 children: (0, a.jsxs)('div', {
                     className: d.textContainer,
                     children: [
-                        v,
+                        f,
                         null != t &&
                             (0, a.jsx)(s.Text, {
                                 className: d.description,

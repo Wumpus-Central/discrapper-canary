@@ -17,11 +17,11 @@ var l = t(192379),
     i = t(304809),
     r = t(586826),
     s = t(943351);
-let u = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
-    o = (0, i.N)();
+let o = new Worker(new URL('/assets/' + t.u('14315'), t.b)),
+    u = (0, i.N)();
 async function c(e) {
     let n = await e.arrayBuffer();
-    return (await o.decodeAudioData(n)).getChannelData(0);
+    return (await u.decodeAudioData(n)).getChannelData(0);
 }
 function d(e) {
     let [n, t] = l.useState(null),
@@ -37,30 +37,30 @@ function d(e) {
 }
 let f = { ...s.nl };
 function m(e, n, t) {
-    let [i, o] = l.useState(null),
+    let [i, u] = l.useState(null),
         [c, d] = l.useState(null),
         [m, h] = l.useState(1),
         { setMaxVolume: g } = (0, r.p)(),
         p = l.useCallback(
             (e, n) => {
-                var l, i, r, s, o;
+                var l, i, r, s, u;
                 d(null),
                     ((l = e),
                     (i = n.offsetWidth),
                     (r = t),
                     (s = f),
-                    (o = h),
+                    (u = h),
                     new Promise((e) => {
                         let n = (0, a.Z)(),
                             t = (l) => {
                                 let {
                                     data: { waveform: a, id: i, normalizedVolumeMultipler: r }
                                 } = l;
-                                n === i && (e(a), o(r)), null == u || u.removeEventListener('message', t);
+                                n === i && (e(a), u(r)), null == o || o.removeEventListener('message', t);
                             };
-                        null == u || u.addEventListener('message', t),
-                            null == u ||
-                                u.postMessage({
+                        null == o || o.addEventListener('message', t),
+                            null == o ||
+                                o.postMessage({
                                     id: n,
                                     options: r,
                                     config: s,
@@ -75,7 +75,7 @@ function m(e, n, t) {
         l.useEffect(() => {
             if (null == e || null == n) return;
             let l = (0, s.V3)(e, t);
-            i !== l && (o(l), p(e, n));
+            i !== l && (u(l), p(e, n));
         }, [e, p, n, t, i]),
         l.useEffect(() => {
             g(m);

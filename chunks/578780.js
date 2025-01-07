@@ -11,8 +11,8 @@ var o = t(100527),
     a = t(987209),
     c = t(563132),
     l = t(409813),
-    s = t(791785),
-    i = t(276442),
+    i = t(791785),
+    s = t(276442),
     d = t(793541),
     h = t(380898),
     f = t(710094),
@@ -30,7 +30,7 @@ let j = [
     {
         key: l.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(i.J, {
+            (0, r.jsx)(s.J, {
                 ...e,
                 onReturn: () => {
                     0 === Object.keys(p.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(l.h8.REVIEW, { trackedFromStep: l.h8.ADD_PAYMENT_STEPS });
@@ -55,7 +55,7 @@ let j = [
     }
 ];
 function v(e) {
-    let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: l, ...i } = e,
+    let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: l, ...s } = e,
         { analyticsLocations: d } = (0, u.ZP)(t, o.Z.GUILD_PRODUCT_PAYMENT_MODAL);
     return (0, r.jsx)(_.R, {
         ...n,
@@ -64,15 +64,15 @@ function v(e) {
             children: (0, r.jsx)(c.PaymentContextProvider, {
                 stepConfigs: j,
                 applicationId: l,
-                skuIDs: [i.skuId],
+                skuIDs: [s.skuId],
                 activeSubscription: null,
                 purchaseType: P.GZ.ONE_TIME,
                 children: (0, r.jsx)(a.KB, {
-                    children: (0, r.jsx)(s.PaymentModal, {
+                    children: (0, r.jsx)(i.PaymentModal, {
                         initialPlanId: null,
                         analyticsLocations: d,
                         renderHeader: C.L,
-                        ...i
+                        ...s
                     })
                 })
             })

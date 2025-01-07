@@ -17,8 +17,8 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 function f(e) {
-    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: S, continueSessionToInitialStep: g } = e,
-        { contextMetadata: E, step: j, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
+    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: E, continueSessionToInitialStep: S } = e,
+        { contextMetadata: g, step: j, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
         { isGift: R } = (0, o.wD)(),
         w = {
             ...(0, a.fL)(),
@@ -35,14 +35,14 @@ function f(e) {
         M = (0, s.N)(v),
         L = !R && null != M && null != _ && h.nG[M.trial_id].skus.includes(_),
         k =
-            null != S
-                ? S
+            null != E
+                ? E
                 : () => {
                       f(Object.values(y).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
     l()(j, 'Step should be set here');
     let F = (0, r.Z)(() => Date.now(), [j]),
-        D = null != g && null == A.current ? g : d.h8.PAYMENT_TYPE;
+        D = null != S && null == A.current ? S : d.h8.PAYMENT_TYPE;
     return (0, a.vP)({
         paymentModalArgs: w,
         initialStep: D,
@@ -63,7 +63,7 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: l - F,
-                flow_duration_ms: l - E.startTime
+                flow_duration_ms: l - g.startTime
             });
         },
         isEligibleForTrial: L,

@@ -7,18 +7,18 @@ var r,
     o = n(570140),
     d = n(959546),
     a = n(215023);
-let E = new Map(),
-    c = new Set(),
+let c = new Map(),
+    E = new Set(),
     f = new Set(),
     S = new Set(),
     _ = new Map(),
     p = null;
 class C extends (r = s.ZP.Store) {
     getPrice(e) {
-        return E.get(e);
+        return c.get(e);
     }
     isFetchingPrice(e) {
-        return c.has(e);
+        return E.has(e);
     }
     getErrored(e) {
         return S.has(e);
@@ -47,13 +47,13 @@ class C extends (r = s.ZP.Store) {
         : (i[u] = l),
     (t.Z = new C(o.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
-            c.add(e.skuId);
+            E.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            E.set(e.skuId, e.price), c.delete(e.skuId);
+            c.set(e.skuId, e.price), E.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            c.delete(e.skuId), S.add(e.skuId);
+            E.delete(e.skuId), S.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
             S.delete(e.skuId);

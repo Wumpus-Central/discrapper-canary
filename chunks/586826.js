@@ -1,6 +1,6 @@
 t.d(n, {
     p: function () {
-        return u;
+        return o;
     }
 });
 var l = t(232713),
@@ -37,7 +37,7 @@ let s = (0, a.F)((e) => ({
         (0, i.j)(() => e({ maxVolume: n }));
     }
 }));
-function u() {
+function o() {
     return s(
         (e) => ({
             audio: e.audio,

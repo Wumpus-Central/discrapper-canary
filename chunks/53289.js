@@ -32,21 +32,21 @@ function h(e, n) {
             }
         }, [r, s, n, m]),
         a.useEffect(() => {
-            var a, o, l;
+            var a;
             if (i || !h || !n) return;
-            let u = s;
-            function c(n) {
+            let { current: o } = e,
+                l = s;
+            function u(n) {
                 let r = n.relatedTarget;
                 setTimeout(() => {
-                    (null == r || 'BUTTON' === r.tagName) && !u && _(e);
+                    (null == r || 'BUTTON' === r.tagName) && !l && _(e);
                 }, 100);
             }
             return (
-                null === (a = e.current) || void 0 === a || a.addEventListener('focusout', c),
-                (null === (o = r.document.activeElement) || void 0 === o ? void 0 : o.tagName) !== 'IFRAME' && !u && (null === (l = e.current) || void 0 === l || l.focus()),
+                null == o || o.addEventListener('focusout', u),
+                (null === (a = r.document.activeElement) || void 0 === a ? void 0 : a.tagName) !== 'IFRAME' && !l && (null == o || o.focus()),
                 () => {
-                    var n;
-                    null === (n = e.current) || void 0 === n || n.removeEventListener('focusout', c), (u = !0);
+                    null == o || o.removeEventListener('focusout', u), (l = !0);
                 }
             );
         }, [n, h, i, e, r, s]),

@@ -13,7 +13,7 @@ var a = t(200651),
     _ = t(833643);
 let g = 28;
 n.Z = function (e) {
-    var n, t, v, f, C;
+    var n, t, f, v, C;
     let { application: x, onSelectApplication: h, showCategory: b = !1 } = e,
         I = (0, c.Z)({ application: x }),
         j = null === (n = x.categories) || void 0 === n ? void 0 : n[0],
@@ -36,7 +36,7 @@ n.Z = function (e) {
                     : void 0,
             [S, x]
         ),
-        P = (null !== (f = null === (t = x.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== f ? f : 0) > 0 || I.length > 0,
+        P = (null !== (v = null === (t = x.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== v ? v : 0) > 0 || I.length > 0,
         R = (0, a.jsx)(s.Z, {
             application: x,
             textVariant: 'text-xs/medium',
@@ -141,7 +141,7 @@ n.Z = function (e) {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 lineClamp: Z || y ? 2 : 3,
-                                children: null !== (C = null === (v = x.directory_entry) || void 0 === v ? void 0 : v.short_description) && void 0 !== C ? C : x.description
+                                children: null !== (C = null === (f = x.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== C ? C : x.description
                             }),
                             P
                                 ? (0, a.jsx)('div', {

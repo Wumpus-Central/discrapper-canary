@@ -15,7 +15,7 @@ function a(n) {
         o = (0, l.e7)([u.Z], () => u.Z.isFetchingForSKU(n), [n]);
     return (
         i.useEffect(() => {
-            !o &&
+            !u.Z.isFetchingForSKU(n) &&
                 (e(!1),
                 (0, r.GZ)(n)
                     .then(() => {

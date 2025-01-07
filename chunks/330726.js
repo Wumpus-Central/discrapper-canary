@@ -5,11 +5,11 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(75124),
-    o = r(846519);
+    s = r(846519),
+    o = r(211266);
 function l(e, n) {
     let [r, i] = (0, a.useState)(e),
-        l = (0, s.Z)(() => new o.V7());
+        l = (0, o.Z)(() => new s.V7());
     return (
         (0, a.useEffect)(() => () => l.stop(), [l]),
         [

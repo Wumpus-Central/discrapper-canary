@@ -41,9 +41,9 @@ t.Z = function (e) {
     let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: P, upgradeToPremiumType: x, headerTheme: I = T.nL.DEFAULT, className: M, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
         O = x === T.p9.TIER_2;
     n = x === T.p9.TIER_0 ? d.Z : x === T.p9.TIER_1 ? f.Z : c.Z;
-    let D = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
-        Z = (0, L.Ng)(),
-        w = null == Z ? void 0 : null === (t = Z.discount) || void 0 === t ? void 0 : t.amount;
+    let Z = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
+        D = (0, L.Ng)(),
+        w = null == D ? void 0 : null === (t = D.discount) || void 0 === t ? void 0 : t.amount;
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
         className: a()(
@@ -54,7 +54,7 @@ t.Z = function (e) {
             M
         ),
         children: [
-            D || I !== T.nL.WINTER
+            Z || I !== T.nL.WINTER
                 ? null
                 : (0, i.jsx)(p.Z, {
                       className: N.snow,

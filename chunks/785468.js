@@ -10,8 +10,8 @@ var l = t(200651),
     a = t.n(r),
     s = t(442837),
     o = t(481060),
-    d = t(933557),
-    c = t(592125),
+    c = t(933557),
+    d = t(592125),
     u = t(430824),
     m = t(496675),
     x = t(699516),
@@ -19,8 +19,8 @@ var l = t(200651),
     g = t(924301),
     v = t(518756),
     j = t(545165),
-    p = t(77810),
-    f = t(274311),
+    f = t(77810),
+    p = t(274311),
     I = t(230900),
     N = t(366815),
     C = t(765305),
@@ -29,10 +29,10 @@ var l = t(200651),
     T = t(601335);
 let y = (e) => e === C.WX.EXTERNAL,
     b = (e, n) => {
-        let t = c.Z.getChannel(e);
+        let t = d.Z.getChannel(e);
         if (null == t) return null;
         let i = t.type === E.d4z.GUILD_STAGE_VOICE,
-            r = (0, f.Q)(t, n),
+            r = (0, p.Q)(t, n),
             a = r ? o.VoiceNormalIcon : o.VoiceLockIcon,
             s = r ? o.StageIcon : o.StageLockIcon;
         return (0, l.jsx)(i ? s : a, {
@@ -43,11 +43,11 @@ let y = (e) => e === C.WX.EXTERNAL,
     },
     Z = (e) => {
         let { guildId: n, channelType: t, channel: i, onSelectChannel: r, disabled: a, entityType: s } = e,
-            c = t === E.d4z.GUILD_STAGE_VOICE,
-            u = (0, f.Q)(i, s),
+            d = t === E.d4z.GUILD_STAGE_VOICE,
+            u = (0, p.Q)(i, s),
             m = (0, j.sR)(n, t);
         return (0, l.jsxs)(o.FormItem, {
-            title: c ? S.intl.string(S.t.S7GjDw) : S.intl.string(S.t['7RYWCA']),
+            title: d ? S.intl.string(S.t.S7GjDw) : S.intl.string(S.t['7RYWCA']),
             className: T.options,
             disabled: a,
             required: !0,
@@ -56,7 +56,7 @@ let y = (e) => e === C.WX.EXTERNAL,
                     value: null == i ? void 0 : i.id,
                     options: m.map((e) => ({
                         value: e.id,
-                        label: (0, d.F6)(e, h.default, x.Z, !0)
+                        label: (0, c.F6)(e, h.default, x.Z, !0)
                     })),
                     onChange: (e) => {
                         let n = m.find((n) => n.id === e);
@@ -75,7 +75,7 @@ let y = (e) => e === C.WX.EXTERNAL,
             ]
         });
     };
-function _(e, n, t, l) {
+function R(e, n, t, l) {
     return n
         ? {
               disabled: !0,
@@ -96,7 +96,7 @@ function _(e, n, t, l) {
                 tooltipText: S.intl.string(S.t.HeF1kZ)
             };
 }
-let R = (e) => (n) => {
+let _ = (e) => (n) => {
         e({ entityMetadata: { location: n } });
     },
     k = (e) => (n) => {
@@ -118,23 +118,23 @@ let R = (e) => (n) => {
     };
 function D(e) {
     let { guildId: n, guildEvent: t, onChange: r, isFocusReady: a } = e,
-        { entityType: d, channelId: u } = t,
-        m = (0, s.e7)([c.Z], () => c.Z.getChannel(u), [u]),
+        { entityType: c, channelId: u } = t,
+        m = (0, s.e7)([d.Z], () => d.Z.getChannel(u), [u]),
         x = i.useRef(null);
     i.useEffect(() => {
-        if (a && y(d)) {
+        if (a && y(c)) {
             var e;
             null === (e = x.current) || void 0 === e || e.focus();
         }
-    }, [a, d]);
-    let h = R(r),
+    }, [a, c]);
+    let h = _(r),
         v = k(r),
         j = (0, I.xV)(t),
-        p = (0, I.xC)(d),
-        f = (0, g.xt)(t);
-    return null == d || d === C.WX.NONE
+        f = (0, I.xC)(c),
+        p = (0, g.xt)(t);
+    return null == c || c === C.WX.NONE
         ? null
-        : y(d)
+        : y(c)
           ? (0, l.jsx)(o.FormItem, {
                 title: S.intl.string(S.t.yx785O),
                 className: T.options,
@@ -148,26 +148,26 @@ function D(e) {
                     inputRef: x
                 })
             })
-          : null == p
+          : null == f
             ? null
             : (0, l.jsx)(Z, {
                   guildId: n,
-                  channelType: p,
+                  channelType: f,
                   onSelectChannel: v,
                   channel: m,
-                  entityType: d,
-                  disabled: f
+                  entityType: c,
+                  disabled: p
               });
 }
 function L(e) {
     let { guildId: n, guildEvent: t, onChange: r } = e,
         a = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        d = (0, v.Z)(n, void 0),
-        c = (0, v.Z)(n, E.d4z.GUILD_VOICE),
+        c = (0, v.Z)(n, void 0),
+        d = (0, v.Z)(n, E.d4z.GUILD_VOICE),
         m = (0, v.Z)(n, E.d4z.GUILD_STAGE_VOICE),
         x = (0, j.sR)(n, E.d4z.GUILD_VOICE),
-        h = (0, p.q)(a),
-        f = null == a ? void 0 : a.hasFeature(E.oNc.COMMUNITY),
+        h = (0, f.q)(a),
+        p = null == a ? void 0 : a.hasFeature(E.oNc.COMMUNITY),
         I = (0, g.xt)(t),
         N = A(r, t),
         y = i.useMemo(() => {
@@ -177,29 +177,29 @@ function L(e) {
                     value: C.WX.VOICE,
                     desc: S.intl.string(S.t['EV//4e']),
                     icon: o.VoiceNormalIcon,
-                    ..._(C.WX.VOICE, I, c, x.length)
+                    ...R(C.WX.VOICE, I, d, x.length)
                 },
                 {
                     name: S.intl.string(S.t.w7ipb2),
                     value: C.WX.EXTERNAL,
                     desc: S.intl.string(S.t.DYxrHh),
                     icon: o.LocationIcon,
-                    ..._(C.WX.EXTERNAL, I, d, 0)
+                    ...R(C.WX.EXTERNAL, I, c, 0)
                 }
             ];
-            return f
+            return p
                 ? [
                       {
                           name: S.intl.string(S.t.EErMzM),
                           value: C.WX.STAGE_INSTANCE,
                           desc: S.intl.string(S.t.LgALpq),
                           icon: o.StageIcon,
-                          ..._(C.WX.STAGE_INSTANCE, I, m, h.length)
+                          ...R(C.WX.STAGE_INSTANCE, I, m, h.length)
                       },
                       ...e
                   ]
                 : e;
-        }, [d, c, m, f, x.length, h.length, I]);
+        }, [c, d, m, p, x.length, h.length, I]);
     return (0, l.jsx)(o.RadioGroup, {
         value: t.entityType,
         options: y,
@@ -208,14 +208,14 @@ function L(e) {
     });
 }
 function B(e) {
-    let { guildId: n, guildEvent: i, validationErrorMessage: r, onChange: a, isSlideReady: d = !1 } = e,
-        { entityType: c } = i,
+    let { guildId: n, guildEvent: i, validationErrorMessage: r, onChange: a, isSlideReady: c = !1 } = e,
+        { entityType: d } = i,
         x = (0, s.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        h = (0, p.q)(x),
+        h = (0, f.q)(x),
         g = (0, s.e7)([m.Z], () => m.Z.can(E.Plq.MANAGE_CHANNELS, x)),
         v = null == x ? void 0 : x.hasFeature(E.oNc.COMMUNITY),
         j = A(a, i),
-        f = v && !y(c) && 0 === h.length && g && null != c;
+        p = v && !y(d) && 0 === h.length && g && null != d;
     return (0, l.jsxs)('div', {
         className: T.container,
         children: [
@@ -238,10 +238,10 @@ function B(e) {
             (0, l.jsx)(D, {
                 guildId: n,
                 guildEvent: i,
-                isFocusReady: d,
+                isFocusReady: c,
                 onChange: a
             }),
-            f
+            p
                 ? (0, l.jsx)(N.Z, {
                       onClick: () => {
                           j({

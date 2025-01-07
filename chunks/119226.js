@@ -20,9 +20,9 @@ var l = t(278074),
     h = t(987209),
     f = t(388032),
     v = t(975765),
-    S = t(241822);
-let g = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
-function E(e) {
+    E = t(241822);
+let S = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+function g(e) {
     let { avatarDecoration: n } = e,
         {
             avatarDecorationSrc: t,
@@ -34,7 +34,7 @@ function E(e) {
         });
     return (0, i.jsx)('div', {
         className: v.giftMainAnimationWrapper,
-        children: (0, i.jsx)(g, {
+        children: (0, i.jsx)(S, {
             ...l,
             avatarDecoration: t,
             src: r,
@@ -52,7 +52,7 @@ function j(e) {
         className: v.profileEffectContainer,
         children: [
             (0, i.jsx)('img', {
-                src: S,
+                src: E,
                 alt: null == l ? void 0 : l.accessibilityLabel,
                 className: v.profileEffectBackground
             }),
@@ -66,7 +66,7 @@ function y(e) {
         { product: s } = (0, o.T)(null == n ? void 0 : n.id),
         a = null == s ? void 0 : s.items[0],
         c = (0, l.EQ)(a)
-            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(E, { avatarDecoration: e }))
+            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(g, { avatarDecoration: e }))
             .with({ type: r.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(j, { id: e.id }))
             .otherwise(() => null);
     return null != t && null == c

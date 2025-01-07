@@ -143,7 +143,7 @@ function D(e) {
                     null === (n = j.current) || void 0 === n || n.focus();
                 }
             },
-            [P, w]
+            [P, w, j]
         ),
         Q = s.useCallback(
             (e) => {
@@ -157,7 +157,7 @@ function D(e) {
             var e;
             null === (e = j.current) || void 0 === e || e.focus();
         }
-    }, [c]);
+    }, [c, j]);
     let J = (0, p.useRedesignIconContext)().enabled;
     return (0, a.jsx)(_.y, {
         spacing: 0,

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return v;
     }
 }),
     t(47120),
@@ -18,12 +18,12 @@ var a = t(200651),
     p = t(79707),
     _ = t(388032),
     g = t(333078);
-function v(e) {
+function f(e) {
     let { onTabSelect: n, tabs: t, selectedTab: r } = e,
         o = (0, d.ZP)(),
         m = (0, s.wj)(o),
-        v = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
-        f = i.useMemo(
+        f = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
+        v = i.useMemo(
             () =>
                 null !=
                 t.find((e) => {
@@ -38,8 +38,8 @@ function v(e) {
             if (t) return i ? 'text-primary' : n ? 'text-brand' : 'text-normal';
             return !n && i ? 'interactive-hover' : n ? 'header-primary' : a ? 'interactive-normal' : 'header-primary';
         })({
-            selected: f,
-            isVisualRefreshEnabled: v,
+            selected: v,
+            isVisualRefreshEnabled: f,
             isDarkTheme: m,
             isHovered: C
         }),
@@ -48,8 +48,8 @@ function v(e) {
             if (t) return i ? c.tokens.colors.TEXT_PRIMARY : n ? c.tokens.colors.TEXT_BRAND : c.tokens.colors.INTERACTIVE_NORMAL;
             return !n && i ? c.tokens.colors.INTERACTIVE_HOVER : n ? c.tokens.colors.HEADER_PRIMARY : a ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
         })({
-            selected: f,
-            isVisualRefreshEnabled: v,
+            selected: v,
+            isVisualRefreshEnabled: f,
             isDarkTheme: m,
             isHovered: C
         }),
@@ -73,8 +73,8 @@ function v(e) {
                 ...e,
                 id: 'more',
                 look: 'brand',
-                selectedItem: v && f ? 'more' : void 0,
-                className: l()(g.tab, { [g.selected]: !v && f }),
+                selectedItem: f && v ? 'more' : void 0,
+                className: l()(g.tab, { [g.selected]: !f && v }),
                 'aria-label': _.intl.string(_.t.UKOtz8),
                 children: (0, a.jsxs)('div', {
                     className: g.more,
@@ -82,7 +82,7 @@ function v(e) {
                     onMouseLeave: j,
                     children: [
                         (0, a.jsx)(c.Text, {
-                            variant: v ? 'text-sm/semibold' : 'text-md/medium',
+                            variant: f ? 'text-sm/semibold' : 'text-md/medium',
                             color: h,
                             children: _.intl.string(_.t.UKOtz8)
                         }),
@@ -101,10 +101,10 @@ function v(e) {
         }
     });
 }
-function f(e) {
+function v(e) {
     let { className: n, selectedTab: t, tabs: r, onTabSelect: s, onAvailableWidthChange: d } = e,
         [p, _] = i.useState(0),
-        f = i.useRef(p),
+        v = i.useRef(p),
         {
             lastVisibleIndex: C,
             onItemLayout: x,
@@ -122,8 +122,8 @@ function f(e) {
         N = i.useCallback(() => {
             var e;
             let n = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            if (null == n || f.current === n.width) return;
-            _(n.width), (f.current = n.width);
+            if (null == n || v.current === n.width) return;
+            _(n.width), (v.current = n.width);
             let t = b.current.reduce((e, n, t) => e + n + (0 === t ? 0 : 20)),
                 a = n.width - t;
             null == d || d(a);
@@ -162,7 +162,7 @@ function f(e) {
                     ),
                     (0, a.jsx)('div', {
                         ref: h,
-                        children: (0, a.jsx)(v, {
+                        children: (0, a.jsx)(f, {
                             tabs: j,
                             onTabSelect: s,
                             selectedTab: t
@@ -192,7 +192,7 @@ function f(e) {
                             )
                         ),
                         0 !== j.length
-                            ? (0, a.jsx)(v, {
+                            ? (0, a.jsx)(f, {
                                   tabs: j,
                                   onTabSelect: s,
                                   selectedTab: t

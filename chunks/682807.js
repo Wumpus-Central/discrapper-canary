@@ -42,14 +42,14 @@ function _(e) {
                               )
                           ),
                           null != i.terms_of_service_url
-                              ? (0, a.jsx)(v, {
+                              ? (0, a.jsx)(f, {
                                     icon: o.FileIcon,
                                     url: i.terms_of_service_url,
                                     children: m.intl.string(m.t.s7STcX)
                                 })
                               : null,
                           null != i.privacy_policy_url
-                              ? (0, a.jsx)(v, {
+                              ? (0, a.jsx)(f, {
                                     icon: o.LockIcon,
                                     url: i.privacy_policy_url,
                                     children: m.intl.string(m.t.kH3JR0)
@@ -67,14 +67,14 @@ function g(e) {
         s = (0, c.ZP)(),
         u = d.Z.getByUrl(i),
         m = (0, l.wj)(s) ? (null == u ? void 0 : null === (n = u.icon) || void 0 === n ? void 0 : n.darkSVG) : null == u ? void 0 : null === (t = u.icon) || void 0 === t ? void 0 : t.lightSVG;
-    return (0, a.jsx)(v, {
+    return (0, a.jsx)(f, {
         icon: void 0 === m ? o.LinkIcon : void 0,
         imageSrc: m,
         url: i,
         children: r
     });
 }
-function v(e) {
+function f(e) {
     let { icon: n, imageSrc: t, iconColor: i, url: l, children: c } = e,
         d = (0, u.nu)(),
         m = null;

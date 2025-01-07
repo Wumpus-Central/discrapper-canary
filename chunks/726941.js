@@ -12,18 +12,18 @@ var a = t(200651),
     _ = t(863375);
 n.Z = function (e) {
     var n;
-    let { tabId: t, onSelectApplication: g, onScroll: v } = e,
-        f = i.useRef(null),
+    let { tabId: t, onSelectApplication: g, onScroll: f } = e,
+        v = i.useRef(null),
         C = i.useCallback(() => {
             var e;
-            null === (e = f.current) || void 0 === e || e.scrollTo({ to: 0 });
+            null === (e = v.current) || void 0 === e || e.scrollTo({ to: 0 });
         }, []),
         x = (0, r.e7)([l.Z], () => l.Z.getCategories()),
         h = i.useMemo(() => x.find((e) => e.id === t), [x, t]),
         b = i.useMemo(() => (null != h ? (0, u.v)(h) : ''), [h]);
     return (0, a.jsxs)(d.Z, {
-        onScroll: v,
-        ref: f,
+        onScroll: f,
+        ref: v,
         children: [
             (0, a.jsx)(s.Z, {
                 title: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '',

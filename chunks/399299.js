@@ -23,8 +23,8 @@ var l = t(200651),
     f = t(650774),
     j = t(430824),
     p = t(131951),
-    I = t(944486),
-    N = t(594174),
+    N = t(944486),
+    I = t(594174),
     T = t(449224),
     E = t(626135),
     R = t(823379),
@@ -39,8 +39,8 @@ var l = t(200651),
     U = t(537135),
     w = t(641115),
     B = t(143135),
-    y = t(70722),
-    G = t(981631),
+    G = t(70722),
+    y = t(981631),
     F = t(526761),
     O = t(388032),
     z = t(949949),
@@ -151,9 +151,9 @@ function K(e) {
         }),
         s = v.eo.useSetting(),
         u = i.useCallback((e, n) => {
-            v.eo.updateSetting(n), E.default.track(G.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: n });
+            v.eo.updateSetting(n), E.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: n });
         }, []);
-    return t >= 2 && t <= y.tB
+    return t >= 2 && t <= G.tB
         ? (0, l.jsx)(o.FormItem, {
               className: r()(V.modalContent, z.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
@@ -211,11 +211,11 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: n, selectedFPS: t, selectedChannelId: s, selectedPreset: r, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: g, selectSource: h, selectGuild: x, sound: v, previewDisabled: f, onClose: j, onChangeSelectedFPS: T, onChangeSelectedResolution: E, onChangeSelectedPreset: R, onChangeSelectedChannelId: A, onChangeSource: M, onChangeAudioDevice: U, onChangeGuild: B, onChangeSound: y, onChangePreviewDisabled: V } = e,
-        q = (0, a.e7)([I.Z, C.Z], () => C.Z.getChannel(I.Z.getVoiceChannelId())),
+    let { selectedSource: n, selectedFPS: t, selectedChannelId: s, selectedPreset: r, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: g, selectSource: h, selectGuild: x, sound: v, previewDisabled: f, onClose: j, onChangeSelectedFPS: T, onChangeSelectedResolution: E, onChangeSelectedPreset: R, onChangeSelectedChannelId: A, onChangeSource: M, onChangeAudioDevice: U, onChangeGuild: B, onChangeSound: G, onChangePreviewDisabled: V } = e,
+        q = (0, a.e7)([N.Z, C.Z], () => C.Z.getChannel(N.Z.getVoiceChannelId())),
         Q = (0, a.e7)([b.Z], () => b.Z.GPUDriversOutdated),
         $ = (0, a.e7)([b.Z], () => b.Z.problematicGPUDriver),
-        ee = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
+        ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         en = (0, _.Z)();
     null != n && n.id.startsWith('screen') && !p.Z.supportsScreenSoundshare() && (en = O.intl.string(O.t['1b0Gm5']));
     let et = !!(null == n ? void 0 : n.id.startsWith('camera')),
@@ -243,7 +243,7 @@ function q(e) {
                           null != n && null == en
                               ? (0, l.jsx)(X, {
                                     enabled: v,
-                                    onChange: y,
+                                    onChange: G,
                                     screen: n.id.startsWith('screen')
                                 })
                               : null
@@ -264,14 +264,14 @@ function q(e) {
                   }),
             null != m && el && ei ? (0, l.jsx)(K, { guildId: m }) : null,
             Q ? (0, l.jsx)(Y, { text: O.intl.string(O.t.q65tS0) }) : null,
-            $ ? (0, l.jsx)(Y, { text: O.intl.format(O.t.RrLvub, { helpCenterLink: P.Z.getArticleURL(G.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            $ ? (0, l.jsx)(Y, { text: O.intl.format(O.t.RrLvub, { helpCenterLink: P.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             es &&
                 (0, l.jsx)(Z.Z, {
                     look: Z.z.WARNING,
                     className: z.hardwareWarning,
                     children: O.intl.format(O.t.zCLXws, {
                         onClick: () => {
-                            j(), u.Z.open(G.oAB.VOICE, null, { scrollPosition: F.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
+                            j(), u.Z.open(y.oAB.VOICE, null, { scrollPosition: F.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
                         }
                     })
                 }),
