@@ -1,7 +1,7 @@
 n.r(t), n(47120), n(757143);
-var r = n(200651),
+var i = n(200651),
     o = n(192379),
-    i = n(481060),
+    r = n(481060),
     a = n(239091),
     l = n(230711),
     c = n(493544),
@@ -11,45 +11,45 @@ var r = n(200651),
     g = n(386506),
     m = n(366953),
     b = n(991346),
-    f = n(606669),
-    p = n(53432),
+    p = n(606669),
+    f = n(53432),
     h = n(74869),
     _ = n(45570),
     S = n(308512),
     x = n(594791),
-    C = n(393431),
-    M = n(69021),
+    M = n(393431),
+    C = n(69021),
     Z = n(981631),
-    k = n(388032);
+    j = n(388032);
 t.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
             [u, s] = o.useState(!1),
-            I = (0, _.Z)(),
-            v = (0, S.Z)(),
-            j = (0, p.Z)(),
-            B = (0, f.Z)(),
-            E = (0, C.Z)(),
+            k = (0, _.Z)(),
+            I = (0, S.Z)(),
+            v = (0, f.Z)(),
+            B = (0, p.Z)(),
+            E = (0, M.Z)(),
             R = (0, x.Z)(),
-            T = (0, h.Z)(),
-            D = (0, M.Z)(),
-            { analyticsLocations: y } = (0, d.ZP)(),
+            y = (0, h.Z)(),
+            T = (0, C.Z)(),
+            { analyticsLocations: D } = (0, d.ZP)(),
             G = o.useMemo(() => (0, m.j)(), []);
-        async function O() {
+        async function U() {
             try {
                 s(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 s(!1);
             }
         }
-        let w = (e) => {
+        let O = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
-                        return I;
+                        return k;
                     case Z.oAB.STREAMER_MODE:
-                        return v;
+                        return I;
                     case Z.oAB.APPEARANCE:
-                        return j;
+                        return v;
                     case Z.oAB.ACCESSIBILITY:
                         return B;
                     case Z.oAB.VOICE:
@@ -57,32 +57,32 @@ t.default = (0, u.Z)(
                     case Z.oAB.TEXT:
                         return R;
                     case Z.oAB.EXPERIMENTS:
-                        return T;
+                        return y;
                     case Z.oAB.DEVELOPER_OPTIONS:
-                        return D;
+                        return T;
                     default:
                         return null;
                 }
             },
-            U = (0, b.VO)()
+            w = (0, b.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
-        return (0, r.jsx)(d.Gt, {
-            value: y,
-            children: (0, r.jsxs)(i.Menu, {
+        return (0, i.jsx)(d.Gt, {
+            value: D,
+            children: (0, i.jsxs)(r.Menu, {
                 navId: 'user-settings-cog',
                 onClose: a.Zy,
-                'aria-label': k.intl.string(k.t.opYYHh),
+                'aria-label': j.intl.string(j.t.opYYHh),
                 onSelect: n,
                 children: [
-                    U.map((e) => {
+                    w.map((e) => {
                         let { section: t, label: n, onClick: o } = e,
                             a = t.replace(/\W/gi, '_');
-                        return (0, r.jsx)(
-                            i.MenuItem,
+                        return (0, i.jsx)(
+                            r.MenuItem,
                             {
                                 id: a,
                                 label: n,
@@ -92,20 +92,20 @@ t.default = (0, u.Z)(
                                         : (function (e, t) {
                                               let n = Object.values(Z.oAB).filter((t) => t === e)[0];
                                               null != n && l.Z.open(n, void 0, { analyticsLocations: t });
-                                          })(t, y),
-                                children: w(t)
+                                          })(t, D),
+                                children: O(t)
                             },
                             a
                         );
                     }),
                     e.user.isStaff() && G.length > 0
-                        ? (0, r.jsx)(i.MenuItem, {
+                        ? (0, i.jsx)(r.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
-                              children: (0, r.jsx)(i.MenuGroup, {
+                              children: (0, i.jsx)(r.MenuGroup, {
                                   children: G.map((e) =>
-                                      (0, r.jsx)(
-                                          i.MenuRadioItem,
+                                      (0, i.jsx)(
+                                          r.MenuRadioItem,
                                           {
                                               id: 'input-'.concat(e.payload),
                                               group: 'build_overrides',
@@ -122,12 +122,12 @@ t.default = (0, u.Z)(
                           })
                         : null,
                     null != t
-                        ? (0, r.jsx)(i.MenuGroup, {
-                              children: (0, r.jsx)(i.MenuItem, {
+                        ? (0, i.jsx)(r.MenuGroup, {
+                              children: (0, i.jsx)(r.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: u,
-                                  label: k.intl.string(k.t['/Nz9ra']),
-                                  action: O,
+                                  label: j.intl.string(j.t['/Nz9ra']),
+                                  action: U,
                                   color: 'danger'
                               })
                           })

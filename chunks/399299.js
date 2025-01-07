@@ -23,8 +23,8 @@ var l = t(200651),
     f = t(650774),
     j = t(430824),
     p = t(131951),
-    N = t(944486),
-    I = t(594174),
+    I = t(944486),
+    N = t(594174),
     T = t(449224),
     E = t(626135),
     R = t(823379),
@@ -212,10 +212,10 @@ function J(e) {
 }
 function q(e) {
     let { selectedSource: n, selectedFPS: t, selectedChannelId: s, selectedPreset: r, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: g, selectSource: h, selectGuild: x, sound: v, previewDisabled: f, onClose: j, onChangeSelectedFPS: T, onChangeSelectedResolution: E, onChangeSelectedPreset: R, onChangeSelectedChannelId: A, onChangeSource: M, onChangeAudioDevice: U, onChangeGuild: B, onChangeSound: y, onChangePreviewDisabled: V } = e,
-        q = (0, a.e7)([N.Z, C.Z], () => C.Z.getChannel(N.Z.getVoiceChannelId())),
+        q = (0, a.e7)([I.Z, C.Z], () => C.Z.getChannel(I.Z.getVoiceChannelId())),
         Q = (0, a.e7)([b.Z], () => b.Z.GPUDriversOutdated),
         $ = (0, a.e7)([b.Z], () => b.Z.problematicGPUDriver),
-        ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
+        ee = (0, a.e7)([N.default], () => N.default.getCurrentUser()),
         en = (0, _.Z)();
     null != n && n.id.startsWith('screen') && !p.Z.supportsScreenSoundshare() && (en = O.intl.string(O.t['1b0Gm5']));
     let et = !!(null == n ? void 0 : n.id.startsWith('camera')),

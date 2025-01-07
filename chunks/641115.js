@@ -24,8 +24,8 @@ var l = t(200651),
     f = t(774026),
     j = t(592125),
     p = t(944486),
-    N = t(594174),
-    I = t(74538),
+    I = t(594174),
+    N = t(74538),
     T = t(451467),
     E = t(122186),
     R = t(37113),
@@ -114,15 +114,15 @@ function U(e) {
 }
 function w(e) {
     let { onClose: n, selectedPreset: t, selectedResolution: s, selectedFPS: r, onResolutionChange: a, onFPSChange: S, onPresetChange: D, targetGuildPremiumTier: w, captureDeviceSelected: B } = e,
-        y = (0, c.e7)([N.default], () => {
-            let e = N.default.getCurrentUser();
+        y = (0, c.e7)([I.default], () => {
+            let e = I.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         G = (0, c.e7)([p.Z, j.Z], () => j.Z.getChannel(p.Z.getVoiceChannelId())),
-        F = I.ZP.canStreamQuality(I.U2.MID, y),
+        F = N.ZP.canStreamQuality(N.U2.MID, y),
         { location: O } = (0, g.O)(),
         z = (0, h.Zq)({ autoTrackExposure: !1 }),
-        V = (0, I.I5)(y, A.p9.TIER_1);
+        V = (0, N.I5)(y, A.p9.TIER_1);
     C.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
@@ -131,7 +131,7 @@ function w(e) {
         }
     );
     let W = (0, Z.B4)({ location: 'StreamSettings' }),
-        H = N.default.getUser(null == G ? void 0 : G.hdStreamingBuyerId),
+        H = I.default.getUser(null == G ? void 0 : G.hdStreamingBuyerId),
         Y = null != G && null != G.hdStreamingUntil && new Date(G.hdStreamingUntil) > new Date() && null != H,
         K = (0, v.So)(u.q.STREAM_HIGH_QUALITY),
         X = (!F && !z) || K,

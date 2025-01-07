@@ -26,8 +26,8 @@ var l,
     f = t(317381),
     j = t(89425),
     p = t(812206),
-    N = t(835473),
-    I = t(600164),
+    I = t(835473),
+    N = t(600164),
     T = t(313201),
     E = t(243778),
     R = t(594190),
@@ -86,7 +86,7 @@ function er(e) {
         eS = (0, m.e7)([U.Z, k.Z], () => k.Z.getChannel(U.Z.getVoiceChannelId())),
         ev = (0, m.e7)([R.ZP, B.Z], () => ((0, F.isWindows)() ? (0, Y.Z)(R.ZP, B.Z) : null)),
         eZ = (0, m.e7)([f.ZP], () => f.ZP.getCurrentEmbeddedActivity()),
-        eC = (0, N.q)(null == eZ ? void 0 : eZ.applicationId),
+        eC = (0, I.q)(null == eZ ? void 0 : eZ.applicationId),
         [ef, ej] = r.useState(null);
     r.useEffect(() => {
         (0, C.R)() &&
@@ -99,12 +99,12 @@ function er(e) {
             let e = w.default.getCurrentUser();
             return o()(null != e, 'GoLiveModal: user cannot be undefined'), e;
         }),
-        eN = null !== (n = null == eS ? void 0 : eS.getGuildId()) && void 0 !== n ? n : eo,
-        eI = (0, m.e7)([L.Z], () => {
+        eI = null !== (n = null == eS ? void 0 : eS.getGuildId()) && void 0 !== n ? n : eo,
+        eN = (0, m.e7)([L.Z], () => {
             var e;
-            return null != eN ? (null === (e = L.Z.getGuild(eN)) || void 0 === e ? void 0 : e.premiumTier) : null;
+            return null != eI ? (null === (e = L.Z.getGuild(eI)) || void 0 === e ? void 0 : e.premiumTier) : null;
         }),
-        [eT, eE] = null !== (l = (0, V.Z)(em, ep, eI)) && void 0 !== l ? l : [$.LY.RESOLUTION_720, $.ws.FPS_30],
+        [eT, eE] = null !== (l = (0, V.Z)(em, ep, eN)) && void 0 !== l ? l : [$.LY.RESOLUTION_720, $.ws.FPS_30],
         { lastPickerAction: eR } = (0, m.e7)([H.ZP], () => H.ZP.getPickerState()),
         eP = D.Z.getUseSystemScreensharePicker();
     (0, H.UB)();
@@ -112,7 +112,7 @@ function er(e) {
         eb = [];
     ed === h.ModalTransitionState.ENTERED && eP && (0, F.isMac)() && eb.push(g.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
     let [eM, e_] = (0, E.US)(eb, void 0, !0);
-    em !== $.tI.PRESET_CUSTOM && ((eg = eT), (eh = eE)), !(0, z.Z)(em, eg, eh, ep, eI) && ((eg = eT), (eh = eE));
+    em !== $.tI.PRESET_CUSTOM && ((eg = eT), (eh = eE)), !(0, z.Z)(em, eg, eh, ep, eN) && ((eg = eT), (eh = eE));
     let ek = (0, T.Dt)();
     let [eL, eD] = r.useState(((b = er), (G = ea && !eA), b ? 0 : G ? 2 : 3)),
         [eU, ew] = r.useState(eA),
@@ -145,7 +145,7 @@ function er(e) {
         let s = eV,
             r = eH,
             a = eK;
-        !(0, z.Z)(s, r, a, ep, eI, l) && ((s = $.tI.PRESET_VIDEO), (r = $.LY.RESOLUTION_720), (a = $.ws.FPS_30)),
+        !(0, z.Z)(s, r, a, ep, eN, l) && ((s = $.tI.PRESET_VIDEO), (r = $.LY.RESOLUTION_720), (a = $.ws.FPS_30)),
             (0, S.Rc)({
                 preset: s,
                 resolution: r,
@@ -193,19 +193,19 @@ function er(e) {
     let e7 = r.useCallback(
             (e, n, t) => {
                 var l;
-                let i = (0, V.Z)(e, ep, eI),
+                let i = (0, V.Z)(e, ep, eN),
                     [s, r] = null != i ? i : [n, t];
                 e !== eV && ((n = s), (t = r));
                 let a = null !== (l = null == eS ? void 0 : eS.id) && void 0 !== l ? l : eB;
                 o()(null != a, 'Received null target channel ID');
                 let u = k.Z.getChannel(a);
-                if (!(0, z.Z)(e, n, t, ep, eI, u)) {
-                    let [e, l] = (0, V.Z)($.tI.PRESET_VIDEO, ep, eI);
+                if (!(0, z.Z)(e, n, t, ep, eN, u)) {
+                    let [e, l] = (0, V.Z)($.tI.PRESET_VIDEO, ep, eN);
                     (n = e), (t = l);
                 }
                 t !== eK && eX(t), n !== eH && eY(n), s !== n || r !== t ? eW($.tI.PRESET_CUSTOM) : e !== eV && eW(e);
             },
-            [eS, eB, ep, eI, eK, eH, eV]
+            [eS, eB, ep, eN, eK, eH, eV]
         ),
         [e9, e5] = r.useState(eA ? '' : void 0),
         e6 = r.useCallback(
@@ -265,9 +265,9 @@ function er(e) {
         ni = (0, s.jsx)(h.ModalHeader, {
             className: ei.modalHeader,
             separator: !1,
-            children: (0, s.jsxs)(I.Z, {
-                direction: I.Z.Direction.VERTICAL,
-                align: I.Z.Align.CENTER,
+            children: (0, s.jsxs)(N.Z, {
+                direction: N.Z.Direction.VERTICAL,
+                align: N.Z.Align.CENTER,
                 className: ei.header,
                 children: [
                     (0, s.jsx)(h.Heading, {
@@ -362,7 +362,7 @@ function er(e) {
                                 onChangePreviewDisabled: (e) => e$(e),
                                 onClose: ec,
                                 selectedGuildId: e0,
-                                targetGuildPremiumTier: eI,
+                                targetGuildPremiumTier: eN,
                                 selectGuild: er
                             })
                         })
@@ -383,7 +383,7 @@ function er(e) {
         }),
         nc = 1 === eL || (eA && 3 === eL) ? el.intl.string(el.t.FiBjwc) : eP && (3 !== eL || null != e9) ? el.intl.string(el.t.PDTjLC) : el.intl.string(el.t['UE/rPz']),
         nd = (0, s.jsxs)(h.ModalFooter, {
-            justify: null == nr ? I.Z.Justify.START : I.Z.Justify.BETWEEN,
+            justify: null == nr ? N.Z.Justify.START : N.Z.Justify.BETWEEN,
             children: [
                 (0, s.jsx)(h.Button, {
                     type: 'submit',

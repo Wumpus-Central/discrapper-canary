@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
-var r = n(200651),
+var i = n(200651),
     o = n(192379),
-    i = n(348327),
-    a = n.n(i),
+    r = n(348327),
+    a = n.n(r),
     l = n(658722),
     c = n.n(l),
     u = n(442837),
@@ -16,9 +16,9 @@ var r = n(200651),
     g = n(353926),
     m = n(499533),
     b = n(388032);
-function f(e) {
+function p(e) {
     let { id: t, experiment: n, currentBucket: o } = e;
-    return (0, r.jsxs)(
+    return (0, i.jsxs)(
         s.MenuItem,
         {
             id: t,
@@ -26,7 +26,7 @@ function f(e) {
             action: () => (0, d.rX)(t, null),
             children: [
                 n.buckets.map((e) =>
-                    (0, r.jsx)(
+                    (0, i.jsx)(
                         s.MenuCheckboxItem,
                         {
                             id: ''.concat(e),
@@ -37,10 +37,10 @@ function f(e) {
                         ''.concat(e)
                     )
                 ),
-                (0, r.jsx)(s.MenuGroup, {
+                (0, i.jsx)(s.MenuGroup, {
                     children:
                         -1 !== o &&
-                        (0, r.jsx)(s.MenuItem, {
+                        (0, i.jsx)(s.MenuItem, {
                             id: 'clear-override',
                             label: 'Clear Override',
                             color: 'danger',
@@ -53,18 +53,18 @@ function f(e) {
         t
     );
 }
-function p() {
+function f() {
     let e = (0, u.e7)(
             [g.Z, g.Z],
             () => {
                 let e = g.Z.getRegisteredExperiments();
                 return Object.keys(e).map((t) => {
                     let n = e[t],
-                        r = g.Z.getExperimentOverrideDescriptor(t);
+                        i = g.Z.getExperimentOverrideDescriptor(t);
                     return {
                         id: t,
                         experiment: n,
-                        currentBucket: null != r ? r.bucket : -1
+                        currentBucket: null != i ? i.bucket : -1
                     };
                 });
             },
@@ -72,7 +72,7 @@ function p() {
             a()
         ),
         [t, n] = o.useState(''),
-        [i, l] = o.useState([]);
+        [r, l] = o.useState([]);
     o.useEffect(() => {
         if (0 === t.trim().length) {
             l(e);
@@ -82,29 +82,29 @@ function p() {
     }, [e, t]);
     let d = o.useMemo(
             () =>
-                i.filter((e) => {
+                r.filter((e) => {
                     let { currentBucket: t } = e;
                     return -1 !== t;
                 }),
-            [i]
+            [r]
         ),
         m = o.useMemo(
             () =>
-                i.filter((e) => {
+                r.filter((e) => {
                     let { currentBucket: t } = e;
                     return -1 === t;
                 }),
-            [i]
+            [r]
         ),
-        p = o.useMemo(() => d.map(f), [d]),
-        h = o.useMemo(() => m.map(f), [m]);
+        f = o.useMemo(() => d.map(p), [d]),
+        h = o.useMemo(() => m.map(p), [m]);
     return [
-        (0, r.jsx)(
+        (0, i.jsx)(
             s.MenuControlItem,
             {
                 id: 'experiments-search',
                 control: (e, o) =>
-                    (0, r.jsx)(s.MenuSearchControl, {
+                    (0, i.jsx)(s.MenuSearchControl, {
                         ...e,
                         query: t,
                         onChange: n,
@@ -114,9 +114,9 @@ function p() {
             },
             'experiments-search'
         ),
-        (0, r.jsx)(s.MenuSeparator, {}, 'separator'),
-        ...p,
-        p.length > 0 ? (0, r.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
+        (0, i.jsx)(s.MenuSeparator, {}, 'separator'),
+        ...f,
+        f.length > 0 ? (0, i.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
         ...h
     ];
 }

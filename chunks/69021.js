@@ -4,10 +4,10 @@ n.d(t, {
     }
 }),
     n(653041);
-var r = n(200651);
+var i = n(200651);
 n(192379);
 var o = n(442837),
-    i = n(481060),
+    r = n(481060),
     a = n(179658),
     l = n(482215),
     c = n(906467),
@@ -27,14 +27,14 @@ function d() {
             };
         }),
         { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: m, maxVerticalSpacing: b } = (0, l.i)(),
-        { setHorizontalSpacing: f, setVerticalSpacing: p } = l.i.getState(),
+        { setHorizontalSpacing: p, setVerticalSpacing: f } = l.i.getState(),
         h = [];
     return (
         t &&
             n &&
             (h.push(
-                (0, r.jsx)(
-                    i.MenuCheckboxItem,
+                (0, i.jsx)(
+                    r.MenuCheckboxItem,
                     {
                         id: 'layout-debugging',
                         label: 'Enable Layout Debugging',
@@ -48,19 +48,19 @@ function d() {
             ),
             e &&
                 (h.push(
-                    (0, r.jsx)(
-                        i.MenuControlItem,
+                    (0, i.jsx)(
+                        r.MenuControlItem,
                         {
                             id: 'horizontal-spacing',
                             label: 'Horizontal Spacing',
                             control: (e, t) =>
-                                (0, r.jsx)(i.MenuSliderControl, {
+                                (0, i.jsx)(r.MenuSliderControl, {
                                     ...e,
                                     ref: t,
                                     value: d,
                                     minValue: 0,
                                     maxValue: m,
-                                    onChange: (e) => f(e),
+                                    onChange: (e) => p(e),
                                     renderValue: (e) => ''.concat(Math.round(e), 'px'),
                                     'aria-label': 'Horizontal Spacing'
                                 })
@@ -69,19 +69,19 @@ function d() {
                     )
                 ),
                 h.push(
-                    (0, r.jsx)(
-                        i.MenuControlItem,
+                    (0, i.jsx)(
+                        r.MenuControlItem,
                         {
                             id: 'vertical-spacing',
                             label: 'Vertical Spacing',
                             control: (e, t) =>
-                                (0, r.jsx)(i.MenuSliderControl, {
+                                (0, i.jsx)(r.MenuSliderControl, {
                                     ...e,
                                     ref: t,
                                     value: g,
                                     minValue: 0,
                                     maxValue: b,
-                                    onChange: (e) => p(e),
+                                    onChange: (e) => f(e),
                                     'aria-label': 'Horizontal Spacing',
                                     renderValue: (e) => ''.concat(Math.round(e), 'px')
                                 })
@@ -89,6 +89,6 @@ function d() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === h.length ? null : (0, r.jsx)(r.Fragment, { children: h })
+        0 === h.length ? null : (0, i.jsx)(i.Fragment, { children: h })
     );
 }

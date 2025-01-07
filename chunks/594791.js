@@ -3,10 +3,10 @@ n.d(t, {
         return u;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
 var o = n(481060),
-    i = n(626135),
+    r = n(626135),
     a = n(695346),
     l = n(981631),
     c = n(388032);
@@ -15,12 +15,12 @@ function u() {
         t = a.R$.useSetting();
     return e
         ? null
-        : (0, r.jsx)(o.MenuCheckboxItem, {
+        : (0, i.jsx)(o.MenuCheckboxItem, {
               id: 'preview-markdown-toggle',
               label: c.intl.string(c.t.sHJ9wc),
               action: () => {
                   let e = !t;
-                  i.default.track(l.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                  r.default.track(l.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                       enabled: e,
                       location: { section: l.jXE.SETTINGS_CONTEXT_MENU }
                   }),

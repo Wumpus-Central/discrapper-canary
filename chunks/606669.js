@@ -3,10 +3,10 @@ n.d(t, {
         return u;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
 var o = n(442837),
-    i = n(481060),
+    r = n(481060),
     a = n(857595),
     l = n(607070),
     c = n(388032);
@@ -35,10 +35,10 @@ function u() {
             }
         ];
     return [
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            r.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuCheckboxItem, {
+                children: (0, i.jsx)(r.MenuCheckboxItem, {
                     id: 'reduced-motion',
                     label: c.intl.string(c.t.b3XBzs),
                     checked: t,
@@ -47,14 +47,14 @@ function u() {
             },
             'reduced-motion'
         ),
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            r.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuControlItem, {
+                children: (0, i.jsx)(r.MenuControlItem, {
                     id: 'input',
                     label: c.intl.string(c.t['5PWWCQ']),
                     control: (t, n) =>
-                        (0, r.jsx)(i.MenuSliderControl, {
+                        (0, i.jsx)(r.MenuSliderControl, {
                             ...t,
                             ref: n,
                             value: 100 * e,
@@ -65,16 +65,16 @@ function u() {
             },
             'input'
         ),
-        (0, r.jsx)(
-            i.MenuGroup,
+        (0, i.jsx)(
+            r.MenuGroup,
             {
-                children: (0, r.jsx)(i.MenuItem, {
+                children: (0, i.jsx)(r.MenuItem, {
                     id: 'role-colors',
                     label: c.intl.string(c.t.uSOPWl),
                     children: u.map((e) => {
                         let { name: t, value: o } = e;
-                        return (0, r.jsx)(
-                            i.MenuRadioItem,
+                        return (0, i.jsx)(
+                            r.MenuRadioItem,
                             {
                                 id: o,
                                 group: 'role-colors',
