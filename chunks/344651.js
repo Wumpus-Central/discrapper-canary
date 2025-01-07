@@ -339,6 +339,7 @@ H(
                             userGuildSettings: e.user_guild_settings,
                             tutorial: e.tutorial,
                             relationships: e.relationships,
+                            gameRelationships: e.game_relationships,
                             friendSuggestionCount: e.friend_suggestion_count,
                             presences: e.presences,
                             analyticsToken: e.analytics_token,
@@ -887,6 +888,25 @@ H(
                 isSpamRequest: e.is_spam_request || !1,
                 userIgnored: e.user_ignored || !1
             }
+        });
+    }),
+    j(['GAME_RELATIONSHIP_ADD'], (e) => {
+        W({
+            type: 'GAME_RELATIONSHIP_ADD',
+            gameRelationship: {
+                id: e.id,
+                applicationId: e.application_id,
+                type: e.type,
+                since: e.since,
+                dmAccessType: e.dm_access_type
+            }
+        });
+    }),
+    j(['GAME_RELATIONSHIP_REMOVE'], (e) => {
+        W({
+            type: 'GAME_RELATIONSHIP_REMOVE',
+            userId: e.id,
+            applicationId: e.application_id
         });
     }),
     j(['PRESENCE_UPDATE'], (e) => {
