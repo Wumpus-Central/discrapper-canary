@@ -3,52 +3,49 @@ r.d(n, {
         return ee;
     },
     $8: function () {
-        return eY;
+        return eH;
     },
     $e: function () {
         return M;
     },
     $n: function () {
-        return e6;
+        return e4;
     },
     A5: function () {
         return er;
     },
     AU: function () {
-        return e_;
+        return ef;
     },
     Bo: function () {
-        return e8;
+        return e7;
     },
     C2: function () {
-        return em;
+        return ep;
     },
     CL: function () {
         return k;
     },
     CR: function () {
-        return eS;
+        return ey;
     },
     Cj: function () {
         return m;
     },
     Cn: function () {
-        return ed;
+        return ec;
     },
     Cx: function () {
-        return te;
+        return e9;
     },
     EA: function () {
         return l;
     },
     ET: function () {
-        return eE;
+        return eg;
     },
     EZ: function () {
         return h;
-    },
-    FL: function () {
-        return el;
     },
     F_: function () {
         return x;
@@ -57,49 +54,49 @@ r.d(n, {
         return W;
     },
     HO: function () {
-        return eK;
+        return eW;
     },
     Hk: function () {
-        return ep;
+        return eh;
     },
     IW: function () {
         return H;
     },
     Lw: function () {
-        return eG;
+        return eB;
     },
     M_: function () {
-        return e7;
+        return e5;
     },
     Nl: function () {
-        return ew;
+        return ex;
     },
     No: function () {
         return j;
     },
     OT: function () {
-        return eN;
+        return eA;
     },
     QI: function () {
-        return e1;
+        return e0;
     },
     QP: function () {
         return d;
     },
     RQ: function () {
-        return e2;
+        return e1;
     },
     RU: function () {
-        return eR;
+        return eC;
     },
     Rg: function () {
-        return eu;
+        return el;
     },
     Rr: function () {
         return X;
     },
     Rt: function () {
-        return eT;
+        return eI;
     },
     Se: function () {
         return C;
@@ -111,13 +108,13 @@ r.d(n, {
         return I;
     },
     TD: function () {
-        return eX;
+        return eQ;
     },
     TL: function () {
-        return eh;
+        return e_;
     },
     Tp: function () {
-        return e$;
+        return eJ;
     },
     UA: function () {
         return $;
@@ -129,7 +126,7 @@ r.d(n, {
         return et;
     },
     Uq: function () {
-        return eF;
+        return eZ;
     },
     VU: function () {
         return A;
@@ -144,7 +141,7 @@ r.d(n, {
         return s;
     },
     Y1: function () {
-        return ez;
+        return eK;
     },
     YQ: function () {
         return U;
@@ -156,22 +153,22 @@ r.d(n, {
         return w;
     },
     _k: function () {
-        return eW;
+        return eY;
     },
     a$: function () {
         return N;
     },
     a1: function () {
-        return eJ;
+        return eX;
     },
     a7: function () {
-        return eg;
+        return em;
     },
     b6: function () {
         return P;
     },
     bg: function () {
-        return eQ;
+        return eq;
     },
     cb: function () {
         return J;
@@ -180,25 +177,25 @@ r.d(n, {
         return u;
     },
     dB: function () {
-        return eD;
+        return eO;
     },
     dJ: function () {
         return G;
     },
     dO: function () {
-        return ev;
+        return eE;
     },
     dT: function () {
-        return eO;
+        return eR;
     },
     eG: function () {
-        return e9;
+        return e8;
     },
     eZ: function () {
-        return e4;
+        return e3;
     },
     ee: function () {
-        return ek;
+        return eM;
     },
     ff: function () {
         return eo;
@@ -207,7 +204,7 @@ r.d(n, {
         return T;
     },
     gW: function () {
-        return eP;
+        return ew;
     },
     gh: function () {
         return ei;
@@ -216,31 +213,31 @@ r.d(n, {
         return f;
     },
     h8: function () {
-        return eA;
+        return eS;
     },
     hX: function () {
         return b;
     },
     hs: function () {
-        return eC;
+        return eN;
     },
     i_: function () {
-        return ec;
+        return eu;
     },
     ih: function () {
-        return ex;
+        return eL;
     },
     in: function () {
         return c;
     },
     jy: function () {
-        return e0;
+        return e$;
     },
     jz: function () {
-        return ey;
+        return eb;
     },
     kJ: function () {
-        return e3;
+        return e2;
     },
     m8: function () {
         return ea;
@@ -249,13 +246,13 @@ r.d(n, {
         return Y;
     },
     n5: function () {
-        return eM;
+        return eP;
     },
     nG: function () {
-        return eU;
+        return ek;
     },
     nH: function () {
-        return eq;
+        return ez;
     },
     nL: function () {
         return p;
@@ -267,13 +264,13 @@ r.d(n, {
         return i;
     },
     pH: function () {
-        return eH;
+        return ej;
     },
     pj: function () {
         return K;
     },
     rB: function () {
-        return eL;
+        return eD;
     },
     rV: function () {
         return o;
@@ -282,16 +279,16 @@ r.d(n, {
         return es;
     },
     rt: function () {
-        return e5;
+        return e6;
     },
     vL: function () {
-        return eB;
+        return eU;
     },
     wh: function () {
-        return ef;
+        return ed;
     },
     xT: function () {
-        return eI;
+        return ev;
     },
     y7: function () {
         return B;
@@ -554,36 +551,39 @@ let W = Object.freeze({
     ea = '775514091874680832',
     es = '845031178288889946',
     eo = 432000000,
-    el = 345600000,
-    eu = 14,
-    ec = '520373071933079552',
-    ed = '902329034132684800',
-    ef = '983601860436819968',
-    e_ = '983601860436819969',
-    eh = '984244797441048577',
-    ep = '1215818925846036480',
-    em = '1004850445463584768',
-    eg = '1073698058383917056',
-    eE = '1070132870233980928',
-    ev = '1267968635301789696',
-    eI = '1267969164312576000',
-    eT = '1268347360493174784',
-    eb = '1271484512081285191',
-    ey = '1161363847311785984',
-    eS = [ec, ed, ef, e_, eh, ep, em, eg, eE, ev, eI, eT, eb, ey],
-    eA = [ev, eI, eb],
-    eN = [ev, eb],
-    eC = '1150904354090532864',
-    eR = '1199128659810582528',
-    eO = '1204865493622587392',
-    eD = '1204867673024888832',
-    eL = '1215346678383509504',
-    ex = '1215366184820539392',
-    ew = '1223319122125783040',
-    eP = '1223380890109870080',
-    eM = '1265748546523762828',
-    ek = [ew, eP],
-    eU = Object.freeze({
+    el = 14,
+    eu = '520373071933079552',
+    ec = '902329034132684800',
+    ed = '983601860436819968',
+    ef = '983601860436819969',
+    e_ = '984244797441048577',
+    eh = '1215818925846036480',
+    ep = '1004850445463584768',
+    em = '1073698058383917056',
+    eg = '1070132870233980928',
+    eE = '1267968635301789696',
+    ev = '1267969164312576000',
+    eI = '1268347360493174784',
+    eT = '1271484512081285191',
+    eb = '1161363847311785984',
+    ey = [eu, ec, ed, ef, e_, eh, ep, em, eg, eE, ev, eI, eT, eb],
+    eS = [eE, ev, eT],
+    eA = [eE, eT],
+    eN = '1150904354090532864',
+    eC = '1199128659810582528',
+    eR = '1204865493622587392',
+    eO = '1204867673024888832',
+    eD = '1215346678383509504',
+    eL = '1215366184820539392',
+    ex = '1223319122125783040',
+    ew = '1223380890109870080',
+    eP = '1265748546523762828',
+    eM = [ex, ew],
+    ek = Object.freeze({
+        [eu]: {
+            id: eu,
+            skus: ['521847234246082599']
+        },
         [ec]: {
             id: ec,
             skus: ['521847234246082599']
@@ -600,32 +600,28 @@ let W = Object.freeze({
             id: e_,
             skus: ['521847234246082599']
         },
-        [eh]: {
-            id: eh,
+        [ep]: {
+            id: ep,
             skus: ['521847234246082599']
+        },
+        [eg]: {
+            id: eg,
+            skus: ['978380684370378762']
         },
         [em]: {
             id: em,
             skus: ['521847234246082599']
         },
-        [eE]: {
-            id: eE,
-            skus: ['978380684370378762']
-        },
-        [eg]: {
-            id: eg,
+        [eh]: {
+            id: eh,
             skus: ['521847234246082599']
         },
-        [ep]: {
-            id: ep,
+        [eI]: {
+            id: eI,
             skus: ['521847234246082599']
         },
-        [eT]: {
-            id: eT,
-            skus: ['521847234246082599']
-        },
-        [ey]: {
-            id: ey,
+        [eb]: {
+            id: eb,
             skus: ['521847234246082599']
         }
     });
@@ -727,36 +723,36 @@ let W = Object.freeze({
     !(function (e) {
         (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
     })(c || (c = {}));
-let eB = Object.freeze({
+let eU = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
+    eB = 52428800,
     eG = 52428800,
-    eZ = 52428800,
-    eF = 524288000,
-    eV = 52428800,
-    ej = 104857600,
-    eH = {
+    eZ = 524288000,
+    eF = 52428800,
+    eV = 104857600,
+    ej = {
         [D.Eu4.NONE]: 5,
         [D.Eu4.TIER_1]: 10,
         [D.Eu4.TIER_2]: 15,
         [D.Eu4.TIER_3]: 30
     },
-    eY = {
-        [D.Eu4.NONE]: eH[D.Eu4.NONE],
-        [D.Eu4.TIER_1]: eH[D.Eu4.NONE] + eH[D.Eu4.TIER_1],
-        [D.Eu4.TIER_2]: eH[D.Eu4.NONE] + eH[D.Eu4.TIER_1] + eH[D.Eu4.TIER_2],
-        [D.Eu4.TIER_3]: eH[D.Eu4.NONE] + eH[D.Eu4.TIER_1] + eH[D.Eu4.TIER_2] + eH[D.Eu4.TIER_3]
+    eH = {
+        [D.Eu4.NONE]: ej[D.Eu4.NONE],
+        [D.Eu4.TIER_1]: ej[D.Eu4.NONE] + ej[D.Eu4.TIER_1],
+        [D.Eu4.TIER_2]: ej[D.Eu4.NONE] + ej[D.Eu4.TIER_1] + ej[D.Eu4.TIER_2],
+        [D.Eu4.TIER_3]: ej[D.Eu4.NONE] + ej[D.Eu4.TIER_1] + ej[D.Eu4.TIER_2] + ej[D.Eu4.TIER_3]
     },
-    eW = {
+    eY = {
         [D.Eu4.NONE]: 8,
         [D.Eu4.TIER_1]: 24,
         [D.Eu4.TIER_2]: 36,
         [D.Eu4.TIER_3]: 48
     },
-    eK = Object.freeze({
+    eW = Object.freeze({
         [D.Eu4.NONE]: {
             features: [],
             limits: {
@@ -765,9 +761,9 @@ let eB = Object.freeze({
                 fileSize: D.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eW[D.Eu4.NONE],
+                soundboardSounds: eY[D.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: eY[D.Eu4.NONE],
+                stickers: eH[D.Eu4.NONE],
                 stageVideoUsers: D.B9o
             }
         },
@@ -779,9 +775,9 @@ let eB = Object.freeze({
                 fileSize: D.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eW[D.Eu4.TIER_1],
+                soundboardSounds: eY[D.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: eY[D.Eu4.TIER_1],
+                stickers: eH[D.Eu4.TIER_1],
                 stageVideoUsers: D.B9o
             }
         },
@@ -790,12 +786,12 @@ let eB = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eV,
+                fileSize: eF,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eW[D.Eu4.TIER_2],
+                soundboardSounds: eY[D.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: eY[D.Eu4.TIER_2],
+                stickers: eH[D.Eu4.TIER_2],
                 stageVideoUsers: D.eez
             }
         },
@@ -804,24 +800,24 @@ let eB = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: ej,
+                fileSize: eV,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eW[D.Eu4.TIER_3],
+                soundboardSounds: eY[D.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: eY[D.Eu4.TIER_3],
+                stickers: eH[D.Eu4.TIER_3],
                 stageVideoUsers: D.RcX
             }
         }
     }),
-    ez = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+    eK = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
 !(function (e) {
     (e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset');
 })(d || (d = {})),
     !(function (e) {
         (e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard');
     })(f || (f = {}));
-let eq = {
+let ez = {
     '1024422698568122368': z,
     '511651876987469824': z,
     '511651885459963904': z,
@@ -831,7 +827,7 @@ let eq = {
 !(function (e) {
     (e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality');
 })(_ || (_ = {}));
-let eQ = Object.freeze({
+let eq = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
@@ -847,15 +843,15 @@ let eQ = Object.freeze({
     !(function (e) {
         (e.USER_NOT_VERIFIED = 'user_not_verified'), (e.NO_CODE_BODY = 'no_code_body'), (e.NO_PROMOTION = 'no_promotion'), (e.CODE_CLAIMED = 'code_claimed'), (e.EXISTING_SUBSCRIBER = 'existing_subscriber'), (e.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (e.BLOCKED_PAYMENT = 'blocked_payment');
     })(g || (g = {}));
-let eX = Object.freeze({
+let eQ = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    eJ = Object.freeze({
-        3: { fileSize: eG },
-        1: { fileSize: eZ },
-        2: { fileSize: eF }
+    eX = Object.freeze({
+        3: { fileSize: eB },
+        1: { fileSize: eG },
+        2: { fileSize: eZ }
     });
 !(function (e) {
     (e.EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (e.HELPER_COLLAPSED = 'helper_collapsed'), (e.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (e.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (e.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (e.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (e.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (e.HELPER_RENDERED = 'premium_feature_helper_rendered');
@@ -869,13 +865,13 @@ let eX = Object.freeze({
     !(function (e) {
         (e.BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (e.BADGE_CLICKED = 'share_nitro_badge_clicked'), (e.FLOW_STARTED = 'share_nitro_flow_started'), (e.FLOW_COMPLETED = 'share_nitro_flow_completed');
     })(T || (T = {}));
-let e$ = new Set(['PL', 'TR']),
-    e0 = [1, 2, 3],
-    e1 = [4, 5, 7, 6],
-    e2 = [12, 5, 7, 6],
-    e3 = [8, 9, 11, 10],
-    e4 = e3.concat(e0),
-    e6 = 190;
+let eJ = new Set(['PL', 'TR']),
+    e$ = [1, 2, 3],
+    e0 = [4, 5, 7, 6],
+    e1 = [12, 5, 7, 6],
+    e2 = [8, 9, 11, 10],
+    e3 = e2.concat(e$),
+    e4 = 190;
 !(function (e) {
     e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY';
 })(b || (b = {})),
@@ -885,13 +881,13 @@ let e$ = new Set(['PL', 'TR']),
     !(function (e) {
         (e[(e.DM_CHANNEL = 0)] = 'DM_CHANNEL'), (e[(e.SHOP_PAGE = 1)] = 'SHOP_PAGE');
     })(S || (S = {}));
-let e5 = 3,
-    e7 = 30,
-    e8 = 20;
+let e6 = 3,
+    e5 = 30,
+    e7 = 20;
 !(function (e) {
     (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
 })(A || (A = {}));
-let e9 = {
+let e8 = {
     premium_tenure_1_month: 1,
     premium_tenure_3_month: 3,
     premium_tenure_6_month: 6,
@@ -907,7 +903,7 @@ let e9 = {
     !(function (e) {
         (e[(e.HOUR = 1)] = 'HOUR'), (e[(e.DAY = 2)] = 'DAY');
     })(C || (C = {}));
-let te = {
+let e9 = {
     [O.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
     [O.a.PREMIUM_TIER_2_1_DAY]: [2, 1]
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return S;
     }
 });
 var i = n(200651);
@@ -8,67 +8,56 @@ n(192379);
 var l = n(120356),
     s = n.n(l),
     r = n(442837),
-    o = n(769415),
-    a = n(650032),
-    c = n(104494),
-    u = n(639119),
-    d = n(655525),
-    h = n(52188),
-    m = n(346497),
-    p = n(924540),
-    b = n(474486),
-    f = n(351402),
-    v = n(170671),
-    S = n(474936),
-    x = n(913074);
-let g = 'UserSettingsPremiumLabel';
-function j(e) {
+    o = n(650032),
+    a = n(104494),
+    c = n(639119),
+    u = n(655525),
+    d = n(52188),
+    h = n(346497),
+    m = n(924540),
+    p = n(351402),
+    b = n(170671),
+    f = n(474936),
+    v = n(913074);
+function S(e) {
     let t,
-        { decoration: n, label: l, isSelected: j } = e,
-        N = (0, u.N)(),
-        C = (0, c.Ng)(),
-        y = (0, m.Vi)(),
-        P = (0, r.e7)([f.Z], () => f.Z.isLocalizedPromoEnabled) && null == N && null == n,
-        { enabled: T } = a._.useExperiment({ location: g }, { autoTrackExposure: !1 }),
-        E = T && (null == N ? void 0 : N.trial_id) === S.a7,
-        I = (null == N ? void 0 : N.trial_id) === S.jz,
-        { enabled: R } = o.Z.getCurrentConfig({ location: g }, { autoTrackExposure: I });
+        { decoration: n, label: l, isSelected: S } = e,
+        x = (0, c.N)(),
+        g = (0, a.Ng)(),
+        j = (0, h.Vi)(),
+        N = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == n,
+        { enabled: C } = o._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
+        y = C && (null == x ? void 0 : x.trial_id) === f.a7;
     return (
-        (t = y
-            ? (0, i.jsx)(d.Z, {})
-            : null != C
-              ? (0, i.jsx)(p.GN, {
-                    isTabSelected: j,
-                    userDiscount: C,
+        (t = j
+            ? (0, i.jsx)(u.Z, {})
+            : null != g
+              ? (0, i.jsx)(m.GN, {
+                    isTabSelected: S,
+                    userDiscount: g,
                     includesAmountOff: !1
                 })
-              : I
-                ? (0, i.jsx)(b.dX, {
-                      isSelected: j,
-                      trialOffer: N,
-                      q4MarketingEnabled: R
-                  })
-                : null == N || E
-                  ? null != n
-                      ? n
-                      : P
-                        ? (0, i.jsx)(h.k, { entryPoint: h.U.SettingsMenu })
-                        : (0, i.jsx)(v.Z, { isSelected: j })
-                  : (0, i.jsx)(p.$H, {
-                        isTabSelected: j,
-                        trialOffer: N
-                    })),
+              : null == x || y
+                ? null != n
+                    ? n
+                    : N
+                      ? (0, i.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
+                      : (0, i.jsx)(b.Z, { isSelected: S })
+                : (0, i.jsx)(m.$H, {
+                      isTabSelected: S,
+                      trialOffer: x
+                  })),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(x.premiumLabel, { [x.selected]: (j || P) && !y }),
+                    className: s()(v.premiumLabel, { [v.selected]: (S || N) && !j }),
                     children: [l, t]
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(x.background, {
-                        [x.auPromo]: P && !j,
-                        [x.auPromoSelected]: P && j,
-                        [x.selectedBackground]: !P && !y && j
+                    className: s()(v.background, {
+                        [v.auPromo]: N && !S,
+                        [v.auPromoSelected]: N && S,
+                        [v.selectedBackground]: !N && !j && S
                     })
                 })
             ]
