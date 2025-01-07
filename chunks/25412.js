@@ -5,8 +5,8 @@ r.d(t, {
 });
 var a = r(798192),
     n = r(135164),
-    o = r(312976),
-    s = r(181568);
+    s = r(312976),
+    o = r(181568);
 let i = Math.PI,
     c = 180 / i,
     u = i / 180;
@@ -16,11 +16,11 @@ function l(e) {
 }
 function f(e, t, { kL: r = 1, kC: f = 1, kH: b = 1 } = {}) {
     let h, d, p;
-    [e, t] = (0, s.Z)([e, t]);
+    [e, t] = (0, o.Z)([e, t]);
     let [m, g, y] = n.Z.from(e),
-        v = o.Z.from(n.Z, [m, g, y])[1],
+        v = s.Z.from(n.Z, [m, g, y])[1],
         [Z, w, M] = n.Z.from(t),
-        k = o.Z.from(n.Z, [Z, w, M])[1];
+        k = s.Z.from(n.Z, [Z, w, M])[1];
     v < 0 && (v = 0), k < 0 && (k = 0);
     let O = l((v + k) / 2),
         C = 0.5 * (1 - Math.sqrt(O / (O + 6103515625))),

@@ -144,8 +144,8 @@ let ep = l.memo((e) => {
         e2 = (0, L.Z)(),
         e3 = e0 && e$ && null != e2,
         e9 = (0, P.o)(Z, eW),
-        e7 = (0, j.lL)('CallTile', !0, eW, e9),
-        e4 = (0, o.e7)([F.Z], () => (Z.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
+        e4 = (0, j.lL)('CallTile', !0, eW, e9),
+        e7 = (0, o.e7)([F.Z], () => (Z.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
         e6 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
         { enableHangStatus: e8 } = C.n.useExperiment({
             guildId: eI.guild_id,
@@ -229,7 +229,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eT,
                     idle: th,
-                    premiumIndicator: e3 || e7.enabled
+                    premiumIndicator: e3 || e4.enabled
                 })),
                 (tI = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: Z.user.username }));
             break;
@@ -321,9 +321,9 @@ let ep = l.memo((e) => {
                                 onKeyDown: ep,
                                 focusProps: { offset: 1 },
                                 children: [
-                                    null != e4 && null != eB
+                                    null != e7 && null != eB
                                         ? (0, i.jsx)(W.Z, {
-                                              voiceChannelEffect: e4,
+                                              voiceChannelEffect: e7,
                                               onComplete: () => (0, F.H)(eB),
                                               userId: eB
                                           })
@@ -399,7 +399,7 @@ let ep = l.memo((e) => {
                                     eC && !ey
                                         ? (0, i.jsx)('div', {
                                               className: r()(ef.border, {
-                                                  [ef.voiceChannelEffect]: !eT && null != e4,
+                                                  [ef.voiceChannelEffect]: !eT && null != e7,
                                                   [ef.speaking]: eq && !eT
                                               })
                                           })

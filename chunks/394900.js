@@ -5,14 +5,14 @@ r.d(t, {
 });
 var a = r(37484),
     n = r(665352),
-    o = r(798192),
-    s = r(181568),
+    s = r(798192),
+    o = r(181568),
     i = r(103671),
     c = r(262281),
     u = r(830927);
-function l(e, { precision: t = o.Z.precision, format: r = 'default', inGamut: l = !0, ...f } = {}) {
+function l(e, { precision: t = s.Z.precision, format: r = 'default', inGamut: l = !0, ...f } = {}) {
     let b;
-    e = (0, s.Z)(e);
+    e = (0, o.Z)(e);
     let h = r;
     r = e.space.getFormat(r) ?? e.space.getFormat('default') ?? n.Z.DEFAULT_FORMAT;
     let d = e.coords.slice();
@@ -22,15 +22,15 @@ function l(e, { precision: t = o.Z.precision, format: r = 'default', inGamut: l 
     } else {
         let n = r.name || 'color';
         r.serializeCoords ? (d = r.serializeCoords(d, t)) : null !== t && (d = d.map((e) => a.zL(e, { precision: t })));
-        let o = [...d];
+        let s = [...d];
         if ('color' === n) {
             let t = r.id || r.ids?.[0] || e.space.id;
-            o.unshift(t);
+            s.unshift(t);
         }
-        let s = e.alpha;
-        null !== t && (s = a.zL(s, { precision: t }));
-        let i = e.alpha >= 1 || r.noAlpha ? '' : `${r.commas ? ',' : ' /'} ${s}`;
-        b = `${n}(${o.join(r.commas ? ', ' : ' ')}${i})`;
+        let o = e.alpha;
+        null !== t && (o = a.zL(o, { precision: t }));
+        let i = e.alpha >= 1 || r.noAlpha ? '' : `${r.commas ? ',' : ' /'} ${o}`;
+        b = `${n}(${s.join(r.commas ? ', ' : ' ')}${i})`;
     }
     return b;
 }

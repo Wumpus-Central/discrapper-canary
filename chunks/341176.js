@@ -1,6 +1,6 @@
 t.d(n, {
     D: function () {
-        return _;
+        return h;
     },
     Z: function () {
         return p;
@@ -16,14 +16,14 @@ var a = t(200651),
     c = t(591759),
     d = t(124347),
     f = t(80966),
-    h = t(891589);
-let _ = {
+    _ = t(891589);
+let h = {
     DEFAULT: null,
-    CONTAIN: h.contain,
-    SCALE_DOWN: h.scaleDown
+    CONTAIN: _.contain,
+    SCALE_DOWN: _.scaleDown
 };
 function p(e) {
-    let { media: n, fit: t = _.DEFAULT, obscured: r = !1, onContextMenu: p } = e,
+    let { media: n, fit: t = h.DEFAULT, obscured: r = !1, onContextMenu: p } = e,
         { width: m, height: C, url: E, proxyUrl: S, alt: g, type: L, maxWidth: O, maxHeight: x, ...A } = n,
         { width: v, height: N } = (0, s.zp)(null != m ? m : 0, null != C ? C : 0),
         R = (0, o.q)({
@@ -63,7 +63,7 @@ function p(e) {
         return b
             ? (0, a.jsx)(d.ZP, {
                   ...A,
-                  imageClassName: i()(h.slide, t),
+                  imageClassName: i()(_.slide, t),
                   src: R,
                   width: m,
                   height: C,
@@ -79,7 +79,7 @@ function p(e) {
             : (0, a.jsx)('img', {
                   src: R,
                   alt: g,
-                  className: i()(h.slide, t),
+                  className: i()(_.slide, t),
                   onContextMenu: p
               });
     return null;

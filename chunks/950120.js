@@ -14,8 +14,8 @@ var a = t(200651),
     c = t(376641),
     d = t(714338),
     f = t(585483),
-    h = t(288229),
-    _ = t(981631),
+    _ = t(288229),
+    h = t(981631),
     p = t(388032),
     m = t(230569);
 function C(e) {
@@ -42,9 +42,9 @@ function E(e) {
         r.useEffect(() => {
             if (null != n)
                 return (
-                    f.S.subscribe(_.CkL.MEDIA_MODAL_CLOSE, n),
+                    f.S.subscribe(h.CkL.MEDIA_MODAL_CLOSE, n),
                     () => {
-                        f.S.unsubscribe(_.CkL.MEDIA_MODAL_CLOSE, n);
+                        f.S.unsubscribe(h.CkL.MEDIA_MODAL_CLOSE, n);
                     }
                 );
         }, [n]),
@@ -68,7 +68,7 @@ function E(e) {
             onClick: n,
             children: [
                 A ? (0, a.jsx)(C, { onClose: n }) : null,
-                (0, a.jsx)(h.Z, {
+                (0, a.jsx)(_.Z, {
                     items: t,
                     startIndex: i,
                     fit: u,

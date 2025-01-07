@@ -1,13 +1,13 @@
 var a = r(665352),
     n = r(629990),
-    o = r(856308),
-    s = r(186267),
+    s = r(856308),
+    o = r(186267),
     i = r(37484);
 let c = n.mh.D65,
     u = 216 / 24389,
     l = 24389 / 27,
-    [f, b] = (0, s.uv)({
-        space: o.Z,
+    [f, b] = (0, o.uv)({
+        space: s.Z,
         coords: c
     });
 t.Z = new a.Z({
@@ -26,12 +26,12 @@ t.Z = new a.Z({
         }
     },
     white: c,
-    base: o.Z,
+    base: s.Z,
     fromBase(e) {
         let t = [(0, i.sI)(e[0]), (0, i.sI)(e[1]), (0, i.sI)(e[2])],
             r = t[1],
-            [a, n] = (0, s.uv)({
-                space: o.Z,
+            [a, n] = (0, o.uv)({
+                space: s.Z,
                 coords: t
             });
         if (!Number.isFinite(a) || !Number.isFinite(n)) return [0, 0, 0];
@@ -43,9 +43,9 @@ t.Z = new a.Z({
         if (0 === t || (0, i.Wi)(t)) return [0, 0, 0];
         (r = (0, i.sI)(r)), (a = (0, i.sI)(a));
         let n = r / (13 * t) + f,
-            o = a / (13 * t) + b,
-            s = t <= 8 ? t / l : Math.pow((t + 16) / 116, 3);
-        return [((9 * n) / (4 * o)) * s, s, ((12 - 3 * n - 20 * o) / (4 * o)) * s];
+            s = a / (13 * t) + b,
+            o = t <= 8 ? t / l : Math.pow((t + 16) / 116, 3);
+        return [((9 * n) / (4 * s)) * o, o, ((12 - 3 * n - 20 * s) / (4 * s)) * o];
     },
     formats: {
         color: {

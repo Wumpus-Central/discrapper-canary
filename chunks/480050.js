@@ -6,7 +6,7 @@ var i = t(200651),
     o = t(956664),
     s = t(981656);
 n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: h, maxWidth: f, maxHeight: m } = e,
+    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: f, maxWidth: h, maxHeight: m } = e,
         p = (0, r.useRef)(null),
         [_, E] = (0, r.useState)(!1),
         [g, S] = (0, r.useState)({
@@ -17,13 +17,13 @@ n.Z = r.memo(function (e) {
             x: 0,
             y: 0
         }),
-        [I, y] = (0, r.useState)({
+        [y, I] = (0, r.useState)({
             x: 0,
             y: 0
         });
     (0, r.useEffect)(() => {
         !t &&
-            (y({
+            (I({
                 x: 0,
                 y: 0
             }),
@@ -43,11 +43,11 @@ n.Z = r.memo(function (e) {
                         y: i
                     }),
                     C({
-                        x: n - I.x,
-                        y: i - I.y
+                        x: n - y.x,
+                        y: i - y.y
                     });
             },
-            [t, I]
+            [t, y]
         ),
         O = (0, r.useCallback)(
             (e) => {
@@ -67,21 +67,21 @@ n.Z = r.memo(function (e) {
                 if (null == t) return;
                 let [i, r] = [t.width > window.innerWidth, t.height > window.innerHeight];
                 if (!i && !r) return;
-                let { x: a, y: l } = I,
+                let { x: a, y: l } = y,
                     [o, s] = [i ? e.clientX - x.x : 0, r ? e.clientY - x.y : 0],
                     [u, c] = [o - a, s - l];
                 i && u + t.x >= 0 && (o -= u + t.x), r && c + t.y >= 0 && (s -= c + t.y);
-                let [d, h] = [t.x + t.width, t.y + t.height];
+                let [d, f] = [t.x + t.width, t.y + t.height];
                 i && u + d <= window.innerWidth && (o = window.innerWidth + a - d),
-                    r && c + h <= window.innerHeight && (s = window.innerHeight + l - h),
-                    y({
+                    r && c + f <= window.innerHeight && (s = window.innerHeight + l - f),
+                    I({
                         x: o,
                         y: s
                     });
             },
-            [_, I, x.x, x.y]
+            [_, y, x.x, x.y]
         ),
-        M = t ? (0, o.vV)(d, h, f, m) : 1,
+        M = t ? (0, o.vV)(d, f, h, m) : 1,
         L = (0, r.useCallback)(() => {
             let e = p.current;
             if (null == e) return !1;
@@ -100,7 +100,7 @@ n.Z = r.memo(function (e) {
         }),
         style: {
             ...(null != c ? c : {}),
-            translate: ''.concat(I.x, 'px ').concat(I.y, 'px'),
+            translate: ''.concat(y.x, 'px ').concat(y.y, 'px'),
             scale: ''.concat(null != M ? M : 1)
         },
         children: n

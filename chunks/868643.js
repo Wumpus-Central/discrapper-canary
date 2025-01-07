@@ -1,6 +1,6 @@
 t.d(n, {
     a: function () {
-        return h;
+        return _;
     },
     h: function () {
         return f;
@@ -24,7 +24,7 @@ function f(e) {
     let t = null === (n = l.Z.getChannel(e.channel_id)) || void 0 === n ? void 0 : n.guild_id;
     return !(null != t && i.Z.isChannelOrThreadParentGated(t, e.channel_id)) && !0;
 }
-function h(e) {
+function _(e) {
     let n = (0, r.e7)([o.Z, i.Z, l.Z], () => {
         var n, t;
         if (null == e) return !0;

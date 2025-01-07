@@ -12,8 +12,8 @@ var i = t(200651),
     u = t(80966),
     c = t(480050),
     d = t(524444),
-    h = t(52824),
-    f = t(956664),
+    f = t(52824),
+    h = t(956664),
     m = t(589530),
     p = t(591759),
     _ = t(254109),
@@ -26,21 +26,21 @@ function S(e) {
 n.Z = r.memo(function (e) {
     let n,
         { media: t, obscured: r = !1, onContextMenu: a } = e,
-        { width: p, height: x, url: C, proxyUrl: I, alt: y, type: v, maxWidth: O, maxHeight: b, ...M } = t,
+        { width: p, height: x, url: C, proxyUrl: y, alt: I, type: v, maxWidth: O, maxHeight: b, ...M } = t,
         { zoomed: L, setZoomed: A } = (0, E.Y)(),
         T = (function (e, n, t) {
             return e && (0, o.rV)(n)
                 ? (0, o.s$)(n)
-                : (0, h.q)({
+                : (0, f.q)({
                       proxyURL: t,
                       url: n
                   });
-        })(L, C, I),
-        { width: R, height: j } = (0, f.zp)(null != p ? p : 0, null != x ? x : 0),
+        })(L, C, y),
+        { width: R, height: j } = (0, h.zp)(null != p ? p : 0, null != x ? x : 0),
         N = !(null == p || 0 === p || null == x || 0 === x);
-    if ('VIDEO' === v && N && null != I) {
+    if ('VIDEO' === v && N && null != y) {
         var D;
-        let e = S(I);
+        let e = S(y);
         if (null == e) return null;
         let n = null !== (D = t.renderLinkComponent) && void 0 !== D ? D : d.iT;
         return (0, i.jsx)(u.Z, {
@@ -59,7 +59,7 @@ n.Z = r.memo(function (e) {
             onMute: m.Zj,
             renderLinkComponent: n,
             autoPlay: !r,
-            alt: y,
+            alt: I,
             onContextMenu: a
         });
     }
@@ -77,13 +77,13 @@ n.Z = r.memo(function (e) {
                       useFullWidth: !0,
                       animated: !r && t.animated,
                       autoPlay: !r,
-                      alt: y,
+                      alt: I,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
                       onContextMenu: a
                   })
                 : (0, i.jsx)('img', {
                       src: T,
-                      alt: y,
+                      alt: I,
                       onContextMenu: a,
                       className: g.dimensionlessImage
                   })),

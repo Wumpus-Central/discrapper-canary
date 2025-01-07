@@ -1,17 +1,17 @@
 var a = r(553616),
     n = r(64774),
-    o = {},
-    s = Object.keys(a);
-s.forEach(function (e) {
-    (o[e] = {}), Object.defineProperty(o[e], 'channels', { value: a[e].channels }), Object.defineProperty(o[e], 'labels', { value: a[e].labels });
+    s = {},
+    o = Object.keys(a);
+o.forEach(function (e) {
+    (s[e] = {}), Object.defineProperty(s[e], 'channels', { value: a[e].channels }), Object.defineProperty(s[e], 'labels', { value: a[e].labels });
     var t = n(e);
     Object.keys(t).forEach(function (r) {
         var a,
             n,
-            s,
+            o,
             i,
             c = t[r];
-        (o[e][r] =
+        (s[e][r] =
             ((a = c),
             (n = function (e) {
                 if (null == e) return e;
@@ -22,13 +22,13 @@ s.forEach(function (e) {
             }),
             'conversion' in a && (n.conversion = a.conversion),
             n)),
-            (o[e][r].raw =
-                ((s = c),
+            (s[e][r].raw =
+                ((o = c),
                 (i = function (e) {
-                    return null == e ? e : (arguments.length > 1 && (e = Array.prototype.slice.call(arguments)), s(e));
+                    return null == e ? e : (arguments.length > 1 && (e = Array.prototype.slice.call(arguments)), o(e));
                 }),
-                'conversion' in s && (i.conversion = s.conversion),
+                'conversion' in o && (i.conversion = o.conversion),
                 i));
     });
 }),
-    (e.exports = o);
+    (e.exports = s);

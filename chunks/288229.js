@@ -11,12 +11,12 @@ var a = t(200651),
     l = t.n(i),
     o = t(299608),
     s = t.n(o),
-    u = t(752877),
+    u = t(666912),
     c = t(442837),
     d = t(481060),
     f = t(794295),
-    h = t(95398),
-    _ = t(247206),
+    _ = t(95398),
+    h = t(247206),
     p = t(394779),
     m = t(134432),
     C = t(254109),
@@ -39,12 +39,12 @@ function b(e) {
     let { children: n, hasMediaControls: t, isObscured: i, src: o } = e,
         [s, u] = (0, r.useState)(!1);
     return i
-        ? (0, a.jsx)(h.a.Provider, {
+        ? (0, a.jsx)(_.a.Provider, {
               value: s,
               children: (0, a.jsx)(
-                  h.Z,
+                  _.Z,
                   {
-                      type: h.Z.Types.ATTACHMENT,
+                      type: _.Z.Types.ATTACHMENT,
                       reason: E.wk.EXPLICIT_CONTENT,
                       className: v.obscureContainer,
                       obscured: !0,
@@ -68,30 +68,30 @@ function b(e) {
 }
 function D(e) {
     var n, t, i;
-    let { items: l, fit: o, startIndex: h = 0, shouldRedactExplicitContent: E = !1, shouldHideMediaOptions: N = !1, shouldAnimateCarousel: D = !1 } = e,
-        [M, T] = (0, r.useState)(h),
-        I = (0, r.useRef)(h),
-        [k, y] = (0, r.useState)([]);
+    let { items: l, fit: o, startIndex: _ = 0, shouldRedactExplicitContent: E = !1, shouldHideMediaOptions: N = !1, shouldAnimateCarousel: D = !1 } = e,
+        [M, T] = (0, r.useState)(_),
+        k = (0, r.useRef)(_),
+        [y, P] = (0, r.useState)([]);
     (0, r.useEffect)(() => {
         var e, n;
         let t = (((M + 1) % (e = l.length)) + e) % e;
         let a = (((M - 1) % (n = l.length)) + n) % n;
         R(l[t]) && (0, m.po)(l[t].url), R(l[a]) && (0, m.po)(l[a].url);
     }, [M, l]);
-    let P = (0, r.useCallback)(
+    let I = (0, r.useCallback)(
         (e) => {
             var n;
-            let t = e - I.current;
-            T((e = ((e % (n = l.length)) + n) % n)), (I.current = e), y((e) => [...e, t]), (0, C.yg)(C.uG.SELECTED_ITEM_CHANGE);
+            let t = e - k.current;
+            T((e = ((e % (n = l.length)) + n) % n)), (k.current = e), P((e) => [...e, t]), (0, C.yg)(C.uG.SELECTED_ITEM_CHANGE);
         },
         [l]
     );
     (0, r.useEffect)(() => {
         let e = s()(() => {
-                P(I.current + 1);
+                I(k.current + 1);
             }, 300),
             n = s()(() => {
-                P(I.current - 1);
+                I(k.current - 1);
             }, 300);
         return (
             g.S.subscribe(x.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -100,7 +100,7 @@ function D(e) {
                 g.S.unsubscribe(x.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(x.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [P]);
+    }, [I]);
     let j = l[M],
         w = null !== (i = j.sourceMetadata) && void 0 !== i ? i : {},
         Z = null == w ? void 0 : null === (n = w.message) || void 0 === n ? void 0 : n.id,
@@ -109,9 +109,9 @@ function D(e) {
         U = null != G ? G : null == w ? void 0 : w.message,
         W = (0, r.useCallback)(() => (0, C.yg)(C.uG.FORWARD_PRESSED), []),
         H = null != U && null != w.identifier ? (0, p.s)(U, w.identifier, W) : null,
-        B = (0, _.KP)(
+        B = (0, h.KP)(
             {
-                type: _.lJ.GenericMedia,
+                type: h.lJ.GenericMedia,
                 media: j
             },
             E
@@ -125,7 +125,7 @@ function D(e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(k[k.length - 1]),
+        })(y[y.length - 1]),
         K = (0, d.useTransition)(
             j,
             {

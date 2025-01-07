@@ -3,7 +3,7 @@ t.d(n, {
         return p;
     },
     am: function () {
-        return _;
+        return h;
     }
 }),
     t(47120);
@@ -32,7 +32,7 @@ let f = {
     CENTER: c.alignCenter,
     LEFT: c.alignLeft
 };
-class h extends (a = i.PureComponent) {
+class _ extends (a = i.PureComponent) {
     componentDidUpdate(e) {
         let { selectedIndex: n } = this.props;
         e.selectedIndex !== n && this.handleSelectedIndexChange(n);
@@ -79,8 +79,8 @@ class h extends (a = i.PureComponent) {
             });
     }
 }
-d(h, 'Align', f),
-    d(h, 'defaultProps', {
+d(_, 'Align', f),
+    d(_, 'defaultProps', {
         scrollToPadding: {
             top: 0,
             left: 0,
@@ -89,7 +89,7 @@ d(h, 'Align', f),
         },
         align: f.CENTER
     });
-class _ extends i.PureComponent {
+class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, r.jsx)(s.Button, {
@@ -135,4 +135,4 @@ class p extends i.PureComponent {
             });
     }
 }
-n.ZP = 12633 == t.j ? h : null;
+n.ZP = 12633 == t.j ? _ : null;

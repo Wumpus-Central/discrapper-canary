@@ -14,8 +14,8 @@ var i = t(200651),
     u = t(376641),
     c = t(714338),
     d = t(585483),
-    h = t(254109),
-    f = t(212459),
+    f = t(254109),
+    h = t(212459),
     m = t(73249),
     p = t(730606),
     _ = t(369171),
@@ -24,7 +24,7 @@ var i = t(200651),
     S = t(388032),
     x = t(176598);
 function C(e) {
-    let { onClose: n, items: t, startingIndex: a, shouldRedactExplicitContent: C, shouldHideMediaOptions: I = !1, className: y, transitionState: v, ...O } = e,
+    let { onClose: n, items: t, startingIndex: a, shouldRedactExplicitContent: C, shouldHideMediaOptions: y = !1, className: I, transitionState: v, ...O } = e,
         [b, M] = r.useState(null != a ? a : 0),
         [L, A] = r.useState(!1),
         [T, R] = r.useState(!0),
@@ -49,7 +49,7 @@ function C(e) {
             [v]
         );
     let N = r.useCallback((e) => {
-            M(e), (0, h.yg)(h.uG.SELECTED_ITEM_CHANGE);
+            M(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
         }, []),
         D = r.useMemo(
             () => ({
@@ -82,7 +82,7 @@ function C(e) {
                 onMouseMove: P,
                 onClick: w,
                 'aria-label': S.intl.string(S.t.AMTX3t),
-                children: (0, i.jsxs)(f.z.Provider, {
+                children: (0, i.jsxs)(h.z.Provider, {
                     value: D,
                     children: [
                         (0, i.jsx)(E.Z, {
@@ -96,11 +96,11 @@ function C(e) {
                                     startIndex: b,
                                     onIndexChange: N,
                                     shouldRedactExplicitContent: C,
-                                    shouldHideMediaOptions: I
+                                    shouldHideMediaOptions: y
                                 }),
                                 (0, i.jsx)(m.Z, {
                                     item: k,
-                                    hideMediaOptions: I
+                                    hideMediaOptions: y
                                 })
                             ]
                         })

@@ -1,7 +1,7 @@
 var a = r(760919),
     n = r(677524),
-    o = r(413668);
-let s = [, , ,].fill('<percentage> | <number>[0, 255]'),
+    s = r(413668);
+let o = [, , ,].fill('<percentage> | <number>[0, 255]'),
     i = [, , ,].fill('<number>[0, 255]');
 t.Z = new a.Z({
     id: 'srgb',
@@ -20,7 +20,7 @@ t.Z = new a.Z({
             return r <= 0.04045 ? e / 12.92 : t * ((r + 0.055) / 1.055) ** 2.4;
         }),
     formats: {
-        rgb: { coords: s },
+        rgb: { coords: o },
         rgb_number: {
             name: 'rgb',
             commas: !0,
@@ -29,7 +29,7 @@ t.Z = new a.Z({
         },
         color: {},
         rgba: {
-            coords: s,
+            coords: o,
             commas: !0,
             lastAlpha: !0
         },
@@ -72,7 +72,7 @@ t.Z = new a.Z({
                     coords: null,
                     alpha: 1
                 };
-                if (('transparent' === e ? ((t.coords = o.Z.black), (t.alpha = 0)) : (t.coords = o.Z[e]), t.coords)) return t;
+                if (('transparent' === e ? ((t.coords = s.Z.black), (t.alpha = 0)) : (t.coords = s.Z[e]), t.coords)) return t;
             }
         }
     }

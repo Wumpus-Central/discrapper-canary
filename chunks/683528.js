@@ -12,8 +12,8 @@ var i = t(200651),
     u = t(124347),
     c = t(52824),
     d = t(549635),
-    h = t(217702),
-    f = t(388032),
+    f = t(217702),
+    h = t(388032),
     m = t(52131);
 function p(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
@@ -39,7 +39,7 @@ let _ = r.memo(function (e) {
               shouldAnimate: !1,
               srcIsAnimated: t.srcIsAnimated,
               alt: t.alt,
-              mediaLayoutType: h.hV.MOSAIC
+              mediaLayoutType: f.hV.MOSAIC
           });
 });
 function E(e) {
@@ -65,13 +65,13 @@ function E(e) {
                 onClick: (e) => e.stopPropagation(),
                 children: n.map((e, r) => {
                     let s = r === t,
-                        u = s ? f.t['qv/U5e'] : f.t.zviMAA;
+                        u = s ? h.t['qv/U5e'] : h.t.zviMAA;
                     return (0, i.jsxs)(
                         o.Clickable,
                         {
                             id: p(r),
                             className: m.galleryItem,
-                            'aria-label': f.intl.formatToPlainString(u, {
+                            'aria-label': h.intl.formatToPlainString(u, {
                                 pageNumber: r + 1,
                                 totalPages: n.length
                             }),

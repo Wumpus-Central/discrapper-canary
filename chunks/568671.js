@@ -18,7 +18,7 @@ function u() {
         size: r.Button.Sizes.LARGE,
         onClick: () => {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('98647'), n.e('90688')]).then(n.bind(n, 978305));
+                let { default: e } = await Promise.all([n.e('13328'), n.e('90688')]).then(n.bind(n, 978305));
                 return (t) => (0, i.jsx)(e, { ...t });
             }),
                 a.default.track(o.rMx.FAMILY_CENTER_ACTION, { action: l.YC.ShowQRCodeModal });

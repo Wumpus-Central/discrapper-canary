@@ -8,8 +8,8 @@ var i = t(200651),
     u = t(904245),
     d = t(933557),
     c = t(576855),
-    g = t(372900),
-    f = t(726521),
+    f = t(372900),
+    g = t(726521),
     m = t(294218),
     h = t(699516),
     E = t(594174),
@@ -51,7 +51,7 @@ class S extends l.PureComponent {
                     className: Z.spacingTop,
                     children: M.intl.string(M.t.x0jzo6)
                 })),
-            (0, i.jsx)(g.Z.Provider, {
+            (0, i.jsx)(f.Z.Provider, {
                 value: l.guild_id,
                 children: (0, i.jsxs)(o.ConfirmModal, {
                     header: u ? M.intl.string(M.t.aIz1oa) : M.intl.string(M.t.MWMcg4),
@@ -86,7 +86,7 @@ class S extends l.PureComponent {
             x(this, 'handleDelete', () => {
                 let { report: e } = this.state,
                     { channel: n, message: t } = this.props;
-                e ? (0, f.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
+                e ? (0, g.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
             }),
             x(this, 'handleToggleReport', (e) => {
                 this.setState({ report: e });
@@ -100,7 +100,7 @@ n.Z = {
             let r = (0, d.F6)(e, E.default, h.Z);
             return (
                 (l = e.isPrivate() ? M.intl.string(M.t.hMRngI) : M.intl.formatToPlainString(M.t['3IRluL'], { channelName: r })),
-                (0, i.jsx)(g.Z.Provider, {
+                (0, i.jsx)(f.Z.Provider, {
                     value: e.guild_id,
                     children: (0, i.jsxs)(o.ConfirmModal, {
                         header: M.intl.string(M.t.bKMaZW),
@@ -132,7 +132,7 @@ n.Z = {
     },
     confirmUnpin: function (e, n) {
         (0, o.openModal)((t) =>
-            (0, i.jsx)(g.Z.Provider, {
+            (0, i.jsx)(f.Z.Provider, {
                 value: e.guild_id,
                 children: (0, i.jsxs)(o.ConfirmModal, {
                     header: M.intl.string(M.t.CFF2vL),

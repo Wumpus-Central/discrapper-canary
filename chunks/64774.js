@@ -12,8 +12,8 @@ e.exports = function (e) {
                     })(),
                     r = [e];
                 for (t[e].distance = 0; r.length; ) {
-                    for (var n = r.pop(), o = Object.keys(a[n]), s = o.length, i = 0; i < s; i++) {
-                        var c = o[i],
+                    for (var n = r.pop(), s = Object.keys(a[n]), o = s.length, i = 0; i < o; i++) {
+                        var c = s[i],
                             u = t[c];
                         -1 === u.distance && ((u.distance = t[n].distance + 1), (u.parent = n), r.unshift(c));
                     }
@@ -22,22 +22,22 @@ e.exports = function (e) {
             })(e),
             r = {},
             n = Object.keys(t),
-            o = n.length,
-            s = 0;
-        s < o;
-        s++
+            s = n.length,
+            o = 0;
+        o < s;
+        o++
     ) {
-        var i = n[s];
+        var i = n[o];
         if (null !== t[i].parent)
             r[i] = (function (e, t) {
-                for (var r = [t[e].parent, e], n = a[t[e].parent][e], o = t[e].parent; t[o].parent; )
-                    r.unshift(t[o].parent),
+                for (var r = [t[e].parent, e], n = a[t[e].parent][e], s = t[e].parent; t[s].parent; )
+                    r.unshift(t[s].parent),
                         (n = (function (e, t) {
                             return function (r) {
                                 return t(e(r));
                             };
-                        })(a[t[o].parent][o], n)),
-                        (o = t[o].parent);
+                        })(a[t[s].parent][s], n)),
+                        (s = t[s].parent);
                 return (n.conversion = r), n;
             })(i, t);
     }

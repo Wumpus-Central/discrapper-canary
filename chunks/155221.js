@@ -73,7 +73,7 @@ let x = (0, g.Un)({
         name: 'LinkAuthorize'
     }),
     Z = (0, g.Un)({
-        createPromise: () => Promise.all([r.e('98647'), r.e('49277')]).then(r.bind(r, 197528)),
+        createPromise: () => Promise.all([r.e('13328'), r.e('49277')]).then(r.bind(r, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
@@ -85,7 +85,7 @@ let x = (0, g.Un)({
         id: 457094
     }),
     V = (0, g.Un)({
-        createPromise: () => Promise.all([r.e('63288'), r.e('98647'), r.e('75492'), r.e('18543'), r.e('95393'), r.e('25788'), r.e('52030'), r.e('1337'), r.e('20011'), r.e('10778'), r.e('11260'), r.e('60673'), r.e('84956'), r.e('56999')]).then(r.bind(r, 822699)),
+        createPromise: () => Promise.all([r.e('63288'), r.e('13328'), r.e('75492'), r.e('18543'), r.e('95393'), r.e('25788'), r.e('52030'), r.e('1337'), r.e('20011'), r.e('10778'), r.e('11260'), r.e('60673'), r.e('84956'), r.e('56999')]).then(r.bind(r, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),

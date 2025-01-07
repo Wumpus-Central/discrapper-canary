@@ -12,13 +12,13 @@ var i = t(200651),
     u = t(700582),
     c = t(372900),
     d = t(318713),
-    h = t(123145),
-    f = t(592125),
+    f = t(123145),
+    h = t(592125),
     m = t(369171),
     p = t(795938);
 let _ = r.memo(function (e) {
     let { message: n } = e,
-        t = (0, o.e7)([f.Z], () => f.Z.getChannel(n.channel_id));
+        t = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -29,7 +29,7 @@ let _ = r.memo(function (e) {
                       children: [
                           (0, i.jsx)(u.Z, { user: n.author }),
                           (0, i.jsx)(s.FocusBlock, {
-                              children: (0, i.jsx)(h.Z, {
+                              children: (0, i.jsx)(f.Z, {
                                   message: n,
                                   channel: t
                               })

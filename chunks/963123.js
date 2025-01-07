@@ -9,7 +9,7 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    s = n(752877),
+    s = n(666912),
     a = n(232713),
     u = n(442837),
     c = n(780384),
@@ -172,9 +172,9 @@ function Z(e) {
         [eJ, e$] = i.useState(!1),
         [e0, e1] = i.useState(null),
         e2 = ez ? (null !== (L = null === (n = eV.current) || void 0 === n ? void 0 : n.duration) && void 0 !== L ? L : 0) : Math.max(ew.maxTimestampSec, eE.progressSeconds),
-        e4 = i.useMemo(() => (q.has(eN) ? _.i.VIDEO_PLAYER_VIDEO : _.i.VIDEO_PLAYER_VIDEO_LOW_RES), [eN]),
-        e6 = i.useMemo(() => (null != e4 ? (0, _.z)(e4, z) : null), [e4, z]),
-        e7 = i.useCallback(
+        e6 = i.useMemo(() => (q.has(eN) ? _.i.VIDEO_PLAYER_VIDEO : _.i.VIDEO_PLAYER_VIDEO_LOW_RES), [eN]),
+        e4 = i.useMemo(() => (null != e6 ? (0, _.z)(e6, z) : null), [e6, z]),
+        e9 = i.useCallback(
             (e) => {
                 null != eV.current &&
                     X({
@@ -182,7 +182,7 @@ function Z(e) {
                         event: k.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: {
                             ...e,
-                            video_asset_id: e4,
+                            video_asset_id: e6,
                             quest_completed: ez,
                             video_duration_sec: eV.current.duration,
                             video_progress: (0, D.formatVideoProgressRatio)(e.segment_end_sec, eV.current.duration),
@@ -190,14 +190,14 @@ function Z(e) {
                         }
                     });
             },
-            [X, z.id, e4, ez, H]
+            [X, z.id, e6, ez, H]
         ),
-        { forceSendCurrentSegment: e9 } = (0, O.Z)({
+        { forceSendCurrentSegment: e7 } = (0, O.Z)({
             videoRef: eV,
             isPlaying: ec === j.rq.PLAYING,
             isMetadataLoaded: eW,
             isInitialSeekComplete: eJ,
-            onAnalytics: e7,
+            onAnalytics: e9,
             emitIntervalMs: 4000,
             minSegmentDurationMs: 2000
         }),
@@ -219,13 +219,13 @@ function Z(e) {
                                 eQ(null);
                             break;
                         case j.rq.PAUSED:
-                            eV.current.pause(), e9();
+                            eV.current.pause(), e7();
                             break;
                         case j.rq.ENDED:
-                            ee(!1), e9();
+                            ee(!1), e7();
                     }
             },
-            [X, z.id, eK, H, e9, ee]
+            [X, z.id, eK, H, e7, ee]
         );
     i.useLayoutEffect(() => {
         eG.current && ((eG.current = !1), eI(p.Z.getEffectiveConnectionSpeed()), ez && ew.timestampSec >= ew.duration && eB(z.id, 0, ew.duration));
@@ -326,9 +326,9 @@ function Z(e) {
     }, [tn]);
     let tl = i.useCallback(
             (e) => {
-                null != eV.current && (e9(), eS(!0), e$(!1), (eV.current.currentTime = e), eB(z.id, e, eV.current.duration));
+                null != eV.current && (e7(), eS(!0), e$(!1), (eV.current.currentTime = e), eB(z.id, e, eV.current.duration));
             },
-            [eV, eB, z.id, e9]
+            [eV, eB, z.id, e7]
         ),
         to = () => {
             if (null != eV.current)
@@ -381,7 +381,7 @@ function Z(e) {
                         properties: {
                             video_progress: l,
                             video_error_type: e,
-                            video_asset_id: e4,
+                            video_asset_id: e6,
                             network_connection_speed: eN,
                             video_session_id: H,
                             video_error_code: null == r ? void 0 : r.code,
@@ -391,7 +391,7 @@ function Z(e) {
                     });
                 } catch (e) {}
             },
-            [eN, z.id, X, e4, H]
+            [eN, z.id, X, e6, H]
         ),
         td = (e) => {
             if (null != eV.current && ec === j.rq.PLAYING) {
@@ -401,7 +401,7 @@ function Z(e) {
                         questId: z.id,
                         event: k.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: {
-                            video_asset_id: e4,
+                            video_asset_id: e6,
                             network_connection_speed: eN,
                             duration: e,
                             buffer_index: eq.current,
@@ -507,7 +507,7 @@ function Z(e) {
                                     questId: z.id,
                                     event: k.rMx.QUEST_VIDEO_LOADING_ENDED,
                                     properties: {
-                                        video_asset_id: e4,
+                                        video_asset_id: e6,
                                         network_connection_speed: eN,
                                         duration: e,
                                         video_session_id: H
@@ -525,7 +525,7 @@ function Z(e) {
                                     questId: z.id,
                                     event: k.rMx.QUEST_VIDEO_LOADING_STARTED,
                                     properties: {
-                                        video_asset_id: e4,
+                                        video_asset_id: e6,
                                         network_connection_speed: eN,
                                         video_session_id: H
                                     }
@@ -538,7 +538,7 @@ function Z(e) {
                                     questId: z.id,
                                     event: k.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                                     properties: {
-                                        video_asset_id: e4,
+                                        video_asset_id: e6,
                                         network_connection_speed: eN,
                                         buffer_index: eq.current,
                                         video_session_id: H
@@ -584,11 +584,11 @@ function Z(e) {
                                     srcLang: 'en',
                                     default: !0
                                 }),
-                            null != e6 &&
+                            null != e4 &&
                                 (0, r.jsx)('source', {
                                     onError: () => tc(j.CY.SOURCE_ERROR),
-                                    src: e6.url,
-                                    type: e6.mimetype
+                                    src: e4.url,
+                                    type: e4.mimetype
                                 })
                         ]
                     }),

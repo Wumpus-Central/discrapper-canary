@@ -1,12 +1,12 @@
 r.d(t, {
     uv: function () {
-        return o;
+        return s;
     }
 });
 var a = r(856308),
     n = r(372528);
-function o(e) {
-    let [t, r, o] = (0, n.Z)(e, a.Z),
-        s = t + 15 * r + 3 * o;
-    return [(4 * t) / s, (9 * r) / s];
+function s(e) {
+    let [t, r, s] = (0, n.Z)(e, a.Z),
+        o = t + 15 * r + 3 * s;
+    return [(4 * t) / o, (9 * r) / o];
 }
