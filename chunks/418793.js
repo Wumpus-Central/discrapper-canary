@@ -41,6 +41,8 @@ let l = (e) => {
                         nameWithArticle: e.messages.name_with_article
                     },
                     expiresAt: e.expires_at,
+                    expirationMode: e.expiration_mode,
+                    expiresAtPremium: e.expires_at_premium,
                     ...n
                 };
             case a.w.FRACTIONAL_PREMIUM:

@@ -22,28 +22,43 @@ function _(e) {
         h = (0, s.Kr)(r.config),
         { targetMinutes: p } = i,
         m = r.config.messages.gameTitle;
-    return f(
-        null != h ? (_ && !l ? c.t.a5ADjY : c.t.Ta44ur) : c.t.NIimTk,
-        {
-            gameTitle: m,
-            reward: d,
-            streamingDurationRequirement: p,
-            rewardNameWithArticle: d,
-            targetMinutes: p,
-            onClick: a,
-            duration: h
-        },
-        o
-    );
+    return (0, s.f$)(r.config) && null != h
+        ? f(
+              _ && !l ? c.t['34NW5e'] : c.t.fSYpaW,
+              {
+                  gameTitle: m,
+                  reward: d,
+                  streamingDurationRequirement: p,
+                  rewardNameWithArticle: d,
+                  targetMinutes: p,
+                  onClick: a,
+                  duration: h
+              },
+              o
+          )
+        : f(
+              null != h ? (_ && !l ? c.t.a5ADjY : c.t.Ta44ur) : c.t.NIimTk,
+              {
+                  gameTitle: m,
+                  reward: d,
+                  streamingDurationRequirement: p,
+                  rewardNameWithArticle: d,
+                  targetMinutes: p,
+                  onClick: a,
+                  duration: h
+              },
+              o
+          );
 }
 function h(e) {
     let { quest: n, taskDetails: r, withoutMarkdown: i } = e,
         a = u.r.build(n.config).defaultReward.messages.nameWithArticle,
         o = (0, s.Kr)(n.config),
         { targetMinutes: l } = r,
-        d = n.config.messages.gameTitle;
+        d = n.config.messages.gameTitle,
+        _ = (0, s.f$)(n.config) ? c.t.fSYpaW : c.t.Ta44ur;
     return f(
-        null != o ? c.t.Ta44ur : c.t.NIimTk,
+        null != o ? _ : c.t.NIimTk,
         {
             gameTitle: d,
             targetMinutes: l,
@@ -58,9 +73,10 @@ function p(e) {
         a = u.r.build(n.config).defaultReward.messages.nameWithArticle,
         o = (0, s.Kr)(n.config),
         { targetMinutes: l } = r,
-        d = n.config.messages.gameTitle;
+        d = n.config.messages.gameTitle,
+        _ = (0, s.f$)(n.config) ? c.t.Lc6EpK : c.t.AwuMRU;
     return f(
-        null != o ? c.t.AwuMRU : c.t.FZL5Q0,
+        null != o ? _ : c.t.FZL5Q0,
         {
             gameTitle: d,
             streamingDurationRequirement: l,
@@ -149,18 +165,18 @@ function v(e) {
             taskDetails: r,
             withoutMarkdown: l
         });
-    return null != o
-        ? o.description
-        : f(
-              null != T ? c.t.BLyDvL : c.t['hkJ+Gh'],
-              {
-                  gameTitle: d,
-                  streamingDurationRequirement: I,
-                  questReward: v,
-                  duration: T
-              },
-              l
-          );
+    if (null != o) return o.description;
+    let b = (0, s.f$)(n.config) ? c.t.KYP2pa : c.t.BLyDvL;
+    return f(
+        null != T ? b : c.t['hkJ+Gh'],
+        {
+            gameTitle: d,
+            streamingDurationRequirement: I,
+            questReward: v,
+            duration: T
+        },
+        l
+    );
 }
 let I = (e) => {
     try {

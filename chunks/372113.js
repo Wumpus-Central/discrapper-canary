@@ -102,10 +102,10 @@ t.Z = (e) => {
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
-        z = (0, x.z)(t),
-        F = U && w,
+        F = (0, x.z)(t),
+        z = U && w,
         V = h && !B,
-        X = W.length > 0 && U && (0, p.$J)(t) && P && !B && !z,
+        X = W.length > 0 && U && (0, p.$J)(t) && P && !B && !F,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
@@ -146,7 +146,7 @@ t.Z = (e) => {
                                             className: R.rewardTileExpired,
                                             children: (0, i.jsx)(o.CircleWarningIcon, { color: o.tokens.colors.WHITE })
                                         }),
-                                    F
+                                    z
                                         ? (0, i.jsx)(N.Z, {
                                               questConfig: t.config,
                                               fallback: Y,
@@ -212,22 +212,21 @@ t.Z = (e) => {
                                               idx: 0
                                           })
                                         : null;
-                                    return u
-                                        ? A.intl.formatToPlainString(A.t.DT3aub, { reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : j })
-                                        : null != v && null != v.approximateCount
-                                          ? A.intl.format(A.t['4bMK19'], {
-                                                maxReward: v.messages.nameWithArticle,
-                                                maxRewardCount: (0, d.Bs)(v.approximateCount, a),
-                                                helpCenterLink: c.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
-                                            })
-                                          : null != T
-                                            ? A.intl.formatToPlainString(A.t.Pu5eyM, {
-                                                  reward: j,
-                                                  duration: T
-                                              })
-                                            : null != f
-                                              ? f.description
-                                              : A.intl.formatToPlainString(A.t.ttFsLi, { reward: j });
+                                    if (u) return A.intl.formatToPlainString(A.t.DT3aub, { reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : j });
+                                    if (null != v && null != v.approximateCount)
+                                        return A.intl.format(A.t['4bMK19'], {
+                                            maxReward: v.messages.nameWithArticle,
+                                            maxRewardCount: (0, d.Bs)(v.approximateCount, a),
+                                            helpCenterLink: c.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
+                                        });
+                                    if (null != T) {
+                                        let e = (0, p.f$)(o.config) ? A.t.YWnLFx : A.t.Pu5eyM;
+                                        return A.intl.formatToPlainString(e, {
+                                            reward: j,
+                                            duration: T
+                                        });
+                                    }
+                                    return null != f ? f.description : A.intl.formatToPlainString(A.t.ttFsLi, { reward: j });
                                 })({
                                     quest: t,
                                     locale: G,
