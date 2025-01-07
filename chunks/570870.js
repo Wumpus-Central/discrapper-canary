@@ -109,6 +109,7 @@ e.Z = (n) => {
                         )
                       : S.map(O)),
               null != M &&
+                  M.length > 0 &&
                   (e = (0, i.jsxs)(i.Fragment, {
                       children: [e, (0, i.jsx)(d.MenuSeparator, {}, 'separator'), M]
                   }))),
