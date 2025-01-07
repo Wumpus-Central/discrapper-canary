@@ -3,7 +3,7 @@ t.d(n, {
         return S;
     },
     xX: function () {
-        return I;
+        return j;
     }
 });
 var l = t(200651);
@@ -22,20 +22,21 @@ var i = t(120356),
     h = t(676149),
     x = t(861529),
     v = t(568248),
-    g = t(770009),
-    C = t(889515),
-    _ = t(892519),
-    b = t(785225);
-function I(e) {
+    C = t(770009),
+    g = t(889515),
+    _ = t(985184),
+    b = t(892519),
+    I = t(785225);
+function j(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
                     return (0, l.jsx)(
-                        C.Z,
+                        g.Z,
                         {
                             ...e,
-                            renderComponents: I
+                            renderComponents: j
                         },
                         n
                     );
@@ -52,7 +53,7 @@ function I(e) {
                 case a.re.TEXT_INPUT:
                     return (0, l.jsx)(m.Z, { ...e }, n);
                 case a.re.SECTION:
-                    return (0, l.jsx)(_.Z, { ...e }, n);
+                    return (0, l.jsx)(b.Z, { ...e }, n);
                 case a.re.TEXT_DISPLAY:
                     return (0, l.jsx)(x.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
@@ -64,7 +65,16 @@ function I(e) {
                 case a.re.SEPARATOR:
                     return (0, l.jsx)(h.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(g.Z, { ...e }, n);
+                    return (0, l.jsx)(C.Z, { ...e }, n);
+                case a.re.CONTAINER:
+                    return (0, l.jsx)(
+                        _.Z,
+                        {
+                            ...e,
+                            renderComponents: j
+                        },
+                        n
+                    );
             }
         })(e, n.toString())
     );
@@ -75,10 +85,10 @@ function S(e) {
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: r()([b.container, { [b.containerUikit]: n.isUIKitComponents() }]),
+              className: r()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: I(t)
+                  children: j(t)
               })
           });
 }
