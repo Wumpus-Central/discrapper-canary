@@ -60,7 +60,7 @@ function O(e) {
         })
     );
 }
-function P(e) {
+function k(e) {
     let { role: t, disabled: n } = e;
     return (0, i.jsxs)(d.FormItem, {
         className: R.colorPicker,
@@ -89,7 +89,7 @@ function P(e) {
         ]
     });
 }
-function k(e) {
+function P(e) {
     var t, l;
     let { role: a, guildId: s } = e;
     let o =
@@ -225,7 +225,7 @@ function w(e) {
                     children: (0, i.jsx)(j.Z, { role: n })
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(k, {
                     role: n,
                     disabled: o
                 }),
@@ -234,7 +234,7 @@ function w(e) {
                     disabled: o,
                     role: n
                 }),
-                (0, i.jsx)(k, {
+                (0, i.jsx)(P, {
                     role: n,
                     guildId: t.id
                 }),

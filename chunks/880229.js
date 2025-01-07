@@ -40,8 +40,8 @@ var i,
     L = n(981631),
     D = n(388032),
     O = n(846605);
-let P = (0, _.hQ)(),
-    k = (0, _.hQ)(),
+let k = (0, _.hQ)(),
+    P = (0, _.hQ)(),
     M = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
@@ -358,7 +358,7 @@ function z(e) {
                   (0, l.jsxs)(x.ModalHeader, {
                       children: [
                           (0, l.jsx)(x.Heading, {
-                              id: P,
+                              id: k,
                               variant: 'heading-md/semibold',
                               children: D.intl.string(D.t['3JrZ/P'])
                           }),
@@ -414,7 +414,7 @@ function W(e) {
             (0, l.jsxs)(x.ModalHeader, {
                 children: [
                     (0, l.jsx)(x.Heading, {
-                        id: k,
+                        id: P,
                         variant: 'heading-md/semibold',
                         children: D.intl.format(D.t.iuPodH, { roleName: d.name })
                     }),
@@ -500,7 +500,7 @@ function V(e) {
         [s, o] = a.useState();
     return (0, l.jsx)(x.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': null == s ? P : k,
+        'aria-labelledby': null == s ? k : P,
         children: (0, l.jsxs)(x.Slides, {
             contentDisplay: 'flex',
             activeSlide: null == s ? 0 : 1,

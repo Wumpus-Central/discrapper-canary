@@ -31,8 +31,8 @@ function j(e) {
         [A, Z] = r.useState(s),
         L = (0, c.e7)([x.Z], () => x.Z.getSubscriptionListing(A)),
         D = null == L,
-        [O, P] = r.useState(D),
-        k = null == L ? void 0 : L.subscription_plans[0],
+        [O, k] = r.useState(D),
+        P = null == L ? void 0 : L.subscription_plans[0],
         M = null !== (t = null == L ? void 0 : L.published) && void 0 !== t && t,
         w = null !== (n = null == L ? void 0 : L.archived) && void 0 !== n && n,
         B = !w && !M && void 0 !== L,
@@ -98,11 +98,11 @@ function j(e) {
                                             text: N.intl.string(N.t.aiwXen),
                                             className: T.unsavedBadge
                                         }),
-                                    null != k &&
+                                    null != P &&
                                         (0, i.jsxs)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-sm/normal',
-                                            children: [(0, m.T4)(k.price, k.currency), '/', (0, h.JE)(k)]
+                                            children: [(0, m.T4)(P.price, P.currency), '/', (0, h.JE)(P)]
                                         })
                                 ]
                             })
@@ -115,7 +115,7 @@ function j(e) {
                                       look: d.Button.Looks.BLANK,
                                       className: T.cancel,
                                       onClick: () => {
-                                          C.GM(A), D ? null == S || S() : P(!1);
+                                          C.GM(A), D ? null == S || S() : k(!1);
                                       },
                                       children: N.intl.string(N.t['ETE/oK'])
                                   }),
@@ -138,7 +138,7 @@ function j(e) {
                               ]
                           })
                         : (0, i.jsx)(d.Clickable, {
-                              onClick: () => P(!0),
+                              onClick: () => k(!0),
                               'aria-label': N.intl.string(N.t['2qPbmJ']),
                               children: (0, i.jsx)(d.PencilIcon, {
                                   size: 'xs',

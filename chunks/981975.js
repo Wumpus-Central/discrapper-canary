@@ -77,12 +77,12 @@ function A(e) {
             var e;
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        P = O.length > 1 ? m.O1.OR : m.O1.AND,
-        k = r.useMemo(() => (P === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [P, O]),
-        M = r.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
+        k = O.length > 1 ? m.O1.OR : m.O1.AND,
+        P = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
+        M = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...k];
+            i = [...P];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -90,7 +90,7 @@ function A(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, p.d_)(n.id, R(i, P));
+            (0, p.d_)(n.id, R(i, k));
     }
     function B() {
         u.Z.dispatch({
@@ -102,15 +102,15 @@ function A(e) {
         });
     }
     let U = null;
-    if (0 === k.length)
+    if (0 === P.length)
         U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (k.length > 0) {
+    else if (P.length > 0) {
         var G, F;
         let e = null;
-        k.length < 10 &&
+        P.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
                 className: a()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
@@ -184,7 +184,7 @@ function A(e) {
                                 'aria-labelledby': E
                             })
                         });
-                    })(l, n.id, P, k, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, k, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function a(n, i) {
                             let r = [];
@@ -248,7 +248,7 @@ function A(e) {
                                 )
                             )
                         });
-                    })(k, (e) => (0, p.d_)(n.id, R(e, P)), l, n.id, o),
+                    })(P, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
                     e
                 ]
             }));

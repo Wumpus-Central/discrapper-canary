@@ -332,7 +332,7 @@ function D() {
 function O(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, r.jsx)(P, { guild: t })
+        ? (0, r.jsx)(k, { guild: t })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.FormItem, {
@@ -354,7 +354,7 @@ function O(e) {
                       className: s()(j.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(P, {
                                   guild: t,
                                   guildTemplate: n
                               }),
@@ -378,7 +378,7 @@ function O(e) {
               ]
           });
 }
-function P(e) {
+function k(e) {
     var t;
     let { guild: n } = e,
         i = (0, d.e7)([E], () => E.name),
@@ -400,7 +400,7 @@ function P(e) {
         children: N.intl.string(N.t.Wxdi8P)
     });
 }
-function k(e) {
+function P(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, a] = l.useState(!1),
         s = async () => {

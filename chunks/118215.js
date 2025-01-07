@@ -6,7 +6,7 @@ var e,
     o = i(570140);
 let a = {},
     c = !1;
-class d extends (s = u.ZP.Store) {
+class g extends (s = u.ZP.Store) {
     isLoading() {
         return c;
     }
@@ -23,7 +23,7 @@ class d extends (s = u.ZP.Store) {
     }
 }
 (l = 'DiscoverGuildChecklistStore'),
-    (r = 'displayName') in (e = d)
+    (r = 'displayName') in (e = g)
         ? Object.defineProperty(e, r, {
               value: l,
               enumerable: !0,
@@ -31,7 +31,7 @@ class d extends (s = u.ZP.Store) {
               writable: !0
           })
         : (e[r] = l),
-    (n.ZP = new d(o.Z, {
+    (n.ZP = new g(o.Z, {
         DISCOVER_CHECKLIST_FETCH_START: function (t) {
             c = !0;
         },

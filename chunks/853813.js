@@ -46,7 +46,7 @@ function E(e) {
     let L = (0, s.e7)([m.Z], () => m.Z.getHighestRole(y), [y]),
         D = (0, s.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, A)),
         O = r.useRef(null),
-        P = (0, s.e7)([f.Z], () => f.Z.getProps().integrations);
+        k = (0, s.e7)([f.Z], () => f.Z.getProps().integrations);
     if (
         (r.useEffect(() => {
             var e, t;
@@ -94,7 +94,7 @@ function E(e) {
                 role: A,
                 locked: D,
                 setSelectedSection: R,
-                integrations: null != P ? P : void 0
+                integrations: null != k ? k : void 0
             });
             break;
         case j.ZI.MEMBERS:

@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return g;
+        return C;
     },
     tE: function () {
         return l;
@@ -32,48 +32,48 @@ function v(e) {
         children: n
     });
 }
-function g(e) {
+function C(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: g, placeholder: C, maxValues: _, disabled: b } = n,
-        [I, S] = a.useState(!1),
-        [j, y] = a.useState(!1),
+        { type: C, placeholder: g, maxValues: _, disabled: b } = n,
+        [I, j] = a.useState(!1),
+        [S, y] = a.useState(!1),
         [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [E, Z] = a.useState(new Set(T.keys())),
         [k, L] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [O, M] = a.useState(0);
+        [O, A] = a.useState(0);
     a.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
         if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
         L(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        N(n), Z(new Set(n.keys())), M((e) => e + 1);
+        N(n), Z(new Set(n.keys())), A((e) => e + 1);
     }, [o, k]);
     let {
-            state: P,
+            state: M,
             executeStateUpdate: R,
-            visualState: A,
+            visualState: P,
             isDisabled: w,
             error: B
         } = (0, m.Ee)(n, {
-            type: g,
+            type: C,
             selectedOptions: Array.from(T.values())
         }),
-        U = A === f.gH.LOADING;
+        U = P === f.gH.LOADING;
     a.useEffect(() => {
-        if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
+        if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
             N(e), Z(new Set(e.keys()));
         }
-    }, [P]);
+    }, [M]);
     let G = a.useCallback(() => {
         R({
-            type: g,
+            type: C,
             selectedOptions: Array.from(T.values())
         }) && Z(new Set(T.keys()));
-    }, [R, g, T]);
+    }, [R, C, T]);
     a.useEffect(() => {
-        if (!(I || j || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
-    }, [I, j, E, T, G]);
+        if (!(I || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
+    }, [I, S, E, T, G]);
     let H = 0 === T.size || I,
         D = {
             isDisabled: b || w,
@@ -82,9 +82,9 @@ function g(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: H ? (null != C ? C : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => S(!1),
-            onOpen: () => S(!0),
+            placeholder: H ? (null != g ? g : p.intl.string(p.t.Otr6W1)) : void 0,
+            onClose: () => j(!1),
+            onOpen: () => j(!0),
             onBlur: () => y(!1),
             maxVisibleItems: 5,
             optionClassName: h.__invalid_selectOption,

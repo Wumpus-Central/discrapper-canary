@@ -40,8 +40,8 @@ var i = n(200651),
     L = n(536442),
     D = n(142497),
     O = n(884858),
-    P = n(516129),
-    k = n(813197),
+    k = n(516129),
+    P = n(813197),
     M = n(208567),
     w = n(592125),
     B = n(324067),
@@ -244,7 +244,7 @@ class eC extends r.PureComponent {
                                     onClick: this.handleUploadImage,
                                     children: [
                                         en.intl.string(en.t['MsUY/f']),
-                                        (0, i.jsx)(k.ZP, {
+                                        (0, i.jsx)(P.ZP, {
                                             ref: this._imageInputRef,
                                             onChange: this.handleOpenImageCroppingModal,
                                             disabled: !n
@@ -555,7 +555,7 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(P.Z, {
+            l = (0, i.jsx)(k.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
-                                              (0, i.jsx)(k.ZP, {
+                                              (0, i.jsx)(P.ZP, {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
@@ -646,7 +646,7 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             a = r && t,
-            s = (0, i.jsx)(P.Z, {
+            s = (0, i.jsx)(k.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t

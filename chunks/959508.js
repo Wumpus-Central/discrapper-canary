@@ -32,8 +32,8 @@ function T(e) {
         D = Z ? v.qm : v.M$,
         {
             drag: O,
-            dragSourcePosition: P,
-            drop: k,
+            dragSourcePosition: k,
+            drop: P,
             setIsDraggable: M
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
@@ -70,11 +70,11 @@ function T(e) {
                   onBlur: () => F(!1),
                   onMouseLeave: () => F(!1),
                   className: a()(I.container, {
-                      [I.dropIndicatorBefore]: null != P && C < P,
-                      [I.dropIndicatorAfter]: null != P && C > P,
+                      [I.dropIndicatorBefore]: null != k && C < k,
+                      [I.dropIndicatorAfter]: null != k && C > k,
                       [I.containerFocused]: G
                   }),
-                  ref: (e) => O(k(e)),
+                  ref: (e) => O(P(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: I.dragContainer,
@@ -127,11 +127,11 @@ function T(e) {
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
                   className: a()(I.container, {
-                      [I.dropIndicatorBefore]: null != P && C < P,
-                      [I.dropIndicatorAfter]: null != P && C > P,
+                      [I.dropIndicatorBefore]: null != k && C < k,
+                      [I.dropIndicatorAfter]: null != k && C > k,
                       [I.containerFocused]: G
                   }),
-                  ref: (e) => O(k(e)),
+                  ref: (e) => O(P(e)),
                   children: [
                       (0, i.jsx)('div', {
                           className: I.dragContainer,

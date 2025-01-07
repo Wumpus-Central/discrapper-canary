@@ -3,7 +3,7 @@ t.d(n, {
         return x;
     },
     r: function () {
-        return g;
+        return C;
     }
 }),
     t(411104);
@@ -50,17 +50,17 @@ function v(e) {
                 ...i
             });
         case o.s.WATCHED_MEDIA:
-            return (0, l.jsx)(S, {
-                entry: n,
-                ...i
-            });
-        case o.s.LISTENED_SESSION:
             return (0, l.jsx)(j, {
                 entry: n,
                 ...i
             });
+        case o.s.LISTENED_SESSION:
+            return (0, l.jsx)(S, {
+                entry: n,
+                ...i
+            });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(C, {
+            return (0, l.jsx)(g, {
                 entry: n,
                 ...i
             });
@@ -68,14 +68,14 @@ function v(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function g(e) {
+function C(e) {
     let { errorFallback: n, ...t } = e;
     return (0, l.jsx)(s.S, {
         fallback: n,
         children: (0, l.jsx)(v, { ...t })
     });
 }
-function C(e) {
+function g(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, c.Z)({
             entry: n,
@@ -131,7 +131,7 @@ function I(e) {
         children: t
     });
 }
-function S(e) {
+function j(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, p.Z)({
             entry: n,
@@ -145,7 +145,7 @@ function S(e) {
         children: t
     });
 }
-function j(e) {
+function S(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, m.Z)({
             entry: n,

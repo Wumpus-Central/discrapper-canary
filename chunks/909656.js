@@ -100,7 +100,7 @@ function O(e) {
         [u, h] = r.useState(a),
         [p, I] = r.useState(null !== (t = null == s ? void 0 : s.description) && void 0 !== t ? t : ''),
         [L, O] = r.useState(c),
-        [P, k] = r.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
+        [k, P] = r.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
         [M, w] = r.useState(null == s ? void 0 : s.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
         { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, j.Z)(null == s ? void 0 : s.cover_image_asset),
@@ -112,8 +112,8 @@ function O(e) {
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== a || (null == s ? void 0 : s.store_page_guild_products_default_sort) !== P || (null == s ? void 0 : s.server_shop_tab_order) !== M;
-        }, [L, a, p, s, u, P, M]),
+            return (null != p && p !== (null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || u !== a || (null == s ? void 0 : s.store_page_guild_products_default_sort) !== k || (null == s ? void 0 : s.server_shop_tab_order) !== M;
+        }, [L, a, p, s, u, k, M]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
@@ -257,10 +257,10 @@ function O(e) {
                                       children: y.intl.string(y.t.TILN8v)
                                   }),
                                   (0, i.jsx)(g.SingleSelect, {
-                                      value: P,
+                                      value: k,
                                       placeholder: y.intl.string(y.t.XqMe3N),
                                       options: J,
-                                      onChange: (e) => k(e)
+                                      onChange: (e) => P(e)
                                   })
                               ]
                           })
@@ -303,12 +303,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                h(a), I(null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : ''), O(c), k(null == s ? void 0 : s.store_page_guild_products_default_sort), w(null == s ? void 0 : s.server_shop_tab_order);
+                                h(a), I(null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : ''), O(c), P(null == s ? void 0 : s.store_page_guild_products_default_sort), w(null == s ? void 0 : s.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != s, 'Settings must be defined');
                                 let e = {};
-                                p !== s.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== a && (e.full_server_gate = u === E.e3.ALL_CHANNELS), P !== s.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = P), M !== s.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
+                                p !== s.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), u !== a && (e.full_server_gate = u === E.e3.ALL_CHANNELS), k !== s.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), M !== s.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : y.intl.string(y.t['6HRvio'])
                         })

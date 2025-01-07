@@ -20,16 +20,16 @@ function d(e) {
         h = t.extra.media_title,
         x = t.extra.media_subtitle,
         v = (0, o.Jg)(t) ? u.t['LH+Z39'] : u.t.YuKgmp,
-        g = { type: s.kG.CRUNCHYROLL },
-        C = l.useMemo(() => {
+        C = { type: s.kG.CRUNCHYROLL },
+        g = l.useMemo(() => {
             if (null == t.extra.url) return;
             let e = a.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [t.extra.url]);
     return (
-        null != C &&
+        null != g &&
             (n = {
-                href: a.Z.format(C),
+                href: a.Z.format(g),
                 ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: h })
             }),
         {
@@ -40,7 +40,7 @@ function d(e) {
             thumbnailClickable: n,
             subtitle: x,
             userDescription: v,
-            providerIconProps: g
+            providerIconProps: C
         }
     );
 }

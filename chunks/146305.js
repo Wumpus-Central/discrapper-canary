@@ -30,8 +30,8 @@ var i = n(200651),
     L = n(823379),
     D = n(85001),
     O = n(434404),
-    P = n(360606),
-    k = n(946724),
+    k = n(360606),
+    P = n(946724),
     M = n(999382),
     w = n(44550),
     B = n(853714),
@@ -115,7 +115,7 @@ t.Z = {
                     type: o.bT.MINIMAL,
                     ariaLabel: ev.intl.string(ev.t.KXcECw),
                     notice: {
-                        stores: [k.Z],
+                        stores: [P.Z],
                         element: z._
                     },
                     predicate: () => t.canManageRoles
@@ -199,7 +199,7 @@ t.Z = {
                     ariaLabel: ev.intl.string(ev.t.CIsNZ2),
                     element: $.Z,
                     notice: {
-                        stores: [P.default, M.Z],
+                        stores: [k.default, M.Z],
                         element: $.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks

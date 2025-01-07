@@ -1,9 +1,9 @@
 i.d(n, {
     EK: function () {
-        return d;
+        return g;
     },
     G0: function () {
-        return g;
+        return d;
     },
     QC: function () {
         return E;
@@ -22,7 +22,7 @@ var r = i(120356),
     o = i(489813),
     a = i(388032),
     c = i(119866);
-function d(t) {
+function g(t) {
     let { terms: n, channelId: i, className: r } = t;
     return (0, e.jsx)('div', {
         className: l()(c.termsFieldBody, r),
@@ -49,7 +49,7 @@ function d(t) {
         )
     });
 }
-function g(t) {
+function d(t) {
     let { onChange: n, checked: i, disabled: r } = t;
     return (0, e.jsx)(s.Checkbox, {
         size: 20,
@@ -78,12 +78,12 @@ let I = (t) => {
     return (0, e.jsxs)(o.hK, {
         title: a.intl.string(a.t.Q8OFNz),
         children: [
-            (0, e.jsx)(d, {
+            (0, e.jsx)(g, {
                 className: c.fieldBackground,
                 terms: i.values,
                 channelId: n
             }),
-            (0, e.jsx)(g, {
+            (0, e.jsx)(d, {
                 onChange: r,
                 checked: i.response
             })

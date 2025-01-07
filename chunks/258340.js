@@ -1,22 +1,22 @@
 t(653041);
-var i = t(192379),
-    r = t(392711);
+var r = t(192379),
+    i = t(392711);
 n.Z = (e) => {
     let n = {
             y: 0.8 * e.h,
             x: 0.3 * e.w
         },
-        t = i.useRef([]);
+        t = r.useRef([]);
     return {
         update: (n) => {
-            let i = [];
+            let r = [];
             if (
-                (t.current.forEach((t, r) => {
-                    (t.position.x -= t.velocity.x * n), (t.position.y -= t.velocity.y * n), (t.velocity.x *= 0.92 ** n), (t.velocity.y *= 0.92 ** n), (t.velocity.y -= 1200 * n), t.position.y > e.h && i.push(r);
+                (t.current.forEach((t, i) => {
+                    (t.position.x -= t.velocity.x * n), (t.position.y -= t.velocity.y * n), (t.velocity.x *= 0.92 ** n), (t.velocity.y *= 0.92 ** n), (t.velocity.y -= 1200 * n), t.position.y > e.h && r.push(i);
                 }),
-                i.length > 0)
+                r.length > 0)
             ) {
-                let e = t.current.filter((e, n) => !i.includes(n));
+                let e = t.current.filter((e, n) => !r.includes(n));
                 t.current = e;
             }
         },
@@ -28,12 +28,12 @@ n.Z = (e) => {
                 h: e.h
             }),
                 t.current.forEach((e) => {
-                    let { x: t, y: i } = e.position;
+                    let { x: t, y: r } = e.position;
                     n.drawImage(
                         e.key,
                         {
                             x: t,
-                            y: i
+                            y: r
                         },
                         {
                             w: 32 * e.scale,
@@ -42,21 +42,21 @@ n.Z = (e) => {
                     );
                 });
         },
-        emit: (i, a) => {
-            for (let c = 0; c < a; c++)
+        emit: (r, a) => {
+            for (let u = 0; u < a; u++)
                 t.current.push({
                     position: {
-                        x: e.w / 2 + (0, r.random)(-50, 50),
+                        x: e.w / 2 + (0, i.random)(-50, 50),
                         y: e.h
                     },
                     velocity: {
-                        x: (0, r.random)(-n.x, n.x, !0),
-                        y: n.y + (0, r.random)(-150, 150, !0)
+                        x: (0, i.random)(-n.x, n.x, !0),
+                        y: n.y + (0, i.random)(-150, 150, !0)
                     },
                     color: 'red',
-                    scale: (0, r.random)(0.8, 1.6),
-                    rotation: (0, r.random)(-20, 20),
-                    key: i
+                    scale: (0, i.random)(0.8, 1.6),
+                    rotation: (0, i.random)(-20, 20),
+                    key: r
                 });
         }
     };

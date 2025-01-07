@@ -61,74 +61,73 @@ function N(e, t) {
     );
 }
 function _(e) {
-    let { applicationId: t, channel: n, command: a, onClose: f, onRequestSent: b, previewMessage: S, ..._ } = e,
-        j = r.useMemo(() => (0, o.dL)(n.id), [n]),
-        [E, M] = r.useState(!1),
-        { commands: L, loading: T } = N(n, t),
-        P = r.useRef(0),
-        [w, A] = r.useState([j]),
-        R = w.length,
-        k = R >= 5,
-        [D, I] = r.useState(''),
-        { results: F, updateSearchText: H } = (0, u.s)({
-            selectedDestinations: w,
-            originDestination: j,
+    let { applicationId: t, channel: n, command: a, onClose: f, requireLaunchChannel: b, onShareResult: S, previewMessage: _, ...j } = e,
+        E = r.useMemo(() => (0, o.dL)(n.id), [n]),
+        [M, L] = r.useState(!1),
+        { commands: T, loading: P } = N(n, t),
+        w = r.useRef(0),
+        [A, R] = r.useState(b ? [E] : []),
+        k = A.length,
+        D = k >= 5,
+        [I, F] = r.useState(''),
+        { results: H, updateSearchText: U } = (0, u.s)({
+            selectedDestinations: A,
+            originDestination: E,
             includeMissingDMs: !0
         }),
-        U = r.useCallback(
+        q = r.useCallback(
             (e) => {
-                I(e), H(e);
+                F(e), U(e);
             },
-            [H]
+            [U]
         ),
-        q = r.useCallback(() => {
-            f();
-        }, [f]),
-        [W] = (0, s.Z)([t]),
-        z = r.useCallback(() => {
-            I('');
-        }, [I]),
-        O = r.useRef(null);
+        W = r.useCallback(() => {
+            S(!1), f();
+        }, [S, f]),
+        [z] = (0, s.Z)([t]),
+        O = r.useCallback(() => {
+            F('');
+        }, [F]),
+        B = r.useRef(null);
     r.useEffect(() => {
-        if ('' === D) {
+        if ('' === I) {
             var e;
-            null === (e = O.current) || void 0 === e || e.focus();
+            null === (e = B.current) || void 0 === e || e.focus();
         }
-    }, [D]);
-    let B = r.useCallback(
+    }, [I]);
+    let G = r.useCallback(
             (e) => {
-                A((t) => {
+                R((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return k ? t : (I(''), (P.current += 1), [e, ...t]);
+                    if (-1 === n) return D ? t : (F(''), (w.current += 1), [e, ...t]);
                     let l = [...t];
-                    return l.splice(n, 1), (P.current += 1), l;
+                    return l.splice(n, 1), (w.current += 1), l;
                 });
             },
-            [k]
+            [D]
         ),
-        [G, V] = r.useMemo(() => {
-            if (T) return [null, !1];
-            let e = L.find((e) => e.untranslatedName === a);
+        [V, X] = r.useMemo(() => {
+            if (P) return [null, !1];
+            let e = T.find((e) => e.untranslatedName === a);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [a, L, T]),
-        X = r.useCallback(
+        }, [a, T, P]),
+        J = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === G) return;
-                M(!0);
+                if (null === V) return;
+                L(!0);
                 let n = (await Promise.all(e.map(o.qx))).filter(h.lm);
-                t && Z(),
-                    null == b || b(),
+                t && (S(!0), Z()),
                     n.forEach(async (e) => {
                         let t = c.Z.getChannel(e);
                         if (null == t) return;
                         let n = d.Z.getGuild(null == t ? void 0 : t.guild_id);
                         null !=
                             (await (0, m.Z)({
-                                command: G,
+                                command: V,
                                 optionValues: {},
                                 context: {
                                     channel: t,
@@ -136,31 +135,32 @@ function _(e) {
                                 }
                             })) && (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['5WjJcn']), i.ToastType.MESSAGE));
                     }),
+                    S(!0),
                     Z();
             },
-            [b, G]
+            [S, V]
         ),
-        J = r.useCallback(() => {
-            X(w, { closeAfterSend: !0 });
-        }, [X, w]);
-    if (T)
+        Q = r.useCallback(() => {
+            J(A, { closeAfterSend: !0 });
+        }, [J, A]);
+    if (P)
         return (0, l.jsx)(i.ModalRoot, {
             className: v.modal,
             'aria-label': x.intl.string(x.t.fuFvw8),
-            ..._,
+            ...j,
             children: (0, l.jsx)(i.Spinner, { className: v.spinnerContainer })
         });
-    V && (i.ModalRoot, v.modal, x.intl.string(x.t.fuFvw8), i.ModalContent, x.intl.string(x.t.yAk8ZW));
-    let Q =
-        F.length > 0
+    X && (i.ModalRoot, v.modal, x.intl.string(x.t.fuFvw8), i.ModalContent, x.intl.string(x.t.yAk8ZW));
+    let Y =
+        H.length > 0
             ? (0, l.jsx)(p.F, {
                   paddingBottom: 16,
                   paddingTop: 16,
-                  rowData: F,
-                  handleToggleDestination: B,
-                  selectedDestinations: w,
-                  disableSelection: k,
-                  originDestination: j
+                  rowData: H,
+                  handleToggleDestination: G,
+                  selectedDestinations: A,
+                  disableSelection: D,
+                  originDestination: E
               })
             : (0, l.jsxs)(i.ModalContent, {
                   className: v.noResults,
@@ -180,7 +180,7 @@ function _(e) {
     return (0, l.jsxs)(i.ModalRoot, {
         className: v.modal,
         'aria-label': x.intl.string(x.t.fuFvw8),
-        ..._,
+        ...j,
         children: [
             (0, l.jsxs)(i.ModalHeader, {
                 className: v.header,
@@ -193,10 +193,10 @@ function _(e) {
                                 children: (0, l.jsxs)(i.HeadingLevel, {
                                     component: (0, l.jsxs)(i.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: ['Share from ', null == W ? void 0 : W.name, '?']
+                                        children: ['Share from ', null == z ? void 0 : z.name, '?']
                                     }),
                                     children: [
-                                        k
+                                        D
                                             ? (0, l.jsx)(i.Text, {
                                                   variant: 'text-sm/normal',
                                                   color: 'text-warning',
@@ -213,30 +213,30 @@ function _(e) {
                             }),
                             (0, l.jsx)(i.ModalCloseButton, {
                                 className: v.closeButton,
-                                onClick: q
+                                onClick: W
                             })
                         ]
                     }),
-                    void 0 !== S ? (0, l.jsx)(g.z, { previewMessage: S }) : null,
+                    void 0 !== _ ? (0, l.jsx)(g.z, { previewMessage: _ }) : null,
                     (0, l.jsx)(i.SearchBar, {
                         className: v.search,
-                        ref: O,
+                        ref: B,
                         size: i.SearchBar.Sizes.MEDIUM,
-                        query: D,
-                        onChange: U,
-                        onClear: z,
+                        query: I,
+                        onChange: q,
+                        onClear: O,
                         placeholder: x.intl.string(x.t['5h0QOD']),
                         'aria-label': x.intl.string(x.t['5h0QOD']),
                         autoFocus: !0
                     })
                 ]
             }),
-            Q,
+            Y,
             (0, l.jsx)(y, {
                 sendLabel: x.intl.string(x.t.TXNS7e),
-                canSend: R > 0,
-                isSending: E,
-                onSend: J
+                canSend: k > 0,
+                isSending: M,
+                onSend: Q
             })
         ]
     });

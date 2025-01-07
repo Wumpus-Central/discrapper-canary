@@ -14,9 +14,9 @@ var l = t(200651),
 function u(e) {
     let n;
     let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: p, required: h, value: x } = e,
-        [v, g] = i.useState(null != x ? x : ''),
+        [v, C] = i.useState(null != x ? x : ''),
         {
-            state: C,
+            state: g,
             executeStateUpdate: _,
             error: b
         } = (0, o.Ee)(
@@ -30,9 +30,9 @@ function u(e) {
         ),
         I = (0, s.hz)(e.id);
     i.useEffect(() => {
-        (null == C ? void 0 : C.type) === t && g(C.value);
-    }, [t, C]);
-    let S = {
+        (null == g ? void 0 : g.type) === t && C(g.value);
+    }, [t, g]);
+    let j = {
         name: d,
         value: v,
         placeholder: m,
@@ -40,7 +40,7 @@ function u(e) {
         maxLength: p,
         required: h,
         onChange: (e) => {
-            g(e),
+            C(e),
                 _({
                     type: t,
                     value: e
@@ -50,12 +50,12 @@ function u(e) {
     };
     switch (u) {
         case a.PT.SMALL:
-            n = (0, l.jsx)(r.TextInput, { ...S });
+            n = (0, l.jsx)(r.TextInput, { ...j });
             break;
         case a.PT.PARAGRAPH:
             n = (0, l.jsx)(r.TextArea, {
                 autosize: !0,
-                ...S
+                ...j
             });
     }
     return (0, l.jsx)(r.FormItem, {

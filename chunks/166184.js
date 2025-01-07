@@ -48,8 +48,8 @@ t.Z = function (e) {
                 ? t
                 : void 0,
         O = null != l.description ? l.description : T,
-        P = null != j ? j : null == l ? void 0 : l.memberCount,
-        k = null != b ? b : null == l ? void 0 : l.presenceCount,
+        k = null != j ? j : null == l ? void 0 : l.memberCount,
+        P = null != b ? b : null == l ? void 0 : l.presenceCount,
         M = null;
     if (null != D)
         M = (0, i.jsx)('img', {
@@ -133,25 +133,25 @@ t.Z = function (e) {
                     (0, i.jsxs)('div', {
                         className: p.memberInfo,
                         children: [
-                            null != k &&
+                            null != P &&
                                 (0, i.jsxs)('div', {
                                     className: p.memberCount,
                                     children: [
                                         (0, i.jsx)('div', { className: p.dotOnline }),
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
-                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: k }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: k })
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: P }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: P })
                                         })
                                     ]
                                 }),
-                            null != P &&
+                            null != k &&
                                 (0, i.jsxs)('div', {
                                     className: p.memberCount,
                                     children: [
                                         (0, i.jsx)('div', { className: p.dotOffline }),
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
-                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: P }) : x.intl.formatToPlainString(x.t.zRl6XV, { count: P })
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: k }) : x.intl.formatToPlainString(x.t.zRl6XV, { count: k })
                                         })
                                     ]
                                 })

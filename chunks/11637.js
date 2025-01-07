@@ -15,47 +15,47 @@ var i = r(763296),
     c = r(277078),
     d = r(981631);
 let f = /^<sound:(\d+):(\d+)>/;
-function _(e, n, r) {
+function _(e, n, r, s) {
     if (!o.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-    let s = i.Z.getSoundById(r),
-        u = (0, c.Z)(s, e);
-    if (null != n && null != e) {
-        let i = (0, l.Z)(e, n, r);
-        if (u && null == i) {
-            let r = a.Z.getMessage(e, n);
-            if ((null == r ? void 0 : r.state) !== d.yb.SENT) return s;
+    let u = i.Z.getSoundById(s),
+        f = (0, c.Z)(u, e, n);
+    if (null != r && null != n) {
+        let e = (0, l.Z)(n, r, s);
+        if (f && null == e) {
+            let e = a.Z.getMessage(n, r);
+            if ((null == e ? void 0 : e.state) !== d.yb.SENT) return u;
         }
-        return i;
+        return e;
     }
-    if (!!u) {
-        if (null != s) return s;
+    if (!!f) {
+        if (null != u) return u;
     }
 }
 function h(e, n) {
     var r;
     let i = e[1],
         a = e[2],
-        { messageId: o, channelId: l } = n,
-        c = _(l, o, a);
-    if (null == c)
+        { guildId: o, channelId: l, messageId: c } = n,
+        d = _(o, l, c, a);
+    if (null == d)
         return {
             type: 'text',
             content: (0, u.Z)(i, a)
         };
-    let d = null !== (r = null == c ? void 0 : c.name) && void 0 !== r ? r : a;
+    let f = null !== (r = null == d ? void 0 : d.name) && void 0 !== r ? r : a;
     return {
         type: 'soundboard',
         soundId: a,
-        guildId: i,
+        guildId: o,
         messageId: n.messageId,
         channelId: n.channelId,
-        content: d,
-        emojiId: null == c ? void 0 : c.emojiId,
-        emojiName: null == c ? void 0 : c.emojiName,
+        content: f,
+        emojiId: null == d ? void 0 : d.emojiId,
+        emojiName: null == d ? void 0 : d.emojiName,
         emojiSrc:
-            (null == c ? void 0 : c.emojiId) != null
+            (null == d ? void 0 : d.emojiId) != null
                 ? (0, s.gT)({
-                      id: null == c ? void 0 : c.emojiId,
+                      id: null == d ? void 0 : d.emojiId,
                       animated: !1,
                       size: 16
                   })

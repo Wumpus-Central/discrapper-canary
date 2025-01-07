@@ -1,31 +1,31 @@
-i.d(n, {
+n.d(t, {
     k: function () {
-        return s;
+        return a;
     }
 });
-var e = i(544891),
-    r = i(570140),
-    l = i(981631);
-async function s(t) {
+var i = n(544891),
+    r = n(570140),
+    l = n(981631);
+async function a(e) {
     r.Z.dispatch({
         type: 'DISCOVER_CHECKLIST_FETCH_START',
-        guildId: t
+        guildId: e
     });
     try {
-        let n = await e.tn.get({
-            url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(t),
+        let t = await i.tn.get({
+            url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
         r.Z.dispatch({
             type: 'DISCOVER_CHECKLIST_FETCH_SUCCESS',
-            guildId: t,
-            checklist: n.body
+            guildId: e,
+            checklist: t.body
         });
-    } catch (n) {
+    } catch (t) {
         r.Z.dispatch({
             type: 'DISCOVER_CHECKLIST_FETCH_FAILURE',
-            guildId: t
+            guildId: e
         });
     }
 }

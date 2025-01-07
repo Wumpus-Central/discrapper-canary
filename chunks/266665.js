@@ -66,7 +66,7 @@ function y(e) {
             },
             drop: () => ({ roleId: h.id })
         }),
-        P = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(b.p6O);
+        k = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(b.p6O);
     return (
         (l = Z
             ? (0, i.jsx)(p.Z, {
@@ -76,11 +76,11 @@ function y(e) {
               })
             : 'dot' === j
               ? (0, i.jsx)(u.RoleDot, {
-                    color: P,
+                    color: k,
                     background: !1,
                     tooltip: !1
                 })
-              : (0, i.jsx)(u.RoleCircle, { color: P })),
+              : (0, i.jsx)(u.RoleCircle, { color: k })),
         (0, i.jsxs)(u.TabBar.Item, {
             className: a()(E.row, {
                 [E.dragBefore]: null !== D && v < D,

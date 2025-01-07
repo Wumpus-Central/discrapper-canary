@@ -3,10 +3,10 @@ i.d(n, {
         return c;
     },
     jn: function () {
-        return d;
+        return g;
     },
     lX: function () {
-        return g;
+        return d;
     }
 });
 var e = i(200651);
@@ -18,7 +18,7 @@ var r = i(120356),
     o = i(592286),
     a = i(119866);
 function c(t) {
-    let { value: n, placeholder: i, onChange: r, disabled: u, className: c, autofocus: d } = t;
+    let { value: n, placeholder: i, onChange: r, disabled: u, className: c, autofocus: g } = t;
     return (0, e.jsx)(s.TextArea, {
         className: l()(a.paragraphFieldBody, c),
         maxLength: o.RS,
@@ -26,12 +26,12 @@ function c(t) {
         placeholder: null != i ? i : '',
         onChange: r,
         disabled: u,
-        autoFocus: d,
+        autoFocus: g,
         autosize: !0,
         showRemainingCharacterCount: !u
     });
 }
-function d(t) {
+function g(t) {
     let { formField: n } = t;
     return (0, e.jsx)(u.hK, {
         title: n.label,
@@ -42,7 +42,7 @@ function d(t) {
         })
     });
 }
-function g(t) {
+function d(t) {
     let { formField: n, autofocus: i, onChange: r } = t;
     return (0, e.jsx)(u.hK, {
         title: n.label,

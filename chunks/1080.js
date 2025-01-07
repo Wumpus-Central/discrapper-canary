@@ -139,7 +139,7 @@ function O(e) {
         ]
     });
 }
-class P extends r.PureComponent {
+class k extends r.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props,
             r = b.ZP.getGlobalName(e);
@@ -203,7 +203,7 @@ class P extends r.PureComponent {
             });
     }
 }
-let k = r.forwardRef(function (e, t) {
+let P = r.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: a } = e,
         s = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation, []),
         o = r.useCallback(
@@ -232,7 +232,7 @@ let k = r.forwardRef(function (e, t) {
                     o = null == a ? void 0 : a.get(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : '');
                 if (null != r && null != o)
                     return (0, i.jsx)(
-                        P,
+                        k,
                         {
                             user: r,
                             ban: o,
@@ -368,7 +368,7 @@ function w() {
         y = r.useMemo(() => R(C, u, v), [C, R, u, v]),
         D = null != C,
         O = y.length % 1000 == 0 && y.length > 0 && D,
-        P = 0 === y.length,
+        k = 0 === y.length,
         [w, B] = r.useState({
             currentPage: 1,
             pageSize: 100
@@ -419,15 +419,15 @@ function w() {
                   (0, i.jsxs)('div', {
                       className: a()(L.scrollerContainer),
                       children: [
-                          !P &&
-                              (0, i.jsx)(k, {
+                          !k &&
+                              (0, i.jsx)(P, {
                                   guild: l,
                                   bans: C,
                                   sortedBans: z,
                                   ref: b
                               }),
                           !O &&
-                              P &&
+                              k &&
                               (0, i.jsxs)(d.EmptyState, {
                                   theme: I,
                                   className: L.emptyState,

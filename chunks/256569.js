@@ -84,17 +84,17 @@ function p(e) {
             mainContainerRef: v
         }),
         {
-            state: { value: L, tags: D, selections: O, isSelecting: P }
+            state: { value: L, tags: D, selections: O, isSelecting: k }
         } = I,
-        k = (0, o.Z)(D),
+        P = (0, o.Z)(D),
         [M, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
             w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
         }, [A]);
     r.useEffect(() => {
-        if (!M && k !== D) l(D);
-    }, [l, k, D, M]),
+        if (!M && P !== D) l(D);
+    }, [l, P, D, M]),
         r.useEffect(() => {
             if (!M) c(L);
         }, [c, L, M]);
@@ -146,7 +146,7 @@ function p(e) {
                                 onFocus: G(t),
                                 onRemove: () => S(t),
                                 isSelected: O.includes(e),
-                                isSelecting: P,
+                                isSelecting: k,
                                 error: u[e],
                                 forceShowErrorTooltip: !M && t === D.length - 1
                             },

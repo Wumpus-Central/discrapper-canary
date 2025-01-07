@@ -21,7 +21,7 @@ function p(e) {
         h = null == p ? void 0 : null === (n = p.message) || void 0 === n ? void 0 : n.getChannelId(),
         x = o.Z.getChannel(h),
         v = s.Z.getGuild(null == x ? void 0 : x.getGuildId()),
-        g = i.useMemo(() => (0, u.tx)(e.defaultValues, null == v ? void 0 : v.id, t), [e.defaultValues, v, t]);
+        C = i.useMemo(() => (0, u.tx)(e.defaultValues, null == v ? void 0 : v.id, t), [e.defaultValues, v, t]);
     return (0, l.jsx)(d.ZP, {
         selectActionComponent: e,
         queryOptions: (e) => (0, u.af)(e, h, t),
@@ -43,6 +43,6 @@ function p(e) {
                 className: f.label,
                 children: e.label
             }),
-        defaultValues: g
+        defaultValues: C
     });
 }

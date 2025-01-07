@@ -825,7 +825,7 @@ n.ZP = {
             .reduce(
                 (e, r) => (
                     r.forEach((r) => {
-                        (0, y.Z)(r, null == n ? void 0 : n.id) && e.push(r);
+                        (0, y.Z)(r, null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id) && e.push(r);
                     }),
                     e
                 ),

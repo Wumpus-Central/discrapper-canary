@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return P;
+        return k;
     }
 }),
     n(47120);
@@ -256,7 +256,7 @@ function O(e) {
         ]
     });
 }
-function P(e) {
+function k(e) {
     let { guild: t, role: l, locked: c, setSelectedSection: d } = e,
         [u, m] = r.useState(''),
         { headerHeight: h, headerRef: g } = (0, N.Z)(0),

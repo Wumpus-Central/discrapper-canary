@@ -137,14 +137,14 @@ function g(e) {
             },
             [t, j, l, x]
         ),
-        P = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
                 u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
             },
             [O, t]
         ),
-        k = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
@@ -172,7 +172,7 @@ function g(e) {
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: k,
+                    onClick: P,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => A(!0),
                     onMouseLeave: () => A(!1),
@@ -189,7 +189,7 @@ function g(e) {
                             }),
                             ref: _,
                             onChange: D,
-                            onKeyDownCapture: P,
+                            onKeyDownCapture: k,
                             value: t,
                             style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),

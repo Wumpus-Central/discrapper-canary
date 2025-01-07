@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return P;
     }
 }),
     n(47120),
@@ -331,7 +331,7 @@ class O extends r.PureComponent {
             });
     }
 }
-let P = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
+let k = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = T.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
@@ -341,7 +341,7 @@ let P = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
         streamerMode: p.Z.hidePersonalInformation
     };
 })(O);
-function k() {
+function P() {
     var e;
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], s.isEqual),
         { enabled: n } = N.T.useExperiment(
@@ -351,5 +351,5 @@ function k() {
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(P, {});
+    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(k, {});
 }

@@ -39,7 +39,7 @@ function j(e) {
             [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
             [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
         },
-        P = r.useMemo(
+        k = r.useMemo(
             () =>
                 Object.values(null != D ? D : {})
                     .flat()
@@ -49,14 +49,14 @@ function j(e) {
     r.useEffect(() => {
         Z && E(null);
     }, [A]);
-    let k = r.useCallback(
+    let P = r.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, i;
                     return null !==
                         (i =
                             null ===
-                                (n = P.find((t) => {
+                                (n = k.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
@@ -67,12 +67,12 @@ function j(e) {
                 }
                 return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [P]
+            [k]
         ),
         M = r.useMemo(() => {
             var e, t;
-            return k(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
-        }, [k, S]);
+            return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [P, S]);
     r.useEffect(() => {
         b(Z, (0, v.af)(M));
     }, [b, Z, M]);
@@ -182,7 +182,7 @@ function j(e) {
                 }),
             (0, i.jsx)(f.Z, {
                 guildId: A,
-                existingRules: P
+                existingRules: k
             }),
             Z && (0, i.jsx)('div', { className: T.endSpacer })
         ]

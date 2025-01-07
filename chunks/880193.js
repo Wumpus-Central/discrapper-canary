@@ -50,8 +50,8 @@ function I(e) {
     function O(e, t) {
         null != t && L(t.name), y(e);
     }
-    let P = (0, m.mY)(),
-        k = (0, s.Dt)(),
+    let k = (0, m.mY)(),
+        P = (0, s.Dt)(),
         M = (0, s.Dt)(),
         w = (0, s.Dt)();
     return (0, i.jsxs)(p.Z, {
@@ -65,15 +65,15 @@ function I(e) {
                         className: _.formSplitHalf,
                         children: (0, i.jsx)(a.FormSection, {
                             title: C.intl.string(C.t.grbGJy),
-                            titleId: k,
-                            disabled: P,
+                            titleId: P,
+                            disabled: k,
                             children: (0, i.jsx)(a.TextInput, {
                                 placeholder: C.intl.string(C.t['So2/xM']),
                                 value: N,
                                 inputClassName: v.formInput,
                                 onChange: T,
-                                'aria-labelledby': k,
-                                disabled: P
+                                'aria-labelledby': P,
+                                disabled: k
                             })
                         })
                     }),
@@ -82,11 +82,11 @@ function I(e) {
                         children: (0, i.jsx)(a.FormSection, {
                             title: C.intl.string(C.t.Ibl4BQ),
                             titleId: M,
-                            disabled: P,
+                            disabled: k,
                             children: (0, i.jsx)(a.SingleSelect, {
                                 options: D,
                                 className: v.formInput,
-                                isDisabled: P || null == t,
+                                isDisabled: k || null == t,
                                 placeholder: C.intl.string(C.t['88XZDg']),
                                 value: j,
                                 onChange: b,
@@ -102,7 +102,7 @@ function I(e) {
             (0, i.jsx)(a.FormSection, {
                 title: C.intl.string(C.t['1w2WcX']),
                 titleId: w,
-                disabled: P,
+                disabled: k,
                 children: (0, i.jsx)(a.TextArea, {
                     placeholder: C.intl.string(C.t.p7Jr4O),
                     value: S,
@@ -111,7 +111,7 @@ function I(e) {
                     className: v.formInput,
                     onChange: E,
                     'aria-labelledby': w,
-                    disabled: P
+                    disabled: k
                 })
             }),
             (0, i.jsx)(a.Spacer, { size: 24 }),
@@ -121,19 +121,19 @@ function I(e) {
                     (0, i.jsxs)(a.FormSection, {
                         title: C.intl.string(C.t.RUBM2t),
                         className: _.iconSectionDescription,
-                        disabled: P,
+                        disabled: k,
                         children: [
                             (0, i.jsx)(a.FormText, {
                                 type: a.FormText.Types.DESCRIPTION,
                                 className: v.formDescription,
-                                disabled: P,
+                                disabled: k,
                                 children: C.intl.string(C.t['0iUofH'])
                             }),
                             (0, i.jsx)(o.Z, {
                                 onChange: O,
                                 buttonCTA: A,
                                 'aria-label': Z,
-                                disabled: P,
+                                disabled: k,
                                 look: a.Button.Looks.OUTLINED,
                                 color: a.Button.Colors.PRIMARY
                             })
@@ -149,7 +149,7 @@ function I(e) {
                         imageClassName: _.tierSymbolUploaderInner,
                         onChange: O,
                         'aria-label': Z,
-                        disabled: P
+                        disabled: k
                     })
                 ]
             })

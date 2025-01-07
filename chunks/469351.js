@@ -41,7 +41,7 @@ function A(e) {
         { loading: L } = (0, d.H)(t),
         [D, O] = a.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
-    let P = a.useCallback(() => {
+    let k = a.useCallback(() => {
         if (null == r) return;
         let e = v.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
@@ -57,7 +57,7 @@ function A(e) {
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let k = (0, l.jsxs)(l.Fragment, {
+    let P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -103,7 +103,7 @@ function A(e) {
                     ? (0, l.jsx)('div', {
                           className: y.previewButton,
                           children: (0, l.jsx)(c.Button, {
-                              onClick: P,
+                              onClick: k,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
@@ -127,7 +127,7 @@ function A(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            k,
+            P,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: y.tabBarContainer,

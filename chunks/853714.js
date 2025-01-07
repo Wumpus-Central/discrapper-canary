@@ -31,7 +31,7 @@ var i = n(200651),
     L = n(600216),
     D = n(670189),
     O = n(616926);
-function P(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function P(e, t, n) {
         e
     );
 }
-class k extends r.PureComponent {
+class P extends r.PureComponent {
     render() {
         let { onHeaderClick: e, guildId: t, guild: n, ...r } = this.props;
         return null == t
@@ -61,11 +61,11 @@ class k extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, 'handleHeaderClick', () => {
+            k(this, 'handleHeaderClick', () => {
                 let { onHeaderClick: e, log: t } = this.props;
                 null == e || e(t);
             }),
-            P(this, 'handleUserContextMenu', (e) => {
+            k(this, 'handleUserContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
                     { user: l } = t;
                 null != l &&
@@ -80,7 +80,7 @@ class k extends r.PureComponent {
                             });
                     });
             }),
-            P(this, 'handleChannelContextMenu', (e) => {
+            k(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
                     l = _.Z.getGuild(r);
                 null != t.options.channel &&
@@ -97,7 +97,7 @@ class k extends r.PureComponent {
                                 : null;
                     });
             }),
-            P(this, 'handleTargetContextMenu', (e) => {
+            k(this, 'handleTargetContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props;
                 switch (t.targetType) {
                     case A.KFR.CHANNEL:
@@ -158,7 +158,7 @@ function M(e) {
                         let t = a === e.id,
                             r = s === e.id;
                         return (0, i.jsx)(
-                            k,
+                            P,
                             {
                                 guildId: n,
                                 guild: l,
@@ -308,18 +308,18 @@ class w extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, '_clickedInside', !1),
-            P(this, '_scrollerRef', null),
-            P(this, '_expandedRef', void 0),
-            P(this, '_lastExpandedRef', void 0),
-            P(this, '_prevRects', this.getRects()),
-            P(this, '_contentRef', r.createRef()),
-            P(this, 'state', {
+            k(this, '_clickedInside', !1),
+            k(this, '_scrollerRef', null),
+            k(this, '_expandedRef', void 0),
+            k(this, '_lastExpandedRef', void 0),
+            k(this, '_prevRects', this.getRects()),
+            k(this, '_contentRef', r.createRef()),
+            k(this, 'state', {
                 expandedId: null,
                 lastExpandedId: null,
                 actionFilterQuery: ''
             }),
-            P(this, 'renderActionQuickSelectItem', (e, t) => {
+            k(this, 'renderActionQuickSelectItem', (e, t) => {
                 var n;
                 let { actionFilter: r } = this.props,
                     l = (0, f.Pw)(e.value),
@@ -346,7 +346,7 @@ class w extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            P(this, 'renderUserQuickSelectItem', (e, t) => {
+            k(this, 'renderUserQuickSelectItem', (e, t) => {
                 var n;
                 if (e.user instanceof C.Z) {
                     let t = e.user;
@@ -405,7 +405,7 @@ class w extends r.PureComponent {
                     null !== (n = e.key) && void 0 !== n ? n : t
                 );
             }),
-            P(this, 'renderHeaderDropdowns', () => {
+            k(this, 'renderHeaderDropdowns', () => {
                 var e, t;
                 let { actionFilter: n, hide: r, userIdFilter: l, moderators: s } = this.props;
                 if (r) return null;
@@ -474,7 +474,7 @@ class w extends r.PureComponent {
                     ]
                 });
             }),
-            P(this, 'renderLoadMore', () => {
+            k(this, 'renderLoadMore', () => {
                 let { showLoadMore: e, hasOlderLogs: t, hide: n } = this.props;
                 if (e && t && !n)
                     return (0, i.jsx)(u.Button, {
@@ -484,13 +484,13 @@ class w extends r.PureComponent {
                         children: Z.intl.string(Z.t['Q/LSXl'])
                     });
             }),
-            P(this, 'handleFilterActionChange', (e) => {
+            k(this, 'handleFilterActionChange', (e) => {
                 (0, m.ZX)(e, this.props.guildId);
             }),
-            P(this, 'handleFilterUserChange', (e) => {
+            k(this, 'handleFilterUserChange', (e) => {
                 (0, m.uo)(e, this.props.guildId);
             }),
-            P(this, 'handleHeaderClick', (e) => {
+            k(this, 'handleHeaderClick', (e) => {
                 let { expandedId: t } = this.state;
                 t !== e.id
                     ? ((this._clickedInside = !0),
@@ -507,7 +507,7 @@ class w extends r.PureComponent {
                           lastExpandedId: null
                       }));
             }),
-            P(this, 'handleOutsideClick', () => {
+            k(this, 'handleOutsideClick', () => {
                 null == this.state.expandedId || this._clickedInside
                     ? null != this.state.expandedId && (this._clickedInside = !1)
                     : ((this._expandedRef = null),
@@ -518,28 +518,28 @@ class w extends r.PureComponent {
                       }),
                       (this._prevRects = this.getRects()));
             }),
-            P(this, 'handleContentClick', (e) => {
+            k(this, 'handleContentClick', (e) => {
                 (this._clickedInside = !0), e.stopPropagation();
             }),
-            P(this, 'handleSetScrollerRef', (e) => {
+            k(this, 'handleSetScrollerRef', (e) => {
                 this._scrollerRef = e;
             }),
-            P(this, 'handleOnScroll', () => {
+            k(this, 'handleOnScroll', () => {
                 this.isScrollerAtBottom() && this.handleFetchNextPage();
             }),
-            P(this, 'handleFetchNextPage', () => {
+            k(this, 'handleFetchNextPage', () => {
                 (0, m.OY)(this.props.guildId);
             }),
-            P(this, 'handleActionFilterQueryChange', (e) => {
+            k(this, 'handleActionFilterQueryChange', (e) => {
                 this.setState({ actionFilterQuery: e });
             }),
-            P(this, 'handleActionFilterQueryClear', () => {
+            k(this, 'handleActionFilterQueryClear', () => {
                 this.setState({ actionFilterQuery: '' });
             }),
-            P(this, 'handleSetExpandedRef', (e) => {
+            k(this, 'handleSetExpandedRef', (e) => {
                 this._expandedRef = e;
             }),
-            P(this, 'handleSetLastExpandedRef', (e) => {
+            k(this, 'handleSetLastExpandedRef', (e) => {
                 this._lastExpandedRef = e;
             });
     }

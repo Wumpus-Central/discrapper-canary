@@ -31,7 +31,7 @@ function h(e) {
     }
     t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.t.vPg1JS : m.t.rPqqtr) : m.t.rPqqtr;
     let v = p[a],
-        g = {
+        C = {
             onClick: (0, o.Z)({
                 location: v,
                 applicationId: i.extra.application_id,
@@ -45,8 +45,8 @@ function h(e) {
         ...c,
         thumbnailUrl: h,
         title: x,
-        titleClickable: g,
-        thumbnailClickable: g,
+        titleClickable: C,
+        thumbnailClickable: C,
         userDescription: t,
         providerIconProps: n
     };

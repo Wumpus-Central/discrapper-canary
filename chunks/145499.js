@@ -179,9 +179,9 @@ t.Z = (e) => {
                 L = (0, p.ig)(c.tier),
                 D = d.slice(v, S),
                 O = D.length > 0,
-                P = E < c.tier,
-                k = b(d.length, t),
-                M = x && !P && k === c.tier && S !== D.length,
+                k = E < c.tier,
+                P = b(d.length, t),
+                M = x && !k && P === c.tier && S !== D.length,
                 w = M || D.length > 0,
                 B = S - v,
                 U = n(872732),
@@ -189,7 +189,7 @@ t.Z = (e) => {
                 F = M ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
                 H = [];
             for (let e = 0; e < F; e++) H.push((0, i.jsx)(R, {}, 'placeholder-'.concat(e)));
-            let z = k === h + 1 && k > E,
+            let z = P === h + 1 && P > E,
                 W = M || z || h > E;
             return (
                 z
@@ -228,7 +228,7 @@ t.Z = (e) => {
                                             (0, i.jsx)(
                                                 I.Z,
                                                 {
-                                                    isDisabled: P,
+                                                    isDisabled: k,
                                                     sticker: e,
                                                     canManageSticker: f(e)
                                                 },
@@ -238,7 +238,7 @@ t.Z = (e) => {
                                         H
                                     ]
                                 }),
-                            !P &&
+                            !k &&
                                 !M &&
                                 0 === D.length &&
                                 (0, i.jsx)('div', {
@@ -249,7 +249,7 @@ t.Z = (e) => {
                                         children: T.intl.string(T.t.lqwv0N)
                                     })
                                 }),
-                            P &&
+                            k &&
                                 !O &&
                                 (0, i.jsxs)('div', {
                                     className: j.emptyTierWrapper,

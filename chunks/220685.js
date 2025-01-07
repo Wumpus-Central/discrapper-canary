@@ -39,17 +39,17 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             [N, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
             [Z, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
-            P = null == D || null != D.match(R),
-            [k, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
+            k = null == D || null != D.match(R),
+            [P, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = N),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = Z),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
+                    P !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = P),
                     !d().isEmpty(e) &&
                         (await _(l.id, e),
                         'store_page_enabled' in e &&
@@ -61,7 +61,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             G = j.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(w),
             F = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, v.gX)(l.id),
-            z = H || !P;
+            z = H || !k;
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(g.FormTitle, {
@@ -148,15 +148,15 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         (0, i.jsx)(g.TextInput, {
                             value: null != D ? D : void 0,
                             onChange: (e) => O('' === e ? null : e),
-                            error: P ? null : b.intl.string(b.t['1kL79f']),
+                            error: k ? null : b.intl.string(b.t['1kL79f']),
                             placeholder: b.intl.string(b.t['+I4gdX']),
                             className: S.trailerInputWrapper,
                             inputClassName: a()(S.trailerInput, {
-                                [S.error]: !P,
-                                [S.trailerInputWithCheckmark]: F || !P
+                                [S.error]: !k,
+                                [S.trailerInputWithCheckmark]: F || !k
                             }),
                             prefixElement:
-                                P &&
+                                k &&
                                 F &&
                                 (0, i.jsx)(g.CircleCheckIcon, {
                                     size: 'md',
@@ -179,7 +179,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, i.jsx)(g.FormSwitch, {
                             className: S.premiumMemberCountSwitchContainer,
-                            value: k,
+                            value: P,
                             hideBorder: !0,
                             onChange: (e) => M(e),
                             disabled: H,

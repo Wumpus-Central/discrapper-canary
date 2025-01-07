@@ -31,8 +31,8 @@ var i = n(200651),
     L = n(287837),
     D = n(573189),
     O = n(899947),
-    P = n(117831),
-    k = n(996737),
+    k = n(117831),
+    P = n(996737),
     M = n(21846),
     w = n(280632),
     B = n(44234),
@@ -263,7 +263,7 @@ function W(e) {
                                                       (0, i.jsx)('img', {
                                                           alt: '',
                                                           className: Z.actionIcon,
-                                                          src: P
+                                                          src: k
                                                       }),
                                                       (0, i.jsx)(u.Text, {
                                                           className: Z.actionText,
@@ -327,7 +327,7 @@ function W(e) {
                                           (0, i.jsx)('img', {
                                               alt: '',
                                               className: Z.actionIcon,
-                                              src: k
+                                              src: P
                                           }),
                                           (0, i.jsx)(u.Text, {
                                               className: Z.actionText,

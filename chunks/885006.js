@@ -1,21 +1,21 @@
 t.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 }),
     t(47120);
-var i = t(192379);
-function r() {
+var r = t(192379);
+function i() {
     var e, n;
-    let [t, r] = i.useState({
+    let [t, i] = r.useState({
         width: null !== (e = window.innerWidth) && void 0 !== e ? e : 1080,
         height: null !== (n = window.innerHeight) && void 0 !== n ? n : 1080
     });
     return (
-        i.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             function e() {
                 let e = window.innerWidth;
-                r({
+                i({
                     width: e,
                     height: window.innerHeight
                 });

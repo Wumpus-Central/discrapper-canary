@@ -9,9 +9,9 @@ var i = r(592125),
     o = r(74538),
     l = r(710111),
     u = r(231338);
-function c(e, n) {
-    let r = i.Z.getChannel(n);
-    if ((null == e ? void 0 : e.guildId) === l.X8 || (null == e ? void 0 : e.guildId) === (null == r ? void 0 : r.guild_id)) return !0;
-    let c = o.ZP.canUseSoundboardEverywhere(s.default.getCurrentUser());
-    return (null == r || null == r.guild_id || a.Z.can(u.Pl.USE_EXTERNAL_SOUNDS, r)) && c;
+function c(e, n, r) {
+    let c = i.Z.getChannel(r);
+    if ((null == e ? void 0 : e.guildId) === l.X8 || (null == e ? void 0 : e.guildId) === (null == c ? void 0 : c.guild_id) || (null == e ? void 0 : e.guildId) === n) return !0;
+    let d = o.ZP.canUseSoundboardEverywhere(s.default.getCurrentUser());
+    return (null == c || null == c.guild_id || a.Z.can(u.Pl.USE_EXTERNAL_SOUNDS, c)) && d;
 }

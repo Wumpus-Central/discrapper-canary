@@ -61,7 +61,7 @@ function b(e) {
         },
         D = (0, g.ss)(t),
         O = (0, g.Gp)(),
-        P = r.useCallback(() => {
+        k = r.useCallback(() => {
             O &&
                 h.jJ.trackExposure({
                     guildId: t,
@@ -84,19 +84,19 @@ function b(e) {
                       )
                     : S();
         }, [t, E, S, l, O, D]),
-        k = C.Lo(Z),
+        P = C.Lo(Z),
         M = r.useCallback(() => Z.forEach(C.GM), [Z]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && P(),
+                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.closeModal)(T);
                 }
             ),
-            [B, P]
+            [B, k]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -120,7 +120,7 @@ function b(e) {
                             )
                         ),
                         (0, i.jsxs)(d.Clickable, {
-                            onClick: w ? void 0 : P,
+                            onClick: w ? void 0 : k,
                             className: a()(N.createTierButton, { [N.disabled]: w }),
                             'aria-disabled': w,
                             children: [
@@ -141,7 +141,7 @@ function b(e) {
                 (0, i.jsx)(c.W, {
                     component: 'div',
                     className: N.contentRegion,
-                    children: k && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: M }) })
+                    children: P && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: M }) })
                 })
             ]
         })

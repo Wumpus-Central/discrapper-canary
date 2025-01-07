@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 }),
     n(47120);
@@ -36,17 +36,17 @@ var i = n(200651),
     L = n(981631),
     D = n(388032),
     O = n(203035);
-function P() {
+function k() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(k, { guild: e });
+    return null == e ? null : (0, i.jsx)(P, { guild: e });
 }
-function k(e) {
+function P(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
-        P = (0, E.Z)(l),
+        k = (0, E.Z)(l),
         {
-            hasChanges: k,
+            hasChanges: P,
             hasConfiguredAnythingForCurrentStep: M,
             hasErrors: w
         } = (0, o.cj)([b.Z], () => ({
@@ -91,7 +91,7 @@ function k(e) {
             range: [0, 1],
             output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (P) {
+    if (k) {
         if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
         if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(Z.Zm, {});
         else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(A.T, {});
@@ -99,7 +99,7 @@ function k(e) {
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {
             let e = j.Z.advancedMode;
-            if (k)
+            if (P)
                 try {
                     if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
@@ -117,7 +117,7 @@ function k(e) {
                 ...(0, g.hH)(l),
                 step: S.PG[C],
                 back: !1,
-                skip: !k
+                skip: !P
             }),
                 (0, _.Nb)((0, S.lg)(C)),
                 (await X()) && (0, _.IG)(l, C);

@@ -176,8 +176,8 @@ t.Z = (e) => {
         [R, L] = r.useState(S.Wy.GAMES),
         {
             initialSettings: O,
-            settings: P,
-            errors: k,
+            settings: k,
+            errors: P,
             submitting: M,
             dirty: w
         } = (0, a.cj)([p.Z], () => {
@@ -230,11 +230,11 @@ t.Z = (e) => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
-            await (0, g.Ii)(t, P), (0, x.Af)(t);
+            await (0, g.Ii)(t, k), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != k && Object.values(k).some((e) => null != e), [k]);
-    if (null == P) return null;
-    let q = Z(k);
+        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
+    if (null == k) return null;
+    let q = Z(P);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
         className: A.modal,
@@ -326,8 +326,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.t6Mbq6),
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
-                                                gameApplicationIds: null !== (e = P.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: k.gameApplicationIds,
+                                                gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: P.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
@@ -336,8 +336,8 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.W0h7pa),
                                                 description: y.intl.string(y.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: P.playstyle,
-                                                error: k.playstyle
+                                                playstyle: k.playstyle,
+                                                error: P.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
                                             return (0, i.jsx)(b.Z, {
@@ -345,30 +345,30 @@ t.Z = (e) => {
                                                 title: y.intl.string(y.t.G4tP09),
                                                 description: y.intl.string(y.t['6Eos19']),
                                                 onUpdateTraits: z,
-                                                progress: P
+                                                progress: k
                                             });
                                         case S.Wy.INTERESTS:
                                             return (0, i.jsx)(I.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: P,
-                                                error: k.interests
+                                                progress: k,
+                                                error: P.interests
                                             });
                                         case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: P,
-                                                errors: k
+                                                progress: k,
+                                                errors: P
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(j.Z, {
                                                 handleUpdate: W,
-                                                tag: P.tag,
-                                                error: k.tag,
-                                                badge: P.badgeKind,
-                                                primaryColor: P.badgePrimaryColor,
-                                                secondaryColor: P.badgeSecondaryColor,
+                                                tag: k.tag,
+                                                error: P.tag,
+                                                badge: k.badgeKind,
+                                                primaryColor: k.badgePrimaryColor,
+                                                secondaryColor: k.badgeSecondaryColor,
                                                 furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
@@ -376,13 +376,13 @@ t.Z = (e) => {
                                             return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: k.verificationForm
+                                                error: P.verificationForm
                                             });
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
-                                                progress: P
+                                                progress: k
                                             });
                                         default:
                                             return null;
@@ -401,7 +401,7 @@ t.Z = (e) => {
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(k).find((e) => null != e)
+                                            errorMessage: Object.values(P).find((e) => null != e)
                                         })
                                     })
                             })

@@ -39,8 +39,8 @@ var i = n(200651),
     L = n(999382),
     D = n(8426),
     O = n(969632),
-    P = n(535907),
-    k = n(981631),
+    k = n(535907),
+    P = n(981631),
     M = n(30513),
     w = n(486324),
     B = n(200299),
@@ -118,8 +118,8 @@ function Y(e) {
         O = null;
     null != S && (0, C.kb)(S) ? !L && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
     let {
-            drag: P,
-            dragSourcePosition: k,
+            drag: k,
+            dragSourcePosition: P,
             drop: M,
             setIsDraggable: w
         } = (0, h.Z)({
@@ -151,11 +151,11 @@ function Y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: a()(G.actionItem, {
-                    [G.dropIndicatorBefore]: null != k && p < k,
-                    [G.dropIndicatorAfter]: null != k && p > k,
+                    [G.dropIndicatorBefore]: null != P && p < P,
+                    [G.dropIndicatorAfter]: null != P && p > P,
                     [G.actionItemError]: null != O
                 }),
-                ref: (e) => P(M(e)),
+                ref: (e) => k(M(e)),
                 children: [
                     (0, i.jsx)('div', {
                         className: G.dragContainer,
@@ -417,7 +417,7 @@ function J(e) {
     var t;
     let { guildId: l } = e,
         a = (0, s.e7)([E.Z], () => E.Z.getGuild(l)),
-        o = null !== (t = null == a ? void 0 : a.hasFeature(k.oNc.BANNER)) && void 0 !== t && t,
+        o = null !== (t = null == a ? void 0 : a.hasFeature(P.oNc.BANNER)) && void 0 !== t && t,
         d = r.useCallback(
             (e, t) => {
                 if (null != l) {
@@ -445,10 +445,10 @@ function J(e) {
                 e.preventDefault(),
                     e.stopPropagation(),
                     null != a &&
-                        ((0, u.yw)(k.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        ((0, u.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                             location: {
-                                section: k.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: k.qAy.LEARN_MORE
+                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: P.qAy.LEARN_MORE
                             },
                             guild_id: null == a ? void 0 : a.id,
                             location_stack: []
@@ -456,9 +456,9 @@ function J(e) {
                         (0, p.Z)({
                             analyticsLocations: [],
                             analyticsSourceLocation: {
-                                section: k.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: k.qAy.ONBOARDING_EDIT,
-                                page: k.ZY5.GUILD_SETTINGS
+                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: P.qAy.ONBOARDING_EDIT,
+                                page: P.ZY5.GUILD_SETTINGS
                             },
                             guild: a,
                             perks: (0, M.XO)()
@@ -496,7 +496,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: a,
-                              guildFeature: k.oNc.BANNER,
+                              guildFeature: P.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -543,7 +543,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: a,
-                              guildFeature: k.oNc.BANNER,
+                              guildFeature: P.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -781,7 +781,7 @@ function et(e) {
         }),
         a = (0, s.Wu)([O.Z], () => O.Z.getDismissedSuggestedChannelIds(t)),
         o = (0, s.e7)([S.ZP], () => (null == t ? [] : S.ZP.getSelectableChannels(t)))
-            .filter((e) => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === k.d4z.GUILD_TEXT && A.Uu(k.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(k.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
+            .filter((e) => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && A.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = r.useCallback(() => {
             let e = o.map((e) => e.channel.id);
@@ -929,7 +929,7 @@ function er(e) {
     let { saveOnClose: t, guildId: n } = e,
         l = (0, s.cj)([O.Z], () => {
             var e;
-            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : P.z;
+            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : k.z;
         }),
         [a, d] = r.useState('new'),
         u = [
