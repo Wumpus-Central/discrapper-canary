@@ -5,7 +5,6 @@ e.exports = {
     content: 'content_ef615b',
     heading: 'heading_ef615b',
     description: 'description_ef615b',
-    learnMore: 'learnMore_ef615b',
     cta: 'cta_ef615b',
     maxParticipants: 'maxParticipants_ef615b',
     peopleIcon: 'peopleIcon_ef615b',

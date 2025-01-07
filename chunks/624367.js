@@ -1,113 +1,139 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return A;
     }
 }),
     n(47120),
     n(789020);
 var i = n(200651);
 n(192379);
-var r = n(568611),
-    l = n(477690),
-    a = n(481060),
-    o = n(493683),
-    s = n(100527),
-    c = n(906732),
-    u = n(835473),
-    d = n(630388),
-    m = n(624138),
-    h = n(122613),
-    f = n(147865),
-    p = n(778569),
-    _ = n(981631),
-    g = n(388032),
-    E = n(258858);
-let C = (0, m.Mg)(l.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function I(e) {
-    var t, n, l;
-    let { applicationId: m, customId: I, referrerId: x } = e,
-        { analyticsLocations: N } = (0, c.ZP)(s.Z.ACTIVITY_BOOKMARK),
-        [v] = (0, u.Z)([m]),
-        T = null == v ? void 0 : null === (t = v.bot) || void 0 === t ? void 0 : t.id,
-        S = (0, f.ZP)(null !== (l = null == v ? void 0 : v.maxParticipants) && void 0 !== l ? l : 0),
-        A = (0, p.Z)({
-            applicationId: m,
-            size: C,
+var r = n(373793),
+    l = n(399606),
+    a = n(477690),
+    o = n(481060),
+    s = n(493683),
+    c = n(100527),
+    u = n(906732),
+    d = n(213459),
+    m = n(132871),
+    h = n(147890),
+    f = n(835473),
+    p = n(914010),
+    _ = n(585483),
+    g = n(630388),
+    E = n(624138),
+    C = n(122613),
+    I = n(147865),
+    x = n(778569),
+    N = n(981631),
+    v = n(388032),
+    T = n(258858);
+let S = (0, E.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function A(e) {
+    var t, n, a, E, A, b, j, R;
+    let { applicationId: Z, customId: P, referrerId: L } = e,
+        { analyticsLocations: y } = (0, u.ZP)(c.Z.ACTIVITY_BOOKMARK),
+        [O] = (0, f.Z)([Z]),
+        M = (0, l.e7)([p.Z], () => {
+            var e;
+            return null !== (e = p.Z.getGuildId()) && void 0 !== e ? e : void 0;
+        }),
+        k = null == O ? void 0 : null === (t = O.bot) || void 0 === t ? void 0 : t.id,
+        D = (0, I.ZP)(null !== (A = null == O ? void 0 : O.maxParticipants) && void 0 !== A ? A : 0),
+        B = (0, x.Z)({
+            applicationId: Z,
+            size: S,
             names: ['embedded_cover']
         }),
-        b = async () => {
-            if (null != T)
+        U = null !== (b = null == O ? void 0 : O.id) && void 0 !== b ? b : 1 / 0,
+        w = U in (null !== (j = null === (n = (0, d.PL)(!0, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== j ? j : {}),
+        F = U in (null !== (R = null === (a = (0, d.LD)(M, !1).result) || void 0 === a ? void 0 : a.sections) && void 0 !== R ? R : {}),
+        G = async () => {
+            if (null != k)
                 try {
-                    let e = await o.Z.openPrivateChannel(T);
-                    await (0, h.Z)({
-                        targetApplicationId: null == v ? void 0 : v.id,
+                    let e = await s.Z.openPrivateChannel(k);
+                    await (0, C.Z)({
+                        targetApplicationId: null == O ? void 0 : O.id,
                         channelId: e,
-                        analyticsLocations: N,
-                        customId: I,
-                        referrerId: x
+                        analyticsLocations: y,
+                        customId: P,
+                        referrerId: L
                     });
                 } catch (e) {}
         };
-    return null != v && (0, d.yE)(v.flags, _.udG.EMBEDDED)
-        ? (0, i.jsx)(c.Gt, {
-              value: N,
+    return null != O && (0, g.yE)(O.flags, N.udG.EMBEDDED)
+        ? (0, i.jsx)(u.Gt, {
+              value: y,
               children: (0, i.jsxs)('div', {
-                  className: E.container,
+                  className: T.container,
                   children: [
                       (0, i.jsx)('div', {
-                          className: E.imgContainer,
+                          className: T.imgContainer,
                           children: (0, i.jsx)('img', {
-                              className: E.img,
-                              alt: v.name,
-                              src: A.url
+                              className: T.img,
+                              alt: O.name,
+                              src: B.url
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: E.content,
+                          className: T.content,
                           children: [
-                              (0, i.jsx)(a.Heading, {
-                                  className: E.heading,
+                              (0, i.jsx)(o.Heading, {
+                                  className: T.heading,
                                   variant: 'heading-xl/semibold',
-                                  children: v.name
+                                  children: O.name
                               }),
-                              (0, i.jsx)(a.Heading, {
-                                  className: E.description,
+                              (0, i.jsx)(o.Heading, {
+                                  className: T.description,
                                   variant: 'heading-sm/medium',
-                                  children: null === (n = v.description) || void 0 === n ? void 0 : n.trim()
-                              }),
-                              (0, i.jsx)(a.Heading, {
-                                  className: E.learnMore,
-                                  variant: 'heading-sm/medium',
-                                  children: (0, i.jsx)(r.rU, {
-                                      to: _.Z5c.ACTIVITY_DETAILS(m),
-                                      children: g.intl.string(g.t.hvVgAQ)
-                                  })
+                                  children: null === (E = O.description) || void 0 === E ? void 0 : E.trim()
                               }),
                               (0, i.jsxs)('div', {
-                                  className: E.cta,
+                                  className: T.cta,
                                   children: [
                                       (0, i.jsxs)('div', {
-                                          className: E.maxParticipants,
+                                          className: T.maxParticipants,
                                           children: [
-                                              (0, i.jsx)(a.GroupIcon, {
+                                              (0, i.jsx)(o.GroupIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: E.peopleIcon
+                                                  className: T.peopleIcon
                                               }),
-                                              (0, i.jsx)(a.Text, {
+                                              (0, i.jsx)(o.Text, {
                                                   variant: 'text-xs/semibold',
-                                                  children: S
+                                                  children: D
                                               })
                                           ]
                                       }),
-                                      (0, i.jsx)('div', {
-                                          className: E.buttonWrapper,
-                                          children: (0, i.jsx)(a.Button, {
-                                              onClick: b,
-                                              className: E.button,
-                                              color: a.ButtonColors.GREEN,
-                                              children: g.intl.string(g.t.RscU7O)
-                                          })
+                                      (0, i.jsxs)('div', {
+                                          className: T.buttonWrapper,
+                                          children: [
+                                              null != O &&
+                                                  (0, i.jsx)(o.Button, {
+                                                      onClick: () => {
+                                                          var e;
+                                                          if (null == O) return;
+                                                          let t = w || F;
+                                                          r.Y.USER_INSTALL in (null !== (e = O.integrationTypesConfig) && void 0 !== e ? e : {}) || t
+                                                              ? _.S.dispatchToLastSubscribed(N.CkL.OPEN_APP_LAUNCHER, { applicationId: O.id })
+                                                              : (0, h.goToAppDirectory)({
+                                                                    guildId: M,
+                                                                    view: m.ApplicationDirectoryViews.APPLICATION,
+                                                                    applicationId: O.id,
+                                                                    entrypoint: { name: m.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
+                                                                });
+                                                      },
+                                                      className: T.button,
+                                                      color: o.ButtonColors.PRIMARY,
+                                                      children: v.intl.string(v.t.fbcCzc)
+                                                  }),
+                                              (0, i.jsx)(o.Button, {
+                                                  onClick: G,
+                                                  className: T.button,
+                                                  color: o.ButtonColors.GREEN,
+                                                  children: v.intl.string(v.t.RscU7O)
+                                              })
+                                          ]
                                       })
                                   ]
                               })
