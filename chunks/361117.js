@@ -5,23 +5,23 @@ n.d(t, {
 }),
     n(47120),
     n(773603);
-var i = n(192379),
-    s = n(399606),
-    r = n(570140),
+var i = n(399606),
+    s = n(570140),
+    r = n(493773),
     a = n(986197),
     l = n(135200);
 let o = (e) => {
-    let [t, n] = (0, s.Wu)([l.Z], () => [l.Z.usernameSuggestion(), l.Z.usernameSuggestionLoading()]);
+    let [t, n] = (0, i.Wu)([l.Z], () => [l.Z.usernameSuggestion(), l.Z.usernameSuggestionLoading()]);
     return (
-        i.useEffect(
+        (0, r.Z)(
             () => (
                 l.Z.wasSuggestionsFetched()
-                    ? r.Z.dispatch({
+                    ? s.Z.dispatch({
                           type: 'POMELO_SUGGESTIONS_FETCH',
                           usernameSuggestionLoading: !1
                       })
                     : a.Z.fetchSuggestions(e).finally(() => {
-                          r.Z.dispatch({
+                          s.Z.dispatch({
                               type: 'POMELO_SUGGESTIONS_FETCH',
                               usernameSuggestionLoading: !1
                           });
@@ -29,8 +29,7 @@ let o = (e) => {
                 () => {
                     a.Z.resetSuggestions();
                 }
-            ),
-            []
+            )
         ),
         {
             usernameSuggestion: t,

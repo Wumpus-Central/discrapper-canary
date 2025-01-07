@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return M;
+            return k;
         }
     }),
     n(610138),
@@ -21,115 +21,116 @@ var i = n(200651),
     m = n(375051),
     g = n(399606),
     f = n(481060),
-    p = n(209613),
-    h = n(626135),
-    _ = n(674588),
-    x = n(463571),
-    C = n(894653),
-    v = n(809547),
-    b = n(738130),
-    j = n(34674),
-    I = n(170771),
-    N = n(33146),
-    S = n(125909),
-    y = n(190733),
-    A = n(101741),
-    T = n(132871),
-    L = n(147890),
-    R = n(166996),
-    P = n(981631),
-    E = n(669867),
-    Z = n(878428);
-function M() {
+    p = n(211266),
+    h = n(209613),
+    _ = n(626135),
+    x = n(674588),
+    C = n(463571),
+    v = n(894653),
+    b = n(809547),
+    j = n(738130),
+    I = n(34674),
+    N = n(170771),
+    S = n(33146),
+    y = n(125909),
+    A = n(190733),
+    T = n(101741),
+    L = n(132871),
+    R = n(147890),
+    P = n(166996),
+    E = n(981631),
+    Z = n(669867),
+    M = n(878428);
+function k() {
     var e;
     let t;
-    let n = (0, T.useApplicationDirectoryHistory)((e) => e.guildId),
-        l = (0, g.e7)([C.Z], () => C.Z.getCategories()),
+    let n = (0, L.useApplicationDirectoryHistory)((e) => e.guildId),
+        l = (0, g.e7)([v.Z], () => v.Z.getCategories()),
         c = (0, s.TH)(),
         {
             queryParam: o,
             pageParam: d,
             categoryIdParam: f
-        } = a.useMemo(() => {
+        } = (0, p.Z)(() => {
             let e = new URLSearchParams(c.search);
             return {
                 queryParam: e.get('q'),
                 pageParam: e.get('page'),
                 categoryIdParam: e.get('category_id')
             };
-        }, []),
-        [p, x] = a.useState(null != d ? Number(d) : 1),
-        [I, M] = a.useState(null != o ? o : ''),
-        [w, G] = a.useState(null !== (e = Number(f)) && void 0 !== e ? e : j.MU),
-        O = a.useMemo(() => (null == l ? void 0 : l.find((e) => e.id === w)), [l, w]),
-        D = a.useCallback((e) => {
-            G(e.id), x(1);
-        }, []),
+        }),
+        [h, C] = a.useState(null != d ? Number(d) : 1),
+        [N, k] = a.useState(null != o ? o : ''),
+        [G, O] = a.useState(null !== (e = Number(f)) && void 0 !== e ? e : I.MU),
+        D = a.useMemo(() => (null == l ? void 0 : l.find((e) => e.id === G)), [l, G]),
         U = a.useCallback((e) => {
-            M(e), x(1), 0 === e.length && G(j.MU);
+            O(e.id), C(1);
         }, []),
-        B = a.useCallback(
+        B = a.useCallback((e) => {
+            k(e), C(1), 0 === e.length && O(I.MU);
+        }, []),
+        H = a.useCallback(
             (e) => {
                 var t, n;
                 let { query: i, categoryId: a, page: l } = e,
                     r = new URLSearchParams(c.search);
-                '' === i ? r.delete('q') : r.set('q', i), a === j.MU ? r.delete('category_id') : r.set('category_id', null !== (t = null == a ? void 0 : a.toString()) && void 0 !== t ? t : ''), 1 === l ? r.delete('page') : r.set('page', null !== (n = null == l ? void 0 : l.toString()) && void 0 !== n ? n : ''), (0, L.replaceAppDirectoryURLWith)(''.concat(P.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r.toString()));
+                '' === i ? r.delete('q') : r.set('q', i), a === I.MU ? r.delete('category_id') : r.set('category_id', null !== (t = null == a ? void 0 : a.toString()) && void 0 !== t ? t : ''), 1 === l ? r.delete('page') : r.set('page', null !== (n = null == l ? void 0 : l.toString()) && void 0 !== n ? n : ''), (0, R.replaceAppDirectoryURLWith)(''.concat(E.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r.toString()));
             },
             [c.search]
         ),
-        H = a.useMemo(() => r().debounce(B, 400), [B]);
+        z = a.useMemo(() => r().debounce(H, 400), [H]);
     a.useEffect(() => {
-        H({
-            query: I,
-            categoryId: w,
-            page: p
+        z({
+            query: N,
+            categoryId: G,
+            page: h
         });
-    }, [H, I, w, p]);
-    let z = (0, g.e7)([v.Z], () =>
-            v.Z.getFetchState({
-                query: I,
+    }, [z, N, G, h]);
+    let F = (0, g.e7)([b.Z], () =>
+            b.Z.getFetchState({
+                query: N,
                 guildId: n,
-                page: p,
+                page: h,
                 pageSize: 7,
-                categoryId: w
+                categoryId: G
             })
         ),
-        F = a.useRef({
+        Y = a.useRef({
             query: '',
             guildId: void 0,
             page: void 0,
             pageSize: void 0,
             categoryId: void 0
         }),
-        Y = (0, g.cj)([v.Z], () => {
-            let e = v.Z.getSearchResults({
-                query: I,
+        V = (0, g.cj)([b.Z], () => {
+            let e = b.Z.getSearchResults({
+                query: N,
                 guildId: n
             });
             return null != e
                 ? {
-                      [j.MU]: e.totalCount,
+                      [I.MU]: e.totalCount,
                       ...e.countsByCategory
                   }
                 : {};
         }),
         {
-            pageResults: V,
-            pageCount: W,
-            searchResultsType: q,
-            loadId: K
-        } = (0, g.cj)([v.Z], () => {
+            pageResults: W,
+            pageCount: q,
+            searchResultsType: K,
+            loadId: J
+        } = (0, g.cj)([b.Z], () => {
             var e, t;
             let i = {
-                    query: I,
+                    query: N,
                     guildId: n,
-                    page: p,
+                    page: h,
                     pageSize: 7,
-                    categoryId: w
+                    categoryId: G
                 },
-                a = v.Z.getSearchResults(i);
+                a = b.Z.getSearchResults(i);
             return (
-                null == a ? (a = v.Z.getSearchResults(F.current)) : (F.current = i),
+                null == a ? (a = b.Z.getSearchResults(Y.current)) : (Y.current = i),
                 {
                     pageResults: null == a ? void 0 : a.results,
                     pageCount: null !== (e = null == a ? void 0 : a.totalPages) && void 0 !== e ? e : 0,
@@ -138,31 +139,31 @@ function M() {
                 }
             );
         }),
-        J = a.useMemo(() => (null == V ? void 0 : V.filter((e) => !(q === m.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))), [V, q]),
-        X = a.useRef(null),
-        Q = (0, T.getCurrentView)(),
-        $ = a.useCallback(
+        X = a.useMemo(() => (null == W ? void 0 : W.filter((e) => !(K === m.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))), [W, K]),
+        Q = a.useRef(null),
+        $ = (0, L.getCurrentView)(),
+        ee = a.useCallback(
             (e) => {
-                h.default.track(P.rMx.APP_DIRECTORY_SEARCHED, {
-                    search_term: I,
+                _.default.track(E.rMx.APP_DIRECTORY_SEARCHED, {
+                    search_term: N,
                     num_results: e,
-                    current_page: null == Q ? void 0 : Q.type,
-                    result_page: p,
-                    category: null == O ? void 0 : O.name,
-                    category_id: null == O ? void 0 : O.id,
+                    current_page: null == $ ? void 0 : $.type,
+                    result_page: h,
+                    category: null == D ? void 0 : D.name,
+                    category_id: null == D ? void 0 : D.id,
                     guild_id: n
                 });
             },
-            [null == O ? void 0 : O.id, null == O ? void 0 : O.name, p, n, I, Q]
+            [null == D ? void 0 : D.id, null == D ? void 0 : D.name, h, n, N, $]
         ),
-        ee = a.useCallback((e) => {
+        et = a.useCallback((e) => {
             let { query: t, page: n, activeCategoryId: i, onSuccessCallback: a, guildId: l, fetchCounts: r } = e;
             r &&
-                _.yC({
+                x.yC({
                     query: t,
                     guildId: l
                 }),
-                _.yC({
+                x.yC({
                     query: t,
                     guildId: l,
                     options: {
@@ -172,111 +173,124 @@ function M() {
                     },
                     onSuccessCallback: a
                 }),
-                (X.current = t);
+                (Q.current = t);
         }, []),
-        [et] = a.useState(() =>
-            r().debounce(ee, 400, {
+        [en] = a.useState(() =>
+            r().debounce(et, 400, {
                 leading: !1,
                 trailing: !0
             })
         ),
-        en = a.useCallback(
-            (e) => {
-                x(e);
-            },
-            [x]
-        ),
         ei = a.useCallback(
             (e) => {
+                C(e);
+            },
+            [C]
+        ),
+        ea = a.useCallback(
+            (e) => {
                 let { application: t, mutualGuilds: i } = e;
-                h.default.track(P.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
-                    current_page: T.ApplicationDirectoryViews.SEARCH,
+                _.default.track(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                    current_page: L.ApplicationDirectoryViews.SEARCH,
                     application_id: t.id,
-                    load_id: K,
-                    search_term: I,
+                    load_id: J,
+                    search_term: N,
                     guild_id: n,
                     shown_mutual_guilds_count: i.length
                 }),
-                    (0, L.goToApplication)({ applicationId: t.id });
+                    (0, R.goToApplication)({ applicationId: t.id });
             },
-            [K, I, n]
-        );
-    a.useEffect(() => {
-        ee({
-            query: I,
-            page: p,
-            activeCategoryId: w,
+            [J, N, n]
+        ),
+        el = {
+            categoryId: G,
+            query: N,
+            trackAppDirectorySearched: ee,
             guildId: n,
-            fetchCounts: I !== X.current,
-            onSuccessCallback: $
-        });
-    }, [ee, O, n, p]),
+            page: h
+        },
+        er = a.useRef(el);
+    a.useEffect(() => {
+        er.current = el;
+    }),
         a.useEffect(() => {
+            let { categoryId: e, query: t, trackAppDirectorySearched: i } = er.current;
             et({
-                query: I,
-                page: p,
-                activeCategoryId: w,
+                query: t,
+                page: h,
+                activeCategoryId: e,
                 guildId: n,
-                fetchCounts: I !== X.current,
-                onSuccessCallback: $
+                fetchCounts: t !== Q.current,
+                onSuccessCallback: i
             });
-        }, [I, et]);
-    let ea = a.useMemo(() => Object.keys(Y).length > 0, [Y]);
+        }, [et, D, n, h]),
+        a.useEffect(() => {
+            let { categoryId: e, query: t, trackAppDirectorySearched: n, guildId: i, page: a } = er.current;
+            en({
+                query: t,
+                page: a,
+                activeCategoryId: e,
+                guildId: i,
+                fetchCounts: t !== Q.current,
+                onSuccessCallback: n
+            });
+        }, [N, en]);
+    let ec = a.useMemo(() => Object.keys(V).length > 0, [V]);
     return (
-        (null != J && 0 === W) || z === v.M.ERROR
-            ? (t = (0, i.jsx)(N.Z, {
-                  category: O,
+        (null != X && 0 === q) || F === b.M.ERROR
+            ? (t = (0, i.jsx)(S.Z, {
+                  category: D,
                   onViewAll: () => {
-                      x(1), G(j.MU);
+                      C(1), O(I.MU);
                   }
               }))
-            : null != J && J.length > 0 && q === m.c.SEARCH_RESULTS
-              ? (t = (0, i.jsx)(k, {
-                    items: J,
-                    pageCount: W,
-                    currentPage: p,
-                    showPrimaryCategory: w === j.MU,
-                    onItemClick: ei,
-                    onChangePage: en
+            : null != X && X.length > 0 && K === m.c.SEARCH_RESULTS
+              ? (t = (0, i.jsx)(w, {
+                    items: X,
+                    pageCount: q,
+                    currentPage: h,
+                    showPrimaryCategory: G === I.MU,
+                    onItemClick: ea,
+                    onChangePage: ei
                 }))
-              : null != J &&
-                J.length > 0 &&
-                q === m.c.MUSIC &&
-                (t = (0, i.jsx)(A.Z, {
+              : null != X &&
+                X.length > 0 &&
+                K === m.c.MUSIC &&
+                (t = (0, i.jsx)(T.Z, {
                     guildId: n,
-                    results: J
+                    results: X
                 })),
-        (0, i.jsx)(b.Z, {
+        (0, i.jsx)(j.Z, {
             children: (0, i.jsxs)('div', {
-                className: E.page,
+                className: Z.page,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: E.sidebar,
+                        className: Z.sidebar,
                         children: [
                             (0, i.jsx)('img', {
-                                src: Z,
+                                src: M,
                                 alt: '',
-                                className: E.sidebarImage
+                                className: Z.sidebarImage
                             }),
-                            (0, i.jsx)(R.Z, {
-                                className: E.categoryList,
-                                countsByCategory: ea ? Y : void 0,
-                                currentCategoryId: w,
-                                onView: D
+                            (0, i.jsx)(P.Z, {
+                                className: Z.categoryList,
+                                countsByCategory: ec ? V : void 0,
+                                currentCategoryId: G,
+                                onView: U
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: E.content,
+                        className: Z.content,
                         children: [
-                            (0, i.jsx)(y.Z, {
-                                query: I,
-                                onChange: U
+                            (0, i.jsx)(A.Z, {
+                                query: N,
+                                onChange: B
                             }),
-                            (0, i.jsx)(S.Z, {
-                                loading: z === v.M.FETCHING,
+                            (0, i.jsx)(y.Z, {
+                                loading: F === b.M.FETCHING,
                                 children: (0, i.jsx)('div', {
-                                    className: E.contentContainer,
+                                    className: Z.contentContainer,
                                     children: t
                                 })
                             })
@@ -287,9 +301,9 @@ function M() {
         })
     );
 }
-function k(e) {
+function w(e) {
     let { items: t, currentPage: n, pageCount: l, showPrimaryCategory: r, onItemClick: c, onChangePage: o } = e,
-        s = (0, p.Z)('application-directory-search');
+        s = (0, h.Z)('application-directory-search');
     return (0, i.jsxs)(a.Fragment, {
         children: [
             (0, i.jsx)(d.bG, {
@@ -308,12 +322,12 @@ function k(e) {
                                     return (
                                         (null === (t = a.directory_entry) || void 0 === t ? void 0 : t.short_description) != null && a.directory_entry.short_description.length > 0 ? (n = a.directory_entry.short_description) : null != a.description && a.description.length > 0 && (n = a.description),
                                         (0, i.jsx)(
-                                            x.Z,
+                                            C.Z,
                                             {
-                                                href: P.Z5c.APPLICATION_DIRECTORY_PROFILE(a.id),
-                                                children: (0, i.jsx)(I.Z, {
-                                                    className: E.listing,
-                                                    childrenClassName: E.listingDetails,
+                                                href: E.Z5c.APPLICATION_DIRECTORY_PROFILE(a.id),
+                                                children: (0, i.jsx)(N.Z, {
+                                                    className: Z.listing,
+                                                    childrenClassName: Z.listingDetails,
                                                     application: a,
                                                     onView: (e) => {
                                                         let { mutualGuilds: t } = e;
@@ -328,7 +342,7 @@ function k(e) {
                                                     children:
                                                         null != n
                                                             ? (0, i.jsx)(f.Text, {
-                                                                  className: E.listingDescription,
+                                                                  className: Z.listingDescription,
                                                                   variant: 'text-md/normal',
                                                                   lineClamp: 3,
                                                                   children: n

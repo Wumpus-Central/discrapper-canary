@@ -1,34 +1,35 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(192379),
     l = n(924826),
-    r = n(459273),
-    a = n(585483),
-    s = n(534091),
-    o = n(959517),
-    c = n(981631);
-function d(e) {
+    r = n(448986),
+    a = n(459273),
+    s = n(585483),
+    o = n(534091),
+    c = n(959517),
+    d = n(981631);
+function u(e) {
     let { scrollerRef: t, ...n } = e,
-        d = i.useCallback(() => {
+        u = (0, r.Z)(() => {
             let e = t.current;
             return null == e
                 ? Promise.resolve()
                 : new Promise((t) => {
                       e.scrollToBottom({ callback: () => requestAnimationFrame(t) });
                   });
-        }, []),
-        u = i.useCallback(() => {
+        }),
+        h = (0, r.Z)(() => {
             let e = t.current;
             return null == e
                 ? Promise.resolve()
                 : new Promise((t) => {
                       e.scrollToTop({ callback: () => requestAnimationFrame(t) });
                   });
-        }, []),
-        h = i.useCallback(
+        }),
+        p = i.useCallback(
             (e) => {
                 var i, l, r;
                 if (!n.keyboardModeEnabled) return;
@@ -39,36 +40,36 @@ function d(e) {
                         void 0 === r ||
                         r.scrollIntoViewNode({
                             node: s,
-                            padding: 4 * o.kQ,
+                            padding: 4 * c.kQ,
                             callback: () => (null == s ? void 0 : s.focus())
                         }));
             },
-            [n.keyboardModeEnabled]
+            [n.keyboardModeEnabled, t]
         ),
-        p = i.useCallback(() => {
-            !n.hasMoreAfter && a.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
+        m = i.useCallback(() => {
+            !n.hasMoreAfter && s.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
-        m = (0, l.ZP)({
-            id: s.W,
+        f = (0, l.ZP)({
+            id: o.W,
             preserveFocusPosition: !1,
-            setFocus: h,
+            setFocus: p,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,
-            scrollToStart: u,
-            scrollToEnd: d,
-            onNavigateNextAtEnd: p
+            scrollToStart: h,
+            scrollToEnd: u,
+            onNavigateNextAtEnd: m
         }),
-        f = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 let { atEnd: t = !1 } = e;
-                t ? m.focusLastVisibleItem() : m.focusFirstVisibleItem();
+                t ? f.focusLastVisibleItem() : f.focusFirstVisibleItem();
             },
-            [m]
+            [f]
         );
     return (
-        (0, r.yp)({
-            event: c.CkL.FOCUS_MESSAGES,
-            handler: f
+        (0, a.yp)({
+            event: d.CkL.FOCUS_MESSAGES,
+            handler: g
         }),
-        m
+        f
     );
 }

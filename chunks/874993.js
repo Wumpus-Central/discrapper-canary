@@ -45,11 +45,20 @@ function j(e) {
                     .flat()
                     .filter(d.lm),
             [D]
-        );
+        ),
+        P = {
+            isInEditMode: Z,
+            setEditingRule: E
+        },
+        M = r.useRef(P);
     r.useEffect(() => {
-        Z && E(null);
-    }, [A]);
-    let P = r.useCallback(
+        M.current = P;
+    }),
+        r.useEffect(() => {
+            let { isInEditMode: e, setEditingRule: t } = M.current;
+            e && t(null);
+        }, [A]);
+    let w = r.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, i;
@@ -69,15 +78,15 @@ function j(e) {
             },
             [k]
         ),
-        M = r.useMemo(() => {
+        B = r.useMemo(() => {
             var e, t;
-            return P(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
-        }, [P, S]);
+            return w(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [w, S]);
     r.useEffect(() => {
-        b(Z, (0, v.af)(M));
-    }, [b, Z, M]);
-    let w = (0, g.Z6)(A),
-        B = (e) =>
+        b(Z, (0, v.af)(B));
+    }, [b, Z, B]);
+    let U = (0, g.Z6)(A),
+        G = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
                     var t;
@@ -150,7 +159,7 @@ function j(e) {
             }),
             L
                 ? (0, i.jsx)(x.Z, {})
-                : Object.entries(w).map((e) => {
+                : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, i.jsx)(r.Fragment, {}, t);
                       let l =
@@ -169,7 +178,7 @@ function j(e) {
                           'div',
                           {
                               className: T.categoryContainer,
-                              children: [l, B(n)]
+                              children: [l, G(n)]
                           },
                           t
                       );

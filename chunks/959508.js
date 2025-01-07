@@ -53,10 +53,14 @@ function T(e) {
         z = w.config,
         W = Z && l.options.length >= v.fY,
         V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
-        Y = r.useRef(null);
-    return (r.useLayoutEffect(() => {
+        Y = r.useRef(null),
+        K = r.useRef(C);
+    return (r.useEffect(() => {
+        K.current = C;
+    }),
+    r.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === C && !d) {
+            if (0 === K.current && !d) {
                 var e;
                 null === (e = Y.current) || void 0 === e || e.focus();
             }

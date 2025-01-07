@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return v;
     }
 }),
     n(47120);
@@ -11,155 +11,153 @@ var o = n(200651),
     i = n(392711),
     s = n.n(i),
     c = n(481060),
-    u = n(110924),
-    d = n(600164),
-    b = n(313201),
-    m = n(237617),
-    f = n(572539),
-    h = n(648159),
-    x = n(63063),
-    C = n(957115),
-    E = n(531578),
-    p = n(388032),
-    N = n(720816),
-    j = n(574087);
-function I() {
+    u = n(493773),
+    d = n(110924),
+    b = n(600164),
+    m = n(313201),
+    f = n(237617),
+    h = n(572539),
+    x = n(648159),
+    C = n(63063),
+    E = n(957115),
+    p = n(531578),
+    N = n(388032),
+    j = n(720816),
+    I = n(574087);
+function T() {
     return (0, o.jsx)(c.Text, {
-        className: N.helpdeskLink,
+        className: j.helpdeskLink,
         variant: 'text-xs/normal',
         color: 'text-muted',
-        children: p.intl.format(p.t.ybi2tL, { helpdeskURL: x.Z.getSubmitRequestURL() })
+        children: N.intl.format(N.t.ybi2tL, { helpdeskURL: C.Z.getSubmitRequestURL() })
     });
 }
-function T(e) {
+function v(e) {
     var t, n;
-    let { header: a, body: i, problems: x, transitionState: T, feedbackProblems: v = {}, otherKey: g, hasCloseButton: _, onSubmit: S, onClose: k, canDismissForever: R = !0, showHelpdeskLink: B = !0 } = e,
-        O = (0, u.Z)(x),
-        [A, y] = l.useState(!1),
-        [L, Z] = l.useState(null),
-        [M, D] = l.useState(s().shuffle(x)),
-        [F, U] = l.useState(''),
-        [V, P] = l.useState(!1),
-        G = (0, b.Dt)(),
-        H = (0, m.Z)(A),
-        z = (0, m.Z)(L),
-        K = (0, m.Z)(S),
-        X = (0, m.Z)(F),
-        w = (0, m.Z)(V),
-        q = null != L ? v[L] : null,
-        W = null != q;
+    let { header: a, body: i, problems: C, transitionState: v, feedbackProblems: g = {}, otherKey: _, hasCloseButton: S, onSubmit: k, onClose: R, canDismissForever: B = !0, showHelpdeskLink: O = !0 } = e,
+        A = (0, d.Z)(C),
+        [y, L] = l.useState(!1),
+        [Z, M] = l.useState(null),
+        [D, F] = l.useState(s().shuffle(C)),
+        [U, V] = l.useState(''),
+        [P, G] = l.useState(!1),
+        H = (0, m.Dt)(),
+        z = (0, f.Z)(y),
+        K = (0, f.Z)(Z),
+        X = (0, f.Z)(k),
+        w = (0, f.Z)(U),
+        q = (0, f.Z)(P),
+        W = null != Z ? g[Z] : null,
+        Y = null != W;
     return (
         l.useEffect(() => {
-            !s().isEqual(O, x) && D((0, C.B)(x, g));
-        }, [x, O, g]),
-        l.useEffect(
-            () => () => {
-                K.current({
-                    problem: z.current,
-                    dontShowAgain: H.current,
-                    feedback: X.current,
-                    closeClicked: w.current
-                });
-            },
-            []
-        ),
+            !s().isEqual(A, C) && F((0, E.B)(C, _));
+        }, [C, A, _]),
+        (0, u.Z)(() => () => {
+            X.current({
+                problem: K.current,
+                dontShowAgain: z.current,
+                feedback: w.current,
+                closeClicked: q.current
+            });
+        }),
         (0, o.jsxs)(c.ModalRoot, {
-            transitionState: T,
-            'aria-labelledby': G,
+            transitionState: v,
+            'aria-labelledby': H,
             children: [
-                (0, o.jsx)(h.Z, {}),
+                (0, o.jsx)(x.Z, {}),
                 (0, o.jsxs)(c.ModalHeader, {
                     separator: !1,
-                    className: r()(N.headerContainer, j.headerContainer),
+                    className: r()(j.headerContainer, I.headerContainer),
                     children: [
                         (0, o.jsx)(c.Heading, {
-                            id: G,
+                            id: H,
                             variant: 'heading-xl/bold',
                             color: 'header-primary',
-                            className: N.header,
+                            className: j.header,
                             children: a
                         }),
                         (0, o.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            className: r()(N.ratingBody, j.headerBody),
-                            children: null !== (t = null == q ? void 0 : q.subheader) && void 0 !== t ? t : i
+                            className: r()(j.ratingBody, I.headerBody),
+                            children: null !== (t = null == W ? void 0 : W.subheader) && void 0 !== t ? t : i
                         }),
-                        _
+                        S
                             ? (0, o.jsx)(c.ModalCloseButton, {
-                                  className: N.modalCloseButton,
+                                  className: j.modalCloseButton,
                                   onClick: function () {
-                                      P(!0), k();
+                                      G(!0), R();
                                   }
                               })
                             : null
                     ]
                 }),
                 (0, o.jsxs)(c.ModalContent, {
-                    className: j.modalContent,
+                    className: I.modalContent,
                     children: [
-                        W
+                        Y
                             ? null
                             : (0, o.jsx)(c.FormItem, {
-                                  className: N.problemInfo,
-                                  children: (0, o.jsx)(f.Z, {
-                                      options: M,
+                                  className: j.problemInfo,
+                                  children: (0, o.jsx)(h.Z, {
+                                      options: D,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          Z(t), !Object.keys(v).includes(t) && k();
+                                          M(t), !Object.keys(g).includes(t) && R();
                                       }
                                   })
                               }),
-                        W
+                        Y
                             ? (0, o.jsxs)(c.FormItem, {
-                                  className: N.problemInfo,
+                                  className: j.problemInfo,
                                   children: [
                                       (0, o.jsx)(c.TextArea, {
-                                          value: F,
-                                          maxLength: E.iF,
-                                          onChange: U,
-                                          className: j.textArea,
-                                          placeholder: null !== (n = q.hint) && void 0 !== n ? n : p.intl.string(p.t.h95hcn)
+                                          value: U,
+                                          maxLength: p.iF,
+                                          onChange: V,
+                                          className: I.textArea,
+                                          placeholder: null !== (n = W.hint) && void 0 !== n ? n : N.intl.string(N.t.h95hcn)
                                       }),
-                                      B ? (0, o.jsx)(I, {}) : null
+                                      O ? (0, o.jsx)(T, {}) : null
                                   ]
                               })
                             : null
                     ]
                 }),
-                R || W
+                B || Y
                     ? (0, o.jsx)(c.ModalFooter, {
-                          className: r()(N.footer, W ? j.submitFooter : j.modalFooter),
-                          direction: d.Z.Direction.HORIZONTAL,
-                          children: W
+                          className: r()(j.footer, Y ? I.submitFooter : I.modalFooter),
+                          direction: b.Z.Direction.HORIZONTAL,
+                          children: Y
                               ? (0, o.jsxs)(o.Fragment, {
                                     children: [
                                         (0, o.jsx)(c.Button, {
-                                            className: j.backButton,
+                                            className: I.backButton,
                                             size: c.Button.Sizes.NONE,
                                             look: c.Button.Looks.LINK,
                                             color: c.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                Z(null), U('');
+                                                M(null), V('');
                                             },
-                                            children: p.intl.string(p.t['13/7kZ'])
+                                            children: N.intl.string(N.t['13/7kZ'])
                                         }),
                                         (0, o.jsx)(c.Button, {
                                             size: c.Button.Sizes.SMALL,
-                                            onClick: k,
-                                            children: p.intl.string(p.t.geKm7u)
+                                            onClick: R,
+                                            children: N.intl.string(N.t.geKm7u)
                                         })
                                     ]
                                 })
-                              : R
+                              : B
                                 ? (0, o.jsx)(c.Checkbox, {
                                       size: 24,
                                       type: c.Checkbox.Types.INVERTED,
-                                      value: A,
-                                      onChange: () => y(!A),
+                                      value: y,
+                                      onChange: () => L(!y),
                                       children: (0, o.jsx)(c.Text, {
                                           variant: 'text-md/normal',
-                                          children: p.intl.string(p.t.lkWab2)
+                                          children: N.intl.string(N.t.lkWab2)
                                       })
                                   })
                                 : null

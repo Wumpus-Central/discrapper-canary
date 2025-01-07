@@ -15,9 +15,7 @@ function c(e) {
         n = a.Uu(o.Plq.REQUEST_TO_SPEAK, t),
         [c, d] = i.useState(n);
     return (
-        i.useEffect(() => {
-            n !== c && d(n);
-        }, [n]),
+        n !== c && d(n),
         [
             c,
             (e) => {

@@ -73,10 +73,19 @@ t.Z = (e) => {
                 location: '6f7fb0_1'
             },
             { autoTrackExposure: !1 }
-        );
+        ),
+        B = {
+            mostRecentQuery: M,
+            showHubEventsList: w
+        },
+        U = l.useRef(B);
     l.useEffect(() => {
-        p.c$(Z.id), p.YZ(Z.id), w && h.c(Z.id), O(M);
-    }, [Z.id]),
+        U.current = B;
+    }),
+        l.useEffect(() => {
+            let { mostRecentQuery: e, showHubEventsList: t } = U.current;
+            p.c$(Z.id), p.YZ(Z.id), t && h.c(Z.id), O(e);
+        }, [Z.id]),
         l.useEffect(() => {
             u.default.track(E.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: Z.id,
@@ -84,7 +93,7 @@ t.Z = (e) => {
                 primary_category_id: S
             });
         }, [Z.id, N.id, S]);
-    let B = (0, g.G)(Z)
+    let H = (0, g.G)(Z)
             ? () => {
                   (0, a.openModalLazy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
@@ -99,7 +108,7 @@ t.Z = (e) => {
                   });
               }
             : void 0,
-        U = (e) => {
+        G = (e) => {
             0 !== k.trim().length &&
                 e.charCode === E.yXg.ENTER &&
                 (p.Rq(Z.id, k),
@@ -108,7 +117,7 @@ t.Z = (e) => {
                     directory_guild_id: N.id
                 }));
         },
-        H = () => {
+        F = () => {
             O(''), p.So(Z.id);
         };
     return D
@@ -116,9 +125,9 @@ t.Z = (e) => {
               searchQuery: k,
               setSearchQuery: O,
               mostRecentQuery: M,
-              handleSearchKeyPress: U,
-              handleClearSearch: H,
-              handleCreateOrAddGuild: B,
+              handleSearchKeyPress: G,
+              handleClearSearch: F,
+              handleCreateOrAddGuild: H,
               searchResults: L,
               searchFetching: R
           })
@@ -132,16 +141,16 @@ t.Z = (e) => {
                   className: b.pageContainer,
                   children: (0, i.jsx)(C.Z, {
                       guild: N,
-                      onAddGuild: B
+                      onAddGuild: H
                   })
               })
             : (0, i.jsx)(x.Z, {
                   channel: Z,
                   searchQuery: k,
                   setSearchQuery: O,
-                  handleSearchKeyPress: U,
-                  handleClearSearch: H,
-                  handleCreateOrAddGuild: B,
+                  handleSearchKeyPress: G,
+                  handleClearSearch: F,
+                  handleCreateOrAddGuild: H,
                   currentCategoryId: S,
                   handleSelectCategory: (e) => {
                       p.Su(Z.id, e);

@@ -155,17 +155,28 @@ function G(e) {
                     is_moderator: N,
                     action: w.T7.DISMISS
                 });
-        };
+        },
+        L = {
+            canModerate: N,
+            audienceCount: _,
+            channel: r,
+            speakerCount: g
+        },
+        k = l.useRef(L);
     l.useEffect(() => {
-        Z &&
-            j.default.track(D.rMx.BOOSTING_UPSELL_VIEWED, {
-                guild_id: r.guild_id,
-                type: w.cd.VIDEO_STAGE_LIMIT,
-                is_moderator: N,
-                listener_count: g + _
-            });
-    }, [Z]);
-    let L = (0, i.jsx)(c.ThemeProvider, {
+        k.current = L;
+    }),
+        l.useEffect(() => {
+            let { canModerate: e, audienceCount: t, channel: n, speakerCount: i } = k.current;
+            Z &&
+                j.default.track(D.rMx.BOOSTING_UPSELL_VIEWED, {
+                    guild_id: n.guild_id,
+                    type: w.cd.VIDEO_STAGE_LIMIT,
+                    is_moderator: e,
+                    listener_count: i + t
+                });
+        }, [Z]);
+    let G = (0, i.jsx)(c.ThemeProvider, {
         theme: D.BRd.DARK,
         children: (e) => {
             var t;
@@ -224,7 +235,7 @@ function G(e) {
     return Z
         ? (0, i.jsxs)('div', {
               children: [
-                  L,
+                  G,
                   (0, i.jsxs)('div', {
                       className: U.boostUpsell,
                       children: [
@@ -287,7 +298,7 @@ function G(e) {
                   })
               ]
           })
-        : L;
+        : G;
 }
 function F() {
     return (0, i.jsxs)('svg', {

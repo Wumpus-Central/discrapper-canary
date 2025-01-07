@@ -1,6 +1,7 @@
-var i = r(200651),
-    a = r(192379),
-    s = r(481060),
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    s = r(493773),
     o = r(367907),
     l = r(524444),
     u = r(297047),
@@ -14,13 +15,13 @@ function m(e) {
     let { guild: n, message: r, onClose: m } = e,
         g = c.Z.getChannel(d.Z.getChannelId(n.id));
     if (
-        (a.useEffect(() => {
+        ((0, s.Z)(() => {
             f.default.track(_.rMx.OPEN_POPOUT, {
                 type: 'New Member Badge Popout',
                 guild_id: n.id,
                 channel_id: null == g ? void 0 : g.id
             });
-        }, []),
+        }),
         null == g)
     )
         return null;
@@ -36,7 +37,7 @@ function m(e) {
                     children: [
                         (0, i.jsx)('div', {
                             className: p.iconContainer,
-                            children: (0, i.jsx)(s.NewUserIcon, {
+                            children: (0, i.jsx)(a.NewUserIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
@@ -45,12 +46,12 @@ function m(e) {
                         }),
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(a.Heading, {
                                     variant: 'heading-md/semibold',
                                     className: p.header,
                                     children: h.intl.string(h.t['v/OYd3'])
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/normal',
                                     children: h.intl.string(h.t.Z85MlJ)
                                 })
@@ -58,9 +59,9 @@ function m(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(s.Button, {
-                    size: s.Button.Sizes.SMALL,
-                    color: s.Button.Colors.BRAND,
+                (0, i.jsx)(a.Button, {
+                    size: a.Button.Sizes.SMALL,
+                    color: a.Button.Colors.BRAND,
                     className: p.ctaButton,
                     innerClassName: p.ctaButtonContent,
                     fullWidth: !0,

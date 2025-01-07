@@ -774,21 +774,30 @@ t.Z = l.memo(function (e) {
                 let { channelId: e } = null !== (n = (0, eu.Qj)(null == i ? void 0 : null === (t = i.location) || void 0 === t ? void 0 : t.pathname)) && void 0 !== n ? n : {};
                 null != e && a(e);
             }
-        }, []),
-        l.useEffect(() => {
-            null != r && null != c && eg && c.id === r && !ec && ((0, eb.Cq)(c), a(null));
-        }, [r, eg]);
-    let ex = (0, N.ts)(c),
-        ev = null != c && c.isPrivate(),
-        e_ = (0, S.Z)(ev),
-        eI = (0, S.Z)(null == c ? void 0 : c.id);
+        }, []);
+    let ex = {
+            channel: c,
+            inCurrentVoiceChannel: ec
+        },
+        ev = l.useRef(ex);
     l.useEffect(() => {
-        let e = e_ && !ev,
-            t = e_ && ev && (null == c ? void 0 : c.id) !== eI;
+        ev.current = ex;
+    }),
+        l.useEffect(() => {
+            let { channel: e, inCurrentVoiceChannel: t } = ev.current;
+            null != r && null != e && eg && e.id === r && !t && ((0, eb.Cq)(e), a(null));
+        }, [r, eg]);
+    let e_ = (0, N.ts)(c),
+        eI = null != c && c.isPrivate(),
+        eE = (0, S.Z)(eI),
+        eZ = (0, S.Z)(null == c ? void 0 : c.id);
+    l.useEffect(() => {
+        let e = eE && !eI,
+            t = eE && eI && (null == c ? void 0 : c.id) !== eZ;
         (e || t) && (0, B.EW)(m.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
-    }, [null == c ? void 0 : c.id, eI, ev, e_]);
-    let eE = (0, f.f9)(),
-        eZ = (0, D.Q3)('Channel');
+    }, [null == c ? void 0 : c.id, eZ, eI, eE]);
+    let eN = (0, f.f9)(),
+        eS = (0, D.Q3)('Channel');
     return (0, i.jsx)(tl, {
         guildId: null == c ? void 0 : c.guild_id,
         channelId: s,
@@ -800,7 +809,7 @@ t.Z = l.memo(function (e) {
         layout: K,
         needSubscriptionToAccess: I,
         isLurking: z,
-        hasModalOpen: eE,
+        hasModalOpen: eN,
         section: $,
         channelSidebarState: ee,
         guildSidebarState: en,
@@ -818,11 +827,11 @@ t.Z = l.memo(function (e) {
         inCall: ec,
         selectedParticipant: q,
         nsfwAllowed: (null == X ? void 0 : X.nsfwAllowed) === !0,
-        showChannelSummaries: ex,
+        showChannelSummaries: e_,
         isFavorites: ei,
         headerGuildBreadcrumbPosition: ei ? 'left' : 'right',
         premiumIndicatorEnabled: el || ea.enabled,
         hasTextActivityInPanelMode: w,
-        isRefreshEnabled: eZ
+        isRefreshEnabled: eS
     });
 });

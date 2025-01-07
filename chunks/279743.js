@@ -16,73 +16,84 @@ var i = n(200651),
     m = n(663389),
     h = n(770082);
 function g(e) {
-    let { children: t, className: n, onFlashEnd: r, animationDelay: m = 500 } = e,
-        g = c.tokens.colors.TEXT_LINK,
-        p = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
-        x = (0, c.useToken)(g).spring({ opacity: 0 }),
-        S = (0, c.useToken)(g).spring({ opacity: 0.1 }),
-        T = (0, c.useToken)(g).spring({ opacity: 0 }),
-        E = (0, c.useToken)(g).spring({ opacity: 1 }),
-        C = (e) => {
-            e.finished && (null == r || r());
-        },
-        [_, f] = (0, c.useSpring)(
+    let { children: t, className: n, onFlashEnd: r, animationDelay: d = 500 } = e,
+        m = c.tokens.colors.TEXT_LINK,
+        g = (0, c.useToken)(m).spring({ opacity: 0 }),
+        p = (0, c.useToken)(m).spring({ opacity: 0.1 }),
+        x = (0, c.useToken)(m).spring({ opacity: 0 }),
+        S = (0, c.useToken)(m).spring({ opacity: 1 }),
+        [T, E] = (0, c.useSpring)(
             () => ({
                 from: {
-                    backgroundColor: x,
-                    borderColor: x
+                    backgroundColor: g,
+                    borderColor: g
                 }
             }),
             'animate-never'
         ),
-        I = m + 200 + 200,
-        N = p ? 0 : 200;
+        C = {
+            startColor: g,
+            handleRest: (e) => {
+                e.finished && (null == r || r());
+            },
+            endColor: x,
+            targetBorderColor: S,
+            targetColor: p,
+            animationDelay: d
+        },
+        _ = s.useRef(C);
     return (
         s.useEffect(() => {
-            f({
+            _.current = C;
+        }),
+        s.useEffect(() => {
+            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: i, targetColor: s, animationDelay: r } = _.current,
+                { useReducedMotion: l } = u.Z,
+                a = l ? 0 : 200;
+            E({
                 reset: !0,
                 immediate: !1,
                 to: {
-                    backgroundColor: x,
-                    borderColor: x
+                    backgroundColor: e,
+                    borderColor: e
                 },
                 config: {
-                    duration: N,
+                    duration: a,
                     easing: o.Z.Easing.ease
                 }
             }),
-                f({
-                    delay: m,
-                    immediate: p,
+                E({
+                    delay: r,
+                    immediate: l,
                     to: [
                         {
-                            backgroundColor: S,
-                            borderColor: E
+                            backgroundColor: s,
+                            borderColor: i
                         }
                     ],
                     config: {
-                        duration: N,
+                        duration: a,
                         easing: o.Z.Easing.ease
                     }
                 }),
-                f({
-                    delay: I,
-                    immediate: p,
+                E({
+                    delay: r + 200 + 200,
+                    immediate: l,
                     to: [
                         {
-                            backgroundColor: T,
-                            borderColor: T
+                            backgroundColor: n,
+                            borderColor: n
                         }
                     ],
                     config: {
-                        duration: N,
+                        duration: a,
                         easing: o.Z.Easing.ease
                     },
-                    onRest: C
+                    onRest: t
                 });
-        }, [f]),
+        }, [E]),
         (0, i.jsx)(a.animated.div, {
-            style: _,
+            style: T,
             className: l()(h.settingsItemHighlight, n),
             children: t
         })

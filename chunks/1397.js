@@ -312,11 +312,15 @@ function z(e) {
         w = (0, s.e7)([E.Z], () => E.Z.getRequest(o)),
         [U, H] = (0, m.L_)(o),
         G = (0, m.Cc)(o),
-        F = (null == w ? void 0 : w.applicationStatus) === _.wB.APPROVED;
+        F = (null == w ? void 0 : w.applicationStatus) === _.wB.APPROVED,
+        z = l.useRef(H);
     l.useEffect(() => {
-        if (!(!(0, f.EJ)(c) || !F || (0, x.d3)(w)) && null == G) H();
-    }, [c, F, w, G]);
-    let z = {
+        z.current = H;
+    }),
+        l.useEffect(() => {
+            if (!(!(0, f.EJ)(c) || !F || (0, x.d3)(w)) && null == G) z.current();
+        }, [c, F, w, G]);
+    let W = {
         ...d,
         guild: c,
         isLurking: g,
@@ -336,7 +340,7 @@ function z(e) {
         clanInfo: G
     };
     return (0, i.jsx)(V, {
-        ...z,
+        ...W,
         channel: r,
         children: a
     });

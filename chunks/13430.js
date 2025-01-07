@@ -6,20 +6,21 @@ var r = n(200651),
     i = n(913527),
     s = n.n(i),
     c = n(481060),
-    u = n(285888),
-    d = n(388032),
-    p = n(234293);
-let h = s()().localeData().months(),
-    f = Array.from(Array(31).keys()).map((e) => ({
+    u = n(493773),
+    d = n(285888),
+    p = n(388032),
+    h = n(234293);
+let f = s()().localeData().months(),
+    v = Array.from(Array(31).keys()).map((e) => ({
         value: e + 1,
         label: ''.concat(e + 1)
     })),
-    v = Array.from(Array(12).keys()).map((e) => ({
+    m = Array.from(Array(12).keys()).map((e) => ({
         value: e + 1,
-        label: h[e]
+        label: f[e]
     })),
-    m = /[a-zA-Z0-9]/;
-function b(e) {
+    b = /[a-zA-Z0-9]/;
+function g(e) {
     let { options: t, selectOption: n, children: l } = e,
         [o, i] = a.useState('');
     a.useEffect(() => {
@@ -30,7 +31,7 @@ function b(e) {
     }, [o, i]);
     let s = a.useCallback(
         (e) => {
-            if (m.test(e.key)) {
+            if (b.test(e.key)) {
                 let r = ''.concat(o).concat(e.key.toLowerCase()),
                     a = t.find((e) => e.label.toLowerCase().startsWith(r));
                 null != a && n(a.value), i(r);
@@ -43,7 +44,7 @@ function b(e) {
         children: l
     });
 }
-function g() {
+function x() {
     let e = s()().localeData().longDateFormat('L'),
         t = e.indexOf('D'),
         n = e.indexOf('M'),
@@ -66,15 +67,15 @@ function g() {
         ].sort((e, t) => (e.index < t.index ? -1 : 1))
     );
 }
-let x = a.forwardRef(function (e, t) {
-    let { value: n, wrapperClassName: l, onChange: i, onPopulated: h, error: m, autoFocus: x, required: E } = e,
+let E = a.forwardRef(function (e, t) {
+    let { value: n, wrapperClassName: l, onChange: i, onPopulated: f, error: b, autoFocus: E, required: y } = e,
         {
-            day: y,
-            setDay: _,
-            month: A,
-            setMonth: k,
-            year: T,
-            setYear: M
+            day: _,
+            setDay: A,
+            month: k,
+            setMonth: T,
+            year: M,
+            setYear: C
         } = (function (e) {
             let t = null,
                 n = null,
@@ -92,13 +93,13 @@ let x = a.forwardRef(function (e, t) {
                 setYear: u
             };
         })(n),
-        C = a.useMemo(() => (null != y && null != A && null != T ? s()(''.concat(y, '/').concat(A, '/').concat(T), 'DD/MM/YYYY') : null), [y, A, T]);
+        O = a.useMemo(() => (null != _ && null != k && null != M ? s()(''.concat(_, '/').concat(k, '/').concat(M), 'DD/MM/YYYY') : null), [_, k, M]);
     a.useEffect(() => {
-        i((null == C ? void 0 : C.isValid()) ? C : null);
-    }, [C, i]);
-    let O = m;
-    null != C && !C.isValid() && (O = d.intl.string(d.t.udnqh4));
-    let R = (function () {
+        i((null == O ? void 0 : O.isValid()) ? O : null);
+    }, [O, i]);
+    let R = b;
+    null != O && !O.isValid() && (R = p.intl.string(p.t.udnqh4));
+    let G = (function () {
             let e = new Date().getFullYear(),
                 t = a.useRef(
                     Array.from(Array(150).keys()).map((t) => ({
@@ -116,58 +117,70 @@ let x = a.forwardRef(function (e, t) {
                 t.current
             );
         })(),
-        [G, N] = a.useState(x ? 0 : -1),
-        S = a.useRef(null),
+        [N, S] = a.useState(E ? 0 : -1),
         w = a.useRef(null),
         D = a.useRef(null),
-        j = a.useMemo(g, []),
-        P = a.useCallback(() => {
+        j = a.useRef(null),
+        P = a.useMemo(x, []),
+        Z = a.useCallback(() => {
             var e, t, n, r;
-            switch (null === (e = j[G]) || void 0 === e ? void 0 : e.type) {
+            switch (null === (e = P[N]) || void 0 === e ? void 0 : e.type) {
                 case 'day':
-                    null === (t = S.current) || void 0 === t || t.focus();
+                    null === (t = w.current) || void 0 === t || t.focus();
                     break;
                 case 'month':
-                    null === (n = w.current) || void 0 === n || n.focus();
+                    null === (n = D.current) || void 0 === n || n.focus();
                     break;
                 case 'year':
-                    null === (r = D.current) || void 0 === r || r.focus();
+                    null === (r = j.current) || void 0 === r || r.focus();
             }
-        }, [G, S, w, D, j]);
+        }, [N, w, D, j, P]);
+    (0, u.Z)(() => {
+        let e = setTimeout(Z, 500);
+        return () => {
+            clearTimeout(e);
+        };
+    });
+    let F = {
+            onPopulated: f,
+            sortedInputs: P
+        },
+        I = a.useRef(F);
     a.useEffect(() => {
-        setTimeout(P, 500);
-    }, []),
+        I.current = F;
+    }),
         a.useEffect(() => {
-            if (G >= j.length) {
-                null == h || h();
+            let { onPopulated: e, sortedInputs: t } = I.current;
+            if (N >= t.length) {
+                null == e || e();
                 return;
             }
-            P();
-        }, [G, P]);
-    let F = [];
+            Z();
+        }, [N, Z]);
+    let U = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = j[e];
+        let { type: t } = P[e];
         switch (t) {
             case 'day':
-                F.push({
+                U.push({
                     key: 'day',
-                    input: (0, r.jsx)(b, {
-                        options: f,
-                        selectOption: _,
-                        children: (0, r.jsx)(u.Z, {
-                            ref: S,
-                            className: p.__invalid_inputDay,
-                            'aria-label': d.intl.string(d.t.Voklra),
-                            menuPlacement: u.Z.MenuPlacements.TOP,
+                    input: (0, r.jsx)(g, {
+                        options: v,
+                        selectOption: A,
+                        children: (0, r.jsx)(d.Z, {
+                            ref: w,
+                            className: h.__invalid_inputDay,
+                            'aria-label': p.intl.string(p.t.Voklra),
+                            menuPlacement: d.Z.MenuPlacements.TOP,
                             placeholder: (0, r.jsx)('span', {
                                 'aria-hidden': !0,
-                                children: d.intl.string(d.t.Voklra)
+                                children: p.intl.string(p.t.Voklra)
                             }),
-                            options: f,
-                            value: y,
+                            options: v,
+                            value: _,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                _(n), N(e + 1);
+                                A(n), S(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -175,25 +188,25 @@ let x = a.forwardRef(function (e, t) {
                 });
                 break;
             case 'month':
-                F.push({
+                U.push({
                     key: 'month',
-                    input: (0, r.jsx)(b, {
-                        options: v,
-                        selectOption: k,
-                        children: (0, r.jsx)(u.Z, {
-                            ref: w,
-                            className: p.__invalid_inputMonth,
-                            'aria-label': d.intl.string(d.t.UDlN8f),
-                            menuPlacement: u.Z.MenuPlacements.TOP,
+                    input: (0, r.jsx)(g, {
+                        options: m,
+                        selectOption: T,
+                        children: (0, r.jsx)(d.Z, {
+                            ref: D,
+                            className: h.__invalid_inputMonth,
+                            'aria-label': p.intl.string(p.t.UDlN8f),
+                            menuPlacement: d.Z.MenuPlacements.TOP,
                             placeholder: (0, r.jsx)('span', {
                                 'aria-hidden': !0,
-                                children: d.intl.string(d.t.UDlN8f)
+                                children: p.intl.string(p.t.UDlN8f)
                             }),
-                            options: v,
-                            value: A,
+                            options: m,
+                            value: k,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                k(n), N(e + 1);
+                                T(n), S(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -201,25 +214,25 @@ let x = a.forwardRef(function (e, t) {
                 });
                 break;
             case 'year':
-                F.push({
+                U.push({
                     key: 'year',
-                    input: (0, r.jsx)(b, {
-                        options: R,
-                        selectOption: M,
-                        children: (0, r.jsx)(u.Z, {
-                            ref: D,
-                            className: p.__invalid_inputYear,
-                            'aria-label': d.intl.string(d.t.ZWr5WF),
-                            menuPlacement: u.Z.MenuPlacements.TOP,
+                    input: (0, r.jsx)(g, {
+                        options: G,
+                        selectOption: C,
+                        children: (0, r.jsx)(d.Z, {
+                            ref: j,
+                            className: h.__invalid_inputYear,
+                            'aria-label': p.intl.string(p.t.ZWr5WF),
+                            menuPlacement: d.Z.MenuPlacements.TOP,
                             placeholder: (0, r.jsx)('span', {
                                 'aria-hidden': !0,
-                                children: d.intl.string(d.t.ZWr5WF)
+                                children: p.intl.string(p.t.ZWr5WF)
                             }),
-                            options: R,
-                            value: T,
+                            options: G,
+                            value: M,
                             onChange: (t) => {
                                 let { value: n } = t;
-                                M(n), N(e + 1);
+                                C(n), S(e + 1);
                             },
                             maxMenuHeight: 215
                         })
@@ -228,23 +241,23 @@ let x = a.forwardRef(function (e, t) {
         }
     }
     return (0, r.jsxs)('fieldset', {
-        className: o()(p.container, l),
+        className: o()(h.container, l),
         children: [
             (0, r.jsx)(c.FormTitle, {
                 tag: 'legend',
-                required: E,
-                error: O,
-                children: d.intl.string(d.t.xNpFJy)
+                required: y,
+                error: R,
+                children: p.intl.string(p.t.xNpFJy)
             }),
             (0, r.jsx)('div', {
-                className: p.inputs,
-                children: F.map((e, t) => {
+                className: h.inputs,
+                children: U.map((e, t) => {
                     let { key: n, input: a } = e;
                     return (0, r.jsx)(
                         'div',
                         {
                             tabIndex: t + 1,
-                            className: p[n],
+                            className: h[n],
                             children: a
                         },
                         n
@@ -254,4 +267,4 @@ let x = a.forwardRef(function (e, t) {
         ]
     });
 });
-t.Z = x;
+t.Z = E;

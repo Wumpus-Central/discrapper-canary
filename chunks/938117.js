@@ -30,11 +30,21 @@ function N(e) {
         B = c.ZP.canUseCustomBackgrounds(T),
         S = (0, o.cj)([u.Z], () => (B ? u.Z.videoFilterAssets : {})),
         U = s.useMemo(() => Object.values(S).filter((e) => e.type === O.xV.BACKGROUND), [S]),
-        y = (0, a.O)();
+        y = (0, a.O)(),
+        D = {
+            isVideoBackgroundSupported: E,
+            onSelectBackgroundOption: f,
+            selectedBackgroundOption: N
+        },
+        M = s.useRef(D);
     s.useEffect(() => {
-        E ? (0, m.FU)(N, v, { track: !1 }).catch(() => f(null)) : null != N && f(null);
-    }, [v]);
-    let D = (e) => {
+        M.current = D;
+    }),
+        s.useEffect(() => {
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: n, selectedBackgroundOption: t } = M.current;
+            e ? (0, m.FU)(t, v, { track: !1 }).catch(() => n(null)) : null != t && n(null);
+        }, [v]);
+    let Z = (e) => {
         f(e),
             (0, m.FU)(e, v, { location: y.location })
                 .then(() => C(null))
@@ -61,7 +71,7 @@ function N(e) {
                       canUseCustomBackgrounds: B,
                       customBackgroundOptions: U,
                       selectedOption: N,
-                      onSelectOption: D,
+                      onSelectOption: Z,
                       onUpsellClick: () => {
                           (0, i.openModalLazy)(async () => {
                               let { default: e } = await t.e('87200').then(t.bind(t, 592163));
@@ -81,7 +91,7 @@ function N(e) {
                           return new Promise(async (l) => {
                               try {
                                   let l = await (0, d.Ff)(e, O.xV.BACKGROUND);
-                                  D(l), (0, g.g5)(l, n.type === j.m.MP4, t), C(null);
+                                  Z(l), (0, g.g5)(l, n.type === j.m.MP4, t), C(null);
                               } catch (e) {
                                   C(e.message);
                               }

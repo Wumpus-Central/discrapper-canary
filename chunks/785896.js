@@ -33,27 +33,33 @@ let f = (e, n, r) => {
             [E, v] = a.useState(null),
             I = null != i ? c.JO.createFromGuildRecord(i) : null,
             [T, b] = a.useState(I),
-            [y, S] = a.useState(null);
+            [y, S] = a.useState(null),
+            A = a.useRef(r);
         return (
             a.useEffect(() => {
-                null == r || r();
-                let e = async () => {
-                    let e = null != n ? await (0, c.Fi)(n) : null;
-                    if (null != e)
-                        switch ((v(e.type), e.type)) {
+                A.current = r;
+            }),
+            a.useEffect(() => {
+                var e, r;
+                null === (e = A.current) || void 0 === e || e.call(A);
+                let i = async () => {
+                    var e;
+                    let r = null != n ? await (0, c.Fi)(n) : null;
+                    if (null != r)
+                        switch ((v(r.type), r.type)) {
                             case c.w6.APPLICATION:
-                                S(e.application);
+                                S(r.application);
                                 break;
                             case c.w6.GUILD:
-                                b(e.guild);
+                                b(r.guild);
                         }
-                    g(!1), null == r || r();
+                    g(!1), null === (e = A.current) || void 0 === e || e.call(A);
                 };
                 if (p) {
-                    e();
+                    i();
                     return;
                 }
-                null == r || r();
+                null === (r = A.current) || void 0 === r || r.call(A);
             }, [n, p]),
             {
                 expressionSourceGuild: T,

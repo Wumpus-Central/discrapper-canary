@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eo;
+        return ec;
     }
 }),
     n(47120);
@@ -14,175 +14,176 @@ var i = n(200651),
     d = n(481060),
     u = n(570140),
     h = n(393238),
-    p = n(40851),
-    m = n(100527),
-    f = n(906732),
-    g = n(358221),
-    C = n(414910),
-    x = n(909820),
-    v = n(493010),
-    _ = n(71127),
-    I = n(185935),
-    E = n(788983),
-    b = n(928518),
-    Z = n(703656),
-    N = n(493754),
-    S = n(880831),
-    T = n(73563),
-    j = n(800965),
-    A = n(107169),
-    y = n(891551),
-    P = n(314897),
-    M = n(979696),
-    R = n(430824),
-    L = n(496675),
-    k = n(944486),
-    O = n(358085),
-    D = n(998502),
-    w = n(922482),
-    B = n(431328),
-    U = n(501655),
-    H = n(427679),
-    G = n(513449),
-    F = n(153349),
-    V = n(901434),
-    z = n(302270),
-    W = n(308177),
-    K = n(700483),
-    Y = n(686468),
-    q = n(801405),
-    X = n(903108),
-    J = n(981631),
-    Q = n(354459),
-    $ = n(388032),
-    ee = n(322455);
-let et = 'HasBeenInStageChannel',
-    en = (e, t) => () => {
+    p = n(493773),
+    m = n(40851),
+    f = n(100527),
+    g = n(906732),
+    C = n(358221),
+    x = n(414910),
+    v = n(909820),
+    _ = n(493010),
+    I = n(71127),
+    E = n(185935),
+    b = n(788983),
+    Z = n(928518),
+    N = n(703656),
+    S = n(493754),
+    T = n(880831),
+    j = n(73563),
+    A = n(800965),
+    y = n(107169),
+    P = n(891551),
+    M = n(314897),
+    R = n(979696),
+    L = n(430824),
+    k = n(496675),
+    O = n(944486),
+    D = n(358085),
+    w = n(998502),
+    B = n(922482),
+    U = n(431328),
+    H = n(501655),
+    G = n(427679),
+    F = n(513449),
+    V = n(153349),
+    z = n(901434),
+    W = n(302270),
+    K = n(308177),
+    Y = n(700483),
+    q = n(686468),
+    X = n(801405),
+    J = n(903108),
+    Q = n(981631),
+    $ = n(354459),
+    ee = n(388032),
+    et = n(322455);
+let en = 'HasBeenInStageChannel',
+    ei = (e, t) => () => {
         let n = e.getGuildId();
-        null != n && null != t && (0, Z.XU)(n, t), E.hP(e);
+        null != n && null != t && (0, N.XU)(n, t), b.hP(e);
     },
-    ei = () => {
-        u.Z.wait(() => E.xv(J.KJ3.CHANNEL_CALL_POPOUT));
+    el = () => {
+        u.Z.wait(() => b.xv(Q.KJ3.CHANNEL_CALL_POPOUT));
     },
-    el = (e) => {
-        E.hY(J.KJ3.CHANNEL_CALL_POPOUT, e);
+    er = (e) => {
+        b.hY(Q.KJ3.CHANNEL_CALL_POPOUT, e);
     };
-function er(e) {
+function ea(e) {
     let { channel: t, appContext: n, popoutOpen: r, popoutWindow: a, popoutWindowAlwaysOnTop: s, selectedParticipant: c } = e,
         d = t.getGuildId(),
-        u = (0, o.e7)([k.Z], () => k.Z.getMostRecentSelectedTextChannelId(d), [d]),
-        h = P.default.getId(),
-        p = !(0, o.e7)([g.Z], () => g.Z.isFullscreenInContext(n)) && (!O.isPlatformEmbedded || (O.isPlatformEmbedded && D.ZP.supportsFeature(J.eRX.POPOUT_WINDOWS))),
-        m = null != c && c.type !== Q.fO.ACTIVITY && c.user.id !== h,
+        u = (0, o.e7)([O.Z], () => O.Z.getMostRecentSelectedTextChannelId(d), [d]),
+        h = M.default.getId(),
+        p = !(0, o.e7)([C.Z], () => C.Z.isFullscreenInContext(n)) && (!D.isPlatformEmbedded || (D.isPlatformEmbedded && w.ZP.supportsFeature(Q.eRX.POPOUT_WINDOWS))),
+        m = null != c && c.type !== $.fO.ACTIVITY && c.user.id !== h,
         f = l.useMemo(() => {
             var e;
             return null !== (e = null == a ? void 0 : a.window) && void 0 !== e ? e : window;
         }, [a]),
-        x = (0, q.Z)({
+        g = (0, X.Z)({
             channel: t,
             appContext: n,
             popoutOpen: r,
             popoutWindow: a,
             currentWindow: f
         }),
-        v = n === J.IlC.POPOUT && O.isPlatformEmbedded && D.ZP.supportsFeature(J.eRX.POPOUT_WINDOWS);
+        v = n === Q.IlC.POPOUT && D.isPlatformEmbedded && w.ZP.supportsFeature(Q.eRX.POPOUT_WINDOWS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             m
-                ? (0, i.jsx)(y.Z, {
-                      context: (0, C.Z)(c.type),
+                ? (0, i.jsx)(P.Z, {
+                      context: (0, x.Z)(c.type),
                       userId: c.user.id,
                       currentWindow: f,
-                      sliderClassName: ee.volumeSlider
+                      sliderClassName: et.volumeSlider
                   })
                 : null,
             v
-                ? (0, i.jsx)(A.Z, {
-                      className: ee.rightTrayIcon,
+                ? (0, i.jsx)(y.Z, {
+                      className: et.rightTrayIcon,
                       popoutWindowAlwaysOnTop: s,
-                      onToggleStayOnTop: el
+                      onToggleStayOnTop: er
                   })
                 : null,
             p
-                ? (0, i.jsx)(j.Z, {
-                      className: ee.rightTrayIcon,
+                ? (0, i.jsx)(A.Z, {
+                      className: et.rightTrayIcon,
                       popoutOpen: r,
-                      onOpenPopout: en(t, u),
-                      onClosePopout: ei
+                      onOpenPopout: ei(t, u),
+                      onClosePopout: el
                   })
                 : null,
-            x
+            g
         ]
     });
 }
-function ea(e) {
+function es(e) {
     let { channel: t } = e,
-        n = (0, p.bp)(),
-        l = (0, o.e7)([L.Z], () => L.Z.can(J.Plq.CREATE_INSTANT_INVITE, t)),
-        r = (0, o.e7)([R.Z], () => R.Z.getGuild(t.guild_id)),
-        a = (0, o.e7)([H.Z], () => H.Z.getStageInstanceByChannel(t.id)),
+        n = (0, m.bp)(),
+        l = (0, o.e7)([k.Z], () => k.Z.can(Q.Plq.CREATE_INSTANT_INVITE, t)),
+        r = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id)),
+        a = (0, o.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id)),
         s = l || (null == a ? void 0 : a.invite_code) != null;
     return null != r && s
-        ? (0, i.jsx)(N.Z, {
+        ? (0, i.jsx)(S.Z, {
               channel: t,
               appContext: n,
-              className: ee.__invalid_leftTrayIcon,
-              analyticsLocation: J.ZY5.GUILD_CHANNEL
+              className: et.__invalid_leftTrayIcon,
+              analyticsLocation: Q.ZY5.GUILD_CHANNEL
           })
         : null;
 }
-function es(e) {
+function eo(e) {
     let t,
-        { channel: n, toggleRequestToSpeakSidebar: r, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: u, popoutOpen: h, chatOpen: m } = e,
-        f = (0, p.bp)(),
-        C = (0, o.e7)([k.Z], () => k.Z.getVoiceChannelId() === n.id, [n.id]),
-        v = (0, o.e7)([L.Z], () => L.Z.can(J.Plq.CONNECT, n)),
-        _ = (0, B.w8)(n.id, U.pV.SPEAKER),
-        I = (0, o.e7)([g.Z], () => g.Z.getSelectedParticipant(n.id)),
-        E = h && f !== J.IlC.POPOUT,
+        { channel: n, toggleRequestToSpeakSidebar: r, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: u, popoutOpen: h, chatOpen: p } = e,
+        f = (0, m.bp)(),
+        g = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId() === n.id, [n.id]),
+        x = (0, o.e7)([k.Z], () => k.Z.can(Q.Plq.CONNECT, n)),
+        _ = (0, U.w8)(n.id, H.pV.SPEAKER),
+        I = (0, o.e7)([C.Z], () => C.Z.getSelectedParticipant(n.id)),
+        E = h && f !== Q.IlC.POPOUT,
         [b, Z] = l.useState(0),
-        { isOnStartStageScreen: N } = (0, G.ZP)();
-    (0, G.MV)(n);
-    let j = (0, o.e7)([M.Z], () => M.Z.getToastsEnabled(n.id)),
-        A = (0, X.Z)(n) ? (null != I ? '84px' : '124px') : null != I ? '0px' : '48px';
+        { isOnStartStageScreen: N } = (0, F.ZP)();
+    (0, F.MV)(n);
+    let S = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)),
+        A = (0, J.Z)(n) ? (null != I ? '84px' : '124px') : null != I ? '0px' : '48px';
     return (
         (t = N
-            ? (0, i.jsx)(Y.Z, {
+            ? (0, i.jsx)(q.Z, {
                   channel: n,
                   onContinueClick: () => {
-                      (0, G.Ku)(!1), !C && (0, w.TM)(n);
+                      (0, F.Ku)(!1), !g && (0, B.TM)(n);
                   }
               })
-            : C
-              ? (0, i.jsx)(W.Z, {
+            : g
+              ? (0, i.jsx)(K.Z, {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
                         (0, s.debounce)(() => Z(t), 1000, { leading: !0 })();
                     }
                 })
-              : (0, i.jsx)(V.Z, {
+              : (0, i.jsx)(z.Z, {
                     participants: _,
                     channel: n,
-                    hasConnectPermission: v
+                    hasConnectPermission: x
                 })),
-        (0, i.jsx)(T.Z, {
+        (0, i.jsx)(j.Z, {
             style: {
                 height: 'calc(100% - '.concat(A, ')'),
                 paddingTop: A
             },
-            disableGradients: 0 === b && T.e.TOP,
-            renderBottomLeft: () => (0, i.jsx)(ea, { channel: n }),
+            disableGradients: 0 === b && j.e.TOP,
+            renderBottomLeft: () => (0, i.jsx)(es, { channel: n }),
             renderBottomCenter: () =>
-                C
-                    ? (0, i.jsx)(K.Z, {
+                g
+                    ? (0, i.jsx)(Y.Z, {
                           channel: n,
                           isOnStartStageScreen: N
                       })
                     : null,
             renderBottomRight: () =>
-                C
-                    ? (0, i.jsx)(er, {
+                g
+                    ? (0, i.jsx)(ea, {
                           channel: n,
                           appContext: f,
                           popoutOpen: h,
@@ -192,18 +193,18 @@ function es(e) {
                       })
                     : null,
             renderHeader: () =>
-                (0, i.jsx)(z.Z, {
-                    inPopout: f === J.IlC.POPOUT,
+                (0, i.jsx)(W.Z, {
+                    inPopout: f === Q.IlC.POPOUT,
                     toggleRequestToSpeakSidebar: r,
                     showRequestToSpeakSidebar: c,
                     channel: n
                 }),
             renderChatToasts: () =>
-                !j || m || E
+                !S || p || E
                     ? null
-                    : (0, i.jsx)(x.ZP, {
-                          children: (0, i.jsx)(S.Z, {
-                              className: a()(ee.chatToasts, { [ee.rtsSidebarOpen]: c }),
+                    : (0, i.jsx)(v.ZP, {
+                          children: (0, i.jsx)(T.Z, {
+                              className: a()(et.chatToasts, { [et.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
                       }),
@@ -211,102 +212,102 @@ function es(e) {
             onPreventIdle: () => {},
             onAllowIdle: () => {},
             onForceIdle: () => {},
-            screenMessage: E ? { mainText: $.intl.string($.t.J5bXZW) } : null,
+            screenMessage: E ? { mainText: ee.intl.string(ee.t.J5bXZW) } : null,
             idle: !1,
             children: !E && t
         })
     );
 }
-function eo(e) {
+function ec(e) {
     let { channel: t } = e,
         [r, s] = l.useState(!1),
         u = l.useCallback(() => {
             s(!r);
         }, [r, s]),
-        { popoutWindow: C, popoutWindowAlwaysOnTop: E } = (0, o.cj)([b.Z], () => ({
-            popoutWindow: b.Z.getWindow(J.KJ3.CHANNEL_CALL_POPOUT),
-            popoutWindowAlwaysOnTop: b.Z.getIsAlwaysOnTop(J.KJ3.CHANNEL_CALL_POPOUT)
+        { popoutWindow: x, popoutWindowAlwaysOnTop: b } = (0, o.cj)([Z.Z], () => ({
+            popoutWindow: Z.Z.getWindow(Q.KJ3.CHANNEL_CALL_POPOUT),
+            popoutWindowAlwaysOnTop: Z.Z.getIsAlwaysOnTop(Q.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        Z = null != C && !C.closed,
-        { analyticsLocations: N } = (0, f.ZP)(m.Z.STAGE_CHANNEL_CALL),
-        S = (0, p.bp)(),
-        { chatOpen: T, participantsListOpen: j } = (0, o.cj)(
-            [g.Z],
+        N = null != x && !x.closed,
+        { analyticsLocations: S } = (0, g.ZP)(f.Z.STAGE_CHANNEL_CALL),
+        T = (0, m.bp)(),
+        { chatOpen: j, participantsListOpen: A } = (0, o.cj)(
+            [C.Z],
             () => ({
-                chatOpen: g.Z.getChatOpen(t.id),
-                participantsListOpen: g.Z.getParticipantsListOpen(t.id)
+                chatOpen: C.Z.getChatOpen(t.id),
+                participantsListOpen: C.Z.getParticipantsListOpen(t.id)
             }),
             [t.id]
         ),
-        A = (0, o.e7)([R.Z], () => R.Z.getGuild(t.guild_id), [t.guild_id]),
-        { hasParticipantsPanel: y } = (0, I.Z)({ location: 'StageChannelCall' });
-    l.useEffect(() => {
-        null == c.K.get(et) &&
+        y = (0, o.e7)([L.Z], () => L.Z.getGuild(t.guild_id), [t.guild_id]),
+        { hasParticipantsPanel: P } = (0, E.Z)({ location: 'StageChannelCall' });
+    (0, p.Z)(() => {
+        null == c.K.get(en) &&
             ((0, d.openModalLazy)(async () => {
                 let { default: e } = await n.e('37194').then(n.bind(n, 947422));
                 return (t) => (0, i.jsx)(e, { ...t });
             }),
-            c.K.set(et, Date.now()));
-    }, []);
-    let { width: P = 0, ref: M } = (0, h.Z)(),
-        L = P - 550,
-        k = !Z || (Z && S === J.IlC.POPOUT);
-    return (0, i.jsx)(f.Gt, {
-        value: N,
-        children: (0, i.jsxs)(x.B2, {
+            c.K.set(en, Date.now()));
+    });
+    let { width: M = 0, ref: R } = (0, h.Z)(),
+        k = M - 550,
+        O = !N || (N && T === Q.IlC.POPOUT);
+    return (0, i.jsx)(g.Gt, {
+        value: S,
+        children: (0, i.jsxs)(v.B2, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: ee.container,
-                    ref: M,
+                    className: et.container,
+                    ref: R,
                     children: [
                         (0, i.jsx)(d.ThemeProvider, {
-                            theme: J.BRd.DARK,
+                            theme: Q.BRd.DARK,
                             children: (e) =>
                                 (0, i.jsx)('div', {
-                                    className: a()(ee.callContainer, e, {
-                                        [ee.sidebarVisible]: r,
-                                        [ee.sidebarOrChatVisible]: r || T || j
+                                    className: a()(et.callContainer, e, {
+                                        [et.sidebarVisible]: r,
+                                        [et.sidebarOrChatVisible]: r || j || A
                                     }),
-                                    children: (0, i.jsx)(es, {
+                                    children: (0, i.jsx)(eo, {
                                         channel: t,
                                         toggleRequestToSpeakSidebar: u,
                                         showRequestToSpeakSidebar: r,
-                                        popoutWindow: C,
-                                        popoutWindowAlwaysOnTop: E,
-                                        popoutOpen: Z,
-                                        chatOpen: T
+                                        popoutWindow: x,
+                                        popoutWindowAlwaysOnTop: b,
+                                        popoutOpen: N,
+                                        chatOpen: j
                                     })
                                 })
                         }),
                         r
-                            ? (0, i.jsx)(F.Z, {
+                            ? (0, i.jsx)(V.Z, {
                                   channel: t,
                                   toggleRequestToSpeakSidebar: u,
-                                  chatOpen: T
+                                  chatOpen: j
                               })
                             : null,
                         (0, i.jsxs)('div', {
-                            className: ee.channelChatWrapper,
+                            className: et.channelChatWrapper,
                             children: [
-                                T &&
-                                    k &&
-                                    (0, i.jsx)(v.Z, {
-                                        channel: t,
-                                        guild: A,
-                                        maxWidth: L
-                                    }),
                                 j &&
-                                    y &&
-                                    k &&
+                                    O &&
                                     (0, i.jsx)(_.Z, {
                                         channel: t,
-                                        maxWidth: L
+                                        guild: y,
+                                        maxWidth: k
+                                    }),
+                                A &&
+                                    P &&
+                                    O &&
+                                    (0, i.jsx)(I.Z, {
+                                        channel: t,
+                                        maxWidth: k
                                     })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(x.H_, {})
+                (0, i.jsx)(v.H_, {})
             ]
         })
     });

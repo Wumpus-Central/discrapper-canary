@@ -12,11 +12,11 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(75124),
-    o = n(748780),
-    c = n(442837),
-    d = n(704215),
-    u = n(481060),
+    s = n(748780),
+    o = n(442837),
+    c = n(704215),
+    d = n(481060),
+    u = n(211266),
     h = n(699682),
     p = n(367907),
     m = n(644914),
@@ -37,13 +37,13 @@ var i = n(200651),
     A = n(567522);
 function y(e) {
     let { className: t, iconUrl: n, icon: r, header: s, completed: o, onClick: c } = e,
-        [d, p] = l.useState(!1),
+        [u, p] = l.useState(!1),
         m = (0, h.Z)(o);
     return (
         l.useEffect(() => {
             null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
         }, [o, m]),
-        (0, i.jsxs)(u.Clickable, {
+        (0, i.jsxs)(d.Clickable, {
             className: a()(t, A.card, { [A.completed]: o }),
             onClick: c,
             children: [
@@ -53,17 +53,17 @@ function y(e) {
                           className: A.icon,
                           style: { backgroundImage: "url('".concat(n, "')") }
                       }),
-                (0, i.jsx)(u.Text, {
+                (0, i.jsx)(d.Text, {
                     color: 'header-primary',
                     className: a()(A.cardTextContainer, A.cardHeader),
                     variant: 'text-sm/normal',
                     children: s
                 }),
                 o
-                    ? (0, i.jsx)(u.CheckmarkLargeIcon, {
+                    ? (0, i.jsx)(d.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: a()(A.checkmark, { [A.animate]: d })
+                          className: a()(A.checkmark, { [A.animate]: u })
                       })
                     : (0, i.jsx)(_.Z, {
                           className: A.arrow,
@@ -75,11 +75,11 @@ function y(e) {
 }
 function P(e) {
     let { channel: t } = e,
-        r = (0, c.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
+        r = (0, o.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - S._8R,
-        _ = (0, c.e7)([C.default], () => (null == r ? void 0 : r.ownerId) === C.default.getId(), [r]),
+        _ = (0, o.e7)([C.default], () => (null == r ? void 0 : r.ownerId) === C.default.getId(), [r]),
         { canInvite: P, canManageGuild: M, canMessage: R } = (0, m.TE)(t, r),
-        L = (0, c.e7)([v.default], () => {
+        L = (0, o.e7)([v.default], () => {
             var e, t;
             return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
@@ -97,7 +97,7 @@ function P(e) {
                         action: T.j7.INVITE
                     }),
                         null != e &&
-                            (0, u.openModalLazy)(async () => {
+                            (0, d.openModalLazy)(async () => {
                                 let { default: t } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, i.jsx)(t, {
@@ -130,7 +130,7 @@ function P(e) {
                         setup_type: T.Ft.CHANNEL_WELCOME,
                         action: T.j7.DOWNLOAD
                     }),
-                        (0, u.openModalLazy)(async () => {
+                        (0, d.openModalLazy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -150,14 +150,14 @@ function P(e) {
                             setup_type: T.Ft.CHANNEL_WELCOME,
                             action: T.j7.ADD_APP
                         }),
-                        (0, u.openModalLazy)(async () => {
+                        (0, d.openModalLazy)(async () => {
                             let { default: t } = await n.e('77875').then(n.bind(n, 657300));
                             return (n) => {
                                 var l;
                                 return (0, i.jsx)(t, {
                                     guildId: null !== (l = e.id) && void 0 !== l ? l : '',
                                     ...n,
-                                    analyticsType: d.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL
+                                    analyticsType: c.z.APP_DIRECTORY_SERVER_SETUP_UPSELL_MODAL
                                 });
                             };
                         }));
@@ -166,40 +166,36 @@ function P(e) {
         })(r),
         F = !(L || k || O || D),
         { titleAnimatedStyle: V, opacities: z } = (function (e) {
-            let t = (0, s.Z)(() => new o.Z.Value(0)),
-                n = (0, s.Z)(() => new o.Z.Value(0)),
-                i = [];
+            let t = (0, u.Z)(() => new s.Z.Value(0)),
+                n = (0, u.Z)(() => new s.Z.Value(0)),
+                i = (0, u.Z)(() => [new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0), new s.Z.Value(0)]);
             return (
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
                 l.useEffect(() => {
-                    o.Z.stagger(300, [
-                        o.Z.parallel([
-                            o.Z.timing(n, {
+                    s.Z.stagger(300, [
+                        s.Z.parallel([
+                            s.Z.timing(n, {
                                 toValue: 1,
                                 duration: 450
                             }),
-                            o.Z.timing(t, {
+                            s.Z.timing(t, {
                                 toValue: 1,
                                 duration: 450
                             })
                         ]),
-                        o.Z.stagger(100, [
-                            o.Z.timing(i[0], {
+                        s.Z.stagger(100, [
+                            s.Z.timing(i[0], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            o.Z.timing(i[1], {
+                            s.Z.timing(i[1], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            o.Z.timing(i[2], {
+                            s.Z.timing(i[2], {
                                 toValue: 1,
                                 duration: 300
                             }),
-                            o.Z.timing(i[3], {
+                            s.Z.timing(i[3], {
                                 toValue: 1,
                                 duration: 300
                             })
@@ -244,7 +240,7 @@ function P(e) {
         (P &&
             q.push(
                 (0, i.jsx)(
-                    o.Z.div,
+                    s.Z.div,
                     {
                         className: A.cardWrapper,
                         style: F ? { opacity: z[q.length] } : {},
@@ -261,7 +257,7 @@ function P(e) {
         M &&
             q.push(
                 (0, i.jsx)(
-                    o.Z.div,
+                    s.Z.div,
                     {
                         className: A.cardWrapper,
                         style: F ? { opacity: z[q.length] } : {},
@@ -278,7 +274,7 @@ function P(e) {
         R &&
             q.push(
                 (0, i.jsx)(
-                    o.Z.div,
+                    s.Z.div,
                     {
                         className: A.cardWrapper,
                         style: F ? { opacity: z[q.length] } : {},
@@ -295,7 +291,7 @@ function P(e) {
         (0, b.isWeb)() &&
             q.push(
                 (0, i.jsx)(
-                    o.Z.div,
+                    s.Z.div,
                     {
                         className: A.cardWrapper,
                         style: F ? { opacity: z[q.length] } : {},
@@ -311,7 +307,7 @@ function P(e) {
             ),
         q.push(
             (0, i.jsx)(
-                o.Z.div,
+                s.Z.div,
                 {
                     className: A.cardWrapper,
                     style: F ? { opacity: z[q.length] } : {},
@@ -335,15 +331,15 @@ function P(e) {
             children: (0, i.jsxs)('div', {
                 className: A.inner,
                 children: [
-                    (0, i.jsxs)(o.Z.div, {
+                    (0, i.jsxs)(s.Z.div, {
                         style: V,
                         children: [
-                            (0, i.jsx)(u.Heading, {
+                            (0, i.jsx)(d.Heading, {
                                 className: A.titleName,
                                 variant: 'heading-xxl/semibold',
                                 children: j.intl.format(j.t.rkHVKS, { guildName: r.name })
                             }),
-                            (0, i.jsxs)(u.Text, {
+                            (0, i.jsxs)(d.Text, {
                                 color: 'header-secondary',
                                 className: a()({
                                     [A.subtitle]: !0,

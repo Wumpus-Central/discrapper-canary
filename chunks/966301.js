@@ -157,20 +157,24 @@ function j(e) {
         o = (0, l.e7)([x.Z], () => x.Z.editedOnboardingPrompts),
         d = (0, l.e7)([x.Z], () => x.Z.advancedMode),
         u = r.useRef(!1);
+    r.useEffect(() => {
+        !s && !u.current && 0 === o.length && ((u.current = !0), !d && (0, g.tS)(t, [(0, v.ae)()], !1));
+    });
+    let m = r.useRef(t);
     if (
         (r.useEffect(() => {
-            !s && !u.current && 0 === o.length && ((u.current = !0), !d && (0, g.tS)(t, [(0, v.ae)()], !1));
+            m.current = t;
         }),
         r.useEffect(() => {
             if (n)
                 return () => {
-                    (0, g.rS)(t, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                    (0, g.rS)(m.current, { ignoreDefaultPrompt: !0 }).catch(() => {});
                 };
         }, [n]),
         null == t)
     )
         return null;
-    let m = async () => {
+    let T = async () => {
         try {
             await (0, g.rS)(t), await (0, h.di)(t.id);
         } catch {}
@@ -201,7 +205,7 @@ function j(e) {
                     }),
                     (0, i.jsx)('div', { className: I.dot }),
                     (0, i.jsx)(a.Anchor, {
-                        onClick: m,
+                        onClick: T,
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',

@@ -19,10 +19,14 @@ function p(e) {
         p = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
         m = (0, u.Z)(e),
         f = i.useRef(m ? Date.now() : null),
-        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]);
+        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]),
+        C = i.useRef(g);
     i.useEffect(() => {
-        f.current = Date.now();
-    }, [m]),
+        C.current = g;
+    }),
+        i.useEffect(() => {
+            f.current = Date.now();
+        }, [m]),
         i.useEffect(() => {
             m && null != t && r.Z.fetchChangelog(t, n, !0);
         }, [t, n, m]),
@@ -31,7 +35,7 @@ function p(e) {
                 null != p &&
                 o.default.track(h.rMx.CHANGE_LOG_OPENED, {
                     change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                    unread_count: g
+                    unread_count: C.current
                 });
         }, [m, p]),
         i.useEffect(() => {
@@ -43,7 +47,7 @@ function p(e) {
                     (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                        unread_count: g
+                        unread_count: C.current
                     }),
                     (f.current = 0));
             };

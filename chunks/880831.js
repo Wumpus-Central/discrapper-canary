@@ -177,23 +177,27 @@ function P(e) {
         [g, C] = l.useState({}),
         x = l.useCallback((e, t) => {
             null == t ? delete f.current[e] : (f.current[e] = t);
-        }, []);
+        }, []),
+        v = l.useRef(g);
     l.useLayoutEffect(() => {
-        let e = {},
-            t = 0;
-        for (let i of m) {
-            var n;
-            let l = null !== (n = f.current[i.id]) && void 0 !== n ? n : 0;
-            (e[i.id] = t), (t += l + 8);
-        }
-        !(0, s.isEqual)(e, g) && C(e);
-    }, [m]);
-    let v = m.map((e) => ({
+        v.current = g;
+    }),
+        l.useLayoutEffect(() => {
+            let e = {},
+                t = 0;
+            for (let i of m) {
+                var n;
+                let l = null !== (n = f.current[i.id]) && void 0 !== n ? n : 0;
+                (e[i.id] = t), (t += l + 8);
+            }
+            !(0, s.isEqual)(e, v.current) && C(e);
+        }, [m]);
+    let _ = m.map((e) => ({
             message: e,
             height: f.current[e.id],
             y: g[e.id]
         })),
-        _ = (0, d.useTransition)(v, {
+        E = (0, d.useTransition)(_, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -227,7 +231,7 @@ function P(e) {
                 onMouseLeave: () => {
                     h(!1);
                 },
-                children: _((e, t) =>
+                children: E((e, t) =>
                     (0, i.jsx)(o.animated.div, {
                         ref: (e) => x(t.message.id, null != e ? e.offsetHeight : null),
                         className: j.toastWrapper,

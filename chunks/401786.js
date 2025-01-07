@@ -116,36 +116,40 @@ function F(e) {
             } catch {
                 return [[], !0];
             }
-        }, [s]);
+        }, [s]),
+        F = l.useRef(m);
     l.useEffect(() => {
-        L && m();
-    }, [L]);
-    let { premiumSubscriptionPlan: F, premiumGuildPlan: M } = (0, c.cj)([A.Z], () => {
+        F.current = m;
+    }),
+        l.useEffect(() => {
+            L && F.current();
+        }, [L]);
+    let { premiumSubscriptionPlan: M, premiumGuildPlan: k } = (0, c.cj)([A.Z], () => {
             let e = A.Z.get(s.planId);
             return {
                 premiumSubscriptionPlan: e,
                 premiumGuildPlan: null != e ? A.Z.getForSkuAndInterval((0, j.Wz)(P.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
-        { analyticsLocations: k } = (0, x.ZP)(),
-        [w] = (0, T.ED)({
+        { analyticsLocations: w } = (0, x.ZP)(),
+        [U] = (0, T.ED)({
             subscriptionId: s.id,
             renewal: !0,
             currency: s.currency,
             paymentSourceId: s.paymentSourceId,
-            analyticsLocations: k,
+            analyticsLocations: w,
             analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
         }),
-        U = null != M ? (0, j.Zx)(s, null !== (i = null === (t = D[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== i ? i : 0, M.id) : null,
-        [V] = (0, T.ED)({
+        V = null != k ? (0, j.Zx)(s, null !== (i = null === (t = D[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== i ? i : 0, k.id) : null,
+        [G] = (0, T.ED)({
             subscriptionId: s.id,
-            items: U,
+            items: V,
             renewal: !0,
-            analyticsLocations: k,
+            analyticsLocations: w,
             analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
         });
-    if (null == V || null == F || null == M || null == w) return (0, r.jsx)(d.Spinner, {});
-    let G =
+    if (null == G || null == M || null == k || null == U) return (0, r.jsx)(d.Spinner, {});
+    let Y =
             (s.items.some((e) => {
                 let { planId: t } = e;
                 return !P.Z1.has(t);
@@ -157,12 +161,12 @@ function F(e) {
                       let { planId: t } = e;
                       return !P.Z1.has(t);
                   })) != null,
-        Y = D.some((e) => {
+        H = D.some((e) => {
             let { planId: t } = e;
             return P.Z1.has(t);
         }),
-        H = G || Y ? V.total - w.total : -w.total,
-        { interval: z, intervalCount: W } = F;
+        z = Y || H ? G.total - U.total : -U.total,
+        { interval: W, intervalCount: K } = M;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(R.Z, { onClose: m }),
@@ -174,23 +178,23 @@ function F(e) {
                             className: B.error,
                             children: b
                         }),
-                    (0, r.jsx)('div', { children: y.intl.format(y.t['0W23cn'], { endDate: V.subscriptionPeriodStart }) }),
+                    (0, r.jsx)('div', { children: y.intl.format(y.t['0W23cn'], { endDate: G.subscriptionPeriodStart }) }),
                     (0, r.jsxs)(_.PO, {
                         className: B.invoiceTable,
                         children: [
                             (0, r.jsx)(_.q9, { children: y.intl.string(y.t.iqhIp6) }),
                             (0, r.jsx)(_.R$, {
                                 label: y.intl.format(y.t['Vg+LRk'], { subscriptionCount: 1 }),
-                                value: (0, O.og)((0, O.T4)(H, s.currency), z, W),
+                                value: (0, O.og)((0, O.T4)(z, s.currency), W, K),
                                 className: B.invoiceCancelRow
                             }),
-                            null != U && U.length > 0
+                            null != V && V.length > 0
                                 ? (0, r.jsxs)('div', {
                                       children: [
                                           (0, r.jsx)(_.KU, {}),
                                           (0, r.jsx)(I.nd, {
                                               premiumSubscription: s,
-                                              renewalInvoice: V,
+                                              renewalInvoice: G,
                                               isUpdate: !0
                                           })
                                       ]
@@ -209,7 +213,7 @@ function F(e) {
                         disabled: C,
                         onClick: async () => {
                             try {
-                                N(!0), v(null), await Z(s, D, k, a), u();
+                                N(!0), v(null), await Z(s, D, w, a), u();
                             } catch (t) {
                                 let e = t instanceof h.HF ? t : new h.HF(t, t.code);
                                 v(y.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? y.t.dq4vq6 : y.t['5mlOCQ'])), N(!1);

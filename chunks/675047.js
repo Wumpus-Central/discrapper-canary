@@ -3,9 +3,10 @@ n.d(t, {
         return I;
     }
 });
-var i = n(200651),
-    s = n(192379),
-    r = n(924628),
+var i = n(200651);
+n(192379);
+var s = n(924628),
+    r = n(493773),
     l = n(977059),
     a = n(630759),
     o = n(398826),
@@ -47,9 +48,9 @@ function f() {
 }
 function I() {
     return (
-        s.useEffect(() => {
-            (0, r.I)(), (0, o.A)();
-        }, []),
+        (0, r.Z)(() => {
+            (0, s.I)(), (0, o.A)();
+        }),
         (0, i.jsxs)(c.N, {
             header: E.intl.string(E.t.OAuOHB),
             children: [(0, i.jsx)(f, {}), (0, i.jsx)(_, {}), (0, i.jsx)(C, {})]

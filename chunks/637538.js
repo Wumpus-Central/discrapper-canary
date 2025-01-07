@@ -1,29 +1,27 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = n(192379),
-    i = n(626135),
-    a = n(353250),
-    c = n(981631);
-function o(e) {
+    i = n(493773),
+    a = n(626135),
+    c = n(353250),
+    o = n(981631);
+function s(e) {
     let t = r.useRef(!0);
     return (
-        r.useEffect(
-            () => () => {
-                t.current && (null == e || e(a.CaptchaError.CANCEL));
-            },
-            []
-        ),
+        (0, i.Z)(() => () => {
+            t.current && (null == e || e(c.CaptchaError.CANCEL));
+        }),
         r.useEffect(
             () => (
-                i.default.track(c.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                a.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
                 () => {
-                    t.current && i.default.track(c.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    t.current && a.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
                 }
             ),
-            [t]
+            []
         ),
         () => {
             t.current = !1;

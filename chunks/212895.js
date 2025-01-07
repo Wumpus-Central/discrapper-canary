@@ -66,35 +66,41 @@ function v(e, n, r, i, s) {
                       loaded: !1
                   }
         ),
-        u = (0, c.V)(s);
+        u = (0, c.V)(s),
+        f = JSON.stringify(s),
+        _ = a.useRef(s);
     a.useEffect(() => {
-        (async () => {
-            try {
-                await m(r, s);
-            } catch (e) {
-                if (e.code !== p) throw e;
-            }
-            let e = [];
-            null != n && null != d.Z.get(n) && (e = g(n, r, i)),
-                e.length > 0
-                    ? l({
-                          paymentSourceId: r,
-                          currency: e[0],
-                          loaded: !0
-                      })
-                    : l({
-                          paymentSourceId: r,
-                          loaded: !1
-                      });
-        })();
-    }, [r, JSON.stringify(s), n, i, u]);
-    let f = o.paymentSourceId !== r || null == n || !u || !0 !== o.loaded;
+        _.current = s;
+    }),
+        a.useEffect(() => {
+            (async () => {
+                let { current: e } = _;
+                try {
+                    await m(r, e);
+                } catch (e) {
+                    if (e.code !== p) throw e;
+                }
+                let a = [];
+                null != n && null != d.Z.get(n) && (a = g(n, r, i)),
+                    a.length > 0
+                        ? l({
+                              paymentSourceId: r,
+                              currency: a[0],
+                              loaded: !0
+                          })
+                        : l({
+                              paymentSourceId: r,
+                              loaded: !1
+                          });
+            })();
+        }, [r, f, n, i, u]);
+    let h = o.paymentSourceId !== r || null == n || !u || !0 !== o.loaded;
     return {
         hasFetchedSubscriptionPlans: u,
         priceOptions: o,
         setCurrency: (e) => {
             l({ currency: e });
         },
-        currencyLoading: f
+        currencyLoading: h
     };
 }

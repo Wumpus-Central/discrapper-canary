@@ -219,28 +219,29 @@ function E() {
         [p, b] = a.useState(!1),
         [g, j] = a.useState(),
         _ = a.useRef(null),
-        S = a.useCallback(
-            (0, o.throttle)(
-                async (e, t) => {
-                    if ('' === e) {
-                        f(t);
-                        return;
-                    }
-                    _.current = (0, o.uniqueId)();
-                    let n = await (0, m.H)(
-                        t,
-                        (e) => {
-                            let { actionLog: t } = e;
-                            return t.name;
-                        },
-                        e,
-                        !0
-                    );
-                    if (null != _.current) f(n);
-                },
-                300,
-                { leading: !0 }
-            ),
+        S = a.useMemo(
+            () =>
+                (0, o.throttle)(
+                    async (e, t) => {
+                        if ('' === e) {
+                            f(t);
+                            return;
+                        }
+                        _.current = (0, o.uniqueId)();
+                        let n = await (0, m.H)(
+                            t,
+                            (e) => {
+                                let { actionLog: t } = e;
+                                return t.name;
+                            },
+                            e,
+                            !0
+                        );
+                        if (null != _.current) f(n);
+                    },
+                    300,
+                    { leading: !0 }
+                ),
             []
         ),
         N = a.useCallback(

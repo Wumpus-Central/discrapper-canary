@@ -150,20 +150,42 @@ function E(e, n) {
     );
 }
 function v(e) {
-    let n = (0, a.useCallback)(() => m(e), [JSON.stringify(e)]);
-    return E(e, n);
+    let n = (0, a.useRef)(e);
+    (0, a.useEffect)(() => {
+        n.current = e;
+    });
+    let r = JSON.stringify(e);
+    return E(
+        e,
+        (0, a.useCallback)(() => m(n.current), [r])
+    );
 }
 function I(e) {
     if ('subscriptionId' in e && null == e.subscriptionId) {
         let { subscriptionId: n, ...r } = e;
         e = r;
     }
-    let n = (0, a.useCallback)(() => ('subscriptionId' in e ? p(e) : 'items' in e ? h(e) : null), [JSON.stringify(e)]);
-    return E(e, n);
+    let n = (0, a.useRef)(e);
+    (0, a.useEffect)(() => {
+        n.current = e;
+    });
+    let r = JSON.stringify(e),
+        i = (0, a.useCallback)(() => {
+            let { current: e } = n;
+            return 'subscriptionId' in e ? p(e) : 'items' in e ? h(e) : null;
+        }, [r]);
+    return E(e, i);
 }
 function T(e) {
-    let n = (0, a.useCallback)(() => g(e), [JSON.stringify(e)]);
-    return E(e, n);
+    let n = (0, a.useRef)(e);
+    (0, a.useEffect)(() => {
+        n.current = e;
+    });
+    let r = JSON.stringify(e);
+    return E(
+        e,
+        (0, a.useCallback)(() => g(n.current), [r])
+    );
 }
 function b(e) {
     let n = e.subscriptionPlanPrice;

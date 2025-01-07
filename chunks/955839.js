@@ -21,20 +21,8 @@ let d = (e) => {
         [u, m] = i.useState(!1),
         [_, j] = i.useState(!1),
         [g, L] = i.useState(new Map());
-    a()(null != c, 'Referrals remaining should not be null'),
-        i.useEffect(() => {
-            c > 0 ? y(0, s) : S();
-        }, [t, c]);
-    let S = async () => {
-            let e = new Map();
-            for (let [t, r] of d)
-                if (r === o.Fe.PENDING && !g.has(t)) {
-                    let r = await (0, l.PR)(t);
-                    e.set(r.id, r);
-                }
-            L(e), p(Array.from(e.values()));
-        },
-        y = async (e, i) => {
+    a()(null != c, 'Referrals remaining should not be null');
+    let S = async (e, i) => {
             if (!u && !_ && null != e && 0 !== c)
                 try {
                     m(!0);
@@ -60,12 +48,35 @@ let d = (e) => {
                 } finally {
                     m(!1);
                 }
-        };
-    return {
-        eligibleUsers: h,
-        fetchUsers: () => y(x, s),
-        hasError: _,
-        isFetching: u,
-        resendUsers: g
-    };
+        },
+        y = {
+            limit: s,
+            getNextRows: S,
+            getLocalReferrals: async () => {
+                let e = new Map();
+                for (let [t, r] of d)
+                    if (r === o.Fe.PENDING && !g.has(t)) {
+                        let r = await (0, l.PR)(t);
+                        e.set(r.id, r);
+                    }
+                L(e), p(Array.from(e.values()));
+            }
+        },
+        v = i.useRef(y);
+    return (
+        i.useEffect(() => {
+            v.current = y;
+        }),
+        i.useEffect(() => {
+            let { getNextRows: e, limit: t, getLocalReferrals: r } = v.current;
+            c > 0 ? e(0, t) : r();
+        }, [t, c]),
+        {
+            eligibleUsers: h,
+            fetchUsers: () => S(x, s),
+            hasError: _,
+            isFetching: u,
+            resendUsers: g
+        }
+    );
 };

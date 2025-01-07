@@ -203,17 +203,30 @@ t.Z = (e) => {
         Z = (0, x.P)(),
         M = null != C && null != C.flagged_content && C.flagged_content.length > 0,
         O = (0, g.e)(),
-        D = !!(null == C ? void 0 : C.is_coppa) && k.includes(m.tG.AGE_VERIFY_ELIGIBLE);
+        D = !!(null == C ? void 0 : C.is_coppa) && k.includes(m.tG.AGE_VERIFY_ELIGIBLE),
+        b = {
+            accountStanding: Z,
+            classificationId: i,
+            hasFlaggedContent: M,
+            isDsaEligible: L,
+            source: o,
+            violationType: w
+        },
+        R = a.useRef(b);
     return (a.useEffect(() => {
+        R.current = b;
+    }),
+    a.useEffect(() => {
+        let { accountStanding: e, classificationId: t, hasFlaggedContent: i, isDsaEligible: n, source: a, violationType: l } = R.current;
         O &&
             u.default.track(T.rMx.SAFETY_HUB_ACTION, {
                 action: E.n0.ViewViolationDetail,
-                account_standing: Z.state,
-                classification_ids: [Number(i)],
-                source: o,
-                is_violative_content_shown: M,
-                is_dsa_eligible: L,
-                violation_type: w
+                account_standing: e.state,
+                classification_ids: [Number(t)],
+                source: a,
+                is_violative_content_shown: i,
+                is_dsa_eligible: n,
+                violation_type: l
             });
     }, [O]),
     null == C && S === m.OY.FAILED)

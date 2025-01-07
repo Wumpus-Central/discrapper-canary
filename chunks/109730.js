@@ -1,7 +1,7 @@
 l.r(e),
     l.d(e, {
         default: function () {
-            return g;
+            return U;
         }
     }),
     l(47120);
@@ -10,149 +10,150 @@ var n = l(200651),
     o = l(442837),
     s = l(481060),
     r = l(91176),
-    i = l(906732),
-    c = l(313201),
-    u = l(910693),
-    d = l(594174),
-    f = l(626135),
-    x = l(5192),
-    m = l(590433),
-    T = l(981631),
-    h = l(388032),
-    _ = l(903066);
-function C(t) {
+    i = l(493773),
+    c = l(906732),
+    u = l(313201),
+    d = l(910693),
+    f = l(594174),
+    x = l(626135),
+    m = l(5192),
+    T = l(590433),
+    h = l(981631),
+    _ = l(388032),
+    C = l(903066);
+function N(t) {
     return {
         value: t,
         get label() {
             var e;
-            return null === (e = (0, m.L9)(t)) || void 0 === e ? void 0 : e.toLocaleUpperCase();
+            return null === (e = (0, T.L9)(t)) || void 0 === e ? void 0 : e.toLocaleUpperCase();
         }
     };
 }
-let N = [C(m.UK.DURATION_60_SEC), C(m.UK.DURATION_5_MIN), C(m.UK.DURATION_10_MIN), C(m.UK.DURATION_1_HOUR), C(m.UK.DURATION_1_DAY), C(m.UK.DURATION_1_WEEK)];
-function g(t) {
+let g = [N(T.UK.DURATION_60_SEC), N(T.UK.DURATION_5_MIN), N(T.UK.DURATION_10_MIN), N(T.UK.DURATION_1_HOUR), N(T.UK.DURATION_1_DAY), N(T.UK.DURATION_1_WEEK)];
+function U(t) {
     var e, l;
-    let { guildId: C, userId: g, anaylticsLocations: U, transitionState: p, onClose: v } = t,
-        I = (0, c.Dt)(),
-        { analyticsLocations: S } = (0, i.ZP)(),
-        b = null !== (l = null !== (e = null == U ? void 0 : U[0]) && void 0 !== e ? e : null == S ? void 0 : S[0]) && void 0 !== l ? l : null,
-        j = (0, o.e7)([d.default], () => d.default.getUser(g), [g]),
-        [B, D] = a.useState(m.UK.DURATION_60_SEC),
-        k = (0, u.sE)(C, {
-            location: b,
-            targetUserId: g
+    let { guildId: N, userId: U, anaylticsLocations: p, transitionState: v, onClose: I } = t,
+        S = (0, u.Dt)(),
+        { analyticsLocations: b } = (0, c.ZP)(),
+        j = null !== (l = null !== (e = null == p ? void 0 : p[0]) && void 0 !== e ? e : null == b ? void 0 : b[0]) && void 0 !== l ? l : null,
+        B = (0, o.e7)([f.default], () => f.default.getUser(U), [U]),
+        [D, k] = a.useState(T.UK.DURATION_60_SEC),
+        O = (0, d.sE)(N, {
+            location: j,
+            targetUserId: U
         }),
-        [O, A] = a.useState(''),
-        [E, R] = a.useState(!1),
-        y = a.useCallback(async () => {
-            if (null != j) {
-                R(!0);
+        [A, R] = a.useState(''),
+        [E, y] = a.useState(!1),
+        M = a.useCallback(async () => {
+            if (null != B) {
+                y(!0);
                 try {
-                    await r.Z.setCommunicationDisabledDuration(C, g, B, O, b), k(u.jQ.TIMEOUT), (0, s.showToast)((0, s.createToast)(h.intl.formatToPlainString(h.t.O9C3Nj, { user: x.ZP.getName(C, null, j) }), s.ToastType.SUCCESS)), v();
+                    await r.Z.setCommunicationDisabledDuration(N, U, D, A, j), O(d.jQ.TIMEOUT), (0, s.showToast)((0, s.createToast)(_.intl.formatToPlainString(_.t.O9C3Nj, { user: m.ZP.getName(N, null, B) }), s.ToastType.SUCCESS)), I();
                 } catch (t) {
-                    (0, s.showToast)((0, s.createToast)(h.intl.string(h.t.epyCur), s.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(_.intl.string(_.t.epyCur), s.ToastType.FAILURE));
                 } finally {
-                    R(!1);
+                    y(!1);
                 }
             }
-        }, [C, j, g, v, B, O, b, k]);
-    return (a.useEffect(() => {
-        if (null != j)
-            f.default.track(T.rMx.OPEN_MODAL, {
-                type: m.Cl,
-                guild_id: C,
-                other_user_id: j.id
+        }, [N, B, U, I, D, A, j, O]);
+    return ((0, i.Z)(() => {
+        if (null != B)
+            x.default.track(h.rMx.OPEN_MODAL, {
+                type: T.Cl,
+                guild_id: N,
+                other_user_id: B.id
             });
-    }, []),
+    }),
     a.useEffect(() => {
-        (null == j || null == C) && v();
-    }, [C, j, v]),
-    null == j || null == C)
+        (null == B || null == N) && I();
+    }, [N, B, I]),
+    null == B || null == N)
         ? null
         : (0, n.jsxs)(s.ModalRoot, {
-              transitionState: p,
-              'aria-labelledby': I,
+              transitionState: v,
+              'aria-labelledby': S,
               children: [
                   (0, n.jsxs)(s.ModalHeader, {
-                      className: _.header,
+                      className: C.header,
                       separator: !1,
                       children: [
                           (0, n.jsx)(s.Heading, {
-                              id: I,
+                              id: S,
                               variant: 'heading-lg/semibold',
-                              children: h.intl.format(h.t.OhsOy8, { user: x.ZP.getName(C, null, j) })
+                              children: _.intl.format(_.t.OhsOy8, { user: m.ZP.getName(N, null, B) })
                           }),
                           (0, n.jsx)(s.Clickable, {
-                              onClick: v,
-                              className: _.closeButton,
-                              'aria-label': h.intl.string(h.t.cpT0Cg),
+                              onClick: I,
+                              className: C.closeButton,
+                              'aria-label': _.intl.string(_.t.cpT0Cg),
                               children: (0, n.jsx)(s.XSmallIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: _.closeIcon
+                                  className: C.closeIcon
                               })
                           })
                       ]
                   }),
                   (0, n.jsxs)(s.ModalContent, {
-                      className: _.contentContainer,
+                      className: C.contentContainer,
                       children: [
                           (0, n.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'interactive-normal',
-                              children: h.intl.format(h.t.Ns83GR, { helpdeskArticle: m.cu })
+                              children: _.intl.format(_.t.Ns83GR, { helpdeskArticle: T.cu })
                           }),
                           (0, n.jsx)(s.Text, {
-                              className: _.selectorHeader,
+                              className: C.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: h.intl.string(h.t['9XsExs'])
+                              children: _.intl.string(_.t['9XsExs'])
                           }),
                           (0, n.jsx)(s.ButtonGroup, {
-                              buttons: N.map((t) =>
+                              buttons: g.map((t) =>
                                   (function (t, e, l) {
                                       let { value: a, label: o } = t;
                                       return {
                                           content: (0, n.jsx)(s.Text, {
                                               variant: 'text-xs/normal',
-                                              className: e ? _.selectorTextSelected : _.selectorText,
+                                              className: e ? C.selectorTextSelected : C.selectorText,
                                               children: o
                                           }),
-                                          className: e ? _.selectorButtonSelected : _.selectorButton,
+                                          className: e ? C.selectorButtonSelected : C.selectorButton,
                                           onClick: () => l(a)
                                       };
-                                  })(t, t.value === B, D)
+                                  })(t, t.value === D, k)
                               )
                           }),
                           (0, n.jsx)(s.Text, {
-                              className: _.selectorHeader,
+                              className: C.selectorHeader,
                               variant: 'text-xs/semibold',
                               color: 'interactive-normal',
-                              children: h.intl.string(h.t.ewHW19)
+                              children: _.intl.string(_.t.ewHW19)
                           }),
                           (0, n.jsx)(s.TextArea, {
-                              value: O,
-                              onChange: (t) => A(t),
-                              placeholder: h.intl.string(h.t.GakiHx),
+                              value: A,
+                              onChange: (t) => R(t),
+                              placeholder: _.intl.string(_.t.GakiHx),
                               rows: 2,
-                              maxLength: m.GN
+                              maxLength: T.GN
                           })
                       ]
                   }),
                   (0, n.jsxs)(s.ModalFooter, {
                       children: [
                           (0, n.jsx)(s.Button, {
-                              onClick: y,
+                              onClick: M,
                               color: s.Button.Colors.BRAND,
                               submitting: E,
-                              children: h.intl.string(h.t.MlPTIi)
+                              children: _.intl.string(_.t.MlPTIi)
                           }),
                           (0, n.jsx)(s.Button, {
                               type: 'button',
                               look: s.Button.Looks.LINK,
                               color: s.Button.Colors.PRIMARY,
-                              onClick: v,
-                              children: h.intl.string(h.t['ETE/oK'])
+                              onClick: I,
+                              children: _.intl.string(_.t['ETE/oK'])
                           })
                       ]
                   })

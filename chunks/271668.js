@@ -95,12 +95,16 @@ n.Z = o.forwardRef(function (e, n) {
             let n = Q.length,
                 r = n * (G + B) + (X.reduce((e, n) => e + n.data.length, 0) - (J ? k : 0)) * U - M;
             J && e + F > r && et(), er(e), j(), (l.current = e);
-        };
+        },
+        ea = o.useRef(ei);
     o.useEffect(() => {
-        ei(l.current);
-    }, [$]);
-    let ea = o.useCallback((e) => (e !== Q.length - 1 || J ? B : 0), [Q.length, J]),
-        es = X.map((e) => e.data.length);
+        ea.current = ei;
+    }),
+        o.useEffect(() => {
+            ea.current(l.current);
+        }, [$]);
+    let es = o.useCallback((e) => (e !== Q.length - 1 || J ? B : 0), [Q.length, J]),
+        eo = X.map((e) => e.data.length);
     o.useEffect(() => {
         null != Y.current && W && null != c && Y.current.scrollRowIntoView(c);
     }, [W, c]),
@@ -110,7 +114,7 @@ n.Z = o.forwardRef(function (e, n) {
                 null === (e = Y.current) || void 0 === e || e.scrollToSectionTop(0);
             }
         }, [$, ee]);
-    let eo = o.useCallback(
+    let el = o.useCallback(
             (e) => {
                 if (e.id === ee || e.id === D.bi.FRECENCY) {
                     var n;
@@ -119,7 +123,7 @@ n.Z = o.forwardRef(function (e, n) {
             },
             [en, ee]
         ),
-        el = o.useCallback(
+        eu = o.useCallback(
             (e, n, i) => {
                 b.Po({
                     channelId: r.id,
@@ -143,7 +147,7 @@ n.Z = o.forwardRef(function (e, n) {
                     if (((n = r), c < (r += e.data.length))) {
                         let r = e.data[c - n],
                             i = q.find((e) => e.id === r.applicationId);
-                        el(r, i, (0, N.tI)(e.section));
+                        eu(r, i, (0, N.tI)(e.section));
                         break;
                     }
                 return !0;
@@ -156,9 +160,9 @@ n.Z = o.forwardRef(function (e, n) {
                 return i >= r ? (i = r - 1) : i < 0 && (i = 0), d(i), K(!0), !0;
             }
         }),
-        [$.length, X, J, q, el, c]
+        [$.length, X, J, q, eu, c]
     );
-    let eu = o.useCallback(
+    let ec = o.useCallback(
             (e) => {
                 let n = Q[e];
                 if (null == n) return null;
@@ -182,7 +186,7 @@ n.Z = o.forwardRef(function (e, n) {
             },
             [r, Q]
         ),
-        ec = o.useCallback(
+        ed = o.useCallback(
             (e, n) => {
                 let r = e === Q.length - 1,
                     i = Q[e],
@@ -208,7 +212,7 @@ n.Z = o.forwardRef(function (e, n) {
             },
             [Q, X]
         ),
-        ed = o.useCallback(
+        ef = o.useCallback(
             (e, n) => {
                 var i;
                 let a = X[n.sectionIndex],
@@ -226,7 +230,7 @@ n.Z = o.forwardRef(function (e, n) {
                         selected: c === e,
                         showImage: a.section.id !== o.applicationId,
                         section: u,
-                        onClick: () => el(o, u, (0, N.tI)(a.section)),
+                        onClick: () => eu(o, u, (0, N.tI)(a.section)),
                         onHover: () => {
                             d(null), K(!1);
                         }
@@ -234,11 +238,11 @@ n.Z = o.forwardRef(function (e, n) {
                     l
                 );
             },
-            [r, X, el, q, c]
+            [r, X, eu, q, c]
         ),
-        ef = (0, E.Dt)();
+        e_ = (0, E.Dt)();
     return (
-        (0, m.KR)(ef, !0, (0, p.DJ)(c)),
+        (0, m.KR)(e_, !0, (0, p.DJ)(c)),
         o.useEffect(
             () => () => {
                 (0, m.sJ)();
@@ -246,7 +250,7 @@ n.Z = o.forwardRef(function (e, n) {
             []
         ),
         (0, s.jsxs)(p.ZP, {
-            id: ef,
+            id: e_,
             className: w.outerWrapper,
             innerClassName: w.wrapper,
             onMouseDown: H,
@@ -257,7 +261,7 @@ n.Z = o.forwardRef(function (e, n) {
                     sections: q,
                     filteredSectionId: ee,
                     activeCategoryIndex: z,
-                    onSectionClick: eo,
+                    onSectionClick: el,
                     applicationCommandListRef: Y
                 }),
                 (0, s.jsx)(g.Z, {
@@ -265,14 +269,14 @@ n.Z = o.forwardRef(function (e, n) {
                     className: w.list,
                     listPadding: V,
                     onScroll: ei,
-                    renderRow: ed,
-                    renderSection: ec,
-                    renderSectionHeader: eu,
+                    renderRow: ef,
+                    renderSection: ed,
+                    renderSectionHeader: ec,
                     rowCount: Q.length,
-                    rowCountBySection: es,
+                    rowCountBySection: eo,
                     rowHeight: U,
                     sectionHeaderHeight: G,
-                    sectionMarginBottom: ea,
+                    sectionMarginBottom: es,
                     ref: Y,
                     stickyHeaders: !0
                 })

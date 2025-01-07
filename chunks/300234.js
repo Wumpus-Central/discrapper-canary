@@ -3,81 +3,82 @@ var a = n(200651),
     r = n(442837),
     s = n(481060),
     i = n(239091),
-    o = n(884338),
-    c = n(592125),
-    d = n(720202),
-    u = n(594174),
-    h = n(260483),
-    m = n(314208),
-    g = n(124368),
-    f = n(316931);
-function x(e) {
+    o = n(493773),
+    c = n(884338),
+    d = n(592125),
+    u = n(720202),
+    h = n(594174),
+    m = n(260483),
+    g = n(314208),
+    f = n(124368),
+    x = n(316931);
+function v(e) {
     let { channel: t } = e,
-        n = (0, r.e7)([h.Z], () => {
+        n = (0, r.e7)([m.Z], () => {
             var e;
-            return null !== (e = h.Z.getMemberIdsPreview(t.id)) && void 0 !== e ? e : [];
+            return null !== (e = m.Z.getMemberIdsPreview(t.id)) && void 0 !== e ? e : [];
         }),
-        s = (0, r.e7)([h.Z], () => {
+        l = (0, r.e7)([m.Z], () => {
             var e;
-            return null !== (e = h.Z.getMemberCount(t.id)) && void 0 !== e ? e : 0;
+            return null !== (e = m.Z.getMemberCount(t.id)) && void 0 !== e ? e : 0;
         }),
-        i = (0, r.Wu)([u.default], () => n.map((e) => u.default.getUser(e)));
-    return (l.useEffect(() => {
-        n.filter((e, t) => null == i[t]).forEach((e) => {
-            d.Z.requestMember(t.guild_id, e);
+        s = (0, r.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
+    return ((0, o.Z)(() => {
+        n.filter((e, t) => null == s[t]).forEach((e) => {
+            u.Z.requestMember(t.guild_id, e);
         });
-    }, []),
+    }),
     0 === n.length)
         ? null
-        : (0, a.jsx)(o.Z, {
-              className: f.facepile,
+        : (0, a.jsx)(c.Z, {
+              className: x.facepile,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,
-              users: i,
-              count: s,
-              max: g.yX
+              users: s,
+              count: l,
+              max: f.yX
           });
 }
 t.Z = l.memo(function (e) {
     let { threadId: t, goToThread: l, showChannelName: o } = e,
-        d = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
-        u = (0, r.e7)([c.Z], () => c.Z.getChannel(d.parent_id));
+        c = (0, r.e7)([d.Z], () => d.Z.getChannel(t)),
+        u = (0, r.e7)([d.Z], () => d.Z.getChannel(c.parent_id));
     return (0, a.jsxs)(s.Clickable, {
-        className: f.container,
-        onClick: (e) => l(d, e.shiftKey),
+        className: x.container,
+        onClick: (e) => l(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('75206')]).then(n.bind(n, 422200));
                 return (t) =>
                     (0, a.jsx)(e, {
                         ...t,
-                        channel: d
+                        channel: c
                     });
             }),
         children: [
             (0, a.jsxs)('div', {
-                className: f.left,
+                className: x.left,
                 children: [
                     (0, a.jsxs)(s.Heading, {
-                        className: f.threadNameLine,
+                        className: x.threadNameLine,
                         variant: 'heading-md/semibold',
                         children: [
                             (0, a.jsx)('span', {
-                                className: f.threadName,
-                                children: d.name
+                                className: x.threadName,
+                                children: c.name
                             }),
                             o && null != u
                                 ? (0, a.jsx)('span', {
-                                      className: f.parentName,
+                                      className: x.parentName,
                                       children: '#'.concat(u.name)
                                   })
                                 : null
                         ]
                     }),
-                    (0, m.Z)(d)
+                    (0, g.Z)(c)
                 ]
             }),
-            (0, a.jsx)(x, { channel: d })
+            (0, a.jsx)(v, { channel: c })
         ]
     });
 });

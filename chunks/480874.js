@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return Z;
     }
 });
 var i = n(200651),
@@ -11,40 +11,41 @@ var i = n(200651),
     o = n(286379),
     c = n(481060),
     d = n(183126),
-    u = n(209613),
-    h = n(82295),
-    m = n(797614),
-    p = n(626135),
-    g = n(26373),
-    f = n(486622),
-    _ = n(922409),
-    E = n(727813),
-    I = n(355350),
-    C = n(307947),
-    N = n(125855),
-    v = n(687683),
-    S = n(981631),
-    T = n(388032),
-    A = n(300755);
-function b() {
+    u = n(493773),
+    h = n(209613),
+    m = n(82295),
+    p = n(797614),
+    g = n(626135),
+    f = n(26373),
+    _ = n(486622),
+    E = n(922409),
+    I = n(727813),
+    C = n(355350),
+    N = n(307947),
+    v = n(125855),
+    S = n(687683),
+    T = n(981631),
+    A = n(388032),
+    b = n(300755);
+function Z() {
     let e = r.useRef(null),
-        t = (0, E.Z)(),
-        n = (0, I.w)(),
-        l = (0, g.V)(),
-        b = (0, d.N)(),
-        Z = (0, u.Z)('message-requests-spam-list'),
-        { channelId: x } = (0, _._)(),
-        L = r.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
+        t = (0, I.Z)(),
+        n = (0, C.w)(),
+        l = (0, f.V)(),
+        Z = (0, d.N)(),
+        x = (0, h.Z)('message-requests-spam-list'),
+        { channelId: L } = (0, E._)(),
+        P = r.useCallback(() => {
+            (0, c.showToast)((0, c.createToast)(A.intl.string(A.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: P } = (0, f.m)({ onError: L }),
-        O = r.useCallback(() => {
-            P(t.map((e) => e.channel.id));
-        }, [t, P]);
-    r.useEffect(() => {
-        p.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
-    }, []);
-    let y = r.useCallback(
+        { rejectAll: O } = (0, _.m)({ onError: P }),
+        y = r.useCallback(() => {
+            O(t.map((e) => e.channel.id));
+        }, [t, O]);
+    (0, u.Z)(() => {
+        g.default.track(T.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), p.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+    });
+    let R = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -52,12 +53,12 @@ function b() {
                     c = null === (r = t[s + 1]) || void 0 === r ? void 0 : null === (n = r.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    N.Z,
+                    v.Z,
                     {
                         index: s,
                         className: a()({
-                            [A.selected]: null != x && x === d,
-                            [A.siblingSelected]: null != x && x === c
+                            [b.selected]: null != L && L === d,
+                            [b.siblingSelected]: null != L && L === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -66,34 +67,34 @@ function b() {
                     d
                 );
             },
-            [t, l, x]
+            [t, l, L]
         ),
-        R = r.useCallback(
+        j = r.useCallback(
             () =>
                 (0, i.jsxs)(
-                    h.Z,
+                    m.Z,
                     {
-                        className: A.sectionTitle,
+                        className: b.sectionTitle,
                         children: [
-                            T.intl.format(T.t.C79Edn, { count: n }),
-                            b && n > 0
+                            A.intl.format(A.t.C79Edn, { count: n }),
+                            Z && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: A.titleDivider,
+                                              className: b.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
                                               children: '\u2022'
                                           }),
                                           (0, i.jsx)(c.Button, {
-                                              onClick: O,
+                                              onClick: y,
                                               look: c.ButtonLooks.LINK,
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
-                                              className: A.clearAllButton,
-                                              'aria-label': T.intl.string(T.t.p6t7RE),
-                                              children: T.intl.string(T.t.p6t7RE)
+                                              className: b.clearAllButton,
+                                              'aria-label': A.intl.string(A.t.p6t7RE),
+                                              children: A.intl.string(A.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -102,31 +103,31 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, b]
+            [n, y, Z]
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.Z, { section: v.pS.SPAM })
+        ? (0, i.jsx)(N.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: Z,
+              navigator: x,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
-                              className: A.list,
+                              className: b.list,
                               innerRole: l,
-                              innerAriaLabel: T.intl.string(T.t.e7GWjY),
+                              innerAriaLabel: A.intl.string(A.t.e7GWjY),
                               ref: (t) => {
                                   var n;
                                   (e.current = t), (r.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: v.oi,
-                              rowHeight: v.WN,
-                              renderSection: R,
-                              renderRow: y,
+                              sectionHeight: S.oi,
+                              rowHeight: S.WN,
+                              renderSection: j,
+                              renderRow: R,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

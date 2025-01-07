@@ -36,32 +36,36 @@ function v() {
 let I = (e) => {
     let { children: n, close: r, onUnmount: i, target: l, rect: c, position: h, align: p, impressionName: m, impressionProperties: E } = e,
         I = s.useRef(null),
-        T = s.useMemo(() => ({ current: l }), [l]);
+        T = s.useMemo(() => ({ current: l }), [l]),
+        b = s.useRef(r);
     s.useEffect(() => {
-        var e, n, i;
-        let a = null === (e = I.current) || void 0 === e ? void 0 : e.elementRef.current;
-        if (null == a) return;
-        let s = (e) => {
-            var n;
-            let i = e.target,
-                a = null === (n = I.current) || void 0 === n ? void 0 : n.elementRef.current;
-            if (!(null != a && (0, u.referencePortalAwareContains)(a, i))) v(), r();
-        };
-        return (
-            null === (n = a.ownerDocument) || void 0 === n || n.addEventListener('click', s, !0),
-            null === (i = a.ownerDocument) || void 0 === i || i.addEventListener('contextmenu', s, !0),
-            () => {
-                var e, n;
-                null === (e = a.ownerDocument) || void 0 === e || e.removeEventListener('click', s, !0), null === (n = a.ownerDocument) || void 0 === n || n.removeEventListener('contextmenu', s, !0);
-            }
-        );
-    }, [r]);
-    let b = s.useRef(i);
-    s.useEffect(() => void (b.current = i)),
+        b.current = r;
+    }),
+        s.useEffect(() => {
+            var e, n, r;
+            let i = null === (e = I.current) || void 0 === e ? void 0 : e.elementRef.current;
+            if (null == i) return;
+            let a = (e) => {
+                var n;
+                let r = e.target,
+                    i = null === (n = I.current) || void 0 === n ? void 0 : n.elementRef.current;
+                if (!(null != i && (0, u.referencePortalAwareContains)(i, r))) v(), b.current();
+            };
+            return (
+                null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('click', a, !0),
+                null === (r = i.ownerDocument) || void 0 === r || r.addEventListener('contextmenu', a, !0),
+                () => {
+                    var e, n;
+                    null === (e = i.ownerDocument) || void 0 === e || e.removeEventListener('click', a, !0), null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('contextmenu', a, !0);
+                }
+            );
+        }, []);
+    let y = s.useRef(i);
+    s.useEffect(() => void (y.current = i)),
         s.useEffect(
             () => () => {
                 var e;
-                return null === (e = b.current) || void 0 === e ? void 0 : e.call(b);
+                return null === (e = y.current) || void 0 === e ? void 0 : e.call(y);
             },
             []
         ),
@@ -74,16 +78,16 @@ let I = (e) => {
             name: m,
             properties: E
         });
-    let y = (0, d.Aq)(),
-        S = s.useCallback(() => {
-            y.dispatch(g.CkL.POPOUT_SHOW);
-        }, [y]),
+    let S = (0, d.Aq)(),
         A = s.useCallback(() => {
-            y.dispatch(g.CkL.POPOUT_HIDE);
-        }, [y]);
+            S.dispatch(g.CkL.POPOUT_SHOW);
+        }, [S]),
+        N = s.useCallback(() => {
+            S.dispatch(g.CkL.POPOUT_HIDE);
+        }, [S]);
     return (0, a.jsx)(_.W5, {
-        onMount: S,
-        onUnmount: A,
+        onMount: A,
+        onUnmount: N,
         targetRef: T,
         overrideTargetRect: c,
         position: null != h ? h : 'right',

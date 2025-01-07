@@ -115,10 +115,13 @@ function eI(e, n, i, a) {
     return {
         submitting: l,
         submit: c,
-        handleSubmit: o.useCallback((e) => {
-            var n;
-            null == i || null === (n = i.current) || void 0 === n || n.submit(e);
-        }, [])
+        handleSubmit: o.useCallback(
+            (e) => {
+                var n;
+                null == i || null === (n = i.current) || void 0 === n || n.submit(e);
+            },
+            [i]
+        )
     };
 }
 function eT(e, n, r) {
@@ -309,7 +312,7 @@ function eL(e, n, r) {
         l = o.useCallback(() => {
             var e;
             null == i && (null === (e = r.current) || void 0 === e || e.handleOuterClick());
-        }, [i]),
+        }, [i, r]),
         u = null == i || null == a || a !== e;
     return {
         expressionPickerView: i,
@@ -322,11 +325,11 @@ function ex(e, n, r) {
     let i = o.useCallback(() => {
             var i, a;
             return !!(!r && (null === (i = n.current) || void 0 === i ? void 0 : i.onTabOrEnter(!1))) || (null === (a = e.current) || void 0 === a ? void 0 : a.onTabOrEnter(!1)) || !1;
-        }, [r]),
+        }, [r, n, e]),
         a = o.useCallback(() => {
             var i, a;
             return !!(!r && (null === (i = n.current) || void 0 === i ? void 0 : i.onTabOrEnter(!0))) || (null === (a = e.current) || void 0 === a ? void 0 : a.onTabOrEnter(!0)) || !1;
-        }, [r]);
+        }, [r, n, e]);
     return {
         handleTab: i,
         handleEnter: a,
@@ -335,7 +338,7 @@ function ex(e, n, r) {
                 var a, s;
                 return !!(!r && (null === (a = n.current) || void 0 === a ? void 0 : a.onMoveSelection(i))) || (null === (s = e.current) || void 0 === s ? void 0 : s.onMoveSelection(i)) || !1;
             },
-            [r]
+            [r, n, e]
         )
     };
 }

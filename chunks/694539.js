@@ -36,7 +36,7 @@ t.Z = (e) => {
         [O, R] = s.useState(!1),
         [P, D] = s.useState([]),
         [y, B] = s.useState(t.name);
-    return (s.useEffect(() => {
+    s.useEffect(() => {
         let e = t.config.effects;
         e.length > 0 &&
             D(
@@ -46,10 +46,19 @@ t.Z = (e) => {
                     return (e.src = n), e;
                 })
             );
-    }, [t]),
+    }, [t]);
+    let L = {
+            effect: t,
+            upsertConfig: r
+        },
+        Z = s.useRef(L);
+    return (s.useEffect(() => {
+        Z.current = L;
+    }),
     s.useEffect(() => {
-        r({
-            id: t.id,
+        let { effect: e, upsertConfig: t } = Z.current;
+        t({
+            id: e.id,
             name: y,
             config: { effects: P }
         });

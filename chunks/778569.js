@@ -11,13 +11,18 @@ function o(e) {
     let { applicationId: t, size: n, names: o = a } = e,
         [s, l] = i.useState(null),
         [c, u] = i.useState(!0),
-        d = (0, r.getAssetImage)(t, s, n);
+        d = (0, r.getAssetImage)(t, s, n),
+        p = i.useRef(o);
     return (
         i.useEffect(() => {
-            (0, r.getAssets)(t).then((e) => {
-                for (let [t, n] of (u(!1), Object.entries(e)))
-                    if (null != n && '' !== n.id && o.includes(n.name)) {
-                        l(n.id);
+            p.current = o;
+        }),
+        i.useEffect(() => {
+            let { current: e } = p;
+            (0, r.getAssets)(t).then((t) => {
+                for (let [n, i] of (u(!1), Object.entries(t)))
+                    if (null != i && '' !== i.id && e.includes(i.name)) {
+                        l(i.id);
                         return;
                     }
             });

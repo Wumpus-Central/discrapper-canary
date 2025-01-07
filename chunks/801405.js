@@ -82,7 +82,7 @@ function _(e) {
             },
             [P, M, j]
         );
-    return (l.useEffect(() => {
+    l.useEffect(() => {
         let e = () => {
             null != j && !(0, g.rB)(j, T) && b === C.AEg.FULL_SCREEN && R(b)();
         };
@@ -92,19 +92,27 @@ function _(e) {
                 T.removeEventListener(g.NO, e);
             }
         );
-    }, [T, b, R, j]),
-    l.useEffect(
-        () => (
+    }, [T, b, R, j]);
+    let L = {
+            channel: t,
+            maybeLeaveFullScreen: M
+        },
+        k = l.useRef(L);
+    return (l.useEffect(() => {
+        k.current = L;
+    }),
+    l.useEffect(() => {
+        let { channel: e, maybeLeaveFullScreen: t } = k.current;
+        return (
             p.default.track(C.rMx.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: I ? 'popout' : b,
-                ...(0, o.AB)(t.id)
+                ...(0, o.AB)(e.id)
             }),
             () => {
-                !(I && (0, f.isMac)()) && M(b);
+                !(I && (0, f.isMac)()) && t(b);
             }
-        ),
-        [b, I]
-    ),
+        );
+    }, [b, I]),
     l.useEffect(() => {
         null != j && E.current === C.WtW.VIDEO && Z === C.WtW.VOICE && (0, g.Pr)(j, T);
     }, [T, Z, E, j]),

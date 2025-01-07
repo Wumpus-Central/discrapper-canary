@@ -45,10 +45,14 @@ function u(e) {
             onNavigatePreviousAtStart: () => g(!0),
             scrollToStart: () => (m(!1, !1), Promise.resolve()),
             scrollToEnd: () => (g(!1), Promise.resolve())
-        });
+        }),
+        v = i.useRef(m);
     return (
         i.useEffect(() => {
-            m(!0, !0);
+            v.current = m;
+        }),
+        i.useEffect(() => {
+            v.current(!0, !0);
         }, [null === (n = f.query) || void 0 === n ? void 0 : n.type, null === (r = f.query) || void 0 === r ? void 0 : r.queryText, null === (u = f.query) || void 0 === u ? void 0 : u.isLoading, f.isVisible]),
         E
     );

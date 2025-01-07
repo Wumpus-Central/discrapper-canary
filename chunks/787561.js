@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return y;
+        return A;
     }
 }),
     n(47120),
@@ -14,46 +14,47 @@ var i = n(200651),
     c = n(433517),
     d = n(481060),
     u = n(852860),
-    m = n(933557),
-    h = n(769654),
-    g = n(984933),
-    x = n(650774),
-    p = n(430824),
-    f = n(496675),
-    C = n(699516),
-    v = n(594174),
-    _ = n(434404),
-    I = n(999382),
-    N = n(54842),
-    T = n(929834),
-    j = n(981631),
-    b = n(388032),
-    S = n(831609),
-    E = n(922905);
-let R = 'dismissedCommunityFeaturesUpsell',
-    y = () => {
+    m = n(493773),
+    h = n(933557),
+    g = n(769654),
+    x = n(984933),
+    p = n(650774),
+    f = n(430824),
+    C = n(496675),
+    v = n(699516),
+    _ = n(594174),
+    I = n(434404),
+    N = n(999382),
+    T = n(54842),
+    j = n(929834),
+    b = n(981631),
+    S = n(388032),
+    E = n(831609),
+    R = n(922905);
+let y = 'dismissedCommunityFeaturesUpsell',
+    A = () => {
         let e;
         let {
                 guild: t,
                 submitting: n,
                 errors: r
-            } = (0, s.cj)([I.Z], () => ({
-                submitting: I.Z.isSubmitting(),
-                guild: I.Z.getGuild(),
-                errors: I.Z.getErrors()
+            } = (0, s.cj)([N.Z], () => ({
+                submitting: N.Z.isSubmitting(),
+                guild: N.Z.getGuild(),
+                errors: N.Z.getErrors()
             })),
             l = Object.keys(r),
             a = l.length > 0 ? l[0] : null;
-        if ('rules_channel_id' === a) e = b.intl.string(b.t['7IrBYm']);
+        if ('rules_channel_id' === a) e = S.intl.string(S.t['7IrBYm']);
         else e = null != a ? r[a] : void 0;
         return (0, i.jsx)(u.Z, {
             submitting: n,
             onReset: () => {
-                if (null != t) _.Z.init(t.id);
+                if (null != t) I.Z.init(t.id);
             },
             onSave: () => {
                 if (null != t)
-                    _.Z.saveGuild(t.id, {
+                    I.Z.saveGuild(t.id, {
                         rulesChannelId: t.rulesChannelId,
                         preferredLocale: t.preferredLocale,
                         safetyAlertsChannelId: t.safetyAlertsChannelId,
@@ -65,74 +66,74 @@ let R = 'dismissedCommunityFeaturesUpsell',
             errorMessage: e
         });
     },
-    A = (e) => {
+    Z = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [a, u] = r.useState(!0 === c.K.get(R)),
-            m = (0, s.e7)([x.Z], () => {
+            [a, u] = r.useState(!0 === c.K.get(y)),
+            h = (0, s.e7)([p.Z], () => {
                 var e;
-                return null !== (e = x.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
+                return null !== (e = p.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
             }),
-            [g, f] = r.useState(!1);
-        r.useEffect(() => {
+            [x, C] = r.useState(!1);
+        (0, m.Z)(() => {
             o.tn
                 .get({
-                    url: j.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    url: b.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
                     rejectWithError: !0
                 })
                 .then((e) => {
-                    f(e.body.eligible_for_admin_server);
+                    C(e.body.eligible_for_admin_server);
                 })
-                .catch(() => f(!1));
-        }, []);
-        let C = (0, s.e7)([p.Z], () => p.Z.getGuild('942897714956472401')),
-            v = l.isCommunity() && m >= 1000 && g && !(null != C);
-        if (t && n && !v) return null;
-        let I = async () => {
+                .catch(() => C(!1));
+        });
+        let v = (0, s.e7)([f.Z], () => f.Z.getGuild('942897714956472401')),
+            _ = l.isCommunity() && h >= 1000 && x && !(null != v);
+        if (t && n && !_) return null;
+        let N = async () => {
             try {
                 let e = await o.tn.post({
-                    url: j.ANM.JOIN_ADMIN_SERVER(l.id),
+                    url: b.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                _.Z.close(), (0, h.X)(e.body.id);
+                I.Z.close(), (0, g.X)(e.body.id);
             } catch {}
         };
-        return a && !v
+        return a && !_
             ? null
             : (0, i.jsxs)('div', {
-                  className: S.upsellContainer,
+                  className: E.upsellContainer,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: S.upsellContent,
+                          className: E.upsellContent,
                           children: [
                               (0, i.jsx)('img', {
-                                  src: E,
+                                  src: R,
                                   alt: '',
                                   width: 60,
-                                  className: S.upsellImage
+                                  className: E.upsellImage
                               }),
                               (0, i.jsxs)('div', {
                                   children: [
                                       (0, i.jsx)(d.Heading, {
                                           variant: 'heading-md/semibold',
-                                          className: S.upsellHeader,
-                                          children: b.intl.string(b.t['pR/BgY'])
+                                          className: E.upsellHeader,
+                                          children: S.intl.string(S.t['pR/BgY'])
                                       }),
                                       (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
-                                          children: b.intl.string(b.t['V+Yo1t'])
+                                          children: S.intl.string(S.t['V+Yo1t'])
                                       })
                                   ]
                               })
                           ]
                       }),
                       (0, i.jsx)(d.Button, {
-                          'aria-label': b.intl.string(b.t.cpT0Cg),
+                          'aria-label': S.intl.string(S.t.cpT0Cg),
                           look: d.Button.Looks.BLANK,
                           size: d.Button.Sizes.NONE,
-                          className: S.upsellClose,
+                          className: E.upsellClose,
                           onClick: () => {
-                              c.K.set(R, !0), u(!0);
+                              c.K.set(y, !0), u(!0);
                           },
                           children: (0, i.jsx)(d.XSmallIcon, {
                               size: 'md',
@@ -140,305 +141,305 @@ let R = 'dismissedCommunityFeaturesUpsell',
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: S.upsellFooter,
+                          className: E.upsellFooter,
                           children: [
-                              v &&
+                              _ &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: I,
-                                      className: S.upsellButton,
-                                      children: b.intl.string(b.t.iF1Asr)
+                                      onClick: N,
+                                      className: E.upsellButton,
+                                      children: S.intl.string(S.t.iF1Asr)
                                   }),
                               n
                                   ? null
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            _.Z.setSection(j.pNK.ONBOARDING);
+                                            I.Z.setSection(b.pNK.ONBOARDING);
                                         },
-                                        className: S.upsellButton,
-                                        children: b.intl.string(b.t['S/DfiY'])
+                                        className: E.upsellButton,
+                                        children: S.intl.string(S.t['S/DfiY'])
                                     }),
                               t
                                   ? null
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            _.Z.setSection(j.pNK.DISCOVERY);
+                                            I.Z.setSection(b.pNK.DISCOVERY);
                                         },
-                                        className: S.upsellButton,
+                                        className: E.upsellButton,
                                         color: d.Button.Colors.PRIMARY,
-                                        children: b.intl.string(b.t['0kmJd3'])
+                                        children: S.intl.string(S.t['0kmJd3'])
                                     }),
                               (0, i.jsx)(d.Button, {
                                   size: d.Button.Sizes.SMALL,
                                   onClick: () => {
-                                      _.Z.setSection(j.pNK.ANALYTICS);
+                                      I.Z.setSection(b.pNK.ANALYTICS);
                                   },
-                                  className: S.upsellButton,
+                                  className: E.upsellButton,
                                   color: d.Button.Colors.PRIMARY,
-                                  children: b.intl.string(b.t.BQIYTU)
+                                  children: S.intl.string(S.t.BQIYTU)
                               })
                           ]
                       })
                   ]
               });
     },
-    Z = () => {
-        let e = (0, s.e7)([I.Z], () => I.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, s.cj)([f.Z], () => ({
-                canManageGuild: f.Z.can(j.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: f.Z.can(j.Plq.ADMINISTRATOR, e)
+    L = () => {
+        let e = (0, s.e7)([N.Z], () => N.Z.getGuild()),
+            { canManageGuild: t, isGuildAdmin: n } = (0, s.cj)([C.Z], () => ({
+                canManageGuild: C.Z.can(b.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: C.Z.can(b.Plq.ADMINISTRATOR, e)
             })),
-            l = (0, s.e7)([g.ZP], () => (null != e ? g.ZP.getChannels(e.id) : null)),
-            o = r.useMemo(T.jb, []),
-            u = !0 !== c.K.get(R);
+            l = (0, s.e7)([x.ZP], () => (null != e ? x.ZP.getChannels(e.id) : null)),
+            o = r.useMemo(j.jb, []),
+            u = !0 !== c.K.get(y);
         if (null == e) return null;
-        let h = [];
+        let m = [];
         null != l &&
-            l[g.sH].forEach((e) => {
+            l[x.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === j.d4z.GUILD_TEXT &&
-                    h.push({
+                t.type === b.d4z.GUILD_TEXT &&
+                    m.push({
                         value: t.id,
-                        label: (0, m.F6)(t, v.default, C.Z, !0)
+                        label: (0, h.F6)(t, _.default, v.Z, !0)
                     });
             });
-        let x = () => {
-                _.Z.init(e.id), _.Z.open(e.id, j.pNK.MEMBER_VERIFICATION);
+        let g = () => {
+                I.Z.init(e.id), I.Z.open(e.id, b.pNK.MEMBER_VERIFICATION);
             },
             p = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(j.oNc.COMMUNITY),
-                    t.delete(j.oNc.DISCOVERABLE),
-                    !e.hasFeature(j.oNc.CLAN) && t.delete(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
-                    t.delete(j.oNc.PREVIEW_ENABLED),
-                    _.Z.updateGuild({
+                t.delete(b.oNc.COMMUNITY),
+                    t.delete(b.oNc.DISCOVERABLE),
+                    !e.hasFeature(b.oNc.CLAN) && t.delete(b.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
+                    t.delete(b.oNc.PREVIEW_ENABLED),
+                    I.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
                     });
             },
-            N = (e) => {
-                _.Z.updateGuild({ rulesChannelId: e });
+            f = (e) => {
+                I.Z.updateGuild({ rulesChannelId: e });
             },
-            E = (e) => {
-                _.Z.updateGuild({ safetyAlertsChannelId: e });
+            T = (e) => {
+                I.Z.updateGuild({ safetyAlertsChannelId: e });
             },
-            y = (e) => {
-                _.Z.updateGuild({ publicUpdatesChannelId: e });
+            R = (e) => {
+                I.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            Z = (e) => {
-                _.Z.updateGuild({ preferredLocale: e });
+            A = (e) => {
+                I.Z.updateGuild({ preferredLocale: e });
             },
             L = (e) => {
-                _.Z.updateGuild({ description: e });
+                I.Z.updateGuild({ description: e });
             },
             D = () => {
-                e.features.has(j.oNc.DISCOVERABLE) && e.features.has(j.oNc.PARTNERED)
+                e.features.has(b.oNc.DISCOVERABLE) && e.features.has(b.oNc.PARTNERED)
                     ? (0, d.openModal)((e) =>
                           (0, i.jsx)(d.ConfirmModal, {
                               ...e,
-                              header: b.intl.string(b.t.iBnVHR),
-                              confirmText: b.intl.string(b.t['cY+Ooa']),
-                              cancelText: b.intl.string(b.t.oEAioK),
+                              header: S.intl.string(S.t.iBnVHR),
+                              confirmText: S.intl.string(S.t['cY+Ooa']),
+                              cancelText: S.intl.string(S.t.oEAioK),
                               onConfirm: p,
                               children: (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
-                                  children: b.intl.string(b.t['P+Sh8f'])
+                                  children: S.intl.string(S.t['P+Sh8f'])
                               })
                           })
                       )
-                    : e.features.has(j.oNc.DISCOVERABLE)
+                    : e.features.has(b.oNc.DISCOVERABLE)
                       ? (0, d.openModal)((e) =>
                             (0, i.jsx)(d.ConfirmModal, {
                                 ...e,
-                                header: b.intl.string(b.t.iBnVHR),
-                                confirmText: b.intl.string(b.t['cY+Ooa']),
-                                cancelText: b.intl.string(b.t.oEAioK),
+                                header: S.intl.string(S.t.iBnVHR),
+                                confirmText: S.intl.string(S.t['cY+Ooa']),
+                                cancelText: S.intl.string(S.t.oEAioK),
                                 onConfirm: p,
                                 children: (0, i.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: b.intl.string(b.t['eMx/ub'])
+                                    children: S.intl.string(S.t['eMx/ub'])
                                 })
                             })
                         )
-                      : e.features.has(j.oNc.PARTNERED)
+                      : e.features.has(b.oNc.PARTNERED)
                         ? (0, d.openModal)((e) =>
                               (0, i.jsx)(d.ConfirmModal, {
                                   ...e,
-                                  header: b.intl.string(b.t.iBnVHR),
-                                  confirmText: b.intl.string(b.t['cY+Ooa']),
-                                  cancelText: b.intl.string(b.t.oEAioK),
+                                  header: S.intl.string(S.t.iBnVHR),
+                                  confirmText: S.intl.string(S.t['cY+Ooa']),
+                                  cancelText: S.intl.string(S.t.oEAioK),
                                   onConfirm: p,
                                   children: (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
-                                      children: b.intl.string(b.t.l1wLeX)
+                                      children: S.intl.string(S.t.l1wLeX)
                                   })
                               })
                           )
-                        : e.features.has(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && !e.features.has(j.oNc.CLAN)
+                        : e.features.has(b.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && !e.features.has(b.oNc.CLAN)
                           ? (0, d.openModal)((e) =>
                                 (0, i.jsx)(d.ConfirmModal, {
                                     ...e,
-                                    header: b.intl.string(b.t.iBnVHR),
+                                    header: S.intl.string(S.t.iBnVHR),
                                     confirmButtonColor: d.Button.Colors.BRAND,
-                                    confirmText: b.intl.string(b.t.izNBMz),
-                                    cancelText: b.intl.string(b.t.oEAioK),
-                                    onConfirm: x,
+                                    confirmText: S.intl.string(S.t.izNBMz),
+                                    cancelText: S.intl.string(S.t.oEAioK),
+                                    onConfirm: g,
                                     children: (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
-                                        children: b.intl.string(b.t.kQzUNj)
+                                        children: S.intl.string(S.t.kQzUNj)
                                     })
                                 })
                             )
                           : p();
             };
         return (0, i.jsxs)(d.FormSection, {
-            title: b.intl.string(b.t.nRtNqq),
+            title: S.intl.string(S.t.nRtNqq),
             tag: d.FormTitleTags.H1,
             children: [
                 u
-                    ? (0, i.jsx)(A, {
-                          discoveryEnabled: e.features.has(j.oNc.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(j.oNc.GUILD_ONBOARDING),
+                    ? (0, i.jsx)(Z, {
+                          discoveryEnabled: e.features.has(b.oNc.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(b.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.descriptionColumn,
+                            className: E.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t.otcXPz)
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t.otcXPz)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: S.__invalid_formDescription,
-                                    children: b.intl.string(b.t.BtwmYG)
+                                    className: E.__invalid_formDescription,
+                                    children: S.intl.string(S.t.BtwmYG)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: S.selectColumn,
+                            className: E.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.rulesChannelId,
-                                options: h,
-                                onChange: N,
+                                options: m,
+                                onChange: f,
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: S.divider }),
+                (0, i.jsx)(d.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.descriptionColumn,
+                            className: E.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t.vAyDGR)
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t.vAyDGR)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: S.__invalid_formDescription,
-                                    children: b.intl.string(b.t.ZFeonp)
+                                    className: E.__invalid_formDescription,
+                                    children: S.intl.string(S.t.ZFeonp)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: S.selectColumn,
+                            className: E.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.publicUpdatesChannelId,
-                                options: h,
-                                onChange: y,
+                                options: m,
+                                onChange: R,
                                 isDisabled: !n
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: S.divider }),
+                (0, i.jsx)(d.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(E.twoColumnFormSection, E.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.descriptionColumn,
+                            className: E.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t.sMkYEx)
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t.sMkYEx)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: S.__invalid_formDescription,
-                                    children: b.intl.string(b.t.htioQk)
+                                    className: E.__invalid_formDescription,
+                                    children: S.intl.string(S.t.htioQk)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: S.selectColumn,
+                            className: E.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.safetyAlertsChannelId,
-                                options: h,
-                                onChange: E,
+                                options: m,
+                                onChange: T,
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: S.divider }),
+                (0, i.jsx)(d.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: S.twoColumnFormSection,
+                    className: E.twoColumnFormSection,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.descriptionColumn,
+                            className: E.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t.pO60f3)
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t.pO60f3)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: S.__invalid_formDescription,
-                                    children: b.intl.string(b.t.aIR73d)
+                                    className: E.__invalid_formDescription,
+                                    children: S.intl.string(S.t.aIR73d)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: S.selectColumn,
+                            className: E.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: Z,
+                                onChange: A,
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: S.divider }),
+                (0, i.jsx)(d.FormDivider, { className: E.divider }),
                 (() => {
                     var n;
                     if (null != e)
                         return (0, i.jsxs)(d.FormSection, {
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t['RSfm+v'])
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t['RSfm+v'])
                                 }),
                                 (0, i.jsx)(d.FormText, {
-                                    className: S.description,
+                                    className: E.description,
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    children: b.intl.string(b.t['/B6PR0'])
+                                    children: S.intl.string(S.t['/B6PR0'])
                                 }),
                                 (0, i.jsx)(d.TextArea, {
                                     value: null !== (n = e.description) && void 0 !== n ? n : '',
-                                    placeholder: b.intl.string(b.t.Nvfows),
+                                    placeholder: S.intl.string(S.t.Nvfows),
                                     onChange: L,
                                     maxLength: 120,
                                     disabled: !t
@@ -446,27 +447,27 @@ let R = 'dismissedCommunityFeaturesUpsell',
                             ]
                         });
                 })(),
-                (0, i.jsx)(d.FormDivider, { className: S.divider }),
+                (0, i.jsx)(d.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: S.twoColumnFormSection,
+                    className: E.twoColumnFormSection,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: S.descriptionColumn,
+                            className: E.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: S.formTitle,
-                                    children: b.intl.string(b.t.c1BmbG)
+                                    className: E.formTitle,
+                                    children: S.intl.string(S.t.c1BmbG)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: S.__invalid_formDescription,
-                                    children: b.intl.string(b.t.aQzVFx)
+                                    className: E.__invalid_formDescription,
+                                    children: S.intl.string(S.t.aQzVFx)
                                 })
                             ]
                         }),
                         (0, i.jsx)(d.Tooltip, {
-                            text: n ? null : b.intl.string(b.t['pjG+T0']),
-                            'aria-label': n ? void 0 : b.intl.string(b.t['pjG+T0']),
+                            text: n ? null : S.intl.string(S.t['pjG+T0']),
+                            'aria-label': n ? void 0 : S.intl.string(S.t['pjG+T0']),
                             children: (e) =>
                                 (0, i.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
@@ -474,7 +475,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                     color: d.Button.Colors.RED,
                                     disabled: !n,
                                     ...e,
-                                    children: b.intl.string(b.t.c1BmbG)
+                                    children: S.intl.string(S.t.c1BmbG)
                                 })
                         })
                     ]
@@ -483,6 +484,6 @@ let R = 'dismissedCommunityFeaturesUpsell',
         });
     };
 t.Z = () => {
-    let e = (0, s.e7)([I.Z], () => I.Z.getGuild());
-    return null == e ? null : e.features.has(j.oNc.COMMUNITY) ? (0, i.jsx)(Z, {}) : (0, i.jsx)(N.Z, { guild: e });
+    let e = (0, s.e7)([N.Z], () => N.Z.getGuild());
+    return null == e ? null : e.features.has(b.oNc.COMMUNITY) ? (0, i.jsx)(L, {}) : (0, i.jsx)(T.Z, { guild: e });
 };

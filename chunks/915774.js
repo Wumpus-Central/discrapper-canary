@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return b;
+            return p;
         }
     }),
     t(47120);
@@ -10,62 +10,63 @@ var o = t(200651),
     i = t(442837),
     a = t(481060),
     u = t(596454),
-    r = t(313201),
-    d = t(318766),
-    s = t(907040),
-    c = t(339085),
-    m = t(984933),
-    j = t(883429),
-    h = t(981631),
-    v = t(185923),
-    x = t(388032),
-    C = t(866878);
-function b(e) {
+    r = t(493773),
+    d = t(313201),
+    s = t(318766),
+    c = t(907040),
+    m = t(339085),
+    j = t(984933),
+    h = t(883429),
+    v = t(981631),
+    x = t(185923),
+    C = t(388032),
+    b = t(866878);
+function p(e) {
     var n;
-    let { transitionState: t, onClose: b, channelId: p, guildId: g, tag: N } = e,
-        k = (0, r.Dt)(),
-        B = null != N,
-        [f, I] = l.useState(null !== (n = null == N ? void 0 : N.name) && void 0 !== n ? n : ''),
-        [_, E] = l.useState(
-            null != N
+    let { transitionState: t, onClose: p, channelId: g, guildId: N, tag: k } = e,
+        B = (0, d.Dt)(),
+        I = null != k,
+        [f, _] = l.useState(null !== (n = null == k ? void 0 : k.name) && void 0 !== n ? n : ''),
+        [T, E] = l.useState(
+            null != k
                 ? {
-                      id: N.emojiId,
-                      name: N.emojiName
+                      id: k.emojiId,
+                      name: k.emojiName
                   }
                 : null
         ),
-        [T, R] = l.useState(null == N ? void 0 : N.moderated),
-        Z = (0, i.e7)([c.ZP], () => ((null == _ ? void 0 : _.id) != null ? c.ZP.getUsableCustomEmojiById(_.id) : null)),
-        y = (null == N ? void 0 : N.name) !== f || (null == N ? void 0 : N.emojiId) !== (null == _ ? void 0 : _.id) || (null == N ? void 0 : N.emojiName) !== (null == _ ? void 0 : _.name) || T !== (null == N ? void 0 : N.moderated),
-        P = () => {
-            if (null != f && y) {
-                if (B) {
-                    j.Z.updateForumTag(
+        [Z, R] = l.useState(null == k ? void 0 : k.moderated),
+        y = (0, i.e7)([m.ZP], () => ((null == T ? void 0 : T.id) != null ? m.ZP.getUsableCustomEmojiById(T.id) : null)),
+        P = (null == k ? void 0 : k.name) !== f || (null == k ? void 0 : k.emojiId) !== (null == T ? void 0 : T.id) || (null == k ? void 0 : k.emojiName) !== (null == T ? void 0 : T.name) || Z !== (null == k ? void 0 : k.moderated),
+        M = () => {
+            if (null != f && P) {
+                if (I) {
+                    h.Z.updateForumTag(
                         {
-                            id: N.id,
+                            id: k.id,
                             name: f,
-                            emojiId: null == _ ? void 0 : _.id,
-                            emojiName: null == _ ? void 0 : _.name,
-                            moderated: T
+                            emojiId: null == T ? void 0 : T.id,
+                            emojiName: null == T ? void 0 : T.name,
+                            moderated: Z
                         },
-                        p
+                        g
                     ),
-                        b();
+                        p();
                     return;
                 }
-                j.Z.createForumTag(
+                h.Z.createForumTag(
                     {
                         name: f,
-                        emojiId: null == _ ? void 0 : _.id,
-                        emojiName: null == _ ? void 0 : _.name,
-                        moderated: T
+                        emojiId: null == T ? void 0 : T.id,
+                        emojiName: null == T ? void 0 : T.name,
+                        moderated: Z
                     },
-                    p
+                    g
                 ),
-                    b();
+                    p();
             }
         },
-        M = (e) => {
+        S = (e) => {
             null != e &&
                 E(
                     null != e.id
@@ -79,47 +80,47 @@ function b(e) {
                           }
                 );
         },
-        S = l.useCallback((e) => I(e), []),
-        D = l.createRef();
+        D = l.useCallback((e) => _(e), []),
+        H = l.createRef();
     return (
-        l.useEffect(() => {
-            null != D.current && D.current.focus();
-        }, []),
+        (0, r.Z)(() => {
+            null != H.current && H.current.focus();
+        }),
         (0, o.jsxs)(a.ModalRoot, {
             transitionState: t,
-            'aria-labelledby': k,
+            'aria-labelledby': B,
             children: [
                 (0, o.jsx)(a.ModalHeader, {
                     separator: !1,
                     children: (0, o.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
-                        children: B ? x.intl.string(x.t.zeVg5e) : x.intl.string(x.t['/jubeH'])
+                        children: I ? C.intl.string(C.t.zeVg5e) : C.intl.string(C.t['/jubeH'])
                     })
                 }),
                 (0, o.jsxs)('div', {
-                    className: C.content,
+                    className: b.content,
                     children: [
                         (0, o.jsx)(a.Text, {
                             variant: 'text-sm/normal',
-                            children: x.intl.string(x.t['3v8kZG'])
+                            children: C.intl.string(C.t['3v8kZG'])
                         }),
                         (0, o.jsxs)('div', {
-                            className: C.inputContainer,
+                            className: b.inputContainer,
                             children: [
                                 (0, o.jsx)('div', {
-                                    className: C.emojiButtonContainer,
+                                    className: b.emojiButtonContainer,
                                     children: (0, o.jsx)(a.Popout, {
                                         renderPopout: (e) => {
                                             let { closePopout: n } = e,
-                                                t = m.ZP.getDefaultChannel(g);
-                                            return (0, o.jsx)(s.Z, {
-                                                guildId: g,
+                                                t = j.ZP.getDefaultChannel(N);
+                                            return (0, o.jsx)(c.Z, {
+                                                guildId: N,
                                                 closePopout: n,
                                                 onSelectEmoji: (e, t) => {
-                                                    M(e), t && n();
+                                                    S(e), t && n();
                                                 },
-                                                pickerIntention: v.Hz.COMMUNITY_CONTENT,
-                                                onNavigateAway: b,
+                                                pickerIntention: x.Hz.COMMUNITY_CONTENT,
+                                                onNavigateAway: p,
                                                 channel: t
                                             });
                                         },
@@ -128,23 +129,23 @@ function b(e) {
                                         align: 'bottom',
                                         children: (e, n) => {
                                             let { isShown: t } = n;
-                                            return (0, o.jsx)(d.Z, {
+                                            return (0, o.jsx)(s.Z, {
                                                 ...e,
                                                 onClick: (n) => {
                                                     var t;
                                                     null === (t = e.onClick) || void 0 === t || t.call(e, n);
                                                 },
                                                 active: t,
-                                                className: C.emojiButton,
+                                                className: b.emojiButton,
                                                 tabIndex: 0,
                                                 renderButtonContents:
-                                                    null != _ && (null != _.id || null != _.name)
+                                                    null != T && (null != T.id || null != T.name)
                                                         ? () =>
                                                               (0, o.jsx)(u.Z, {
-                                                                  className: C.emoji,
-                                                                  emojiId: _.id,
-                                                                  emojiName: _.name,
-                                                                  animated: !!(null == Z ? void 0 : Z.animated)
+                                                                  className: b.emoji,
+                                                                  emojiId: T.id,
+                                                                  emojiName: T.name,
+                                                                  animated: !!(null == y ? void 0 : y.animated)
                                                               })
                                                         : null
                                             });
@@ -152,30 +153,30 @@ function b(e) {
                                     })
                                 }),
                                 (0, o.jsx)(a.TextInput, {
-                                    inputRef: D,
+                                    inputRef: H,
                                     maxLength: 20,
                                     value: f,
-                                    inputClassName: C.input,
-                                    placeholder: x.intl.string(x.t['5vpeb2']),
-                                    onChange: S,
+                                    inputClassName: b.input,
+                                    placeholder: C.intl.string(C.t['5vpeb2']),
+                                    onChange: D,
                                     autoFocus: !0,
                                     onKeyDown: (e) => {
-                                        e.keyCode === h.yXg.ENTER && f.length > 0 && (f.length > 0 && P(), e.preventDefault());
+                                        e.keyCode === v.yXg.ENTER && f.length > 0 && (f.length > 0 && M(), e.preventDefault());
                                     }
                                 }),
-                                f.length > 0 || null != _
+                                f.length > 0 || null != T
                                     ? (0, o.jsx)(a.Button, {
-                                          'aria-label': x.intl.string(x.t.o8lsHR),
-                                          className: C.clearButton,
+                                          'aria-label': C.intl.string(C.t.o8lsHR),
+                                          className: b.clearButton,
                                           onClick: () => {
-                                              I(''), E(null);
+                                              _(''), E(null);
                                           },
                                           look: a.Button.Looks.BLANK,
                                           size: a.Button.Sizes.NONE,
                                           children: (0, o.jsx)(a.CircleXIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: C.clearIcon
+                                              className: b.clearIcon
                                           })
                                       })
                                     : null
@@ -186,43 +187,43 @@ function b(e) {
                 (0, o.jsx)(a.Checkbox, {
                     type: a.Checkbox.Types.INVERTED,
                     size: 18,
-                    value: null != T && T,
-                    onChange: (e, n) => R(n || ((null == N ? void 0 : N.moderated) == null && void 0)),
-                    className: C.moderatedCheckbox,
+                    value: null != Z && Z,
+                    onChange: (e, n) => R(n || ((null == k ? void 0 : k.moderated) == null && void 0)),
+                    className: b.moderatedCheckbox,
                     children: (0, o.jsx)(a.Text, {
                         variant: 'text-sm/normal',
-                        children: x.intl.string(x.t['rMH+rq'])
+                        children: C.intl.string(C.t['rMH+rq'])
                     })
                 }),
                 (0, o.jsxs)(a.ModalFooter, {
-                    className: C.footer,
+                    className: b.footer,
                     children: [
                         (0, o.jsxs)('div', {
-                            className: C.buttons,
+                            className: b.buttons,
                             children: [
                                 (0, o.jsx)(a.Button, {
                                     color: a.Button.Colors.PRIMARY,
                                     onClick: () => {
-                                        b();
+                                        p();
                                     },
-                                    children: x.intl.string(x.t['ETE/oK'])
+                                    children: C.intl.string(C.t['ETE/oK'])
                                 }),
                                 (0, o.jsx)(a.Button, {
-                                    onClick: P,
-                                    disabled: 0 === f.length || !y,
+                                    onClick: M,
+                                    disabled: 0 === f.length || !P,
                                     autoFocus: !0,
-                                    children: x.intl.string(x.t.R3BPHx)
+                                    children: C.intl.string(C.t.R3BPHx)
                                 })
                             ]
                         }),
-                        B &&
+                        I &&
                             (0, o.jsx)(a.Button, {
                                 color: a.Button.Colors.RED,
                                 look: a.Button.Looks.LINK,
                                 onClick: () => {
-                                    B && (j.Z.deleteForumTag(p, N.id), b());
+                                    I && (h.Z.deleteForumTag(g, k.id), p());
                                 },
-                                children: x.intl.string(x.t.huYSMj)
+                                children: C.intl.string(C.t.huYSMj)
                             })
                     ]
                 })

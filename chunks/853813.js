@@ -46,20 +46,29 @@ function E(e) {
     let L = (0, s.e7)([m.Z], () => m.Z.getHighestRole(y), [y]),
         D = (0, s.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, A)),
         O = r.useRef(null),
-        k = (0, s.e7)([f.Z], () => f.Z.getProps().integrations);
+        k = (0, s.e7)([f.Z], () => f.Z.getProps().integrations),
+        P = {
+            role: A,
+            editRoleId: n
+        },
+        M = r.useRef(P);
     if (
         (r.useEffect(() => {
+            M.current = P;
+        }),
+        r.useEffect(() => {
             var e, t;
-            let i = (0, C.UT)(E),
-                r = null !== (t = null === (e = x.Z.getRoleMemberCount(y.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t ? t : 0;
+            let { role: n, editRoleId: i } = M.current,
+                r = (0, C.UT)(E),
+                l = null !== (t = null === (e = x.Z.getRoleMemberCount(y.id)) || void 0 === e ? void 0 : e[i]) && void 0 !== t ? t : 0;
             h.default.track(b.rMx.ROLE_PAGE_VIEWED, {
-                tab_opened: i,
-                is_everyone: (0, d.pM)(y.id, n),
-                role_id: n,
-                role_mentionable: null == A ? void 0 : A.mentionable,
-                role_hoist: null == A ? void 0 : A.hoist,
-                role_permissions: null == A ? void 0 : A.permissions.toString(),
-                role_num_members: r,
+                tab_opened: r,
+                is_everyone: (0, d.pM)(y.id, i),
+                role_id: i,
+                role_mentionable: null == n ? void 0 : n.mentionable,
+                role_hoist: null == n ? void 0 : n.hoist,
+                role_permissions: null == n ? void 0 : n.permissions.toString(),
+                role_num_members: l,
                 ...(0, c.hH)(y.id)
             });
         }, [E, y.id, null == A ? void 0 : A.id]),

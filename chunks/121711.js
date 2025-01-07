@@ -26,21 +26,26 @@ t.Z = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, v.z)(),
         { onScroll: Z, scrollPosition: x } = (0, c.M)(),
         L = I.Z.getState().getUtmCurrentContext(),
-        P = (0, E._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? N.Z : N.j;
+        P = (0, E._)({ location: S.dr.QUEST_HOME_DESKTOP }) ? N.Z : N.j,
+        O = r.useRef(L);
     r.useEffect(() => {
-        (0, s.h)({
-            name: l.ImpressionNames.QUEST_HOME,
-            type: l.ImpressionTypes.VIEW,
-            properties: {
-                utm_source_current: L.utmSourceCurrent,
-                utm_medium_current: L.utmMediumCurrent,
-                utm_campaign_current: L.utmCampaignCurrent,
-                utm_content_current: L.utmContentCurrent,
-                tab: e
-            }
-        });
-    }, [e]);
-    let O = r.useCallback(() => {
+        O.current = L;
+    }),
+        r.useEffect(() => {
+            let { current: t } = O;
+            (0, s.h)({
+                name: l.ImpressionNames.QUEST_HOME,
+                type: l.ImpressionTypes.VIEW,
+                properties: {
+                    utm_source_current: t.utmSourceCurrent,
+                    utm_medium_current: t.utmMediumCurrent,
+                    utm_campaign_current: t.utmCampaignCurrent,
+                    utm_content_current: t.utmContentCurrent,
+                    tab: e
+                }
+            });
+        }, [e]);
+    let y = r.useCallback(() => {
         window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
@@ -60,7 +65,7 @@ t.Z = function () {
                             description: A.intl.string(A.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
                                 text: A.intl.string(A.t.hvVgAQ),
-                                onClick: O
+                                onClick: y
                             }),
                             className: b.bannerContainer,
                             children: (0, i.jsx)('div', {

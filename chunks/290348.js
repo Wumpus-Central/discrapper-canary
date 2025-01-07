@@ -102,8 +102,9 @@ function b(t, e, n) {
     return [void 0 !== o ? o : n, l];
 }
 function P(t, e) {
-    let n = (0, c.e7)([m.Z], () => m.Z.getSubscriptionListing(t));
-    return i.useMemo(() => e(n), [n]);
+    let n = (0, c.e7)([m.Z], () => m.Z.getSubscriptionListing(t)),
+        r = i.useRef(e);
+    return i.useMemo(() => r.current(n), [n]);
 }
 function M(t) {
     let e = P(t, (t) => {

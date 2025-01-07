@@ -184,17 +184,23 @@ function D(e) {
         d = (0, s.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
         u = (0, s.e7)([j.Z], () => j.Z.advancedMode),
         h = r.useRef(null),
-        [g, x] = r.useState(!1);
+        [g, x] = r.useState(!1),
+        p = r.useRef(n);
     return (r.useEffect(() => {
-        if (t)
+        p.current = n;
+    }),
+    r.useEffect(() => {
+        if (t) {
+            let { current: e } = p;
             return () => {
-                null != n &&
-                    (0, I.DO)(n)
+                null != e &&
+                    (0, I.DO)(e)
                         .then(() => {
-                            u && (0, T.rS)(n, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
+        }
     }, [t, u]),
     null == n)
         ? null

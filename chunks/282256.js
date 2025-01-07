@@ -5,58 +5,68 @@ var i = n(200651),
     r = n.n(a),
     s = n(434650),
     o = n(393903),
-    c = n(353093),
-    u = n(979264),
-    d = n(506800);
+    c = n(448986),
+    u = n(353093),
+    d = n(979264),
+    m = n(506800);
 t.Z = l.memo(function (e) {
-    let { children: t, isOverlay: n, contextGuildId: a, ...m } = e,
-        f = l.useRef(null),
-        [p, g] = l.useState({ maskImage: 'none' }),
-        h = l.useCallback(() => {
+    let { children: t, isOverlay: n, contextGuildId: a, ...f } = e,
+        p = l.useRef(null),
+        [g, h] = l.useState({ maskImage: 'none' }),
+        v = (0, c.Z)(() => {
             var e, t;
             if (n) {
-                g({ maskImage: 'none' });
+                h({ maskImage: 'none' });
                 return;
             }
-            let i = null === (e = v.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
-                l = null === (t = f.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+            let i = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+                l = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == l) {
-                g({ maskImage: 'none' });
+                h({ maskImage: 'none' });
                 return;
             }
             let a = l.right - i.right,
                 r = l.width - a;
             if (r > l.width) {
-                g({ maskImage: 'none' });
+                h({ maskImage: 'none' });
                 return;
             }
-            g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
-        }, []),
-        v = (0, o.y)(h),
-        S = (0, c.p0)(m.userId, a);
+            h({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
+        }),
+        S = (0, o.y)(v),
+        I = (0, u.p0)(f.userId, a),
+        _ = {
+            handleResize: v,
+            positionTrackerRef: S
+        },
+        x = l.useRef(_);
     l.useEffect(() => {
-        if (null != v.current) h();
-    }, [S]);
-    let I = (0, s.O)(h);
+        x.current = _;
+    }),
+        l.useEffect(() => {
+            let { handleResize: e, positionTrackerRef: t } = x.current;
+            if (null != t.current) e();
+        }, [I]);
+    let E = (0, s.O)(v);
     return (0, i.jsxs)('div', {
-        className: r()(d.container, n && d.isOverlayContainer),
-        ref: v,
+        className: r()(m.container, n && m.isOverlayContainer),
+        ref: S,
         children: [
             (0, i.jsx)('div', {
-                className: d.usernameContainer,
+                className: m.usernameContainer,
                 children: t
             }),
             (0, i.jsx)('div', {
-                className: d.chipletParent,
-                ref: I,
+                className: m.chipletParent,
+                ref: E,
                 children: (0, i.jsx)('span', {
-                    className: r()(d.chipletContainer, !S && n && d.noPadding),
-                    ref: f,
-                    style: p,
-                    children: (0, i.jsx)(u.ZP, {
-                        ...m,
+                    className: r()(m.chipletContainer, !I && n && m.noPadding),
+                    ref: p,
+                    style: g,
+                    children: (0, i.jsx)(d.ZP, {
+                        ...f,
                         contextGuildId: a,
-                        className: r()(m.className, n && d.isOverlayTag)
+                        className: r()(f.className, n && m.isOverlayTag)
                     })
                 })
             })

@@ -35,38 +35,46 @@ function y(e) {
             leaderboardId: r,
             intervalOffset: 0
         }),
-        o = (0, f.Z)({
-            guildId: null != n ? n : '',
-            leaderboardId: r,
-            intervalOffset: -1
-        });
+        o = {
+            leaderboard: a,
+            prevLeaderboard: (0, f.Z)({
+                guildId: null != n ? n : '',
+                leaderboardId: r,
+                intervalOffset: -1
+            })
+        },
+        l = s.useRef(o);
     s.useEffect(() => {
-        let e, r;
-        if (null == a) return;
-        let s = a.guild_settings.sort_by_statistic_id;
-        if (null != o) {
-            var l, c;
-            let n = o.guild_settings.sort_by_statistic_id,
-                i = o.users[0];
-            (e = null == i ? void 0 : i.user_id), (r = null == i ? void 0 : null === (c = i.statistics) || void 0 === c ? void 0 : null === (l = c[n]) || void 0 === l ? void 0 : l.value);
-        }
-        u.default.track(g.rMx.LEADERBOARD_POPOUT_VIEWED, {
-            guild_id: n,
-            leaderboard_id: a.leaderboard_id,
-            interval_start: a.interval_start,
-            interval_end: a.interval_end,
-            sort_by_statistic_id: s,
-            sort_desc: a.guild_settings.sort_desc,
-            ordered_leaderboard_user_ids: a.users.map((e) => e.user_id),
-            ordered_leaderboard_user_values: a.users.map((e) => {
-                var n, r;
-                return null !== (r = null === (n = e.statistics[s]) || void 0 === n ? void 0 : n.value) && void 0 !== r ? r : 0;
-            }),
-            opened_from_source: i,
-            last_interval_champion_id: e,
-            last_interval_champion_value: r
-        });
-    }, [n, r, i]);
+        l.current = o;
+    }),
+        s.useEffect(() => {
+            let e, r;
+            let { leaderboard: a, prevLeaderboard: s } = l.current;
+            if (null == a) return;
+            let o = a.guild_settings.sort_by_statistic_id;
+            if (null != s) {
+                var c, d;
+                let n = s.guild_settings.sort_by_statistic_id,
+                    i = s.users[0];
+                (e = null == i ? void 0 : i.user_id), (r = null == i ? void 0 : null === (d = i.statistics) || void 0 === d ? void 0 : null === (c = d[n]) || void 0 === c ? void 0 : c.value);
+            }
+            u.default.track(g.rMx.LEADERBOARD_POPOUT_VIEWED, {
+                guild_id: n,
+                leaderboard_id: a.leaderboard_id,
+                interval_start: a.interval_start,
+                interval_end: a.interval_end,
+                sort_by_statistic_id: o,
+                sort_desc: a.guild_settings.sort_desc,
+                ordered_leaderboard_user_ids: a.users.map((e) => e.user_id),
+                ordered_leaderboard_user_values: a.users.map((e) => {
+                    var n, r;
+                    return null !== (r = null === (n = e.statistics[o]) || void 0 === n ? void 0 : n.value) && void 0 !== r ? r : 0;
+                }),
+                opened_from_source: i,
+                last_interval_champion_id: e,
+                last_interval_champion_value: r
+            });
+        }, [n, r, i]);
 }
 let S = (e) => {
     var n;

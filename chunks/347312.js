@@ -82,10 +82,14 @@ function B(e, n) {
 }
 function G(e, n, r) {
     let [i, a] = o.useState(e),
-        [s, l] = o.useState(e);
+        [s, l] = o.useState(e),
+        u = o.useRef(s);
     return (
         o.useLayoutEffect(() => {
-            a(s), l(e);
+            u.current = s;
+        }),
+        o.useLayoutEffect(() => {
+            a(u.current), l(e);
         }, [e, n, r]),
         [i, s]
     );
@@ -124,16 +128,26 @@ function V(e) {
         S = o.useRef(c),
         A = o.useRef(null),
         C = window.devicePixelRatio,
-        { lastBackgroundFillColor: O, backgroundFillColor: L, lastActiveFillColor: x, activeFillColor: P, lastInactiveFillColor: M, inactiveFillColor: G } = Z(l, c);
-    o.useEffect(() => {
-        let e = k({
-            showAll: !l,
+        { lastBackgroundFillColor: O, backgroundFillColor: L, lastActiveFillColor: x, activeFillColor: P, lastInactiveFillColor: M, inactiveFillColor: G } = Z(l, c),
+        V = {
             currentTime: i,
             duration: a,
-            numSegments: b.length
-        });
-        T.current = b.map((n, r) => new m.Z(r < e ? n : 0));
-    }, [b]),
+            played: l
+        },
+        j = o.useRef(V);
+    o.useEffect(() => {
+        j.current = V;
+    }),
+        o.useEffect(() => {
+            let { currentTime: e, duration: n, played: r } = j.current,
+                i = k({
+                    showAll: !r,
+                    currentTime: e,
+                    duration: n,
+                    numSegments: b.length
+                });
+            T.current = b.map((e, n) => new m.Z(n < i ? e : 0));
+        }, [b]),
         o.useEffect(() => {
             let e = T.current;
             if (null == e) return;
@@ -204,14 +218,14 @@ function V(e) {
                 }
             );
         }, [g, C, b, v, i, a, l, c, O, L, x, P, M, G]);
-    let [, V] = (0, _.Z)({
+    let [, H] = (0, _.Z)({
         ref: g,
         onDrag: d,
         onDragStart: h,
         onDragEnd: p
     });
     return (0, s.jsx)('canvas', {
-        onMouseDown: V,
+        onMouseDown: H,
         className: u()(E.canvas, n),
         style: { width: I },
         ref: g,

@@ -19,28 +19,40 @@ function u(e) {
         f = r.useRef((0, o._)(t, m)),
         [_, x] = r.useState(null == h),
         [E, I] = r.useState(!1),
-        [v, N] = r.useState(-1),
-        b = () => {
-            (f.current = (0, o._)(t, m)), N((e) => e + 1);
-        },
-        C = () => {
-            x(!1), I(!0), N(-1), p(d);
-        };
+        [v, N] = r.useState(-1);
     r.useEffect(() => {
         null == h && p(d);
-    }, [h, d]),
+    }, [h, d]);
+    let b = {
+            applyAnimation: () => {
+                (f.current = (0, o._)(t, m)), N((e) => e + 1);
+            },
+            idleAnimationState: h,
+            isChanging: E,
+            resetAnimation: () => {
+                x(!1), I(!0), N(-1), p(d);
+            },
+            versionKey: v
+        },
+        C = r.useRef(b);
+    r.useEffect(() => {
+        C.current = b;
+    }),
         r.useEffect(() => {
-            if (null != h && v >= 0) {
-                C();
+            let { resetAnimation: e, versionKey: t, applyAnimation: n } = C.current;
+            if (null != h && t >= 0) {
+                e();
                 return;
             }
-            b();
+            n();
         }, [t, h]),
         r.useEffect(() => {
-            (!E || null == h) && b();
+            let { applyAnimation: e, isChanging: t, idleAnimationState: n } = C.current;
+            (!t || null == n) && e();
         }, [m]),
         r.useEffect(() => {
-            E && (x(null == h), I(!1), b());
+            let { applyAnimation: e, idleAnimationState: t } = C.current;
+            E && (x(null == t), I(!1), e());
         }, [E]);
     if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
     return (0, i.jsx)(l.LottieAnimation, {

@@ -1,6 +1,6 @@
 n.d(t, {
     A$: function () {
-        return L;
+        return S;
     },
     OF: function () {
         return p;
@@ -98,30 +98,34 @@ function Z() {
     if (y < k.length - 1) return E();
     M();
 }
-let S = (e) => {
+let L = (e) => {
     let t = e.filter((e) => ('attributes' !== e.type || e.attributeName !== p) && !0);
     0 !== t.length && (N(), null != g && (clearTimeout(g), (g = null)), null != w && (clearTimeout(w), (w = null)), (g = setTimeout(E, 250)));
 };
-function L(e, t) {
+function S(e, t) {
+    let n = (0, a.useRef)(t);
     (0, a.useLayoutEffect)(() => {
-        if (m && null != e) {
-            (I = t), (x = e);
-            let n = (function (e) {
-                let t = new MutationObserver(S);
-                return (
-                    t.observe(e, {
-                        attributes: !0,
-                        childList: !0,
-                        subtree: !0
-                    }),
-                    t
-                );
-            })(e);
-            return () => {
-                (I = () => {}), n.disconnect();
-            };
-        }
-    }, [e]);
+        n.current = t;
+    }),
+        (0, a.useLayoutEffect)(() => {
+            if (m && null != e) {
+                (I = n.current), (x = e);
+                let t = (function (e) {
+                    let t = new MutationObserver(L);
+                    return (
+                        t.observe(e, {
+                            attributes: !0,
+                            childList: !0,
+                            subtree: !0
+                        }),
+                        t
+                    );
+                })(e);
+                return () => {
+                    (I = () => {}), t.disconnect();
+                };
+            }
+        }, [e]);
 }
 function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,

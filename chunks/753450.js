@@ -53,8 +53,8 @@ var i = n(200651),
     M = n(823379),
     U = n(900849),
     G = n(135431),
-    W = n(674588),
-    V = n(264043),
+    V = n(674588),
+    W = n(264043),
     z = n(303383),
     Y = n(887706),
     K = n(738130),
@@ -123,7 +123,7 @@ function eS(e) {
             );
         }),
         eP = a.useMemo(() => (null == eT ? void 0 : eT.slice(0, 3)), [eT]),
-        eE = (0, _.e7)([V.Z], () => V.Z.getApplicationFetchState(m)),
+        eE = (0, _.e7)([W.Z], () => W.Z.getApplicationFetchState(m)),
         [eA, eL] = a.useState(void 0),
         ek = a.useCallback(
             (e) => {
@@ -140,9 +140,9 @@ function eS(e) {
         eR = (0, _.e7)([Z.Z], () => Z.Z.isFocused()),
         eB = (0, _.e7)([O.default], () => O.default.locale),
         eO = a.useRef(m),
-        ew = (0, _.e7)([V.Z], () => {
-            let e = V.Z.getApplication(m);
-            return null == e ? (e = V.Z.getApplication(eO.current)) : (eO.current = m), e;
+        ew = (0, _.e7)([W.Z], () => {
+            let e = W.Z.getApplication(m);
+            return null == e ? (e = W.Z.getApplication(eO.current)) : (eO.current = m), e;
         }),
         eZ = (0, ei.Z)({ application: ew }),
         eH = (0, _.e7)([w.default], () => w.default.getSessionId());
@@ -185,7 +185,7 @@ function eS(e) {
         a.useEffect(() => {
             if (null != m) {
                 let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
-                W.i6(m, { noCache: e });
+                V.i6(m, { noCache: e });
             }
         }, [m]),
         a.useEffect(() => {
@@ -214,26 +214,34 @@ function eS(e) {
             id: null !== (c = null == ew ? void 0 : ew.id) && void 0 !== c ? c : '',
             label: e_.intl.string(e_.t['FfCL+/'])
         }),
-        { canInstall: eW, install: eV } = (0, q.P)(ew, g),
-        ez = null === (t = (0, et.getPreviousView)()) || void 0 === t ? void 0 : t.type;
+        { canInstall: eV, install: eW } = (0, q.P)(ew, g),
+        ez = {
+            previousViewType: null === (t = (0, et.getPreviousView)()) || void 0 === t ? void 0 : t.type,
+            selectedSection: f
+        },
+        eY = a.useRef(ez);
     a.useEffect(() => {
-        (null == ew ? void 0 : ew.id) != null &&
-            H.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
-                current_page: 'product',
-                previous_page: ez,
-                application_id: ew.id,
-                guild_id: g,
-                shown_mutual_guilds_count: eZ.length,
-                profile_section: f,
-                referrer: document.referrer
-            });
-    }, [null == ew ? void 0 : ew.id, g, eZ]);
-    let eY = a.useMemo(() => {
+        eY.current = ez;
+    }),
+        a.useEffect(() => {
+            let { previousViewType: e, selectedSection: t } = eY.current;
+            (null == ew ? void 0 : ew.id) != null &&
+                H.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+                    current_page: 'product',
+                    previous_page: e,
+                    application_id: ew.id,
+                    guild_id: g,
+                    shown_mutual_guilds_count: eZ.length,
+                    profile_section: t,
+                    referrer: document.referrer
+                });
+        }, [null == ew ? void 0 : ew.id, g, eZ]);
+    let eK = a.useMemo(() => {
             var e;
             let t = null == ew ? void 0 : null === (e = ew.install_params) || void 0 === e ? void 0 : e.permissions;
             if (null != t) return k.VY.filter((e) => p.e$(p.vB(t), e));
         }, [null == ew ? void 0 : null === (r = ew.install_params) || void 0 === r ? void 0 : r.permissions]),
-        eK = a.useCallback(
+        eq = a.useCallback(
             (e) => {
                 ek(e),
                     (null == ew ? void 0 : ew.id) != null &&
@@ -245,14 +253,14 @@ function eS(e) {
             },
             [null == ew ? void 0 : ew.id, g, ek]
         ),
-        eq = a.useMemo(() => {
+        eX = a.useMemo(() => {
             var e, t, n;
             return null !== (n = (null !== (t = null == ew ? void 0 : null === (e = ew.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(X.RF).filter(M.lm)) && void 0 !== n ? n : [];
         }, [ew]),
-        eX = a.useCallback(
+        eJ = a.useCallback(
             (e, t) => {
                 if (e.type === ep.s9s.IMG) {
-                    let t = eq.filter((e) => e.type === ep.s9s.IMG),
+                    let t = eX.filter((e) => e.type === ep.s9s.IMG),
                         n = t.findIndex((t) => t === e);
                     if (n < 0) return;
                     let i = t.map((e) => ({
@@ -272,9 +280,9 @@ function eS(e) {
                     });
                 }
             },
-            [eq]
+            [eX]
         ),
-        eJ = a.useCallback(
+        eQ = a.useCallback(
             (e) => {
                 (null == ew ? void 0 : ew.id) != null &&
                     H.default.track(ep.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
@@ -290,12 +298,12 @@ function eS(e) {
         );
     a.useEffect(() => {
         if (null != m)
-            W.T4({
+            V.T4({
                 applicationId: m,
                 guildId: g
             });
     }, [m, g]);
-    let eQ = a.useCallback(
+    let e$ = a.useCallback(
             (e) => {
                 let { application: t, mutualGuilds: n, index: i } = e;
                 (null == ew ? void 0 : ew.id) != null &&
@@ -312,7 +320,7 @@ function eS(e) {
             },
             [null == ew ? void 0 : ew.id, ej, g]
         ),
-        e$ = a.useCallback(() => {
+        e0 = a.useCallback(() => {
             null != ew &&
                 (0, C.Z)(
                     (0, er.G)({
@@ -322,7 +330,7 @@ function eS(e) {
                     })
                 );
         }, [eB, ew]),
-        e0 = a.useCallback(
+        e6 = a.useCallback(
             (e) =>
                 (0, i.jsxs)(h.Menu, {
                     navId: 'application-directory-profile',
@@ -335,33 +343,33 @@ function eS(e) {
                                 id: 'report',
                                 label: e_.intl.string(e_.t.NgA5vr),
                                 color: 'danger',
-                                action: e$
+                                action: e0
                             })
                         }),
                         null != eG ? (0, i.jsx)(h.MenuGroup, { children: eG }) : null
                     ]
                 }),
-            [eG, e$]
+            [eG, e0]
         ),
-        [e6, e1] = (0, x.Z)(!1, 1000),
-        e2 = a.useCallback(() => {
+        [e1, e2] = (0, x.Z)(!1, 1000),
+        e3 = a.useCallback(() => {
             if (null != ew)
                 H.default.track(ep.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, {
                     application_id: ew.id,
                     guild_id: g
                 }),
                     (0, F.JG)(eC(ew.id)),
-                    e1(!0);
-        }, [ew, e1, g]);
+                    e2(!0);
+        }, [ew, e2, g]);
     a.useEffect(() => {
         let e = new URL(location.href);
         if (y && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let t = e.pathname + e.search;
-            (0, R.dL)(t), eV('product_page');
+            (0, R.dL)(t), eW('product_page');
         }
-    }, [y, eV]);
-    let e3 = a.useCallback(() => {
+    }, [y, eW]);
+    let e5 = a.useCallback(() => {
             if (null != ew) {
                 if ((u.tq || u.Em) && null == ew.custom_install_url) {
                     let e = (0, G.Er)({
@@ -376,7 +384,7 @@ function eS(e) {
                     }
                 }
                 y
-                    ? eV('product_page')
+                    ? eW('product_page')
                     : (H.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: m,
                           guild_id: g,
@@ -386,21 +394,21 @@ function eS(e) {
                       }),
                       (0, X.rf)({ [ex]: 'true' }));
             }
-        }, [ew, y, eV, m, g]),
-        e5 = (null == ew ? void 0 : ew.id) === em.g,
-        [e8, e9] = a.useState(!1),
-        [e4, e7] = a.useState(!1),
-        [te, tt] = a.useState(!0),
-        tn = (e) => {
-            null != e && e9(e.scrollHeight > e.clientHeight);
+        }, [ew, y, eW, m, g]),
+        e8 = (null == ew ? void 0 : ew.id) === em.g,
+        [e9, e4] = a.useState(!1),
+        [e7, te] = a.useState(!1),
+        [tt, tn] = a.useState(!0),
+        ti = (e) => {
+            null != e && e4(e.scrollHeight > e.clientHeight);
         },
-        ti = null != eY && eY.length > 0,
-        ta = (null == ew ? void 0 : ew.flags) != null,
-        tr = (0, N.R)(null != m ? m : '');
+        ta = null != eK && eK.length > 0,
+        tr = (null == ew ? void 0 : ew.flags) != null,
+        to = (0, N.R)(null != m ? m : '');
     a.useEffect(() => {
-        tr && null != m && (0, T.Z)(m);
-    }, [tr, m]);
-    let to = a.useMemo(() => {
+        to && null != m && (0, T.Z)(m);
+    }, [to, m]);
+    let tl = a.useMemo(() => {
             let e = [],
                 t = !0;
             switch (f) {
@@ -417,10 +425,10 @@ function eS(e) {
                                           children: e_.intl.string(e_.t.txraKS)
                                       }),
                                       (0, i.jsx)('div', {
-                                          ref: tn,
+                                          ref: ti,
                                           className: o()({
-                                              [ef.descriptionClamp]: !e4,
-                                              [ef.descriptionClampSafari]: !e4 && 'Safari' === s().name
+                                              [ef.descriptionClamp]: !e7,
+                                              [ef.descriptionClampSafari]: !e7 && 'Safari' === s().name
                                           }),
                                           children: (0, i.jsx)(E.Z, {
                                               className: ef.detailedDescription,
@@ -430,11 +438,11 @@ function eS(e) {
                                               children: r
                                           })
                                       }),
-                                      (e8 || e4) &&
+                                      (e9 || e7) &&
                                           (0, i.jsx)(eN, {
-                                              isViewAll: e4,
+                                              isViewAll: e7,
                                               onToggle: () => {
-                                                  e7((e) => !e);
+                                                  te((e) => !e);
                                               }
                                           })
                                   ]
@@ -482,7 +490,7 @@ function eS(e) {
                     break;
                 }
                 case eu.ApplicationDirectoryProfileSections.IMAGES: {
-                    if (0 === eq.length) break;
+                    if (0 === eX.length) break;
                     let t = (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('img', {
@@ -497,11 +505,11 @@ function eS(e) {
                             })
                         ]
                     });
-                    eq.forEach((e, t) => {
+                    eX.forEach((e, t) => {
                         null != ew
                             ? (e.alt = e_.intl.formatToPlainString(e_.t.sSEhHR, {
                                   index: t + 1,
-                                  totalImages: eq.length,
+                                  totalImages: eX.length,
                                   name: ew.name
                               }))
                             : (e.alt = e_.intl.string(e_.t['5UVm9/']));
@@ -510,11 +518,11 @@ function eS(e) {
                             (0, i.jsx)(v.Z, {
                                 className: ef.carousel,
                                 themedPagination: !0,
-                                items: eq,
+                                items: eX,
                                 autoplayInterval: 8000,
                                 paused: !eR,
                                 videoAutoPlay: !0,
-                                onCurrentItemClick: eX,
+                                onCurrentItemClick: eJ,
                                 errorComponent: t,
                                 onImageLoad: (e) => {
                                     let { src: t, loadTimeMs: n } = e;
@@ -531,10 +539,10 @@ function eS(e) {
                     break;
                 }
                 case eu.ApplicationDirectoryProfileSections.STORE:
-                    tr && null != m && e.push((0, i.jsx)(ea.M, { appId: m }));
+                    to && null != m && e.push((0, i.jsx)(ea.M, { appId: m }));
                     break;
                 case eu.ApplicationDirectoryProfileSections.PRIVACY:
-                    ti &&
+                    ta &&
                         e.push(
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
@@ -545,13 +553,13 @@ function eS(e) {
                                     }),
                                     (0, i.jsx)(I.Z, {
                                         className: ef.commandList,
-                                        grantedPermissions: eY,
+                                        grantedPermissions: eK,
                                         grantedPermissionsHeader: e_.intl.string(e_.t.SLgiND)
                                     })
                                 ]
                             })
                         ),
-                        ta &&
+                        tr &&
                             e.push(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -566,7 +574,7 @@ function eS(e) {
                             );
             }
             return (
-                tt(t),
+                tn(t),
                 0 === e.length && f !== eu.ApplicationDirectoryProfileSections.GENERAL && null != ew && eM(),
                 e.map((e, t) =>
                     (0, i.jsx)(
@@ -579,8 +587,8 @@ function eS(e) {
                     )
                 )
             );
-        }, [f, eM, ew, eA, e4, e8, eq, eR, eX, tr, m, ti, ta, eY]),
-        tl = a.useMemo(() => {
+        }, [f, eM, ew, eA, e7, e9, eX, eR, eJ, to, m, ta, tr, eK]),
+        ts = a.useMemo(() => {
             let e = [
                 {
                     name: eu.ApplicationDirectoryProfileSections.GENERAL,
@@ -589,19 +597,19 @@ function eS(e) {
                 }
             ];
             return (
-                eq.length > 0 &&
+                eX.length > 0 &&
                     e.push({
                         name: eu.ApplicationDirectoryProfileSections.IMAGES,
                         text: e_.intl.string(e_.t.BEFwGR),
                         Icon: h.ImagesIcon
                     }),
-                tr &&
+                to &&
                     e.push({
                         name: eu.ApplicationDirectoryProfileSections.STORE,
                         text: e_.intl.string(e_.t.pylO39),
                         Icon: h.ShopSparkleIcon
                     }),
-                (ti || ta) &&
+                (ta || tr) &&
                     e.push({
                         name: eu.ApplicationDirectoryProfileSections.PRIVACY,
                         text: e_.intl.string(e_.t.hrodJy),
@@ -609,12 +617,12 @@ function eS(e) {
                     }),
                 e
             );
-        }, [eq.length, ti, ta, tr]);
+        }, [eX.length, ta, tr, to]);
     return (
         (d =
             null == ew
-                ? null == eE || eE === V.M.FETCHING
-                    ? (0, i.jsx)($.Z, { loading: eE === V.M.FETCHING })
+                ? null == eE || eE === W.M.FETCHING
+                    ? (0, i.jsx)($.Z, { loading: eE === W.M.FETCHING })
                     : (0, i.jsx)('div', {
                           className: ef.__invalid_page,
                           children: (0, i.jsxs)('div', {
@@ -633,7 +641,7 @@ function eS(e) {
                           })
                       })
                 : (0, i.jsxs)($.Z, {
-                      loading: eE === V.M.FETCHING,
+                      loading: eE === W.M.FETCHING,
                       children: [
                           (0, i.jsx)(ey, {
                               app: ew,
@@ -678,7 +686,7 @@ function eS(e) {
                                                                       variant: 'heading-xxl/semibold',
                                                                       children: ew.name
                                                                   }),
-                                                                  tr &&
+                                                                  to &&
                                                                       (0, i.jsx)(h.Tooltip, {
                                                                           tooltipClassName: ef.premiumIconTooltip,
                                                                           text: e_.intl.string(e_.t['7B10XF']),
@@ -690,27 +698,27 @@ function eS(e) {
                                                                                   src: n(744050)
                                                                               })
                                                                       }),
-                                                                  e5 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
+                                                                  e8 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
                                                               className: ef.buttons,
                                                               children: [
                                                                   (0, i.jsx)(h.Button, {
-                                                                      onClick: e2,
+                                                                      onClick: e3,
                                                                       color: h.Button.Colors.PRIMARY,
-                                                                      children: e6 ? e_.intl.string(e_.t.wwdb3t) : e_.intl.string(e_.t.z4sP5O)
+                                                                      children: e1 ? e_.intl.string(e_.t.wwdb3t) : e_.intl.string(e_.t.z4sP5O)
                                                                   }),
                                                                   (0, i.jsx)(h.Button, {
                                                                       color: h.Button.Colors.BRAND,
-                                                                      onClick: e3,
-                                                                      disabled: !eW,
+                                                                      onClick: e5,
+                                                                      disabled: !eV,
                                                                       children: e_.intl.string(e_.t.NgXl3N)
                                                                   }),
                                                                   (0, i.jsx)(h.Popout, {
                                                                       renderPopout: (e) => {
                                                                           let { closePopout: t } = e;
-                                                                          return e0(t);
+                                                                          return e6(t);
                                                                       },
                                                                       position: 'left',
                                                                       align: 'top',
@@ -734,8 +742,8 @@ function eS(e) {
                                                   }),
                                                   (0, i.jsx)(ed.Z, {
                                                       activeSection: f,
-                                                      setSection: eK,
-                                                      sections: tl
+                                                      setSection: eq,
+                                                      sections: ts
                                                   })
                                               ]
                                           })
@@ -747,11 +755,11 @@ function eS(e) {
                                           (0, i.jsxs)('div', {
                                               className: ef.content,
                                               children: [
-                                                  to,
+                                                  tl,
                                                   null != eP && eP.length > 0
                                                       ? (0, i.jsxs)(i.Fragment, {
                                                             children: [
-                                                                te && (0, i.jsx)('div', { className: ef.separator }),
+                                                                tt && (0, i.jsx)('div', { className: ef.separator }),
                                                                 (0, i.jsxs)('div', {
                                                                     className: ef.section,
                                                                     children: [
@@ -765,7 +773,7 @@ function eS(e) {
                                                                             children: (0, i.jsx)(J.Z, {
                                                                                 applicationId: m,
                                                                                 applications: eP,
-                                                                                onViewOne: eQ
+                                                                                onViewOne: e$
                                                                             })
                                                                         })
                                                                     ]
@@ -779,7 +787,7 @@ function eS(e) {
                                               className: ef.sidebar,
                                               application: ew,
                                               guildId: g,
-                                              onViewCategory: eJ,
+                                              onViewCategory: eQ,
                                               onClickGuildWidget: eF
                                           })
                                       ]

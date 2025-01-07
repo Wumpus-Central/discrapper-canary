@@ -1,9 +1,9 @@
 n.d(t, {
     Sz: function () {
-        return _;
+        return f;
     },
     of: function () {
-        return C;
+        return _;
     }
 }),
     n(653041),
@@ -16,15 +16,16 @@ var i = n(200651),
     o = n(780384),
     c = n(481060),
     d = n(355467),
-    u = n(410030),
-    m = n(906732),
-    h = n(600164),
-    g = n(296848),
-    p = n(798769),
-    x = n(981631),
-    S = n(388032),
-    T = n(612711);
-async function E(e) {
+    u = n(493773),
+    m = n(410030),
+    h = n(906732),
+    g = n(600164),
+    p = n(296848),
+    x = n(798769),
+    S = n(981631),
+    T = n(388032),
+    E = n(612711);
+async function C(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: r, analyticsLocations: l, analyticsLocation: a } = e;
     try {
         r(!0), s(!1), await (0, d.Mg)(t, { pauseDuration: n }, l, a), i();
@@ -32,105 +33,105 @@ async function E(e) {
         s(!0), r(!1);
     }
 }
-function C(e) {
+function _(e) {
     let { premiumType: t, onClose: n, pauseDuration: r, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
-        u = s.useCallback(
+        m = s.useCallback(
             (e) => {
                 let { value: t } = e;
                 l(t);
             },
             [l]
         ),
-        m = d.status === x.O0b.PAUSED ? S.intl.string(S.t.Lp9WoK) : S.intl.string(S.t.eSR83d),
-        E = (function (e) {
-            let t = e.status === x.O0b.PAUSED ? S.t.o3upfX : S.t.dBXZEh,
-                { durations: n, currentDaysPaused: i } = (0, g.AT)(e),
+        h = d.status === S.O0b.PAUSED ? T.intl.string(T.t.Lp9WoK) : T.intl.string(T.t.eSR83d),
+        C = (function (e) {
+            let t = e.status === S.O0b.PAUSED ? T.t.o3upfX : T.t.dBXZEh,
+                { durations: n, currentDaysPaused: i } = (0, p.AT)(e),
                 s = [];
             for (let e of n) {
                 let n = a.T[e];
                 s.push({
-                    name: S.intl.formatToPlainString(t, { days: n - i }),
+                    name: T.intl.formatToPlainString(t, { days: n - i }),
                     value: n,
-                    radioItemIconClassName: T.radioOption
+                    radioItemIconClassName: E.radioOption
                 });
             }
             return (
                 s.sort((e, t) => e.value - t.value),
                 s.push({
-                    name: S.intl.string(S.t.OCPUMz),
+                    name: T.intl.string(T.t.OCPUMz),
                     value: 0,
-                    radioBarClassName: T.cancelText,
-                    radioItemIconClassName: T.cancelText
+                    radioBarClassName: E.cancelText,
+                    radioItemIconClassName: E.cancelText
                 }),
                 s
             );
         })(d);
     return (
-        s.useEffect(() => {
-            if (!(E.length < 1)) l(E[0].value);
-        }, []),
+        (0, u.Z)(() => {
+            if (!(C.length < 1)) l(C[0].value);
+        }),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(x.Z, {
                     premiumType: t,
                     onClose: n
                 }),
                 (0, i.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, i.jsxs)('div', {
-                        className: T.__invalid_header,
+                        className: E.__invalid_header,
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: 'heading-xl/bold',
-                                className: T.__invalid_modalHeader,
-                                children: S.intl.string(S.t.f3nnBw)
+                                className: E.__invalid_modalHeader,
+                                children: T.intl.string(T.t.f3nnBw)
                             }),
                             (0, i.jsx)(c.Heading, {
                                 variant: 'heading-sm/medium',
-                                className: T.subtitle,
-                                children: m
+                                className: E.subtitle,
+                                children: h
                             })
                         ]
                     })
                 }),
                 (0, i.jsx)(c.ModalContent, {
-                    className: T.body,
+                    className: E.body,
                     children: (0, i.jsx)(c.RadioGroup, {
-                        options: E,
-                        onChange: u,
+                        options: C,
+                        onChange: m,
                         value: r
                     })
                 }),
                 (0, i.jsx)(c.ModalFooter, {
-                    justify: h.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: o
                 })
             ]
         })
     );
 }
-function _(e) {
+function f(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
-        [g, C] = s.useState(!1),
-        { analyticsLocations: _ } = (0, m.ZP)(),
+        [u, p] = s.useState(!1),
+        { analyticsLocations: _ } = (0, h.ZP)(),
         [f, I] = s.useState(!1),
-        N = (0, u.ZP)(),
+        N = (0, m.ZP)(),
         A = null,
         b = null,
-        v = [x.O0b.PAST_DUE, x.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        v = [S.O0b.PAST_DUE, S.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         j = l()(v).add(a, 'days').toDate();
     switch (t.status) {
-        case x.O0b.PAST_DUE:
-            b = S.intl.format(S.t['xaS18/'], {
+        case S.O0b.PAST_DUE:
+            b = T.intl.format(T.t['xaS18/'], {
                 pauseDuration: a,
                 resumeDate: j
             });
             break;
-        case x.O0b.PAUSED:
-            b = S.intl.format(S.t.Vur3FR, { resumeDate: j });
+        case S.O0b.PAUSED:
+            b = T.intl.format(T.t.Vur3FR, { resumeDate: j });
             break;
         default:
-            b = S.intl.format(S.t.W85vFB, {
+            b = T.intl.format(T.t.W85vFB, {
                 pauseDate: v,
                 resumeDate: j,
                 pauseDuration: a
@@ -138,64 +139,64 @@ function _(e) {
     }
     return (
         (A = (0, i.jsx)('div', {
-            className: T.body,
+            className: E.body,
             children: b
         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(x.Z, {
                     premiumType: n,
                     onClose: r
                 }),
                 (0, i.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, i.jsx)('div', {
-                        className: T.__invalid_header,
+                        className: E.__invalid_header,
                         children: (0, i.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
-                            className: T.__invalid_modalHeader,
-                            children: S.intl.string(S.t['AnMG5+'])
+                            className: E.__invalid_modalHeader,
+                            children: T.intl.string(T.t['AnMG5+'])
                         })
                     })
                 }),
                 (0, i.jsxs)(c.ModalContent, {
-                    className: T.body,
+                    className: E.body,
                     children: [
-                        g
+                        u
                             ? (0, i.jsx)(c.FormErrorBlock, {
-                                  className: T.errorBlock,
-                                  children: S.intl.string(S.t['5mlOCQ'])
+                                  className: E.errorBlock,
+                                  children: T.intl.string(T.t['5mlOCQ'])
                               })
                             : null,
                         A
                     ]
                 }),
                 (0, i.jsx)(c.ModalFooter, {
-                    justify: h.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
-                        className: T.whatYouLoseButtonContainer,
+                        className: E.whatYouLoseButtonContainer,
                         children: [
                             (0, i.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
                                 disabled: f || null == a,
                                 onClick: async () => {
-                                    await E({
+                                    await C({
                                         premiumSubscription: t,
                                         pauseDuration: a,
                                         setIsCancelling: I,
-                                        setHasError: C,
+                                        setHasError: p,
                                         onClose: r,
                                         analyticsLocations: _,
                                         analyticsLocation: d
                                     });
                                 },
-                                children: S.intl.string(S.t['cY+Ooa'])
+                                children: T.intl.string(T.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(c.Button, {
                                 look: c.Button.Looks.LINK,
                                 color: (0, o.wj)(N) ? c.Button.Colors.WHITE : c.Button.Colors.PRIMARY,
                                 onClick: r,
-                                children: S.intl.string(S.t.h9tkAA)
+                                children: T.intl.string(T.t.h9tkAA)
                             })
                         ]
                     })

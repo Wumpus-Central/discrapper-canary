@@ -1,15 +1,15 @@
 e.d(n, {
     Lh: function () {
-        return m;
+        return C;
     },
     S0: function () {
-        return h;
+        return m;
     },
     ZP: function () {
-        return x;
+        return v;
     },
     ku: function () {
-        return d;
+        return h;
     }
 }),
     e(47120);
@@ -17,13 +17,14 @@ var l = e(200651),
     i = e(192379),
     o = e(846519),
     s = e(481060),
-    r = e(765305),
-    u = e(388032),
-    c = e(77257);
-function a(t) {
+    r = e(493773),
+    u = e(765305),
+    c = e(388032),
+    a = e(77257);
+function d(t) {
     let { text: n, disabled: e, onJoinClick: i } = t;
     return (0, l.jsx)(s.Button, {
-        className: c.__invalid_button,
+        className: a.__invalid_button,
         size: s.Button.Sizes.SMALL,
         onClick: i,
         color: s.Button.Colors.GREEN,
@@ -31,32 +32,29 @@ function a(t) {
         children: n
     });
 }
-function d(t) {
-    let { onInviteClick: n, canInvite: e, isChannelPublic: r } = t,
-        a = new o.V7(),
-        [d, h] = i.useState(!1);
-    i.useEffect(
-        () => () => {
-            a.stop();
-        },
-        []
-    );
-    let m = (t) => {
-        null != n && n(t), h(!0), a.start(1000, () => h(!1));
+function h(t) {
+    let { onInviteClick: n, canInvite: e, isChannelPublic: u } = t,
+        d = new o.V7(),
+        [h, m] = i.useState(!1);
+    (0, r.Z)(() => () => {
+        d.stop();
+    });
+    let C = (t) => {
+        null != n && n(t), m(!0), d.start(1000, () => m(!1));
     };
     return null == n
         ? null
         : (0, l.jsx)(s.Tooltip, {
-              text: g(e, r),
+              text: x(e, u),
               position: 'top',
-              tooltipClassName: c.tooltips,
-              'aria-label': u.intl.string(u.t.Ej3B3d),
+              tooltipClassName: a.tooltips,
+              'aria-label': c.intl.string(c.t.Ej3B3d),
               children: (t) =>
-                  e && r
+                  e && u
                       ? (0, l.jsxs)(s.Button, {
                             ...t,
-                            className: c.__invalid_button,
-                            innerClassName: c.innerButton,
+                            className: a.__invalid_button,
+                            innerClassName: a.innerButton,
                             color: s.Button.Colors.PRIMARY,
                             size: s.Button.Sizes.SMALL,
                             onClick: n,
@@ -65,20 +63,20 @@ function d(t) {
                                     size: 'xs',
                                     color: 'currentColor'
                                 }),
-                                u.intl.string(u.t.RDE0SU)
+                                c.intl.string(c.t.RDE0SU)
                             ]
                         })
                       : (0, l.jsxs)(s.Button, {
                             ...t,
-                            className: c.__invalid_button,
-                            innerClassName: c.innerButton,
+                            className: a.__invalid_button,
+                            innerClassName: a.innerButton,
                             color: s.Button.Colors.PRIMARY,
                             size: s.Button.Sizes.SMALL,
-                            disabled: d,
-                            look: d ? s.Button.Looks.OUTLINED : s.Button.Looks.FILLED,
-                            onClick: m,
+                            disabled: h,
+                            look: h ? s.Button.Looks.OUTLINED : s.Button.Looks.FILLED,
+                            onClick: C,
                             children: [
-                                d
+                                h
                                     ? (0, l.jsx)(s.CheckmarkLargeIcon, {
                                           size: 'xs',
                                           color: 'currentColor'
@@ -87,18 +85,18 @@ function d(t) {
                                           size: 'xs',
                                           color: 'currentColor'
                                       }),
-                                d ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.RDE0SU)
+                                h ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.RDE0SU)
                             ]
                         })
           });
 }
-function h(t) {
+function m(t) {
     let { isUserRsvped: n, isUserLurking: e, onRsvpClick: i, ...o } = t,
         r = n && !e;
     return (0, l.jsxs)(s.Button, {
         ...o,
-        className: c.__invalid_button,
-        innerClassName: c.innerButton,
+        className: a.__invalid_button,
+        innerClassName: a.innerButton,
         size: s.Button.Sizes.SMALL,
         onClick: i,
         color: s.Button.Colors.PRIMARY,
@@ -114,80 +112,80 @@ function h(t) {
                       size: 'xs',
                       color: 'currentColor'
                   }),
-            u.intl.string(u.t.DlcqlZ)
+            c.intl.string(c.t.DlcqlZ)
         ]
     });
 }
-function m(t) {
+function C(t) {
     return (0, l.jsx)(s.Tooltip, {
-        text: u.intl.string(u.t['26dTyc']),
+        text: c.intl.string(c.t['26dTyc']),
         position: 'top',
-        tooltipClassName: c.tooltips,
-        'aria-label': u.intl.string(u.t.Ej3B3d),
+        tooltipClassName: a.tooltips,
+        'aria-label': c.intl.string(c.t.Ej3B3d),
         children: (n) =>
-            (0, l.jsx)(h, {
+            (0, l.jsx)(m, {
                 ...n,
                 ...t
             })
     });
 }
-let C = (t) => null == t || t,
-    g = (t, n) => (C(t) ? u.intl.string(u.t.vk5Xw8) : C(n) ? u.intl.string(u.t.FFLWGR) : u.intl.string(u.t.k9KGYm));
-function x(t) {
-    let { isActive: n, isUserLurking: e, rsvped: i, canInvite: o, isChannelPublic: C = !0, entityType: g, onContextMenu: x, onJoinClick: v, onRsvpClick: k, onStartClick: p, onInviteClick: f, onEndClick: B, isJoined: N = !1 } = t,
-        j = void 0 !== v;
+let g = (t) => null == t || t,
+    x = (t, n) => (g(t) ? c.intl.string(c.t.vk5Xw8) : g(n) ? c.intl.string(c.t.FFLWGR) : c.intl.string(c.t.k9KGYm));
+function v(t) {
+    let { isActive: n, isUserLurking: e, rsvped: i, canInvite: o, isChannelPublic: r = !0, entityType: g, onContextMenu: x, onJoinClick: v, onRsvpClick: k, onStartClick: p, onInviteClick: B, onEndClick: N, isJoined: j = !1 } = t,
+        f = void 0 !== v;
     return (0, l.jsxs)('div', {
-        className: c.container,
+        className: a.container,
         children: [
             null != x
                 ? (0, l.jsx)(s.Tooltip, {
-                      text: u.intl.string(u.t.UKOtz8),
+                      text: c.intl.string(c.t.UKOtz8),
                       position: 'top',
-                      'aria-label': u.intl.string(u.t.bt75u7),
+                      'aria-label': c.intl.string(c.t.bt75u7),
                       children: (t) =>
                           (0, l.jsx)(s.Clickable, {
                               ...t,
                               onClick: x,
-                              className: c.iconButton,
+                              className: a.iconButton,
                               children: (0, l.jsx)(s.MoreHorizontalIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 20,
                                   height: 20,
-                                  className: c.icon
+                                  className: a.icon
                               })
                           })
                   })
                 : null,
-            (0, l.jsx)(d, {
-                onInviteClick: f,
+            (0, l.jsx)(h, {
+                onInviteClick: B,
                 canInvite: o,
-                isChannelPublic: C
+                isChannelPublic: r
             }),
-            n && g !== r.WX.EXTERNAL
-                ? (0, l.jsx)(a, {
+            n && g !== u.WX.EXTERNAL
+                ? (0, l.jsx)(d, {
                       text: (function (t) {
                           let { isJoined: n, canJoin: e, isVoiceChannel: l } = t;
-                          return e ? (n ? u.intl.string(u.t.aW2YlJ) : l ? u.intl.string(u.t.nxUtoa) : u.intl.string(u.t.ZYO5OD)) : u.intl.string(u.t.TVBCKS);
+                          return e ? (n ? c.intl.string(c.t.aW2YlJ) : l ? c.intl.string(c.t.nxUtoa) : c.intl.string(c.t.ZYO5OD)) : c.intl.string(c.t.TVBCKS);
                       })({
-                          isJoined: N,
-                          canJoin: j,
-                          isVoiceChannel: g === r.WX.VOICE
+                          isJoined: j,
+                          canJoin: f,
+                          isVoiceChannel: g === u.WX.VOICE
                       }),
-                      disabled: !j,
+                      disabled: !f,
                       onJoinClick: v
                   })
                 : null,
             e &&
                 !n &&
-                (0, l.jsx)(m, {
+                (0, l.jsx)(C, {
                     isUserRsvped: i,
                     isUserLurking: e
                 }),
             !e &&
                 !n &&
                 null != k &&
-                (0, l.jsx)(h, {
+                (0, l.jsx)(m, {
                     isUserRsvped: i,
                     isUserLurking: e,
                     onRsvpClick: k
@@ -195,21 +193,21 @@ function x(t) {
             n || null == p
                 ? null
                 : (0, l.jsx)(s.Button, {
-                      className: c.__invalid_button,
-                      innerClassName: c.innerButton,
+                      className: a.__invalid_button,
+                      innerClassName: a.innerButton,
                       size: s.Button.Sizes.SMALL,
                       onClick: p,
                       color: s.Button.Colors.GREEN,
-                      children: u.intl.string(u.t.I0v0Qk)
+                      children: c.intl.string(c.t.I0v0Qk)
                   }),
-            n && null != B
+            n && null != N
                 ? (0, l.jsx)(s.Button, {
-                      className: c.__invalid_button,
-                      innerClassName: c.innerButton,
+                      className: a.__invalid_button,
+                      innerClassName: a.innerButton,
                       size: s.Button.Sizes.SMALL,
-                      onClick: B,
+                      onClick: N,
                       color: s.Button.Colors.PRIMARY,
-                      children: u.intl.string(u.t.qaYzPD)
+                      children: c.intl.string(c.t.qaYzPD)
                   })
                 : null
         ]

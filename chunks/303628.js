@@ -74,20 +74,30 @@ function D(e) {
     (0, y.yp)({
         event: N.CkL.FOCUS_ATTACHMENT_AREA,
         handler: k
+    });
+    let U = {
+            isApplicationCommand: D,
+            previousUploadOptions: P,
+            uploadOptions: w
+        },
+        B = o.useRef(U);
+    o.useEffect(() => {
+        B.current = U;
     }),
         o.useEffect(() => {
-            if (D) {
+            let { isApplicationCommand: e, previousUploadOptions: i, uploadOptions: a } = B.current;
+            if (e) {
                 let e = [];
-                P.forEach((n) => {
-                    !w.some((e) => n.name === e.name) && e.push(n);
+                i.forEach((n) => {
+                    !a.some((e) => n.name === e.name) && e.push(n);
                 }),
                     e.forEach((e) => {
                         h.Z.remove(n, e.name, r.drafts.type);
                     }),
-                    M(w);
+                    M(a);
             }
         }, [n, w.length, r]);
-    let U = (0, v.Q3)('ChannelAttachmentArea');
+    let G = (0, v.Q3)('ChannelAttachmentArea');
     return (!D && 0 === l.length) || (D && 0 === w.length)
         ? null
         : (0, s.jsxs)(o.Fragment, {
@@ -130,7 +140,7 @@ function D(e) {
                           }
                       })
                   }),
-                  r.drafts.type === T.d.FirstThreadMessage || U ? null : (0, s.jsx)(I.Z, {})
+                  r.drafts.type === T.d.FirstThreadMessage || G ? null : (0, s.jsx)(I.Z, {})
               ]
           });
 }

@@ -128,17 +128,27 @@ function Y(e) {
         Q = T.Z.get(X);
     s.useEffect(() => {
         N(g.friendSync), v(g.visibility), O(g.metadataVisibility), D(g.showActivity);
-    }, [g]),
+    }, [g]);
+    let J = {
+            inProgressVisibility: k,
+            inProgressMetadataVisibility: Y
+        },
+        $ = s.useRef(J);
+    s.useEffect(() => {
+        $.current = J;
+    }),
         s.useEffect(() => {
-            if (!1 !== g.verified) null != k && (v(k), h.Z.setVisibility(g.type, g.id, k), V(null)), null != Y && (O(Y), h.Z.setMetadataVisibility(g.type, g.id, Y), H(null));
+            if (!1 === g.verified) return;
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = $.current;
+            null != e && (v(e), h.Z.setVisibility(g.type, g.id, e), V(null)), null != t && (O(t), h.Z.setMetadataVisibility(g.type, g.id, t), H(null));
         }, [g]);
-    function J() {
+    function ee() {
         (0, _.Z)({
             platformType: g.type,
             location: 'User Settings'
         });
     }
-    function $() {
+    function et() {
         let e = T.Z.get(g.type),
             t = w.intl.string(w.t.apVJu7);
         (0, y.Z)(g) &&
@@ -162,7 +172,7 @@ function Y(e) {
                 })
             );
     }
-    function ee(e) {
+    function en(e) {
         let { verified: t } = g,
             n = e ? 1 : 0;
         if (e && !t) {
@@ -175,7 +185,7 @@ function Y(e) {
         }
         v(n), h.Z.setVisibility(g.type, g.id, n);
     }
-    function et(e) {
+    function ei(e) {
         let { verified: t } = g,
             n = e ? 1 : 0;
         if (e && !t) {
@@ -188,10 +198,10 @@ function Y(e) {
         }
         O(n), h.Z.setMetadataVisibility(g.type, g.id, n);
     }
-    function en(e) {
+    function es(e) {
         N(e), h.Z.setFriendSync(g.type, g.id, e);
     }
-    function ei(e) {
+    function er(e) {
         D(e), h.Z.setShowActivity(g.type, g.id, e);
     }
     return (0, i.jsxs)('div', {
@@ -254,7 +264,7 @@ function Y(e) {
                             }),
                             (0, i.jsx)(u.Clickable, {
                                 className: U.connectionDelete,
-                                onClick: $,
+                                onClick: et,
                                 'aria-label': w.intl.string(w.t.ppppRE),
                                 focusProps: {
                                     offset: {
@@ -390,7 +400,7 @@ function Y(e) {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: I,
-                    onChange: en,
+                    onChange: es,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: w.intl.string(w.t['+KCMSk'])
@@ -401,7 +411,7 @@ function Y(e) {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: R,
-                    onChange: ei,
+                    onChange: er,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: w.intl.format(w.t['6u6J0t'], { platform: n.name })
@@ -412,7 +422,7 @@ function Y(e) {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: 1 === j,
-                    onChange: et,
+                    onChange: ei,
                     disabled: 1 !== b || null == g.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -428,7 +438,7 @@ function Y(e) {
                             className: U.connectionOptionSwitch,
                             hideBorder: !0,
                             value: 1 === b,
-                            onChange: ee,
+                            onChange: en,
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
                                 children: w.intl.string(w.t.f7yOAQ)
@@ -448,7 +458,7 @@ function Y(e) {
                       className: U.integrationsWrapper,
                       children: (0, i.jsx)(u.FormText, {
                           className: U.integrationRevoked,
-                          children: w.intl.format(w.t['6C4lgI'], { onReconnect: J })
+                          children: w.intl.format(w.t['6C4lgI'], { onReconnect: ee })
                       })
                   })
                 : g.integrations.length > 0

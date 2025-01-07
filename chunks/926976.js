@@ -180,28 +180,29 @@ function Z() {
         [c, h] = a.useState(Object.keys(w)),
         [m, f] = a.useState(s),
         p = a.useRef(null),
-        v = a.useCallback(
-            (0, o.throttle)(
-                async (e, t) => {
-                    if ('' === e) {
-                        f(t);
-                        return;
-                    }
-                    p.current = (0, o.uniqueId)();
-                    let n = await (0, x.H)(
-                        t,
-                        (e) => {
-                            let { event: t } = e;
-                            return t;
-                        },
-                        e,
-                        !0
-                    );
-                    if (null != p.current) f(n);
-                },
-                300,
-                { leading: !0 }
-            ),
+        v = a.useMemo(
+            () =>
+                (0, o.throttle)(
+                    async (e, t) => {
+                        if ('' === e) {
+                            f(t);
+                            return;
+                        }
+                        p.current = (0, o.uniqueId)();
+                        let n = await (0, x.H)(
+                            t,
+                            (e) => {
+                                let { event: t } = e;
+                                return t;
+                            },
+                            e,
+                            !0
+                        );
+                        if (null != p.current) f(n);
+                    },
+                    300,
+                    { leading: !0 }
+                ),
             []
         ),
         k = a.useMemo(

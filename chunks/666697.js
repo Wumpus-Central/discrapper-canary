@@ -12,8 +12,8 @@ var a = t(200651),
     p = t(283293),
     _ = t(881294),
     g = t(292191),
-    v = t(258971),
-    f = t(133743),
+    f = t(258971),
+    v = t(133743),
     C = t(680474),
     x = t(571737),
     h = t(796150),
@@ -47,22 +47,31 @@ n.Z = function (e) {
     i.useEffect(() => {
         (null == R ? void 0 : R.storefront_available) && null != n && (0, d.Z)(n);
     }, [null == R ? void 0 : R.storefront_available, n]);
-    let M = (0, v.Uc)(),
+    let M = (0, f.Uc)(),
         B = (0, r.e7)([s.Z], () => s.Z.getFetchState({ applicationId: null == R ? void 0 : R.id })),
         G = (0, r.e7)([s.Z], () => s.Z.getSimilarApplications({ applicationId: null == R ? void 0 : R.id })),
-        w = i.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]);
+        w = i.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
+        H = {
+            displayedSimilarApplications: w,
+            previousView: M
+        },
+        F = i.useRef(H);
     i.useEffect(() => {
-        (null == R ? void 0 : R.id) != null &&
-            B !== s.M.FETCHING &&
-            (0, _.zZ)(S.rMx.APP_DIRECTORY_PAGE_VIEWED, {
-                current_page: v.m_.APPLICATION,
-                previous_page: null == M ? void 0 : M.type,
-                application_id: R.id,
-                referrer: document.referrer,
-                suggested_application_ids: null == w ? void 0 : w.map((e) => e.id)
-            });
-    }, [null == R ? void 0 : R.id, B]);
-    let H = i.useMemo(
+        F.current = H;
+    }),
+        i.useEffect(() => {
+            let { displayedSimilarApplications: e, previousView: n } = F.current;
+            (null == R ? void 0 : R.id) != null &&
+                B !== s.M.FETCHING &&
+                (0, _.zZ)(S.rMx.APP_DIRECTORY_PAGE_VIEWED, {
+                    current_page: f.m_.APPLICATION,
+                    previous_page: null == n ? void 0 : n.type,
+                    application_id: R.id,
+                    referrer: document.referrer,
+                    suggested_application_ids: null == e ? void 0 : e.map((e) => e.id)
+                });
+        }, [null == R ? void 0 : R.id, B]);
+    let z = i.useMemo(
             () => [
                 {
                     id: j.GlobalDiscoveryAppsSections.ABOUT,
@@ -75,7 +84,7 @@ n.Z = function (e) {
             ],
             []
         ),
-        F = i.useMemo(() => {
+        U = i.useMemo(() => {
             if (null == R) return null;
             switch (O) {
                 case j.GlobalDiscoveryAppsSections.ABOUT:
@@ -84,18 +93,18 @@ n.Z = function (e) {
                     return (0, a.jsx)(I.Z, { application: R });
             }
         }, [O, R]),
-        z = i.useCallback(
+        Y = i.useCallback(
             (e) => {
                 (0, _.zZ)(S.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: n,
                     tab_name: e
                 }),
                     D(e),
-                    e === j.GlobalDiscoveryAppsSections.ABOUT ? (0, f.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(n)) : (0, f.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, e));
+                    e === j.GlobalDiscoveryAppsSections.ABOUT ? (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(n)) : (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, e));
             },
             [n]
         ),
-        U = O === j.GlobalDiscoveryAppsSections.ABOUT;
+        V = O === j.GlobalDiscoveryAppsSections.ABOUT;
     return (0, a.jsx)(p.Z, {
         onScroll: y,
         ref: P,
@@ -128,12 +137,12 @@ n.Z = function (e) {
                                                   (0, a.jsx)('div', {
                                                       className: E.contentTabs,
                                                       children: (0, a.jsx)(m.Z, {
-                                                          tabs: H,
-                                                          onTabSelect: z,
+                                                          tabs: z,
+                                                          onTabSelect: Y,
                                                           selectedTab: O
                                                       })
                                                   }),
-                                              F,
+                                              U,
                                               (0, a.jsx)(b.Z, {
                                                   applicationId: n,
                                                   fetchState: B,
@@ -143,7 +152,7 @@ n.Z = function (e) {
                                               })
                                           ]
                                       }),
-                                      U &&
+                                      V &&
                                           (0, a.jsx)(h.Z, {
                                               className: E.sidebar,
                                               application: R,

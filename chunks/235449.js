@@ -107,10 +107,14 @@ function I(e, t, n) {
         })),
         m = a.useCallback(() => {
             c.Z.can(Z.Pl.READ_MESSAGE_HISTORY, e) && x.Z.loadArchivedThreads(e.guild_id, e.id, t, n, u);
-        }, [e, t, n, u]);
+        }, [e, t, n, u]),
+        f = a.useRef(m);
     return (
         a.useEffect(() => {
-            h && m();
+            f.current = m;
+        }),
+        a.useEffect(() => {
+            h && f.current();
         }, [e.id, t, n, h]),
         a.useEffect(() => {
             i.Z.resort(e.id);

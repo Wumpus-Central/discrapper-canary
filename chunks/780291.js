@@ -24,11 +24,12 @@ function m(e) {
         v = (0, s.e7)([u.ZP, l.default], () => u.ZP.isComboing(l.default.getId(), f)),
         I = null !== (n = null == g ? void 0 : g.left) && void 0 !== n ? n : 0,
         T = (null !== (r = null == g ? void 0 : g.top) && void 0 !== r ? r : 0) - h,
-        b = a.useMemo(() => Math.random() < p, [0 === c.length]);
+        b = 0 === c.length,
+        y = a.useMemo(() => Math.random() < p, [b]);
     return (
         a.useEffect(() => {
-            0 !== c.length && c !== m.current && v && (E.fire(I, T, b ? { sprite: _.vv } : null), (m.current = c));
-        }, [c, v, I, T, b, E]),
+            0 !== c.length && c !== m.current && v && (E.fire(I, T, y ? { sprite: _.vv } : null), (m.current = c));
+        }, [c, v, I, T, y, E]),
         null
     );
 }

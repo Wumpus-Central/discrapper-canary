@@ -83,9 +83,13 @@ function C(e, t) {
     }, [n, r, e]);
 }
 function v(e, t, n) {
+    let r = i.useRef(n);
     return (
         i.useEffect(() => {
-            (0, h.H)(e, t).catch(n);
+            r.current = n;
+        }),
+        i.useEffect(() => {
+            (0, h.H)(e, t).catch(r.current);
         }, [e, t]),
         C(
             e,

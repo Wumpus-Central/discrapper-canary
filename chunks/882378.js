@@ -4,64 +4,65 @@ var i = n(200651),
     r = n(442837),
     a = n(952265),
     s = n(481060),
-    o = n(378298),
-    c = n(444957),
-    d = n(276618),
-    u = n(367408),
-    h = n(473092),
-    p = n(819640),
-    m = n(665149),
-    f = n(134612),
-    g = n(388032),
-    C = n(629435);
+    o = n(493773),
+    c = n(378298),
+    d = n(444957),
+    u = n(276618),
+    h = n(367408),
+    p = n(473092),
+    m = n(819640),
+    f = n(665149),
+    g = n(134612),
+    C = n(388032),
+    x = n(629435);
 t.Z = l.memo(function (e) {
     let { channel: t } = e,
-        x = (0, c.h)(t.id),
-        v = (0, d.o)(t.id),
-        _ = (0, u.M)(t.id),
-        I = (0, a.f9)(),
-        E = (0, r.e7)([p.Z], () => p.Z.hasLayers()),
-        b = l.useCallback(() => (v ? g.intl.string(g.t['16QyDg']) : null != _ ? g.intl.string(g.t.kCN9i4) : null), [v, _]),
-        Z = l.useMemo(() => (v || null != _) && !I && !E, [v, _, I, E]),
-        [N, S] = l.useState(b());
+        v = (0, d.h)(t.id),
+        _ = (0, u.o)(t.id),
+        I = (0, h.M)(t.id),
+        E = (0, a.f9)(),
+        b = (0, r.e7)([m.Z], () => m.Z.hasLayers()),
+        Z = l.useCallback(() => (_ ? C.intl.string(C.t['16QyDg']) : null != I ? C.intl.string(C.t.kCN9i4) : null), [_, I]),
+        N = l.useMemo(() => (_ || null != I) && !E && !b, [_, I, E, b]),
+        [S, T] = l.useState(Z());
     l.useEffect(() => {
-        null != _ &&
-            null != x &&
-            (s.AccessibilityAnnouncer.announce(g.intl.string(g.t.acsXuL)),
+        null != I &&
+            null != v &&
+            (s.AccessibilityAnnouncer.announce(C.intl.string(C.t.acsXuL)),
             setTimeout(() => {
-                (0, o.T)(t.id, [_.id]);
+                (0, c.T)(t.id, [I.id]);
             }, 5000),
-            (0, h.KQ)({
+            (0, p.KQ)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: _.id,
-                warningType: _.type,
-                isNudgeWarning: null != _,
-                viewName: h.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
+                warningId: I.id,
+                warningType: I.type,
+                isNudgeWarning: null != I,
+                viewName: p.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
             })),
-            v &&
-                (s.AccessibilityAnnouncer.announce(g.intl.string(g.t['1dxCqK'])),
+            _ &&
+                (s.AccessibilityAnnouncer.announce(C.intl.string(C.t['1dxCqK'])),
                 setTimeout(() => {
-                    (0, o.Ot)(t.id);
+                    (0, c.Ot)(t.id);
                 }, 5000));
-    }, [t, _, x, v]),
-        l.useEffect(() => {
-            null != x &&
-                (0, h.KQ)({
+    }, [t, I, v, _]),
+        (0, o.Z)(() => {
+            null != v &&
+                (0, p.KQ)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: x.id,
-                    warningType: x.type,
-                    isNudgeWarning: null != _,
-                    viewName: h.pb.SAFETY_TOOLS_BUTTON
+                    warningId: v.id,
+                    warningType: v.type,
+                    isNudgeWarning: null != I,
+                    viewName: p.pb.SAFETY_TOOLS_BUTTON
                 });
-        }, []),
+        }),
         l.useEffect(() => {
-            let e = b();
-            null != e && S(e);
-        }, [v, _, b]);
-    let T = l.useCallback(() => {
-        if ((null != _ && (0, o.T)(t.id, [_.id]), null != x))
+            let e = Z();
+            null != e && T(e);
+        }, [_, I, Z]);
+    let j = l.useCallback(() => {
+        if ((null != I && (0, c.T)(t.id, [I.id]), null != v))
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
@@ -70,39 +71,39 @@ t.Z = l.memo(function (e) {
                         return (0, i.jsx)(e, {
                             otherUserId: t.getRecipientId(),
                             channelId: t.id,
-                            warningId: x.id,
-                            warningType: x.type,
+                            warningId: v.id,
+                            warningType: v.type,
                             onClose: l,
                             transitionState: r
                         });
                     };
                 },
-                { modalKey: f.X_ }
+                { modalKey: g.X_ }
             ),
-                (0, h.qc)({
+                (0, p.qc)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: x.id,
-                    warningType: x.type,
-                    cta: h.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != _
+                    warningId: v.id,
+                    warningType: v.type,
+                    cta: p.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                    isNudgeWarning: null != I
                 });
-    }, [_, x, t]);
-    return null == x
+    }, [I, v, t]);
+    return null == v
         ? null
         : (0, i.jsx)(s.Tooltip, {
-              forceOpen: Z,
-              text: N,
+              forceOpen: N,
+              text: S,
               color: s.TooltipColors.BRAND,
               position: 'bottom',
-              tooltipClassName: C.tooltip,
-              tooltipContentClassName: C.tooltipContent,
+              tooltipClassName: x.tooltip,
+              tooltipContentClassName: x.tooltipContent,
               children: () =>
-                  (0, i.jsx)(m.ZP.Icon, {
+                  (0, i.jsx)(f.ZP.Icon, {
                       icon: s.ShieldIcon,
-                      onClick: T,
-                      tooltip: g.intl.string(g.t.rpc2qq),
-                      tooltipDisabled: null != _
+                      onClick: j,
+                      tooltip: C.intl.string(C.t.rpc2qq),
+                      tooltipDisabled: null != I
                   })
           });
 });

@@ -65,10 +65,14 @@ let I = (e) => {
     let { entry: n, inline: r = !1, textColor: i, hovered: o = !1, bold: u = !1, scaleFontToUserSetting: c = !1 } = e,
         { now: f } = v(o),
         _ = s.useMemo(() => (0, m.T_)(n, f), [n, f]),
-        h = s.useRef(_);
+        h = s.useRef(_),
+        p = s.useRef(_);
     return (
         s.useEffect(() => {
-            h.current = _;
+            p.current = _;
+        }),
+        s.useEffect(() => {
+            h.current = p.current;
         }, [n]),
         (0, a.jsx)(d.Text, {
             className: l()(g.timestamp, {

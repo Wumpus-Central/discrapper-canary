@@ -34,32 +34,44 @@ function R(e) {
         el = (0, E.N)(),
         eu = (0, g.Ng)(),
         ec = !er && ((null == el ? void 0 : null === (n = el.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === Q || (0, g.Wp)(eu, Q)) && !eo,
-        { analyticsLocations: ed } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL);
+        { analyticsLocations: ed } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
+        ef = {
+            analyticsLocation: x,
+            analyticsLocations: ed,
+            analyticsSource: L,
+            guildBoostProps: D,
+            type: O
+        },
+        e_ = a.useRef(ef);
     a.useEffect(() => {
-        !X &&
-            (eo
+        e_.current = ef;
+    }),
+        a.useEffect(() => {
+            if (X) return;
+            let { analyticsLocation: e, analyticsLocations: n, analyticsSource: r, guildBoostProps: i, type: a } = e_.current;
+            eo
                 ? h.default.track(S.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                      type: ''.concat(O, ' - Tier ').concat(D.boostedGuildTier),
-                      guild_id: D.guild.id,
-                      channel_id: D.channelId,
-                      location: x,
-                      location_stack: ed
+                      type: ''.concat(a, ' - Tier ').concat(null == i ? void 0 : i.boostedGuildTier),
+                      guild_id: null == i ? void 0 : i.guild.id,
+                      channel_id: null == i ? void 0 : i.channelId,
+                      location: e,
+                      location_stack: n
                   })
                 : h.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
-                      type: O,
-                      source: L,
-                      location: x,
-                      location_stack: ed,
+                      type: a,
+                      source: r,
+                      location: e,
+                      location_stack: n,
                       sku_id: (0, p.Wz)(Q)
-                  }));
-    }, [eo, Q, X]);
-    let ef = (0, l.e7)([m.Z], () => m.Z.affinities),
-        e_ = ef.length > 1 && (0, b.YN)(O),
-        eh = (0, l.e7)([m.Z], () => m.Z.hasFetched);
+                  });
+        }, [eo, Q, X]);
+    let eh = (0, l.e7)([m.Z], () => m.Z.affinities),
+        ep = eh.length > 1 && (0, b.YN)(O),
+        em = (0, l.e7)([m.Z], () => m.Z.hasFetched);
     a.useEffect(() => {
-        !eh && c.MH();
-    }, [eh]);
-    let ep = () => {
+        !em && c.MH();
+    }, [em]);
+    let eg = () => {
             if (eo)
                 return (0, i.jsx)(_.Z, {
                     analyticsLocation: x,
@@ -90,26 +102,26 @@ function R(e) {
                 buttonText: null != K ? K : e
             });
         },
-        em = q ? o()(N.artContainer, N.artContainerBoxShadow, B) : o()(N.artContainer, B),
-        eg = null;
+        eE = q ? o()(N.artContainer, N.artContainerBoxShadow, B) : o()(N.artContainer, B),
+        ev = null;
     return (
         null != es.artURL
-            ? (eg = (0, i.jsx)('img', {
+            ? (ev = (0, i.jsx)('img', {
                   className: N.art,
                   alt: '',
                   src: es.artURL
               }))
-            : null != es.artElement && (eg = es.artElement),
+            : null != es.artElement && (ev = es.artElement),
         (0, i.jsxs)(u.ModalRoot, {
             className: o()(N.root, !ec && k),
             'aria-label': R,
             transitionState: F,
             children: [
-                null != eg &&
+                null != ev &&
                     (0, i.jsxs)('div', {
-                        className: em,
+                        className: eE,
                         children: [
-                            eg,
+                            ev,
                             z
                                 ? (0, i.jsx)('img', {
                                       className: N.sparkleBadge,
@@ -151,7 +163,7 @@ function R(e) {
                                                         variant: 'heading-xl/bold',
                                                         children: R
                                                     }),
-                                                    e_ ? (0, i.jsx)(T.Z, { affinities: ef }) : void 0,
+                                                    ep ? (0, i.jsx)(T.Z, { affinities: eh }) : void 0,
                                                     ei,
                                                     (0, i.jsx)(u.Text, {
                                                         variant: 'text-md/normal',
@@ -180,7 +192,7 @@ function R(e) {
                                           children: W
                                       })
                                     : null,
-                                ep()
+                                eg()
                             ]
                         }),
                         !J &&

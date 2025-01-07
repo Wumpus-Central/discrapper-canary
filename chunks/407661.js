@@ -44,11 +44,15 @@ function S(e) {
     function o() {
         (0, f.A6)(n.id), (0, p.R6)(n, r, 'Reply Chain Nudge');
     }
+    let l = a.useRef(s);
     return (
+        a.useEffect(() => {
+            l.current = s;
+        }),
         a.useEffect(() => {
             (0, c.yw)(E.rMx.THREAD_NUDGE_SHOWN, {
                 type: 'Reply Chain ('.concat(T + 1, ')'),
-                reply_chain_length: s + 1,
+                reply_chain_length: l.current + 1,
                 channel_id: n.id,
                 guild_id: n.guild_id
             });

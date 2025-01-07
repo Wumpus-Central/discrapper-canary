@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 }),
     n(47120),
@@ -12,31 +12,32 @@ var i = n(200651),
     s = n(399606),
     o = n(704215),
     c = n(481060),
-    d = n(70097),
-    u = n(243778),
-    h = n(518950),
-    p = n(594174),
-    m = n(133634),
-    f = n(324085),
-    g = n(921944),
-    C = n(388032),
-    x = n(140343);
-function v(e) {
+    d = n(493773),
+    u = n(70097),
+    h = n(243778),
+    p = n(518950),
+    m = n(594174),
+    f = n(133634),
+    g = n(324085),
+    C = n(921944),
+    x = n(388032),
+    v = n(140343);
+function _(e) {
     let { channel: t } = e,
-        r = (0, s.e7)([p.default], () => p.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
-        [a, d] = (0, l.useState)(!1),
-        [h, C] = (0, l.useState)(!1),
-        x = (0, f.bK)(),
-        [v, I] = (0, l.useState)(!1);
-    (0, l.useEffect)(() => {
-        t.isHDStreamSplashed && I(!0);
-    }, []),
-        (0, f.Uu)(t),
+        r = (0, s.e7)([m.default], () => m.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
+        [a, u] = (0, l.useState)(!1),
+        [p, x] = (0, l.useState)(!1),
+        v = (0, g.bK)(),
+        [_, E] = (0, l.useState)(!1);
+    (0, d.Z)(() => {
+        t.isHDStreamSplashed && E(!0);
+    }),
+        (0, g.Uu)(t),
         (function (e) {
-            let t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+            let t = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
                 r = [];
             e.hdStreamingBuyerId === (null == t ? void 0 : t.id) && !e.isHDStreamSplashed && r.push(o.z.HD_STREAMING_POTION_MODAL_UPSELL);
-            let [a, d] = (0, u.US)(r);
+            let [a, d] = (0, h.US)(r);
             (0, l.useEffect)(() => {
                 if (a === o.z.HD_STREAMING_POTION_MODAL_UPSELL) {
                     var t;
@@ -53,53 +54,53 @@ function v(e) {
                 }
             }, [a, d, e]);
         })(t);
-    let E = () => {
-        d(!1);
+    let b = () => {
+        u(!1);
     };
-    (0, f.J)(t, () => {
-        if (x) {
-            C(!0), E();
+    (0, g.J)(t, () => {
+        if (v) {
+            x(!0), b();
             return;
         }
-        d(!0);
+        u(!0);
         let e = setTimeout(() => {
-            C(!0);
+            x(!0);
         }, 25000);
         return () => clearTimeout(e);
     });
-    let b = v ? [o.z.HD_STREAMING_POTION_BANNER] : [],
-        [Z, N] = (0, u.US)(b);
+    let Z = _ ? [o.z.HD_STREAMING_POTION_BANNER] : [],
+        [N, S] = (0, h.US)(Z);
     return null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   a &&
-                      (0, i.jsx)(_, {
+                      (0, i.jsx)(I, {
                           buyer: r,
-                          onEnd: E
+                          onEnd: b
                       }),
-                  (h || Z === o.z.HD_STREAMING_POTION_BANNER) &&
-                      (0, i.jsx)(m.Z, {
+                  (p || N === o.z.HD_STREAMING_POTION_BANNER) &&
+                      (0, i.jsx)(f.Z, {
                           channel: t,
                           buyer: r,
                           streaming: !0,
                           onClose: () => {
-                              C(!1), v && N(g.L.DISMISS);
+                              x(!1), _ && S(C.L.DISMISS);
                           }
                       })
               ]
           });
 }
-function _(e) {
+function I(e) {
     let { onEnd: t, buyer: n } = e,
         r = (0, l.useRef)(null),
         s = (0, l.useRef)(null),
-        [o, u] = (0, l.useState)(!1);
+        [o, d] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
         let e = r.current;
         if (null == e) return;
         let t = () => {
-            e.currentTime >= 23 && !o && u(!0);
+            e.currentTime >= 23 && !o && d(!0);
         };
         return (
             e.addEventListener('timeupdate', t),
@@ -108,21 +109,21 @@ function _(e) {
             }
         );
     });
-    let [p, m] = (0, l.useState)(!1);
+    let [h, m] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
         if (null != s.current) m(s.current.offsetWidth > 245);
     }, []);
-    let { avatarSrc: f, eventHandlers: g } = (0, h.Z)({
+    let { avatarSrc: f, eventHandlers: g } = (0, p.Z)({
         user: n,
         size: c.AvatarSizes.SIZE_32,
         animateOnHover: !0
     });
     return (0, i.jsxs)('div', {
-        className: x.trigger,
+        className: v.trigger,
         children: [
-            (0, i.jsx)(d.Z, {
+            (0, i.jsx)(u.Z, {
                 ref: r,
-                className: x.video,
+                className: v.video,
                 autoPlay: !0,
                 onEnded: t,
                 children: (0, i.jsx)('source', {
@@ -132,7 +133,7 @@ function _(e) {
             }),
             (0, i.jsxs)('div', {
                 ref: s,
-                className: a()(x.content, { [x.masked]: o }),
+                className: a()(v.content, { [v.masked]: o }),
                 children: [
                     (0, i.jsx)(c.Avatar, {
                         src: f,
@@ -141,17 +142,17 @@ function _(e) {
                         ...g
                     }),
                     (0, i.jsxs)('div', {
-                        className: x.text,
+                        className: v.text,
                         children: [
-                            !p &&
+                            !h &&
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/normal',
-                                    children: C.intl.string(C.t['i/nliI'])
+                                    children: x.intl.string(x.t['i/nliI'])
                                 }),
                             (0, i.jsx)(c.Text, {
-                                className: x.premium,
+                                className: v.premium,
                                 variant: 'text-sm/normal',
-                                children: C.intl.string(C.t['Fh/mk5'])
+                                children: x.intl.string(x.t['Fh/mk5'])
                             })
                         ]
                     })

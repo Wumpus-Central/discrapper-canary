@@ -272,13 +272,25 @@ let U = (e) => {
             r = (0, l.e7)([T.Z], () => T.Z.getStickerById(e.id)),
             [i, a] = o.useState(!0),
             [s, u] = o.useState(!1),
-            c = (0, y.J8)(e) || (0, y.jl)(e);
+            c = (0, y.J8)(e) || (0, y.jl)(e),
+            d = {
+                hasFetched: s,
+                isReturnable: c,
+                renderableSticker: e,
+                shouldFetch: i,
+                stickersStoreDefinition: r
+            },
+            f = o.useRef(d);
         return (o.useEffect(() => {
+            f.current = d;
+        }),
+        o.useEffect(() => {
             (async () => {
-                if (n && !c && null == r && i && !s) {
+                let { hasFetched: e, isReturnable: r, renderableSticker: i, shouldFetch: s, stickersStoreDefinition: o } = f.current;
+                if (n && !r && null == o && s && !e) {
                     a(!1);
                     try {
-                        await (0, v.Il)(e.id);
+                        await (0, v.Il)(i.id);
                     } catch {}
                     u(!0);
                 }

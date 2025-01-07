@@ -125,24 +125,35 @@ n.Z = s.memo(function (e) {
     s.useEffect(() => {
         !V && B && j(!0);
     }, [B, V]);
-    let es = s.useRef(null);
+    let es = s.useRef(null),
+        eo = {
+            played: V,
+            currentTime: x,
+            onPause: O,
+            onPlay: R
+        },
+        el = s.useRef(eo);
     s.useEffect(() => {
-        if (V || B) {
-            if (B) {
-                var e, n;
-                (es.current = performance.now()), null == R || R(!1, x, (null !== (n = null === (e = L.current) || void 0 === e ? void 0 : e.duration) && void 0 !== n ? n : 0) * m.Z.Millis.SECOND);
-            } else {
-                let e = performance.now(),
-                    n = es.current,
-                    r = null != n ? (e - n) / 1000 : 0;
-                null == O || O(x, r), (es.current = null);
+        el.current = eo;
+    }),
+        s.useEffect(() => {
+            let { played: e, currentTime: n, onPause: r, onPlay: i } = el.current;
+            if (e || B) {
+                if (B) {
+                    var a, s;
+                    (es.current = performance.now()), null == i || i(!1, n, (null !== (s = null === (a = L.current) || void 0 === a ? void 0 : a.duration) && void 0 !== s ? s : 0) * m.Z.Millis.SECOND);
+                } else {
+                    let e = performance.now(),
+                        i = es.current,
+                        a = null != i ? (e - i) / 1000 : 0;
+                    null == r || r(n, a), (es.current = null);
+                }
             }
-        }
-    }, [B]),
+        }, [B]),
         S(L, B, w),
         A(r, B, G);
-    let eo = B ? c.PauseIcon : c.PlayIcon,
-        el = B ? I.intl.string(I.t.ZcgDJS) : I.intl.string(I.t.RscU7O);
+    let eu = B ? c.PauseIcon : c.PlayIcon,
+        ec = B ? I.intl.string(I.t.ZcgDJS) : I.intl.string(I.t.RscU7O);
     'Safari' === platform.name
         ? (n = (0, a.jsx)(s.Suspense, {
               children: (0, a.jsx)(b, {
@@ -171,22 +182,22 @@ n.Z = s.memo(function (e) {
               playing: B && !Z,
               children: (0, a.jsx)('source', { src: r })
           }));
-    let eu = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        { enabled: ec } = (0, c.useRedesignIconContext)();
+    let ed = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
+        { enabled: ef } = (0, c.useRedesignIconContext)();
     return (0, a.jsxs)('div', {
         className: l()(T.container, { [T.playing]: B }),
         onMouseEnter: Q,
         children: [
             (0, a.jsx)('div', {
                 className: T.rippleContainer,
-                children: (0, a.jsx)('div', { className: l()(T.ripple, { [T.reducedMotion]: eu }) })
+                children: (0, a.jsx)('div', { className: l()(T.ripple, { [T.reducedMotion]: ed }) })
             }),
             (0, a.jsx)(c.Clickable, {
                 className: T.playButtonContainer,
                 onClick: q,
-                'aria-label': el,
-                children: (0, a.jsx)(eo, {
-                    className: l()(T.playIcon, { [T.oldPlayIconSpacing]: !ec && !B }),
+                'aria-label': ec,
+                children: (0, a.jsx)(eu, {
+                    className: l()(T.playIcon, { [T.oldPlayIconSpacing]: !ef && !B }),
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,

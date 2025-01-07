@@ -207,17 +207,18 @@ t.ZP = a.memo((e) => {
             },
             [L]
         ),
-        b = a.useCallback(
-            r().throttle(
-                (e) => {
-                    (0, I.L)(k.xP.CARD_POPOUT_OPEN, e);
-                },
-                2000,
-                {
-                    leading: !0,
-                    trailing: !1
-                }
-            ),
+        b = a.useMemo(
+            () =>
+                r().throttle(
+                    (e) => {
+                        (0, I.L)(k.xP.CARD_POPOUT_OPEN, e);
+                    },
+                    2000,
+                    {
+                        leading: !0,
+                        trailing: !1
+                    }
+                ),
             []
         ),
         B = () => {

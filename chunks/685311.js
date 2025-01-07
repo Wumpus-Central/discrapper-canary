@@ -80,15 +80,19 @@ let g = [
     I = 1 / 300;
 function T(e) {
     let [n, r] = o.useState(!1),
-        [i, a] = o.useState(Math.floor(Math.random() * v));
+        [i, a] = o.useState(Math.floor(Math.random() * v)),
+        s = o.useRef(i);
     return (
+        o.useEffect(() => {
+            s.current = i;
+        }),
         o.useEffect(() => {
             if (e) return;
             let n = Math.random() <= I;
             if ((r(n), !n)) {
                 let e;
                 do e = Math.floor(Math.random() * v);
-                while (e === i);
+                while (e === s.current);
                 a(e);
             }
         }, [e]),

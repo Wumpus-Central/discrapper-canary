@@ -3,11 +3,12 @@ n.d(t, {
         return f;
     }
 });
-var i = n(200651),
-    s = n(192379),
-    r = n(442837),
-    l = n(481060),
-    a = n(37234),
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(37234),
+    a = n(493773),
     o = n(100527),
     c = n(906732),
     d = n(94795),
@@ -22,11 +23,11 @@ var i = n(200651),
     E = n(352545),
     C = n(232186);
 let _ = () => {
-        (0, d.nJ)(), (0, a.xf)();
+        (0, d.nJ)(), (0, l.xf)();
     },
     f = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
-            t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
+            t = (0, s.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = h.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
@@ -35,13 +36,13 @@ let _ = () => {
                 }
             );
         return (
-            s.useEffect(() => {
+            (0, a.Z)(() => {
                 t &&
                     p.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: S.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });
-            }, []),
+            }),
             (0, i.jsxs)('div', {
                 className: E.selectionGroup,
                 children: [
@@ -51,8 +52,8 @@ let _ = () => {
                             (0, i.jsxs)('div', {
                                 className: E.tryItOutButtons,
                                 children: [
-                                    (0, i.jsx)(l.Button, {
-                                        color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
+                                    (0, i.jsx)(r.Button, {
+                                        color: !n && t ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
                                         onClick: () => _(),
                                         children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
                                     }),
@@ -66,7 +67,7 @@ let _ = () => {
                                 ]
                             })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: C.marginTop20 })
+                    (0, i.jsx)(r.FormDivider, { className: C.marginTop20 })
                 ]
             })
         );

@@ -6,16 +6,16 @@ n.d(t, {
         return F;
     },
     R2: function () {
-        return R;
+        return O;
     },
     T$: function () {
-        return L;
+        return R;
     },
     Uu: function () {
         return M;
     },
     Zm: function () {
-        return O;
+        return L;
     },
     bK: function () {
         return b;
@@ -36,8 +36,8 @@ var r = n(192379),
     o = n(846027),
     d = n(607070),
     a = n(569545),
-    E = n(199902),
-    c = n(430824),
+    c = n(199902),
+    E = n(430824),
     f = n(131951),
     S = n(158776),
     _ = n(959457),
@@ -51,13 +51,13 @@ var r = n(192379),
     N = n(981631),
     v = n(37113);
 let A = new l.Yd('HDStreamingConsumableModal'),
-    L = (e) => {
-        let t = (0, s.e7)([c.Z], () => c.Z.getGuild(null == e ? void 0 : e.guild_id)),
+    R = (e) => {
+        let t = (0, s.e7)([E.Z], () => E.Z.getGuild(null == e ? void 0 : e.guild_id)),
             n = (0, s.e7)([p.default], () => {
                 var e;
                 return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            i = (0, s.Wu)([E.Z], () => (null == e ? [] : E.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            i = (0, s.Wu)([c.Z], () => (null == e ? [] : c.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
             u = i.some((e) => {
                 let t = p.default.getUser(e.ownerId);
                 return null != t && S.Z.isMobileOnline(t.id);
@@ -83,17 +83,17 @@ let A = new l.Yd('HDStreamingConsumableModal'),
             T = (null == t ? void 0 : t.premiumTier) === N.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === N.Eu4.TIER_1;
         return T && C && !u;
     },
-    O = (e, t) => {
+    L = (e, t) => {
         let n = (0, s.e7)([p.default], () => {
                 var e;
                 return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            r = (0, s.Wu)([E.Z], () => (null == e ? [] : E.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            r = (0, s.Wu)([c.Z], () => (null == e ? [] : c.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
             i = (0, I.j)(t),
-            u = L(e);
+            u = R(e);
         return i && u && r.length > 0;
     };
-function R(e) {
+function O(e) {
     let [t, n, i] = (0, s.Wu)([h.Z], () => [h.Z.isFetchingPrice(e), h.Z.getPrice(e), h.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
@@ -121,18 +121,22 @@ function Z(e) {
 }
 function y(e, t) {
     let n = (0, r.useRef)(!0),
-        i = null == e ? void 0 : e.hdStreamingUntil;
+        i = null == e ? void 0 : e.hdStreamingUntil,
+        u = (0, r.useRef)(t);
     (0, r.useEffect)(() => {
-        if (n.current) {
-            n.current = !1;
-            return;
-        }
-        if (null != i && new Date(i) > new Date()) return t();
-    }, [i]);
+        u.current = t;
+    }),
+        (0, r.useEffect)(() => {
+            if (n.current) {
+                n.current = !1;
+                return;
+            }
+            if (null != i && new Date(i) > new Date()) return u.current();
+        }, [i]);
 }
 function M(e) {
     y(e, () => {
-        let t = E.Z.getCurrentUserActiveStream();
+        let t = c.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = f.Z.getState().goLiveSource;
             (0, m.x8)(null == e ? void 0 : e.quality);
@@ -152,7 +156,7 @@ function U(e) {
     T.default.track(N.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
 }
 function F(e) {
-    let t = (0, s.e7)([c.Z], () => c.Z.getGuild(null == e ? void 0 : e.guild_id)),
+    let t = (0, s.e7)([E.Z], () => E.Z.getGuild(null == e ? void 0 : e.guild_id)),
         n = (0, I.j)('VoiceEffectsActionBar');
     return ((null == t ? void 0 : t.premiumTier) === N.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === N.Eu4.TIER_1) && (null == e ? void 0 : e.type) === N.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
 }

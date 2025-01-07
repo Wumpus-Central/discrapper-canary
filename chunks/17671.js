@@ -1,10 +1,10 @@
 t.r(e),
     t.d(e, {
         __import__useLazyAPIPromise: function () {
-            return M;
+            return L;
         },
         default: function () {
-            return L;
+            return S;
         }
     });
 var i = t(200651),
@@ -14,94 +14,95 @@ var i = t(200651),
     o = t(442837),
     c = t(481060),
     s = t(45114),
-    u = t(313201),
-    d = t(597),
-    g = t(147754),
-    h = t(984933),
-    v = t(720202),
-    m = t(430824),
-    x = t(306680),
-    Z = t(626135),
-    f = t(823379),
-    C = t(981888),
-    p = t(709054),
-    N = t(897285),
-    j = t(518756),
-    E = t(554747),
-    k = t(710679),
-    I = t(74562),
-    _ = t(576749),
-    P = t(765305),
-    T = t(981631),
-    y = t(490897),
-    b = t(388032),
-    G = t(984226);
-let M = C.Z;
-function L(n) {
-    let { transitionState: e, onClose: r, guildId: C } = n,
-        M = (0, u.Dt)(),
-        L = (0, o.e7)([m.Z], () => m.Z.getGuild(C)),
-        S = (0, j.Z)(null == L ? void 0 : L.id),
-        A = (0, E.ZP)(C),
-        R = l.useRef(x.ZP.ackMessageId(C, y.W.GUILD_EVENT)),
-        w = (0, _.Z)();
+    u = t(493773),
+    d = t(313201),
+    g = t(597),
+    h = t(147754),
+    v = t(984933),
+    m = t(720202),
+    x = t(430824),
+    Z = t(306680),
+    f = t(626135),
+    C = t(823379),
+    p = t(981888),
+    N = t(709054),
+    j = t(897285),
+    E = t(518756),
+    k = t(554747),
+    I = t(710679),
+    _ = t(74562),
+    P = t(576749),
+    T = t(765305),
+    y = t(981631),
+    b = t(490897),
+    G = t(388032),
+    M = t(984226);
+let L = p.Z;
+function S(n) {
+    let { transitionState: e, onClose: r, guildId: p } = n,
+        L = (0, d.Dt)(),
+        S = (0, o.e7)([x.Z], () => x.Z.getGuild(p)),
+        A = (0, E.Z)(null == S ? void 0 : S.id),
+        R = (0, k.ZP)(p),
+        w = l.useRef(Z.ZP.ackMessageId(p, b.W.GUILD_EVENT)),
+        D = (0, P.Z)();
     return (
         l.useEffect(() => {
-            A.forEach((n) => N.Z.getGuildEventUserCounts(C, n.id, [])), N.Z.getGuildEventsForCurrentUser(C);
-        }, [A, C]),
+            R.forEach((n) => j.Z.getGuildEventUserCounts(p, n.id, [])), j.Z.getGuildEventsForCurrentUser(p);
+        }, [R, p]),
         l.useEffect(() => {
-            let n = m.Z.getGuild(C);
-            if (!(null == n ? void 0 : n.hasFeature(T.oNc.HUB))) return;
-            let { showHubEventsList: e } = g.Z.getCurrentConfig({
-                guildId: C,
+            let n = x.Z.getGuild(p);
+            if (!(null == n ? void 0 : n.hasFeature(y.oNc.HUB))) return;
+            let { showHubEventsList: e } = h.Z.getCurrentConfig({
+                guildId: p,
                 location: 'd3755f_1'
             });
             if (!e) return;
-            let t = h.ZP.getDefaultChannel(C);
-            null != t && d.c(t.id);
-        }, [C]),
-        l.useEffect(() => {
-            Z.default.track(T.rMx.OPEN_MODAL, {
-                type: P.zw,
-                guild_id: C,
-                guild_events_count: A.length
+            let t = v.ZP.getDefaultChannel(p);
+            null != t && g.c(t.id);
+        }, [p]),
+        (0, u.Z)(() => {
+            f.default.track(y.rMx.OPEN_MODAL, {
+                type: T.zw,
+                guild_id: p,
+                guild_events_count: R.length
             });
-        }, []),
+        }),
         l.useEffect(() => {
-            a()(A)
+            a()(R)
                 .map((n) => n.creator_id)
-                .filter(f.lm)
+                .filter(C.lm)
                 .uniq()
                 .forEach((n) => {
-                    v.Z.requestMember(C, n);
+                    m.Z.requestMember(p, n);
                 });
-        }, [C, A]),
+        }, [p, R]),
         l.useEffect(() => {
-            null != C && (0, s.Ju)(C, y.W.GUILD_EVENT);
-        }, [C]),
+            null != p && (0, s.Ju)(p, b.W.GUILD_EVENT);
+        }, [p]),
         (0, i.jsxs)(c.ModalRoot, {
             size: c.ModalSize.MEDIUM,
             transitionState: e,
-            'aria-labelledby': M,
+            'aria-labelledby': L,
             children: [
                 (0, i.jsxs)(c.ModalHeader, {
-                    className: G.header,
+                    className: M.header,
                     children: [
                         (0, i.jsx)(c.CalendarIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: G.icon
+                            className: M.icon
                         }),
                         (0, i.jsx)(c.Heading, {
-                            id: M,
+                            id: L,
                             variant: 'heading-md/semibold',
-                            children: A.length > 0 ? b.intl.formatToPlainString(b.t.IBdqSk, { number: A.length }) : b.intl.string(b.t.tlopTE)
+                            children: R.length > 0 ? G.intl.formatToPlainString(G.t.IBdqSk, { number: R.length }) : G.intl.string(G.t.tlopTE)
                         }),
-                        S &&
+                        A &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: G.divider,
+                                        className: M.divider,
                                         children: '|'
                                     }),
                                     (0, i.jsx)(c.Button, {
@@ -112,45 +113,45 @@ function L(n) {
                                                 return (e) =>
                                                     (0, i.jsx)(n, {
                                                         ...e,
-                                                        guildId: C
+                                                        guildId: p
                                                     });
-                                            }, w);
+                                            }, D);
                                         },
-                                        innerClassName: G.button,
-                                        children: b.intl.string(b.t['60lJ0N'])
+                                        innerClassName: M.button,
+                                        children: G.intl.string(G.t['60lJ0N'])
                                     })
                                 ]
                             }),
                         (0, i.jsx)(c.Clickable, {
                             onClick: r,
-                            className: G.iconButton,
-                            'aria-label': b.intl.string(b.t.cpT0Cg),
+                            className: M.iconButton,
+                            'aria-label': G.intl.string(G.t.cpT0Cg),
                             children: (0, i.jsx)(c.XSmallIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: G.icon
+                                className: M.icon
                             })
                         })
                     ]
                 }),
                 (0, i.jsx)(c.ModalContent, {
-                    className: G.content,
+                    className: M.content,
                     children:
-                        A.length > 0
-                            ? A.map((n) =>
+                        R.length > 0
+                            ? R.map((n) =>
                                   (0, i.jsx)(
-                                      k.Z,
+                                      I.Z,
                                       {
                                           guildEvent: n,
-                                          guildId: C,
+                                          guildId: p,
                                           onActionTaken: r,
-                                          isNew: null != R.current && p.default.compare(n.id, R.current) > 0
+                                          isNew: null != w.current && N.default.compare(n.id, w.current) > 0
                                       },
                                       n.id
                                   )
                               )
-                            : (0, i.jsx)(I.Z, {
-                                  guildId: C,
+                            : (0, i.jsx)(_.Z, {
+                                  guildId: p,
                                   onClose: r
                               })
                 })

@@ -33,14 +33,14 @@ t.Z = s.memo(function (e) {
             },
             [Z, r]
         ),
-        [B, k] = s.useState(!1),
-        [R, I] = s.useState(!1),
-        E = s.useRef(null),
+        [B, R] = s.useState(!1),
+        [k, E] = s.useState(!1),
+        I = s.useRef(null),
         D = s.useCallback(
             (e) => {
                 e &&
-                    (E.current = setTimeout(() => {
-                        I(!0);
+                    (I.current = setTimeout(() => {
+                        E(!0);
                     }, T));
             },
             [T]
@@ -68,49 +68,58 @@ t.Z = s.memo(function (e) {
             opacity: 0,
             top: -24,
             onRest: () => {
-                r && k(!0);
+                r && R(!0);
             }
-        }));
+        })),
+        U = {
+            animateFade: z,
+            animateExpand: F
+        },
+        O = s.useRef(U);
     s.useEffect(() => {
-        if (R)
-            F({
-                ...('left' === H
-                    ? {
-                          right: 68,
-                          config: c.config.stiff
-                      }
-                    : {
-                          left: 280,
-                          config: c.config.stiff
-                      })
-            }),
-                z({
-                    opacity: 1,
-                    top: -24
+        O.current = U;
+    }),
+        s.useEffect(() => {
+            let { animateFade: e, animateExpand: t } = O.current;
+            if (k)
+                t({
+                    ...('left' === H
+                        ? {
+                              right: 68,
+                              config: c.config.stiff
+                          }
+                        : {
+                              left: 280,
+                              config: c.config.stiff
+                          })
+                }),
+                    e({
+                        opacity: 1,
+                        top: -24
+                    });
+            k &&
+                r &&
+                e({
+                    opacity: 0,
+                    top: 0
                 });
-        R &&
-            r &&
-            z({
-                opacity: 0,
-                top: 0
-            });
-    }, [R, r, H]),
+        }, [k, r, H]),
         s.useEffect(
             () => () => {
-                null != E.current && clearTimeout(E.current);
+                null != I.current && clearTimeout(I.current);
             },
             []
         );
-    let U = o()(N.signHintAnimationContainer, B && N.noDisplay, 'left' === H ? N.signTextLeft : N.signTextRight),
-        O = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY),
-        W = (0, u.useToken)(u.tokens.colors.BG_BRAND),
-        q = null != l ? l : W.hex(),
-        J = (0, v.j1)(q, O.hex()),
-        { height: K = 87, ref: Q } = (0, x.Z)(i),
-        X = (0, u.useTransition)(i, {
+    let W = o()(N.signHintAnimationContainer, B && N.noDisplay, 'left' === H ? N.signTextLeft : N.signTextRight),
+        q = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY),
+        J = (0, u.useToken)(u.tokens.colors.BG_BRAND),
+        K = null != l ? l : J.hex(),
+        Q = (0, v.j1)(K, q.hex()),
+        { height: X = 87, ref: $ } = (0, x.Z)(i),
+        ee = (0, u.useTransition)(i, {
             from: {
                 opacity: 0,
-                translateY: K
+                translateY: X
             },
             enter: {
                 opacity: 1,
@@ -134,14 +143,14 @@ t.Z = s.memo(function (e) {
                             children: n
                         })
                     }),
-                    X(
+                    ee(
                         (e, l) =>
                             l &&
                             (0, a.jsx)(c.animated.div, {
                                 className: N.signatureBlockContainer,
                                 style: e,
                                 children: (0, a.jsx)('div', {
-                                    ref: Q,
+                                    ref: $,
                                     children: (0, a.jsxs)('div', {
                                         className: N.signatureBlock,
                                         children: [
@@ -149,7 +158,7 @@ t.Z = s.memo(function (e) {
                                                 ref: _,
                                                 className: N.signHintContainer,
                                                 children: (0, a.jsxs)(c.animated.div, {
-                                                    className: U,
+                                                    className: W,
                                                     style: {
                                                         ...G,
                                                         ...Y
@@ -158,7 +167,7 @@ t.Z = s.memo(function (e) {
                                                         (0, a.jsx)('div', {
                                                             className: N.signContainerButton,
                                                             children: (0, a.jsxs)(p.Z, {
-                                                                themeColor: q,
+                                                                themeColor: K,
                                                                 className: N.signButton,
                                                                 size: u.Button.Sizes.SMALL,
                                                                 onClick: (e) => {
@@ -167,8 +176,8 @@ t.Z = s.memo(function (e) {
                                                                 },
                                                                 children: [
                                                                     (0, a.jsx)('div', {
-                                                                        className: o()(N.signCarot, { [N.signCarotCustomColors]: null != J }),
-                                                                        style: null != J ? J : { borderColor: q }
+                                                                        className: o()(N.signCarot, { [N.signCarotCustomColors]: null != Q }),
+                                                                        style: null != Q ? Q : { borderColor: K }
                                                                     }),
                                                                     null != S ? S : j.intl.string(j.t.ySpZ9P)
                                                                 ]

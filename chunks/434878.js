@@ -365,19 +365,28 @@ function ev(e) {
                         ),
             [eu, Q, C, K, t, F, A, R, O]
         ),
-        eL = (0, g.e7)([B.Z], () => B.Z.hasHidden(t.id));
+        eL = (0, g.e7)([B.Z], () => B.Z.hasHidden(t.id)),
+        eF = {
+            editorHeight: r,
+            isGridLayout: ea
+        },
+        eO = i.useRef(eF);
     i.useEffect(() => {
-        var e, t;
-        let n = ea ? eD : ee,
-            a = null === (e = n.current) || void 0 === e ? void 0 : e.getScrollerState();
-        null != a && !eL && a.scrollTop > r && (null === (t = n.current) || void 0 === t || t.scrollTo({ to: 0 }));
-    }, [eL]);
+        eO.current = eF;
+    }),
+        i.useEffect(() => {
+            var e, t;
+            let { editorHeight: n, isGridLayout: a } = eO.current,
+                i = a ? eV : ee,
+                r = null === (e = i.current) || void 0 === e ? void 0 : e.getScrollerState();
+            null != r && !eL && r.scrollTop > n && (null === (t = i.current) || void 0 === t || t.scrollTo({ to: 0 }));
+        }, [eL]);
     let {
-            updateListScrollerRef: eF,
-            renderListSection: eO,
-            renderListItem: eB,
-            getListSectionHeight: ez,
-            getListItemHeight: eH
+            updateListScrollerRef: eB,
+            renderListSection: ez,
+            renderListItem: eH,
+            getListSectionHeight: eD,
+            getListItemHeight: eU
         } = (function (e) {
             let { listRef: t, hasActiveThreads: n, threadIdsBySection: r, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
                 g = i.useCallback(
@@ -457,15 +466,15 @@ function ev(e) {
             observePostVisibilityAnalytics: et,
             isShowingSearchResult: eu
         }),
-        eD = i.useRef(null),
+        eV = i.useRef(null),
         {
-            updateMasonryListScrollerRef: eU,
-            getItemKey: eV,
-            renderGridSection: eG,
-            renderGridItem: eW,
-            getGridSectionHeight: eq,
-            getSectionProps: eX,
-            handleGridFocus: eK
+            updateMasonryListScrollerRef: eG,
+            getItemKey: eW,
+            renderGridSection: eq,
+            renderGridItem: eX,
+            getGridSectionHeight: eK,
+            getSectionProps: eJ,
+            handleGridFocus: eY
         } = (function (e) {
             let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: r, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
                 x = i.useRef(null),
@@ -588,7 +597,7 @@ function ev(e) {
                 getGridSectionHeight: i.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
             };
         })({
-            masonryListScrollerRef: eD,
+            masonryListScrollerRef: eV,
             threadIdsBySection: eP,
             goToThread: eM,
             renderSectionOrItem: eA,
@@ -627,17 +636,17 @@ function ev(e) {
             }
         }, [s, n, a, r, l, t]);
     })({
-        masonryListScrollerRef: eD,
+        masonryListScrollerRef: eV,
         containerWidth: eI,
         isGridLayout: ea,
         threadIdsBySection: eP,
         parentId: t.id,
         focusedThreadId: ex
     });
-    let eJ = i.useCallback(() => {
+    let eQ = i.useCallback(() => {
             var e, n;
             if (eu) return;
-            let a = ea ? (null === (e = eD.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = ee.current) || void 0 === n ? void 0 : n.getScrollerState();
+            let a = ea ? (null === (e = eV.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = ee.current) || void 0 === n ? void 0 : n.getScrollerState();
             if (null == a) return;
             (0, W.ab)({
                 guildId: t.guild_id,
@@ -647,26 +656,26 @@ function ev(e) {
                 r = a.scrollHeight - i;
             r < (ea ? Math.max(200, (0, en.KW)(eI)) : 200) && j();
         }, [eu, ea, t.guild_id, t.id, eI, j]),
-        eY = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
-        eQ = (0, er.ZP)({
+        e$ = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        e0 = (0, er.ZP)({
             id: 'forum-grid-view',
-            isEnabled: ea && eY,
-            setFocus: eK
+            isEnabled: ea && e$,
+            setFocus: eY
         }),
-        e$ = (0, el.Z)({
+        e1 = (0, el.Z)({
             listRef: ee,
             padding: 96,
-            isEnabled: !ea && eY,
+            isEnabled: !ea && e$,
             channel: t
         }),
-        { ref: e0, ...e1 } = eQ.containerProps,
-        e6 = M.ZP.getSidebarState(t.id),
-        e9 = null != e6 && (0, M.D5)(e6),
-        e2 = (0, g.e7)([M.ZP], () => M.ZP.getSection(t.id)) === es.ULH.MEMBERS;
+        { ref: e6, ...e9 } = e0.containerProps,
+        e2 = M.ZP.getSidebarState(t.id),
+        e5 = null != e2 && (0, M.D5)(e2),
+        e3 = (0, g.e7)([M.ZP], () => M.ZP.getSection(t.id)) === es.ULH.MEMBERS;
     return (0, a.jsx)('div', {
         className: ed.container,
         ref: ev,
-        'data-member-list-open': e2,
+        'data-member-list-open': e3,
         children: (0, a.jsx)(f.FocusJumpSection, {
             children: (e) =>
                 (0, a.jsxs)(a.Fragment, {
@@ -676,7 +685,7 @@ function ev(e) {
                                 channel: t,
                                 draftType: Z.d.FirstThreadMessage,
                                 className: ed.uploadArea,
-                                style: { right: e9 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
+                                style: { right: e5 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
                             }),
                         (0, a.jsx)(e_, { channel: t }),
                         (0, a.jsx)(f.HiddenVisually, { children: (0, a.jsx)(f.H, { children: ec.intl.string(ec.t.B2panJ) }) }),
@@ -688,50 +697,50 @@ function ev(e) {
                             : null,
                         ea
                             ? (0, a.jsx)(er.KT, {
-                                  navigator: eQ,
+                                  navigator: e0,
                                   children: (0, a.jsx)(
                                       f.MasonryList,
                                       {
                                           ref: (e) => {
                                               var t;
-                                              (e0.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eU(e);
+                                              (e6.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eG(e);
                                           },
                                           itemGutter: 16,
                                           padding: 24,
                                           className: ed.grid,
                                           columns: eN,
                                           sections: eR,
-                                          getItemKey: eV,
-                                          getSectionHeight: eq,
+                                          getItemKey: eW,
+                                          getSectionHeight: eK,
                                           getItemHeight: eg,
-                                          renderSection: eG,
-                                          renderItem: eW,
-                                          getSectionProps: eX,
-                                          onScroll: b ? eJ : void 0,
+                                          renderSection: eq,
+                                          renderItem: eX,
+                                          getSectionProps: eJ,
+                                          onScroll: b ? eQ : void 0,
                                           chunkSize: 350,
-                                          ...e1,
+                                          ...e9,
                                           ...e
                                       },
                                       L
                                   )
                               })
                             : (0, a.jsx)(d.bG, {
-                                  navigator: e$,
+                                  navigator: e1,
                                   children: (0, a.jsx)(d.SJ, {
                                       children: (t) => {
                                           let { ref: n, ...i } = t;
                                           return (0, a.jsx)(
                                               f.ListAuto,
                                               {
-                                                  ref: eF(n),
+                                                  ref: eB(n),
                                                   className: ed.list,
                                                   sections: eR,
-                                                  sectionHeight: ez,
-                                                  rowHeight: eH,
-                                                  renderRow: eB,
-                                                  renderSection: eO,
+                                                  sectionHeight: eD,
+                                                  rowHeight: eU,
+                                                  renderRow: eH,
+                                                  renderSection: ez,
                                                   chunkSize: 150,
-                                                  onScroll: b ? eJ : void 0,
+                                                  onScroll: b ? eQ : void 0,
                                                   paddingBottom: 24,
                                                   ...i,
                                                   ...e,

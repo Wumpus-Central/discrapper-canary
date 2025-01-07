@@ -448,24 +448,30 @@ function X(e) {
         [i, r] = o.useState(!1),
         l = o.useRef(Date.now()),
         [a, s] = o.useState(() => z());
-    return (
-        o.useEffect(() => {
-            let e = (e) => s(e);
-            return (
-                t.on('change', e),
-                s(t.state),
-                () => {
-                    t.off('change', e);
-                }
-            );
-        }, [t]),
+    o.useEffect(() => {
+        let e = (e) => s(e);
+        return (
+            t.on('change', e),
+            s(t.state),
+            () => {
+                t.off('change', e);
+            }
+        );
+    }, [t]),
         o.useEffect(() => {
             if (null == a || a.channels.length > 0 || i) return;
             let t = Date.now(),
                 o = z();
             0 === o.channels.length || t - l.current < 10 * k.Z.Millis.SECOND ? r(!0) : ((l.current = Date.now()), n(new V(o, e)));
-        }, [a, i, e]),
-        o.useLayoutEffect(t.maybeLoadMore, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]),
+        }, [a, i, e]);
+    let c = o.useRef(t);
+    return (
+        o.useLayoutEffect(() => {
+            c.current = t;
+        }),
+        o.useLayoutEffect(() => {
+            null == a || a.channels, null == a || a.loadState, c.current.maybeLoadMore();
+        }, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]),
         o.useEffect(() => (P.Z.addChangeListener(t.reloadMessages), () => P.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         o.useEffect(() => (M.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => M.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
         o.useEffect(() => (N.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => N.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),

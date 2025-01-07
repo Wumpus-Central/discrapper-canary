@@ -17,15 +17,24 @@ var i = r(200651),
 let u = a.createContext(null),
     c = (e) => {
         let { value: n, children: r, shouldTrackViewOnMount: s = !0 } = e,
-            { analyticsLocations: c } = (0, o.ZP)();
+            { analyticsLocations: c } = (0, o.ZP)(),
+            d = {
+                analyticsLocations: c,
+                value: n
+            },
+            f = a.useRef(d);
         return (
             a.useEffect(() => {
-                if (!!s)
-                    (0, l.pQ)({
-                        action: 'VIEW',
-                        analyticsLocations: c,
-                        ...n
-                    });
+                f.current = d;
+            }),
+            a.useEffect(() => {
+                if (!s) return;
+                let { analyticsLocations: e, value: n } = f.current;
+                (0, l.pQ)({
+                    action: 'VIEW',
+                    analyticsLocations: e,
+                    ...n
+                });
             }, [s]),
             (0, i.jsx)(u.Provider, {
                 value: n,

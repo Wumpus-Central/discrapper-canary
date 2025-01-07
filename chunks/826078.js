@@ -30,7 +30,7 @@ function C(e) {
     return ''.concat(n, ' ').concat(a);
 }
 t.Z = function (e) {
-    var t, n, i, y, w, _;
+    var t, n, i, w, y, _;
     let { sourceURL: k } = e,
         { videoPlayerRef: S, cropData: N, setCropData: T } = (0, b.S)(),
         [L, F] = l.useState(((_ = !(null === (n = S.current) || void 0 === n ? void 0 : null === (t = n.videoElement) || void 0 === t ? void 0 : t.paused)), _)),
@@ -72,9 +72,10 @@ t.Z = function (e) {
     let { ref: V, width: K = 0, height: G = 0 } = (0, c.Z)(),
         X = (0, s.e7)([v.Z], () => v.Z.windowSize());
     l.useMemo(() => {
+        X.width, X.height;
         let e = V.current;
         null != e && W(e.getBoundingClientRect());
-    }, [X.width, X.height, K]);
+    }, [X.width, X.height, K, V]);
     let Q = l.useRef(null),
         Y = l.useRef({}),
         J = l.useCallback(
@@ -340,7 +341,7 @@ t.Z = function (e) {
                                         'aria-valuemin': N.start + h.Hp,
                                         'aria-valuenow': N.end,
                                         'aria-valuetext': C(N.end),
-                                        'aria-valuemax': null === (w = S.current) || void 0 === w ? void 0 : null === (y = w.videoElement) || void 0 === y ? void 0 : y.duration,
+                                        'aria-valuemax': null === (y = S.current) || void 0 === y ? void 0 : null === (w = y.videoElement) || void 0 === w ? void 0 : w.duration,
                                         'aria-label': x.intl.string(x.t.bBgBYm),
                                         children: (0, a.jsx)('div', { className: g.cropRightArrow })
                                     })

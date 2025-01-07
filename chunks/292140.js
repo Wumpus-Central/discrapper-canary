@@ -3,9 +3,10 @@ n.d(t, {
         return f;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    l = n(493773),
     a = n(626135),
     s = n(144145),
     o = n(555927),
@@ -25,7 +26,7 @@ function f(e) {
         N = (0, s.Z)(t),
         v = (0, o.Z)(t);
     return (
-        r.useEffect(() => {
+        (0, l.Z)(() => {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
@@ -36,19 +37,19 @@ function f(e) {
                 type: 'Now Playing Card Popout',
                 games_detected: e
             });
-        }, []),
-        (0, i.jsxs)(l.Menu, {
+        }),
+        (0, i.jsxs)(r.Menu, {
             navId: 'now-playing-menu',
             onClose: n,
             'aria-label': g.intl.string(g.t.ogxXGh),
             onSelect: f,
             children: [
                 _,
-                (0, i.jsxs)(l.MenuGroup, {
+                (0, i.jsxs)(r.MenuGroup, {
                     children: [E, I]
                 }),
-                (0, i.jsx)(l.MenuGroup, { children: C }),
-                (0, i.jsx)(l.MenuGroup, { children: N }),
+                (0, i.jsx)(r.MenuGroup, { children: C }),
+                (0, i.jsx)(r.MenuGroup, { children: N }),
                 v
             ]
         })

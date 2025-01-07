@@ -69,9 +69,19 @@ function j(e) {
             size: X,
             animateOnHover: !q
         }),
-        $ = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
+        $ = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id)),
+        ee = {
+            channel: n,
+            selectedParticipant: $,
+            user: U
+        },
+        et = l.useRef(ee);
     return (l.useEffect(() => {
-        n.isGuildStageVoice() && !B && (null == $ ? void 0 : $.id) === U.id && c.Z.selectParticipant(n.id, null);
+        et.current = ee;
+    }),
+    l.useEffect(() => {
+        let { channel: e, selectedParticipant: t, user: n } = et.current;
+        e.isGuildStageVoice() && !B && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
     }, [B]),
     a && !H && !O && B && !w && null != k && _.Z.supports(y.AN.VIDEO))
         ? (0, i.jsx)(

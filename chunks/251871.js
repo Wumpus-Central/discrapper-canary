@@ -1,7 +1,7 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return Z;
+            return M;
         }
     }),
     e(47120);
@@ -9,54 +9,55 @@ var i = e(200651),
     r = e(192379),
     l = e(399606),
     o = e(481060),
-    a = e(100527),
-    s = e(906732),
-    u = e(565138),
-    d = e(314897),
-    c = e(271383),
-    f = e(430824),
-    g = e(626135),
-    h = e(715903),
-    I = e(295474),
-    N = e(273504),
-    _ = e(981631),
-    C = e(372897),
+    a = e(493773),
+    s = e(100527),
+    u = e(906732),
+    d = e(565138),
+    c = e(314897),
+    f = e(271383),
+    g = e(430824),
+    h = e(626135),
+    I = e(715903),
+    N = e(295474),
+    _ = e(273504),
+    C = e(981631),
+    Z = e(372897),
     A = e(388032),
     E = e(295831);
-function Z(t) {
+function M(t) {
     var n;
-    let { onClose: e, transitionState: Z, guildId: M } = t,
-        k = (0, l.e7)([d.default], () => d.default.getId()),
-        R = (0, l.e7)([c.ZP], () => c.ZP.getMember(M, k), [M, k]),
-        m = (0, l.e7)([f.Z], () => f.Z.getGuild(M), [M]),
-        x = null !== (n = null == m ? void 0 : m.name) && void 0 !== n ? n : '',
-        O = (0, h.no)(R),
-        { analyticsLocations: p } = (0, s.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [v, L] = (0, I.ww)({
-            guildId: M,
-            analyticsLocations: p,
+    let { onClose: e, transitionState: M, guildId: k } = t,
+        R = (0, l.e7)([c.default], () => c.default.getId()),
+        m = (0, l.e7)([f.ZP], () => f.ZP.getMember(k, R), [k, R]),
+        x = (0, l.e7)([g.Z], () => g.Z.getGuild(k), [k]),
+        O = null !== (n = null == x ? void 0 : x.name) && void 0 !== n ? n : '',
+        p = (0, I.no)(m),
+        { analyticsLocations: v } = (0, u.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [L, P] = (0, N.ww)({
+            guildId: k,
+            analyticsLocations: v,
             openWithoutBackstack: !0
         }),
-        P = O.has(C.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? A.intl.string(A.t.SpDXIy) : A.intl.string(A.t['QRN+Sk']);
-    !L && (P = A.intl.string(A.t.FFj5Dg));
-    let U = L ? A.intl.string(A.t['/PGQf3']) : A.intl.string(A.t.WikgZ2);
-    return (r.useEffect(() => {
-        g.default.track(_.rMx.OPEN_MODAL, {
-            type: N.dc,
-            guild_id: M,
-            other_user_id: k
+        U = p.has(Z.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? A.intl.string(A.t.SpDXIy) : A.intl.string(A.t['QRN+Sk']);
+    !P && (U = A.intl.string(A.t.FFj5Dg));
+    let j = P ? A.intl.string(A.t['/PGQf3']) : A.intl.string(A.t.WikgZ2);
+    return ((0, a.Z)(() => {
+        h.default.track(C.rMx.OPEN_MODAL, {
+            type: _.dc,
+            guild_id: k,
+            other_user_id: R
         });
-    }, []),
+    }),
     r.useEffect(() => {
-        if (null == m) {
+        if (null == x) {
             e();
             return;
         }
-    }, [m, e]),
-    null == m)
+    }, [x, e]),
+    null == x)
         ? null
         : (0, i.jsxs)(o.ModalRoot, {
-              transitionState: Z,
+              transitionState: M,
               size: o.ModalSize.SMALL,
               children: [
                   (0, i.jsx)(o.ModalHeader, {
@@ -67,9 +68,9 @@ function Z(t) {
                               (0, i.jsxs)('div', {
                                   className: E.guildIconContainer,
                                   children: [
-                                      (0, i.jsx)(u.Z, {
-                                          guild: m,
-                                          size: u.Z.Sizes.LARGER
+                                      (0, i.jsx)(d.Z, {
+                                          guild: x,
+                                          size: d.Z.Sizes.LARGER
                                       }),
                                       (0, i.jsx)('div', {
                                           className: E.statusContainer,
@@ -84,7 +85,7 @@ function Z(t) {
                               (0, i.jsx)(o.Heading, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
-                                  children: A.intl.format(A.t.kcYdTk, { guildName: x })
+                                  children: A.intl.format(A.t.kcYdTk, { guildName: O })
                               })
                           ]
                       })
@@ -95,7 +96,7 @@ function Z(t) {
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
-                              children: P
+                              children: U
                           })
                       })
                   }),
@@ -103,11 +104,11 @@ function Z(t) {
                       children: [
                           (0, i.jsx)(o.Button, {
                               onClick: () => {
-                                  v(), e();
+                                  L(), e();
                               },
                               color: o.Button.Colors.BRAND,
                               look: o.Button.Looks.FILLED,
-                              children: U
+                              children: j
                           }),
                           (0, i.jsx)(o.Button, {
                               onClick: e,
