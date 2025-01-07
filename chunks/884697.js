@@ -119,20 +119,19 @@ let p = (e) => (null == e ? void 0 : e.premiumType) != null,
         return (null === (n = I(e, h.tuJ.DEFAULT)) || void 0 === n ? void 0 : n.amount) === 0;
     },
     S = (e) =>
-        e.reduce((e, n) => {
-            if (null != n && n.type === l.Z.VARIANTS_GROUP && null != n.variants) {
-                let r = n.prices;
-                return (0, o.concat)(
-                    e,
-                    n.variants.map((e) => ({
-                        ...e,
-                        prices: r,
-                        variantGroupStoreListingId: n.storeListingId
-                    }))
-                );
-            }
-            return e.push(n), e;
-        }, []),
+        e.reduce(
+            (e, n) =>
+                null != n && n.type === l.Z.VARIANTS_GROUP && null != n.variants
+                    ? (0, o.concat)(
+                          e,
+                          n.variants.map((e) => ({
+                              ...e,
+                              variantGroupStoreListingId: n.storeListingId
+                          }))
+                      )
+                    : (e.push(n), e),
+            []
+        ),
     A = (e, n) => {
         let r = (0, o.flatMap)([...e.values()], 'products');
         return (0, o.uniqBy)(n ? S(r) : r, 'storeListingId');
