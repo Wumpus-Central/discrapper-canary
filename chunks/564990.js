@@ -19,18 +19,21 @@ var i = r(544891),
     l = r(981631),
     u = r(388032);
 let c = async (e) => {
-        let { token: n, feedId: r } = e;
+        let { token: n, feedId: r, feature: a } = e;
         try {
             let e = (
                     await i.tn.get({
                         url: l.ANM.MY_CONTENT_INVENTORY(n),
-                        ...(r === o.YN.GAME_PROFILE_FEED && { query: { for_game_profile: !0 } }),
+                        query: {
+                            for_game_profile: r === o.YN.GAME_PROFILE_FEED,
+                            feature: a
+                        },
                         rejectWithError: !1
                     })
                 ).body,
-                a = e.wait_ms_until_next_fetch;
-            if (null != a) {
-                let n = new Date(Date.now() + a);
+                s = e.wait_ms_until_next_fetch;
+            if (null != s) {
+                let n = new Date(Date.now() + s);
                 e.expired_at = n.toISOString();
             }
             return e;

@@ -1,20 +1,21 @@
 var i = r(47120);
 var a = r(392711);
-var s = r(570140),
-    o = r(147913),
-    l = r(539746),
-    u = r(38618),
-    c = r(456644),
-    d = r(553795),
-    f = r(517100),
-    _ = r(451478),
-    h = r(162461),
-    p = r(564990),
-    m = r(71585),
-    g = r(146282),
-    E = r(206583),
-    v = r(981631);
-function I(e, n, r) {
+var s = r(126313),
+    o = r(570140),
+    l = r(147913),
+    u = r(539746),
+    c = r(38618),
+    d = r(456644),
+    f = r(553795),
+    _ = r(517100),
+    h = r(451478),
+    p = r(162461),
+    m = r(564990),
+    g = r(71585),
+    E = r(146282),
+    v = r(206583),
+    I = r(981631);
+function T(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -27,134 +28,162 @@ function I(e, n, r) {
         e
     );
 }
-let T = 3,
-    b = 5,
-    y = E.YN.GLOBAL_FEED,
-    S = 900000,
-    A = new Map(),
-    N = new Set(),
-    C = new Map(),
-    R = null,
-    O = (0, a.debounce)(p.yK, 3000, { trailing: !0 });
-function D(e, n) {
-    s.Z.dispatch({
+let b = 3,
+    y = 5,
+    S = v.YN.GLOBAL_FEED,
+    A = 900000,
+    N = new Map(),
+    C = new Set(),
+    R = new Map(),
+    O = null,
+    D = (0, a.debounce)(m.yK, 3000, { trailing: !0 });
+function L(e, n) {
+    o.Z.dispatch({
         type: 'CONTENT_INVENTORY_SET_FEED_STATE',
         feedId: e,
         state: n
     });
 }
-function L(e) {
-    if (N.has(e) || (e === E.YN.GAME_PROFILE_FEED && (!(0, l._J)('ContentInventoryManager') || void 0 !== g.Z.getFeed(e)))) return !1;
-    if (e === y) {
-        if (!(0, h.sA)('ContentInventoryManager') || (m.Z.hidden && null != g.Z.getFeed(e)) || !_.Z.isFocused() || !u.Z.isConnected()) return !1;
-        let n = f.Z.getIdleSince();
-        if (null != n && Date.now() - n > S) return !1;
+function x(e) {
+    if (C.has(e) || (e === v.YN.GAME_PROFILE_FEED && (!(0, u._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))) return !1;
+    if (e === S) {
+        if (!(0, p.sA)('ContentInventoryManager') || (g.Z.hidden && null != E.Z.getFeed(e)) || !h.Z.isFocused() || !c.Z.isConnected()) return !1;
+        let n = _.Z.getIdleSince();
+        if (null != n && Date.now() - n > A) return !1;
     }
     return !0;
 }
-function x(e) {
-    D(e, { loading: !1 });
-    let n = A.get(e);
-    void 0 !== n && (clearTimeout(n), A.delete(e));
+function w(e) {
+    L(e, { loading: !1 });
+    let n = N.get(e);
+    void 0 !== n && (clearTimeout(n), N.delete(e));
 }
-function w() {
-    if ((x(y), !L(y))) return;
-    let e = g.Z.getFeed(y);
-    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == R) return;
+function P() {
+    if ((w(S), !x(S))) return;
+    let e = E.Z.getFeed(S);
+    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == O) return;
     let n = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-        r = Math.max(0, null == R ? 0 : new Date(R).getTime() - Date.now(), n);
-    D(y, {
+        r = Math.max(0, null == O ? 0 : new Date(O).getTime() - Date.now(), n);
+    L(S, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + r)
     }),
-        A.set(
-            y,
-            setTimeout(() => P(y), r)
+        N.set(
+            S,
+            setTimeout(
+                () =>
+                    M({
+                        feedId: S,
+                        feature: s.L.INBOX
+                    }),
+                r
+            )
         );
 }
-async function P(e) {
-    let { force: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    if (!!(L(e) || n))
+async function M(e) {
+    let { feedId: n, feature: r, force: i = !1 } = e;
+    if (!!(x(n) || i))
         try {
-            let n = g.Z.getFeed(e);
-            N.add(e), D(e, { loading: !0 });
-            let r = await (0, p.mt)({
-                token: null == n ? void 0 : n.refresh_token,
-                feedId: e
+            let e = E.Z.getFeed(n);
+            C.add(n), L(n, { loading: !0 });
+            let i = await (0, m.mt)({
+                token: null == e ? void 0 : e.refresh_token,
+                feedId: n,
+                feature: r
             });
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'CONTENT_INVENTORY_SET_FEED',
-                feedId: e,
-                feed: r
+                feedId: n,
+                feed: i
             }),
-                C.set(e, 0),
-                N.delete(e),
-                D(e, { loading: !1 }),
-                e === y && ((R = null), w());
-        } catch (a) {
-            var r;
-            let i = null !== (r = C.get(e)) && void 0 !== r ? r : 0;
-            if (i < T) {
-                let r = 1000 * Math.pow(b, i);
-                A.set(
-                    e,
-                    setTimeout(() => P(e, { force: n }), r)
+                R.set(n, 0),
+                C.delete(n),
+                L(n, { loading: !1 }),
+                n === S && ((O = null), P());
+        } catch (s) {
+            var a;
+            let e = null !== (a = R.get(n)) && void 0 !== a ? a : 0;
+            if (e < b) {
+                let a = 1000 * Math.pow(y, e);
+                N.set(
+                    n,
+                    setTimeout(
+                        () =>
+                            M({
+                                feedId: n,
+                                feature: r,
+                                force: i
+                            }),
+                        a
+                    )
                 ),
-                    C.set(e, i + 1);
+                    R.set(n, e + 1);
             } else
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'CONTENT_INVENTORY_CLEAR_FEED',
-                    feedId: e
+                    feedId: n
                 });
-            N.delete(e);
+            C.delete(n);
         }
 }
-function M() {
-    w();
-}
 function k() {
-    M();
-    let { recentActivityEnabled: e } = (0, c.G)({
+    P();
+}
+function U() {
+    k();
+    let { recentActivityEnabled: e } = (0, d.G)({
         location: 'ContentInventoryManager',
         autoTrackExposure: !1
     });
-    e && P(E.YN.GAME_PROFILE_FEED);
+    e &&
+        M({
+            feedId: v.YN.GAME_PROFILE_FEED,
+            feature: s.L.RECENT_ACTIVITY
+        });
 }
-function U() {
-    x(y);
-}
-function B(e) {
-    let { feedId: n } = e;
-    x(n), P(n, { force: !0 });
+function B() {
+    w(S);
 }
 function G(e) {
-    let { refreshAfterMs: n } = e,
-        r = g.Z.getFeed(y);
-    if ((null == r ? void 0 : r.refresh_stale_inbox_after_ms) != null) (R = new Date(Date.now() + (null != n ? n : r.refresh_stale_inbox_after_ms)).toUTCString()), w();
+    let { feedId: n, feature: r } = e;
+    w(n),
+        M({
+            feedId: n,
+            feature: r,
+            force: !0
+        });
 }
 function Z(e) {
+    let { refreshAfterMs: n } = e,
+        r = E.Z.getFeed(S);
+    if ((null == r ? void 0 : r.refresh_stale_inbox_after_ms) != null) (O = new Date(Date.now() + (null != n ? n : r.refresh_stale_inbox_after_ms)).toUTCString()), P();
+}
+function F(e) {
     var n;
     let { connectionId: r, track: i } = e;
-    if (null != r) (null === (n = d.Z.getAccount(r, v.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && O(r, i);
+    if (null != r) (null === (n = f.Z.getAccount(r, I.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && D(r, i);
 }
-function F() {
-    P(E.YN.GAME_PROFILE_FEED);
+function V() {
+    M({
+        feedId: v.YN.GAME_PROFILE_FEED,
+        feature: s.L.GAME_PROFILE
+    });
 }
-class V extends o.Z {
+class j extends l.Z {
     constructor(...e) {
         super(...e),
-            I(this, 'actions', {
-                POST_CONNECTION_OPEN: k,
-                CONNECTION_CLOSED: U,
-                WINDOW_FOCUS: M,
-                IDLE: M,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
-                CONTENT_INVENTORY_MANUAL_REFRESH: B,
-                CONTENT_INVENTORY_INBOX_STALE: G,
-                SPOTIFY_NEW_TRACK: Z,
-                GAME_PROFILE_OPEN: F,
-                OVERLAY_READY: F
+            T(this, 'actions', {
+                POST_CONNECTION_OPEN: U,
+                CONNECTION_CLOSED: B,
+                WINDOW_FOCUS: k,
+                IDLE: k,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
+                CONTENT_INVENTORY_MANUAL_REFRESH: G,
+                CONTENT_INVENTORY_INBOX_STALE: Z,
+                SPOTIFY_NEW_TRACK: F,
+                GAME_PROFILE_OPEN: V,
+                OVERLAY_READY: V
             });
     }
 }
-n.Z = new V();
+n.Z = new j();

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return Z;
     }
 }),
     n(47120);
@@ -11,31 +11,32 @@ var r = n(200651),
     o = n(392711),
     s = n.n(o),
     c = n(876215),
-    d = n(442837),
-    u = n(433517),
-    h = n(481060),
-    m = n(570140),
-    x = n(812206),
-    f = n(835473),
-    p = n(681619),
-    b = n(810568),
-    g = n(168524),
-    v = n(77498),
-    j = n(823379),
-    C = n(71585),
-    T = n(146282),
-    _ = n(650613),
-    S = n(789086),
-    N = n(206583),
-    y = n(298149),
-    k = n(941469);
-let I = [
+    d = n(126313),
+    u = n(442837),
+    h = n(433517),
+    m = n(481060),
+    x = n(570140),
+    f = n(812206),
+    p = n(835473),
+    b = n(681619),
+    g = n(810568),
+    v = n(168524),
+    j = n(77498),
+    C = n(823379),
+    T = n(71585),
+    _ = n(146282),
+    S = n(650613),
+    N = n(789086),
+    y = n(206583),
+    k = n(298149),
+    I = n(941469);
+let E = [
     {
         key: 'type',
-        cellClassName: i()(y.cell, y.cellType),
+        cellClassName: i()(k.cell, k.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(h.Text, {
+            return (0, r.jsx)(m.Text, {
                 variant: 'text-md/semibold',
                 children: c.s[t]
             });
@@ -43,11 +44,11 @@ let I = [
     },
     {
         key: 'count',
-        cellClassName: i()(y.cell, y.cellCount),
+        cellClassName: i()(k.cell, k.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, r.jsx)('div', {
-                children: (0, r.jsx)(h.Text, {
+                children: (0, r.jsx)(m.Text, {
                     variant: 'text-md/normal',
                     children: t.length
                 })
@@ -56,38 +57,38 @@ let I = [
     },
     {
         key: 'only?',
-        cellClassName: y.cell,
+        cellClassName: k.cell,
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(E, { type: t });
+            return (0, r.jsx)(w, { type: t });
         }
     }
 ];
-function E(e) {
+function w(e) {
     var t, n;
     let { type: a } = e,
-        l = (0, d.e7)([T.Z], () => T.Z.getFilters()),
+        l = (0, u.e7)([_.Z], () => _.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
-    return (0, r.jsx)(h.Checkbox, {
+    return (0, r.jsx)(m.Checkbox, {
         value: i,
         onClick: function () {
             i
-                ? m.Z.dispatch({
+                ? x.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: void 0
                   })
-                : m.Z.dispatch({
+                : x.Z.dispatch({
                       type: 'CONTENT_INVENTORY_SET_FILTERS',
                       filters: { types: new Set([a]) }
                   });
         }
     });
 }
-function w() {
+function Z() {
     var e, t;
-    let n = (0, d.e7)([T.Z], () => T.Z.getFeed(N.YN.GLOBAL_FEED)),
-        l = (0, d.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
-        o = (0, d.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, u.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
+        o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
             let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,25 +100,25 @@ function w() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        E = (0, d.e7)([T.Z], () => {
+        w = (0, u.e7)([_.Z], () => {
             var e;
-            return (null === (e = T.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = _.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [w, R] = a.useState(''),
-        O = (0, d.e7)(
-            [v.Z, x.Z],
+        [Z, O] = a.useState(''),
+        B = (0, u.e7)(
+            [j.Z, f.Z],
             () => {
                 var e, t, n;
-                return parseInt(w) > 0 ? w : null !== (n = null === (e = v.Z.getGameByName(w)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(w)) || void 0 === t ? void 0 : t.id;
+                return parseInt(Z) > 0 ? Z : null !== (n = null === (e = j.Z.getGameByName(Z)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = f.Z.getApplicationByName(Z)) || void 0 === t ? void 0 : t.id;
             },
-            [w]
+            [Z]
         ),
-        B = (0, g.Z)({
-            applicationId: O,
+        P = (0, v.Z)({
+            applicationId: B,
             location: 'DevToolsContentInventory',
-            source: b.m1.DevTools
+            source: g.m1.DevTools
         }),
-        P = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        L = Object.entries(null !== (t = h.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,106 +127,107 @@ function w() {
                 let [t] = e;
                 return t;
             }),
-        L = (0, f.Z)(P).filter(j.lm);
+        A = (0, p.Z)(L).filter(C.lm);
     return (0, r.jsx)('div', {
-        className: i()(k.panel),
-        children: (0, r.jsxs)(h.ScrollerThin, {
-            className: y.content,
+        className: i()(I.panel),
+        children: (0, r.jsxs)(m.ScrollerThin, {
+            className: k.content,
             children: [
-                (0, r.jsxs)(h.FormSection, {
+                (0, r.jsxs)(m.FormSection, {
                     children: [
-                        (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
+                        (0, r.jsx)(m.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
-                            (0, r.jsx)(p.Z, {
-                                columns: I,
+                            (0, r.jsx)(b.Z, {
+                                columns: E,
                                 data: c
                             }),
-                        (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(S.Z, {}),
-                        (0, r.jsx)(h.Button, {
+                        (0, r.jsx)(m.Spacer, { size: 8 }),
+                        (0, r.jsx)(N.Z, {}),
+                        (0, r.jsx)(m.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({
+                                x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: N.YN.GLOBAL_FEED
+                                    feedId: y.YN.GLOBAL_FEED,
+                                    feature: d.L.INBOX
                                 });
                             },
-                            submitting: E,
+                            submitting: w,
                             children: 'Refresh Now'
                         })
                     ]
                 }),
-                (0, r.jsxs)(h.FormSection, {
+                (0, r.jsxs)(m.FormSection, {
                     children: [
-                        (0, r.jsx)(h.FormTitle, { children: 'Impression Capping' }),
-                        (0, r.jsx)(h.Button, {
+                        (0, r.jsx)(m.FormTitle, { children: 'Impression Capping' }),
+                        (0, r.jsx)(m.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
+                                x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
                             },
                             children: 'Clear Impressions'
                         }),
-                        (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(h.Button, {
+                        (0, r.jsx)(m.Spacer, { size: 8 }),
+                        (0, r.jsx)(m.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
+                                x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
                             },
                             children: 'Log Impressions'
                         }),
-                        (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(h.Button, {
+                        (0, r.jsx)(m.Spacer, { size: 8 }),
+                        (0, r.jsx)(m.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
+                                x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
                             },
                             children: l ? 'Enable Impression Capping' : 'Disable Impression Capping'
                         }),
-                        (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(h.Button, {
+                        (0, r.jsx)(m.Spacer, { size: 8 }),
+                        (0, r.jsx)(m.Button, {
                             fullWidth: !0,
                             onClick: function () {
-                                m.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
+                                x.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING' });
                             },
                             children: o ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping'
                         })
                     ]
                 }),
                 false,
-                (0, r.jsx)(_.Z, {}),
-                (0, r.jsxs)(h.FormSection, {
+                (0, r.jsx)(S.Z, {}),
+                (0, r.jsxs)(m.FormSection, {
                     children: [
-                        (0, r.jsx)(h.FormTitle, { children: 'Game Profile' }),
-                        (0, r.jsx)(h.TextInput, {
+                        (0, r.jsx)(m.FormTitle, { children: 'Game Profile' }),
+                        (0, r.jsx)(m.TextInput, {
                             placeholder: 'App ID or full name',
-                            onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && O(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (w === e.currentTarget.value ? null == B || B(e) : R(e.currentTarget.value));
+                                'Enter' === e.key && (Z === e.currentTarget.value ? null == P || P(e) : O(e.currentTarget.value));
                             },
-                            error: w.length > 0 && null == B ? 'No game profile for '.concat(null != O ? O : w + ' - try by id', '.') : void 0,
-                            style: null != B ? { border: '1px solid green' } : {}
+                            error: Z.length > 0 && null == P ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
+                            style: null != P ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: L.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: A.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(R, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
         })
     });
 }
-let Z = (e) => {
+let R = (e) => {
     let { application: t } = e,
-        n = (0, g.Z)({
+        n = (0, v.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
-            source: b.m1.DevTools
+            source: g.m1.DevTools
         });
-    return (0, r.jsx)(h.Clickable, {
+    return (0, r.jsx)(m.Clickable, {
         onClick: n,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, r.jsx)(h.Text, {
+        children: (0, r.jsx)(m.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: t.name
