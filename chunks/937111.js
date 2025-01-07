@@ -71,10 +71,14 @@ function v(e) {
     (0, u.d3)(i) ? delete f[n] : (f[n] = i);
 }
 function I(e) {
+    let { guildId: n } = e;
+    delete f[n];
+}
+function T(e) {
     let { guild: n } = e;
     delete f[n.id];
 }
-function T(e) {
+function b(e) {
     let { invite: n } = e,
         { guild: r, join_request: i } = n;
     if (null != r && null != i) {
@@ -89,7 +93,7 @@ function T(e) {
         };
     }
 }
-function b(e) {
+function y(e) {
     let { guilds: n } = e;
     (_ = !0),
         n.forEach((e) => {
@@ -102,11 +106,11 @@ function b(e) {
             };
         });
 }
-function y(e) {
+function S(e) {
     let { guildId: n, cooldown: r } = e;
     p[n] = null != r ? r : 0;
 }
-function S(e) {
+function A(e) {
     let { form: n, guildId: r } = e;
     if ((null == n ? void 0 : n.guild) != null) {
         let { id: e, name: i, icon: a, features: s } = n.guild;
@@ -118,17 +122,17 @@ function S(e) {
         };
     }
 }
-function A(e) {
+function N(e) {
     let { guildId: n } = e;
     delete f[n];
 }
-function N() {
+function C() {
     d = !0;
 }
-function C() {
+function R() {
     d = !1;
 }
-class R extends (i = a.ZP.Store) {
+class O extends (i = a.ZP.Store) {
     getRequest(e) {
         return f[e];
     }
@@ -150,18 +154,19 @@ class R extends (i = a.ZP.Store) {
         return p[e];
     }
 }
-c(R, 'displayName', 'UserGuildJoinRequestStore'),
-    (n.Z = new R(s.Z, {
+c(O, 'displayName', 'UserGuildJoinRequestStore'),
+    (n.Z = new O(s.Z, {
         CONNECTION_OPEN: g,
         GUILD_JOIN_REQUEST_UPDATE: v,
         GUILD_JOIN_REQUEST_CREATE: v,
+        GUILD_JOIN_REQUEST_DELETE: I,
         USER_GUILD_JOIN_REQUEST_UPDATE: E,
-        GUILD_DELETE: I,
-        USER_JOIN_REQUEST_GUILDS_FETCH: b,
-        MEMBER_VERIFICATION_FORM_UPDATE: S,
-        INVITE_ACCEPT_SUCCESS: T,
-        ACK_APPROVED_GUILD_JOIN_REQUEST: A,
-        USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: N,
-        USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: C,
-        USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: y
+        GUILD_DELETE: T,
+        USER_JOIN_REQUEST_GUILDS_FETCH: y,
+        MEMBER_VERIFICATION_FORM_UPDATE: A,
+        INVITE_ACCEPT_SUCCESS: b,
+        ACK_APPROVED_GUILD_JOIN_REQUEST: N,
+        USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: C,
+        USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: R,
+        USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: S
     }));
