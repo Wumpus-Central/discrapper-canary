@@ -155,13 +155,9 @@ function j(e) {
         var r, i, a, s, o, l;
         let u = !(0, D.zi)(e),
             c = !(0, D.zi)(n),
-            d = (0, D.Mi)(e, O.jn.QUEST_BAR) || (0, D.Mi)(e, O.jn.QUEST_BAR_V2),
-            f = (0, D.Mi)(n, O.jn.QUEST_BAR) || (0, D.Mi)(n, O.jn.QUEST_BAR_V2),
-            _ = (0, D.Mi)(e, O.jn.GIFT_INVENTORY_FOR_YOU),
-            h = (0, D.Mi)(n, O.jn.GIFT_INVENTORY_FOR_YOU),
-            p = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-            m = (null === (i = n.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null;
-        return u !== c ? (u ? Z : F) : d !== f && u && c ? (d ? Z : F) : _ !== h ? (_ ? Z : F) : p !== m ? (p ? Z : F) : u && c ? H(null === (o = e.config) || void 0 === o ? void 0 : o.expiresAt, null === (l = n.config) || void 0 === l ? void 0 : l.expiresAt, 1) : H(null === (a = e.config) || void 0 === a ? void 0 : a.expiresAt, null === (s = n.config) || void 0 === s ? void 0 : s.expiresAt, 0);
+            d = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
+            f = (null === (i = n.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null;
+        return u !== c ? (u ? Z : F) : d !== f ? (d ? Z : F) : u && c ? H(null === (o = e.config) || void 0 === o ? void 0 : o.expiresAt, null === (l = n.config) || void 0 === l ? void 0 : l.expiresAt, 1) : H(null === (a = e.config) || void 0 === a ? void 0 : a.expiresAt, null === (s = n.config) || void 0 === s ? void 0 : s.expiresAt, 0);
     });
 }
 function H(e, n, r) {
