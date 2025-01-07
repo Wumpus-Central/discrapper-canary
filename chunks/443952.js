@@ -248,16 +248,16 @@ t.Z = {
             let n,
                 {
                     socket: i,
-                    args: { command: r, preview_image: l, components: a, content: s }
+                    args: { command: r, preview_image: l, components: a, require_launch_channel: s, content: o }
                 } = e;
             (0, P.bu)(i.transport);
-            let o = i.application.id;
-            if (null == o) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            if (!w.Cr.includes(o)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
+            let c = i.application.id;
+            if (null == c) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
+            if (!w.Cr.includes(c)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, T.yE)(null !== (t = i.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let c = (0, y.Z)();
-            if (null == c) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
-            if (null !== l || null !== a || null !== s) {
+            let d = (0, y.Z)();
+            if (null == d) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
+            if (null !== l || null !== a || null !== o) {
                 let e = [];
                 void 0 !== l &&
                     (e = [
@@ -273,17 +273,24 @@ t.Z = {
                     ]),
                     (n = new I.ZP({
                         id: b.default.cast(b.default.fromTimestamp(Date.now())),
-                        applicationId: o,
-                        content: s,
+                        applicationId: c,
+                        content: o,
                         components: a,
                         attachments: e
                     }));
             }
-            (0, _.M)({
-                applicationId: o,
-                channel: c,
-                command: r,
-                previewMessage: n
+            return new Promise((e) => {
+                let t = !1;
+                (0, _.M)({
+                    applicationId: c,
+                    channel: d,
+                    command: r,
+                    requireLaunchChannel: !0 === s,
+                    onShareResult: (n) => {
+                        !t && (t = n), e({ success: t });
+                    },
+                    previewMessage: n
+                });
             });
         }
     })

@@ -123,7 +123,23 @@ t.Z = (e) => {
                 (0, i.jsx)(f.Z, {
                     className: _.checklist,
                     guild: t,
-                    guildId: t.id
+                    guildId: t.id,
+                    headerContent: (0, i.jsx)(c.Heading, {
+                        variant: 'heading-md/semibold',
+                        children: R
+                            ? v.intl.string(v.t.XAgDU1)
+                            : v.intl.format(v.t['+6Hylp'], {
+                                  doesNotHook: (e, t) =>
+                                      (0, i.jsx)(
+                                          'strong',
+                                          {
+                                              className: _.doesNot,
+                                              children: e
+                                          },
+                                          t
+                                      )
+                              })
+                    })
                 })
             ]
         })

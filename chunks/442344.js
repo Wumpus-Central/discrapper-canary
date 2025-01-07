@@ -8,5 +8,6 @@ e.exports = {
     previewCard: 'previewCard_d6d7a8',
     placeholderCard: 'placeholderCard_d6d7a8',
     enableButton: 'enableButton_d6d7a8',
-    checklist: 'checklist_d6d7a8'
+    checklist: 'checklist_d6d7a8',
+    doesNot: 'doesNot_d6d7a8'
 };

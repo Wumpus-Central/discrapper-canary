@@ -37,8 +37,8 @@ var i = n(200651),
     L = n(96788),
     D = n(654351),
     O = n(354051),
-    P = n(347604),
-    k = n(203377),
+    k = n(347604),
+    P = n(203377),
     M = n(929834),
     w = n(981631),
     B = n(128449),
@@ -375,8 +375,8 @@ class z extends r.PureComponent {
                     tags: t.keywords,
                     onRemoveTag: this.handleRemoveKeyword,
                     onAddTag: this.handleAddKeyword,
-                    maxTags: k.G7,
-                    maxTaxLength: k._0,
+                    maxTags: P.G7,
+                    maxTaxLength: P._0,
                     disabled: !e
                 }),
                 (null == n ? void 0 : n.keywords) != null
@@ -395,7 +395,8 @@ class z extends r.PureComponent {
         if (null == e || null == t) return null;
         switch ((0, D.TJ)(e, t)) {
             case D.d5.INTRO:
-                return (0, i.jsx)(P.Z, {
+            case D.d5.INTRO_INELIGIBLE:
+                return (0, i.jsx)(k.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
@@ -458,7 +459,7 @@ class z extends r.PureComponent {
             F(this, 'handleAddKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props,
                     { keywords: i } = n;
-                if ((null == t ? void 0 : t.id) != null) !(i.length >= k.G7) && (0, g.zH)(t.id, [...i, e]);
+                if ((null == t ? void 0 : t.id) != null) !(i.length >= P.G7) && (0, g.zH)(t.id, [...i, e]);
             }),
             F(this, 'handleToggleEmojiDiscoverability', () => {
                 let { guild: e, guildMetadata: t } = this.props,

@@ -91,7 +91,7 @@ function T(e, t) {
     );
 }
 t.Z = (e) => {
-    let { guild: t, guildId: l, className: s, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
+    let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
         [m, j] = (0, u.Wu)([C.ZP], () => [C.ZP.getDiscoveryChecklist(l), C.ZP.isLoading()], [l]),
         { nsfwProperties: b } = null != m ? m : {},
         S = null == t ? void 0 : t.hasFeature(v.oNc.PARTNERED),
@@ -328,35 +328,19 @@ t.Z = (e) => {
         className: a()(I.container, s),
         children: [
             (() => {
-                let e = _.t['+6Hylp'],
-                    t = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
-                return o
+                let e = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
+                return null == o
                     ? null
                     : (0, i.jsxs)('div', {
                           className: I.header,
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  src: t,
+                                  src: e,
                                   className: I.headerIcon,
                                   width: 40
                               }),
-                              (0, i.jsx)(h.Heading, {
-                                  variant: 'heading-md/semibold',
-                                  children: (null == m ? void 0 : m.sufficient)
-                                      ? _.intl.string(_.t.XAgDU1)
-                                      : _.intl.format(e, {
-                                            doesNotHook: (e, t) =>
-                                                (0, i.jsx)(
-                                                    'strong',
-                                                    {
-                                                        className: I.doesNot,
-                                                        children: e
-                                                    },
-                                                    t
-                                                )
-                                        })
-                              })
+                              o
                           ]
                       });
             })(),

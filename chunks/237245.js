@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return I;
+        return N;
     }
 }),
     n(47120);
@@ -14,41 +14,62 @@ var i = n(200651),
     d = n(246364),
     u = n(983736),
     m = n(571728),
-    h = n(999382),
-    g = n(654351),
-    x = n(217472),
-    p = n(658666),
-    f = n(384632),
-    C = n(981631),
-    v = n(388032);
-function _(e) {
+    h = n(434404),
+    g = n(999382),
+    x = n(654351),
+    p = n(217472),
+    f = n(658666),
+    C = n(384632),
+    v = n(981631),
+    _ = n(388032);
+function I(e) {
     var t;
-    let { pendingState: g } = e,
-        [p, _] = r.useState(!1),
-        [I, N] = r.useState(null),
-        T = (0, l.e7)([h.Z], () => h.Z.getProps().guild),
-        j = null == T ? void 0 : T.id,
-        b = null == T ? void 0 : T.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        S = null !== (t = (0, m.A)({ guildId: j })) && void 0 !== t ? t : 0,
-        E = r.useCallback(() => {
-            N(null), x.Z.reset();
+    let { pendingState: x } = e,
+        [f, I] = r.useState(!1),
+        [N, T] = r.useState(null),
+        j = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
+        b = null == j ? void 0 : j.id,
+        S = null == j ? void 0 : j.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        E = null !== (t = (0, m.A)({ guildId: b })) && void 0 !== t ? t : 0,
+        R = r.useCallback(() => {
+            T(null), p.Z.reset();
         }, []),
-        R = r.useCallback(async (e) => {
+        y = r.useCallback(async (e) => {
             try {
-                _(!0), await e(), N(null);
-            } catch (e) {
-                N(new o.Hx(e).getAnyErrorMessage());
+                I(!0), await e(), T(null);
             } finally {
-                _(!1);
+                I(!1);
             }
         }, []),
-        y = r.useCallback(() => {
-            if (null != j) {
-                if (g.joinType === f.A.INVITE) {
-                    let { requireTerms: e, termRules: t = [] } = g,
+        A = r.useCallback(async () => {
+            if (null == j ? void 0 : j.hasFeature(v.oNc.DISCOVERABLE)) {
+                let e = new Set(j.features);
+                e.delete(v.oNc.DISCOVERABLE);
+                try {
+                    await h.Z.saveGuild(j.id, { features: e }, { throwErr: !0 });
+                } catch (e) {
+                    throw ('object' == typeof e && 'message' in e ? T(e.message) : T(_.intl.formatToPlainString(_.t.aTVNen, { statusPageURL: v.yXt.STATUS })), e);
+                }
+            }
+        }, [j]),
+        Z = r.useCallback(
+            async (e, t) => {
+                if (null != b)
+                    try {
+                        await c.ZP.updateVerificationForm(b, e, t);
+                    } catch (e) {
+                        throw (T(new o.Hx(e).getAnyErrorMessage()), e);
+                    }
+            },
+            [b]
+        ),
+        L = r.useCallback(() => {
+            if (null != b) {
+                if (x.joinType === C.A.INVITE) {
+                    let { requireTerms: e, termRules: t = [] } = x,
                         n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
                     if (n.length < 1 && e) {
-                        N(v.intl.string(v.t.TCHkcX));
+                        T(_.intl.string(_.t.TCHkcX));
                         return;
                     }
                     let i =
@@ -56,61 +77,61 @@ function _(e) {
                             ? [
                                   {
                                       field_type: d.QJ.TERMS,
-                                      label: v.intl.string(v.t['9suSIC']),
+                                      label: _.intl.string(_.t['9suSIC']),
                                       values: n,
                                       required: !0
                                   }
                               ]
                             : [];
-                    R(async () => {
-                        await c.ZP.updateVerificationForm(j, i, e);
+                    y(async () => {
+                        await A(), await Z(i, e);
                     });
-                } else if (g.joinType === f.A.APPLY) {
-                    let { pendingVerificationFields: e } = g;
+                } else if (x.joinType === C.A.APPLY) {
+                    let { pendingVerificationFields: e } = x;
                     if (null == e) return;
                     if (!e.some((e) => (0, u._C)(e))) {
-                        N(v.intl.string(v.t.HGVrIy));
+                        T(_.intl.string(_.t.HGVrIy));
                         return;
                     }
-                    R(async () => {
-                        await c.ZP.updateVerificationForm(j, [...e], !0);
+                    y(async () => {
+                        await A(), await Z([...e], !0);
                     });
                 }
             }
-        }, [j, g, R]),
-        A = r.useCallback(() => {
-            if (null != j && null != g) {
-                if (b && S > 0 && (null == g ? void 0 : g.joinType) !== f.A.APPLY) {
+        }, [b, x, y, A, Z]),
+        D = r.useCallback(() => {
+            if (null != b && null != x) {
+                if (S && E > 0 && (null == x ? void 0 : x.joinType) !== C.A.APPLY) {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('55009').then(n.bind(n, 826390));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                guildId: j,
-                                submittedGuildJoinRequestsCount: S,
-                                onConfirm: () => y()
+                                guildId: b,
+                                submittedGuildJoinRequestsCount: E,
+                                onConfirm: () => L()
                             });
                     });
                     return;
                 }
-                y();
+                L();
             }
-        }, [j, g, b, S, y]);
+        }, [b, x, S, E, L]);
     return (0, i.jsx)(s.Z, {
-        submitting: p,
-        errorMessage: I,
-        onReset: E,
-        onSave: A
+        submitting: f,
+        errorMessage: N,
+        onReset: R,
+        onSave: D
     });
 }
-function I() {
-    let e = (0, l.e7)([p.Z], () => p.Z.pendingState);
+function N() {
+    let e = (0, l.e7)([f.Z], () => f.Z.pendingState);
     return null == e
         ? null
-        : (null == e ? void 0 : e.joinType) === f.A.DISCOVERABLE && e.settingsView === g.d5.INTRO
+        : (null == e ? void 0 : e.joinType) === C.A.DISCOVERABLE && e.settingsView === x.d5.INTRO_INELIGIBLE
           ? (0, i.jsx)(s.Z, {
-                message: v.intl.string(v.t.TEXwRk),
-                onReset: x.Z.reset
+                message: _.intl.string(_.t.TEXwRk),
+                onReset: p.Z.reset
             })
-          : (0, i.jsx)(_, { pendingState: e });
+          : (0, i.jsx)(I, { pendingState: e });
 }

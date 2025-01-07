@@ -68,6 +68,7 @@ let l = {
                     e.object({
                         command: e.string().required(),
                         content: e.string().max(2000),
+                        require_launch_channel: e.boolean(),
                         preview_image: e.object({
                             height: e.number().required(),
                             url: e.string().required(),
@@ -76,7 +77,7 @@ let l = {
                         components: e.array().items(s(e))
                     })
                 ),
-            response: void 0
+            response: (e) => e.object({ success: e.boolean().required() })
         }
     },
     a = (e) =>

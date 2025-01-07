@@ -40,7 +40,6 @@ t.Z = (e) => {
                         className: u.checklist,
                         guild: t,
                         guildId: t.id,
-                        noHeader: !0,
                         failedItemsOnly: !0
                     }),
                     m &&
