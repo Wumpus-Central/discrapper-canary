@@ -32,24 +32,25 @@ var l = n(200651),
     N = n(190417),
     x = n(621054);
 function P(e) {
-    let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: O, onClose: R, onRequestSent: w, ...D } = e,
+    let { message: t, initialSelectedDestinations: P, forwardOptions: y, onClose: Z, onRequestSent: O, ...R } = e,
+        { channel_id: w, id: D } = t,
         { hasOneTapSendButton: M, hasMessageInput: j, hasPreview: U } = (0, p.yk)({ location: 'ForwardModal' }),
-        k = i.useMemo(() => (0, u.dL)(t), [t]),
+        k = i.useMemo(() => (0, u.dL)(w), [w]),
         [F, G] = i.useState(!1),
         W = (0, r.e7)(
             [f.Z],
             () => {
                 var e;
-                return null !== (e = f.Z.getMessage(t, P)) && void 0 !== e ? e : y;
+                return null !== (e = f.Z.getMessage(t.channel_id, t.id)) && void 0 !== e ? e : t;
             },
-            [t, P, y]
+            [t]
         ),
-        B = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
+        B = (0, r.e7)([h.Z], () => h.Z.getChannel(w), [w]),
         H = (0, I.ZF)(),
         z = (0, I.mh)(),
         Q = i.useRef(0),
         V = i.useRef(0),
-        [K, Y] = i.useState(Z),
+        [K, Y] = i.useState(P),
         q = K.length,
         X = q >= T.G,
         [J, $] = i.useState(''),
@@ -60,25 +61,25 @@ function P(e) {
         }),
         en = i.useCallback(
             (e) => {
-                $(e), et(e), (V.current += 1), '' !== e && z(t, P);
+                $(e), et(e), (V.current += 1), '' !== e && z(w, D);
             },
-            [t, P, z, et]
+            [w, D, z, et]
         ),
         el = i.useCallback(() => {
             (0, I.sF)({
-                channelId: t,
-                messageId: P,
+                channelId: w,
+                messageId: D,
                 numDestinationChanges: Q.current,
                 numQueryChanges: V.current
             }),
-                R();
-        }, [t, P, R]),
+                Z();
+        }, [w, D, Z]),
         ei = i.useCallback(() => {
             var e;
-            let n = null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
-                l = (0, _.wR)(n, t, P);
-            (0, s.showToast)((0, s.createToast)(b.intl.string(b.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, I.xp)(t, P);
-        }, [t, P]),
+            let t = null === (e = h.Z.getChannel(w)) || void 0 === e ? void 0 : e.guild_id,
+                n = (0, _.wR)(t, w, D);
+            (0, s.showToast)((0, s.createToast)(b.intl.string(b.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(n), (0, I.xp)(w, D);
+        }, [w, D]),
         ea = i.useCallback(() => {
             $('');
         }, [$]),
@@ -105,7 +106,7 @@ function P(e) {
         ),
         eo = i.useCallback(
             (e) => {
-                H(t, P, '' !== J),
+                H(w, D, '' !== J),
                     Y((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -116,13 +117,13 @@ function P(e) {
                         return l.splice(n, 1), (Q.current += 1), l;
                     });
             },
-            [t, X, P, J, H]
+            [w, X, D, J, H]
         ),
         ec = i.useCallback(
             async function (e) {
                 var i;
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    _ = null !== (i = f.Z.getMessage(t, P)) && void 0 !== i ? i : y;
+                    _ = null !== (i = f.Z.getMessage(w, D)) && void 0 !== i ? i : t;
                 if (null == _) {
                     (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.R0RpRU), s.ToastType.FAILURE));
                     return;
@@ -146,9 +147,9 @@ function P(e) {
                     G(!1);
                     return;
                 }
-                d && (0, v.mc)(), null == w || w(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
+                d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
                 let p = await E.Z.sendForwards(_, g, {
-                        ...O,
+                        ...y,
                         withMessage: a
                     }),
                     A = g.some((e) => {
@@ -162,8 +163,8 @@ function P(e) {
                     })
                 ) {
                     (0, I.gP)({
-                        channelId: t,
-                        messageId: P,
+                        channelId: w,
+                        messageId: D,
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: g.length,
@@ -175,8 +176,8 @@ function P(e) {
                     return;
                 }
                 (0, I.gP)({
-                    channelId: t,
-                    messageId: P,
+                    channelId: w,
+                    messageId: D,
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: g.length,
@@ -186,14 +187,12 @@ function P(e) {
                 });
                 let C = e.filter((e, t) => 'rejected' === p[t].status);
                 (0, v.Np)({
-                    messageId: P,
-                    channelId: t,
                     message: _,
                     failedDestinations: C,
-                    forwardOptions: O
+                    forwardOptions: y
                 });
             },
-            [t, O, P, y, w, es]
+            [w, y, D, t, O, es]
         ),
         eu = i.useCallback(
             (e) => {
@@ -249,7 +248,7 @@ function P(e) {
     return (0, l.jsxs)(s.ModalRoot, {
         className: N.modal,
         'aria-label': b.intl.string(b.t['+SkRRk']),
-        ...D,
+        ...R,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
                 className: N.header,
@@ -290,7 +289,7 @@ function P(e) {
                             className: N.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(L.O, {
                                 message: W,
-                                forwardOptions: O
+                                forwardOptions: y
                             })
                         }),
                     (0, l.jsx)(s.SearchBar, {
@@ -310,7 +309,7 @@ function P(e) {
                 (j
                     ? (0, l.jsx)(C.n, {
                           message: W,
-                          forwardOptions: O,
+                          forwardOptions: y,
                           sendLabel: e_,
                           canSend: q > 0,
                           selectedDestinations: K,

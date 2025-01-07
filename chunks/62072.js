@@ -88,8 +88,7 @@ t.Z = function (e, t, n) {
                             (0, a.h)(U) &&
                             (n.preventDefault(),
                             (0, s.l8)({
-                                messageId: U.id,
-                                channelId: H.id,
+                                message: U,
                                 source: 'keyboard-shortcut'
                             }));
                         break;

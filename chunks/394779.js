@@ -13,8 +13,8 @@ var a = t(200651),
     c = t(912332),
     d = t(701865),
     f = t(388032),
-    h = t(923007);
-function _() {
+    _ = t(923007);
+function h() {
     (0, o.closeModal)(d.U);
 }
 function p(e) {
@@ -22,29 +22,25 @@ function p(e) {
         u = r.useCallback(() => {
             if ((null == s || s(), 'embed' === i.type)) {
                 (0, c.l8)({
-                    messageId: t.id,
-                    channelId: t.channel_id,
                     message: t,
                     source: 'media-viewer',
                     forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
-                    onRequestSent: _
+                    onRequestSent: h
                 });
                 return;
             }
             (0, c.l8)({
-                messageId: t.id,
-                channelId: t.channel_id,
                 message: t,
                 source: 'media-viewer',
                 forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
-                onRequestSent: _
+                onRequestSent: h
             });
         }, [t, i, s]);
     return (0, a.jsx)(o.Clickable, {
-        className: l()(h.container, n),
+        className: l()(_.container, n),
         onClick: u,
         children: (0, a.jsx)(o.Text, {
-            className: h.text,
+            className: _.text,
             variant: 'text-sm/medium',
             color: 'always-white',
             children: f.intl.string(f.t.I3ltXF)

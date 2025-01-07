@@ -8,8 +8,8 @@ var i = t(200651),
     u = t(868643),
     c = t(912332),
     d = t(378409),
-    h = t(49012),
-    f = t(358085),
+    f = t(49012),
+    h = t(358085),
     m = t(998502),
     p = t(254109),
     _ = t(212459),
@@ -20,7 +20,7 @@ var i = t(200651),
 function C() {
     (0, o.closeModal)(g.U);
 }
-function I(e) {
+function y(e) {
     let { onClick: n, tooltipText: t, children: r, selected: a, ...s } = e;
     return (0, i.jsx)(o.Tooltip, {
         text: t,
@@ -42,9 +42,9 @@ function I(e) {
         }
     });
 }
-function y() {
+function I() {
     let { zoomed: e, setZoomed: n } = (0, _.Y)();
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(y, {
         onClick: () => {
             (0, p.yg)(e ? p.uG.ZOOM_OUT_BUTTON_PRESSED : p.uG.ZOOM_IN_BUTTON_PRESSED), n(!e);
         },
@@ -57,12 +57,10 @@ function v(e) {
     let { item: a } = e,
         l = null === (n = a.sourceMetadata) || void 0 === n ? void 0 : n.message,
         d = null === (t = a.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
-        h = r.useCallback(() => {
+        f = r.useCallback(() => {
             if (null != l && null != d) {
                 if (((0, p.yg)(p.uG.FORWARD_PRESSED), 'embed' === d.type)) {
                     (0, c.l8)({
-                        messageId: l.id,
-                        channelId: l.channel_id,
                         message: l,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
@@ -71,8 +69,6 @@ function v(e) {
                     return;
                 }
                 (0, c.l8)({
-                    messageId: l.id,
-                    channelId: l.channel_id,
                     message: l,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
@@ -80,10 +76,10 @@ function v(e) {
                 });
             }
         }, [l, d]),
-        { canForwardMessages: f } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return null != l && f && (0, u.h)(l)
-        ? (0, i.jsx)(I, {
-              onClick: h,
+        { canForwardMessages: h } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return null != l && h && (0, u.h)(l)
+        ? (0, i.jsx)(y, {
+              onClick: f,
               tooltipText: S.intl.string(S.t.I3ltXF),
               children: (0, i.jsx)(o.ArrowAngleRightUpIcon, {})
           })
@@ -92,10 +88,10 @@ function v(e) {
 function O(e) {
     let { item: n } = e,
         [t, a] = r.useState(!1);
-    if (!('VIDEO' === n.type || (f.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
+    if (!('VIDEO' === n.type || (h.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
     let l = (0, d.s$)(n.url);
     async function s() {
-        if (((0, p.yg)(p.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === n.type && (0, h.q)({ href: l }), 'IMAGE' === n.type)) {
+        if (((0, p.yg)(p.uG.SAVE_MEDIA_PRESSED), 'VIDEO' === n.type && (0, f.q)({ href: l }), 'IMAGE' === n.type)) {
             a(!0);
             try {
                 await m.ZP.saveImage(l), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.cqpdJS), o.ToastType.SUCCESS));
@@ -106,7 +102,7 @@ function O(e) {
             }
         }
     }
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(y, {
         onClick: s,
         tooltipText: S.intl.string('VIDEO' === n.type ? S.t.JVuuz8 : S.t['S/xNKS']),
         submitting: t,
@@ -118,9 +114,9 @@ function b(e) {
     let { item: t } = e;
     if (!(0, d.Jj)(t.url)) return null;
     let r = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(y, {
         onClick: () => {
-            (0, p.yg)(p.uG.OPEN_LINK_PRESSED), (0, h.q)({ href: r });
+            (0, p.yg)(p.uG.OPEN_LINK_PRESSED), (0, f.q)({ href: r });
         },
         tooltipText: S.intl.string(S.t.q5jLJC),
         children: (0, i.jsx)(o.WindowLaunchIcon, {})
@@ -164,7 +160,7 @@ function M(e) {
                                 var e;
                                 (0, p.yg)(p.uG.COPY_LINK_PRESSED);
                                 let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
-                                f.isPlatformEmbedded ? m.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t['L/PwZW']), o.ToastType.SUCCESS));
+                                h.isPlatformEmbedded ? m.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t['L/PwZW']), o.ToastType.SUCCESS));
                             }
                         },
                         'media-viewer-copy-link'
@@ -176,7 +172,7 @@ function M(e) {
 function L(e) {
     let { item: n } = e,
         [t, a] = r.useState(!1),
-        l = 'IMAGE' === n.type && f.isPlatformEmbedded && null == n.children && m.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        l = 'IMAGE' === n.type && h.isPlatformEmbedded && null == n.children && m.ZP.canCopyImage() && (0, d.Lz)(n.url),
         s = (0, d.Jj)(n.url);
     return l || s
         ? (0, i.jsx)(o.Popout, {
@@ -194,7 +190,7 @@ function L(e) {
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, i.jsx)(I, {
+                  return (0, i.jsx)(y, {
                       tooltipText: S.intl.string(S.t.UKOtz8),
                       onClick: () => {
                           (0, p.yg)(p.uG.MORE_BUTTON_PRESSED), a(!t);
@@ -216,7 +212,7 @@ n.Z = r.memo(function (e) {
                     className: l()(x.actionButtons, e),
                     onClick: (e) => e.stopPropagation(),
                     children: [
-                        'IMAGE' === n.type && (0, i.jsx)(y, {}),
+                        'IMAGE' === n.type && (0, i.jsx)(I, {}),
                         !t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [(0, i.jsx)(v, { item: n }), (0, i.jsx)(O, { item: n }), (0, i.jsx)(b, { item: n }), (0, i.jsx)(L, { item: n })]

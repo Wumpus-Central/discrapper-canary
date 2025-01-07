@@ -98,32 +98,30 @@ function x(e) {
     return null;
 }
 function m(e) {
-    let { messageId: t, channelId: i, message: l, failedDestinations: r, forwardOptions: c, ...d } = e,
-        o = n.useCallback(() => {
+    let { message: t, failedDestinations: i, forwardOptions: l, ...r } = e,
+        c = n.useCallback(() => {
             (0, f.l8)({
-                messageId: t,
-                channelId: i,
-                message: l,
+                message: t,
                 source: 'retry-modal',
-                initialSelectedDestinations: r,
-                forwardOptions: c
+                initialSelectedDestinations: i,
+                forwardOptions: l
             });
-        }, [i, r, t, l, c]);
+        }, [i, t, l]);
     return (0, a.jsxs)(s.ConfirmModal, {
         header: h.intl.string(h.t['/OPIaG']),
         confirmText: h.intl.string(h.t['5911LS']),
         cancelText: h.intl.string(h.t['ETE/oK']),
         confirmButtonColor: s.Button.Colors.BRAND,
-        onConfirm: o,
-        ...d,
+        onConfirm: c,
+        ...r,
         children: [
             (0, a.jsx)(s.Text, {
                 variant: 'text-md/medium',
-                children: h.intl.format(h.t.cn9vFR, { count: r.length })
+                children: h.intl.format(h.t.cn9vFR, { count: i.length })
             }),
             (0, a.jsx)('div', {
                 className: g.failedDestinations,
-                children: r.map((e, t) => (0, a.jsx)(x, { destination: e }, t))
+                children: i.map((e, t) => (0, a.jsx)(x, { destination: e }, t))
             })
         ]
     });

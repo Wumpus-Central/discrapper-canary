@@ -58,8 +58,8 @@ t(726521);
 var u = t(623292),
     d = t(324701),
     c = t(488131),
-    g = t(314897),
-    f = t(592125),
+    f = t(314897),
+    g = t(592125),
     m = t(626135),
     h = t(934415),
     E = t(572004),
@@ -107,7 +107,7 @@ function y(e, n) {
 }
 function C(e, n, t) {
     let i = e.isPrivate(),
-        l = n.author.id === g.default.getId();
+        l = n.author.id === f.default.getId();
     (0, u.fE)({
         channel: e,
         message: n,
@@ -120,7 +120,7 @@ function L(e, n) {
     (0, c.R6)(e, n, 'Message');
 }
 function D(e, n) {
-    let t = f.Z.getChannel(I.default.castMessageIdAsChannelId(n.id));
+    let t = g.Z.getChannel(I.default.castMessageIdAsChannelId(n.id));
     null != t && (0, c.ok)(t);
 }
 function R(e, n) {
@@ -137,8 +137,7 @@ function O(e, n) {
 }
 function G(e, n) {
     (0, o.l8)({
-        channelId: e.id,
-        messageId: n.id,
+        message: n,
         source: 'message-actions'
     });
 }

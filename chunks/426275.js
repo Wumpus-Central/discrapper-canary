@@ -22,8 +22,7 @@ function m(e) {
                 embedIndex: f
             });
             (0, c.l8)({
-                channelId: n,
-                messageId: m,
+                message: e,
                 source: 'message-actions',
                 forwardOptions: t
             });
