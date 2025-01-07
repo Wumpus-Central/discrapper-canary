@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -26,9 +26,9 @@ var i = n(200651),
     v = n(981631),
     S = n(921944),
     T = n(388032),
-    b = n(382290);
-function A(e) {
-    let { channel: t, iconClassName: l, className: A, innerClassName: Z, ...x } = e,
+    A = n(382290);
+function b(e) {
+    let { channel: t, iconClassName: l, className: b, innerClassName: Z, ...x } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
         { mute: P, suppress: O } = (0, f.Z)(t),
         y = (0, s.e7)([_.Z], () => _.Z.isDeaf()),
@@ -80,11 +80,11 @@ function A(e) {
                         children: (0, i.jsx)(d.Button, {
                             ...e,
                             ...t,
-                            className: a()(A, {
-                                [b.buttonActive]: j,
-                                [b.disabled]: R
+                            className: a()(b, {
+                                [A.buttonActive]: j,
+                                [A.disabled]: R
                             }),
-                            wrapperClassName: A,
+                            wrapperClassName: b,
                             innerClassName: Z,
                             disabled: R,
                             onClick: () => {

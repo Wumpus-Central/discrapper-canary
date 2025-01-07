@@ -3,13 +3,13 @@ n.d(e, {
         return c;
     },
     Ic: function () {
-        return S;
-    },
-    Lg: function () {
         return I;
     },
-    OU: function () {
+    Lg: function () {
         return m;
+    },
+    OU: function () {
+        return g;
     },
     RH: function () {
         return a;
@@ -21,7 +21,7 @@ n.d(e, {
         return d;
     },
     Vg: function () {
-        return g;
+        return S;
     },
     Vk: function () {
         return _;
@@ -68,9 +68,9 @@ let a = 1000,
     _ = 1,
     E = 1,
     p = 260,
-    m = 100,
-    g = 1,
-    I = 50,
-    S = 20,
+    g = 100,
+    S = 1,
+    m = 50,
+    I = 20,
     h = 150,
     C = 'automod-profile-quarantine-alert';

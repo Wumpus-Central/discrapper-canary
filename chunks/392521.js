@@ -42,7 +42,7 @@ let o = 'premium_tier_2_gradient',
             })
         ]
     }),
-    m = (0, a.jsxs)('linearGradient', {
+    g = (0, a.jsxs)('linearGradient', {
         id: c,
         x1: '0%',
         y1: '0%',
@@ -63,7 +63,7 @@ let o = 'premium_tier_2_gradient',
             })
         ]
     }),
-    g = (0, a.jsxs)('linearGradient', {
+    m = (0, a.jsxs)('linearGradient', {
         id: d,
         x1: '0.005697',
         y1: '18.3495',
@@ -93,7 +93,7 @@ let o = 'premium_tier_2_gradient',
         ]
     }),
     f = (0, a.jsxs)('defs', {
-        children: [u, m, g]
+        children: [u, g, m]
     }),
     p = (e) => {
         let { className: t, fill: n, gradient: i } = e;

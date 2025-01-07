@@ -9,7 +9,7 @@ var o = n(200651),
     u = n(277636);
 t.Z = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: g, onCtxMenuClosed: f, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
+    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: f, onCtxMenuClosed: g, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
         _ = r.useRef(null),
         b = r.useRef(null),
         N = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -33,8 +33,8 @@ t.Z = function (e) {
                 expansionSpring: p,
                 className: u.content,
                 collapsedHeight: j,
-                onCtxMenuOpen: g,
-                onCtxMenuClose: f,
+                onCtxMenuOpen: f,
+                onCtxMenuClose: g,
                 onCtxMenuSelect: h,
                 overlayRef: b,
                 isExpanded: m,
@@ -56,8 +56,8 @@ t.Z = function (e) {
                                 useReducedMotion: v,
                                 isExpanded: m,
                                 isExpansionAnimationComplete: x,
-                                onCtxMenuOpen: g,
-                                onCtxMenuClose: f,
+                                onCtxMenuOpen: f,
+                                onCtxMenuClose: g,
                                 onCtxMenuSelect: h
                             })
                     ]

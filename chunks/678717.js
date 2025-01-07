@@ -15,8 +15,8 @@ var r = n(200651),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    m = n(213713),
-    h = n(665149),
+    h = n(213713),
+    m = n(665149),
     x = n(906467),
     f = n(259580),
     p = n(31336),
@@ -26,8 +26,8 @@ n(381996);
 var v = n(392750),
     j = n(926976),
     C = n(592197),
-    _ = n(806240),
-    T = n(789654),
+    T = n(806240),
+    _ = n(789654),
     S = n(719672),
     N = n(691867),
     y = n(916790),
@@ -40,8 +40,8 @@ var v = n(392750),
     O = n(496025),
     B = n(442954),
     P = n(633001),
-    A = n(702904),
-    L = n(178821),
+    L = n(702904),
+    A = n(178821),
     D = n(248526),
     F = n(958328),
     M = n(514866),
@@ -113,12 +113,12 @@ function q() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(T.Z, {})
                     }),
                     e.push({
                         id: 'performance',
                         name: 'Performance',
-                        render: () => (0, r.jsx)(L.Z, {})
+                        render: () => (0, r.jsx)(A.Z, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -138,7 +138,7 @@ function q() {
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    render: () => (0, r.jsx)(T.Z, {})
+                    render: () => (0, r.jsx)(_.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
@@ -179,7 +179,7 @@ function q() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, r.jsx)(m.Z, {})
+                        render: () => (0, r.jsx)(h.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
@@ -195,7 +195,7 @@ function q() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -237,19 +237,19 @@ function q() {
         }),
         (0, r.jsxs)(R.Gk, {
             children: [
-                (0, r.jsxs)(h.ZP, {
+                (0, r.jsxs)(m.ZP, {
                     className: Y.headerBar,
-                    toolbar: (0, r.jsx)(h.ZP.Icon, {
+                    toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: c.XSmallIcon,
                         tooltip: W.intl.string(W.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
-                        (0, r.jsx)(h.ZP.Icon, {
+                        (0, r.jsx)(m.ZP.Icon, {
                             icon: c.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, r.jsx)(n, {}),
@@ -304,15 +304,15 @@ function J() {
               className: K.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
-                  children: (0, r.jsxs)(h.ZP, {
+                  children: (0, r.jsxs)(m.ZP, {
                       className: i()(Y.headerBar, K.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, r.jsx)(h.ZP.Icon, {
+                          (0, r.jsx)(m.ZP.Icon, {
                               icon: c.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

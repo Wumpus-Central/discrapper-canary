@@ -22,8 +22,8 @@ var i = n(200651),
 function x(e) {
     let { guild: t, selected: n } = e,
         x = (0, r.e7)([p.Z], () => p.Z.can(g.Plq.KICK_MEMBERS, t)),
-        Z = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = x && null != Z ? Z : 0;
+        I = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        _ = x && null != I ? I : 0;
     return (
         l.useEffect(() => {
             x &&
@@ -51,7 +51,7 @@ function x(e) {
                 }),
                     (0, h.uL)(g.Z5c.CHANNEL(t.id, v.oC.MEMBER_APPLICATIONS));
             },
-            trailing: I > 0 ? (0, i.jsx)(a.NumberBadge, { count: I }) : null
+            trailing: _ > 0 ? (0, i.jsx)(a.NumberBadge, { count: _ }) : null
         })
     );
 }

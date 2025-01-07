@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(585483),
     d = n(246992),
     u = n(981631),
-    m = n(941469),
-    h = n(509345);
+    h = n(941469),
+    m = n(509345);
 function x() {
     let e = {
             PremiumSubscriptionAprilMarketingDecoModal: async () => {
@@ -32,22 +32,22 @@ function x() {
         })),
         [l, x] = a.useState(t[0].value);
     return (0, r.jsx)(o.ScrollerThin, {
-        className: i()(m.panel),
+        className: i()(h.panel),
         children: (0, r.jsxs)('div', {
-            className: h.panelInner,
+            className: m.panelInner,
             children: [
                 (0, r.jsxs)('section', {
-                    className: h.section,
+                    className: m.section,
                     children: [
                         (0, r.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             children: 'Open a Modal'
                         }),
                         (0, r.jsxs)('div', {
-                            className: h.inputRow,
+                            className: m.inputRow,
                             children: [
                                 (0, r.jsx)(o.Select, {
-                                    className: h.input,
+                                    className: m.input,
                                     options: t,
                                     isSelected: (e) => l === e,
                                     placeholder: 'Trial ID',
@@ -66,14 +66,14 @@ function x() {
                     ]
                 }),
                 (0, r.jsxs)('section', {
-                    className: h.section,
+                    className: m.section,
                     children: [
                         (0, r.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             children: 'Wow moment'
                         }),
                         (0, r.jsx)('div', {
-                            className: h.inputRow,
+                            className: m.inputRow,
                             children: (0, r.jsx)(o.Button, {
                                 onClick: () => {
                                     (0, s.H)(!0), c.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);

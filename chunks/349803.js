@@ -8,15 +8,15 @@ var r = n(120356),
     c = n(639119),
     d = n(318747),
     u = n(409100),
-    m = n(474936),
-    g = n(981631),
+    g = n(474936),
+    m = n(981631),
     f = n(798849);
 t.Z = function (e) {
     var t, n;
     let { isVisible: r, isFullscreen: p, subscriptionTier: _, isMarketingPageV2: h } = e,
-        E = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        b = (0, o.Ng)(),
-        x = (0, o.Wp)(b, m.Si.TIER_2) ? m.Si.TIER_2 : void 0,
+        x = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
+        E = (0, o.Ng)(),
+        b = (0, o.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
         C = (0, l.useSpring)({
             transform: r ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: r ? 1 : 0,
@@ -25,7 +25,7 @@ t.Z = function (e) {
                 friction: 12
             }
         }),
-        T = { section: g.jXE.MARKETING_FLOATING_CTA };
+        v = { section: m.jXE.MARKETING_FLOATING_CTA };
     return (0, i.jsx)(s.animated.div, {
         className: a()(f.wrapper, {
             [f.fullscreenWrapper]: p,
@@ -37,13 +37,13 @@ t.Z = function (e) {
             children: [
                 (0, i.jsx)(u.Z, {
                     className: f.button,
-                    subscriptionTier: null !== (n = null != _ ? _ : null == E ? void 0 : E.sku_id) && void 0 !== n ? n : x,
-                    premiumModalAnalyticsLocation: T,
+                    subscriptionTier: null !== (n = null != _ ? _ : null == x ? void 0 : x.sku_id) && void 0 !== n ? n : b,
+                    premiumModalAnalyticsLocation: v,
                     isPersistentCTA: !0
                 }),
                 (0, i.jsx)(d.Z, {
                     className: f.button,
-                    premiumModalAnalyticsLocation: T
+                    premiumModalAnalyticsLocation: v
                 })
             ]
         })

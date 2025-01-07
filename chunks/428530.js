@@ -26,8 +26,8 @@ function u(e) {
     for (let [n, r] of Object.entries(e)) t[n] = r;
     return t;
 }
-let m = u(d),
-    h = u(d);
+let h = u(d),
+    m = u(d);
 function x(e) {
     return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {
@@ -43,7 +43,7 @@ function f(e) {
         className: c.inspectorWrapper,
         children: (0, r.jsx)(a.L, {
             data: t,
-            theme: 'light' === n ? h : m,
+            theme: 'light' === n ? m : h,
             invertTheme: !1,
             valueRenderer: x,
             shouldExpandNode: () => !0

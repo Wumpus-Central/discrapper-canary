@@ -8,7 +8,7 @@ var r = n(120356),
     c = n(388032),
     d = n(187640),
     u = n(232186);
-let m = (e) => {
+let g = (e) => {
     let { header: t, description: n, icon: r, inModal: l } = e;
     return (0, i.jsxs)('div', {
         className: a()(d.row, u.marginBottom8, { [d.inModal]: l }),
@@ -49,7 +49,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: n
             }),
-            (0, i.jsx)(m, {
+            (0, i.jsx)(g, {
                 header: c.intl.string(c.t['/zMYZW']),
                 description: c.intl.string(c.t.DxFKkZ),
                 icon: (0, i.jsx)(s.FriendsIcon, {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, i.jsx)(m, {
+            (0, i.jsx)(g, {
                 header: c.intl.string(c.t['44NEx8']),
                 description: c.intl.string(c.t.WrY56O),
                 icon: (0, i.jsx)(s.ServerGridIcon, {
@@ -71,7 +71,7 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, i.jsx)(m, {
+            (0, i.jsx)(g, {
                 header: c.intl.string(c.t['Z3G+8v']),
                 description: c.intl.string(c.t.KBgAra),
                 icon: (0, i.jsx)(o.Z, {
@@ -87,7 +87,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: r
             }),
-            (0, i.jsx)(m, {
+            (0, i.jsx)(g, {
                 header: a,
                 description: u,
                 icon: (0, i.jsx)(s.XSmallIcon, {

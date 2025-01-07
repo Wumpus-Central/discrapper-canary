@@ -32,9 +32,9 @@ var i,
     v = n(427679),
     C = n(155409),
     x = n(131704),
-    Z = n(199902),
-    I = n(430824),
-    _ = n(496675),
+    I = n(199902),
+    _ = n(430824),
+    Z = n(496675),
     b = n(914010),
     S = n(281029),
     N = n(981631),
@@ -48,7 +48,7 @@ function T(e, t) {
 }
 function P(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([_.Z, b.Z], () => n || b.Z.getGuildId() === N.I_8 || (!_.Z.can(N.Plq.MANAGE_CHANNELS, t) && !_.Z.can(N.Plq.MANAGE_ROLES, t) && !_.Z.can(N.Plq.MANAGE_WEBHOOKS, t)) || ((0, x.r8)(t.type) && !_.Z.can(N.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !_.Z.can(N.Plq.CONNECT, t)) || !x.dF.has(t.type))) return null;
+    if ((0, d.e7)([Z.Z, b.Z], () => n || b.Z.getGuildId() === N.I_8 || (!Z.Z.can(N.Plq.MANAGE_CHANNELS, t) && !Z.Z.can(N.Plq.MANAGE_ROLES, t) && !Z.Z.can(N.Plq.MANAGE_WEBHOOKS, t)) || ((0, x.r8)(t.type) && !Z.Z.can(N.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !Z.Z.can(N.Plq.CONNECT, t)) || !x.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
@@ -76,15 +76,15 @@ function P(e) {
 }
 function A(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
-        c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
+        c = (0, d.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([v.Z], () => v.Z.getStageInstanceByChannel(t.id), [t.id]),
         g = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        x = (0, d.e7)([_.Z], () => (0, m.b)(_.Z, c, t, p)),
-        b = (0, d.e7)([_.Z], () => (_.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8)));
+        x = (0, d.e7)([Z.Z], () => (0, m.b)(Z.Z, c, t, p)),
+        b = (0, d.e7)([Z.Z], () => (Z.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8)));
     if (l || !x) return null;
     function S() {
         if (null != c) {
-            let e = Z.Z.getAllActiveStreams().filter((e) => e.state !== N.jm8.ENDED && e.channelId === t.id);
+            let e = I.Z.getAllActiveStreams().filter((e) => e.state !== N.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
                 let { default: i } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                 return (n) =>

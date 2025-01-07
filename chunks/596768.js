@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    m = n(481060),
-    h = n(570140),
+    h = n(481060),
+    m = n(570140),
     x = n(665149),
     f = n(55935),
     p = n(120816),
@@ -23,13 +23,13 @@ var r = n(200651),
     v = n(484036),
     j = n(681619),
     C = n(621060),
-    _ = n(388032),
-    T = n(931933),
+    T = n(388032),
+    _ = n(931933),
     S = n(941469);
 let N = [
         {
             key: 'id',
-            cellClassName: T.eventColumn,
+            cellClassName: _.eventColumn,
             render(e) {
                 let { experimentId: t } = e;
                 return t;
@@ -37,7 +37,7 @@ let N = [
         },
         {
             key: 'bucket',
-            cellClassName: T.locationColumn,
+            cellClassName: _.locationColumn,
             render(e) {
                 let { descriptor: t } = e;
                 return t.bucket;
@@ -45,7 +45,7 @@ let N = [
         },
         {
             key: 'timestamp',
-            cellClassName: T.locationColumn,
+            cellClassName: _.locationColumn,
             render(e) {
                 let { timestamp: t } = e;
                 return t.toLocaleString();
@@ -64,17 +64,17 @@ let N = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(x.ZP, {
-                            className: i()(S.headerBar, T.subPanelHeaderBar),
+                            className: i()(S.headerBar, _.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
-                                    icon: m.AnalyticsIcon,
+                                    icon: h.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(x.ZP.Title, { children: t })
                             ]
                         }),
                         (0, r.jsxs)(g.E, {
-                            className: T.commonProperties,
+                            className: _.commonProperties,
                             children: [
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Timestamp (local)',
@@ -134,43 +134,43 @@ function k() {
         { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
         k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         I = a.useCallback((e) => {
-            h.Z.dispatch({
+            m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
         }, []);
     return (0, r.jsxs)('div', {
         ref: n,
-        className: i()(S.panel, T.panel),
+        className: i()(S.panel, _.panel),
         children: [
             (0, r.jsxs)('div', {
-                className: T.toolbar,
+                className: _.toolbar,
                 children: [
                     (0, r.jsx)('div', {
                         title: 'Enables tracking of all triggers',
-                        className: T.triggersEnable,
-                        children: (0, r.jsx)(m.Switch, {
+                        className: _.triggersEnable,
+                        children: (0, r.jsx)(h.Switch, {
                             checked: k,
                             onChange: I,
-                            className: T.__invalid_toolbarSwitch
+                            className: _.__invalid_toolbarSwitch
                         })
                     }),
-                    (0, r.jsx)(m.Button, {
-                        className: T.toolbarButton,
-                        look: m.Button.Looks.BLANK,
-                        size: m.Button.Sizes.ICON,
+                    (0, r.jsx)(h.Button, {
+                        className: _.toolbarButton,
+                        look: h.Button.Looks.BLANK,
+                        size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: _.intl.string(_.t.VkKicX),
-                            children: (0, r.jsx)(m.TrashIcon, {
+                            title: T.intl.string(T.t.VkKicX),
+                            children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': _.intl.string(_.t.VkKicX)
+                                'aria-label': T.intl.string(T.t.VkKicX)
                             })
                         })
                     }),
-                    (0, r.jsx)(m.SearchBar, {
-                        className: T.searchBar,
+                    (0, r.jsx)(h.SearchBar, {
+                        className: _.searchBar,
                         query: e,
                         onChange: t,
                         onClear: () => t(''),
@@ -186,7 +186,7 @@ function k() {
             }),
             null != x &&
                 (0, r.jsxs)(v.Z, {
-                    className: T.subPanel,
+                    className: _.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
                     children: [(0, r.jsx)(f, {}), g({ loggedTrigger: x })]

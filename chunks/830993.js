@@ -22,14 +22,14 @@ var i = n(200651),
     v = n(355363),
     C = n(449932),
     x = n(561788),
-    Z = n(135724),
-    I = n(543432),
-    _ = n(981631),
+    I = n(135724),
+    _ = n(543432),
+    Z = n(981631),
     b = n(388032),
     S = n(684393);
 function N(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: m, voiceStates: v, isChannelSelected: x, shouldShowSettingNudge: Z } = e;
+    let { channel: h, guild: p, onAction: m, voiceStates: v, isChannelSelected: x, shouldShowSettingNudge: I } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -48,10 +48,10 @@ function N(e) {
         }, [e, t]);
         (0, o.$)(n);
     })(h, v);
-    let I = (0, s.ZP)(h),
-        N = Array.from((0, s.uF)(I).values()),
+    let _ = (0, s.ZP)(h),
+        N = Array.from((0, s.uF)(_).values()),
         y = null !== (t = null == v ? void 0 : v.filter(g.lm)) && void 0 !== t ? t : [],
-        j = (e) => (t) => ([_.IIU.PLAYING, _.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === _.IIU.LISTENING,
+        j = (e) => (t) => ([Z.IIU.PLAYING, Z.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === Z.IIU.LISTENING,
         T = (0, r.e7)(
             [f.Z],
             () => {
@@ -69,7 +69,7 @@ function N(e) {
                                               members: [],
                                               activity: n
                                           };
-                            s.members.push(t), !(0, c.Z)(s.activity, _.xjy.JOIN) && (s.activity = n), (e[o] = s);
+                            s.members.push(t), !(0, c.Z)(s.activity, Z.xjy.JOIN) && (s.activity = n), (e[o] = s);
                         }
                     }),
                     Object.values(e)
@@ -115,7 +115,7 @@ function N(e) {
                           t
                       );
                   }),
-                  Z &&
+                  I &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)('div', { className: S.headerDivider }),
@@ -127,7 +127,7 @@ function N(e) {
                                       children: b.intl.format(b.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('84605'), n.e('33053'), n.e('8016'), n.e('15669'), n.e('76540'), n.e('17938'), n.e('18101'), n.e('22646'), n.e('3940'), n.e('89029'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('92729'), n.e('57085'), n.e('29263')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('84605'), n.e('33053'), n.e('8016'), n.e('15669'), n.e('76540'), n.e('17938'), n.e('18101'), n.e('22646'), n.e('3940'), n.e('70596'), n.e('48923'), n.e('30419'), n.e('8821'), n.e('18824'), n.e('38175'), n.e('37229'), n.e('25183'), n.e('28044'), n.e('48542'), n.e('57085'), n.e('75392')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,
@@ -145,7 +145,7 @@ function N(e) {
 }
 function E(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        a = (0, r.e7)([p.Z], () => !p.Z.can(_.Plq.CONNECT, t)),
+        a = (0, r.e7)([p.Z], () => !p.Z.can(Z.Plq.CONNECT, t)),
         o = (0, r.e7)([m.Z], () => m.Z.hasVideo(t.id)),
         s = (0, v.ZP)({
             channel: t,
@@ -161,12 +161,12 @@ function E(e) {
               children: [
                   (0, i.jsx)(x.Z, { channel: t }),
                   s
-                      ? (0, i.jsx)(Z.Z, {
+                      ? (0, i.jsx)(I.Z, {
                             userCount: l,
                             video: o,
                             channel: t
                         })
-                      : (0, i.jsx)(I.Z, { userCount: l })
+                      : (0, i.jsx)(_.Z, { userCount: l })
               ]
           });
 }

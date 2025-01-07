@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(100527),
     S = n(906732),
     T = n(676742),
-    b = n(1585),
-    A = n(304761),
+    A = n(1585),
+    b = n(304761),
     Z = n(865427),
     x = n(571250),
     L = n(628581),
@@ -81,8 +81,8 @@ var i = n(200651),
     ev = n(870569),
     eS = n(345243),
     eT = n(115530),
-    eb = n(981631),
-    eA = n(215023),
+    eA = n(981631),
+    eb = n(215023),
     eZ = n(388032),
     ex = n(628005);
 function eL(e, t, n) {
@@ -107,12 +107,12 @@ function eR(e) {
         d = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
         u = (0, eg.NZ)({
             avatarDecoration: d,
-            size: (0, b.y9)(m.AvatarSizes.SIZE_32)
+            size: (0, A.y9)(m.AvatarSizes.SIZE_32)
         });
     return null == r
         ? null
         : (0, i.jsx)(_.Z, {
-              object: eb.qAy.AVATAR,
+              object: eA.qAy.AVATAR,
               children: (0, i.jsx)(m.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
@@ -148,7 +148,7 @@ function eR(e) {
                                   src: r.getAvatarURL(void 0, c ? 44 : 32, !1),
                                   avatarDecoration: u,
                                   'aria-label': r.username,
-                                  status: n ? eb.Skl.STREAMING : l,
+                                  status: n ? eA.Skl.STREAMING : l,
                                   isSpeaking: t,
                                   className: ex.avatar
                               }),
@@ -189,7 +189,7 @@ class ej extends r.PureComponent {
             { customStatusActivity: n, userTag: r, currentUser: l, status: a } = this.props;
         if (null == l) return null;
         let s = eC.ZP.getName(l),
-            o = null != a && a !== eb.Skl.UNKNOWN,
+            o = null != a && a !== eA.Skl.UNKNOWN,
             c = null != n;
         return (
             (c || (o && l.isPomelo())) &&
@@ -363,17 +363,17 @@ class ej extends r.PureComponent {
             }),
             eL(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
-                (0, O.Z)(e, t, eb.jXE.ACCOUNT_PANEL);
+                (0, O.Z)(e, t, eA.jXE.ACCOUNT_PANEL);
             }),
             eL(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, P.Z)(e, eb.jXE.ACCOUNT_PANEL);
+                (0, P.Z)(e, eA.jXE.ACCOUNT_PANEL);
             }),
             eL(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
             eL(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eb.oAB.ACCOUNT,
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eA.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 f.Z.open(e, t, n);
@@ -447,7 +447,7 @@ class ej extends r.PureComponent {
                         identifiable: 'always'
                     })
                 ),
-                    ep.default.track(eb.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    ep.default.track(eA.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let i = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -497,7 +497,7 @@ function eD() {
         n = (0, s.e7)([el.default], () => el.default.getId()),
         l = (0, D.a)(),
         { streaming: a, status: c } = (0, s.cj)([ed.Z], () => ({
-            streaming: null != ed.Z.findActivity((e) => e.type === eb.IIU.STREAMING),
+            streaming: null != ed.Z.findActivity((e) => e.type === eA.IIU.STREAMING),
             status: ed.Z.getStatus()
         })),
         d = (0, C.Z)({ userId: n }),
@@ -508,10 +508,10 @@ function eD() {
             return null != e ? ea.Z.getChannel(e) : null;
         }),
         { mute: f, selfMute: _, suppress: N } = (0, er.Z)(g),
-        { selfDeaf: T, deaf: b } = (0, ei.Z)(g),
-        x = (0, s.e7)([A.C], () => {
+        { selfDeaf: T, deaf: A } = (0, ei.Z)(g),
+        x = (0, s.e7)([b.C], () => {
             var e;
-            return (0, Z.fD)() ? (null === (e = A.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, Z.fD)() ? (null === (e = b.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         L = (0, s.e7)([em.ZP], () => em.ZP.getPremiumTypeSubscription()),
         P = (0, s.e7)([eo.Z], () => eo.Z.getSpeakingWhileMuted()),
@@ -523,7 +523,7 @@ function eD() {
         w = (0, E.u)(),
         U = (0, K.t)(),
         B = eE.ZP.canUsePremiumGuildMemberProfile(t),
-        V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eA.rL,
+        V = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eb.rL,
         W = 'account';
     (0, I.j)({
         location: W + ' auto on',
@@ -541,7 +541,7 @@ function eD() {
                 { enabled: a } = z.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = r.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != l && (l.status === eb.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < ey);
+                    return null != l && (l.status === eA.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < ey);
                 }, [l]);
             return (
                 r.useEffect(() => {
@@ -576,7 +576,7 @@ function eD() {
                 premiumSubscription: L,
                 selfDeaf: T,
                 selfMute: _,
-                serverDeaf: b,
+                serverDeaf: A,
                 serverMute: f,
                 speaking: d,
                 speakingWhileMuted: P,
@@ -632,16 +632,16 @@ function ew(e) {
         C = n || l ? m.MicrophoneDenyIcon : _,
         { mode: N } = (0, en.ZP)({ location: 'RTC Microphone Button' }),
         T = null != s ? s : (0, L.Z)(t, n, l, a, N === en.BK.GroupedButtonsRedMic),
-        { analyticsLocations: b } = (0, S.ZP)(v.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: A } = (0, S.ZP)(v.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
-    let A = r.useCallback(
+    let b = r.useCallback(
         (e) => {
-            g(e, b);
+            g(e, A);
         },
-        [g, b]
+        [g, A]
     );
     return (0, i.jsx)(S.Gt, {
-        value: b,
+        value: A,
         children: (0, i.jsx)(ev.Z, {
             tooltipText: T,
             tooltipColor: o,
@@ -660,7 +660,7 @@ function ew(e) {
             }),
             iconForeground: f ? ex.strikethrough : null,
             onClick: p,
-            onContextMenu: A,
+            onContextMenu: b,
             role: 'switch',
             'aria-label': eZ.intl.string(eZ.t['w4m94+']),
             'aria-checked': f,

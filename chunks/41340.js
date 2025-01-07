@@ -13,65 +13,65 @@ var r = n(200651),
     c = n(259580),
     d = n(55935),
     u = n(709054),
-    m = n(246992),
-    h = n(981631),
+    h = n(246992),
+    m = n(981631),
     x = n(474936),
     f = n(236990),
     p = n(509345);
 let b = {
-        [h.O0b.UNPAID]: 'Unpaid',
-        [h.O0b.ACTIVE]: 'Active',
-        [h.O0b.PAST_DUE]: 'Past Due',
-        [h.O0b.CANCELED]: 'Canceled',
-        [h.O0b.ENDED]: 'Ended',
-        [h.O0b.ACCOUNT_HOLD]: 'Account Hold',
-        [h.O0b.BILLING_RETRY]: 'Billing Retry',
-        [h.O0b.PAUSED]: 'Paused',
-        [h.O0b.PAUSE_PENDING]: 'Pause Pending'
+        [m.O0b.UNPAID]: 'Unpaid',
+        [m.O0b.ACTIVE]: 'Active',
+        [m.O0b.PAST_DUE]: 'Past Due',
+        [m.O0b.CANCELED]: 'Canceled',
+        [m.O0b.ENDED]: 'Ended',
+        [m.O0b.ACCOUNT_HOLD]: 'Account Hold',
+        [m.O0b.BILLING_RETRY]: 'Billing Retry',
+        [m.O0b.PAUSED]: 'Paused',
+        [m.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
     g = [
         {
             label: 'Unpaid',
-            value: h.O0b.UNPAID
+            value: m.O0b.UNPAID
         },
         {
             label: 'Active',
-            value: h.O0b.ACTIVE
+            value: m.O0b.ACTIVE
         },
         {
             label: 'Past Due',
-            value: h.O0b.PAST_DUE
+            value: m.O0b.PAST_DUE
         },
         {
             label: 'Canceled',
-            value: h.O0b.CANCELED
+            value: m.O0b.CANCELED
         },
         {
             label: 'Ended',
-            value: h.O0b.ENDED
+            value: m.O0b.ENDED
         },
         {
             label: 'Account Hold',
-            value: h.O0b.ACCOUNT_HOLD
+            value: m.O0b.ACCOUNT_HOLD
         },
         {
             label: 'Billing Retry',
-            value: h.O0b.BILLING_RETRY
+            value: m.O0b.BILLING_RETRY
         },
         {
             label: 'Paused',
-            value: h.O0b.PAUSED
+            value: m.O0b.PAUSED
         },
         {
             label: 'Pause Pending',
-            value: h.O0b.PAUSE_PENDING
+            value: m.O0b.PAUSE_PENDING
         }
     ];
 function v(e) {
     var t, n, l;
     let { subscription: v, onUpdated: j } = e,
-        [C, _] = a.useState(!1),
-        [T, S] = a.useState(!1),
+        [C, T] = a.useState(!1),
+        [_, S] = a.useState(!1),
         N = (e) => ((null == e && (e = v.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         y = (e) => {
             let t = new Date(e);
@@ -113,7 +113,7 @@ function v(e) {
                     variant: 'text-md/normal',
                     children: ['ID: ', v.id, ' ']
                 }),
-                v.status !== h.O0b.ACTIVE &&
+                v.status !== m.O0b.ACTIVE &&
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-md/normal',
                         children: ['Dates: ', (0, d.vc)(v.createdAt, 'LL'), ' - ', (0, d.vc)(v.currentPeriodEnd, 'LL')]
@@ -129,7 +129,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)(s.Clickable, {
                                 onClick: () => {
-                                    _(!C);
+                                    T(!C);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -173,7 +173,7 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(s.Clickable, {
                             onClick: () => {
-                                S(!T);
+                                S(!_);
                             },
                             className: f.collapsablePaneHeader,
                             children: [
@@ -183,10 +183,10 @@ function v(e) {
                                         children: 'Modifications'
                                     })
                                 }),
-                                (0, r.jsx)(c.Z, { direction: T ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, r.jsx)(c.Z, { direction: _ ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        T &&
+                        _ &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(s.FormSection, {
@@ -198,7 +198,7 @@ function v(e) {
                                             isSelected: (e) => e === v.status,
                                             options: g,
                                             select: (e) => k({ status: e }),
-                                            popoutLayerContext: m.O$
+                                            popoutLayerContext: h.O$
                                         })
                                     }),
                                     (0, r.jsx)(s.FormSection, {

@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(823379),
     C = n(51144),
     x = n(823469);
-let Z = d.u.SIZE_24;
-function I(e) {
+let I = d.u.SIZE_24;
+function _(e) {
     var t, n;
     let { activity: r, user: a, embeddedApp: o, onOpenSpotifyAlbum: u } = e,
         d = null == r ? void 0 : r.assets,
@@ -76,7 +76,7 @@ function I(e) {
           }))
         : C;
 }
-function _(e) {
+function Z(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
         r = null == t ? void 0 : t.details,
         a = null == t ? void 0 : t.name,
@@ -177,7 +177,7 @@ function E(e) {
                   (0, i.jsxs)('div', {
                       className: x.flexRow,
                       children: [
-                          (0, i.jsx)(I, {
+                          (0, i.jsx)(_, {
                               activity: t,
                               user: r,
                               embeddedApp: n,
@@ -186,7 +186,7 @@ function E(e) {
                           (0, i.jsxs)('div', {
                               className: x.detailsAndAvatarsContainer,
                               children: [
-                                  (0, i.jsx)(_, {
+                                  (0, i.jsx)(Z, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
@@ -202,7 +202,7 @@ function E(e) {
                                           className: x.usersSummary,
                                           guildId: a.guild_id,
                                           users: E,
-                                          size: Z,
+                                          size: I,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -217,7 +217,7 @@ function E(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, Z),
+                                                              src: e.getAvatarURL(a.guild_id, I),
                                                               alt: l,
                                                               className: x.avatar
                                                           },

@@ -21,16 +21,16 @@ var i = n(200651),
     v = n(276952),
     C = n(199540),
     x = n(40153),
-    Z = n(252686),
-    I = n(682662),
-    _ = n(662146),
+    I = n(252686),
+    _ = n(682662),
+    Z = n(662146),
     b = n(388032),
     S = n(10448),
     N = n(284923);
 let E = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: m = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: m = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: B, folderIconContent: k } = e,
         { id: U, name: O, children: V } = t,
         H = (0, p.Q3)('FolderItem'),
         [F, W] = l.useState(!1),
@@ -79,7 +79,7 @@ function j(e) {
             config: { duration: E }
         }),
         el = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
-        er = (0, i.jsxs)(I.H, {
+        er = (0, i.jsxs)(_.H, {
             children: [
                 (0, i.jsx)(v.Z, {
                     disabled: Q || s,
@@ -88,7 +88,7 @@ function j(e) {
                     unread: T,
                     className: N.pill
                 }),
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(Z.Z, {
                     text: $,
                     disabled: M,
                     selected: r,
@@ -98,7 +98,7 @@ function j(e) {
                         className: a()(S.folderIcon, { [N.wobble]: !Q && z && !s }),
                         'data-dnd-name': $,
                         children: Q
-                            ? (0, i.jsx)(Z.Z, {})
+                            ? (0, i.jsx)(I.Z, {})
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: s,
@@ -114,7 +114,7 @@ function j(e) {
                                   onHoverChange: W,
                                   onKeyDown: X,
                                   treeItemProps: ee,
-                                  folderIconContent: B
+                                  folderIconContent: k
                               })
                     })
                 }),
@@ -151,7 +151,7 @@ function j(e) {
                             id: et,
                             style: { height: e.height.to((e) => e * en) },
                             role: 'group',
-                            children: V.map(k)
+                            children: V.map(B)
                         },
                         l
                     )

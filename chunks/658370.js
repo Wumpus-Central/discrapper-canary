@@ -8,15 +8,15 @@ var r = n(120356),
     c = n(104494),
     d = n(639119),
     u = n(404615),
-    m = n(743612),
-    g = n(409100),
+    g = n(743612),
+    m = n(409100),
     f = n(474936),
     p = n(388032),
     _ = n(506829);
 t.Z = (e) => {
     var t;
     let n;
-    let { title: r, titleClassName: h = '', buttonClassName: E = '', subtitle: b = '', description: x = '', descriptionCta: C = '', isPremiumGetCta: T, onCtaClick: v, cardVariant: N } = e,
+    let { title: r, titleClassName: h = '', buttonClassName: x = '', subtitle: E = '', description: b = '', descriptionCta: C = '', isPremiumGetCta: v, onCtaClick: T, cardVariant: N } = e,
         I = (0, d.N)(),
         S = null == I ? void 0 : I.subscription_trial,
         R = (0, c.Ng)(),
@@ -35,16 +35,16 @@ t.Z = (e) => {
     return (0, i.jsxs)('div', {
         className: a()(_.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(g.Z, {
                 title: r,
                 cardVariantStyleInfo: P,
                 titleClassName: h,
-                subtitle: b,
-                description: x
+                subtitle: E,
+                description: b
             }),
-            T &&
-                (0, i.jsx)(g.Z, {
-                    className: E,
+            v &&
+                (0, i.jsx)(m.Z, {
+                    className: x,
                     subscriptionTier: f.Si.TIER_2,
                     buttonText: A,
                     color: s.Button.Colors.GREEN,
@@ -52,10 +52,10 @@ t.Z = (e) => {
                 }),
             0 !== C.length &&
                 (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != v &&
+                null != T &&
                 (0, i.jsx)(s.Button, {
-                    className: E,
-                    onClick: v,
+                    className: x,
+                    onClick: T,
                     children: C
                 })
         ]

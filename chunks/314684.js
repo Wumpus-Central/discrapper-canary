@@ -1,12 +1,12 @@
 n.d(t, {
     $_: function () {
-        return w;
+        return y;
     },
     FM: function () {
         return U;
     },
     IB: function () {
-        return y;
+        return w;
     },
     IY: function () {
         return k;
@@ -18,13 +18,13 @@ n.d(t, {
         return D;
     },
     Vp: function () {
-        return B;
+        return M;
     },
     bq: function () {
         return P;
     },
     rM: function () {
-        return O;
+        return B;
     },
     yQ: function () {
         return A;
@@ -40,18 +40,18 @@ var i = n(192379),
     c = n(607070),
     d = n(335131),
     u = n(1870),
-    m = n(228624),
-    g = n(605236),
+    g = n(228624),
+    m = n(605236),
     f = n(706140),
     p = n(243778),
     _ = n(594174),
     h = n(314884),
-    E = n(580130),
-    b = n(626135),
-    x = n(823379),
+    x = n(580130),
+    E = n(626135),
+    b = n(823379),
     C = n(111361),
-    T = n(595878),
-    v = n(944880),
+    v = n(595878),
+    T = n(944880),
     N = n(513785),
     I = n(106255),
     S = n(474936),
@@ -64,37 +64,37 @@ function A() {
             let n = (0, s.cj)([N.Z], () => N.Z.getState());
             if (null != n) return null !== (t = null !== (e = n.userTenureRewardStatusByRewardId[R.Ft.FREE_AVATAR_DECO_1_MONTH]) && void 0 !== e ? e : n.userTenureRewardStatusByRewardId[R.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== t ? t : n.userTenureRewardStatusByRewardId[R.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
-        r = B(),
+        r = M(),
         l = (function () {
-            return M([R.Ft.FREE_AVATAR_DECO_1_MONTH]);
+            return Z([R.Ft.FREE_AVATAR_DECO_1_MONTH]);
         })(),
         o = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         c = (0, s.e7)([h.Z], () => h.Z.boostSlots),
         d = i.useMemo(() => Object.values(c).some((e) => null == e.premiumGuildSubscription), [c]),
         u = null != r,
-        m = u && !1 === d,
-        g = null != l,
+        g = u && !1 === d,
+        m = null != l,
         f = (function () {
             let e = (0, s.e7)(
-                [E.Z],
+                [x.Z],
                 () => {
                     var e;
-                    return null !== (e = E.Z.getForApplication(j.XAJ)) && void 0 !== e ? e : Z;
+                    return null !== (e = x.Z.getForApplication(j.XAJ)) && void 0 !== e ? e : O;
                 },
                 [],
-                x.OL
+                b.OL
             );
             return (0, I.Cl)(R.qY, e);
         })(),
-        p = g && null != f && (0, I.C3)(f.skuId, o),
-        b = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == r ? void 0 : r.skuId;
+        p = m && null != f && (0, I.C3)(f.skuId, o),
+        E = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == r ? void 0 : r.skuId;
     return i.useMemo(() => {
         let e = {
             redeemableAt: null == n ? void 0 : n.redeemable_at,
             tenureRewardStatusId: null == n ? void 0 : n.id,
-            tenureRewardType: (0, I.Xs)(b)
+            tenureRewardType: (0, I.Xs)(E)
         };
-        if (m)
+        if (g)
             return {
                 ...e,
                 nitroTenureStatus: R.EB.REDEEMED,
@@ -119,7 +119,7 @@ function A() {
                 showCard: !0
             };
         else {
-            if (g)
+            if (m)
                 return {
                     ...e,
                     nitroTenureStatus: R.EB.REDEEMABLE,
@@ -146,7 +146,7 @@ function A() {
                 }
             );
         }
-    }, [u, r, n, m, g, p, l, b]);
+    }, [u, r, n, g, m, p, l, E]);
 }
 function P(e) {
     let { showAnimations: t } = e,
@@ -162,16 +162,16 @@ function P(e) {
         percentage: d
     };
 }
-let Z = new Set();
-function M(e) {
+let O = new Set();
+function Z(e) {
     let t = (0, s.e7)(
-            [E.Z],
+            [x.Z],
             () => {
                 var e;
-                return null !== (e = E.Z.getForApplication(S.CL)) && void 0 !== e ? e : Z;
+                return null !== (e = x.Z.getForApplication(S.CL)) && void 0 !== e ? e : O;
             },
             [],
-            x.OL
+            b.OL
         ),
         n = (0, s.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
@@ -179,10 +179,10 @@ function M(e) {
         });
     if (null != (0, I.kG)(t) || !!n) return (0, I.MR)(e, t);
 }
-function B() {
-    return M([R.Ft.FREE_GUILD_BOOST_1_MONTH, R.Ft.FREE_GUILD_BOOST_3_MONTHS]);
+function M() {
+    return Z([R.Ft.FREE_GUILD_BOOST_1_MONTH, R.Ft.FREE_GUILD_BOOST_3_MONTHS]);
 }
-let O = (e) => {
+let B = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
             case R.EB.PENDING:
@@ -193,36 +193,36 @@ let O = (e) => {
                 return [];
         }
     },
-    w = () => {
+    y = () => {
         let e = A(),
-            [t, n] = i.useState(O(e)),
-            r = (0, T.cG)({ location: 'Home' });
+            [t, n] = i.useState(B(e)),
+            r = (0, v.cG)({ location: 'Home' });
         i.useEffect(() => {
-            if (!1 !== r) n(O(e));
+            if (!1 !== r) n(B(e));
         }, [e, r]);
         let [a] = (0, p.US)(r ? t : []);
         return r ? (null != e && !0 === e.showNotification && (a === l.z.TENURE_REWARD_REDEEMABLE || a === l.z.TENURE_REWARD_PENDING) ? (0, I.Wb)(e.nitroTenureStatus) : null) : null;
     },
-    y = () => {
+    w = () => {
         var e;
         let t = null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            n = (0, T.cG)({ location: 'Home' }) && null != t && t === R.EB.REDEEMABLE,
+            n = (0, v.cG)({ location: 'Home' }) && null != t && t === R.EB.REDEEMABLE,
             [i] = (0, p.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && i === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
     k = () => {
         let e = A(),
-            t = i.useMemo(() => O(e), [e]),
+            t = i.useMemo(() => B(e), [e]),
             [n] = (0, f.cv)(t),
             r = i.useRef(!1);
         return i.useCallback(() => {
             null != e &&
                 !0 === e.showNotification &&
                 (n === l.z.TENURE_REWARD_REDEEMABLE || n === l.z.TENURE_REWARD_PENDING) &&
-                ((0, g.EW)(n),
+                ((0, m.EW)(n),
                 n === l.z.TENURE_REWARD_PENDING &&
                     !1 === r.current &&
-                    (b.default.track(j.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+                    (E.default.track(j.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
                         reward_type: null == e ? void 0 : e.tenureRewardType,
@@ -234,7 +234,7 @@ let O = (e) => {
 function L() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.CL,
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, s.e7)([E.Z], () => E.Z.isFetchingForApplication(e)),
+        n = (0, s.e7)([x.Z], () => x.Z.isFetchingForApplication(e)),
         r = (0, s.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return null != e && (0, C.M5)(e, S.p9.TIER_2);
@@ -246,18 +246,18 @@ function L() {
 }
 function U() {
     var e;
-    let t = (0, T.oY)({ location: 'Home' });
+    let t = (0, v.oY)({ location: 'Home' });
     L(S.CL), L(j.XAJ, t), D(R.qY);
     let n = A(),
         r = null !== (e = null == n ? void 0 : n.showCard) && void 0 !== e && e;
     i.useEffect(() => {
-        r && v.Z.forceRefreshIfOutdated();
+        r && T.Z.forceRefreshIfOutdated();
     }, [r]);
 }
 function D(e) {
     var t;
-    let n = (0, T.oY)({ location: 'Home' }),
-        r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),
+    let n = (0, v.oY)({ location: 'Home' }),
+        r = (0, g.hv)('useCollectiblePurchaseForTenureReward'),
         [a, l] = (0, s.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
     return (
         i.useEffect(() => {

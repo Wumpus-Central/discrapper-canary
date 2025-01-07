@@ -1,12 +1,12 @@
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    a = n.n(i),
-    s = n(442837),
+    s = n.n(i),
+    a = n(442837),
     o = n(481060),
     E = n(749210),
-    c = n(700582),
-    u = n(484459),
+    u = n(700582),
+    c = n(484459),
     d = n(271383),
     _ = n(246946),
     A = n(594174),
@@ -129,8 +129,8 @@ let S = l.memo(function () {
     };
 function h(e) {
     var t;
-    let { guildId: n, inviterUser: i, joinSourceType: E, className: u, onClickInviter: _ } = e,
-        A = (0, s.e7)([d.ZP], () => (null == i ? null : d.ZP.getMember(n, i.id)), [i, n]),
+    let { guildId: n, inviterUser: i, joinSourceType: E, className: c, onClickInviter: _ } = e,
+        A = (0, a.e7)([d.ZP], () => (null == i ? null : d.ZP.getMember(n, i.id)), [i, n]),
         T = l.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), null != i && (null == _ || _(i));
@@ -140,17 +140,17 @@ function h(e) {
     return null == i
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(O.inviterTooltipContainer, u),
+              className: s()(O.inviterTooltipContainer, c),
               children: [
                   (0, r.jsx)(o.Text, {
                       variant: 'text-xs/medium',
                       children: E !== N.gq.BOT ? R.intl.string(R.t.azhY2t) : R.intl.string(R.t['2ByN2t'])
                   }),
                   (0, r.jsxs)(o.Clickable, {
-                      className: a()(O.inviterUserContainer, null != _ && O.clickable),
+                      className: s()(O.inviterUserContainer, null != _ && O.clickable),
                       onClick: T,
                       children: [
-                          (0, r.jsx)(c.Z, {
+                          (0, r.jsx)(u.Z, {
                               user: i,
                               size: o.AvatarSizes.SIZE_16
                           }),
@@ -167,15 +167,15 @@ function h(e) {
           });
 }
 function U(e) {
-    let { children: t, hasTooltip: n, guildId: l, inviterUser: i, joinSourceType: a } = e;
+    let { children: t, hasTooltip: n, guildId: l, inviterUser: i, joinSourceType: s } = e;
     return n && null != i
         ? (0, r.jsx)(o.Tooltip, {
-              'aria-label': a !== N.gq.BOT ? R.intl.string(R.t.azhY2t) : R.intl.string(R.t['2ByN2t']),
+              'aria-label': s !== N.gq.BOT ? R.intl.string(R.t.azhY2t) : R.intl.string(R.t['2ByN2t']),
               allowOverflow: !0,
               text: (0, r.jsx)(h, {
                   guildId: l,
                   inviterUser: i,
-                  joinSourceType: a
+                  joinSourceType: s
               }),
               children: (e) => (0, r.jsx)(r.Fragment, { children: t(e) })
           })
@@ -196,7 +196,7 @@ function C(e) {
           });
 }
 function L(e) {
-    let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: s, guildId: E, inviterUser: c, onClickInviter: u, ...d } = e,
+    let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: a, guildId: E, inviterUser: u, onClickInviter: c, ...d } = e,
         _ = null != n ? D[n] : null,
         A = n === N.gq.INTEGRATION && null != i,
         T = l.useCallback(
@@ -245,7 +245,7 @@ function L(e) {
             });
         case null != _:
             return (0, r.jsxs)('div', {
-                className: a()(s && O.footerAlignment),
+                className: s()(a && O.footerAlignment),
                 children: [
                     (0, r.jsxs)(o.Clickable, {
                         className: O.inviteContainer,
@@ -262,13 +262,13 @@ function L(e) {
                             })
                         ]
                     }),
-                    s &&
+                    a &&
                         (0, r.jsx)(h, {
                             guildId: E,
-                            inviterUser: c,
+                            inviterUser: u,
                             joinSourceType: n,
                             className: O.inviterFooter,
-                            onClickInviter: u
+                            onClickInviter: c
                         })
                 ]
             });
@@ -278,14 +278,14 @@ function L(e) {
 }
 t.ZP = l.memo(function (e) {
     var t, n;
-    let { userId: i, guildId: a, showInviterAsFooter: o, onClickInviter: c } = e,
-        d = (0, s.e7)([g.Z], () => g.Z.getEnhancedMember(a, i), [a, i]),
+    let { userId: i, guildId: s, showInviterAsFooter: o, onClickInviter: u } = e,
+        d = (0, a.e7)([g.Z], () => g.Z.getEnhancedMember(s, i), [s, i]),
         T = null !== (t = null == d ? void 0 : d.inviterId) && void 0 !== t ? t : null,
-        I = (0, s.e7)([A.default], () => A.default.getUser(T), [T]);
+        I = (0, a.e7)([A.default], () => A.default.getUser(T), [T]);
     l.useEffect(() => {
-        null != T && (E.Z.requestMembersById(a, [T]), (0, u.Z)(T, void 0, { guildId: a }));
-    }, [a, T]);
-    let f = (0, s.e7)([_.Z], () => _.Z.hideInstantInvites, []);
+        null != T && (E.Z.requestMembersById(s, [T]), (0, c.Z)(T, void 0, { guildId: s }));
+    }, [s, T]);
+    let f = (0, a.e7)([_.Z], () => _.Z.hideInstantInvites, []);
     if (null == d) return (0, r.jsx)(S, {});
     let { sourceInviteCode: R, joinSourceType: O, integrationType: h } = d,
         C = null != O ? D[O] : null,
@@ -295,7 +295,7 @@ t.ZP = l.memo(function (e) {
         : (0, r.jsx)(U, {
               hasTooltip: M && !o,
               inviterUser: null != I ? I : null,
-              guildId: a,
+              guildId: s,
               joinSourceType: O,
               children: (e) =>
                   (0, r.jsx)(L, {
@@ -304,8 +304,8 @@ t.ZP = l.memo(function (e) {
                       integrationType: h,
                       showInviterAsFooter: o,
                       inviterUser: null != I ? I : null,
-                      guildId: a,
-                      onClickInviter: c,
+                      guildId: s,
+                      onClickInviter: u,
                       ...e
                   })
           });

@@ -23,18 +23,18 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: b, inviteCode: A } = e,
+    let { guildId: A, inviteCode: b } = e,
         [Z, x] = r.useState(N.hO.INITIAL),
-        L = (0, l.e7)([p.Z], () => p.Z.get(b)),
-        P = (0, l.e7)([f.Z], () => f.Z.getRequest(b)),
-        O = (0, l.e7)([c.Z], () => c.Z.getGuild(b)),
+        L = (0, l.e7)([p.Z], () => p.Z.get(A)),
+        P = (0, l.e7)([f.Z], () => f.Z.getRequest(A)),
+        O = (0, l.e7)([c.Z], () => c.Z.getGuild(A)),
         { hasFetchedRequestToJoinGuilds: y, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: f.Z.getJoinRequestGuild(b)
+            guildPreviewDisabled: f.Z.getJoinRequestGuild(A)
         }));
     r.useEffect(() => {
-        null != O && (0, o.uL)(C.Z5c.CHANNEL(b));
-    }, [O, b]),
+        null != O && (0, o.uL)(C.Z5c.CHANNEL(A));
+    }, [O, A]),
         r.useEffect(() => {
             !y && h.Z.fetchRequestToJoinGuilds();
         }, [y]);
@@ -42,15 +42,15 @@ t.Z = (e) => {
             x((t) => Math.max(t, e));
         }, []),
         D = async (e) => {
-            await m.ZP.submitVerificationForm(b, e);
+            await m.ZP.submitVerificationForm(A, e);
         },
         M = () => {
-            h.Z.resetGuildJoinRequest(b);
+            h.Z.resetGuildJoinRequest(A);
         };
     let w =
             ((n = v.intl.format(v.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
             (T = () => {
-                x(Math.max(Z, N.hO.FILLING)), h.Z.removeGuildJoinRequest(b), (0, o.uL)(C.Z5c.ME);
+                x(Math.max(Z, N.hO.FILLING)), h.Z.removeGuildJoinRequest(A), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
@@ -106,8 +106,8 @@ t.Z = (e) => {
                                 });
                             default:
                                 return (0, i.jsx)(I.Z, {
-                                    guildId: b,
-                                    inviteCode: A,
+                                    guildId: A,
+                                    inviteCode: b,
                                     onComplete: D
                                 });
                         }

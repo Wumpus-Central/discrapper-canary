@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(70097),
     m = n(703656),
     x = n(358085),
-    g = n(617136),
-    f = n(272008),
+    f = n(617136),
+    g = n(272008),
     h = n(113434),
     C = n(569984),
     v = n(497505),
@@ -23,8 +23,8 @@ var o = n(200651),
     B = n(340100),
     T = n(611855),
     S = n(644646),
-    A = n(78826),
-    y = n(64141),
+    y = n(78826),
+    A = n(64141),
     R = n(667105),
     w = n(46140),
     I = n(981631),
@@ -33,22 +33,22 @@ var o = n(200651),
     P = n(502926);
 let M = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Z, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, quest: U, useReducedMotion: z } = e,
+    let { children: _, className: M, collapsedHeight: L, expansionSpring: W, isExpanded: Z, isExpansionAnimationComplete: Q, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, quest: U, useReducedMotion: z } = e,
         F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
-        Y = E.r.build(U.config),
-        K = (0, h.B6)(Y.rewardsExpireAt),
+        K = E.r.build(U.config),
+        Y = (0, h.B6)(K.rewardsExpireAt),
         X = r.useMemo(() => (0, N.fh)(U, N.eC.HERO), [U]),
-        J = (0, R.tP)(Y.application.id),
-        $ = Y.features.has(w.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
-        ee = Y.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
+        J = (0, R.tP)(K.application.id),
+        $ = K.features.has(w.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
+        ee = K.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         et = r.useCallback(() => {
-            (0, f.AH)(U.id, {
+            (0, g.AH)(U.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: $
             }),
-                Y.features.has(w.S7.START_QUEST_CTA) && (0, m.uL)(I.Z5c.ACTIVITY_DETAILS(k.In), void 0);
-        }, [U, $, Y.features]),
+                K.features.has(w.S7.START_QUEST_CTA) && (0, m.uL)(I.Z5c.ACTIVITY_DETAILS(k.In), void 0);
+        }, [U, $, K.features]),
         en = (0, R.hf)({
             quest: U,
             location: v.jn.QUEST_BAR
@@ -56,10 +56,10 @@ let M = r.forwardRef(function (e, t) {
         eo = r.useCallback(() => {
             (0, j.FE)(U, {
                 content: v.jn.QUEST_BAR,
-                ctaContent: g.jZ.OPEN_GAME_LINK
+                ctaContent: f.jZ.OPEN_GAME_LINK
             });
         }, [U]),
-        er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
+        er = K.features.has(w.S7.POST_ENROLLMENT_CTA),
         es = (0, h.Rf)(U),
         ea = (0, h.Jf)(U),
         ei = null != ea ? ea.progress > 0 : es.progressSeconds > 0,
@@ -94,13 +94,13 @@ let M = r.forwardRef(function (e, t) {
                 ? void 0
                 : (0, i.to)(
                       [
-                          L.to({
+                          W.to({
                               range: [0, 1],
                               output: [0, -100]
                           }),
-                          L.to({
+                          W.to({
                               range: [0, 1],
-                              output: [0, W]
+                              output: [0, L]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -143,13 +143,13 @@ let M = r.forwardRef(function (e, t) {
                                                           className: P.questAcceptedContentCopySubheading,
                                                           color: 'always-white',
                                                           variant: 'text-xxs/normal',
-                                                          children: ec ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: K }) : q.intl.formatToPlainString(q.t['pX+fmp'], { expirationDate: G })
+                                                          children: ec ? q.intl.formatToPlainString(q.t.APddvL, { expirationDate: Y }) : q.intl.formatToPlainString(q.t['pX+fmp'], { expirationDate: G })
                                                       })
                                                   ]
                                               })
                                           ]
                                       }),
-                                      (0, o.jsx)(y.r, {
+                                      (0, o.jsx)(A.r, {
                                           onOpen: D,
                                           onClose: H,
                                           onSelect: V,
@@ -201,7 +201,7 @@ let M = r.forwardRef(function (e, t) {
                                           className: P.utils,
                                           children: [
                                               (0, o.jsx)(T.Z, { color: 'always-white' }),
-                                              (0, o.jsx)(y.r, {
+                                              (0, o.jsx)(A.r, {
                                                   onOpen: D,
                                                   onClose: H,
                                                   onSelect: V,
@@ -263,7 +263,7 @@ let M = r.forwardRef(function (e, t) {
                                   className: P.heroAssetWrapper,
                                   style: { color: U.config.colors.secondary },
                                   children: X.isAnimated
-                                      ? (0, o.jsx)(A.Fl, {
+                                      ? (0, o.jsx)(y.Fl, {
                                             id: 'QuestBarContentExpanded_heroAnimated',
                                             children: (e) => {
                                                 var t;
@@ -282,7 +282,7 @@ let M = r.forwardRef(function (e, t) {
                                                 });
                                             }
                                         })
-                                      : (0, o.jsx)(A.Fl, {
+                                      : (0, o.jsx)(y.Fl, {
                                             id: 'QuestBarContentExpanded_heroStatic',
                                             children: (e) =>
                                                 (0, o.jsx)('img', {

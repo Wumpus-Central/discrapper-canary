@@ -24,9 +24,9 @@ var i = n(200651),
     v = n(385499),
     C = n(570908),
     x = n(702321),
-    Z = n(201895),
-    I = n(43267),
-    _ = n(933557),
+    I = n(201895),
+    _ = n(43267),
+    Z = n(933557),
     b = n(979264),
     S = n(588688),
     N = n(163889),
@@ -42,8 +42,8 @@ var i = n(200651),
     R = n(158776),
     D = n(306680),
     G = n(699516),
-    k = n(111583),
-    B = n(9156),
+    B = n(111583),
+    k = n(9156),
     U = n(594174),
     O = n(709054),
     V = n(998502),
@@ -96,8 +96,8 @@ let q = V.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
             className: z.favoriteIcon
         });
 function $(e) {
-    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: f, onClick: m, className: g, role: v, 'aria-posinset': x, 'aria-setsize': Z, ...I } = e,
-        _ = (0, y.Q3)('PrivateChannelLinkButton');
+    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: f, onClick: m, className: g, role: v, 'aria-posinset': x, 'aria-setsize': I, ..._ } = e,
+        Z = (0, y.Q3)('PrivateChannelLinkButton');
     return (0, i.jsx)(N.Z, {
         className: a()(z.channel, { [z.fullWidth]: d.tq }, g),
         onClick: m,
@@ -107,7 +107,7 @@ function $(e) {
             ...Y
         },
         'aria-posinset': x,
-        'aria-setsize': Z,
+        'aria-setsize': I,
         children: (0, i.jsx)(p.Interactive, {
             as: 'div',
             selected: n,
@@ -118,13 +118,13 @@ function $(e) {
                     state: f
                 },
                 className: z.link,
-                ...I,
+                ..._,
                 children: [
                     (0, i.jsx)(C.Z, {
                         selected: n,
                         muted: !1,
                         avatar: (0, i.jsx)(l, {
-                            size: _ ? 'refresh_sm' : void 0,
+                            size: Z ? 'refresh_sm' : void 0,
                             className: a()(z.linkButtonIcon, r),
                             color: 'currentColor'
                         }),
@@ -139,7 +139,7 @@ function $(e) {
 }
 function ee(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: y, activities: T, applicationStream: w, entry: L, isTyping: R, status: k, isMobile: U, 'aria-posinset': O, 'aria-setsize': V } = e,
+    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: y, activities: T, applicationStream: w, entry: L, isTyping: R, status: B, isMobile: U, 'aria-posinset': O, 'aria-setsize': V } = e,
         [$, ee] = l.useState(!1),
         et = l.useRef(null),
         en = l.useRef(null),
@@ -152,13 +152,13 @@ function ee(e) {
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(d || $)
         }),
-        ea = (0, h.e7)([B.ZP], () => B.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        ea = (0, h.e7)([k.ZP], () => k.ZP.isChannelMuted(r.getGuildId(), r.id)),
         { ignored: eo, blocked: es } = (0, h.cj)([G.Z], () => ({
             ignored: G.Z.isIgnored(r.getRecipientId()),
             blocked: G.Z.isBlocked(r.getRecipientId())
         })),
         ec = (0, h.e7)([D.ZP], () => D.ZP.getMentionCount(r.id) > 0),
-        eu = (0, _.ZP)(r),
+        eu = (0, Z.ZP)(r),
         ed = (0, h.e7)([j.Z], () => j.Z.isFavorite(r.id)),
         eh = () => {
             ee(!0);
@@ -224,7 +224,7 @@ function ee(e) {
                         });
                 });
         },
-        eZ = () => {
+        eI = () => {
             let e = {
                 className: z.activity,
                 textClassName: z.activityText,
@@ -240,7 +240,7 @@ function ee(e) {
                         className: z.subtext,
                         children: W.intl.format(W.t.CxSA5O, { members: r.recipients.length + 1 })
                     })
-                  : k !== F.Skl.OFFLINE && k !== F.Skl.INVISIBLE && null != T && T.length > 0
+                  : B !== F.Skl.OFFLINE && B !== F.Skl.INVISIBLE && null != T && T.length > 0
                     ? (0, i.jsx)(H.ZP, {
                           ...e,
                           activities: T,
@@ -256,7 +256,7 @@ function ee(e) {
                         })
                       : null;
         },
-        eI = () => {
+        e_ = () => {
             let e = p.AvatarSizes.SIZE_32;
             if (r.isMultiUserDM())
                 return r.recipients.length >= 2 && o && null == r.icon
@@ -265,20 +265,20 @@ function ee(e) {
                           recipients: r.recipients,
                           size: e,
                           isTyping: R,
-                          status: k
+                          status: B
                       })
                     : (0, i.jsx)(q, {
                           ...er,
-                          src: (0, I.x)(r),
+                          src: (0, _.x)(r),
                           'aria-hidden': !0,
                           size: e,
-                          status: R ? F.Skl.ONLINE : k,
+                          status: R ? F.Skl.ONLINE : B,
                           isTyping: R
                       });
             s()(null != y, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let t = null;
             return (
-                !y.isSystemUser() && (t = (0, g.Z)(T) ? F.Skl.STREAMING : k),
+                !y.isSystemUser() && (t = (0, g.Z)(T) ? F.Skl.STREAMING : B),
                 (0, i.jsx)(q, {
                     ...er,
                     size: p.AvatarSizes.SIZE_32,
@@ -292,10 +292,10 @@ function ee(e) {
                 })
             );
         },
-        e_ = r.isMultiUserDM(),
+        eZ = r.isMultiUserDM(),
         eb = r.isSystemDM(),
         eS = (0, A.Q)(),
-        eN = !e_ && !eb && r.type === F.d4z.DM,
+        eN = !eZ && !eb && r.type === F.d4z.DM,
         eE = eN && (null == y ? void 0 : y.primaryGuild) != null,
         ey = eN && eo,
         ej = eN && es,
@@ -347,17 +347,17 @@ function ee(e) {
                             innerRef: et,
                             to: F.Z5c.CHANNEL(F.ME, r.id),
                             className: z.link,
-                            'aria-label': (0, Z.ZP)({
+                            'aria-label': (0, I.ZP)({
                                 channel: r,
                                 unread: ec
                             }),
                             ...n,
                             children: (0, i.jsx)(C.Z, {
-                                avatar: eI(),
+                                avatar: e_(),
                                 selected: d,
                                 highlighted: ec,
                                 muted: eP,
-                                subText: eZ(),
+                                subText: eI(),
                                 name: (0, i.jsx)(E.Z, {
                                     tooltipClassName: z.overflowTooltip,
                                     children: eT
@@ -375,8 +375,8 @@ function ee(e) {
                         ey ? (0, i.jsx)(K, {}) : null,
                         ej ? (0, i.jsx)(X, {}) : null,
                         (0, i.jsx)(Q, {
-                            'aria-label': e_ ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
-                            onClick: e_ ? ex : ef,
+                            'aria-label': eZ ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
+                            onClick: eZ ? ex : ef,
                             onMouseDown: eg
                         })
                     ]
@@ -411,17 +411,17 @@ t.ZP = (e) => {
         ),
         d = (0, w.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
         p = (0, h.e7)(
-            [U.default, k.Z],
+            [U.default, B.Z],
             () => {
                 if (t.isMultiUserDM())
                     return (
                         !!o &&
-                        O.default.keys(k.Z.getTypingUsers(t.id)).some((e) => {
+                        O.default.keys(B.Z.getTypingUsers(t.id)).some((e) => {
                             var t;
                             return e !== (null === (t = U.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })
                     );
-                if (null != r) return k.Z.isTyping(t.id, t.getRecipientId());
+                if (null != r) return B.Z.isTyping(t.id, t.getRecipientId());
                 return !1;
             },
             [t, r, o]

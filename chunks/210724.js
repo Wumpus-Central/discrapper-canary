@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return A;
+        return y;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(819640),
     m = n(617136),
     x = n(113434),
-    g = n(497505),
-    f = n(977156),
+    f = n(497505),
+    g = n(977156),
     h = n(5881),
     C = n(602667),
     v = n(78826),
@@ -33,21 +33,21 @@ function S(e) {
     return (
         (0, x.qI)({
             mode: t ? E.NH.EXPANDED : E.NH.COLLAPSED,
-            questContent: g.jn.QUEST_BAR_V2,
+            questContent: f.jn.QUEST_BAR_V2,
             questId: n
         }),
         null
     );
 }
-function A(e) {
+function y(e) {
     var t, n;
     let { quest: s } = e,
         x = (0, h.T)({
             quest: s,
             location: E.dr.QUESTS_BAR
         }),
-        A = (0, f.Zy)({ location: E.dr.QUESTS_BAR }),
-        y = (0, j.qN)({
+        y = (0, g.Zy)({ location: E.dr.QUESTS_BAR }),
+        A = (0, j.qN)({
             quest: s,
             location: E.dr.QUESTS_BAR
         }),
@@ -58,15 +58,15 @@ function A(e) {
         q = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         P = (0, d.Z)(q),
         { hasError: M, isLoading: O } = (0, v.d7)(),
-        W = r.useContext(N.T) || (A && y && !O),
-        L = r.useRef(W),
-        Z = (0, b.B)(s, W && !M),
+        L = r.useContext(N.T) || (y && A && !O),
+        W = r.useRef(L),
+        Z = (0, b.B)(s, L && !M),
         Q = r.useRef(-1),
         D = r.useRef(!1),
         [H, V] = r.useState(!1),
         [U, z] = r.useState(!1),
         [F, G] = r.useState(!0),
-        [Y, K] = r.useState(!0),
+        [K, Y] = r.useState(!0),
         [X, J] = r.useState(Z.preEnrollmentExpandedHeight),
         $ = r.useRef(null),
         ee = r.useCallback((e) => {
@@ -107,7 +107,7 @@ function A(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER,
-                properties: (0, m.mH)(g.jn.QUEST_BAR)
+                properties: (0, m.mH)(f.jn.QUEST_BAR)
             }),
                 (D.current = !0),
                 ea({ withDelay: !0 });
@@ -116,7 +116,7 @@ function A(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER_OFF,
-                properties: (0, m.mH)(g.jn.QUEST_BAR)
+                properties: (0, m.mH)(f.jn.QUEST_BAR)
             }),
                 (D.current = !1),
                 el();
@@ -131,8 +131,8 @@ function A(e) {
             !q && I && !k && !D.current && ee(!1);
         }, [I, q, k, ee]),
         r.useLayoutEffect(() => {
-            W !== L.current && K(!1), (L.current = W);
-        }, [W]);
+            L !== W.current && Y(!1), (W.current = L);
+        }, [L]);
     let eu = I ? E.XZ : E.R4,
         [{ expansionSpring: ep }, em] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
@@ -152,17 +152,17 @@ function A(e) {
     }, [U, em, R]);
     let { visibilitySpring: ex } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
-        to: { visibilitySpring: W ? 1 : 0 },
+        to: { visibilitySpring: L ? 1 : 0 },
         config: {
             tension: 250,
             friction: 10,
             clamp: !0
         },
         onRest: () => {
-            K(!0);
+            Y(!0);
         },
         onStart: () => {
-            K(!1);
+            Y(!1);
         }
     });
     return (r.useLayoutEffect(() => {
@@ -174,44 +174,44 @@ function A(e) {
                 questId: s.id,
                 event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, m.mH)(g.jn.QUEST_BAR),
+                    ...(0, m.mH)(f.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
                 }
             }),
-            !A &&
+            !y &&
                 (0, m.dA)({
                     questId: s.id,
                     event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, m.mH)(g.jn.QUEST_BAR),
+                        ...(0, m.mH)(f.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
                     }
                 });
-    }, [M, A, s.id]),
-    A && (W || !Y || O) && !M)
+    }, [M, y, s.id]),
+    y && (L || !K || O) && !M)
         ? (0, o.jsx)(C.A, {
               questOrQuests: s,
               questContent: Z.trackingCtx.content,
-              overrideVisibility: !w && W,
+              overrideVisibility: !w && L,
               children: () => {
                   let e = Z.component;
                   return (0, o.jsxs)('div', {
                       className: T.mask,
                       children: [
-                          W &&
+                          L &&
                               (0, o.jsx)(S, {
                                   questId: s.id,
                                   isExpanded: U
                               }),
                           (0, o.jsx)(i.animated.div, {
-                              'aria-hidden': !W,
+                              'aria-hidden': !L,
                               onMouseLeave: ed,
                               onMouseEnter: ec,
                               onFocus: ei,
                               onBlur: el,
                               className: a()(T.wrapper, {
-                                  [T.wrapperInvisible]: !W,
-                                  [T.wrapperVisible]: W && Y
+                                  [T.wrapperInvisible]: !L,
+                                  [T.wrapperVisible]: L && K
                               }),
                               style: {
                                   color: s.config.colors.secondary,
@@ -251,7 +251,7 @@ function A(e) {
                   });
               }
           })
-        : (M ? x.log('Not rendered due to asset error') : !A && x.log('Not rendered due to ineligibility'), null);
+        : (M ? x.log('Not rendered due to asset error') : !y && x.log('Not rendered due to ineligibility'), null);
 }
 t.Z =
     12633 == n.j
@@ -264,7 +264,7 @@ t.Z =
                         {
                             source: E.dr.QUESTS_BAR,
                             questId: e.id,
-                            children: (0, o.jsx)(A, { quest: e })
+                            children: (0, o.jsx)(y, { quest: e })
                         },
                         e.id
                     );

@@ -1,9 +1,9 @@
-a.d(n, {
+t.d(n, {
     $: function () {
-        return t;
+        return r;
     }
 });
-let t = (0, a(818083).B)({
+let r = (0, t(818083).B)({
     kind: 'user',
     id: '2024-07_referral_program_sender_incentive',
     label: 'Referral Program Sender Incentive',

@@ -17,7 +17,7 @@ function h(e) {
     var t;
     let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: m, trailing: g, showUnread: v = !1, ...C } = e,
         x = (0, a.JA)(n),
-        Z = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
+        I = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(s.ClickableContainer, {
             ...C,
@@ -27,7 +27,7 @@ function h(e) {
                 role: 'button'
             },
             tag: 'div',
-            'aria-label': Z,
+            'aria-label': I,
             focusProps: {
                 offset: {
                     top: 1,

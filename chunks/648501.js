@@ -21,9 +21,9 @@ var l = n(442837),
     v = n(790901),
     C = n(714794),
     x = n(355363),
-    Z = n(687352),
-    I = n(135724),
-    _ = n(25601),
+    I = n(687352),
+    _ = n(135724),
+    Z = n(25601),
     b = n(981631),
     S = n(490897),
     N = n(388032),
@@ -32,8 +32,8 @@ function y(e) {
     var t;
     let { channel: n, isChannelSelected: y, isChannelCollapsed: j, voiceStates: T, enableConnectedUserLimit: P, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: M, isNewChannel: L, muted: R, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
-        k = (0, l.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
-        B = (0, o.ZP)(n),
+        B = (0, l.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
+        k = (0, o.ZP)(n),
         U = (0, l.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, n)),
         O = (0, l.e7)([m.Z], () => m.Z.hasVideo(n.id)),
         V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
@@ -50,9 +50,9 @@ function y(e) {
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(b.oNc.COMMUNITY)) && void 0 !== t && t;
         });
     if ((0, C.Z)(G))
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(Z.Z, {
             mentionsCount: G,
-            isMentionLowImportance: k
+            isMentionLowImportance: B
         });
     if ((0, c.O)(w)) return (0, i.jsx)(c.Z, { locked: M });
     if (L)
@@ -75,7 +75,7 @@ function y(e) {
         });
     let q = null !== (t = null == T ? void 0 : T.length) && void 0 !== t ? t : 0;
     return null != P && P && H
-        ? (0, i.jsx)(I.Z, {
+        ? (0, i.jsx)(_.Z, {
               userCount: q,
               video: O || V,
               channel: n
@@ -85,9 +85,9 @@ function y(e) {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != A && A && (0, v.u)(B)
-            ? (0, i.jsx)(Z.Z, {
-                  embeddedApps: B,
+          : null != A && A && (0, v.u)(k)
+            ? (0, i.jsx)(I.Z, {
+                  embeddedApps: k,
                   muted: R
               })
             : null;

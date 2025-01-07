@@ -23,9 +23,9 @@ var l = n(120356),
     v = n(378844),
     C = n(359110),
     x = n(922482),
-    Z = n(431328),
-    I = n(501655),
-    _ = n(427679),
+    I = n(431328),
+    _ = n(501655),
+    Z = n(427679),
     b = n(368442),
     S = n(201469),
     N = n(680089),
@@ -41,8 +41,8 @@ var l = n(120356),
     R = n(648501),
     D = n(473403),
     G = n(207055),
-    k = n(981631),
-    B = n(647086),
+    B = n(981631),
+    k = n(647086),
     U = n(388032),
     O = n(831746),
     V = n(645693);
@@ -82,7 +82,7 @@ class F extends L.ZP {
             voiceStates: l,
             collapsed: t,
             tabIndex: n,
-            location: k.Sbl.GUILD_CHANNEL_LIST,
+            location: B.Sbl.GUILD_CHANNEL_LIST,
             numAudience: r
         });
     }
@@ -90,9 +90,9 @@ class F extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: Z } = this.props,
-            { shouldShowGuildVerificationPopout: I } = this.state,
-            _ = this.getVoiceStatesCount(),
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: I } = this.props,
+            { shouldShowGuildVerificationPopout: _ } = this.state,
+            Z = this.getVoiceStatesCount(),
             b = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [O.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
@@ -102,7 +102,7 @@ class F extends L.ZP {
                         renderPopout: this.renderPopout,
                         spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
-                        shouldShow: I,
+                        shouldShow: _,
                         children: () =>
                             (0, i.jsx)(o.Tooltip, {
                                 text: this.getTooltipText(),
@@ -112,7 +112,7 @@ class F extends L.ZP {
                                         className: O.iconVisibility,
                                         iconClassName: r()({ [V.iconLive]: null != f }),
                                         channel: e,
-                                        selected: !Z && t,
+                                        selected: !I && t,
                                         connected: n,
                                         unread: n ? v : void 0,
                                         resolvedUnreadSetting: C,
@@ -126,17 +126,17 @@ class F extends L.ZP {
                                         },
                                         connectDragPreview: u,
                                         subtitle: this.renderSubtitle(),
-                                        isFavoriteSuggestion: Z,
+                                        isFavoriteSuggestion: I,
                                         'aria-label': (0, h.ZP)({
                                             channel: e,
                                             unread: v,
                                             mentionCount: x,
-                                            userCount: _,
+                                            userCount: Z,
                                             isSubscriptionGated: m,
                                             needSubscriptionToAccess: g
                                         }),
                                         ...c,
-                                        children: [Z && this.renderAcceptSuggestionButton(), Z && this.renderRemoveSuggestionButton(), !Z && this.renderOpenChatButton(), !Z && this.renderInviteButton(), !Z && this.renderEditButton(), !Z && this.renderChannelInfo()]
+                                        children: [I && this.renderAcceptSuggestionButton(), I && this.renderRemoveSuggestionButton(), !I && this.renderOpenChatButton(), !I && this.renderInviteButton(), !I && this.renderEditButton(), !I && this.renderChannelInfo()]
                                     });
                                 }
                             })
@@ -235,18 +235,18 @@ function z(e) {
             let e = E.Z.getChannel(n.parent_id),
                 i = j.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && T.Z.can(k.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === B._ || (null != e ? T.Z.can(k.Plq.MANAGE_CHANNELS, e) : T.Z.can(k.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: T.Z.can(k.Plq.MOVE_MEMBERS, n),
-                locked: !T.Z.can(k.Plq.CONNECT, n),
-                bypassLimit: T.Z.can(k.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && T.Z.can(B.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === k._ || (null != e ? T.Z.can(B.Plq.MANAGE_CHANNELS, e) : T.Z.can(B.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: T.Z.can(B.Plq.MOVE_MEMBERS, n),
+                locked: !T.Z.can(B.Plq.CONNECT, n),
+                bypassLimit: T.Z.can(B.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, S.ZP)(n.id),
-        f = (0, a.e7)([_.Z], () => _.Z.getStageInstanceByChannel(n.id), [n.id]),
-        m = (0, Z.Rk)(n.id, I.pV.AUDIENCE),
+        f = (0, a.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, I.Rk)(n.id, _.pV.AUDIENCE),
         { isSubscriptionGated: v, needSubscriptionToAccess: C } = (0, g.Z)(n.id),
         x = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         y = (0, b.xJ)(n.id),
@@ -257,7 +257,7 @@ function z(e) {
             voiceStates: s,
             isSubscriptionGated: v,
             needSubscriptionToAccess: C,
-            enableConnectedUserLimit: y || (n.userLimit > 0 && n.userLimit < k.xGv)
+            enableConnectedUserLimit: y || (n.userLimit > 0 && n.userLimit < B.xGv)
         }),
         M = e.connected && null == w;
     return (0, i.jsx)(W, {

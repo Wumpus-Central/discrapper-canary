@@ -9,14 +9,14 @@ var r = n(399606),
     d = n(618553);
 t.Z = (e) => {
     let { userId: t, timestamp: n, timestampFormatter: u } = e,
-        m = (0, r.e7)([s.default], () => s.default.getUser(t));
-    return void 0 === m
+        g = (0, r.e7)([s.default], () => s.default.getUser(t));
+    return void 0 === g
         ? null
         : (0, i.jsxs)('div', {
               className: d.container,
               children: [
                   (0, i.jsx)(c.r, {
-                      user: m,
+                      user: g,
                       avatarSize: a.AvatarSizes.SIZE_40
                   }),
                   (0, i.jsx)('div', {
@@ -25,7 +25,7 @@ t.Z = (e) => {
                           children: [
                               (0, i.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
-                                  children: l.ZP.getName(m)
+                                  children: l.ZP.getName(g)
                               }),
                               (0, i.jsx)(a.Text, {
                                   variant: 'text-xs/medium',

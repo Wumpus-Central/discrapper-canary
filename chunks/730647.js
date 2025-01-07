@@ -24,22 +24,22 @@ function d(t) {
     let { guildId: e, children: n, refetchOnMount: c, includeSoftDeleted: d, countryCode: f, dontFetchWhileTrue: _ } = t,
         E = (0, l.e7)([o.Z], () => o.Z.isConnected()),
         p = (0, l.e7)([a.Z], () => (null != e ? a.Z.getSubscriptionGroupListingsForGuildFetchState(e) : a.M.FETCHED)),
-        m = r.useRef(c),
-        g = r.useCallback(() => {
+        g = r.useRef(c),
+        S = r.useCallback(() => {
             if (null == e || !E || !0 === _) return;
             let t = a.Z.getSubscriptionGroupListingsForGuildFetchState(e);
-            (m.current || t === a.M.NOT_FETCHED) &&
-                ((m.current = !1),
+            (g.current || t === a.M.NOT_FETCHED) &&
+                ((g.current = !1),
                 u.FP(e, {
                     includeSoftDeleted: d,
                     countryCode: f
                 }));
         }, [E, e, d, f, _]),
-        I = r.useMemo(() => p === a.M.FETCHED && !0 !== m.current, [p, m]);
+        m = r.useMemo(() => p === a.M.FETCHED && !0 !== g.current, [p, g]);
     return (0, i.jsx)(s.Provider, {
         value: {
-            listingsLoaded: I,
-            fetchGroupListingsForGuild: g
+            listingsLoaded: m,
+            fetchGroupListingsForGuild: S
         },
         children: n
     });

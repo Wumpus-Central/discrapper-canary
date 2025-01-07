@@ -7,13 +7,13 @@ var i,
     c = n(594174),
     d = n(981631);
 let u = null;
-class m extends (s = l.ZP.Store) {
+class g extends (s = l.ZP.Store) {
     getHouseMembership() {
         return u;
     }
 }
 (a = 'HypeSquadStore'),
-    (r = 'displayName') in (i = m)
+    (r = 'displayName') in (i = g)
         ? Object.defineProperty(i, r, {
               value: a,
               enumerable: !0,
@@ -21,7 +21,7 @@ class m extends (s = l.ZP.Store) {
               writable: !0
           })
         : (i[r] = a),
-    (t.Z = new m(o.Z, {
+    (t.Z = new g(o.Z, {
         CONNECTION_OPEN: function () {
             let e = c.default.getCurrentUser();
             null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (u = d.gkr.HOUSE_1) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (u = d.gkr.HOUSE_2) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (u = d.gkr.HOUSE_3));

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
@@ -26,25 +26,25 @@ var i = n(200651),
     v = n(981631),
     S = n(815660),
     T = n(388032);
-function b() {
+function A() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        b = I.Z.getVerificationTypes(e),
-        [A, Z] = r.useState(0),
-        x = (0, h.Z)(b);
+        A = I.Z.getVerificationTypes(e),
+        [b, Z] = r.useState(0),
+        x = (0, h.Z)(A);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: b[0],
-                verification_types: b
+                verification_type: A[0],
+                verification_types: A
             }
         },
         {},
-        [b.toString()]
+        [A.toString()]
     );
     let L = () => {
             (0, u.FD)(),
@@ -87,7 +87,7 @@ function b() {
         ),
         r.useEffect(() => {
             (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
+                (null == A ? void 0 : A[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -105,10 +105,10 @@ function b() {
                         onCloseCallback: L
                     }
                 );
-        }, [b, x]),
+        }, [A, x]),
         (0, i.jsx)(C.Z, {
-            types: b,
-            captchaKey: A,
+            types: A,
+            captchaKey: b,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({

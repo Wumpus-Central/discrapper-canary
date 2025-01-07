@@ -6,13 +6,13 @@ n.d(e, {
         return _;
     },
     _X: function () {
-        return m;
+        return g;
     },
     _o: function () {
         return E;
     },
     nb: function () {
-        return g;
+        return S;
     },
     zO: function () {
         return f;
@@ -54,12 +54,12 @@ async function p(t, e) {
         searchState: e
     });
 }
-function m(t) {
+function g(t) {
     let e = (0, a.lv)(t),
         n = u.Z.getGuild(t);
     return !!e && null != n && (((0, r.K2)(t, 'Guild Sidebar') && n.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) || n.hasFeature(c.oNc.COMMUNITY) || n.hasFeature(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(c.Z5c.CHANNEL(t, d.oC.MEMBER_SAFETY)), !0) : (l.Z.open(n.id, c.pNK.MEMBERS), !0));
 }
-async function g(t, e) {
+async function S(t, e) {
     let n = await (0, s._2)(t, e);
     return 0 === n.length
         ? []

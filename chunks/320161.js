@@ -13,16 +13,16 @@ var i = n(200651),
     c = n(572004),
     d = n(70956),
     u = n(981631),
-    m = n(388032);
-let g = d.Z.Millis.SECOND,
-    f = 2 * g,
+    g = n(388032);
+let m = d.Z.Millis.SECOND,
+    f = 2 * m,
     p = d.Z.Millis.HALF_SECOND,
-    _ = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
+    _ = [() => g.intl.string(g.t.MSaeTU), () => g.intl.string(g.t.UmrCw8), () => g.intl.string(g.t.gKE0Ji), () => g.intl.string(g.t['4DSKbm']), () => g.intl.string(g.t['+8ENdX']), () => g.intl.string(g.t.GlWHv7), () => g.intl.string(g.t.hIzxU1), () => g.intl.string(g.t['26uMPD']), () => g.intl.string(g.t.uFs7R0), () => g.intl.string(g.t.bLXdcX), () => g.intl.string(g.t.gPg9fX)];
 function h(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': h, delay: E = p } = e,
-        [b, x] = r.useState(0),
-        [C, T] = r.useState(!1),
-        [v, N] = r.useState(!1),
+    let { text: t, copyValue: n, children: d, onCopy: g, 'aria-label': h, delay: x = p } = e,
+        [E, b] = r.useState(0),
+        [C, v] = r.useState(!1),
+        [T, N] = r.useState(!1),
         [I] = r.useState(() => new s.V7()),
         [S] = r.useState(() => new s.V7());
     if (
@@ -35,29 +35,29 @@ function h(e) {
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let R = b >= _.length - 1,
+    let R = E >= _.length - 1,
         j = R ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         A = C ? j : l.TooltipColors.PRIMARY,
         P = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !v && x(b + 1), N(!0), T(!0), I.start(g, () => N(!1)), S.start(f, () => x(0));
+            null == g || g(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !T && b(E + 1), N(!0), v(!0), I.start(m, () => N(!1)), S.start(f, () => b(0));
         };
     return (0, i.jsx)(l.Tooltip, {
         text: (() => {
             var e;
             if (!C) return t;
-            let n = (0, a.clamp)(b - 1, 0, _.length - 1),
+            let n = (0, a.clamp)(E - 1, 0, _.length - 1),
                 r = null !== (e = _[n]) && void 0 !== e ? e : _[0];
             return (0, i.jsx)(l.Shaker, {
                 isShaking: R,
                 children: r()
             });
         })(),
-        delay: E,
+        delay: x,
         'aria-label': h,
         color: A,
-        forceOpen: v,
+        forceOpen: T,
         onAnimationRest: (e, t) => {
-            !v && C && t.phase === u.UkZ.LEAVE && T(!1);
+            !T && C && t.phase === u.UkZ.LEAVE && v(!1);
         },
         children: (e) => {
             let { onClick: t, onMouseEnter: n, ...i } = e;

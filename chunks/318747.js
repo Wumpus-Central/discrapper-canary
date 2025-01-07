@@ -8,21 +8,21 @@ var r = n(120356),
     c = n(197115),
     d = n(474936),
     u = n(388032),
-    m = n(923201);
+    g = n(923201);
 t.Z = (e) => {
-    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: g, ...f } = e,
+    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: m, ...f } = e,
         p = (0, o.ZP)(),
         _ = (0, s.wj)(p) || n,
         h = _ ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
-        E = g === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
+        x = m === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
     return (0, i.jsx)(c.Z, {
         isGift: !0,
         color: h,
         look: l.ButtonLooks.OUTLINED,
-        buttonText: E,
+        buttonText: x,
         giftMessage: r,
-        className: a()(t, m.giftButton, _ ? m.buttonWhite : m.buttonBrand),
-        subscriptionTier: g,
+        className: a()(t, g.giftButton, _ ? g.buttonWhite : g.buttonBrand),
+        subscriptionTier: m,
         ...f
     });
 };

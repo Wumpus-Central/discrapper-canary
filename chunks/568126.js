@@ -8,32 +8,32 @@ var r = n(442837),
     c = n(222727),
     d = n(474494),
     u = n(981631),
-    m = n(455427);
+    g = n(455427);
 t.Z = function (e) {
     let { localizedPricingPromo: t } = e,
         n = t.countryCode,
-        g = (0, r.e7)([s.default], () => s.default.locale);
+        m = (0, r.e7)([s.default], () => s.default.locale);
     (0, c.U)(u.jXE.SETTINGS_PREMIUM_BANNER, n);
     let f = (0, r.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
         { localizedPricingBannerBody: p } = (0, o.vB)({
             localizedPricingPromo: t,
             subscription: f,
             forceSingleLine: !0,
-            userLocale: g
+            userLocale: m
         });
     return (0, i.jsxs)('div', {
-        className: m.bannerContainer,
+        className: g.bannerContainer,
         children: [
             (0, i.jsx)(d.Z, {
-                className: m.badge,
+                className: g.badge,
                 countryCode: n
             }),
             (0, i.jsx)('div', {
-                className: m.bannerBodyContainer,
+                className: g.bannerBodyContainer,
                 children: (0, i.jsx)(a.Text, {
                     color: 'none',
                     variant: 'text-md/normal',
-                    className: m.bannerBody,
+                    className: g.bannerBody,
                     children: p
                 })
             })

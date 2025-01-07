@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(606304),
     S = n(979651),
     T = n(938475),
-    b = n(823379),
-    A = n(557177),
+    A = n(823379),
+    b = n(557177),
     Z = n(981631);
 function x(e, t, n, i) {
     r.useEffect(() => {
@@ -34,7 +34,7 @@ function x(e, t, n, i) {
             l = new s.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !I.Z.isSoundDisabled(l) && (0, A.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, b.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
@@ -236,15 +236,15 @@ function M() {
                     t = N.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityChannelId(),
                     i = g.default.getId(),
-                    r = (0, b.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    l = (0, b.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    a = (0, b.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+                    r = (0, A.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+                    l = (0, A.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+                    a = (0, A.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
                 return {
                     voiceChannelId: e,
                     currentUserId: i,
                     channelActivities: r,
                     connectedChannelActivities: a,
-                    userConnectedActivity: (0, b.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
+                    userConnectedActivity: (0, A.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
                     voiceChannelActivities: l
                 };
             },
@@ -252,15 +252,15 @@ function M() {
                 let n,
                     { voiceChannelId: i, currentUserId: r, channelActivities: l, connectedChannelActivities: a, userConnectedActivity: s, voiceChannelActivities: o } = t;
                 let c = o.some((e) => e.applicationId === (null == s ? void 0 : s.applicationId) && e.launchId === s.launchId);
-                if ((0, b.lm)(i)) {
+                if ((0, A.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(r)),
                         i = o.find((e) => e.userIds.has(r));
-                    e.voiceChannelActivities.length < o.length && (0, b.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, b.lm)(t) && (n = 'activity_end'), void 0 === t && (0, b.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, b.lm)(i) && (0, b.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    e.voiceChannelActivities.length < o.length && (0, A.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, A.lm)(t) && (n = 'activity_end'), void 0 === t && (0, A.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, A.lm)(i) && (0, A.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 if (!c) {
                     e.connectedChannelActivities.length < a.length && e.channelActivities.length < l.length && (n = 'activity_launch');
                     let t = e.userConnectedActivity;
-                    null == s && (0, b.lm)(t) && (n = 'activity_end'), (0, b.lm)(s) && (0, b.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    null == s && (0, A.lm)(t) && (n = 'activity_end'), (0, A.lm)(s) && (0, A.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 return n;
             }

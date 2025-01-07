@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651),
@@ -23,7 +23,7 @@ let x = {
     friction: 30,
     tension: 300
 };
-function Z(e) {
+function I(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
         o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -69,19 +69,19 @@ function Z(e) {
         ]
     });
 }
-function I(e) {
+function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: h } = e,
         p = (0, d.Q3)('UnreadBar'),
-        { bottomBar: m, topBar: I } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
-        _ = (0, s.e7)([f.Z], () => f.Z.isFocused()),
-        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? m : I,
+        { bottomBar: m, topBar: _ } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
+        Z = (0, s.e7)([f.Z], () => f.Z.isFocused()),
+        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? m : _,
         E = b === g.x.HIDDEN,
         y = (0, u.useSpring)(
             {
                 to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: x
             },
-            _ ? 'respect-motion-settings' : 'animate-never'
+            Z ? 'respect-motion-settings' : 'animate-never'
         ),
         j = l.useCallback(
             (e) => {
@@ -141,7 +141,7 @@ function I(e) {
                               })
                           })
                         : b === g.x.VOICE_CHANNELS
-                          ? (0, i.jsx)(Z, {
+                          ? (0, i.jsx)(I, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,
                                 guildChannelsVersion: r

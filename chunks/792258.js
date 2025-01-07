@@ -8,8 +8,8 @@ var r = n(120356),
     c = n(372769),
     d = n(914788),
     u = n(981631),
-    m = n(388032),
-    g = n(77659);
+    g = n(388032),
+    m = n(77659);
 let f = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
@@ -19,20 +19,20 @@ t.Z = (e) => {
         p = n.toString(),
         _ = n.getIconURL(40, !0),
         h = null,
-        E = f[f.length - 1];
+        x = f[f.length - 1];
     if (null == n.icon && null != p) {
-        var b;
-        E = null !== (b = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== b ? b : f[f.length - 1];
+        var E;
+        x = null !== (E = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== E ? E : f[f.length - 1];
     }
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: m.container,
         children: [
             (0, i.jsxs)('div', {
-                style: { fontSize: E },
+                style: { fontSize: x },
                 children: [
                     null != h
                         ? (0, i.jsx)('div', {
-                              className: a()(g.childWrapper, g.acronym),
+                              className: a()(m.childWrapper, m.acronym),
                               'aria-hidden': !0,
                               children: h
                           })
@@ -47,17 +47,17 @@ t.Z = (e) => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: g.descriptors,
+                className: m.descriptors,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.header,
+                        className: m.header,
                         children: [
                             r
                                 ? (0, i.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',
                                       tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                      className: g.guildBadge
+                                      className: m.guildBadge
                                   })
                                 : null,
                             (0, i.jsx)(o.Text, {
@@ -70,7 +70,7 @@ t.Z = (e) => {
                         ? (0, i.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              children: m.intl.format(m.t['5JmNgo'], { members: n.approximateMemberCount })
+                              children: g.intl.format(g.t['5JmNgo'], { members: n.approximateMemberCount })
                           })
                         : null
                 ]

@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(912471),
     S = n(100527),
     T = n(838134),
-    b = n(77987),
-    A = n(679891),
+    A = n(77987),
+    b = n(679891),
     Z = n(491575),
     x = n(954709),
     L = n(644679),
@@ -75,8 +75,8 @@ var i = n(200651),
     ev = n(377368),
     eS = n(262702),
     eT = n(639033),
-    eb = n(479313),
-    eA = n(911560),
+    eA = n(479313),
+    eb = n(911560),
     eZ = n(703016),
     ex = n(171368),
     eL = n(429974),
@@ -160,10 +160,10 @@ let e4 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
             }
         }
     ),
-    e3 = (0, b.e)(Z.Z, null, { passProps: !1 }),
-    e5 = (0, b.e)(T.default, null, { passProps: !1 }),
-    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
-function e9(e) {
+    e3 = (0, A.e)(Z.Z, null, { passProps: !1 }),
+    e5 = (0, A.e)(T.default, null, { passProps: !1 }),
+    e9 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+function e7(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
         guildId: null != t ? t : eJ.ME,
@@ -383,7 +383,7 @@ class tt extends r.PureComponent {
     componentDidMount() {
         eX.ZP.setZoomFactor(g.Z.zoom),
             eE.Z.init(),
-            A.Z.initialize(),
+            b.Z.initialize(),
             ed.Z.initialize(),
             G.Z.initialize(),
             ej.Z.initialize(),
@@ -442,7 +442,7 @@ class tt extends r.PureComponent {
             (this.historyUnlisten = eg.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), A.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), ev.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), P.Z.terminate(), O.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), x.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        ej.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), b.Z.terminate(), C.ZP.terminate(), eR.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), eL.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), ev.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), P.Z.terminate(), O.Z.terminate(), eu.Z.terminate(), j.Z.terminate(), U.Z.terminate(), x.Z.terminate(), L.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -463,7 +463,7 @@ class tt extends r.PureComponent {
             !(function (e, t) {
                 let n = e8(e);
                 if (null == n) return;
-                let { guildId: i, channelId: r, messageId: s, threadId: o } = e9(n),
+                let { guildId: i, channelId: r, messageId: s, threadId: o } = e7(n),
                     c = (0, ef.Ss)(i),
                     d = (0, ef.cq)(r),
                     m = (0, ef.cq)(o),
@@ -480,7 +480,7 @@ class tt extends r.PureComponent {
                                 messageId: s
                             });
                         let { summaryId: e } = (0, l.parse)(t);
-                        null != e && eb.ZP.setSelectedSummary(r, e);
+                        null != e && eA.ZP.setSelectedSummary(r, e);
                     }
                     if (null != o && m) {
                         let e = eM.ZP.getCurrentSidebarChannelId(n) !== o,
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e7.some((e) => {
+                        !e9.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
@@ -524,12 +524,12 @@ class tt extends r.PureComponent {
         let { pathname: t } = e,
             n = e8(t);
         if (null == n) return null;
-        let { guildId: i, channelId: r, threadId: l } = e9(n),
+        let { guildId: i, channelId: r, threadId: l } = e7(n),
             a = (0, ef.Ss)(i) && i !== eJ.ME && i !== eJ.I_8;
         if (null != r && (0, ef.cq)(r) && !(0, e$.AB)(r) && a) {
             let n = ew.Z.getChannel(r);
             if (null == n)
-                eA.Z.loadThread(r).then(() =>
+                eb.Z.loadThread(r).then(() =>
                     te({
                         channelId: r,
                         guildId: i,
@@ -545,7 +545,7 @@ class tt extends r.PureComponent {
                 if (!((0, ef.cq)(l) && !(0, e$.AB)(r))) return null;
                 let n = ew.Z.getChannel(l);
                 if (null == n)
-                    eA.Z.loadThread(l).then(() =>
+                    eb.Z.loadThread(l).then(() =>
                         te({
                             channelId: l,
                             guildId: i,

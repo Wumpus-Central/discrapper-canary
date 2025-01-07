@@ -22,12 +22,12 @@ n.d(t, {
 var r = n(192379),
     l = n(658722),
     i = n.n(l),
-    a = n(913527),
-    s = n.n(a),
+    s = n(913527),
+    a = n.n(s),
     o = n(442837),
     E = n(704215),
-    c = n(45114),
-    u = n(740504),
+    u = n(45114),
+    c = n(740504),
     d = n(605236),
     _ = n(931261),
     A = n(540126),
@@ -47,8 +47,8 @@ function U(e, t) {
 }
 function C(e, t, n, l) {
     l = l.toLowerCase();
-    let a = (0, _.g)(e),
-        s = r.useCallback((e, t) => !(a && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== O.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [a]);
+    let s = (0, _.g)(e),
+        a = r.useCallback((e, t) => !(s && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== O.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
     return r.useMemo(() => {
         let e = {
             null: [],
@@ -57,13 +57,13 @@ function C(e, t, n, l) {
         return (
             n[O.d4z.GUILD_CATEGORY].forEach((n) => {
                 let { channel: r } = n;
-                'null' === r.id && (e.null = t.null.filter((e) => s(e, l))), (e[r.id] = t[r.id].filter((e) => s(e, l)));
+                'null' === r.id && (e.null = t.null.filter((e) => a(e, l))), (e[r.id] = t[r.id].filter((e) => a(e, l)));
             }),
             (e._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === l.length || e[t.channel.id].length > 0)),
-            (0, u.Z)(e._categories, e).forEach(U),
+            (0, c.Z)(e._categories, e).forEach(U),
             e
         );
-    }, [t, n, s, l]);
+    }, [t, n, a, l]);
 }
 function L(e) {
     let t = e.getSections(!1);
@@ -87,7 +87,7 @@ function L(e) {
 function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     (0, T.n)(e, t),
-        (0, c.y5)(
+        (0, u.y5)(
             t.map((e) => ({
                 channelId: e,
                 readStateType: D.W.CHANNEL,
@@ -114,7 +114,7 @@ function m(e, t, n, r) {
             },
             [e]
         ),
-        a = t._categories.map((e) => {
+        s = t._categories.map((e) => {
             let r = t[e.channel.id];
             return {
                 rowCount: 'null' !== e.channel.id && 0 === i[e.channel.id] ? 1 : r.length,
@@ -124,11 +124,11 @@ function m(e, t, n, r) {
     return (
         !l &&
             null != r &&
-            a.unshift({
+            s.unshift({
                 rowCount: 1,
                 rowHeight: r
             }),
-        a
+        s
     );
 }
 function v(e) {
@@ -137,10 +137,10 @@ function v(e) {
         l = r._categories.length,
         i = r._categories[r._categories.length - 1];
     if (null == i) return 0;
-    let a = r[null !== (n = null === (t = i.channel) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'null'];
-    return null == a ? 0 : 0 === a.length ? i.index + 2 - l : a[a.length - 1].index + 2 - l;
+    let s = r[null !== (n = null === (t = i.channel) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : 'null'];
+    return null == s ? 0 : 0 === s.length ? i.index + 2 - l : s[s.length - 1].index + 2 - l;
 }
 function b(e) {
     var t;
-    return h.intl.formatToPlainString(h.t['8N0BHR'], { timeAgo: s()(R.default.extractTimestamp(null !== (t = N.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
+    return h.intl.formatToPlainString(h.t['8N0BHR'], { timeAgo: a()(R.default.extractTimestamp(null !== (t = N.ZP.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow() });
 }

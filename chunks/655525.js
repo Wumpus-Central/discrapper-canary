@@ -1,14 +1,14 @@
-s.d(t, {
+t.d(e, {
     Z: function () {
-        return a;
+        return i;
     }
 });
-var n = s(200651);
-s(192379);
-var r = s(346497),
-    i = s(227140);
-function a() {
-    let e = (0, r.Vi)(),
-        t = (0, r.W1)();
-    return e ? (0, n.jsx)(i.Z, { copy: t }) : null;
+var n = t(200651);
+t(192379);
+var r = t(346497),
+    c = t(227140);
+function i() {
+    let s = (0, r.Vi)(),
+        e = (0, r.W1)();
+    return s ? (0, n.jsx)(c.Z, { copy: e }) : null;
 }

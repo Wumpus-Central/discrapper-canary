@@ -8,8 +8,8 @@ var r = n(399606),
     c = n(631885),
     d = n(552045),
     u = n(87792),
-    m = n(302289),
-    g = n(946690),
+    g = n(302289),
+    m = n(946690),
     f = n(456771),
     p = n(292352),
     _ = n(388032),
@@ -18,9 +18,9 @@ t.Z = () => {
     let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        E = (0, l.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
-        b = (0, l.o)(_.intl.string(_.t.XKnFFh), _.intl.string(_.t['68zfxM'])),
-        x = (0, l.o)(_.intl.string(_.t['Rm/6a2']), _.intl.string(_.t['1xPTwM'])),
+        x = (0, l.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
+        E = (0, l.o)(_.intl.string(_.t.XKnFFh), _.intl.string(_.t['68zfxM'])),
+        b = (0, l.o)(_.intl.string(_.t['Rm/6a2']), _.intl.string(_.t['1xPTwM'])),
         C = (0, a.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
@@ -34,25 +34,25 @@ t.Z = () => {
                   (0, i.jsxs)('div', {
                       className: h.featureCards,
                       children: [
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               iconClassName: h.chatCheckIcon,
                               icon: a.ChatCheckIcon,
                               header: _.intl.string(_.t['001l3t']),
-                              description: E
+                              description: x
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               icon: a.EyeIcon,
                               header: _.intl.string(_.t.yipAeH),
-                              description: b
+                              description: E
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               icon: C ? a.QrCodeIcon : (0, a.makeIconCompat)(f.Z),
                               header: _.intl.string(_.t.hhOuMT),
-                              description: x
+                              description: b
                           })
                       ]
                   }),
-                  0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
+                  0 === e.length ? (0, i.jsx)(g.Z, {}) : null,
                   void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
               ]
           });

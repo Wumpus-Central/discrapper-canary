@@ -187,7 +187,7 @@ class m extends i.PureComponent {
     }
 }
 let C = 240;
-class g extends i.PureComponent {
+class N extends i.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
             this.setState({ visible: !0 }), u.S.dispatch(d.CkL.SHAKE_APP, { duration: 2400 });
@@ -254,4 +254,4 @@ class g extends i.PureComponent {
             });
     }
 }
-t.Z = g;
+t.Z = N;

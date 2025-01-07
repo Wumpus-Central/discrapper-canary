@@ -42,12 +42,12 @@ let C = l.memo(function (e) {
                 e
             );
         }, [C, n]),
-        Z = null == n ? 0 : n.length,
-        I = (0, r.JA)('progress-bar-'.concat(t.id));
+        I = null == n ? 0 : n.length,
+        _ = (0, r.JA)('progress-bar-'.concat(t.id));
     return (0, i.jsxs)('li', {
         children: [
             (0, i.jsxs)(o.Clickable, {
-                ...I,
+                ..._,
                 role: 'button',
                 focusProps: { offset: { right: 4 } },
                 className: g.progressBarContainer,
@@ -71,7 +71,7 @@ let C = l.memo(function (e) {
                                         className: g.rightText,
                                         children: m.intl.format(m.t.eqZ1lZ, {
                                             numberHook: v,
-                                            total: Z.toString(),
+                                            total: I.toString(),
                                             completed: x.toString()
                                         })
                                     }),
@@ -88,7 +88,7 @@ let C = l.memo(function (e) {
                     (0, i.jsx)(o.Progress, {
                         className: g.progressBar,
                         foregroundGradientColor: [(0, s.Lq)(p.Ilk.GREEN_300), (0, s.Lq)(p.Ilk.GREEN_230)],
-                        percent: (x / Z) * 100 + 3,
+                        percent: (x / I) * 100 + 3,
                         animate: !0
                     })
                 ]

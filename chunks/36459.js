@@ -3,7 +3,7 @@ n.d(e, {
         return T;
     },
     JK: function () {
-        return S;
+        return I;
     },
     Je: function () {
         return h;
@@ -21,7 +21,7 @@ n.d(e, {
         return C;
     },
     qY: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
@@ -63,13 +63,13 @@ function p(t) {
         }
     );
 }
-function m(t) {
+function g(t) {
     return {
         type: t.type,
         metadata: (0, d.C)(t.metadata)
     };
 }
-function g(t) {
+function S(t) {
     var e, n, i;
     let r = {
         id: null !== (e = t.id) && void 0 !== e ? e : s.default.fromTimestamp(Date.now()),
@@ -78,7 +78,7 @@ function g(t) {
         eventType: t.event_type,
         triggerType: t.trigger_type,
         triggerMetadata: (0, d.C)(t.trigger_metadata),
-        actions: t.actions.filter(a.lm).map(m),
+        actions: t.actions.filter(a.lm).map(g),
         enabled: t.enabled,
         creatorId: t.creator_id,
         position: t.position,
@@ -87,7 +87,7 @@ function g(t) {
     };
     return null != r.triggerMetadata && delete r.triggerMetadata.keywordLists, r;
 }
-async function I(t) {
+async function m(t) {
     let e = p(t),
         n = await i.tn.post({
             url: _.ANM.GUILD_AUTOMOD_VALIDATE_RULE(t.guildId),
@@ -96,11 +96,11 @@ async function I(t) {
         });
     return (0, d.C)(n.body);
 }
-async function S(t) {
+async function I(t) {
     let e = p(t);
     return (
         delete e.id,
-        g(
+        S(
             (
                 await i.tn.post({
                     url: _.ANM.GUILD_AUTOMOD_RULES(t.guildId),
@@ -113,7 +113,7 @@ async function S(t) {
 }
 async function h(t) {
     let e = p(t);
-    return g(
+    return S(
         (
             await i.tn.patch({
                 url: _.ANM.GUILD_AUTOMOD_RULE(t.guildId, t.id),
@@ -137,7 +137,7 @@ async function T(t) {
         url: _.ANM.GUILD_AUTOMOD_RULES(t),
         rejectWithError: !1
     });
-    return Array.isArray(e.body) ? e.body.map(g) : [];
+    return Array.isArray(e.body) ? e.body.map(S) : [];
 }
 async function v(t, e, n) {
     if (!!u.Z.can(_.Plq.MANAGE_MESSAGES, e))

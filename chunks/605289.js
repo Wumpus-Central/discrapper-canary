@@ -8,8 +8,8 @@ var r = n(120356),
     c = n(78839),
     d = n(985754),
     u = n(222727),
-    m = n(318747),
-    g = n(409100),
+    g = n(318747),
+    m = n(409100),
     f = n(474936),
     p = n(981631),
     _ = n(802273);
@@ -18,10 +18,10 @@ t.Z = function (e) {
         r = t.countryCode,
         h = (0, s.e7)([o.default], () => o.default.locale);
     (0, u.U)(p.jXE.SETTINGS_PREMIUM_BANNER, r);
-    let E = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerHeader: b, localizedPricingBannerBody: x } = (0, d.vB)({
+    let x = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+        { localizedPricingBannerHeader: E, localizedPricingBannerBody: b } = (0, d.vB)({
             localizedPricingPromo: t,
-            subscription: E,
+            subscription: x,
             userLocale: h
         }),
         C = r.toLowerCase() + 'Banner';
@@ -35,7 +35,7 @@ t.Z = function (e) {
             (0, i.jsx)(l.Heading, {
                 className: _.bannerHeading,
                 variant: 'heading-xl/semibold',
-                children: b
+                children: E
             }),
             (0, i.jsx)('div', {
                 className: _.textContainer,
@@ -43,18 +43,18 @@ t.Z = function (e) {
                     color: 'none',
                     variant: 'text-md/normal',
                     className: _.bannerBody,
-                    children: x
+                    children: b
                 })
             }),
             (0, i.jsxs)('div', {
                 className: _.ctaButtonContainer,
                 children: [
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(m.Z, {
                         forceInverted: !0,
                         className: _.ctaButton,
                         subscriptionTier: f.Si.TIER_2
                     }),
-                    (0, i.jsx)(m.Z, {
+                    (0, i.jsx)(g.Z, {
                         forceWhite: !0,
                         subscriptionTier: f.Si.TIER_2,
                         className: _.ctaButton

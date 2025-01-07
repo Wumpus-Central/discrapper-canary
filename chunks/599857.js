@@ -3,21 +3,21 @@ n.d(t, {
         return d;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(29978),
-    c = n(780384),
-    o = n(481060),
-    s = n(756148),
-    p = n(981631);
+var i = n(200651),
+    r = n(192379),
+    l = n(29978),
+    a = n(780384),
+    s = n(481060),
+    o = n(756148),
+    c = n(981631);
 function d(e) {
     return (
-        i.useEffect(() => {
-            s.I.loadRecaptchaScript(e.sitekey, () => {
-                var t, n, r;
-                return null === (r = window) || void 0 === r
+        r.useEffect(() => {
+            o.I.loadRecaptchaScript(e.sitekey, () => {
+                var t, n, i;
+                return null === (i = window) || void 0 === i
                     ? void 0
-                    : null === (n = r.grecaptcha) || void 0 === n
+                    : null === (n = i.grecaptcha) || void 0 === n
                       ? void 0
                       : null === (t = n.enterprise) || void 0 === t
                         ? void 0
@@ -28,25 +28,25 @@ function d(e) {
                           });
             });
         }, [e]),
-        (0, r.jsx)(o.Spinner, {})
+        (0, i.jsx)(s.Spinner, {})
     );
 }
-let l = (e) => {
+let u = (e) => {
     let { theme: t, ...n } = e,
-        i = (0, c.wj)(t) ? 'dark' : 'light';
-    return (0, r.jsx)(a.Z, {
-        sitekey: p.OL7,
+        r = (0, a.wj)(t) ? 'dark' : 'light';
+    return (0, i.jsx)(l.Z, {
+        sitekey: c.OL7,
         ...n,
-        theme: i
+        theme: r
     });
 };
-(l.Themes = {
+(u.Themes = {
     LIGHT: 'light',
     DARK: 'dark'
 }),
-    (l.Sizes = {
+    (u.Sizes = {
         COMPACT: 'compact',
         NORMAL: 'normal',
         INVISIBLE: 'invisible'
     }),
-    (t.Z = 12633 == n.j ? l : null);
+    (t.Z = u);

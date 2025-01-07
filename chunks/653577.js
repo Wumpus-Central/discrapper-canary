@@ -19,11 +19,11 @@ var i = n(200651),
     g = n(316249),
     v = n(665162);
 function C(e) {
-    let { channel: t, connected: n, hovered: r, subtitle: C, onClick: x, enableHangStatus: Z, allowChannelTopic: I } = e,
-        _ = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        b = null != _ && _.length > 0,
+    let { channel: t, connected: n, hovered: r, subtitle: C, onClick: x, enableHangStatus: I, allowChannelTopic: _ } = e,
+        Z = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        b = null != Z && Z.length > 0,
         S = (0, c.ZP)(t, !0),
-        N = (!Z || !!I) && S,
+        N = (!I || !!_) && S,
         E = null != C && C.length > 0;
     l.useEffect(() => {
         b &&
@@ -42,7 +42,7 @@ function C(e) {
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, v.markup),
-                children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(_, !0, { channelId: t.id }) })
+                children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(Z, !0, { channelId: t.id }) })
             })
         });
     if (n && N && (!E || r))

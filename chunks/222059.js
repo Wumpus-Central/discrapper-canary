@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(594174),
     C = n(431),
     x = n(774343),
-    Z = n(417363),
-    I = n(941128),
-    _ = n(780570),
+    I = n(417363),
+    _ = n(941128),
+    Z = n(780570),
     b = n(557177),
     S = n(278464),
     N = n(276952),
@@ -51,17 +51,17 @@ function R(e) {
     let { selected: t, user: n, badge: p, link: m, showProgressBadge: g } = e,
         v = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, x] = l.useState(!1),
-        [Z, I] = l.useState(!1),
-        [_, S] = l.useState(null),
+        [I, _] = l.useState(!1),
+        [Z, S] = l.useState(null),
         [P, R] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
-        k = () => {
-            S(null), R(0), clearTimeout(_);
+        B = () => {
+            S(null), R(0), clearTimeout(Z);
         };
     if (null == n) return null;
-    let B = w.intl.string(w.t.YUU0RE);
-    Z && (B = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    let k = w.intl.string(w.t.YUU0RE);
+    I && (k = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let U = null;
     !t &&
         g &&
@@ -79,15 +79,15 @@ function R(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != _ && clearTimeout(_), S(setTimeout(k, 500)), R(P + 1), 15 === P)) {
-                        k();
+                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(B, 500)), R(P + 1), 15 === P)) {
+                        B();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
                             e && o.K.set(A.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
-                            I(!0),
+                            _(!0),
                             setTimeout(() => {
-                                I(!1);
+                                _(!1);
                             }, 1000);
                     }
                 },
@@ -123,7 +123,7 @@ function R(e) {
                     (0, i.jsx)(y.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
-                        text: B,
+                        text: k,
                         selected: t,
                         children: V
                     })
@@ -134,10 +134,10 @@ function R(e) {
 }
 function D() {
     let e = (0, S.n)(),
-        t = (0, a.e7)([I.Z, Z.Z], () => {
-            let e = (0, c.E)(I.Z.activeItems, Z.Z),
-                { total: t, progress: n } = _.lK(e),
-                i = _.xI(n, t);
+        t = (0, a.e7)([_.Z, I.Z], () => {
+            let e = (0, c.E)(_.Z.activeItems, I.Z),
+                { total: t, progress: n } = Z.lK(e),
+                i = Z.xI(n, t);
             return i > 0 && i < 100;
         }),
         n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),

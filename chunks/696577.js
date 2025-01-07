@@ -33,7 +33,7 @@ function E(e) {
                 });
         },
         T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
-        b = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
+        A = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
         isFocused: I,
         user: t,
@@ -89,7 +89,7 @@ function E(e) {
                         hovered: e,
                         showAccountIdentifier: !0,
                         status: T,
-                        subText: b
+                        subText: A
                     }),
                     (0, i.jsx)('div', {
                         className: _.actions,

@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(605236),
     S = n(243778),
     T = n(984370),
-    b = n(797614),
-    A = n(359110),
+    A = n(797614),
+    b = n(359110),
     Z = n(6025),
     x = n(897473),
     L = n(108427),
@@ -127,7 +127,7 @@ function en() {
                 ),
             [t, f, c]
         );
-    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && A.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -241,7 +241,7 @@ let es = (0, p.Z)(function (e) {
     let { width: t } = e,
         n = (0, H.q)();
     r.useEffect(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
     let l = (0, c.e7)([y.Z], () => y.Z.theme),
         s = (0, z.w)(),
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, A.Kh)(g), Z.Z.closeChannelSidebar(R.uZ));
+        null != g && !_ && E && f && ((0, b.Kh)(g), Z.Z.closeChannelSidebar(R.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         v = (e) => {

@@ -78,8 +78,8 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    m = n(694626),
-    h = n(855930),
+    h = n(694626),
+    m = n(855930),
     x = n(385787),
     f = n(566162),
     p = n(567027),
@@ -88,8 +88,8 @@ var r,
     v = n(20450),
     j = n(312976),
     C = n(147591),
-    _ = n(135164),
-    T = n(940172),
+    T = n(135164),
+    _ = n(940172),
     S = n(81011),
     N = n(981613),
     y = n(762399),
@@ -102,8 +102,8 @@ var r,
     O = n(856308),
     B = n(665352),
     P = n(394900),
-    A = n(661105),
-    L = n(525169),
+    L = n(661105),
+    A = n(525169),
     D = n(433517),
     F = n(190558),
     M = n(231338);
@@ -112,8 +112,8 @@ let H = {
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: m.Z,
-        HSL: h.Z,
+        HPLuv: h.Z,
+        HSL: m.Z,
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
@@ -122,8 +122,8 @@ let H = {
         Jzazbz: v.Z,
         LCH: j.Z,
         LCHuv: C.Z,
-        Lab: _.Z,
-        Lab_D65: T.Z,
+        Lab: T.Z,
+        Lab_D65: _.Z,
         Luv: S.Z,
         OKLCH: N.Z,
         OKLab: y.Z,
@@ -188,7 +188,7 @@ function X(e) {
     };
 }
 function q(e) {
-    return (0, P.Z)((0, A.Z)(e, s.Z), { format: 'hex' });
+    return (0, P.Z)((0, L.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -239,37 +239,37 @@ function et(e, t) {
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
         o = H[e.colorSpace],
-        c = (0, A.Z)(n, o),
-        d = (0, L.CD)(c, 'white', 1 - a, {
+        c = (0, L.Z)(n, o),
+        d = (0, A.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
         }),
-        u = (0, L.CD)(c, 'black', 1 - l, {
+        u = (0, A.CD)(c, 'black', 1 - l, {
             space: o,
             outputSpace: s.Z
         }),
-        m = Math.floor(r / 2),
-        h = r - m,
-        x = (0, L.w6)(d, c, {
-            steps: m,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        f = (0, L.w6)(u, c, {
+        h = Math.floor(r / 2),
+        m = r - h,
+        x = (0, A.w6)(d, c, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
+        f = (0, A.w6)(u, c, {
+            steps: m,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
         p = [];
-    for (let e = 0; e < m; e++) {
-        let t = x(e / m);
+    for (let e = 0; e < h; e++) {
+        let t = x(e / h);
         p.push(t);
     }
     p.push(c);
-    for (let e = 1; e < h; e++) {
-        let t = f(1 - e / h);
+    for (let e = 1; e < m; e++) {
+        let t = f(1 - e / m);
         p.push(t);
     }
     return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));

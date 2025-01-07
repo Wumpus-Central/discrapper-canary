@@ -21,16 +21,16 @@ var l = n(155281),
     v = n(430824),
     C = n(496675),
     x = n(914010),
-    Z = n(281029),
-    I = n(700785),
-    _ = n(981631);
+    I = n(281029),
+    _ = n(700785),
+    Z = n(981631);
 let b = 'DRAGGABLE_GUILD_CHANNEL';
 function S(e, t) {
     var n, i;
     if (null == e || null == t) return null;
-    if (e !== _.I_8) return f.Z.getChannel(t);
+    if (e !== Z.I_8) return f.Z.getChannel(t);
     let l = g.ZP.getChannels(e),
-        r = null !== (i = null !== (n = l[g.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[g.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[_.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
+        r = null !== (i = null !== (n = l[g.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[g.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[Z.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == r ? void 0 : r.channel;
 }
 function N(e) {
@@ -41,16 +41,16 @@ function N(e) {
                 let n;
                 let l = x.Z.getGuildId(),
                     r = t.getItem(),
-                    a = (0, Z.if)(S(l, r.id), r.position, e.channel, e.position, r.channelList);
+                    a = (0, I.if)(S(l, r.id), r.position, e.channel, e.position, r.channelList);
                 if (null == a) return;
                 let u = S(l, r.id);
                 if (null == u) return;
                 let h = m.Z.getCategories(l),
                     p = v.Z.getGuild(l);
                 if (null == p) return;
-                let g = (0, Z.Dn)(u, S(l, a.referenceId), a.parentId, h);
+                let g = (0, I.Dn)(u, S(l, a.referenceId), a.parentId, h);
                 if (0 !== g.length) {
-                    if (l === _.I_8) {
+                    if (l === Z.I_8) {
                         (0, d.s3)(g);
                         return;
                     }
@@ -60,15 +60,15 @@ function N(e) {
                                 n = f.Z.getChannel(t);
                             if (null == n) return !1;
                             let i = f.Z.getChannel(n.parent_id);
-                            return n.type === _.d4z.GUILD_CATEGORY || null == i ? C.Z.can(_.Plq.MANAGE_CHANNELS, p) : C.Z.can(_.Plq.MANAGE_CHANNELS, i);
+                            return n.type === Z.d4z.GUILD_CATEGORY || null == i ? C.Z.can(Z.Plq.MANAGE_CHANNELS, p) : C.Z.can(Z.Plq.MANAGE_CHANNELS, i);
                         })),
                         u.parent_id !== a.parentId &&
                             g.find((e) => {
                                 if (e.id !== u.id) return !1;
                                 let t = f.Z.getChannel(e.parent_id);
-                                if (!(null != t && C.Z.can(_.Plq.MANAGE_ROLES, u) && C.Z.can(_.Plq.MANAGE_ROLES, t))) return !0;
-                                let i = I.o4(u, t),
-                                    l = I.o4(u, f.Z.getChannel(u.parent_id));
+                                if (!(null != t && C.Z.can(Z.Plq.MANAGE_ROLES, u) && C.Z.can(Z.Plq.MANAGE_ROLES, t))) return !0;
+                                let i = _.o4(u, t),
+                                    l = _.o4(u, f.Z.getChannel(u.parent_id));
                                 return ((null == u.parent_id && !i) || (l && !i)) && (n = e), !0;
                             }),
                         null != n)
@@ -95,16 +95,16 @@ function N(e) {
                 let n = t.getItem(),
                     i = f.Z.getChannel(n.id);
                 if (null == i) return !1;
-                let l = (0, Z.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
+                let l = (0, I.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
                 if (null == l) return !1;
-                if (x.Z.getGuildId() === _.I_8) return !0;
+                if (x.Z.getGuildId() === Z.I_8) return !0;
                 let r = v.Z.getGuild(n.guildId);
                 if (null == r) return !1;
                 let a = f.Z.getChannel(l.parentId),
                     o = f.Z.getChannel(i.parent_id),
-                    s = C.Z.can(_.Plq.MANAGE_CHANNELS, r),
-                    c = null != o ? C.Z.can(_.Plq.MANAGE_CHANNELS, o) : s,
-                    u = null != a ? C.Z.can(_.Plq.MANAGE_CHANNELS, a) : s;
+                    s = C.Z.can(Z.Plq.MANAGE_CHANNELS, r),
+                    c = null != o ? C.Z.can(Z.Plq.MANAGE_CHANNELS, o) : s,
+                    u = null != a ? C.Z.can(Z.Plq.MANAGE_CHANNELS, a) : s;
                 return c && u;
             }
         },
@@ -132,10 +132,10 @@ function N(e) {
             {
                 canDrag(e) {
                     let { channel: t } = e;
-                    if (x.Z.getGuildId() === _.I_8) return !0;
+                    if (x.Z.getGuildId() === Z.I_8) return !0;
                     let l = v.Z.getGuild(t.getGuildId());
                     if (null == l) return !1;
-                    if ((0, h.r1)(l.id) && C.Z.can(_.Plq.MANAGE_CHANNELS, l))
+                    if ((0, h.r1)(l.id) && C.Z.can(Z.Plq.MANAGE_CHANNELS, l))
                         return (
                             'true' !== a.K.get('doNotShowReorderModal') &&
                                 (0, o.openModalLazy)(async () => {
@@ -144,9 +144,9 @@ function N(e) {
                                 }),
                             !1
                         );
-                    if (t.type === _.d4z.GUILD_CATEGORY) return C.Z.can(_.Plq.MANAGE_CHANNELS, l) && !(0, h.r1)(l.id);
+                    if (t.type === Z.d4z.GUILD_CATEGORY) return C.Z.can(Z.Plq.MANAGE_CHANNELS, l) && !(0, h.r1)(l.id);
                     let r = f.Z.getChannel(t.parent_id);
-                    return (null != r && C.Z.can(_.Plq.MANAGE_CHANNELS, r)) || (null == r && C.Z.can(_.Plq.MANAGE_CHANNELS, l));
+                    return (null != r && C.Z.can(Z.Plq.MANAGE_CHANNELS, r)) || (null == r && C.Z.can(Z.Plq.MANAGE_CHANNELS, l));
                 },
                 beginDrag(e) {
                     let {
@@ -163,7 +163,7 @@ function N(e) {
                         type: l,
                         channelList: (0, u.Z)(o._categories, o, (e) => {
                             let { channel: t } = e;
-                            if (t.type === _.d4z.GUILD_CATEGORY && null != o[t.id] && 0 === o[t.id].length) return a === _.I_8 || (C.Z.can(_.Plq.MANAGE_CHANNELS, t) && C.Z.can(_.Plq.VIEW_CHANNEL, t));
+                            if (t.type === Z.d4z.GUILD_CATEGORY && null != o[t.id] && 0 === o[t.id].length) return a === Z.I_8 || (C.Z.can(Z.Plq.MANAGE_CHANNELS, t) && C.Z.can(Z.Plq.VIEW_CHANNEL, t));
                             return !p.Z.isCollapsed(t.parent_id);
                         }),
                         guildId: i

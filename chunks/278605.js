@@ -1,14 +1,14 @@
-s.d(t, {
+t.d(e, {
     ah: function () {
-        return i;
+        return c;
     },
     xP: function () {
-        return a;
+        return i;
     }
 });
-var n = s(818083),
-    r = s(987338);
-let i = (0, n.B)({
+var n = t(818083),
+    r = t(987338);
+let c = (0, n.B)({
     kind: 'user',
     id: '2024-11_marketing_page_v2_experiment',
     label: 'Marketing Page V2 Experiment',
@@ -27,7 +27,7 @@ let i = (0, n.B)({
         }
     ]
 });
-function a(e) {
-    let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !1 });
-    return t;
+function i(s) {
+    let { enabled: e } = c.useExperiment({ location: s }, { autoTrackExposure: !1 });
+    return e;
 }

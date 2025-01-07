@@ -13,14 +13,14 @@ var s = n(481060),
     c = n(937615),
     d = n(474936),
     u = n(981631),
-    m = n(388032),
-    g = n(637444);
+    g = n(388032),
+    m = n(637444);
 let f = (e) => {
         let { text: t, badge: n, variant: i } = e;
         return (0, a.jsxs)(s.Text, {
             color: 'none',
             variant: null != i ? i : 'text-md/medium',
-            className: g.rowLabelText,
+            className: m.rowLabelText,
             children: [t, ' ', n]
         });
     },
@@ -32,10 +32,10 @@ let f = (e) => {
                       (0, a.jsx)(s.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: n ? g.basicCheckMark : g.premiumCheckMark,
+                          className: n ? m.basicCheckMark : m.premiumCheckMark,
                           'aria-hidden': !0
                       }),
-                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t['tq+6t7']) })
+                      (0, a.jsx)(s.HiddenVisually, { children: g.intl.string(g.t['tq+6t7']) })
                   ]
               })
             : (0, a.jsxs)(a.Fragment, {
@@ -43,10 +43,10 @@ let f = (e) => {
                       (0, a.jsx)(s.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: g.closeIcon,
+                          className: m.closeIcon,
                           'aria-hidden': !0
                       }),
-                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t.l4qZrq) })
+                      (0, a.jsx)(s.HiddenVisually, { children: g.intl.string(g.t.l4qZrq) })
                   ]
               });
     };
@@ -55,7 +55,7 @@ let _ = (e, t, n, i) => {
     let r = {
         0: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t['09yRKy']),
+                text: g.intl.string(g.t['09yRKy']),
                 variant: 'text-lg/bold'
             }),
             tier0Column: (0, a.jsx)(a.Fragment, { children: (0, a.jsx)(f, { text: o.ZP.formatPriceString(e, d.rV.MONTH) }) }),
@@ -65,13 +65,13 @@ let _ = (e, t, n, i) => {
         },
         18: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t.Ij3Zmp),
+                text: g.intl.string(g.t.Ij3Zmp),
                 variant: 'text-lg/bold'
             }),
             withBottomBorder: !1
         },
         11: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['svn/YW']) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t['svn/YW']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -79,7 +79,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         8: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.ID5B6e) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.ID5B6e) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -87,7 +87,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         14: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.PBUrx8) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.PBUrx8) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -97,13 +97,13 @@ let _ = (e, t, n, i) => {
         },
         19: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t.Wme3nZ),
+                text: g.intl.string(g.t.Wme3nZ),
                 variant: 'text-lg/bold'
             }),
             withBottomBorder: !1
         },
         1: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.s186xc) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.s186xc) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -111,7 +111,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         2: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.RIRtn5) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.RIRtn5) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -119,7 +119,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         3: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.Uukj4u) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.Uukj4u) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -127,7 +127,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         13: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.NIKDqK) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.NIKDqK) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -135,7 +135,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         10: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['5OAKh4']) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t['5OAKh4']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -145,18 +145,18 @@ let _ = (e, t, n, i) => {
         },
         20: {
             label: (0, a.jsx)(f, {
-                text: m.intl.string(m.t['6b3ydH']),
+                text: g.intl.string(g.t['6b3ydH']),
                 variant: 'text-lg/bold'
             }),
             withBottomBorder: !1
         },
         5: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.zAn3dH) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.zAn3dH) }),
             tier0Column: (0, a.jsx)(f, { text: (0, o.v9)(d.p9.TIER_0) }),
             tier2Column: (0, a.jsx)(f, { text: (0, o.v9)(d.p9.TIER_2) })
         },
         12: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.qQxxVV) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.qQxxVV) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -164,7 +164,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         4: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['9kRJS0']) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t['9kRJS0']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !0,
                 isTier0: !0
@@ -172,7 +172,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         6: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.VwxlMz) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.VwxlMz) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -181,7 +181,7 @@ let _ = (e, t, n, i) => {
         },
         7: {
             label: (0, a.jsx)(f, {
-                text: m.intl.formatToPlainString(m.t.nyhDp6, {
+                text: g.intl.formatToPlainString(g.t.nyhDp6, {
                     numBoosts: d.cb,
                     percentageOff: (0, c.T3)(l.default.locale, d.Rr / 100)
                 })
@@ -193,7 +193,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         17: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['93xPy8']) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t['93xPy8']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -201,7 +201,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         9: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.IzrZHx) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.IzrZHx) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -209,7 +209,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         21: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t.Rj1Qys) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t.Rj1Qys) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -217,7 +217,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         16: {
-            label: (0, a.jsx)(f, { text: m.intl.formatToPlainString(m.t['8crdzM'], { maxChars: u.en1 }) }),
+            label: (0, a.jsx)(f, { text: g.intl.formatToPlainString(g.t['8crdzM'], { maxChars: u.en1 }) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0
@@ -225,7 +225,7 @@ let _ = (e, t, n, i) => {
             tier2Column: (0, a.jsx)(p, { includes: !0 })
         },
         15: {
-            label: (0, a.jsx)(f, { text: m.intl.string(m.t['il8+nJ']) }),
+            label: (0, a.jsx)(f, { text: g.intl.string(g.t['il8+nJ']) }),
             tier0Column: (0, a.jsx)(p, {
                 includes: !1,
                 isTier0: !0

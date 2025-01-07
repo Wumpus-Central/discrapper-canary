@@ -9,18 +9,18 @@ var r = n(120356),
     c = n(906732),
     d = n(927359),
     u = n(975298),
-    m = n(125529),
-    g = n(78839),
+    g = n(125529),
+    m = n(78839),
     f = n(975104),
     p = n(63063),
     _ = n(775412),
     h = n(520540),
-    E = n(501862),
-    b = n(533525),
-    x = n(197115),
+    x = n(501862),
+    E = n(533525),
+    b = n(197115),
     C = n(823188),
-    T = n(184176),
-    v = n(938736),
+    v = n(184176),
+    T = n(938736),
     N = n(386733),
     I = n(474936),
     S = n(981631),
@@ -28,9 +28,9 @@ var r = n(120356),
     j = n(477746),
     A = n(872905),
     P = n(578478);
-let Z = (e) => {
+let O = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: r, headingBottom: s } = w();
+            { headingText: n, headingTop: r, headingBottom: s } = y();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: a()(j.container, t),
@@ -53,7 +53,7 @@ let Z = (e) => {
                             s,
                             (0, i.jsx)('div', {
                                 className: j.buttonContainer,
-                                children: (0, i.jsx)(x.Z, {
+                                children: (0, i.jsx)(b.Z, {
                                     color: l.ButtonColors.BRAND,
                                     buttonText: R.intl.string(R.t['3KomGR']),
                                     className: j.button,
@@ -66,11 +66,11 @@ let Z = (e) => {
             })
         });
     },
-    M = (e) => {
+    Z = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = h.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === h.p.VARIANT_2,
-            { headingText: a, headingTop: s, headingBottom: o } = w();
+            { headingText: a, headingTop: s, headingBottom: o } = y();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -94,7 +94,7 @@ let Z = (e) => {
                             r &&
                                 (0, i.jsx)('div', {
                                     className: j.buttonContainer,
-                                    children: (0, i.jsx)(x.Z, {
+                                    children: (0, i.jsx)(b.Z, {
                                         color: l.ButtonColors.BRAND,
                                         buttonText: R.intl.string(R.t['3KomGR']),
                                         className: j.button,
@@ -108,8 +108,8 @@ let Z = (e) => {
             ]
         });
     },
-    B = () => {
-        let { headingText: e } = w();
+    M = () => {
+        let { headingText: e } = y();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -131,33 +131,33 @@ let Z = (e) => {
                                     children: e
                                 })
                             }),
-                            (0, i.jsx)(T.Z, {})
+                            (0, i.jsx)(v.Z, {})
                         ]
                     })
                 })
             ]
         });
     },
-    [O, w] = (0, f.Z)();
+    [B, y] = (0, f.Z)();
 t.Z = (e) => {
     let { className: t, location: n } = e,
         { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        l = (0, s.e7)([g.ZP], () => g.ZP.inReverseTrial()),
+        l = (0, s.e7)([m.ZP], () => m.ZP.inReverseTrial()),
         f = (0, _._O)(),
         h = R.intl.string(R.t.qYKftb),
-        x = (0, b.b)(n),
-        T = (0, v.pn)(n),
-        N = (0, i.jsx)(Z, { className: t }),
+        b = (0, E.b)(n),
+        v = (0, T.pn)(n),
+        N = (0, i.jsx)(O, { className: t }),
         A = R.intl.string(R.t.ifwQZW),
         P = !1,
-        { fractionalState: w, endsAt: y } = (0, u.Z)(),
-        k = (0, d.Z)(y, d.a.ENDS_IN);
-    l ? ((A = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(B, {}))) : (x || T) && ((h = R.intl.string(R.t.qYKftb)), (A = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(M, { location: n })));
+        { fractionalState: y, endsAt: w } = (0, u.Z)(),
+        k = (0, d.Z)(w, d.a.ENDS_IN);
+    l ? ((A = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(M, {}))) : (b || v) && ((h = R.intl.string(R.t.qYKftb)), (A = R.intl.string(R.t.ifwQZW)), (N = (0, i.jsx)(Z, { location: n })));
     let L = null;
-    if (w !== I.a$.NONE) {
+    if (y !== I.a$.NONE) {
         (f = !0), (h = R.intl.string(R.t.vaqFvb)), (P = !0);
         let e = R.intl.format(R.t['yR+oDA'], { helpCenterLink: p.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-        L = (0, i.jsx)(m.Z, {
+        L = (0, i.jsx)(g.Z, {
             text: e,
             'aria-label': e.toString(),
             tooltipClassName: j.tooltip,
@@ -166,7 +166,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', {
                     ...e,
                     className: j.pillContainer,
-                    children: (0, i.jsx)(E.Z, {
+                    children: (0, i.jsx)(x.Z, {
                         countdownText: k,
                         showInfoIcon: !0
                     })
@@ -186,7 +186,7 @@ t.Z = (e) => {
             : (0, i.jsx)(C.Cy, { ...U });
     return (0, i.jsx)(c.Gt, {
         value: r,
-        children: (0, i.jsx)(O.Provider, {
+        children: (0, i.jsx)(B.Provider, {
             value: {
                 headingText: A,
                 headingTop: D,

@@ -13,8 +13,8 @@ var a = n(120356),
     c = n(933557),
     d = n(592125),
     u = n(430824),
-    m = n(496675),
-    h = n(944486),
+    h = n(496675),
+    m = n(944486),
     x = n(914010),
     f = n(233608),
     p = n(71080),
@@ -42,16 +42,16 @@ function v(e) {
     });
 }
 function j() {
-    let e = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
+    let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        j = (0, o.e7)([m.Z], () => m.Z.computePermissions(n)),
-        C = (0, o.e7)([m.Z], () => m.Z.computePermissions(a)),
-        _ = (0, c.ZP)(n, !0),
-        T = null != n ? (0, p.IG)(n, !1, !0) : null,
+        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        T = (0, c.ZP)(n, !0),
+        _ = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
-        N = Object.values(null != T ? T : {}).map((e) => {
+        N = Object.values(null != _ ? _ : {}).map((e) => {
             let { title: t, flag: n } = e,
                 a = i.e$(j, n);
             return (0, r.jsx)(
@@ -85,7 +85,7 @@ function j() {
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
+                            children: null != T ? 'Permissions in '.concat(T) : 'No channel selected'
                         }),
                         N
                     ]

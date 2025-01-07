@@ -22,18 +22,18 @@ var i = n(200651),
 function x(e) {
     let { guild: t, selected: n } = e,
         x = (0, d.jS)(t.id, 'Guild Sidebar'),
-        Z = (0, r.e7)([m.Z], () => m.Z.can(v.Plq.KICK_MEMBERS, t)),
-        I = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        _ = x && Z && null != I ? I : 0;
+        I = (0, r.e7)([m.Z], () => m.Z.can(v.Plq.KICK_MEMBERS, t)),
+        _ = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        Z = x && I && null != _ ? _ : 0;
     l.useEffect(() => {
-        Z &&
+        I &&
             x &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: h.wB.SUBMITTED,
                 limit: p.p
             });
-    }, [Z, t.id, x]);
+    }, [I, t.id, x]);
     let b = l.useCallback(() => {
             (0, g._X)(t.id);
         }, [t.id]),
@@ -51,7 +51,7 @@ function x(e) {
             text: C.intl.string(C.t.oclz3d),
             selected: n,
             onClick: b,
-            trailing: _ > 0 ? (0, i.jsx)(o.NumberBadge, { count: _ }) : null
+            trailing: Z > 0 ? (0, i.jsx)(o.NumberBadge, { count: Z }) : null
         })
     });
 }

@@ -13,8 +13,8 @@ var r = n(200651),
     c = n.n(s),
     d = n(442837),
     u = n(481060),
-    m = n(129861),
-    h = n(665149),
+    h = n(129861),
+    m = n(665149),
     x = n(301801),
     f = n(594174),
     p = n(55935),
@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(257785),
     j = n(484036),
     C = n(681619),
-    _ = n(621060),
-    T = n(388032),
+    T = n(621060),
+    _ = n(388032),
     S = n(931933),
     N = n(941469);
 let y = [
@@ -80,18 +80,18 @@ let E = [
                     d = c()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(h.ZP, {
+                        (0, r.jsxs)(m.ZP, {
                             className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
-                                (0, r.jsx)(h.ZP.Icon, {
+                                (0, r.jsx)(m.ZP.Icon, {
                                     icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, r.jsx)(h.ZP.Title, {
+                                (0, r.jsx)(m.ZP.Title, {
                                     wrapperClassName: N.headerTitle,
                                     children: t
                                 }),
-                                (0, r.jsx)(h.ZP.Icon, {
+                                (0, r.jsx)(m.ZP.Icon, {
                                     icon: u.CircleXIcon,
                                     tooltip: 'Close',
                                     onClick: o
@@ -112,7 +112,7 @@ let E = [
                                 null != s &&
                                     (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(m.Z, { user: s })
+                                        children: (0, r.jsx)(h.Z, { user: s })
                                     }),
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
@@ -177,8 +177,8 @@ function Z() {
         [t, n] = a.useState(''),
         l = (0, d.e7)([b.Z], () => b.Z.loggedEventsVersion),
         s = a.useMemo(() => b.Z.loggedEvents, [l]),
-        [c, m] = a.useState(Object.keys(w)),
-        [h, f] = a.useState(s),
+        [c, h] = a.useState(Object.keys(w)),
+        [m, f] = a.useState(s),
         p = a.useRef(null),
         v = a.useCallback(
             (0, o.throttle)(
@@ -206,18 +206,18 @@ function Z() {
         ),
         k = a.useMemo(
             () =>
-                h.filter((e) => {
+                m.filter((e) => {
                     for (let t of c) if (w[t].filter(e)) return !0;
                     return !1;
                 }),
-            [h, c]
+            [m, c]
         );
     a.useEffect(() => {
         v(t, s);
     }, [t, v, s]);
     let [I, Z] = a.useState(void 0),
         R = k.find((e) => e.key === I),
-        { TabBar: O, renderSelectedTab: B } = (0, _.Z)({ tabs: E }, []);
+        { TabBar: O, renderSelectedTab: B } = (0, T.Z)({ tabs: E }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, S.panel),
@@ -231,11 +231,11 @@ function Z() {
                         size: u.Button.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: T.intl.string(T.t.VkKicX),
+                            title: _.intl.string(_.t.VkKicX),
                             children: (0, r.jsx)(u.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': T.intl.string(T.t.VkKicX)
+                                'aria-label': _.intl.string(_.t.VkKicX)
                             })
                         })
                     }),
@@ -250,7 +250,7 @@ function Z() {
                                     className: i()(S.filter, c.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void m((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void h((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
                                     children: n.label
                                 },

@@ -8,14 +8,14 @@ var r = n(120356),
     c = n(743612),
     d = n(735825),
     u = n(506829),
-    m = n(721239),
-    g = n(557634),
+    g = n(721239),
+    m = n(557634),
     f = n(992429);
 t.Z = (e) => {
     var t;
     let n,
         r,
-        { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: T = '', descriptionCta: v = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
+        { title: p, titleClassName: _, buttonClassName: h, perkImage: x, isCarousel: E, onCtaClick: b, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
         R = (0, o._)(N),
         j = (0, l.yQ)(),
         A = (null == j ? void 0 : j.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -24,10 +24,10 @@ t.Z = (e) => {
             (n = f), (r = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = m), (r = 'locked icon');
+            (n = g), (r = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = g), (r = 'thumbs up icon');
+            (n = m), (r = 'thumbs up icon');
             break;
         default:
             (n = void 0), (r = '');
@@ -41,17 +41,17 @@ t.Z = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: R,
                 titleClassName: _,
-                subtitle: T,
+                subtitle: v,
                 subtitleClassName: I
             }),
-            null != E &&
+            null != x &&
                 (0, i.jsxs)('div', {
-                    className: a()(u.relative, { [u.cardImage]: !b }),
+                    className: a()(u.relative, { [u.cardImage]: !E }),
                     children: [
                         (0, i.jsx)('img', {
-                            src: E,
+                            src: x,
                             alt: '',
-                            className: b ? (P ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
+                            className: E ? (P ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
                         }),
                         P
                             ? (0, i.jsx)('div', {
@@ -71,13 +71,13 @@ t.Z = (e) => {
                         className: u.cardIllustrationNoHover,
                         children: [
                             C,
-                            0 !== v.length &&
-                                null != x &&
+                            0 !== T.length &&
+                                null != b &&
                                 (0, i.jsx)(s.Button, {
                                     className: h,
                                     disabled: !A,
                                     fullWidth: !0,
-                                    onClick: x,
+                                    onClick: b,
                                     children: (0, i.jsxs)('div', {
                                         className: null == R ? void 0 : null === (t = R.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
@@ -85,7 +85,7 @@ t.Z = (e) => {
                                                 alt: r,
                                                 src: n
                                             }),
-                                            v
+                                            T
                                         ]
                                     })
                                 })

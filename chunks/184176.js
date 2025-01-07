@@ -8,8 +8,8 @@ var r = n(442837),
     c = n(78839),
     d = n(74538),
     u = n(823188),
-    m = n(474936),
-    g = n(981631),
+    g = n(474936),
+    m = n(981631),
     f = n(388032),
     p = n(536720);
 t.Z = () => {
@@ -35,9 +35,9 @@ t.Z = () => {
             (0, i.jsx)(a.Button, {
                 onClick: () => {
                     (0, o.Z)({
-                        initialPlanId: m.Xh.PREMIUM_MONTH_TIER_2,
+                        initialPlanId: g.Xh.PREMIUM_MONTH_TIER_2,
                         analyticsLocations: n.analyticsLocations,
-                        analyticsObject: { object: g.qAy.BUTTON_CTA }
+                        analyticsObject: { object: m.qAy.BUTTON_CTA }
                     });
                 },
                 look: a.ButtonLooks.OUTLINED,

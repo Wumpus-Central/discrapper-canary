@@ -15,9 +15,9 @@ var i = n(200651),
     v = n(306680),
     C = n(979651),
     x = n(938475),
-    Z = n(714794),
-    I = n(135724),
-    _ = n(25601),
+    I = n(714794),
+    _ = n(135724),
+    Z = n(25601),
     b = n(207055),
     S = n(981631),
     N = n(124368),
@@ -93,13 +93,13 @@ t.Z = l.memo(function (e) {
         {
             unread: D,
             mentionCount: G,
-            isMentionLowImportance: k
+            isMentionLowImportance: B
         } = (0, s.cj)([v.ZP], () => ({
             unread: v.ZP.hasUnread(t.id),
             mentionCount: v.ZP.getMentionCount(t.id),
             isMentionLowImportance: v.ZP.getIsMentionLowImportance(t.id)
         })),
-        B = (0, s.e7)([f.Z], () => f.Z.isMuted(t.id)),
+        k = (0, s.e7)([f.Z], () => f.Z.isMuted(t.id)),
         U = l.useCallback(
             (e) => {
                 (0, m.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
@@ -160,14 +160,14 @@ t.Z = l.memo(function (e) {
                 children: (0, i.jsxs)('div', {
                     className: a()(y.iconVisibility, j.wrapper, j.typeThread, {
                         [j.modeSelected]: r,
-                        [j.modeMuted]: !r && B,
-                        [j.modeUnreadImportant]: !B && !r && D,
+                        [j.modeMuted]: !r && k,
+                        [j.modeUnreadImportant]: !k && !r && D,
                         [j.withGuildIcon]: M
                     }),
                     onMouseDown: O,
                     onContextMenu: V,
                     children: [
-                        !D || B || r ? null : (0, i.jsx)('div', { className: a()(j.unread, j.unreadImportant) }),
+                        !D || k || r ? null : (0, i.jsx)('div', { className: a()(j.unread, j.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
                             ...W,
                             innerRef: z,
@@ -187,16 +187,16 @@ t.Z = l.memo(function (e) {
                                         className: j.children,
                                         children: [
                                             H > 0 && t.userLimit > 0
-                                                ? (0, i.jsx)(I.Z, {
+                                                ? (0, i.jsx)(_.Z, {
                                                       userCount: H,
                                                       video: R,
                                                       channel: t
                                                   })
                                                 : null,
-                                            (0, Z.Z)(G)
-                                                ? (0, i.jsx)(_.Z, {
+                                            (0, I.Z)(G)
+                                                ? (0, i.jsx)(Z.Z, {
                                                       mentionsCount: G,
-                                                      isMentionLowImportance: k
+                                                      isMentionLowImportance: B
                                                   })
                                                 : null
                                         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return I;
     }
 }),
     n(47120),
@@ -90,13 +90,13 @@ function x(e) {
         })
     );
 }
-function Z(e) {
+function I(e) {
     let { onActivate: t } = e,
-        [n, Z] = l.useState(!1),
-        I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
-        _ = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
+        [n, I] = l.useState(!1),
+        _ = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
+        Z = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         b = (0, f.Z)(),
-        S = (0, o.Z)(I),
+        S = (0, o.Z)(_),
         N = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -108,12 +108,12 @@ function Z(e) {
             return e;
         }, [b, n]);
     l.useEffect(() => {
-        n && !_ && s.Z.fetchRequestToJoinGuilds();
-    }, [n, _]);
-    let E = null != I && b.includes(I);
+        n && !Z && s.Z.fetchRequestToJoinGuilds();
+    }, [n, Z]);
+    let E = null != _ && b.includes(_);
     return (l.useEffect(() => {
-        !n && E && S !== I && Z(!0);
-    }, [n, E, S, I]),
+        !n && E && S !== _ && I(!0);
+    }, [n, E, S, _]),
     0 === b.length)
         ? null
         : (0, i.jsx)(x, {
@@ -126,7 +126,7 @@ function Z(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      Z(!n), c.ZP.clearCoachmark();
+                      I(!n), c.ZP.clearCoachmark();
                   },
                   folderIconContent: (0, i.jsx)(a.HourglassIcon, {
                       size: 'custom',

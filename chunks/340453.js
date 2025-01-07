@@ -17,8 +17,8 @@ function u(e) {
         s = (0, l.j_)(t.id, n),
         {
             avatarSrc: u,
-            avatarDecorationSrc: m,
-            eventHandlers: g
+            avatarDecorationSrc: g,
+            eventHandlers: m
         } = (0, a.Z)({
             user: t,
             size: r.AvatarSizes.SIZE_40,
@@ -27,11 +27,11 @@ function u(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ...g,
+                ...m,
                 children: (0, i.jsx)(d, {
                     className: c.avatar,
                     src: u,
-                    avatarDecoration: m,
+                    avatarDecoration: g,
                     size: r.AvatarSizes.SIZE_40,
                     'aria-label': t.username
                 })

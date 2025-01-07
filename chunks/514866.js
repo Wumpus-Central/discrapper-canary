@@ -13,8 +13,8 @@ var a = n(120356),
     c = n(423932),
     d = n(695346),
     u = n(601948),
-    m = n(594174),
-    h = n(173183),
+    h = n(594174),
+    m = n(173183),
     x = n(232186);
 let f = () => {
     Promise.all([n.e('52030'), n.e('66411')])
@@ -43,24 +43,24 @@ let f = () => {
         });
 };
 function p() {
-    let e = m.default.getCurrentUser(),
+    let e = h.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = d.Rt.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(h.buttonsContainer, x.marginBottom20),
+                className: l()(m.buttonsContainer, x.marginBottom20),
                 children: (0, r.jsx)(u.S, { isDevTools: !0 })
             }),
             (0, r.jsx)('div', {
-                className: l()(h.buttonsContainer, x.marginBottom20),
+                className: l()(m.buttonsContainer, x.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
                     onClick: f,
                     children: 'Launch MFA'
                 })
             }),
             (0, r.jsx)('div', {
-                className: l()(h.buttonsContainer, x.marginBottom20),
+                className: l()(m.buttonsContainer, x.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
                     onClick: () => (0, c.Z)(),
                     children: 'Launch Vibing Wumpus'
@@ -68,7 +68,7 @@ function p() {
             }),
             t &&
                 (0, r.jsx)('div', {
-                    className: l()(h.buttonsContainer, x.marginBottom20),
+                    className: l()(m.buttonsContainer, x.marginBottom20),
                     children: (0, r.jsx)(i.Button, {
                         onClick: () => (0, s.N)(),
                         children: 'Launch Captcha Test Tool'
@@ -76,7 +76,7 @@ function p() {
                 }),
             t &&
                 (0, r.jsx)('div', {
-                    className: l()(h.buttonsContainer, x.marginBottom20),
+                    className: l()(m.buttonsContainer, x.marginBottom20),
                     children: (0, r.jsx)(i.Button, {
                         onClick: () => (0, o.E)(),
                         children: 'Launch Age Verification Test Tool'
@@ -84,7 +84,7 @@ function p() {
                 }),
             t &&
                 (0, r.jsx)('div', {
-                    className: l()(h.buttonsContainer, x.marginBottom20),
+                    className: l()(m.buttonsContainer, x.marginBottom20),
                     children: (0, r.jsx)(i.FormSwitch, {
                         value: n,
                         onChange: (e) => d.Rt.updateSetting(e),

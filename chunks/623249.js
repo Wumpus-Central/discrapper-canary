@@ -20,8 +20,8 @@ var o = n(200651),
     p = n(210887),
     m = n(617136),
     x = n(113434),
-    g = n(497505),
-    f = n(918701),
+    f = n(497505),
+    g = n(918701),
     h = n(475595),
     C = n(667105),
     v = n(981631),
@@ -33,14 +33,14 @@ function N(e) {
         B = (0, x.B4)(t);
     null == B && N();
     let [T, S] = (0, r.useState)(n),
-        A = (0, x.KX)(),
-        y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, x.KX)(),
+        A = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, C.g2)({
-            useReducedMotion: y,
+            useReducedMotion: A,
             className: _.colorTransition
         }),
         w = T.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, f.Bz)(B),
+        I = (0, g.Bz)(B),
         k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
@@ -49,7 +49,7 @@ function N(e) {
                 R.startAnimation(),
                     (0, m._3)({
                         questId: B.id,
-                        questContent: g.jn.CONNECTIONS_MODAL,
+                        questContent: f.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
@@ -92,7 +92,7 @@ function N(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: _.upperBodyText,
-                        children: A.message
+                        children: y.message
                     })
                 ]
             }),
@@ -179,10 +179,10 @@ function N(e) {
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
                             N(),
-                                (0, f.V$)(
+                                (0, g.V$)(
                                     { quest: B },
                                     {
-                                        content: g.jn.CONNECTIONS_MODAL,
+                                        content: f.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                                     }
                                 );

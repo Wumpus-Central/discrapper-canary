@@ -16,9 +16,9 @@ var i,
     v = n(19780),
     C = n(306680),
     x = n(944486),
-    Z = n(594174),
-    I = n(451478),
-    _ = n(276952),
+    I = n(594174),
+    _ = n(451478),
+    Z = n(276952),
     b = n(682662),
     S = n(662146),
     N = n(674552),
@@ -61,7 +61,7 @@ class A extends (i = r.PureComponent) {
         e(),
             t
                 .update({
-                    immediate: !I.Z.isFocused(),
+                    immediate: !_.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
@@ -87,7 +87,7 @@ class A extends (i = r.PureComponent) {
         this.setState({ animating: !0 }, () =>
             t
                 .update({
-                    immediate: !I.Z.isFocused(),
+                    immediate: !_.Z.isFocused(),
                     height: 0,
                     opacity: 0,
                     scale: 0,
@@ -111,7 +111,7 @@ class A extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === E.d4z.DM ? Z.default.getUser(e.getRecipientId()) : null;
+            t = e.type === E.d4z.DM ? I.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -122,7 +122,7 @@ class A extends (i = r.PureComponent) {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(b.H, {
                 children: [
-                    (0, l.jsx)(_.Z, {
+                    (0, l.jsx)(Z.Z, {
                         hovered: !g && f,
                         selected: !g && n,
                         unread: !g && h,
@@ -185,7 +185,7 @@ class A extends (i = r.PureComponent) {
             }),
             j(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === E.d4z.DM ? Z.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === E.d4z.DM ? I.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
@@ -224,10 +224,10 @@ j(A, 'defaultProps', {
             u = (0, s.e7)([C.ZP], () => C.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
             m = r === n,
-            Z = !1,
-            I = !1;
+            I = !1,
+            _ = !1;
         return (
-            m && ((Z = a === E.WtW.VOICE), (I = a === E.WtW.VIDEO)),
+            m && ((I = a === E.WtW.VOICE), (_ = a === E.WtW.VIDEO)),
             (0, l.jsx)(A, {
                 ...e,
                 ref: t,
@@ -235,8 +235,8 @@ j(A, 'defaultProps', {
                 unread: u > 0,
                 selected: c === n,
                 badge: u,
-                audio: Z,
-                video: I,
+                audio: I,
+                video: _,
                 stream: o,
                 isCurrentUserInThisDMCall: m,
                 isGDMFacepileEnabled: h

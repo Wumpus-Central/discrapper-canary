@@ -20,26 +20,26 @@ var i = n(200651),
     v = n(540126),
     C = n(434479),
     x = n(981631),
-    Z = n(176505),
-    I = n(490897),
-    _ = n(388032),
+    I = n(176505),
+    _ = n(490897),
+    Z = n(388032),
     b = n(518360);
 function S(e) {
     let { guild: t, selected: S } = e,
         N = (0, h.Z)(t),
         E = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         y = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        j = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
+        j = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, _.W.GUILD_ONBOARDING_QUESTION)),
         T = y.length > v.Cb,
         P = (0, r.e7)([d.Z, m.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = m.ZP.lastMessageId(t.id, I.W.GUILD_ONBOARDING_QUESTION);
+                n = m.ZP.lastMessageId(t.id, _.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = g.default.extractTimestamp(n);
             return null != e && e > i;
         }),
         A = l.useCallback(() => {
-            (0, f.uL)(x.Z5c.CHANNEL(t.id, N ? Z.oC.CUSTOMIZE_COMMUNITY : Z.oC.CHANNEL_BROWSER));
+            (0, f.uL)(x.Z5c.CHANNEL(t.id, N ? I.oC.CUSTOMIZE_COMMUNITY : I.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
             (e) => {
@@ -61,7 +61,7 @@ function S(e) {
             !P &&
             (M = (0, i.jsx)(s.TextBadge, {
                 color: o.Z.colors.BADGE_BRAND_BG.css,
-                text: _.intl.string(_.t.y2b7CA),
+                text: Z.intl.string(Z.t.y2b7CA),
                 className: b.newChannel
             })),
         (0, i.jsx)(C.m, {
@@ -72,7 +72,7 @@ function S(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: N ? _.intl.string(_.t.h9mGOD) : _.intl.string(_.t.et6wam),
+            text: N ? Z.intl.string(Z.t.h9mGOD) : Z.intl.string(Z.t.et6wam),
             selected: S,
             onClick: A,
             onContextMenu: w,

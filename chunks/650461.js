@@ -1,118 +1,118 @@
-r(47120), r(192379);
-var n,
-    i = r(392711),
-    o = r.n(i),
-    a = r(442837),
-    d = r(570140),
-    s = r(944163),
-    l = r(709054),
-    c = r(116175),
-    g = r(308083);
-function f(e, t, r) {
+n(47120), n(192379);
+var r,
+    l = n(392711),
+    i = n.n(l),
+    s = n(442837),
+    a = n(570140),
+    o = n(944163),
+    E = n(709054),
+    u = n(116175),
+    c = n(308083);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-let b = new Map(),
-    u = new Map(),
-    p = !1,
-    _ = Object.freeze({
+let _ = new Map(),
+    A = new Map(),
+    T = !1,
+    I = Object.freeze({
         gameApplicationIds: new Set(),
-        playstyle: g.zv.NONE,
+        playstyle: c.zv.NONE,
         interests: new Set(),
         description: '',
-        wildcardDescriptors: [g.U6, g.U6, g.U6],
+        wildcardDescriptors: [c.U6, c.U6, c.U6],
         tag: '',
-        verificationForm: { ...s.t },
-        badgeKind: c.ZD.SWORD,
+        verificationForm: { ...o.t },
+        badgeKind: u.ZD.SWORD,
         badgePrimaryColor: void 0,
         badgeSecondaryColor: void 0,
-        banner: g.qC.NIGHT_SKY,
+        banner: c.qC.NIGHT_SKY,
         brandPrimaryColor: void 0,
         brandSecondaryColor: void 0,
-        currentStep: g.Wy.GAMES,
-        furthestStep: g.Wy.GAMES,
+        currentStep: c.Wy.GAMES,
+        furthestStep: c.Wy.GAMES,
         requiredGameId: void 0
     });
-function C(e) {
+function g(e) {
     var t;
-    return null !== (t = b.get(e)) && void 0 !== t
+    return null !== (t = _.get(e)) && void 0 !== t
         ? t
         : (function () {
-              let e = o().cloneDeep(_);
-              return (e.badgeKind = (0, c.lP)()), (e.banner = (0, g.i1)()), e;
+              let e = i().cloneDeep(I);
+              return (e.badgeKind = (0, u.lP)()), (e.banner = (0, c.i1)()), e;
           })();
 }
-function S(e, t) {
-    let r = C(e);
-    b.set(e, {
-        ...r,
+function f(e, t) {
+    let n = g(e);
+    _.set(e, {
+        ...n,
         ...t
     });
-    let n = u.get(e);
-    if (null != n) {
-        let r = { ...n };
+    let r = A.get(e);
+    if (null != r) {
+        let n = { ...r };
         Object.keys(t).forEach((e) => {
-            delete r[e];
+            delete n[e];
         }),
-            u.set(e, r);
+            A.set(e, n);
     }
 }
-class m extends (n = a.ZP.PersistedStore) {
+class N extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
-            l.default.keys(e.progressByGuild).forEach((t) => {
-                var r, n, i, o, a;
-                b.set(t, {
-                    gameApplicationIds: new Set((r = e.progressByGuild[t]).gameApplicationIds),
-                    playstyle: r.playstyle,
-                    interests: new Set(r.interests),
-                    description: r.description,
-                    wildcardDescriptors: null !== (n = r.wildcardDescriptors) && void 0 !== n ? n : [g.U6, g.U6, g.U6],
-                    tag: r.tag,
-                    verificationForm: null !== (i = r.verificationForm) && void 0 !== i ? i : { ...s.t },
-                    badgeKind: null !== (o = r.badgeKind) && void 0 !== o ? o : c.ZD.SWORD,
-                    badgePrimaryColor: r.badgePrimaryColor,
-                    badgeSecondaryColor: r.badgeSecondaryColor,
-                    banner: null !== (a = r.banner) && void 0 !== a ? a : g.qC.NIGHT_SKY,
-                    brandPrimaryColor: r.brandPrimaryColor,
-                    brandSecondaryColor: r.brandSecondaryColor,
-                    currentStep: r.currentStep,
-                    furthestStep: r.furthestStep,
-                    requiredGameId: r.requiredGameId
+            E.default.keys(e.progressByGuild).forEach((t) => {
+                var n, r, l, i, s;
+                _.set(t, {
+                    gameApplicationIds: new Set((n = e.progressByGuild[t]).gameApplicationIds),
+                    playstyle: n.playstyle,
+                    interests: new Set(n.interests),
+                    description: n.description,
+                    wildcardDescriptors: null !== (r = n.wildcardDescriptors) && void 0 !== r ? r : [c.U6, c.U6, c.U6],
+                    tag: n.tag,
+                    verificationForm: null !== (l = n.verificationForm) && void 0 !== l ? l : { ...o.t },
+                    badgeKind: null !== (i = n.badgeKind) && void 0 !== i ? i : u.ZD.SWORD,
+                    badgePrimaryColor: n.badgePrimaryColor,
+                    badgeSecondaryColor: n.badgeSecondaryColor,
+                    banner: null !== (s = n.banner) && void 0 !== s ? s : c.qC.NIGHT_SKY,
+                    brandPrimaryColor: n.brandPrimaryColor,
+                    brandSecondaryColor: n.brandSecondaryColor,
+                    currentStep: n.currentStep,
+                    furthestStep: n.furthestStep,
+                    requiredGameId: n.requiredGameId
                 });
             });
     }
     getState() {
         let e = {};
         return (
-            b.forEach((t, r) => {
-                var n;
-                e[r] = {
-                    gameApplicationIds: Array.from((n = t).gameApplicationIds),
-                    playstyle: n.playstyle,
-                    interests: Array.from(n.interests),
-                    description: n.description,
-                    wildcardDescriptors: n.wildcardDescriptors,
-                    tag: n.tag,
-                    verificationForm: n.verificationForm,
-                    badgeKind: n.badgeKind,
-                    badgePrimaryColor: n.badgePrimaryColor,
-                    badgeSecondaryColor: n.badgeSecondaryColor,
-                    banner: n.banner,
-                    brandPrimaryColor: n.brandPrimaryColor,
-                    brandSecondaryColor: n.brandSecondaryColor,
-                    currentStep: n.currentStep,
-                    furthestStep: n.furthestStep,
-                    requiredGameId: n.requiredGameId
+            _.forEach((t, n) => {
+                var r;
+                e[n] = {
+                    gameApplicationIds: Array.from((r = t).gameApplicationIds),
+                    playstyle: r.playstyle,
+                    interests: Array.from(r.interests),
+                    description: r.description,
+                    wildcardDescriptors: r.wildcardDescriptors,
+                    tag: r.tag,
+                    verificationForm: r.verificationForm,
+                    badgeKind: r.badgeKind,
+                    badgePrimaryColor: r.badgePrimaryColor,
+                    badgeSecondaryColor: r.badgeSecondaryColor,
+                    banner: r.banner,
+                    brandPrimaryColor: r.brandPrimaryColor,
+                    brandSecondaryColor: r.brandSecondaryColor,
+                    currentStep: r.currentStep,
+                    furthestStep: r.furthestStep,
+                    requiredGameId: r.requiredGameId
                 };
             }),
             { progressByGuild: e }
@@ -120,57 +120,57 @@ class m extends (n = a.ZP.PersistedStore) {
     }
     getStateForGuild(e) {
         return {
-            progress: b.get(e),
-            errors: u.get(e),
-            submitting: p
+            progress: _.get(e),
+            errors: A.get(e),
+            submitting: T
         };
     }
     getGuildIds() {
-        return [...b.keys()];
+        return [..._.keys()];
     }
 }
-f(m, 'displayName', 'ClanSetupStore'),
-    f(m, 'persistKey', 'ClanSetupStore'),
-    (t.ZP = new m(d.Z, {
+d(N, 'displayName', 'ClanSetupStore'),
+    d(N, 'persistKey', 'ClanSetupStore'),
+    (t.ZP = new N(a.Z, {
         CLAN_SETUP_RESET: function () {
-            b.clear(), u.clear();
+            _.clear(), A.clear();
         },
         CLAN_SETUP_UPDATE: function (e) {
-            let { guildId: t, updates: r } = e;
-            S(t, r);
+            let { guildId: t, updates: n } = e;
+            f(t, n);
         },
         CLAN_SETUP_SUBMIT: function (e) {
             let { guildId: t } = e;
-            (p = !0), u.delete(t);
+            (T = !0), A.delete(t);
         },
         CLAN_SETUP_SUCCESS: function (e) {
             let { guildId: t } = e;
-            (p = !1), b.delete(t), u.delete(t);
+            (T = !1), _.delete(t), A.delete(t);
         },
         CLAN_SETUP_ERROR: function (e) {
-            let { guildId: t, error: r } = e;
-            (p = !1),
-                u.set(t, {
-                    gameApplicationIds: r.getFirstFieldErrorMessage('game_application_ids'),
-                    playstyle: r.getFirstFieldErrorMessage('play_style'),
-                    description: r.getFirstFieldErrorMessage('description'),
-                    wildcardDescriptors: r.getFirstFieldErrorMessage('wildcard_descriptors'),
-                    interests: r.getFirstFieldErrorMessage('search_terms'),
-                    tag: r.getFirstFieldErrorMessage('tag'),
-                    verificationForm: r.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
+            let { guildId: t, error: n } = e;
+            (T = !1),
+                A.set(t, {
+                    gameApplicationIds: n.getFirstFieldErrorMessage('game_application_ids'),
+                    playstyle: n.getFirstFieldErrorMessage('play_style'),
+                    description: n.getFirstFieldErrorMessage('description'),
+                    wildcardDescriptors: n.getFirstFieldErrorMessage('wildcard_descriptors'),
+                    interests: n.getFirstFieldErrorMessage('search_terms'),
+                    tag: n.getFirstFieldErrorMessage('tag'),
+                    verificationForm: n.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
                 });
         },
         MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
             let t;
-            let { form: r, guildId: n, isLocalUpdate: i } = e;
-            i &&
+            let { form: n, guildId: r, isLocalUpdate: l } = e;
+            l &&
                 ((t =
-                    null == r
-                        ? s.t
+                    null == n
+                        ? o.t
                         : {
-                              ...C(n).verificationForm,
-                              ...r
+                              ...g(r).verificationForm,
+                              ...n
                           }),
-                S(n, { verificationForm: t }));
+                f(r, { verificationForm: t }));
         }
     }));

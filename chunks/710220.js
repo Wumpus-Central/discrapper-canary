@@ -14,7 +14,7 @@ var r = n(481060),
 function d(e) {
     let { referrer: t, isMarketingPageV2Enabled: n } = e,
         d = (e) => (null != e.globalName ? e.globalName : e.username),
-        { avatarSrc: u, eventHandlers: m } = (0, a.Z)({
+        { avatarSrc: u, eventHandlers: g } = (0, a.Z)({
             user: t,
             size: s.EF.SIZE_32,
             animateOnHover: !0
@@ -31,7 +31,7 @@ function d(e) {
                         src: u,
                         'aria-label': t.username,
                         size: s.EF.SIZE_32,
-                        ...m
+                        ...g
                     })
                 }),
                 n

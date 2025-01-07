@@ -20,8 +20,8 @@ var i = n(200651),
     v = n(452081),
     S = n(46140),
     T = n(981631),
-    b = n(388032),
-    A = n(359643);
+    A = n(388032),
+    b = n(359643);
 t.Z = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, v.z)(),
         { onScroll: Z, scrollPosition: x } = (0, c.M)(),
@@ -44,28 +44,28 @@ t.Z = function () {
         window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
-        (0, o.Tt)({ location: b.intl.string(b.t.JALI2N) }),
+        (0, o.Tt)({ location: A.intl.string(A.t.JALI2N) }),
         (0, i.jsxs)('div', {
-            className: A.container,
+            className: b.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
                     variant: p._6.OVERLAY,
-                    children: [(0, i.jsx)('div', { className: A.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: x }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
+                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: x }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {
                     onScroll: Z,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            title: b.intl.format(b.t.lmMBf3, {}),
-                            description: b.intl.string(b.t.oWCrBg),
+                            title: A.intl.format(A.t.lmMBf3, {}),
+                            description: A.intl.string(A.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
-                                text: b.intl.string(b.t.hvVgAQ),
+                                text: A.intl.string(A.t.hvVgAQ),
                                 onClick: O
                             }),
-                            className: A.bannerContainer,
+                            className: b.bannerContainer,
                             children: (0, i.jsx)('div', {
-                                className: A.bannerImage,
-                                children: (0, i.jsx)('div', { className: A.bannerGradient })
+                                className: b.bannerImage,
+                                children: (0, i.jsx)('div', { className: b.bannerGradient })
                             })
                         }),
                         (0, i.jsxs)(h.Z, {
@@ -74,7 +74,7 @@ t.Z = function () {
                                     tabs: n,
                                     selectedTab: e,
                                     onTabSelect: t,
-                                    className: A.tabs
+                                    className: b.tabs
                                 }),
                                 e === _.e5.CLAIMED ? (0, i.jsx)(P, { onSelectTab: t }) : (0, i.jsx)(C.Z, {})
                             ]

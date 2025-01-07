@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return A;
+        return b;
     }
 }),
     n(411104);
@@ -78,7 +78,7 @@ async function v() {
 }
 let S = null,
     T = !0;
-function b() {
+function A() {
     if (T || (null != S && S !== g.hes.DISCONNECTED && S !== g.hes.RTC_DISCONNECTED))
         try {
             C();
@@ -90,21 +90,21 @@ function b() {
             if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), N(), (0, a.Z)();
         })();
 }
-function A() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(x), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', Z), b();
+function b() {
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(x), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', P), l.Z.subscribe('LOGIN_SUCCESS', Z), A();
 }
 function Z() {
     v(!0);
 }
 function x() {
     let e = c.Z.getState();
-    S !== e && ((S = e), b());
+    S !== e && ((S = e), A());
 }
 function L(e) {
     let { focused: t } = e;
-    (T = t), b();
+    (T = t), A();
 }
 function P(e) {
     let { state: t } = e;
-    (T = t === g.$7l.ACTIVE), b();
+    (T = t === g.$7l.ACTIVE), A();
 }

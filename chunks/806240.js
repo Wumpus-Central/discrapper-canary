@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
 var r = n(200651),
@@ -12,12 +12,12 @@ var r = n(200651),
     c = n(836768),
     d = n(859921),
     u = n(53876),
-    m = n(941469);
-function h() {
+    h = n(941469);
+function m() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(m.panel, u.panel),
+        className: i()(h.panel, u.panel),
         children: [
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,

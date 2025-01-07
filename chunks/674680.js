@@ -13,12 +13,12 @@ var r = n(780384),
     c = n(955204),
     d = n(231338),
     u = n(262284);
-let m = {
+let g = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     },
-    g = {
+    m = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -30,14 +30,14 @@ function f(e) {
         _ = (0, c.oX)(n);
     if (null == _) return null;
     let h = (0, a.getAvatarSpecs)(f),
-        { name: E, rarity: b } = _,
-        { color: x } = (0, c.F7)(b),
-        C = (0, r.wj)(p) ? m : g,
-        T = (h.size - h.offset - 2 * h.stroke) * 0.8,
-        v = h.size - h.stroke,
+        { name: x, rarity: E } = _,
+        { color: b } = (0, c.F7)(E),
+        C = (0, r.wj)(p) ? g : m,
+        v = (h.size - h.offset - 2 * h.stroke) * 0.8,
+        T = h.size - h.stroke,
         N = {
-            width: 0.4 * T,
-            height: 0.4 * T
+            width: 0.4 * v,
+            height: 0.4 * v
         },
         I = {
             width: N.width + 1,
@@ -49,19 +49,19 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: u.container,
         style: {
-            width: v,
-            height: v,
+            width: T,
+            height: T,
             padding: h.stroke
         },
-        'aria-label': ''.concat(null !== (t = E()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = x()) && void 0 !== t ? t : ''),
         children: [
             (0, i.jsx)('div', {
                 className: u.trophyIconContainer,
                 children: (0, i.jsx)(a.TrophyIcon, {
                     size: 'custom',
-                    color: d ? x : (0, l.Lq)(C.trophy),
-                    width: T,
-                    height: T
+                    color: d ? b : (0, l.Lq)(C.trophy),
+                    width: v,
+                    height: v
                 })
             }),
             !d &&
@@ -75,7 +75,7 @@ function f(e) {
                     })
                 }),
             d &&
-                b === c.EP.LEGENDARY &&
+                E === c.EP.LEGENDARY &&
                 (0, i.jsx)('div', {
                     className: u.lockContainer,
                     style: I,

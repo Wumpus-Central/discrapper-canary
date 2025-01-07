@@ -68,7 +68,7 @@ class T extends c.Z {
         super(), C(this, 'key', void 0), C(this, 'type', void 0), C(this, 'status', void 0), C(this, 'isMobile', void 0), C(this, 'activities', void 0), C(this, 'applicationStream', void 0), C(this, 'user', void 0), C(this, 'usernameLower', void 0), C(this, 'mutualGuildsLength', void 0), C(this, 'mutualGuilds', void 0), C(this, 'nickname', void 0), C(this, 'spam', void 0), C(this, 'giftIntentType', void 0), C(this, 'ignoredUser', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType), (this.ignoredUser = e.ignoredUser);
     }
 }
-class b {
+class A {
     reset() {
         let e = l().map(
                 f.Z.getRelationships(),
@@ -97,10 +97,10 @@ class b {
                         ...S(e.key)
                     })
             );
-        return new b(l().concat(e, t));
+        return new A(l().concat(e, t));
     }
     clone() {
-        return new b(this._rows);
+        return new A(this._rows);
     }
     update(e) {
         let t = !1;
@@ -162,23 +162,23 @@ class b {
         C(this, '_rows', void 0), (this._rows = e);
     }
 }
-let A = !0,
+let b = !0,
     Z = !1,
     x = E.pJs.ONLINE,
-    L = new b(),
+    L = new A(),
     P = !0,
     O = !1;
 function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (x !== E.pJs.ONLINE && x !== E.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
+    b && (e || (x !== E.pJs.ONLINE && x !== E.pJs.ADD_FRIEND)) && !Z && ((b = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function R() {
-    if (((A = !0), P ? (Z = !1) : y(), (L = L.reset()), O)) return;
+    if (((b = !0), P ? (Z = !1) : y(), (L = L.reset()), O)) return;
     let e = L.getRelationshipCounts();
     x = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
 }
 function j() {
-    L = P ? new b() : L.reset();
+    L = P ? new A() : L.reset();
 }
 function D(e) {
     return function () {
@@ -214,7 +214,7 @@ C(M, 'displayName', 'FriendsStore'),
             Z = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (A = !0), (Z = !0);
+            (b = !0), (Z = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;

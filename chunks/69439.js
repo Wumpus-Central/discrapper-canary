@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    g = n(667105),
-    f = n(341907),
+    f = n(667105),
+    g = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -57,9 +57,9 @@ function b(e) {
 }
 function N(e) {
     var t, n, s, N;
-    let { quest: E, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: A } = e,
-        y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, g.g2)({ useReducedMotion: y }),
+    let { quest: E, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: y } = e,
+        A = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
+        R = (0, f.g2)({ useReducedMotion: A }),
         w = (0, u._s)({ quest: E }),
         I = (0, u.z)(E),
         k = (0, u.B6)(E.config.expiresAt, {
@@ -72,8 +72,8 @@ function N(e) {
         })),
         M = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         O = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        W = O && (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
-        L = (0, x.iQ)(E),
+        L = O && (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        W = (0, x.iQ)(E),
         Z = !(0, x.zi)(E),
         Q = (0, u._Q)(E),
         D = (0, x.Xv)(E.config),
@@ -81,9 +81,9 @@ function N(e) {
         V = (0, u.GU)(E),
         U = (0, u.Rf)(E),
         [z, F, G] = (0, u.me)(E, U),
-        Y = Z && Q === u.OH.ACCEPTED,
-        K = Y && z === m.LI.SELECT,
-        X = Y && !K && F.length > 1,
+        K = Z && Q === u.OH.ACCEPTED,
+        Y = K && z === m.LI.SELECT,
+        X = K && !Y && F.length > 1,
         J = r.useCallback(
             (e) => {
                 G(e), e === C.cd.DESKTOP && T([]);
@@ -94,13 +94,13 @@ function N(e) {
             text: $,
             onClick: ee,
             tooltipText: et
-        } = (0, g.Ks)({
+        } = (0, f.Ks)({
             progressState: Q,
             quest: E,
             location: B,
             isCollectibleQuest: D,
             questContentPosition: S,
-            questContentRowIndex: A,
+            questContentRowIndex: y,
             inGiftInventory: !0,
             isVideoQuest: H
         }),
@@ -113,7 +113,7 @@ function N(e) {
                         questContent: B,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: S,
-                        questContentRowIndex: A
+                        questContentRowIndex: y
                     });
             },
             afterRequest: (e) => {
@@ -122,7 +122,7 @@ function N(e) {
         }),
         er = (null === (N = E.userStatus) || void 0 === N ? void 0 : N.claimedAt) != null,
         es = null;
-    return (L && W
+    return (W && L
         ? (es = (0, o.jsx)(l.Button, {
               color: l.ButtonColors.BRAND,
               submitting: q,
@@ -139,7 +139,7 @@ function N(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, f.openVideoQuestModal)(E);
+                                  (0, g.openVideoQuestModal)(E);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,
@@ -182,7 +182,7 @@ function N(e) {
                       },
                       et
                   ))
-                : Z && W
+                : Z && L
                   ? (es = (0, o.jsx)(l.Button, {
                         color: l.ButtonColors.BRAND,
                         submitting: q,
@@ -191,7 +191,7 @@ function N(e) {
                         children: $
                     }))
                   : Z && M && !er
-                    ? (es = K
+                    ? (es = Y
                           ? (0, o.jsx)(l.Select, {
                                 className: j.platformSelectorPrimary,
                                 isSelected: () => !1,

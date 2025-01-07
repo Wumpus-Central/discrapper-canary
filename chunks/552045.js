@@ -8,8 +8,8 @@ var r = n(481060),
     c = n(568671),
     d = n(292352),
     u = n(388032),
-    m = n(852402),
-    g = n(633488),
+    g = n(852402),
+    m = n(633488),
     f = n(361848);
 let p = () => {
     let e = (0, o.mq)(d.ne.ACTIVE),
@@ -18,7 +18,7 @@ let p = () => {
     return (0, o.VM)() || (t && e.length > 0)
         ? null
         : (0, i.jsx)('div', {
-              className: m.button,
+              className: g.button,
               children: t
                   ? (0, i.jsx)(r.Button, {
                         fullWidth: !1,
@@ -34,13 +34,13 @@ t.Z = () => {
         t = (0, a.o)(u.intl.string(u.t.T7GyW1), u.intl.string(u.t.goKE2d)),
         n = (0, a.o)(u.intl.format(u.t.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), u.intl.format(u.t.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: g.container,
         children: [
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsxs)('div', {
-                            className: m.headerText,
+                            className: g.headerText,
                             children: [
                                 (0, i.jsx)(r.Heading, {
                                     variant: 'heading-xl/medium',
@@ -58,9 +58,9 @@ t.Z = () => {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: m.headerImage,
+                className: g.headerImage,
                 children: (0, i.jsx)('img', {
-                    src: e ? g : f,
+                    src: e ? m : f,
                     alt: u.intl.string(u.t.ffg6xc)
                 })
             })

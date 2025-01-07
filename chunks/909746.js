@@ -21,7 +21,7 @@ n.d(t, {
         return Z;
     },
     Iv: function () {
-        return ea;
+        return es;
     },
     J5: function () {
         return ed;
@@ -39,10 +39,10 @@ n.d(t, {
         return e_;
     },
     QM: function () {
-        return eu;
+        return ec;
     },
     V$: function () {
-        return es;
+        return ea;
     },
     _$: function () {
         return eg;
@@ -75,7 +75,7 @@ n.d(t, {
         return ee;
     },
     pY: function () {
-        return j;
+        return y;
     },
     pi: function () {
         return $;
@@ -98,12 +98,12 @@ n.d(t, {
 var r = n(654861),
     l = n.n(r),
     i = n(913527),
-    a = n.n(i),
-    s = n(536402),
+    s = n.n(i),
+    a = n(536402),
     o = n(533800),
     E = n(149765),
-    c = n(866442),
-    u = n(379649),
+    u = n(866442),
+    c = n(379649),
     d = n(911969),
     _ = n(933557),
     A = n(710845),
@@ -129,9 +129,9 @@ var r = n(654861),
     x = n(765305),
     G = n(388032);
 let F = new A.Z('AuditLogUtils'),
-    y = [u.J6.DAYS, u.J6.HOURS, u.J6.MINUTES, u.J6.SECONDS],
+    j = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
     B = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
-    j = () => ({
+    y = () => ({
         [v.zUn.NAME]: () => G.t.CkDiND,
         [v.zUn.DESCRIPTION]: eD(G.t.RP3Ey8, G.t.QAVj1d),
         [v.zUn.ICON_HASH]: () => G.t.iLZ8Q0,
@@ -410,7 +410,7 @@ let F = new A.Z('AuditLogUtils'),
             [v.zUn.SOUND_ID]: !0
         }
     },
-    ea = () => [
+    es = () => [
         {
             value: v.rsA.ALL,
             label: G.intl.string(G.t.QxEVcn),
@@ -681,7 +681,7 @@ let F = new A.Z('AuditLogUtils'),
             label: G.intl.string(G.t.V9PEQ0)
         }
     ];
-function es(e, t) {
+function ea(e, t) {
     return null != t.changes ? t.changes.find((t) => t.key === e) : null;
 }
 function eo(e, t) {
@@ -689,17 +689,17 @@ function eo(e, t) {
 }
 function eE(e) {
     var t;
-    let n = ea().find((t) => t.value === e.action);
-    return null != es(v.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? G.intl.string(G.t.z3wbj4) : null !== (t = null == n ? void 0 : n.label) && void 0 !== t ? t : null;
+    let n = es().find((t) => t.value === e.action);
+    return null != ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? G.intl.string(G.t.z3wbj4) : null !== (t = null == n ? void 0 : n.label) && void 0 !== t ? t : null;
 }
-let ec = {
-    [u.J6.SECONDS]: (e) => G.intl.formatToPlainString(G.t.geSp4O, { seconds: e }),
-    [u.J6.MINUTES]: (e) => G.intl.formatToPlainString(G.t.iXLF9f, { minutes: e }),
-    [u.J6.HOURS]: (e) => G.intl.formatToPlainString(G.t.xCjYxM, { hours: e }),
-    [u.J6.DAYS]: (e) => G.intl.formatToPlainString(G.t.k2UNz8, { days: e })
+let eu = {
+    [c.J6.SECONDS]: (e) => G.intl.formatToPlainString(G.t.geSp4O, { seconds: e }),
+    [c.J6.MINUTES]: (e) => G.intl.formatToPlainString(G.t.iXLF9f, { minutes: e }),
+    [c.J6.HOURS]: (e) => G.intl.formatToPlainString(G.t.xCjYxM, { hours: e }),
+    [c.J6.DAYS]: (e) => G.intl.formatToPlainString(G.t.k2UNz8, { days: e })
 };
-function eu(e) {
-    let t = es(v.zUn.COMMUNICATION_DISABLED_UNTIL, e),
+function ec(e) {
+    let t = ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e),
         n = eo(v.zUn.ROLES_ADD, e).length > 0,
         r = eo(v.zUn.ROLES_REMOVE, e).length > 0;
     if (null != t) {
@@ -707,12 +707,12 @@ function eu(e) {
             let n = new Date(null == t ? void 0 : t.newValue).getTime(),
                 r = n - M.default.extractTimestamp(e.id),
                 l = Math.round(r / 1000 / 60),
-                i = (0, u.CI)(l, y);
+                i = (0, c.CI)(l, j);
             if (null == i.unit || null == i.time) return null;
-            if (i.unit in ec) {
+            if (i.unit in eu) {
                 let e = i.unit,
-                    t = i.unit === u.J6.SECONDS ? Math.round(r / 1000) : i.time;
-                return ec[e](t);
+                    t = i.unit === c.J6.SECONDS ? Math.round(r / 1000) : i.time;
+                return eu[e](t);
             }
         } else if ((null == t ? void 0 : t.oldValue) != null) return G.intl.string(G.t.MA1ltr);
     } else if (n && r) return G.intl.string(G.t.RdMMe3);
@@ -926,9 +926,9 @@ function e_(e) {
             let l = null != e.changes ? e.changes.find((e) => e.key === v.zUn.ENTITY_TYPE) : null;
             if (null == l) return G.t['UZ+U3N'];
             switch (l.newValue) {
-                case s.w.MESSAGE:
+                case a.w.MESSAGE:
                     return G.t['PyEa+P'];
-                case s.w.FORUM_POST:
+                case a.w.FORUM_POST:
                     return G.t.hCuAb2;
                 default:
                     return G.t['UZ+U3N'];
@@ -1249,7 +1249,7 @@ function eg(e, t) {
                                     var t;
                                     let r = m.Z.guildScheduledEvents.find((t) => t.id === e.targetId),
                                         l = null == r ? void 0 : r.guild_scheduled_event_exceptions.find((t) => t.event_exception_id === e.options.event_exception_id);
-                                    n.subtarget = (0, U.vc)(a()(M.default.extractTimestamp(null !== (t = null == l ? void 0 : l.event_exception_id) && void 0 !== t ? t : '0')), 'LL');
+                                    n.subtarget = (0, U.vc)(s()(M.default.extractTimestamp(null !== (t = null == l ? void 0 : l.event_exception_id) && void 0 !== t ? t : '0')), 'LL');
                                 }
                                 return n;
                             }
@@ -1306,9 +1306,9 @@ function eg(e, t) {
                                 case v.zUn.BITRATE:
                                     return eR(e, (e) => e / 1000);
                                 case v.zUn.COLOR:
-                                    return eR(e, (e) => (0, c.Rf)(e).toUpperCase());
+                                    return eR(e, (e) => (0, u.Rf)(e).toUpperCase());
                                 case v.zUn.THEME_COLORS:
-                                    return eR(e, (e) => ''.concat((0, c.Rf)(e[0]).toUpperCase(), ', ').concat((0, c.Rf)(e[1]).toUpperCase()));
+                                    return eR(e, (e) => ''.concat((0, u.Rf)(e[0]).toUpperCase(), ', ').concat((0, u.Rf)(e[1]).toUpperCase()));
                                 case v.zUn.MAX_AGE:
                                     return eR(e, (e) => {
                                         let t = L.ZP.getMaxAgeOptions.find((t) => {
@@ -1351,15 +1351,15 @@ function eg(e, t) {
                                                 r = 'number' == typeof t ? t : 0,
                                                 l = C.Ge(r, n),
                                                 i = C.Ge(n, r),
-                                                a = [],
-                                                s = [];
+                                                s = [],
+                                                a = [];
                                             for (let e in b.zZ) {
                                                 let t = b.zZ[e];
-                                                C.yE(l, t) && a.push(t), C.yE(i, t) && s.push(t);
+                                                C.yE(l, t) && s.push(t), C.yE(i, t) && a.push(t);
                                             }
                                             return {
-                                                added: a,
-                                                removed: s
+                                                added: s,
+                                                removed: a
                                             };
                                         })(e.oldValue, e.newValue);
                                     if (n.length > 0) {
@@ -1393,8 +1393,8 @@ function eg(e, t) {
                                                 let l = (e.oldValue & r) === r,
                                                     i = (e.newValue & r) === r;
                                                 if (l === i) return;
-                                                let a = new O.ms(t[r], !l, !i);
-                                                n.push(a);
+                                                let s = new O.ms(t[r], !l, !i);
+                                                n.push(s);
                                             }),
                                             n
                                         );
@@ -1459,31 +1459,31 @@ function eg(e, t) {
                                             l = Array.isArray(n) ? n : [];
                                         if (0 === r.length && 0 === l.length) return e;
                                         let i = {},
-                                            a = {};
+                                            s = {};
                                         if (
                                             (r.forEach((e) => {
                                                 i[e.id] = e;
                                             }),
                                             l.forEach((e) => {
-                                                a[e.id] = e;
+                                                s[e.id] = e;
                                             }),
                                             r.length < l.length)
                                         ) {
-                                            for (let e in a) if (null == i[e]) return new O.ms(v.zUn.AVAILABLE_TAG_ADD, null, eN(a[e]));
+                                            for (let e in s) if (null == i[e]) return new O.ms(v.zUn.AVAILABLE_TAG_ADD, null, eN(s[e]));
                                         }
                                         if (r.length > l.length) {
-                                            for (let e in i) if (null == a[e]) return new O.ms(v.zUn.AVAILABLE_TAG_DELETE, null, eN(i[e]));
+                                            for (let e in i) if (null == s[e]) return new O.ms(v.zUn.AVAILABLE_TAG_DELETE, null, eN(i[e]));
                                         }
                                         for (let e in i) {
                                             let t = i[e],
-                                                n = a[e];
+                                                n = s[e];
                                             if ((null == n ? void 0 : n.name) !== t.name || (null == n ? void 0 : n.emoji_id) !== t.emoji_id || (null == n ? void 0 : n.emoji_name) !== t.emoji_name) return new O.ms(v.zUn.AVAILABLE_TAG_EDIT, eN(t), eN(n));
                                         }
                                         return e;
                                     })(e);
                                 case v.zUn.SCHEDULED_START_TIME:
                                 case v.zUn.SCHEDULED_END_TIME:
-                                    return eR(e, (e) => (0, U.vc)(a()(new Date(e)), 'LLLL'));
+                                    return eR(e, (e) => (0, U.vc)(s()(new Date(e)), 'LLLL'));
                             }
                             return e;
                         })(r, e, t);
@@ -1502,15 +1502,15 @@ function ef(e, t) {
         r = E.vB('string' == typeof t ? t : 0),
         l = E.Od(r, n),
         i = E.Od(n, r),
-        a = [],
-        s = [];
+        s = [],
+        a = [];
     for (let e in v.Plq) {
         let t = v.Plq[e];
-        E.e$(l, t) && a.push(t), E.e$(i, t) && s.push(t);
+        E.e$(l, t) && s.push(t), E.e$(i, t) && a.push(t);
     }
     return {
-        added: a,
-        removed: s
+        added: s,
+        removed: a
     };
 }
 function eN(e) {
@@ -1531,8 +1531,8 @@ function eR(e, t, n) {
 }
 function eO(e, t, n, r, l) {
     let i = null,
-        a = n((l = null != l ? l : e.targetId));
-    if ((null != a && null != r && (i = r(a)), null == i)) {
+        s = n((l = null != l ? l : e.targetId));
+    if ((null != s && null != r && (i = r(s)), null == i)) {
         let t = m.Z.deletedTargets[e.targetType];
         null != t && null != t[l] && (i = t[l]);
     }

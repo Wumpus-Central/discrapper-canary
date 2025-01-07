@@ -28,7 +28,7 @@ function g(e) {
             [t.id]
         ),
         x = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function Z() {
+    async function I() {
         await (0, a.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
             return (n) =>
@@ -39,8 +39,8 @@ function g(e) {
         }),
             (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let I = (0, c.ZP)(t.id),
-        _ = I.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: I.length }) : f.intl.string(f.t.tlopTE);
+    let _ = (0, c.ZP)(t.id),
+        Z = _.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: _.length }) : f.intl.string(f.t.tlopTE);
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -49,9 +49,9 @@ function g(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: _,
+        text: Z,
         selected: g,
-        onClick: Z,
+        onClick: I,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));

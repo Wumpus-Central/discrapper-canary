@@ -19,17 +19,17 @@ var s = n(200651),
     _ = n(436774),
     m = n(313201),
     C = n(451603),
-    g = n(885714),
-    f = n(973616),
-    N = n(594174),
-    b = n(855981),
-    R = n(55543),
+    N = n(885714),
+    g = n(973616),
+    f = n(594174),
+    R = n(855981),
+    b = n(55543),
     I = n(626135),
     T = n(768581),
     S = n(358085),
     O = n(998502),
-    A = n(379164),
-    x = n(590965),
+    x = n(379164),
+    A = n(590965),
     y = n(981631),
     M = n(474936),
     P = n(388032),
@@ -47,7 +47,7 @@ function D() {
         }, [t]),
         (0, s.jsxs)(a.Clickable, {
             onClick: () =>
-                (0, g.Z)({
+                (0, N.Z)({
                     analyticsSource: { page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
                         page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL,
@@ -80,7 +80,7 @@ function Z(e) {
         'aria-hidden': 'true',
         className: o()(L.iconContainer, t),
         children: [
-            (0, s.jsx)(b.Z, { className: L.iconSparklePlus }),
+            (0, s.jsx)(R.Z, { className: L.iconSparklePlus }),
             (0, s.jsx)(a.LinkIcon, {
                 size: 'custom',
                 color: 'currentColor',
@@ -88,7 +88,7 @@ function Z(e) {
                 width: 40,
                 height: 40
             }),
-            (0, s.jsx)(R.Z, { className: L.iconSparkleStar })
+            (0, s.jsx)(b.Z, { className: L.iconSparkleStar })
         ]
     });
 }
@@ -118,7 +118,7 @@ function U(e) {
                     }),
                     (0, s.jsx)(h.zx, {
                         size: h.zx.Sizes.LARGE,
-                        onClick: () => A.Z.close(),
+                        onClick: () => x.Z.close(),
                         color: h.zx.Colors.BRAND,
                         children: P.intl.string(P.t.wcqOoK)
                     })
@@ -131,27 +131,27 @@ function w(e) {
     let t,
         n,
         { transitionState: r } = e;
-    (0, l.e7)([N.default], () => {
+    (0, l.e7)([f.default], () => {
         var e;
-        return null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+        return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: _, error: g, submitting: b } = (0, l.cj)([x.Z], () => x.Z.getProps());
+    let { invite: _, error: N, submitting: R } = (0, l.cj)([A.Z], () => A.Z.getProps());
     i.useEffect(() => {
         !__OVERLAY__ && S.isPlatformEmbedded && ((0, S.isWindows)() ? O.ZP.minimize() : O.ZP.restore(), O.ZP.focus());
     }, []);
-    let R = (0, m.Dt)(),
+    let b = (0, m.Dt)(),
         { analyticsLocations: I } = (0, d.ZP)(u.Z.INVITE_MODAL);
     if (null == _) return null;
     if (_.state === y.r2o.EXPIRED || _.state === y.r2o.BANNED || _.state === y.r2o.ERROR) return (0, s.jsx)(U, { transitionState: r });
     if (null == _.channel) return null;
     function M() {
-        null != _ && A.Z.acceptInvite(_);
+        null != _ && x.Z.acceptInvite(_);
     }
     let { guild: Z, channel: w, inviter: k, target_application: j } = _,
         H = null != Z,
         V = null != _.stage_instance,
         G = null == _.guild && null == _.channel && null != _.inviter;
-    if (null != j) (t = null == Z ? void 0 : Z.name), (n = f.ZP.createFromServer(j).getCoverImageURL(1024));
+    if (null != j) (t = null == Z ? void 0 : Z.name), (n = g.ZP.createFromServer(j).getCoverImageURL(1024));
     else if (null != Z)
         (t = Z.name),
             (n = T.ZP.getGuildSplashURL({
@@ -167,7 +167,7 @@ function w(e) {
             value: I,
             children: (0, s.jsxs)(a.ModalRoot, {
                 size: a.ModalSize.DYNAMIC,
-                'aria-labelledby': R,
+                'aria-labelledby': b,
                 transitionState: r,
                 className: L.container,
                 children: [
@@ -181,12 +181,12 @@ function w(e) {
                                 justify: p.Z.Justify.BETWEEN,
                                 children: [
                                     (0, s.jsx)('div', {
-                                        id: R,
+                                        id: b,
                                         className: v.marginBottom20,
                                         children: (0, s.jsx)(c.Z, {
                                             invite: _,
                                             disableUser: H,
-                                            error: g
+                                            error: N
                                         })
                                     }),
                                     V && null != Z
@@ -211,7 +211,7 @@ function w(e) {
                                                           return (0, s.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
-                                                              submitting: b,
+                                                              submitting: R,
                                                               disabled: K,
                                                               color: V ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
@@ -226,14 +226,14 @@ function w(e) {
                                                           (0, s.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
-                                                              submitting: b,
+                                                              submitting: R,
                                                               children: P.intl.string(P.t.RscU7O)
                                                           }),
                                                           (0, s.jsx)(h.zx, {
                                                               color: h.zx.Colors.PRIMARY,
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
-                                                              submitting: b,
+                                                              submitting: R,
                                                               children: P.intl.string(P.t.eylRaW)
                                                           })
                                                       ]
@@ -245,7 +245,7 @@ function w(e) {
                                                     look: h.zx.Looks.LINK,
                                                     className: L.noThanksButton,
                                                     onClick: function () {
-                                                        A.Z.close();
+                                                        x.Z.close();
                                                     },
                                                     color: h.zx.Colors.TRANSPARENT,
                                                     children: P.intl.string(P.t.ndsK4e)

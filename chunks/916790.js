@@ -13,8 +13,8 @@ var r = n(200651),
     c = n.n(s),
     d = n(481060),
     u = n(570140),
-    m = n(665149),
-    h = n(301801),
+    h = n(665149),
+    m = n(301801),
     x = n(4912),
     f = n(55935),
     p = n(428530),
@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(681619),
     j = n(621060),
     C = n(912130),
-    _ = n(941469);
-function T(e) {
+    T = n(941469);
+function _(e) {
     return parseFloat(e.toFixed(3));
 }
 let S = [
@@ -41,7 +41,7 @@ let S = [
         cellClassName: C.totalTimeColumn,
         render(e) {
             let { trace: t } = e;
-            return ''.concat(T(t.time), ' ms');
+            return ''.concat(_(t.time), ' ms');
         }
     }
 ];
@@ -85,7 +85,7 @@ let y = [
                             }),
                             (0, r.jsxs)(b.Z9, {
                                 name: 'Total Time',
-                                children: [T(n.totalTime), ' ms']
+                                children: [_(n.totalTime), ' ms']
                             })
                         ]
                     }),
@@ -123,11 +123,11 @@ function k(e) {
                                   return (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: i()(C.errorToolbar, _.toolbar),
+                                              className: i()(C.errorToolbar, T.toolbar),
                                               children: (0, r.jsx)('div', {
-                                                  className: _.toolbarGroup,
+                                                  className: T.toolbarGroup,
                                                   children: (0, r.jsx)(d.Button, {
-                                                      className: _.toolbarButton,
+                                                      className: T.toolbarButton,
                                                       size: d.Button.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: 'Log to Console'
@@ -153,14 +153,14 @@ function k(e) {
         initialHeight: n,
         children: [
             (0, r.jsx)(o, {}),
-            (0, r.jsxs)(m.ZP, {
-                className: i()(_.headerBar, C.subPanelHeaderBar),
+            (0, r.jsxs)(h.ZP, {
+                className: i()(T.headerBar, C.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(m.ZP.Icon, {
+                    (0, r.jsx)(h.ZP.Icon, {
                         icon: d.ReceiptIcon,
                         tooltip: t.name
                     }),
-                    (0, r.jsx)(m.ZP.Title, { children: t.name })
+                    (0, r.jsx)(h.ZP.Title, { children: t.name })
                 ]
             }),
             s({ actionLog: t })
@@ -183,7 +183,7 @@ let I = [
         cellClassName: C.totalTimeColumn,
         render(e) {
             let { actionLog: t } = e;
-            return ''.concat(T(t.totalTime), ' ms');
+            return ''.concat(_(t.totalTime), ' ms');
         }
     }
 ];
@@ -214,11 +214,11 @@ function E() {
                 })),
             [l]
         ),
-        [c, m] = a.useState(s),
+        [c, h] = a.useState(s),
         [x, f] = a.useState(s),
         [p, b] = a.useState(!1),
         [g, j] = a.useState(),
-        T = a.useRef(null),
+        _ = a.useRef(null),
         S = a.useCallback(
             (0, o.throttle)(
                 async (e, t) => {
@@ -226,8 +226,8 @@ function E() {
                         f(t);
                         return;
                     }
-                    T.current = (0, o.uniqueId)();
-                    let n = await (0, h.H)(
+                    _.current = (0, o.uniqueId)();
+                    let n = await (0, m.H)(
                         t,
                         (e) => {
                             let { actionLog: t } = e;
@@ -236,7 +236,7 @@ function E() {
                         e,
                         !0
                     );
-                    if (null != T.current) f(n);
+                    if (null != _.current) f(n);
                 },
                 300,
                 { leading: !0 }
@@ -245,7 +245,7 @@ function E() {
         ),
         N = a.useCallback(
             (e) => {
-                m(s), b(e);
+                h(s), b(e);
             },
             [s]
         );
@@ -257,13 +257,13 @@ function E() {
         S(t, s);
     }, [p, t, S, s, c]),
         a.useEffect(() => {
-            T.current = null;
+            _.current = null;
         }, []);
     let y = t.trim().length > 0,
         E = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(_.panel, C.panel),
+        className: i()(T.panel, C.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: C.toolbar,

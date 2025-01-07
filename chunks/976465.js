@@ -1,9 +1,9 @@
 n.d(t, {
     Rw: function () {
-        return w;
+        return y;
     },
     V6: function () {
-        return y;
+        return w;
     },
     f9: function () {
         return P;
@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     sf: function () {
-        return M;
+        return Z;
     },
     x$: function () {
         return k;
@@ -32,24 +32,24 @@ var i = n(192379),
     c = n(243778),
     d = n(291175),
     u = n(621853),
-    m = n(594174),
-    g = n(78839),
+    g = n(594174),
+    m = n(78839),
     f = n(111361),
     p = n(471309),
     _ = n(474936),
     h = n(388032),
-    E = n(888300),
-    b = n(665321),
-    x = n(256017),
+    x = n(888300),
+    E = n(665321),
+    b = n(256017),
     C = n(126807),
-    T = n(432119),
-    v = n(205119),
+    v = n(432119),
+    T = n(205119),
     N = n(145007),
     I = n(937264);
 let S = () => {
         var e;
         let t;
-        let n = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        let n = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
             i = (0, s.e7)([u.Z], () => (null != n ? u.Z.getUserProfile(n.id) : null));
         return (
             null == i ||
@@ -64,8 +64,8 @@ let S = () => {
         );
     },
     R = () => {
-        let e = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-            t = (0, s.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription());
+        let e = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+            t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         if (!(0, f.M5)(e, _.p9.TIER_2) || null == t || null == t.premiumSince) return null;
         let n = a()(),
             i = a()(t.premiumSince).add(1, 'day'),
@@ -78,17 +78,17 @@ let S = () => {
     j = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
-                return E;
+                return x;
             case _.VU.PREMIUM_TENURE_3_MONTH:
                 return I;
             case _.VU.PREMIUM_TENURE_6_MONTH:
-                return T;
-            case _.VU.PREMIUM_TENURE_12_MONTH:
                 return v;
+            case _.VU.PREMIUM_TENURE_12_MONTH:
+                return T;
             case _.VU.PREMIUM_TENURE_24_MONTH:
-                return b;
+                return E;
             case _.VU.PREMIUM_TENURE_36_MONTH:
-                return x;
+                return b;
             case _.VU.PREMIUM_TENURE_60_MONTH:
                 return N;
             case _.VU.PREMIUM_TENURE_72_MONTH:
@@ -120,8 +120,8 @@ let S = () => {
                 return '';
         }
     },
-    Z = () => P(S()),
-    M = (e) => {
+    O = () => P(S()),
+    Z = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
             case _.VU.PREMIUM_TENURE_3_MONTH:
@@ -138,20 +138,20 @@ let S = () => {
                 return '';
         }
     },
-    B = () => M(S()),
-    O = () => {
+    M = () => Z(S()),
+    B = () => {
         let e = S(),
-            t = (0, s.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription());
+            t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
     },
-    w = () => ({
+    y = () => ({
         badge: S(),
         image: A(),
-        name: Z(),
-        earnedOnDate: O(),
-        tenureRequirement: B()
+        name: O(),
+        earnedOnDate: B(),
+        tenureRequirement: M()
     }),
-    y = () => {
+    w = () => {
         let e = R(),
             { enabled: t } = (0, p.Z)(!0),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);

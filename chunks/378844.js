@@ -23,11 +23,11 @@ var a = n(442837),
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
-        { notClaimed: x, notEmailVerified: Z, notPhoneVerified: I, newAccount: _, newMember: b } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        { notClaimed: x, notEmailVerified: I, notPhoneVerified: _, newAccount: Z, newMember: b } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         N = null,
         E = null;
-    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : Z ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : _ && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
+    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : _ ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : I ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : Z && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: v.container,
@@ -59,7 +59,7 @@ t.Z = (e) => {
                                             onClick: () => {
                                                 x
                                                     ? c.j()
-                                                    : I
+                                                    : _
                                                       ? (0, o.openModalLazy)(
                                                             async () => {
                                                                 let { default: e } = await Promise.all([n.e('76540'), n.e('51501')]).then(n.bind(n, 607018));
@@ -71,7 +71,7 @@ t.Z = (e) => {
                                                             },
                                                             { modalKey: m.M }
                                                         )
-                                                      : Z &&
+                                                      : I &&
                                                         (s.Z.verifyResend(),
                                                         (0, o.openModal)((e) => {
                                                             var t;
@@ -92,7 +92,7 @@ t.Z = (e) => {
                                             children: E
                                         })
                                       : null,
-                                  x || I || Z
+                                  x || _ || I
                                       ? (0, r.jsx)(o.Button, {
                                             onClick: l,
                                             look: o.Button.Looks.BLANK,

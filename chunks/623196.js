@@ -90,7 +90,7 @@ function _() {
                 : (0, i.jsx)('div', {
                       className: E.button,
                       children: (0, i.jsx)(o.Tooltip, {
-                          text: e.isStaff() ? T.intl.string(T.t.ZPQLHx) : e.verified ? T.intl.string(T.t['c1f88/']) : null,
+                          text: e.isStaff() ? T.intl.string(T.t.ZPQLHx) : e.verified ? null : T.intl.string(T.t['c1f88/']),
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: s } = e;
                               return (0, i.jsx)(o.Button, {

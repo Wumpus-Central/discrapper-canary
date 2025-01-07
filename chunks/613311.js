@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(600164),
     S = n(606081),
     T = n(252618),
-    b = n(100159),
-    A = n(646288),
+    A = n(100159),
+    b = n(646288),
     Z = n(984370),
     x = n(706454),
     L = n(210887),
@@ -128,7 +128,7 @@ class ec extends r.PureComponent {
             carousel_video_count: r.videos,
             location: i.location.page,
             source: this._analyticsSource,
-            ...(0, b.Z)(e, !0)
+            ...(0, A.Z)(e, !0)
         }),
             (this._trackedViewed = !0);
     }
@@ -396,7 +396,7 @@ class ec extends r.PureComponent {
                 let { sku: i } = this.props;
                 null != i &&
                     U.default.track(er.rMx.STORE_LISTING_MEDIA_SCROLLED, {
-                        ...(0, b.Z)(i),
+                        ...(0, A.Z)(i),
                         card_index: n,
                         card_type: e.type === er.s9s.IMG ? 'image' : 'video'
                     });
@@ -513,7 +513,7 @@ class ec extends r.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, A.Z)(t) : null,
+                                    null != t ? (0, b.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,

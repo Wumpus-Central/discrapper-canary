@@ -17,11 +17,11 @@ var o = n(200651),
     p = n(302221),
     m = n(554804);
 let x = [0, 0.5, 1],
-    g = {
+    f = {
         'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
     };
-async function f(e, t) {
+async function g(e, t) {
     let o = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
@@ -34,14 +34,14 @@ async function f(e, t) {
                 });
                 l().set(e, o, r);
             }
-        })(o, g, t),
+        })(o, f, t),
         o
     );
 }
 function h(e) {
     var t;
     let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
-        g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
+        f = (0, c.e7)([u.Z], () => u.Z.isFocused()),
         h = r.useRef(null),
         [C, v] = r.useState(!1),
         j = r.useMemo(() => {
@@ -53,14 +53,14 @@ function h(e) {
                     b: e.b / 255
                 },
                 n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-            return f(i.id, n);
+            return g(i.id, n);
         }, [i]),
         _ = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        b = !l && g;
+        b = !l && f;
     r.useEffect(() => {
         var e, t, n, o;
-        g ? b && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
-    }, [b, g]);
+        f ? b && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    }, [b, f]);
     let N = r.useCallback(() => {
         v(!0);
     }, []);

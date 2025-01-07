@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     container: 'container_dc71f0',
     imageContainer: 'imageContainer_dc71f0',
     image: 'image_dc71f0',

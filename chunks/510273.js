@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return m;
     }
 });
 var i = n(200651),
@@ -12,7 +12,7 @@ var i = n(200651),
     c = n(818765),
     d = n(674680),
     u = n(941253);
-let m = (e) => {
+let g = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
         width: '48',
@@ -68,9 +68,9 @@ let m = (e) => {
         ]
     });
 };
-function g(e) {
+function m(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: g, rarity: f, hideDescriptionUntilUnlock: p, onAction: _ } = t,
+        { name: a, description: m, rarity: f, hideDescriptionUntilUnlock: p, onAction: _ } = t,
         { color: h } = (0, o.F7)(f);
     r.useEffect(() => {
         let e = setTimeout(() => {
@@ -80,12 +80,12 @@ function g(e) {
             clearTimeout(e);
         };
     }, []);
-    let E = null != _ && n,
-        b = E ? l.Clickable : 'div';
-    return (0, i.jsxs)(b, {
-        className: s()(u.container, E && u.actionable),
+    let x = null != _ && n,
+        E = x ? l.Clickable : 'div';
+    return (0, i.jsxs)(E, {
+        className: s()(u.container, x && u.actionable),
         onClick: () => {
-            E && _();
+            x && _();
         },
         children: [
             (0, i.jsx)('div', {
@@ -107,13 +107,13 @@ function g(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: p && !n ? '?????' : g()
+                        children: p && !n ? '?????' : m()
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: u.flair,
-                children: (0, i.jsx)(m, { color: h })
+                children: (0, i.jsx)(g, { color: h })
             })
         ]
     });

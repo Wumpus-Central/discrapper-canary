@@ -12,8 +12,8 @@ var i = n(200651),
     c = n(594174),
     d = n(933970),
     u = n(340453),
-    m = n(292352),
-    g = n(388032),
+    g = n(292352),
+    m = n(388032),
     f = n(659506);
 function p(e) {
     let { user: t } = e,
@@ -37,7 +37,7 @@ function p(e) {
                 className: f.details,
                 children: (0, i.jsx)(u.Z, {
                     otherUser: t,
-                    status: m.ne.ACTIVE
+                    status: g.ne.ACTIVE
                 })
             }),
             (0, i.jsx)('div', {
@@ -45,7 +45,7 @@ function p(e) {
                 children: (0, i.jsx)(d.Z, {
                     icon: o.XSmallIcon,
                     className: f.__invalid_actionDeny,
-                    tooltip: g.intl.string(g.t.l20ZZm),
+                    tooltip: m.intl.string(m.t.l20ZZm),
                     onClick: p
                 })
             })

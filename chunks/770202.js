@@ -16,8 +16,8 @@ var i = n(200651),
     v = n(473403),
     C = n(981631),
     x = n(490897),
-    Z = n(831746);
-function I(e, t, n) {
+    I = n(831746);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function _(e, t) {
+function Z(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
     s.Z.preload(n, t.id);
@@ -39,14 +39,14 @@ class b extends g.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [Z.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [I.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(v.Z, {
-                    className: Z.iconVisibility,
+                    className: I.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: _,
+                    onMouseDown: Z,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: o ? r : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
@@ -58,7 +58,7 @@ class b extends g.ZP {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'handleContextMenu', (e) => {
+            _(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     l = f.Z.getGuild(t.getGuildId());
                 null != l &&
@@ -72,7 +72,7 @@ class b extends g.ZP {
                             });
                     });
             }),
-            I(this, 'handleClick', (e) => {
+            _(this, 'handleClick', (e) => {
                 !(function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');

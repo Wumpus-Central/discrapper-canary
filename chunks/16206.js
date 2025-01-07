@@ -3,34 +3,34 @@ t.d(n, {
         return i;
     }
 });
-var s = t(981631),
-    r = t(388032);
+var r = t(981631),
+    s = t(388032);
 function i(e) {
     if (null == e) return null;
     switch (e.type) {
-        case s.d4z.GUILD_ANNOUNCEMENT:
-            return r.intl.string(r.t.l1dkSE);
-        case s.d4z.GUILD_STORE:
-            return r.intl.string(r.t['P1/Erq']);
-        case s.d4z.DM:
-        case s.d4z.GROUP_DM:
-            return r.intl.string(r.t.jN2DfX);
-        case s.d4z.PRIVATE_THREAD:
-            return r.intl.string(r.t.F1zyvb);
-        case s.d4z.ANNOUNCEMENT_THREAD:
-        case s.d4z.PUBLIC_THREAD:
-            return r.intl.string(r.t['7Xm5QE']);
-        case s.d4z.GUILD_TEXT:
-            return r.intl.string(r.t.Pnajj4);
-        case s.d4z.GUILD_FORUM:
-            return e.isMediaChannel() ? r.intl.string(r.t.seKITE) : r.intl.string(r.t.GbryDQ);
-        case s.d4z.GUILD_MEDIA:
-            return r.intl.string(r.t.seKITE);
-        case s.d4z.GUILD_STAGE_VOICE:
-            return r.intl.string(r.t.EErMzM);
-        case s.d4z.GUILD_VOICE:
-            return r.intl.string(r.t.BVZqJi);
-        case s.d4z.GUILD_CATEGORY:
+        case r.d4z.GUILD_ANNOUNCEMENT:
+            return s.intl.string(s.t.l1dkSE);
+        case r.d4z.GUILD_STORE:
+            return s.intl.string(s.t['P1/Erq']);
+        case r.d4z.DM:
+        case r.d4z.GROUP_DM:
+            return s.intl.string(s.t.jN2DfX);
+        case r.d4z.PRIVATE_THREAD:
+            return s.intl.string(s.t.F1zyvb);
+        case r.d4z.ANNOUNCEMENT_THREAD:
+        case r.d4z.PUBLIC_THREAD:
+            return s.intl.string(s.t['7Xm5QE']);
+        case r.d4z.GUILD_TEXT:
+            return s.intl.string(s.t.Pnajj4);
+        case r.d4z.GUILD_FORUM:
+            return e.isMediaChannel() ? s.intl.string(s.t.seKITE) : s.intl.string(s.t.GbryDQ);
+        case r.d4z.GUILD_MEDIA:
+            return s.intl.string(s.t.seKITE);
+        case r.d4z.GUILD_STAGE_VOICE:
+            return s.intl.string(s.t.EErMzM);
+        case r.d4z.GUILD_VOICE:
+            return s.intl.string(s.t.BVZqJi);
+        case r.d4z.GUILD_CATEGORY:
         default:
             return null;
     }

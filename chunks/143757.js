@@ -29,8 +29,8 @@ var i = n(200651),
     v = n(973616),
     S = n(592125),
     T = n(626135),
-    b = n(823379),
-    A = n(404295),
+    A = n(823379),
+    b = n(404295),
     Z = n(728345),
     x = n(812206),
     L = n(981631),
@@ -155,7 +155,7 @@ let M = (e) => {
     });
 };
 function w() {
-    let e = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, b.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
         t = (0, s.e7)([N.ZP], () => N.ZP.showPlayAgain),
         { frecentApps: n } = (0, f.f)({
             channel: void 0,
@@ -167,7 +167,7 @@ function w() {
 }
 function k(e) {
     let { bottomDivider: t } = e,
-        n = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        n = (0, b.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: l } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -182,7 +182,7 @@ function k(e) {
             () =>
                 l
                     .map((e) => e.application)
-                    .filter(b.lm)
+                    .filter(A.lm)
                     .slice(0, 5),
             [l]
         );

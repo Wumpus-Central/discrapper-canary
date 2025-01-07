@@ -14,8 +14,8 @@ var i = n(913527),
     c = n(704215),
     d = n(481060),
     u = n(713284),
-    m = n(883904),
-    h = n(211644),
+    h = n(883904),
+    m = n(211644),
     x = n(675478),
     f = n(681619),
     p = n(388958);
@@ -52,8 +52,8 @@ let b = (e) => {
     ];
 function j() {
     let e = (0, s.e7)([u.Z], () => u.Z.getDCFEvents()),
-        t = (0, h.ZP)((e) => e.candidates),
-        n = (0, h.ZP)((e) => e.lastWinnerTime),
+        t = (0, m.ZP)((e) => e.candidates),
+        n = (0, m.ZP)((e) => e.lastWinnerTime),
         r = o()(n).fromNow(),
         a = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
@@ -75,7 +75,7 @@ function j() {
                 children: [
                     (0, l.jsx)(d.Button, {
                         className: p.button,
-                        onClick: () => (0, m.EG)(),
+                        onClick: () => (0, h.EG)(),
                         children: 'Reset Daily Cap'
                     }),
                     (0, l.jsx)(d.Button, {

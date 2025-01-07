@@ -16,9 +16,9 @@ var i,
     v = n(367907),
     C = n(453542),
     x = n(702321),
-    Z = n(82295),
-    I = n(313201),
-    _ = n(540059),
+    I = n(82295),
+    _ = n(313201),
+    Z = n(540059),
     b = n(860144),
     S = n(214852),
     N = n(518311),
@@ -47,7 +47,7 @@ function G(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let k = o.memo(function () {
+let B = o.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
@@ -195,7 +195,7 @@ let k = o.memo(function () {
         ]
     });
 });
-class B extends (l = o.Component) {
+class k extends (l = o.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -351,14 +351,14 @@ class B extends (l = o.Component) {
             G(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(k, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(B, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
             G(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, a.jsxs)(
-                          Z.Z,
+                          I.Z,
                           {
                               className: D.privateChannelsHeaderContainer,
                               children: [
@@ -400,9 +400,9 @@ class B extends (l = o.Component) {
             });
     }
 }
-G(B, 'defaultProps', { padding: 8 });
+G(k, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
-    let t = (0, _.Q3)('ConnectedPrivateChannelsList'),
+    let t = (0, Z.Q3)('ConnectedPrivateChannelsList'),
         { density: n } = (0, f.useThemeContext)(),
         { version: i, theme: l, children: r, showDMHeader: s } = e,
         c = o.Children.count(r),
@@ -423,7 +423,7 @@ t.Z = (e) => {
             version: null != i ? ''.concat(i, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
         })),
         x = o.useRef(null),
-        Z = o.useCallback((e) => {
+        I = o.useCallback((e) => {
             let t = x.current,
                 n = document.querySelector(e);
             null != t &&
@@ -460,18 +460,18 @@ t.Z = (e) => {
                 }),
             []
         ),
-        M = (0, I.Dt)(),
+        M = (0, _.Dt)(),
         R = (0, d.ZP)({
             id: 'private-channels-'.concat(M),
             isEnabled: C.keyboardModeEnabled,
             scrollToStart: N,
             scrollToEnd: A,
             defaultFocused: (c + (s ? 1 : 0)).toString(),
-            setFocus: Z
+            setFocus: I
         });
     return (0, a.jsx)(u.bG, {
         navigator: R,
-        children: (0, a.jsx)(B, {
+        children: (0, a.jsx)(k, {
             density: n,
             isVisualRefreshEnabled: t,
             channels: m,

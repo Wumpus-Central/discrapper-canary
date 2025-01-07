@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return y;
     }
 }),
     n(47120);
@@ -14,18 +14,18 @@ var r = n(319147),
     c = n(298274),
     d = n(569620),
     u = n(16503),
-    m = n(64268),
-    g = n(697720),
+    g = n(64268),
+    m = n(697720),
     f = n(578325),
     p = n(56790),
     _ = n(90718),
     h = n(897482),
-    E = n(4515),
-    b = n(474472),
-    x = n(156129),
+    x = n(4515),
+    E = n(474472),
+    b = n(156129),
     C = n(799303),
-    T = n(245630),
-    v = n(842272),
+    v = n(245630),
+    T = n(842272),
     N = n(486731),
     I = n(346943),
     S = n(55826),
@@ -33,28 +33,28 @@ var r = n(319147),
     j = n(414653),
     A = n(297141),
     P = n(26517),
-    Z = n(93125),
-    M = n(278583),
-    B = n(814437);
-let O = new Map([
+    O = n(93125),
+    Z = n(278583),
+    M = n(814437);
+let B = new Map([
     ['BG', s],
     ['CZ', c],
     ['HU', h],
     ['RO', P],
-    ['SE', Z],
+    ['SE', O],
     ['CY', o],
     ['EE', u],
-    ['IS', b],
-    ['IE', E],
+    ['IS', E],
+    ['IE', x],
     ['LV', N],
     ['LI', C],
-    ['LT', T],
-    ['LU', v],
+    ['LT', v],
+    ['LU', T],
     ['MT', I],
-    ['SK', B],
-    ['SI', M],
+    ['SK', M],
+    ['SI', Z],
     ['GR', p],
-    ['FI', g],
+    ['FI', m],
     ['PT', A],
     ['NO', R],
     ['BE', a],
@@ -62,16 +62,16 @@ let O = new Map([
     ['CH', l],
     ['FR', f],
     ['DE', d],
-    ['ES', m],
-    ['IT', x],
+    ['ES', g],
+    ['IT', b],
     ['NL', S],
     ['PL', j],
     ['HR', _]
 ]);
-function w(e) {
+function y(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !O.has(n)) return null;
-    let r = O.get(n);
+    if (null == n || !B.has(n)) return null;
+    let r = B.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

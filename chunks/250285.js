@@ -8,23 +8,23 @@ var i = n(200651),
     c = n(91192),
     d = n(906732),
     u = n(171368),
-    m = n(981631),
-    g = n(197831);
+    g = n(981631),
+    m = n(197831);
 t.Z = (e) => {
     let { userId: t, children: n, isLast: a, className: f } = e,
         [p, _] = r.useState(!1),
         { analyticsLocations: h } = (0, d.ZP)(),
-        E = r.useCallback(() => {
+        x = r.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: h,
-                analyticsLocation: { section: m.jXE.FAMILY_CENTER }
+                analyticsLocation: { section: g.jXE.FAMILY_CENTER }
             });
         }, [t, h]),
-        b = () => {
+        E = () => {
             _(!0);
         },
-        x = () => {
+        b = () => {
             _(!1);
         };
     return (0, i.jsx)(c.mh, {
@@ -37,13 +37,13 @@ t.Z = (e) => {
                 },
                 children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: s()(g.rowItem, f, {
-                        [g.last]: a,
-                        [g.active]: p
+                    className: s()(m.rowItem, f, {
+                        [m.last]: a,
+                        [m.active]: p
                     }),
-                    onMouseEnter: b,
-                    onMouseLeave: x,
-                    onClick: E,
+                    onMouseEnter: E,
+                    onMouseLeave: b,
+                    onClick: x,
                     ...e,
                     children: n(p)
                 })

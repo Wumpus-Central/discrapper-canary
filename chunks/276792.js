@@ -24,8 +24,8 @@ function _(e) {
         v = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
         { onClose: S } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
-        b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        A =
+        A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        b =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), S();
@@ -107,11 +107,11 @@ function _(e) {
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: v,
-                        cta_type: b,
+                        cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: v
                     }),
-                        A();
+                        b();
                 },
                 children: [
                     (0, i.jsx)('img', {

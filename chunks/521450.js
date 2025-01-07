@@ -7,23 +7,23 @@ var i = n(200651),
     c = n(442837),
     d = n(481060),
     u = n(37234),
-    m = n(960412),
-    g = n(151662),
+    g = n(960412),
+    m = n(151662),
     f = n(695346),
     p = n(981631),
     _ = n(930441),
     h = n(388032),
-    E = n(660728),
-    b = n(232186);
+    x = n(660728),
+    E = n(232186);
 t.Z = () => {
     let e = f.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
+        { categories: t, initialized: n } = (0, c.cj)([m.Z], () => m.Z.getEmailSettings());
     return (
         r.useEffect(() => {
-            null == n && (0, m.Y7)();
+            null == n && (0, g.Y7)();
         }, [n]),
         (0, i.jsxs)('div', {
-            className: E.container,
+            className: x.container,
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'eyebrow',
@@ -31,7 +31,7 @@ t.Z = () => {
                     children: h.intl.string(h.t.USIXU1)
                 }),
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(b.marginTop8, b.marginBottom20),
+                    className: s()(E.marginTop8, E.marginBottom20),
                     value: e,
                     note: h.intl.string(h.t['5MdB3t']),
                     hideBorder: !0,
@@ -40,7 +40,7 @@ t.Z = () => {
                 }),
                 e
                     ? (0, i.jsx)(d.Card, {
-                          className: E.enableCard,
+                          className: x.enableCard,
                           type: d.Card.Types.CUSTOM,
                           outline: !0,
                           children: (0, i.jsxs)(o.k, {
@@ -65,7 +65,7 @@ t.Z = () => {
                                   }),
                                   (0, i.jsx)(d.IconBadge, {
                                       icon: d.ArrowSmallRightIcon,
-                                      className: E.arrow,
+                                      className: x.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -73,12 +73,12 @@ t.Z = () => {
                       })
                     : null,
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(b.marginTop20, b.marginBottom20),
+                    className: s()(E.marginTop20, E.marginBottom20),
                     value: !!t[_.$Z.FAMILY_CENTER_DIGEST],
                     note: h.intl.string(h.t['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, m.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, g.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
                     },
                     children: h.intl.string(h.t.irvJKS)
                 })

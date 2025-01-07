@@ -1,29 +1,29 @@
-s.d(t, {
+n.d(t, {
     G: function () {
-        return l;
+        return c;
     },
     Q: function () {
-        return c;
+        return o;
     }
 });
-var n = s(192379),
-    r = s(442837),
-    i = s(232567),
-    a = s(594174),
-    o = s(276444);
-let c = 3;
-function l() {
-    let e = (0, r.Wu)([o.Z], () => o.Z.getSentUserIds()),
-        t = (0, r.Wu)([a.default], () => e.map((e) => a.default.getUser(e)).filter((e) => null != e));
-    n.useEffect(() => {
+var i = n(192379),
+    r = n(442837),
+    a = n(232567),
+    s = n(594174),
+    l = n(276444);
+let o = 3;
+function c() {
+    let e = (0, r.Wu)([l.Z], () => l.Z.getSentUserIds()),
+        t = (0, r.Wu)([s.default], () => e.map((e) => s.default.getUser(e)).filter((e) => null != e));
+    i.useEffect(() => {
         e.forEach((e) => {
-            (0, i.PR)(e);
+            (0, a.PR)(e);
         });
     }, [e]);
-    let s = e.length === c;
+    let n = e.length === o;
     return {
         referralSentUsers: t,
-        hasSentAllReferrals: s,
-        refreshAt: (0, r.e7)([o.Z], () => o.Z.getRefreshAt())
+        hasSentAllReferrals: n,
+        refreshAt: (0, r.e7)([l.Z], () => l.Z.getRefreshAt())
     };
 }

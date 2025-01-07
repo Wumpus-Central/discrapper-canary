@@ -16,7 +16,7 @@ var l = n(120356),
     v = n(51144),
     C = n(754231),
     x = n(787308);
-function Z(e) {
+function I(e) {
     let { guildId: t, member: n, className: l } = e,
         a = null != n.member ? (0, g.CA)(n.member) : null;
     return (0, i.jsx)(o.Tooltip, {
@@ -34,7 +34,7 @@ function Z(e) {
         }
     });
 }
-function I(e) {
+function _(e) {
     let { members: t, guildId: n } = e;
     return (0, i.jsx)(h.Z, {
         className: x.partyMembers,
@@ -43,7 +43,7 @@ function I(e) {
         max: 6,
         renderUser: (e, t, l) =>
             (0, i.jsx)(
-                Z,
+                I,
                 {
                     guildId: n,
                     member: e,
@@ -74,23 +74,23 @@ t.Z = (e) => {
             }
         });
     if (null == v) return null;
-    let Z = h || (0, c.Z)(n),
-        _ = (0, p.vd)(t.type);
+    let I = h || (0, c.Z)(n),
+        Z = (0, p.vd)(t.type);
     return (0, i.jsxs)('div', {
         className: x.activity,
         children: [
             (0, i.jsx)('div', {
                 className: x.channelActivityContainer,
-                children: Z
+                children: I
                     ? (0, i.jsx)(C.Z, {
                           activity: n,
                           embeddedApp: r,
                           user: v,
                           channel: t,
                           sortedVoiceStates: l,
-                          onOpenSpotifyTrack: _ ? d.aG : void 0,
-                          onOpenSpotifyArtist: _ ? d.d$ : void 0,
-                          onOpenSpotifyAlbum: _ ? d.Z5 : void 0
+                          onOpenSpotifyTrack: Z ? d.aG : void 0,
+                          onOpenSpotifyArtist: Z ? d.d$ : void 0,
+                          onOpenSpotifyAlbum: Z ? d.Z5 : void 0
                       })
                     : (0, i.jsx)(s.Z, {
                           type: s.P.VOICE_CHANNEL,
@@ -101,7 +101,7 @@ t.Z = (e) => {
                           renderHeaderAccessory:
                               null != l
                                   ? () =>
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(_, {
                                             guildId: t.guild_id,
                                             members: l
                                         })

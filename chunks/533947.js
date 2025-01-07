@@ -19,17 +19,17 @@ let C = [],
     v = !1,
     S = I.QZA.CLOSED,
     T = {},
-    b = !1,
-    A = null;
+    A = !1,
+    b = null;
 function Z() {
     if (((i = null != (r = g.Z.getChannel()) ? f.Z.getGuild(r.guild_id) : null), (C = null != r && null != i && _.Z.can(I.Plq.MANAGE_WEBHOOKS, r) ? E.Z.getWebhooksForChannel(i.id, r.id) : []), null != N)) {
         let e = L(N.id);
         null != e && (N = e);
     }
-    (S = I.QZA.OPEN), (T = {}), (b = !1);
+    (S = I.QZA.OPEN), (T = {}), (A = !1);
 }
 let x = u().debounce(() => {
-    b && ((null == N || u().isEqual(N, L(N.id))) && (b = !1), !b && O.emitChange());
+    A && ((null == N || u().isEqual(N, L(N.id))) && (A = !1), !A && O.emitChange());
 }, 500);
 function L(e) {
     return C.find((t) => {
@@ -42,7 +42,7 @@ class P extends (a = h.ZP.Store) {
         this.waitFor(g.Z, f.Z, E.Z, _.Z);
     }
     hasChanges() {
-        return b;
+        return A;
     }
     get webhooks() {
         return C;
@@ -65,7 +65,7 @@ class P extends (a = h.ZP.Store) {
             webhooks: C,
             editedWebhook: N,
             section: l,
-            sectionId: A,
+            sectionId: b,
             hasChanges: this.hasChanges(),
             isFetching: v,
             errors: T
@@ -99,21 +99,21 @@ let O = new P(
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {
                   let { section: t, sectionId: n } = e;
-                  (l = t), (A = n);
+                  (l = t), (b = n);
               },
               INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                   let { webhookId: t } = e,
                       n = L(t);
                   if (null == n) return !1;
-                  (N = n), (T = {}), (b = !1);
+                  (N = n), (T = {}), (A = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (N = null), (T = {}), (b = !1);
+                  (N = null), (T = {}), (A = !1);
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: t } = e;
                   if (null == N) return !1;
-                  (N = { ...N }), null != t.name && N.name !== t.name && ((N.name = t.name), (b = !0)), void 0 !== t.avatar && N.avatar !== t.avatar && ((N.avatar = t.avatar), (b = !0)), null != t.channelId && N.channel_id !== t.channelId && ((N.channel_id = t.channelId), (b = !0)), b && x();
+                  (N = { ...N }), null != t.name && N.name !== t.name && ((N.name = t.name), (A = !0)), void 0 !== t.avatar && N.avatar !== t.avatar && ((N.avatar = t.avatar), (A = !0)), null != t.channelId && N.channel_id !== t.channelId && ((N.channel_id = t.channelId), (A = !0)), A && x();
               },
               CHANNEL_SETTINGS_CLOSE: function () {
                   (r = null), (i = null), (C = []), (N = null), (S = I.QZA.CLOSED);
@@ -134,7 +134,7 @@ let O = new P(
                               ...t,
                               ...i
                           };
-                          (C[e] = n), !b && (null == N ? void 0 : N.id) === n.id && (N = n);
+                          (C[e] = n), !A && (null == N ? void 0 : N.id) === n.id && (N = n);
                       } else (null == N ? void 0 : N.id) === t.id && (N = null), C.splice(e, 1);
                   }
                   for (let e of l)

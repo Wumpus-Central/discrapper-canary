@@ -21,10 +21,10 @@ function x(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function Z() {
+function I() {
     (0, m.C1)();
 }
-let I = (e) => {
+let _ = (e) => {
     let { keybindString: t, children: n } = e,
         l = (e, t) => {
             e.stopPropagation(), e.preventDefault(), null == t || t();
@@ -89,12 +89,12 @@ t.Z = () => {
         o = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (!(t && n) || null == o || e) return null;
     let s = h.BB(o.shortcut, !0);
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(_, {
         keybindString: s,
         children: (0, i.jsx)(c.Z, {
             disabled: r,
             tooltipText: null != o ? v.intl.formatToPlainString(v.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : v.intl.string(v.t.s52pjo),
-            onClick: Z,
+            onClick: I,
             onContextMenu: x,
             icon: a.ClipsIcon
         })

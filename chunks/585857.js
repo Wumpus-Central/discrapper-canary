@@ -16,8 +16,8 @@ var r = n(120356),
     p = n(497505),
     m = n(796111),
     x = n(46140),
-    g = n(981631),
-    f = n(388032),
+    f = n(981631),
+    g = n(388032),
     h = n(387029);
 function C(e) {
     let { quest: t, isConnected: n, consoleType: r } = e;
@@ -32,7 +32,7 @@ function C(e) {
                 (0, d.Z)({ platformType: r });
         },
         children:
-            r === g.ABu.PLAYSTATION
+            r === f.ABu.PLAYSTATION
                 ? (0, o.jsx)(a.T, {
                       colorClass: s()(h.connectConsoleButton, n ? h.playstationButtonConnected : h.connectConsoleButtonUnconnected),
                       size: 'sm'
@@ -53,7 +53,7 @@ function v(e) {
                 questContent: p.jn.QUEST_BAR_V2,
                 questContentCTA: u.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
             }),
-                c.Z.open(g.oAB.CONNECTIONS);
+                c.Z.open(f.oAB.CONNECTIONS);
         },
         children: (0, o.jsx)(l.Text, {
             'aria-label': t,
@@ -78,19 +78,19 @@ function j(e) {
                     (0, o.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-xxs/normal',
-                        children: c ? f.intl.string(f.t['u30/ur']) : f.intl.string(f.t.owFNBw)
+                        children: c ? g.intl.string(g.t['u30/ur']) : g.intl.string(g.t.owFNBw)
                     }),
                     (0, o.jsxs)('div', {
                         className: h.inlineConsoleConnectionDetailsIcons,
                         children: [
                             (0, o.jsx)(C, {
-                                consoleType: g.ABu.PLAYSTATION,
+                                consoleType: f.ABu.PLAYSTATION,
                                 isConnected: u,
                                 quest: t
                             }),
                             (0, o.jsx)('div', { className: h.consoleIconDivider }),
                             (0, o.jsx)(C, {
-                                consoleType: g.ABu.XBOX,
+                                consoleType: f.ABu.XBOX,
                                 isConnected: d,
                                 quest: t
                             })
@@ -111,7 +111,7 @@ function j(e) {
                                         (0, o.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
-                                            children: e.type === g.ABu.XBOX ? f.intl.string(f.t.MEhKlp) : f.intl.string(f.t['74VQCA'])
+                                            children: e.type === f.ABu.XBOX ? g.intl.string(g.t.MEhKlp) : g.intl.string(g.t['74VQCA'])
                                         }),
                                         (0, o.jsx)(l.Text, {
                                             color: 'header-secondary',
@@ -125,7 +125,7 @@ function j(e) {
                         ),
                         a.length > 2 &&
                             (0, o.jsx)(v, {
-                                text: f.intl.string(f.t.o8ZkKS),
+                                text: g.intl.string(g.t.o8ZkKS),
                                 quest: t
                             })
                     ]
@@ -137,7 +137,7 @@ function _(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
         ? (0, o.jsx)(v, {
-              text: f.intl.string(f.t['qiS+xs']),
+              text: g.intl.string(g.t['qiS+xs']),
               quest: n
           })
         : null;
@@ -149,7 +149,7 @@ function b(e) {
             (0, o.jsx)(l.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
-                children: f.intl.string(f.t.EJFSvL)
+                children: g.intl.string(g.t.EJFSvL)
             }),
             t ? (0, o.jsx)(j, { ...e }) : (0, o.jsx)(_, { ...e })
         ]

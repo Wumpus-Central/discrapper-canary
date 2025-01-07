@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(789020),
@@ -38,10 +38,10 @@ async function T(e, t, n) {
         c,
         d,
         N,
-        { client_id: S, response_type: T = 'code', redirect_uri: b, code_challenge: A, code_challenge_method: Z, state: x, nonce: L, scope: P, permissions: O, guild_id: y, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: S, response_type: T = 'code', redirect_uri: A, code_challenge: b, code_challenge_method: Z, state: x, nonce: L, scope: P, permissions: O, guild_id: y, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: v.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == S) throw new C.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'No Client ID provided');
-    if (null != b) throw new C.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
+    if (null != A) throw new C.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let U = [];
     if (('string' == typeof P ? (U = P.split(' ').filter((e) => e.length > 0)) : Array.isArray(P) && (U = P), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let G = null !== (l = u.Z.getApplication(S)) && void 0 !== l ? l : null;
@@ -59,8 +59,8 @@ async function T(e, t, n) {
             clientId: S,
             scopes: U,
             responseType: T,
-            redirectUri: b,
-            codeChallenge: A,
+            redirectUri: A,
+            codeChallenge: b,
             codeChallengeMethod: Z,
             state: x,
             integrationType: o,
@@ -84,8 +84,8 @@ async function T(e, t, n) {
                     clientId: S,
                     scopes: U,
                     responseType: T,
-                    redirectUri: b,
-                    codeChallenge: A,
+                    redirectUri: A,
+                    codeChallenge: b,
                     codeChallengeMethod: Z,
                     state: x,
                     nonce: L,
@@ -109,8 +109,8 @@ async function T(e, t, n) {
             scopes: U,
             parsedPermissions: V,
             responseType: T,
-            redirectUri: b,
-            codeChallenge: A,
+            redirectUri: A,
+            codeChallenge: b,
             codeChallengeMethod: Z,
             state: x,
             guildId: y,
@@ -123,7 +123,7 @@ async function T(e, t, n) {
         })
     );
 }
-function b(e, t) {
+function A(e, t) {
     if (e.authorization.accessToken) throw new C.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'Already authenticated');
     if (e.authorization.authing) throw new C.Z({ errorCode: v.lTL.INVALID_COMMAND }, 'Already authenticating');
     return (
@@ -166,7 +166,7 @@ function b(e, t) {
             })
     );
 }
-function A(e, t) {
+function b(e, t) {
     return {
         [v.Etm.AUTHENTICATE]: (0, o.S)(v.Etm.AUTHENTICATE, {
             handler(n) {
@@ -208,7 +208,7 @@ function A(e, t) {
                                         }),
                                             c.K.set(S, l);
                                     })(n, l.access_token, l.scope, l.expires_in),
-                                    b(r, l.access_token)
+                                    A(r, l.access_token)
                                 );
                             });
                     return null !=
@@ -220,7 +220,7 @@ function A(e, t) {
                                 delete n[e], c.K.set(S, n);
                             }
                         })(n, o))
-                        ? b(r, s).catch(
+                        ? A(r, s).catch(
                               () => (
                                   !(function (e) {
                                       var t;
@@ -233,7 +233,7 @@ function A(e, t) {
                         : d();
                 }
                 if (null == s) throw new C.Z({ errorCode: v.lTL.INVALID_TOKEN }, 'No access token provided');
-                return b(r, s);
+                return A(r, s);
             }
         }),
         [v.Etm.AUTHORIZE]: {

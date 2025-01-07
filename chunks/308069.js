@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(685613),
     m = n(64141),
     x = n(341907),
-    g = n(303385),
-    f = n(388032),
+    f = n(303385),
+    g = n(388032),
     h = n(626094);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: v, useReducedMotion: j, isExpanded: _, isExpansionAnimationComplete: b } = e,
@@ -61,7 +61,7 @@ t.Z = (e) => {
                     backdropFilter: n.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(f.Z, {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: B,
@@ -84,7 +84,7 @@ t.Z = (e) => {
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: f.intl.string(f.t.o6FLcH)
+                                children: g.intl.string(g.t.o6FLcH)
                             }),
                             (0, o.jsx)(l.CircleQuestionIcon, {
                                 color: l.tokens.colors.WHITE,
@@ -104,7 +104,7 @@ t.Z = (e) => {
                             (0, o.jsx)(l.Clickable, {
                                 ...e,
                                 className: h.submenuWrapper,
-                                'aria-label': f.intl.string(f.t.DEoVWV),
+                                'aria-label': g.intl.string(g.t.DEoVWV),
                                 children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',

@@ -3,10 +3,10 @@ n.d(t, {
         return C;
     },
     Dp: function () {
-        return E;
+        return x;
     },
     Gw: function () {
-        return T;
+        return v;
     },
     Op: function () {
         return A;
@@ -24,16 +24,16 @@ n.d(t, {
         return P;
     },
     oo: function () {
-        return x;
+        return b;
     },
     sP: function () {
         return j;
     },
     t2: function () {
-        return v;
+        return T;
     },
     vZ: function () {
-        return b;
+        return E;
     }
 }),
     n(653041),
@@ -47,8 +47,8 @@ var i = n(278074),
     c = n(74538),
     d = n(331119),
     u = n(575595),
-    m = n(650032),
-    g = n(391110),
+    g = n(650032),
+    m = n(391110),
     f = n(474936),
     p = n(735825),
     _ = n(388032);
@@ -64,7 +64,7 @@ let h = (e) => {
                 return '';
         }
     },
-    E = (e) => {
+    x = (e) => {
         switch (e) {
             case p.EB.PENDING:
                 return _.intl.string(_.t['9o4F4+']);
@@ -75,7 +75,7 @@ let h = (e) => {
                 return '';
         }
     },
-    b = (e, t, n) => {
+    E = (e, t, n) => {
         switch (e) {
             case p.EB.PENDING:
                 return t === p.Ft.FREE_GUILD_BOOST_1_MONTH ? _.intl.string(_.t.hnbagI) : _.intl.string(_.t['73+DnJ']);
@@ -88,7 +88,7 @@ let h = (e) => {
                 return;
         }
     },
-    x = (e) => {
+    b = (e) => {
         switch (e) {
             case p.EB.PENDING:
                 return _.intl.string(_.t.nlcs6O);
@@ -111,7 +111,7 @@ let h = (e) => {
                 return;
         }
     },
-    T = (e) => {
+    v = (e) => {
         switch (e) {
             case p.EB.PENDING:
                 return _.intl.string(_.t.LAFMBQ);
@@ -122,7 +122,7 @@ let h = (e) => {
                 return;
         }
     };
-function v(e, t) {
+function T(e, t) {
     switch (e) {
         case p.EB.PENDING:
             return null != t ? _.intl.formatToPlainString(_.t.FULtam, { days: t }) : '';
@@ -158,18 +158,18 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
             c = () => {
                 a !== s.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: g } = m._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
+            { enabled: m } = g._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
             { enabled: f } = u.r.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
             { enabled: p } = d.C.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            _ = g && !f && !p,
-            h = Z();
+            _ = m && !f && !p,
+            h = O();
         return null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     j = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o } = e,
             c = [];
         switch (n) {
-            case g.R0.PERKS_DISCOVERABILITY:
+            case m.R0.PERKS_DISCOVERABILITY:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
@@ -178,7 +178,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
-            case g.R0.WHATS_NEW:
+            case m.R0.WHATS_NEW:
                 c = R({
                     cards: c,
                     perksCards: t,
@@ -187,12 +187,12 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     shopMarketingVariation: r
                 });
                 break;
-            case g.R0.CARD_CAROUSEL_FIRST_ROW:
+            case m.R0.CARD_CAROUSEL_FIRST_ROW:
                 c = (0, i.EQ)({ isPremiumSubscriber: l })
                     .with({ isPremiumSubscriber: !1 }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks])
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
-            case g.R0.CARD_CAROUSEL_SECOND_ROW:
+            case m.R0.CARD_CAROUSEL_SECOND_ROW:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
@@ -201,7 +201,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
-            case g.R0.CARD_CAROUSEL_THIRD_ROW:
+            case m.R0.CARD_CAROUSEL_THIRD_ROW:
                 c = (0, i.EQ)({ fractionalState: o })
                     .with({ fractionalState: f.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
@@ -231,7 +231,7 @@ let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
         let e = (0, r.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    Z = () => {
+    O = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, f.p9.TIER_2);
     };

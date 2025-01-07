@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(665149),
     d = n(428530),
     u = n(484036),
-    m = n(681619),
-    h = n(621060),
+    h = n(681619),
+    m = n(621060),
     x = n(941469),
     f = n(668055);
 function p(e, t) {
@@ -81,7 +81,7 @@ let g = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: a, renderSelectedTab: l } = (0, h.Z)({ tabs: v }, []);
+        { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
         className: f.subPanel,
         minHeight: 100,
@@ -124,7 +124,7 @@ function C() {
                 })(e, t)
             ),
         [d, u] = a.useState(),
-        h = l.find((e) => e._dispatchToken === d);
+        m = l.find((e) => e._dispatchToken === d);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(x.panel, f.panel),
@@ -141,15 +141,15 @@ function C() {
                     'aria-label': 'Search stores'
                 })
             }),
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(h.Z, {
                 columns: g,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
-            null != h &&
+            null != m &&
                 (0, r.jsx)(j, {
-                    store: h,
+                    store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
         ]

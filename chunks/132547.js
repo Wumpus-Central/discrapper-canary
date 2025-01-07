@@ -8,31 +8,31 @@ var i = n(200651),
     c = n(100527),
     d = n(906732),
     u = n(464824),
-    m = n(214852),
-    g = n(626135),
+    g = n(214852),
+    m = n(626135),
     f = n(533525),
     p = n(314684),
     _ = n(794484),
     h = n(536844),
-    E = n(342414),
-    b = n(938736),
-    x = n(391110),
+    x = n(342414),
+    E = n(938736),
+    b = n(391110),
     C = n(71363),
-    T = n(781800),
-    v = n(981631),
+    v = n(781800),
+    T = n(981631),
     N = n(388032),
     I = n(368549),
     S = n(865215);
 let R = 'SubscriberNitroHome';
 t.Z = () => {
-    (0, m.z)(u.X);
+    (0, g.z)(u.X);
     let e = r.useRef(null),
         [t, n] = r.useState(!1),
         { analyticsLocations: a } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [j, A] = r.useState(!1);
     (0, p.FM)();
     let P = (0, f.b)(R),
-        Z = (0, b.TW)(R);
+        O = (0, E.TW)(R);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.AdvancedScrollerAuto, {
@@ -43,13 +43,13 @@ t.Z = () => {
                     children: (0, i.jsxs)(d.Gt, {
                         value: a,
                         children: [
-                            (0, i.jsx)(E.Z, {
+                            (0, i.jsx)(x.Z, {
                                 className: I.heroHeading,
-                                location: x.MQ.HOME
+                                location: b.MQ.HOME
                             }),
                             (0, i.jsx)(_.Z, {
-                                variant: x.R0.WHATS_NEW,
-                                className: s()(I.whatsNew, { [I.whatsNewWithOriginalHeroHeading]: !(P || Z) }),
+                                variant: b.R0.WHATS_NEW,
+                                className: s()(I.whatsNew, { [I.whatsNewWithOriginalHeroHeading]: !(P || O) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
@@ -57,23 +57,23 @@ t.Z = () => {
                                 className: I.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
-                                showAllPerksButton: (0, i.jsx)(T.Z, {
+                                showAllPerksButton: (0, i.jsx)(v.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: x.MQ.HOME
+                                    previousComponent: b.MQ.HOME
                                 })
                             }),
                             (0, i.jsx)(h.Z, {
                                 className: I.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: v.ZY5.NITRO_HOME,
-                                    section: v.jXE.GIFT_BANNER
+                                    page: T.ZY5.NITRO_HOME,
+                                    section: T.jXE.GIFT_BANNER
                                 }
                             }),
                             (0, i.jsx)('div', { className: I.footerSpacing }),
                             (0, i.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !j && (g.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
+                                    e && !j && (m.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
                                 },
                                 children: (0, i.jsx)('div', { className: I.bottomOfPageVisibilitySensor })
                             }),
@@ -91,7 +91,7 @@ t.Z = () => {
             (0, i.jsx)(C.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: x.MQ.HOME
+                previousComponent: b.MQ.HOME
             })
         ]
     });
