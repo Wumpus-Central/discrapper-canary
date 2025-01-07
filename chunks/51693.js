@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120),
@@ -9,65 +9,68 @@ var l = n(200651),
     i = n(192379),
     r = n(658550),
     s = n(481060),
-    o = n(507453),
-    a = n(388032);
-function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c } = e,
-        [h, f] = i.useState(!1),
-        [m, g] = i.useState(null),
-        [S, x] = i.useState(''),
-        p = i.useRef(null);
+    o = n(540059),
+    a = n(507453),
+    d = n(388032);
+function u(e) {
+    let { mfaChallenge: t, finish: n, setSlide: u, onClose: c, isSlideReady: h } = e,
+        f = (0, o.Q3)('TotpSlide'),
+        [m, g] = i.useState(!1),
+        [S, x] = i.useState(null),
+        [p, v] = i.useState(''),
+        j = i.useRef(null);
     return (
         i.useEffect(() => {
-            if (c) {
+            if (h) {
                 var e;
-                null === (e = p.current) || void 0 === e || e.focus();
+                null === (e = j.current) || void 0 === e || e.focus();
             }
-        }, [c]),
+        }, [h]),
         (0, l.jsxs)('form', {
             onSubmit: (e) => {
                 e.preventDefault(),
-                    f(!0),
-                    g(null),
+                    g(!0),
+                    x(null),
                     n({
                         mfaType: 'totp',
-                        data: S
+                        data: p
                     })
                         .catch((e) => {
                             var t, n;
-                            g(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
+                            x(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
                         })
                         .finally(() => {
-                            f(!1);
+                            g(!1);
                         });
             },
             children: [
-                (0, l.jsx)(o.Z.SlideHeader, { onClose: u }),
-                (0, l.jsx)(o.Z.SlideContent, {
+                (0, l.jsx)(a.Z.SlideHeader, { onClose: c }),
+                (0, l.jsx)(a.Z.SlideContent, {
+                    scrollbarType: f ? 'none' : void 0,
                     children: (0, l.jsxs)(s.FormItem, {
-                        title: a.intl.string(a.t.HZPBOT),
+                        title: d.intl.string(d.t.HZPBOT),
                         children: [
                             (0, l.jsx)(s.TextInput, {
-                                inputRef: p,
-                                onChange: x,
-                                placeholder: a.intl.string(a.t.tARzgo),
+                                inputRef: j,
+                                onChange: v,
+                                placeholder: d.intl.string(d.t.tARzgo),
                                 maxLength: r.gH,
                                 minLength: r.gH,
-                                value: S,
+                                value: p,
                                 autoComplete: 'one-time-code',
                                 spellCheck: 'false',
-                                disabled: h
+                                disabled: m
                             }),
-                            (0, l.jsx)(o.Z.SlideError, { error: m })
+                            (0, l.jsx)(a.Z.SlideError, { error: S })
                         ]
                     })
                 }),
-                (0, l.jsx)(o.Z.SlideFooter, {
+                (0, l.jsx)(a.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: u,
                     showConfirm: !0,
-                    disabled: S.length !== r.gH,
-                    submitting: h
+                    disabled: p.length !== r.gH,
+                    submitting: m
                 })
             ]
         })

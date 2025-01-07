@@ -6,9 +6,10 @@ var i = n(481060),
     o = n(452091);
 t.Z = {
     SlideContent: function (e) {
-        let { children: t } = e;
+        let { children: t, scrollbarType: n } = e;
         return (0, l.jsx)(i.ModalContent, {
             className: o.content,
+            scrollbarType: n,
             children: t
         });
     },
