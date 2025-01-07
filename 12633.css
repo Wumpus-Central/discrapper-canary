@@ -12066,7 +12066,6 @@ div.modalHeader_c5e09c {
     padding: .5em;
     border-radius: 4px;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none;
     color: var(--text-normal);
     background: var(--background-secondary)
@@ -12252,7 +12251,6 @@ div.modalHeader_c5e09c {
     padding: .5em;
     border-radius: 4px;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none;
     color: var(--text-normal)
 }
@@ -26087,7 +26085,6 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     font-family: var(--font-code);
     font-size: 85%;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none
 }
 
