@@ -43,7 +43,7 @@ n.Z = (e) => {
                 });
         },
         emit: (r, a) => {
-            for (let u = 0; u < a; u++)
+            for (let c = 0; c < a; c++)
                 t.current.push({
                     position: {
                         x: e.w / 2 + (0, i.random)(-50, 50),

@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(899007),
     S = n(648052),
     T = n(867176),
-    A = n(537006),
-    b = n(483424),
+    b = n(537006),
+    A = n(483424),
     Z = n(681837),
     x = n(502762),
     L = n(530),
@@ -373,11 +373,11 @@ function ee(e) {
                                     onClose: k
                                 }),
                                 em &&
-                                    (0, i.jsx)(A.Z, {
+                                    (0, i.jsx)(b.Z, {
                                         isPremiumUser: ep,
                                         onInteraction: k
                                     }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: n,
                                     currentUser: n,
                                     onClose: k

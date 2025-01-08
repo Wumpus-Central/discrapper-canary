@@ -10,14 +10,14 @@ var i = n(200651),
     u = n(984370),
     m = n(785195),
     f = n(889711),
-    b = n(246364),
-    x = n(388032),
-    p = n(315651);
-let h = (e) => {
+    x = n(246364),
+    b = n(388032),
+    h = n(315651);
+let p = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
         return (0, i.jsx)(s.Menu, {
             navId: 'member-applications-tabs-overflow-menu',
-            'aria-label': x.intl.string(x.t.riPnr6),
+            'aria-label': b.intl.string(b.t.riPnr6),
             hideScroller: !0,
             onClose: a,
             onSelect: a,
@@ -48,25 +48,25 @@ let h = (e) => {
             e &&
                 i.push({
                     id: 'REVIEW_APPLICATION',
-                    label: x.intl.string(x.t.fSGLR0)
+                    label: b.intl.string(b.t.fSGLR0)
                 }),
             t &&
                 (i.push({
-                    id: b.wB.SUBMITTED,
-                    label: 0 === n ? x.intl.string(x.t['4eQVBA']) : x.intl.formatToPlainString(x.t['Wo+zLy'], { count: n })
+                    id: x.wB.SUBMITTED,
+                    label: 0 === n ? b.intl.string(b.t['4eQVBA']) : b.intl.formatToPlainString(b.t['Wo+zLy'], { count: n })
                 }),
                 i.push({
-                    id: b.wB.APPROVED,
-                    label: x.intl.string(x.t.aURgY2)
+                    id: x.wB.APPROVED,
+                    label: b.intl.string(b.t.aURgY2)
                 }),
                 i.push({
-                    id: b.wB.REJECTED,
-                    label: x.intl.string(x.t.bSZklZ)
+                    id: x.wB.REJECTED,
+                    label: b.intl.string(b.t.bSZklZ)
                 })),
             i
         );
     };
-function g(e) {
+function _(e) {
     let { onTabSelect: t, tabs: n, selectedTab: a } = e,
         l = (0, d.ZP)(),
         u = (0, c.wj)(l),
@@ -80,11 +80,11 @@ function g(e) {
             [a, n]
         ),
         f = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
-        b = m ? s.tokens.colors.HEADER_PRIMARY : u ? s.tokens.colors.TEXT_MUTED : s.tokens.colors.HEADER_PRIMARY;
+        x = m ? s.tokens.colors.HEADER_PRIMARY : u ? s.tokens.colors.TEXT_MUTED : s.tokens.colors.HEADER_PRIMARY;
     return (0, i.jsx)(s.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
-            return (0, i.jsx)(h, {
+            return (0, i.jsx)(p, {
                 selectedTab: a,
                 onClose: r,
                 tabs: n,
@@ -99,22 +99,22 @@ function g(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: o()(p.more, { [p.selected]: m }),
-                'aria-label': x.intl.string(x.t.UKOtz8),
+                className: o()(h.more, { [h.selected]: m }),
+                'aria-label': b.intl.string(b.t.UKOtz8),
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/medium',
                         color: f,
-                        children: x.intl.string(x.t.UKOtz8)
+                        children: b.intl.string(b.t.UKOtz8)
                     }),
                     n
                         ? (0, i.jsx)(s.ChevronSmallUpIcon, {
                               size: 'sm',
-                              color: b
+                              color: x
                           })
                         : (0, i.jsx)(s.ChevronSmallDownIcon, {
                               size: 'sm',
-                              color: b
+                              color: x
                           })
                 ]
             });
@@ -123,9 +123,9 @@ function g(e) {
 }
 t.Z = function (e) {
     let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: a, showSetupTab: o, canActionJoinRequests: c, isSidebarOpen: d } = e,
-        [b, h] = r.useState(0),
-        _ = r.useRef(null),
-        v = r.useRef(b),
+        [x, p] = r.useState(0),
+        g = r.useRef(null),
+        v = r.useRef(x),
         j = C(o, c, t),
         {
             lastVisibleIndex: I,
@@ -135,25 +135,25 @@ t.Z = function (e) {
             items: j,
             itemGapPx: 16,
             maxLines: 1,
-            containerWidth: b - 400
+            containerWidth: x - 400
         }),
         E = r.useMemo(() => j.slice(0, I + 1), [I, j]),
         S = r.useMemo(() => j.slice(I + 1), [I, j]),
-        w = r.useCallback(() => {
+        A = r.useCallback(() => {
             var e;
-            let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != t && v.current !== t.width && (h(t.width), (v.current = t.width));
+            let t = null === (e = g.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            null != t && v.current !== t.width && (p(t.width), (v.current = t.width));
         }, []);
     return (
         r.useEffect(() => {
-            let e = (0, f.pP)(w);
+            let e = (0, f.pP)(A);
             return (0, f.YP)(e, document.body), () => (0, f.UC)(e, document.body);
-        }, [w]),
+        }, [A]),
         r.useEffect(() => {
-            w();
-        }, [w, d]),
+            A();
+        }, [A, d]),
         (0, i.jsx)('div', {
-            ref: _,
+            ref: g,
             children: (0, i.jsxs)(u.Z, {
                 hideSearch: !0,
                 toolbar: (0, i.jsx)('div', {}),
@@ -161,18 +161,18 @@ t.Z = function (e) {
                     (0, i.jsx)(u.Z.Icon, {
                         icon: (0, s.makeIconCompat)(m.Z),
                         disabled: !0,
-                        'aria-label': x.intl.string(x.t.tcvVXF)
+                        'aria-label': b.intl.string(b.t.tcvVXF)
                     }),
                     (0, i.jsx)(u.Z.Title, {
-                        className: p.title,
-                        children: x.intl.string(x.t.tcvVXF)
+                        className: h.title,
+                        children: b.intl.string(b.t.tcvVXF)
                     }),
-                    (0, i.jsx)(u.Z.Divider, { className: p.divider }),
+                    (0, i.jsx)(u.Z.Divider, { className: h.divider }),
                     (0, i.jsxs)('div', {
-                        className: p.container,
+                        className: h.container,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: p.measurements,
+                                className: h.measurements,
                                 children: [
                                     j.map((e, t) =>
                                         (0, i.jsx)(
@@ -191,7 +191,7 @@ t.Z = function (e) {
                                     ),
                                     (0, i.jsx)('div', {
                                         ref: R,
-                                        children: (0, i.jsx)(g, {
+                                        children: (0, i.jsx)(_, {
                                             tabs: S,
                                             onTabSelect: a,
                                             selectedTab: n
@@ -200,7 +200,7 @@ t.Z = function (e) {
                                 ]
                             }),
                             (0, i.jsxs)(s.TabBar, {
-                                'aria-label': x.intl.string(x.t.TdEu5e),
+                                'aria-label': b.intl.string(b.t.TdEu5e),
                                 selectedItem: n,
                                 type: 'top-pill',
                                 onItemSelect: a,
@@ -217,7 +217,7 @@ t.Z = function (e) {
                                         )
                                     ),
                                     0 !== S.length
-                                        ? (0, i.jsx)(g, {
+                                        ? (0, i.jsx)(_, {
                                               tabs: S,
                                               onTabSelect: a,
                                               selectedTab: n

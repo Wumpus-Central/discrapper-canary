@@ -21,8 +21,8 @@ var i,
     v = n(906732),
     S = n(812206),
     T = n(933557),
-    A = n(194082),
-    b = n(264165),
+    b = n(194082),
+    A = n(264165),
     Z = n(548816),
     x = n(925329),
     L = n(102172),
@@ -403,7 +403,7 @@ let ee = (e) => {
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(b.Z, {
+            t = (0, l.jsx)(A.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
@@ -491,7 +491,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             children: [Y(G.ZP.getName(r)), K(g)]
                         }),
-                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
+                        (0, l.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     ]
                 }),
                 p

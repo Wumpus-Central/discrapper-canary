@@ -78,8 +78,8 @@ var i,
     v = n(594174),
     S = n(979651),
     T = n(70956),
-    A = n(5192),
-    b = n(226951),
+    b = n(5192),
+    A = n(226951),
     Z = n(591759),
     x = n(996106),
     L = n(863141),
@@ -93,7 +93,7 @@ let y = null !== (r = null === (i = Z.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(b.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(b.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * T.Z.Millis.MINUTE,
     M = {};
 function w(e) {
@@ -176,7 +176,7 @@ function V(e, t, n) {
         c = v.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: A.ZP.getName(e, t, c),
+        nick: b.ZP.getName(e, t, c),
         mute: I.Z.isLocalMute(c.id),
         volume: I.Z.getLocalVolume(c.id),
         pan: I.Z.getLocalPan(c.id),

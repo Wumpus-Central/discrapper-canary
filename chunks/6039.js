@@ -21,10 +21,10 @@ var i = n(200651),
     v = n(981631),
     S = n(898625),
     T = n(388032),
-    A = n(301219);
+    b = n(301219);
 t.Z = (e) => {
     var t;
-    let n, b;
+    let n, A;
     let { guildId: Z, inviteCode: x } = e,
         L = (0, g.jS)(Z, 'MemberVerificationPreviewDisabled'),
         [P, O] = r.useState(S.hO.INITIAL),
@@ -52,7 +52,7 @@ t.Z = (e) => {
         };
     let G =
         ((n = T.intl.format(T.t['9ZezpK'], { name: null == M ? void 0 : M.toString() })),
-        (b = () => {
+        (A = () => {
             O(Math.max(P, S.hO.FILLING)), h.Z.removeGuildJoinRequest(Z), (0, o.uL)(v.Z5c.ME);
         }),
         () => {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                 (0, i.jsx)(a.ConfirmModal, {
                     header: T.intl.string(T.t.y0CVen),
                     cancelText: T.intl.string(T.t.oEAioK),
-                    onConfirm: b,
+                    onConfirm: A,
                     confirmText: T.intl.string(T.t.p89ACg),
                     confirmButtonColor: a.Button.Colors.RED,
                     ...e,
@@ -75,9 +75,9 @@ t.Z = (e) => {
     if (L && (null == R ? void 0 : R.applicationStatus) !== f.wB.SUBMITTED && (null == R ? void 0 : R.applicationStatus) !== f.wB.REJECTED)
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)('div', { className: A.dragRegion }),
+                (0, i.jsx)('div', { className: b.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: A.v2ContentWrapper,
+                    className: b.v2ContentWrapper,
                     children: (0, i.jsx)(N.Z, {
                         guildId: Z,
                         inviteCode: x,
@@ -94,7 +94,7 @@ t.Z = (e) => {
               })
             : (0, d.gK)();
     return (0, i.jsx)('div', {
-        className: A.page,
+        className: b.page,
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: B,
@@ -102,9 +102,9 @@ t.Z = (e) => {
             showLogo: !1,
             updateWaveState: w,
             children: [
-                (0, i.jsx)('div', { className: A.dragRegion }),
+                (0, i.jsx)('div', { className: b.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: A.contentWrapper,
+                    className: b.contentWrapper,
                     children: (() => {
                         switch (null == R ? void 0 : R.applicationStatus) {
                             case f.wB.SUBMITTED:

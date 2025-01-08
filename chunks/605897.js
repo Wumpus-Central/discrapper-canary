@@ -1,7 +1,7 @@
 var a = r(621028),
     n = r(667929),
-    s = r(395043);
-function o(e, t) {
+    o = r(395043);
+function s(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
@@ -17,12 +17,12 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? o(Object(r), !0).forEach(function (t) {
+            ? s(Object(r), !0).forEach(function (t) {
                   (0, a.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : o(Object(r)).forEach(function (t) {
+              : s(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
@@ -228,6 +228,6 @@ var c = (0, n.t7)(
             }
         };
     },
-    { defaultBase16: s.Z }
+    { defaultBase16: o.Z }
 );
 t.Z = c;

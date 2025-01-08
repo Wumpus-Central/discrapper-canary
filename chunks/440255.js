@@ -11,8 +11,8 @@ r.d(t, {
 });
 var a = r(665352),
     n = r(37484),
-    s = r(99978),
-    o = r(656653),
+    o = r(99978),
+    s = r(656653),
     i = r(856308);
 let c = r(629990).mh.D65,
     u = 2.380952380952381,
@@ -48,18 +48,18 @@ function Z(e, t) {
         return (400 * (0, n.g6)(r, e)) / (r + 27.13);
     });
 }
-function w(e, t, r, a, o) {
+function w(e, t, r, a, s) {
     let i = {};
-    (i.discounting = o), (i.refWhite = e), (i.surround = a);
+    (i.discounting = s), (i.refWhite = e), (i.surround = a);
     let c = e.map((e) => 100 * e);
     (i.la = t), (i.yb = r);
     let u = c[1],
-        l = (0, s.Z)(f, c),
+        l = (0, o.Z)(f, c),
         b = (a = d[i.surround])[0];
     (i.c = a[1]), (i.nc = a[2]);
     let h = (1 / (5 * i.la + 1)) ** 4;
     (i.fl = h * i.la + 0.1 * (1 - h) * (1 - h) * Math.cbrt(5 * i.la)), (i.flRoot = i.fl ** 0.25), (i.n = i.yb / u), (i.z = 1.48 + Math.sqrt(i.n)), (i.nbb = 0.725 * i.n ** -0.2), (i.ncb = i.nbb);
-    let p = o ? 1 : Math.max(Math.min(b * (1 - (1 / 3.6) * Math.exp((-i.la - 42) / 92)), 1), 0);
+    let p = s ? 1 : Math.max(Math.min(b * (1 - (1 / 3.6) * Math.exp((-i.la - 42) / 92)), 1), 0);
     (i.dRgb = l.map((e) => (0, n.sX)(1, u / e, p))), (i.dRgbInv = i.dRgb.map((e) => 1 / e));
     let m = Z(
         l.map((e, t) => e * i.dRgb[t]),
@@ -77,14 +77,14 @@ function k(e, t) {
         a = Math.cos(
             (r =
                 void 0 !== e.h
-                    ? (0, o.j)(e.h) * v
+                    ? (0, s.j)(e.h) * v
                     : (function (e) {
                           let t = ((e % 400) + 400) % 400,
                               r = Math.floor(0.01 * t);
                           t %= 100;
                           let [a, n] = p.slice(r, r + 2),
-                              [s, i] = m.slice(r, r + 2);
-                          return (0, o.j)((t * (i * a - s * n) - 100 * a * i) / (t * (i - s) - 100 * i));
+                              [o, i] = m.slice(r, r + 2);
+                          return (0, s.j)((t * (i * a - o * n) - 100 * a * i) / (t * (i - o) - 100 * i));
                       })(e.H) * v)
         ),
         i = Math.sin(r),
@@ -105,10 +105,10 @@ function k(e, t) {
                 return (0, n.g6)(r * (0, n.$7)(t / (400 - t), u), e);
             });
         })(
-            (0, s.Z)(h, [Z, w * a, w * i]).map((e) => (1 * e) / 1403),
+            (0, o.Z)(h, [Z, w * a, w * i]).map((e) => (1 * e) / 1403),
             t.fl
         );
-    return (0, s.Z)(
+    return (0, o.Z)(
         b,
         M.map((e, r) => e * t.dRgbInv[r])
     ).map((e) => e / 100);
@@ -116,7 +116,7 @@ function k(e, t) {
 function O(e, t) {
     let r = e.map((e) => 100 * e),
         a = Z(
-            (0, s.Z)(f, r).map((e, r) => e * t.dRgb[r]),
+            (0, o.Z)(f, r).map((e, r) => e * t.dRgb[r]),
             t.fl
         ),
         i = a[0] + (-12 * a[1] + a[2]) / 11,
@@ -131,16 +131,16 @@ function O(e, t) {
         k = (4 / t.c) * w * (t.aW + 4) * t.flRoot,
         O = d * w,
         C = O * t.flRoot,
-        E = (0, o.j)(u * y),
+        E = (0, s.j)(u * y),
         j = (function (e) {
-            let t = (0, o.j)(e);
+            let t = (0, s.j)(e);
             t <= p[0] && (t += 360);
             let r = (0, n.Nw)(p, t) - 1,
-                [a, s] = p.slice(r, r + 2),
+                [a, o] = p.slice(r, r + 2),
                 [i, c] = m.slice(r, r + 2),
                 u = g[r],
                 l = (t - a) / i;
-            return u + (100 * l) / (l + (s - t) / c);
+            return u + (100 * l) / (l + (o - t) / c);
         })(E);
     return {
         J: M,

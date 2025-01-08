@@ -1,7 +1,7 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return T;
+            return f;
         }
     }),
     e(47120);
@@ -17,22 +17,22 @@ var o = e(200651),
     E = e(540440),
     _ = e(365583),
     h = e(388032),
-    f = e(51478);
-function T(t) {
-    let { user: n, entry: e, transitionState: T, onAction: N, onClose: R, onOpenGameSettings: x } = t,
+    T = e(51478);
+function f(t) {
+    let { user: n, entry: e, transitionState: f, onAction: N, onClose: R, onOpenGameSettings: x } = t,
         [C, S] = (0, i.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
     return (
         r.useEffect(() => a.Bt, []),
         (0, o.jsxs)(l.ModalRoot, {
             size: l.ModalSize.SMALL,
-            transitionState: T,
+            transitionState: f,
             children: [
                 (0, o.jsxs)(l.ModalContent, {
-                    className: f.content,
+                    className: T.content,
                     children: [
                         null != S
                             ? (0, o.jsxs)('div', {
-                                  className: f.error,
+                                  className: T.error,
                                   children: [
                                       (0, o.jsx)(l.CircleXIcon, { color: l.tokens.colors.STATUS_DANGER }),
                                       (0, o.jsx)(l.Text, {
@@ -71,13 +71,13 @@ function T(t) {
                         (0, o.jsx)(u.Z, {
                             user: n,
                             entry: e,
-                            className: f.card,
+                            className: T.card,
                             hideContextMenu: !0
                         })
                     ]
                 }),
                 (0, o.jsxs)(l.ModalFooter, {
-                    className: f.footer,
+                    className: T.footer,
                     children: [
                         (0, o.jsx)(l.Button, {
                             disabled: C,

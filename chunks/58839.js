@@ -1,6 +1,6 @@
 var i = n(200651);
 n(192379);
-var s = n(325767);
+var s = n(331595);
 t.Z = (e) => {
     let { width: t = 24, height: n = 24, color: r = 'currentColor', className: l, foreground: a, ...o } = e;
     return (0, i.jsx)('svg', {

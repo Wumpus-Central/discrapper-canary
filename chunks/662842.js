@@ -26,8 +26,8 @@ var i,
     v = n(230900),
     S = n(854698),
     T = n(703656),
-    A = n(922482),
-    b = n(565799),
+    b = n(922482),
+    A = n(565799),
     Z = n(501655),
     x = n(427679),
     L = n(448206),
@@ -55,8 +55,8 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        V = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        V = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([y.Z], () => y.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, A.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, b.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

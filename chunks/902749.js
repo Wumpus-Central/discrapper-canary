@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(692547),
     l = n(390507),
-    o = n(325767);
+    o = n(331595);
 let s = (e) => {
     var t, n;
     let { size: s = 'md', width: a, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...m } = e,

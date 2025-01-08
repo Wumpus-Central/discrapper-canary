@@ -1,8 +1,8 @@
 var a = r(910974),
     n = r(190293),
-    s = r(192379),
-    o = r(639519),
-    i = r.n(o),
+    o = r(192379),
+    s = r(639519),
+    i = r.n(s),
     c = r(247595),
     u = ['data'];
 function l(e) {
@@ -11,7 +11,7 @@ function l(e) {
 var f = function (e) {
     var t = e.data,
         r = (0, n.Z)(e, u);
-    return s.createElement(
+    return o.createElement(
         c.Z,
         (0, a.Z)({}, r, {
             data: t,

@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(474936),
     S = n(981631),
     T = n(388032),
-    A = n(378480),
-    b = n(423360);
+    b = n(378480),
+    A = n(423360);
 let Z = {
     width: 14,
     height: 14
@@ -88,15 +88,15 @@ function x(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(b.actionButton, A.popoutButton, {
-                          [b.highlight]: x,
-                          [b.actionButtonMobile]: c.tq
+                      className: a()(A.actionButton, b.popoutButton, {
+                          [A.highlight]: x,
+                          [A.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
                       children: (0, i.jsx)(s.animated.div, {
-                          className: A.spriteContainer,
-                          children: (0, i.jsx)('div', { className: A.sprite })
+                          className: b.spriteContainer,
+                          children: (0, i.jsx)('div', { className: b.sprite })
                       })
                   })
                 : (0, i.jsx)(d.Button, {
@@ -104,7 +104,7 @@ function x(e) {
                       onMouseEnter: D,
                       onMouseLeave: R,
                       children: (0, i.jsxs)('div', {
-                          className: A.pillContentContainer,
+                          className: b.pillContentContainer,
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
@@ -115,7 +115,7 @@ function x(e) {
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
-                                  className: A.pillButtonText,
+                                  className: b.pillButtonText,
                                   children: k()
                               })
                           ]

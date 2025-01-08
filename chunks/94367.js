@@ -5,23 +5,23 @@ r.d(t, {
 });
 var a = r(37484),
     n = r(527628),
-    s = r(665352),
-    o = r(798192);
+    o = r(665352),
+    s = r(798192);
 let i = new Set(['<number>', '<percentage>', '<angle>']);
 function c(e, t, r, n) {
-    return Object.entries(e.coords).map(([e, s], o) => {
+    return Object.entries(e.coords).map(([e, o], s) => {
         let c,
-            u = t.coordGrammar[o],
-            l = n[o],
+            u = t.coordGrammar[s],
+            l = n[s],
             f = l?.type;
         if (!(c = l.none ? u.find((e) => i.has(e)) : u.find((e) => e == f))) {
-            let t = s.name || e;
+            let t = o.name || e;
             throw TypeError(`${f ?? l.raw} not allowed for ${t} in ${r}()`);
         }
         let b = c.range;
         '<percentage>' === f && (b ||= [0, 1]);
-        let h = s.range || s.refRange;
-        return b && h && (n[o] = a.KK(b, h, n[o])), c;
+        let h = o.range || o.refRange;
+        return b && h && (n[s] = a.KK(b, h, n[s])), c;
     });
 }
 function u(e, { meta: t } = {}) {
@@ -34,20 +34,20 @@ function u(e, { meta: t } = {}) {
                 a = e.startsWith('--') ? e.substring(2) : `--${e}`,
                 n = [e, a],
                 i = r.parsed.rawArgs.indexOf('/') > 0 ? r.parsed.args.pop() : 1;
-            for (let a of s.Z.all) {
-                let s = a.getFormat('color');
-                if (s && (n.includes(s.id) || s.ids?.filter((e) => n.includes(e)).length)) {
+            for (let a of o.Z.all) {
+                let o = a.getFormat('color');
+                if (o && (n.includes(o.id) || o.ids?.filter((e) => n.includes(e)).length)) {
                     let n;
                     let u = Object.keys(a.coords).map((e, t) => r.parsed.args[t] || 0);
                     return (
-                        s.coordGrammar && (n = c(a, s, 'color', u)),
+                        o.coordGrammar && (n = c(a, o, 'color', u)),
                         t &&
                             Object.assign(t, {
                                 formatId: 'color',
                                 types: n
                             }),
-                        s.id.startsWith('--') && !e.startsWith('--') && o.Z.warn(`${a.name} is a non-standard space and not currently supported in the CSS spec. Use prefixed color(${s.id}) instead of color(${e}).`),
-                        e.startsWith('--') && !s.id.startsWith('--') && o.Z.warn(`${a.name} is a standard space and supported in the CSS spec. Use color(${s.id}) instead of prefixed color(${e}).`),
+                        o.id.startsWith('--') && !e.startsWith('--') && s.Z.warn(`${a.name} is a non-standard space and not currently supported in the CSS spec. Use prefixed color(${o.id}) instead of color(${e}).`),
+                        e.startsWith('--') && !o.id.startsWith('--') && s.Z.warn(`${a.name} is a standard space and supported in the CSS spec. Use color(${o.id}) instead of prefixed color(${e}).`),
                         {
                             spaceId: a.id,
                             coords: u,
@@ -57,26 +57,26 @@ function u(e, { meta: t } = {}) {
                 }
             }
             let u = '',
-                l = e in s.Z.registry ? e : a;
-            if (l in s.Z.registry) {
-                let e = s.Z.registry[l].formats?.color?.id;
+                l = e in o.Z.registry ? e : a;
+            if (l in o.Z.registry) {
+                let e = o.Z.registry[l].formats?.color?.id;
                 e && (u = `Did you mean color(${e})?`);
             }
             throw TypeError(`Cannot parse color(${e}). ` + (u || 'Missing a plugin?'));
         }
-        for (let n of s.Z.all) {
-            let s = n.getFormat(e);
-            if (s && 'function' === s.type) {
-                let o,
+        for (let n of o.Z.all) {
+            let o = n.getFormat(e);
+            if (o && 'function' === o.type) {
+                let s,
                     i = 1;
-                (s.lastAlpha || a.Z$(r.parsed.args).alpha) && (i = r.parsed.args.pop());
+                (o.lastAlpha || a.Z$(r.parsed.args).alpha) && (i = r.parsed.args.pop());
                 let u = r.parsed.args;
                 return (
-                    s.coordGrammar && (o = c(n, s, e, u)),
+                    o.coordGrammar && (s = c(n, o, e, u)),
                     t &&
                         Object.assign(t, {
-                            formatId: s.name,
-                            types: o
+                            formatId: o.name,
+                            types: s
                         }),
                     {
                         spaceId: n.id,
@@ -87,12 +87,12 @@ function u(e, { meta: t } = {}) {
             }
         }
     } else
-        for (let e of s.Z.all)
+        for (let e of o.Z.all)
             for (let a in e.formats) {
                 let n = e.formats[a];
                 if ('custom' !== n.type || (n.test && !n.test(r.str))) continue;
-                let s = n.parse(r.str);
-                if (s) return (s.alpha ??= 1), t && (t.formatId = a), s;
+                let o = n.parse(r.str);
+                if (o) return (o.alpha ??= 1), t && (t.formatId = a), o;
             }
     throw TypeError(`Could not parse ${e} as a color. Missing a plugin?`);
 }

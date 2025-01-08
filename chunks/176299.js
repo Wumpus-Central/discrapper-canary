@@ -26,8 +26,8 @@ var i = n(200651),
     v = n(626421),
     S = n(118379),
     T = n(267161),
-    A = n(652515),
-    b = n(544978),
+    b = n(652515),
+    A = n(544978),
     Z = n(540059),
     x = n(724383),
     L = n(135864),
@@ -117,7 +117,7 @@ let e_ = (0, c.Un)({
         name: 'GuildOnboardingPage',
         renderLoader: eE
     }),
-    eA = (e) => {
+    eb = (e) => {
         let { match: t } = e,
             n = (0, u.e7)([J.Z, et.Z], () => {
                 let e = et.Z.getChannelId();
@@ -132,14 +132,14 @@ let e_ = (0, c.Un)({
                 if ((null == e ? void 0 : e.type) === G.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return b.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return A.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return b.y.GUILD_PRODUCTS;
+                            return A.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
             }),
-            h = (0, A.C4)(r, 'channel_renderer'),
+            h = (0, b.C4)(r, 'channel_renderer'),
             m = (0, O.jS)(r, 'ChannelRenderer');
         if (null != r && null != l && (0, ep.AB)(l))
             switch (l) {
@@ -147,7 +147,7 @@ let e_ = (0, c.Un)({
                     return h
                         ? (0, i.jsx)(eI, {
                               guildId: r,
-                              initialTab: b.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: A.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(D.Z, { guildId: r });
                 case ep.oC.GUILD_SHOP:
@@ -195,7 +195,7 @@ let e_ = (0, c.Un)({
         }
         return (0, i.jsx)(N.Z, {});
     },
-    eb = r.memo(function () {
+    eA = r.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e)));
         return (function () {
@@ -216,7 +216,7 @@ let e_ = (0, c.Un)({
                 )
               : (0, i.jsx)(ec.Z, {});
     }),
-    eZ = (e) => (0, i.jsx)(eA, { ...e }),
+    eZ = (e) => (0, i.jsx)(eb, { ...e }),
     ex = () => (0, i.jsx)(x.Z, {}),
     eL = (e) => {
         let { match: t } = e;
@@ -324,7 +324,7 @@ function eG(e) {
             }
         }, [v]);
     let S = r.useRef(null),
-        A = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
                 var n;
                 eU(e);
@@ -335,7 +335,7 @@ function eG(e) {
             },
             [I]
         ),
-        b = r.useCallback(() => {
+        A = r.useCallback(() => {
             document.body.classList.add(ef.dragging);
         }, []),
         x = r.useCallback((e) => {
@@ -346,8 +346,8 @@ function eG(e) {
             minDimension: ed.li,
             maxDimension: ed.zx,
             resizableDomNodeRef: S,
-            onElementResize: A,
-            onElementResizeStart: b,
+            onElementResize: b,
+            onElementResizeStart: A,
             onElementResizeEnd: x,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
@@ -386,7 +386,7 @@ function eG(e) {
                     !s &&
                         (0, i.jsx)(O, {
                             ...y,
-                            children: (0, i.jsx)(eb, {})
+                            children: (0, i.jsx)(eA, {})
                         }),
                     N
                         ? (0, i.jsx)(m.Clickable, {
@@ -450,7 +450,7 @@ function eB() {
         C = (0, Z.Q3)('AppView'),
         N = (0, Z.TH)('AppView'),
         S = C ? 'div' : r.Fragment,
-        A = (0, T.useAppSidebarState)((e) => !e.isOpen);
+        b = (0, T.useAppSidebarState)((e) => !e.isOpen);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: ef.container,
@@ -483,7 +483,7 @@ function eB() {
                                     }),
                                     (0, i.jsx)(S, {
                                         className: ef.page,
-                                        'data-collapsed': !!N && A,
+                                        'data-collapsed': !!N && b,
                                         children: (0, i.jsx)(_.Z.Provider, {
                                             value: E,
                                             children: (0, i.jsxs)(s.rs, {

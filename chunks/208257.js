@@ -10,13 +10,13 @@ var i = n(200651),
     u = n(496675),
     m = n(693546),
     f = n(246364),
-    b = n(98493),
-    x = n(985159),
-    p = n(328977),
-    h = n(412222),
+    x = n(98493),
+    b = n(985159),
+    h = n(328977),
+    p = n(412222),
     C = n(223312),
-    g = n(571728),
-    _ = n(572940),
+    _ = n(571728),
+    g = n(572940),
     v = n(80487),
     j = n(146463),
     I = n(981631),
@@ -71,51 +71,51 @@ function E(e) {
 }
 function S(e) {
     var t, n;
-    let { guildId: S, isSidebarOpen: w } = e,
-        A = r.useRef(null),
-        [N, B] = r.useState((0, x.z)({ guildId: S })),
-        Z = (0, h.C)({ guildId: S }),
-        P = (0, p.L)({ guildId: S }),
-        k = null !== (t = (0, g.A)({ guildId: S })) && void 0 !== t ? t : 0,
+    let { guildId: S, isSidebarOpen: A } = e,
+        w = r.useRef(null),
+        [N, P] = r.useState((0, b.z)({ guildId: S })),
+        B = (0, p.C)({ guildId: S }),
+        Z = (0, h.L)({ guildId: S }),
+        k = null !== (t = (0, _.A)({ guildId: S })) && void 0 !== t ? t : 0,
         { guildJoinRequests: M } = (0, C.j)({
             guildId: S,
             applicationStatus: 'REVIEW_APPLICATION' === N ? f.wB.SUBMITTED : N,
-            sortOrder: Z
+            sortOrder: B
         }),
         y = (0, a.e7)([d.Z], () => d.Z.getGuild(S), [S]),
         F = (0, a.e7)([s.Z], () => s.Z.getMemberCount(S)),
         U = null != y && (null != F ? F : 0) >= y.maxMembers,
-        { fetchNextPage: L } = (0, b.m)({
+        { fetchNextPage: L } = (0, x.m)({
             guildId: S,
             guildJoinRequests: M
         }),
         D = (0, a.e7)([u.Z], () => u.Z.can(I.Plq.KICK_MEMBERS, y)),
         O = r.useRef(!1);
-    !O.current && ((O.current = !0), L(Z, 'REVIEW_APPLICATION' === N ? f.wB.SUBMITTED : N)),
+    !O.current && ((O.current = !0), L(B, 'REVIEW_APPLICATION' === N ? f.wB.SUBMITTED : N)),
         r.useEffect(() => {
-            !D && B('REVIEW_APPLICATION');
+            !D && P('REVIEW_APPLICATION');
         }, [D]);
-    let q = r.useRef(!1);
+    let J = r.useRef(!1);
     r.useEffect(() => {
-        q.current = !0;
-    }, [Z, N]),
+        J.current = !0;
+    }, [B, N]),
         r.useEffect(() => {
-            if (q.current && 0 !== M.length && 'REVIEW_APPLICATION' !== N) {
+            if (J.current && 0 !== M.length && 'REVIEW_APPLICATION' !== N) {
                 var e;
-                (q.current = !1), m.Z.setSelectedGuildJoinRequest(S, M[0]), null === (e = A.current) || void 0 === e || e.scrollToTop();
+                (J.current = !1), m.Z.setSelectedGuildJoinRequest(S, M[0]), null === (e = w.current) || void 0 === e || e.scrollToTop();
             }
-        }, [S, M, P, N]);
-    let J = r.useCallback(
+        }, [S, M, Z, N]);
+    let q = r.useCallback(
             async (e) => {
-                if ('REVIEW_APPLICATION' !== N) Z !== e && (m.Z.setSelectedSortOrder(S, e), await L(e, N));
+                if ('REVIEW_APPLICATION' !== N) B !== e && (m.Z.setSelectedSortOrder(S, e), await L(e, N));
             },
-            [N, Z, S, L]
+            [N, B, S, L]
         ),
         H = r.useCallback(
             async (e) => {
                 if (N !== e) {
                     if (
-                        (B(e),
+                        (P(e),
                         (0, l.Q2)({
                             guildId: S,
                             source: I.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
@@ -124,17 +124,17 @@ function S(e) {
                         m.Z.setSelectedGuildJoinRequest(S, null),
                         'REVIEW_APPLICATION' !== e)
                     )
-                        m.Z.setSelectedApplicationTab(S, e), await L(Z, e);
+                        m.Z.setSelectedApplicationTab(S, e), await L(B, e);
                 }
             },
-            [N, Z, S, L]
+            [N, B, S, L]
         ),
         V = r.useCallback(async () => {
             var e;
             if ('REVIEW_APPLICATION' === N) return;
-            let t = null === (e = A.current) || void 0 === e ? void 0 : e.getScrollerState();
-            if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await L(Z, N));
-        }, [N, Z, L]),
+            let t = null === (e = w.current) || void 0 === e ? void 0 : e.getScrollerState();
+            if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 200 && (await L(B, N));
+        }, [N, B, L]),
         W = null !== (n = null == y ? void 0 : y.hasFeature(I.oNc.CLAN)) && void 0 !== n && n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -144,7 +144,7 @@ function S(e) {
                 pendingGuildJoinRequestsTotal: k,
                 showSetupTab: W,
                 canActionJoinRequests: D,
-                isSidebarOpen: w
+                isSidebarOpen: A
             }),
             (0, i.jsx)('div', {
                 className: R.content,
@@ -176,10 +176,10 @@ function S(e) {
                                       }),
                                   (0, i.jsx)('div', {
                                       className: R.listControls,
-                                      children: (0, i.jsx)(_.Z, {
+                                      children: (0, i.jsx)(g.Z, {
                                           className: R.sortSelect,
-                                          sortOrder: Z,
-                                          onSortChange: J
+                                          sortOrder: B,
+                                          onSortChange: q
                                       })
                                   }),
                                   (0, i.jsx)(o.Text, {
@@ -193,7 +193,7 @@ function S(e) {
                                       guildJoinRequests: M,
                                       guildId: S,
                                       onScroll: V,
-                                      listRef: A,
+                                      listRef: w,
                                       atMaxMemberCapacity: U
                                   })
                               ]

@@ -1,25 +1,25 @@
-n.d(t, {
+t.d(n, {
     i: function () {
-        return a;
+        return o;
     }
 });
-var l = n(442837),
-    i = n(430824),
-    s = n(944163),
-    r = n(981631);
-function a(e) {
-    let { guildId: t } = e;
-    return (0, l.e7)(
-        [s.Z, i.Z],
+var i = t(442837),
+    r = t(430824),
+    l = t(944163),
+    s = t(981631);
+function o(e) {
+    let { guildId: n } = e;
+    return (0, i.e7)(
+        [l.Z, r.Z],
         () => {
             var e;
-            let n = s.Z.get(t),
-                l = null == n ? void 0 : n.guild,
-                a = i.Z.getGuild(t),
-                o = null == a ? void 0 : a.verificationLevel,
-                d = null == l ? void 0 : l.verification_level;
-            return null !== (e = null != o ? o : d) && void 0 !== e ? e : r.sFg.NONE;
+            let t = l.Z.get(n),
+                i = null == t ? void 0 : t.guild,
+                o = r.Z.getGuild(n),
+                u = null == o ? void 0 : o.verificationLevel,
+                c = null == i ? void 0 : i.verification_level;
+            return null !== (e = null != u ? u : c) && void 0 !== e ? e : s.sFg.NONE;
         },
-        [t]
+        [n]
     );
 }

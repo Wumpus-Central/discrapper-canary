@@ -28,8 +28,8 @@ var i = n(200651),
     v = n(63063),
     S = n(134433),
     T = n(225104),
-    A = n(981631),
-    b = n(388032),
+    b = n(981631),
+    A = n(388032),
     Z = n(698948),
     x = n(795661);
 function L(e, t) {
@@ -54,7 +54,7 @@ t.default = function (e) {
     if (
         (r.useEffect(() => {
             if (0 !== j.length)
-                N.default.track(A.rMx.PASSPORT_ENTRY_VIEWED, {
+                N.default.track(b.rMx.PASSPORT_ENTRY_VIEWED, {
                     role_ids: j.map((e) => {
                         let { role_id: t } = e;
                         return t;
@@ -87,7 +87,7 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: b.intl.string(b.t.ghtnsr)
+                        children: A.intl.string(A.t.ghtnsr)
                     }),
                     (0, i.jsx)(c.ModalCloseButton, {
                         className: Z.modalCloseButton,
@@ -101,7 +101,7 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: v.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
+                        children: A.intl.format(A.t['Y+TsER'], { helpdeskArticleUrl: v.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
                         className: Z.verifiedRoles,

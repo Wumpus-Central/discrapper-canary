@@ -17,7 +17,7 @@ var r = n(481060),
 t.Z = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: S, prompt: T, disableGuildSelect: A, disclosures: b, integrationType: Z, pid: x } = e,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: N, guildId: v, channelId: S, prompt: T, disableGuildSelect: b, disclosures: A, integrationType: Z, pid: x } = e,
             L = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
             P = null != Z ? (null == d ? void 0 : d.get(Z)) : void 0,
             O = null !== (t = null == P ? void 0 : P.application) && void 0 !== t ? t : s.Z.getApplication(n);
@@ -37,7 +37,7 @@ t.Z = (0, g.Z)(
                             authorizations: d,
                             clientId: n,
                             scopes: null != u ? u : [],
-                            disclosures: null != b ? b : [],
+                            disclosures: null != A ? A : [],
                             responseType: g,
                             redirectUri: E,
                             codeChallenge: I,
@@ -47,7 +47,7 @@ t.Z = (0, g.Z)(
                             guildId: v,
                             channelId: S,
                             prompt: T,
-                            disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
+                            disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                             integrationType: Z
                         }
                     });
@@ -60,7 +60,7 @@ t.Z = (0, g.Z)(
                         authorizations: d,
                         clientId: n,
                         scopes: null != u ? u : [],
-                        disclosures: null != b ? b : [],
+                        disclosures: null != A ? A : [],
                         callback: P,
                         responseType: g,
                         redirectUri: E,
@@ -71,7 +71,7 @@ t.Z = (0, g.Z)(
                         guildId: v,
                         channelId: S,
                         prompt: T,
-                        disableGuildSelect: 'boolean' == typeof A ? A : 'true' === A,
+                        disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                         integrationType: Z
                     }),
                 {

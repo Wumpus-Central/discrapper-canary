@@ -22,30 +22,30 @@ t.Z = new a.Z({
     fromBase: (e) => {
         let t = Math.max(...e),
             r = Math.min(...e),
-            [a, n, s] = e,
-            [o, i, c] = [NaN, 0, (r + t) / 2],
+            [a, n, o] = e,
+            [s, i, c] = [NaN, 0, (r + t) / 2],
             u = t - r;
         if (0 !== u) {
             switch (((i = 0 === c || 1 === c ? 0 : (t - c) / Math.min(c, 1 - c)), t)) {
                 case a:
-                    o = (n - s) / u + (n < s ? 6 : 0);
+                    s = (n - o) / u + (n < o ? 6 : 0);
                     break;
                 case n:
-                    o = (s - a) / u + 2;
+                    s = (o - a) / u + 2;
                     break;
-                case s:
-                    o = (a - n) / u + 4;
+                case o:
+                    s = (a - n) / u + 4;
             }
-            o *= 60;
+            s *= 60;
         }
-        return i < 0 && ((o += 180), (i = Math.abs(i))), o >= 360 && (o -= 360), [o, 100 * i, 100 * c];
+        return i < 0 && ((s += 180), (i = Math.abs(i))), s >= 360 && (s -= 360), [s, 100 * i, 100 * c];
     },
     toBase: (e) => {
         let [t, r, a] = e;
         function n(e) {
             let n = (e + t / 30) % 12,
-                s = r * Math.min(a, 1 - a);
-            return a - s * Math.max(-1, Math.min(n - 3, 9 - n, 1));
+                o = r * Math.min(a, 1 - a);
+            return a - o * Math.max(-1, Math.min(n - 3, 9 - n, 1));
         }
         return (t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)];
     },

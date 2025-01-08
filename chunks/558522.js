@@ -1,6 +1,6 @@
 var l = t(200651),
     i = t(192379),
-    r = t(325767);
+    r = t(331595);
 n.Z = i.forwardRef(function (e, n) {
     let { width: t = 24, height: i = 24, color: a = 'currentColor', foreground: o, ...s } = e;
     return (0, l.jsx)('svg', {

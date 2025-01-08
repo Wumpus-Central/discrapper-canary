@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(64141),
     S = n(667105),
     T = n(860151),
-    A = n(341907),
-    b = n(46140),
+    b = n(341907),
+    A = n(46140),
     Z = n(981631),
     x = n(388032),
     L = n(444865);
@@ -83,7 +83,7 @@ t.Z = function (e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, A.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
         }, [o]),
         D = r.useCallback(() => {
             (0, u._3)({
@@ -91,7 +91,7 @@ t.Z = function (e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, A.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
         M = (0, S.hf)({
             quest: o,
@@ -106,7 +106,7 @@ t.Z = function (e) {
         H = (0, _.D)({
             quest: o,
             taskDetails: V,
-            location: b.dr.ACTIVITY_PANEL,
+            location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
     return B || w || G
@@ -169,7 +169,7 @@ t.Z = function (e) {
                                   className: L.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
-                                  location: b.dr.ACTIVITY_PANEL,
+                                  location: A.dr.ACTIVITY_PANEL,
                                   taskDetails: V
                               }),
                           (0, i.jsxs)('div', {

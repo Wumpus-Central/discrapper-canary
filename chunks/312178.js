@@ -87,7 +87,7 @@ class C extends s.PureComponent {
                 state: { dragging: r }
             } = this,
             a = E[e.type];
-        if (null == a) throw Error('OverlayLayout: Widget does not exist in WidgetMap');
+        if (null == a) throw Error('OverlayLayout: Widget ('.concat(e.type, ') does not exist in WidgetMap'));
         return (o) =>
             a({
                 id: e.id,

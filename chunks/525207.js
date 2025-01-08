@@ -1,6 +1,6 @@
 r.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var a = r(501951);
@@ -10,6 +10,6 @@ function n(e, t) {
         (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, (0, a.Z)(n.key), n);
     }
 }
-function s(e, t, r) {
+function o(e, t, r) {
     return t && n(e.prototype, t), r && n(e, r), Object.defineProperty(e, 'prototype', { writable: !1 }), e;
 }

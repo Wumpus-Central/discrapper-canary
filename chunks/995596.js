@@ -35,7 +35,7 @@ let N = (e) => [
             label: g.intl.string(g.t.bSZklZ)
         }
     ],
-    v = (e) => {
+    _ = (e) => {
         let { tabs: n, selectedTab: t, onTabSelect: i, onClose: r } = e;
         return (0, l.jsx)(d.Menu, {
             navId: 'members-tabs-overflow-menu',
@@ -64,7 +64,7 @@ let N = (e) => [
             )
         });
     };
-function _(e) {
+function v(e) {
     let { onTabSelect: n, tabs: t, selectedTab: r } = e,
         s = (0, u.ZP)(),
         o = (0, c.wj)(s),
@@ -82,7 +82,7 @@ function _(e) {
     return (0, l.jsx)(d.Popout, {
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, l.jsx)(v, {
+            return (0, l.jsx)(_, {
                 selectedTab: r,
                 onClose: i,
                 tabs: t,
@@ -123,15 +123,15 @@ function E(e) {
     let { guildId: n, currentTab: t, onTabSelect: r } = e,
         [a, c] = i.useState(0),
         u = i.useRef(null),
-        v = i.useRef(a),
+        _ = i.useRef(a),
         E = (0, x.A)({ guildId: n }),
-        I = N(null != E ? E : 0),
+        T = N(null != E ? E : 0),
         {
-            lastVisibleIndex: T,
+            lastVisibleIndex: I,
             onItemLayout: S,
             overflowItemsRef: p
         } = (0, o.zP)({
-            items: I,
+            items: T,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
@@ -139,12 +139,12 @@ function E(e) {
         M = (0, s.e7)([C.ZP], () => null != C.ZP.getGuildSidebarState(n), [n]),
         R = (0, m.L)({ guildId: n }),
         A = i.useMemo(() => (t === b.e.ALL_MEMBERS ? M : null != R && null != R.user), [t, M, R]),
-        Z = i.useMemo(() => I.slice(0, T + 1), [T, I]),
-        k = i.useMemo(() => I.slice(T + 1), [T, I]),
+        Z = i.useMemo(() => T.slice(0, I + 1), [I, T]),
+        k = i.useMemo(() => T.slice(I + 1), [I, T]),
         L = i.useCallback(() => {
             var e;
             let n = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != n && v.current !== n.width && (c(n.width), (v.current = n.width));
+            null != n && _.current !== n.width && (c(n.width), (_.current = n.width));
         }, []);
     return (
         i.useEffect(() => {
@@ -164,7 +164,7 @@ function E(e) {
                         (0, l.jsxs)('div', {
                             className: f.measurements,
                             children: [
-                                I.map((e, n) =>
+                                T.map((e, n) =>
                                     (0, l.jsx)(
                                         o.AJ,
                                         {
@@ -181,7 +181,7 @@ function E(e) {
                                 ),
                                 (0, l.jsx)('div', {
                                     ref: p,
-                                    children: (0, l.jsx)(_, {
+                                    children: (0, l.jsx)(v, {
                                         tabs: k,
                                         onTabSelect: r,
                                         selectedTab: t
@@ -207,7 +207,7 @@ function E(e) {
                                     )
                                 ),
                                 0 !== k.length
-                                    ? (0, l.jsx)(_, {
+                                    ? (0, l.jsx)(v, {
                                           tabs: k,
                                           onTabSelect: r,
                                           selectedTab: t

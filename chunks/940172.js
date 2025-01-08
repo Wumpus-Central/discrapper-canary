@@ -1,7 +1,7 @@
 var a = r(665352),
     n = r(629990),
-    s = r(856308);
-let o = 216 / 24389,
+    o = r(856308);
+let s = 216 / 24389,
     i = 24 / 116,
     c = 24389 / 27,
     u = n.mh.D65;
@@ -21,9 +21,9 @@ t.Z = new a.Z({
         }
     },
     white: u,
-    base: s.Z,
+    base: o.Z,
     fromBase(e) {
-        let t = e.map((e, t) => e / u[t]).map((e) => (e > o ? Math.cbrt(e) : (c * e + 16) / 116));
+        let t = e.map((e, t) => e / u[t]).map((e) => (e > s ? Math.cbrt(e) : (c * e + 16) / 116));
         return [116 * t[1] - 16, 500 * (t[0] - t[1]), 200 * (t[1] - t[2])];
     },
     toBase(e) {

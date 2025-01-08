@@ -1,4 +1,4 @@
-let r, i, l, u, a, o;
+let i, r, l, u, a, o;
 n(724458), n(789020), n(47120);
 var d,
     s,
@@ -30,22 +30,22 @@ function b(e) {
     (g = v.QZA.OPEN),
         (u = l = t),
         (H = 'location' in e && null != e.location ? e.location : null),
-        (i = 'subsection' in e ? e.subsection : null),
+        (r = 'subsection' in e ? e.subsection : null),
         null != u && (u = u.set('nsfw', u.isNSFW())),
         (a = L.Z.getChannel(u.parent_id)),
         (o = u.getGuildId()),
         (y = {}),
         j({
             type: 'CHANNEL_SETTINGS_SET_SECTION',
-            section: null != r ? r : v.CoT.OVERVIEW,
-            subsection: i
+            section: null != i ? i : v.CoT.OVERVIEW,
+            subsection: r
         });
 }
 function j(e) {
-    (r = e.section),
-        (i = e.subsection),
+    (i = e.section),
+        (r = e.subsection),
         null != u &&
-            r === v.CoT.INSTANT_INVITES &&
+            i === v.CoT.INSTANT_INVITES &&
             ((O = !0),
             h.tn
                 .get({
@@ -65,7 +65,7 @@ function j(e) {
                 ));
 }
 function M() {
-    (G = !1), (g = v.QZA.CLOSED), (r = null), (u = l = null), (a = null), (Z = {});
+    (G = !1), (g = v.QZA.CLOSED), (i = null), (u = l = null), (a = null), (Z = {});
 }
 let P = c().debounce(() => {
     if (null == u || null == l) return !1;
@@ -122,7 +122,7 @@ class V extends (d = I.ZP.Store) {
         return G;
     }
     getSection() {
-        return r;
+        return i;
     }
     getInvites() {
         return {
@@ -147,8 +147,8 @@ class V extends (d = I.ZP.Store) {
             submitting: g === v.QZA.SUBMITTING,
             errors: y,
             channel: u,
-            section: r,
-            subsection: i,
+            section: i,
+            subsection: r,
             invites: Z,
             selectedOverwriteId: o,
             hasChanges: this.hasChanges(),
@@ -180,8 +180,8 @@ let k = new V(C.Z, {
         var t;
         (g = v.QZA.OPEN),
             (y = Object.keys(null !== (t = e.errors) && void 0 !== t ? t : {}).reduce((t, n) => {
-                let r = e.errors[n];
-                return (0, N.isArray)(r) ? (t[n] = r.join('\n')) : (t[n] = r), t;
+                let i = e.errors[n];
+                return (0, N.isArray)(i) ? (t[n] = i.join('\n')) : (t[n] = i), t;
             }, {}));
     },
     CHANNEL_SETTINGS_CLOSE: M,
@@ -192,11 +192,11 @@ let k = new V(C.Z, {
         o = t;
     },
     CHANNEL_SETTINGS_UPDATE: function (e) {
-        let { name: t, channelType: n, topic: r, bitrate: i, userLimit: l, nsfw: a, flags: o, rateLimitPerUser: d, defaultThreadRateLimitPerUser: s, autoArchiveDuration: E, locked: _, invitable: N, defaultAutoArchiveDuration: c, template: S, defaultReactionEmoji: T, rtcRegion: I, videoQualityMode: h, availableTags: C, defaultSortOrder: f, defaultForumLayout: m, iconEmoji: A, themeColor: p } = e;
+        let { name: t, channelType: n, topic: i, bitrate: r, userLimit: l, nsfw: a, flags: o, rateLimitPerUser: d, defaultThreadRateLimitPerUser: s, autoArchiveDuration: E, locked: _, invitable: N, defaultAutoArchiveDuration: c, template: S, defaultReactionEmoji: T, rtcRegion: I, videoQualityMode: h, availableTags: C, defaultSortOrder: f, defaultForumLayout: m, iconEmoji: A, themeColor: p } = e;
         if (null == u) return !1;
         null != t && (u = u.set('name', t)),
-            null != r && (u = u.set('topic', r)),
-            null != i && (u = u.set('bitrate', i)),
+            null != i && (u = u.set('topic', i)),
+            null != r && (u = u.set('bitrate', r)),
             null != l && (u = u.set('userLimit', l)),
             null != a && (u = u.set('nsfw', a)),
             null != o && (u = u.set('flags', o)),

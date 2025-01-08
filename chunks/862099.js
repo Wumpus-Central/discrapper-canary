@@ -32,8 +32,8 @@ var i,
     v = n(448206),
     S = n(496675),
     T = n(938475),
-    A = n(626135),
-    b = n(823379),
+    b = n(626135),
+    A = n(823379),
     Z = n(15274),
     x = n(924301),
     L = n(504160),
@@ -164,7 +164,7 @@ function z(e) {
             innerClassName: V.rsvpButton,
             onClick: function () {
                 (0, k.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, L.L_)(t.id), 1000)),
-                    A.default.track(G.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                    b.default.track(G.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
                     });
@@ -206,7 +206,7 @@ function W(e) {
         C = E ? (I > 0 ? B.intl.formatToPlainString(B.t.PQlCWl, { minutes: I }) : B.intl.string(B.t.WINqKS)) : B.intl.formatToPlainString(B.t.DC6h3N, { date: _ });
     return (
         a.useEffect(() => {
-            A.default.track(G.rMx.CHANNEL_NOTICE_VIEWED, {
+            b.default.track(G.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: i,
                 guild_id: n.guild_id
             });
@@ -229,7 +229,7 @@ function W(e) {
                         }),
                         (0, l.jsx)(d.Clickable, {
                             onClick: () => {
-                                A.default.track(G.rMx.CHANNEL_NOTICE_CLOSED, {
+                                b.default.track(G.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: i,
                                     guild_id: n.guild_id
                                 }),
@@ -391,7 +391,7 @@ function Q(e) {
             p = B.intl.string(B.t.wBoE6O);
             break;
         default:
-            (0, b.vE)(i);
+            (0, A.vE)(i);
     }
     return null == r
         ? null

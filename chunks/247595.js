@@ -5,8 +5,8 @@ r.d(t, {
 });
 var a = r(681996),
     n = r(525207),
-    s = r(987609),
-    o = r(332133),
+    o = r(987609),
+    s = r(332133),
     i = r(775310),
     c = r(700717),
     u = r(621028),
@@ -50,7 +50,7 @@ function w(e) {
     return { expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level) };
 }
 var M = (function (e) {
-    (0, o.Z)(d, e);
+    (0, s.Z)(d, e);
     var t,
         r,
         h =
@@ -74,7 +74,7 @@ var M = (function (e) {
         return (
             (0, a.Z)(this, d),
             (t = h.call(this, e)),
-            (0, u.Z)((0, s.Z)(t), 'handleClick', function () {
+            (0, u.Z)((0, o.Z)(t), 'handleClick', function () {
                 t.props.expandable && t.setState({ expanded: !t.state.expanded });
             }),
             (t.state = w(e)),
@@ -109,8 +109,8 @@ var M = (function (e) {
                         r = e.nodeTypeIndicator,
                         a = e.nodeType,
                         n = e.data,
-                        s = e.hideRoot,
-                        o = e.createItemString,
+                        o = e.hideRoot,
+                        s = e.createItemString,
                         i = e.styling,
                         c = e.collectionLimit,
                         u = e.keyPath,
@@ -118,18 +118,18 @@ var M = (function (e) {
                         d = e.expandable,
                         v = this.state.expanded,
                         w =
-                            v || (s && 0 === this.props.level)
+                            v || (o && 0 === this.props.level)
                                 ? (function e(t, r, a) {
                                       var n = t.nodeType,
-                                          s = t.data,
-                                          o = t.collectionLimit,
+                                          o = t.data,
+                                          s = t.collectionLimit,
                                           i = t.circularCache,
                                           c = t.keyPath,
                                           u = t.postprocessValue,
                                           h = t.sortObjectKeys,
                                           d = [];
                                       return (
-                                          (0, m.Z)(n, s, h, o, r, a).forEach(function (r) {
+                                          (0, m.Z)(n, o, h, s, r, a).forEach(function (r) {
                                               if (void 0 !== r.to)
                                                   d.push(
                                                       b.createElement(
@@ -145,18 +145,18 @@ var M = (function (e) {
                                               else {
                                                   var a = r.key,
                                                       n = r.value,
-                                                      s = -1 !== i.indexOf(n);
+                                                      o = -1 !== i.indexOf(n);
                                                   d.push(
                                                       b.createElement(
                                                           g.Z,
                                                           (0, f.Z)({}, t, {
                                                               postprocessValue: u,
-                                                              collectionLimit: o,
+                                                              collectionLimit: s,
                                                               key: 'Node--'.concat(a),
                                                               keyPath: [a].concat((0, l.Z)(c)),
                                                               value: u(n),
                                                               circularCache: [].concat((0, l.Z)(i), [n]),
-                                                              isCircular: s,
+                                                              isCircular: o,
                                                               hideRoot: !1
                                                           })
                                                       )
@@ -167,9 +167,9 @@ var M = (function (e) {
                                       );
                                   })(Z(Z({}, this.props), {}, { level: this.props.level + 1 }))
                                 : null,
-                        M = t(a, n, b.createElement('span', i('nestedNodeItemType', v), r), o(n, c), u),
+                        M = t(a, n, b.createElement('span', i('nestedNodeItemType', v), r), s(n, c), u),
                         k = [u, a, v, d];
-                    return s
+                    return o
                         ? b.createElement('li', i.apply(void 0, ['rootNode'].concat(k)), b.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(k)), w))
                         : b.createElement(
                               'li',

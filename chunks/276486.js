@@ -1,63 +1,63 @@
-n.d(t, {
+t.d(n, {
     l: function () {
-        return d;
+        return c;
     },
     v: function () {
-        return u;
+        return a;
     }
 });
-var l = n(200651);
-n(192379);
-var i = n(481060),
-    s = n(144114),
-    r = n(489813),
-    a = n(815660),
-    o = n(388032);
-function d() {
-    return (0, l.jsx)(l.Fragment, {
-        children: (0, l.jsx)(r.PU, {
-            icon: i.MobilePhoneIcon,
-            text: o.intl.string(o.t.woMjLS),
-            footnote: o.intl.string(o.t['jMh+TU']),
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(144114),
+    s = t(489813),
+    o = t(815660),
+    u = t(388032);
+function c() {
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsx)(s.PU, {
+            icon: r.MobilePhoneIcon,
+            text: u.intl.string(u.t.woMjLS),
+            footnote: u.intl.string(u.t['jMh+TU']),
             meetsRequirement: !1,
-            children: (0, l.jsx)(i.Tooltip, {
-                text: o.intl.string(o.t.mGlP39),
+            children: (0, i.jsx)(r.Tooltip, {
+                text: u.intl.string(u.t.mGlP39),
                 children: (e) =>
-                    (0, l.jsx)(i.Button, {
+                    (0, i.jsx)(r.Button, {
                         ...e,
-                        size: i.Button.Sizes.SMALL,
+                        size: r.Button.Sizes.SMALL,
                         disabled: !0,
-                        children: o.intl.string(o.t['13ofGh'])
+                        children: u.intl.string(u.t['13ofGh'])
                     })
             })
         })
     });
 }
-function u(e) {
-    let { isUserVerified: t } = e,
-        d = t ? o.intl.string(o.t.WWzQtb) : o.intl.string(o.t.woMjLS);
-    return (0, l.jsx)(l.Fragment, {
-        children: (0, l.jsx)(r.PU, {
-            icon: i.MobilePhoneIcon,
-            text: d,
-            footnote: o.intl.string(o.t['jMh+TU']),
-            meetsRequirement: t,
-            children: (0, l.jsx)(i.Button, {
-                size: i.Button.Sizes.SMALL,
+function a(e) {
+    let { isUserVerified: n } = e,
+        c = n ? u.intl.string(u.t.WWzQtb) : u.intl.string(u.t.woMjLS);
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, i.jsx)(s.PU, {
+            icon: r.MobilePhoneIcon,
+            text: c,
+            footnote: u.intl.string(u.t['jMh+TU']),
+            meetsRequirement: n,
+            children: (0, i.jsx)(r.Button, {
+                size: r.Button.Sizes.SMALL,
                 onClick: () => {
-                    (0, i.openModalLazy)(
+                    (0, r.openModalLazy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('76540'), n.e('98859')]).then(n.bind(n, 607018));
-                            return (t) =>
-                                (0, l.jsx)(e, {
-                                    reason: s.L.GUILD_PHONE_REQUIRED,
-                                    ...t
+                            let { default: e } = await Promise.all([t.e('76540'), t.e('98859')]).then(t.bind(t, 607018));
+                            return (n) =>
+                                (0, i.jsx)(e, {
+                                    reason: l.L.GUILD_PHONE_REQUIRED,
+                                    ...n
                                 });
                         },
-                        { modalKey: a.M }
+                        { modalKey: o.M }
                     );
                 },
-                children: o.intl.string(o.t['13ofGh'])
+                children: u.intl.string(u.t['13ofGh'])
             })
         })
     });

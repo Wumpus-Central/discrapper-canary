@@ -1,10 +1,10 @@
 r.d(t, {
     H3: function () {
-        return s;
+        return o;
     }
 });
 var a = r(605700),
     n = r(856308);
-function s(e) {
+function o(e) {
     return (0, a.Z)(e, [n.Z, 'y']);
 }

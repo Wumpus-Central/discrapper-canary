@@ -1,7 +1,7 @@
 var a = r(910974),
     n = r(621028),
-    s = r(190293),
-    o = r(192379),
+    o = r(190293),
+    s = r(192379),
     i = r(639519),
     c = r.n(i),
     u = r(101933),
@@ -45,7 +45,7 @@ var g = function (e) {
         c = e.value,
         p = e.valueRenderer,
         g = e.isCustomNode,
-        y = (0, s.Z)(e, d),
+        y = (0, o.Z)(e, d),
         v = g(c) ? 'Custom' : (0, u.Z)(c),
         Z = {
             getItemString: t,
@@ -70,15 +70,15 @@ var g = function (e) {
         case 'Error':
         case 'WeakMap':
         case 'WeakSet':
-            return o.createElement(l.Z, w);
+            return s.createElement(l.Z, w);
         case 'Array':
-            return o.createElement(f.Z, w);
+            return s.createElement(f.Z, w);
         case 'Iterable':
         case 'Map':
         case 'Set':
-            return o.createElement(b.Z, w);
+            return s.createElement(b.Z, w);
         case 'String':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function (e) {
@@ -88,9 +88,9 @@ var g = function (e) {
             );
         case 'Number':
         case 'Custom':
-            return o.createElement(h.Z, Z);
+            return s.createElement(h.Z, Z);
         case 'Boolean':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function (e) {
@@ -99,7 +99,7 @@ var g = function (e) {
                 })
             );
         case 'Date':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function (e) {
@@ -108,7 +108,7 @@ var g = function (e) {
                 })
             );
         case 'Null':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function () {
@@ -117,7 +117,7 @@ var g = function (e) {
                 })
             );
         case 'Undefined':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function () {
@@ -127,7 +127,7 @@ var g = function (e) {
             );
         case 'Function':
         case 'Symbol':
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function (e) {
@@ -136,7 +136,7 @@ var g = function (e) {
                 })
             );
         default:
-            return o.createElement(
+            return s.createElement(
                 h.Z,
                 (0, a.Z)({}, Z, {
                     valueGetter: function () {

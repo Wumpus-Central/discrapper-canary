@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(325767);
+var r = n(331595);
 function a(e) {
     let { width: t = 24, height: n = 24, color: a = 'currentColor', foreground: s, ...l } = e;
     return (0, i.jsxs)('svg', {

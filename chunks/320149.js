@@ -27,13 +27,13 @@ function S(e) {
     let { channel: t, baseChannelId: n } = e,
         S = (0, E.ZP)(t),
         T = (0, h.K)(),
-        A = (0, h.V)(),
-        b = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        b = (0, h.V)(),
+        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         Z = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         x = (0, p.V)(t.id, t.getRecipientId()),
         L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), b && T && (0, g.Kh)(t.id), Z && A && (0, g.Kh)(t.id);
-        }, [t.id, Z, A, b, T]),
+            f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), Z && b && (0, g.Kh)(t.id);
+        }, [t.id, Z, b, A, T]),
         P = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),

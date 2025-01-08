@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(325767),
+    a = n(331595),
     o = n(554869);
 function s(e) {
     let { width: t = 16, height: n = 16, color: l = 'currentColor', foreground: s, className: c, ...d } = e;

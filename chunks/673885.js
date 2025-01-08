@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return x;
     }
 });
 var i = n(200651);
@@ -15,16 +15,16 @@ var r = n(120356),
     u = n(981631),
     m = n(388032),
     f = n(64371);
-function b(e) {
+function x(e) {
     let { user: t, joinRequestId: n, className: r } = e,
-        { username: b } = t,
-        x = s.ZP.getUserAvatarURL(t),
-        { analyticsLocations: p } = (0, l.ZP)(),
-        h = () => {
+        { username: x } = t,
+        b = s.ZP.getUserAvatarURL(t),
+        { analyticsLocations: h } = (0, l.ZP)(),
+        p = () => {
             (0, c.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: n,
-                sourceAnalyticsLocations: p,
+                sourceAnalyticsLocations: h,
                 analyticsLocation: {
                     section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                     object: u.qAy.JOIN_REQUEST
@@ -35,11 +35,11 @@ function b(e) {
         className: a()(f.container, r),
         children: [
             (0, i.jsx)(o.Anchor, {
-                onClick: h,
+                onClick: p,
                 children: (0, i.jsx)(o.Avatar, {
-                    src: x,
+                    src: b,
                     size: o.AvatarSizes.SIZE_80,
-                    'aria-label': b,
+                    'aria-label': x,
                     className: f.avatar
                 })
             }),
@@ -51,7 +51,7 @@ function b(e) {
                 })
             }),
             (0, i.jsx)(o.Anchor, {
-                onClick: h,
+                onClick: p,
                 children: m.intl.string(m.t.iXAna2)
             })
         ]

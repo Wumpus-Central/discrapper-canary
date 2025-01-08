@@ -8,7 +8,7 @@ n(192379);
 var i = n(692547),
     s = n(780384),
     o = n(410030),
-    l = n(325767);
+    l = n(331595);
 function a(e) {
     let { width: t = 160, height: n = 210, color: a = i.Z.unsafe_rawColors.WHITE_500.css, ...c } = e,
         d = (0, o.ZP)(),

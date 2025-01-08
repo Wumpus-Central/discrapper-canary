@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(437314),
     S = n(696577),
     T = n(163417),
-    A = n(830880),
-    b = n(492347),
+    b = n(830880),
+    A = n(492347),
     Z = n(42575),
     x = n(617015),
     L = n(981631),
@@ -98,7 +98,7 @@ t.Z = function (e) {
         children: (0, i.jsxs)(u.Z, {
             section: L.jXE.FRIENDS_LIST,
             children: [
-                k && w && (0, i.jsx)(A.R, {}),
+                k && w && (0, i.jsx)(b.R, {}),
                 (0, i.jsx)(o.SearchBar, {
                     className: a()(O.searchBar, Y ? O.searchEmptyState : null),
                     query: U[t],
@@ -109,7 +109,7 @@ t.Z = function (e) {
                 (0, i.jsxs)('div', {
                     className: O.sectionTitle,
                     children: [
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(A.Z, {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {

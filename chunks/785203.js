@@ -38,8 +38,8 @@ function T(e) {
             lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
-        A = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
-        b = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
+        b = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
+        A = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
         Z = (0, a.e7)([_.Z], () => _.Z.can(S.Plq.ADMINISTRATOR, e)),
         x = null != r && Date.now() - r <= S.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
@@ -74,11 +74,11 @@ function T(e) {
                 }
             );
         }, [n, y]),
-        A)
+        b)
     )
         return 0;
     if (T) return 1;
-    if (b) return 2;
+    if (A) return 2;
     else if (R || null != G) return 3;
     else if (j) return 4;
     else if (D) return 5;

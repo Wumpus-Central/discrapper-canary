@@ -3,8 +3,8 @@ n.d(t, {
         return r;
     },
     z: function () {
-        return o;
+        return s;
     }
 });
 let r = 'PHONE_VERIFICATION_MODAL_KEY',
-    o = 6;
+    s = 6;

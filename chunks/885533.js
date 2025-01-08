@@ -1,22 +1,22 @@
 var a = r(259775),
     n = r(192379),
-    s = r(639519),
-    o = r.n(s),
+    o = r(639519),
+    s = r.n(o),
     i = function (e) {
         var t = e.nodeType,
             r = e.styling,
-            s = e.labelRenderer,
-            o = e.keyPath,
+            o = e.labelRenderer,
+            s = e.keyPath,
             i = e.valueRenderer,
             c = e.value,
             u = e.valueGetter;
         return n.createElement(
             'li',
-            r('value', t, o),
-            n.createElement('label', r(['label', 'valueLabel'], t, o), s(o, t, !1, !1)),
+            r('value', t, s),
+            n.createElement('label', r(['label', 'valueLabel'], t, s), o(s, t, !1, !1)),
             n.createElement(
                 'span',
-                r('valueText', t, o),
+                r('valueText', t, s),
                 i.apply(
                     void 0,
                     [
@@ -26,18 +26,18 @@ var a = r(259775),
                               }
                             : u)(c),
                         c
-                    ].concat((0, a.Z)(o))
+                    ].concat((0, a.Z)(s))
                 )
             )
         );
     };
 (i.propTypes = {
-    nodeType: o().string.isRequired,
-    styling: o().func.isRequired,
-    labelRenderer: o().func.isRequired,
-    keyPath: o().arrayOf(o().oneOfType([o().string, o().number]).isRequired).isRequired,
-    valueRenderer: o().func.isRequired,
-    value: o().any,
-    valueGetter: o().func
+    nodeType: s().string.isRequired,
+    styling: s().func.isRequired,
+    labelRenderer: s().func.isRequired,
+    keyPath: s().arrayOf(s().oneOfType([s().string, s().number]).isRequired).isRequired,
+    valueRenderer: s().func.isRequired,
+    value: s().any,
+    valueGetter: s().func
 }),
     (t.Z = i);

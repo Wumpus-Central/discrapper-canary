@@ -5,8 +5,8 @@ r.d(t, {
 });
 var a = r(910974),
     n = r(681996),
-    s = r(525207),
-    o = r(987609),
+    o = r(525207),
+    s = r(987609),
     i = r(332133),
     c = r(775310),
     u = r(700717),
@@ -40,7 +40,7 @@ var a = r(910974),
             return (
                 (0, n.Z)(this, h),
                 (t = b.call(this, e)),
-                (0, l.Z)((0, o.Z)(t), 'handleClick', function () {
+                (0, l.Z)((0, s.Z)(t), 'handleClick', function () {
                     t.setState({ expanded: !t.state.expanded });
                 }),
                 (t.state = { expanded: !1 }),
@@ -48,7 +48,7 @@ var a = r(910974),
             );
         }
         return (
-            (0, s.Z)(h, [
+            (0, o.Z)(h, [
                 {
                     key: 'render',
                     value: function () {
@@ -56,15 +56,15 @@ var a = r(910974),
                             t = e.styling,
                             r = e.from,
                             n = e.to,
-                            s = e.renderChildNodes,
-                            o = e.nodeType;
+                            o = e.renderChildNodes,
+                            s = e.nodeType;
                         return this.state.expanded
-                            ? f.createElement('div', t('itemRange', this.state.expanded), s(this.props, r, n))
+                            ? f.createElement('div', t('itemRange', this.state.expanded), o(this.props, r, n))
                             : f.createElement(
                                   'div',
                                   (0, a.Z)({}, t('itemRange', this.state.expanded), { onClick: this.handleClick }),
                                   f.createElement(d.Z, {
-                                      nodeType: o,
+                                      nodeType: s,
                                       styling: t,
                                       expanded: !1,
                                       onClick: this.handleClick,

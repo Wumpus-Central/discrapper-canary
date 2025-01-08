@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(377171),
-    r = n(325767);
+    r = n(331595);
 function a(e) {
     let { width: t = 24, height: n = 24, ...a } = e;
     return (0, i.jsxs)('svg', {

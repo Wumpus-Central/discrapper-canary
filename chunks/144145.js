@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(653041),
@@ -27,11 +27,11 @@ var i = n(200651),
     v = n(346329),
     S = n(981631),
     T = n(388032);
-let A = d.Z.get(S.ABu.XBOX).name;
-function b(e) {
+let b = d.Z.get(S.ABu.XBOX).name;
+function A(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        b = (function (e) {
+        A = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(S.ABu.XBOX).type)),
                 r = t.some((e) => {
@@ -43,7 +43,7 @@ function b(e) {
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(S.oAB.CONNECTIONS),
-                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: A })
+                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: b })
                   });
         })(e),
         Z = (function (e) {
@@ -124,5 +124,5 @@ function b(e) {
                 })(e, n)
             );
     }
-    return [b, ...x];
+    return [A, ...x];
 }

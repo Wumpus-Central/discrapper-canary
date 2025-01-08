@@ -1,54 +1,54 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
-        return o;
+        return r;
     },
     t: function () {
-        return c;
+        return o;
     }
 });
-var i = t(442837),
-    r = t(430824),
-    l = t(938475),
-    a = t(981631);
-function o(e) {
-    return (0, i.cj)(
-        [l.ZP, r.Z],
+var l = t(442837),
+    i = t(430824),
+    a = t(938475),
+    u = t(981631);
+function r(n) {
+    return (0, l.cj)(
+        [a.ZP, i.Z],
         () => {
-            let n = l.ZP.countVoiceStatesForChannel(e.id),
-                t = r.Z.getGuild(e.getGuildId());
+            let e = a.ZP.countVoiceStatesForChannel(n.id),
+                t = i.Z.getGuild(n.getGuildId());
             return null == t
                 ? {
                       reachedLimit: !1,
                       limit: -1
                   }
-                : e.type === a.d4z.GUILD_STAGE_VOICE
+                : n.type === u.d4z.GUILD_STAGE_VOICE
                   ? {
-                        reachedLimit: n > t.maxStageVideoChannelUsers,
+                        reachedLimit: e > t.maxStageVideoChannelUsers,
                         limit: t.maxStageVideoChannelUsers
                     }
                   : {
-                        reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
+                        reachedLimit: t.maxVideoChannelUsers > 0 && e > t.maxVideoChannelUsers,
                         limit: t.maxVideoChannelUsers
                     };
         },
-        [e]
+        [n]
     );
 }
-function c(e) {
-    let n = l.ZP.countVoiceStatesForChannel(e.id),
-        t = r.Z.getGuild(e.getGuildId());
+function o(n) {
+    let e = a.ZP.countVoiceStatesForChannel(n.id),
+        t = i.Z.getGuild(n.getGuildId());
     return null == t
         ? {
               reachedLimit: !1,
               limit: -1
           }
-        : e.type === a.d4z.GUILD_STAGE_VOICE
+        : n.type === u.d4z.GUILD_STAGE_VOICE
           ? {
-                reachedLimit: n > t.maxStageVideoChannelUsers,
+                reachedLimit: e > t.maxStageVideoChannelUsers,
                 limit: t.maxStageVideoChannelUsers
             }
           : {
-                reachedLimit: t.maxVideoChannelUsers > 0 && n > t.maxVideoChannelUsers,
+                reachedLimit: t.maxVideoChannelUsers > 0 && e > t.maxVideoChannelUsers,
                 limit: t.maxVideoChannelUsers
             };
 }

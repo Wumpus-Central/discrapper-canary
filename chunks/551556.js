@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var s = n(692547),
-    r = n(325767);
+    r = n(331595);
 function a(e) {
     let { width: t = 24, height: n = 24, color: a = s.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: l = s.Z.unsafe_rawColors.BRAND_500.css, ...o } = e;
     return (0, i.jsxs)('svg', {

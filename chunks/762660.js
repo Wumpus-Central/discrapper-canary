@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     h: function () {
-        return g;
+        return _;
     }
 }),
     n(47120),
@@ -19,36 +19,36 @@ var i = n(200651),
     u = n(598077),
     m = n(768581),
     f = n(693546),
-    b = n(246364),
-    x = n(388032),
-    p = n(372819);
-function h(e) {
+    x = n(246364),
+    b = n(388032),
+    h = n(372819);
+function p(e) {
     let { icon: t, onClick: n, submitting: r, disabled: a } = e;
     return (0, i.jsx)(s.Clickable, {
-        className: o()(p.actionIconContainer, { [p.disabled]: a || r }),
+        className: o()(h.actionIconContainer, { [h.disabled]: a || r }),
         onClick: n,
         children: r
             ? (0, i.jsx)(s.Dots, {
-                  className: p.icon,
+                  className: h.icon,
                   dotRadius: 2,
                   themed: !0
               })
             : (0, i.jsx)(t, {
-                  className: p.icon,
+                  className: h.icon,
                   size: 'xxs',
                   color: 'currentColor'
               })
     });
 }
 function C(e) {
-    let { applicationStatus: t, guild: a, guildJoinRequest: l, className: C, onClick: g, atMaxMemberCapacity: _ } = e,
+    let { applicationStatus: t, guild: a, guildJoinRequest: l, className: C, onClick: _, atMaxMemberCapacity: g } = e,
         [v, j] = r.useState(null),
         { user: I, createdAt: T } = l;
     if (null == I) throw Error('Missing user on this guild join request!');
     let R = r.useMemo(() => new u.Z(I), [I]),
         E = m.ZP.getUserAvatarURL(R),
-        S = t === b.wB.SUBMITTED,
-        w = r.useCallback(
+        S = t === x.wB.SUBMITTED,
+        A = r.useCallback(
             async (e, t) => {
                 let { guildId: n, userId: i } = e;
                 if (null == v) {
@@ -56,30 +56,30 @@ function C(e) {
                     try {
                         await f.Z.updateGuildJoinRequest(n, i, l.joinRequestId, t);
                     } catch (e) {
-                        (0, s.showToast)((0, s.createToast)(x.intl.string(x.t.R0RpRU), s.ToastType.FAILURE)), j(null);
+                        (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.R0RpRU), s.ToastType.FAILURE)), j(null);
                     }
                 }
             },
             [v, l.joinRequestId]
         ),
-        A = async () => {
-            await w(l, b.wB.APPROVED);
+        w = async () => {
+            await A(l, x.wB.APPROVED);
         },
         N = async () => {
-            await w(l, b.wB.REJECTED);
+            await A(l, x.wB.REJECTED);
         };
     return (0, i.jsxs)(s.Clickable, {
-        className: o()(p.container, C),
-        onClick: g,
+        className: o()(h.container, C),
+        onClick: _,
         children: [
             (0, i.jsx)(s.Avatar, {
                 src: E,
                 size: s.AvatarSizes.SIZE_40,
                 'aria-label': I.username,
-                className: p.__invalid_spacer
+                className: h.__invalid_spacer
             }),
             (0, i.jsxs)('div', {
-                className: p.userDetails,
+                className: h.userDetails,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/semibold',
@@ -87,7 +87,7 @@ function C(e) {
                         children: I.username
                     }),
                     (0, i.jsx)(s.Text, {
-                        className: p.createdAt,
+                        className: h.createdAt,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: c()(T).format('lll')
@@ -95,22 +95,22 @@ function C(e) {
                 ]
             }),
             S &&
-                !_ &&
-                (0, i.jsx)(h, {
+                !g &&
+                (0, i.jsx)(p, {
                     icon: s.CheckmarkLargeIcon,
-                    onClick: A,
-                    submitting: v === b.wB.APPROVED,
-                    disabled: null != v && v !== b.wB.APPROVED
+                    onClick: w,
+                    submitting: v === x.wB.APPROVED,
+                    disabled: null != v && v !== x.wB.APPROVED
                 }),
             S &&
-                (0, i.jsx)(h, {
+                (0, i.jsx)(p, {
                     icon: s.XSmallIcon,
                     onClick: N,
-                    submitting: v === b.wB.REJECTED,
-                    disabled: null != v && v !== b.wB.REJECTED
+                    submitting: v === x.wB.REJECTED,
+                    disabled: null != v && v !== x.wB.REJECTED
                 }),
             (0, i.jsx)(s.Clickable, {
-                className: o()(p.overflowMenuContainer, { [p.disabled]: null != v }),
+                className: o()(h.overflowMenuContainer, { [h.disabled]: null != v }),
                 onClick: (e) => {
                     (0, d.jW)(
                         e,
@@ -132,29 +132,29 @@ function C(e) {
                 children: (0, i.jsx)(s.MoreHorizontalIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: p.icon,
+                    className: h.icon,
                     width: 18
                 })
             })
         ]
     });
 }
-function g() {
+function _() {
     let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
         t = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
     return (0, i.jsxs)('div', {
-        className: p.placeholder,
+        className: h.placeholder,
         children: [
-            (0, i.jsx)('div', { className: o()(p.placeholderAvatar) }),
+            (0, i.jsx)('div', { className: o()(h.placeholderAvatar) }),
             (0, i.jsxs)('div', {
-                className: p.userDetails,
+                className: h.userDetails,
                 children: [
                     (0, i.jsx)('div', {
-                        className: p.placeholderUsername,
+                        className: h.placeholderUsername,
                         style: { maxWidth: e }
                     }),
                     (0, i.jsx)('div', {
-                        className: p.placeholderCreatedAt,
+                        className: h.placeholderCreatedAt,
                         style: { maxWidth: t }
                     })
                 ]

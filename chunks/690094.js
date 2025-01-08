@@ -1,15 +1,15 @@
 var a = r(364510),
     n = r(114170),
-    s = [].slice,
-    o = ['keyword', 'gray', 'hex'],
+    o = [].slice,
+    s = ['keyword', 'gray', 'hex'],
     i = {};
 Object.keys(n).forEach(function (e) {
-    i[s.call(n[e].labels).sort().join('')] = e;
+    i[o.call(n[e].labels).sort().join('')] = e;
 });
 var c = {};
 function u(e, t) {
     if (!(this instanceof u)) return new u(e, t);
-    if ((t && t in o && (t = null), t && !(t in n))) throw Error('Unknown model: ' + t);
+    if ((t && t in s && (t = null), t && !(t in n))) throw Error('Unknown model: ' + t);
     if (null == e) (this.model = 'rgb'), (this.color = [0, 0, 0]), (this.valpha = 1);
     else if (e instanceof u) (this.model = e.model), (this.color = e.color.slice()), (this.valpha = e.valpha);
     else if ('string' == typeof e) {
@@ -20,7 +20,7 @@ function u(e, t) {
         (this.model = f.model), (l = n[this.model].channels), (this.color = f.value.slice(0, l)), (this.valpha = 'number' == typeof f.value[l] ? f.value[l] : 1);
     } else if (e.length) {
         (this.model = t || 'rgb'), (l = n[this.model].channels);
-        var h = s.call(e, 0, l);
+        var h = o.call(e, 0, l);
         (this.color = b(h, l)), (this.valpha = 'number' == typeof e[l] ? e[l] : 1);
     } else if ('number' == typeof e) (e &= 16777215), (this.model = 'rgb'), (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]), (this.valpha = 1);
     else {
@@ -201,15 +201,15 @@ function u(e, t) {
         var r = e.rgb(),
             a = this.rgb(),
             n = void 0 === t ? 0.5 : t,
-            s = 2 * n - 1,
-            o = r.alpha() - a.alpha(),
-            i = ((s * o == -1 ? s : (s + o) / (1 + s * o)) + 1) / 2,
+            o = 2 * n - 1,
+            s = r.alpha() - a.alpha(),
+            i = ((o * s == -1 ? o : (o + s) / (1 + o * s)) + 1) / 2,
             c = 1 - i;
         return u.rgb(i * r.red() + c * a.red(), i * r.green() + c * a.green(), i * r.blue() + c * a.blue(), r.alpha() * n + a.alpha() * (1 - n));
     }
 }),
     Object.keys(n).forEach(function (e) {
-        if (-1 === o.indexOf(e)) {
+        if (-1 === s.indexOf(e)) {
             var t = n[e].channels;
             (u.prototype[e] = function () {
                 if (this.model === e) return new u(this);
@@ -223,7 +223,7 @@ function u(e, t) {
                 );
             }),
                 (u[e] = function (r) {
-                    return 'number' == typeof r && (r = b(s.call(arguments), t)), new u(r, e);
+                    return 'number' == typeof r && (r = b(o.call(arguments), t)), new u(r, e);
                 });
         }
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return g;
     }
 });
 var i = n(200651);
@@ -15,39 +15,39 @@ var r = n(913527),
     u = n(650774),
     m = n(271383),
     f = n(594174),
-    b = n(709054),
-    x = n(246364),
-    p = n(360328),
-    h = n(981631),
+    x = n(709054),
+    b = n(246364),
+    h = n(360328),
+    p = n(981631),
     C = n(388032),
-    g = n(364068);
-function _(e) {
+    _ = n(364068);
+function g(e) {
     var t;
-    let { guildJoinRequest: r, guild: _, guildJoinRequestUser: v } = e,
+    let { guildJoinRequest: r, guild: g, guildJoinRequestUser: v } = e,
         { createdAt: j, actionedAt: I, guildId: T, userId: R } = r,
-        { approveRequest: E, rejectRequest: S, submitting: w } = (0, p.s)(T, R, r.joinRequestId),
-        A = null === (t = r.actionedByUser) || void 0 === t ? void 0 : t.id,
-        N = (0, o.e7)([f.default], () => f.default.getUser(A)),
-        B = (0, o.e7)([m.ZP], () => (null != A ? m.ZP.getMember(T, A) : null), [A, T]),
-        Z = (0, o.e7)([u.Z], () => u.Z.getMemberCount(T)),
-        P = (null != Z ? Z : 0) >= _.maxMembers,
+        { approveRequest: E, rejectRequest: S, submitting: A } = (0, h.s)(T, R, r.joinRequestId),
+        w = null === (t = r.actionedByUser) || void 0 === t ? void 0 : t.id,
+        N = (0, o.e7)([f.default], () => f.default.getUser(w)),
+        P = (0, o.e7)([m.ZP], () => (null != w ? m.ZP.getMember(T, w) : null), [w, T]),
+        B = (0, o.e7)([u.Z], () => u.Z.getMemberCount(T)),
+        Z = (null != B ? B : 0) >= g.maxMembers,
         k = C.intl.string(C.t['4eQVBA']),
         M = (0, i.jsx)(c.ClockIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 24,
             height: 24,
-            className: g.icon
+            className: _.icon
         });
-    r.applicationStatus === x.wB.APPROVED
+    r.applicationStatus === b.wB.APPROVED
         ? ((k = C.intl.string(C.t.aURgY2)),
           (M = (0, i.jsx)(c.CircleCheckIcon, {
               size: 'md',
-              className: g.iconApproved,
+              className: _.iconApproved,
               color: l.Z.colors.WHITE.css,
               secondaryColor: 'currentColor'
           })))
-        : r.applicationStatus === x.wB.REJECTED &&
+        : r.applicationStatus === b.wB.REJECTED &&
           ((k = C.intl.string(C.t.bSZklZ)),
           (M = (0, i.jsx)(c.CircleXIcon, {
               size: 'md',
@@ -57,20 +57,20 @@ function _(e) {
     let y =
         null != N && null != I
             ? C.intl.format(C.t.pRpZCQ, {
-                  date: a()(b.default.extractTimestamp(I)).format('ll'),
+                  date: a()(x.default.extractTimestamp(I)).format('ll'),
                   usernameHook: function () {
                       var e;
                       return (0, i.jsx)(
                           c.Clickable,
                           {
-                              className: g.actionedByUser,
+                              className: _.actionedByUser,
                               onClick: () =>
                                   (0, d.openUserProfileModal)({
                                       userId: N.id,
                                       guildId: T,
                                       analyticsLocation: {
-                                          section: h.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                                          object: h.qAy.ACTIONED_BY_USER
+                                          section: p.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                                          object: p.qAy.ACTIONED_BY_USER
                                       }
                                   }),
                               tag: 'div',
@@ -78,7 +78,7 @@ function _(e) {
                               children: (0, i.jsx)(c.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'header-primary',
-                                  children: null !== (e = null == B ? void 0 : B.nick) && void 0 !== e ? e : N.username
+                                  children: null !== (e = null == P ? void 0 : P.nick) && void 0 !== e ? e : N.username
                               })
                           },
                           'username-hook'
@@ -87,13 +87,13 @@ function _(e) {
               })
             : a()(j).format('lll');
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: _.container,
         children: [
             (0, i.jsxs)('div', {
-                className: g.wrapper,
+                className: _.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.inline,
+                        className: _.inline,
                         children: [
                             M,
                             (0, i.jsxs)('div', {
@@ -103,7 +103,7 @@ function _(e) {
                                         children: k
                                     }),
                                     (0, i.jsx)(c.Text, {
-                                        className: g.headerSubtext,
+                                        className: _.headerSubtext,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
                                         children: y
@@ -113,21 +113,21 @@ function _(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: g.inline,
+                        className: _.inline,
                         children: [
-                            r.applicationStatus === x.wB.SUBMITTED &&
+                            r.applicationStatus === b.wB.SUBMITTED &&
                                 (0, i.jsxs)('div', {
-                                    className: g.buttons,
+                                    className: _.buttons,
                                     children: [
                                         (0, i.jsx)(c.Tooltip, {
                                             text: C.intl.string(C.t.RbIXi4),
-                                            shouldShow: P,
+                                            shouldShow: Z,
                                             children: (e) =>
                                                 (0, i.jsx)(c.Button, {
                                                     ...e,
                                                     color: c.Button.Colors.GREEN,
-                                                    submitting: w,
-                                                    disabled: P,
+                                                    submitting: A,
+                                                    disabled: Z,
                                                     onClick: E,
                                                     children: C.intl.string(C.t.BzjDQE)
                                                 })
@@ -135,7 +135,7 @@ function _(e) {
                                         (0, i.jsx)(c.Button, {
                                             color: c.Button.Colors.RED,
                                             onClick: S,
-                                            disabled: w,
+                                            disabled: A,
                                             children: C.intl.string(C.t.hDtbs7)
                                         })
                                     ]
@@ -147,28 +147,28 @@ function _(e) {
                                         return (t) =>
                                             (0, i.jsx)(e, {
                                                 ...t,
-                                                guild: _,
+                                                guild: g,
                                                 user: v
                                             });
                                     });
                                 },
-                                className: g.overflow,
+                                className: _.overflow,
                                 children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,
                                     height: 20,
-                                    className: g.iconInteractive
+                                    className: _.iconInteractive
                                 })
                             })
                         ]
                     })
                 ]
             }),
-            r.applicationStatus === x.wB.REJECTED &&
+            r.applicationStatus === b.wB.REJECTED &&
                 null != r.rejectionReason &&
                 (0, i.jsx)('div', {
-                    className: g.rejectionReason,
+                    className: _.rejectionReason,
                     children: (0, i.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         children: r.rejectionReason

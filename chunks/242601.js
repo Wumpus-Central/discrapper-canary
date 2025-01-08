@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(745837),
     S = n(13228),
     T = n(540059),
-    A = n(211644),
-    b = n(605236),
+    b = n(211644),
+    A = n(605236),
     Z = n(243778),
     x = n(492162),
     L = n(818634),
@@ -329,9 +329,9 @@ class ev extends r.PureComponent {
             }),
             ef(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
-                let t = (0, b.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, A.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(ed.oNc.HUB);
-                !t && n && (0, b.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
+                !t && n && (0, A.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
             }),
             ef(this, 'handleCloseSubscribeTooltip', () => {
                 this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
@@ -417,7 +417,7 @@ function eS(e) {
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
         { enableStudyGroup: H } = (0, D.s)(u),
-        K = (0, A.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        K = (0, b.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [er, el] = r.useState(!K),
         ea = (0, _.Z)(n),
         { analyticsLocations: es } = (0, I.ZP)(E.Z.GUILD_HEADER),
@@ -425,7 +425,7 @@ function eS(e) {
     r.useEffect(() => {
         n !== ea && el(!K);
     }, [n, ea, K]);
-    let [ec, em] = (0, A.ZP)((e) => [eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.R.GUILD_HEADER_TOOLTIPS)], o.X),
+    let [ec, em] = (0, b.ZP)((e) => [eu.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.R.GUILD_HEADER_TOOLTIPS)], o.X),
         ep = (0, N.Z)(u),
         eg = (0, h.useModalsStore)(h.hasAnyModalOpenSelector),
         ef = (0, c.e7)([Q.Z], () => Q.Z.hasLayers()),
@@ -435,8 +435,8 @@ function eS(e) {
         eN = v && null != eI && eI >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eS = Z && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eI && eI > 50)),
         eT = (0, y.Z)(n),
-        eA = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        eb = v && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        eb = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
+        eA = v && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
         eZ = (0, C.Q)(),
         ex = (v || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eZ,
         eL = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && v && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
@@ -448,7 +448,7 @@ function eS(e) {
         eD = er && !ej,
         eM = (0, S.Z)(U);
     (0, P.Z)(u);
-    let ew = (0, b.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+    let ew = (0, A.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ek = (0, w.Z)(n),
         eU = (0, O.Z)(n),
         eG = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
@@ -474,11 +474,11 @@ function eS(e) {
         showGuildBoostingProgressBarUpsell: eE,
         showGuildBoostingProgressBarSizeUpsell: eN,
         showInviteSplashUpsell: ex,
-        showDiscoveryLandingPageSettingsUpsell: eb,
+        showDiscoveryLandingPageSettingsUpsell: eA,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: eL,
         showRoleSubscriptionUpsell: eT,
-        showHubPrivacySettingsTooltip: eA,
+        showHubPrivacySettingsTooltip: eb,
         showNewUnreadsBar: ey,
         showActiveThreadsNotice: R && null != eI && eI >= 200 && eR,
         showGuildSoundboardPermissionUpsell: eS,

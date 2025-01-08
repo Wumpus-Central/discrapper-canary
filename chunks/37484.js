@@ -4,8 +4,8 @@ function a(e) {
 function n(e) {
     return (Object.prototype.toString.call(e).match(/^\[object\s+(.*?)\]$/)[1] || '').toLowerCase();
 }
-function s(e, { precision: t, unit: r }) {
-    return o(e)
+function o(e, { precision: t, unit: r }) {
+    return s(e)
         ? 'none'
         : (function (e, t) {
               if (0 === e) return 0;
@@ -16,11 +16,11 @@ function s(e, { precision: t, unit: r }) {
               return Math.floor(e * n + 0.5) / n;
           })(e, t) + (r ?? '');
 }
-function o(e) {
+function s(e) {
     return Number.isNaN(e) || (e instanceof Number && e?.none);
 }
 function i(e) {
-    return o(e) ? 0 : e;
+    return s(e) ? 0 : e;
 }
 r.d(t, {
     $7: function () {
@@ -39,7 +39,7 @@ r.d(t, {
         return h;
     },
     Wi: function () {
-        return o;
+        return s;
     },
     Z$: function () {
         return l;
@@ -66,7 +66,7 @@ r.d(t, {
         return d;
     },
     zL: function () {
-        return s;
+        return o;
     }
 });
 let c = {
@@ -85,14 +85,14 @@ function u(e) {
         let e = [];
         return (
             a[2].replace(/\/?\s*(none|[-\w.]+(?:%|deg|g?rad|turn)?)/g, (a, n) => {
-                let s = n.match(r),
-                    o = n;
-                if (s) {
-                    let e = s[0],
-                        t = o.slice(0, -e.length);
-                    '%' === e ? ((o = new Number(t / 100)).type = '<percentage>') : (((o = new Number(t * c[e])).type = '<angle>'), (o.unit = e));
-                } else t.test(o) ? ((o = new Number(o)).type = '<number>') : 'none' === o && ((o = new Number(NaN)).none = !0);
-                a.startsWith('/') && ((o = o instanceof Number ? o : new Number(o)).alpha = !0), 'object' == typeof o && o instanceof Number && (o.raw = n), e.push(o);
+                let o = n.match(r),
+                    s = n;
+                if (o) {
+                    let e = o[0],
+                        t = s.slice(0, -e.length);
+                    '%' === e ? ((s = new Number(t / 100)).type = '<percentage>') : (((s = new Number(t * c[e])).type = '<angle>'), (s.unit = e));
+                } else t.test(s) ? ((s = new Number(s)).type = '<number>') : 'none' === s && ((s = new Number(NaN)).none = !0);
+                a.startsWith('/') && ((s = s instanceof Number ? s : new Number(s)).alpha = !0), 'object' == typeof s && s instanceof Number && (s.raw = n), e.push(s);
             }),
             {
                 name: a[1].toLowerCase(),

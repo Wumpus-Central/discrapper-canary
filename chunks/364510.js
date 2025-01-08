@@ -1,8 +1,8 @@
 var a = r(33608),
     n = r(405458),
-    s = Object.hasOwnProperty,
-    o = Object.create(null);
-for (var i in a) s.call(a, i) && (o[a[i]] = i);
+    o = Object.hasOwnProperty,
+    s = Object.create(null);
+for (var i in a) o.call(a, i) && (s[a[i]] = i);
 var c = (e.exports = {
     to: {},
     get: {}
@@ -38,26 +38,26 @@ function l(e) {
         var t,
             r,
             n,
-            o = [0, 0, 0, 1];
+            s = [0, 0, 0, 1];
         if ((t = e.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i))) {
             for (r = 0, n = t[2], t = t[1]; r < 3; r++) {
                 var i = 2 * r;
-                o[r] = parseInt(t.slice(i, i + 2), 16);
+                s[r] = parseInt(t.slice(i, i + 2), 16);
             }
-            n && (o[3] = parseInt(n, 16) / 255);
+            n && (s[3] = parseInt(n, 16) / 255);
         } else if ((t = e.match(/^#([a-f0-9]{3,4})$/i))) {
-            for (r = 0, n = (t = t[1])[3]; r < 3; r++) o[r] = parseInt(t[r] + t[r], 16);
-            n && (o[3] = parseInt(n + n, 16) / 255);
+            for (r = 0, n = (t = t[1])[3]; r < 3; r++) s[r] = parseInt(t[r] + t[r], 16);
+            n && (s[3] = parseInt(n + n, 16) / 255);
         } else if ((t = e.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) {
-            for (r = 0; r < 3; r++) o[r] = parseInt(t[r + 1], 0);
-            t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
+            for (r = 0; r < 3; r++) s[r] = parseInt(t[r + 1], 0);
+            t[4] && (t[5] ? (s[3] = 0.01 * parseFloat(t[4])) : (s[3] = parseFloat(t[4])));
         } else if ((t = e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) {
-            for (r = 0; r < 3; r++) o[r] = Math.round(2.55 * parseFloat(t[r + 1]));
-            t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
+            for (r = 0; r < 3; r++) s[r] = Math.round(2.55 * parseFloat(t[r + 1]));
+            t[4] && (t[5] ? (s[3] = 0.01 * parseFloat(t[4])) : (s[3] = parseFloat(t[4])));
         } else if (!(t = e.match(/^(\w+)$/))) return null;
-        else return 'transparent' === t[1] ? [0, 0, 0, 0] : s.call(a, t[1]) ? (((o = a[t[1]])[3] = 1), o) : null;
-        for (r = 0; r < 3; r++) o[r] = u(o[r], 0, 255);
-        return (o[3] = u(o[3], 0, 1)), o;
+        else return 'transparent' === t[1] ? [0, 0, 0, 0] : o.call(a, t[1]) ? (((s = a[t[1]])[3] = 1), s) : null;
+        for (r = 0; r < 3; r++) s[r] = u(s[r], 0, 255);
+        return (s[3] = u(s[3], 0, 1)), s;
     }),
     (c.get.hsl = function (e) {
         if (!e) return null;
@@ -102,5 +102,5 @@ function l(e) {
         return e.length >= 4 && 1 !== e[3] && (t = ', ' + e[3]), 'hwb(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%' + t + ')';
     }),
     (c.to.keyword = function (e) {
-        return o[e.slice(0, 3)];
+        return s[e.slice(0, 3)];
     });

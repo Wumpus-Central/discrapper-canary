@@ -1,7 +1,7 @@
 var a = r(910974),
     n = r(192379),
-    s = r(247595);
-function o(e, t) {
+    o = r(247595);
+function s(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
@@ -12,17 +12,17 @@ function i(e, t) {
     if (Number.isSafeInteger(e.size)) r = e.size;
     else {
         var n,
-            s = (function (e, t) {
+            o = (function (e, t) {
                 var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
                 if (!r) {
                     if (
                         Array.isArray(e) ||
                         (r = (function (e, t) {
                             if (e) {
-                                if ('string' == typeof e) return o(e, t);
+                                if ('string' == typeof e) return s(e, t);
                                 var r = Object.prototype.toString.call(e).slice(8, -1);
                                 if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return o(e, t);
+                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return s(e, t);
                             }
                         })(e))
                     ) {
@@ -47,7 +47,7 @@ function i(e, t) {
                     }
                     throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
                 }
-                var s,
+                var o,
                     i = !0,
                     c = !1;
                 return {
@@ -59,19 +59,19 @@ function i(e, t) {
                         return (i = e.done), e;
                     },
                     e: function (e) {
-                        (c = !0), (s = e);
+                        (c = !0), (o = e);
                     },
                     f: function () {
                         try {
                             !i && null != r.return && r.return();
                         } finally {
-                            if (c) throw s;
+                            if (c) throw o;
                         }
                     }
                 };
             })(e);
         try {
-            for (s.s(); !(n = s.n()).done; ) {
+            for (o.s(); !(n = o.n()).done; ) {
                 if ((n.value, t && r + 1 > t)) {
                     a = !0;
                     break;
@@ -79,9 +79,9 @@ function i(e, t) {
                 r += 1;
             }
         } catch (e) {
-            s.e(e);
+            o.e(e);
         } finally {
-            s.f();
+            o.f();
         }
     }
     return ''
@@ -92,7 +92,7 @@ function i(e, t) {
 t.Z = function (e) {
     var t = (0, a.Z)({}, e);
     return n.createElement(
-        s.Z,
+        o.Z,
         (0, a.Z)({}, t, {
             nodeType: 'Iterable',
             nodeTypeIndicator: '()',

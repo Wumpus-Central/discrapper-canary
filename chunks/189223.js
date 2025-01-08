@@ -5,8 +5,8 @@ r.d(t, {
 });
 var a = r(910974),
     n = r(190293),
-    s = r(681996),
-    o = r(525207),
+    o = r(681996),
+    s = r(525207),
     i = r(332133),
     c = r(775310),
     u = r(700717),
@@ -54,7 +54,7 @@ function M(e) {
         r,
         a,
         n,
-        s =
+        o =
             ((t = e.theme),
             (r = e),
             (n = Object.keys(
@@ -72,12 +72,12 @@ function M(e) {
                 n.forEach(function (e) {
                     console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')),
                         (t[a[e]] = function (t) {
-                            for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) s[o - 1] = arguments[o];
-                            return { style: Z(Z({}, a), r[e].apply(r, s)) };
+                            for (var a = t.style, n = arguments.length, o = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) o[s - 1] = arguments[s];
+                            return { style: Z(Z({}, a), r[e].apply(r, o)) };
                         });
                 })),
             t);
-    return e.invertTheme && (s = (0, g.y7)(s)), { styling: (0, m.Z)(s) };
+    return e.invertTheme && (o = (0, g.y7)(o)), { styling: (0, m.Z)(o) };
 }
 var k = (function (e) {
     (0, i.Z)(f, e);
@@ -101,10 +101,10 @@ var k = (function (e) {
             });
     function f(e) {
         var t;
-        return (0, s.Z)(this, f), ((t = l.call(this, e)).state = M(e)), t;
+        return (0, o.Z)(this, f), ((t = l.call(this, e)).state = M(e)), t;
     }
     return (
-        (0, o.Z)(f, [
+        (0, s.Z)(f, [
             {
                 key: 'UNSAFE_componentWillReceiveProps',
                 value: function (e) {
@@ -129,8 +129,8 @@ var k = (function (e) {
                     var e = this.props,
                         t = e.data,
                         r = e.keyPath,
-                        s = e.postprocessValue,
-                        o = e.hideRoot,
+                        o = e.postprocessValue,
+                        s = e.hideRoot,
                         i = (e.theme, e.invertTheme, (0, n.Z)(e, y)),
                         c = this.state.styling;
                     return b.createElement(
@@ -142,15 +142,15 @@ var k = (function (e) {
                                 {},
                                 Z(
                                     {
-                                        postprocessValue: s,
-                                        hideRoot: o,
+                                        postprocessValue: o,
+                                        hideRoot: s,
                                         styling: c
                                     },
                                     i
                                 ),
                                 {
-                                    keyPath: o ? [] : r,
-                                    value: s(t)
+                                    keyPath: s ? [] : r,
+                                    value: o(t)
                                 }
                             )
                         )

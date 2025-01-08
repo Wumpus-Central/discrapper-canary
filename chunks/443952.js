@@ -22,8 +22,8 @@ var r = n(243814),
     v = n(885110),
     S = n(451478),
     T = n(630388),
-    A = n(823379),
-    b = n(709054),
+    b = n(823379),
+    A = n(709054),
     Z = n(591759),
     x = n(228488),
     L = n(996106),
@@ -198,7 +198,7 @@ t.Z = {
                             }, 1000);
                     };
                     l.addEventListener('change', () => {
-                        (0, A.lm)(l.files) && e(l.files[0]), a();
+                        (0, b.lm)(l.files) && e(l.files[0]), a();
                     }),
                         l.addEventListener('cancel', () => {
                             a();
@@ -209,7 +209,7 @@ t.Z = {
                 })(
                     async (n) => {
                         let l = await (0, m.kv)(i, r, n);
-                        (0, A.lm)(l) && (0, A.lm)(l.url) && !(l instanceof u.Z) ? e({ image_url: l.url }) : t(l);
+                        (0, b.lm)(l) && (0, b.lm)(l.url) && !(l instanceof u.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error('Upload canceled'))
                 );
@@ -262,7 +262,7 @@ t.Z = {
                 void 0 !== l &&
                     (e = [
                         {
-                            id: b.default.cast(b.default.fromTimestamp(Date.now())),
+                            id: A.default.cast(A.default.fromTimestamp(Date.now())),
                             size: 0,
                             proxy_url: l.url,
                             filename: 'preview',
@@ -272,7 +272,7 @@ t.Z = {
                         }
                     ]),
                     (n = new I.ZP({
-                        id: b.default.cast(b.default.fromTimestamp(Date.now())),
+                        id: A.default.cast(A.default.fromTimestamp(Date.now())),
                         applicationId: c,
                         content: o,
                         components: a,

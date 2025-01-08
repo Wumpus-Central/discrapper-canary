@@ -1,86 +1,86 @@
-n.d(t, {
+t.d(n, {
     B: function () {
-        return m;
+        return f;
     },
     b: function () {
-        return c;
+        return d;
     }
 }),
-    n(47120);
-var l = n(200651),
-    i = n(192379),
-    s = n(481060),
-    r = n(893776),
-    a = n(489813),
-    o = n(388032),
-    d = n(119866);
-function u() {
-    let [e, t] = i.useState(!1),
-        [n, a] = i.useState(!1),
-        [u, c] = i.useState(!1);
-    i.useEffect(() => {
+    t(47120);
+var i = t(200651),
+    r = t(192379),
+    l = t(481060),
+    s = t(893776),
+    o = t(489813),
+    u = t(388032),
+    c = t(119866);
+function a() {
+    let [e, n] = r.useState(!1),
+        [t, o] = r.useState(!1),
+        [a, d] = r.useState(!1);
+    r.useEffect(() => {
         let e;
         return (
-            n &&
+            t &&
                 (e = setTimeout(() => {
-                    a(!1);
+                    o(!1);
                 }, 2000)),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [n]);
-    let m = async () => {
+    }, [t]);
+    let f = async () => {
         if (!e) {
-            t(!0);
+            n(!0);
             try {
-                await r.Z.verifyResend(), a(!0), c(!0);
+                await s.Z.verifyResend(), o(!0), d(!0);
             } catch (e) {
             } finally {
-                t(!1);
+                n(!1);
             }
         }
     };
-    return n
-        ? (0, l.jsx)(s.Text, {
-              className: d.verifyConfirmText,
+    return t
+        ? (0, i.jsx)(l.Text, {
+              className: c.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: o.intl.string(o.t.H3Q7U1)
+              children: u.intl.string(u.t.H3Q7U1)
           })
-        : (0, l.jsx)(s.Button, {
-              size: s.Button.Sizes.SMALL,
+        : (0, i.jsx)(l.Button, {
+              size: l.Button.Sizes.SMALL,
               submitting: e,
-              onClick: m,
-              children: u ? o.intl.string(o.t.WnX4Jy) : o.intl.string(o.t['13ofGh'])
+              onClick: f,
+              children: a ? u.intl.string(u.t.WnX4Jy) : u.intl.string(u.t['13ofGh'])
           });
 }
-function c() {
-    return (0, l.jsx)(a.PU, {
-        icon: s.EnvelopeIcon,
-        text: o.intl.string(o.t.c6EUJC),
-        footnote: o.intl.string(o.t['jMh+TU']),
+function d() {
+    return (0, i.jsx)(o.PU, {
+        icon: l.EnvelopeIcon,
+        text: u.intl.string(u.t.c6EUJC),
+        footnote: u.intl.string(u.t['jMh+TU']),
         meetsRequirement: !1,
-        children: (0, l.jsx)(s.Tooltip, {
-            text: o.intl.string(o.t.mGlP39),
+        children: (0, i.jsx)(l.Tooltip, {
+            text: u.intl.string(u.t.mGlP39),
             children: (e) =>
-                (0, l.jsx)(s.Button, {
+                (0, i.jsx)(l.Button, {
                     ...e,
-                    size: s.Button.Sizes.SMALL,
+                    size: l.Button.Sizes.SMALL,
                     disabled: !0,
-                    children: o.intl.string(o.t['13ofGh'])
+                    children: u.intl.string(u.t['13ofGh'])
                 })
         })
     });
 }
-function m(e) {
-    let { isUserVerified: t } = e,
-        n = t ? o.intl.string(o.t.qY1jHB) : o.intl.string(o.t.c6EUJC);
-    return (0, l.jsx)(a.PU, {
-        icon: s.EnvelopeIcon,
-        text: n,
-        footnote: o.intl.string(o.t['jMh+TU']),
-        meetsRequirement: t,
-        children: (0, l.jsx)(u, {})
+function f(e) {
+    let { isUserVerified: n } = e,
+        t = n ? u.intl.string(u.t.qY1jHB) : u.intl.string(u.t.c6EUJC);
+    return (0, i.jsx)(o.PU, {
+        icon: l.EnvelopeIcon,
+        text: t,
+        footnote: u.intl.string(u.t['jMh+TU']),
+        meetsRequirement: n,
+        children: (0, i.jsx)(a, {})
     });
 }

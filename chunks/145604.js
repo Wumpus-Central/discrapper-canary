@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(734307),
     S = n(355298),
     T = n(371651),
-    A = n(829907),
-    b = n(427679),
+    b = n(829907),
+    A = n(427679),
     Z = n(695346),
     x = n(592125),
     L = n(77498),
@@ -61,7 +61,7 @@ class K extends r.PureComponent {
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = E.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
-                i = b.Z.getStageInstanceByChannel(e.voiceChannelId),
+                i = A.Z.getStageInstanceByChannel(e.voiceChannelId),
                 r = N.ZP.getActiveEventByChannel(e.voiceChannelId);
             F.default.track(Y.rMx.LEAVE_VOICE_CHANNEL, {
                 channel_id: e.voiceChannelId,
@@ -84,7 +84,7 @@ class K extends r.PureComponent {
         if (e.voiceChannelId !== r && null != r) {
             let e = E.ZP.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : '',
-                n = b.Z.getStageInstanceByChannel(r),
+                n = A.Z.getStageInstanceByChannel(r),
                 i = N.ZP.getActiveEventByChannel(r);
             (0, d.yw)(Y.rMx.CHANNEL_OPENED, { ...(0, d.$H)(r) }), (0, h.a)(Y.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: r });
             let a = null,
@@ -117,7 +117,7 @@ class K extends r.PureComponent {
             if (
                 (setTimeout(async () => {
                     var t;
-                    let n = await (0, A.hj)(P.pid),
+                    let n = await (0, b.hj)(P.pid),
                         { gameName: i, gameId: a, exe: m, distributor: p } = (0, _.G8)(P);
                     F.default.track(Y.rMx.LAUNCH_GAME, {
                         game: i,
@@ -262,8 +262,8 @@ function q() {
         [_, N] = (0, l.Wu)([y.Z], () => [y.Z.isVideoEnabled(), y.Z.isScreenSharing()], []),
         v = (0, l.e7)([w.Z], () => w.Z.getPrimaryActivity(), []),
         T = (0, l.e7)([E.ZP], () => E.ZP.getCurrentGameForAnalytics(), []),
-        A = (0, C.Z)(o),
-        b = (0, l.e7)([S.Z], () => S.Z.getMessageRequestsCount(), []),
+        b = (0, C.Z)(o),
+        A = (0, l.e7)([S.Z], () => S.Z.getMessageRequestsCount(), []),
         Z = {
             selectedChannelId: t,
             isNSFWChannel: a,
@@ -285,9 +285,9 @@ function q() {
             gameExeName: null != T ? T.exeName : null,
             hasPreviewEnabled: null == d ? void 0 : d.features.has(Y.oNc.PREVIEW_ENABLED),
             isMemberPending: h,
-            postableChannelCount: A,
+            postableChannelCount: b,
             isTextInVoice: r,
-            numMessageRequests: b
+            numMessageRequests: A
         };
     return (0, i.jsx)(K, { ...Z });
 }

@@ -21,11 +21,11 @@ var l = t(200651),
     g = t(328977),
     f = t(412222),
     N = t(223312),
-    v = t(768762),
-    _ = t(171368),
+    _ = t(768762),
+    v = t(171368),
     E = t(598077),
-    I = t(430824),
-    T = t(51144),
+    T = t(430824),
+    I = t(51144),
     S = t(388032),
     p = t(174598),
     M = t(676391),
@@ -79,13 +79,13 @@ function k(e) {
                                 children: S.intl.string(S.t.EZ5QWF)
                             }),
                             n === j.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(v.Z, {
+                                ? (0, l.jsx)(_.Z, {
                                       className: p.sortIcon,
-                                      direction: v.Z.Directions.UP
+                                      direction: _.Z.Directions.UP
                                   })
-                                : (0, l.jsx)(v.Z, {
+                                : (0, l.jsx)(_.Z, {
                                       className: p.sortIcon,
-                                      direction: v.Z.Directions.DOWN
+                                      direction: _.Z.Directions.DOWN
                                   })
                         ]
                     })
@@ -109,7 +109,7 @@ let L = i.memo(function (e) {
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, _.openUserProfileModal)({
+                        (0, v.openUserProfileModal)({
                             userId: t.id,
                             joinRequestId: r
                         });
@@ -152,7 +152,7 @@ let L = i.memo(function (e) {
                         children: (0, l.jsx)(d.Clickable, {
                             onClick: s,
                             tag: 'span',
-                            children: T.ZP.getUserTag(t)
+                            children: I.ZP.getUserTag(t)
                         })
                     })
                 })
@@ -164,7 +164,7 @@ let L = i.memo(function (e) {
             { guildId: s, createdAt: m, applicationStatus: x } = n,
             h = i.useMemo(() => new E.Z(n.user), [n.user]),
             C = (0, g.L)({ guildId: s }),
-            b = (0, c.e7)([I.Z], () => I.Z.getGuild(s)),
+            b = (0, c.e7)([T.Z], () => T.Z.getGuild(s)),
             f = x === j.wB.SUBMITTED,
             N = (e) => {
                 (0, u.jW)(
@@ -273,7 +273,7 @@ let L = i.memo(function (e) {
 function w(e) {
     let { guildId: n, currentTab: t } = e,
         r = i.useRef(null),
-        s = (0, c.e7)([I.Z], () => I.Z.getGuild(n)),
+        s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)),
         o = (0, f.C)({ guildId: n }),
         u = (0, c.e7)([C.Z], () => C.Z.isFetching()),
         { guildJoinRequests: m } = (0, N.j)({

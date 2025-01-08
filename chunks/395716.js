@@ -19,7 +19,7 @@ function u(e) {
         f = r.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(d.intl.string(d.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
-        b = r.useCallback(async () => {
+        x = r.useCallback(async () => {
             if (null != m) {
                 l.default.selectPrivateChannel(m.id);
                 return;
@@ -38,7 +38,7 @@ function u(e) {
     return (0, i.jsx)(o.Button, {
         color: o.Button.Colors.BRAND,
         submitting: n,
-        onClick: b,
+        onClick: x,
         children: d.intl.string(d.t.aqiUAA)
     });
 }

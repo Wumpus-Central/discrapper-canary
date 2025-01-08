@@ -28,8 +28,8 @@ var r,
     u = n(452823),
     f = n(744709),
     p = n(39934),
-    g = n(681532),
-    v = n(12981);
+    g = n(681532);
+if (12633 == n.j) var v = n(12981);
 ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
 let h = (t) =>
         (0, i.EQ)(t)

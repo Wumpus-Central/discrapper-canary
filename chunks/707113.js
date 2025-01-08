@@ -37,35 +37,35 @@ function g(e) {
         g = n.id,
         f = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(g), [g]),
         N = (0, d.$j)(g),
-        v = (0, d.M3)(g),
-        _ = i.useCallback(
+        _ = (0, d.M3)(g),
+        v = i.useCallback(
             (e) => {
                 if (null != e) null == s || s(e);
             },
             [s]
         ),
-        E = (0, m.xb)(v, N, f),
-        I = i.useRef(null),
+        E = (0, m.xb)(_, N, f),
         T = i.useRef(null),
+        I = i.useRef(null),
         S = i.useCallback(() => {
             var e;
-            null === (e = I.current) || void 0 === e || e.resetSearchText();
+            null === (e = T.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, l.jsx)('div', {
         className: a()(j.mainTableContainer, t),
         children: (0, l.jsxs)(c.AdvancedScroller, {
             className: a()(j.horizatonalScroller),
-            ref: T,
+            ref: I,
             orientation: 'horizontal',
             children: [
                 (0, l.jsx)(C.Z, {
                     guild: n,
-                    ref: I
+                    ref: T
                 }),
                 (0, l.jsx)(b, { guild: n }),
                 (0, l.jsx)(x.Z, {
                     guild: n,
-                    onSelectRow: _,
+                    onSelectRow: v,
                     searchState: E,
                     onResetForNewMembers: S
                 }),

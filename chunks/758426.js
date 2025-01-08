@@ -2,7 +2,7 @@ var i = r(200651);
 r(192379);
 var a = r(960259),
     s = r(381708),
-    o = r(325767);
+    o = r(331595);
 n.Z = (0, a.hN)(
     function (e) {
         let { width: n = 6, height: r = 11, color: a = 'currentColor', foreground: s, ...l } = e;

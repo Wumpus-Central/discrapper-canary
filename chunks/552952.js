@@ -1,7 +1,7 @@
 var a = r(665352),
     n = r(99978),
-    s = r(257381);
-let o = 2413 / 128,
+    o = r(257381);
+let s = 2413 / 128,
     i = 2610 / 16384,
     c = 2523 / 32,
     u = 16384 / 2610,
@@ -43,11 +43,11 @@ t.Z = new a.Z({
             name: 'CP'
         }
     },
-    base: s.Z,
+    base: o.Z,
     fromBase: (e) =>
         (function (e) {
             let t = e.map(function (e) {
-                let t = 0.8359375 + o * (e / 10000) ** i,
+                let t = 0.8359375 + s * (e / 10000) ** i,
                     r = 1 + 18.6875 * (e / 10000) ** i;
                 return (t / r) ** c;
             });
@@ -57,7 +57,7 @@ t.Z = new a.Z({
         let t = (function (e) {
             return (0, n.Z)(h, e).map(function (e) {
                 let t = Math.max(e ** l - 0.8359375, 0);
-                return 10000 * (t / (o - 18.6875 * e ** l)) ** u;
+                return 10000 * (t / (s - 18.6875 * e ** l)) ** u;
             });
         })(e);
         return (0, n.Z)(d, t);

@@ -3,9 +3,9 @@ function a(e) {
         r,
         a,
         n = e[0],
-        s = e[1],
-        o = e[2];
-    return (t = 1 * n + 0 * s + 1.13983 * o), (r = 1 * n + -0.39465 * s + -0.5806 * o), (a = 1 * n + 2.02311 * s + 0 * o), [255 * (t = Math.min(Math.max(0, t), 1)), 255 * (r = Math.min(Math.max(0, r), 1)), 255 * (a = Math.min(Math.max(0, a), 1))];
+        o = e[1],
+        s = e[2];
+    return (t = 1 * n + 0 * o + 1.13983 * s), (r = 1 * n + -0.39465 * o + -0.5806 * s), (a = 1 * n + 2.02311 * o + 0 * s), [255 * (t = Math.min(Math.max(0, t), 1)), 255 * (r = Math.min(Math.max(0, r), 1)), 255 * (a = Math.min(Math.max(0, a), 1))];
 }
 function n(e) {
     var t = e[0] / 255,

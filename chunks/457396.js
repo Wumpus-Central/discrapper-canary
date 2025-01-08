@@ -30,8 +30,8 @@ var a = n(91192),
     v = n(650032),
     S = n(767870),
     T = n(104494),
-    A = n(639119),
-    b = n(655525),
+    b = n(639119),
+    A = n(655525),
     Z = n(314684),
     x = n(52188),
     L = n(346497),
@@ -53,7 +53,7 @@ let H = (e) => {
         let { selected: t } = e,
             n = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             i = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-            r = (0, A.N)(),
+            r = (0, b.N)(),
             l = (0, T.Ng)(),
             a = (0, L.Vi)(),
             o = (0, j.vx)(B),
@@ -76,7 +76,7 @@ let H = (e) => {
             Y = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             K = (0, C.Qo)(W, Y),
             q = (0, a.JA)('nitro'),
-            X = (0, A.N)(),
+            X = (0, b.N)(),
             Q = (0, T.Ng)(),
             J = (0, s.e7)([E.ZP], () => E.ZP.inReverseTrial()),
             $ = (0, s.e7)([_.Z], () => _.Z.isLocalizedPromoEnabled) && null == X,
@@ -107,7 +107,7 @@ let H = (e) => {
                 : el
                   ? ((i = (0, l.jsx)(R.Z, { copy: U.intl.string(U.t.jyYgZ2) })), (r = 8))
                   : ee
-                    ? ((i = (0, l.jsx)(b.Z, {})), (r = 0))
+                    ? ((i = (0, l.jsx)(A.Z, {})), (r = 0))
                     : null != ep && ep === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((i = (0, l.jsx)(D.Z, {
                             copy: U.intl.string(U.t.HwUCnp),

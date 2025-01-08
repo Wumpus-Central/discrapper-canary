@@ -7,30 +7,30 @@ var o = n(200651),
     c = n(852860),
     u = n(313201),
     d = n(944163),
-    l = n(266395),
-    f = n(200305),
+    f = n(266395),
+    l = n(200305),
     p = n(592286),
     b = n(388032),
-    g = n(832311);
-let _ = () =>
+    _ = n(832311);
+let g = () =>
     (0, o.jsx)(c.Z, {
         submitting: !1,
         message: b.intl.string(b.t['8g514e']),
         onReset: () => {
-            (0, l.PE)(!1);
+            (0, f.PE)(!1);
         },
         onResetText: b.intl.string(b.t['ETE/oK']),
         onSave: () => {
-            (0, l.PE)(!1), (0, a.closeModal)(p.Pn);
+            (0, f.PE)(!1), (0, a.closeModal)(p.Pn);
         },
         onSaveText: b.intl.string(b.t['Xt+UaW']),
         onSaveButtonColor: a.ButtonColors.RED
     });
 t.default = (e) => {
     let { guildId: t, transitionState: n, onClose: c, onComplete: p, isPreview: b = !1 } = e,
-        m = (0, l.rb)((e) => e.shouldShowWarning),
+        m = (0, f.rb)((e) => e.shouldShowWarning),
         h = (0, r.e7)([d.Z], () => d.Z.get(t)),
-        E = (0, u.Dt)();
+        x = (0, u.Dt)();
     return (s.useEffect(() => {
         h === d.t && c();
     }, [c, h]),
@@ -40,16 +40,16 @@ t.default = (e) => {
               children: [
                   (0, o.jsxs)(a.ModalRoot, {
                       size: a.ModalSize.MEDIUM,
-                      className: g.container,
+                      className: _.container,
                       transitionState: n,
-                      'aria-labelledby': E,
+                      'aria-labelledby': x,
                       children: [
                           (0, o.jsx)(a.ModalCloseButton, {
                               onClick: () => c(!1),
-                              className: g.closeButton
+                              className: _.closeButton
                           }),
-                          (0, o.jsx)(f.Z, {
-                              headerId: E,
+                          (0, o.jsx)(l.Z, {
+                              headerId: x,
                               guildId: t,
                               onClose: c,
                               onComplete: p,
@@ -61,8 +61,8 @@ t.default = (e) => {
                       children:
                           !0 === m &&
                           (0, o.jsx)(a.SlideIn, {
-                              className: g.notice,
-                              children: (0, o.jsx)(_, {})
+                              className: _.notice,
+                              children: (0, o.jsx)(g, {})
                           })
                   })
               ]

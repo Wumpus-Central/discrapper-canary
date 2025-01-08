@@ -21,16 +21,16 @@ var l = t(200651),
     g = t(598077),
     f = t(430824),
     N = t(51144),
-    v = t(981631),
-    _ = t(308083),
+    _ = t(981631),
+    v = t(308083),
     E = t(388032),
-    I = t(861683),
-    T = t(125712);
+    T = t(861683),
+    I = t(125712);
 function S(e) {
     let { icon: n, label: t, onClick: i, disabled: r } = e;
     return (0, l.jsxs)(o.Clickable, {
-        className: a()(I.actionButton, { [I.disabled]: r }),
-        onClick: r ? v.dG4 : i,
+        className: a()(T.actionButton, { [T.disabled]: r }),
+        onClick: r ? _.dG4 : i,
         'aria-label': t,
         children: [
             (0, l.jsx)(n, {
@@ -56,20 +56,20 @@ function p(e) {
                 joinRequestId: i.joinRequestId,
                 sourceAnalyticsLocations: r,
                 analyticsLocation: {
-                    section: v.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: v.qAy.JOIN_REQUEST
+                    section: _.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                    object: _.qAy.JOIN_REQUEST
                 }
             });
         };
     return (0, l.jsxs)('div', {
-        className: I.infoContainer,
+        className: T.infoContainer,
         children: [
             (0, l.jsxs)('div', {
-                className: T.memberNameContainer,
+                className: I.memberNameContainer,
                 children: [
                     (0, l.jsx)(o.Clickable, {
                         onClick: s,
-                        className: a()(I.clickable, T.memberAvatar),
+                        className: a()(T.clickable, I.memberAvatar),
                         children: (0, l.jsx)(o.Avatar, {
                             src: n.getAvatarURL(t, 48),
                             'aria-label': n.username,
@@ -77,14 +77,14 @@ function p(e) {
                         })
                     }),
                     (0, l.jsxs)('div', {
-                        className: T.memberNameAndTagContainer,
+                        className: I.memberNameAndTagContainer,
                         children: [
                             (0, l.jsxs)('div', {
-                                className: T.memberNameTextContainer,
+                                className: I.memberNameTextContainer,
                                 children: [
                                     (0, l.jsx)(o.Clickable, {
                                         onClick: s,
-                                        className: I.clickable,
+                                        className: T.clickable,
                                         children: (0, l.jsx)(o.Text, {
                                             variant: 'text-lg/medium',
                                             children: null == n ? void 0 : n.globalName
@@ -94,16 +94,16 @@ function p(e) {
                                         primaryGuild: null == n ? void 0 : n.primaryGuild,
                                         userId: null == n ? void 0 : n.id,
                                         contextGuildId: t,
-                                        badgeSize: _.NC.SIZE_16,
+                                        badgeSize: v.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: T.memberClanTag,
-                                        containerClassName: T.memberClanTagContainer
+                                        className: I.memberClanTag,
+                                        containerClassName: I.memberClanTagContainer
                                     })
                                 ]
                             }),
                             (0, l.jsx)(o.Clickable, {
                                 onClick: s,
-                                className: I.clickable,
+                                className: T.clickable,
                                 children: (0, l.jsx)(o.Text, {
                                     variant: 'text-md/medium',
                                     color: 'text-normal',
@@ -115,7 +115,7 @@ function p(e) {
                 ]
             }),
             (0, l.jsx)(o.Clickable, {
-                className: T.closeAction,
+                className: I.closeAction,
                 onClick: () => m.Z.setSelectedGuildJoinRequest(t, null),
                 children: (0, l.jsx)(o.XSmallIcon, {
                     size: 'md',
@@ -129,7 +129,7 @@ function M(e) {
     let { user: n, guildId: t, joinRequest: i } = e,
         { approveRequest: r, rejectRequest: a, handleOpenInterview: s, submitting: c } = (0, j.s)(t, n.id, i.joinRequestId, i.interviewChannelId);
     return (0, l.jsxs)('div', {
-        className: I.actionRow,
+        className: T.actionRow,
         children: [
             (0, l.jsx)(S, {
                 icon: o.CircleCheckIcon,
@@ -168,13 +168,13 @@ function R(e) {
     }),
     null != t && null != m && null != d && null != r)
         ? (0, l.jsx)('section', {
-              className: I.sidebar,
+              className: T.sidebar,
               children: (0, l.jsx)(o.Scroller, {
                   children: (0, l.jsxs)('div', {
-                      className: I.innerContainer,
+                      className: T.innerContainer,
                       children: [
                           (0, l.jsxs)('div', {
-                              className: I.cardContainer,
+                              className: T.cardContainer,
                               children: [
                                   (0, l.jsx)(p, {
                                       user: d,
@@ -190,7 +190,7 @@ function R(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: a()(I.cardContainer, I.responsesContainer),
+                              className: a()(T.cardContainer, T.responsesContainer),
                               children: (0, l.jsx)(C.Z, {
                                   guildId: m.id,
                                   formFields: c,

@@ -1,12 +1,12 @@
-n.d(t, {
+t.d(e, {
     R: function () {
-        return l;
+        return a;
     },
     S: function () {
-        return r;
+        return i;
     }
 });
-let i = (0, n(987170).Z)({
+let l = (0, t(987170).Z)({
     kind: 'user',
     id: '2024-05_secure_frames_ui_rollout',
     label: 'Secure Frames Rollout',
@@ -19,11 +19,11 @@ let i = (0, n(987170).Z)({
         }
     ]
 });
-function r(e) {
-    let { location: t } = e;
-    return i.useExperiment({ location: t }, { autoTrackExposure: !0 });
+function i(n) {
+    let { location: e } = n;
+    return l.useExperiment({ location: e }, { autoTrackExposure: !0 });
 }
-function l(e) {
-    let { location: t } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+function a(n) {
+    let { location: e } = n;
+    return l.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
