@@ -62,11 +62,12 @@ function p(t) {
     return t.hasFeature(T.oNc.DISCOVERABLE) ? N.A.DISCOVERABLE : t.hasFeature(T.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) ? N.A.APPLY : N.A.INVITE;
 }
 function x(t, n) {
+    let i = t.hasFeature(T.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t.hasFeature(T.oNc.CLAN);
     switch (n) {
         case N.A.INVITE:
             return {
                 joinType: N.A.INVITE,
-                requireTerms: t.hasFeature(T.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t.hasFeature(T.oNc.CLAN),
+                requireTerms: i,
                 termRules: S()
             };
         case N.A.APPLY:
@@ -77,7 +78,9 @@ function x(t, n) {
         case N.A.DISCOVERABLE:
             return {
                 joinType: N.A.DISCOVERABLE,
-                settingsView: C()
+                settingsView: C(),
+                requireTerms: i,
+                termRules: S()
             };
     }
 }
@@ -117,17 +120,17 @@ function D() {
     (e = x(t, n)), R();
 }
 function L() {
-    if (null == I.Z.getGuildId()) return !1;
-    (null == e ? void 0 : e.joinType) === N.A.APPLY
-        ? (e = {
-              ...e,
-              pendingVerificationFields: v()
-          })
-        : (null == e ? void 0 : e.joinType) === N.A.INVITE &&
-          (e = {
-              ...e,
-              termRules: S()
-          }),
+    if (null == I.Z.getGuildId() || null == e) return !1;
+    (e =
+        e.joinType === N.A.APPLY
+            ? {
+                  ...e,
+                  pendingVerificationFields: v()
+              }
+            : {
+                  ...e,
+                  termRules: S()
+              }),
         R();
 }
 function G(t) {
@@ -163,7 +166,7 @@ class O extends (r = c.ZP.Store) {
     (n.Z = new O(g.Z, {
         GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES: function (t) {
             let { guildId: n, requireTerms: i, termRules: r } = t;
-            if (n !== I.Z.getGuildId() || (null == e ? void 0 : e.joinType) !== N.A.INVITE) return !1;
+            if (n !== I.Z.getGuildId() || ((null == e ? void 0 : e.joinType) !== N.A.INVITE && (null == e ? void 0 : e.joinType) !== N.A.DISCOVERABLE)) return !1;
             (e = {
                 ...e,
                 requireTerms: i,

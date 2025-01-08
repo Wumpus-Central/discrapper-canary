@@ -309,7 +309,8 @@ let l = {
             alwaysUseLayer: !0,
             small: !0
         },
-        showCharacterCount: !1
+        showCharacterCount: !1,
+        disableAutoFocus: !0
     },
     y = {
         analyticsName: 'forum_channel_guidelines',
