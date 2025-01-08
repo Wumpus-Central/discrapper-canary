@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(95242),
     v = n(530198),
     _ = n(420966),
-    I = n(203377),
-    N = n(981631),
+    N = n(203377),
+    I = n(981631),
     T = n(856651),
     j = n(388032),
     b = n(312772),
@@ -47,7 +47,7 @@ function y(e) {
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(I.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, i.jsx)(d.Button, {
                 disabled: n,
@@ -78,11 +78,11 @@ function A(e) {
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
         k = O.length > 1 ? m.O1.OR : m.O1.AND,
-        P = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
-        M = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
+        M = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
+        P = r.useMemo(() => new Set(M.map((e) => e.connectionType)), [M]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...P];
+            i = [...M];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -96,21 +96,21 @@ function A(e) {
         u.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => w(e),
-            excludedPlatformTypes: M,
+            excludedPlatformTypes: P,
             integrations: o,
             onCompleteApplication: (e) => w(T.Kt, e)
         });
     }
     let U = null;
-    if (0 === P.length)
+    if (0 === M.length)
         U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (P.length > 0) {
+    else if (M.length > 0) {
         var G, F;
         let e = null;
-        P.length < 10 &&
+        M.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
                 className: a()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
@@ -158,7 +158,7 @@ function A(e) {
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(I.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
@@ -184,7 +184,7 @@ function A(e) {
                                 'aria-labelledby': E
                             })
                         });
-                    })(l, n.id, k, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, k, M, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function a(n, i) {
                             let r = [];
@@ -248,7 +248,7 @@ function A(e) {
                                 )
                             )
                         });
-                    })(P, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
+                    })(M, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
                     e
                 ]
             }));
@@ -266,7 +266,7 @@ function A(e) {
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: I.ZI.VERIFICATIONS,
+                        selectedSection: N.ZI.VERIFICATIONS,
                         setSelectedSection: s
                     })
                 }),

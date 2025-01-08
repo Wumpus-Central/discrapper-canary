@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     XG: function () {
-        return N;
+        return I;
     },
     _N: function () {
         return x;
@@ -39,7 +39,7 @@ n.d(t, {
         return y;
     },
     r2: function () {
-        return I;
+        return N;
     },
     vR: function () {
         return p;
@@ -120,13 +120,13 @@ async function _(e, t, n, i) {
         );
     }
 }
-function I(e) {
+function N(e) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
     });
 }
-function N(e, t) {
+function I(e, t) {
     a.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,

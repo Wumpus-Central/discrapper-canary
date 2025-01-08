@@ -24,21 +24,21 @@ function v() {
     let t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: v } = (0, o.Z)(null == t ? void 0 : t.id, f.wW.GUILD_ROLE_SUBSCRIPTIONS),
         _ = r.useRef(null),
-        I = (0, u.Z)(null != t ? t : void 0);
+        N = (0, u.Z)(null != t ? t : void 0);
     r.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.EW)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let N = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let I = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || v
                 ? (0, i.jsx)(s.Spinner, {})
-                : null != I
+                : null != N
                   ? (0, i.jsx)(g.Z, {
                         guild: t,
-                        config: I
+                        config: N
                     })
-                  : N
+                  : I
                     ? (0, i.jsx)(x.Z, { guild: t })
                     : (0, i.jsx)(h.Z, {
                           guild: t,

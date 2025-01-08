@@ -15,7 +15,7 @@ t.Z = (e) => {
     let { className: t, isDisabled: l, sticker: x, canManageSticker: p } = e,
         [f, C] = r.useState(!1),
         [v, _] = (0, c.Z)(null, 4000),
-        I = () => {
+        N = () => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('93626'), n.e('64493')]).then(n.bind(n, 136735));
                 return (t) =>
@@ -26,7 +26,7 @@ t.Z = (e) => {
                     });
             });
         },
-        N = async () => {
+        I = async () => {
             _(null), C(!0);
             try {
                 await (0, u.Um)(x);
@@ -83,7 +83,7 @@ t.Z = (e) => {
                                       children: [
                                           (0, i.jsx)(s.Clickable, {
                                               className: g.action,
-                                              onClick: I,
+                                              onClick: N,
                                               'aria-label': h.intl.string(h.t.bt75u7),
                                               children: (0, i.jsx)(s.PencilIcon, {
                                                   size: 'xs',
@@ -93,7 +93,7 @@ t.Z = (e) => {
                                           }),
                                           (0, i.jsx)(s.Clickable, {
                                               className: a()(g.action, g.actionRemove),
-                                              onClick: N,
+                                              onClick: I,
                                               'aria-label': h.intl.string(h.t.N86XcH),
                                               children: (0, i.jsx)(s.XSmallIcon, {
                                                   size: 'md',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return M;
     }
 }),
     n(47120),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(251625),
     v = n(226951),
     _ = n(51144),
-    I = n(434404),
-    N = n(372454),
+    N = n(434404),
+    I = n(372454),
     T = n(999382),
     j = n(84613),
     b = n(740903),
@@ -205,13 +205,13 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        I.Z.setSection(E.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
+        N.Z.setSection(E.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        I.Z.setSearchQuery(e);
+        N.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        I.Z.setSearchQuery('');
+        N.Z.setSearchQuery('');
     }
     constructor(...e) {
         super(...e),
@@ -341,10 +341,10 @@ let k = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
         streamerMode: p.Z.hidePersonalInformation
     };
 })(O);
-function P() {
+function M() {
     var e;
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], s.isEqual),
-        { enabled: n } = N.T.useExperiment(
+        { enabled: n } = I.T.useExperiment(
             {
                 guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : E.lds,
                 location: '4d6318_1'

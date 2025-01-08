@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(94963),
     v = n(745628),
     _ = n(950279),
-    I = n(796918),
-    N = n(513532),
+    N = n(796918),
+    I = n(513532),
     T = n(741595),
     j = n(974842),
     b = n(359380),
@@ -177,8 +177,8 @@ t.Z = (e) => {
         {
             initialSettings: O,
             settings: k,
-            errors: P,
-            submitting: M,
+            errors: M,
+            submitting: P,
             dirty: w
         } = (0, a.cj)([p.Z], () => {
             var e;
@@ -232,9 +232,9 @@ t.Z = (e) => {
         Y = async () => {
             await (0, g.Ii)(t, k), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
+        K = r.useMemo(() => null != M && Object.values(M).some((e) => null != e), [M]);
     if (null == k) return null;
-    let q = Z(P);
+    let q = Z(M);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
         className: A.modal,
@@ -327,7 +327,7 @@ t.Z = (e) => {
                                                 description: y.intl.string(y.t.E7Ymwc),
                                                 onUpdateGames: F,
                                                 gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: P.gameApplicationIds,
+                                                error: M.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
@@ -337,7 +337,7 @@ t.Z = (e) => {
                                                 description: y.intl.string(y.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
                                                 playstyle: k.playstyle,
-                                                error: P.playstyle
+                                                error: M.playstyle
                                             });
                                         case S.Wy.UTILITY_TRAITS:
                                             return (0, i.jsx)(b.Z, {
@@ -348,24 +348,24 @@ t.Z = (e) => {
                                                 progress: k
                                             });
                                         case S.Wy.INTERESTS:
-                                            return (0, i.jsx)(I.Z, {
+                                            return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
                                                 progress: k,
-                                                error: P.interests
+                                                error: M.interests
                                             });
                                         case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 handleUpdate: W,
                                                 progress: k,
-                                                errors: P
+                                                errors: M
                                             });
                                         case S.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(j.Z, {
                                                 handleUpdate: W,
                                                 tag: k.tag,
-                                                error: P.tag,
+                                                error: M.tag,
                                                 badge: k.badgeKind,
                                                 primaryColor: k.badgePrimaryColor,
                                                 secondaryColor: k.badgeSecondaryColor,
@@ -373,10 +373,10 @@ t.Z = (e) => {
                                                 inSettings: !0
                                             });
                                         case S.Wy.MEMBER_APPLICATION:
-                                            return (0, i.jsx)(N.Z, {
+                                            return (0, i.jsx)(I.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
-                                                error: P.verificationForm
+                                                error: M.verificationForm
                                             });
                                         case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
@@ -397,11 +397,11 @@ t.Z = (e) => {
                                         className: A.noticeRegion,
                                         children: (0, i.jsx)(u.Z, {
                                             onSave: Y,
-                                            submitting: M,
+                                            submitting: P,
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(P).find((e) => null != e)
+                                            errorMessage: Object.values(M).find((e) => null != e)
                                         })
                                     })
                             })

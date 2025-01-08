@@ -35,7 +35,7 @@ t.Z = (e) => {
             let e = f.trim();
             if (0 !== e.length) (null == h || !(n.length >= h)) && (u(e), C(''));
         }, [f, h, u, n.length]),
-        I = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
@@ -58,7 +58,7 @@ t.Z = (e) => {
                 inputClassName: c.inputInner,
                 ...p,
                 value: f,
-                onKeyDown: I,
+                onKeyDown: N,
                 onChange: C,
                 maxLength: m,
                 disabled: g,

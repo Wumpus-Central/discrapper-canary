@@ -23,8 +23,8 @@ function x(e) {
     r.useEffect(() => f(c), [c]);
     let C = null !== (t = (0, s.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
         [v, _] = r.useState(null),
-        I = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, a.J)(e))), [x]),
-        N = r.useMemo(() => x.length === m.nx, [x]),
+        N = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, a.J)(e))), [x]),
+        I = r.useMemo(() => x.length === m.nx, [x]),
         T = r.useCallback(
             (e) => {
                 u.Z.setPendingMemberVerificationRules(n.id, e), f(e), null != v && _(null);
@@ -86,16 +86,16 @@ function x(e) {
                     fieldStyle: a.it.COMPACT
                 })
             ),
-            !N &&
+            !I &&
                 (0, i.jsx)('div', {
                     className: g.addQuestionsContainer,
                     children: (0, i.jsx)(o.Z, {
                         addFormField: j,
                         guild: n,
-                        allowTerms: !I
+                        allowTerms: !N
                     })
                 }),
-            !N && (0, i.jsx)(p, { addFormField: j })
+            !I && (0, i.jsx)(p, { addFormField: j })
         ]
     });
 }

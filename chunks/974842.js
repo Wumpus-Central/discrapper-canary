@@ -17,7 +17,7 @@ var i = n(200651),
     C = n(240938);
 let v = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
 t.Z = (e) => {
-    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: s, tag: _, error: I, furthestStep: N, inSettings: T } = e,
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: s, tag: _, error: N, furthestStep: I, inSettings: T } = e,
         j = r.useMemo(() => {
             let e = (0, g.yf)();
             return {
@@ -48,13 +48,13 @@ t.Z = (e) => {
         }, [t]);
     return (
         r.useEffect(() => {
-            N === x.Wy.CUSTOMIZE_TAG_BADGE &&
+            I === x.Wy.CUSTOMIZE_TAG_BADGE &&
                 !T &&
                 t({
                     brandPrimaryColor: j.primary,
                     brandSecondaryColor: j.secondary
                 });
-        }, [t, j.primary, j.secondary, N, l, s, T]),
+        }, [t, j.primary, j.secondary, I, l, s, T]),
         (0, i.jsxs)('div', {
             className: C.slideContent,
             children: [
@@ -176,12 +176,12 @@ t.Z = (e) => {
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['3eZP8/'])
                                 }),
-                                null != I &&
+                                null != N &&
                                     (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'status-danger',
                                         className: C.errorText,
-                                        children: I
+                                        children: N
                                     }),
                                 (0, i.jsx)(d.TextInput, {
                                     className: f.tagInputWrapper,

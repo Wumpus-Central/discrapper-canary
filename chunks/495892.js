@@ -68,21 +68,21 @@ function _(e) {
               children: l
           });
 }
-let I = (e, t) => () =>
+let N = (e, t) => () =>
         t({
             ...e,
             enabled: !e.enabled
         }),
-    N = (e) => {
+    I = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
     T = (e) => {
         let { className: t, children: n, ...r } = e;
         return (0, i.jsx)(a.Clickable, {
             className: t,
-            onClick: N,
-            onMouseDown: N,
-            onMouseUp: N,
+            onClick: I,
+            onMouseDown: I,
+            onMouseUp: I,
             ...r,
             children: n
         });
@@ -90,9 +90,9 @@ let I = (e, t) => () =>
 function j(e) {
     var t;
     let { rule: n, onChangeRule: r, onContextMenu: l } = e,
-        s = I(n, r),
+        s = N(n, r),
         o = (e) => {
-            N(e), l(e);
+            I(e), l(e);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -141,7 +141,7 @@ function S(e) {
         { isLoading: c, saveRule: m } = (0, h.w)(),
         { updateRule: x } = (0, u.pH)(t.guildId),
         [p, f] = r.useState(t.enabled),
-        I = (0, l.throttle)(async (e, n) => {
+        N = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = {
                     ...t,
@@ -153,7 +153,7 @@ function S(e) {
             }
         }, 300),
         j = (e) => {
-            N(e), s(e);
+            I(e), s(e);
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: E, descriptionText: R, icon: y } = o,
@@ -204,7 +204,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)(a.Switch, {
                         className: v.toggle,
-                        onChange: I,
+                        onChange: N,
                         checked: null != p && p
                     }),
                     !n &&

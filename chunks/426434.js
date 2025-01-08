@@ -25,9 +25,9 @@ function x(e) {
         C = n.isOwner(f),
         v = null == f ? void 0 : f.mfaEnabled,
         _ = x === m.BpS.ELEVATED,
-        I = C && v,
-        N = (0, r.throttle)(async (e) => {
-            if (!!I)
+        N = C && v,
+        I = (0, r.throttle)(async (e) => {
+            if (!!N)
                 await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
@@ -35,7 +35,7 @@ function x(e) {
                 });
         }, 1000);
     if (!p) return null;
-    !I && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => s.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
+    !N && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => s.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
     let T = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, i.jsxs)('div', {
         className: g.simpleItemWrapper,
@@ -55,21 +55,21 @@ function x(e) {
                     })
                 ]
             }),
-            !I || (_ && T)
+            !N || (_ && T)
                 ? (0, i.jsx)(a.Tooltip, {
                       text: T ? h.intl.string(h.t['KG1V/P']) : C ? h.intl.string(h.t.NmsheX) : h.intl.string(h.t.LieBtb),
                       children: (e) =>
                           (0, i.jsx)(u.Z, {
                               checked: _,
                               disabled: !0,
-                              onChange: N,
+                              onChange: I,
                               className: g.bringToFront,
                               tooltipProps: e
                           })
                   })
                 : (0, i.jsx)(u.Z, {
                       checked: _,
-                      onChange: N,
+                      onChange: I,
                       className: g.bringToFront
                   })
         ]

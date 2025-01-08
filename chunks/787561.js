@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(430824),
     v = n(496675),
     _ = n(699516),
-    I = n(594174),
-    N = n(434404),
+    N = n(594174),
+    I = n(434404),
     T = n(999382),
     j = n(54842),
     b = n(929834),
@@ -51,11 +51,11 @@ let A = 'dismissedCommunityFeaturesUpsell',
         return (0, i.jsx)(u.Z, {
             submitting: n,
             onReset: () => {
-                if (null != t) N.Z.init(t.id);
+                if (null != t) I.Z.init(t.id);
             },
             onSave: () => {
                 if (null != t)
-                    N.Z.saveGuild(t.id, {
+                    I.Z.saveGuild(t.id, {
                         rulesChannelId: t.rulesChannelId,
                         preferredLocale: t.preferredLocale,
                         safetyAlertsChannelId: t.safetyAlertsChannelId,
@@ -89,14 +89,14 @@ let A = 'dismissedCommunityFeaturesUpsell',
         let v = (0, s.e7)([C.Z], () => C.Z.getGuild('942897714956472401')),
             _ = l.isCommunity() && h >= 1000 && g && !(null != v);
         if (t && n && !_) return null;
-        let I = async () => {
+        let N = async () => {
             try {
                 let e = await o.tn.post({
                     url: S.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                N.Z.close(), (0, x.X)(e.body.id);
+                I.Z.close(), (0, x.X)(e.body.id);
             } catch {}
         };
         return a && !_
@@ -147,7 +147,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                               _ &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: I,
+                                      onClick: N,
                                       className: R.upsellButton,
                                       children: E.intl.string(E.t.iF1Asr)
                                   }),
@@ -156,7 +156,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            N.Z.setSection(S.pNK.ONBOARDING);
+                                            I.Z.setSection(S.pNK.ONBOARDING);
                                         },
                                         className: R.upsellButton,
                                         children: E.intl.string(E.t['S/DfiY'])
@@ -166,7 +166,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            N.Z.setSection(S.pNK.DISCOVERY);
+                                            I.Z.setSection(S.pNK.DISCOVERY);
                                         },
                                         className: R.upsellButton,
                                         color: d.Button.Colors.PRIMARY,
@@ -175,7 +175,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                               (0, i.jsx)(d.Button, {
                                   size: d.Button.Sizes.SMALL,
                                   onClick: () => {
-                                      N.Z.setSection(S.pNK.ANALYTICS);
+                                      I.Z.setSection(S.pNK.ANALYTICS);
                                   },
                                   className: R.upsellButton,
                                   color: d.Button.Colors.PRIMARY,
@@ -203,11 +203,11 @@ let A = 'dismissedCommunityFeaturesUpsell',
                 t.type === S.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
-                        label: (0, h.F6)(t, I.default, _.Z, !0)
+                        label: (0, h.F6)(t, N.default, _.Z, !0)
                     });
             });
         let x = () => {
-                N.Z.init(e.id), N.Z.open(e.id, S.pNK.MEMBER_VERIFICATION);
+                I.Z.init(e.id), I.Z.open(e.id, S.pNK.MEMBER_VERIFICATION);
             },
             f = () => {
                 if (null == e) return;
@@ -216,26 +216,26 @@ let A = 'dismissedCommunityFeaturesUpsell',
                     t.delete(S.oNc.DISCOVERABLE),
                     !(0, g.K2)(e.id, 'disableCommunity') && !e.hasFeature(S.oNc.CLAN) && t.delete(S.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
                     t.delete(S.oNc.PREVIEW_ENABLED),
-                    N.Z.updateGuild({
+                    I.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
                     });
             },
             C = (e) => {
-                N.Z.updateGuild({ rulesChannelId: e });
+                I.Z.updateGuild({ rulesChannelId: e });
             },
             j = (e) => {
-                N.Z.updateGuild({ safetyAlertsChannelId: e });
+                I.Z.updateGuild({ safetyAlertsChannelId: e });
             },
             y = (e) => {
-                N.Z.updateGuild({ publicUpdatesChannelId: e });
+                I.Z.updateGuild({ publicUpdatesChannelId: e });
             },
             Z = (e) => {
-                N.Z.updateGuild({ preferredLocale: e });
+                I.Z.updateGuild({ preferredLocale: e });
             },
             D = (e) => {
-                N.Z.updateGuild({ description: e });
+                I.Z.updateGuild({ description: e });
             },
             O = () => {
                 let t = (0, g.K2)(e.id, 'GuildSettingsCommunity');

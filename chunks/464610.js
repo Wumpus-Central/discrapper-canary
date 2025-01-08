@@ -142,10 +142,10 @@ function f(e) {
                       numRules: t
                   });
         }, [f, C]),
-        I = (0, m.Q)(t),
-        N = I[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        T = I[u.u.DM_AND_SPAM_PROTECTION],
-        j = I[u.u.PERMISSIONS],
+        N = (0, m.Q)(t),
+        I = N[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        T = N[u.u.DM_AND_SPAM_PROTECTION],
+        j = N[u.u.PERMISSIONS],
         b = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
@@ -163,8 +163,8 @@ function f(e) {
                         icon: n(14215),
                         title: h.intl.string(h.t['53eF5u']),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: N.filter((e) => e.enabled).length,
-                            total: N.length
+                            enabled: I.filter((e) => e.enabled).length,
+                            total: I.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),

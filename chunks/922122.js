@@ -119,7 +119,7 @@ function v(e) {
         I = i.useMemo(() => r.slice(0, C + 1), [C, r]),
         j = i.useMemo(() => r.slice(C + 1), [C, r]),
         S = i.useRef(null),
-        N = i.useCallback(() => {
+        E = i.useCallback(() => {
             var e;
             let n = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == n || v.current === n.width) return;
@@ -129,10 +129,10 @@ function v(e) {
             null == d || d(a);
         }, [b, d]);
     i.useEffect(() => {
-        let e = (0, m.pP)(N);
+        let e = (0, m.pP)(E);
         return (0, m.YP)(e, document.body), () => (0, m.UC)(e, document.body);
-    }, [N]);
-    let E = 0 !== p,
+    }, [E]);
+    let N = 0 !== p,
         y = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, a.jsxs)('div', {
         className: l()(g.container, n),
@@ -170,7 +170,7 @@ function v(e) {
                     })
                 ]
             }),
-            E &&
+            N &&
                 (0, a.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',

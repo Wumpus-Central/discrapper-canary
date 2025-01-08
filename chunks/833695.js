@@ -29,12 +29,12 @@ function _(e) {
     var t, n, s;
     let { guildId: x } = e,
         _ = (0, p.Z)(x),
-        I = (0, a.f3)(),
-        N = (0, r.e7)([g.Z], () => g.Z.getGuild());
-    return _.loading || null == N
+        N = (0, a.f3)(),
+        I = (0, r.e7)([g.Z], () => g.Z.getGuild());
+    return _.loading || null == I
         ? (0, i.jsx)(l.Spinner, {})
         : null == _.application
-          ? (0, i.jsx)(u.Z, { guild: N })
+          ? (0, i.jsx)(u.Z, { guild: I })
           : (0, i.jsxs)(d.Z, {
                 children: [
                     (0, i.jsx)(c.Z, {
@@ -59,7 +59,7 @@ function _(e) {
                     }),
                     (0, i.jsx)(l.FormSection, {
                         title: C.intl.string(C.t.O8cDAA),
-                        disabled: I,
+                        disabled: N,
                         children: (0, i.jsx)(m.Z, {
                             guildId: x,
                             application: _.application

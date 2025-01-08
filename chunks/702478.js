@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(650774),
     v = n(430824),
     _ = n(246946),
-    I = n(626135),
-    N = n(771212),
+    N = n(626135),
+    I = n(771212),
     T = n(434404),
     j = n(146596),
     b = n(559368),
@@ -32,8 +32,8 @@ var i = n(200651),
     D = n(573189),
     O = n(899947),
     k = n(117831),
-    P = n(996737),
-    M = n(21846),
+    M = n(996737),
+    P = n(21846),
     w = n(280632),
     B = n(44234),
     U = n(117428);
@@ -67,7 +67,7 @@ let G = function (e, t, n) {
                 });
     };
 function H(e) {
-    I.default.track(E.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+    N.default.track(E.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
     let t = null == e ? E.E07.DEVELOPER_PORTAL : E.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
         n = (0, l.Z)();
     return o.tn
@@ -109,7 +109,7 @@ function W(e) {
             var e;
             return null !== (e = C.Z.getMemberCount()) && void 0 !== e ? e : 0;
         }),
-        { showAccessRate: o } = (0, N.eA)(t, !n);
+        { showAccessRate: o } = (0, I.eA)(t, !n);
     if (
         (r.useEffect(() => {
             o && ((0, g.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, g.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: R.L.AUTO }));
@@ -164,7 +164,7 @@ function W(e) {
                           )
                   })),
                   (f = A.intl.formatToPlainString(A.t['+k7pAA'], { accessRate: m })))
-                : ((h = M),
+                : ((h = P),
                   (x = A.intl.format(A.t.RNxsr6, {
                       ratingHook: (e, t) =>
                           (0, i.jsx)(
@@ -327,7 +327,7 @@ function W(e) {
                                           (0, i.jsx)('img', {
                                               alt: '',
                                               className: Z.actionIcon,
-                                              src: P
+                                              src: M
                                           }),
                                           (0, i.jsx)(u.Text, {
                                               className: Z.actionText,

@@ -1,28 +1,28 @@
-n.d(t, {
+t.d(n, {
     j: function () {
         return s;
     }
 });
-var l = n(200651);
-n(192379);
-var a = n(120356),
-    i = n.n(a),
-    r = n(481060),
-    o = n(538537);
+var l = t(200651);
+t(192379);
+var a = t(120356),
+    i = t.n(a),
+    r = t(481060),
+    o = t(538537);
 function s(e) {
-    let { pills: t, pillClassName: n } = e;
+    let { pills: n, pillClassName: t } = e;
     return (0, l.jsx)('div', {
         className: o.container,
-        children: t.map((e) =>
+        children: n.map((e) =>
             (0, l.jsx)(
                 r.Tooltip,
                 {
                     text: e.tooltipText,
                     shouldShow: null != e.tooltipText,
-                    children: (t) =>
+                    children: (n) =>
                         (0, l.jsx)(r.Clickable, {
-                            ...t,
-                            className: i()(o.pill, { [o.disabled]: e.disabled }, n),
+                            ...n,
+                            className: i()(o.pill, { [o.disabled]: e.disabled }, t),
                             onClick: e.onClick,
                             children: (0, l.jsx)(r.Text, {
                                 tag: 'span',

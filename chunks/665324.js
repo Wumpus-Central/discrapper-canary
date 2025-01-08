@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     }
 }),
     n(47120),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(763296),
     v = n(22382),
     _ = n(747071),
-    I = n(286654),
-    N = n(171368),
+    N = n(286654),
+    I = n(171368),
     T = n(430824),
     j = n(594174),
     b = n(15385),
@@ -38,8 +38,8 @@ var i = n(200651),
     D = n(710111),
     O = n(388032),
     k = n(572005);
-let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
-function M() {
+let M = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+function P() {
     let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
     return null == e
         ? null
@@ -154,8 +154,8 @@ function F(e) {
         (0, f.w)();
     }, []);
     let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
-        I = 0 === l.length && !a;
-    function N(e) {
+        N = 0 === l.length && !a;
+    function I(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = x[e.soundId];
@@ -169,7 +169,7 @@ function F(e) {
         []
     );
     if (a) return (0, i.jsx)(u.Spinner, {});
-    let T = P
+    let T = M
         ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
@@ -197,11 +197,11 @@ function F(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: k.buttons,
-                        children: !I && T
+                        children: !N && T
                     })
                 ]
             }),
-            I
+            N
                 ? (0, i.jsxs)(u.EmptyState, {
                       theme: d,
                       className: k.empty,
@@ -252,7 +252,7 @@ function F(e) {
                                               sound: e,
                                               isPlaying: !1,
                                               guild: t,
-                                              onPlaySound: N
+                                              onPlaySound: I
                                           },
                                           e.soundId
                                       )
@@ -272,8 +272,8 @@ function H(e) {
         E = r.useMemo(() => b(t), [t, b]),
         R = null != v || null != _,
         [A, Z] = r.useState(!1),
-        D = (0, I.z)(t, o.id);
-    async function P() {
+        D = (0, N.z)(t, o.id);
+    async function M() {
         if (!A) {
             Z(!0);
             try {
@@ -289,9 +289,9 @@ function H(e) {
             await (0, m.PR)(C);
         }
     }, [T, C]);
-    let M = r.useCallback(() => {
+    let P = r.useCallback(() => {
             null != T &&
-                (0, N.openUserProfileModal)({
+                (0, I.openUserProfileModal)({
                     userId: T.id,
                     guildId: o.id,
                     analyticsLocation: { section: L.jXE.GUILD_SETTINGS_SOUNDBOARD }
@@ -335,7 +335,7 @@ function H(e) {
             null != T &&
                 (0, i.jsxs)(u.Clickable, {
                     className: k.uploader,
-                    onClick: M,
+                    onClick: P,
                     children: [
                         (0, i.jsx)(u.Avatar, {
                             'aria-label': w,
@@ -384,7 +384,7 @@ function H(e) {
                                               header: O.intl.formatToPlainString(O.t['PR/VbG'], { soundName: g }),
                                               confirmText: O.intl.string(O.t.oyYWHB),
                                               cancelText: O.intl.string(O.t['ETE/oK']),
-                                              onConfirm: P,
+                                              onConfirm: M,
                                               ...e,
                                               children: (0, i.jsx)(u.Text, {
                                                   variant: 'text-md/normal',

@@ -24,12 +24,12 @@ function x(e) {
             let t = a.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: C, loading: v, createEnableRequest: _, submittedRequest: I } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: N, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
+        { error: C, loading: v, createEnableRequest: _, submittedRequest: N } = (0, c.Z)(null == e ? void 0 : e.id),
+        { loading: I, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(b),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
-        A = I || (null == b ? void 0 : b.isApplicationPending) === !0,
+        A = N || (null == b ? void 0 : b.isApplicationPending) === !0,
         Z = (null == b ? void 0 : b.canApply) === !0,
         L = g.intl.format(g.t.aJUdOj, { faqUrl: s.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
     S && y
@@ -43,7 +43,7 @@ function x(e) {
     let D = n && f && !1 === p,
         O = n && !1 === x,
         k = (0, m.f)(),
-        P = S && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        M = S && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
             D && j();
@@ -53,8 +53,8 @@ function x(e) {
             resubmissionError: C,
             isGuildOwner: f,
             createEnableRequest: _,
-            resubmittedRequest: I,
-            eligibilityLoading: N,
+            resubmittedRequest: N,
+            eligibilityLoading: I,
             eligibilityError: T,
             refreshEligibility: j,
             eligibility: b,
@@ -62,7 +62,7 @@ function x(e) {
             isApplicationPending: A,
             hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: P,
+            reapplyNoticeText: M,
             showAcceptTermsFlow: O,
             wasRejectedInV1: O && (R || S),
             requirementsFinePrintText: L,

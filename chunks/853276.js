@@ -98,10 +98,10 @@ let h = r.forwardRef(function (e, t) {
 function g(e) {
     let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: v } = e,
         _ = r.useRef(null),
-        I = r.useRef(null),
-        [N, T] = r.useState(!1),
-        { ref: j, width: b = 0 } = (0, c.Z)(N),
-        { ref: S, width: E = 0 } = (0, c.Z)(N),
+        N = r.useRef(null),
+        [I, T] = r.useState(!1),
+        { ref: j, width: b = 0 } = (0, c.Z)(I),
+        { ref: S, width: E = 0 } = (0, c.Z)(I),
         R = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         [y, A] = r.useState(v),
         Z = r.useRef(null),
@@ -129,9 +129,9 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != _.current && null != j.current && null != I.current)) {
+                if ((t.trim().length <= 0 && x(), null != _.current && null != j.current && null != N.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = I.current) || void 0 === n ? void 0 : n.ref) != null && (I.current.ref.scrollLeft = 0);
+                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = N.current) || void 0 === n ? void 0 : n.ref) != null && (N.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
@@ -144,14 +144,14 @@ function g(e) {
             },
             [O, t]
         ),
-        P = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
             },
             [g]
         ),
-        M = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 x();
             },
@@ -162,29 +162,29 @@ function g(e) {
         children: (0, i.jsxs)('div', {
             ref: S,
             className: a()(m.chipletContainer, {
-                [m.isEditing]: N,
-                [m.smallBlink]: !N && !R,
+                [m.isEditing]: I,
+                [m.smallBlink]: !I && !R,
                 [m.isSelected]: p,
                 [m.isSelecting]: f,
-                [m.isError]: null != C && !N
+                [m.isError]: null != C && !I
             }),
             children: [
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: P,
+                    onClick: M,
                     ignoreKeyPress: !0,
                     onMouseEnter: () => A(!0),
                     onMouseLeave: () => A(!1),
                     className: a()(m.chipletContainerInner, {
                         [m.isSelecting]: f,
-                        [m.isEditing]: N
+                        [m.isEditing]: I
                     }),
-                    ref: I,
+                    ref: N,
                     children: [
                         (0, i.jsx)('input', {
                             className: a()(m.chipletInput, {
-                                [m.isEditing]: N,
+                                [m.isEditing]: I,
                                 [m.isSelecting]: f
                             }),
                             ref: _,
@@ -196,17 +196,17 @@ function g(e) {
                         (0, i.jsx)(h, {
                             ref: j,
                             value: t,
-                            isEditing: N,
+                            isEditing: I,
                             isSelected: p,
                             error: C,
-                            forceShowErrorTooltip: y || N
+                            forceShowErrorTooltip: y || I
                         })
                     ]
                 }),
-                !N &&
+                !I &&
                     (0, i.jsx)(o.Clickable, {
                         className: m.closeIconContainer,
-                        onClick: M,
+                        onClick: P,
                         children: (0, i.jsx)(o.XSmallIcon, {
                             size: 'xxs',
                             color: 'currentColor',

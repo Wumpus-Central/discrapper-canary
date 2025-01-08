@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(438825),
     v = n(236140),
     _ = n(37069),
-    I = n(518513),
-    N = n(168179),
+    N = n(518513),
+    I = n(168179),
     T = n(348986),
     j = n(930065),
     b = n(345669);
@@ -88,13 +88,13 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: I,
+            iconSrc: N,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: N,
+            iconSrc: I,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
@@ -169,8 +169,8 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
         [a, o] = r.useState(0),
-        [_, I] = r.useState(),
-        N = (0, s.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+        [_, N] = r.useState(),
+        I = (0, s.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
         T = null == _ ? void 0 : _.offsetWidth,
         j = null == _ ? void 0 : _.offsetHeight;
     r.useEffect(() => {
@@ -187,7 +187,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: f.banner,
-                ref: (e) => I(e),
+                ref: (e) => N(e),
                 children: [
                     E.map((e) =>
                         (0, i.jsx)(
@@ -223,13 +223,13 @@ t.Z = (e) => {
                 children: p.intl.format(p.t['52EgsL'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
             }),
             (0, i.jsx)(c.Tooltip, {
-                text: N ? null : p.intl.string(p.t['pjG+T0']),
-                'aria-label': N ? void 0 : p.intl.string(p.t['pjG+T0']),
+                text: I ? null : p.intl.string(p.t['pjG+T0']),
+                'aria-label': I ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
                     (0, i.jsx)(c.Button, {
                         onClick: b,
                         className: f.button,
-                        disabled: !N,
+                        disabled: !I,
                         ...e,
                         children: p.intl.string(p.t.LhlgY2)
                     })

@@ -21,7 +21,7 @@ t.Z = (e) => {
         C = (0, a.e7)([o.default], () => o.default.locale),
         v = (0, a.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
         _ = (0, a.e7)([d.Z], () => (null != v ? d.Z.get(v.planId) : void 0)),
-        I = null !== (t = (0, a.e7)([d.Z], () => (null != _ ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), _.interval, _.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
+        N = null !== (t = (0, a.e7)([d.Z], () => (null != _ ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), _.interval, _.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
     return (0, i.jsxs)('div', {
         className: l()(f.wrapper, n),
         children: [
@@ -73,9 +73,9 @@ t.Z = (e) => {
                 })({
                     currentUser: r,
                     locale: C,
-                    guildBoostingPlanId: I.id,
-                    interval: I.interval,
-                    intervalCount: I.intervalCount
+                    guildBoostingPlanId: N.id,
+                    interval: N.interval,
+                    intervalCount: N.intervalCount
                 })
             })
         ]

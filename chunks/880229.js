@@ -26,8 +26,8 @@ var i,
     C = n(605436),
     v = n(91218),
     _ = n(313201),
-    I = n(339085),
-    N = n(518738),
+    N = n(339085),
+    I = n(518738),
     T = n(131704),
     j = n(324067),
     b = n(430824),
@@ -41,12 +41,12 @@ var i,
     D = n(388032),
     O = n(846605);
 let k = (0, _.hQ)(),
-    P = (0, _.hQ)(),
-    M = (0, E.Mg)(h.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+    M = (0, _.hQ)(),
+    P = (0, E.Mg)(h.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
     let { emojiId: n, emojiName: i, className: r } = e,
-        a = (0, u.e7)([I.ZP], () => (null != n ? I.ZP.getCustomEmojiById(n) : void 0));
+        a = (0, u.e7)([N.ZP], () => (null != n ? N.ZP.getCustomEmojiById(n) : void 0));
     return (0, l.jsx)(x.Z, {
         emojiId: n,
         emojiName: i,
@@ -172,7 +172,7 @@ function G(e) {
         f = a.useMemo(() => new Set(x.filter((e) => i.some((t) => t.ref_id === e.ref_id))), [x, i]),
         C = a.useMemo(() => new Set(p.filter((e) => r.some((t) => (0, m.Z)(e, t)))), [r, p]),
         v = (0, _.Dt)();
-    function I(e, t) {
+    function N(e, t) {
         u((n) => {
             let i = new Set(n);
             return t ? i.add(e) : i.delete(e), i;
@@ -215,7 +215,7 @@ function G(e) {
                             benefits: x,
                             dupeBenefits: f,
                             selectedBenefits: d,
-                            onToggleBenefit: I
+                            onToggleBenefit: N
                         }),
                         (0, l.jsx)(U, {
                             title: D.intl.string(D.t.RdwKw8),
@@ -223,7 +223,7 @@ function G(e) {
                             benefits: p,
                             dupeBenefits: C,
                             selectedBenefits: d,
-                            onToggleBenefit: I
+                            onToggleBenefit: N
                         })
                     ]
                 }),
@@ -248,10 +248,10 @@ function G(e) {
 function F(e) {
     var t;
     let { guildId: n, role: i, channelCount: r, onSelect: a } = e,
-        s = (0, N.p9)({
+        s = (0, I.p9)({
             guildId: n,
             roleId: i.id,
-            size: M
+            size: P
         });
     return (0, l.jsxs)(g.Clickable, {
         className: O.roleRow,
@@ -414,7 +414,7 @@ function W(e) {
             (0, l.jsxs)(g.ModalHeader, {
                 children: [
                     (0, l.jsx)(g.Heading, {
-                        id: P,
+                        id: M,
                         variant: 'heading-md/semibold',
                         children: D.intl.format(D.t.iuPodH, { roleName: c.name })
                     }),
@@ -500,7 +500,7 @@ function V(e) {
         [s, o] = a.useState();
     return (0, l.jsx)(g.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': null == s ? k : P,
+        'aria-labelledby': null == s ? k : M,
         children: (0, l.jsxs)(g.Slides, {
             contentDisplay: 'flex',
             activeSlide: null == s ? 0 : 1,

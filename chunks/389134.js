@@ -33,17 +33,17 @@ let C = () => ({
     }),
     v = C(),
     _ = d()(v),
-    I = !1,
     N = !1,
+    I = !1,
     T = {};
 class j extends (i = u.ZP.Store) {
     getState() {
         return {
             initialSettings: v,
             settings: _,
-            dirty: I,
+            dirty: N,
             errors: T,
-            submitting: N
+            submitting: I
         };
     }
 }
@@ -58,7 +58,7 @@ class j extends (i = u.ZP.Store) {
         : (r[l] = a),
     (t.Z = new j(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
-            (N = !1), (v = C()), (_ = d()(v)), (I = !1), (T = {});
+            (I = !1), (v = C()), (_ = d()(v)), (N = !1), (T = {});
         },
         CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: t } = e;
@@ -67,7 +67,7 @@ class j extends (i = u.ZP.Store) {
                 ...t
             }),
                 ((_ = d()(v)).gameApplicationIds = f(_.gameApplicationIds)),
-                (I = !1);
+                (N = !1);
         },
         CLAN_SETTINGS_UPDATE: function (e) {
             let { updates: t } = e,
@@ -79,17 +79,17 @@ class j extends (i = u.ZP.Store) {
             }),
             t))
                 delete T[e], (T = { ...T });
-            I = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(v, 'verificationForm'));
+            N = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(v, 'verificationForm'));
         },
         CLAN_SETTINGS_SUBMIT: function () {
-            (N = !0), (T = {});
+            (I = !0), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (N = !1), (v = d()(_)), (I = !1), (T = {});
+            (I = !1), (v = d()(_)), (N = !1), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
             let { error: t } = e;
-            (N = !1),
+            (I = !1),
                 (T = {
                     gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
                     playstyle: t.getFirstFieldErrorMessage('play_style'),
@@ -114,7 +114,7 @@ class j extends (i = u.ZP.Store) {
                 n)
             ) {
                 var i;
-                I = !o().isEqual(_.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
-            } else I = !1;
+                N = !o().isEqual(_.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
+            } else N = !1;
         }
     }));

@@ -17,8 +17,8 @@ var r = n(780384),
 t.Z = function (e) {
     let { guild: t, disabled: C, role: v } = e,
         _ = (0, a.ZP)(),
-        I = (0, u.oC)(t.id, v),
-        { analyticsLocations: N } = (0, o.ZP)(),
+        N = (0, u.oC)(t.id, v),
+        { analyticsLocations: I } = (0, o.ZP)(),
         T = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('22942').then(n.bind(n, 660727));
@@ -40,10 +40,10 @@ t.Z = function (e) {
                         section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
                     },
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: N
+                    location_stack: I
                 }),
                 (0, m.Z)({
-                    analyticsLocations: N,
+                    analyticsLocations: I,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
                         section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
@@ -82,9 +82,9 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: f.previewContainer,
                         children:
-                            null != I
+                            null != N
                                 ? (0, i.jsx)(c.Z, {
-                                      ...I,
+                                      ...N,
                                       className: f.roleIconPreview,
                                       enableTooltip: !1
                                   })
@@ -104,7 +104,7 @@ t.Z = function (e) {
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),
-                    null != I
+                    null != N
                         ? (0, i.jsx)(l.Button, {
                               className: f.button,
                               color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,

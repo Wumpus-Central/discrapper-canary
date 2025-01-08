@@ -21,8 +21,8 @@ var i = n(200651),
     C = n(440857),
     v = n(472596),
     _ = n(598948),
-    I = n(428936),
-    N = n(41586),
+    N = n(428936),
+    I = n(41586),
     T = n(918192),
     j = n(981631),
     b = n(388032),
@@ -87,7 +87,7 @@ function E(e) {
                                                 ? (0, i.jsxs)('div', {
                                                       className: a()(S.mainTableContainer),
                                                       children: [
-                                                          (0, i.jsx)(N.Z, {
+                                                          (0, i.jsx)(I.Z, {
                                                               guild: n,
                                                               ref: A
                                                           }),
@@ -98,7 +98,7 @@ function E(e) {
                                                               onSelectRow: y,
                                                               onResetForNewMembers: Z
                                                           }),
-                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })
+                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(N.Z, { guildId: n.id })
                                                       ]
                                                   })
                                                 : (0, i.jsx)('div', {

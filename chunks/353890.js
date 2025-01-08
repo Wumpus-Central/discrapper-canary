@@ -61,12 +61,12 @@ function C() {
 }
 function v(e) {
     let { channels: t } = e;
-    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(I, { label: e.name }, e.id) : (0, i.jsx)(N, { channel: e }, e.id))) });
+    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(N, { label: e.name }, e.id) : (0, i.jsx)(I, { channel: e }, e.id))) });
 }
 function _() {
     return (0, i.jsx)('div', { className: p.divider });
 }
-function I(e) {
+function N(e) {
     let { label: t } = e;
     return (0, i.jsxs)('div', {
         className: p.category,
@@ -86,7 +86,7 @@ function I(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     var t;
     let { channel: n } = e,
         r = (0, d.iF)(n),

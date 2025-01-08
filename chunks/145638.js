@@ -1,11 +1,11 @@
 e.exports = {
     container: 'container_ad47cc',
     guildSidebar: 'guildSidebar_ad47cc',
+    sidebarCard: 'sidebarCard_ad47cc',
     modal: 'modal_ad47cc',
     sequencer: 'sequencer_ad47cc',
     modalContent: 'modalContent_ad47cc',
     content: 'content_ad47cc',
-    centerContent: 'centerContent_ad47cc',
     closeButton: 'closeButton_ad47cc',
     applicationIconContainer: 'applicationIconContainer_ad47cc',
     applicationIcon: 'applicationIcon_ad47cc',

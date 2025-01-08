@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 });
 var i = n(200651),
@@ -21,12 +21,12 @@ var i = n(200651),
     C = n(598622),
     v = n(921944),
     _ = n(388032),
-    I = n(232203);
-function N(e) {
+    N = n(232203);
+function I(e) {
     let t,
         { hideChangelog: n } = e,
-        N = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        T = (0, l.e7)([u.Z], () => u.Z.getGuild(N)),
+        I = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        T = (0, l.e7)([u.Z], () => u.Z.getGuild(I)),
         j = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
@@ -68,8 +68,8 @@ function N(e) {
         children: [
             j !== x.u.OVERVIEW &&
                 (0, i.jsxs)(s.Button, {
-                    className: I.back,
-                    innerClassName: I.backButton,
+                    className: N.back,
+                    innerClassName: N.backButton,
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.MIN,
                     onClick: () => {
@@ -77,7 +77,7 @@ function N(e) {
                     },
                     children: [
                         (0, i.jsx)(d.Z, {
-                            className: I.__invalid_arrow,
+                            className: N.__invalid_arrow,
                             direction: d.Z.Directions.LEFT
                         }),
                         (0, i.jsx)(s.Text, {

@@ -66,9 +66,9 @@ function p(e) {
         C = r.useRef(null),
         v = r.useRef(null),
         _ = r.useRef(null),
-        I = (0, m.V)(n),
+        N = (0, m.V)(n),
         {
-            handlePasteEvent: N,
+            handlePasteEvent: I,
             handleInputChange: T,
             handleKeyDown: j,
             handleContainerKeyUp: b,
@@ -78,26 +78,26 @@ function p(e) {
             handleUnselectTag: y,
             handleResetTagSelections: A,
             handleInputBlurEvent: Z
-        } = (0, m.Q)(I, {
+        } = (0, m.Q)(N, {
             scrollerRef: _,
             mainInputRef: C,
             mainContainerRef: v
         }),
         {
             state: { value: L, tags: D, selections: O, isSelecting: k }
-        } = I,
-        P = (0, o.Z)(D),
-        [M, w] = r.useState(!1),
+        } = N,
+        M = (0, o.Z)(D),
+        [P, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
             w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
         }, [A]);
     r.useEffect(() => {
-        if (!M && P !== D) l(D);
-    }, [l, P, D, M]),
+        if (!P && M !== D) l(D);
+    }, [l, M, D, P]),
         r.useEffect(() => {
-            if (!M) c(L);
-        }, [c, L, M]);
+            if (!P) c(L);
+        }, [c, L, P]);
     let U = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -148,17 +148,17 @@ function p(e) {
                                 isSelected: O.includes(e),
                                 isSelecting: k,
                                 error: u[e],
-                                forceShowErrorTooltip: !M && t === D.length - 1
+                                forceShowErrorTooltip: !P && t === D.length - 1
                             },
                             t
                         )
                     ),
                     (0, i.jsx)('input', {
-                        className: a()(h.mainTextInput, { [h.isEditingOtherNodes]: M }),
+                        className: a()(h.mainTextInput, { [h.isEditingOtherNodes]: P }),
                         ref: C,
                         onChange: T,
                         onKeyDownCapture: j,
-                        onPaste: N,
+                        onPaste: I,
                         onBlur: Z,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L

@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(95242),
     v = n(420966),
     _ = n(275296),
-    I = n(203377),
-    N = n(981631),
+    N = n(203377),
+    I = n(981631),
     T = n(388032),
     j = n(105452),
     b = n(490909);
@@ -150,7 +150,7 @@ function R(e) {
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!R.current && '' !== d.trimStart()) h.default.track(N.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
+            if (!R.current && '' !== d.trimStart()) h.default.track(I.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
         }, [d]),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: j.scroller,
@@ -166,7 +166,7 @@ function R(e) {
                             (0, i.jsx)(v.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: I.ZI.PERMISSIONS,
+                                selectedSection: N.ZI.PERMISSIONS,
                                 setSelectedSection: s
                             }),
                             (0, i.jsx)('div', {

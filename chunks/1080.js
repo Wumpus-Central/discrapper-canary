@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(118012),
     v = n(218867),
     _ = n(733026),
-    I = n(246946),
-    N = n(594174),
+    N = n(246946),
+    I = n(594174),
     T = n(626135),
     j = n(136015),
     b = n(51144),
@@ -54,8 +54,8 @@ function O(e) {
         [u, g] = r.useState(!1),
         [x, v] = r.useState(null),
         { analyticsLocations: _ } = (0, f.ZP)(),
-        I = null !== (t = null == _ ? void 0 : _[0]) && void 0 !== t ? t : null;
-    async function N() {
+        N = null !== (t = null == _ ? void 0 : _[0]) && void 0 !== t ? t : null;
+    async function I() {
         if (null != l) {
             v(null), g(!0);
             try {
@@ -65,7 +65,7 @@ function O(e) {
                         ...(0, p.hH)(l.id),
                         target_user_id: a.id,
                         reason: s.reason,
-                        location: I
+                        location: N
                     });
             } catch (e) {
                 v(new h.Z(e)), g(!1);
@@ -128,7 +128,7 @@ function O(e) {
                         children: Z.intl.string(Z.t.i4jeWV)
                     }),
                     (0, i.jsx)(d.Button, {
-                        onClick: N,
+                        onClick: I,
                         look: d.Button.Looks.LINK,
                         color: d.Button.Colors.RED,
                         submitting: u,
@@ -203,9 +203,9 @@ class k extends r.PureComponent {
             });
     }
 }
-let P = r.forwardRef(function (e, t) {
+let M = r.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: a } = e,
-        s = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation, []),
+        s = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation, []),
         o = r.useCallback(
             (e) => {
                 var t;
@@ -253,7 +253,7 @@ let P = r.forwardRef(function (e, t) {
         ref: t
     });
 });
-function M(e) {
+function P(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, a] = r.useState(null != n ? n : ''),
         [s, o] = r.useState(!1),
@@ -339,7 +339,7 @@ function w() {
         f = h !== p,
         [C] = (0, c.e7)([E.Z], () => E.Z.getBans(), [], j.Q),
         v = null !== (e = null == C ? void 0 : C.size) && void 0 !== e ? e : 0,
-        I = (0, x.ZP)(),
+        N = (0, x.ZP)(),
         T = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : A.lds,
         b = r.useRef(null),
         S = r.useCallback(
@@ -358,7 +358,7 @@ function w() {
                 if (null == e || 0 === n) return [];
                 let i = [];
                 for (let n of e.keys()) {
-                    let e = N.default.getUser(n);
+                    let e = I.default.getUser(n);
                     null != e && S(t)(e) && i.push(e);
                 }
                 return i;
@@ -412,7 +412,7 @@ function w() {
         : (0, i.jsxs)('div', {
               className: a()(L.container),
               children: [
-                  (0, i.jsx)(M, {
+                  (0, i.jsx)(P, {
                       guildId: T,
                       storedSearchQuery: u
                   }),
@@ -420,7 +420,7 @@ function w() {
                       className: a()(L.scrollerContainer),
                       children: [
                           !k &&
-                              (0, i.jsx)(P, {
+                              (0, i.jsx)(M, {
                                   guild: l,
                                   bans: C,
                                   sortedBans: z,
@@ -429,7 +429,7 @@ function w() {
                           !O &&
                               k &&
                               (0, i.jsxs)(d.EmptyState, {
-                                  theme: I,
+                                  theme: N,
                                   className: L.emptyState,
                                   children: [
                                       (0, i.jsx)(d.EmptyStateImage, {

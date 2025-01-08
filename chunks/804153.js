@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(434404),
     v = n(999382),
     _ = n(981631),
-    I = n(388032),
-    N = n(359963);
+    N = n(388032),
+    I = n(359963);
 function T(e, t, n) {
     return (
         t in e
@@ -68,20 +68,20 @@ class S extends r.PureComponent {
         return (
             r.unshift({
                 value: j,
-                label: I.intl.string(I.t.u197b2)
+                label: N.intl.string(N.t.u197b2)
             }),
             (0, i.jsxs)(c.FormItem, {
-                title: I.intl.string(I.t.LUo0Q0),
+                title: N.intl.string(N.t.LUo0Q0),
                 children: [
                     (0, i.jsx)(c.SingleSelect, {
-                        className: N.spacing,
+                        className: I.spacing,
                         options: r,
                         value: t,
                         onChange: this.handleChannelSelect
                     }),
                     (0, i.jsx)(c.FormText, {
                         type: c.FormTextTypes.DESCRIPTION,
-                        children: I.intl.string(I.t.LxVR9P)
+                        children: N.intl.string(N.t.LxVR9P)
                     })
                 ]
             })
@@ -90,16 +90,16 @@ class S extends r.PureComponent {
     renderAPIInfo(e) {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/').concat(e.id, '/widget.json');
         return (0, i.jsxs)('div', {
-            className: N.infoWrapper,
+            className: I.infoWrapper,
             children: [
                 (0, i.jsx)(c.FormItem, {
-                    title: I.intl.string(I.t.TRyLUl),
-                    className: N.infoItem,
+                    title: N.intl.string(N.t.TRyLUl),
+                    className: I.infoItem,
                     children: (0, i.jsx)(u.Z, { value: e.id })
                 }),
                 (0, i.jsx)(c.FormItem, {
-                    title: I.intl.string(I.t.VECJcH),
-                    className: N.infoItem,
+                    title: N.intl.string(N.t.VECJcH),
+                    className: I.infoItem,
                     children: (0, i.jsx)(u.Z, { value: t })
                 })
             ]
@@ -109,21 +109,21 @@ class S extends r.PureComponent {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, '?id=').concat(e.id, '&theme=dark');
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
-                className: N.infoWrapper,
+                className: I.infoWrapper,
                 children: [
                     (0, i.jsxs)(c.FormItem, {
-                        className: N.infoItem,
-                        title: I.intl.string(I.t.XVGbn5),
+                        className: I.infoItem,
+                        title: N.intl.string(N.t.XVGbn5),
                         children: [
                             (0, i.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
                             (0, i.jsx)(c.FormText, {
                                 type: c.FormTextTypes.DESCRIPTION,
-                                children: I.intl.format(I.t['+baN19'], {})
+                                children: N.intl.format(N.t['+baN19'], {})
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
-                        className: N.infoItem,
+                        className: I.infoItem,
                         'data-accessibility': 'desaturate',
                         alt: '',
                         src: n(329488)
@@ -140,8 +140,8 @@ class S extends r.PureComponent {
               ? (0, i.jsx)(d.Z, {})
               : (0, i.jsxs)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
-                    title: I.intl.string(I.t.qlhNb2),
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: N.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: N.divider }), this.renderWidget(e)]
+                    title: N.intl.string(N.t.qlhNb2),
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: I.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: I.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
@@ -152,10 +152,10 @@ class S extends r.PureComponent {
             }),
             T(this, 'renderToggle', () =>
                 (0, i.jsx)(c.FormSwitch, {
-                    className: N.spacing,
+                    className: I.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
-                    children: I.intl.string(I.t.NR6hub)
+                    children: N.intl.string(N.t.NR6hub)
                 })
             ),
             T(this, 'handleToggleWidget', (e) => {

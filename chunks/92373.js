@@ -22,7 +22,7 @@ t.Z = function (e) {
         _ = r.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
-        I = r.useMemo(
+        N = r.useMemo(
             () =>
                 f
                     ? null
@@ -55,7 +55,7 @@ t.Z = function (e) {
                                 className: a()(m.selectedGameCheck, { [m.selectedGameCheckLocked]: g })
                             })
                         }),
-                    I,
+                    N,
                     x > 0 &&
                         (0, i.jsx)('div', {
                             className: m.remainingGame,

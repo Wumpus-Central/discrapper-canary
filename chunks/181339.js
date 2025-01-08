@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(496675),
     v = n(699516),
     _ = n(594174),
-    I = n(434404),
-    N = n(449226),
+    N = n(434404),
+    I = n(449226),
     T = n(981631),
     j = n(388032),
     b = n(232203);
@@ -36,7 +36,7 @@ function S(e) {
         f = t.canHaveRaidActivityAlerts(),
         [C, v] = r.useState(f),
         _ = (0, o.e7)([p.Z], () => p.Z.getChannel(l), [l]),
-        I = (0, u.ZP)(_),
+        N = (0, u.ZP)(_),
         S = async () => {
             v(!C);
             try {
@@ -85,12 +85,12 @@ function S(e) {
                                       color: 'currentColor'
                                   }),
                                   ' ',
-                                  I
+                                  N
                               ]
                           })
                 ]
             }),
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(I.Z, {
                 checked: C,
                 onChange: S,
                 disabled: !x || null == l
@@ -124,7 +124,7 @@ function E(e) {
         p = async (e) => {
             l(e);
             try {
-                if ((e !== h && (await I.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), I.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
+                if ((e !== h && (await N.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), N.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
                     let t = {
                         raid_alert_type: g.wR.JOIN_RAID,
                         enabled: n.canHaveRaidActivityAlerts(),

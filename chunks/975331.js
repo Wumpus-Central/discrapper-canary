@@ -25,15 +25,15 @@ function C() {
         [n, l] = m.TT(t),
         [C, v] = m.F2(t),
         _ = (0, c.oC)(t),
-        { options: I } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
-        N = (0, h.Z)(),
+        { options: N } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
+        I = (0, h.Z)(),
         T = null != n,
         j = r.useCallback(
             (e) => {
-                let t = I.find((e) => e.isDefault);
+                let t = N.find((e) => e.isDefault);
                 a()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null);
             },
-            [l, I]
+            [l, N]
         ),
         b = (0, d.mY)(),
         S = (0, o.Dt)(),
@@ -63,7 +63,7 @@ function C() {
                     (0, i.jsx)(s.Spacer, { size: 8 }),
                     (0, i.jsx)(s.SingleSelect, {
                         'aria-labelledby': S,
-                        options: I,
+                        options: N,
                         className: f.formInput,
                         placeholder: p.intl.string(p.t.WZG1BQ),
                         value: n,
@@ -88,7 +88,7 @@ function C() {
                     }),
                     (0, i.jsx)(s.SingleSelect, {
                         'aria-labelledby': E,
-                        options: N,
+                        options: I,
                         className: f.formInput,
                         value: C,
                         onChange: v,

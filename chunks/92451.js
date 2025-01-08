@@ -1,22 +1,22 @@
-n.r(t), n(47120);
-var l = n(200651),
-    a = n(192379),
-    i = n(97613),
-    r = n.n(i),
-    o = n(410575),
-    s = n(881052),
-    u = n(246364),
-    d = n(296991),
-    c = n(915509),
-    f = n(981631),
-    g = n(388032);
-t.default = function (e) {
-    let { field: t, onSave: n, onClose: i, guild: p } = e,
+t.r(n), t(47120);
+var l = t(200651),
+    a = t(192379),
+    i = t(97613),
+    r = t.n(i),
+    o = t(410575),
+    s = t(881052),
+    u = t(246364),
+    d = t(296991),
+    c = t(915509),
+    f = t(981631),
+    g = t(388032);
+n.default = function (e) {
+    let { field: n, onSave: t, onClose: i, guild: p } = e,
         [x, m] = a.useState(
-            (null == t ? void 0 : t.values) != null
-                ? null == t
+            (null == n ? void 0 : n.values) != null
+                ? null == n
                     ? void 0
-                    : t.values.map((e) => ({
+                    : n.values.map((e) => ({
                           id: r()(),
                           value: e
                       }))
@@ -35,14 +35,14 @@ t.default = function (e) {
                 h(g.intl.string(g.t.TCHkcX));
                 return;
             }
-            let t = {
+            let n = {
                 field_type: u.QJ.TERMS,
                 label: g.intl.string(g.t['9suSIC']),
                 values: e,
                 required: !0
             };
             try {
-                await n(t), i();
+                await t(n), i();
             } catch (e) {
                 h(new s.Hx(e).getAnyErrorMessage());
             }

@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     P_: function () {
-        return I;
+        return N;
     },
     ap: function () {
         return _;
@@ -155,9 +155,9 @@ function v(e) {
     var t, n, c, d;
     let { guildId: u, onEdit: C, disableGoodStatus: v } = e,
         _ = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(u)),
-        I = (0, l.e7)([s.Z], () => (0, o.kl)(u, s.Z.getDefaultChannelIds(u), s.Z.getOnboardingPrompts(u)).length),
-        N = r.useMemo(() => new Set(_), [_]),
-        [, T] = (0, o.VF)(u, N),
+        N = (0, l.e7)([s.Z], () => (0, o.kl)(u, s.Z.getDefaultChannelIds(u), s.Z.getOnboardingPrompts(u)).length),
+        I = r.useMemo(() => new Set(_), [_]),
+        [, T] = (0, o.VF)(u, I),
         j = T.length,
         b = f(u),
         S = (0, m.O4)(u),
@@ -166,7 +166,7 @@ function v(e) {
         ((t = b),
         (n = E),
         (c = j),
-        (d = I),
+        (d = N),
         n
             ? g.intl.formatToPlainString(g.t.nHwnLC, {
                   numDefaultChannels: c,
@@ -201,10 +201,10 @@ function _(e) {
         C = m.length + h.length,
         v = (f / C) * 100,
         _ = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        I = u > 0,
-        N = 'none';
+        N = u > 0,
+        I = 'none';
     return (
-        I && (v >= 85 && !r ? (N = 'good') : v < 85 && (N = 'warning')),
+        N && (v >= 85 && !r ? (I = 'good') : v < 85 && (I = 'warning')),
         (0, i.jsx)(p, {
             title: _ ? g.intl.string(g.t.AGjtFh) : g.intl.string(g.t.dqCzoa),
             description: g.intl.format(g.t.iuNisr, {
@@ -225,13 +225,13 @@ function _(e) {
                 color: 'currentColor',
                 className: x.channelIcon
             }),
-            hasStarted: I,
-            status: N,
+            hasStarted: N,
+            status: I,
             onEdit: n
         })
     );
 }
-function I(e) {
+function N(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         m = (0, l.e7)([u.Z], () => u.Z.getSettings()),
         h = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
@@ -241,10 +241,10 @@ function I(e) {
             (0, d.To)(t, !C);
         }, [t, C]),
         _ = !(0, c.av)(m),
-        I = 'none';
-    _ && (f && !o ? (I = 'good') : !f && (I = 'required'));
-    let N = g.intl.string(g.t.GMOwOD);
-    f ? !_ && (N = g.intl.string(g.t.wHOoyM)) : (N = g.intl.string(g.t.wXFbgY));
+        N = 'none';
+    _ && (f && !o ? (N = 'good') : !f && (N = 'required'));
+    let I = g.intl.string(g.t.GMOwOD);
+    f ? !_ && (I = g.intl.string(g.t.wHOoyM)) : (I = g.intl.string(g.t.wXFbgY));
     let T = null;
     return (
         _ &&
@@ -257,14 +257,14 @@ function I(e) {
             })),
         (0, i.jsx)(p, {
             title: g.intl.string(g.t.mRHqsr),
-            description: N,
+            description: I,
             icon: (0, i.jsx)(a.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: x.channelIcon
             }),
             hasStarted: _,
-            status: I,
+            status: N,
             onEdit: n,
             extra: T
         })

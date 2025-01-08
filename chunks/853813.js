@@ -21,8 +21,8 @@ var i = n(200651),
     C = n(130341),
     v = n(981975),
     _ = n(660962),
-    I = n(442182),
-    N = n(322816),
+    N = n(442182),
+    I = n(322816),
     T = n(266665),
     j = n(203377),
     b = n(981631),
@@ -47,18 +47,18 @@ function E(e) {
         D = (0, s.e7)([m.Z], () => !m.Z.isRoleHigher(y, L, A)),
         O = r.useRef(null),
         k = (0, s.e7)([f.Z], () => f.Z.getProps().integrations),
-        P = {
+        M = {
             role: A,
             editRoleId: n
         },
-        M = r.useRef(P);
+        P = r.useRef(M);
     if (
         (r.useEffect(() => {
-            M.current = P;
+            P.current = M;
         }),
         r.useEffect(() => {
             var e, t;
-            let { role: n, editRoleId: i } = M.current,
+            let { role: n, editRoleId: i } = P.current,
                 r = (0, C.UT)(E),
                 l = null !== (t = null === (e = x.Z.getRoleMemberCount(y.id)) || void 0 === e ? void 0 : e[i]) && void 0 !== t ? t : 0;
             h.default.track(b.rMx.ROLE_PAGE_VIEWED, {
@@ -89,7 +89,7 @@ function E(e) {
             });
             break;
         case j.ZI.PERMISSIONS:
-            t = (0, i.jsx)(N.ZP, {
+            t = (0, i.jsx)(I.ZP, {
                 guild: y,
                 role: A,
                 locked: D,
@@ -107,7 +107,7 @@ function E(e) {
             });
             break;
         case j.ZI.MEMBERS:
-            t = (0, i.jsx)(I.ZP, {
+            t = (0, i.jsx)(N.ZP, {
                 guild: y,
                 role: A,
                 locked: D,

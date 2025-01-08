@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return N;
+        return I;
     }
 }),
     n(47120);
@@ -22,11 +22,11 @@ var i = n(200651),
     C = n(384632),
     v = n(981631),
     _ = n(388032);
-function I(e) {
+function N(e) {
     var t;
     let { pendingState: x } = e,
-        [f, I] = r.useState(!1),
-        [N, T] = r.useState(null),
+        [f, N] = r.useState(!1),
+        [I, T] = r.useState(null),
         j = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
         b = null == j ? void 0 : j.id,
         S = null == j ? void 0 : j.hasFeature(v.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
@@ -36,9 +36,9 @@ function I(e) {
         }, []),
         y = r.useCallback(async (e) => {
             try {
-                I(!0), await e(), T(null);
+                N(!0), await e(), T(null);
             } finally {
-                I(!1);
+                N(!1);
             }
         }, []),
         A = r.useCallback(async () => {
@@ -119,12 +119,12 @@ function I(e) {
         }, [b, x, S, E, L]);
     return (0, i.jsx)(s.Z, {
         submitting: f,
-        errorMessage: N,
+        errorMessage: I,
         onReset: R,
         onSave: D
     });
 }
-function N() {
+function I() {
     let e = (0, l.e7)([f.Z], () => f.Z.pendingState);
     return null == e
         ? null
@@ -133,5 +133,5 @@ function N() {
                 message: _.intl.string(_.t.TEXwRk),
                 onReset: p.Z.reset
             })
-          : (0, i.jsx)(I, { pendingState: e });
+          : (0, i.jsx)(N, { pendingState: e });
 }

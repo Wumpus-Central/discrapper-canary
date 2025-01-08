@@ -45,11 +45,11 @@ function p(e) {
             [x.id, t.id]
         ),
         _ = (0, o.pM)(t.id, x.id),
-        I = (0, u.Z)(x);
+        N = (0, u.Z)(x);
     r.useEffect(() => {
         _ && f(m.ZI.PERMISSIONS);
     }, [_, f]);
-    let N = (0, c.useHasGuildRoleItems)(t, x);
+    let I = (0, c.useHasGuildRoleItems)(t, x);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -61,7 +61,7 @@ function p(e) {
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.BUdGkJ, { roleName: x.name })
                     }),
-                    N
+                    I
                         ? (0, i.jsx)(a.Clickable, {
                               className: g.menu,
                               onClick: function (e) {
@@ -84,10 +84,10 @@ function p(e) {
                         : null
                 ]
             }),
-            null != I
+            null != N
                 ? (0, i.jsx)(a.HelpMessage, {
                       messageType: a.HelpMessageTypes.WARNING,
-                      children: I
+                      children: N
                   })
                 : null,
             (0, i.jsxs)(a.TabBar, {

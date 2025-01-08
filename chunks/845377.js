@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(118215),
     v = n(981631),
     _ = n(388032),
-    I = n(555437);
-let N = (e) => {
+    N = n(555437);
+let I = (e) => {
     let { name: t, failingName: n, description: r, checked: l, pending: a, pendingDescription: s, failingDescription: o } = e,
         c = t,
         d = null,
@@ -50,14 +50,14 @@ let N = (e) => {
                 (c = null != n ? n : t),
                 (u = null != o ? o : r)),
         (0, i.jsxs)('div', {
-            className: I.checklistItem,
+            className: N.checklistItem,
             children: [
                 (0, i.jsx)('div', {
-                    className: I.checklistIcon,
+                    className: N.checklistIcon,
                     children: d
                 }),
                 (0, i.jsxs)('div', {
-                    className: I.checklistText,
+                    className: N.checklistText,
                     children: [
                         (0, i.jsx)(h.Heading, {
                             variant: 'heading-md/semibold',
@@ -130,15 +130,15 @@ t.Z = (e) => {
         );
     if (j || null == m)
         return (0, i.jsxs)('div', {
-            className: a()(I.container, I.loaderContainer, s),
+            className: a()(N.container, N.loaderContainer, s),
             children: [
                 (0, i.jsx)(h.Heading, {
-                    className: I.loadingText,
+                    className: N.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: _.intl.string(_.t.e1gm0d)
                 }),
-                (0, i.jsx)(h.Spinner, { className: I.__invalid_spinner })
+                (0, i.jsx)(h.Spinner, { className: N.__invalid_spinner })
             ]
         });
     let y = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
@@ -178,7 +178,7 @@ t.Z = (e) => {
                     children: [
                         (0, i.jsx)(h.Text, {
                             color: 'text-muted',
-                            className: I.healthFailingDescription,
+                            className: N.healthFailingDescription,
                             variant: 'text-sm/normal',
                             children: _.intl.string(_.t.LjqS0N)
                         }),
@@ -203,7 +203,7 @@ t.Z = (e) => {
                             return (!e && null != l) || (!t && null != i && null != r);
                         })() &&
                             (0, i.jsx)(h.Button, {
-                                className: I.detailsButton,
+                                className: N.detailsButton,
                                 look: h.Button.Looks.LINK,
                                 size: h.Button.Sizes.NONE,
                                 color: h.Button.Colors.LINK,
@@ -226,7 +226,7 @@ t.Z = (e) => {
                               (0, i.jsx)(
                                   'strong',
                                   {
-                                      className: I.healthPending,
+                                      className: N.healthPending,
                                       children: e
                                   },
                                   t
@@ -251,7 +251,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: I.doesNot,
+                                                  className: N.doesNot,
                                                   children: e
                                               },
                                               t
@@ -261,7 +261,7 @@ t.Z = (e) => {
                             : null,
                         R.length > 0
                             ? (0, i.jsx)('div', {
-                                  className: I.indent,
+                                  className: N.indent,
                                   children: R.map((e) => {
                                       let [t, n] = e;
                                       return null != t
@@ -287,7 +287,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: I.doesNot,
+                                                  className: N.doesNot,
                                                   children: e
                                               },
                                               t
@@ -304,7 +304,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: I.doesNot,
+                                                  className: N.doesNot,
                                                   children: e
                                               },
                                               t
@@ -325,19 +325,19 @@ t.Z = (e) => {
             }
         ];
     return (0, i.jsxs)('div', {
-        className: a()(I.container, s),
+        className: a()(N.container, s),
         children: [
             (() => {
                 let e = (null == m ? void 0 : m.sufficient) ? n(909425) : n(177266);
                 return null == o
                     ? null
                     : (0, i.jsxs)('div', {
-                          className: I.header,
+                          className: N.header,
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
                                   src: e,
-                                  className: I.headerIcon,
+                                  className: N.headerIcon,
                                   width: 40
                               }),
                               o
@@ -348,7 +348,7 @@ t.Z = (e) => {
                 (0, i.jsxs)(
                     r.Fragment,
                     {
-                        children: [(0, i.jsx)(N, { ...e }), t < A.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
+                        children: [(0, i.jsx)(I, { ...e }), t < A.length - 1 ? (0, i.jsx)('hr', { className: N.separator }) : null]
                     },
                     ''.concat(e.name)
                 )

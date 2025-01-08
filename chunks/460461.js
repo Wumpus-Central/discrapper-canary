@@ -29,8 +29,8 @@ var i = n(200651),
     C = n(208567),
     v = n(496675),
     _ = n(768581),
-    I = n(63063),
-    N = n(434404),
+    N = n(63063),
+    I = n(434404),
     T = n(999382),
     j = n(450474),
     b = n(190287),
@@ -53,11 +53,11 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         return (0, i.jsx)(d.Z, {
             submitting: n,
             onReset: () => {
-                if (null != e) N.Z.init(e.id);
+                if (null != e) I.Z.init(e.id);
             },
             onSave: () => {
                 if (null != e)
-                    N.Z.saveGuild(e.id, {
+                    I.Z.saveGuild(e.id, {
                         discoverySplash: e.discoverySplash,
                         description: e.description
                     }),
@@ -87,8 +87,8 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         let { canManageGuild: D } = (0, l.cj)([v.Z], () => ({ canManageGuild: v.Z.can(E.Plq.MANAGE_GUILD, n) })),
             O = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
             k = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
-            P = (0, l.e7)([T.Z], () => (null != n && (null == k ? void 0 : k.isPublished) ? T.Z.getSlug() : null)),
-            [M, w] = r.useState([!0]),
+            M = (0, l.e7)([T.Z], () => (null != n && (null == k ? void 0 : k.isPublished) ? T.Z.getSlug() : null)),
+            [P, w] = r.useState([!0]),
             [B, U] = r.useState(!0),
             [G, F] = r.useState([!1]),
             [H, z] = r.useState(['']),
@@ -137,7 +137,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             K = (0, l.e7)([x.Z], () => x.Z.getPrimaryCategories(), [], x.j);
         if (null == n || null == k) return null;
         let q = (e) => {
-                N.Z.updateGuild({ discoverySplash: e });
+                I.Z.updateGuild({ discoverySplash: e });
             },
             X = (e) => {
                 var t;
@@ -145,7 +145,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             Q = (e) => {
                 var t;
-                N.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
+                I.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
             },
             J = (e) => {
                 (0, g.mA)(n.id, e);
@@ -177,7 +177,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                               socialLinks: k.socialLinks,
                               about: k.about
                           }),
-                    N.Z.saveGuild(n.id, {
+                    I.Z.saveGuild(n.id, {
                         discoverySplash: n.discoverySplash,
                         description: n.description
                     });
@@ -191,7 +191,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             et = (e, t) => {
                 let i = [...k.socialLinks],
                     r = [...H],
-                    l = [...M];
+                    l = [...P];
                 (r[t] = e), (i[t] = S.z[e].baseUrl), (l[t] = !0), w(l), z(r), U(l.every((e) => !0 === e)), (0, g.t$)(n.id, i);
             },
             en = (e, t) => {
@@ -204,7 +204,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             ei = (e) => {
                 let t = [...G];
                 t.splice(e, 1), F(t);
-                let i = [...M];
+                let i = [...P];
                 i.splice(e, 1), w(i);
                 let r = [...H];
                 r.splice(e, 1), z(r);
@@ -274,11 +274,11 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             (0, i.jsxs)(s.FormText, {
                                                 className: A.tabMainDescription,
                                                 type: s.FormTextTypes.DESCRIPTION,
-                                                children: [y.intl.format(y.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', y.intl.format(y.t.T6WtKy, { learnMoreURL: I.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES) })]
+                                                children: [y.intl.format(y.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', y.intl.format(y.t.T6WtKy, { learnMoreURL: N.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
-                                                if (!k.isPublished || null == P) return;
-                                                let e = Z + P;
+                                                if (!k.isPublished || null == M) return;
+                                                let e = Z + M;
                                                 return (0, i.jsx)(i.Fragment, {
                                                     children: (0, i.jsxs)(s.FormSection, {
                                                         className: A.noDividerFormSection,
@@ -557,7 +557,7 @@ let Z = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             },
                                                                             'link-' + t
                                                                         ),
-                                                                        M[t]
+                                                                        P[t]
                                                                             ? (0, i.jsx)(
                                                                                   s.CircleCheckIcon,
                                                                                   {

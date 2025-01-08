@@ -15,8 +15,8 @@ var i = n(200651),
     p = n(778916);
 let f = (e) => {
     var t;
-    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: _, position: I } = e,
-        [N, T] = r.useState(!1),
+    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: _, position: N } = e,
+        [I, T] = r.useState(!1),
         j = (0, s.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
     return (0, i.jsxs)('div', {
         className: a()(p.reasonContainer),
@@ -25,7 +25,7 @@ let f = (e) => {
                 onRequestClose: () => {
                     T(!1);
                 },
-                shouldShow: N,
+                shouldShow: I,
                 position: 'right',
                 align: 'top',
                 animation: o.Popout.Animation.NONE,
@@ -75,7 +75,7 @@ let f = (e) => {
                             },
                             defaultDirty: (null == n ? void 0 : n.length) > 0
                         },
-                        'text-input-'.concat(I, '-').concat(j)
+                        'text-input-'.concat(N, '-').concat(j)
                     ),
                     (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0 || null != l
                         ? (0, i.jsx)(o.Button, {

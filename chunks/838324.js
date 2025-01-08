@@ -23,9 +23,9 @@ function g(e) {
         [p, f] = (0, o.VF)(t, x),
         [C, v] = (0, d.OA)(t, [...x]),
         _ = g ? v.length : f.length,
-        I = g ? C.length : p.length,
-        N = _ < u.md,
-        T = I >= u.X,
+        N = g ? C.length : p.length,
+        I = _ < u.md,
+        T = N >= u.X,
         j = v.length - f.length,
         b = (0, i.jsx)(a.CircleCheckIcon, {
             size: 'sm',
@@ -39,8 +39,8 @@ function g(e) {
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
-        E = [(Math.min(u.X, I) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
-        R = !N && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        E = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
+        R = !I && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -50,7 +50,7 @@ function g(e) {
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: m.intl.format(m.t.kvroKC, { count: I })
+                        children: m.intl.format(m.t.kvroKC, { count: N })
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/bold',
@@ -67,7 +67,7 @@ function g(e) {
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    N ? S : b,
+                    I ? S : b,
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',

@@ -25,9 +25,9 @@ var r = n(120356),
     f = n(439217);
 function C(e) {
     var t, r, a, c;
-    let { guild: u, prompt: C, singleColumn: v, promptIndex: _, option: I, hasError: N, onDragStart: T, onDragComplete: j, onDragReset: b } = e,
+    let { guild: u, prompt: C, singleColumn: v, promptIndex: _, option: N, hasError: I, onDragStart: T, onDragComplete: j, onDragReset: b } = e,
         S = null,
-        E = s().findIndex(C.options, (e) => e.id === I.id),
+        E = s().findIndex(C.options, (e) => e.id === N.id),
         {
             drag: R,
             dragSourcePosition: y,
@@ -36,17 +36,17 @@ function C(e) {
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
             index: E,
-            optionId: I.id,
+            optionId: N.id,
             onDragStart: T,
             onDragComplete: j,
             onDragReset: b
         }),
-        { customEmoji: L, unicodeEmoji: D } = (0, m.Z)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (r = I.emoji) || void 0 === r ? void 0 : r.name);
+        { customEmoji: L, unicodeEmoji: D } = (0, m.Z)(null === (t = N.emoji) || void 0 === t ? void 0 : t.id, null === (r = N.emoji) || void 0 === r ? void 0 : r.name);
     return (
-        !((0, x.Oq)(I.emoji) || null != L || null != D) && (S = p.intl.string(p.t['61wfmp'])),
+        !((0, x.Oq)(N.emoji) || null != L || null != D) && (S = p.intl.string(p.t['61wfmp'])),
         (0, i.jsxs)(o.Clickable, {
             className: l()(f.optionCard, {
-                [f.hasError]: N || null != S,
+                [f.hasError]: I || null != S,
                 [f.dropIndicatorBefore]: null != y && E < y,
                 [f.dropIndicatorAfter]: null != y && E > y,
                 [f.singleColumn]: v
@@ -59,13 +59,13 @@ function C(e) {
                             ...t,
                             guild: u,
                             prompt: C,
-                            option: I,
+                            option: N,
                             index: _,
                             onSave: (e) => {
-                                (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === I.id ? e : t)) });
+                                (0, g.Kk)(u, C.id, { options: C.options.map((t) => (t.id === N.id ? e : t)) });
                             },
                             onDelete: () => {
-                                (0, g.Kk)(u, C.id, { options: C.options.filter((e) => e.id !== I.id) });
+                                (0, g.Kk)(u, C.id, { options: C.options.filter((e) => e.id !== N.id) });
                             }
                         });
                 }),
@@ -87,8 +87,8 @@ function C(e) {
                         (0, i.jsx)('div', {
                             className: f.emoji,
                             children: (0, i.jsx)(h.Z, {
-                                emojiId: null === (a = I.emoji) || void 0 === a ? void 0 : a.id,
-                                emojiName: null === (c = I.emoji) || void 0 === c ? void 0 : c.name,
+                                emojiId: null === (a = N.emoji) || void 0 === a ? void 0 : a.id,
+                                emojiName: null === (c = N.emoji) || void 0 === c ? void 0 : c.name,
                                 defaultComponent: null
                             })
                         }),
@@ -99,14 +99,14 @@ function C(e) {
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     lineClamp: 1,
-                                    children: I.title
+                                    children: N.title
                                 }),
-                                '' !== I.description &&
+                                '' !== N.description &&
                                     (0, i.jsx)(o.Text, {
                                         className: f.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        children: I.description
+                                        children: N.description
                                     })
                             ]
                         })

@@ -3,19 +3,19 @@ var a = n(200651),
     r = n(192379),
     o = n(593473),
     i = n(702493),
-    c = n(77987),
-    l = n(133853),
+    l = n(77987),
+    c = n(133853),
     s = n(703656),
     d = n(643366),
     u = n(94628),
     f = n(659154),
-    x = n(581690),
+    h = n(581690),
     p = n(902928),
-    h = n(521937),
+    x = n(521937),
     C = n(981631),
-    m = n(881579);
-let v = n(575703);
-t.default = (0, c.e)(function () {
+    v = n(881579);
+let m = n(575703);
+t.default = (0, l.e)(function () {
     let e;
     let [t, n] = r.useState(() => {
         if (window.location.pathname.endsWith(C.Z5c.ACTIVATE_HANDOFF)) {
@@ -31,7 +31,7 @@ t.default = (0, c.e)(function () {
         };
     });
     (0, i.Z)(), (0, d.Y)(t);
-    let c = r.useCallback(() => {
+    let l = r.useCallback(() => {
             n({ type: 'user-code-input' });
         }, [n]),
         g = r.useCallback(
@@ -64,10 +64,10 @@ t.default = (0, c.e)(function () {
         N = !0;
     switch (t.type) {
         case 'handoff':
-            (e = (0, a.jsx)(x.c, { code: t.code })), (N = !1);
+            (e = (0, a.jsx)(h.c, { code: t.code })), (N = !1);
             break;
         case 'user-code-input':
-            e = (0, a.jsx)(h.v, {
+            e = (0, a.jsx)(x.v, {
                 usePrefilledCode: t.usePrefilledCode || !1,
                 onUserCodeAccepted: g
             });
@@ -75,7 +75,7 @@ t.default = (0, c.e)(function () {
         case 'authorization':
             (e = (0, a.jsx)(u.B, {
                 data: t.userCodeData,
-                onDenied: c,
+                onDenied: l,
                 onError: b,
                 onSuccess: _
             })),
@@ -88,26 +88,26 @@ t.default = (0, c.e)(function () {
             });
             break;
         case 'error':
-            e = (0, a.jsx)(f.c, { onTryAgain: c });
+            e = (0, a.jsx)(f.c, { onTryAgain: l });
             break;
         default:
             e = null;
     }
     return (0, a.jsxs)('div', {
-        className: m.activatePage,
+        className: v.activatePage,
         children: [
             (0, a.jsx)('img', {
-                className: m.artwork,
-                src: v,
+                className: v.artwork,
+                src: m,
                 alt: ''
             }),
-            (0, a.jsx)(l.Z, {
+            (0, a.jsx)(c.Z, {
                 show: !0,
-                className: m.logo
+                className: v.logo
             }),
             N
                 ? (0, a.jsx)('div', {
-                      className: m.content,
+                      className: v.content,
                       children: e
                   })
                 : e

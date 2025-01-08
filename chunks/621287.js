@@ -1,4 +1,4 @@
-var r = {
+var o = {
     './bg.png': '135316',
     './cs.png': '107217',
     './da.png': '120273',
@@ -31,19 +31,19 @@ var r = {
     './zh-CN.png': '640909',
     './zh-TW.png': '408999'
 };
-function s(e) {
-    return n(o(e));
+function r(e) {
+    return n(i(e));
 }
-function o(e) {
-    if (!n.o(r, e)) {
+function i(e) {
+    if (!n.o(o, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
-    return r[e];
+    return o[e];
 }
-(s.keys = function () {
-    return Object.keys(r);
+(r.keys = function () {
+    return Object.keys(o);
 }),
-    (s.resolve = o),
-    (e.exports = s),
-    (s.id = '621287');
+    (r.resolve = i),
+    (e.exports = r),
+    (r.id = '621287');

@@ -41,7 +41,7 @@ function f(e) {
         );
     if (null == l) return null;
     if (null == n) return (0, i.jsx)(c.Spinner, {});
-    let I = !l.hasFeature(g.oNc.CLAN);
+    let N = !l.hasFeature(g.oNc.CLAN);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -64,7 +64,7 @@ function f(e) {
                             })
                         ]
                     }),
-                    I &&
+                    N &&
                         (0, i.jsx)(c.Switch, {
                             onChange: v,
                             checked: t

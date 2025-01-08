@@ -43,24 +43,24 @@ function s(e, t, n) {
         C = null == u ? void 0 : u.slug,
         v = null != C ? a.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(C) : void 0,
         _ = null == m ? void 0 : null === (s = m.guild) || void 0 === s ? void 0 : s.name,
-        I = null == m ? void 0 : null === (o = m.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
-        N = !c && null != _ && null != g && null != x;
-    return N
+        N = null == m ? void 0 : null === (o = m.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
+        I = !c && null != _ && null != g && null != x;
+    return I
         ? {
-              hasAllImperativeDetails: N,
+              hasAllImperativeDetails: I,
               isLoading: c,
               details: {
                   guildName: _,
                   guildIcon: g,
                   guildAvatarUrl: x,
                   storePageUrl: v,
-                  subscriberCount: I,
+                  subscriberCount: N,
                   emojisToShow: p,
                   notShownEmojiCount: f
               }
           }
         : {
-              hasAllImperativeDetails: N,
+              hasAllImperativeDetails: I,
               isLoading: c,
               error: d
           };

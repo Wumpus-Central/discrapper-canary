@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(345861),
     v = n(208567),
     _ = n(73346),
-    I = n(624138),
-    N = n(584825),
+    N = n(624138),
+    I = n(584825),
     T = n(723047),
     j = n(927954),
     b = n(164000),
@@ -32,7 +32,7 @@ var i = n(200651),
     R = n(333866),
     y = n(388032),
     A = n(848720);
-let Z = (0, I.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+let Z = (0, N.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function L() {
     return [
         {
@@ -92,17 +92,17 @@ function O(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: a } = (0, b.Z)(n.id),
-        s = (0, N.YB)(n.id),
+        s = (0, I.YB)(n.id),
         c = r.useCallback(() => {
             var e;
             return (null == s ? void 0 : null === (e = s.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, Z);
         }, [s]),
         [m, x] = r.useState(a),
-        [p, I] = r.useState(null !== (t = null == s ? void 0 : s.description) && void 0 !== t ? t : ''),
+        [p, N] = r.useState(null !== (t = null == s ? void 0 : s.description) && void 0 !== t ? t : ''),
         [L, O] = r.useState(c),
-        [k, P] = r.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
-        [M, w] = r.useState(null == s ? void 0 : s.server_shop_tab_order),
-        { loading: B, error: U, updateSubscriptionsSettings: G } = (0, N.QV)(),
+        [k, M] = r.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
+        [P, w] = r.useState(null == s ? void 0 : s.server_shop_tab_order),
+        { loading: B, error: U, updateSubscriptionsSettings: G } = (0, I.QV)(),
         { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, j.Z)(null == s ? void 0 : s.cover_image_asset),
         W = (0, f.Dt)(),
         V = (0, f.Dt)(),
@@ -112,8 +112,8 @@ function O(e) {
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== a || (null == s ? void 0 : s.store_page_guild_products_default_sort) !== k || (null == s ? void 0 : s.server_shop_tab_order) !== M;
-        }, [L, a, p, s, m, k, M]),
+            return (null != p && p !== (null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== a || (null == s ? void 0 : s.store_page_guild_products_default_sort) !== k || (null == s ? void 0 : s.server_shop_tab_order) !== P;
+        }, [L, a, p, s, m, k, P]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
@@ -200,7 +200,7 @@ function O(e) {
                     value: p,
                     rows: 2,
                     autosize: !0,
-                    onChange: I,
+                    onChange: N,
                     'aria-labelledby': V,
                     disabled: Q
                 })
@@ -260,7 +260,7 @@ function O(e) {
                                       value: k,
                                       placeholder: y.intl.string(y.t.XqMe3N),
                                       options: J,
-                                      onChange: (e) => P(e)
+                                      onChange: (e) => M(e)
                                   })
                               ]
                           })
@@ -283,7 +283,7 @@ function O(e) {
                                     children: y.intl.string(y.t.n8WSWF)
                                 }),
                                 (0, i.jsx)(h.SingleSelect, {
-                                    value: M,
+                                    value: P,
                                     placeholder: y.intl.string(y.t.XqMe3N),
                                     options: $,
                                     onChange: (e) => w(e)
@@ -303,12 +303,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                x(a), I(null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : ''), O(c), P(null == s ? void 0 : s.store_page_guild_products_default_sort), w(null == s ? void 0 : s.server_shop_tab_order);
+                                x(a), N(null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : ''), O(c), M(null == s ? void 0 : s.store_page_guild_products_default_sort), w(null == s ? void 0 : s.server_shop_tab_order);
                             },
                             onSave: () => {
                                 o()(null != s, 'Settings must be defined');
                                 let e = {};
-                                p !== s.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), k !== s.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), M !== s.server_shop_tab_order && (e.server_shop_tab_order = M), !d().isEmpty(e) && G(n.id, e);
+                                p !== s.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), k !== s.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), P !== s.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : y.intl.string(y.t['6HRvio'])
                         })

@@ -19,8 +19,8 @@ function m(e) {
         { updateRule: C } = (0, o.pH)(t),
         v = null != x,
         _ = v && !(0, s.Vb)(x),
-        I = v || g || _,
-        N = async () => {
+        N = v || g || _,
+        I = async () => {
             if (!g && !_) return m();
             null != x && !_ && C(x);
             let e = n.find((e) => {
@@ -48,12 +48,12 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                I &&
+                N &&
                 (0, i.jsx)(l.SlideIn, {
                     children: (0, i.jsx)(a.Z, {
                         submitting: h,
                         disabled: h,
-                        onSave: N,
+                        onSave: I,
                         onReset: m,
                         onResetText: T,
                         message: j

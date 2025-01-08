@@ -18,7 +18,7 @@ var i = n(200651),
 function x(e) {
     var t, n, x, p, f, C;
     let { rule: v, onChangeRule: _ } = e,
-        I = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 _({
                     ...v,
@@ -30,7 +30,7 @@ function x(e) {
             },
             [_, v]
         ),
-        N = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 _({
                     ...v,
@@ -51,7 +51,7 @@ function x(e) {
                     header: h.intl.string(h.t['ue+tnZ']),
                     children: [
                         (0, i.jsx)(o.Z, {
-                            onChangeText: I,
+                            onChangeText: N,
                             maxWordCount: m.RH,
                             initialValue: null === (t = v.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
@@ -61,7 +61,7 @@ function x(e) {
                             collapsed: (null == v ? void 0 : null === (n = v.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == v ? void 0 : null === (x = v.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
                         }),
                         (0, i.jsx)(l.Z, {
-                            onChange: N,
+                            onChange: I,
                             initialValue: null === (p = v.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
                             maxWordCount: m.n4,
                             collapsed: (null === (f = v.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = v.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0

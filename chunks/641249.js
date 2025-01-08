@@ -24,8 +24,8 @@ function p() {
         C = (0, d.Z)(t, e),
         { setCurrentTab: v } = (0, h.dw)(),
         _ = () => v(h.ue.EMOJIS),
-        I = (0, r.e7)([a.Z], () => a.Z.getGuild(t)),
-        N = null == I ? void 0 : I.getMaxRoleSubscriptionEmojiSlots();
+        N = (0, r.e7)([a.Z], () => a.Z.getGuild(t)),
+        I = null == N ? void 0 : N.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
         null == p ? f(new Set(e)) : f(new Set([...p, ...e]));
     }
@@ -42,7 +42,7 @@ function p() {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
                 disabled: b,
-                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: N }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
+                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: I }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, i.jsx)(m.E, {
                 tierEmojiIds: p,

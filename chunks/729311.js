@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(984933),
     v = n(259580),
     _ = n(999382),
-    I = n(743475),
-    N = n(889369),
+    N = n(743475),
+    I = n(889369),
     T = n(570961),
     j = n(208665),
     b = n(868814),
@@ -41,7 +41,7 @@ function L(e) {
         l = (0, s.e7)([m.Z], () => m.Z.getEnabled(t.id)),
         a = (0, s.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         c = (0, b.Z)(t),
-        f = (0, s.e7)([N.Z], () => N.Z.editedDefaultChannelIds),
+        f = (0, s.e7)([I.Z], () => I.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
         [v, _] = r.useState(!1);
     r.useEffect(() => {
@@ -145,7 +145,7 @@ function L(e) {
                                                     color: o.Button.Colors.BRAND,
                                                     size: o.Button.Sizes.SMALL,
                                                     className: Z.addChannelCTA,
-                                                    onClick: () => (0, I.pt)(e.id),
+                                                    onClick: () => (0, N.pt)(e.id),
                                                     children: A.intl.string(A.t.OYkgVl)
                                                 })
                                               : (0, i.jsxs)(o.Button, {
@@ -194,7 +194,7 @@ function D(e) {
             let { current: e } = p;
             return () => {
                 null != e &&
-                    (0, I.DO)(e)
+                    (0, N.DO)(e)
                         .then(() => {
                             u && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
@@ -289,19 +289,19 @@ function D(e) {
 }
 function O() {
     let e = (0, s.e7)([_.Z], () => _.Z.getProps().guild),
-        t = (0, s.e7)([N.Z], () => N.Z.submitting),
+        t = (0, s.e7)([I.Z], () => I.Z.submitting),
         n = (0, s.e7)([j.Z], () => j.Z.advancedMode);
     return null == e
         ? null
         : (0, i.jsx)(c.Z, {
               onSave: () => {
-                  (0, I.DO)(e)
+                  (0, N.DO)(e)
                       .then(() => {
                           n && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: I.BG,
+              onReset: N.BG,
               submitting: t,
               onSaveText: A.intl.string(A.t.R3BPHx)
           });

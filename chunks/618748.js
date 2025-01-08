@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     }
 });
 var i = n(200651);
@@ -22,8 +22,8 @@ var r = n(442837),
     C = n(584825),
     v = n(723047),
     _ = n(303737),
-    I = n(568074),
-    N = n(411667),
+    N = n(568074),
+    I = n(411667),
     T = n(903773),
     j = n(822531),
     b = n(909656),
@@ -92,7 +92,7 @@ function k(e) {
         ];
     return (0, i.jsx)(S.Z, { children: m });
 }
-function P(e) {
+function M(e) {
     let { application: t } = e,
         { teams: n } = (0, h.Z)({ refreshOnDepChange: !1 }),
         r = n.find((e) => {
@@ -106,7 +106,7 @@ function P(e) {
           })
         : null;
 }
-function M(e) {
+function P(e) {
     let t,
         { guild: n, application: l } = e,
         a = (0, r.e7)([c.Z], () => c.Z.getProps().subsection),
@@ -142,9 +142,9 @@ function w(e) {
         { currentTab: h, setCurrentTab: C } = (0, R.dw)(),
         v = (0, f.f)(),
         T = (0, r.e7)([x.default], () => x.default.getCurrentUser()),
-        S = (0, I.Z)(n.id),
+        S = (0, N.Z)(n.id),
         L = n.isOwner(T),
-        M = () => {
+        P = () => {
             let e = g.Z.getRole(n.id, n.getEveryoneRoleId());
             if (null == e) return;
             o.Z.close();
@@ -189,8 +189,8 @@ function w(e) {
                         type: l.FormText.Types.DESCRIPTION,
                         children: D.intl.string(D.t.KyGv0t)
                     }),
-                    (0, i.jsx)(N.Z, { guild: n }),
-                    c && (0, i.jsx)(P, { application: s }),
+                    (0, i.jsx)(I.Z, { guild: n }),
+                    c && (0, i.jsx)(M, { application: s }),
                     (0, i.jsxs)('div', {
                         className: O.tabBarContainer,
                         children: [
@@ -240,7 +240,7 @@ function w(e) {
                                                 disabled: S,
                                                 onMouseEnter: S ? t : void 0,
                                                 onMouseLeave: S ? n : void 0,
-                                                onClick: M,
+                                                onClick: P,
                                                 color: l.Button.Colors.PRIMARY,
                                                 size: l.Button.Sizes.SMALL,
                                                 grow: !S,

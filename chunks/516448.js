@@ -24,7 +24,7 @@ var i = n(200651),
 function _(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: _ } = (0, o.N)(),
-        [I, N] = c.UE(n),
+        [N, I] = c.UE(n),
         [T, j] = c.R7(n),
         b = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
         { isFullServerGating: S } = (0, d.Z)(_),
@@ -45,18 +45,18 @@ function _(e) {
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
-                        channelBenefits: I,
+                        channelBenefits: N,
                         intangibleBenefits: T,
                         subscriptionListings: b,
                         onImport: function (e, t) {
-                            N((t) => t.concat(e)), j((e) => e.concat(t));
+                            I((t) => t.concat(e)), j((e) => e.concat(t));
                         }
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(m.w, {
                         guildId: _,
                         onImport: function (e) {
-                            N((t) => {
+                            I((t) => {
                                 let n = new Set(
                                     t.map((e) => {
                                         let { ref_id: t } = e;

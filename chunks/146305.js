@@ -16,8 +16,8 @@ var i = n(200651),
     C = n(45966),
     v = n(637853),
     _ = n(352981),
-    I = n(610403),
-    N = n(923726),
+    N = n(610403),
+    I = n(923726),
     T = n(303737),
     j = n(15030),
     b = n(220685),
@@ -31,8 +31,8 @@ var i = n(200651),
     D = n(85001),
     O = n(434404),
     k = n(360606),
-    P = n(946724),
-    M = n(999382),
+    M = n(946724),
+    P = n(999382),
     w = n(44550),
     B = n(853714),
     U = n(359191),
@@ -72,11 +72,11 @@ var i = n(200651),
     e_ = n(413929);
 t.Z = {
     getSectionDefinition: function (e, t) {
-        var eI;
-        let eN = (0, _.p)(t.guild.id, 'guild_settings'),
+        var eN;
+        let eI = (0, _.p)(t.guild.id, 'guild_settings'),
             eT = !1 === t.guild.hasFeature(ep.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(ep.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
             ej =
-                eN && eT
+                eI && eT
                     ? {
                           label: (0, i.jsx)('div', {
                               className: e_.roleSubLabel,
@@ -92,7 +92,7 @@ t.Z = {
                           ariaLabel: ev.intl.string(ev.t['KzCF//'])
                       },
             eb = t.guild.hasFeature(ep.oNc.COMMUNITY) && t.canViewGuildAnalytics,
-            eS = (null === (eI = t.guild.profile) || void 0 === eI ? void 0 : eI.badge) != null ? (0, u.ky)(t.guild.id, t.guild.profile.badge, ef.NC.SIZE_16) : null;
+            eS = (null === (eN = t.guild.profile) || void 0 === eN ? void 0 : eN.badge) != null ? (0, u.ky)(t.guild.id, t.guild.profile.badge, ef.NC.SIZE_16) : null;
         switch (e) {
             case ep.pNK.OVERVIEW:
                 return {
@@ -102,7 +102,7 @@ t.Z = {
                     ariaLabel: ev.intl.string(ev.t['/dp6yc']),
                     element: ei.Z,
                     notice: {
-                        stores: [M.Z],
+                        stores: [P.Z],
                         element: ei.O
                     }
                 };
@@ -115,7 +115,7 @@ t.Z = {
                     type: o.bT.MINIMAL,
                     ariaLabel: ev.intl.string(ev.t.KXcECw),
                     notice: {
-                        stores: [P.Z],
+                        stores: [M.Z],
                         element: z._
                     },
                     predicate: () => t.canManageRoles
@@ -199,7 +199,7 @@ t.Z = {
                     ariaLabel: ev.intl.string(ev.t.CIsNZ2),
                     element: $.Z,
                     notice: {
-                        stores: [k.default, M.Z],
+                        stores: [k.default, P.Z],
                         element: $.j
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks
@@ -300,7 +300,7 @@ t.Z = {
                     ariaLabel: t.guild.hasFeature(ep.oNc.COMMUNITY) ? ev.intl.string(ev.t['/dp6yc']) : ev.intl.string(ev.t.ElKTeX),
                     newIndicator: !t.guild.hasFeature(ep.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= eC.U3 && S.qc.hasHotspot(S.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                     notice: {
-                        stores: [M.Z],
+                        stores: [P.Z],
                         element: K.X
                     }
                 };
@@ -346,7 +346,7 @@ t.Z = {
                     label: ev.intl.string(ev.t.oGaVGx),
                     element: X.Z,
                     notice: {
-                        stores: [M.Z],
+                        stores: [P.Z],
                         element: X.s
                     },
                     predicate: () => !t.memberVerificationRolloutEnabled && t.canManageGuild && t.guild.hasFeature(ep.oNc.COMMUNITY),
@@ -363,7 +363,7 @@ t.Z = {
                     ariaLabel: ev.intl.string(ev.t.kGlQGB),
                     element: Q.Z,
                     notice: {
-                        stores: [M.Z],
+                        stores: [P.Z],
                         element: Q.J
                     },
                     type: o.bT.CUSTOM,
@@ -399,8 +399,8 @@ t.Z = {
                     section: ep.pNK.GUILD_PRODUCTS,
                     label: ev.intl.string(ev.t.X6h2g4),
                     ariaLabel: ev.intl.string(ev.t.X6h2g4),
-                    element: I.Z,
-                    predicate: () => t.monetizationPredicate() && (0, _.p)(t.guild.id, 'guild_product_settings_predicate') && (0, N.sy)(t.guild)
+                    element: N.Z,
+                    predicate: () => t.monetizationPredicate() && (0, _.p)(t.guild.id, 'guild_product_settings_predicate') && (0, I.sy)(t.guild)
                 };
             case ep.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE:
                 return {
@@ -410,7 +410,7 @@ t.Z = {
                     label: ev.intl.string(ev.t.ipTYsr),
                     ariaLabel: ev.intl.string(ev.t.ipTYsr),
                     element: b.Z,
-                    predicate: () => t.monetizationPredicate() && (0, N.sy)(t.guild)
+                    predicate: () => t.monetizationPredicate() && (0, I.sy)(t.guild)
                 };
             case ep.pNK.GUILD_PREMIUM:
                 return {

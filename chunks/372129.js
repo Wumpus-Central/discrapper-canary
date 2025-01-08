@@ -82,10 +82,10 @@ t.Z = (e) => {
     let _ = () => {
             null !== f.current && ((0, l.closeModal)(f.current), (f.current = null));
         },
-        I = async (e) => {
+        N = async (e) => {
             null == x || x(!0), await u(e, t), v(!0), null == x || x(!1);
         },
-        N = async (e) => {
+        I = async (e) => {
             var t, r, a;
             if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (a = e.currentTarget) || void 0 === a ? void 0 : null === (r = a.files) || void 0 === r ? void 0 : r.length) === 0)) return;
             let s = e.currentTarget.files;
@@ -93,13 +93,13 @@ t.Z = (e) => {
                 let { default: e } = await n.e('16169').then(n.bind(n, 935333));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        processFiles: () => I(s),
+                        processFiles: () => N(s),
                         ...t
                     });
             });
         };
     return (0, i.jsx)(a.Z, {
-        onChange: N,
+        onChange: I,
         filters: null != g ? g : (0, s.Zj)(),
         multiple: o,
         disabled: c,

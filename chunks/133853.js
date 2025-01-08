@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return h;
     }
 }),
     n(47120);
@@ -8,8 +8,8 @@ var a,
     r = n(200651),
     o = n(192379),
     i = n(120356),
-    c = n.n(i),
-    l = n(748780),
+    l = n.n(i),
+    c = n(748780),
     s = n(481060),
     d = n(981631),
     u = n(817623);
@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-class x extends (a = o.Component) {
+class h extends (a = o.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
@@ -52,19 +52,19 @@ class x extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(l.Z.a, {
+        return (0, r.jsx)(c.Z.a, {
             href: d.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
-            className: c()(u.logo, this.props.className),
+            className: l()(u.logo, this.props.className),
             style: this.getAnimatedStyle()
         });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'anim', new l.Z.Value(0)),
+            f(this, 'anim', new c.Z.Value(0)),
             f(this, 'animate', (e) => {
-                l.Z.spring(this.anim, {
+                c.Z.spring(this.anim, {
                     toValue: e,
                     friction: 10,
                     tension: 100
@@ -72,4 +72,4 @@ class x extends (a = o.Component) {
             });
     }
 }
-f(x, 'contextType', s.AccessibilityPreferencesContext);
+f(h, 'contextType', s.AccessibilityPreferencesContext);

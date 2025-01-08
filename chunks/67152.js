@@ -29,8 +29,8 @@ var i,
     C = n(759178),
     v = n(462087),
     _ = n(685201),
-    I = n(981631),
-    N = n(198139),
+    N = n(981631),
+    I = n(198139),
     T = n(388032),
     j = n(641991);
 ((r = i || (i = {})).DROPDOWN = 'dropdown'), (r.PERIOD = 'period'), (r.SUBSCRIBERS = 'subscribers'), (r.AMOUNT = 'amount'), (r.STATUS = 'status');
@@ -38,11 +38,11 @@ let b = (e, t, n, i) => {
         let r = null != i ? d()(i).add(15, 'days').toISOString() : void 0,
             a = (0, f.Zo)(r, 'MMM D');
         switch (e) {
-            case N.x_.OPEN:
+            case I.x_.OPEN:
                 return (0, l.jsxs)(l.Fragment, {
                     children: [null != a ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: a }) : T.intl.string(T.t.G5ATX1), (0, l.jsx)(v.Z, { className: j.statusScheduledIcon })]
                 });
-            case N.x_.CANCELED:
+            case I.x_.CANCELED:
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         T.intl.string(T.t['0SrNPz']),
@@ -53,8 +53,8 @@ let b = (e, t, n, i) => {
                         })
                     ]
                 });
-            case N.x_.PAYOUT_DEFERRED:
-                if ((null == n ? void 0 : n.includes(N.XL.PAYOUT_SEIZED)) === !0)
+            case I.x_.PAYOUT_DEFERRED:
+                if ((null == n ? void 0 : n.includes(I.XL.PAYOUT_SEIZED)) === !0)
                     return (0, l.jsxs)(l.Fragment, {
                         children: [
                             T.intl.string(T.t['0SrNPz']),
@@ -70,18 +70,18 @@ let b = (e, t, n, i) => {
                 });
         }
         switch (t) {
-            case N.jw.MANUAL:
-            case N.jw.OPEN:
-            case N.jw.PENDING:
-            case N.jw.PROCESSING:
-            case N.jw.SUBMITTED:
-            case N.jw.PENDING_FUNDS:
-            case N.jw.CANCELED:
-            case N.jw.ERROR:
+            case I.jw.MANUAL:
+            case I.jw.OPEN:
+            case I.jw.PENDING:
+            case I.jw.PROCESSING:
+            case I.jw.SUBMITTED:
+            case I.jw.PENDING_FUNDS:
+            case I.jw.CANCELED:
+            case I.jw.ERROR:
                 return (0, l.jsxs)(l.Fragment, {
                     children: [null != a ? T.intl.formatToPlainString(T.t.I6YOjY, { payoutDate: a }) : T.intl.string(T.t.ubdQTk), (0, l.jsx)(v.Z, { className: j.statusScheduledIcon })]
                 });
-            case N.jw.PAID:
+            case I.jw.PAID:
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         T.intl.string(T.t.eoSslJ),
@@ -92,10 +92,10 @@ let b = (e, t, n, i) => {
                         })
                     ]
                 });
-            case N.jw.DEFERRED:
-            case N.jw.DEFERRED_INTERNAL:
-            case N.jw.REJECTED:
-            case N.jw.RISK_REVIEW:
+            case I.jw.DEFERRED:
+            case I.jw.DEFERRED_INTERNAL:
+            case I.jw.REJECTED:
+            case I.jw.RISK_REVIEW:
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         C.Z.getStatusErrorText(t),
@@ -120,7 +120,7 @@ let b = (e, t, n, i) => {
         let { children: t } = e;
         return (0, l.jsx)('div', {
             className: j.cell,
-            children: (0, x.T4)(null != t ? t : 0, I.pKx.USD)
+            children: (0, x.T4)(null != t ? t : 0, N.pKx.USD)
         });
     },
     R = (e) => {

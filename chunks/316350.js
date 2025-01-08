@@ -22,12 +22,12 @@ var i,
     C = n(981631),
     v = n(388032),
     _ = n(534560);
-let I = {
+let N = {
         tension: 200,
         friction: 20
     },
-    N = {
-        ...I,
+    I = {
+        ...N,
         clamp: !0
     };
 function T(e) {
@@ -47,7 +47,7 @@ function T(e) {
     return (0, s.jsx)(m.Spring, {
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: N,
+        config: I,
         shouldAnimate: 'animate-always',
         children: (e) =>
             (0, s.jsxs)(u.animated.div, {
@@ -89,7 +89,7 @@ function j(e) {
         (0, s.jsx)(m.Spring, {
             from: { unlockedTranslateY: 50 },
             to: { unlockedTranslateY: 0 === f ? 50 : 0 },
-            config: I,
+            config: N,
             children: (e) =>
                 (0, s.jsx)('div', {
                     className: d()(
@@ -133,8 +133,8 @@ function j(e) {
 function b(e) {
     let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: a, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
         p = (0, f.vn)(u)[r.tier],
-        I = l && n >= p,
-        N = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
+        N = l && n >= p,
+        I = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
         T = (e, t) => {
             var n;
             let { icon: i, className: r } = (0, g.t)(e.icon, t);
@@ -192,7 +192,7 @@ function b(e) {
                     guildId: u,
                     hasBottomMargin: a,
                     subscriptionsRequired: p,
-                    hasAnimatedUnlocked: I,
+                    hasAnimatedUnlocked: N,
                     isAnimatedTo: l
                 }),
                 (0, s.jsx)('div', {
@@ -202,7 +202,7 @@ function b(e) {
                             ? t
                             : (0, s.jsxs)(s.Fragment, {
                                   children: [
-                                      N
+                                      I
                                           ? (0, s.jsx)('div', {
                                                 className: _.previousPerks,
                                                 children: v.intl.string(v.t.oKzyRU)
@@ -211,7 +211,7 @@ function b(e) {
                                       null != r.perks &&
                                           (0, s.jsx)('div', {
                                               className: _.perks,
-                                              children: r.perks.map((e) => T(e, I))
+                                              children: r.perks.map((e) => T(e, N))
                                           })
                                   ]
                               })

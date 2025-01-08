@@ -24,7 +24,7 @@ function p(e) {
     return '' !== e.toString() ? e.toString() : h.intl.string(h.t['154/bG']);
 }
 function f(e) {
-    let { guild: t, canManageGuild: n, canViewAuditLog: u, canManageRoles: f, canManageWebhooks: C, canManageBans: v, canAccessMembersPage: _, canViewGuildAnalytics: I, isOwner: N, isOwnerWithRequiredMfaLevel: T, welcomeScreenEmpty: j, guildMetadata: b, canAccessClanSettings: S } = e,
+    let { guild: t, canManageGuild: n, canViewAuditLog: u, canManageRoles: f, canManageWebhooks: C, canManageBans: v, canAccessMembersPage: _, canViewGuildAnalytics: N, isOwner: I, isOwnerWithRequiredMfaLevel: T, welcomeScreenEmpty: j, guildMetadata: b, canAccessClanSettings: S } = e,
         E = d.$.getCurrentConfig({
             guildId: t.id,
             location: 'generateSections'
@@ -32,7 +32,7 @@ function f(e) {
         R = () =>
             (0, o.X$)({
                 guild: t,
-                isOwner: N,
+                isOwner: I,
                 canManageGuildRoleSubscriptions: (0, o.H2)(t),
                 isMonetizationWaitlistEnabledForGuild: (0, i.mG)(t.id),
                 isGuildEligibleForRoleSubscriptions: (0, s.kT)(t.id),
@@ -90,9 +90,9 @@ function f(e) {
                     : [],
             d = (0, a.wC)(t.id),
             C = n && (t.hasFeature(m.oNc.DISCOVERABLE) || !!(null == b ? void 0 : b.isPublished)),
-            N = n && !j && !t.hasFeature(m.oNc.GUILD_SERVER_GUIDE),
+            I = n && !j && !t.hasFeature(m.oNc.GUILD_SERVER_GUIDE),
             E =
-                r && (n || d || (r && I) || C || N)
+                r && (n || d || (r && N) || C || I)
                     ? [
                           { section: x.DIVIDER },
                           {
@@ -183,12 +183,12 @@ function f(e) {
         g(m.pNK.BANS, y),
         {
             section: x.DIVIDER,
-            predicate: () => n || I
+            predicate: () => n || N
         },
         {
             section: x.HEADER,
             label: h.intl.string(h.t['1g9A/f']),
-            predicate: () => !S && (n || I)
+            predicate: () => !S && (n || N)
         },
         g(m.pNK.CLAN, y),
         g(m.pNK.COMMUNITY, y),

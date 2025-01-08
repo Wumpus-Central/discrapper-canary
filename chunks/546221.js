@@ -40,7 +40,7 @@ function _(e) {
               ]
           });
 }
-function I(e) {
+function N(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
         r = (0, o.qi)(t, { includeSoftDeleted: !0 });
     return null == n && 0 === r.length
@@ -51,10 +51,10 @@ function I(e) {
               className: v.currentMonthEarningsTable
           });
 }
-let N = (e) => {
+let I = (e) => {
     var t, n;
     let { guildId: s, application: o } = e,
-        { loading: m, team: h, currentPeriod: N, allPeriods: T, metrics: j } = (0, d.Z)(s, o),
+        { loading: m, team: h, currentPeriod: I, allPeriods: T, metrics: j } = (0, d.Z)(s, o),
         b = (0, u.u)(s),
         S = (0, c.mY)();
     return m
@@ -99,9 +99,9 @@ let N = (e) => {
                                   })
                               ]
                           }),
-                          (0, i.jsx)(I, {
+                          (0, i.jsx)(N, {
                               guildId: s,
-                              totalPayoutsForPeriod: N
+                              totalPayoutsForPeriod: I
                           })
                       ]
                   }),
@@ -136,6 +136,6 @@ let N = (e) => {
 function T(e) {
     return (0, i.jsx)(s.l, {
         guildId: e.guildId,
-        children: (0, i.jsx)(N, { ...e })
+        children: (0, i.jsx)(I, { ...e })
     });
 }

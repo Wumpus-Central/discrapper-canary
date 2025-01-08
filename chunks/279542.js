@@ -28,8 +28,8 @@ var i = n(200651),
     C = n(78451),
     v = n(434404),
     _ = n(999382),
-    I = n(181339),
-    N = n(193544),
+    N = n(181339),
+    I = n(193544),
     T = n(981631),
     j = n(388032),
     b = n(686160);
@@ -73,7 +73,7 @@ function S(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(I.Z, {
                 changeTitle: j.intl.string(j.t.TxESJC),
                 value: null == s ? void 0 : s.value,
                 options: a,
@@ -126,7 +126,7 @@ function E(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(N.Z, {
+                    (0, i.jsx)(I.Z, {
                         changeTitle: j.intl.string(j.t['eBd+Ul']),
                         value: null == m ? void 0 : m.value,
                         options: u,
@@ -288,7 +288,7 @@ function Z() {
                     (0, i.jsx)(c.FormDivider, { className: b.divider }),
                     (0, i.jsx)('div', {
                         className: a()(b.setupContainer),
-                        children: (0, i.jsx)(I.w, { guild: e })
+                        children: (0, i.jsx)(N.w, { guild: e })
                     })
                 ]
             });

@@ -37,18 +37,18 @@ function f(e) {
                     });
             });
         },
-        I = (e, t) => {
+        N = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
-        N = f.length > 0;
+        I = f.length > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.FormTitle, {
                 className: x.productListingsHeader,
                 id: p,
-                children: N ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
+                children: I ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
             }),
-            N
+            I
                 ? (0, i.jsx)('ul', {
                       className: x.productListings,
                       'aria-labelledby': p,
@@ -62,7 +62,7 @@ function f(e) {
                                       onEditProduct: () => u(e.id),
                                       onUnpublishProduct: () => v(e.id),
                                       onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => I(t, e.id),
+                                      onCopyProductLink: () => N(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,

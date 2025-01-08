@@ -53,7 +53,7 @@ function _() {
         ]
     });
 }
-function I() {
+function N() {
     let e = (0, a.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
@@ -124,7 +124,7 @@ function I() {
         ]
     });
 }
-function N() {
+function I() {
     return (0, i.jsxs)('div', {
         className: c.earningBenefitCard,
         children: [
@@ -136,7 +136,7 @@ function N() {
             (0, i.jsx)(l.Spacer, { size: 32 }),
             (0, i.jsx)(_, {}),
             (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(I, {})
+            (0, i.jsx)(N, {})
         ]
     });
 }
@@ -205,7 +205,7 @@ function b() {
             (0, i.jsx)(l.Spacer, { size: 24 }),
             (0, i.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
+                children: [(0, i.jsx)(I, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
             })
         ]
     });

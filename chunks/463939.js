@@ -21,9 +21,9 @@ var i,
     C = n(334820),
     v = n(198139),
     _ = n(388032),
-    I = n(927332);
+    N = n(927332);
 ((i = r || (r = {})).DROPDOWN = 'DROPDOWN'), (i.PERIOD = 'PERIOD'), (i.AMOUNT = 'AMOUNT '), (i.STATUS = 'STATUS ');
-let N = (e) => {
+let I = (e) => {
     let { dateUtc: t } = e;
     return (0, l.jsx)(u.Text, {
         variant: 'text-md/medium',
@@ -39,7 +39,7 @@ function T(e) {
     switch (n) {
         case v.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.G5ATX1), (0, l.jsx)(g.Z, { className: I.statusScheduledIcon })]
+                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.G5ATX1), (0, l.jsx)(g.Z, { className: N.statusScheduledIcon })]
             });
         case v.x_.CANCELED:
             return (0, l.jsxs)(l.Fragment, {
@@ -48,7 +48,7 @@ function T(e) {
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: I.statusErrorIcon
+                        className: N.statusErrorIcon
                     })
                 ]
             });
@@ -60,12 +60,12 @@ function T(e) {
                         (0, l.jsx)(u.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: I.statusErrorIcon
+                            className: N.statusErrorIcon
                         })
                     ]
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(x.Z, { className: I.statusDeferredIcon })]
+                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(x.Z, { className: N.statusDeferredIcon })]
             });
     }
     switch (i) {
@@ -78,7 +78,7 @@ function T(e) {
         case v.jw.CANCELED:
         case v.jw.ERROR:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.ubdQTk), (0, l.jsx)(g.Z, { className: I.statusScheduledIcon })]
+                children: [null != o ? _.intl.formatToPlainString(_.t.I6YOjY, { payoutDate: o }) : _.intl.string(_.t.ubdQTk), (0, l.jsx)(g.Z, { className: N.statusScheduledIcon })]
             });
         case v.jw.PAID:
             return (0, l.jsxs)(l.Fragment, {
@@ -87,7 +87,7 @@ function T(e) {
                     (0, l.jsx)(u.CircleCheckIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: I.statusPaidIcon
+                        className: N.statusPaidIcon
                     })
                 ]
             });
@@ -101,7 +101,7 @@ function T(e) {
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: I.statusErrorIcon
+                        className: N.statusErrorIcon
                     })
                 ]
             });
@@ -110,7 +110,7 @@ function T(e) {
 }
 let j = (0, f.i$)({
         key: 'AMOUNT ',
-        cellClassName: I.amountColumn,
+        cellClassName: N.amountColumn,
         renderHeader() {
             let e = (0, l.jsx)(u.Tooltip, {
                 text: _.intl.string(_.t.q3PkLy),
@@ -118,7 +118,7 @@ let j = (0, f.i$)({
                     (0, l.jsx)(u.CircleInformationIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: I.amountDisclaimer,
+                        className: N.amountDisclaimer,
                         ...e
                     })
             });
@@ -132,9 +132,9 @@ let j = (0, f.i$)({
         [
             (0, C.Fd)({
                 key: 'PERIOD',
-                cellClassName: I.periodColumn,
+                cellClassName: N.periodColumn,
                 renderHeader: () => (0, l.jsx)(f.qN, { children: _.intl.string(_.t.fThnXV) }),
-                renderContent: (e) => (0, l.jsx)(N, { dateUtc: e.periodStartingAt }),
+                renderContent: (e) => (0, l.jsx)(I, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, 'CellProps should always be provided');
                     let { ListingIdLabel: n } = t;
@@ -148,7 +148,7 @@ let j = (0, f.i$)({
             }),
             (0, f.wy)({
                 key: 'STATUS ',
-                cellClassName: I.statusColumn,
+                cellClassName: N.statusColumn,
                 renderHeader() {
                     let e = (0, l.jsx)(u.Tooltip, {
                         text: _.intl.string(_.t.cIGvZG),
@@ -156,7 +156,7 @@ let j = (0, f.i$)({
                             (0, l.jsx)(u.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: I.statusDisclaimer,
+                                className: N.statusDisclaimer,
                                 ...e
                             })
                     });
@@ -166,7 +166,7 @@ let j = (0, f.i$)({
                 },
                 renderContent: (e) =>
                     (0, l.jsx)(f.bL, {
-                        className: I.statusCell,
+                        className: N.statusCell,
                         children: (0, l.jsx)(T, { item: e })
                     })
             })

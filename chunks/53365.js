@@ -1,92 +1,92 @@
-r.d(n, {
+r.d(t, {
     $J: function () {
-        return d;
+        return m;
     },
     He: function () {
-        return l;
+        return o;
     },
     av: function () {
-        return _;
+        return E;
     },
     df: function () {
-        return A;
+        return p;
     },
     hY: function () {
-        return N;
+        return I;
     },
     oL: function () {
-        return O;
-    },
-    wE: function () {
-        return s;
-    },
-    wZ: function () {
         return T;
     },
+    wE: function () {
+        return d;
+    },
+    wZ: function () {
+        return _;
+    },
     yk: function () {
-        return u;
+        return c;
     },
     zo: function () {
-        return E;
+        return u;
     }
 });
-var e = r(544891),
+var n = r(544891),
     i = r(570140),
-    o = r(728345),
-    a = r(981631),
-    c = r(674563);
-async function l(t) {
-    await e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_ENABLE_REQUESTS(t),
+    a = r(728345),
+    l = r(981631),
+    s = r(674563);
+async function o(e) {
+    await n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_ENABLE_REQUESTS(e),
         rejectWithError: !1
     });
 }
-async function u(t) {
+async function c(e) {
     return (
-        await e.tn.get({
-            url: a.ANM.CREATOR_MONETIZATION_ELIGIBILITY(t),
+        await n.tn.get({
+            url: l.ANM.CREATOR_MONETIZATION_ELIGIBILITY(e),
             rejectWithError: !1
         })
     ).body;
 }
-async function s(t, n) {
-    await e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS(t, n),
+async function d(e, t) {
+    await n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t),
         rejectWithError: !1
     });
 }
-async function E(t) {
-    await e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(t),
+async function u(e) {
+    await n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e),
         rejectWithError: !1
     });
 }
-async function T(t) {
+async function _(e) {
     return (
-        await e.tn.get({
-            url: a.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(t),
+        await n.tn.get({
+            url: l.ANM.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e),
             rejectWithError: !1
         })
     ).body;
 }
-async function _(t) {
+async function E(e) {
     try {
-        let n = await e.tn.get({
-            url: a.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
-            query: { nag_guild_ids: t },
+        let t = await n.tn.get({
+            url: l.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
+            query: { nag_guild_ids: e },
             rejectWithError: !0
         });
         i.Z.dispatch({
             type: 'CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS',
-            eligibleGuilds: n.body.eligible_guilds
+            eligibleGuilds: t.body.eligible_guilds
         });
-    } catch (t) {}
+    } catch (e) {}
 }
-async function A(t, n) {
+async function p(e, t) {
     let r = (
-        await e.tn.post({
-            url: a.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(t),
-            body: { team_id: n },
+        await n.tn.post({
+            url: l.ANM.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
+            body: { team_id: t },
             rejectWithError: !1
         })
     ).body;
@@ -99,30 +99,30 @@ async function A(t, n) {
         r
     );
 }
-function N(t) {
-    return e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(t),
+function I(e) {
+    return n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e),
         rejectWithError: !1
     });
 }
-function d(t) {
-    return e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(t),
+function m(e) {
+    return n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e),
         rejectWithError: !1
     });
 }
-async function I(t) {
-    await e.tn.post({
-        url: a.ANM.CREATOR_MONETIZATION_REMOVE_MONETIZATION(t),
+async function h(e) {
+    await n.tn.post({
+        url: l.ANM.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
         body: {},
         rejectWithError: !1
     });
 }
-async function O(t) {
+async function T(e) {
     return (
-        await I(t),
-        await o.ZP.getApplicationsForGuild(t, {
-            type: c.wW.GUILD_ROLE_SUBSCRIPTIONS,
+        await h(e),
+        await a.ZP.getApplicationsForGuild(e, {
+            type: s.wW.GUILD_ROLE_SUBSCRIPTIONS,
             includeTeam: !0
         })
     );

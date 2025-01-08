@@ -29,7 +29,7 @@ function v(e) {
             drag: x,
             drop: v,
             dragSourcePosition: _,
-            setIsDraggable: I
+            setIsDraggable: N
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -38,16 +38,16 @@ function v(e) {
             onDragComplete: () => {},
             onDragReset: () => {}
         }),
-        N = r.useRef(null);
+        I = r.useRef(null);
     return (
         r.useEffect(() => {
-            I(!1);
-        }, [I]),
+            N(!1);
+        }, [N]),
         r.useEffect(() => {
-            x(v(N));
-        }, [x, v, N]),
+            x(v(I));
+        }, [x, v, I]),
         (0, i.jsxs)('div', {
-            ref: N,
+            ref: I,
             className: a()(C.separatorSection, {
                 [C.dropIndicatorBefore]: null != _ && m < _,
                 [C.dropIndicatorAfter]: null != _ && m > _
@@ -98,10 +98,10 @@ function _(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: a } = e,
         d = (0, s.e7)([m.Z], () => m.Z.getGuild(t)),
         _ = (0, s.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        I = _.filter((e) => e.inOnboarding),
-        N = _.filter((e) => !0 !== e.inOnboarding),
+        N = _.filter((e) => e.inOnboarding),
+        I = _.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ...I.map((e) => ({
+            ...N.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -109,7 +109,7 @@ function _(e) {
                 id: 'separator',
                 data: (0, p.ae)()
             },
-            ...N.map((e) => ({
+            ...I.map((e) => ({
                 id: e.id,
                 data: e
             }))
@@ -162,7 +162,7 @@ function _(e) {
                                               })
                                           ]
                                       }),
-                                I.map((e, t) =>
+                                N.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -191,14 +191,14 @@ function _(e) {
                       ? null
                       : (0, i.jsxs)(i.Fragment, {
                             children: [
-                                N.map((e, t) =>
+                                I.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + I.length,
-                                            dragIndex: t + I.length + 1,
+                                            promptIndex: t + N.length,
+                                            dragIndex: t + N.length + 1,
                                             onPromptDragStart: j,
                                             onPromptDragReset: b,
                                             onPromptDragComplete: S

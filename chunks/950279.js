@@ -29,7 +29,7 @@ function x(e) {
             },
             [n, t, l]
         ),
-        I = r.useCallback(() => null, []);
+        N = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
         children: (0, i.jsxs)(s.FormItem, {
@@ -48,7 +48,7 @@ function x(e) {
                     matchSorterOptions: f,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: h.pills,
-                    renderCustomPill: I
+                    renderCustomPill: N
                 }),
                 C.length > 0 &&
                     (0, i.jsxs)('div', {

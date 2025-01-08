@@ -192,7 +192,7 @@ function c(e, t) {
             },
             [u]
         ),
-        I = i.useCallback(
+        N = i.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -213,7 +213,7 @@ function c(e, t) {
             },
             [n, u, o]
         ),
-        N = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
@@ -292,16 +292,16 @@ function c(e, t) {
         ),
         b = i.useCallback(
             (e) => {
-                e.relatedTarget !== e.currentTarget && I(e, !1, !1);
+                e.relatedTarget !== e.currentTarget && N(e, !1, !1);
             },
-            [I]
+            [N]
         ),
         S = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
-                if ('Meta' !== e.key) s.ye.has(e.key) ? I(e) : 'Backspace' === e.key ? N(e) : 'Escape' === e.key ? v(e) : 'a' === e.key && t ? j(e) : s.Bd.has(e.key) && t && T(e);
+                if ('Meta' !== e.key) s.ye.has(e.key) ? N(e) : 'Backspace' === e.key ? I(e) : 'Escape' === e.key ? v(e) : 'a' === e.key && t ? j(e) : s.Bd.has(e.key) && t && T(e);
             },
-            [I, N, v, j, T]
+            [N, I, v, j, T]
         );
     return {
         handlePasteEvent: g,
@@ -311,9 +311,9 @@ function c(e, t) {
             (e) => {
                 if (document.activeElement !== l.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? N(e) : 'a' === e.key && t ? j(e) : 'Escape' === e.key ? v(e) : s.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && v(e);
+                'Backspace' === e.key ? I(e) : 'a' === e.key && t ? j(e) : 'Escape' === e.key ? v(e) : s.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && v(e);
             },
-            [T, N, j, v, l]
+            [T, I, j, v, l]
         ),
         handleRemoveTag: x,
         handleTagChangeEvent: p,

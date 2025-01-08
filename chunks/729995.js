@@ -22,8 +22,8 @@ var r = n(442837),
     C = n(974513),
     v = n(677892),
     _ = n(981631),
-    I = n(388032),
-    N = n(240921);
+    N = n(388032),
+    I = n(240921);
 function T(e) {
     let { guildId: t, completed: n } = e,
         l = (0, r.e7)([o.Z], () => o.Z.getEnabled(t)),
@@ -76,7 +76,7 @@ function T(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, i.jsx)(d.Z, { className: N.divider }),
+                (0, i.jsx)(d.Z, { className: I.divider }),
                 (0, i.jsx)(v.ap, {
                     guildId: t,
                     onEdit: () => {
@@ -89,7 +89,7 @@ function T(e) {
                     },
                     disableGoodStatus: n
                 }),
-                (0, i.jsx)(d.Z, { className: N.divider }),
+                (0, i.jsx)(d.Z, { className: I.divider }),
                 (0, i.jsx)(v.P_, {
                     guildId: t,
                     onEdit: () => {
@@ -113,7 +113,7 @@ function T(e) {
                   }),
                   (0, i.jsx)(b, {}),
                   (0, i.jsxs)('div', {
-                      className: N.content,
+                      className: I.content,
                       children: [
                           (0, i.jsx)(S, {
                               guildId: t,
@@ -127,7 +127,7 @@ function T(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: N.content,
+                      className: I.content,
                       children: [
                           (0, i.jsx)(E, {
                               guildId: t,
@@ -148,17 +148,17 @@ function j(e) {
             (0, i.jsx)(l.Heading, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: N.header,
-                children: I.intl.string(I.t.mhxUsL)
+                className: I.header,
+                children: N.intl.string(N.t.mhxUsL)
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: N.subheader,
-                children: I.intl.string(I.t.GtWdQE)
+                className: I.subheader,
+                children: N.intl.string(N.t.GtWdQE)
             }),
             (0, i.jsxs)('div', {
-                className: N.help,
+                className: I.help,
                 children: [
                     (0, i.jsx)(l.Anchor, {
                         target: '_blank',
@@ -166,19 +166,19 @@ function j(e) {
                         children: (0, i.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: I.intl.string(I.t.Ok55Ki)
+                            children: N.intl.string(N.t.Ok55Ki)
                         })
                     }),
-                    (0, i.jsx)('div', { className: N.helpSeparator }),
+                    (0, i.jsx)('div', { className: I.helpSeparator }),
                     (0, i.jsx)(l.Anchor, {
                         onClick: n,
                         children: (0, i.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-link',
-                            children: I.intl.string(I.t['6gsjdH'])
+                            children: N.intl.string(N.t['6gsjdH'])
                         })
                     }),
-                    (0, i.jsx)('div', { className: N.helpSeparator }),
+                    (0, i.jsx)('div', { className: I.helpSeparator }),
                     (0, i.jsx)(C.Wu, { guildId: t })
                 ]
             })
@@ -188,10 +188,10 @@ function j(e) {
 function b() {
     let e = '\u2022 ';
     return (0, i.jsxs)('div', {
-        className: N.notice,
+        className: I.notice,
         children: [
             (0, i.jsx)('img', {
-                className: N.wumpus,
+                className: I.wumpus,
                 src: n(33631),
                 alt: 'wumpus'
             }),
@@ -200,18 +200,18 @@ function b() {
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        className: N.header,
-                        children: I.intl.string(I.t.WslWRE)
+                        className: I.header,
+                        children: N.intl.string(N.t.WslWRE)
                     }),
                     (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.intl.string(I.t.z9k21N)]
+                        children: [e, N.intl.string(N.t.z9k21N)]
                     }),
                     (0, i.jsxs)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: [e, I.intl.string(I.t.t1LelZ)]
+                        children: [e, N.intl.string(N.t.t1LelZ)]
                     })
                 ]
             })
@@ -223,19 +223,19 @@ function S(e) {
         a = (0, v.$$)(t),
         s = (0, r.e7)([o.Z], () => o.Z.getEnabled(t));
     return (0, i.jsxs)('div', {
-        className: N.review,
+        className: I.review,
         children: [
             (0, i.jsxs)('div', {
-                className: N.reviewHeaderText,
+                className: I.reviewHeaderText,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        children: s ? I.intl.string(I.t.MBdTCQ) : I.intl.string(I.t.Wslim5)
+                        children: s ? N.intl.string(N.t.MBdTCQ) : N.intl.string(N.t.Wslim5)
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
-                        children: s ? I.intl.string(I.t.LokpLi) : I.intl.string(I.t.nBIyJi)
+                        children: s ? N.intl.string(N.t.LokpLi) : N.intl.string(N.t.nBIyJi)
                     })
                 ]
             }),
@@ -253,37 +253,37 @@ function E(e) {
         o = (0, r.e7)([x.Z], () => x.Z.getSettings()),
         d = (0, c.uo)(o);
     return (0, i.jsxs)('div', {
-        className: N.reviewHeader,
+        className: I.reviewHeader,
         children: [
             (0, i.jsxs)('div', {
-                className: N.reviewHeaderText,
+                className: I.reviewHeaderText,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        children: s ? I.intl.string(I.t.FcIcT0) : I.intl.string(I.t.R09tJy)
+                        children: s ? N.intl.string(N.t.FcIcT0) : N.intl.string(N.t.R09tJy)
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
-                        children: s ? I.intl.string(I.t.ockHVV) : I.intl.string(I.t['u/ji09'])
+                        children: s ? N.intl.string(N.t.ockHVV) : N.intl.string(N.t['u/ji09'])
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: N.reviewActions,
+                className: I.reviewActions,
                 children: [
                     (0, i.jsx)(l.Button, {
                         size: l.Button.Sizes.SMALL,
                         color: l.Button.Colors.PRIMARY,
                         look: l.Button.Looks.OUTLINED,
                         onClick: a,
-                        children: I.intl.string(I.t['6gsjdH'])
+                        children: N.intl.string(N.t['6gsjdH'])
                     }),
                     (0, i.jsx)(l.Button, {
                         size: l.Button.Sizes.SMALL,
                         color: l.Button.Colors.BRAND,
                         onClick: () => n(d),
                         disabled: !s,
-                        children: I.intl.string(I.t.Yz7hsL)
+                        children: N.intl.string(N.t.Yz7hsL)
                     })
                 ]
             })
@@ -296,17 +296,17 @@ function R(e) {
     return null == n || n.verificationLevel < _.sFg.VERY_HIGH
         ? null
         : (0, i.jsxs)('div', {
-              className: N.rolesWarning,
+              className: I.rolesWarning,
               children: [
                   (0, i.jsx)(l.CircleWarningIcon, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: N.warningIcon
+                      className: I.warningIcon
                   }),
                   (0, i.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
-                      children: I.intl.string(I.t.HVoKZ2)
+                      children: N.intl.string(N.t.HVoKZ2)
                   })
               ]
           });

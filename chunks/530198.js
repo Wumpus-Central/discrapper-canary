@@ -75,10 +75,10 @@ function v(e) {
         C = null != g ? g : x.iO.GREATER_THAN,
         v = Math.round(Number(null !== (l = null == s ? void 0 : null === (t = s.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
     C === x.iO.GREATER_THAN ? (v = Math.max(1, v + 1)) : C === x.iO.LESS_THAN && (v = Math.max(0, v - 1));
-    let [_, I] = r.useState(v.toString());
+    let [_, N] = r.useState(v.toString());
     return (
         r.useEffect(() => {
-            I(_);
+            N(_);
         }, [_]),
         (0, i.jsx)(
             d.TextInput,
@@ -105,7 +105,7 @@ function v(e) {
                                     p
                                 );
                         }
-                        I(e);
+                        N(e);
                     }
                 },
                 disabled: o
@@ -161,7 +161,7 @@ function _(e) {
         r
     );
 }
-function I(e) {
+function N(e) {
     let { titleText: t, fieldText: n, fieldTextHook: l, metadataField: a, existingPendingConfiguration: s, platform: o, applicationId: c, onConfigurationChange: u, locked: m, operator: h } = e,
         g = r.createRef(),
         C = (null == s ? void 0 : s.configuration) != null,
@@ -179,7 +179,7 @@ function I(e) {
             },
             a
         ),
-        I =
+        N =
             null != l
                 ? p.intl.format(l, { metadataHook: () => _ })
                 : (0, i.jsxs)(i.Fragment, {
@@ -209,7 +209,7 @@ function I(e) {
                             children: (0, i.jsx)(d.Text, {
                                 variant: 'text-md/normal',
                                 className: f.numericalRuleSubText,
-                                children: I
+                                children: N
                             })
                         })
                     ]
@@ -241,12 +241,12 @@ function I(e) {
         a
     );
 }
-function N(e) {
+function I(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.STEAM);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.zdXqGx),
                 fieldTextHook: p.t.REyUZ2,
                 metadataField: x.PC.CREATED_AT,
@@ -255,7 +255,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.gLs17O),
                 fieldTextHook: p.t.zVJxqq,
                 metadataField: x.PC.STEAM_GAME_COUNT,
@@ -264,7 +264,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.formatToPlainString(p.t.j1Gf2t, { gameName: p.intl.string(p.t.HKUEZm) }),
                 fieldTextHook: p.t.ZCNdDw,
                 metadataField: x.PC.STEAM_ITEM_COUNT_DOTA2,
@@ -273,7 +273,7 @@ function N(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.formatToPlainString(p.t.j1Gf2t, { gameName: p.intl.string(p.t.C8p1Sk) }),
                 fieldTextHook: p.t.MCHnKy,
                 metadataField: x.PC.STEAM_ITEM_COUNT_TF2,
@@ -290,7 +290,7 @@ function T(e) {
         l = h.Z.get(g.ABu.TWITTER);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.zdXqGx),
                 fieldTextHook: p.t.REyUZ2,
                 metadataField: x.PC.CREATED_AT,
@@ -299,7 +299,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.wbvDMz),
                 fieldTextHook: p.t['/w/EYm'],
                 metadataField: x.PC.TWITTER_FOLLOWERS_COUNT,
@@ -308,7 +308,7 @@ function T(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t['1B3DVl']),
                 fieldTextHook: p.t['+NFH7u'],
                 metadataField: x.PC.TWITTER_STATUSES_COUNT,
@@ -334,7 +334,7 @@ function j(e) {
         l = h.Z.get(g.ABu.REDDIT);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.zdXqGx),
                 fieldTextHook: p.t.REyUZ2,
                 metadataField: x.PC.CREATED_AT,
@@ -343,7 +343,7 @@ function j(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t['3Xsroq']),
                 fieldTextHook: p.t.TLgZho,
                 metadataField: x.PC.REDDIT_TOTAL_KARMA,
@@ -378,7 +378,7 @@ function b(e) {
         l = h.Z.get(g.ABu.PAYPAL);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.zdXqGx),
                 fieldTextHook: p.t.REyUZ2,
                 metadataField: x.PC.CREATED_AT,
@@ -404,7 +404,7 @@ function S(e) {
         l = h.Z.get(g.ABu.EBAY);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.zdXqGx),
                 fieldTextHook: p.t.REyUZ2,
                 metadataField: x.PC.CREATED_AT,
@@ -413,7 +413,7 @@ function S(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.AuMxf3),
                 fieldTextHook: p.t.oTFOe3,
                 metadataField: x.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
@@ -422,7 +422,7 @@ function S(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.WzvoSk),
                 fieldTextHook: p.t.RH3VAw,
                 metadataField: x.PC.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT,
@@ -431,7 +431,7 @@ function S(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.VuSFzs),
                 fieldTextHook: p.t.sn3m7u,
                 metadataField: x.PC.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT,
@@ -467,7 +467,7 @@ function E(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.WUSIHh),
                 fieldTextHook: p.t['/w/EYm'],
                 metadataField: x.PC.TIKTOK_FOLLOWER_COUNT,
@@ -476,7 +476,7 @@ function E(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t.w1IVQk),
                 fieldTextHook: p.t.JHEsY2,
                 metadataField: x.PC.TIKTOK_FOLLOWING_COUNT,
@@ -485,7 +485,7 @@ function E(e) {
                 onConfigurationChange: n,
                 locked: r
             }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(N, {
                 titleText: p.intl.string(p.t['1cFXJi']),
                 fieldTextHook: p.t.tEFCYG,
                 metadataField: x.PC.TIKTOK_LIKES_COUNT,
@@ -531,7 +531,7 @@ function R(e) {
             case x.xn.DATETIME_LESS_THAN_EQUAL:
             case x.xn.DATETIME_GREATER_THAN_EQUAL:
                 return (0, i.jsx)(
-                    I,
+                    N,
                     {
                         titleText: e.name,
                         fieldText: e.description,
@@ -598,7 +598,7 @@ function y(e) {
         p = null;
     switch (null == d ? void 0 : d.type) {
         case g.ABu.STEAM:
-            p = (0, i.jsx)(N, { ...x });
+            p = (0, i.jsx)(I, { ...x });
             break;
         case g.ABu.TWITTER:
             p = (0, i.jsx)(T, { ...x });

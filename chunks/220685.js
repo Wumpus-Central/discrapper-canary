@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(367907),
     v = n(674180),
     _ = n(999382),
-    I = n(626135),
-    N = n(730647),
+    N = n(626135),
+    I = n(730647),
     T = n(584825),
     j = n(981631),
     b = n(388032),
@@ -36,25 +36,25 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         let { guild: l, canEnable: s } = e,
             c = (0, T.YB)(l.id),
             { loading: u, updateSubscriptionsSettings: _ } = (0, T.QV)(),
-            [N, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
+            [I, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
             [Z, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
             k = null == D || null != D.match(R),
-            [P, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
+            [M, P] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != M && M !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = N),
+                I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = Z),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    P !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = P),
+                    M !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = M),
                     !d().isEmpty(e) &&
                         (await _(l.id, e),
                         'store_page_enabled' in e &&
-                            I.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
-                                enabled: N,
+                            N.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+                                enabled: I,
                                 ...(0, C.hH)(l.id)
                             }));
             },
@@ -74,9 +74,9 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, i.jsx)(g.FormSwitch, {
                     className: S.enableSwitch,
-                    value: N,
-                    disabled: H || (!N && !s),
-                    tooltipNote: N || s ? void 0 : b.intl.string(b.t.mIgfEh),
+                    value: I,
+                    disabled: H || (!I && !s),
+                    tooltipNote: I || s ? void 0 : b.intl.string(b.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => A(e),
                     children: (0, i.jsx)(g.Text, {
@@ -179,9 +179,9 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, i.jsx)(g.FormSwitch, {
                             className: S.premiumMemberCountSwitchContainer,
-                            value: P,
+                            value: M,
                             hideBorder: !0,
-                            onChange: (e) => M(e),
+                            onChange: (e) => P(e),
                             disabled: H,
                             children: (0, i.jsxs)('div', {
                                 className: S.iconSwitchLabel,
@@ -225,7 +225,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    A(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), M(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
+                                    A(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
                                 },
                                 onSave: U,
                                 disabled: z
@@ -237,7 +237,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     };
 function Z() {
     let e = (0, u.e7)([_.Z], () => _.Z.getGuild()),
-        t = (0, N.f)(),
+        t = (0, I.f)(),
         n = (0, T.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
         ? (0, i.jsx)(A, {
@@ -248,7 +248,7 @@ function Z() {
 }
 function L() {
     let e = (0, u.e7)([_.Z], () => _.Z.getGuild());
-    return (0, i.jsx)(N.l, {
+    return (0, i.jsx)(I.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,
         children: (0, i.jsx)(Z, {})

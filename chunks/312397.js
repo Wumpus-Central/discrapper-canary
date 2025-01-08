@@ -26,8 +26,8 @@ var i = n(200651),
     C = n(100527),
     v = n(367907),
     _ = n(906732),
-    I = n(740504),
-    N = n(933557),
+    N = n(740504),
+    I = n(933557),
     T = n(471445),
     j = n(890477),
     b = n(34586),
@@ -41,8 +41,8 @@ var i = n(200651),
     D = n(142497),
     O = n(884858),
     k = n(516129),
-    P = n(813197),
-    M = n(208567),
+    M = n(813197),
+    P = n(208567),
     w = n(592125),
     B = n(324067),
     U = n(650774),
@@ -92,7 +92,7 @@ function ex(e) {
     if (null == e) return;
     let { label: t, channel: n, category: r } = e,
         l = (0, T.KS)(n),
-        a = null != r ? (0, N.F6)(r, H.default, F.Z) : null;
+        a = null != r ? (0, I.F6)(r, H.default, F.Z) : null;
     return (0, i.jsx)(g.IconSelectOption, {
         title: t,
         icon: l,
@@ -102,7 +102,7 @@ function ex(e) {
 function ep(e) {
     return {
         value: e.id,
-        label: (0, N.F6)(e, H.default, F.Z),
+        label: (0, I.F6)(e, H.default, F.Z),
         channel: e,
         category: w.Z.getChannel(e.parent_id)
     };
@@ -198,7 +198,7 @@ class eC extends r.PureComponent {
                         (0, i.jsxs)(S.Z.Child, {
                             wrap: !0,
                             children: [
-                                (0, i.jsx)(M.Z, {
+                                (0, i.jsx)(P.Z, {
                                     showIcon: !0,
                                     name: e.name,
                                     image: e.icon,
@@ -244,7 +244,7 @@ class eC extends r.PureComponent {
                                     onClick: this.handleUploadImage,
                                     children: [
                                         en.intl.string(en.t['MsUY/f']),
-                                        (0, i.jsx)(P.ZP, {
+                                        (0, i.jsx)(M.ZP, {
                                             ref: this._imageInputRef,
                                             onChange: this.handleOpenImageCroppingModal,
                                             disabled: !n
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
-                                              (0, i.jsx)(P.ZP, {
+                                              (0, i.jsx)(M.ZP, {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
@@ -972,7 +972,7 @@ function ev() {
         (0, D.Kw)(L.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
     let d = (0, u.e7)([B.Z], () => B.Z.getCategories(null == t ? void 0 : t.id)),
-        m = r.useMemo(() => (0, I.Z)(d._categories, d), [d]),
+        m = r.useMemo(() => (0, N.Z)(d._categories, d), [d]),
         { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([G.Z], () => ({
             canManageGuild: G.Z.can(J.Plq.MANAGE_GUILD, t),
             isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
@@ -981,7 +981,7 @@ function ev() {
         p = (0, b.E)(t),
         v = (0, u.e7)([H.default], () => H.default.getCurrentUser());
     o()(null != v, 'GuildSettingsOverview: currentUser cannot be undefined');
-    let { enableDeadchat: N } = j.Z.useExperiment(
+    let { enableDeadchat: I } = j.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
             location: 'guild_settings'
@@ -1008,7 +1008,7 @@ function ev() {
                   isInventoryFeedEnabled: p,
                   theme: s,
                   analyticsLocations: c,
-                  eligibleForDeadchatPrompt: N
+                  eligibleForDeadchatPrompt: I
               })
           });
 }

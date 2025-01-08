@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(976983),
     v = n(290511),
     _ = n(388032),
-    I = n(530961);
-let N = { optionErrors: [] };
+    N = n(530961);
+let I = { optionErrors: [] };
 function T(e) {
     var t;
     let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: A } = e,
@@ -33,8 +33,8 @@ function T(e) {
         {
             drag: O,
             dragSourcePosition: k,
-            drop: P,
-            setIsDraggable: M
+            drop: M,
+            setIsDraggable: P
         } = (0, c.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: T,
@@ -45,7 +45,7 @@ function T(e) {
         }),
         w = (0, s.cj)([f.Z], () => {
             var e;
-            return null !== (e = f.Z.errors[C]) && void 0 !== e ? e : N;
+            return null !== (e = f.Z.errors[C]) && void 0 !== e ? e : I;
         }),
         [B, U] = r.useState(!1),
         [G, F] = r.useState(!1),
@@ -73,25 +73,25 @@ function T(e) {
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
                   onMouseLeave: () => F(!1),
-                  className: a()(I.container, {
-                      [I.dropIndicatorBefore]: null != k && C < k,
-                      [I.dropIndicatorAfter]: null != k && C > k,
-                      [I.containerFocused]: G
+                  className: a()(N.container, {
+                      [N.dropIndicatorBefore]: null != k && C < k,
+                      [N.dropIndicatorAfter]: null != k && C > k,
+                      [N.containerFocused]: G
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => O(M(e)),
                   children: [
                       (0, i.jsx)('div', {
-                          className: I.dragContainer,
-                          onMouseEnter: () => M(!0),
-                          onMouseLeave: () => M(!1),
+                          className: N.dragContainer,
+                          onMouseEnter: () => P(!0),
+                          onMouseLeave: () => P(!1),
                           children: (0, i.jsx)(o.DragIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: I.dragIcon
+                              className: N.dragIcon
                           })
                       }),
                       (0, i.jsx)(o.Text, {
-                          className: I.questionNumber,
+                          className: N.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
@@ -102,7 +102,7 @@ function T(e) {
                           children: l.title
                       }),
                       (0, i.jsx)(o.Clickable, {
-                          className: I.collapseButton,
+                          className: N.collapseButton,
                           onClick: () => U(!1),
                           children: (0, i.jsx)(h.Z, {
                               direction: h.Z.Directions.DOWN,
@@ -112,9 +112,9 @@ function T(e) {
                       }),
                       (0, i.jsx)(o.TooltipContainer, {
                           text: _.intl.string(_.t['Ku+86e']),
-                          className: I.removeButton,
+                          className: N.removeButton,
                           children: (0, i.jsx)(o.Clickable, {
-                              className: I.closeIcon,
+                              className: N.closeIcon,
                               onClick: () => (0, p.fi)(n, l.id),
                               children: (0, i.jsx)(o.TrashIcon, {
                                   size: 'xs',
@@ -130,32 +130,32 @@ function T(e) {
                   tabIndex: 0,
                   onFocus: () => F(!0),
                   onBlur: () => F(!1),
-                  className: a()(I.container, {
-                      [I.dropIndicatorBefore]: null != k && C < k,
-                      [I.dropIndicatorAfter]: null != k && C > k,
-                      [I.containerFocused]: G
+                  className: a()(N.container, {
+                      [N.dropIndicatorBefore]: null != k && C < k,
+                      [N.dropIndicatorAfter]: null != k && C > k,
+                      [N.containerFocused]: G
                   }),
-                  ref: (e) => O(P(e)),
+                  ref: (e) => O(M(e)),
                   children: [
                       (0, i.jsx)('div', {
-                          className: I.dragContainer,
-                          onMouseEnter: () => M(!0),
-                          onMouseLeave: () => M(!1),
+                          className: N.dragContainer,
+                          onMouseEnter: () => P(!0),
+                          onMouseLeave: () => P(!1),
                           children: (0, i.jsx)(o.DragIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: I.dragIcon
+                              className: N.dragIcon
                           })
                       }),
                       (0, i.jsx)(o.Text, {
-                          className: I.questionNumber,
+                          className: N.questionNumber,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: _.intl.format(_.t.yjS3zs, { index: C + 1 })
                       }),
                       (0, i.jsx)(o.TextInput, {
-                          className: I.title,
-                          inputClassName: I.titleInput,
+                          className: N.title,
+                          inputClassName: N.titleInput,
                           inputRef: Y,
                           value: l.title,
                           onChange: (e) => (0, p.Kk)(n, l.id, { title: e }),
@@ -168,7 +168,7 @@ function T(e) {
                           guild: n
                       }),
                       (0, i.jsx)(o.Text, {
-                          className: I.optionsHeader,
+                          className: N.optionsHeader,
                           variant: 'text-xs/semibold',
                           color: 'text-muted',
                           children: W
@@ -190,10 +190,10 @@ function T(e) {
                       }),
                       null != H ? (0, i.jsx)(o.InputError, { error: H }) : null,
                       (0, i.jsxs)('div', {
-                          className: I.buttons,
+                          className: N.buttons,
                           children: [
                               (0, i.jsxs)('div', {
-                                  className: I.checkboxes,
+                                  className: N.checkboxes,
                                   children: [
                                       (0, i.jsx)(o.Checkbox, {
                                           size: 20,
@@ -223,7 +223,7 @@ function T(e) {
                                   ]
                               }),
                               (0, i.jsx)(o.Clickable, {
-                                  className: I.collapseButton,
+                                  className: N.collapseButton,
                                   onClick: () => U(!0),
                                   children: (0, i.jsx)(h.Z, {
                                       direction: h.Z.Directions.UP,
@@ -233,9 +233,9 @@ function T(e) {
                               }),
                               (0, i.jsx)(o.TooltipContainer, {
                                   text: _.intl.string(_.t['Ku+86e']),
-                                  className: I.removeButton,
+                                  className: N.removeButton,
                                   children: (0, i.jsx)(o.Clickable, {
-                                      className: I.closeIcon,
+                                      className: N.closeIcon,
                                       onClick: () => (0, p.fi)(n, l.id),
                                       children: (0, i.jsx)(o.TrashIcon, {
                                           size: 'xs',
@@ -262,7 +262,7 @@ function j(e) {
         return null;
     function s(e) {
         return (0, i.jsx)(o.Clickable, {
-            className: I.example,
+            className: N.example,
             onClick: () => (0, p.Kk)(n, t.id, { title: e }),
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
@@ -271,7 +271,7 @@ function j(e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: I.examplesSection,
+        className: N.examplesSection,
         children: [
             (0, i.jsx)(o.Text, {
                 variant: 'text-xs/normal',
@@ -279,7 +279,7 @@ function j(e) {
                 children: _.intl.string(_.t.ECnSLi)
             }),
             (0, i.jsxs)('div', {
-                className: I.examples,
+                className: N.examples,
                 children: [s(_.intl.string(_.t['7GZMJS'])), s(_.intl.string(_.t.nItydn)), s(_.intl.string(_.t.evuYbm)), s(_.intl.string(_.t.XWRuOj))]
             })
         ]
@@ -291,7 +291,7 @@ function b(e) {
         o = s ? v.qm : v.M$,
         { handleDragStart: c, handleDragReset: u, handleDragComplete: h } = (0, d.Z)(n.options, (e) => (0, p.Kk)(t, n.id, { options: e }));
     return (0, i.jsxs)('div', {
-        className: I.options,
+        className: N.options,
         children: [
             n.options.map((e, s) =>
                 (0, i.jsx)(

@@ -17,11 +17,11 @@ var i = n(200651),
 t.Z = (e) => {
     let { guildId: t, handleUpdate: n, progress: l, error: C } = e,
         { interests: v } = l,
-        [_, I] = r.useState(''),
-        [N, T] = r.useState(0),
+        [_, N] = r.useState(''),
+        [I, T] = r.useState(0),
         j = (0, c.e7)([d.default], () => d.default.getId()),
         b = r.useMemo(() => (0, s.chunk)((0, u.XV)(g.i6, j), 9), [j]),
-        S = [...b[N], ...b[(N + 1) % b.length]],
+        S = [...b[I], ...b[(I + 1) % b.length]],
         E = r.useMemo(() => Array.from(v), [v]),
         R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
         y = (e) => {
@@ -34,7 +34,7 @@ t.Z = (e) => {
                 let t = null != e ? e : _.trim();
                 if (0 === t.length) return;
                 let i = new Set(v);
-                i.add(t), n({ interests: i }), I('');
+                i.add(t), n({ interests: i }), N('');
             },
             [n, _, v]
         ),
@@ -92,7 +92,7 @@ t.Z = (e) => {
                                         inputClassName: f.input,
                                         value: _,
                                         onKeyDown: Z,
-                                        onChange: I,
+                                        onChange: N,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
                                         disabled: v.size === g.c4

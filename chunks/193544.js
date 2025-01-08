@@ -19,12 +19,12 @@ var i = n(200651),
 function x(e) {
     var t, n, l;
     let { changeTitle: x, value: p, options: f, className: C, onChange: v } = e,
-        [_, I] = r.useState(p),
-        [N, T] = r.useState(!1),
+        [_, N] = r.useState(p),
+        [I, T] = r.useState(!1),
         [j, b] = r.useState(!1),
         S = r.useRef(null);
     r.useEffect(() => {
-        I(p);
+        N(p);
     }, [p]),
         r.useEffect(
             () => () => {
@@ -37,15 +37,15 @@ function x(e) {
             if (!e.disabled && e.value !== _)
                 b(!0),
                     null == v || v(e),
-                    I(e.value),
+                    N(e.value),
                     (S.current = setTimeout(() => {
                         b(!1), T(!1);
                     }, 1000));
         };
     return (0, i.jsx)(u.Z, {
-        title: N ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
-        description: N ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
-        highlightColor: N ? d.q.NONE : null == E ? void 0 : E.highlightColor,
+        title: I ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
+        description: I ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
+        highlightColor: I ? d.q.NONE : null == E ? void 0 : E.highlightColor,
         action: (0, i.jsx)(s.Button, {
             look: s.Button.Looks.LINK,
             size: s.Button.Sizes.MIN,

@@ -25,13 +25,13 @@ n.Z = function (e) {
     var n;
     let { categoryId: t, onSelectApplication: b, resetScroll: I } = e,
         [j, S] = i.useState(1),
-        N = i.useCallback((e) => {
+        E = i.useCallback((e) => {
             S(e);
         }, []);
     i.useEffect(() => {
         S(1);
     }, [t]);
-    let E = i.useMemo(
+    let N = i.useMemo(
             () => ({
                 query: v.EMPTY_QUERY,
                 page: j,
@@ -50,12 +50,12 @@ n.Z = function (e) {
         ),
         A = (0, l.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(E)) && void 0 !== e ? e : h;
+            return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : h;
         }),
         T = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : h,
         { results: P, totalPages: R, loadId: Z } = i.useMemo(() => (y === d.M.FETCHING ? T : A), [y, T, A]),
         L = i.useMemo(() => (null == P ? void 0 : P.filter((e) => !(e.type !== r.s.APPLICATION))), [P]),
-        O = i.useCallback((e) => {
+        D = i.useCallback((e) => {
             let { page: n, activeCategoryId: t, onSuccessCallback: a, guildId: i, fetchCounts: r } = e;
             r &&
                 c.yC({
@@ -75,13 +75,13 @@ n.Z = function (e) {
         }, []);
     i.useEffect(() => {
         I(),
-            O({
+            D({
                 page: j,
                 activeCategoryId: t,
                 onSuccessCallback: () => {}
             });
-    }, [t, I, O, j]);
-    let D = i.useCallback(
+    }, [t, I, D, j]);
+    let O = i.useCallback(
         (e, n) => {
             (0, p.zZ)(C.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                 current_page: f.m_.SEARCH,
@@ -113,7 +113,7 @@ n.Z = function (e) {
                                             _.Z,
                                             {
                                                 application: t,
-                                                onSelectApplication: (e) => D(e, n)
+                                                onSelectApplication: (e) => O(e, n)
                                             },
                                             t.id
                                         );
@@ -128,7 +128,7 @@ n.Z = function (e) {
                       disablePaginationGap: !0,
                       hideMaxPage: !0,
                       currentPage: j,
-                      onPageChange: N
+                      onPageChange: E
                   })
               ]
           });

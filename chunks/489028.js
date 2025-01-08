@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(723047),
     v = n(416867),
     _ = n(903773),
-    I = n(215124),
-    N = n(326578),
+    N = n(215124),
+    I = n(326578),
     T = n(981631),
     j = n(674563),
     b = n(829857),
@@ -55,7 +55,7 @@ function y(e) {
             (await d(t, s, j.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
                 (0, v.B)({
-                    Icon: N.Z,
+                    Icon: I.Z,
                     title: S.intl.string(S.t['AP/2qa']),
                     body: S.intl.string(S.t.kHMgaG)
                 }));
@@ -98,7 +98,7 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: v, loading: N } = (0, h.Z)({ refreshOnDepChange: C }),
+        { teams: v, loading: I } = (0, h.Z)({ refreshOnDepChange: C }),
         j = r.useMemo(
             () =>
                 v.filter((e) => {
@@ -128,7 +128,7 @@ t.Z = (e) => {
                     : e,
             [Z, c]
         );
-    return N
+    return I
         ? (0, i.jsx)(a.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -162,7 +162,7 @@ t.Z = (e) => {
                   (0, i.jsx)(a.FormSection, {
                       title: S.intl.string(S.t['0n7R2d']),
                       className: E.selfDemonetization,
-                      children: (0, i.jsx)(I.Z, {
+                      children: (0, i.jsx)(N.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

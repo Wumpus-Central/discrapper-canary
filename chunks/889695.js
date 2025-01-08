@@ -10,23 +10,23 @@ var i = t(200651),
     l = t(192379),
     r = t(658722),
     o = t.n(r),
-    s = t(392711),
-    a = t.n(s),
+    a = t(392711),
+    s = t.n(a),
     c = t(149765),
     d = t(442837),
     u = t(481060),
-    g = t(271383),
-    b = t(430824),
-    m = t(594174),
+    b = t(271383),
+    m = t(430824),
+    g = t(594174),
     p = t(700785),
-    h = t(709054),
-    f = t(962086),
+    f = t(709054),
+    h = t(962086),
     _ = t(160404),
     x = t(225675),
-    C = t(981631),
-    v = t(388032),
-    T = t(22314);
-function I(e) {
+    I = t(981631),
+    C = t(388032),
+    v = t(22314);
+function T(e) {
     var n;
     return (0, i.jsx)('span', {
         style: { color: null !== (n = e.colorString) && void 0 !== n ? n : 'currentColor' },
@@ -35,34 +35,34 @@ function I(e) {
 }
 function N(e) {
     let { guildId: n } = e,
-        t = (0, d.e7)([m.default], () => m.default.getCurrentUser()),
-        r = (0, d.e7)([b.Z], () => b.Z.getGuild(n)),
-        s = (0, d.e7)([b.Z], () => b.Z.getRoles(n)),
+        t = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
+        r = (0, d.e7)([m.Z], () => m.Z.getGuild(n)),
+        a = (0, d.e7)([m.Z], () => m.Z.getRoles(n)),
         { impersonateType: N, viewingRoles: Z } = (0, d.cj)([_.Z], () => ({
             impersonateType: _.Z.getImpersonateType(n),
             viewingRoles: _.Z.getViewingRoles(n)
         })),
         w = N === x.z.SERVER_SHOP,
-        S = (0, d.e7)([g.ZP], () => (null != t ? g.ZP.getTrueMember(n, t.id) : null)),
-        [R, E] = (0, u.useMultiSelect)(null == Z ? [] : h.default.keys(Z)),
+        S = (0, d.e7)([b.ZP], () => (null != t ? b.ZP.getTrueMember(n, t.id) : null)),
+        [R, E] = (0, u.useMultiSelect)(null == Z ? [] : f.default.keys(Z)),
         k = l.useRef(r);
     l.useEffect(() => {
         let e = {},
             n = k.current;
         if (null != n && null != N) {
             for (let n of R) {
-                let t = s[n];
+                let t = a[n];
                 null != t && (e[n] = t);
             }
-            (0, f.Zm)(n.id, {
+            (0, h.Zm)(n.id, {
                 type: N,
                 roles: e
             });
         }
-    }, [R, N, s]);
+    }, [R, N, a]);
     let B =
             null != r && null != t && null != S
-                ? a()(s)
+                ? s()(a)
                       .filter((e) => -1 !== S.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
                       .first()
@@ -70,7 +70,7 @@ function N(e) {
         j = l.useMemo(
             () =>
                 null != r && null != t
-                    ? Object.values(s)
+                    ? Object.values(a)
                           .filter((e) => e.id !== r.id)
                           .filter((e) => {
                               var n;
@@ -78,12 +78,12 @@ function N(e) {
                           })
                           .filter((e) => (null == B ? void 0 : B.id) === e.id || p.r6(r, t.id, B, e))
                     : [],
-            [r, t, w, B, s]
+            [r, t, w, B, a]
         );
     if (null == t || null == r || null == S) return null;
     let O = {};
     return (S.roles.forEach((e) => {
-        let n = s[e];
+        let n = a[e];
         null != n && (O[n.id] = n);
     }),
     c.e$(
@@ -91,12 +91,12 @@ function N(e) {
             forceRoles: O,
             context: r
         }),
-        c.$e(C.Plq.MANAGE_GUILD, C.Plq.MANAGE_ROLES)
+        c.$e(I.Plq.MANAGE_GUILD, I.Plq.MANAGE_ROLES)
     ) || r.isOwner(t.id))
         ? (0, i.jsx)('div', {
-              className: T.container,
+              className: v.container,
               children: (0, i.jsx)(u.Combobox, {
-                  placeholder: v.intl.string(v.t.Sojqsr),
+                  placeholder: C.intl.string(C.t.Sojqsr),
                   value: R,
                   onChange: E,
                   autoFocus: !0,
@@ -109,7 +109,7 @@ function N(e) {
                                               u.ComboboxItem,
                                               {
                                                   value: t.id,
-                                                  children: [(0, i.jsx)(u.ComboboxItem.Label, { children: I(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, {})]
+                                                  children: [(0, i.jsx)(u.ComboboxItem.Label, { children: T(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, {})]
                                               },
                                               t.id
                                           )
@@ -118,7 +118,7 @@ function N(e) {
                               ),
                               []
                           ),
-                          t = s[r.getEveryoneRoleId()];
+                          t = a[r.getEveryoneRoleId()];
                       return (
                           null != t &&
                               n.push(
@@ -127,7 +127,7 @@ function N(e) {
                                       {
                                           value: t.id,
                                           disabled: !0,
-                                          children: [(0, i.jsx)(u.ComboboxItem.Label, { children: I(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, { checked: !0 })]
+                                          children: [(0, i.jsx)(u.ComboboxItem.Label, { children: T(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, { checked: !0 })]
                                       },
                                       t.id
                                   )
@@ -139,6 +139,6 @@ function N(e) {
           })
         : (0, i.jsx)(u.Text, {
               variant: 'text-md/medium',
-              children: v.intl.string(v.t.MNSTbW)
+              children: C.intl.string(C.t.MNSTbW)
           });
 }

@@ -21,8 +21,8 @@ var a = t(200651),
     I = t(213746),
     j = t(979007),
     S = t(981631),
-    N = t(388032),
-    E = t(890030);
+    E = t(388032),
+    N = t(890030);
 n.Z = function (e) {
     let { applicationId: n, onSelectApplication: t, onScroll: y, initialTab: A, onButtonsVisibilityChange: T } = e,
         P = i.useRef(null),
@@ -36,11 +36,11 @@ n.Z = function (e) {
         }, [n]),
         i.useEffect(() => () => T(!0), [T]);
     let L = null == R ? void 0 : R.storefront_available,
-        [O, D] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
+        [D, O] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
         k = i.useCallback(
             (e) => {
                 var n;
-                null === (n = P.current) || void 0 === n || n.scrollTo({ to: 0 }), D(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
+                null === (n = P.current) || void 0 === n || n.scrollTo({ to: 0 }), O(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
             },
             [t]
         );
@@ -75,36 +75,36 @@ n.Z = function (e) {
             () => [
                 {
                     id: j.GlobalDiscoveryAppsSections.ABOUT,
-                    label: N.intl.string(N.t.DkyHMD)
+                    label: E.intl.string(E.t.DkyHMD)
                 },
                 {
                     id: j.GlobalDiscoveryAppsSections.STORE,
-                    label: N.intl.string(N.t.jgEXGB)
+                    label: E.intl.string(E.t.jgEXGB)
                 }
             ],
             []
         ),
         U = i.useMemo(() => {
             if (null == R) return null;
-            switch (O) {
+            switch (D) {
                 case j.GlobalDiscoveryAppsSections.ABOUT:
                     return (0, a.jsx)(C.Z, { application: R });
                 case j.GlobalDiscoveryAppsSections.STORE:
                     return (0, a.jsx)(I.Z, { application: R });
             }
-        }, [O, R]),
+        }, [D, R]),
         Y = i.useCallback(
             (e) => {
                 (0, _.zZ)(S.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: n,
                     tab_name: e
                 }),
-                    D(e),
+                    O(e),
                     e === j.GlobalDiscoveryAppsSections.ABOUT ? (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(n)) : (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, e));
             },
             [n]
         ),
-        V = O === j.GlobalDiscoveryAppsSections.ABOUT;
+        V = D === j.GlobalDiscoveryAppsSections.ABOUT;
     return (0, a.jsx)(p.Z, {
         onScroll: y,
         ref: P,
@@ -113,33 +113,33 @@ n.Z = function (e) {
                 null == R
                     ? null == Z || Z === o.M.FETCHING
                         ? (0, a.jsx)('div', {
-                              className: E.centerContainer,
+                              className: N.centerContainer,
                               children: (0, a.jsx)(c.Z, { loading: !0 })
                           })
                         : (0, a.jsx)('div', {
-                              className: E.centerContainer,
-                              children: (0, a.jsx)(g.Z, { className: E.error })
+                              className: N.centerContainer,
+                              children: (0, a.jsx)(g.Z, { className: N.error })
                           })
                     : (0, a.jsxs)('div', {
-                          className: E.detailContainer,
+                          className: N.detailContainer,
                           children: [
                               (0, a.jsx)(x.Z, {
                                   application: R,
                                   onButtonsVisibilityChange: T
                               }),
                               (0, a.jsxs)('div', {
-                                  className: E.contentContainer,
+                                  className: N.contentContainer,
                                   children: [
                                       (0, a.jsxs)('div', {
-                                          className: E.contentTabsContainer,
+                                          className: N.contentTabsContainer,
                                           children: [
                                               L &&
                                                   (0, a.jsx)('div', {
-                                                      className: E.contentTabs,
+                                                      className: N.contentTabs,
                                                       children: (0, a.jsx)(m.Z, {
                                                           tabs: z,
                                                           onTabSelect: Y,
-                                                          selectedTab: O
+                                                          selectedTab: D
                                                       })
                                                   }),
                                               U,
@@ -154,7 +154,7 @@ n.Z = function (e) {
                                       }),
                                       V &&
                                           (0, a.jsx)(h.Z, {
-                                              className: E.sidebar,
+                                              className: N.sidebar,
                                               application: R,
                                               view: 'side'
                                           })

@@ -25,7 +25,7 @@ var i = n(200651),
     C = n(185923),
     v = n(388032),
     _ = n(575769);
-function I(e) {
+function N(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: a } = e,
         d = (0, s.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
         u = (0, s.e7)([p.ZP], () => p.ZP.getDefaultChannel(t)),
@@ -56,7 +56,7 @@ function I(e) {
             },
             [a, u]
         ),
-        I = r.useMemo(
+        N = r.useMemo(
             () =>
                 null == d && null == n.name
                     ? null
@@ -70,9 +70,9 @@ function I(e) {
                       },
             [n, d]
         ),
-        N = '';
+        I = '';
     return (
-        null != d ? (N = ':'.concat(d.name, ':')) : null != n.name && (N = x.ZP.convertSurrogateToName(n.name)),
+        null != d ? (I = ':'.concat(d.name, ':')) : null != n.name && (I = x.ZP.convertSurrogateToName(n.name)),
         (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
             position: 'top',
@@ -87,12 +87,12 @@ function I(e) {
                             className: _.emojiButton,
                             active: n,
                             tabIndex: 0,
-                            renderButtonContents: I
+                            renderButtonContents: N
                         }),
                         (0, i.jsx)(o.TextInput, {
                             inputClassName: _.emojiText,
                             placeholder: v.intl.string(v.t.qJPLNT),
-                            value: N,
+                            value: I,
                             'aria-labelledby': l,
                             readOnly: !0
                         })
@@ -102,24 +102,24 @@ function I(e) {
         })
     );
 }
-function N(e) {
+function I(e) {
     var t;
     let { guildId: n, initialData: l, benefitTypeInput: a, descriptionPlaceholder: s, canSubmit: c, onSave: m, onDelete: h, transitionState: g, onClose: x } = e,
         p = (0, u.Dt)(),
         f = (0, u.Dt)(),
         C = (0, u.Dt)(),
-        [N, T] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
+        [I, T] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
         [j, b] = r.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name
         })),
-        S = c && '' !== N && (null != j.id || null != j.name);
+        S = c && '' !== I && (null != j.id || null != j.name);
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
                 S &&
                     (m({
-                        description: N,
+                        description: I,
                         emojiId: j.id,
                         emojiName: j.name
                     }),
@@ -152,7 +152,7 @@ function N(e) {
                             titleId: f,
                             children: (0, i.jsx)(o.TextArea, {
                                 placeholder: s,
-                                value: N,
+                                value: I,
                                 rows: 1,
                                 autosize: !0,
                                 onChange: T,
@@ -163,7 +163,7 @@ function N(e) {
                         (0, i.jsx)(o.FormSection, {
                             title: v.intl.string(v.t.sMOuub),
                             titleId: C,
-                            children: (0, i.jsx)(I, {
+                            children: (0, i.jsx)(N, {
                                 guildId: n,
                                 emojiData: j,
                                 onSelectEmoji: b,
@@ -239,7 +239,7 @@ function T(e) {
                 })
             ]
         });
-    return (0, i.jsx)(N, {
+    return (0, i.jsx)(I, {
         guildId: t,
         initialData: l,
         benefitTypeInput: p,
@@ -275,7 +275,7 @@ function j(e) {
                 'aria-labelledby': x
             })
         });
-    return (0, i.jsx)(N, {
+    return (0, i.jsx)(I, {
         guildId: m,
         initialData: n,
         benefitTypeInput: p,

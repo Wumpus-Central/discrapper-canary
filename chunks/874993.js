@@ -23,21 +23,21 @@ var i = n(200651),
     C = n(546513),
     v = n(572456),
     _ = n(273504),
-    I = n(981631),
-    N = n(388032),
+    N = n(981631),
+    I = n(388032),
     T = n(925144);
 function j(e) {
     var t, n;
     let { guildId: j, setPreventNavigation: b = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : I.lds,
+        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : N.lds,
         Z = null != S,
         [L] = (0, h.RD)(A),
         { rulesByTriggerType: D } = (0, h.pH)(A),
         O = {
-            [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
-            [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
+            [g.vh.MEMBERS]: I.intl.string(I.t.sx4E5u),
+            [g.vh.CONTENT]: I.intl.string(I.t.fphZb2)
         },
         k = r.useMemo(
             () =>
@@ -46,16 +46,16 @@ function j(e) {
                     .filter(d.lm),
             [D]
         ),
-        P = {
+        M = {
             isInEditMode: Z,
             setEditingRule: E
         },
-        M = r.useRef(P);
+        P = r.useRef(M);
     r.useEffect(() => {
-        M.current = P;
+        P.current = M;
     }),
         r.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = M.current;
+            let { isInEditMode: e, setEditingRule: t } = P.current;
             e && t(null);
         }, [A]);
     let w = r.useCallback(
@@ -96,14 +96,14 @@ function j(e) {
                             guildId: A,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
-                            initWithEdit: y === I.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
+                            initWithEdit: y === N.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );
                 })
             });
     return (0, i.jsxs)(s.FormSection, {
-        title: N.intl.string(N.t.uRelg4),
+        title: I.intl.string(I.t.uRelg4),
         tag: 'h1',
         children: [
             (0, i.jsxs)('div', {
@@ -117,12 +117,12 @@ function j(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: N.intl.string(N.t.EwuSCQ)
+                                children: I.intl.string(I.t.EwuSCQ)
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 className: T.helpUrl,
-                                children: N.intl.format(N.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(I.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                children: I.intl.format(I.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(N.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
@@ -132,7 +132,7 @@ function j(e) {
                             (0, i.jsx)(s.Avatar, {
                                 src: (0, m.j)(),
                                 size: s.AvatarSizes.SIZE_80,
-                                'aria-label': N.intl.string(N.t.hG1StL)
+                                'aria-label': I.intl.string(I.t.hG1StL)
                             }),
                             (0, i.jsx)(s.TextBadge, {
                                 text: (0, i.jsxs)('div', {
@@ -146,7 +146,7 @@ function j(e) {
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
                                             className: T.automodText,
-                                            children: N.intl.string(N.t.hG1StL)
+                                            children: I.intl.string(I.t.hG1StL)
                                         })
                                     ]
                                 }),

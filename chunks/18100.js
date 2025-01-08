@@ -40,7 +40,7 @@ function p(e) {
     var t;
     let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
         v = (0, s.e7)([c.Z], () => c.Z.getGuild(n)),
-        { interests: _, description: I, playstyle: N, wildcardDescriptors: T, brandPrimaryColor: j } = l,
+        { interests: _, description: N, playstyle: I, wildcardDescriptors: T, brandPrimaryColor: j } = l,
         b = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
         S = Array.from(_),
         E = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
@@ -72,7 +72,7 @@ function p(e) {
                                 variant: 'text-xs/normal',
                                 color: 'text-secondary',
                                 className: g.clanInfoItem,
-                                children: null !== (t = (0, m.mv)(N)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
+                                children: null !== (t = (0, m.mv)(I)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
                             }),
                             null != v &&
                                 (0, i.jsx)(d.cS, {
@@ -85,7 +85,7 @@ function p(e) {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         className: g.descriptionText,
-                        children: (null == I ? void 0 : I.length) > 0 ? I : h.intl.string(h.t['/pfXKi'])
+                        children: (null == N ? void 0 : N.length) > 0 ? N : h.intl.string(h.t['/pfXKi'])
                     })
                 ]
             }),

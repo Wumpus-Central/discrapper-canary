@@ -21,8 +21,8 @@ var i = n(200651),
     C = n(267642),
     v = n(63063),
     _ = n(999382),
-    I = n(981631),
-    N = n(388032),
+    N = n(981631),
+    I = n(388032),
     T = n(981004);
 function j(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -32,11 +32,11 @@ function j(e) {
         : (0, i.jsx)(i.Fragment, {
               children:
                   0 === l && 0 === a
-                      ? N.intl.format(N.t.kF0HER, {
+                      ? I.intl.format(I.t.kF0HER, {
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
-                      : N.intl.format(N.t.neDJho, {
+                      : I.intl.format(I.t.neDJho, {
                             days: l,
                             hours: a,
                             tierName: r,
@@ -55,7 +55,7 @@ function b(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.guildBoostingGracePeriodTitle,
-                children: N.intl.format(N.t.LG7vvr, {})
+                children: I.intl.format(I.t.LG7vvr, {})
             }),
             (0, i.jsx)(j, {
                 endsAt: r,
@@ -95,7 +95,7 @@ function E() {
                 children: [
                     (0, i.jsx)(a.FormTitle, {
                         tag: a.FormTitleTags.H1,
-                        children: N.intl.string(N.t.nLovSU)
+                        children: I.intl.string(I.t.nLovSU)
                     }),
                     null != t && null != e
                         ? (0, i.jsx)(b, {
@@ -106,12 +106,12 @@ function E() {
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: I.intl.format(I.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, i.jsx)(g.Z, {
-                tiers: (0, C.cP)(null != e && e.hasFeature(I.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= I.B9o),
+                tiers: (0, C.cP)(null != e && e.hasFeature(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
                 renderTier: S
             }),
             (0, i.jsx)('div', { className: T.divider }),
@@ -119,11 +119,11 @@ function E() {
             n
                 ? (0, i.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void f.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void f.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: I.ZY5.GUILD_SETTINGS,
-                                  section: I.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: I.qAy.BUTTON_CTA
+                                  page: N.ZY5.GUILD_SETTINGS,
+                                  section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: N.qAy.BUTTON_CTA
                               }
                           })
                   })

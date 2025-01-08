@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(734893),
     v = n(216701),
     _ = n(150512),
-    I = n(516129),
-    N = n(813197),
+    N = n(516129),
+    I = n(813197),
     T = n(210887),
     j = n(314897),
     b = n(592125),
@@ -40,8 +40,8 @@ var i = n(200651),
     D = n(8426),
     O = n(969632),
     k = n(535907),
-    P = n(981631),
-    M = n(30513),
+    M = n(981631),
+    P = n(30513),
     w = n(486324),
     B = n(200299),
     U = n(388032),
@@ -106,7 +106,7 @@ function V(e) {
 }
 function Y(e) {
     var t, l, o, d, u;
-    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: I, onDragStart: N, onDragComplete: T, onDragReset: j } = e,
+    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: N, onDragStart: I, onDragComplete: T, onDragReset: j } = e,
         S = (0, s.e7)([b.Z], () => b.Z.getChannel(x.channelId)),
         R = (0, s.e7)([E.Z], () => E.Z.getGuild(g)),
         { customEmoji: A, unicodeEmoji: Z } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
@@ -119,14 +119,14 @@ function Y(e) {
     null != S && (0, C.kb)(S) ? !L && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
     let {
             drag: k,
-            dragSourcePosition: P,
-            drop: M,
+            dragSourcePosition: M,
+            drop: P,
             setIsDraggable: w
         } = (0, h.Z)({
             type: 'NEW_MEMBER_ACTION',
             index: p,
             optionId: x.channelId,
-            onDragStart: N,
+            onDragStart: I,
             onDragComplete: T,
             onDragReset: j
         }),
@@ -140,10 +140,10 @@ function Y(e) {
                             guildId: g,
                             action: x,
                             onSave: (e, t, n) => _(p, e, t, n),
-                            onDelete: () => I(p)
+                            onDelete: () => N(p)
                         });
                 });
-        }, [g, x, p, _, I]);
+        }, [g, x, p, _, N]);
     if (null == S || null == R) return null;
     let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
@@ -151,11 +151,11 @@ function Y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: a()(G.actionItem, {
-                    [G.dropIndicatorBefore]: null != P && p < P,
-                    [G.dropIndicatorAfter]: null != P && p > P,
+                    [G.dropIndicatorBefore]: null != M && p < M,
+                    [G.dropIndicatorAfter]: null != M && p > M,
                     [G.actionItemError]: null != O
                 }),
-                ref: (e) => k(M(e)),
+                ref: (e) => k(P(e)),
                 children: [
                     (0, i.jsx)('div', {
                         className: G.dragContainer,
@@ -417,7 +417,7 @@ function J(e) {
     var t;
     let { guildId: l } = e,
         a = (0, s.e7)([E.Z], () => E.Z.getGuild(l)),
-        o = null !== (t = null == a ? void 0 : a.hasFeature(P.oNc.BANNER)) && void 0 !== t && t,
+        o = null !== (t = null == a ? void 0 : a.hasFeature(M.oNc.BANNER)) && void 0 !== t && t,
         d = r.useCallback(
             (e, t) => {
                 if (null != l) {
@@ -445,10 +445,10 @@ function J(e) {
                 e.preventDefault(),
                     e.stopPropagation(),
                     null != a &&
-                        ((0, u.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        ((0, u.yw)(M.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                             location: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.LEARN_MORE
+                                section: M.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: M.qAy.LEARN_MORE
                             },
                             guild_id: null == a ? void 0 : a.id,
                             location_stack: []
@@ -456,18 +456,18 @@ function J(e) {
                         (0, p.Z)({
                             analyticsLocations: [],
                             analyticsSourceLocation: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.ONBOARDING_EDIT,
-                                page: P.ZY5.GUILD_SETTINGS
+                                section: M.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: M.qAy.ONBOARDING_EDIT,
+                                page: M.ZY5.GUILD_SETTINGS
                             },
                             guild: a,
-                            perks: (0, M.XO)()
+                            perks: (0, P.XO)()
                         }));
             },
             [a]
         );
     if (null == a) return null;
-    let h = (0, i.jsx)(I.Z, {
+    let h = (0, i.jsx)(N.Z, {
         image: a.homeHeader,
         makeURL: (e) =>
             null != e
@@ -496,7 +496,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: a,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: M.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -517,7 +517,7 @@ function J(e) {
                                       className: G.uploadButton,
                                       children: [
                                           U.intl.string(U.t.yG2pUl),
-                                          (0, i.jsx)(N.ZP, {
+                                          (0, i.jsx)(I.ZP, {
                                               onChange: d,
                                               maxFileSizeBytes: B.B
                                           })
@@ -543,7 +543,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: a,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: M.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -598,8 +598,8 @@ function $(e) {
         v = b.Z.getChannel(p),
         _ = null;
     (null == v || !(0, C.k3)(v)) && (_ = U.intl.string(U.t.kTdL8f));
-    let I = null == f || 0 === f.length,
-        N = y.ZP.getResourceChannelIconURL({
+    let N = null == f || 0 === f.length,
+        I = y.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon
         }),
@@ -672,11 +672,11 @@ function $(e) {
                                   className: G.dragIcon
                               })
                           }),
-                          null != N &&
+                          null != I &&
                               (0, i.jsx)('div', {
                                   className: G.iconWrapper,
                                   children: (0, i.jsx)('img', {
-                                      src: N,
+                                      src: I,
                                       className: G.icon,
                                       width: 32,
                                       height: 32,
@@ -693,7 +693,7 @@ function $(e) {
                                       color: 'header-primary',
                                       children: x
                                   }),
-                                  !I &&
+                                  !N &&
                                       (0, i.jsx)(c.Text, {
                                           className: G.resourceChannelDescription,
                                           variant: 'text-xs/medium',
@@ -781,7 +781,7 @@ function et(e) {
         }),
         a = (0, s.Wu)([O.Z], () => O.Z.getDismissedSuggestedChannelIds(t)),
         o = (0, s.e7)([S.ZP], () => (null == t ? [] : S.ZP.getSelectableChannels(t)))
-            .filter((e) => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && A.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
+            .filter((e) => !a.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === M.d4z.GUILD_TEXT && A.Uu(M.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(M.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = r.useCallback(() => {
             let e = o.map((e) => e.channel.id);

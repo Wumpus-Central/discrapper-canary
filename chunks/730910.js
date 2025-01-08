@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(999382),
     v = n(743475),
     _ = n(983135),
-    I = n(8426),
-    N = n(969632),
+    N = n(8426),
+    I = n(969632),
     T = n(570961),
     j = n(208665),
     b = n(359191),
@@ -38,16 +38,16 @@ var i = n(200651),
     O = n(203035);
 function k() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(P, { guild: e });
+    return null == e ? null : (0, i.jsx)(M, { guild: e });
 }
-function P(e) {
+function M(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
         k = (0, E.Z)(l),
         {
-            hasChanges: P,
-            hasConfiguredAnythingForCurrentStep: M,
+            hasChanges: M,
+            hasConfiguredAnythingForCurrentStep: P,
             hasErrors: w
         } = (0, o.cj)([b.Z], () => ({
             hasChanges: b.Z.hasChanges(),
@@ -99,13 +99,13 @@ function P(e) {
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {
             let e = j.Z.advancedMode;
-            if (P)
+            if (M)
                 try {
                     if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (C === S.PG.HOME_SETTINGS) {
-                        let e = N.Z.getSettings();
-                        await (0, I.oo)(t.id, e);
+                        let e = I.Z.getSettings();
+                        await (0, N.oo)(t.id, e);
                     }
                 } catch {
                     return !1;
@@ -117,7 +117,7 @@ function P(e) {
                 ...(0, g.hH)(l),
                 step: S.PG[C],
                 back: !1,
-                skip: !P
+                skip: !M
             }),
                 (0, _.Nb)((0, S.lg)(C)),
                 (await X()) && (0, _.IG)(l, C);
@@ -153,7 +153,7 @@ function P(e) {
         }),
         et = (0, i.jsx)(m.Button, {
             className: O.button,
-            color: M ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
+            color: P ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
             look: m.Button.Looks.FILLED,
             size: m.Button.Sizes.SMALL,
             onClick: Q,
@@ -162,7 +162,7 @@ function P(e) {
                 className: O.button,
                 style: { color: Y },
                 children: [
-                    M ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
+                    P ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
                     (0, i.jsx)(x.Z, {
                         className: O.arrow,
                         direction: x.Z.Directions.RIGHT

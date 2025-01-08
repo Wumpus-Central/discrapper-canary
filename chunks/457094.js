@@ -162,8 +162,8 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
     ),
     e3 = (0, b.e)(Z.Z, null, { passProps: !1 }),
     e5 = (0, b.e)(T.default, null, { passProps: !1 }),
-    e9 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
-function e6(e) {
+    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+function e9(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
         guildId: null != t ? t : eJ.ME,
@@ -172,7 +172,7 @@ function e6(e) {
         threadId: r
     };
 }
-let e7 = [
+let e6 = [
     {
         path: [eJ.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(':inviteCode')],
         render(e) {
@@ -366,7 +366,7 @@ let e7 = [
     }
 ];
 function e8(e) {
-    for (let { path: t, isChatRoute: n } of e7) {
+    for (let { path: t, isChatRoute: n } of e6) {
         if (!n) continue;
         let i = (0, a.LX)(e, { path: t });
         if (null != i) return i;
@@ -452,7 +452,7 @@ class tt extends r.PureComponent {
             if (null != t)
                 null !=
                     (function (e) {
-                        for (let { path: t, isSessionRequired: n } of e7) {
+                        for (let { path: t, isSessionRequired: n } of e6) {
                             if (!n) continue;
                             let i = (0, a.LX)(e, { path: t });
                             if (null != i) return i;
@@ -463,7 +463,7 @@ class tt extends r.PureComponent {
             !(function (e, t) {
                 let n = e8(e);
                 if (null == n) return;
-                let { guildId: i, channelId: r, messageId: s, threadId: o } = e6(n),
+                let { guildId: i, channelId: r, messageId: s, threadId: o } = e9(n),
                     c = (0, ef.Ss)(i),
                     d = (0, ef.cq)(r),
                     m = (0, ef.cq)(o),
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e9.some((e) => {
+                        !e7.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
@@ -524,7 +524,7 @@ class tt extends r.PureComponent {
         let { pathname: t } = e,
             n = e8(t);
         if (null == n) return null;
-        let { guildId: i, channelId: r, threadId: l } = e6(n),
+        let { guildId: i, channelId: r, threadId: l } = e9(n),
             a = (0, ef.Ss)(i) && i !== eJ.ME && i !== eJ.I_8;
         if (null != r && (0, ef.cq)(r) && !(0, e$.AB)(r) && a) {
             let n = ew.Z.getChannel(r);
@@ -574,7 +574,7 @@ class tt extends r.PureComponent {
                             from: '/channels',
                             to: '/'
                         }),
-                        e7.map((e) => {
+                        e6.map((e) => {
                             let { path: t, render: n } = e;
                             return (0, i.jsx)(
                                 a.AW,

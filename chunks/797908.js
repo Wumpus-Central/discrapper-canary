@@ -17,9 +17,9 @@ n.Z = function (e) {
     let { application: x, onSelectApplication: h, showCategory: b = !1 } = e,
         I = (0, c.Z)({ application: x }),
         j = null === (n = x.categories) || void 0 === n ? void 0 : n[0],
-        [S, N] = i.useState(!1),
-        E = i.useCallback((e) => {
-            e && N(!0);
+        [S, E] = i.useState(!1),
+        N = i.useCallback((e) => {
+            e && E(!0);
         }, []),
         y = (0, o.lf)(x),
         A = i.useCallback(() => {
@@ -47,7 +47,7 @@ n.Z = function (e) {
         }),
         Z = b && null != j;
     return (0, a.jsx)(r.$, {
-        onChange: E,
+        onChange: N,
         active: !S,
         children: (0, a.jsx)('div', {
             className: _.container,

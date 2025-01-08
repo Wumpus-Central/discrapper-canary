@@ -127,7 +127,7 @@ function j(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback: () => {
-                                    !N() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, v.GlobalDiscoveryAppsSections.STORE));
+                                    !E() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, v.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -154,7 +154,7 @@ function j(e) {
                             {
                                 modalKey: u,
                                 onCloseCallback: () => {
-                                    !N() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, v.GlobalDiscoveryAppsSections.STORE));
+                                    !E() && (0, f.Gp)(C.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(m, v.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -201,6 +201,6 @@ function S(e) {
         })
     });
 }
-function N() {
+function E() {
     return window.location.pathname.startsWith('/login');
 }

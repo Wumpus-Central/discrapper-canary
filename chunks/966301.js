@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(981631),
     v = n(290511),
     _ = n(388032),
-    I = n(554205);
-function N(e) {
+    N = n(554205);
+function I(e) {
     let { guildId: t, prompts: n } = e,
         s = (0, l.e7)([m.Z], () => m.Z.editedDefaultChannelIds),
         [c, u] = (0, d.dF)(t, n, [...s]),
@@ -37,23 +37,23 @@ function N(e) {
         [f, C] = r.useState(!1),
         v = f ? a.ChevronSmallDownIcon : a.ChevronSmallUpIcon;
     return (0, i.jsxs)('div', {
-        className: I.channelCoverage,
+        className: N.channelCoverage,
         children: [
             (0, i.jsxs)(a.Clickable, {
-                className: I.coverageHeader,
+                className: N.coverageHeader,
                 onClick: () => C(!f),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: I.warningTextContainer,
+                        className: N.warningTextContainer,
                         children: [
                             x <= 85 &&
                                 (0, i.jsx)(a.CircleWarningIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: I.warning
+                                    className: N.warning
                                 }),
                             (0, i.jsx)(a.Text, {
-                                className: I.coverageTitle,
+                                className: N.coverageTitle,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 children: _.intl.format(_.t.nMVKCQ, { numChannelsMissing: g - h })
@@ -61,17 +61,17 @@ function N(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: I.progressContainer,
+                        className: N.progressContainer,
                         children: [
                             (0, i.jsx)(a.Progress, {
-                                className: I.coverageProgress,
+                                className: N.coverageProgress,
                                 foregroundColor: x > 85 ? 'var(--status-positive)' : 'var(--status-warning)',
                                 percent: x
                             }),
                             (0, i.jsx)(v, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.caret
+                                className: N.caret
                             })
                         ]
                     })
@@ -79,7 +79,7 @@ function N(e) {
             }),
             f
                 ? (0, i.jsxs)('div', {
-                      className: I.channelCoverageDetails,
+                      className: N.channelCoverageDetails,
                       children: [
                           (0, i.jsx)(a.Text, {
                               variant: 'text-xs/semibold',
@@ -87,16 +87,16 @@ function N(e) {
                               children: _.intl.string(_.t['0FM4i4'])
                           }),
                           (0, i.jsx)('div', {
-                              className: I.channels,
+                              className: N.channels,
                               children: u.map((e) => {
                                   var t;
                                   let n = null !== (t = (0, o.KS)(e)) && void 0 !== t ? t : a.TextIcon;
                                   return (0, i.jsx)(
                                       'div',
                                       {
-                                          className: I.channelPill,
+                                          className: N.channelPill,
                                           children: (0, i.jsxs)(a.Text, {
-                                              className: I.channel,
+                                              className: N.channel,
                                               variant: 'text-xs/normal',
                                               color: 'interactive-active',
                                               children: [
@@ -113,7 +113,7 @@ function N(e) {
                               })
                           }),
                           (0, i.jsx)('div', {
-                              className: I.channelCoverageHint,
+                              className: N.channelCoverageHint,
                               children:
                                   p > 0
                                       ? (0, i.jsxs)(i.Fragment, {
@@ -182,7 +182,7 @@ function j(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(a.Heading, {
-                className: I.header,
+                className: N.header,
                 variant: 'heading-lg/extrabold',
                 children: d ? _.intl.string(_.t.AGjtFh) : _.intl.string(_.t.dqCzoa)
             }),
@@ -192,7 +192,7 @@ function j(e) {
                 children: _.intl.string(_.t['q/6MLC'])
             }),
             (0, i.jsxs)('div', {
-                className: I.links,
+                className: N.links,
                 children: [
                     (0, i.jsx)(a.Anchor, {
                         target: '_blank',
@@ -203,7 +203,7 @@ function j(e) {
                             children: _.intl.string(_.t.Ok55Ki)
                         })
                     }),
-                    (0, i.jsx)('div', { className: I.dot }),
+                    (0, i.jsx)('div', { className: N.dot }),
                     (0, i.jsx)(a.Anchor, {
                         onClick: T,
                         children: (0, i.jsx)(a.Text, {
@@ -212,16 +212,16 @@ function j(e) {
                             children: _.intl.string(_.t['6gsjdH'])
                         })
                     }),
-                    (0, i.jsx)('div', { className: I.dot }),
+                    (0, i.jsx)('div', { className: N.dot }),
                     (0, i.jsx)(p.Wu, { guildId: t.id })
                 ]
             }),
-            (0, i.jsx)(N, {
+            (0, i.jsx)(I, {
                 guildId: t.id,
                 prompts: o
             }),
             (0, i.jsx)('div', {
-                className: I.prompts,
+                className: N.prompts,
                 children: s
                     ? (0, i.jsx)(a.Spinner, {})
                     : (0, i.jsx)(f.Z, {

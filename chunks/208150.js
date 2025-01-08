@@ -17,12 +17,12 @@ var r = n(442837),
     C = n(611480),
     v = n(388032),
     _ = n(64462);
-let I = {
+let N = {
         page: f.ZY5.GUILD_SETTINGS,
         section: f.jXE.GUILD_SETTINGS_STICKERS,
         object: f.qAy.BOOSTING_BANNER
     },
-    N = (e) => {
+    I = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, s.ZP)(),
             r = (0, g.vn)(t.id)[f.Eu4.TIER_1] - t.premiumSubscriberCount;
@@ -49,7 +49,7 @@ let I = {
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: I,
+                                    analyticsLocation: N,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: r
                                 }),
@@ -145,7 +145,7 @@ t.Z = () => {
                               (0, i.jsx)(T, {})
                           ]
                       })
-                    : (0, i.jsx)(N, { guild: e }),
+                    : (0, i.jsx)(I, { guild: e }),
                 (0, i.jsx)(l.FormDivider, { className: _.divider }),
                 (0, i.jsx)(m.Z, { guild: e })
             ]

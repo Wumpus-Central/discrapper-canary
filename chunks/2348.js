@@ -22,7 +22,7 @@ var i = n(200651),
     C = n(981631),
     v = n(388032),
     _ = n(683559);
-function I(e) {
+function N(e) {
     let { guild: t, channel: r } = e,
         l = (0, p.Mf)(r.id);
     return 'null' === r.id
@@ -82,7 +82,7 @@ function I(e) {
               ]
           });
 }
-let N = r.memo(function () {
+let I = r.memo(function () {
         return (0, i.jsx)('div', { className: _.separator });
     }),
     T = r.memo(function (e) {
@@ -98,7 +98,7 @@ let N = r.memo(function () {
         );
     }),
     j = r.memo(function (e) {
-        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: I, tooltipDirection: j = 'right' } = e,
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: N, tooltipDirection: j = 'right' } = e,
             b = (0, p.Mf)(t.id, r.id),
             S = (0, p.t4)(t.id, r.id),
             E = (0, p.EH)(t.id, r.id),
@@ -154,7 +154,7 @@ let N = r.memo(function () {
                         (0, i.jsxs)(o.Clickable, {
                             className: a()(_.channelRow, {
                                 [_.firstChannel]: g,
-                                [_.lastChannel]: I,
+                                [_.lastChannel]: N,
                                 [_.disabled]: S
                             }),
                             ...e,
@@ -230,7 +230,7 @@ let N = r.memo(function () {
                             ]
                         })
                 }),
-                !I && (0, i.jsx)(N, {})
+                !N && (0, i.jsx)(I, {})
             ]
         });
     });
@@ -240,7 +240,7 @@ function b(e) {
             (e) => {
                 let r = t._categories[e];
                 return (0, i.jsx)(
-                    I,
+                    N,
                     {
                         channel: r.channel,
                         guild: n

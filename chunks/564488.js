@@ -15,8 +15,8 @@ t.Z = r.memo(function (e) {
         [C] = r.useState(() => !(0, l.Vb)(t)),
         v = (null == g ? void 0 : g.id) === t.id || n,
         _ = (0, a.U)(null == t ? void 0 : t.id),
-        I = v && null != g ? g : t,
-        N = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
+        N = v && null != g ? g : t,
+        I = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
         T = r.useCallback(() => {
             x(t.guildId, t.triggerType);
         }, [t.guildId, t.triggerType, x]),
@@ -33,14 +33,14 @@ t.Z = r.memo(function (e) {
         v
             ? !h && p(null)
             : h
-              ? N(() => {
+              ? I(() => {
                     p(t);
                 })
               : p(t);
-    }, [v, h, N, t, p]);
+    }, [v, h, I, t, p]);
     return (0, i.jsx)(d.Z, {
         renderHeader: (0, i.jsx)(u.Z, {
-            rule: I,
+            rule: N,
             forceSetup: C && !v && !_,
             triggerType: t.triggerType,
             isEditMode: v,
@@ -54,7 +54,7 @@ t.Z = r.memo(function (e) {
         children:
             v &&
             (0, i.jsx)(c.Z, {
-                rule: I,
+                rule: N,
                 isLoading: f,
                 onChangeRule: j
             })

@@ -34,11 +34,11 @@ function f(e, t, n) {
 let C = -1,
     v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
     _ = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    I = {
+    N = {
         tension: 140,
         friction: 30
     },
-    N = {
+    I = {
         tension: 800,
         friction: 20
     };
@@ -131,7 +131,7 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(m.Spring, {
                         from: { scale: 1 },
                         to: { scale: f ? 1.625 : 1 },
-                        config: N,
+                        config: I,
                         children: (t) =>
                             (0, r.jsx)(o.animated.div, {
                                 ...e,
@@ -194,7 +194,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)(m.Spring, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: I,
+                    config: N,
                     delay: i ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: i ? void 0 : this.handleFinishedInitialAnimation,

@@ -24,10 +24,10 @@ var i = n(200651),
 function C(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: s, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
         _ = r.useRef(null),
-        I = r.useRef(null),
-        { drag: N, dragPreview: T, drop: j, isDragging: b } = (0, x.Z)(_, d, u, C);
+        N = r.useRef(null),
+        { drag: I, dragPreview: T, drop: j, isDragging: b } = (0, x.Z)(_, d, u, C);
     return (
-        N(I),
+        I(N),
         T(j(_)),
         (0, i.jsxs)('div', {
             ref: _,
@@ -47,7 +47,7 @@ function C(e) {
                         }),
                         !v &&
                             (0, i.jsx)('div', {
-                                ref: I,
+                                ref: N,
                                 className: f.dragIconWrapper,
                                 'data-dnd-name': h,
                                 children: (0, i.jsx)(o.DragIcon, {

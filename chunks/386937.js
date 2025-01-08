@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(271383),
     v = n(594174),
     _ = n(267642),
-    I = n(624138),
-    N = n(981631),
+    N = n(624138),
+    I = n(981631),
     T = n(388032),
     j = n(534560);
 function b(e, t, n) {
@@ -34,7 +34,7 @@ function b(e, t, n) {
         e
     );
 }
-let S = (0, I.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let S = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class E extends r.Component {
     componentDidMount() {
         this.measure();
@@ -153,7 +153,7 @@ class E extends r.Component {
             b(this, 'defaultTierRef', r.createRef()),
             b(this, 'state', {
                 tierPositions: null,
-                animatedTier: N.Eu4.NONE
+                animatedTier: I.Eu4.NONE
             }),
             b(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,

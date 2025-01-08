@@ -21,8 +21,8 @@ var a = t(200651),
     I = t(314897),
     j = t(594174),
     S = t(626135),
-    N = t(31569),
-    E = t(881294),
+    E = t(31569),
+    N = t(881294),
     y = t(975907),
     A = t(119014),
     T = t(258971),
@@ -30,8 +30,8 @@ var a = t(200651),
     R = t(726941),
     Z = t(666697),
     L = t(548514),
-    O = t(370648),
-    D = t(569527),
+    D = t(370648),
+    O = t(569527),
     k = t(979007),
     M = t(981631),
     B = t(388032),
@@ -80,10 +80,10 @@ function w(e) {
 }
 function H() {
     let e = i.useCallback(() => {
-            (0, E.qF)();
+            (0, N.qF)();
         }, []),
         n = i.useCallback(() => {
-            (0, E.rf)();
+            (0, N.rf)();
         }, []);
     return (0, a.jsxs)(c.Notice, {
         color: c.NoticeColors.BRAND,
@@ -124,7 +124,7 @@ n.default = function () {
     let n = (0, s.e7)([I.default], () => !I.default.isAuthenticated()),
         { onScroll: t, scrollPosition: r, resetScrollPosition: l } = (0, g.M)(),
         u = (0, T.Xh)(),
-        L = (0, E.nu)(),
+        L = (0, N.nu)(),
         F = (null == u ? void 0 : u.type) === T.m_.CATEGORY ? u.categoryId : void 0,
         { applicationId: z, section: U } = (null == u ? void 0 : u.type) === T.m_.APPLICATION ? u : {},
         { query: Y, categoryId: V } = (null == u ? void 0 : u.type) === T.m_.SEARCH ? u : {},
@@ -162,7 +162,7 @@ n.default = function () {
     let ei = null != z,
         er = (null == u ? void 0 : u.type) === T.m_.SEARCH,
         { searchQuery: el, onSearchTextChange: eo, onClearSearch: es, onSearchSubmit: ec } = (0, y.M)({ initialQuery: null != Y ? Y : '' }),
-        ed = N.Z.useField('searchBarState'),
+        ed = E.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: eu,
             onCollapsedSearchBarClick: em,
@@ -171,7 +171,7 @@ n.default = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === el.trim(),
             searchBarState: ed,
-            setSearchBarState: (e) => N.Z.setState({ searchBarState: e })
+            setSearchBarState: (e) => E.Z.setState({ searchBarState: e })
         }),
         e_ = i.useCallback(
             (e) => {
@@ -187,7 +187,7 @@ n.default = function () {
         eC = (0, o.debounce)((e) => {
             let { scrollTop: n, offsetHeight: t, scrollHeight: a, location: i } = e;
             n > 0 &&
-                (0, E.zZ)(M.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
+                (0, N.zZ)(M.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (n + t) / a,
                     current_page: i
                 });
@@ -265,12 +265,12 @@ n.default = function () {
                               onButtonsVisibilityChange: ee
                           })
                         : er
-                          ? (0, a.jsx)(D.Z, {
+                          ? (0, a.jsx)(O.Z, {
                                 onSelectApplication: eg,
                                 onScroll: (e) => ex(e, T.m_.SEARCH)
                             })
                           : Q === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
-                            ? (0, a.jsx)(O.Z, {
+                            ? (0, a.jsx)(D.Z, {
                                   onScroll: (e) => ex(e, T.m_.HOME),
                                   onSelectApplication: eg
                               })

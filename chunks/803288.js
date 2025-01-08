@@ -26,8 +26,8 @@ var i = n(200651),
     C = n(246946),
     v = n(709586),
     _ = n(267642),
-    I = n(999382),
-    N = n(621319),
+    N = n(999382),
+    I = n(621319),
     T = n(44550),
     j = n(770270),
     b = n(981631),
@@ -47,23 +47,23 @@ function y(e, t, n) {
         e
     );
 }
-let A = s.ZP.connectStores([I.Z, T.Z], () => {
+let A = s.ZP.connectStores([N.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
-        t = I.Z.getGuildId();
+        t = N.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
         onReset() {
-            (0, N.H7)();
+            (0, I.H7)();
         },
         onSave() {
-            null != t && (0, N.en)(t, e);
+            null != t && (0, I.en)(t, e);
         }
     };
 })(d.Z);
 class Z extends r.PureComponent {
     componentWillUnmount() {
-        (0, N.xv)();
+        (0, I.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
@@ -146,10 +146,10 @@ class Z extends r.PureComponent {
         }
     }
     handleRemoveVanityURL() {
-        (0, N.Gy)('');
+        (0, I.Gy)('');
     }
     handleInviteCodeChange(e) {
-        (0, N.Gy)(e.replace(/ /g, '-'));
+        (0, I.Gy)(e.replace(/ /g, '-'));
     }
     render() {
         let { hide: e, guild: t } = this.props;
@@ -228,7 +228,7 @@ class Z extends r.PureComponent {
     }
 }
 function L() {
-    let e = (0, s.e7)([I.Z], () => I.Z.getGuild()),
+    let e = (0, s.e7)([N.Z], () => N.Z.getGuild()),
         t = (0, s.cj)([T.Z], () => ({
             vanityURLCode: T.Z.vanityURLCode,
             vanityURLUses: T.Z.vanityURLUses,

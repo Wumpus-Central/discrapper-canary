@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(325476),
     v = n(496675),
     _ = n(671533),
-    I = n(946724),
-    N = n(970129),
+    N = n(946724),
+    I = n(970129),
     T = n(712181),
     j = n(420966),
     b = n(203377),
@@ -34,8 +34,8 @@ let y = 'DRAGGABLE_ROLE';
 function A(e) {
     var t, r;
     let l,
-        { guild: d, role: h, highestRole: g, selectedItem: x, onClick: C, currentPosition: v, onDragStart: _, onDragReset: I, onDragComplete: T, roleStyle: j } = e,
-        b = (0, N.T)(d, g, h),
+        { guild: d, role: h, highestRole: g, selectedItem: x, onClick: C, currentPosition: v, onDragStart: _, onDragReset: N, onDragComplete: T, roleStyle: j } = e,
+        b = (0, I.T)(d, g, h),
         E = (0, p.pM)(d.id, h.id),
         A = null == b && !E,
         Z = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
@@ -52,7 +52,7 @@ function A(e) {
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
-                    I();
+                    N();
                     return;
                 }
                 T(n.roleId);
@@ -110,7 +110,7 @@ function A(e) {
             children: [
                 l,
                 null != b
-                    ? (0, i.jsx)(N.Z, {
+                    ? (0, i.jsx)(I.Z, {
                           className: R.lock,
                           tooltipText: b
                       })
@@ -127,11 +127,11 @@ function A(e) {
 }
 function Z(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: s } = e,
-        o = (0, d.e7)([I.Z], () => I.Z.roles),
+        o = (0, d.e7)([N.Z], () => N.Z.roles),
         c = (0, d.e7)([v.Z], () => v.Z.getHighestRole(t)),
         m = (0, d.e7)([x.Z], () => x.Z.roleStyle),
         [p, f] = r.useState(o.length),
-        { scrolledToTop: N, handleScroll: S } = (0, j.V)(),
+        { scrolledToTop: I, handleScroll: S } = (0, j.V)(),
         { handleDragStart: y, handleDragReset: Z, handleDragComplete: L } = (0, T.Z)(o),
         D = r.useRef(null),
         O = r.useCallback(
@@ -157,7 +157,7 @@ function Z(e) {
             className: R.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: a()(R.titleContainer, { [R.titleElevated]: !N }),
+                    className: a()(R.titleContainer, { [R.titleElevated]: !I }),
                     children: [
                         (0, i.jsxs)(u.Clickable, {
                             className: R.title,
