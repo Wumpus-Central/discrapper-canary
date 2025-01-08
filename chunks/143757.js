@@ -29,8 +29,8 @@ var i = n(200651),
     v = n(973616),
     S = n(592125),
     T = n(626135),
-    A = n(823379),
-    b = n(404295),
+    b = n(823379),
+    A = n(404295),
     Z = n(728345),
     x = n(812206),
     L = n(981631),
@@ -155,7 +155,7 @@ let M = (e) => {
     });
 };
 function w() {
-    let e = (0, b.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
         t = (0, s.e7)([N.ZP], () => N.ZP.showPlayAgain),
         { frecentApps: n } = (0, f.f)({
             channel: void 0,
@@ -167,7 +167,7 @@ function w() {
 }
 function k(e) {
     let { bottomDivider: t } = e,
-        n = (0, b.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
+        n = (0, A.en)(p.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: l } = (0, f.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -176,21 +176,20 @@ function k(e) {
         }),
         [s, o] = r.useState(void 0),
         { analyticsLocations: c } = (0, g.ZP)(p.Z.APP_DMS_QUICK_LAUNCHER),
-        d = w(),
-        [u, h] = r.useState(!1),
-        m = r.useMemo(
+        d = r.useRef(!1),
+        u = r.useMemo(
             () =>
                 l
                     .map((e) => e.application)
-                    .filter(A.lm)
+                    .filter(b.lm)
                     .slice(0, 5),
             [l]
         );
     return (
         r.useLayoutEffect(() => {
             var e;
-            if (!u && !!d) h(!0), T.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = m.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
-        }, [d, m, u]),
+            if (!d.current) (d.current = !0), T.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        }, [u]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -208,7 +207,7 @@ function k(e) {
                             })
                         }),
                         (0, i.jsx)(D, {
-                            frecentApps: m,
+                            frecentApps: u,
                             loadingAppId: s,
                             setLoadingAppId: o,
                             analyticsLocations: c

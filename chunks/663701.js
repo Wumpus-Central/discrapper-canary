@@ -26,8 +26,8 @@ var i = n(200651),
     v = n(540059),
     S = n(243778),
     T = n(922409),
-    A = n(899740),
-    b = n(28476),
+    b = n(899740),
+    A = n(28476),
     Z = n(880257),
     x = n(631885),
     L = n(522558),
@@ -133,14 +133,14 @@ let ee = (e) => {
         });
     },
     en = () => {
-        let e = (0, A.q)();
+        let e = (0, b.q)();
         return e > 0 ? (0, i.jsx)(p.NumberBadge, { count: e }) : null;
     },
     ei = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, T._)();
-        if (!(0, b.a)()) return null;
+        if (!(0, A.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -217,21 +217,8 @@ function es(e) {
     if (e.startsWith(q.Z5c.APPLICATION_STORE)) return e === q.Z5c.APPLICATION_STORE ? q.ZY5.STORE_DIRECTORY_HOME : e.startsWith(q.Z5c.APPLICATION_STORE) ? q.ZY5.STORE_DIRECTORY_BROWSE : q.ZY5.STORE_LISTING;
     return q.ZY5.DM_CHANNEL;
 }
-let eo = (e) => {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
-        [o, c] = (0, D.Z)((e) => {
-            let { channelId: t, path: n } = e;
-            return [t, n];
-        }, s.X),
-        u = (0, v.Q3)('PrivateChannels'),
-        h = (0, y.i)({ selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE) }),
-        m = (0, b.a)(),
-        g = (function () {
-            let e = k.Ex.useSetting(),
-                t = (0, Z.Z)();
-            return e && t;
-        })(),
-        f = (0, I.n)();
+let eo = r.memo(function (e) {
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l, isVisualRefreshEnabled: s, shouldShowNitroTab: o, shouldShowMessageRequestsRow: c, shouldShowFamilyCenterRow: u, shouldShowQuickLauncherRow: h, selectedChannelId: m, path: g } = e;
     return (0, i.jsxs)('nav', {
         className: $.privateChannels,
         'aria-label': J.intl.string(J.t.ZH9aPz),
@@ -242,7 +229,7 @@ let eo = (e) => {
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
                     className: a()($.searchBar, { [$.themedHeaderMobile]: d.tq }),
-                    children: u
+                    children: s
                         ? (0, i.jsx)(p.Button, {
                               grow: !0,
                               color: p.Button.Colors.PRIMARY,
@@ -261,26 +248,26 @@ let eo = (e) => {
             }),
             (0, i.jsxs)(Y.Z, {
                 ...e,
-                version: c,
-                selectedChannelId: o,
+                version: g,
+                selectedChannelId: m,
                 showDMHeader: !0,
                 children: [
-                    (0, i.jsx)(ee, { selected: null != c ? c === q.Z5c.FRIENDS : r === q.Z5c.FRIENDS }, 'friends'),
+                    (0, i.jsx)(ee, { selected: null != g ? g === q.Z5c.FRIENDS : r === q.Z5c.FRIENDS }, 'friends'),
                     n && t
                         ? (0, i.jsx)(
                               et,
                               {
-                                  selected: null == c ? null != r && r.startsWith(q.Z5c.APPLICATION_LIBRARY) : c.startsWith(q.Z5c.APPLICATION_LIBRARY),
+                                  selected: null == g ? null != r && r.startsWith(q.Z5c.APPLICATION_LIBRARY) : g.startsWith(q.Z5c.APPLICATION_LIBRARY),
                                   hideGameUpdateProgressIndicator: r === q.Z5c.APPLICATION_LIBRARY
                               },
                               'library'
                           )
                         : null,
-                    h
+                    o
                         ? (0, i.jsx)(
                               y.g,
                               {
-                                  selected: null == c ? l : c.startsWith(q.Z5c.APPLICATION_STORE),
+                                  selected: null == g ? l : g.startsWith(q.Z5c.APPLICATION_STORE),
                                   route: q.Z5c.APPLICATION_STORE,
                                   locationState: {
                                       analyticsSource: {
@@ -293,11 +280,11 @@ let eo = (e) => {
                               'premium'
                           )
                         : null,
-                    m ? (0, i.jsx)(ei, { selected: null == c ? null != r && r.startsWith(q.Z5c.MESSAGE_REQUESTS) : c === q.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
+                    c ? (0, i.jsx)(ei, { selected: null == g ? null != r && r.startsWith(q.Z5c.MESSAGE_REQUESTS) : g === q.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                     (0, i.jsx)(
                         C.i,
                         {
-                            selected: c === q.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(q.Z5c.COLLECTIBLES_SHOP)),
+                            selected: g === q.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(q.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
                                     page: es(r),
@@ -308,14 +295,14 @@ let eo = (e) => {
                         },
                         'discord-shop'
                     ),
-                    g ? (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != c && c.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
-                    u ? (0, i.jsx)(ec, {}, 'section-divider-top') : null,
-                    f ? (0, i.jsx)(I.Z, { bottomDivider: u ? (0, i.jsx)(ec, {}) : null }, 'dm-quick-launcher') : null
+                    u ? (0, i.jsx)(er, { selected: (null != r && r.startsWith(q.Z5c.FAMILY_CENTER)) || (null != g && g.startsWith(q.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
+                    s ? (0, i.jsx)(ec, {}, 'section-divider-top') : null,
+                    h ? (0, i.jsx)(I.Z, { bottomDivider: s ? (0, i.jsx)(ec, {}) : null }, 'dm-quick-launcher') : null
                 ]
             })
         ]
     });
-};
+});
 function ec() {
     return (0, i.jsx)('div', { className: $.sectionDivider });
 }
@@ -337,13 +324,33 @@ function ed() {
         n = !k.bm.useSetting(),
         { theme: r } = (0, u.cj)([w.Z], () => ({ theme: w.Z.theme })),
         l = (0, u.e7)([U.Z], () => U.Z.hasLibraryApplication()),
-        a = (0, u.e7)([B.Z], () => B.Z.getCurrentPath());
+        a = (0, u.e7)([B.Z], () => B.Z.getCurrentPath()),
+        o = (0, v.Q3)('PrivateChannels'),
+        [c, d] = (0, D.Z)((e) => {
+            let { channelId: t, path: n } = e;
+            return [t, n];
+        }, s.X),
+        h = (0, y.i)({ selected: null == d ? t : d.startsWith(q.Z5c.APPLICATION_STORE) }),
+        m = (0, A.a)(),
+        p = (function () {
+            let e = k.Ex.useSetting(),
+                t = (0, Z.Z)();
+            return !0 === e && !0 === t;
+        })(),
+        g = (0, I.n)();
     return (0, i.jsx)(eo, {
         theme: r,
         showLibrary: n,
         hasLibraryApplication: l,
         storeLink: a,
         homeLink: e,
-        premiumTabSelected: t
+        premiumTabSelected: t,
+        isVisualRefreshEnabled: o,
+        shouldShowNitroTab: h,
+        shouldShowMessageRequestsRow: m,
+        shouldShowFamilyCenterRow: p,
+        shouldShowQuickLauncherRow: g,
+        selectedChannelId: c,
+        path: d
     });
 }
