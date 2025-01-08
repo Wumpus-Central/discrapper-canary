@@ -32,8 +32,8 @@ var t = n(200651),
     d = n(519320),
     u = n(592125),
     m = n(52824),
-    _ = n(630388),
-    f = n(591759),
+    f = n(630388),
+    _ = n(591759),
     p = n(850908),
     I = n(524444),
     C = n(981631),
@@ -52,12 +52,15 @@ function y(e) {
         original: n.url,
         placeholder: n.placeholder,
         placeholderVersion: n.placeholder_version,
-        srcIsAnimated: (0, _.yE)(null !== (i = n.flags) && void 0 !== i ? i : 0, C.J0y.IS_ANIMATED),
+        srcIsAnimated: (0, f.yE)(null !== (i = n.flags) && void 0 !== i ? i : 0, C.J0y.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: {
                 type: 'attachment',
-                attachmentId: n.id
+                attachmentId: n.id,
+                filename: n.filename,
+                title: n.title,
+                size: n.size
             }
         },
         analyticsSource: 'ImageComponentForMessageAttachment'
@@ -68,7 +71,7 @@ function g(e) {
     let n = e.item.originalItem,
         a = o.useCallback(() => {
             var e;
-            return (0, _.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, C.J0y.IS_CLIP)
+            return (0, f.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, C.J0y.IS_CLIP)
                 ? (0, t.jsxs)(r.DY, {
                       text: h.intl.string(h.t['/fgfWl']),
                       className: v.clipPill,
@@ -86,7 +89,7 @@ function g(e) {
                   })
                 : null;
         }, [n]),
-        s = f.Z.toURLSafe(n.proxy_url);
+        s = _.Z.toURLSafe(n.proxy_url);
     return null == s
         ? null
         : (s.searchParams.append('format', 'webp'),
@@ -99,13 +102,15 @@ function g(e) {
               src: n.url,
               placeholder: n.placeholder,
               placeholderVersion: n.placeholder_version,
-              srcIsAnimated: (0, _.yE)(null !== (i = n.flags) && void 0 !== i ? i : 0, C.J0y.IS_ANIMATED),
+              srcIsAnimated: (0, f.yE)(null !== (i = n.flags) && void 0 !== i ? i : 0, C.J0y.IS_ANIMATED),
               renderOverlayContent: a,
               sourceMetadata: {
                   message: e.message,
                   identifier: {
                       type: 'attachment',
-                      attachmentId: n.id
+                      attachmentId: n.id,
+                      filename: n.filename,
+                      size: n.size
                   }
               }
           }));
@@ -190,7 +195,7 @@ function x(e) {
             var e;
             return null === (e = u.Z.getBasicChannel(c)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        { clip_created_at: l, clip_participants: d, title: m, application: _ } = n;
+        { clip_created_at: l, clip_participants: d, title: m, application: f } = n;
     return (0, t.jsx)(s.Z, {
         createdAt: null != l ? Date.parse(l) : void 0,
         participantIds:
@@ -204,7 +209,7 @@ function x(e) {
                           })) && void 0 !== i
                 ? i
                 : [],
-        applicationId: null == _ ? void 0 : _.id,
+        applicationId: null == f ? void 0 : f.id,
         title: m,
         guildId: r
     });

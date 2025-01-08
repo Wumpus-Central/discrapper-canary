@@ -22,51 +22,47 @@ var i = n(200651),
     v = n(921944),
     _ = n(388032),
     N = n(232203);
-function I(e) {
-    let t,
-        { hideChangelog: n } = e,
-        I = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        T = (0, l.e7)([u.Z], () => u.Z.getGuild(I)),
-        j = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
+function I() {
+    let e;
+    let t = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        n = (0, l.e7)([u.Z], () => u.Z.getGuild(t)),
+        I = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
             (0, o.EW)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
-        null == T)
+        null == n)
     )
         return null;
-    let b = (0, C.Q)(T);
-    switch (j) {
+    let T = (0, C.Q)(n);
+    switch (I) {
         case x.u.OVERVIEW:
-            t = (0, i.jsx)(p.Z, {
-                guild: T,
-                hideChangelog: n
-            });
+            e = (0, i.jsx)(p.Z, { guild: n });
             break;
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
-            t = (0, i.jsx)(f.Z, {
+            e = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t['53eF5u']),
-                settings: b[x.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: T[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
-            t = (0, i.jsx)(f.Z, {
+            e = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: b[x.u.DM_AND_SPAM_PROTECTION]
+                settings: T[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case x.u.AUTOMOD:
-            t = (0, i.jsx)(c.Z, { guildId: T.id });
+            e = (0, i.jsx)(c.Z, { guildId: n.id });
             break;
         case x.u.PERMISSIONS:
-            t = (0, i.jsx)(f.Z, {
+            e = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: b[x.u.PERMISSIONS]
+                settings: T[x.u.PERMISSIONS]
             });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            j !== x.u.OVERVIEW &&
+            I !== x.u.OVERVIEW &&
                 (0, i.jsxs)(s.Button, {
                     className: N.back,
                     innerClassName: N.backButton,
@@ -87,7 +83,7 @@ function I(e) {
                         })
                     ]
                 }),
-            t
+            e
         ]
     });
 }

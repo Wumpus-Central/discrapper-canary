@@ -85,7 +85,10 @@ function m(e, n) {
             message: n,
             identifier: {
                 type: 'attachment',
-                attachmentId: e.id
+                attachmentId: e.id,
+                filename: e.filename,
+                title: e.title,
+                size: e.size
             }
         }
     };

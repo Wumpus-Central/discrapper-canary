@@ -73,12 +73,21 @@ function y(e) {
 }
 let S = 2000;
 function A(e, n) {
-    let r = Math.min(Math.round(0.65 * window.innerHeight), S);
+    let r =
+            arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : {
+                      vertical: 0,
+                      horizontal: 0
+                  },
+        i = Math.min(Math.round(0.65 * window.innerHeight), Math.round(window.innerHeight - r.vertical)),
+        a = Math.min(Math.round(0.75 * window.innerWidth), Math.round(window.innerWidth - r.horizontal)),
+        s = Math.min(i, S);
     return y({
         width: e,
         height: n,
-        maxWidth: Math.min(Math.round(0.75 * window.innerWidth), S),
-        maxHeight: r
+        maxWidth: Math.min(a, S),
+        maxHeight: s
     });
 }
 let N = 2,
