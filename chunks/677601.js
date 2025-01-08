@@ -515,19 +515,19 @@ class eG extends l.PureComponent {
                     : null;
             }),
             eB(this, 'renderBottomLeft', () => {
-                let { layout: e, mentionCount: t, channel: n, appContext: l, useNewInviteButton: r, selectedParticipant: s, shouldUseVoiceEffectsActionBar: o, inCall: c, participants: d } = this.props;
-                if (!c) return null;
-                let u = e === eO.AEg.NO_CHAT ? ee.Z.Directions.UP : ee.Z.Directions.DOWN,
-                    h = [eO.AEg.FULL_SCREEN, eO.AEg.NO_CHAT].includes(e),
-                    p = d.some((e) => e.type === ek.fO.STREAM),
-                    f =
+                let { layout: e, mentionCount: t, channel: n, appContext: l, useNewInviteButton: r, selectedParticipant: s, shouldUseVoiceEffectsActionBar: o, showGameConsoleCallButton: c, inCall: d, participants: u } = this.props;
+                if (!d) return null;
+                let h = e === eO.AEg.NO_CHAT ? ee.Z.Directions.UP : ee.Z.Directions.DOWN,
+                    p = [eO.AEg.FULL_SCREEN, eO.AEg.NO_CHAT].includes(e),
+                    f = u.some((e) => e.type === ek.fO.STREAM),
+                    g =
                         e === eO.AEg.FULL_SCREEN
                             ? () => {
                                   (this._prevLayout = eO.AEg.NORMAL), this.handleFullScreen();
                               }
                             : this.handleToggleLayout,
-                    { canChangeLayout: g, canInvite: C } = this.viewProperties,
-                    x = r
+                    { canChangeLayout: C, canInvite: x } = this.viewProperties,
+                    v = r
                         ? (0, i.jsx)(q.Z, {
                               channel: n,
                               stream: (null == s ? void 0 : s.type) === ek.fO.STREAM ? (0, H.my)(s.id) : void 0,
@@ -546,20 +546,20 @@ class eG extends l.PureComponent {
                           });
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        C && !o ? x : null,
-                        g
+                        x && !o ? v : null,
+                        C
                             ? (0, i.jsxs)(O.Z, {
                                   className: ew.iconWrapper,
                                   align: O.Z.Align.CENTER,
                                   grow: 0,
                                   children: [
                                       (0, i.jsx)(ee.Z, {
-                                          label: h ? eD.intl.string(eD.t.kkKapK) : eD.intl.string(eD.t['5MstTk']),
-                                          direction: u,
+                                          label: p ? eD.intl.string(eD.t.kkKapK) : eD.intl.string(eD.t['5MstTk']),
+                                          direction: h,
                                           className: ew.leftTrayIcon,
-                                          onClick: f
+                                          onClick: g
                                       }),
-                                      h && t > 0
+                                      p && t > 0
                                           ? (0, i.jsx)(m.NumberBadge, {
                                                 className: ew.badge,
                                                 count: t
@@ -582,16 +582,17 @@ class eG extends l.PureComponent {
                               }),
                         o &&
                             (0, i.jsx)(eL.Z, {
+                                showRightDivider: c,
                                 channel: n,
-                                hasActiveStream: p,
+                                hasActiveStream: f,
                                 themeable: this.viewProperties.useTheme
                             }),
-                        (0, i.jsx)(U.Z, {
-                            showLeftDivider: o,
-                            themeable: this.viewProperties.useTheme,
-                            className: ew.leftTrayIcon,
-                            channel: n
-                        })
+                        c &&
+                            (0, i.jsx)(U.Z, {
+                                themeable: this.viewProperties.useTheme,
+                                className: ew.leftTrayIcon,
+                                channel: n
+                            })
                     ]
                 });
             }),
@@ -706,7 +707,7 @@ t.Z = function (e) {
             participantsOpen: L,
             participantsListOpen: k,
             chatOpen: O,
-            selectedParticipant: U
+            selectedParticipant: H
         } = (0, d.cj)(
             [eb.Z],
             () => {
@@ -731,31 +732,31 @@ t.Z = function (e) {
             },
             [g, n.id]
         ),
-        H = (0, d.Wu)([es.Z], () => es.Z.getAllActiveStreams()),
-        { selectedStream: G } = (0, d.cj)([es.Z], () => ({ selectedStream: null != U ? es.Z.getActiveStreamForStreamKey(U.id) : null }), [U]),
-        F = (0, d.e7)([eu.Z], () => eu.Z.getGuild(n.getGuildId())),
-        z = (0, d.e7)([ed.Z], () => ed.Z.getCall(n.id), [n.id]),
-        K = (0, d.e7)([ep.ZP], () => ep.ZP.getMentionCount(n.id), [n.id]),
-        Y = (0, d.e7)([eo.default], () => eo.default.getId()),
-        { popoutWindow: q, popoutWindowAlwaysOnTop: X } = (0, d.cj)([V.Z], () => ({
+        G = (0, d.Wu)([es.Z], () => es.Z.getAllActiveStreams()),
+        { selectedStream: F } = (0, d.cj)([es.Z], () => ({ selectedStream: null != H ? es.Z.getActiveStreamForStreamKey(H.id) : null }), [H]),
+        z = (0, d.e7)([eu.Z], () => eu.Z.getGuild(n.getGuildId())),
+        K = (0, d.e7)([ed.Z], () => ed.Z.getCall(n.id), [n.id]),
+        Y = (0, d.e7)([ep.ZP], () => ep.ZP.getMentionCount(n.id), [n.id]),
+        q = (0, d.e7)([eo.default], () => eo.default.getId()),
+        { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, d.cj)([V.Z], () => ({
             popoutWindow: V.Z.getWindow(eO.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: V.Z.getIsAlwaysOnTop(eO.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        J = (0, d.e7)([eh.Z], () => eh.Z.can(eO.Plq.CONNECT, n)),
-        Q = (0, d.e7)([ec.Z], () => ec.Z.getToastsEnabled(n.id)),
-        $ = (0, d.e7)([w.Z], () => w.Z.getAwaitingRemoteSessionInfo()),
-        ee = (0, d.e7)([W.ZP], () => W.ZP.callHeaderHeight),
-        et = l.useCallback((e) => {
+        Q = (0, d.e7)([eh.Z], () => eh.Z.can(eO.Plq.CONNECT, n)),
+        $ = (0, d.e7)([ec.Z], () => ec.Z.getToastsEnabled(n.id)),
+        ee = (0, d.e7)([w.Z], () => w.Z.getAwaitingRemoteSessionInfo()),
+        et = (0, d.e7)([W.ZP], () => W.ZP.callHeaderHeight),
+        en = l.useCallback((e) => {
             _.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
-        en = null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : null,
-        ei = (0, A.Z)(en, n.id),
-        el = (0, d.e7)([T.Z], () => T.Z.getFetchState(), []),
-        er = (0, Z.Z)(el);
+        ei = null !== (t = null == z ? void 0 : z.id) && void 0 !== t ? t : null,
+        el = (0, A.Z)(ei, n.id),
+        er = (0, d.e7)([T.Z], () => T.Z.getFetchState(), []),
+        ea = (0, Z.Z)(er);
     l.useEffect(() => {
-        el === T.O.ERROR && er !== T.O.ERROR && (0, m.showToast)((0, m.createToast)(eD.intl.string(eD.t.AlJyIy), m.ToastType.FAILURE));
-    }, [el, er]);
-    let ea = (0, d.e7)([j.ZP], () => j.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+        er === T.O.ERROR && ea !== T.O.ERROR && (0, m.showToast)((0, m.createToast)(eD.intl.string(eD.t.AlJyIy), m.ToastType.FAILURE));
+    }, [er, ea]);
+    let ef = (0, d.e7)([j.ZP], () => j.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     l.useEffect(() => {
         let e = !1,
             t = null;
@@ -768,14 +769,15 @@ t.Z = function (e) {
             }
         );
     }, [x, y]);
-    let ef = (0, eN.Z)(n, !0),
-        { hasParticipantsPanel: eg } = (0, eP.Z)({ location: 'ChannelCall' }),
-        eC = (0, D.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: ex } = (0, R.ZP)(P.Z.CHANNEL_CALL),
-        ev = j.ZP.getEmbeddedActivitiesForChannel(n.id),
-        { theme: e_ } = (0, m.useThemeContext)();
+    let eg = (0, U.S)(),
+        eC = (0, eN.Z)(n, !0),
+        { hasParticipantsPanel: ex } = (0, eP.Z)({ location: 'ChannelCall' }),
+        ev = (0, D.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
+        { analyticsLocations: e_ } = (0, R.ZP)(P.Z.CHANNEL_CALL),
+        eE = j.ZP.getEmbeddedActivitiesForChannel(n.id),
+        { theme: eZ } = (0, m.useThemeContext)();
     return (0, i.jsx)(R.Gt, {
-        value: ex,
+        value: e_,
         children: (0, i.jsx)(E.Z, {
             page: eO.ZY5.CHANNEL_CALL,
             children: (0, i.jsx)(eS.B2, {
@@ -783,17 +785,17 @@ t.Z = function (e) {
                     children: [
                         (0, i.jsx)(eG, {
                             channel: n,
-                            guild: F,
-                            hasConnectPermission: J,
+                            guild: z,
+                            hasConnectPermission: Q,
                             participantsOpen: L,
-                            participantsListOpen: k && eg,
+                            participantsListOpen: k && ex,
                             renderExternalHeader: r,
                             appContext: g,
-                            call: z,
-                            popoutWindow: q,
-                            popoutWindowAlwaysOnTop: X,
-                            mentionCount: K,
-                            selectedStream: G,
+                            call: K,
+                            popoutWindow: X,
+                            popoutWindowAlwaysOnTop: J,
+                            mentionCount: Y,
+                            selectedStream: F,
                             mode: y,
                             inCall: x,
                             participants: v,
@@ -802,15 +804,16 @@ t.Z = function (e) {
                             layout: M,
                             chatOpen: O,
                             maxSidebarWidth: s - 550,
-                            shouldUseVoiceEffectsActionBar: ef,
-                            currentUserId: Y,
-                            selectedParticipant: U,
-                            allActiveStreams: H,
-                            useNewInviteButton: ei,
-                            connectedToEmbeddedActivity: null != ea,
-                            showChatToasts: Q,
-                            storedCallHeaderHeight: ee,
-                            updateStoredCallHeaderHeight: et,
+                            shouldUseVoiceEffectsActionBar: eC,
+                            showGameConsoleCallButton: eg,
+                            currentUserId: q,
+                            selectedParticipant: H,
+                            allActiveStreams: G,
+                            useNewInviteButton: el,
+                            connectedToEmbeddedActivity: null != ef,
+                            showChatToasts: $,
+                            storedCallHeaderHeight: et,
+                            updateStoredCallHeaderHeight: en,
                             wrapperRef: o,
                             callContainerDimensions: {
                                 width: c,
@@ -820,10 +823,10 @@ t.Z = function (e) {
                             channelChatRef: f,
                             width: s,
                             maxHeight: a,
-                            forceShowControls: eC,
-                            awaitingRemoteSessionInfo: $,
-                            currentChannelActivities: ev,
-                            theme: e_
+                            forceShowControls: ev,
+                            awaitingRemoteSessionInfo: ee,
+                            currentChannelActivities: eE,
+                            theme: eZ
                         }),
                         !n.isPrivate() && (0, i.jsx)(eR.YR, {}),
                         (0, i.jsx)(eS.H_, {})
