@@ -160,6 +160,10 @@ let P = {
         throttlePeriod: N,
         throttleKeys: () => []
     },
+    [g.rMx.AUDIO_INPUT_INITIALIZED]: {
+        throttlePeriod: N,
+        throttleKeys: () => []
+    },
     [g.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
         throttlePeriod: C,
         throttleKeys: () => []

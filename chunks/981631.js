@@ -4253,6 +4253,7 @@ let oc = Object.freeze({
     (aS.STREAM_REPORT_PROBLEM = 'stream_report_problem'),
     (aS.STREAM_SETTINGS_UPDATE = 'stream_settings_update'),
     (aS.VIDEO_INPUT_INITIALIZED = 'video_input_initialized'),
+    (aS.AUDIO_INPUT_INITIALIZED = 'audio_input_initialized'),
     (aS.NOTIFY_STREAM_SETTING_UPDATE = 'notify_stream_setting_update'),
     (aS.SECURE_FRAMES_TRANSITION = 'secure_frames_transition'),
     (aS.MLS_FAILURES = 'mls_failures'),

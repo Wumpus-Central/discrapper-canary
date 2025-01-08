@@ -532,6 +532,13 @@ function ty() {
                 rtc_connection_id: ed.Z.getRTCConnectionId()
             });
         }),
+        eB.on(S.aB.AudioInputInitialized, (e) => {
+            J.default.track(ep.rMx.AUDIO_INPUT_INITIALIZED, {
+                device_name: e.description.name,
+                time_to_initialized_ms: Math.round(e.timeToInitialized * ee.Z.Millis.SECOND),
+                rtc_connection_id: ed.Z.getRTCConnectionId()
+            });
+        }),
         eB.on(S.aB.ClipsRecordingRestartNeeded, () => {
             C.Z.dispatch({ type: 'CLIPS_RESTART' });
         }),
