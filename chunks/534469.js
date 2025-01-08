@@ -121,7 +121,15 @@ function X(e) {
         Q = v.NA.useSetting(),
         $ = (0, d.e7)([C.Z], () => C.Z.getMessageByReference(N)),
         ee = (0, f.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
-        { handleMouseEnter: et, handleMouseLeave: en, isHovered: ei } = (0, P.tn)(E, s.author.id, q),
+        {
+            handleMouseEnter: et,
+            handleMouseLeave: en,
+            isHovered: ei
+        } = (0, P.tn)({
+            groupId: E,
+            message: s,
+            defaultValue: q
+        }),
         el = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         er = q || (el && D),
         ea = er || ei,
@@ -235,7 +243,16 @@ t.ZP = l.memo(function (e) {
         { popouts: es, selected: eo, setPopout: ec } = (0, R.Z)(x.id, V.d$),
         ed = (0, P.qo)(x, Y, ec),
         eu = (0, P.Go)(x, Y),
-        { handleMouseEnter: eh, handleMouseLeave: ep, hasHovered: em, isHovered: ef } = (0, P.tn)($, x.author.id, eo),
+        {
+            handleMouseEnter: eh,
+            handleMouseLeave: ep,
+            hasHovered: em,
+            isHovered: ef
+        } = (0, P.tn)({
+            groupId: $,
+            message: x,
+            defaultValue: eo
+        }),
         { isFocused: eg, hasFocused: eC, handleFocus: ex, handleBlur: ev } = (0, P.bb)(en),
         e_ = (0, d.e7)([E.Z], () => E.Z.isEditing(q, N), [q, N]),
         eI = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
