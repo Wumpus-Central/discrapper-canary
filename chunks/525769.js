@@ -37,6 +37,7 @@ r.d(n, {
             (e.AUDIO_DEVICE_MENU = 'impression_audio_device_menu'),
             (e.AVATAR_UPLOAD = 'impression_avatar_upload'),
             (e.BLOCK_USER_CONFIRMATION = 'impression_block_user_confirmation'),
+            (e.CALL_TILE_CONTEXT_MENU = 'impression_call_tile_context_menu'),
             (e.CHANNEL_ADD_INFO = 'impression_channel_add_info'),
             (e.CHANNEL_ADD_MEMBERS = 'impression_channel_add_members'),
             (e.CHANNEL_CALL_VIDEO_GRID = 'impression_channel_call_video_grid'),
