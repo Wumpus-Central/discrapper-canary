@@ -5,8 +5,7 @@ r.d(n, {
     MT: function () {
         return _;
     }
-}),
-    r(155831);
+});
 var a = (function () {
         return ('function' == typeof Symbol && Symbol.observable) || '@@observable';
     })(),

@@ -1,6 +1,6 @@
 r.d(n, {
     _: function () {
-        return x;
+        return w;
     }
 });
 var i,
@@ -9,42 +9,43 @@ var i,
     o = r(939990),
     l = r(73745),
     u = r(555936),
-    c = r(854718),
-    d = r(664002),
-    f = new RegExp('^'.concat(u.p.source, '*')),
-    _ = new RegExp(''.concat(u.p.source, '*$'));
-function h(e, n) {
+    c = r(791929),
+    d = r(921367),
+    f = r(664002),
+    _ = new RegExp('^'.concat(u.p.source, '*')),
+    h = new RegExp(''.concat(u.p.source, '*$'));
+function p(e, n) {
     return {
         start: e,
         end: n
     };
 }
-var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
-    m = !!String.fromCodePoint,
-    g = !!Object.fromEntries,
-    E = !!String.prototype.codePointAt,
-    v = !!String.prototype.trimStart,
-    I = !!String.prototype.trimEnd,
-    T = Number.isSafeInteger
+var m = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
+    g = !!String.fromCodePoint,
+    E = !!Object.fromEntries,
+    v = !!String.prototype.codePointAt,
+    I = !!String.prototype.trimStart,
+    T = !!String.prototype.trimEnd,
+    b = Number.isSafeInteger
         ? Number.isSafeInteger
         : function (e) {
               return 'number' == typeof e && isFinite(e) && Math.floor(e) === e && 9007199254740991 >= Math.abs(e);
           },
-    b = !0;
+    y = !0;
 try {
-    var y = D('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    b = (null === (i = y.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
+    var S = L('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    y = (null === (i = S.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
 } catch (e) {
-    b = !1;
+    y = !1;
 }
-var S = p
+var A = m
         ? function (e, n, r) {
               return e.startsWith(n, r);
           }
         : function (e, n, r) {
               return e.slice(r, r + n.length) === n;
           },
-    A = m
+    N = g
         ? String.fromCodePoint
         : function () {
               for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
@@ -54,7 +55,7 @@ var S = p
               }
               return i;
           },
-    N = g
+    C = E
         ? Object.fromEntries
         : function (e) {
               for (var n = {}, r = 0, i = e; r < i.length; r++) {
@@ -65,7 +66,7 @@ var S = p
               }
               return n;
           },
-    C = E
+    R = v
         ? function (e, n) {
               return e.codePointAt(n);
           }
@@ -77,39 +78,39 @@ var S = p
                   return a < 55296 || a > 56319 || n + 1 === i || (r = e.charCodeAt(n + 1)) < 56320 || r > 57343 ? a : ((a - 55296) << 10) + (r - 56320) + 65536;
               }
           },
-    R = v
+    O = I
         ? function (e) {
               return e.trimStart();
           }
         : function (e) {
-              return e.replace(f, '');
+              return e.replace(_, '');
           },
-    O = I
+    D = T
         ? function (e) {
               return e.trimEnd();
           }
         : function (e) {
-              return e.replace(_, '');
+              return e.replace(h, '');
           };
-function D(e, n) {
+function L(e, n) {
     return new RegExp(e, n);
 }
-if (b) {
-    var L = D('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+if (y) {
+    var x = L('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     a = function (e, n) {
         var r;
-        return (L.lastIndex = n), null !== (r = L.exec(e)[1]) && void 0 !== r ? r : '';
+        return (x.lastIndex = n), null !== (r = x.exec(e)[1]) && void 0 !== r ? r : '';
     };
 } else
     a = function (e, n) {
         for (var r = []; ; ) {
-            var i = C(e, n);
-            if (void 0 === i || k(i) || U(i)) break;
+            var i = R(e, n);
+            if (void 0 === i || U(i) || B(i)) break;
             r.push(i), (n += i >= 65536 ? 2 : 1);
         }
-        return A.apply(void 0, r);
+        return N.apply(void 0, r);
     };
-var x = (function () {
+var w = (function () {
     function e(e, n) {
         void 0 === n && (n = {}),
             (this.message = e),
@@ -141,10 +142,10 @@ var x = (function () {
                     this.bump(),
                         i.push({
                             type: l.wD.pound,
-                            location: h(u, this.clonePosition())
+                            location: p(u, this.clonePosition())
                         });
                 } else if (60 !== a || this.ignoreTag || 47 !== this.peek()) {
-                    if (60 === a && !this.ignoreTag && w(this.peek() || 0)) {
+                    if (60 === a && !this.ignoreTag && P(this.peek() || 0)) {
                         var s = this.parseTag(e, n);
                         if (s.err) return s;
                         i.push(s.val);
@@ -154,7 +155,7 @@ var x = (function () {
                         i.push(s.val);
                     }
                 } else {
-                    if (!r) return this.error(o.o.UNMATCHED_CLOSING_TAG, h(this.clonePosition(), this.clonePosition()));
+                    if (!r) return this.error(o.o.UNMATCHED_CLOSING_TAG, p(this.clonePosition(), this.clonePosition()));
                     break;
                 }
             }
@@ -172,35 +173,35 @@ var x = (function () {
                     val: {
                         type: l.wD.literal,
                         value: '<'.concat(i, '/>'),
-                        location: h(r, this.clonePosition())
+                        location: p(r, this.clonePosition())
                     },
                     err: null
                 };
-            if (!this.bumpIf('>')) return this.error(o.o.INVALID_TAG, h(r, this.clonePosition()));
+            if (!this.bumpIf('>')) return this.error(o.o.INVALID_TAG, p(r, this.clonePosition()));
             var a = this.parseMessage(e + 1, n, !0);
             if (a.err) return a;
             var s = a.val,
                 u = this.clonePosition();
-            if (!this.bumpIf('</')) return this.error(o.o.UNCLOSED_TAG, h(r, this.clonePosition()));
-            if (this.isEOF() || !w(this.char())) return this.error(o.o.INVALID_TAG, h(u, this.clonePosition()));
+            if (!this.bumpIf('</')) return this.error(o.o.UNCLOSED_TAG, p(r, this.clonePosition()));
+            if (this.isEOF() || !P(this.char())) return this.error(o.o.INVALID_TAG, p(u, this.clonePosition()));
             var c = this.clonePosition();
             return i !== this.parseTagName()
-                ? this.error(o.o.UNMATCHED_CLOSING_TAG, h(c, this.clonePosition()))
+                ? this.error(o.o.UNMATCHED_CLOSING_TAG, p(c, this.clonePosition()))
                 : (this.bumpSpace(), this.bumpIf('>'))
                   ? {
                         val: {
                             type: l.wD.tag,
                             value: i,
                             children: s,
-                            location: h(r, this.clonePosition())
+                            location: p(r, this.clonePosition())
                         },
                         err: null
                     }
-                  : this.error(o.o.INVALID_TAG, h(u, this.clonePosition()));
+                  : this.error(o.o.INVALID_TAG, p(u, this.clonePosition()));
         }),
         (e.prototype.parseTagName = function () {
             var e = this.offset();
-            for (this.bump(); !this.isEOF() && M(this.char()); ) this.bump();
+            for (this.bump(); !this.isEOF() && k(this.char()); ) this.bump();
             return this.message.slice(e, this.offset());
         }),
         (e.prototype.parseLiteral = function (e, n) {
@@ -222,7 +223,7 @@ var x = (function () {
                 }
                 break;
             }
-            var u = h(r, this.clonePosition());
+            var u = p(r, this.clonePosition());
             return {
                 val: {
                     type: l.wD.literal,
@@ -233,7 +234,7 @@ var x = (function () {
             };
         }),
         (e.prototype.tryParseLeftAngleBracket = function () {
-            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && P(this.peek() || 0)) ? null : (this.bump(), '<');
+            return this.isEOF() || 60 !== this.char() || (!this.ignoreTag && M(this.peek() || 0)) ? null : (this.bump(), '<');
         }),
         (e.prototype.tryParseQuote = function (e) {
             if (this.isEOF() || 39 !== this.char()) return null;
@@ -264,20 +265,20 @@ var x = (function () {
                 } else n.push(r);
                 this.bump();
             }
-            return A.apply(void 0, n);
+            return N.apply(void 0, n);
         }),
         (e.prototype.tryParseUnquoted = function (e, n) {
             if (this.isEOF()) return null;
             var r = this.char();
-            return 60 === r || 123 === r || (35 === r && ('plural' === n || 'selectordinal' === n)) || (125 === r && e > 0) ? null : (this.bump(), A(r));
+            return 60 === r || 123 === r || (35 === r && ('plural' === n || 'selectordinal' === n)) || (125 === r && e > 0) ? null : (this.bump(), N(r));
         }),
         (e.prototype.parseArgument = function (e, n) {
             var r = this.clonePosition();
-            if ((this.bump(), this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, h(r, this.clonePosition()));
-            if (125 === this.char()) return this.bump(), this.error(o.o.EMPTY_ARGUMENT, h(r, this.clonePosition()));
+            if ((this.bump(), this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, p(r, this.clonePosition()));
+            if (125 === this.char()) return this.bump(), this.error(o.o.EMPTY_ARGUMENT, p(r, this.clonePosition()));
             var i = this.parseIdentifierIfPossible().value;
-            if (!i) return this.error(o.o.MALFORMED_ARGUMENT, h(r, this.clonePosition()));
-            if ((this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, h(r, this.clonePosition()));
+            if (!i) return this.error(o.o.MALFORMED_ARGUMENT, p(r, this.clonePosition()));
+            if ((this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, p(r, this.clonePosition()));
             switch (this.char()) {
                 case 125:
                     return (
@@ -286,16 +287,16 @@ var x = (function () {
                             val: {
                                 type: l.wD.argument,
                                 value: i,
-                                location: h(r, this.clonePosition())
+                                location: p(r, this.clonePosition())
                             },
                             err: null
                         }
                     );
                 case 44:
-                    if ((this.bump(), this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, h(r, this.clonePosition()));
+                    if ((this.bump(), this.bumpSpace(), this.isEOF())) return this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, p(r, this.clonePosition()));
                     return this.parseArgumentOptions(e, n, i, r);
                 default:
-                    return this.error(o.o.MALFORMED_ARGUMENT, h(r, this.clonePosition()));
+                    return this.error(o.o.MALFORMED_ARGUMENT, p(r, this.clonePosition()));
             }
         }),
         (e.prototype.parseIdentifierIfPossible = function () {
@@ -307,42 +308,42 @@ var x = (function () {
                 this.bumpTo(i),
                 {
                     value: r,
-                    location: h(e, this.clonePosition())
+                    location: p(e, this.clonePosition())
                 }
             );
         }),
         (e.prototype.parseArgumentOptions = function (e, n, r, i) {
             var a,
                 u = this.clonePosition(),
-                f = this.parseIdentifierIfPossible().value,
+                d = this.parseIdentifierIfPossible().value,
                 _ = this.clonePosition();
-            switch (f) {
+            switch (d) {
                 case '':
-                    return this.error(o.o.EXPECT_ARGUMENT_TYPE, h(u, _));
+                    return this.error(o.o.EXPECT_ARGUMENT_TYPE, p(u, _));
                 case 'number':
                 case 'date':
                 case 'time':
                     this.bumpSpace();
-                    var p = null;
+                    var h = null;
                     if (this.bumpIf(',')) {
                         this.bumpSpace();
                         var m = this.clonePosition(),
                             g = this.parseSimpleArgStyleIfPossible();
                         if (g.err) return g;
-                        var E = O(g.val);
-                        if (0 === E.length) return this.error(o.o.EXPECT_ARGUMENT_STYLE, h(this.clonePosition(), this.clonePosition()));
-                        p = {
+                        var E = D(g.val);
+                        if (0 === E.length) return this.error(o.o.EXPECT_ARGUMENT_STYLE, p(this.clonePosition(), this.clonePosition()));
+                        h = {
                             style: E,
-                            styleLocation: h(m, this.clonePosition())
+                            styleLocation: p(m, this.clonePosition())
                         };
                     }
                     var v = this.tryParseArgumentClose(i);
                     if (v.err) return v;
-                    var I = h(i, this.clonePosition());
-                    if (p && S(null == p ? void 0 : p.style, '::', 0)) {
-                        var T = R(p.style.slice(2));
-                        if ('number' === f) {
-                            var g = this.parseNumberSkeletonFromString(T, p.styleLocation);
+                    var I = p(i, this.clonePosition());
+                    if (h && A(null == h ? void 0 : h.style, '::', 0)) {
+                        var T = O(h.style.slice(2));
+                        if ('number' === d) {
+                            var g = this.parseNumberSkeletonFromString(T, h.styleLocation);
                             if (g.err) return g;
                             return {
                                 val: {
@@ -356,16 +357,16 @@ var x = (function () {
                         }
                         if (0 === T.length) return this.error(o.o.EXPECT_DATE_TIME_SKELETON, I);
                         var b = T;
-                        this.locale && (b = (0, d.T)(T, this.locale));
+                        this.locale && (b = (0, f.T)(T, this.locale));
                         var E = {
                             type: l.aV.dateTime,
                             pattern: b,
-                            location: p.styleLocation,
-                            parsedOptions: this.shouldParseSkeletons ? (0, c.TE)(b) : {}
+                            location: h.styleLocation,
+                            parsedOptions: this.shouldParseSkeletons ? (0, c.T)(b) : {}
                         };
                         return {
                             val: {
-                                type: 'date' === f ? l.wD.date : l.wD.time,
+                                type: 'date' === d ? l.wD.date : l.wD.time,
                                 value: r,
                                 location: I,
                                 style: E
@@ -375,10 +376,10 @@ var x = (function () {
                     }
                     return {
                         val: {
-                            type: 'number' === f ? l.wD.number : 'date' === f ? l.wD.date : l.wD.time,
+                            type: 'number' === d ? l.wD.number : 'date' === d ? l.wD.date : l.wD.time,
                             value: r,
                             location: I,
-                            style: null !== (a = null == p ? void 0 : p.style) && void 0 !== a ? a : null
+                            style: null !== (a = null == h ? void 0 : h.style) && void 0 !== a ? a : null
                         },
                         err: null
                     };
@@ -386,28 +387,28 @@ var x = (function () {
                 case 'selectordinal':
                 case 'select':
                     var y = this.clonePosition();
-                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(o.o.EXPECT_SELECT_ARGUMENT_OPTIONS, h(y, (0, s.pi)({}, y)));
+                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(o.o.EXPECT_SELECT_ARGUMENT_OPTIONS, p(y, (0, s.pi)({}, y)));
                     this.bumpSpace();
-                    var A = this.parseIdentifierIfPossible(),
-                        C = 0;
-                    if ('select' !== f && 'offset' === A.value) {
-                        if (!this.bumpIf(':')) return this.error(o.o.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, h(this.clonePosition(), this.clonePosition()));
+                    var S = this.parseIdentifierIfPossible(),
+                        N = 0;
+                    if ('select' !== d && 'offset' === S.value) {
+                        if (!this.bumpIf(':')) return this.error(o.o.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, p(this.clonePosition(), this.clonePosition()));
                         this.bumpSpace();
                         var g = this.tryParseDecimalInteger(o.o.EXPECT_PLURAL_ARGUMENT_OFFSET_VALUE, o.o.INVALID_PLURAL_ARGUMENT_OFFSET_VALUE);
                         if (g.err) return g;
-                        this.bumpSpace(), (A = this.parseIdentifierIfPossible()), (C = g.val);
+                        this.bumpSpace(), (S = this.parseIdentifierIfPossible()), (N = g.val);
                     }
-                    var D = this.tryParsePluralOrSelectOptions(e, f, n, A);
-                    if (D.err) return D;
+                    var R = this.tryParsePluralOrSelectOptions(e, d, n, S);
+                    if (R.err) return R;
                     var v = this.tryParseArgumentClose(i);
                     if (v.err) return v;
-                    var L = h(i, this.clonePosition());
-                    if ('select' === f)
+                    var L = p(i, this.clonePosition());
+                    if ('select' === d)
                         return {
                             val: {
                                 type: l.wD.select,
                                 value: r,
-                                options: N(D.val),
+                                options: C(R.val),
                                 location: L
                             },
                             err: null
@@ -416,20 +417,20 @@ var x = (function () {
                         val: {
                             type: l.wD.plural,
                             value: r,
-                            options: N(D.val),
-                            offset: C,
-                            pluralType: 'plural' === f ? 'cardinal' : 'ordinal',
+                            options: C(R.val),
+                            offset: N,
+                            pluralType: 'plural' === d ? 'cardinal' : 'ordinal',
                             location: L
                         },
                         err: null
                     };
                 default:
-                    return this.error(o.o.INVALID_ARGUMENT_TYPE, h(u, _));
+                    return this.error(o.o.INVALID_ARGUMENT_TYPE, p(u, _));
             }
         }),
         (e.prototype.tryParseArgumentClose = function (e) {
             return this.isEOF() || 125 !== this.char()
-                ? this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, h(e, this.clonePosition()))
+                ? this.error(o.o.EXPECT_ARGUMENT_CLOSING_BRACE, p(e, this.clonePosition()))
                 : (this.bump(),
                   {
                       val: !0,
@@ -442,7 +443,7 @@ var x = (function () {
                     case 39:
                         this.bump();
                         var r = this.clonePosition();
-                        if (!this.bumpUntil("'")) return this.error(o.o.UNCLOSED_QUOTE_IN_ARGUMENT_STYLE, h(r, this.clonePosition()));
+                        if (!this.bumpUntil("'")) return this.error(o.o.UNCLOSED_QUOTE_IN_ARGUMENT_STYLE, p(r, this.clonePosition()));
                         this.bump();
                         break;
                     case 123:
@@ -467,7 +468,7 @@ var x = (function () {
         (e.prototype.parseNumberSkeletonFromString = function (e, n) {
             var r = [];
             try {
-                r = (0, c.OG)(e);
+                r = (0, d.O)(e);
             } catch (e) {
                 return this.error(o.o.INVALID_NUMBER_SKELETON, n);
             }
@@ -476,7 +477,7 @@ var x = (function () {
                     type: l.aV.number,
                     tokens: r,
                     location: n,
-                    parsedOptions: this.shouldParseSkeletons ? (0, c.Iu)(r) : {}
+                    parsedOptions: this.shouldParseSkeletons ? (0, d.I)(r) : {}
                 },
                 err: null
             };
@@ -488,22 +489,22 @@ var x = (function () {
                     if ('select' !== n && this.bumpIf('=')) {
                         var _ = this.tryParseDecimalInteger(o.o.EXPECT_PLURAL_ARGUMENT_SELECTOR, o.o.INVALID_PLURAL_ARGUMENT_SELECTOR);
                         if (_.err) return _;
-                        (d = h(f, this.clonePosition())), (c = this.message.slice(f.offset, this.offset()));
+                        (d = p(f, this.clonePosition())), (c = this.message.slice(f.offset, this.offset()));
                     } else break;
                 }
                 if (u.has(c)) return this.error('select' === n ? o.o.DUPLICATE_SELECT_ARGUMENT_SELECTOR : o.o.DUPLICATE_PLURAL_ARGUMENT_SELECTOR, d);
                 'other' === c && (s = !0), this.bumpSpace();
-                var p = this.clonePosition();
-                if (!this.bumpIf('{')) return this.error('select' === n ? o.o.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT : o.o.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT, h(this.clonePosition(), this.clonePosition()));
+                var h = this.clonePosition();
+                if (!this.bumpIf('{')) return this.error('select' === n ? o.o.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT : o.o.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT, p(this.clonePosition(), this.clonePosition()));
                 var m = this.parseMessage(e + 1, n, r);
                 if (m.err) return m;
-                var g = this.tryParseArgumentClose(p);
+                var g = this.tryParseArgumentClose(h);
                 if (g.err) return g;
                 l.push([
                     c,
                     {
                         value: m.val,
-                        location: h(p, this.clonePosition())
+                        location: p(h, this.clonePosition())
                     }
                 ]),
                     u.add(c),
@@ -512,9 +513,9 @@ var x = (function () {
                     (d = a.location);
             }
             return 0 === l.length
-                ? this.error('select' === n ? o.o.EXPECT_SELECT_ARGUMENT_SELECTOR : o.o.EXPECT_PLURAL_ARGUMENT_SELECTOR, h(this.clonePosition(), this.clonePosition()))
+                ? this.error('select' === n ? o.o.EXPECT_SELECT_ARGUMENT_SELECTOR : o.o.EXPECT_PLURAL_ARGUMENT_SELECTOR, p(this.clonePosition(), this.clonePosition()))
                 : this.requiresOtherClause && !s
-                  ? this.error(o.o.MISSING_OTHER_CLAUSE, h(this.clonePosition(), this.clonePosition()))
+                  ? this.error(o.o.MISSING_OTHER_CLAUSE, p(this.clonePosition(), this.clonePosition()))
                   : {
                         val: l,
                         err: null
@@ -529,9 +530,9 @@ var x = (function () {
                 if (o >= 48 && o <= 57) (a = !0), (s = 10 * s + (o - 48)), this.bump();
                 else break;
             }
-            var l = h(i, this.clonePosition());
+            var l = p(i, this.clonePosition());
             return a
-                ? T((s *= r))
+                ? b((s *= r))
                     ? {
                           val: s,
                           err: null
@@ -555,7 +556,7 @@ var x = (function () {
         (e.prototype.char = function () {
             var e = this.position.offset;
             if (e >= this.message.length) throw Error('out of bound');
-            var n = C(this.message, e);
+            var n = R(this.message, e);
             if (void 0 === n) throw Error('Offset '.concat(e, ' is at invalid UTF-16 code unit boundary'));
             return n;
         }),
@@ -576,7 +577,7 @@ var x = (function () {
             }
         }),
         (e.prototype.bumpIf = function (e) {
-            if (S(this.message, e, this.offset())) {
+            if (A(this.message, e, this.offset())) {
                 for (var n = 0; n < e.length; n++) this.bump();
                 return !0;
             }
@@ -597,7 +598,7 @@ var x = (function () {
             }
         }),
         (e.prototype.bumpSpace = function () {
-            for (; !this.isEOF() && k(this.char()); ) this.bump();
+            for (; !this.isEOF() && U(this.char()); ) this.bump();
         }),
         (e.prototype.peek = function () {
             if (this.isEOF()) return null;
@@ -609,19 +610,19 @@ var x = (function () {
         e
     );
 })();
-function w(e) {
+function P(e) {
     return (e >= 97 && e <= 122) || (e >= 65 && e <= 90);
 }
-function P(e) {
-    return w(e) || 47 === e;
-}
 function M(e) {
-    return 45 === e || 46 === e || (e >= 48 && e <= 57) || 95 === e || (e >= 97 && e <= 122) || (e >= 65 && e <= 90) || 183 == e || (e >= 192 && e <= 214) || (e >= 216 && e <= 246) || (e >= 248 && e <= 893) || (e >= 895 && e <= 8191) || (e >= 8204 && e <= 8205) || (e >= 8255 && e <= 8256) || (e >= 8304 && e <= 8591) || (e >= 11264 && e <= 12271) || (e >= 12289 && e <= 55295) || (e >= 63744 && e <= 64975) || (e >= 65008 && e <= 65533) || (e >= 65536 && e <= 983039);
+    return P(e) || 47 === e;
 }
 function k(e) {
-    return (e >= 9 && e <= 13) || 32 === e || 133 === e || (e >= 8206 && e <= 8207) || 8232 === e || 8233 === e;
+    return 45 === e || 46 === e || (e >= 48 && e <= 57) || 95 === e || (e >= 97 && e <= 122) || (e >= 65 && e <= 90) || 183 == e || (e >= 192 && e <= 214) || (e >= 216 && e <= 246) || (e >= 248 && e <= 893) || (e >= 895 && e <= 8191) || (e >= 8204 && e <= 8205) || (e >= 8255 && e <= 8256) || (e >= 8304 && e <= 8591) || (e >= 11264 && e <= 12271) || (e >= 12289 && e <= 55295) || (e >= 63744 && e <= 64975) || (e >= 65008 && e <= 65533) || (e >= 65536 && e <= 983039);
 }
 function U(e) {
+    return (e >= 9 && e <= 13) || 32 === e || 133 === e || (e >= 8206 && e <= 8207) || 8232 === e || 8233 === e;
+}
+function B(e) {
     return (
         (e >= 33 && e <= 35) ||
         36 === e ||

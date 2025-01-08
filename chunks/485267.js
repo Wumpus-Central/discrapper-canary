@@ -15,9 +15,8 @@ var a = n(944486),
     i = n(914010);
 n(594174);
 var r = n(626135),
-    o = n(71585);
-n(295955);
-var s = n(981631);
+    o = n(71585),
+    s = n(981631);
 let c = () => {
     l.Z.dispatch({ type: 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN' }),
         r.default.track(s.rMx.MEMBERLIST_CONTENT_FEED_HIDDEN, {
