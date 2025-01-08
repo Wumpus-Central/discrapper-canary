@@ -10,6 +10,7 @@ e.exports = {
     activeLight: 'activeLight_ef18ee',
     white: 'white_ef18ee',
     green: 'green_ef18ee',
+    premiumGradient: 'premiumGradient_ef18ee',
     yellow: 'yellow_ef18ee',
     experimentDark: 'experimentDark_ef18ee',
     experimentActiveLight: 'experimentActiveLight_ef18ee',

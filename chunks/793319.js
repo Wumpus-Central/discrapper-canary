@@ -104,28 +104,29 @@ function eT(e) {
             (0, e_.Z)(E, t.id, eE.ZY5.GUILD_CHANNEL);
         }, [E, t.id, l, i]),
         Z = (0, G.B4)({ location: 'GoLiveButton' }),
-        N = (0, P.bK)(),
-        [S, T] = a.useState(!1);
+        [N, S] = a.useState(!1),
+        T = (0, P.bK)(),
+        [j, A] = a.useState(!1);
     a.useEffect(() => {
-        if ((T(t.isHDStreamSplashed && null == g && !N), t.isHDStreamSplashed)) {
+        if ((A(t.isHDStreamSplashed && null == g && !T), t.isHDStreamSplashed)) {
             let e = setTimeout(() => {
-                T(!1);
+                A(!1);
             }, 300000);
             return () => clearTimeout(e);
         }
-    }, [t.isHDStreamSplashed, g, N]);
-    let j = () => {
+    }, [t.isHDStreamSplashed, g, T]);
+    let y = () => {
             if (l) {
                 b();
                 return;
             }
             (0, ev.Z)();
         },
-        A = () => {
+        R = () => {
             (0, D.Z)(g);
         },
-        y = F.pM,
-        R = a.useCallback(() => {
+        L = F.pM,
+        k = a.useCallback(() => {
             eo.default.track(eE.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -133,7 +134,7 @@ function eT(e) {
             }),
                 (0, F.qA)();
         }, [t.guild_id, t.id]),
-        L = (e, t) => {
+        O = (e, t) => {
             let { onClick: n, ...i } = null != e ? e : { onClick: void 0 },
                 l = null != g;
             return (0, r.jsx)(et.O, {
@@ -146,14 +147,15 @@ function eT(e) {
                 isSelfStream: !0,
                 onPopoutClick: l
                     ? function (e) {
-                          x.hqStreamingIsEnabled && !x.hqStreamingPopoutDismissed && y(), null == n || n(e);
+                          x.hqStreamingIsEnabled && !x.hqStreamingPopoutDismissed && L(), null == n || n(e);
                       }
                     : null,
                 popoutOpen: t,
                 shouldShowTooltip: !t,
-                premiumGlow: S,
+                premiumGlow: j,
+                renderNUXHighlight: N,
                 buttonRef: I,
-                onClick: null != g ? A : j
+                onClick: null != g ? R : y
             });
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -165,24 +167,29 @@ function eT(e) {
                       children: (e) => {
                           let { visibleContent: t, markAsDismissed: n } = e;
                           if (t === m.z.TRIAL_NUX_STREAM_COACH_MARK)
-                              return (0, r.jsx)(W.h, {
-                                  buttonRef: I,
-                                  dismissed: !1,
-                                  onDismiss: () => n(eZ.L.USER_DISMISS)
-                              });
+                              return (
+                                  S(!0),
+                                  (0, r.jsx)(W.h, {
+                                      buttonRef: I,
+                                      dismissed: !1,
+                                      onDismiss: () => {
+                                          n(eZ.L.USER_DISMISS), S(!1);
+                                      }
+                                  })
+                              );
                       }
                   })
                 : v && x.hqStreamingIsEnabled
                   ? (0, r.jsx)(z.$, {
                         buttonRef: I,
                         dismissed: x.hqStreamingPopoutDismissed,
-                        onDismiss: y
+                        onDismiss: L
                     })
                   : (0, r.jsx)(V.b, {
                         channel: t,
                         buttonRef: I,
                         dismissed: x.hqStreamingOptInPopoutDismissed,
-                        onDismiss: R
+                        onDismiss: k
                     }),
             (0, r.jsx)(Y.Z, {
                 children: (0, r.jsx)(f.Popout, {
@@ -206,7 +213,7 @@ function eT(e) {
                     children: (e, t) => {
                         let { ...n } = e,
                             { isShown: i } = t;
-                        return (0, r.jsx)('div', { children: L(n, i) });
+                        return (0, r.jsx)('div', { children: O(n, i) });
                     }
                 })
             })

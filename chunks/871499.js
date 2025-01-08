@@ -87,7 +87,8 @@ let y = {
         yellow: I.yellow,
         primaryDark: I.primaryDark,
         primaryLight: I.primaryLight,
-        activeLight: I.activeLight
+        activeLight: I.activeLight,
+        premiumGradient: I.premiumGradient
     },
     S = {
         red: I.red,
@@ -96,7 +97,8 @@ let y = {
         yellow: I.yellow,
         primaryDark: I.experimentDark,
         primaryLight: I.experimentDark,
-        activeLight: I.experimentActiveLight
+        activeLight: I.experimentActiveLight,
+        premiumGradient: I.premiumGradient
     };
 function A(e) {
     let { color: n, ignoreColorForCaret: r = !1, isActive: i = !1, className: o, iconClassName: u, onPopoutClick: A, popoutOpen: N = !1, premiumGlow: C = !1, fullRegionButton: R = !1, ...O } = e,

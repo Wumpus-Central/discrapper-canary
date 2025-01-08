@@ -11,29 +11,28 @@ var i = n(200651),
     o = n(388032);
 function c(e) {
     let t,
-        { hasPermission: n, streamActive: c, isSelfStream: d, centerButton: u, onMouseEnter: h, onMouseLeave: p, premiumGlow: m, buttonRef: f, ...g } = e,
-        { mode: C } = (0, a.ZP)({ location: 'StreamButton' }),
-        x = u ? s.d : s.Z;
-    t = c ? (d ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : n ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
-    let { Component: v, events: _, play: I } = (0, r.P)(c ? 'disable' : 'enable');
-    return (
-        l.useEffect(() => () => I(), [c, I]),
-        (0, i.jsx)(x, {
-            buttonRef: f,
-            label: t,
-            disabled: !n,
-            iconComponent: v,
-            isActive: c,
-            color: C === a.BK.GroupedButtonsRedMic && c ? 'green' : void 0,
-            ignoreColorForCaret: C === a.BK.GroupedButtonsRedMic && c,
-            onMouseEnter: (e) => {
-                null == h || h(e), _.onMouseEnter();
-            },
-            onMouseLeave: (e) => {
-                null == p || p(e), _.onMouseLeave();
-            },
-            premiumGlow: m,
-            ...g
-        })
-    );
+        n,
+        { hasPermission: c, streamActive: d, isSelfStream: u, centerButton: h, onMouseEnter: p, onMouseLeave: m, premiumGlow: f, renderNUXHighlight: g, buttonRef: C, ...x } = e,
+        { mode: v } = (0, a.ZP)({ location: 'StreamButton' }),
+        _ = h ? s.d : s.Z;
+    n = d ? (u ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : c ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
+    let { Component: I, events: E, play: b } = (0, r.P)(d ? 'disable' : 'enable');
+    l.useEffect(() => () => b(), [d, b]);
+    return (0, i.jsx)(_, {
+        buttonRef: C,
+        label: n,
+        disabled: !c,
+        iconComponent: I,
+        isActive: d,
+        color: (g ? (t = 'premiumGradient') : v === a.BK.GroupedButtonsRedMic && d && (t = 'green'), t),
+        ignoreColorForCaret: v === a.BK.GroupedButtonsRedMic && d,
+        onMouseEnter: (e) => {
+            null == p || p(e), E.onMouseEnter();
+        },
+        onMouseLeave: (e) => {
+            null == m || m(e), E.onMouseLeave();
+        },
+        premiumGlow: f,
+        ...x
+    });
 }
