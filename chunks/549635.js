@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     r = t(192379),
-    a = t(120356),
-    l = t.n(a),
+    l = t(120356),
+    a = t.n(l),
     o = t(378409),
     s = t(124347),
     u = t(80966),
@@ -25,78 +25,79 @@ function S(e) {
 }
 n.Z = r.memo(function (e) {
     let n,
-        { media: t, obscured: r = !1, onContextMenu: a } = e,
-        { width: p, height: x, url: C, proxyUrl: y, alt: I, type: v, maxWidth: O, maxHeight: b, ...M } = t,
-        { zoomed: L, setZoomed: A } = (0, E.Y)(),
-        T = (function (e, n, t) {
+        { media: t, obscured: r = !1, panPadding: l, onContextMenu: p } = e,
+        { width: x, height: C, url: y, proxyUrl: I, alt: v, type: O, maxWidth: b, maxHeight: M, ...L } = t,
+        { zoomed: A, setZoomed: T } = (0, E.Y)(),
+        R = (function (e, n, t) {
             return e && (0, o.rV)(n)
                 ? (0, o.s$)(n)
                 : (0, f.q)({
                       proxyURL: t,
                       url: n
                   });
-        })(L, C, y),
-        { width: R, height: j } = (0, h.zp)(null != p ? p : 0, null != x ? x : 0),
-        N = !(null == p || 0 === p || null == x || 0 === x);
-    if ('VIDEO' === v && N && null != y) {
-        var D;
-        let e = S(y);
+        })(A, y, I),
+        { width: j, height: N } = (0, h.zp)(null != x ? x : 0, null != C ? C : 0),
+        D = !(null == x || 0 === x || null == C || 0 === C);
+    if ('VIDEO' === O && D && null != I) {
+        var P;
+        let e = S(I);
         if (null == e) return null;
-        let n = null !== (D = t.renderLinkComponent) && void 0 !== D ? D : d.iT;
+        let n = null !== (P = t.renderLinkComponent) && void 0 !== P ? P : d.iT;
         return (0, i.jsx)(u.Z, {
-            ...M,
-            src: T,
-            width: p,
-            height: x,
-            maxWidth: R,
-            maxHeight: j,
+            ...L,
+            src: R,
+            width: x,
+            height: C,
+            maxWidth: j,
+            maxHeight: N,
             poster: e,
-            naturalWidth: p,
-            naturalHeight: x,
+            naturalWidth: x,
+            naturalHeight: C,
             volume: m.FC,
             autoMute: m.rs,
             onVolumeChange: m.jA,
             onMute: m.Zj,
             renderLinkComponent: n,
             autoPlay: !r,
-            alt: I,
-            onContextMenu: a
+            alt: v,
+            onContextMenu: p
         });
     }
     return (
-        'IMAGE' === v &&
-            (n = N
+        'IMAGE' === O &&
+            (n = D
                 ? (0, i.jsx)(s.ZP, {
-                      ...M,
-                      src: T,
-                      width: p,
-                      height: x,
+                      ...L,
+                      src: R,
+                      width: x,
+                      height: C,
                       shouldLink: !1,
-                      maxWidth: R,
-                      maxHeight: j,
+                      maxWidth: j,
+                      maxHeight: N,
                       useFullWidth: !0,
                       animated: !r && t.animated,
                       autoPlay: !r,
-                      alt: I,
+                      alt: v,
                       zoomThumbnailPlaceholder: t.zoomThumbnailPlaceholder,
-                      onContextMenu: a
+                      onContextMenu: p
                   })
                 : (0, i.jsx)('img', {
-                      src: T,
-                      alt: I,
-                      onContextMenu: a,
+                      src: R,
+                      alt: v,
+                      onContextMenu: p,
                       className: g.dimensionlessImage
                   })),
         null != n
             ? (0, i.jsx)(c.Z, {
-                  width: p,
-                  height: x,
-                  maxWidth: R,
-                  maxHeight: j,
-                  active: L,
-                  className: l()(g.wrapper, { [g.zoomed]: L }),
+                  width: x,
+                  height: C,
+                  maxWidth: j,
+                  maxHeight: N,
+                  active: A,
+                  className: a()(g.wrapper, { [g.zoomed]: A }),
+                  panPadding: l,
                   onClick: () => {
-                      A(!L), (0, _.yg)(L ? _.uG.ZOOM_OUT_IMAGE_PRESSED : _.uG.ZOOM_IN_IMAGE_PRESSED);
+                      T(!A), (0, _.yg)(A ? _.uG.ZOOM_OUT_IMAGE_PRESSED : _.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
                   children: n
               })
