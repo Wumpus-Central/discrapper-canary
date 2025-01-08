@@ -259,69 +259,23 @@ t.Z = (e) => {
         { channelId: s } = (0, h._)(),
         o = (0, a.e7)([d.Z], () => null != s && d.Z.isSpam(s), [s]),
         c = (0, a.e7)([v.Z], () => v.Z.getRelationshipType(t), [t]),
-        u = n.id === s;
-    return t === Z.fL
-        ? null
-        : o || u
-          ? (0, i.jsxs)('div', {
-                className: T.mobileContainer,
-                children: [
-                    (0, i.jsx)('div', {
-                        className: T.mobileMutualGuilds,
-                        children: (0, i.jsx)(j, {
-                            userId: t,
-                            channelId: n.id
-                        })
-                    }),
-                    (0, i.jsxs)('div', {
-                        className: T.mobileButtons,
-                        children: [
-                            (0, i.jsx)(y, {
-                                channelId: n.id,
-                                otherUserId: t
-                            }),
-                            (0, i.jsx)(p.Z, { channel: n })
-                        ]
-                    })
-                ]
-            })
-          : !0 === r.tq || u
-            ? (0, i.jsxs)('div', {
-                  className: T.mobileContainer,
+        u = n.id === s,
+        m = !r.tq && !u,
+        f = !!r.tq || u || o;
+    if (t === Z.fL) return null;
+    let g =
+        o || u
+            ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)('div', {
-                          className: T.mobileMutualGuilds,
-                          children: (0, i.jsx)(j, {
-                              userId: t,
-                              channelId: n.id
-                          })
+                      (0, i.jsx)(y, {
+                          channelId: n.id,
+                          otherUserId: t
                       }),
-                      (0, i.jsxs)('div', {
-                          className: T.mobileButtons,
-                          children: [
-                              (0, i.jsx)(A, {
-                                  relationshipType: c,
-                                  userId: t,
-                                  showingBanner: l
-                              }),
-                              !l &&
-                                  (0, i.jsx)(E.Z, {
-                                      otherUserId: t,
-                                      channel: n,
-                                      navigateAwayOnReportSuccess: !1
-                                  })
-                          ]
-                      })
+                      (0, i.jsx)(p.Z, { channel: n })
                   ]
               })
-            : (0, i.jsxs)('div', {
-                  className: T.container,
+            : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(j, {
-                          userId: t,
-                          channelId: n.id
-                      }),
-                      (0, i.jsx)('div', { className: T.divider }),
                       (0, i.jsx)(A, {
                           relationshipType: c,
                           userId: t,
@@ -330,8 +284,26 @@ t.Z = (e) => {
                       !l &&
                           (0, i.jsx)(E.Z, {
                               otherUserId: t,
-                              channel: n
+                              channel: n,
+                              navigateAwayOnReportSuccess: m
                           })
                   ]
               });
+    return (0, i.jsxs)('div', {
+        className: f ? T.mobileContainer : T.container,
+        children: [
+            (0, i.jsx)('div', {
+                className: T.inline,
+                children: (0, i.jsx)(j, {
+                    userId: t,
+                    channelId: n.id
+                })
+            }),
+            !f && (0, i.jsx)('div', { className: T.divider }),
+            (0, i.jsx)('div', {
+                className: T.inline,
+                children: g
+            })
+        ]
+    });
 };
