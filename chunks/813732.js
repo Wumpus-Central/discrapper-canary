@@ -92,29 +92,28 @@ function W() {
     return (0, i.jsx)('hr', { className: Y.hr });
 }
 t.Z = function () {
-    var e, t, n;
-    let r = (0, a.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
-        m = (0, S.Z)({ subscriptionFilter: (e) => M.eS.has(e.status) }),
-        E = m.length > 1,
-        C = (0, a.e7)([O.Z], () => (null != r && null != r.paymentSourceId ? O.Z.getPaymentSource(r.paymentSourceId) : null), [r]),
-        B = (0, a.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
-        Z = (0, a.e7)([j.Z], () => j.Z.isBusy),
-        H = (0, T.V)(),
-        K = (0, a.e7)([v.Z], () => v.Z.getSubsection()),
-        q = (0, a.e7)([R.ZP], () => {
+    var e, t;
+    let n = (0, a.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
+        r = (0, S.Z)({ subscriptionFilter: (e) => M.eS.has(e.status) }),
+        m = r.length > 1,
+        E = (0, a.e7)([O.Z], () => (null != n && null != n.paymentSourceId ? O.Z.getPaymentSource(n.paymentSourceId) : null), [n]),
+        C = (0, a.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        P = (0, a.e7)([j.Z], () => j.Z.isBusy),
+        B = (0, T.V)(),
+        Z = (0, a.e7)([v.Z], () => v.Z.getSubsection()),
+        H = (0, a.e7)([R.ZP], () => {
             var e, t;
             return null !== (t = null === (e = R.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0;
         }),
-        X = (0, a.e7)([R.ZP], () => {
+        K = (0, a.e7)([R.ZP], () => {
             var e;
             return Object.values(null !== (e = R.ZP.getSubscriptions()) && void 0 !== e ? e : {})
                 .filter((e) => e.type === w.NYc.GUILD)
                 .filter((e) => e.status !== w.O0b.ENDED).length;
         }),
-        Q = (0, x.Z)({ forceFetch: !0 }),
-        J = (0, a.Wu)([P.Z], () => P.Z.getUnactivatedFractionalPremiumUnits()),
-        $ = null !== r ? r.currentPeriodEnd : void 0,
-        ee = Q.fractionalState !== k.a$.NONE || J.length > 0;
+        q = (0, x.Z)({ forceFetch: !0 }),
+        X = null !== n ? n.currentPeriodEnd : void 0,
+        Q = q.fractionalState !== k.a$.NONE || q.unactivatedUnits.length > 0;
     if (
         (s.useEffect(
             () => (
@@ -130,31 +129,30 @@ t.Z = function () {
         b.Z.enabled)
     )
         return (0, i.jsx)(p.Z, {});
-    if (!B || !H)
+    if (!C || !B)
         return (0, i.jsx)('div', {
             className: l()(Y.container, Y.loading),
             children: (0, i.jsx)(o.Spinner, {})
         });
-    if (K === U.cP) return (0, i.jsx)(f.Z, { onGoBack: () => g.Z.clearSubsection() });
-    if (K === U.XZ) return (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (Z === U.cP) return (0, i.jsx)(f.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (Z === U.XZ) return (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() });
     return (0, i.jsx)('div', {
         className: Y.container,
         children: (0, i.jsxs)('div', {
             className: Y.content,
             children: [
-                E ? (0, i.jsx)(M.Yn, {}) : null,
-                null != r
+                m ? (0, i.jsx)(M.Yn, {}) : null,
+                null != n
                     ? (0, i.jsx)(M.ZP, {
-                          subscription: r,
-                          paymentSource: C,
-                          busy: Z,
-                          subscriptions: m
+                          subscription: n,
+                          paymentSource: E,
+                          busy: P,
+                          subscriptions: r
                       })
                     : (0, i.jsx)(M.MM, {}),
-                ee &&
-                    ((e = Q),
-                    (t = J),
-                    (n = $),
+                Q &&
+                    ((e = q),
+                    (t = X),
                     (0, i.jsxs)('section', {
                         children: [
                             (0, i.jsx)(o.Heading, {
@@ -170,8 +168,7 @@ t.Z = function () {
                             (0, i.jsx)(L.Z, {
                                 className: Y.accountCredit,
                                 fractionalPremiumInfo: e,
-                                unactivatedUnits: t,
-                                activationDate: n
+                                activationDate: t
                             })
                         ]
                     })),
@@ -179,22 +176,22 @@ t.Z = function () {
                     setting: V.s6.SUBSCRIPTIONS_CREDITS,
                     children: (0, i.jsx)(z, {})
                 }),
-                X > 0 &&
+                K > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(W, {}),
                             (0, i.jsx)(_.Z, {
-                                count: X,
+                                count: K,
                                 onClickManageSubscription: () => g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.cP)
                             })
                         ]
                     }),
-                q > 0 &&
+                H > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(W, {}),
                             (0, i.jsx)(I.Z, {
-                                count: q,
+                                count: H,
                                 onClickManageSubscription: () => {
                                     g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.XZ), D.default.track(w.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                 }
@@ -202,9 +199,9 @@ t.Z = function () {
                         ]
                     }),
                 (0, i.jsx)(W, {}),
-                null != r
+                null != n
                     ? (0, i.jsx)(F.Z, {
-                          subscription: r,
+                          subscription: n,
                           withOverheadSeparator: !1
                       })
                     : null

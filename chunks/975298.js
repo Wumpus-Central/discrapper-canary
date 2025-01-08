@@ -30,7 +30,8 @@ function b() {
         [o, u] = s.useState({
             fractionalState: T.a$.NONE,
             endsAt: c()(0),
-            currentEntitlementId: ''
+            currentEntitlementId: '',
+            unactivatedUnits: []
         });
     return (
         (0, _.Z)(() => {
@@ -44,7 +45,8 @@ function b() {
                         : {
                               fractionalState: T.a$.NONE,
                               endsAt: c()(0),
-                              currentEntitlementId: ''
+                              currentEntitlementId: '',
+                              unactivatedUnits: []
                           }
                 );
                 return;
@@ -58,7 +60,8 @@ function b() {
             u({
                 fractionalState: null == a || I.JwP.INACTIVE.has(a.status) || a.isBoostOnly ? T.a$.FP_ONLY : T.a$.FP_SUB_PAUSED,
                 endsAt: c()((0, v.N1)(e[0].endsAt, i)),
-                currentEntitlementId: e.length > 0 ? e[0].id : ''
+                currentEntitlementId: e.length > 0 ? e[0].id : '',
+                unactivatedUnits: i
             });
         }, [n, r, a, i]),
         o
