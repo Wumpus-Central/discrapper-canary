@@ -9,50 +9,54 @@ var a = r(120356),
     d = r(388032),
     f = r(507304);
 function _(e) {
-    let { children: n, className: r, compact: a = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: m = !1, isInline: g = !0, id: E, isEdited: v = !1, application: I } = e,
-        T = (0, l.Hg)(_),
-        b = a ? (0, l.vc)(_, 'LT') : (0, l.Y4)(_),
-        y = a ? (0, c.Z)(b) : null,
-        S = v ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: T }) : T;
+    return new Date(e);
+}
+function h(e) {
+    let { children: n, className: r, compact: a = !1, timestamp: h, isVisibleOnlyOnHover: m = !1, cozyAlt: g = !1, isInline: E = !0, id: v, isEdited: I = !1, application: T } = e,
+        b = _(h),
+        y = (0, l.Hg)(b),
+        S = a ? (0, l.vc)(b, 'LT') : (0, l.Y4)(b),
+        A = a ? (0, c.Z)(S) : null,
+        N = I ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: y }) : y;
     return (0, i.jsx)('span', {
-        className: s()(r, y, {
+        className: s()(r, A, {
             [f.timestamp]: !0,
-            [f.timestampVisibleOnHover]: p,
-            [f.timestampInline]: g,
-            [f.alt]: m
+            [f.timestampVisibleOnHover]: m,
+            [f.timestampInline]: E,
+            [f.alt]: g
         }),
         children:
-            null == I
+            null == T
                 ? (0, i.jsx)(o.Tooltip, {
-                      text: (0, l.vc)(_, 'LLLL'),
-                      'aria-label': S,
+                      text: (0, l.vc)(b, 'LLLL'),
+                      'aria-label': N,
                       tooltipClassName: f.timestampTooltip,
                       delay: 750,
                       children: (e) =>
-                          (0, i.jsx)(h, {
+                          (0, i.jsx)(p, {
                               tooltipProps: e,
-                              timeFormatted: b,
-                              timestamp: _,
-                              id: E,
+                              timeFormatted: S,
+                              timestamp: b,
+                              id: v,
                               compact: a,
                               children: n
                           })
                   })
                 : (0, i.jsx)(u.Z, {
-                      application: I,
-                      timestamp: _,
+                      application: T,
+                      timestamp: b,
                       compact: a,
-                      children: (0, i.jsx)(h, {
-                          timeFormatted: b,
-                          timestamp: _,
-                          id: E,
+                      children: (0, i.jsx)(p, {
+                          timeFormatted: S,
+                          timestamp: b,
+                          id: v,
                           compact: a,
                           children: n
                       })
                   })
     });
 }
-function h(e) {
+function p(e) {
     let { tooltipProps: n, timeFormatted: r, children: a, compact: s, timestamp: o, id: l } = e;
     return (0, i.jsx)('time', {
         ...n,
@@ -79,4 +83,4 @@ function h(e) {
                   })
     });
 }
-n.Z = _;
+n.Z = h;
