@@ -12,36 +12,37 @@ var i = n(200651),
     o = n(481060),
     s = n(53281),
     u = n(476326),
+    d = n(304761),
     c = n(273031),
-    d = n(859235),
-    m = n(898463),
-    h = n(951394),
-    v = n(594174),
-    x = n(768581),
-    p = n(358085),
-    f = n(223356),
-    g = n(225452),
-    j = n(388032),
-    y = n(466443);
-let S = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
+    m = n(859235),
+    h = n(898463),
+    v = n(951394),
+    x = n(594174),
+    p = n(768581),
+    f = n(358085),
+    g = n(223356),
+    j = n(225452),
+    y = n(388032),
+    S = n(466443);
+let b = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
     label: e,
     value: e
 }));
 function I(e) {
-    var t, I, b, C, T;
-    let { transitionState: _, onClose: P } = e,
-        w = r.useRef(null),
+    var t, I, C, T, _;
+    let { transitionState: P, onClose: w } = e,
         k = r.useRef(null),
-        [E, D] = r.useState(''),
-        [M, F] = r.useState(''),
-        [N, A] = r.useState(),
-        [L, R] = r.useState(''),
-        [O, B] = r.useState([]),
-        [V, Z] = r.useState(),
-        [W, z] = r.useState(),
-        [G, H] = r.useState(!1),
-        [q, U] = r.useState(''),
-        [Y, X] = r.useState(
+        E = r.useRef(null),
+        [N, O] = r.useState(''),
+        [F, D] = r.useState(''),
+        [M, A] = r.useState(),
+        [R, L] = r.useState(''),
+        [B, Z] = r.useState([]),
+        [V, W] = r.useState(),
+        [z, G] = r.useState(),
+        [H, q] = r.useState(!1),
+        [U, Y] = r.useState(''),
+        [X, K] = r.useState(
             (function (e) {
                 switch (e) {
                     case 'windows':
@@ -52,376 +53,389 @@ function I(e) {
                         return 'Linux';
                 }
                 return '';
-            })((0, p.getOS)())
+            })((0, f.getOS)())
         ),
-        [K, J] = r.useState(''),
-        [Q, $] = r.useState(''),
-        [ee, et] = r.useState(''),
-        [en, ei] = r.useState(''),
-        [er, el] = r.useState(!1),
-        [ea, eo] = r.useState(!1),
-        [es, eu] = r.useState(!1),
-        ec = (0, a.e7)([v.default], () => {
-            let e = v.default.getCurrentUser();
+        [J, Q] = r.useState(''),
+        [$, ee] = r.useState(''),
+        [et, en] = r.useState(''),
+        [ei, er] = r.useState(''),
+        [el, ea] = r.useState(!1),
+        [eo, es] = r.useState(!1),
+        [eu, ed] = r.useState(!1),
+        ec = (0, a.e7)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ed = () => {
-            null == P || P();
+        em = (0, a.e7)([d.C], () => {
+            var e;
+            return null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web;
+        }),
+        eh = () => {
+            null == w || w();
         },
-        em = (e) => {
-            B(O.filter((t) => t.id !== e));
+        ev = (e) => {
+            Z(B.filter((t) => t.id !== e));
         };
-    async function eh() {
-        var e;
-        if ((eu(!1), '' === E || null == N)) {
-            el(!0);
+    async function ex() {
+        var e, t;
+        if ((ed(!1), '' === N || null == M)) {
+            ea(!0);
             return;
         }
-        let t = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find((e) => (0, f.pD)(e) === W);
-        eo(!0), el(!1);
-        let r = (0, g.D)(
-                O.map((e) => {
+        let r = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find((e) => (0, g.pD)(e) === z);
+        es(!0), ea(!1);
+        let l = (0, j.D)(
+                B.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
             ),
-            l =
-                !0 === G
+            a =
+                !0 === H
                     ? {
-                          overridePlatformInformation: G,
-                          device: q,
-                          operatingSystem: Y,
-                          operatingSystemVersion: K,
-                          clientVersion: Q,
-                          clientBuildNumber: ee,
-                          locale: en
+                          overridePlatformInformation: H,
+                          device: U,
+                          operatingSystem: X,
+                          operatingSystemVersion: J,
+                          clientVersion: $,
+                          clientBuildNumber: et,
+                          locale: ei
                       }
-                    : { overridePlatformInformation: G },
-            a = await (0, f.ZD)(
+                    : { overridePlatformInformation: H },
+            s = await (0, g.ZD)(
                 {
-                    name: E,
-                    description: M,
-                    priority: N,
-                    feature: t,
-                    url: L
+                    name: N,
+                    description: F,
+                    priority: M,
+                    feature: r,
+                    url: R,
+                    buildOverride: null !== (t = null == em ? void 0 : em.id) && void 0 !== t ? t : null
                 },
-                l,
-                r
-            ).catch(() => eu(!0));
-        eo(!1),
-            null != a && a.ok
-                ? (ec && window.open(a.body.permalink_url, '_blank'),
-                  ed(),
+                a,
+                l
+            ).catch(() => ed(!0));
+        es(!1),
+            null != s && s.ok
+                ? (ec && window.open(s.body.permalink_url, '_blank'),
+                  eh(),
                   (0, o.openModalLazy)(async () => {
                       let { default: e } = await n.e('64648').then(n.bind(n, 81155));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,
-                              asanaTask: a.body
+                              asanaTask: s.body
                           });
                   }))
-                : eu(!0);
+                : ed(!0);
     }
     return (
         r.useEffect(() => {
             async function e() {
-                Z(await (0, f.WG)());
+                W(await (0, g.WG)());
             }
             ec && e();
         }, [ec]),
         r.useEffect(() => {
-            if (O.length > 0) {
+            if (B.length > 0) {
                 var e;
-                null === (e = k.current) ||
+                null === (e = E.current) ||
                     void 0 === e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
                         block: 'end'
                     });
             }
-        }, [O]),
+        }, [B]),
         (0, i.jsxs)(o.ModalRoot, {
-            transitionState: _,
-            'aria-label': j.intl.string(j.t.mCCdws),
+            transitionState: P,
+            'aria-label': y.intl.string(y.t.mCCdws),
             size: o.ModalSize.MEDIUM,
             children: [
                 (0, i.jsx)(o.ModalHeader, {
                     children: (0, i.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: (0, i.jsx)(o.H, { children: j.intl.string(j.t['5Lqopa']) })
+                        children: (0, i.jsx)(o.H, { children: y.intl.string(y.t['5Lqopa']) })
                     })
                 }),
                 (0, i.jsx)(o.ModalContent, {
-                    children: (0, i.jsx)('form', {
-                        onSubmit: eh,
-                        children: (0, i.jsxs)(o.Stack, {
-                            gap: 24,
-                            padding: {
-                                top: 8,
-                                bottom: 8
-                            },
-                            children: [
-                                (0, i.jsx)(o.FormItem, {
-                                    error: er && '' === E ? j.intl.string(j.t.EkokLy) : null,
-                                    title: j.intl.string(j.t.OZRgj4),
-                                    children: (0, i.jsx)(o.TextInput, {
-                                        placeholder: 'Something is broken on this screen.',
-                                        type: 'text',
-                                        value: E,
-                                        maxLength: 100,
-                                        onChange: D
-                                    })
+                    children: (0, i.jsxs)('form', {
+                        onSubmit: ex,
+                        children: [
+                            null != em &&
+                                (0, i.jsx)(o.FormNotice, {
+                                    type: o.FormNotice.Types.WARNING,
+                                    body: y.intl.format(y.t['yY60+/'], { buildOverrideHook: () => (0, i.jsx)('b', { children: null == em ? void 0 : em.id }) }),
+                                    title: y.intl.string(y.t['ZP/hEx'])
                                 }),
-                                (0, i.jsxs)(o.FormItem, {
-                                    title: j.intl.string(j.t['1SplHx']),
-                                    children: [
-                                        (0, i.jsx)(o.TextArea, {
-                                            placeholder: 'What did you expect to see?',
-                                            value: M,
-                                            onChange: F
-                                        }),
-                                        (0, i.jsx)(o.FormText, {
-                                            type: o.FormTextTypes.DESCRIPTION,
-                                            children: 'You can add additional information/media on the ticket after submitting'
-                                        })
-                                    ]
-                                }),
-                                (0, i.jsx)(o.FormItem, {
-                                    error: er && void 0 === N ? j.intl.string(j.t.EkokLy) : null,
-                                    title: j.intl.string(j.t.xMXLdX),
-                                    children: (0, i.jsx)(o.SingleSelect, {
-                                        renderOptionLabel: (e) =>
-                                            (function (e) {
-                                                let t = e.priority;
-                                                return (0, i.jsxs)('div', {
-                                                    className: y.formPriorityImageContainer,
-                                                    children: [
-                                                        (0, i.jsxs)('div', {
-                                                            className: y.formPriorityTitleContainer,
-                                                            children: [
-                                                                (0, i.jsx)('img', {
-                                                                    alt: '',
-                                                                    className: y.formPriorityImage,
-                                                                    src: (0, x.gT)({
-                                                                        id: t.emoji,
-                                                                        animated: !0,
-                                                                        size: 48
-                                                                    })
-                                                                }),
-                                                                (0, i.jsx)(o.Text, {
-                                                                    color: 'header-primary',
-                                                                    variant: 'text-sm/semibold',
-                                                                    className: y.formPriorityTitle,
-                                                                    children: t.title
-                                                                })
-                                                            ]
-                                                        }),
-                                                        (0, i.jsx)(o.Text, {
-                                                            color: 'header-secondary',
-                                                            variant: 'text-xs/normal',
-                                                            className: y.formPriorityDescription,
-                                                            children: t.description
-                                                        })
-                                                    ]
-                                                });
-                                            })(e),
-                                        onChange: A,
-                                        options: (0, f.Tj)().map((e) => ({
-                                            priority: e,
-                                            value: e.value,
-                                            label: e.title
-                                        })),
-                                        value: N,
-                                        maxVisibleItems: 3,
-                                        closeOnSelect: !0
-                                    })
-                                }),
-                                ec &&
+                            (0, i.jsxs)(o.Stack, {
+                                gap: 24,
+                                padding: {
+                                    top: 8,
+                                    bottom: 8
+                                },
+                                children: [
                                     (0, i.jsx)(o.FormItem, {
-                                        title: j.intl.string(j.t['77VVd3']),
-                                        children: (0, i.jsx)(o.SearchableSelect, {
-                                            value: W,
-                                            options:
-                                                null !==
-                                                    (T =
-                                                        null == (t = V)
-                                                            ? void 0
-                                                            : null === (C = t.features) || void 0 === C
-                                                              ? void 0
-                                                              : null === (b = C.filter((e) => '' !== (0, f.pD)(e))) || void 0 === b
-                                                                ? void 0
-                                                                : null ===
-                                                                        (I = b.map((e) => {
-                                                                            var t;
-                                                                            return {
-                                                                                label: null !== (t = e.name) && void 0 !== t ? t : '',
-                                                                                value: (0, f.pD)(e)
-                                                                            };
-                                                                        })) || void 0 === I
-                                                                  ? void 0
-                                                                  : I.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== T
-                                                    ? T
-                                                    : [],
-                                            isDisabled: null == V,
-                                            onChange: (e) => z(e)
+                                        error: el && '' === N ? y.intl.string(y.t.EkokLy) : null,
+                                        title: y.intl.string(y.t.OZRgj4),
+                                        children: (0, i.jsx)(o.TextInput, {
+                                            placeholder: 'Something is broken on this screen.',
+                                            type: 'text',
+                                            value: N,
+                                            maxLength: 100,
+                                            onChange: O
                                         })
                                     }),
-                                (0, i.jsx)(o.FormItem, {
-                                    title: j.intl.string(j.t['7p5pqq']),
-                                    children: (0, i.jsx)(o.TextInput, {
-                                        placeholder: j.intl.string(j.t.HewMzs),
-                                        type: 'text',
-                                        value: L,
-                                        maxLength: 5000,
-                                        onChange: R
-                                    })
-                                }),
-                                (0, i.jsx)(o.FormItem, {
-                                    children: (0, i.jsx)(o.Checkbox, {
-                                        value: G,
-                                        onChange: (e, t) => H(t),
-                                        children: j.intl.string(j.t.ayhqiI)
-                                    })
-                                }),
-                                G
-                                    ? (0, i.jsxs)(i.Fragment, {
-                                          children: [
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t.rrI4Tk),
-                                                  children: (0, i.jsx)(o.TextInput, {
-                                                      placeholder: 'Device',
-                                                      value: q,
-                                                      onChange: (e) => U(e)
-                                                  })
-                                              }),
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t.kcHxi4),
-                                                  children: (0, i.jsx)(o.SingleSelect, {
-                                                      value: Y,
-                                                      options: S,
-                                                      onChange: (e) => X(e)
-                                                  })
-                                              }),
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t.rEtxdn),
-                                                  children: (0, i.jsx)(o.TextInput, {
-                                                      placeholder: 'Operating System Version',
-                                                      value: K,
-                                                      onChange: (e) => J(e)
-                                                  })
-                                              }),
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t['wy1M/v']),
-                                                  children: (0, i.jsx)(o.TextInput, {
-                                                      placeholder: 'Client Version',
-                                                      value: Q,
-                                                      onChange: (e) => $(e)
-                                                  })
-                                              }),
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t.f7kbVl),
-                                                  children: (0, i.jsx)(o.TextInput, {
-                                                      placeholder: 'Client Build Number',
-                                                      value: ee,
-                                                      onChange: (e) => et(e)
-                                                  })
-                                              }),
-                                              (0, i.jsx)(o.FormItem, {
-                                                  title: j.intl.string(j.t['4Z5+zs']),
-                                                  children: (0, i.jsx)(o.TextInput, {
-                                                      placeholder: 'Locale',
-                                                      value: en,
-                                                      onChange: (e) => ei(e)
-                                                  })
-                                              })
-                                          ]
-                                      })
-                                    : null,
-                                (0, i.jsxs)(o.Button, {
-                                    color: o.Button.Colors.PRIMARY,
-                                    children: [
-                                        j.intl.string(j.t.HVxmOD),
-                                        (0, i.jsx)(s.Z, {
-                                            ref: w,
-                                            onChange: (e) => {
-                                                var t, n;
-                                                (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
-                                                    B([
-                                                        ...O,
-                                                        ...Array.from(e.currentTarget.files).map(
-                                                            (e) =>
-                                                                new u.ZP({
-                                                                    id: (0, l.Z)(),
-                                                                    file: e,
-                                                                    platform: u.ow.WEB
-                                                                })
-                                                        )
-                                                    ]);
-                                            },
-                                            multiple: !0
+                                    (0, i.jsxs)(o.FormItem, {
+                                        title: y.intl.string(y.t['1SplHx']),
+                                        children: [
+                                            (0, i.jsx)(o.TextArea, {
+                                                placeholder: 'What did you expect to see?',
+                                                value: F,
+                                                onChange: D
+                                            }),
+                                            (0, i.jsx)(o.FormText, {
+                                                type: o.FormTextTypes.DESCRIPTION,
+                                                children: 'You can add additional information/media on the ticket after submitting'
+                                            })
+                                        ]
+                                    }),
+                                    (0, i.jsx)(o.FormItem, {
+                                        error: el && void 0 === M ? y.intl.string(y.t.EkokLy) : null,
+                                        title: y.intl.string(y.t.xMXLdX),
+                                        children: (0, i.jsx)(o.SingleSelect, {
+                                            renderOptionLabel: (e) =>
+                                                (function (e) {
+                                                    let t = e.priority;
+                                                    return (0, i.jsxs)('div', {
+                                                        className: S.formPriorityImageContainer,
+                                                        children: [
+                                                            (0, i.jsxs)('div', {
+                                                                className: S.formPriorityTitleContainer,
+                                                                children: [
+                                                                    (0, i.jsx)('img', {
+                                                                        alt: '',
+                                                                        className: S.formPriorityImage,
+                                                                        src: (0, p.gT)({
+                                                                            id: t.emoji,
+                                                                            animated: !0,
+                                                                            size: 48
+                                                                        })
+                                                                    }),
+                                                                    (0, i.jsx)(o.Text, {
+                                                                        color: 'header-primary',
+                                                                        variant: 'text-sm/semibold',
+                                                                        className: S.formPriorityTitle,
+                                                                        children: t.title
+                                                                    })
+                                                                ]
+                                                            }),
+                                                            (0, i.jsx)(o.Text, {
+                                                                color: 'header-secondary',
+                                                                variant: 'text-xs/normal',
+                                                                className: S.formPriorityDescription,
+                                                                children: t.description
+                                                            })
+                                                        ]
+                                                    });
+                                                })(e),
+                                            onChange: A,
+                                            options: (0, g.Tj)().map((e) => ({
+                                                priority: e,
+                                                value: e.value,
+                                                label: e.title
+                                            })),
+                                            value: M,
+                                            maxVisibleItems: 3,
+                                            closeOnSelect: !0
                                         })
-                                    ]
-                                }),
-                                O.length > 0
-                                    ? (0, i.jsxs)(o.FormSection, {
-                                          children: [
-                                              (0, i.jsx)(o.FormTitle, { children: 'Preview' }),
-                                              (0, i.jsx)('div', {
-                                                  ref: k,
-                                                  className: y.attachments,
-                                                  children:
-                                                      O.length > 0 &&
-                                                      O.map((e) =>
-                                                          (0, i.jsxs)(
-                                                              'div',
-                                                              {
-                                                                  className: y.attachment,
-                                                                  children: [
-                                                                      (0, i.jsxs)('div', {
-                                                                          children: [
-                                                                              (0, i.jsx)(m.r, {
-                                                                                  size: d.q.SMALL,
-                                                                                  upload: e
-                                                                              }),
-                                                                              (0, i.jsx)('div', {
-                                                                                  className: y.removeAttachment,
-                                                                                  children: (0, i.jsx)(h.ZP, {
-                                                                                      children: (0, i.jsx)(c.Z, {
-                                                                                          tooltip: j.intl.string(j.t.vN7REx),
-                                                                                          onClick: () => em(e.id),
-                                                                                          dangerous: !0,
-                                                                                          children: (0, i.jsx)(o.TrashIcon, {
-                                                                                              size: 'md',
-                                                                                              color: 'currentColor'
+                                    }),
+                                    ec &&
+                                        (0, i.jsx)(o.FormItem, {
+                                            title: y.intl.string(y.t['77VVd3']),
+                                            children: (0, i.jsx)(o.SearchableSelect, {
+                                                value: z,
+                                                options:
+                                                    null !==
+                                                        (_ =
+                                                            null == (t = V)
+                                                                ? void 0
+                                                                : null === (T = t.features) || void 0 === T
+                                                                  ? void 0
+                                                                  : null === (C = T.filter((e) => '' !== (0, g.pD)(e))) || void 0 === C
+                                                                    ? void 0
+                                                                    : null ===
+                                                                            (I = C.map((e) => {
+                                                                                var t;
+                                                                                return {
+                                                                                    label: null !== (t = e.name) && void 0 !== t ? t : '',
+                                                                                    value: (0, g.pD)(e)
+                                                                                };
+                                                                            })) || void 0 === I
+                                                                      ? void 0
+                                                                      : I.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== _
+                                                        ? _
+                                                        : [],
+                                                isDisabled: null == V,
+                                                onChange: (e) => G(e)
+                                            })
+                                        }),
+                                    (0, i.jsx)(o.FormItem, {
+                                        title: y.intl.string(y.t['7p5pqq']),
+                                        children: (0, i.jsx)(o.TextInput, {
+                                            placeholder: y.intl.string(y.t.HewMzs),
+                                            type: 'text',
+                                            value: R,
+                                            maxLength: 5000,
+                                            onChange: L
+                                        })
+                                    }),
+                                    (0, i.jsx)(o.FormItem, {
+                                        children: (0, i.jsx)(o.Checkbox, {
+                                            value: H,
+                                            onChange: (e, t) => q(t),
+                                            children: y.intl.string(y.t.ayhqiI)
+                                        })
+                                    }),
+                                    H
+                                        ? (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t.rrI4Tk),
+                                                      children: (0, i.jsx)(o.TextInput, {
+                                                          placeholder: 'Device',
+                                                          value: U,
+                                                          onChange: (e) => Y(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t.kcHxi4),
+                                                      children: (0, i.jsx)(o.SingleSelect, {
+                                                          value: X,
+                                                          options: b,
+                                                          onChange: (e) => K(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t.rEtxdn),
+                                                      children: (0, i.jsx)(o.TextInput, {
+                                                          placeholder: 'Operating System Version',
+                                                          value: J,
+                                                          onChange: (e) => Q(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t['wy1M/v']),
+                                                      children: (0, i.jsx)(o.TextInput, {
+                                                          placeholder: 'Client Version',
+                                                          value: $,
+                                                          onChange: (e) => ee(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t.f7kbVl),
+                                                      children: (0, i.jsx)(o.TextInput, {
+                                                          placeholder: 'Client Build Number',
+                                                          value: et,
+                                                          onChange: (e) => en(e)
+                                                      })
+                                                  }),
+                                                  (0, i.jsx)(o.FormItem, {
+                                                      title: y.intl.string(y.t['4Z5+zs']),
+                                                      children: (0, i.jsx)(o.TextInput, {
+                                                          placeholder: 'Locale',
+                                                          value: ei,
+                                                          onChange: (e) => er(e)
+                                                      })
+                                                  })
+                                              ]
+                                          })
+                                        : null,
+                                    (0, i.jsxs)(o.Button, {
+                                        color: o.Button.Colors.PRIMARY,
+                                        children: [
+                                            y.intl.string(y.t.HVxmOD),
+                                            (0, i.jsx)(s.Z, {
+                                                ref: k,
+                                                onChange: (e) => {
+                                                    var t, n;
+                                                    (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
+                                                        Z([
+                                                            ...B,
+                                                            ...Array.from(e.currentTarget.files).map(
+                                                                (e) =>
+                                                                    new u.ZP({
+                                                                        id: (0, l.Z)(),
+                                                                        file: e,
+                                                                        platform: u.ow.WEB
+                                                                    })
+                                                            )
+                                                        ]);
+                                                },
+                                                multiple: !0
+                                            })
+                                        ]
+                                    }),
+                                    B.length > 0
+                                        ? (0, i.jsxs)(o.FormSection, {
+                                              children: [
+                                                  (0, i.jsx)(o.FormTitle, { children: 'Preview' }),
+                                                  (0, i.jsx)('div', {
+                                                      ref: E,
+                                                      className: S.attachments,
+                                                      children:
+                                                          B.length > 0 &&
+                                                          B.map((e) =>
+                                                              (0, i.jsxs)(
+                                                                  'div',
+                                                                  {
+                                                                      className: S.attachment,
+                                                                      children: [
+                                                                          (0, i.jsxs)('div', {
+                                                                              children: [
+                                                                                  (0, i.jsx)(h.r, {
+                                                                                      size: m.q.SMALL,
+                                                                                      upload: e
+                                                                                  }),
+                                                                                  (0, i.jsx)('div', {
+                                                                                      className: S.removeAttachment,
+                                                                                      children: (0, i.jsx)(v.ZP, {
+                                                                                          children: (0, i.jsx)(c.Z, {
+                                                                                              tooltip: y.intl.string(y.t.vN7REx),
+                                                                                              onClick: () => ev(e.id),
+                                                                                              dangerous: !0,
+                                                                                              children: (0, i.jsx)(o.TrashIcon, {
+                                                                                                  size: 'md',
+                                                                                                  color: 'currentColor'
+                                                                                              })
                                                                                           })
                                                                                       })
                                                                                   })
-                                                                              })
-                                                                          ]
-                                                                      }),
-                                                                      (0, i.jsx)(o.Text, {
-                                                                          variant: 'text-xxs/medium',
-                                                                          color: 'text-secondary',
-                                                                          children: e.filename
-                                                                      })
-                                                                  ]
-                                                              },
-                                                              e.id
+                                                                              ]
+                                                                          }),
+                                                                          (0, i.jsx)(o.Text, {
+                                                                              variant: 'text-xxs/medium',
+                                                                              color: 'text-secondary',
+                                                                              children: e.filename
+                                                                          })
+                                                                      ]
+                                                                  },
+                                                                  e.id
+                                                              )
                                                           )
-                                                      )
-                                              })
-                                          ]
-                                      })
-                                    : null,
-                                es
-                                    ? (0, i.jsx)(o.Text, {
-                                          color: 'text-danger',
-                                          variant: 'text-sm/normal',
-                                          children: 'Something went wrong, try again!'
-                                      })
-                                    : null
-                            ]
-                        })
+                                                  })
+                                              ]
+                                          })
+                                        : null,
+                                    eu
+                                        ? (0, i.jsx)(o.Text, {
+                                              color: 'text-danger',
+                                              variant: 'text-sm/normal',
+                                              children: 'Something went wrong, try again!'
+                                          })
+                                        : null
+                                ]
+                            })
+                        ]
                     })
                 }),
                 (0, i.jsx)(o.ModalFooter, {
@@ -431,14 +445,14 @@ function I(e) {
                         justify: 'end',
                         children: [
                             (0, i.jsx)(o.Button, {
-                                submitting: ea,
-                                onClick: eh,
+                                submitting: eo,
+                                onClick: ex,
                                 children: 'Submit and Open Report'
                             }),
                             (0, i.jsx)(o.Button, {
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: ed,
-                                children: j.intl.string(j.t['ETE/oK'])
+                                onClick: eh,
+                                children: y.intl.string(y.t['ETE/oK'])
                             })
                         ]
                     })
