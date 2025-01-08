@@ -13,8 +13,8 @@ var l = t(481060),
     u = t(960048),
     d = t(998502),
     c = t(36998),
-    f = t(981631),
-    g = t(388032);
+    g = t(981631),
+    f = t(388032);
 function m(e, n) {
     (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE)), u.Z.captureException(n);
 }
@@ -23,16 +23,16 @@ function h(e, n, t) {
     let u = (0, r.s$)(e),
         h = async () => {
             try {
-                await d.ZP.saveImage(u), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.cqpdJS), l.ToastType.SUCCESS));
+                await d.ZP.saveImage(u), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.cqpdJS), l.ToastType.SUCCESS));
             } catch (e) {
-                o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, c.v)() }), m(g.intl.string(g.t['8Ve/S0']), e);
+                o.default.track(g.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, c.v)() }), m(f.intl.string(f.t['8Ve/S0']), e);
             }
         },
         E = async () => {
             try {
-                await d.ZP.copyImage(u), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.bhUpvL), l.ToastType.SUCCESS));
+                await d.ZP.copyImage(u), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t.bhUpvL), l.ToastType.SUCCESS));
             } catch (e) {
-                m(g.intl.string(g.t.PTPbj4), e), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, c.v)() });
+                m(f.intl.string(f.t.PTPbj4), e), o.default.track(g.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, c.v)() });
             }
         };
     return [
@@ -41,7 +41,7 @@ function h(e, n, t) {
                   l.MenuItem,
                   {
                       id: 'copy-image',
-                      label: g.intl.string(g.t.tvUqWl),
+                      label: f.intl.string(f.t.tvUqWl),
                       action: E
                   },
                   'copy-image'
@@ -51,7 +51,7 @@ function h(e, n, t) {
             l.MenuItem,
             {
                 id: 'save-image',
-                label: g.intl.string(g.t.PeXhgI),
+                label: f.intl.string(f.t.PeXhgI),
                 action: h
             },
             'save-image'

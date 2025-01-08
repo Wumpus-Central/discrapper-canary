@@ -119,7 +119,7 @@ function e1(e, t, n) {
     );
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073);
-let e2 = !1;
+let e4 = !1;
 (0, v.D)(),
     s.ZP.initialize(),
     eE.Z.loadServer(),
@@ -138,7 +138,7 @@ let e2 = !1;
                 }
             });
         }));
-let e4 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
+let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         isConnected: F.Z.isConnected(),
         defaultRoute: ek.Z.defaultRoute,
         defaultRouteFallback: ek.Z.fallbackRoute,
@@ -177,13 +177,13 @@ let e7 = [
         path: [eJ.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(':inviteCode')],
         render(e) {
             let { match: t } = e;
-            return (0, i.jsx)(e4, { match: t });
+            return (0, i.jsx)(e2, { match: t });
         },
         isSessionRequired: !0
     },
     {
         path: [eJ.Z5c.APP],
-        render: () => (0, i.jsx)(e4, {}),
+        render: () => (0, i.jsx)(e2, {}),
         isSessionRequired: !0
     },
     {
@@ -472,8 +472,8 @@ class tt extends r.PureComponent {
                 if ((c && g && u.Z.selectGuild(i), c && d)) {
                     let n = eV.Z.getChannelId(p),
                         a = n !== r;
-                    if (!e2 || g || a || null != s) {
-                        (e2 = !0),
+                    if (!e4 || g || a || null != s) {
+                        (e4 = !0),
                             h.default.selectChannel({
                                 guildId: i,
                                 channelId: r,

@@ -8,8 +8,8 @@ var i,
     u = t(442837),
     d = t(570140),
     c = t(247206),
-    f = t(786761),
-    g = t(706454),
+    g = t(786761),
+    f = t(706454),
     m = t(592125),
     h = t(271383),
     E = t(430824),
@@ -25,7 +25,7 @@ function Z(e) {
         r = null != l ? l.getGuildId() : null;
     return {
         id: e,
-        messages: n.map((e) => (0, f.e5)(e)),
+        messages: n.map((e) => (0, g.e5)(e)),
         guildId: r,
         loaded: t,
         loading: i
@@ -42,7 +42,7 @@ function S() {
 }
 class j extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, E.Z, h.ZP, v.Z, p.default, g.default);
+        this.waitFor(m.Z, E.Z, h.ZP, v.Z, p.default, f.default);
     }
     getPinnedMessages(e) {
         var n;
@@ -83,7 +83,7 @@ class j extends (i = u.ZP.Store) {
                     let l = s().findIndex(i.messages, (e) => e.id === n);
                     if (l >= 0) {
                         let n = i.messages[l],
-                            r = (0, f.wi)(n, e.message);
+                            r = (0, g.wi)(n, e.message);
                         if (r !== n) {
                             let e = i.messages.slice();
                             (e[l] = r), (M[t].messages = e);
@@ -99,7 +99,7 @@ class j extends (i = u.ZP.Store) {
                 }
                 i.messages = i.messages.slice();
                 let l = s().findIndex(i.messages, (e) => e.id === n);
-                -1 === l ? i.messages.unshift((0, f.e5)(e.message)) : (i.messages[l] = (0, f.wi)(i.messages[l], e.message)), (M[t] = i);
+                -1 === l ? i.messages.unshift((0, g.e5)(e.message)) : (i.messages[l] = (0, g.wi)(i.messages[l], e.message)), (M[t] = i);
             } else {
                 if (null == i) return;
                 let e = s().findIndex(i.messages, (e) => e.id === n);

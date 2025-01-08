@@ -17,8 +17,8 @@ var l = t(374470),
     u = t(26737),
     d = t(29264),
     c = t(905041),
-    f = t(89013),
-    g = t(988500),
+    g = t(89013),
+    f = t(988500),
     m = t(570870),
     h = t(786095),
     E = t(268623),
@@ -51,17 +51,17 @@ function k(e) {
         r,
         o,
         s,
-        { channel: u, message: d, target: c, mediaItem: f, shouldHideMediaOptions: g, onSelect: m, onHeightUpdate: h } = e,
+        { channel: u, message: d, target: c, mediaItem: g, shouldHideMediaOptions: f, onSelect: m, onHeightUpdate: h } = e,
         E = c,
         v = c.getAttribute('data-type'),
         I = c.getAttribute('data-id'),
         p = c.getAttribute('data-name');
-    if (null != f) r = i = o = f.url;
+    if (null != g) r = i = o = g.url;
     else for (; (0, l.k)(E); ) (0, l.k)(E, HTMLImageElement) && null != E.src && (r = E.src), (0, l.k)(E, HTMLAnchorElement) && null != E.href && ((i = E.href), (s = E.textContent), null == r && 'img' === E.getAttribute('data-role') && ((r = i), E.hasAttribute('data-safe-src') && '' !== E.getAttribute('data-safe-src') && (o = E.getAttribute('data-safe-src')))), (E = E.parentNode);
     return F({
         message: d,
         channel: u,
-        mediaItem: f,
+        mediaItem: g,
         textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
         favoriteableType: v,
         favoriteableId: I,
@@ -76,13 +76,13 @@ function k(e) {
         onClose: a.Zy,
         navId: 'message',
         ariaLabel: U.intl.string(U.t.ChPNkJ),
-        shouldHideMediaOptions: g
+        shouldHideMediaOptions: f
     });
 }
 function F(e) {
     let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: k, favoriteableId: F, favoriteableName: z, itemHref: K, itemSrc: H, itemSafeSrc: B, itemTextContent: X, canReport: V, onHeightUpdate: q, onSelect: J, onClose: W, navId: $, ariaLabel: Y, shouldHideMediaOptions: Q = !1 } = e,
         ee = (0, u.Z)(a),
-        en = (0, f.Z)(a),
+        en = (0, g.Z)(a),
         et = (0, b.Z)(n, t),
         ei = (0, v.Z)(n, t),
         el = (0, x.Z)(n, t),
@@ -97,8 +97,8 @@ function F(e) {
         eu = (0, A.Z)(n),
         ed = (0, I.Z)(n, t),
         ec = (0, p.Z)(n, t),
-        ef = (0, P.Z)(n, t),
-        eg = (0, N.Z)(n, t),
+        eg = (0, P.Z)(n, t),
+        ef = (0, N.Z)(n, t),
         em = (0, Z.Z)(n, t),
         eh = (0, C.Z)(n),
         eE = (0, C.e)(n),
@@ -126,7 +126,7 @@ function F(e) {
             onHeightUpdate: q
         }),
         eN = (0, O.Z)(n),
-        ey = (0, g.Z)(n);
+        ey = (0, f.Z)(n);
     return (0, i.jsxs)(r.Menu, {
         navId: $,
         onClose: W,
@@ -145,7 +145,7 @@ function F(e) {
                 children: [eb, er, eT, eP, eo, es, ed, ec, ev, ey, eN]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eg, ef, em, V && eh, V && eE]
+                children: [ef, eg, em, V && eh, V && eE]
             }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [ea, e_, ep, eM, eA]

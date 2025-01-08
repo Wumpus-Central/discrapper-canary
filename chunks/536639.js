@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = t(200651);
@@ -13,7 +13,7 @@ var l = t(442837),
     u = t(151007),
     d = t(981631),
     c = t(388032);
-function f(e, n) {
+function g(e, n) {
     let t = (0, l.e7)([s.Z], () => s.Z.can(d.Plq.MANAGE_MESSAGES, n), [n]);
     return e.state !== d.yb.SEND_FAILED && (0, u.Z)(e, n, t)
         ? !1 === e.pinned

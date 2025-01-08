@@ -13,8 +13,8 @@ var l = t(120356),
     u = t(222677),
     d = t(995774),
     c = t(665906),
-    f = t(695346),
-    g = t(496675),
+    g = t(695346),
+    f = t(496675),
     m = t(768581),
     h = t(176354),
     E = t(981631),
@@ -77,9 +77,9 @@ function x(e, n) {
         );
     });
     t.length > 4 && (t.length = 4);
-    let l = f.nc.useSetting(),
+    let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
         I = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };

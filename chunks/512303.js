@@ -12,8 +12,8 @@ var i = t(200651),
     u = t(700582),
     d = t(592180),
     c = t(565138),
-    f = t(598077),
-    g = t(430824),
+    g = t(598077),
+    f = t(430824),
     m = t(594174),
     h = t(388032),
     E = t(500054);
@@ -23,7 +23,7 @@ function v(e) {
         M = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
         Z = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
         x = (0, a.e7)([m.default], () => m.default.getUser(p)),
-        S = (0, a.e7)([g.Z], () => g.Z.getGuild(M)),
+        S = (0, a.e7)([f.Z], () => f.Z.getGuild(M)),
         j = (0, a.e7)([m.default], () => m.default.getUser(Z));
     if (
         (l.useEffect(() => {
@@ -32,7 +32,7 @@ function v(e) {
         !(0, d.a)(e))
     )
         return null;
-    null == j && (j = new f.Z(null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user));
+    null == j && (j = new g.Z(null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user));
     let _ = null;
     return (
         null != S

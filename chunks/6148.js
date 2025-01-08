@@ -15,8 +15,8 @@ var l = t(442837),
 function c(e, n) {
     let t = (0, l.e7)([s.default], () => s.default.getId()),
         c = (0, o.$R)(n),
-        f = (0, o.Gu)(n);
-    return (0, u.Z)(e, t) && c && !f
+        g = (0, o.Gu)(n);
+    return (0, u.Z)(e, t) && c && !g
         ? (0, i.jsx)(r.MenuItem, {
               id: 'edit',
               label: d.intl.string(d.t.fsBWmZ),
