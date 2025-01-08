@@ -1,148 +1,202 @@
-n.d(t, {
+t.d(n, {
     W: function () {
-        return j;
+        return b;
     },
     r: function () {
-        return p;
+        return E;
     }
 }),
-    n(47120);
-var l = n(200651),
-    i = n(192379),
-    s = n(442837),
-    r = n(430824),
-    a = n(594174),
-    o = n(246364),
-    d = n(990686),
-    u = n(118346),
-    c = n(186078),
-    m = n(73880),
-    f = n(276486),
-    g = n(196345),
-    x = n(707592),
-    h = n(981631);
-function v(e) {
-    let { guildId: t, formFields: n, updateFormFields: i } = e,
-        a = (0, s.e7)([r.Z], () => {
+    t(47120);
+var i = t(200651),
+    r = t(192379),
+    l = t(442837),
+    s = t(430824),
+    o = t(594174),
+    u = t(63568),
+    c = t(246364),
+    a = t(990686),
+    d = t(118346),
+    f = t(186078),
+    m = t(73880),
+    h = t(276486),
+    x = t(196345),
+    j = t(707592),
+    g = t(23262),
+    v = t(483760),
+    C = t(465588),
+    p = t(842310),
+    T = t(644929),
+    I = t(814960),
+    F = t(981631);
+function N(e) {
+    let { guildId: n, formFields: t, updateFormFields: r, v2Enabled: o } = e,
+        u = (0, l.e7)([s.Z], () => {
             var e;
-            return null === (e = r.Z.getGuild(t)) || void 0 === e ? void 0 : e.rulesChannelId;
+            return null === (e = s.Z.getGuild(n)) || void 0 === e ? void 0 : e.rulesChannelId;
         }),
-        d = (e, t) => {
-            let l = n[e];
-            i([
-                ...n.slice(0, e),
+        a = (e, n) => {
+            let i = t[e];
+            r([
+                ...t.slice(0, e),
+                {
+                    ...i,
+                    response: n
+                },
+                ...t.slice(e + 1)
+            ]);
+        },
+        d = (e, n) => {
+            let i = t[e];
+            r([
+                ...t.slice(0, e),
+                {
+                    ...i,
+                    response: n
+                },
+                ...t.slice(e + 1)
+            ]);
+        },
+        h = (e, n) => {
+            let { value: i } = n,
+                l = t[e];
+            r([
+                ...t.slice(0, e),
                 {
                     ...l,
-                    response: t
+                    response: i
                 },
-                ...n.slice(e + 1)
+                ...t.slice(e + 1)
             ]);
         },
-        u = (e, t) => {
-            let l = n[e];
-            i([
-                ...n.slice(0, e),
-                {
-                    ...l,
-                    response: t
-                },
-                ...n.slice(e + 1)
-            ]);
-        },
-        f = (e, t) => {
-            let { value: l } = t,
-                s = n[e];
-            i([
-                ...n.slice(0, e),
-                {
-                    ...s,
-                    response: l
-                },
-                ...n.slice(e + 1)
-            ]);
-        },
-        h = (e, t) => {
+        g = (e, n) => {
             switch (e.field_type) {
-                case o.QJ.TERMS:
-                    return (0, l.jsx)(
-                        g.dd,
+                case c.QJ.TERMS:
+                    return (0, i.jsx)(
+                        x.dd,
                         {
-                            channelId: a,
+                            channelId: u,
                             formField: e,
-                            onChange: (e, n) => d(t, n)
+                            onChange: (e, t) => a(n, t)
                         },
-                        t
+                        n
                     );
-                case o.QJ.TEXT_INPUT:
-                    return (0, l.jsx)(
-                        x.zY,
+                case c.QJ.TEXT_INPUT:
+                    return (0, i.jsx)(
+                        j.zY,
                         {
                             formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => u(t, e)
+                            autofocus: 0 === n,
+                            onChange: (e) => d(n, e)
                         },
-                        t
+                        n
                     );
-                case o.QJ.PARAGRAPH:
-                    return (0, l.jsx)(
+                case c.QJ.PARAGRAPH:
+                    return (0, i.jsx)(
                         m.lX,
                         {
                             formField: e,
-                            autofocus: 0 === t,
-                            onChange: (e) => u(t, e)
+                            autofocus: 0 === n,
+                            onChange: (e) => d(n, e)
                         },
-                        t
+                        n
                     );
-                case o.QJ.MULTIPLE_CHOICE:
-                    return (0, l.jsx)(
-                        c.sp,
+                case c.QJ.MULTIPLE_CHOICE:
+                    return (0, i.jsx)(
+                        f.sp,
                         {
                             formField: e,
-                            onChange: (e) => f(t, e)
+                            onChange: (e) => h(n, e)
                         },
-                        t
+                        n
+                    );
+            }
+        },
+        p = (e, n) => {
+            switch (e.field_type) {
+                case c.QJ.TERMS:
+                    return (0, i.jsx)(
+                        T.dd,
+                        {
+                            channelId: u,
+                            formField: e,
+                            onChange: (e, t) => a(n, t)
+                        },
+                        n
+                    );
+                case c.QJ.TEXT_INPUT:
+                    return (0, i.jsx)(
+                        I.zY,
+                        {
+                            formField: e,
+                            autofocus: 0 === n,
+                            onChange: (e) => d(n, e)
+                        },
+                        n
+                    );
+                case c.QJ.PARAGRAPH:
+                    return (0, i.jsx)(
+                        C.lX,
+                        {
+                            formField: e,
+                            autofocus: 0 === n,
+                            onChange: (e) => d(n, e)
+                        },
+                        n
+                    );
+                case c.QJ.MULTIPLE_CHOICE:
+                    return (0, i.jsx)(
+                        v.sp,
+                        {
+                            formField: e,
+                            onChange: (e) => h(n, e)
+                        },
+                        n
                     );
             }
         };
-    return (0, l.jsx)(l.Fragment, { children: n.map((e, t) => h(e, t)) });
+    return (0, i.jsx)(i.Fragment, { children: t.map((e, n) => (o ? p(e, n) : g(e, n))) });
 }
-function j(e) {
-    let t,
-        { guildId: n, formFields: i, updateFormFields: r, disableVerification: o } = e,
-        c = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-        m = (0, d.i)({ guildId: n });
-    return ((t = m === h.sFg.NONE ? null : m === h.sFg.VERY_HIGH ? f.l : u.b), null == c)
+function b(e) {
+    let n,
+        { guildId: t, formFields: r, updateFormFields: s, disableVerification: c } = e,
+        f = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        m = (0, a.i)({ guildId: t }),
+        x = (0, u.jS)(t, 'PreviewFormRenderer');
+    return ((n = m === F.sFg.NONE ? null : m === F.sFg.VERY_HIGH ? (x ? p.l : h.l) : x ? g.b : d.b), null == f)
         ? null
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  !o && null != t && (0, l.jsx)(t, {}),
-                  (0, l.jsx)(v, {
-                      guildId: n,
-                      formFields: i,
-                      updateFormFields: r
+                  !c && null != n && (0, i.jsx)(n, {}),
+                  (0, i.jsx)(N, {
+                      guildId: t,
+                      formFields: r,
+                      updateFormFields: s,
+                      v2Enabled: x
                   })
               ]
           });
 }
-function p(e) {
-    let t,
-        { guildId: n, formFields: r, updateFormFields: o, disableVerification: c } = e,
-        m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-        g = (0, d.i)({ guildId: n }),
-        x = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
-        j = (null == m ? void 0 : m.verified) || x,
-        p = !1;
-    g === h.sFg.NONE ? ((p = !0), (t = null)) : g === h.sFg.VERY_HIGH ? ((p = null != x && x), (t = f.v)) : ((p = null != j && j), (t = u.B));
-    let N = i.useRef(p);
+function E(e) {
+    let n,
+        { guildId: t, formFields: s, updateFormFields: c, disableVerification: f } = e,
+        m = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        x = (0, a.i)({ guildId: t }),
+        j = (0, u.jS)(t, 'PreviewFormRenderer'),
+        v = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
+        C = (null == m ? void 0 : m.verified) || v,
+        T = !1;
+    x === F.sFg.NONE ? ((T = !0), (n = null)) : x === F.sFg.VERY_HIGH ? ((T = null != v && v), (n = j ? p.v : h.v)) : ((T = null != C && C), (n = j ? g.B : d.B));
+    let I = r.useRef(T);
     return null == m
         ? null
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  !c && !N.current && null != t && (0, l.jsx)(t, { isUserVerified: p }),
-                  (0, l.jsx)(v, {
-                      guildId: n,
-                      formFields: r,
-                      updateFormFields: o
+                  !f && !I.current && null != n && (0, i.jsx)(n, { isUserVerified: T }),
+                  (0, i.jsx)(N, {
+                      guildId: t,
+                      formFields: s,
+                      updateFormFields: c,
+                      v2Enabled: j
                   })
               ]
           });

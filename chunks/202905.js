@@ -1,6 +1,6 @@
 n.d(t, {
     r: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651),
@@ -9,55 +9,47 @@ var i = n(200651),
     a = n(442837),
     s = n(481060),
     o = n(944163),
-    c = n(999382),
-    d = n(548522),
-    u = n(388032),
-    m = n(229311);
-function h(e) {
+    c = n(66511),
+    d = n(999382),
+    u = n(548522),
+    m = n(388032),
+    h = n(229311);
+function g(e) {
     let { pendingFields: t } = e,
-        h = (0, a.e7)([c.Z], () => c.Z.getProps().guild),
-        g = null == h ? void 0 : h.id,
+        n = (0, a.e7)([d.Z], () => d.Z.getProps().guild),
+        g = null == n ? void 0 : n.id,
         x = r.useCallback(() => {
-            if (null != g)
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e('80026'), n.e('36869')]).then(n.bind(n, 645264));
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            guildId: g,
-                            isPreview: !0
-                        });
-                });
+            if (null != g) c.Z.openMemberVerificationPreviewModal(g);
         }, [g]),
         p = (0, a.e7)([o.Z], () => o.Z.get(g));
-    if (null == h) return null;
+    if (null == n) return null;
     let f = null != t ? t : null == p ? void 0 : p.formFields;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.X6, {
                 variant: 'heading-md/semibold',
                 color: 'header-primary',
-                children: u.intl.string(u.t.AHJddH)
+                children: m.intl.string(m.t.AHJddH)
             }),
             (0, i.jsx)(l.xv, {
                 tag: 'p',
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
-                className: m.applicationBody,
-                children: u.intl.string(u.t.Z7TCtb)
+                className: h.applicationBody,
+                children: m.intl.string(m.t.Z7TCtb)
             }),
             (0, i.jsx)(s.LinkButton, {
-                text: u.intl.string(u.t.SKNnqq),
+                text: m.intl.string(m.t.SKNnqq),
                 icon: s.WindowLaunchIcon,
                 variant: 'primary',
                 onClick: x
             }),
             (0, i.jsx)('div', {
-                className: m.form,
+                className: h.form,
                 children:
                     null != f
-                        ? (0, i.jsx)(d.y, {
-                              guild: h,
+                        ? (0, i.jsx)(u.y, {
+                              guild: n,
                               formFields: f
                           })
                         : (0, i.jsx)(s.Spinner, {})
