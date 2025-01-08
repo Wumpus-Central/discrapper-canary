@@ -1,35 +1,39 @@
 r.d(n, {
     _: function () {
-        return f;
+        return _;
     }
 });
-var i = r(200651),
-    a = r(192379),
-    s = r(120356),
-    o = r.n(s),
-    l = r(539907),
-    u = r(743236),
-    c = r(21340),
-    d = r(450793);
-function f(e) {
-    let { subMenuClassName: n, parentItem: r, isFocused: s, menuSubmenuProps: f, renderSubmenu: _ } = e,
-        { focusIndex: h, isUsingKeyboardNavigation: p, ...m } = f,
-        g = a.useRef(null),
-        E = a.useRef(null),
-        v = a.useRef(null);
+var i = r(47120);
+var a = r(200651),
+    s = r(192379),
+    o = r(120356),
+    l = r.n(o),
+    u = r(539907),
+    c = r(743236),
+    d = r(21340),
+    f = r(450793);
+function _(e) {
+    let { subMenuClassName: n, parentItem: r, isFocused: i, menuSubmenuProps: o, renderSubmenu: _ } = e,
+        { focusIndex: h, isUsingKeyboardNavigation: p, ...m } = o,
+        g = s.useRef(null),
+        E = s.useRef(null),
+        v = s.useRef(null),
+        [I, T] = s.useState(!1);
     return (
-        a.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
+            T(!0);
+        }, []),
+        s.useLayoutEffect(() => {
             var e;
-            s && ((0, u.F)(g), null === (e = v.current) || void 0 === e || e.focus());
-        }, [s]),
-        (0, i.jsxs)('div', {
+            i && ((0, c.F)(g), null === (e = v.current) || void 0 === e || e.focus());
+        }, [i]),
+        (0, a.jsxs)('div', {
             ref: g,
-            className: d.__invalid_submenuContainer,
             children: [
-                (0, i.jsx)('div', { ref: E }),
+                (0, a.jsx)('div', { ref: E }),
                 r,
-                s
-                    ? (0, i.jsx)(l.j, {
+                i && I
+                    ? (0, a.jsx)(u.j, {
                           targetRef: E,
                           autoInvert: !0,
                           nudgeAlignIntoViewport: !0,
@@ -38,14 +42,14 @@ function f(e) {
                           position: 'right',
                           align: 'top',
                           children: () =>
-                              (0, i.jsx)('div', {
-                                  className: d.submenuPaddingContainer,
-                                  children: (0, i.jsx)('div', {
-                                      className: o()(d.submenu, n),
+                              (0, a.jsx)('div', {
+                                  className: f.submenuPaddingContainer,
+                                  children: (0, a.jsx)('div', {
+                                      className: l()(f.submenu, n),
                                       ...m,
                                       ref: v,
-                                      children: (0, i.jsx)(c.zJ, {
-                                          className: d.scroller,
+                                      children: (0, a.jsx)(d.zJ, {
+                                          className: f.scroller,
                                           children: _()
                                       })
                                   })
