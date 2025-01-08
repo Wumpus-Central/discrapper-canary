@@ -364,6 +364,7 @@ class eG extends l.PureComponent {
                     type: c.ImpressionTypes.MENU,
                     name: c.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
+                        location: 'ChannelCall',
                         is_tile_owner: e.type !== ek.fO.ACTIVITY && e.user.id === this.props.currentUserId,
                         tile_type: t
                     }

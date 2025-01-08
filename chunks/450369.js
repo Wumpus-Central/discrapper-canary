@@ -138,6 +138,7 @@ t.Z = l.memo(function (e) {
                 type: s.ImpressionTypes.MENU,
                 name: s.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                 properties: {
+                    location: 'StageTile',
                     is_tile_owner: C.id === g,
                     tile_type: e
                 }
