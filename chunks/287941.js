@@ -1,13 +1,15 @@
 var i = r(570140),
-    a = r(111810),
-    s = r(477931);
-let o = (e) => {
+    a = r(607070),
+    s = r(111810),
+    o = r(477931);
+let l = (e) => {
     var n;
-    a.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti &&
+    s.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti &&
+        !a.Z.useReducedMotion &&
         (null === (n = e.potions) ||
             void 0 === n ||
             n.forEach((e) => {
-                e.type === s.B.CONFETTI &&
+                e.type === o.B.CONFETTI &&
                     e.emoji.forEach((e) => {
                         i.Z.dispatch({
                             type: 'POTIONS_TRIGGER_MESSAGE_CONFETTI',
@@ -16,4 +18,4 @@ let o = (e) => {
                     });
             }));
 };
-n.Z = o;
+n.Z = l;
