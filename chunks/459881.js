@@ -1,5 +1,8 @@
 e.exports = {
     panel: 'panel_c33858',
+    panelHeader: 'panelHeader_c33858',
+    panelContent: 'panelContent_c33858',
+    logo: 'logo_c33858',
     qrcodeContent: 'qrcodeContent_c33858',
     qrcodeCard: 'qrcodeCard_c33858',
     qrcodeOverlay: 'qrcodeOverlay_c33858',
