@@ -46,7 +46,7 @@ function h(e, n) {
     return {
         type: 'soundboard',
         soundId: a,
-        guildId: o,
+        guildId: i,
         messageId: n.messageId,
         channelId: n.channelId,
         content: f,
