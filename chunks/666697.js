@@ -36,11 +36,11 @@ n.Z = function (e) {
         }, [n]),
         i.useEffect(() => () => T(!0), [T]);
     let L = null == R ? void 0 : R.storefront_available,
-        [D, O] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
+        [O, D] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
         k = i.useCallback(
             (e) => {
                 var n;
-                null === (n = P.current) || void 0 === n || n.scrollTo({ to: 0 }), O(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
+                null === (n = P.current) || void 0 === n || n.scrollTo({ to: 0 }), D(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
             },
             [t]
         );
@@ -86,25 +86,25 @@ n.Z = function (e) {
         ),
         U = i.useMemo(() => {
             if (null == R) return null;
-            switch (D) {
+            switch (O) {
                 case j.GlobalDiscoveryAppsSections.ABOUT:
                     return (0, a.jsx)(C.Z, { application: R });
                 case j.GlobalDiscoveryAppsSections.STORE:
                     return (0, a.jsx)(I.Z, { application: R });
             }
-        }, [D, R]),
+        }, [O, R]),
         Y = i.useCallback(
             (e) => {
                 (0, _.zZ)(S.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: n,
                     tab_name: e
                 }),
-                    O(e),
+                    D(e),
                     e === j.GlobalDiscoveryAppsSections.ABOUT ? (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(n)) : (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, e));
             },
             [n]
         ),
-        V = D === j.GlobalDiscoveryAppsSections.ABOUT;
+        V = O === j.GlobalDiscoveryAppsSections.ABOUT;
     return (0, a.jsx)(p.Z, {
         onScroll: y,
         ref: P,
@@ -139,7 +139,7 @@ n.Z = function (e) {
                                                       children: (0, a.jsx)(m.Z, {
                                                           tabs: z,
                                                           onTabSelect: Y,
-                                                          selectedTab: D
+                                                          selectedTab: O
                                                       })
                                                   }),
                                               U,

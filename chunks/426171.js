@@ -37,7 +37,7 @@ let p = ''.concat('#').concat('itemSkuId', '='),
                         window.location.hash.startsWith(p) && window.location.replace('#');
                     }
                 );
-        }, [e, t]);
+        }, [e, t.pathname]);
     },
     v = (e) => {
         let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: a, reducedMotion: i = !1 } = e,

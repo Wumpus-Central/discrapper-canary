@@ -2,8 +2,8 @@ var l,
     i,
     u,
     a,
-    E,
     r,
+    E,
     o,
     d = t(442837),
     _ = t(570140),
@@ -13,7 +13,7 @@ var l,
     s = t(944486),
     T = t(55589),
     A = t(981631);
-let h = (null !== (r = null === (E = window) || void 0 === E ? void 0 : null === (a = E.location) || void 0 === a ? void 0 : a.pathname) && void 0 !== r ? r : '').startsWith(A.Z5c.ACTIVITIES) ? A.Z5c.ACTIVITIES : null;
+let h = (null !== (E = null === (r = window) || void 0 === r ? void 0 : null === (a = r.location) || void 0 === a ? void 0 : a.pathname) && void 0 !== E ? E : '').startsWith(A.Z5c.ACTIVITIES) ? A.Z5c.ACTIVITIES : null;
 function S(e) {
     let { link: n } = e;
     if (h === n) return !1;

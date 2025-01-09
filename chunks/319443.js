@@ -30,8 +30,8 @@ var a = t(200651),
     R = t(726941),
     Z = t(666697),
     L = t(548514),
-    D = t(370648),
-    O = t(569527),
+    O = t(370648),
+    D = t(569527),
     k = t(979007),
     M = t(981631),
     B = t(388032),
@@ -122,27 +122,27 @@ function H() {
 n.default = function () {
     var e;
     let n = (0, s.e7)([I.default], () => !I.default.isAuthenticated()),
-        { onScroll: t, scrollPosition: r, resetScrollPosition: l } = (0, g.M)(),
-        u = (0, T.Xh)(),
-        L = (0, N.nu)(),
-        F = (null == u ? void 0 : u.type) === T.m_.CATEGORY ? u.categoryId : void 0,
-        { applicationId: z, section: U } = (null == u ? void 0 : u.type) === T.m_.APPLICATION ? u : {},
-        { query: Y, categoryId: V } = (null == u ? void 0 : u.type) === T.m_.SEARCH ? u : {},
-        K = (0, s.e7)([m.Z], () => m.Z.getCategories()),
-        X = i.useMemo(() => [(0, p.KQ)(), ...K], [K]),
-        W = i.useMemo(() => X.find((e) => e.id === Number(V)), [X, V]),
-        { tabs: q, selectedTab: Q, onSelectTab: J } = (0, A.i)(null == F ? void 0 : F.toString()),
-        [$, ee] = i.useState(!0),
-        en = T.z8.useField('trackedOpenedFromExternalEntrypoint'),
-        et = T.z8.useField('sessionId'),
-        ea = (0, s.e7)([j.default], () => j.default.getCurrentUser());
+        { onScroll: t, scrollPosition: r, resetScrollPosition: u } = (0, g.M)(),
+        L = (0, T.Xh)(),
+        F = (0, N.nu)(),
+        z = (null == L ? void 0 : L.type) === T.m_.CATEGORY ? L.categoryId : void 0,
+        { applicationId: U, section: Y } = (null == L ? void 0 : L.type) === T.m_.APPLICATION ? L : {},
+        { query: V, categoryId: K } = (null == L ? void 0 : L.type) === T.m_.SEARCH ? L : {},
+        X = (0, s.e7)([m.Z], () => m.Z.getCategories()),
+        W = i.useMemo(() => [(0, p.KQ)(), ...X], [X]),
+        q = i.useMemo(() => W.find((e) => e.id === Number(K)), [W, K]),
+        { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, A.i)(null == z ? void 0 : z.toString()),
+        [ee, en] = i.useState(!0),
+        et = T.z8.useField('trackedOpenedFromExternalEntrypoint'),
+        ea = T.z8.useField('sessionId'),
+        ei = (0, s.e7)([j.default], () => j.default.getCurrentUser());
     i.useEffect(() => {
-        if (!en && null == et) {
+        if (!et && null == ea) {
             let e = (0, h.PM)();
             S.default.track(M.rMx.APP_DIRECTORY_OPENED, {
                 source: _.ApplicationDirectoryEntrypointNames.EXTERNAL,
                 session_id: e,
-                user_id: null == ea ? void 0 : ea.id
+                user_id: null == ei ? void 0 : ei.id
             }),
                 T.z8.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
@@ -151,40 +151,40 @@ n.default = function () {
                     guildId: null
                 });
         }
-    }, [et, en, null == ea ? void 0 : ea.id]),
+    }, [ea, et, null == ei ? void 0 : ei.id]),
         i.useEffect(() => {
             d.CP();
         }, []),
         i.useEffect(() => {
-            L && d.g5();
-        }, [L]),
-        i.useEffect(() => T.aQ.setState({ lastItem: u }), [u]);
-    let ei = null != z,
-        er = (null == u ? void 0 : u.type) === T.m_.SEARCH,
-        { searchQuery: el, onSearchTextChange: eo, onClearSearch: es, onSearchSubmit: ec } = (0, y.M)({ initialQuery: null != Y ? Y : '' }),
-        ed = E.Z.useField('searchBarState'),
+            F && d.g5();
+        }, [F]),
+        i.useEffect(() => T.aQ.setState({ lastItem: L }), [L]);
+    let er = null != U,
+        el = (null == L ? void 0 : L.type) === T.m_.SEARCH,
+        { searchQuery: eo, onSearchTextChange: es, onClearSearch: ec, onSearchSubmit: ed } = (0, y.M)({ initialQuery: null != V ? V : '' }),
+        eu = E.Z.useField('searchBarState'),
         {
-            onTabsAvailableWidthChange: eu,
-            onCollapsedSearchBarClick: em,
-            onSearchBarBlur: ep
+            onTabsAvailableWidthChange: em,
+            onCollapsedSearchBarClick: ep,
+            onSearchBarBlur: e_
         } = (0, f.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === el.trim(),
-            searchBarState: ed,
+            isSearchBarEmpty: '' === eo.trim(),
+            searchBarState: eu,
             setSearchBarState: (e) => E.Z.setState({ searchBarState: e })
         }),
-        e_ = i.useCallback(
+        eg = i.useCallback(
             (e) => {
-                J(e), er && es(), l();
+                $(e), el && ec(), u();
             },
-            [er, es, J, l]
+            [el, ec, $, u]
         ),
-        eg = i.useCallback((e) => (0, P.ph)({ applicationId: e }), []),
-        ef = ei || er,
-        ev = i.useCallback(() => {
+        ef = i.useCallback((e) => (0, P.ph)({ applicationId: e }), []),
+        ev = er || el,
+        eC = i.useCallback(() => {
             null != (0, T.Uc)() ? (0, b.op)() : (0, P.Yp)();
         }, []),
-        eC = (0, o.debounce)((e) => {
+        ex = (0, o.debounce)((e) => {
             let { scrollTop: n, offsetHeight: t, scrollHeight: a, location: i } = e;
             n > 0 &&
                 (0, N.zZ)(M.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
@@ -192,92 +192,92 @@ n.default = function () {
                     current_page: i
                 });
         }, 200),
-        ex = i.useCallback(
+        eh = i.useCallback(
             (e, n) => {
                 t(e),
-                    eC({
+                    ex({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
                         location: n
                     });
             },
-            [eC, t]
+            [ex, t]
         );
     return (0, a.jsxs)('div', {
-        className: G.outerContainer,
+        className: l()(G.outerContainer, { [G.loggedOutContainer]: n }),
         children: [
             n ? (0, a.jsx)(H, {}) : null,
             (0, a.jsxs)('div', {
                 className: G.innerContainer,
                 children: [
                     (0, a.jsxs)(v.ZP, {
-                        variant: ef ? v._6.RELATIVE : v._6.OVERLAY,
+                        variant: ev ? v._6.RELATIVE : v._6.OVERLAY,
                         children: [
-                            !ef && (0, a.jsx)(v.z6, { scrollPosition: r }),
-                            ei
+                            !ev && (0, a.jsx)(v.z6, { scrollPosition: r }),
+                            er
                                 ? (0, a.jsx)(w, {
-                                      applicationId: z,
-                                      hideDetailHeaderButtons: $,
-                                      onClickBack: ev
+                                      applicationId: U,
+                                      hideDetailHeaderButtons: ee,
+                                      onClickBack: eC
                                   })
                                 : (0, a.jsxs)(a.Fragment, {
                                       children: [
-                                          er
+                                          el
                                               ? (0, a.jsx)(v.Cm, {
                                                     icon: c.ArrowLargeLeftIcon,
-                                                    onClick: ev
+                                                    onClick: eC
                                                 })
                                               : (0, a.jsx)(v.aV, { icon: c.AppsIcon }),
-                                          er
+                                          el
                                               ? (0, a.jsx)(c.Heading, {
                                                     variant: 'heading-lg/semibold',
                                                     color: 'header-primary',
                                                     className: G.searchHeader,
-                                                    children: null != Y && '' !== Y ? B.intl.formatToPlainString(B.t.zHdzqa, { query: Y }) : B.intl.formatToPlainString(B.t.Qhj5Bg, { categoryName: null !== (e = null == W ? void 0 : W.name) && void 0 !== e ? e : B.intl.string(B.t.E407b2) })
+                                                    children: null != V && '' !== V ? B.intl.formatToPlainString(B.t.zHdzqa, { query: V }) : B.intl.formatToPlainString(B.t.Qhj5Bg, { categoryName: null !== (e = null == q ? void 0 : q.name) && void 0 !== e ? e : B.intl.string(B.t.E407b2) })
                                                 })
                                               : (0, a.jsx)(C.Z, {
-                                                    tabs: q,
-                                                    selectedTab: Q,
-                                                    onTabSelect: e_,
-                                                    onAvailableWidthChange: eu
+                                                    tabs: Q,
+                                                    selectedTab: J,
+                                                    onTabSelect: eg,
+                                                    onAvailableWidthChange: em
                                                 }),
                                           (0, a.jsx)(x.Z, {
-                                              query: el,
+                                              query: eo,
                                               placeholder: B.intl.string(B.t.HPQXEB),
-                                              onTextChange: eo,
-                                              onClear: es,
-                                              onSubmit: ec,
-                                              onCollapsedClick: em,
-                                              state: ed,
-                                              onBlur: ep
+                                              onTextChange: es,
+                                              onClear: ec,
+                                              onSubmit: ed,
+                                              onCollapsedClick: ep,
+                                              state: eu,
+                                              onBlur: e_
                                           })
                                       ]
                                   })
                         ]
                     }),
-                    ei
+                    er
                         ? (0, a.jsx)(Z.Z, {
-                              onScroll: (e) => ex(e, T.m_.APPLICATION),
-                              onSelectApplication: eg,
-                              applicationId: z,
-                              initialTab: U,
-                              onButtonsVisibilityChange: ee
+                              onScroll: (e) => eh(e, T.m_.APPLICATION),
+                              onSelectApplication: ef,
+                              applicationId: U,
+                              initialTab: Y,
+                              onButtonsVisibilityChange: en
                           })
-                        : er
-                          ? (0, a.jsx)(O.Z, {
-                                onSelectApplication: eg,
-                                onScroll: (e) => ex(e, T.m_.SEARCH)
+                        : el
+                          ? (0, a.jsx)(D.Z, {
+                                onSelectApplication: ef,
+                                onScroll: (e) => eh(e, T.m_.SEARCH)
                             })
-                          : Q === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
-                            ? (0, a.jsx)(D.Z, {
-                                  onScroll: (e) => ex(e, T.m_.HOME),
-                                  onSelectApplication: eg
+                          : J === k.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
+                            ? (0, a.jsx)(O.Z, {
+                                  onScroll: (e) => eh(e, T.m_.HOME),
+                                  onSelectApplication: ef
                               })
                             : (0, a.jsx)(R.Z, {
-                                  tabId: Number(Q),
-                                  onScroll: (e) => ex(e, T.m_.CATEGORY),
-                                  onSelectApplication: eg
+                                  tabId: Number(J),
+                                  onScroll: (e) => eh(e, T.m_.CATEGORY),
+                                  onSelectApplication: ef
                               })
                 ]
             })

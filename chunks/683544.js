@@ -55,7 +55,7 @@ n.Z = function (e) {
         T = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : h,
         { results: P, totalPages: R, loadId: Z } = i.useMemo(() => (y === d.M.FETCHING ? T : A), [y, T, A]),
         L = i.useMemo(() => (null == P ? void 0 : P.filter((e) => !(e.type !== r.s.APPLICATION))), [P]),
-        D = i.useCallback((e) => {
+        O = i.useCallback((e) => {
             let { page: n, activeCategoryId: t, onSuccessCallback: a, guildId: i, fetchCounts: r } = e;
             r &&
                 c.yC({
@@ -75,13 +75,13 @@ n.Z = function (e) {
         }, []);
     i.useEffect(() => {
         I(),
-            D({
+            O({
                 page: j,
                 activeCategoryId: t,
                 onSuccessCallback: () => {}
             });
-    }, [t, I, D, j]);
-    let O = i.useCallback(
+    }, [t, I, O, j]);
+    let D = i.useCallback(
         (e, n) => {
             (0, p.zZ)(C.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                 current_page: f.m_.SEARCH,
@@ -113,7 +113,7 @@ n.Z = function (e) {
                                             _.Z,
                                             {
                                                 application: t,
-                                                onSelectApplication: (e) => O(e, n)
+                                                onSelectApplication: (e) => D(e, n)
                                             },
                                             t.id
                                         );

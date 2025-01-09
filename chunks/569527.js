@@ -41,9 +41,9 @@ function P(e) {
         R = (0, s.e7)([x.default], () => x.default.isAuthenticated()),
         Z = i.useRef(null),
         L = (0, r.TH)(),
-        D = i.useRef(null),
+        O = i.useRef(null),
         {
-            query: O,
+            query: D,
             page: k,
             categoryId: M
         } = i.useMemo(() => {
@@ -62,7 +62,7 @@ function P(e) {
         w = i.useCallback(
             (e) => {
                 (0, b.zZ)(A.rMx.APP_DIRECTORY_SEARCHED, {
-                    search_term: O,
+                    search_term: D,
                     num_results: e,
                     current_page: j.m_.SEARCH,
                     result_page: k,
@@ -70,19 +70,19 @@ function P(e) {
                     category_id: null == G ? void 0 : G.id
                 });
             },
-            [O, k, null == G ? void 0 : G.name, null == G ? void 0 : G.id]
+            [D, k, null == G ? void 0 : G.name, null == G ? void 0 : G.id]
         );
     i.useEffect(() => {
         var e;
         null === (e = Z.current) || void 0 === e || e.scrollTo({ to: 0 }),
-            O !== D.current &&
-                ((D.current = O),
+            D !== O.current &&
+                ((O.current = D),
                 u.yC({
-                    query: O,
+                    query: D,
                     options: { source: o.F.APP_DIRECTORY }
                 })),
             u.yC({
-                query: O,
+                query: D,
                 options: {
                     categoryId: M,
                     page: k,
@@ -91,17 +91,17 @@ function P(e) {
                 },
                 onSuccessCallback: w
             });
-    }, [M, k, O, w]);
+    }, [M, k, D, w]);
     let { fetchState: H, searchResults: F } = (0, s.cj)([_.Z], () => ({
             fetchState: _.Z.getFetchState({
-                query: O,
+                query: D,
                 categoryId: M,
                 page: k,
                 pageSize: y.PAGE_SIZE,
                 source: o.F.APP_DIRECTORY
             }),
             searchResults: _.Z.getSearchResults({
-                query: O,
+                query: D,
                 categoryId: M,
                 page: k,
                 pageSize: y.PAGE_SIZE,
@@ -110,7 +110,7 @@ function P(e) {
         })),
         z = (0, s.cj)([_.Z], () => {
             let e = _.Z.getSearchResults({
-                query: O,
+                query: D,
                 source: o.F.APP_DIRECTORY
             });
             return null != e
@@ -125,12 +125,12 @@ function P(e) {
         V = i.useCallback(
             (e) => {
                 (0, S.pR)({
-                    query: O,
+                    query: D,
                     categoryId: M,
                     page: e
                 });
             },
-            [M, O]
+            [M, D]
         ),
         K = i.useCallback(
             (e) => {
@@ -140,11 +140,11 @@ function P(e) {
                     current_page: j.m_.SEARCH
                 }),
                     (0, S.pR)({
-                        query: O,
+                        query: D,
                         categoryId: e.id
                     });
             },
-            [O]
+            [D]
         ),
         X = i.useCallback(
             (e, n) => {
@@ -152,12 +152,12 @@ function P(e) {
                     current_page: j.m_.SEARCH,
                     application_id: e,
                     load_id: null == Y ? void 0 : Y.loadId,
-                    search_term: O,
+                    search_term: D,
                     position: n
                 }),
                     t(e);
             },
-            [null == Y ? void 0 : Y.loadId, t, O]
+            [null == Y ? void 0 : Y.loadId, t, D]
         ),
         W = (0, h.K)();
     return (0, a.jsxs)('div', {
