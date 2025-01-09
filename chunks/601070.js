@@ -368,7 +368,6 @@ T(el, 'displayName', 'ActiveJoinedThreadsStore'),
         PASSIVE_UPDATE_V2: H,
         WINDOW_FOCUS: j,
         UPDATE_CHANNEL_DIMENSIONS: j,
-        DRAWER_OPEN: j,
-        DRAWER_CLOSE: j,
+        TRY_ACK: j,
         BULK_ACK: j
     }));

@@ -28,8 +28,8 @@ var i = t(200651),
     h = t(944486),
     U = t(914010),
     P = t(594174),
-    R = t(186523),
-    f = t(553826),
+    f = t(186523),
+    R = t(553826),
     g = t(823379),
     G = t(407316),
     O = t(937784),
@@ -44,7 +44,7 @@ function Z(n) {
         className: v.channelRow,
         onClick: () => a(e.id),
         children: [
-            l ? (0, i.jsx)(f.Z, { className: v.radioIcon }) : (0, i.jsx)(R.Z, { className: v.radioIcon }),
+            l ? (0, i.jsx)(R.Z, { className: v.radioIcon }) : (0, i.jsx)(f.Z, { className: v.radioIcon }),
             (0, i.jsx)(t, {
                 className: v.icon,
                 size: 'xs',
@@ -176,17 +176,18 @@ function M(n) {
         [C, S] = l.useState(''),
         [A, L] = l.useState(!1),
         [D, h] = l.useState(null),
-        R = (0, E.Wu)([N.Z], () => N.Z.getFriendIDs()),
-        f = (0, E.Wu)(
+        f = (0, E.Wu)([N.Z], () => N.Z.getFriendIDs()),
+        R = (0, E.Wu)(
             [I.Z, P.default],
             () =>
-                R.map((n) => P.default.getUser(n))
+                f
+                    .map((n) => P.default.getUser(n))
                     .filter(g.lm)
                     .sort((n, e) => {
                         var t, i, l, a;
                         return (null !== (l = null === (t = I.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== l ? l : 0) - (null !== (a = null === (i = I.Z.getUserAffinity(n.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== a ? a : 0);
                     }),
-            [R]
+            [f]
         ),
         G = (0, E.e7)([U.Z], () => U.Z.getGuildId()),
         { analyticsLocations: p } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
@@ -241,7 +242,7 @@ function M(n) {
             (0, i.jsx)('div', { className: r()(v.divider, v.topDivider) }),
             (0, i.jsx)(b, {
                 searchQuery: C,
-                friends: f,
+                friends: R,
                 onShareClip: Z,
                 disabled: A
             }),
