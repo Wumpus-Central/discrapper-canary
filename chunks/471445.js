@@ -24,10 +24,10 @@ function h(e, n, r, i) {
     if (e.id === (null == n ? void 0 : n.rulesChannelId)) return _.intl.string(_.t['/7EhaW']);
     switch (e.type) {
         case f.d4z.GUILD_TEXT:
+            if (null != e.linkedLobby) return _.intl.string(_.t.Lt3PAA);
             if (i) return _.intl.string(_.t.LKpYbm);
             if (e.isNSFW()) return _.intl.string(_.t.vvASTU);
             if ((0, c.Z)(e)) return _.intl.string(_.t.jQ1plp);
-            if (null != e.linkedLobby) return _.intl.string(_.t.Lt3PAA);
             return _.intl.string(_.t.t1yj0N);
         case f.d4z.GUILD_FORUM:
             let a = e.isMediaChannel();
@@ -96,14 +96,9 @@ function p(e, n) {
             if (e.isForumPost()) return i.ChatIcon;
             else return i.ThreadIcon;
         case f.d4z.GUILD_TEXT:
-            if (m) {
-                if (e.isNSFW()) return i.TextWarningIcon;
-                if ((0, c.Z)(e)) return i.TextLockIcon;
-                else return i.TextIcon;
-            }
+            if (null != e.linkedLobby) return i.RefreshIcon;
             if (e.isNSFW()) return i.TextWarningIcon;
             if ((0, c.Z)(e)) return i.TextLockIcon;
-            if (null != e.linkedLobby) return i.RefreshIcon;
             return i.TextIcon;
         case f.d4z.GUILD_FORUM:
             let v = e.isMediaChannel();
