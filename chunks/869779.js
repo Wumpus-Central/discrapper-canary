@@ -56,8 +56,8 @@ class P extends l.PureComponent {
     }
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
-            { formState: i, section: l, canManageRoles: s, canManageChannels: r, canManageWebhooks: a } = this.props;
-        (r || s || a) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (a || l !== A.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
+            { formState: i, section: l, canManageRoles: s, canManageChannels: r, canManageWebhooks: a, canUnlinkChannel: o } = this.props;
+        (r || s || a || o) && (i !== A.QZA.CLOSED || i === t) && (s || l !== A.CoT.PERMISSIONS) && (a || o || l !== A.CoT.INTEGRATIONS) ? l !== n && D(l, n) : (0, c.xf)();
     }
     render() {
         let { theme: e, sidebarTheme: t, section: n, channel: l, category: s, canManageRoles: a, canManageChannels: h, canDeleteChannels: x, canManageWebhooks: f, canUnlinkChannel: v } = this.props;
@@ -181,26 +181,27 @@ function k() {
         r = (0, s.e7)([v.Z], () => v.Z.theme),
         a = (0, s.e7)([v.Z], () => (v.Z.darkSidebar ? A.BRd.DARK : void 0)),
         o = (0, f.C7)(e),
-        c = (0, x.Y)(e),
-        d = (0, f.Xb)(e),
+        c = (0, f.Xb)(e),
         {
-            canManageChannels: u,
-            canManageRoles: h,
-            canManageWebhooks: m
+            canManageChannels: d,
+            canManageRoles: u,
+            canManageWebhooks: h,
+            canUnlinkChannel: m
         } = (0, s.cj)([S.Z], () => ({
             canManageChannels: S.Z.can(A.Plq.MANAGE_CHANNELS, e),
             canManageRoles: null != e && S.Z.can(A.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && S.Z.can(A.Plq.MANAGE_WEBHOOKS, e)
+            canManageWebhooks: null != e && S.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, x.C)(e, S.Z)
         })),
         g = (0, s.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(P, {
         channel: e,
         category: g,
-        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : u,
-        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? d : u,
-        canManageRoles: h,
-        canManageWebhooks: m,
-        canUnlinkChannel: c,
+        canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
+        canDeleteChannels: (null == e ? void 0 : e.isThread()) ? c : d,
+        canManageRoles: u,
+        canManageWebhooks: h,
+        canUnlinkChannel: m,
         formState: n,
         theme: r,
         sidebarTheme: a,
