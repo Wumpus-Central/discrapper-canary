@@ -21,7 +21,6 @@ function d(e) {
         showDirtyGuildTemplateIndicator: !1,
         ...n,
         canUnlinkChannels: t,
-        showAccessRate: !1,
         canAccessClanSettings: n.isGuildAdmin && e.hasFeature(u.oNc.CLAN),
         welcomeScreenEmpty: a.Z.isEmpty(e.id),
         memberVerificationRolloutEnabled: d

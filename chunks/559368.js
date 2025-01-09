@@ -8,11 +8,10 @@ var i,
     d = n(570140);
 let u = ['pct_retained', 'new_members', 'visitors', 'communicators'],
     m = {},
-    h = {},
-    g = null;
-function x(e) {
+    h = null;
+function g(e) {
     let { guildId: t, stats: n } = e;
-    g = null;
+    h = null;
     let i = {},
         r = {},
         l = n[0],
@@ -30,29 +29,20 @@ function x(e) {
             ...m[t]
         });
 }
-function p(e) {
+function x(e) {
     let { error: t } = e;
-    g = t.code;
+    h = t.code;
 }
-class f extends (a = c.ZP.Store) {
+class p extends (a = c.ZP.Store) {
     getOverviewAnalytics(e) {
         return m[e];
     }
-    getMemberInsights(e) {
-        var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : {};
-    }
-    shouldFetchMemberInsights(e) {
-        var t;
-        let n = null === (t = h[e]) || void 0 === t ? void 0 : t.fetchedAt;
-        return null == n || Date.now() - n > 43200000;
-    }
     getError() {
-        return g;
+        return h;
     }
 }
 (l = 'GuildSettingsAnalyticsStore'),
-    (r = 'displayName') in (i = f)
+    (r = 'displayName') in (i = p)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -60,18 +50,11 @@ class f extends (a = c.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new f(d.Z, {
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: x,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: x,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: x,
-        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: p,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: p,
-        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: p,
-        GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, ...n } = e;
-            h[t] = {
-                ...n,
-                fetchedAt: Date.now()
-            };
-        }
+    (t.Z = new p(d.Z, {
+        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: g,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: g,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: g,
+        GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE: x,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE: x,
+        GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE: x
     }));

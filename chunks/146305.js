@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(84615),
     R = n(575258),
     y = n(276687),
-    A = n(594174),
-    Z = n(585483),
+    Z = n(594174),
+    A = n(585483),
     L = n(823379),
     D = n(85001),
     O = n(434404),
@@ -335,8 +335,6 @@ t.Z = {
                     label: ev.intl.string(ev.t['0wWfUF']),
                     ariaLabel: ev.intl.string(ev.t['0wWfUF']),
                     element: V.Z,
-                    newIndicator: S.qc.hasHotspot(S.v6.GUILD_ANALYTICS_GUILD_SETTINGS_MENU),
-                    newIndicatorDismissibleContentTypes: t.showAccessRate ? [l.z.GUILD_INSIGHTS_ACCESS_RATE_NEW] : null,
                     predicate: () => eb
                 };
             case ep.pNK.DISCOVERY:
@@ -445,7 +443,7 @@ t.Z = {
                 return {
                     section: ep.pNK.DELETE,
                     onClick() {
-                        let e = A.default.getCurrentUser();
+                        let e = Z.default.getCurrentUser();
                         if (null == e) return;
                         let r = t.guild.toString(),
                             o = {
@@ -453,7 +451,7 @@ t.Z = {
                                 confirmText: ev.intl.string(ev.t.l3hWPz),
                                 cancelText: ev.intl.string(ev.t['ETE/oK']),
                                 onConfirm: () => {
-                                    Z.S.subscribeOnce(ep.CkL.LAYER_POP_COMPLETE, () => {
+                                    A.S.subscribeOnce(ep.CkL.LAYER_POP_COMPLETE, () => {
                                         O.Z.deleteGuild(t.guild.id, r).then(() => {
                                             if ((0, g.un)(l.z.GUILD_DELETE_FEEDBACK)) return;
                                             D.Z.trackExposure({ location: 'e4be39_1' });
