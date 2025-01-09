@@ -1,5 +1,6 @@
 e.exports = {
     outerContainer: 'outerContainer_d862e5',
+    loggedOutContainer: 'loggedOutContainer_d862e5',
     innerContainer: 'innerContainer_d862e5',
     detailHeaderContainer: 'detailHeaderContainer_d862e5',
     detailHeaderSection: 'detailHeaderSection_d862e5',
