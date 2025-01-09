@@ -223,8 +223,13 @@ function eg(e) {
     s.set(i, a), w.set(r, s);
 }
 function eE(e) {
-    let { quest: n, placement: r } = e;
-    null == n ? v.delete(r) : v.set(r, n);
+    let { decisionId: n, quest: r, placement: i } = e;
+    null == r
+        ? v.delete(i)
+        : v.set(i, {
+              decisionId: n,
+              quest: r
+          });
 }
 function ev(e) {
     let { placement: n } = e;

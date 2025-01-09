@@ -94,6 +94,9 @@ r.d(n, {
     },
     z6: function () {
         return ep;
+    },
+    zP: function () {
+        return ex;
     }
 });
 var i,
@@ -764,6 +767,12 @@ function eL(e) {
               duration: r,
               decorationName: n
           });
+}
+function ex(e) {
+    return (0, m.e7)([L.Z], () => {
+        var n;
+        return null != e ? (null === (n = L.Z.questToDeliverForPlacement.get(e)) || void 0 === n ? void 0 : n.decisionId) : void 0;
+    });
 }
 !(function (e) {
     (e[(e.UNACCEPTED = 0)] = 'UNACCEPTED'), (e[(e.ACCEPTED = 1)] = 'ACCEPTED'), (e[(e.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (e[(e.COMPLETED = 3)] = 'COMPLETED'), (e[(e.CLAIMED = 4)] = 'CLAIMED');

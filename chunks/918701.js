@@ -86,6 +86,9 @@ r.d(n, {
     ZZ: function () {
         return Y;
     },
+    Zp: function () {
+        return tu;
+    },
     _D: function () {
         return H;
     },
@@ -422,7 +425,7 @@ let ef = (e) => ''.concat(location.protocol, '//').concat(location.host, '/quest
 function e_(e, n, r) {
     let i = n.get(r);
     if (null == i) return;
-    let a = e.get(i.id);
+    let a = e.get(i.quest.id);
     if (null != a && !Q(a)) return a;
 }
 let eh = (e) => {
@@ -850,4 +853,11 @@ function to(e) {
 function tl(e, n) {
     var r, i;
     if (!Q(e) && (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null && (null === (i = e.userStatus) || void 0 === i ? void 0 : i.completedAt) == null) (0, O.cT)(e.id, n);
+}
+function tu(e) {
+    return {
+        [L.jn.QUEST_BAR]: L.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [L.jn.QUEST_BAR_V2]: L.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [L.jn.QUEST_BAR_MOBILE]: L.Ok.MOBILE_HOME_DOCK_AREA
+    }[e];
 }

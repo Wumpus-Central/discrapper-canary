@@ -444,6 +444,7 @@ async function U(e) {
         });
         o.Z.dispatch({
             type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
+            decisionId: n.body.request_id,
             quest: (0, h.q6)(n.body.quest),
             placement: e
         });
