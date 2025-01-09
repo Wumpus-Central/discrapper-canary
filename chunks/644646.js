@@ -19,13 +19,14 @@ var i = r(200651),
 function b(e) {
     let n;
     let { className: r, quest: s, autoplay: b = !0, learnMoreStyle: y = null } = e,
-        S = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        A = a.useMemo(() => (0, p.fh)(s, p.eC.REWARD), [s]),
-        N = a.useCallback(
+        S = (0, _.O5)(),
+        A = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
+        N = a.useMemo(() => (0, p.fh)(s, p.eC.REWARD), [s]),
+        C = a.useCallback(
             (n) => {
                 var r;
                 (0, l.k)(n.currentTarget, HTMLElement) && n.currentTarget.blur(),
-                    (0, _._3)({
+                    S({
                         questId: s.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -34,22 +35,22 @@ function b(e) {
                     (0, v.navigateToQuestHome)(e.location, e.questContent, s.id),
                     null === (r = e.onClick) || void 0 === r || r.call(e, n);
             },
-            [s.id, e]
+            [S, s.id, e]
         ),
-        C = a.useRef(null),
-        R = a.useRef(b),
-        O = (0, h.Bg)(s.config);
+        R = a.useRef(null),
+        O = a.useRef(b),
+        D = (0, h.Bg)(s.config);
     return (
         a.useEffect(() => {
-            if (null != C.current) {
-                if (!A.isAnimated || S) {
-                    (C.current.currentTime = 0), C.current.pause();
+            if (null != R.current) {
+                if (!N.isAnimated || A) {
+                    (R.current.currentTime = 0), R.current.pause();
                     return;
                 }
-                b && !R.current ? C.current.play() : !b && R.current && ((C.current.currentTime = 0), C.current.pause()), (R.current = b);
+                b && !O.current ? R.current.play() : !b && O.current && ((R.current.currentTime = 0), R.current.pause()), (O.current = b);
             }
-        }, [b, A, S]),
-        (n = O
+        }, [b, N, A]),
+        (n = D
             ? (0, i.jsx)(E.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
@@ -58,24 +59,24 @@ function b(e) {
                           className: T.questRewardTileAsset
                       })
               })
-            : A.isAnimated
+            : N.isAnimated
               ? (0, i.jsx)(E.Fl, {
                     id: 'QuestRewardTile_rewardTileAnimated',
                     children: (e) => {
                         var n;
                         return (0, i.jsx)(f.Z, {
                             ref: (n) => {
-                                (e.current = n), (C.current = n);
+                                (e.current = n), (R.current = n);
                             },
-                            autoPlay: !S && b,
+                            autoPlay: !A && b,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
                             className: T.questRewardTileAsset,
                             controls: !1,
                             children: (0, i.jsx)('source', {
-                                src: A.url,
-                                type: null !== (n = A.mimetype) && void 0 !== n ? n : void 0
+                                src: N.url,
+                                type: null !== (n = N.mimetype) && void 0 !== n ? n : void 0
                             })
                         });
                     }
@@ -87,7 +88,7 @@ function b(e) {
                             ref: e,
                             alt: m.r.build(s.config).defaultReward.messages.name,
                             className: o()(T.questRewardTileAsset, T.questRewardTileAssetStatic),
-                            src: A.url
+                            src: N.url
                         })
                 })),
         null == y
@@ -97,7 +98,7 @@ function b(e) {
               })
             : (0, i.jsxs)(c.Clickable, {
                   className: o()(T.questRewardTileInteractive, T.questRewardTile, T.rewardHighlight, r),
-                  onClick: N,
+                  onClick: C,
                   children: [
                       n,
                       (0, i.jsx)(c.Shine, {

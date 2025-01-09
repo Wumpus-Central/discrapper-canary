@@ -565,7 +565,8 @@ function eU(e, n) {
                 questId: e.id,
                 questContent: n.content,
                 questContentCTA: n.ctaContent,
-                questContentPosition: n.position
+                questContentPosition: n.position,
+                impressionId: n.impressionId
             }),
                 (0, I.Z)(r);
         }
@@ -576,7 +577,8 @@ let eB = (e, n) => {
             questId: e,
             questContent: n.content,
             questContentCTA: n.ctaContent,
-            questContentPosition: n.position
+            questContentPosition: n.position,
+            impressionId: n.impressionId
         }),
             (0, b.JG)(ef(e));
     },
@@ -739,7 +741,8 @@ function e6(e, n) {
     (0, R._3)({
         questId: i.id,
         questContent: n.content,
-        questContentCTA: n.ctaContent
+        questContentCTA: n.ctaContent,
+        impressionId: n.impressionId
     }),
         (0, T.Z)({
             platformType: r,
@@ -753,7 +756,8 @@ function e5(e, n) {
         questContent: n.content,
         questContentPosition: n.position,
         questContentRowIndex: n.rowIndex,
-        questContentCTA: n.ctaContent
+        questContentCTA: n.ctaContent,
+        impressionId: n.impressionId
     });
     let i = ta(r);
     if (1 === i.length) return (0, T.Z)({ platformType: i.at(0) });
@@ -769,7 +773,8 @@ function e7(e, n) {
         questId: r.id,
         questContent: n.content,
         questContentPosition: n.position,
-        questContentCTA: n.ctaContent
+        questContentCTA: n.ctaContent,
+        impressionId: n.impressionId
     }),
         e4();
 }

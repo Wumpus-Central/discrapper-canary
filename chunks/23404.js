@@ -63,53 +63,54 @@ function P(e) {
 t.Z = function (e) {
     var t, n, l;
     let { quest: o } = e,
-        d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
-        [E, I] = r.useState(!1),
-        Z = r.useCallback(() => I(!0), []),
-        O = r.useCallback(() => I(!1), []),
-        y = r.useCallback((e) => {
+        d = (0, u.O5)(),
+        E = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
+        [I, Z] = r.useState(!1),
+        O = r.useCallback(() => Z(!0), []),
+        y = r.useCallback(() => Z(!1), []),
+        R = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        R = r.useCallback(() => {
+        j = r.useCallback(() => {
             (0, h.AH)(o.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [o]),
-        j = r.useCallback(() => {
+        D = r.useCallback(() => {
             null != o &&
-                ((0, u._3)({
+                (d({
                     questId: o.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
                 (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
-        }, [o]),
-        D = r.useCallback(() => {
-            (0, u._3)({
+        }, [o, d]),
+        M = r.useCallback(() => {
+            d({
                 questId: o.id,
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
                 (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
-        }, [o]),
-        M = (0, S.hf)({
+        }, [o.id, d]),
+        w = (0, S.hf)({
             quest: o,
             location: g.jn.ACTIVITY_PANEL
         }),
-        w = (0, m.tP)(o),
-        k = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        U = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        G = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
-        B = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
-        V = (0, m.Rf)(o),
-        H = (0, _.D)({
+        k = (0, m.tP)(o),
+        U = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        G = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        B = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
+        V = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
+        H = (0, m.Rf)(o),
+        F = (0, _.D)({
             quest: o,
-            taskDetails: V,
+            taskDetails: H,
             location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
-    return B || w || G
+    return V || k || B
         ? null
         : (0, i.jsx)(C.A, {
               questOrQuests: o,
@@ -120,18 +121,18 @@ t.Z = function (e) {
                       ref: (t) => {
                           e.current = t;
                       },
-                      className: a()(L.wrapper, { [L.wrapperQuestAccepted]: k }),
-                      onClick: y,
-                      onKeyPress: y,
-                      onFocus: Z,
-                      onMouseEnter: Z,
-                      onBlur: O,
-                      onMouseLeave: O,
+                      className: a()(L.wrapper, { [L.wrapperQuestAccepted]: U }),
+                      onClick: R,
+                      onKeyPress: R,
+                      onFocus: O,
+                      onMouseEnter: O,
+                      onBlur: y,
+                      onMouseLeave: y,
                       children: [
                           (0, i.jsxs)('div', {
                               className: L.utils,
                               children: [
-                                  k ? (0, i.jsx)(P, { quest: o }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
+                                  U ? (0, i.jsx)(P, { quest: o }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
                                   (0, i.jsx)(v.r, {
                                       quest: o,
                                       questContent: g.jn.ACTIVITY_PANEL,
@@ -150,7 +151,7 @@ t.Z = function (e) {
                                   })
                               ]
                           }),
-                          !k &&
+                          !U &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(P, { quest: o }),
@@ -158,24 +159,24 @@ t.Z = function (e) {
                                           className: L.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: H
+                                          children: F
                                       })
                                   ]
                               }),
-                          k &&
-                              !U &&
+                          U &&
+                              !G &&
                               (0, i.jsx)(T.Z, {
-                                  autoplay: E,
+                                  autoplay: I,
                                   className: L.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
                                   location: A.dr.ACTIVITY_PANEL,
-                                  taskDetails: V
+                                  taskDetails: H
                               }),
                           (0, i.jsxs)('div', {
                               className: L.ctas,
                               children: [
-                                  !k &&
+                                  !U &&
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(c.Button, {
@@ -183,36 +184,36 @@ t.Z = function (e) {
                                                   color: c.Button.Colors.PRIMARY,
                                                   fullWidth: !0,
                                                   size: c.Button.Sizes.SMALL,
-                                                  onClick: D,
+                                                  onClick: M,
                                                   children: x.intl.string(x.t.LLLLPD)
                                               }),
                                               (0, i.jsx)(c.Button, {
                                                   className: L.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: R,
+                                                  onClick: j,
                                                   size: c.Button.Sizes.SMALL,
-                                                  submitting: d,
+                                                  submitting: E,
                                                   children: x.intl.string(x.t.l7E81t)
                                               })
                                           ]
                                       }),
-                                  k &&
-                                      !U &&
+                                  U &&
+                                      !G &&
                                       (0, i.jsx)(c.Button, {
                                           className: L.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: j,
+                                          onClick: D,
                                           size: c.Button.Sizes.SMALL,
                                           children: x.intl.string(x.t.VN1Ajo)
                                       }),
-                                  U &&
+                                  G &&
                                       (0, i.jsx)(c.Button, {
                                           className: L.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: M,
+                                          onClick: w,
                                           size: c.Button.Sizes.SMALL,
                                           children: x.intl.string(x.t.cfY4PD)
                                       })

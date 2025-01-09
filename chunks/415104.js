@@ -16,58 +16,65 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(263740);
-function f(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: f, rowIndex: g } = e,
-        [h, C] = r.useState(!1),
-        [v, j] = r.useState([]),
-        _ = (0, l.qb)(t),
+function g(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: g } = e,
+        [f, h] = r.useState(!1),
+        [C, v] = r.useState([]),
+        j = (0, l.qb)(t),
+        _ = (0, i._F)(),
         b = r.useCallback(() => {
-            C(!0),
-                (0, i.dA)({
+            h(!0),
+                _({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER,
                     properties: (0, i.mH)(s)
                 });
-        }, [C, s, t.id]),
+        }, [_, t.id, s]),
         N = r.useCallback(() => {
-            C(!1),
-                (0, i.dA)({
+            h(!1),
+                _({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER_OFF,
                     properties: (0, i.mH)(s)
                 });
-        }, [C, s, t.id]);
+        }, [_, t.id, s]);
+    return (0, o.jsxs)('div', {
+        id: 'quest-tile-'.concat(t.id),
+        ref: (e) => {
+            g.current = e;
+        },
+        className: a()(x.container, n),
+        onMouseEnter: b,
+        onMouseLeave: N,
+        children: [
+            (0, o.jsx)(u.Z, {
+                quest: t,
+                isHovering: f,
+                errorHints: C,
+                warningHints: j
+            }),
+            (0, o.jsx)(p.Z, {
+                quest: t,
+                questContent: s,
+                isHovering: f,
+                contentPosition: c,
+                rowIndex: d,
+                onReceiveErrorHints: v
+            })
+        ]
+    });
+}
+function f(e) {
     return (0, o.jsx)(d.A, {
-        questOrQuests: t,
-        questContent: s,
-        questContentPosition: f,
-        questContentRowIndex: g,
-        trackGuildAndChannelMetadata: s === c.jn.QUESTS_EMBED,
-        children: (e) =>
-            (0, o.jsxs)('div', {
-                id: 'quest-tile-'.concat(t.id),
-                ref: (t) => {
-                    e.current = t;
-                },
-                className: a()(x.container, n),
-                onMouseEnter: b,
-                onMouseLeave: N,
-                children: [
-                    (0, o.jsx)(u.Z, {
-                        quest: t,
-                        isHovering: h,
-                        errorHints: v,
-                        warningHints: _
-                    }),
-                    (0, o.jsx)(p.Z, {
-                        quest: t,
-                        questContent: s,
-                        isHovering: h,
-                        contentPosition: f,
-                        rowIndex: g,
-                        onReceiveErrorHints: j
-                    })
-                ]
+        questOrQuests: e.quest,
+        questContent: e.questContent,
+        questContentPosition: e.contentPosition,
+        questContentRowIndex: e.rowIndex,
+        trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
+        children: (t) =>
+            (0, o.jsx)(g, {
+                ...e,
+                impressionRef: t
             })
     });
 }

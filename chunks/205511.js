@@ -8,62 +8,65 @@ var o = n(200651),
     d = n(607070),
     u = n(553795),
     p = n(617136),
-    m = n(111382),
-    x = n(113434),
+    m = n(915750),
+    x = n(111382),
+    g = n(113434),
     f = n(497505),
-    g = n(918701),
-    h = n(667105),
-    C = n(585857),
-    v = n(388032),
-    j = n(313750);
-function _(e) {
+    h = n(918701),
+    C = n(667105),
+    v = n(585857),
+    j = n(388032),
+    _ = n(313750);
+function b(e) {
     let { children: t, isComplete: n, hasNextStep: r } = e;
     return (0, o.jsxs)('li', {
-        className: a()(j.stepWrapper, { [j.stepWrapperComplete]: n }, { [j.stepWrapperWithNextStep]: r }),
+        className: a()(_.stepWrapper, { [_.stepWrapperComplete]: n }, { [_.stepWrapperWithNextStep]: r }),
         children: [
             (0, o.jsxs)('div', {
-                className: j.stepIndicator,
+                className: _.stepIndicator,
                 children: [
                     (0, o.jsx)('div', {
-                        className: j.stepIconWrapper,
+                        className: _.stepIconWrapper,
                         children:
                             n &&
                             (0, o.jsx)(c.CheckmarkLargeBoldIcon, {
-                                className: j.stepIcon,
+                                className: _.stepIcon,
                                 color: c.tokens.colors.WHITE
                             })
                     }),
-                    r && (0, o.jsx)('div', { className: j.stepConnector })
+                    r && (0, o.jsx)('div', { className: _.stepConnector })
                 ]
             }),
             (0, o.jsx)('div', {
-                className: j.stepContent,
+                className: _.stepContent,
                 children: t
             })
         ]
     });
 }
-function b(e) {
+function N(e) {
     return (0, o.jsx)(c.Text, {
-        className: j.microphoneUnitBodyText,
+        className: _.microphoneUnitBodyText,
         color: 'text-muted',
         variant: 'text-xxs/normal',
         children: e.children
     });
 }
-function N(e) {
+function E(e) {
     let { quest: t, useReducedMotion: n } = e,
-        s = (0, m.n)(),
-        l = (0, h.k3)(t.id, f.jn.QUEST_BAR_V2),
-        d = (0, h.g2)({ useReducedMotion: n }),
+        s = (0, x.n)(),
+        l = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
+        d = (0, C.g2)({ useReducedMotion: n }),
+        v = (0, p.O5)(),
+        b = (0, m.aM)(),
         {
-            errorHints: C,
-            startingConsoleQuest: _,
-            startConsoleQuest: N
-        } = (0, x.GI)({
+            errorHints: E,
+            startingConsoleQuest: B,
+            startConsoleQuest: T
+        } = (0, g.GI)({
             questId: t.id,
             beforeRequest: () => {
-                (0, p._3)({
+                v({
                     questId: t.id,
                     questContent: f.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR
@@ -72,33 +75,34 @@ function N(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: E, renderBody: B } = r.useMemo(() => {
-            let e = C.length > 0,
+        { header: S, renderBody: y } = r.useMemo(() => {
+            let e = E.length > 0,
                 n = t.config.messages.gameTitle;
             return {
-                header: e ? v.intl.formatToPlainString(v.t['28Ql29'], { gameTitle: n }) : v.intl.formatToPlainString(v.t.gX0Qc3, { gameTitle: n }),
+                header: e ? j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: n }) : j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, o.jsx)(o.Fragment, {
-                              children: C.map((e, n) => {
+                              children: E.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          s = (0, g.C9)(e),
-                                          a = (0, g._j)(e);
+                                          s = (0, h.C9)(e),
+                                          a = (0, h._j)(e);
                                       return (0, o.jsx)(
-                                          b,
+                                          N,
                                           {
-                                              children: v.intl.format(s, {
+                                              children: j.intl.format(s, {
                                                   account_name: null == r ? void 0 : r.name,
                                                   onClick: () => {
-                                                      (0, g.fY)(
+                                                      (0, h.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a
                                                           },
                                                           {
                                                               content: f.jn.QUEST_BAR,
-                                                              ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
+                                                              ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
+                                                              impressionId: b
                                                           }
                                                       );
                                                   }
@@ -107,50 +111,50 @@ function N(e) {
                                           n
                                       );
                                   }
-                                  return (0, o.jsx)(b, { children: e.message }, n);
+                                  return (0, o.jsx)(N, { children: e.message }, n);
                               })
                           })
                     : () =>
                           (0, o.jsx)(c.Text, {
-                              className: j.microphoneUnitBodyText,
+                              className: _.microphoneUnitBodyText,
                               color: 'text-muted',
                               variant: 'text-xxs/normal',
-                              children: v.intl.format(v.t.GXqvCw, { gameTitle: n })
+                              children: j.intl.format(j.t.GXqvCw, { gameTitle: n })
                           })
             };
-        }, [t, C, s]);
+        }, [E, t, s, b]);
     return (0, o.jsxs)('div', {
-        className: j.microphoneUnit,
+        className: _.microphoneUnit,
         children: [
             (0, o.jsxs)('div', {
-                className: j.microphoneUnitHeader,
+                className: _.microphoneUnitHeader,
                 children: [
                     (0, o.jsx)(c.CircleWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: 0 === C.length ? j.warningCircle : j.errorCircle,
+                        className: 0 === E.length ? _.warningCircle : _.errorCircle,
                         width: 16,
                         height: 16
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: E
+                        children: S
                     }),
                     (0, o.jsx)(c.Clickable, {
-                        className: a()(j.microphoneUnitRefreshIconWrapper, { [j.disabled]: _ }),
-                        onClick: () => N(),
+                        className: a()(_.microphoneUnitRefreshIconWrapper, { [_.disabled]: B }),
+                        onClick: () => T(),
                         children: d.render()
                     })
                 ]
             }),
             (0, o.jsxs)('div', {
-                className: a()({ [j.opacity_50]: _ }),
-                children: [B(), 0 === C.length ? null : (0, o.jsx)(b, { children: l })]
+                className: a()({ [_.opacity_50]: B }),
+                children: [y(), 0 === E.length ? null : (0, o.jsx)(N, { children: l })]
             })
         ]
     });
 }
-function E(e) {
+function B(e) {
     let { text: t } = e;
     return (0, o.jsx)(c.Text, {
         color: 'text-muted',
@@ -161,7 +165,7 @@ function E(e) {
 t.Z = function (e) {
     let { quest: t, taskDetails: n } = e,
         s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        a = (0, x.z6)(),
+        a = (0, g.z6)(),
         {
             steps: i,
             hasConnectedAccounts: u,
@@ -170,25 +174,25 @@ t.Z = function (e) {
         } = r.useMemo(() => {
             var e;
             let r = a.xboxAndPlaystationAccounts.length > 0,
-                s = r && (0, g.Bz)(t),
+                s = r && (0, h.Bz)(t),
                 i = t.config.messages.gameTitle,
                 l = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
                 steps: [
                     {
                         renderContent: () =>
-                            (0, o.jsx)(C.Q, {
+                            (0, o.jsx)(v.Q, {
                                 ...a,
                                 quest: t
                             }),
                         isComplete: r || s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(E, { text: v.intl.formatToPlainString(v.t['+8JB6e'], { gameTitle: i }) }),
+                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: i }) }),
                         isComplete: s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(E, { text: v.intl.formatToPlainString(v.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: l
                     }
                 ],
@@ -198,23 +202,23 @@ t.Z = function (e) {
             };
         }, [a, t, n]);
     return (0, o.jsxs)('div', {
-        className: j.wrapper,
+        className: _.wrapper,
         children: [
             (0, o.jsx)('div', {
-                className: j.headingWrapper,
+                className: _.headingWrapper,
                 children: (0, o.jsx)(c.Heading, {
-                    className: j.heading,
+                    className: _.heading,
                     variant: 'text-xs/medium',
-                    children: v.intl.string(v.t.UPWlJi)
+                    children: j.intl.string(j.t.UPWlJi)
                 })
             }),
             (0, o.jsxs)('div', {
-                className: j.stepsWrapper,
+                className: _.stepsWrapper,
                 children: [
                     (0, o.jsx)('ul', {
                         children: i.map((e, t) =>
                             (0, o.jsx)(
-                                _,
+                                b,
                                 {
                                     isComplete: e.isComplete,
                                     hasNextStep: t < i.length - 1,
@@ -227,7 +231,7 @@ t.Z = function (e) {
                     u &&
                         !p &&
                         !m &&
-                        (0, o.jsx)(N, {
+                        (0, o.jsx)(E, {
                             useReducedMotion: s,
                             quest: t
                         })

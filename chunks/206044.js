@@ -22,25 +22,26 @@ var i = n(200651),
     S = n(611855),
     N = n(644646),
     q = n(64141),
-    _ = n(87894),
-    A = n(46140),
+    A = n(87894),
+    _ = n(46140),
     R = n(231338),
-    b = n(388032),
+    M = n(388032),
     I = n(747028);
-let M = (0, o.animated)(d.ChevronSmallDownIcon),
+let b = (0, o.animated)(d.ChevronSmallDownIcon),
     L = (0, o.animated)(h.Z),
     Z = (e) => {
         let { quest: t, location: n, questContentPosition: l, ...r } = e,
             [o, a] = s.useState(!1),
-            u = s.useRef(new c.V7());
+            u = s.useRef(new c.V7()),
+            m = (0, p.O5)();
         s.useEffect(() => {
             let e = u.current;
             return function () {
                 e.stop();
             };
         }, []);
-        let m = () => {
-            (0, p._3)({
+        let x = () => {
+            m({
                 questId: t.id,
                 questContent: n,
                 questContentCTA: p.jZ.COPY_QUEST_URL,
@@ -54,15 +55,15 @@ let M = (0, o.animated)(d.ChevronSmallDownIcon),
             forceOpen: o,
             shouldShow: o,
             color: d.Tooltip.Colors.GREEN,
-            text: b.intl.string(b.t.MSaeTU),
+            text: M.intl.string(M.t.MSaeTU),
             children: () =>
                 (0, i.jsx)(d.Button, {
                     ...r,
                     className: I.shareButton,
                     color: d.Button.Colors.PRIMARY,
                     size: d.Button.Sizes.SMALL,
-                    onClick: m,
-                    children: b.intl.string(b.t['5Z6rz8'])
+                    onClick: x,
+                    children: M.intl.string(M.t['5Z6rz8'])
                 })
         });
     };
@@ -74,26 +75,27 @@ t.Z = (e) => {
         G = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
         F = s.useMemo(() => (0, T.fh)(h, T.eC.HERO), [h]),
         z = s.useRef(null),
-        V = (0, _.uq)(C),
+        V = (0, A.uq)(C),
         X = C === E.jn.QUESTS_EMBED,
-        Y = (0, g.t5)(h, A.dr.QUESTS_CARD, C),
+        Y = (0, g.t5)(h, _.dr.QUESTS_CARD, C),
         K = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        J = (0, g.B6)(h.config.expiresAt, {
+        J = (0, p.O5)(),
+        $ = (0, g.B6)(h.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        $ = (0, g.B6)(f.r.build(h.config).rewardsExpireAt, {
+        ee = (0, g.B6)(f.r.build(h.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        ee = s.useMemo(() => null != h.config.cosponsorMetadata, [h]),
-        et = (e) => {
+        et = s.useMemo(() => null != h.config.cosponsorMetadata, [h]),
+        en = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 U(),
-                (0, p._3)({
+                J({
                     questId: h.id,
                     questContent: C,
                     questContentCTA: B ? p.jZ.COLLAPSE : p.jZ.EXPAND,
@@ -103,9 +105,9 @@ t.Z = (e) => {
     s.useEffect(() => {
         F.isAnimated && null != z.current && (l ? z.current.play() : !l && (z.current.pause(), (z.current.currentTime = 0)));
     }, [l, F]);
-    let en = (0, i.jsx)(v.ZP, {
+    let ei = (0, i.jsx)(v.ZP, {
         className: I.partnerBranding,
-        logotypeClassName: ee ? I.partnerBrandingLogotypes : void 0,
+        logotypeClassName: et ? I.partnerBrandingLogotypes : void 0,
         gameTileSize: v.fF.MEDIUM,
         quest: h,
         separatorSpacing: v.US.MEDIUM,
@@ -118,7 +120,7 @@ t.Z = (e) => {
             [I.outerContainerEmbed]: X,
             [I.outerContainerXs]: 'xs' === j
         }),
-        'aria-label': b.intl.string(b.t.dcl9MT),
+        'aria-label': M.intl.string(M.t.dcl9MT),
         style: { height: V ? Q : void 0 },
         children: [
             (0, i.jsx)(L, {
@@ -154,7 +156,7 @@ t.Z = (e) => {
                             y: V
                                 ? y.to({
                                       range: [0, 1],
-                                      output: [_.DJ, 0]
+                                      output: [A.DJ, 0]
                                   })
                                 : void 0
                         },
@@ -171,8 +173,8 @@ t.Z = (e) => {
                                     },
                                     'aria-hidden': !P && B,
                                     children: (0, i.jsxs)(d.ClickableContainer, {
-                                        'aria-label': b.intl.string(b.t.dcl9MT),
-                                        onClick: et,
+                                        'aria-label': M.intl.string(M.t.dcl9MT),
+                                        onClick: en,
                                         className: I.headerCollapsedClickableContainer,
                                         children: [
                                             (0, i.jsx)('div', {
@@ -181,7 +183,7 @@ t.Z = (e) => {
                                                     quest: h,
                                                     questContent: C,
                                                     className: I.headerCollapsedRewardTile,
-                                                    location: A.dr.QUESTS_CARD
+                                                    location: _.dr.QUESTS_CARD
                                                 })
                                             }),
                                             (0, i.jsxs)('div', {
@@ -189,7 +191,7 @@ t.Z = (e) => {
                                                 children: [
                                                     (0, i.jsxs)('div', {
                                                         className: I.headerCollapsedContentCopyLogos,
-                                                        children: [en, (0, i.jsx)(S.Z, { color: 'always-white' })]
+                                                        children: [ei, (0, i.jsx)(S.Z, { color: 'always-white' })]
                                                     }),
                                                     (0, i.jsx)(d.Text, {
                                                         variant: 'text-xs/medium',
@@ -222,7 +224,7 @@ t.Z = (e) => {
                                         children: [
                                             (0, i.jsxs)('div', {
                                                 className: I.iconLogotypeContainer,
-                                                children: [en, X ? null : (0, i.jsx)(S.Z, { color: 'always-white' })]
+                                                children: [ei, X ? null : (0, i.jsx)(S.Z, { color: 'always-white' })]
                                             }),
                                             (0, i.jsxs)('div', {
                                                 className: I.questInfo,
@@ -237,13 +239,13 @@ t.Z = (e) => {
                                                                 className: I.heading,
                                                                 color: 'always-white',
                                                                 ...e,
-                                                                children: b.intl.format(b.t.EAYZAg, { questName: h.config.messages.questName })
+                                                                children: M.intl.format(M.t.EAYZAg, { questName: h.config.messages.questName })
                                                             })
                                                     }),
                                                     (0, i.jsx)(d.Text, {
                                                         variant: 'text-xs/normal',
                                                         color: 'always-white',
-                                                        children: K ? b.intl.formatToPlainString(b.t.APddvL, { expirationDate: $ }) : c ? b.intl.formatToPlainString(b.t.v7xMw8, { expirationDate: J }) : b.intl.formatToPlainString(b.t['pX+fmp'], { expirationDate: J })
+                                                        children: K ? M.intl.formatToPlainString(M.t.APddvL, { expirationDate: ee }) : c ? M.intl.formatToPlainString(M.t.v7xMw8, { expirationDate: $ }) : M.intl.formatToPlainString(M.t['pX+fmp'], { expirationDate: $ })
                                                     })
                                                 ]
                                             })
@@ -266,9 +268,9 @@ t.Z = (e) => {
                             top: V
                                 ? y.to({
                                       range: [0, 1],
-                                      output: [_.DJ / 2 - _.Z$ / 2, _.jc]
+                                      output: [A.DJ / 2 - A.Z$ / 2, A.jc]
                                   })
-                                : _.jc
+                                : A.jc
                         },
                         children: [
                             (0, i.jsx)(q.r, {
@@ -288,7 +290,7 @@ t.Z = (e) => {
                                         children: (0, i.jsx)(d.Clickable, {
                                             ...e,
                                             className: I.iconWrapper,
-                                            'aria-label': b.intl.string(b.t.DEoVWV),
+                                            'aria-label': M.intl.string(M.t.DEoVWV),
                                             children: (0, i.jsx)(d.MoreHorizontalIcon, {
                                                 size: 'md',
                                                 color: a.Z.WHITE
@@ -297,12 +299,12 @@ t.Z = (e) => {
                                     })
                             }),
                             D &&
-                                !(0, _.W_)(C) &&
+                                !(0, A.W_)(C) &&
                                 (0, i.jsx)(d.Clickable, {
-                                    onClick: et,
+                                    onClick: en,
                                     className: I.iconWrapper,
-                                    'aria-label': B ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
-                                    children: (0, i.jsx)(M, {
+                                    'aria-label': B ? M.intl.string(M.t.iTcumZ) : M.intl.string(M.t.dcl9MT),
+                                    children: (0, i.jsx)(b, {
                                         style: {
                                             rotate: y.to({
                                                 range: [0, 1],

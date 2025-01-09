@@ -79,15 +79,16 @@ function T(e) {
     u.default.track(r, c, { flush: f });
 }
 function b(e) {
-    let { questId: n, questContent: r, questContentCTA: i, questContentPosition: a, questContentRowIndex: s, trackGuildAndChannelMetadata: o = !1 } = e;
+    let { questId: n, questContent: r, questContentCTA: i, questContentPosition: a, questContentRowIndex: s, impressionId: o, trackGuildAndChannelMetadata: l = !1 } = e;
     T({
         questId: n,
         event: h.rMx.QUEST_CONTENT_CLICKED,
         properties: {
             ...I(r, a, s),
-            cta_name: i
+            cta_name: i,
+            impression_id: o
         },
-        trackGuildAndChannelMetadata: o
+        trackGuildAndChannelMetadata: l
     });
 }
 function y(e) {

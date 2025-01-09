@@ -25,12 +25,13 @@ let g = r.tq || r.Em;
 function h(e) {
     let { match: t } = e,
         n = (0, s.e7)([E.Z], () => E.Z.getState('quests')),
-        r = t.params.questId;
+        r = t.params.questId,
+        h = (0, m._F)();
     if (
         (a.useEffect(() => {
             if (!g)
                 null == n
-                    ? ((0, m.dA)({
+                    ? (h({
                           questId: r,
                           event: _.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT
                       }),
@@ -43,7 +44,7 @@ function h(e) {
                           pathname: _.Z5c.QUEST_HOME,
                           hash: r
                       });
-        }, [n, r]),
+        }, [n, r, h]),
         g)
     )
         return (0, i.jsxs)('div', {
@@ -66,7 +67,7 @@ function h(e) {
                 })
             ]
         });
-    let h = null == n || n === _.kEZ.OPENING || n === _.kEZ.OPEN_FAIL;
+    let P = null == n || n === _.kEZ.OPENING || n === _.kEZ.OPEN_FAIL;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
@@ -76,7 +77,7 @@ function h(e) {
             (0, i.jsx)('div', {
                 className: N.container,
                 children: (0, i.jsx)(d.ZP, {
-                    children: h
+                    children: P
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [(0, i.jsx)(d.Dx, { children: b.intl.string(b.t['Z+hCVV']) }), (0, i.jsx)(d.Hh, {})]
                           })

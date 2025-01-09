@@ -1,3 +1,8 @@
+r.d(n, {
+    Z: function () {
+        return V;
+    }
+});
 var i = r(47120);
 var a = r(200651),
     s = r(192379),
@@ -38,41 +43,41 @@ function Z(e, n) {
     return null != e && null != n && (0, E.p9)(n, y.Z, T.Z, b.Z, g.Z)[0];
 }
 function F(e) {
-    var n, r, i;
-    let { quest: g, memberListItemRef: E, applicationStream: T, position: b, closePopout: y, updatePosition: F } = e,
-        V = (0, u.e7)([I.Z], () => {
+    var n, r, i, g, E;
+    let { quest: T, memberListItemRef: b, applicationStream: y, position: R, closePopout: F, updatePosition: V, impressionRef: j } = e,
+        H = (0, u.e7)([I.Z], () => {
             var e;
-            return null !== (e = I.Z.getChannel(null == T ? void 0 : T.channelId)) && void 0 !== e ? e : null;
+            return null !== (e = I.Z.getChannel(null == y ? void 0 : y.channelId)) && void 0 !== e ? e : null;
         }),
-        j = (0, D.hf)({
-            quest: g,
+        Y = (0, D.hf)({
+            quest: T,
             location: N.jn.MEMBERS_LIST
         }),
-        H = (0, A.tP)(g),
-        Y = (null == g ? void 0 : null === (n = g.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-        W = (null == g ? void 0 : null === (r = g.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-        K = (null == g ? void 0 : null === (i = g.userStatus) || void 0 === i ? void 0 : i.completedAt) != null,
-        z = (0, u.e7)([v.Z], () => v.Z.getState().theme),
-        q = (0, c.wj)(z) ? P.BR.DARK : P.BR.LIGHT,
-        Q = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
-        { ref: X, height: J } = (0, h.Z)(),
-        [$, ee] = s.useState(Q),
-        et = (0, p.Aq)(),
-        en = (0, l.eg)();
+        W = (0, A.tP)(T),
+        K = (null == T ? void 0 : null === (n = T.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+        z = (null == T ? void 0 : null === (r = T.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
+        q = (null == T ? void 0 : null === (i = T.userStatus) || void 0 === i ? void 0 : i.completedAt) != null,
+        Q = (0, u.e7)([v.Z], () => v.Z.getState().theme),
+        X = (0, c.wj)(Q) ? P.BR.DARK : P.BR.LIGHT,
+        J = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
+        { ref: $, height: ee } = (0, h.Z)(),
+        [et, en] = s.useState(J),
+        er = (0, p.Aq)(),
+        ei = (0, l.eg)();
     s.useEffect(() => {
-        let e = en.current;
+        let e = ei.current;
         return (
-            null == e || e.addEventListener('scroll', y),
+            null == e || e.addEventListener('scroll', F),
             () => {
-                null == e || e.removeEventListener('scroll', y);
+                null == e || e.removeEventListener('scroll', F);
             }
         );
-    }, [y, en]),
+    }, [F, ei]),
         s.useEffect(() => {
-            let e = en.current,
-                n = E.current;
+            let e = ei.current,
+                n = b.current;
             if (null == e || null == n) return;
-            let r = new MutationObserver(() => F());
+            let r = new MutationObserver(() => V());
             return (
                 r.observe(e, {
                     childList: !0,
@@ -82,17 +87,17 @@ function F(e) {
                     r.disconnect();
                 }
             );
-        }, [E, en, F]);
-    let er = (0, d.useSpring)({
+        }, [b, ei, V]);
+    let ea = (0, d.useSpring)({
             from: { height: 0 },
-            height: null != J ? J : 0,
+            height: null != ee ? ee : 0,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => ee(!0)
+            onRest: () => en(!0)
         }),
-        ei = (0, d.useTransition)($, {
+        es = (0, d.useTransition)(et, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -102,183 +107,188 @@ function F(e) {
                 scale: 1
             }
         }),
-        ea = () => {
-            et.dispatch(w.CkL.POPOUT_CLOSE);
+        eo = () => {
+            er.dispatch(w.CkL.POPOUT_CLOSE);
         },
-        es = 'top' === b ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
-    if (null == g || H || (Y && !Z(T, V))) return null;
-    let eo = () => {
+        el = 'top' === R ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
+    if (null == T || W || (K && !Z(y, H))) return null;
+    let eu = () => {
             (0, S._3)({
-                questId: g.id,
+                questId: T.id,
                 questContent: N.jn.MEMBERS_LIST,
                 questContentCTA: S.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.openDisclosureModal)(g, {
+                (0, L.openDisclosureModal)(T, {
                     content: N.jn.MEMBERS_LIST,
                     ctaContent: S.jZ.OPEN_DISCLOSURE
                 });
         },
-        el = () => {
+        ec = () => {
             (0, S._3)({
-                questId: g.id,
+                questId: T.id,
                 questContent: N.jn.MEMBERS_LIST,
                 questContentCTA: S.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.navigateToQuestHome)(x.dr.MEMBERS_LIST, N.jn.MEMBERS_LIST, g.id);
+                (0, L.navigateToQuestHome)(x.dr.MEMBERS_LIST, N.jn.MEMBERS_LIST, T.id);
         },
-        eu = (e) => {
-            e.stopPropagation(), eo();
+        ed = (e) => {
+            e.stopPropagation(), eu();
         },
-        ec = () => {
-            if (Z(T, V) && null != V)
+        ef = () => {
+            if (Z(y, H) && null != H)
                 return (
                     (0, S._3)({
-                        questId: g.id,
+                        questId: T.id,
                         questContent: N.jn.MEMBERS_LIST,
                         questContentCTA: S.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
-                    f.default.selectVoiceChannel(V.id),
-                    (0, _.iV)(T)
+                    f.default.selectVoiceChannel(H.id),
+                    (0, _.iV)(y)
                 );
-            el();
+            ec();
         },
-        ed = (() =>
-            K && !Y
+        e_ = (() =>
+            q && !K
                 ? {
                       headerText: M.intl.string(M.t.gHerLS),
                       ctaText: M.intl.string(M.t.cfY4PD),
-                      handleClickCta: j,
+                      handleClickCta: Y,
                       tileAssetType: 'reward'
                   }
-                : W && !Y
+                : z && !K
                   ? {
                         headerText: M.intl.string(M.t.uH2sf3),
                         ctaText: M.intl.string(M.t.VN1Ajo),
-                        handleClickCta: el,
+                        handleClickCta: ec,
                         tileAssetType: 'reward'
                     }
-                  : Z(T, V)
+                  : Z(y, H)
                     ? {
                           headerText: M.intl.string(M.t.Bz6SkJ),
                           ctaText: M.intl.string(M.t.BXFP39),
-                          handleClickCta: ec,
+                          handleClickCta: ef,
                           tileAssetType: 'game'
                       }
                     : {
                           headerText: M.intl.string(M.t.Bz6SkJ),
                           ctaText: M.intl.string(M.t.BSXPZ2),
-                          handleClickCta: el,
+                          handleClickCta: ec,
                           tileAssetType: 'game'
                       })();
-    return (0, a.jsx)(R.A, {
-        questOrQuests: g,
-        questContent: N.jn.MEMBERS_LIST,
-        trackGuildAndChannelMetadata: !0,
-        children: (e) => {
-            var n, r;
-            return (0, a.jsx)(o.animated.div, {
-                ref: (n) => {
-                    e.current = n;
-                },
-                'aria-expanded': $,
-                className: k.wrapper,
-                style: {
-                    width: null !== (r = null === (n = E.current) || void 0 === n ? void 0 : n.clientWidth) && void 0 !== r ? r : G,
-                    height: er.height,
-                    overflow: $ ? 'visible' : 'hidden',
-                    borderRadius: es
-                },
-                children: (0, a.jsxs)('div', {
-                    ref: (e) => {
-                        X.current = e;
-                    },
-                    className: k.container,
-                    style: { borderRadius: es },
+    return (0, a.jsx)(o.animated.div, {
+        ref: (e) => {
+            j.current = e;
+        },
+        'aria-expanded': et,
+        className: k.wrapper,
+        style: {
+            width: null !== (E = null === (g = b.current) || void 0 === g ? void 0 : g.clientWidth) && void 0 !== E ? E : G,
+            height: ea.height,
+            overflow: et ? 'visible' : 'hidden',
+            borderRadius: el
+        },
+        children: (0, a.jsxs)('div', {
+            ref: (e) => {
+                $.current = e;
+            },
+            className: k.container,
+            style: { borderRadius: el },
+            children: [
+                (0, a.jsxs)('div', {
+                    className: k.top,
                     children: [
                         (0, a.jsxs)('div', {
-                            className: k.top,
+                            className: k.left,
                             children: [
-                                (0, a.jsxs)('div', {
-                                    className: k.left,
+                                (0, a.jsx)(d.Heading, {
+                                    variant: 'heading-sm/semibold',
+                                    children: e_.headerText
+                                }),
+                                (0, a.jsxs)(d.Clickable, {
+                                    className: k.help,
+                                    onClick: (e) => {
+                                        eo(), ed(e);
+                                    },
                                     children: [
-                                        (0, a.jsx)(d.Heading, {
-                                            variant: 'heading-sm/semibold',
-                                            children: ed.headerText
+                                        (0, a.jsx)(d.Text, {
+                                            variant: 'text-xs/medium',
+                                            color: 'text-muted',
+                                            className: k.helpText,
+                                            children: M.intl.format(M.t['Lm8/mJ'], { gamePublisher: T.config.messages.gamePublisher })
                                         }),
-                                        (0, a.jsxs)(d.Clickable, {
-                                            className: k.help,
-                                            onClick: (e) => {
-                                                ea(), eu(e);
-                                            },
-                                            children: [
-                                                (0, a.jsx)(d.Text, {
-                                                    variant: 'text-xs/medium',
-                                                    color: 'text-muted',
-                                                    className: k.helpText,
-                                                    children: M.intl.format(M.t['Lm8/mJ'], { gamePublisher: g.config.messages.gamePublisher })
-                                                }),
-                                                (0, a.jsx)(d.CircleQuestionIcon, {
-                                                    size: 'custom',
-                                                    className: k.helpIcon,
-                                                    width: B,
-                                                    height: B,
-                                                    color: d.tokens.colors.INTERACTIVE_NORMAL
-                                                })
-                                            ]
+                                        (0, a.jsx)(d.CircleQuestionIcon, {
+                                            size: 'custom',
+                                            className: k.helpIcon,
+                                            width: B,
+                                            height: B,
+                                            color: d.tokens.colors.INTERACTIVE_NORMAL
                                         })
                                     ]
-                                }),
-                                (0, a.jsx)('div', {
-                                    className: k.right,
-                                    children: (0, a.jsxs)('div', {
-                                        className: k.imgWrapper,
-                                        children: [
-                                            ei(
-                                                (e, n) =>
-                                                    n &&
-                                                    (0, a.jsx)(o.animated.div, {
-                                                        style: e,
-                                                        className: k.imgUnderlay
-                                                    })
-                                            ),
-                                            'game' === ed.tileAssetType &&
-                                                (0, a.jsx)('img', {
-                                                    alt: M.intl.formatToPlainString(M.t.IskzPj, {
-                                                        gameTitle: g.config.messages.gameTitle,
-                                                        gamePublisher: g.config.messages.gamePublisher
-                                                    }),
-                                                    className: k.assetTile,
-                                                    src: (0, C.fh)(g, C.eC.GAME_TILE, q).url
-                                                }),
-                                            'reward' === ed.tileAssetType &&
-                                                (0, a.jsx)(O.Z, {
-                                                    className: k.assetTile,
-                                                    quest: g,
-                                                    questContent: N.jn.MEMBERS_LIST,
-                                                    learnMoreStyle: 'icon',
-                                                    location: x.dr.MEMBERS_LIST,
-                                                    onClick: ea
-                                                })
-                                        ]
-                                    })
                                 })
                             ]
                         }),
-                        (0, a.jsx)(d.Button, {
-                            onClick: () => {
-                                ea(), ed.handleClickCta();
-                            },
-                            color: d.Button.Colors.CUSTOM,
-                            className: k.ctaButton,
-                            children: ed.ctaText
+                        (0, a.jsx)('div', {
+                            className: k.right,
+                            children: (0, a.jsxs)('div', {
+                                className: k.imgWrapper,
+                                children: [
+                                    es(
+                                        (e, n) =>
+                                            n &&
+                                            (0, a.jsx)(o.animated.div, {
+                                                style: e,
+                                                className: k.imgUnderlay
+                                            })
+                                    ),
+                                    'game' === e_.tileAssetType &&
+                                        (0, a.jsx)('img', {
+                                            alt: M.intl.formatToPlainString(M.t.IskzPj, {
+                                                gameTitle: T.config.messages.gameTitle,
+                                                gamePublisher: T.config.messages.gamePublisher
+                                            }),
+                                            className: k.assetTile,
+                                            src: (0, C.fh)(T, C.eC.GAME_TILE, X).url
+                                        }),
+                                    'reward' === e_.tileAssetType &&
+                                        (0, a.jsx)(O.Z, {
+                                            className: k.assetTile,
+                                            quest: T,
+                                            questContent: N.jn.MEMBERS_LIST,
+                                            learnMoreStyle: 'icon',
+                                            location: x.dr.MEMBERS_LIST,
+                                            onClick: eo
+                                        })
+                                ]
+                            })
                         })
                     ]
+                }),
+                (0, a.jsx)(d.Button, {
+                    onClick: () => {
+                        eo(), e_.handleClickCta();
+                    },
+                    color: d.Button.Colors.CUSTOM,
+                    className: k.ctaButton,
+                    children: e_.ctaText
                 })
-            });
-        }
+            ]
+        })
     });
 }
-n.Z = F;
+function V(e) {
+    return null == e.quest
+        ? null
+        : (0, a.jsx)(R.A, {
+              questOrQuests: e.quest,
+              questContent: N.jn.MEMBERS_LIST,
+              trackGuildAndChannelMetadata: !0,
+              children: (n) =>
+                  (0, a.jsx)(F, {
+                      impressionRef: n,
+                      ...e
+                  })
+          });
+}

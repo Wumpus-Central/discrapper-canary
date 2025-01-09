@@ -5,40 +5,43 @@ var o = n(200651),
     i = n(666912),
     l = n(481060),
     c = n(617136),
-    d = n(497505),
-    u = n(918701),
-    p = n(685613),
-    m = n(64141),
-    x = n(341907),
+    d = n(915750),
+    u = n(497505),
+    p = n(918701),
+    m = n(685613),
+    x = n(64141),
+    g = n(341907),
     f = n(303385),
-    g = n(388032),
-    h = n(626094);
+    h = n(388032),
+    C = n(626094);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: v, useReducedMotion: j, isExpanded: _, isExpansionAnimationComplete: b } = e,
-        N = r.useCallback(() => {
-            (0, x.openDisclosureModal)(t, {
-                content: d.jn.QUEST_BAR_V2,
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: v, onCtxMenuClose: j, useReducedMotion: _, isExpanded: b, isExpansionAnimationComplete: N } = e,
+        E = (0, d.aM)(),
+        B = r.useCallback(() => {
+            (0, g.openDisclosureModal)(t, {
+                content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        E = r.useCallback(() => {
-            (0, u.FE)(t, {
-                content: d.jn.QUEST_BAR_V2,
-                ctaContent: c.jZ.OPEN_GAME_LINK
+        T = r.useCallback(() => {
+            (0, p.FE)(t, {
+                content: u.jn.QUEST_BAR_V2,
+                ctaContent: c.jZ.OPEN_GAME_LINK,
+                impressionId: E
             });
-        }, [t]),
-        B = _ && b,
-        T = (0, o.jsx)(l.Clickable, {
-            onClick: E,
-            className: a()(h.clickable, { [h.logo]: B }),
-            children: (0, o.jsx)(p.ZP, {
+        }, [E, t]),
+        S = b && N,
+        y = (0, o.jsx)(l.Clickable, {
+            onClick: T,
+            className: a()(C.clickable, { [C.logo]: S }),
+            children: (0, o.jsx)(m.ZP, {
                 quest: t,
-                logotypeClassName: a()(h.rewardHighlightLogotype),
+                logotypeClassName: a()(C.rewardHighlightLogotype),
                 withGameTile: !1
             })
         });
     return (0, o.jsxs)(i.animated.div, {
-        className: a()(h.wrapper, h.rewardHighlightWrapper, { [h.interactable]: B }),
+        className: a()(C.wrapper, C.rewardHighlightWrapper, { [C.interactable]: S }),
         style: {
             transform: (0, i.to)(
                 [
@@ -52,7 +55,7 @@ t.Z = (e) => {
         },
         children: [
             (0, o.jsx)(i.animated.div, {
-                className: h.opaqueExpandedBackground,
+                className: C.opaqueExpandedBackground,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -64,12 +67,12 @@ t.Z = (e) => {
             (0, o.jsx)(f.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: B,
-                partnerBranding: T,
-                useReducedMotion: j
+                isFullyExpanded: S,
+                partnerBranding: y,
+                useReducedMotion: _
             }),
             (0, o.jsxs)(i.animated.div, {
-                className: h.promotedBadgeWrapper,
+                className: C.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -78,37 +81,37 @@ t.Z = (e) => {
                 },
                 children: [
                     (0, o.jsxs)(l.Clickable, {
-                        className: h.promotedBadge,
-                        onClick: N,
+                        className: C.promotedBadge,
+                        onClick: B,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: g.intl.string(g.t.o6FLcH)
+                                children: h.intl.string(h.t.o6FLcH)
                             }),
                             (0, o.jsx)(l.CircleQuestionIcon, {
                                 color: l.tokens.colors.WHITE,
-                                className: h.promotedBadgeIcon
+                                className: C.promotedBadgeIcon
                             })
                         ]
                     }),
-                    (0, o.jsx)(m.r, {
-                        onOpen: C,
-                        onClose: v,
+                    (0, o.jsx)(x.r, {
+                        onOpen: v,
+                        onClose: j,
                         onSelect: s,
-                        questContent: d.jn.QUEST_BAR_V2,
+                        questContent: u.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
                         children: (e) =>
                             (0, o.jsx)(l.Clickable, {
                                 ...e,
-                                className: h.submenuWrapper,
-                                'aria-label': g.intl.string(g.t.DEoVWV),
+                                className: C.submenuWrapper,
+                                'aria-label': h.intl.string(h.t.DEoVWV),
                                 children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()(h.submenuIcon, h.white)
+                                    className: a()(C.submenuIcon, C.white)
                                 })
                             })
                     })

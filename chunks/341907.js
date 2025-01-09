@@ -89,7 +89,8 @@ function R(e, n) {
         questId: e.id,
         questContent: n.content,
         questContentPosition: n.position,
-        questContentCTA: n.ctaContent
+        questContentCTA: n.ctaContent,
+        impressionId: n.impressionId
     }),
         (0, s.openModalLazy)(async () => {
             let { default: a } = await r.e('4266').then(r.bind(r, 316210));

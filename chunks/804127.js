@@ -43,28 +43,30 @@ function s(e) {
     );
 }
 function i(e) {
-    let { claimCode: t, fetchCode: r, hasError: a, onDismiss: s, quest: i, questContent: l, questContentCTA: d = o.jZ.GET_REWARD_CODE, questContentPosition: c, requiresPlatformSelection: p, selectedPlatformType: u } = e;
+    var t;
+    let { claimCode: r, fetchCode: a, hasError: s, onDismiss: i, quest: l, questContent: d, questContentCTA: c = o.jZ.GET_REWARD_CODE, questContentPosition: p, requiresPlatformSelection: u, selectedPlatformType: m } = e,
+        f = (0, o.O5)();
     return n.useCallback(() => {
         var e;
-        p && null != u
-            ? (t(i.id, u, l),
-              (0, o._3)({
-                  questId: i.id,
-                  questContent: l,
-                  questContentCTA: d,
-                  questContentPosition: c
+        u && null != m
+            ? (r(l.id, m, d),
+              f({
+                  questId: l.id,
+                  questContent: d,
+                  questContentCTA: c,
+                  questContentPosition: p
               }))
-            : a
-              ? (null === (e = i.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-                  ? r(i.id)
-                  : null != u &&
-                    (t(i.id, u, l),
-                    (0, o._3)({
-                        questId: i.id,
-                        questContent: l,
-                        questContentCTA: d,
-                        questContentPosition: c
+            : s
+              ? (null === (e = l.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
+                  ? a(l.id)
+                  : null != m &&
+                    (r(l.id, m, d),
+                    f({
+                        questId: l.id,
+                        questContent: d,
+                        questContentCTA: c,
+                        questContentPosition: p
                     }))
-              : s();
-    }, [t, r, a, s, i, l, d, c, p, u]);
+              : i();
+    }, [r, a, s, i, l.id, null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt, d, c, p, u, m, f]);
 }
