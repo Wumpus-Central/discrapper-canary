@@ -19105,11 +19105,15 @@ span.clanTag_a31c43 {
     text-indent: 0
 }
 
-.platform-osx .drag_fccaa9 {
+.platform-osx:not(.visual-refresh) .drag_fccaa9 {
     -webkit-app-region: drag;
     position: absolute;
     width: 100%;
     padding-top: 32px
+}
+
+.visual-refresh .drag_fccaa9 {
+    display: none
 }
 
 .root_fccaa9 {
@@ -33660,7 +33664,6 @@ img.thumbnail_c64476 {
     color: var(--white)
 }
 
-.colorDefault_d90b3d.focused_d90b3d .subtext_d90b3d,
 .colorDefault_d90b3d.focused_d90b3d .checkbox_d90b3d,
 .colorDefault_d90b3d.focused_d90b3d .radioSelection_d90b3d,
 .colorDefault_d90b3d.focused_d90b3d .caret_d90b3d {
@@ -36138,7 +36141,7 @@ img.thumbnail_c64476 {
     top: 29px
 }
 
-.platform-osx .container_fc4f04 {
+.platform-osx:not(.visual-refresh) .container_fc4f04 {
     -webkit-app-region: drag
 }
 
@@ -37107,7 +37110,7 @@ img.thumbnail_c64476 {
     border-color: var(--custom-notice-text) !important
 }
 
-.platform-osx .notice_be03aa {
+.platform-osx:not(.visual-refresh) .notice_be03aa {
     -webkit-app-region: drag
 }
 
@@ -38676,8 +38679,11 @@ img.thumbnail_c64476 {
 
 .typeMacOSWithFrame_a934d8 {
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
-    display: flex
+    display: flex;
+    margin-top: 0;
+    height: 24px
 }
 
 .typeMacOSWithFrame_a934d8 .macButtons_a934d8 {
@@ -44723,6 +44729,121 @@ html.disable-forced-colors * {
     margin-left: 8px
 }
 
+.bar_a5e357 {
+    grid-area: titleBar;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+    min-height: var(--custom-app-top-bar-height);
+    padding-left: calc(var(--custom-guild-list-width) + var(--space-8));
+    padding-right: var(--space-12);
+    position: relative;
+    -webkit-app-region: drag
+}
+
+.shortBar_a5e357 {
+    --custom-app-top-bar-height: 24px
+}
+
+.systemBar_a5e357 {
+    justify-content: flex-end;
+    z-index: 999999;
+    display: none
+}
+
+.show_a5e357 {
+    display: flex
+}
+
+.fixed_a5e357 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.title_a5e357 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+@media(max-width:800px) {
+    .title_a5e357 {
+        display: none
+    }
+}
+
+.leading_a5e357 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-12);
+    position: relative;
+    z-index: 1;
+    -webkit-app-region: no-drag
+}
+
+.trailing_a5e357 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-12);
+    position: relative;
+    z-index: 1;
+    -webkit-app-region: no-drag
+}
+
+.winButtons_a5e357 {
+    color: var(--interactive-normal);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-4);
+    margin-right: calc(-1*var(--space-8))
+}
+
+.winButtonsWithDivider_a5e357:before {
+    content: "";
+    display: block;
+    border-left: 1px solid var(--border-subtle);
+    height: calc(var(--custom-app-top-bar-height) - var(--space-12));
+    margin-left: var(--space-4);
+    margin-right: var(--space-4)
+}
+
+.winButton_a5e357 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--custom-app-top-bar-height);
+    height: var(--custom-app-top-bar-height);
+    cursor: pointer
+}
+
+.winButtonMinMax_a5e357:hover {
+    background-color: var(--background-modifier-hover);
+    color: var(--interactive-hover)
+}
+
+.winButtonMinMax_a5e357:active {
+    background-color: var(--background-modifier-active);
+    color: var(--interactive-active)
+}
+
+.winButtonClose_a5e357:hover {
+    color: var(--white-500);
+    background-color: var(--status-danger)
+}
+
 .appAsidePanelWrapper_bd26cc {
     flex: 1 1 auto;
     display: flex;
@@ -44745,14 +44866,6 @@ html.disable-forced-colors * {
     height: 100%
 }
 
-.visual-refresh .app_bd26cc {
-    position: static
-}
-
-.visual-refresh .notAppAsidePanel_bd26cc:has(~[data-app-right-panel=true]) .app_bd26cc {
-    position: relative
-}
-
 .mobileApp_bd26cc {
     z-index: auto;
     overflow: auto;
@@ -44761,6 +44874,14 @@ html.disable-forced-colors * {
 
 .allowsScrolling_bd26cc {
     overflow: auto
+}
+
+.visual-refresh .app_bd26cc {
+    position: static
+}
+
+.visual-refresh .notAppAsidePanel_bd26cc:has(~[data-app-right-panel=true]) .app_bd26cc {
+    position: relative
 }
 
 .modal_c97cbd {

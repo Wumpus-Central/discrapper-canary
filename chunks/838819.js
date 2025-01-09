@@ -34,8 +34,8 @@ var r = n(200651),
     w = n(309956),
     A = n(853748),
     R = n(426171),
-    H = n(823941),
-    F = n(752053),
+    F = n(823941),
+    H = n(752053),
     D = n(963102),
     V = n(508498),
     M = n(38900),
@@ -136,7 +136,7 @@ function er(e) {
                         giftStyle: X.Cj.BOX
                     })
                 }),
-            (0, r.jsx)(H.Z, {
+            (0, r.jsx)(F.Z, {
                 category: t,
                 hideLimitedTimeBadge: null != f
             }),
@@ -164,7 +164,7 @@ t.default = function (e) {
     let i = (0, L.u)('CollectiblesShop'),
         { analyticsSource: h, analyticsLocations: x } = (0, o.cj)([y.Z], () => y.Z.getAnalytics()),
         { analyticsLocations: _ } = (0, p.ZP)([...x, g.Z.COLLECTIBLES_SHOP]),
-        { sessionId: O, scrollerRef: A, scrollHandler: H } = (0, f._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, h),
+        { sessionId: O, scrollerRef: A, scrollHandler: F } = (0, f._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, h),
         { feedState: W, catalogState: K, transitionToCatalog: et, transitionToFeed: en } = (0, w.B)(i, A),
         [ea, ei] = a.useState(!1),
         [el, es] = a.useState(q.IV),
@@ -273,7 +273,7 @@ t.default = function (e) {
                         className: ee.shopScroll,
                         ref: A,
                         onScroll: () => {
-                            if ((H(), null != A.current)) {
+                            if ((F(), null != A.current)) {
                                 let e = A.current.getDistanceFromBottom();
                                 el >= q.iA ? ei(e < 20) : e <= 200 && es(el + q.IV);
                             }
@@ -295,6 +295,7 @@ t.default = function (e) {
                                             transparent: !0
                                         }),
                                         (0, r.jsx)(z.Z, {
+                                            isFullScreen: n,
                                             handleTransition: ew,
                                             numVisibleItems: el
                                         })
@@ -323,9 +324,9 @@ t.default = function (e) {
                                                 children: eb
                                                     ? (0, r.jsx)(M.Z, {})
                                                     : null != eI
-                                                      ? (0, r.jsx)(F.Z, {
+                                                      ? (0, r.jsx)(H.Z, {
                                                             onRetry: eN,
-                                                            errorOrigin: F.i.SHOP_PAGE
+                                                            errorOrigin: H.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: ee.categories,

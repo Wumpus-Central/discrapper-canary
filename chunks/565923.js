@@ -1,5 +1,9 @@
 e.exports = {
     bar: 'bar_a5e357',
+    shortBar: 'shortBar_a5e357',
+    systemBar: 'systemBar_a5e357',
+    show: 'show_a5e357',
+    fixed: 'fixed_a5e357',
     title: 'title_a5e357',
     leading: 'leading_a5e357',
     trailing: 'trailing_a5e357',

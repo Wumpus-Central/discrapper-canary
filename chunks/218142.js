@@ -6,6 +6,7 @@ e.exports = {
     between: 'between_ebba41',
     shop: 'shop_ebba41',
     banner: 'banner_ebba41',
+    shopFullscreen: 'shopFullscreen_ebba41',
     bannerImage: 'bannerImage_ebba41',
     bannerVideoBackground: 'bannerVideoBackground_ebba41',
     bannerShadow: 'bannerShadow_ebba41',
