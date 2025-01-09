@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return f;
     }
 });
 var i = n(200651),
@@ -9,16 +9,17 @@ var i = n(200651),
     a = n(481060),
     s = n(287734),
     o = n(367907),
-    c = n(769654),
-    d = n(496675),
-    u = n(205129),
-    h = n(626135),
-    m = n(981631),
-    p = n(388032);
-function g(e) {
-    let t = r.useContext(h.AnalyticsContext),
+    c = n(359110),
+    d = n(769654),
+    u = n(496675),
+    h = n(205129),
+    m = n(626135),
+    p = n(981631),
+    g = n(388032);
+function f(e) {
+    let t = r.useContext(m.AnalyticsContext),
         n = e.voiceChannels[0],
-        g = (0, l.e7)([d.Z], () => null != n && d.Z.can(m.Plq.CONNECT, n.channel));
+        f = (0, l.e7)([u.Z], () => null != n && u.Z.can(p.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
@@ -27,20 +28,20 @@ function g(e) {
                   {
                       id: 'join-voice',
                       action: function () {
-                          (0, c.X)(n.guild.id),
+                          (0, c.Kh)(n.channel.id),
                               s.default.selectVoiceChannel(n.channel.id),
-                              o.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
+                              o.ZP.trackWithMetadata(p.rMx.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
                                   source: {
                                       ...t.location,
-                                      object: m.qAy.LIST_ITEM
+                                      object: p.qAy.LIST_ITEM
                                   },
                                   guild_id: n.guild.id,
                                   channel_id: n.channel.id,
-                                  ...(0, u.y)(e)
+                                  ...(0, h.y)(e)
                               });
                       },
-                      label: p.intl.string(p.t['8yOlh4']),
-                      disabled: !g
+                      label: g.intl.string(g.t['8yOlh4']),
+                      disabled: !f
                   },
                   'join-voice'
               ),
@@ -49,18 +50,18 @@ function g(e) {
                   {
                       id: 'goto-server',
                       action: function () {
-                          (0, c.X)(n.guild.id),
-                              o.ZP.trackWithMetadata(m.rMx.ACTIVITY_FEED_GUILD_VISITED, {
+                          (0, d.X)(n.guild.id),
+                              o.ZP.trackWithMetadata(p.rMx.ACTIVITY_FEED_GUILD_VISITED, {
                                   source: {
                                       ...t.location,
-                                      object: m.qAy.LIST_ITEM
+                                      object: p.qAy.LIST_ITEM
                                   },
                                   guild_id: n.guild.id,
                                   af_recently_played: !1,
-                                  ...(0, u.y)(e)
+                                  ...(0, h.y)(e)
                               });
                       },
-                      label: p.intl.string(p.t.RGgqm5)
+                      label: g.intl.string(g.t.RGgqm5)
                   },
                   'goto-server'
               )
