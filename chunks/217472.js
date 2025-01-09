@@ -15,9 +15,6 @@ t.Z = {
             formFields: t
         });
     },
-    reset: function () {
-        i.Z.dispatch({ type: 'GUILD_SETTINGS_JOIN_RULES_RESET' });
-    },
     setSelectedJoinType: function (e, t) {
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE',

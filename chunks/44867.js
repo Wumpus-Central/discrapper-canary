@@ -6,16 +6,16 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    a = n(481060),
-    s = n(999382),
-    o = n(654351),
-    c = n(845377),
-    d = n(976288),
+    s = n(481060),
+    a = n(999382),
+    o = n(845377),
+    c = n(976288),
+    d = n(386885),
     u = n(388032),
     m = n(130376);
 function h(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: h, rules: g } = e,
-        x = (0, l.e7)([s.Z], () => s.Z.getProps().guild);
+        x = (0, l.e7)([a.Z], () => a.Z.getProps().guild);
     if (
         (r.useEffect(() => {
             if (null != x) t(x.id);
@@ -24,13 +24,13 @@ function h(e) {
     )
         return null;
     switch (n) {
-        case o.d5.DISQUALIFIED:
-            return (0, i.jsx)(c.Z, {
+        case d.U.DISQUALIFIED:
+            return (0, i.jsx)(o.Z, {
                 guild: x,
                 guildId: x.id,
                 headerContent: (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             className: m.header,
@@ -46,7 +46,7 @@ function h(e) {
                                     )
                             })
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'text-secondary',
                             children: u.intl.string(u.t.Qgaw3d)
@@ -54,17 +54,18 @@ function h(e) {
                     ]
                 })
             });
-        case o.d5.SETTINGS:
-        case o.d5.INTRO:
-            return (0, i.jsx)(d.d, {
+        case d.U.ELIGIBLE_DISABLED:
+        case d.U.ELIGIBLE_ENABLED:
+            return (0, i.jsx)(c.d, {
                 requireTerms: h,
-                rules: g
+                rules: g,
+                settingsView: n
             });
-        case o.d5.INTRO_INELIGIBLE:
-            return (0, i.jsx)(c.Z, {
+        case d.U.INELIGIBLE:
+            return (0, i.jsx)(o.Z, {
                 guild: x,
                 guildId: x.id,
-                headerContent: (0, i.jsx)(a.Heading, {
+                headerContent: (0, i.jsx)(s.Heading, {
                     variant: 'heading-md/semibold',
                     children: u.intl.format(u.t['+6Hylp'], {
                         doesNotHook: (e, t) =>
@@ -80,6 +81,6 @@ function h(e) {
                 })
             });
         default:
-            return (0, i.jsx)(a.Spinner, {});
+            return (0, i.jsx)(s.Spinner, {});
     }
 }

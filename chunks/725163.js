@@ -8,5 +8,6 @@ e.exports = {
     editableSection: 'editableSection_fcf190',
     divider: 'divider_fcf190',
     error: 'error_fcf190',
-    localeSelect: 'localeSelect_fcf190'
+    localeSelect: 'localeSelect_fcf190',
+    required: 'required_fcf190'
 };
