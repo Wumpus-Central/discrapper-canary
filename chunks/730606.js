@@ -5,37 +5,37 @@ t.d(n, {
 }),
     t(47120);
 var i = t(200651),
-    r = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
     o = t(299608),
     s = t.n(o),
     u = t(484957),
     c = t(481060),
     d = t(95398),
     f = t(247206),
-    h = t(134432),
-    m = t(169525),
+    m = t(134432),
+    h = t(169525),
     p = t(585483),
-    _ = t(254109),
-    E = t(212459),
-    g = t(369171),
+    g = t(254109),
+    _ = t(212459),
+    E = t(369171),
     S = t(683528),
     x = t(549635),
     C = t(981631),
-    y = t(388032),
-    I = t(563297);
-function v(e, n) {
+    v = t(388032),
+    y = t(563297);
+function I(e, n) {
     return ((e % n) + n) % n;
 }
-function O(e) {
+function b(e) {
     let { width: n, height: t } = e;
     return null == n || 0 === n || null == t || 0 === t;
 }
-function b(e) {
-    let { children: n, isObscured: t, src: l } = e,
-        [o, s] = r.useState(!1),
-        u = r.useCallback(() => {
+function O(e) {
+    let { children: n, isObscured: t, src: r } = e,
+        [o, s] = l.useState(!1),
+        u = l.useCallback(() => {
             s((e) => !e);
         }, []);
     return t
@@ -45,47 +45,47 @@ function b(e) {
                   d.Z,
                   {
                       type: d.Z.Types.ATTACHMENT,
-                      reason: m.wk.EXPLICIT_CONTENT,
+                      reason: h.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, i.jsx)(i.Fragment, {
                               children: (0, i.jsx)('div', {
-                                  className: a()(I.obscureWrapper, { [I.obscure]: e }),
+                                  className: a()(y.obscureWrapper, { [y.obscure]: e }),
                                   children: n(e)
                               })
                           })
                   },
-                  l
+                  r
               )
           })
         : (0, i.jsx)(i.Fragment, { children: n(!1) });
 }
 function M(e) {
-    let { items: n, onIndexChange: t, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: d = !1 } = e,
-        [m, v] = r.useState(l),
-        M = r.useRef(l),
-        { zoomed: L, setZoomed: A } = (0, E.Y)();
-    r.useEffect(() => {
+    let { items: n, onIndexChange: t, startIndex: r = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: d = !1 } = e,
+        [h, I] = l.useState(r),
+        M = l.useRef(r),
+        { zoomed: L, setZoomed: T } = (0, _.Y)();
+    l.useEffect(() => {
         var e, t;
-        let i = (((m + 1) % (e = n.length)) + e) % e;
-        let r = (((m - 1) % (t = n.length)) + t) % t;
-        O(n[i]) && (0, h.po)(n[i].url), O(n[r]) && (0, h.po)(n[r].url);
-    }, [m, n]);
-    let T = r.useCallback(
+        let i = (((h + 1) % (e = n.length)) + e) % e;
+        let l = (((h - 1) % (t = n.length)) + t) % t;
+        b(n[i]) && (0, m.po)(n[i].url), b(n[l]) && (0, m.po)(n[l].url);
+    }, [h, n]);
+    let A = l.useCallback(
         (e) => {
             var i;
-            v((e = ((e % (i = n.length)) + i) % i)), (M.current = e), null == t || t(e), A(!1);
+            I((e = ((e % (i = n.length)) + i) % i)), (M.current = e), null == t || t(e), T(!1);
         },
-        [t, n, A]
+        [t, n, T]
     );
-    r.useEffect(() => {
+    l.useEffect(() => {
         let e = s()(() => {
-                T(M.current + 1);
+                A(M.current + 1);
             }, 300),
             n = s()(() => {
-                T(M.current - 1);
+                A(M.current - 1);
             }, 300);
         return (
             p.S.subscribe(C.CkL.MODAL_CAROUSEL_NEXT, e),
@@ -94,8 +94,8 @@ function M(e) {
                 p.S.unsubscribe(C.CkL.MODAL_CAROUSEL_NEXT, e), p.S.unsubscribe(C.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [T, A]);
-    let R = n[m],
+    }, [A, T]);
+    let R = n[h],
         j = (0, f.KP)(
             {
                 type: f.lJ.GenericMedia,
@@ -107,48 +107,48 @@ function M(e) {
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
-            : () => (0, _.yg)(_.uG.CONTEXT_MENU_OPENED),
-        D = n.length > 1;
+            : () => (0, g.yg)(g.uG.CONTEXT_MENU_OPENED),
+        P = n.length > 1;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: I.wrapper,
+            className: y.wrapper,
             children: [
-                D
-                    ? (0, i.jsx)(g.ZP, {
+                P
+                    ? (0, i.jsx)(E.ZP, {
                           children: (e) =>
                               (0, i.jsx)(c.CircleIconButton, {
-                                  className: a()(I.navPrev, e),
+                                  className: a()(y.navPrev, e),
                                   size: c.CircleIconButtonSizes.SIZE_36,
                                   onClick: (e) => {
                                       e.stopPropagation(), p.S.dispatch(C.CkL.MODAL_CAROUSEL_PREV);
                                   },
                                   icon: (0, i.jsx)(u.j, {}),
-                                  tooltip: y.intl.string(y.t.vgfxaG),
+                                  tooltip: v.intl.string(v.t.vgfxaG),
                                   color: c.CircleIconButtonColors.PRIMARY
                               })
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    className: I.mediaContainer,
+                    className: y.mediaContainer,
                     children: (0, i.jsx)(
                         'div',
                         {
-                            className: I.mediaWrapper,
-                            children: (0, i.jsx)(b, {
+                            className: a()(y.mediaWrapper, { [y.hasPreviews]: P }),
+                            children: (0, i.jsx)(O, {
                                 isObscured: !L && j,
                                 src: R.url,
                                 children: (e) =>
                                     (0, i.jsx)(i.Fragment, {
                                         children: (0, i.jsx)('div', {
                                             onClick: (e) => e.stopPropagation(),
-                                            className: a()(I.innerWrapper, { [I.shifted]: L && D }),
+                                            className: a()(y.innerWrapper, { [y.shifted]: L && P }),
                                             children: (0, i.jsx)(x.Z, {
                                                 media: R,
                                                 obscured: e,
                                                 onContextMenu: N,
-                                                panPadding: {
+                                                padding: {
                                                     top: 112,
-                                                    bottom: 144 + (D ? 64 : 0)
+                                                    bottom: 144 + (P ? 64 : 0)
                                                 }
                                             })
                                         })
@@ -158,25 +158,25 @@ function M(e) {
                         R.url
                     )
                 }),
-                D
-                    ? (0, i.jsx)(g.ZP, {
+                P
+                    ? (0, i.jsx)(E.ZP, {
                           children: (e) =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(S.Z, {
                                           items: n,
-                                          currentIndex: m,
-                                          onGalleryItemClick: v,
+                                          currentIndex: h,
+                                          onGalleryItemClick: I,
                                           className: e
                                       }),
                                       (0, i.jsx)(c.CircleIconButton, {
-                                          className: a()(I.navNext, e),
+                                          className: a()(y.navNext, e),
                                           size: c.CircleIconButtonSizes.SIZE_36,
                                           onClick: (e) => {
                                               e.stopPropagation(), p.S.dispatch(C.CkL.MODAL_CAROUSEL_NEXT);
                                           },
                                           icon: (0, i.jsx)(c.ArrowLargeRightIcon, {}),
-                                          tooltip: y.intl.string(y.t.XiOHRU),
+                                          tooltip: v.intl.string(v.t.XiOHRU),
                                           color: c.CircleIconButtonColors.PRIMARY
                                       })
                                   ]

@@ -17,8 +17,8 @@ var i = t(200651),
     E = t(358085),
     S = t(998502),
     x = t(254109),
-    v = t(212459),
-    C = t(369171),
+    C = t(212459),
+    v = t(369171),
     y = t(701865),
     I = t(388032),
     b = t(197736);
@@ -48,7 +48,7 @@ function M(e) {
     });
 }
 function L() {
-    let { zoomed: e, setZoomed: n } = (0, v.Y)();
+    let { zoomed: e, setZoomed: n } = (0, C.Y)();
     return (0, i.jsx)(M, {
         onClick: () => {
             (0, x.yg)(e ? x.uG.ZOOM_OUT_BUTTON_PRESSED : x.uG.ZOOM_IN_BUTTON_PRESSED), n(!e);
@@ -139,7 +139,7 @@ function j(e) {
             var n;
             let { alt: t, sourceMetadata: l, width: r, height: a } = e,
                 s = N(I.intl.string(I.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
-                u = N(I.intl.string(I.t['3Nf9u7']), 'size'),
+                u = N(I.intl.string(I.t.sPO3io), 'size'),
                 c = N(I.intl.string(I.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == l ? void 0 : null === (n = l.identifier) || void 0 === n ? void 0 : n.type) !== 'attachment') return null;
             let d = (0, m.Z)(l.identifier),
@@ -148,7 +148,7 @@ function j(e) {
                 o.MenuItem,
                 {
                     id: 'media-viewer-details',
-                    label: I.intl.string(I.t.sqBLa2),
+                    label: I.intl.string(I.t.GoCQxc),
                     children: [
                         s(d),
                         u(
@@ -279,7 +279,7 @@ n.Z = l.memo(function (e) {
     let { item: n, hideMediaOptions: t } = e;
     return (
         ('IMAGE' === n.type || !t) &&
-        (0, i.jsx)(C.ZP, {
+        (0, i.jsx)(v.ZP, {
             children: (e) =>
                 (0, i.jsxs)('div', {
                     className: a()(b.actionButtons, e),

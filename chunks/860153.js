@@ -1,24 +1,24 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var i = t(200651),
-    r = t(192379),
-    a = t(120356),
-    l = t.n(a),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
     o = t(442837),
     s = t(481060),
     u = t(700582),
     c = t(372900),
     d = t(318713),
     f = t(123145),
-    h = t(592125),
-    m = t(369171),
+    m = t(592125),
+    h = t(369171),
     p = t(795938);
-let _ = r.memo(function (e) {
+let g = l.memo(function (e) {
     let { message: n } = e,
-        t = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id));
+        t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -43,14 +43,14 @@ let _ = r.memo(function (e) {
               })
           });
 });
-function E(e) {
+function _(e) {
     var n;
-    let { item: t, onClose: r } = e,
-        a = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
-    return (0, i.jsx)(m.ZP, {
+    let { item: t, onClose: l } = e,
+        r = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
+    return (0, i.jsx)(h.ZP, {
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: l()(p.topBar, e),
+                className: a()(p.topBar, e),
                 children: [
                     (0, i.jsx)(s.Button, {
                         look: s.ButtonLooks.BLANK,
@@ -58,10 +58,10 @@ function E(e) {
                         size: s.ButtonSizes.ICON,
                         className: p.closeButton,
                         innerClassName: p.closeButtonInner,
-                        onClick: r,
+                        onClick: l,
                         children: (0, i.jsx)(s.XSmallIcon, {})
                     }),
-                    null != a && (0, i.jsx)(_, { message: a })
+                    null != r && (0, i.jsx)(g, { message: r })
                 ]
             })
     });

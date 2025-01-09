@@ -1,107 +1,107 @@
 t(47120);
 var i = t(200651),
-    r = t(192379),
-    a = t(120356),
-    l = t.n(a),
+    l = t(192379),
+    r = t(120356),
+    a = t.n(r),
     o = t(956664),
     s = t(981656);
-n.Z = r.memo(function (e) {
-    let { children: n, active: t, onClick: a, className: u, style: c, width: d, height: f, maxWidth: h, maxHeight: m } = e,
-        p = (0, r.useRef)(null),
-        [_, E] = (0, r.useState)(!1),
-        [g, S] = (0, r.useState)({
+n.Z = l.memo(function (e) {
+    let { children: n, active: t, onClick: r, className: u, style: c, width: d, height: f, maxWidth: m, maxHeight: h, panPadding: p } = e,
+        g = (0, l.useRef)(null),
+        [_, E] = (0, l.useState)(!1),
+        [S, x] = (0, l.useState)({
             x: 0,
             y: 0
         }),
-        [x, C] = (0, r.useState)({
+        [C, v] = (0, l.useState)({
             x: 0,
             y: 0
         }),
-        [y, I] = (0, r.useState)({
+        [y, I] = (0, l.useState)({
             x: 0,
             y: 0
         });
-    (0, r.useEffect)(() => {
+    (0, l.useEffect)(() => {
         !t &&
             (I({
                 x: 0,
                 y: 0
             }),
-            C({
+            v({
                 x: 0,
                 y: 0
             }));
     }, [t]);
-    let v = (0, r.useCallback)(
+    let b = (0, l.useCallback)(
             (e) => {
                 if (!t || 0 !== e.button) return;
                 e.preventDefault();
                 let { clientX: n, clientY: i } = e;
                 E(!0),
-                    S({
+                    x({
                         x: n,
                         y: i
                     }),
-                    C({
+                    v({
                         x: n - y.x,
                         y: i - y.y
                     });
             },
             [t, y]
         ),
-        O = (0, r.useCallback)(
+        O = (0, l.useCallback)(
             (e) => {
                 if (!t) {
-                    0 === e.button && (null == a || a(e));
+                    0 === e.button && (null == r || r(e));
                     return;
                 }
-                (e.clientX - g.x) ** 2 + (e.clientY - g.y) ** 2 < 400 && (null == a || a(e)), E(!1);
+                (e.clientX - S.x) ** 2 + (e.clientY - S.y) ** 2 < 400 && (null == r || r(e)), E(!1);
             },
-            [t, a, g]
+            [t, r, S]
         ),
-        b = (0, r.useCallback)(
+        M = (0, l.useCallback)(
             (e) => {
                 var n;
                 if (!_) return;
-                let t = null === (n = p.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                let t = null === (n = g.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
                 if (null == t) return;
-                let [i, r] = [t.width > window.innerWidth, t.height > window.innerHeight];
-                if (!i && !r) return;
-                let { x: a, y: l } = y,
-                    [o, s] = [i ? e.clientX - x.x : 0, r ? e.clientY - x.y : 0],
-                    [u, c] = [o - a, s - l];
-                i && u + t.x >= 0 && (o -= u + t.x), r && c + t.y >= 0 && (s -= c + t.y);
-                let [d, f] = [t.x + t.width, t.y + t.height];
-                i && u + d <= window.innerWidth && (o = window.innerWidth + a - d),
-                    r && c + f <= window.innerHeight && (s = window.innerHeight + l - f),
+                let [i, l, r, a] = [null == p ? void 0 : p.top, null == p ? void 0 : p.right, null == p ? void 0 : p.bottom, null == p ? void 0 : p.left].map((e) => (null != e ? e : 0)),
+                    [o, s] = [t.width + a + l > window.innerWidth, t.height + i + r > window.innerHeight];
+                if (!o && !s) return;
+                let [u, c] = [o ? e.clientX - C.x : 0, s ? e.clientY - C.y : 0],
+                    [d, f] = [u - y.x, c - y.y];
+                o && d + t.x - a >= 0 && (u = y.x - t.x + a), s && f + t.y - i >= 0 && (c = y.y - t.y + i);
+                let [m, h] = [t.x + t.width, t.y + t.height];
+                o && d + m + l <= window.innerWidth && (u = window.innerWidth + y.x - m - l),
+                    s && f + h + r <= window.innerHeight && (c = window.innerHeight + y.y - h - r),
                     I({
-                        x: o,
-                        y: s
+                        x: u,
+                        y: c
                     });
             },
-            [_, y, x.x, x.y]
+            [_, y, C.x, C.y, p]
         ),
-        M = t ? (0, o.vV)(d, f, h, m) : 1,
-        L = (0, r.useCallback)(() => {
-            let e = p.current;
+        L = t ? (0, o.vV)(d, f, m, h) : 1,
+        T = (0, l.useCallback)(() => {
+            let e = g.current;
             if (null == e) return !1;
-            let n = null != M ? M : 1;
+            let n = null != L ? L : 1;
             return e.offsetWidth * n > window.innerWidth || e.offsetHeight * n > window.innerHeight;
-        }, [M]);
+        }, [L]);
     return (0, i.jsx)('div', {
-        ref: p,
-        onMouseDown: v,
+        ref: g,
+        onMouseDown: b,
         onMouseUp: O,
-        onMouseMove: b,
+        onMouseMove: M,
         onMouseLeave: () => E(!1),
-        className: l()(u, s.wrapper, {
+        className: a()(u, s.wrapper, {
             [s.panning]: t && _,
-            [s.pannable]: t && L()
+            [s.pannable]: t && T()
         }),
         style: {
             ...(null != c ? c : {}),
             translate: ''.concat(y.x, 'px ').concat(y.y, 'px'),
-            scale: ''.concat(null != M ? M : 1)
+            scale: ''.concat(null != L ? L : 1)
         },
         children: n
     });

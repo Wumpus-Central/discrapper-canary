@@ -26,8 +26,8 @@ function S(e) {
 n.Z = l.memo(function (e) {
     var n, t, l, r, p;
     let x,
-        { media: v, obscured: C = !1, padding: y, onContextMenu: I } = e,
-        { width: b, height: O, url: M, proxyUrl: L, alt: T, type: A, maxWidth: R, maxHeight: j, ...N } = v,
+        { media: C, obscured: v = !1, padding: y, onContextMenu: I } = e,
+        { width: b, height: O, url: M, proxyUrl: L, alt: T, type: A, maxWidth: R, maxHeight: j, ...N } = C,
         { zoomed: P, setZoomed: D } = (0, _.Y)(),
         w = (function (e, n, t) {
             return e && (0, o.rV)(n)
@@ -46,7 +46,7 @@ n.Z = l.memo(function (e) {
     if ('VIDEO' === A && B && null != L) {
         let e = S(L);
         if (null == e) return null;
-        let n = null !== (p = v.renderLinkComponent) && void 0 !== p ? p : d.iT;
+        let n = null !== (p = C.renderLinkComponent) && void 0 !== p ? p : d.iT;
         return (0, i.jsx)(u.Z, {
             ...N,
             src: w,
@@ -62,7 +62,7 @@ n.Z = l.memo(function (e) {
             onVolumeChange: h.jA,
             onMute: h.Zj,
             renderLinkComponent: n,
-            autoPlay: !C,
+            autoPlay: !v,
             alt: T,
             onContextMenu: I
         });
@@ -79,10 +79,10 @@ n.Z = l.memo(function (e) {
                       maxWidth: Z,
                       maxHeight: U,
                       useFullWidth: !0,
-                      animated: !C && v.animated,
-                      autoPlay: !C,
+                      animated: !v && C.animated,
+                      autoPlay: !v,
                       alt: T,
-                      zoomThumbnailPlaceholder: v.zoomThumbnailPlaceholder,
+                      zoomThumbnailPlaceholder: C.zoomThumbnailPlaceholder,
                       onContextMenu: I
                   })
                 : (0, i.jsx)('img', {

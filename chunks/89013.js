@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return f;
     }
 });
 var i = t(200651),
@@ -12,7 +12,7 @@ var i = t(200651),
     u = t(358085),
     d = t(981631),
     c = t(388032);
-function g(e) {
+function f(e) {
     let n = l.useCallback(() => {
         a()(null != e, 'text cannot be null'), s.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
     }, [e]);

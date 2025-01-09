@@ -12,8 +12,8 @@ var i = t(200651),
     u = t(995774),
     d = t(665906),
     c = t(695346),
-    g = t(496675),
-    f = t(768581),
+    f = t(496675),
+    g = t(768581),
     m = t(585483),
     h = t(176354),
     E = t(981631),
@@ -21,8 +21,8 @@ var i = t(200651),
     I = t(388032);
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        f = (0, d.$R)(n),
-        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)) && f, [n, f]),
+        g = (0, d.$R)(n),
+        p = (0, r.e7)([f.Z], () => (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
         Z = (0, o.MZ)(n.getGuildId());
     if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
     let x = Z.filter(
@@ -87,7 +87,7 @@ function M(e) {
         className: r,
         src:
             null != t.id
-                ? f.ZP.getEmojiURL({
+                ? g.ZP.getEmojiURL({
                       id: t.id,
                       animated: t.animated && (!l || a),
                       size: 18

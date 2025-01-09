@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return g;
+            return f;
         }
     });
 var i = t(200651);
@@ -14,11 +14,11 @@ var l = t(481060),
     u = t(112554),
     d = t(160877),
     c = t(388032);
-function g(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: g, embedId: f, transitionState: m, onClose: h } = e,
+function f(e) {
+    let { channelId: n, messageId: t, mediaItemUrl: f, embedId: g, transitionState: m, onClose: h } = e,
         E = (0, a.yh)(),
-        v = (0, u.K)(n, t, g),
-        I = (0, u.b)(n, t, f),
+        v = (0, u.K)(n, t, f),
+        I = (0, u.b)(n, t, g),
         { reportFalsePositive: p, isReportFalsePositiveLoading: M } = (0, s.$)({
             onSuccess: () => (0, d.s)(h),
             onError: () => {

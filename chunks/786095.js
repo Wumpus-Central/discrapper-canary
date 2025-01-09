@@ -14,8 +14,8 @@ var i = t(200651),
     u = t(85960),
     d = t(676317),
     c = t(65912),
-    g = t(556012),
-    f = t(572456),
+    f = t(556012),
+    g = t(572456),
     m = t(434404),
     h = t(981631),
     E = t(273504),
@@ -59,7 +59,7 @@ function M(e, n) {
         },
         O = async (n) => {
             var t, i;
-            if (((0, a.Zy)(), !(await (0, f.XN)(n.name, e)))) return;
+            if (((0, a.Zy)(), !(await (0, g.XN)(n.name, e)))) return;
             let l = {
                 ...n,
                 triggerMetadata: {
@@ -93,7 +93,7 @@ function M(e, n) {
                                 return t === n;
                             });
                             if (null == i) return n;
-                            let l = (0, g.c)(t, i);
+                            let l = (0, f.c)(t, i);
                             return (n += ', '.concat(null == l ? void 0 : l.headerText));
                         }, '');
                         return (0, i.jsx)(

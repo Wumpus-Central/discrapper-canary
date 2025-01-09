@@ -373,13 +373,13 @@ function ei(e) {
                                                       lastTargetNode: ej[ej.length - 1]
                                                   }),
                                             (0, i.jsx)(z.Z, {}),
-                                            t ? null : (0, i.jsx)(B.Z, {}),
                                             !n && s
                                                 ? (0, i.jsx)(O.Z, {
                                                       selected: eS,
                                                       className: $.discoveryIcon
                                                   })
-                                                : null
+                                                : null,
+                                            t ? null : (0, i.jsx)(B.Z, {})
                                         ]
                                     }),
                                     n || s

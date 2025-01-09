@@ -57,7 +57,7 @@ function y(e) {
                 : (0, i.jsx)(j.Z, {});
             break;
         case C.PG.SAFETY_CHECK:
-            t = (0, i.jsx)(b.Z, { hideChangelog: !0 });
+            t = (0, i.jsx)(b.Z, {});
             break;
         case C.PG.DEFAULT_CHANNELS:
             t = (0, i.jsx)(_.Z, { saveOnClose: !p });

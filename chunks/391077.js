@@ -55,11 +55,11 @@ function m(e) {
 }
 t.Z = function (e) {
     var t;
-    let { fractionalPremiumInfo: n, className: s, unactivatedUnits: c, activationDate: h } = e,
-        g = (0, o.Am)(n, c),
-        p = g.length > 0,
-        x = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
-        S = p ? g : x;
+    let { fractionalPremiumInfo: n, className: s, activationDate: c } = e,
+        h = (0, o.Am)(n),
+        g = h.length > 0,
+        p = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
+        x = g ? h : p;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(s, u.fractionalPremiumAccountCredit),
@@ -67,7 +67,7 @@ t.Z = function (e) {
                 (0, i.jsx)('div', {
                     className: u.accountCreditsContainer,
                     children:
-                        ((t = g),
+                        ((t = h),
                         (0, i.jsxs)('div', {
                             className: u.accountCreditRow,
                             children: [
@@ -95,11 +95,11 @@ t.Z = function (e) {
                         }))
                 }),
                 (0, i.jsx)(m, {
-                    showChargingUpState: p,
-                    rowValueText: S,
+                    showChargingUpState: g,
+                    rowValueText: x,
                     endsAt: n.endsAt,
                     fractionalState: n.fractionalState,
-                    activationDate: h
+                    activationDate: c
                 })
             ]
         })

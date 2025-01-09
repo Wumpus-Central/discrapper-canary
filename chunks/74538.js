@@ -841,16 +841,16 @@ function eS(e) {
 }
 function eA(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [],
-        a =
-            arguments.length > 4 && void 0 !== arguments[4]
-                ? arguments[4]
+        i =
+            arguments.length > 3 && void 0 !== arguments[3]
+                ? arguments[3]
                 : {
                       fractionalState: U.a$.NONE,
                       endsAt: h()(0),
-                      currentEntitlementId: ''
+                      currentEntitlementId: '',
+                      unactivatedUnits: []
                   },
-        s = r
+        a = r
             ? (0, P.T4)(
                   n.invoiceItems
                       .filter((e) => U.UD.has(e.subscriptionPlanId))
@@ -867,29 +867,29 @@ function eA(e, n) {
             resumeDate: e.pauseEndsAt
         });
     if (e.status === M.O0b.PAUSED)
-        return a.fractionalState !== U.a$.NONE
+        return i.fractionalState !== U.a$.NONE
             ? G.intl.format(G.t.Q18lRE, {
-                  renewalDate: a.endsAt.toDate(),
-                  price: s
+                  renewalDate: i.endsAt.toDate(),
+                  price: a
               })
             : null == e.pauseEndsAt
               ? r
                   ? G.intl.format(G.t.KTYQCg, {
                         planName: G.intl.string(G.t.Ipxkoq),
-                        price: s
+                        price: a
                     })
                   : G.intl.string(G.t.fMz6Li)
               : r
                 ? G.intl.format(G.t.zcgtzc, {
                       planName: G.intl.string(G.t.Ipxkoq),
                       resumeDate: e.pauseEndsAt,
-                      price: s
+                      price: a
                   })
                 : G.intl.format(G.t['V8+l6u'], { resumeDate: e.pauseEndsAt });
     else if (e.status === M.O0b.PAST_DUE) {
-        var o, l;
+        var s, o;
         let n = eS(e).expiresDate;
-        return (e.isPurchasedViaGoogle && (null === (o = e.metadata) || void 0 === o ? void 0 : o.google_grace_period_expires_date) != null && (n = h()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (l = e.metadata) || void 0 === l ? void 0 : l.apple_grace_period_expires_date) != null && (n = h()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally)
+        return (e.isPurchasedViaGoogle && (null === (s = e.metadata) || void 0 === s ? void 0 : s.google_grace_period_expires_date) != null && (n = h()(e.metadata.google_grace_period_expires_date)), e.isPurchasedViaApple && (null === (o = e.metadata) || void 0 === o ? void 0 : o.apple_grace_period_expires_date) != null && (n = h()(e.metadata.apple_grace_period_expires_date)), e.isPurchasedExternally)
             ? G.intl.format(G.t.U2hb3d, {
                   endDate: n.toDate(),
                   paymentGatewayName: B.Vz[e.paymentGateway],
@@ -897,13 +897,13 @@ function eA(e, n) {
               })
             : G.intl.format(G.t.qEIzys, {
                   endDate: n.toDate(),
-                  price: s
+                  price: a
               });
     } else {
         if (e.status === M.O0b.BILLING_RETRY)
             return G.intl.format(G.t.EMTLOT, {
                 endDate: h()(e.currentPeriodStart).add(U.A5, 'days').toDate(),
-                price: s
+                price: a
             });
         if (e.status === M.O0b.ACCOUNT_HOLD)
             return e.isPurchasedViaGoogle && !(0, L.isAndroid)()
@@ -914,7 +914,7 @@ function eA(e, n) {
                   })
                 : G.intl.format(G.t.EMTLOT, {
                       endDate: h()(e.currentPeriodStart).add(U.gh, 'days').toDate(),
-                      price: s
+                      price: a
                   });
         if (eD(e)) return G.intl.format(G.t.awpB0N, { prepaidEndDate: e.currentPeriodEnd });
         if (e.status === M.O0b.UNPAID) return G.intl.format(G.t.CzTKoq, { maxProcessingTimeInDays: U.Rg });
@@ -924,18 +924,18 @@ function eA(e, n) {
                 paymentGatewayName: B.Vz[e.paymentGateway],
                 subscriptionManagementLink: eQ(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
             });
-        let a = new Date(n.subscriptionPeriodStart);
+        let s = new Date(n.subscriptionPeriodStart);
         return (
-            !e.isBoostOnly && (a = eN(a, i)),
+            !e.isBoostOnly && (s = eN(s, i.unactivatedUnits)),
             r
                 ? G.intl.format(G.t.Vl3cEB, {
                       planName: G.intl.string(G.t.Ipxkoq),
-                      renewalDate: a,
-                      price: s
+                      renewalDate: s,
+                      price: a
                   })
                 : G.intl.format(G.t.Q18lRE, {
-                      renewalDate: a,
-                      price: s
+                      renewalDate: s,
+                      price: a
                   })
         );
     }
@@ -948,16 +948,16 @@ function eN(e, n) {
     }
     return r.toDate();
 }
-function eC(e, n) {
-    let r = tx(n);
-    if (!(r > 0 && e.fractionalState === U.a$.NONE)) return '';
-    let i = {
+function eC(e) {
+    let n = tx(e.unactivatedUnits);
+    if (!(n > 0 && e.fractionalState === U.a$.NONE)) return '';
+    let r = {
             days: G.t.fYmir6,
             hours: G.t['C3RO+v'],
             minutes: G.t.r77oHR
         },
-        a = (0, R.TD)(0, r * O.Z.Millis.HOUR);
-    return (0, R.QX)(a, i);
+        i = (0, R.TD)(0, n * O.Z.Millis.HOUR);
+    return (0, R.QX)(i, r);
 }
 function eR(e, n) {
     return (null != n && n !== U.a$.NONE) || null != e.renewalMutations || null != e.trialEndsAt || e.status === M.O0b.PAST_DUE;
