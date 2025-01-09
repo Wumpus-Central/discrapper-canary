@@ -43,6 +43,10 @@ function o() {
                     to: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', l.GlobalDiscoveryAppsSections.STORE)
                 }),
                 (0, i.jsx)(r.l_, {
+                    path: a.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', s.ApplicationDirectoryProfileSections.PREMIUM_DEPRECATED),
+                    to: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', l.GlobalDiscoveryAppsSections.STORE)
+                }),
+                (0, i.jsx)(r.l_, {
                     path: a.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
                     to: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId')
                 }),
