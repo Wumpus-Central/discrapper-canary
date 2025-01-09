@@ -348,6 +348,11 @@ class $ extends s.Component {
                                           name: V.intl.string(V.t['7iegX1']),
                                           value: U.fx.COMPACT,
                                           desc: 'Dense layout with minimal spacing'
+                                      },
+                                      {
+                                          name: 'Auto',
+                                          value: U.fx.AUTO,
+                                          desc: 'UI density will change to match your window size'
                                       }
                                   ],
                                   onChange: this.handleListDensityModeChange,

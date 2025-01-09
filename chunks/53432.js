@@ -19,28 +19,29 @@ var o = n(442837),
     b = n(695346),
     p = n(874893),
     f = n(981631),
-    h = n(388032);
+    h = n(969943),
+    S = n(388032);
 function _() {
     let e = b.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
             useSystemTheme: _,
-            useForcedColors: S
+            useForcedColors: x
         } = (0, o.cj)([g.Z, m.ZP, c.Z], () => ({
             theme: g.Z.theme,
             useSystemTheme: m.ZP.useSystemTheme,
             useForcedColors: c.Z.useForcedColors
         })),
-        x = b.N5.useSetting(),
+        C = b.N5.useSetting(),
         M = (0, d.Q3)('appearance_settings'),
-        C = (0, d.o9)('appearance_settings'),
-        Z = (e, o) =>
+        Z = (0, d.o9)('appearance_settings'),
+        j = (e, o) =>
             (0, i.jsx)(r.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
                 label: o,
-                disabled: S,
+                disabled: x,
                 checked: _ === p.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, s.Yk)({
@@ -51,18 +52,18 @@ function _() {
                         (0, a.ZI)({ theme: e });
                 }
             }),
-        j = [
+        k = [
             (0, i.jsxs)(
                 r.MenuGroup,
                 {
                     children: [
-                        Z(f.BRd.DARK, h.intl.string(h.t.b8Cei4)),
-                        Z(f.BRd.LIGHT, h.intl.string(h.t.K2sFfn)),
+                        j(f.BRd.DARK, S.intl.string(S.t.b8Cei4)),
+                        j(f.BRd.LIGHT, S.intl.string(S.t.K2sFfn)),
                         M &&
                             (0, i.jsxs)(i.Fragment, {
-                                children: [Z(f.BRd.DARKER, 'Darker'), Z(f.BRd.MIDNIGHT, h.intl.string(h.t.pQwSpa))]
+                                children: [j(f.BRd.DARKER, 'Darker'), j(f.BRd.MIDNIGHT, S.intl.string(S.t.pQwSpa))]
                             }),
-                        Z('system', h.intl.string(h.t['7rOU6u']))
+                        j('system', S.intl.string(S.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -70,8 +71,8 @@ function _() {
             ,
         ];
     return (
-        C
-            ? (j.push(
+        Z
+            ? (k.push(
                   (0, i.jsxs)(
                       r.MenuGroup,
                       {
@@ -81,18 +82,27 @@ function _() {
                                   id: 'cozy-ui',
                                   group: 'list-density',
                                   label: 'Cozy',
-                                  checked: 'cozy' === x,
+                                  checked: C === h.fx.COZY,
                                   action: () => {
-                                      b.N5.updateSetting('cozy');
+                                      b.N5.updateSetting(h.fx.COZY);
                                   }
                               }),
                               (0, i.jsx)(r.MenuRadioItem, {
                                   id: 'compact-ui',
                                   group: 'list-density',
                                   label: 'Compact',
-                                  checked: 'compact' === x,
+                                  checked: C === h.fx.COMPACT,
                                   action: () => {
-                                      b.N5.updateSetting('compact');
+                                      b.N5.updateSetting(h.fx.COMPACT);
+                                  }
+                              }),
+                              (0, i.jsx)(r.MenuRadioItem, {
+                                  id: 'auto-ui',
+                                  group: 'list-density',
+                                  label: 'Auto',
+                                  checked: C === h.fx.AUTO,
+                                  action: () => {
+                                      b.N5.updateSetting(h.fx.AUTO);
                                   }
                               })
                           ]
@@ -100,7 +110,7 @@ function _() {
                       'list-density'
                   )
               ),
-              j.push(
+              k.push(
                   (0, i.jsxs)(
                       r.MenuGroup,
                       {
@@ -129,7 +139,7 @@ function _() {
                       'chat-density'
                   )
               ),
-              j.push(
+              k.push(
                   (0, i.jsx)(
                       r.MenuGroup,
                       {
@@ -145,13 +155,13 @@ function _() {
                       'refresh-experiment'
                   )
               ))
-            : j.push(
+            : k.push(
                   (0, i.jsx)(
                       r.MenuGroup,
                       {
                           children: (0, i.jsx)(r.MenuItem, {
                               id: 'compact-mode',
-                              label: e ? h.intl.string(h.t.CTpwDw) : h.intl.string(h.t['J/FISU']),
+                              label: e ? S.intl.string(S.t.CTpwDw) : S.intl.string(S.t['J/FISU']),
                               action: () => {
                                   b.jU.updateSetting(!e), (0, l.ZZ)();
                               }
@@ -160,6 +170,6 @@ function _() {
                       'compact-mode'
                   )
               ),
-        j
+        k
     );
 }
