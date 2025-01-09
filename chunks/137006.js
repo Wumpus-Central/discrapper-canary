@@ -78,6 +78,17 @@ let l = {
                     })
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
+        },
+        [r.Q5.SHARE_LINK]: {
+            request: (e) =>
+                (0, r.C5)(
+                    e.object({
+                        referrer_id: e.string().max(64),
+                        custom_id: e.string().max(64),
+                        message: e.string().max(1000).required()
+                    })
+                ),
+            response: (e) => e.object({ success: e.boolean().required() })
         }
     },
     a = (e) =>
