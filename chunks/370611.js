@@ -245,6 +245,7 @@ function U(e) {
                         horizontal: !0
                     }),
                     (0, a.jsx)(l.Heading, {
+                        lineClamp: 1,
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
                         children: T

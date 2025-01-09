@@ -18914,7 +18914,8 @@ span.clanTag_a31c43 {
 .userPlayer_cf8a7d {
     flex: 1;
     display: flex;
-    align-items: center
+    align-items: center;
+    min-width: 0
 }
 
 .userWinnerImage_cf8a7d {
