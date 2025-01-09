@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(471445),
     c = n(977258),
     d = n(637853),
@@ -20,7 +20,7 @@ var r = n(120356),
     p = n(531840);
 function f(e) {
     let { guild: t, scrollToQuestions: n } = e,
-        r = (0, a.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
+        r = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, r).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
     return (0, i.jsxs)('div', {
         className: p.container,
@@ -34,7 +34,7 @@ function f(e) {
             }),
             (0, i.jsxs)('div', {
                 className: p.channelList,
-                children: [(0, i.jsx)(_, {}), 0 === l.length && (0, i.jsx)(C, {}), (0, i.jsx)(v, { channels: l })]
+                children: [(0, i.jsx)(N, {}), 0 === l.length && (0, i.jsx)(C, {}), (0, i.jsx)(v, { channels: l })]
             })
         ]
     });
@@ -45,12 +45,12 @@ function C() {
         children: [
             (0, i.jsx)('div', {
                 className: p.emptyStateIcon,
-                children: (0, i.jsx)(s.TextIcon, {
+                children: (0, i.jsx)(a.TextIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 className: p.channelName,
                 variant: 'text-md/normal',
                 color: 'text-muted',
@@ -61,12 +61,12 @@ function C() {
 }
 function v(e) {
     let { channels: t } = e;
-    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(N, { label: e.name }, e.id) : (0, i.jsx)(I, { channel: e }, e.id))) });
+    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(_, { label: e.name }, e.id) : (0, i.jsx)(I, { channel: e }, e.id))) });
 }
-function _() {
+function N() {
     return (0, i.jsx)('div', { className: p.divider });
 }
-function N(e) {
+function _(e) {
     let { label: t } = e;
     return (0, i.jsxs)('div', {
         className: p.category,
@@ -77,7 +77,7 @@ function N(e) {
                 height: 12,
                 direction: m.Z.Directions.DOWN
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-muted',
                 lineClamp: 1,
@@ -90,16 +90,16 @@ function I(e) {
     var t;
     let { channel: n } = e,
         r = (0, d.iF)(n),
-        a = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : s.TextIcon;
+        s = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : a.TextIcon;
     return (0, i.jsxs)('div', {
         className: p.channel,
         children: [
-            (0, i.jsx)(a, {
+            (0, i.jsx)(s, {
                 className: p.channelIcon,
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 className: p.channelName,
                 variant: 'text-md/normal',
                 color: 'text-muted',

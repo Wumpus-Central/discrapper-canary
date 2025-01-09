@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return E;
     },
     _: function () {
         return b;
@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(512722),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(749210),
     c = n(852860),
     d = n(493773),
@@ -24,17 +24,17 @@ var i = n(200651),
     f = n(999382),
     C = n(130341),
     v = n(853813),
-    _ = n(163249),
-    N = n(150689),
+    N = n(163249),
+    _ = n(150689),
     I = n(203377),
     T = n(981631);
 function j(e) {
     g.Z.selectRole(e);
 }
 let b = () => {
-    let { guild: e } = (0, s.cj)([f.Z], () => f.Z.getProps()),
-        t = (0, s.e7)([p.Z], () => p.Z.formState),
-        n = (0, s.e7)([p.Z], () => p.Z.errorMessage);
+    let { guild: e } = (0, a.cj)([f.Z], () => f.Z.getProps()),
+        t = (0, a.e7)([p.Z], () => p.Z.formState),
+        n = (0, a.e7)([p.Z], () => p.Z.errorMessage);
     return (0, i.jsx)(c.Z, {
         errorMessage: n,
         onSave: () => {
@@ -50,9 +50,9 @@ let b = () => {
         onReset: x.S1
     });
 };
-function S(e) {
+function E(e) {
     let { refToScroller: t } = e,
-        { guild: n, roles: l } = (0, s.cj)(
+        { guild: n, roles: l } = (0, a.cj)(
             [p.Z],
             () => ({
                 guild: p.Z.guild,
@@ -60,11 +60,11 @@ function S(e) {
             }),
             []
         );
-    a()(null != n, 'Guild cannot be null here');
+    s()(null != n, 'Guild cannot be null here');
     let c = r.useMemo(() => l.find((e) => (0, u.pM)(n.id, e.id)), [l, n]);
-    a()(null != c, 'Guild must have an everyone role');
+    s()(null != c, 'Guild must have an everyone role');
     let h = r.useMemo(() => l.filter((e) => !(0, u.pM)(n.id, e.id)), [l, n]),
-        g = (0, s.e7)([f.Z], () => f.Z.getSelectedRoleId()),
+        g = (0, a.e7)([f.Z], () => f.Z.getSelectedRoleId()),
         [x, T] = r.useState(h.length > 0);
     r.useEffect(() => {
         T(x || h.length > 0);
@@ -73,27 +73,27 @@ function S(e) {
             let e = m.Z.getMemberCount(n.id);
             null != e && e <= C.cm && o.Z.requestMembers(n.id, '', 0, !1);
         });
-    let [b, S] = r.useState(I.ZI.DISPLAY);
+    let [b, E] = r.useState(I.ZI.DISPLAY);
     return (r.useEffect(() => {
-        null == g && S(I.ZI.DISPLAY);
+        null == g && E(I.ZI.DISPLAY);
     }, [g]),
     null != g)
         ? (0, i.jsx)(v.Z, {
               editRoleId: g,
               setEditRoleId: j,
               selectedSection: b,
-              setSelectedSection: S
+              setSelectedSection: E
           })
         : x
-          ? (0, i.jsx)(N.Z, {
+          ? (0, i.jsx)(_.Z, {
                 setEditRoleId: j,
                 guild: n,
                 everyoneRole: c,
                 otherRoles: h,
-                setSelectedSection: S,
+                setSelectedSection: E,
                 refToScroller: t
             })
-          : (0, i.jsx)(_.Z, {
+          : (0, i.jsx)(N.Z, {
                 guild: n,
                 everyoneRole: c,
                 setEditRoleId: j

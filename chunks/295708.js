@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(273504),
-    s = n(981631),
+    s = n(273504),
+    a = n(981631),
     o = n(388032),
     c = n(410411),
     d = n(799639);
@@ -33,10 +33,10 @@ function u(e) {
                 },
                 onClick: (e) => e.stopPropagation(),
                 onKeyPress: (e) => {
-                    e.which === s.yXg.SPACE && e.stopPropagation();
+                    e.which === a.yXg.SPACE && e.stopPropagation();
                 },
                 placeholder: o.intl.string(o.t['5AO43N']),
-                maxLength: a.OU,
+                maxLength: s.OU,
                 value: u
             })
         ]

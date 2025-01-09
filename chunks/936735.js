@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(772848),
-    a = n(442837),
-    s = n(339085),
+    s = n(442837),
+    a = n(339085),
     o = n(231053),
     c = n(183023),
     d = n(650774),
@@ -15,7 +15,7 @@ var i = n(200651),
 function m(e) {
     let { guild: t, discoverableGuild: n } = e,
         m = null == t ? void 0 : t.id,
-        { memberCount: h, onlineCount: g } = (0, a.cj)(
+        { memberCount: h, onlineCount: g } = (0, s.cj)(
             [d.Z],
             () => {
                 var e, t;
@@ -30,7 +30,7 @@ function m(e) {
         p = r.useMemo(() => {
             if (null != n) return o.JO.createFromDiscoverableGuild(n);
             if (null == t) return null;
-            let e = s.ZP.getGuildEmoji(t.id);
+            let e = a.ZP.getGuildEmoji(t.id);
             return o.JO.createFromDiscoverableGuild({
                 ...t,
                 premiumSubscriptionCount: null == t ? void 0 : t.premiumSubscriberCount,

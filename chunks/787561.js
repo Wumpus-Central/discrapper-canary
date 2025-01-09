@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120),
@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(544891),
     c = n(433517),
     d = n(481060),
@@ -22,32 +22,32 @@ var i = n(200651),
     f = n(650774),
     C = n(430824),
     v = n(496675),
-    _ = n(699516),
-    N = n(594174),
+    N = n(699516),
+    _ = n(594174),
     I = n(434404),
     T = n(999382),
     j = n(54842),
     b = n(929834),
-    S = n(981631),
-    E = n(388032),
+    E = n(981631),
+    S = n(388032),
     R = n(831609),
     y = n(922905);
-let Z = 'dismissedCommunityFeaturesUpsell',
-    A = () => {
+let A = 'dismissedCommunityFeaturesUpsell',
+    Z = () => {
         let e;
         let {
                 guild: t,
                 submitting: n,
                 errors: r
-            } = (0, s.cj)([T.Z], () => ({
+            } = (0, a.cj)([T.Z], () => ({
                 submitting: T.Z.isSubmitting(),
                 guild: T.Z.getGuild(),
                 errors: T.Z.getErrors()
             })),
             l = Object.keys(r),
-            a = l.length > 0 ? l[0] : null;
-        if ('rules_channel_id' === a) e = E.intl.string(E.t['7IrBYm']);
-        else e = null != a ? r[a] : void 0;
+            s = l.length > 0 ? l[0] : null;
+        if ('rules_channel_id' === s) e = S.intl.string(S.t['7IrBYm']);
+        else e = null != s ? r[s] : void 0;
         return (0, i.jsx)(u.Z, {
             submitting: n,
             onReset: () => {
@@ -69,8 +69,8 @@ let Z = 'dismissedCommunityFeaturesUpsell',
     },
     L = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [a, u] = r.useState(!0 === c.K.get(Z)),
-            h = (0, s.e7)([f.Z], () => {
+            [s, u] = r.useState(!0 === c.K.get(A)),
+            h = (0, a.e7)([f.Z], () => {
                 var e;
                 return null !== (e = f.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
             }),
@@ -78,7 +78,7 @@ let Z = 'dismissedCommunityFeaturesUpsell',
         (0, m.Z)(() => {
             o.tn
                 .get({
-                    url: S.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    url: E.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
                     rejectWithError: !0
                 })
                 .then((e) => {
@@ -86,20 +86,20 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                 })
                 .catch(() => p(!1));
         });
-        let v = (0, s.e7)([C.Z], () => C.Z.getGuild('942897714956472401')),
-            _ = l.isCommunity() && h >= 1000 && g && !(null != v);
-        if (t && n && !_) return null;
-        let N = async () => {
+        let v = (0, a.e7)([C.Z], () => C.Z.getGuild('942897714956472401')),
+            N = l.isCommunity() && h >= 1000 && g && !(null != v);
+        if (t && n && !N) return null;
+        let _ = async () => {
             try {
                 let e = await o.tn.post({
-                    url: S.ANM.JOIN_ADMIN_SERVER(l.id),
+                    url: E.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
                 I.Z.close(), (0, x.X)(e.body.id);
             } catch {}
         };
-        return a && !_
+        return s && !N
             ? null
             : (0, i.jsxs)('div', {
                   className: R.upsellContainer,
@@ -118,23 +118,23 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                                       (0, i.jsx)(d.Heading, {
                                           variant: 'heading-md/semibold',
                                           className: R.upsellHeader,
-                                          children: E.intl.string(E.t['pR/BgY'])
+                                          children: S.intl.string(S.t['pR/BgY'])
                                       }),
                                       (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
-                                          children: E.intl.string(E.t['V+Yo1t'])
+                                          children: S.intl.string(S.t['V+Yo1t'])
                                       })
                                   ]
                               })
                           ]
                       }),
                       (0, i.jsx)(d.Button, {
-                          'aria-label': E.intl.string(E.t.cpT0Cg),
+                          'aria-label': S.intl.string(S.t.cpT0Cg),
                           look: d.Button.Looks.BLANK,
                           size: d.Button.Sizes.NONE,
                           className: R.upsellClose,
                           onClick: () => {
-                              c.K.set(Z, !0), u(!0);
+                              c.K.set(A, !0), u(!0);
                           },
                           children: (0, i.jsx)(d.XSmallIcon, {
                               size: 'md',
@@ -144,42 +144,42 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                       (0, i.jsxs)('div', {
                           className: R.upsellFooter,
                           children: [
-                              _ &&
+                              N &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: N,
+                                      onClick: _,
                                       className: R.upsellButton,
-                                      children: E.intl.string(E.t.iF1Asr)
+                                      children: S.intl.string(S.t.iF1Asr)
                                   }),
                               n
                                   ? null
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            I.Z.setSection(S.pNK.ONBOARDING);
+                                            I.Z.setSection(E.pNK.ONBOARDING);
                                         },
                                         className: R.upsellButton,
-                                        children: E.intl.string(E.t['S/DfiY'])
+                                        children: S.intl.string(S.t['S/DfiY'])
                                     }),
                               t
                                   ? null
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            I.Z.setSection(S.pNK.DISCOVERY);
+                                            I.Z.setSection(E.pNK.DISCOVERY);
                                         },
                                         className: R.upsellButton,
                                         color: d.Button.Colors.PRIMARY,
-                                        children: E.intl.string(E.t['0kmJd3'])
+                                        children: S.intl.string(S.t['0kmJd3'])
                                     }),
                               (0, i.jsx)(d.Button, {
                                   size: d.Button.Sizes.SMALL,
                                   onClick: () => {
-                                      I.Z.setSection(S.pNK.ANALYTICS);
+                                      I.Z.setSection(E.pNK.ANALYTICS);
                                   },
                                   className: R.upsellButton,
                                   color: d.Button.Colors.PRIMARY,
-                                  children: E.intl.string(E.t.BQIYTU)
+                                  children: S.intl.string(S.t.BQIYTU)
                               })
                           ]
                       })
@@ -187,35 +187,35 @@ let Z = 'dismissedCommunityFeaturesUpsell',
               });
     },
     D = () => {
-        let e = (0, s.e7)([T.Z], () => T.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, s.cj)([v.Z], () => ({
-                canManageGuild: v.Z.can(S.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: v.Z.can(S.Plq.ADMINISTRATOR, e)
+        let e = (0, a.e7)([T.Z], () => T.Z.getGuild()),
+            { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([v.Z], () => ({
+                canManageGuild: v.Z.can(E.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: v.Z.can(E.Plq.ADMINISTRATOR, e)
             })),
-            l = (0, s.e7)([p.ZP], () => (null != e ? p.ZP.getChannels(e.id) : null)),
+            l = (0, a.e7)([p.ZP], () => (null != e ? p.ZP.getChannels(e.id) : null)),
             o = r.useMemo(b.jb, []),
-            u = !0 !== c.K.get(Z);
+            u = !0 !== c.K.get(A);
         if (null == e) return null;
         let m = [];
         null != l &&
             l[p.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === S.d4z.GUILD_TEXT &&
+                t.type === E.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
-                        label: (0, h.F6)(t, N.default, _.Z, !0)
+                        label: (0, h.F6)(t, _.default, N.Z, !0)
                     });
             });
         let x = () => {
-                I.Z.init(e.id), I.Z.open(e.id, S.pNK.MEMBER_VERIFICATION);
+                I.Z.init(e.id), I.Z.open(e.id, E.pNK.MEMBER_VERIFICATION);
             },
             f = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(S.oNc.COMMUNITY),
-                    t.delete(S.oNc.DISCOVERABLE),
-                    !(0, g.K2)(e.id, 'disableCommunity') && !e.hasFeature(S.oNc.CLAN) && t.delete(S.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
-                    t.delete(S.oNc.PREVIEW_ENABLED),
+                t.delete(E.oNc.COMMUNITY),
+                    t.delete(E.oNc.DISCOVERABLE),
+                    !(0, g.K2)(e.id, 'disableCommunity') && !e.hasFeature(E.oNc.CLAN) && t.delete(E.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
+                    t.delete(E.oNc.PREVIEW_ENABLED),
                     I.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
@@ -231,7 +231,7 @@ let Z = 'dismissedCommunityFeaturesUpsell',
             y = (e) => {
                 I.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            A = (e) => {
+            Z = (e) => {
                 I.Z.updateGuild({ preferredLocale: e });
             },
             D = (e) => {
@@ -239,90 +239,90 @@ let Z = 'dismissedCommunityFeaturesUpsell',
             },
             O = () => {
                 let t = (0, g.K2)(e.id, 'GuildSettingsCommunity');
-                e.features.has(S.oNc.DISCOVERABLE) && e.features.has(S.oNc.PARTNERED)
+                e.features.has(E.oNc.DISCOVERABLE) && e.features.has(E.oNc.PARTNERED)
                     ? (0, d.openModal)((e) =>
                           (0, i.jsx)(d.ConfirmModal, {
                               ...e,
-                              header: E.intl.string(E.t.iBnVHR),
-                              confirmText: E.intl.string(E.t['cY+Ooa']),
-                              cancelText: E.intl.string(E.t.oEAioK),
+                              header: S.intl.string(S.t.iBnVHR),
+                              confirmText: S.intl.string(S.t['cY+Ooa']),
+                              cancelText: S.intl.string(S.t.oEAioK),
                               onConfirm: f,
                               children: (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
-                                  children: E.intl.string(E.t['P+Sh8f'])
+                                  children: S.intl.string(S.t['P+Sh8f'])
                               })
                           })
                       )
-                    : e.features.has(S.oNc.DISCOVERABLE)
+                    : e.features.has(E.oNc.DISCOVERABLE)
                       ? (0, d.openModal)((e) =>
                             (0, i.jsx)(d.ConfirmModal, {
                                 ...e,
-                                header: E.intl.string(E.t.iBnVHR),
-                                confirmText: E.intl.string(E.t['cY+Ooa']),
-                                cancelText: E.intl.string(E.t.oEAioK),
+                                header: S.intl.string(S.t.iBnVHR),
+                                confirmText: S.intl.string(S.t['cY+Ooa']),
+                                cancelText: S.intl.string(S.t.oEAioK),
                                 onConfirm: f,
                                 children: (0, i.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: E.intl.string(E.t['eMx/ub'])
+                                    children: S.intl.string(S.t['eMx/ub'])
                                 })
                             })
                         )
-                      : e.features.has(S.oNc.PARTNERED)
+                      : e.features.has(E.oNc.PARTNERED)
                         ? (0, d.openModal)((e) =>
                               (0, i.jsx)(d.ConfirmModal, {
                                   ...e,
-                                  header: E.intl.string(E.t.iBnVHR),
-                                  confirmText: E.intl.string(E.t['cY+Ooa']),
-                                  cancelText: E.intl.string(E.t.oEAioK),
+                                  header: S.intl.string(S.t.iBnVHR),
+                                  confirmText: S.intl.string(S.t['cY+Ooa']),
+                                  cancelText: S.intl.string(S.t.oEAioK),
                                   onConfirm: f,
                                   children: (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
-                                      children: E.intl.string(E.t.l1wLeX)
+                                      children: S.intl.string(S.t.l1wLeX)
                                   })
                               })
                           )
-                        : !e.features.has(S.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t || e.features.has(S.oNc.CLAN)
+                        : !e.features.has(E.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || t || e.features.has(E.oNc.CLAN)
                           ? f()
                           : (0, d.openModal)((e) =>
                                 (0, i.jsx)(d.ConfirmModal, {
                                     ...e,
-                                    header: E.intl.string(E.t.iBnVHR),
+                                    header: S.intl.string(S.t.iBnVHR),
                                     confirmButtonColor: d.Button.Colors.BRAND,
-                                    confirmText: E.intl.string(E.t.izNBMz),
-                                    cancelText: E.intl.string(E.t.oEAioK),
+                                    confirmText: S.intl.string(S.t.izNBMz),
+                                    cancelText: S.intl.string(S.t.oEAioK),
                                     onConfirm: x,
                                     children: (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
-                                        children: E.intl.string(E.t.kQzUNj)
+                                        children: S.intl.string(S.t.kQzUNj)
                                     })
                                 })
                             );
             };
         return (0, i.jsxs)(d.FormSection, {
-            title: E.intl.string(E.t.nRtNqq),
+            title: S.intl.string(S.t.nRtNqq),
             tag: d.FormTitleTags.H1,
             children: [
                 u
                     ? (0, i.jsx)(L, {
-                          discoveryEnabled: e.features.has(S.oNc.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(S.oNc.GUILD_ONBOARDING),
+                          discoveryEnabled: e.features.has(E.oNc.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(E.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(R.twoColumnFormSection, R.firstSection),
+                    className: s()(R.twoColumnFormSection, R.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
                             className: R.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t.otcXPz)
+                                    children: S.intl.string(S.t.otcXPz)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
                                     className: R.__invalid_formDescription,
-                                    children: E.intl.string(E.t.BtwmYG)
+                                    children: S.intl.string(S.t.BtwmYG)
                                 })
                             ]
                         }),
@@ -339,19 +339,19 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(R.twoColumnFormSection, R.firstSection),
+                    className: s()(R.twoColumnFormSection, R.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
                             className: R.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t.vAyDGR)
+                                    children: S.intl.string(S.t.vAyDGR)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
                                     className: R.__invalid_formDescription,
-                                    children: E.intl.string(E.t.ZFeonp)
+                                    children: S.intl.string(S.t.ZFeonp)
                                 })
                             ]
                         }),
@@ -368,19 +368,19 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: a()(R.twoColumnFormSection, R.firstSection),
+                    className: s()(R.twoColumnFormSection, R.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
                             className: R.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t.sMkYEx)
+                                    children: S.intl.string(S.t.sMkYEx)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
                                     className: R.__invalid_formDescription,
-                                    children: E.intl.string(E.t.htioQk)
+                                    children: S.intl.string(S.t.htioQk)
                                 })
                             ]
                         }),
@@ -404,12 +404,12 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t.pO60f3)
+                                    children: S.intl.string(S.t.pO60f3)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
                                     className: R.__invalid_formDescription,
-                                    children: E.intl.string(E.t.aIR73d)
+                                    children: S.intl.string(S.t.aIR73d)
                                 })
                             ]
                         }),
@@ -418,7 +418,7 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: A,
+                                onChange: Z,
                                 isDisabled: !t
                             })
                         })
@@ -432,16 +432,16 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t['RSfm+v'])
+                                    children: S.intl.string(S.t['RSfm+v'])
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     className: R.description,
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    children: E.intl.string(E.t['/B6PR0'])
+                                    children: S.intl.string(S.t['/B6PR0'])
                                 }),
                                 (0, i.jsx)(d.TextArea, {
                                     value: null !== (n = e.description) && void 0 !== n ? n : '',
-                                    placeholder: E.intl.string(E.t.Nvfows),
+                                    placeholder: S.intl.string(S.t.Nvfows),
                                     onChange: D,
                                     maxLength: 120,
                                     disabled: !t
@@ -458,18 +458,18 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
                                     className: R.formTitle,
-                                    children: E.intl.string(E.t.c1BmbG)
+                                    children: S.intl.string(S.t.c1BmbG)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
                                     className: R.__invalid_formDescription,
-                                    children: E.intl.string(E.t.aQzVFx)
+                                    children: S.intl.string(S.t.aQzVFx)
                                 })
                             ]
                         }),
                         (0, i.jsx)(d.Tooltip, {
-                            text: n ? null : E.intl.string(E.t['pjG+T0']),
-                            'aria-label': n ? void 0 : E.intl.string(E.t['pjG+T0']),
+                            text: n ? null : S.intl.string(S.t['pjG+T0']),
+                            'aria-label': n ? void 0 : S.intl.string(S.t['pjG+T0']),
                             children: (e) =>
                                 (0, i.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
@@ -477,7 +477,7 @@ let Z = 'dismissedCommunityFeaturesUpsell',
                                     color: d.Button.Colors.RED,
                                     disabled: !n,
                                     ...e,
-                                    children: E.intl.string(E.t.c1BmbG)
+                                    children: S.intl.string(S.t.c1BmbG)
                                 })
                         })
                     ]
@@ -486,6 +486,6 @@ let Z = 'dismissedCommunityFeaturesUpsell',
         });
     };
 t.Z = () => {
-    let e = (0, s.e7)([T.Z], () => T.Z.getGuild());
-    return null == e ? null : e.features.has(S.oNc.COMMUNITY) ? (0, i.jsx)(D, {}) : (0, i.jsx)(j.Z, { guild: e });
+    let e = (0, a.e7)([T.Z], () => T.Z.getGuild());
+    return null == e ? null : e.features.has(E.oNc.COMMUNITY) ? (0, i.jsx)(D, {}) : (0, i.jsx)(j.Z, { guild: e });
 };

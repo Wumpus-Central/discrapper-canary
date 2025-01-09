@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
+    s = n.n(l),
+    a = n(392711),
     o = n(481060),
     c = n(442837),
     d = n(314897),
@@ -17,36 +17,36 @@ var i = n(200651),
 t.Z = (e) => {
     let { guildId: t, handleUpdate: n, progress: l, error: C } = e,
         { interests: v } = l,
-        [_, N] = r.useState(''),
+        [N, _] = r.useState(''),
         [I, T] = r.useState(0),
         j = (0, c.e7)([d.default], () => d.default.getId()),
-        b = r.useMemo(() => (0, s.chunk)((0, u.XV)(g.i6, j), 9), [j]),
-        S = [...b[I], ...b[(I + 1) % b.length]],
-        E = r.useMemo(() => Array.from(v), [v]),
-        R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
+        b = r.useMemo(() => (0, a.chunk)((0, u.XV)(g.i6, j), 9), [j]),
+        E = [...b[I], ...b[(I + 1) % b.length]],
+        S = r.useMemo(() => Array.from(v), [v]),
+        R = r.useMemo(() => S.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [S]),
         y = (e) => {
             let t = new Set(v);
             t.delete(e), n({ interests: t });
         },
-        Z = r.useCallback(
+        A = r.useCallback(
             (e) => {
                 if (v.size === g.c4) return;
-                let t = null != e ? e : _.trim();
+                let t = null != e ? e : N.trim();
                 if (0 === t.length) return;
                 let i = new Set(v);
-                i.add(t), n({ interests: i }), N('');
+                i.add(t), n({ interests: i }), _('');
             },
-            [n, _, v]
+            [n, N, v]
         ),
-        A = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), Z();
+                        e.preventDefault(), e.stopPropagation(), A();
                 }
             },
-            [Z]
+            [A]
         ),
         L = r.useCallback(() => {
             T((e) => (e + 1) % b.length);
@@ -90,24 +90,24 @@ t.Z = (e) => {
                                     (0, i.jsx)(o.TextInput, {
                                         autoFocus: !0,
                                         inputClassName: f.input,
-                                        value: _,
-                                        onKeyDown: A,
-                                        onChange: N,
+                                        value: N,
+                                        onKeyDown: Z,
+                                        onChange: _,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
                                         disabled: v.size === g.c4
                                     }),
-                                    _.length > 0 &&
+                                    N.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => Z(_.trim()),
-                                            className: a()(f.plusIcon, f.clickable),
+                                            onClick: () => A(N.trim()),
+                                            className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
                                                 className: f.icon
                                             })
                                         }),
-                                    _.length > 0 &&
+                                    N.length > 0 &&
                                         (0, i.jsx)(o.Text, {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',
@@ -123,7 +123,7 @@ t.Z = (e) => {
                                 children: x.intl.string(x.t.P793o6)
                             }),
                             (0, i.jsx)(o.HorizontalOverflowList, {
-                                items: S,
+                                items: E,
                                 renderItem: (e) =>
                                     (0, i.jsx)(
                                         m.Z,
@@ -132,7 +132,7 @@ t.Z = (e) => {
                                             color: 'interactive-normal',
                                             text: e,
                                             selected: v.has(e),
-                                            onClick: v.has(e) ? y : Z
+                                            onClick: v.has(e) ? y : A
                                         },
                                         e
                                     ),
@@ -165,7 +165,7 @@ t.Z = (e) => {
                     (0, i.jsx)('div', {
                         className: f.fixedWidthSidebar,
                         children:
-                            E.length > 0 &&
+                            S.length > 0 &&
                             (0, i.jsx)(h.Z, {
                                 guildId: t,
                                 progress: l,

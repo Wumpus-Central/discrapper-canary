@@ -8,9 +8,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(525654),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(525654),
+    o = n.n(a),
     c = n(442837),
     d = n(846519),
     u = n(481060),
@@ -22,25 +22,25 @@ var i = n(200651),
     f = n(208049),
     C = n(763296),
     v = n(22382),
-    _ = n(747071),
-    N = n(286654),
+    N = n(747071),
+    _ = n(286654),
     I = n(171368),
     T = n(430824),
     j = n(594174),
     b = n(15385),
-    S = n(768581),
-    E = n(267642),
+    E = n(768581),
+    S = n(267642),
     R = n(358085),
     y = n(51144),
-    Z = n(999382),
-    A = n(70409),
+    A = n(999382),
+    Z = n(70409),
     L = n(981631),
     D = n(710111),
     O = n(388032),
-    k = n(572005);
-let M = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+    M = n(572005);
+let k = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function P() {
-    let e = (0, c.e7)([Z.Z], () => Z.Z.getProps().guild);
+    let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
     return null == e
         ? null
         : (0, i.jsx)(u.FormSection, {
@@ -52,7 +52,7 @@ function P() {
 function w(e) {
     let { children: t } = e;
     return (0, i.jsx)(u.Heading, {
-        className: k.tableHeader,
+        className: M.tableHeader,
         variant: 'heading-sm/semibold',
         color: 'header-secondary',
         children: t
@@ -61,12 +61,12 @@ function w(e) {
 function B(e) {
     let { currentTier: t, availableSounds: n, guildId: r } = e,
         l = T.Z.getGuild(r),
-        a = (0, E.U2)(t, l);
+        s = (0, S.U2)(t, l);
     return 0 === t
         ? (0, i.jsx)(i.Fragment, {
               children: O.intl.format(O.t['7E9Hd3'], {
                   slots: n,
-                  totalSlots: a
+                  totalSlots: s
               })
           })
         : (0, i.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ function B(e) {
                       text: O.intl.formatToPlainString(O.t.tuuJJS, { currentBoostLevel: t }),
                       children: (e) =>
                           (0, i.jsx)(u.Clickable, {
-                              className: k.boostingIconWrapper,
+                              className: M.boostingIconWrapper,
                               onClick: () => {
                                   var e;
                                   return (
@@ -95,7 +95,7 @@ function B(e) {
                   }),
                   O.intl.format(O.t.HHCdvb, {
                       slots: n,
-                      totalSlots: a,
+                      totalSlots: s,
                       boostLevel: t
                   })
               ]
@@ -103,19 +103,19 @@ function B(e) {
 }
 let U = (e) => {
         let { renderPopoutBody: t, renderPopoutChildren: n, ...l } = e,
-            [a, s] = r.useState(!1),
+            [s, a] = r.useState(!1),
             o = r.useMemo(() => new d.V7(), []),
             c = r.useCallback(() => {
-                o.stop(), s(!0);
+                o.stop(), a(!0);
             }, [o]),
             m = r.useCallback(() => {
-                o.start(200, () => s(!1));
+                o.start(200, () => a(!1));
             }, [o]);
         return (0, i.jsx)(u.Popout, {
-            shouldShow: a,
+            shouldShow: s,
             renderPopout: (e) =>
                 (0, i.jsx)(u.Dialog, {
-                    className: k.browserUnsupportedDialog,
+                    className: M.browserUnsupportedDialog,
                     onMouseEnter: c,
                     onMouseLeave: m,
                     children: t(e)
@@ -141,25 +141,25 @@ let U = (e) => {
         });
 function F(e) {
     let { guild: t } = e,
-        [l, a] = (0, c.Wu)([C.Z], () => {
+        [l, s] = (0, c.Wu)([C.Z], () => {
             var e;
             return [null !== (e = C.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : D.Hy, C.Z.isFetchingSounds() || C.Z.isFetchingDefaultSounds()];
         }),
-        { canCreateExpressions: s } = (0, p.XJ)(t),
+        { canCreateExpressions: a } = (0, p.XJ)(t),
         o = r.useRef(null),
         d = (0, g.ZP)(),
         m = t.premiumTier,
-        h = (0, E.yw)(t, l, m);
+        h = (0, S.yw)(t, l, m);
     r.useEffect(() => {
         (0, f.w)();
     }, []);
     let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
-        N = 0 === l.length && !a;
+        _ = 0 === l.length && !s;
     function I(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = x[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, _.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, N.Z)(e.volume)), n.play());
     }
     r.useEffect(
         () => () => {
@@ -168,8 +168,8 @@ function F(e) {
         },
         []
     );
-    if (a) return (0, i.jsx)(u.Spinner, {});
-    let T = M
+    if (s) return (0, i.jsx)(u.Spinner, {});
+    let T = k
         ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
@@ -181,7 +181,7 @@ function F(e) {
                           });
                   });
               },
-              disabled: h <= 0 || !s,
+              disabled: h <= 0 || !a,
               children: O.intl.string(O.t['/uNYPD'])
           })
         : (0, i.jsx)(G, {});
@@ -190,21 +190,21 @@ function F(e) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(u.Text, {
-                        className: k.helpText,
+                        className: M.helpText,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: O.intl.string(O.t.BohnsL)
                     }),
                     (0, i.jsx)('div', {
-                        className: k.buttons,
-                        children: !N && T
+                        className: M.buttons,
+                        children: !_ && T
                     })
                 ]
             }),
-            N
+            _
                 ? (0, i.jsxs)(u.EmptyState, {
                       theme: d,
-                      className: k.empty,
+                      className: M.empty,
                       children: [
                           (0, i.jsx)(u.EmptyStateImage, {
                               darkSrc: n(458601),
@@ -214,7 +214,7 @@ function F(e) {
                           }),
                           (0, i.jsx)(u.EmptyStateText, {
                               note: O.intl.string(O.t.ZhoSBA),
-                              noteClassName: k.emptyText,
+                              noteClassName: M.emptyText,
                               children: O.intl.string(O.t.I6P1p6)
                           }),
                           T
@@ -222,9 +222,9 @@ function F(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(u.FormDivider, { className: k.divider }),
+                          (0, i.jsx)(u.FormDivider, { className: M.divider }),
                           (0, i.jsx)(u.Heading, {
-                              className: k.tableTitle,
+                              className: M.tableTitle,
                               variant: 'heading-md/bold',
                               color: 'header-primary',
                               children: (0, i.jsx)(B, {
@@ -233,16 +233,16 @@ function F(e) {
                                   availableSounds: h
                               })
                           }),
-                          (0, i.jsx)(A.Z, {
+                          (0, i.jsx)(Z.Z, {
                               guild: t,
                               numSounds: l.length,
                               isOutOfSlots: 0 === h
                           }),
                           (0, i.jsxs)('div', {
-                              className: k.soundTable,
+                              className: M.soundTable,
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: k.tableHeaders,
+                                      className: M.tableHeaders,
                                       children: [(0, i.jsx)(w, { children: O.intl.string(O.t.sMOuub) }), (0, i.jsx)(w, { children: O.intl.string(O.t.lLFvlZ) }), (0, i.jsx)(w, { children: O.intl.string(O.t['85qMS0']) })]
                                   }),
                                   l.map((e) =>
@@ -265,21 +265,21 @@ function F(e) {
     });
 }
 function H(e) {
-    let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
-        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: _ } = t,
+    let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
+        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: N } = t,
         T = (0, c.e7)([j.default], () => (null != x ? x : j.default.getUser(C)), [C, x]),
         { canManageGuildExpression: b } = (0, p.XJ)(o),
-        E = r.useMemo(() => b(t), [t, b]),
-        R = null != v || null != _,
-        [Z, A] = r.useState(!1),
-        D = (0, N.z)(t, o.id);
-    async function M() {
-        if (!Z) {
-            A(!0);
+        S = r.useMemo(() => b(t), [t, b]),
+        R = null != v || null != N,
+        [A, Z] = r.useState(!1),
+        D = (0, _.z)(t, o.id);
+    async function k() {
+        if (!A) {
+            Z(!0);
             try {
                 await (0, f.AA)(o.id, d);
             } catch {
-                A(!1);
+                Z(!1);
             }
         }
     }
@@ -299,49 +299,49 @@ function H(e) {
         }, [T, o.id]),
         w = y.ZP.useUserTag(T);
     return (0, i.jsxs)('div', {
-        className: a()(k.row, { [k.active]: l }),
+        className: s()(M.row, { [M.active]: l }),
         children: [
             R
                 ? (0, i.jsx)(h.Z, {
                       emojiId: v,
-                      emojiName: _,
-                      className: k.emoji
+                      emojiName: N,
+                      className: M.emoji
                   })
                 : (0, i.jsx)(u.ImageIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: k.emoji
+                      className: M.emoji
                   }),
             (0, i.jsx)(u.Clickable, {
                 onClick: () => {
-                    !Z && s(t);
+                    !A && a(t);
                 },
                 onContextMenu: D,
-                className: k.soundName,
+                className: M.soundName,
                 children: (0, i.jsxs)(u.Text, {
                     variant: 'text-sm/normal',
-                    className: k.soundName,
+                    className: M.soundName,
                     children: [
                         g,
                         ' ',
                         (0, i.jsx)(u.VoiceNormalIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: k.soundPreviewIcon
+                            className: M.soundPreviewIcon
                         })
                     ]
                 })
             }),
             null != T &&
                 (0, i.jsxs)(u.Clickable, {
-                    className: k.uploader,
+                    className: M.uploader,
                     onClick: P,
                     children: [
                         (0, i.jsx)(u.Avatar, {
                             'aria-label': w,
                             size: u.AvatarSizes.SIZE_24,
-                            className: k.uploaderAvatar,
-                            src: (0, S.ov)(T, !1, 24)
+                            className: M.uploaderAvatar,
+                            src: (0, E.ov)(T, !1, 24)
                         }),
                         (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
@@ -350,12 +350,12 @@ function H(e) {
                         })
                     ]
                 }),
-            E
+            S
                 ? (0, i.jsxs)('div', {
-                      className: k.soundEditContainer,
+                      className: M.soundEditContainer,
                       children: [
                           (0, i.jsx)(u.Clickable, {
-                              className: k.soundUpdate,
+                              className: M.soundUpdate,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModalLazy)(async () => {
@@ -372,11 +372,11 @@ function H(e) {
                               children: (0, i.jsx)(u.PencilIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: k.soundEditIcon
+                                  className: M.soundEditIcon
                               })
                           }),
                           (0, i.jsx)(u.Clickable, {
-                              className: k.soundRemove,
+                              className: M.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModal)((e) =>
@@ -384,7 +384,7 @@ function H(e) {
                                               header: O.intl.formatToPlainString(O.t['PR/VbG'], { soundName: g }),
                                               confirmText: O.intl.string(O.t.oyYWHB),
                                               cancelText: O.intl.string(O.t['ETE/oK']),
-                                              onConfirm: M,
+                                              onConfirm: k,
                                               ...e,
                                               children: (0, i.jsx)(u.Text, {
                                                   variant: 'text-md/normal',
@@ -397,7 +397,7 @@ function H(e) {
                               children: (0, i.jsx)(u.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: k.soundEditIcon
+                                  className: M.soundEditIcon
                               })
                           })
                       ]

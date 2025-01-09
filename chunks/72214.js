@@ -6,20 +6,20 @@ n.d(t, {
     n(47120);
 var l = n(192379),
     r = n(442837),
-    i = n(38618),
-    s = n(51596),
+    s = n(38618),
+    i = n(51596),
     a = n(516373),
-    o = n(314897),
-    u = n(580005),
+    u = n(314897),
+    o = n(580005),
     c = n(987509),
     d = n(601565),
-    h = n(41837);
-function f(e) {
-    let { query: t, queryMode: n } = (0, s.F_)(e),
-        l = h.M,
+    f = n(41837);
+function h(e) {
+    let { query: t, queryMode: n } = (0, i.F_)(e),
+        l = f.M,
         r = null;
     return (
-        null != n && h.M.includes(n) && ((l = [n]), (r = n)),
+        null != n && f.M.includes(n) && ((l = [n]), (r = n)),
         {
             query: t,
             queryMode: r,
@@ -28,9 +28,9 @@ function f(e) {
     );
 }
 function m(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: s, includeMissingDMs: h = !1 } = e,
-        m = (0, r.e7)([o.default], () => o.default.getId()),
-        g = l.useMemo(
+    let { targetDestination: t, selectedDestinations: n, originDestination: i, includeMissingDMs: f = !1 } = e,
+        m = (0, r.e7)([u.default], () => u.default.getId()),
+        b = l.useMemo(
             () => ({
                 searchOptions: {
                     blacklist: new Set(['user:'.concat(m)]),
@@ -40,44 +40,44 @@ function m(e) {
             }),
             [m]
         ),
-        { search: p, query: b, results: x } = (0, d.Z)(g),
-        [v, C] = l.useState(f('')),
-        S = l.useCallback((e) => C(f(e)), [C]),
-        { queryMode: y } = v,
-        [N, Z] = l.useState(null != n ? n : []),
-        _ = l.useRef(n);
+        { search: p, query: x, results: g } = (0, d.Z)(b),
+        [y, C] = l.useState(h('')),
+        S = l.useCallback((e) => C(h(e)), [C]),
+        { queryMode: v } = y,
+        [E, Z] = l.useState(null != n ? n : []),
+        N = l.useRef(n);
     l.useEffect(() => {
-        _.current = n;
+        N.current = n;
     }),
         l.useLayoutEffect(() => {
             var e;
-            let { query: t, resultTypes: n } = v;
+            let { query: t, resultTypes: n } = y;
             p({
                 query: t,
                 resultTypes: n
             }),
-                Z(null !== (e = _.current) && void 0 !== e ? e : []);
-        }, [p, v]),
+                Z(null !== (e = N.current) && void 0 !== e ? e : []);
+        }, [p, y]),
         (0, a.D)();
-    let j = (0, r.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
-        E = (0, r.e7)([i.Z], () => i.Z.isConnected()),
-        M = '' !== b;
+    let L = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+        _ = (0, r.e7)([s.Z], () => s.Z.isConnected()),
+        j = '' !== x;
     return {
         results: l.useMemo(
             () =>
                 (0, c.ZP)({
-                    results: x,
-                    hasQuery: M,
-                    queryMode: y,
+                    results: g,
+                    hasQuery: j,
+                    queryMode: v,
                     targetDestination: t,
-                    frequentChannels: j,
+                    frequentChannels: L,
                     selectedDestinations: n,
-                    pinnedDestinations: N,
-                    originDestination: s,
-                    includeMissingDMs: h,
-                    isConnected: E
+                    pinnedDestinations: E,
+                    originDestination: i,
+                    includeMissingDMs: f,
+                    isConnected: _
                 }),
-            [x, M, y, t, j, n, N, s, h, E]
+            [g, j, v, t, L, n, E, i, f, _]
         ),
         updateSearchText: S
     };

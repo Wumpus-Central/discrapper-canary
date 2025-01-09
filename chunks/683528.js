@@ -62,7 +62,7 @@ function _(e) {
                 orientation: 'horizontal',
                 className: h.gallery,
                 ref: c,
-                onClick: (e) => e.stopPropagation(),
+                onMouseDown: (e) => e.stopPropagation(),
                 children: n.map((e, l) => {
                     let s = l === t,
                         u = s ? m.t['qv/U5e'] : m.t.zviMAA;

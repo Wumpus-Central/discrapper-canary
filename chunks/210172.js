@@ -1,151 +1,151 @@
 i.r(t), i(47120);
 var s = i(200651),
-    a = i(192379),
-    n = i(442837),
-    r = i(481060),
+    n = i(192379),
+    r = i(442837),
+    a = i(481060),
     l = i(367907),
     o = i(313201),
     d = i(456268),
     c = i(416162),
-    m = i(434404),
-    u = i(999382),
-    x = i(449543),
-    g = i(681518),
+    u = i(434404),
+    m = i(999382),
+    g = i(449543),
+    x = i(681518),
     h = i(627573),
     p = i(814008),
     v = i(259674),
     f = i(981631),
     N = i(128449),
-    T = i(388032),
-    j = i(89388),
-    C = i(438825);
+    I = i(388032),
+    S = i(89388),
+    j = i(438825);
 t.default = (e) => {
-    let { transitionState: t, onClose: I } = e,
-        { guild: S, guildMetadata: b } = (0, n.cj)([u.Z], () => u.Z.getProps()),
-        E = (0, o.Dt)(),
-        [_, y] = a.useState(!1),
-        [k, R] = a.useState(0),
-        [F, A] = a.useState(!1);
+    let { transitionState: t, onClose: C } = e,
+        { guild: T, guildMetadata: E } = (0, r.cj)([m.Z], () => m.Z.getProps()),
+        y = (0, o.Dt)(),
+        [b, _] = n.useState(!1),
+        [k, F] = n.useState(0),
+        [R, A] = n.useState(!1);
     if (
-        (a.useEffect(() => {
+        (n.useEffect(() => {
             l.ZP.trackWithMetadata(f.rMx.OPEN_MODAL, { type: f.jXE.DISCOVERY_SETUP_SUCCESS_MODAL });
         }, []),
-        null == S)
+        null == T)
     )
         return null;
-    let w = (0, s.jsx)(g.Z, {
-            guild: S,
-            headerId: E
+    let w = (0, s.jsx)(x.Z, {
+            guild: T,
+            headerId: y
         }),
-        D = (0, s.jsx)(x.Z, {
-            guild: S,
-            guildMetadata: b,
-            headerId: E
+        D = (0, s.jsx)(g.Z, {
+            guild: T,
+            guildMetadata: E,
+            headerId: y
         }),
-        P = (0, s.jsx)(p.Z, {
-            guild: S,
-            guildMetadata: b,
-            headerId: E
+        Z = (0, s.jsx)(p.Z, {
+            guild: T,
+            guildMetadata: E,
+            headerId: y
         }),
-        Z = (0, s.jsx)(h.Z, {
-            guild: S,
-            headerId: E,
+        M = (0, s.jsx)(h.Z, {
+            guild: T,
+            headerId: y,
             onAgreedChange: A
         }),
-        O = (0, s.jsx)('img', {
+        P = (0, s.jsx)('img', {
             alt: '',
-            src: C,
-            className: j.footerImage,
+            src: j,
+            className: S.footerImage,
             width: 240
         }),
-        M = async () => {
+        L = async () => {
             if (0 === k) {
-                y(!0);
+                _(!0);
                 try {
-                    await m.Z.saveGuild(
-                        S.id,
-                        { description: S.description },
+                    await u.Z.saveGuild(
+                        T.id,
+                        { description: T.description },
                         {
                             isForDiscovery: !0,
                             throwErr: !0
                         }
                     ),
-                        R(k + 1),
-                        (0, v.Nx)(v.tK.DESCRIPTION, v.tK.CATEGORIES, S.id);
+                        F(k + 1),
+                        (0, v.Nx)(v.tK.DESCRIPTION, v.tK.CATEGORIES, T.id);
                 } catch (e) {}
-            } else if (1 === k) R(k + 1), (0, v.Nx)(v.tK.CATEGORIES, v.tK.TAGS, S.id);
+            } else if (1 === k) F(k + 1), (0, v.Nx)(v.tK.CATEGORIES, v.tK.TAGS, T.id);
             else if (2 === k) {
-                y(!0);
+                _(!0);
                 try {
                     await (0, d.Vv)({
-                        guildId: S.id,
-                        primaryCategoryId: b.primaryCategoryId,
-                        keywords: b.keywords,
-                        emojiDiscoverabilityEnabled: b.emojiDiscoverabilityEnabled,
-                        partnerActionedTimestamp: b.partnerActionedTimestamp,
-                        partnerApplicationTimestamp: b.partnerApplicationTimestamp,
-                        isPublished: b.isPublished,
-                        reasonsToJoin: b.reasonsToJoin,
-                        socialLinks: b.socialLinks,
-                        about: b.about
+                        guildId: T.id,
+                        primaryCategoryId: E.primaryCategoryId,
+                        keywords: E.keywords,
+                        emojiDiscoverabilityEnabled: E.emojiDiscoverabilityEnabled,
+                        partnerActionedTimestamp: E.partnerActionedTimestamp,
+                        partnerApplicationTimestamp: E.partnerApplicationTimestamp,
+                        isPublished: E.isPublished,
+                        reasonsToJoin: E.reasonsToJoin,
+                        socialLinks: E.socialLinks,
+                        about: E.about
                     }),
-                        R(k + 1),
-                        (0, v.Nx)(v.tK.TAGS, v.tK.AGREE_TO_RULES, S.id);
+                        F(k + 1),
+                        (0, v.Nx)(v.tK.TAGS, v.tK.AGREE_TO_RULES, T.id);
                 } catch (e) {}
             }
-            y(!1);
+            _(!1);
         },
-        L = [
+        O = [
             {
                 modalContent: w,
-                disableNextStep: null == S.description,
-                overviewTitle: T.intl.string(T.t.RHP0kJ)
+                disableNextStep: null == T.description,
+                overviewTitle: I.intl.string(I.t.RHP0kJ)
             },
             {
                 modalContent: D,
-                disableNextStep: b.primaryCategoryId === N.o3 || null == b.primaryCategoryId,
-                overviewTitle: T.intl.string(T.t.Rv9An5)
-            },
-            {
-                modalContent: P,
-                disableNextStep: 0 === b.keywords.length,
-                overviewTitle: T.intl.string(T.t['0PJZXl'])
+                disableNextStep: E.primaryCategoryId === N.o3 || null == E.primaryCategoryId,
+                overviewTitle: I.intl.string(I.t.Rv9An5)
             },
             {
                 modalContent: Z,
-                disableNextStep: !F,
-                overviewTitle: T.intl.string(T.t.Q8OFNz)
+                disableNextStep: 0 === E.keywords.length,
+                overviewTitle: I.intl.string(I.t['0PJZXl'])
+            },
+            {
+                modalContent: M,
+                disableNextStep: !R,
+                overviewTitle: I.intl.string(I.t.Q8OFNz)
             }
         ];
     return (0, s.jsx)(c.Z, {
-        stepData: L,
-        title: T.intl.string(T.t.uyuIen),
+        stepData: O,
+        title: I.intl.string(I.t.uyuIen),
         transitionState: t,
-        onClose: I,
-        completeButtonText: T.intl.string(T.t.wYi2lJ),
-        onNextPressed: M,
+        onClose: C,
+        completeButtonText: I.intl.string(I.t.wYi2lJ),
+        onNextPressed: L,
         onPrevPressed: () => {
-            R(k - 1);
+            F(k - 1);
         },
         forceStep: k,
         onComplete: () => {
-            let e = S.features;
-            !S.hasFeature(f.oNc.DISCOVERABLE) && e.add(f.oNc.DISCOVERABLE),
-                m.Z.saveGuild(S.id, {
+            let e = T.features;
+            !T.hasFeature(f.oNc.DISCOVERABLE) && e.add(f.oNc.DISCOVERABLE),
+                u.Z.saveGuild(T.id, {
                     features: e,
-                    description: S.description
+                    description: T.description
                 }),
-                (0, r.openModalLazy)(async () => {
+                (0, a.openModalLazy)(async () => {
                     let { default: e } = await i.e('263').then(i.bind(i, 477520));
                     return (t) =>
                         (0, s.jsx)(e, {
                             ...t,
-                            guild: S
+                            guild: T
                         });
                 });
         },
-        overviewFooter: O,
-        submitting: _,
-        sequencerClassName: j.container
+        overviewFooter: P,
+        submitting: b,
+        sequencerClassName: S.container
     });
 };

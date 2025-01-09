@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(666912),
-    a = n(722770),
-    s = n(481060),
+    s = n(722770),
+    a = n(481060),
     o = n(236413),
     c = n(85960),
     d = n(65912),
@@ -21,35 +21,35 @@ function g(e) {
         [x] = r.useState(g),
         [p, f] = r.useState(!1),
         { editingRule: C, createNewEditingRule: v } = (0, d.V)(),
-        { getDefaultRuleName: _ } = c.I6[n],
-        N = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
-        [I, T] = r.useState(N ? C : x),
-        j = (0, s.useSpring)({
-            opacity: N ? 0 : 1,
-            pointerEvents: N ? 'none' : 'all',
+        { getDefaultRuleName: N } = c.I6[n],
+        _ = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
+        [I, T] = r.useState(_ ? C : x),
+        j = (0, a.useSpring)({
+            opacity: _ ? 0 : 1,
+            pointerEvents: _ ? 'none' : 'all',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             }
         }),
-        b = (0, s.useSpring)({
-            opacity: N ? 1 : 0,
-            pointerEvents: N ? 'all' : 'none',
+        b = (0, a.useSpring)({
+            opacity: _ ? 1 : 0,
+            pointerEvents: _ ? 'all' : 'none',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             },
             onStart: () => {
-                T(N ? C : x);
+                T(_ ? C : x);
             },
             onRest: () => {
-                T(N ? C : x), f(N);
+                T(_ ? C : x), f(_);
             }
         });
-    return null == C || N
+    return null == C || _
         ? (0, i.jsxs)('div', {
               className: h.mainRuleContainer,
-              style: { height: N ? 'auto' : '60px' },
+              style: { height: _ ? 'auto' : '60px' },
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
@@ -62,23 +62,23 @@ function g(e) {
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedNewRuleContainer,
                       style: j,
-                      children: (0, i.jsxs)(s.Clickable, {
+                      children: (0, i.jsxs)(a.Clickable, {
                           className: h.addAnotherRuleCardContainer,
                           onClick: () => {
                               v(t, n);
                           },
                           children: [
-                              (0, i.jsx)(s.CirclePlusIcon, {
+                              (0, i.jsx)(a.CirclePlusIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
-                                  color: a.Z.BLUE_345,
+                                  color: s.Z.BLUE_345,
                                   className: h.plusIcon
                               }),
-                              (0, i.jsx)(s.Text, {
+                              (0, i.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: _() })
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: N() })
                               })
                           ]
                       })

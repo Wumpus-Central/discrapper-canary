@@ -14,9 +14,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(512722),
+    o = n.n(a),
     c = n(481060),
     d = n(755930),
     u = n(708952);
@@ -55,7 +55,7 @@ function m(e, t) {
                             children: (0, i.jsx)(c.ChevronSmallRightIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: a()(u.caretIcon, { [u.caretDownIcon]: l })
+                                className: s()(u.caretIcon, { [u.caretDownIcon]: l })
                             })
                         })
                     });

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(780384),
     l = n(481060),
-    a = n(410030),
-    s = n(293810),
+    s = n(410030),
+    a = n(293810),
     o = n(388032),
     c = n(552091),
     d = n(934961),
@@ -23,8 +23,8 @@ var r = n(780384),
 function v(e) {
     return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function _() {
-    let e = (0, a.ZP)(),
+function N() {
+    let e = (0, s.ZP)(),
         t = { backgroundColor: (0, r.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
     return (0, i.jsxs)('div', {
         className: c.earningsPreviewContainer,
@@ -53,8 +53,8 @@ function _() {
         ]
     });
 }
-function N() {
-    let e = (0, a.ZP)();
+function _() {
+    let e = (0, s.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
         return (0, i.jsx)('div', {
@@ -134,9 +134,9 @@ function I() {
                 children: o.intl.string(o.t['9CdmS0'])
             }),
             (0, i.jsx)(l.Spacer, { size: 32 }),
-            (0, i.jsx)(_, {}),
+            (0, i.jsx)(N, {}),
             (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(N, {})
+            (0, i.jsx)(_, {})
         ]
     });
 }
@@ -164,7 +164,7 @@ function T() {
     });
 }
 function j() {
-    let e = (0, a.ZP)();
+    let e = (0, s.ZP)();
     return (0, i.jsxs)('div', {
         className: c.revenueShareBenefitCard,
         children: [
@@ -177,7 +177,7 @@ function j() {
                             lineHeight: '52px'
                         },
                         variant: 'heading-xxl/extrabold',
-                        children: [s.NT, '%']
+                        children: [a.NT, '%']
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',

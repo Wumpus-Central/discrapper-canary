@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(393238),
     d = n(607070),
@@ -16,22 +16,22 @@ var i = n(200651),
     m = n(207809);
 let h = r.forwardRef(function (e, t) {
     var n, l;
-    let { value: s, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: h } = e,
+    let { value: a, isSelected: c, isEditing: d, forceShowErrorTooltip: u = !1, error: h } = e,
         [g, x, p] = r.useMemo(() => {
             if (null == h) return [];
-            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = s.length } = null != h ? h : {},
-                n = s.slice(0, e),
-                i = s.slice(e, e + t);
-            return [n, i, s.slice(e + t)];
-        }, [s, h]);
+            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = a.length } = null != h ? h : {},
+                n = a.slice(0, e),
+                i = a.slice(e, e + t);
+            return [n, i, a.slice(e + t)];
+        }, [a, h]);
     return null == h
         ? (0, i.jsx)('div', {
-              className: a()(m.chipletValue, {
+              className: s()(m.chipletValue, {
                   [m.isEditing]: d,
                   [m.isSelected]: c
               }),
               ref: t,
-              children: s
+              children: a
           })
         : (null !== (n = null == g ? void 0 : g.length) && void 0 !== n ? n : 0) + (null !== (l = null == x ? void 0 : x.length) && void 0 !== l ? l : 0) > 70
           ? (0, i.jsx)(o.Tooltip, {
@@ -55,7 +55,7 @@ let h = r.forwardRef(function (e, t) {
                 children: (e) =>
                     (0, i.jsxs)('div', {
                         ref: t,
-                        className: a()(m.chipletValue, {
+                        className: s()(m.chipletValue, {
                             [m.isEditing]: d,
                             [m.isError]: null != h && !d,
                             [m.isOverflowing]: null != h && !d
@@ -73,7 +73,7 @@ let h = r.forwardRef(function (e, t) {
             })
           : (0, i.jsxs)('div', {
                 ref: t,
-                className: a()(m.chipletValue, {
+                className: s()(m.chipletValue, {
                     [m.isEditing]: d,
                     [m.isError]: null != h && !d
                 }),
@@ -97,26 +97,26 @@ let h = r.forwardRef(function (e, t) {
 });
 function g(e) {
     let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: v } = e,
-        _ = r.useRef(null),
         N = r.useRef(null),
+        _ = r.useRef(null),
         [I, T] = r.useState(!1),
         { ref: j, width: b = 0 } = (0, c.Z)(I),
-        { ref: S, width: E = 0 } = (0, c.Z)(I),
-        R = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        [y, Z] = r.useState(v),
-        A = r.useRef(null),
-        L = b > E ? b : E;
+        { ref: E, width: S = 0 } = (0, c.Z)(I),
+        R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        [y, A] = r.useState(v),
+        Z = r.useRef(null),
+        L = b > S ? b : S;
     r.useEffect(() => {
         v
-            ? (Z(!0),
-              (A.current = setTimeout(() => {
-                  Z(!1), (A.current = null);
+            ? (A(!0),
+              (Z.current = setTimeout(() => {
+                  A(!1), (Z.current = null);
               }, u.I5)))
-            : Z(!1);
+            : A(!1);
     }, [v]),
         r.useEffect(
             () => () => {
-                clearTimeout(A.current);
+                clearTimeout(Z.current);
             },
             []
         );
@@ -129,22 +129,22 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != _.current && null != j.current && null != N.current)) {
+                if ((t.trim().length <= 0 && x(), null != N.current && null != j.current && null != _.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = N.current) || void 0 === n ? void 0 : n.ref) != null && (N.current.ref.scrollLeft = 0);
+                    N.current.scrollTo(0, 0), N.current.setSelectionRange(0, 0), (N.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = _.current) || void 0 === n ? void 0 : n.ref) != null && (_.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
             [t, j, l, x]
         ),
-        k = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
                 u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
             },
             [O, t]
         ),
-        M = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
@@ -160,8 +160,8 @@ function g(e) {
     return (0, i.jsx)('div', {
         className: m.chipletFlexContainer,
         children: (0, i.jsxs)('div', {
-            ref: S,
-            className: a()(m.chipletContainer, {
+            ref: E,
+            className: s()(m.chipletContainer, {
                 [m.isEditing]: I,
                 [m.smallBlink]: !I && !R,
                 [m.isSelected]: p,
@@ -172,24 +172,24 @@ function g(e) {
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: M,
+                    onClick: k,
                     ignoreKeyPress: !0,
-                    onMouseEnter: () => Z(!0),
-                    onMouseLeave: () => Z(!1),
-                    className: a()(m.chipletContainerInner, {
+                    onMouseEnter: () => A(!0),
+                    onMouseLeave: () => A(!1),
+                    className: s()(m.chipletContainerInner, {
                         [m.isSelecting]: f,
                         [m.isEditing]: I
                     }),
-                    ref: N,
+                    ref: _,
                     children: [
                         (0, i.jsx)('input', {
-                            className: a()(m.chipletInput, {
+                            className: s()(m.chipletInput, {
                                 [m.isEditing]: I,
                                 [m.isSelecting]: f
                             }),
-                            ref: _,
+                            ref: N,
                             onChange: D,
-                            onKeyDownCapture: k,
+                            onKeyDownCapture: M,
                             value: t,
                             style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),

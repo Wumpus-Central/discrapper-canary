@@ -44,7 +44,7 @@ function L(e) {
         className: r()(w.categoryRow, { [w.uncategorized]: 'null' === a.id }),
         onContextMenu: (e) => {
             (0, u.jW)(e, async () => {
-                let { default: e } = await t.e('8965').then(t.bind(t, 139035));
+                let { default: e } = await Promise.all([t.e('8965'), t.e('14280')]).then(t.bind(t, 139035));
                 return (t) =>
                     (0, l.jsx)(e, {
                         ...t,
@@ -116,7 +116,7 @@ let k = a.memo(function () {
             G = (e) => {
                 n.isGuildVocal()
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331')]).then(t.bind(t, 213202));
+                          let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331'), t.e('81070')]).then(t.bind(t, 213202));
                           return (t) =>
                               (0, l.jsx)(e, {
                                   ...t,
@@ -125,7 +125,7 @@ let k = a.memo(function () {
                               });
                       })
                     : (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('54310')]).then(t.bind(t, 373651));
+                          let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('44011')]).then(t.bind(t, 373651));
                           return (t) =>
                               (0, l.jsx)(e, {
                                   ...t,

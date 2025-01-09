@@ -1,20 +1,20 @@
 n.d(t, {
     ZP: function () {
-        return A;
+        return Z;
     },
     fp: function () {
         return R;
     },
     k0: function () {
-        return E;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
+    s = n.n(l),
+    a = n(392711),
     o = n(442837),
     c = n(481060),
     d = n(230711),
@@ -27,13 +27,13 @@ var i = n(200651),
     f = n(63063),
     C = n(78451),
     v = n(434404),
-    _ = n(999382),
-    N = n(181339),
+    N = n(999382),
+    _ = n(181339),
     I = n(193544),
     T = n(981631),
     j = n(388032),
     b = n(686160);
-function S(e) {
+function E(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         l = r.useCallback(
@@ -47,14 +47,14 @@ function S(e) {
             },
             [t]
         ),
-        a = r.useMemo(() => {
+        s = r.useMemo(() => {
             let e = (0, C.IF)(null == t ? void 0 : t.hasFeature(T.oNc.COMMUNITY)).map((e) => ({
                 ...e,
                 tooltipPosition: 'left'
             }));
             return (0, C.LJ)(e);
         }, [t]),
-        s = r.useMemo(() => a.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, a]);
+        a = r.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
     return (0, i.jsxs)('div', {
         className: b.setupContainer,
         children: [
@@ -75,17 +75,17 @@ function S(e) {
             }),
             (0, i.jsx)(I.Z, {
                 changeTitle: j.intl.string(j.t.TxESJC),
-                value: null == s ? void 0 : s.value,
-                options: a,
+                value: null == a ? void 0 : a.value,
+                options: s,
                 disabled: !n,
                 onChange: l
             })
         ]
     });
 }
-function E(e) {
+function S(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
-        s = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
+        a = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         d = r.useCallback(
             async (e) => {
                 let { value: n } = e;
@@ -109,7 +109,7 @@ function E(e) {
         children: [
             l && (0, i.jsx)(c.FormDivider, { className: b.divider }),
             (0, i.jsxs)('div', {
-                className: a()(b.setupContainer, n),
+                className: s()(b.setupContainer, n),
                 children: [
                     (0, i.jsxs)('div', {
                         className: b.switchItemTextContent,
@@ -130,7 +130,7 @@ function E(e) {
                         changeTitle: j.intl.string(j.t['eBd+Ul']),
                         value: null == m ? void 0 : m.value,
                         options: u,
-                        disabled: !s,
+                        disabled: !a,
                         onChange: d
                     })
                 ]
@@ -147,15 +147,15 @@ function y(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         l = t.hasFeature(T.oNc.COMMUNITY),
-        a = (0, h.n2)(t.id),
-        [s, d] = r.useState(t.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        s = (0, h.n2)(t.id),
+        [a, d] = r.useState(t.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         u = r.useCallback(
             async (e) => {
                 d(e), await R(t, e);
             },
             [t]
         );
-    return l || !a
+    return l || !s
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -163,7 +163,7 @@ function y(e) {
                       className: b.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
-                              value: s,
+                              value: a,
                               onChange: u,
                               className: b.switchItem,
                               disabled: !n,
@@ -195,25 +195,25 @@ function y(e) {
               ]
           });
 }
-function Z(e) {
+function A(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
-        a = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        s = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         { isGuildOwnerWithMFA: u, showMFAUserTooltip: m } = r.useMemo(
             () =>
-                null == a
+                null == s
                     ? {
                           canChangeMFALevel: !1,
                           showMFAUserTooltip: !1
                       }
                     : {
-                          isGuildOwnerWithMFA: t.isOwnerWithRequiredMfaLevel(a),
-                          showMFAUserTooltip: !a.mfaEnabled && t.isOwner(a)
+                          isGuildOwnerWithMFA: t.isOwnerWithRequiredMfaLevel(s),
+                          showMFAUserTooltip: !s.mfaEnabled && t.isOwner(s)
                       },
-            [a, t]
+            [s, t]
         ),
         h = n === T.BpS.ELEVATED,
-        x = (0, s.throttle)(async (e) => {
+        x = (0, a.throttle)(async (e) => {
             if (!!u && !m)
                 await v.Z.updateMFALevel({
                     guildId: t.id,
@@ -266,8 +266,8 @@ function Z(e) {
           })
         : null;
 }
-function A() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
+function Z() {
+    let { guild: e, mfaLevel: t } = (0, o.cj)([N.Z], () => N.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
         ? null
@@ -279,16 +279,16 @@ function A() {
                 titleClassName: b.headerContainer,
                 children: [
                     (0, i.jsx)(y, { guild: e }),
-                    (0, i.jsx)(S, { guild: e }),
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(E, { guild: e }),
+                    (0, i.jsx)(A, {
                         guild: e,
                         mfaLevel: t
                     }),
-                    (0, i.jsx)(E, { guild: e }),
+                    (0, i.jsx)(S, { guild: e }),
                     (0, i.jsx)(c.FormDivider, { className: b.divider }),
                     (0, i.jsx)('div', {
-                        className: a()(b.setupContainer),
-                        children: (0, i.jsx)(N.w, { guild: e })
+                        className: s()(b.setupContainer),
+                        children: (0, i.jsx)(_.w, { guild: e })
                     })
                 ]
             });

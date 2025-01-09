@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         default: function () {
-            return g;
+            return C;
         }
     });
 var l = n(200651),
@@ -9,55 +9,55 @@ var l = n(200651),
     t = n(481060),
     s = n(100527),
     a = n(906732),
-    c = n(563132),
-    i = n(409813),
+    i = n(563132),
+    c = n(409813),
     d = n(185139),
     u = n(263954),
     p = n(267642),
     m = n(678558),
     f = n(981631),
     h = n(388032),
-    x = n(316798),
-    _ = n(232186);
+    _ = n(316798),
+    x = n(232186);
 let N = 'premium-guild-subscription-upsell-modal-header';
-function b(e) {
+function y(e) {
     let { title: r, subtitle: n, image: o } = e;
     return (0, l.jsxs)('div', {
-        className: x.header,
+        className: _.header,
         children: [
             (0, l.jsx)(t.Heading, {
                 variant: 'heading-xl/semibold',
                 id: N,
                 color: 'header-primary',
-                className: _.marginBottom8,
+                className: x.marginBottom8,
                 children: r
             }),
             (0, l.jsx)(t.Text, {
                 variant: 'text-md/normal',
-                className: x.subtitleText,
+                className: _.subtitleText,
                 children: n
             }),
             o
         ]
     });
 }
-let v = (e) => {
+let b = (e) => {
         let { onClose: r, perks: n, perkIntro: o = h.intl.string(h.t.Dr3Goa), headerProps: s } = e;
         return (0, l.jsxs)('div', {
-            className: x.wrapper,
+            className: _.wrapper,
             children: [
                 (0, l.jsx)(t.ModalCloseButton, {
-                    className: x.closeButton,
+                    className: _.closeButton,
                     onClick: () => {
                         r();
                     }
                 }),
-                (0, l.jsx)(y, {
+                (0, l.jsx)(v, {
                     headerProps: s,
                     perkIntro: o
                 }),
                 (0, l.jsx)('div', {
-                    className: x.perks,
+                    className: _.perks,
                     children: n.map((e, r) => {
                         let { icon: n, iconClassName: o, description: t, color: s } = e;
                         return (0, l.jsx)(
@@ -75,26 +75,26 @@ let v = (e) => {
             ]
         });
     },
-    y = (e) => {
+    v = (e) => {
         let { headerProps: r, perkIntro: s } = e;
         return (0, l.jsxs)(o.Fragment, {
             children: [
                 null != r
-                    ? (0, l.jsx)(b, { ...r })
+                    ? (0, l.jsx)(y, { ...r })
                     : (0, l.jsx)('img', {
-                          className: x.heroImage,
+                          className: _.heroImage,
                           src: n(438471),
                           alt: h.intl.string(h.t.PkcaAA)
                       }),
                 (0, l.jsx)(t.Text, {
                     variant: 'text-md/normal',
-                    className: x.heading,
+                    className: _.heading,
                     children: s
                 })
             ]
         });
     },
-    C = (e) => {
+    S = (e) => {
         let { guild: r, targetBoostedGuildTier: n, onClose: o, analyticsSourceLocation: s } = e,
             a = {
                 section: f.jXE.PREMIUM_GUILD_UPSELL_MODAL,
@@ -102,7 +102,7 @@ let v = (e) => {
                 objectType: null != n ? (0, p.ge)(n) : null
             };
         return (0, l.jsxs)(t.ModalFooter, {
-            className: x.footer,
+            className: _.footer,
             children: [
                 (0, l.jsx)(t.Button, {
                     size: t.Button.Sizes.SMALL,
@@ -125,12 +125,12 @@ let v = (e) => {
             ]
         });
     };
-function g(e) {
+function C(e) {
     let { analyticsSourceLocation: r, guild: n, targetBoostedGuildTier: o, perks: u, perkIntro: p, headerProps: m, onClose: f, ...h } = e,
-        { analyticsLocations: x } = (0, a.ZP)(s.Z.ACTIVITY_DIRECTORY);
+        { analyticsLocations: _ } = (0, a.ZP)(s.Z.ACTIVITY_DIRECTORY);
     return (0, l.jsx)(a.Gt, {
-        value: x,
-        children: (0, l.jsx)(c.PaymentContextProvider, {
+        value: _,
+        children: (0, l.jsx)(i.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
             skuIDs: [],
@@ -139,20 +139,20 @@ function g(e) {
                 'aria-labelledby': N,
                 children: (0, l.jsx)(d.Z, {
                     hideBreadcrumbs: !0,
-                    body: (0, l.jsx)(v, {
+                    body: (0, l.jsx)(b, {
                         onClose: f,
                         perks: u,
                         perkIntro: p,
                         headerProps: m
                     }),
-                    footer: (0, l.jsx)(C, {
+                    footer: (0, l.jsx)(S, {
                         guild: n,
                         targetBoostedGuildTier: o,
                         onClose: f,
                         analyticsSourceLocation: r
                     }),
-                    steps: [i.h8.PREMIUM_GUILD_UPSELL],
-                    currentStep: i.h8.PREMIUM_GUILD_UPSELL
+                    steps: [c.h8.PREMIUM_GUILD_UPSELL],
+                    currentStep: c.h8.PREMIUM_GUILD_UPSELL
                 })
             })
         })

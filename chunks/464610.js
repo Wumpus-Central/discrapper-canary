@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(727072),
-    s = n(85960),
+    s = n(727072),
+    a = n(85960),
     o = n(676317),
     c = n(823379),
     d = n(84613),
@@ -17,7 +17,7 @@ var i = n(200651),
     h = n(388032),
     g = n(20115);
 function x(e) {
-    let { title: t, subtitle: n, icon: r, page: a } = e;
+    let { title: t, subtitle: n, icon: r, page: s } = e;
     return (0, i.jsxs)('div', {
         className: g.safetyStepRow,
         children: [
@@ -50,7 +50,7 @@ function x(e) {
                 size: l.Button.Sizes.SMALL,
                 color: l.Button.Colors.PRIMARY,
                 look: l.Button.Looks.OUTLINED,
-                onClick: () => (0, d.K)(a),
+                onClick: () => (0, d.K)(s),
                 children: h.intl.string(h.t.bt75u7)
             })
         ]
@@ -58,9 +58,9 @@ function x(e) {
 }
 function p(e) {
     let { guild: t } = e;
-    (0, a.RD)(t.id);
-    let d = (0, s.Z6)(t.id),
-        { rulesByTriggerType: p } = (0, a.pH)(t.id),
+    (0, s.RD)(t.id);
+    let d = (0, a.Z6)(t.id),
+        { rulesByTriggerType: p } = (0, s.pH)(t.id),
         { numEnabledRules: f, numRules: C } = r.useMemo(() => {
             let e = 0,
                 t = 0;
@@ -88,8 +88,8 @@ function p(e) {
                   });
         }, [d, p]),
         v = (0, m.Q)(t),
-        _ = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        N = v[u.u.DM_AND_SPAM_PROTECTION],
+        N = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        _ = v[u.u.DM_AND_SPAM_PROTECTION],
         I = v[u.u.PERMISSIONS],
         T = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
@@ -107,8 +107,8 @@ function p(e) {
                         icon: n(14215),
                         title: h.intl.string(h.t['53eF5u']),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: _.filter((e) => e.enabled).length,
-                            total: _.length
+                            enabled: N.filter((e) => e.enabled).length,
+                            total: N.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
@@ -117,8 +117,8 @@ function p(e) {
                         icon: n(128724),
                         title: h.intl.string(h.t.O0SfFx),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: N.filter((e) => e.enabled).length,
-                            total: N.length
+                            enabled: _.filter((e) => e.enabled).length,
+                            total: _.length
                         }),
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),

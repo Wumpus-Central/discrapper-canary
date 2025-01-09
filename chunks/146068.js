@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(249849),
     l = n(907561),
-    a = n(388032),
-    s = n(585025);
+    s = n(388032),
+    a = n(585025);
 let o = ['#0fa3dd', '#a7e4e4', '#a2ccdd'],
     c = ['#0b3215', '#a6b51a', '#35748a', '#65a88f', '#621c12', '#f96748', '#ffbbbb'],
     d = [0.25, 0.9, 0.9],
@@ -69,10 +69,10 @@ function g(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: h
         }),
-        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
+        { styleContent: v, containerId: N } = (0, l.bC)(f, C);
     return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': a.intl.string(a.t.nH6S2d),
+        'aria-label': s.intl.string(s.t.nH6S2d),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
@@ -102,12 +102,12 @@ function g(e) {
                 ]
             }),
             (0, i.jsx)('use', {
-                href: ''.concat(s, '#sky'),
+                href: ''.concat(a, '#sky'),
                 style: { fill: 'url(#sky-gradient)' }
             }),
             (0, i.jsx)('use', {
-                href: ''.concat(s, '#wrapper-layer'),
-                id: _
+                href: ''.concat(a, '#wrapper-layer'),
+                id: N
             })
         ]
     });

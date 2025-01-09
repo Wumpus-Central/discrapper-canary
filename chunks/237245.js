@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return N;
+        return I;
     }
 }),
     n(47120);
@@ -21,18 +21,18 @@ var i = n(200651),
     f = n(386885),
     C = n(981631),
     v = n(128449),
-    _ = n(388032);
-function I(e) {
+    N = n(388032);
+function _(e) {
     var t;
     let { pendingState: l, settingsGuild: g, settingsMetadata: x } = e,
-        I = g.id,
-        [N, T] = r.useState(!1),
+        _ = g.id,
+        [I, T] = r.useState(!1),
         [j, b] = r.useState(null),
         E = g.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         S = null !== (t = (0, m.A)({ guildId: g.id })) && void 0 !== t ? t : 0,
         R = r.useCallback(() => {
-            b(null), h.Z.init(I, C.pNK.ACCESS);
-        }, [I]),
+            b(null), h.Z.init(_, C.pNK.ACCESS);
+        }, [_]),
         y = r.useCallback(async (e) => {
             try {
                 T(!0), await e(), b(null);
@@ -47,26 +47,26 @@ function I(e) {
                 try {
                     await h.Z.saveGuild(g.id, { features: e }, { throwErr: !0 });
                 } catch (e) {
-                    throw ('object' == typeof e && 'message' in e ? b(e.message) : b(_.intl.formatToPlainString(_.t.aTVNen, { statusPageURL: C.yXt.STATUS })), e);
+                    throw ('object' == typeof e && 'message' in e ? b(e.message) : b(N.intl.formatToPlainString(N.t.aTVNen, { statusPageURL: C.yXt.STATUS })), e);
                 }
             }
         }, [g]),
         Z = r.useCallback(
             async (e, t) => {
                 try {
-                    await c.ZP.updateVerificationForm(I, e, t);
+                    await c.ZP.updateVerificationForm(_, e, t);
                 } catch (e) {
                     throw (b(new o.Hx(e).getAnyErrorMessage()), e);
                 }
             },
-            [I]
+            [_]
         ),
         L = r.useCallback(() => {
             if (l.joinType === p.A.INVITE) {
                 let { requireTerms: e, termRules: t = [] } = l,
                     n = t.map((e) => e.value.trim()).filter((e) => '' !== e);
                 if (n.length < 1 && e) {
-                    b(_.intl.string(_.t.TCHkcX));
+                    b(N.intl.string(N.t.TCHkcX));
                     return;
                 }
                 let i =
@@ -74,7 +74,7 @@ function I(e) {
                         ? [
                               {
                                   field_type: d.QJ.TERMS,
-                                  label: _.intl.string(_.t['9suSIC']),
+                                  label: N.intl.string(N.t['9suSIC']),
                                   values: n,
                                   required: !0
                               }
@@ -87,7 +87,7 @@ function I(e) {
                 let { pendingVerificationFields: e } = l;
                 if (null == e) return;
                 if (!e.some((e) => (0, u._C)(e))) {
-                    b(_.intl.string(_.t.HGVrIy));
+                    b(N.intl.string(N.t.HGVrIy));
                     return;
                 }
                 y(async () => {
@@ -103,7 +103,7 @@ function I(e) {
                         return (n) =>
                             (0, i.jsx)(t, {
                                 ...n,
-                                guildId: I,
+                                guildId: _,
                                 onConfirm: e
                             });
                     });
@@ -118,7 +118,7 @@ function I(e) {
                         return (n) =>
                             (0, i.jsx)(t, {
                                 ...n,
-                                guildId: I,
+                                guildId: _,
                                 submittedGuildJoinRequestsCount: S,
                                 onConfirm: e
                             });
@@ -127,20 +127,20 @@ function I(e) {
                 }
                 e();
             })(() => e(L));
-        }, [E, L, l, I, S]),
+        }, [E, L, l, _, S]),
         O = l.joinType === p.A.DISCOVERABLE && l.settingsView === f.U.ELIGIBLE_DISABLED,
         M = null != g.description && x.primaryCategoryId !== v.o3 && x.keywords.length > 0;
     return (0, i.jsx)(a.Z, {
-        message: O ? _.intl.string(_.t.V2G2Ym) : void 0,
-        onSaveText: O ? _.intl.string(_.t['qjtt/v']) : void 0,
-        submitting: N,
+        message: O ? N.intl.string(N.t.V2G2Ym) : void 0,
+        onSaveText: O ? N.intl.string(N.t['qjtt/v']) : void 0,
+        submitting: I,
         errorMessage: j,
         onReset: R,
         onSave: D,
         disabled: O && !M
     });
 }
-function N() {
+function I() {
     let e = (0, l.e7)([x.Z], () => x.Z.pendingState),
         { settingsGuild: t, settingsMetadata: n } = (0, l.cj)([g.Z], () => {
             let { guild: e, guildMetadata: t } = g.Z.getProps();
@@ -153,10 +153,10 @@ function N() {
         ? null
         : e.joinType === p.A.DISCOVERABLE && e.settingsView === f.U.INELIGIBLE
           ? (0, i.jsx)(a.Z, {
-                message: _.intl.string(_.t.TEXwRk),
+                message: N.intl.string(N.t.TEXwRk),
                 onReset: () => h.Z.init(t.id, C.pNK.ACCESS)
             })
-          : (0, i.jsx)(I, {
+          : (0, i.jsx)(_, {
                 pendingState: e,
                 settingsGuild: t,
                 settingsMetadata: n

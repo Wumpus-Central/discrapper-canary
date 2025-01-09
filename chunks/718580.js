@@ -99,7 +99,7 @@ function I(e) {
         ),
         B = (0, p.Z)(C),
         { width: G, centered: Z = !0 } = b,
-        F = l.tq ? '100%' : k.width.to((e) => Math.round(e)),
+        F = l.tq ? '100%' : k.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         V = l.tq ? '100%' : k.height.to((e) => Math.round(e)),
         j = l.tq
             ? {}

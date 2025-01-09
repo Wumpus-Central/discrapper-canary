@@ -1,32 +1,32 @@
-a.d(t, {
+s.d(t, {
     o: function () {
-        return m;
+        return h;
     }
 }),
-    a(47120);
-var n,
-    s = a(200651),
-    i = a(192379),
-    r = a(948789),
-    l = a(66037),
-    o = a(248108),
-    c = a(231338),
-    d = a(330711);
-function u(e, t, a) {
+    s(47120);
+var a,
+    n = s(200651),
+    r = s(192379),
+    i = s(948789),
+    o = s(66037),
+    l = s(248108),
+    c = s(231338),
+    d = s(330711);
+function u(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: a,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = a),
+            : (e[t] = s),
         e
     );
 }
-let N = c.j_.MAIN_NAVIGATION_MENU,
-    h = (e) => [
+let p = c.j_.MAIN_NAVIGATION_MENU,
+    N = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
@@ -124,66 +124,66 @@ let N = c.j_.MAIN_NAVIGATION_MENU,
             ]
         }
     ];
-class m extends (n = i.PureComponent) {
+class h extends (a = r.PureComponent) {
     render() {
-        let e = (0, r.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: i, avoidRouter: u } = this.props,
-            { sectionShown: m } = this.state;
-        return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((r) => {
-            if (null != r.links)
-                return (0, s.jsx)(
-                    o.Z,
+        let e = (0, i.fQ)(this.context.router),
+            { isMobile: t, isVisible: s, styles: a, TrackClick: r, avoidRouter: u } = this.props,
+            { sectionShown: h } = this.state;
+        return N(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((i) => {
+            if (null != i.links)
+                return (0, n.jsx)(
+                    l.Z,
                     {
-                        title: r.title,
-                        links: r.links,
-                        isOpen: m === r.title,
+                        title: i.title,
+                        links: i.links,
+                        isOpen: h === i.title,
                         isMobile: t,
                         avoidRouter: u,
-                        TrackClick: i,
+                        TrackClick: r,
                         onClose: this.closeSubNav,
                         onOpen: this.openSubNav
                     },
-                    r.title
+                    i.title
                 );
-            if (r.external && null != r.route)
-                return (0, s.jsx)(
+            if (i.external && null != i.route)
+                return (0, n.jsx)(
                     'li',
                     {
-                        className: n.listItemInactive,
+                        className: a.listItemInactive,
                         role: 'none',
-                        children: (0, s.jsx)(i, {
-                            className: n.mainNavLink,
-                            eventName: N,
-                            data: r.linkClicked ? { linkClicked: r.linkClicked } : {},
-                            href: r.route,
+                        children: (0, n.jsx)(r, {
+                            className: a.mainNavLink,
+                            eventName: p,
+                            data: i.linkClicked ? { linkClicked: i.linkClicked } : {},
+                            href: i.route,
                             rel: 'me',
-                            children: r.title
+                            children: i.title
                         })
                     },
-                    'external_link_'.concat(r.route)
+                    'external_link_'.concat(i.route)
                 );
-            if (null != r.route)
-                return (0, s.jsx)(
+            if (null != i.route)
+                return (0, n.jsx)(
                     'li',
                     {
-                        className: e(r.route) ? n.listItemActive : n.listItemInactive,
+                        className: e(i.route) ? a.listItemActive : a.listItemInactive,
                         role: 'none',
-                        children: (0, s.jsx)(l.Z, {
+                        children: (0, n.jsx)(o.Z, {
                             avoidRouter: u,
-                            to: r.route,
+                            to: i.route,
                             from: c.j_.MAIN_NAVIGATION_MENU,
-                            tabIndex: a ? 0 : -1,
+                            tabIndex: s ? 0 : -1,
                             role: 'menuitem',
-                            children: (0, s.jsx)(i, {
+                            children: (0, n.jsx)(r, {
                                 tag: 'span',
-                                className: n.mainNavLink,
-                                eventName: N,
-                                data: { linkClicked: r.linkClicked },
-                                children: r.title
+                                className: a.mainNavLink,
+                                eventName: p,
+                                data: { linkClicked: i.linkClicked },
+                                children: i.title
                             })
                         })
                     },
-                    'link_'.concat(r.route)
+                    'link_'.concat(i.route)
                 );
             return [];
         });
@@ -201,7 +201,7 @@ class m extends (n = i.PureComponent) {
             });
     }
 }
-u(m, 'defaultProps', {
+u(h, 'defaultProps', {
     isMobile: !1,
     isVisible: !0
 });

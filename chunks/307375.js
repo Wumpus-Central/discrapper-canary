@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(496675),
     d = n(384632),
@@ -17,7 +17,7 @@ var i = n(200651),
 function g(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         g = l.hasFeature(u.oNc.COMMUNITY),
-        x = (0, s.e7)([c.Z], () => c.Z.can(u.Plq.ADMINISTRATOR, l)),
+        x = (0, a.e7)([c.Z], () => c.Z.can(u.Plq.ADMINISTRATOR, l)),
         p = r.useMemo(() => {
             let e = t === d.A.DISCOVERABLE && !x,
                 n = g && (t === d.A.DISCOVERABLE || x);
@@ -86,7 +86,7 @@ function g(e) {
                                 className: h.tooltipContainer,
                                 tooltipClassName: h.tooltip,
                                 children: (0, i.jsxs)('div', {
-                                    className: a()(h.joinOptionContent, {
+                                    className: s()(h.joinOptionContent, {
                                         [h.active]: n,
                                         [h.uninteractive]: !e.enabled
                                     }),

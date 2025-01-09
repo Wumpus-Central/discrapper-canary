@@ -4,8 +4,8 @@ var r,
     l,
     T,
     I,
-    o = n(392711),
-    E = n.n(o),
+    E = n(392711),
+    o = n.n(E),
     u = n(442837),
     N = n(570140),
     a = n(308063);
@@ -26,10 +26,10 @@ class O extends (r = u.ZP.Store) {
         return null != S[c(e, t)];
     }
     getWebhooksForGuild(e) {
-        return E().values(d(e));
+        return o().values(d(e));
     }
     getWebhooksForChannel(e, t) {
-        return E()(d(e))
+        return o()(d(e))
             .values()
             .filter((e) => e.channel_id === t)
             .value();
@@ -57,7 +57,7 @@ class O extends (r = u.ZP.Store) {
             i = null;
             let T = [];
             null != n &&
-                (T = E()(d(t))
+                (T = o()(d(t))
                     .values()
                     .filter((e) => e.channel_id !== n)
                     .value());

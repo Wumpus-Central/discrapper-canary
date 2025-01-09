@@ -2,9 +2,9 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(477690),
     u = n(481060),
@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(899667),
     C = n(271383),
     v = n(594174),
-    _ = n(267642),
-    N = n(624138),
+    N = n(267642),
+    _ = n(624138),
     I = n(981631),
     T = n(388032),
     j = n(534560);
@@ -34,8 +34,8 @@ function b(e, t, n) {
         e
     );
 }
-let S = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
-class E extends r.Component {
+let E = (0, _.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+class S extends r.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
@@ -61,12 +61,12 @@ class E extends r.Component {
                 y: 0,
                 key: x.x
             },
-            a = (0, _.vn)(n),
-            s = e.map((e) => {
+            s = (0, N.vn)(n),
+            a = e.map((e) => {
                 var n;
                 return {
-                    numRequired: a[e.tier],
-                    name: (0, _.nW)(e.tier),
+                    numRequired: s[e.tier],
+                    name: (0, N.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
@@ -74,7 +74,7 @@ class E extends r.Component {
         return (0, i.jsx)(x.Z, {
             className: r > 0 ? j.progressWithSubscriptions : j.progress,
             progress: r,
-            tiers: [l, ...s],
+            tiers: [l, ...a],
             initialAnimationDelay: 500,
             onAnimatedTierMaker: this.handleAnimatedTier
         });
@@ -120,7 +120,7 @@ class E extends r.Component {
         let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: r, tiers: l } = this.props;
         if (null == n) return (0, i.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let a = (0, _.vn)(e);
+        let s = (0, N.vn)(e);
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
                 className: j.content,
@@ -136,7 +136,7 @@ class E extends r.Component {
                                     tiers: r,
                                     tierIndex: i,
                                     onSetRef: this.setTierRef,
-                                    isAnimatedTo: a[this.state.animatedTier] >= a[n.tier],
+                                    isAnimatedTo: s[this.state.animatedTier] >= s[n.tier],
                                     subscriptionCount: this.getSubscriptionCount(),
                                     guildId: e
                                 })
@@ -164,8 +164,8 @@ class E extends r.Component {
                 for (let [t, r] of Object.entries(this.tierRefs)) {
                     if (null == r) return;
                     let { top: l } = r.getBoundingClientRect(),
-                        a = e > 0 ? S : 0;
-                    i[t] = l - n + 32 - a;
+                        s = e > 0 ? E : 0;
+                    i[t] = l - n + 32 - s;
                 }
                 this.setState({ tierPositions: i });
             }),
@@ -192,7 +192,7 @@ class E extends r.Component {
                                       ...n,
                                       tabIndex: -1,
                                       src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                      className: a()(j.avatar, t, null != t ? j.subscriberMask : null),
+                                      className: s()(j.avatar, t, null != t ? j.subscriberMask : null),
                                       size: u.AvatarSizes.SIZE_32
                                   })
                           },
@@ -264,5 +264,5 @@ let R = c.ZP.connectStores([g.Z, v.default, f.Z, C.ZP], () => {
         subscribers: i,
         subscriberCount: n.size()
     };
-})(E);
+})(S);
 t.Z = R;

@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(392711),
-    a = n(481060),
-    s = n(239091),
+    s = n(481060),
+    a = n(239091),
     o = n(132580),
     c = n(688465),
     d = n(236413),
@@ -23,7 +23,7 @@ var i = n(200651),
     f = n(273504),
     C = n(388032),
     v = n(867270);
-function _(e) {
+function N(e) {
     let { rule: t, triggerType: n } = e,
         l = r.useMemo(
             () =>
@@ -40,18 +40,18 @@ function _(e) {
                       )
                     : (0, m.V9)(n).reduce((e, r) => {
                           var l;
-                          let a = t.actions.find((e) => {
+                          let s = t.actions.find((e) => {
                               let { type: t } = e;
                               return r === t;
                           });
-                          return null == a
+                          return null == s
                               ? e
                               : (e.push(
                                     (0, i.jsx)(
                                         x.Z,
                                         {
                                             actionType: r,
-                                            action: a,
+                                            action: s,
                                             triggerType: null !== (l = null == t ? void 0 : t.triggerType) && void 0 !== l ? l : n
                                         },
                                         r
@@ -68,7 +68,7 @@ function _(e) {
               children: l
           });
 }
-let N = (e, t) => () =>
+let _ = (e, t) => () =>
         t({
             ...e,
             enabled: !e.enabled
@@ -78,7 +78,7 @@ let N = (e, t) => () =>
     },
     T = (e) => {
         let { className: t, children: n, ...r } = e;
-        return (0, i.jsx)(a.Clickable, {
+        return (0, i.jsx)(s.Clickable, {
             className: t,
             onClick: I,
             onMouseDown: I,
@@ -90,7 +90,7 @@ let N = (e, t) => () =>
 function j(e) {
     var t;
     let { rule: n, onChangeRule: r, onContextMenu: l } = e,
-        s = N(n, r),
+        a = _(n, r),
         o = (e) => {
             I(e), l(e);
         };
@@ -106,21 +106,21 @@ function j(e) {
             (0, i.jsxs)(T, {
                 className: v.actionContainer,
                 children: [
-                    (0, i.jsx)(a.Switch, {
+                    (0, i.jsx)(s.Switch, {
                         className: v.toggle,
-                        onChange: s,
+                        onChange: a,
                         checked: null !== (t = null == n ? void 0 : n.enabled) && void 0 !== t && t
                     }),
-                    (0, i.jsx)(a.Tooltip, {
+                    (0, i.jsx)(s.Tooltip, {
                         text: C.intl.string(C.t.UKOtz8),
                         position: 'top',
                         'aria-label': C.intl.string(C.t.PdRCRk),
                         children: (e) =>
-                            (0, i.jsx)(a.Clickable, {
+                            (0, i.jsx)(s.Clickable, {
                                 ...e,
                                 onClick: o,
                                 className: v.menuIconButton,
-                                children: (0, i.jsx)(a.MoreVerticalIcon, {
+                                children: (0, i.jsx)(s.MoreVerticalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: v.menuIcon
@@ -135,13 +135,13 @@ function j(e) {
 function b(e) {
     return (0, m.r5)(e, m.vT.ALPHA) ? (0, i.jsx)(o.Z, { className: v.alphaBetaTag }) : (0, m.r5)(e, m.vT.BETA) ? (0, i.jsx)(c.Z, { className: v.alphaBetaTag }) : null;
 }
-function S(e) {
-    let { rule: t, isDefaultRule: n, onContextMenu: s } = e,
+function E(e) {
+    let { rule: t, isDefaultRule: n, onContextMenu: a } = e,
         o = (0, g.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, h.w)(),
         { updateRule: x } = (0, u.pH)(t.guildId),
         [p, f] = r.useState(t.enabled),
-        N = (0, l.throttle)(async (e, n) => {
+        _ = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = {
                     ...t,
@@ -153,11 +153,11 @@ function S(e) {
             }
         }, 300),
         j = (e) => {
-            I(e), s(e);
+            I(e), a(e);
         };
     if (null == o) return null;
-    let { headerText: S, headerSubtext: E, descriptionText: R, icon: y } = o,
-        Z = !(0, d.Vb)(t);
+    let { headerText: E, headerSubtext: S, descriptionText: R, icon: y } = o,
+        A = !(0, d.Vb)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -171,29 +171,29 @@ function S(e) {
             (0, i.jsxs)('div', {
                 className: v.ruleTextContainer,
                 children: [
-                    (0, i.jsxs)(a.Heading, {
+                    (0, i.jsxs)(s.Heading, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         className: v.ruleTextHeaderContainer,
                         children: [
                             (0, i.jsxs)('div', {
                                 className: v.ruleTextHeader,
-                                children: [S, b(t.triggerType)]
+                                children: [E, b(t.triggerType)]
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 className: v.ruleSubtextHeader,
                                 variant: 'text-sm/normal',
-                                children: E
+                                children: S
                             })
                         ]
                     }),
-                    Z &&
-                        (0, i.jsx)(a.Text, {
+                    A &&
+                        (0, i.jsx)(s.Text, {
                             className: v.ruleTextDescription,
                             variant: 'text-sm/normal',
                             children: R
                         }),
-                    (0, i.jsx)(_, {
+                    (0, i.jsx)(N, {
                         rule: t,
                         triggerType: t.triggerType
                     })
@@ -202,22 +202,22 @@ function S(e) {
             (0, i.jsxs)(T, {
                 className: v.actionContainer,
                 children: [
-                    (0, i.jsx)(a.Switch, {
+                    (0, i.jsx)(s.Switch, {
                         className: v.toggle,
-                        onChange: N,
+                        onChange: _,
                         checked: null != p && p
                     }),
                     !n &&
-                        (0, i.jsx)(a.Tooltip, {
+                        (0, i.jsx)(s.Tooltip, {
                             text: C.intl.string(C.t.UKOtz8),
                             position: 'top',
                             'aria-label': C.intl.string(C.t.PdRCRk),
                             children: (e) =>
-                                (0, i.jsx)(a.Clickable, {
+                                (0, i.jsx)(s.Clickable, {
                                     ...e,
                                     onClick: j,
                                     className: v.menuIconButton,
-                                    children: (0, i.jsx)(a.MoreVerticalIcon, {
+                                    children: (0, i.jsx)(s.MoreVerticalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: v.menuIcon
@@ -229,11 +229,11 @@ function S(e) {
         ]
     });
 }
-function E(e) {
+function S(e) {
     let { triggerType: t, onSetupRule: n } = e,
         l = r.useMemo(() => (0, g.w)(t), [t]);
     if (null == l) return null;
-    let { headerText: s, descriptionText: o, icon: c } = l;
+    let { headerText: a, descriptionText: o, icon: c } = l;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -247,27 +247,27 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: v.ruleTextContainer,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         className: v.ruleTextHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: (0, i.jsxs)('div', {
                             className: v.ruleTextHeader,
-                            children: [s, b(t)]
+                            children: [a, b(t)]
                         })
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: v.ruleTextDescription,
                         variant: 'text-sm/normal',
                         children: o
                     }),
-                    (0, i.jsx)(_, { triggerType: t })
+                    (0, i.jsx)(N, { triggerType: t })
                 ]
             }),
             (0, i.jsx)(T, {
                 className: v.actionContainer,
-                children: (0, i.jsx)(a.Button, {
-                    size: a.Button.Sizes.SMALL,
+                children: (0, i.jsx)(s.Button, {
+                    size: s.Button.Sizes.SMALL,
                     onClick: n,
                     children: t === f.fX.KEYWORD ? C.intl.string(C.t.CumH4u) : C.intl.string(C.t.oRs6mJ)
                 })
@@ -281,7 +281,7 @@ function R(e) {
             if (null != t)
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, s.jW)(e, async () => {
+                    (0, a.jW)(e, async () => {
                         let { default: e } = await n.e('25443').then(n.bind(n, 46577));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -290,7 +290,7 @@ function R(e) {
                             });
                     });
         },
-        h = (0, i.jsx)(E, {
+        h = (0, i.jsx)(S, {
             triggerType: r,
             onSetupRule: d
         });
@@ -303,12 +303,12 @@ function R(e) {
                       onChangeRule: u,
                       onContextMenu: m
                   })
-                : (0, i.jsx)(S, {
+                : (0, i.jsx)(E, {
                       rule: t,
                       isDefaultRule: o,
                       onContextMenu: m
                   })),
-        (0, i.jsx)(a.Clickable, {
+        (0, i.jsx)(s.Clickable, {
             className: v.mainContainer,
             onContextMenu: m,
             children: h

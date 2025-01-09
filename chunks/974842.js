@@ -2,9 +2,9 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(688619),
-    a = n.n(l),
-    s = n(120356),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(120356),
+    o = n.n(a),
     c = n(866442),
     d = n(481060),
     u = n(550271),
@@ -17,33 +17,33 @@ var i = n(200651),
     C = n(240938);
 let v = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
 t.Z = (e) => {
-    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: s, tag: _, error: N, furthestStep: I, inSettings: T } = e,
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: N, error: _, furthestStep: I, inSettings: T } = e,
         j = r.useMemo(() => {
             let e = (0, g.yf)();
             return {
                 primary: null != l ? l : e.primary,
-                secondary: null != s ? s : e.secondary
+                secondary: null != a ? a : e.secondary
             };
-        }, [l, s]);
+        }, [l, a]);
     r.useEffect(() => {
-        (null == l || null == s) &&
+        (null == l || null == a) &&
             t({
                 badgePrimaryColor: j.primary,
                 badgeSecondaryColor: j.secondary
             });
-    }, [j.primary, j.secondary, t, l, s]);
+    }, [j.primary, j.secondary, t, l, a]);
     let b = r.useMemo(() => {
             for (let e = 0; e < g.sg.length; e++) if (g.sg[e].primary === j.primary && g.sg[e].secondary === j.secondary) return 1 + e;
             return 0;
         }, [j.primary, j.secondary]),
-        [S, E] = r.useState(!1),
+        [E, S] = r.useState(!1),
         R = r.useCallback(() => {
             let e = v[Math.floor(Math.random() * v.length)],
-                n = a().random().hex();
+                n = s().random().hex();
             t({
                 badgeKind: e,
                 badgePrimaryColor: n,
-                badgeSecondaryColor: a().random().hex()
+                badgeSecondaryColor: s().random().hex()
             });
         }, [t]);
     return (
@@ -54,7 +54,7 @@ t.Z = (e) => {
                     brandPrimaryColor: j.primary,
                     brandSecondaryColor: j.secondary
                 });
-        }, [t, j.primary, j.secondary, I, l, s, T]),
+        }, [t, j.primary, j.secondary, I, l, a, T]),
         (0, i.jsxs)('div', {
             className: C.slideContent,
             children: [
@@ -124,13 +124,13 @@ t.Z = (e) => {
                                                     onSecondaryColorChange: (e) => {
                                                         t({ badgeSecondaryColor: (0, c.Rf)(e) });
                                                     },
-                                                    shouldShow: S,
-                                                    onRequestClose: () => E(!1),
+                                                    shouldShow: E,
+                                                    onRequestClose: () => S(!1),
                                                     children: (e) =>
                                                         (0, i.jsx)(d.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                E((e) => !e);
+                                                                S((e) => !e);
                                                             },
                                                             className: o()(f.badgeAssetContainer, { [f.badgeAssetContainerSelected]: 0 === b }),
                                                             children: (0, i.jsx)(d.PaintPaletteIcon, {
@@ -176,17 +176,17 @@ t.Z = (e) => {
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['3eZP8/'])
                                 }),
-                                null != N &&
+                                null != _ &&
                                     (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'status-danger',
                                         className: C.errorText,
-                                        children: N
+                                        children: _
                                     }),
                                 (0, i.jsx)(d.TextInput, {
                                     className: f.tagInputWrapper,
                                     inputClassName: f.tagInput,
-                                    value: null != _ ? _ : '',
+                                    value: null != N ? N : '',
                                     onChange: (e) => t({ tag: e }),
                                     maxLength: x.cG,
                                     placeholder: p.intl.string(p.t['0V0ZFx']),

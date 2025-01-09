@@ -1,12 +1,12 @@
 n.d(t, {
     k: function () {
-        return a;
+        return s;
     }
 });
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-async function a(e) {
+async function s(e) {
     r.Z.dispatch({
         type: 'DISCOVER_CHECKLIST_FETCH_START',
         guildId: e

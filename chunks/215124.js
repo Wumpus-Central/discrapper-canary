@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(399606),
     l = n(481060),
-    a = n(674180),
-    s = n(267101),
+    s = n(674180),
+    a = n(267101),
     o = n(430824),
     c = n(584825),
     d = n(198139),
@@ -17,8 +17,8 @@ function m(e) {
     let { guildId: t, allPeriods: m } = e,
         h = (0, r.e7)([o.Z], () => o.Z.getGuild(t)),
         g = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        x = (0, s.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: p } = (0, a.gX)(t),
+        x = (0, a.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: p } = (0, s.gX)(t),
         f = m.filter((e) => {
             var t;
             let n = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
@@ -26,7 +26,7 @@ function m(e) {
         }),
         C = g.length > 0,
         v = x.length > 0,
-        _ = f.length > 0;
+        N = f.length > 0;
     return null == h
         ? null
         : (0, i.jsxs)('div', {
@@ -37,7 +37,7 @@ function m(e) {
                   }),
                   (0, i.jsx)(l.Spacer, { size: 16 }),
                   (0, i.jsx)(l.Button, {
-                      disabled: !p || C || v || _,
+                      disabled: !p || C || v || N,
                       look: l.Button.Looks.FILLED,
                       color: l.Button.Colors.RED,
                       onClick: () => {

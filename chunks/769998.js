@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    a = n(430824),
-    s = n(496675),
+    s = n(430824),
+    a = n(496675),
     o = n(556012),
     c = n(273504),
     d = n(981631),
@@ -20,9 +20,9 @@ function g(e) {
     let { action: n, triggerType: g, guildId: x, toggled: p, onToggleAction: f } = e,
         C = (e) => () => f(e),
         v = (0, o.c)(n.type, n, g),
-        _ = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
-        N = null != _ ? (0, u.L9)(_) : null,
-        I = (0, r.e7)([s.Z, a.Z], () => s.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(x)), [x]);
+        N = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
+        _ = null != N ? (0, u.L9)(N) : null,
+        I = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
     if (null == v) return null;
     let { headerText: T, descriptionText: j, icon: b } = v;
     return (0, i.jsxs)('div', {
@@ -57,7 +57,7 @@ function g(e) {
                                     if (null === t) return null;
                                     if (e === c.fX.MENTION_SPAM) return m.intl.format(m.t.i3lsKC, { friendlyDurationString: t });
                                     return m.intl.format(m.t.mvHxzc, { friendlyDurationString: t });
-                                })(g, N),
+                                })(g, _),
                                 I &&
                                     (0, i.jsx)(l.Clickable, {
                                         onClick: C(!0),

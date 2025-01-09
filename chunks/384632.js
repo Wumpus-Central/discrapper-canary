@@ -1,9 +1,9 @@
-var e, r;
-i.d(n, {
+var i, r;
+t.d(n, {
     A: function () {
-        return e;
+        return i;
     }
 }),
-    ((r = e || (e = {})).INVITE = 'invite'),
+    ((r = i || (i = {})).INVITE = 'invite'),
     (r.APPLY = 'apply'),
     (r.DISCOVERABLE = 'discoverable');

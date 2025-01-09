@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 }),
     n(47120);
 var i = n(192379),
     r = n(584825),
     l = n(14263);
-function a(e) {
+function s(e) {
     let t = (0, r.qi)(e),
         n = (0, l.Z)(e);
     return i.useMemo(() => {

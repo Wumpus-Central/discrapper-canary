@@ -29,7 +29,7 @@ function u(e) {
               sectionId: u,
               webhooks: h,
               editedWebhook: m,
-              isFetching: g,
+              isFetchingWebhooks: g,
               hasChanges: o.Z.hasChanges,
               errors: p,
               refToScroller: t

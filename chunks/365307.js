@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(139387),
-    a = n(852860),
-    s = n(490655),
+    s = n(852860),
+    a = n(490655),
     o = n(434404),
     c = n(360606),
     d = n(999382),
@@ -22,7 +22,7 @@ function h(e) {
         n = (0, r.e7)([d.Z], () => d.Z.getGuild()),
         {
             section: l,
-            sectionId: a,
+            sectionId: s,
             integrations: o,
             editedIntegration: u,
             webhooks: m,
@@ -41,15 +41,15 @@ function h(e) {
         }));
     return null == n
         ? null
-        : (0, i.jsx)(s.Z, {
+        : (0, i.jsx)(a.Z, {
               guild: n,
               section: l,
-              sectionId: a,
+              sectionId: s,
               integrations: o,
               webhooks: m,
               editedIntegration: u,
               editedWebhook: h,
-              isFetching: g,
+              isFetchingWebhooks: g,
               hasChanges: c.default.hasChanges,
               errors: x,
               refToScroller: t
@@ -60,7 +60,7 @@ function g() {
         guild: d.Z.getGuild(),
         submitting: d.Z.isSubmitting()
     }));
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         submitting: t,
         onReset: () => {
             l.Z.init(), u.Ui(), null != e && o.Z.init(e.id);

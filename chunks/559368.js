@@ -1,9 +1,9 @@
 var i,
     r,
     l,
-    a,
-    s = n(877921),
-    o = n.n(s),
+    s,
+    a = n(877921),
+    o = n.n(a),
     c = n(442837),
     d = n(570140);
 let u = ['pct_retained', 'new_members', 'visitors', 'communicators'],
@@ -15,12 +15,12 @@ function g(e) {
     let i = {},
         r = {},
         l = n[0],
-        a = n[1];
+        s = n[1];
     null != l &&
         u.forEach((e) => {
             if (null != l[e]) {
                 let t = o()(e);
-                null != a && 0 !== a[e] && (i[''.concat(t, 'Change')] = ((l[e] - a[e]) * 100) / a[e]), (r[t] = l[e]);
+                null != s && 0 !== s[e] && (i[''.concat(t, 'Change')] = ((l[e] - s[e]) * 100) / s[e]), (r[t] = l[e]);
             }
         }),
         (m[t] = {
@@ -33,7 +33,7 @@ function x(e) {
     let { error: t } = e;
     h = t.code;
 }
-class p extends (a = c.ZP.Store) {
+class p extends (s = c.ZP.Store) {
     getOverviewAnalytics(e) {
         return m[e];
     }

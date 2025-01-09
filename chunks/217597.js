@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(202513);
-function a(e) {
-    let { label: t, sublabel: n, value: a, additionalContent: s, tooltip: o } = e;
+function s(e) {
+    let { label: t, sublabel: n, value: s, additionalContent: a, tooltip: o } = e;
     return (0, i.jsxs)('div', {
         className: l.metricCard,
         'aria-label': t,
@@ -47,9 +47,9 @@ function a(e) {
                 tag: 'span',
                 variant: 'heading-xl/medium',
                 color: 'header-primary',
-                children: a
+                children: s
             }),
-            s
+            a
         ]
     });
 }

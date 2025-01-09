@@ -1,14 +1,14 @@
-i.d(n, {
+n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
-var t = i(531643),
-    o = i(403182),
-    a = i(388032);
-function l(e) {
-    (0, t.openUploadError)({
-        title: a.intl.string(a.t['/tGlcn']),
-        help: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, o.Ng)(e) })
+var i = n(531643),
+    r = n(403182),
+    l = n(388032);
+function s(e) {
+    (0, i.openUploadError)({
+        title: l.intl.string(l.t['/tGlcn']),
+        help: l.intl.formatToPlainString(l.t.fxEKdX, { maxSize: (0, r.Ng)(e) })
     });
 }

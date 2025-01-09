@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(852229),
     l = n(481060),
-    a = n(724598),
-    s = n(674180),
+    s = n(724598),
+    a = n(674180),
     o = n(495437),
     c = n(267101),
     d = n(863663),
@@ -21,11 +21,11 @@ let p = 'guild-product-listings-header';
 function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         f = (0, c.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, s.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
         v = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        _ = (e, r) => {
+        N = (e, r) => {
             (0, l.openModalLazy)(async () => {
                 let { default: l } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
@@ -37,7 +37,7 @@ function f(e) {
                     });
             });
         },
-        N = (e, t) => {
+        _ = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
         I = f.length > 0;
@@ -61,8 +61,8 @@ function f(e) {
                                       product: e,
                                       onEditProduct: () => u(e.id),
                                       onUnpublishProduct: () => v(e.id),
-                                      onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => N(t, e.id),
+                                      onDeleteProduct: () => N(e.id, e.name),
+                                      onCopyProductLink: () => _(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,
@@ -76,7 +76,7 @@ function f(e) {
                           )
                       )
                   })
-                : (0, i.jsx)(a.Z, {
+                : (0, i.jsx)(s.Z, {
                       guildId: t,
                       showCTA: !1,
                       responsive: !1
@@ -86,7 +86,7 @@ function f(e) {
 }
 function C(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, s.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
         r = (e) => {
             u.h(t, e);
         };

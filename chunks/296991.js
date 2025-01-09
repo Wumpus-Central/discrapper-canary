@@ -1,111 +1,111 @@
-t.d(n, {
+n.d(t, {
     k: function () {
-        return T;
+        return E;
     }
 }),
-    t(47120);
-var l = t(200651),
-    a = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    o = t(97613),
-    s = t.n(o),
-    u = t(999153),
-    d = t(584922),
-    c = t(442837),
-    f = t(481060),
-    g = t(541716),
-    p = t(752305),
-    x = t(893718),
-    m = t(592125),
-    C = t(984933),
-    h = t(540457),
-    b = t(681460),
-    v = t(592286),
-    _ = t(981631),
-    I = t(388032),
-    j = t(163537);
-let k = 'RULE';
-function N(e) {
-    let { rule: n, rulesChannel: t, index: i, onChange: o, onKeyDown: s, onClear: c, onRuleReorder: m, isDropHovered: C, focused: h, onFocus: b, previewEnabled: _, isDragEnabled: N } = e,
-        T = a.useRef(null),
-        B = a.useRef(null),
-        [{ textValue: R, richValue: S }, E] = a.useState((0, p.eK)(n.value)),
-        [, y, D] = (0, u.c)({
-            type: k,
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(97613),
+    o = n.n(a),
+    c = n(999153),
+    d = n(584922),
+    u = n(442837),
+    m = n(481060),
+    h = n(541716),
+    g = n(752305),
+    x = n(893718),
+    p = n(592125),
+    f = n(984933),
+    C = n(540457),
+    v = n(681460),
+    N = n(592286),
+    _ = n(981631),
+    I = n(388032),
+    T = n(163537);
+let j = 'RULE';
+function b(e) {
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: _, isDragEnabled: b } = e,
+        E = r.useRef(null),
+        S = r.useRef(null),
+        [{ textValue: R, richValue: y }, A] = r.useState((0, g.eK)(t.value)),
+        [, Z, L] = (0, c.c)({
+            type: j,
             item: {
-                rule: n,
-                index: i
+                rule: t,
+                index: l
             },
-            end: (e, n) => {
-                null != e && !n.didDrop() && m(e.rule, null, !0);
+            end: (e, t) => {
+                null != e && !t.didDrop() && p(e.rule, null, !0);
             }
         }),
-        [, L] = (0, d.L)({
-            accept: k,
-            hover: (e, n) => {
-                var t;
-                let { index: l } = e,
-                    a = null === (t = T.current) || void 0 === t ? void 0 : t.getBoundingClientRect(),
-                    r = n.getClientOffset();
-                if (null == a || null == r) return;
-                let o = (a.bottom - a.top) / 2,
-                    s = r.y - a.top;
-                (!(l < i) || !(s < o)) && (!(l > i) || !(s > o)) && m(e.rule, i, !1);
+        [, D] = (0, d.L)({
+            accept: j,
+            hover: (e, t) => {
+                var n;
+                let { index: i } = e,
+                    r = null === (n = E.current) || void 0 === n ? void 0 : n.getBoundingClientRect(),
+                    s = t.getClientOffset();
+                if (null == r || null == s) return;
+                let a = (r.bottom - r.top) / 2,
+                    o = s.y - r.top;
+                (!(i < l) || !(o < a)) && (!(i > l) || !(o > a)) && p(e.rule, l, !1);
             },
             drop: (e) => {
-                m(e.rule, i, !0);
+                p(e.rule, l, !0);
             }
         });
-    a.useLayoutEffect(
+    r.useLayoutEffect(
         () => (
-            y(B),
-            D(L(T)),
+            Z(S),
+            L(D(E)),
             () => {
-                y(null), L(null);
+                Z(null), D(null);
             }
         ),
-        [y, L, D]
+        [Z, D, L]
     );
     if (
-        (a.useEffect(() => {
-            '' !== n.value && '' === R && E((0, p.eK)(n.value));
-        }, [n.value, R]),
-        null == t)
+        (r.useEffect(() => {
+            '' !== t.value && '' === R && A((0, g.eK)(t.value));
+        }, [t.value, R]),
+        null == n)
     )
         return null;
-    let A = '' !== n.value ? n.value : n.id;
-    return (0, l.jsx)('div', {
-        ref: T,
-        className: r()(j.draggableInputContainer, { [j.dragging]: C }),
-        'data-dnd-name': A,
-        children: (0, l.jsxs)('div', {
-            className: j.inputWrapper,
+    let O = '' !== t.value ? t.value : t.id;
+    return (0, i.jsx)('div', {
+        ref: E,
+        className: s()(T.draggableInputContainer, { [T.dragging]: f }),
+        'data-dnd-name': O,
+        children: (0, i.jsxs)('div', {
+            className: T.inputWrapper,
             children: [
-                (0, l.jsx)(f.Clickable, {
-                    onMouseDown: () => b(i),
-                    children: (0, l.jsx)(x.Z, {
-                        innerClassName: j.rulesTextAreaInput,
-                        type: g.Ie.RULES_INPUT,
+                (0, i.jsx)(m.Clickable, {
+                    onMouseDown: () => v(l),
+                    children: (0, i.jsx)(x.Z, {
+                        innerClassName: T.rulesTextAreaInput,
+                        type: h.Ie.RULES_INPUT,
                         textValue: R,
-                        richValue: S,
-                        channel: t,
+                        richValue: y,
+                        channel: n,
                         placeholder: I.intl.string(I.t['BRkD4+']),
-                        focused: h,
-                        onChange: (e, n, t) => {
-                            let l = n;
-                            l.length > v.fn && (l = l.slice(0, v.fn)),
-                                n !== l && ((n = l), (t = (0, p.JM)(l))),
-                                o(n),
-                                E({
-                                    textValue: n,
-                                    richValue: t
+                        focused: C,
+                        onChange: (e, t, n) => {
+                            let i = t;
+                            i.length > N.fn && (i = i.slice(0, N.fn)),
+                                t !== i && ((t = i), (n = (0, g.JM)(i))),
+                                a(t),
+                                A({
+                                    textValue: t,
+                                    richValue: n
                                 });
                         },
-                        onKeyDown: s,
+                        onKeyDown: o,
                         canMentionChannels: _,
                         canMentionRoles: _,
-                        maxCharacterCount: v.fn,
+                        maxCharacterCount: N.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -113,169 +113,169 @@ function N(e) {
                             })
                     })
                 }),
-                (0, l.jsx)(f.Button, {
-                    className: j.clearButton,
-                    onClick: c,
-                    look: f.Button.Looks.BLANK,
-                    size: f.Button.Sizes.NONE,
-                    children: (0, l.jsx)(f.CircleXIcon, {
+                (0, i.jsx)(m.Button, {
+                    className: T.clearButton,
+                    onClick: u,
+                    look: m.Button.Looks.BLANK,
+                    size: m.Button.Sizes.NONE,
+                    children: (0, i.jsx)(m.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: j.clearIcon
+                        className: T.clearIcon
                     })
                 }),
-                (0, l.jsx)('div', {
-                    ref: B,
-                    className: j.dragContainer,
-                    'data-dnd-name': A,
+                (0, i.jsx)('div', {
+                    ref: S,
+                    className: T.dragContainer,
+                    'data-dnd-name': O,
                     children:
-                        N &&
-                        (0, l.jsx)(f.DragIcon, {
+                        b &&
+                        (0, i.jsx)(m.DragIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: j.dragIcon
+                            className: T.dragIcon
                         })
                 })
             ]
         })
     });
 }
-function T(e) {
-    let { rules: n, setRules: t, guild: i } = e,
-        r = i.rulesChannelId,
-        o = i.hasFeature(_.oNc.PREVIEW_ENABLED),
-        u = (0, c.e7)([m.Z], () => (null != r ? m.Z.getChannel(r) : null)),
-        d = (0, c.e7)([C.ZP], () => C.ZP.getDefaultChannel(i.id)),
-        [g, p] = a.useState(null),
-        [x, k] = a.useState(null),
-        T = a.useCallback(
+function E(e) {
+    let { rules: t, setRules: n, guild: l } = e,
+        s = l.rulesChannelId,
+        a = l.hasFeature(_.oNc.PREVIEW_ENABLED),
+        c = (0, u.e7)([p.Z], () => (null != s ? p.Z.getChannel(s) : null)),
+        d = (0, u.e7)([f.ZP], () => f.ZP.getDefaultChannel(l.id)),
+        [h, g] = r.useState(null),
+        [x, j] = r.useState(null),
+        E = r.useCallback(
             (e) => {
-                if (n.length !== v.X2) {
-                    if (null != e && '' === n[n.length - 1].value) {
-                        let l = [...n];
-                        (l[n.length - 1] = {
-                            ...l[n.length - 1],
+                if (t.length !== N.X2) {
+                    if (null != e && '' === t[t.length - 1].value) {
+                        let i = [...t];
+                        (i[t.length - 1] = {
+                            ...i[t.length - 1],
                             value: e
                         }),
-                            t(l),
-                            k(l.length - 1);
+                            n(i),
+                            j(i.length - 1);
                     } else
-                        t([
-                            ...n,
+                        n([
+                            ...t,
                             {
-                                id: s()(),
+                                id: o()(),
                                 value: null != e ? e : ''
                             }
                         ]),
-                            k(n.length);
+                            j(t.length);
                 }
             },
-            [n, t]
+            [t, n]
         ),
-        B = a.useCallback(() => {
-            T(void 0);
-        }, [T]),
-        R = (e, l) => {
-            let a = [...n];
-            (a[l] = {
-                ...a[l],
+        S = r.useCallback(() => {
+            E(void 0);
+        }, [E]),
+        R = (e, i) => {
+            let r = [...t];
+            (r[i] = {
+                ...r[i],
                 value: e
             }),
-                t(a);
+                n(r);
         },
-        S = (e) => {
-            let l = [...n.slice(0, e), ...n.slice(e + 1)];
-            t(
-                0 === l.length
+        y = (e) => {
+            let i = [...t.slice(0, e), ...t.slice(e + 1)];
+            n(
+                0 === i.length
                     ? [
                           {
-                              id: s()(),
+                              id: o()(),
                               value: ''
                           }
                       ]
-                    : l
+                    : i
             );
         },
-        E = a.useCallback(
-            (e, l, a) => {
-                if (null == n) return;
-                let i = n.indexOf(e);
-                if (null != l && l !== i) {
-                    let a = [...n];
-                    a.splice(i, 1), a.splice(l, 0, e), t(a);
+        A = r.useCallback(
+            (e, i, r) => {
+                if (null == t) return;
+                let l = t.indexOf(e);
+                if (null != i && i !== l) {
+                    let r = [...t];
+                    r.splice(l, 1), r.splice(i, 0, e), n(r);
                 }
-                a ? null !== g && p(null) : l !== g && p(l);
+                r ? null !== h && g(null) : i !== h && g(i);
             },
-            [g, n, t]
+            [h, t, n]
         ),
-        y = n.length === v.X2,
-        D = a.useMemo(() => {
-            let e = y ? I.intl.formatToPlainString(I.t.tU718P, { number: v.X2 }) : void 0;
+        Z = t.length === N.X2,
+        L = r.useMemo(() => {
+            let e = Z ? I.intl.formatToPlainString(I.t.tU718P, { number: N.X2 }) : void 0;
             return [
                 {
                     text: I.intl.string(I.t.DXq2oa),
-                    onClick: () => T(I.intl.string(I.t.XudkSk)),
-                    disabled: y,
+                    onClick: () => E(I.intl.string(I.t.XudkSk)),
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: I.intl.string(I.t.nSqTjI),
-                    onClick: () => T(I.intl.string(I.t.np91jI)),
-                    disabled: y,
+                    onClick: () => E(I.intl.string(I.t.np91jI)),
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: I.intl.string(I.t.AtRxsL),
-                    onClick: () => T(I.intl.string(I.t.PNIDDA)),
-                    disabled: y,
+                    onClick: () => E(I.intl.string(I.t.PNIDDA)),
+                    disabled: Z,
                     tooltipText: e
                 },
                 {
                     text: I.intl.string(I.t['0K5NJi']),
-                    onClick: () => T(I.intl.string(I.t.HolIDw)),
-                    disabled: y,
+                    onClick: () => E(I.intl.string(I.t.HolIDw)),
+                    disabled: Z,
                     tooltipText: e
                 }
             ];
-        }, [T, y]);
-    return (0, l.jsxs)(l.Fragment, {
+        }, [E, Z]);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)('div', {
-                className: j.rulesContainer,
-                children: n.map((e, t) =>
-                    (0, l.jsx)(
-                        N,
+            (0, i.jsx)('div', {
+                className: T.rulesContainer,
+                children: t.map((e, n) =>
+                    (0, i.jsx)(
+                        b,
                         {
-                            rulesChannel: null != u ? u : d,
+                            rulesChannel: null != c ? c : d,
                             rule: e,
-                            index: t,
-                            onChange: (e) => R(e, t),
-                            onClear: () => S(t),
-                            onRuleReorder: E,
-                            isDropHovered: t === g,
-                            focused: t === x,
-                            onFocus: k,
-                            previewEnabled: null == o || o,
-                            isDragEnabled: n.length > 1
+                            index: n,
+                            onChange: (e) => R(e, n),
+                            onClear: () => y(n),
+                            onRuleReorder: A,
+                            isDropHovered: n === h,
+                            focused: n === x,
+                            onFocus: j,
+                            previewEnabled: null == a || a,
+                            isDragEnabled: t.length > 1
                         },
                         e.id
                     )
                 )
             }),
-            !y &&
-                (0, l.jsx)(h.A, {
+            !Z &&
+                (0, i.jsx)(C.A, {
                     text: I.intl.string(I.t.Cq5Jub),
-                    onClick: B
+                    onClick: S
                 }),
-            (0, l.jsx)(f.Heading, {
+            (0, i.jsx)(m.Heading, {
                 variant: 'text-xs/bold',
                 color: 'text-muted',
-                className: j.exampleRulesTitle,
+                className: T.exampleRulesTitle,
                 children: I.intl.string(I.t.XHWj8f)
             }),
-            (0, l.jsx)(b.j, {
-                pills: D,
-                pillClassName: j.pill
+            (0, i.jsx)(v.j, {
+                pills: L,
+                pillClassName: T.pill
             })
         ]
     });

@@ -1,18 +1,18 @@
-n.d(t, {
+t.d(e, {
     C: function () {
-        return a;
+        return u;
     },
     Y: function () {
-        return o;
+        return a;
     }
 });
-var i = n(442837),
-    l = n(496675),
-    r = n(981631);
-function a(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Z;
-    return null != e && null != e.linkedLobby && t.can(r.Plq.MANAGE_CHANNELS, e) && t.can(r.Plq.VIEW_CHANNEL, e) && t.can(r.Plq.SEND_MESSAGES, e);
+var l = t(442837),
+    i = t(496675),
+    r = t(981631);
+function u(n) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z;
+    return null != n && null != n.linkedLobby && e.can(r.Plq.MANAGE_CHANNELS, n) && e.can(r.Plq.VIEW_CHANNEL, n) && e.can(r.Plq.SEND_MESSAGES, n);
 }
-function o(e) {
-    return (0, i.e7)([l.Z], () => a(e, l.Z));
+function a(n) {
+    return (0, l.e7)([i.Z], () => u(n, i.Z));
 }

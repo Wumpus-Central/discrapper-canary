@@ -1,50 +1,50 @@
-i.d(e, {
+t.d(e, {
     Oc: function () {
-        return h;
+        return j;
     },
     t: function () {
-        return j;
+        return h;
     },
     xe: function () {
         return v;
     }
 });
-var t = i(200651);
-i(192379);
-var r = i(481060),
-    l = i(131388),
-    a = i(409813),
-    s = i(586585),
-    o = i(614277),
-    c = i(225715),
-    d = i(750143),
-    u = i(388032),
-    m = i(641479),
-    x = i(365627),
-    f = i(753260);
-let j = (n) => {
-        let { step: e, onClose: i } = n,
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(131388),
+    a = t(409813),
+    s = t(586585),
+    o = t(614277),
+    c = t(225715),
+    d = t(750143),
+    u = t(388032),
+    m = t(641479),
+    x = t(365627),
+    f = t(753260);
+let h = (n) => {
+        let { step: e, onClose: t } = n,
             s = (0, l.Z)(d.X);
         return e === a.h8.CONFIRM || e === a.h8.BENEFITS
-            ? (0, t.jsx)('div', {})
-            : (0, t.jsxs)('div', {
+            ? (0, i.jsx)('div', {})
+            : (0, i.jsxs)('div', {
                   className: m.headerContainer,
                   children: [
                       !s &&
-                          (0, t.jsx)('div', {
+                          (0, i.jsx)('div', {
                               className: m.headerImageContainer,
                               'aria-hidden': 'true',
-                              children: (0, t.jsx)('img', {
+                              children: (0, i.jsx)('img', {
                                   src: f,
                                   alt: '',
                                   className: m.headerImage
                               })
                           }),
-                      (0, t.jsx)(r.Clickable, {
+                      (0, i.jsx)(r.Clickable, {
                           className: m.closeContainer,
-                          onClick: () => i(),
+                          onClick: () => t(),
                           'aria-label': u.intl.string(u.t.cpT0Cg),
-                          children: (0, t.jsx)(r.XSmallIcon, {
+                          children: (0, i.jsx)(r.XSmallIcon, {
                               size: 'md',
                               color: 'currentColor',
                               className: m.closeIcon
@@ -53,27 +53,27 @@ let j = (n) => {
                   ]
               });
     },
-    h = (n) => {
-        let { icon: e, storeListingBenefits: i, skuBenefits: r, application: l, title: a, subtitle: s, description: o } = n;
+    j = (n) => {
+        let { icon: e, storeListingBenefits: t, skuBenefits: r, application: l, title: a, subtitle: s, description: o } = n;
         return null == l
             ? null
-            : (0, t.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: m.confirmationContainer,
-                  children: (0, t.jsxs)(c.q$, {
+                  children: (0, i.jsxs)(c.q$, {
                       children: [
-                          (0, t.jsx)(c.CW, {
+                          (0, i.jsx)(c.CW, {
                               application: l,
                               asset: e
                           }),
-                          (0, t.jsx)(c.r0, { children: a }),
-                          (0, t.jsx)(c.s$, {}),
-                          (0, t.jsx)(c.K9, {
+                          (0, i.jsx)(c.r0, { children: a }),
+                          (0, i.jsx)(c.s$, {}),
+                          (0, i.jsx)(c.K9, {
                               title: s,
                               description: o
                           }),
-                          (0, t.jsx)(c.G9, {
+                          (0, i.jsx)(c.G9, {
                               applicationId: l.id,
-                              storeListingBenefits: i,
+                              storeListingBenefits: t,
                               skuBenefits: r
                           })
                       ]
@@ -81,31 +81,31 @@ let j = (n) => {
               });
     };
 function v(n) {
-    let { tierName: e, onConfirm: i, subscription: l } = n;
-    return (0, t.jsxs)('div', {
+    let { tierName: e, onConfirm: t, subscription: l } = n;
+    return (0, i.jsxs)('div', {
         className: m.purchaseConfirmation,
         children: [
-            (0, t.jsx)('img', {
+            (0, i.jsx)('img', {
                 src: x,
                 alt: '',
                 width: 300,
                 height: 126
             }),
-            (0, t.jsx)(r.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: m.confirmationTitle,
                 variant: 'heading-xl/extrabold',
                 color: 'header-primary',
                 children: u.intl.format(u.t['wLFT6+'], { tier: e })
             }),
-            (0, t.jsx)(r.Text, {
+            (0, i.jsx)(r.Text, {
                 className: m.confirmationSubtitle,
                 variant: 'text-md/medium',
                 color: 'header-secondary',
                 children: u.intl.format(u.t.OsAK9v, { timestamp: null == l ? void 0 : l.currentPeriodEnd })
             }),
-            (0, t.jsx)(o.O3, {
-                children: (0, t.jsx)(s.Z, {
-                    onPrimary: i,
+            (0, i.jsx)(o.O3, {
+                children: (0, i.jsx)(s.Z, {
+                    onPrimary: t,
                     primaryCTA: s.g.CONTINUE,
                     primaryText: u.intl.string(u.t['JtWl+f'])
                 })

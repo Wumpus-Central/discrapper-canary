@@ -1,4 +1,4 @@
-a.r(
+s.r(
     (e.exports = {
         footer: 'footer_ad7a9f',
         footerPrimary: 'footerPrimary_ad7a9f footer_ad7a9f',

@@ -1,8 +1,8 @@
 var i,
     r,
     l,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(430824),
     d = n(981631);
@@ -28,7 +28,7 @@ function p(e) {
     } else x = m = u;
     g = !1;
 }
-class f extends (a = s.ZP.Store) {
+class f extends (s = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }

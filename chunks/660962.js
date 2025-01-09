@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(605436),
@@ -21,18 +21,18 @@ var i = n(200651),
     f = n(598077),
     C = n(496675),
     v = n(764260),
-    _ = n(95242),
-    N = n(541575),
+    N = n(95242),
+    _ = n(541575),
     I = n(420966),
     T = n(337344),
     j = n(275296),
     b = n(203377),
-    S = n(981631),
-    E = n(388032),
+    E = n(981631),
+    S = n(388032),
     R = n(380859),
     y = n(490909),
-    Z = n(179517),
-    A = n(79829);
+    A = n(179517),
+    Z = n(79829);
 let L = (0, m.Un)({
         createPromise: () => n.e('5609').then(n.bind(n, 336231)),
         webpackId: 336231
@@ -40,47 +40,47 @@ let L = (0, m.Un)({
     D = o().debounce((e, t) => (0, v.Uv)(e, t), 200);
 function O(e) {
     let { role: t, disabled: n } = e,
-        [l, a] = r.useState(t.name);
+        [l, s] = r.useState(t.name);
     return (
         r.useEffect(() => {
-            a(t.name);
+            s(t.name);
         }, [t.name]),
         (0, i.jsx)(d.FormItem, {
-            title: E.intl.string(E.t.dLbkBg),
+            title: S.intl.string(S.t.dLbkBg),
             required: !0,
             children: (0, i.jsx)(d.TextInput, {
                 type: 'text',
                 value: l,
-                maxLength: S.VKK,
+                maxLength: E.VKK,
                 onChange: function (e) {
-                    a(e), D(t.id, e);
+                    s(e), D(t.id, e);
                 },
                 disabled: n
             })
         })
     );
 }
-function k(e) {
+function M(e) {
     let { role: t, disabled: n } = e;
     return (0, i.jsxs)(d.FormItem, {
         className: R.colorPicker,
-        title: E.intl.string(E.t['1F6FzM']),
+        title: S.intl.string(S.t['1F6FzM']),
         required: !0,
         children: [
             (0, i.jsx)(d.FormText, {
                 className: R.colorDescription,
-                children: E.intl.string(E.t['9UCxlZ'])
+                children: S.intl.string(S.t['9UCxlZ'])
             }),
             (0, i.jsx)(
                 L,
                 {
-                    defaultColor: S.p6O,
-                    colors: S.pmI,
+                    defaultColor: E.p6O,
+                    colors: E.pmI,
                     value: t.color,
                     disabled: n,
                     onChange: (e) =>
                         (function (e, t) {
-                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, v.OW)(e.id, t);
+                            if (e.color !== t && (t !== E.p6O || 0 !== e.color)) t === E.p6O && (t = 0), (0, v.OW)(e.id, t);
                         })(t, e),
                     customPickerPosition: 'right'
                 },
@@ -89,24 +89,24 @@ function k(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     var t, l;
-    let { role: a, guildId: s } = e;
+    let { role: s, guildId: a } = e;
     let o =
-            ((l = E.intl.string(E.t.Mi9KbW)),
+            ((l = S.intl.string(S.t.Mi9KbW)),
             r.useMemo(() => {
                 let e = (0, g.e5)({
                     ...(0, x.ZP)({
                         channelId: '1337',
                         content: l
                     }),
-                    state: S.yb.SENT,
+                    state: E.yb.SENT,
                     id: '31337'
                 });
                 return (
                     (e.author = new f.Z({
                         id: '313337',
-                        username: E.intl.string(E.t.cqpybG),
+                        username: S.intl.string(S.t.cqpybG),
                         discriminator: '0000',
                         bot: !1
                     })),
@@ -116,17 +116,17 @@ function M(e) {
             }, [l])),
         c = {
             nick: o.author.username,
-            colorString: null !== (t = a.colorString) && void 0 !== t ? t : void 0
+            colorString: null !== (t = s.colorString) && void 0 !== t ? t : void 0
         },
         u = {
-            src: Z,
-            name: a.name
+            src: A,
+            name: s.name
         },
         m = {
-            src: A,
-            name: a.name
+            src: Z,
+            name: s.name
         },
-        C = (0, h.oC)(s, a);
+        C = (0, h.oC)(a, s);
     return (0, i.jsx)(d.FocusBlock, {
         children: (0, i.jsxs)('div', {
             className: R.previewContainer,
@@ -134,7 +134,7 @@ function M(e) {
             'data-disable-adaptive-theme': !0,
             children: [
                 (0, i.jsx)(d.ThemeProvider, {
-                    theme: S.BRd.LIGHT,
+                    theme: E.BRd.LIGHT,
                     children: (e) =>
                         (0, i.jsx)('div', {
                             className: e,
@@ -150,7 +150,7 @@ function M(e) {
                         })
                 }),
                 (0, i.jsx)(d.ThemeProvider, {
-                    theme: S.BRd.DARK,
+                    theme: E.BRd.DARK,
                     children: (e) =>
                         (0, i.jsx)('div', {
                             className: e,
@@ -178,26 +178,26 @@ function P(e) {
                 value: t.hoist,
                 onChange: (e) => (0, v.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: E.intl.string(E.t.vceJPj)
+                children: S.intl.string(S.t.vceJPj)
             }),
             (0, i.jsx)(d.FormDivider, { className: R.divider }),
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.mentionable,
                 onChange: (e) => (0, v.we)(t.id, t.hoist, e),
-                note: E.intl.string(E.t.kRg5W1),
+                note: S.intl.string(S.t.kRg5W1),
                 hideBorder: !0,
-                children: E.intl.format(E.t.DTXoJS, {})
+                children: S.intl.format(S.t.DTXoJS, {})
             })
         ]
     });
 }
 function w(e) {
     let { guild: t, role: n, locked: r, setSelectedSection: l } = e,
-        s = (0, u.pM)(null == t ? void 0 : t.id, n.id),
-        o = r || s,
+        a = (0, u.pM)(null == t ? void 0 : t.id, n.id),
+        o = r || a,
         m = (0, c.e7)([C.Z], () => C.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: g } = (0, _.Z)(0),
+        { headerHeight: h, headerRef: g } = (0, N.Z)(0),
         { scrolledToTop: x, handleScroll: p } = (0, I.V)();
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
         className: R.scroller,
@@ -207,7 +207,7 @@ function w(e) {
             className: y.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !x }),
+                    className: s()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !x }),
                     ref: g,
                     children: (0, i.jsx)(I.Z, {
                         guild: t,
@@ -225,16 +225,16 @@ function w(e) {
                     children: (0, i.jsx)(j.Z, { role: n })
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
-                (0, i.jsx)(k, {
+                (0, i.jsx)(M, {
                     role: n,
                     disabled: o
                 }),
-                (0, i.jsx)(N.Z, {
+                (0, i.jsx)(_.Z, {
                     guild: t,
                     disabled: o,
                     role: n
                 }),
-                (0, i.jsx)(M, {
+                (0, i.jsx)(k, {
                     role: n,
                     guildId: t.id
                 }),

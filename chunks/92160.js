@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
-    a = n(481060),
-    s = n(388032),
+    s = n(481060),
+    a = n(388032),
     o = n(353701);
 function c(e) {
     let { className: t, enabled: n, previewCTA: r, onPreview: c, onToggle: d, animateStatus: u, firstLine: m, secondLine: h, disabled: g } = e;
@@ -16,14 +16,14 @@ function c(e) {
         className: l()(t, o.enableContainer),
         children: [
             n
-                ? (0, i.jsx)(a.CheckmarkLargeIcon, {
+                ? (0, i.jsx)(s.CheckmarkLargeIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
                       className: l()(o.activeCircle, { [o.animate]: u })
                   })
-                : (0, i.jsx)(a.PencilIcon, {
+                : (0, i.jsx)(s.PencilIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
@@ -33,11 +33,11 @@ function c(e) {
             (0, i.jsxs)('div', {
                 className: o.enableDescription,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: m
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: h
                     })
@@ -48,21 +48,21 @@ function c(e) {
                 children: [
                     null == c
                         ? null
-                        : (0, i.jsx)(a.Button, {
+                        : (0, i.jsx)(s.Button, {
                               className: o.previewButton,
-                              look: a.Button.Looks.LINK,
-                              size: a.Button.Sizes.SMALL,
+                              look: s.Button.Looks.LINK,
+                              size: s.Button.Sizes.SMALL,
                               onClick: c,
                               disabled: g,
-                              color: a.Button.Colors.PRIMARY,
-                              children: null != r ? r : s.intl.string(s.t['5U0kLy'])
+                              color: s.Button.Colors.PRIMARY,
+                              children: null != r ? r : a.intl.string(a.t['5U0kLy'])
                           }),
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(s.Button, {
                         disabled: null == d || g,
-                        size: a.Button.Sizes.SMALL,
-                        color: n ? a.Button.Colors.RED : a.Button.Colors.BRAND,
+                        size: s.Button.Sizes.SMALL,
+                        color: n ? s.Button.Colors.RED : s.Button.Colors.BRAND,
                         onClick: d,
-                        children: n ? s.intl.string(s.t.R9GHyc) : s.intl.string(s.t.JFfinp)
+                        children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
                     })
                 ]
             })

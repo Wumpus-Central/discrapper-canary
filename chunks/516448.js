@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(313201),
-    s = n(723047),
+    s = n(313201),
+    a = n(723047),
     o = n(727843),
     c = n(290348),
     d = n(164000),
@@ -21,15 +21,15 @@ var i = n(200651),
     f = n(293810),
     C = n(388032),
     v = n(83701);
-function _(e) {
+function N(e) {
     let { allSubscriptionListings: t } = e,
-        { editStateId: n, guildId: _ } = (0, o.N)(),
-        [N, I] = c.UE(n),
+        { editStateId: n, guildId: N } = (0, o.N)(),
+        [_, I] = c.UE(n),
         [T, j] = c.R7(n),
         b = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: S } = (0, d.Z)(_),
-        E = (0, a.Dt)(),
-        R = (0, s.mY)();
+        { isFullServerGating: E } = (0, d.Z)(N),
+        S = (0, s.Dt)(),
+        R = (0, a.mY)();
     return (0, i.jsxs)(u.Z, {
         title: C.intl.string(C.t.YNw2Sk),
         description: C.intl.string(C.t.zMW5r6),
@@ -45,7 +45,7 @@ function _(e) {
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
-                        channelBenefits: N,
+                        channelBenefits: _,
                         intangibleBenefits: T,
                         subscriptionListings: b,
                         onImport: function (e, t) {
@@ -54,7 +54,7 @@ function _(e) {
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(m.w, {
-                        guildId: _,
+                        guildId: N,
                         onImport: function (e) {
                             I((t) => {
                                 let n = new Set(
@@ -81,7 +81,7 @@ function _(e) {
             (0, i.jsx)(l.Spacer, { size: 24 }),
             (0, i.jsxs)(l.FormSection, {
                 title: C.intl.string(C.t.S2kKzM),
-                titleId: E,
+                titleId: S,
                 disabled: R,
                 children: [
                     (0, i.jsx)(l.FormText, {
@@ -90,11 +90,11 @@ function _(e) {
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
-                    S &&
+                    E &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(h.Z, {
-                                    'aria-labelledby': E,
+                                    'aria-labelledby': S,
                                     disabled: R
                                 }),
                                 (0, i.jsx)(l.Spacer, { size: 8 })

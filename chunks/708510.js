@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    a = n(481060),
-    s = n(456268),
+    s = n(481060),
+    a = n(456268),
     o = n(863249),
     c = n(999382),
     d = n(209054),
@@ -20,15 +20,15 @@ var i = n(200651),
     f = n(307375),
     C = n(384632),
     v = n(388032),
-    _ = n(322825);
-function N(e) {
+    N = n(322825);
+function _(e) {
     let { pendingState: t } = e,
         n = r.useRef(!1),
         l = r.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, d.k)(e), (0, u.V)(e), (0, s.le)(), (0, s.aC)(e);
+                        await (0, d.k)(e), (0, u.V)(e), (0, a.le)(), (0, a.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -65,22 +65,22 @@ function I() {
         [null == e ? void 0 : e.id]
     );
     if (null == e || null == t) return null;
-    let { joinType: s } = t;
-    return (0, i.jsxs)(a.Stack, {
+    let { joinType: a } = t;
+    return (0, i.jsxs)(s.Stack, {
         gap: 32,
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(s.Heading, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
                 children: v.intl.string(v.t['+hFV+P'])
             }),
             (0, i.jsx)(f.h, {
                 onTypePicked: n,
-                activeType: s,
+                activeType: a,
                 guild: e
             }),
-            (0, i.jsx)('div', { className: _.divider }),
-            (0, i.jsx)('div', { children: (0, i.jsx)(N, { pendingState: t }) })
+            (0, i.jsx)('div', { className: N.divider }),
+            (0, i.jsx)('div', { children: (0, i.jsx)(_, { pendingState: t }) })
         ]
     });
 }

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(825055),
-    a = n(937615),
-    s = n(730647),
+    s = n(937615),
+    a = n(730647),
     o = n(584825),
     c = n(723047),
     d = n(997519),
@@ -21,7 +21,7 @@ var r = n(481060),
     f = n(981631),
     C = n(388032),
     v = n(899621);
-function _(e) {
+function N(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? f.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
@@ -40,7 +40,7 @@ function _(e) {
               ]
           });
 }
-function N(e) {
+function _(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
         r = (0, o.qi)(t, { includeSoftDeleted: !0 });
     return null == n && 0 === r.length
@@ -53,17 +53,17 @@ function N(e) {
 }
 let I = (e) => {
     var t, n;
-    let { guildId: s, application: o } = e,
-        { loading: m, team: h, currentPeriod: I, allPeriods: T, metrics: j } = (0, d.Z)(s, o),
-        b = (0, u.u)(s),
-        S = (0, c.mY)();
+    let { guildId: a, application: o } = e,
+        { loading: m, team: h, currentPeriod: I, allPeriods: T, metrics: j } = (0, d.Z)(a, o),
+        b = (0, u.u)(a),
+        E = (0, c.mY)();
     return m
         ? (0, i.jsx)(r.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   b &&
                       (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(l.Z, { children: C.intl.format(C.t['2raBCQ'], { insightsURL: f.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(s) }) }), (0, i.jsx)(r.Spacer, { size: 32 })]
+                          children: [(0, i.jsx)(l.Z, { children: C.intl.format(C.t['2raBCQ'], { insightsURL: f.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(a) }) }), (0, i.jsx)(r.Spacer, { size: 32 })]
                       }),
                   (0, i.jsxs)(r.FormSection, {
                       title: C.intl.string(C.t.ofmOzc),
@@ -75,7 +75,7 @@ let I = (e) => {
                               children: [
                                   (0, i.jsx)(g.Z, {
                                       label: C.intl.string(C.t.iY1jW1),
-                                      value: (0, a.T4)(null !== (t = j.revenue) && void 0 !== t ? t : 0, f.pKx.USD),
+                                      value: (0, s.T4)(null !== (t = j.revenue) && void 0 !== t ? t : 0, f.pKx.USD),
                                       additionalContent: (0, i.jsx)(g.H, {
                                           value: j.revenuePctChange,
                                           isPercent: !0
@@ -99,8 +99,8 @@ let I = (e) => {
                                   })
                               ]
                           }),
-                          (0, i.jsx)(N, {
-                              guildId: s,
+                          (0, i.jsx)(_, {
+                              guildId: a,
                               totalPayoutsForPeriod: I
                           })
                       ]
@@ -108,17 +108,17 @@ let I = (e) => {
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['+5Rmho']),
                       className: v.formSection,
-                      children: (0, i.jsx)(_, {
+                      children: (0, i.jsx)(N, {
                           payoutsByPeriod: T,
                           team: h
                       })
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t.O8cDAA),
-                      disabled: S,
+                      disabled: E,
                       className: v.formSection,
                       children: (0, i.jsx)(x.Z, {
-                          guildId: s,
+                          guildId: a,
                           application: o
                       })
                   }),
@@ -126,7 +126,7 @@ let I = (e) => {
                       title: C.intl.string(C.t['0n7R2d']),
                       className: v.formSection,
                       children: (0, i.jsx)(p.Z, {
-                          guildId: s,
+                          guildId: a,
                           allPeriods: T
                       })
                   })
@@ -134,7 +134,7 @@ let I = (e) => {
           });
 };
 function T(e) {
-    return (0, i.jsx)(s.l, {
+    return (0, i.jsx)(a.l, {
         guildId: e.guildId,
         children: (0, i.jsx)(I, { ...e })
     });

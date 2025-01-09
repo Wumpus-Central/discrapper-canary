@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(115470),
     d = n(511010),
     u = n(246992),
-    h = n(719);
-let m = 60000,
+    m = n(719);
+let h = 60000,
     x = 3600000,
     f = 86400000,
     p = [
@@ -50,11 +50,11 @@ function b() {
         })),
         S = a.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
     return (0, r.jsxs)('div', {
-        className: h.container,
+        className: m.container,
         children: [
             (0, r.jsx)(i.FormSection, {
                 title: 'Feedback Survey',
-                className: h.formElement,
+                className: m.formElement,
                 tag: i.FormTitleTags.H3,
                 children: (0, r.jsx)(i.SingleSelect, {
                     options: _,
@@ -68,14 +68,14 @@ function b() {
             }),
             (0, r.jsxs)(i.FormSection, {
                 title: 'Override Survey Cooldown',
-                className: h.formElement,
+                className: m.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
                     null != T &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    className: h.formDividerTitle,
+                                    className: m.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current cooldown'
@@ -87,7 +87,7 @@ function b() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(T.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(T.cooldown / h, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
@@ -100,14 +100,14 @@ function b() {
                             ]
                         }),
                     (0, r.jsx)(d.Z, {
-                        className: h.formDividerTitle,
+                        className: m.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override cooldown'
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: h.formRow,
+                        className: m.formRow,
                         children: [
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
@@ -130,14 +130,14 @@ function b() {
             }),
             (0, r.jsxs)(i.FormSection, {
                 title: 'Override Survey Chance',
-                className: h.formElement,
+                className: m.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
                     null != T &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    className: h.formDividerTitle,
+                                    className: m.formDividerTitle,
                                     children: (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/semibold',
                                         children: 'Current chance'
@@ -150,14 +150,14 @@ function b() {
                             ]
                         }),
                     (0, r.jsx)(d.Z, {
-                        className: h.formDividerTitle,
+                        className: m.formDividerTitle,
                         children: (0, r.jsx)(i.Text, {
                             variant: 'text-sm/semibold',
                             children: 'Override chance'
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: h.formRow,
+                        className: m.formRow,
                         children: [
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
@@ -175,7 +175,7 @@ function b() {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: h.formRow,
+                className: m.formRow,
                 children: [
                     (0, r.jsx)(i.Button, {
                         onClick: () =>

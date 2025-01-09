@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(772848),
-    a = n(640358),
-    s = n(442837),
+    s = n(640358),
+    a = n(442837),
     o = n(544891),
     c = n(481060),
     d = n(497321),
@@ -16,8 +16,8 @@ var i = n(200651),
     f = n(626135),
     C = n(146596),
     v = n(559368),
-    _ = n(999382),
-    N = n(981631),
+    N = n(999382),
+    _ = n(981631),
     I = n(190378),
     T = n(388032),
     j = n(175957);
@@ -25,18 +25,18 @@ let b = function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             r = null;
         return (
-            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (r = T.intl.string(T.t.xO2msb)) : (r = T.intl.formatToPlainString(T.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
+            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (r = T.intl.string(T.t.xO2msb)) : (r = T.intl.formatToPlainString(T.t.nskeMz, { percentage: (0, s.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? ''.concat((0, a.o)(e, n)).concat(i ? '%' : '') : T.intl.string(T.t.jHpxws),
+                localizedNumber: null != e ? ''.concat((0, s.o)(e, n)).concat(i ? '%' : '') : T.intl.string(T.t.jHpxws),
                 subtext: r,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0
             }
         );
     },
-    S = function (e) {
+    E = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === N.evJ.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === _.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, i.jsx)(c.FormErrorBlock, {
                   icon: c.CircleInformationIcon,
                   className: j.notEnoughMembersError,
@@ -50,20 +50,20 @@ let b = function (e, t, n) {
                     children: T.intl.string(T.t.Iju63d)
                 });
     },
-    E = () => {
+    S = () => {
         let [e, t] = r.useState(!1),
-            n = (0, s.e7)([_.Z], () => _.Z.getGuildId());
+            n = (0, a.e7)([N.Z], () => N.Z.getGuildId());
         return (0, i.jsx)(c.Button, {
             className: j.developerPortalCta,
             onClick: () => {
                 t(!0),
                     (function (e) {
-                        f.default.track(N.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-                        let t = null == e ? N.E07.DEVELOPER_PORTAL : N.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+                        f.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                        let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                             n = (0, l.Z)();
                         return o.tn
                             .post({
-                                url: N.ANM.HANDOFF,
+                                url: _.ANM.HANDOFF,
                                 body: { key: n },
                                 oldFormErrors: !0,
                                 rejectWithError: !0
@@ -71,7 +71,7 @@ let b = function (e, t, n) {
                             .then(
                                 (e) => {
                                     let i = e.body.handoff_token;
-                                    window.open(N.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
+                                    window.open(_.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
                                 },
                                 () => {
                                     window.open(t);
@@ -86,16 +86,16 @@ let b = function (e, t, n) {
         });
     };
 t.Z = () => {
-    let e = (0, s.e7)([_.Z], () => _.Z.getGuildId()),
-        t = (0, s.e7)([g.Z], () => g.Z.getMemberCount(e)),
-        n = (0, s.e7)([x.Z], () => x.Z.getGuild(e)),
-        l = (0, s.e7)([h.default], () => h.default.locale),
-        { analytics: a, errorCode: o } = (0, s.cj)([v.Z], () => ({
+    let e = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
+        t = (0, a.e7)([g.Z], () => g.Z.getMemberCount(e)),
+        n = (0, a.e7)([x.Z], () => x.Z.getGuild(e)),
+        l = (0, a.e7)([h.default], () => h.default.locale),
+        { analytics: s, errorCode: o } = (0, a.cj)([v.Z], () => ({
             analytics: null != e ? v.Z.getOverviewAnalytics(e) : null,
             errorCode: v.Z.getError()
         })),
-        f = (0, s.e7)([p.Z], () => p.Z.getSettings().enabled),
-        R = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(N.oNc.PARTNERED) && !n.hasFeature(N.oNc.VERIFIED));
+        f = (0, a.e7)([p.Z], () => p.Z.getSettings().enabled),
+        R = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(_.oNc.PARTNERED) && !n.hasFeature(_.oNc.VERIFIED));
     r.useEffect(() => {
         null != e && !R && ((0, C.Vk)(e), (0, C.SR)(e), (0, C.xl)(e));
     }, [e, R]),
@@ -103,7 +103,7 @@ t.Z = () => {
             (0, m.Kw)(I.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
         }, []);
     let y =
-        null != a
+        null != s
             ? (0, i.jsx)('div', {
                   className: j.__invalid_guildAnalyticsOverviewWrapper,
                   children: (0, i.jsxs)('div', {
@@ -112,21 +112,21 @@ t.Z = () => {
                           (0, i.jsx)(u.Z, {
                               title: T.intl.string(T.t.i0Nora),
                               tooltipText: T.intl.string(T.t.KiRbLC),
-                              ...b(a.visitors, a.visitorsChange, l)
+                              ...b(s.visitors, s.visitorsChange, l)
                           }),
                           (0, i.jsx)(u.Z, {
                               title: T.intl.string(T.t.DDAHdX),
                               tooltipText: T.intl.string(T.t.HxWUkZ),
-                              ...b(a.communicators, a.communicatorsChange, l)
+                              ...b(s.communicators, s.communicatorsChange, l)
                           }),
                           (0, i.jsx)(u.Z, {
                               title: T.intl.string(T.t.hYeOqK),
-                              ...b(a.newMembers, a.newMembersChange, l)
+                              ...b(s.newMembers, s.newMembersChange, l)
                           }),
                           (0, i.jsx)(u.Z, {
                               title: T.intl.string(T.t.jj7OPz),
                               tooltipText: T.intl.string(T.t.MQCsl5),
-                              ...b(a.pctRetained, a.pctRetainedChange, l, !0)
+                              ...b(s.pctRetained, s.pctRetainedChange, l, !0)
                           })
                       ]
                   })
@@ -140,7 +140,7 @@ t.Z = () => {
                 type: c.FormTextTypes.DESCRIPTION,
                 children: T.intl.format(T.t.NIZ60d, {})
             }),
-            S(o, R),
+            E(o, R),
             (0, i.jsxs)('div', {
                 className: j.developerPortalCtaWrapper,
                 children: [
@@ -150,7 +150,7 @@ t.Z = () => {
                         variant: 'text-sm/normal',
                         children: T.intl.string(T.t.A5vsws)
                     }),
-                    (0, i.jsx)(E, {})
+                    (0, i.jsx)(S, {})
                 ]
             }),
             f

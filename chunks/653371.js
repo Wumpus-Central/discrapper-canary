@@ -1,110 +1,110 @@
-a.d(t, {
+s.d(t, {
     a: function () {
-        return f;
+        return A;
     }
 }),
-    a(47120),
-    a(653041);
-var n = a(200651),
-    s = a(192379),
-    i = a(557533),
-    r = a.n(i),
-    l = a(771950),
-    o = a(860911),
-    c = a(66037),
-    d = a(787907),
-    u = a(643103),
-    N = a(34211),
-    h = a(231338),
-    m = a(436620),
-    p = a(431138),
-    I = a(330711),
-    _ = a(790730);
-function k(e, t, a) {
+    s(47120),
+    s(653041);
+var a = s(200651),
+    n = s(192379),
+    r = s(557533),
+    i = s.n(r),
+    o = s(771950),
+    l = s(860911),
+    c = s(66037),
+    d = s(787907),
+    u = s(643103),
+    p = s(34211),
+    N = s(231338),
+    h = s(436620),
+    m = s(431138),
+    f = s(330711),
+    g = s(790730);
+function I(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: a,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = a),
+            : (e[t] = s),
         e
     );
 }
-let A = h.j_.MAIN_NAVIGATION_MENU,
-    g = () => [
+let _ = N.j_.MAIN_NAVIGATION_MENU,
+    k = () => [
         {
-            route: (0, l.L)(h.RK.TWITTER),
+            route: (0, o.L)(N.RK.TWITTER),
             linkClicked: 'twitter',
             alt: "Discord's Twitter",
-            img: p.r.ASSET_SOCIAL_TWITTER
+            img: m.r.ASSET_SOCIAL_TWITTER
         },
         {
-            route: h.fK.FACEBOOK_URL,
+            route: N.fK.FACEBOOK_URL,
             linkClicked: 'facebook',
             alt: "Discord's Facebook",
-            img: p.r.ASSET_SOCIAL_FACEBOOK
+            img: m.r.ASSET_SOCIAL_FACEBOOK
         },
         {
-            route: h.fK.INSTAGRAM_URL,
+            route: N.fK.INSTAGRAM_URL,
             linkClicked: 'instagram',
             alt: "Discord's Instagram",
-            img: p.r.ASSET_SOCIAL_INSTAGRAM
+            img: m.r.ASSET_SOCIAL_INSTAGRAM
         }
     ];
-class f extends s.PureComponent {
+class A extends n.PureComponent {
     componentDidMount() {
-        this.setState({ isAppCompatible: m.KO });
+        this.setState({ isAppCompatible: h.KO });
     }
     render() {
-        let { className: e, mainContentId: t, skipToContentLabel: a, onChangeLocale: s, TrackClick: i, avoidRouter: l } = this.props;
-        return (0, n.jsxs)('header', {
-            className: r()(_.header, e),
+        let { className: e, mainContentId: t, skipToContentLabel: s, onChangeLocale: n, TrackClick: r, avoidRouter: o } = this.props;
+        return (0, a.jsxs)('header', {
+            className: i()(g.header, e),
             children: [
-                (0, n.jsxs)('nav', {
-                    className: _.headerInner,
+                (0, a.jsxs)('nav', {
+                    className: g.headerInner,
                     children: [
-                        (0, n.jsxs)('div', {
-                            className: _.headerLogo,
+                        (0, a.jsxs)('div', {
+                            className: g.headerLogo,
                             children: [
-                                (0, n.jsx)(i, {
+                                (0, a.jsx)(r, {
                                     tag: 'div',
-                                    eventName: A,
+                                    eventName: _,
                                     data: { linkClicked: 'logo' },
-                                    children: (0, n.jsx)(c.Z, {
-                                        avoidRouter: l,
-                                        to: h.am.INDEX,
-                                        from: h.j_.MAIN_NAVIGATION_MENU,
-                                        children: (0, n.jsx)(d.O, {})
+                                    children: (0, a.jsx)(c.Z, {
+                                        avoidRouter: o,
+                                        to: N.am.INDEX,
+                                        from: N.j_.MAIN_NAVIGATION_MENU,
+                                        children: (0, a.jsx)(d.O, {})
                                     })
                                 }),
                                 null != t
-                                    ? (0, n.jsx)('a', {
-                                          className: _.skipToContent,
+                                    ? (0, a.jsx)('a', {
+                                          className: g.skipToContent,
                                           href: '#'.concat(t),
-                                          children: a
+                                          children: s
                                       })
                                     : null
                             ]
                         }),
-                        (0, n.jsx)('ul', {
-                            className: _.headerNav,
-                            children: (0, n.jsx)(N.o, {
-                                avoidRouter: l,
-                                TrackClick: i,
-                                styles: _
+                        (0, a.jsx)('ul', {
+                            className: g.headerNav,
+                            children: (0, a.jsx)(p.o, {
+                                avoidRouter: o,
+                                TrackClick: r,
+                                styles: g
                             })
                         }),
-                        (0, n.jsxs)('ul', {
-                            className: _.headerNavRight,
-                            children: [this.renderSocialMediaNav(), (0, n.jsx)(u.p, { onChange: s })]
+                        (0, a.jsxs)('ul', {
+                            className: g.headerNavRight,
+                            children: [this.renderSocialMediaNav(), (0, a.jsx)(u.p, { onChange: n })]
                         })
                     ]
                 }),
                 null != t &&
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         id: t,
                         tabIndex: -1
                     })
@@ -113,28 +113,28 @@ class f extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'state', { isAppCompatible: !0 }),
-            k(this, 'getAppButton', () => {
-                let { token: e, TrackClick: t, authRedirectTo: a } = this.props,
-                    { isAppCompatible: s } = this.state,
-                    i = (0, o.Ui)(a),
-                    r = I.Z.Messages.NAVIGATION_LOGIN;
+            I(this, 'state', { isAppCompatible: !0 }),
+            I(this, 'getAppButton', () => {
+                let { token: e, TrackClick: t, authRedirectTo: s } = this.props,
+                    { isAppCompatible: n } = this.state,
+                    r = (0, l.Ui)(s),
+                    i = f.Z.Messages.NAVIGATION_LOGIN;
                 return (
-                    null != e && ((i = h.$w.ME), (r = I.Z.Messages.NAVIGATION_OPEN)),
-                    s
-                        ? (0, n.jsx)(
+                    null != e && ((r = N.$w.ME), (i = f.Z.Messages.NAVIGATION_OPEN)),
+                    n
+                        ? (0, a.jsx)(
                               'li',
                               {
-                                  className: _.listItemInactive,
-                                  children: (0, n.jsx)(t, {
-                                      eventName: A,
-                                      className: _.appButton,
+                                  className: g.listItemInactive,
+                                  children: (0, a.jsx)(t, {
+                                      eventName: _,
+                                      className: g.appButton,
                                       data: {
                                           linkClicked: e ? 'open' : 'login',
                                           googleAnalytics: !0
                                       },
-                                      href: i,
-                                      children: r
+                                      href: r,
+                                      children: i
                                   })
                               },
                               'app-button'
@@ -142,21 +142,21 @@ class f extends s.PureComponent {
                         : null
                 );
             }),
-            k(this, 'renderSocialMediaNav', () => {
+            I(this, 'renderSocialMediaNav', () => {
                 let { TrackClick: e } = this.props,
-                    t = g().map((t) =>
-                        (0, n.jsx)(
+                    t = k().map((t) =>
+                        (0, a.jsx)(
                             'li',
                             {
-                                className: r()(_.listItemInactive, _.listItemSocialMedia),
-                                children: (0, n.jsx)(e, {
-                                    eventName: A,
-                                    className: _.rightNavLink,
+                                className: i()(g.listItemInactive, g.listItemSocialMedia),
+                                children: (0, a.jsx)(e, {
+                                    eventName: _,
+                                    className: g.rightNavLink,
                                     data: { linkClicked: t.linkClicked },
                                     href: t.route,
                                     rel: 'me',
                                     target: '_blank',
-                                    children: (0, n.jsx)('img', {
+                                    children: (0, a.jsx)('img', {
                                         src: t.img,
                                         alt: t.alt
                                     })
@@ -165,8 +165,8 @@ class f extends s.PureComponent {
                             t.route
                         )
                     ),
-                    a = this.getAppButton();
-                return null != a && t.push(a), t;
+                    s = this.getAppButton();
+                return null != s && t.push(s), t;
             });
     }
 }

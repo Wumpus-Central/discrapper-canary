@@ -15,8 +15,8 @@ var i,
     d = n(728345),
     u = n(812206),
     _ = n(600164),
-    f = n(886176),
-    p = n(572004),
+    p = n(886176),
+    f = n(572004),
     C = n(504211),
     S = n(283836),
     I = n(507608),
@@ -58,7 +58,7 @@ function E(t) {
                     (0, a.jsxs)('div', {
                         className: h.modalTitle,
                         children: [
-                            (0, a.jsx)(f.Z, {}),
+                            (0, a.jsx)(p.Z, {}),
                             (0, a.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: v
@@ -68,7 +68,7 @@ function E(t) {
                     (0, a.jsxs)('div', {
                         className: h.modalHeaderLinks,
                         children: [
-                            p.wS &&
+                            f.wS &&
                                 (0, a.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
@@ -76,7 +76,7 @@ function E(t) {
                                     'aria-label': N.intl.string(N.t.WqhZsr),
                                     onClick: () => {
                                         let t = ''.concat(location.protocol, '//').concat(location.host).concat(b.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(i, m.ApplicationDirectoryProfileSections.STORE));
-                                        (0, p.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, C.X)(i, C.B.STORE_MODAL);
+                                        (0, f.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, C.X)(i, C.B.STORE_MODAL);
                                     },
                                     children: (0, a.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),

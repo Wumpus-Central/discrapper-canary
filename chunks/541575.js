@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var r = n(780384),
     l = n(481060),
-    a = n(410030),
-    s = n(367907),
+    s = n(410030),
+    a = n(367907),
     o = n(906732),
     c = n(91218),
     d = n(807582),
@@ -16,8 +16,8 @@ var r = n(780384),
     f = n(792464);
 t.Z = function (e) {
     let { guild: t, disabled: C, role: v } = e,
-        _ = (0, a.ZP)(),
-        N = (0, u.oC)(t.id, v),
+        N = (0, s.ZP)(),
+        _ = (0, u.oC)(t.id, v),
         { analyticsLocations: I } = (0, o.ZP)(),
         T = () => {
             (0, l.openModalLazy)(async () => {
@@ -34,7 +34,7 @@ t.Z = function (e) {
         j = t.features.has(g.oNc.ROLE_ICONS),
         b = (e) => {
             !j &&
-                ((0, s.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         ...e,
                         section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
@@ -53,7 +53,7 @@ t.Z = function (e) {
                     perks: (0, x.Yp)()
                 }));
         },
-        S = (0, i.jsx)(d.Z, {
+        E = (0, i.jsx)(d.Z, {
             className: f.availabilityIndicator,
             guild: t,
             guildFeature: g.oNc.ROLE_ICONS,
@@ -70,7 +70,7 @@ t.Z = function (e) {
         children: [
             (0, i.jsxs)(l.FormTitle, {
                 className: f.formTitle,
-                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), S]
+                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), E]
             }),
             (0, i.jsx)(l.FormText, {
                 className: f.description,
@@ -82,9 +82,9 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: f.previewContainer,
                         children:
-                            null != N
+                            null != _
                                 ? (0, i.jsx)(c.Z, {
-                                      ...N,
+                                      ..._,
                                       className: f.roleIconPreview,
                                       enableTooltip: !1
                                   })
@@ -98,16 +98,16 @@ t.Z = function (e) {
                     }),
                     (0, i.jsx)(l.Button, {
                         className: f.button,
-                        color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
+                        color: (0, r.ap)(N) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                         look: l.Button.Looks.OUTLINED,
                         onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : b({ object: g.qAy.UPLOAD_IMAGE })),
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),
-                    null != N
+                    null != _
                         ? (0, i.jsx)(l.Button, {
                               className: f.button,
-                              color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
+                              color: (0, r.ap)(N) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
                               look: l.Button.Looks.BLANK,
                               onClick: () => {
                                   (0, h._l)(v.id, null, null);

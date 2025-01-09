@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(273504),
-    s = n(388032),
+    s = n(273504),
+    a = n(388032),
     o = n(900340);
 function c(e) {
     let { preset: t, toggled: n, onToggle: r } = e,
@@ -16,14 +16,14 @@ function c(e) {
             let t = null,
                 n = null;
             switch (e) {
-                case a.Ux.PROFANITY:
-                    (t = s.intl.string(s.t['I+BDrK'])), (n = (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.hISCmp) }));
+                case s.Ux.PROFANITY:
+                    (t = a.intl.string(a.t['I+BDrK'])), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.hISCmp) }));
                     break;
-                case a.Ux.SEXUAL_CONTENT:
-                    (t = s.intl.string(s.t.URSMen)), (n = (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.oRQDBg) }));
+                case s.Ux.SEXUAL_CONTENT:
+                    (t = a.intl.string(a.t.URSMen)), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.oRQDBg) }));
                     break;
-                case a.Ux.SLURS:
-                    (t = s.intl.string(s.t.xjK2Mz)), (n = (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.oJYXBA) }));
+                case s.Ux.SLURS:
+                    (t = a.intl.string(a.t.xjK2Mz)), (n = (0, i.jsx)(i.Fragment, { children: a.intl.string(a.t.oJYXBA) }));
                     break;
                 default:
                     (t = 'Error'), (n = 'Unrecognized list');
@@ -62,7 +62,7 @@ function c(e) {
 function d(e) {
     var t;
     let { rule: n, onChangeRule: l } = e,
-        [s, o] = r.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)),
+        [a, o] = r.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)),
         d = r.useMemo(
             () => (e) => {
                 l({
@@ -76,24 +76,24 @@ function d(e) {
             [l, n]
         ),
         u = (e) => {
-            let t = new Set(s);
+            let t = new Set(a);
             t.has(e) ? t.delete(e) : t.add(e), o(t), d(Array.from(t));
         };
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(c, {
-                preset: a.Ux.PROFANITY,
-                toggled: s.has(a.Ux.PROFANITY),
+                preset: s.Ux.PROFANITY,
+                toggled: a.has(s.Ux.PROFANITY),
                 onToggle: u
             }),
             (0, i.jsx)(c, {
-                preset: a.Ux.SLURS,
-                toggled: s.has(a.Ux.SLURS),
+                preset: s.Ux.SLURS,
+                toggled: a.has(s.Ux.SLURS),
                 onToggle: u
             }),
             (0, i.jsx)(c, {
-                preset: a.Ux.SEXUAL_CONTENT,
-                toggled: s.has(a.Ux.SEXUAL_CONTENT),
+                preset: s.Ux.SEXUAL_CONTENT,
+                toggled: a.has(s.Ux.SEXUAL_CONTENT),
                 onToggle: u
             })
         ]

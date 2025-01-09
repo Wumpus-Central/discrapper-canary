@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return E;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
+    s = n.n(l),
+    a = n(392711),
     o = n(399606),
     c = n(215569),
     d = n(481060),
@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(723047),
     C = n(290348),
     v = n(450215),
-    _ = n(981631),
-    N = n(388032),
+    N = n(981631),
+    _ = n(388032),
     I = n(26405);
 let T = 'guild-role-subscription-tier-template-selector',
     j = (e) => {
@@ -44,24 +44,24 @@ let T = 'guild-role-subscription-tier-template-selector',
 function b(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         j = (0, x._k)(p),
-        { editStateIds: b, addNewEditStateId: S, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
-        [y, Z] = r.useState({}),
-        A = r.useMemo(() => {
+        { editStateIds: b, addNewEditStateId: E, addNewEditStateFromTemplate: S, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
+        [y, A] = r.useState({}),
+        Z = r.useMemo(() => {
             let e = b.map((e) => {
                 var t;
                 return null !== (t = y[e]) && void 0 !== t ? t : e;
             });
-            return (0, s.uniq)(e);
+            return (0, a.uniq)(e);
         }, [b, y]),
         L = (e, t) => {
-            Z((n) => ({
+            A((n) => ({
                 ...n,
                 [e]: t
             }));
         },
         D = (0, g.ss)(t),
         O = (0, g.Gp)(),
-        k = r.useCallback(() => {
+        M = r.useCallback(() => {
             O &&
                 h.jJ.trackExposure({
                     guildId: t,
@@ -75,35 +75,35 @@ function b(e) {
                                   (0, i.jsx)(e, {
                                       ...n,
                                       guildId: t,
-                                      addNewEditStateFromTemplate: E,
-                                      addNewEditStateFromScratch: S,
+                                      addNewEditStateFromTemplate: S,
+                                      addNewEditStateFromScratch: E,
                                       priceTiers: l
                                   });
                           },
                           { modalKey: T }
                       )
-                    : S();
-        }, [t, E, S, l, O, D]),
-        M = C.Lo(A),
-        P = r.useCallback(() => A.forEach(C.GM), [A]),
+                    : E();
+        }, [t, S, E, l, O, D]),
+        k = C.Lo(Z),
+        P = r.useCallback(() => Z.forEach(C.GM), [Z]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
+                B === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && M(),
                 () => {
                     (0, d.closeModal)(T);
                 }
             ),
-            [B, k]
+            [B, M]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
                     className: I.groupListings,
                     children: [
-                        A.map((e) =>
+                        Z.map((e) =>
                             (0, i.jsx)(
                                 v.Z,
                                 {
@@ -120,8 +120,8 @@ function b(e) {
                             )
                         ),
                         (0, i.jsxs)(d.Clickable, {
-                            onClick: w ? void 0 : k,
-                            className: a()(I.createTierButton, { [I.disabled]: w }),
+                            onClick: w ? void 0 : M,
+                            className: s()(I.createTierButton, { [I.disabled]: w }),
                             'aria-disabled': w,
                             children: [
                                 (0, i.jsx)(d.CirclePlusIcon, {
@@ -132,7 +132,7 @@ function b(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/normal',
                                     color: 'interactive-active',
-                                    children: N.intl.string(N.t.PiFnn5)
+                                    children: _.intl.string(_.t.PiFnn5)
                                 })
                             ]
                         })
@@ -141,31 +141,31 @@ function b(e) {
                 (0, i.jsx)(c.W, {
                     component: 'div',
                     className: I.contentRegion,
-                    children: M && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: P }) })
+                    children: k && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: P }) })
                 })
             ]
         })
     );
 }
-function S(e) {
+function E(e) {
     let { guildId: t } = e,
         { priceTiers: n } = j(t),
         r = (0, x.GG)(t),
         { maxTiers: l } = (0, g.s1)(t),
-        a = r.map((e) => e.id);
+        s = r.map((e) => e.id);
     return (0, i.jsxs)(d.FormSection, {
-        title: N.intl.string(N.t['72+Soq']),
+        title: _.intl.string(_.t['72+Soq']),
         className: I.container,
         children: [
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
-                children: N.intl.format(N.t.nHRSvL, { maxTiers: l })
+                children: _.intl.format(_.t.nHRSvL, { maxTiers: l })
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsx)(b, {
                 priceTiers: n,
                 guildId: t,
-                groupListingId: a[0]
+                groupListingId: s[0]
             })
         ]
     });

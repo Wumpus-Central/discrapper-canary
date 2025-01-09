@@ -26,43 +26,43 @@ function S(e) {
 n.Z = l.memo(function (e) {
     var n, t, l, r, p;
     let x,
-        { media: C, obscured: v = !1, padding: y, onContextMenu: I } = e,
-        { width: b, height: O, url: M, proxyUrl: L, alt: T, type: A, maxWidth: R, maxHeight: j, ...N } = C,
-        { zoomed: P, setZoomed: D } = (0, _.Y)(),
-        w = (function (e, n, t) {
+        { media: v, obscured: C = !1, padding: y, onContextMenu: I } = e,
+        { width: b, height: M, url: O, proxyUrl: L, alt: T, type: A, maxWidth: R, maxHeight: j, ...D } = v,
+        { zoomed: N, setZoomed: w } = (0, _.Y)(),
+        P = (function (e, n, t) {
             return e && (0, o.rV)(n)
                 ? (0, o.s$)(n)
                 : (0, f.q)({
                       proxyURL: t,
                       url: n
                   });
-        })(P, M, L),
-        k = {
+        })(N, O, L),
+        Z = {
             vertical: (null !== (n = null == y ? void 0 : y.top) && void 0 !== n ? n : 0) + (null !== (t = null == y ? void 0 : y.bottom) && void 0 !== t ? t : 0),
             horizontal: (null !== (l = null == y ? void 0 : y.left) && void 0 !== l ? l : 0) + (null !== (r = null == y ? void 0 : y.right) && void 0 !== r ? r : 0)
         },
-        { width: Z, height: U } = (0, m.zp)(null != b ? b : 0, null != O ? O : 0, k),
-        B = !(null == b || 0 === b || null == O || 0 === O);
+        { width: k, height: U } = (0, m.zp)(null != b ? b : 0, null != M ? M : 0, Z),
+        B = !(null == b || 0 === b || null == M || 0 === M);
     if ('VIDEO' === A && B && null != L) {
         let e = S(L);
         if (null == e) return null;
-        let n = null !== (p = C.renderLinkComponent) && void 0 !== p ? p : d.iT;
+        let n = null !== (p = v.renderLinkComponent) && void 0 !== p ? p : d.iT;
         return (0, i.jsx)(u.Z, {
-            ...N,
-            src: w,
+            ...D,
+            src: P,
             width: b,
-            height: O,
-            maxWidth: Z,
+            height: M,
+            maxWidth: k,
             maxHeight: U,
             poster: e,
             naturalWidth: b,
-            naturalHeight: O,
+            naturalHeight: M,
             volume: h.FC,
             autoMute: h.rs,
             onVolumeChange: h.jA,
             onMute: h.Zj,
             renderLinkComponent: n,
-            autoPlay: !v,
+            autoPlay: !C,
             alt: T,
             onContextMenu: I
         });
@@ -71,22 +71,22 @@ n.Z = l.memo(function (e) {
         'IMAGE' === A &&
             (x = B
                 ? (0, i.jsx)(s.ZP, {
-                      ...N,
-                      src: w,
+                      ...D,
+                      src: P,
                       width: b,
-                      height: O,
+                      height: M,
                       shouldLink: !1,
-                      maxWidth: Z,
+                      maxWidth: k,
                       maxHeight: U,
                       useFullWidth: !0,
-                      animated: !v && C.animated,
-                      autoPlay: !v,
+                      animated: !C && v.animated,
+                      autoPlay: !C,
                       alt: T,
-                      zoomThumbnailPlaceholder: C.zoomThumbnailPlaceholder,
+                      zoomThumbnailPlaceholder: v.zoomThumbnailPlaceholder,
                       onContextMenu: I
                   })
                 : (0, i.jsx)('img', {
-                      src: w,
+                      src: P,
                       alt: T,
                       onContextMenu: I,
                       className: E.dimensionlessImage
@@ -94,14 +94,14 @@ n.Z = l.memo(function (e) {
         null != x
             ? (0, i.jsx)(c.Z, {
                   width: b,
-                  height: O,
-                  maxWidth: Z,
+                  height: M,
+                  maxWidth: k,
                   maxHeight: U,
-                  active: P,
-                  className: a()(E.wrapper, { [E.zoomed]: P }),
+                  active: N,
+                  className: a()(E.wrapper, { [E.zoomed]: N }),
                   panPadding: y,
                   onClick: () => {
-                      D(!P), (0, g.yg)(P ? g.uG.ZOOM_OUT_IMAGE_PRESSED : g.uG.ZOOM_IN_IMAGE_PRESSED);
+                      w(!N), (0, g.yg)(N ? g.uG.ZOOM_OUT_IMAGE_PRESSED : g.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
                   children: x
               })

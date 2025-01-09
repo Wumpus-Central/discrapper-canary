@@ -78,8 +78,8 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    h = n(694626),
-    m = n(855930),
+    m = n(694626),
+    h = n(855930),
     x = n(385787),
     f = n(566162),
     p = n(567027),
@@ -112,8 +112,8 @@ let H = {
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: h.Z,
-        HSL: m.Z,
+        HPLuv: m.Z,
+        HSL: h.Z,
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
@@ -248,28 +248,28 @@ function en(e) {
             space: o,
             outputSpace: s.Z
         }),
-        h = Math.floor(r / 2),
-        m = r - h,
+        m = Math.floor(r / 2),
+        h = r - m,
         x = (0, A.w6)(d, c, {
-            steps: h,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        f = (0, A.w6)(u, c, {
             steps: m,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
+        f = (0, A.w6)(u, c, {
+            steps: h,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
         p = [];
-    for (let e = 0; e < h; e++) {
-        let t = x(e / h);
+    for (let e = 0; e < m; e++) {
+        let t = x(e / m);
         p.push(t);
     }
     p.push(c);
-    for (let e = 1; e < m; e++) {
-        let t = f(1 - e / m);
+    for (let e = 1; e < h; e++) {
+        let t = f(1 - e / h);
         p.push(t);
     }
     return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));

@@ -1,31 +1,31 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
-    o = n(481060),
-    l = n(367907),
-    a = n(357352),
+var r = n(120356),
+    l = n.n(r),
+    s = n(481060),
+    a = n(367907),
+    o = n(357352),
     c = n(434404),
     d = n(626135),
-    C = n(629481),
-    u = n(981631),
-    x = n(388032),
-    f = n(164626);
-function p(e) {
+    u = n(629481),
+    m = n(981631),
+    h = n(388032),
+    g = n(164626);
+function x(e) {
     let { pills: t } = e;
-    return (0, r.jsx)('div', {
-        className: f.row,
+    return (0, i.jsx)('div', {
+        className: g.row,
         children: t.map((e) =>
-            (0, r.jsx)(
+            (0, i.jsx)(
                 'div',
                 {
-                    className: f.pill,
-                    children: (0, r.jsx)(o.Text, {
+                    className: g.pill,
+                    children: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: e
                     })
@@ -35,53 +35,53 @@ function p(e) {
         )
     });
 }
-function h(e) {
-    let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        h = [
-            [x.intl.string(x.t['73h51N']), x.intl.string(x.t['gbjs//'])],
-            [x.intl.string(x.t.mCoH0d), x.intl.string(x.t['l/BuSE'])],
-            [x.intl.string(x.t.psQktr), x.intl.string(x.t.nMhIZW)],
-            [x.intl.string(x.t['0ItLmJ']), x.intl.string(x.t.yQHqsL)]
+function p(e) {
+    let { guildId: t, showCTA: n, responsive: r = !0 } = e,
+        p = [
+            [h.intl.string(h.t['73h51N']), h.intl.string(h.t['gbjs//'])],
+            [h.intl.string(h.t.mCoH0d), h.intl.string(h.t['l/BuSE'])],
+            [h.intl.string(h.t.psQktr), h.intl.string(h.t.nMhIZW)],
+            [h.intl.string(h.t['0ItLmJ']), h.intl.string(h.t.yQHqsL)]
         ];
-    return (0, r.jsx)('div', {
-        className: s()({ [f.responsive]: i }),
-        children: (0, r.jsxs)('div', {
-            className: f.container,
+    return (0, i.jsx)('div', {
+        className: l()({ [g.responsive]: r }),
+        children: (0, i.jsxs)('div', {
+            className: g.container,
             children: [
-                (0, r.jsxs)('div', {
-                    className: f.content,
+                (0, i.jsxs)('div', {
+                    className: g.content,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: f.pillContainer,
-                            children: h.map((e, t) => (0, r.jsx)(p, { pills: e }, 'pill-row-'.concat(t)))
+                        (0, i.jsx)('div', {
+                            className: g.pillContainer,
+                            children: p.map((e, t) => (0, i.jsx)(x, { pills: e }, 'pill-row-'.concat(t)))
                         }),
-                        (0, r.jsxs)('div', {
-                            className: f.ctaContent,
+                        (0, i.jsxs)('div', {
+                            className: g.ctaContent,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-lg/medium',
                                     color: 'header-primary',
-                                    children: x.intl.string(x.t['67arYG'])
+                                    children: h.intl.string(h.t['67arYG'])
                                 }),
                                 n &&
-                                    (0, r.jsxs)(o.ShinyButton, {
-                                        size: o.Button.Sizes.MEDIUM,
-                                        className: f.getStartedButton,
-                                        innerClassName: f.getStartedButtonContents,
-                                        shineSize: o.ShinyButton.ShineSizes.SMALL,
+                                    (0, i.jsxs)(s.ShinyButton, {
+                                        size: s.Button.Sizes.MEDIUM,
+                                        className: g.getStartedButton,
+                                        innerClassName: g.getStartedButtonContents,
+                                        shineSize: s.ShinyButton.ShineSizes.SMALL,
                                         onClick: () => {
-                                            d.default.track(u.rMx.GUILD_SHOP_PREVIEW_CLICK, {
-                                                ...(0, l.hH)(t),
-                                                action_taken: C.mz.GET_STARTED_CLICK
+                                            d.default.track(m.rMx.GUILD_SHOP_PREVIEW_CLICK, {
+                                                ...(0, a.hH)(t),
+                                                action_taken: u.mz.GET_STARTED_CLICK
                                             }),
-                                                c.Z.open(t, u.pNK.GUILD_PRODUCTS);
+                                                c.Z.open(t, m.pNK.GUILD_PRODUCTS);
                                         },
                                         children: [
-                                            x.intl.string(x.t.oyzLpK),
-                                            (0, r.jsx)(o.ArrowSmallRightIcon, {
+                                            h.intl.string(h.t.oyzLpK),
+                                            (0, i.jsx)(s.ArrowSmallRightIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: f.getStartedArrow
+                                                className: g.getStartedArrow
                                             })
                                         ]
                                     })
@@ -89,18 +89,18 @@ function h(e) {
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
-                    className: f.muralImageContainer,
+                (0, i.jsxs)('div', {
+                    className: g.muralImageContainer,
                     children: [
-                        (0, r.jsx)('img', {
-                            src: (0, a.b)('server_products/storefront/preview-mural.png'),
+                        (0, i.jsx)('img', {
+                            src: (0, o.b)('server_products/storefront/preview-mural.png'),
                             alt: '',
-                            className: f.muralImage
+                            className: g.muralImage
                         }),
-                        (0, r.jsx)('img', {
-                            src: (0, a.b)('server_products/storefront/preview-mural-reduced.png'),
+                        (0, i.jsx)('img', {
+                            src: (0, o.b)('server_products/storefront/preview-mural-reduced.png'),
                             alt: '',
-                            className: f.muralImageReducedWidth
+                            className: g.muralImageReducedWidth
                         })
                     ]
                 })

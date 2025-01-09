@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(430824),
     d = n(900681),
@@ -18,15 +18,15 @@ var i = n(200651),
     g = n(560913);
 function x(e) {
     let { trait: t, selected: n, onClick: l } = e,
-        [s, o] = r.useState(!1),
+        [a, o] = r.useState(!1),
         c = r.useCallback(() => o(!0), []),
         d = r.useCallback(() => o(!1), []);
     return (0, i.jsx)(
         u.Z,
         {
             variant: 'text-xs/semibold',
-            color: s ? 'text-muted' : 'interactive-active',
-            className: a()(g.trait, { [g.strikethrough]: s }),
+            color: a ? 'text-muted' : 'interactive-active',
+            className: s()(g.trait, { [g.strikethrough]: a }),
             text: t,
             selected: n,
             onMouseEnter: n ? c : void 0,
@@ -39,15 +39,15 @@ function x(e) {
 function p(e) {
     var t;
     let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
-        v = (0, s.e7)([c.Z], () => c.Z.getGuild(n)),
-        { interests: _, description: N, playstyle: I, wildcardDescriptors: T, brandPrimaryColor: j } = l,
+        v = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
+        { interests: N, description: _, playstyle: I, wildcardDescriptors: T, brandPrimaryColor: j } = l,
         b = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
-        S = Array.from(_),
-        E = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
+        E = Array.from(N),
+        S = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: a()(g.description, p ? g.descriptionBorderMask : void 0),
+                className: s()(g.description, p ? g.descriptionBorderMask : void 0),
                 children: [
                     (0, i.jsx)('div', { className: p ? g.descriptionMask : void 0 }),
                     (0, i.jsx)(o.Heading, {
@@ -85,12 +85,12 @@ function p(e) {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         className: g.descriptionText,
-                        children: (null == N ? void 0 : N.length) > 0 ? N : h.intl.string(h.t['/pfXKi'])
+                        children: (null == _ ? void 0 : _.length) > 0 ? _ : h.intl.string(h.t['/pfXKi'])
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: a()(g.tagsContainer, f ? g.traitsBorderMask : void 0),
+                className: s()(g.tagsContainer, f ? g.traitsBorderMask : void 0),
                 children: [
                     (0, i.jsx)('div', { className: f ? g.traitsMask : void 0 }),
                     (0, i.jsxs)('div', {
@@ -103,18 +103,18 @@ function p(e) {
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: h.intl.format(h.t['3vJqtr'], { n: S.length })
+                                children: h.intl.format(h.t['3vJqtr'], { n: E.length })
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
                         className: g.traits,
-                        children: S.map((e) =>
+                        children: E.map((e) =>
                             (0, i.jsx)(
                                 x,
                                 {
                                     trait: e,
-                                    selected: E.has(e),
+                                    selected: S.has(e),
                                     onClick: C
                                 },
                                 e

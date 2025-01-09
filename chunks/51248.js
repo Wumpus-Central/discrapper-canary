@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(215569),
     l = n(481060),
-    a = n(852860),
-    s = n(236413),
+    s = n(852860),
+    a = n(236413),
     o = n(727072),
     c = n(65912),
     d = n(388032),
@@ -18,11 +18,11 @@ function m(e) {
         { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
         { updateRule: C } = (0, o.pH)(t),
         v = null != x,
-        _ = v && !(0, s.Vb)(x),
-        N = v || g || _,
+        N = v && !(0, a.Vb)(x),
+        _ = v || g || N,
         I = async () => {
-            if (!g && !_) return m();
-            null != x && !_ && C(x);
+            if (!g && !N) return m();
+            null != x && !N && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == x ? void 0 : x.id);
@@ -48,9 +48,9 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                N &&
+                _ &&
                 (0, i.jsx)(l.SlideIn, {
-                    children: (0, i.jsx)(a.Z, {
+                    children: (0, i.jsx)(s.Z, {
                         submitting: h,
                         disabled: h,
                         onSave: I,

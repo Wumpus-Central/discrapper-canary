@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(496675),
     C = n(699516),
     v = n(594174),
-    _ = n(768581),
-    I = n(900849),
-    N = n(434404),
+    N = n(768581),
+    _ = n(900849),
+    I = n(434404),
     T = n(999382),
     j = n(450474),
     b = n(209054),
@@ -60,12 +60,12 @@ let U = l.ZP.connectStores([T.Z], () => {
         guild: e,
         submitting: n,
         onReset() {
-            if (null != e) N.Z.init(e.id);
+            if (null != e) I.Z.init(e.id);
         },
         onSave() {
             if (null != e)
                 (0, A.UA)(e, t),
-                    N.Z.saveGuild(e.id, {
+                    I.Z.saveGuild(e.id, {
                         features: e.features,
                         discoverySplash: e.discoverySplash,
                         description: e.description,
@@ -97,7 +97,7 @@ class G extends r.PureComponent {
             }),
                 (0, u.le)(),
                 (0, u.aC)(e.id);
-            let t = await (0, I.Eg)(e.id);
+            let t = await (0, _.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t });
         }
     }
@@ -183,7 +183,7 @@ class G extends r.PureComponent {
                                 children: (0, i.jsx)(x.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        _.ZP.getGuildDiscoverySplashURL({
+                                        N.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
                                             size: 512 * (0, h.x_)()
@@ -386,7 +386,7 @@ class G extends r.PureComponent {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(M.oNc.DISCOVERABLE) ? t.delete(M.oNc.DISCOVERABLE) : t.add(M.oNc.DISCOVERABLE), N.Z.updateGuild({ features: t });
+                e.hasFeature(M.oNc.DISCOVERABLE) ? t.delete(M.oNc.DISCOVERABLE) : t.add(M.oNc.DISCOVERABLE), I.Z.updateGuild({ features: t });
             }),
             B(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, s.openModalLazy)(
@@ -405,10 +405,10 @@ class G extends r.PureComponent {
                 );
             }),
             B(this, 'handleSplashChange', (e) => {
-                N.Z.updateGuild({ discoverySplash: e });
+                I.Z.updateGuild({ discoverySplash: e });
             }),
             B(this, 'handleLocaleChange', (e) => {
-                N.Z.updateGuild({ preferredLocale: e });
+                I.Z.updateGuild({ preferredLocale: e });
             }),
             B(this, 'handlePrimaryCategoryChange', (e) => {
                 var t;

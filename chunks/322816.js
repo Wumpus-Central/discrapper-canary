@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(149765),
+    s = n.n(l),
+    a = n(149765),
     o = n(442837),
     c = n(481060),
     d = n(144991),
@@ -22,22 +22,22 @@ var i = n(200651),
     f = n(631969),
     C = n(95242),
     v = n(420966),
-    _ = n(275296),
-    N = n(203377),
+    N = n(275296),
+    _ = n(203377),
     I = n(981631),
     T = n(388032),
     j = n(105452),
     b = n(490909);
-function S(e) {
+function E(e) {
     let { guild: t, role: n, locked: l } = e,
-        a = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = r.useMemo(
             () =>
                 x.uB({
-                    user: a,
+                    user: s,
                     context: t
                 }),
-            [a, t]
+            [s, t]
         ),
         u = r.useMemo(
             () => ({
@@ -51,13 +51,13 @@ function S(e) {
         h = r.useMemo(
             () =>
                 x.uB({
-                    user: a,
+                    user: s,
                     context: t,
                     roles: u
                 }),
-            [a, t, u]
+            [s, t, u]
         ),
-        g = !s.fS(d, h);
+        g = !a.fS(d, h);
     return (0, i.jsx)('div', {
         className: j.clearButtonWrapper,
         children: (0, i.jsx)(c.Tooltip, {
@@ -74,14 +74,14 @@ function S(e) {
                     onClick: () => (0, p.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: r,
-                    disabled: s.fS(n.permissions, x.Hn) || g || l,
+                    disabled: a.fS(n.permissions, x.Hn) || g || l,
                     children: T.intl.string(T.t['UYq7+P'])
                 });
             }
         })
     });
 }
-function E(e) {
+function S(e) {
     let { guild: t, role: n, specs: r, locked: l } = e;
     if (0 === r.length)
         return (0, i.jsxs)('div', {
@@ -94,12 +94,12 @@ function E(e) {
                 })
             ]
         });
-    function a(e) {
+    function s(e) {
         return u.Z.can(e, t)
             ? !u.Z.can(e, t, null, {
                   [n.id]: {
                       ...n,
-                      permissions: s.Od(n.permissions, e)
+                      permissions: a.Od(n.permissions, e)
                   }
               }) && T.intl.string(T.t['K+D+GB'])
             : T.intl.string(T.t.nOtPMD);
@@ -107,7 +107,7 @@ function E(e) {
     return (0, i.jsxs)('div', {
         className: j.permissionsWrapper,
         children: [
-            (0, i.jsx)(S, {
+            (0, i.jsx)(E, {
                 guild: t,
                 role: n,
                 locked: l
@@ -124,7 +124,7 @@ function E(e) {
                             if ('string' == typeof t) throw Error('Unexpected string `allow`');
                             (0, p.lO)(n.id, e, t);
                         },
-                        permissionRender: a
+                        permissionRender: s
                     },
                     t
                 )
@@ -133,7 +133,7 @@ function E(e) {
     });
 }
 function R(e) {
-    let { guild: t, role: n, locked: l, setSelectedSection: s, initialSearchQuery: o } = e,
+    let { guild: t, role: n, locked: l, setSelectedSection: a, initialSearchQuery: o } = e,
         [d, u] = r.useState(null != o ? o : ''),
         m = r
             .useMemo(() => g.Z.generateGuildPermissionSpec(t), [t])
@@ -146,7 +146,7 @@ function R(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: x, headerRef: p } = (0, C.Z)(0),
-        { scrolledToTop: f, handleScroll: S } = (0, v.V)(),
+        { scrolledToTop: f, handleScroll: E } = (0, v.V)(),
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
@@ -155,23 +155,23 @@ function R(e) {
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: j.scroller,
             style: { scrollPaddingTop: x },
-            onScroll: S,
+            onScroll: E,
             children: (0, i.jsxs)('div', {
                 className: b.contentWidth,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !f }),
+                        className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !f }),
                         ref: p,
                         children: [
                             (0, i.jsx)(v.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: N.ZI.PERMISSIONS,
-                                setSelectedSection: s
+                                selectedSection: _.ZI.PERMISSIONS,
+                                setSelectedSection: a
                             }),
                             (0, i.jsx)('div', {
                                 className: j.noticeContainer,
-                                children: (0, i.jsx)(_.Z, { role: n })
+                                children: (0, i.jsx)(N.Z, { role: n })
                             }),
                             (0, i.jsx)('div', {
                                 className: j.searchContainer,
@@ -186,7 +186,7 @@ function R(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(E, {
+                    (0, i.jsx)(S, {
                         guild: t,
                         role: n,
                         specs: m,

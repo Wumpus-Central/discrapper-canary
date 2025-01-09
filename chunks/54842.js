@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(142497),
@@ -16,13 +16,13 @@ var i = n(200651),
     f = n(905697),
     C = n(438825),
     v = n(236140),
-    _ = n(37069),
-    N = n(518513),
+    N = n(37069),
+    _ = n(518513),
     I = n(168179),
     T = n(348986),
     j = n(930065),
     b = n(345669);
-let S = () => [
+let E = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
@@ -74,7 +74,7 @@ let S = () => [
             body: p.intl.string(p.t.hyNkHx)
         }
     ],
-    E = [
+    S = [
         {
             iconSrc: T,
             name: 'Pokemon GO Paris',
@@ -88,7 +88,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: N,
+            iconSrc: _,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
@@ -105,7 +105,7 @@ let S = () => [
             position: [-250, 40]
         },
         {
-            iconSrc: _,
+            iconSrc: N,
             name: 'Hogwarts School',
             position: [-270, 40],
             faded: !0,
@@ -113,7 +113,7 @@ let S = () => [
         }
     ],
     R = (e) => {
-        let { icon: t, color: n, size: r = 24, header: l, body: a } = e;
+        let { icon: t, color: n, size: r = 24, header: l, body: s } = e;
         return (0, i.jsxs)('div', {
             className: f.featureCard,
             children: [
@@ -134,19 +134,19 @@ let S = () => [
                 (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: a
+                    children: s
                 })
             ]
         });
     },
     y = (e) => {
-        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: s, imageCoordinates: o } = e,
+        let { iconSrc: t, name: n, position: r, faded: l, rightAlign: a, imageCoordinates: o } = e,
             d = {
-                [s ? 'right' : 'left']: o[0] + r[0],
+                [a ? 'right' : 'left']: o[0] + r[0],
                 top: o[1] + r[1]
             };
         return (0, i.jsxs)('div', {
-            className: a()(f.guildDetails, { [f.faded]: l }),
+            className: s()(f.guildDetails, { [f.faded]: l }),
             style: d,
             children: [
                 (0, i.jsx)('div', {
@@ -168,11 +168,11 @@ let S = () => [
 t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
-        [a, o] = r.useState(0),
-        [_, N] = r.useState(),
-        I = (0, s.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
-        T = null == _ ? void 0 : _.offsetWidth,
-        j = null == _ ? void 0 : _.offsetHeight;
+        [s, o] = r.useState(0),
+        [N, _] = r.useState(),
+        I = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+        T = null == N ? void 0 : N.offsetWidth,
+        j = null == N ? void 0 : N.offsetHeight;
     r.useEffect(() => {
         null != T && l(T / 2), null != j && o(j / 2);
     }, [T, j, l, o]),
@@ -187,14 +187,14 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: f.banner,
-                ref: (e) => N(e),
+                ref: (e) => _(e),
                 children: [
-                    E.map((e) =>
+                    S.map((e) =>
                         (0, i.jsx)(
                             y,
                             {
                                 ...e,
-                                imageCoordinates: [n, a]
+                                imageCoordinates: [n, s]
                             },
                             e.name
                         )
@@ -248,7 +248,7 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('div', {
                 className: f.features,
-                children: S().map((e, t) => (0, i.jsx)(R, { ...e }, t))
+                children: E().map((e, t) => (0, i.jsx)(R, { ...e }, t))
             })
         ]
     });

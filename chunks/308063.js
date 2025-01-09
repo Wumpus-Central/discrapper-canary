@@ -3,7 +3,7 @@ var i = n(392711),
     l = n(544891),
     T = n(570140),
     I = n(981631);
-let o = ['Spidey Bot', 'Captain Hook'];
+let E = ['Spidey Bot', 'Captain Hook'];
 t.Z = {
     fetchForGuild(e) {
         T.Z.dispatch({
@@ -56,7 +56,7 @@ t.Z = {
                 });
     },
     create: (e, t, n) => (
-        null == n && (n = o[r().random(0, o.length - 1)]),
+        null == n && (n = E[r().random(0, E.length - 1)]),
         l.tn
             .post({
                 url: I.ANM.CHANNEL_WEBHOOKS(t),

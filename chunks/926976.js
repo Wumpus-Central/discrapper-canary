@@ -13,8 +13,8 @@ var r = n(200651),
     c = n.n(s),
     d = n(442837),
     u = n(481060),
-    h = n(129861),
-    m = n(665149),
+    m = n(129861),
+    h = n(665149),
     x = n(301801),
     f = n(594174),
     p = n(55935),
@@ -80,18 +80,18 @@ let E = [
                     d = c()(a);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(m.ZP, {
+                        (0, r.jsxs)(h.ZP, {
                             className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
-                                (0, r.jsx)(m.ZP.Icon, {
+                                (0, r.jsx)(h.ZP.Icon, {
                                     icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, r.jsx)(m.ZP.Title, {
+                                (0, r.jsx)(h.ZP.Title, {
                                     wrapperClassName: N.headerTitle,
                                     children: t
                                 }),
-                                (0, r.jsx)(m.ZP.Icon, {
+                                (0, r.jsx)(h.ZP.Icon, {
                                     icon: u.CircleXIcon,
                                     tooltip: 'Close',
                                     onClick: o
@@ -112,7 +112,7 @@ let E = [
                                 null != s &&
                                     (0, r.jsx)(v.Z9, {
                                         name: 'User',
-                                        children: (0, r.jsx)(h.Z, { user: s })
+                                        children: (0, r.jsx)(m.Z, { user: s })
                                     }),
                                 (0, r.jsx)(v.Z9, {
                                     name: 'Fingerprint',
@@ -177,8 +177,8 @@ function Z() {
         [t, n] = a.useState(''),
         l = (0, d.e7)([b.Z], () => b.Z.loggedEventsVersion),
         s = a.useMemo(() => b.Z.loggedEvents, [l]),
-        [c, h] = a.useState(Object.keys(w)),
-        [m, f] = a.useState(s),
+        [c, m] = a.useState(Object.keys(w)),
+        [h, f] = a.useState(s),
         p = a.useRef(null),
         v = a.useMemo(
             () =>
@@ -207,11 +207,11 @@ function Z() {
         ),
         k = a.useMemo(
             () =>
-                m.filter((e) => {
+                h.filter((e) => {
                     for (let t of c) if (w[t].filter(e)) return !0;
                     return !1;
                 }),
-            [m, c]
+            [h, c]
         );
     a.useEffect(() => {
         v(t, s);
@@ -251,7 +251,7 @@ function Z() {
                                     className: i()(S.filter, c.includes(t) && S.activeFilter),
                                     onClick: () => {
                                         var e;
-                                        return (e = t), void h((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+                                        return (e = t), void m((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
                                     },
                                     children: n.label
                                 },

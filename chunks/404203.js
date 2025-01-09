@@ -1,22 +1,22 @@
-e.d(n, {
+s.d(n, {
     Z: function () {
-        return l;
+        return o;
     }
 });
-var i = e(200651),
-    s = e(192379);
+var e = s(200651),
+    i = s(192379);
 let r = (t) => (n) => {
     null == n || n.stopPropagation(), t();
 };
-function l(t) {
-    let { onClick: n, className: e, children: l } = t,
-        o = s.useRef(null);
-    return (0, i.jsx)('div', {
+function o(t) {
+    let { onClick: n, className: s, children: o } = t,
+        c = i.useRef(null);
+    return (0, e.jsx)('div', {
         onClick: n,
-        ref: o,
-        className: e,
-        children: l({
-            areaRef: o,
+        ref: c,
+        className: s,
+        children: o({
+            areaRef: c,
             handleStopPropagation: r
         })
     });

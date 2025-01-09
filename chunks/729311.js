@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(852860),
     d = n(111028),
@@ -24,29 +24,29 @@ var i = n(200651),
     f = n(324067),
     C = n(984933),
     v = n(259580),
-    _ = n(999382),
-    N = n(743475),
+    N = n(999382),
+    _ = n(743475),
     I = n(889369),
     T = n(570961),
     j = n(208665),
     b = n(868814),
-    S = n(974513),
-    E = n(2348),
+    E = n(974513),
+    S = n(2348),
     R = n(353890),
     y = n(716130),
-    Z = n(388032),
-    A = n(152623);
+    A = n(388032),
+    Z = n(152623);
 function L(e) {
     let { guild: t } = e,
-        l = (0, s.e7)([m.Z], () => m.Z.getEnabled(t.id)),
-        a = (0, s.e7)([p.Z], () => p.Z.hasFetched(t.id)),
+        l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
+        s = (0, a.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         c = (0, b.Z)(t),
-        f = (0, s.e7)([I.Z], () => I.Z.editedDefaultChannelIds),
+        f = (0, a.e7)([I.Z], () => I.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
-        [v, _] = r.useState(!1);
+        [v, N] = r.useState(!1);
     r.useEffect(() => {
-        !a && !l && (0, x.S)(t.id);
-    }, [t.id, a, l]);
+        !s && !l && (0, x.S)(t.id);
+    }, [t.id, s, l]);
     let T = (e) => {
         (0, o.openModalLazy)(async () => {
             let { default: r } = await n.e('35641').then(n.bind(n, 89216));
@@ -61,62 +61,62 @@ function L(e) {
     return v || 0 === C.length
         ? null
         : (0, i.jsxs)('div', {
-              className: A.recommendations,
+              className: Z.recommendations,
               children: [
                   (0, i.jsx)(o.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      children: Z.intl.string(Z.t.NN7rDw)
+                      children: A.intl.string(A.t.NN7rDw)
                   }),
                   (0, i.jsxs)('div', {
-                      className: A.recsSubheader,
+                      className: Z.recsSubheader,
                       children: [
                           (0, i.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: Z.intl.string(Z.t['3Uuql5'])
+                              children: A.intl.string(A.t['3Uuql5'])
                           }),
                           (0, i.jsxs)(o.Clickable, {
-                              className: A.dismissAll,
-                              onClick: () => _(!0),
+                              className: Z.dismissAll,
+                              onClick: () => N(!0),
                               children: [
                                   (0, i.jsx)(o.CheckmarkLargeIcon, {
                                       size: 'xxs',
                                       color: 'currentColor',
-                                      className: A.checkmark
+                                      className: Z.checkmark
                                   }),
                                   (0, i.jsx)(o.Text, {
-                                      className: A.dismissAllText,
+                                      className: Z.dismissAllText,
                                       variant: 'text-xs/medium',
                                       color: 'text-brand',
-                                      children: Z.intl.string(Z.t.ZC3PJy)
+                                      children: A.intl.string(A.t.ZC3PJy)
                                   })
                               ]
                           })
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: A.recommendedChannels,
+                      className: Z.recommendedChannels,
                       children: C.map((e, n) =>
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: A.channelRow,
+                                      className: Z.channelRow,
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: A.channelInfo,
+                                              className: Z.channelInfo,
                                               children: [
                                                   (0, i.jsxs)('div', {
-                                                      className: A.channelName,
+                                                      className: Z.channelName,
                                                       children: [
                                                           (0, i.jsx)(h._, {
                                                               channel: e,
                                                               guild: t
                                                           }),
                                                           (0, i.jsx)(d.Z, {
-                                                              className: A.__invalid_name,
+                                                              className: Z.__invalid_name,
                                                               children: (0, i.jsx)(o.Text, {
-                                                                  className: A.__invalid_channelText,
+                                                                  className: Z.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
                                                                   color: 'text-normal',
@@ -130,7 +130,7 @@ function L(e) {
                                                             d.Z,
                                                             {
                                                                 children: (0, i.jsx)(o.Text, {
-                                                                    className: A.topic,
+                                                                    className: Z.topic,
                                                                     variant: 'text-xs/normal',
                                                                     children: g.Z.parseTopic(e.topic, !0, { channelId: e.id })
                                                                 })
@@ -144,15 +144,15 @@ function L(e) {
                                               ? (0, i.jsx)(o.Button, {
                                                     color: o.Button.Colors.BRAND,
                                                     size: o.Button.Sizes.SMALL,
-                                                    className: A.addChannelCTA,
-                                                    onClick: () => (0, N.pt)(e.id),
-                                                    children: Z.intl.string(Z.t.OYkgVl)
+                                                    className: Z.addChannelCTA,
+                                                    onClick: () => (0, _.pt)(e.id),
+                                                    children: A.intl.string(A.t.OYkgVl)
                                                 })
                                               : (0, i.jsxs)(o.Button, {
                                                     look: o.Button.Looks.OUTLINED,
                                                     color: o.Button.Colors.PRIMARY,
-                                                    className: A.lockedPill,
-                                                    innerClassName: A.lockedPillInner,
+                                                    className: Z.lockedPill,
+                                                    innerClassName: Z.lockedPillInner,
                                                     onClick: () => T(e.id),
                                                     children: [
                                                         (0, i.jsx)(o.LockIcon, {
@@ -161,28 +161,28 @@ function L(e) {
                                                         }),
                                                         (0, i.jsx)(o.Text, {
                                                             variant: 'text-sm/medium',
-                                                            children: Z.intl.string(Z.t.zA9d1N)
+                                                            children: A.intl.string(A.t.zA9d1N)
                                                         })
                                                     ]
                                                 })
                                       ]
                                   }),
-                                  n < C.length - 1 ? (0, i.jsx)('div', { className: A.separator }) : null
+                                  n < C.length - 1 ? (0, i.jsx)('div', { className: Z.separator }) : null
                               ]
                           })
                       )
                   }),
-                  (0, i.jsx)('div', { className: A.largeSeparator })
+                  (0, i.jsx)('div', { className: Z.largeSeparator })
               ]
           });
 }
 function D(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, s.e7)([_.Z], () => _.Z.getGuild()),
-        l = (0, s.e7)([m.Z], () => m.Z.isLoading()),
-        c = (0, s.e7)([C.ZP], () => C.ZP.getChannels(null == n ? void 0 : n.id)),
-        d = (0, s.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, s.e7)([j.Z], () => j.Z.advancedMode),
+        n = (0, a.e7)([N.Z], () => N.Z.getGuild()),
+        l = (0, a.e7)([m.Z], () => m.Z.isLoading()),
+        c = (0, a.e7)([C.ZP], () => C.ZP.getChannels(null == n ? void 0 : n.id)),
+        d = (0, a.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
+        u = (0, a.e7)([j.Z], () => j.Z.advancedMode),
         h = r.useRef(null),
         [g, x] = r.useState(!1),
         p = r.useRef(n);
@@ -194,7 +194,7 @@ function D(e) {
             let { current: e } = p;
             return () => {
                 null != e &&
-                    (0, N.DO)(e)
+                    (0, _.DO)(e)
                         .then(() => {
                             u && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
@@ -207,13 +207,13 @@ function D(e) {
         : l
           ? (0, i.jsx)(o.Spinner, {})
           : (0, i.jsxs)('div', {
-                className: A.columns,
+                className: Z.columns,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: A.channelBrowser,
+                        className: Z.channelBrowser,
                         children: [
                             (0, i.jsx)(o.Clickable, {
-                                className: A.collapseButton,
+                                className: Z.collapseButton,
                                 onClick: () => x((e) => !e),
                                 children: (0, i.jsx)(v.Z, {
                                     direction: g ? v.Z.Directions.DOWN : v.Z.Directions.UP,
@@ -222,17 +222,17 @@ function D(e) {
                                 })
                             }),
                             (0, i.jsx)(o.Heading, {
-                                className: A.header,
+                                className: Z.header,
                                 variant: 'heading-lg/extrabold',
-                                children: Z.intl.string(Z.t['4GSygo'])
+                                children: A.intl.string(A.t['4GSygo'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: Z.intl.string(Z.t.Kq7FAQ)
+                                children: A.intl.string(A.t.Kq7FAQ)
                             }),
-                            (0, i.jsx)(S.Wu, {
-                                className: A.advancedModeToggle,
+                            (0, i.jsx)(E.Wu, {
+                                className: Z.advancedModeToggle,
                                 guildId: n.id
                             }),
                             g
@@ -240,8 +240,8 @@ function D(e) {
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(L, { guild: n }),
-                                          (0, i.jsx)(E.Z, {
-                                              className: a()(A.channelBrowserOuter),
+                                          (0, i.jsx)(S.Z, {
+                                              className: s()(Z.channelBrowserOuter),
                                               guild: n,
                                               categories: d,
                                               channels: c,
@@ -252,21 +252,21 @@ function D(e) {
                             u &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)('div', { className: A.largeSeparator }),
+                                        (0, i.jsx)('div', { className: Z.largeSeparator }),
                                         (0, i.jsx)(o.Heading, {
-                                            className: A.prejoinHeader,
+                                            className: Z.prejoinHeader,
                                             variant: 'heading-lg/extrabold',
-                                            children: Z.intl.string(Z.t.g2Rnpa)
+                                            children: A.intl.string(A.t.g2Rnpa)
                                         }),
                                         (0, i.jsx)(o.Text, {
-                                            className: A.prejoinSubHeader,
+                                            className: Z.prejoinSubHeader,
                                             variant: 'text-sm/normal',
                                             color: 'header-secondary',
-                                            children: Z.intl.string(Z.t.bLDQ1d)
+                                            children: A.intl.string(A.t.bLDQ1d)
                                         }),
                                         (0, i.jsx)('div', {
                                             ref: h,
-                                            className: A.advancedModeQuestions,
+                                            className: Z.advancedModeQuestions,
                                             children: (0, i.jsx)(y.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
@@ -288,21 +288,21 @@ function D(e) {
             });
 }
 function O() {
-    let e = (0, s.e7)([_.Z], () => _.Z.getProps().guild),
-        t = (0, s.e7)([I.Z], () => I.Z.submitting),
-        n = (0, s.e7)([j.Z], () => j.Z.advancedMode);
+    let e = (0, a.e7)([N.Z], () => N.Z.getProps().guild),
+        t = (0, a.e7)([I.Z], () => I.Z.submitting),
+        n = (0, a.e7)([j.Z], () => j.Z.advancedMode);
     return null == e
         ? null
         : (0, i.jsx)(c.Z, {
               onSave: () => {
-                  (0, N.DO)(e)
+                  (0, _.DO)(e)
                       .then(() => {
                           n && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: N.BG,
+              onReset: _.BG,
               submitting: t,
-              onSaveText: Z.intl.string(Z.t.R3BPHx)
+              onSaveText: A.intl.string(A.t.R3BPHx)
           });
 }

@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     r = n(200651),
     l = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(666912),
     c = n(772848),
     d = n(513431),
@@ -33,8 +33,8 @@ function f(e, t, n) {
 }
 let C = -1,
     v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    _ = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    N = {
+    N = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    _ = {
         tension: 140,
         friction: 30
     },
@@ -45,7 +45,7 @@ let C = -1,
 class T extends (i = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + _ / 2;
+        return e[e.length - 1].y + N / 2;
     }
     getProgressHeight(e) {
         let { tiers: t, progress: n } = this.props,
@@ -53,9 +53,9 @@ class T extends (i = l.Component) {
             r = t[e + 1];
         if (null == r || n === i.numRequired) return i.y;
         let l = r.y - i.y,
-            a = r.numRequired - i.numRequired,
-            s = n - i.numRequired;
-        return i.y + (s / a) * l;
+            s = r.numRequired - i.numRequired,
+            a = n - i.numRequired;
+        return i.y + (a / s) * l;
     }
     getCurrentTierIndex() {
         let { tiers: e, progress: t } = this.props;
@@ -67,8 +67,8 @@ class T extends (i = l.Component) {
             { showForegroundTooltip: n, foregroundTooltipY: i } = this.state;
         if (!n || null == this.foregroundTooltipElementRef.current) return null;
         let l = t[this.getCurrentTierIndex() + 1],
-            a = null != l ? l.numRequired : null,
-            s = null != a ? a - e : null;
+            s = null != l ? l.numRequired : null,
+            a = null != s ? s - e : null;
         return (0, r.jsxs)(
             m.TooltipLayer,
             {
@@ -78,11 +78,11 @@ class T extends (i = l.Component) {
                 tooltipClassName: p.foregroundTooltip,
                 children: [
                     (0, r.jsx)('div', { children: x.intl.format(x.t.gDsyBw, { numSubscriptions: e }) }),
-                    null != s && null != l
+                    null != a && null != l
                         ? (0, r.jsx)('div', {
                               className: p.tooltipMuted,
                               children: x.intl.format(x.t['2U9MDg'], {
-                                  number: s,
+                                  number: a,
                                   tier: l.name
                               })
                           })
@@ -112,13 +112,13 @@ class T extends (i = l.Component) {
     renderTierMarker(e, t, n) {
         var i;
         let l;
-        let { progress: a, tiers: s } = this.props,
-            c = s[n],
-            d = a >= e.numRequired,
+        let { progress: s, tiers: a } = this.props,
+            c = a[n],
+            d = s >= e.numRequired,
             u = null != c && e.key === c.key,
-            h = e.key === s[0].key;
+            h = e.key === a[0].key;
         l = h ? p.tierFirst : u ? p.tierCurrent : d ? p.tierAccomplished : p.tierInProgress;
-        let g = e.y - (h ? 0 : _ / 2),
+        let g = e.y - (h ? 0 : N / 2),
             x = this.state.tierMarkerActive === t,
             f = !h && u && x;
         return (0, r.jsx)(
@@ -194,7 +194,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)(m.Spring, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: N,
+                    config: _,
                     delay: i ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: i ? void 0 : this.handleFinishedInitialAnimation,
@@ -216,7 +216,7 @@ class T extends (i = l.Component) {
             n = this.getCurrentTierIndex(),
             i = this.getTotalHeight();
         return (0, r.jsxs)('div', {
-            className: s()(e, p.progressBar),
+            className: a()(e, p.progressBar),
             style: { height: i },
             children: [
                 (0, r.jsxs)('svg', {
@@ -262,10 +262,10 @@ class T extends (i = l.Component) {
                     { tiers: n, progress: i, onAnimatedTierMaker: r } = this.props,
                     { tierMarkerActive: l } = this.state;
                 for (let e = n.length - 1; e > 0; e--) {
-                    let a = n[e],
-                        s = l === e;
-                    if (t + 20 >= a.y && i >= a.numRequired) {
-                        !s && (this.setState({ tierMarkerActive: e }), null != r && r(a));
+                    let s = n[e],
+                        a = l === e;
+                    if (t + 20 >= s.y && i >= s.numRequired) {
+                        !a && (this.setState({ tierMarkerActive: e }), null != r && r(s));
                         return;
                     }
                 }

@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(399606),
+    s = n.n(l),
+    a = n(399606),
     o = n(481060),
     c = n(668781),
     d = n(603211),
@@ -22,14 +22,14 @@ var i = n(200651),
     C = n(554205);
 function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
-        c = (0, s.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
             drag: x,
             drop: v,
-            dragSourcePosition: _,
-            setIsDraggable: N
+            dragSourcePosition: N,
+            setIsDraggable: _
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -41,16 +41,16 @@ function v(e) {
         I = r.useRef(null);
     return (
         r.useEffect(() => {
-            N(!1);
-        }, [N]),
+            _(!1);
+        }, [_]),
         r.useEffect(() => {
             x(v(I));
         }, [x, v, I]),
         (0, i.jsxs)('div', {
             ref: I,
-            className: a()(C.separatorSection, {
-                [C.dropIndicatorBefore]: null != _ && m < _,
-                [C.dropIndicatorAfter]: null != _ && m > _
+            className: s()(C.separatorSection, {
+                [C.dropIndicatorBefore]: null != N && m < N,
+                [C.dropIndicatorAfter]: null != N && m > N
             }),
             children: [
                 !l && u.length < p.b3
@@ -94,14 +94,14 @@ function v(e) {
         })
     );
 }
-function _(e) {
-    let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: a } = e,
-        d = (0, s.e7)([m.Z], () => m.Z.getGuild(t)),
-        _ = (0, s.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        N = _.filter((e) => e.inOnboarding),
-        I = _.filter((e) => !0 !== e.inOnboarding),
+function N(e) {
+    let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
+        d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
+        N = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        _ = N.filter((e) => e.inOnboarding),
+        I = N.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ...N.map((e) => ({
+            ..._.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -117,7 +117,7 @@ function _(e) {
         {
             handleDragStart: j,
             handleDragReset: b,
-            handleDragComplete: S
+            handleDragComplete: E
         } = (0, u.Z)(T, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
                 n = e.slice(0, t).map((e) => ({
@@ -162,7 +162,7 @@ function _(e) {
                                               })
                                           ]
                                       }),
-                                N.map((e, t) =>
+                                _.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -170,12 +170,12 @@ function _(e) {
                                             prompt: e,
                                             disableAutofocus: n,
                                             includeCount: l,
-                                            singleColumn: a,
+                                            singleColumn: s,
                                             promptIndex: t,
                                             dragIndex: t,
                                             onPromptDragStart: j,
                                             onPromptDragReset: b,
-                                            onPromptDragComplete: S
+                                            onPromptDragComplete: E
                                         },
                                         e.id
                                     )
@@ -197,19 +197,19 @@ function _(e) {
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + N.length,
-                                            dragIndex: t + N.length + 1,
+                                            promptIndex: t + _.length,
+                                            dragIndex: t + _.length + 1,
                                             onPromptDragStart: j,
                                             onPromptDragReset: b,
-                                            onPromptDragComplete: S
+                                            onPromptDragComplete: E
                                         },
                                         e.id
                                     )
                                 ),
-                                _.length < p.YW
+                                N.length < p.YW
                                     ? (0, i.jsxs)(o.Clickable, {
                                           className: C.addPrompt,
-                                          onClick: () => (0, h.tS)(d, [..._, (0, p.yZ)(!1)], !1),
+                                          onClick: () => (0, h.tS)(d, [...N, (0, p.yZ)(!1)], !1),
                                           children: [
                                               (0, i.jsx)(o.CirclePlusIcon, {
                                                   size: 'custom',

@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(192379),
     r = n(584825),
     l = n(14263);
-function a(e, t) {
+function s(e, t) {
     let n = (0, r.qi)(e),
-        a = (0, l.Z)(e);
+        s = (0, l.Z)(e);
     return i.useMemo(
         () =>
             n.map((e) => {
@@ -18,9 +18,9 @@ function a(e, t) {
                     ...(null !== (n = null == t ? void 0 : t.ppgs[e.id]) && void 0 !== n ? n : {}),
                     key: e.id,
                     subscriptionListing: e,
-                    roleMemberCount: null == i ? void 0 : null == a ? void 0 : a[i]
+                    roleMemberCount: null == i ? void 0 : null == s ? void 0 : s[i]
                 };
             }),
-        [n, null == t ? void 0 : t.ppgs, a]
+        [n, null == t ? void 0 : t.ppgs, s]
     );
 }

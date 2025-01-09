@@ -33,16 +33,16 @@ var o,
     C = t(409813),
     y = t(45572),
     N = t(98278),
-    k = t(431369),
-    A = t(176919),
-    M = t(3409),
+    A = t(431369),
+    M = t(176919),
+    k = t(3409),
     v = t(185139),
     L = t(210887),
     R = t(430824),
     j = t(314884),
     B = t(975060),
-    Z = t(853872),
-    D = t(509545),
+    D = t(853872),
+    Z = t(509545),
     O = t(78839),
     U = t(626135),
     w = t(267642),
@@ -75,30 +75,30 @@ function et(e) {
         { activeSubscription: eu, blockedPayments: ed } = (0, x.usePaymentContext)(),
         ep = (0, c.e7)([O.ZP], () => O.ZP.hasFetchedSubscriptions()),
         ef = null != eu ? eu.paymentSourceId : null,
-        em = (0, c.e7)([D.Z], () => (null != eu ? (0, G.oE)(eu.planId) : null)),
-        e_ = (0, c.e7)([D.Z], () => null == eu || null != D.Z.get(eu.planId)),
-        eS = (0, c.e7)([D.Z], () => (null == em ? D.Z.get(J) : em)),
+        em = (0, c.e7)([Z.Z], () => (null != eu ? (0, G.oE)(eu.planId) : null)),
+        e_ = (0, c.e7)([Z.Z], () => null == eu || null != Z.Z.get(eu.planId)),
+        eS = (0, c.e7)([Z.Z], () => (null == em ? Z.Z.get(J) : em)),
         eg = (0, c.e7)([L.Z], () => L.Z.theme),
         eE = i.useRef((0, w.vx)(j.Z.boostSlots)).current,
-        eh = (0, c.e7)([Z.Z], () => Z.Z.defaultPaymentSourceId),
-        eP = (0, M.fL)(null != ef ? ef : ep ? eh : null),
-        { paymentSources: eT, setPurchaseError: eI, paymentSourceId: eb, setIsSubmittingCurrentStep: ex, paymentAuthenticationState: eC, setPaymentSourceId: ey, isSubmittingCurrentStep: eN, paymentError: ek, purchaseError: eA, purchaseErrorBlockRef: eM } = eP,
+        eh = (0, c.e7)([D.Z], () => D.Z.defaultPaymentSourceId),
+        eP = (0, k.fL)(null != ef ? ef : ep ? eh : null),
+        { paymentSources: eT, setPurchaseError: eI, paymentSourceId: eb, setIsSubmittingCurrentStep: ex, paymentAuthenticationState: eC, setPaymentSourceId: ey, isSubmittingCurrentStep: eN, paymentError: eA, purchaseError: eM, purchaseErrorBlockRef: ek } = eP,
         ev = Object.keys(eT).length > 0,
         [eL, eR] = i.useState(er - eE.length),
         [ej, eB] = i.useState(!1),
-        eZ = (0, c.e7)([B.Z], () => B.Z.popupCallbackCalled),
-        eD = (0, P.V)(),
+        eD = (0, c.e7)([B.Z], () => B.Z.popupCallbackCalled),
+        eZ = (0, P.V)(),
         eO = i.useMemo(
             () =>
-                null != eu && e_ && eD
-                    ? (0, k.g)(eu, eL)
+                null != eu && e_ && eZ
+                    ? (0, A.g)(eu, eL)
                     : [
                           {
                               planId: X.Xh.PREMIUM_MONTH_GUILD,
                               quantity: eL
                           }
                       ],
-            [eu, e_, eL, eD]
+            [eu, e_, eL, eZ]
         ),
         [eU, ew] = (0, _.Z)(() => [(0, s.Z)(), Date.now()]),
         { analyticsLocations: eF } = (0, h.ZP)(f, E.Z.GUILD_BOOST_PURCHASE_MODAL),
@@ -165,7 +165,7 @@ function et(e) {
         i.useEffect(() => {
             let { baseAnalyticsData: e, flowStartTime: n, guildId: t, handleStepChange: o, onSubscribeComplete: l, paymentSourceId: i, setIsSubmittingCurrentStep: r, setPurchaseError: a } = eX.current;
             (async () => {
-                if (!0 === eZ)
+                if (!0 === eD)
                     try {
                         if (null == B.Z.redirectedPaymentId) return;
                         await (0, p.OP)(B.Z.redirectedPaymentId), o(C.h8.CONFIRM), eJ(y.A.COMPLETED), null != t && (await en(t)), null != l && l();
@@ -183,7 +183,7 @@ function et(e) {
                         r(!1), (0, p.K2)();
                     }
             })();
-        }, [eZ]),
+        }, [eD]),
         (0, S.Z)(() => {
             !O.ZP.hasFetchedSubscriptions() && (0, p.jg)(),
                 (0, b.U)({
@@ -206,21 +206,21 @@ function et(e) {
         },
         e2 = null != eu && eu.isPurchasedExternally;
     i.useEffect(() => {
-        eC !== A.wr.PENDING && eG !== C.h8.CONFIRM && null != ef && (e$ !== Q && eK(Q), !Q.includes(eG) && eG !== C.h8.PREMIUM_UPSELL && eV(C.h8.REVIEW)), eG === C.h8.ADD_PAYMENT_STEPS && e$ !== ee && eK(ee), e2 && eG !== C.h8.PLAN_SELECT && eY(C.h8.PLAN_SELECT);
+        eC !== M.wr.PENDING && eG !== C.h8.CONFIRM && null != ef && (e$ !== Q && eK(Q), !Q.includes(eG) && eG !== C.h8.PREMIUM_UPSELL && eV(C.h8.REVIEW)), eG === C.h8.ADD_PAYMENT_STEPS && e$ !== ee && eK(ee), e2 && eG !== C.h8.PLAN_SELECT && eY(C.h8.PLAN_SELECT);
     }, [eG, eV, e2, eC, eu, ef, e$]),
-        (0, A.bp)(eG, eC, eV, eJ),
+        (0, M.bp)(eG, eC, eV, eJ),
         (0, C.dZ)(eG, eq, eJ);
     let e1 = i.useRef(null),
         [e7, e9] = (0, g.Z)(!1, 500),
         [e3, e5] = i.useState(null),
-        [e6, e4] = i.useState([]),
+        [e4, e6] = i.useState([]),
         [ne, nn] = i.useState(!1),
-        nt = i.useMemo(() => JSON.stringify(e6), [e6]);
+        nt = i.useMemo(() => JSON.stringify(e4), [e4]);
     i.useEffect(() => {
         let e;
-        if (!!eD) null != D.Z.get(X.Xh.PREMIUM_MONTH_GUILD) && e4((e = (0, W.DE)(X.Xh.PREMIUM_MONTH_GUILD, eb, !1))), null == eb && null != eu && null != eu.paymentSourceId ? e5(eu.currency) : null != e && e5(e[0]);
-    }, [eb, eu, eD, nt]);
-    let no = (0, M.vP)({
+        if (!!eZ) null != Z.Z.get(X.Xh.PREMIUM_MONTH_GUILD) && e6((e = (0, W.DE)(X.Xh.PREMIUM_MONTH_GUILD, eb, !1))), null == eb && null != eu && null != eu.paymentSourceId ? e5(eu.currency) : null != e && e5(e[0]);
+    }, [eb, eu, eZ, nt]);
+    let no = (0, k.vP)({
         paymentModalArgs: eP,
         initialStep: C.h8.PAYMENT_TYPE,
         prependSteps: [C.h8.PLAN_SELECT],
@@ -247,7 +247,7 @@ function et(e) {
         }
     });
     if (ed) n = (0, l.jsx)(T.Vq, { onClose: e8 });
-    else if (ep && e_ && eD && null != e3 && '' !== e3) {
+    else if (ep && e_ && eZ && null != e3 && '' !== e3) {
         if (null == eu ? void 0 : eu.isPausedOrPausePending)
             n = (0, l.jsx)(d.ModalContent, {
                 children: (0, l.jsx)('p', {
@@ -451,7 +451,7 @@ function et(e) {
                         paymentSourceType: null === (nl = eT[null != eb ? eb : '']) || void 0 === nl ? void 0 : nl.type
                     });
             }
-            let f = null != ek && null == (0, C.ly)(ek) ? ek : eA;
+            let f = null != eA && null == (0, C.ly)(eA) ? eA : eM;
             n =
                 eG === C.h8.ADD_PAYMENT_STEPS
                     ? no
@@ -460,8 +460,8 @@ function et(e) {
                           steps: e$,
                           currentStep: eG,
                           paymentError: f,
-                          purchaseErrorBlockRef: eM,
-                          hasCurrencies: e6.length > 1,
+                          purchaseErrorBlockRef: ek,
+                          hasCurrencies: e4.length > 1,
                           body: e,
                           footer:
                               eG !== C.h8.CONFIRM

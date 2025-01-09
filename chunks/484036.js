@@ -27,7 +27,7 @@ function c(e) {
 function d(e) {
     let { children: t, className: n, initialHeight: l, minHeight: o } = e,
         d = a.useRef(null),
-        [u, h] = a.useState(l);
+        [u, m] = a.useState(l);
     return (0, r.jsxs)('div', {
         ref: d,
         className: s.container,
@@ -39,7 +39,7 @@ function d(e) {
             (0, r.jsx)(c, {
                 resizableNode: d,
                 minHeight: o,
-                onResize: h
+                onResize: m
             }),
             (0, r.jsx)('div', {
                 className: i()(s.subPanelContent, n),

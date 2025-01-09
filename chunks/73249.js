@@ -17,15 +17,15 @@ var i = t(200651),
     E = t(358085),
     S = t(998502),
     x = t(254109),
-    C = t(212459),
-    v = t(369171),
+    v = t(212459),
+    C = t(369171),
     y = t(701865),
     I = t(388032),
     b = t(197736);
-function O() {
+function M() {
     (0, o.closeModal)(y.U);
 }
-function M(e) {
+function O(e) {
     let { onClick: n, tooltipText: t, children: l, selected: r, ...s } = e;
     return (0, i.jsx)(o.Tooltip, {
         text: t,
@@ -48,8 +48,8 @@ function M(e) {
     });
 }
 function L() {
-    let { zoomed: e, setZoomed: n } = (0, C.Y)();
-    return (0, i.jsx)(M, {
+    let { zoomed: e, setZoomed: n } = (0, v.Y)();
+    return (0, i.jsx)(O, {
         onClick: () => {
             (0, x.yg)(e ? x.uG.ZOOM_OUT_BUTTON_PRESSED : x.uG.ZOOM_IN_BUTTON_PRESSED), n(!e);
         },
@@ -69,7 +69,7 @@ function T(e) {
                         message: a,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [s.embedIndex] },
-                        onRequestSent: O
+                        onRequestSent: M
                     });
                     return;
                 }
@@ -77,13 +77,13 @@ function T(e) {
                     message: a,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [s.attachmentId] },
-                    onRequestSent: O
+                    onRequestSent: M
                 });
             }
         }, [a, s]),
         { canForwardMessages: m } = (0, u.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return null != a && m && (0, c.h)(a)
-        ? (0, i.jsx)(M, {
+        ? (0, i.jsx)(O, {
               onClick: f,
               tooltipText: I.intl.string(I.t.I3ltXF),
               children: (0, i.jsx)(o.ArrowAngleRightUpIcon, {})
@@ -107,7 +107,7 @@ function A(e) {
             }
         }
     }
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(O, {
         onClick: s,
         tooltipText: I.intl.string('VIDEO' === n.type ? I.t.JVuuz8 : I.t['S/xNKS']),
         submitting: t,
@@ -119,7 +119,7 @@ function R(e) {
     let { item: t } = e;
     if (!(0, f.Jj)(t.url)) return null;
     let l = (0, f.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, i.jsx)(M, {
+    return (0, i.jsx)(O, {
         onClick: () => {
             (0, x.yg)(x.uG.OPEN_LINK_PRESSED), (0, _.q)({ href: l });
         },
@@ -138,9 +138,9 @@ function j(e) {
         p = (function (e) {
             var n;
             let { alt: t, sourceMetadata: l, width: r, height: a } = e,
-                s = N(I.intl.string(I.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
-                u = N(I.intl.string(I.t.sPO3io), 'size'),
-                c = N(I.intl.string(I.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
+                s = D(I.intl.string(I.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
+                u = D(I.intl.string(I.t.sPO3io), 'size'),
+                c = D(I.intl.string(I.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == l ? void 0 : null === (n = l.identifier) || void 0 === n ? void 0 : n.type) !== 'attachment') return null;
             let d = (0, m.Z)(l.identifier),
                 f = (0, g.BU)(l.identifier.size / 1000);
@@ -215,7 +215,7 @@ function j(e) {
         ]
     });
 }
-function N(e, n, t) {
+function D(e, n, t) {
     let r = l.useCallback((e) => {
         (0, p.JG)(e),
             (0, o.showToast)({
@@ -239,7 +239,7 @@ function N(e, n, t) {
               )
             : null;
 }
-function P(e) {
+function N(e) {
     var n, t;
     let { item: r } = e,
         [a, s] = l.useState(!1),
@@ -263,7 +263,7 @@ function P(e) {
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, i.jsx)(M, {
+                  return (0, i.jsx)(O, {
                       tooltipText: I.intl.string(I.t.UKOtz8),
                       onClick: () => {
                           (0, x.yg)(x.uG.MORE_BUTTON_PRESSED), s(!a);
@@ -279,16 +279,16 @@ n.Z = l.memo(function (e) {
     let { item: n, hideMediaOptions: t } = e;
     return (
         ('IMAGE' === n.type || !t) &&
-        (0, i.jsx)(v.ZP, {
+        (0, i.jsx)(C.ZP, {
             children: (e) =>
                 (0, i.jsxs)('div', {
                     className: a()(b.actionButtons, e),
-                    onClick: (e) => e.stopPropagation(),
+                    onMouseDown: (e) => e.stopPropagation(),
                     children: [
                         'IMAGE' === n.type && (0, i.jsx)(L, {}),
                         !t &&
                             (0, i.jsxs)(i.Fragment, {
-                                children: [(0, i.jsx)(T, { item: n }), (0, i.jsx)(A, { item: n }), (0, i.jsx)(R, { item: n }), (0, i.jsx)(P, { item: n })]
+                                children: [(0, i.jsx)(T, { item: n }), (0, i.jsx)(A, { item: n }), (0, i.jsx)(R, { item: n }), (0, i.jsx)(N, { item: n })]
                             })
                     ]
                 })

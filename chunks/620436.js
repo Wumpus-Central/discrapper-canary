@@ -7,28 +7,28 @@ var i,
     r,
     l = n(200651);
 n(192379);
-var a = n(481060),
-    s = n(673744);
+var s = n(481060),
+    a = n(673744);
 ((i = r || (r = {})).ARROW_DOWN = 'arrow_down'), (i.CROSS = 'cross');
 function o(e) {
     let { type: t } = e;
     return (0, l.jsx)('div', {
-        className: s.dividerContainer,
+        className: a.dividerContainer,
         children: (0, l.jsx)('div', {
-            className: s.dividerIconContainer,
+            className: a.dividerIconContainer,
             children: (function (e) {
                 switch (e) {
                     case 'arrow_down':
-                        return (0, l.jsx)(a.ArrowSmallDownIcon, {
+                        return (0, l.jsx)(s.ArrowSmallDownIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: s.dividierIcon
+                            className: a.dividierIcon
                         });
                     case 'cross':
-                        return (0, l.jsx)(a.XSmallIcon, {
+                        return (0, l.jsx)(s.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: s.dividierIcon
+                            className: a.dividierIcon
                         });
                     default:
                         return null;

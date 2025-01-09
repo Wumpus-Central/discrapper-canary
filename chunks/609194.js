@@ -3,8 +3,8 @@ var l,
     t,
     s,
     a,
-    c = n(200651),
-    i = n(192379),
+    i = n(200651),
+    c = n(192379),
     d = n(120356),
     u = n.n(d),
     p = n(600164),
@@ -29,25 +29,25 @@ let h = {
         warning: m.colorWarning,
         error: m.colorError
     },
-    x = {
+    _ = {
         small: m.small,
         large: m.large,
         none: null
     };
-class _ extends (a = i.PureComponent) {
+class x extends (a = c.PureComponent) {
     render() {
         let { icon: e, color: r, children: n, iconSize: l, className: o, iconClassName: t } = this.props;
-        return (0, c.jsxs)(p.Z, {
+        return (0, i.jsxs)(p.Z, {
             className: u()(m.note, h[r], o),
             align: p.Z.Align.CENTER,
             children: [
-                (0, c.jsx)(e, {
-                    className: u()(m.icon, x[l], t),
+                (0, i.jsx)(e, {
+                    className: u()(m.icon, _[l], t),
                     color: 'currentColor'
                 }),
-                (0, c.jsx)('div', { children: n })
+                (0, i.jsx)('div', { children: n })
             ]
         });
     }
 }
-f(_, 'Colors', t), f(_, 'Sizes', s), (r.Z = _);
+f(x, 'Colors', t), f(x, 'Sizes', s), (r.Z = x);

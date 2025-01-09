@@ -1,13 +1,13 @@
-e.d(t, {
+t.d(e, {
     Z: function () {
         return u;
     }
 });
-var i = e(200651);
-e(192379);
-var r = e(481060),
-    l = e(117984),
-    a = e(388032);
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(117984),
+    a = t(388032);
 function u(n) {
     return (0, i.jsx)(r.MenuItem, {
         id: 'delete-channel',
@@ -16,12 +16,12 @@ function u(n) {
         color: 'danger',
         action: () =>
             (0, r.openModalLazy)(async () => {
-                let { default: t } = await e.e('37720').then(e.bind(e, 357632));
-                return (e) =>
-                    (0, i.jsx)(t, {
-                        ...e,
+                let { default: e } = await t.e('37720').then(t.bind(t, 357632));
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        ...t,
                         onConfirm: () => {
-                            e.onClose(), (0, l.xh)(n.id);
+                            t.onClose(), (0, l.xh)(n.id);
                         },
                         channel: n
                     });

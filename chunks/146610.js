@@ -2,8 +2,8 @@ var i,
     r,
     l = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     o = n(167533),
     c = n(73346),
     d = n(169903),
@@ -41,13 +41,13 @@ let x = [
     },
     {
         key: 'subscribers',
-        cellClassName: s()(h.subscribersColumn, g.cellAlignRight),
+        cellClassName: a()(h.subscribersColumn, g.cellAlignRight),
         renderHeader: () => m.intl.string(m.t.zu8go6),
         render: (e) => (0, l.jsx)(u.av, { children: e.roleMemberCount })
     },
     {
         key: 'price',
-        cellClassName: s()(h.priceColumn, g.cellAlignRight),
+        cellClassName: a()(h.priceColumn, g.cellAlignRight),
         renderHeader: () => m.intl.string(m.t.NcrbWF),
         render(e) {
             let { subscriptionListing: t } = e,
@@ -61,13 +61,13 @@ t.Z = (e) => {
     let { totalPayoutsForPeriod: t, guildId: n, className: i } = e,
         r = (0, d.Z)(n, t);
     return (0, l.jsx)('div', {
-        className: s()(g.tableContainer, i),
+        className: a()(g.tableContainer, i),
         children: (0, l.jsx)(o.Z, {
             columns: x,
             data: r,
-            className: s()(g.table, h.table),
+            className: a()(g.table, h.table),
             rowClassName: h.row,
-            headerClassName: s()(g.header, h.header)
+            headerClassName: a()(g.header, h.header)
         })
     });
 };

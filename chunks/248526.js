@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(746599),
     d = n(594174),
     u = n(246992),
-    h = n(473657);
-let m = [
+    m = n(473657);
+let h = [
         {
             label: 'No Override',
             value: !1
@@ -50,14 +50,14 @@ function p() {
         [p, b] = a.useState(!1),
         [g, v] = a.useState(1);
     return (0, r.jsxs)('div', {
-        className: h.container,
+        className: m.container,
         children: [
             (0, r.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Available',
-                className: h.formElement,
+                className: m.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: m,
+                    options: h,
                     value: t,
                     onChange: (e) => {
                         n(e);
@@ -67,7 +67,7 @@ function p() {
             }),
             (0, r.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Activate',
-                className: h.formElement,
+                className: m.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
                     options: x,
@@ -80,7 +80,7 @@ function p() {
             }),
             (0, r.jsx)(o.FormSection, {
                 title: 'Override Demo Duration',
-                className: h.formElement,
+                className: m.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
                     options: f,

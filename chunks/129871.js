@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(249849),
     l = n(907561),
-    a = n(388032),
-    s = n(136050);
+    s = n(388032),
+    a = n(136050);
 let o = ['#7185f6', '#7799f3', '#7eb2eb', '#85d5e0', '#89e6dd', '#8cefda', '#68eacb'],
     c = ['#ffffff', '#f0f0f0'],
     d = [0.15, 0.23, 0.32, 0.45, 0.57, 0.62, 0.7],
@@ -65,10 +65,10 @@ function g(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: h
         }),
-        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
+        { styleContent: v, containerId: N } = (0, l.bC)(f, C);
     return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': a.intl.string(a.t.nH6S2d),
+        'aria-label': s.intl.string(s.t.nH6S2d),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
@@ -99,11 +99,11 @@ function g(e) {
                 ]
             }),
             (0, i.jsx)('use', {
-                href: ''.concat(s, '#wrapper-layer'),
-                id: _
+                href: ''.concat(a, '#wrapper-layer'),
+                id: N
             }),
             (0, i.jsx)('use', {
-                href: ''.concat(s, '#foam'),
+                href: ''.concat(a, '#foam'),
                 style: { fill: 'url(#foam-gradient)' }
             })
         ]

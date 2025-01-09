@@ -1,12 +1,12 @@
 n.d(t, {
     G7: function () {
-        return s;
+        return a;
     },
     LG: function () {
         return d;
     },
     Pg: function () {
-        return a;
+        return s;
     },
     ZI: function () {
         return r;
@@ -18,8 +18,8 @@ n.d(t, {
 var i,
     r,
     l = n(388032);
-let a = 5,
-    s = 10,
+let s = 5,
+    a = 10,
     o = 30;
 ((i = r || (r = {}))[(i.DISPLAY = 0)] = 'DISPLAY'), (i[(i.PERMISSIONS = 1)] = 'PERMISSIONS'), (i[(i.MEMBERS = 2)] = 'MEMBERS'), (i[(i.VERIFICATIONS = 3)] = 'VERIFICATIONS');
 let c = {

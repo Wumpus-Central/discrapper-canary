@@ -11,8 +11,8 @@ n.d(t, {
 var i = n(192379),
     r = n(392711),
     l = n(881052),
-    a = n(36459),
-    s = n(388032);
+    s = n(36459),
+    a = n(388032);
 let o = '_errors',
     c = 'GENERIC_REGEX_ERROR';
 async function d(e, t) {
@@ -21,10 +21,10 @@ async function d(e, t) {
         return;
     }
     try {
-        await (0, a.qY)(e), t([]);
-    } catch (a) {
+        await (0, s.qY)(e), t([]);
+    } catch (s) {
         var n, i;
-        let e = new l.Hx(a).errors;
+        let e = new l.Hx(s).errors;
         if (!('object' == typeof (n = e) && (null == n ? void 0 : null === (i = n.trigger_metadata) || void 0 === i ? void 0 : i.regex_patterns) != null)) return;
         let r = (function (e) {
             var t;
@@ -37,16 +37,16 @@ async function d(e, t) {
                               var t;
                               let [n, i] = e,
                                   r = i[o],
-                                  { code: l, message: a } =
+                                  { code: l, message: s } =
                                       null !== (t = null == r ? void 0 : r[0]) && void 0 !== t
                                           ? t
                                           : {
                                                 code: c,
-                                                message: s.intl.string(s.t.hDPEu7)
+                                                message: a.intl.string(a.t.hDPEu7)
                                             };
                               return {
                                   pattern: n,
-                                  message: a,
+                                  message: s,
                                   code: l,
                                   description: null == i ? void 0 : i.description,
                                   erroringCharacterLength: null == i ? void 0 : i.erroring_character_length,
@@ -55,10 +55,10 @@ async function d(e, t) {
                               };
                           });
                       if (t.length > 0) {
-                          var r, l, a, d;
+                          var r, l, s, d;
                           i.push({
                               pattern: o,
-                              message: null !== (a = null === (r = t[0]) || void 0 === r ? void 0 : r.message) && void 0 !== a ? a : s.intl.string(s.t.hDPEu7),
+                              message: null !== (s = null === (r = t[0]) || void 0 === r ? void 0 : r.message) && void 0 !== s ? s : a.intl.string(a.t.hDPEu7),
                               code: null !== (d = null === (l = t[0]) || void 0 === l ? void 0 : l.code) && void 0 !== d ? d : c
                           });
                       }
@@ -71,7 +71,7 @@ async function d(e, t) {
 let u = (0, r.throttle)(d, 1000, { leading: !1 });
 function m(e, t) {
     var n, l;
-    let [a, s] = i.useState([]),
+    let [s, a] = i.useState([]),
         [o, c] = i.useState(null),
         [m, h] = i.useState(null !== (l = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) && void 0 !== l ? l : []),
         g = i.useCallback(
@@ -95,7 +95,7 @@ function m(e, t) {
         );
     return {
         patterns: m,
-        errors: a,
+        errors: s,
         valueError: o,
         validatePatternsChanged: i.useCallback(
             (n, i) => {
@@ -110,7 +110,7 @@ function m(e, t) {
                                 }
                             },
                             (e) => {
-                                s(e), 0 === e.length && c(null);
+                                a(e), 0 === e.length && c(null);
                             }
                         ),
                         h(n),

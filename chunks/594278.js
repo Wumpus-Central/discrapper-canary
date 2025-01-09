@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(846519),
+    s = n.n(l),
+    a = n(846519),
     o = n(481060),
     c = n(259580),
     d = n(81543),
@@ -11,10 +11,10 @@ var i = n(200651),
     m = n(470650);
 t.Z = function (e) {
     let { items: t, carouselClassName: n, paginationCaretClassName: l, intervalBetweenAutomaticItemRotations: h, renderItem: g } = e,
-        x = r.useMemo(() => new s.Xp(), []),
+        x = r.useMemo(() => new a.Xp(), []),
         [p, f] = r.useState(d.n.LEFT),
         [C, v] = r.useState(0),
-        [_, N] = r.useState(!1),
+        [N, _] = r.useState(!1),
         [I, T] = r.useState(!1),
         j = r.useCallback(
             (e, t) => {
@@ -28,21 +28,21 @@ t.Z = function (e) {
         b = r.useCallback(() => {
             if (!I) j(t, 1);
         }, [j, t, I]),
-        S = r.useCallback(() => {
+        E = r.useCallback(() => {
             if (!I) j(t, -1);
         }, [j, t, I]);
     return (
         r.useEffect(() => {
-            null != h && (_ ? _ && x.stop() : x.start(h, b));
-        }, [_, x, h, b]),
+            null != h && (N ? N && x.stop() : x.start(h, b));
+        }, [N, x, h, b]),
         (0, i.jsxs)('div', {
             className: m.root,
-            onMouseEnter: () => N(!0),
-            onMouseLeave: () => N(!1),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
             children: [
                 (0, i.jsx)(o.Clickable, {
-                    className: a()(m.carouselCaret, l),
-                    onClick: S,
+                    className: s()(m.carouselCaret, l),
+                    onClick: E,
                     onMouseEnter: () => f(d.n.RIGHT),
                     ignoreKeyPress: I,
                     children: (0, i.jsx)(c.Z, {
@@ -57,11 +57,11 @@ t.Z = function (e) {
                     direction: p,
                     onAnimationStart: () => T(!0),
                     onAnimationEnd: () => T(!1),
-                    className: a()(m.carousel, n),
+                    className: s()(m.carousel, n),
                     children: g(t[C])
                 }),
                 (0, i.jsx)(o.Clickable, {
-                    className: a()(m.carouselCaret, l),
+                    className: s()(m.carouselCaret, l),
                     onClick: b,
                     onMouseEnter: () => f(d.n.LEFT),
                     ignoreKeyPress: I,

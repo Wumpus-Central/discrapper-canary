@@ -34,8 +34,8 @@ var i = n(200651),
     C = n(782568),
     S = n(581364),
     N = n(970321),
-    T = n(283836),
-    y = n(220082),
+    y = n(283836),
+    T = n(220082),
     j = n(252618),
     P = n(299206),
     E = n(241209),
@@ -95,7 +95,7 @@ function eS(e) {
             }
         } = e,
         g = (0, et.useApplicationDirectoryHistory)((e) => e.guildId),
-        y = (0, Y.Z)(),
+        T = (0, Y.Z)(),
         es = (0, _.e7)(
             [z.Z],
             () =>
@@ -108,7 +108,7 @@ function eS(e) {
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: eT, similarLoadId: ej } = (0, _.cj)([z.Z], () => {
+        { similarApplications: ey, similarLoadId: ej } = (0, _.cj)([z.Z], () => {
             let e = {
                     applicationId: m,
                     guildId: g
@@ -122,7 +122,7 @@ function eS(e) {
                 }
             );
         }),
-        eP = a.useMemo(() => (null == eT ? void 0 : eT.slice(0, 3)), [eT]),
+        eP = a.useMemo(() => (null == ey ? void 0 : ey.slice(0, 3)), [ey]),
         eE = (0, _.e7)([W.Z], () => W.Z.getApplicationFetchState(m)),
         [eA, eL] = a.useState(void 0),
         ek = a.useCallback(
@@ -166,16 +166,16 @@ function eS(e) {
     a.useEffect(() => {
         if (null == ew) return;
         let e = new URL(location.href);
-        if (y && null != eH && 'true' === e.searchParams.get(ev)) {
+        if (T && null != eH && 'true' === e.searchParams.get(ev)) {
             e.searchParams.delete(ev);
             let t = e.pathname + e.search;
             (0, R.dL)(t), eD();
         }
-    }, [y, eD, eH, ew]);
+    }, [T, eD, eH, ew]);
     let eF = a.useCallback(() => {
             var e;
-            null != (null == ew ? void 0 : null === (e = ew.guild) || void 0 === e ? void 0 : e.id) && (y ? eD() : (0, X.rf)({ [ev]: 'true' }));
-        }, [ew, y, eD]),
+            null != (null == ew ? void 0 : null === (e = ew.guild) || void 0 === e ? void 0 : e.id) && (T ? eD() : (0, X.rf)({ [ev]: 'true' }));
+        }, [ew, T, eD]),
         eM = a.useCallback(() => {
             (0, en.replaceAppDirectoryURLWith)(''.concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(m)).concat(location.search));
         }, [m]);
@@ -363,12 +363,12 @@ function eS(e) {
         }, [ew, e2, g]);
     a.useEffect(() => {
         let e = new URL(location.href);
-        if (y && 'true' === e.searchParams.get(ex)) {
+        if (T && 'true' === e.searchParams.get(ex)) {
             e.searchParams.delete(ex);
             let t = e.pathname + e.search;
             (0, R.dL)(t), eW('product_page');
         }
-    }, [y, eW]);
+    }, [T, eW]);
     let e5 = a.useCallback(() => {
             if (null != ew) {
                 if ((u.tq || u.Em) && null == ew.custom_install_url) {
@@ -383,7 +383,7 @@ function eS(e) {
                         return;
                     }
                 }
-                y
+                T
                     ? eW('product_page')
                     : (H.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: m,
@@ -394,7 +394,7 @@ function eS(e) {
                       }),
                       (0, X.rf)({ [ex]: 'true' }));
             }
-        }, [ew, y, eW, m, g]),
+        }, [ew, T, eW, m, g]),
         e8 = (null == ew ? void 0 : ew.id) === em.g,
         [e9, e4] = a.useState(!1),
         [e7, te] = a.useState(!1),
@@ -406,7 +406,7 @@ function eS(e) {
         tr = (null == ew ? void 0 : ew.flags) != null,
         to = (0, N.R)(null != m ? m : '');
     a.useEffect(() => {
-        to && null != m && (0, T.Z)(m);
+        to && null != m && (0, y.Z)(m);
     }, [to, m]);
     let tl = a.useMemo(() => {
             let e = [],
@@ -643,7 +643,7 @@ function eS(e) {
                 : (0, i.jsxs)($.Z, {
                       loading: eE === W.M.FETCHING,
                       children: [
-                          (0, i.jsx)(ey, {
+                          (0, i.jsx)(eT, {
                               app: ew,
                               iconSrc: eU
                           }),
@@ -832,7 +832,7 @@ let eN = (e) => {
                           })
                       ]
                   })),
-            (0, i.jsx)(eT, {
+            (0, i.jsx)(ey, {
                 children: (0, i.jsx)(h.Button, {
                     look: h.Button.Looks.BLANK,
                     color: h.Button.Colors.TRANSPARENT,
@@ -845,7 +845,7 @@ let eN = (e) => {
             })
         );
     },
-    eT = (e) => {
+    ey = (e) => {
         let { className: t, contentClassName: n, children: a } = e;
         return (0, i.jsxs)('div', {
             className: o()([ef.dividerContainer, t]),
@@ -865,9 +865,9 @@ let eN = (e) => {
             ]
         });
     };
-function ey(e) {
+function eT(e) {
     let { app: t, iconSrc: n } = e,
-        r = (0, y.ZP)(n, f.Z.unsafe_rawColors.PRIMARY_800.css),
+        r = (0, T.ZP)(n, f.Z.unsafe_rawColors.PRIMARY_800.css),
         { bot: o } = t,
         l = a.useMemo(() => {
             let e = { backgroundColor: r };

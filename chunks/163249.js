@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(749210),
     c = n(493544),
     d = n(607070),
@@ -21,7 +21,7 @@ function x(e) {
     return (0, i.jsxs)('div', {
         className: g.roleTag,
         children: [
-            (0, i.jsx)(s.RoleCircle, {
+            (0, i.jsx)(a.RoleCircle, {
                 className: g.roleDot,
                 color: t
             }),
@@ -35,7 +35,7 @@ function x(e) {
 function p(e) {
     let { guild: t, display: n } = e;
     return (0, i.jsxs)('div', {
-        className: a()(g.banner, t.backgroundClass, { [g.bannerOut]: !n }),
+        className: s()(g.banner, t.backgroundClass, { [g.bannerOut]: !n }),
         children: [
             (0, i.jsx)('div', {
                 className: g.roles,
@@ -64,13 +64,13 @@ function p(e) {
                 children: (0, i.jsxs)('div', {
                     className: g.avatarContainer,
                     children: [
-                        (0, i.jsx)(s.Avatar, {
-                            size: s.AvatarSizes.SIZE_56,
+                        (0, i.jsx)(a.Avatar, {
+                            size: a.AvatarSizes.SIZE_56,
                             'aria-hidden': !0,
                             status: m.Skl.ONLINE,
                             src: t.avatar
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'header-primary',
                             variant: 'text-md/bold',
                             className: g.avatarName,
@@ -194,14 +194,14 @@ function f() {
             []
         ),
         [t, l] = r.useState(0),
-        a = r.useRef(e);
+        s = r.useRef(e);
     return (
         r.useEffect(() => {
-            a.current = e;
+            s.current = e;
         }),
         r.useEffect(() => {
             if (d.Z.useReducedMotion) return;
-            let e = setTimeout(() => l((t + 1) % a.current.length), 6332);
+            let e = setTimeout(() => l((t + 1) % s.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
         (0, i.jsx)('div', {
@@ -222,7 +222,7 @@ function f() {
 }
 function C(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
-        [a, d] = r.useState(!1),
+        [s, d] = r.useState(!1),
         m = async () => {
             d(!0), await o.Z.createRole(t.id), d(!1);
         },
@@ -230,35 +230,35 @@ function C(e) {
             l(n.id);
         }, [l, n.id]);
     return (0, i.jsx)(c.NM, {
-        children: (0, i.jsxs)(s.FormSection, {
+        children: (0, i.jsxs)(a.FormSection, {
             className: g.section,
             title: h.intl.string(h.t.LPJmLy),
-            tag: s.FormTitleTags.H2,
+            tag: a.FormTitleTags.H2,
             children: [
                 (0, i.jsxs)('div', {
                     className: g.container,
                     children: [
                         (0, i.jsx)(f, {}),
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
                             children: h.intl.string(h.t.ALlnbm)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: g.introBody,
                             children: h.intl.string(h.t['1ydhVl'])
                         }),
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(a.Button, {
                             className: g.button,
-                            size: s.Button.Sizes.MEDIUM,
+                            size: a.Button.Sizes.MEDIUM,
                             onClick: m,
-                            submitting: a,
+                            submitting: s,
                             children: h.intl.string(h.t.JZZjQE)
                         })
                     ]
                 }),
-                (0, i.jsx)(s.FormDivider, { className: g.divider }),
+                (0, i.jsx)(a.FormDivider, { className: g.divider }),
                 (0, i.jsx)(u.Z, {
                     role: n,
                     onClick: x

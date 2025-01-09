@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var r = n(990547),
     l = n(481060),
-    a = n(213609),
-    s = n(605288),
+    s = n(213609),
+    a = n(605288),
     o = n(787051),
     c = n(346163),
     d = n(587431),
@@ -30,19 +30,19 @@ function C(e) {
                 children: [(0, i.jsx)(l.FormDivider, { className: f.sectionDivider }), t]
             });
         },
-        a = (0, i.jsx)(r, { children: (0, i.jsx)(g.Z, {}) }, p.q.HOW_IT_WORKS),
-        s = (0, i.jsx)(r, { children: (0, i.jsx)(m.Z, {}) }, p.q.BENEFITS);
+        s = (0, i.jsx)(r, { children: (0, i.jsx)(g.Z, {}) }, p.q.HOW_IT_WORKS),
+        a = (0, i.jsx)(r, { children: (0, i.jsx)(m.Z, {}) }, p.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, i.jsxs)(i.Fragment, {
-              children: [a, s]
+              children: [s, a]
           })
         : (0, i.jsx)(i.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
                       case p.q.HOW_IT_WORKS:
-                          return a;
-                      case p.q.BENEFITS:
                           return s;
+                      case p.q.BENEFITS:
+                          return a;
                       case p.q.OTHER_CREATORS:
                           return (0, i.jsx)(r, { children: (0, i.jsx)(h.Z, { highlightedCreators: e.creators }) }, p.q.OTHER_CREATORS);
                   }
@@ -53,9 +53,9 @@ function v(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: h, eligibility: g } = n,
-        p = (0, s.j)(g),
-        { isLoading: v, error: _, creatorMonetizationOnboardingMarketing: N } = (0, o.Z)(t.id);
-    return ((0, a.Z)(
+        p = (0, a.j)(g),
+        { isLoading: v, error: N, creatorMonetizationOnboardingMarketing: _ } = (0, o.Z)(t.id);
+    return ((0, s.Z)(
         {
             type: r.ImpressionTypes.PANE,
             name: r.ImpressionNames.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING,
@@ -82,8 +82,8 @@ function v(e) {
                           monetizationEligibility: n
                       }),
                       (0, i.jsx)(C, {
-                          onboardingMarketing: N,
-                          onboardingMarketingError: _
+                          onboardingMarketing: _,
+                          onboardingMarketingError: N
                       })
                   ]
               });

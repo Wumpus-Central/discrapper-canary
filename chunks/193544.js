@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(186523),
     c = n(553826),
     d = n(2150),
@@ -19,37 +19,37 @@ var i = n(200651),
 function x(e) {
     var t, n, l;
     let { changeTitle: x, value: p, options: f, className: C, onChange: v } = e,
-        [_, N] = r.useState(p),
+        [N, _] = r.useState(p),
         [I, T] = r.useState(!1),
         [j, b] = r.useState(!1),
-        S = r.useRef(null);
+        E = r.useRef(null);
     r.useEffect(() => {
-        N(p);
+        _(p);
     }, [p]),
         r.useEffect(
             () => () => {
-                clearTimeout(S.current);
+                clearTimeout(E.current);
             },
             []
         );
-    let E = f.find((e) => e.value === _),
+    let S = f.find((e) => e.value === N),
         R = (e) => {
-            if (!e.disabled && e.value !== _)
+            if (!e.disabled && e.value !== N)
                 b(!0),
                     null == v || v(e),
-                    N(e.value),
-                    (S.current = setTimeout(() => {
+                    _(e.value),
+                    (E.current = setTimeout(() => {
                         b(!1), T(!1);
                     }, 1000));
         };
     return (0, i.jsx)(u.Z, {
-        title: I ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
-        description: I ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
-        highlightColor: I ? d.q.NONE : null == E ? void 0 : E.highlightColor,
-        action: (0, i.jsx)(s.Button, {
-            look: s.Button.Looks.LINK,
-            size: s.Button.Sizes.MIN,
-            color: s.Button.Colors.LINK,
+        title: I ? x : null !== (t = null == S ? void 0 : S.title) && void 0 !== t ? t : x,
+        description: I ? '('.concat(null !== (n = null == S ? void 0 : S.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == S ? void 0 : S.description) && void 0 !== l ? l : '',
+        highlightColor: I ? d.q.NONE : null == S ? void 0 : S.highlightColor,
+        action: (0, i.jsx)(a.Button, {
+            look: a.Button.Looks.LINK,
+            size: a.Button.Sizes.MIN,
+            color: a.Button.Colors.LINK,
             children: h.intl.string(h.t.GEgsAw)
         }),
         loading: j,
@@ -61,9 +61,9 @@ function x(e) {
                     title: e.title,
                     description: e.description,
                     highlightColor: e.highlightColor,
-                    className: a()(g.groupCollapsedRow, _ === e.value && g.selected),
-                    selected: _ === e.value,
-                    action: _ === e.value ? (0, i.jsx)(c.Z, { className: g.radioItem }) : (0, i.jsx)(o.Z, { className: g.radioItem }),
+                    className: s()(g.groupCollapsedRow, N === e.value && g.selected),
+                    selected: N === e.value,
+                    action: N === e.value ? (0, i.jsx)(c.Z, { className: g.radioItem }) : (0, i.jsx)(o.Z, { className: g.radioItem }),
                     onClick: () => R(e),
                     disabled: e.disabled
                 },

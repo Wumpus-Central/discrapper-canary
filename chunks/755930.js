@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     Yn: function () {
-        return _;
+        return N;
     },
     ZP: function () {
         return b;
@@ -21,7 +21,7 @@ n.d(t, {
         return f;
     },
     qN: function () {
-        return N;
+        return _;
     },
     wy: function () {
         return x;
@@ -31,9 +31,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l);
+    s = n.n(l);
 n(913527);
-var s = n(481060),
+var a = n(481060),
     o = n(167533),
     c = n(937615),
     d = n(809086),
@@ -59,7 +59,7 @@ function x(e) {
     };
 }
 function p() {
-    return (0, i.jsx)(s.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: 'text-xs/medium',
         className: h.unpublishedBadge,
         children: m.intl.string(m.t.TJ4CCw)
@@ -84,7 +84,7 @@ function f(e) {
                                 alt: '',
                                 className: h.listingImage
                             }),
-                            (0, i.jsxs)(s.Text, {
+                            (0, i.jsxs)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
                                 className: h.listingNameLabel,
@@ -102,7 +102,7 @@ function f(e) {
     });
 }
 function C(e) {
-    let { cellClassName: t, getAmount: n, key: r, renderHeader: l, ...a } = e;
+    let { cellClassName: t, getAmount: n, key: r, renderHeader: l, ...s } = e;
     return x({
         key: r,
         cellClassName: t,
@@ -111,11 +111,11 @@ function C(e) {
             let t = n(e);
             return (0, i.jsx)(T, { children: t });
         },
-        ...a
+        ...s
     });
 }
 function v(e) {
-    let { cellClassName: t, getCount: n, key: r, renderHeader: l, ...a } = e;
+    let { cellClassName: t, getCount: n, key: r, renderHeader: l, ...s } = e;
     return x({
         key: r,
         cellClassName: t,
@@ -124,23 +124,23 @@ function v(e) {
             let t = n(e);
             return (0, i.jsx)(j, { children: t });
         },
-        ...a
+        ...s
     });
 }
-function _(e) {
+function N(e) {
     let t = [...e];
     for (let n = 1; n < e.length; ++n) {
         let i = e[n];
         t[n] = {
             ...i,
-            cellClassName: a()(i.cellClassName, h.cellAlignRight)
+            cellClassName: s()(i.cellClassName, h.cellAlignRight)
         };
     }
     return t;
 }
-let N = (e) => {
+let _ = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(s.Text, {
+        return (0, i.jsx)(a.Text, {
             className: h.headerCell,
             variant: 'text-xs/medium',
             color: 'interactive-normal',
@@ -150,7 +150,7 @@ let N = (e) => {
     },
     I = (e) => {
         let { children: t, className: n } = e;
-        return (0, i.jsx)(s.Text, {
+        return (0, i.jsx)(a.Text, {
             className: n,
             variant: 'text-md/normal',
             color: 'interactive-normal',
@@ -168,7 +168,7 @@ let N = (e) => {
             children: [
                 null != t ? t : '-',
                 ' ',
-                (0, i.jsx)(s.UserIcon, {
+                (0, i.jsx)(a.UserIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: h.personCountIcon,
@@ -178,15 +178,15 @@ let N = (e) => {
         });
     };
 function b(e) {
-    let { className: t, headerClassName: n, rowClassName: l, enableRowSeparators: s = !1, initialSortKey: c, initialSortDirection: d = u.sHY.ASCENDING, ...m } = e,
+    let { className: t, headerClassName: n, rowClassName: l, enableRowSeparators: a = !1, initialSortKey: c, initialSortDirection: d = u.sHY.ASCENDING, ...m } = e,
         [g, x] = r.useState(c),
         [p, f] = r.useState(d);
     return (0, i.jsx)('div', {
-        className: a()(h.tableContainer, t),
+        className: s()(h.tableContainer, t),
         children: (0, i.jsx)(o.Z, {
-            className: a()({ [h.tableWithoutSeparators]: !s }, h.table),
-            rowClassName: a()({ [h.rowWithSeparators]: s }, l),
-            headerClassName: a()(h.header, { [h.headerWithoutSeparators]: !s }, n),
+            className: s()({ [h.tableWithoutSeparators]: !a }, h.table),
+            rowClassName: s()({ [h.rowWithSeparators]: a }, l),
+            headerClassName: s()(h.header, { [h.headerWithoutSeparators]: !a }, n),
             sortKey: g,
             sortDirection: p,
             onSort: (e, t) => {

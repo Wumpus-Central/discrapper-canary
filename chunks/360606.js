@@ -3,9 +3,9 @@ n.r(t), n(653041), n(47120);
 var l,
     T,
     I,
-    o,
-    E = n(392711),
-    u = n.n(E),
+    E,
+    o = n(392711),
+    u = n.n(o),
     N = n(442837),
     a = n(570140),
     _ = n(308063),
@@ -29,7 +29,7 @@ function P(e) {
     if (t !== s.pNK.INTEGRATIONS) return !1;
     if (null == i) {
         let e = d.Z.getGuildId();
-        null != e && _.Z.fetchForGuild(e), D(!1);
+        null != e && S.Z.can(s.Plq.MANAGE_WEBHOOKS, i) && _.Z.fetchForGuild(e), D(!1);
     }
 }
 function D(e) {
@@ -48,7 +48,7 @@ function D(e) {
     (p = null), (Z = s.QZA.OPEN), (y = {}), (g = !1);
 }
 let v = u().debounce(() => {
-    g && (null != A ? u().isEqual(A, M(A.id)) && (g = !1) : null != h && u().isEqual(h, b(h.id)) && (g = !1), !g && W.emitChange());
+    g && (null != A ? u().isEqual(A, M(A.id)) && (g = !1) : null != h && u().isEqual(h, b(h.id)) && (g = !1), !g && m.emitChange());
 }, 500);
 function M(e) {
     return O.find((t) => {
@@ -62,7 +62,7 @@ function b(e) {
         return n === e;
     });
 }
-class m extends (l = N.ZP.Store) {
+class W extends (l = N.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z, S.Z);
     }
@@ -122,16 +122,16 @@ class m extends (l = N.ZP.Store) {
             : t.application;
     }
 }
-(o = 'GuildSettingsIntegrationsStore'),
-    (I = 'displayName') in (T = m)
+(E = 'GuildSettingsIntegrationsStore'),
+    (I = 'displayName') in (T = W)
         ? Object.defineProperty(T, I, {
-              value: o,
+              value: E,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[I] = o);
-let W = new m(
+        : (T[I] = E);
+let m = new W(
     a.Z,
     __OVERLAY__
         ? {}
@@ -255,4 +255,4 @@ let W = new m(
               }
           }
 );
-t.default = W;
+t.default = m;

@@ -1,13 +1,13 @@
 n.d(t, {
     z: function () {
-        return s;
+        return a;
     }
 });
 var i = n(664751),
     r = n(544891),
     l = n(570140),
-    a = n(981631);
-async function s(e) {
+    s = n(981631);
+async function a(e) {
     l.Z.dispatch({
         type: 'DISCOVER_GUILDS_FETCH_START',
         guildIds: e
@@ -15,7 +15,7 @@ async function s(e) {
     try {
         let { guilds: t } = (
             await r.tn.get({
-                url: a.ANM.GUILD_DISCOVERY,
+                url: s.ANM.GUILD_DISCOVERY,
                 query: i.stringify({ guild_ids: e }),
                 oldFormErrors: !0,
                 rejectWithError: !0

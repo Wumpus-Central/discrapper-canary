@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return C;
+            return v;
         }
     }),
     t(47120);
@@ -23,9 +23,9 @@ var i = t(200651),
     E = t(981631),
     S = t(388032),
     x = t(176598);
-function C(e) {
-    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: C, shouldHideMediaOptions: v = !1, className: y, transitionState: I, ...b } = e,
-        [O, M] = l.useState(null != r ? r : 0),
+function v(e) {
+    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: v, shouldHideMediaOptions: C = !1, className: y, transitionState: I, ...b } = e,
+        [M, O] = l.useState(null != r ? r : 0),
         [L, T] = l.useState(!1),
         [A, R] = l.useState(!0),
         j = l.useRef(null);
@@ -48,10 +48,10 @@ function C(e) {
             ),
             [I]
         );
-    let N = l.useCallback((e) => {
-            M(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
+    let D = l.useCallback((e) => {
+            O(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        P = l.useMemo(
+        N = l.useMemo(
             () => ({
                 zoomed: L,
                 setZoomed: T,
@@ -61,14 +61,14 @@ function C(e) {
             }),
             [L, I, A]
         ),
-        D = l.useCallback(() => {
+        w = l.useCallback(() => {
             var e;
             R(!0), (null !== (e = j.current) && void 0 !== e) || (j.current = new o.sW(1000, () => R(!1))), j.current.delay();
         }, []),
-        w = l.useCallback(() => {
-            D(), null == n || n();
-        }, [D, n]),
-        k = t[O];
+        P = l.useCallback(() => {
+            w(), null == n || n();
+        }, [w, n]),
+        Z = t[M];
     return (0, i.jsx)(s.ThemeProvider, {
         theme: E.BRd.DARK,
         children: (e) =>
@@ -79,28 +79,28 @@ function C(e) {
                 ...b,
                 size: s.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
-                onMouseMove: D,
-                onClick: w,
+                onMouseMove: w,
+                onMouseDown: P,
                 'aria-label': S.intl.string(S.t.AMTX3t),
                 children: (0, i.jsxs)(m.z.Provider, {
-                    value: P,
+                    value: N,
                     children: [
                         (0, i.jsx)(_.Z, {
-                            item: k,
+                            item: Z,
                             onClose: n
                         }),
                         (0, i.jsxs)(g.c7, {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     items: t,
-                                    startIndex: O,
-                                    onIndexChange: N,
-                                    shouldRedactExplicitContent: C,
-                                    shouldHideMediaOptions: v
+                                    startIndex: M,
+                                    onIndexChange: D,
+                                    shouldRedactExplicitContent: v,
+                                    shouldHideMediaOptions: C
                                 }),
                                 (0, i.jsx)(h.Z, {
-                                    item: k,
-                                    hideMediaOptions: v
+                                    item: Z,
+                                    hideMediaOptions: C
                                 })
                             ]
                         })

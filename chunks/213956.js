@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    a = n(704215),
-    s = n(481060),
+    s = n(704215),
+    a = n(481060),
     o = n(605236),
     c = n(874993),
     d = n(768762),
@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(733629),
     C = n(598622),
     v = n(921944),
-    _ = n(388032),
-    N = n(232203);
+    N = n(388032),
+    _ = n(232203);
 function I() {
     let e;
     let t = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
@@ -29,7 +29,7 @@ function I() {
         I = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
-            (0, o.EW)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
         null == n)
     )
@@ -41,13 +41,13 @@ function I() {
             break;
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t['53eF5u']),
+                title: N.intl.string(N.t['53eF5u']),
                 settings: T[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
             e = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t.O0SfFx),
+                title: N.intl.string(N.t.O0SfFx),
                 settings: T[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
@@ -56,30 +56,30 @@ function I() {
             break;
         case x.u.PERMISSIONS:
             e = (0, i.jsx)(f.Z, {
-                title: _.intl.string(_.t.BXoNiY),
+                title: N.intl.string(N.t.BXoNiY),
                 settings: T[x.u.PERMISSIONS]
             });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             I !== x.u.OVERVIEW &&
-                (0, i.jsxs)(s.Button, {
-                    className: N.back,
-                    innerClassName: N.backButton,
-                    look: s.Button.Looks.BLANK,
-                    size: s.Button.Sizes.MIN,
+                (0, i.jsxs)(a.Button, {
+                    className: _.back,
+                    innerClassName: _.backButton,
+                    look: a.Button.Looks.BLANK,
+                    size: a.Button.Sizes.MIN,
                     onClick: () => {
                         (0, h.K)(x.u.OVERVIEW);
                     },
                     children: [
                         (0, i.jsx)(d.Z, {
-                            className: N.__invalid_arrow,
+                            className: _.__invalid_arrow,
                             direction: d.Z.Directions.LEFT
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-sm/semibold',
                             color: 'interactive-normal',
-                            children: _.intl.string(_.t['13/7kZ'])
+                            children: N.intl.string(N.t['13/7kZ'])
                         })
                     ]
                 }),

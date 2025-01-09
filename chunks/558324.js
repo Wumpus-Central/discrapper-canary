@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
+    s = n.n(l),
+    a = n(481060),
     o = n(981631),
     c = n(524910);
 t.Z = (e) => {
@@ -13,14 +13,14 @@ t.Z = (e) => {
             (0, i.jsxs)(
                 'span',
                 {
-                    className: a()(c.tag, { [c.__invalid_disabledTag]: g }),
+                    className: s()(c.tag, { [c.__invalid_disabledTag]: g }),
                     children: [
                         e,
                         !g &&
-                            (0, i.jsx)(s.Clickable, {
+                            (0, i.jsx)(a.Clickable, {
                                 className: c.closeWrapper,
                                 onClick: () => d(t),
-                                children: (0, i.jsx)(s.XSmallIcon, {
+                                children: (0, i.jsx)(a.XSmallIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: c.close
@@ -31,11 +31,11 @@ t.Z = (e) => {
                 t
             )
         ),
-        _ = r.useCallback(() => {
+        N = r.useCallback(() => {
             let e = f.trim();
             if (0 !== e.length) (null == h || !(n.length >= h)) && (u(e), C(''));
         }, [f, h, u, n.length]),
-        N = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
@@ -44,25 +44,25 @@ t.Z = (e) => {
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), _();
+                        e.preventDefault(), e.stopPropagation(), N();
                 }
             },
-            [_, f.length, d, n.length]
+            [N, f.length, d, n.length]
         );
     return (0, i.jsxs)('div', {
-        className: a()(t, c.inputWrapper, { [c.disabled]: g }),
+        className: s()(t, c.inputWrapper, { [c.disabled]: g }),
         children: [
             v,
-            (0, i.jsx)(s.TextInput, {
+            (0, i.jsx)(a.TextInput, {
                 className: c.inputOuter,
                 inputClassName: c.inputInner,
                 ...p,
                 value: f,
-                onKeyDown: N,
+                onKeyDown: _,
                 onChange: C,
                 maxLength: m,
                 disabled: g,
-                onBlur: _,
+                onBlur: N,
                 placeholder: x
             })
         ]

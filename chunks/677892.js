@@ -3,10 +3,10 @@ n.d(t, {
         return C;
     },
     P_: function () {
-        return N;
+        return _;
     },
     ap: function () {
-        return _;
+        return N;
     },
     ku: function () {
         return v;
@@ -16,8 +16,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(442837),
-    a = n(481060),
-    s = n(45966),
+    s = n(481060),
+    a = n(45966),
     o = n(637853),
     c = n(734893),
     d = n(8426),
@@ -28,17 +28,17 @@ var i = n(200651),
     x = n(15832);
 function p(e) {
     let t,
-        { title: n, description: r, icon: l, hasStarted: s, status: o, onEdit: c, extra: d } = e;
+        { title: n, description: r, icon: l, hasStarted: a, status: o, onEdit: c, extra: d } = e;
     switch (o) {
         case 'good':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.CheckmarkLargeIcon, {
+                    (0, i.jsx)(s.CheckmarkLargeIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.checkmark
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-positive',
                         className: x.statusText,
@@ -50,12 +50,12 @@ function p(e) {
         case 'warning':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.CircleWarningIcon, {
+                    (0, i.jsx)(s.CircleWarningIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.warning
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-warning',
                         className: x.statusText,
@@ -67,12 +67,12 @@ function p(e) {
         case 'required':
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.CircleWarningIcon, {
+                    (0, i.jsx)(s.CircleWarningIcon, {
                         size: 'xs',
                         color: 'currentColor',
                         className: x.danger
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-danger',
                         className: x.statusText,
@@ -94,13 +94,13 @@ function p(e) {
                     (0, i.jsxs)('div', {
                         className: x.onboardingStepText,
                         children: [
-                            (0, i.jsx)(a.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 variant: 'heading-md/semibold',
                                 children: n
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
-                                color: s && 'required' === o ? 'status-danger' : 'text-normal',
+                                color: a && 'required' === o ? 'status-danger' : 'text-normal',
                                 children: r
                             })
                         ]
@@ -112,24 +112,24 @@ function p(e) {
                 children: [
                     t,
                     d,
-                    s
-                        ? (0, i.jsx)(a.Button, {
+                    a
+                        ? (0, i.jsx)(s.Button, {
                               className: x.cta,
-                              size: a.Button.Sizes.SMALL,
-                              color: a.Button.Colors.PRIMARY,
-                              look: a.Button.Looks.OUTLINED,
+                              size: s.Button.Sizes.SMALL,
+                              color: s.Button.Colors.PRIMARY,
+                              look: s.Button.Looks.OUTLINED,
                               onClick: c,
                               children: g.intl.string(g.t.bt75u7)
                           })
-                        : (0, i.jsxs)(a.Button, {
+                        : (0, i.jsxs)(s.Button, {
                               className: x.cta,
                               innerClassName: x.ctaInner,
-                              size: a.Button.Sizes.SMALL,
-                              color: a.Button.Colors.PRIMARY,
+                              size: s.Button.Sizes.SMALL,
+                              color: s.Button.Colors.PRIMARY,
                               onClick: c,
                               children: [
                                   g.intl.string(g.t['0GWElZ']),
-                                  (0, i.jsx)(a.ArrowSmallRightIcon, {
+                                  (0, i.jsx)(s.ArrowSmallRightIcon, {
                                       size: 'xxs',
                                       color: 'currentColor'
                                   })
@@ -141,10 +141,10 @@ function p(e) {
     });
 }
 function f(e) {
-    let t = (0, l.e7)([s.Z], () => s.Z.getDefaultChannelIds(e)),
+    let t = (0, l.e7)([a.Z], () => a.Z.getDefaultChannelIds(e)),
         n = r.useMemo(() => new Set(t), [t]),
-        [i, a] = (0, o.VF)(e, n);
-    return a.length >= h.md && i.length >= h.X;
+        [i, s] = (0, o.VF)(e, n);
+    return s.length >= h.md && i.length >= h.X;
 }
 function C(e) {
     let t = f(e),
@@ -154,19 +154,19 @@ function C(e) {
 function v(e) {
     var t, n, c, d;
     let { guildId: u, onEdit: C, disableGoodStatus: v } = e,
-        _ = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(u)),
-        N = (0, l.e7)([s.Z], () => (0, o.kl)(u, s.Z.getDefaultChannelIds(u), s.Z.getOnboardingPrompts(u)).length),
-        I = r.useMemo(() => new Set(_), [_]),
+        N = (0, l.Wu)([a.Z], () => a.Z.getDefaultChannelIds(u)),
+        _ = (0, l.e7)([a.Z], () => (0, o.kl)(u, a.Z.getDefaultChannelIds(u), a.Z.getOnboardingPrompts(u)).length),
+        I = r.useMemo(() => new Set(N), [N]),
         [, T] = (0, o.VF)(u, I),
         j = T.length,
         b = f(u),
-        S = (0, m.O4)(u),
-        E = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(u));
+        E = (0, m.O4)(u),
+        S = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(u));
     let R =
         ((t = b),
-        (n = E),
+        (n = S),
         (c = j),
-        (d = N),
+        (d = _),
         n
             ? g.intl.formatToPlainString(g.t.nHwnLC, {
                   numDefaultChannels: c,
@@ -179,34 +179,34 @@ function v(e) {
                     numChattableChannels: h.X
                 }));
     return (0, i.jsx)(p, {
-        title: E ? g.intl.string(g.t.YZookZ) : g.intl.string(g.t['4GSygo']),
+        title: S ? g.intl.string(g.t.YZookZ) : g.intl.string(g.t['4GSygo']),
         description: R,
-        icon: (0, i.jsx)(a.TextIcon, {
+        icon: (0, i.jsx)(s.TextIcon, {
             size: 'md',
             color: 'currentColor',
             className: x.channelIcon
         }),
-        hasStarted: j > 0 || E,
-        status: b || S ? (v ? 'none' : 'good') : 'required',
+        hasStarted: j > 0 || S,
+        status: b || E ? (v ? 'none' : 'good') : 'required',
         onEdit: C
     });
 }
-function _(e) {
+function N(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: r } = e,
-        c = (0, l.Wu)([s.Z], () => s.Z.getDefaultChannelIds(t)),
-        d = (0, l.Wu)([s.Z], () => s.Z.getOnboardingPrompts(t)),
+        c = (0, l.Wu)([a.Z], () => a.Z.getDefaultChannelIds(t)),
+        d = (0, l.Wu)([a.Z], () => a.Z.getOnboardingPrompts(t)),
         u = d.length,
         [m, h] = (0, o.dF)(t, d, c),
         f = m.length,
         C = m.length + h.length,
         v = (f / C) * 100,
-        _ = (0, l.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        N = u > 0,
+        N = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
+        _ = u > 0,
         I = 'none';
     return (
-        N && (v >= 85 && !r ? (I = 'good') : v < 85 && (I = 'warning')),
+        _ && (v >= 85 && !r ? (I = 'good') : v < 85 && (I = 'warning')),
         (0, i.jsx)(p, {
-            title: _ ? g.intl.string(g.t.AGjtFh) : g.intl.string(g.t.dqCzoa),
+            title: N ? g.intl.string(g.t.AGjtFh) : g.intl.string(g.t.dqCzoa),
             description: g.intl.format(g.t.iuNisr, {
                 numChannels: f,
                 numTotalChannels: C,
@@ -220,36 +220,36 @@ function _(e) {
                         t
                     )
             }),
-            icon: (0, i.jsx)(a.FriendsIcon, {
+            icon: (0, i.jsx)(s.FriendsIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: x.channelIcon
             }),
-            hasStarted: N,
+            hasStarted: _,
             status: I,
             onEdit: n
         })
     );
 }
-function N(e) {
+function _(e) {
     let { guildId: t, onEdit: n, disableGoodStatus: o } = e,
         m = (0, l.e7)([u.Z], () => u.Z.getSettings()),
-        h = (0, l.e7)([s.Z], () => s.Z.getEnabled(t)),
+        h = (0, l.e7)([a.Z], () => a.Z.getEnabled(t)),
         f = (0, c.uo)(m),
         C = m.enabled,
         v = r.useCallback(() => {
             (0, d.To)(t, !C);
         }, [t, C]),
-        _ = !(0, c.av)(m),
-        N = 'none';
-    _ && (f && !o ? (N = 'good') : !f && (N = 'required'));
+        N = !(0, c.av)(m),
+        _ = 'none';
+    N && (f && !o ? (_ = 'good') : !f && (_ = 'required'));
     let I = g.intl.string(g.t.GMOwOD);
-    f ? !_ && (I = g.intl.string(g.t.wHOoyM)) : (I = g.intl.string(g.t.wXFbgY));
+    f ? !N && (I = g.intl.string(g.t.wHOoyM)) : (I = g.intl.string(g.t.wXFbgY));
     let T = null;
     return (
-        _ &&
+        N &&
             h &&
-            (T = (0, i.jsx)(a.Switch, {
+            (T = (0, i.jsx)(s.Switch, {
                 className: x.inlineSwitch,
                 checked: C,
                 onChange: v,
@@ -258,13 +258,13 @@ function N(e) {
         (0, i.jsx)(p, {
             title: g.intl.string(g.t.mRHqsr),
             description: I,
-            icon: (0, i.jsx)(a.SignPostIcon, {
+            icon: (0, i.jsx)(s.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: x.channelIcon
             }),
-            hasStarted: _,
-            status: N,
+            hasStarted: N,
+            status: _,
             onEdit: n,
             extra: T
         })

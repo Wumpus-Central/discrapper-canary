@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(793030),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(944163),
     c = n(66511),
     d = n(999382),
@@ -16,12 +16,12 @@ var i = n(200651),
     h = n(229311);
 function g(e) {
     let { pendingFields: t } = e,
-        n = (0, a.e7)([d.Z], () => d.Z.getProps().guild),
+        n = (0, s.e7)([d.Z], () => d.Z.getProps().guild),
         g = null == n ? void 0 : n.id,
         x = r.useCallback(() => {
             if (null != g) c.Z.openMemberVerificationPreviewModal(g);
         }, [g]),
-        p = (0, a.e7)([o.Z], () => o.Z.get(g));
+        p = (0, s.e7)([o.Z], () => o.Z.get(g));
     if (null == n) return null;
     let f = null != t ? t : null == p ? void 0 : p.formFields;
     return (0, i.jsxs)(i.Fragment, {
@@ -38,9 +38,9 @@ function g(e) {
                 className: h.applicationBody,
                 children: m.intl.string(m.t.Z7TCtb)
             }),
-            (0, i.jsx)(s.LinkButton, {
+            (0, i.jsx)(a.LinkButton, {
                 text: m.intl.string(m.t.SKNnqq),
-                icon: s.WindowLaunchIcon,
+                icon: a.WindowLaunchIcon,
                 variant: 'primary',
                 onClick: x
             }),
@@ -52,7 +52,7 @@ function g(e) {
                               guild: n,
                               formFields: f
                           })
-                        : (0, i.jsx)(s.Spinner, {})
+                        : (0, i.jsx)(a.Spinner, {})
             })
         ]
     });

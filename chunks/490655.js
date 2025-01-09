@@ -46,7 +46,7 @@ function E(e, t) {
     }
 }
 t.Z = l.memo(function (e) {
-    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: k, editedWebhook: L, isFetching: O, refToScroller: w, errors: M, hasChanges: B } = e,
+    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: k, editedWebhook: L, isFetchingWebhooks: O, refToScroller: w, errors: M, hasChanges: B } = e,
         P = (0, o.e7)([g.ZP], () => (null != r ? g.ZP.getDefaultChannel(r.id) : null)),
         D = (0, o.cj)([g.ZP], () => g.ZP.getChannels(null == r ? void 0 : r.id)),
         U = (0, o.cj)([x.Z], () =>
@@ -222,7 +222,7 @@ t.Z = l.memo(function (e) {
                 builtInIntegrations: J,
                 customWebhooks: X,
                 followedChannelWebhooks: Q,
-                isLoading: O || null == r,
+                isLoadingWebhooks: O || null == r,
                 canCreateWebhook: null != W,
                 onManageCustomWebhooks: () => {
                     c.Z.setSection(T.b4C.WEBHOOKS);

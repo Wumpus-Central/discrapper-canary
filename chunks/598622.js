@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var r = n(63568),
     l = n(983736),
-    a = n(740903),
-    s = n(426434),
+    s = n(740903),
+    a = n(426434),
     o = n(112824),
     c = n(181339),
     d = n(195189),
@@ -69,7 +69,7 @@ let x = (e) => {
             }
         ].filter((e) => null != e);
     return {
-        [a.u.CAPTCHA_AND_RAID_PROTECTION]: [
+        [s.u.CAPTCHA_AND_RAID_PROTECTION]: [
             {
                 renderComponent: () => (0, i.jsx)(c.Z, { guild: e }, 'raid-alerts'),
                 enabled: !e.hasFeature(h.oNc.RAID_ALERTS_DISABLED)
@@ -83,10 +83,10 @@ let x = (e) => {
                 enabled: !0
             }
         ],
-        [a.u.DM_AND_SPAM_PROTECTION]: n,
-        [a.u.PERMISSIONS]: [
+        [s.u.DM_AND_SPAM_PROTECTION]: n,
+        [s.u.PERMISSIONS]: [
             {
-                renderComponent: () => (0, i.jsx)(s.Z, { guild: e }, 'guild-mfa'),
+                renderComponent: () => (0, i.jsx)(a.Z, { guild: e }, 'guild-mfa'),
                 enabled: e.mfaLevel === h.BpS.ELEVATED
             },
             {

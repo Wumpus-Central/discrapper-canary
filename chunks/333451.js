@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return A;
     }
 });
 var o = t(200651),
@@ -63,25 +63,25 @@ function N(e) {
         ]
     });
 }
-function k(e) {
+function A(e) {
     var n;
-    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: S, onSubscriptionConfirmation: g, analyticsLocation: E, analyticsSourceLocation: P, priceOptions: k } = e,
-        { analyticsLocations: A, sourceAnalyticsLocations: M } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: S, onSubscriptionConfirmation: g, analyticsLocation: E, analyticsSourceLocation: P, priceOptions: A } = e,
+        { analyticsLocations: M, sourceAnalyticsLocations: k } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: v } = (0, c.useThemeContext)(),
         L = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         R = null == t || null == t.premiumSubscriptionType,
-        j = T.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, k),
+        j = T.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, A),
         B = (0, I.T4)(j.amount, j.currency),
-        Z = (0, m.N)(),
-        D = null == Z ? void 0 : Z.trial_id,
-        O = (null == Z ? void 0 : null === (n = Z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === x.Si.TIER_2;
+        D = (0, m.N)(),
+        Z = null == D ? void 0 : D.trial_id,
+        O = (null == D ? void 0 : null === (n = D.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === x.Si.TIER_2;
     return (
         l.useEffect(() => {
             h.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: x.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: M
+                location_stack: k
             });
-        }, [M]),
+        }, [k]),
         (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)(c.ModalContent, {
@@ -95,7 +95,7 @@ function k(e) {
                         (0, o.jsx)('div', { className: r()(y.upsellImage, { [y.upsellImageWithTrialOffer]: O }) }),
                         (0, o.jsx)('div', {
                             className: y.bodyText,
-                            children: null != D ? C.intl.string(C.t.AoSzEh) : C.intl.format(C.t['7vePZW'], { monthlyPrice: B })
+                            children: null != Z ? C.intl.string(C.t.AoSzEh) : C.intl.format(C.t['7vePZW'], { monthlyPrice: B })
                         }),
                         (0, o.jsx)(N, { shouldUpsellFromNoneTier: R })
                     ]
@@ -121,17 +121,17 @@ function k(e) {
                                             (0, f.Z)({
                                                 initialPlanId: null,
                                                 subscriptionTier: x.Si.TIER_2,
-                                                analyticsLocations: A,
+                                                analyticsLocations: M,
                                                 analyticsObject: {
                                                     ...E,
                                                     section: b.jXE.PREMIUM_GUILD_PURCHASE_MODAL
                                                 },
                                                 analyticsSourceLocation: P,
                                                 onSubscriptionConfirmation: g,
-                                                trialId: D
+                                                trialId: Z
                                             });
                                     },
-                                    children: null != D ? C.intl.string(C.t['Gd/XHB']) : C.intl.string(C.t.p2moio)
+                                    children: null != Z ? C.intl.string(C.t['Gd/XHB']) : C.intl.string(C.t.p2moio)
                                 })
                             ]
                         }),

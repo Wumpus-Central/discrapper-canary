@@ -18,11 +18,11 @@ function p(n) {
         e = (0, o.DM)(n.guild_id),
         p = (0, l.e7)([c.ZP], () => c.ZP.isChannelOptedIn(n.guild_id, n.id)),
         _ = (0, l.e7)([c.ZP], () => null != n.parent_id && c.ZP.isChannelOptedIn(n.guild_id, n.parent_id)),
-        h = (0, l.e7)([c.ZP], () => c.ZP.isFavorite(n.guild_id, n.id)),
-        Z = () => {
+        f = (0, l.e7)([c.ZP], () => c.ZP.isFavorite(n.guild_id, n.id)),
+        E = () => {
             (0, u.XQ)(n.guild_id, n.id, !p, { section: d.jXE.CONTEXT_MENU });
         },
-        f = () => {
+        Z = () => {
             null != n.parent_id && (0, u.XQ)(n.guild_id, n.parent_id, !1, { section: d.jXE.CONTEXT_MENU });
         };
     if (!e || n.isThread()) return null;
@@ -30,29 +30,29 @@ function p(n) {
         return (0, i.jsx)(a.MenuItem, {
             id: 'opt-into-category',
             label: p ? s.intl.string(s.t['3zySTE']) : s.intl.string(s.t['9mysCg']),
-            action: () => Z()
+            action: () => E()
         });
-    let g = h ? s.intl.string(s.t.z7I3gY) : s.intl.string(s.t['N2c/Ul']),
-        E = h ? s.intl.string(s.t.M5PWSU) : s.intl.string(s.t.RMpwZm);
+    let h = f ? s.intl.string(s.t.z7I3gY) : s.intl.string(s.t['N2c/Ul']),
+        g = f ? s.intl.string(s.t.M5PWSU) : s.intl.string(s.t.RMpwZm);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(a.MenuItem, {
                 id: 'opt-in-favorite-channel',
-                label: t ? E : g,
+                label: t ? g : h,
                 action: () => {
-                    (0, u.dM)(n.guild_id, n.id, !h, { section: d.jXE.CONTEXT_MENU });
+                    (0, u.dM)(n.guild_id, n.id, !f, { section: d.jXE.CONTEXT_MENU });
                 }
             }),
             _
                 ? (0, i.jsx)(a.MenuItem, {
                       id: 'opt-out-category',
                       label: s.intl.string(s.t.jNphKS),
-                      action: () => f()
+                      action: () => Z()
                   })
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'opt-into-channel',
                       label: p ? s.intl.string(s.t['3zySTE']) : s.intl.string(s.t['9mysCg']),
-                      action: () => Z()
+                      action: () => E()
                   })
         ]
     });

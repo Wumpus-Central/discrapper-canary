@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var r = n(442837),
     l = n(481060),
-    a = n(100527),
-    s = n(906732),
+    s = n(100527),
+    a = n(906732),
     o = n(623624),
     c = n(372444),
     d = n(852679),
@@ -16,47 +16,47 @@ var r = n(442837),
     f = n(981631),
     C = n(611480),
     v = n(388032),
-    _ = n(64462);
-let N = {
+    N = n(64462);
+let _ = {
         page: f.ZY5.GUILD_SETTINGS,
         section: f.jXE.GUILD_SETTINGS_STICKERS,
         object: f.qAy.BOOSTING_BANNER
     },
     I = (e) => {
         let { guild: t } = e,
-            { analyticsLocations: n } = (0, s.ZP)(),
+            { analyticsLocations: n } = (0, a.ZP)(),
             r = (0, g.vn)(t.id)[f.Eu4.TIER_1] - t.premiumSubscriberCount;
         return (0, i.jsxs)('div', {
-            className: _.upsellContainer,
+            className: N.upsellContainer,
             children: [
                 (0, i.jsx)(l.Heading, {
-                    className: _.upsellHeader,
+                    className: N.upsellHeader,
                     variant: 'heading-xl/semibold',
                     children: v.intl.string(v.t.hzCkys)
                 }),
                 (0, i.jsx)(l.Text, {
-                    className: _.upsellDescription,
+                    className: N.upsellDescription,
                     variant: 'text-md/normal',
                     children: v.intl.string(v.t.jcesAA)
                 }),
                 (0, i.jsxs)('div', {
-                    className: _.upsellButtons,
+                    className: N.upsellButtons,
                     children: [
                         (0, i.jsx)(l.Button, {
-                            className: _.upsellButtonPrimary,
-                            innerClassName: _.upsellButton,
+                            className: N.upsellButtonPrimary,
+                            innerClassName: N.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: N,
+                                    analyticsLocation: _,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: r
                                 }),
                             children: v.intl.string(v.t.Q5dbTk)
                         }),
                         (0, i.jsx)(l.Button, {
-                            innerClassName: _.upsellButton,
+                            innerClassName: N.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
@@ -88,13 +88,13 @@ let N = {
         let t,
             n,
             r,
-            { guild: l, guildStickers: a } = e,
-            s = l.premiumTier,
-            o = (0, g.Qi)(a, s),
-            d = (0, g.FZ)(s, l.id),
-            u = (0, g.A3)(s),
-            m = a.length;
-        return null == d || s === f.Eu4.TIER_3 || o > 0
+            { guild: l, guildStickers: s } = e,
+            a = l.premiumTier,
+            o = (0, g.Qi)(s, a),
+            d = (0, g.FZ)(a, l.id),
+            u = (0, g.A3)(a),
+            m = s.length;
+        return null == d || a === f.Eu4.TIER_3 || o > 0
             ? (0, i.jsx)(i.Fragment, {})
             : (m > u
                   ? ((t = v.intl.formatToPlainString(v.t.ZtAY1d, { level: d })), (n = v.intl.formatToPlainString(v.t['13hOWl'], { level: d })), (r = f.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
@@ -126,10 +126,10 @@ t.Z = () => {
             },
             [e]
         ),
-        { analyticsLocations: n } = (0, s.ZP)(a.Z.STICKERS);
+        { analyticsLocations: n } = (0, a.ZP)(s.Z.STICKERS);
     if (null == e) return null;
     let o = e.premiumTier !== f.Eu4.NONE || t.length > 0;
-    return (0, i.jsx)(s.Gt, {
+    return (0, i.jsx)(a.Gt, {
         value: n,
         children: (0, i.jsxs)(l.FormSection, {
             title: v.intl.string(v.t.R5nQkZ),
@@ -146,7 +146,7 @@ t.Z = () => {
                           ]
                       })
                     : (0, i.jsx)(I, { guild: e }),
-                (0, i.jsx)(l.FormDivider, { className: _.divider }),
+                (0, i.jsx)(l.FormDivider, { className: N.divider }),
                 (0, i.jsx)(m.Z, { guild: e })
             ]
         })

@@ -1,69 +1,69 @@
-n.r(t);
-var s = n(200651),
-    r = n(192379),
-    o = n(442837),
-    i = n(215569),
-    a = n(481060),
-    c = n(852860),
-    d = n(313201),
-    l = n(944163),
-    u = n(266395),
-    p = n(577809),
-    f = n(592286),
-    b = n(388032),
-    g = n(145638);
-let m = () =>
-    (0, s.jsx)(c.Z, {
+t.r(n);
+var o = t(200651),
+    r = t(192379),
+    i = t(442837),
+    a = t(215569),
+    s = t(481060),
+    l = t(852860),
+    d = t(313201),
+    c = t(944163),
+    u = t(266395),
+    m = t(577809),
+    _ = t(592286),
+    h = t(388032),
+    b = t(145638);
+let p = () =>
+    (0, o.jsx)(l.Z, {
         submitting: !1,
-        message: b.intl.string(b.t['8g514e']),
+        message: h.intl.string(h.t['8g514e']),
         onReset: () => {
             (0, u.PE)(!1);
         },
-        onResetText: b.intl.string(b.t['ETE/oK']),
+        onResetText: h.intl.string(h.t['ETE/oK']),
         onSave: () => {
-            (0, u.PE)(!1), (0, a.closeModal)(f.Pn);
+            (0, u.PE)(!1), (0, s.closeModal)(_.Pn);
         },
-        onSaveText: b.intl.string(b.t['Xt+UaW']),
-        onSaveButtonColor: a.ButtonColors.RED
+        onSaveText: h.intl.string(h.t['Xt+UaW']),
+        onSaveButtonColor: s.ButtonColors.RED
     });
-t.default = (e) => {
-    let { transitionState: t, guildId: n, onClose: c, onComplete: f, isPreview: b = !1 } = e,
-        _ = (0, u.rb)((e) => e.shouldShowWarning),
-        h = (0, o.e7)([l.Z], () => l.Z.get(n)),
-        x = (0, d.Dt)();
+n.default = (e) => {
+    let { transitionState: n, guildId: t, onClose: l, onComplete: _, isPreview: h = !1 } = e,
+        f = (0, u.rb)((e) => e.shouldShowWarning),
+        x = (0, i.e7)([c.Z], () => c.Z.get(t)),
+        g = (0, d.Dt)();
     return (r.useEffect(() => {
-        h === l.t && c();
-    }, [c, h]),
-    h === l.t)
+        x === c.t && l();
+    }, [l, x]),
+    x === c.t)
         ? null
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, o.jsxs)(o.Fragment, {
               children: [
-                  (0, s.jsxs)(a.ModalRoot, {
-                      transitionState: t,
-                      'aria-labelledby': x,
-                      size: a.ModalSize.DYNAMIC,
-                      className: g.container,
+                  (0, o.jsxs)(s.ModalRoot, {
+                      transitionState: n,
+                      'aria-labelledby': g,
+                      size: s.ModalSize.DYNAMIC,
+                      className: b.container,
                       hideShadow: !0,
                       children: [
-                          (0, s.jsx)(a.ModalCloseButton, {
-                              onClick: () => c(!1),
-                              className: g.closeButton
+                          (0, o.jsx)(s.ModalCloseButton, {
+                              onClick: () => l(!1),
+                              className: b.closeButton
                           }),
-                          (0, s.jsx)(p.Z, {
-                              headerId: x,
-                              guildId: n,
-                              onClose: c,
-                              onComplete: f,
-                              isPreview: b
+                          (0, o.jsx)(m.Z, {
+                              headerId: g,
+                              guildId: t,
+                              onClose: l,
+                              onComplete: _,
+                              isPreview: h
                           })
                       ]
                   }),
-                  (0, s.jsx)(i.W, {
+                  (0, o.jsx)(a.W, {
                       children:
-                          !0 === _ &&
-                          (0, s.jsx)(a.SlideIn, {
-                              className: g.notice,
-                              children: (0, s.jsx)(m, {})
+                          !0 === f &&
+                          (0, o.jsx)(s.SlideIn, {
+                              className: b.notice,
+                              children: (0, o.jsx)(p, {})
                           })
                   })
               ]

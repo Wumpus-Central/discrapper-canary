@@ -7,16 +7,16 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(259580),
-    a = n(388032),
-    s = n(537487);
+    s = n(388032),
+    a = n(537487);
 function o(e) {
     let { role: t, onClick: n } = e;
     return (0, i.jsxs)(r.Clickable, {
-        className: s.container,
+        className: a.container,
         onClick: n,
         children: [
             (0, i.jsx)('div', {
-                className: s.icon,
+                className: a.icon,
                 children: (0, i.jsx)(r.GroupIcon, {
                     size: 'custom',
                     color: 'currentColor',
@@ -25,23 +25,23 @@ function o(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: s.description,
+                className: a.description,
                 children: [
                     (0, i.jsx)(r.Text, {
-                        className: s.label,
+                        className: a.label,
                         color: 'none',
                         variant: 'text-md/bold',
-                        children: a.intl.string(a.t.yiaoNj)
+                        children: s.intl.string(s.t.yiaoNj)
                     }),
                     (0, i.jsxs)(r.Text, {
                         color: 'none',
                         variant: 'text-xs/normal',
-                        children: [t.name, ' \u2022 ', a.intl.string(a.t.JwYI3N)]
+                        children: [t.name, ' \u2022 ', s.intl.string(s.t.JwYI3N)]
                     })
                 ]
             }),
             (0, i.jsx)(l.Z, {
-                className: s.arrow,
+                className: a.arrow,
                 direction: l.Z.Directions.RIGHT
             })
         ]

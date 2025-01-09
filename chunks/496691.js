@@ -1,69 +1,69 @@
-a.r(t), a(47120);
-var n = a(200651),
-    s = a(192379),
-    i = a(548668),
-    r = a(231262),
-    l = a(501522),
-    o = a(442837),
-    c = a(153867),
-    d = a(706454),
-    u = a(626135),
-    N = a(981631),
-    h = a(388032),
-    m = a(32304);
-class p extends s.Component {
+s.r(t), s(47120);
+var a = s(200651),
+    n = s(192379),
+    r = s(548668),
+    i = s(231262),
+    o = s(501522),
+    l = s(442837),
+    c = s(153867),
+    d = s(706454),
+    u = s(626135),
+    p = s(981631),
+    N = s(388032),
+    h = s(32304);
+class m extends n.Component {
     shouldScrollToTop(e) {
         let { location: t } = e;
-        return t.pathname.startsWith(N.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
+        return t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(p.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
     }
     render() {
-        let { location: e, className: t, render: a, locale: o } = this.props;
-        return (0, n.jsx)(l.Z, {
+        let { location: e, className: t, render: s, locale: l } = this.props;
+        return (0, a.jsx)(o.Z, {
             className: t,
             shouldScrollToTop: this.shouldScrollToTop,
-            render: (t, l) =>
-                (0, n.jsxs)(s.Fragment, {
+            render: (t, o) =>
+                (0, a.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(r.h, {
+                        (0, a.jsx)(i.h, {
                             avoidRouter: !0,
-                            locale: o,
+                            locale: l,
                             authRedirectTo: e.pathname,
                             track: u.default.track,
-                            className: m.marketingHeader,
+                            className: h.marketingHeader,
                             onChangeLocale: this.handleHeaderLocaleChange,
-                            mobileClassName: m.marketingHeader,
-                            openNavAriaLabel: h.intl.string(h.t.Fs9k3N),
-                            hideNavAriaLabel: h.intl.string(h.t.AbfyHB),
-                            skipToContentLabel: h.intl.string(h.t['18gavL'])
+                            mobileClassName: h.marketingHeader,
+                            openNavAriaLabel: N.intl.string(N.t.Fs9k3N),
+                            hideNavAriaLabel: N.intl.string(N.t.AbfyHB),
+                            skipToContentLabel: N.intl.string(N.t['18gavL'])
                         }),
-                        a(t, l),
-                        (0, n.jsx)(i.$, {
-                            locale: o,
+                        s(t, o),
+                        (0, a.jsx)(r.$, {
+                            locale: l,
                             authRedirectTo: e.pathname,
                             avoidRouter: !0,
                             track: u.default.track,
-                            className: m.marketingFooter
+                            className: h.marketingFooter
                         })
                     ]
                 })
         });
     }
     constructor(...e) {
-        var t, a, n;
+        var t, s, a;
         super(...e),
             (t = this),
-            (a = 'handleHeaderLocaleChange'),
-            (n = (e) => {
+            (s = 'handleHeaderLocaleChange'),
+            (a = (e) => {
                 e !== this.props.locale && c.ZP.overrideLocale(e);
             }),
-            a in t
-                ? Object.defineProperty(t, a, {
-                      value: n,
+            s in t
+                ? Object.defineProperty(t, s, {
+                      value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[a] = n);
+                : (t[s] = a);
     }
 }
-t.default = o.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(p);
+t.default = l.ZP.connectStores([d.default], () => ({ locale: d.default.locale }))(m);

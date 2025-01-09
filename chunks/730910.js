@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return M;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(666912),
+    s = n.n(l),
+    a = n(666912),
     o = n(442837),
     c = n(692547),
     d = n(215569),
@@ -21,32 +21,32 @@ var i = n(200651),
     f = n(585483),
     C = n(999382),
     v = n(743475),
-    _ = n(983135),
-    N = n(8426),
+    N = n(983135),
+    _ = n(8426),
     I = n(969632),
     T = n(570961),
     j = n(208665),
     b = n(359191),
-    S = n(84658),
-    E = n(142961),
+    E = n(84658),
+    S = n(142961),
     R = n(232764),
     y = n(729311),
-    Z = n(850864),
-    A = n(966301),
+    A = n(850864),
+    Z = n(966301),
     L = n(981631),
     D = n(388032),
     O = n(203035);
-function k() {
+function M() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(M, { guild: e });
+    return null == e ? null : (0, i.jsx)(k, { guild: e });
 }
-function M(e) {
+function k(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
-        k = (0, E.Z)(l),
+        M = (0, S.Z)(l),
         {
-            hasChanges: M,
+            hasChanges: k,
             hasConfiguredAnythingForCurrentStep: P,
             hasErrors: w
         } = (0, o.cj)([b.Z], () => ({
@@ -55,7 +55,7 @@ function M(e) {
             hasErrors: b.Z.hasErrors()
         })),
         B = (0, o.e7)([b.Z], () => {
-            let e = (0, S.lg)(C);
+            let e = (0, E.lg)(C);
             return null != e && !b.Z.isEducationUpsellDismissed(e);
         }),
         U = (0, h.ZP)(),
@@ -65,11 +65,11 @@ function M(e) {
         function e() {
             H({
                 spring: 1,
-                config: s.config.gentle
+                config: a.config.gentle
             }),
                 H({
                     spring: 0,
-                    config: s.config.gentle,
+                    config: a.config.gentle,
                     delay: 1000
                 });
         }
@@ -91,21 +91,21 @@ function M(e) {
             range: [0, 1],
             output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
-    if (k) {
-        if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
-        if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(A.Zm, {});
-        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(Z.T, {});
+    if (M) {
+        if (C === E.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
+        if (C === E.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(Z.Zm, {});
+        else if (C === E.PG.HOME_SETTINGS) return (0, i.jsx)(A.T, {});
     }
-    let q = C === S.xh[S.xh.length - 1],
+    let q = C === E.xh[E.xh.length - 1],
         X = async () => {
             let e = j.Z.advancedMode;
-            if (M)
+            if (k)
                 try {
-                    if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
-                    else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
-                    else if (C === S.PG.HOME_SETTINGS) {
+                    if (C === E.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+                    else if (C === E.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
+                    else if (C === E.PG.HOME_SETTINGS) {
                         let e = I.Z.getSettings();
-                        await (0, N.oo)(t.id, e);
+                        await (0, _.oo)(t.id, e);
                     }
                 } catch {
                     return !1;
@@ -115,26 +115,26 @@ function M(e) {
         Q = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
-                step: S.PG[C],
+                step: E.PG[C],
                 back: !1,
-                skip: !M
+                skip: !k
             }),
-                (0, _.Nb)((0, S.lg)(C)),
-                (await X()) && (0, _.IG)(l, C);
+                (0, N.Nb)((0, E.lg)(C)),
+                (await X()) && (0, N.IG)(l, C);
         },
         J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                 ...(0, g.hH)(l),
-                step: S.PG[C],
+                step: E.PG[C],
                 back: !0,
                 skip: !1
             }),
-                (await X()) && (0, _.Wy)(l, C);
+                (await X()) && (0, N.Wy)(l, C);
         },
         $ = null;
-    B && (C === S.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === S.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === S.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === S.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));
+    B && (C === E.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === E.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === E.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === E.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));
     let ee = (0, i.jsx)(m.Button, {
-            className: a()(O.button, { [O.hidden]: B }),
+            className: s()(O.button, { [O.hidden]: B }),
             color: m.Button.Colors.PRIMARY,
             look: m.Button.Looks.OUTLINED,
             size: m.Button.Sizes.SMALL,
@@ -158,7 +158,7 @@ function M(e) {
             size: m.Button.Sizes.SMALL,
             onClick: Q,
             disabled: B || w,
-            children: (0, i.jsxs)(s.animated.span, {
+            children: (0, i.jsxs)(a.animated.span, {
                 className: O.button,
                 style: { color: Y },
                 children: [
@@ -173,8 +173,8 @@ function M(e) {
     return (0, i.jsx)(d.W, {
         component: 'div',
         children: (0, i.jsx)(m.SlideIn, {
-            className: a()(O.noticeRegion),
-            children: (0, i.jsx)(s.animated.div, {
+            className: s()(O.noticeRegion),
+            children: (0, i.jsx)(a.animated.div, {
                 className: O.container,
                 style: { backgroundColor: K },
                 children: (0, i.jsxs)('div', {
@@ -186,7 +186,7 @@ function M(e) {
                                   className: O.educationUpsellRoot,
                                   children: [
                                       (0, i.jsx)('img', {
-                                          className: a()(O.wumpus),
+                                          className: s()(O.wumpus),
                                           src: n(33631),
                                           alt: 'wumpus'
                                       }),

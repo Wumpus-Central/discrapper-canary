@@ -13,7 +13,7 @@ n.Z = l.memo(function (e) {
             x: 0,
             y: 0
         }),
-        [C, v] = (0, l.useState)({
+        [v, C] = (0, l.useState)({
             x: 0,
             y: 0
         }),
@@ -27,7 +27,7 @@ n.Z = l.memo(function (e) {
                 x: 0,
                 y: 0
             }),
-            v({
+            C({
                 x: 0,
                 y: 0
             }));
@@ -42,14 +42,14 @@ n.Z = l.memo(function (e) {
                         x: n,
                         y: i
                     }),
-                    v({
+                    C({
                         x: n - y.x,
                         y: i - y.y
                     });
             },
             [t, y]
         ),
-        O = (0, l.useCallback)(
+        M = (0, l.useCallback)(
             (e) => {
                 if (!t) {
                     0 === e.button && (null == r || r(e));
@@ -59,7 +59,7 @@ n.Z = l.memo(function (e) {
             },
             [t, r, S]
         ),
-        M = (0, l.useCallback)(
+        O = (0, l.useCallback)(
             (e) => {
                 var n;
                 if (!_) return;
@@ -68,7 +68,7 @@ n.Z = l.memo(function (e) {
                 let [i, l, r, a] = [null == p ? void 0 : p.top, null == p ? void 0 : p.right, null == p ? void 0 : p.bottom, null == p ? void 0 : p.left].map((e) => (null != e ? e : 0)),
                     [o, s] = [t.width + a + l > window.innerWidth, t.height + i + r > window.innerHeight];
                 if (!o && !s) return;
-                let [u, c] = [o ? e.clientX - C.x : 0, s ? e.clientY - C.y : 0],
+                let [u, c] = [o ? e.clientX - v.x : 0, s ? e.clientY - v.y : 0],
                     [d, f] = [u - y.x, c - y.y];
                 o && d + t.x - a >= 0 && (u = y.x - t.x + a), s && f + t.y - i >= 0 && (c = y.y - t.y + i);
                 let [m, h] = [t.x + t.width, t.y + t.height];
@@ -79,7 +79,7 @@ n.Z = l.memo(function (e) {
                         y: c
                     });
             },
-            [_, y, C.x, C.y, p]
+            [_, y, v.x, v.y, p]
         ),
         L = t ? (0, o.vV)(d, f, m, h) : 1,
         T = (0, l.useCallback)(() => {
@@ -91,8 +91,8 @@ n.Z = l.memo(function (e) {
     return (0, i.jsx)('div', {
         ref: g,
         onMouseDown: b,
-        onMouseUp: O,
-        onMouseMove: M,
+        onMouseUp: M,
+        onMouseMove: O,
         onMouseLeave: () => E(!1),
         className: a()(u, s.wrapper, {
             [s.panning]: t && _,

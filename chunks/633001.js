@@ -15,8 +15,8 @@ var r = n(200651),
     c = n(481060),
     d = n(765250),
     u = n(13245),
-    h = n(615287),
-    m = n(594190),
+    m = n(615287),
+    h = n(594190),
     x = n(371651),
     f = n(829907),
     p = n(610394),
@@ -47,7 +47,7 @@ let y = (e) => ({
     k = (e, t) => e.find((e) => e.type === t);
 function I(e) {
     let { trackedGame: t } = e,
-        n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
+        n = (0, s.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
         a = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
     return (0, r.jsxs)('div', {
         className: S.panelGroup,
@@ -137,27 +137,27 @@ function E() {
         },
         R = [
             {
-                label: h.R5.UNSET,
-                value: h.R5.UNSET
+                label: m.R5.UNSET,
+                value: m.R5.UNSET
             },
             {
-                label: h.R5.IN_PROCESS_V2,
-                value: h.R5.IN_PROCESS_V2
+                label: m.R5.IN_PROCESS_V2,
+                value: m.R5.IN_PROCESS_V2
             },
             {
-                label: h.R5.OUT_OF_PROCESS_V2,
-                value: h.R5.OUT_OF_PROCESS_V2
+                label: m.R5.OUT_OF_PROCESS_V2,
+                value: m.R5.OUT_OF_PROCESS_V2
             },
             {
-                label: h.R5.OUT_OF_PROCESS_V3,
-                value: h.R5.OUT_OF_PROCESS_V3
+                label: m.R5.OUT_OF_PROCESS_V3,
+                value: m.R5.OUT_OF_PROCESS_V3
             }
         ].map((e) => ({
             ...e,
             label: ''.concat(e.label, ' ').concat(l === e.value ? '(current)' : '')
         })),
         O = (0, s.cj)([x.Z], () => x.Z.getTrackedGames()),
-        B = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
+        B = (0, s.e7)([h.ZP], () => h.ZP.getRunningGames());
     a.useEffect(() => {
         g((e) => {
             for (let t of Object.keys(O)) e[Number(t)] = O[Number(t)];
@@ -170,7 +170,7 @@ function E() {
     a.useEffect(
         () => (
             (D.current = setInterval(async () => {
-                let e = m.ZP.getRunningGames(),
+                let e = h.ZP.getRunningGames(),
                     t = [],
                     n = Date.now();
                 for (let r of e) t.push((0, f.hj)(r.pid, 0).then((e) => [r.pid, e, n]));

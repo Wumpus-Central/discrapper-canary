@@ -9,18 +9,18 @@ var a = t(481060),
     o = t(398048),
     d = t(3689),
     s = t(323597),
-    _ = t(852245),
-    E = t(367722),
+    E = t(852245),
+    _ = t(367722),
     Z = t(388032);
 e.default = (0, r.Z)(
     function (n) {
         let { channel: e, guild: t, onSelect: r } = n,
-            u = (0, _.Z)(e),
-            h = (0, E.Z)(e, t),
-            f = (0, o.Z)(e, t),
-            p = (0, d.Z)(e, t),
-            I = (0, s.Z)(e),
-            M = (0, c.Z)({
+            u = (0, E.Z)(e),
+            f = (0, _.Z)(e, t),
+            h = (0, o.Z)(e, t),
+            N = (0, d.Z)(e, t),
+            A = (0, s.Z)(e),
+            p = (0, c.Z)({
                 id: e.id,
                 label: Z.intl.string(Z.t.gFHI3t)
             });
@@ -32,10 +32,10 @@ e.default = (0, r.Z)(
             children: [
                 (0, l.jsx)(a.MenuGroup, { children: u }),
                 (0, l.jsxs)(a.MenuGroup, {
-                    children: [h, f, p]
+                    children: [f, h, N]
                 }),
-                (0, l.jsx)(a.MenuGroup, { children: I }),
-                (0, l.jsx)(a.MenuGroup, { children: M })
+                (0, l.jsx)(a.MenuGroup, { children: A }),
+                (0, l.jsx)(a.MenuGroup, { children: p })
             ]
         });
     },

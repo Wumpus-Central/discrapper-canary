@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(793030),
+    s = n.n(l),
+    a = n(793030),
     o = n(442837),
     c = n(481060),
     d = n(66511),
@@ -32,7 +32,7 @@ function f(e) {
             },
             [f, n]
         ),
-        _ = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 if (null == f) return null;
                 h.Z.setPendingInviteRules(f, t, e);
@@ -41,7 +41,7 @@ function f(e) {
         );
     if (null == l) return null;
     if (null == n) return (0, i.jsx)(c.Spinner, {});
-    let N = !l.hasFeature(g.oNc.CLAN);
+    let _ = !l.hasFeature(g.oNc.CLAN);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -50,12 +50,12 @@ function f(e) {
                     (0, i.jsxs)('div', {
                         className: p.headerText,
                         children: [
-                            (0, i.jsx)(s.X6, {
+                            (0, i.jsx)(a.X6, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
                                 children: x.intl.string(x.t.d21uOj)
                             }),
-                            (0, i.jsx)(s.xv, {
+                            (0, i.jsx)(a.xv, {
                                 tag: 'p',
                                 variant: 'text-sm/medium',
                                 color: 'text-secondary',
@@ -64,7 +64,7 @@ function f(e) {
                             })
                         ]
                     }),
-                    N &&
+                    _ &&
                         (0, i.jsx)(c.Switch, {
                             onChange: v,
                             checked: t
@@ -79,11 +79,11 @@ function f(e) {
                     onClick: C
                 }),
             (0, i.jsx)('div', {
-                className: a()(p.rules, { [p.disabled]: !t }),
+                className: s()(p.rules, { [p.disabled]: !t }),
                 children: (0, i.jsxs)('div', {
                     inert: t ? void 0 : '',
                     children: [
-                        (0, i.jsx)(s.X6, {
+                        (0, i.jsx)(a.X6, {
                             variant: 'text-xs/bold',
                             color: 'text-muted',
                             className: p.rulesHeader,
@@ -92,7 +92,7 @@ function f(e) {
                         (0, i.jsx)(u.k, {
                             guild: l,
                             rules: n,
-                            setRules: _
+                            setRules: N
                         })
                     ]
                 })

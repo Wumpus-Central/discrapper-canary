@@ -65,9 +65,9 @@ t.Z = (e) => {
         A = (0, C.l)(w).slice(0, 4),
         R = I.intl.formatToPlainString(I.t.wvKYCg, { category_name: O.name });
     if (null == P || (!b && O === E)) return null;
-    let H = null != O.categorySkuId ? (0, k.ZS)(O.categorySkuId) : void 0,
-        F = null !== (i = null == H ? void 0 : H.heroBanner) && void 0 !== i ? i : void 0,
-        D = null !== (s = null == F ? void 0 : F.animationSource) && void 0 !== s ? s : null === (t = O.bannerAsset) || void 0 === t ? void 0 : t.animated,
+    let F = null != O.categorySkuId ? (0, k.ZS)(O.categorySkuId) : void 0,
+        H = null !== (i = null == F ? void 0 : F.heroBanner) && void 0 !== i ? i : void 0,
+        D = null !== (s = null == H ? void 0 : H.animationSource) && void 0 !== s ? s : null === (t = O.bannerAsset) || void 0 === t ? void 0 : t.animated,
         V = null !== (f = null === (n = O.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== f ? f : O.fallbackBannerUrl;
     return (0, r.jsxs)('div', {
         className: S.heroBlock,
@@ -87,12 +87,12 @@ t.Z = (e) => {
                               style: { backgroundImage: 'url('.concat(V, ')') }
                           }),
                     (0, r.jsx)('div', {
-                        className: l()(S.bannerShadow, S.left, { [S.darker]: null == F ? void 0 : F.darker }),
-                        style: (null == F ? void 0 : F.gradientLeft) != null ? { background: null == F ? void 0 : F.gradientLeft } : void 0
+                        className: l()(S.bannerShadow, S.left, { [S.darker]: null == H ? void 0 : H.darker }),
+                        style: (null == H ? void 0 : H.gradientLeft) != null ? { background: null == H ? void 0 : H.gradientLeft } : void 0
                     }),
                     (0, r.jsx)('div', {
-                        className: l()(S.bannerShadow, S.right, { [S.darker]: null == F ? void 0 : F.darker }),
-                        style: (null == F ? void 0 : F.gradientRight) != null ? { background: null == F ? void 0 : F.gradientRight } : void 0
+                        className: l()(S.bannerShadow, S.right, { [S.darker]: null == H ? void 0 : H.darker }),
+                        style: (null == H ? void 0 : H.gradientRight) != null ? { background: null == H ? void 0 : H.gradientRight } : void 0
                     })
                 ]
             }),
@@ -123,7 +123,7 @@ t.Z = (e) => {
                                                   }),
                                                   (0, r.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
-                                                      className: null != H && H.showDarkBannerText ? S.subHeaderTextDark : S.subHeaderText,
+                                                      className: null != F && F.showDarkBannerText ? S.subHeaderTextDark : S.subHeaderText,
                                                       children: O.summary
                                                   })
                                               ]

@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    h = n(481060),
-    m = n(570140),
+    m = n(481060),
+    h = n(570140),
     x = n(665149),
     f = n(55935),
     p = n(120816),
@@ -67,7 +67,7 @@ let N = [
                             className: i()(S.headerBar, _.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
-                                    icon: h.AnalyticsIcon,
+                                    icon: m.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(x.ZP.Title, { children: t })
@@ -134,7 +134,7 @@ function k() {
         { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
         k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         I = a.useCallback((e) => {
-            m.Z.dispatch({
+            h.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
@@ -149,27 +149,27 @@ function k() {
                     (0, r.jsx)('div', {
                         title: 'Enables tracking of all triggers',
                         className: _.triggersEnable,
-                        children: (0, r.jsx)(h.Switch, {
+                        children: (0, r.jsx)(m.Switch, {
                             checked: k,
                             onChange: I,
                             className: _.__invalid_toolbarSwitch
                         })
                     }),
-                    (0, r.jsx)(h.Button, {
+                    (0, r.jsx)(m.Button, {
                         className: _.toolbarButton,
-                        look: h.Button.Looks.BLANK,
-                        size: h.Button.Sizes.ICON,
+                        look: m.Button.Looks.BLANK,
+                        size: m.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
                             title: T.intl.string(T.t.VkKicX),
-                            children: (0, r.jsx)(h.TrashIcon, {
+                            children: (0, r.jsx)(m.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 'aria-label': T.intl.string(T.t.VkKicX)
                             })
                         })
                     }),
-                    (0, r.jsx)(h.SearchBar, {
+                    (0, r.jsx)(m.SearchBar, {
                         className: _.searchBar,
                         query: e,
                         onChange: t,

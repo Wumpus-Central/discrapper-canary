@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120),
@@ -9,9 +9,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     d = n(481060),
     u = n(570140),
@@ -23,14 +23,14 @@ var i = n(200651),
     f = n(946724),
     C = n(95242),
     v = n(530198),
-    _ = n(420966),
-    N = n(203377),
+    N = n(420966),
+    _ = n(203377),
     I = n(981631),
     T = n(856651),
     j = n(388032),
     b = n(312772),
-    S = n(490909);
-let E = (0, h.hQ)();
+    E = n(490909);
+let S = (0, h.hQ)();
 function R(e, t) {
     return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
@@ -61,10 +61,10 @@ function y(e) {
         ]
     });
 }
-function Z(e) {
-    let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
-        { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
-        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
+function A(e) {
+    let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
+        { headerHeight: h, headerRef: A } = (0, C.Z)(0),
+        { scrolledToTop: Z, handleScroll: L } = (0, N.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -77,12 +77,12 @@ function Z(e) {
             var e;
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        k = O.length > 1 ? m.O1.OR : m.O1.AND,
-        M = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
-        P = r.useMemo(() => new Set(M.map((e) => e.connectionType)), [M]);
+        M = O.length > 1 ? m.O1.OR : m.O1.AND,
+        k = r.useMemo(() => (M === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [M, O]),
+        P = r.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...M];
+            i = [...k];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -90,7 +90,7 @@ function Z(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, p.d_)(n.id, R(i, k));
+            (0, p.d_)(n.id, R(i, M));
     }
     function B() {
         u.Z.dispatch({
@@ -102,17 +102,17 @@ function Z(e) {
         });
     }
     let U = null;
-    if (0 === M.length)
+    if (0 === k.length)
         U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (M.length > 0) {
+    else if (k.length > 0) {
         var G, F;
         let e = null;
-        M.length < 10 &&
+        k.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
-                className: a()(b.addVerificationButton, b.addVerificationButtonAppend),
+                className: s()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
@@ -163,7 +163,7 @@ function Z(e) {
                         ]
                     })),
                     (function (e, t, n, r, l) {
-                        let a = R(r, m.O1.OR);
+                        let s = R(r, m.O1.OR);
                         return (0, i.jsx)(d.FormItem, {
                             className: b.operatorContainer,
                             title: j.intl.string(j.t.Xs7PHR),
@@ -180,13 +180,13 @@ function Z(e) {
                                 ],
                                 onChange: (e) => l(r, e.value),
                                 value: n,
-                                disabled: e || a.length < 2,
-                                'aria-labelledby': E
+                                disabled: e || s.length < 2,
+                                'aria-labelledby': S
                             })
                         });
-                    })(l, n.id, k, M, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, M, k, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
-                        function a(n, i) {
+                        function s(n, i) {
                             let r = [];
                             for (let t of e) r.push({ ...t });
                             if (null == n) {
@@ -195,25 +195,25 @@ function Z(e) {
                             } else -1 === i ? r.push(n) : i >= 0 && (r[i] = n);
                             t(r);
                         }
-                        let s = new Map();
+                        let a = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = ''.concat(e.connectionType, ':').concat(e.applicationId);
-                            if (s.has(n)) {
-                                let i = s.get(n);
+                            if (a.has(n)) {
+                                let i = a.get(n);
                                 null == i ||
                                     i.push({
                                         index: t,
                                         configuration: e
                                     });
                             } else
-                                s.set(n, [
+                                a.set(n, [
                                     {
                                         index: t,
                                         configuration: e
                                     }
                                 ]);
                         }),
-                        s.values())) {
+                        a.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -235,12 +235,12 @@ function Z(e) {
                         }
                         return (0, i.jsx)('div', {
                             className: b.configurationsContainer,
-                            children: Array.from(s.values()).map((e) =>
+                            children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
                                     v.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: a,
+                                        onConfigurationChange: s,
                                         locked: n,
                                         integrations: l
                                     },
@@ -248,7 +248,7 @@ function Z(e) {
                                 )
                             )
                         });
-                    })(M, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
+                    })(k, (e) => (0, p.d_)(n.id, R(e, M)), l, n.id, o),
                     e
                 ]
             }));
@@ -258,16 +258,16 @@ function Z(e) {
         style: { scrollPaddingTop: h },
         onScroll: L,
         children: (0, i.jsxs)('div', {
-            className: S.contentWidth,
+            className: E.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
-                    ref: Z,
-                    children: (0, i.jsx)(_.Z, {
+                    className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
+                    ref: A,
+                    children: (0, i.jsx)(N.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: N.ZI.VERIFICATIONS,
-                        setSelectedSection: s
+                        selectedSection: _.ZI.VERIFICATIONS,
+                        setSelectedSection: a
                     })
                 }),
                 (null != D ? D : 0) > 0

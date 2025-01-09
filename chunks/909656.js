@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(512722),
+    o = n.n(a),
     c = n(392711),
     d = n.n(c),
     u = n(215569),
@@ -21,36 +21,36 @@ var i = n(200651),
     f = n(313201),
     C = n(345861),
     v = n(208567),
-    _ = n(73346),
-    N = n(624138),
+    N = n(73346),
+    _ = n(624138),
     I = n(584825),
     T = n(723047),
     j = n(927954),
     b = n(164000),
-    S = n(587431),
-    E = n(293810),
+    E = n(587431),
+    S = n(293810),
     R = n(333866),
     y = n(388032),
-    Z = n(848720);
-let A = (0, N.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+    A = n(848720);
+let Z = (0, _.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function L() {
     return [
         {
             name: y.intl.string(y.t.rXqxhI),
             desc: y.intl.string(y.t.yQiJnZ),
-            value: E.e3.SOME_CHANNELS,
+            value: S.e3.SOME_CHANNELS,
             icon: h.TextIcon
         },
         {
             name: y.intl.string(y.t.WzC9s7),
             desc: y.intl.string(y.t.WmagiI),
-            value: E.e3.ALL_CHANNELS,
+            value: S.e3.ALL_CHANNELS,
             icon: h.KeyIcon
         }
     ];
 }
 function D(e) {
-    let { value: t, 'aria-labelledby': n, onChange: l, disabled: s = !1 } = e,
+    let { value: t, 'aria-labelledby': n, onChange: l, disabled: a = !1 } = e,
         { ref: o, width: c } = (0, x.Z)(),
         d = (0, p.Z)(L),
         u = r.useMemo(
@@ -60,12 +60,12 @@ function D(e) {
                     icon: function () {
                         let { icon: t } = e;
                         return (0, i.jsx)('div', {
-                            className: Z.formatRadioIconWrapper,
-                            children: (0, i.jsx)(t, { className: Z.formatRadioIcon })
+                            className: A.formatRadioIconWrapper,
+                            children: (0, i.jsx)(t, { className: A.formatRadioIcon })
                         });
                     },
-                    radioBarClassName: Z.formatOptionRadioBar,
-                    radioItemIconClassName: Z.formatOptionRadioItemIcon
+                    radioBarClassName: A.formatOptionRadioBar,
+                    radioItemIconClassName: A.formatOptionRadioItemIcon
                 })),
             [d]
         ),
@@ -77,33 +77,33 @@ function D(e) {
             value: t,
             orientation: m ? 'horizontal' : 'vertical',
             size: h.RadioGroup.Sizes.NONE,
-            className: a()({ [Z.radioGroupHorizontal]: m }),
-            radioItemClassName: Z.formatOptionRadioItem,
+            className: s()({ [A.radioGroupHorizontal]: m }),
+            radioItemClassName: A.formatOptionRadioItem,
             onChange: (e) => {
                 let { value: t } = e;
                 return l(t);
             },
             'aria-labelledby': n,
-            disabled: s
+            disabled: a
         })
     });
 }
 function O(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
-        { format: a } = (0, b.Z)(n.id),
-        s = (0, I.YB)(n.id),
+        { format: s } = (0, b.Z)(n.id),
+        a = (0, I.YB)(n.id),
         c = r.useCallback(() => {
             var e;
-            return (null == s ? void 0 : null === (e = s.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, A);
-        }, [s]),
-        [m, x] = r.useState(a),
-        [p, N] = r.useState(null !== (t = null == s ? void 0 : s.description) && void 0 !== t ? t : ''),
+            return (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, N._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z);
+        }, [a]),
+        [m, x] = r.useState(s),
+        [p, _] = r.useState(null !== (t = null == a ? void 0 : a.description) && void 0 !== t ? t : ''),
         [L, O] = r.useState(c),
-        [k, M] = r.useState(null == s ? void 0 : s.store_page_guild_products_default_sort),
-        [P, w] = r.useState(null == s ? void 0 : s.server_shop_tab_order),
+        [M, k] = r.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
+        [P, w] = r.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: U, updateSubscriptionsSettings: G } = (0, I.QV)(),
-        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, j.Z)(null == s ? void 0 : s.cover_image_asset),
+        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, j.Z)(null == a ? void 0 : a.cover_image_asset),
         W = (0, f.Dt)(),
         V = (0, f.Dt)(),
         Y = (0, f.Dt)();
@@ -112,13 +112,13 @@ function O(e) {
     }
     let q = r.useMemo(() => {
             var e;
-            return (null != p && p !== (null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== a || (null == s ? void 0 : s.store_page_guild_products_default_sort) !== k || (null == s ? void 0 : s.server_shop_tab_order) !== P;
-        }, [L, a, p, s, m, k, P]),
+            return (null != p && p !== (null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : '')) || (null == L ? void 0 : L.startsWith('data:')) === !0 || m !== s || (null == a ? void 0 : a.store_page_guild_products_default_sort) !== M || (null == a ? void 0 : a.server_shop_tab_order) !== P;
+        }, [L, s, p, a, m, M, P]),
         X = null != p && '' !== p && null != L;
     r.useEffect(() => {
         var e;
-        (null == s ? void 0 : null === (e = s.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, A));
-    }, [null == s ? void 0 : s.cover_image_asset]);
+        (null == a ? void 0 : null === (e = a.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && O((0, N._W)(a.cover_image_asset.application_id, a.cover_image_asset, Z));
+    }, [null == a ? void 0 : a.cover_image_asset]);
     let Q = (0, T.mY)(),
         J = r.useMemo(
             () =>
@@ -142,11 +142,11 @@ function O(e) {
             []
         );
     return (0, i.jsxs)('div', {
-        className: Z.container,
+        className: A.container,
         children: [
             null != U &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(S.Z, { children: U.getAnyErrorMessage() }), (0, i.jsx)(h.Spacer, { size: 16 })]
+                    children: [(0, i.jsx)(E.Z, { children: U.getAnyErrorMessage() }), (0, i.jsx)(h.Spacer, { size: 16 })]
                 }),
             l
                 ? null
@@ -159,15 +159,15 @@ function O(e) {
                               children: [
                                   (0, i.jsx)(h.FormText, {
                                       type: h.FormText.Types.DESCRIPTION,
-                                      className: Z.formDescription,
+                                      className: A.formDescription,
                                       disabled: Q,
                                       children: y.intl.string(y.t.x87YqK)
                                   }),
                                   (0, i.jsx)(D, {
                                       value: m,
                                       onChange: (e) => {
-                                          a !== e &&
-                                              e === E.e3.ALL_CHANNELS &&
+                                          s !== e &&
+                                              e === S.e3.ALL_CHANNELS &&
                                               (0, h.openModal)((e) =>
                                                   (0, i.jsx)(h.ConfirmModal, {
                                                       ...e,
@@ -187,7 +187,7 @@ function O(e) {
                                   })
                               ]
                           }),
-                          (0, i.jsx)(h.FormDivider, { className: Z.divider })
+                          (0, i.jsx)(h.FormDivider, { className: A.divider })
                       ]
                   }),
             (0, i.jsx)(h.FormSection, {
@@ -200,19 +200,19 @@ function O(e) {
                     value: p,
                     rows: 2,
                     autosize: !0,
-                    onChange: N,
+                    onChange: _,
                     'aria-labelledby': V,
                     disabled: Q
                 })
             }),
-            (0, i.jsx)(h.FormDivider, { className: Z.divider }),
+            (0, i.jsx)(h.FormDivider, { className: A.divider }),
             (0, i.jsxs)(h.FormSection, {
                 title: y.intl.string(y.t['0kpTpK']),
                 disabled: Q,
                 children: [
                     (0, i.jsx)(h.FormText, {
                         type: h.FormText.Types.DESCRIPTION,
-                        className: Z.formDescription,
+                        className: A.formDescription,
                         disabled: Q,
                         children: y.intl.string(y.t.i2rCwc)
                     }),
@@ -222,10 +222,10 @@ function O(e) {
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,
-                        className: Z.coverImageUploader,
-                        iconWrapperClassName: Z.coverImageUploaderIconWrapper,
-                        imageClassName: Z.coverImageUploaderInner,
-                        iconClassName: Z.coverImageUploaderIcon,
+                        className: A.coverImageUploader,
+                        iconWrapperClassName: A.coverImageUploaderIconWrapper,
+                        imageClassName: A.coverImageUploaderInner,
+                        iconClassName: A.coverImageUploaderIcon,
                         onChange: K,
                         'aria-label': H,
                         disabled: Q
@@ -244,7 +244,7 @@ function O(e) {
             l
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(h.FormDivider, { className: Z.divider }),
+                          (0, i.jsx)(h.FormDivider, { className: A.divider }),
                           (0, i.jsxs)(h.FormSection, {
                               title: y.intl.string(y.t.aaZ9pK),
                               titleId: Y,
@@ -252,15 +252,15 @@ function O(e) {
                               children: [
                                   (0, i.jsx)(h.FormText, {
                                       type: h.FormText.Types.DESCRIPTION,
-                                      className: Z.formDescription,
+                                      className: A.formDescription,
                                       disabled: Q,
                                       children: y.intl.string(y.t.TILN8v)
                                   }),
                                   (0, i.jsx)(h.SingleSelect, {
-                                      value: k,
+                                      value: M,
                                       placeholder: y.intl.string(y.t.XqMe3N),
                                       options: J,
-                                      onChange: (e) => M(e)
+                                      onChange: (e) => k(e)
                                   })
                               ]
                           })
@@ -270,7 +270,7 @@ function O(e) {
             $.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(h.FormDivider, { className: Z.divider }),
+                        (0, i.jsx)(h.FormDivider, { className: A.divider }),
                         (0, i.jsxs)(h.FormSection, {
                             title: y.intl.string(y.t['+dtmw8']),
                             titleId: Y,
@@ -278,7 +278,7 @@ function O(e) {
                             children: [
                                 (0, i.jsx)(h.FormText, {
                                     type: h.FormText.Types.DESCRIPTION,
-                                    className: Z.formDescription,
+                                    className: A.formDescription,
                                     disabled: Q,
                                     children: y.intl.string(y.t.n8WSWF)
                                 }),
@@ -294,7 +294,7 @@ function O(e) {
                 }),
             (0, i.jsx)(u.W, {
                 component: 'div',
-                className: Z.contentRegion,
+                className: A.contentRegion,
                 children:
                     q &&
                     (0, i.jsx)(h.SlideIn, {
@@ -303,12 +303,12 @@ function O(e) {
                             disabled: !X,
                             onReset: () => {
                                 var e;
-                                x(a), N(null !== (e = null == s ? void 0 : s.description) && void 0 !== e ? e : ''), O(c), M(null == s ? void 0 : s.store_page_guild_products_default_sort), w(null == s ? void 0 : s.server_shop_tab_order);
+                                x(s), _(null !== (e = null == a ? void 0 : a.description) && void 0 !== e ? e : ''), O(c), k(null == a ? void 0 : a.store_page_guild_products_default_sort), w(null == a ? void 0 : a.server_shop_tab_order);
                             },
                             onSave: () => {
-                                o()(null != s, 'Settings must be defined');
+                                o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                p !== s.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== a && (e.full_server_gate = m === E.e3.ALL_CHANNELS), k !== s.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = k), P !== s.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && G(n.id, e);
+                                p !== a.description && (e.description = p), null != L && L.startsWith('data:') && (e.cover_image = L), m !== s && (e.full_server_gate = m === S.e3.ALL_CHANNELS), M !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = M), P !== a.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : y.intl.string(y.t['6HRvio'])
                         })

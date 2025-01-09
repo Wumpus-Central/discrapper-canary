@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(392711),
-    a = n.n(l),
-    s = n(252759),
+    s = n.n(l),
+    a = n(252759),
     o = n(442837),
     c = n(481060),
     d = n(650774),
@@ -16,17 +16,17 @@ var i = n(200651),
     f = n(845377),
     C = n(981631),
     v = n(388032),
-    _ = n(442344),
-    N = n(716455);
+    N = n(442344),
+    _ = n(716455);
 let I = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
-        [j, b] = (0, s.Z)(() => [a().sample(I), a().sample(T)], []);
+        [j, b] = (0, a.Z)(() => [s().sample(I), s().sample(T)], []);
     r.useEffect(() => {
         (0, u.z)([j, b]);
     }, [j, b]);
-    let [S, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(b)], [j, b]),
+    let [E, S] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(b)], [j, b]),
         { canEnableDiscovery: R, isPendingSuccess: y } = (0, o.cj)(
             [m.ZP],
             () => ({
@@ -35,7 +35,7 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [Z, A] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
+        [A, Z] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
@@ -43,47 +43,47 @@ t.Z = (e) => {
     return (
         l ? (y ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
         (0, i.jsxs)('div', {
-            className: _.container,
+            className: N.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
-                    src: N,
-                    className: _.sparkles
+                    src: _,
+                    className: N.sparkles
                 }),
                 (0, i.jsxs)('div', {
-                    className: _.discoverPreview,
+                    className: N.discoverPreview,
                     children: [
                         (0, i.jsx)(g.Z, {
-                            className: _.placeholderCard,
-                            disabled: !0,
-                            small: !0,
-                            loading: null == S,
-                            guild: S
-                        }),
-                        (0, i.jsx)(g.Z, {
-                            className: _.previewCard,
-                            guild: t,
-                            description: v.intl.string(v.t['0k7fyM']),
-                            presenceCount: Z,
-                            memberCount: A
-                        }),
-                        (0, i.jsx)(g.Z, {
-                            className: _.placeholderCard,
+                            className: N.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == E,
                             guild: E
+                        }),
+                        (0, i.jsx)(g.Z, {
+                            className: N.previewCard,
+                            guild: t,
+                            description: v.intl.string(v.t['0k7fyM']),
+                            presenceCount: A,
+                            memberCount: Z
+                        }),
+                        (0, i.jsx)(g.Z, {
+                            className: N.placeholderCard,
+                            disabled: !0,
+                            small: !0,
+                            loading: null == S,
+                            guild: S
                         })
                     ]
                 }),
                 (0, i.jsx)(c.Heading, {
-                    className: _.header,
+                    className: N.header,
                     variant: 'heading-xl/semibold',
                     children: v.intl.string(v.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: _.valueProp,
+                    className: N.valueProp,
                     color: 'header-secondary',
                     children: v.intl.format(v.t.BhkgBg, {
                         onLinkClick: () =>
@@ -96,7 +96,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: _.byline,
+                    className: N.byline,
                     color: 'header-secondary',
                     children: v.intl.format(v.t.ALSi8v, {
                         onGuidelinesClick: () =>
@@ -112,7 +112,7 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, i.jsx)(c.Button, {
                             ...e,
-                            className: _.enableButton,
+                            className: N.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
@@ -121,7 +121,7 @@ t.Z = (e) => {
                         })
                 }),
                 (0, i.jsx)(f.Z, {
-                    className: _.checklist,
+                    className: N.checklist,
                     guild: t,
                     guildId: t.id,
                     headerContent: (0, i.jsx)(c.Heading, {
@@ -133,7 +133,7 @@ t.Z = (e) => {
                                       (0, i.jsx)(
                                           'strong',
                                           {
-                                              className: _.doesNot,
+                                              className: N.doesNot,
                                               children: e
                                           },
                                           t

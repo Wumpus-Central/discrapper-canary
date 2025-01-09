@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120),
@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     r,
     l = n(200651),
-    a = n(192379),
-    s = n(278074),
+    s = n(192379),
+    a = n(278074),
     o = n(399606),
     c = n(481060),
     d = n(76535),
@@ -22,26 +22,26 @@ var i,
     f = n(225675),
     C = n(703656),
     v = n(430824),
-    _ = n(594174),
-    N = n(63063),
+    N = n(594174),
+    _ = n(63063),
     I = n(267101),
     T = n(294294),
     j = n(310800),
     b = n(833695),
-    S = n(981631),
-    E = n(176505),
+    E = n(981631),
+    S = n(176505),
     R = n(388032),
     y = n(969033);
-function Z(e) {
+function A(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: i } = (0, I.eD)(t),
         r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
-        Z = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        A = (null == r ? void 0 : r.isOwner(Z)) === !0,
+        A = (0, o.e7)([N.default], () => N.default.getCurrentUser()),
+        Z = (null == r ? void 0 : r.isOwner(A)) === !0,
         { loading: L } = (0, d.H)(t),
-        [D, O] = a.useState(n ? 'manage_listings' : 'payment');
+        [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
-    let k = a.useCallback(() => {
+    let M = s.useCallback(() => {
         if (null == r) return;
         let e = v.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
@@ -51,13 +51,13 @@ function Z(e) {
             type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: S.pNK.GUILD_PRODUCTS
+            returnToSection: E.pNK.GUILD_PRODUCTS
         }),
-            (0, C.uL)(S.Z5c.CHANNEL(r.id, E.oC.GUILD_SHOP));
+            (0, C.uL)(E.Z5c.CHANNEL(r.id, S.oC.GUILD_SHOP));
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let M = (0, l.jsxs)(l.Fragment, {
+    let k = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -66,8 +66,8 @@ function Z(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: N.Z.getArticleURL(S.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: _.Z.getArticleURL(E.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: _.Z.getCreatorSupportArticleURL(E.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
@@ -92,7 +92,7 @@ function Z(e) {
                     disabled: !n,
                     children: R.intl.string(R.t.wlZ1mp)
                 }),
-                A
+                Z
                     ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
                           className: y.tabBarItem,
@@ -103,7 +103,7 @@ function Z(e) {
                     ? (0, l.jsx)('div', {
                           className: y.previewButton,
                           children: (0, l.jsx)(c.Button, {
-                              onClick: k,
+                              onClick: M,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
@@ -113,7 +113,7 @@ function Z(e) {
                     : null
             ]
         }),
-        w = (0, s.EQ)(D)
+        w = (0, a.EQ)(D)
             .with('basic_info', () => (0, l.jsx)(T.Z, { guildId: t }))
             .with('manage_listings', () => (0, l.jsx)(j.Z, { guildId: t }))
             .with('payment', () => (0, l.jsx)(b.Z, { guildId: t }))
@@ -127,7 +127,7 @@ function Z(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            M,
+            k,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: y.tabBarContainer,

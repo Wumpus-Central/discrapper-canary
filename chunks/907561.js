@@ -3,17 +3,17 @@ n.d(t, {
         return l;
     },
     bC: function () {
-        return s;
+        return a;
     },
     md: function () {
-        return a;
+        return s;
     }
 });
 var i = n(192379),
     r = n(772848);
 let l = 262,
-    a = 100;
-function s(e, t) {
+    s = 100;
+function a(e, t) {
     let n = i.useMemo(() => 'clan-banner-container-'.concat((0, r.Z)()), []);
     return {
         styleContent: i.useMemo(() => {

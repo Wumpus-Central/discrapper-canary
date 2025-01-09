@@ -172,20 +172,20 @@ function ey(e) {
 }
 function eS(e, n) {
     return o.useCallback(
-        (r) => {
-            let i = e.current;
+        (r, i) => {
+            let a = e.current;
             null != r &&
-                null != i &&
+                null != a &&
                 (Q.default.track(ef.rMx.SOUNDMOJI_SELECT, {
                     channel_id: n.id,
                     guild_id: n.guild_id,
                     sound_guild_id: r.guildId,
                     sound_id: r.soundId,
-                    source: 'expression_picker'
+                    source: i
                 }),
-                i.insertSound(r)),
+                a.insertSound(r)),
                 (0, L._Q)(),
-                null == i || i.focus();
+                null == a || a.focus();
         },
         [e, n.id, n.guild_id]
     );

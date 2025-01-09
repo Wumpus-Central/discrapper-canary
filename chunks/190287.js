@@ -2,8 +2,8 @@ n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    a = n(442837),
     o = n(481060),
     c = n(596454),
     d = n(318766),
@@ -15,11 +15,11 @@ var i = n(200651),
     p = n(778916);
 let f = (e) => {
     var t;
-    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: _, position: N } = e,
+    let { reason: n = '', emoji_name: l, onSetReason: m, onSelectEmoji: x, onClearPressed: f, reasonMinLength: C, reasonMaxLength: v, placeholder: N, position: _ } = e,
         [I, T] = r.useState(!1),
-        j = (0, s.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
+        j = (0, a.e7)([h.Z], () => h.Z.isGuildMetadataLoaded());
     return (0, i.jsxs)('div', {
-        className: a()(p.reasonContainer),
+        className: s()(p.reasonContainer),
         children: [
             (0, i.jsx)(o.Popout, {
                 onRequestClose: () => {
@@ -66,7 +66,7 @@ let f = (e) => {
                         o.TextInput,
                         {
                             inputClassName: p.reason,
-                            placeholder: _,
+                            placeholder: N,
                             value: n,
                             minLength: C,
                             maxLength: v,
@@ -75,7 +75,7 @@ let f = (e) => {
                             },
                             defaultDirty: (null == n ? void 0 : n.length) > 0
                         },
-                        'text-input-'.concat(N, '-').concat(j)
+                        'text-input-'.concat(_, '-').concat(j)
                     ),
                     (null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0 || null != l
                         ? (0, i.jsx)(o.Button, {
@@ -99,15 +99,15 @@ let f = (e) => {
 };
 t.Z = (e) => {
     let { reasonMinLength: t, reasonMaxLength: n, guildId: r, reasons: l } = e,
-        a = [x.intl.string(x.t['9dhBGh']), x.intl.string(x.t['8RmhKC']), x.intl.string(x.t['2t0V8/']), x.intl.string(x.t.l8WqCQ)],
-        s = [];
+        s = [x.intl.string(x.t['9dhBGh']), x.intl.string(x.t['8RmhKC']), x.intl.string(x.t['2t0V8/']), x.intl.string(x.t.l8WqCQ)],
+        a = [];
     for (let e = 0; e < 4; e++)
-        s.push(
+        a.push(
             (0, i.jsx)(
                 f,
                 {
                     position: e,
-                    placeholder: a[e],
+                    placeholder: s[e],
                     ...l[e],
                     onSetReason: (t) => {
                         let n = [...l],
@@ -133,5 +133,5 @@ t.Z = (e) => {
                 'reasonListItem-' + e
             )
         );
-    return (0, i.jsx)('div', { children: s });
+    return (0, i.jsx)('div', { children: a });
 };

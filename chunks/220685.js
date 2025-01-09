@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(512722),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(512722),
+    o = n.n(a),
     c = n(392711),
     d = n.n(c),
     u = n(442837),
@@ -21,39 +21,39 @@ var i = n(200651),
     f = n(782568),
     C = n(367907),
     v = n(674180),
-    _ = n(999382),
-    N = n(626135),
+    N = n(999382),
+    _ = n(626135),
     I = n(730647),
     T = n(584825),
     j = n(981631),
     b = n(388032),
-    S = n(897668);
-let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
+    E = n(897668);
+let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
     R = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-    y = E[4],
-    Z = (e) => {
+    y = S[4],
+    A = (e) => {
         var t, n;
-        let { guild: l, canEnable: s } = e,
+        let { guild: l, canEnable: a } = e,
             c = (0, T.YB)(l.id),
-            { loading: u, updateSubscriptionsSettings: _ } = (0, T.QV)(),
-            [I, Z] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
-            [A, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
+            { loading: u, updateSubscriptionsSettings: N } = (0, T.QV)(),
+            [I, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
+            [Z, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
-            k = null == D || null != D.match(R),
-            [M, P] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
+            M = null == D || null != D.match(R),
+            [k, P] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != M && M !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
-                    (((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = A),
+                    (((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = Z),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    M !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = M),
+                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
                     !d().isEmpty(e) &&
-                        (await _(l.id, e),
+                        (await N(l.id, e),
                         'store_page_enabled' in e &&
-                            N.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+                            _.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
                                 enabled: I,
                                 ...(0, C.hH)(l.id)
                             }));
@@ -61,7 +61,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             G = j.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(w),
             F = null != D && D === (null == c ? void 0 : c.store_page_trailer_url),
             { shouldRestrictUpdatingCreatorMonetizationSettings: H } = (0, v.gX)(l.id),
-            z = H || !k;
+            z = H || !M;
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(g.FormTitle, {
@@ -73,12 +73,12 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     children: b.intl.string(b.t['uU/69/'])
                 }),
                 (0, i.jsx)(g.FormSwitch, {
-                    className: S.enableSwitch,
+                    className: E.enableSwitch,
                     value: I,
-                    disabled: H || (!I && !s),
-                    tooltipNote: I || s ? void 0 : b.intl.string(b.t.mIgfEh),
+                    disabled: H || (!I && !a),
+                    tooltipNote: I || a ? void 0 : b.intl.string(b.t.mIgfEh),
                     hideBorder: !0,
-                    onChange: (e) => Z(e),
+                    onChange: (e) => A(e),
                     children: (0, i.jsx)(g.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
@@ -91,17 +91,17 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     children: [
                         (0, i.jsx)(x.Z, {
                             value: G,
-                            className: a()({ [S.disabled]: H })
+                            className: s()({ [E.disabled]: H })
                         }),
                         (0, i.jsx)(g.Button, {
                             onClick: () => (0, f.Z)(G),
-                            className: S.openPageButton,
+                            className: E.openPageButton,
                             disabled: H,
                             children: b.intl.string(b.t.CaOYqa)
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(g.FormItem, {
                     title: b.intl.string(b.t.W39uIC),
                     disabled: H,
@@ -111,32 +111,32 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             children: b.intl.string(b.t.B6XtEx)
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.accentColorContainer,
+                            className: E.accentColorContainer,
                             children: [
                                 (0, i.jsx)(g.Button, {
                                     onClick: () => null,
                                     color: g.Button.Colors.CUSTOM,
-                                    style: { backgroundColor: '#'.concat(A.toString(16).padStart(6, '0')) },
-                                    className: S.buttonPreview,
+                                    style: { backgroundColor: '#'.concat(Z.toString(16).padStart(6, '0')) },
+                                    className: E.buttonPreview,
                                     disabled: H,
                                     children: b.intl.string(b.t.l6iM39)
                                 }),
                                 (0, i.jsx)(g.ColorPicker, {
-                                    colors: E,
+                                    colors: S,
                                     customColor: null,
                                     defaultColor: y,
-                                    value: A,
+                                    value: Z,
                                     onChange: (e) => L(e),
                                     renderDefaultButton: () => null,
                                     renderCustomButton: () => null,
-                                    colorContainerClassName: S.hideColorButtons,
+                                    colorContainerClassName: E.hideColorButtons,
                                     disabled: H
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(g.FormItem, {
                     title: b.intl.string(b.t.k2yRvb),
                     disabled: H,
@@ -148,27 +148,27 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         (0, i.jsx)(g.TextInput, {
                             value: null != D ? D : void 0,
                             onChange: (e) => O('' === e ? null : e),
-                            error: k ? null : b.intl.string(b.t['1kL79f']),
+                            error: M ? null : b.intl.string(b.t['1kL79f']),
                             placeholder: b.intl.string(b.t['+I4gdX']),
-                            className: S.trailerInputWrapper,
-                            inputClassName: a()(S.trailerInput, {
-                                [S.error]: !k,
-                                [S.trailerInputWithCheckmark]: F || !k
+                            className: E.trailerInputWrapper,
+                            inputClassName: s()(E.trailerInput, {
+                                [E.error]: !M,
+                                [E.trailerInputWithCheckmark]: F || !M
                             }),
                             prefixElement:
-                                k &&
+                                M &&
                                 F &&
                                 (0, i.jsx)(g.CircleCheckIcon, {
                                     size: 'md',
                                     color: m.Z.unsafe_rawColors.BRAND_500.css,
                                     secondaryColor: m.Z.unsafe_rawColors.WHITE_500.css,
-                                    className: S.inputCheckmark
+                                    className: E.inputCheckmark
                                 }),
                             disabled: H
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: E.divider }),
                 (0, i.jsxs)(g.FormItem, {
                     title: b.intl.string(b.t.AU2HU1),
                     disabled: H,
@@ -178,22 +178,22 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             children: b.intl.string(b.t.iWBt3d)
                         }),
                         (0, i.jsx)(g.FormSwitch, {
-                            className: S.premiumMemberCountSwitchContainer,
-                            value: M,
+                            className: E.premiumMemberCountSwitchContainer,
+                            value: k,
                             hideBorder: !0,
                             onChange: (e) => P(e),
                             disabled: H,
                             children: (0, i.jsxs)('div', {
-                                className: S.iconSwitchLabel,
+                                className: E.iconSwitchLabel,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: S.iconContainer,
+                                        className: E.iconContainer,
                                         children: (0, i.jsx)(g.UserIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 28,
                                             height: 28,
-                                            className: S.premiumMemberCountIcon
+                                            className: E.premiumMemberCountIcon
                                         })
                                     }),
                                     (0, i.jsxs)('div', {
@@ -217,7 +217,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, i.jsx)(h.W, {
                     component: 'div',
-                    className: S.contentRegion,
+                    className: E.contentRegion,
                     children:
                         B &&
                         (0, i.jsx)(g.SlideIn, {
@@ -225,7 +225,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    Z(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
+                                    A(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
                                 },
                                 onSave: U,
                                 disabled: z
@@ -235,22 +235,22 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             ]
         });
     };
-function A() {
-    let e = (0, u.e7)([_.Z], () => _.Z.getGuild()),
+function Z() {
+    let e = (0, u.e7)([N.Z], () => N.Z.getGuild()),
         t = (0, I.f)(),
         n = (0, T.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(A, {
               guild: e,
               canEnable: n
           })
         : (0, i.jsx)(g.Spinner, {});
 }
 function L() {
-    let e = (0, u.e7)([_.Z], () => _.Z.getGuild());
+    let e = (0, u.e7)([N.Z], () => N.Z.getGuild());
     return (0, i.jsx)(I.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,
-        children: (0, i.jsx)(A, {})
+        children: (0, i.jsx)(Z, {})
     });
 }

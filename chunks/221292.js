@@ -139,7 +139,7 @@ let I = (e) => {
             activity_session_id: null == l ? void 0 : l.session_id,
             activity_application_id: null == l ? void 0 : l.application_id,
             item_id: null == c ? void 0 : c.id,
-            author_id: null == c ? void 0 : c.author_id,
+            author_id_v2: null == c ? void 0 : c.author_id,
             item_ids:
                 null == d
                     ? void 0
@@ -147,7 +147,7 @@ let I = (e) => {
                           let { id: n } = e;
                           return n;
                       }),
-            author_ids:
+            author_ids_v2:
                 null == d
                     ? void 0
                     : d.entries.map((e) => {

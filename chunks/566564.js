@@ -95,62 +95,62 @@ let L = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { handleTransition: n, numVisibleItems: i } = e,
-        { categories: o, isFetchingCategories: v, fetchCategoriesError: P, fetchPurchasesError: Z, claimError: O, refreshCategories: w } = (0, b.ZP)({ location: 'CollectiblesFeedShop' }),
-        A = null !== (t = null != P ? P : Z) && void 0 !== t ? t : O,
-        R = Array.from(o.values()),
+    let { isFullScreen: n, handleTransition: i, numVisibleItems: o } = e,
+        { categories: v, isFetchingCategories: P, fetchCategoriesError: Z, fetchPurchasesError: O, claimError: w, refreshCategories: A } = (0, b.ZP)({ location: 'CollectiblesFeedShop' }),
+        R = null !== (t = null != Z ? Z : O) && void 0 !== t ? t : w,
+        F = Array.from(v.values()),
         H = (0, c.e7)([u.default], () => u.default.getCurrentUser()),
-        F = (0, f.n)('CollectiblesFeedShop'),
-        D = (0, p.c)('CollectiblesFeedShop') && null != g.Z.getCategory(s.T.ROBERT),
-        V = a.createRef(),
-        M = (0, C.b)('Collectibles Shop Button'),
-        { noCache: W, includeUnpublished: U } = (0, S.Z)(),
-        G = (0, T.u)(),
-        z = R[0],
-        $ = [R[1], g.Z.getCategory(D ? s.T.ROBERT : s.T.ANIME_V2)],
-        K = a.useCallback(() => {
-            w();
-        }, [w]),
-        q = a.useMemo(() => G(B.yo), [v, G]),
-        J = (0, x.l)(q);
+        D = (0, f.n)('CollectiblesFeedShop'),
+        V = (0, p.c)('CollectiblesFeedShop') && null != g.Z.getCategory(s.T.ROBERT),
+        M = a.createRef(),
+        W = (0, C.b)('Collectibles Shop Button'),
+        { noCache: U, includeUnpublished: G } = (0, S.Z)(),
+        z = (0, T.u)(),
+        $ = F[0],
+        K = [F[1], g.Z.getCategory(V ? s.T.ROBERT : s.T.ANIME_V2)],
+        q = a.useCallback(() => {
+            A();
+        }, [A]),
+        J = a.useMemo(() => z(B.yo), [P, z]),
+        Y = (0, x.l)(J);
     if (null == H) return null;
-    if (null != A) {
+    if (null != R) {
         let e = [];
-        null != P ? e.push('shop load fetch categories error: '.concat(A.message)) : null != Z ? e.push('shop load fetch purchase error: '.concat(A.message)) : e.push('shop load claim error: '.concat(A.message)),
+        null != Z ? e.push('shop load fetch categories error: '.concat(R.message)) : null != O ? e.push('shop load fetch purchase error: '.concat(R.message)) : e.push('shop load claim error: '.concat(R.message)),
             m.Z.captureMessage(e.join('\n'), {
                 tags: {
                     isStaff: H.isStaff().toString(),
-                    preloadEnabled: M.toString(),
-                    disableCache: W.toString(),
-                    includeUnpublished: U.toString()
+                    preloadEnabled: W.toString(),
+                    disableCache: U.toString(),
+                    includeUnpublished: G.toString()
                 }
             });
     }
-    return null != P
+    return null != Z
         ? (0, r.jsx)(_.Z, {
-              onRetry: K,
+              onRetry: q,
               errorOrigin: _.i.SHOP_PAGE,
-              errorMessage: P.message
+              errorMessage: Z.message
           })
         : (0, r.jsx)(r.Fragment, {
               children: (0, r.jsx)('div', {
-                  className: y.shop,
+                  className: l()(y.shop, { [y.shopFullscreen]: n }),
                   children: (0, r.jsxs)('div', {
                       className: l()(y.content, y.mainContent),
                       children: [
-                          F
-                              ? (0, r.jsx)(L, { handleTransition: n })
+                          D
+                              ? (0, r.jsx)(L, { handleTransition: i })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(j.Z, {
-                                            isLoading: v,
-                                            handleTransition: n,
-                                            category: z
+                                            isLoading: P,
+                                            handleTransition: i,
+                                            category: $
                                         }),
                                         (0, r.jsx)(E.Z, {
-                                            isLoading: v,
-                                            handleTransition: n,
-                                            categories: $
+                                            isLoading: P,
+                                            handleTransition: i,
+                                            categories: K
                                         })
                                     ]
                                 }),
@@ -166,7 +166,7 @@ t.Z = (e) => {
                                           }),
                                           (0, r.jsxs)(d.Clickable, {
                                               className: y.shopAll,
-                                              onClick: () => n('shop all top'),
+                                              onClick: () => i('shop all top'),
                                               children: [
                                                   (0, r.jsx)(d.ServerGridIcon, {}),
                                                   (0, r.jsx)(d.Text, {
@@ -179,11 +179,11 @@ t.Z = (e) => {
                                   }),
                                   (0, r.jsx)('div', {
                                       className: y.feed,
-                                      ref: V,
-                                      children: v
+                                      ref: M,
+                                      children: P
                                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(k.K, {}, t + 1)) })
                                           : (0, r.jsx)(r.Fragment, {
-                                                children: J.slice(0, i).map((e, t) => {
+                                                children: Y.slice(0, o).map((e, t) => {
                                                     let n = g.Z.getCategoryForProduct(e.skuId);
                                                     return null == e || null == n
                                                         ? null
@@ -213,7 +213,7 @@ t.Z = (e) => {
                                   })
                               ]
                           }),
-                          i >= B.iA &&
+                          o >= B.iA &&
                               (0, r.jsxs)('div', {
                                   className: y.endOfFeed,
                                   children: [
@@ -224,7 +224,7 @@ t.Z = (e) => {
                                       (0, r.jsx)(d.Button, {
                                           className: y.endOfFeedButton,
                                           onClick: () => {
-                                              n('shop all bottom', void 0, !0);
+                                              i('shop all bottom', void 0, !0);
                                           },
                                           children: (0, r.jsx)(d.Text, {
                                               variant: 'text-md/medium',

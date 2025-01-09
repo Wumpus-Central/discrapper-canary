@@ -1,12 +1,12 @@
 n.d(t, {
     S: function () {
-        return a;
+        return s;
     }
 });
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-function a(e) {
+function s(e) {
     return i.tn
         .get({
             url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
