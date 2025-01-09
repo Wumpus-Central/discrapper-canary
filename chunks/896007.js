@@ -107,7 +107,7 @@ function f(e) {
                           g(m.pNK.COMMUNITY_WELCOME, y)
                       ]
                     : [],
-            A = R()
+            Z = R()
                 ? [
                       { section: x.DIVIDER },
                       {
@@ -119,8 +119,8 @@ function f(e) {
                       g(m.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y)
                   ]
                 : [],
-            Z = n && !t.hasFeature(m.oNc.COMMUNITY),
-            L = (null != S && S) || Z || n ? [{ section: x.DIVIDER }, g(m.pNK.CLAN, y), g(m.pNK.COMMUNITY, y), g(m.pNK.DISCOVERY, y), g(m.pNK.WIDGET, y), g(m.pNK.VANITY_URL, y), g(m.pNK.GUILD_TEMPLATES, y)] : [];
+            A = n && !t.hasFeature(m.oNc.COMMUNITY),
+            L = (null != S && S) || A || n ? [{ section: x.DIVIDER }, g(m.pNK.CLAN, y), g(m.pNK.COMMUNITY, y), g(m.pNK.DISCOVERY, y), g(m.pNK.WIDGET, y), g(m.pNK.VANITY_URL, y), g(m.pNK.GUILD_TEMPLATES, y)] : [];
         return [
             {
                 section: x.HEADER,
@@ -131,7 +131,7 @@ function f(e) {
             ...i,
             ...o,
             ...E,
-            ...A,
+            ...Z,
             { section: x.DIVIDER },
             g(m.pNK.GUILD_PREMIUM, y),
             ...L,

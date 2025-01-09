@@ -31,8 +31,8 @@ var i = n(200651),
     E = n(142961),
     R = n(232764),
     y = n(729311),
-    A = n(850864),
-    Z = n(966301),
+    Z = n(850864),
+    A = n(966301),
     L = n(981631),
     D = n(388032),
     O = n(203035);
@@ -93,8 +93,8 @@ function M(e) {
         });
     if (k) {
         if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
-        if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(Z.Zm, {});
-        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(A.T, {});
+        if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(A.Zm, {});
+        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(Z.T, {});
     }
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {

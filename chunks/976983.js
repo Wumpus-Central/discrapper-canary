@@ -31,8 +31,8 @@ function C(e) {
         {
             drag: R,
             dragSourcePosition: y,
-            drop: A,
-            setIsDraggable: Z
+            drop: Z,
+            setIsDraggable: A
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
             index: E,
@@ -69,9 +69,9 @@ function C(e) {
                             }
                         });
                 }),
-            onMouseEnter: () => Z(!0),
-            onMouseLeave: () => Z(!1),
-            innerRef: (e) => R(A(e)),
+            onMouseEnter: () => A(!0),
+            onMouseLeave: () => A(!1),
+            innerRef: (e) => R(Z(e)),
             children: [
                 (0, i.jsx)('div', {
                     className: f.dragContainer,

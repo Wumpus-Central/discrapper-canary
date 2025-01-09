@@ -18,7 +18,7 @@ n.d(t, {
         return _;
     },
     bj: function () {
-        return A;
+        return Z;
     },
     el: function () {
         return f;
@@ -250,6 +250,6 @@ function y(e, t) {
             channelIds: t
         });
 }
-function A() {
+function Z() {
     a.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

@@ -95,7 +95,7 @@ t.Z = (e) => {
         ),
         { analyticsLocations: x } = (0, u.ZP)(),
         E = t.hasFeature(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-        A = t.hasFeature(I.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[I.Eu4.TIER_3] : t.premiumSubscriberCount;
+        Z = t.hasFeature(I.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[I.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (
         (r.useEffect(() => {
             let e = !1;
@@ -114,7 +114,7 @@ t.Z = (e) => {
         l)
     )
         return (0, i.jsx)(o.Spinner, {});
-    let Z = (e, n) => {
+    let A = (e, n) => {
             let i = null;
             n === I.Eu4.TIER_1 ? (i = I.Qqv.TIER_1) : n === I.Eu4.TIER_2 ? (i = I.Qqv.TIER_2) : n === I.Eu4.TIER_3 && (i = I.Qqv.TIER_3),
                 (0, h.Z)({
@@ -210,7 +210,7 @@ t.Z = (e) => {
                 (0, i.jsxs)(
                     _.Z,
                     {
-                        subscriptionCount: A,
+                        subscriptionCount: Z,
                         tier: c,
                         onSetRef: s,
                         isAnimatedTo: l,
@@ -273,7 +273,7 @@ t.Z = (e) => {
                                         }),
                                         (0, i.jsx)(o.Button, {
                                             color: o.Button.Colors.GREEN,
-                                            onClick: () => Z((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
+                                            onClick: () => A((0, p.vn)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
                                             children: T.intl.string(T.t.dtFw5e)
                                         })
                                     ]

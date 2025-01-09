@@ -35,7 +35,7 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [A, Z] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
+        [Z, A] = (0, o.Wu)([d.Z], () => [null, d.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
@@ -64,8 +64,8 @@ t.Z = (e) => {
                             className: _.previewCard,
                             guild: t,
                             description: v.intl.string(v.t['0k7fyM']),
-                            presenceCount: A,
-                            memberCount: Z
+                            presenceCount: Z,
+                            memberCount: A
                         }),
                         (0, i.jsx)(g.Z, {
                             className: _.placeholderCard,

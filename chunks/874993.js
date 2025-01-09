@@ -31,10 +31,10 @@ function j(e) {
     let { guildId: j, setPreventNavigation: b = () => {} } = e,
         { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: y } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : N.lds,
-        Z = null != S,
-        [L] = (0, h.RD)(A),
-        { rulesByTriggerType: D } = (0, h.pH)(A),
+        Z = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : N.lds,
+        A = null != S,
+        [L] = (0, h.RD)(Z),
+        { rulesByTriggerType: D } = (0, h.pH)(Z),
         O = {
             [g.vh.MEMBERS]: I.intl.string(I.t.sx4E5u),
             [g.vh.CONTENT]: I.intl.string(I.t.fphZb2)
@@ -47,7 +47,7 @@ function j(e) {
             [D]
         ),
         M = {
-            isInEditMode: Z,
+            isInEditMode: A,
             setEditingRule: E
         },
         P = r.useRef(M);
@@ -57,7 +57,7 @@ function j(e) {
         r.useEffect(() => {
             let { isInEditMode: e, setEditingRule: t } = P.current;
             e && t(null);
-        }, [A]);
+        }, [Z]);
     let w = r.useCallback(
             (e, t) => {
                 if (null != e) {
@@ -83,9 +83,9 @@ function j(e) {
             return w(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
         }, [w, S]);
     r.useEffect(() => {
-        b(Z, (0, v.af)(B));
-    }, [b, Z, B]);
-    let U = (0, g.Z6)(A),
+        b(A, (0, v.af)(B));
+    }, [b, A, B]);
+    let U = (0, g.Z6)(Z),
         G = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
@@ -93,7 +93,7 @@ function j(e) {
                     return (0, i.jsx)(
                         C.Z,
                         {
-                            guildId: A,
+                            guildId: Z,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
                             initWithEdit: y === N.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
@@ -190,10 +190,10 @@ function j(e) {
                     className: T.explicitContentFilterSection
                 }),
             (0, i.jsx)(f.Z, {
-                guildId: A,
+                guildId: Z,
                 existingRules: k
             }),
-            Z && (0, i.jsx)('div', { className: T.endSpacer })
+            A && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

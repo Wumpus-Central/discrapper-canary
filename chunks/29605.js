@@ -34,8 +34,8 @@ var i = n(200651),
     E = n(768581),
     R = n(176354),
     y = n(267642),
-    A = n(51144),
-    Z = n(434404),
+    Z = n(51144),
+    A = n(434404),
     L = n(471613),
     D = n(999382),
     O = n(981631),
@@ -56,7 +56,7 @@ let B = d().throttle(x.OQ, 1000),
                 animated: n.animated,
                 size: 32
             }),
-            u = A.ZP.useUserTag(n.user);
+            u = Z.ZP.useUserTag(n.user);
         return (0, i.jsxs)('div', {
             className: a()(P.emojiRow, w.card),
             children: [
@@ -301,13 +301,13 @@ t.ZP = () => {
         r.useEffect(() => {
             null != x && x < c && B(e.id);
         }, [c, x, e.id]);
-    let [A, w] = r.useMemo(() => {
+    let [Z, w] = r.useMemo(() => {
             let t = null == g ? void 0 : g.filter((t) => !(0, I.Kt)(t, e.id)),
                 [n, i] = d().partition(t, (e) => !e.animated);
             return [n, i];
         }, [g, e.id]),
         U = e.getMaxEmojiSlots(),
-        G = Math.max(U - A.length, U - w.length),
+        G = Math.max(U - Z.length, U - w.length),
         H = (n, i, r) =>
             (0, _.G)({
                 data: n,
@@ -355,7 +355,7 @@ t.ZP = () => {
                 children: [
                     (0, i.jsx)(W, {
                         guild: e,
-                        staticEmojiCount: A.length,
+                        staticEmojiCount: Z.length,
                         animatedEmojiCount: w.length
                     }),
                     (0, i.jsxs)(h.FormSection, {
@@ -368,7 +368,7 @@ t.ZP = () => {
                             K &&
                                 (0, i.jsx)(h.FormText, {
                                     type: h.FormTextTypes.DESCRIPTION,
-                                    children: M.intl.format(M.t.uMkfTk, { onClick: () => Z.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })
+                                    children: M.intl.format(M.t.uMkfTk, { onClick: () => A.Z.open(e.id, O.pNK.ROLE_SUBSCRIPTIONS, void 0, O.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                 }),
                             (0, i.jsxs)('div', {
                                 children: [
@@ -439,7 +439,7 @@ t.ZP = () => {
                     }),
                     (0, i.jsx)(F, {
                         isLoading: null == g,
-                        staticEmojis: A,
+                        staticEmojis: Z,
                         animatedEmojis: w,
                         guild: e,
                         theme: a

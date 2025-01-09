@@ -157,7 +157,7 @@ function S(e) {
         };
     if (null == o) return null;
     let { headerText: S, headerSubtext: E, descriptionText: R, icon: y } = o,
-        A = !(0, d.Vb)(t);
+        Z = !(0, d.Vb)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -187,7 +187,7 @@ function S(e) {
                             })
                         ]
                     }),
-                    A &&
+                    Z &&
                         (0, i.jsx)(a.Text, {
                             className: v.ruleTextDescription,
                             variant: 'text-sm/normal',

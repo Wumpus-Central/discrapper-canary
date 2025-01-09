@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(4912),
     R = n(626135),
     y = n(700785),
-    A = n(434404),
-    Z = n(92160),
+    Z = n(434404),
+    A = n(92160),
     L = n(981631),
     D = n(231338),
     O = n(388032),
@@ -40,8 +40,8 @@ let M = 'WELCOME_CHANNEL',
             [I, T] = r.useState(!1),
             j = r.useRef(null),
             R = (0, u.e7)([S.Z], () => S.Z.getChannel(o.channel_id)),
-            A = (0, u.e7)([v.ZP], () => (null != o.emoji_id ? v.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
-            Z = null != R && y.Uu(L.Plq.VIEW_CHANNEL, R),
+            Z = (0, u.e7)([v.ZP], () => (null != o.emoji_id ? v.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
+            A = null != R && y.Uu(L.Plq.VIEW_CHANNEL, R),
             P = null !== (t = (0, C.KS)(R)) && void 0 !== t ? t : m.TextIcon,
             w = (0, f.ZP)(R, !1),
             [, B] = (0, c.c)({
@@ -73,12 +73,12 @@ let M = 'WELCOME_CHANNEL',
                 ),
                 [B, U]
             ),
-            (l = Z
-                ? null != A || null != o.emoji_name
+            (l = A
+                ? null != Z || null != o.emoji_name
                     ? (0, i.jsx)(g.Z, {
-                          emojiId: null == A ? void 0 : A.id,
-                          emojiName: null != A ? A.name : o.emoji_name,
-                          animated: !!(null == A ? void 0 : A.animated)
+                          emojiId: null == Z ? void 0 : Z.id,
+                          emojiName: null != Z ? Z.name : o.emoji_name,
+                          animated: !!(null == Z ? void 0 : Z.animated)
                       })
                     : (0, i.jsx)(P, {
                           size: 'md',
@@ -120,7 +120,7 @@ let M = 'WELCOME_CHANNEL',
                                 children: o.description
                             }),
                             (0, i.jsxs)(m.Text, {
-                                className: Z ? void 0 : k.channelWarning,
+                                className: A ? void 0 : k.channelWarning,
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
@@ -129,7 +129,7 @@ let M = 'WELCOME_CHANNEL',
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    (0, i.jsx)('span', { children: Z ? w : O.intl.string(O.t.zFuCsL) })
+                                    (0, i.jsx)('span', { children: A ? w : O.intl.string(O.t.zFuCsL) })
                                 ]
                             })
                         ]
@@ -242,7 +242,7 @@ t.Z = (e) => {
         ),
         r.useEffect(() => () => (0, T.sm)(), []);
     let z = r.useCallback(() => {
-        null != t && A.Z.open(t.id, L.pNK.ONBOARDING);
+        null != t && Z.Z.open(t.id, L.pNK.ONBOARDING);
     }, [t]);
     return null == t
         ? null
@@ -273,7 +273,7 @@ t.Z = (e) => {
                       variant: 'text-sm/normal',
                       children: O.intl.string(O.t['w2d74+'])
                   }),
-                  (0, i.jsx)(Z.Z, {
+                  (0, i.jsx)(A.Z, {
                       enabled: y,
                       onPreview:
                           (null == S ? void 0 : S.length) === 0

@@ -24,8 +24,8 @@ let T = new Set(),
     E = [],
     R = [],
     y = !1,
-    A = new Set(),
-    Z = new Map(),
+    Z = new Set(),
+    A = new Map(),
     L = new Map();
 function D() {
     if (null == i || null == E) return [];
@@ -80,7 +80,7 @@ function k() {
         (y = !1),
         e &&
             (L.clear(),
-            Z.forEach((e, t) => {
+            A.forEach((e, t) => {
                 L.set(t, [...e]);
             }));
 }
@@ -99,7 +99,7 @@ let M = u().debounce(() => {
             ) && (T.delete(t), (e = !0));
         }),
         0 === T.size && (b = !1),
-        y && u().isEqual(Z, L) && ((e = !0), (y = !1)),
+        y && u().isEqual(A, L) && ((e = !0), (y = !1)),
         e && G.emitChange();
 }, 500);
 function P(e, t) {
@@ -169,7 +169,7 @@ class U extends (a = g.ZP.Store) {
         return Array.from(T);
     }
     get editedRoleIdsForConfigurations() {
-        return A;
+        return Z;
     }
     get roles() {
         return E;
@@ -290,23 +290,23 @@ let G = new U(
                   let { roleId: t, roleConnectionConfigurations: n } = e,
                       i = w(t);
                   if (null == i) return !1;
-                  let r = Z.get(i.id);
+                  let r = A.get(i.id);
                   if (u().isEqual(r, n)) return !1;
-                  L.set(i.id, n), Z.set(i.id, n), M();
+                  L.set(i.id, n), A.set(i.id, n), M();
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS: function (e) {
                   let { roleId: t, roleConnectionConfigurations: n } = e,
                       i = w(t);
                   if (null == i) return !1;
-                  (y = !0), A.add(i.id), L.set(i.id, n), M();
+                  (y = !0), Z.add(i.id), L.set(i.id, n), M();
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (R = E = []), Z.clear(), T.clear(), L.clear(), (A = new Set()), (b = !1), (S = !1), (y = !1), (j = I.QZA.CLOSED);
+                  (i = null), (R = E = []), A.clear(), T.clear(), L.clear(), (Z = new Set()), (b = !1), (S = !1), (y = !1), (j = I.QZA.CLOSED);
               },
               GUILD_ROLE_CREATE: B,
               GUILD_ROLE_UPDATE: B,
               GUILD_ROLE_DELETE: function (e) {
-                  return A.has(e.roleId) && (A.delete(e.roleId), Z.delete(e.roleId), L.delete(e.roleId), (y = !1)), B(e);
+                  return Z.has(e.roleId) && (Z.delete(e.roleId), A.delete(e.roleId), L.delete(e.roleId), (y = !1)), B(e);
               },
               GUILD_SETTINGS_ROLES_SUBMITTING: function () {
                   j = I.QZA.SUBMITTING;

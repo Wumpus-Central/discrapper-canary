@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return Z;
+        return A;
     }
 }),
     n(47120),
@@ -32,8 +32,8 @@ var i = n(200651),
     E = n(388032),
     R = n(831609),
     y = n(922905);
-let A = 'dismissedCommunityFeaturesUpsell',
-    Z = () => {
+let Z = 'dismissedCommunityFeaturesUpsell',
+    A = () => {
         let e;
         let {
                 guild: t,
@@ -69,7 +69,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
     },
     L = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [a, u] = r.useState(!0 === c.K.get(A)),
+            [a, u] = r.useState(!0 === c.K.get(Z)),
             h = (0, s.e7)([f.Z], () => {
                 var e;
                 return null !== (e = f.Z.getMemberCount(l.id)) && void 0 !== e ? e : 0;
@@ -134,7 +134,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                           size: d.Button.Sizes.NONE,
                           className: R.upsellClose,
                           onClick: () => {
-                              c.K.set(A, !0), u(!0);
+                              c.K.set(Z, !0), u(!0);
                           },
                           children: (0, i.jsx)(d.XSmallIcon, {
                               size: 'md',
@@ -194,7 +194,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
             })),
             l = (0, s.e7)([p.ZP], () => (null != e ? p.ZP.getChannels(e.id) : null)),
             o = r.useMemo(b.jb, []),
-            u = !0 !== c.K.get(A);
+            u = !0 !== c.K.get(Z);
         if (null == e) return null;
         let m = [];
         null != l &&
@@ -231,7 +231,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
             y = (e) => {
                 I.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            Z = (e) => {
+            A = (e) => {
                 I.Z.updateGuild({ preferredLocale: e });
             },
             D = (e) => {
@@ -418,7 +418,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: Z,
+                                onChange: A,
                                 isDisabled: !t
                             })
                         })

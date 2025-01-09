@@ -79,7 +79,7 @@ function y(e) {
         children: [
             !p &&
                 l !== C.PG.LANDING &&
-                (0, i.jsx)(A, {
+                (0, i.jsx)(Z, {
                     setOnboardingStep: g.$K,
                     page: l,
                     homeSettingsEnabled: !0
@@ -111,7 +111,7 @@ function y(e) {
         ]
     });
 }
-function A(e) {
+function Z(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: r } = e,
         l = (0, s.e7)([f.Z], () => f.Z.hasErrors()),
         o = (e) => {

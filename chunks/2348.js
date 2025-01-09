@@ -104,8 +104,8 @@ let I = r.memo(function () {
             E = (0, p.EH)(t.id, r.id),
             R = (0, p.lL)(l.id, r.id),
             y = null != (0, f.Z)(l).find((e) => e.id === t.id),
-            A = (0, m.mn)(t.id),
-            Z = (e) => {
+            Z = (0, m.mn)(t.id),
+            A = (e) => {
                 if (!S)
                     return (
                         e.stopPropagation(),
@@ -158,7 +158,7 @@ let I = r.memo(function () {
                                 [_.disabled]: S
                             }),
                             ...e,
-                            onClick: Z,
+                            onClick: A,
                             onContextMenu: L,
                             children: [
                                 (0, i.jsx)('div', {
@@ -204,7 +204,7 @@ let I = r.memo(function () {
                                               value: b,
                                               type: o.Checkbox.Types.INVERTED,
                                               disabled: S,
-                                              color: A ? s.Z.colors.TEXT_BRAND.css : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                              color: Z ? s.Z.colors.TEXT_BRAND.css : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                               innerClassName: _.checkboxInner,
                                               displayOnly: !0
                                           })

@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(981631),
     R = n(231338),
     y = n(388032),
-    A = n(131800);
-let Z = (e) => [
+    Z = n(131800);
+let A = (e) => [
         {
             section: m.ID.HEADER,
             label: y.intl.string(y.t['7r0U+/'])
@@ -102,7 +102,7 @@ let Z = (e) => [
             };
         return (0, i.jsxs)(o.TabBar.Item, {
             selectedItem: !1,
-            className: A.deleteItem,
+            className: Z.deleteItem,
             'aria-label': y.intl.string(y.t.vc5h39),
             onClick: () => {
                 if (a) {
@@ -130,7 +130,7 @@ let Z = (e) => [
                 (0, i.jsx)(o.TrashIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.statusDanger
+                    className: Z.statusDanger
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
@@ -146,12 +146,12 @@ let Z = (e) => [
             r = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, R.BR.DARK);
         return t
             ? (0, i.jsxs)('div', {
-                  className: A.tooltipContents,
+                  className: Z.tooltipContents,
                   children: [
                       (0, i.jsx)(o.WarningIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: A.errorIconTooltip
+                          className: Z.errorIconTooltip
                       }),
                       (0, i.jsxs)('div', {
                           children: [
@@ -234,14 +234,14 @@ t.Z = (e) => {
         },
         K = r.useMemo(() => null != M && Object.values(M).some((e) => null != e), [M]);
     if (null == k) return null;
-    let q = Z(M);
+    let q = A(M);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
-        className: A.modal,
+        className: Z.modal,
         children: [
             (0, i.jsx)(o.Tooltip, {
                 color: o.Tooltip.Colors.GREY,
-                tooltipClassName: A.tooltip,
+                tooltipClassName: Z.tooltip,
                 text: (0, i.jsx)(D, { isErrorVisible: K }),
                 position: 'left',
                 'aria-label': null != K ? y.intl.string(y.t.M6w76e) : void 0,
@@ -250,18 +250,18 @@ t.Z = (e) => {
                 children: (e) =>
                     (0, i.jsx)(d.Z, {
                         ...e,
-                        className: A.closeButton,
+                        className: Z.closeButton,
                         closeAction: V,
                         keybind: 'ESC'
                     })
             }),
             (0, i.jsxs)('div', {
-                className: A.modalContents,
+                className: Z.modalContents,
                 children: [
                     (0, i.jsx)('div', {
-                        className: A.sidebarWrapper,
+                        className: Z.sidebarWrapper,
                         children: (0, i.jsx)(o.TabBar, {
-                            className: A.sidebar,
+                            className: Z.sidebar,
                             selectedItem: R,
                             onItemSelect: B,
                             orientation: 'vertical',
@@ -286,7 +286,7 @@ t.Z = (e) => {
                                         return (0, i.jsx)(
                                             o.TabBar.Item,
                                             {
-                                                className: A.settingsTab,
+                                                className: Z.settingsTab,
                                                 'aria-label': e.label,
                                                 id: e.section,
                                                 children: (0, i.jsxs)(i.Fragment, {
@@ -302,7 +302,7 @@ t.Z = (e) => {
                                                                         size: 'xs',
                                                                         color: 'currentColor',
                                                                         ...e,
-                                                                        className: A.errorIcon
+                                                                        className: Z.errorIcon
                                                                     })
                                                             })
                                                     ]
@@ -315,7 +315,7 @@ t.Z = (e) => {
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: A.mainContent,
+                        className: Z.mainContent,
                         children: [
                             (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
@@ -394,7 +394,7 @@ t.Z = (e) => {
                                 children:
                                     w &&
                                     (0, i.jsx)(o.SlideIn, {
-                                        className: A.noticeRegion,
+                                        className: Z.noticeRegion,
                                         children: (0, i.jsx)(u.Z, {
                                             onSave: Y,
                                             submitting: P,

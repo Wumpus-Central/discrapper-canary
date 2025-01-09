@@ -107,26 +107,26 @@ t.Z = (e) => {
                 }),
             [v, n]
         ),
-        A = j.length > 0,
-        Z = r.useCallback(async () => {
+        Z = j.length > 0,
+        A = r.useCallback(async () => {
             p.default.track(T.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: f,
-                has_eligible_team: A,
+                has_eligible_team: Z,
                 guild_id: t.id,
                 is_owner: c
             });
             let e = await (0, d.$)(T.E07.DEVELOPER_PORTAL_TEAMS);
             (0, s.Z)(e);
-        }, [t, c, f, A]),
+        }, [t, c, f, Z]),
         L = r.useCallback(
             (e) =>
                 c
                     ? (0, i.jsx)(u.Z, {
-                          onClick: Z,
+                          onClick: A,
                           children: e
                       })
                     : e,
-            [Z, c]
+            [A, c]
         );
     return I
         ? (0, i.jsx)(a.Spinner, {})
@@ -147,14 +147,14 @@ t.Z = (e) => {
                               disabled: !c,
                               children: S.intl.format(S.t['5mfqpa'], { onCreateTeamHook: L })
                           }),
-                          A
+                          Z
                               ? (0, i.jsx)(y, {
                                     guild: t,
                                     eligibleTeams: j,
                                     isGuildOwner: c
                                 })
                               : (0, i.jsx)(R, {
-                                    onCreateTeamClick: Z,
+                                    onCreateTeamClick: A,
                                     isGuildOwner: c
                                 })
                       ]

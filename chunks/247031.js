@@ -32,8 +32,8 @@ var i = n(200651),
     E = n(981631),
     R = n(388032),
     y = n(488566),
-    A = n(684309);
-function Z(e, t, n) {
+    Z = n(684309);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -130,7 +130,7 @@ class D extends r.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props;
         return (0, i.jsxs)(c.Clickable, {
-            className: a()(y.bannedUser, A.card),
+            className: a()(y.bannedUser, Z.card),
             onClick: this.handleShowModal,
             onContextMenu: this.handleContextMenu,
             children: [
@@ -160,7 +160,7 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'handleShowModal', () => {
+            A(this, 'handleShowModal', () => {
                 let { guild: e, user: t, hideDiscriminator: n, ban: r } = this.props;
                 (0, c.openModal)((l) =>
                     (0, i.jsx)(L, {
@@ -172,7 +172,7 @@ class D extends r.PureComponent {
                     })
                 );
             }),
-            Z(this, 'handleContextMenu', (e) => {
+            A(this, 'handleContextMenu', (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
                     return (t) =>
@@ -215,7 +215,7 @@ class O extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(
+            A(
                 this,
                 'getSortedBans',
                 (0, C.oH)((e, t) => {
@@ -229,7 +229,7 @@ class O extends r.PureComponent {
                     return i.sort((e, t) => e.username.localeCompare(t.username));
                 })
             ),
-            Z(this, 'getRowHeight', (e, t) => {
+            A(this, 'getRowHeight', (e, t) => {
                 var n;
                 if (e > 0) return 0;
                 let { bans: i, searchQuery: r } = this.props,
@@ -239,7 +239,7 @@ class O extends r.PureComponent {
                     s = null == i ? void 0 : i.get(null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : '');
                 return null == a || null == s ? 0 : 56;
             }),
-            Z(this, 'renderRow', (e) => {
+            A(this, 'renderRow', (e) => {
                 var t;
                 let { section: n, row: r } = e,
                     { bans: l, streamerMode: a, guild: s, searchQuery: o } = this.props;
@@ -267,12 +267,12 @@ class O extends r.PureComponent {
                         d.id
                     );
             }),
-            Z(this, 'getSectionHeight', (e) => {
+            A(this, 'getSectionHeight', (e) => {
                 if (e > 0) return 0;
                 let { bans: t } = this.props;
                 return null == t ? 462 : 120;
             }),
-            Z(this, 'renderSection', () => {
+            A(this, 'renderSection', () => {
                 var e;
                 let t;
                 let { bans: r, theme: l, searchQuery: a } = this.props;

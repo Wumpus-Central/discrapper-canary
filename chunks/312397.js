@@ -35,8 +35,8 @@ var i = n(200651),
     E = n(688465),
     R = n(807582),
     y = n(48217),
-    A = n(26323),
-    Z = n(35125),
+    Z = n(26323),
+    A = n(35125),
     L = n(536442),
     D = n(142497),
     O = n(884858),
@@ -375,7 +375,7 @@ class eC extends r.PureComponent {
             value: eo,
             label: en.intl.string(en.t.ibUhoa)
         });
-        let c = (0, Z.eI)(t),
+        let c = (0, A.eI)(t),
             u = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
             m = c || (0, V.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
         return (0, i.jsxs)(g.FormSection, {
@@ -905,7 +905,7 @@ class eC extends r.PureComponent {
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
                 }),
-                    (0, A.Z)({
+                    (0, Z.Z)({
                         analyticsLocations: l,
                         analyticsSourceLocation: {
                             section: t,

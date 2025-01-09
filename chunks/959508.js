@@ -26,10 +26,10 @@ var i = n(200651),
 let I = { optionErrors: [] };
 function T(e) {
     var t;
-    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: A } = e,
-        { dropdownsAllowed: Z } = (0, m.Ug)(n.id),
+    let { guild: n, prompt: l, disableAutofocus: d, promptIndex: C, dragIndex: T, includeCount: S, singleColumn: E, onPromptDragComplete: R, onPromptDragStart: y, onPromptDragReset: Z } = e,
+        { dropdownsAllowed: A } = (0, m.Ug)(n.id),
         L = (0, s.e7)([x.Z], () => x.Z.editedDefaultChannelIds),
-        D = Z ? v.qm : v.M$,
+        D = A ? v.qm : v.M$,
         {
             drag: O,
             dragSourcePosition: k,
@@ -41,7 +41,7 @@ function T(e) {
             optionId: l.id,
             onDragStart: y,
             onDragComplete: R,
-            onDragReset: A
+            onDragReset: Z
         }),
         w = (0, s.cj)([f.Z], () => {
             var e;
@@ -51,7 +51,7 @@ function T(e) {
         [G, F] = r.useState(!1),
         H = null !== (t = w.options) && void 0 !== t ? t : w.optionErrors.filter(g.lm)[0],
         z = w.config,
-        W = Z && l.options.length >= v.fY,
+        W = A && l.options.length >= v.fY,
         V = (0, u.kl)(n.id, Array.from(L), [l]).length - L.size,
         Y = r.useRef(null),
         K = r.useRef(C);

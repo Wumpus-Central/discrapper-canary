@@ -332,7 +332,7 @@ function y(e) {
         ]
     });
 }
-function A(e) {
+function Z(e) {
     let { preferredLocale: t } = e,
         n = r.useMemo(() => (0, I.jb)(), []),
         l = r.useCallback((e) => {
@@ -367,7 +367,7 @@ function A(e) {
         ]
     });
 }
-function Z() {
+function A() {
     return (0, i.jsx)('div', { className: b.divider });
 }
 function L(e) {
@@ -390,26 +390,26 @@ function L(e) {
               className: b.settings,
               children: [
                   (0, i.jsx)(S, { guild: s }),
-                  (0, i.jsx)(Z, {}),
+                  (0, i.jsx)(A, {}),
                   (0, i.jsx)(E, {
                       guild: s,
                       guildMetadata: a,
                       error: r.discovery_splash
                   }),
-                  (0, i.jsx)(Z, {}),
+                  (0, i.jsx)(A, {}),
                   (0, i.jsx)(R, {
                       guildId: s.id,
                       guildMetadata: a,
                       error: r.keywords
                   }),
-                  (0, i.jsx)(Z, {}),
+                  (0, i.jsx)(A, {}),
                   (0, i.jsx)(y, {
                       guild: s,
                       guildMetadata: a
                   }),
-                  (0, i.jsx)(Z, {}),
-                  (0, i.jsx)(A, { preferredLocale: s.preferredLocale }),
-                  (0, i.jsx)(Z, {}),
+                  (0, i.jsx)(A, {}),
+                  (0, i.jsx)(Z, { preferredLocale: s.preferredLocale }),
+                  (0, i.jsx)(A, {}),
                   (0, i.jsx)('div', {
                       children: (0, i.jsx)(_.A, {
                           requireTerms: t,

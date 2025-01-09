@@ -41,7 +41,7 @@ function N(e) {
                 N(!1);
             }
         }, []),
-        A = r.useCallback(async () => {
+        Z = r.useCallback(async () => {
             if (null == j ? void 0 : j.hasFeature(v.oNc.DISCOVERABLE)) {
                 let e = new Set(j.features);
                 e.delete(v.oNc.DISCOVERABLE);
@@ -52,7 +52,7 @@ function N(e) {
                 }
             }
         }, [j]),
-        Z = r.useCallback(
+        A = r.useCallback(
             async (e, t) => {
                 if (null != b)
                     try {
@@ -84,7 +84,7 @@ function N(e) {
                               ]
                             : [];
                     y(async () => {
-                        await A(), await Z(i, e);
+                        await Z(), await A(i, e);
                     });
                 } else if (x.joinType === C.A.APPLY) {
                     let { pendingVerificationFields: e } = x;
@@ -94,11 +94,11 @@ function N(e) {
                         return;
                     }
                     y(async () => {
-                        await A(), await Z([...e], !0);
+                        await Z(), await A([...e], !0);
                     });
                 }
             }
-        }, [b, x, y, A, Z]),
+        }, [b, x, y, Z, A]),
         D = r.useCallback(() => {
             if (null != b && null != x) {
                 if (S && E > 0 && (null == x ? void 0 : x.joinType) !== C.A.APPLY) {

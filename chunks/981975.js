@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return Z;
     }
 }),
     n(47120),
@@ -61,10 +61,10 @@ function y(e) {
         ]
     });
 }
-function A(e) {
+function Z(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
-        { headerHeight: h, headerRef: A } = (0, C.Z)(0),
-        { scrolledToTop: Z, handleScroll: L } = (0, _.V)(),
+        { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
+        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -261,8 +261,8 @@ function A(e) {
             className: S.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !Z }),
-                    ref: A,
+                    className: a()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
+                    ref: Z,
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,

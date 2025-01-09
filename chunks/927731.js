@@ -45,8 +45,8 @@ function b(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         j = (0, x._k)(p),
         { editStateIds: b, addNewEditStateId: S, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
-        [y, A] = r.useState({}),
-        Z = r.useMemo(() => {
+        [y, Z] = r.useState({}),
+        A = r.useMemo(() => {
             let e = b.map((e) => {
                 var t;
                 return null !== (t = y[e]) && void 0 !== t ? t : e;
@@ -54,7 +54,7 @@ function b(e) {
             return (0, s.uniq)(e);
         }, [b, y]),
         L = (e, t) => {
-            A((n) => ({
+            Z((n) => ({
                 ...n,
                 [e]: t
             }));
@@ -84,8 +84,8 @@ function b(e) {
                       )
                     : S();
         }, [t, E, S, l, O, D]),
-        M = C.Lo(Z),
-        P = r.useCallback(() => Z.forEach(C.GM), [Z]),
+        M = C.Lo(A),
+        P = r.useCallback(() => A.forEach(C.GM), [A]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
@@ -103,7 +103,7 @@ function b(e) {
                 (0, i.jsxs)('div', {
                     className: I.groupListings,
                     children: [
-                        Z.map((e) =>
+                        A.map((e) =>
                             (0, i.jsx)(
                                 v.Z,
                                 {

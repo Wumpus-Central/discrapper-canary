@@ -31,7 +31,7 @@ var i = n(200651),
     E = n(388032),
     R = n(322442),
     y = n(490909);
-async function A(e, t, n) {
+async function Z(e, t, n) {
     let r = e.roles.filter((e) => e !== n);
     try {
         await v.Z.updateMemberRoles(t, e.id, r, [], [n]);
@@ -52,13 +52,13 @@ async function A(e, t, n) {
         );
     }
 }
-function Z(e) {
+function A(e) {
     let { member: t, guildId: l, roleId: s, locked: d } = e,
         m = r.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function h(e) {
         if ((e.stopPropagation(), !d)) {
             if (e.shiftKey) {
-                A(t, l, s);
+                Z(t, l, s);
                 return;
             }
             !(function (e, t, n) {
@@ -69,7 +69,7 @@ function Z(e) {
                         header: E.intl.string(E.t['7sFNfX']),
                         confirmText: E.intl.string(E.t.N86XcH),
                         cancelText: E.intl.string(E.t['ETE/oK']),
-                        onConfirm: () => A(e, t, n),
+                        onConfirm: () => Z(e, t, n),
                         children: [
                             (0, i.jsx)(o.Text, {
                                 color: 'text-normal',
@@ -219,7 +219,7 @@ function D(e) {
                     );
                 let l = f[r];
                 return (0, i.jsx)(
-                    Z,
+                    A,
                     {
                         member: l,
                         guildId: t,
@@ -268,7 +268,7 @@ function k(e) {
                 var e, n;
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
             }) > _.length,
-        A = () => {
+        Z = () => {
             f.default.track(S.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
@@ -305,7 +305,7 @@ function k(e) {
                                 query: u,
                                 setQuery: m,
                                 locked: v,
-                                handleAddClick: A
+                                handleAddClick: Z
                             }),
                             j
                                 ? (0, i.jsx)(o.HelpMessage, {
@@ -326,7 +326,7 @@ function k(e) {
                 locked: v,
                 onScroll: p,
                 roleMembers: _,
-                handleAddClick: A
+                handleAddClick: Z
             })
         ]
     });

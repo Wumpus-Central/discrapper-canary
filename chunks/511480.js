@@ -32,8 +32,8 @@ var i = n(200651),
     E = n(166184),
     R = n(96788),
     y = n(936735),
-    A = n(654351),
-    Z = n(354051),
+    Z = n(654351),
+    A = n(354051),
     L = n(347604),
     D = n(203377),
     O = n(929834),
@@ -64,7 +64,7 @@ let U = l.ZP.connectStores([T.Z], () => {
         },
         onSave() {
             if (null != e)
-                (0, A.UA)(e, t),
+                (0, Z.UA)(e, t),
                     I.Z.saveGuild(e.id, {
                         features: e.features,
                         discoverySplash: e.discoverySplash,
@@ -359,17 +359,17 @@ class G extends r.PureComponent {
     render() {
         let { guild: e, discoveryChecklist: t, isGuildAdmin: n } = this.props;
         if (null == e || null == t) return null;
-        switch ((0, A.TJ)(e, t)) {
-            case A.d5.INTRO:
-            case A.d5.INTRO_INELIGIBLE:
+        switch ((0, Z.TJ)(e, t)) {
+            case Z.d5.INTRO:
+            case Z.d5.INTRO_INELIGIBLE:
                 return (0, i.jsx)(L.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
                 });
-            case A.d5.DISQUALIFIED:
-                return (0, i.jsx)(Z.Z, { guild: e });
-            case A.d5.SETTINGS:
+            case Z.d5.DISQUALIFIED:
+                return (0, i.jsx)(A.Z, { guild: e });
+            case Z.d5.SETTINGS:
                 return (0, i.jsxs)(a.FormSection, {
                     className: w.__invalid_discoverySettings,
                     title: P.intl.string(P.t.oGaVGx),
