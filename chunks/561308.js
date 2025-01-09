@@ -114,24 +114,25 @@ let f = (e) => {
         let { formatSet: i = p } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
             a = s()(r),
             o = s()(c.default.extractTimestamp(e.id)),
-            l = a.diff(o, 's');
-        if (l < u.Z.Seconds.MINUTE) return i.secondsAgo(l);
-        if (l < u.Z.Seconds.HOUR) {
+            l = a.diff(o, 's'),
+            d = Math.abs(l);
+        if (d < u.Z.Seconds.MINUTE) return i.secondsAgo(l);
+        if (d < u.Z.Seconds.HOUR) {
             let e = Math.round(l / u.Z.Seconds.MINUTE);
             return i.minutesAgo(e);
         }
-        if (l < 12 * u.Z.Seconds.HOUR) {
+        if (d < 12 * u.Z.Seconds.HOUR) {
             let e = Math.round(l / u.Z.Seconds.HOUR);
             return i.hoursAgo(e);
-        } else if (l < 9 * u.Z.Seconds.DAY) {
+        } else if (d < 9 * u.Z.Seconds.DAY) {
             let e = Math.round(l / u.Z.Seconds.DAY);
             return i.daysAgo(e);
-        } else if (l < 4 * u.Z.Seconds.WEEK) {
+        } else if (d < 4 * u.Z.Seconds.WEEK) {
             let e = Math.round(l / (7 * u.Z.Seconds.DAY));
             return i.weeksAgo(e);
         }
-        let d = Math.round(l / u.Z.Seconds.DAYS_30);
-        return i.monthsAgo(d);
+        let f = Math.round(l / u.Z.Seconds.DAYS_30);
+        return i.monthsAgo(f);
     },
     g = function (e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
