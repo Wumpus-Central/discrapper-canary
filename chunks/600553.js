@@ -1,6 +1,9 @@
 n.d(t, {
-    $: function () {
-        return i;
+    Dj: function () {
+        return l;
+    },
+    i1: function () {
+        return r;
     }
 });
 let i = (0, n(987170).Z)({
@@ -16,3 +19,25 @@ let i = (0, n(987170).Z)({
         }
     ]
 });
+function r(e) {
+    let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
+        { enabled: l } = i.getCurrentConfig(
+            {
+                guildId: t,
+                location: n
+            },
+            { autoTrackExposure: r }
+        );
+    return l;
+}
+function l(e) {
+    let { guildId: t, location: n, autoTrackExposure: r = !0 } = e,
+        { enabled: l } = i.useExperiment(
+            {
+                guildId: t,
+                location: n
+            },
+            { autoTrackExposure: r }
+        );
+    return l;
+}
