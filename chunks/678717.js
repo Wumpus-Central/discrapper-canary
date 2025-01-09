@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return Q;
+            return ee;
         }
     }),
     n(653041),
@@ -15,8 +15,8 @@ var r = n(200651),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    h = n(213713),
-    m = n(665149),
+    m = n(213713),
+    h = n(665149),
     x = n(906467),
     f = n(259580),
     p = n(31336),
@@ -44,16 +44,17 @@ var v = n(392750),
     A = n(178821),
     D = n(248526),
     F = n(958328),
-    M = n(514866),
-    H = n(678639),
-    G = n(351930),
-    U = n(771751),
-    z = n(596768),
-    V = n(621060),
-    W = n(388032),
-    K = n(771466),
-    Y = n(941469);
-function X(e) {
+    M = n(315384),
+    H = n(514866),
+    G = n(678639),
+    U = n(351930),
+    z = n(771751),
+    V = n(596768),
+    W = n(621060),
+    K = n(388032),
+    Y = n(771466),
+    X = n(941469);
+function q(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
             minDimension: b.h,
@@ -64,10 +65,10 @@ function X(e) {
         });
     return (0, r.jsx)('div', {
         onMouseDown: l,
-        className: K.resizeHandle
+        className: Y.resizeHandle
     });
 }
-function q() {
+function $() {
     var e;
     let t = a.useMemo(() => {
             let e = [
@@ -79,12 +80,12 @@ function q() {
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, r.jsx)(z.Z, {})
+                    render: () => (0, r.jsx)(V.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, r.jsx)(H.Z, {})
+                    render: () => (0, r.jsx)(G.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -97,7 +98,7 @@ function q() {
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, r.jsx)(M.Z, {})
+                        render: () => (0, r.jsx)(H.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
@@ -179,18 +180,23 @@ function q() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, r.jsx)(h.Z, {})
+                        render: () => (0, r.jsx)(m.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
                     name: 'DCF',
                     render: () => (0, r.jsx)(S.Z, {})
                 }),
+                e.push({
+                    id: 'potions',
+                    name: 'Potions',
+                    render: () => (0, r.jsx)(M.Z, {})
+                }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, r.jsx)(U.Z, {})
+                        render: () => (0, r.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'payments',
@@ -200,7 +206,7 @@ function q() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, r.jsx)(G.Z, {})
+                        render: () => (0, r.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'billing',
@@ -219,7 +225,7 @@ function q() {
             TabBar: n,
             renderSelectedTab: l,
             selectedTabId: i
-        } = (0, V.Z)(
+        } = (0, W.Z)(
             {
                 tabs: t,
                 initialSelectedTabId: null !== (e = b.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
@@ -237,29 +243,29 @@ function q() {
         }),
         (0, r.jsxs)(R.Gk, {
             children: [
-                (0, r.jsxs)(m.ZP, {
-                    className: Y.headerBar,
-                    toolbar: (0, r.jsx)(m.ZP.Icon, {
+                (0, r.jsxs)(h.ZP, {
+                    className: X.headerBar,
+                    toolbar: (0, r.jsx)(h.ZP.Icon, {
                         icon: c.XSmallIcon,
-                        tooltip: W.intl.string(W.t.cpT0Cg),
+                        tooltip: K.intl.string(K.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
-                        (0, r.jsx)(m.ZP.Icon, {
+                        (0, r.jsx)(h.ZP.Icon, {
                             icon: c.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(R.Br, { className: K.layerContainer })
+                (0, r.jsx)(R.Br, { className: Y.layerContainer })
             ]
         })
     );
 }
-function $() {
+function J() {
     let e = a.useRef(null),
         t = (0, s.e7)([b.Z], () => b.Z.sidebarWidth),
         [n, l] = a.useState(null),
@@ -271,54 +277,54 @@ function $() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(K.container),
+              className: i()(Y.container),
               style: {
                   minWidth: b.h,
                   width: n
               },
               'data-app-right-panel': !0,
               children: [
-                  (0, r.jsx)(X, {
+                  (0, r.jsx)(q, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
-                      className: K.sidebarContent,
-                      children: (0, r.jsx)(q, {})
+                      className: Y.sidebarContent,
+                      children: (0, r.jsx)($, {})
                   })
               ]
           });
 }
-function J() {
+function Q() {
     let e = (0, s.e7)([b.Z], () => b.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
-              className: i()(K.container, K.mobileContainerExpanded),
+              className: i()(Y.container, Y.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
-                  className: K.sidebarContent,
-                  children: (0, r.jsx)(q, {})
+                  className: Y.sidebarContent,
+                  children: (0, r.jsx)($, {})
               })
           })
         : (0, r.jsx)('div', {
-              className: K.container,
+              className: Y.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
-                  children: (0, r.jsxs)(m.ZP, {
-                      className: i()(Y.headerBar, K.mobileHeaderCollapsed),
+                  children: (0, r.jsxs)(h.ZP, {
+                      className: i()(X.headerBar, Y.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, r.jsx)(m.ZP.Icon, {
+                          (0, r.jsx)(h.ZP.Icon, {
                               icon: c.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })
           });
 }
-function Q(e) {
+function ee(e) {
     let { mobile: t } = e;
-    return t ? (0, r.jsx)(J, {}) : (0, r.jsx)($, {});
+    return t ? (0, r.jsx)(Q, {}) : (0, r.jsx)(J, {});
 }
