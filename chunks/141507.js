@@ -30,7 +30,7 @@ var i = r(200651),
     R = r(598263);
 let O = 250;
 function D(e) {
-    return 'animated' in e;
+    return null != e && 'animated' in e;
 }
 let L = (e) => {
         let { inspectedEmoji: n, guild: r } = e,
@@ -60,6 +60,9 @@ let L = (e) => {
                     allNamesString: null == F ? void 0 : F.name
                 };
                 break;
+            case A.ld.SOUNDMOJI:
+                n = null;
+                break;
             case A.ld.CREATE_EMOJI:
             default:
                 n = {
@@ -75,31 +78,30 @@ let L = (e) => {
             W = (0, b.C1)(k, D(n) ? n : null),
             K = (0, s.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, y.Z)(k, U),
-            q = n.id,
-            Q = (null == F ? void 0 : F.type) === A.ld.EMOJI ? F.subCategory : N.t0.NONE;
+            q = (null == F ? void 0 : F.type) === A.ld.EMOJI ? F.subCategory : N.t0.NONE;
         if (
             (a.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= O &&
                         D(n) &&
-                        Q !== N.t0.NONE &&
-                        (Q === N.t0.NEWLY_ADDED_EMOJI && null !== n && n.type === d.B.GUILD && (0, _.Zg)(n.guildId, z[0].id),
+                        q !== N.t0.NONE &&
+                        (q === N.t0.NEWLY_ADDED_EMOJI && null !== n && n.type === d.B.GUILD && (0, _.Zg)(n.guildId, z[0].id),
                         null != Z.source &&
                             (0, b.Gn)({
                                 emoji: n,
-                                subCategory: Q,
+                                subCategory: q,
                                 position: F.columnIndex + 1,
-                                newlyAddedHighlight: Q === N.t0.NEWLY_ADDED_EMOJI && f.Z.isNewerThanLastSeen(k, q)
+                                newlyAddedHighlight: q === N.t0.NEWLY_ADDED_EMOJI && f.Z.isNewerThanLastSeen(k, n.id)
                             }));
                 };
             }),
             null == n)
         )
             return null;
-        let X = m.Z.theme;
+        let Q = m.Z.theme;
         if (D(n)) {
-            var J;
+            var X;
             let e =
                 null != n.id
                     ? I.ZP.getEmojiURL({
@@ -116,7 +118,7 @@ let L = (e) => {
                           children: 'surrogates' in n ? n.surrogates : null
                       })
                     : (0, i.jsx)('img', {
-                          alt: null !== (J = n.allNamesString) && void 0 !== J ? J : '',
+                          alt: null !== (X = n.allNamesString) && void 0 !== X ? X : '',
                           src: e,
                           className: R.emoji
                       });
@@ -135,16 +137,16 @@ let L = (e) => {
             x = K.has(n.guildId)
                 ? (0, i.jsx)('img', {
                       className: R.icon,
-                      src: (0, o.wj)(X) ? s : l,
+                      src: (0, o.wj)(Q) ? s : l,
                       alt: ''
                   })
                 : (0, i.jsx)('img', {
                       className: R.icon,
-                      src: (0, o.wj)(X) ? e : a,
+                      src: (0, o.wj)(Q) ? e : a,
                       alt: ''
                   });
         }
-        let $ =
+        let J =
             null != V
                 ? (0, i.jsx)(S.Z, {
                       className: R.__invalid_guildIcon,
@@ -153,7 +155,7 @@ let L = (e) => {
                   })
                 : null;
         w = G && 'CREATE_EMOJI' === n.type ? C.intl.string(C.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === n.type ? (K.has(n.guildId) ? C.intl.string(C.t['/K2RDA']) : C.intl.string(C.t.NZI2Zm)) : n.allNamesString;
-        let ee =
+        let $ =
             G && 'CREATE_EMOJI' === n.type
                 ? C.intl.string(C.t['Z/r7IS'])
                 : L({
@@ -166,10 +168,10 @@ let L = (e) => {
         return (0, i.jsx)(p.Z, {
             className: P,
             graphicPrimary: x,
-            graphicSecondary: $,
+            graphicSecondary: J,
             titlePrimary: w,
-            titleSecondary: ee,
+            titleSecondary: $,
             isFavorite: W,
-            emojiSubCategory: Q
+            emojiSubCategory: q
         });
     });

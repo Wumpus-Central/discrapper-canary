@@ -10,5 +10,6 @@ e.exports = {
     header: 'header_a3bc57',
     inactiveNitroHeader: 'inactiveNitroHeader_a3bc57',
     activeNitroHeader: 'activeNitroHeader_a3bc57',
-    nitroBottomDivider: 'nitroBottomDivider_a3bc57'
+    nitroBottomDivider: 'nitroBottomDivider_a3bc57',
+    soundmojiViewMore: 'soundmojiViewMore_a3bc57'
 };

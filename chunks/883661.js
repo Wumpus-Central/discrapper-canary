@@ -28,6 +28,8 @@ let l = (e) => {
                 return s.FlagIcon;
             case o.UX.PREMIUM_UPSELL:
                 return s.NitroWheelIcon;
+            case o.UX.SOUNDMOJI:
+                return s.SoundboardIcon;
             default:
                 return;
         }
