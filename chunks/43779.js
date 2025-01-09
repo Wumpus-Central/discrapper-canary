@@ -15,8 +15,8 @@ var o = n(200651),
     p = n(113434),
     m = n(566078),
     x = n(472144),
-    f = n(644646),
-    g = n(69439),
+    g = n(644646),
+    f = n(69439),
     h = n(46140),
     C = n(642145),
     v = n(388032),
@@ -40,7 +40,7 @@ function b(e) {
         }),
         M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         O = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: L, completedRatioDisplay: W } = (0, p.I)(b),
+        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(b),
         Z = (0, p.Bd)(b),
         Q = r.useCallback(
             (e) =>
@@ -96,11 +96,11 @@ function b(e) {
                                           (0, o.jsx)(x.Z, {
                                               quest: b,
                                               size: 76,
-                                              percentComplete: L,
-                                              percentCompleteText: E ? W : void 0,
+                                              percentComplete: W,
+                                              percentCompleteText: E ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
-                                                  children: (0, o.jsx)(f.Z, {
+                                                  children: (0, o.jsx)(g.Z, {
                                                       quest: b,
                                                       questContent: N,
                                                       className: j.circularQuestRewardTileAsset,
@@ -110,7 +110,7 @@ function b(e) {
                                           })
                                       ]
                                   })
-                                : (0, o.jsx)(f.Z, {
+                                : (0, o.jsx)(g.Z, {
                                       quest: b,
                                       autoplay: E,
                                       questContent: N,
@@ -147,7 +147,7 @@ function b(e) {
                         })
                 ]
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(f.Z, {
                 quest: b,
                 location: N,
                 contentPosition: B,

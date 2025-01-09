@@ -11,8 +11,8 @@ var o = n(200651),
     p = n(607070),
     m = n(819640),
     x = n(569379),
-    f = n(675654),
-    g = n(211720),
+    g = n(675654),
+    f = n(211720),
     h = n(197857);
 let C = ['#51BC9D'];
 t.Z = (e) => {
@@ -48,7 +48,7 @@ t.Z = (e) => {
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
-                        ...f.We,
+                        ...g.We,
                         position: {
                             type: 'static-random',
                             minValue: {
@@ -108,20 +108,20 @@ t.Z = (e) => {
     T)
         ? null
         : (0, o.jsxs)('div', {
-              className: g.wrapper,
+              className: f.wrapper,
               'aria-hidden': 'true',
               ref: S,
               children: [
                   (0, o.jsx)(c.animated.div, {
-                      className: g.background,
+                      className: f.background,
                       style: { opacity: b }
                   }),
                   (0, o.jsx)(c.animated.div, {
-                      className: a()(g.borders, g.bordersTopLeft),
+                      className: a()(f.borders, f.bordersTopLeft),
                       style: { opacity: b }
                   }),
                   (0, o.jsxs)(c.animated.div, {
-                      className: g.confettiWrapper,
+                      className: f.confettiWrapper,
                       style: {
                           transform: n
                               .to({
@@ -133,20 +133,20 @@ t.Z = (e) => {
                       children: [
                           (0, o.jsx)(i.O_, {
                               ref: w,
-                              className: g.confetti,
+                              className: f.confetti,
                               environment: q.current
                           }),
                           (0, o.jsx)(i.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
-                              spriteWidth: f.Ko,
-                              spriteHeight: f.Ko
+                              spriteWidth: g.Ko,
+                              spriteHeight: g.Ko
                           }),
                           null != s.current &&
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
-                                      className: a()(g.borders, g.bordersBottom),
+                                      className: a()(f.borders, f.bordersBottom),
                                       style: { opacity: b }
                                   }),
                                   s.current

@@ -44,11 +44,11 @@ r.d(n, {
     }
 }),
     !(function (e) {
-        (e.GUILD = 'GUILD'), (e.UNICODE = 'UNICODE'), (e.RECENT = 'RECENT'), (e.CUSTOM = 'CUSTOM'), (e.SEARCH_RESULTS = 'SEARCH_RESULTS'), (e.FAVORITES = 'FAVORITES'), (e.TOP_GUILD_EMOJI = 'TOP_GUILD_EMOJI'), (e.PREMIUM_UPSELL = 'PREMIUM_UPSELL');
+        (e.GUILD = 'GUILD'), (e.UNICODE = 'UNICODE'), (e.RECENT = 'RECENT'), (e.CUSTOM = 'CUSTOM'), (e.SEARCH_RESULTS = 'SEARCH_RESULTS'), (e.FAVORITES = 'FAVORITES'), (e.TOP_GUILD_EMOJI = 'TOP_GUILD_EMOJI'), (e.PREMIUM_UPSELL = 'PREMIUM_UPSELL'), (e.SOUNDMOJI = 'SOUNDMOJI');
     })(i || (i = {}));
 let l = 'emoji-picker-grid';
 !(function (e) {
-    (e.RECENT = 'recent'), (e.FAVORITES = 'favorites'), (e.TOP_GUILD_EMOJI = 'top guild emoji'), (e.CUSTOM = 'custom'), (e.PEOPLE = 'people'), (e.NATURE = 'nature'), (e.FOOD = 'food'), (e.ACTIVITY = 'activity'), (e.TRAVEL = 'travel'), (e.OBJECTS = 'objects'), (e.SYMBOLS = 'symbols'), (e.FLAGS = 'flags'), (e.PREMIUM_UPSELL = 'premium emoji');
+    (e.RECENT = 'recent'), (e.FAVORITES = 'favorites'), (e.TOP_GUILD_EMOJI = 'top guild emoji'), (e.CUSTOM = 'custom'), (e.PEOPLE = 'people'), (e.NATURE = 'nature'), (e.FOOD = 'food'), (e.ACTIVITY = 'activity'), (e.TRAVEL = 'travel'), (e.OBJECTS = 'objects'), (e.SYMBOLS = 'symbols'), (e.FLAGS = 'flags'), (e.PREMIUM_UPSELL = 'premium emoji'), (e.SOUNDMOJI = 'soundmoji');
 })(a || (a = {})),
     !(function (e) {
         (e.NONE = ''), (e.TOP_GUILD_EMOJI = 'top_server'), (e.NEWLY_ADDED_EMOJI = 'newly_added');

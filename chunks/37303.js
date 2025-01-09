@@ -26,22 +26,22 @@ function p(e) {
         f = s.useCallback(() => j(!1), []),
         v = (0, o.tP)(t),
         { containerRef: S, size: N, height: q } = (0, x.h)(),
-        _ = (0, r.q)({ location: h.dr.QUESTS_CARD }),
+        A = (0, r.q)({ location: h.dr.QUESTS_CARD }),
         {
-            expansionSpring: A,
+            expansionSpring: _,
             isAnimating: R,
-            isExpanded: b,
+            isExpanded: M,
             toggleExpanded: I
         } = (0, x.O)({
             initiallyExpanded:
-                !_ ||
+                !A ||
                 p ||
                 (0, c.iM)({
                     location: n,
                     quest: t
                 })
         }),
-        M = null != q ? q : c.U0;
+        b = null != q ? q : c.U0;
     return (0, i.jsx)(u.A, {
         questOrQuests: t,
         questContent: n,
@@ -54,9 +54,9 @@ function p(e) {
                         maxHeight:
                             n === a.jn.QUESTS_EMBED
                                 ? void 0
-                                : A.to({
+                                : _.to({
                                       range: [0, 1],
-                                      output: [c.DJ, M]
+                                      output: [c.DJ, b]
                                   })
                     },
                     className: C.questsCard,
@@ -75,10 +75,10 @@ function p(e) {
                                 location: n,
                                 quest: t,
                                 size: N,
-                                expansionSpring: A,
+                                expansionSpring: _,
                                 isAnimating: R,
-                                isExpanded: b,
-                                isInConcurrentQuestExperiment: _,
+                                isExpanded: M,
+                                isInConcurrentQuestExperiment: A,
                                 contentPosition: g,
                                 toggleExpanded: I
                             }),
@@ -88,7 +88,7 @@ function p(e) {
                                 location: n,
                                 size: N,
                                 isFocused: E,
-                                isExpanded: b,
+                                isExpanded: M,
                                 isAnimating: R,
                                 contentPosition: g
                             })
