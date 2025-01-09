@@ -201,14 +201,16 @@ function W(e) {
         });
     let eb = (null === (n = Q.gifs) || void 0 === n ? void 0 : n.allowSending) && !d.tq && null != L,
         ey = (null === (r = Q.stickers) || void 0 === r ? void 0 : r.allowSending) && null != K,
-        eS = (null === (i = Q.soundmoji) || void 0 === i ? void 0 : i.allowSending) === !0 && null != z,
-        eA = !(null === (o = Q.expressionPicker) || void 0 === o ? void 0 : o.onlyEmojis) && (eb || ey),
-        eN = 'left' === J ? 'right' : 'left',
-        eC = null != $ ? $ : 'left' === J ? V.positionLayerDefaultAlignLeft : V.positionLayerDefaultAlignRight;
+        eS = s.useCallback((e) => (null == z ? void 0 : z(e, 'emoji_picker')), [z]),
+        eA = s.useCallback((e) => (null == z ? void 0 : z(e, 'soundboard_picker')), [z]),
+        eN = (null === (i = Q.soundmoji) || void 0 === i ? void 0 : i.allowSending) === !0 && null != z,
+        eC = !(null === (o = Q.expressionPicker) || void 0 === o ? void 0 : o.onlyEmojis) && (eb || ey),
+        eR = 'left' === J ? 'right' : 'left',
+        eO = null != $ ? $ : 'left' === J ? V.positionLayerDefaultAlignLeft : V.positionLayerDefaultAlignRight;
     return (0, a.jsx)(E.Z, {
         section: k.jXE.EXPRESSION_PICKER,
         children: (0, a.jsx)(A.W5, {
-            className: l()(V.positionLayer, eC),
+            className: l()(V.positionLayer, eO),
             targetRef: u,
             position: X,
             align: J,
@@ -218,7 +220,7 @@ function W(e) {
                 var n;
                 let { isPositioned: r } = e;
                 return (0, a.jsx)('section', {
-                    className: l()(V.positionContainer, { [V.positionContainerOnlyEmoji]: !eA }),
+                    className: l()(V.positionContainer, { [V.positionContainerOnlyEmoji]: !eC }),
                     ref: en,
                     role: 'dialog',
                     'aria-label': F.intl.string(F.t.Utlwvr),
@@ -234,12 +236,12 @@ function W(e) {
                                   (0, a.jsx)('div', {
                                       className: V.resizeHandle,
                                       onMouseDown: eo,
-                                      style: { [eN]: -2 }
+                                      style: { [eR]: -2 }
                                   }),
                                   (0, a.jsxs)('div', {
                                       className: V.contentWrapper,
                                       children: [
-                                          eA
+                                          eC
                                               ? (0, a.jsx)('nav', {
                                                     className: V.nav,
                                                     children: (0, a.jsxs)('div', {
@@ -280,7 +282,7 @@ function W(e) {
                                                                 children: F.intl.string(F.t.Xu3wEx)
                                                             }),
                                                             e_ &&
-                                                                eS &&
+                                                                eN &&
                                                                 (0, a.jsx)(H, {
                                                                     id: B.Hr,
                                                                     'aria-controls': B.gV,
@@ -318,7 +320,7 @@ function W(e) {
                                           el === M.X1.EMOJI
                                               ? (0, a.jsx)(y.Z, {
                                                     hasTabWrapper: !0,
-                                                    containerContext: eA ? y.v.TABS_EXPRESSION_PICKER : y.v.NO_TABS_EXPRESSION_PICKER,
+                                                    containerContext: eC ? y.v.TABS_EXPRESSION_PICKER : y.v.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
                                                     channel: q,
                                                     containerWidth: es,
@@ -327,7 +329,7 @@ function W(e) {
                                                     pickerIntention: G.Hz.CHAT,
                                                     closePopout: eg,
                                                     onSelectEmoji: W,
-                                                    onSelectSoundmoji: z,
+                                                    onSelectSoundmoji: eS,
                                                     ref: (e) => {
                                                         ei.current = e;
                                                     },
@@ -342,7 +344,7 @@ function W(e) {
                                                         channel: q,
                                                         containerWidth: es,
                                                         onClose: eg,
-                                                        onSelect: z,
+                                                        onSelect: eA,
                                                         analyticsSource: 'expression-picker',
                                                         renderHeader: (e) =>
                                                             (0, a.jsx)('div', {

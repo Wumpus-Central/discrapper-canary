@@ -92,6 +92,7 @@ let Q = 0,
                                 collapsed: !a,
                                 guild_id: r.id
                             }),
+                        e === H.UX.SOUNDMOJI && M.default.track(Y.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !a }),
                         E(i);
                 },
                 [Q, n, E]
@@ -185,7 +186,9 @@ let Q = 0,
                                 o === H.En.SOUNDMOJI
                                     ? (0, a.jsx)(p.Clickable, {
                                           className: q.soundmojiViewMore,
-                                          onClick: () => (0, T.hr)(W.X1.SOUNDBOARD),
+                                          onClick: () => {
+                                              (0, T.hr)(W.X1.SOUNDBOARD), M.default.track(Y.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                          },
                                           children: z.intl.string(z.t.rUEjBQ)
                                       })
                                     : void 0;
