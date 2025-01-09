@@ -101,11 +101,11 @@ class p {
             d(this, 'onFeedItemUnseen', void 0),
             d(this, 'initialize', () => {
                 var e, n;
-                c.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), c.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), c.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), c.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), c.Z.subscribe('DRAWER_OPEN', this.handleDrawerOpen), c.Z.subscribe('DRAWER_CLOSE', this.handleDrawerClose), c.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (n = this).onInitialize) || void 0 === e || e.call(n);
+                c.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), c.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), c.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), c.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), c.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (n = this).onInitialize) || void 0 === e || e.call(n);
             }),
             d(this, 'terminate', () => {
                 var e, n;
-                c.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), c.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), c.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), c.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), c.Z.unsubscribe('DRAWER_OPEN', this.handleDrawerOpen), c.Z.unsubscribe('DRAWER_CLOSE', this.handleDrawerClose), c.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (n = this).onTerminate) || void 0 === e || e.call(n), this.maybeFlushSeenItems(0);
+                c.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), c.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), c.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), c.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), c.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = (n = this).onTerminate) || void 0 === e || e.call(n), this.maybeFlushSeenItems(0);
             }),
             d(this, 'handleFeedItemFlush', (e) => {
                 let { id: n, force: r } = e;
@@ -146,12 +146,6 @@ class p {
                         })
                     )
             ),
-            d(this, 'handleDrawerClose', () => {
-                this._isReactNavigationFocused && this.resume();
-            }),
-            d(this, 'handleDrawerOpen', () => {
-                this._isReactNavigationFocused && this.pause();
-            }),
             d(this, 'handleAppStateUpdate', (e) => {
                 let { state: n } = e;
                 'active' === n && this._isReactNavigationFocused && this.resume(), 'background' === n && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0));
@@ -186,8 +180,8 @@ class p {
                         }),
                         this.clearPausedFeedItemIds();
             }),
-            d(this, 'handleReactNavigationFocus', (e, n) => {
-                (this._isReactNavigationFocused = e), this._isReactNavigationFocused && !n ? this.resume() : this.pause();
+            d(this, 'handleReactNavigationFocus', (e) => {
+                (this._isReactNavigationFocused = e), this._isReactNavigationFocused ? this.resume() : this.pause();
             }),
             d(this, 'handleWindowFocus', (e) => {
                 if (this._windowId === e.windowId) e.focused ? this.resume() : this.pause();

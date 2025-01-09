@@ -63,22 +63,6 @@ n.Z = {
             });
     },
     popAll() {
-        (0, u.lE)(),
-            o.Z.dispatch({ type: 'MODAL_POP_ALL' }),
-            o.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' }),
-            o.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }),
-            o.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }),
-            o.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }),
-            o.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }),
-            o.Z.dispatch({
-                type: 'DRAWER_CLOSE',
-                animated: !0
-            }),
-            o.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }),
-            o.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }),
-            o.Z.dispatch({ type: 'MENTION_MODAL_CLOSE' }),
-            o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }),
-            o.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }),
-            o.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
+        (0, u.lE)(), o.Z.dispatch({ type: 'MODAL_POP_ALL' }), o.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' }), o.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }), o.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }), o.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }), o.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }), o.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }), o.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }), o.Z.dispatch({ type: 'MENTION_MODAL_CLOSE' }), o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), o.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }), o.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
     }
 };
