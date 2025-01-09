@@ -1,6 +1,9 @@
 t.d(n, {
-    Z: function () {
-        return u;
+    Gt: function () {
+        return f;
+    },
+    ZP: function () {
+        return p;
     }
 }),
     t(47120);
@@ -11,17 +14,30 @@ var l = t(200651),
     o = t(95398),
     s = t(169525),
     c = t(541964);
-function u(e) {
+let u = { isInContainer: !0 },
+    d = i.createContext({ isInContainer: !1 });
+function m(e) {
+    let { children: n } = e;
+    return (0, l.jsx)(d.Provider, {
+        value: u,
+        children: n
+    });
+}
+function f() {
+    let { isInContainer: e } = i.useContext(d);
+    return e;
+}
+function p(e) {
     let { components: n, accentColor: t, spoiler: r, renderComponents: u } = e,
-        [d, m] = i.useState(r),
-        f = (e) =>
+        [d, f] = i.useState(r),
+        p = (e) =>
             (0, l.jsx)('div', {
-                className: a()(c.container, { [c.withAccentColor]: null != t }),
-                style: {
-                    '--__accent-color': t,
-                    opacity: e ? 0 : void 0
-                },
-                children: u(n)
+                className: a()(c.container, {
+                    [c.isHidden]: e,
+                    [c.withAccentColor]: null != t
+                }),
+                style: { '--__accent-color': t },
+                children: (0, l.jsx)(m, { children: u(n) })
             });
     return null == n || 0 === n.length
         ? null
@@ -30,8 +46,8 @@ function u(e) {
                 type: o.Z.Types.ATTACHMENT,
                 reason: s.wk.SPOILER,
                 obscured: d,
-                onToggleObscurity: () => m((e) => !e),
-                children: (e) => f(e)
+                onToggleObscurity: () => f((e) => !e),
+                children: (e) => p(e)
             })
-          : f(!1);
+          : p(!1);
 }

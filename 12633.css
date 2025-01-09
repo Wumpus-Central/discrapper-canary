@@ -7733,7 +7733,9 @@ div.modalHeader_c5e09c {
 .spoilerContainer_aa9639 {
     position: relative;
     filter: blur(0);
-    background-color: var(--__current--spoiler-background-color)
+    background-color: var(--__current--spoiler-background-color);
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .spoilerContainer_aa9639.embedContainer_aa9639 {
