@@ -90,18 +90,20 @@ function b(e) {
     let { fixed: n = !1, show: r, windowKey: s } = e,
         l = (0, f.getPlatform)(),
         u = a.useCallback((e) => E(s, e), [s]);
-    return (0, i.jsx)('div', {
-        className: o()(p.bar, p.systemBar, {
-            [p.fixed]: n,
-            [p.show]: r
-        }),
-        onDoubleClick: u,
-        children:
-            l === f.PlatformTypes.WINDOWS &&
-            (0, i.jsx)('div', {
-                className: p.trailing,
-                onDoubleClick: v,
-                children: (0, i.jsx)(I, { windowKey: s })
-            })
-    });
+    return l === f.PlatformTypes.WEB
+        ? null
+        : (0, i.jsx)('div', {
+              className: o()(p.bar, p.systemBar, {
+                  [p.fixed]: n,
+                  [p.show]: r
+              }),
+              onDoubleClick: u,
+              children:
+                  l === f.PlatformTypes.WINDOWS &&
+                  (0, i.jsx)('div', {
+                      className: p.trailing,
+                      onDoubleClick: v,
+                      children: (0, i.jsx)(I, { windowKey: s })
+                  })
+          });
 }
