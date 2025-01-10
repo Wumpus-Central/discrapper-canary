@@ -41,17 +41,17 @@ var i = n(200651),
     P = n(247627);
 function M(e) {
     var t;
-    let { channel: n } = e,
-        l = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id),
-        [r, a] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
-    if (null == l) return null;
-    let s = I.ZP.getApplicationIconURL({
-            id: l.id,
-            icon: l.icon,
+    let { channel: n, children: l } = e,
+        r = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id),
+        [a, s] = (0, m.US)([o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
+    if (null == r) return null;
+    let u = I.ZP.getApplicationIconURL({
+            id: r.id,
+            icon: r.icon,
             size: 14
         }),
-        [u, h] =
-            r !== o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP
+        [h, p] =
+            a !== o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP
                 ? [y.intl.string(y.t.XJVlf3), void 0]
                 : [
                       (0, i.jsxs)(
@@ -71,7 +71,7 @@ function M(e) {
                                   }),
                                   (0, i.jsx)(c.Clickable, {
                                       className: P.linkedLobbyEducationTooltipCloseClickContainer,
-                                      onClick: () => a(A.L.USER_DISMISS),
+                                      onClick: () => s(A.L.USER_DISMISS),
                                       children: (0, i.jsx)(c.XSmallIcon, {
                                           className: P.linkedLobbyEducationTooltipCloseIcon,
                                           color: 'currentColor'
@@ -87,27 +87,35 @@ function M(e) {
         c.Tooltip,
         {
             tooltipClassName: P.linkedLobbyEducationTooltipWrapper,
-            text: u,
-            'aria-label': h,
-            forceOpen: r === o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP || void 0,
+            position: 'bottom',
+            align: 'left',
+            text: h,
+            'aria-label': p,
+            forceOpen: a === o.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP || void 0,
             children: (e) =>
-                (0, i.jsxs)(c.Text, {
+                (0, i.jsxs)('div', {
+                    className: P.linkedLobbyTooltip,
                     ...e,
-                    className: P.linkedLobby,
-                    variant: 'text-sm/medium',
-                    color: 'header-primary',
                     children: [
-                        '\u2022',
-                        (0, i.jsx)('img', {
-                            alt: '',
-                            src: s,
-                            className: P.linkedLobbyApplicationIcon
-                        }),
-                        l.name
+                        l,
+                        (0, i.jsxs)(c.Text, {
+                            className: P.linkedLobby,
+                            variant: 'text-sm/medium',
+                            color: 'header-primary',
+                            children: [
+                                '\u2022',
+                                (0, i.jsx)('img', {
+                                    alt: '',
+                                    src: u,
+                                    className: P.linkedLobbyApplicationIcon
+                                }),
+                                r.name
+                            ]
+                        })
                     ]
                 })
         },
-        r
+        a
     );
 }
 function R(e) {
@@ -196,19 +204,31 @@ function R(e) {
         case j.d4z.GUILD_TEXT:
         case j.d4z.GUILD_FORUM:
         case j.d4z.GUILD_MEDIA:
-            return (0, i.jsxs)(l.Fragment, {
-                children: [
-                    O(v, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
-                    (0, i.jsx)(S.Z.Title, {
-                        level: E,
-                        onContextMenu: u,
-                        onClick: d,
-                        children: b
-                    }),
-                    null != t.linkedLobby ? (0, i.jsx)(M, { channel: t }) : null,
-                    null != C ? C() : null
-                ]
-            });
+            return null != t.linkedLobby
+                ? (0, i.jsxs)(M, {
+                      channel: t,
+                      children: [
+                          O(v, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
+                          (0, i.jsx)(S.Z.Title, {
+                              level: E,
+                              onContextMenu: u,
+                              onClick: d,
+                              children: b
+                          })
+                      ]
+                  })
+                : (0, i.jsxs)(l.Fragment, {
+                      children: [
+                          O(v, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
+                          (0, i.jsx)(S.Z.Title, {
+                              level: E,
+                              onContextMenu: u,
+                              onClick: d,
+                              children: b
+                          }),
+                          null != C ? C() : null
+                      ]
+                  });
         case j.d4z.GUILD_VOICE:
             return (0, i.jsxs)(l.Fragment, {
                 children: [

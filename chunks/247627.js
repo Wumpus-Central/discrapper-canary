@@ -23,6 +23,7 @@ e.exports = {
     subtitleContainer: 'subtitleContainer_a7d72e',
     secureFramesIcon: 'secureFramesIcon_a7d72e',
     shaker: 'shaker_a7d72e',
+    linkedLobbyTooltip: 'linkedLobbyTooltip_a7d72e',
     linkedLobby: 'linkedLobby_a7d72e',
     linkedLobbyApplicationIcon: 'linkedLobbyApplicationIcon_a7d72e',
     linkedLobbyEducationTooltipWrapper: 'linkedLobbyEducationTooltipWrapper_a7d72e',
