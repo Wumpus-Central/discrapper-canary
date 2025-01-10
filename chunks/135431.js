@@ -7,6 +7,9 @@ r.d(n, {
     },
     LO: function () {
         return g;
+    },
+    TK: function () {
+        return v;
     }
 });
 var i = r(315314);
@@ -84,4 +87,9 @@ function E(e) {
         let e = new URL(p.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
         return e.searchParams.set('client_id', n), e.searchParams.set('scope', i.scopes.join(' ')), null != i.permissions && e.searchParams.set('permissions', i.permissions), e.toString();
     }
+}
+function v(e, n) {
+    var r;
+    let i = null === (r = n.result) || void 0 === r ? void 0 : r.sections;
+    return null != i && e in i;
 }

@@ -11,7 +11,7 @@ var r = n(481060),
     o = n(388032),
     s = n(210550);
 function c(e) {
-    let { title: t, info: n, bannerSrc: c, iconSrc: u, embedUrl: d, actions: m } = e,
+    let { title: t, info: n, bannerSrc: c, iconSrc: u, embedUrl: d, actions: m = [] } = e,
         { primaryColor: h, secondaryColor: f } = (0, l.Z)(null != u ? u : c),
         p = 'linear-gradient(45deg, '.concat(h, ', ').concat(f, ')');
     return (0, i.jsxs)('div', {
@@ -62,10 +62,22 @@ function c(e) {
                                 })
                         ]
                     }),
-                    null != m &&
+                    m.length > 0 &&
                         (0, i.jsx)('div', {
                             className: s.actionWrapper,
-                            children: m
+                            children: m.map((e, t) => {
+                                let { label: n, onClick: l } = e;
+                                return (0, i.jsx)(
+                                    r.Button,
+                                    {
+                                        color: 0 === t ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
+                                        fullWidth: !0,
+                                        onClick: l,
+                                        children: n
+                                    },
+                                    n
+                                );
+                            })
                         })
                 ]
             })
