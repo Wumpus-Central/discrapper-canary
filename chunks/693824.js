@@ -1,7 +1,7 @@
-var i, s, o, r, l, a, h, c;
-n.d(e, {
+var n, s, o, r, l, a, h, c;
+i.d(e, {
     GX: function () {
-        return i;
+        return n;
     },
     JU: function () {
         return s;
@@ -13,7 +13,7 @@ n.d(e, {
         return r;
     }
 }),
-    ((l = i || (i = {}))[(l.None = 0)] = 'None'),
+    ((l = n || (n = {}))[(l.None = 0)] = 'None'),
     (l[(l.Truncate = 1)] = 'Truncate'),
     (l[(l.Wrap = 2)] = 'Wrap'),
     ((a = s || (s = {}))[(a.Stretch = 0)] = 'Stretch'),

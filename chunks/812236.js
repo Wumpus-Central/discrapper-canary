@@ -65,20 +65,20 @@ function g(e, n) {
                 !i &&
                 (0, c.j)({
                     type: 'application',
-                    applicationId: n
+                    applicationId: e
                 });
-        }, [n, o, i]),
+        }, [e, o, i]),
         s
     );
 }
 function E(e, n) {
     return (0, d.v1)(
-        e,
+        n,
         { commandTypes: h },
         {
             placeholderCount: 1,
             scoreMethod: f.p.COMMAND_ONLY,
-            applicationId: n,
+            applicationId: e,
             allowFetch: !1,
             allowApplicationState: !0
         }
@@ -86,7 +86,7 @@ function E(e, n) {
 }
 function v(e) {
     let { channel: n, applicationId: r, botUserId: i } = e,
-        a = g(n, r),
+        a = g(r, n),
         u = (0, l.bG)('useIsPrimaryAppCommandUsableInAppDM');
     if (null == a) return !1;
     let c = null != a.integration_types && a.integration_types.includes(s.Y.USER_INSTALL),

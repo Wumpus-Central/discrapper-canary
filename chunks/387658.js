@@ -27,8 +27,8 @@ var i = t(200651),
     E = t(676161),
     b = t(660090),
     I = t(783097),
-    P = t(46332),
-    j = t(176412),
+    j = t(46332),
+    P = t(176412),
     y = t(870205),
     S = t(981631),
     T = t(689079),
@@ -60,7 +60,7 @@ function O(e) {
                 x.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
         }, [a.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        h = l.useMemo(() => (0, j.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        h = l.useMemo(() => (0, P.ae)(o.displayDescription, void 0), [o.displayDescription]),
         f = l.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -160,7 +160,7 @@ function B(e) {
                 e.stopPropagation();
                 let i = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, P.L)({
+                    (await (0, j.L)({
                         applicationId: t.applicationId,
                         channel: n,
                         sectionName: a,

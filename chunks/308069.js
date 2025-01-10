@@ -10,15 +10,15 @@ var o = n(200651),
     p = n(918701),
     m = n(685613),
     x = n(64141),
-    g = n(341907),
-    f = n(303385),
+    f = n(341907),
+    g = n(303385),
     h = n(388032),
     C = n(626094);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: v, onCtxMenuClose: j, useReducedMotion: _, isExpanded: b, isExpansionAnimationComplete: N } = e,
-        E = (0, d.aM)(),
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: v, onCtxMenuClose: j, useReducedMotion: _, isExpanded: b, isExpansionAnimationComplete: E } = e,
+        N = (0, d.aM)(),
         B = r.useCallback(() => {
-            (0, g.openDisclosureModal)(t, {
+            (0, f.openDisclosureModal)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
@@ -27,10 +27,10 @@ t.Z = (e) => {
             (0, p.FE)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: E
+                impressionId: N
             });
-        }, [E, t]),
-        S = b && N,
+        }, [N, t]),
+        S = b && E,
         y = (0, o.jsx)(l.Clickable, {
             onClick: T,
             className: a()(C.clickable, { [C.logo]: S }),
@@ -64,7 +64,7 @@ t.Z = (e) => {
                     backdropFilter: n.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, o.jsx)(f.Z, {
+            (0, o.jsx)(g.Z, {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: S,

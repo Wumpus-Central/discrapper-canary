@@ -29,8 +29,8 @@ function E(e) {
     let { channel: t, application: s, sectionName: c } = e,
         E = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         I = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        P = (0, h.ye)(I) ? b : x.Z,
-        j = l.useRef(null),
+        j = (0, h.ye)(I) ? b : x.Z,
+        P = l.useRef(null),
         [y, S] = l.useState(!1),
         { iconURL: T, name: L } = l.useMemo(
             () =>
@@ -51,7 +51,7 @@ function E(e) {
         (0, i.jsxs)(r.ScrollerNone, {
             className: g.container,
             fade: !0,
-            ref: j,
+            ref: P,
             role: 'region',
             'aria-label': N.intl.formatToPlainString(N.t['4OP4Ul'], { applicationName: L }),
             children: [
@@ -60,7 +60,7 @@ function E(e) {
                     channel: t,
                     name: L,
                     iconURL: T,
-                    scrollerRef: j,
+                    scrollerRef: P,
                     sectionName: c
                 }),
                 null != T &&
@@ -69,7 +69,7 @@ function E(e) {
                         className: g.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(j, {
                     channel: t,
                     application: I,
                     sectionName: c,

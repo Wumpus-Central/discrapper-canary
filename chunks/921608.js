@@ -1,10 +1,10 @@
-n.d(e, {
+i.d(e, {
     F: function () {
-        return i;
+        return n;
     },
     n: function () {
         return s;
     }
 });
-let i = 12,
+let n = 12,
     s = 24;

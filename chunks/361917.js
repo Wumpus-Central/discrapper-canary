@@ -28,8 +28,8 @@ var i = t(200651),
     E = t(541099),
     b = t(827498),
     I = t(87005),
-    P = t(219066),
-    j = t(106066),
+    j = t(219066),
+    P = t(106066),
     y = t(783097),
     S = t(695676),
     T = t(98880),
@@ -69,9 +69,9 @@ function F(e) {
         [x, _] = K(!0),
         [N, g] = K(h),
         [A, E] = K(f),
-        [I, P] = K(C),
-        j = x && N && A && I,
-        S = (f || h) && !j,
+        [I, j] = K(C),
+        P = x && N && A && I,
+        S = (f || h) && !P,
         T = C && u;
     l.useEffect(() => {
         (0, p.w1)({
@@ -124,9 +124,9 @@ function F(e) {
                               C &&
                                   (0, i.jsx)(X, {
                                       channel: n,
-                                      onEmptyState: P
+                                      onEmptyState: j
                                   }),
-                              j &&
+                              P &&
                                   (0, i.jsx)(M.A, {
                                       type: b.LG.HOME_EMPTY,
                                       textContent: t === b._b.TEXT ? w.intl.string(w.t.iKZctb) : w.intl.string(w.t.RL7Ncn)
@@ -335,7 +335,7 @@ function X(e) {
             numItems: a.length,
             numVisibleItems: a.length
         }),
-        s = (0, j.s)('ActivitiesShelfSection'),
+        s = (0, P.s)('ActivitiesShelfSection'),
         c = 0 === a.length;
     return (l.useEffect(() => {
         t(c);
@@ -375,7 +375,7 @@ function X(e) {
 function q(e) {
     let { channel: n, onEmptyState: t } = e,
         a = b.L3.APPS_IN_THIS_SERVER,
-        { appsInThisServer: o, isLoading: r } = (0, P.Z)({ channel: n }),
+        { appsInThisServer: o, isLoading: r } = (0, j.Z)({ channel: n }),
         { items: s, handleViewMore: c } = $({
             title: w.intl.string(w.t.KfkuGR),
             look: T.U4.ROW,

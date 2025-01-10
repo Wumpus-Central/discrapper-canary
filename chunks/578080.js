@@ -10,16 +10,16 @@ var o = n(200651),
     p = n(70097),
     m = n(703656),
     x = n(358085),
-    g = n(617136),
-    f = n(915750),
+    f = n(617136),
+    g = n(915750),
     h = n(272008),
     C = n(113434),
     v = n(569984),
     j = n(497505),
     _ = n(918701),
     b = n(865364),
-    N = n(585500),
-    E = n(475595),
+    E = n(585500),
+    N = n(475595),
     B = n(566078),
     T = n(340100),
     S = n(611855),
@@ -34,15 +34,15 @@ var o = n(200651),
     M = n(502926);
 let O = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: b, className: O, collapsedHeight: L, expansionSpring: Z, isExpanded: Q, isExpansionAnimationComplete: D, onCtxMenuOpen: H, onCtxMenuClose: V, onCtxMenuSelect: U, quest: z, useReducedMotion: F } = e,
+    let { children: b, className: O, collapsedHeight: L, expansionSpring: Z, isExpanded: Q, isExpansionAnimationComplete: D, onCtxMenuOpen: H, onCtxMenuClose: U, onCtxMenuSelect: V, quest: z, useReducedMotion: F } = e,
         G = (0, l.e7)([v.Z], () => v.Z.isEnrolling(z.id), [z]),
-        K = (0, f.aM)(),
+        K = (0, g.aM)(),
         Y = (0, C.B6)(z.config.expiresAt),
         X = B.r.build(z.config),
         J = (0, C.B6)(X.rewardsExpireAt),
-        $ = r.useMemo(() => (0, E.fh)(z, E.eC.HERO), [z]),
+        $ = r.useMemo(() => (0, N.fh)(z, N.eC.HERO), [z]),
         ee = (0, w.tP)(X.application.id),
-        et = X.features.has(I.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
+        et = X.features.has(I.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
         en = X.features.has(I.S7.START_QUEST_CTA) ? P.intl.string(P.t.E80Bdn) : P.intl.string(P.t.l7E81t),
         eo = r.useCallback(() => {
             (0, h.AH)(z.id, {
@@ -58,7 +58,7 @@ let O = r.forwardRef(function (e, t) {
         es = r.useCallback(() => {
             (0, _.FE)(z, {
                 content: j.jn.QUEST_BAR,
-                ctaContent: g.jZ.OPEN_GAME_LINK,
+                ctaContent: f.jZ.OPEN_GAME_LINK,
                 impressionId: K
             });
         }, [K, z]),
@@ -70,15 +70,15 @@ let O = r.forwardRef(function (e, t) {
         eu = (null === (s = z.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         ep = r.useMemo(() => (0, _.Xv)(z.config), [z.config]),
         em = Q && D,
-        ex = (0, N.D)({
+        ex = (0, E.D)({
             quest: z,
             taskDetails: ei,
             location: I.dr.QUESTS_BAR,
             questContent: j.jn.QUEST_BAR,
             thirdPartyTaskDetails: null != el ? el : void 0
         }),
-        eg = (0, x.isWeb)(),
-        ef = r.useMemo(() => {
+        ef = (0, x.isWeb)(),
+        eg = r.useMemo(() => {
             let e = (0, d.Qg)(z.config.colors.primary, {
                 base: '#ffffff',
                 contrastRatio: d.S3.Text
@@ -154,8 +154,8 @@ let O = r.forwardRef(function (e, t) {
                                       }),
                                       (0, o.jsx)(R.r, {
                                           onOpen: H,
-                                          onClose: V,
-                                          onSelect: U,
+                                          onClose: U,
+                                          onSelect: V,
                                           questContent: j.jn.QUEST_BAR,
                                           quest: z,
                                           shouldShowDisclosure: !1,
@@ -177,7 +177,7 @@ let O = r.forwardRef(function (e, t) {
                               eu
                                   ? (0, o.jsx)(u.Button, {
                                         className: a()(M.cta, M.ctaClaimReward),
-                                        style: ep ? ef : void 0,
+                                        style: ep ? eg : void 0,
                                         color: u.Button.Colors.CUSTOM,
                                         fullWidth: !0,
                                         onClick: er,
@@ -191,7 +191,7 @@ let O = r.forwardRef(function (e, t) {
                                         children: ex
                                     }),
                               (0, o.jsx)(T.Z, { quest: z }),
-                              !eg && !ec && !ee && ea && (0, o.jsx)(W, { onClick: em ? es : void 0 })
+                              !ef && !ec && !ee && ea && (0, o.jsx)(W, { onClick: em ? es : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {
@@ -206,8 +206,8 @@ let O = r.forwardRef(function (e, t) {
                                               (0, o.jsx)(S.Z, { color: 'always-white' }),
                                               (0, o.jsx)(R.r, {
                                                   onOpen: H,
-                                                  onClose: V,
-                                                  onSelect: U,
+                                                  onClose: U,
+                                                  onSelect: V,
                                                   questContent: j.jn.QUEST_BAR,
                                                   quest: z,
                                                   shouldShowDisclosure: !0,
@@ -252,7 +252,7 @@ let O = r.forwardRef(function (e, t) {
                                       }),
                                       (0, o.jsx)(u.Button, {
                                           className: M.cta,
-                                          style: '1232852290197655573' !== z.id ? ef : void 0,
+                                          style: '1232852290197655573' !== z.id ? eg : void 0,
                                           color: u.Button.Colors.CUSTOM,
                                           fullWidth: !0,
                                           onClick: em ? eo : void 0,

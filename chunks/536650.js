@@ -36,11 +36,11 @@ function x(e) {
         E = l.useRef(null),
         b = l.useRef(null),
         I = l.useRef(null),
-        P = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        j = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
+        j = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        P = (0, c.ZP)('number' == typeof x ? '' : x, null != j ? j : ''),
         y = l.useMemo(() => {
             var e, n;
-            let t = (0, a.compact)([d.Z.parseHexString(j), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
+            let t = (0, a.compact)([d.Z.parseHexString(P), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -52,8 +52,8 @@ function x(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : j;
-        }, [j, g]),
+                : P;
+        }, [P, g]),
         S = v(A),
         T = v(E),
         L = l.useCallback(() => {
@@ -74,7 +74,7 @@ function x(e) {
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((g ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(j, ' ')
+                        .concat(P, ' ')
                         .concat((1 - N) * 100, '%, ')
                         .concat(y, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
@@ -84,7 +84,7 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [y, j, null == T ? void 0 : T.height, g, _, null == S ? void 0 : S.height]);
+        }, [y, P, null == T ? void 0 : T.height, g, _, null == S ? void 0 : S.height]);
     return (
         l.useEffect(() => {
             L();
@@ -143,7 +143,7 @@ function x(e) {
                 (0, i.jsx)('div', {
                     ref: E,
                     className: f.bannerBackground,
-                    style: { backgroundColor: j }
+                    style: { backgroundColor: P }
                 })
             ]
         })

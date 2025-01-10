@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return E;
+            return N;
         },
         openConsoleConnectionErrorsModal: function () {
             return T;
@@ -20,22 +20,22 @@ var o = n(200651),
     p = n(210887),
     m = n(617136),
     x = n(915750),
-    g = n(113434),
-    f = n(497505),
+    f = n(113434),
+    g = n(497505),
     h = n(918701),
     C = n(475595),
     v = n(667105),
     j = n(981631),
     _ = n(388032),
     b = n(506430),
-    N = n(708901);
-function E(e) {
+    E = n(708901);
+function N(e) {
     var t;
-    let { questId: n, errorHints: s, transitionState: E, onClose: T } = e,
-        S = (0, g.B4)(n);
+    let { questId: n, errorHints: s, transitionState: N, onClose: T } = e,
+        S = (0, f.B4)(n);
     null == S && T();
     let [y, A] = (0, r.useState)(s),
-        R = (0, g.KX)(),
+        R = (0, f.KX)(),
         w = (0, m.O5)(),
         I = null === (t = (0, x.WD)()) || void 0 === t ? void 0 : t.getId(),
         k = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -47,13 +47,13 @@ function E(e) {
         M = (0, h.Bz)(S),
         O = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         W = (0, l.wj)(O) ? j.BRd.DARK : j.BRd.LIGHT,
-        { startConsoleQuest: L, startingConsoleQuest: Z } = (0, g.GI)({
+        { startConsoleQuest: L, startingConsoleQuest: Z } = (0, f.GI)({
             questId: S.id,
             beforeRequest: () => {
                 q.startAnimation(),
                     w({
                         questId: S.id,
-                        questContent: f.jn.CONNECTIONS_MODAL,
+                        questContent: g.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
@@ -62,7 +62,7 @@ function E(e) {
             }
         });
     return (0, o.jsxs)(c.ModalRoot, {
-        transitionState: E,
+        transitionState: N,
         size: c.ModalSize.DYNAMIC,
         className: b.modalRoot,
         children: [
@@ -79,7 +79,7 @@ function E(e) {
                                 children: (0, o.jsx)('img', {
                                     className: b.icon,
                                     alt: '',
-                                    src: N
+                                    src: E
                                 })
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
@@ -186,7 +186,7 @@ function E(e) {
                                 (0, h.V$)(
                                     { quest: S },
                                     {
-                                        content: f.jn.CONNECTIONS_MODAL,
+                                        content: g.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                                         impressionId: I
                                     }

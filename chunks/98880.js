@@ -37,8 +37,8 @@ var i,
     E = t(973616),
     b = t(695103),
     I = t(880448),
-    P = t(768581),
-    j = t(541099),
+    j = t(768581),
+    P = t(541099),
     y = t(783097),
     S = t(695676),
     T = t(176412),
@@ -170,7 +170,7 @@ function W(e) {
         A = (0, y.lf)(n),
         E = 'large_banner' === t || 'medium_banner' === t,
         I = o.useCallback(() => _(!1), []),
-        P = (0, c.e7)([h.Z, b.Z], () => h.Z.inDevModeForApplication(n.id) || b.Z.inTestModeForApplication(n.id), [n.id]);
+        j = (0, c.e7)([h.Z, b.Z], () => h.Z.inDevModeForApplication(n.id) || b.Z.inTestModeForApplication(n.id), [n.id]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)('div', {
@@ -195,7 +195,7 @@ function W(e) {
                     E
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  P || A
+                                  j || A
                                       ? (0, a.jsxs)('div', {
                                             className: U.bannerUpperRightContainer,
                                             children: [
@@ -208,7 +208,7 @@ function W(e) {
                                                             children: O.intl.string(O.t['/eVltr'])
                                                         })
                                                     }),
-                                                P && (0, a.jsx)(F, {})
+                                                j && (0, a.jsx)(F, {})
                                             ]
                                         })
                                       : null,
@@ -365,7 +365,7 @@ function Y(e) {
 function X(e) {
     let { bot: n, fallbackColor: t, disableFadeIn: i } = e,
         l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        o = (0, P.aN)({
+        o = (0, j.aN)({
             id: n.id,
             banner: n.banner,
             canAnimate: !l,
@@ -399,7 +399,7 @@ function J(e) {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
-                    source: j.Z.entrypoint(),
+                    source: P.Z.entrypoint(),
                     location: r,
                     query: l
                 }),

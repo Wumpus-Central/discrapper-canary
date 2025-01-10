@@ -25,7 +25,7 @@ function C(e) {
         E = (0, a.e7)([p.Z], () => (null != A ? p.Z.can(h.Plq.MANAGE_GUILD, A) : null)),
         b = (0, c.LD)(x, !0),
         I = (0, c.PL)(!0, !0),
-        { isUserApp: P, isGuildApp: j } = l.useMemo(() => {
+        { isUserApp: j, isGuildApp: P } = l.useMemo(() => {
             var e, n, t, i;
             if (null == g)
                 return {
@@ -59,7 +59,7 @@ function C(e) {
     if (_ === h.IlC.POPOUT) return null;
     let T = [];
     return (
-        j &&
+        P &&
             E &&
             T.push(
                 (0, i.jsx)(
@@ -72,7 +72,7 @@ function C(e) {
                     'manage-server-integration'
                 )
             ),
-        P &&
+        j &&
             T.push(
                 (0, i.jsx)(
                     o.MenuItem,

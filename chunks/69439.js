@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return E;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    g = n(667105),
-    f = n(341907),
+    f = n(667105),
+    g = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -55,33 +55,33 @@ function b(e) {
         children: [n, t]
     });
 }
-function N(e) {
-    var t, n, s, N;
-    let { quest: E, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: y } = e,
+function E(e) {
+    var t, n, s, E;
+    let { quest: N, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: y } = e,
         A = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, g.g2)({ useReducedMotion: A }),
+        R = (0, f.g2)({ useReducedMotion: A }),
         w = (0, d.O5)(),
-        I = (0, u._s)({ quest: E }),
-        k = (0, u.z)(E),
-        q = (0, u.B6)(E.config.expiresAt, {
+        I = (0, u._s)({ quest: N }),
+        k = (0, u.z)(N),
+        q = (0, u.B6)(N.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
         { isClaiming: P, isEnrolling: M } = (0, i.cj)([p.Z], () => ({
-            isClaiming: p.Z.isClaimingReward(E.id) || p.Z.isFetchingRewardCode(E.id),
-            isEnrolling: p.Z.isEnrolling(E.id)
+            isClaiming: p.Z.isClaimingReward(N.id) || p.Z.isFetchingRewardCode(N.id),
+            isEnrolling: p.Z.isEnrolling(N.id)
         })),
-        O = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        W = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        L = W && (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
-        Z = (0, x.iQ)(E),
-        Q = !(0, x.zi)(E),
-        D = (0, u._Q)(E),
-        H = (0, x.Xv)(E.config),
-        V = (0, x.q8)(E),
-        U = (0, u.GU)(E),
-        z = (0, u.Rf)(E),
-        [F, G, K] = (0, u.me)(E, z),
+        O = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        W = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        L = W && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        Z = (0, x.iQ)(N),
+        Q = !(0, x.zi)(N),
+        D = (0, u._Q)(N),
+        H = (0, x.Xv)(N.config),
+        U = (0, x.q8)(N),
+        V = (0, u.GU)(N),
+        z = (0, u.Rf)(N),
+        [F, G, K] = (0, u.me)(N, z),
         Y = Q && D === u.OH.ACCEPTED,
         X = Y && F === m.LI.SELECT,
         J = Y && !X && G.length > 1,
@@ -95,22 +95,22 @@ function N(e) {
             text: ee,
             onClick: et,
             tooltipText: en
-        } = (0, g.Ks)({
+        } = (0, f.Ks)({
             progressState: D,
-            quest: E,
+            quest: N,
             location: B,
             isCollectibleQuest: H,
             questContentPosition: S,
             questContentRowIndex: y,
             inGiftInventory: !0,
-            isVideoQuest: V
+            isVideoQuest: U
         }),
         { startingConsoleQuest: eo, startConsoleQuest: er } = (0, u.GI)({
-            questId: E.id,
+            questId: N.id,
             beforeRequest: () => {
                 R.startAnimation(),
                     w({
-                        questId: E.id,
+                        questId: N.id,
                         questContent: B,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: S,
@@ -121,7 +121,7 @@ function N(e) {
                 R.stopAnimation(), T(e);
             }
         }),
-        es = (null === (N = E.userStatus) || void 0 === N ? void 0 : N.claimedAt) != null,
+        es = (null === (E = N.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null,
         ea = null;
     return (Z && L
         ? (ea = (0, o.jsx)(l.Button, {
@@ -132,7 +132,7 @@ function N(e) {
               children: ee
           }))
         : W
-          ? (ea = V
+          ? (ea = U
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(l.Button, {
@@ -140,7 +140,7 @@ function N(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, f.openVideoQuestModal)(E);
+                                  (0, g.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,
@@ -168,7 +168,7 @@ function N(e) {
                       children: ee
                   }))
           : Q
-            ? U.length > 0
+            ? V.length > 0
                 ? (ea = (0, o.jsx)(
                       l.TooltipContainer,
                       {
@@ -209,7 +209,7 @@ function N(e) {
                                     }
                                 }
                             })
-                          : (0, x.$J)(E) && !k && F !== m.LI.DESKTOP
+                          : (0, x.$J)(N) && !k && F !== m.LI.DESKTOP
                             ? I
                                 ? (0, o.jsx)(l.Button, {
                                       color: l.ButtonColors.PRIMARY,
@@ -227,7 +227,7 @@ function N(e) {
                                           children: [R.render(), v.intl.string(v.t.nPThNT)]
                                       })
                                   })
-                            : V
+                            : U
                               ? (0, o.jsx)(l.Button, {
                                     color: l.ButtonColors.BRAND,
                                     onClick: null != et ? et : void 0,
@@ -264,7 +264,7 @@ function N(e) {
                   J &&
                       (0, o.jsx)(h.U, {
                           onSelect: $,
-                          quest: E,
+                          quest: N,
                           questContent: m.jn.ACTIVITY_PANEL,
                           children: (e) =>
                               (0, o.jsx)(l.Button, {

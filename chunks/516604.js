@@ -1,40 +1,40 @@
-var r = t(192379),
-    i = t(570140),
-    a = t(4646),
-    c = t(258340),
-    o = t(768581),
-    u = t(176354);
-n.Z = function (e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 30,
-        { update: t, draw: s, emit: l } = (0, c.Z)(e),
-        d = r.useMemo(() => new a.ZP(), []),
+var r = n(192379),
+    i = n(570140),
+    u = n(4646),
+    a = n(258340),
+    c = n(768581),
+    l = n(176354);
+t.Z = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 30,
+        { update: n, draw: o, emit: s } = (0, a.Z)(e),
+        d = r.useMemo(() => new u.ZP(), []),
         f = r.useCallback(
             (e) => {
-                (e.assetMap = d), s(e);
+                (e.assetMap = d), o(e);
             },
-            [d, s]
+            [d, o]
         );
     return (
         r.useEffect(() => {
             async function e(e) {
-                var t;
+                var n;
                 let { emoji: r } = e,
-                    i = null !== (t = r.id) && void 0 !== t ? t : r.name,
-                    a =
+                    i = null !== (n = r.id) && void 0 !== n ? n : r.name,
+                    u =
                         null == r.id
-                            ? u.ZP.getURL(r.name)
-                            : o.ZP.getEmojiURL({
+                            ? l.ZP.getURL(r.name)
+                            : c.ZP.getEmojiURL({
                                   id: r.id,
                                   animated: !1,
-                                  size: 32,
+                                  size: 64,
                                   forcePNG: !0
                               });
-                await d.loadRemoteImage(i, a), l(i, n);
+                await d.loadRemoteImage(i, u), s(i, t);
             }
             return i.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => i.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
         }),
         {
-            update: t,
+            update: n,
             draw: f
         }
     );

@@ -9,11 +9,11 @@ var o = n(200651),
     u = n(277636);
 t.Z = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: g, onCtxMenuClosed: f, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
+    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: f, onCtxMenuClosed: g, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
         _ = r.useRef(null),
         b = r.useRef(null),
-        N = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        E = (0, s.Rf)(C);
+        E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        N = (0, s.Rf)(C);
     return (0, o.jsxs)(i.p, {
         expandedContentRef: n,
         collapsedContentRef: _,
@@ -27,14 +27,14 @@ t.Z = function (e) {
                 isExpansionAnimationComplete: x,
                 quest: C,
                 useReducedMotion: v,
-                taskDetails: E
+                taskDetails: N
             }),
             (0, o.jsx)(c.Z, {
                 expansionSpring: p,
                 className: u.content,
                 collapsedHeight: j,
-                onCtxMenuOpen: g,
-                onCtxMenuClose: f,
+                onCtxMenuOpen: f,
+                onCtxMenuClose: g,
                 onCtxMenuSelect: h,
                 overlayRef: b,
                 isExpanded: m,
@@ -42,22 +42,22 @@ t.Z = function (e) {
                 quest: C,
                 useReducedMotion: v,
                 ref: n,
-                taskDetails: E,
+                taskDetails: N,
                 children: (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)(d.Z, {
                             expansionSpring: p,
                             isExpanded: m
                         }),
-                        !N &&
+                        !E &&
                             (0, o.jsx)(a.Z, {
                                 quest: C,
                                 expansionSpring: p,
                                 useReducedMotion: v,
                                 isExpanded: m,
                                 isExpansionAnimationComplete: x,
-                                onCtxMenuOpen: g,
-                                onCtxMenuClose: f,
+                                onCtxMenuOpen: f,
+                                onCtxMenuClose: g,
                                 onCtxMenuSelect: h
                             })
                     ]

@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(617136),
     m = n(915750),
     x = n(111382),
-    g = n(113434),
-    f = n(497505),
+    f = n(113434),
+    g = n(497505),
     h = n(918701),
     C = n(667105),
     v = n(585857),
@@ -44,7 +44,7 @@ function b(e) {
         ]
     });
 }
-function N(e) {
+function E(e) {
     return (0, o.jsx)(c.Text, {
         className: _.microphoneUnitBodyText,
         color: 'text-muted',
@@ -52,23 +52,23 @@ function N(e) {
         children: e.children
     });
 }
-function E(e) {
+function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, x.n)(),
-        l = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
+        l = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2),
         d = (0, C.g2)({ useReducedMotion: n }),
         v = (0, p.O5)(),
         b = (0, m.aM)(),
         {
-            errorHints: E,
+            errorHints: N,
             startingConsoleQuest: B,
             startConsoleQuest: T
-        } = (0, g.GI)({
+        } = (0, f.GI)({
             questId: t.id,
             beforeRequest: () => {
                 v({
                     questId: t.id,
-                    questContent: f.jn.QUEST_BAR_V2,
+                    questContent: g.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR
                 }),
                     d.startAnimation();
@@ -76,20 +76,20 @@ function E(e) {
             afterRequest: d.stopAnimation
         }),
         { header: S, renderBody: y } = r.useMemo(() => {
-            let e = E.length > 0,
+            let e = N.length > 0,
                 n = t.config.messages.gameTitle;
             return {
                 header: e ? j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: n }) : j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: n }),
                 renderBody: e
                     ? () =>
                           (0, o.jsx)(o.Fragment, {
-                              children: E.map((e, n) => {
+                              children: N.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                                           s = (0, h.C9)(e),
                                           a = (0, h._j)(e);
                                       return (0, o.jsx)(
-                                          N,
+                                          E,
                                           {
                                               children: j.intl.format(s, {
                                                   account_name: null == r ? void 0 : r.name,
@@ -100,7 +100,7 @@ function E(e) {
                                                               platformType: a
                                                           },
                                                           {
-                                                              content: f.jn.QUEST_BAR,
+                                                              content: g.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
                                                               impressionId: b
                                                           }
@@ -111,7 +111,7 @@ function E(e) {
                                           n
                                       );
                                   }
-                                  return (0, o.jsx)(N, { children: e.message }, n);
+                                  return (0, o.jsx)(E, { children: e.message }, n);
                               })
                           })
                     : () =>
@@ -122,7 +122,7 @@ function E(e) {
                               children: j.intl.format(j.t.GXqvCw, { gameTitle: n })
                           })
             };
-        }, [E, t, s, b]);
+        }, [N, t, s, b]);
     return (0, o.jsxs)('div', {
         className: _.microphoneUnit,
         children: [
@@ -132,7 +132,7 @@ function E(e) {
                     (0, o.jsx)(c.CircleWarningIcon, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: 0 === E.length ? _.warningCircle : _.errorCircle,
+                        className: 0 === N.length ? _.warningCircle : _.errorCircle,
                         width: 16,
                         height: 16
                     }),
@@ -149,7 +149,7 @@ function E(e) {
             }),
             (0, o.jsxs)('div', {
                 className: a()({ [_.opacity_50]: B }),
-                children: [y(), 0 === E.length ? null : (0, o.jsx)(N, { children: l })]
+                children: [y(), 0 === N.length ? null : (0, o.jsx)(E, { children: l })]
             })
         ]
     });
@@ -165,7 +165,7 @@ function B(e) {
 t.Z = function (e) {
     let { quest: t, taskDetails: n } = e,
         s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        a = (0, g.z6)(),
+        a = (0, f.z6)(),
         {
             steps: i,
             hasConnectedAccounts: u,
@@ -231,7 +231,7 @@ t.Z = function (e) {
                     u &&
                         !p &&
                         !m &&
-                        (0, o.jsx)(E, {
+                        (0, o.jsx)(N, {
                             useReducedMotion: s,
                             quest: t
                         })

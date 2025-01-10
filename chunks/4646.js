@@ -1,38 +1,38 @@
-function i(t, e, n) {
+function n(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
+            : (t[e] = i),
         t
     );
 }
-n.d(e, {
+i.d(e, {
     k2: function () {
         return o;
     }
 }),
-    n(47120);
-let s = new (n(259443).Yd)('AssetMap');
+    i(47120);
+let s = new (i(259443).Yd)('AssetMap');
 async function o(t) {
     let e = new r(),
-        n = Object.entries(t).map((t) => {
-            let [n, i] = t;
-            return e.loadRemoteImage(n, i).catch((t) => s.warn('Failed to load canvas asset', t, n, i));
+        i = Object.entries(t).map((t) => {
+            let [i, n] = t;
+            return e.loadRemoteImage(i, n).catch((t) => s.warn('Failed to load canvas asset', t, i, n));
         });
-    return await Promise.all(n), e;
+    return await Promise.all(i), e;
 }
 class r {
     loadFonts() {
         return Promise.resolve();
     }
     async loadRemoteImage(t, e) {
-        let n = new Image();
-        return (n.src = e), (n.crossOrigin = 'anonymous'), await n.decode(), (this.assets[t] = n), Promise.resolve();
+        let i = new Image();
+        return (i.src = e), (i.crossOrigin = 'anonymous'), await i.decode(), (this.assets[t] = i), Promise.resolve();
     }
     get(t) {
         return this.assets[t];
@@ -41,7 +41,7 @@ class r {
         return null != this.assets[t];
     }
     constructor() {
-        i(this, 'assets', {}), i(this, 'fontManager', void 0);
+        n(this, 'assets', {}), n(this, 'fontManager', void 0);
     }
 }
 e.ZP = r;

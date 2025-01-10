@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return P;
     }
 }),
     t(789020),
@@ -28,10 +28,10 @@ var i = t(200651),
     E = t(314734),
     b = t(981631),
     I = t(388032),
-    P = t(472033);
-function j(e) {
+    j = t(472033);
+function P(e) {
     var n;
-    let { application: t, channel: l, className: j, sectionName: y } = e,
+    let { application: t, channel: l, className: P, sectionName: y } = e,
         S = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
         T = (0, g.L1)(t),
         L = (0, _.Eb)(T),
@@ -50,7 +50,7 @@ function j(e) {
         O = (0, A.P)({ application: t }),
         U = (0, x.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, b.udG.EMBEDDED);
     return (0, i.jsxs)('div', {
-        className: P.container,
+        className: j.container,
         children: [
             (0, i.jsx)(r.Clickable, {
                 onClick: () => {
@@ -70,7 +70,7 @@ function j(e) {
                         }),
                         (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['L/PwZW']), r.ToastType.SUCCESS));
                 },
-                className: a()(P.clickable, j),
+                className: a()(j.clickable, P),
                 'aria-label': I.intl.string(I.t.WqhZsr),
                 children: (0, i.jsx)(r.LinkIcon, {
                     size: 'sm',
@@ -134,7 +134,7 @@ function j(e) {
                 children: (e) =>
                     (0, i.jsx)(r.Clickable, {
                         onClick: e.onClick,
-                        className: a()(P.clickable, j),
+                        className: a()(j.clickable, P),
                         'aria-label': I.intl.string(I.t.UKOtz8),
                         children: (0, i.jsx)(r.MoreHorizontalIcon, {
                             size: 'sm',

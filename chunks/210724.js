@@ -16,24 +16,24 @@ var o = n(200651),
     p = n(819640),
     m = n(617136),
     x = n(113434),
-    g = n(497505),
-    f = n(977156),
+    f = n(497505),
+    g = n(977156),
     h = n(5881),
     C = n(602667),
     v = n(78826),
     j = n(667105),
     _ = n(693900),
     b = n(617889),
-    N = n(130653),
-    E = n(46140),
+    E = n(130653),
+    N = n(46140),
     B = n(981631),
     T = n(157410);
 function S(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, x.qI)({
-            mode: t ? E.NH.EXPANDED : E.NH.COLLAPSED,
-            questContent: g.jn.QUEST_BAR_V2,
+            mode: t ? N.NH.EXPANDED : N.NH.COLLAPSED,
+            questContent: f.jn.QUEST_BAR_V2,
             questId: n
         }),
         null
@@ -44,12 +44,12 @@ function y(e) {
     let { quest: s } = e,
         x = (0, h.T)({
             quest: s,
-            location: E.dr.QUESTS_BAR
+            location: N.dr.QUESTS_BAR
         }),
-        y = (0, f.Zy)({ location: E.dr.QUESTS_BAR }),
+        y = (0, g.Zy)({ location: N.dr.QUESTS_BAR }),
         A = (0, j.qN)({
             quest: s,
-            location: E.dr.QUESTS_BAR
+            location: N.dr.QUESTS_BAR
         }),
         R = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         w = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
@@ -59,12 +59,12 @@ function y(e) {
         P = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         M = (0, d.Z)(P),
         { hasError: O, isLoading: W } = (0, v.d7)(),
-        L = r.useContext(N.T) || (y && A && !W),
+        L = r.useContext(E.T) || (y && A && !W),
         Z = r.useRef(L),
         Q = (0, b.B)(s, L && !O),
         D = r.useRef(-1),
         H = r.useRef(!1),
-        [V, U] = r.useState(!1),
+        [U, V] = r.useState(!1),
         [z, F] = r.useState(!1),
         [G, K] = r.useState(!0),
         [Y, X] = r.useState(!0),
@@ -81,13 +81,13 @@ function y(e) {
             en(), et(!0);
         }, [en, et]),
         er = r.useCallback(() => {
-            U(!0);
+            V(!0);
         }, []),
         es = r.useCallback(() => {
-            U(!1), !H.current && !P && et(!1);
+            V(!1), !H.current && !P && et(!1);
         }, [P, et]),
         ea = r.useCallback(() => {
-            U(!1), !P && et(!1), (H.current = !1);
+            V(!1), !P && et(!1), (H.current = !1);
         }, [P, et]),
         ei = r.useCallback(
             function () {
@@ -102,15 +102,15 @@ function y(e) {
             ei();
         }, [ei]),
         ec = r.useCallback(() => {
-            if ((window.clearTimeout(D.current), !!Q.canCollapseOnBlur && !V)) !H.current && et(!1);
-        }, [V, Q, et]),
+            if ((window.clearTimeout(D.current), !!Q.canCollapseOnBlur && !U)) !H.current && et(!1);
+        }, [U, Q, et]),
         ed = r.useCallback(() => {
             var e;
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER,
                 properties: {
-                    ...(0, m.mH)(g.jn.QUEST_BAR),
+                    ...(0, m.mH)(f.jn.QUEST_BAR),
                     impression_id: null === (e = I.current) || void 0 === e ? void 0 : e.getId()
                 }
             }),
@@ -123,7 +123,7 @@ function y(e) {
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER_OFF,
                 properties: {
-                    ...(0, m.mH)(g.jn.QUEST_BAR),
+                    ...(0, m.mH)(f.jn.QUEST_BAR),
                     impression_id: null === (e = I.current) || void 0 === e ? void 0 : e.getId()
                 }
             }),
@@ -142,7 +142,7 @@ function y(e) {
         r.useLayoutEffect(() => {
             L !== Z.current && X(!1), (Z.current = L);
         }, [L]);
-    let ep = k ? E.XZ : E.R4,
+    let ep = k ? N.XZ : N.R4,
         [{ expansionSpring: em }, ex] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: ep,
@@ -159,7 +159,7 @@ function y(e) {
             immediate: R
         });
     }, [z, ex, R]);
-    let { visibilitySpring: eg } = (0, c.useSpring)({
+    let { visibilitySpring: ef } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: L ? 1 : 0 },
         config: {
@@ -184,7 +184,7 @@ function y(e) {
                 questId: s.id,
                 event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, m.mH)(g.jn.QUEST_BAR),
+                    ...(0, m.mH)(f.jn.QUEST_BAR),
                     reason: 'asset_loading_error',
                     impression_id: null === (e = I.current) || void 0 === e ? void 0 : e.getId()
                 }
@@ -194,7 +194,7 @@ function y(e) {
                     questId: s.id,
                     event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, m.mH)(g.jn.QUEST_BAR),
+                        ...(0, m.mH)(f.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest',
                         impression_id: null === (t = I.current) || void 0 === t ? void 0 : t.getId()
                     }
@@ -229,7 +229,7 @@ function y(e) {
                                   }),
                                   style: {
                                       color: s.config.colors.secondary,
-                                      height: eg.to({
+                                      height: ef.to({
                                           range: [0, 1],
                                           output: [0, !Q.canCollapseOnBlur && z ? J : 70]
                                       })
@@ -277,7 +277,7 @@ t.Z =
                   : (0, o.jsx)(
                         v.p,
                         {
-                            source: E.dr.QUESTS_BAR,
+                            source: N.dr.QUESTS_BAR,
                             questId: e.id,
                             children: (0, o.jsx)(y, { quest: e })
                         },

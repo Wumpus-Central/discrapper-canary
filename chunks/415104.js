@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     n(47120);
@@ -16,9 +16,9 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(263740);
-function g(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: g } = e,
-        [f, h] = r.useState(!1),
+function f(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: f } = e,
+        [g, h] = r.useState(!1),
         [C, v] = r.useState([]),
         j = (0, l.qb)(t),
         _ = (0, i._F)(),
@@ -30,7 +30,7 @@ function g(e) {
                     properties: (0, i.mH)(s)
                 });
         }, [_, t.id, s]),
-        N = r.useCallback(() => {
+        E = r.useCallback(() => {
             h(!1),
                 _({
                     questId: t.id,
@@ -41,22 +41,22 @@ function g(e) {
     return (0, o.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
-            g.current = e;
+            f.current = e;
         },
         className: a()(x.container, n),
         onMouseEnter: b,
-        onMouseLeave: N,
+        onMouseLeave: E,
         children: [
             (0, o.jsx)(u.Z, {
                 quest: t,
-                isHovering: f,
+                isHovering: g,
                 errorHints: C,
                 warningHints: j
             }),
             (0, o.jsx)(p.Z, {
                 quest: t,
                 questContent: s,
-                isHovering: f,
+                isHovering: g,
                 contentPosition: c,
                 rowIndex: d,
                 onReceiveErrorHints: v
@@ -64,7 +64,7 @@ function g(e) {
         ]
     });
 }
-function f(e) {
+function g(e) {
     return (0, o.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -72,7 +72,7 @@ function f(e) {
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
         children: (t) =>
-            (0, o.jsx)(g, {
+            (0, o.jsx)(f, {
                 ...e,
                 impressionRef: t
             })

@@ -11,15 +11,15 @@ var o = n(200651),
     p = n(607070),
     m = n(819640),
     x = n(569379),
-    g = n(675654),
-    f = n(211720),
+    f = n(675654),
+    g = n(211720),
     h = n(197857);
 let C = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
-        { completionSpring: b, startCompletionAnimation: N } = (0, x.G)(),
-        E = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
+        N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         B = r.useRef(!1),
         T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         S = r.useRef(null),
@@ -48,7 +48,7 @@ t.Z = (e) => {
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
-                        ...g.We,
+                        ...f.We,
                         position: {
                             type: 'static-random',
                             minValue: {
@@ -92,36 +92,36 @@ t.Z = (e) => {
         }, [j, S, P, T]),
         O = (0, u.Z)(_);
     return (r.useEffect(() => {
-        E && _ && !O && (N(), M());
-    }, [_, E, N, M, O]),
+        N && _ && !O && (E(), M());
+    }, [_, N, E, M, O]),
     r.useEffect(() => {
-        E &&
+        N &&
             !y &&
             A &&
             setTimeout(() => {
-                N(), M();
+                E(), M();
             }, 200);
-    }, [E, A, y, N, M]),
+    }, [N, A, y, E, M]),
     r.useEffect(() => {
-        if (!!P.isReady) !B.current && E && (N(), M()), (B.current = E);
-    }, [E, B, M, N, P]),
+        if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
+    }, [N, B, M, E, P]),
     T)
         ? null
         : (0, o.jsxs)('div', {
-              className: f.wrapper,
+              className: g.wrapper,
               'aria-hidden': 'true',
               ref: S,
               children: [
                   (0, o.jsx)(c.animated.div, {
-                      className: f.background,
+                      className: g.background,
                       style: { opacity: b }
                   }),
                   (0, o.jsx)(c.animated.div, {
-                      className: a()(f.borders, f.bordersTopLeft),
+                      className: a()(g.borders, g.bordersTopLeft),
                       style: { opacity: b }
                   }),
                   (0, o.jsxs)(c.animated.div, {
-                      className: f.confettiWrapper,
+                      className: g.confettiWrapper,
                       style: {
                           transform: n
                               .to({
@@ -133,20 +133,20 @@ t.Z = (e) => {
                       children: [
                           (0, o.jsx)(i.O_, {
                               ref: w,
-                              className: f.confetti,
+                              className: g.confetti,
                               environment: q.current
                           }),
                           (0, o.jsx)(i.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
-                              spriteWidth: g.Ko,
-                              spriteHeight: g.Ko
+                              spriteWidth: f.Ko,
+                              spriteHeight: f.Ko
                           }),
                           null != s.current &&
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
-                                      className: a()(f.borders, f.bordersBottom),
+                                      className: a()(g.borders, g.bordersBottom),
                                       style: { opacity: b }
                                   }),
                                   s.current

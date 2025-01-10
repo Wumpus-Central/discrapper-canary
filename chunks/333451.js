@@ -17,8 +17,8 @@ var o = t(200651),
     m = t(639119),
     _ = t(165583),
     S = t(263954),
-    g = t(706454),
-    E = t(709586),
+    E = t(706454),
+    g = t(709586),
     h = t(626135),
     P = t(930153),
     T = t(74538),
@@ -29,17 +29,17 @@ var o = t(200651),
     C = t(427930);
 function N(e) {
     let { shouldUpsellFromNoneTier: n } = e,
-        t = (0, a.e7)([g.default], () => g.default.locale);
+        t = (0, a.e7)([E.default], () => E.default.locale);
     return (0, o.jsxs)('div', {
         className: C.perksList,
         children: [
             (0, o.jsx)(S.Z, {
-                icon: E.Z,
+                icon: g.Z,
                 iconClassName: C.perkIconGuild,
                 description: y.intl.formatToPlainString(y.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
             }),
             (0, o.jsx)(S.Z, {
-                icon: E.Z,
+                icon: g.Z,
                 iconClassName: C.perkIconGuild,
                 description: y.intl.formatToPlainString(y.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
             }),
@@ -65,11 +65,11 @@ function N(e) {
 }
 function A(e) {
     var n;
-    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: S, onSubscriptionConfirmation: g, analyticsLocation: E, analyticsSourceLocation: P, priceOptions: A } = e,
+    let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: S, onSubscriptionConfirmation: E, analyticsLocation: g, analyticsSourceLocation: P, priceOptions: A } = e,
         { analyticsLocations: M, sourceAnalyticsLocations: k } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: v } = (0, c.useThemeContext)(),
-        R = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
-        L = null == t || null == t.premiumSubscriptionType,
+        L = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+        R = null == t || null == t.premiumSubscriptionType,
         j = T.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, A),
         B = (0, I.T4)(j.amount, j.currency),
         D = (0, m.N)(),
@@ -97,7 +97,7 @@ function A(e) {
                             className: C.bodyText,
                             children: null != Z ? y.intl.string(y.t.AoSzEh) : y.intl.format(y.t['7vePZW'], { monthlyPrice: B })
                         }),
-                        (0, o.jsx)(N, { shouldUpsellFromNoneTier: L })
+                        (0, o.jsx)(N, { shouldUpsellFromNoneTier: R })
                     ]
                 }),
                 (0, o.jsxs)(c.ModalFooter, {
@@ -109,7 +109,7 @@ function A(e) {
                             children: [
                                 (0, o.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
-                                    color: R,
+                                    color: L,
                                     onClick: S,
                                     children: y.intl.string(y.t['SI/adn'])
                                 }),
@@ -123,11 +123,11 @@ function A(e) {
                                                 subscriptionTier: x.Si.TIER_2,
                                                 analyticsLocations: M,
                                                 analyticsObject: {
-                                                    ...E,
+                                                    ...g,
                                                     section: b.jXE.PREMIUM_GUILD_PURCHASE_MODAL
                                                 },
                                                 analyticsSourceLocation: P,
-                                                onSubscriptionConfirmation: g,
+                                                onSubscriptionConfirmation: E,
                                                 trialId: Z
                                             });
                                     },
@@ -138,7 +138,7 @@ function A(e) {
                         (0, o.jsx)('div', {
                             className: C.backStep,
                             children: (0, o.jsx)(c.Button, {
-                                color: R,
+                                color: L,
                                 look: c.Button.Looks.LINK,
                                 size: c.Button.Sizes.NONE,
                                 onClick: () => a(),

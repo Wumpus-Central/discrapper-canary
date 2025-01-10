@@ -27,8 +27,8 @@ var i = t(200651),
     E = t(561160),
     b = t(41558),
     I = t(106771),
-    P = t(79984),
-    j = t(314734),
+    j = t(79984),
+    P = t(314734),
     y = t(981631),
     S = t(388032),
     T = t(722029);
@@ -98,10 +98,10 @@ function k(e) {
             ];
         }, [N, C]),
         I = b.length > 0,
-        P = p && !I && !A;
+        j = p && !I && !A;
     return u
         ? (0, i.jsx)(D, {})
-        : P
+        : j
           ? (0, i.jsx)(E.A, {
                 type: v.LG.SEARCH_EMPTY,
                 searchQuery: t,
@@ -133,9 +133,9 @@ function O(e) {
         [_, N] = l.useState(!1),
         A = null !== (n = (0, s.Z)(_)) && void 0 !== n ? n : _,
         E = l.useCallback(() => N((e) => !e), []),
-        P = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
-        L = _ && !P;
-    l.useLayoutEffect(() => N(!1), [P]);
+        j = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
+        L = _ && !j;
+    l.useLayoutEffect(() => N(!1), [j]);
     let {
         ref: R,
         isTransitioning: M,
@@ -144,7 +144,7 @@ function O(e) {
         key: r,
         isExpanded: L,
         durationMs: 200,
-        maxAnimationHeight: j.K7
+        maxAnimationHeight: P.K7
     });
     l.useEffect(() => {
         !A &&
@@ -248,7 +248,7 @@ function B(e) {
                                   t.id
                               );
                           }),
-                          t && R.map((e) => (0, i.jsx)(P.Z, {}, e))
+                          t && R.map((e) => (0, i.jsx)(j.Z, {}, e))
                       ]
                   })
               ]
@@ -296,12 +296,12 @@ function D() {
             (0, i.jsx)(b.Z, { title: S.intl.string(S.t['0hKkS0']) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: L.map((e) => (0, i.jsx)(P.Z, {}, e))
+                children: L.map((e) => (0, i.jsx)(j.Z, {}, e))
             }),
             (0, i.jsx)(b.Z, { title: S.intl.string(S.t.PHjkRE) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: R.map((e) => (0, i.jsx)(P.Z, {}, e))
+                children: R.map((e) => (0, i.jsx)(j.Z, {}, e))
             })
         ]
     });

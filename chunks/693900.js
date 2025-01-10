@@ -37,20 +37,20 @@ function m(e) {
     let { children: n } = e,
         { springConfig: p, isExpanded: m } = r.useContext(u),
         x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: g, height: f = null } = (0, l.Z)(),
-        h = null !== (t = (0, c.Z)(f)) && void 0 !== t ? t : null,
+        { ref: f, height: g = null } = (0, l.Z)(),
+        h = null !== (t = (0, c.Z)(g)) && void 0 !== t ? t : null,
         [{ height: C }, v] = (0, i.useSpring)(() => ({
             from: { height: 0 },
             config: p
         }));
     return (
         r.useLayoutEffect(() => {
-            null !== f &&
+            null !== g &&
                 v({
-                    height: f,
+                    height: g,
                     immediate: !m || x || null === h
                 });
-        }, [f, v, m, x, h]),
+        }, [g, v, m, x, h]),
         (0, o.jsx)(s.animated.div, {
             style: {
                 height: null === h ? 'auto' : C,
@@ -58,7 +58,7 @@ function m(e) {
             },
             children: (0, o.jsx)('div', {
                 style: { overflow: 'hidden' },
-                ref: g,
+                ref: f,
                 children: n
             })
         })
