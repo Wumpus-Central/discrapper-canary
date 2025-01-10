@@ -4,7 +4,7 @@ n.r(r),
             return W;
         },
         default: function () {
-            return O;
+            return w;
         }
     }),
     n(653041),
@@ -22,33 +22,33 @@ var t = n(200651),
     p = n(563132),
     h = n(409813),
     _ = n(185139),
-    f = n(624138),
-    S = n(790954),
+    S = n(624138),
+    f = n(790954),
     N = n(453070),
     E = n(926491),
-    C = n(378233),
-    x = n(515005),
-    P = n(282896),
+    x = n(378233),
+    P = n(515005),
+    C = n(282896),
     g = n(929204),
     v = n(981631),
-    y = n(388032),
-    I = n(9520);
-let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-    b = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-    j = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+    I = n(388032),
+    y = n(9520);
+let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+    b = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+    j = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
     A = k + 2 * b,
-    T = a()(S.pF, 250),
+    T = a()(f.pF, 250),
     M = () => {
         T.cancel();
     },
     R = (e) => {
         let { visibleRowIndex: r, columnIndex: n } = e;
-        T.cancel(), (0, S.Mf)(n, r, m.u.MOUSE_EVENT);
+        T.cancel(), (0, f.Mf)(n, r, m.u.MOUSE_EVENT);
     },
     B = (e) => {
         let { stickerPack: r, width: n, hasHeaderImage: o, isScrolling: s, onInspect: a } = e,
-            c = l.useMemo(() => [(0, C.z)(r)], [r]),
-            d = (0, S.Y6)((e) => e.inspectedStickerPosition),
+            c = l.useMemo(() => [(0, x.z)(r)], [r]),
+            d = (0, f.Y6)((e) => e.inspectedStickerPosition),
             {
                 rowCountBySection: u,
                 stickersGrid: m,
@@ -60,12 +60,12 @@ let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                 listWidth: n
             });
         return (0, t.jsxs)('div', {
-            className: i()(I.container, { [I.containerWithHeader]: o }),
+            className: i()(y.container, { [y.containerWithHeader]: o }),
             children: [
                 (0, t.jsx)(
-                    P.Z,
+                    C.Z,
                     {
-                        className: I.header,
+                        className: y.header,
                         stickerPack: r,
                         withDescription: !0
                     },
@@ -82,7 +82,7 @@ let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                         for (let r = 0; r < u[0]; r++)
                             e.push(
                                 (0, t.jsx)(
-                                    x.Z,
+                                    P.Z,
                                     {
                                         enlargeOnInteraction: !0,
                                         preferAnimation: !0,
@@ -111,18 +111,18 @@ let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
         (0, N.fP)();
         let l = (0, c.e7)([E.Z], () => E.Z.isPremiumPack(n.id));
         return (0, t.jsxs)(u.ModalFooter, {
-            className: I.footer,
+            className: y.footer,
             children: [
                 (0, t.jsx)(u.Anchor, {
                     onClick: r,
-                    className: I.skuPreviewFooterCloseButton,
-                    children: y.intl.string(y.t.cpT0Cg)
+                    className: y.skuPreviewFooterCloseButton,
+                    children: I.intl.string(I.t.cpT0Cg)
                 }),
                 l &&
                     (0, t.jsxs)(u.ShinyButton, {
                         color: u.Button.Colors.GREEN,
                         type: 'submit',
-                        innerClassName: I.premiumButtonInner,
+                        innerClassName: y.premiumButtonInner,
                         onClick: () => {
                             r(), (0, g.Z)({ section: v.jXE.STICKER_PACK_VIEW_ALL });
                         },
@@ -130,9 +130,9 @@ let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                             (0, t.jsx)(u.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.premiumButtonNitroWheel
+                                className: y.premiumButtonNitroWheel
                             }),
-                            y.intl.string(y.t['w+kuhY'])
+                            I.intl.string(I.t['w+kuhY'])
                         ]
                     })
             ]
@@ -140,25 +140,25 @@ let k = (0, f.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
     },
     D = (e) => {
         let { stickerPack: r, onClose: n } = e,
-            l = (0, C.sM)(r, 1024);
+            l = (0, x.sM)(r, 1024);
         return null == l
             ? null
             : (0, t.jsxs)(u.ModalHeader, {
-                  className: I.headerWithImage,
+                  className: y.headerWithImage,
                   children: [
                       (0, t.jsx)('div', {
                           role: 'image',
                           style: { backgroundImage: 'url('.concat(l, ')') },
-                          className: I.backgroundImage
+                          className: y.backgroundImage
                       }),
                       (0, t.jsx)(u.ModalCloseButton, {
-                          className: I.closeButton,
+                          className: y.closeButton,
                           onClick: n
                       })
                   ]
               });
     };
-function O(e) {
+function w(e) {
     let { onClose: r, stickerPack: n, ...o } = e,
         [i, s] = l.useState(null),
         a = l.useCallback((e) => {
@@ -166,7 +166,7 @@ function O(e) {
         }, []);
     return (
         l.useLayoutEffect(() => {
-            (0, S.pF)();
+            (0, f.pF)();
         }, []),
         (0, t.jsx)(p.PaymentContextProvider, {
             activeSubscription: null,

@@ -25,8 +25,8 @@ var i,
     a = n(512969),
     o = n(972959),
     s = n(264043),
-    l = n(34674),
-    c = n(703656),
+    c = n(34674),
+    l = n(703656),
     u = n(979007),
     d = n(981631);
 ((r = i || (i = {})).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), (r.CATEGORY = 'category');
@@ -40,14 +40,14 @@ let p = (0, o.H)(() => ({})),
 function _() {
     let {
         location: { state: e }
-    } = (0, c.s1)();
+    } = (0, l.s1)();
     return null == e ? void 0 : e.previousView;
 }
 function m() {
     var e, t, n;
     let {
         location: { pathname: i, search: r }
-    } = (0, c.s1)();
+    } = (0, l.s1)();
     if (
         null !=
         (0, a.LX)(i, {
@@ -68,7 +68,7 @@ function m() {
             n = e.get('q');
         null != n && '' !== n && (t.query = n);
         let i = Number(e.get('category_id'));
-        Number.isInteger(i) && i !== l.MU && (t.categoryId = i.toString());
+        Number.isInteger(i) && i !== c.MU && (t.categoryId = i.toString());
         let a = Number(e.get('page'));
         return null != a && a > 1 && (t.page = a), t;
     }

@@ -9,7 +9,7 @@ n.d(t, {
         return p;
     },
     RF: function () {
-        return C;
+        return T;
     },
     m0: function () {
         return m;
@@ -32,8 +32,8 @@ var i = n(860911),
     a = n(481060),
     o = n(911969),
     s = n(134432),
-    l = n(703656),
-    c = n(768581),
+    c = n(703656),
+    l = n(768581),
     u = n(981631),
     d = n(388032);
 let p = 0,
@@ -69,7 +69,7 @@ function I(e) {
 function S(e) {
     let { itemId: t, hash: n } = e,
         i = new URLSearchParams({ size: (0, s.oO)(parseFloat(r.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, s.x_)()).toString() }).toString(),
-        a = c.$k ? 'webp' : 'png';
+        a = l.$k ? 'webp' : 'png';
     return null != _
         ? ''.concat(location.protocol, '//').concat(_, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(a, '?').concat(i)
         : ''
@@ -87,14 +87,14 @@ function b() {
     }
     let n = t.pathname + t.search,
         r = (0, i.Ui)(n, !1);
-    (0, l.uL)(r);
+    (0, c.uL)(r);
 }
 let g = (e) => {
     if (null == e) return null;
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
     return null != t ? t[1] : null;
 };
-function C(e) {
+function T(e) {
     switch (e.type) {
         case o.ee.MEDIA_PROXY:
             var t;

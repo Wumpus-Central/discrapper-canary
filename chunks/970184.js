@@ -93,41 +93,41 @@ function L(e, t) {
         }
     );
 }
-function R(e, t, n) {
-    var l;
-    let i = (0, a.e7)([N.Z], () => N.Z.getInteractionComponentState(e.id, t.id)),
-        r = (0, a.e7)([E.ZP], () => E.ZP.getInteraction(e), [e]),
-        o = A(e.channel_id),
-        { error: d, validate: c } = L(t, i),
-        s = null !== (l = e.applicationId) && void 0 !== l ? l : e.author.id;
+function R(e, t, n, l) {
+    var i;
+    let r = (0, a.e7)([N.Z], () => N.Z.getInteractionComponentState(e.id, n.id)),
+        o = (0, a.e7)([E.ZP], () => E.ZP.getInteraction(e), [e]),
+        d = A(e.channel_id) || t,
+        { error: c, validate: s } = L(n, r),
+        T = null !== (i = e.applicationId) && void 0 !== i ? i : e.author.id;
     return {
-        state: i,
+        state: r,
         executeStateUpdate: u.useCallback(
-            (n) => {
-                if (!c(n)) return !1;
+            (t) => {
+                if (!s(t)) return !1;
                 let l = m.Z.getChannel(e.channel_id);
                 return (
                     null != l &&
-                        null != t.customId &&
+                        null != n.customId &&
                         (0, I.tM)({
-                            componentType: t.type,
+                            componentType: n.type,
                             messageId: e.id,
                             messageFlags: e.flags,
-                            customId: t.customId,
-                            componentId: t.id,
-                            applicationId: s,
+                            customId: n.customId,
+                            componentId: n.id,
+                            applicationId: T,
                             channelId: l.id,
                             guildId: l.guild_id,
-                            localState: n
+                            localState: t
                         }),
                     !0
                 );
             },
-            [e.channel_id, e.flags, e.id, t.customId, t.type, t.id, s, c]
+            [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, T, s]
         ),
-        isDisabled: o,
-        visualState: O(r, t),
-        error: d
+        isDisabled: d,
+        visualState: O(o, n),
+        error: c
     };
 }
 function Z(e, t, n) {
@@ -160,12 +160,12 @@ function Z(e, t, n) {
 }
 let y = u.createContext(null);
 function M(e) {
-    let { children: t, message: n, modal: i, validators: a } = e,
-        o = u.useMemo(
+    let { children: t, message: n, modal: i, validators: a, shouldDisableInteractiveComponents: o = !1 } = e,
+        d = u.useMemo(
             () =>
                 null != n
                     ? {
-                          useComponentState: R.bind(null, n),
+                          useComponentState: R.bind(null, n, o),
                           channelId: n.channel_id,
                           message: n,
                           validators: a
@@ -177,10 +177,10 @@ function M(e) {
                           modal: i,
                           validators: a
                       }),
-            [n, i, a]
+            [n, i, a, o]
         );
     return (0, l.jsx)(y.Provider, {
-        value: o,
+        value: d,
         children: t
     });
 }

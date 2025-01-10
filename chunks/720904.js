@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return Z;
     }
 });
 var i = t(200651);
@@ -13,22 +13,22 @@ var l = t(120356),
     u = t(222677),
     d = t(995774),
     c = t(665906),
-    f = t(695346),
+    m = t(695346),
     g = t(496675),
-    m = t(768581),
+    f = t(768581),
     h = t(176354),
     E = t(981631),
-    v = t(185923),
-    I = t(388032),
-    p = t(953568);
-let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function Z(e) {
+    I = t(185923),
+    v = t(388032),
+    M = t(953568);
+let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function x(e) {
     var n;
     let { emoji: t, isFocused: l } = e,
         { animated: a, src: s, surrogates: u } = t;
     return (
         null == s && null != t.id
-            ? (s = m.ZP.getEmojiURL({
+            ? (s = f.ZP.getEmojiURL({
                   id: t.id,
                   animated: !!a,
                   size: 20
@@ -43,18 +43,18 @@ function Z(e) {
                 forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': I.intl.formatToPlainString(I.t['/iYSo6'], { emojiName: t.name }),
-                        className: r()(p.button, { [p.focused]: l }),
+                        'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
+                        className: r()(M.button, { [M.focused]: l }),
                         ...e,
                         children:
                             null == s || '' === s.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: r()('emoji', 'emoji-text', p.icon),
+                                      className: r()('emoji', 'emoji-text', M.icon),
                                       ...e,
                                       children: u
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: p.icon,
+                                      className: M.icon,
                                       src: s,
                                       alt: ''
                                   })
@@ -64,28 +64,28 @@ function Z(e) {
         )
     );
 }
-function x(e, n) {
+function Z(e, n) {
     let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && p.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: v.Hz.REACTION
+                intention: I.Hz.REACTION
             })
         );
     });
     t.length > 4 && (t.length = 4);
-    let l = f.nc.useSetting(),
+    let l = m.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
-        I = (t) => {
+        f = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        v = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
-    return m && t.length > 0
+    return f && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {
-              className: p.wrapper,
+              className: M.wrapper,
               children: t.map((e, n) => {
                   var t;
                   return (0, i.jsx)(
@@ -94,12 +94,12 @@ function x(e, n) {
                           id: 'quickreact-'.concat(null !== (t = e.id) && void 0 !== t ? t : n),
                           render: (n) => {
                               let { isFocused: t } = n;
-                              return (0, i.jsx)(Z, {
+                              return (0, i.jsx)(x, {
                                   emoji: e,
                                   isFocused: t
                               });
                           },
-                          action: () => I(e),
+                          action: () => v(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       n

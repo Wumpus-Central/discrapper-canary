@@ -205,9 +205,9 @@ function J(e) {
                     hasSpoilerEmbeds: eo,
                     isInteracting: ea,
                     renderThreadAccessory: !1,
-                    renderComponentAccessory: !1,
                     renderSuppressEmbeds: !1,
-                    renderReactions: !1
+                    renderReactions: !1,
+                    disableComponentInteractivity: !0
                 }),
                 childrenSystemMessage: (0, V.Z)(e),
                 childrenMessageContent: ep,

@@ -25,40 +25,40 @@ var o = t(200651),
     I = t(937615),
     b = t(981631),
     x = t(474936),
-    C = t(388032),
-    y = t(427930);
+    y = t(388032),
+    C = t(427930);
 function N(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.e7)([g.default], () => g.default.locale);
     return (0, o.jsxs)('div', {
-        className: y.perksList,
+        className: C.perksList,
         children: [
             (0, o.jsx)(S.Z, {
                 icon: E.Z,
-                iconClassName: y.perkIconGuild,
-                description: C.intl.formatToPlainString(C.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
+                iconClassName: C.perkIconGuild,
+                description: y.intl.formatToPlainString(y.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
             }),
             (0, o.jsx)(S.Z, {
                 icon: E.Z,
-                iconClassName: y.perkIconGuild,
-                description: C.intl.formatToPlainString(C.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
+                iconClassName: C.perkIconGuild,
+                description: y.intl.formatToPlainString(y.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
             }),
             n
                 ? (0, o.jsx)(S.Z, {
                       icon: c.ReactionIcon,
-                      iconClassName: y.perkIconChatPerks,
-                      description: C.intl.string(C.t.Z9b2x8)
+                      iconClassName: C.perkIconChatPerks,
+                      description: y.intl.string(y.t.Z9b2x8)
                   })
                 : null,
             (0, o.jsx)(S.Z, {
                 icon: c.ScreenArrowIcon,
-                iconClassName: y.perkIconStream,
-                description: C.intl.string(C.t['8dqG5O'])
+                iconClassName: C.perkIconStream,
+                description: y.intl.string(y.t['8dqG5O'])
             }),
             (0, o.jsx)(S.Z, {
                 icon: c.UploadIcon,
-                iconClassName: y.perkIconUpload,
-                description: C.intl.string(C.t.cBorIy)
+                iconClassName: C.perkIconUpload,
+                description: y.intl.string(y.t.cBorIy)
             })
         ]
     });
@@ -68,8 +68,8 @@ function A(e) {
     let { premiumSubscriptionPlan: t, onClose: i, onBack: a, onSkip: S, onSubscriptionConfirmation: g, analyticsLocation: E, analyticsSourceLocation: P, priceOptions: A } = e,
         { analyticsLocations: M, sourceAnalyticsLocations: k } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: v } = (0, c.useThemeContext)(),
-        L = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
-        R = null == t || null == t.premiumSubscriptionType,
+        R = (0, s.ap)(v) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+        L = null == t || null == t.premiumSubscriptionType,
         j = T.ZP.getPrice(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, A),
         B = (0, I.T4)(j.amount, j.currency),
         D = (0, m.N)(),
@@ -85,19 +85,19 @@ function A(e) {
         (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)(c.ModalContent, {
-                    className: y.content,
+                    className: C.content,
                     children: [
                         (0, o.jsx)(c.ModalCloseButton, {
                             onClick: i,
-                            className: y.closeButton
+                            className: C.closeButton
                         }),
-                        O && (0, o.jsx)(_.dz, { className: y.premiumTrialBadge }),
-                        (0, o.jsx)('div', { className: r()(y.upsellImage, { [y.upsellImageWithTrialOffer]: O }) }),
+                        O && (0, o.jsx)(_.dz, { className: C.premiumTrialBadge }),
+                        (0, o.jsx)('div', { className: r()(C.upsellImage, { [C.upsellImageWithTrialOffer]: O }) }),
                         (0, o.jsx)('div', {
-                            className: y.bodyText,
-                            children: null != Z ? C.intl.string(C.t.AoSzEh) : C.intl.format(C.t['7vePZW'], { monthlyPrice: B })
+                            className: C.bodyText,
+                            children: null != Z ? y.intl.string(y.t.AoSzEh) : y.intl.format(y.t['7vePZW'], { monthlyPrice: B })
                         }),
-                        (0, o.jsx)(N, { shouldUpsellFromNoneTier: R })
+                        (0, o.jsx)(N, { shouldUpsellFromNoneTier: L })
                     ]
                 }),
                 (0, o.jsxs)(c.ModalFooter, {
@@ -105,13 +105,13 @@ function A(e) {
                     justify: p.Z.Justify.END,
                     children: [
                         (0, o.jsxs)('div', {
-                            className: y.footerRight,
+                            className: C.footerRight,
                             children: [
                                 (0, o.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
-                                    color: L,
+                                    color: R,
                                     onClick: S,
-                                    children: C.intl.string(C.t['SI/adn'])
+                                    children: y.intl.string(y.t['SI/adn'])
                                 }),
                                 (0, o.jsx)(c.Button, {
                                     color: c.Button.Colors.GREEN,
@@ -131,18 +131,18 @@ function A(e) {
                                                 trialId: Z
                                             });
                                     },
-                                    children: null != Z ? C.intl.string(C.t['Gd/XHB']) : C.intl.string(C.t.p2moio)
+                                    children: null != Z ? y.intl.string(y.t['Gd/XHB']) : y.intl.string(y.t.p2moio)
                                 })
                             ]
                         }),
                         (0, o.jsx)('div', {
-                            className: y.backStep,
+                            className: C.backStep,
                             children: (0, o.jsx)(c.Button, {
-                                color: L,
+                                color: R,
                                 look: c.Button.Looks.LINK,
                                 size: c.Button.Sizes.NONE,
                                 onClick: () => a(),
-                                children: C.intl.string(C.t['13/7kZ'])
+                                children: y.intl.string(y.t['13/7kZ'])
                             })
                         })
                     ]

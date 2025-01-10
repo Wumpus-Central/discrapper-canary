@@ -3,9 +3,9 @@ var i,
     a = n(200651),
     o = n(192379),
     s = n(120356),
-    l = n.n(s),
-    c = n(477660),
-    u = n.n(c),
+    c = n.n(s),
+    l = n(477660),
+    u = n.n(l),
     d = n(663993),
     p = n(770146),
     f = n(772096),
@@ -30,7 +30,7 @@ let b = new RegExp('https?://'.concat(null !== (i = window.GLOBAL_ENV.CDN_HOST) 
 function g(e) {
     return 'string' == typeof e.content ? e.content : N(e.content);
 }
-let C = {
+let T = {
         ...u().defaultRules,
         heading: {
             ...u().defaultRules.heading,
@@ -126,7 +126,7 @@ let C = {
                         'pre',
                         {
                             children: (0, a.jsx)('code', {
-                                className: l()(I.scrollbarGhostHairline, 'hljs'),
+                                className: c()(I.scrollbarGhostHairline, 'hljs'),
                                 children: g(e)
                             })
                         },
@@ -148,7 +148,7 @@ let C = {
                                           'pre',
                                           {
                                               children: (0, a.jsx)('code', {
-                                                  className: l()(I.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: c()(I.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -162,8 +162,8 @@ let C = {
             }
         }
     },
-    T = u().parserFor(C),
-    N = u().reactFor(u().ruleOutput(C, 'react'));
+    C = u().parserFor(T),
+    N = u().reactFor(u().ruleOutput(T, 'react'));
 class v extends (r = o.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
@@ -174,14 +174,14 @@ class v extends (r = o.PureComponent) {
                 })
             );
         return (0, a.jsx)('div', {
-            className: l()(h.markdown, e),
+            className: c()(h.markdown, e),
             children: o
         });
     }
 }
-S(v, 'rules', C),
+S(v, 'rules', T),
     S(v, 'defaultProps', {
-        parser: T,
+        parser: C,
         output: N
     }),
     (t.Z = v);

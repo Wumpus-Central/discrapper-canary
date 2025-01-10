@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return p;
     }
 }),
     t(47120),
@@ -14,41 +14,41 @@ var i = t(200651),
     u = t(85960),
     d = t(676317),
     c = t(65912),
-    f = t(556012),
+    m = t(556012),
     g = t(572456),
-    m = t(434404),
+    f = t(434404),
     h = t(981631),
     E = t(273504),
-    v = t(388032),
-    I = t(986371);
-let p = E.fX.KEYWORD;
-function M(e, n) {
-    let { perGuildMaxCount: t } = u.I6[p],
-        { isLoading: M, saveRule: Z, errorMessage: x } = (0, c.w)(),
+    I = t(388032),
+    v = t(986371);
+let M = E.fX.KEYWORD;
+function p(e, n) {
+    let { perGuildMaxCount: t } = u.I6[M],
+        { isLoading: p, saveRule: x, errorMessage: Z } = (0, c.w)(),
         { createNewEditingRule: S } = (0, c.V)(),
-        [j, _] = l.useState(!1),
-        [T, b] = (0, s.I2)(n),
-        { rulesByTriggerType: A, updateRule: P } = (0, s.pH)(n),
-        N = l.useMemo(() => {
+        [j, T] = l.useState(!1),
+        [_, A] = (0, s.I2)(n),
+        { rulesByTriggerType: N, updateRule: b } = (0, s.pH)(n),
+        P = l.useMemo(() => {
             var e;
-            return null !== (e = A[p]) && void 0 !== e ? e : [];
-        }, [A]),
-        y = 0 === N.length,
-        C = t > N.length && !y;
+            return null !== (e = N[M]) && void 0 !== e ? e : [];
+        }, [N]),
+        C = 0 === P.length,
+        y = t > P.length && !C;
     if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
-    let L = e.split(' '),
-        D = L.length;
+    let D = e.split(' '),
+        L = D.length;
     try {
-        (0, o.km)(L, E.RH);
+        (0, o.km)(D, E.RH);
     } catch (e) {
         return null;
     }
     let R = () => {
             if (null != n)
                 (0, a.Zy)(),
-                    m.Z.open(n, h.pNK.GUILD_AUTOMOD),
+                    f.Z.open(n, h.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        S(n, p, {
+                        S(n, M, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -67,33 +67,33 @@ function M(e, n) {
                     keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await Z(l, N), P(l), null != x ? (0, r.showToast)((0, r.createToast)(v.intl.string(v.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(v.intl.string(v.t['0rdYm5']), r.ToastType.SUCCESS));
+            await x(l, P), b(l), null != Z ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
         },
         G = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(r.MenuItem, {
                 id: 'automod-rules-loading',
-                label: v.intl.string(v.t.ZTNur6)
+                label: I.intl.string(I.t.ZTNur6)
             })
         });
     return (
-        !T &&
+        !_ &&
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    y &&
+                    C &&
                         (0, i.jsx)(r.MenuItem, {
                             id: 'add-first-rule',
-                            label: v.intl.string(v.t.f72Zqa),
+                            label: I.intl.string(I.t.f72Zqa),
                             action: R,
-                            disabled: M
+                            disabled: p
                         }),
-                    N.map((e) => {
-                        let n = (0, u.V9)(p).reduce((n, t) => {
+                    P.map((e) => {
+                        let n = (0, u.V9)(M).reduce((n, t) => {
                             let i = e.actions.find((e) => {
                                 let { type: n } = e;
                                 return t === n;
                             });
                             if (null == i) return n;
-                            let l = (0, f.c)(t, i);
+                            let l = (0, m.c)(t, i);
                             return (n += ', '.concat(null == l ? void 0 : l.headerText));
                         }, '');
                         return (0, i.jsx)(
@@ -103,27 +103,27 @@ function M(e, n) {
                                 label: e.name,
                                 subtext: (0, i.jsx)(r.Text, {
                                     color: 'text-muted',
-                                    className: I.actionTextHeader,
+                                    className: v.actionTextHeader,
                                     variant: 'text-xs/normal',
                                     children: n.slice(2)
                                 }),
                                 group: 'automod-rule-selection',
                                 checked: !1,
-                                disabled: M,
+                                disabled: p,
                                 action: () => O(e)
                             },
                             e.id
                         );
                     }),
-                    C &&
+                    y &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(r.MenuSeparator, {}),
                                 (0, i.jsx)(r.MenuItem, {
                                     id: 'add-another-rule',
-                                    label: v.intl.string(v.t['0K5jDA']),
+                                    label: I.intl.string(I.t['0K5jDA']),
                                     action: R,
-                                    disabled: M
+                                    disabled: p
                                 })
                             ]
                         })
@@ -131,9 +131,9 @@ function M(e, n) {
             })),
         (0, i.jsx)(r.MenuItem, {
             id: 'guild-automod-add-selection',
-            label: v.intl.formatToPlainString(v.t.Kkjv1t, { keywordCount: D }),
+            label: I.intl.formatToPlainString(I.t.Kkjv1t, { keywordCount: L }),
             onFocus: () => {
-                if (!j) _(!0), b();
+                if (!j) T(!0), A();
             },
             children: G
         })

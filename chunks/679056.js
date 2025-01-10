@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-class l extends (i = a.Component) {
+class c extends (i = a.Component) {
     static getDerivedStateFromProps(e) {
         return e.disable ? { hovered: !1 } : null;
     }
@@ -35,8 +35,8 @@ class l extends (i = a.Component) {
             a,
             { props: o } = this;
         let s = ((n = o), (i = this.state), !n.disable && !(i.hovered && n.pauseOnHover));
-        let l = ((r = e), (a = t), !r.disable && !(a.hovered && r.pauseOnHover));
-        (s && !l) || e.interval !== o.interval ? this.startTimer() : !s && l && this.stopTimer();
+        let c = ((r = e), (a = t), !r.disable && !(a.hovered && r.pauseOnHover));
+        (s && !c) || e.interval !== o.interval ? this.startTimer() : !s && c && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -76,8 +76,8 @@ class l extends (i = a.Component) {
             });
     }
 }
-s(l, 'defaultProps', {
+s(c, 'defaultProps', {
     disable: !1,
     pauseOnHover: !1
 }),
-    (t.Z = l);
+    (t.Z = c);

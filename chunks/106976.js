@@ -36,7 +36,7 @@ function s(e) {
         restricted: !1
     };
 }
-function l(e) {
+function c(e) {
     var t;
     return {
         id: e.id,
@@ -48,14 +48,14 @@ function l(e) {
         published: e.published
     };
 }
-function c(e) {
+function l(e) {
     for (let t of (i.Z.dispatch({
         type: 'SKUS_FETCH_SUCCESS',
         skus: e.map(s)
     }),
     i.Z.dispatch({
         type: 'STORE_LISTINGS_FETCH_SUCCESS',
-        storeListings: e.map(l)
+        storeListings: e.map(c)
     }),
     e))
         i.Z.dispatch({
@@ -79,7 +79,7 @@ async function u(e, t) {
                 applicationId: e,
                 groupListing: r
             }),
-            c(null !== (n = r.subscription_listings) && void 0 !== n ? n : []),
+            l(null !== (n = r.subscription_listings) && void 0 !== n ? n : []),
             r
         );
     } catch (t) {
@@ -132,6 +132,6 @@ async function f(e) {
                 if (t.subscription_plans[0].id === e) return r.GZ(t.id, void 0, void 0, !0);
             })
         ),
-            c(o);
+            l(o);
     } catch (e) {}
 }

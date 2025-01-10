@@ -14,19 +14,19 @@ var i = t(200651),
     u = t(222677),
     d = t(665906),
     c = t(496675),
-    f = t(768581),
+    m = t(768581),
     g = t(176354),
-    m = t(981631),
+    f = t(981631),
     h = t(388032);
 function E(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        f = (0, d.$R)(n),
-        g = (0, r.e7)([c.Z], () => c.Z.can(m.Plq.MANAGE_MESSAGES, n) && f, [n, f]),
+        m = (0, d.$R)(n),
+        g = (0, r.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, n) && m, [n, m]),
         E = e.reactions.reduce((e, n) => {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
         }, []),
-        I = (t, i) => {
+        v = (t, i) => {
             t.shiftKey
                 ? (0, u.$E)(n.id, e.id, i)
                 : o.Z.show({
@@ -52,9 +52,9 @@ function E(e, n) {
                       {
                           id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
                           label: null == e.id ? e.name : ':'.concat(e.name, ':'),
-                          action: (n) => I(n, e),
+                          action: (n) => v(n, e),
                           icon: (n) =>
-                              (0, i.jsx)(v, {
+                              (0, i.jsx)(I, {
                                   ...n,
                                   reducedMotionEnabled: t.enabled,
                                   emoji: e
@@ -66,14 +66,14 @@ function E(e, n) {
               })
           });
 }
-function v(e) {
+function I(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {
         className: r,
         src:
             null != t.id
-                ? f.ZP.getEmojiURL({
+                ? m.ZP.getEmojiURL({
                       id: t.id,
                       animated: t.animated && (!l || a),
                       size: 18

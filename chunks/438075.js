@@ -19,10 +19,10 @@ function a(e) {
         isAutomodBlockedMessage: u,
         isMessageSnapshot: d,
         renderThreadAccessory: m,
-        renderComponentAccessory: h,
-        renderSuppressEmbeds: f,
-        renderReactions: p,
-        forceAddReactions: _,
+        renderSuppressEmbeds: h,
+        renderReactions: f,
+        forceAddReactions: p,
+        disableComponentInteractivity: _,
         className: g
     } = e;
     return u
@@ -39,10 +39,10 @@ function a(e) {
                   isMessageSnapshot: d,
                   onMediaItemContextMenu: s,
                   renderThreadAccessory: m,
-                  renderComponentAccessory: h,
-                  renderSuppressEmbeds: f,
-                  forceAddReactions: _,
-                  renderReactions: p
+                  disableComponentInteractivity: _,
+                  renderSuppressEmbeds: h,
+                  forceAddReactions: p,
+                  renderReactions: f
               })
           });
 }

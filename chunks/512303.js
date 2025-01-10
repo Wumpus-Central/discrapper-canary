@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return I;
     }
 });
 var i = t(200651),
@@ -12,31 +12,31 @@ var i = t(200651),
     u = t(700582),
     d = t(592180),
     c = t(565138),
-    f = t(598077),
+    m = t(598077),
     g = t(430824),
-    m = t(594174),
+    f = t(594174),
     h = t(388032),
     E = t(500054);
-function v(e) {
-    var n, t, v, I;
-    let p = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
-        M = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
-        Z = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
-        x = (0, a.e7)([m.default], () => m.default.getUser(p)),
-        S = (0, a.e7)([g.Z], () => g.Z.getGuild(M)),
-        j = (0, a.e7)([m.default], () => m.default.getUser(Z));
+function I(e) {
+    var n, t, I, v;
+    let M = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
+        p = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
+        x = null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user.id,
+        Z = (0, a.e7)([f.default], () => f.default.getUser(M)),
+        S = (0, a.e7)([g.Z], () => g.Z.getGuild(p)),
+        j = (0, a.e7)([f.default], () => f.default.getUser(x));
     if (
         (l.useEffect(() => {
-            null == x && null != p && (0, s.PR)(p);
-        }, [x, p]),
+            null == Z && null != M && (0, s.PR)(M);
+        }, [Z, M]),
         !(0, d.a)(e))
     )
         return null;
-    null == j && (j = new f.Z(null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user));
-    let _ = null;
+    null == j && (j = new m.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
+    let T = null;
     return (
         null != S
-            ? (_ = (0, i.jsx)(o.MenuItem, {
+            ? (T = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
@@ -48,24 +48,24 @@ function v(e) {
                   label: S.name,
                   subtext: h.intl.formatToPlainString(h.t.ShLXXF, { application: e.author.username })
               }))
-            : null != x &&
-              (_ = (0, i.jsx)(o.MenuItem, {
+            : null != Z &&
+              (T = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(u.Z, {
-                          user: x,
+                          user: Z,
                           size: o.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: x.username,
+                  label: Z.username,
                   subtext: h.intl.formatToPlainString(h.t.ShLXXF, { application: e.author.username })
               })),
         (0, i.jsxs)(o.MenuItem, {
             id: 'view-interaction-info',
             label: h.intl.string(h.t.Rjezb2),
             children: [
-                _,
+                T,
                 null != j
                     ? (0, i.jsx)(o.MenuItem, {
                           className: E.interactionInfoMenuItem,

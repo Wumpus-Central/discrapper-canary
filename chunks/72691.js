@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         default: function () {
-            return R;
+            return M;
         }
     });
 var l = n(200651),
@@ -18,12 +18,12 @@ var l = n(200651),
     f = n(409813),
     _ = n(104494),
     h = n(639119),
-    N = n(165583),
-    S = n(197115),
+    S = n(165583),
+    N = n(197115),
     b = n(185139),
     x = n(263954),
-    C = n(706454),
-    E = n(853872),
+    E = n(706454),
+    C = n(853872),
     P = n(930153),
     y = n(74538),
     g = n(937615),
@@ -58,7 +58,7 @@ let k = (e) => {
     },
     A = (e) => {
         let { trialOffer: r, discountOffer: o, isLoading: t, price: a, onClose: d } = e,
-            u = (0, s.e7)([C.default], () => C.default.locale),
+            u = (0, s.e7)([E.default], () => E.default.locale),
             p = null != r || null != o;
         return (0, l.jsxs)('div', {
             className: T.wrapper,
@@ -67,7 +67,7 @@ let k = (e) => {
                     onClick: d,
                     className: T.closeButton
                 }),
-                p && (0, l.jsx)(N.dz, { className: T.premiumTrialBadge }),
+                p && (0, l.jsx)(S.dz, { className: T.premiumTrialBadge }),
                 (0, l.jsx)('img', {
                     className: i()(T.heroImage, { [T.heroImageWithTrialOffer]: p }),
                     src: n(178632),
@@ -91,7 +91,7 @@ let k = (e) => {
             ]
         });
     },
-    M = (e) => {
+    R = (e) => {
         let { trialOffer: r, discountOffer: n, onClose: o } = e,
             t = { section: v.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
         return (0, l.jsxs)(c.ModalFooter, {
@@ -104,7 +104,7 @@ let k = (e) => {
                     look: c.Button.Looks.LINK,
                     children: I.intl.string(I.t.cpT0Cg)
                 }),
-                (0, l.jsx)(S.Z, {
+                (0, l.jsx)(N.Z, {
                     buttonText: null != r || null != n ? I.intl.string(I.t['Gd/XHB']) : void 0,
                     premiumModalAnalyticsLocation: t,
                     subscriptionTier: j.Si.TIER_2,
@@ -117,19 +117,19 @@ let k = (e) => {
             ]
         });
     };
-function R(e) {
+function M(e) {
     let { onClose: r, ...n } = e,
         t = (0, p.V)(),
-        i = (0, s.e7)([E.Z], () => E.Z.hasFetchedPaymentSources),
-        N = t && i,
-        S = (0, h.N)(),
+        i = (0, s.e7)([C.Z], () => C.Z.hasFetchedPaymentSources),
+        S = t && i,
+        N = (0, h.N)(),
         x = (0, _.Ng)();
     o.useEffect(() => {
         a.Z.wait(() => {
             (0, d.tZ)(), (0, u.Y2)(null, null, v.JjL.DISCOVERY);
         });
     }, []);
-    let C = N ? y.ZP.getDefaultPrice(j.Xh.PREMIUM_MONTH_TIER_2) : null;
+    let E = S ? y.ZP.getDefaultPrice(j.Xh.PREMIUM_MONTH_TIER_2) : null;
     return (0, l.jsx)(m.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
@@ -140,14 +140,14 @@ function R(e) {
             children: (0, l.jsx)(b.Z, {
                 hideBreadcrumbs: !0,
                 body: (0, l.jsx)(A, {
-                    trialOffer: S,
+                    trialOffer: N,
                     discountOffer: x,
-                    isLoading: !N,
-                    price: C,
+                    isLoading: !S,
+                    price: E,
                     onClose: r
                 }),
-                footer: (0, l.jsx)(M, {
-                    trialOffer: S,
+                footer: (0, l.jsx)(R, {
+                    trialOffer: N,
                     discountOffer: x,
                     onClose: r
                 }),

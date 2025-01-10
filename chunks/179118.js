@@ -32,8 +32,8 @@ var n = t(200651),
     j = t(51144),
     P = t(987209),
     E = t(981631),
-    N = t(474936),
-    w = t(388032),
+    w = t(474936),
+    N = t(388032),
     A = t(431852);
 function O(e) {
     let { giftCode: i, application: t, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: h, isSendingMessage: v } = e,
@@ -50,11 +50,11 @@ function O(e) {
         F = () => {
             let e;
             return null != h
-                ? w.intl.string(w.t.qB8ayc)
+                ? N.intl.string(N.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === N.rV.MONTH ? (R ? (H ? D.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : R ? (H ? D.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
-                    w.intl.format(e, {
+                  : ((e = s.interval === w.rV.MONTH ? (R ? (H ? D.monthGiftText : N.t['4ZJ+7e']) : N.t['P+z55e']) : R ? (H ? D.yearGiftText : N.t.p0pZXF) : N.t.bXqk3t),
+                    N.intl.format(e, {
                         skuName: (0, B.aq)(s.id),
                         intervalCount: s.intervalCount
                     }));
@@ -82,21 +82,21 @@ function O(e) {
             if (null == i) return null;
             switch (I) {
                 case d.CopyInput.Modes.SUCCESS:
-                    e = w.intl.string(w.t.XVvPjY);
+                    e = N.intl.string(N.t.XVvPjY);
                     break;
                 case d.CopyInput.Modes.ERROR:
-                    e = w.intl.string(w.t.i4GM3N);
+                    e = N.intl.string(N.t.i4GM3N);
                     break;
                 default:
-                    e = w.intl.string(w.t.OpuAlJ);
+                    e = N.intl.string(N.t.OpuAlJ);
             }
             return (0, n.jsxs)('div', {
                 className: A.giftCodeSection,
                 children: [
-                    (0, n.jsx)(d.FormTitle, { children: w.intl.string(w.t['/dG4ND']) }),
+                    (0, n.jsx)(d.FormTitle, { children: N.intl.string(N.t['/dG4ND']) }),
                     null != i &&
                         (0, n.jsx)(d.CopyInput, {
-                            hideMessage: O ? w.intl.string(w.t['0RLn4+']) : null,
+                            hideMessage: O ? N.intl.string(N.t['0RLn4+']) : null,
                             value: (0, T.Nz)(i),
                             mode: I,
                             text: e,
@@ -108,7 +108,7 @@ function O(e) {
                         }),
                     (0, n.jsx)('div', {
                         className: A.subtext,
-                        children: w.intl.string(w.t.QWKUpq)
+                        children: N.intl.string(N.t.QWKUpq)
                     })
                 ]
             });
@@ -145,7 +145,7 @@ function O(e) {
                           [A.header]: null == l && !L,
                           [A.headerCustomGifting]: null != l && !L
                       }),
-                      children: null != b || (f && null == h) ? w.intl.string(w.t.zOmK9P) : null != h ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])
+                      children: null != b || (f && null == h) ? N.intl.string(N.t.zOmK9P) : null != h ? N.intl.string(N.t.d1lrmZ) : N.intl.string(N.t['/s1xR0'])
                   }),
                   (f && null != b && null == h) || R
                       ? (0, n.jsxs)(n.Fragment, {
@@ -221,12 +221,12 @@ let Z = (e) => {
     return (0, n.jsxs)('div', {
         className: A.giftRecipientSection,
         children: [
-            (0, n.jsx)(d.FormTitle, { children: w.intl.string(w.t.MJw05e) }),
+            (0, n.jsx)(d.FormTitle, { children: N.intl.string(N.t.MJw05e) }),
             (0, n.jsxs)('div', {
                 className: A.giftRecipient,
                 children: [
                     (0, n.jsx)(d.SearchableSelect, {
-                        placeholder: w.intl.string(w.t.J019jY),
+                        placeholder: N.intl.string(N.t.J019jY),
                         wrapperClassName: A.giftRecipientInputWrapper,
                         className: s ? A.giftRecipientInputError : void 0,
                         renderOptionPrefix: (e) =>
@@ -260,13 +260,13 @@ let Z = (e) => {
                                         _(!0), g(!1);
                                     });
                         },
-                        children: w.intl.string(w.t['+EgwQk'])
+                        children: N.intl.string(N.t['+EgwQk'])
                     })
                 ]
             }),
             (0, n.jsx)('div', {
                 className: s ? A.subtextError : A.subtext,
-                children: s ? w.intl.string(w.t.jo5Vbm) : w.intl.string(w.t['8/N3v7'])
+                children: s ? N.intl.string(N.t.jo5Vbm) : N.intl.string(N.t['8/N3v7'])
             })
         ]
     });

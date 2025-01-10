@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return I;
     }
 }),
     t(47120);
@@ -13,16 +13,16 @@ var i = t(200651),
     u = t(324701),
     d = t(575016),
     c = t(768943),
-    f = t(175006),
+    m = t(175006),
     g = t(742989),
-    m = t(898150),
+    f = t(898150),
     h = t(70956),
     E = t(388032);
-function v(e) {
+function I(e) {
     let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: t } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        v = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
-        I = (function (e) {
+        I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
+        v = (function (e) {
             let { message: n, savedMessage: t } = e,
                 [r, o] = l.useState(new Date());
             l.useEffect(() => {
@@ -41,8 +41,8 @@ function v(e) {
                         }),
                     [n.channel_id, n.id]
                 ),
-                c = (0, m.useMessageReminderDurationSuggestions)({ createReminder: s }),
-                { dueInText: f } = (0, d.AT)({
+                c = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
+                { dueInText: m } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
                     now: r,
                     type: d.hQ.LONG
@@ -53,7 +53,7 @@ function v(e) {
                       children: c
                   })
                 : (0, i.jsxs)(a.MenuGroup, {
-                      label: f,
+                      label: m,
                       children: [
                           (0, i.jsx)(a.MenuItem, {
                               id: 'mark-complete',
@@ -75,15 +75,15 @@ function v(e) {
                   });
         })({
             message: e,
-            savedMessage: v
+            savedMessage: I
         });
     return n || t
-        ? null != v || (0, f.Z)()
+        ? null != I || (0, m.Z)()
             ? (0, i.jsxs)(a.MenuItem, {
                   id: 'save-for-later',
                   label: E.intl.string(E.t.tpxJtr),
                   action: () =>
-                      null == v
+                      null == I
                           ? (0, u.z)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
@@ -92,11 +92,11 @@ function v(e) {
                           : (0, u.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
-                                dueAt: v.saveData.dueAt,
+                                dueAt: I.saveData.dueAt,
                                 displayToast: !0
                             }),
                   children: [
-                      null != v
+                      null != I
                           ? (0, i.jsx)(a.MenuItem, {
                                 id: 'remove-from-for-later',
                                 label: E.intl.string(E.t.SvXS1d),
@@ -105,7 +105,7 @@ function v(e) {
                                     (0, u.x)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
-                                        dueAt: v.saveData.dueAt,
+                                        dueAt: I.saveData.dueAt,
                                         displayToast: !0
                                     })
                             })
@@ -121,7 +121,7 @@ function v(e) {
                                     })
                             }),
                       (0, i.jsx)(a.MenuSeparator, {}),
-                      I
+                      v
                   ]
               })
             : (0, i.jsx)(a.MenuItem, {
