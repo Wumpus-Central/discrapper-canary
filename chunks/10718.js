@@ -138,8 +138,10 @@ function y(e) {
             allowFetch: a
         }),
         [v, I] = o.useState(null),
-        T = o.useRef(!1);
-    T.current = E;
+        T = o.useRef(E);
+    o.useEffect(() => {
+        T.current = E;
+    });
     let b = o.useMemo(() => {
         var e;
         return R(null !== (e = i.placeholderCount) && void 0 !== e ? e : 0, r.commandTypes[0]);

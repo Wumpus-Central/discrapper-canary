@@ -1,15 +1,15 @@
 r.d(n, {
     I3: function () {
-        return h;
+        return p;
     },
     d9: function () {
-        return m;
+        return g;
     },
     oo: function () {
-        return _;
+        return h;
     },
     yp: function () {
-        return p;
+        return m;
     }
 });
 var i = r(47120);
@@ -17,8 +17,9 @@ var a = r(411104);
 var s = r(200651),
     o = r(192379),
     l = r(836560);
-var u = r(585483);
-function c(e, n, r) {
+var u = r(211266),
+    c = r(585483);
+function d(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,47 +32,44 @@ function c(e, n, r) {
         e
     );
 }
-class d {
-    subscribe(e, n) {
-        u.S.subscribe(e, n), this.emitter.on(e, n);
-    }
-    unsubscribe(e, n) {
-        u.S.unsubscribe(e, n), this.emitter.off(e, n);
-    }
-    bumpDispatchPriority() {
-        for (let e of this.emitter.eventNames()) for (let n of this.emitter.listeners(e)) u.S.resubscribe(e, n);
-    }
-    constructor() {
-        c(this, 'emitter', new l.EventEmitter());
-    }
-}
 class f {
     subscribe(e, n) {
-        u.S.subscribe(e, n);
+        c.S.subscribe(e, n), this.emitter.on(e, n);
     }
     unsubscribe(e, n) {
-        u.S.unsubscribe(e, n);
+        c.S.unsubscribe(e, n), this.emitter.off(e, n);
+    }
+    bumpDispatchPriority() {
+        for (let e of this.emitter.eventNames()) for (let n of this.emitter.listeners(e)) c.S.resubscribe(e, n);
+    }
+    constructor() {
+        d(this, 'emitter', new l.EventEmitter());
+    }
+}
+class _ {
+    subscribe(e, n) {
+        c.S.subscribe(e, n);
+    }
+    unsubscribe(e, n) {
+        c.S.unsubscribe(e, n);
     }
     bumpDispatchPriority() {}
 }
-let _ = o.createContext(new f()),
-    h = o.forwardRef(function (e, n) {
+let h = o.createContext(new _()),
+    p = o.forwardRef(function (e, n) {
         let { children: r } = e,
-            i = o.useRef(null);
-        function a() {
-            return null === i.current && (i.current = new d()), i.current;
-        }
+            i = (0, u.Z)(() => new f());
         return (
-            o.useImperativeHandle(n, a),
-            (0, s.jsx)(_.Provider, {
-                value: a(),
+            o.useImperativeHandle(n, () => i, [i]),
+            (0, s.jsx)(h.Provider, {
+                value: i,
                 children: r
             })
         );
     });
-function p(e) {
+function m(e) {
     let { event: n, handler: r } = e,
-        i = o.useContext(_),
+        i = o.useContext(h),
         a = o.useRef(r);
     o.useEffect(() => {
         a.current = r;
@@ -94,6 +92,6 @@ function p(e) {
         null
     );
 }
-function m(e) {
-    return p(e), null;
+function g(e) {
+    return m(e), null;
 }

@@ -1,20 +1,16 @@
 r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
-var i = r(192379);
-function a() {
-    let e = i.useRef(null);
+var i = r(211266),
+    a = r(493773);
+function s() {
+    let e = (0, i.Z)(() => new AbortController());
     return (
-        null === e.current && (e.current = new AbortController()),
-        i.useEffect(
-            () => () => {
-                var n;
-                null === (n = e.current) || void 0 === n || n.abort();
-            },
-            []
-        ),
-        e.current.signal
+        (0, a.Z)(() => () => {
+            e.abort();
+        }),
+        e.signal
     );
 }

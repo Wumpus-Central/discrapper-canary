@@ -3,13 +3,14 @@ n.d(t, {
         return s;
     }
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(772848),
+var i = n(200651);
+n(192379);
+var l = n(772848),
+    r = n(211266),
     a = n(331595);
 function s(e) {
     let { width: t = 16, height: n = 16, color: s = 'currentColor', foreground: o, background: c, ...d } = e,
-        u = l.useRef((0, r.Z)());
+        u = (0, r.Z)(() => (0, l.Z)());
     return (0, i.jsxs)('svg', {
         ...(0, a.Z)(d),
         width: t,
@@ -19,7 +20,7 @@ function s(e) {
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsxs)('g', {
-                'clip-path': 'url('.concat(u.current, ')'),
+                'clip-path': 'url('.concat(u, ')'),
                 children: [
                     (0, i.jsx)('path', {
                         className: c,
@@ -39,7 +40,7 @@ function s(e) {
             }),
             (0, i.jsx)('defs', {
                 children: (0, i.jsx)('clipPath', {
-                    id: u.current,
+                    id: u,
                     children: (0, i.jsx)('rect', {
                         width: '24',
                         height: '24',

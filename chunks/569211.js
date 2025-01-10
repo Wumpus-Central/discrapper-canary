@@ -14,7 +14,9 @@ function o(e) {
         o = r._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
         [c, d] = i.useState(null),
         u = i.useRef(c);
-    u.current = c;
+    i.useInsertionEffect(() => {
+        u.current = c;
+    });
     let h = i.useMemo(() => (null != c ? (0, a.sl)(c) : null), [c]);
     i.useEffect(() => {
         n && d(null);
