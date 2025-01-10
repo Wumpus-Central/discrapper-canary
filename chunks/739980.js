@@ -41,7 +41,12 @@ function c(e) {
                         content: n
                     }),
                     c,
-                    t.components.length > 0 ? (0, l.jsx)(i.ZP, { message: t }) : null
+                    t.components.length > 0
+                        ? (0, l.jsx)(i.ZP, {
+                              message: t,
+                              shouldDisableInteractiveComponents: !0
+                          })
+                        : null
                 ]
             })
         ]

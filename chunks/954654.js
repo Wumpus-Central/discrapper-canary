@@ -80,15 +80,16 @@ function S(e) {
     );
 }
 function j(e) {
-    let { message: n } = e,
-        { components: t } = n;
-    return 0 === t.length
+    let { message: n, shouldDisableInteractiveComponents: t } = e,
+        { components: i } = n;
+    return 0 === i.length
         ? null
         : (0, l.jsx)('div', {
               className: r()([I.container, { [I.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: S(t)
+                  shouldDisableInteractiveComponents: t,
+                  children: S(i)
               })
           });
 }

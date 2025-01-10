@@ -477,20 +477,23 @@ class e3 extends (i = l.Component) {
             : null;
     }
     renderComponentAccessories(e) {
-        if (0 === e.components.length || !1 === this.props.renderComponentAccessory) return null;
-        let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: i, onMediaItemContextMenu: l } = this.props;
+        if (0 === e.components.length) return null;
+        let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: i, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
         return (0, r.jsx)(ek.F, {
             gifAutoPlay: t,
             getGifFavButton: e1,
             getOnMediaItemContextMenu:
-                null == l
+                null == a
                     ? void 0
                     : (e) => (t) => {
-                          t.stopPropagation(), t.preventDefault(), null == l || l(t, e);
+                          t.stopPropagation(), t.preventDefault(), null == a || a(t, e);
                       },
             shouldHideMediaOptions: i,
             shouldRedactExplicitContent: n,
-            children: (0, r.jsx)(V.ZP, { message: e })
+            children: (0, r.jsx)(V.ZP, {
+                message: e,
+                shouldDisableInteractiveComponents: l
+            })
         });
     }
     renderActivityInvite(e) {
@@ -879,7 +882,7 @@ eQ(e3, 'defaultProps', {
 });
 let e6 = (e) => {
     var t;
-    let { message: n, channel: i, disableReactionReads: l = !1, renderComponentAccessory: a = !1, renderThreadAccessory: o = !1, disableReactionCreates: s = !0, disableReactionUpdates: c = !0, isSearchResult: u = !1, ...d } = e,
+    let { message: n, channel: i, disableReactionReads: l = !1, renderThreadAccessory: a = !1, disableReactionCreates: o = !0, disableReactionUpdates: s = !0, disableComponentInteractivity: c = !0, isSearchResult: u = !1, ...d } = e,
         m = ec.x4.useSetting(),
         h = ec.RS.useSetting(),
         f = ec.NA.useSetting(),
@@ -894,12 +897,12 @@ let e6 = (e) => {
         message: n,
         channel: i,
         disableReactionReads: l,
-        disableReactionCreates: s,
-        disableReactionUpdates: c,
+        disableReactionCreates: o,
+        disableReactionUpdates: s,
+        disableComponentInteractivity: c,
         canSuppressEmbeds: !1,
         canDeleteAttachments: !1,
-        renderComponentAccessory: a,
-        renderThreadAccessory: o,
+        renderThreadAccessory: a,
         inlineAttachmentMedia: m,
         inlineEmbedMedia: h,
         renderEmbeds: f,
