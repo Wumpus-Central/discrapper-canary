@@ -458,7 +458,7 @@ function er(e) {
         g = null != a && a.isPrivate() ? a.getRecipientId() : null,
         m = (0, d.e7)([P.Z], () => (null != r ? P.Z.getPendingReply(r) : void 0)),
         v = (0, d.e7)([V.default], () => (null != g ? V.default.getUser(g) : null)),
-        { placeholder: x } = (0, _.Z)(a);
+        { placeholder: x } = (0, _.Z)({ channel: a });
     return null != a && null != p && q.TPd.GUILD_THREADS_ONLY.has(a.type)
         ? (0, i.jsx)(S.Z, {})
         : (0, i.jsx)(es, {

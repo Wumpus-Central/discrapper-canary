@@ -738,7 +738,7 @@ class eX extends l.PureComponent {
 }
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: r, filterAfterTimestamp: a } = e,
-        { placeholder: s, accessibilityLabel: o } = (0, eR.Z)(t),
+        { placeholder: s, accessibilityLabel: o } = (0, eR.Z)({ channel: t }),
         c = (0, ed.S)(eZ.default.getCurrentUser(), t),
         [d] = (0, J.AB)(null == n ? void 0 : n.id),
         p = (0, Y.Ux)(null == n ? void 0 : n.id),

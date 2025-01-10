@@ -20,7 +20,7 @@ var n = i(200651),
 function m(e) {
     let { id: t, channel: i, onSend: m } = e,
         v = (0, h.Z)(),
-        { placeholder: g, accessibilityLabel: S } = (0, r.Z)(i),
+        { placeholder: g, accessibilityLabel: S } = (0, r.Z)({ channel: i }),
         [_, Z] = l.useState(() => (0, u.H2)()),
         { textValue: C, richValue: O } = _,
         [I, N] = l.useState(!1),
