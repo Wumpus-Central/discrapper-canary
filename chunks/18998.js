@@ -1,55 +1,194 @@
-function n(e) {
-    let n = {
-        variants: [
-            e.COMMENT('^[ \\t]*(?=#)', '$', {
-                relevance: 0,
-                excludeBegin: !0
-            }),
-            e.COMMENT('[;@]', '$', { relevance: 0 }),
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE
-        ]
-    };
-    return {
-        name: 'ARM Assembly',
-        case_insensitive: !0,
-        aliases: ['arm'],
-        keywords: {
-            $pattern: '\\.?' + e.IDENT_RE,
-            meta: '.2byte .4byte .align .ascii .asciz .balign .byte .code .data .else .end .endif .endm .endr .equ .err .exitm .extern .global .hword .if .ifdef .ifndef .include .irp .long .macro .rept .req .section .set .skip .space .text .word .arm .thumb .code16 .code32 .force_thumb .thumb_func .ltorg ALIAS ALIGN ARM AREA ASSERT ATTR CN CODE CODE16 CODE32 COMMON CP DATA DCB DCD DCDU DCDO DCFD DCFDU DCI DCQ DCQU DCW DCWU DN ELIF ELSE END ENDFUNC ENDIF ENDP ENTRY EQU EXPORT EXPORTAS EXTERN FIELD FILL FUNCTION GBLA GBLL GBLS GET GLOBAL IF IMPORT INCBIN INCLUDE INFO KEEP LCLA LCLL LCLS LTORG MACRO MAP MEND MEXIT NOFP OPT PRESERVE8 PROC QN READONLY RELOC REQUIRE REQUIRE8 RLIST FN ROUT SETA SETL SETS SN SPACE SUBT THUMB THUMBX TTL WHILE WEND ',
-            built_in: 'r0 r1 r2 r3 r4 r5 r6 r7 r8 r9 r10 r11 r12 r13 r14 r15 pc lr sp ip sl sb fp a1 a2 a3 a4 v1 v2 v3 v4 v5 v6 v7 v8 f0 f1 f2 f3 f4 f5 f6 f7 p0 p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 q0 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15 cpsr_c cpsr_x cpsr_s cpsr_f cpsr_cx cpsr_cxs cpsr_xs cpsr_xsf cpsr_sf cpsr_cxsf spsr_c spsr_x spsr_s spsr_f spsr_cx spsr_cxs spsr_xs spsr_xsf spsr_sf spsr_cxsf s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 s21 s22 s23 s24 s25 s26 s27 s28 s29 s30 s31 d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 d12 d13 d14 d15 d16 d17 d18 d19 d20 d21 d22 d23 d24 d25 d26 d27 d28 d29 d30 d31 {PC} {VAR} {TRUE} {FALSE} {OPT} {CONFIG} {ENDIAN} {CODESIZE} {CPU} {FPU} {ARCHITECTURE} {PCSTOREOFFSET} {ARMASM_VERSION} {INTER} {ROPI} {RWPI} {SWST} {NOSWST} . @'
-        },
-        contains: [
-            {
-                className: 'keyword',
-                begin: '\\b(adc|(qd?|sh?|u[qh]?)?add(8|16)?|usada?8|(q|sh?|u[qh]?)?(as|sa)x|and|adrl?|sbc|rs[bc]|asr|b[lx]?|blx|bxj|cbn?z|tb[bh]|bic|bfc|bfi|[su]bfx|bkpt|cdp2?|clz|clrex|cmp|cmn|cpsi[ed]|cps|setend|dbg|dmb|dsb|eor|isb|it[te]{0,3}|lsl|lsr|ror|rrx|ldm(([id][ab])|f[ds])?|ldr((s|ex)?[bhd])?|movt?|mvn|mra|mar|mul|[us]mull|smul[bwt][bt]|smu[as]d|smmul|smmla|mla|umlaal|smlal?([wbt][bt]|d)|mls|smlsl?[ds]|smc|svc|sev|mia([bt]{2}|ph)?|mrr?c2?|mcrr2?|mrs|msr|orr|orn|pkh(tb|bt)|rbit|rev(16|sh)?|sel|[su]sat(16)?|nop|pop|push|rfe([id][ab])?|stm([id][ab])?|str(ex)?[bhd]?|(qd?)?sub|(sh?|q|u[qh]?)?sub(8|16)|[su]xt(a?h|a?b(16)?)|srs([id][ab])?|swpb?|swi|smi|tst|teq|wfe|wfi|yield)(eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le|al|hs|lo)?[sptrx]?(?=\\s)'
-            },
-            n,
-            e.QUOTE_STRING_MODE,
-            {
-                className: 'string',
-                begin: "'",
-                end: "[^\\\\]'",
-                relevance: 0
-            },
-            {
-                className: 'title',
-                begin: '\\|',
-                end: '\\|',
-                illegal: '\\n',
-                relevance: 0
-            },
-            {
-                className: 'number',
-                variants: [{ begin: '[#$=]?0x[0-9a-f]+' }, { begin: '[#$=]?0b[01]+' }, { begin: '[#$=]\\d+' }, { begin: '\\b\\d+' }],
-                relevance: 0
-            },
-            {
-                className: 'symbol',
-                variants: [{ begin: '^[ \\t]*[a-z_\\.\\$][a-z0-9_\\.\\$]+:' }, { begin: '^[a-z_\\.\\$][a-z0-9_\\.\\$]+' }, { begin: '[=#]\\w+' }],
-                relevance: 0
-            }
-        ]
-    };
+n(47120), n(653041);
+var i,
+    l = n(200651),
+    r = n(192379),
+    a = n(120356),
+    o = n.n(a),
+    s = n(954955),
+    c = n.n(s),
+    u = n(748780),
+    d = n(902704),
+    h = n(481060),
+    p = n(702294);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-e.exports = n;
+let m = {
+    friction: 10,
+    tension: 300
+};
+class g extends r.Component {
+    shouldComponentUpdate(e, t) {
+        return !(0, d.Z)(this.props, e, ['animate']) || !(0, d.Z)(this.state, t);
+    }
+    componentDidMount() {
+        let { hide: e } = this.props;
+        e ? this.state.translateY.setValue(1) : this.state.translateY.setValue(0);
+    }
+    componentDidUpdate(e) {
+        let { hide: t } = e,
+            { hide: n } = this.props;
+        n && !t ? this.animateOut() : !n && t && this.animateIn();
+    }
+    componentWillUnmount() {
+        null != this._timeout && clearTimeout(this._timeout);
+    }
+    animateIn() {
+        let { translateY: e } = this.state;
+        if ((null != this._timeout && clearTimeout(this._timeout), !this.props.animate)) {
+            e.setValue(0);
+            return;
+        }
+        this._timeout = setTimeout(() => {
+            u.Z.spring(e, {
+                toValue: 0,
+                ...m
+            }).start();
+        }, 100);
+    }
+    animateOut() {
+        let { translateY: e } = this.state;
+        if ((null != this._timeout && clearTimeout(this._timeout), !this.props.animate)) {
+            e.setValue(1);
+            return;
+        }
+        u.Z.spring(e, {
+            toValue: 1,
+            ...m
+        }).start();
+    }
+    render() {
+        let { className: e, text: t, hide: n, onClick: i } = this.props;
+        return (0, l.jsx)(u.Z.div, {
+            className: o()(p.bar, e),
+            onClick: i,
+            style: this.getAnimatedStyle(),
+            'aria-hidden': n,
+            children: (0, l.jsx)('span', {
+                className: p.text,
+                children: t
+            })
+        });
+    }
+    getAnimatedStyle() {
+        let { translateY: e } = this.state,
+            { reverse: t } = this.props;
+        return {
+            transform: [
+                {
+                    translateY: e.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: ['0%', t ? '180%' : '-180%']
+                    })
+                }
+            ]
+        };
+    }
+    constructor(e) {
+        super(e),
+            f(this, '_timeout', void 0),
+            (this.state = {
+                translateY: new u.Z.Value(),
+                reduceMotion: !1
+            });
+    }
+}
+class v extends (i = r.PureComponent) {
+    componentDidMount() {
+        this.calculateState();
+    }
+    componentDidUpdate() {
+        this.calculateState();
+    }
+    componentWillUnmount() {
+        this.calculateState.cancel();
+    }
+    render() {
+        let { unread: e, mention: t } = this.state,
+            { textMention: n, textUnread: i, reverse: r, className: a, barClassName: s, hide: c, animate: u } = this.props,
+            { reducedMotion: d } = this.context;
+        return (0, l.jsx)('div', {
+            className: null != a ? a : void 0,
+            children: (0, l.jsx)(g, {
+                hide: !0 === c || (null == e && null == t),
+                className: o()(s, null != t ? p.mention : p.unread),
+                text: null != t ? n : i,
+                reverse: r,
+                animate: u && !d.enabled,
+                onClick: this.handleClick
+            })
+        });
+    }
+    constructor(...e) {
+        super(...e),
+            f(this, 'state', {
+                unread: null,
+                mention: null
+            }),
+            f(
+                this,
+                'calculateState',
+                c()(() => {
+                    let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: a } = this.props,
+                        o = null,
+                        s = null,
+                        c = [];
+                    e.forEach((e) => {
+                        'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
+                    });
+                    let u = (e) => {
+                            null == o && l(e, r, c) && (o = e), null == s && i(e, r, c) && (s = e);
+                        },
+                        d = r ? c.length - 1 : 0,
+                        h = c[d];
+                    for (; null != h; ) {
+                        if ('string' == typeof h) {
+                            if (n(h, r, c)) break;
+                            u(h);
+                        } else {
+                            let e = !1;
+                            for (let t of h) {
+                                if (n(t, r, c)) {
+                                    e = !0;
+                                    break;
+                                }
+                                u(t);
+                            }
+                            if (e) break;
+                        }
+                        (d += r ? -1 : 1), (h = c[d]);
+                    }
+                    null != a && a(o, s, r),
+                        this.setState({
+                            mention: o,
+                            unread: s
+                        });
+                }, 200)
+            ),
+            f(this, 'handleClick', (e) => {
+                e.preventDefault(), e.stopPropagation();
+                let { unread: t, mention: n } = this.state,
+                    { onJumpTo: i } = this.props,
+                    l = null != n ? n : t;
+                null != l && i(l, [n, t]);
+            });
+    }
+}
+f(v, 'contextType', h.AccessibilityPreferencesContext),
+    f(v, 'defaultProps', {
+        className: p.container,
+        reverse: !1,
+        hide: !1,
+        animate: !0
+    }),
+    (t.Z = v);

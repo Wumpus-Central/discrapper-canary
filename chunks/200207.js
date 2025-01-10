@@ -1,73 +1,66 @@
-e.d(i, {
-    I: function () {
-        return c;
-    }
-});
-var l = e(200651);
-e(192379);
-var t = e(557533),
-    r = e.n(t),
-    s = e(489948),
-    d = e(790472),
-    a = e(777207),
-    u = e(134992),
-    o = e(717729);
-function c(n) {
-    let { title: i, description: e, headerImage: t, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
-    return (0, l.jsx)(s.tE, {
-        children: (0, l.jsxs)('div', {
-            className: r()(u.wrapper, o.hoverCard),
-            tabIndex: 0,
-            onClick: () => {
-                null != c ? c() : null != m && m();
+function n(e) {
+    let n = e.regex,
+        r = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
+        i = n.concat(r, n.concat('(\\.', r, ')*')),
+        a = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
+        s = {
+            className: 'rest_arg',
+            begin: /[.]{3}/,
+            end: r,
+            relevance: 10
+        };
+    return {
+        name: 'ActionScript',
+        aliases: ['as'],
+        keywords: {
+            keyword: ['as', 'break', 'case', 'catch', 'class', 'const', 'continue', 'default', 'delete', 'do', 'dynamic', 'each', 'else', 'extends', 'final', 'finally', 'for', 'function', 'get', 'if', 'implements', 'import', 'in', 'include', 'instanceof', 'interface', 'internal', 'is', 'namespace', 'native', 'new', 'override', 'package', 'private', 'protected', 'public', 'return', 'set', 'static', 'super', 'switch', 'this', 'throw', 'try', 'typeof', 'use', 'var', 'void', 'while', 'with'],
+            literal: ['true', 'false', 'null', 'undefined']
+        },
+        contains: [
+            e.APOS_STRING_MODE,
+            e.QUOTE_STRING_MODE,
+            e.C_LINE_COMMENT_MODE,
+            e.C_BLOCK_COMMENT_MODE,
+            e.C_NUMBER_MODE,
+            {
+                match: [/\bpackage/, /\s+/, i],
+                className: {
+                    1: 'keyword',
+                    3: 'title.class'
+                }
             },
-            children: [
-                (0, l.jsx)('div', {
-                    className: u.cardHeaderImg,
-                    style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
-                    children:
-                        null == t &&
-                        (0, l.jsx)(d.P, {
-                            color: 'white',
-                            size: 'custom',
-                            height: 80,
-                            width: 80
-                        })
-                }),
-                (0, l.jsxs)('div', {
-                    className: u.details,
-                    children: [
-                        (0, l.jsx)(a.x, {
-                            color: 'header-primary',
-                            variant: 'text-md/semibold',
-                            children: i
-                        }),
-                        null != e &&
-                            (0, l.jsx)(a.x, {
-                                className: u.description,
-                                color: 'text-muted',
-                                variant: 'text-sm/normal',
-                                children: e
-                            })
-                    ]
-                }),
-                null != v &&
-                    (0, l.jsxs)('div', {
-                        className: u.footer,
-                        children: [
-                            (0, l.jsx)(a.x, {
-                                color: 'interactive-normal',
-                                variant: 'text-sm/normal',
-                                children: p
-                            }),
-                            (0, l.jsx)(v, {
-                                onClick: (n) => {
-                                    n.stopPropagation(), null == m || m();
-                                }
-                            })
-                        ]
-                    })
-            ]
-        })
-    });
+            {
+                match: [/\b(?:class|interface|extends|implements)/, /\s+/, r],
+                className: {
+                    1: 'keyword',
+                    3: 'title.class'
+                }
+            },
+            {
+                className: 'meta',
+                beginKeywords: 'import include',
+                end: /;/,
+                keywords: { keyword: 'import include' }
+            },
+            {
+                beginKeywords: 'function',
+                end: /[{;]/,
+                excludeEnd: !0,
+                illegal: /\S/,
+                contains: [
+                    e.inherit(e.TITLE_MODE, { className: 'title.function' }),
+                    {
+                        className: 'params',
+                        begin: /\(/,
+                        end: /\)/,
+                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, s]
+                    },
+                    { begin: n.concat(/:\s*/, a) }
+                ]
+            },
+            e.METHOD_GUARD
+        ],
+        illegal: /#/
+    };
 }
+e.exports = n;
