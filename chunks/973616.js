@@ -132,11 +132,13 @@ class m extends p {
                       )
                     : void 0,
             termsOfServiceUrl: e.terms_of_service_url,
-            privacyPolicyUrl: e.privacy_policy_url
+            privacyPolicyUrl: e.privacy_policy_url,
+            isDiscoverable: e.is_discoverable,
+            directoryEntry: e.directory_entry
         });
     }
     mergeFromApplicationUpdate(e) {
-        var n, r, i, a, s, o, l, u, c, d, f, _, h, p, g, E, v, I, T, b, y, S, A, N, C, R, O, D, L, x, w, P, M, k, U, B, G, F, Z, V;
+        var n, r, i, a, s, o, l, u, c, d, f, _, h, p, g, E, v, I, T, b, y, S, A, N, C, R, O, D, L, x, w, P, M, k, U, B, G, F, Z, V, j;
         return new m({
             id: null !== (n = e.id) && void 0 !== n ? n : this.id,
             name: null !== (r = e.name) && void 0 !== r ? r : this.name,
@@ -177,7 +179,8 @@ class m extends p {
             isVerified: null !== (G = e.isVerified) && void 0 !== G ? G : this.isVerified,
             customInstallUrl: null !== (F = e.customInstallUrl) && void 0 !== F ? F : this.customInstallUrl,
             installParams: null !== (Z = e.installParams) && void 0 !== Z ? Z : this.installParams,
-            isDiscoverable: null !== (V = e.isDiscoverable) && void 0 !== V ? V : this.isDiscoverable
+            isDiscoverable: null !== (V = e.isDiscoverable) && void 0 !== V ? V : this.isDiscoverable,
+            directoryEntry: null !== (j = e.directoryEntry) && void 0 !== j ? j : this.directoryEntry
         });
     }
     getMaxParticipants() {
@@ -200,7 +203,7 @@ class m extends p {
         return null != e && (e & n) === n;
     }
     constructor(e) {
-        var n, r, i, a, o, l, u, c, d, _, p, m, g, E, v, I;
-        super(e), f(this, 'overlay', void 0), f(this, 'overlayWarn', void 0), f(this, 'overlayCompatibilityHook', void 0), f(this, 'overlayMethods', void 0), f(this, 'hook', void 0), f(this, 'aliases', void 0), f(this, 'publishers', void 0), f(this, 'developers', void 0), f(this, 'storeListingSkuId', void 0), f(this, 'guildId', void 0), f(this, 'guild', void 0), f(this, 'executables', void 0), f(this, 'hashes', void 0), f(this, 'eulaId', void 0), f(this, 'slug', void 0), f(this, 'flags', void 0), f(this, 'maxParticipants', void 0), f(this, 'tags', void 0), f(this, 'embeddedActivityConfig', void 0), f(this, 'team', void 0), f(this, 'integrationTypesConfig', void 0), f(this, 'storefront_available', void 0), f(this, 'termsOfServiceUrl', void 0), f(this, 'privacyPolicyUrl', void 0), f(this, 'isDiscoverable', void 0), f(this, 'customInstallUrl', void 0), f(this, 'installParams', void 0), (this.overlay = null !== (n = e.overlay) && void 0 !== n && n), (this.overlayWarn = null !== (r = e.overlayWarn) && void 0 !== r && r), (this.overlayCompatibilityHook = null !== (i = e.overlayCompatibilityHook) && void 0 !== i && i), (this.overlayMethods = null !== (a = e.overlayMethods) && void 0 !== a ? a : s.e.DEFAULT), (this.hook = null === (o = e.hook) || void 0 === o || o), (this.aliases = null !== (l = e.aliases) && void 0 !== l ? l : []), (this.publishers = null !== (u = e.publishers) && void 0 !== u ? u : []), (this.developers = null !== (c = e.developers) && void 0 !== c ? c : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null !== (d = e.executables) && void 0 !== d ? d : []).map(h)), (this.hashes = null !== (_ = e.hashes) && void 0 !== _ ? _ : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null !== (p = e.flags) && void 0 !== p ? p : 0), (this.tags = null !== (m = e.tags) && void 0 !== m ? m : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null !== (g = e.embedded_activity_config) && void 0 !== g ? g : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null !== (E = e.is_discoverable) && void 0 !== E ? E : e.isDiscoverable), (this.customInstallUrl = null !== (v = e.custom_install_url) && void 0 !== v ? v : e.customInstallUrl), (this.installParams = null !== (I = e.install_params) && void 0 !== I ? I : e.installParams);
+        var n, r, i, a, o, l, u, c, d, _, p, m, g, E, v, I, T;
+        super(e), f(this, 'overlay', void 0), f(this, 'overlayWarn', void 0), f(this, 'overlayCompatibilityHook', void 0), f(this, 'overlayMethods', void 0), f(this, 'hook', void 0), f(this, 'aliases', void 0), f(this, 'publishers', void 0), f(this, 'developers', void 0), f(this, 'storeListingSkuId', void 0), f(this, 'guildId', void 0), f(this, 'guild', void 0), f(this, 'executables', void 0), f(this, 'hashes', void 0), f(this, 'eulaId', void 0), f(this, 'slug', void 0), f(this, 'flags', void 0), f(this, 'maxParticipants', void 0), f(this, 'tags', void 0), f(this, 'embeddedActivityConfig', void 0), f(this, 'team', void 0), f(this, 'integrationTypesConfig', void 0), f(this, 'storefront_available', void 0), f(this, 'termsOfServiceUrl', void 0), f(this, 'privacyPolicyUrl', void 0), f(this, 'isDiscoverable', void 0), f(this, 'customInstallUrl', void 0), f(this, 'installParams', void 0), f(this, 'directoryEntry', void 0), (this.overlay = null !== (n = e.overlay) && void 0 !== n && n), (this.overlayWarn = null !== (r = e.overlayWarn) && void 0 !== r && r), (this.overlayCompatibilityHook = null !== (i = e.overlayCompatibilityHook) && void 0 !== i && i), (this.overlayMethods = null !== (a = e.overlayMethods) && void 0 !== a ? a : s.e.DEFAULT), (this.hook = null === (o = e.hook) || void 0 === o || o), (this.aliases = null !== (l = e.aliases) && void 0 !== l ? l : []), (this.publishers = null !== (u = e.publishers) && void 0 !== u ? u : []), (this.developers = null !== (c = e.developers) && void 0 !== c ? c : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null !== (d = e.executables) && void 0 !== d ? d : []).map(h)), (this.hashes = null !== (_ = e.hashes) && void 0 !== _ ? _ : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null !== (p = e.flags) && void 0 !== p ? p : 0), (this.tags = null !== (m = e.tags) && void 0 !== m ? m : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null !== (g = e.embedded_activity_config) && void 0 !== g ? g : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null !== (E = e.is_discoverable) && void 0 !== E ? E : e.isDiscoverable), (this.customInstallUrl = null !== (v = e.custom_install_url) && void 0 !== v ? v : e.customInstallUrl), (this.installParams = null !== (I = e.install_params) && void 0 !== I ? I : e.installParams), (this.directoryEntry = null !== (T = e.directory_entry) && void 0 !== T ? T : e.directoryEntry);
     }
 }

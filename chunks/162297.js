@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return k;
     }
 }),
     n(47120);
@@ -29,31 +29,30 @@ var i = n(200651),
     S = n(944486),
     A = n(914010),
     b = n(768581),
-    j = n(585483),
-    R = n(135431),
-    Z = n(728345),
-    P = n(812206),
-    L = n(981631),
-    y = n(388032),
-    O = n(363637),
-    M = n(413097),
-    k = n(970952);
-function D(e) {
+    j = n(135431),
+    R = n(728345),
+    Z = n(812206),
+    P = n(981631),
+    L = n(388032),
+    y = n(363637),
+    O = n(413097),
+    M = n(970952);
+function k(e) {
     let { applicationId: t } = e,
-        [n, l, a] = (0, o.Wu)([P.Z], () => [P.Z.getApplication(t), P.Z.isFetchingApplication(t), P.Z.didFetchingApplicationFail(t)], [t]);
+        [n, l, a] = (0, o.Wu)([Z.Z], () => [Z.Z.getApplication(t), Z.Z.isFetchingApplication(t), Z.Z.didFetchingApplicationFail(t)], [t]);
     return (r.useEffect(() => {
-        null == n && !l && !a && Z.ZP.fetchApplication(t);
+        null == n && !l && !a && R.ZP.fetchApplication(t);
     }, [n, l, a, t]),
     null != n &&
-        (0, R.Eb)({
+        (0, j.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, i.jsx)(B, { application: n })
+        ? (0, i.jsx)(D, { application: n })
         : null;
 }
-function B(e) {
+function D(e) {
     var t;
     let { application: n } = e,
         u = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
@@ -64,98 +63,102 @@ function B(e) {
         }),
         {
             iconURL: b,
-            name: Z,
-            description: P
+            name: R,
+            description: Z
         } = r.useMemo(
             () =>
                 (0, _.sl)(n, {
-                    fakeAppIconURL: M,
+                    fakeAppIconURL: O,
                     size: 56
                 }),
             [n]
         ),
-        D = r.useMemo(() => (null != P ? (0, N.parseBioReact)(P) : null), [P]),
-        [B, w] = r.useState(!1),
-        F = r.useCallback((e) => {
-            e && w(!0);
+        k = r.useMemo(() => (null != Z ? (0, N.parseBioReact)(Z) : null), [Z]),
+        [D, U] = r.useState(!1),
+        w = r.useCallback((e) => {
+            e && U(!0);
         }, []),
-        G = (0, c.O)(F);
+        F = (0, c.O)(w);
     r.useEffect(() => {
-        B &&
+        D &&
             (0, p.h)({
                 type: l.ImpressionTypes.VIEW,
                 name: l.ImpressionNames.APP_OAUTH2_LINK_EMBED,
                 properties: { application_id: n.id }
             });
-    }, [B, n]);
-    let V = (0, R.TK)(n.id, (0, E.PL)(!0, !1)),
-        H = (0, R.TK)(n.id, (0, E.LD)(x, !1)),
-        z = V || H,
-        W = n.isVerified && n.isDiscoverable,
-        K = (0, o.e7)([S.Z, v.Z], () => v.Z.getChannel(S.Z.getChannelId())),
-        Y = (0, o.e7)([T.Z], () => (null == K ? void 0 : K.isPrivate()) || T.Z.can(L.Plq.SEND_MESSAGES, K)),
-        { analyticsLocations: X } = (0, f.ZP)(m.Z.APP_OAUTH2_LINK_EMBED),
-        Q = async () => {
+    }, [D, n]);
+    let G = (0, j.TK)(n.id, (0, E.PL)(!0, !1)),
+        V = (0, j.TK)(n.id, (0, E.LD)(x, !1)),
+        H = G || V,
+        z = n.isVerified && n.isDiscoverable,
+        W = (0, o.e7)([S.Z, v.Z], () => v.Z.getChannel(S.Z.getChannelId())),
+        K = (0, o.e7)([T.Z], () => (null == W ? void 0 : W.isPrivate()) || T.Z.can(P.Plq.SEND_MESSAGES, W)),
+        { analyticsLocations: Y } = (0, f.ZP)(m.Z.APP_OAUTH2_LINK_EMBED),
+        X = async () => {
             if (null != u)
                 try {
-                    await (0, g.W)(n.id, u, X);
+                    await (0, g.W)({
+                        appId: n.id,
+                        botId: u,
+                        analyticsLocations: Y
+                    });
                 } catch (e) {}
         };
     return (0, i.jsxs)('div', {
-        ref: G,
-        className: O.embedContainer,
+        ref: F,
+        className: y.embedContainer,
         children: [
-            (0, i.jsx)(U, {
+            (0, i.jsx)(B, {
                 application: n,
                 iconUrl: b
             }),
             (0, i.jsx)('img', {
-                className: O.icon,
+                className: y.icon,
                 alt: n.name,
-                src: null != b ? b : k,
+                src: null != b ? b : M,
                 'aria-hidden': !0,
                 draggable: !1
             }),
             (0, i.jsxs)('div', {
-                className: O.body,
+                className: y.body,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: O.details,
+                        className: y.details,
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'heading-lg/bold',
                                 color: 'interactive-active',
-                                children: Z
+                                children: R
                             }),
-                            null != D &&
+                            null != k &&
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: D
+                                    children: k
                                 })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: O.buttonContainer,
+                        className: y.buttonContainer,
                         children: [
                             d &&
                                 (0, i.jsx)(s.Button, {
                                     color: s.Button.Colors.BRAND,
                                     type: 'button',
                                     size: s.Button.Sizes.MEDIUM,
-                                    onClick: Q,
-                                    children: y.intl.string(y.t.RscU7O)
+                                    onClick: X,
+                                    children: L.intl.string(L.t.RscU7O)
                                 }),
-                            (z || W) &&
-                                Y &&
+                            (H || z) &&
+                                K &&
                                 (0, i.jsx)(s.Button, {
                                     color: d ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
                                     type: 'button',
                                     size: s.Button.Sizes.MEDIUM,
                                     onClick: () => {
                                         var e;
-                                        a.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || z
-                                            ? j.S.dispatchToLastSubscribed(L.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id })
+                                        a.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || H
+                                            ? (0, _.X)(n.id)
                                             : (0, I.goToAppDirectory)({
                                                   guildId: x,
                                                   view: C.ApplicationDirectoryViews.APPLICATION,
@@ -163,17 +166,17 @@ function B(e) {
                                                   entrypoint: { name: C.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
                                               });
                                     },
-                                    children: y.intl.string(y.t.fbcCzc)
+                                    children: L.intl.string(L.t.fbcCzc)
                                 }),
                             !d &&
-                                !z &&
+                                !H &&
                                 (0, i.jsx)(s.Button, {
                                     color: s.Button.Colors.PRIMARY,
                                     type: 'button',
                                     size: s.Button.Sizes.MEDIUM,
                                     onClick: () => {
-                                        h.ZP.trackWithMetadata(L.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: n.id }),
-                                            (0, R.LO)({
+                                        h.ZP.trackWithMetadata(P.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: n.id }),
+                                            (0, j.LO)({
                                                 applicationId: n.id,
                                                 customInstallUrl: n.customInstallUrl,
                                                 installParams: n.installParams,
@@ -182,7 +185,7 @@ function B(e) {
                                                 source: 'app_oauth2_link_embed'
                                             });
                                     },
-                                    children: y.intl.string(y.t.NgXl3N)
+                                    children: L.intl.string(L.t.NgXl3N)
                                 })
                         ]
                     })
@@ -191,7 +194,7 @@ function B(e) {
         ]
     });
 }
-function U(e) {
+function B(e) {
     let { application: t, iconUrl: n } = e,
         r = (0, u.Z)({
             applicationId: t.id,
@@ -206,8 +209,8 @@ function U(e) {
         o = (0, i.jsx)(d.Z, {
             imageBackground: r,
             applicationName: t.name,
-            imageClassName: O.bannerImage,
-            imageNotFoundClassName: O.bannerImage
+            imageClassName: y.bannerImage,
+            imageNotFoundClassName: y.bannerImage
         });
     else if ((null == a ? void 0 : a.banner) != null) {
         let e = (0, b.aN)({
@@ -219,11 +222,11 @@ function U(e) {
         o = (0, i.jsx)('img', {
             alt: t.name,
             src: e,
-            className: O.bannerImage
+            className: y.bannerImage
         });
     } else s = { backgroundColor: l };
     return (0, i.jsx)('div', {
-        className: O.banner,
+        className: y.banner,
         style: s,
         children: o
     });

@@ -5,11 +5,14 @@ n.d(t, {
 });
 var i = n(493683),
     r = n(122613);
-async function l(e, t, n) {
-    let l = await i.Z.openPrivateChannel(t);
+async function l(e) {
+    let { appId: t, botId: n, analyticsLocations: l, customId: a, referrerId: o } = e,
+        s = await i.Z.openPrivateChannel(n);
     return await (0, r.Z)({
-        targetApplicationId: e,
-        channelId: l,
-        analyticsLocations: n
+        targetApplicationId: t,
+        channelId: s,
+        analyticsLocations: l,
+        customId: a,
+        referrerId: o
     });
 }

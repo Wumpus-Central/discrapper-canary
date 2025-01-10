@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return R;
+        return j;
     }
 }),
     n(653041);
@@ -24,148 +24,154 @@ var i = n(200651),
     I = n(944486),
     x = n(914010),
     N = n(768581),
-    v = n(585483),
-    T = n(135431),
-    S = n(758199),
-    A = n(981631),
-    b = n(388032),
-    j = n(129548);
-function R(e) {
+    v = n(135431),
+    T = n(758199),
+    S = n(981631),
+    A = n(388032),
+    b = n(129548);
+function j(e) {
     var t;
-    let { app: n, embedUrl: R } = e,
-        { name: Z, bot: P, is_discoverable: L } = n,
-        y = null == P ? void 0 : P.id,
-        O = (0, T.Eb)({
-            customInstallUrl: n.custom_install_url,
-            installParams: n.install_params,
-            integrationTypesConfig: n.integration_types_config
+    let { app: n, embedUrl: j, activityCustomId: R, activityReferrerId: Z } = e,
+        { name: P, bot: L, isDiscoverable: y } = n,
+        O = null == L ? void 0 : L.id,
+        M = (0, v.Eb)({
+            customInstallUrl: n.customInstallUrl,
+            installParams: n.installParams,
+            integrationTypesConfig: n.integrationTypesConfig
         }),
-        M = O && null != n.integration_types_config && l.Y.GUILD_INSTALL in n.integration_types_config,
-        k = O && null != n.integration_types_config && l.Y.USER_INSTALL in n.integration_types_config,
-        D = (0, a.e7)([x.Z], () => {
+        k = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
+        D = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
+        B = (0, a.e7)([x.Z], () => {
             var e;
             return null !== (e = x.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        B = (0, m.PL)(!0, !1),
-        U = (0, m.LD)(D, !1),
-        w = (0, T.TK)(n.id, B),
-        F = (0, T.TK)(n.id, U),
-        G = (0, u.ye)(n),
-        V = r.useMemo(() => {
-            let e = n.description.trim();
-            return '' === e ? null : (0, _.parseBioReact)(e);
+        U = (0, m.PL)(!0, !1),
+        w = (0, m.LD)(B, !1),
+        F = (0, v.TK)(n.id, U),
+        G = (0, v.TK)(n.id, w),
+        V = (0, u.ye)(n),
+        H = r.useMemo(() => {
+            var e;
+            let t = null === (e = n.description) || void 0 === e ? void 0 : e.trim();
+            return null == t || '' === t ? null : (0, _.parseBioReact)(t);
         }, [n.description]),
-        H = (0, a.e7)([g.default], () => g.default.locale, []),
-        z = r.useMemo(() => {
+        z = (0, a.e7)([g.default], () => g.default.locale, []),
+        W = r.useMemo(() => {
             var e, t;
-            let i = new Intl.NumberFormat(H, {
+            let i = new Intl.NumberFormat(z, {
                     notation: 'compact',
                     compactDisplay: 'short'
                 }),
-                r = null !== (t = null === (e = n.directory_entry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 !== r && M ? b.intl.format(b.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
-        }, [null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count, M, H]),
-        W =
-            null != P
+                r = null !== (t = null === (e = n.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
+            return 0 !== r && k ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
+        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, k, z]),
+        K =
+            null != L
                 ? (0, N.aN)({
-                      id: null == P ? void 0 : P.id,
-                      banner: null == P ? void 0 : P.banner,
+                      id: null == L ? void 0 : L.id,
+                      banner: null == L ? void 0 : L.banner,
                       size: 512,
                       canAnimate: !1
                   })
                 : void 0,
-        K = N.ZP.getApplicationIconURL({
+        Y = N.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
-            bot: P
+            bot: L
         }),
-        { analyticsLocations: Y } = (0, c.ZP)(s.Z.APP_MESSAGE_EMBED),
-        X = (0, a.e7)(
+        { analyticsLocations: X } = (0, c.ZP)(s.Z.APP_MESSAGE_EMBED),
+        Q = (0, a.e7)(
             [E.Z, C.Z, I.Z],
             () => {
                 let e = E.Z.getChannel(I.Z.getChannelId());
-                return null != e && (e.isPrivate() || C.Z.can(A.Plq.SEND_MESSAGES, e));
+                return null != e && (e.isPrivate() || C.Z.can(S.Plq.SEND_MESSAGES, e));
             },
             []
         ),
-        Q = (w || F || k) && X,
-        q = L || Q,
-        J = r.useCallback(() => {
-            if (Q) {
-                v.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id });
+        q = (F || G || D) && Q,
+        J = y || q,
+        $ = r.useCallback(() => {
+            if (q) {
+                (0, u.X)(n.id);
                 return;
             }
             (0, p.goToAppDirectory)({
                 applicationId: n.id,
                 entrypoint: { name: f.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
-        }, [n.id, Q]),
-        $ = r.useCallback(() => {
-            (0, T.LO)({
+        }, [n.id, q]),
+        ee = r.useCallback(() => {
+            (0, v.LO)({
                 applicationId: n.id,
-                customInstallUrl: n.custom_install_url,
-                installParams: n.install_params,
-                integrationTypesConfig: n.integration_types_config,
-                guildId: D,
+                customInstallUrl: n.customInstallUrl,
+                installParams: n.installParams,
+                integrationTypesConfig: n.integrationTypesConfig,
+                guildId: B,
                 source: 'app_message_embed'
             });
-        }, [n.custom_install_url, n.id, n.install_params, n.integration_types_config, D]),
-        ee = (0, h.ms)({
+        }, [n.customInstallUrl, n.id, n.installParams, n.integrationTypesConfig, B]),
+        et = (0, h.ms)({
             applicationId: n.id,
-            botUserId: null == P ? void 0 : P.id
+            botUserId: null == L ? void 0 : L.id
         }),
-        et = null != y && G && ee,
-        en = r.useMemo(() => {
+        en = null != O && V && et,
+        ei = r.useMemo(() => {
             let e = [];
             return (
-                et &&
+                en &&
                     e.push({
-                        label: b.intl.string(b.t.RscU7O),
+                        label: A.intl.string(A.t.RscU7O),
                         onClick() {
-                            (0, d.W)(n.id, y, Y);
+                            (0, d.W)({
+                                appId: n.id,
+                                botId: O,
+                                analyticsLocations: X,
+                                customId: R,
+                                referrerId: Z
+                            });
                         }
                     }),
-                q
+                J
                     ? e.push({
-                          label: b.intl.string(b.t['HO/oXl']),
-                          onClick: J
-                      })
-                    : O &&
-                      e.push({
-                          label: b.intl.string(b.t.NgXl3N),
+                          label: A.intl.string(A.t['HO/oXl']),
                           onClick: $
+                      })
+                    : M &&
+                      e.push({
+                          label: A.intl.string(A.t.NgXl3N),
+                          onClick: ee
                       }),
                 e
             );
-        }, [Y, n.id, y, et, q, $, J, O]);
-    return (0, i.jsx)(S.W, {
-        title: Z,
-        bannerSrc: W,
-        iconSrc: K,
-        embedUrl: R,
+        }, [R, Z, X, n.id, O, en, J, ee, $, M]);
+    return (0, i.jsx)(T.W, {
+        title: P,
+        bannerSrc: K,
+        iconSrc: Y,
+        embedUrl: j,
         info: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
-                    className: j.description,
+                    className: b.description,
                     color: 'always-white',
-                    children: V
+                    children: H
                 }),
-                null != z &&
+                null != W &&
                     (0, i.jsxs)(o.Text, {
                         variant: 'text-xs/normal',
-                        className: j.tagline,
+                        className: b.tagline,
                         color: 'always-white',
                         children: [
                             (0, i.jsx)(o.CompassIcon, {
                                 size: 'xxs',
                                 color: 'currentColor'
                             }),
-                            z
+                            W
                         ]
                     })
             ]
         }),
-        actions: en
+        actions: ei
     });
 }

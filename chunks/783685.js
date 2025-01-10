@@ -23,7 +23,11 @@ function u(e) {
             }),
                 h(!0);
             try {
-                await (0, s.W)(t, n, m);
+                await (0, s.W)({
+                    appId: t,
+                    botId: n,
+                    analyticsLocations: m
+                });
             } catch (e) {}
             clearTimeout(f.current), h(!1);
         }, [n, t, m]);
