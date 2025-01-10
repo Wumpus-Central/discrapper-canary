@@ -257,7 +257,8 @@ class e3 extends (i = l.Component) {
                           g.Z,
                           {
                               code: i,
-                              message: e
+                              message: e,
+                              embedUrl: l
                           },
                           i
                       );
@@ -272,7 +273,8 @@ class e3 extends (i = l.Component) {
                               applicationId: i,
                               message: e,
                               referrerId: n,
-                              customId: s
+                              customId: s,
+                              embedUrl: l
                           },
                           i
                       );
@@ -301,7 +303,15 @@ class e3 extends (i = l.Component) {
                                 },
                                 i
                             );
-                  } else if (n === v.g.APP_OAUTH2_LINK) return (0, r.jsx)(I.Z, { applicationId: i }, i);
+                  } else if (n === v.g.APP_OAUTH2_LINK)
+                      return (0, r.jsx)(
+                          I.Z,
+                          {
+                              applicationId: i,
+                              embedUrl: l
+                          },
+                          i
+                      );
                   else if (n === v.g.COLLECTIBLES_SHOP) return null;
                   else throw Error('Unknown coded link type: '.concat(n));
               });
