@@ -357,6 +357,7 @@ var r;
         (e.SEASONAL_GIFTING_REMINDER_COACHMARK = 'seasonal gifting reminder coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_NAGBAR = 'seasonal gifting reminder nagbar'),
         (e.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
+        (e.CONFETTI_POTION_MODAL = 'confetti potion modal'),
         (e.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
         (e.DEEPLINK = 'deeplink'),
         (e.HOLIDAY_COACHMARK = 'holiday coachmark'),

@@ -1906,6 +1906,8 @@ let n0 = '@me',
         CONSUMABLE_FETCH_PRICE: (e) => '/store/consumable/pricing/'.concat(e),
         CONSUME_HD_STREAMING_POTION: '/users/@me/consumable/hd-streaming',
         FETCH_HD_STREAMING_ENTITLEMENT: '/users/@me/consumable/hd-streaming',
+        CONSUME_MESSAGE_CONFETTI_POTION: '/users/@me/consumable/confetti',
+        FETCH_MESSAGE_CONFETTI_ENTITLEMENT: '/users/@me/consumable/confetti',
         GUILD_MEMBER_BANNER: function (e, t, r) {
             let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'png';
             return '/guilds/'.concat(e, '/users/').concat(t, '/banners/').concat(r, '.').concat(a);

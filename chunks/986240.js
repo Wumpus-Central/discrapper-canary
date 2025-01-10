@@ -1,30 +1,25 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return u;
     }
 });
 var i = t(200651);
 t(192379);
-var l = t(442837),
-    r = t(481060),
+var l = t(481060),
+    r = t(135793),
     a = t(111810),
-    o = t(665906),
-    s = t(695346),
-    u = t(496675),
-    d = t(981631),
-    c = t(388032);
-function f(e, n) {
-    let t = (0, o.$R)(n),
-        f = (0, l.e7)([u.Z], () => (n.isPrivate() || u.Z.can(d.Plq.ADD_REACTIONS, n)) && t, [n, t]),
-        g = s.nc.getSetting() && f && e.type !== d.uaV.GUILD_INVITE_REMINDER,
-        m = e.hasPotions(),
-        h = (0, a.V1)('Message Context Menu');
-    return g && !m && h
-        ? (0, i.jsx)(r.MenuItem, {
+    o = t(84040),
+    s = t(388032);
+function u(e, n) {
+    let t = (0, o.Z)(e, n),
+        u = e.hasPotions(),
+        d = (0, a.V1)('Message Context Menu');
+    return t && !u && d
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'add-confetti-potion',
-              label: c.intl.string(c.t.axfAra),
-              icon: r.PotionIcon,
-              action: () => {}
+              label: s.intl.string(s.t.icaJW1),
+              icon: l.PotionIcon,
+              action: () => (0, r.openMessageConfettiModal)(n, e)
           })
         : null;
 }

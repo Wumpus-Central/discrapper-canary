@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return M;
     }
 });
 var i = t(200651),
@@ -12,27 +12,28 @@ var i = t(200651),
     u = t(995774),
     d = t(665906),
     c = t(695346),
-    f = t(496675),
+    m = t(496675),
     g = t(768581),
-    m = t(585483),
+    f = t(585483),
     h = t(176354),
     E = t(981631),
-    v = t(185923),
-    I = t(388032);
-function p(e, n) {
+    I = t(185923),
+    v = t(388032);
+function M(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         g = (0, d.$R)(n),
-        p = (0, r.e7)([f.Z], () => (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
-        Z = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
-    let x = Z.filter(
-        (e) =>
-            !h.ZP.isEmojiFilteredOrLocked({
-                emoji: e,
-                channel: n,
-                intention: v.Hz.REACTION
-            })
-    )
+        M = (0, r.e7)([m.Z], () => (n.isPrivate() || m.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
+        x = (0, o.MZ)(n.getGuildId());
+    if (!c.nc.getSetting() || !M || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
+    let Z = x
+        .filter(
+            (e) =>
+                !h.ZP.isEmojiFilteredOrLocked({
+                    emoji: e,
+                    channel: n,
+                    intention: I.Hz.REACTION
+                })
+        )
         .slice(0, 12)
         .map((l, r) => {
             var o, d;
@@ -43,7 +44,7 @@ function p(e, n) {
                     id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(p, {
                             ...e,
                             reducedMotionEnabled: t.enabled,
                             emoji: l
@@ -58,29 +59,29 @@ function p(e, n) {
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'add-reaction',
-        label: I.intl.string(I.t.lfIHs7),
+        label: v.intl.string(v.t.lfIHs7),
         action: () => {
-            m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                x,
+                Z,
                 (0, i.jsx)(a.MenuSeparator, {}),
                 (0, i.jsx)(a.MenuItem, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: I.intl.string(I.t['OBCR+v']),
+                    label: v.intl.string(v.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
-                        m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
         })
     });
 }
-function M(e) {
+function p(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {
