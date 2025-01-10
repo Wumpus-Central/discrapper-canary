@@ -1,32 +1,33 @@
 n(653041);
 var r = n(192379),
     i = n(392711);
-let u = (e) => {
-    let t = {
-        y: 0.9 * e.h,
-        x: 0.3 * e.w
+let u = (e) => Math.round(4 * e) / 4,
+    a = (e) => {
+        let t = {
+            y: 0.9 * e.h,
+            x: 0.3 * e.w
+        };
+        return {
+            SPEED: t,
+            GRAVITY: 1100,
+            DRAG: 0.92,
+            Y_POS: 110
+        };
     };
-    return {
-        SPEED: t,
-        GRAVITY: 1100,
-        DRAG: 0.92,
-        Y_POS: 110
-    };
-};
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: n, DRAG: a, Y_POS: c } = u(e),
-        l = r.useRef([]);
+    let { SPEED: t, GRAVITY: n, DRAG: c, Y_POS: l } = a(e),
+        s = r.useRef([]);
     return {
         update: (t) => {
             let r = [];
             if (
-                (l.current.forEach((i, u) => {
-                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= a ** t), (i.velocity.y *= a ** t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(u);
+                (s.current.forEach((i, u) => {
+                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= c ** t), (i.velocity.y *= c ** t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(u);
                 }),
                 r.length > 0)
             ) {
-                let e = l.current.filter((e, t) => !r.includes(t));
-                l.current = e;
+                let e = s.current.filter((e, t) => !r.includes(t));
+                s.current = e;
             }
         },
         draw: (t) => {
@@ -36,9 +37,9 @@ t.Z = (e) => {
                 w: e.w,
                 h: e.h
             }),
-                l.current.forEach((e) => {
+                s.current.forEach((e) => {
                     let { x: n, y: r } = e.position;
-                    e.scale > 1 && t.setFilter({ blur: (e.scale - 1) * 3 }),
+                    e.scale > 1 && t.setFilter({ blur: u((e.scale - 1) * 3) }),
                         t.drawImage(
                             e.key,
                             {
@@ -59,10 +60,10 @@ t.Z = (e) => {
                 max: e.h / 3
             };
             for (let a = 0; a < r; a++)
-                l.current.push({
+                s.current.push({
                     position: {
                         x: e.w / 2 + (0, i.random)(-50, 50),
-                        y: e.h - c
+                        y: e.h - l
                     },
                     velocity: {
                         x: (0, i.random)(-t.x, t.x, !0),
