@@ -6,8 +6,19 @@ let i = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Enable Tiered Tenure Badges',
-            config: { enabled: !0 }
+            label: 'Enable Tiered Tenure Badges v1',
+            config: {
+                enabled: !0,
+                version: 1
+            }
+        },
+        {
+            id: 2,
+            label: 'Enable Tiered Tenure Badges v2',
+            config: {
+                enabled: !0,
+                version: 2
+            }
         }
     ]
 });
