@@ -69,7 +69,7 @@ function w(e) {
 function P(e) {
     let { applicationId: n, branchId: r, flags: i } = e,
         a = (0, p.Tu)(n, r),
-        s = F(n, r);
+        s = Z(n, r);
     null != s && !s.isHidden() && h.yE(i, g.eHb.HIDDEN) && (C = !0), S.add(a);
 }
 function M(e) {
@@ -94,7 +94,7 @@ function B(e) {
 function G() {
     y = {};
 }
-function Z(e) {
+function F(e) {
     let n = V();
     return (
         Object.keys(n).forEach((r) => {
@@ -103,7 +103,7 @@ function Z(e) {
         n
     );
 }
-function F(e, n) {
+function Z(e, n) {
     var r;
     let i = (0, p.Tu)(e, n);
     return null !== (r = b[i]) && void 0 !== r ? r : y[i];
@@ -121,7 +121,7 @@ class j extends (i = c.ZP.Store) {
         null != e && (null == e.activeLaunchOptionIds ? R() : (N = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? O() : (A = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
-        return Z((e) => !e.isHidden());
+        return F((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
         return V();
@@ -131,12 +131,12 @@ class j extends (i = c.ZP.Store) {
     }
     hasApplication(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = F(e, n);
+            i = Z(e, n);
         return !(null == i || (!r && i.isHidden())) && (0, p.Je)(i);
     }
     getLibraryApplication(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = F(e, n);
+            i = Z(e, n);
         return r && null != i ? ((0, p.Je)(i) ? i : null) : i;
     }
     getActiveLibraryApplication(e) {

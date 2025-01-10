@@ -25,9 +25,9 @@ var i = n(200651),
     f = n(366980),
     C = n(246946),
     v = n(709586),
-    N = n(267642),
-    _ = n(999382),
-    I = n(621319),
+    I = n(267642),
+    N = n(999382),
+    _ = n(621319),
     T = n(44550),
     j = n(770270),
     b = n(981631),
@@ -47,23 +47,23 @@ function y(e, t, n) {
         e
     );
 }
-let A = a.ZP.connectStores([_.Z, T.Z], () => {
+let A = a.ZP.connectStores([N.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
-        t = _.Z.getGuildId();
+        t = N.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
         onReset() {
-            (0, I.H7)();
+            (0, _.H7)();
         },
         onSave() {
-            null != t && (0, I.en)(t, e);
+            null != t && (0, _.en)(t, e);
         }
     };
 })(d.Z);
 class Z extends r.PureComponent {
     componentWillUnmount() {
-        (0, I.xv)();
+        (0, _.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
@@ -146,10 +146,10 @@ class Z extends r.PureComponent {
         }
     }
     handleRemoveVanityURL() {
-        (0, I.Gy)('');
+        (0, _.Gy)('');
     }
     handleInviteCodeChange(e) {
-        (0, I.Gy)(e.replace(/ /g, '-'));
+        (0, _.Gy)(e.replace(/ /g, '-'));
     }
     render() {
         let { hide: e, guild: t } = this.props;
@@ -203,7 +203,7 @@ class Z extends r.PureComponent {
                         location: {
                             section: n,
                             object: b.qAy.LEARN_MORE,
-                            objectType: (0, N.ge)(t),
+                            objectType: (0, I.ge)(t),
                             location_stack: s
                         },
                         guild_id: null == l ? void 0 : l.id
@@ -228,7 +228,7 @@ class Z extends r.PureComponent {
     }
 }
 function L() {
-    let e = (0, a.e7)([_.Z], () => _.Z.getGuild()),
+    let e = (0, a.e7)([N.Z], () => N.Z.getGuild()),
         t = (0, a.cj)([T.Z], () => ({
             vanityURLCode: T.Z.vanityURLCode,
             vanityURLUses: T.Z.vanityURLUses,

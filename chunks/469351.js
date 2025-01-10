@@ -22,9 +22,9 @@ var i,
     f = n(225675),
     C = n(703656),
     v = n(430824),
-    N = n(594174),
-    _ = n(63063),
-    I = n(267101),
+    I = n(594174),
+    N = n(63063),
+    _ = n(267101),
     T = n(294294),
     j = n(310800),
     b = n(833695),
@@ -34,9 +34,9 @@ var i,
     y = n(969033);
 function A(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: i } = (0, I.eD)(t),
+        { listingsLoaded: i } = (0, _.eD)(t),
         r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
-        A = (0, o.e7)([N.default], () => N.default.getCurrentUser()),
+        A = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         Z = (null == r ? void 0 : r.isOwner(A)) === !0,
         { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
@@ -57,7 +57,7 @@ function A(e) {
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let k = (0, l.jsxs)(l.Fragment, {
+    let P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -66,13 +66,13 @@ function A(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: _.Z.getArticleURL(E.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: _.Z.getCreatorSupportArticleURL(E.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: N.Z.getArticleURL(E.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(E.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
         }),
-        P = (0, l.jsxs)(c.TabBar, {
+        k = (0, l.jsxs)(c.TabBar, {
             type: 'top',
             look: 'brand',
             className: y.tabBar,
@@ -127,11 +127,11 @@ function A(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            k,
+            P,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: y.tabBarContainer,
-                children: P
+                children: k
             }),
             B
         ]

@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(723047),
     C = n(290348),
     v = n(450215),
-    N = n(981631),
-    _ = n(388032),
-    I = n(26405);
+    I = n(981631),
+    N = n(388032),
+    _ = n(26405);
 let T = 'guild-role-subscription-tier-template-selector',
     j = (e) => {
         let [t, n] = r.useState(!0),
@@ -84,14 +84,14 @@ function b(e) {
                       )
                     : E();
         }, [t, S, E, l, O, D]),
-        k = C.Lo(Z),
-        P = r.useCallback(() => Z.forEach(C.GM), [Z]),
+        P = C.Lo(Z),
+        k = r.useCallback(() => Z.forEach(C.GM), [Z]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === N.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && M(),
+                B === I.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && M(),
                 () => {
                     (0, d.closeModal)(T);
                 }
@@ -101,7 +101,7 @@ function b(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: I.groupListings,
+                    className: _.groupListings,
                     children: [
                         Z.map((e) =>
                             (0, i.jsx)(
@@ -121,18 +121,18 @@ function b(e) {
                         ),
                         (0, i.jsxs)(d.Clickable, {
                             onClick: w ? void 0 : M,
-                            className: s()(I.createTierButton, { [I.disabled]: w }),
+                            className: s()(_.createTierButton, { [_.disabled]: w }),
                             'aria-disabled': w,
                             children: [
                                 (0, i.jsx)(d.CirclePlusIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: I.createTierIcon
+                                    className: _.createTierIcon
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/normal',
                                     color: 'interactive-active',
-                                    children: _.intl.string(_.t.PiFnn5)
+                                    children: N.intl.string(N.t.PiFnn5)
                                 })
                             ]
                         })
@@ -140,8 +140,8 @@ function b(e) {
                 }),
                 (0, i.jsx)(c.W, {
                     component: 'div',
-                    className: I.contentRegion,
-                    children: k && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: P }) })
+                    className: _.contentRegion,
+                    children: P && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: k }) })
                 })
             ]
         })
@@ -154,12 +154,12 @@ function E(e) {
         { maxTiers: l } = (0, g.s1)(t),
         s = r.map((e) => e.id);
     return (0, i.jsxs)(d.FormSection, {
-        title: _.intl.string(_.t['72+Soq']),
-        className: I.container,
+        title: N.intl.string(N.t['72+Soq']),
+        className: _.container,
         children: [
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
-                children: _.intl.format(_.t.nHRSvL, { maxTiers: l })
+                children: N.intl.format(N.t.nHRSvL, { maxTiers: l })
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
             (0, i.jsx)(b, {

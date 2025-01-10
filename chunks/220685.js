@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(782568),
     C = n(367907),
     v = n(674180),
-    N = n(999382),
-    _ = n(626135),
-    I = n(730647),
+    I = n(999382),
+    N = n(626135),
+    _ = n(730647),
     T = n(584825),
     j = n(981631),
     b = n(388032),
@@ -35,26 +35,26 @@ let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         var t, n;
         let { guild: l, canEnable: a } = e,
             c = (0, T.YB)(l.id),
-            { loading: u, updateSubscriptionsSettings: N } = (0, T.QV)(),
-            [I, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
+            { loading: u, updateSubscriptionsSettings: I } = (0, T.QV)(),
+            [_, A] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
             [Z, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
             M = null == D || null != D.match(R),
-            [k, P] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
+            [P, k] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != k && k !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = _ !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
-                I !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = I),
+                _ !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = _),
                     (((null == c ? void 0 : c.store_page_primary_color) == null && Z !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && Z !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = Z),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
-                    k !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = k),
+                    P !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = P),
                     !d().isEmpty(e) &&
-                        (await N(l.id, e),
+                        (await I(l.id, e),
                         'store_page_enabled' in e &&
-                            _.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
-                                enabled: I,
+                            N.default.track(j.rMx.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+                                enabled: _,
                                 ...(0, C.hH)(l.id)
                             }));
             },
@@ -74,9 +74,9 @@ let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, i.jsx)(g.FormSwitch, {
                     className: E.enableSwitch,
-                    value: I,
-                    disabled: H || (!I && !a),
-                    tooltipNote: I || a ? void 0 : b.intl.string(b.t.mIgfEh),
+                    value: _,
+                    disabled: H || (!_ && !a),
+                    tooltipNote: _ || a ? void 0 : b.intl.string(b.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => A(e),
                     children: (0, i.jsx)(g.Text, {
@@ -179,9 +179,9 @@ let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                         }),
                         (0, i.jsx)(g.FormSwitch, {
                             className: E.premiumMemberCountSwitchContainer,
-                            value: k,
+                            value: P,
                             hideBorder: !0,
-                            onChange: (e) => P(e),
+                            onChange: (e) => k(e),
                             disabled: H,
                             children: (0, i.jsxs)('div', {
                                 className: E.iconSwitchLabel,
@@ -225,7 +225,7 @@ let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    A(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
+                                    A(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), k(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
                                 },
                                 onSave: U,
                                 disabled: z
@@ -236,8 +236,8 @@ let S = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         });
     };
 function Z() {
-    let e = (0, u.e7)([N.Z], () => N.Z.getGuild()),
-        t = (0, I.f)(),
+    let e = (0, u.e7)([I.Z], () => I.Z.getGuild()),
+        t = (0, _.f)(),
         n = (0, T.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
         ? (0, i.jsx)(A, {
@@ -247,8 +247,8 @@ function Z() {
         : (0, i.jsx)(g.Spinner, {});
 }
 function L() {
-    let e = (0, u.e7)([N.Z], () => N.Z.getGuild());
-    return (0, i.jsx)(I.l, {
+    let e = (0, u.e7)([I.Z], () => I.Z.getGuild());
+    return (0, i.jsx)(_.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,
         children: (0, i.jsx)(Z, {})

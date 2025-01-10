@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(134433),
     C = n(325476),
     v = n(496675),
-    N = n(671533),
-    _ = n(946724),
-    I = n(970129),
+    I = n(671533),
+    N = n(946724),
+    _ = n(970129),
     T = n(712181),
     j = n(420966),
     b = n(203377),
@@ -34,15 +34,15 @@ let y = 'DRAGGABLE_ROLE';
 function A(e) {
     var t, r;
     let l,
-        { guild: d, role: h, highestRole: g, selectedItem: x, onClick: C, currentPosition: v, onDragStart: N, onDragReset: _, onDragComplete: T, roleStyle: j } = e,
-        b = (0, I.T)(d, g, h),
+        { guild: d, role: h, highestRole: g, selectedItem: x, onClick: C, currentPosition: v, onDragStart: I, onDragReset: N, onDragComplete: T, roleStyle: j } = e,
+        b = (0, _.T)(d, g, h),
         S = (0, p.pM)(d.id, h.id),
         A = null == b && !S,
         Z = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, L] = (0, a.c)({
             type: y,
             item: () => (
-                N(h.id),
+                I(h.id),
                 {
                     id: h.id,
                     position: v
@@ -52,7 +52,7 @@ function A(e) {
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
-                    _();
+                    N();
                     return;
                 }
                 T(n.roleId);
@@ -110,7 +110,7 @@ function A(e) {
             children: [
                 l,
                 null != b
-                    ? (0, i.jsx)(I.Z, {
+                    ? (0, i.jsx)(_.Z, {
                           className: R.lock,
                           tooltipText: b
                       })
@@ -127,11 +127,11 @@ function A(e) {
 }
 function Z(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
-        o = (0, d.e7)([_.Z], () => _.Z.roles),
+        o = (0, d.e7)([N.Z], () => N.Z.roles),
         c = (0, d.e7)([v.Z], () => v.Z.getHighestRole(t)),
         m = (0, d.e7)([x.Z], () => x.Z.roleStyle),
         [p, f] = r.useState(o.length),
-        { scrolledToTop: I, handleScroll: E } = (0, j.V)(),
+        { scrolledToTop: _, handleScroll: E } = (0, j.V)(),
         { handleDragStart: y, handleDragReset: Z, handleDragComplete: L } = (0, T.Z)(o),
         D = r.useRef(null),
         O = r.useCallback(
@@ -157,13 +157,13 @@ function Z(e) {
             className: R.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(R.titleContainer, { [R.titleElevated]: !I }),
+                    className: s()(R.titleContainer, { [R.titleElevated]: !_ }),
                     children: [
                         (0, i.jsxs)(u.Clickable, {
                             className: R.title,
                             onClick: () => l(null),
                             children: [
-                                (0, i.jsx)(N.Z, { direction: N.Z.Directions.LEFT }),
+                                (0, i.jsx)(I.Z, { direction: I.Z.Directions.LEFT }),
                                 (0, i.jsx)(u.Text, {
                                     className: R.titleText,
                                     variant: 'text-md/semibold',

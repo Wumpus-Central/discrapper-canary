@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651),
@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(307375),
     C = n(384632),
     v = n(388032),
-    N = n(322825);
-function _(e) {
+    I = n(322825);
+function N(e) {
     let { pendingState: t } = e,
         n = r.useRef(!1),
         l = r.useCallback(
@@ -52,7 +52,7 @@ function _(e) {
             });
     }
 }
-function I() {
+function _() {
     let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
         t = (0, l.e7)([p.Z], () => p.Z.pendingState);
     r.useEffect(() => {
@@ -79,8 +79,8 @@ function I() {
                 activeType: a,
                 guild: e
             }),
-            (0, i.jsx)('div', { className: N.divider }),
-            (0, i.jsx)('div', { children: (0, i.jsx)(_, { pendingState: t }) })
+            (0, i.jsx)('div', { className: I.divider }),
+            (0, i.jsx)('div', { children: (0, i.jsx)(N, { pendingState: t }) })
         ]
     });
 }

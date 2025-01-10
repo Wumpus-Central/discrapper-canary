@@ -1,77 +1,77 @@
-e.r(o),
-    e.d(o, {
+n.r(o),
+    n.d(o, {
         default: function () {
             return x;
         }
     });
-var n = e(200651),
-    s = e(192379),
-    r = e(399606),
-    l = e(481060),
-    a = e(194359),
-    i = e(726521),
-    c = e(681678),
-    d = e(594174),
-    u = e(51144),
-    h = e(650408),
-    C = e(134612),
-    k = e(981631),
-    p = e(388032),
-    m = e(263856);
+var e = n(200651),
+    s = n(192379),
+    l = n(399606),
+    i = n(481060),
+    a = n(194359),
+    r = n(726521),
+    c = n(681678),
+    d = n(594174),
+    u = n(51144),
+    h = n(991981),
+    C = n(134612),
+    k = n(981631),
+    p = n(388032),
+    m = n(263856);
 function x(t) {
-    let { userId: o, channelId: e, transitionState: x, onBlock: B, onBlockAndReport: M, onClose: g, onCancel: f } = t,
-        j = (0, h.q)(e),
-        z = s.useCallback(() => {
+    let { userId: o, channelId: n, transitionState: x, onBlock: B, onBlockAndReport: M, onClose: f, onCancel: j } = t,
+        z = (0, h.q)(n),
+        D = s.useCallback(() => {
             a.Z.addRelationship({
                 userId: o,
                 context: { location: C.zr },
                 type: k.OGo.BLOCKED
             }),
-                c.Z.showBlockSuccessToast(o, e);
-        }, [o, e]),
-        D = s.useCallback(() => {
-            z(), B(), g();
-        }, [z, B, g]),
+                c.Z.showBlockSuccessToast(o, n);
+        }, [o, n]),
         b = s.useCallback(() => {
-            z(), (0, i.wk)(j), M(), g();
-        }, [j, z, M, g]),
-        v = (0, r.e7)([d.default], () => d.default.getUser(o)),
-        I = u.ZP.useName(v);
-    return (0, n.jsx)(l.ModalRoot, {
+            D(), B(), f();
+        }, [D, B, f]),
+        g = s.useCallback(() => {
+            D(), (0, r.wk)(z), M(), f();
+        }, [z, D, M, f]),
+        I = (0, l.e7)([d.default], () => d.default.getUser(o)),
+        R = u.ZP.useName(I);
+    return (0, e.jsx)(i.ModalRoot, {
         transitionState: x,
-        children: (0, n.jsx)(l.Scroller, {
+        children: (0, e.jsx)(i.Scroller, {
             style: { overflow: 'hidden auto' },
-            children: (0, n.jsxs)(l.ModalContent, {
+            children: (0, e.jsxs)(i.ModalContent, {
                 className: m.modalContent,
                 children: [
-                    (0, n.jsx)(l.Heading, {
+                    (0, e.jsx)(i.Heading, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: p.intl.format(p.t.x5pOn5, { name: I })
+                        children: p.intl.format(p.t.x5pOn5, { name: R })
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, e.jsx)(i.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
                         className: m.modalDescription,
                         children: p.intl.string(p.t.aedksr)
                     }),
-                    (0, n.jsx)(l.Button, {
-                        onClick: D,
-                        color: l.ButtonColors.BRAND,
-                        size: l.ButtonSizes.MEDIUM,
+                    (0, e.jsx)(i.Button, {
+                        onClick: b,
+                        color: i.ButtonColors.BRAND,
+                        size: i.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t.MzsUsr)
                     }),
-                    (0, n.jsx)(l.Button, {
-                        onClick: b,
-                        color: l.ButtonColors.PRIMARY,
-                        size: l.ButtonSizes.MEDIUM,
+                    (0, e.jsx)(i.Button, {
+                        onClick: g,
+                        color: i.ButtonColors.PRIMARY,
+                        size: i.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t['3pzuj4'])
                     }),
-                    (0, n.jsx)(l.Button, {
-                        onClick: f,
-                        color: l.ButtonColors.PRIMARY,
-                        look: l.ButtonLooks.OUTLINED,
-                        size: l.ButtonSizes.MEDIUM,
+                    (0, e.jsx)(i.Button, {
+                        onClick: j,
+                        color: i.ButtonColors.PRIMARY,
+                        look: i.ButtonLooks.OUTLINED,
+                        size: i.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t.okuCoa)
                     })
                 ]

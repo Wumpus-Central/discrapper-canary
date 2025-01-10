@@ -49,7 +49,7 @@ function g(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: h
         }),
-        { styleContent: v, containerId: N } = (0, l.bC)(f, C);
+        { styleContent: v, containerId: I } = (0, l.bC)(f, C);
     return (0, i.jsxs)('svg', {
         ...p,
         'aria-label': s.intl.string(s.t.nH6S2d),
@@ -60,7 +60,7 @@ function g(e) {
             (0, i.jsx)('defs', { children: (0, i.jsx)('style', { children: v }) }),
             (0, i.jsx)('use', {
                 href: ''.concat(a, '#wrapper-layer'),
-                id: N
+                id: I
             })
         ]
     });

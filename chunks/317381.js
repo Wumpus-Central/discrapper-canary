@@ -58,8 +58,8 @@ function U(e, n) {
 }
 let B = new Map(),
     G = new Map(),
-    Z = new Map(),
     F = new Map(),
+    Z = new Map(),
     V = new Map(),
     j = new Map(),
     H = new Map(),
@@ -87,8 +87,8 @@ function X(e) {
         L = null === (n = p.find((e) => e.userId === R)) || void 0 === n ? void 0 : n.sessionId,
         x = p.some((e) => (0, T.J)(e)),
         G = w.get(d),
-        Z = null === (r = B.get(U(null != E ? E : null, d))) || void 0 === r ? void 0 : r.launchParams,
-        F = {
+        F = null === (r = B.get(U(null != E ? E : null, d))) || void 0 === r ? void 0 : r.launchParams,
+        Z = {
             applicationId: d,
             location: c,
             launchId: f,
@@ -96,14 +96,14 @@ function X(e) {
             url: m,
             userIds: new Set(N),
             participants: p,
-            referrerId: null !== (s = null == G ? void 0 : G.referrerId) && void 0 !== s ? s : null == Z ? void 0 : Z.referrerId,
-            customId: null !== (o = null == G ? void 0 : G.customId) && void 0 !== o ? o : null == Z ? void 0 : Z.customId
+            referrerId: null !== (s = null == G ? void 0 : G.referrerId) && void 0 !== s ? s : null == F ? void 0 : F.referrerId,
+            customId: null !== (o = null == G ? void 0 : G.customId) && void 0 !== o ? o : null == F ? void 0 : F.customId
         };
     O &&
         null != G &&
         w.set(G.applicationId, {
             ...G,
-            ...F
+            ...Z
         });
     let V = !x;
     null != G && c.id === G.location.id && d === (null == G ? void 0 : G.applicationId) && ((!O && Array.from(G.userIds).some((e) => e === R)) || V)
@@ -119,15 +119,15 @@ function X(e) {
               participants: p,
               isFirstActivityInChannel: y,
               isStart: null == A,
-              referrerId: F.referrerId,
-              customId: F.customId
+              referrerId: Z.referrerId,
+              customId: Z.customId
           });
     let j = S.filter((e) => e.applicationId !== d);
-    if ((N.length > 0 && j.push(F), k.set(c.id, j), null != E)) {
+    if ((N.length > 0 && j.push(Z), k.set(c.id, j), null != E)) {
         let e = (null !== (l = M.get(E)) && void 0 !== l ? l : []).filter((e) => e.applicationId !== d),
             n = Q((0, b.j)(c)),
             r = (null !== (u = P.get(n)) && void 0 !== u ? u : []).filter((e) => !(e.applicationId === d && e.location.id === c.id));
-        N.length > 0 && (e.push(F), r.push(F)), M.set(E, e), P.set(n, r);
+        N.length > 0 && (e.push(Z), r.push(Z)), M.set(E, e), P.set(n, r);
     }
 }
 function J(e) {
@@ -252,8 +252,8 @@ function eo(e) {
 function el(e) {
     let { guildId: n } = e,
         r = Q(n),
-        i = Z.get(r);
-    Z.set(r, {
+        i = F.get(r);
+    F.set(r, {
         isFetching: !0,
         lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     });
@@ -261,8 +261,8 @@ function el(e) {
 function eu(e) {
     let { guildId: n } = e,
         r = Q(n),
-        i = Z.get(r);
-    Z.set(r, {
+        i = F.get(r);
+    F.set(r, {
         isFetching: !1,
         lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     });
@@ -294,7 +294,7 @@ function ed(e) {
         activities: r,
         now: a
     }),
-        Z.set(i, {
+        F.set(i, {
             isFetching: !1,
             lastFetchTimestampMs: a
         });
@@ -332,7 +332,7 @@ function em(e) {
 }
 function eg(e) {
     let { applicationId: n, lockState: r, pictureInPictureLockState: i, gridLockState: a } = e;
-    null == r ? F.delete(n) : F.set(n, r), null === i ? V.delete(n) : void 0 !== i && V.set(n, i), null === a ? j.delete(n) : void 0 !== a && j.set(n, a);
+    null == r ? Z.delete(n) : Z.set(n, r), null === i ? V.delete(n) : void 0 !== i && V.set(n, i), null === a ? j.delete(n) : void 0 !== a && j.set(n, a);
 }
 function eE(e) {
     let { activityPanelMode: n } = e;
@@ -412,17 +412,17 @@ class eS extends (a = u.ZP.PersistedStore) {
     }
     getShelfFetchStatus(e) {
         let n = Q(e);
-        return Z.get(n);
+        return F.get(n);
     }
     shouldFetchShelf(e) {
         var n, r;
         let i = Q(e),
-            a = null !== (n = Z.get(i)) && void 0 !== n ? n : { isFetching: !1 },
+            a = null !== (n = F.get(i)) && void 0 !== n ? n : { isFetching: !1 },
             s = Date.now() - (null !== (r = null == a ? void 0 : a.lastFetchTimestampMs) && void 0 !== r ? r : 0) > Y;
         return !(null == a ? void 0 : a.isFetching) && s;
     }
     getOrientationLockStateForApp(e) {
-        return F.get(e);
+        return Z.get(e);
     }
     getPipOrientationLockStateForApp(e) {
         var n;

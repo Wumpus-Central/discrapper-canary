@@ -42,8 +42,8 @@ var o = r(772848),
     U = r(16609),
     B = r(761122),
     G = r(983695),
-    Z = r(917107),
-    F = r(981631),
+    F = r(917107),
+    Z = r(981631),
     V = r(388032);
 function j(e, n, r) {
     return (
@@ -85,7 +85,7 @@ async function q(e) {
     null != s &&
         null != u &&
         (await l.tn.post({
-            url: F.ANM.ACTIVITY_LEAVE(i, a.id, s),
+            url: Z.ANM.ACTIVITY_LEAVE(i, a.id, s),
             body: { session_id: u },
             retries: 2,
             rejectWithError: !1
@@ -102,7 +102,7 @@ async function q(e) {
         }),
         { releasePhase: g } = K(m),
         E = h.Z.getRawThermalState();
-    A.default.track(F.rMx.ACTIVITY_SESSION_LEFT, {
+    A.default.track(Z.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: d.id,
         guild_id: _,
         media_session_id: c.mediaSessionIds[0],
@@ -118,7 +118,7 @@ async function q(e) {
         channel_type: d.type,
         media_session_ids: c.mediaSessionIds
     }),
-        A.default.track(F.rMx.ACTIVITY_IFRAME_UNMOUNT, {
+        A.default.track(Z.rMx.ACTIVITY_IFRAME_UNMOUNT, {
             channel_id: d.id,
             guild_id: _,
             application_id: i,
@@ -154,7 +154,7 @@ function Q(e) {
             activityConfigs: M
         }),
         G = 1 + k.findIndex((e) => e === a),
-        { releasePhase: Z } = K(B),
+        { releasePhase: F } = K(B),
         V = h.Z.getRawThermalState(),
         j = null != v ? [v] : [],
         H = {
@@ -167,7 +167,7 @@ function Q(e) {
     Y[a] = H;
     let z = W[a];
     !(0, R.Ew)(m.nonce) && m.nonce !== (null == z ? void 0 : z.nonce) && (z = void 0),
-        A.default.track(F.rMx.ACTIVITY_SESSION_JOINED, {
+        A.default.track(Z.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: E.id,
             guild_id: E.getGuildId(),
             media_session_id: j[0],
@@ -178,7 +178,7 @@ function Q(e) {
             raw_thermal_state: V,
             n_participants: _.Z.getUserParticipantCount(E.id),
             is_activity_start: l,
-            release_phase: Z,
+            release_phase: F,
             activity_premium_tier_requirement: null == B ? void 0 : null === (n = B.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
             shelf_rank: null == B ? void 0 : null === (r = B.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: G > 0 ? G : null,
@@ -186,7 +186,7 @@ function Q(e) {
             channel_type: E.type,
             source: null == z ? void 0 : z.source
         }),
-        A.default.track(F.rMx.ACTIVITY_IFRAME_MOUNT, {
+        A.default.track(Z.rMx.ACTIVITY_IFRAME_MOUNT, {
             location_stack: null == z ? void 0 : z.locations,
             channel_id: E.id,
             channel_type: E.type,
@@ -207,10 +207,10 @@ function X(e) {
 }
 class J extends d.Z {
     _initialize() {
-        y.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.subscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, Q), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', z), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), u.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', q), u.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), u.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), u.Z.subscribe('CALL_DELETE', this.handleCallDelete), u.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), u.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), u.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete);
+        y.Z.addChangeListener(this.handleSelectedChannelUpdate), N.S.subscribe(Z.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.subscribe(Z.CkL.OPEN_EMBEDDED_ACTIVITY, Q), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_START', z), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), u.Z.subscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), u.Z.subscribe('EMBEDDED_ACTIVITY_CLOSE', q), u.Z.subscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), u.Z.subscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), u.Z.subscribe('CALL_DELETE', this.handleCallDelete), u.Z.subscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), u.Z.subscribe('GUILD_DELETE', this.handleGuildDelete), u.Z.subscribe('CHANNEL_DELETE', this.handleChannelDelete);
     }
     _terminate() {
-        y.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(F.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.unsubscribe(F.CkL.OPEN_EMBEDDED_ACTIVITY, Q), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', z), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), u.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', q), u.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), u.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), u.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), u.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), u.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), u.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete);
+        y.Z.removeChangeListener(this.handleSelectedChannelUpdate), N.S.unsubscribe(Z.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease), N.S.unsubscribe(Z.CkL.OPEN_EMBEDDED_ACTIVITY, Q), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_START', z), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_SUCCESS', this.handleActivityLaunchSuccess), u.Z.unsubscribe('EMBEDDED_ACTIVITY_LAUNCH_FAIL', this.handleActivityLaunchFail), u.Z.unsubscribe('EMBEDDED_ACTIVITY_CLOSE', q), u.Z.unsubscribe('EMBEDDED_ACTIVITY_DEFERRED_OPEN', this.handleDeferredOpen), u.Z.unsubscribe('RPC_APP_DISCONNECTED', this.handleRPCDisconnect), u.Z.unsubscribe('CALL_DELETE', this.handleCallDelete), u.Z.unsubscribe('RTC_CONNECTION_STATE', this.handleRTCConnectionState), u.Z.unsubscribe('GUILD_DELETE', this.handleGuildDelete), u.Z.unsubscribe('CHANNEL_DELETE', this.handleChannelDelete);
     }
     constructor(...e) {
         super(...e),
@@ -219,7 +219,7 @@ class J extends d.Z {
                 for (let { location: n, applicationId: r } of x.ZP.getSelfEmbeddedActivities().values()) {
                     let i = (0, U.p)(n);
                     null != i &&
-                        (0, Z.Z)(i) &&
+                        (0, F.Z)(i) &&
                         i !== e &&
                         this.leaveActivity({
                             location: n,
@@ -281,28 +281,28 @@ class J extends d.Z {
                     (n = 1), (i = a.reason), (d = null !== (f = (0, g.A0)(a.reason, l)) && void 0 !== f ? f : d);
                 } else
                     switch (((n = 2), (r = a.status), (i = a.code), a.code)) {
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
                             d = V.intl.string(V.t.Gyzcra);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
                             d = V.intl.string(V.t.zxv7EB);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_CONCURRENT_ACTIVITIES:
                             d = V.intl.string(V.t['H+KK6e']);
                             break;
-                        case F.evJ.INVALID_PERMISSIONS:
+                        case Z.evJ.INVALID_PERMISSIONS:
                             d = V.intl.string(V.t.hHGrW1);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
                             d = V.intl.string(V.t.j29zCg);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
                             d = V.intl.string(V.t['4WuFRE']);
                             break;
-                        case F.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
+                        case Z.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
                             d = V.intl.string(V.t.RvkXdX);
                             break;
-                        case F.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
+                        case Z.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
                             d = V.intl.string(V.t.uGDCc3);
                     }
                 this.showLaunchErrorModal(d);
@@ -310,7 +310,7 @@ class J extends d.Z {
                 if (null == _) return;
                 let v = _.getGuildId(),
                     I = h.Z.getRawThermalState();
-                A.default.track(F.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
+                A.default.track(Z.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: o,
                     guild_id: v,
                     application_id: l,
@@ -334,7 +334,7 @@ class J extends d.Z {
                                 location: n,
                                 applicationId: i
                             });
-                    n.code !== F.$VG.CLOSE_NORMAL && this.showErrorModal(n, i);
+                    n.code !== Z.$VG.CLOSE_NORMAL && this.showErrorModal(n, i);
                 }
             }),
             j(this, 'handleCallDelete', (e) => {
@@ -343,7 +343,7 @@ class J extends d.Z {
                 null != r && r === n && this.handleCallEnded(n);
             }),
             j(this, 'handleRTCConnectionState', (e) => {
-                if (e.state !== F.hes.DISCONNECTED) return;
+                if (e.state !== Z.hes.DISCONNECTED) return;
                 let n = e.channelId;
                 this.handleCallEnded(n);
             }),

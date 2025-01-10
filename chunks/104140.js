@@ -75,7 +75,7 @@ function B(e, n) {
 function G(e) {
     return e.toString();
 }
-class Z extends o.Component {
+class F extends o.Component {
     componentDidMount() {
         this.forceUpdate();
     }
@@ -103,7 +103,7 @@ class Z extends o.Component {
         super(...e), I(this, 'timeoutId', void 0);
     }
 }
-function F(e) {
+function Z(e) {
     let { selected: n, upperBadge: r, lowerBadge: i, highlight: a } = e;
     return n || null != r || null != i || !!a;
 }
@@ -133,8 +133,8 @@ class j extends o.Component {
             c = !1;
         return (
             ((null != l && null == i) || (null != u && null == a)) && ((c = !0), (r = !0), (i = new _.Controller({ spring: 0 })), (a = new _.Controller({ spring: 0 }))),
-            F(e) && null == s && ((c = !0), (s = new _.Controller({ spring: 0 }))),
-            !o && F(e) && ((c = !0), (o = !0)),
+            Z(e) && null == s && ((c = !0), (s = new _.Controller({ spring: 0 }))),
+            !o && Z(e) && ((c = !0), (o = !0)),
             c
                 ? {
                       hasRenderedBadge: r,
@@ -235,7 +235,7 @@ class j extends o.Component {
                               config: R
                           })
                           .start()),
-            !l || F(this.props) || this.timeout.isStarted() ? F(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(f()(T, b), this.handleTimeout);
+            !l || Z(this.props) || this.timeout.isStarted() ? Z(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(f()(T, b), this.handleTimeout);
     }
     getBadgePositionInterpolation(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -474,7 +474,7 @@ class j extends o.Component {
                         children: [
                             null != i
                                 ? (0, s.jsx)(
-                                      Z,
+                                      F,
                                       {
                                           className: v.lowerBadge,
                                           animatedStyle: this.getLowerBadgeStyles(),
@@ -485,7 +485,7 @@ class j extends o.Component {
                                 : null,
                             null != c
                                 ? (0, s.jsx)(
-                                      Z,
+                                      F,
                                       {
                                           className: v.upperBadge,
                                           animatedStyle: this.getUpperBadgeStyles(),

@@ -57,21 +57,21 @@ let R = new m.Z('GuildMemberStore'),
         removed: []
     };
 function G(e, n) {
-    if (null == n.communicationDisabledUntil || !(0, g.b)(n)) return Z(e, n.userId);
+    if (null == n.communicationDisabledUntil || !(0, g.b)(n)) return F(e, n.userId);
     let r = j(e, n.userId);
-    x[r] !== n.communicationDisabledUntil && (0, g.b)(n) && ((x[r] = n.communicationDisabledUntil), F(r));
+    x[r] !== n.communicationDisabledUntil && (0, g.b)(n) && ((x[r] = n.communicationDisabledUntil), Z(r));
 }
-function Z(e, n) {
+function F(e, n) {
     if (null != n) {
         let r = j(e, n);
-        null != x[r] && F(r), V(j(e, n));
+        null != x[r] && Z(r), V(j(e, n));
     } else
         for (let n in x) {
             let r = n;
-            Y(r) === e && (F(n), V(r));
+            Y(r) === e && (Z(n), V(r));
         }
 }
-function F(e) {
+function Z(e) {
     (P += 1), (k[e] = P);
 }
 function V(e) {
@@ -387,7 +387,7 @@ function ep(e) {
     let { guildId: n, user: r } = e,
         i = O[n];
     if (null == i || null == i[r.id]) return !1;
-    delete i[r.id], Z(n, r.id), M++;
+    delete i[r.id], F(n, r.id), M++;
 }
 function em(e) {
     let { guild: n } = e;
@@ -431,7 +431,7 @@ function eE(e) {
 }
 function ev(e) {
     let { guild: n } = e;
-    delete O[n.id], Z(n.id);
+    delete O[n.id], F(n.id);
 }
 function eI(e) {
     let n = O[e.guildId];

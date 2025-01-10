@@ -220,7 +220,7 @@ function G() {
         os_version: null !== (n = null === h() || void 0 === h() ? void 0 : null === (e = h().os) || void 0 === e ? void 0 : e.version) && void 0 !== n ? n : ''
     };
 }
-function Z() {
+function F() {
     let e = {};
     return (
         (e.referrer = document.referrer),
@@ -232,7 +232,7 @@ function Z() {
         })
     );
 }
-function F(e, n) {
+function Z(e, n) {
     let r = {};
     return Object.keys(e).map((i) => (r[''.concat(i).concat(n)] = e[i])), r;
 }
@@ -240,10 +240,10 @@ function V() {
     let e = g.K.get(S);
     null == e && ((e = B()), g.K.set(S, e));
     let n = g.K.get(A);
-    null == n && ((n = Z()), g.K.set(A, n));
+    null == n && ((n = F()), g.K.set(A, n));
     let r = E.x.get(A);
     return (
-        null == r && ((r = F(Z(), '_current')), E.x.set(A, r)),
+        null == r && ((r = Z(F(), '_current')), E.x.set(A, r)),
         {
             ...e,
             ...G(),
@@ -263,7 +263,7 @@ function H() {
     let i = {},
         a = window.GLOBAL_ENV.RELEASE_CHANNEL;
     a && (i.release_channel = a.split('-')[0]);
-    let s = parseInt(((r = '358093'), '358093'), 10);
+    let s = parseInt(((r = '358155'), '358155'), 10);
     !isNaN(s) && (i.client_build_number = s);
     let o = null == R ? void 0 : null === (e = (n = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(n);
     return !isNaN(o) && (i.native_build_number = o), (i.client_event_source = j()), (i.has_client_mods = (0, p.e)()), i;

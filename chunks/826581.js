@@ -92,12 +92,12 @@ function G(e) {
     let o = null === (n = k(a.joinRequestId)) || void 0 === n ? void 0 : n.applicationStatus;
     return S(r, a.applicationStatus, o), B(a), !0;
 }
-function Z(e) {
+function F(e) {
     let { id: n, guildId: r } = e,
         i = k(n);
     null != i && (S(r, null, i.applicationStatus), U(n));
 }
-function F(e) {
+function Z(e) {
     let { guildId: n, action: r } = e;
     w.values(L(n, m.wB.SUBMITTED)).forEach((e) => {
         B({
@@ -169,10 +169,10 @@ v(Q, 'displayName', 'GuildJoinRequestStoreV2'),
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: R,
         GUILD_JOIN_REQUESTS_FETCH_START: C,
         GUILD_JOIN_REQUESTS_FETCH_FAILURE: O,
-        GUILD_JOIN_REQUESTS_BULK_ACTION: F,
+        GUILD_JOIN_REQUESTS_BULK_ACTION: Z,
         GUILD_JOIN_REQUEST_CREATE: G,
         GUILD_JOIN_REQUEST_UPDATE: G,
-        GUILD_JOIN_REQUEST_DELETE: Z,
+        GUILD_JOIN_REQUEST_DELETE: F,
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: j,
         GUILD_JOIN_REQUESTS_SET_SORT_ORDER: Y,
         GUILD_JOIN_REQUESTS_SET_SELECTED: K

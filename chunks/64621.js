@@ -62,15 +62,15 @@ function R(e) {
         x = !O && b === v.y0.BITE_SIZE && (D || L),
         [w, P] = s.useState(!1);
     (0, c.Z)(() => P(!0), x ? S : null);
-    let { asset: M, assetClassName: k, className: U, content: B, header: G, spacing: Z, dismissibleContentType: F } = C(D),
+    let { asset: M, assetClassName: k, className: U, content: B, header: G, spacing: F, dismissibleContentType: Z } = C(D),
         V = (0, d.N)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        j = w && !V ? [F] : [],
+        j = w && !V ? [Z] : [],
         [H, Y] = (0, f.US)(j);
     return (0, a.jsx)(u.Popout, {
         align: 'center',
         position: n === v.n_.AVATAR ? 'left' : 'right',
         shouldShow: null != H,
-        spacing: Z,
+        spacing: F,
         renderPopout: (e) => {
             let { position: n, closePopout: r, setPopoutRef: i } = e;
             return (0, a.jsx)(u.Dialog, {

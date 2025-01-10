@@ -70,8 +70,8 @@ let S = (e, n) => ''.concat(e, ':').concat(n),
     });
 function N(e) {
     let { descriptor: n, emojiItemKey: i, isInspected: o, rowIndex: l, channelGuildId: h, onInspect: m, onSelect: v, isScrolling: T, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: N, surrogateCodePoint: C, selectedItemClassName: R, getEmojiItemProps: O, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: w, setPulseItemKey: P, messageId: M, isBurstReaction: k, rowPosition: U, inNitroLockedSection: B } = e,
-        [G, Z] = s.useState(''),
-        F = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        [G, F] = s.useState(''),
+        Z = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
         V = (0, u.e7)([_.ZP], () => _.ZP.getDisambiguatedEmojiContext(h), [h]),
         j = s.useRef(null),
         { emoji: H, size: Y, isDisabled: W, columnIndex: K } = n,
@@ -121,10 +121,10 @@ function N(e) {
                         onMouseEnter: n,
                         onMouseLeave: r,
                         onClick: (e) => {
-                            if (null != j.current && null != U && null != M && !e.shiftKey && null != H.name && k && !F && w) {
+                            if (null != j.current && null != U && null != M && !e.shiftKey && null != H.name && k && !Z && w) {
                                 let e = null == H.id ? p.ZP.convertNameToSurrogate(H.name) : H.name,
                                     n = j.current.getBoundingClientRect();
-                                (n.x = U.x + (K + 1) * Y), Z(S(K, l)), (0, E.U)(M, e, H.id, n);
+                                (n.x = U.x + (K + 1) * Y), F(S(K, l)), (0, E.U)(M, e, H.id, n);
                             }
                             z(e);
                         },

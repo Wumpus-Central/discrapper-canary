@@ -21,41 +21,41 @@ function g(e) {
         [x] = r.useState(g),
         [p, f] = r.useState(!1),
         { editingRule: C, createNewEditingRule: v } = (0, d.V)(),
-        { getDefaultRuleName: N } = c.I6[n],
-        _ = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
-        [I, T] = r.useState(_ ? C : x),
+        { getDefaultRuleName: I } = c.I6[n],
+        N = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
+        [_, T] = r.useState(N ? C : x),
         j = (0, a.useSpring)({
-            opacity: _ ? 0 : 1,
-            pointerEvents: _ ? 'none' : 'all',
+            opacity: N ? 0 : 1,
+            pointerEvents: N ? 'none' : 'all',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             }
         }),
         b = (0, a.useSpring)({
-            opacity: _ ? 1 : 0,
-            pointerEvents: _ ? 'all' : 'none',
+            opacity: N ? 1 : 0,
+            pointerEvents: N ? 'all' : 'none',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             },
             onStart: () => {
-                T(_ ? C : x);
+                T(N ? C : x);
             },
             onRest: () => {
-                T(_ ? C : x), f(_);
+                T(N ? C : x), f(N);
             }
         });
-    return null == C || _
+    return null == C || N
         ? (0, i.jsxs)('div', {
               className: h.mainRuleContainer,
-              style: { height: _ ? 'auto' : '60px' },
+              style: { height: N ? 'auto' : '60px' },
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
                       style: b,
                       children: (0, i.jsx)(u.Z, {
-                          rule: I,
+                          rule: _,
                           persistEdit: p
                       })
                   }),
@@ -78,7 +78,7 @@ function g(e) {
                               (0, i.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
                                   color: 'text-link',
-                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: N() })
+                                  children: m.intl.format(m.t.dNjRAQ, { ruleName: I() })
                               })
                           ]
                       })

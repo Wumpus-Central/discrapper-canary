@@ -6,10 +6,10 @@ t.d(n, {
         return f;
     },
     QC: function () {
-        return h;
+        return E;
     },
     dd: function () {
-        return E;
+        return I;
     }
 }),
     t(47120);
@@ -65,7 +65,7 @@ function f(e) {
         })
     });
 }
-function h(e) {
+function E(e) {
     let { formField: n } = e;
     return (0, i.jsx)(a.Ih, {
         icon: u.BookCheckIcon,
@@ -73,7 +73,7 @@ function h(e) {
         meetsRequirement: !!n.response
     });
 }
-let E = (e) => {
+let I = (e) => {
     let { channelId: n, formField: t, onChange: r } = e;
     return (0, i.jsxs)(a.hK, {
         title: s.intl.string(s.t.Q8OFNz),

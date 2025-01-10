@@ -17,11 +17,11 @@ var i = n(200651),
 t.Z = (e) => {
     let { guildId: t, handleUpdate: n, progress: l, error: C } = e,
         { interests: v } = l,
-        [N, _] = r.useState(''),
-        [I, T] = r.useState(0),
+        [I, N] = r.useState(''),
+        [_, T] = r.useState(0),
         j = (0, c.e7)([d.default], () => d.default.getId()),
         b = r.useMemo(() => (0, a.chunk)((0, u.XV)(g.i6, j), 9), [j]),
-        E = [...b[I], ...b[(I + 1) % b.length]],
+        E = [...b[_], ...b[(_ + 1) % b.length]],
         S = r.useMemo(() => Array.from(v), [v]),
         R = r.useMemo(() => S.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [S]),
         y = (e) => {
@@ -31,12 +31,12 @@ t.Z = (e) => {
         A = r.useCallback(
             (e) => {
                 if (v.size === g.c4) return;
-                let t = null != e ? e : N.trim();
+                let t = null != e ? e : I.trim();
                 if (0 === t.length) return;
                 let i = new Set(v);
-                i.add(t), n({ interests: i }), _('');
+                i.add(t), n({ interests: i }), N('');
             },
-            [n, N, v]
+            [n, I, v]
         ),
         Z = r.useCallback(
             (e) => {
@@ -90,16 +90,16 @@ t.Z = (e) => {
                                     (0, i.jsx)(o.TextInput, {
                                         autoFocus: !0,
                                         inputClassName: f.input,
-                                        value: N,
+                                        value: I,
                                         onKeyDown: Z,
-                                        onChange: _,
+                                        onChange: N,
                                         placeholder: x.intl.string(x.t.axCpsL),
                                         maxLength: g.Sq,
                                         disabled: v.size === g.c4
                                     }),
-                                    N.length > 0 &&
+                                    I.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => A(N.trim()),
+                                            onClick: () => A(I.trim()),
                                             className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
@@ -107,7 +107,7 @@ t.Z = (e) => {
                                                 className: f.icon
                                             })
                                         }),
-                                    N.length > 0 &&
+                                    I.length > 0 &&
                                         (0, i.jsx)(o.Text, {
                                             color: 'text-muted',
                                             variant: 'text-xs/normal',

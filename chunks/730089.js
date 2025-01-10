@@ -33,7 +33,7 @@ let g = (e, t, n, i) => (
     },
     p = async (e) => {
         let { data: t, file: n, guildId: c, uploadId: p, roles: f, image: C, hideErrorModal: v } = e,
-            N = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
+            I = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
         if (o.ZP.isFileTooBig(n)) {
             if ('image/gif' === n.type) return g(n.name, n.size, c, p);
             if (null != C) {
@@ -51,7 +51,7 @@ let g = (e, t, n, i) => (
             await (0, l.rS)({
                 guildId: c,
                 image: t,
-                name: N,
+                name: I,
                 roles: f
             }),
                 a.default.track(u.rMx.EMOJI_UPLOAD_COMPLETED, {

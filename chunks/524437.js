@@ -57,7 +57,7 @@ r.d(n, {
         return s;
     },
     o8: function () {
-        return Z;
+        return F;
     },
     os: function () {
         return H;
@@ -219,7 +219,7 @@ class G extends M.C {
                     a.guildFolders = ek.internalBinaryRead(e, e.uint32(), r, a.guildFolders);
                     break;
                 case 15:
-                    a.favorites = eZ.internalBinaryRead(e, e.uint32(), r, a.favorites);
+                    a.favorites = eF.internalBinaryRead(e, e.uint32(), r, a.favorites);
                     break;
                 case 16:
                     a.audioContextSettings = eW.internalBinaryRead(e, e.uint32(), r, a.audioContextSettings);
@@ -252,7 +252,7 @@ class G extends M.C {
         return a;
     }
     internalBinaryWrite(e, n, r) {
-        e.versions && B.L.internalBinaryWrite(e.versions, n.tag(1, x.TD.LengthDelimited).fork(), r).join(), e.inbox && V.internalBinaryWrite(e.inbox, n.tag(2, x.TD.LengthDelimited).fork(), r).join(), e.guilds && H.internalBinaryWrite(e.guilds, n.tag(3, x.TD.LengthDelimited).fork(), r).join(), e.userContent && en.internalBinaryWrite(e.userContent, n.tag(4, x.TD.LengthDelimited).fork(), r).join(), e.voiceAndVideo && el.internalBinaryWrite(e.voiceAndVideo, n.tag(5, x.TD.LengthDelimited).fork(), r).join(), e.textAndImages && eh.internalBinaryWrite(e.textAndImages, n.tag(6, x.TD.LengthDelimited).fork(), r).join(), e.notifications && em.internalBinaryWrite(e.notifications, n.tag(7, x.TD.LengthDelimited).fork(), r).join(), e.privacy && eE.internalBinaryWrite(e.privacy, n.tag(8, x.TD.LengthDelimited).fork(), r).join(), e.debug && eI.internalBinaryWrite(e.debug, n.tag(9, x.TD.LengthDelimited).fork(), r).join(), e.gameLibrary && eb.internalBinaryWrite(e.gameLibrary, n.tag(10, x.TD.LengthDelimited).fork(), r).join(), e.status && eS.internalBinaryWrite(e.status, n.tag(11, x.TD.LengthDelimited).fork(), r).join(), e.localization && eR.internalBinaryWrite(e.localization, n.tag(12, x.TD.LengthDelimited).fork(), r).join(), e.appearance && ex.internalBinaryWrite(e.appearance, n.tag(13, x.TD.LengthDelimited).fork(), r).join(), e.guildFolders && ek.internalBinaryWrite(e.guildFolders, n.tag(14, x.TD.LengthDelimited).fork(), r).join(), e.favorites && eZ.internalBinaryWrite(e.favorites, n.tag(15, x.TD.LengthDelimited).fork(), r).join(), e.audioContextSettings && eW.internalBinaryWrite(e.audioContextSettings, n.tag(16, x.TD.LengthDelimited).fork(), r).join(), e.communities && ez.internalBinaryWrite(e.communities, n.tag(17, x.TD.LengthDelimited).fork(), r).join(), e.broadcast && e0.internalBinaryWrite(e.broadcast, n.tag(18, x.TD.LengthDelimited).fork(), r).join(), e.clips && e2.internalBinaryWrite(e.clips, n.tag(19, x.TD.LengthDelimited).fork(), r).join(), e.forLater && e5.internalBinaryWrite(e.forLater, n.tag(20, x.TD.LengthDelimited).fork(), r).join(), e.safetySettings && e4.internalBinaryWrite(e.safetySettings, n.tag(21, x.TD.LengthDelimited).fork(), r).join(), e.icymiSettings && e8.internalBinaryWrite(e.icymiSettings, n.tag(22, x.TD.LengthDelimited).fork(), r).join();
+        e.versions && B.L.internalBinaryWrite(e.versions, n.tag(1, x.TD.LengthDelimited).fork(), r).join(), e.inbox && V.internalBinaryWrite(e.inbox, n.tag(2, x.TD.LengthDelimited).fork(), r).join(), e.guilds && H.internalBinaryWrite(e.guilds, n.tag(3, x.TD.LengthDelimited).fork(), r).join(), e.userContent && en.internalBinaryWrite(e.userContent, n.tag(4, x.TD.LengthDelimited).fork(), r).join(), e.voiceAndVideo && el.internalBinaryWrite(e.voiceAndVideo, n.tag(5, x.TD.LengthDelimited).fork(), r).join(), e.textAndImages && eh.internalBinaryWrite(e.textAndImages, n.tag(6, x.TD.LengthDelimited).fork(), r).join(), e.notifications && em.internalBinaryWrite(e.notifications, n.tag(7, x.TD.LengthDelimited).fork(), r).join(), e.privacy && eE.internalBinaryWrite(e.privacy, n.tag(8, x.TD.LengthDelimited).fork(), r).join(), e.debug && eI.internalBinaryWrite(e.debug, n.tag(9, x.TD.LengthDelimited).fork(), r).join(), e.gameLibrary && eb.internalBinaryWrite(e.gameLibrary, n.tag(10, x.TD.LengthDelimited).fork(), r).join(), e.status && eS.internalBinaryWrite(e.status, n.tag(11, x.TD.LengthDelimited).fork(), r).join(), e.localization && eR.internalBinaryWrite(e.localization, n.tag(12, x.TD.LengthDelimited).fork(), r).join(), e.appearance && ex.internalBinaryWrite(e.appearance, n.tag(13, x.TD.LengthDelimited).fork(), r).join(), e.guildFolders && ek.internalBinaryWrite(e.guildFolders, n.tag(14, x.TD.LengthDelimited).fork(), r).join(), e.favorites && eF.internalBinaryWrite(e.favorites, n.tag(15, x.TD.LengthDelimited).fork(), r).join(), e.audioContextSettings && eW.internalBinaryWrite(e.audioContextSettings, n.tag(16, x.TD.LengthDelimited).fork(), r).join(), e.communities && ez.internalBinaryWrite(e.communities, n.tag(17, x.TD.LengthDelimited).fork(), r).join(), e.broadcast && e0.internalBinaryWrite(e.broadcast, n.tag(18, x.TD.LengthDelimited).fork(), r).join(), e.clips && e2.internalBinaryWrite(e.clips, n.tag(19, x.TD.LengthDelimited).fork(), r).join(), e.forLater && e5.internalBinaryWrite(e.forLater, n.tag(20, x.TD.LengthDelimited).fork(), r).join(), e.safetySettings && e4.internalBinaryWrite(e.safetySettings, n.tag(21, x.TD.LengthDelimited).fork(), r).join(), e.icymiSettings && e8.internalBinaryWrite(e.icymiSettings, n.tag(22, x.TD.LengthDelimited).fork(), r).join();
         let i = r.writeUnknownFields;
         return !1 !== i && (!0 == i ? x.z.onWrite : i)(this.typeName, e, n), n;
     }
@@ -346,7 +346,7 @@ class G extends M.C {
                 no: 15,
                 name: 'favorites',
                 kind: 'message',
-                T: () => eZ
+                T: () => eF
             },
             {
                 no: 16,
@@ -393,8 +393,8 @@ class G extends M.C {
         ]);
     }
 }
-let Z = new G();
-class F extends M.C {
+let F = new G();
+class Z extends M.C {
     create(e) {
         let n = {
             currentTab: 0,
@@ -452,7 +452,7 @@ class F extends M.C {
         ]);
     }
 }
-let V = new F();
+let V = new Z();
 class j extends M.C {
     create(e) {
         let n = { guilds: {} };
@@ -2931,8 +2931,8 @@ class eG extends M.C {
         ]);
     }
 }
-let eZ = new eG();
-class eF extends M.C {
+let eF = new eG();
+class eZ extends M.C {
     create(e) {
         let n = {
             nickname: '',
@@ -3010,7 +3010,7 @@ class eF extends M.C {
         ]);
     }
 }
-let eV = new eF();
+let eV = new eZ();
 class ej extends M.C {
     create(e) {
         let n = {

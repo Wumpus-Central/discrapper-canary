@@ -120,20 +120,20 @@ function O(e) {
     return e.map((e) => R(e)).join(', ');
 }
 function D(e) {
-    let { options: n, placeholder: r = I.intl.string(I.t.XqMe3N), className: i, isDisabled: o = !1, maxVisibleItems: u = 7, autoFocus: c = !1, popoutWidth: f, clearable: h = !1, look: E = v.q.FILLED, onClose: b, onOpen: y, renderOptionLabel: S = R, renderOptionValue: A = O, popoutClassName: N, popoutPosition: C = 'bottom', popoutLayerContext: D, optionClassName: x, closeOnSelect: w, select: P, isSelected: M, serialize: k, clear: U, hideIcon: B = !1, 'aria-label': G, 'aria-labelledby': Z } = e,
-        [F, V] = s.useState(!1),
+    let { options: n, placeholder: r = I.intl.string(I.t.XqMe3N), className: i, isDisabled: o = !1, maxVisibleItems: u = 7, autoFocus: c = !1, popoutWidth: f, clearable: h = !1, look: E = v.q.FILLED, onClose: b, onOpen: y, renderOptionLabel: S = R, renderOptionValue: A = O, popoutClassName: N, popoutPosition: C = 'bottom', popoutLayerContext: D, optionClassName: x, closeOnSelect: w, select: P, isSelected: M, serialize: k, clear: U, hideIcon: B = !1, 'aria-label': G, 'aria-labelledby': F } = e,
+        [Z, V] = s.useState(!1),
         { ref: j, width: H, height: Y } = (0, m.Z)(),
         W = s.useCallback(
             (e) => {
-                F !== e && !o && (V(e), e ? null == y || y() : null == b || b());
+                Z !== e && !o && (V(e), e ? null == y || y() : null == b || b());
             },
-            [o, b, y, F]
+            [o, b, y, Z]
         ),
         K = s.useCallback(
             (e) => {
-                F && !e && W(!1);
+                Z && !e && W(!1);
             },
-            [W, F]
+            [W, Z]
         ),
         z = (0, g.O)(K),
         q = s.useCallback(
@@ -162,7 +162,7 @@ function D(e) {
     return (0, a.jsx)(_.y, {
         spacing: 0,
         animation: _.y.Animation.NONE,
-        shouldShow: F,
+        shouldShow: Z,
         onRequestOpen: () => {
             W(!0);
         },
@@ -204,7 +204,7 @@ function D(e) {
                 onClick: o
                     ? void 0
                     : (e) => {
-                          s(e), W(!F);
+                          s(e), W(!Z);
                       },
                 onKeyDown: (e) => {
                     'ArrowDown' === e.key ? W(!0) : 'Escape' === e.key && (e.stopPropagation(), W(!1)), u(e);
@@ -219,7 +219,7 @@ function D(e) {
                 'aria-haspopup': 'listbox',
                 'aria-expanded': f,
                 'aria-label': G,
-                'aria-labelledby': Z,
+                'aria-labelledby': F,
                 children: [
                     X.length > 0
                         ? (0, a.jsx)('span', {

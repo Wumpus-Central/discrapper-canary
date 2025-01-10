@@ -1,20 +1,20 @@
-var r = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(481060),
+var r = t(481060),
     a = t(181076);
 n.Z = function (e) {
     let { message: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, i.jsxs)('div', {
         className: a.container,
         children: [
-            (0, r.jsx)(i.CircleInformationIcon, {
+            (0, i.jsx)(r.CircleInformationIcon, {
                 size: 'custom',
                 className: a.icon,
                 width: 20,
                 height: 20,
-                color: i.tokens.colors.TEXT_WARNING
+                color: r.tokens.colors.TEXT_WARNING
             }),
-            (0, r.jsx)(i.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-muted',
                 children: n

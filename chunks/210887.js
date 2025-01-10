@@ -100,7 +100,7 @@ function B() {
 function G() {
     !__OVERLAY__ && g.isPlatformEmbedded && m.Z.setApplicationBackgroundColor((0, c.wj)(O()) ? u.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: f.Z.saturation }).hsl() : u.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: f.Z.saturation }).hsl());
 }
-class Z extends (s = o.ZP.PersistedStore) {
+class F extends (s = o.ZP.PersistedStore) {
     initialize(e) {
         (null == e ? void 0 : e.theme) != null && (A = e.theme), this.waitFor(v.ZP, E.Z, I.Z, f.Z);
     }
@@ -123,9 +123,9 @@ class Z extends (s = o.ZP.PersistedStore) {
         return null !== N;
     }
 }
-S(Z, 'displayName', 'ThemeStore'),
-    S(Z, 'persistKey', 'ThemeStore'),
-    S(Z, 'migrations', [
+S(F, 'displayName', 'ThemeStore'),
+    S(F, 'persistKey', 'ThemeStore'),
+    S(F, 'migrations', [
         (e) => {
             let n = e.theme;
             return (
@@ -137,7 +137,7 @@ S(Z, 'displayName', 'ThemeStore'),
             );
         }
     ]),
-    (n.Z = new Z(d.Z, {
+    (n.Z = new F(d.Z, {
         CACHE_LOADED: D,
         CONNECTION_OPEN: D,
         LOGOUT: w,

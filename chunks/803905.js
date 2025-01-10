@@ -54,7 +54,7 @@ r.d(n, {
         return C;
     },
     ks: function () {
-        return F;
+        return Z;
     },
     lX: function () {
         return v;
@@ -98,7 +98,7 @@ function f(e, n) {
     try {
         let r = d[n.premiumType];
         if (null == r) return c.warn("Cannot find the corresponding SKU to the user's premium type ".concat(n.premiumType)), !1;
-        let i = Z[r];
+        let i = F[r];
         if (null == i) return c.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(r, ' and premium type ').concat(n.premiumType)), !1;
         return i.skuFeatures.includes(e);
     } catch (e) {
@@ -139,11 +139,11 @@ let k = new _(i.q.INCREASED_GUILD_LIMIT),
     U = new _(i.q.INCREASED_MESSAGE_LENGTH),
     B = new _('increasedVideoUploadQuality'),
     G = new _('uploadLargeFiles'),
-    Z = Object.freeze({
+    F = Object.freeze({
         [u.Si.TIER_0]: new l.Z(u.Si.TIER_0, [h, p, m, b, M, B, G, A]),
         [u.Si.TIER_1]: new l.Z(u.Si.TIER_1, [h, p, v, I, b, C, O, x, B, G, A]),
         [u.Si.TIER_2]: new l.Z(u.Si.TIER_2, [h, p, m, g, E, v, I, T, b, y, N, C, R, O, D, x, w, P, M, k, U, B, G, A, S, L])
     });
-function F(e, n) {
+function Z(e, n) {
     return e.getFeatureValue(n);
 }

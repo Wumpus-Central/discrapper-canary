@@ -75,10 +75,10 @@ function B(e) {
 function G(e) {
     return 'flags' in e;
 }
-function Z(e, n, r) {
+function F(e, n, r) {
     return !(((0, p.bw)(e.type) && 0 === n) || !I.Z.canBasicChannel((0, p.Gz)(e.type), e) || U(e, n, r) || (G(e) && e.hasFlag(C.zZ.IS_GUILD_RESOURCE_CHANNEL))) && (n > 0 || S.ZP.resolveUnreadSetting(e) === R.i.ALL_MESSAGES);
 }
-function F(e) {
+function Z(e) {
     switch (e) {
         case D:
         case null:
@@ -118,7 +118,7 @@ function K(e, n, r) {
     );
 }
 function z(e, n) {
-    let r = F(e),
+    let r = Z(e),
         i = M(r),
         a = j(r, i),
         { enabled: s, removeHomeMentionBadges: o } = (0, u.XN)({ location: 'GuildReadStateStore.recountGuild' }),
@@ -158,7 +158,7 @@ function q(e, n) {
     return (i.unreadByType[R.W.GUILD_EVENT] = V(e, n)), K(e, i, r);
 }
 function Q(e, n) {
-    let r = F(e),
+    let r = Z(e),
         i = P(r),
         { enabled: a, removeHomeMentionBadges: s } = (0, u.XN)({ location: 'GuildReadStateStore.recountGuild' }),
         o = a && s;
@@ -190,7 +190,7 @@ function Q(e, n) {
                 m = _ > 0;
             if (!m && c) continue;
             let g = !f && (!c || m) && h;
-            if ((g || m) && Z(r, _, l) && (g && ((i.unreadByType[R.W.CHANNEL] = !0), (i.unreadChannelId = n)), m)) {
+            if ((g || m) && F(r, _, l) && (g && ((i.unreadByType[R.W.CHANNEL] = !0), (i.unreadChannelId = n)), m)) {
                 let e = Math.max(_ - (o ? d.Z.getMentionCountForChannel(r.id) : 0), 0);
                 p ? (i.lowImportanceMentionCount += e) : (i.highImportanceMentionCount += e),
                     (i.mentionCounts[r.id] = {

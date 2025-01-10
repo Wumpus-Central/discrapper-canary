@@ -32,7 +32,7 @@ function f(e) {
             },
             [f, n]
         ),
-        N = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 if (null == f) return null;
                 h.Z.setPendingInviteRules(f, t, e);
@@ -41,7 +41,7 @@ function f(e) {
         );
     if (null == l) return null;
     if (null == n) return (0, i.jsx)(c.Spinner, {});
-    let _ = !l.hasFeature(g.oNc.CLAN);
+    let N = !l.hasFeature(g.oNc.CLAN);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -64,7 +64,7 @@ function f(e) {
                             })
                         ]
                     }),
-                    _ &&
+                    N &&
                         (0, i.jsx)(c.Switch, {
                             onChange: v,
                             checked: t
@@ -92,7 +92,7 @@ function f(e) {
                         (0, i.jsx)(u.k, {
                             guild: l,
                             rules: n,
-                            setRules: N
+                            setRules: I
                         })
                     ]
                 })

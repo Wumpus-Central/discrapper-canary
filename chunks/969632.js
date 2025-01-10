@@ -46,7 +46,7 @@ function C(e, t) {
 function v() {
     (g = !1), (h = l().cloneDeep(Object.assign({}, o.Z.getSettings(m))));
 }
-class N extends (i = s.ZP.PersistedStore) {
+class I extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (x = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(c.Z, o.Z);
     }
@@ -79,9 +79,9 @@ class N extends (i = s.ZP.PersistedStore) {
         return null == n ? null : n;
     }
 }
-d(N, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
-    d(N, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore'),
-    (t.Z = new N(a.Z, {
+d(I, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
+    d(I, 'persistKey', 'GuildSettingsOnboardingHomeSettingsStore'),
+    (t.Z = new I(a.Z, {
         GUILD_SETTINGS_INIT: p,
         GUILD_SETTINGS_SET_SECTION: p,
         GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: p,

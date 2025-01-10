@@ -64,7 +64,7 @@ function G(e) {
     let { applicationStreamState: n } = e;
     (a = n.streamsByUserAndGuild), (i = new Map(n.activeStreams)), (s = n.rtcStreams), (o = n.streamerActiveStreamMetadatas);
 }
-function Z(e) {
+function F(e) {
     let { voiceStates: n } = e;
     return n.reduce((e, n) => {
         let { userId: r, guildId: i, channelId: a, sessionId: s, selfStream: o, discoverable: l } = n;
@@ -85,7 +85,7 @@ function Z(e) {
         }
     }, !1);
 }
-function F(e) {
+function Z(e) {
     let { streamKey: n } = e,
         r = (0, m.my)(n);
     i.delete(n),
@@ -337,8 +337,8 @@ D(ee, 'displayName', 'ApplicationStreamingStore'),
     D(ee, 'persistKey', 'ApplicationStreamingStore'),
     (n.Z = new ee(_.Z, {
         OVERLAY_INITIALIZE: G,
-        VOICE_STATE_UPDATES: Z,
-        STREAM_WATCH: F,
+        VOICE_STATE_UPDATES: F,
+        STREAM_WATCH: Z,
         STREAM_START: V,
         STREAM_STOP: j,
         STREAM_CREATE: H,

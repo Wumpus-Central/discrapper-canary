@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(899667),
     C = n(271383),
     v = n(594174),
-    N = n(267642),
-    _ = n(624138),
-    I = n(981631),
+    I = n(267642),
+    N = n(624138),
+    _ = n(981631),
     T = n(388032),
     j = n(534560);
 function b(e, t, n) {
@@ -34,7 +34,7 @@ function b(e, t, n) {
         e
     );
 }
-let E = (0, _.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let E = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class S extends r.Component {
     componentDidMount() {
         this.measure();
@@ -61,12 +61,12 @@ class S extends r.Component {
                 y: 0,
                 key: x.x
             },
-            s = (0, N.vn)(n),
+            s = (0, I.vn)(n),
             a = e.map((e) => {
                 var n;
                 return {
                     numRequired: s[e.tier],
-                    name: (0, N.nW)(e.tier),
+                    name: (0, I.nW)(e.tier),
                     y: null !== (n = t[e.tier]) && void 0 !== n ? n : 0,
                     key: e.tier
                 };
@@ -120,7 +120,7 @@ class S extends r.Component {
         let { guildId: e, renderTier: t, subscriptions: n, subscriberCount: r, tiers: l } = this.props;
         if (null == n) return (0, i.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE });
         if (null == e) return null;
-        let s = (0, N.vn)(e);
+        let s = (0, I.vn)(e);
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
                 className: j.content,
@@ -153,7 +153,7 @@ class S extends r.Component {
             b(this, 'defaultTierRef', r.createRef()),
             b(this, 'state', {
                 tierPositions: null,
-                animatedTier: I.Eu4.NONE
+                animatedTier: _.Eu4.NONE
             }),
             b(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,

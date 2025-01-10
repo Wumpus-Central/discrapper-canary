@@ -135,7 +135,7 @@ function G(e) {
             })
     );
 }
-class Z extends (i = o.ZP.Store) {
+class F extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -180,8 +180,8 @@ class Z extends (i = o.ZP.Store) {
         return y;
     }
 }
-d(Z, 'displayName', 'UserSettingsModalStore'),
-    (n.Z = new Z(l.Z, {
+d(F, 'displayName', 'UserSettingsModalStore'),
+    (n.Z = new F(l.Z, {
         USER_SETTINGS_MODAL_OPEN: R,
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_MODAL_CLOSE: D,

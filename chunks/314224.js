@@ -17,10 +17,10 @@ var i = n(200651),
     g = n(318668);
 function x(e) {
     var t, n, x, p, f, C;
-    let { rule: v, onChangeRule: N } = e,
-        _ = r.useCallback(
+    let { rule: v, onChangeRule: I } = e,
+        N = r.useCallback(
             (e) => {
-                N({
+                I({
                     ...v,
                     triggerMetadata: {
                         ...v.triggerMetadata,
@@ -28,11 +28,11 @@ function x(e) {
                     }
                 });
             },
-            [N, v]
+            [I, v]
         ),
-        I = r.useCallback(
+        _ = r.useCallback(
             (e) => {
-                N({
+                I({
                     ...v,
                     triggerMetadata: {
                         ...v.triggerMetadata,
@@ -40,7 +40,7 @@ function x(e) {
                     }
                 });
             },
-            [N, v]
+            [I, v]
         );
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -51,17 +51,17 @@ function x(e) {
                     header: h.intl.string(h.t['ue+tnZ']),
                     children: [
                         (0, i.jsx)(o.Z, {
-                            onChangeText: _,
+                            onChangeText: N,
                             maxWordCount: m.RH,
                             initialValue: null === (t = v.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
                         (0, i.jsx)(a.Z, {
                             rule: v,
-                            onChangeRule: N,
+                            onChangeRule: I,
                             collapsed: (null == v ? void 0 : null === (n = v.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == v ? void 0 : null === (x = v.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
                         }),
                         (0, i.jsx)(l.Z, {
-                            onChange: I,
+                            onChange: _,
                             initialValue: null === (p = v.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
                             maxWordCount: m.n4,
                             collapsed: (null === (f = v.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = v.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
@@ -74,7 +74,7 @@ function x(e) {
                     header: h.intl.string(h.t['18TOiY']),
                     children: (0, i.jsx)(s.Z, {
                         rule: v,
-                        onChangeRule: N
+                        onChangeRule: I
                     })
                 }),
                 (0, i.jsx)(u.Z, { type: u.Z.Type.CROSS }),
@@ -83,7 +83,7 @@ function x(e) {
                     header: h.intl.string(h.t.eq3gjo),
                     children: (0, i.jsx)(c.Z, {
                         rule: v,
-                        onChangeRule: N
+                        onChangeRule: I
                     })
                 })
             ]

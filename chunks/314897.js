@@ -46,8 +46,8 @@ let P = new y.Z('AuthenticationStore'),
     U = 'user_id_cache',
     B = 'login_cache',
     G = null,
-    Z = null,
     F = null,
+    Z = null,
     V = null,
     j = null,
     H = null,
@@ -232,11 +232,11 @@ function eG(e) {
               dropped_fingerprint: (0, h.s)(n)
           });
 }
-function eZ(e) {
+function eF(e) {
     let { form: n } = e;
     (a = n), (z = L.$ib.REGISTER_AGE_GATE);
 }
-function eF(e) {
+function eZ(e) {
     let { birthday: n } = e;
     (es = {}),
         null != n &&
@@ -262,12 +262,12 @@ function eH() {
 function eY(e) {
     var n;
     let { user: r, sessionId: i, authSessionIdHash: a, analyticsToken: s, auth: o, staticAuthSessionId: l } = e;
-    ep('handleConnectionOpen called'), R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (F = i), (V = a), (j = l), (W = s), (G = r.id), (Z = r.email), void 0 !== o && (Q = o.authenticator_types), g.K.set(k, r.email), g.K.set(U, r.id);
+    ep('handleConnectionOpen called'), R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (Z = i), (V = a), (j = l), (W = s), (G = r.id), (F = r.email), void 0 !== o && (Q = o.authenticator_types), g.K.set(k, r.email), g.K.set(U, r.id);
 }
 function eW(e) {
     var n;
     let { user: r, sessionId: i, analyticsToken: a, token: s } = e;
-    R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (F = i), (W = a), ev(s), eE(), (G = r.id), g.K.set(U, r.id);
+    R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (Z = i), (W = a), ev(s), eE(), (G = r.id), g.K.set(U, r.id);
 }
 function eK(e) {
     let { code: n } = e;
@@ -306,7 +306,7 @@ function eX(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         D.Z.clearAll();
-    b.ZH(), R.Z.clearUser(), g.K.remove(U), (G = null), (F = null), (K = (null == e ? void 0 : e.isSwitchingAccount) ? L.u34.LOGGING_IN : L.u34.NONE), (z = L.$ib.NONE), (X = ''), (en = ''), ($ = null), (J = !1), (er = !1), (ei = !1), (ea = {}), (es = {}), (ed = !1), (ef = !1);
+    b.ZH(), R.Z.clearUser(), g.K.remove(U), (G = null), (Z = null), (K = (null == e ? void 0 : e.isSwitchingAccount) ? L.u34.LOGGING_IN : L.u34.NONE), (z = L.$ib.NONE), (X = ''), (en = ''), ($ = null), (J = !1), (er = !1), (ei = !1), (ea = {}), (es = {}), (ed = !1), (ef = !1);
 }
 function eJ(e) {
     let { errors: n } = e;
@@ -323,7 +323,7 @@ function e1() {
 }
 function e2(e) {
     let { user: n } = e;
-    (G = n.id), (Z = n.email), void 0 !== n.authenticator_types && (Q = n.authenticator_types), g.K.set(k, n.email), g.K.set(U, n.id);
+    (G = n.id), (F = n.email), void 0 !== n.authenticator_types && (Q = n.authenticator_types), g.K.set(k, n.email), g.K.set(U, n.id);
 }
 function e3() {
     es = {};
@@ -337,10 +337,10 @@ function e6() {
 }
 class e5 extends (s = p.ZP.Store) {
     initialize() {
-        (G = g.K.get(U)), (Z = g.K.get(k)), (eu = g.K.get(B)), null == _.getToken() && em(), this.addChangeListener(() => (0, T.u)(G));
+        (G = g.K.get(U)), (F = g.K.get(k)), (eu = g.K.get(B)), null == _.getToken() && em(), this.addChangeListener(() => (0, T.u)(G));
     }
     getEmail() {
-        return Z;
+        return F;
     }
     getLogin() {
         return eu;
@@ -364,7 +364,7 @@ class e5 extends (s = p.ZP.Store) {
         return G;
     }
     getSessionId() {
-        return F;
+        return Z;
     }
     getAuthSessionIdHash() {
         return V;
@@ -485,8 +485,8 @@ w(e5, 'displayName', 'AuthenticationStore'),
             SET_LOGIN_CREDENTIALS: eS,
             LOGOUT: eX,
             FINGERPRINT: eG,
-            REGISTER_SAVE_FORM: eZ,
-            REGISTER: eF,
+            REGISTER_SAVE_FORM: eF,
+            REGISTER: eZ,
             REGISTER_SUCCESS: eV,
             REGISTER_FAILURE: ej,
             VERIFY_FAILURE: eJ,

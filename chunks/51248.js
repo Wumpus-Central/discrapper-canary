@@ -18,11 +18,11 @@ function m(e) {
         { cancelEditingRule: m, isLoading: h, hasChanges: g, editingRule: x, errorMessage: p, saveEditingRule: f } = (0, c.w)(),
         { updateRule: C } = (0, o.pH)(t),
         v = null != x,
-        N = v && !(0, a.Vb)(x),
-        _ = v || g || N,
-        I = async () => {
-            if (!g && !N) return m();
-            null != x && !N && C(x);
+        I = v && !(0, a.Vb)(x),
+        N = v || g || I,
+        _ = async () => {
+            if (!g && !I) return m();
+            null != x && !I && C(x);
             let e = n.find((e) => {
                 let { id: t } = e;
                 return t === (null == x ? void 0 : x.id);
@@ -48,12 +48,12 @@ function m(e) {
             component: 'div',
             className: u.saveNoticeContainer,
             children:
-                _ &&
+                N &&
                 (0, i.jsx)(l.SlideIn, {
                     children: (0, i.jsx)(s.Z, {
                         submitting: h,
                         disabled: h,
-                        onSave: I,
+                        onSave: _,
                         onReset: m,
                         onResetText: T,
                         message: j

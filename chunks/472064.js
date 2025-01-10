@@ -1,7 +1,7 @@
-n.r(e), n(47120), n(411104);
+n.r(t), n(47120), n(411104);
 var l = n(200651),
-    i = n(192379),
-    s = n(442837),
+    s = n(192379),
+    i = n(442837),
     a = n(481060),
     r = n(570140),
     o = n(57513),
@@ -16,66 +16,66 @@ var l = n(200651),
     I = n(173747),
     g = n(850840),
     T = n(391690),
-    v = n(424218),
+    P = n(424218),
     b = n(94692),
-    P = n(981631),
-    N = n(388032),
-    x = n(51809);
-function L(t, e, n) {
+    v = n(981631),
+    x = n(388032),
+    L = n(51809);
+function N(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-class E extends i.Component {
+class C extends s.Component {
     fetchInstallSize() {
-        let { applicationId: t, branchId: e, buildId: n, manifestIds: l, buildSizeKB: i } = this.props;
+        let { applicationId: e, branchId: t, buildId: n, manifestIds: l, buildSizeKB: s } = this.props;
         null != n &&
             null != l &&
-            null == i &&
+            null == s &&
             r.Z.wait(() => {
-                (0, c.q)(t, e, n, l);
+                (0, c.q)(e, t, n, l);
             });
     }
     componentDidMount() {
-        let { applicationId: t, branchId: e, buildId: n, manifestIds: l } = this.props;
-        null == n || null == l ? (0, o.l)(t, e) : this.fetchInstallSize();
+        let { applicationId: e, branchId: t, buildId: n, manifestIds: l } = this.props;
+        null == n || null == l ? (0, o.l)(e, t) : this.fetchInstallSize();
     }
-    componentDidUpdate(t) {
-        (this.props.buildId !== t.buildId || this.props.manifestIds !== t.manifestIds) && this.fetchInstallSize();
+    componentDidUpdate(e) {
+        (this.props.buildId !== e.buildId || this.props.manifestIds !== e.manifestIds) && this.fetchInstallSize();
     }
     componentWillUnmount() {
         this.isUnmounted = !0;
     }
     renderButton() {
-        let { buildId: t } = this.props,
-            { hasError: e, hasAcceptedNeccessaryTerms: n } = this.state;
+        let { buildId: e } = this.props,
+            { hasError: t, hasAcceptedNeccessaryTerms: n } = this.state;
         return (0, l.jsx)(a.Button, {
-            disabled: e || null == t || !n,
+            disabled: t || null == e || !n,
             color: a.Button.Colors.GREEN,
             onClick: this.handleInstall,
-            children: N.intl.string(N.t.nL0WvL)
+            children: x.intl.string(x.t.nL0WvL)
         });
     }
     render() {
-        let { application: t, buildSizeKB: e, transitionState: n } = this.props,
-            { selectedInstallationPath: i, isInstalling: s } = this.state,
-            r = null != t && t.getSplashURL(440);
+        let { application: e, buildSizeKB: t, transitionState: n } = this.props,
+            { selectedInstallationPath: s, isInstalling: i } = this.state,
+            r = null != e && e.getSplashURL(440);
         return (0, l.jsxs)(a.ModalRoot, {
             transitionState: n,
             size: a.ModalSize.SMALL,
-            'aria-label': N.intl.string(N.t.PphjtL),
+            'aria-label': x.intl.string(x.t.PphjtL),
             children: [
                 null != r
                     ? (0, l.jsx)('div', {
-                          className: x.splash,
+                          className: L.splash,
                           style: { backgroundImage: 'url('.concat(r, ')') }
                       })
                     : null,
@@ -86,7 +86,7 @@ class E extends i.Component {
                             grow: 1,
                             children: (0, l.jsx)(a.Heading, {
                                 variant: 'heading-lg/semibold',
-                                children: N.intl.string(N.t.PphjtL)
+                                children: x.intl.string(x.t.PphjtL)
                             })
                         }),
                         (0, l.jsx)(m.Z.Child, {
@@ -101,36 +101,36 @@ class E extends i.Component {
                             align: m.Z.Align.CENTER,
                             children: [
                                 (0, l.jsx)(f.Z, {
-                                    game: t,
+                                    game: e,
                                     size: f.Z.Sizes.MEDIUM,
-                                    className: x.gameIcon
+                                    className: L.gameIcon
                                 }),
                                 (0, l.jsx)('div', {
-                                    className: x.gameName,
-                                    children: null != t && t.name
+                                    className: L.gameName,
+                                    children: null != e && e.name
                                 }),
-                                null != e
+                                null != t
                                     ? (0, l.jsx)('div', {
-                                          className: x.installSize,
-                                          children: (0, v.BU)(e, { useKibibytes: !0 })
+                                          className: L.installSize,
+                                          children: (0, P.BU)(t, { useKibibytes: !0 })
                                       })
                                     : null
                             ]
                         }),
-                        (0, l.jsx)('div', { className: x.divider }),
+                        (0, l.jsx)('div', { className: L.divider }),
                         (0, l.jsx)(b.Z, {
                             autoFocus: !0,
-                            className: x.selector,
-                            value: i,
-                            requiredDiskKB: e,
+                            className: L.selector,
+                            value: s,
+                            requiredDiskKB: t,
                             onChange: this.handleChangePath
                         }),
                         (0, l.jsx)(u.Z, {
-                            eulaId: t.eulaId,
-                            applicationName: t.name,
-                            disabled: s,
+                            eulaId: e.eulaId,
+                            applicationName: e.name,
+                            disabled: i,
                             onChange: this.handlePurchaseTermsChange,
-                            className: x.terms
+                            className: L.terms
                         })
                     ]
                 }),
@@ -138,57 +138,57 @@ class E extends i.Component {
             ]
         });
     }
-    constructor(...t) {
-        super(...t),
-            L(this, 'state', {
+    constructor(...e) {
+        super(...e),
+            N(this, 'state', {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
                 isInstalling: !1,
                 hasAcceptedNeccessaryTerms: !1
             }),
-            L(this, 'isUnmounted', !1),
-            L(this, 'handleChangePath', (t, e) => {
+            N(this, 'isUnmounted', !1),
+            N(this, 'handleChangePath', (e, t) => {
                 this.setState({
-                    selectedInstallationPath: t,
-                    hasError: e
+                    selectedInstallationPath: e,
+                    hasError: t
                 });
             }),
-            L(this, 'install', (t, e) => {
-                let { application: n, branchId: l, analyticsLocation: i } = this.props;
+            N(this, 'install', (e, t) => {
+                let { application: n, branchId: l, analyticsLocation: s } = this.props;
                 if (null == n) return null;
                 (0, d.LO)({
                     application: n,
                     branchId: l,
-                    buildId: t,
-                    manifestIds: e,
+                    buildId: e,
+                    manifestIds: t,
                     installationPath: this.state.selectedInstallationPath,
-                    analyticsLocation: i
+                    analyticsLocation: s
                 }),
-                    (0, A.uL)(P.Z5c.APPLICATION_LIBRARY),
+                    (0, A.uL)(v.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
-            L(this, 'handleInstall', () => {
-                let { application: t, buildId: e, manifestIds: n, hasPreviouslyAcceptedStoreTerms: l } = this.props;
-                if (null != e && null != n) !l && (0, h.B)(), null != t && null != t.eulaId && (0, h.D)(t.eulaId), this.install(e, n);
+            N(this, 'handleInstall', () => {
+                let { application: e, buildId: t, manifestIds: n, hasPreviouslyAcceptedStoreTerms: l } = this.props;
+                if (null != t && null != n) !l && (0, h.B)(), null != e && null != e.eulaId && (0, h.D)(e.eulaId), this.install(t, n);
                 else throw Error('Unexpected missing build info for non-premium product');
             }),
-            L(this, 'handlePurchaseTermsChange', (t) => {
-                this.setState({ hasAcceptedNeccessaryTerms: t });
+            N(this, 'handlePurchaseTermsChange', (e) => {
+                this.setState({ hasAcceptedNeccessaryTerms: e });
             }),
-            L(this, 'close', () => {
+            N(this, 'close', () => {
                 this.props.onClose();
             });
     }
 }
-e.default = s.ZP.connectStores([I.Z, T.Z, g.Z, p.Z], (t) => {
-    let { applicationId: e, branchId: n } = t,
-        l = I.Z.getTargetBuildId(e, n);
+t.default = i.ZP.connectStores([I.Z, T.Z, g.Z, p.Z], (e) => {
+    let { applicationId: t, branchId: n } = e,
+        l = I.Z.getTargetBuildId(t, n);
     return {
-        application: p.Z.getApplication(e),
+        application: p.Z.getApplication(t),
         defaultInstallationPath: T.Z.defaultInstallationPath,
         buildId: l,
-        manifestIds: I.Z.getTargetManifests(e, n),
+        manifestIds: I.Z.getTargetManifests(t, n),
         buildSizeKB: null != l ? I.Z.getBuildSize(l) : null,
         hasPreviouslyAcceptedStoreTerms: g.Z.hasAcceptedStoreTerms
     };
-})(E);
+})(C);

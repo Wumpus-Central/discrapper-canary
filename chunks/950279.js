@@ -21,7 +21,7 @@ function x(e) {
             },
             [o, l]
         ),
-        N = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 if (n) return;
                 let i = new Set(t);
@@ -29,7 +29,7 @@ function x(e) {
             },
             [n, t, l]
         ),
-        _ = r.useCallback(() => null, []);
+        N = r.useCallback(() => null, []);
     return (0, i.jsx)('div', {
         className: h.inputContainer,
         children: (0, i.jsxs)(a.FormItem, {
@@ -48,7 +48,7 @@ function x(e) {
                     matchSorterOptions: f,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: h.pills,
-                    renderCustomPill: _
+                    renderCustomPill: N
                 }),
                 C.length > 0 &&
                     (0, i.jsxs)('div', {
@@ -78,7 +78,7 @@ function x(e) {
                                                             imageContainerClassName: t.size > o ? h.clickableGame : void 0,
                                                             selected: !0,
                                                             locked: n,
-                                                            onClick: N
+                                                            onClick: I
                                                         },
                                                         e
                                                     )

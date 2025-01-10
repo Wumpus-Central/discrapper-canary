@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 }),
     n(47120),
@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(208049),
     C = n(763296),
     v = n(22382),
-    N = n(747071),
-    _ = n(286654),
-    I = n(171368),
+    I = n(747071),
+    N = n(286654),
+    _ = n(171368),
     T = n(430824),
     j = n(594174),
     b = n(15385),
@@ -38,8 +38,8 @@ var i = n(200651),
     D = n(710111),
     O = n(388032),
     M = n(572005);
-let k = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
-function P() {
+let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+function k() {
     let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
     return null == e
         ? null
@@ -154,12 +154,12 @@ function F(e) {
         (0, f.w)();
     }, []);
     let x = r.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
-        _ = 0 === l.length && !s;
-    function I(e) {
+        N = 0 === l.length && !s;
+    function _(e) {
         var t;
         null === (t = o.current) || void 0 === t || t.pause();
         let n = x[e.soundId];
-        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, N.Z)(e.volume)), n.play());
+        null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, I.Z)(e.volume)), n.play());
     }
     r.useEffect(
         () => () => {
@@ -169,7 +169,7 @@ function F(e) {
         []
     );
     if (s) return (0, i.jsx)(u.Spinner, {});
-    let T = k
+    let T = P
         ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
@@ -197,11 +197,11 @@ function F(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: M.buttons,
-                        children: !_ && T
+                        children: !N && T
                     })
                 ]
             }),
-            _
+            N
                 ? (0, i.jsxs)(u.EmptyState, {
                       theme: d,
                       className: M.empty,
@@ -252,7 +252,7 @@ function F(e) {
                                               sound: e,
                                               isPlaying: !1,
                                               guild: t,
-                                              onPlaySound: I
+                                              onPlaySound: _
                                           },
                                           e.soundId
                                       )
@@ -266,14 +266,14 @@ function F(e) {
 }
 function H(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: N } = t,
+        { soundId: d, name: g, user: x, userId: C, emojiId: v, emojiName: I } = t,
         T = (0, c.e7)([j.default], () => (null != x ? x : j.default.getUser(C)), [C, x]),
         { canManageGuildExpression: b } = (0, p.XJ)(o),
         S = r.useMemo(() => b(t), [t, b]),
-        R = null != v || null != N,
+        R = null != v || null != I,
         [A, Z] = r.useState(!1),
-        D = (0, _.z)(t, o.id);
-    async function k() {
+        D = (0, N.z)(t, o.id);
+    async function P() {
         if (!A) {
             Z(!0);
             try {
@@ -289,9 +289,9 @@ function H(e) {
             await (0, m.PR)(C);
         }
     }, [T, C]);
-    let P = r.useCallback(() => {
+    let k = r.useCallback(() => {
             null != T &&
-                (0, I.openUserProfileModal)({
+                (0, _.openUserProfileModal)({
                     userId: T.id,
                     guildId: o.id,
                     analyticsLocation: { section: L.jXE.GUILD_SETTINGS_SOUNDBOARD }
@@ -304,7 +304,7 @@ function H(e) {
             R
                 ? (0, i.jsx)(h.Z, {
                       emojiId: v,
-                      emojiName: N,
+                      emojiName: I,
                       className: M.emoji
                   })
                 : (0, i.jsx)(u.ImageIcon, {
@@ -335,7 +335,7 @@ function H(e) {
             null != T &&
                 (0, i.jsxs)(u.Clickable, {
                     className: M.uploader,
-                    onClick: P,
+                    onClick: k,
                     children: [
                         (0, i.jsx)(u.Avatar, {
                             'aria-label': w,
@@ -384,7 +384,7 @@ function H(e) {
                                               header: O.intl.formatToPlainString(O.t['PR/VbG'], { soundName: g }),
                                               confirmText: O.intl.string(O.t.oyYWHB),
                                               cancelText: O.intl.string(O.t['ETE/oK']),
-                                              onConfirm: k,
+                                              onConfirm: P,
                                               ...e,
                                               children: (0, i.jsx)(u.Text, {
                                                   variant: 'text-md/normal',

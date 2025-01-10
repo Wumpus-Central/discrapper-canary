@@ -20,8 +20,8 @@ t.Z = (e) => {
         r = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         C = (0, s.e7)([o.default], () => o.default.locale),
         v = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
-        N = (0, s.e7)([d.Z], () => (null != v ? d.Z.get(v.planId) : void 0)),
-        _ = null !== (t = (0, s.e7)([d.Z], () => (null != N ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), N.interval, N.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
+        I = (0, s.e7)([d.Z], () => (null != v ? d.Z.get(v.planId) : void 0)),
+        N = null !== (t = (0, s.e7)([d.Z], () => (null != I ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), I.interval, I.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
     return (0, i.jsxs)('div', {
         className: l()(f.wrapper, n),
         children: [
@@ -73,9 +73,9 @@ t.Z = (e) => {
                 })({
                     currentUser: r,
                     locale: C,
-                    guildBoostingPlanId: _.id,
-                    interval: _.interval,
-                    intervalCount: _.intervalCount
+                    guildBoostingPlanId: N.id,
+                    interval: N.interval,
+                    intervalCount: N.intervalCount
                 })
             })
         ]

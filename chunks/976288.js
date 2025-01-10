@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(166184),
     C = n(936735),
     v = n(654351),
-    N = n(557359),
-    _ = n(386885),
-    I = n(203377),
+    I = n(557359),
+    N = n(386885),
+    _ = n(203377),
     T = n(929834),
     j = n(128449),
     b = n(388032),
@@ -233,7 +233,7 @@ function A(e) {
         m = r.useCallback(
             (e) => {
                 let { keywords: i } = n;
-                !(i.length >= I.G7) && (0, c.zH)(t, [...i, e]);
+                !(i.length >= _.G7) && (0, c.zH)(t, [...i, e]);
             },
             [t, n]
         ),
@@ -268,8 +268,8 @@ function A(e) {
                         tags: n.keywords,
                         onRemoveTag: d,
                         onAddTag: m,
-                        maxTags: I.G7,
-                        maxTaxLength: I._0,
+                        maxTags: _.G7,
+                        maxTaxLength: _._0,
                         placeholder: n.keywords.length < 1 ? b.intl.string(b.t.EL4Lho) : void 0
                     }),
                     null != o
@@ -395,7 +395,7 @@ function O(e) {
             };
         });
     if (null == o) return null;
-    let c = r === _.U.ELIGIBLE_DISABLED;
+    let c = r === N.U.ELIGIBLE_DISABLED;
     return (0, i.jsxs)('div', {
         className: E.settings,
         children: [
@@ -426,7 +426,7 @@ function O(e) {
             (0, i.jsx)(L, { preferredLocale: o.preferredLocale }),
             (0, i.jsx)(D, {}),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(N.A, {
+                children: (0, i.jsx)(I.A, {
                     requireTerms: t,
                     rules: n
                 })

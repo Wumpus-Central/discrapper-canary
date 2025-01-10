@@ -93,8 +93,8 @@ var T = new WeakMap(),
     U = new WeakMap(),
     B = new WeakMap(),
     G = new WeakMap(),
-    Z = new WeakMap(),
     F = new WeakMap(),
+    Z = new WeakMap(),
     V = Symbol('placeholder'),
     j = Symbol('mark-placeholder'),
     H = globalThis.Text,
@@ -579,13 +579,13 @@ var T = new WeakMap(),
                 else if (e) {
                     var n = window.ResizeObserver || _.do;
                     (f.current = new n(() => {
-                        var e = F.get(d);
+                        var e = Z.get(d);
                         null == e || e();
                     })),
                         f.current.observe(e);
                 }
                 if (!e && l.current) {
-                    var r = F.get(d);
+                    var r = Z.get(d);
                     null == r || r();
                 }
                 return (
@@ -666,7 +666,7 @@ var T = new WeakMap(),
         );
     },
     eG = c.memo(eB, (e, n) => n.parent === e.parent && n.isLast === e.isLast && n.renderLeaf === e.renderLeaf && n.renderPlaceholder === e.renderPlaceholder && n.text === e.text && eC(n.decorations, e.decorations)),
-    eZ = (e) => {
+    eF = (e) => {
         var { decorations: n, element: r, renderElement: i = (e) => c.createElement(eV, Object.assign({}, e)), renderPlaceholder: s, renderLeaf: o, selection: l } = e,
             u = eP(),
             d = eq(),
@@ -729,7 +729,7 @@ var T = new WeakMap(),
             decorations: n
         });
     },
-    eF = c.memo(eZ, (e, n) => e.element === n.element && e.renderElement === n.renderElement && e.renderLeaf === n.renderLeaf && e.renderPlaceholder === n.renderPlaceholder && eN(e.decorations, n.decorations) && (e.selection === n.selection || (!!e.selection && !!n.selection && f.e6.equals(e.selection, n.selection)))),
+    eZ = c.memo(eF, (e, n) => e.element === n.element && e.renderElement === n.renderElement && e.renderLeaf === n.renderLeaf && e.renderPlaceholder === n.renderPlaceholder && eN(e.decorations, n.decorations) && (e.selection === n.selection || (!!e.selection && !!n.selection && f.e6.equals(e.selection, n.selection)))),
     eV = (e) => {
         var { attributes: n, children: r, element: i } = e,
             a = eP().isInline(i) ? 'span' : 'div';
@@ -759,7 +759,7 @@ var T = new WeakMap(),
                               key: 'provider-'.concat(E.id),
                               value: !!I
                           },
-                          c.createElement(eF, {
+                          c.createElement(eZ, {
                               decorations: y,
                               element: g,
                               key: E.id,
@@ -1235,8 +1235,8 @@ function tm(e) {
         u = 0,
         c = !1,
         d = () => {
-            var e = Z.get(n);
-            if ((Z.delete(n), e)) {
+            var e = F.get(n);
+            if ((F.delete(n), e)) {
                 var { selection: r } = n,
                     i = ts(n, e);
                 i && (!r || !f.e6.equals(i, r)) && f.YR.select(n, i);
@@ -1280,10 +1280,10 @@ function tm(e) {
                                   return n !== u.id;
                               })
                     ),
-                    !e8(n, u) && ((s = !1), G.delete(n), U.delete(n), (a = 'action'), Z.delete(n), r.cancel(), i.cancel(), null == e || e.unref());
+                    !e8(n, u) && ((s = !1), G.delete(n), U.delete(n), (a = 'action'), F.delete(n), r.cancel(), i.cancel(), null == e || e.unref());
             }
             var E = null == e ? void 0 : e.unref();
-            if ((E && !Z.get(n) && (!n.selection || !f.e6.equals(E, n.selection)) && f.YR.select(n, E), I())) {
+            if ((E && !F.get(n) && (!n.selection || !f.e6.equals(E, n.selection)) && f.YR.select(n, E), I())) {
                 _();
                 return;
             }
@@ -1334,7 +1334,7 @@ function tm(e) {
         E = function (e) {
             var { at: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             (c = !1),
-                Z.delete(n),
+                F.delete(n),
                 r.cancel(),
                 i.cancel(),
                 I() && h(),
@@ -1488,17 +1488,17 @@ function tm(e) {
                             );
                         if (f.y$.equals(i.anchor.path, i.focus.path)) {
                             var [U, G] = f.e6.edges(i),
-                                Z = {
+                                F = {
                                     start: U.offset,
                                     end: G.offset,
                                     text: M
                                 };
                             if (M && c && 'insertCompositionText' === r) {
-                                var F = c.start + c.text.search(/\S|$/);
-                                Z.start + Z.text.search(/\S|$/) === F + 1 && Z.end === c.start + c.text.length ? ((Z.start -= 1), (c = null), C()) : (c = !1);
-                            } else c = 'insertText' === r && (null === c ? Z : !!(c && f.e6.isCollapsed(i)) && c.end + c.text.length === U.offset && td(td({}, c), {}, { text: c.text + M }));
+                                var Z = c.start + c.text.search(/\S|$/);
+                                F.start + F.text.search(/\S|$/) === Z + 1 && F.end === c.start + c.text.length ? ((F.start -= 1), (c = null), C()) : (c = !1);
+                            } else c = 'insertText' === r && (null === c ? F : !!(c && f.e6.isCollapsed(i)) && c.end + c.text.length === U.offset && td(td({}, c), {}, { text: c.text + M }));
                             if (u) {
-                                g(U.path, Z);
+                                g(U.path, F);
                                 return;
                             }
                         }
@@ -1513,7 +1513,7 @@ function tm(e) {
         },
         b = () => I() || T(),
         y = (e) => {
-            Z.set(n, e), o && (clearTimeout(o), (o = null));
+            F.set(n, e), o && (clearTimeout(o), (o = null));
             var { selection: r } = n;
             if (!!e) {
                 var i = !r || !f.y$.equals(r.anchor.path, e.anchor.path),
@@ -1534,7 +1534,7 @@ function tm(e) {
             if (!(T() || I())) {
                 if (e.some((r) => ea(n, r, e))) {
                     var r;
-                    null === (r = F.get(n)) || void 0 === r || r();
+                    null === (r = Z.get(n)) || void 0 === r || r();
                 }
             }
         };
@@ -1685,9 +1685,9 @@ var tO = (e) => c.createElement(c.Fragment, null, eK(e)),
             [P, M] = (0, c.useState)(!1),
             B = (0, c.useRef)(null),
             G = (0, c.useRef)([]),
-            { onUserInput: Z, receivedUserInput: H } = tS(),
+            { onUserInput: F, receivedUserInput: H } = tS(),
             [, W] = (0, c.useReducer)((e) => e + 1, 0);
-        F.set(O, W), D.set(O, h);
+        Z.set(O, W), D.set(O, h);
         var q = (0, c.useMemo)(
             () => ({
                 isDraggingInternally: !1,
@@ -1799,7 +1799,7 @@ var tO = (e) => c.createElement(c.Fragment, null, eK(e)),
         });
         var ee = (0, c.useCallback)(
                 (e) => {
-                    if ((Z(), !h && eT.hasEditableTarget(O, e.target) && !tM(e, d))) {
+                    if ((F(), !h && eT.hasEditableTarget(O, e.target) && !tM(e, d))) {
                         if ($) return $.handleDOMBeforeInput(e);
                         J.flush(), Q.flush();
                         var { selection: n } = O,
@@ -2406,10 +2406,10 @@ function tB(e) {
     return e instanceof Error;
 }
 var tG = (0, c.createContext)({}),
-    tZ = (e, n) => e === n;
-function tF(e) {
+    tF = (e, n) => e === n;
+function tZ(e) {
     var n,
-        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tZ,
+        r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tF,
         [, i] = useReducer((e) => e + 1, 0),
         a = useContext(tG);
     if (!a) throw Error("The `useSlateSelector` hook must be used inside the <Slate> component's context.");
@@ -2607,8 +2607,8 @@ var tX = function (e) {
                     var o = s.map((n) => tu(n, e)).filter(Boolean);
                     B.set(r, o);
                 }
-                var l = Z.get(r);
-                l && Z.set(r, tl(r, l, e));
+                var l = F.get(r);
+                l && F.set(r, tl(r, l, e));
                 var u = G.get(r);
                 if (null != u && u.at) {
                     var c = f.E9.isPoint(null == u ? void 0 : u.at) ? to(r, u.at, e) : tl(r, u.at, e);

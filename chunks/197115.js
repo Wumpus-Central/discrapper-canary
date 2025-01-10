@@ -88,7 +88,7 @@ function N(e) {
     );
 }
 function C(e) {
-    let { isGift: n, subscriptionTier: r, onClick: a, size: _, className: C, isTrialCTA: R, buttonText: O, buttonTextClassName: D, iconClassName: L, postSuccessGuild: x, onSubscribeModalClose: w, premiumModalAnalyticsLocation: P, showIcon: M = !0, disableShine: k, applicationId: U, giftMessage: B, overrideDisabledButtonText: G, shinyButtonClassName: Z, showGradient: F = !1, ...V } = e,
+    let { isGift: n, subscriptionTier: r, onClick: a, size: _, className: C, isTrialCTA: R, buttonText: O, buttonTextClassName: D, iconClassName: L, postSuccessGuild: x, onSubscribeModalClose: w, premiumModalAnalyticsLocation: P, showIcon: M = !0, disableShine: k, applicationId: U, giftMessage: B, overrideDisabledButtonText: G, shinyButtonClassName: F, showGradient: Z = !1, ...V } = e,
         j = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         H = (0, o.e7)([E.Z], () => E.Z.isFocused()),
         Y = (0, o.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
@@ -186,11 +186,11 @@ function C(e) {
             innerClassName: S.premiumSubscribeButton,
             color: r === T.Si.TIER_1 ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
             size: _,
-            className: Z,
+            className: F,
             wrapperClassName: s()(
                 {
-                    [S.tier2Gradient]: F && r === T.Si.TIER_2,
-                    [S.tier1Gradient]: F && r === T.Si.TIER_1
+                    [S.tier2Gradient]: Z && r === T.Si.TIER_2,
+                    [S.tier1Gradient]: Z && r === T.Si.TIER_1
                 },
                 C
             ),

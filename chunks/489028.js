@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(584825),
     C = n(723047),
     v = n(416867),
-    N = n(903773),
-    _ = n(215124),
-    I = n(326578),
+    I = n(903773),
+    N = n(215124),
+    _ = n(326578),
     T = n(981631),
     j = n(674563),
     b = n(829857),
@@ -55,7 +55,7 @@ function y(e) {
             (await d(t, a, j.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (h(t.id),
                 (0, v.B)({
-                    Icon: I.Z,
+                    Icon: _.Z,
                     title: E.intl.string(E.t['AP/2qa']),
                     body: E.intl.string(E.t.kHMgaG)
                 }));
@@ -98,7 +98,7 @@ t.Z = (e) => {
         c = t.isOwner(n),
         f = (0, o.Ob)(t),
         C = (0, l.e7)([x.Z], () => x.Z.isFocused()),
-        { teams: v, loading: I } = (0, h.Z)({ refreshOnDepChange: C }),
+        { teams: v, loading: _ } = (0, h.Z)({ refreshOnDepChange: C }),
         j = r.useMemo(
             () =>
                 v.filter((e) => {
@@ -128,12 +128,12 @@ t.Z = (e) => {
                     : e,
             [Z, c]
         );
-    return I
+    return _
         ? (0, i.jsx)(s.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !c &&
-                      (0, i.jsx)(N.Z, {
+                      (0, i.jsx)(I.Z, {
                           className: S.nonOwnerNotice,
                           children: E.intl.string(E.t.t56qWF)
                       }),
@@ -162,7 +162,7 @@ t.Z = (e) => {
                   (0, i.jsx)(s.FormSection, {
                       title: E.intl.string(E.t['0n7R2d']),
                       className: S.selfDemonetization,
-                      children: (0, i.jsx)(_.Z, {
+                      children: (0, i.jsx)(N.Z, {
                           guildId: t.id,
                           allPeriods: []
                       })

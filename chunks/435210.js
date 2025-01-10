@@ -319,14 +319,14 @@ function B(e, n) {
         return e;
     });
 var G = 'undefined' != typeof Symbol ? Symbol('util.promisify.custom') : void 0;
-function Z(e, n) {
+function F(e, n) {
     if (!e) {
         var r = Error('Promise was rejected with a falsy value');
         (r.reason = e), (e = r);
     }
     return n(e);
 }
-function F(e) {
+function Z(e) {
     if ('function' != typeof e) throw TypeError('The "original" argument must be of type Function');
     function n() {
         for (var n = [], r = 0; r < arguments.length; r++) n.push(arguments[r]);
@@ -341,7 +341,7 @@ function F(e) {
                 i.nextTick(o.bind(null, null, e));
             },
             function (e) {
-                i.nextTick(Z.bind(null, e, o));
+                i.nextTick(F.bind(null, e, o));
             }
         );
     }
@@ -398,4 +398,4 @@ function F(e) {
     );
 }),
     (n.promisify.custom = G),
-    (n.callbackify = F);
+    (n.callbackify = Z);

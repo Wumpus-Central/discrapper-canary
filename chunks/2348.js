@@ -21,15 +21,15 @@ var i = n(200651),
     f = n(868814),
     C = n(981631),
     v = n(388032),
-    N = n(683559);
-function _(e) {
+    I = n(683559);
+function N(e) {
     let { guild: t, channel: r } = e,
         l = (0, p.Mf)(r.id);
     return 'null' === r.id
         ? (0, i.jsx)('div', {
-              className: s()(N.categoryRow, N.uncategorized),
+              className: s()(I.categoryRow, I.uncategorized),
               children: (0, i.jsx)(o.Text, {
-                  className: N.categoryText,
+                  className: I.categoryText,
                   color: 'text-muted',
                   variant: 'text-xs/semibold',
                   lineClamp: 1,
@@ -37,7 +37,7 @@ function _(e) {
               })
           })
         : (0, i.jsxs)(o.Clickable, {
-              className: s()(N.categoryRow, { [N.uncategorized]: 'null' === r.id }),
+              className: s()(I.categoryRow, { [I.uncategorized]: 'null' === r.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('38902'), n.e('58059'), n.e('8965'), n.e('98350')]).then(n.bind(n, 139035));
@@ -66,7 +66,7 @@ function _(e) {
               ),
               children: [
                   (0, i.jsx)(o.Text, {
-                      className: N.categoryText,
+                      className: I.categoryText,
                       color: 'text-muted',
                       variant: 'text-xs/semibold',
                       lineClamp: 1,
@@ -76,14 +76,14 @@ function _(e) {
                       'aria-checked': l,
                       value: l,
                       type: o.Checkbox.Types.INVERTED,
-                      className: N.checkbox,
+                      className: I.checkbox,
                       displayOnly: !0
                   })
               ]
           });
 }
-let I = r.memo(function () {
-        return (0, i.jsx)('div', { className: N.separator });
+let _ = r.memo(function () {
+        return (0, i.jsx)('div', { className: I.separator });
     }),
     T = r.memo(function (e) {
         let { index: t } = e;
@@ -91,14 +91,14 @@ let I = r.memo(function () {
             o.Text,
             {
                 variant: 'text-xs/normal',
-                className: N.subtitleSeparator,
+                className: I.subtitleSeparator,
                 children: '\xB7'
             },
             'separator-'.concat(t)
         );
     }),
     j = r.memo(function (e) {
-        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: _, tooltipDirection: j = 'right' } = e,
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: N, tooltipDirection: j = 'right' } = e,
             b = (0, p.Mf)(t.id, r.id),
             E = (0, p.t4)(t.id, r.id),
             S = (0, p.EH)(t.id, r.id),
@@ -152,28 +152,28 @@ let I = r.memo(function () {
                     position: j,
                     children: (e) =>
                         (0, i.jsxs)(o.Clickable, {
-                            className: s()(N.channelRow, {
-                                [N.firstChannel]: g,
-                                [N.lastChannel]: _,
-                                [N.disabled]: E
+                            className: s()(I.channelRow, {
+                                [I.firstChannel]: g,
+                                [I.lastChannel]: N,
+                                [I.disabled]: E
                             }),
                             ...e,
                             onClick: Z,
                             onContextMenu: L,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: N.channelInfo,
+                                    className: I.channelInfo,
                                     children: (0, i.jsxs)('div', {
-                                        className: N.channelName,
+                                        className: I.channelName,
                                         children: [
                                             (0, i.jsx)(h._, {
                                                 channel: t,
                                                 guild: l
                                             }),
                                             (0, i.jsx)(d.Z, {
-                                                className: N.__invalid_name,
+                                                className: I.__invalid_name,
                                                 children: (0, i.jsx)(o.Text, {
-                                                    className: N.channelText,
+                                                    className: I.channelText,
                                                     variant: 'text-md/medium',
                                                     lineClamp: 1,
                                                     color: E ? 'text-muted' : 'text-normal',
@@ -186,7 +186,7 @@ let I = r.memo(function () {
                                                           (0, i.jsx)(T, { index: 0 }),
                                                           (0, i.jsx)(o.Text, {
                                                               variant: 'text-xs/medium',
-                                                              className: N.channelSubtitle,
+                                                              className: I.channelSubtitle,
                                                               color: 'text-brand',
                                                               children: v.intl.string(v.t.mPxmeH)
                                                           })
@@ -197,7 +197,7 @@ let I = r.memo(function () {
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: N.channelActions,
+                                    className: I.channelActions,
                                     children: (0, u.s)(t.guild_id, t.id)
                                         ? (0, i.jsx)(o.Checkbox, {
                                               'aria-checked': b,
@@ -205,14 +205,14 @@ let I = r.memo(function () {
                                               type: o.Checkbox.Types.INVERTED,
                                               disabled: E,
                                               color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                              innerClassName: N.checkboxInner,
+                                              innerClassName: I.checkboxInner,
                                               displayOnly: !0
                                           })
                                         : (0, i.jsxs)(o.Button, {
                                               look: o.Button.Looks.OUTLINED,
                                               color: o.Button.Colors.PRIMARY,
-                                              className: N.lockedPill,
-                                              innerClassName: N.lockedPillInner,
+                                              className: I.lockedPill,
+                                              innerClassName: I.lockedPillInner,
                                               onClick: C.dG4,
                                               children: [
                                                   (0, i.jsx)(o.LockIcon, {
@@ -230,7 +230,7 @@ let I = r.memo(function () {
                             ]
                         })
                 }),
-                !_ && (0, i.jsx)(I, {})
+                !N && (0, i.jsx)(_, {})
             ]
         });
     });
@@ -240,7 +240,7 @@ function b(e) {
             (e) => {
                 let r = t._categories[e];
                 return (0, i.jsx)(
-                    _,
+                    N,
                     {
                         channel: r.channel,
                         guild: n

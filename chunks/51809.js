@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     splash: 'splash_fd3088',
     gameIcon: 'gameIcon_fd3088',
     gameName: 'gameName_fd3088',

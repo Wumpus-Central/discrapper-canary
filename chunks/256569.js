@@ -65,10 +65,10 @@ function p(e) {
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: f } = e,
         C = r.useRef(null),
         v = r.useRef(null),
-        N = r.useRef(null),
-        _ = (0, m.V)(n),
+        I = r.useRef(null),
+        N = (0, m.V)(n),
         {
-            handlePasteEvent: I,
+            handlePasteEvent: _,
             handleInputChange: T,
             handleKeyDown: j,
             handleContainerKeyUp: b,
@@ -78,26 +78,26 @@ function p(e) {
             handleUnselectTag: y,
             handleResetTagSelections: A,
             handleInputBlurEvent: Z
-        } = (0, m.Q)(_, {
-            scrollerRef: N,
+        } = (0, m.Q)(N, {
+            scrollerRef: I,
             mainInputRef: C,
             mainContainerRef: v
         }),
         {
             state: { value: L, tags: D, selections: O, isSelecting: M }
-        } = _,
-        k = (0, o.Z)(D),
-        [P, w] = r.useState(!1),
+        } = N,
+        P = (0, o.Z)(D),
+        [k, w] = r.useState(!1),
         B = r.useCallback(() => {
             var e;
             w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
         }, [A]);
     r.useEffect(() => {
-        if (!P && k !== D) l(D);
-    }, [l, k, D, P]),
+        if (!k && P !== D) l(D);
+    }, [l, P, D, k]),
         r.useEffect(() => {
-            if (!P) c(L);
-        }, [c, L, P]);
+            if (!k) c(L);
+        }, [c, L, k]);
     let U = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -133,7 +133,7 @@ function p(e) {
         onKeyUp: b,
         children: [
             (0, i.jsxs)(x, {
-                ref: N,
+                ref: I,
                 onClick: B,
                 children: [
                     D.map((e, t) =>
@@ -148,17 +148,17 @@ function p(e) {
                                 isSelected: O.includes(e),
                                 isSelecting: M,
                                 error: u[e],
-                                forceShowErrorTooltip: !P && t === D.length - 1
+                                forceShowErrorTooltip: !k && t === D.length - 1
                             },
                             t
                         )
                     ),
                     (0, i.jsx)('input', {
-                        className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: P }),
+                        className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: k }),
                         ref: C,
                         onChange: T,
                         onKeyDownCapture: j,
-                        onPaste: I,
+                        onPaste: _,
                         onBlur: Z,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L

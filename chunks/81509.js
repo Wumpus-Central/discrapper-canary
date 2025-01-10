@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return _;
     }
 });
 var i = n(200651);
@@ -95,7 +95,7 @@ function v(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { emojisToShow: t, notShownEmojiCount: n, storePageUrl: r } = e,
         c = null != t && t.length > 0,
         d = () => {
@@ -165,7 +165,7 @@ function N(e) {
               })
     });
 }
-function _(e) {
+function N(e) {
     let { highlightedCreatorGuild: t } = e,
         { guild_id: n, quote: r, quote_attribution: l, quote_attribution_title: a } = t,
         o = (0, m.Z)(n, 4, 60),
@@ -176,7 +176,7 @@ function _(e) {
             children: (0, i.jsx)(s.Spinner, {})
         });
     if (!d) return null;
-    let { guildIcon: u, guildName: h, guildAvatarUrl: g, subscriberCount: x, emojisToShow: f, notShownEmojiCount: _, storePageUrl: I } = o.details;
+    let { guildIcon: u, guildName: h, guildAvatarUrl: g, subscriberCount: x, emojisToShow: f, notShownEmojiCount: N, storePageUrl: _ } = o.details;
     return (0, i.jsxs)('div', {
         className: p.guildCard,
         children: [
@@ -191,15 +191,15 @@ function _(e) {
                 quoteAttribution: l,
                 quoteAttributionTitle: a
             }),
-            (0, i.jsx)(N, {
+            (0, i.jsx)(I, {
                 emojisToShow: f,
-                notShownEmojiCount: _,
-                storePageUrl: I
+                notShownEmojiCount: N,
+                storePageUrl: _
             })
         ]
     });
 }
-function I(e) {
+function _(e) {
     let { highlightedCreators: t } = e;
     return (0, i.jsxs)('div', {
         children: [
@@ -212,7 +212,7 @@ function I(e) {
             (0, i.jsx)(h.Z, {
                 carouselClassName: p.creatorGuildCarousel,
                 items: t,
-                renderItem: (e) => (0, i.jsx)(_, { highlightedCreatorGuild: e }),
+                renderItem: (e) => (0, i.jsx)(N, { highlightedCreatorGuild: e }),
                 intervalBetweenAutomaticItemRotations: 7000
             })
         ]

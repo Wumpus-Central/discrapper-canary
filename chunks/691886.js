@@ -24,7 +24,7 @@ var i = n(200651),
 function v(e) {
     return String(e);
 }
-function N(e) {
+function I(e) {
     let { icon: t, title: n, subtitle: r, className: l } = e;
     return (0, i.jsxs)('div', {
         className: s()(C.label, l),
@@ -52,8 +52,8 @@ function N(e) {
         ]
     });
 }
-function _() {
-    return (0, i.jsx)(N, {
+function N() {
+    return (0, i.jsx)(I, {
         icon: (0, i.jsx)(o.PlusSmallIcon, {
             size: 'md',
             color: 'currentColor',
@@ -63,7 +63,7 @@ function _() {
         className: C.createLabel
     });
 }
-function I(e) {
+function _(e) {
     var t;
     let { channelId: n } = e,
         r = (0, x.m7)(n),
@@ -72,7 +72,7 @@ function I(e) {
     let s = (0, d.KS)(r),
         a = (0, c.F6)(r, g.default, h.Z),
         o = null != l ? (0, c.F6)(l, g.default, h.Z) : void 0;
-    return (0, i.jsx)(N, {
+    return (0, i.jsx)(I, {
         icon: null != s && (0, i.jsx)(s, { className: C.labelIcon }),
         title: a,
         subtitle: o
@@ -80,23 +80,23 @@ function I(e) {
 }
 function T(e) {
     let { value: t } = e;
-    return null != t ? (0, i.jsx)(I, { channelId: t }) : (0, i.jsx)(_, {});
+    return null != t ? (0, i.jsx)(_, { channelId: t }) : (0, i.jsx)(N, {});
 }
 function j(e) {
-    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: N } = e,
-        _ = f.intl.string(f.t.d7YJMD),
-        I = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
+    let { guildId: t, value: l, initialChannelId: s, omitChannelIds: d, 'aria-labelledby': C, onChange: I } = e,
+        N = f.intl.string(f.t.d7YJMD),
+        _ = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         j = (0, x.m7)(null != l ? l : p.lds),
         b = r.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: _
+                        label: N
                     }
                 ],
                 t = !1;
-            for (let n of I._categories)
-                for (let { channel: i } of I[n.channel.id]) {
+            for (let n of _._categories)
+                for (let { channel: i } of _[n.channel.id]) {
                     if (!!(0, u.r8)(i.type) || !!(0, u.bw)(i.type))
                         (!(i.id !== l && (null == d ? void 0 : d.has(i.id))) || (i.id === s && l !== s)) &&
                             (l === i.id && (t = !0),
@@ -115,7 +115,7 @@ function j(e) {
                     }),
                 e
             );
-        }, [_, l, j, I, d, s]);
+        }, [N, l, j, _, d, s]);
     return (0, i.jsx)(o.Select, {
         placeholder: f.intl.string(f.t.r2pts7),
         options: b,
@@ -127,10 +127,10 @@ function j(e) {
                           (0, i.jsx)(e, {
                               ...n,
                               guildId: t,
-                              onSubmit: N
+                              onSubmit: I
                           });
                   })
-                : N(e);
+                : I(e);
         },
         isSelected: (e) => null != l && v(e) === v(l),
         serialize: v,

@@ -3,7 +3,7 @@ r.d(n, {
         return s;
     },
     Ni: function () {
-        return F;
+        return Z;
     },
     YH: function () {
         return G;
@@ -12,7 +12,7 @@ r.d(n, {
         return i;
     },
     rf: function () {
-        return Z;
+        return F;
     }
 });
 var i,
@@ -61,8 +61,8 @@ let G = (e) => {
         I = (0, _.e7)([p.ZP], () => p.ZP.categories),
         T = (0, _.e7)([N.Z], () => N.Z.getGuild(null == n ? void 0 : n.getGuildId()), [n]),
         G = null == n ? null : n.getGuildId(),
-        Z = (0, _.e7)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(G), [G]),
-        F = (0, w.NJ)(G),
+        F = (0, _.e7)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(G), [G]),
+        Z = (0, w.NJ)(G),
         V = (0, w.wC)(G),
         j = (0, w.q5)(G),
         { canSplitFrecencyList: H } = (0, g.S)({
@@ -81,7 +81,7 @@ let G = (e) => {
         X = (0, _.e7)([O.default], () => O.default.getCurrentUser()),
         J = (0, L.I5)(X),
         $ = (0, y.B4)({ location: 'useEmojiGrid' }),
-        ee = Z.getCustomEmoji(),
+        ee = F.getCustomEmoji(),
         et = (e) => {
             if (e.type === m.B.GUILD) return e.guildId;
         },
@@ -101,7 +101,7 @@ let G = (e) => {
             p = [],
             m = 0,
             g = 0;
-        if (null != Z && null != o) {
+        if (null != F && null != o) {
             let E = Math.floor(o / (c + 2 * l)),
                 b = 3 * E,
                 y = (s, o) => {
@@ -196,12 +196,12 @@ let G = (e) => {
                         }
                         g++;
                     }
-                    let Z = f ? 0 : U,
-                        F = {
+                    let F = f ? 0 : U,
+                        Z = {
                             ...o,
                             count: s.length
                         };
-                    u.push(F), e.push(Z);
+                    u.push(Z), e.push(F);
                 };
             if (null != s)
                 0 !== s.unlocked.length &&
@@ -305,7 +305,7 @@ let G = (e) => {
                             isNitroLocked: !1
                         });
                     } else if (e === k.UX.FAVORITES) {
-                        let r = F.filter(
+                        let r = Z.filter(
                             (e) =>
                                 !D.ZP.isEmojiFiltered({
                                     emoji: e,
@@ -340,12 +340,12 @@ let G = (e) => {
             rowCountBySection: e,
             sectionDescriptors: u
         };
-    }, [Z, o, c, l, s, r, er, ei, en, i, Q, q, n, a, W, K, J, I, T, z, H, Y, j, V, F, $, ea, h]);
+    }, [F, o, c, l, s, r, er, ei, en, i, Q, q, n, a, W, K, J, I, T, z, H, Y, j, V, Z, $, ea, h]);
 };
 !(function (e) {
     (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION');
 })(s || (s = {}));
-let Z = (e) => {
+let F = (e) => {
         let { pickerIntention: n, selectedChannel: r, onSelectEmoji: i, setUpsellConfigs: a, emojiSelectAnalytics: s, trackEmojiFavorited: o } = e,
             l = (0, _.e7)([p.ZP], () => p.ZP.getDisambiguatedEmojiContext(null == r ? void 0 : r.getGuildId()), [r]);
         return u.useCallback(
@@ -390,7 +390,7 @@ let Z = (e) => {
             [r, n, i, a, l, s, o]
         );
     },
-    F = (e) => {
+    Z = (e) => {
         let { emojiListRef: n } = e,
             r = (0, T.Iu)((e) => e.searchQuery),
             i = u.useCallback(

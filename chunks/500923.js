@@ -4930,8 +4930,8 @@
                         U,
                         B,
                         G,
-                        Z = -1;
-                    if (1 === M.s.rn) for (g = 0; g < E; g += 1) Z != (k = i[g]).anIndexes[T] && ((Z = k.anIndexes[T]), (G = w.splice(Math.floor(Math.random() * w.length), 1)[0])), (k.anIndexes[T] = G);
+                        F = -1;
+                    if (1 === M.s.rn) for (g = 0; g < E; g += 1) F != (k = i[g]).anIndexes[T] && ((F = k.anIndexes[T]), (G = w.splice(Math.floor(Math.random() * w.length), 1)[0])), (k.anIndexes[T] = G);
                 }
                 (e.yOffset = e.finalLineHeight || 1.2 * e.finalSize), (e.ls = e.ls || 0), (e.ascent = (_.ascent * e.finalSize) / 100);
             }),
@@ -5103,8 +5103,8 @@
                                 U,
                                 B,
                                 G,
-                                Z,
                                 F,
+                                Z,
                                 V,
                                 j,
                                 H,
@@ -5126,8 +5126,8 @@
                                 (W = bez.buildBezierData(K.v[D], K.v[D + 1], [K.o[D][0] - K.v[D][0], K.o[D][1] - K.v[D][1]], [K.i[D + 1][0] - K.v[D + 1][0], K.i[D + 1][1] - K.v[D + 1][1]])), (x.tLength += W.segmentLength), x.segments.push(W), (j += W.segmentLength);
                             (D = L), Y.v.c && ((W = bez.buildBezierData(K.v[D], K.v[0], [K.o[D][0] - K.v[D][0], K.o[D][1] - K.v[D][1]], [K.i[0][0] - K.v[0][0], K.i[0][1] - K.v[0][1]])), (x.tLength += W.segmentLength), x.segments.push(W), (j += W.segmentLength)), (this._pathData.pi = x);
                         }
-                        if (((x = this._pathData.pi), (w = this._pathData.f.v), (B = 0), (U = 1), (M = 0), (k = !0), (F = x.segments), w < 0 && Y.v.c)) for (x.tLength < Math.abs(w) && (w = -Math.abs(w) % x.tLength), B = F.length - 1, U = (Z = F[B].points).length - 1; w < 0; ) (w += Z[U].partialLength), (U -= 1) < 0 && ((B -= 1), (U = (Z = F[B].points).length - 1));
-                        (G = (Z = F[B].points)[U - 1]), (V = (P = Z[U]).partialLength);
+                        if (((x = this._pathData.pi), (w = this._pathData.f.v), (B = 0), (U = 1), (M = 0), (k = !0), (Z = x.segments), w < 0 && Y.v.c)) for (x.tLength < Math.abs(w) && (w = -Math.abs(w) % x.tLength), B = Z.length - 1, U = (F = Z[B].points).length - 1; w < 0; ) (w += F[U].partialLength), (U -= 1) < 0 && ((B -= 1), (U = (F = Z[B].points).length - 1));
+                        (G = (F = Z[B].points)[U - 1]), (V = (P = F[U]).partialLength);
                     }
                     (L = C.length), (R = 0), (O = 0);
                     var z = 1.2 * e.finalSize * 0.714,
@@ -5157,7 +5157,7 @@
                         for (er && (er += ei); es < D; ) (C[es].animatorJustifyOffset = er), (es += 1);
                     }
                     for (D = 0; D < L; D += 1) {
-                        if ((S.reset(), (f = 1), C[D].n)) (R = 0), (O += e.yOffset + (q ? 1 : 0)), (w = X), (q = !1), this._hasMaskedPath && ((B = J), (U = $), (G = (Z = F[B].points)[U - 1]), (V = (P = Z[U]).partialLength), (M = 0)), (et = ''), (v = ''), (g = ''), (I = ''), (en = this.defaultPropsArray);
+                        if ((S.reset(), (f = 1), C[D].n)) (R = 0), (O += e.yOffset + (q ? 1 : 0)), (w = X), (q = !1), this._hasMaskedPath && ((B = J), (U = $), (G = (F = Z[B].points)[U - 1]), (V = (P = F[U]).partialLength), (M = 0)), (et = ''), (v = ''), (g = ''), (I = ''), (en = this.defaultPropsArray);
                         else {
                             if (this._hasMaskedPath) {
                                 if (ee !== C[D].line) {
@@ -5173,7 +5173,7 @@
                                 Q !== C[D].ind && (C[Q] && (w += C[Q].extra), (w += C[D].an / 2), (Q = C[D].ind)), (w += T[0] * C[D].an * 0.005);
                                 var el = 0;
                                 for (a = 0; a < s; a += 1) (r = b[a].a).p.propType && ((l = (i = b[a].s).getMult(C[D].anIndexes[a], y.a[a].s.totalChars)).length ? (el += r.p.v[0] * l[0]) : (el += r.p.v[0] * l)), r.a.propType && ((l = (i = b[a].s).getMult(C[D].anIndexes[a], y.a[a].s.totalChars)).length ? (el += r.a.v[0] * l[0]) : (el += r.a.v[0] * l));
-                                for (k = !0, this._pathData.a.v && (w = 0.5 * C[0].an + ((j - this._pathData.f.v - 0.5 * C[0].an - 0.5 * C[C.length - 1].an) * Q) / (L - 1) + this._pathData.f.v); k; ) M + V >= w + el || !Z ? ((H = (w + el - M) / P.partialLength), (c = G.point[0] + (P.point[0] - G.point[0]) * H), (d = G.point[1] + (P.point[1] - G.point[1]) * H), S.translate(-T[0] * C[D].an * 0.005, -(0.01 * (T[1] * z))), (k = !1)) : Z && ((M += P.partialLength), (U += 1) >= Z.length && ((U = 0), F[(B += 1)] ? (Z = F[B].points) : Y.v.c ? ((U = 0), (Z = F[(B = 0)].points)) : ((M -= P.partialLength), (Z = null))), Z && ((G = P), (V = (P = Z[U]).partialLength)));
+                                for (k = !0, this._pathData.a.v && (w = 0.5 * C[0].an + ((j - this._pathData.f.v - 0.5 * C[0].an - 0.5 * C[C.length - 1].an) * Q) / (L - 1) + this._pathData.f.v); k; ) M + V >= w + el || !F ? ((H = (w + el - M) / P.partialLength), (c = G.point[0] + (P.point[0] - G.point[0]) * H), (d = G.point[1] + (P.point[1] - G.point[1]) * H), S.translate(-T[0] * C[D].an * 0.005, -(0.01 * (T[1] * z))), (k = !1)) : F && ((M += P.partialLength), (U += 1) >= F.length && ((U = 0), Z[(B += 1)] ? (F = Z[B].points) : Y.v.c ? ((U = 0), (F = Z[(B = 0)].points)) : ((M -= P.partialLength), (F = null))), F && ((G = P), (V = (P = F[U]).partialLength)));
                                 (u = C[D].an / 2 - C[D].add), S.translate(-u, 0, 0);
                             } else (u = C[D].an / 2 - C[D].add), S.translate(-u, 0, 0), S.translate(-T[0] * C[D].an * 0.005, -T[1] * z * 0.01, 0);
                             for (a = 0; a < s; a += 1) (r = b[a].a).t.propType && ((l = (i = b[a].s).getMult(C[D].anIndexes[a], y.a[a].s.totalChars)), (0 !== R || 0 !== e.j) && (this._hasMaskedPath ? (l.length ? (w += r.t.v * l[0]) : (w += r.t.v * l)) : l.length ? (R += r.t.v * l[0]) : (R += r.t.v * l)));

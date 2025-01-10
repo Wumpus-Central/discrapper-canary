@@ -187,7 +187,7 @@ function L() {
     y = {};
 }
 function x() {
-    Z();
+    F();
 }
 function w(e) {
     let { voiceStates: n } = e;
@@ -226,7 +226,7 @@ function G(e) {
     let { guild: n } = e;
     delete y[n.id];
 }
-function Z() {
+function F() {
     y = {};
     let e = g.Z.getAllVoiceStates();
     E.default.keys(e).forEach((n) => {
@@ -235,9 +235,9 @@ function Z() {
         });
     });
 }
-class F extends (i = u.ZP.Store) {
+class Z extends (i = u.ZP.Store) {
     initialize() {
-        Z(), this.waitFor(_.default, m.default, p.ZP, g.Z), this.syncWith([m.default], k);
+        F(), this.waitFor(_.default, m.default, p.ZP, g.Z), this.syncWith([m.default], k);
     }
     getVoiceStates(e) {
         return S(null != e ? e : I.ME).getVoiceStates();
@@ -263,8 +263,8 @@ class F extends (i = u.ZP.Store) {
         return S(null != e ? e : I.ME).getVersion();
     }
 }
-T(F, 'displayName', 'SortedVoiceStateStore'),
-    (n.ZP = new F(d.Z, {
+T(Z, 'displayName', 'SortedVoiceStateStore'),
+    (n.ZP = new Z(d.Z, {
         CONNECTION_OPEN: L,
         OVERLAY_INITIALIZE: x,
         VOICE_CHANNEL_SELECT: M,

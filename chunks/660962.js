@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(598077),
     C = n(496675),
     v = n(764260),
-    N = n(95242),
-    _ = n(541575),
-    I = n(420966),
+    I = n(95242),
+    N = n(541575),
+    _ = n(420966),
     T = n(337344),
     j = n(275296),
     b = n(203377),
@@ -89,7 +89,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function P(e) {
     var t, l;
     let { role: s, guildId: a } = e;
     let o =
@@ -169,7 +169,7 @@ function k(e) {
         })
     });
 }
-function P(e) {
+function k(e) {
     let { role: t, disabled: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -197,8 +197,8 @@ function w(e) {
         a = (0, u.pM)(null == t ? void 0 : t.id, n.id),
         o = r || a,
         m = (0, c.e7)([C.Z], () => C.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: g } = (0, N.Z)(0),
-        { scrolledToTop: x, handleScroll: p } = (0, I.V)();
+        { headerHeight: h, headerRef: g } = (0, I.Z)(0),
+        { scrolledToTop: x, handleScroll: p } = (0, _.V)();
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
         className: R.scroller,
         style: { scrollPaddingTop: h },
@@ -209,7 +209,7 @@ function w(e) {
                 (0, i.jsx)('div', {
                     className: s()(y.header, y.stickyHeader, { [y.stickyHeaderElevated]: !x }),
                     ref: g,
-                    children: (0, i.jsx)(I.Z, {
+                    children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,
                         selectedSection: b.ZI.DISPLAY,
@@ -229,17 +229,17 @@ function w(e) {
                     role: n,
                     disabled: o
                 }),
-                (0, i.jsx)(_.Z, {
+                (0, i.jsx)(N.Z, {
                     guild: t,
                     disabled: o,
                     role: n
                 }),
-                (0, i.jsx)(k, {
+                (0, i.jsx)(P, {
                     role: n,
                     guildId: t.id
                 }),
                 (0, i.jsx)(d.FormDivider, { className: R.divider }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(k, {
                     role: n,
                     disabled: o
                 }),

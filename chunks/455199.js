@@ -55,7 +55,7 @@ function G(e) {
             null == D[e.getChannelId()] && (D[e.getChannelId()] = 0), D[e.getChannelId()]++;
         });
 }
-function Z(e) {
+function F(e) {
     let { addedMessages: n, deletedMessages: r } = e;
     null != n &&
         n.forEach((e) => {
@@ -66,7 +66,7 @@ function Z(e) {
                 null != D[e.getChannelId()] && (D[e.getChannelId()] = Math.max(0, D[e.getChannelId()] - 1));
             });
 }
-function F() {
+function Z() {
     U = !0;
 }
 function V() {
@@ -84,7 +84,7 @@ function H(e) {
 function Y(e) {
     let { hasMoreAfter: n, messages: r, isAfter: i } = e,
         a = l().map(r, H);
-    Z({ addedMessages: a }),
+    F({ addedMessages: a }),
         i ? (O = O.concat(a)) : ((O = a), (L = {})),
         l().forEach(a, (e) => {
             L[e.id] = !0;
@@ -141,7 +141,7 @@ function z(e) {
         return !1;
     let a = K(r, n);
     if (null == a) return !1;
-    (O = O.slice()).unshift(a), (L[a.id] = !0), Z({ addedMessages: [a] });
+    (O = O.slice()).unshift(a), (L[a.id] = !0), F({ addedMessages: [a] });
 }
 function q(e) {
     let n = e.message.id;
@@ -156,7 +156,7 @@ function q(e) {
 function Q(e) {
     if (null == L[e]) return !1;
     delete L[e],
-        Z({
+        F({
             deletedMessages: l().filter(O, (n) => {
                 let { id: r } = n;
                 return r === e;
@@ -204,22 +204,22 @@ function en(e) {
         let i = v.Z.getChannel(e.channel_id);
         return (null != i && i.getGuildId() !== n.id) || (delete L[e.id], r.push(e), !1);
     })),
-        Z({ deletedMessages: r });
+        F({ deletedMessages: r });
 }
 function er() {
-    Z({ deletedMessages: l().filter(O, (e) => b.Z.isBlockedOrIgnoredForMessage(e)) }), (O = O.filter((e) => !b.Z.isBlockedOrIgnoredForMessage(e)));
+    F({ deletedMessages: l().filter(O, (e) => b.Z.isBlockedOrIgnoredForMessage(e)) }), (O = O.filter((e) => !b.Z.isBlockedOrIgnoredForMessage(e)));
 }
 function ei(e) {
     let { channel: n } = e,
         r = [];
-    (O = l().filter(O, (e) => e.channel_id !== n.id || (delete L[e.id], r.push(e), !1))), Z({ deletedMessages: r });
+    (O = l().filter(O, (e) => e.channel_id !== n.id || (delete L[e.id], r.push(e), !1))), F({ deletedMessages: r });
 }
 function ea(e) {
     et();
 }
 function es(e) {
     let { size: n } = e;
-    Z({ deletedMessages: O.slice(n) });
+    F({ deletedMessages: O.slice(n) });
     for (let e = n; e < O.length; ++e) delete L[O[e].id];
     let r = O.length;
     r > (O = O.slice(0, n)).length && (w = !0);
@@ -293,7 +293,7 @@ C(el, 'displayName', 'RecentMentionsStore'),
         RELATIONSHIP_ADD: er,
         RELATIONSHIP_REMOVE: er,
         RELATIONSHIP_UPDATE: er,
-        MENTION_MODAL_OPEN: F,
+        MENTION_MODAL_OPEN: Z,
         MENTION_MODAL_CLOSE: V,
         SET_RECENT_MENTIONS_STALE: eo
     }));

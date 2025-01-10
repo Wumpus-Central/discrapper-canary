@@ -3,7 +3,7 @@ r.d(n, {
         return j;
     },
     LY: function () {
-        return Z;
+        return F;
     },
     Nj: function () {
         return u.Z;
@@ -36,7 +36,7 @@ r.d(n, {
         return w;
     },
     wR: function () {
-        return F;
+        return Z;
     },
     wl: function () {
         return G;
@@ -199,7 +199,7 @@ function G(e) {
     else if (e.type === T.d4z.GUILD_MEDIA) return 'media';
     else if (_.sR.has(e.type)) return 'text';
 }
-function Z(e) {
+function F(e) {
     let n;
     let r = h.Z.getChannel(g.Z.getLastSelectedChannelId());
     if (null != r && r.getGuildId() === e && r.type === T.d4z.GUILD_TEXT) n = r.id;
@@ -209,7 +209,7 @@ function Z(e) {
     }
     return T.Z5c.CHANNEL(e, n);
 }
-function F(e, n, r, i) {
+function Z(e, n, r, i) {
     let a = null == i ? '' : '?summaryId='.concat(i);
     return ''
         .concat(location.protocol, '//')
@@ -219,7 +219,7 @@ function F(e, n, r, i) {
 }
 function V(e, n, r, i) {
     return null == e || null == n || null == r
-        ? F(e, n, i)
+        ? Z(e, n, i)
         : ''
               .concat(location.protocol, '//')
               .concat(location.host)
@@ -229,7 +229,7 @@ function j(e, n, r, i) {
     let a;
     let s = e.getGuildId(),
         o = (0, d.BC)(s, n);
-    return (a = null != n && o ? V(s, n.id, e.id, I.default.castChannelIdAsMessageId(e.id)) : null != i ? i : F(s, e.id, r));
+    return (a = null != n && o ? V(s, n.id, e.id, I.default.castChannelIdAsMessageId(e.id)) : null != i ? i : Z(s, e.id, r));
 }
 function H(e) {
     if (null == e) return null;

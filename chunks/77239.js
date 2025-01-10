@@ -30,8 +30,8 @@ e.exports = function (e, n, r, p, m, g, E, v) {
         U = 0,
         B = 0,
         G = 0,
-        Z = null,
-        F = 0,
+        F = null,
+        Z = 0,
         V = new i.Buf16(a + 1),
         j = new i.Buf16(a + 1),
         H = null,
@@ -45,9 +45,9 @@ e.exports = function (e, n, r, p, m, g, E, v) {
     if (U > 0 && (e === l || 1 !== w)) return -1;
     for (D = 1, j[1] = 0; D < a; D++) j[D + 1] = j[D] + V[D];
     for (L = 0; L < p; L++) 0 !== n[r + L] && (E[j[n[r + L]]++] = L);
-    if ((e === l ? ((Z = H = E), (A = 19)) : e === u ? ((Z = d), (F -= 257), (H = f), (Y -= 257), (A = 256)) : ((Z = _), (H = h), (A = -1)), (G = 0), (L = 0), (D = x), (S = g), (M = P), (k = 0), (b = -1), (y = (B = 1 << P) - 1), (e === u && B > s) || (e === c && B > o))) return 1;
+    if ((e === l ? ((F = H = E), (A = 19)) : e === u ? ((F = d), (Z -= 257), (H = f), (Y -= 257), (A = 256)) : ((F = _), (H = h), (A = -1)), (G = 0), (L = 0), (D = x), (S = g), (M = P), (k = 0), (b = -1), (y = (B = 1 << P) - 1), (e === u && B > s) || (e === c && B > o))) return 1;
     for (;;) {
-        (N = D - k), E[L] < A ? ((C = 0), (R = E[L])) : E[L] > A ? ((C = H[Y + E[L]]), (R = Z[F + E[L]])) : ((C = 96), (R = 0)), (I = 1 << (D - k)), (x = T = 1 << M);
+        (N = D - k), E[L] < A ? ((C = 0), (R = E[L])) : E[L] > A ? ((C = H[Y + E[L]]), (R = F[Z + E[L]])) : ((C = 96), (R = 0)), (I = 1 << (D - k)), (x = T = 1 << M);
         do m[S + (G >> k) + (T -= I)] = (N << 24) | (C << 16) | R | 0;
         while (0 !== T);
         for (I = 1 << (D - 1); G & I; ) I >>= 1;

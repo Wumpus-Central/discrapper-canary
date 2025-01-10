@@ -171,7 +171,7 @@ r.d(n, {
         return eP;
     },
     mX: function () {
-        return F;
+        return Z;
     },
     nc: function () {
         return eh;
@@ -204,7 +204,7 @@ r.d(n, {
         return Y;
     },
     zA: function () {
-        return Z;
+        return F;
     }
 });
 var i = r(47120);
@@ -412,13 +412,13 @@ let T = (0, u.Zc)(
         (e) => o.D5.create({ value: e })
     ),
     G = [],
-    Z = (0, u.Zc)(
+    F = (0, u.Zc)(
         'privacy',
         'messageRequestRestrictedGuildIds',
         (e) => (null != e ? e : G),
         (e) => e
     ),
-    F = (0, u.Zc)(
+    Z = (0, u.Zc)(
         'privacy',
         'defaultMessageRequestRestricted',
         (e) => {

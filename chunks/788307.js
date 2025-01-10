@@ -108,18 +108,18 @@ let x = 150,
                 },
                 { autoTrackExposure: !1 }
             ),
-            Z = (0, p.Sl)(R.Ilk.BRAND_345),
-            F = null,
+            F = (0, p.Sl)(R.Ilk.BRAND_345),
+            Z = null,
             V = G && null != U && y.Z.can(R.Plq.CONNECT, B);
         V
-            ? (F = (0, a.jsx)(v.Z, {
+            ? (Z = (0, a.jsx)(v.Z, {
                   className: l,
                   hangStatusActivity: U
               }))
             : null != M &&
               null != M.emoji &&
               !I &&
-              (F = (0, a.jsx)(L, {
+              (Z = (0, a.jsx)(L, {
                   emoji: M.emoji,
                   animate: d,
                   hideTooltip: m,
@@ -143,12 +143,12 @@ let x = 150,
         }, [j, H, Y, x, r, z, W]);
         let q = null == K ? void 0 : K.activityText,
             Q = null != q && '' !== q;
-        return (H && W === R.OGo.BLOCKED) || (null == F && !Q)
+        return (H && W === R.OGo.BLOCKED) || (null == Z && !Q)
             ? null
             : (0, a.jsxs)('div', {
                   className: i,
                   children: [
-                      F,
+                      Z,
                       (0, a.jsx)(w, {
                           text: q,
                           className: o
@@ -159,7 +159,7 @@ let x = 150,
                               className: O.questsIcon,
                               height: D,
                               width: D,
-                              color: Z.hex
+                              color: F.hex
                           }),
                       null != n && n.some((e) => (0, f.Z)(e, V))
                           ? (0, a.jsx)(N.Z, {

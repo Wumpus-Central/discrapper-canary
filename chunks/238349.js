@@ -1,7 +1,7 @@
 let i;
 r.d(n, {
     U: function () {
-        return F;
+        return Z;
     }
 });
 var a,
@@ -72,13 +72,13 @@ function B(e) {
 function G() {
     (R = []), (i = null), (S = null), (A = new Set()), (N = u.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = l().chain(b)), (x = l().chain(b)), P.clear(), w.clear();
 }
-function Z() {
+function F() {
     var e;
     let n = g.Z.getChannelId();
     if (null == n || !(null === (e = p.Z.getChannel(n)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return G(), !1;
     V({ refreshThreadIds: !0 });
 }
-function F(e) {
+function Z(e) {
     let n = p.Z.getChannel(e);
     return null == n
         ? []
@@ -177,10 +177,10 @@ class Q extends (a = c.ZP.Store) {
 }
 T(Q, 'displayName', 'ForumActivePostStore'),
     (n.Z = new Q(d.Z, {
-        CONNECTION_OPEN: Z,
-        OVERLAY_INITIALIZE: Z,
-        GUILD_CREATE: Z,
-        CHANNEL_SELECT: Z,
+        CONNECTION_OPEN: F,
+        OVERLAY_INITIALIZE: F,
+        GUILD_CREATE: F,
+        CHANNEL_SELECT: F,
         CHANNEL_DELETE: K,
         THREAD_LIST_SYNC: j,
         THREAD_CREATE: Y,

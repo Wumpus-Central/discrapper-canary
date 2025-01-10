@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return P;
     }
 }),
     n(47120),
@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(594174),
     C = n(251625),
     v = n(226951),
-    N = n(51144),
-    _ = n(434404),
-    I = n(372454),
+    I = n(51144),
+    N = n(434404),
+    _ = n(372454),
     T = n(999382),
     j = n(84613),
     b = n(740903),
@@ -71,7 +71,7 @@ function L(e) {
                     (0, i.jsx)(g.Z, {
                         size: g.Z.Sizes.SIZE_24,
                         className: y.userUsername,
-                        children: N.ZP.getUserTag(l, {
+                        children: I.ZP.getUserTag(l, {
                             mode: 'username',
                             identifiable: a ? 'never' : 'always'
                         })
@@ -143,7 +143,7 @@ class D extends r.PureComponent {
                 (0, i.jsxs)('div', {
                     className: y.username,
                     children: [
-                        N.ZP.getUserTag(e, {
+                        I.ZP.getUserTag(e, {
                             mode: 'username',
                             identifiable: t ? 'never' : 'always'
                         }),
@@ -205,13 +205,13 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        _.Z.setSection(S.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
+        N.Z.setSection(S.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        _.Z.setSearchQuery(e);
+        N.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        _.Z.setSearchQuery('');
+        N.Z.setSearchQuery('');
     }
     constructor(...e) {
         super(...e),
@@ -341,10 +341,10 @@ let M = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
         streamerMode: p.Z.hidePersonalInformation
     };
 })(O);
-function k() {
+function P() {
     var e;
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], a.isEqual),
-        { enabled: n } = I.T.useExperiment(
+        { enabled: n } = _.T.useExperiment(
             {
                 guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : S.lds,
                 location: '4d6318_1'

@@ -19,10 +19,10 @@ t.Z = function (e) {
             var e, n;
             return null !== (n = null === (e = d.Z.getDetectableGame(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
         }),
-        N = r.useCallback(() => {
+        I = r.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
-        _ = r.useMemo(
+        N = r.useMemo(
             () =>
                 f
                     ? null
@@ -42,7 +42,7 @@ t.Z = function (e) {
         className: m.selectedGame,
         children: [
             (0, i.jsxs)(a.Clickable, {
-                onClick: N,
+                onClick: I,
                 className: s()(n, f ? m.gameImageLoading : void 0, m.gameImageBackground),
                 children: [
                     h &&
@@ -55,7 +55,7 @@ t.Z = function (e) {
                                 className: s()(m.selectedGameCheck, { [m.selectedGameCheckLocked]: g })
                             })
                         }),
-                    _,
+                    N,
                     x > 0 &&
                         (0, i.jsx)('div', {
                             className: m.remainingGame,

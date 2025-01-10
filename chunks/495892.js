@@ -23,7 +23,7 @@ var i = n(200651),
     f = n(273504),
     C = n(388032),
     v = n(867270);
-function N(e) {
+function I(e) {
     let { rule: t, triggerType: n } = e,
         l = r.useMemo(
             () =>
@@ -68,21 +68,21 @@ function N(e) {
               children: l
           });
 }
-let _ = (e, t) => () =>
+let N = (e, t) => () =>
         t({
             ...e,
             enabled: !e.enabled
         }),
-    I = (e) => {
+    _ = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
     T = (e) => {
         let { className: t, children: n, ...r } = e;
         return (0, i.jsx)(s.Clickable, {
             className: t,
-            onClick: I,
-            onMouseDown: I,
-            onMouseUp: I,
+            onClick: _,
+            onMouseDown: _,
+            onMouseUp: _,
             ...r,
             children: n
         });
@@ -90,9 +90,9 @@ let _ = (e, t) => () =>
 function j(e) {
     var t;
     let { rule: n, onChangeRule: r, onContextMenu: l } = e,
-        a = _(n, r),
+        a = N(n, r),
         o = (e) => {
-            I(e), l(e);
+            _(e), l(e);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -141,7 +141,7 @@ function E(e) {
         { isLoading: c, saveRule: m } = (0, h.w)(),
         { updateRule: x } = (0, u.pH)(t.guildId),
         [p, f] = r.useState(t.enabled),
-        _ = (0, l.throttle)(async (e, n) => {
+        N = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
                 let e = {
                     ...t,
@@ -153,7 +153,7 @@ function E(e) {
             }
         }, 300),
         j = (e) => {
-            I(e), a(e);
+            _(e), a(e);
         };
     if (null == o) return null;
     let { headerText: E, headerSubtext: S, descriptionText: R, icon: y } = o,
@@ -193,7 +193,7 @@ function E(e) {
                             variant: 'text-sm/normal',
                             children: R
                         }),
-                    (0, i.jsx)(N, {
+                    (0, i.jsx)(I, {
                         rule: t,
                         triggerType: t.triggerType
                     })
@@ -204,7 +204,7 @@ function E(e) {
                 children: [
                     (0, i.jsx)(s.Switch, {
                         className: v.toggle,
-                        onChange: _,
+                        onChange: N,
                         checked: null != p && p
                     }),
                     !n &&
@@ -261,7 +261,7 @@ function S(e) {
                         variant: 'text-sm/normal',
                         children: o
                     }),
-                    (0, i.jsx)(N, { triggerType: t })
+                    (0, i.jsx)(I, { triggerType: t })
                 ]
             }),
             (0, i.jsx)(T, {

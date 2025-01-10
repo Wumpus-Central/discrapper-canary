@@ -15,9 +15,9 @@ var i = n(200651),
     f = n(598077),
     C = n(699516),
     v = n(594174),
-    N = n(259580),
-    _ = n(51144),
-    I = n(426563),
+    I = n(259580),
+    N = n(51144),
+    _ = n(426563),
     T = n(909746),
     j = n(501801),
     b = n(981631),
@@ -32,7 +32,7 @@ class R extends r.PureComponent {
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: _.ZP.getUserTag(e, { mode: 'username' })
+                    children: N.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
                     (0, i.jsxs)(d.Text, {
@@ -148,7 +148,7 @@ class y extends r.PureComponent {
                             e.stopPropagation(), n.onClick(e);
                         },
                         className: S.avatar,
-                        src: ((r = e), (l = t), r.action === b.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === b.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === b.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === b.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, I.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
+                        src: ((r = e), (l = t), r.action === b.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === b.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === b.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === b.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, _.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
                         'aria-hidden': !0,
                         size: d.AvatarSizes.SIZE_40
                     });
@@ -218,7 +218,7 @@ class y extends r.PureComponent {
                                     ]
                                 }),
                                 o
-                                    ? (0, i.jsx)(N.Z, {
+                                    ? (0, i.jsx)(I.Z, {
                                           className: S.expand,
                                           foreground: S.expandForeground,
                                           expanded: r,

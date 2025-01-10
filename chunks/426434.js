@@ -24,10 +24,10 @@ function x(e) {
         f = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         C = n.isOwner(f),
         v = null == f ? void 0 : f.mfaEnabled,
-        N = x === m.BpS.ELEVATED,
-        _ = C && v,
-        I = (0, r.throttle)(async (e) => {
-            if (!!_)
+        I = x === m.BpS.ELEVATED,
+        N = C && v,
+        _ = (0, r.throttle)(async (e) => {
+            if (!!N)
                 await d.Z.updateMFALevel({
                     guildId: n.id,
                     level: e ? m.BpS.ELEVATED : m.BpS.NONE,
@@ -35,7 +35,7 @@ function x(e) {
                 });
         }, 1000);
     if (!p) return null;
-    !_ && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
+    !N && (t = C ? h.intl.format(h.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : h.intl.string(h.t['9Ghu4+']));
     let T = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, i.jsxs)('div', {
         className: g.simpleItemWrapper,
@@ -55,21 +55,21 @@ function x(e) {
                     })
                 ]
             }),
-            !_ || (N && T)
+            !N || (I && T)
                 ? (0, i.jsx)(s.Tooltip, {
                       text: T ? h.intl.string(h.t['KG1V/P']) : C ? h.intl.string(h.t.NmsheX) : h.intl.string(h.t.LieBtb),
                       children: (e) =>
                           (0, i.jsx)(u.Z, {
-                              checked: N,
+                              checked: I,
                               disabled: !0,
-                              onChange: I,
+                              onChange: _,
                               className: g.bringToFront,
                               tooltipProps: e
                           })
                   })
                 : (0, i.jsx)(u.Z, {
-                      checked: N,
-                      onChange: I,
+                      checked: I,
+                      onChange: _,
                       className: g.bringToFront
                   })
         ]

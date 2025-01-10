@@ -42,9 +42,9 @@ function S(e) {
             size: O,
             canAnimate: x || !U ? P : k
         }),
-        Z = (0, f.useToken)(d.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        F = r.getAvatarURL(o, (0, f.getAvatarSize)(N)),
-        V = (0, u._i)((0, _.ZP)(F, Z, !1)),
+        F = (0, f.useToken)(d.Z.unsafe_rawColors.PRIMARY_800).hex(),
+        Z = r.getAvatarURL(o, (0, f.getAvatarSize)(N)),
+        V = (0, u._i)((0, _.ZP)(Z, F, !1)),
         j = (0, h.Z)(null !== (n = null == i ? void 0 : i.primaryColor) && void 0 !== n ? n : V).hex,
         H = y(N),
         Y = H + C - L,

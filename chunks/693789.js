@@ -77,20 +77,20 @@ function E() {
     });
 }
 function v(e) {
-    let { look: n = h.FILLED, color: r = p.BRAND, size: s = m.MEDIUM, fullWidth: l = !1, grow: v = !0, disabled: I = !1, submitting: T = !1, type: b = 'button', style: y, wrapperClassName: S, className: A, innerClassName: N, onClick: C, onDoubleClick: R, onMouseDown: O, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: w, children: P, rel: M, buttonRef: k, focusProps: U, 'aria-label': B, submittingStartedLabel: G, submittingFinishedLabel: Z, ...F } = e,
+    let { look: n = h.FILLED, color: r = p.BRAND, size: s = m.MEDIUM, fullWidth: l = !1, grow: v = !0, disabled: I = !1, submitting: T = !1, type: b = 'button', style: y, wrapperClassName: S, className: A, innerClassName: N, onClick: C, onDoubleClick: R, onMouseDown: O, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: w, children: P, rel: M, buttonRef: k, focusProps: U, 'aria-label': B, submittingStartedLabel: G, submittingFinishedLabel: F, ...Z } = e,
         V = I || T,
         j = V && (null != L || null != x),
         H = j ? null : S,
         Y = g(U, n),
         W = a.useRef(!1);
     a.useEffect(() => {
-        !0 === T && ((W.current = !0), u.u.announce(null != G ? G : f.intl.string(f.t.pfChQk))), !1 === T && !0 === W.current && u.u.announce(null != Z ? Z : f.intl.string(f.t.SVPara));
-    }, [T, G, Z]);
+        !0 === T && ((W.current = !0), u.u.announce(null != G ? G : f.intl.string(f.t.pfChQk))), !1 === T && !0 === W.current && u.u.announce(null != F ? F : f.intl.string(f.t.SVPara));
+    }, [T, G, F]);
     let K = (0, i.jsx)(c.t, {
         ...U,
         offset: Y,
         children: (0, i.jsxs)('button', {
-            ...(V ? null : F),
+            ...(V ? null : Z),
             'aria-label': B,
             'aria-busy': !!T || void 0,
             ref: k,

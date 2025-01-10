@@ -24,8 +24,8 @@ var i = n(200651),
     f = n(691886),
     C = n(185923),
     v = n(388032),
-    N = n(575769);
-function _(e) {
+    I = n(575769);
+function N(e) {
     let { guildId: t, emojiData: n, 'aria-labelledby': l, onSelectEmoji: s } = e,
         d = (0, a.e7)([g.ZP], () => (null != n.id ? g.ZP.getCustomEmojiById(n.id) : void 0)),
         u = (0, a.e7)([p.ZP], () => p.ZP.getDefaultChannel(t)),
@@ -56,13 +56,13 @@ function _(e) {
             },
             [s, u]
         ),
-        _ = r.useMemo(
+        N = r.useMemo(
             () =>
                 null == d && null == n.name
                     ? null
                     : function () {
                           return (0, i.jsx)(c.Z, {
-                              className: N.emoji,
+                              className: I.emoji,
                               emojiId: n.id,
                               emojiName: n.name,
                               animated: null == d ? void 0 : d.animated
@@ -70,9 +70,9 @@ function _(e) {
                       },
             [n, d]
         ),
-        I = '';
+        _ = '';
     return (
-        null != d ? (I = ':'.concat(d.name, ':')) : null != n.name && (I = x.ZP.convertSurrogateToName(n.name)),
+        null != d ? (_ = ':'.concat(d.name, ':')) : null != n.name && (_ = x.ZP.convertSurrogateToName(n.name)),
         (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
             position: 'top',
@@ -80,19 +80,19 @@ function _(e) {
             children: (e, t) => {
                 let { isShown: n } = t;
                 return (0, i.jsxs)('div', {
-                    className: N.emojiInputContainer,
+                    className: I.emojiInputContainer,
                     ...e,
                     children: [
                         (0, i.jsx)(m.Z, {
-                            className: N.emojiButton,
+                            className: I.emojiButton,
                             active: n,
                             tabIndex: 0,
-                            renderButtonContents: _
+                            renderButtonContents: N
                         }),
                         (0, i.jsx)(o.TextInput, {
-                            inputClassName: N.emojiText,
+                            inputClassName: I.emojiText,
                             placeholder: v.intl.string(v.t.qJPLNT),
-                            value: I,
+                            value: _,
                             'aria-labelledby': l,
                             readOnly: !0
                         })
@@ -102,24 +102,24 @@ function _(e) {
         })
     );
 }
-function I(e) {
+function _(e) {
     var t;
     let { guildId: n, initialData: l, benefitTypeInput: s, descriptionPlaceholder: a, canSubmit: c, onSave: m, onDelete: h, transitionState: g, onClose: x } = e,
         p = (0, u.Dt)(),
         f = (0, u.Dt)(),
         C = (0, u.Dt)(),
-        [I, T] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
+        [_, T] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
         [j, b] = r.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name
         })),
-        E = c && '' !== I && (null != j.id || null != j.name);
+        E = c && '' !== _ && (null != j.id || null != j.name);
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
                 E &&
                     (m({
-                        description: I,
+                        description: _,
                         emojiId: j.id,
                         emojiName: j.name
                     }),
@@ -137,13 +137,13 @@ function I(e) {
                             children: v.intl.string(v.t['2qf9EB'])
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
-                            className: N.closeButton,
+                            className: I.closeButton,
                             onClick: x
                         })
                     ]
                 }),
                 (0, i.jsxs)(o.ModalContent, {
-                    className: N.modalContent,
+                    className: I.modalContent,
                     children: [
                         s,
                         (0, i.jsx)(o.Spacer, { size: 24 }),
@@ -152,7 +152,7 @@ function I(e) {
                             titleId: f,
                             children: (0, i.jsx)(o.TextArea, {
                                 placeholder: a,
-                                value: I,
+                                value: _,
                                 rows: 1,
                                 autosize: !0,
                                 onChange: T,
@@ -163,7 +163,7 @@ function I(e) {
                         (0, i.jsx)(o.FormSection, {
                             title: v.intl.string(v.t.sMOuub),
                             titleId: C,
-                            children: (0, i.jsx)(_, {
+                            children: (0, i.jsx)(N, {
                                 guildId: n,
                                 emojiData: j,
                                 onSelectEmoji: b,
@@ -176,7 +176,7 @@ function I(e) {
                     justify: d.Z.Justify.BETWEEN,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: N.primaryButtons,
+                            className: I.primaryButtons,
                             children: [
                                 (0, i.jsx)(o.Button, {
                                     type: 'submit',
@@ -187,7 +187,7 @@ function I(e) {
                                     (0, i.jsx)(o.Button, {
                                         look: o.Button.Looks.BLANK,
                                         size: o.Button.Sizes.ICON,
-                                        className: N.deleteButton,
+                                        className: I.deleteButton,
                                         onClick: () => {
                                             h(), x();
                                         },
@@ -202,7 +202,7 @@ function I(e) {
                         (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
-                            className: N.cancelButton,
+                            className: I.cancelButton,
                             onClick: x,
                             children: v.intl.string(v.t['ETE/oK'])
                         })
@@ -239,7 +239,7 @@ function T(e) {
                 })
             ]
         });
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(_, {
         guildId: t,
         initialData: l,
         benefitTypeInput: p,
@@ -275,7 +275,7 @@ function j(e) {
                 'aria-labelledby': x
             })
         });
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(_, {
         guildId: m,
         initialData: n,
         benefitTypeInput: p,

@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(496675),
     C = n(699516),
     v = n(594174),
-    N = n(768581),
-    _ = n(900849),
-    I = n(434404),
+    I = n(768581),
+    N = n(900849),
+    _ = n(434404),
     T = n(999382),
     j = n(450474),
     b = n(209054),
@@ -38,8 +38,8 @@ var i = n(200651),
     D = n(203377),
     O = n(929834),
     M = n(981631),
-    k = n(128449),
-    P = n(388032),
+    P = n(128449),
+    k = n(388032),
     w = n(37084);
 function B(e, t, n) {
     return (
@@ -60,12 +60,12 @@ let U = l.ZP.connectStores([T.Z], () => {
         guild: e,
         submitting: n,
         onReset() {
-            if (null != e) I.Z.init(e.id);
+            if (null != e) _.Z.init(e.id);
         },
         onSave() {
             if (null != e)
                 (0, A.UA)(e, t),
-                    I.Z.saveGuild(e.id, {
+                    _.Z.saveGuild(e.id, {
                         features: e.features,
                         discoverySplash: e.discoverySplash,
                         description: e.description,
@@ -97,7 +97,7 @@ class G extends r.PureComponent {
             }),
                 (0, u.le)(),
                 (0, u.aC)(e.id);
-            let t = await (0, _.Eg)(e.id);
+            let t = await (0, N.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t });
         }
     }
@@ -112,20 +112,20 @@ class G extends r.PureComponent {
                     children: [
                         (0, i.jsx)(s.FormTitle, {
                             className: w.formTitle,
-                            children: P.intl.string(P.t.XU0S6u)
+                            children: k.intl.string(k.t.XU0S6u)
                         }),
                         (0, i.jsx)(s.FormText, {
                             type: s.FormTextTypes.DESCRIPTION,
                             className: w.formDescription,
-                            children: P.intl.string(P.t['IIiV/P'])
+                            children: k.intl.string(k.t['IIiV/P'])
                         }),
                         (0, i.jsx)(s.FormText, {
                             type: s.FormTextTypes.DESCRIPTION,
                             className: w.formDescription,
-                            children: P.intl.string(P.t.rSHA09)
+                            children: k.intl.string(k.t.rSHA09)
                         }),
                         (0, i.jsx)(s.Tooltip, {
-                            text: t ? null : P.intl.string(P.t['5VbUBw']),
+                            text: t ? null : k.intl.string(k.t['5VbUBw']),
                             children: (e) =>
                                 (0, i.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
@@ -133,7 +133,7 @@ class G extends r.PureComponent {
                                     color: n ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
                                     disabled: !t,
                                     ...e,
-                                    children: n ? P.intl.string(P.t.VHHyFR) : P.intl.string(P.t.XU0S6u)
+                                    children: n ? k.intl.string(k.t.VHHyFR) : k.intl.string(k.t.XU0S6u)
                                 })
                         })
                     ]
@@ -158,18 +158,18 @@ class G extends r.PureComponent {
                                 children: [
                                     (0, i.jsx)(s.FormTitle, {
                                         className: w.formTitle,
-                                        children: P.intl.string(P.t['8bT/Cg'])
+                                        children: k.intl.string(k.t['8bT/Cg'])
                                     }),
                                     (0, i.jsx)(s.FormText, {
                                         type: s.FormTextTypes.DESCRIPTION,
                                         className: w.formDescription,
-                                        children: P.intl.string(P.t.Ltsutr)
+                                        children: k.intl.string(k.t.Ltsutr)
                                     }),
                                     (0, i.jsxs)(s.Button, {
                                         size: s.Button.Sizes.SMALL,
                                         color: s.Button.Colors.PRIMARY,
                                         children: [
-                                            P.intl.string(P.t.yG2pUl),
+                                            k.intl.string(k.t.yG2pUl),
                                             (0, i.jsx)(g.ZP, {
                                                 disabled: !n,
                                                 onChange: this.handleSplashChange
@@ -183,14 +183,14 @@ class G extends r.PureComponent {
                                 children: (0, i.jsx)(x.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        N.ZP.getGuildDiscoverySplashURL({
+                                        I.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
                                             size: 512 * (0, h.x_)()
                                         }),
                                     disabled: !n,
                                     onChange: this.handleSplashChange,
-                                    hint: P.intl.string(P.t.uPvxqK),
+                                    hint: k.intl.string(k.t.uPvxqK),
                                     imageClassName: w.imageUploaderInnerSquare,
                                     hideSize: !0
                                 })
@@ -219,19 +219,19 @@ class G extends r.PureComponent {
                     children: [
                         (0, i.jsx)(s.FormTitle, {
                             className: w.formTitle,
-                            children: P.intl.string(P.t.DhJ8ur)
+                            children: k.intl.string(k.t.DhJ8ur)
                         }),
                         (0, i.jsx)(s.FormText, {
                             className: w.description,
                             type: s.FormTextTypes.DESCRIPTION,
-                            children: P.intl.string(P.t['/RSSlZ'])
+                            children: k.intl.string(k.t['/RSSlZ'])
                         }),
                         (0, i.jsx)(s.Button, {
                             size: s.Button.Sizes.SMALL,
                             color: l ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
                             disabled: !e,
                             onClick: this.handleToggleEmojiDiscoverability,
-                            children: l ? P.intl.string(P.t.XnrNLi) : P.intl.string(P.t.bHbZLC)
+                            children: l ? k.intl.string(k.t.XnrNLi) : k.intl.string(k.t.bHbZLC)
                         })
                     ]
                 }),
@@ -252,12 +252,12 @@ class G extends r.PureComponent {
                         children: [
                             (0, i.jsx)(s.FormTitle, {
                                 className: w.formTitle,
-                                children: P.intl.string(P.t.pO60f3)
+                                children: k.intl.string(k.t.pO60f3)
                             }),
                             (0, i.jsx)(s.FormText, {
                                 type: s.FormTextTypes.DESCRIPTION,
                                 className: w.formDescription,
-                                children: P.intl.string(P.t['SF/GRk'])
+                                children: k.intl.string(k.t['SF/GRk'])
                             })
                         ]
                     }),
@@ -282,18 +282,18 @@ class G extends r.PureComponent {
                         children: [
                             (0, i.jsx)(s.FormTitle, {
                                 className: w.formTitle,
-                                children: P.intl.string(P.t['5b4VCQ'])
+                                children: k.intl.string(k.t['5b4VCQ'])
                             }),
                             (0, i.jsx)(s.FormText, {
                                 type: s.FormTextTypes.DESCRIPTION,
                                 className: w.description,
-                                children: P.intl.string(P.t.MSfJlZ)
+                                children: k.intl.string(k.t.MSfJlZ)
                             })
                         ]
                     }),
                     (0, i.jsx)(d.Z, {
-                        value: t.primaryCategoryId === k.o3 ? null : t.primaryCategoryId,
-                        placeholder: P.intl.string(P.t.XqMe3N),
+                        value: t.primaryCategoryId === P.o3 ? null : t.primaryCategoryId,
+                        placeholder: k.intl.string(k.t.XqMe3N),
                         options: n,
                         onChange: this.handlePrimaryCategoryChange,
                         disabled: !e,
@@ -305,7 +305,7 @@ class G extends r.PureComponent {
                         children: [
                             (0, i.jsx)(s.FormTitle, {
                                 className: w.formTitle,
-                                children: P.intl.string(P.t.oOPlPD)
+                                children: k.intl.string(k.t.oOPlPD)
                             }),
                             (0, i.jsx)(j.Z, {
                                 guild: l,
@@ -330,12 +330,12 @@ class G extends r.PureComponent {
             children: [
                 (0, i.jsx)(s.FormTitle, {
                     className: w.formTitle,
-                    children: P.intl.string(P.t.V5pXNT)
+                    children: k.intl.string(k.t.V5pXNT)
                 }),
                 (0, i.jsx)(s.FormText, {
                     className: w.description,
                     type: s.FormTextTypes.DESCRIPTION,
-                    children: P.intl.format(P.t.FLMb5O, {})
+                    children: k.intl.format(k.t.FLMb5O, {})
                 }),
                 (0, i.jsx)(o.Z, {
                     tags: t.keywords,
@@ -371,7 +371,7 @@ class G extends r.PureComponent {
             case A.d5.SETTINGS:
                 return (0, i.jsxs)(s.FormSection, {
                     className: w.__invalid_discoverySettings,
-                    title: P.intl.string(P.t.oGaVGx),
+                    title: k.intl.string(k.t.oGaVGx),
                     tag: s.FormTitleTags.H1,
                     children: [this.renderDiscoverableSection(), (0, i.jsx)(s.FormDivider, { className: w.divider }), this.renderCoverImageSection(), (0, i.jsx)(s.FormDivider, { className: w.divider }), this.renderEmojiDiscoverabilitySection(), (0, i.jsx)(s.FormDivider, { className: w.divider }), this.renderCategoriesSection(), (0, i.jsx)(s.FormDivider, { className: w.divider }), this.renderKeywordsSection(), (0, i.jsx)(s.FormDivider, { className: w.divider }), this.renderLocaleSelector()]
                 });
@@ -386,7 +386,7 @@ class G extends r.PureComponent {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(M.oNc.DISCOVERABLE) ? t.delete(M.oNc.DISCOVERABLE) : t.add(M.oNc.DISCOVERABLE), I.Z.updateGuild({ features: t });
+                e.hasFeature(M.oNc.DISCOVERABLE) ? t.delete(M.oNc.DISCOVERABLE) : t.add(M.oNc.DISCOVERABLE), _.Z.updateGuild({ features: t });
             }),
             B(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, s.openModalLazy)(
@@ -405,15 +405,15 @@ class G extends r.PureComponent {
                 );
             }),
             B(this, 'handleSplashChange', (e) => {
-                I.Z.updateGuild({ discoverySplash: e });
+                _.Z.updateGuild({ discoverySplash: e });
             }),
             B(this, 'handleLocaleChange', (e) => {
-                I.Z.updateGuild({ preferredLocale: e });
+                _.Z.updateGuild({ preferredLocale: e });
             }),
             B(this, 'handlePrimaryCategoryChange', (e) => {
                 var t;
                 let { guild: n } = this.props;
-                (null == n ? void 0 : n.id) != null && (0, u.TA)(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : k.o3);
+                (null == n ? void 0 : n.id) != null && (0, u.TA)(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : P.o3);
             }),
             B(this, 'handleRemoveKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props;

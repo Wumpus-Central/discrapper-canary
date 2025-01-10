@@ -39,11 +39,11 @@ var a = r(200651),
     U = r(388032),
     B = r(622492),
     G = r(616926);
-let Z = {
+let F = {
         width: 232,
         height: 315
     },
-    F = {
+    Z = {
         width: 232,
         height: 267
     },
@@ -193,7 +193,7 @@ function W(e) {
                 })
             ]
         }),
-        D = C ? Z : F,
+        D = C ? F : Z,
         P = (0, c.e7)([L.Z], () => L.Z.windowSize());
     return (0, a.jsx)(p.Z, {
         className: B.wrapper,

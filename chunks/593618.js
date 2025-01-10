@@ -42,8 +42,8 @@ var s = r(200651),
     U = r(981631),
     B = r(388032),
     G = r(782451),
-    Z = r(572488);
-function F(e) {
+    F = r(572488);
+function Z(e) {
     let n = e.id,
         r = (0, f.Wu)(
             [x.ZP, D.Z],
@@ -201,7 +201,7 @@ function H(e) {
 function Y(e) {
     let { guild: n } = e,
         r = n.id,
-        { voiceUsersToShow: i, stageSpeakers: a, numStageListeners: o, streamUsersToShow: l, embeddedActivitiesUsers: c } = F(n),
+        { voiceUsersToShow: i, stageSpeakers: a, numStageListeners: o, streamUsersToShow: l, embeddedActivitiesUsers: c } = Z(n),
         d = V(_.VoiceNormalIcon, i, r),
         h = j(r, a, o),
         p = V(_.ScreenArrowIcon, l, r),
@@ -314,7 +314,7 @@ function q(e) {
                   includeActivity: l
               }),
         'aria-label': i,
-        tooltipClassName: Z.listItemTooltip,
+        tooltipClassName: F.listItemTooltip,
         children: (e) => {
             let { onFocus: n, onBlur: r, ...i } = e;
             return (0, s.jsx)('div', {

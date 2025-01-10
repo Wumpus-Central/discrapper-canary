@@ -34,8 +34,8 @@ var a = r(200651),
     U = r(199902),
     B = r(314897),
     G = r(131951),
-    Z = r(699516),
-    F = r(594174),
+    F = r(699516),
+    Z = r(594174),
     V = r(248402),
     j = r(33039),
     H = r(451478),
@@ -146,7 +146,7 @@ class es extends s.PureComponent {
     }
     render() {
         let { channel: e, streamId: n, participantOnScreen: r, isVideoEnabled: i, width: s } = this.props,
-            o = (0, b.F6)(e, F.default, Z.Z),
+            o = (0, b.F6)(e, Z.default, F.Z),
             l = (null == r ? void 0 : r.id) === B.default.getId() && i,
             u = this.renderStreamState(),
             c = null;

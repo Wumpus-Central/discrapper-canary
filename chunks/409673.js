@@ -119,43 +119,43 @@ function G(e, n) {
     }, [n, e]);
 }
 n.ZP = s.forwardRef(function (e, n) {
-    var r, i, o, f, b, y, k, Z;
-    let { sound: F, channel: V, containerClassName: j, className: H, focused: Y, forceSecondaryActions: W = !1, interactive: K = !0, enableSecondaryActions: z = !1, suppressPlaySound: q, onMouseEnter: Q, onSelectItem: X, analyticsLocations: J, buttonOverlay: $ = S.Pb.PLAY, showLockForDisabledSound: ee = !0, inNitroLockedSection: et = !1, refreshEnabled: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: es, tooltipOverride: eo, tooltipClassName: el, tooltipContentClassName: eu, ...ec } = e,
-        { name: ed, emojiId: ef, emojiName: e_ } = F,
+    var r, i, o, f, b, y, k, F;
+    let { sound: Z, channel: V, containerClassName: j, className: H, focused: Y, forceSecondaryActions: W = !1, interactive: K = !0, enableSecondaryActions: z = !1, suppressPlaySound: q, onMouseEnter: Q, onSelectItem: X, analyticsLocations: J, buttonOverlay: $ = S.Pb.PLAY, showLockForDisabledSound: ee = !0, inNitroLockedSection: et = !1, refreshEnabled: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: es, tooltipOverride: eo, tooltipClassName: el, tooltipContentClassName: eu, ...ec } = e,
+        { name: ed, emojiId: ef, emojiName: e_ } = Z,
         eh = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
-        ep = (0, C.z)(F, null == V ? void 0 : V.guild_id),
-        { playSoundboardSound: em, previewSound: eg, isPlayingSound: eE, isPreviewingSound: ev } = (0, N.Z)(F, null !== (f = null == V ? void 0 : V.id) && void 0 !== f ? f : null),
+        ep = (0, C.z)(Z, null == V ? void 0 : V.guild_id),
+        { playSoundboardSound: em, previewSound: eg, isPlayingSound: eE, isPreviewingSound: ev } = (0, N.Z)(Z, null !== (f = null == V ? void 0 : V.id) && void 0 !== f ? f : null),
         { createMultipleConfettiAt: eI } = s.useContext(m.h),
         eT = s.useRef(null),
-        eb = G(F.soundId, eT.current),
+        eb = G(Z.soundId, eT.current),
         ey = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         eS = s.useRef(x),
         eA = s.useRef(new d.Xp()),
-        eN = F.soundId === L,
-        eC = 'sound-'.concat(F.soundId),
+        eN = Z.soundId === L,
+        eC = 'sound-'.concat(Z.soundId),
         eR = (0, u.JA)(eC),
         eO = null != ef || null != e_,
-        eD = !(0, A.Nq)(eh, F, V) && !ea,
+        eD = !(0, A.Nq)(eh, Z, V) && !ea,
         eL = W || (z && !eD),
         ex = s.useRef(null),
         ew = (null !== (b = null === (r = ex.current) || void 0 === r ? void 0 : r.scrollHeight) && void 0 !== b ? b : 0) > (null !== (y = null === (i = ex.current) || void 0 === i ? void 0 : i.offsetHeight) && void 0 !== y ? y : 0),
         eP = null !== (k = g.Wq.useStore().bottomPosition) && void 0 !== k ? k : 0,
-        eM = (null !== (Z = null === (o = eT.current) || void 0 === o ? void 0 : o.getBoundingClientRect().bottom) && void 0 !== Z ? Z : 0) + 50 > eP ? 'top' : 'bottom',
+        eM = (null !== (F = null === (o = eT.current) || void 0 === o ? void 0 : o.getBoundingClientRect().bottom) && void 0 !== F ? F : 0) + 50 > eP ? 'top' : 'bottom',
         [ek, eU] = s.useState(!1),
         eB = eD && ee,
         { enableInlineUpsell: eG } = I.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: eB });
-    function eZ() {
+    function eF() {
         !q && em(J);
     }
-    function eF() {
+    function eZ() {
         if ((eN && !ey && ((eS.current = Math.min(eS.current + P, w)), Math.random() < eS.current && eI(eb.x, eb.y, void 0, void 0, { sprite: R.vv })), null != X)) {
             X();
             return;
         }
-        eZ();
+        eF();
     }
     let eV = U({
-            sound: F,
+            sound: Z,
             previewSound: eg,
             disabled: eD && !W,
             refreshEnabled: en
@@ -175,7 +175,7 @@ n.ZP = s.forwardRef(function (e, n) {
                       className: l()(D.primaryIcon, e)
                   }),
         eH = (0, a.jsx)(B, {
-            sound: F,
+            sound: Z,
             refreshEnabled: en,
             disabled: !K && !W
         }),
@@ -203,7 +203,7 @@ n.ZP = s.forwardRef(function (e, n) {
                               children:
                                   $ === S.Pb.SOUNDMOJI
                                       ? (0, a.jsx)(E.ZP, {
-                                            sound: F,
+                                            sound: Z,
                                             channel: V,
                                             setTooltipShowing: eU
                                         })
@@ -278,8 +278,8 @@ n.ZP = s.forwardRef(function (e, n) {
         onMouseEnter: Q,
         children: [
             (0, a.jsx)(_.Tooltip, {
-                'aria-label': null != eo ? F.name : void 0,
-                text: null != eo ? eo : F.name,
+                'aria-label': null != eo ? Z.name : void 0,
+                text: null != eo ? eo : Z.name,
                 tooltipClassName: el,
                 tooltipContentClassName: eu,
                 position: eM,
@@ -294,8 +294,8 @@ n.ZP = s.forwardRef(function (e, n) {
                             role: 'button'
                         },
                         'aria-label': O.intl.formatToPlainString(O.t.tuMUJy, {
-                            emojiName: F.emojiName,
-                            soundName: F.name
+                            emojiName: Z.emojiName,
+                            soundName: Z.name
                         }),
                         className: l()(
                             en ? D.soundButtonRefresh : D.soundButton,
@@ -317,7 +317,7 @@ n.ZP = s.forwardRef(function (e, n) {
                         ...e,
                         onClick: () => {
                             var n;
-                            null == e || null === (n = e.onClick) || void 0 === n || n.call(e), null == eF || eF();
+                            null == e || null === (n = e.onClick) || void 0 === n || n.call(e), null == eZ || eZ();
                         },
                         onContextMenu: z && !eD ? ep : void 0,
                         onMouseOver: () => {
@@ -358,7 +358,7 @@ n.ZP = s.forwardRef(function (e, n) {
                         ]
                     })
             }),
-            !F.available &&
+            !Z.available &&
                 (0, a.jsx)(_.Tooltip, {
                     text: O.intl.string(O.t.MDOXJS),
                     children: (e) =>
@@ -369,7 +369,7 @@ n.ZP = s.forwardRef(function (e, n) {
                 }),
             !0 === ea &&
                 (0, a.jsx)(v.Z, {
-                    sound: F,
+                    sound: Z,
                     containerDimensions: eK,
                     ref: es
                 })

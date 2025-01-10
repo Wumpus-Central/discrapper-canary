@@ -21,7 +21,7 @@ r.d(n, {
         return j;
     },
     k6: function () {
-        return F;
+        return Z;
     },
     l_: function () {
         return A;
@@ -306,19 +306,19 @@ function G(e) {
         };
     return (r.displayName = n), (r.WrappedComponent = e), p()(r, e);
 }
-var Z = a.useContext;
-function F() {
-    return Z(m);
+var F = a.useContext;
+function Z() {
+    return F(m);
 }
 function V() {
-    return Z(g).location;
+    return F(g).location;
 }
 function j() {
-    var e = Z(g).match;
+    var e = F(g).match;
     return e ? e.params : {};
 }
 function H(e) {
     var n = V(),
-        r = Z(g).match;
+        r = F(g).match;
     return e ? D(n.pathname, e) : r;
 }

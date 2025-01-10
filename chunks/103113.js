@@ -42,11 +42,11 @@ function D(e) {
             roleId: L
         }),
         G = s.useRef(null),
-        Z = (0, l.Z)(G);
+        F = (0, l.Z)(G);
     s.useEffect(() => {
         null == x || x(null == G ? void 0 : G.current);
     }, [G, x]);
-    let F = () => {
+    let Z = () => {
             null == w || w(),
                 (0, N.openUserProfileModal)({
                     sourceAnalyticsLocations: U,
@@ -60,7 +60,7 @@ function D(e) {
                       id: 'view-profile',
                       label: R.intl.string(R.t['+Xp3ho']),
                       action: () => {
-                          F(),
+                          Z(),
                               (0, m.pQ)({
                                   action: 'PRESS_VIEW_PROFILE',
                                   analyticsLocations: U,
@@ -104,7 +104,7 @@ function D(e) {
                                         guildId: r,
                                         channelId: i,
                                         profileType: C.y0.BITE_SIZE,
-                                        onOpenProfile: V ? F : void 0
+                                        onOpenProfile: V ? Z : void 0
                                     }),
                                     n.isClyde() && (0, a.jsx)(f.Z, { className: O.headerTag })
                                 ]
@@ -117,7 +117,7 @@ function D(e) {
                                         user: n,
                                         profileType: C.y0.BITE_SIZE,
                                         nickname: h.ZP.getName(r, i, n),
-                                        onOpenProfile: V ? F : void 0,
+                                        onOpenProfile: V ? Z : void 0,
                                         tags: (0, a.jsx)(v.Z, {
                                             displayProfile: k,
                                             profileType: C.y0.BITE_SIZE,
@@ -138,7 +138,7 @@ function D(e) {
                     (null == k ? void 0 : k.profileEffectId) != null &&
                         (0, a.jsx)(_.Z, {
                             profileEffectId: null == k ? void 0 : k.profileEffectId,
-                            isHovering: Z
+                            isHovering: F
                         })
                 ]
             })

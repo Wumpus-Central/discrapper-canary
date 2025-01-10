@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(631969),
     C = n(95242),
     v = n(420966),
-    N = n(275296),
-    _ = n(203377),
-    I = n(981631),
+    I = n(275296),
+    N = n(203377),
+    _ = n(981631),
     T = n(388032),
     j = n(105452),
     b = n(490909);
@@ -150,7 +150,7 @@ function R(e) {
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!R.current && '' !== d.trimStart()) h.default.track(I.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
+            if (!R.current && '' !== d.trimStart()) h.default.track(_.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
         }, [d]),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: j.scroller,
@@ -166,12 +166,12 @@ function R(e) {
                             (0, i.jsx)(v.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: _.ZI.PERMISSIONS,
+                                selectedSection: N.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, i.jsx)('div', {
                                 className: j.noticeContainer,
-                                children: (0, i.jsx)(N.Z, { role: n })
+                                children: (0, i.jsx)(I.Z, { role: n })
                             }),
                             (0, i.jsx)('div', {
                                 className: j.searchContainer,

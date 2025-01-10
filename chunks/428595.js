@@ -34,7 +34,7 @@ let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     U = /^ *>>> ?/,
     B = /^ *> ?/gm,
     G = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function Z(e) {
+function F(e) {
     let n = (0, b.yw)(e[1]);
     if (null == n)
         return {
@@ -54,11 +54,11 @@ function Z(e) {
         title: void 0
     };
 }
-let F = (e) => {
+let Z = (e) => {
         let n = h.Z.getChannel(e);
         return null == n ? void 0 : n.getGuildId();
     },
-    V = (e) => (null != e.guildId ? p.Z.getGuild(e.guildId) : null != e.channelId ? p.Z.getGuild(F(e.channelId)) : null),
+    V = (e) => (null != e.guildId ? p.Z.getGuild(e.guildId) : null != e.channelId ? p.Z.getGuild(Z(e.channelId)) : null),
     j = {
         newline: c().defaultRules.newline,
         paragraph: c().defaultRules.paragraph,
@@ -103,7 +103,7 @@ let F = (e) => {
         link: b.ZP,
         autolink: {
             ...c().defaultRules.autolink,
-            parse: Z
+            parse: F
         },
         url: {
             ...c().defaultRules.url,
@@ -126,7 +126,7 @@ let F = (e) => {
                 }
                 return r;
             },
-            parse: Z
+            parse: F
         },
         strong: c().defaultRules.strong,
         em: c().defaultRules.em,
@@ -375,7 +375,7 @@ let F = (e) => {
                     itemContent: u(l),
                     itemId: s,
                     id: a,
-                    guildId: F(r.channelId),
+                    guildId: Z(r.channelId),
                     channelId: a
                 };
             }

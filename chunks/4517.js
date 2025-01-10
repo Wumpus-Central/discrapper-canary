@@ -39,7 +39,7 @@ function x(e) {
         { trackUserProfileAction: U } = (0, v.KZ)(),
         B = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
         [G] = s.useState(() => new d.V7()),
-        [Z, F] = s.useState(!0),
+        [F, Z] = s.useState(!0),
         V = s.useRef(null),
         j = s.useRef(null),
         H = s.useRef(null),
@@ -99,12 +99,12 @@ function x(e) {
                 });
             }
             if (B) {
-                F(!e);
+                Z(!e);
                 return;
             }
             let i = e ? L : D;
             G.start(i, () => {
-                F(!e);
+                Z(!e);
             });
         },
         ep = () =>
@@ -127,8 +127,8 @@ function x(e) {
                 : null,
         eg = () => {
             let e = l()(y.content, {
-                [y.clamp]: Z,
-                [y.unclamp]: !Z,
+                [y.clamp]: F,
+                [y.unclamp]: !F,
                 [y.singleLineAlign]: ea
             });
             return (0, a.jsxs)(u.animated.div, {

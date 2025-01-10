@@ -20,9 +20,9 @@ var i = n(200651),
     f = n(626135),
     C = n(267642),
     v = n(63063),
-    N = n(999382),
-    _ = n(981631),
-    I = n(388032),
+    I = n(999382),
+    N = n(981631),
+    _ = n(388032),
     T = n(981004);
 function j(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -32,11 +32,11 @@ function j(e) {
         : (0, i.jsx)(i.Fragment, {
               children:
                   0 === l && 0 === s
-                      ? I.intl.format(I.t.kF0HER, {
+                      ? _.intl.format(_.t.kF0HER, {
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
-                      : I.intl.format(I.t.neDJho, {
+                      : _.intl.format(_.t.neDJho, {
                             days: l,
                             hours: s,
                             tierName: r,
@@ -55,7 +55,7 @@ function b(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.guildBoostingGracePeriodTitle,
-                children: I.intl.format(I.t.LG7vvr, {})
+                children: _.intl.format(_.t.LG7vvr, {})
             }),
             (0, i.jsx)(j, {
                 endsAt: r,
@@ -86,7 +86,7 @@ function S() {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([N.Z], () => N.Z.getGuild()),
+    let e = (0, l.e7)([I.Z], () => I.Z.getGuild()),
         t = (0, l.e7)([p.Z], () => (null != e ? p.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, u.V)();
     return (0, i.jsxs)(i.Fragment, {
@@ -95,7 +95,7 @@ function S() {
                 children: [
                     (0, i.jsx)(s.FormTitle, {
                         tag: s.FormTitleTags.H1,
-                        children: I.intl.string(I.t.nLovSU)
+                        children: _.intl.string(_.t.nLovSU)
                     }),
                     null != t && null != e
                         ? (0, i.jsx)(b, {
@@ -106,12 +106,12 @@ function S() {
                     (0, i.jsx)(s.FormText, {
                         type: s.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: I.intl.format(I.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(_.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: _.intl.format(_.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, i.jsx)(g.Z, {
-                tiers: (0, C.cP)(null != e && e.hasFeature(_.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= _.B9o),
+                tiers: (0, C.cP)(null != e && e.hasFeature(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
                 renderTier: E
             }),
             (0, i.jsx)('div', { className: T.divider }),
@@ -119,11 +119,11 @@ function S() {
             n
                 ? (0, i.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void f.default.track(_.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void f.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: _.ZY5.GUILD_SETTINGS,
-                                  section: _.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: _.qAy.BUTTON_CTA
+                                  page: N.ZY5.GUILD_SETTINGS,
+                                  section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: N.qAy.BUTTON_CTA
                               }
                           })
                   })

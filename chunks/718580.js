@@ -98,12 +98,12 @@ function I(e) {
             null == N ? 'animate-never' : 'respect-motion-settings'
         ),
         B = (0, p.Z)(C),
-        { width: G, centered: Z = !0 } = b,
-        F = l.tq ? '100%' : k.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
+        { width: G, centered: F = !0 } = b,
+        Z = l.tq ? '100%' : k.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         V = l.tq ? '100%' : k.height.to((e) => Math.round(e)),
         j = l.tq
             ? {}
-            : Z
+            : F
               ? {
                     transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
                     top: '50%'
@@ -113,7 +113,7 @@ function I(e) {
     return (0, i.jsx)(s.animated.div, {
         style: {
             position: 'relative',
-            minWidth: F,
+            minWidth: Z,
             minHeight: V,
             ...H
         },

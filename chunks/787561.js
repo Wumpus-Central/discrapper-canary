@@ -22,9 +22,9 @@ var i = n(200651),
     f = n(650774),
     C = n(430824),
     v = n(496675),
-    N = n(699516),
-    _ = n(594174),
-    I = n(434404),
+    I = n(699516),
+    N = n(594174),
+    _ = n(434404),
     T = n(999382),
     j = n(54842),
     b = n(929834),
@@ -51,11 +51,11 @@ let A = 'dismissedCommunityFeaturesUpsell',
         return (0, i.jsx)(u.Z, {
             submitting: n,
             onReset: () => {
-                if (null != t) I.Z.init(t.id);
+                if (null != t) _.Z.init(t.id);
             },
             onSave: () => {
                 if (null != t)
-                    I.Z.saveGuild(t.id, {
+                    _.Z.saveGuild(t.id, {
                         rulesChannelId: t.rulesChannelId,
                         preferredLocale: t.preferredLocale,
                         safetyAlertsChannelId: t.safetyAlertsChannelId,
@@ -87,19 +87,19 @@ let A = 'dismissedCommunityFeaturesUpsell',
                 .catch(() => p(!1));
         });
         let v = (0, a.e7)([C.Z], () => C.Z.getGuild('942897714956472401')),
-            N = l.isCommunity() && h >= 1000 && g && !(null != v);
-        if (t && n && !N) return null;
-        let _ = async () => {
+            I = l.isCommunity() && h >= 1000 && g && !(null != v);
+        if (t && n && !I) return null;
+        let N = async () => {
             try {
                 let e = await o.tn.post({
                     url: E.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                I.Z.close(), (0, x.X)(e.body.id);
+                _.Z.close(), (0, x.X)(e.body.id);
             } catch {}
         };
-        return s && !N
+        return s && !I
             ? null
             : (0, i.jsxs)('div', {
                   className: R.upsellContainer,
@@ -144,10 +144,10 @@ let A = 'dismissedCommunityFeaturesUpsell',
                       (0, i.jsxs)('div', {
                           className: R.upsellFooter,
                           children: [
-                              N &&
+                              I &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: _,
+                                      onClick: N,
                                       className: R.upsellButton,
                                       children: S.intl.string(S.t.iF1Asr)
                                   }),
@@ -156,7 +156,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            I.Z.setSection(E.pNK.ONBOARDING);
+                                            _.Z.setSection(E.pNK.ONBOARDING);
                                         },
                                         className: R.upsellButton,
                                         children: S.intl.string(S.t['S/DfiY'])
@@ -166,7 +166,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                                   : (0, i.jsx)(d.Button, {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: () => {
-                                            I.Z.setSection(E.pNK.DISCOVERY);
+                                            _.Z.setSection(E.pNK.DISCOVERY);
                                         },
                                         className: R.upsellButton,
                                         color: d.Button.Colors.PRIMARY,
@@ -175,7 +175,7 @@ let A = 'dismissedCommunityFeaturesUpsell',
                               (0, i.jsx)(d.Button, {
                                   size: d.Button.Sizes.SMALL,
                                   onClick: () => {
-                                      I.Z.setSection(E.pNK.ANALYTICS);
+                                      _.Z.setSection(E.pNK.ANALYTICS);
                                   },
                                   className: R.upsellButton,
                                   color: d.Button.Colors.PRIMARY,
@@ -203,11 +203,11 @@ let A = 'dismissedCommunityFeaturesUpsell',
                 t.type === E.d4z.GUILD_TEXT &&
                     m.push({
                         value: t.id,
-                        label: (0, h.F6)(t, _.default, N.Z, !0)
+                        label: (0, h.F6)(t, N.default, I.Z, !0)
                     });
             });
         let x = () => {
-                I.Z.init(e.id), I.Z.open(e.id, E.pNK.MEMBER_VERIFICATION);
+                _.Z.init(e.id), _.Z.open(e.id, E.pNK.MEMBER_VERIFICATION);
             },
             f = () => {
                 if (null == e) return;
@@ -216,26 +216,26 @@ let A = 'dismissedCommunityFeaturesUpsell',
                     t.delete(E.oNc.DISCOVERABLE),
                     !(0, g.K2)(e.id, 'disableCommunity') && !e.hasFeature(E.oNc.CLAN) && t.delete(E.oNc.MEMBER_VERIFICATION_GATE_ENABLED),
                     t.delete(E.oNc.PREVIEW_ENABLED),
-                    I.Z.updateGuild({
+                    _.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null
                     });
             },
             C = (e) => {
-                I.Z.updateGuild({ rulesChannelId: e });
+                _.Z.updateGuild({ rulesChannelId: e });
             },
             j = (e) => {
-                I.Z.updateGuild({ safetyAlertsChannelId: e });
+                _.Z.updateGuild({ safetyAlertsChannelId: e });
             },
             y = (e) => {
-                I.Z.updateGuild({ publicUpdatesChannelId: e });
+                _.Z.updateGuild({ publicUpdatesChannelId: e });
             },
             Z = (e) => {
-                I.Z.updateGuild({ preferredLocale: e });
+                _.Z.updateGuild({ preferredLocale: e });
             },
             D = (e) => {
-                I.Z.updateGuild({ description: e });
+                _.Z.updateGuild({ description: e });
             },
             O = () => {
                 let t = (0, g.K2)(e.id, 'GuildSettingsCommunity');

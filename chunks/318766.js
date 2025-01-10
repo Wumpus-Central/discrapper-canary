@@ -66,8 +66,8 @@ function P(e) {
         [M, k] = s.useState(!1),
         [U, B] = s.useState(50),
         G = M || o,
-        Z = (0, T.l)(N, 'emojiButton', G ? 'Hovered' : 'Normal'),
-        F = w(U, (0, h.Q3)('EmojiButton')),
+        F = (0, T.l)(N, 'emojiButton', G ? 'Hovered' : 'Normal'),
+        Z = w(U, (0, h.Q3)('EmojiButton')),
         V = s.useCallback(() => {
             if (G) return;
             let e = Math.floor(Math.random() * D);
@@ -110,7 +110,7 @@ function P(e) {
                         look: f.Button.Looks.BLANK,
                         size: f.Button.Sizes.NONE,
                         tabIndex: n,
-                        className: l()(Z, r),
+                        className: l()(F, r),
                         onMouseEnter: () => {
                             var e;
                             V(), null === (e = s.onMouseEnter) || void 0 === e || e.call(s), I.default.track(b.rMx.EMOJI_PICKER_BUTTON_HOVERED);
@@ -142,7 +142,7 @@ function P(e) {
                                           return (0, a.jsxs)(u.animated.div, {
                                               className: N.spriteContainer,
                                               style: {
-                                                  ...F,
+                                                  ...Z,
                                                   transform: n.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                               },
                                               children: [(0, a.jsx)('div', { className: l()(N.sprite, N.spriteColored, G ? N.active : N.inactive) }), (0, a.jsx)('div', { className: l()(N.sprite, z ? N.spritePremiumColored : N.spriteGreyscale, G ? N.inactive : N.active, { [N.reducedMotion]: Q }) })]

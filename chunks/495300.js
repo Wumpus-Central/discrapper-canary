@@ -20,9 +20,9 @@ var i = n(200651),
     f = n(359191),
     C = n(84658),
     v = n(142961),
-    N = n(729311),
-    _ = n(850864),
-    I = n(729995),
+    I = n(729311),
+    N = n(850864),
+    _ = n(729995),
     T = n(966301),
     j = n(707076),
     b = n(213956),
@@ -50,7 +50,7 @@ function y(e) {
     ) {
         case C.PG.LANDING:
             t = p
-                ? (0, i.jsx)(I.Z, {
+                ? (0, i.jsx)(_.Z, {
                       completed: !0,
                       guildId: n
                   })
@@ -60,16 +60,16 @@ function y(e) {
             t = (0, i.jsx)(b.Z, {});
             break;
         case C.PG.DEFAULT_CHANNELS:
-            t = (0, i.jsx)(N.Z, { saveOnClose: !p });
+            t = (0, i.jsx)(I.Z, { saveOnClose: !p });
             break;
         case C.PG.CUSTOMIZATION_QUESTIONS:
             t = (0, i.jsx)(T.ZP, { saveOnClose: !p });
             break;
         case C.PG.HOME_SETTINGS:
-            t = (0, i.jsx)(_.Z, { saveOnClose: !p });
+            t = (0, i.jsx)(N.Z, { saveOnClose: !p });
             break;
         case C.PG.REVIEW:
-            t = (0, i.jsx)(I.Z, {
+            t = (0, i.jsx)(_.Z, {
                 completed: p,
                 guildId: n
             });

@@ -34,8 +34,8 @@ var s = r(200651),
     U = r(260035),
     B = r(482215),
     G = r(540059),
-    Z = r(947519),
-    F = r(243778),
+    F = r(947519),
+    Z = r(243778),
     V = r(314910),
     j = r(84615),
     H = r(429142),
@@ -112,7 +112,7 @@ function ep(e) {
         eg = en && !el,
         eE = [];
     em && Q && !ep && eE.push(h.z.CLIENT_THEMES_COACHMARK);
-    let [ev, eI] = (0, F.US)(eE, ec.R.SIDEBAR, !0);
+    let [ev, eI] = (0, Z.US)(eE, ec.R.SIDEBAR, !0);
     eE.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     let eT = ev === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
         eb = ev === h.z.CLIENT_THEMES_COACHMARK;
@@ -226,7 +226,7 @@ function ep(e) {
                                                                     initialTab: eN ? q._.APP_ICONS : q._.CLIENT_THEMES,
                                                                     markAsDismissed: eI
                                                                 }),
-                                                            (0, s.jsx)(Z.Z, { mobile: l })
+                                                            (0, s.jsx)(F.Z, { mobile: l })
                                                         ]
                                                     }),
                                                     !1

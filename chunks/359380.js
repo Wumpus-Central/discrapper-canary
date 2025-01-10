@@ -80,7 +80,7 @@ function m(e) {
             [n, p]
         ),
         v = r.useMemo(() => p.filter((e) => o.WZ.has(e) || o.gh.has(e)), [p]),
-        N = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 let t = new Set(x);
                 t.delete(e), n(t);
@@ -137,7 +137,7 @@ function m(e) {
                         progress: s,
                         traitsToHighlight: v,
                         maskDescription: !0,
-                        onTraitClick: N
+                        onTraitClick: I
                     })
             })
         ]

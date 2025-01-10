@@ -36,7 +36,7 @@ let w = (0, A.Mg)(u.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     P = 3;
 function M(e) {
     var n;
-    let { selected: r = !1, colorString: i, colorRoleName: o, isOwner: u, ownerTooltipText: A, lostPermissionTooltipText: w, isTyping: M = !1, nick: k, user: U, currentUser: B, activities: G, applicationStream: Z, status: F, shouldAnimateStatus: V = !1, isMobile: j, premiumSince: H, channel: Y, guildId: W, className: K, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: J, onFocus: $, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: ea, itemProps: es } = e,
+    let { selected: r = !1, colorString: i, colorRoleName: o, isOwner: u, ownerTooltipText: A, lostPermissionTooltipText: w, isTyping: M = !1, nick: k, user: U, currentUser: B, activities: G, applicationStream: F, status: Z, shouldAnimateStatus: V = !1, isMobile: j, premiumSince: H, channel: Y, guildId: W, className: K, onMouseDown: z, onKeyDown: q, onClick: Q, onContextMenu: X, onClickPremiumGuildIcon: J, onFocus: $, 'aria-controls': ee, 'aria-expanded': et, 'aria-posinset': en, 'aria-setsize': er, id: ei, tabIndex: ea, itemProps: es } = e,
         eo = null == U ? void 0 : U.id,
         el = N.ZP.useName(U),
         eu = (null === (n = y.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === eo,
@@ -70,7 +70,7 @@ function M(e) {
             eh(e);
         },
         eN = () => {
-            if (F !== R.Skl.OFFLINE && F !== R.Skl.INVISIBLE && null != G && G.length > 0) {
+            if (Z !== R.Skl.OFFLINE && Z !== R.Skl.INVISIBLE && null != G && G.length > 0) {
                 let e = null != G ? G.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
                     n = null != e && null != U && (0, g.Z)(e, U, Y);
                 return (0, a.jsx)(C.ZP, {
@@ -78,7 +78,7 @@ function M(e) {
                     textClassName: x.activityText,
                     emojiClassName: x.activityEmoji,
                     activities: G,
-                    applicationStream: Z,
+                    applicationStream: F,
                     animate: ed,
                     hideEmoji: !n,
                     hideTooltip: !0,
@@ -138,7 +138,7 @@ function M(e) {
             }),
         eL = (e, n) => {
             let r = V ? c.AnimatedAvatar : c.Avatar,
-                i = (0, d.Z)(G) ? R.Skl.STREAMING : F;
+                i = (0, d.Z)(G) ? R.Skl.STREAMING : Z;
             return (
                 (i = n ? void 0 : i),
                 (0, a.jsxs)(a.Fragment, {
@@ -188,11 +188,11 @@ function M(e) {
             (0, a.jsx)(I.Z, {
                 quest: eT,
                 memberListItemRef: ec,
-                applicationStream: Z,
+                applicationStream: F,
                 ...e,
                 closePopout: () => eI(!0)
             }),
-        eM = F === R.Skl.OFFLINE;
+        eM = Z === R.Skl.OFFLINE;
     return null == U
         ? (0, a.jsx)(_.Z, {
               avatarSize: c.AvatarSizes.SIZE_32,

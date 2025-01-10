@@ -24,9 +24,9 @@ var i = n(200651),
     f = n(324067),
     C = n(984933),
     v = n(259580),
-    N = n(999382),
-    _ = n(743475),
-    I = n(889369),
+    I = n(999382),
+    N = n(743475),
+    _ = n(889369),
     T = n(570961),
     j = n(208665),
     b = n(868814),
@@ -41,9 +41,9 @@ function L(e) {
         l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
         s = (0, a.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         c = (0, b.Z)(t),
-        f = (0, a.e7)([I.Z], () => I.Z.editedDefaultChannelIds),
+        f = (0, a.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
-        [v, N] = r.useState(!1);
+        [v, I] = r.useState(!1);
     r.useEffect(() => {
         !s && !l && (0, x.S)(t.id);
     }, [t.id, s, l]);
@@ -78,7 +78,7 @@ function L(e) {
                           }),
                           (0, i.jsxs)(o.Clickable, {
                               className: Z.dismissAll,
-                              onClick: () => N(!0),
+                              onClick: () => I(!0),
                               children: [
                                   (0, i.jsx)(o.CheckmarkLargeIcon, {
                                       size: 'xxs',
@@ -145,7 +145,7 @@ function L(e) {
                                                     color: o.Button.Colors.BRAND,
                                                     size: o.Button.Sizes.SMALL,
                                                     className: Z.addChannelCTA,
-                                                    onClick: () => (0, _.pt)(e.id),
+                                                    onClick: () => (0, N.pt)(e.id),
                                                     children: A.intl.string(A.t.OYkgVl)
                                                 })
                                               : (0, i.jsxs)(o.Button, {
@@ -178,7 +178,7 @@ function L(e) {
 }
 function D(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, a.e7)([N.Z], () => N.Z.getGuild()),
+        n = (0, a.e7)([I.Z], () => I.Z.getGuild()),
         l = (0, a.e7)([m.Z], () => m.Z.isLoading()),
         c = (0, a.e7)([C.ZP], () => C.ZP.getChannels(null == n ? void 0 : n.id)),
         d = (0, a.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
@@ -194,7 +194,7 @@ function D(e) {
             let { current: e } = p;
             return () => {
                 null != e &&
-                    (0, _.DO)(e)
+                    (0, N.DO)(e)
                         .then(() => {
                             u && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
@@ -288,20 +288,20 @@ function D(e) {
             });
 }
 function O() {
-    let e = (0, a.e7)([N.Z], () => N.Z.getProps().guild),
-        t = (0, a.e7)([I.Z], () => I.Z.submitting),
+    let e = (0, a.e7)([I.Z], () => I.Z.getProps().guild),
+        t = (0, a.e7)([_.Z], () => _.Z.submitting),
         n = (0, a.e7)([j.Z], () => j.Z.advancedMode);
     return null == e
         ? null
         : (0, i.jsx)(c.Z, {
               onSave: () => {
-                  (0, _.DO)(e)
+                  (0, N.DO)(e)
                       .then(() => {
                           n && (0, T.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
-              onReset: _.BG,
+              onReset: N.BG,
               submitting: t,
               onSaveText: A.intl.string(A.t.R3BPHx)
           });

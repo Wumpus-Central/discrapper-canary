@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     n(47120);
@@ -28,8 +28,8 @@ function v(e) {
         {
             drag: x,
             drop: v,
-            dragSourcePosition: N,
-            setIsDraggable: _
+            dragSourcePosition: I,
+            setIsDraggable: N
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -38,19 +38,19 @@ function v(e) {
             onDragComplete: () => {},
             onDragReset: () => {}
         }),
-        I = r.useRef(null);
+        _ = r.useRef(null);
     return (
         r.useEffect(() => {
-            _(!1);
-        }, [_]),
+            N(!1);
+        }, [N]),
         r.useEffect(() => {
-            x(v(I));
-        }, [x, v, I]),
+            x(v(_));
+        }, [x, v, _]),
         (0, i.jsxs)('div', {
-            ref: I,
+            ref: _,
             className: s()(C.separatorSection, {
-                [C.dropIndicatorBefore]: null != N && m < N,
-                [C.dropIndicatorAfter]: null != N && m > N
+                [C.dropIndicatorBefore]: null != I && m < I,
+                [C.dropIndicatorAfter]: null != I && m > I
             }),
             children: [
                 !l && u.length < p.b3
@@ -94,14 +94,14 @@ function v(e) {
         })
     );
 }
-function N(e) {
+function I(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
-        N = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        _ = N.filter((e) => e.inOnboarding),
-        I = N.filter((e) => !0 !== e.inOnboarding),
+        I = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
+        N = I.filter((e) => e.inOnboarding),
+        _ = I.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ..._.map((e) => ({
+            ...N.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -109,7 +109,7 @@ function N(e) {
                 id: 'separator',
                 data: (0, p.ae)()
             },
-            ...I.map((e) => ({
+            ..._.map((e) => ({
                 id: e.id,
                 data: e
             }))
@@ -162,7 +162,7 @@ function N(e) {
                                               })
                                           ]
                                       }),
-                                _.map((e, t) =>
+                                N.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -191,14 +191,14 @@ function N(e) {
                       ? null
                       : (0, i.jsxs)(i.Fragment, {
                             children: [
-                                I.map((e, t) =>
+                                _.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + _.length,
-                                            dragIndex: t + _.length + 1,
+                                            promptIndex: t + N.length,
+                                            dragIndex: t + N.length + 1,
                                             onPromptDragStart: j,
                                             onPromptDragReset: b,
                                             onPromptDragComplete: E
@@ -206,10 +206,10 @@ function N(e) {
                                         e.id
                                     )
                                 ),
-                                N.length < p.YW
+                                I.length < p.YW
                                     ? (0, i.jsxs)(o.Clickable, {
                                           className: C.addPrompt,
-                                          onClick: () => (0, h.tS)(d, [...N, (0, p.yZ)(!1)], !1),
+                                          onClick: () => (0, h.tS)(d, [...I, (0, p.yZ)(!1)], !1),
                                           children: [
                                               (0, i.jsx)(o.CirclePlusIcon, {
                                                   size: 'custom',

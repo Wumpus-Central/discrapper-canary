@@ -114,10 +114,10 @@ function G(e) {
     let { streamKey: n, timestamp: r } = e;
     D === r && (D = null), null == r ? (L[n] = []) : (L[n] = L[n].filter((e) => e.timestamp !== r));
 }
-function Z() {
+function F() {
     A = Math.max(A - 1, 0);
 }
-function F(e) {
+function Z(e) {
     var n, r;
     let { clip: i } = e;
     (A = Math.max(A - 1, 0)),
@@ -411,11 +411,11 @@ I(er, 'displayName', 'ClipsStore'),
     ]);
 let ei = new er(l.Z, {
     CLIPS_SETTINGS_UPDATE: U,
-    CLIPS_SAVE_CLIP: F,
+    CLIPS_SAVE_CLIP: Z,
     CLIPS_SAVE_CLIP_PLACEHOLDER: V,
     CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: j,
     CLIPS_SAVE_CLIP_START: B,
-    CLIPS_SAVE_CLIP_ERROR: Z,
+    CLIPS_SAVE_CLIP_ERROR: F,
     CLIPS_SAVE_ANIMATION_END: G,
     STREAM_START: z,
     STREAM_STOP: q,

@@ -72,8 +72,8 @@ var s = r(990547),
     U = r(595519),
     B = r(317381),
     G = r(672181),
-    Z = r(882347),
-    F = r(16609),
+    F = r(882347),
+    Z = r(16609),
     V = r(224189),
     j = r(374065),
     H = r(917107),
@@ -293,7 +293,7 @@ async function en(e) {
         ((null == m ? void 0 : m.applicationId) != null && (n = I.Z.getApplication(null == m ? void 0 : m.applicationId)),
         !(
             !o ||
-            (await (0, Z.p)({
+            (await (0, F.p)({
                 applicationId: r,
                 application: _,
                 channel: h,
@@ -348,7 +348,7 @@ function er(e) {
         instanceId: null == a ? void 0 : a.launchId,
         showFeedback: i
     });
-    let s = (0, F.p)(n);
+    let s = (0, Z.p)(n);
     if (null != s) {
         var o;
         let e = T.Z.getSelectedParticipantId(s),

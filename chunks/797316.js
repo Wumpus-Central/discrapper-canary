@@ -118,11 +118,11 @@ function G(e) {
     let { guildId: n } = e;
     C.subscribeToMemberUpdates(n);
 }
-function Z(e) {
+function F(e) {
     let { guildId: n } = e;
     C.unsubscribeFromMemberUpdates(n);
 }
-function F(e) {
+function Z(e) {
     let { guildId: n } = e;
     return C.subscribeToGuild(n);
 }
@@ -206,9 +206,9 @@ N(Q, 'displayName', 'GuildSubscriptionsStore'),
         GUILD_SUBSCRIPTIONS_MEMBERS_ADD: U,
         GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE: B,
         GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES: G,
-        GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: Z,
+        GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES: F,
         GUILD_SUBSCRIPTIONS_CHANNEL: V,
-        GUILD_SUBSCRIPTIONS: F,
+        GUILD_SUBSCRIPTIONS: Z,
         CHANNEL_PRELOAD: j,
         INBOX_OPEN: q,
         THREAD_UPDATE: W,

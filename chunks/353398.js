@@ -27,9 +27,9 @@ var i,
     f = n(751189),
     C = n(409059),
     v = n(518936),
-    N = n(999382),
-    _ = n(58346),
-    I = n(388032),
+    I = n(999382),
+    N = n(58346),
+    _ = n(388032),
     T = n(434881),
     j = n(232186);
 function b(e, t, n) {
@@ -47,10 +47,10 @@ function b(e, t, n) {
 }
 class E extends (i = d.ZP.Store) {
     getTemplate() {
-        let e = N.Z.getProps().guild;
+        let e = I.Z.getProps().guild;
         if (null == e) return null;
         let t = C.Z.getForGuild(e.id);
-        return null != t && t.state !== _.Rj.RESOLVING ? t : null;
+        return null != t && t.state !== N.Rj.RESOLVING ? t : null;
     }
     showNotice() {
         let e = this.getTemplate();
@@ -79,7 +79,7 @@ class E extends (i = d.ZP.Store) {
                 (this.error = e), this.emitChange();
             }),
             b(this, 'save', async () => {
-                await f.Z.updateGuildTemplate(N.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
+                await f.Z.updateGuildTemplate(I.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
@@ -102,13 +102,13 @@ function y() {
         children: (0, r.jsxs)(m.HeadingLevel, {
             component: (0, r.jsx)(m.FormTitle, {
                 tag: m.FormTitleTags.H1,
-                children: I.intl.string(I.t.KUw7Sk)
+                children: _.intl.string(_.t.KUw7Sk)
             }),
             children: [
                 (0, r.jsx)(m.FormText, {
                     className: j.marginBottom20,
                     type: m.FormTextTypes.DESCRIPTION,
-                    children: I.intl.format(I.t.c0m8bG, {})
+                    children: _.intl.format(_.t.c0m8bG, {})
                 }),
                 (0, r.jsx)(Z, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
@@ -118,7 +118,7 @@ function y() {
     });
 }
 function A() {
-    let { guild: e } = N.Z.getProps();
+    let { guild: e } = I.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([S], () => S.error),
         [n, i] = l.useState(!0),
@@ -194,7 +194,7 @@ function Z() {
                 children: [
                     (0, r.jsx)(m.Heading, {
                         variant: 'eyebrow',
-                        children: I.intl.string(I.t['f8u+VF'])
+                        children: _.intl.string(_.t['f8u+VF'])
                     }),
                     (0, r.jsxs)('div', {
                         className: T.descriptionRow,
@@ -205,7 +205,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t.K2tn19)
+                            _.intl.string(_.t.K2tn19)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -217,7 +217,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t.om5gNj)
+                            _.intl.string(_.t.om5gNj)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -229,7 +229,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t['/VNqdH'])
+                            _.intl.string(_.t['/VNqdH'])
                         ]
                     })
                 ]
@@ -239,7 +239,7 @@ function Z() {
                 children: [
                     (0, r.jsx)(m.Heading, {
                         variant: 'eyebrow',
-                        children: I.intl.string(I.t['8zhJEh'])
+                        children: _.intl.string(_.t['8zhJEh'])
                     }),
                     (0, r.jsxs)('div', {
                         className: T.descriptionRow,
@@ -250,7 +250,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t.WOKI6u)
+                            _.intl.string(_.t.WOKI6u)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -262,7 +262,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t.ddhDJC)
+                            _.intl.string(_.t.ddhDJC)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -274,7 +274,7 @@ function Z() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            I.intl.string(I.t['6Q/DHh'])
+                            _.intl.string(_.t['6Q/DHh'])
                         ]
                     })
                 ]
@@ -286,15 +286,15 @@ function L(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(m.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: I.intl.string(I.t['cN/RFB']),
-        confirmText: I.intl.string(I.t['cN/RFB']),
-        cancelText: I.intl.string(I.t['ETE/oK']),
+        header: _.intl.string(_.t['cN/RFB']),
+        confirmText: _.intl.string(_.t['cN/RFB']),
+        cancelText: _.intl.string(_.t['ETE/oK']),
         onCancel: t,
         onConfirm: n,
         children: (0, r.jsx)(m.Text, {
             variant: 'text-md/normal',
             color: 'text-normal',
-            children: I.intl.string(I.t.apCQv7)
+            children: _.intl.string(_.t.apCQv7)
         })
     });
 }
@@ -306,23 +306,23 @@ function D() {
         children: [
             (0, r.jsx)(m.FormItem, {
                 className: j.marginBottom20,
-                title: I.intl.string(I.t.z1a9R0),
+                title: _.intl.string(_.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, r.jsx)(m.TextInput, {
                     value: e,
                     onChange: (e) => S.setName(e),
-                    placeholder: I.intl.string(I.t.bMlpvr),
+                    placeholder: _.intl.string(_.t.bMlpvr),
                     maxLength: 100
                 })
             }),
             (0, r.jsx)(m.FormItem, {
                 className: j.marginBottom20,
-                title: I.intl.string(I.t.GxirWV),
+                title: _.intl.string(_.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, r.jsx)(m.TextArea, {
                     value: t,
                     onChange: (e) => S.setDescription(e),
-                    placeholder: I.intl.string(I.t.n1FBXl),
+                    placeholder: _.intl.string(_.t.n1FBXl),
                     maxLength: 120
                 })
             })
@@ -336,7 +336,7 @@ function O(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.FormItem, {
-                      title: I.intl.string(I.t.zGGcLy),
+                      title: _.intl.string(_.t.zGGcLy),
                       children: (0, r.jsx)(g.Z, {
                           buttonLook: m.Button.Looks.FILLED,
                           buttonColor: m.Button.Colors.BRAND,
@@ -348,20 +348,20 @@ function O(e) {
                           color: 'text-warning',
                           className: j.marginTop8,
                           variant: 'text-sm/normal',
-                          children: I.intl.string(I.t.aWsjtL)
+                          children: _.intl.string(_.t.aWsjtL)
                       }),
                   (0, r.jsxs)('div', {
                       className: a()(j.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, r.jsx)(k, {
+                              (0, r.jsx)(P, {
                                   guild: t,
                                   guildTemplate: n
                               }),
                           (0, r.jsxs)('div', {
                               className: T.rightButtonContainer,
                               children: [
-                                  (0, r.jsx)(P, {
+                                  (0, r.jsx)(k, {
                                       guild: t,
                                       guildTemplate: n
                                   }),
@@ -373,7 +373,7 @@ function O(e) {
                   n.isDirty &&
                       (0, r.jsx)('div', {
                           className: T.lastSync,
-                          children: I.intl.format(I.t.v0AVur, { timestamp: new Date(n.updatedAt) })
+                          children: _.intl.format(_.t.v0AVur, { timestamp: new Date(n.updatedAt) })
                       })
               ]
           });
@@ -397,10 +397,10 @@ function M(e) {
         disabled: !(null != (t = i) && t.trim().length >= 2),
         color: m.Button.Colors.BRAND,
         onClick: o,
-        children: I.intl.string(I.t.Wxdi8P)
+        children: _.intl.string(_.t.Wxdi8P)
     });
 }
-function k(e) {
+function P(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {
@@ -416,10 +416,10 @@ function k(e) {
         submitting: i,
         className: T.button,
         onClick: a,
-        children: I.intl.string(I.t['Nw+0Y2'])
+        children: _.intl.string(_.t['Nw+0Y2'])
     });
 }
-function P(e) {
+function k(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {
@@ -438,7 +438,7 @@ function P(e) {
                 className: T.button,
                 color: m.Button.Colors.RED,
                 onClick: () => s(!0),
-                children: I.intl.string(I.t['cN/RFB'])
+                children: _.intl.string(_.t['cN/RFB'])
             }),
             i
                 ? (0, r.jsx)(L, {
@@ -463,6 +463,6 @@ function w(e) {
                         guildTemplate: t
                     });
             }),
-        children: I.intl.string(I.t.YI3iV1)
+        children: _.intl.string(_.t.YI3iV1)
     });
 }

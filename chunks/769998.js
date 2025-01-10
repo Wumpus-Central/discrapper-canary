@@ -20,9 +20,9 @@ function g(e) {
     let { action: n, triggerType: g, guildId: x, toggled: p, onToggleAction: f } = e,
         C = (e) => () => f(e),
         v = (0, o.c)(n.type, n, g),
-        N = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
-        _ = null != N ? (0, u.L9)(N) : null,
-        I = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
+        I = null === (t = n.metadata) || void 0 === t ? void 0 : t.durationSeconds,
+        N = null != I ? (0, u.L9)(I) : null,
+        _ = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
     if (null == v) return null;
     let { headerText: T, descriptionText: j, icon: b } = v;
     return (0, i.jsxs)('div', {
@@ -57,8 +57,8 @@ function g(e) {
                                     if (null === t) return null;
                                     if (e === c.fX.MENTION_SPAM) return m.intl.format(m.t.i3lsKC, { friendlyDurationString: t });
                                     return m.intl.format(m.t.mvHxzc, { friendlyDurationString: t });
-                                })(g, _),
-                                I &&
+                                })(g, N),
+                                _ &&
                                     (0, i.jsx)(l.Clickable, {
                                         onClick: C(!0),
                                         className: h.editChannel,
@@ -73,7 +73,7 @@ function g(e) {
             (0, i.jsx)(l.Tooltip, {
                 text: m.intl.format(m.t.wx6Vb2, {}),
                 'aria-label': m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
-                shouldShow: !I,
+                shouldShow: !_,
                 children: (e) =>
                     (0, i.jsx)('div', {
                         ...e,
@@ -81,7 +81,7 @@ function g(e) {
                             type: l.Checkbox.Types.INVERTED,
                             value: p,
                             onChange: C(!1),
-                            disabled: !I,
+                            disabled: !_,
                             className: h.__invalid_actionCheckbox
                         })
                     })

@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(626135),
     C = n(146596),
     v = n(559368),
-    N = n(999382),
-    _ = n(981631),
-    I = n(190378),
+    I = n(999382),
+    N = n(981631),
+    _ = n(190378),
     T = n(388032),
     j = n(175957);
 let b = function (e, t, n) {
@@ -36,7 +36,7 @@ let b = function (e, t, n) {
     },
     E = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === _.evJ.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === N.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, i.jsx)(c.FormErrorBlock, {
                   icon: c.CircleInformationIcon,
                   className: j.notEnoughMembersError,
@@ -52,18 +52,18 @@ let b = function (e, t, n) {
     },
     S = () => {
         let [e, t] = r.useState(!1),
-            n = (0, a.e7)([N.Z], () => N.Z.getGuildId());
+            n = (0, a.e7)([I.Z], () => I.Z.getGuildId());
         return (0, i.jsx)(c.Button, {
             className: j.developerPortalCta,
             onClick: () => {
                 t(!0),
                     (function (e) {
-                        f.default.track(_.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-                        let t = null == e ? _.E07.DEVELOPER_PORTAL : _.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+                        f.default.track(N.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+                        let t = null == e ? N.E07.DEVELOPER_PORTAL : N.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
                             n = (0, l.Z)();
                         return o.tn
                             .post({
-                                url: _.ANM.HANDOFF,
+                                url: N.ANM.HANDOFF,
                                 body: { key: n },
                                 oldFormErrors: !0,
                                 rejectWithError: !0
@@ -71,7 +71,7 @@ let b = function (e, t, n) {
                             .then(
                                 (e) => {
                                     let i = e.body.handoff_token;
-                                    window.open(_.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
+                                    window.open(N.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
                                 },
                                 () => {
                                     window.open(t);
@@ -86,7 +86,7 @@ let b = function (e, t, n) {
         });
     };
 t.Z = () => {
-    let e = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
+    let e = (0, a.e7)([I.Z], () => I.Z.getGuildId()),
         t = (0, a.e7)([g.Z], () => g.Z.getMemberCount(e)),
         n = (0, a.e7)([x.Z], () => x.Z.getGuild(e)),
         l = (0, a.e7)([h.default], () => h.default.locale),
@@ -95,12 +95,12 @@ t.Z = () => {
             errorCode: v.Z.getError()
         })),
         f = (0, a.e7)([p.Z], () => p.Z.getSettings().enabled),
-        R = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(_.oNc.PARTNERED) && !n.hasFeature(_.oNc.VERIFIED));
+        R = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(N.oNc.PARTNERED) && !n.hasFeature(N.oNc.VERIFIED));
     r.useEffect(() => {
         null != e && !R && ((0, C.Vk)(e), (0, C.SR)(e), (0, C.xl)(e));
     }, [e, R]),
         r.useEffect(() => {
-            (0, m.Kw)(I.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
+            (0, m.Kw)(_.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
         }, []);
     let y =
         null != s

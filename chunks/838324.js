@@ -22,10 +22,10 @@ function g(e) {
         x = (0, r.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
         [p, f] = (0, o.VF)(t, x),
         [C, v] = (0, d.OA)(t, [...x]),
-        N = g ? v.length : f.length,
-        _ = g ? C.length : p.length,
-        I = N < u.md,
-        T = _ >= u.X,
+        I = g ? v.length : f.length,
+        N = g ? C.length : p.length,
+        _ = I < u.md,
+        T = N >= u.X,
         j = v.length - f.length,
         b = (0, i.jsx)(s.CircleCheckIcon, {
             size: 'sm',
@@ -39,8 +39,8 @@ function g(e) {
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
-        S = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, N) / u.md) * 100],
-        R = !I && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        S = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, I) / u.md) * 100],
+        R = !_ && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -50,12 +50,12 @@ function g(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-brand',
-                        children: m.intl.format(m.t.kvroKC, { count: _ })
+                        children: m.intl.format(m.t.kvroKC, { count: N })
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        children: m.intl.format(m.t['0MjxJy'], { count: N })
+                        children: m.intl.format(m.t['0MjxJy'], { count: I })
                     })
                 ]
             }),
@@ -67,7 +67,7 @@ function g(e) {
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    I ? E : b,
+                    _ ? E : b,
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',

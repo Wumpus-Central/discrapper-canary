@@ -56,7 +56,7 @@ function R(e) {
             let e = g.ZP.getUserMaxFileSize(R);
             return (0, h.BU)(e / 1024, { useKibibytes: !0 });
         }, [R]),
-        Z = a.useMemo(() => {
+        F = a.useMemo(() => {
             let e = N.intl.formatToPlainString(N.t.q5fTZm, { maxSize: G });
             switch (D) {
                 case y.p9.TIER_0:
@@ -67,7 +67,7 @@ function R(e) {
             }
             return e;
         }, [D, G]),
-        F = (0, h.BU)(y.Uq / 1024, { useKibibytes: !0 }),
+        Z = (0, h.BU)(y.Uq / 1024, { useKibibytes: !0 }),
         V = M ? N.intl.string(N.t['9C+41t']) : N.intl.string(N.t['/tGlcn']),
         j = k
             ? M
@@ -78,7 +78,7 @@ function R(e) {
                       }
                   })
                 : N.intl.string(N.t.ZcYwgY)
-            : N.intl.formatToPlainString(N.t.htbuIS, { premiumMaxSize: F }),
+            : N.intl.formatToPlainString(N.t.htbuIS, { premiumMaxSize: Z }),
         H = k
             ? (0, i.jsx)('div', {
                   className: C.body,
@@ -90,7 +90,7 @@ function R(e) {
             : (0, i.jsxs)('div', {
                   className: C.body,
                   children: [
-                      (0, i.jsx)('span', { children: Z }),
+                      (0, i.jsx)('span', { children: F }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-md/medium',
                           children: j

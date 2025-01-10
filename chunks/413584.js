@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(933557),
     C = n(471445),
     v = n(339085),
-    N = n(565138),
-    _ = n(372769),
-    I = n(690221),
+    I = n(565138),
+    N = n(372769),
+    _ = n(690221),
     T = n(524329),
     j = n(575258),
     b = n(514698),
@@ -32,35 +32,35 @@ var i = n(200651),
     D = n(231338),
     O = n(388032),
     M = n(86592);
-let k = 'WELCOME_CHANNEL',
-    P = (e) => {
+let P = 'WELCOME_CHANNEL',
+    k = (e) => {
         var t;
         let l,
-            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: p, isDropHovered: N, index: _ } = e,
-            [I, T] = r.useState(!1),
+            { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: p, isDropHovered: I, index: N } = e,
+            [_, T] = r.useState(!1),
             j = r.useRef(null),
             R = (0, u.e7)([E.Z], () => E.Z.getChannel(o.channel_id)),
             A = (0, u.e7)([v.ZP], () => (null != o.emoji_id ? v.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             Z = null != R && y.Uu(L.Plq.VIEW_CHANNEL, R),
-            P = null !== (t = (0, C.KS)(R)) && void 0 !== t ? t : m.TextIcon,
+            k = null !== (t = (0, C.KS)(R)) && void 0 !== t ? t : m.TextIcon,
             w = (0, f.ZP)(R, !1),
             [, B] = (0, c.c)({
-                type: k,
+                type: P,
                 item: {
                     channel: o,
-                    index: _
+                    index: N
                 },
                 end: (e, t) => {
                     null != e && !t.didDrop() && p(e.channel, null, !0);
                 }
             }),
             [, U] = (0, d.L)({
-                accept: k,
+                accept: P,
                 hover: (e) => {
-                    p(e.channel, _, !1);
+                    p(e.channel, N, !1);
                 },
                 drop: (e) => {
-                    p(e.channel, _, !0);
+                    p(e.channel, N, !0);
                 }
             });
         return (
@@ -80,7 +80,7 @@ let k = 'WELCOME_CHANNEL',
                           emojiName: null != A ? A.name : o.emoji_name,
                           animated: !!(null == A ? void 0 : A.animated)
                       })
-                    : (0, i.jsx)(P, {
+                    : (0, i.jsx)(k, {
                           size: 'md',
                           color: 'currentColor',
                           className: M.channelIcon
@@ -91,7 +91,7 @@ let k = 'WELCOME_CHANNEL',
                       className: M.warningIcon
                   })),
             (0, i.jsxs)('div', {
-                className: s()(M.welcomeChannel, { [M.dragging]: N }),
+                className: s()(M.welcomeChannel, { [M.dragging]: I }),
                 ref: j,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -105,7 +105,7 @@ let k = 'WELCOME_CHANNEL',
                                 onChannelReorder: p,
                                 setShowConfirmModal: T,
                                 onEdit: x,
-                                index: _
+                                index: N
                             });
                     });
                 },
@@ -124,7 +124,7 @@ let k = 'WELCOME_CHANNEL',
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 children: [
-                                    (0, i.jsx)(P, {
+                                    (0, i.jsx)(k, {
                                         className: M.channelTitleIcon,
                                         size: 'xxs',
                                         color: 'currentColor'
@@ -154,7 +154,7 @@ let k = 'WELCOME_CHANNEL',
                             ),
                         children: O.intl.string(O.t.bt75u7)
                     }),
-                    I &&
+                    _ &&
                         (0, i.jsx)(b.Z, {
                             onConfirm: () => x(),
                             onCancel: () => T(!1),
@@ -172,7 +172,7 @@ t.Z = (e) => {
         [g, f] = r.useState(!1),
         [C, v] = r.useState(!1),
         { description: b, channels: E, enabled: y } = s,
-        k = () => {
+        P = () => {
             if (null != t) b !== a.description && ((0, T.Es)(t.id, { description: null == b ? void 0 : b.trim() }), f(!0));
         },
         w = (e) => {
@@ -259,7 +259,7 @@ t.Z = (e) => {
                                   (0, i.jsx)(S.Z, { className: M.noticeIcon }),
                                   O.intl.format(O.t.oj2vi4, {
                                       onboardingLink: (e) =>
-                                          (0, i.jsx)(I.Z, {
+                                          (0, i.jsx)(_.Z, {
                                               onClick: z,
                                               children: e
                                           })
@@ -306,8 +306,8 @@ t.Z = (e) => {
                           (0, i.jsxs)('div', {
                               className: M.welcomeHeader,
                               children: [
-                                  (0, i.jsx)(N.Z, {
-                                      size: N.Z.Sizes.LARGER,
+                                  (0, i.jsx)(I.Z, {
+                                      size: I.Z.Sizes.LARGER,
                                       className: M.icon,
                                       guild: t,
                                       animate: !0,
@@ -323,7 +323,7 @@ t.Z = (e) => {
                                                   'span',
                                                   {
                                                       children: [
-                                                          (0, i.jsx)(_.Z, {
+                                                          (0, i.jsx)(N.Z, {
                                                               guild: t,
                                                               className: M.headerGuildBadge,
                                                               flowerStarClassName: M.flowerStar
@@ -344,7 +344,7 @@ t.Z = (e) => {
                                               (0, T.VP)({ description: e });
                                           },
                                           onBlur: () => {
-                                              k();
+                                              P();
                                           },
                                           onKeyDown: (e) => {
                                               e.keyCode === L.yXg.ENTER && e.preventDefault();
@@ -370,7 +370,7 @@ t.Z = (e) => {
                                       ? void 0
                                       : E.map((e, n) =>
                                             (0, i.jsx)(
-                                                P,
+                                                k,
                                                 {
                                                     guildId: t.id,
                                                     welcomeChannel: e,

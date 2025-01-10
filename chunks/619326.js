@@ -41,22 +41,22 @@ function f(e) {
             height: 24,
             color: p(t)
         }),
-        N = (0, o.useRadioGroup)({
+        I = (0, o.useRadioGroup)({
             orientation: 'horizontal',
             isDisabled: l
         }),
-        _ = (0, o.useRadioItem)({
+        N = (0, o.useRadioItem)({
             isSelected: f,
             label: h.intl.formatToPlainString(h.t.ZC69mJ, { colorHex: (0, a.Rf)(m.p6O) })
         }),
-        I = (0, o.useRadioItem)({
+        _ = (0, o.useRadioItem)({
             isSelected: !f,
             label: h.intl.formatToPlainString(h.t['3kiLZW'], { colorHex: (0, a.Rf)(t) })
         });
     return (0, i.jsxs)('div', {
         className: g.buttonsContainer,
         'aria-label': h.intl.string(h.t.FJjrIy),
-        ...N,
+        ...I,
         children: [
             (0, i.jsx)('div', {
                 className: s()(g.colorSwatch, { [g.disabled]: l }),
@@ -67,7 +67,7 @@ function f(e) {
                               n(m.p6O);
                           },
                     'aria-disabled': l,
-                    ..._,
+                    ...N,
                     children: [
                         (0, i.jsx)('div', {
                             className: g.swatch,
@@ -90,7 +90,7 @@ function f(e) {
                     (0, i.jsxs)(o.Clickable, {
                         onClick: l ? void 0 : u,
                         'aria-disabled': l,
-                        ...I,
+                        ..._,
                         children: [
                             (0, i.jsx)('div', {
                                 className: s()(g.customSwatch, { [g.defaultSwatch]: C === m.p6O }),

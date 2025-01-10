@@ -68,13 +68,13 @@ function G(e) {
             alwaysOnTop: !!b.isPlatformEmbedded && O[e]
         });
 }
-function Z(e) {
+function F(e) {
     let n = D[e];
     h()(null != n, 'Popout window was null during unmount'), n.removeEventListener('focus', M), n.removeEventListener('blur', M), n.removeEventListener('resize', k);
     let r = L[e];
     h()(null != r, 'Window root was null while unmounting'), r.unmount(), delete D[e], delete O[e], delete x[e], delete L[e];
 }
-function F(e, n, i) {
+function Z(e, n, i) {
     let a = e.document,
         s = new URL(n).origin,
         o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
@@ -87,7 +87,7 @@ function F(e, n, i) {
     (u.href = n), (u.rel = 'stylesheet'), (u.integrity = i), h()(null != a.head, 'Document head was null'), a.head.appendChild(u);
 }
 function V(e, n) {
-    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) F(n, e.href, e.integrity);
+    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) Z(n, e.href, e.integrity);
 }
 function j(e) {
     let n = D[e],
@@ -129,7 +129,7 @@ function Y(e) {
 }
 function W(e) {
     let n = D[e];
-    null != n && (!n.closed && G(e), setTimeout(() => n.close(), 100), Z(e), $.emitChange());
+    null != n && (!n.closed && G(e), setTimeout(() => n.close(), 100), F(e), $.emitChange());
 }
 function K(e) {
     let { data: n } = e;
@@ -160,7 +160,7 @@ function Q(e) {
 }
 function X(e) {
     let { url: n, integrity: r } = e;
-    for (let e of Object.values(D)) null != e && !e.closed && F(e, n, r);
+    for (let e of Object.values(D)) null != e && !e.closed && Z(e, n, r);
 }
 class J extends (i = E.ZP.PersistedStore) {
     initialize(e) {

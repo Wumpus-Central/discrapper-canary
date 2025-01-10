@@ -6,10 +6,10 @@ r.d(n, {
         return J;
     },
     cG: function () {
-        return Z;
+        return F;
     },
     ly: function () {
-        return F;
+        return Z;
     },
     oL: function () {
         return X;
@@ -79,13 +79,13 @@ function G(e, n) {
         }
     );
 }
-function Z(e, n) {
+function F(e, n) {
     return Object.values(b.Z.getGuilds()).some((r) => {
         let [i] = v.Z.hasConsented(M.pjP.PERSONALIZATION) ? (0, x.q)(r, P.nf, e, n, !1) : (0, x.A)(r, e);
         return i === P.AR.UseGreyDot;
     });
 }
-function F() {
+function Z() {
     let e = Object.values(b.Z.getGuilds()),
         n = {};
     for (let a of e) {

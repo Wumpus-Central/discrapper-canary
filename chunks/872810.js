@@ -1,6 +1,6 @@
 r.d(n, {
     L6: function () {
-        return Z;
+        return F;
     },
     Rc: function () {
         return B;
@@ -193,7 +193,7 @@ function G(e, n) {
         rejectWithError: !0
     });
 }
-function Z() {
+function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         n = h.Z.getCurrentUserActiveStream();
     null != n && P((0, c.V9)(n), e);

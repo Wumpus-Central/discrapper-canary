@@ -34,8 +34,8 @@ var s = r(200651),
     U = r(521332),
     B = r(905434),
     G = r(196627),
-    Z = r(739319),
-    F = r(842401),
+    F = r(739319),
+    Z = r(842401),
     V = r(375790),
     j = r(981631),
     H = r(388032),
@@ -172,10 +172,10 @@ let q = (e) => {
             (0, s.jsxs)(l.ModalContent, {
                 className: Y.body,
                 children: [
-                    null != et ? (0, s.jsx)(Z.Z, { element: et }) : null,
+                    null != et ? (0, s.jsx)(F.Z, { element: et }) : null,
                     null != W(n, 'breadcrumbs') && (0, s.jsx)(g.Z, { history: a }),
                     null != W(n, 'message_preview') && ('message' === r.name || 'first_dm' === r.name) && (0, s.jsx)(x.Z, { message: r.record }),
-                    null != W(n, 'user_preview') && 'user' === r.name ? (0, s.jsx)(F.Z, { user: r.record }) : null,
+                    null != W(n, 'user_preview') && 'user' === r.name ? (0, s.jsx)(Z.Z, { user: r.record }) : null,
                     K(n) &&
                         (0, s.jsxs)(M.Z, {
                             children: [

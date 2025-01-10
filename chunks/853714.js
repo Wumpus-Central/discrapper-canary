@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(387667),
     C = n(598077),
     v = n(592125),
-    N = n(430824),
-    _ = n(246946),
-    I = n(594174),
+    I = n(430824),
+    N = n(246946),
+    _ = n(594174),
     T = n(823379),
     j = n(51144),
     b = n(987707),
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-class k extends r.PureComponent {
+class P extends r.PureComponent {
     render() {
         let { onHeaderClick: e, guildId: t, guild: n, ...r } = this.props;
         return null == t
@@ -82,7 +82,7 @@ class k extends r.PureComponent {
             }),
             M(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props,
-                    l = N.Z.getGuild(r);
+                    l = I.Z.getGuild(r);
                 null != t.options.channel &&
                     'string' != typeof t.options.channel &&
                     null != l &&
@@ -103,7 +103,7 @@ class k extends r.PureComponent {
                     case A.KFR.CHANNEL:
                     case A.KFR.CHANNEL_OVERWRITE:
                         let l = v.Z.getChannel(t.targetId),
-                            s = N.Z.getGuild(r);
+                            s = I.Z.getGuild(r);
                         if (null != l && null != s)
                             return (0, h.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e('38902'), n.e('51529')]).then(n.bind(n, 228620));
@@ -123,7 +123,7 @@ class k extends r.PureComponent {
                                 });
                         });
                     case A.KFR.USER:
-                        let a = I.default.getUser(t.targetId);
+                        let a = _.default.getUser(t.targetId);
                         if (null != a && null != r)
                             return (0, h.jW)(e, async () => {
                                 let { default: e } = await n.e('50929').then(n.bind(n, 595011));
@@ -139,7 +139,7 @@ class k extends r.PureComponent {
             });
     }
 }
-function P(e) {
+function k(e) {
     let { logs: t, guildId: n, guild: l, expandedId: s, lastExpandedId: a, scroller: c, setExpandedRef: d, setLastExpandedRef: u, onHeaderClick: m, onContentClick: h } = e,
         g = r.useRef(c);
     r.useEffect(() => {
@@ -158,7 +158,7 @@ function P(e) {
                         let t = s === e.id,
                             r = a === e.id;
                         return (0, i.jsx)(
-                            k,
+                            P,
                             {
                                 guildId: n,
                                 guild: l,
@@ -271,7 +271,7 @@ class w extends r.PureComponent {
                 ]
             });
         }
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(k, {
             logs: r,
             guildId: d,
             guild: m,
@@ -544,14 +544,14 @@ class w extends r.PureComponent {
             });
     }
 }
-t.Z = d.ZP.connectStores([b.Z, E.Z, N.Z, p.Z, _.Z, I.default], () => {
+t.Z = d.ZP.connectStores([b.Z, E.Z, I.Z, p.Z, N.Z, _.default], () => {
     let e = E.Z.getGuildId(),
-        t = N.Z.getGuild(e),
+        t = I.Z.getGuild(e),
         n = b.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: b.Z.userIds.map((e) => I.default.getUser(e)).filter(T.lm),
+        moderators: b.Z.userIds.map((e) => _.default.getUser(e)).filter(T.lm),
         isInitialLoading: b.Z.isInitialLoading,
         isLoading: b.Z.isLoading,
         isLoadingNextPage: b.Z.isLoadingNextPage,
@@ -562,6 +562,6 @@ t.Z = d.ZP.connectStores([b.Z, E.Z, N.Z, p.Z, _.Z, I.default], () => {
         actionFilter: b.Z.actionFilter,
         userIdFilter: b.Z.userIdFilter,
         theme: p.Z.theme,
-        hide: _.Z.enabled
+        hide: N.Z.enabled
     };
 })(w);

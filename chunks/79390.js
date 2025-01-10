@@ -154,7 +154,7 @@ function G(e) {
         return e + (null !== (i = null === (r = n.count_details) || void 0 === r ? void 0 : r.vote) && void 0 !== i ? i : 0);
     }, 0);
 }
-function Z(e, n) {
+function F(e, n) {
     let r = {
             id: n,
             name: '',
@@ -170,7 +170,7 @@ function Z(e, n) {
         .map((e) => T.ZP.getName(o, null == s ? void 0 : s.id, e))
         .value();
 }
-function F(e, n) {
+function Z(e, n) {
     let r = Math.max(0, n - e.length);
     if (1 === e.length)
         return r > 0
@@ -215,6 +215,6 @@ function V(e, n, r) {
             animated: !1
         }),
         l = null !== (a = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== a ? a : 0,
-        u = Z(s, r);
-    return 0 === u.length ? '' : F(u, l);
+        u = F(s, r);
+    return 0 === u.length ? '' : Z(u, l);
 }

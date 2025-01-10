@@ -42,18 +42,18 @@ function x() {
                 });
         });
     }
-    let N = (0, l.mY)();
+    let I = (0, l.mY)();
     return (0, i.jsxs)(o.Z, {
         title: m.intl.string(m.t['Ah+sQ0']),
         description: m.intl.string(m.t.ixbWiI),
         children: [
             (0, i.jsx)(r.FormSection, {
                 title: m.intl.string(m.t['6OUqDQ']),
-                disabled: N,
+                disabled: I,
                 children: (0, i.jsx)(d.Z, {
                     value: p,
                     onChange: f,
-                    disabled: N
+                    disabled: I
                 })
             }),
             (0, i.jsx)(r.Spacer, { size: 24 }),
@@ -61,12 +61,12 @@ function x() {
                 className: h.__invalid_iconSection,
                 children: (0, i.jsxs)(r.FormSection, {
                     title: m.intl.string(m.t['zn8/AQ']),
-                    disabled: N,
+                    disabled: I,
                     children: [
                         (0, i.jsx)(r.FormText, {
                             type: r.FormText.Types.DESCRIPTION,
                             className: h.formDescription,
-                            disabled: N,
+                            disabled: I,
                             children: m.intl.string(m.t.AqHUra)
                         }),
                         (0, i.jsxs)('div', {
@@ -76,14 +76,14 @@ function x() {
                                     role: C,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
                                     onClick: v,
-                                    disabled: N
+                                    disabled: I
                                 }),
                                 (0, i.jsx)(r.Button, {
                                     look: r.Button.Looks.OUTLINED,
                                     color: r.Button.Colors.PRIMARY,
                                     className: h.__invalid_imageUploadButtonCTA,
                                     onClick: v,
-                                    disabled: N,
+                                    disabled: I,
                                     children: m.intl.string(m.t.mD1oGB)
                                 })
                             ]

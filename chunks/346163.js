@@ -24,12 +24,12 @@ function x(e) {
             let t = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: C, loading: v, createEnableRequest: N, submittedRequest: _ } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: I, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
+        { error: C, loading: v, createEnableRequest: I, submittedRequest: N } = (0, c.Z)(null == e ? void 0 : e.id),
+        { loading: _, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
         { isApplicationRejected: E, requestCooldownDuration: S } = (0, u.Z)(b),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: y } = (0, l.eC)(null == e ? void 0 : e.id),
-        A = _ || (null == b ? void 0 : b.isApplicationPending) === !0,
+        A = N || (null == b ? void 0 : b.isApplicationPending) === !0,
         Z = (null == b ? void 0 : b.canApply) === !0,
         L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
     E && y
@@ -43,7 +43,7 @@ function x(e) {
     let D = n && f && !1 === p,
         O = n && !1 === x,
         M = (0, m.f)(),
-        k = E && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        P = E && Z && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
             D && j();
@@ -52,9 +52,9 @@ function x(e) {
             resubmittingEnableRequest: v,
             resubmissionError: C,
             isGuildOwner: f,
-            createEnableRequest: N,
-            resubmittedRequest: _,
-            eligibilityLoading: I,
+            createEnableRequest: I,
+            resubmittedRequest: N,
+            eligibilityLoading: _,
             eligibilityError: T,
             refreshEligibility: j,
             eligibility: b,
@@ -62,7 +62,7 @@ function x(e) {
             isApplicationPending: A,
             hasPreviousApplicationRejection: E,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: k,
+            reapplyNoticeText: P,
             showAcceptTermsFlow: O,
             wasRejectedInV1: O && (R || E),
             requirementsFinePrintText: L,

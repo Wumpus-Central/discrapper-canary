@@ -22,12 +22,12 @@ function x(e) {
         [x, f] = r.useState(c);
     r.useEffect(() => f(c), [c]);
     let C = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
-        [v, N] = r.useState(null),
-        _ = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, s.J)(e))), [x]),
-        I = r.useMemo(() => x.length === m.nx, [x]),
+        [v, I] = r.useState(null),
+        N = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, s.J)(e))), [x]),
+        _ = r.useMemo(() => x.length === m.nx, [x]),
         T = r.useCallback(
             (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), f(e), null != v && N(null);
+                u.Z.setPendingMemberVerificationRules(n.id, e), f(e), null != v && I(null);
             },
             [v, n.id]
         ),
@@ -55,7 +55,7 @@ function x(e) {
             (e, t, n) => {
                 let i = x.indexOf(e),
                     r = [...x];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), f(r)), n ? (T(r), null !== v && N(null)) : v !== t && N(t);
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), f(r)), n ? (T(r), null !== v && I(null)) : v !== t && I(t);
             },
             [v, x, T]
         );
@@ -86,16 +86,16 @@ function x(e) {
                     fieldStyle: s.it.COMPACT
                 })
             ),
-            !I &&
+            !_ &&
                 (0, i.jsx)('div', {
                     className: g.addQuestionsContainer,
                     children: (0, i.jsx)(o.Z, {
                         addFormField: j,
                         guild: n,
-                        allowTerms: !_
+                        allowTerms: !N
                     })
                 }),
-            !I && (0, i.jsx)(p, { addFormField: j })
+            !_ && (0, i.jsx)(p, { addFormField: j })
         ]
     });
 }

@@ -103,10 +103,10 @@ n.Z = o.ZP.connectStores([m.Z, u.ZP, y.Z, g.Z, I.Z, b.Z, T.Z, h.Z, E.ZP], (e) =>
         U = E.ZP.callChatSidebarWidth,
         B = b.Z.getVoiceChannelId(),
         G = b.Z.getChannelId() === B,
-        Z = null != B && h.Z.getChatOpen(B),
-        F = O || D,
-        V = F && null != _ && (0, c.q)(_.applicationId),
-        j = !F && null != s && G && Z;
+        F = null != B && h.Z.getChatOpen(B),
+        Z = O || D,
+        V = Z && null != _ && (0, c.q)(_.applicationId),
+        j = !Z && null != s && G && F;
     return {
         selectedPIPWindow: s,
         pipWindows: k,

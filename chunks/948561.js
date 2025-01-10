@@ -101,7 +101,7 @@ function G(e, n) {
     }
     (0, N.OP)(r, n);
 }
-function Z(e) {
+function F(e) {
     if (B(e, N.Pq.TIMEOUT)) {
         let n = v.Z.getMessage(e.channel_id, e.id),
             { attachmentIds: r, embedIds: i } = (0, y.ZW)(n);
@@ -118,7 +118,7 @@ function Z(e) {
             });
     }
 }
-let F = (e, n) => {
+let Z = (e, n) => {
     if (0 !== e.length) {
         if (n) {
             (0, S.gx)(e);
@@ -140,19 +140,19 @@ function V(e, n) {
             (M[n] = {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
-                    Z(e);
+                    F(e);
                 }, w)
             }));
     });
     let s = r || new Set(a.map((e) => e.channel_id)).size > 1;
     i
         ? setTimeout(() => {
-              F(
+              Z(
                   a.filter((e) => null != M[k(e)]),
                   s
               );
           }, Math.random() * P)
-        : F(a, s);
+        : Z(a, s);
 }
 function j(e) {
     let n = R.Z.validContentScanVersion;

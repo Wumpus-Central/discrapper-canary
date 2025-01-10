@@ -23,22 +23,22 @@ function v() {
     let e;
     let t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         { application: n, loading: v } = (0, o.Z)(null == t ? void 0 : t.id, f.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        N = r.useRef(null),
-        _ = (0, u.Z)(null != t ? t : void 0);
+        I = r.useRef(null),
+        N = (0, u.Z)(null != t ? t : void 0);
     r.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let I = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let _ = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || v
                 ? (0, i.jsx)(a.Spinner, {})
-                : null != _
+                : null != N
                   ? (0, i.jsx)(g.Z, {
                         guild: t,
-                        config: _
+                        config: N
                     })
-                  : I
+                  : _
                     ? (0, i.jsx)(x.Z, { guild: t })
                     : (0, i.jsx)(h.Z, {
                           guild: t,
@@ -51,10 +51,10 @@ function v() {
                 children: (0, i.jsx)(a.ScrollerAuto, {
                     className: C.settingsScroller,
                     children: (0, i.jsx)('main', {
-                        ref: N,
+                        ref: I,
                         className: C.settingsContent,
                         children: (0, i.jsx)(a.FocusRingScope, {
-                            containerRef: N,
+                            containerRef: I,
                             children: e
                         })
                     })

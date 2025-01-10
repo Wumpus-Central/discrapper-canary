@@ -23,9 +23,9 @@ var i = n(200651),
     f = n(946724),
     C = n(95242),
     v = n(530198),
-    N = n(420966),
-    _ = n(203377),
-    I = n(981631),
+    I = n(420966),
+    N = n(203377),
+    _ = n(981631),
     T = n(856651),
     j = n(388032),
     b = n(312772),
@@ -47,7 +47,7 @@ function y(e) {
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(I.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, i.jsx)(d.Button, {
                 disabled: n,
@@ -64,7 +64,7 @@ function y(e) {
 function A(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: h, headerRef: A } = (0, C.Z)(0),
-        { scrolledToTop: Z, handleScroll: L } = (0, N.V)(),
+        { scrolledToTop: Z, handleScroll: L } = (0, I.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -78,11 +78,11 @@ function A(e) {
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
         M = O.length > 1 ? m.O1.OR : m.O1.AND,
-        k = r.useMemo(() => (M === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [M, O]),
-        P = r.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
+        P = r.useMemo(() => (M === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [M, O]),
+        k = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...k];
+            i = [...P];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -96,21 +96,21 @@ function A(e) {
         u.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => w(e),
-            excludedPlatformTypes: P,
+            excludedPlatformTypes: k,
             integrations: o,
             onCompleteApplication: (e) => w(T.Kt, e)
         });
     }
     let U = null;
-    if (0 === k.length)
+    if (0 === P.length)
         U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (k.length > 0) {
+    else if (P.length > 0) {
         var G, F;
         let e = null;
-        k.length < 10 &&
+        P.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
                 className: s()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
@@ -158,7 +158,7 @@ function A(e) {
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(I.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(_.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
@@ -184,7 +184,7 @@ function A(e) {
                                 'aria-labelledby': S
                             })
                         });
-                    })(l, n.id, M, k, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, M, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function s(n, i) {
                             let r = [];
@@ -248,7 +248,7 @@ function A(e) {
                                 )
                             )
                         });
-                    })(k, (e) => (0, p.d_)(n.id, R(e, M)), l, n.id, o),
+                    })(P, (e) => (0, p.d_)(n.id, R(e, M)), l, n.id, o),
                     e
                 ]
             }));
@@ -263,10 +263,10 @@ function A(e) {
                 (0, i.jsx)('div', {
                     className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !Z }),
                     ref: A,
-                    children: (0, i.jsx)(N.Z, {
+                    children: (0, i.jsx)(I.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: _.ZI.VERIFICATIONS,
+                        selectedSection: N.ZI.VERIFICATIONS,
                         setSelectedSection: a
                     })
                 }),

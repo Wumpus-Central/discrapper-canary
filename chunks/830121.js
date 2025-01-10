@@ -56,8 +56,8 @@ let y = 10,
     U = W(window.GLOBAL_ENV.INVITE_HOST),
     B = W(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
     G = W(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : '//canary.'.concat(b.$R1)),
-    Z = W('//canary.'.concat(b.$R1)),
-    F = W('//ptb.'.concat(b.$R1)),
+    F = W('//canary.'.concat(b.$R1)),
+    Z = W('//ptb.'.concat(b.$R1)),
     V = W('discordapp.com'),
     j = W('discord.com'),
     H = [v.Z.escape(null !== (a = U.host) && void 0 !== a ? a : ''), v.Z.escape(null !== (s = B.host) && void 0 !== s ? s : ''), v.Z.escape(null !== (o = G.host) && void 0 !== o ? o : ''), v.Z.escape(null !== (l = V.host) && void 0 !== l ? l : ''), v.Z.escape(null !== (u = j.host) && void 0 !== u ? u : '')].filter(Boolean),
@@ -91,7 +91,7 @@ function K(e, n) {
 }
 function z(e) {
     var n, r, i, a;
-    return null !== (a = null !== (i = null !== (r = null !== (n = K(G, e)) && void 0 !== n ? n : K(Z, e)) && void 0 !== r ? r : K(F, e)) && void 0 !== i ? i : K(V, e)) && void 0 !== a ? a : K(j, e);
+    return null !== (a = null !== (i = null !== (r = null !== (n = K(G, e)) && void 0 !== n ? n : K(F, e)) && void 0 !== r ? r : K(Z, e)) && void 0 !== i ? i : K(V, e)) && void 0 !== a ? a : K(j, e);
 }
 function q(e) {
     if (null == e) return null;
@@ -116,7 +116,7 @@ function Q(e) {
         };
     let o = K(U, s),
         l = K(B, s),
-        u = null !== (a = null !== (i = null !== (r = null !== (n = K(G, s)) && void 0 !== n ? n : K(Z, s)) && void 0 !== r ? r : K(F, s)) && void 0 !== i ? i : K(V, s)) && void 0 !== a ? a : K(j, s);
+        u = null !== (a = null !== (i = null !== (r = null !== (n = K(G, s)) && void 0 !== n ? n : K(F, s)) && void 0 !== r ? r : K(Z, s)) && void 0 !== i ? i : K(V, s)) && void 0 !== a ? a : K(j, s);
     return {
         url: s,
         inviteHostRemainingPath: o,

@@ -92,7 +92,7 @@ function N(e) {
                 }),
             []
         ),
-        Z = s.useCallback(
+        F = s.useCallback(
             () =>
                 new Promise((e) => {
                     let n = M.current;
@@ -101,7 +101,7 @@ function N(e) {
                 }),
             []
         ),
-        F = s.useCallback((e, n) => {
+        Z = s.useCallback((e, n) => {
             w(n);
             let r = document.querySelector(e),
                 i = M.current;
@@ -112,8 +112,8 @@ function N(e) {
             isEnabled: !0,
             useVirtualFocus: !0,
             scrollToStart: G,
-            scrollToEnd: Z,
-            setFocus: F
+            scrollToEnd: F,
+            setFocus: Z
         }),
         j = R ? _.Tv : _.lW;
     return (0, a.jsx)(c.bG, {

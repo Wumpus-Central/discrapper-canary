@@ -119,7 +119,7 @@ function O(e) {
                     }),
                 D === y.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        Z = (e) => {
+        F = (e) => {
             e.animationName === (0, c.get)(A, 'fadeInAndOut') && U(!1);
         };
     return (0, s.jsxs)(p.ZP, {
@@ -131,7 +131,7 @@ function O(e) {
             [A.avatarPopover]: r === y.n_.AVATAR,
             [A.activityPopover]: r === y.n_.ACTIVITY
         }),
-        onAnimationEnd: k ? Z : void 0,
+        onAnimationEnd: k ? F : void 0,
         children: [
             (0, s.jsx)(h.TooltipContainer, {
                 text: S.intl.string(S.t.nhaI4e),

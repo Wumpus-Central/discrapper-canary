@@ -187,10 +187,10 @@ function G(e) {
         a[i] = B(r, a[i]);
     } else delete a[i];
 }
-function Z(e) {
+function F(e) {
     c.gl();
 }
-function F(e) {
+function Z(e) {
     let { path: n } = e,
         r = d.Z.getMediaEngine();
     if ((x(), !r.supports(h.AN.CONNECTION_REPLAY) || 0 === n.length)) return;
@@ -275,8 +275,8 @@ p(Y, 'displayName', 'RTCDebugStore'),
         RTC_DEBUG_MODAL_CLOSE: P,
         RTC_DEBUG_MODAL_SET_SECTION: U,
         RTC_DEBUG_MODAL_UPDATE: G,
-        RTC_DEBUG_MODAL_OPEN_REPLAY: Z,
-        RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: F,
+        RTC_DEBUG_MODAL_OPEN_REPLAY: F,
+        RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: Z,
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: V,
         RTC_DEBUG_SET_RECORDING_FLAG: j,
         RTC_DEBUG_SET_SIMULCAST_OVERRIDE: H,

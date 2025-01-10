@@ -34,8 +34,8 @@ var d = r(512722),
     U = r(849522),
     B = r(780291),
     G = r(913663),
-    Z = r(268350),
-    F = r(378233),
+    F = r(268350),
+    Z = r(378233),
     V = r(665906),
     j = r(695346),
     H = r(271383),
@@ -150,14 +150,14 @@ function ey(e) {
         (e, o) => {
             var c, d;
             !r &&
-                ((0, F.Hc)(o, i, a, s.drafts.type)
+                ((0, Z.Hc)(o, i, a, s.drafts.type)
                     ? ((0, ea._H)({
                           sticker: e,
                           stickerSelectLocation: o,
                           isReplacement: null != G.Z.getStickerPreview(a, s.drafts.type),
                           analyticsLocations: u
                       }),
-                      (0, Z.eu)(a, e, s.drafts.type))
+                      (0, F.eu)(a, e, s.drafts.type))
                     : (l({
                           value: '',
                           uploads: void 0,
@@ -351,7 +351,7 @@ function ew(e, n, r, i) {
 }
 function eP(e, n) {
     var r, i, a, l, c, d, _, p, E, L, w, M, k;
-    let { textValue: G, richValue: Z, className: F, innerClassName: V, editorClassName: H, id: Y, required: W, disabled: z, placeholder: q, accessibilityLabel: Q, channel: X, type: J, focused: ea, renderAttachButton: eh, renderApplicationCommandIcon: eE, renderAppLauncherButton: ev, renderLeftAccessories: eP, pendingReply: eM, onChange: ek, onResize: eU, onBlur: eB, onFocus: eG, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
+    let { textValue: G, richValue: F, className: Z, innerClassName: V, editorClassName: H, id: Y, required: W, disabled: z, placeholder: q, accessibilityLabel: Q, channel: X, type: J, focused: ea, renderAttachButton: eh, renderApplicationCommandIcon: eE, renderAppLauncherButton: ev, renderLeftAccessories: eP, pendingReply: eM, onChange: ek, onResize: eU, onBlur: eB, onFocus: eG, onKeyDown: eF, onSubmit: eZ, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
     f()(null != J, 'chat input type must be set');
     let { analyticsLocations: e6 } = (0, y.ZP)(b.Z.CHANNEL_TEXT_AREA),
         e5 = (0, D.Q3)('ChannelTextAreaContainer'),
@@ -394,8 +394,8 @@ function eP(e, n) {
         [ek, e4, null === (i = J.commands) || void 0 === i ? void 0 : i.enabled]
     );
     eA(J, tu);
-    let { eventEmitter: tb, handleEditorSelectionChanged: ty } = eN(e9, G, Z),
-        { submitting: tS, submit: tA, handleSubmit: tN } = eI(eF, J, e9, X.id),
+    let { eventEmitter: tb, handleEditorSelectionChanged: ty } = eN(e9, G, F),
+        { submitting: tS, submit: tA, handleSubmit: tN } = eI(eZ, J, e9, X.id),
         { autocompleteRef: tC, handleMaybeShowAutocomplete: tR, handleHideAutocomplete: tO } = eC(),
         tD = eT(tA, J, e9),
         tL = eb(e9),
@@ -405,7 +405,7 @@ function eP(e, n) {
             textValue: G,
             channelId: X.id,
             chatInputType: J,
-            submit: eF
+            submit: eZ
         }),
         tw = eS(e9, X),
         tP = o.useCallback(() => {
@@ -414,15 +414,15 @@ function eP(e, n) {
         }, []),
         { editorHeight: tM, handleResize: tk } = eO(eU),
         { handleTab: tU, handleEnter: tB, handleMoveSelection: tG } = ex(tC, e8, tp),
-        { expressionPickerView: tZ, shouldHideExpressionPicker: tF, handleAutocompleteVisibilityChange: tV, handleOuterClick: tj } = eL(J, tb, e9);
+        { expressionPickerView: tF, shouldHideExpressionPicker: tZ, handleAutocompleteVisibilityChange: tV, handleOuterClick: tj } = eL(J, tb, e9);
     (0, ee.S)(tb, X.guild_id, X.id);
     let tH = null != eM,
         tY = (tu && !((to || tl) && tf)) || (tS && (null === (a = J.submit) || void 0 === a ? void 0 : a.useDisabledStylesOnSubmit)),
         tW = null;
     null != ta ? (tW = null == eE ? void 0 : eE(ta, ts, ep.attachButton)) : (!tu || td) && (tW = null == eh ? void 0 : eh(tH, ep.attachButton));
-    let tK = th && null != Z && !tu && J.showCharacterCount && null == ta,
-        tz = th && !__OVERLAY__ && null != Z && null == ta && J.toolbarType !== et.OW.NONE,
-        tq = ew(X, J, Z, tC),
+    let tK = th && null != F && !tu && J.showCharacterCount && null == ta,
+        tz = th && !__OVERLAY__ && null != F && null == ta && J.toolbarType !== et.OW.NONE,
+        tq = ew(X, J, F, tC),
         tQ = (0, es.c)({
             channel: X,
             type: J,
@@ -499,7 +499,7 @@ function eP(e, n) {
                       : null,
                 (0, s.jsxs)('div', {
                     ref: e7,
-                    className: u()(F, {
+                    className: u()(Z, {
                         [ep.channelTextArea]: !0,
                         [ep.channelTextAreaDisabled]: tY,
                         [ep.highlighted]: ej,
@@ -549,7 +549,7 @@ function eP(e, n) {
                                                 focused: ea,
                                                 useSlate: th,
                                                 textValue: G,
-                                                richValue: Z,
+                                                richValue: F,
                                                 disabled: tu,
                                                 placeholder: q,
                                                 required: W,
@@ -566,7 +566,7 @@ function eP(e, n) {
                                                 onResize: tk,
                                                 onBlur: eB,
                                                 onFocus: eG,
-                                                onKeyDown: eZ,
+                                                onKeyDown: eF,
                                                 onSubmit: tA,
                                                 onTab: tU,
                                                 onEnter: tB,
@@ -626,7 +626,7 @@ function eP(e, n) {
                             canSendSoundmoji: null === (p = J.soundmoji) || void 0 === p ? void 0 : p.allowSending,
                             textValue: G,
                             focused: ea,
-                            expressionPickerView: tZ,
+                            expressionPickerView: tF,
                             type: J,
                             targetRef: e7,
                             editorRef: e9,
@@ -656,7 +656,7 @@ function eP(e, n) {
                         e0
                     ]
                 }),
-                tF
+                tZ
                     ? null
                     : (0, s.jsx)(x.Z, {
                           positionTargetRef: e7,

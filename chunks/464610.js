@@ -88,9 +88,9 @@ function p(e) {
                   });
         }, [d, p]),
         v = (0, m.Q)(t),
-        N = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        _ = v[u.u.DM_AND_SPAM_PROTECTION],
-        I = v[u.u.PERMISSIONS],
+        I = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        N = v[u.u.DM_AND_SPAM_PROTECTION],
+        _ = v[u.u.PERMISSIONS],
         T = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
@@ -107,8 +107,8 @@ function p(e) {
                         icon: n(14215),
                         title: h.intl.string(h.t['53eF5u']),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: N.filter((e) => e.enabled).length,
-                            total: N.length
+                            enabled: I.filter((e) => e.enabled).length,
+                            total: I.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
@@ -117,8 +117,8 @@ function p(e) {
                         icon: n(128724),
                         title: h.intl.string(h.t.O0SfFx),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: _.filter((e) => e.enabled).length,
-                            total: _.length
+                            enabled: N.filter((e) => e.enabled).length,
+                            total: N.length
                         }),
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
@@ -142,8 +142,8 @@ function p(e) {
                         icon: n(913414),
                         title: h.intl.string(h.t.xrmhRU),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: I.filter((e) => e.enabled).length,
-                            total: I.length
+                            enabled: _.filter((e) => e.enabled).length,
+                            total: _.length
                         }),
                         page: u.u.PERMISSIONS
                     })

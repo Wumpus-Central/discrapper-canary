@@ -21,9 +21,9 @@ var i = n(200651),
     f = n(585483),
     C = n(999382),
     v = n(743475),
-    N = n(983135),
-    _ = n(8426),
-    I = n(969632),
+    I = n(983135),
+    N = n(8426),
+    _ = n(969632),
     T = n(570961),
     j = n(208665),
     b = n(359191),
@@ -38,16 +38,16 @@ var i = n(200651),
     O = n(203035);
 function M() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(k, { guild: e });
+    return null == e ? null : (0, i.jsx)(P, { guild: e });
 }
-function k(e) {
+function P(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
         M = (0, S.Z)(l),
         {
-            hasChanges: k,
-            hasConfiguredAnythingForCurrentStep: P,
+            hasChanges: P,
+            hasConfiguredAnythingForCurrentStep: k,
             hasErrors: w
         } = (0, o.cj)([b.Z], () => ({
             hasChanges: b.Z.hasChanges(),
@@ -81,15 +81,15 @@ function k(e) {
         );
     }, [H]);
     let z = (0, m.useToken)(c.Z.colors.BACKGROUND_FLOATING).hex(),
-        W = (0, m.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        V = (0, u.wj)(U) ? z : W,
+        V = (0, m.useToken)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
+        W = (0, u.wj)(U) ? z : V,
         Y = F.to({
             range: [0, 1],
             output: [(0, m.useToken)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.useToken)(c.Z.colors.TEXT_NORMAL).hex()]
         }),
         K = F.to({
             range: [0, 1],
-            output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
+            output: [W, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
     if (M) {
         if (C === E.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
@@ -99,13 +99,13 @@ function k(e) {
     let q = C === E.xh[E.xh.length - 1],
         X = async () => {
             let e = j.Z.advancedMode;
-            if (k)
+            if (P)
                 try {
                     if (C === E.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === E.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
                     else if (C === E.PG.HOME_SETTINGS) {
-                        let e = I.Z.getSettings();
-                        await (0, _.oo)(t.id, e);
+                        let e = _.Z.getSettings();
+                        await (0, N.oo)(t.id, e);
                     }
                 } catch {
                     return !1;
@@ -117,10 +117,10 @@ function k(e) {
                 ...(0, g.hH)(l),
                 step: E.PG[C],
                 back: !1,
-                skip: !k
+                skip: !P
             }),
-                (0, N.Nb)((0, E.lg)(C)),
-                (await X()) && (0, N.IG)(l, C);
+                (0, I.Nb)((0, E.lg)(C)),
+                (await X()) && (0, I.IG)(l, C);
         },
         J = async () => {
             p.default.track(L.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
@@ -129,7 +129,7 @@ function k(e) {
                 back: !0,
                 skip: !1
             }),
-                (await X()) && (0, N.Wy)(l, C);
+                (await X()) && (0, I.Wy)(l, C);
         },
         $ = null;
     B && (C === E.PG.SAFETY_CHECK ? ($ = (0, i.jsx)(R.j7, {})) : C === E.PG.DEFAULT_CHANNELS ? ($ = (0, i.jsx)(R.Io, {})) : C === E.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, i.jsx)(R.cZ, {})) : C === E.PG.HOME_SETTINGS && ($ = (0, i.jsx)(R.g6, {})));
@@ -153,7 +153,7 @@ function k(e) {
         }),
         et = (0, i.jsx)(m.Button, {
             className: O.button,
-            color: P ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
+            color: k ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
             look: m.Button.Looks.FILLED,
             size: m.Button.Sizes.SMALL,
             onClick: Q,
@@ -162,7 +162,7 @@ function k(e) {
                 className: O.button,
                 style: { color: Y },
                 children: [
-                    P ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
+                    k ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
                     (0, i.jsx)(x.Z, {
                         className: O.arrow,
                         direction: x.Z.Directions.RIGHT

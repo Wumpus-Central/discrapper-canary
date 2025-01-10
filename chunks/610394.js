@@ -54,7 +54,7 @@ function G(e, n) {
         ...n
     };
 }
-function Z(e) {
+function F(e) {
     var n, r;
     if (null != D[e]) return;
     let i = h.ZP.getGameForPID(e);
@@ -75,8 +75,8 @@ function Z(e) {
         host_crash_count: 0
     };
 }
-function F(e) {
-    if ((null == L || L.trackGame(e), Z(e), !R.has(e))) R.add(e), u.Z.updateOverlayState(e, c.mM.WAITING_FOR_OVERLAY_OPEN);
+function Z(e) {
+    if ((null == L || L.trackGame(e), F(e), !R.has(e))) R.add(e), u.Z.updateOverlayState(e, c.mM.WAITING_FOR_OVERLAY_OPEN);
 }
 function V(e) {
     null == L || L.untrackGame(e), R.delete(e), C.verbose('Removing tracked game '.concat(e));
@@ -102,7 +102,7 @@ function Y() {
             .map((e) => e.pid)
     );
     for (let n of new Set([...R].filter((n) => !e.has(n)))) V(n);
-    for (let e of R) F(e);
+    for (let e of R) Z(e);
 }
 function W(e) {
     null == L || L.setInteractionEnabled(!e);
@@ -213,7 +213,7 @@ function er(e) {}
 function ei(e) {}
 function ea(e) {}
 function es(e) {
-    C.verbose('Updating OverlayMethod', e), e.overlayMethod === c.gl.OutOfProcess ? F(e.pid) : V(e.pid);
+    C.verbose('Updating OverlayMethod', e), e.overlayMethod === c.gl.OutOfProcess ? Z(e.pid) : V(e.pid);
 }
 function eo() {
     C.verbose('Maybe Enable Overlay'), H() ? en(I.v.enabled, I.v.global) : x && ((x = !1), (0, v.vR)(!1));

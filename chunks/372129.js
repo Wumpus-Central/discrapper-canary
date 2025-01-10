@@ -77,15 +77,15 @@ t.Z = (e) => {
         f = r.useRef(null),
         [C, v] = r.useState(!1);
     r.useEffect(() => {
-        C && N();
+        C && I();
     }, [C]);
-    let N = () => {
+    let I = () => {
             null !== f.current && ((0, l.closeModal)(f.current), (f.current = null));
         },
-        _ = async (e) => {
+        N = async (e) => {
             null == x || x(!0), await u(e, t), v(!0), null == x || x(!1);
         },
-        I = async (e) => {
+        _ = async (e) => {
             var t, r, s;
             if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (s = e.currentTarget) || void 0 === s ? void 0 : null === (r = s.files) || void 0 === r ? void 0 : r.length) === 0)) return;
             let a = e.currentTarget.files;
@@ -93,13 +93,13 @@ t.Z = (e) => {
                 let { default: e } = await n.e('16169').then(n.bind(n, 935333));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        processFiles: () => _(a),
+                        processFiles: () => N(a),
                         ...t
                     });
             });
         };
     return (0, i.jsx)(s.Z, {
-        onChange: I,
+        onChange: _,
         filters: null != g ? g : (0, a.Zj)(),
         multiple: o,
         disabled: c,

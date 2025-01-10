@@ -150,19 +150,19 @@ function G(e) {
     let { context: n, userId: r } = e;
     r !== h.default.getId() && P(n, r, p.Z.isLocalMute(r, n));
 }
-function Z(e) {
+function F(e) {
     let { context: n, userId: r } = e;
     r !== h.default.getId() && M(n, r, _.Z.isLocalSoundboardMuted(r));
 }
-class F extends c.Z {
+class Z extends c.Z {
     constructor(...e) {
         super(...e),
             T(this, 'actions', {
                 POST_CONNECTION_OPEN: L,
                 AUDIO_SET_LOCAL_VOLUME: B,
                 AUDIO_TOGGLE_LOCAL_MUTE: G,
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: Z
+                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F
             });
     }
 }
-n.Z = new F();
+n.Z = new Z();

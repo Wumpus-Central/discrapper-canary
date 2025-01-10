@@ -173,7 +173,7 @@ function B(e) {
 function G(e) {
     return e.replace(N, (e, n) => q(n, e));
 }
-function Z(e) {
+function F(e) {
     let n = v[e];
     return null != n
         ? {
@@ -186,7 +186,7 @@ function Z(e) {
               text: e
           };
 }
-let F = String.fromCodePoint(917631),
+let Z = String.fromCodePoint(917631),
     V = String.fromCodePoint(127988),
     j = /^[\u{E0061}-\u{E007A}]$/u;
 function H(e, n) {
@@ -204,16 +204,16 @@ function H(e, n) {
     for (let e = 0; e < s.length; e++) {
         let n = s[e];
         if (null != i && '' !== i) {
-            if (n === F) (n = i + n), (i = '');
+            if (n === Z) (n = i + n), (i = '');
             else if (j.test(n)) {
                 i += n;
                 continue;
-            } else a.push(Z(i)), (i = '');
+            } else a.push(F(i)), (i = '');
         } else if (n === V) {
             i = n;
             continue;
         }
-        let r = Z(n);
+        let r = F(n);
         if (a.length > 0) {
             let e = a[a.length - 1];
             if ('text' === r.type && 'text' === e.type) {
@@ -223,7 +223,7 @@ function H(e, n) {
         }
         a.push(r);
     }
-    return null != i && '' !== i && a.push(Z(i)), a;
+    return null != i && '' !== i && a.push(F(i)), a;
 }
 function Y(e) {
     return H(e)

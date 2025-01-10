@@ -44,12 +44,12 @@ function p(e) {
             },
             [x.id, t.id]
         ),
-        N = (0, o.pM)(t.id, x.id),
-        _ = (0, u.Z)(x);
+        I = (0, o.pM)(t.id, x.id),
+        N = (0, u.Z)(x);
     r.useEffect(() => {
-        N && f(m.ZI.PERMISSIONS);
-    }, [N, f]);
-    let I = (0, c.useHasGuildRoleItems)(t, x);
+        I && f(m.ZI.PERMISSIONS);
+    }, [I, f]);
+    let _ = (0, c.useHasGuildRoleItems)(t, x);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -61,7 +61,7 @@ function p(e) {
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.BUdGkJ, { roleName: x.name })
                     }),
-                    I
+                    _
                         ? (0, i.jsx)(s.Clickable, {
                               className: g.menu,
                               onClick: function (e) {
@@ -84,10 +84,10 @@ function p(e) {
                         : null
                 ]
             }),
-            null != _
+            null != N
                 ? (0, i.jsx)(s.HelpMessage, {
                       messageType: s.HelpMessageTypes.WARNING,
-                      children: _
+                      children: N
                   })
                 : null,
             (0, i.jsxs)(s.TabBar, {
@@ -101,7 +101,7 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.DISPLAY,
-                        disabled: N,
+                        disabled: I,
                         children: h.intl.string(h.t.hmdom5)
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
@@ -112,14 +112,14 @@ function p(e) {
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
-                        disabled: N,
+                        disabled: I,
                         children: h.intl.string(h.t['5//Mur'])
                     }),
                     (0, i.jsx)(s.TabBar.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
-                        disabled: N,
-                        children: N ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(v) })
+                        disabled: I,
+                        children: I ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(v) })
                     })
                 ]
             })

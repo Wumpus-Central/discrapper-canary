@@ -40,9 +40,9 @@ function p(e) {
     var t;
     let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
         v = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
-        { interests: N, description: _, playstyle: I, wildcardDescriptors: T, brandPrimaryColor: j } = l,
+        { interests: I, description: N, playstyle: _, wildcardDescriptors: T, brandPrimaryColor: j } = l,
         b = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
-        E = Array.from(N),
+        E = Array.from(I),
         S = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
     return (0, i.jsxs)('div', {
         children: [
@@ -72,7 +72,7 @@ function p(e) {
                                 variant: 'text-xs/normal',
                                 color: 'text-secondary',
                                 className: g.clanInfoItem,
-                                children: null !== (t = (0, m.mv)(I)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
+                                children: null !== (t = (0, m.mv)(_)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
                             }),
                             null != v &&
                                 (0, i.jsx)(d.cS, {
@@ -85,7 +85,7 @@ function p(e) {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
                         className: g.descriptionText,
-                        children: (null == _ ? void 0 : _.length) > 0 ? _ : h.intl.string(h.t['/pfXKi'])
+                        children: (null == N ? void 0 : N.length) > 0 ? N : h.intl.string(h.t['/pfXKi'])
                     })
                 ]
             }),

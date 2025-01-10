@@ -37,8 +37,8 @@ let O = 'text-sm/medium',
     M = 150,
     k = 300;
 function U(e) {
-    let { user: n, guildId: i, channelId: o, profileType: U, hasEntered: B = !0, animate: G = !0, onCloseProfile: Z } = e,
-        F = (0, c.e7)([v.default], () => v.default.getId() === n.id),
+    let { user: n, guildId: i, channelId: o, profileType: U, hasEntered: B = !0, animate: G = !0, onCloseProfile: F } = e,
+        Z = (0, c.e7)([v.default], () => v.default.getId() === n.id),
         V = (0, g.Z)(n.id),
         { analyticsLocations: j } = (0, m.ZP)(p.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: H } = (0, I.KZ)(),
@@ -63,8 +63,8 @@ function U(e) {
         e_ = ed === N.n_.STATUS && ec === N.P.REACT,
         eh = ed === N.n_.STATUS && ec === N.P.REPLY,
         ep = e_ || eh,
-        em = F && !eu,
-        eg = F && eu,
+        em = Z && !eu,
+        eg = Z && eu,
         [eE, ev] = s.useState(ei),
         [eI, eT] = s.useState(!ei),
         [eb, ey] = s.useState(!1),
@@ -168,7 +168,7 @@ function U(e) {
             }),
         eP = () => {
             H({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
-                null == Z || Z(),
+                null == F || F(),
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await r.e('51714').then(r.bind(r, 211065));
                     return (n) =>
@@ -190,13 +190,13 @@ function U(e) {
             [R.statusBubbleSingleLineWithTextShape]: (eE && en) || em
         }),
         eG = l()(R.statusBubbleOuter, eM, eB, { [R.statusBubbleOuterAddStatusCursor]: em }),
-        eZ = l()(R.statusBubble, eB, {
+        eF = l()(R.statusBubble, eB, {
             [R.statusBubbleEmojiOnlyPadding]: ei,
             [R.statusBubbleWithTextPadding]: en || em,
             [R.statusBubbleWithTextMinWidth]: en,
             [R.statusBubbleCopyStatusCursor]: eu
         }),
-        eF = () => {
+        eZ = () => {
             if (er) {
                 let e = null != $.id ? '`' + ':'.concat($.name, ':') + '`' : E.ZP.translateSurrogatesToInlineEmoji($.name);
                 return ei ? ''.concat(e) : ''.concat(e, ' ').concat(ee);
@@ -212,7 +212,7 @@ function U(e) {
                 children: (0, a.jsx)('div', {
                     className: eG,
                     children: (0, a.jsx)('span', {
-                        className: eZ,
+                        className: eF,
                         children: (0, a.jsxs)('div', {
                             className: R.content,
                             children: [
@@ -232,7 +232,7 @@ function U(e) {
             }),
         ej = () => {
             let e = (0, a.jsxs)('span', {
-                className: eZ,
+                className: eF,
                 children: [eu && ex(), eu && ew()]
             });
             return (0, a.jsxs)('div', {
@@ -280,7 +280,7 @@ function U(e) {
                         (0, a.jsx)('div', {
                             className: eG,
                             children: (0, a.jsx)('span', {
-                                className: eZ,
+                                className: eF,
                                 children: eu && eL()
                             })
                         }),
@@ -288,7 +288,7 @@ function U(e) {
                             ? (0, a.jsx)(A.Z, {
                                   isVisible: eb,
                                   isExpandable: eI,
-                                  onCloseProfile: Z
+                                  onCloseProfile: F
                               })
                             : (0, a.jsx)(y.ZP, {
                                   user: n,
@@ -313,7 +313,7 @@ function U(e) {
                           guildId: i,
                           channelId: o,
                           profileType: U,
-                          sourceDetails: eF(),
+                          sourceDetails: eZ(),
                           sourceType: N.n_.STATUS,
                           onAction: H,
                           onClose: () => {

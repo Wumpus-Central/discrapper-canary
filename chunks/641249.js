@@ -23,9 +23,9 @@ function p() {
         [p, f] = c.XZ(e, t),
         C = (0, d.Z)(t, e),
         { setCurrentTab: v } = (0, h.dw)(),
-        N = () => v(h.ue.EMOJIS),
-        _ = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
-        I = null == _ ? void 0 : _.getMaxRoleSubscriptionEmojiSlots();
+        I = () => v(h.ue.EMOJIS),
+        N = (0, r.e7)([s.Z], () => s.Z.getGuild(t)),
+        _ = null == N ? void 0 : N.getMaxRoleSubscriptionEmojiSlots();
     function T(e) {
         null == p ? f(new Set(e)) : f(new Set([...p, ...e]));
     }
@@ -42,7 +42,7 @@ function p() {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
                 disabled: b,
-                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: I }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: N })]
+                children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: _ }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: I })]
             }),
             (0, i.jsx)(m.E, {
                 tierEmojiIds: p,
@@ -74,7 +74,7 @@ function p() {
                                 initialTierEmojiIds: p,
                                 onSubmit: T,
                                 transitionToManageEmoji: () => {
-                                    N(), n.onClose();
+                                    I(), n.onClose();
                                 }
                             });
                     });

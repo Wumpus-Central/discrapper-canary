@@ -57,7 +57,7 @@ function P(e) {
     let { type: I, disabled: A, channel: N, handleSubmit: C, isEmpty: P, showAllButtons: k, children: U } = e,
         B = (0, u.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
         G = M(N.id, I, P),
-        { activeCommand: Z, activeCommandOption: F } = (0, u.cj)([f.Z], () => ({
+        { activeCommand: F, activeCommandOption: Z } = (0, u.cj)([f.Z], () => ({
             activeCommand: f.Z.getActiveCommand(N.id),
             activeCommandOption: f.Z.getActiveOption(N.id)
         })),
@@ -83,7 +83,7 @@ function P(e) {
     return (!l.tq &&
         (N.isDM() &&
             (null === (o = I.gifts) || void 0 === o ? void 0 : o.button) != null &&
-            null == Z &&
+            null == F &&
             (b.ZP.isPremiumExactly(Y, L.p9.TIER_2) && Q && g.Z.trackExposure({ location: 'dc120b_5' }),
             q &&
                 j.push(
@@ -99,7 +99,7 @@ function P(e) {
                     )
                 )),
         (null === (m = I.gifts) || void 0 === m ? void 0 : m.button) != null &&
-            null == Z &&
+            null == F &&
             !V &&
             (null == z || b.ZP.isPremiumEligible(z)) &&
             j.push(
@@ -113,7 +113,7 @@ function P(e) {
                 )
             ),
         (null === (E = I.gifs) || void 0 === E ? void 0 : E.button) != null &&
-            null == Z &&
+            null == F &&
             k &&
             j.push(
                 (0, s.jsx)(
@@ -126,7 +126,7 @@ function P(e) {
                 )
             ),
         (null === (v = I.stickers) || void 0 === v ? void 0 : v.button) != null &&
-            null == Z &&
+            null == F &&
             k &&
             j.push(
                 (0, s.jsx)(
@@ -139,7 +139,7 @@ function P(e) {
                 )
             )),
     (null === (n = I.emojis) || void 0 === n ? void 0 : n.button) != null &&
-        (null == Z || (null != F && F.type !== c.jw.ATTACHMENT)) &&
+        (null == F || (null != Z && Z.type !== c.jw.ATTACHMENT)) &&
         j.push(
             (0, s.jsx)(
                 y.Z,

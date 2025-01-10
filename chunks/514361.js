@@ -79,7 +79,7 @@ function B() {
 let G = () => {
         R = !T.ZP.canUseClientThemes(I.default.getCurrentUser());
     },
-    Z = () => {
+    F = () => {
         let e = m.L1.getSetting().backgroundGradientPresetId;
         if (f.Z.shouldSync('appearance')) {
             if (null == e) {
@@ -89,7 +89,7 @@ let G = () => {
             i = S.qt[e];
         }
     },
-    F = () => {
+    Z = () => {
         if (!f.Z.shouldSync('appearance')) return;
         let e = m.L1.getSetting().backgroundGradientPresetId;
         if ((p.ZP.useSystemTheme === A.K.ON && null != e && (0, _.hi)(A.K.OFF), null == e)) {
@@ -102,7 +102,7 @@ let G = () => {
     };
 class V extends (s = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? S.qt[e.gradientPresetId] : void 0), this.waitFor(I.default, h.Z, v.Z, f.Z, g.Z), this.syncWith([I.default], G), this.syncWith([f.Z], Z), this.syncWith([g.Z], F);
+        null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? S.qt[e.gradientPresetId] : void 0), this.waitFor(I.default, h.Z, v.Z, f.Z, g.Z), this.syncWith([I.default], G), this.syncWith([f.Z], F), this.syncWith([g.Z], Z);
     }
     getState() {
         return R ? {} : { gradientPresetId: null == i ? void 0 : i.id };

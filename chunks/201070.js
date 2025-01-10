@@ -181,7 +181,7 @@ function G(e) {
         { selectedSort: E } = e;
     return null != E && (m.sort = E), m;
 }
-function Z(e, n) {
+function F(e, n) {
     return null == n
         ? e
         : {
@@ -189,7 +189,7 @@ function Z(e, n) {
               ...n
           };
 }
-function F(e, n) {
+function Z(e, n) {
     return Math.floor(Math.max(e - 1, 0) / n);
 }
 function V(e) {
@@ -198,9 +198,9 @@ function V(e) {
         i = e.pageSize * e.currentPage,
         a = e.pageSize * (e.currentPage + 1);
     return {
-        previousPageChunkNumber: F(r, n),
-        currentPageChunkNumber: F(i, n),
-        nextPageChunkNumber: F(a, n)
+        previousPageChunkNumber: Z(r, n),
+        currentPageChunkNumber: Z(i, n),
+        nextPageChunkNumber: Z(a, n)
     };
 }
 function j(e, n) {
@@ -272,7 +272,7 @@ async function W(e) {
         o = N(e),
         l = L(o),
         [u, d] = H(e, l, s),
-        f = Z(G(a), d),
+        f = F(G(a), d),
         _ = null !== (n = a.selectedSort) && void 0 !== n ? n : I.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (Y(o, f) && (0, c.isEqual)(u, l.cursor)) return;
     let h = w(o, f, u, s, _);

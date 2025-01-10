@@ -20,10 +20,10 @@ var i,
     f = n(755930),
     C = n(334820),
     v = n(198139),
-    N = n(388032),
-    _ = n(927332);
+    I = n(388032),
+    N = n(927332);
 ((i = r || (r = {})).DROPDOWN = 'DROPDOWN'), (i.PERIOD = 'PERIOD'), (i.AMOUNT = 'AMOUNT '), (i.STATUS = 'STATUS ');
-let I = (e) => {
+let _ = (e) => {
     let { dateUtc: t } = e;
     return (0, l.jsx)(u.Text, {
         variant: 'text-md/medium',
@@ -39,16 +39,16 @@ function T(e) {
     switch (n) {
         case v.x_.OPEN:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? N.intl.formatToPlainString(N.t.I6YOjY, { payoutDate: o }) : N.intl.string(N.t.G5ATX1), (0, l.jsx)(g.Z, { className: _.statusScheduledIcon })]
+                children: [null != o ? I.intl.formatToPlainString(I.t.I6YOjY, { payoutDate: o }) : I.intl.string(I.t.G5ATX1), (0, l.jsx)(g.Z, { className: N.statusScheduledIcon })]
             });
         case v.x_.CANCELED:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    N.intl.string(N.t['0SrNPz']),
+                    I.intl.string(I.t['0SrNPz']),
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: _.statusErrorIcon
+                        className: N.statusErrorIcon
                     })
                 ]
             });
@@ -56,16 +56,16 @@ function T(e) {
             if ((null == r ? void 0 : r.includes(v.XL.PAYOUT_SEIZED)) === !0)
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
-                        N.intl.string(N.t['0SrNPz']),
+                        I.intl.string(I.t['0SrNPz']),
                         (0, l.jsx)(u.CircleXIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: _.statusErrorIcon
+                            className: N.statusErrorIcon
                         })
                     ]
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [N.intl.string(N.t.OtZ5k5), (0, l.jsx)(x.Z, { className: _.statusDeferredIcon })]
+                children: [I.intl.string(I.t.OtZ5k5), (0, l.jsx)(x.Z, { className: N.statusDeferredIcon })]
             });
     }
     switch (i) {
@@ -78,16 +78,16 @@ function T(e) {
         case v.jw.CANCELED:
         case v.jw.ERROR:
             return (0, l.jsxs)(l.Fragment, {
-                children: [null != o ? N.intl.formatToPlainString(N.t.I6YOjY, { payoutDate: o }) : N.intl.string(N.t.ubdQTk), (0, l.jsx)(g.Z, { className: _.statusScheduledIcon })]
+                children: [null != o ? I.intl.formatToPlainString(I.t.I6YOjY, { payoutDate: o }) : I.intl.string(I.t.ubdQTk), (0, l.jsx)(g.Z, { className: N.statusScheduledIcon })]
             });
         case v.jw.PAID:
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    N.intl.string(N.t.eoSslJ),
+                    I.intl.string(I.t.eoSslJ),
                     (0, l.jsx)(u.CircleCheckIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: _.statusPaidIcon
+                        className: N.statusPaidIcon
                     })
                 ]
             });
@@ -101,7 +101,7 @@ function T(e) {
                     (0, l.jsx)(u.CircleXIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: _.statusErrorIcon
+                        className: N.statusErrorIcon
                     })
                 ]
             });
@@ -110,20 +110,20 @@ function T(e) {
 }
 let j = (0, f.i$)({
         key: 'AMOUNT ',
-        cellClassName: _.amountColumn,
+        cellClassName: N.amountColumn,
         renderHeader() {
             let e = (0, l.jsx)(u.Tooltip, {
-                text: N.intl.string(N.t.q3PkLy),
+                text: I.intl.string(I.t.q3PkLy),
                 children: (e) =>
                     (0, l.jsx)(u.CircleInformationIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: _.amountDisclaimer,
+                        className: N.amountDisclaimer,
                         ...e
                     })
             });
             return (0, l.jsxs)(f.qN, {
-                children: [N.intl.string(N.t.VodAGR), e]
+                children: [I.intl.string(I.t.VodAGR), e]
             });
         },
         getAmount: (e) => e.amount
@@ -132,9 +132,9 @@ let j = (0, f.i$)({
         [
             (0, C.Fd)({
                 key: 'PERIOD',
-                cellClassName: _.periodColumn,
-                renderHeader: () => (0, l.jsx)(f.qN, { children: N.intl.string(N.t.fThnXV) }),
-                renderContent: (e) => (0, l.jsx)(I, { dateUtc: e.periodStartingAt }),
+                cellClassName: N.periodColumn,
+                renderHeader: () => (0, l.jsx)(f.qN, { children: I.intl.string(I.t.fThnXV) }),
+                renderContent: (e) => (0, l.jsx)(_, { dateUtc: e.periodStartingAt }),
                 renderExpandedContent(e, t) {
                     o()(null != t, 'CellProps should always be provided');
                     let { ListingIdLabel: n } = t;
@@ -148,25 +148,25 @@ let j = (0, f.i$)({
             }),
             (0, f.wy)({
                 key: 'STATUS ',
-                cellClassName: _.statusColumn,
+                cellClassName: N.statusColumn,
                 renderHeader() {
                     let e = (0, l.jsx)(u.Tooltip, {
-                        text: N.intl.string(N.t.cIGvZG),
+                        text: I.intl.string(I.t.cIGvZG),
                         children: (e) =>
                             (0, l.jsx)(u.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: _.statusDisclaimer,
+                                className: N.statusDisclaimer,
                                 ...e
                             })
                     });
                     return (0, l.jsxs)(f.qN, {
-                        children: [N.intl.string(N.t.oypxx8), e]
+                        children: [I.intl.string(I.t.oypxx8), e]
                     });
                 },
                 renderContent: (e) =>
                     (0, l.jsx)(f.bL, {
-                        className: _.statusCell,
+                        className: N.statusCell,
                         children: (0, l.jsx)(T, { item: e })
                     })
             })

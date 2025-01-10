@@ -14,8 +14,8 @@ t.Z = function (e) {
         x = r.useMemo(() => new a.Xp(), []),
         [p, f] = r.useState(d.n.LEFT),
         [C, v] = r.useState(0),
-        [N, _] = r.useState(!1),
-        [I, T] = r.useState(!1),
+        [I, N] = r.useState(!1),
+        [_, T] = r.useState(!1),
         j = r.useCallback(
             (e, t) => {
                 v((n) => {
@@ -26,25 +26,25 @@ t.Z = function (e) {
             [v]
         ),
         b = r.useCallback(() => {
-            if (!I) j(t, 1);
-        }, [j, t, I]),
+            if (!_) j(t, 1);
+        }, [j, t, _]),
         E = r.useCallback(() => {
-            if (!I) j(t, -1);
-        }, [j, t, I]);
+            if (!_) j(t, -1);
+        }, [j, t, _]);
     return (
         r.useEffect(() => {
-            null != h && (N ? N && x.stop() : x.start(h, b));
-        }, [N, x, h, b]),
+            null != h && (I ? I && x.stop() : x.start(h, b));
+        }, [I, x, h, b]),
         (0, i.jsxs)('div', {
             className: m.root,
-            onMouseEnter: () => _(!0),
-            onMouseLeave: () => _(!1),
+            onMouseEnter: () => N(!0),
+            onMouseLeave: () => N(!1),
             children: [
                 (0, i.jsx)(o.Clickable, {
                     className: s()(m.carouselCaret, l),
                     onClick: E,
                     onMouseEnter: () => f(d.n.RIGHT),
-                    ignoreKeyPress: I,
+                    ignoreKeyPress: _,
                     children: (0, i.jsx)(c.Z, {
                         direction: c.Z.Directions.LEFT,
                         height: 48,
@@ -64,7 +64,7 @@ t.Z = function (e) {
                     className: s()(m.carouselCaret, l),
                     onClick: b,
                     onMouseEnter: () => f(d.n.LEFT),
-                    ignoreKeyPress: I,
+                    ignoreKeyPress: _,
                     children: (0, i.jsx)(c.Z, {
                         direction: c.Z.Directions.RIGHT,
                         height: 48,

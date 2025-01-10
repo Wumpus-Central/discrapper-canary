@@ -16,9 +16,9 @@ var i = n(200651),
     f = n(594174),
     C = n(434404),
     v = n(999382),
-    N = n(981631),
-    _ = n(388032),
-    I = n(359963);
+    I = n(981631),
+    N = n(388032),
+    _ = n(359963);
 function T(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function T(e, t, n) {
     );
 }
 let j = 'NO_INSTANT_INVITE',
-    b = a.$e(N.Plq.VIEW_CHANNEL, N.Plq.CREATE_INSTANT_INVITE);
+    b = a.$e(I.Plq.VIEW_CHANNEL, I.Plq.CREATE_INSTANT_INVITE);
 class E extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
@@ -68,20 +68,20 @@ class E extends r.PureComponent {
         return (
             r.unshift({
                 value: j,
-                label: _.intl.string(_.t.u197b2)
+                label: N.intl.string(N.t.u197b2)
             }),
             (0, i.jsxs)(c.FormItem, {
-                title: _.intl.string(_.t.LUo0Q0),
+                title: N.intl.string(N.t.LUo0Q0),
                 children: [
                     (0, i.jsx)(c.SingleSelect, {
-                        className: I.spacing,
+                        className: _.spacing,
                         options: r,
                         value: t,
                         onChange: this.handleChannelSelect
                     }),
                     (0, i.jsx)(c.FormText, {
                         type: c.FormTextTypes.DESCRIPTION,
-                        children: _.intl.string(_.t.LxVR9P)
+                        children: N.intl.string(N.t.LxVR9P)
                     })
                 ]
             })
@@ -90,16 +90,16 @@ class E extends r.PureComponent {
     renderAPIInfo(e) {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/').concat(e.id, '/widget.json');
         return (0, i.jsxs)('div', {
-            className: I.infoWrapper,
+            className: _.infoWrapper,
             children: [
                 (0, i.jsx)(c.FormItem, {
-                    title: _.intl.string(_.t.TRyLUl),
-                    className: I.infoItem,
+                    title: N.intl.string(N.t.TRyLUl),
+                    className: _.infoItem,
                     children: (0, i.jsx)(u.Z, { value: e.id })
                 }),
                 (0, i.jsx)(c.FormItem, {
-                    title: _.intl.string(_.t.VECJcH),
-                    className: I.infoItem,
+                    title: N.intl.string(N.t.VECJcH),
+                    className: _.infoItem,
                     children: (0, i.jsx)(u.Z, { value: t })
                 })
             ]
@@ -109,21 +109,21 @@ class E extends r.PureComponent {
         let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.WIDGET_ENDPOINT, '?id=').concat(e.id, '&theme=dark');
         return (0, i.jsx)('div', {
             children: (0, i.jsxs)('div', {
-                className: I.infoWrapper,
+                className: _.infoWrapper,
                 children: [
                     (0, i.jsxs)(c.FormItem, {
-                        className: I.infoItem,
-                        title: _.intl.string(_.t.XVGbn5),
+                        className: _.infoItem,
+                        title: N.intl.string(N.t.XVGbn5),
                         children: [
                             (0, i.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
                             (0, i.jsx)(c.FormText, {
                                 type: c.FormTextTypes.DESCRIPTION,
-                                children: _.intl.format(_.t['+baN19'], {})
+                                children: N.intl.format(N.t['+baN19'], {})
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
-                        className: I.infoItem,
+                        className: _.infoItem,
                         'data-accessibility': 'desaturate',
                         alt: '',
                         src: n(329488)
@@ -140,8 +140,8 @@ class E extends r.PureComponent {
               ? (0, i.jsx)(d.Z, {})
               : (0, i.jsxs)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
-                    title: _.intl.string(_.t.qlhNb2),
-                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: I.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: I.divider }), this.renderWidget(e)]
+                    title: N.intl.string(N.t.qlhNb2),
+                    children: [this.renderToggle(), this.renderChannelSelect(e), (0, i.jsx)(c.FormDivider, { className: _.divider }), this.renderAPIInfo(e), (0, i.jsx)(c.FormDivider, { className: _.divider }), this.renderWidget(e)]
                 });
     }
     constructor(...e) {
@@ -152,10 +152,10 @@ class E extends r.PureComponent {
             }),
             T(this, 'renderToggle', () =>
                 (0, i.jsx)(c.FormSwitch, {
-                    className: I.spacing,
+                    className: _.spacing,
                     value: this.state.internalEnabled,
                     onChange: this.handleToggleWidget,
-                    children: _.intl.string(_.t.NR6hub)
+                    children: N.intl.string(N.t.NR6hub)
                 })
             ),
             T(this, 'handleToggleWidget', (e) => {

@@ -31,11 +31,11 @@ t.Z = (e) => {
                 t
             )
         ),
-        N = r.useCallback(() => {
+        I = r.useCallback(() => {
             let e = f.trim();
             if (0 !== e.length) (null == h || !(n.length >= h)) && (u(e), C(''));
         }, [f, h, u, n.length]),
-        _ = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 switch (e.keyCode) {
                     case o.yXg.BACKSPACE:
@@ -44,10 +44,10 @@ t.Z = (e) => {
                     case o.yXg.ENTER:
                     case o.yXg.TAB:
                     case o.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), N();
+                        e.preventDefault(), e.stopPropagation(), I();
                 }
             },
-            [N, f.length, d, n.length]
+            [I, f.length, d, n.length]
         );
     return (0, i.jsxs)('div', {
         className: s()(t, c.inputWrapper, { [c.disabled]: g }),
@@ -58,11 +58,11 @@ t.Z = (e) => {
                 inputClassName: c.inputInner,
                 ...p,
                 value: f,
-                onKeyDown: _,
+                onKeyDown: N,
                 onChange: C,
                 maxLength: m,
                 disabled: g,
-                onBlur: N,
+                onBlur: I,
                 placeholder: x
             })
         ]

@@ -34,8 +34,8 @@ var i,
     U = 13,
     B = 14,
     G = 15,
-    Z = 16,
-    F = 17,
+    F = 16,
+    Z = 17,
     V = 18,
     j = 19,
     H = 20,
@@ -258,7 +258,7 @@ function em(e, n) {
                         }
                         break;
                     case 2:
-                        r.mode = F;
+                        r.mode = Z;
                         break;
                     case 3:
                         (e.msg = 'invalid block type'), (r.mode = ee);
@@ -276,8 +276,8 @@ function em(e, n) {
                 }
                 if (((r.length = 65535 & eo), (eo = 0), (el = 0), (r.mode = G), n === m)) break r;
             case G:
-                r.mode = Z;
-            case Z:
+                r.mode = F;
+            case F:
                 if ((ed = r.length)) {
                     if ((ed > ei && (ed = ei), ed > ea && (ed = ea), 0 === ed)) break r;
                     s.arraySet(a, i, en, ed, er), (ei -= ed), (en += ed), (ea -= ed), (er += ed), (r.length -= ed);
@@ -285,7 +285,7 @@ function em(e, n) {
                 }
                 r.mode = k;
                 break;
-            case F:
+            case Z:
                 for (; el < 14; ) {
                     if (0 === ei) break r;
                     ei--, (eo += i[en++] << el), (el += 8);

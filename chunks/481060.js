@@ -730,13 +730,13 @@ r.r(n),
             return G.$;
         },
         FormErrorBlock: function () {
-            return Z.k;
+            return F.k;
         },
         FormErrorBlockColors: function () {
-            return Z.m;
+            return F.m;
         },
         FormItem: function () {
-            return F.x;
+            return Z.x;
         },
         FormLabel: function () {
             return V.l;
@@ -907,7 +907,7 @@ r.r(n),
             return tI.G2;
         },
         IconSelectOption: function () {
-            return eZ.Z;
+            return eF.Z;
         },
         IdIcon: function () {
             return tO.VuL;
@@ -1552,7 +1552,7 @@ r.r(n),
             return eB.Ph;
         },
         SelectLooks: function () {
-            return eF.q;
+            return eZ.q;
         },
         SendMessageIcon: function () {
             return tO.Uuj;
@@ -2343,15 +2343,15 @@ var i = r(680732),
     D = r(799151),
     L = r(206557),
     x = r(79320),
-    w = r(66597),
+    w = r(411734),
     P = r(287235),
     M = r(597442),
     k = r(84735),
     U = r(347016),
     B = r(15127),
     G = r(770102),
-    Z = r(434333),
-    F = r(540863),
+    F = r(434333),
+    Z = r(540863),
     V = r(722187),
     j = r(383838),
     H = r(789164),
@@ -2404,8 +2404,8 @@ var i = r(680732),
     eU = r(189283),
     eB = r(619307),
     eG = r(921349),
-    eZ = r(119757),
-    eF = r(748585),
+    eF = r(119757),
+    eZ = r(748585),
     eV = r(263953),
     ej = r(503145),
     eH = r(936621),

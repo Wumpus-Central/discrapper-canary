@@ -80,11 +80,11 @@ function G(e) {
     let { entitlements: n } = e;
     for (let e of n) O(e);
 }
-function Z(e) {
+function F(e) {
     let { libraryApplications: n } = e;
     for (let e of n) if (null != e.entitlements) for (let n of e.entitlements) O(n);
 }
-function F(e) {
+function Z(e) {
     return O(e.entitlement);
 }
 function V(e) {
@@ -189,9 +189,9 @@ E(j, 'displayName', 'EntitlementStore'),
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: P,
         SKU_PURCHASE_SUCCESS: G,
         VIRTUAL_CURRENCY_REDEEM_SUCCESS: G,
-        LIBRARY_FETCH_SUCCESS: Z,
-        ENTITLEMENT_CREATE: F,
-        ENTITLEMENT_UPDATE: F,
+        LIBRARY_FETCH_SUCCESS: F,
+        ENTITLEMENT_CREATE: Z,
+        ENTITLEMENT_UPDATE: Z,
         ENTITLEMENT_DELETE: V,
         LOGOUT: R,
         ENTITLEMENTS_FETCH_FOR_USER_START: k,

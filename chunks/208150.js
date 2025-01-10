@@ -16,47 +16,47 @@ var r = n(442837),
     f = n(981631),
     C = n(611480),
     v = n(388032),
-    N = n(64462);
-let _ = {
+    I = n(64462);
+let N = {
         page: f.ZY5.GUILD_SETTINGS,
         section: f.jXE.GUILD_SETTINGS_STICKERS,
         object: f.qAy.BOOSTING_BANNER
     },
-    I = (e) => {
+    _ = (e) => {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, a.ZP)(),
             r = (0, g.vn)(t.id)[f.Eu4.TIER_1] - t.premiumSubscriberCount;
         return (0, i.jsxs)('div', {
-            className: N.upsellContainer,
+            className: I.upsellContainer,
             children: [
                 (0, i.jsx)(l.Heading, {
-                    className: N.upsellHeader,
+                    className: I.upsellHeader,
                     variant: 'heading-xl/semibold',
                     children: v.intl.string(v.t.hzCkys)
                 }),
                 (0, i.jsx)(l.Text, {
-                    className: N.upsellDescription,
+                    className: I.upsellDescription,
                     variant: 'text-md/normal',
                     children: v.intl.string(v.t.jcesAA)
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.upsellButtons,
+                    className: I.upsellButtons,
                     children: [
                         (0, i.jsx)(l.Button, {
-                            className: N.upsellButtonPrimary,
-                            innerClassName: N.upsellButton,
+                            className: I.upsellButtonPrimary,
+                            innerClassName: I.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, d.Z)({
                                     analyticsLocations: n,
-                                    analyticsLocation: _,
+                                    analyticsLocation: N,
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: r
                                 }),
                             children: v.intl.string(v.t.Q5dbTk)
                         }),
                         (0, i.jsx)(l.Button, {
-                            innerClassName: N.upsellButton,
+                            innerClassName: I.upsellButton,
                             color: l.Button.Colors.WHITE,
                             onClick: () =>
                                 (0, o.f)({
@@ -145,8 +145,8 @@ t.Z = () => {
                               (0, i.jsx)(T, {})
                           ]
                       })
-                    : (0, i.jsx)(I, { guild: e }),
-                (0, i.jsx)(l.FormDivider, { className: N.divider }),
+                    : (0, i.jsx)(_, { guild: e }),
+                (0, i.jsx)(l.FormDivider, { className: I.divider }),
                 (0, i.jsx)(m.Z, { guild: e })
             ]
         })

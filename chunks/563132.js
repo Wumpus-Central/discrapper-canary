@@ -7,10 +7,10 @@ r.r(n),
             return V;
         },
         useForwardedPaymentContext: function () {
-            return F;
+            return Z;
         },
         usePaymentContext: function () {
-            return Z;
+            return F;
         }
     });
 var i = r(47120);
@@ -48,10 +48,10 @@ var u = r(772848),
     k = r(362755),
     U = r(981631),
     B = r(474936);
-let [G, Z, F] = (0, T.Z)();
+let [G, F, Z] = (0, T.Z)();
 function V(e) {
     var n, r, i;
-    let { loadId: a, activeSubscription: T, stepConfigs: Z, breadcrumbs: F = [], skuIDs: V, isGift: j = !1, children: H, defaultPlanId: Y, purchaseType: W = U.GZQ.SUBSCRIPTION, applicationId: K, referralCode: z, repeatPurchase: q = !1 } = e,
+    let { loadId: a, activeSubscription: T, stepConfigs: F, breadcrumbs: Z = [], skuIDs: V, isGift: j = !1, children: H, defaultPlanId: Y, purchaseType: W = U.GZQ.SUBSCRIPTION, applicationId: K, referralCode: z, repeatPurchase: q = !1 } = e,
         Q = (0, M.Z)(),
         X = (0, m.Q)(),
         J = (0, C.Z)(),
@@ -87,8 +87,8 @@ function V(e) {
             breadcrumbsData: em,
             previousStepRef: eg
         } = (0, P.Z)({
-            stepConfigs: Z,
-            breadcrumbs: F
+            stepConfigs: F,
+            breadcrumbs: Z
         }),
         [eE, ev] = (0, L.Z)(e_),
         { paymentError: eI, paymentAuthenticationState: eT } = (0, O.Z)(),
@@ -107,7 +107,7 @@ function V(e) {
         [ex, ew] = (0, c.Wu)([E.Z], () => [E.Z.purchaseTokenAuthState, E.Z.purchaseTokenHash]),
         [eP, eM, ek, eU] = (0, c.Wu)([k.Z], () => [k.Z.browserCheckoutState, k.Z.loadId, k.Z.skuId, k.Z.planId]),
         [eB, eG] = o.useState(null),
-        [eZ, eF] = o.useState(null),
+        [eF, eZ] = o.useState(null),
         [eV, ej] = o.useState(null),
         [eH, eY] = o.useState(null),
         [eW, eK] = o.useState(null),
@@ -180,7 +180,7 @@ function V(e) {
             step: e_,
             setStep: eh,
             steps: ep,
-            stepConfigs: Z,
+            stepConfigs: F,
             breadcrumbs: em,
             previousStepRef: eg,
             purchaseState: eE,
@@ -199,8 +199,8 @@ function V(e) {
             browserCheckoutStatePlanId: eU,
             bodyNode: eB,
             setBodyNode: eG,
-            footerNode: eZ,
-            setFooterNode: eF,
+            footerNode: eF,
+            setFooterNode: eZ,
             modalOverlayNode: eV,
             setModalOverlayNode: ej,
             selectedSkuId: eN,

@@ -29,13 +29,13 @@ function h(e) {
             [C]
         );
     if (null == f) return null;
-    let { headerText: N, descriptionText: _, icon: I } = f;
+    let { headerText: I, descriptionText: N, icon: _ } = f;
     return (0, i.jsxs)('div', {
         className: m.actionContainer,
         children: [
             (0, i.jsx)('div', {
                 className: m.actionIconContainer,
-                children: (0, i.jsx)(I, {
+                children: (0, i.jsx)(_, {
                     size: 'md',
                     color: 'currentColor',
                     className: m.actionIcon
@@ -46,12 +46,12 @@ function h(e) {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-sm/semibold',
-                        children: N
+                        children: I
                     }),
                     (0, i.jsx)(l.Text, {
                         color: 'interactive-normal',
                         variant: 'text-xs/medium',
-                        children: _
+                        children: N
                     }),
                     g &&
                         (0, i.jsxs)(l.Text, {

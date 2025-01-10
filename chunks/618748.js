@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return k;
     }
 });
 var i = n(200651);
@@ -21,9 +21,9 @@ var r = n(442837),
     f = n(730647),
     C = n(584825),
     v = n(723047),
-    N = n(303737),
-    _ = n(568074),
-    I = n(411667),
+    I = n(303737),
+    N = n(568074),
+    _ = n(411667),
     T = n(903773),
     j = n(822531),
     b = n(909656),
@@ -92,7 +92,7 @@ function M(e) {
         ];
     return (0, i.jsx)(E.Z, { children: m });
 }
-function k(e) {
+function P(e) {
     let { application: t } = e,
         { teams: n } = (0, h.Z)({ refreshOnDepChange: !1 }),
         r = n.find((e) => {
@@ -106,7 +106,7 @@ function k(e) {
           })
         : null;
 }
-function P(e) {
+function k(e) {
     let t,
         { guild: n, application: l } = e,
         s = (0, r.e7)([c.Z], () => c.Z.getProps().subsection),
@@ -142,9 +142,9 @@ function w(e) {
         { currentTab: h, setCurrentTab: C } = (0, R.dw)(),
         v = (0, f.f)(),
         T = (0, r.e7)([x.default], () => x.default.getCurrentUser()),
-        E = (0, _.Z)(n.id),
+        E = (0, N.Z)(n.id),
         L = n.isOwner(T),
-        P = () => {
+        k = () => {
             let e = g.Z.getRole(n.id, n.getEveryoneRoleId());
             if (null == e) return;
             o.Z.close();
@@ -155,7 +155,7 @@ function w(e) {
                 initialTab: 'role_subscriptions',
                 returnToSection: A.pNK.ROLE_SUBSCRIPTIONS
             }),
-                (0, N.be)(n.id),
+                (0, I.be)(n.id),
                 (0, m.uL)(A.Z5c.CHANNEL(n.id, Z.oC.ROLE_SUBSCRIPTIONS));
         };
     if (!v) return (0, i.jsx)(l.Spinner, {});
@@ -189,8 +189,8 @@ function w(e) {
                         type: l.FormText.Types.DESCRIPTION,
                         children: D.intl.string(D.t.KyGv0t)
                     }),
-                    (0, i.jsx)(I.Z, { guild: n }),
-                    c && (0, i.jsx)(k, { application: a }),
+                    (0, i.jsx)(_.Z, { guild: n }),
+                    c && (0, i.jsx)(P, { application: a }),
                     (0, i.jsxs)('div', {
                         className: O.tabBarContainer,
                         children: [
@@ -240,7 +240,7 @@ function w(e) {
                                                 disabled: E,
                                                 onMouseEnter: E ? t : void 0,
                                                 onMouseLeave: E ? n : void 0,
-                                                onClick: P,
+                                                onClick: k,
                                                 color: l.Button.Colors.PRIMARY,
                                                 size: l.Button.Sizes.SMALL,
                                                 grow: !E,

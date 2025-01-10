@@ -152,11 +152,11 @@ function G(e) {
     let n = m.Z.getGuild(e.id);
     null != n && null != e.stickers && (e.stickers.forEach((e) => w(e, !0, n)), O(n.id, e.stickers));
 }
-function Z(e) {
+function F(e) {
     let { guild: n } = e;
     if (!h.Z.isLurking(n.id)) G(n), 1 === T && null == n.stickers && null != n.stickerUpdates && (T = 0);
 }
-function F(e) {
+function Z(e) {
     var n;
     let { guild: r } = e;
     (null !== (n = R.get(r.id)) && void 0 !== n ? n : []).forEach((e) => {
@@ -263,8 +263,8 @@ I(Q, 'displayName', 'StickersStore'),
     (n.Z = new Q(u.Z, {
         BACKGROUND_SYNC: B,
         CONNECTION_OPEN: U,
-        GUILD_CREATE: Z,
-        GUILD_DELETE: F,
+        GUILD_CREATE: F,
+        GUILD_DELETE: Z,
         LOGOUT: V,
         STICKER_PACKS_FETCH_START: j,
         STICKER_PACKS_FETCH_SUCCESS: H,

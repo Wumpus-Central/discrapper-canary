@@ -167,12 +167,12 @@ function G(e) {
     if ((null === (n = r.store_listing) || void 0 === n ? void 0 : n.sku.application) == null) return !1;
     v(u.ZP.createFromServer(r.store_listing.sku.application));
 }
-function Z(e) {
+function F(e) {
     let { invite: n } = e;
     if (null == n.target_application) return !1;
     v(u.ZP.createFromServer(n.target_application));
 }
-function F(e) {
+function Z(e) {
     let { storeListing: n } = e;
     if (null == n.sku.application) return !1;
     v(u.ZP.createFromServer(n.sku.application));
@@ -278,10 +278,10 @@ c(Y, 'displayName', 'ApplicationStore'),
         GUILD_APPLICATIONS_FETCH_SUCCESS: k,
         BILLING_PAYMENTS_FETCH_SUCCESS: U,
         PAYMENT_UPDATE: B,
-        INVITE_RESOLVE_SUCCESS: Z,
+        INVITE_RESOLVE_SUCCESS: F,
         GIFT_CODE_RESOLVE_SUCCESS: G,
         LIBRARY_FETCH_SUCCESS: O,
-        STORE_LISTING_FETCH_SUCCESS: F,
+        STORE_LISTING_FETCH_SUCCESS: Z,
         LOAD_MESSAGES_SUCCESS: V,
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: L,
         USER_PROFILE_FETCH_SUCCESS: x,

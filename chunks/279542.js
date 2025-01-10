@@ -27,9 +27,9 @@ var i = n(200651),
     f = n(63063),
     C = n(78451),
     v = n(434404),
-    N = n(999382),
-    _ = n(181339),
-    I = n(193544),
+    I = n(999382),
+    N = n(181339),
+    _ = n(193544),
     T = n(981631),
     j = n(388032),
     b = n(686160);
@@ -73,7 +73,7 @@ function E(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(_.Z, {
                 changeTitle: j.intl.string(j.t.TxESJC),
                 value: null == a ? void 0 : a.value,
                 options: s,
@@ -126,7 +126,7 @@ function S(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(I.Z, {
+                    (0, i.jsx)(_.Z, {
                         changeTitle: j.intl.string(j.t['eBd+Ul']),
                         value: null == m ? void 0 : m.value,
                         options: u,
@@ -267,7 +267,7 @@ function A(e) {
         : null;
 }
 function Z() {
-    let { guild: e, mfaLevel: t } = (0, o.cj)([N.Z], () => N.Z.getProps(), []),
+    let { guild: e, mfaLevel: t } = (0, o.cj)([I.Z], () => I.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
         ? null
@@ -288,7 +288,7 @@ function Z() {
                     (0, i.jsx)(c.FormDivider, { className: b.divider }),
                     (0, i.jsx)('div', {
                         className: s()(b.setupContainer),
-                        children: (0, i.jsx)(_.w, { guild: e })
+                        children: (0, i.jsx)(N.w, { guild: e })
                     })
                 ]
             });

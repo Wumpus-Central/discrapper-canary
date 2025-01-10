@@ -21,13 +21,13 @@ var i = n(200651),
     f = n(984933),
     C = n(540457),
     v = n(681460),
-    N = n(592286),
-    _ = n(981631),
-    I = n(388032),
+    I = n(592286),
+    N = n(981631),
+    _ = n(388032),
     T = n(163537);
 let j = 'RULE';
 function b(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: _, isDragEnabled: b } = e,
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: u, onRuleReorder: p, isDropHovered: f, focused: C, onFocus: v, previewEnabled: N, isDragEnabled: b } = e,
         E = r.useRef(null),
         S = r.useRef(null),
         [{ textValue: R, richValue: y }, A] = r.useState((0, g.eK)(t.value)),
@@ -90,11 +90,11 @@ function b(e) {
                         textValue: R,
                         richValue: y,
                         channel: n,
-                        placeholder: I.intl.string(I.t['BRkD4+']),
+                        placeholder: _.intl.string(_.t['BRkD4+']),
                         focused: C,
                         onChange: (e, t, n) => {
                             let i = t;
-                            i.length > N.fn && (i = i.slice(0, N.fn)),
+                            i.length > I.fn && (i = i.slice(0, I.fn)),
                                 t !== i && ((t = i), (n = (0, g.JM)(i))),
                                 a(t),
                                 A({
@@ -103,9 +103,9 @@ function b(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: _,
-                        canMentionRoles: _,
-                        maxCharacterCount: N.fn,
+                        canMentionChannels: N,
+                        canMentionRoles: N,
+                        maxCharacterCount: I.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -143,14 +143,14 @@ function b(e) {
 function E(e) {
     let { rules: t, setRules: n, guild: l } = e,
         s = l.rulesChannelId,
-        a = l.hasFeature(_.oNc.PREVIEW_ENABLED),
+        a = l.hasFeature(N.oNc.PREVIEW_ENABLED),
         c = (0, u.e7)([p.Z], () => (null != s ? p.Z.getChannel(s) : null)),
         d = (0, u.e7)([f.ZP], () => f.ZP.getDefaultChannel(l.id)),
         [h, g] = r.useState(null),
         [x, j] = r.useState(null),
         E = r.useCallback(
             (e) => {
-                if (t.length !== N.X2) {
+                if (t.length !== I.X2) {
                     if (null != e && '' === t[t.length - 1].value) {
                         let i = [...t];
                         (i[t.length - 1] = {
@@ -208,31 +208,31 @@ function E(e) {
             },
             [h, t, n]
         ),
-        Z = t.length === N.X2,
+        Z = t.length === I.X2,
         L = r.useMemo(() => {
-            let e = Z ? I.intl.formatToPlainString(I.t.tU718P, { number: N.X2 }) : void 0;
+            let e = Z ? _.intl.formatToPlainString(_.t.tU718P, { number: I.X2 }) : void 0;
             return [
                 {
-                    text: I.intl.string(I.t.DXq2oa),
-                    onClick: () => E(I.intl.string(I.t.XudkSk)),
+                    text: _.intl.string(_.t.DXq2oa),
+                    onClick: () => E(_.intl.string(_.t.XudkSk)),
                     disabled: Z,
                     tooltipText: e
                 },
                 {
-                    text: I.intl.string(I.t.nSqTjI),
-                    onClick: () => E(I.intl.string(I.t.np91jI)),
+                    text: _.intl.string(_.t.nSqTjI),
+                    onClick: () => E(_.intl.string(_.t.np91jI)),
                     disabled: Z,
                     tooltipText: e
                 },
                 {
-                    text: I.intl.string(I.t.AtRxsL),
-                    onClick: () => E(I.intl.string(I.t.PNIDDA)),
+                    text: _.intl.string(_.t.AtRxsL),
+                    onClick: () => E(_.intl.string(_.t.PNIDDA)),
                     disabled: Z,
                     tooltipText: e
                 },
                 {
-                    text: I.intl.string(I.t['0K5NJi']),
-                    onClick: () => E(I.intl.string(I.t.HolIDw)),
+                    text: _.intl.string(_.t['0K5NJi']),
+                    onClick: () => E(_.intl.string(_.t.HolIDw)),
                     disabled: Z,
                     tooltipText: e
                 }
@@ -264,14 +264,14 @@ function E(e) {
             }),
             !Z &&
                 (0, i.jsx)(C.A, {
-                    text: I.intl.string(I.t.Cq5Jub),
+                    text: _.intl.string(_.t.Cq5Jub),
                     onClick: S
                 }),
             (0, i.jsx)(m.Heading, {
                 variant: 'text-xs/bold',
                 color: 'text-muted',
                 className: T.exampleRulesTitle,
-                children: I.intl.string(I.t.XHWj8f)
+                children: _.intl.string(_.t.XHWj8f)
             }),
             (0, i.jsx)(v.j, {
                 pills: L,

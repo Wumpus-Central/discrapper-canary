@@ -44,9 +44,9 @@ n.Z = a.forwardRef(function (e, n) {
         U = (0, f.useToken)(d.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         B = null !== (T = N.colorString) && void 0 !== T ? T : U,
         G = null !== (b = (0, u.wK)(B, 0.6)) && void 0 !== b ? b : void 0,
-        Z = d.Z.unsafe_rawColors.WHITE_500.css,
-        F = (0, u._i)(B);
-    null != F && 0.3 > (0, u.Bd)(F) && (Z = d.Z.unsafe_rawColors.PRIMARY_630.css),
+        F = d.Z.unsafe_rawColors.WHITE_500.css,
+        Z = (0, u._i)(B);
+    null != Z && 0.3 > (0, u.Bd)(Z) && (F = d.Z.unsafe_rawColors.PRIMARY_630.css),
         (y = M
             ? (0, i.jsx)(p.Z, {
                   className: I.roleFlowerStar,
@@ -87,7 +87,7 @@ n.Z = a.forwardRef(function (e, n) {
                               y,
                               (0, i.jsx)(f.XSmallIcon, {
                                   size: 'md',
-                                  color: Z,
+                                  color: F,
                                   className: I.roleRemoveIcon,
                                   'aria-hidden': !0
                               })

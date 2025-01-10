@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     s: function () {
-        return N;
+        return I;
     }
 });
 var i = n(200651),
@@ -23,14 +23,14 @@ var i = n(200651),
     f = n(290803);
 function C(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
+        I = r.useRef(null),
         N = r.useRef(null),
-        _ = r.useRef(null),
-        { drag: I, dragPreview: T, drop: j, isDragging: b } = (0, x.Z)(N, d, u, C);
+        { drag: _, dragPreview: T, drop: j, isDragging: b } = (0, x.Z)(I, d, u, C);
     return (
-        I(_),
-        T(j(N)),
+        _(N),
+        T(j(I)),
         (0, i.jsxs)('div', {
-            ref: N,
+            ref: I,
             className: s()(f.card, {
                 [f.cardDragging]: b,
                 [f.disabled]: v
@@ -47,7 +47,7 @@ function C(e) {
                         }),
                         !v &&
                             (0, i.jsx)('div', {
-                                ref: _,
+                                ref: N,
                                 className: f.dragIconWrapper,
                                 'data-dnd-name': h,
                                 children: (0, i.jsx)(o.DragIcon, {
@@ -128,7 +128,7 @@ function v(e) {
               )
           });
 }
-function N(e) {
+function I(e) {
     let { onClick: t, children: n, disabled: r = !1 } = e;
     return (0, i.jsx)(o.Clickable, {
         className: f.container,

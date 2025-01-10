@@ -33,19 +33,19 @@ function f(e, t, n) {
 }
 let C = -1,
     v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    N = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    _ = {
+    I = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    N = {
         tension: 140,
         friction: 30
     },
-    I = {
+    _ = {
         tension: 800,
         friction: 20
     };
 class T extends (i = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + N / 2;
+        return e[e.length - 1].y + I / 2;
     }
     getProgressHeight(e) {
         let { tiers: t, progress: n } = this.props,
@@ -118,7 +118,7 @@ class T extends (i = l.Component) {
             u = null != c && e.key === c.key,
             h = e.key === a[0].key;
         l = h ? p.tierFirst : u ? p.tierCurrent : d ? p.tierAccomplished : p.tierInProgress;
-        let g = e.y - (h ? 0 : N / 2),
+        let g = e.y - (h ? 0 : I / 2),
             x = this.state.tierMarkerActive === t,
             f = !h && u && x;
         return (0, r.jsx)(
@@ -131,7 +131,7 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(m.Spring, {
                         from: { scale: 1 },
                         to: { scale: f ? 1.625 : 1 },
-                        config: I,
+                        config: _,
                         children: (t) =>
                             (0, r.jsx)(o.animated.div, {
                                 ...e,
@@ -194,7 +194,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)(m.Spring, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: _,
+                    config: N,
                     delay: i ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: i ? void 0 : this.handleFinishedInitialAnimation,

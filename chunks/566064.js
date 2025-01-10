@@ -148,25 +148,25 @@ function h(e) {
             [P, E, T, S, p, i, h]
         ),
         G = a.useCallback((e) => (e.currentTarget !== e.target ? (!A && (N(!0), D(!0)), !1) : A ? (P(!1), !1) : void (v && null != S ? w(i, h) : P(!0))), [A, v, S, P, w, i, h]),
-        Z = a.useCallback((e) => {
+        F = a.useCallback((e) => {
             if (e.target !== e.currentTarget) {
                 if (e.currentTarget.contains(e.relatedTarget)) return !1;
                 N(!1);
             }
         }, []),
-        F = a.useMemo(() => Math.max(...r), [r]),
+        Z = a.useMemo(() => Math.max(...r), [r]),
         V = a.useCallback(
             () => ({
                 role: 'grid',
                 'aria-rowcount': r.length,
-                'aria-colcount': F,
+                'aria-colcount': Z,
                 tabIndex: A && v ? -1 : 0,
                 'data-ref-id': n,
                 onKeyDown: B,
                 onFocus: G,
-                onBlur: Z
+                onBlur: F
             }),
-            [r.length, F, A, v, n, B, G, Z]
+            [r.length, Z, A, v, n, B, G, F]
         ),
         j = a.useCallback(
             (e, r) => {

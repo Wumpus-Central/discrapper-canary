@@ -373,13 +373,13 @@
     var G = function (e) {
             return U(n.useContext(k), e);
         },
-        Z = function () {
+        F = function () {
             return G('calls useElements()').elements;
         },
-        F = function (e) {
+        Z = function (e) {
             return (0, e.children)(G('mounts <ElementsConsumer>'));
         };
-    F.propTypes = { children: y.func.isRequired };
+    Z.propTypes = { children: y.func.isRequired };
     var V = ['on', 'session'],
         j = n.createContext(null);
     j.displayName = 'CustomCheckoutSdkContext';
@@ -786,5 +786,5 @@
         eA = $('paymentMethodMessaging', ee),
         eN = $('affirmMessage', ee),
         eC = $('afterpayClearpayMessage', ee);
-    (e.AddressElement = ey), (e.AffirmMessageElement = eN), (e.AfterpayClearpayMessageElement = eC), (e.AuBankAccountElement = eu), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ef), (e.CardNumberElement = ed), (e.CustomCheckoutProvider = z), (e.Elements = B), (e.ElementsConsumer = F), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eE), (e.ExpressCheckoutElement = eI), (e.FpxBankElement = eh), (e.IbanElement = ep), (e.IdealBankElement = em), (e.LinkAuthenticationElement = eb), (e.P24BankElement = eg), (e.PaymentElement = ev), (e.PaymentMethodMessagingElement = eA), (e.PaymentRequestButtonElement = eT), (e.ShippingAddressElement = eS), (e.useCustomCheckout = X), (e.useElements = Z), (e.useStripe = el);
+    (e.AddressElement = ey), (e.AffirmMessageElement = eN), (e.AfterpayClearpayMessageElement = eC), (e.AuBankAccountElement = eu), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ef), (e.CardNumberElement = ed), (e.CustomCheckoutProvider = z), (e.Elements = B), (e.ElementsConsumer = Z), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = ei), (e.EpsBankElement = eE), (e.ExpressCheckoutElement = eI), (e.FpxBankElement = eh), (e.IbanElement = ep), (e.IdealBankElement = em), (e.LinkAuthenticationElement = eb), (e.P24BankElement = eg), (e.PaymentElement = ev), (e.PaymentMethodMessagingElement = eA), (e.PaymentRequestButtonElement = eT), (e.ShippingAddressElement = eS), (e.useCustomCheckout = X), (e.useElements = F), (e.useStripe = el);
 });

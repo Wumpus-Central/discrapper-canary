@@ -25,7 +25,7 @@ function f(e) {
         v = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
-        N = (e, r) => {
+        I = (e, r) => {
             (0, l.openModalLazy)(async () => {
                 let { default: l } = await n.e('95925').then(n.bind(n, 673078));
                 return (n) =>
@@ -37,18 +37,18 @@ function f(e) {
                     });
             });
         },
-        _ = (e, t) => {
+        N = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
-        I = f.length > 0;
+        _ = f.length > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.FormTitle, {
                 className: x.productListingsHeader,
                 id: p,
-                children: I ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
+                children: _ ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
             }),
-            I
+            _
                 ? (0, i.jsx)('ul', {
                       className: x.productListings,
                       'aria-labelledby': p,
@@ -61,8 +61,8 @@ function f(e) {
                                       product: e,
                                       onEditProduct: () => u(e.id),
                                       onUnpublishProduct: () => v(e.id),
-                                      onDeleteProduct: () => N(e.id, e.name),
-                                      onCopyProductLink: () => _(t, e.id),
+                                      onDeleteProduct: () => I(e.id, e.name),
+                                      onCopyProductLink: () => N(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,

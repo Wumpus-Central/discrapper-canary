@@ -659,8 +659,8 @@
         return (isNaN((e = parseFloat(e))) || e < 0 || e > 1) && (e = 1), e;
     }
     function U(e, r) {
-        Z(e) && (e = '100%');
-        var i = F(e);
+        F(e) && (e = '100%');
+        var i = Z(e);
         return ((e = o(r, l(0, parseFloat(e)))), i && (e = parseInt(e * r, 10) / 100), 0.000001 > n.abs(e - r)) ? 1 : (e % r) / parseFloat(r);
     }
     function B(e) {
@@ -669,10 +669,10 @@
     function G(e) {
         return parseInt(e, 16);
     }
-    function Z(e) {
+    function F(e) {
         return 'string' == typeof e && -1 != e.indexOf('.') && 1 === parseFloat(e);
     }
-    function F(e) {
+    function Z(e) {
         return 'string' == typeof e && -1 != e.indexOf('%');
     }
     function V(e) {

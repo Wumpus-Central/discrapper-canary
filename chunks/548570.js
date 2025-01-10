@@ -39,8 +39,8 @@ var p = r(261470),
     U = r(610308),
     B = r(91247),
     G = r(508569),
-    Z = r(183139),
-    F = r(645436),
+    F = r(183139),
+    Z = r(645436),
     V = r(833508),
     j = r(981631);
 function H(e, n, r) {
@@ -125,7 +125,7 @@ function er(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
 let ei = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class ea extends Z.Z {
+class ea extends F.Z {
     get connectionState() {
         return this.connectionState_;
     }
@@ -146,7 +146,7 @@ class ea extends Z.Z {
             Y.verbose('Skipping _connect because willReconnect is false');
             return;
         }
-        if (F.a()) {
+        if (Z.a()) {
             Y.info('Skipping _connect because socket is paused');
             return;
         }
@@ -180,28 +180,28 @@ class ea extends Z.Z {
                 onMessage: en(this.compressionHandler, this._handleClose.bind(this), (e, n) => {
                     let r = Date.now(),
                         { op: i, s: a, t: s, d: o } = W.unpack(e);
-                    if ((i !== Z.j.DISPATCH && m.Z.mark('\uD83C\uDF10', 'GatewaySocket.onMessage '.concat(i, ' ').concat(Z.j[i])), R.default.isLoggingGatewayEvents)) {
+                    if ((i !== F.j.DISPATCH && m.Z.mark('\uD83C\uDF10', 'GatewaySocket.onMessage '.concat(i, ' ').concat(F.j[i])), R.default.isLoggingGatewayEvents)) {
                         let e = [i];
-                        i === Z.j.DISPATCH && e.push(s), e.push(o), Y.verboseDangerously('<~', ...e);
+                        i === F.j.DISPATCH && e.push(s), e.push(o), Y.verboseDangerously('<~', ...e);
                     }
                     let l = Date.now() - r;
                     switch (('READY' === s ? C.Z.parseReady.set(r, l) : 'READY_SUPPLEMENTAL' === s ? C.Z.parseReadySupplemental.set(r, l) : l > 10 && m.Z.mark('\uD83C\uDF10', 'Parse ' + s, l), null != a && (this.seq = a), i)) {
-                        case Z.j.HELLO:
+                        case F.j.HELLO:
                             this._clearHelloTimeout(), this._handleHello(o);
                             break;
-                        case Z.j.RECONNECT:
+                        case F.j.RECONNECT:
                             this._handleReconnect();
                             break;
-                        case Z.j.INVALID_SESSION:
+                        case F.j.INVALID_SESSION:
                             this._handleInvalidSession(o);
                             break;
-                        case Z.j.HEARTBEAT:
+                        case F.j.HEARTBEAT:
                             this._handleHeartbeatReceive();
                             break;
-                        case Z.j.HEARTBEAT_ACK:
+                        case F.j.HEARTBEAT_ACK:
                             this._handleHeartbeatAck(o);
                             break;
-                        case Z.j.DISPATCH:
+                        case F.j.DISPATCH:
                             this._handleDispatch(
                                 o,
                                 s,
@@ -367,7 +367,7 @@ class ea extends Z.Z {
             (this.dispatcher.resumeAnalytics = (0, B.zH)(Date.now() - this.connectionStartTime)),
             Y.info('[RESUME] resuming session '.concat(null !== (e = this.sessionId) && void 0 !== e ? e : '', ', seq: ').concat(this.seq)),
             this.send(
-                Z.j.RESUME,
+                F.j.RESUME,
                 {
                     token: this.token,
                     session_id: this.sessionId,
@@ -414,7 +414,7 @@ class ea extends Z.Z {
                 client_state: s
             },
             d = JSON.stringify(c);
-        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = h.deflate(d).length), (this.identifyCount += 1), this.send(Z.j.IDENTIFY, c, !1);
+        (this.identifyUncompressedByteSize = d.length), (this.identifyCompressedByteSize = h.deflate(d).length), (this.identifyCount += 1), this.send(F.j.IDENTIFY, c, !1);
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -434,7 +434,7 @@ class ea extends Z.Z {
         this.lastHeartbeatAckTime = Date.now();
     }
     _sendHeartbeat() {
-        this.send(Z.j.HEARTBEAT, this.seq, !1), (this.lastHeartbeatTime = Date.now());
+        this.send(F.j.HEARTBEAT, this.seq, !1), (this.lastHeartbeatTime = Date.now());
     }
     getLogger() {
         return Y;

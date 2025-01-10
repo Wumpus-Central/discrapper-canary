@@ -39,8 +39,8 @@ function k(e, n, r) {
 let U = !0,
     B = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkChannelId', 'afkTimeout', 'systemChannelId', 'verificationLevel', 'defaultMessageNotifications', 'explicitContentFilter', 'features', 'systemChannelFlags', 'preferredLocale', 'rulesChannelId', 'safetyAlertsChannelId', 'discoverySplash', 'publicUpdatesChannelId', 'premiumProgressBarEnabled', 'profile'],
     G = new Set(['icon', 'splash', 'banner', 'discoverySplash', 'homeHeader']),
-    Z = !1,
-    F = w.QZA.CLOSED,
+    F = !1,
+    Z = w.QZA.CLOSED,
     V = {},
     j = !1,
     H = null,
@@ -74,21 +74,21 @@ function ei(e) {
     return null != n && (o === l ? (l = o = n) : (o = n), !0);
 }
 function ea(e) {
-    (Z = !0), es(e);
+    (F = !0), es(e);
 }
 function es(e) {
     var n;
     let { guildId: r, section: a, subsection: s, location: c } = e,
         f = R.Z.getGuild(r);
     if (null == f) return eo();
-    (o = l = f), (F = w.QZA.OPEN), (V = {}), (u = D.default.castGuildIdAsEveryoneGuildRoleId(r)), (K = l.mfaLevel), (J = X), (d = null), (z = c);
+    (o = l = f), (Z = w.QZA.OPEN), (V = {}), (u = D.default.castGuildIdAsEveryoneGuildRoleId(r)), (K = l.mfaLevel), (J = X), (d = null), (z = c);
     eu({
         section: null !== (n = null != a ? a : i) && void 0 !== n ? n : w.pNK.OVERVIEW,
         subsection: null != s ? s : null
     });
 }
 function eo() {
-    (Z = !1), (F = w.QZA.CLOSED), (o = l = null), (j = !1), (H = null), (Y = null), (W = 0), ($ = null), (en = null), (er = null), (i = null), (a = null), (s = null), (K = w.BpS.NONE), (c = void 0);
+    (F = !1), (Z = w.QZA.CLOSED), (o = l = null), (j = !1), (H = null), (Y = null), (W = 0), ($ = null), (en = null), (er = null), (i = null), (a = null), (s = null), (K = w.BpS.NONE), (c = void 0);
 }
 function el(e) {
     let { state: n } = e;
@@ -169,14 +169,14 @@ function ed(e) {
     null != r && (o = l = r);
 }
 function ef() {
-    (F = w.QZA.SUBMITTING), (V = {});
+    (Z = w.QZA.SUBMITTING), (V = {});
 }
 function e_() {
-    F = w.QZA.OPEN;
+    Z = w.QZA.OPEN;
 }
 function eh(e) {
     var n;
-    (F = w.QZA.OPEN), (i = null != i ? i : w.pNK.OVERVIEW), (a = null), (V = null !== (n = e.errors) && void 0 !== n ? n : {});
+    (Z = w.QZA.OPEN), (i = null != i ? i : w.pNK.OVERVIEW), (a = null), (V = null !== (n = e.errors) && void 0 !== n ? n : {});
 }
 function ep() {
     if (null == l) return !1;
@@ -294,7 +294,7 @@ function eP(e) {
     er = e.integrations;
 }
 function eM(e) {
-    if (null == l || F !== w.QZA.OPEN || ('GUILD_INTEGRATIONS_UPDATE' === e.type && e.guildId !== l.id)) return !1;
+    if (null == l || Z !== w.QZA.OPEN || ('GUILD_INTEGRATIONS_UPDATE' === e.type && e.guildId !== l.id)) return !1;
     (0, x.i)(l.id);
 }
 function ek(e) {
@@ -329,7 +329,7 @@ function eG(e) {
     let {} = e;
     d = null;
 }
-function eZ(e) {
+function eF(e) {
     let { guildId: n, categoryId: r } = e;
     null != l &&
         n === l.id &&
@@ -342,7 +342,7 @@ function eZ(e) {
             secondaryCategoryIds: [...X.secondaryCategoryIds, r]
         }));
 }
-function eF(e) {
+function eZ(e) {
     let n,
         { guildId: r, categoryId: i } = e;
     if (null == l || r !== l.id) return;
@@ -394,7 +394,7 @@ class eY extends (f = v.ZP.Store) {
         return !m().isEqual(l, o) || !m().isEqual(J, X);
     }
     isOpen() {
-        return Z;
+        return F;
     }
     getSavedRouteState() {
         return c;
@@ -415,7 +415,7 @@ class eY extends (f = v.ZP.Store) {
         return l;
     }
     isSubmitting() {
-        return F === w.QZA.SUBMITTING;
+        return Z === w.QZA.SUBMITTING;
     }
     isGuildMetadataLoaded() {
         return Q;
@@ -496,8 +496,8 @@ k(eY, 'displayName', 'GuildSettingsStore'),
                   INSTANT_INVITE_CREATE_SUCCESS: eI,
                   GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: ek,
                   GUILD_DISCOVERY_METADATA_FETCH_FAIL: eU,
-                  GUILD_DISCOVERY_CATEGORY_ADD: eZ,
-                  GUILD_DISCOVERY_CATEGORY_DELETE: eF,
+                  GUILD_DISCOVERY_CATEGORY_ADD: eF,
+                  GUILD_DISCOVERY_CATEGORY_DELETE: eZ,
                   GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: eV,
                   GUILD_UPDATE_DISCOVERY_METADATA: ej,
                   GUILD_UPDATE_DISCOVERY_METADATA_FAIL: eH,

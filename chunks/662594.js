@@ -256,10 +256,10 @@ function G(e) {
     }),
         n.setGroups(e.groups);
 }
-function Z() {
+function F() {
     B.reset();
 }
-function F(e) {
+function Z(e) {
     let { guild: n } = e;
     B.forEach(n.id, (e) => {
         e.updateOwnerId() && e.rebuildMembers();
@@ -312,10 +312,10 @@ class q extends (a = h.ZP.Store) {
 }
 O(q, 'displayName', 'ChannelMemberStore'),
     (n.ZP = new q(p.Z, {
-        CONNECTION_OPEN: Z,
-        OVERLAY_INITIALIZE: Z,
+        CONNECTION_OPEN: F,
+        OVERLAY_INITIALIZE: F,
         GUILD_MEMBER_LIST_UPDATE: G,
-        GUILD_UPDATE: F,
+        GUILD_UPDATE: Z,
         GUILD_DELETE: V,
         GUILD_ROLE_UPDATE: j,
         GUILD_MEMBER_UPDATE: H,

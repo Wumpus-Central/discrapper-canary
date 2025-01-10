@@ -35,7 +35,7 @@ function O(e) {
         U = (0, a.e7)([u.Z], () => u.Z.hidePersonalInformation),
         B = n.id === r.id,
         { dimissibleUpsellsEnabled: G } = (0, f.u)({ location: 'UserProfilePopoutBody' }),
-        Z = (0, d.I5)(r);
+        F = (0, d.I5)(r);
     return (0, i.jsxs)(s.Scroller, {
         fade: !0,
         className: R.body,
@@ -97,7 +97,7 @@ function O(e) {
             G &&
                 B &&
                 (0, i.jsx)(h.Z, {
-                    isPremiumUser: Z,
+                    isPremiumUser: F,
                     onInteraction: P,
                     className: R.upsell
                 }),

@@ -17,7 +17,7 @@ var i = n(200651),
     C = n(240938);
 let v = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
 t.Z = (e) => {
-    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: N, error: _, furthestStep: I, inSettings: T } = e,
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: I, error: N, furthestStep: _, inSettings: T } = e,
         j = r.useMemo(() => {
             let e = (0, g.yf)();
             return {
@@ -48,13 +48,13 @@ t.Z = (e) => {
         }, [t]);
     return (
         r.useEffect(() => {
-            I === x.Wy.CUSTOMIZE_TAG_BADGE &&
+            _ === x.Wy.CUSTOMIZE_TAG_BADGE &&
                 !T &&
                 t({
                     brandPrimaryColor: j.primary,
                     brandSecondaryColor: j.secondary
                 });
-        }, [t, j.primary, j.secondary, I, l, a, T]),
+        }, [t, j.primary, j.secondary, _, l, a, T]),
         (0, i.jsxs)('div', {
             className: C.slideContent,
             children: [
@@ -176,17 +176,17 @@ t.Z = (e) => {
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['3eZP8/'])
                                 }),
-                                null != _ &&
+                                null != N &&
                                     (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'status-danger',
                                         className: C.errorText,
-                                        children: _
+                                        children: N
                                     }),
                                 (0, i.jsx)(d.TextInput, {
                                     className: f.tagInputWrapper,
                                     inputClassName: f.tagInput,
-                                    value: null != N ? N : '',
+                                    value: null != I ? I : '',
                                     onChange: (e) => t({ tag: e }),
                                     maxLength: x.cG,
                                     placeholder: p.intl.string(p.t['0V0ZFx']),

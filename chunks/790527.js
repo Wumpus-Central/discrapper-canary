@@ -29,7 +29,7 @@ var i = r(200651),
     C = r(769860);
 function R(e) {
     var n, r, s;
-    let { title: R, type: O, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: w, context: P, glowUp: M, modalClassName: k, modalContentClassName: U, artContainerClassName: B, headerClassName: G, bodyClassName: Z, transitionState: F, onClose: V, onSubscribeClick: j, onSubscribeFinish: H, onSecondaryClick: Y, secondaryCTA: W, subscribeButtonText: K, showNewBadge: z = !1, enableArtBoxShadow: q = !0, subscriptionTier: Q = y.Si.TIER_2, isLoading: X = !1, hideBackButton: J, backButtonText: $, showEnhancedUpsell: ee, useSubscribeButtonGradient: et, subscribeButtonClassname: en, hidePremiumOfferUpsell: er, children: ei, LeadingComponent: ea, ...es } = e,
+    let { title: R, type: O, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: w, context: P, glowUp: M, modalClassName: k, modalContentClassName: U, artContainerClassName: B, headerClassName: G, bodyClassName: F, transitionState: Z, onClose: V, onSubscribeClick: j, onSubscribeFinish: H, onSecondaryClick: Y, secondaryCTA: W, subscribeButtonText: K, showNewBadge: z = !1, enableArtBoxShadow: q = !0, subscriptionTier: Q = y.Si.TIER_2, isLoading: X = !1, hideBackButton: J, backButtonText: $, showEnhancedUpsell: ee, useSubscribeButtonGradient: et, subscribeButtonClassname: en, hidePremiumOfferUpsell: er, children: ei, LeadingComponent: ea, ...es } = e,
         eo = null != D,
         el = (0, E.N)(),
         eu = (0, g.Ng)(),
@@ -115,7 +115,7 @@ function R(e) {
         (0, i.jsxs)(u.ModalRoot, {
             className: o()(N.root, !ec && k),
             'aria-label': R,
-            transitionState: F,
+            transitionState: Z,
             children: [
                 null != ev &&
                     (0, i.jsxs)('div', {
@@ -167,7 +167,7 @@ function R(e) {
                                                     ei,
                                                     (0, i.jsx)(u.Text, {
                                                         variant: 'text-md/normal',
-                                                        className: o()(Z, N.subHeader),
+                                                        className: o()(F, N.subHeader),
                                                         children: w
                                                     })
                                                 ]

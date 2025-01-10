@@ -16,13 +16,13 @@ var i = n(200651),
     f = n(845377),
     C = n(981631),
     v = n(388032),
-    N = n(442344),
-    _ = n(716455);
-let I = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
+    I = n(442344),
+    N = n(716455);
+let _ = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
-        [j, b] = (0, a.Z)(() => [s().sample(I), s().sample(T)], []);
+        [j, b] = (0, a.Z)(() => [s().sample(_), s().sample(T)], []);
     r.useEffect(() => {
         (0, u.z)([j, b]);
     }, [j, b]);
@@ -43,32 +43,32 @@ t.Z = (e) => {
     return (
         l ? (y ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
         (0, i.jsxs)('div', {
-            className: N.container,
+            className: I.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
-                    src: _,
-                    className: N.sparkles
+                    src: N,
+                    className: I.sparkles
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.discoverPreview,
+                    className: I.discoverPreview,
                     children: [
                         (0, i.jsx)(g.Z, {
-                            className: N.placeholderCard,
+                            className: I.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == E,
                             guild: E
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: N.previewCard,
+                            className: I.previewCard,
                             guild: t,
                             description: v.intl.string(v.t['0k7fyM']),
                             presenceCount: A,
                             memberCount: Z
                         }),
                         (0, i.jsx)(g.Z, {
-                            className: N.placeholderCard,
+                            className: I.placeholderCard,
                             disabled: !0,
                             small: !0,
                             loading: null == S,
@@ -77,13 +77,13 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, i.jsx)(c.Heading, {
-                    className: N.header,
+                    className: I.header,
                     variant: 'heading-xl/semibold',
                     children: v.intl.string(v.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: N.valueProp,
+                    className: I.valueProp,
                     color: 'header-secondary',
                     children: v.intl.format(v.t.BhkgBg, {
                         onLinkClick: () =>
@@ -96,7 +96,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
-                    className: N.byline,
+                    className: I.byline,
                     color: 'header-secondary',
                     children: v.intl.format(v.t.ALSi8v, {
                         onGuidelinesClick: () =>
@@ -112,7 +112,7 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, i.jsx)(c.Button, {
                             ...e,
-                            className: N.enableButton,
+                            className: I.enableButton,
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
@@ -121,7 +121,7 @@ t.Z = (e) => {
                         })
                 }),
                 (0, i.jsx)(f.Z, {
-                    className: N.checklist,
+                    className: I.checklist,
                     guild: t,
                     guildId: t.id,
                     headerContent: (0, i.jsx)(c.Heading, {
@@ -133,7 +133,7 @@ t.Z = (e) => {
                                       (0, i.jsx)(
                                           'strong',
                                           {
-                                              className: N.doesNot,
+                                              className: I.doesNot,
                                               children: e
                                           },
                                           t

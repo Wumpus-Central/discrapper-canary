@@ -32,8 +32,8 @@ var m = r(512722),
     U = r(594190),
     B = r(502286),
     G = r(12898),
-    Z = r(294473),
-    F = r(706629),
+    F = r(294473),
+    Z = r(706629),
     V = r(166884),
     j = r(998594),
     H = r(14457),
@@ -159,8 +159,8 @@ function eU() {
 let eB = (0, S.Mt)((0, S.jj)());
 eb.enableNativeLogger(!0);
 let eG = {},
-    eZ = new Set([ev.Yn.DEFAULT]),
-    eF = eB.supports(ev.AN.AUTO_ENABLE),
+    eF = new Set([ev.Yn.DEFAULT]),
+    eZ = eB.supports(ev.AN.AUTO_ENABLE),
     eV = !1,
     ej = ev.Yn.STREAM,
     eH = { [ev.w5]: tw('No Input Devices') },
@@ -224,7 +224,7 @@ function tg(e) {
 }
 function tE(e) {
     let n = tp(e.context),
-        r = !eF || n.mute || n.deaf;
+        r = !eZ || n.mute || n.deaf;
     e.context === ev.Yn.DEFAULT ? (r = r || eK || ez || eq || !q.Z.didHavePermission(eg.Eu.AUDIO)) : e.context === ev.Yn.STREAM && (r = !0), e.setSelfMute(r), e.setSelfDeaf(n.deaf), e.context === ev.Yn.DEFAULT && D.Z.updateNativeMute();
 }
 function tv(e) {
@@ -308,7 +308,7 @@ function ty() {
                 muteBeforeProcessing: c,
                 pttBeforeProcessing: d,
                 skipEncode: f
-            } = (null != u ? F.Z : Z.Z).getCurrentConfig(
+            } = (null != u ? Z.Z : F.Z).getCurrentConfig(
                 {
                     location: 'setupMediaEngine',
                     ...(null != u && { guildId: u })
@@ -681,7 +681,7 @@ function tL() {
     eB.setAudioInputDevice(i.inputDeviceId), eB.setAudioOutputDevice(i.outputDeviceId), tI(), eB.setInputVolume(i.inputVolume), eB.setOutputVolume(i.outputVolume), eB.setH264Enabled(null === (e = i.hardwareEncoding) || void 0 === e || e || i.openH264), eB.setAv1Enabled(null === (n = i.hardwareEncoding) || void 0 === n || n), eB.setH265Enabled(null === (r = i.hardwareEncoding) || void 0 === r || r), eB.setAecDump(i.aecDumpEnabled), eB.setSidechainCompression(i.sidechainCompression), eB.setSidechainCompressionStrength(i.sidechainCompressionStrength);
 }
 function tx() {
-    !eF &&
+    !eZ &&
         eB.enable().then(() =>
             C.Z.dispatch({
                 type: 'MEDIA_ENGINE_SET_AUDIO_ENABLED',
@@ -784,7 +784,7 @@ function tG() {
         );
     }
 }
-function tZ(e) {
+function tF(e) {
     if (null == i)
         return (
             eb.info('Error: trying to get soundshare id before MediaEngineStore is instantiated.'),
@@ -805,7 +805,7 @@ function tZ(e) {
         );
     }
 }
-function tF(e, n) {
+function tZ(e, n) {
     (0, et.isWindows)() &&
         O.YT(e, { soundshare_session: n }).then((n) => {
             null != n &&
@@ -1185,25 +1185,25 @@ function nw(e) {
 }
 function nP(e) {
     let { application: n } = e;
-    eZ.add(n.id);
+    eF.add(n.id);
 }
 function nM(e) {
     let { application: n } = e;
-    eZ.delete(n.id);
+    eF.delete(n.id);
 }
 function nk(e) {
     let { kind: n, granted: r } = e;
     if (!r)
         switch (n) {
             case 'audio':
-                (eF = !1), eB.eachConnection(tE);
+                (eZ = !1), eB.eachConnection(tE);
                 break;
             case 'video':
                 tI(!1);
         }
 }
 function nU(e) {
-    (eF = e.enabled),
+    (eZ = e.enabled),
         e.unmute &&
             tO({
                 mute: !1,
@@ -1223,7 +1223,7 @@ function nG(e) {
     let u = null,
         c = null,
         d = $.Z.getPidFromDesktopSource(n);
-    ({ soundshareId: u, soundshareSession: c } = tZ(d));
+    ({ soundshareId: u, soundshareSession: c } = tF(d));
     let f = {
         desktopSource: {
             id: n,
@@ -1233,7 +1233,7 @@ function nG(e) {
         },
         quality: a
     };
-    null != o && o.desktopSource.id !== f.desktopSource.id && (eB.setClipsSource(null), (0, et.isWindows)() && null != o.desktopSource.soundshareId && O.pn(o.desktopSource.soundshareId)), null != u && tF(u, c), (o = f);
+    null != o && o.desktopSource.id !== f.desktopSource.id && (eB.setClipsSource(null), (0, et.isWindows)() && null != o.desktopSource.soundshareId && O.pn(o.desktopSource.soundshareId)), null != u && tZ(u, c), (o = f);
     let _ = th(),
         h = tp().videoHook;
     eB.setClipsSource({
@@ -1253,11 +1253,11 @@ function nG(e) {
         applicationName: r
     });
 }
-function nZ(e) {
+function nF(e) {
     let { settings: n } = e;
     !1 === n.decoupledClipsEnabled && ((o = null), eB.setClipsSource(null));
 }
-function nF(e) {
+function nZ(e) {
     var n, r, i, a;
     let { settings: s } = e;
     if ((null == s ? void 0 : s.desktopSettings) != null) {
@@ -1273,7 +1273,7 @@ function nF(e) {
                           frameRate: 30
                       },
             c = !1 === o ? null : $.Z.getPidFromDesktopSource(a);
-        et.isPlatformEmbedded && !0 === o && (({ soundshareId: e, soundshareSession: i } = tZ(c)), null != e && tF(e, i)),
+        et.isPlatformEmbedded && !0 === o && (({ soundshareId: e, soundshareSession: i } = tF(c)), null != e && tZ(e, i)),
             tv(l),
             tI(l === ev.Yn.STREAM && eX, {
                 desktopSource: {
@@ -1434,7 +1434,7 @@ class n1 extends (u = y.ZP.Store) {
         return eB.supports(ev.AN.DIRECT_VIDEO) && eB.setUseDirectVideo(!0), eB.Camera;
     }
     isEnabled() {
-        return eF;
+        return eZ;
     }
     isMute() {
         return this.isSelfMute() || eK;
@@ -1558,7 +1558,7 @@ class n1 extends (u = y.ZP.Store) {
                     mode: i,
                     modeOptions: { shortcut: a }
                 } = n;
-                i === ep.pM4.PUSH_TO_TALK && eZ.has(r) && (e[r] = a);
+                i === ep.pM4.PUSH_TO_TALK && eF.has(r) && (e[r] = a);
             }),
             e
         );
@@ -1802,7 +1802,7 @@ eT(n1, 'displayName', 'MediaEngineStore'),
         MEDIA_ENGINE_SET_AUDIO_ENABLED: nU,
         MEDIA_ENGINE_SET_VIDEO_ENABLED: nB,
         MEDIA_ENGINE_PERMISSION: nk,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: nF,
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: nZ,
         MEDIA_ENGINE_SET_VIDEO_DEVICE: t9,
         MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS: n_,
         MEDIA_ENGINE_INTERACTION_REQUIRED: ne,
@@ -1827,7 +1827,7 @@ eT(n1, 'displayName', 'MediaEngineStore'),
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR: n$,
         USER_SETTINGS_PROTO_UPDATE: tQ,
         CLIPS_INIT: nG,
-        CLIPS_SETTINGS_UPDATE: nZ,
+        CLIPS_SETTINGS_UPDATE: nF,
         MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: n0
     })),
     (n.Z = i);

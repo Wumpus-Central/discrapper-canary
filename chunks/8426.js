@@ -9,13 +9,13 @@ n.d(t, {
         return S;
     },
     XG: function () {
-        return I;
+        return _;
     },
     _N: function () {
         return x;
     },
     ad: function () {
-        return N;
+        return I;
     },
     bj: function () {
         return A;
@@ -39,7 +39,7 @@ n.d(t, {
         return y;
     },
     r2: function () {
-        return _;
+        return N;
     },
     vR: function () {
         return p;
@@ -89,7 +89,7 @@ function v(e) {
         actions: e
     });
 }
-async function N(e, t, n, i) {
+async function I(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
@@ -120,13 +120,13 @@ async function N(e, t, n, i) {
         );
     }
 }
-function _(e) {
+function N(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
     });
 }
-function I(e, t) {
+function _(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,

@@ -26,7 +26,7 @@ function m(e) {
         }),
         C = g.length > 0,
         v = x.length > 0,
-        N = f.length > 0;
+        I = f.length > 0;
     return null == h
         ? null
         : (0, i.jsxs)('div', {
@@ -37,7 +37,7 @@ function m(e) {
                   }),
                   (0, i.jsx)(l.Spacer, { size: 16 }),
                   (0, i.jsx)(l.Button, {
-                      disabled: !p || C || v || N,
+                      disabled: !p || C || v || I,
                       look: l.Button.Looks.FILLED,
                       color: l.Button.Colors.RED,
                       onClick: () => {

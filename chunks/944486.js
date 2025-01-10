@@ -67,13 +67,13 @@ function G() {
                 .value()
         });
 }
-function Z(e) {
+function F(e) {
     if (null != e) {
         let n = S.ZP.getDefaultChannel(e);
         if (null != n) return n.id;
     }
 }
-function F(e, n) {
+function Z(e, n) {
     if (null == e || null == n || k[e] === n) return !1;
     let r = y.Z.getChannel(n),
         i = null != r && (0, I.zi)(r.type),
@@ -97,7 +97,7 @@ function j() {
         }),
         p().each(n, (e) => {
             let n = P[e.id];
-            null == k[e.id] && F(e.id, n);
+            null == k[e.id] && Z(e.id, n);
         }),
         null != u && Date.now() - u >= x && ((l = null), (e = !0)),
         e
@@ -107,7 +107,7 @@ function H(e) {
     (i = e.sessionId), null != l && null == y.Z.getChannel(l) && (l = null), j() && G();
 }
 function Y(e) {
-    (i = e.sessionId), (l = e.selectedVoiceChannelId), (P = {}), (M = {}), (s = e.selectedChannelId), (P[e.selectedGuildId] = e.selectedChannelId), F(e.selectedGuildId, s), j();
+    (i = e.sessionId), (l = e.selectedVoiceChannelId), (P = {}), (M = {}), (s = e.selectedChannelId), (P[e.selectedGuildId] = e.selectedChannelId), Z(e.selectedGuildId, s), j();
 }
 function W() {
     i = null;
@@ -115,14 +115,14 @@ function W() {
 function K(e) {
     let { guildId: n, channelId: r } = e;
     if (void 0 === n) return !1;
-    null == r && (r = Z(n)), null != s && r !== s && (a = s), (s = r), F(n, r), P[B(n)] !== r && ((M[B(n)] = P[B(n)]), (P[B(n)] = s)), G();
+    null == r && (r = F(n)), null != s && r !== s && (a = s), (s = r), Z(n, r), P[B(n)] !== r && ((M[B(n)] = P[B(n)]), (P[B(n)] = s)), G();
 }
 function z(e) {
     let { channelId: n } = e;
     if (null == n) {
         let e = y.Z.getChannel(l),
             n = null == e ? void 0 : e.guild_id;
-        null != n && n !== C.Z.getGuildId() && P[n] === l && (P[n] = Z(n));
+        null != n && n !== C.Z.getGuildId() && P[n] === l && (P[n] = F(n));
     }
     (l = n), G();
 }
@@ -134,7 +134,7 @@ function q(e, n) {
     let r = null != A.Z.getGuild(n) ? n : null,
         i = !1;
     l === e && ((l = null), (i = !0));
-    P[B(r)] === e && ((P[B(r)] = Z(B(r))), C.Z.getGuildId() === r && (0, v.dL)(R.Z5c.CHANNEL(n, P[B(r)])), (i = !0)), null != r && k[r] === e && (delete k[r], (i = !0)), i && G();
+    P[B(r)] === e && ((P[B(r)] = F(B(r))), C.Z.getGuildId() === r && (0, v.dL)(R.Z5c.CHANNEL(n, P[B(r)])), (i = !0)), null != r && k[r] === e && (delete k[r], (i = !0)), i && G();
 }
 function Q(e) {
     let {
@@ -149,8 +149,8 @@ function X(e) {
 function J(e) {
     let { guild: n } = e;
     if (null == P[n.id]) {
-        let e = Z(n.id);
-        (P[n.id] = e), F(n.id, e), G();
+        let e = F(n.id);
+        (P[n.id] = e), Z(n.id, e), G();
     }
 }
 function $(e) {
@@ -202,7 +202,7 @@ function er(e) {
         case R.d4z.GUILD_ANNOUNCEMENT:
         case R.d4z.GUILD_TEXT:
             let r = n.guild_id;
-            if ((null != r && null == k[r] && (k[r] = n.id), null != r && null == P[r])) return (P[r] = Z(r)), !0;
+            if ((null != r && null == k[r] && (k[r] = n.id), null != r && null == P[r])) return (P[r] = F(r)), !0;
     }
     return !1;
 }
@@ -238,7 +238,7 @@ class ei extends (d = m.ZP.Store) {
         var n, r;
         let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             a = B(e === R.ME ? null : null !== (n = null != e ? e : C.Z.getGuildId()) && void 0 !== n ? n : null);
-        return i ? (null !== (r = P[a]) && void 0 !== r ? r : Z(a)) : P[a];
+        return i ? (null !== (r = P[a]) && void 0 !== r ? r : F(a)) : P[a];
     }
     getVoiceChannelId() {
         return N.Z.isSupported() ? l : null;

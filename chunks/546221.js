@@ -21,7 +21,7 @@ var r = n(481060),
     f = n(981631),
     C = n(388032),
     v = n(899621);
-function N(e) {
+function I(e) {
     let { payoutsByPeriod: t, team: n } = e,
         l = (0, c.mY)() ? null : C.intl.format(C.t.d1sCiY, { url: null != n ? f.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
     return 0 === t.length
@@ -40,7 +40,7 @@ function N(e) {
               ]
           });
 }
-function _(e) {
+function N(e) {
     let { guildId: t, totalPayoutsForPeriod: n } = e,
         r = (0, o.qi)(t, { includeSoftDeleted: !0 });
     return null == n && 0 === r.length
@@ -51,10 +51,10 @@ function _(e) {
               className: v.currentMonthEarningsTable
           });
 }
-let I = (e) => {
+let _ = (e) => {
     var t, n;
     let { guildId: a, application: o } = e,
-        { loading: m, team: h, currentPeriod: I, allPeriods: T, metrics: j } = (0, d.Z)(a, o),
+        { loading: m, team: h, currentPeriod: _, allPeriods: T, metrics: j } = (0, d.Z)(a, o),
         b = (0, u.u)(a),
         E = (0, c.mY)();
     return m
@@ -99,16 +99,16 @@ let I = (e) => {
                                   })
                               ]
                           }),
-                          (0, i.jsx)(_, {
+                          (0, i.jsx)(N, {
                               guildId: a,
-                              totalPayoutsForPeriod: I
+                              totalPayoutsForPeriod: _
                           })
                       ]
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t['+5Rmho']),
                       className: v.formSection,
-                      children: (0, i.jsx)(N, {
+                      children: (0, i.jsx)(I, {
                           payoutsByPeriod: T,
                           team: h
                       })
@@ -136,6 +136,6 @@ let I = (e) => {
 function T(e) {
     return (0, i.jsx)(a.l, {
         guildId: e.guildId,
-        children: (0, i.jsx)(I, { ...e })
+        children: (0, i.jsx)(_, { ...e })
     });
 }

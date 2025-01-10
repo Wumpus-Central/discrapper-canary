@@ -120,13 +120,13 @@ r.d(n, {
         return $;
     },
     UD: function () {
-        return Z;
+        return F;
     },
     Ue: function () {
         return et;
     },
     Uq: function () {
-        return eZ;
+        return eF;
     },
     VU: function () {
         return A;
@@ -147,7 +147,7 @@ r.d(n, {
         return U;
     },
     Z1: function () {
-        return F;
+        return Z;
     },
     Zh: function () {
         return w;
@@ -372,8 +372,8 @@ let U = ['628379670982688768', '978380684370378762', '521846918637420545', '5218
     (e.NONE_MONTH = '628379151761408000'), (e.NONE_YEAR = '628381571568631808'), (e.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (e.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (e.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (e.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (e.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (e.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (e.PREMIUM_MONTH_GUILD = '590665532894740483'), (e.PREMIUM_YEAR_GUILD = '590665538238152709'), (e.NONE_3_MONTH = '944265614527037440'), (e.NONE_6_MONTH = '944265636643602432'), (e.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (e.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (e.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (e.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (e.PREMIUM_MONTH_LEGACY = '511651856145973248'), (e.PREMIUM_YEAR_LEGACY = '511651860671627264');
 })(s || (s = {}));
 let G = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
-    Z = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
-    F = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
+    F = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
+    Z = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
     V = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
     j = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
     H = Object.freeze({
@@ -731,8 +731,8 @@ let eU = Object.freeze({
     }),
     eB = 52428800,
     eG = 52428800,
-    eZ = 524288000,
-    eF = 52428800,
+    eF = 524288000,
+    eZ = 52428800,
     eV = 104857600,
     ej = {
         [D.Eu4.NONE]: 5,
@@ -786,7 +786,7 @@ let eU = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eF,
+                fileSize: eZ,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
                 soundboardSounds: eY[D.Eu4.TIER_2],
@@ -851,7 +851,7 @@ let eQ = Object.freeze({
     eX = Object.freeze({
         3: { fileSize: eB },
         1: { fileSize: eG },
-        2: { fileSize: eZ }
+        2: { fileSize: eF }
     });
 !(function (e) {
     (e.EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (e.HELPER_COLLAPSED = 'helper_collapsed'), (e.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (e.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (e.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (e.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (e.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (e.HELPER_RENDERED = 'premium_feature_helper_rendered');
