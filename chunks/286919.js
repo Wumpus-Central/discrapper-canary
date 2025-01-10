@@ -37,5 +37,6 @@ e.exports = {
     heroHeadingV2Art: 'heroHeadingV2Art_a8b566',
     heroHeadingV2ArtContainer: 'heroHeadingV2ArtContainer_a8b566',
     heroHeaderSideGradient: 'heroHeaderSideGradient_a8b566',
-    heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_a8b566'
+    heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_a8b566',
+    subButtonText: 'subButtonText_a8b566'
 };

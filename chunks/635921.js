@@ -35,7 +35,10 @@ let R = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: l, isDarkMode: o } = e,
             c = (0, i.jsx)(T.Z, {
                 forceInverted: o || !l,
-                className: a()(S.button, s, { [S.extendedButton]: t && l }),
+                className: a()(S.button, S.subButton, s, {
+                    [S.extendedButton]: t && l,
+                    [S.whiteSubButton]: l && !o
+                }),
                 subscriptionTier: n
             }),
             d =
@@ -73,9 +76,9 @@ t.ZP = (e) => {
     var t, n;
     let { isFullscreen: r, className: d, buttonClassName: b, subscriptionTier: T, entrypoint: P, isDarkMode: O } = e,
         { analyticsLocations: Z } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        M = (0, m._O)(),
-        B = (0, p.Ng)(),
-        y = (0, p.Wp)(B, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
+        B = (0, m._O)(),
+        M = (0, p.Ng)(),
+        y = (0, p.Wp)(M, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
         w = (0, _.N)(),
         k = (0, g.Nx)(),
         L = (0, x.Vi)(),
@@ -112,7 +115,7 @@ t.ZP = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(A, {}),
-                        L || M
+                        L || B
                             ? (0, i.jsx)('div', {
                                   className: a()(S.buttonContainer),
                                   children: (0, i.jsx)(v.Z, {

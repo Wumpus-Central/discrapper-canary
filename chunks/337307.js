@@ -25,5 +25,7 @@ e.exports = {
     marketingPageV2CTAMargin: 'marketingPageV2CTAMargin_f26610',
     marketingPageV2TextContainer: 'marketingPageV2TextContainer_f26610',
     marketingPageV2Heading: 'marketingPageV2Heading_f26610',
-    premiumOfferPill: 'premiumOfferPill_f26610'
+    premiumOfferPill: 'premiumOfferPill_f26610',
+    subButton: 'subButton_f26610',
+    whiteSubButton: 'whiteSubButton_f26610'
 };
