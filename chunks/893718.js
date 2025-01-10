@@ -607,7 +607,7 @@ function eP(e, n) {
                                 })
                             ]
                         }),
-                        e5 ? t5 : null,
+                        e5 && !J.hideAccessoryBar ? t5 : null,
                         tp
                             ? null
                             : (0, s.jsx)(A.Z, {

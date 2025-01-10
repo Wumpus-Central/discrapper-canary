@@ -39,8 +39,8 @@ t.Z = (e) => {
     let { isFullscreen: r, className: S, buttonClassName: R, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         Z = (0, g._O)(),
-        M = (0, f.Ng)(),
-        B = (0, f.Wp)(M, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
+        B = (0, f.Ng)(),
+        M = (0, f.Wp)(B, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
         y = (0, p.N)(),
         w = (0, u.Nx)(),
         k = (0, h.Vi)(),
@@ -60,7 +60,7 @@ t.Z = (e) => {
                     w &&
                         (0, i.jsx)(I, {
                             trialOffer: y,
-                            discountOffer: M
+                            discountOffer: B
                         }),
                     (0, i.jsx)(l.Heading, {
                         className: N.marketingPageV2Heading,
@@ -91,7 +91,7 @@ t.Z = (e) => {
                               })
                           })
                         : (0, i.jsx)(C.PK, {
-                              subscriptionTier: null !== (n = null != j ? j : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : B,
+                              subscriptionTier: null !== (n = null != j ? j : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : M,
                               inOfferExperience: w,
                               containerClassName: a()(N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(H || G) }),
                               buttonClassName: R,

@@ -34,8 +34,8 @@ var s = n(399606),
     P = n(467685),
     O = n(391110),
     Z = n(75077),
-    M = n(976465),
-    B = n(474936),
+    B = n(976465),
+    M = n(474936),
     y = n(735825),
     w = n(981631),
     k = n(526761),
@@ -75,13 +75,13 @@ var s = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        i = (0, v.BU)(B.Uq / 1024, { useKibibytes: !0 }),
+        i = (0, v.BU)(M.Uq / 1024, { useKibibytes: !0 }),
         r = (0, s.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
         e_ = null != r ? N.ZP.getPremiumPlanItem(r) : null,
-        eh = (null != e_ ? N.ZP.getSkuIdForPlan(e_.planId) : null) === B.Si.TIER_2,
+        eh = (null != e_ ? N.ZP.getSkuIdForPlan(e_.planId) : null) === M.Si.TIER_2,
         ex = E.default.getCurrentUser(),
-        eE = (0, N.I5)(ex, B.p9.TIER_2),
-        eb = (0, N.I5)(ex, B.p9.TIER_0),
+        eE = (0, N.I5)(ex, M.p9.TIER_2),
+        eb = (0, N.I5)(ex, M.p9.TIER_0),
         eC = (0, R.bq)({ showAnimations: !0 }),
         ev = null != eC ? eC.initialPercentage : void 0,
         eT = null != eC ? eC.percentage : void 0,
@@ -90,7 +90,7 @@ t.Z = () => {
         eS = (0, j.aJ)(),
         eR = (0, R.Kb)(y.qY),
         { fractionalState: ej } = (0, g.Z)(),
-        eA = ej === B.a$.FP_ONLY,
+        eA = ej === M.a$.FP_ONLY,
         eP = (0, p.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -104,10 +104,10 @@ t.Z = () => {
         eZ = () => {
             (0, _.uL)(w.Z5c.COLLECTIBLES_SHOP);
         },
-        eM = () => {
+        eB = () => {
             o.Z.open(w.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
         },
-        eB = {
+        eM = {
             clientThemes: {
                 name: 'clientThemes',
                 title: U.intl.string(U.t.kWM48P),
@@ -376,7 +376,7 @@ t.Z = () => {
                 perkImage: q,
                 description: U.intl.string(U.t.e7FKCg),
                 descriptionCta: U.intl.string(U.t.jVcuVV),
-                onCtaClick: eM
+                onCtaClick: eB
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
@@ -420,7 +420,7 @@ t.Z = () => {
                 description: U.intl.string(U.t.ee7wQ0),
                 descriptionCta: eE || eb ? U.intl.string(U.t.y9TxXV) : U.intl.string(U.t.d8o6lZ),
                 isPremiumGetCta: !(eE || eb),
-                onCtaClick: eE || eb ? eM : void 0,
+                onCtaClick: eE || eb ? eB : void 0,
                 perkImage: en
             },
             referralProgram: {
@@ -455,7 +455,7 @@ t.Z = () => {
                     initialPercentage: ev
                 })
             });
-        eB.tenureRewardCollectible = {
+        eM.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
             subtitle: n,
@@ -486,7 +486,7 @@ t.Z = () => {
                     initialPercentage: ev
                 })
             });
-        eB.freeBoost = {
+        eM.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
@@ -501,7 +501,7 @@ t.Z = () => {
             dismissibleContentType: l
         };
     }
-    let ey = (0, M.kG)(),
+    let ey = (0, B.kG)(),
         { enabled: ew } = (0, S.Z)(),
         ek = () => {
             C.default.track(w.rMx.OPEN_MODAL, {
@@ -518,7 +518,7 @@ t.Z = () => {
     return (
         null != ey &&
             ew &&
-            (eB.tenureBadge = {
+            (eM.tenureBadge = {
                 name: 'tenureBadge',
                 title: U.intl.string(U.t.rnsqpa),
                 pillText: U.intl.string(U.t.jyYgZ2).toLocaleUpperCase(),
@@ -527,7 +527,7 @@ t.Z = () => {
                 onClick: () => ek()
             }),
         (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&
-            (eB.shyProject = {
+            (eM.shyProject = {
                 name: 'shyProject',
                 title: U.intl.string(U.t['0Mykgo']),
                 subtitle: U.intl.string(U.t.opgqDQ),
@@ -538,6 +538,6 @@ t.Z = () => {
                 perkImage: K,
                 isPremiumGetCta: !eE
             }),
-        eB
+        eM
     );
 };

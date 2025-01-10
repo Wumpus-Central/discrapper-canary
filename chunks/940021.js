@@ -18,7 +18,7 @@ function u() {
         setting: o.s6.PRIVACY_DATA_QUESTS_V2,
         children: (0, i.jsx)(a.Z, {
             title: d.intl.string(d.t.VkS7YW),
-            note: d.intl.format(d.t['5htRLC'], { helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
+            note: d.intl.format(d.t['7Q2yX1'], { helpdeskArticle: s.Z.getArticleURL(c.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
             onChange: (e) => r.bh.updateSetting(!e)
         })

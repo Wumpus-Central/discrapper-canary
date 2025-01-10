@@ -5,13 +5,13 @@ n.d(t, {
 }),
     n(47120);
 var l = n(512722),
-    u = n.n(l),
-    i = n(911969),
+    i = n.n(l),
+    u = n(911969),
     r = n(388032);
 let a = (e, t) => {
         let { minValues: n, maxValues: l } = e;
         if (null == t) return 0 === n ? null : r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
-        if (t.type === i.re.STRING_SELECT) {
+        if (t.type === u.re.STRING_SELECT) {
             if (t.values.length < n) return r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
             if (t.values.length > l) return r.intl.formatToPlainString(r.t.LDvfRE, { count: l });
         } else {
@@ -21,9 +21,9 @@ let a = (e, t) => {
         return null;
     },
     o = (e, t) => {
-        let { minLength: n, maxLength: l, required: u } = e;
+        let { minLength: n, maxLength: l, required: i } = e;
         if (null == t || 0 === t.value.length)
-            return u
+            return i
                 ? r.intl.formatToPlainString(r.t.ONSqYW, {
                       min: n,
                       max: l
@@ -37,18 +37,18 @@ let a = (e, t) => {
             : null;
     };
 function d(e, t) {
-    switch ((null != t && u()(t.type === e.type, 'component type matches state'), e.type)) {
-        case i.re.BUTTON:
+    switch ((null != t && i()(t.type === e.type, 'component type matches state'), e.type)) {
+        case u.re.BUTTON:
             return null;
-        case i.re.STRING_SELECT:
-        case i.re.USER_SELECT:
-        case i.re.ROLE_SELECT:
-        case i.re.MENTIONABLE_SELECT:
-        case i.re.CHANNEL_SELECT:
+        case u.re.STRING_SELECT:
+        case u.re.USER_SELECT:
+        case u.re.ROLE_SELECT:
+        case u.re.MENTIONABLE_SELECT:
+        case u.re.CHANNEL_SELECT:
             return a(e, t);
-        case i.re.TEXT_INPUT:
+        case u.re.TEXT_INPUT:
             return o(e, t);
         default:
-            u()(!1, 'missing validator for this component');
+            i()(!1, 'missing validator for this component');
     }
 }

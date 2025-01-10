@@ -162,7 +162,7 @@ let Z = () => {
                   ]
               });
     },
-    M = (e) => {
+    B = (e) => {
         let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
             a = (0, h.I)(t);
         return void 0 === a
@@ -190,7 +190,7 @@ let Z = () => {
                   ]
               });
     },
-    B = () => {
+    M = () => {
         let e = (0, E.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, p.G)({}),
@@ -200,7 +200,7 @@ let Z = () => {
             })),
             s = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(M, {
+                    (0, i.jsx)(B, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
@@ -228,8 +228,8 @@ let Z = () => {
             a = (0, g.Qr)(!!n),
             s = (0, E.Rd)(a);
         return n && 1 !== r.length
-            ? (0, i.jsx)(B, {})
-            : (0, i.jsx)(M, {
+            ? (0, i.jsx)(M, {})
+            : (0, i.jsx)(B, {
                   userId: t,
                   subText: s
               });

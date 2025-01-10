@@ -34,8 +34,8 @@ var i = n(200651),
     P = n(246946),
     O = n(78839),
     Z = n(483444),
-    M = n(626135),
-    B = n(63063),
+    B = n(626135),
+    M = n(63063),
     y = n(74538),
     w = n(140465),
     k = n(286961),
@@ -141,7 +141,7 @@ function en() {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: q.fractionalPremiumSubheader,
-                                      children: Q.intl.format(Q.t.sK7fGh, { helpCenterLink: B.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      children: Q.intl.format(Q.t.sK7fGh, { helpCenterLink: M.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
@@ -159,7 +159,7 @@ function en() {
                         className: q.tierCardButton,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            M.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
@@ -177,7 +177,7 @@ function en() {
                         look: g.Button.Looks.OUTLINED,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            M.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -249,7 +249,7 @@ function ei(e) {
                         buttonTextClassName: q.giftButtonCTA,
                         color: g.Button.Colors.CUSTOM,
                         onClick: () => {
-                            M.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: $,
                                 target: ee
                             });
@@ -294,7 +294,7 @@ function er() {
                               buttonTextClassName: q.giftButtonCTA,
                               color: g.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  M.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: $,
                                       target: ee
                                   });
@@ -333,7 +333,7 @@ t.Z = function () {
             !b && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, K.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, b, e]);
-    let [B, y] = r.useState(!1);
+    let [M, y] = r.useState(!1);
     if (b) return (0, i.jsx)(x.Z, {});
     if (e) return (0, i.jsx)(R.c8, {});
     let w = a && null !== n && s,
@@ -367,7 +367,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !B && (M.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), y(!0));
+                        e && !M && (B.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), y(!0));
                     },
                     children: (0, i.jsx)('div', { className: q.bottomOfPageVisibilitySensor })
                 })

@@ -68,12 +68,12 @@ t.Z = (e) => {
                 cancelAnimationFrame(t), P && O();
             };
         }, [S, j, P, O]);
-    let M = (0, _.Op)(P),
-        B = (0, m.Z)(),
+    let B = (0, _.Op)(P),
+        M = (0, m.Z)(),
         y = (0, _.mN)(),
         { fractionalState: w } = (0, c.Z)(),
         k = (0, _.sP)({
-            perksCards: B,
+            perksCards: M,
             variant: b,
             shopMarketingVariation: A,
             isFullScreen: I,
@@ -86,7 +86,7 @@ t.Z = (e) => {
         G = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            ((null == B ? void 0 : null === (t = B.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == B ? void 0 : null === (n = B.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
+            ((null == M ? void 0 : null === (t = M.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == M ? void 0 : null === (n = M.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: D,
                     className: x.confettiCanvas,
@@ -106,7 +106,7 @@ t.Z = (e) => {
                     (0, i.jsx)(E, {
                         showAllPerksButton: T,
                         leftAlignHeaders: v,
-                        title: M.title,
+                        title: B.title,
                         headerClassname: N
                     }),
                     (0, i.jsx)(o.Text, {
@@ -120,7 +120,7 @@ t.Z = (e) => {
                             [x.leftAlignSubtitle]: v,
                             [x.centerAlignSubtitle]: !v
                         }),
-                        children: M.subtitle
+                        children: B.subtitle
                     }),
                     !v &&
                         null != T &&

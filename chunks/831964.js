@@ -36,8 +36,8 @@ var i,
     P = n(220046),
     O = n(385874),
     Z = n(371000),
-    M = n(377679),
-    B = n(825087);
+    B = n(377679),
+    M = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let y = () => {
     let e = (0, c.rO)();
@@ -118,7 +118,7 @@ t.ZP = (e) => {
                 descriptionCta: m.intl.string(m.t.jVcuVV),
                 previewImage: _,
                 onClick: i,
-                videoUrl: r ? M.Z : B.Z
+                videoUrl: r ? B.Z : M.Z
             }
         };
     return e ? b : p;

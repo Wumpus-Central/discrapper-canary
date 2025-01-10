@@ -1,7 +1,7 @@
 n(47120);
 var l,
-    u,
     i,
+    u,
     r,
     a = n(442837),
     o = n(570140),
@@ -12,8 +12,8 @@ let c = new d.Z(196606),
     T = new d.Z(196606);
 function I(e, t, n) {
     var l;
-    let u = null !== (l = c.get(e)) && void 0 !== l ? l : new Map();
-    u.set(t, n), c.set(e, u), s++;
+    let i = null !== (l = c.get(e)) && void 0 !== l ? l : new Map();
+    i.set(t, n), c.set(e, i), s++;
 }
 function f(e) {
     let t = E.get(e);
@@ -33,26 +33,26 @@ class p extends (l = a.ZP.Store) {
     }
 }
 (r = 'LocalInteractionComponentStateStore'),
-    (i = 'displayName') in (u = p)
-        ? Object.defineProperty(u, i, {
+    (u = 'displayName') in (i = p)
+        ? Object.defineProperty(i, u, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[i] = r),
+        : (i[u] = r),
     (t.Z = new p(o.Z, {
         LOGOUT: function () {
             c.clear(), E.clear(), T.clear(), s++;
         },
         QUEUE_INTERACTION_COMPONENT_STATE: function (e) {
-            let { messageId: t, nonce: n, componentId: l, state: u } = e;
+            let { messageId: t, nonce: n, componentId: l, state: i } = e;
             E.set(t, n),
                 T.set(n, {
                     messageId: t,
                     componentId: l
                 }),
-                I(t, l, u);
+                I(t, l, i);
         },
         SET_INTERACTION_COMPONENT_STATE: function (e) {
             let { rootContainerId: t, componentId: n, state: l } = e;

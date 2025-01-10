@@ -34,8 +34,8 @@ let P = {
     },
     O = r.memo((e) => {
         let { name: t, canReveal: n = !0, dismissibleContentType: a, forceShadow: E, cardType: T, confettiCanvas: N } = e,
-            M = null == e ? void 0 : e.onCtaClick,
-            B = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
+            B = null == e ? void 0 : e.onCtaClick,
+            M = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
             [y, w] = r.useState(!1),
             [k, L] = r.useState(!1),
             U = (0, h.yQ)(),
@@ -69,10 +69,10 @@ let P = {
                 });
             }, 800),
             et = (0, l.debounce)(() => {
-                null != M &&
+                null != B &&
                     _.default.track(S.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                         card_type: (0, l.snakeCase)(t),
-                        function_name: (0, l.snakeCase)(M.name)
+                        function_name: (0, l.snakeCase)(B.name)
                     });
             }, 800),
             en = r.useRef(null);
@@ -80,16 +80,16 @@ let P = {
             onMouseEnter: ee,
             ...e,
             onCtaClick:
-                null != M
+                null != B
                     ? () => {
-                          null == M || M(), et();
+                          null == B || B(), et();
                       }
                     : void 0
         };
         let ei = K !== a || null == a || k || a === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
         return (r.useEffect(() => {
-            B && y && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
-        }, [B, y, a, t, Q]),
+            M && y && (L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION));
+        }, [M, y, a, t, Q]),
         (0, m.Z)(
             {
                 type: o.ImpressionTypes.VIEW,
@@ -122,7 +122,7 @@ let P = {
                               [A.partialFlipCard]: !J,
                               [A.ultraFlipCard]: J,
                               [A.rotateCard]: J && 3 === q,
-                              [A.reducedMotion]: B
+                              [A.reducedMotion]: M
                           }),
                           children: [
                               (0, i.jsx)('div', {
@@ -149,7 +149,7 @@ let P = {
                                 [A.noFlipCardContainer]: !z,
                                 [A.noFlipCardContainerCarousel]: z,
                                 [A.forceShadow]: E,
-                                [A.reducedMotion]: B
+                                [A.reducedMotion]: M
                             }),
                             children: [
                                 (0, i.jsx)(Z, {
@@ -180,7 +180,7 @@ let P = {
                             className: s()(A.flipCard, A.clickable, {
                                 [A.flipped]: y,
                                 [A.partialFlipCard]: !k && !y,
-                                [A.reducedMotion]: B
+                                [A.reducedMotion]: M
                             }),
                             onTransitionEnd: (e) => {
                                 if (!!y && 'transform' === e.propertyName && !!e.target.classList.contains(A.flipCard)) L(!0), _.default.track(S.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != a && Q(R.L.TAKE_ACTION);

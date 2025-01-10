@@ -29,11 +29,11 @@ t.Z = (e) => {
         P = (0, g.Nx)(),
         O = (0, u.rO)(),
         Z = r.useRef(null),
-        [M, B] = r.useState(!1);
+        [B, M] = r.useState(!1);
     return (
         r.useEffect(() => {
-            T && !I && !M && null != Z.current && Z.current.play();
-        }, [T, I, M]),
+            T && !I && !B && null != Z.current && Z.current.play();
+        }, [T, I, B]),
         (0, i.jsx)(c.Gt, {
             value: S,
             children: (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                             poster: C.Z,
                             className: s()(E.footerArt),
                             onEnded: () => {
-                                B(!0);
+                                M(!0);
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
