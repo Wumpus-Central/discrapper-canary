@@ -1,64 +1,67 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return k;
         }
     });
-var i = n(200651);
-n(192379);
-var a = n(442837),
-    l = n(780384),
+var i = n(200651),
+    a = n(192379),
+    l = n(442837),
+    s = n(780384),
     o = n(481060),
-    s = n(313201),
-    c = n(210887),
-    r = n(450269),
-    d = n(388032),
-    h = n(42129),
-    u = n(112847),
-    x = n(516954);
-function m(e) {
-    let { guildId: t, transitionState: n, onClose: m, onConfirm: k } = e,
-        C = (0, s.Dt)(),
-        b = (0, a.e7)([c.Z], () => c.Z.theme),
-        g = (0, l.wj)(b) ? u : x,
-        { rules: p, rulesAccepted: y } = (0, r.V)(t);
+    c = n(313201),
+    r = n(210887),
+    d = n(450269),
+    h = n(388032),
+    u = n(42129),
+    x = n(112847),
+    m = n(516954);
+function k(e) {
+    let { guildId: t, transitionState: n, onClose: k, onConfirm: C } = e,
+        b = (0, c.Dt)(),
+        g = (0, l.e7)([r.Z], () => r.Z.theme),
+        p = (0, s.wj)(g) ? x : m,
+        { rules: y, rulesAccepted: j } = (0, d.V)(t),
+        E = a.useCallback(() => {
+            k(), C();
+        }, [k, C]);
     return (0, i.jsxs)(o.ModalRoot, {
         transitionState: n,
-        'aria-labelledby': C,
-        className: h.modal,
+        'aria-labelledby': b,
+        className: u.modal,
         children: [
             (0, i.jsx)(o.ModalCloseButton, {
-                onClick: m,
-                className: h.close
+                onClick: k,
+                className: u.close
             }),
             (0, i.jsxs)(o.ModalContent, {
-                className: h.content,
+                className: u.content,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: h.header,
+                        className: u.header,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: g,
+                                src: p,
                                 width: 80
                             }),
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-xxl/semibold',
                                 color: 'header-primary',
-                                id: C,
-                                children: d.intl.string(d.t.Q8OFNz)
+                                id: b,
+                                children: h.intl.string(h.t.Q8OFNz)
                             })
                         ]
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: h.centeredText,
-                        children: d.intl.string(d.t['WT+829'])
+                        className: u.centeredText,
+                        children: h.intl.string(h.t['WT+829'])
                     }),
                     (0, i.jsx)('div', {
-                        className: h.checkboxContainer,
-                        children: p.map((e) =>
+                        className: u.checkboxContainer,
+                        children: y.map((e) =>
                             (0, i.jsxs)(
                                 o.Checkbox,
                                 {
@@ -89,13 +92,13 @@ function m(e) {
             (0, i.jsx)(o.ModalFooter, {
                 children: (0, i.jsx)(o.Button, {
                     fullWidth: !0,
-                    disabled: !y,
+                    disabled: !j,
                     color: o.Button.Colors.BRAND,
-                    onClick: k,
+                    onClick: E,
                     size: o.Button.Sizes.LARGE,
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-sm/semibold',
-                        children: d.intl.string(d.t['qjtt/v'])
+                        children: h.intl.string(h.t['qjtt/v'])
                     })
                 })
             })
