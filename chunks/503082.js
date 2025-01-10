@@ -36,7 +36,7 @@ class h {
         let n = null != i ? i : 'default',
             a = this.imageMap.get(t);
         if (null != a && null != a[n]) return a[n];
-        if ((this.needsReset && this.reset(), e.width > this.MAX_ROW_WIDTH || e.height > this.MAX_HEIGHT)) throw Error('Image: '.concat(t, ' is too wide to use with offscreen canvas'));
+        if ((this.needsReset && this.reset(), e.width > this.MAX_ROW_WIDTH || e.height > this.MAX_HEIGHT)) throw Error('Image: '.concat(t, ' is too wide to use with offscreen canvas. (').concat(e.width, ' x ').concat(e.height));
         (this.nextX + e.width > this.MAX_ROW_WIDTH || this.nextY + e.height > this.MAX_HEIGHT) && this.breakToNewRow(!0), this.context.save(), null != i && (this.context.filter = i), this.context.drawImage(e, this.nextX, this.nextY, e.width, e.height), this.context.restore();
         let r = null !== (s = this.imageMap.get(t)) && void 0 !== s ? s : {},
             o = {
@@ -57,7 +57,7 @@ class h {
         );
     }
     constructor() {
-        l(this, 'CELL_BUFFER', 2), l(this, 'MAX_ROW_WIDTH', 64), l(this, 'MAX_HEIGHT', 4096), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), (this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT);
+        l(this, 'CELL_BUFFER', 2), l(this, 'MAX_ROW_WIDTH', 4096), l(this, 'MAX_HEIGHT', 4096), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), (this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT);
         let t = this.canvas.getContext('2d');
         if (null == t) throw Error("Couldn't construct context for offscreen canvas");
         this.context = t;

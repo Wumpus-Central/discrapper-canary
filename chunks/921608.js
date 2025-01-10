@@ -1,10 +1,10 @@
 i.d(e, {
     F: function () {
-        return n;
+        return s;
     },
     n: function () {
-        return s;
+        return n;
     }
 });
-let n = 12,
-    s = 24;
+let s = 12,
+    n = 24;
