@@ -150,7 +150,7 @@ r.d(n, {
         return e4;
     },
     xG: function () {
-        return tw;
+        return tP;
     },
     yd: function () {
         return w.yd;
@@ -159,7 +159,7 @@ r.d(n, {
         return ec;
     },
     zV: function () {
-        return eZ;
+        return eF;
     }
 });
 var i,
@@ -199,12 +199,12 @@ var m = r(782568),
     U = r(474936),
     B = r(231338),
     G = r(388032);
-let Z = {
+let F = {
         PAYMENT_SOURCE_MANAGEMENT: 'https://support.apple.com/HT201266',
         BILLING_HISTORY: 'https://support.apple.com/HT201266',
         SUBSCRIPTION_MANAGEMENT: 'https://support.apple.com/HT202039'
     },
-    F = {
+    Z = {
         SUBSCRIPTION_MANAGEMENT: 'https://play.google.com/store/account/subscriptions',
         PAYMENT_SOURCE_MANAGEMENT: 'https://play.google.com/store/paymentmethods',
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
@@ -622,11 +622,11 @@ function el(e) {
                 case M.O0b.UNPAID:
                     return G.intl.format(G.t['0HopYW'], { num: L });
                 case M.O0b.PAUSE_PENDING:
-                    let Z = null != f.pauseEndsAt ? h()(f.pauseEndsAt).diff(f.currentPeriodEnd, 'days') : null;
-                    return null != Z
+                    let F = null != f.pauseEndsAt ? h()(f.pauseEndsAt).diff(f.currentPeriodEnd, 'days') : null;
+                    return null != F
                         ? G.intl.format(G.t.WUfODw, {
                               pauseDate: f.currentPeriodEnd,
-                              pauseDuration: Z
+                              pauseDuration: F
                           })
                         : G.intl.format(G.t.VlWufn, { pauseDate: f.currentPeriodEnd });
                 case M.O0b.PAUSED:
@@ -673,7 +673,7 @@ function eu(e) {
         el({
             subscription: r,
             planId: u.id,
-            price: eF(n, r, u),
+            price: eZ(n, r, u),
             includePremiumGuilds: a,
             hasDiscountApplied: s,
             activeDiscountInfo: o,
@@ -943,13 +943,13 @@ function eA(e, n) {
 function eN(e, n) {
     let r = h()(e);
     if (n.length > 0) {
-        let e = tx(n);
+        let e = tw(n);
         r = r.add(e, 'hours');
     }
     return r.toDate();
 }
 function eC(e) {
-    let n = tx(e.unactivatedUnits);
+    let n = tw(e.unactivatedUnits);
     if (!(n > 0 && e.fractionalState === U.a$.NONE)) return '';
     let r = {
             days: G.t.fYmir6,
@@ -1077,10 +1077,10 @@ function eG(e) {
     let { status: n, renewalMutations: r } = e;
     return n === M.O0b.CANCELED || (null != r && (0, T.Q0)(r.planId) && !e.isPurchasedExternally);
 }
-function eZ(e) {
+function eF(e) {
     return e === M.O0b.PAST_DUE || e === M.O0b.ACCOUNT_HOLD || e === M.O0b.BILLING_RETRY;
 }
-function eF(e, n, r) {
+function eZ(e, n, r) {
     let i = e.invoiceItems.find((e) => {
             let { subscriptionPlanId: n } = e;
             return n === r.id;
@@ -1240,14 +1240,14 @@ function eQ(e, n) {
     switch (e) {
         case M.gg$.APPLE_PARTNER:
         case M.gg$.APPLE:
-            return Z[n];
-        case M.gg$.GOOGLE:
             return F[n];
+        case M.gg$.GOOGLE:
+            return Z[n];
     }
     throw Error('Invalid external payment gateway '.concat(e));
 }
 function eX(e, n) {
-    return (0, w.I5)(e) || eZ(null == n ? void 0 : n.status);
+    return (0, w.I5)(e) || eF(null == n ? void 0 : n.status);
 }
 function eJ(e, n) {
     var r, i;
@@ -1453,12 +1453,17 @@ function tD(e) {
     return null != e && U.OT.includes(e) ? 1 : 2;
 }
 function tL(e) {
-    return null != e && !e.isProvisional && !e.bot;
+    if (e === U.rV.YEAR) return G.intl.string(G.t.tfqrho);
+    if (e === U.rV.MONTH) return G.intl.string(G.t.FPybU1);
+    throw Error('Invalid interval type: '.concat(e));
 }
 function tx(e) {
-    return tw(e.map((e) => e.skuId));
+    return null != e && !e.isProvisional && !e.bot;
 }
 function tw(e) {
+    return tP(e.map((e) => e.skuId));
+}
+function tP(e) {
     return e.reduce((e, n) => {
         let [r, i] = U.Cx[n],
             a = 1;
@@ -1477,7 +1482,7 @@ n.ZP = Object.freeze({
     isPremiumAtLeast: w.yd,
     isPremium: w.I5,
     isPremiumExactly: w.M5,
-    isPremiumEligible: tL,
+    isPremiumEligible: tx,
     getPrice: K,
     getDefaultPrice: W,
     getInterval: X,
@@ -1489,6 +1494,7 @@ n.ZP = Object.freeze({
     getPremiumPlanOptions: ef,
     getUpgradeEligibilities: ep,
     getReverseTrialWeeks: tD,
+    formatInterval: tL,
     getPlanDescription: el,
     isPremiumSku: ed,
     getClosestUpgrade: em,
@@ -1517,7 +1523,7 @@ n.ZP = Object.freeze({
     getPremiumTypeFromSubscription: e8,
     getPremiumTypeFromSubscriptionRenewalMutations: e9,
     getPremiumGradientColor: te,
-    getUnactivatedFractionalPremiumHours: tx,
+    getUnactivatedFractionalPremiumHours: tw,
     castPremiumSubscriptionAsSkuId: tR,
     canUseAnimatedEmojis: tn,
     canUseEmojisEverywhere: tr,
