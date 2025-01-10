@@ -27,7 +27,7 @@ var h = r(913527),
     A = r(710845),
     N = r(353926),
     C = r(924301),
-    R = r(57132),
+    R = r(777639),
     O = r(355298),
     D = r(869404),
     L = r(333984),
@@ -908,7 +908,7 @@ function ta(e) {
                 manual: !1
             })
         );
-    let _ = (0, R.P)();
+    let _ = (0, R.D)();
     if ((null == _ ? void 0 : _.isReady()) === !0) {
         let e = _.getCurrentRoute();
         if (b.Z.getChatOpen(l.channelId)) n = l.channelId;

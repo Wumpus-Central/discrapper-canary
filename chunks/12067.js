@@ -40,11 +40,11 @@ function x(e) {
                       'Media Mosaic'
                   )
                 : {};
-    function j(e, n) {
+    function S(e, n) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let S = e.items.map((e, t) => {
+    let j = e.items.map((e, t) => {
         let l = e.media,
             i = null == _ ? void 0 : _(l),
             r = {
@@ -62,7 +62,7 @@ function x(e) {
                 },
                 onContextMenu: i,
                 autoPlayGif: C,
-                getObscureReason: j,
+                getObscureReason: S,
                 renderImageComponent: s.aB,
                 renderVideoComponent: s.rJ,
                 renderVisualPlaceholderComponent: s.yF,
@@ -81,5 +81,5 @@ function x(e) {
             });
         return a in I && (r.onClick = I[a]), r;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: S }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: j }) });
 }

@@ -5,7 +5,7 @@ var a = r(544891),
     l = r(802098),
     u = r(702321),
     c = r(408987),
-    d = r(57132),
+    d = r(777639),
     f = r(895886),
     _ = r(703656),
     h = r(359110),
@@ -53,7 +53,7 @@ n.Z = {
     _openCachedDMChannel(e, n) {
         let r = m.Z.getDMFromUserId(e),
             i = null != r ? m.Z.getChannel(r) : null;
-        return null == i ? null : (null == n || n(), null != (0, d.P)() ? (0, h.Kh)(i.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(i.id), i);
+        return null == i ? null : (null == n || n(), null != (0, d.D)() ? (0, h.Kh)(i.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(i.id), i);
     },
     async ensurePrivateChannel(e) {
         let n = this._getRecipients(e),
@@ -98,7 +98,7 @@ n.Z = {
                 type: 'CHANNEL_CREATE',
                 channel: n
             }),
-            null != (0, d.P)() ? (0, h.Kh)(n.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(n.id),
+            null != (0, d.D)() ? (0, h.Kh)(n.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(n.id),
             n
         );
     },

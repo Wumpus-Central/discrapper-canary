@@ -40,15 +40,15 @@ function C(e) {
 function g(e) {
     let n;
     let { label: t, style: i, disabled: m, emoji: x, url: g, skuId: _ } = e,
-        { executeStateUpdate: b, visualState: I, isDisabled: j } = (0, p.Ee)(e),
-        S = (0, d.s)(_),
+        { executeStateUpdate: b, visualState: I, isDisabled: S } = (0, p.Ee)(e),
+        j = (0, d.s)(_),
         y = null != _ && i === u.ZJ.PREMIUM,
-        T = y && (null == S ? void 0 : S.disabled),
-        N = y ? (null == S ? void 0 : S.label) : t,
+        T = y && (null == j ? void 0 : j.disabled),
+        N = y ? (null == j ? void 0 : j.label) : t,
         E = null != x,
         Z = null != N && N.length > 0,
         k = i === u.ZJ.LINK && null != g && g.length > 0,
-        L = I === h.gH.LOADING || (y && null == S);
+        L = I === h.gH.LOADING || (y && null == j);
     return (
         (n = k
             ? () => {
@@ -58,8 +58,8 @@ function g(e) {
                   });
               }
             : y
-              ? null != S && !1 === S.disabled
-                  ? S.onClick
+              ? null != j && !1 === j.disabled
+                  ? j.onClick
                   : a.noop
               : () => b()),
         (0, l.jsxs)(o.Button, {
@@ -77,7 +77,7 @@ function g(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || I === h.gH.DISABLED || j || T,
+            disabled: m || I === h.gH.DISABLED || S || T,
             onClick: n,
             onContextMenu: (e) => {
                 k &&

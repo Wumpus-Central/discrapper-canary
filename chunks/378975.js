@@ -118,15 +118,15 @@ function C(e) {
         {
             state: b,
             executeStateUpdate: I,
-            visualState: j,
-            isDisabled: S,
+            visualState: S,
+            isDisabled: j,
             error: y
         } = (0, d.Ee)(e, {
             type: n,
             values: _
         }),
         T = s > 1,
-        N = j === m.gH.LOADING,
+        N = S === m.gH.LOADING,
         [E, Z] = i.useState(!1),
         [k, L] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
         [O, A] = i.useState(k),
@@ -140,7 +140,7 @@ function C(e) {
             L(e), A(e);
         }
     }, [r, _, b]);
-    let R = i.useCallback(() => {
+    let P = i.useCallback(() => {
         if (O !== k)
             I({
                 type: c.re.STRING_SELECT,
@@ -148,14 +148,14 @@ function C(e) {
             }) && A(k);
     }, [k, O, A, I]);
     i.useEffect(() => {
-        if (!(E || (k.size === O.size && Array.from(O).every((e) => k.has(e))))) R();
-    }, [E, k, O, R]);
-    let P = o.singleSelect;
-    T ? (P = o.multiSelect) : 0 === C && (P = o.toggleSelect);
+        if (!(E || (k.size === O.size && Array.from(O).every((e) => k.has(e))))) P();
+    }, [E, k, O, P]);
+    let R = o.singleSelect;
+    T ? (R = o.multiSelect) : 0 === C && (R = o.toggleSelect);
     let w = (0, o.useVariableSelect)({
         value: k,
         onChange: (e) => L(e),
-        onSelectInteraction: P
+        onSelectInteraction: R
     });
     return (0, l.jsxs)(i.Fragment, {
         children: [
@@ -163,7 +163,7 @@ function C(e) {
                 className: p.container,
                 children: [
                     (0, l.jsx)(o.Select, {
-                        isDisabled: g || S,
+                        isDisabled: g || j,
                         className: p.select,
                         options: t.map((e) => ({
                             ...e,

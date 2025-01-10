@@ -14,27 +14,27 @@ var i = n(200651),
     p = n(606669),
     f = n(53432),
     h = n(74869),
-    S = n(45570),
-    _ = n(308512),
+    _ = n(45570),
+    S = n(308512),
     x = n(594791),
-    C = n(393431),
-    M = n(69021),
+    M = n(393431),
+    C = n(69021),
     Z = n(981631),
     j = n(388032);
 t.default = (0, u.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
             [u, s] = o.useState(!1),
-            k = (0, S.Z)(),
-            I = (0, _.Z)(),
+            k = (0, _.Z)(),
+            I = (0, S.Z)(),
             v = (0, f.Z)(),
             B = (0, p.Z)(),
-            E = (0, C.Z)(),
+            E = (0, M.Z)(),
             R = (0, x.Z)(),
-            T = (0, h.Z)(),
-            y = (0, M.Z)(),
+            y = (0, h.Z)(),
+            T = (0, C.Z)(),
             { analyticsLocations: D } = (0, d.ZP)(),
-            O = o.useMemo(() => (0, m.j)(), []);
+            G = o.useMemo(() => (0, m.j)(), []);
         async function U() {
             try {
                 s(!0), await (0, g.bF)(), window.location.reload(!0);
@@ -42,7 +42,7 @@ t.default = (0, u.Z)(
                 s(!1);
             }
         }
-        let G = (e) => {
+        let O = (e) => {
                 switch (e) {
                     case Z.oAB.GAMES:
                         return k;
@@ -57,9 +57,9 @@ t.default = (0, u.Z)(
                     case Z.oAB.TEXT:
                         return R;
                     case Z.oAB.EXPERIMENTS:
-                        return T;
-                    case Z.oAB.DEVELOPER_OPTIONS:
                         return y;
+                    case Z.oAB.DEVELOPER_OPTIONS:
+                        return T;
                     default:
                         return null;
                 }
@@ -93,17 +93,17 @@ t.default = (0, u.Z)(
                                               let n = Object.values(Z.oAB).filter((t) => t === e)[0];
                                               null != n && l.Z.open(n, void 0, { analyticsLocations: t });
                                           })(t, D),
-                                children: G(t)
+                                children: O(t)
                             },
                             a
                         );
                     }),
-                    e.user.isStaff() && O.length > 0
+                    e.user.isStaff() && G.length > 0
                         ? (0, i.jsx)(r.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
                               children: (0, i.jsx)(r.MenuGroup, {
-                                  children: O.map((e) =>
+                                  children: G.map((e) =>
                                       (0, i.jsx)(
                                           r.MenuRadioItem,
                                           {

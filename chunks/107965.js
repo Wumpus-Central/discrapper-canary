@@ -86,7 +86,7 @@ class E {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || 'ba0fa96cdc35e0a65caae93f505e5b9f79ff286d' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '21aa5b12de5d0a3b2fc74621b5f0e65b701e2d0b' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - _ > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);

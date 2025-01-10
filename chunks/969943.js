@@ -17,5 +17,5 @@ r.d(n, {
         (e.REDUCED_MOTION = 'REDUCED_MOTION'), (e.REDUCED_MOTION_STICKERS = 'REDUCED_MOTION_STICKERS');
     })(a || (a = {})),
     !(function (e) {
-        (e.AUTO = 'auto'), (e.COMPACT = 'compact'), (e.COZY = 'cozy');
+        (e.COMPACT = 'compact'), (e.COZY = 'cozy');
     })(s || (s = {}));

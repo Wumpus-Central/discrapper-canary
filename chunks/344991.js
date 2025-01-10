@@ -35,8 +35,8 @@ function v(e) {
 function C(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
         { type: C, placeholder: g, maxValues: _, disabled: b } = n,
-        [I, j] = a.useState(!1),
-        [S, y] = a.useState(!1),
+        [I, S] = a.useState(!1),
+        [j, y] = a.useState(!1),
         [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [E, Z] = a.useState(new Set(T.keys())),
         [k, L] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
@@ -50,15 +50,15 @@ function C(e) {
     }, [o, k]);
     let {
             state: M,
-            executeStateUpdate: R,
-            visualState: P,
+            executeStateUpdate: P,
+            visualState: R,
             isDisabled: w,
             error: B
         } = (0, m.Ee)(n, {
             type: C,
             selectedOptions: Array.from(T.values())
         }),
-        U = P === f.gH.LOADING;
+        U = R === f.gH.LOADING;
     a.useEffect(() => {
         if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
             let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
@@ -66,14 +66,14 @@ function C(e) {
         }
     }, [M]);
     let G = a.useCallback(() => {
-        R({
+        P({
             type: C,
             selectedOptions: Array.from(T.values())
         }) && Z(new Set(T.keys()));
-    }, [R, C, T]);
+    }, [P, C, T]);
     a.useEffect(() => {
-        if (!(I || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
-    }, [I, S, E, T, G]);
+        if (!(I || j || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
+    }, [I, j, E, T, G]);
     let H = 0 === T.size || I,
         D = {
             isDisabled: b || w,
@@ -83,8 +83,8 @@ function C(e) {
                     n(t(e));
                 }),
             placeholder: H ? (null != g ? g : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => j(!1),
-            onOpen: () => j(!0),
+            onClose: () => S(!1),
+            onOpen: () => S(!0),
             onBlur: () => y(!1),
             maxVisibleItems: 5,
             optionClassName: h.__invalid_selectOption,

@@ -16,7 +16,7 @@ var u = r(990547),
     h = r(881052),
     p = r(882037),
     m = r(710845),
-    g = r(57132),
+    g = r(777639),
     E = r(703656),
     v = r(365007),
     I = r(314897),
@@ -41,7 +41,7 @@ function O(e) {
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
     if ((O(), null == e)) return;
-    let n = (0, g.P)();
+    let n = (0, g.D)();
     if (null == n) {
         (0, E.uL)(e);
         return;
