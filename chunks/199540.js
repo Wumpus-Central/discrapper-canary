@@ -114,43 +114,44 @@ function E(e) {
             isMentionLowImportance: u,
             tooltipName: f,
             folderGroupId: m,
-            folderIconContent: g,
-            onClick: C,
-            onContextMenu: _,
-            onHoverChange: Z,
-            onKeyDown: b,
-            treeItemProps: { onFocus: S, ...E }
+            folderIconContentClassName: g,
+            folderIconContent: C,
+            onClick: _,
+            onContextMenu: Z,
+            onHoverChange: b,
+            onKeyDown: S,
+            treeItemProps: { onFocus: E, ...y }
         } = e,
-        [y, j] = l.useState(!1),
-        T = l.useCallback(() => {
-            o || j(!0), null == Z || Z(!0);
-        }, [o, Z]),
+        [j, T] = l.useState(!1),
         P = l.useCallback(() => {
-            o || j(!1), null == Z || Z(!1);
-        }, [o, Z]),
-        A = (0, p.Q3)('FolderHeader'),
-        w = r || null == s ? null : (0, v.Or)(s),
-        M = !r && c > 0 ? (0, v.Ne)(c, u ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null;
+            o || T(!0), null == b || b(!0);
+        }, [o, b]),
+        A = l.useCallback(() => {
+            o || T(!1), null == b || b(!1);
+        }, [o, b]),
+        w = (0, p.Q3)('FolderHeader'),
+        M = r || null == s ? null : (0, v.Or)(s),
+        L = !r && c > 0 ? (0, v.Ne)(c, u ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER) : null;
     return (0, i.jsx)(d.BlobMask, {
         isFolder: !0,
-        style: A
+        style: w
             ? {
                   width: 52,
                   height: 52
               }
             : void 0,
-        selected: !!A || !n,
-        upperBadge: w,
-        lowerBadge: M,
+        selected: !!w || !n,
+        upperBadge: M,
+        lowerBadge: L,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(I.folder, { [I.hover]: y }),
-            onClick: C,
-            onContextMenu: _,
-            onMouseEnter: T,
-            onMouseLeave: P,
-            onKeyDown: b,
-            onFocus: S,
+            className: a()(I.folder, { [I.hover]: j }),
+            onClick: _,
+            onContextMenu: Z,
+            onMouseEnter: P,
+            onMouseLeave: A,
+            onKeyDown: S,
+            onFocus: E,
             'aria-label': x.intl.formatToPlainString(x.t['90/DwM'], {
                 folderName: f,
                 mentions: c
@@ -158,17 +159,17 @@ function E(e) {
             'aria-expanded': r,
             'aria-owns': m,
             focusProps: { enabled: !1 },
-            ...E,
+            ...y,
             role: 'treeitem',
             children:
-                null != g
+                null != C
                     ? (0, i.jsx)('div', {
-                          className: I.expandedFolderIconWrapper,
-                          children: g
+                          className: a()(I.expandedFolderIconWrapper, g),
+                          children: C
                       })
                     : (0, i.jsx)(N, {
                           folderNode: t,
-                          hovered: y,
+                          hovered: j,
                           expanded: r
                       })
         })
