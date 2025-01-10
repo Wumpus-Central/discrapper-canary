@@ -60,167 +60,171 @@ function P(e) {
         ]
     });
 }
-t.Z = function (e) {
-    var t, n, l;
-    let { quest: o } = e,
-        d = (0, u.O5)(),
-        E = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
-        [I, Z] = r.useState(!1),
-        O = r.useCallback(() => Z(!0), []),
-        y = r.useCallback(() => Z(!1), []),
-        R = r.useCallback((e) => {
+function O(e) {
+    var t, n, l, o;
+    let { nodeRef: d, quest: E } = e,
+        I = (0, u.O5)(),
+        C = (0, s.e7)([p.Z], () => p.Z.isEnrolling(E.id), [E]),
+        [Z, O] = r.useState(!1),
+        y = r.useCallback(() => O(!0), []),
+        R = r.useCallback(() => O(!1), []),
+        j = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        j = r.useCallback(() => {
-            (0, h.AH)(o.id, {
+        D = r.useCallback(() => {
+            (0, h.AH)(E.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
-        }, [o]),
-        D = r.useCallback(() => {
-            null != o &&
-                (d({
-                    questId: o.id,
+        }, [E]),
+        M = r.useCallback(() => {
+            null != E &&
+                (I({
+                    questId: E.id,
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
-        }, [o, d]),
-        M = r.useCallback(() => {
-            d({
-                questId: o.id,
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id));
+        }, [E, I]),
+        w = r.useCallback(() => {
+            I({
+                questId: E.id,
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
-        }, [o.id, d]),
-        w = (0, S.hf)({
-            quest: o,
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id);
+        }, [E.id, I]),
+        k = (0, S.hf)({
+            quest: E,
             location: g.jn.ACTIVITY_PANEL
         }),
-        k = (0, m.tP)(o),
-        U = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        G = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        B = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
-        V = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
-        H = (0, m.Rf)(o),
-        F = (0, _.D)({
-            quest: o,
-            taskDetails: H,
+        U = (0, m.tP)(E),
+        G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        B = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
+        H = (null == E ? void 0 : E.userStatus) == null || (0, f.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
+        F = (0, m.Rf)(E),
+        z = (0, _.D)({
+            quest: E,
+            taskDetails: F,
             location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
-    return V || k || B
+    return H || U || V
         ? null
-        : (0, i.jsx)(C.A, {
-              questOrQuests: o,
-              questContent: g.jn.ACTIVITY_PANEL,
-              children: (e) => {
-                  var t;
-                  return (0, i.jsxs)('div', {
-                      ref: (t) => {
-                          e.current = t;
-                      },
-                      className: a()(L.wrapper, { [L.wrapperQuestAccepted]: U }),
-                      onClick: R,
-                      onKeyPress: R,
-                      onFocus: O,
-                      onMouseEnter: O,
-                      onBlur: y,
-                      onMouseLeave: y,
+        : (0, i.jsxs)('div', {
+              ref: (e) => {
+                  d.current = e;
+              },
+              className: a()(L.wrapper, { [L.wrapperQuestAccepted]: G }),
+              onClick: j,
+              onKeyPress: j,
+              onFocus: y,
+              onMouseEnter: y,
+              onBlur: R,
+              onMouseLeave: R,
+              children: [
+                  (0, i.jsxs)('div', {
+                      className: L.utils,
                       children: [
-                          (0, i.jsxs)('div', {
-                              className: L.utils,
-                              children: [
-                                  U ? (0, i.jsx)(P, { quest: o }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(v.r, {
-                                      quest: o,
-                                      questContent: g.jn.ACTIVITY_PANEL,
-                                      shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
-                                      showShareLink: !0,
-                                      children: (e) =>
-                                          (0, i.jsx)(c.Clickable, {
-                                              ...e,
-                                              'aria-label': x.intl.string(x.t.DEoVWV),
-                                              children: (0, i.jsx)(c.MoreHorizontalIcon, {
-                                                  size: 'md',
-                                                  color: 'currentColor',
-                                                  className: L.submenuIcon
-                                              })
-                                          })
+                          G ? (0, i.jsx)(P, { quest: E }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
+                          (0, i.jsx)(v.r, {
+                              quest: E,
+                              questContent: g.jn.ACTIVITY_PANEL,
+                              shouldShowDisclosure: (null === (o = E.userStatus) || void 0 === o ? void 0 : o.enrolledAt) == null,
+                              showShareLink: !0,
+                              children: (e) =>
+                                  (0, i.jsx)(c.Clickable, {
+                                      ...e,
+                                      'aria-label': x.intl.string(x.t.DEoVWV),
+                                      children: (0, i.jsx)(c.MoreHorizontalIcon, {
+                                          size: 'md',
+                                          color: 'currentColor',
+                                          className: L.submenuIcon
+                                      })
                                   })
-                              ]
-                          }),
-                          !U &&
+                          })
+                      ]
+                  }),
+                  !G &&
+                      (0, i.jsxs)(i.Fragment, {
+                          children: [
+                              (0, i.jsx)(P, { quest: E }),
+                              (0, i.jsx)(c.Text, {
+                                  className: L.instructions,
+                                  variant: 'text-sm/normal',
+                                  color: 'text-normal',
+                                  children: z
+                              })
+                          ]
+                      }),
+                  G &&
+                      !B &&
+                      (0, i.jsx)(T.Z, {
+                          autoplay: Z,
+                          className: L.rewardTileWithInstructions,
+                          quest: E,
+                          questContent: g.jn.ACTIVITY_PANEL,
+                          location: A.dr.ACTIVITY_PANEL,
+                          taskDetails: F
+                      }),
+                  (0, i.jsxs)('div', {
+                      className: L.ctas,
+                      children: [
+                          !G &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(P, { quest: o }),
-                                      (0, i.jsx)(c.Text, {
-                                          className: L.instructions,
-                                          variant: 'text-sm/normal',
-                                          color: 'text-normal',
-                                          children: F
-                                      })
-                                  ]
-                              }),
-                          U &&
-                              !G &&
-                              (0, i.jsx)(T.Z, {
-                                  autoplay: I,
-                                  className: L.rewardTileWithInstructions,
-                                  quest: o,
-                                  questContent: g.jn.ACTIVITY_PANEL,
-                                  location: A.dr.ACTIVITY_PANEL,
-                                  taskDetails: H
-                              }),
-                          (0, i.jsxs)('div', {
-                              className: L.ctas,
-                              children: [
-                                  !U &&
-                                      (0, i.jsxs)(i.Fragment, {
-                                          children: [
-                                              (0, i.jsx)(c.Button, {
-                                                  className: L.cta,
-                                                  color: c.Button.Colors.PRIMARY,
-                                                  fullWidth: !0,
-                                                  size: c.Button.Sizes.SMALL,
-                                                  onClick: M,
-                                                  children: x.intl.string(x.t.LLLLPD)
-                                              }),
-                                              (0, i.jsx)(c.Button, {
-                                                  className: L.cta,
-                                                  color: c.Button.Colors.BRAND,
-                                                  fullWidth: !0,
-                                                  onClick: j,
-                                                  size: c.Button.Sizes.SMALL,
-                                                  submitting: E,
-                                                  children: x.intl.string(x.t.l7E81t)
-                                              })
-                                          ]
+                                      (0, i.jsx)(c.Button, {
+                                          className: L.cta,
+                                          color: c.Button.Colors.PRIMARY,
+                                          fullWidth: !0,
+                                          size: c.Button.Sizes.SMALL,
+                                          onClick: w,
+                                          children: x.intl.string(x.t.LLLLPD)
                                       }),
-                                  U &&
-                                      !G &&
                                       (0, i.jsx)(c.Button, {
                                           className: L.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: D,
                                           size: c.Button.Sizes.SMALL,
-                                          children: x.intl.string(x.t.VN1Ajo)
-                                      }),
-                                  G &&
-                                      (0, i.jsx)(c.Button, {
-                                          className: L.cta,
-                                          color: c.Button.Colors.BRAND,
-                                          fullWidth: !0,
-                                          onClick: w,
-                                          size: c.Button.Sizes.SMALL,
-                                          children: x.intl.string(x.t.cfY4PD)
+                                          submitting: C,
+                                          children: x.intl.string(x.t.l7E81t)
                                       })
-                              ]
-                          })
+                                  ]
+                              }),
+                          G &&
+                              !B &&
+                              (0, i.jsx)(c.Button, {
+                                  className: L.cta,
+                                  color: c.Button.Colors.BRAND,
+                                  fullWidth: !0,
+                                  onClick: M,
+                                  size: c.Button.Sizes.SMALL,
+                                  children: x.intl.string(x.t.VN1Ajo)
+                              }),
+                          B &&
+                              (0, i.jsx)(c.Button, {
+                                  className: L.cta,
+                                  color: c.Button.Colors.BRAND,
+                                  fullWidth: !0,
+                                  onClick: k,
+                                  size: c.Button.Sizes.SMALL,
+                                  children: x.intl.string(x.t.cfY4PD)
+                              })
                       ]
-                  });
-              }
+                  })
+              ]
           });
+}
+t.Z = function (e) {
+    return (0, i.jsx)(C.A, {
+        questOrQuests: e.quest,
+        questContent: g.jn.ACTIVITY_PANEL,
+        children: (t) =>
+            (0, i.jsx)(O, {
+                nodeRef: t,
+                ...e
+            })
+    });
 };
