@@ -362,6 +362,7 @@ var r;
         (e.DEEPLINK = 'deeplink'),
         (e.HOLIDAY_COACHMARK = 'holiday coachmark'),
         (e.USER_SETTINGS_COACHMARK = 'user settings coachmark'),
-        (e.CONNECTED_ACCOUNT_RELINK_BUTTON = 'connected account relink button');
+        (e.CONNECTED_ACCOUNT_RELINK_BUTTON = 'connected account relink button'),
+        (e.APP_MESSAGE_EMBED = 'app message embed');
 })(r || (r = {})),
     (n.Z = r);
