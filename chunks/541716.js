@@ -310,7 +310,8 @@ let l = {
             small: !0
         },
         showCharacterCount: !1,
-        disableAutoFocus: !0
+        disableAutoFocus: !0,
+        hideAccessoryBar: !0
     },
     y = {
         analyticsName: 'forum_channel_guidelines',

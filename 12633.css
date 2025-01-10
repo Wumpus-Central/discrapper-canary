@@ -22971,7 +22971,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 }
 
 .inactiveNitroHeader_a3bc57 {
-    background-color: transparent
+    background-color: transparent !important
 }
 
 .activeNitroHeader_a3bc57 {
