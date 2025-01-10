@@ -1,19 +1,21 @@
 r.d(n, {
     Ji: function () {
-        return _;
+        return h;
     },
     XN: function () {
-        return d;
+        return f;
     }
 });
 var i,
     a = r(818083),
     s = r(638395);
 r(171393);
-let o = (0, a.B)({
+var o = r(987338);
+let l = (0, a.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
+        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -42,10 +44,11 @@ let o = (0, a.B)({
             }
         ]
     }),
-    l = (0, a.B)({
+    u = (0, a.B)({
         kind: 'user',
         id: '2024-10_icymi_sorting_fe',
         label: 'FE experiment for sorting on ICYMI',
+        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -75,7 +78,7 @@ let o = (0, a.B)({
             }
         ]
     }),
-    u = (0, a.B)({
+    c = (0, a.B)({
         kind: 'user',
         id: '2024-12_icymi_status_with_media',
         label: 'Shows media with custom status in ICYMI',
@@ -91,7 +94,7 @@ let o = (0, a.B)({
 !(function (e) {
     (e[(e.NO_BADGE = 1)] = 'NO_BADGE'), (e[(e.RED_BADGE = 2)] = 'RED_BADGE'), (e[(e.BLUE_BADGE = 3)] = 'BLUE_BADGE');
 })(i || (i = {}));
-let c = (0, a.B)({
+let d = (0, a.B)({
     kind: 'user',
     id: '2024-10_merge_notifications_tab',
     label: 'Merge notifications tab',
@@ -139,15 +142,15 @@ let c = (0, a.B)({
         }
     ]
 });
-function d(e) {
+function f(e) {
     let { location: n, autoTrackExposure: r = !0 } = e,
         i = s.Z.get('hide_icymi_tab'),
-        a = _(n, !1),
+        a = h(n, !1),
         {
             enabled: o,
             tabBadgeVariant: l,
             removeHomeMentionBadges: u
-        } = c.getCurrentConfig(
+        } = d.getCurrentConfig(
             { location: n },
             {
                 autoTrackExposure: r,
@@ -160,16 +163,16 @@ function d(e) {
         removeHomeMentionBadges: u
     };
 }
-function f(e) {
+function _(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = o.useExperiment(
+        r = l.useExperiment(
             { location: e },
             {
                 autoTrackExposure: n,
                 disable: !0
             }
         ),
-        i = l.useExperiment(
+        i = u.useExperiment(
             { location: e },
             {
                 disable: !0,
@@ -178,16 +181,16 @@ function f(e) {
         );
     return r.enabled || i.enabled;
 }
-function _(e) {
+function h(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = o.getCurrentConfig(
+        r = l.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
                 autoTrackExposure: n
             }
         ).enabled,
-        i = l.getCurrentConfig(
+        i = u.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
