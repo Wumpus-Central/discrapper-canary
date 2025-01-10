@@ -49,6 +49,7 @@ function g(e) {
                 navId: 'channel-context',
                 label: m.intl.string(m.t.Xm41aW)
             }),
+        clickTrap: !0,
         children: (e, t) => {
             let { isShown: l } = t;
             return (0, i.jsx)(u.ZP.Icon, {

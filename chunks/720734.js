@@ -114,6 +114,7 @@ function eR(e) {
         : (0, i.jsx)(_.Z, {
               object: eb.qAy.AVATAR,
               children: (0, i.jsx)(m.Popout, {
+                  clickTrap: !0,
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, i.jsx)('div', {

@@ -58,6 +58,7 @@ t.Z = function (e) {
                     channel: t
                 });
             },
+            clickTrap: !0,
             children: (e, t) => {
                 let { isShown: l } = t;
                 return (0, i.jsx)(m.JO, {

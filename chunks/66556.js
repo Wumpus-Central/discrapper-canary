@@ -48,6 +48,7 @@ function m(e) {
                 })
             });
         },
+        clickTrap: !0,
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, i.jsx)(s.JO, {

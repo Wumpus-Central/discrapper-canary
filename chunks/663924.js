@@ -100,6 +100,7 @@ t.Z = l.memo(function (e) {
             align: 'right',
             spacing: l ? 24 : 8,
             autoInvert: !0,
+            clickTrap: !0,
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, i.jsx)('section', {

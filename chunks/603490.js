@@ -21,6 +21,7 @@ function o(e) {
         onRequestClose: o,
         position: l.tq ? 'top' : 'left',
         align: l.tq ? 'center' : 'top',
+        clickTrap: !0,
         children: () =>
             (0, i.jsx)(
                 a.sF,

@@ -721,6 +721,7 @@ function ed(e) {
               align: u,
               onRequestClose: () => g(!1),
               animation: m.Popout.Animation.NONE,
+              clickTrap: !0,
               children: (e) =>
                   (0, l.jsx)(X.ZP.Icon, {
                       ...e,

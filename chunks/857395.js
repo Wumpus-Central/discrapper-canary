@@ -34,11 +34,13 @@ function h(e) {
         ? (0, i.jsx)(a.Popout, {
               position: 'right',
               renderPopout: (e) => (0, i.jsx)(u.SK, {}),
-              ...f
+              ...f,
+              clickTrap: !0
           })
         : (0, i.jsx)(a.Popout, {
               position: 'right',
               preload: N,
+              clickTrap: !0,
               renderPopout: (e) =>
                   x
                       ? (0, i.jsx)(d.Z, {

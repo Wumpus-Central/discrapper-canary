@@ -34,8 +34,8 @@ var a = r(200651),
     U = r(921944),
     B = r(149203),
     G = r(185923),
-    Z = r(611480),
-    F = r(388032),
+    F = r(611480),
+    Z = r(388032),
     V = r(662689);
 let j = M.Om + B.Su.MEDIUM,
     H = s.memo(function (e) {
@@ -216,6 +216,7 @@ function W(e) {
             align: J,
             spacing: 8,
             autoInvert: !0,
+            clickTrap: !0,
             children: (e) => {
                 var n;
                 let { isPositioned: r } = e;
@@ -223,7 +224,7 @@ function W(e) {
                     className: l()(V.positionContainer, { [V.positionContainerOnlyEmoji]: !eC }),
                     ref: en,
                     role: 'dialog',
-                    'aria-label': F.intl.string(F.t.Utlwvr),
+                    'aria-label': Z.intl.string(Z.t.Utlwvr),
                     children: r
                         ? (0, a.jsxs)('div', {
                               className: V.drawerSizingWrapper,
@@ -247,7 +248,7 @@ function W(e) {
                                                     children: (0, a.jsxs)('div', {
                                                         className: V.navList,
                                                         role: 'tablist',
-                                                        'aria-label': F.intl.string(F.t['2j4VgY']),
+                                                        'aria-label': Z.intl.string(Z.t['2j4VgY']),
                                                         children: [
                                                             eb
                                                                 ? (0, a.jsx)(H, {
@@ -256,20 +257,20 @@ function W(e) {
                                                                       'aria-selected': el === M.X1.GIF,
                                                                       isActive: el === M.X1.GIF,
                                                                       viewType: M.X1.GIF,
-                                                                      children: F.intl.string(F.t['6gUTsb'])
+                                                                      children: Z.intl.string(Z.t['6gUTsb'])
                                                                   })
                                                                 : null,
                                                             ey
                                                                 ? (0, a.jsx)(H, {
-                                                                      id: Z.ED,
-                                                                      'aria-controls': Z.nZ,
+                                                                      id: F.ED,
+                                                                      'aria-controls': F.nZ,
                                                                       'aria-selected': el === M.X1.STICKER,
                                                                       isActive: el === M.X1.STICKER,
                                                                       autoFocus: !eu,
                                                                       viewType: M.X1.STICKER,
                                                                       children: (0, a.jsx)('div', {
                                                                           className: V.stickersNavItem,
-                                                                          children: F.intl.string(F.t.nf1s3t)
+                                                                          children: Z.intl.string(Z.t.nf1s3t)
                                                                       })
                                                                   })
                                                                 : null,
@@ -279,7 +280,7 @@ function W(e) {
                                                                 'aria-selected': el === M.X1.EMOJI,
                                                                 isActive: el === M.X1.EMOJI,
                                                                 viewType: M.X1.EMOJI,
-                                                                children: F.intl.string(F.t.Xu3wEx)
+                                                                children: Z.intl.string(Z.t.Xu3wEx)
                                                             }),
                                                             e_ &&
                                                                 eN &&
@@ -291,7 +292,7 @@ function W(e) {
                                                                     viewType: M.X1.SOUNDBOARD,
                                                                     children: (0, a.jsxs)('div', {
                                                                         className: V.soundmojiLabelContainer,
-                                                                        children: [F.intl.string(F.t.EHlAMT), null != eE && (0, a.jsx)(m.TextBadge, { text: F.intl.string(F.t.y2b7CA) })]
+                                                                        children: [Z.intl.string(Z.t.EHlAMT), null != eE && (0, a.jsx)(m.TextBadge, { text: Z.intl.string(Z.t.y2b7CA) })]
                                                                     })
                                                                 })
                                                         ]

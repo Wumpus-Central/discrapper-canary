@@ -151,6 +151,7 @@ function A(e) {
                 });
             },
             ignoreModalClicks: !0,
+            clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
                 return A(B, n, e, G);

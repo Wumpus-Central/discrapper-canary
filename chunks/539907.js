@@ -298,37 +298,43 @@ class x extends (i = l.Component) {
         f()(null != a, 'Missing elementRef'), b.delete(a), m.S.unsubscribe(v.CkL.LAYER_POP_START, this.handleLayerPopStart), m.S.unsubscribe(v.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == a || null === (n = a.ownerDocument) || void 0 === n || null === (e = n.defaultView) || void 0 === e || e.removeEventListener('resize', this.handleLayerPopComplete), null === (r = (i = this.props).onUnmount) || void 0 === r || r.call(i);
     }
     render() {
-        let { id: e, className: n, children: r, fixed: i, disablePointerEvents: a } = this.props,
-            { position: s, isPositioned: l, isSettingsLayerTransitioning: u, nudge: d } = this.state;
-        return (0, o.jsx)(h.C1, {
-            children: (f) => {
-                let { theme: h, disableAdaptiveTheme: m } = f;
-                return (0, o.jsx)('div', {
-                    id: e,
-                    className: c()(n, (0, p.Qe)(h), I.layer, {
-                        [I.emptyError]: !1,
-                        [I.layerHidden]: u,
-                        [I.disabledPointerEvents]: a,
-                        'disable-adaptive-theme': m
-                    }),
-                    style: {
-                        position: i ? 'fixed' : 'absolute',
-                        ...this.state.style
-                    },
-                    ref: this.elementRef,
-                    children: (0, o.jsx)(_.J, {
-                        containerRef: this.elementRef,
-                        children: r(
-                            {
-                                position: s,
-                                nudge: d,
-                                isPositioned: l
-                            },
-                            this.updatePosition
-                        )
-                    })
-                });
-            }
+        let { id: e, className: n, children: r, fixed: i, disablePointerEvents: a, clickTrap: s = !1 } = this.props,
+            { position: l, isPositioned: u, isSettingsLayerTransitioning: d, nudge: f } = this.state;
+        return (0, o.jsx)('div', {
+            className: c()({
+                [I.clickTrapContainer]: !0,
+                [I.trapClicks]: s
+            }),
+            children: (0, o.jsx)(h.C1, {
+                children: (s) => {
+                    let { theme: h, disableAdaptiveTheme: m } = s;
+                    return (0, o.jsx)('div', {
+                        id: e,
+                        className: c()(n, (0, p.Qe)(h), I.layer, {
+                            [I.emptyError]: !1,
+                            [I.layerHidden]: d,
+                            [I.disabledPointerEvents]: a,
+                            'disable-adaptive-theme': m
+                        }),
+                        style: {
+                            position: i ? 'fixed' : 'absolute',
+                            ...this.state.style
+                        },
+                        ref: this.elementRef,
+                        children: (0, o.jsx)(_.J, {
+                            containerRef: this.elementRef,
+                            children: r(
+                                {
+                                    position: l,
+                                    nudge: f,
+                                    isPositioned: u
+                                },
+                                this.updatePosition
+                            )
+                        })
+                    });
+                }
+            })
         });
     }
     constructor(...e) {

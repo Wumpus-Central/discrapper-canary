@@ -127,6 +127,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
             position: u.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: V,
+            clickTrap: !0,
             children: (e, n) => {
                 let { isShown: l } = n;
                 return (0, i.jsx)(U.Z, {

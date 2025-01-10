@@ -54,7 +54,7 @@ function g(e) {
 }
 class E extends (a = u.Component) {
     render() {
-        let { children: e, shouldShow: n, position: r, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: h, positionKey: p, preload: m, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: I, useMouseEnter: T, renderPopout: b, layerContext: y } = this.props;
+        let { children: e, shouldShow: n, position: r, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: h, positionKey: p, preload: m, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: I, useMouseEnter: T, renderPopout: b, layerContext: y, clickTrap: S = !1 } = this.props;
         return (0, l.jsx)(f.H, {
             ref: this.ref,
             preload: m,
@@ -76,6 +76,7 @@ class E extends (a = u.Component) {
             closeOnScroll: I,
             useMouseEnter: T,
             layerContext: y,
+            clickTrap: S,
             children: e
         });
     }

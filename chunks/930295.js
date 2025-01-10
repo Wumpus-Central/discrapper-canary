@@ -97,9 +97,9 @@ class S extends (i = l.Component) {
     }
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
-        let { position: e, align: n, nudgeAlignIntoViewport: r, useRawTargetDimensions: i, spacing: a, autoInvert: s, fixed: l, positionKey: u, disablePointerEvents: c, layerContext: d } = this.props,
-            { resizeKey: f, isLoading: _, shouldShowLoadingState: m } = this.state;
-        return _ && !m
+        let { position: e, align: n, nudgeAlignIntoViewport: r, useRawTargetDimensions: i, spacing: a, autoInvert: s, fixed: l, positionKey: u, disablePointerEvents: c, layerContext: d, clickTrap: f = !1 } = this.props,
+            { resizeKey: _, isLoading: m, shouldShowLoadingState: g } = this.state;
+        return m && !g
             ? null
             : (0, o.jsx)(h.mh, {
                   layerContext: null != d ? d : v.nz,
@@ -116,9 +116,10 @@ class S extends (i = l.Component) {
                       spacing: a,
                       autoInvert: s,
                       fixed: l,
-                      positionKey: null != u ? u : String(f),
+                      positionKey: null != u ? u : String(_),
                       disablePointerEvents: c,
                       onPositionChange: this.handlePopoutPositionChange,
+                      clickTrap: f,
                       children: this.renderPopout
                   })
               });
