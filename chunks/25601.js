@@ -1,21 +1,23 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return c;
     }
 });
 var i = n(200651);
 n(192379);
-var l = n(831209),
-    r = n(481060),
-    a = n(953498);
-function o(e) {
-    let { mentionsCount: t, isMentionLowImportance: n } = e;
+var l = n(120356),
+    r = n.n(l),
+    a = n(831209),
+    o = n(481060),
+    s = n(953498);
+function c(e) {
+    let { mentionsCount: t, isMentionLowImportance: n, className: l } = e;
     return (0, i.jsx)('div', {
-        className: a.mentionsBadge,
+        className: r()(s.mentionsBadge, l),
         'aria-hidden': !0,
-        children: (0, i.jsx)(r.NumberBadge, {
+        children: (0, i.jsx)(o.NumberBadge, {
             count: t,
-            color: n ? l.Z.BACKGROUND_ACCENT : l.Z.STATUS_DANGER
+            color: n ? a.Z.BACKGROUND_ACCENT : a.Z.STATUS_DANGER
         })
     });
 }

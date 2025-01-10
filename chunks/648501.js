@@ -52,7 +52,8 @@ function y(e) {
     if ((0, C.Z)(G))
         return (0, i.jsx)(Z.Z, {
             mentionsCount: G,
-            isMentionLowImportance: B
+            isMentionLowImportance: B,
+            className: E.channelMentionBadge
         });
     if ((0, c.O)(w)) return (0, i.jsx)(c.Z, { locked: M });
     if (L)
