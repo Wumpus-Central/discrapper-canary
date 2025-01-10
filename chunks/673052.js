@@ -23,10 +23,21 @@ function d(e) {
         })(m),
         f = (0, l.q)(t.applicationId);
     if (null == f) return null;
-    let p = c.intl.format(c.t.fwn2Mz, {
+    let p = c.intl.format(c.t.mAtJTE, {
         username: t.author.username,
         usernameHook: h,
         applicationName: f.name,
+        applicationNameHook: () =>
+            (0, i.jsx)(
+                r.Text,
+                {
+                    className: u.applicationName,
+                    variant: 'text-md/semibold',
+                    color: 'header-primary',
+                    children: f.name
+                },
+                f.name
+            ),
         helpdeskArticle: '#'
     });
     return (0, i.jsx)(s.Z, {
