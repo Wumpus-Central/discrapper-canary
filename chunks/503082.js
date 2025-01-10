@@ -1,24 +1,24 @@
-n.d(e, {
+i.d(e, {
     Z: function () {
         return h;
     }
 }),
-    n(47120);
-var i = n(512722),
-    s = n.n(i),
-    o = n(129508),
-    r = n(921608),
-    l = n(693824);
-function a(t, e, n) {
+    i(47120);
+var n = i(512722),
+    s = i.n(n),
+    o = i(129508),
+    r = i(921608),
+    l = i(693824);
+function a(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
+            : (t[e] = i),
         t
     );
 }
@@ -30,66 +30,66 @@ class h extends o.Z {
         null != this.context && ((this.context.fillStyle = this.color), (this.context.strokeStyle = this.color), (this.context.font = ''.concat(this.font.style, ' ').concat(this.font.weight, ' ').concat(this.font.size, 'px ').concat(this.font.family.join(', '))));
     }
     setSize(t, e) {
-        let { w: n, h: i } = t;
-        null != this.context && null != e ? ((this.canvas.width = n * e), (this.canvas.height = i * e), this.context.scale(e, e)) : ((this.canvas.width = n), (this.canvas.height = i));
+        let { w: i, h: n } = t;
+        null != this.context && null != e ? ((this.canvas.width = i * e), (this.canvas.height = n * e), this.context.scale(e, e)) : ((this.canvas.width = i), (this.canvas.height = n));
     }
     clearRect(t) {
         if (null == this.context) return;
-        let { x: e, y: n, w: i, h: s } = t;
-        this.context.clearRect(e, n, i, s);
+        let { x: e, y: i, w: n, h: s } = t;
+        this.context.clearRect(e, i, n, s);
     }
     restoreContext() {
         null != this.context && this.context.restore();
     }
     drawRect(t) {
         let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+            i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (null == this.context) return;
-        let { x: i, y: s, w: o, h: r } = t;
-        n && this.setContextProperties(), e ? this.context.fillRect(i, s, o, r) : this.context.strokeRect(i, s, o, r);
+        let { x: n, y: s, w: o, h: r } = t;
+        i && this.setContextProperties(), e ? this.context.fillRect(n, s, o, r) : this.context.strokeRect(n, s, o, r);
     }
     drawRoundedRect(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+            i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            n = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (null == this.context) return;
         let { x: s, y: o, w: r, h: l } = t;
-        i && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(s, o, r, l, e), n ? this.context.fill() : this.context.stroke();
+        n && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(s, o, r, l, e), i ? this.context.fill() : this.context.stroke();
     }
-    drawText(t, e, n) {
-        var i, o;
+    drawText(t, e, i) {
+        var n, o;
         if (null == this.context) return;
         this.setContextProperties();
-        let a = null !== (i = e.w) && void 0 !== i ? i : this.canvas.width - e.x,
+        let a = null !== (n = e.w) && void 0 !== n ? n : this.canvas.width - e.x,
             h = this.context.measureText(t),
             c = !1,
             u = this.font.size,
             d = (t, e) => {
-                null != this.context && (n ? this.context.fillText(t, e.x, e.y) : this.context.strokeText(t, e.x, e.y));
+                null != this.context && (i ? this.context.fillText(t, e.x, e.y) : this.context.strokeText(t, e.x, e.y));
             },
-            x = (t) => {
+            f = (t) => {
                 if (null == this.context || h.width <= r.F) return '';
                 let e = ''.concat(t);
                 for (; h.width + r.F > a; ) (e = e.slice(0, -4)), (h = this.context.measureText(e)), (c = !0);
                 return c && (e += '...'), e;
             };
-        if ((this.font.truncate === l.GX.None && d(t, e), this.font.truncate === l.GX.Truncate && d((t = x(t)), e), this.font.truncate === l.GX.Wrap)) {
-            let n = t.split(' '),
-                i = 1 / 0,
+        if ((this.font.truncate === l.GX.None && d(t, e), this.font.truncate === l.GX.Truncate && d((t = f(t)), e), this.font.truncate === l.GX.Wrap)) {
+            let i = t.split(' '),
+                n = 1 / 0,
                 r = '',
                 l = 0;
-            for (null != e.h && ((i = e.h / u), s()(i > 0, 'DiscordCavas: boundingBox.h of '.concat(e.h, ' results in 0 visible lines with font size of ').concat(u))); n.length > 0; )
-                if ((h = this.context.measureText(r + ' ' + n[0])).width > a) {
+            for (null != e.h && ((n = e.h / u), s()(n > 0, 'DiscordCavas: boundingBox.h of '.concat(e.h, ' results in 0 visible lines with font size of ').concat(u))); i.length > 0; )
+                if ((h = this.context.measureText(r + ' ' + i[0])).width > a) {
                     let t = !1;
                     if (
-                        (l + 1 >= i && n.length > 0 && (t = !0),
+                        (l + 1 >= n && i.length > 0 && (t = !0),
                         '' !== r
-                            ? (d(t ? x(r + '...') : r, {
+                            ? (d(t ? f(r + '...') : r, {
                                   x: e.x,
                                   y: e.y + u * l
                               }),
                               (r = ''))
-                            : d(x(null !== (o = n.shift()) && void 0 !== o ? o : ''), {
+                            : d(f(null !== (o = i.shift()) && void 0 !== o ? o : ''), {
                                   x: e.x,
                                   y: e.y + u * l
                               }),
@@ -98,8 +98,8 @@ class h extends o.Z {
                         break;
                     l += 1;
                 } else
-                    (r += ' '.concat(n.shift())),
-                        0 === n.length &&
+                    (r += ' '.concat(i.shift())),
+                        0 === i.length &&
                             d(r, {
                                 x: e.x,
                                 y: e.y + u * l
@@ -112,71 +112,72 @@ class h extends o.Z {
             h: h.actualBoundingBoxAscent + h.actualBoundingBoxDescent
         };
     }
-    drawFormattedMessage(t, e, n) {
+    drawFormattedMessage(t, e, i) {
         this.font.truncate === l.GX.Wrap && console.warn("DiscordCavas: `drawFormattedMessage` doesn't currently support wrapping formatted text. The results of this draw likely won't match your expectations.");
-        let i = this.font.weight,
-            s = (t, e, n) => {
+        let n = this.font.weight,
+            s = (t, e, i) => {
                 let s;
                 if ('strong' === t.type) this.setFont({ weight: 700 });
-                return Array.isArray(t.content) ? (s = o(t.content, e, n)) : (s = this.drawText(t.content, e, n)), this.setFont({ weight: i }), s;
+                return Array.isArray(t.content) ? (s = o(t.content, e, i)) : (s = this.drawText(t.content, e, i)), this.setFont({ weight: n }), s;
             },
-            o = (t, e, n) => {
-                let i = 0;
+            o = (t, e, i) => {
+                let n = 0;
                 return (
                     t.forEach((t) => {
                         let { x: o, y: r, w: l, h: a } = e,
-                            h = null != l ? l - i : void 0,
+                            h = null != l ? l - n : void 0,
                             c = s(
                                 t,
                                 {
-                                    x: o + i,
+                                    x: o + n,
                                     y: r,
                                     w: h,
                                     h: a
                                 },
-                                n
+                                i
                             );
-                        null != c && (i += c.w);
+                        null != c && (n += c.w);
                     }),
                     {
-                        x: e.x + i,
+                        x: e.x + n,
                         y: e.y,
-                        w: i,
+                        w: n,
                         h: this.font.size
                     }
                 );
             };
-        Array.isArray(t) ? o(t, e, n) : s(t, e, n);
+        Array.isArray(t) ? o(t, e, i) : s(t, e, i);
     }
-    drawImage(t, e, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { fillMode: l.JU.Stretch };
+    drawImage(t, e, i) {
+        let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { fillMode: l.JU.Stretch };
         s()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.');
-        let { fillMode: o } = i;
+        let { fillMode: o } = n;
         if (null == this.context) return l.vP.Failure;
+        this.setContextProperties();
         let r = this.assetMap.get(t);
         if (null == r) return l.vP.ImageNotLoaded;
-        if (null != n) {
+        if (null != i) {
             if (o === l.JU.Contain) {
-                let i;
+                let n;
                 let s = {
                         w: r.width,
                         h: r.height
                     },
                     o = +(s.w / s.h).toFixed(1);
-                if (+(n.w / n.h).toFixed(1) > o) {
-                    let t = n.h * o;
-                    i = {
-                        x: e.x + (n.w - t) / 2,
+                if (+(i.w / i.h).toFixed(1) > o) {
+                    let t = i.h * o;
+                    n = {
+                        x: e.x + (i.w - t) / 2,
                         y: e.y,
                         w: t,
-                        h: n.h
+                        h: i.h
                     };
                 } else {
-                    let t = n.w / o;
-                    i = {
+                    let t = i.w / o;
+                    n = {
                         x: e.x,
-                        y: e.y + (n.h - t) / 2,
-                        w: n.w,
+                        y: e.y + (i.h - t) / 2,
+                        w: i.w,
                         h: t
                     };
                 }
@@ -190,10 +191,10 @@ class h extends o.Z {
                             h: s.h
                         },
                         {
-                            x: i.x,
-                            y: i.y,
-                            w: i.w,
-                            h: i.h
+                            x: n.x,
+                            y: n.y,
+                            w: n.w,
+                            h: n.h
                         }
                     ),
                     l.vP.Success
@@ -207,19 +208,19 @@ class h extends o.Z {
                         h: r.height
                     },
                     d = +(o.w / o.h).toFixed(1),
-                    x = +(n.w / n.h).toFixed(1);
-                if (x > d) {
-                    let t = o.w / x;
+                    f = +(i.w / i.h).toFixed(1);
+                if (f > d) {
+                    let t = o.w / f;
                     s = {
                         x: 0,
-                        y: (o.h - t) * (null !== (h = null == i ? void 0 : null === (a = i.focus) || void 0 === a ? void 0 : a.y) && void 0 !== h ? h : 0.5),
+                        y: (o.h - t) * (null !== (h = null == n ? void 0 : null === (a = n.focus) || void 0 === a ? void 0 : a.y) && void 0 !== h ? h : 0.5),
                         w: r.width,
                         h: t
                     };
                 } else {
-                    let t = o.h * x;
+                    let t = o.h * f;
                     s = {
-                        x: (r.width - t) * (null !== (u = null == i ? void 0 : null === (c = i.focus) || void 0 === c ? void 0 : c.x) && void 0 !== u ? u : 0.5),
+                        x: (r.width - t) * (null !== (u = null == n ? void 0 : null === (c = n.focus) || void 0 === c ? void 0 : c.x) && void 0 !== u ? u : 0.5),
                         y: 0,
                         w: t,
                         h: r.height
@@ -229,86 +230,86 @@ class h extends o.Z {
                     this.drawCroppedImage(t, s, {
                         x: e.x,
                         y: e.y,
-                        w: n.w,
-                        h: n.h
+                        w: i.w,
+                        h: i.h
                     }),
                     l.vP.Success
                 );
             }
-            this.context.drawImage(r, e.x, e.y, n.w, n.h);
+            this.context.drawImage(r, e.x, e.y, i.w, i.h);
         } else this.context.drawImage(r, e.x, e.y);
         return l.vP.Success;
     }
-    drawRoundedImage(t, e, n, i, s) {
+    drawRoundedImage(t, e, i, n, s) {
         if (null == this.context) return l.vP.Failure;
         let { x: o, y: r } = e,
-            { w: a, h } = n;
+            { w: a, h } = i;
         this.context.save();
         let c = new Path2D();
-        c.roundRect(o, r, a, h, i), this.context.clip(c);
-        let u = this.drawImage(t, e, n, s);
+        c.roundRect(o, r, a, h, n), this.context.clip(c);
+        let u = this.drawImage(t, e, i, s);
         return this.restoreContext(), u;
     }
-    drawCroppedImage(t, e, n) {
-        var i;
+    drawCroppedImage(t, e, i) {
+        var n;
         if (null == this.context) return l.vP.Failure;
-        let s = null === (i = this.assetMap) || void 0 === i ? void 0 : i.get(t);
+        let s = null === (n = this.assetMap) || void 0 === n ? void 0 : n.get(t);
         if (null == s) return l.vP.ImageNotLoaded;
         let { x: o, y: r, w: a, h: h } = e,
-            { x: c, y: u, w: d, h: x } = n;
-        return this.context.drawImage(s, o, r, a, h, c, u, d, x), l.vP.Success;
+            { x: c, y: u, w: d, h: f } = i;
+        return this.context.drawImage(s, o, r, a, h, c, u, d, f), l.vP.Success;
     }
     drawPath(t, e) {
-        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+            n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
         if (null == this.context) return l.vP.Failure;
         this.setContextProperties(), this.context.save();
         let s = new Path2D(t);
-        return this.context.translate(e.x, e.y), this.context.scale(i, i), n ? this.context.fill(s, 'evenodd') : this.context.stroke(s), this.restoreContext(), l.vP.Success;
+        return this.context.translate(e.x, e.y), this.context.scale(n, n), i ? this.context.fill(s, 'evenodd') : this.context.stroke(s), this.restoreContext(), l.vP.Success;
     }
-    setGradientFillStyle(t, e, n) {
+    setGradientFillStyle(t, e, i) {
         if (null == this.context) return;
-        let i = this.context.createLinearGradient(e.x, e.y, n.x, n.y);
-        for (let { color: e, stop: n } of t) i.addColorStop(n, e);
-        this.context.fillStyle = i;
+        let n = this.context.createLinearGradient(e.x, e.y, i.x, i.y);
+        for (let { color: e, stop: i } of t) n.addColorStop(i, e);
+        this.context.fillStyle = n;
     }
-    drawGradientRect(t, e, n, i) {
-        return null == this.context ? l.vP.Failure : (this.setGradientFillStyle(t, e, n), this.drawRect(i, !0, !1), l.vP.Success);
+    drawGradientRect(t, e, i, n) {
+        return null == this.context ? l.vP.Failure : (this.setGradientFillStyle(t, e, i), this.drawRect(n, !0, !1), l.vP.Success);
     }
-    drawRoundedGradientRect(t, e, n, i, s) {
-        return null == this.context ? l.vP.Failure : (this.setGradientFillStyle(t, e, n), this.drawRoundedRect(i, s, !0, !1), l.vP.Success);
+    drawRoundedGradientRect(t, e, i, n, s) {
+        return null == this.context ? l.vP.Failure : (this.setGradientFillStyle(t, e, i), this.drawRoundedRect(n, s, !0, !1), l.vP.Success);
     }
     clip(t, e) {
         if (null == this.context) return;
         this.context.save();
-        let { x: n, y: i } = t,
+        let { x: i, y: n } = t,
             s = new Path2D(e);
-        this.context.translate(n, i), this.context.clip(s);
+        this.context.translate(i, n), this.context.clip(s);
     }
     clipRect(t, e) {
         if (null == this.context) return;
         this.context.save();
-        let { x: n, y: i, w: s, h: o } = t;
+        let { x: i, y: n, w: s, h: o } = t;
         if (e) {
             let t = new Path2D();
-            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.rect(n, i, s, o), this.context.clip(t, 'evenodd');
+            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.rect(i, n, s, o), this.context.clip(t, 'evenodd');
         } else {
             let t = new Path2D();
-            t.rect(n, i, s, o), this.context.clip(t);
+            t.rect(i, n, s, o), this.context.clip(t);
         }
     }
     clipRoundedRect(t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            n = arguments.length > 2 ? arguments[2] : void 0;
+            i = arguments.length > 2 ? arguments[2] : void 0;
         if (null == this.context) return;
         this.context.save();
-        let { x: i, y: s, w: o, h: r } = t;
-        if (n) {
+        let { x: n, y: s, w: o, h: r } = t;
+        if (i) {
             let t = new Path2D();
-            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.roundRect(i, s, o, r, e), this.context.clip(t, 'evenodd');
+            t.moveTo(0, 0), t.lineTo(this.canvas.width, 0), t.lineTo(this.canvas.width, this.canvas.height), t.lineTo(0, this.canvas.height), t.lineTo(0, 0), t.closePath(), t.roundRect(n, s, o, r, e), this.context.clip(t, 'evenodd');
         } else {
             let t = new Path2D();
-            t.roundRect(i, s, o, r, e), this.context.clip(t);
+            t.roundRect(n, s, o, r, e), this.context.clip(t);
         }
     }
     constructor(t, e) {

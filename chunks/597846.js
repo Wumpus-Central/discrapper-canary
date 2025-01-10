@@ -1,35 +1,45 @@
-t.d(n, {
+n.d(t, {
     z: function () {
-        return o;
+        return c;
     }
 });
-var r = t(200651),
-    i = t(192379),
-    a = t(658312),
-    c = t(503082);
-let o = (e) => {
-    let { drawCallback: n, size: t, fps: o = 60 } = e,
-        u = i.useRef(null),
-        s = i.useRef();
+var r = n(200651),
+    i = n(192379),
+    u = n(658312),
+    a = n(503082);
+let c = (e) => {
+    let { drawCallback: t, size: n, fps: c = 60, useOffscreen: l = !1 } = e,
+        o = i.useRef(null),
+        s = i.useRef(),
+        d = i.useRef();
     return (
         i.useEffect(() => {
-            if (null != u.current) {
-                let e = new c.Z(u.current);
-                e.setSize(t), (s.current = e);
+            null != s.current && s.current.setSize(n);
+        }, [n]),
+        i.useEffect(() => {
+            if (null != o.current) {
+                let e = new a.Z(o.current);
+                if (((s.current = e), l)) {
+                    let e = document.createElement('canvas');
+                    document.appendChild(e), (d.current = e);
+                }
             }
-        }, [t]),
-        (0, a.Z)((e) => {
+            return () => {
+                null != d.current && document.removeChild(d.current);
+            };
+        }, [o, l]),
+        (0, u.Z)((e) => {
             if (null != s.current) {
-                let { width: t, height: r } = s.current.canvas;
+                let { width: n, height: r } = s.current.canvas;
                 s.current.clearRect({
                     x: 0,
                     y: 0,
-                    w: t,
+                    w: n,
                     h: r
                 }),
-                    n(s.current, e / 1000);
+                    t(s.current, e / 1000);
             }
-        }, 1000 / o),
-        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: u }) })
+        }, 1000 / c),
+        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: o }) })
     );
 };
