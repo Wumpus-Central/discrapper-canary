@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return f;
     },
@@ -8,36 +8,36 @@ t.d(n, {
 });
 var r,
     o,
-    a = t(200651);
-t(192379);
-var l = t(120356),
-    i = t.n(l),
-    c = t(481060),
-    u = t(312403);
+    i = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    c = n(481060),
+    u = n(312403);
 ((r = o || (o = {})).INFO = 'info'), (r.WARNING = 'warning');
-let d = {
+let s = {
         info: u.info,
         warning: u.warning
     },
-    s = {
+    d = {
         info: c.CircleInformationIcon,
         warning: c.CircleWarningIcon
     };
 function f(e) {
-    let { children: n, className: t, look: r = 'info' } = e,
-        o = s[r];
-    return (0, a.jsxs)('div', {
-        className: i()(u.root, t, d[r]),
+    let { children: t, className: n, look: r = 'info' } = e,
+        o = d[r];
+    return (0, i.jsxs)('div', {
+        className: a()(u.root, n, s[r]),
         children: [
-            (0, a.jsx)(o, {
+            (0, i.jsx)(o, {
                 className: u.icon,
                 color: 'currentColor'
             }),
-            (0, a.jsx)(c.Text, {
+            (0, i.jsx)(c.Text, {
                 className: u.text,
                 variant: 'text-sm/medium',
                 color: 'text-normal',
-                children: n
+                children: t
             })
         ]
     });

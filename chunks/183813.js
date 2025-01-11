@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return g;
+        return E;
     }
 });
 var i = n(200651),
@@ -22,9 +22,9 @@ var i = n(200651),
     m = n(981631),
     L = n(388032),
     S = n(732721);
-function g(e) {
+function E(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: s, selectedSkuId: g, step: E } = (0, _.usePaymentContext)(),
+        { selectedPlan: s, selectedSkuId: E, step: g } = (0, _.usePaymentContext)(),
         { setSelectedGiftingPromotionReward: I, selectedGiftingPromotionReward: M, claimableRewards: v } = (0, h.wD)(),
         y = (0, a.e7)([p.default], () => p.default.getCurrentUser());
     l.useEffect(() => {
@@ -46,7 +46,7 @@ function g(e) {
             );
         },
         N = (0, u.Q3)('PremiumPaymentFreeSKUSelectStep');
-    r()(null != s, 'Expected plan to selected'), r()(null != g, 'Expected selectedSkuId'), r()(null != E, 'Step should be set');
+    r()(null != s, 'Expected plan to selected'), r()(null != E, 'Expected selectedSkuId'), r()(null != g, 'Step should be set');
     let P = null == v ? void 0 : v.map((e) => T(e)),
         Z =
             null != M && null != y

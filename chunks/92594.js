@@ -23,7 +23,7 @@ var i = n(200651),
     m = n(388032),
     L = n(988113);
 function S() {
-    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: S, selectedPlan: g, setSelectedSkuId: E, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, _.usePaymentContext)(),
+    let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: S, selectedPlan: E, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, _.usePaymentContext)(),
         { isGift: v } = (0, h.wD)(),
         [y, T] = l.useState(!1),
         [N, P] = l.useState(!1),
@@ -58,9 +58,9 @@ function S() {
                                 )
                         }),
                         handleClick: () => {
-                            s(null), a.Z.wait(C.pB), a.Z.wait(o.fw), M(m.intl.string(m.t['/5p4ws'])), E(j.Si.TIER_0);
+                            s(null), a.Z.wait(C.pB), a.Z.wait(o.fw), M(m.intl.string(m.t['/5p4ws'])), g(j.Si.TIER_0);
                             let e = j.Xh.PREMIUM_MONTH_TIER_0;
-                            (null == g ? void 0 : g.id) === j.Xh.PREMIUM_YEAR_TIER_2 && (e = j.Xh.PREMIUM_YEAR_TIER_0), I(e), P(!0);
+                            (null == E ? void 0 : E.id) === j.Xh.PREMIUM_YEAR_TIER_2 && (e = j.Xh.PREMIUM_YEAR_TIER_0), I(e), P(!0);
                         },
                         handleClose: () => P(!0),
                         handleImageClick: () => {},

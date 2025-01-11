@@ -1,12 +1,12 @@
 n.d(t, {
     TB: function () {
-        return E;
+        return g;
     },
     VY: function () {
         return I;
     },
     ZP: function () {
-        return g;
+        return E;
     }
 }),
     n(47120),
@@ -79,17 +79,17 @@ function S(e) {
         children: l
     });
 }
-function g(e) {
+function E(e) {
     let t,
         n,
-        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: g, isDowngrade: E, hideClose: I, postSuccessGuild: M, paymentSourceType: v } = e,
+        { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: E, isDowngrade: g, hideClose: I, postSuccessGuild: M, paymentSourceType: v } = e,
         { theme: y } = (0, o.useThemeContext)(),
-        T = (0, a.e7)([x.Z], () => (null != g ? x.Z.get(g.id) : null));
+        T = (0, a.e7)([x.Z], () => (null != E ? x.Z.get(E.id) : null));
     l.useEffect(() => {
-        if (null == g || null != T) return;
-        let { applicationId: e, id: t } = g;
+        if (null == E || null != T) return;
+        let { applicationId: e, id: t } = E;
         (0, C.$N)(e, t).catch(j.VqG);
-    }, [g, T]);
+    }, [E, T]);
     let N = (e) => {
         if (e.skuId === f.Si.TIER_0) return j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? m.intl.format(m.t.o6hBiY, {}) : m.intl.string(m.t['AGf/yc']);
         if (e.skuId === f.Si.TIER_1) return j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? m.intl.format(m.t.o6hBiY, {}) : m.intl.string(m.t.knvOV1);
@@ -131,7 +131,7 @@ function g(e) {
     let P = h.ZP.getPremiumType(s);
     return (
         r()(null != P, 'premium type should not be null in purchase confirmation'),
-        (n = null != T ? m.intl.formatToPlainString(m.t['1qGgm5'], { skuName: T.name }) : E ? m.intl.string(m.t.QJ9EyM) : null != M ? m.intl.string(m.t.ta3cXV) : m.intl.string(m.t.TkTvBw)),
+        (n = null != T ? m.intl.formatToPlainString(m.t['1qGgm5'], { skuName: T.name }) : g ? m.intl.string(m.t.QJ9EyM) : null != M ? m.intl.string(m.t.ta3cXV) : m.intl.string(m.t.TkTvBw)),
         (0, i.jsxs)('div', {
             className: L.confirmation,
             children: [
@@ -152,7 +152,7 @@ function g(e) {
         })
     );
 }
-function E(e) {
+function g(e) {
     let { planId: t, onClose: n } = e,
         { giftRecipient: l, selectedGiftStyle: s, hasSentMessage: o, giftMessageError: C, isSendingMessage: x } = (0, d.wD)(),
         h = (0, a.e7)([p.Z], () => p.Z.get(t));

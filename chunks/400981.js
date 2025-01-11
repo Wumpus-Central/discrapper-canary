@@ -24,8 +24,8 @@ function h(e) {
         m = s.AvatarSizes.SIZE_32,
         L = (0, o.Z)(null == h ? void 0 : h.assetId, m, !f),
         S = (0, u.Z)(),
-        g = null == S ? void 0 : S.giftPurchaseConfirmation;
-    return null == n || null == g
+        E = null == S ? void 0 : S.giftPurchaseConfirmation;
+    return null == n || null == E
         ? null
         : (0, i.jsx)(p.O3, {
               children: (0, i.jsx)(s.ModalFooter, {
@@ -48,7 +48,7 @@ function h(e) {
                                           analyticsLocations: j
                                       });
                               },
-                              children: g.collectRewardButtonText()
+                              children: E.collectRewardButtonText()
                           })
                       ]
                   })

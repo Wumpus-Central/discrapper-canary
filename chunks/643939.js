@@ -21,24 +21,24 @@ var i = n(200651),
     x = n(74316);
 let h = { NITRO_BASIC: u.nitroBasic },
     _ = l.memo(function (e) {
-        let { message: t, handleClick: n, handleClose: s, buttonText: _, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: S, upsellType: g, themeOverride: E = h.NITRO_BASIC } = e,
+        let { message: t, handleClick: n, handleClose: s, buttonText: _, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: S, upsellType: E, themeOverride: g = h.NITRO_BASIC } = e,
             [I, M] = l.useState(f),
             [v, y] = l.useState(p);
         return (
             l.useEffect(() => {
                 y(c);
-            }, [E]),
+            }, [g]),
             l.useEffect(() => {
                 setTimeout(() => M(!1), 3000);
             }, []),
             l.useEffect(() => {
                 o.default.track(C.rMx.POST_ACTION_UPSELL_SHOWN, {
-                    type: g,
+                    type: E,
                     location: S
                 });
-            }, [g, S]),
+            }, [E, S]),
             (0, i.jsx)('div', {
-                className: r()(u.wrapper, E),
+                className: r()(u.wrapper, g),
                 children: (0, i.jsxs)('div', {
                     className: r()(u.content, I ? u.initialGlowUp : u.initialGlowDown, j ? u.contentGlow : null, L),
                     children: [
@@ -51,7 +51,7 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                         ? {
                                               onClick: () => {
                                                   o.default.track(C.rMx.POST_ACTION_UPSELL_SECONDARY_ACTION_CLICKED, {
-                                                      type: g,
+                                                      type: E,
                                                       location: S
                                                   }),
                                                       m();
@@ -83,7 +83,7 @@ let h = { NITRO_BASIC: u.nitroBasic },
                                 onlyShineOnHover: !0,
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_PRIMARY_ACTION_CLICKED, {
-                                        type: g,
+                                        type: E,
                                         location: S
                                     }),
                                         n();
@@ -103,7 +103,7 @@ let h = { NITRO_BASIC: u.nitroBasic },
                             children: (0, i.jsx)(a.Clickable, {
                                 onClick: () => {
                                     o.default.track(C.rMx.POST_ACTION_UPSELL_DISMISSED, {
-                                        type: g,
+                                        type: E,
                                         location: S
                                     }),
                                         s();

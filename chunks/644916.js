@@ -6,7 +6,7 @@ r.d(n, {
 var i = r(115434),
     a = r(704215),
     s = r(874703),
-    o = r(906690),
+    o = r(974592),
     l = r(580130);
 function u(e) {
     switch (e) {
@@ -17,7 +17,7 @@ function u(e) {
         case a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case a.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case a.z.GIFTING_PROMOTION_REMINDER:
-            return o.JY;
+            return o.C;
         case a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL:
             let u = l.Z.getFractionalPremium(!1);
             if ((null == u ? void 0 : u.length) > 0) return Number(u[0].id);

@@ -31,8 +31,8 @@ var i = n(200651),
     m = n(793541),
     L = n(380898),
     S = n(710094),
-    g = n(213264),
-    E = n(92594),
+    E = n(213264),
+    g = n(92594),
     I = n(293858),
     M = n(183813),
     v = n(614223),
@@ -43,10 +43,10 @@ var i = n(200651),
     Z = n(981631),
     A = n(474936),
     U = n(388032),
-    k = n(809186);
-let O = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
+    O = n(809186);
+let k = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
 function R(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: S, reviewWarningMessage: g, openInvoiceId: E, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: v, followupSKUInfo: y, renderHeader: T, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: k, returnRef: O, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: S, reviewWarningMessage: E, openInvoiceId: g, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: v, followupSKUInfo: y, renderHeader: T, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: O, returnRef: k, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
         { analyticsLocations: w } = (0, C.ZP)();
     l.useEffect(() => {
         !u.Z.isLoadedForPremiumSKUs() && r.Z.wait(() => (0, a.Y2)());
@@ -69,9 +69,9 @@ function R(e) {
         trialId: L,
         isGift: H,
         trialFooterMessageOverride: S,
-        reviewWarningMessage: g,
+        reviewWarningMessage: E,
         planGroup: A.Y1,
-        openInvoiceId: E,
+        openInvoiceId: g,
         onSubscriptionConfirmation: I,
         renderPurchaseConfirmation: M,
         postSuccessGuild: v,
@@ -80,10 +80,10 @@ function R(e) {
         applicationId: N,
         guildId: P,
         referralTrialOfferId: U,
-        skuId: k,
+        skuId: O,
         shakeWhilePurchasing: !0,
         isLargeModal: D,
-        returnRef: O,
+        returnRef: k,
         skipConfirm: R,
         continueSessionToInitialStep: b
     });
@@ -113,7 +113,7 @@ function w(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(j.J, {
             ...e,
-            breadcrumbSteps: O,
+            breadcrumbSteps: k,
             onReturn: () => {
                 let e = Object.values(s),
                     i = e.length < 1 && null == t ? _.h8.PLAN_SELECT : _.h8.REVIEW;
@@ -183,7 +183,7 @@ let B = [
         key: _.h8.SELECT_FREE_SKU,
         renderStep: (e) => (0, i.jsx)(M.S, { ...e }),
         options: {
-            bodyClassName: k.selectFreeSku,
+            bodyClassName: O.selectFreeSku,
             isDynamicModal: !0
         }
     }
@@ -191,7 +191,7 @@ let B = [
 function H(e) {
     let t = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: n } = (0, C.ZP)(e.analyticsLocations, o.Z.PREMIUM_PAYMENT_MODAL),
-        l = (0, g.s)('premiumPaymentModal'),
+        l = (0, E.s)('premiumPaymentModal'),
         { subscriptionTier: r, isGift: a, giftRecipient: d, giftMessage: u, giftStyle: p, giftingOrigin: _, loadId: f, defaultPlanId: j, referralCode: m, repeatPurchase: L } = e;
     if (null != r && !Object.values(A.Si).includes(r)) throw Error('subscriptionTier must be a premium subscription');
     return (0, i.jsx)(C.Gt, {
@@ -211,7 +211,7 @@ function H(e) {
                 giftMessage: u,
                 giftStyle: p,
                 giftingOrigin: _,
-                children: [(0, i.jsx)(R, { ...e }), l && (0, i.jsx)(E.t, {})]
+                children: [(0, i.jsx)(R, { ...e }), l && (0, i.jsx)(g.t, {})]
             })
         })
     });

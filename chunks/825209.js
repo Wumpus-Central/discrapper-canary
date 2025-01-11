@@ -22,7 +22,7 @@ function c(e, t, n) {
     );
 }
 let m = d.isPlatformEmbedded && null != u.ZP.getDiscordUtils().inputCaptureRegisterElement;
-class p extends s.PureComponent {
+class g extends s.PureComponent {
     componentDidMount() {
         this._mounted = !0;
     }
@@ -98,4 +98,4 @@ class p extends s.PureComponent {
         };
     }
 }
-t.Z = p;
+t.Z = g;

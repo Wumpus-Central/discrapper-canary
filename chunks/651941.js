@@ -18,7 +18,7 @@ function s(e, t, n) {
     );
 }
 let a = {};
-class E extends (r = i.ZP.PersistedStore) {
+class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         a = null !== (t = null == e ? void 0 : e.users) && void 0 !== t ? t : {};
@@ -41,9 +41,9 @@ class E extends (r = i.ZP.PersistedStore) {
         return a[e];
     }
 }
-s(E, 'displayName', 'VerifiedKeyStore'),
-    s(E, 'persistKey', 'VerifiedKeyStore'),
-    (t.Z = new E(l.Z, {
+s(c, 'displayName', 'VerifiedKeyStore'),
+    s(c, 'persistKey', 'VerifiedKeyStore'),
+    (t.Z = new c(l.Z, {
         SECURE_FRAMES_VERIFIED_KEY_CREATE: function (e) {
             let { userId: t, key: n } = e,
                 r = (function (e) {

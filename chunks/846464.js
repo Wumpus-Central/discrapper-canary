@@ -25,8 +25,8 @@ function L(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
         { setSelectedSkuId: s, activeSubscription: r, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: d, priceOptions: j } = (0, p.usePaymentContext)(),
         { isGift: m, claimableRewards: L } = (0, c.wD)(),
-        g = m && null != L && L.length > 0,
-        E = (0, o.N)(l),
+        E = m && null != L && L.length > 0,
+        g = (0, o.N)(l),
         I = (0, a.Nx)();
     return (0, i.jsx)(S, {
         selectSku: (e) =>
@@ -54,7 +54,7 @@ function L(e) {
                 setSelectedSkuId: s,
                 handleStepChange: t,
                 isGift: m,
-                userTrialOffer: E,
+                userTrialOffer: g,
                 startedPaymentFlowWithPaymentSources: C.current,
                 setSelectedPlanId: d
             }),
@@ -62,7 +62,7 @@ function L(e) {
         isGift: m,
         inOfferExperience: I,
         priceOptions: j,
-        showPromotionalGiftBanner: g
+        showPromotionalGiftBanner: E
     });
 }
 function S(e) {

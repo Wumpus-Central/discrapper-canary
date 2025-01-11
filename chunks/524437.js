@@ -114,7 +114,7 @@ var x = r(230367),
     U = r(835913),
     B = r(397696);
 !(function (e) {
-    (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.MENTIONS = 1)] = 'MENTIONS'), (e[(e.UNREADS = 2)] = 'UNREADS'), (e[(e.TODOS = 3)] = 'TODOS'), (e[(e.FOR_YOU = 4)] = 'FOR_YOU'), (e[(e.GAME_INVITES = 5)] = 'GAME_INVITES'), (e[(e.BOOKMARKS = 6)] = 'BOOKMARKS');
+    (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.MENTIONS = 1)] = 'MENTIONS'), (e[(e.UNREADS = 2)] = 'UNREADS'), (e[(e.TODOS = 3)] = 'TODOS'), (e[(e.FOR_YOU = 4)] = 'FOR_YOU'), (e[(e.GAME_INVITES = 5)] = 'GAME_INVITES'), (e[(e.BOOKMARKS = 6)] = 'BOOKMARKS'), (e[(e.SCHEDULED = 7)] = 'SCHEDULED');
 })(i || (i = {})),
     !(function (e) {
         (e[(e.NO_PROGRESS = 0)] = 'NO_PROGRESS'), (e[(e.JOIN_GUILD = 1)] = 'JOIN_GUILD'), (e[(e.INVITE_USER = 2)] = 'INVITE_USER'), (e[(e.CONTACT_SYNC = 4)] = 'CONTACT_SYNC');

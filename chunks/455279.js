@@ -15,8 +15,8 @@ var i,
     h = n(392711),
     c = n.n(h),
     m = n(481060),
-    p = n(600164),
-    g = n(13140),
+    g = n(600164),
+    p = n(13140),
     b = n(388032),
     f = n(944500);
 function C(e, t, n) {
@@ -53,7 +53,7 @@ class v extends l.PureComponent {
     render() {
         let e;
         let { mode: t, value: n, disabled: i } = this.props,
-            s = (0, g.BB)(n, !0);
+            s = (0, p.BB)(n, !0);
         e = 'RECORDING' === t ? b.intl.string(b.t.bmOri4) : 0 === n.length ? b.intl.string(b.t.co3wt7) : b.intl.string(b.t.idFMvL);
         let l = 'DEFAULT' === t && n.length > 0;
         return (0, r.jsx)(m.FocusRing, {
@@ -67,10 +67,10 @@ class v extends l.PureComponent {
                     [f.hasValue]: l,
                     [f.containerDisabled]: i
                 }),
-                children: (0, r.jsxs)(p.Z, {
+                children: (0, r.jsxs)(g.Z, {
                     className: f.recorderLayout,
                     children: [
-                        (0, r.jsx)(p.Z.Child, {
+                        (0, r.jsx)(g.Z.Child, {
                             className: f.keybindInput,
                             children: (0, r.jsx)('input', {
                                 id: this._inputId,
@@ -82,7 +82,7 @@ class v extends l.PureComponent {
                                 disabled: 'RECORDING' !== this.props.mode || i
                             })
                         }),
-                        (0, r.jsx)(p.Z, {
+                        (0, r.jsx)(g.Z, {
                             shrink: 1,
                             grow: 0,
                             style: { margin: 0 },
