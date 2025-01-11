@@ -258,46 +258,58 @@ t.ZP = l.memo(function (e) {
             defaultValue: eh
         }),
         { isFocused: e_, hasFocused: eI, handleFocus: eE, handleBlur: eb } = (0, L.bb)(er),
-        eZ = (0, d.e7)([N.Z], () => N.Z.isEditing(Q, j), [Q, j]),
-        eN = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        eS = eh || eZ || (eN && e_),
-        eT = eS || ev,
-        ej = (0, d.e7)([b.Z], () => I.hasFlag(Y.iLy.HAS_THREAD) && b.Z.getChannel(S.default.castMessageIdAsChannelId(I.id))),
-        eA = I.isFirstMessageInForumPost(J),
-        ey = (0, f.A)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()),
-        eP = (0, d.e7)([Z.Z], () => Z.Z.isDeveloper),
-        { content: eM, hasSpoilerEmbeds: eR } = (0, D.Z)(I, {
+        eZ = l.useCallback(
+            (e) => {
+                eE(e), eg();
+            },
+            [eE, eg]
+        ),
+        eN = l.useCallback(
+            (e) => {
+                eb(e), eC();
+            },
+            [eb, eC]
+        ),
+        eS = (0, d.e7)([N.Z], () => N.Z.isEditing(Q, j), [Q, j]),
+        eT = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
+        ej = eh || eS || (eT && e_),
+        eA = ej || ev,
+        ey = (0, d.e7)([b.Z], () => I.hasFlag(Y.iLy.HAS_THREAD) && b.Z.getChannel(S.default.castMessageIdAsChannelId(I.id))),
+        eP = I.isFirstMessageInForumPost(J),
+        eM = (0, f.A)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()),
+        eR = (0, d.e7)([Z.Z], () => Z.Z.isDeveloper),
+        { content: eL, hasSpoilerEmbeds: ek } = (0, D.Z)(I, {
             hideSimpleEmbedContent: eo && ec,
-            isInteracting: eT,
+            isInteracting: eA,
             formatInline: !1,
-            allowList: eA || ey,
-            allowHeading: eA || ey,
+            allowList: eP || eM,
+            allowHeading: eP || eM,
             allowLinks: !0,
-            allowDevLinks: eP,
+            allowDevLinks: eR,
             previewLinkTarget: !0
         }),
-        eL = (0, k.Z)(j, Q, eN),
-        ek = (0, y.ZP)(I),
-        eO = (0, d.e7)([v.Z], () => v.Z.getPendingReply(Q)),
-        eD = (function (e) {
+        eO = (0, k.Z)(j, Q, eT),
+        eD = (0, y.ZP)(I),
+        ew = (0, d.e7)([v.Z], () => v.Z.getPendingReply(Q)),
+        eB = (function (e) {
             let t = l.useRef(e);
             return l.useEffect(() => void (t.current = null != e ? e : t.current)), null != e ? e : t.current;
         })(et),
-        ew = (0, m.p9)({
+        eU = (0, m.p9)({
             guildId: J.guild_id,
-            roleId: ek.iconRoleId
+            roleId: eD.iconRoleId
         }),
-        eB = (0, R.iG)(I, en),
-        eU = (0, R.Gx)(I),
-        eH = (0, d.e7)([p.Z], () => p.Z.getMessage(j), [j]),
-        eG = (0, w.Z)({
+        eH = (0, R.iG)(I, en),
+        eG = (0, R.Gx)(I),
+        eF = (0, d.e7)([p.Z], () => p.Z.getMessage(j), [j]),
+        eV = (0, w.Z)({
             message: I,
             channel: J
         }),
-        eF = null != eH;
-    r = I.type === Y.uaV.CUSTOM_GIFT ? '' : !eZ && eF ? (0, U.Z)(e, eM) : (0, F.Z)(e, eM, eZ);
-    let eV = I.id === en,
-        ez = (0, i.jsx)(u.FocusRing, {
+        ez = null != eF;
+    r = I.type === Y.uaV.CUSTOM_GIFT ? '' : !eS && ez ? (0, U.Z)(e, eL) : (0, F.Z)(e, eL, eS);
+    let eW = I.id === en,
+        eK = (0, i.jsx)(u.FocusRing, {
             offset: {
                 left: 4,
                 right: 4
@@ -312,12 +324,12 @@ t.ZP = l.memo(function (e) {
                         ...ea,
                         'aria-setsize': -1,
                         'aria-roledescription': q.intl.string(q.t.BAB0yM),
-                        'aria-labelledby': eB,
-                        'aria-describedby': eU,
-                        onFocus: eE,
-                        onBlur: eb,
+                        'aria-labelledby': eH,
+                        'aria-describedby': eG,
+                        onFocus: eZ,
+                        onBlur: eN,
                         onContextMenu: em,
-                        onKeyDown: eL,
+                        onKeyDown: eO,
                         onClick: ef,
                         compact: $,
                         contentOnly: ei,
@@ -328,14 +340,14 @@ t.ZP = l.memo(function (e) {
                             [X.ephemeral]: (0, T.Pv)(I),
                             [X.nitroMessage]: I.type === Y.uaV.NITRO_NOTIFICATION,
                             [X.systemMessage]: (0, A.Z)(I),
-                            [X.groupStart]: !ei && (eV || I.type === Y.uaV.REPLY),
-                            [X.selected]: eS,
-                            [X.replying]: (null == eO ? void 0 : eO.message.id) === I.id,
+                            [X.groupStart]: !ei && (eW || I.type === Y.uaV.REPLY),
+                            [X.selected]: ej,
+                            [X.replying]: (null == ew ? void 0 : ew.message.id) === I.id,
                             [X.interactionSending]: I.isCommandType() && I.state === Y.yb.SENDING,
-                            [X.automodMessage]: eF,
+                            [X.automodMessage]: ez,
                             [X.potioned]: (0, x.U)(I) && es
                         }),
-                        zalgo: !eZ,
+                        zalgo: !eS,
                         childrenRepliedMessage:
                             ei || I.type !== Y.uaV.REPLY
                                 ? void 0
@@ -356,16 +368,16 @@ t.ZP = l.memo(function (e) {
                                   setPopout: ep,
                                   messagePopouts: eu,
                                   replyReference: el,
-                                  author: ek,
+                                  author: eD,
                                   repliedMessage: ed,
-                                  roleIcon: ew
+                                  roleIcon: eU
                               }),
                         childrenAccessories: (0, B.Z)({
                             channelMessageProps: e,
-                            hasSpoilerEmbeds: eR,
+                            hasSpoilerEmbeds: ek,
                             handleContextMenu: em,
-                            isInteracting: eT,
-                            isAutomodBlockedMessage: eF
+                            isInteracting: eA,
+                            isAutomodBlockedMessage: ez
                         }),
                         childrenButtons:
                             ex || eI
@@ -380,26 +392,26 @@ t.ZP = l.memo(function (e) {
                         childrenMessageContent: r,
                         onMouseMove: eg,
                         onMouseLeave: eC,
-                        hasThread: !ei && I.hasFlag(Y.iLy.HAS_THREAD) && null != ej,
+                        hasThread: !ei && I.hasFlag(Y.iLy.HAS_THREAD) && null != ey,
                         isSystemMessage: (0, A.Z)(I),
                         hasReply: I.type === Y.uaV.REPLY,
-                        messageRef: eG
+                        messageRef: eV
                     })
                 ]
             })
         });
-    return null != eD
+    return null != eB
         ? (0, i.jsx)(
               P.Z,
               {
-                  flashKey: eD,
+                  flashKey: eB,
                   className: a()({
                       [X.backgroundFlash]: !0,
                       [X.groupStart]: !$ && I.id === en
                   }),
-                  children: ez
+                  children: eK
               },
               'bg-flash-'.concat(s)
           )
-        : ez;
+        : eK;
 });
