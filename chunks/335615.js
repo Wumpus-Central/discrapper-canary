@@ -95,7 +95,6 @@ class $ extends l.Component {
             position: u.tq ? 'window_center' : 'left',
             spacing: 16,
             onShiftClick: this.handleShiftClick,
-            clickTrap: !0,
             children: (u, f) => {
                 let { isShown: g } = f;
                 return (0, i.jsx)(v.Z, {

@@ -69,7 +69,6 @@ function P(e) {
             }),
                 c.Z.startTyping(l.id);
         },
-        clickTrap: !0,
         children: (e) =>
             (0, i.jsx)(
                 N.Z,
