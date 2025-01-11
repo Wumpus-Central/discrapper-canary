@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return Z;
     }
 }),
     t(724458),
@@ -12,21 +12,20 @@ var l = t(200651),
     a = t(392711),
     o = t.n(a),
     u = t(856901),
-    c = t(442837),
-    d = t(481060),
-    m = t(131951),
-    g = t(537135),
-    h = t(176940),
-    x = t(388032),
-    S = t(378967),
-    v = t(456963),
-    Z = t(232186);
-function C(e) {
+    c = t(481060),
+    d = t(687058),
+    m = t(537135),
+    g = t(176940),
+    h = t(388032),
+    x = t(378967),
+    S = t(456963),
+    v = t(232186);
+function Z(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: s } = e;
     r()(null != n, 'Camera capture device cannot be null');
-    let a = (0, h.Z)(),
-        C = (0, c.e7)([m.Z], () => m.Z.getInputDevices()),
-        [f, j] = i.useState(
+    let a = (0, g.Z)(),
+        Z = (0, d.Z)(),
+        [C, f] = i.useState(
             (function (e, n, t) {
                 if (null != n && null != t) {
                     let l = n.find((n) => n.id === e);
@@ -34,43 +33,43 @@ function C(e) {
                     let i = o().reduce(t, (e, n) => ((0, u.stringSimilarity)(l.name, n.name) > (0, u.stringSimilarity)(l.name, e.name) ? n : e));
                     if (null != i) return i.id;
                 }
-            })(n.id, a, C)
+            })(n.id, a, Z)
         );
     return (
-        null != f && s(f),
+        null != C && s(C),
         (0, l.jsx)(i.Fragment, {
-            children: (0, l.jsxs)(d.FormItem, {
+            children: (0, l.jsxs)(c.FormItem, {
                 title: 'Capture Device',
-                className: v.modalContent,
+                className: S.modalContent,
                 children: [
-                    (0, l.jsx)(d.FormItem, {
-                        className: Z.marginTop8,
-                        children: (0, l.jsxs)(g.Z, {
+                    (0, l.jsx)(c.FormItem, {
+                        className: v.marginTop8,
+                        children: (0, l.jsxs)(m.Z, {
                             children: [
                                 (0, l.jsx)('span', {
-                                    className: S.ellipsisText,
+                                    className: x.ellipsisText,
                                     children: n.name
                                 }),
-                                (0, l.jsx)(d.Button, {
-                                    className: S.changeButton,
-                                    color: d.Button.Colors.PRIMARY,
-                                    size: d.Button.Sizes.SMALL,
+                                (0, l.jsx)(c.Button, {
+                                    className: x.changeButton,
+                                    color: c.Button.Colors.PRIMARY,
+                                    size: c.Button.Sizes.SMALL,
                                     onClick: t,
-                                    children: x.intl.string(x.t.GEgsAw)
+                                    children: h.intl.string(h.t.GEgsAw)
                                 })
                             ]
                         })
                     }),
-                    (0, l.jsx)(d.FormItem, {
-                        className: Z.marginTop8,
-                        title: x.intl.string(x.t.y4ooen),
-                        children: (0, l.jsx)(d.SingleSelect, {
-                            value: f,
-                            className: Z.__invalid_marginaTop8,
+                    (0, l.jsx)(c.FormItem, {
+                        className: v.marginTop8,
+                        title: h.intl.string(h.t.y4ooen),
+                        children: (0, l.jsx)(c.SingleSelect, {
+                            value: C,
+                            className: v.__invalid_marginaTop8,
                             onChange: (e) => {
-                                j(e), s(e);
+                                f(e), s(e);
                             },
-                            options: o().map(C, (e) => {
+                            options: o().map(Z, (e) => {
                                 let { id: n, name: t } = e;
                                 return {
                                     value: n,
