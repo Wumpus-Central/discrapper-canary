@@ -2496,7 +2496,9 @@ let n0 = '@me',
         UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard',
         GUILD_LEADERBOARD_SETTINGS: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t, '/settings'),
         USER_REDEEM_VIRTUAL_CURRENCY: (e) => '/virtual-currency/skus/'.concat(e, '/redeem'),
-        IGNORE_USER: (e) => '/users/@me/relationships/'.concat(e, '/ignore')
+        IGNORE_USER: (e) => '/users/@me/relationships/'.concat(e, '/ignore'),
+        SCHEDULED_MESSAGES: '/users/@me/scheduled-messages',
+        SCHEDULED_MESSAGE: (e) => '/users/@me/scheduled-messages/'.concat(e)
     }),
     n9 = Object.freeze({
         INDEX: '/',
