@@ -354,6 +354,7 @@ var r;
         (e.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
         (e.NITROWEEN_COACHMARK = 'nitroween coachmark'),
         (e.SEASONAL_GIFTING_COACHMARK = 'seasonal gifting coachmark'),
+        (e.VALENTINES_GIFTING_COACHMARK = 'valentines gifting coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_COACHMARK = 'seasonal gifting reminder coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_NAGBAR = 'seasonal gifting reminder nagbar'),
         (e.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
