@@ -110,6 +110,9 @@ class C extends (a = o.ZP.Store) {
         let r = m[null != n ? n : 0][e];
         return null != r ? r.cooldownMs : 0;
     }
+    isChannelOnCooldown(e, n) {
+        return this.getSlowmodeCooldownGuess(e.id, n) > 0 && e.rateLimitPerUser > 0;
+    }
 }
 h(C, 'displayName', 'SlowmodeStore'),
     (n.Z = new C(u.Z, {
