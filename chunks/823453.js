@@ -35,7 +35,8 @@ function C(e) {
     let w = (0, S.Z)(window, __OVERLAY__ || r),
         P = (0, f.e7)([g.Z], () => g.Z.sidebarWidth),
         M = (0, h.useRedesignIconContext)().enabled,
-        k = (0, m.Q3)('AppHelmet');
+        k = (0, m.Q3)('AppHelmet'),
+        U = (0, m.R6)('AppHelmet');
     return (0, a.jsx)('html', {
         lang: n,
         style: 'font-size: '.concat(T, '%; --saturation-factor: ').concat(C, '; --devtools-sidebar-width: ').concat(P, 'px;'),
@@ -53,7 +54,8 @@ function C(e) {
                 'disable-forced-colors': !O && 'active' === D,
                 'enable-forced-colors': O,
                 'show-redesigned-icons': M,
-                'visual-refresh': k
+                'visual-refresh': k,
+                'visual-refresh-chat-input': U
             },
             (0, h.getThemeClass)(i),
             'density-'.concat(o),

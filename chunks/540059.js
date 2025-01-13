@@ -1,15 +1,18 @@
 r.d(n, {
     Q3: function () {
-        return c;
+        return d;
+    },
+    R6: function () {
+        return u;
     },
     TH: function () {
-        return d;
+        return f;
     },
     i9: function () {
         return l;
     },
     o9: function () {
-        return u;
+        return c;
     }
 });
 var i = r(442837),
@@ -21,7 +24,8 @@ let o = (0, a.B)({
     kind: 'user',
     defaultConfig: {
         enabled: !1,
-        enableCollapsibleSidebar: !1
+        enableCollapsibleSidebar: !1,
+        newChatInput: !1
     },
     treatments: [
         {
@@ -29,23 +33,44 @@ let o = (0, a.B)({
             label: 'Control',
             config: {
                 enabled: !1,
-                enableCollapsibleSidebar: !1
+                enableCollapsibleSidebar: !1,
+                newChatInput: !1
             }
         },
         {
             id: 1,
-            label: 'Refresh Enabled',
+            label: 'Refresh with New Chat Input',
             config: {
                 enabled: !0,
-                enableCollapsibleSidebar: !1
+                enableCollapsibleSidebar: !1,
+                newChatInput: !0
             }
         },
         {
             id: 2,
-            label: 'Refresh with Collapsible Sidebar',
+            label: 'Refresh with New Chat Input, Collapsible Sidebar',
             config: {
                 enabled: !0,
-                enableCollapsibleSidebar: !0
+                enableCollapsibleSidebar: !0,
+                newChatInput: !0
+            }
+        },
+        {
+            id: 3,
+            label: 'Refresh with Legacy Chat Input',
+            config: {
+                enabled: !0,
+                enableCollapsibleSidebar: !1,
+                newChatInput: !1
+            }
+        },
+        {
+            id: 4,
+            label: 'Refresh with Legacy Chat Input, Collapsible Sidebar',
+            config: {
+                enabled: !0,
+                enableCollapsibleSidebar: !0,
+                newChatInput: !1
             }
         }
     ]
@@ -56,15 +81,18 @@ function l(e) {
     return !!n && !r;
 }
 function u(e) {
-    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+    return o.getCurrentConfig({ location: e }).newChatInput;
 }
 function c(e) {
-    let n = u(e),
-        r = (0, i.e7)([s.ZP], () => s.ZP.disableVisualRefresh);
-    return !!n && !r;
+    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
 function d(e) {
     let n = c(e),
+        r = (0, i.e7)([s.ZP], () => s.ZP.disableVisualRefresh);
+    return !!n && !r;
+}
+function f(e) {
+    let n = d(e),
         r = o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
     return !!n && r;
 }
