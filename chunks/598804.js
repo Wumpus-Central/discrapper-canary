@@ -55,6 +55,7 @@ n.Z = l.memo(function (e) {
                           suppressPlaySound: !0,
                           enableSecondaryActions: !0,
                           refreshEnabled: !0,
+                          isSoundmoji: !0,
                           sound: e,
                           channel: s,
                           onSelectItem: () => (null == i ? void 0 : i(e))

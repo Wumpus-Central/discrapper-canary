@@ -63,7 +63,7 @@ let $ = 16,
     ei = 32 + A.Kn,
     ea = 16,
     es = 150,
-    eo = 102,
+    eo = 100,
     el = 60,
     eu = '3';
 function ec(e, n, r) {
@@ -165,8 +165,8 @@ function ef() {
     return (0, a.jsx)(_.Z, { message: X.intl.string(X.t.bgDdND) });
 }
 function e_(e) {
-    let { descriptors: n, soundButtonProps: r, rowIndex: i, isLastRow: o, isUsingKeyboardNavigation: u, suppressPlaySound: c, gridRowProps: d, getItemProps: f, onSelectItem: _, onItemMouseEnter: h, buttonOverlay: p, isNitroLocked: m, shouldShowUpsell: g, refreshEnabled: E } = e,
-        v = I.Wq.useStore((e) => e.inspectedExpressionPosition);
+    let { descriptors: n, soundButtonProps: r, rowIndex: i, isLastRow: o, isUsingKeyboardNavigation: u, suppressPlaySound: c, gridRowProps: d, getItemProps: f, onSelectItem: _, onItemMouseEnter: h, buttonOverlay: p, isNitroLocked: m, shouldShowUpsell: g, refreshEnabled: E, inExpressionPicker: v } = e,
+        T = I.Wq.useStore((e) => e.inspectedExpressionPosition);
     return (0, a.jsx)('ul', {
         ...d,
         className: l()(J.soundRow, {
@@ -175,7 +175,7 @@ function e_(e) {
         }),
         children: n.map((e, n) => {
             let a = 'item-'.concat(n),
-                o = u && v.rowIndex === i && v.columnIndex === n;
+                o = u && T.rowIndex === i && T.columnIndex === n;
             switch (e.item.type) {
                 case U.vB.SOUND:
                     return (0, s.createElement)(j.ZP, {
@@ -191,7 +191,8 @@ function e_(e) {
                         buttonOverlay: p,
                         inNitroLockedSection: m,
                         showLockForDisabledSound: g,
-                        refreshEnabled: E
+                        refreshEnabled: E,
+                        isSoundmoji: !0 === v
                     });
                 case U.vB.ADD_SOUND:
                     return (0, s.createElement)(H.Z, {
@@ -307,12 +308,13 @@ function eh(e) {
                         buttonOverlay: $,
                         isNitroLocked: c && eW,
                         shouldShowUpsell: j,
-                        refreshEnabled: eE
+                        refreshEnabled: eE,
+                        inExpressionPicker: eg
                     },
                     'row-'.concat(r['aria-rowindex'])
                 );
             },
-            [eF, j, eR, n, x, e$, i, eq, eQ, eD, ej, eT, $, eW, eE]
+            [eF, j, eR, n, x, e$, i, eq, eQ, eD, ej, eT, $, eW, eE, eg]
         ),
         e1 = s.useCallback(
             (e, n) => {
