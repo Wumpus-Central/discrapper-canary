@@ -3,10 +3,10 @@ r.d(n, {
         return i;
     },
     ZP: function () {
-        return p;
+        return m;
     },
     s5: function () {
-        return m;
+        return g;
     }
 });
 var i,
@@ -17,56 +17,58 @@ var i,
     u = r(594174),
     c = r(979651),
     d = r(934415),
-    f = r(782769),
-    _ = r(983695),
-    h = r(981631);
-function p(e) {
+    f = r(774226),
+    _ = r(782769),
+    h = r(983695),
+    p = r(981631);
+function m(e) {
     var n, r, i;
-    let { userId: a, activity: s, application: o, channelId: l, currentUser: u, isActivitiesEnabledForCurrentPlatform: c, ChannelStore: f, VoiceStateStore: p, PermissionStore: m, GuildStore: g } = e;
+    let { userId: a, activity: s, application: o, channelId: l, currentUser: u, isActivitiesEnabledForCurrentPlatform: c, ChannelStore: _, VoiceStateStore: m, PermissionStore: g, GuildStore: E } = e;
     if (null == a) return 8;
     if ((null == u ? void 0 : u.nsfwAllowed) === !1 && (null == o ? void 0 : null === (n = o.embeddedActivityConfig) || void 0 === n ? void 0 : n.requires_age_gate) === !0) return 7;
     if (!c) return 5;
-    if (!(0, _.Z)(null == o ? void 0 : null === (r = o.embeddedActivityConfig) || void 0 === r ? void 0 : r.supported_platforms)) return 6;
-    let E = null != l ? l : null === (i = p.getVoiceStateForSession(a, null == s ? void 0 : s.session_id)) || void 0 === i ? void 0 : i.channelId;
-    if (null == E) return 4;
-    let v = f.getChannel(l);
-    if (null == v) return 4;
-    let I = v.getGuildId();
-    if (!v.isPrivate()) {
-        if (null == I) return 10;
-        let e = g.getGuild(I);
-        if ((null == e ? void 0 : e.afkChannelId) === v.id) return 9;
-        let n = p.getCurrentClientVoiceChannelId(v.getGuildId()) === E,
-            r = (0, d.rY)(v, p, g),
-            i = m.can(h.Plq.CONNECT, v);
-        if (!m.can(h.Plq.USE_EMBEDDED_ACTIVITIES, v)) return 1;
-        if (v.isVocal() && !n) {
-            if (r) return 3;
-            if (!i) return 2;
+    if (!(0, h.Z)(null == o ? void 0 : null === (r = o.embeddedActivityConfig) || void 0 === r ? void 0 : r.supported_platforms)) return 6;
+    let v = (0, f.s)(),
+        I = null != l ? l : null === (i = m.getVoiceStateForSession(a, null == s ? void 0 : s.session_id)) || void 0 === i ? void 0 : i.channelId;
+    if (!v && null == I) return 4;
+    let T = _.getChannel(l);
+    if (!v && null == T) return 4;
+    if (null != T && !T.isPrivate()) {
+        let e = T.getGuildId();
+        if (null == e) return 10;
+        let n = E.getGuild(e);
+        if ((null == n ? void 0 : n.afkChannelId) === T.id) return 9;
+        let r = m.getCurrentClientVoiceChannelId(T.getGuildId()) === I,
+            i = (0, d.rY)(T, m, E),
+            a = g.can(p.Plq.CONNECT, T);
+        if (!g.can(p.Plq.USE_EMBEDDED_ACTIVITIES, T)) return 1;
+        if (T.isVocal() && !r) {
+            if (i) return 3;
+            if (!a) return 2;
         }
     }
     return 0;
 }
-function m(e) {
+function g(e) {
     let { userId: n, activity: r, channelId: i, application: d } = e,
-        _ = (0, f.z)(null != i ? i : void 0),
+        f = (0, _.z)(null != i ? i : void 0),
         h = (0, a.e7)([u.default], () => u.default.getCurrentUser());
     return (0, a.e7)(
         [s.Z, c.Z, l.Z, o.Z],
         () =>
-            p({
+            m({
                 userId: n,
                 activity: r,
                 application: d,
                 channelId: i,
                 currentUser: h,
-                isActivitiesEnabledForCurrentPlatform: _,
+                isActivitiesEnabledForCurrentPlatform: f,
                 ChannelStore: s.Z,
                 VoiceStateStore: c.Z,
                 PermissionStore: l.Z,
                 GuildStore: o.Z
             }),
-        [r, d, i, h, _, n]
+        [r, d, i, h, f, n]
     );
 }
 !(function (e) {

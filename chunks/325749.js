@@ -25,17 +25,17 @@ var i = t(200651),
     C = t(51144),
     j = t(145597),
     g = t(214629),
-    P = t(317381),
-    A = t(884338),
+    A = t(317381),
+    P = t(884338),
     S = t(473179),
-    N = t(981631),
-    b = t(388032),
+    b = t(981631),
+    N = t(388032),
     y = t(124062);
-let T = A.u.SIZE_24;
+let T = P.u.SIZE_24;
 function k(e) {
     let { applicationId: n, channelId: t } = e,
         a = (0, l.e7)([s.Z], () => s.Z.getApplication(n)),
-        k = (0, l.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivities().get(n)),
+        k = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(n)),
         w = (0, l.e7)([Z.Z], () => Z.Z.getChannel(t)),
         E = (0, l.Wu)(
             [_.ZP],
@@ -57,7 +57,7 @@ function k(e) {
         L = r.useCallback(
             (e, n) => {
                 var t;
-                if (null == e || void 0 === e || void 0 === n) return null;
+                if (null == e) return null;
                 let r = R.get(e.id),
                     a = null !== (t = null == r ? void 0 : r.nick) && void 0 !== t ? t : C.ZP.getName(e);
                 return (0, i.jsx)(
@@ -68,7 +68,7 @@ function k(e) {
                         children: (0, i.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(n.guild_id, T),
+                                src: e.getAvatarURL(null == n ? void 0 : n.guild_id, T),
                                 alt: a,
                                 className: y.avatar
                             },
@@ -86,7 +86,7 @@ function k(e) {
             () =>
                 Array.from(null != O ? O : [])
                     .map((e) => I.default.getUser(e))
-                    .filter((e) => null != e && void 0 !== e),
+                    .filter((e) => null != e),
             [O]
         ),
         M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
@@ -95,10 +95,10 @@ function k(e) {
             d.Z.setInputLocked(!m.Z.isInputLocked(e), e);
         }, []),
         z = (0, g.PR)();
-    return null == a || null == t || null == w
+    return null == a || null == k
         ? null
         : (0, i.jsx)(c.ThemeProvider, {
-              theme: N.BRd.DARK,
+              theme: b.BRd.DARK,
               children: (e) =>
                   (0, i.jsxs)('div', {
                       className: o()(y.container, e),
@@ -124,7 +124,7 @@ function k(e) {
                                           children: '.'
                                       })
                                   }),
-                                  (0, i.jsx)(A.Z, {
+                                  (0, i.jsx)(P.Z, {
                                       renderIcon: !1,
                                       users: B,
                                       size: T,
@@ -140,16 +140,17 @@ function k(e) {
                                   className: y.actionButtonsContainer,
                                   children: [
                                       (0, i.jsx)(x.Z, {
-                                          appContext: N.IlC.POPOUT,
+                                          appContext: b.IlC.POPOUT,
                                           applicationId: n,
                                           channel: w,
-                                          shouldPrioritizeGroupPlusIcon: !0
+                                          shouldPrioritizeGroupPlusIcon: !0,
+                                          embeddedActivity: k
                                       }),
                                       z
                                           ? (0, i.jsx)(h.Z, {
                                                 onClick: U,
                                                 iconComponent: c.WindowTopOutlineIcon,
-                                                label: b.intl.string(b.t.mseZsL)
+                                                label: N.intl.string(N.t.mseZsL)
                                             })
                                           : null,
                                       M &&

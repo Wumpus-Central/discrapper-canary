@@ -67,20 +67,20 @@ let W = (e, n) => {
     };
 async function q(e) {
     var n, r, i, a, s, o, l, u, f, h, m, g, I, T, b, y, S;
-    let { command: A, optionValues: N, context: O, commandTargetId: L, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: k = ee, source: B } = e,
-        V = null !== (i = G.Z.getSource(O.channel.id)) && void 0 !== i ? i : B,
-        H = null !== (a = G.Z.getCommandOrigin(O.channel.id)) && void 0 !== a ? a : w;
+    let { command: A, optionValues: N, context: O, commandTargetId: L, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: k = ee, source: B, clientSupportsContextlessActivityLaunch: V } = e,
+        H = null !== (i = G.Z.getSource(O.channel.id)) && void 0 !== i ? i : B,
+        Y = null !== (a = G.Z.getCommandOrigin(O.channel.id)) && void 0 !== a ? a : w;
     null == O.autocomplete &&
         d.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
             context: O,
             command: A,
-            commandOrigin: H
+            commandOrigin: Y
         }),
         await C.Z.unarchiveThreadIfNecessary(O.channel.id);
-    let Y = [],
-        q = [],
-        X = (0, Z.D7)(H);
+    let q = [],
+        X = [],
+        $ = (0, Z.D7)(Y);
     if (null != A.options)
         for (let e of A.options) {
             if (e.type === p.jw.SUB_COMMAND || e.type === p.jw.SUB_COMMAND_GROUP || !(e.name in N)) continue;
@@ -91,7 +91,7 @@ async function q(e) {
                 (r = null != e.choices ? W(e.choices, i) : e.autocomplete ? K(e, i, O) : i),
                     c()(null != O.autocomplete || null != r, 'Option "'.concat(e.name, '" expects a value')),
                     null != r &&
-                        Y.push({
+                        q.push({
                             type: e.type,
                             name: e.name,
                             value: r,
@@ -101,11 +101,11 @@ async function q(e) {
             }
             if (e.type === p.jw.ATTACHMENT) {
                 if (null != O.autocomplete) continue;
-                let r = D.Z.getUpload(O.channel.id, e.name, X);
+                let r = D.Z.getUpload(O.channel.id, e.name, $);
                 if (null == r) continue;
-                let i = q.length;
-                q.push(r),
-                    Y.push({
+                let i = X.length;
+                X.push(r),
+                    q.push({
                         type: e.type,
                         name: e.name,
                         value: i,
@@ -186,7 +186,7 @@ async function q(e) {
             }
             c()(null != O.autocomplete || null != r, 'Unexpected value for option "'.concat(e.name, '"')),
                 null != r &&
-                    Y.push({
+                    q.push({
                         type: e.type,
                         name: e.name,
                         value: r,
@@ -196,11 +196,11 @@ async function q(e) {
     if (null != A.subCommandPath)
         for (let e = A.subCommandPath.length - 1; e >= 0; e -= 1) {
             let { name: n, type: r } = A.subCommandPath[e];
-            Y = [
+            q = [
                 {
                     type: r,
                     name: n,
-                    options: Y
+                    options: q
                 }
             ];
         }
@@ -210,39 +210,40 @@ async function q(e) {
                 command_id: A.id,
                 application_id: A.applicationId,
                 command_type: A.type,
-                location: et(H),
-                source: V
+                location: et(Y),
+                source: H
             }),
-            A.execute(Y, O)
+            A.execute(q, O)
         );
     if (A.inputType === F.iw.BUILT_IN || A.inputType === F.iw.BUILT_IN_TEXT || A.inputType === F.iw.BUILT_IN_INTEGRATION) return;
-    let $ = {
+    let en = {
             version: A.version,
             id: null !== (y = null === (n = A.rootCommand) || void 0 === n ? void 0 : n.id) && void 0 !== y ? y : A.id,
             guild_id: A.guildId,
             name: null !== (S = null === (r = A.rootCommand) || void 0 === r ? void 0 : r.name) && void 0 !== S ? S : A.untranslatedName,
             type: A.type,
-            options: Y,
+            options: q,
             application_command: A.rootCommand
         },
-        en = () => {
+        er = () => {
             Q(N);
         };
-    null != L && ($.target_id = L),
+    null != L && (en.target_id = L),
+        V && (en.client_supports_contextless_activity_launch = !0),
         null != O.autocomplete
-            ? (0, M.GV)(A, O, $)
-            : (_.Z.clearAll(O.channel.id, X),
+            ? (0, M.GV)(A, O, en)
+            : (_.Z.clearAll(O.channel.id, $),
               J({
                   applicationId: A.applicationId,
-                  data: $,
+                  data: en,
                   context: O,
-                  attachments: q,
+                  attachments: X,
                   maxSizeCallback: x,
-                  onMessageSuccess: en,
-                  analytics_location: et(H),
+                  onMessageSuccess: er,
+                  analytics_location: et(Y),
                   sectionName: P,
-                  source: V,
-                  interactionLifecycleOptions: await k(A, O, $)
+                  source: H,
+                  interactionLifecycleOptions: await k(A, O, en)
               }));
 }
 let Q = (e) => {

@@ -234,7 +234,10 @@ function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;
-    return (n && (l |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= O.xjy.JOIN), t) ? ((l |= O.xjy.EMBEDDED), (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === O.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (p.cP.getSetting() && (l |= O.xjy.PARTY_PRIVACY_FRIENDS), p.Ou.getSetting() && (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
+    n && (l |= O.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= O.xjy.JOIN);
+    let a = p.cP.getSetting(),
+        s = p.Ou.getSetting();
+    return t ? ((l |= O.xjy.EMBEDDED), a && (l |= O.xjy.PARTY_PRIVACY_FRIENDS), s && (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL), l) : (((null == r ? void 0 : r.privacy) === O.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (l |= O.xjy.PARTY_PRIVACY_FRIENDS), s && (l |= O.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
 }
 function K(e, t, n) {
     if (e === O.mFx.JOIN) return null != t && null != t.id && null != n.join;

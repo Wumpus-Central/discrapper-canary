@@ -90,13 +90,14 @@ function F(e) {
             if (
                 Y &&
                 J &&
-                null != z &&
                 null != W &&
                 (await (0, h.Z)({
                     applicationId: W,
                     activityChannelId: z,
                     locationObject: { page: U.ZY5.USER_PROFILE },
-                    analyticsLocations: V
+                    analyticsLocations: V,
+                    joinUserId: n.id,
+                    joinSessionId: K
                 }))
             ) {
                 null == Z || Z();
