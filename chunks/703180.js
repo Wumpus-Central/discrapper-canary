@@ -63,7 +63,8 @@ t.default = () =>
                 },
                 style: {
                     width: '12px',
-                    height: '12px'
+                    height: '12px',
+                    display: 'flex'
                 },
                 children: (0, i.jsx)(r.SettingsIcon, { size: 'xxs' })
             })
