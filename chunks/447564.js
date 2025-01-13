@@ -65,30 +65,22 @@ function b(e) {
         { analyticsLocations: v } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
         T = null != g && !g.consumed;
     (0, a.useEffect)(
-        () => (
-            null != g && !1 === g.consumed && i && g.type !== C.qc2.DEVELOPER_GIFT && (0, m.Zu)(t.id, I.FX),
-            () => {
-                N && (0, m.SN)(I.FX);
-            }
-        ),
+        () => () => {
+            N && (0, m.SN)(I.FX);
+        },
         [g, t, i, N]
     );
-    let S = (0, a.useMemo)(
-            () => () =>
-                (0, p.Z)({
-                    skuId: I.FX,
-                    analyticsLocations: v,
-                    onComplete: c.closeAllModals,
-                    variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS
-                }),
-            [v]
-        ),
-        A = (0, a.useMemo)(
-            () => () => {
-                (0, m.Zu)(t.id, I.FX), (0, c.closeAllModals)();
-            },
-            [t.id]
-        ),
+    let S = (0, a.useCallback)(() => {
+            (0, m.Zu)(t.id, I.FX), (0, c.closeAllModals)();
+        }, [t.id]),
+        A = (0, a.useCallback)(() => {
+            (0, p.Z)({
+                skuId: I.FX,
+                analyticsLocations: v,
+                onComplete: S,
+                variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS
+            });
+        }, [v, S]),
         b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == g ? void 0 : g.type) === C.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == g ? void 0 : g.type, T]),
         R = (0, a.useMemo)(() => b(), [b]);
     return (0, l.jsx)(j, {
@@ -96,7 +88,7 @@ function b(e) {
         buttonState: R,
         price: s,
         onActionClick: () => {
-            r(!0), (T ? A : S)();
+            r(!0), (T ? S : A)();
         },
         loading: f || !E
     });

@@ -3,26 +3,27 @@ var i = r(200651),
     s = r(481060),
     o = r(111810),
     l = r(287941),
-    u = r(388032),
-    c = r(814169);
-let d = (e) => {
+    u = r(235894),
+    c = r(388032),
+    d = r(814169);
+let f = (e) => {
     let { message: n } = e,
         r = (0, o.p7)('Message Header') && n.hasPotions(),
-        d = a.useMemo(() => {
+        f = a.useMemo(() => {
             var e, r;
             return null !== (r = null === (e = n.potions) || void 0 === e ? void 0 : e.length) && void 0 !== r ? r : 0;
         }, [n]),
-        f = a.useCallback(() => {
-            n.hasPotions() && (0, l.Z)(n);
+        _ = a.useCallback(() => {
+            (0, u.U)(n) && (0, l.Z)(n);
         }, [n]);
     return r
         ? (0, i.jsx)(s.Clickable, {
-              onFocus: f,
+              onFocus: _,
               children: (0, i.jsx)(s.Tooltip, {
-                  text: u.intl.string(d > 1 ? u.t.sNHsqa : u.t.wjLsq6),
+                  text: c.intl.string(f > 1 ? c.t.sNHsqa : c.t.wjLsq6),
                   children: (e) =>
                       (0, i.jsxs)('div', {
-                          className: c.potionBadge,
+                          className: d.potionBadge,
                           ...e,
                           children: [
                               (0, i.jsx)(s.PotionIcon, {
@@ -34,7 +35,7 @@ let d = (e) => {
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
-                                  children: u.intl.string(u.t['9rhzMj'])
+                                  children: c.intl.string(c.t['9rhzMj'])
                               })
                           ]
                       })
@@ -42,4 +43,4 @@ let d = (e) => {
           })
         : null;
 };
-n.Z = d;
+n.Z = f;
