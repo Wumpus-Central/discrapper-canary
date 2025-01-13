@@ -3,7 +3,6 @@ n.d(t, {
         return E;
     }
 }),
-    n(411104),
     n(47120);
 var i = n(200651),
     s = n(192379),
@@ -87,18 +86,19 @@ class C extends s.PureComponent {
                 state: { dragging: r }
             } = this,
             a = E[e.type];
-        if (null == a) throw Error('OverlayLayout: Widget ('.concat(e.type, ') does not exist in WidgetMap'));
-        return (o) =>
-            a({
-                id: e.id,
-                locked: i,
-                pinned: e.pinned,
-                dragging: r,
-                isPreviewingInGame: s,
-                anchor: t,
-                size: n,
-                dragStart: o
-            });
+        return null == a
+            ? null
+            : (o) =>
+                  a({
+                      id: e.id,
+                      locked: i,
+                      pinned: e.pinned,
+                      dragging: r,
+                      isPreviewingInGame: s,
+                      anchor: t,
+                      size: n,
+                      dragStart: o
+                  });
     }
     render() {
         let { widget: e, widgetConfig: t, layoutSize: n, locked: s, isPreviewingInGame: r, isActiveRegion: a } = this.props;
@@ -117,25 +117,28 @@ class C extends s.PureComponent {
                 minY: 0,
                 maxX: n.width,
                 maxY: n.height
-            };
-        return (0, i.jsx)(d.Z, {
-            id: o,
-            size: f,
-            anchor: g,
-            container: E,
-            minSize: m,
-            hidden: !Z,
-            resizeX: x,
-            resizeY: _,
-            style: { zIndex: c },
-            dragAnywhere: S,
-            active: !s || a,
-            onUpdate: this.handleUpdate,
-            onClick: this.handleFocus,
-            onDragStart: this.handleDragStart,
-            onDragEnd: this.handleDragEnd,
-            children: this.renderWidget(e, g, f)
-        });
+            },
+            C = this.renderWidget(e, g, f);
+        return null == C
+            ? null
+            : (0, i.jsx)(d.Z, {
+                  id: o,
+                  size: f,
+                  anchor: g,
+                  container: E,
+                  minSize: m,
+                  hidden: !Z,
+                  resizeX: x,
+                  resizeY: _,
+                  style: { zIndex: c },
+                  dragAnywhere: S,
+                  active: !s || a,
+                  onUpdate: this.handleUpdate,
+                  onClick: this.handleFocus,
+                  onDragStart: this.handleDragStart,
+                  onDragEnd: this.handleDragEnd,
+                  children: C
+              });
     }
     constructor(...e) {
         super(...e),
