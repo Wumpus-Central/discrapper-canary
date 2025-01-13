@@ -4852,7 +4852,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-sm\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -4863,7 +4863,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-sm\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -4874,7 +4874,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-sm\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -4885,7 +4885,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-sm\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -4896,7 +4896,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-sm\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 800
 }
@@ -4907,7 +4907,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-md\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -4918,7 +4918,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-md\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -4929,7 +4929,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-md\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -4940,7 +4940,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-md\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -4951,7 +4951,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-md\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -4962,7 +4962,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-lg\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -4973,7 +4973,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-lg\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -4984,7 +4984,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-lg\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -4995,7 +4995,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-lg\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -5006,7 +5006,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-lg\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 800
 }
@@ -5017,7 +5017,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xl\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -5028,7 +5028,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xl\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -5039,7 +5039,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xl\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -5050,7 +5050,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xl\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -5061,7 +5061,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xl\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -5072,7 +5072,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xxl\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -5083,7 +5083,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xxl\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -5094,7 +5094,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xxl\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -5105,7 +5105,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xxl\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -5116,7 +5116,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-xxl\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25;
     font-weight: 800
 }
@@ -5127,7 +5127,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .eyebrow_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700;
     text-transform: uppercase;
@@ -5140,7 +5140,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-deprecated-12\/normal_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -5151,7 +5151,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-deprecated-12\/medium_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -5162,7 +5162,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-deprecated-12\/semibold_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -5173,7 +5173,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-deprecated-12\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -5184,7 +5184,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .heading-deprecated-12\/extrabold_c46f6a {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 800
 }
@@ -5195,7 +5195,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/heading-18\/bold_c46f6a {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -5206,7 +5206,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xxs\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -5217,7 +5217,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xxs\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -5228,7 +5228,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xxs\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -5239,7 +5239,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xxs\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -5250,7 +5250,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xs\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -5261,7 +5261,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xs\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -5272,7 +5272,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xs\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -5283,7 +5283,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-xs\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -5294,7 +5294,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-sm\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 400
 }
@@ -5305,7 +5305,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-sm\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 500
 }
@@ -5316,7 +5316,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-sm\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 600
 }
@@ -5327,7 +5327,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-sm\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2857142857142858;
     font-weight: 700
 }
@@ -5338,7 +5338,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-md\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 400
 }
@@ -5349,7 +5349,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-md\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 500
 }
@@ -5360,7 +5360,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-md\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 600
 }
@@ -5371,7 +5371,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-md\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.25;
     font-weight: 700
 }
@@ -5382,7 +5382,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-lg\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 400
 }
@@ -5393,7 +5393,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-lg\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 500
 }
@@ -5404,7 +5404,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-lg\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 600
 }
@@ -5415,7 +5415,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .text-lg\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
     font-weight: 700
 }
@@ -5426,7 +5426,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/message-preview\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 400
 }
@@ -5437,7 +5437,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/message-preview\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 500
 }
@@ -5448,7 +5448,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/message-preview\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 600
 }
@@ -5459,7 +5459,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/message-preview\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -5470,7 +5470,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/channel-title\/normal_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 400
 }
@@ -5481,7 +5481,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/channel-title\/medium_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 500
 }
@@ -5492,7 +5492,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/channel-title\/semibold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 600
 }
@@ -5503,7 +5503,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .redesign\/channel-title\/bold_c46f6a {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.375;
     font-weight: 700
 }
@@ -5514,7 +5514,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .display-sm_c46f6a {
     font-family: var(--font-headline);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1;
     font-weight: 800
 }
@@ -5525,7 +5525,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .display-md_c46f6a {
     font-family: var(--font-headline);
-    font-size: 34px;
+    font-size: 2.125rem;
     line-height: 1.0588235294117647;
     font-weight: 800
 }
@@ -5536,7 +5536,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .display-lg_c46f6a {
     font-family: var(--font-headline);
-    font-size: 44px;
+    font-size: 2.75rem;
     line-height: .9545454545454546;
     font-weight: 800
 }
@@ -5547,7 +5547,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .code_c46f6a {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     line-height: 1.3333333333333333;
     font-weight: 700
 }
@@ -5563,29 +5563,29 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .h1_c46f6a {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     font-weight: 600
 }
 
 .h2_c46f6a {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 600;
     text-transform: uppercase
 }
 
 .h3_c46f6a {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 500
 }
 
 .h4_c46f6a {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 600;
-    letter-spacing: .3px;
+    letter-spacing: .01875rem;
     text-transform: uppercase
 }
 
@@ -5617,7 +5617,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .errorMessage_c46f6a {
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     font-style: italic;
     text-transform: none
@@ -5652,8 +5652,8 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 :where(.visual-refresh) .h5_c46f6a {
     color: var(--header-primary);
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     margin-bottom: 8px;
     text-transform: capitalize
