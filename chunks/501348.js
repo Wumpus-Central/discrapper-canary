@@ -335,19 +335,24 @@ class $ extends s.Component {
                               (0, i.jsx)(u.FormText, {
                                   type: u.FormTextTypes.DESCRIPTION,
                                   className: Y.marginBottom8,
-                                  children: 'Adjust how compact or spacious the app appears.'
+                                  children: 'Adjust the spacing and layout to balance readability and content based on your preferences.'
                               }),
                               (0, i.jsx)(u.RadioGroup, {
                                   options: [
                                       {
                                           name: V.intl.string(V.t.T7G4Y2),
                                           value: U.fx.COZY,
-                                          desc: 'Relaxed layout with room to breath'
+                                          desc: 'Comfortable spacing for easier readability'
                                       },
                                       {
                                           name: V.intl.string(V.t['7iegX1']),
                                           value: U.fx.COMPACT,
-                                          desc: 'Dense layout with minimal spacing'
+                                          desc: 'Tighter layout to fit more content'
+                                      },
+                                      {
+                                          name: 'Auto',
+                                          value: U.fx.AUTO,
+                                          desc: 'Automatically adjusts for a responsive fit based on window size'
                                       }
                                   ],
                                   onChange: this.handleListDensityModeChange,
