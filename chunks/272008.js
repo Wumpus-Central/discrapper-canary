@@ -29,6 +29,9 @@ r.d(n, {
     eT: function () {
         return L;
     },
+    gU: function () {
+        return F;
+    },
     gl: function () {
         return R;
     },
@@ -501,4 +504,11 @@ async function G(e) {
             fetchStatus: p.iF.FAILURE
         });
     }
+}
+async function F(e) {
+    let n = await s.tn.get({
+        url: E.ANM.QUEST(e),
+        rejectWithError: !1
+    });
+    return (0, h.q6)(n.body);
 }
