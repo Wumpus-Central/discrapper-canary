@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return A;
+        return S;
     }
 });
 var i = r(200651),
@@ -17,97 +17,95 @@ var i = r(200651),
     p = r(979651),
     m = r(626135),
     g = r(9161),
-    E = r(490231),
-    v = r(456644),
-    I = r(409057),
-    T = r(443375),
-    b = r(128277),
-    y = r(263059),
-    S = r(981631);
-function A(e) {
-    let { user: n, currentUser: r, activity: A, className: N, onClose: C, profileGuildId: R } = e,
-        O = (0, s.e7)([p.Z, f.Z], () => {
+    E = r(456644),
+    v = r(409057),
+    I = r(443375),
+    T = r(128277),
+    b = r(263059),
+    y = r(981631);
+function S(e) {
+    let { user: n, currentUser: r, activity: S, className: A, onClose: N, profileGuildId: C } = e,
+        R = (0, s.e7)([p.Z, f.Z], () => {
             var e;
             return f.Z.getChannel(null === (e = p.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
-        { enableHangStatus: D } = d.n.useExperiment(
+        { enableHangStatus: O } = d.n.useExperiment(
             {
-                guildId: null == O ? void 0 : O.guild_id,
+                guildId: null == R ? void 0 : R.guild_id,
                 location: 'UserProfileActivityCardWrapper'
             },
             { autoTrackExposure: !1 }
         ),
-        L = D && h.Z.can(S.Plq.CONNECT, O),
-        x = (null == A ? void 0 : A.type) === S.IIU.HANG_STATUS && L ? O : null,
-        { fadeInAndOutEnabled: w } = (0, E.o)({ location: 'UserProfileActivityCardWrapper' }),
-        { recentActivityTabEnabled: P } = (0, g.O)({ location: 'UserProfileActivityCardWrapper' }),
-        { recentActivityEnabled: M } = (0, v.i)({ location: 'UserProfileActivityCardWrapper' }),
-        k = n.id === r.id,
-        U = (w || P || M) && !k && !n.bot,
-        B = (0, s.e7)([_.Z, p.Z, f.Z], () => {
-            if ((0, o.Z)(A)) {
+        D = O && h.Z.can(y.Plq.CONNECT, R),
+        L = (null == S ? void 0 : S.type) === y.IIU.HANG_STATUS && D ? R : null,
+        { recentActivityTabEnabled: x } = (0, g.O)({ location: 'UserProfileActivityCardWrapper' }),
+        { recentActivityEnabled: w } = (0, E.i)({ location: 'UserProfileActivityCardWrapper' }),
+        P = n.id === r.id,
+        M = (x || w) && !P && !n.bot,
+        k = (0, s.e7)([_.Z, p.Z, f.Z], () => {
+            if ((0, o.Z)(S)) {
                 var e, r;
-                let i = null === (e = p.Z.getVoiceStateForSession(n.id, null == A ? void 0 : A.session_id)) || void 0 === e ? void 0 : e.channelId;
+                let i = null === (e = p.Z.getVoiceStateForSession(n.id, null == S ? void 0 : S.session_id)) || void 0 === e ? void 0 : e.channelId;
                 return _.Z.getGuild(null === (r = f.Z.getChannel(i)) || void 0 === r ? void 0 : r.getGuildId());
             }
-            return null != x ? _.Z.getGuild(x.getGuildId()) : null;
+            return null != L ? _.Z.getGuild(L.getGuildId()) : null;
         });
-    (0, c.q)(null == A ? void 0 : A.application_id);
-    let G = (0, s.e7)([u.Z], () => ((null == A ? void 0 : A.application_id) != null ? u.Z.getApplication(A.application_id) : (null == A ? void 0 : A.name) != null ? u.Z.getApplicationByName(A.name) : null));
+    (0, c.q)(null == S ? void 0 : S.application_id);
+    let U = (0, s.e7)([u.Z], () => ((null == S ? void 0 : S.application_id) != null ? u.Z.getApplication(S.application_id) : (null == S ? void 0 : S.name) != null ? u.Z.getApplicationByName(S.name) : null));
     if (
         (a.useEffect(() => {
-            (null == A ? void 0 : A.type) === S.IIU.HANG_STATUS &&
-                L &&
-                m.default.track(S.rMx.VIEW_HANG_STATUS, {
+            (null == S ? void 0 : S.type) === y.IIU.HANG_STATUS &&
+                D &&
+                m.default.track(y.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
-                    guild_id: null == x ? void 0 : x.guild_id,
-                    channel_id: null == x ? void 0 : x.id
+                    guild_id: null == L ? void 0 : L.guild_id,
+                    channel_id: null == L ? void 0 : L.id
                 });
-        }, [null == A ? void 0 : A.type, L, x]),
-        (null == A ? void 0 : A.type) === S.IIU.HANG_STATUS && !L)
+        }, [null == S ? void 0 : S.type, D, L]),
+        (null == S ? void 0 : S.type) === y.IIU.HANG_STATUS && !D)
     )
         return null;
-    if ((0, l.Z)(A))
-        return U
-            ? (0, i.jsx)(y.Z, {
+    if ((0, l.Z)(S))
+        return M
+            ? (0, i.jsx)(b.Z, {
                   user: n,
                   currentUser: r,
-                  activity: A,
-                  guild: B,
-                  profileGuildId: R,
-                  channel: O,
-                  className: N,
-                  onClose: C
+                  activity: S,
+                  guild: k,
+                  profileGuildId: C,
+                  channel: R,
+                  className: A,
+                  onClose: N
               })
-            : (0, i.jsx)(b.Z, {
+            : (0, i.jsx)(T.Z, {
                   user: n,
                   currentUser: r,
-                  activity: A,
-                  guild: B,
-                  channel: O,
-                  className: N,
-                  onClose: C
+                  activity: S,
+                  guild: k,
+                  channel: R,
+                  className: A,
+                  onClose: N
               });
-    return U
-        ? (0, i.jsx)(T.Z, {
+    return M
+        ? (0, i.jsx)(I.Z, {
               user: n,
               currentUser: r,
-              activity: A,
-              application: G,
-              guild: B,
-              profileGuildId: R,
-              channel: O,
-              className: N,
-              onClose: C
+              activity: S,
+              application: U,
+              guild: k,
+              profileGuildId: C,
+              channel: R,
+              className: A,
+              onClose: N
           })
-        : (0, i.jsx)(I.Z, {
+        : (0, i.jsx)(v.Z, {
               user: n,
               currentUser: r,
-              activity: A,
-              application: G,
-              guild: B,
-              channel: O,
-              className: N,
-              onClose: C
+              activity: S,
+              application: U,
+              guild: k,
+              channel: R,
+              className: A,
+              onClose: N
           });
 }
