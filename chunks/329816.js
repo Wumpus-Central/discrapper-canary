@@ -103,19 +103,20 @@ function ep(e) {
         a = (0, ee.getPlatform)(),
         l = f.tq || f.Em,
         p = (0, _.e7)([z.Z], () => (z.Z.darkSidebar ? eu.BRd.DARK : void 0)),
-        b = (0, _.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
-        [G, Q, $] = (0, _.Wu)([P.Z], () => [P.Z.isEditorOpen, P.Z.isCoachmark, P.Z.isPreview]),
-        [en, eo] = (0, _.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isUpsellPreview]),
-        el = (0, _.e7)([X.Z], () => X.Z.getLayers().includes(eu.S9g.USER_SETTINGS)),
-        ep = (0, _.e7)([J.default], () => et.ZP.canUseClientThemes(J.default.getCurrentUser())),
-        em = G && !el,
-        eg = en && !el,
-        eE = [];
-    em && Q && !ep && eE.push(h.z.CLIENT_THEMES_COACHMARK);
-    let [ev, eI] = (0, Z.US)(eE, ec.R.SIDEBAR, !0);
-    eE.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    let eT = ev === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-        eb = ev === h.z.CLIENT_THEMES_COACHMARK;
+        b = (0, G.Q3)('ChannelSidebar'),
+        Q = (0, _.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
+        [$, en, eo] = (0, _.Wu)([P.Z], () => [P.Z.isEditorOpen, P.Z.isCoachmark, P.Z.isPreview]),
+        [el, ep] = (0, _.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isUpsellPreview]),
+        em = (0, _.e7)([X.Z], () => X.Z.getLayers().includes(eu.S9g.USER_SETTINGS)),
+        eg = (0, _.e7)([J.default], () => et.ZP.canUseClientThemes(J.default.getCurrentUser())),
+        eE = $ && !em,
+        ev = el && !em,
+        eI = [];
+    eE && en && !eg && eI.push(h.z.CLIENT_THEMES_COACHMARK);
+    let [eT, eb] = (0, Z.US)(eI, ec.R.SIDEBAR, !0);
+    eI.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+    let ey = eT === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+        eS = eT === h.z.CLIENT_THEMES_COACHMARK;
     o.useEffect(() => {
         null ==
             (0, d.LX)(i, {
@@ -123,16 +124,16 @@ function ep(e) {
                 exact: !1,
                 strict: !1
             }) &&
-            eT &&
-            !eb &&
+            ey &&
+            !eS &&
             ((0, O.nJ)(),
             g.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
-                markAsDismissed: eI
+                markAsDismissed: eb
             }));
-    }, [eT, eb, eI, i]);
-    let ey = o.useRef(document.body),
-        eS = () => {
+    }, [ey, eS, eb, i]);
+    let eA = o.useRef(document.body),
+        eN = () => {
             let e = (0, d.LX)(i, {
                 path: eu.Z5c.APPLICATION_DIRECTORY,
                 exact: !1,
@@ -140,16 +141,17 @@ function ep(e) {
             });
             return ((!!f.tq || !!f.Em) && null != e) || !1;
         },
-        eA = (em && !Q) || eb,
-        eN = eg && !eb,
-        eC = $ || eo,
-        { enabled: eR } = W.Z.useExperiment(
+        eC = (eE && !en) || eS,
+        eR = ev && !eS,
+        eO = eo || ep,
+        { enabled: eD } = W.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eC && (eA || eN),
-                disable: !eC
+                autoTrackExposure: eO && (eC || eR),
+                disable: !eO
             }
-        );
+        ),
+        eL = ''.concat(b ? 'enabled' : 'disabled').concat(Q);
     return (0, s.jsx)(
         K.Z,
         {
@@ -160,7 +162,7 @@ function ep(e) {
                         (0, s.jsx)(T.T, {
                             children: (0, s.jsx)(ei.Z, {
                                 children: (0, s.jsxs)(m.FocusRingScope, {
-                                    containerRef: ey,
+                                    containerRef: eA,
                                     children: [
                                         (0, s.jsx)(es.Co, {}),
                                         (0, s.jsx)(ea.ZP, {}),
@@ -177,7 +179,7 @@ function ep(e) {
                                                           })
                                                         : null,
                                                     (0, s.jsxs)('div', {
-                                                        className: u()(ed.appAsidePanelWrapper, l && ed.mobileAppAsidePanelWrapper, { [ed.allowsScrolling]: eS() }),
+                                                        className: u()(ed.appAsidePanelWrapper, l && ed.mobileAppAsidePanelWrapper, { [ed.allowsScrolling]: eN() }),
                                                         children: [
                                                             (0, s.jsx)(B.K, {}),
                                                             (0, s.jsx)('div', {
@@ -213,18 +215,18 @@ function ep(e) {
                                                             }),
                                                             (0, s.jsx)(w.Z, {}),
                                                             (0, s.jsx)(E.Z, {}),
-                                                            eA && !eR && (0, s.jsx)(M.Z, { markAsDismissed: eI }),
-                                                            eN &&
-                                                                !eR &&
+                                                            eC && !eD && (0, s.jsx)(M.Z, { markAsDismissed: eb }),
+                                                            eR &&
+                                                                !eD &&
                                                                 (0, s.jsx)(L.Z, {
-                                                                    isCoachmark: eT,
-                                                                    markAsDismissed: eI
+                                                                    isCoachmark: ey,
+                                                                    markAsDismissed: eb
                                                                 }),
-                                                            (eA || eN) &&
-                                                                eR &&
+                                                            (eC || eR) &&
+                                                                eD &&
                                                                 (0, s.jsx)(q.Z, {
-                                                                    initialTab: eN ? q._.APP_ICONS : q._.CLIENT_THEMES,
-                                                                    markAsDismissed: eI
+                                                                    initialTab: eR ? q._.APP_ICONS : q._.CLIENT_THEMES,
+                                                                    markAsDismissed: eb
                                                                 }),
                                                             (0, s.jsx)(F.Z, { mobile: l })
                                                         ]
@@ -242,7 +244,7 @@ function ep(e) {
                 })
             })
         },
-        b
+        eL
     );
 }
 n.Z = ep;

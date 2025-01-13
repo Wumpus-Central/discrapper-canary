@@ -1,18 +1,21 @@
 r.d(n, {
     Q3: function () {
-        return d;
+        return f;
     },
     R6: function () {
         return u;
     },
     TH: function () {
-        return f;
+        return _;
     },
     i9: function () {
         return l;
     },
-    o9: function () {
+    iT: function () {
         return c;
+    },
+    o9: function () {
+        return d;
     }
 });
 var i = r(442837),
@@ -25,7 +28,8 @@ let o = (0, a.B)({
     defaultConfig: {
         enabled: !1,
         enableCollapsibleSidebar: !1,
-        newChatInput: !1
+        newChatInput: !1,
+        disabledByDefault: !0
     },
     treatments: [
         {
@@ -34,7 +38,8 @@ let o = (0, a.B)({
             config: {
                 enabled: !1,
                 enableCollapsibleSidebar: !1,
-                newChatInput: !1
+                newChatInput: !1,
+                disabledByDefault: !0
             }
         },
         {
@@ -43,7 +48,8 @@ let o = (0, a.B)({
             config: {
                 enabled: !0,
                 enableCollapsibleSidebar: !1,
-                newChatInput: !0
+                newChatInput: !0,
+                disabledByDefault: !1
             }
         },
         {
@@ -52,7 +58,8 @@ let o = (0, a.B)({
             config: {
                 enabled: !0,
                 enableCollapsibleSidebar: !0,
-                newChatInput: !0
+                newChatInput: !0,
+                disabledByDefault: !1
             }
         },
         {
@@ -61,7 +68,8 @@ let o = (0, a.B)({
             config: {
                 enabled: !0,
                 enableCollapsibleSidebar: !1,
-                newChatInput: !1
+                newChatInput: !1,
+                disabledByDefault: !1
             }
         },
         {
@@ -70,7 +78,18 @@ let o = (0, a.B)({
             config: {
                 enabled: !0,
                 enableCollapsibleSidebar: !0,
-                newChatInput: !1
+                newChatInput: !1,
+                disabledByDefault: !1
+            }
+        },
+        {
+            id: 5,
+            label: 'External Testers',
+            config: {
+                enabled: !0,
+                enableCollapsibleSidebar: !1,
+                newChatInput: !0,
+                disabledByDefault: !0
             }
         }
     ]
@@ -84,15 +103,18 @@ function u(e) {
     return o.getCurrentConfig({ location: e }).newChatInput;
 }
 function c(e) {
-    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+    return o.getCurrentConfig({ location: e }).disabledByDefault;
 }
 function d(e) {
-    let n = c(e),
-        r = (0, i.e7)([s.ZP], () => s.ZP.disableVisualRefresh);
-    return !!n && !r;
+    return o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
 function f(e) {
     let n = d(e),
+        r = (0, i.e7)([s.ZP], () => s.ZP.disableVisualRefresh);
+    return !!n && !r;
+}
+function _(e) {
+    let n = f(e),
         r = o.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
     return !!n && r;
 }
