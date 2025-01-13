@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(70956),
     o = n(5192),
     s = n(379357),
-    c = n(561308),
-    u = n(919394),
+    u = n(561308),
+    c = n(919394),
     d = n(206295),
     m = n(227172),
     x = n(555672),
@@ -36,24 +36,24 @@ let f = (e, t, n, l) => {
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: j } = e,
         { largeImage: Z } = (0, s.rv)({ entry: n }),
-        { user: P, details: L, appName: T } = (0, v.n)(n),
-        { primaryColor: N, secondaryColor: y } = (0, d.Z)(null == Z ? void 0 : Z.src),
-        _ = (0, c.yA)(n),
-        A = (0, c.Nq)(n),
+        { user: P, details: L, appName: N } = (0, v.n)(n),
+        { primaryColor: T, secondaryColor: y } = (0, d.Z)(null == Z ? void 0 : Z.src),
+        _ = (0, u.yA)(n),
+        A = (0, u.Nq)(n),
         E = a.useCallback(
             (e) => {
                 if (null != t && null != P && null != _ && null != A && !!(0, x.qy)(A))
-                    return (0, u.SO)({
+                    return (0, c.SO)({
                         entry: n,
                         applicationImageSrc: null == Z ? void 0 : Z.src,
                         avatarSrcs: [P.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
                         description: f(n, t, P, A),
                         timestamp: g.intl.formatToPlainString(g.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
-                        colors: [N, y],
+                        colors: [T, y],
                         channelId: e
                     });
             },
-            [null == Z ? void 0 : Z.src, t, _, n, N, A, y, P]
+            [null == Z ? void 0 : Z.src, t, _, n, T, A, y, P]
         );
     if (null == P || null == _ || null == A || !(0, x.qy)(A)) return null;
     let S = null != n.extra.platform ? m.v[n.extra.platform] : null;
@@ -70,7 +70,7 @@ t.Z = (e) => {
                           }),
                 entry: n,
                 userDescription: g.t.rPqqtr,
-                title: T,
+                title: N,
                 subtitle: L,
                 badges: (0, l.jsx)(h.Gk, {
                     location: h.Gt.POPOUT,

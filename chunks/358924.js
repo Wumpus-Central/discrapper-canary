@@ -21,8 +21,8 @@ var i,
     v = n(74433),
     S = n(906732),
     T = n(812206),
-    b = n(933557),
-    A = n(194082),
+    A = n(933557),
+    b = n(194082),
     Z = n(264165),
     x = n(548816),
     L = n(925329),
@@ -261,7 +261,7 @@ let ei = (e) => {
         var t, n;
         let { guild: i, channel: r, partySize: s, members: c, onChannelContextMenu: d } = e,
             m = a.useRef(null),
-            p = (0, b.ZP)(r, !0);
+            p = (0, A.ZP)(r, !0);
         return (0, l.jsx)($, {
             children: (0, l.jsxs)('div', {
                 className: Y.voiceSection,
@@ -496,7 +496,7 @@ let ei = (e) => {
                         (0, l.jsxs)('div', {
                             children: [X(H.ZP.getName(r)), Q(g)]
                         }),
-                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
+                        (0, l.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     ]
                 }),
                 p

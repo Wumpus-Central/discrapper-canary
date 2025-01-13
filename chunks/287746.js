@@ -766,7 +766,7 @@ t.Z = l.memo(function (e) {
     });
     let R = l.useRef(null),
         L = (0, u.e7)([T.Z], () => T.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        k = (0, W.Q3)('ChannelChat');
+        k = (0, W.R6)('ChannelChat');
     return (0, i.jsx)(eX, {
         channel: t,
         isEditing: null != (0, u.e7)([ex.Z], () => ex.Z.getEditingMessageId(t.id)),

@@ -20,8 +20,8 @@ let I = new Set(),
     v = null,
     S = null,
     T = null,
-    b = null,
     A = null,
+    b = null,
     Z = null,
     x = h.K.get(E.kf) || !1;
 function L(e) {
@@ -30,9 +30,9 @@ function L(e) {
     return null != t && null == n[t] && (n[t] = p.we(t)), n;
 }
 function P() {
-    if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
+    if (((T = g.Z.getChannel()), (A = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (S = v = L(T)), null == v[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (Z = null), (N = !1), (C = _.QZA.CLOSED), I.clear();
+    (S = v = L(T)), null == v[b] && (b = e), (r = null != A), (i = p.o4(T, A)), (Z = null), (N = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class O extends (l = u.ZP.Store) {
     initialize() {
@@ -54,7 +54,7 @@ class O extends (l = u.ZP.Store) {
         return v;
     }
     get selectedOverwriteId() {
-        return A;
+        return b;
     }
     get formState() {
         return C;
@@ -69,7 +69,7 @@ class O extends (l = u.ZP.Store) {
         return T;
     }
     get category() {
-        return b;
+        return A;
     }
     get advancedMode() {
         return x;
@@ -107,18 +107,18 @@ class O extends (l = u.ZP.Store) {
                 I.add(t),
                 (C = _.QZA.OPEN),
                 (N = !d().isEqual(v, S)),
-                (i = p.o4(T, b));
+                (i = p.o4(T, A));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != v && null != v[t]) A = t;
+            if (null != v && null != v[t]) b = t;
             else {
                 if (null == T) return !1;
                 Z = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (v = null), (S = null), (T = null), (b = null), (N = !1), I.clear(), (A = null), (Z = null);
+            (C = _.QZA.CLOSED), (v = null), (S = null), (T = null), (A = null), (N = !1), I.clear(), (b = null), (Z = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -128,7 +128,7 @@ class O extends (l = u.ZP.Store) {
                 !1 !==
                     (function (e) {
                         if (null == T || T.id !== e || null == (T = f.Z.getChannel(e))) return !1;
-                        b = g.Z.getCategory();
+                        A = g.Z.getCategory();
                         let t = T.getGuildId();
                         if (null == t) return !1;
                         S = L(T);
@@ -142,10 +142,10 @@ class O extends (l = u.ZP.Store) {
                             (v = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[A]
-                                ? (A = t)
-                                : null != Z && null != v[Z] && ((A = Z), (Z = null)),
-                            (i = p.o4(T, b)),
+                            })[b]
+                                ? (b = t)
+                                : null != Z && null != v[Z] && ((b = Z), (Z = null)),
+                            (i = p.o4(T, A)),
                             !0
                         );
                     })(e.id) && (n = !0);

@@ -10,8 +10,8 @@ var l = n(200651),
     r = n(481060),
     o = n(835473),
     s = n(297781),
-    c = n(443487),
-    u = n(314897),
+    u = n(443487),
+    c = n(314897),
     d = n(594174),
     m = n(626135),
     x = n(5192),
@@ -51,7 +51,7 @@ function P(e) {
 function L(e) {
     var t, n, g, I, Z;
     let L,
-        { selected: N, channel: y, entry: _ } = e,
+        { selected: T, channel: y, entry: _ } = e,
         A = y.guild_id,
         E = (0, h.Z)({
             guildId: A,
@@ -63,7 +63,7 @@ function L(e) {
             leaderboardId: _.extra.leaderboard_id,
             intervalStart: null !== (I = null == E ? void 0 : E.interval_start) && void 0 !== I ? I : ''
         }),
-        R = (0, i.e7)([u.default], () => u.default.getId()),
+        R = (0, i.e7)([c.default], () => c.default.getId()),
         [M, k] = a.useMemo(() => {
             let e = S.find((e) => e.userId === R),
                 t = S[0],
@@ -90,9 +90,9 @@ function L(e) {
     let b = (0, o.q)(null == E ? void 0 : null === (t = E.settings) || void 0 === t ? void 0 : t.application_id);
     if (null == E || null == b) return null;
     if (0 === E.users.length || null == M || null == w)
-        return (0, l.jsx)(T, {
+        return (0, l.jsx)(N, {
             application: b,
-            selected: N
+            selected: T
         });
     let { sort_by_statistic_id: H } = E.guild_settings,
         V = null !== (Z = null == k ? void 0 : null === (g = k.statistics) || void 0 === g ? void 0 : null === (n = g[H]) || void 0 === n ? void 0 : n.value) && void 0 !== Z ? Z : 0,
@@ -105,14 +105,14 @@ function L(e) {
                       rank: B,
                       username: O
                   })),
-        (0, l.jsxs)(c.Zb, {
-            selected: N,
+        (0, l.jsxs)(u.Zb, {
+            selected: T,
             children: [
-                (0, l.jsxs)(c.e$, {
+                (0, l.jsxs)(u.e$, {
                     children: [
                         (0, l.jsx)(P, { application: b }),
                         (0, l.jsx)(r.Spacer, { size: 2 }),
-                        (0, l.jsx)(c.ll, { children: L }),
+                        (0, l.jsx)(u.ll, { children: L }),
                         (0, l.jsx)(s.Gk, {
                             location: s.Gt.CARD,
                             children: (0, l.jsx)(C.DC, {
@@ -130,16 +130,16 @@ function L(e) {
         })
     );
 }
-function T(e) {
+function N(e) {
     let { selected: t, application: n } = e;
-    return (0, l.jsxs)(c.Zb, {
+    return (0, l.jsxs)(u.Zb, {
         selected: t,
         children: [
-            (0, l.jsxs)(c.e$, {
+            (0, l.jsxs)(u.e$, {
                 children: [
                     (0, l.jsx)(P, { application: n }),
                     (0, l.jsx)(r.Spacer, { size: 2 }),
-                    (0, l.jsx)(c.ll, { children: j.intl.string(j.t['t+b0DA']) }),
+                    (0, l.jsx)(u.ll, { children: j.intl.string(j.t['t+b0DA']) }),
                     (0, l.jsx)(s.Gk, {
                         location: s.Gt.CARD,
                         children: (0, l.jsx)(C.ZR, { text: j.intl.string(j.t.zX8HUl) })

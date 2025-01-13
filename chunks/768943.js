@@ -20,9 +20,9 @@ function f(e, n, r) {
     );
 }
 function _(e) {
-    var n, r;
-    let i = 10000000000000;
-    return null !== (r = null === (n = e.dueAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== r ? r : i - e.savedAt.getTime();
+    var n, r, i, a;
+    let s = 10000000000000;
+    return (null !== (i = null === (n = e.dueAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== i ? i : s) - (null !== (a = null === (r = e.savedAt) || void 0 === r ? void 0 : r.getTime()) && void 0 !== a ? a : s);
 }
 let h = new o.h(
         (e) => {

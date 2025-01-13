@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651),
     o = n(192379),
     i = n(481060),
-    l = n(100527),
-    a = n(906732),
+    a = n(100527),
+    l = n(906732),
     c = n(184301),
     u = n(347475),
     s = n(592125),
@@ -15,7 +15,7 @@ var r = n(200651),
 function f(e) {
     var t, n;
     let { user: f, channelId: m, guildId: p, messageId: _, stopPropagation: h = !1, ariaLabel: g } = e,
-        { analyticsLocations: x } = (0, a.ZP)(l.Z.USERNAME);
+        { analyticsLocations: x } = (0, l.ZP)(a.Z.USERNAME);
     let v =
         ((t = f),
         (n = m),
@@ -37,11 +37,11 @@ function f(e) {
                         roleName: null == e ? void 0 : e.colorRoleName,
                         'aria-label': g
                     }),
-                l = (e) => (t) => {
+                a = (e) => (t) => {
                     h && t.stopPropagation(), e(t);
                 };
             return (0, r.jsx)(
-                a.Gt,
+                l.Gt,
                 {
                     value: x,
                     children:
@@ -65,7 +65,7 @@ function f(e) {
                                   children: (e) => {
                                       let { onClick: t, ...n } = e;
                                       return o({
-                                          onClick: l(t),
+                                          onClick: a(t),
                                           ...n
                                       });
                                   }

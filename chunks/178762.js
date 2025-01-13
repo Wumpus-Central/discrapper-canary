@@ -16,8 +16,8 @@ var l = n(200651),
     r = n.n(i),
     o = n(91192),
     s = n(876215),
-    c = n(442837),
-    u = n(704215),
+    u = n(442837),
+    c = n(704215),
     d = n(481060),
     m = n(239091),
     x = n(607070),
@@ -32,8 +32,8 @@ var l = n(200651),
     Z = n(107062),
     P = n(91140),
     L = n(227172),
-    T = n(551228),
-    N = n(678869),
+    N = n(551228),
+    T = n(678869),
     y = n(278399),
     _ = n(886217),
     A = n(555672),
@@ -71,7 +71,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(T.ZP, {
+                return (0, l.jsx)(N.ZP, {
                     ...n,
                     entry: t
                 });
@@ -133,7 +133,7 @@ let H = (e) => {
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(N.Z, {
+                return (0, l.jsx)(T.Z, {
                     ...n,
                     entry: t
                 });
@@ -173,13 +173,13 @@ t.ZP = a.memo((e) => {
             }),
             [P, h.channel.guild_id, h.channel.id, h.entry, h.requestId, Z]
         ),
-        T = a.useRef(!1),
-        [N, y] = a.useState(!1),
+        N = a.useRef(!1),
+        [T, y] = a.useState(!1),
         [_, A] = a.useState(!1),
-        E = (0, c.e7)([x.Z], () => x.Z.keyboardModeEnabled);
+        E = (0, u.e7)([x.Z], () => x.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        N && E && A(!0);
-    }, [N, E]);
+        T && E && A(!0);
+    }, [T, E]);
     let S = a.useCallback(
             (e) => {
                 if (!!j)
@@ -222,17 +222,17 @@ t.ZP = a.memo((e) => {
             []
         ),
         B = () => {
-            (T.current = !1),
+            (N.current = !1),
                 setTimeout(() => {
-                    !T.current && (y(!1), A(E));
+                    !N.current && (y(!1), A(E));
                 }, 100);
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
-            h.entry.content_type === s.s.LEADERBOARD && !(0, p.un)(u.z.LEADERBOARD_NUX_COACHMARK) && (0, p.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
-                (T.current = !0),
+            h.entry.content_type === s.s.LEADERBOARD && !(0, p.un)(c.z.LEADERBOARD_NUX_COACHMARK) && (0, p.EW)(c.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
+                (N.current = !0),
                 setTimeout(() => {
-                    T.current && y(!0), b(L);
+                    N.current && y(!0), b(L);
                 }, 100);
         },
         onMouseLeave: B,
@@ -247,7 +247,7 @@ t.ZP = a.memo((e) => {
                 });
             },
             position: 'left',
-            shouldShow: N,
+            shouldShow: T,
             positionKey: C,
             onRequestOpen: () => b(L),
             onRequestClose: () => {
@@ -268,13 +268,13 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !N && y(!0);
+                        !T && y(!0);
                     },
                     onContextMenu: S,
                     children: (0, l.jsx)(H, {
                         ...h,
                         selected: n,
-                        hovered: T.current
+                        hovered: N.current
                     })
                 });
             }

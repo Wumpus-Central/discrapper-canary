@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120),
@@ -38,7 +38,7 @@ let S = [],
             text: t
         });
     },
-    b = (e) => {
+    A = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
             className: a()(v.featureCard, { [v.wideStyle]: s }),
@@ -71,8 +71,8 @@ let S = [],
             ]
         });
     };
-function A(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: Z, header: x, headerClassName: L, subHeader: P, subHeaderExtra: O, featureCards: y, changeLogId: R, button: j, body: D } = e,
+function b(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: b, modalTopExtra: Z, header: x, headerClassName: L, subHeader: P, subHeaderExtra: O, featureCards: y, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
         U = y.length % 2 == 0,
@@ -152,7 +152,7 @@ function A(e) {
             [R, l.type]
         ),
         r.useEffect(() => {
-            null != A && (0, p.kk)(A);
+            null != b && (0, p.kk)(b);
             let e = Date.now();
             return (
                 f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -161,10 +161,10 @@ function A(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
+                        null != b && (0, p.EW)(b, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [A, R]),
+        }, [b, R]),
         (0, i.jsxs)(o.ModalRoot, {
             className: a()(v.root, t),
             transitionState: w,
@@ -267,7 +267,7 @@ function A(e) {
                                 className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
                                 children: y.map((e, t) =>
                                     (0, i.jsx)(
-                                        b,
+                                        A,
                                         {
                                             ...e,
                                             wideStyle: U

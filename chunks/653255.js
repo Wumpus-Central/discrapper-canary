@@ -1,8 +1,8 @@
 var r,
     o,
     i,
-    l,
-    a = n(442837),
+    a,
+    l = n(442837),
     c = n(570140),
     u = n(358085),
     s = n(998502),
@@ -12,7 +12,7 @@ var r,
 let p = !1,
     _ = !0,
     h = !1;
-class g extends (l = a.ZP.Store) {
+class g extends (a = l.ZP.Store) {
     initialize() {
         !(!u.isPlatformEmbedded || __OVERLAY__) &&
             s.ZP.getGPUDriverVersions().then((e) => {

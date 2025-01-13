@@ -121,7 +121,7 @@ t.Z = l.memo(function (e) {
             canLaunchActivities: eS,
             appContext: J
         }),
-        eA = (0, v.Q3)('ChannelAttachButton');
+        eA = (0, v.R6)('ChannelAttachButton');
     if (0 === ej.length) return null;
     let ey = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
         eP = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || ey;

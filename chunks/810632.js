@@ -85,7 +85,7 @@ function L() {
     return r.useCallback(async () => {
         if (!(!S || null == e || (await T())))
             (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('79477'), n.e('81741')]).then(n.bind(n, 60594));
+                let { default: e } = await Promise.all([n.e('79477'), n.e('73554')]).then(n.bind(n, 60594));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

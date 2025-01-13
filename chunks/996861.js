@@ -1,6 +1,6 @@
 t.d(n, {
     $Z: function () {
-        return _;
+        return b;
     },
     B8: function () {
         return N;
@@ -12,7 +12,7 @@ t.d(n, {
         return y;
     },
     Hd: function () {
-        return A;
+        return _;
     },
     Xl: function () {
         return P;
@@ -36,7 +36,7 @@ t.d(n, {
         return L;
     },
     rY: function () {
-        return b;
+        return A;
     },
     ts: function () {
         return G;
@@ -58,8 +58,8 @@ t(726521);
 var u = t(623292),
     d = t(324701),
     c = t(488131),
-    m = t(314897),
-    g = t(592125),
+    g = t(314897),
+    m = t(592125),
     f = t(626135),
     h = t(934415),
     E = t(572004),
@@ -83,16 +83,16 @@ function T(e, n) {
     }),
         (0, E.JG)((0, h.wR)(e.guild_id, e.id, n.id));
 }
-function _(e, n, t) {
+function b(e, n, t) {
     n.state === Z.yb.SEND_FAILED || t.shiftKey ? l.Z.deleteMessage(e.id, n.id, n.state === Z.yb.SEND_FAILED) : r.Z.confirmDelete(e, n);
 }
-function A(e, n) {
+function _(e, n) {
     l.Z.startEditMessage(e.id, n.id, n.content);
 }
 function N(e, n) {
     (0, p.Z)(e.id, n.id);
 }
-function b(e, n, t) {
+function A(e, n, t) {
     if (!1 === n.pinned) {
         t.shiftKey ? i.Z.pinMessage(e, n.id) : r.Z.confirmPin(e, n);
         return;
@@ -107,7 +107,7 @@ function C(e, n) {
 }
 function y(e, n, t) {
     let i = e.isPrivate(),
-        l = n.author.id === m.default.getId();
+        l = n.author.id === g.default.getId();
     (0, u.fE)({
         channel: e,
         message: n,
@@ -120,7 +120,7 @@ function D(e, n) {
     (0, c.R6)(e, n, 'Message');
 }
 function L(e, n) {
-    let t = g.Z.getChannel(v.default.castMessageIdAsChannelId(n.id));
+    let t = m.Z.getChannel(v.default.castMessageIdAsChannelId(n.id));
     null != t && (0, c.ok)(t);
 }
 function R(e, n) {

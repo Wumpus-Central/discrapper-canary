@@ -5,19 +5,19 @@ var l = n(200651),
     r = n(481060),
     o = n(243778),
     s = n(388032),
-    c = n(649314),
-    u = n(442937);
+    u = n(649314),
+    c = n(442937);
 let d = () =>
     (0, l.jsxs)('div', {
-        className: c.coachtipInner,
+        className: u.coachtipInner,
         children: [
             (0, l.jsx)('img', {
-                src: u,
+                src: c,
                 alt: s.intl.string(s.t['9wkT19']),
-                className: c.coachtipAsset
+                className: u.coachtipAsset
             }),
             (0, l.jsxs)('div', {
-                className: c.coachtipTextContainer,
+                className: u.coachtipTextContainer,
                 children: [
                     (0, l.jsx)(r.Heading, {
                         variant: 'heading-lg/semibold',
@@ -35,18 +35,18 @@ let d = () =>
 t.Z = (e) => {
     let { children: t } = e,
         [n] = (0, o.US)([i.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
-        [s, u] = a.useState(!1);
+        [s, c] = a.useState(!1);
     return (a.useEffect(() => {
         setTimeout(() => {
-            u(!0);
+            c(!0);
         }, 300);
     }),
     n !== i.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP)
         ? (0, l.jsx)(l.Fragment, { children: t })
         : (0, l.jsx)(r.Tooltip, {
               text: (0, l.jsx)(d, {}),
-              tooltipClassName: c.coachtip,
-              tooltipContentClassName: c.coachtipContent,
+              tooltipClassName: u.coachtip,
+              tooltipContentClassName: u.coachtipContent,
               position: 'left',
               allowOverflow: !0,
               forceOpen: s,

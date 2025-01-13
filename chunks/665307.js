@@ -27,8 +27,8 @@ var i,
     v = n(799777),
     S = n(626135),
     T = n(780570),
-    b = n(624138),
-    A = n(645818),
+    A = n(624138),
+    b = n(645818),
     Z = n(981631),
     x = n(388032),
     L = n(399210);
@@ -45,8 +45,8 @@ function P(e, t, n) {
         e
     );
 }
-let O = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    y = (0, b.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    y = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [Z.iEv.PLATFORM]: 'Platform',
         [Z.iEv.LAST_PLAYED]: 'Last Played',
@@ -170,7 +170,7 @@ let O = (0, b.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     icon: h.ScreenSlashIcon,
                                     tooltip: x.intl.string(x.t.Az9eqq)
                                 }),
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(b.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })

@@ -4,7 +4,7 @@ n.r(t),
             return Z;
         },
         useAppSidebarState: function () {
-            return b;
+            return A;
         }
     });
 var i = n(200651),
@@ -29,8 +29,8 @@ var i = n(200651),
     v = n(981631),
     S = n(741764),
     T = n(553512);
-let b = (0, l.U)(() => ({ isOpen: !0 }));
-function A() {
+let A = (0, l.U)(() => ({ isOpen: !0 }));
+function b() {
     let e = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
         t = (0, a.e7)([_.Z], () => _.Z.getChannel(e), [e]),
         n = E.Z.getGuild(null == t ? void 0 : t.guild_id);
@@ -58,7 +58,7 @@ function Z() {
         C.ZP.setMinimumSize(S.J, S.N);
     }, []);
     let e = (0, u.TH)('AppTitleBar'),
-        t = b((e) => e.isOpen),
+        t = A((e) => e.isOpen),
         { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (
         r.useLayoutEffect(() => {
@@ -73,7 +73,7 @@ function Z() {
                         (0, i.jsx)(s.Clickable, {
                             className: T.button,
                             onClick: () => {
-                                b.setState({ isOpen: !b.getState().isOpen });
+                                A.setState({ isOpen: !A.getState().isOpen });
                             },
                             children: (0, i.jsx)(x, {})
                         }),

@@ -154,8 +154,8 @@ function F(e) {
               children: (e) =>
                   (0, a.jsx)(k.tG, {
                       ...e,
-                      icon: l.ActivitiesIcon,
-                      text: G.intl.string(G.t['4i2vj4']),
+                      icon: l.DoorEnterIcon,
+                      text: G.intl.string(G.t.sqe0ho),
                       disabled: et,
                       submitting: X,
                       fullWidth: !0,

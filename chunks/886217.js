@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(423875),
     o = n(442837),
     s = n(18323),
-    c = n(594174),
-    u = n(908841),
+    u = n(594174),
+    c = n(908841),
     d = n(823379),
     m = n(5192),
     x = n(561308),
@@ -33,16 +33,16 @@ let L = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    T = (e, t) =>
+    N = (e, t) =>
         P.intl.formatToPlainString(P.t.Osmpr6, {
             username: t.username,
             artist: e.extra.artist.name
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: N, provider: y, image_url: _ } = n.extra.media,
+        { parent_title: T, provider: y, image_url: _ } = n.extra.media,
         A = n.extra.artist.name,
-        E = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
+        E = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
         { primaryColor: S, secondaryColor: R } = (0, C.Z)(_),
         M = (0, x.Nq)(n),
         k = a.useCallback(() => {
@@ -81,12 +81,12 @@ t.Z = (e) => {
                     y === r.p.SPOTIFY
                         ? (0, l.jsx)(I.Z, {
                               onClick: w,
-                              Icon: u.Z,
+                              Icon: c.Z,
                               'aria-label': P.intl.string(P.t['0ZB/XF'])
                           })
                         : null,
                 userDescription: P.t.CcVI1d,
-                title: N,
+                title: T,
                 subtitle: A,
                 badges: (0, l.jsx)(g.Gk, {
                     location: g.Gt.POPOUT,
@@ -100,7 +100,7 @@ t.Z = (e) => {
                     user: E,
                     channel: t,
                     generateReactionImage: k,
-                    reactionImageAltText: T(n, E),
+                    reactionImageAltText: N(n, E),
                     entry: n
                 })
             })

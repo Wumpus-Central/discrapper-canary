@@ -27,13 +27,13 @@ var i = n(200651),
     v = n(294330),
     S = n(981631),
     T = n(841787);
-let b = Object.freeze({
+let A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    A = Object.freeze({
+    b = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -230,7 +230,7 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? b : A;
+        $ = D ? A : b;
     return (0, i.jsx)('div', {
         className: T.container,
         ref: H,

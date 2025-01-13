@@ -8,12 +8,12 @@ n.d(t, {
 var r = n(512722),
     o = n.n(r),
     i = n(90757),
-    l = n.n(i),
-    a = n(65154);
+    a = n.n(i),
+    l = n(65154);
 function c(e, t, n) {
     let r = window.DiscordNative;
     o()(null != r, "Can't get desktop sources outside of native app"),
-        (t = null != t ? t : [a.vA.WINDOW, a.vA.SCREEN]),
+        (t = null != t ? t : [l.vA.WINDOW, l.vA.SCREEN]),
         (n =
             null != n
                 ? n
@@ -23,8 +23,8 @@ function c(e, t, n) {
                   });
     let i = [];
     return (
-        t.includes(a.vA.SCREEN) && e.supports(a.AN.SCREEN_PREVIEWS) && (i.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== a.vA.SCREEN))),
-        t.includes(a.vA.WINDOW) && e.supports(a.AN.WINDOW_PREVIEWS) && (i.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== a.vA.WINDOW))),
+        t.includes(l.vA.SCREEN) && e.supports(l.AN.SCREEN_PREVIEWS) && (i.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== l.vA.SCREEN))),
+        t.includes(l.vA.WINDOW) && e.supports(l.AN.WINDOW_PREVIEWS) && (i.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== l.vA.WINDOW))),
         0 !== t.length &&
             i.push(
                 r.desktopCapture.getDesktopCaptureSources({
@@ -32,6 +32,6 @@ function c(e, t, n) {
                     thumbnailSize: n
                 })
             ),
-        Promise.all(i).then((e) => l()(e))
+        Promise.all(i).then((e) => a()(e))
     );
 }

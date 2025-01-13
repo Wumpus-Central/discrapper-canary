@@ -20,20 +20,20 @@ var i,
     c = n(481060),
     u = n(100527),
     d = n(906732),
-    m = n(997323),
-    h = n(324085),
-    f = n(688465),
-    p = n(333867),
-    _ = n(63063),
-    g = n(937615),
-    E = n(82950),
-    C = n(981631),
-    I = n(215023),
+    m = n(688465),
+    h = n(333867),
+    f = n(980463),
+    p = n(576645),
+    _ = n(317951),
+    g = n(63063),
+    E = n(937615),
+    C = n(82950),
+    I = n(981631),
     x = n(388032),
     N = n(588973),
     v = n(99713);
 let T = (e, t) => {
-    (0, h.mx)(t),
+    (0, p.mx)(t),
         (0, c.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
@@ -57,31 +57,31 @@ function S(e) {
 let A = 'HD_STREAMING_POTION_MODAL_KEY';
 function b(e) {
     let { channel: t } = e,
-        n = (0, h.T$)(t),
+        n = (0, p.T$)(t),
         [i, r] = (0, a.useState)(!1),
-        { price: s, fetchingPrice: f, error: _ } = (0, h.R2)(I.FX),
-        { entitlement: g, fetchedEntitlement: E, error: x } = (0, h.t6)(I.FX),
-        N = _ || x,
+        { price: s, fetchingPrice: m, error: g } = (0, p.R2)(_.FX),
+        { entitlement: E, fetchedEntitlement: C, error: x } = (0, p.t6)(_.FX),
+        N = g || x,
         { analyticsLocations: v } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
-        T = null != g && !g.consumed;
+        T = null != E && !E.consumed;
     (0, a.useEffect)(
         () => () => {
-            N && (0, m.SN)(I.FX);
+            N && (0, f.SN)(_.FX);
         },
-        [g, t, i, N]
+        [E, t, i, N]
     );
     let S = (0, a.useCallback)(() => {
-            (0, m.Zu)(t.id, I.FX), (0, c.closeAllModals)();
+            (0, f.Zu)(t.id, _.FX), (0, c.closeAllModals)();
         }, [t.id]),
         A = (0, a.useCallback)(() => {
-            (0, p.Z)({
-                skuId: I.FX,
+            (0, h.Z)({
+                skuId: _.FX,
                 analyticsLocations: v,
                 onComplete: S,
                 variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS
             });
         }, [v, S]),
-        b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == g ? void 0 : g.type) === C.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == g ? void 0 : g.type, T]),
+        b = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == E ? void 0 : E.type) === I.qc2.DEVELOPER_GIFT ? 1 : T ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == E ? void 0 : E.type, T]),
         R = (0, a.useMemo)(() => b(), [b]);
     return (0, l.jsx)(j, {
         channel: t,
@@ -90,7 +90,7 @@ function b(e) {
         onActionClick: () => {
             r(!0), (T ? S : A)();
         },
-        loading: f || !E
+        loading: m || !C
     });
 }
 let j = (e) => {
@@ -133,7 +133,7 @@ let j = (e) => {
                                     variant: 'heading-lg/bold',
                                     children: x.intl.string(x.t.K04rOD)
                                 }),
-                                (0, l.jsx)(f.Z, {})
+                                (0, l.jsx)(m.Z, {})
                             ]
                         }),
                         (0, l.jsx)(c.Text, {
@@ -143,7 +143,7 @@ let j = (e) => {
                         (0, l.jsx)(c.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: x.intl.format(x.t['1wV4qq'], { helpCenterLink: _.Z.getArticleURL(C.BhN.HD_STREAMING_POTION) })
+                            children: x.intl.format(x.t['1wV4qq'], { helpCenterLink: g.Z.getArticleURL(I.BhN.HD_STREAMING_POTION) })
                         }),
                         (0, l.jsx)(c.Text, {
                             color: 'text-muted',
@@ -160,7 +160,7 @@ let j = (e) => {
                             variant: 'eyebrow',
                             children: x.intl.string(x.t.tZyXg4)
                         }),
-                        (0, l.jsx)(E.Z, { channel: t })
+                        (0, l.jsx)(C.Z, { channel: t })
                     ]
                 })
             ]
@@ -189,7 +189,7 @@ let P = (e) => {
     },
     L = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e,
-            r = x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
+            r = x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, E.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
                 3: x.intl.string(x.t.Qrh2BQ),

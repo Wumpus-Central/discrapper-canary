@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return m;
     }
 });
 var i = t(200651);
@@ -13,23 +13,23 @@ var l = t(442837),
     u = t(665906),
     d = t(496675),
     c = t(981631),
-    m = t(388032);
-function g(e, n) {
+    g = t(388032);
+function m(e, n) {
     let t = (0, u.$R)(n),
-        g = (0, l.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
-    return !g || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
+        m = (0, l.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
+    return !m || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
         : (0, i.jsx)(r.MenuItem, {
               id: 'remove-reactions',
-              label: m.intl.string(m.t.ZbtGBg),
+              label: g.intl.string(g.t.ZbtGBg),
               action: function (t) {
                   t.shiftKey
                       ? (0, s.wX)(n.id, e.id)
                       : a.Z.show({
-                            title: m.intl.string(m.t.iz3vYW),
-                            body: m.intl.string(m.t.VpjOCg),
-                            confirmText: m.intl.string(m.t.p89ACg),
-                            cancelText: m.intl.string(m.t.gm1Ven),
+                            title: g.intl.string(g.t.iz3vYW),
+                            body: g.intl.string(g.t.VpjOCg),
+                            confirmText: g.intl.string(g.t.p89ACg),
+                            cancelText: g.intl.string(g.t.gm1Ven),
                             onConfirm: () => {
                                 (0, s.wX)(n.id, e.id);
                             }

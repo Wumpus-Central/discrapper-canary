@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     u: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -13,8 +13,8 @@ var l = n(200651),
     r = n.n(i),
     o = n(392711),
     s = n(208404),
-    c = n(481060),
-    u = n(596454),
+    u = n(481060),
+    c = n(596454),
     d = n(727637),
     m = n(313201),
     x = n(543241),
@@ -29,19 +29,19 @@ var l = n(200651),
     Z = n(420212),
     P = n(191315);
 let L = j.Hz.CHAT,
-    T = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
-function N(e) {
+    N = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
+function T(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
         x = (0, d.Z)(m);
     return (0, l.jsx)('span', {
         ref: m,
-        children: (0, l.jsx)(c.Button, {
+        children: (0, l.jsx)(u.Button, {
             onClick: i,
-            look: c.Button.Looks.BLANK,
-            size: c.Button.Sizes.NONE,
+            look: u.Button.Looks.BLANK,
+            size: u.Button.Sizes.NONE,
             focusProps: { enabled: !n },
-            children: (0, l.jsx)(c.Spring, {
+            children: (0, l.jsx)(u.Spring, {
                 config: h.u,
                 from: { value: 0 },
                 to: { value: x ? 1 : 0 },
@@ -51,7 +51,7 @@ function N(e) {
                         style: {
                             transform: a.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                         },
-                        children: (0, l.jsx)(u.Z, {
+                        children: (0, l.jsx)(c.Z, {
                             className: r()(P.emoji, o, { [P.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
@@ -68,12 +68,12 @@ function y(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             t,
-            (0, l.jsx)(c.Clickable, {
+            (0, l.jsx)(u.Clickable, {
                 className: P.dropDownContainer,
                 onClick: () => {
                     a(!n), i();
                 },
-                children: (0, l.jsx)(c.ChevronSmallDownIcon, {
+                children: (0, l.jsx)(u.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: r()(P.dropDown, { [P.dropDownOpen]: n })
@@ -83,11 +83,11 @@ function y(e) {
     });
 }
 function _(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
         A = (0, m.Dt)(),
         [E, S] = a.useState(!1),
         R = (0, x.wC)(t.guild_id),
-        M = (0, o.uniqBy)([...R, ...T], 'name')
+        M = (0, o.uniqBy)([...R, ...N], 'name')
             .filter(
                 (e) =>
                     !g.ZP.isEmojiFilteredOrLocked({
@@ -106,16 +106,16 @@ function _(e) {
                 i();
                 return;
             }
-            null != e && u(e);
+            null != e && c(e);
             k(!t), t && v.kJ.setSearchPlaceholder(null);
         };
-    return (0, l.jsxs)(c.Dialog, {
+    return (0, l.jsxs)(u.Dialog, {
         'aria-labelledby': A,
         children: [
-            (0, l.jsx)(c.HeadingLevel, {
+            (0, l.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
-                children: (0, l.jsx)(c.HiddenVisually, {
-                    children: (0, l.jsx)(c.H, {
+                children: (0, l.jsx)(u.HiddenVisually, {
+                    children: (0, l.jsx)(u.H, {
                         id: A,
                         children: n
                     })
@@ -161,13 +161,13 @@ function _(e) {
                                     'div',
                                     {
                                         className: P.slot,
-                                        children: (0, l.jsx)(c.TooltipContainer, {
+                                        children: (0, l.jsx)(u.TooltipContainer, {
                                             text: e.name,
                                             position: 'top',
                                             'aria-label': e.name,
                                             tooltipClassName: P.tooltipContainer,
-                                            color: c.Tooltip.Colors.BRAND,
-                                            children: (0, l.jsx)(N, {
+                                            color: u.Tooltip.Colors.BRAND,
+                                            children: (0, l.jsx)(T, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

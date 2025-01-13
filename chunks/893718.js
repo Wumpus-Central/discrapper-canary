@@ -354,7 +354,7 @@ function eP(e, n) {
     let { textValue: G, richValue: F, className: Z, innerClassName: V, editorClassName: H, id: Y, required: W, disabled: z, placeholder: q, accessibilityLabel: Q, channel: X, type: J, focused: ea, renderAttachButton: eh, renderApplicationCommandIcon: eE, renderAppLauncherButton: ev, renderLeftAccessories: eP, pendingReply: eM, onChange: ek, onResize: eU, onBlur: eB, onFocus: eG, onKeyDown: eF, onSubmit: eZ, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
     f()(null != J, 'chat input type must be set');
     let { analyticsLocations: e6 } = (0, y.ZP)(b.Z.CHANNEL_TEXT_AREA),
-        e5 = (0, D.Q3)('ChannelTextAreaContainer'),
+        e5 = (0, D.R6)('ChannelTextAreaContainer'),
         e7 = eR(n),
         e8 = o.useRef(null),
         e9 = o.useRef(null),

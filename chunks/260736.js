@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(215339),
-    a = n(461195),
+    l = n(67390),
+    a = n(896835),
     o = n(447564),
     s = n(63063),
     c = n(739566),
@@ -25,7 +25,7 @@ function p(e) {
             guildId: p.guild_id,
             messageId: n.id
         })(_),
-        E = (0, l.j)('HDStreamingUpgradedMessage'),
+        E = (0, a.j)('HDStreamingUpgradedMessage'),
         C = () => (0, o.openHDPotionModal)(p, 'HDStreamingUpgradedMessage'),
         I = E ? C : s.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
     return (0, i.jsxs)(i.Fragment, {
@@ -48,7 +48,7 @@ function p(e) {
                 },
                 className: f.embed,
                 children: [
-                    (0, i.jsx)(a.Z, {}),
+                    (0, i.jsx)(l.Z, {}),
                     (0, i.jsxs)('div', {
                         className: f.text,
                         children: [

@@ -30,7 +30,7 @@ let P = l.forwardRef(function (e, t) {
     let { type: n, animateRef: r } = e,
         f = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
         { Component: g, events: C, play: x } = (0, c.w)(),
-        I = (0, v.Q3)('ChannelAppLauncherButton');
+        I = (0, v.R6)('ChannelAppLauncherButton');
     l.useImperativeHandle(
         r,
         () => ({

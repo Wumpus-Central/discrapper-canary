@@ -3,10 +3,10 @@ n.d(t, {
         return i;
     },
     _j: function () {
-        return l;
+        return a;
     },
     nm: function () {
-        return a;
+        return l;
     },
     xS: function () {
         return c;
@@ -59,10 +59,10 @@ function i(e, t, i) {
                       });
               });
 }
-function l(e, t) {
-    let { user: i, channel: l, moderationAlertId: a, guildId: c, ...u } = t;
-    if ((null == l ? void 0 : l.isGroupDM()) || (null == l ? void 0 : l.isDM())) throw Error('Cannot moderate user in DM or group DM');
-    let s = null != c ? c : null == l ? void 0 : l.getGuildId();
+function a(e, t) {
+    let { user: i, channel: a, moderationAlertId: l, guildId: c, ...u } = t;
+    if ((null == a ? void 0 : a.isGroupDM()) || (null == a ? void 0 : a.isDM())) throw Error('Cannot moderate user in DM or group DM');
+    let s = null != c ? c : null == a ? void 0 : a.getGuildId();
     null != s &&
         (0, o.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('13125'), n.e('9124')]).then(n.bind(n, 833737));
@@ -70,23 +70,23 @@ function l(e, t) {
                 (0, r.jsx)(e, {
                     ...t,
                     user: i,
-                    channelId: null == l ? void 0 : l.id,
+                    channelId: null == a ? void 0 : a.id,
                     guildId: s,
-                    moderationAlertId: a,
+                    moderationAlertId: l,
                     ...u
                 });
         });
 }
-function a(e, t) {
-    let { user: i, guildId: l, analyticsLocations: a, onCloseContextMenu: c, isViewOnly: u } = t;
+function l(e, t) {
+    let { user: i, guildId: a, analyticsLocations: l, onCloseContextMenu: c, isViewOnly: u } = t;
     (0, o.jW)(e, async () => {
         let { default: e } = await n.e('45130').then(n.bind(n, 246389));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
                 user: i,
-                guildId: l,
-                analyticsLocations: a,
+                guildId: a,
+                analyticsLocations: l,
                 onCloseContextMenu: c,
                 isViewOnly: u
             });

@@ -7,15 +7,15 @@ var i = t(200651);
 t(192379);
 var l = t(442837),
     s = t(481060),
-    a = t(493773),
-    r = t(100527),
+    r = t(493773),
+    a = t(100527),
     o = t(906732),
     d = t(335131),
     c = t(628952),
     u = t(225657),
     h = t(600164),
-    x = t(109213),
-    f = t(927699),
+    f = t(109213),
+    x = t(927699),
     C = t(987716),
     m = t(311821),
     g = t(251660),
@@ -41,15 +41,15 @@ let O = {
     }
 };
 function P(e) {
-    let { onStepChange: n, onBackClick: t, showBackButton: l = !1, disabled: a = !1, loading: r = !1 } = e,
+    let { onStepChange: n, onBackClick: t, showBackButton: l = !1, disabled: r = !1, loading: a = !1 } = e,
         { hasPaymentSources: o } = (0, I.usePaymentContext)(),
         d = o ? T.h8.REVIEW : T.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(s.Button, {
                 onClick: () => n(d),
-                disabled: a,
-                submitting: r,
+                disabled: r,
+                submitting: a,
                 children: y.intl.string(y.t.XiOHRU)
             }),
             l ? (0, i.jsx)(m.Z, { onClick: t }) : null
@@ -58,16 +58,16 @@ function P(e) {
 }
 function k(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { customGiftMessage: r = '', setCustomGiftMessage: o, giftRecipientError: m, setGiftRecipientError: T, validatingGiftRecipient: O, giftRecipient: k, recommendedGiftSkuIds: L, giftingOrigin: G, setValidatingGiftRecipient: D } = (0, E.wD)(),
+        { customGiftMessage: a = '', setCustomGiftMessage: o, giftRecipientError: m, setGiftRecipientError: T, validatingGiftRecipient: O, giftRecipient: k, recommendedGiftSkuIds: L, giftingOrigin: D, setValidatingGiftRecipient: G } = (0, E.wD)(),
         { selectedSkuId: R, setSelectedSkuId: B, selectedSkuPricePreview: F, paymentSourceId: w, skuPricePreviewsById: H } = (0, I.usePaymentContext)(),
         W = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        { enabled: U, giftRecommendationAlgorithm: Y } = x.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
-        K = U && G === M.Wt.DM_CHANNEL,
-        V = Y === x.u.POPULAR ? y.intl.string(y.t.Kwgrrq) : y.intl.string(y.t.r1huYW),
+        { enabled: U, giftRecommendationAlgorithm: Y } = f.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
+        K = U && D === M.Wt.DM_CHANNEL,
+        V = Y === f.u.POPULAR ? y.intl.string(y.t.Kwgrrq) : y.intl.string(y.t.r1huYW),
         q = async (e, n) => {
-            D(!0), null != m && T(), !(await (0, d.B1)(e.id, n)) && T(y.intl.string(y.t['4kgVqa'])), D(!1);
+            G(!0), null != m && T(), !(await (0, d.B1)(e.id, n)) && T(y.intl.string(y.t['4kgVqa'])), G(!1);
         };
-    (0, a.Z)(() => {
+    (0, r.Z)(() => {
         null != R && null != k && (j.default.track(_.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: R }), q(k, R));
     });
     let z = (e) => {
@@ -95,11 +95,11 @@ function k(e) {
             );
         },
         Q = () =>
-            (0, i.jsx)(f.Z, {
+            (0, i.jsx)(x.Z, {
                 sectionTitle: y.intl.string(y.t.B3miEx),
                 onTextChange: (e) => (null == o ? void 0 : o(e)),
-                pendingText: r,
-                currentText: r,
+                pendingText: a,
+                currentText: a,
                 disableThemedBackground: !0,
                 className: Z.customGiftMessageWrapper,
                 innerClassName: Z.customGiftMessage
@@ -173,7 +173,7 @@ function k(e) {
                     children: (0, i.jsx)(P, {
                         onStepChange: n,
                         onBackClick: t,
-                        disabled: null != m || null == k || k.id === (null == W ? void 0 : W.id) || r.length > M.$n,
+                        disabled: null != m || null == k || k.id === (null == W ? void 0 : W.id) || a.length > M.$n,
                         loading: O
                     })
                 })
@@ -183,7 +183,7 @@ function k(e) {
 }
 function b(e) {
     let { handleClose: n } = e,
-        { analyticsLocations: t } = (0, o.ZP)(r.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+        { analyticsLocations: t } = (0, o.ZP)(a.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, i.jsx)(s.Clickable, {
         onClick: function () {
             n(),
@@ -191,7 +191,7 @@ function b(e) {
                 (0, d.mK)({
                     openInLayer: !1,
                     analyticsLocations: t,
-                    analyticsSource: r.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL
+                    analyticsSource: a.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL
                 });
         },
         children: (0, i.jsxs)('div', {

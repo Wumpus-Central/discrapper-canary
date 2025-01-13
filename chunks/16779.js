@@ -26,7 +26,7 @@ function h(e) {
         h = null !== (i = null === (n = d.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : d.created_at;
     if (null == h || (0, f.Z)(d)) return null;
     let p = (0, s.EQ)(d)
-        .when(l.Z, () => o.ActivitiesIcon)
+        .when(l.Z, () => o.AppsIcon)
         .with({ type: _.IIU.LISTENING }, () => o.RecordPlayerIcon)
         .with({ type: _.IIU.WATCHING }, () => o.TvIcon)
         .otherwise(() => o.GameControllerIcon);

@@ -8,13 +8,13 @@ var r = n(200651),
     a = n(192379),
     l = n(544891),
     i = n(481060),
-    o = n(959546),
-    s = n(215023),
+    o = n(317951),
+    s = n(959546),
     c = n(695063);
 let d = '/users/@me/debug/consumables/',
     u = {
-        [s.FX]: 'HD Streaming Potion',
-        [s.D1]: 'Confetti Potion'
+        [o.FX]: 'HD Streaming Potion',
+        [o.D1]: 'Confetti Potion'
     };
 function m() {
     let e,
@@ -25,7 +25,7 @@ function m() {
         () => (
             (async () => {
                 try {
-                    let e = (await l.tn.get(d)).body.entitlements.map((e) => o.Z.createFromServer(e));
+                    let e = (await l.tn.get(d)).body.entitlements.map((e) => s.Z.createFromServer(e));
                     n(e);
                 } catch (e) {
                     h('Failed to fetch entitlements');
@@ -56,7 +56,7 @@ function m() {
                                         }),
                                         (0, r.jsx)(i.Button, {
                                             onClick:
-                                                ((e = s.D1),
+                                                ((e = o.D1),
                                                 async () => {
                                                     f(!0);
                                                     try {
@@ -65,7 +65,7 @@ function m() {
                                                                 query: { sku_id: e },
                                                                 rejectWithError: !0
                                                             }),
-                                                            a = new o.Z(r.body.entitlement);
+                                                            a = new s.Z(r.body.entitlement);
                                                         n([...t, a]);
                                                     } catch (e) {
                                                         h('Failed to create entitlement');

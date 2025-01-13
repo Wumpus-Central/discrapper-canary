@@ -21,7 +21,7 @@ var a = r(200651),
     v = r(200263);
 function I(e) {
     let n,
-        { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: o, slowmodeCooldownGuess: u, isRefreshEnabled: f } = e,
+        { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: o, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: f } = e,
         [_, h] = s.useState(!1);
     if (
         (s.useEffect(() => {
@@ -82,12 +82,12 @@ function T(e) {
         s = (0, u.e7)([_.Z], () => (r ? _.Z.can(g.Plq.MANAGE_THREADS, n) : _.Z.can(g.Plq.MANAGE_CHANNELS, n) || _.Z.can(g.Plq.MANAGE_MESSAGES, n))),
         { rateLimitPerUser: o } = n,
         l = o > 0,
-        c = (0, f.Q3)('SlowmodeIndicator');
+        c = (0, f.R6)('SlowmodeIndicator');
     return (0, a.jsx)(I, {
         isEnabled: l,
         rateLimitPerUser: o,
         isBypassSlowmode: s,
         slowmodeCooldownGuess: i,
-        isRefreshEnabled: c
+        isRefreshChatInputEnabled: c
     });
 }

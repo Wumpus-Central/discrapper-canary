@@ -26,8 +26,8 @@ var i = n(200651),
     v = n(540059),
     S = n(243778),
     T = n(922409),
-    b = n(899740),
-    A = n(28476),
+    A = n(899740),
+    b = n(28476),
     Z = n(880257),
     x = n(631885),
     L = n(522558),
@@ -133,14 +133,14 @@ let ee = (e) => {
         });
     },
     en = () => {
-        let e = (0, b.q)();
+        let e = (0, A.q)();
         return e > 0 ? (0, i.jsx)(p.NumberBadge, { count: e }) : null;
     },
     ei = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, T._)();
-        if (!(0, A.a)()) return null;
+        if (!(0, b.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(q.ME, r);
         return (0, i.jsx)(W.Qj, {
             selected: t,
@@ -331,7 +331,7 @@ function ed() {
             return [t, n];
         }, s.X),
         h = (0, y.i)({ selected: null == d ? t : d.startsWith(q.Z5c.APPLICATION_STORE) }),
-        m = (0, A.a)(),
+        m = (0, b.a)(),
         p = (function () {
             let e = k.Ex.useSetting(),
                 t = (0, Z.Z)();

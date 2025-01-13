@@ -240,7 +240,7 @@ function K(e) {
             location: r
         }),
         y = (0, D.oD)(m, _) ? o.ThreadLockIcon : o.ThreadIcon,
-        P = (0, I.Q3)('CreateThreadSidebar');
+        P = (0, I.R6)('CreateThreadSidebar');
     return (0, i.jsx)('div', {
         className: F.chat,
         onMouseDown: h,

@@ -12,8 +12,8 @@ var l = n(200651),
     r = n(442837),
     o = n(902704),
     s = n(481060),
-    c = n(952164),
-    u = n(768419),
+    u = n(952164),
+    c = n(768419),
     d = n(424678),
     m = n(239470),
     x = n(894344),
@@ -28,8 +28,8 @@ var l = n(200651),
     Z = n(551228),
     P = n(591853),
     L = n(371991),
-    T = n(410441),
-    N = n(981631),
+    N = n(410441),
+    T = n(981631),
     y = n(616922),
     _ = n(388032),
     A = n(241574),
@@ -94,8 +94,8 @@ function M(e) {
         { largeImage: V } = (0, v.rv)({ entry: w }),
         { activity: B, currentEntry: D, artist: U, title: G, user: z } = (0, Z.pi)(w),
         { primaryColor: Y, secondaryColor: W } = (0, j.Z)(null == V ? void 0 : V.src),
-        q = (0, I.Z)(N.ABu.SPOTIFY),
-        F = (0, r.e7)([u.Z, h.default], () => ((null == B ? void 0 : B.type) === N.IIU.LISTENING && null != z ? (0, m.Z)(u.Z, h.default, z, B) : void 0), [B, z], o.Z),
+        q = (0, I.Z)(T.ABu.SPOTIFY),
+        F = (0, r.e7)([c.Z, h.default], () => ((null == B ? void 0 : B.type) === T.IIU.LISTENING && null != z ? (0, m.Z)(c.Z, h.default, z, B) : void 0), [B, z], o.Z),
         J = a.useCallback(() => {
             var e;
             if (null == k || null == z) return;
@@ -123,21 +123,21 @@ function M(e) {
         K = [];
     if (D.media.provider === i.p.SPOTIFY) {
         (A = () => {
-            (0, c.aG)(B);
+            (0, u.aG)(B);
         }),
             (M = () => {
-                (0, c.Z5)(B, z.id);
+                (0, u.Z5)(B, z.id);
             }),
             (L = () => {
                 var e;
-                (null !== (e = null == q ? void 0 : q()) && void 0 !== e) || (0, c.aG)(B);
+                (null !== (e = null == q ? void 0 : q()) && void 0 !== e) || (0, u.aG)(B);
             });
         (X = (0, l.jsx)(d.Z, {
             artists: U,
             canOpen: null != B.sync_id,
             linkClassName: E.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, c.d$)(B, z.id, e);
+                (0, u.d$)(B, z.id, e);
             }
         })),
             (null == F ? void 0 : F.syncDisabled) === !1 &&
@@ -161,7 +161,7 @@ function M(e) {
         entry: w,
         headerIcons:
             D.media.provider === i.p.SPOTIFY
-                ? (0, l.jsx)(T.Z, {
+                ? (0, l.jsx)(N.Z, {
                       onClick: L,
                       'aria-label': _.intl.string(_.t.rRffNz),
                       Icon: p.Z

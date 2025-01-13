@@ -35,16 +35,16 @@ var i,
     j = n(793865),
     A = n(575175),
     y = n(997614),
-    P = n(324085),
-    M = n(243778),
-    R = n(258609),
-    L = n(446226),
-    k = n(569545),
-    O = n(74299),
-    D = n(803647),
-    w = n(554747),
-    B = n(95764),
-    U = n(459502),
+    P = n(243778),
+    M = n(258609),
+    R = n(446226),
+    L = n(569545),
+    k = n(74299),
+    O = n(803647),
+    D = n(554747),
+    w = n(95764),
+    B = n(459502),
+    U = n(576645),
     H = n(386542),
     G = n(140465),
     F = n(746599),
@@ -105,7 +105,7 @@ function eT(e) {
         }, [E, t.id, l, i]),
         Z = (0, G.B4)({ location: 'GoLiveButton' }),
         [N, S] = a.useState(!1),
-        T = (0, P.bK)(),
+        T = (0, U.bK)(),
         [j, A] = a.useState(!1);
     a.useEffect(() => {
         if ((A(t.isHDStreamSplashed && null == g && !T), t.isHDStreamSplashed)) {
@@ -122,11 +122,11 @@ function eT(e) {
             }
             (0, ev.Z)();
         },
-        R = () => {
-            (0, D.Z)(g);
+        M = () => {
+            (0, O.Z)(g);
         },
-        L = F.pM,
-        k = a.useCallback(() => {
+        R = F.pM,
+        L = a.useCallback(() => {
             eo.default.track(eE.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -134,7 +134,7 @@ function eT(e) {
             }),
                 (0, F.qA)();
         }, [t.guild_id, t.id]),
-        O = (e, t) => {
+        k = (e, t) => {
             let { onClick: n, ...i } = null != e ? e : { onClick: void 0 },
                 l = null != g;
             return (0, r.jsx)(et.O, {
@@ -147,7 +147,7 @@ function eT(e) {
                 isSelfStream: !0,
                 onPopoutClick: l
                     ? function (e) {
-                          x.hqStreamingIsEnabled && !x.hqStreamingPopoutDismissed && L(), null == n || n(e);
+                          x.hqStreamingIsEnabled && !x.hqStreamingPopoutDismissed && R(), null == n || n(e);
                       }
                     : null,
                 popoutOpen: t,
@@ -155,13 +155,13 @@ function eT(e) {
                 premiumGlow: j,
                 renderNUXHighlight: N,
                 buttonRef: I,
-                onClick: null != g ? R : y
+                onClick: null != g ? M : y
             });
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             Z && 0 === u.length
-                ? (0, r.jsx)(M.ZP, {
+                ? (0, r.jsx)(P.ZP, {
                       contentTypes: [m.z.TRIAL_NUX_STREAM_COACH_MARK],
                       bypassAutoDismiss: !0,
                       children: (e) => {
@@ -183,13 +183,13 @@ function eT(e) {
                   ? (0, r.jsx)(z.$, {
                         buttonRef: I,
                         dismissed: x.hqStreamingPopoutDismissed,
-                        onDismiss: L
+                        onDismiss: R
                     })
                   : (0, r.jsx)(V.b, {
                         channel: t,
                         buttonRef: I,
                         dismissed: x.hqStreamingOptInPopoutDismissed,
-                        onDismiss: k
+                        onDismiss: L
                     }),
             (0, r.jsx)(Y.Z, {
                 children: (0, r.jsx)(f.Popout, {
@@ -213,7 +213,7 @@ function eT(e) {
                     children: (e, t) => {
                         let { ...n } = e,
                             { isShown: i } = t;
-                        return (0, r.jsx)('div', { children: O(n, i) });
+                        return (0, r.jsx)('div', { children: k(n, i) });
                     }
                 })
             })
@@ -250,7 +250,7 @@ let eA = a.memo(function (e) {
                 return n !== (null == t ? void 0 : t.id);
             })
         ),
-        _ = (0, w.qY)(i.id),
+        _ = (0, D.qY)(i.id),
         I = a.useCallback(() => {
             if ((null == s ? void 0 : s.type) === eb.fO.ACTIVITY && s.id === (null == l ? void 0 : l.applicationId)) return 'ACTIVITY';
             if (g) return 'STREAM';
@@ -280,8 +280,8 @@ let eA = a.memo(function (e) {
         I() !== E && d(!0);
     }, [E, I]);
     let T = a.useCallback(() => {
-            if (null != m) (0, x.g)((0, k.V9)(m));
-            else for (let e of v) (0, x.g)((0, k.V9)(e));
+            if (null != m) (0, x.g)((0, L.V9)(m));
+            else for (let e of v) (0, x.g)((0, L.V9)(e));
         }, [v, m]),
         j = (e, a) => {
             let o = Z
@@ -323,7 +323,7 @@ let eA = a.memo(function (e) {
                         onPopoutClick: v.length > 0 ? a : null
                     });
                 case 'EVENT':
-                    return (0, r.jsx)(B.Z, {
+                    return (0, r.jsx)(w.Z, {
                         channelId: i.id,
                         onClick: () => {
                             C.default.disconnect(), null == n || n();
@@ -416,10 +416,10 @@ t.ZP = function (e) {
         }),
         { cameraUnavailable: _, enabled: E } = (0, ed.Z)(),
         N = (0, ep.Z)(i),
-        { suppress: P, selfMute: M, mute: k } = (0, em.Z)(i),
-        { canGoLive: D } = (0, p.cj)([er.Z], () => ({ canGoLive: (0, O.Z)(er.Z) })),
-        w = (0, L.Z)(),
-        B = (0, p.e7)([R.Z], () => null != R.Z.getAwaitingRemoteSessionInfo()),
+        { suppress: P, selfMute: L, mute: O } = (0, em.Z)(i),
+        { canGoLive: D } = (0, p.cj)([er.Z], () => ({ canGoLive: (0, k.Z)(er.Z) })),
+        w = (0, R.Z)(),
+        U = (0, p.e7)([M.Z], () => null != M.Z.getAwaitingRemoteSessionInfo()),
         H = null != w,
         G = (0, p.e7)([ea.Z], () => {
             var e;
@@ -450,7 +450,7 @@ t.ZP = function (e) {
                   children: [
                       (0, r.jsx)('div', {
                           className: eN.eventPromptsContainer,
-                          children: (0, r.jsx)(U.Z, { channelId: i.id })
+                          children: (0, r.jsx)(B.Z, { channelId: i.id })
                       }),
                       (0, r.jsxs)('div', {
                           className: o()(eN.experimentWrapper, l),
@@ -480,12 +480,12 @@ t.ZP = function (e) {
                                               return (0, r.jsx)(ee.Z, {
                                                   centerButton: !0,
                                                   onPopoutClick: H ? null : n,
-                                                  selfMute: M,
-                                                  serverMute: k,
+                                                  selfMute: L,
+                                                  serverMute: O,
                                                   suppress: P,
                                                   popoutOpen: i,
-                                                  awaitingRemote: B,
-                                                  onClick: () => (0, A.Z)(k, P, eE.jXE.VOICE_CONTROL_TRAY)
+                                                  awaitingRemote: U,
+                                                  onClick: () => (0, A.Z)(O, P, eE.jXE.VOICE_CONTROL_TRAY)
                                               });
                                           }
                                       }),
@@ -576,7 +576,7 @@ t.ZP = function (e) {
                   children: [
                       (0, r.jsx)('div', {
                           className: eN.eventPromptsContainer,
-                          children: (0, r.jsx)(U.Z, { channelId: i.id })
+                          children: (0, r.jsx)(B.Z, { channelId: i.id })
                       }),
                       (0, r.jsxs)('div', {
                           className: o()(eN.wrapper, l),
@@ -604,12 +604,12 @@ t.ZP = function (e) {
                                                 centerButton: !0,
                                                 onPopoutClick: H ? null : n,
                                                 className: eN.controlButton,
-                                                selfMute: M,
-                                                serverMute: k,
+                                                selfMute: L,
+                                                serverMute: O,
                                                 suppress: P,
                                                 popoutOpen: i,
-                                                awaitingRemote: B,
-                                                onClick: () => (0, A.Z)(k, P, eE.jXE.VOICE_CONTROL_TRAY)
+                                                awaitingRemote: U,
+                                                onClick: () => (0, A.Z)(O, P, eE.jXE.VOICE_CONTROL_TRAY)
                                             });
                                         }
                                     })
@@ -677,12 +677,12 @@ t.ZP = function (e) {
                                                 centerButton: !0,
                                                 onPopoutClick: H ? null : n,
                                                 className: eN.controlButton,
-                                                selfMute: M,
-                                                serverMute: k,
+                                                selfMute: L,
+                                                serverMute: O,
                                                 suppress: P,
                                                 popoutOpen: i,
-                                                awaitingRemote: B,
-                                                onClick: () => (0, A.Z)(k, P, eE.jXE.VOICE_CONTROL_TRAY)
+                                                awaitingRemote: U,
+                                                onClick: () => (0, A.Z)(O, P, eE.jXE.VOICE_CONTROL_TRAY)
                                             });
                                         }
                                     })

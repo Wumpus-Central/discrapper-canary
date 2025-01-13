@@ -8,9 +8,9 @@ t(192379);
 var i = t(913527),
     s = t.n(i),
     r = t(793030),
-    a = t(461195),
-    o = t(739566),
-    u = t(942951),
+    a = t(739566),
+    o = t(942951),
+    u = t(67390),
     c = t(63063),
     d = t(981631),
     m = t(388032),
@@ -18,8 +18,8 @@ var i = t(913527),
 function h(e) {
     var n;
     let { streamingUntil: t, user: i, channel: h } = e,
-        x = (0, o.JZ)(i, h),
-        S = (0, u.l)({
+        x = (0, a.JZ)(i, h),
+        S = (0, o.l)({
             user: i,
             channelId: h.id,
             guildId: h.guild_id,
@@ -31,7 +31,7 @@ function h(e) {
         : (0, l.jsxs)('div', {
               className: g.attribution,
               children: [
-                  (0, l.jsx)(a.Z, { className: g.img }),
+                  (0, l.jsx)(u.Z, { className: g.img }),
                   (0, l.jsxs)('div', {
                       children: [
                           (0, l.jsx)(r.X6, {

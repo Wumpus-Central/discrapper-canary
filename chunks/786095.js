@@ -14,8 +14,8 @@ var i = t(200651),
     u = t(85960),
     d = t(676317),
     c = t(65912),
-    m = t(556012),
-    g = t(572456),
+    g = t(556012),
+    m = t(572456),
     f = t(434404),
     h = t(981631),
     E = t(273504),
@@ -27,8 +27,8 @@ function p(e, n) {
         { isLoading: p, saveRule: x, errorMessage: Z } = (0, c.w)(),
         { createNewEditingRule: S } = (0, c.V)(),
         [j, T] = l.useState(!1),
-        [_, A] = (0, s.I2)(n),
-        { rulesByTriggerType: N, updateRule: b } = (0, s.pH)(n),
+        [b, _] = (0, s.I2)(n),
+        { rulesByTriggerType: N, updateRule: A } = (0, s.pH)(n),
         P = l.useMemo(() => {
             var e;
             return null !== (e = N[M]) && void 0 !== e ? e : [];
@@ -59,7 +59,7 @@ function p(e, n) {
         },
         O = async (n) => {
             var t, i;
-            if (((0, a.Zy)(), !(await (0, g.XN)(n.name, e)))) return;
+            if (((0, a.Zy)(), !(await (0, m.XN)(n.name, e)))) return;
             let l = {
                 ...n,
                 triggerMetadata: {
@@ -67,7 +67,7 @@ function p(e, n) {
                     keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await x(l, P), b(l), null != Z ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
+            await x(l, P), A(l), null != Z ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
         },
         G = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(r.MenuItem, {
@@ -76,7 +76,7 @@ function p(e, n) {
             })
         });
     return (
-        !_ &&
+        !b &&
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
                     C &&
@@ -93,7 +93,7 @@ function p(e, n) {
                                 return t === n;
                             });
                             if (null == i) return n;
-                            let l = (0, m.c)(t, i);
+                            let l = (0, g.c)(t, i);
                             return (n += ', '.concat(null == l ? void 0 : l.headerText));
                         }, '');
                         return (0, i.jsx)(
@@ -133,7 +133,7 @@ function p(e, n) {
             id: 'guild-automod-add-selection',
             label: I.intl.formatToPlainString(I.t.Kkjv1t, { keywordCount: L }),
             onFocus: () => {
-                if (!j) T(!0), A();
+                if (!j) T(!0), _();
             },
             children: G
         })

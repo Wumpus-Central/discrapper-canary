@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(481060),
     o = n(620662),
     s = n(841784),
-    c = n(429589),
-    u = n(499254),
+    u = n(429589),
+    c = n(499254),
     d = n(827498),
     m = n(541716),
     x = n(706454),
@@ -21,17 +21,17 @@ var l = n(200651),
     Z = n(591853),
     P = n(797342),
     L = n(981631),
-    T = n(388032);
-let N = (e, t) =>
-        T.intl.formatToPlainString(T.t.tAwI1t, {
+    N = n(388032);
+let T = (e, t) =>
+        N.intl.formatToPlainString(N.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
     y = (e, t, n) => {
-        let l = T.t['bES+y8'],
+        let l = N.t['bES+y8'],
             a = p.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
-        return T.intl
+        return N.intl
             .formatToMarkdownString(l, {
                 gameName: i,
                 userName: a
@@ -40,8 +40,8 @@ let N = (e, t) =>
     },
     _ = (e) => {
         let { entry: t, channel: n, users: l, countOthers: a } = e,
-            i = T.t['7j/5mp'];
-        return T.intl
+            i = N.t['7j/5mp'];
+        return N.intl
             .formatToMarkdownString(i, {
                 gameName: t.extra.activity_name,
                 user1: p.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[0]),
@@ -61,7 +61,7 @@ t.ZP = (e) => {
         b = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
         U = () => {
-            u.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
+            c.__(d._b.TEXT, m.Ie.NORMAL, { applicationId: n.extra.application_id });
         },
         G = a.useCallback(
             (e) => {
@@ -94,7 +94,7 @@ t.ZP = (e) => {
         }),
         Y = (0, l.jsx)(Z.wG, {
             channel: t,
-            userDescription: (0, g.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
+            userDescription: (0, g.kr)(n) ? N.t.vPg1JS : N.t.rPqqtr,
             title: n.extra.activity_name,
             subtitle: R,
             badges: z,
@@ -106,7 +106,7 @@ t.ZP = (e) => {
         }),
         W = (0, o.Z)(M, L.xjy.JOIN) || (0, s.Z)(M),
         q = W
-            ? (0, l.jsx)(c.Z, {
+            ? (0, l.jsx)(u.Z, {
                   isEmbedded: (0, s.Z)(M),
                   embeddedActivity: k,
                   activity: M,
@@ -121,7 +121,7 @@ t.ZP = (e) => {
         F = (0, l.jsx)(Z.Ll, {
             onClick: U,
             IconComponent: r.AppsIcon,
-            children: T.intl.string(T.t.GDWYR0)
+            children: N.intl.string(N.t.GDWYR0)
         }),
         J = [W ? q : F].filter(h.lm);
     return (0, l.jsxs)(Z.yR, {
@@ -134,7 +134,7 @@ t.ZP = (e) => {
                     user: S,
                     channel: t,
                     generateReactionImage: G,
-                    reactionImageAltText: N(n, S),
+                    reactionImageAltText: T(n, S),
                     entry: n,
                     buttons: J
                 })

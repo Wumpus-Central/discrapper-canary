@@ -1,15 +1,15 @@
 n.d(t, {
     z: function () {
-        return c;
+        return s;
     }
 });
 var r = n(200651),
     i = n(192379),
-    u = n(658312),
-    a = n(503082);
-let c = (e) => {
-    let { drawCallback: t, size: n, fps: c = 60, useOffscreen: l = !0 } = e,
-        s = i.useRef(null),
+    a = n(658312),
+    u = n(503082);
+let s = (e) => {
+    let { drawCallback: t, size: n, fps: s = 60, useOffscreen: c = !0 } = e,
+        l = i.useRef(null),
         o = i.useRef();
     return (
         i.useEffect(() => {
@@ -19,12 +19,12 @@ let c = (e) => {
             null != o.current && o.current.setSize(n);
         }, [n]),
         i.useEffect(() => {
-            if (null != s.current) {
-                let e = new a.Z(s.current);
-                (o.current = e), l && e.setupOffscreenCanvas();
+            if (null != l.current) {
+                let e = new u.Z(l.current);
+                (o.current = e), c && e.setupOffscreenCanvas();
             }
-        }, [s, l, n]),
-        (0, u.Z)((e) => {
+        }, [l, c, n]),
+        (0, a.Z)((e) => {
             if (null != o.current) {
                 let { width: n, height: r } = o.current.canvas;
                 o.current.clearRect({
@@ -35,7 +35,7 @@ let c = (e) => {
                 }),
                     t(o.current, e / 1000);
             }
-        }, 1000 / c),
-        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: s }) })
+        }, 1000 / s),
+        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: l }) })
     );
 };

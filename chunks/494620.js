@@ -10,8 +10,8 @@ var r,
     o,
     i = n(200651);
 n(192379);
-var l = n(120356),
-    a = n.n(l),
+var a = n(120356),
+    l = n.n(a),
     c = n(481060),
     u = n(312403);
 ((r = o || (o = {})).INFO = 'info'), (r.WARNING = 'warning');
@@ -27,7 +27,7 @@ function f(e) {
     let { children: t, className: n, look: r = 'info' } = e,
         o = d[r];
     return (0, i.jsxs)('div', {
-        className: a()(u.root, n, s[r]),
+        className: l()(u.root, n, s[r]),
         children: [
             (0, i.jsx)(o, {
                 className: u.icon,
