@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return S;
+            return C;
         }
     }),
     n(47120);
@@ -22,9 +22,9 @@ var l = n(200651),
     x = n(207003),
     g = n(388032),
     y = n(409267),
-    C = n(621054);
-function S(e) {
-    let { applicationId: t, onClose: n, transitionState: b, message: S, launchParams: E, onShare: Z, ...N } = e,
+    S = n(621054);
+function C(e) {
+    let { applicationId: t, onClose: n, transitionState: b, message: C, launchParams: E, onShare: Z, ...N } = e,
         [L] = (0, o.Z)([t]),
         _ = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         [j, M] = r.useState(!1),
@@ -81,7 +81,7 @@ function S(e) {
         W = r.useCallback(
             async (e) => {
                 if (null == L) return;
-                let t = ''.concat(S, '\n').concat(k);
+                let t = ''.concat(C, '\n').concat(k);
                 M(!0),
                     (await Promise.all(e.map(d.qx))).filter(p.lm).forEach(async (e) => {
                         let n = h.Z.getChannel(e);
@@ -91,7 +91,7 @@ function S(e) {
                     Z(!0),
                     n();
             },
-            [S, k, n, Z, L]
+            [C, k, n, Z, L]
         ),
         G =
             w.length > 0
@@ -108,7 +108,7 @@ function S(e) {
                       children: [
                           (0, l.jsx)('img', {
                               className: y.noResultsImg,
-                              src: C,
+                              src: S,
                               alt: ''
                           }),
                           (0, l.jsx)(i.Text, {
@@ -141,7 +141,7 @@ function S(e) {
                                         lineClamp: 1,
                                         variant: 'text-sm/medium',
                                         color: 'text-secondary',
-                                        children: S
+                                        children: C
                                     })
                                 })
                             }),
@@ -169,7 +169,10 @@ function S(e) {
                 children: (0, l.jsxs)('div', {
                     className: y.copySendBar,
                     children: [
-                        (0, l.jsx)(v, { link: k }),
+                        (0, l.jsx)(v, {
+                            link: k,
+                            onShare: Z
+                        }),
                         (0, l.jsx)(i.Button, {
                             className: y.sendWithMessage,
                             onClick: () => W(D),
@@ -184,30 +187,30 @@ function S(e) {
     });
 }
 function v(e) {
-    let { link: t } = e,
-        [n, s] = r.useState(!1);
+    let { link: t, onShare: n } = e,
+        [s, a] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e;
             return (
-                n &&
+                s &&
                     (e = setTimeout(() => {
-                        s(!1);
+                        a(!1);
                     }, 1000)),
                 () => {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [n]),
+        }, [s]),
         (0, l.jsxs)(i.Button, {
             look: i.Button.Looks.LINK,
             color: i.Button.Colors.LINK,
             onClick: function () {
-                (0, b.JG)(t), s(!0);
+                (0, b.JG)(t), n(!0), a(!0);
             },
             innerClassName: y.copyButton,
             children: [
-                n
+                s
                     ? (0, l.jsx)(i.CircleCheckIcon, {
                           size: 'md',
                           color: 'currentColor'
@@ -216,7 +219,7 @@ function v(e) {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                n ? g.intl.string(g.t['t5VZ8/']) : g.intl.string(g.t.WqhZsr)
+                s ? g.intl.string(g.t['t5VZ8/']) : g.intl.string(g.t.WqhZsr)
             ]
         })
     );
