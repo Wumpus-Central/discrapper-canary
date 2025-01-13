@@ -8,6 +8,9 @@ r.d(n, {
     ad: function () {
         return u;
     },
+    ld: function () {
+        return d;
+    },
     oH: function () {
         return l;
     }
@@ -38,4 +41,8 @@ function u(e) {
 }
 function c(e) {
     for (var n in e) e.hasOwnProperty(n) && delete e[n];
+}
+function d(e) {
+    for (let n in e) return !1;
+    return !0;
 }
