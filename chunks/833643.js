@@ -10,6 +10,5 @@ e.exports = {
     infoContainer: 'infoContainer_f2758d',
     appName: 'appName_f2758d',
     appCategory: 'appCategory_f2758d',
-    description: 'description_f2758d',
-    memberDetails: 'memberDetails_f2758d'
+    description: 'description_f2758d'
 };
