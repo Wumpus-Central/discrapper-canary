@@ -88,7 +88,7 @@ function E(e) {
     let n = e.some((e) => 'link' !== e.type || !1);
     return e.filter((e) => {
         let r = 'link' === e.type,
-            i = null != (0, o.el)(e.target);
+            i = null != (null != e.target ? (0, o.el)(e.target) : null);
         return !(r && i && !n);
     });
 }
