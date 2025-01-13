@@ -9,7 +9,7 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    s = n(666912),
+    s = n(208404),
     a = n(232713),
     u = n(442837),
     c = n(780384),
@@ -173,8 +173,8 @@ function Y(e) {
         [eX, eJ] = i.useState(null),
         [e$, e0] = i.useState(!1),
         [e1, e2] = i.useState(!1),
-        [e6, e4] = i.useState(null),
-        e9 = eQ ? (null !== (O = null === (n = ez.current) || void 0 === n ? void 0 : n.duration) && void 0 !== O ? O : 0) : Math.max(eF.maxTimestampSec, ef.progressSeconds),
+        [e4, e9] = i.useState(null),
+        e6 = eQ ? (null !== (O = null === (n = ez.current) || void 0 === n ? void 0 : n.duration) && void 0 !== O ? O : 0) : Math.max(eF.maxTimestampSec, ef.progressSeconds),
         e7 = i.useMemo(() => (B.has(ej) ? N.i.VIDEO_PLAYER_VIDEO : N.i.VIDEO_PLAYER_VIDEO_LOW_RES), [ej]),
         e8 = i.useMemo(() => (null != e7 ? (0, N.z)(e7, K) : null), [e7, K]),
         e3 = i.useCallback(
@@ -311,7 +311,7 @@ function Y(e) {
         },
         ts = () => {
             if (null == ez.current || !tT) return;
-            let e = Math.min(ez.current.currentTime + 10, e9);
+            let e = Math.min(ez.current.currentTime + 10, e6);
             ta(e),
                 ev !== R.rq.ENDED && e >= ez.current.duration && te(R.rq.ENDED),
                 et({
@@ -347,10 +347,10 @@ function Y(e) {
                 }
         },
         tc = (e) => {
-            e4(e);
+            e9(e);
         },
         td = (e) => {
-            e4((t) => ((null == t ? void 0 : t.id) === e.id ? null : t));
+            e9((t) => ((null == t ? void 0 : t.id) === e.id ? null : t));
         },
         tm = i.useCallback(() => {
             if (null == ez.current || 0 === ez.current.textTracks.length) return;
@@ -442,14 +442,14 @@ function Y(e) {
         var e, t;
         return (
             tg({
-                captionHeightSpring: ei && null != e6 && null !== (t = null === (e = tf.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
+                captionHeightSpring: ei && null != e4 && null !== (t = null === (e = tf.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
                 immediate: eG
             }),
             () => {
                 tS.stop();
             }
         );
-    }, [ei, tg, eG, e6, tS]),
+    }, [ei, tg, eG, e4, tS]),
         i.useEffect(
             () => (
                 tC({
@@ -677,7 +677,7 @@ function Y(e) {
                         ev
                     ),
                     ei &&
-                        null != e6 &&
+                        null != e4 &&
                         (0, r.jsx)(s.animated.div, {
                             className: w.captionContainer,
                             ref: tf,
@@ -696,7 +696,7 @@ function Y(e) {
                                 variant: 'text-lg/semibold',
                                 color: 'always-white',
                                 className: w.captionText,
-                                children: e6.text
+                                children: e4.text
                             })
                         }),
                     (0, r.jsxs)(s.animated.div, {
@@ -738,7 +738,7 @@ function Y(e) {
                                 backgroundColor: ti ? void 0 : 'rgba(0, 0, 0, 0.0)',
                                 preloadedBuffers: ti ? eI : void 0,
                                 duration: null !== (H = null === (D = ez.current) || void 0 === D ? void 0 : D.duration) && void 0 !== H ? H : 1,
-                                maxSeekableTime: ti && ey ? e9 : void 0,
+                                maxSeekableTime: ti && ey ? e6 : void 0,
                                 onClick: (e) => {
                                     ta(e), ev === R.rq.ENDED && te(R.rq.PLAYING);
                                 },

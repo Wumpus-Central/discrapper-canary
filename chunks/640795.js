@@ -48,14 +48,14 @@ async function E() {
                 if (null === o) throw Error('Blocked domain list is null');
                 m.verbose('Blocked domains list length: '.concat(o.size, ' before update')),
                     i.ADDED.forEach((e) => {
-                        if (o.has(e)) throw Error('Unable to add domain which is already in the blockedDomains set: '.concat(e));
-                        o.add(e);
+                        if (null != o[e]) throw Error('Unable to add domain which is already in the blockedDomains set: '.concat(e));
+                        o[e] = !0;
                     }),
                     i.REMOVED.forEach((e) => {
-                        if (!o.has(e)) throw Error('Unable to removed domain which is not in the blockedDomains set: '.concat(e));
-                        o.delete(e);
+                        if (null == o[e]) throw Error('Unable to removed domain which is not in the blockedDomains set: '.concat(e));
+                        o[e] = !1;
                     }),
-                    (e = Array.from(o)),
+                    (e = Object.keys(o).filter((e) => o[e])),
                     m.verbose('Delta applied successfully');
             } catch (n) {
                 if ((m.verbose('Unable to process domain list delta: '.concat(n.message)), (0, u.K)())) {

@@ -106,7 +106,7 @@ let W = (e) => {
             emojiListRef: r
         }),
         T = (0, p.O)(),
-        b = (0, y.kI)(o, u, null, d),
+        b = (0, y.kI)(o, u, null == u ? void 0 : u.guild_id, d),
         S = s.useRef(null),
         A = (0, f.e7)([I.Z], () => I.Z.isFocused()),
         R = (0, f.e7)([m.Z], () => m.Z.useReducedMotion, []),

@@ -12,7 +12,7 @@ var l,
     r = t(192379),
     a = t(512722),
     o = t.n(a),
-    u = t(666912),
+    u = t(208404),
     c = t(553813),
     d = t.n(c),
     m = t(442837),
@@ -208,14 +208,14 @@ function er(e) {
             [eS, eB, ep, eI, eK, eH, eV]
         ),
         [e9, e5] = r.useState(eA ? '' : void 0),
-        e6 = r.useCallback(
+        e8 = r.useCallback(
             (e) => {
                 (0, W.t)(), (0, W.T)(null != e ? e : e9);
             },
             [e9]
         );
-    function e8(e) {
-        if ((e.preventDefault(), 1 === eL)) return e6();
+    function e6(e) {
+        if ((e.preventDefault(), 1 === eL)) return e8();
         if (2 === eL) return eD(3);
         if (null != e9) return eD(1);
         let n = (0, q.Z)(ev, ey, R.ZP.getRunningGames());
@@ -434,7 +434,7 @@ function er(e) {
                         }),
                     children: () =>
                         (0, s.jsxs)('form', {
-                            onSubmit: e8,
+                            onSubmit: e6,
                             children: [ni, nu, nd]
                         })
                 })

@@ -146,20 +146,20 @@ let ep = l.memo((e) => {
         e9 = (0, P.o)(Z, eW),
         e4 = (0, j.lL)('CallTile', !0, eW, e9),
         e7 = (0, o.e7)([F.Z], () => (Z.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
-        e6 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
-        { enableHangStatus: e8 } = C.n.useExperiment({
+        e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
+        { enableHangStatus: e6 } = C.n.useExperiment({
             guildId: eI.guild_id,
             location: 'VoiceUsers'
         }),
         { showGameIcon: e5 } = E.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-        te = e5 || e8,
+        te = e5 || e6,
         { hangStatusActivity: tt, gameActivity: tn } = (0, o.cj)(
             [Y.Z],
             () => ({
-                hangStatusActivity: e8 && null != eB ? Y.Z.findActivity(eB, (e) => e.type === es.IIU.HANG_STATUS) : null,
+                hangStatusActivity: e6 && null != eB ? Y.Z.findActivity(eB, (e) => e.type === es.IIU.HANG_STATUS) : null,
                 gameActivity: te && null != eB ? Y.Z.findActivity(eB, (e) => null != e.application_id && e.type === es.IIU.PLAYING) : null
             }),
-            [e8, eB, te]
+            [e6, eB, te]
         ),
         ti = (0, o.e7)([z.Z], () => ((null == tn ? void 0 : tn.application_id) != null ? z.Z.getDetectableGame(tn.application_id) : null)),
         tl = (0, o.e7)([p.Z], () => (null != ti && (null == tn ? void 0 : tn.application_id) != null ? p.Z.getApplication(null == tn ? void 0 : tn.application_id) : void 0)),
@@ -374,7 +374,7 @@ let ep = l.memo((e) => {
                                               hasVideo: null != eK && eK,
                                               ...eQ,
                                               idle: eM,
-                                              platform: e6,
+                                              platform: e8,
                                               title: (0, $.Z)(eI, Z),
                                               blocked: eA,
                                               ignored: eN,
