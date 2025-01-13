@@ -158,6 +158,7 @@ function D(e, n) {
             (i = !0)),
         null != n.mention_everyone && ((r = r.set('mentionEveryone', n.mention_everyone)), (i = !0)),
         null != n.mention_roles && ((r = r.set('mentionRoles', n.mention_roles)), (i = !0)),
+        null != n.potions && (r = r.set('potions', n.potions)),
         i &&
             (r = r.set(
                 'mentioned',
