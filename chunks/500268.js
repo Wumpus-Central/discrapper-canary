@@ -1,16 +1,17 @@
 function r(e, n, r, i) {
     var a = [],
-        o = {};
-    return function l(u) {
-        (o[u] = !0),
-            a.push(u),
-            e[u].forEach(function (e) {
-                if (o[e]) {
-                    if (a.indexOf(e) >= 0 && (a.push(e), !i)) throw new s(a);
-                } else l(e);
-            }),
-            a.pop(),
-            (!n || 0 === e[u].length) && -1 === r.indexOf(u) && r.push(u);
+        o = {},
+        l = {},
+        u = {};
+    return function c(d) {
+        (o[d] = !0), a.push(d), (u[d] = !0);
+        for (let n = 0; n < e[d].length; n++) {
+            let r = e[d][n];
+            if (o[r]) {
+                if (u[r] && (a.push(r), !i)) throw new s(a);
+            } else c(r);
+        }
+        a.pop(), delete u[d], (!n || 0 === e[d].length) && !l[d] && (r.push(d), (l[d] = !0));
     };
 }
 var i,
