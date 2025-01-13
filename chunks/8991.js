@@ -48,7 +48,10 @@ function o() {
                 }),
                 (0, i.jsx)(r.l_, {
                     path: a.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
-                    to: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId')
+                    to: {
+                        pathname: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
+                        search: location.search
+                    }
                 }),
                 (0, i.jsx)(r.l_, {
                     path: a.Z5c.APPLICATION_DIRECTORY,
@@ -82,7 +85,10 @@ function c() {
                 }),
                 (0, i.jsx)(r.l_, {
                     path: a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
-                    to: a.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId')
+                    to: {
+                        pathname: a.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
+                        search: location.search
+                    }
                 }),
                 (0, i.jsx)(r.l_, {
                     path: a.Z5c.GLOBAL_DISCOVERY_APPS,
