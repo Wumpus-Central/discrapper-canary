@@ -10,17 +10,17 @@ var i = n(200651),
     o = n(905405),
     s = n(937889),
     c = n(267128),
-    u = n(123145),
-    d = n(699516),
+    d = n(123145),
+    u = n(699516),
     m = n(217702),
     h = n(507304);
 function f(e) {
     let { message: t, channel: n } = e,
         { isBlocked: f, isIgnored: p } = (0, l.cj)(
-            [d.Z],
+            [u.Z],
             () => ({
-                isBlocked: d.Z.isBlockedForMessage(t),
-                isIgnored: d.Z.isIgnoredForMessage(t)
+                isBlocked: u.Z.isBlockedForMessage(t),
+                isIgnored: u.Z.isIgnoredForMessage(t)
             }),
             [t]
         ),
@@ -45,7 +45,7 @@ function f(e) {
                 src: t.author.getAvatarURL(n.guild_id, 16),
                 className: h.threadMessageAccessoryAvatar
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(d.Z, {
                 message: t,
                 channel: n,
                 compact: !0

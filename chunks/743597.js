@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(392711),
-    a = n.n(l),
-    r = n(772848),
+    r = n.n(l),
+    a = n(772848),
     s = n(846519),
     o = n(125268),
     c = n(984063),
     u = n(813900);
-let d = a().debounce(o.BR, u.Fq, { maxWait: u.Fq });
+let d = r().debounce(o.BR, u.Fq, { maxWait: u.Fq });
 function m(e, t, n) {
-    let l = i.useRef((0, r.Z)()),
-        a = i.useRef(new s.Xp()),
+    let l = i.useRef((0, a.Z)()),
+        r = i.useRef(new s.Xp()),
         m = i.useCallback(
             (i) => {
                 (i.lastUpdatedAt = Date.now()), (0, o.gr)(i, e, n), (0, o.BR)(t, n, i);
@@ -23,7 +23,7 @@ function m(e, t, n) {
         ),
         f = i.useCallback(
             (i, s, d) => {
-                l.current = (0, r.Z)();
+                l.current = (0, a.Z)();
                 let f = {
                     ...i,
                     id: l.current,
@@ -33,34 +33,34 @@ function m(e, t, n) {
                     state: c.f.START,
                     lastUpdatedAt: Date.now()
                 };
-                (0, o.BR)(t, n, f), (0, o.gr)(f, e, n), a.current.start(u.FO, () => m(f));
+                (0, o.BR)(t, n, f), (0, o.gr)(f, e, n), r.current.start(u.FO, () => m(f));
             },
             [e, t, n, m]
         ),
         p = i.useCallback(
-            (i, r, s) => {
+            (i, a, s) => {
                 let f = {
                     ...i,
                     id: l.current,
-                    x: r,
+                    x: a,
                     y: s,
                     userId: e,
                     state: c.f.START,
                     lastUpdatedAt: Date.now()
                 };
-                d(t, n, f), (0, o.gr)(f, e, n), a.current.start(u.FO, () => m(f));
+                d(t, n, f), (0, o.gr)(f, e, n), r.current.start(u.FO, () => m(f));
             },
             [e, t, n, m]
         ),
-        g = i.useCallback(
-            (i, r, s) => {
+        h = i.useCallback(
+            (i, a, s) => {
                 d.cancel(),
                     (0, o.Df)(t, n, l.current),
                     (0, o.gr)(
                         {
                             ...i,
                             id: l.current,
-                            x: r,
+                            x: a,
                             y: s,
                             userId: e,
                             state: c.f.STOP,
@@ -69,18 +69,18 @@ function m(e, t, n) {
                         e,
                         n
                     ),
-                    a.current.stop();
+                    r.current.stop();
             },
             [t, n, e]
         ),
-        h = i.useCallback((e, t, n) => p(e, t, n), [p]);
+        g = i.useCallback((e, t, n) => p(e, t, n), [p]);
     return i.useMemo(
         () => ({
             handleMouseDown: f,
             handleMouseMove: p,
-            handleMouseUp: g,
-            handleMouseEnter: h
+            handleMouseUp: h,
+            handleMouseEnter: g
         }),
-        [f, h, p, g]
+        [f, g, p, h]
     );
 }

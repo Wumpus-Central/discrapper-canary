@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(818083),
     l = n(594174),
-    a = n(74538),
-    r = n(474936);
+    r = n(74538),
+    a = n(474936);
 let s = (0, i.B)({
     kind: 'user',
     id: '2024-08_hd_streaming_viewer',
@@ -30,7 +30,7 @@ let s = (0, i.B)({
     ]
 });
 function o(e, t) {
-    return (0, a.I5)(e, r.p9.TIER_2) || t;
+    return (0, r.I5)(e, a.p9.TIER_2) || t;
 }
 function c(e) {
     let t = l.default.getCurrentUser();

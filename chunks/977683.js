@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(192379),
@@ -10,21 +10,21 @@ var i = n(192379),
     o = n(275344),
     s = n(918088),
     c = n(562293);
-function u(e, t) {
+function d(e, t) {
     var n;
-    let u = (0, o.v)(e),
-        d = (0, a.cE)(u.getChannelId())[u.id],
-        m = (0, c.Z)(null === (n = u.poll) || void 0 === n ? void 0 : n.expiry),
+    let d = (0, o.v)(e),
+        u = (0, a.cE)(d.getChannelId())[d.id],
+        m = (0, c.Z)(null === (n = d.poll) || void 0 === n ? void 0 : n.expiry),
         h = l.Yk.useSetting(),
         f = (0, r.ZP)(),
         p = null != t ? t : f;
     return i.useMemo(
         () =>
-            (0, s.ZP)(u, d, {
+            (0, s.ZP)(d, u, {
                 animateEmoji: h,
                 theme: p,
                 formattedExpirationLabel: m
             }),
-        [h, u, d, m, p]
+        [h, d, u, m, p]
     );
 }

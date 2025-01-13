@@ -11,21 +11,21 @@ var i = n(904245),
     o = n(268350),
     s = n(926491),
     c = n(373228),
-    u = n(430824),
-    d = n(594174),
+    d = n(430824),
+    u = n(594174),
     m = n(176354),
     h = n(709054),
     f = n(981631),
     p = n(185923);
 function _(e) {
-    let t = u.Z.getGuild(e);
+    let t = d.Z.getGuild(e);
     return null != t && (t.nsfwLevel === f.V_K.DEFAULT || t.nsfwLevel === f.V_K.SAFE);
 }
 async function g(e, t) {
     var n, f, g;
     let E = t.getGuildId();
-    if (null == E || null == u.Z.getGuild(E)) return;
-    let C = d.default.getCurrentUser();
+    if (null == E || null == d.Z.getGuild(E)) return;
+    let C = u.default.getCurrentUser();
     if (null == C) return;
     await (0, o.$p)();
     let I = Array.from(s.Z.getAllStickersIterator()),
@@ -43,7 +43,7 @@ async function g(e, t) {
         });
         return;
     }
-    let N = u.Z.getGuildIds()
+    let N = d.Z.getGuildIds()
         .filter(_)
         .map((e) => r.ZP.getUsableGuildEmoji(e))
         .flat()

@@ -35,9 +35,9 @@ var i = n(200651),
     A = n(841409),
     P = n(652262),
     O = n(880257),
-    Z = n(631885),
-    B = n(830746),
-    M = n(731934),
+    M = n(631885),
+    Z = n(830746),
+    B = n(731934),
     y = n(521450),
     w = n(292352),
     k = n(981631),
@@ -46,17 +46,17 @@ var i = n(200651),
     D = n(388032),
     G = n(228351);
 let H = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.REQUESTS]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(Z.Z, {}),
         [w.dG.SETTINGS]: () => (0, i.jsx)(y.Z, {})
     },
     V = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
+        [w.dG.REQUESTS]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(Z.Z, {})
     };
 function F(e) {
     let { section: t, handleItemSelect: n } = e,
-        r = (0, Z.gU)(),
+        r = (0, M.gU)(),
         a = (0, O.Z)();
     return (0, i.jsxs)(u.TabBar, {
         className: G.settingsTabBar,
@@ -98,7 +98,7 @@ function F(e) {
 function W(e) {
     let { theme: t, section: n, handleItemSelect: r } = e,
         a = (0, x.Dt)(),
-        o = (0, Z.gU)();
+        o = (0, M.gU)();
     return (0, i.jsx)(u.ThemeProvider, {
         theme: t,
         children: (e) =>
@@ -152,7 +152,7 @@ function W(e) {
 }
 function z() {
     let e = (0, O.Z)(),
-        t = (0, Z.M8)(),
+        t = (0, M.M8)(),
         n = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([j.Z], () => j.Z.getIsInitialized()),
         l = (0, P.M)(),
@@ -170,19 +170,19 @@ function z() {
                     forceTrack: !0
                 });
     });
-    let B = {
+    let Z = {
             isConsideredAdult: e,
             numOfAcceptedRequests: t,
             selectedTab: g,
             selectedTeenId: l
         },
-        M = r.useRef(B);
+        B = r.useRef(Z);
     return (r.useEffect(() => {
-        M.current = B;
+        B.current = Z;
     }),
     r.useEffect(() => {
         if (a && T) {
-            let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = M.current;
+            let { isConsideredAdult: e, numOfAcceptedRequests: t, selectedTab: n, selectedTeenId: i } = B.current;
             S.default.track(k.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
@@ -221,12 +221,12 @@ function z() {
 function Y() {
     let { analyticsLocations: e } = (0, _.ZP)(p.Z.FAMILY_CENTER),
         t = (0, O.Z)(),
-        n = (0, Z.M8)(),
+        n = (0, M.M8)(),
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([j.Z], () => j.Z.getIsInitialized()),
         b = (0, P.M)(),
-        B = (0, c.e7)([T.Z], () => T.Z.theme),
-        { selectedTab: M, handleTabChange: y } = (0, A.Z)(),
+        Z = (0, c.e7)([T.Z], () => T.Z.theme),
+        { selectedTab: B, handleTabChange: y } = (0, A.Z)(),
         H = (0, x.Dt)(),
         F = I.default.getCurrentUser(),
         z = null != t,
@@ -244,7 +244,7 @@ function Y() {
     let K = {
             isConsideredAdult: t,
             numOfAcceptedRequests: n,
-            selectedTab: M,
+            selectedTab: B,
             selectedTeenId: b
         },
         Q = r.useRef(K);
@@ -272,7 +272,7 @@ function Y() {
             Y && (0, f.mN)(L.L0.FAMILY_CENTER);
         }, [Y]);
     if (Y) return null;
-    let q = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
+    let q = B !== w.dG.SETTINGS ? B : w.dG.ACTIVITY,
         J = V[q];
     return (0, i.jsx)(_.Gt, {
         value: e,
@@ -282,7 +282,7 @@ function Y() {
             children: [
                 (0, i.jsx)(h.yY, { location: D.intl.string(D.t.RZqaJi) }),
                 (0, i.jsx)(W, {
-                    theme: B,
+                    theme: Z,
                     section: q,
                     handleItemSelect: (e) => {
                         y(e);

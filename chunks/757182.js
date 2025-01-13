@@ -3,21 +3,21 @@ t.d(n, {
         return u;
     }
 });
-var l = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(655922),
+var l = t(655922),
     r = t(420660),
     o = t(915863),
     a = t(388032);
 function u(e) {
     let { activity: n, onAction: t, ButtonComponent: u = o.Z, ...s } = e;
     return (0, r.Z)(n)
-        ? (0, l.jsx)(
+        ? (0, i.jsx)(
               u,
               {
                   onClick: () => {
                       null == t || t();
-                      let e = (0, i.Z)(n);
+                      let e = (0, l.Z)(n);
                       return window.open(null != e ? e : void 0);
                   },
                   fullWidth: !0,

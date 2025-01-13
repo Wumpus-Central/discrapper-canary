@@ -94,7 +94,7 @@ let O = new P(
                   if (((l = I.b4C.OVERVIEW), null == i)) {
                       let e = g.Z.getChannel(),
                           t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && _.Z.can(I.Plq.MANAGE_WEBHOOKS, e) && (p.Z.fetchForChannel(t, e.id), (v = !0)), Z();
+                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (v = !0)), Z();
                   }
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {

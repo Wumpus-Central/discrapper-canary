@@ -11,14 +11,14 @@ var r = n(120356),
     o = n(481060),
     s = n(839963),
     c = n(139256),
-    u = n(388032),
-    d = n(590222);
+    d = n(388032),
+    u = n(590222);
 function m(e) {
     let { didSelfVote: t, label: n, percentage: r } = e;
     return (0, i.jsxs)('div', {
-        className: d.votesData,
+        className: u.votesData,
         children: [
-            t && (0, i.jsx)(a.T, { children: u.intl.string(u.t['8DAM+/']) }),
+            t && (0, i.jsx)(a.T, { children: d.intl.string(d.t['8DAM+/']) }),
             (0, i.jsxs)(o.Text, {
                 variant: 'text-md/semibold',
                 color: 'none',
@@ -36,21 +36,21 @@ function h(e) {
     let { answer: t, isExpired: n, myAvatarUrl: r, canShowVoteCounts: a } = e,
         o = !0 === t.isSelected,
         s = !0 === t.didSelfVote,
-        u = !0 === t.isVictor;
+        d = !0 === t.isVictor;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.$w, {
-                attachmentClassName: l()(d.attachment, { [d.attachmentWithResults]: a }),
-                emojiClassName: d.emoji,
+                attachmentClassName: l()(u.attachment, { [u.attachmentWithResults]: a }),
+                emojiClassName: u.emoji,
                 media: t.pollMedia,
-                fallback: (0, i.jsx)('div', { className: l()(d.attachment, d.mediaMissing) })
+                fallback: (0, i.jsx)('div', { className: l()(u.attachment, u.mediaMissing) })
             }),
             o &&
                 (0, i.jsx)(c.ZY, {
                     size: 40,
-                    isVictor: u,
+                    isVictor: d,
                     isExpired: n,
-                    className: d.selectedIcon
+                    className: u.selectedIcon
                 }),
             a &&
                 (0, i.jsxs)(i.Fragment, {
@@ -61,12 +61,12 @@ function h(e) {
                             label: t.votes,
                             myAvatarUrl: s ? r : void 0
                         }),
-                        ((!n && s) || u) &&
+                        ((!n && s) || d) &&
                             (0, i.jsx)(c.ZY, {
                                 size: 18,
-                                isVictor: u,
+                                isVictor: d,
                                 isExpired: n,
-                                className: d.pollAnswerIcon
+                                className: u.pollAnswerIcon
                             })
                     ]
                 })
@@ -76,8 +76,8 @@ function h(e) {
 function f(e) {
     let { isExpired: t, myAvatarUrl: n, answersInteraction: r, canShowVoteCounts: a, ...o } = e;
     return (0, i.jsx)(c.$e, {
-        className: d.answersContainer,
-        answerClassName: l()(d.answer, { [d.currentlyVoting]: r !== s.Y7.LIST }),
+        className: u.answersContainer,
+        answerClassName: l()(u.answer, { [u.currentlyVoting]: r !== s.Y7.LIST }),
         myAvatarUrl: n,
         answersInteraction: r,
         renderAnswerContent: (e) =>

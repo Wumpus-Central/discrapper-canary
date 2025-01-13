@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,9 +11,9 @@ var r = n(481060),
     o = n(942951),
     s = n(834129),
     c = n(388032),
-    u = n(506287);
-function d(e) {
-    let { message: t, channel: n, compact: d } = e,
+    d = n(506287);
+function u(e) {
+    let { message: t, channel: n, compact: u } = e,
         m = (0, a.ZP)(t),
         h = (0, o.l)({
             user: t.author,
@@ -31,7 +31,7 @@ function d(e) {
             (0, i.jsx)(
                 r.Text,
                 {
-                    className: u.applicationName,
+                    className: d.applicationName,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
                     children: f.name
@@ -46,8 +46,8 @@ function d(e) {
             color: r.tokens.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
-        compact: d,
-        contentClassName: u.systemMessage,
+        compact: u,
+        contentClassName: d.systemMessage,
         children: p
     });
 }

@@ -8,29 +8,29 @@ n.d(t, {
     n(298267);
 var i = n(200651),
     l = n(192379),
-    a = n(414910),
-    r = n(226961),
+    r = n(414910),
+    a = n(226961),
     s = n(284902);
 function o(e) {
     let { currentUserId: t, participant: n } = e,
-        o = (0, a.Z)(n.type),
+        o = (0, r.Z)(n.type),
         [c, u] = l.useState(),
         [d, m] = l.useState(),
         [f, p] = l.useState(),
-        g = n.id.split(':').at(-1),
-        h = t === g,
+        h = n.id.split(':').at(-1),
+        g = t === h,
         v = l.useCallback((e, t, n) => {
-            var i, l, a;
-            let s = n ? r.ZP.getOutboundStats(t) : r.ZP.getInboundStats(e, t);
-            u(null !== (i = null == s ? void 0 : s.codec) && void 0 !== i ? i : 'unknown'), m(void 0 === (l = null == s ? void 0 : s.resolution) || (0 === l.width && 0 === l.height) ? 'unknown' : l.width + ' x ' + l.height), p((null == s ? void 0 : s.bitrateEstimate) !== void 0 ? ((a = s.bitrateEstimate), ''.concat((a / 1000).toFixed(2), ' Kbps')) : 'unknown');
+            var i, l, r;
+            let s = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
+            u(null !== (i = null == s ? void 0 : s.codec) && void 0 !== i ? i : 'unknown'), m(void 0 === (l = null == s ? void 0 : s.resolution) || (0 === l.width && 0 === l.height) ? 'unknown' : l.width + ' x ' + l.height), p((null == s ? void 0 : s.bitrateEstimate) !== void 0 ? ((r = s.bitrateEstimate), ''.concat((r / 1000).toFixed(2), ' Kbps')) : 'unknown');
         }, []);
     return (
         l.useEffect(() => {
-            let e = () => v(g, o, h);
+            let e = () => v(h, o, g);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [h, g, o, v]),
+        }, [g, h, o, v]),
         (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
                 className: s.streamInfoContainer,
@@ -44,7 +44,7 @@ function o(e) {
                         className: s.infoRow,
                         children: [(0, i.jsx)('span', { children: 'Resolution: ' }), (0, i.jsx)('strong', { children: d })]
                     }),
-                    h &&
+                    g &&
                         (0, i.jsxs)('div', {
                             className: s.infoRow,
                             children: [(0, i.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, i.jsx)('strong', { children: f })]

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(524437),
     s = n(481060),
     c = n(100527),
-    u = n(906732),
-    d = n(602478),
+    d = n(906732),
+    u = n(602478),
     m = n(2818),
     h = n(768943),
     f = n(742989),
@@ -30,7 +30,7 @@ var i = n(200651),
     A = n(388032);
 function b(e) {
     let { onOpen: t, onClose: n, children: b, badgeState: j, popoutPosition: R, popoutAlign: Z } = e,
-        { analyticsLocations: P } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
+        { analyticsLocations: P } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [L, y] = r.useState(!1),
         [O, M] = (function () {
             let e = (0, a.e7)([_.Z], () => {
@@ -80,7 +80,7 @@ function b(e) {
     let { showReminders: w } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: F, inInbox: G } = m.Z.useExperiment({ location: 'RecentsPopout' }),
         V = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && F && G,
-        { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        { enabled: H } = u.Z.useExperiment({ location: 'RecentsPopout' });
     r.useEffect(() => {
         (((!w || (F && G)) && O === o.X.TODOS) || (O === o.X.BOOKMARKS && !(F || G))) && M(o.X.MENTIONS);
     });
@@ -90,7 +90,7 @@ function b(e) {
         },
         [B]
     );
-    return (0, i.jsx)(u.Gt, {
+    return (0, i.jsx)(d.Gt, {
         value: P,
         children: (0, i.jsx)(s.Popout, {
             animation: s.Popout.Animation.NONE,

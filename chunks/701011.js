@@ -52,7 +52,7 @@ function Z() {
     return (0, i.jsx)('div', {
         className: x.container,
         children:
-            null == e || null == I || null == n
+            null == e || null == I
                 ? (0, i.jsx)(o.Spinner, { className: x.iframe })
                 : (0, i.jsx)('div', {
                       className: x.loadedContentContainer,

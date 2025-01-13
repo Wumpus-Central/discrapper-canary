@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(442837),
     s = n(475179),
     c = n(100527),
-    u = n(906732),
-    d = n(174556),
+    d = n(906732),
+    u = n(174556),
     m = n(358221),
     h = n(185935),
     f = n(320007),
@@ -40,17 +40,17 @@ async function P() {
     }
 }
 function L(e) {
-    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: u, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: k, hideSearch: D, showDivider: B } = e,
+    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: d, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: k, hideSearch: D, showDivider: B } = e,
         U = null == r || (0, R.AB)(r) ? null : r,
         w = (0, o.e7)([x.Z], () => x.Z.isInChannel(U) || !1),
         F = (0, o.e7)([m.Z], () => null != U && m.Z.getParticipantsListOpen(U)),
-        { hasBugReporterAccess: G } = d.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
+        { hasBugReporterAccess: G } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: V, inInbox: H } = g.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: z } = (0, h.Z)({ location: 'HeaderBar' }),
         W = (0, p.Q3)('HeaderBar');
     return (0, i.jsx)(T.ZP, {
         className: n,
-        innerClassName: u,
+        innerClassName: d,
         toolbar: (function () {
             if (null == v) return null;
             let e = null != r && !D;
@@ -100,9 +100,9 @@ function y(e) {
 }
 function O(e) {
     let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: r } = (0, u.ZP)(c.Z.HEADER_BAR),
+        { analyticsLocations: r } = (0, d.ZP)(c.Z.HEADER_BAR),
         a = l()(n.className, { [Z.forumOrHome]: (null != n.channelType && j.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === R.oC.GUILD_HOME });
-    return (0, i.jsx)(u.Gt, {
+    return (0, i.jsx)(d.Gt, {
         value: r,
         children: t
             ? (0, i.jsx)(L, {

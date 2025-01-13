@@ -12,8 +12,8 @@ var i = n(200651),
     o = n(954955),
     s = n.n(o),
     c = n(507274),
-    u = n(481060),
-    d = n(255963),
+    d = n(481060),
+    u = n(255963),
     m = n(466794),
     h = n(659215),
     f = n(222677),
@@ -62,26 +62,26 @@ class R extends r.Component {
                 color: 'currentColor',
                 className: a()(T.icon, { [T.largeIcon]: R })
             };
-        return (0, i.jsx)(u.Popout, {
+        return (0, i.jsx)(d.Popout, {
             shouldShow: s,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: 'right',
             children: (e, t) => {
                 let { isShown: l } = t;
-                return (0, i.jsx)(u.TooltipContainer, {
+                return (0, i.jsx)(d.TooltipContainer, {
                     text: _,
-                    color: u.TooltipColors.PRIMARY,
+                    color: d.TooltipColors.PRIMARY,
                     'aria-label': h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
                     tooltipClassName: T.__invalid_addReactionTooltip,
-                    children: (0, i.jsxs)(u.Clickable, {
+                    children: (0, i.jsxs)(d.Clickable, {
                         ...e,
                         tabIndex: o,
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, d.x)(v.qR.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, d.x)(v.qR.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, u.x)(v.qR.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, u.x)(v.qR.AddReactionPopoutFocused),
                         className: a()(
                             T.reactionBtn,
                             {
@@ -90,7 +90,7 @@ class R extends r.Component {
                             },
                             n
                         ),
-                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.SuperReactionIcon, { ...Z }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(u.ReactionIcon, { ...Z }) }), r]
+                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...Z }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...Z }) }), r]
                     })
                 });
             }
@@ -147,7 +147,7 @@ class R extends r.Component {
                 return (0, i.jsx)(c.M.Consumer, {
                     children: (e) =>
                         e
-                            ? (0, i.jsx)(u.Dialog, {
+                            ? (0, i.jsx)(d.Dialog, {
                                   'aria-label': S.intl.string(S.t['7Xqzdn']),
                                   children: o
                               })

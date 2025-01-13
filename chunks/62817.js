@@ -1,6 +1,6 @@
 t(47120), t(177593);
-var l,
-    i,
+var i,
+    l,
     r,
     o,
     a = t(442837),
@@ -31,15 +31,15 @@ function x(e, n) {
               }
             : e
     );
-    let l = f[n.id];
-    null != l &&
-        null != v[l.id] &&
-        (v[l.id] = {
-            ...v[l.id],
+    let i = f[n.id];
+    null != i &&
+        null != v[i.id] &&
+        (v[i.id] = {
+            ...v[i.id],
             ...n
         });
 }
-class P extends (l = a.ZP.Store) {
+class P extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -58,14 +58,14 @@ class P extends (l = a.ZP.Store) {
     }
 }
 (o = 'UploadStore'),
-    (r = 'displayName') in (i = P)
-        ? Object.defineProperty(i, r, {
+    (r = 'displayName') in (l = P)
+        ? Object.defineProperty(l, r, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = o),
+        : (l[r] = o),
     (n.Z = new P(u.Z, {
         CONNECTION_OPEN: function () {
             m = {};
@@ -75,17 +75,17 @@ class P extends (l = a.ZP.Store) {
         },
         UPLOAD_START: function (e) {
             var n;
-            let { channelId: t, file: l, uploader: i, message: r } = e;
-            if (i._aborted || i._errored) return;
+            let { channelId: t, file: i, uploader: l, message: r } = e;
+            if (l._aborted || l._errored) return;
             let o = null !== (n = c[t]) && void 0 !== n ? n : d;
-            (p[l.id] = i), (c[t] = [...o, l]), (f[l.id] = r);
-            let { items: a } = l;
+            (p[i.id] = l), (c[t] = [...o, i]), (f[i.id] = r);
+            let { items: a } = i;
             null != a &&
                 (v[r.id] = {
-                    ...l,
+                    ...i,
                     items: a
                 }),
-                h(r.nonce, l);
+                h(r.nonce, i);
         },
         UPLOAD_COMPRESSION_PROGRESS: function (e) {
             let { channelId: n, file: t } = e;
@@ -114,14 +114,14 @@ class P extends (l = a.ZP.Store) {
         },
         UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
             let { file: n, itemId: t } = e,
-                l = p[n.id];
-            if (null == l) return !1;
-            setImmediate(() => l.cancelItem(t));
+                i = p[n.id];
+            if (null == i) return !1;
+            setImmediate(() => i.cancelItem(t));
         },
         UPLOAD_FILE_UPDATE: function (e) {
             let { channelId: n, file: t } = e,
-                l = f[t.id];
-            null != l && h(l.nonce, t), x(n, t);
+                i = f[t.id];
+            null != i && h(i.nonce, t), x(n, t);
         },
         UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
             let { file: n, messageId: t } = e;

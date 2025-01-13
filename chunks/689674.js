@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(192379),
@@ -10,25 +10,25 @@ var i = n(192379),
     o = n(430824),
     s = n(63205),
     c = n(529726),
-    u = n(981631);
-function d(e) {
+    d = n(981631);
+function u(e) {
     var t, n;
-    let { message: d, channel: m, enabled: h = !0 } = e,
+    let { message: u, channel: m, enabled: h = !0 } = e,
         f = (0, l.e7)(
             [o.Z],
             () => {
                 var e;
                 let t = o.Z.getGuild(m.guild_id);
-                return null !== (e = null == t ? void 0 : t.hasFeature(u.oNc.COMMUNITY)) && void 0 !== e && e;
+                return null !== (e = null == t ? void 0 : t.hasFeature(d.oNc.COMMUNITY)) && void 0 !== e && e;
             },
             [m.guild_id]
         ),
-        p = (null === (t = d.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != m.guild_id,
+        p = (null === (t = u.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != u.webhookId && u.hasFlag(d.iLy.IS_CROSSPOST) && null != m.guild_id,
         _ = m.type === r.d.GUILD_ANNOUNCEMENT && f,
-        g = !d.hasFlag(u.iLy.EPHEMERAL) && (p || _),
-        E = p && null != d.messageReference ? d.messageReference.message_id : d.id,
-        C = p && null != d.messageReference ? d.messageReference.channel_id : m.id,
-        I = p && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : m.guild_id,
+        g = !u.hasFlag(d.iLy.EPHEMERAL) && (p || _),
+        E = p && null != u.messageReference ? u.messageReference.message_id : u.id,
+        C = p && null != u.messageReference ? u.messageReference.channel_id : m.id,
+        I = p && (null === (n = u.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? u.messageReference.guild_id : m.guild_id,
         x = i.useCallback(
             (e) => {
                 e

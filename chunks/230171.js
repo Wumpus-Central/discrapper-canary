@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(481060),
     s = n(100527),
     c = n(906732),
-    u = n(783097),
-    d = n(606192),
+    d = n(783097),
+    u = n(606192),
     m = n(213459),
     h = n(812236),
     f = n(132871),
@@ -49,7 +49,7 @@ function j(e) {
         w = (0, m.LD)(B, !1),
         F = (0, v.TK)(n.id, U),
         G = (0, v.TK)(n.id, w),
-        V = (0, u.ye)(n),
+        V = (0, d.ye)(n),
         H = r.useMemo(() => {
             var e;
             let t = null === (e = n.description) || void 0 === e ? void 0 : e.trim();
@@ -92,7 +92,7 @@ function j(e) {
         J = y || q,
         $ = r.useCallback(() => {
             if (q) {
-                (0, u.X)(n.id);
+                (0, d.X)(n.id);
                 return;
             }
             (0, p.goToAppDirectory)({
@@ -122,7 +122,7 @@ function j(e) {
                     e.push({
                         label: A.intl.string(A.t.RscU7O),
                         onClick() {
-                            (0, d.W)({
+                            (0, u.W)({
                                 appId: n.id,
                                 botId: O,
                                 analyticsLocations: X,

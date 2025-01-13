@@ -31,9 +31,9 @@ t.Z = (e) => {
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
         { analyticsLocations: P } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [O, Z] = r.useState(!1),
-        B = (0, f.ZP)('perks-discoverability'),
-        M = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        [O, M] = r.useState(!1),
+        Z = (0, f.ZP)('perks-discoverability'),
+        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         y = (0, b.mN)(),
         { fractionalState: w } = (0, m.Z)();
     return (
@@ -41,7 +41,7 @@ t.Z = (e) => {
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: s()(T.allPerksScroller, {
                 [T.open]: a,
-                [T.openCloseReduceMotion]: M
+                [T.openCloseReduceMotion]: B
             }),
             ref: j,
             children: (0, i.jsx)('div', {
@@ -74,7 +74,7 @@ t.Z = (e) => {
                                     cards: (0, b.sP)({
                                         perksCards: A,
                                         variant: E.R0.CARD_CAROUSEL_FIRST_ROW,
-                                        shopMarketingVariation: B,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: y,
                                         isFullScreen: R,
                                         fractionalState: w
@@ -92,7 +92,7 @@ t.Z = (e) => {
                                     cards: (0, b.sP)({
                                         perksCards: A,
                                         variant: E.R0.CARD_CAROUSEL_SECOND_ROW,
-                                        shopMarketingVariation: B,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: y,
                                         isFullScreen: R,
                                         fractionalState: w
@@ -110,7 +110,7 @@ t.Z = (e) => {
                                     cards: (0, b.sP)({
                                         perksCards: A,
                                         variant: E.R0.CARD_CAROUSEL_THIRD_ROW,
-                                        shopMarketingVariation: B,
+                                        shopMarketingVariation: Z,
                                         isPremiumSubscriber: y,
                                         isFullScreen: R,
                                         fractionalState: w
@@ -122,7 +122,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', { className: T.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !O && (p.default.track(C.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), Z(!0));
+                                e && !O && (p.default.track(C.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), M(!0));
                             },
                             children: (0, i.jsx)('div', { className: T.bottomOfPageVisibilitySensor })
                         }),

@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(91192),
-    u = n(722770),
-    d = n(442837),
+    d = n(722770),
+    u = n(442837),
     m = n(481060),
     h = n(287734),
     f = n(607070),
@@ -48,14 +48,14 @@ function V(e, t) {
         { usernameProfile: a, avatarProfile: o } = n,
         s = (0, y.wq)(e.author.id, t.id),
         c = (0, y.RN)(e.author.id, t.id, e.id),
-        u = (0, y.XO)(e, t, a, l),
-        d = (0, y.R9)(o, l);
+        d = (0, y.XO)(e, t, a, l),
+        u = (0, y.R9)(o, l);
     return {
         selected: i,
         onContextMenu: s,
         onContextMenuModerateUser: c,
-        onClickUsername: u,
-        onClickAvatar: d,
+        onClickUsername: d,
+        onClickAvatar: u,
         onPopoutRequestClose: r.useCallback(
             () =>
                 l({
@@ -126,7 +126,7 @@ function K(e, t) {
 }
 function Y(e) {
     let { alertAction: t, guildId: n } = e,
-        r = (0, d.e7)([T.default], () => T.default.getUser(t.actor), [t.actor]);
+        r = (0, u.e7)([T.default], () => T.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
         if (null == r) return K(e, {});
@@ -189,12 +189,12 @@ let Q = r.memo(function (e) {
         { message: n, channel: r, embedChannel: l, compact: a, interactionUserId: o } = e,
         s = V(n, r),
         c = H(r, n.author),
-        u = (0, j.ZP)(n),
-        d = (0, P.CF)(
+        d = (0, j.ZP)(n),
+        u = (0, P.CF)(
             {
                 message: n,
                 channel: r,
-                author: u,
+                author: d,
                 guildId: null == r ? void 0 : r.guild_id,
                 compact: a,
                 ...s
@@ -236,7 +236,7 @@ let Q = r.memo(function (e) {
                         openChatWithoutConnecting: !0
                     })
                 }),
-            () => d,
+            () => u,
             t
         )
     });
@@ -250,15 +250,15 @@ function q(e) {
         } = (0, M.m)(!0),
         { onFocus: A, ...j } = (0, c.JA)(null != n ? n : ''),
         { isFocused: R, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
-        D = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        H = (0, d.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
+        D = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        H = (0, u.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, g.ZP)(o),
         eo = r.useMemo(() => (0, b.k$)(ee, J, s.id), [ee, J, s]),
         { selected: es, ...ec } = V(o, s),
-        eu = r.useCallback(() => {
+        ed = r.useCallback(() => {
             (0, E._s)(o.id, ee, q, s);
         }, [o.id, ee, q, s]),
-        ed = r.useCallback(
+        eu = r.useCallback(
             (e) => {
                 if (null != et && null != Y) e.stopPropagation(), e.preventDefault(), (0, I.Z)(B.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et));
             },
@@ -408,7 +408,7 @@ function q(e) {
                             zalgo: !0,
                             onFocus: L,
                             onBlur: O,
-                            onClick: ed
+                            onClick: eu
                         })
                     }),
                     (0, i.jsx)(z, {
@@ -430,7 +430,7 @@ function q(e) {
                                         children: [
                                             (0, i.jsx)(m.ShieldIcon, {
                                                 size: 'xs',
-                                                color: u.Z.BLUE_345,
+                                                color: d.Z.BLUE_345,
                                                 className: G.footerIcon
                                             }),
                                             (0, i.jsx)(m.Text, {
@@ -465,7 +465,7 @@ function q(e) {
                                     : null,
                                 (0, i.jsx)('div', { className: G.dot }),
                                 (0, i.jsx)(m.Button, {
-                                    onClick: eu,
+                                    onClick: ed,
                                     color: m.Button.Colors.LINK,
                                     look: m.Button.Looks.LINK,
                                     size: m.Button.Sizes.SMALL,

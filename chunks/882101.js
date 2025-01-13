@@ -18,14 +18,14 @@ var r = n(481060),
     o = n(817460),
     s = n(290348),
     c = n(367719),
-    u = n(388032),
-    d = n(987345);
+    d = n(388032),
+    u = n(987345);
 let m = (e) => {
     let { listingName: t } = e;
     return (0, i.jsx)(r.Heading, {
         variant: 'text-md/normal',
         color: 'interactive-active',
-        className: d.tierName,
+        className: u.tierName,
         children: t
     });
 };
@@ -36,7 +36,7 @@ function h(e) {
         : (0, i.jsx)('img', {
               src: t,
               alt: '',
-              className: d.tierImage
+              className: u.tierImage
           });
 }
 let f = (e) => {
@@ -51,20 +51,20 @@ let f = (e) => {
             (0, i.jsx)(h, { image: _ }),
             !n &&
                 (0, i.jsx)('div', {
-                    className: d.draftBadgeContainer,
+                    className: u.draftBadgeContainer,
                     children: (0, i.jsx)(l.v, {})
                 }),
             (0, i.jsx)(r.Text, {
                 variant: 'heading-xl/semibold',
-                className: d.tierPrice,
+                className: u.tierPrice,
                 tag: 'div',
                 children: (0, a.T4)(g.price, g.currency)
             }),
             (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 color: 'interactive-normal',
-                className: d.tierPeriod,
-                children: u.intl.format(u.t.isLGyc, {
+                className: u.tierPeriod,
+                children: d.intl.format(d.t.isLGyc, {
                     period: (0, o.JE)({
                         interval: g.interval,
                         interval_count: g.interval_count

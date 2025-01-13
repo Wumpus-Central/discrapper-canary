@@ -15,8 +15,8 @@ var i = n(200651),
     o = n(241159),
     s = n(558381),
     c = n(812206),
-    u = n(926061),
-    d = n(307643),
+    d = n(926061),
+    u = n(307643),
     m = n(171246),
     h = n(263519),
     f = n(592125),
@@ -51,9 +51,9 @@ let P = O(function (e) {
                 [t, s.channel_id]
             );
         r.useEffect(() => {
-            I === _.N.NONE && (0, o.k)(t), null == h && !p && !g && (0, d.UM)(t);
+            I === _.N.NONE && (0, o.k)(t), null == h && !p && !g && (0, u.UM)(t);
         }, [h, t, g, p, I]);
-        let P = (0, u.YP)({ location: 'AppStorefrontMessageEmbed' }),
+        let P = (0, d.YP)({ location: 'AppStorefrontMessageEmbed' }),
             L = E.subscriptions.length,
             O = E.otps.length,
             M = r.useMemo(
@@ -117,7 +117,7 @@ let P = O(function (e) {
     }),
     L = O(function (e) {
         var t, o;
-        let { appId: d, skuId: _, message: I } = e,
+        let { appId: u, skuId: _, message: I } = e,
             [v, P, L, O, M, k, D, B] = (0, l.Wu)(
                 [g.Z, E.Z, p.Z, f.Z, c.Z],
                 () => {
@@ -127,11 +127,11 @@ let P = O(function (e) {
                         a = null !== (n = null == l ? void 0 : null === (t = l.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == l ? void 0 : l.applicationId,
                         o = null !== (i = null != a ? c.Z.getApplication(a) : void 0) && void 0 !== i ? i : null == l ? void 0 : l.application,
                         s = null != o ? (0, x.y)(o, 45) : void 0,
-                        u = p.Z.getForSKU(_),
-                        m = (null == l ? void 0 : l.applicationId) === d;
-                    return [m ? l : null, m ? o : null, E.Z.getForSKU(_), g.Z.isFetching(_), g.Z.didFetchingSkuFail(_), u.length > 0 ? u[0] : null, r, s];
+                        d = p.Z.getForSKU(_),
+                        m = (null == l ? void 0 : l.applicationId) === u;
+                    return [m ? l : null, m ? o : null, E.Z.getForSKU(_), g.Z.isFetching(_), g.Z.didFetchingSkuFail(_), d.length > 0 ? d[0] : null, r, s];
                 },
-                [d, I.channel_id, _]
+                [u, I.channel_id, _]
             ),
             U = (0, T.R)(null !== (o = null == P ? void 0 : P.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
@@ -145,7 +145,7 @@ let P = O(function (e) {
                 skuId: _,
                 initialSubscribeForGuild: D
             }),
-            V = (0, u.YP)({ location: 'AppStorefrontSKUMessageEmbed' });
+            V = (0, d.YP)({ location: 'AppStorefrontSKUMessageEmbed' });
         if (!U || null == P || null == v) return null;
         let H = v.type === A.epS.SUBSCRIPTION,
             z = !!H && (0, m.KW)(v.flags),
@@ -297,7 +297,7 @@ let P = O(function (e) {
         });
     });
 function y(e) {
-    let { appName: t, title: n, description: r, link: l, iconSrc: o, onIconClick: s, onLinkCopy: c, children: u } = e;
+    let { appName: t, title: n, description: r, link: l, iconSrc: o, onIconClick: s, onLinkCopy: c, children: d } = e;
     return (0, i.jsxs)('div', {
         className: Z.wrapper,
         children: [
@@ -365,7 +365,7 @@ function y(e) {
                             })
                         ]
                     }),
-                    u
+                    d
                 ]
             })
         ]

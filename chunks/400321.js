@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 }),
     n(653041);
 var i = n(88315),
     l = n(199766),
-    a = n(813900);
-function r(e) {
-    let { line: t, context: n, canvasWidth: r, canvasHeight: s, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: m } = e;
+    r = n(813900);
+function a(e) {
+    let { line: t, context: n, canvasWidth: a, canvasHeight: s, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: m } = e;
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
-    let f = t.points.map((e) => (0, i.RR)(e, r, s)),
+    let f = t.points.map((e) => (0, i.RR)(e, a, s)),
         p = d.current[t.id],
-        g = (e) => p + e.deltaTime,
-        h = (e) => g(e) + 1500 >= Date.now(),
-        v = (e) => g(e) <= Date.now() && h(e),
+        h = (e) => p + e.deltaTime,
+        g = (e) => h(e) + 1500 >= Date.now(),
+        v = (e) => h(e) <= Date.now() && g(e),
         S = f.find(v);
     if (null == S) {
-        !h(t.points[t.points.length - 1]) && m.push(t);
+        !g(t.points[t.points.length - 1]) && m.push(t);
         return;
     }
     let I = (e, t) => {
@@ -30,7 +30,7 @@ function r(e) {
             return n.stroke(), i;
         },
         { fillColor: _, outlineColor: x } = (0, i.bg)(t.userId, c, u, o),
-        E = I(x, 6 + a.q2),
+        E = I(x, 6 + r.q2),
         C = null != E && v(E);
-    C && (0, l.I)(n, E.x, E.y, x, a.q2), I(_, 6), C && (0, l.T)(n, E.x, E.y, t.userId);
+    C && (0, l.I)(n, E.x, E.y, x, r.q2), I(_, 6), C && (0, l.T)(n, E.x, E.y, t.userId);
 }

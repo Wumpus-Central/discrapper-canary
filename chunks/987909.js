@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(904245),
     s = n(541716),
     c = n(419922),
-    u = n(665906),
-    d = n(271383),
+    d = n(665906),
+    u = n(271383),
     m = n(496675),
     h = n(594174),
     f = n(626135),
@@ -26,18 +26,9 @@ function C(e) {
     return t[r];
 }
 function I(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: m, eventProperties: h } = e,
+    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: u, event: m, eventProperties: h } = e,
         [p, g] = r.useState(!1),
         I = r.useMemo(
-            () =>
-                C({
-                    assets: d,
-                    currentUser: t,
-                    message: l
-                }),
-            [d, t, l]
-        ),
-        x = r.useMemo(
             () =>
                 C({
                     assets: u,
@@ -45,6 +36,15 @@ function I(e) {
                     message: l
                 }),
             [u, t, l]
+        ),
+        x = r.useMemo(
+            () =>
+                C({
+                    assets: d,
+                    currentUser: t,
+                    message: l
+                }),
+            [d, t, l]
         ),
         N = r.useCallback(async () => {
             let { valid: e } = await (0, _.v)({
@@ -106,13 +106,13 @@ function x(e) {
         c = h.default.getCurrentUser(),
         f = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, l.e7)([m.Z, d.ZP], () => {
+            return (0, l.e7)([m.Z, u.ZP], () => {
                 var e;
                 let r = t.guild_id;
                 if (null == i || null == r) return !1;
-                let l = (0, u.xl)(t),
+                let l = (0, d.xl)(t),
                     a = m.Z.can(g.Plq.SEND_MESSAGES, t),
-                    o = null === (e = d.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
+                    o = null === (e = u.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
                     s = n.author.bot;
                 return a && !l && !o && !s;
             });

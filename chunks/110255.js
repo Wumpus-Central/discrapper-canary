@@ -11,8 +11,8 @@ var r = n(442837),
     o = n(218035),
     s = n(775666),
     c = n(858822),
-    u = n(423589),
-    d = n(131704),
+    d = n(423589),
+    u = n(131704),
     m = n(430824);
 function h(e) {
     let { channel: t, closePopout: n, onSelect: h, navId: f, label: p, location: _, includeGuildMute: g } = e,
@@ -20,7 +20,7 @@ function h(e) {
         C = (0, s.EQ)(t),
         I = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
         x = (0, c.Z)(I),
-        N = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
+        N = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
     return (0, i.jsxs)(l.Menu, {
         navId: f,
         onClose: n,

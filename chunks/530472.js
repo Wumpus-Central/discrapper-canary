@@ -13,9 +13,9 @@ var r = n(481060),
 function c(e) {
     var t;
     let n,
-        { message: c, onDeleteMessage: u, children: d } = e,
+        { message: c, onDeleteMessage: d, children: u } = e,
         m = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        h = () => u(c, !0);
+        h = () => d(c, !0);
     if (null != m) {
         let e = (0, l.i)(m);
         n = (0, i.jsx)('div', {
@@ -44,7 +44,7 @@ function c(e) {
                 className: s.icon
             }),
             n,
-            d
+            u
         ]
     });
 }

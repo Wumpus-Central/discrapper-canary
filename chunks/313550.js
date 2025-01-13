@@ -13,12 +13,12 @@ var i = n(192379),
 function s(e) {
     let { includeFlairAsBenefit: t, listing: n, guildId: s } = e,
         c = 0,
-        u = 0;
-    for (let e of n.role_benefits.benefits) (0, l.rC)(e) ? (c += 1) : (0, l.lL)(e) && (u += 1);
-    let d = n.role_id,
-        m = (0, a.Z)(s).filter((e) => e.roles.includes(d)).length;
+        d = 0;
+    for (let e of n.role_benefits.benefits) (0, l.rC)(e) ? (c += 1) : (0, l.lL)(e) && (d += 1);
+    let u = n.role_id,
+        m = (0, a.Z)(s).filter((e) => e.roles.includes(u)).length;
     return i.useMemo(() => {
         let e = [];
-        return !0 === t && e.push(o.intl.string(o.t.EhdV29)), 0 !== c && e.push(o.intl.formatToPlainString(o.t['p/l+BA'], { channelCount: c })), 0 !== u && e.push(o.intl.formatToPlainString(o.t.eXP5vr, { benefitCount: u })), 0 !== m && e.push(o.intl.formatToPlainString(o.t.YjmQwc, { emojiCount: m })), new r.Z(e);
-    }, [c, u, m, t]);
+        return !0 === t && e.push(o.intl.string(o.t.EhdV29)), 0 !== c && e.push(o.intl.formatToPlainString(o.t['p/l+BA'], { channelCount: c })), 0 !== d && e.push(o.intl.formatToPlainString(o.t.eXP5vr, { benefitCount: d })), 0 !== m && e.push(o.intl.formatToPlainString(o.t.YjmQwc, { emojiCount: m })), new r.Z(e);
+    }, [c, d, m, t]);
 }

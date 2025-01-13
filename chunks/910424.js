@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(572691),
+    r = n(481060),
+    a = n(572691),
     s = n(287734),
     o = n(872810),
     c = n(40851),
@@ -17,8 +17,8 @@ var l = n(442837),
     m = n(592125),
     f = n(585483),
     p = n(915863),
-    g = n(981631),
-    h = n(388032),
+    h = n(981631),
+    g = n(388032),
     v = n(951908);
 function S(e) {
     let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: _ } = e,
@@ -34,13 +34,13 @@ function S(e) {
         C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
         [Z, y] = (0, u.wq)(C),
         b = (0, c.Aq)(),
-        T = null != x && null != I && x.state !== g.jm8.ENDED && x.ownerId === I.ownerId,
+        T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
         A = (e) => {
-            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(g.CkL.POPOUT_CLOSE), f.S.dispatch(g.CkL.MODAL_CLOSE), r.Z.popAll();
+            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), a.Z.popAll();
         };
     if (null == I) return null;
     let N = (0, u.P9)(y);
-    t ? (N = h.intl.string(h.t.XvBdeX)) : T && (N = h.intl.string(h.t.JH1SJy));
+    t ? (N = g.intl.string(g.t.XvBdeX)) : T && (N = g.intl.string(g.t.JH1SJy));
     let w = {
         color: n,
         look: S
@@ -55,7 +55,7 @@ function S(e) {
                     ...w,
                     fullWidth: !0,
                     children: [
-                        (0, i.jsx)(a.ScreenArrowIcon, {
+                        (0, i.jsx)(r.ScreenArrowIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: v.streamIcon
@@ -66,8 +66,8 @@ function S(e) {
                 'play'
             ),
             E && !T
-                ? (0, i.jsx)(a.Tooltip, {
-                      text: h.intl.string(h.t.wCrzur),
+                ? (0, i.jsx)(r.Tooltip, {
+                      text: g.intl.string(g.t.wCrzur),
                       children: (e) =>
                           (0, i.jsx)(p.Z, {
                               ...e,
@@ -78,7 +78,7 @@ function S(e) {
                               ...w,
                               className: v.iconButton,
                               size: v.iconButtonSize,
-                              children: (0, i.jsx)(a.EyePlusIcon, {
+                              children: (0, i.jsx)(r.EyePlusIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: v.iconSize

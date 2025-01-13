@@ -28,12 +28,12 @@ t.Z = (e) => {
         A = (0, f.N)(),
         P = (0, g.Nx)(),
         O = (0, u.rO)(),
-        Z = r.useRef(null),
-        [B, M] = r.useState(!1);
+        M = r.useRef(null),
+        [Z, B] = r.useState(!1);
     return (
         r.useEffect(() => {
-            T && !I && !B && null != Z.current && Z.current.play();
-        }, [T, I, B]),
+            T && !I && !Z && null != M.current && M.current.play();
+        }, [T, I, Z]),
         (0, i.jsx)(c.Gt, {
             value: S,
             children: (0, i.jsxs)('div', {
@@ -60,9 +60,9 @@ t.Z = (e) => {
                             poster: C.Z,
                             className: s()(E.footerArt),
                             onEnded: () => {
-                                M(!0);
+                                B(!0);
                             },
-                            ref: Z,
+                            ref: M,
                             children: (0, i.jsx)('source', {
                                 src: O ? b.Z : v.Z,
                                 type: O ? h.m.MP4 : h.m.WEBM

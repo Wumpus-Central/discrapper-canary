@@ -54,10 +54,10 @@ t.Z = (e) => {
         A = (0, d.ZP)('perks-discoverability'),
         P = b === p.R0.WHATS_NEW,
         O = (0, u.IY)(),
-        Z = (0, f.x$)();
+        M = (0, f.x$)();
     r.useEffect(() => {
-        P && !j && (O(), Z());
-    }, [O, Z, P, j]),
+        P && !j && (O(), M());
+    }, [O, M, P, j]),
         r.useEffect(() => {
             let e = S.current;
             if (null == e || !j || !P) return;
@@ -68,12 +68,12 @@ t.Z = (e) => {
                 cancelAnimationFrame(t), P && O();
             };
         }, [S, j, P, O]);
-    let B = (0, _.Op)(P),
-        M = (0, m.Z)(),
+    let Z = (0, _.Op)(P),
+        B = (0, m.Z)(),
         y = (0, _.mN)(),
         { fractionalState: w } = (0, c.Z)(),
         k = (0, _.sP)({
-            perksCards: M,
+            perksCards: B,
             variant: b,
             shopMarketingVariation: A,
             isFullScreen: I,
@@ -86,7 +86,7 @@ t.Z = (e) => {
         G = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            ((null == M ? void 0 : null === (t = M.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == M ? void 0 : null === (n = M.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
+            ((null == B ? void 0 : null === (t = B.freeBoost) || void 0 === t ? void 0 : t.name) === m.u.FREE_BOOST || (null == B ? void 0 : null === (n = B.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === m.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: D,
                     className: x.confettiCanvas,
@@ -106,7 +106,7 @@ t.Z = (e) => {
                     (0, i.jsx)(E, {
                         showAllPerksButton: T,
                         leftAlignHeaders: v,
-                        title: B.title,
+                        title: Z.title,
                         headerClassname: N
                     }),
                     (0, i.jsx)(o.Text, {
@@ -120,7 +120,7 @@ t.Z = (e) => {
                             [x.leftAlignSubtitle]: v,
                             [x.centerAlignSubtitle]: !v
                         }),
-                        children: B.subtitle
+                        children: Z.subtitle
                     }),
                     !v &&
                         null != T &&

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,17 +11,17 @@ var r = n(120356),
     o = n(492593),
     s = n(930282),
     c = n(464891),
-    u = n(987998);
-function d(e) {
-    let { message: t, channel: n, content: r, className: d, compact: m, popoutProps: h, hideTimestamp: f = !1, withFooter: p = !1, ..._ } = e,
+    d = n(987998);
+function u(e) {
+    let { message: t, channel: n, content: r, className: u, compact: m, popoutProps: h, hideTimestamp: f = !1, withFooter: p = !1, ..._ } = e,
         g = (0, a.ZP)(t);
     return (0, i.jsx)('div', {
-        className: l()({ [u.withFooter]: p }, u.embedCard, { [u.compact]: m }, d),
+        className: l()({ [d.withFooter]: p }, d.embedCard, { [d.compact]: m }, u),
         children: (0, i.jsx)(o.Z, {
             ..._,
-            className: l()(u.messageContainer, { [u.compact]: m }),
+            className: l()(d.messageContainer, { [d.compact]: m }),
             childrenMessageContent: (0, i.jsx)(s.ZP, {
-                className: l()(u.__invalid_messageContent, { [u.compact]: m }),
+                className: l()(d.__invalid_messageContent, { [d.compact]: m }),
                 message: t,
                 content: r
             }),
@@ -32,7 +32,7 @@ function d(e) {
                 guildId: null == n ? void 0 : n.guild_id,
                 compact: m,
                 hideTimestamp: f,
-                className: l()(u.header, { [u.compact]: m }),
+                className: l()(d.header, { [d.compact]: m }),
                 ...(null != h ? h : {})
             }),
             compact: m

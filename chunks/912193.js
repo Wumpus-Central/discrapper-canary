@@ -1,6 +1,6 @@
 n.d(t, {
     b: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -13,16 +13,16 @@ let s = null;
 function c() {
     null !== s && (0, r.closeModal)(s), (s = null);
 }
-function u() {
+function d() {
     l.Z.setSilenceWarning(!1), c();
 }
-function d() {
+function u() {
     s = (0, r.openModal)((e) =>
         (0, i.jsx)(a.default, {
             title: o.intl.string(o.t['zQ1+Jy']),
             body: o.intl.string(o.t.K1gWXl),
             secondaryConfirmText: o.intl.string(o.t.XAiAgI),
-            onConfirmSecondary: u,
+            onConfirmSecondary: d,
             onConfirm: c,
             confirmText: o.intl.string(o.t.BddRzc),
             ...e

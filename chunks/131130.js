@@ -11,17 +11,17 @@ var r = n(704215),
     o = n(963249),
     s = n(286961),
     c = n(644916),
-    u = n(243778),
-    d = n(921944),
+    d = n(243778),
+    u = n(921944),
     m = n(230278);
 let h = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
         f = (0, s.Z)();
-    return (0, i.jsx)(u.Xf, {
+    return (0, i.jsx)(d.Xf, {
         contentType: t,
         latestVersion: (0, c.t)(t),
-        groupName: d.R.NOTICE_BAR,
+        groupName: u.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: a } = e;
@@ -31,7 +31,7 @@ let h = (e) => {
                     color: l.NoticeColors.PREMIUM_TIER_2,
                     children: [
                         (0, i.jsx)(l.NoticeCloseButton, {
-                            onClick: () => a(d.L.USER_DISMISS),
+                            onClick: () => a(u.L.USER_DISMISS),
                             noticeType: n
                         }),
                         (0, i.jsx)(l.GiftIcon, {

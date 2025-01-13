@@ -14,14 +14,14 @@ var i = t(200651),
     u = t(222677),
     d = t(665906),
     c = t(496675),
-    g = t(768581),
-    m = t(176354),
+    m = t(768581),
+    g = t(176354),
     f = t(981631),
     h = t(388032);
 function E(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        g = (0, d.$R)(n),
-        m = (0, r.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, n) && g, [n, g]),
+        m = (0, d.$R)(n),
+        g = (0, r.e7)([c.Z], () => c.Z.can(f.Plq.MANAGE_MESSAGES, n) && m, [n, m]),
         E = e.reactions.reduce((e, n) => {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
@@ -39,7 +39,7 @@ function E(e, n) {
                       }
                   });
         };
-    return !m || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+    return !g || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
         ? null
         : (0, i.jsx)(a.MenuItem, {
               id: 'remove-emoji-reactions',
@@ -73,12 +73,12 @@ function I(e) {
         className: r,
         src:
             null != t.id
-                ? g.ZP.getEmojiURL({
+                ? m.ZP.getEmojiURL({
                       id: t.id,
                       animated: t.animated && (!l || a),
                       size: 18
                   })
-                : m.ZP.getURL(null !== (n = t.name) && void 0 !== n ? n : ''),
+                : g.ZP.getURL(null !== (n = t.name) && void 0 !== n ? n : ''),
         alt: ''
     });
 }

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(208404),
-    r = n(442837),
+    r = n(208404),
+    a = n(442837),
     s = n(780384),
     o = n(481060),
     c = n(435064),
@@ -15,8 +15,8 @@ var i = n(200651),
     m = n(569545),
     f = n(314910),
     p = n(340534);
-let g = { visibility: 'hidden' },
-    h = {
+let h = { visibility: 'hidden' },
+    g = {
         precision: 0.0001,
         duration: 300
     },
@@ -33,8 +33,8 @@ function I(e) {
         _ = (0, l.useRef)(null),
         x = d.n.getState().clipsButtonRef,
         E = (0, m.V9)(t),
-        C = (0, r.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        Z = (0, r.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
+        C = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        Z = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
         y = (0, l.useRef)();
     l.useEffect(
         () => () => {
@@ -46,7 +46,7 @@ function I(e) {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
-                ? g
+                ? h
                 : {
                       width: t.width,
                       height: t.height,
@@ -56,7 +56,7 @@ function I(e) {
         },
         T = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
-            if (((y.current = t), e.timestamp !== C || null == t || n)) return g;
+            if (((y.current = t), e.timestamp !== C || null == t || n)) return h;
             let { top: i, left: l } = t;
             return {
                 top: i + 36,
@@ -73,7 +73,7 @@ function I(e) {
                 ref: A,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: h
+                config: g
             },
             'animate-always'
         ),
@@ -118,7 +118,7 @@ function I(e) {
             'animate-always'
         );
     return (
-        (0, a.useChain)([A, w], [0, 0.1], 3000),
+        (0, r.useChain)([A, w], [0, 0.1], 3000),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
@@ -128,7 +128,7 @@ function I(e) {
                 N(
                     (e, t) =>
                         null != t &&
-                        (0, i.jsx)(a.animated.div, {
+                        (0, i.jsx)(r.animated.div, {
                             className: p.whiteFlash,
                             style: e
                         })
@@ -139,7 +139,7 @@ function I(e) {
                         children: j(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, i.jsx)(a.animated.img, {
+                                (0, i.jsx)(r.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
                                     style: e

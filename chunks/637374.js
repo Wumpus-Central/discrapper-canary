@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    u = n(481060),
-    d = n(230711),
+    d = n(481060),
+    u = n(230711),
     m = n(568836),
     h = n(730749),
     f = n(112724),
@@ -51,11 +51,11 @@ function w(e, t, n) {
 }
 function F(e) {
     let { onClick: t, libraryApplication: n } = e;
-    return (0, i.jsxs)(u.Clickable, {
+    return (0, i.jsxs)(d.Clickable, {
         className: U.libraryLink,
         onClick: t,
         children: [
-            (0, i.jsx)(u.InventoryIcon, {
+            (0, i.jsx)(d.InventoryIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: U.libraryIcon
@@ -70,7 +70,7 @@ class G extends r.PureComponent {
         return e >= m.aL;
     }
     handleViewInventory() {
-        d.Z.open(k.oAB.INVENTORY);
+        u.Z.open(k.oAB.INVENTORY);
     }
     render() {
         return (0, i.jsx)(m.$G, {
@@ -87,14 +87,14 @@ class G extends r.PureComponent {
             w(this, 'renderTitle', () => (this.props.isSelfGift ? B.intl.string(B.t['mT9B4+']) : B.intl.string(B.t.Vo5yHx))),
             w(this, 'renderActions', () =>
                 this.props.isSelfGift
-                    ? (0, i.jsx)(u.Button, {
-                          size: u.Button.Sizes.SMALL,
+                    ? (0, i.jsx)(d.Button, {
+                          size: d.Button.Sizes.SMALL,
                           onClick: this.handleViewInventory,
                           children: B.intl.string(B.t['jcSP+v'])
                       })
-                    : (0, i.jsx)(u.Button, {
+                    : (0, i.jsx)(d.Button, {
                           disabled: !0,
-                          size: u.Button.Sizes.SMALL,
+                          size: d.Button.Sizes.SMALL,
                           children: B.intl.string(B.t.bUvv1d)
                       })
             ),
@@ -148,15 +148,15 @@ class V extends r.Component {
         let { libraryApplication: t, currentUser: n, isSelfGift: r } = this.props,
             l = {
                 onClick: this.handleAccept,
-                color: u.Button.Colors.BRAND
+                color: d.Button.Colors.BRAND
             },
             a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && r) || (e.isExistingPremiumSubscriptionDisallowed && (0, L.I5)(n));
         return (
-            (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.Button.Colors.BRAND), (l.disabled = !0)),
-            (0, i.jsx)(u.Button, {
+            (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = d.Button.Colors.BRAND), (l.disabled = !0)),
+            (0, i.jsx)(d.Button, {
                 ...l,
                 className: (0, _.mO)(e) ? U.collectiblesAcceptButton : null,
-                size: u.Button.Sizes.SMALL,
+                size: d.Button.Sizes.SMALL,
                 children: e.redeemed ? B.intl.string(B.t.BTihoq) : null != e.giftStyle ? B.intl.string(B.t.TiZFqa) : B.intl.string(B.t.bUvv1d)
             })
         );
@@ -231,8 +231,8 @@ class V extends r.Component {
         return null != r ? B.intl.format(B.t['3HsdQ0'], { username: O.ZP.getUserTag(r) }) : B.intl.string(B.t.Jdnjjo);
     }
     renderPromotionActions() {
-        return (0, i.jsx)(u.Button, {
-            size: u.Button.Sizes.SMALL,
+        return (0, i.jsx)(d.Button, {
+            size: d.Button.Sizes.SMALL,
             onClick: this.handleClaimPromotion,
             children: B.intl.string(B.t['71nuwc'])
         });
@@ -285,7 +285,7 @@ class V extends r.Component {
                 e.preventDefault(), null != t && t.isHidden() ? (0, N.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, N.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             w(this, 'handleVerificationClick', (e) => {
-                e.stopPropagation(), e.preventDefault(), d.Z.open(k.oAB.ACCOUNT);
+                e.stopPropagation(), e.preventDefault(), u.Z.open(k.oAB.ACCOUNT);
             }),
             w(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: i, type: r, giftInfo: l } = this.props;
@@ -308,7 +308,7 @@ class V extends r.Component {
             }),
             w(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
-                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(k.oAB.PREMIUM));
+                null != t && t.isSubscription && (e.preventDefault(), u.Z.open(k.oAB.PREMIUM));
             }),
             w(this, 'handleClaimPromotion', (e) => {
                 var t;

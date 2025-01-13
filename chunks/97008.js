@@ -1,6 +1,6 @@
 t(411104);
-var l = t(141795),
-    i = t(476326),
+var i = t(141795),
+    l = t(476326),
     r = t(956664),
     o = t(693824);
 n.Z = class e {
@@ -24,10 +24,10 @@ n.Z = class e {
             let { channelId: t } = n,
                 o = this.toDataUrl(e, a, u),
                 d = await (0, r.Bo)(o, s, 'image/png');
-            return new l.n(
+            return new i.n(
                 {
                     file: d,
-                    platform: i.ow.WEB,
+                    platform: l.ow.WEB,
                     isThumbnail: !1
                 },
                 t

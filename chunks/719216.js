@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(763472),
-    a = n(49012),
-    r = n(591759),
+    r = n(49012),
+    a = n(591759),
     s = n(915863);
 function o(e) {
     let { activity: t, color: n, user: o, look: c, onAction: u } = e;
@@ -18,10 +18,10 @@ function o(e) {
             if (i.button_urls.length <= n) return;
             let s = i.button_urls[n];
             if ('string' != typeof s) return;
-            let o = r.Z.safeParseWithQuery(s);
+            let o = a.Z.safeParseWithQuery(s);
             if (null == o || null == o.protocol || null == o.hostname) return;
-            (0, a.q)({
-                href: r.Z.format(o),
+            (0, r.q)({
+                href: a.Z.format(o),
                 trusted: !1
             });
         } catch (e) {}

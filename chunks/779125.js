@@ -11,8 +11,8 @@ var r = n(442837),
     o = n(287734),
     s = n(933557),
     c = n(124072),
-    u = n(703656),
-    d = n(131704),
+    d = n(703656),
+    u = n(131704),
     m = n(592125),
     h = n(430824),
     f = n(699516),
@@ -46,15 +46,15 @@ function C(e) {
                                       return;
                                   }
                                   let r = m.Z.getChannel(t);
-                                  if (null != r && (0, d.bw)(r.type)) {
+                                  if (null != r && (0, u.bw)(r.type)) {
                                       if (n) {
-                                          a.Z.updateChatOpen(r.id, !0), (0, u.uL)(E.Z5c.CHANNEL(e, t));
+                                          a.Z.updateChatOpen(r.id, !0), (0, d.uL)(E.Z5c.CHANNEL(e, t));
                                           return;
                                       }
                                       o.default.selectVoiceChannel(r.id);
                                       return;
                                   }
-                                  (0, u.uL)(E.Z5c.CHANNEL(e, t));
+                                  (0, d.uL)(E.Z5c.CHANNEL(e, t));
                               })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, x));
                 },
                 onMouseEnter: r,

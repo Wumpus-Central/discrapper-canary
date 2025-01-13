@@ -11,7 +11,7 @@ var r = n(481060),
     o = n(834129),
     s = n(388032);
 function c(e) {
-    let { message: t, usernameHook: c, onClickPins: u, compact: d } = e,
+    let { message: t, usernameHook: c, onClickPins: d, compact: u } = e,
         m = (0, a.ZP)(t),
         h = m.nick,
         f = c(m),
@@ -35,10 +35,10 @@ function c(e) {
     return (0, i.jsx)(o.Z, {
         ..._,
         timestamp: t.timestamp,
-        compact: d,
+        compact: u,
         children:
             null != t.messageReference
-                ? null == u
+                ? null == d
                     ? s.intl.format(s.t.lD5tur, {
                           usernameHook: f,
                           username: h,
@@ -47,10 +47,10 @@ function c(e) {
                     : s.intl.format(s.t.yIDvPD, {
                           usernameHook: f,
                           username: h,
-                          pinsActionOnClick: u,
+                          pinsActionOnClick: d,
                           messageOnClick: p
                       })
-                : null == u
+                : null == d
                   ? s.intl.format(s.t.vfkjq6, {
                         usernameHook: f,
                         username: h
@@ -58,7 +58,7 @@ function c(e) {
                   : s.intl.format(s.t.R7vZGR, {
                         usernameHook: f,
                         username: h,
-                        pinsActionOnClick: u
+                        pinsActionOnClick: d
                     })
     });
 }

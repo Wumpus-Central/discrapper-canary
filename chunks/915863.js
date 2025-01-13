@@ -3,17 +3,17 @@ t.d(n, {
         return u;
     }
 });
-var l = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(120356),
-    r = t.n(i),
+var l = t(120356),
+    r = t.n(l),
     o = t(481060),
     a = t(472113);
 function u(e) {
-    let { className: n, size: t, ...i } = e;
-    return (0, l.jsx)(o.Button, {
+    let { className: n, size: t, ...l } = e;
+    return (0, i.jsx)(o.Button, {
         className: r()(a.button, n),
         size: r()(a.buttonSize, t),
-        ...i
+        ...l
     });
 }

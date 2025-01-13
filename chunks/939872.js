@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,19 +11,19 @@ var r = n(442837),
     o = n(430824),
     s = n(313550),
     c = n(388032),
-    u = n(522477);
-let d = (e) => {
-    let { onClose: t, listing: n, guildId: d } = e,
-        m = (0, r.e7)([o.Z], () => o.Z.getGuild(d), [d]),
+    d = n(522477);
+let u = (e) => {
+    let { onClose: t, listing: n, guildId: u } = e,
+        m = (0, r.e7)([o.Z], () => o.Z.getGuild(u), [u]),
         h = (0, s.Z)({
             listing: n,
-            guildId: d
+            guildId: u
         });
     return (0, i.jsxs)('div', {
-        className: u.confirmationContainer,
+        className: d.confirmationContainer,
         children: [
             (0, i.jsx)(l.Heading, {
-                className: u.confirmationHeader,
+                className: d.confirmationHeader,
                 variant: 'heading-lg/extrabold',
                 children: c.intl.format(c.t.I5dYFh, {
                     serverName: null == m ? void 0 : m.toString(),
@@ -32,18 +32,18 @@ let d = (e) => {
             }),
             !h.isEmpty() &&
                 (0, i.jsx)(l.Text, {
-                    className: u.confirmationSubtitle,
+                    className: d.confirmationSubtitle,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: c.intl.format(c.t.TnhFHh, { benefits: h.asString() })
                 }),
             (0, i.jsx)(l.Button, {
-                className: u.openDiscordButton,
+                className: d.openDiscordButton,
                 onClick: () => (0, a.Z)('role_sub_mweb_success_modal'),
                 children: c.intl.string(c.t.WWvswM)
             }),
             (0, i.jsx)(l.Button, {
-                className: u.doneButton,
+                className: d.doneButton,
                 look: l.Button.Looks.BLANK,
                 onClick: () => t(!0),
                 children: c.intl.string(c.t.y84Dho)

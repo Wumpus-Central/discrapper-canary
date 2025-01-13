@@ -14,8 +14,8 @@ var i = n(200651),
     o = n(607070),
     s = n(426563),
     c = n(998502),
-    u = n(388032),
-    d = n(657733);
+    d = n(388032),
+    u = n(657733);
 let m = c.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -37,11 +37,11 @@ function h() {
 function f(e) {
     let { src: t } = e;
     return (0, i.jsx)('div', {
-        className: d.avatarContainer,
+        className: u.avatarContainer,
         children: (0, i.jsx)(m, {
             src: t,
             size: a.AvatarSizes.SIZE_40,
-            'aria-label': u.intl.string(u.t.hG1StL)
+            'aria-label': d.intl.string(d.t.hG1StL)
         })
     });
 }

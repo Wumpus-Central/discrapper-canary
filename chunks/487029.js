@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return v;
     }
 }),
     n(47120),
@@ -8,8 +8,8 @@ n.d(t, {
 var l = n(200651),
     r = n(192379),
     s = n(990547),
-    i = n(442837),
-    o = n(100527),
+    o = n(442837),
+    i = n(100527),
     a = n(906732),
     c = n(213609),
     u = n(675478),
@@ -20,50 +20,50 @@ var l = n(200651),
     N = n(242291),
     C = n(174470),
     f = n(549771),
-    p = n(964398),
-    m = n(409673),
+    m = n(964398),
+    p = n(409673),
     E = n(710111),
     T = n(6609);
-function I(e) {
-    let { guildId: t, channel: n, width: I, height: v, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: _ } = e,
-        b = (function (e) {
-            let [t, n] = (0, i.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
+function v(e) {
+    let { guildId: t, channel: n, width: v, height: I, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: b } = e,
+        S = (function (e) {
+            let [t, n] = (0, o.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
             return r.useMemo(() => {
                 let l = [],
                     r = [...e, E.X8],
                     s = (e, r) => {
-                        var s, i;
-                        for (let o of null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
-                            let e = n.has(o.soundId);
-                            ((e && r) || (!e && !r)) && o.available && l.push(o);
+                        var s, o;
+                        for (let i of null !== (o = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== o ? o : []) {
+                            let e = n.has(i.soundId);
+                            ((e && r) || (!e && !r)) && i.available && l.push(i);
                         }
                     };
                 return r.forEach((e) => s(e, !0)), r.forEach((e) => s(e, !1)), l;
             }, [t, n, e]);
         })((0, f.h)(n, !0)),
-        S = (0, C.j)(),
-        R = r.useRef(null),
+        R = (0, C.j)(),
+        _ = r.useRef(null),
         [A, Z] = r.useState(void 0),
-        P = (0, i.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: k } = (0, a.ZP)(o.Z.SOUNDBOARD_WHEEL),
-        D = r.useCallback(
+        P = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: k } = (0, a.ZP)(i.Z.SOUNDBOARD_WHEEL),
+        B = r.useCallback(
             (e) => {
-                (0, N.GN)(e, n.id, k), _();
+                (0, N.GN)(e, n.id, k), b();
             },
-            [k, n.id, _]
+            [k, n.id, b]
         );
     r.useEffect(() => {
         x.w(), u.DZ.loadIfNecessary();
     }, []),
         r.useEffect(() => {
-            0 === b.length && 0 === S.length && _();
-        }, [b.length, S, _]),
+            0 === S.length && 0 === R.length && b();
+        }, [S.length, R, b]),
         r.useEffect(
             () => () => {
-                let e = R.current;
-                !O && null != e && D(e);
+                let e = _.current;
+                !O && null != e && B(e);
             },
-            [O, D]
+            [O, B]
         ),
         (0, c.Z)(
             {
@@ -77,33 +77,33 @@ function I(e) {
             },
             { disableTrack: !j }
         );
-    let B = r.useCallback((e) => {
-            (R.current = e), Z(null == e ? void 0 : e.soundId);
+    let w = r.useCallback((e) => {
+            (_.current = e), Z(null == e ? void 0 : e.soundId);
         }, []),
-        w = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 if (null == e) {
-                    B(null);
+                    w(null);
                     return;
                 }
-                let t = b[e];
-                if (null != t) B(t);
+                let t = S[e];
+                if (null != t) w(t);
             },
-            [B, b]
+            [w, S]
         ),
         M = r.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = b[e];
-                if (null != t) D(t);
+                let t = S[e];
+                if (null != t) B(t);
             },
-            [b, D]
+            [S, B]
         ),
         L = r.useMemo(
             () =>
-                b.map((e) =>
+                S.map((e) =>
                     (0, l.jsx)(
-                        m.ZP,
+                        p.ZP,
                         {
                             interactive: j,
                             className: T.soundButton,
@@ -114,20 +114,20 @@ function I(e) {
                         e.soundId
                     )
                 ),
-            [A, n, j, b]
+            [A, n, j, S]
         );
-    return 0 === b.length
+    return 0 === S.length
         ? null
         : (0, l.jsx)(a.Gt, {
               value: k,
-              children: (0, l.jsx)(p.Z, {
-                  wheelWidth: I,
-                  wheelHeight: v,
+              children: (0, l.jsx)(m.Z, {
+                  wheelWidth: v,
+                  wheelHeight: I,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !O,
                   activeItem: A,
-                  onItemSelect: w,
+                  onItemSelect: D,
                   onItemAction: M,
                   interactive: j,
                   children: L

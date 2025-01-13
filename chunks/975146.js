@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,7 +11,7 @@ var r = n(120356),
     o = n(871499),
     s = n(388032),
     c = n(273128);
-function u(e) {
+function d(e) {
     let { className: t, count: n } = e;
     return (0, i.jsxs)('div', {
         className: l()(c.root, c.comboIcon, t),
@@ -31,13 +31,13 @@ function u(e) {
         ]
     });
 }
-function d(e) {
+function u(e) {
     let { count: t, ...n } = e;
     return (0, i.jsx)(o.Z, {
         label: s.intl.string(s.t.jNqDh4),
         iconComponent: (e) => {
             let { className: n } = e;
-            return (0, i.jsx)(u, {
+            return (0, i.jsx)(d, {
                 className: n,
                 count: t
             });

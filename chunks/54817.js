@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(385499),
     s = n(739566),
     c = n(464891),
-    u = n(83561),
-    d = n(834129),
+    d = n(83561),
+    u = n(834129),
     m = n(981631),
     h = n(674563),
     f = n(388032),
@@ -24,7 +24,7 @@ function _(e) {
         {
             avatarSrc: E,
             eventHandlers: { onMouseEnter: C, onMouseLeave: I }
-        } = (0, u.m)(!0),
+        } = (0, d.m)(!0),
         x =
             '' !== t.content
                 ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
@@ -38,9 +38,9 @@ function _(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: C,
         onMouseLeave: I,
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(u.Z, {
             className: l()(p.mainContainer, { [p.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: E }),
+            iconNode: n ? null : (0, i.jsx)(d.S, { src: E }),
             iconContainerClassName: p.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {

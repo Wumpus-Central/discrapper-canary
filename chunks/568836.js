@@ -3,7 +3,7 @@ n.d(t, {
         return c;
     },
     OR: function () {
-        return u;
+        return d;
     },
     aL: function () {
         return s;
@@ -24,7 +24,7 @@ let s = 660,
                 [o.embedHorizontal]: e.isHorizontal
             })
         }),
-    u = (e) => {
+    d = (e) => {
         let { isHorizontal: t } = e;
         return (0, i.jsx)(c, {
             ...e,

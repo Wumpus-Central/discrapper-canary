@@ -6,8 +6,8 @@ var i,
     o = n(442837),
     s = n(570140),
     c = n(999650),
-    u = n(279779),
-    d = n(483360),
+    d = n(279779),
+    u = n(483360),
     m = n(892880),
     h = n(405656),
     f = n(51144),
@@ -26,7 +26,7 @@ function v(e) {
         null == o &&
             ((o = {
                 results: [],
-                context: u.Z.getSearchContext(T.bind(null, t))
+                context: d.Z.getSearchContext(T.bind(null, t))
             }),
             (N[t] = o)),
         {
@@ -71,15 +71,15 @@ function T(e, t) {
                 e
             );
         })(n, o));
-    let { query: s, mode: c, tokens: u, cursorScope: d } = r,
+    let { query: s, mode: c, tokens: d, cursorScope: u } = r,
         { autocompletes: m } = r;
     (m = b(e, c)),
         (x[e] = v({
             searchId: e,
             query: s,
             mode: c,
-            tokens: u,
-            cursorScope: d,
+            tokens: d,
+            cursorScope: u,
             autocompletes: m
         })),
         L.emitChange();
@@ -90,14 +90,14 @@ function S(e, t, n) {
         o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
     if (null == e || '' === e) return null;
     let s = _.Z.getSearchType(n),
-        u = null !== (r = null == t ? void 0 : null === (i = t.getFullMatch()) || void 0 === i ? void 0 : i.trim()) && void 0 !== r ? r : '',
+        d = null !== (r = null == t ? void 0 : null === (i = t.getFullMatch()) || void 0 === i ? void 0 : i.trim()) && void 0 !== r ? r : '',
         m = e === C.dCx.FILTER_FROM || e === C.dCx.FILTER_MENTIONS;
     if (s === C.aib.GUILD && m) {
         let e = N[n];
         null == e
             ? (a = null)
-            : ((null == t || 0 === u.length) &&
-                  (e.results = d.ZP.getRecentlyTalked(n, 10).map((e) => {
+            : ((null == t || 0 === d.length) &&
+                  (e.results = u.ZP.getRecentlyTalked(n, 10).map((e) => {
                       let { record: t } = e;
                       return {
                           user: t,
@@ -107,10 +107,10 @@ function S(e, t, n) {
               (a = e.results));
     } else {
         let t = null === (l = c.ZP[e]) || void 0 === l ? void 0 : l.getAutocompletions;
-        a = null != t ? t(u, n, null != o ? o : 10) : [];
+        a = null != t ? t(d, n, null != o ? o : 10) : [];
     }
-    let h = u.toLowerCase().replace(/^@/, '');
-    if (null != a && m && u.length > 0 && (I.intl.string(I.t.Qf3ptr).startsWith(h) || C.ME.substr(1).startsWith(h))) {
+    let h = d.toLowerCase().replace(/^@/, '');
+    if (null != a && m && d.length > 0 && (I.intl.string(I.t.Qf3ptr).startsWith(h) || C.ME.substr(1).startsWith(h))) {
         let e = E.default.getCurrentUser();
         null != e &&
             (a = a.filter((t) => {
@@ -259,12 +259,12 @@ let L = new P(s.Z, {
             o = (0, h.qc)(l, r),
             s = null !== (t = x[i]) && void 0 !== t ? t : {},
             c = N[i],
-            u = !0;
-        if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
+            d = !0;
+        if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (d = !1);
         else if (o.type === C.Sap.EMPTY || (o.type === C.Sap.FILTER && o.filter !== C.dCx.FILTER_FROM && o.filter !== C.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = b(i, o));
         else if (null != c) {
             let { token: e } = o;
-            null != e && e.getFullMatch().trim().length > 0 ? (m.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = b(i, o)));
+            null != e && e.getFullMatch().trim().length > 0 ? (m.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = s.autocompletes), (d = !1)) : (c.context.clearQuery(), (n = b(i, o)));
         }
         return (
             (x[i] = v({
@@ -275,7 +275,7 @@ let L = new P(s.Z, {
                 cursorScope: l,
                 autocompletes: n
             })),
-            u
+            d
         );
     },
     SEARCH_EDITOR_STATE_CLEAR: function (e) {

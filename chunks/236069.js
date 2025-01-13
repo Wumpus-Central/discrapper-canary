@@ -12,19 +12,19 @@ var r = n(481060),
     o = n(230278);
 function s(e) {
     let { guildId: t, analyticsLocations: n, analyticsLocation: s } = e,
-        [c, u] = (0, l.ww)({
+        [c, d] = (0, l.ww)({
             guildId: t,
             analyticsLocations: n,
             analyticsLocation: s,
             openWithoutBackstack: !0
         }),
-        d = u ? a.intl.string(a.t['6ndMcn']) : a.intl.string(a.t['0eiu6O']),
-        m = u ? a.intl.string(a.t.S09nw8) : a.intl.string(a.t.tEttXV);
+        u = d ? a.intl.string(a.t['6ndMcn']) : a.intl.string(a.t['0eiu6O']),
+        m = d ? a.intl.string(a.t.S09nw8) : a.intl.string(a.t.tEttXV);
     return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.CUSTOM,
         className: o.quarantineNotice,
         children: [
-            d,
+            u,
             (0, i.jsx)(r.NoticeButton, {
                 onClick: c,
                 children: m

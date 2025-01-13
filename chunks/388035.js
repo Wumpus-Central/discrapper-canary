@@ -11,29 +11,29 @@ var i = n(200651),
     o = n(970731),
     s = n(2818),
     c = n(921944),
-    u = n(388032),
-    d = n(295646),
+    d = n(388032),
+    u = n(295646),
     m = n(235810);
 let h = r.z.FOR_LATER_POPOUT_COACHMARK,
     f = () =>
         (0, i.jsx)('div', {
-            className: d.imageContainer,
+            className: u.imageContainer,
             children: (0, i.jsx)('img', {
-                className: d.image,
+                className: u.image,
                 src: m,
                 alt: ''
             })
         }),
     p = (e) =>
         (0, i.jsx)(o.ZP, {
-            className: d.container,
+            className: u.container,
             asset: (0, i.jsx)(f, {}),
-            header: u.intl.string(u.t.qPbFKy),
-            content: u.intl.string(u.t.URrJq6),
-            buttonCTA: u.intl.string(u.t['NX+WJC']),
+            header: d.intl.string(d.t.qPbFKy),
+            content: d.intl.string(d.t.URrJq6),
+            buttonCTA: d.intl.string(d.t['NX+WJC']),
             buttonProps: {
                 color: l.ButtonColors.WHITE,
-                innerClassName: d.primaryButton
+                innerClassName: u.primaryButton
             },
             onClick: () => e(c.L.USER_DISMISS),
             markAsDismissed: e,
@@ -42,11 +42,11 @@ let h = r.z.FOR_LATER_POPOUT_COACHMARK,
 function _(e) {
     let { location: t, children: n } = e,
         { enabled: r, inInbox: o } = s.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [c, u] = (0, a.US)(r && t === (o ? 'inbox-button' : 'bookmarks-button') ? [h] : [], void 0);
+        [c, d] = (0, a.US)(r && t === (o ? 'inbox-button' : 'bookmarks-button') ? [h] : [], void 0);
     return c !== h
         ? (0, i.jsx)(i.Fragment, { children: n })
         : (0, i.jsx)(l.Popout, {
-              renderPopout: () => p(u),
+              renderPopout: () => p(d),
               position: 'bottom',
               align: 'right',
               animation: l.Popout.Animation.TRANSLATE,

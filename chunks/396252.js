@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(481060),
     s = n(385499),
     c = n(430824),
-    u = n(739566),
-    d = n(464891),
+    d = n(739566),
+    u = n(464891),
     m = n(83561),
     h = n(834129),
     f = n(674563),
@@ -22,7 +22,7 @@ function g(e) {
     var t;
     let { message: n, compact: r, usernameHook: g, channel: E } = e,
         C = (0, a.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
-        I = (0, u.ZP)(n),
+        I = (0, d.ZP)(n),
         x = g(I),
         {
             avatarSrc: N,
@@ -39,7 +39,7 @@ function g(e) {
             children: (0, i.jsxs)('div', {
                 className: l()(_.content, { [_.compact]: r }),
                 children: [
-                    (0, i.jsx)(d.nD, {
+                    (0, i.jsx)(u.nD, {
                         message: n,
                         messageClassname: _.spanCorrection,
                         className: l()(_.usernameContainer, _.spanCorrection, { [_.compact]: r }),

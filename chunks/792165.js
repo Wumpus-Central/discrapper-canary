@@ -11,8 +11,8 @@ var r = n(442837),
     o = n(481060),
     s = n(230711),
     c = n(197115),
-    u = n(504983),
-    d = n(594174),
+    d = n(504983),
+    u = n(594174),
     m = n(74538),
     h = n(981631),
     f = n(921944),
@@ -23,12 +23,12 @@ var r = n(442837),
 function C(e) {
     var t;
     let { onClose: n, markAsDismissed: C } = e,
-        I = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+        I = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     let x = (t = null == I ? void 0 : I.premiumType) === p.p9.TIER_2 ? g.intl.string(g.t.jqO5Qk) : null == t ? g.intl.string(g.t.f2qjw8) : g.intl.string(g.t.SblICQ),
         N = m.ZP.canUseCustomCallSounds(I);
-    return (0, i.jsxs)(u.Z, {
+    return (0, i.jsxs)(d.Z, {
         isShown: !0,
-        type: u.Y.PREMIUM,
+        type: d.Y.PREMIUM,
         className: E.upsellOuter,
         backgroundClassName: E.upsellInner,
         children: [

@@ -5,8 +5,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    u = n(570140),
-    d = n(821849),
+    d = n(570140),
+    u = n(821849),
     m = n(131388),
     h = n(906732),
     f = n(305325),
@@ -53,8 +53,8 @@ t.Z = (e, t, n, l) => {
     r.useEffect(() => {
         B &&
             null != U &&
-            u.Z.wait(() => {
-                (0, d.GZ)(U);
+            d.Z.wait(() => {
+                (0, u.GZ)(U);
             });
     }, [B, U]);
     let ee = r.useCallback(async () => {

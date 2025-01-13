@@ -1,4 +1,4 @@
-var i, l, a, r;
+var i, l, r, a;
 n.d(t, {
     W: function () {
         return i;
@@ -7,7 +7,7 @@ n.d(t, {
         return l;
     }
 }),
-    ((a = i || (i = {})).LINE = 'line'),
-    (a.EMOJI_HOSE = 'emoji_hose'),
-    ((r = l || (l = {})).START = 'START'),
-    (r.STOP = 'STOP');
+    ((r = i || (i = {})).LINE = 'line'),
+    (r.EMOJI_HOSE = 'emoji_hose'),
+    ((a = l || (l = {})).START = 'START'),
+    (a.STOP = 'STOP');

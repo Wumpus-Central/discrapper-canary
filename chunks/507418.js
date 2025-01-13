@@ -11,11 +11,11 @@ var r = n(512722),
     o = n(245315),
     s = n(556041),
     c = n(347475),
-    u = n(592125),
-    d = n(368859);
+    d = n(592125),
+    u = n(368859);
 function m(e, t) {
     if ((0, o.cp)(t)) return (0, i.jsx)(s.Z, {});
-    if ((0, d.Z)(t)) {
+    if ((0, u.Z)(t)) {
         var n, r;
         let l = (null !== (r = null == t ? void 0 : null === (n = t.author) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : '').split(' ').slice(0, -1).join(' '),
             { guild_id: o, channel_id: s, message_id: c } = t.messageReference;
@@ -29,7 +29,7 @@ function m(e, t) {
             });
     }
     if (null != t.interaction && 'SENDING' === t.state) return (0, i.jsx)(i.Fragment, {});
-    let m = u.Z.getChannel(t.channel_id);
+    let m = d.Z.getChannel(t.channel_id);
     return (
         l()(null != m, 'renderUserGuildPopout: channel should never be null'),
         (0, i.jsx)(c.Z, {

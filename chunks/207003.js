@@ -20,8 +20,8 @@ var l = n(200651),
     x = n(810123),
     g = n(448486),
     y = n(987509),
-    C = n(131704),
-    S = n(592125),
+    S = n(131704),
+    C = n(592125),
     v = n(430824),
     E = n(496675),
     Z = n(158776),
@@ -124,8 +124,8 @@ function B(e) {
     let { channel: t, subLabel: n, ...r } = e,
         s = (0, c.e7)([v.Z], () => v.Z.getGuild(null == t ? void 0 : t.guild_id)),
         i = (0, b.ZP)(t),
-        a = (0, c.e7)([S.Z, _.default, L.Z], () => {
-            let e = S.Z.getChannel(t.parent_id);
+        a = (0, c.e7)([C.Z, _.default, L.Z], () => {
+            let e = C.Z.getChannel(t.parent_id);
             return null == e ? null : (0, b.F6)(e, _.default, L.Z, !1);
         }),
         o = (0, c.e7)([N.ZP], () => N.ZP.lastMessageTimestamp(t.id, k.W.CHANNEL)),
@@ -202,7 +202,7 @@ function H(e) {
                               },
                     c = (0, y.hC)(o),
                     d = (function (e) {
-                        if (e instanceof C.Sf && (0, C.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(E.Z.can(R.Plq.MANAGE_CHANNELS, e) || E.Z.can(R.Plq.MANAGE_MESSAGES, e))) return { label: P.intl.string(P.t.Icu3bW) };
+                        if (e instanceof S.Sf && (0, S.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(E.Z.can(R.Plq.MANAGE_CHANNELS, e) || E.Z.can(R.Plq.MANAGE_MESSAGES, e))) return { label: P.intl.string(P.t.Icu3bW) };
                     })(u),
                     h = f.includes(c),
                     b = {

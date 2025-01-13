@@ -3,7 +3,7 @@ t.d(n, {
         return c;
     },
     e: function () {
-        return g;
+        return m;
     }
 });
 var i = t(200651);
@@ -26,7 +26,7 @@ function c(e) {
           })
         : null;
 }
-function g(e) {
+function m(e) {
     let n = (0, l.e7)([a.ZP], () => a.ZP.get('iar_testing')),
         t = (0, l.e7)([s.default], () => s.default.getCurrentUser());
     return (0, u.a4)(e) && null != t && t.isStaff() && n

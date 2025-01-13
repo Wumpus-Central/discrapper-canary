@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,9 +11,9 @@ var r = n(481060),
     o = n(834129),
     s = n(981791),
     c = n(234596);
-function u(e) {
-    let { message: t, channel: n, compact: u } = e,
-        d = (0, l.ZP)(t),
+function d(e) {
+    let { message: t, channel: n, compact: d } = e,
+        u = (0, l.ZP)(t),
         m = t.application,
         h = (0, a.l)({
             user: t.author,
@@ -28,11 +28,11 @@ function u(e) {
             className: c.ticketIcon
         }),
         timestamp: t.timestamp,
-        compact: u,
+        compact: d,
         children: (0, s.A)({
             application: m,
-            username: d.nick,
-            usernameHook: h(d)
+            username: u.nick,
+            usernameHook: h(u)
         })
     });
 }

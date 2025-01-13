@@ -100,7 +100,7 @@ function l(e) {
     return !!n && !r;
 }
 function u(e) {
-    return o.getCurrentConfig({ location: e }).newChatInput;
+    return f(e) && o.getCurrentConfig({ location: e }).newChatInput;
 }
 function c(e) {
     return o.getCurrentConfig({ location: e }).disabledByDefault;

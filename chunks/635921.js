@@ -75,10 +75,10 @@ function A(e) {
 t.ZP = (e) => {
     var t, n;
     let { isFullscreen: r, className: d, buttonClassName: b, subscriptionTier: T, entrypoint: P, isDarkMode: O } = e,
-        { analyticsLocations: Z } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        B = (0, m._O)(),
-        M = (0, p.Ng)(),
-        y = (0, p.Wp)(M, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
+        { analyticsLocations: M } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
+        Z = (0, m._O)(),
+        B = (0, p.Ng)(),
+        y = (0, p.Wp)(B, N.Si.TIER_2) ? N.Si.TIER_2 : void 0,
         w = (0, _.N)(),
         k = (0, g.Nx)(),
         L = (0, x.Vi)(),
@@ -88,7 +88,7 @@ t.ZP = (e) => {
         H = P === N.EZ.ApplicationStoreHome && null != D && G,
         V = U.length > 0;
     return (0, i.jsx)(c.Gt, {
-        value: Z,
+        value: M,
         children: (0, i.jsxs)('div', {
             className: a()(S.container, d, {
                 [S.settingsContainer]: !r,
@@ -115,7 +115,7 @@ t.ZP = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(A, {}),
-                        L || B
+                        L || Z
                             ? (0, i.jsx)('div', {
                                   className: a()(S.buttonContainer),
                                   children: (0, i.jsx)(v.Z, {

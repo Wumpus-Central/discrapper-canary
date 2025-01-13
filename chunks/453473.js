@@ -14,8 +14,8 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(913527),
-    u = n.n(c),
-    d = n(990547),
+    d = n.n(c),
+    u = n(990547),
     m = n(91192),
     h = n(442837),
     f = n(481060),
@@ -68,8 +68,8 @@ function U(e) {
         n = (0, Z.Z)();
     return ((0, E.Z)(
         {
-            type: d.ImpressionTypes.POPOUT,
-            name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
+            type: u.ImpressionTypes.POPOUT,
+            name: u.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
                 overdue_count: j.Z.getOverdueMessageReminderCount()
@@ -88,13 +88,13 @@ function U(e) {
 function w(e) {
     let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
         [s, c] = r.useState(!1),
-        u = r.useCallback(() => {
+        d = r.useCallback(() => {
             c(!1), s && (null == n || n());
         }, [n, s]),
-        d = r.useCallback(() => {
+        u = r.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    r.useEffect(() => (T.S.subscribe(O.CkL.TOGGLE_FOR_LATER, d), () => void T.S.unsubscribe(O.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    r.useEffect(() => (T.S.subscribe(O.CkL.TOGGLE_FOR_LATER, u), () => void T.S.unsubscribe(O.CkL.TOGGLE_FOR_LATER, u)), [u]);
     let m = (0, h.e7)([j.Z], () => j.Z.hasOverdueReminder(), []);
     return (0, i.jsx)(f.Popout, {
         animation: f.Popout.Animation.NONE,
@@ -102,14 +102,14 @@ function w(e) {
         align: o,
         autoInvert: !1,
         shouldShow: s,
-        onRequestClose: u,
+        onRequestClose: d,
         renderPopout: function () {
-            return (0, i.jsx)(B, { closePopout: u });
+            return (0, i.jsx)(B, { closePopout: d });
         },
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return l(d, n, e, m);
+            return l(u, n, e, m);
         }
     });
 }
@@ -167,7 +167,7 @@ function G(e) {
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
                         type: null != t.saveData.dueAt ? R._l.REMINDER : R._l.BOOKMARK,
-                        due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
+                        due_duration: null != t.saveData.dueAt ? d()().diff(t.saveData.dueAt) : void 0
                     });
             },
             [n, t, o]

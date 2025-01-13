@@ -34,9 +34,9 @@ var r = n(319147),
     A = n(297141),
     P = n(26517),
     O = n(93125),
-    Z = n(278583),
-    B = n(814437);
-let M = new Map([
+    M = n(278583),
+    Z = n(814437);
+let B = new Map([
     ['BG', s],
     ['CZ', c],
     ['HU', h],
@@ -51,8 +51,8 @@ let M = new Map([
     ['LT', v],
     ['LU', T],
     ['MT', I],
-    ['SK', B],
-    ['SI', Z],
+    ['SK', Z],
+    ['SI', M],
     ['GR', p],
     ['FI', m],
     ['PT', A],
@@ -70,8 +70,8 @@ let M = new Map([
 ]);
 function y(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !M.has(n)) return null;
-    let r = M.get(n);
+    if (null == n || !B.has(n)) return null;
+    let r = B.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

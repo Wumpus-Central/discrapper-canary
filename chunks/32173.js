@@ -33,9 +33,9 @@ var s = n(399606),
     A = n(119269),
     P = n(467685),
     O = n(391110),
-    Z = n(75077),
-    B = n(976465),
-    M = n(474936),
+    M = n(75077),
+    Z = n(976465),
+    B = n(474936),
     y = n(735825),
     w = n(981631),
     k = n(526761),
@@ -75,13 +75,13 @@ var s = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        i = (0, v.BU)(M.Uq / 1024, { useKibibytes: !0 }),
+        i = (0, v.BU)(B.Uq / 1024, { useKibibytes: !0 }),
         r = (0, s.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
         e_ = null != r ? N.ZP.getPremiumPlanItem(r) : null,
-        eh = (null != e_ ? N.ZP.getSkuIdForPlan(e_.planId) : null) === M.Si.TIER_2,
+        eh = (null != e_ ? N.ZP.getSkuIdForPlan(e_.planId) : null) === B.Si.TIER_2,
         ex = E.default.getCurrentUser(),
-        eE = (0, N.I5)(ex, M.p9.TIER_2),
-        eb = (0, N.I5)(ex, M.p9.TIER_0),
+        eE = (0, N.I5)(ex, B.p9.TIER_2),
+        eb = (0, N.I5)(ex, B.p9.TIER_0),
         eC = (0, R.bq)({ showAnimations: !0 }),
         ev = null != eC ? eC.initialPercentage : void 0,
         eT = null != eC ? eC.percentage : void 0,
@@ -90,7 +90,7 @@ t.Z = () => {
         eS = (0, j.aJ)(),
         eR = (0, R.Kb)(y.qY),
         { fractionalState: ej } = (0, g.Z)(),
-        eA = ej === M.a$.FP_ONLY,
+        eA = ej === B.a$.FP_ONLY,
         eP = (0, p.Z)({
             scrollPosition: k.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -101,13 +101,13 @@ t.Z = () => {
                 analyticsLocations: e
             });
         },
-        eZ = () => {
+        eM = () => {
             (0, _.uL)(w.Z5c.COLLECTIBLES_SHOP);
         },
-        eB = () => {
+        eZ = () => {
             o.Z.open(w.oAB.APPEARANCE, null, { scrollPosition: k.h1.CUSTOM_APP_ICONS });
         },
-        eM = {
+        eB = {
             clientThemes: {
                 name: 'clientThemes',
                 title: U.intl.string(U.t.kWM48P),
@@ -275,7 +275,7 @@ t.Z = () => {
                       subtitle: U.intl.string(U.t.opgqDQ),
                       description: U.intl.string(U.t['t+QZSU']),
                       descriptionCta: U.intl.string(U.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      onCtaClick: eM,
                       perkImage: el
                   }
                 : {
@@ -293,7 +293,7 @@ t.Z = () => {
                       subtitle: U.intl.string(U.t.opgqDQ),
                       description: U.intl.string(U.t['t+QZSU']),
                       descriptionCta: U.intl.string(U.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      onCtaClick: eM,
                       perkImage: eo
                   }
                 : {
@@ -311,7 +311,7 @@ t.Z = () => {
                       subtitle: U.intl.string(U.t.chRZiY),
                       description: U.intl.string(U.t['t+QZSU']),
                       descriptionCta: U.intl.string(U.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      onCtaClick: eM,
                       perkImage: el
                   }
                 : {
@@ -320,7 +320,7 @@ t.Z = () => {
                       subtitle: U.intl.string(U.t.chRZiY),
                       description: U.intl.string(U.t['JE/EWV']),
                       descriptionCta: U.intl.string(U.t.dBJVnZ),
-                      onCtaClick: eZ,
+                      onCtaClick: eM,
                       perkImage: el
                   },
             unlimitedSuperReactions: eE
@@ -376,7 +376,7 @@ t.Z = () => {
                 perkImage: q,
                 description: U.intl.string(U.t.e7FKCg),
                 descriptionCta: U.intl.string(U.t.jVcuVV),
-                onCtaClick: eB
+                onCtaClick: eZ
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
@@ -389,14 +389,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: U.intl.string(U.t.LWsAra),
                 subtitle: U.intl.string(U.t.bTzbVl),
-                perkImage: (0, Z.gx)(t, H, V),
+                perkImage: (0, M.gx)(t, H, V),
                 description: U.intl.string(U.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: U.intl.string(U.t.tzdIwM),
                 subtitle: U.intl.string(U.t.FXlU29),
-                perkImage: (0, Z.gx)(t, F, ec),
+                perkImage: (0, M.gx)(t, F, ec),
                 description: U.intl.string(U.t.e7FKCg)
             },
             largeUploads: {
@@ -420,7 +420,7 @@ t.Z = () => {
                 description: U.intl.string(U.t.ee7wQ0),
                 descriptionCta: eE || eb ? U.intl.string(U.t.y9TxXV) : U.intl.string(U.t.d8o6lZ),
                 isPremiumGetCta: !(eE || eb),
-                onCtaClick: eE || eb ? eB : void 0,
+                onCtaClick: eE || eb ? eZ : void 0,
                 perkImage: en
             },
             referralProgram: {
@@ -455,7 +455,7 @@ t.Z = () => {
                     initialPercentage: ev
                 })
             });
-        eM.tenureRewardCollectible = {
+        eB.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
             subtitle: n,
@@ -486,7 +486,7 @@ t.Z = () => {
                     initialPercentage: ev
                 })
             });
-        eM.freeBoost = {
+        eB.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
@@ -501,7 +501,7 @@ t.Z = () => {
             dismissibleContentType: l
         };
     }
-    let ey = (0, B.kG)(),
+    let ey = (0, Z.kG)(),
         { enabled: ew } = (0, S.Z)(),
         ek = () => {
             C.default.track(w.rMx.OPEN_MODAL, {
@@ -518,7 +518,7 @@ t.Z = () => {
     return (
         null != ey &&
             ew &&
-            (eM.tenureBadge = {
+            (eB.tenureBadge = {
                 name: 'tenureBadge',
                 title: U.intl.string(U.t.rnsqpa),
                 pillText: U.intl.string(U.t.jyYgZ2).toLocaleUpperCase(),
@@ -527,17 +527,17 @@ t.Z = () => {
                 onClick: () => ek()
             }),
         (0, I.ZP)('usePerksDiscoverabilityCard') === I.P0.SUMMER_2024 &&
-            (eM.shyProject = {
+            (eB.shyProject = {
                 name: 'shyProject',
                 title: U.intl.string(U.t['0Mykgo']),
                 subtitle: U.intl.string(U.t.opgqDQ),
                 description: eE ? U.intl.string(U.t['t+QZSU']) : U.intl.string(U.t['JE/EWV']),
                 descriptionCta: U.intl.string(U.t.dBJVnZ),
                 pillText: U.intl.string(U.t.tahjbG).toLocaleUpperCase(),
-                onCtaClick: eE ? eZ : void 0,
+                onCtaClick: eE ? eM : void 0,
                 perkImage: K,
                 isPremiumGetCta: !eE
             }),
-        eM
+        eB
     );
 };

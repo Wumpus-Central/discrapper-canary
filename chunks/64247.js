@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,16 +11,16 @@ var r = n(481060),
     o = n(346479),
     s = n(723170),
     c = n(124368);
-function u(e) {
-    let { channel: t, closePopout: n, onSelect: u, navId: d, label: m } = e,
+function d(e) {
+    let { channel: t, closePopout: n, onSelect: d, navId: u, label: m } = e,
         h = (0, l.Z)(t, 'Notifications Bell'),
         f = (0, a.Z)(t),
         p = (0, s.B)(t);
     return (0, i.jsxs)(r.Menu, {
-        navId: d,
+        navId: u,
         onClose: n,
         'aria-label': m,
-        onSelect: u,
+        onSelect: d,
         children: [
             (0, i.jsxs)(r.MenuGroup, {
                 children: [t.isForumPost() ? h : null, f]

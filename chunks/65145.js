@@ -1,6 +1,6 @@
 n.d(t, {
     Pk: function () {
-        return d;
+        return u;
     },
     dv: function () {
         return c;
@@ -20,7 +20,7 @@ function c() {
     if (null == e) throw Error('No PollFocusContextProvider found');
     return e;
 }
-function u(e) {
+function d(e) {
     let { children: t, actionButtonRef: n, pollAnswerRef: i, manageFocusOnAction: r } = e,
         o = a.useMemo(
             () => ({
@@ -35,7 +35,7 @@ function u(e) {
         children: t
     });
 }
-function d(e) {
+function u(e) {
     let { children: t } = e,
         [n, i] = a.useState(),
         r = a.useRef(null),
@@ -45,7 +45,7 @@ function d(e) {
             var e, t, i;
             'POLL_ANSWERS' === n && null != s.current && (null === (t = s.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), 'ACTION_BUTTON' === n && null != r.current && (null === (i = r.current) || void 0 === i || i.focus());
         }, [n]),
-        (0, l.jsx)(u, {
+        (0, l.jsx)(d, {
             pollAnswerRef: s,
             actionButtonRef: r,
             manageFocusOnAction: (e) => {

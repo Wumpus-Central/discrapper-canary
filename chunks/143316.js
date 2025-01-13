@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -11,10 +11,10 @@ var i = n(200651),
     o = n(288552),
     s = n(981631),
     c = n(388032),
-    u = n(76334);
-function d(e) {
+    d = n(76334);
+function u(e) {
     let { type: t, onClick: n } = e,
-        [d, h] = r.useState(!1),
+        [u, h] = r.useState(!1),
         f = () => {
             n(),
                 a.default.track(s.rMx.INBOX_CHANNEL_ACKED, {
@@ -27,7 +27,7 @@ function d(e) {
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            d
+            u
                 ? (0, i.jsx)(m, {
                       confirm: f,
                       cancel: () => h(!1)
@@ -46,7 +46,7 @@ function d(e) {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                      className: u.controlButton,
+                      className: d.controlButton,
                       onClick: p
                   })
         ]

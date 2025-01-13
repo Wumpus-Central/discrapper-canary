@@ -7,8 +7,8 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(430824),
-    u = n(914010),
-    d = n(693546),
+    d = n(914010),
+    u = n(693546),
     m = n(305325),
     h = n(246364),
     f = n(983736),
@@ -20,7 +20,7 @@ var r = n(120356),
     I = n(532623);
 t.Z = () => {
     var e, t;
-    let r = (0, o.e7)([u.Z], () => u.Z.getGuildId(), []),
+    let r = (0, o.e7)([d.Z], () => d.Z.getGuildId(), []),
         x = (0, o.e7)([c.Z], () => c.Z.getGuild(r), [r]),
         N = (0, o.e7)([p.Z], () => (null != r ? p.Z.getRequest(r) : null), [r]),
         v = (0, a.TH)(),
@@ -41,7 +41,7 @@ t.Z = () => {
                             header: E.intl.string(E.t.aIz1oa),
                             confirmText: E.intl.string(E.t['cY+Ooa']),
                             cancelText: E.intl.string(E.t['ETE/oK']),
-                            onConfirm: () => d.Z.removeGuildJoinRequest(x.id),
+                            onConfirm: () => u.Z.removeGuildJoinRequest(x.id),
                             confirmButtonColor: s.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(s.Text, {

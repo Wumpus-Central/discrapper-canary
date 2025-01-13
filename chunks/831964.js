@@ -35,9 +35,9 @@ var i,
     A = n(845571),
     P = n(220046),
     O = n(385874),
-    Z = n(371000),
-    B = n(377679),
-    M = n(825087);
+    M = n(371000),
+    Z = n(377679),
+    B = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let y = () => {
     let e = (0, c.rO)();
@@ -109,7 +109,7 @@ t.ZP = (e) => {
                 descriptionCta: m.intl.string(m.t.jVcuVV),
                 previewImage: h,
                 onClick: n,
-                videoUrl: r ? O.Z : Z.Z
+                videoUrl: r ? O.Z : M.Z
             },
             yourSpace: {
                 name: 'yourSpace',
@@ -118,7 +118,7 @@ t.ZP = (e) => {
                 descriptionCta: m.intl.string(m.t.jVcuVV),
                 previewImage: _,
                 onClick: i,
-                videoUrl: r ? B.Z : M.Z
+                videoUrl: r ? Z.Z : B.Z
             }
         };
     return e ? b : p;

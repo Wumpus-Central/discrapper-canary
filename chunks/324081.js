@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(788307),
-    u = n(43267),
-    d = n(933557),
+    d = n(43267),
+    u = n(933557),
     m = n(471445),
     h = n(377171),
     f = n(313201),
@@ -33,12 +33,12 @@ let T = {
 };
 function S(e) {
     let { channel: t, children: n, gotoChannel: r, mentionCount: l, channelState: o, toggleCollapsed: c } = e,
-        u = (0, a.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
+        d = (0, a.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
     return (0, i.jsx)(s.FocusRing, {
         offset: T,
         children: (0, i.jsxs)('div', {
             className: v.channelHeader,
-            ...u,
+            ...d,
             tabIndex: 0,
             'data-recents-channel': t.id,
             onKeyDown: function (e) {
@@ -74,7 +74,7 @@ function A(e) {
 function b(e) {
     let { channel: t, gotoChannel: n } = e,
         r = (0, o.e7)([x.default], () => (t.isDM() ? x.default.getUser(t.getRecipientId()) : null)),
-        l = null == r ? (0, u.x)(t) : r.getAvatarURL(void 0, 40);
+        l = null == r ? (0, d.x)(t) : r.getAvatarURL(void 0, 40);
     return (0, i.jsx)(s.Clickable, {
         onClick: n,
         tabIndex: -1,
@@ -105,9 +105,9 @@ function R(e) {
     let { channel: t, gotoChannel: n, mentionCount: r } = e,
         a = (0, o.e7)([E.Z], () => E.Z.getGuild(t.guild_id)),
         c = (0, o.e7)([g.Z], () => g.Z.getChannel(t.parent_id)),
-        u = (0, o.e7)([I.ZP], () => I.ZP.getIsMentionLowImportance(t.id)),
+        d = (0, o.e7)([I.ZP], () => I.ZP.getIsMentionLowImportance(t.id)),
         f = (0, m.KS)(t, a),
-        p = (0, d.ZP)(t, !1),
+        p = (0, u.ZP)(t, !1),
         _ = null == c ? (null == a ? void 0 : a.name) : ''.concat(null == a ? void 0 : a.name, ' \u203A ').concat(c.name),
         C = t.isMultiUserDM()
             ? N.intl.formatToPlainString(N.t.CxSA5O, { members: t.recipients.length + 1 })
@@ -146,7 +146,7 @@ function R(e) {
                                   className: v.badge,
                                   children: (0, i.jsx)(s.NumberBadge, {
                                       count: r,
-                                      color: u ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER
+                                      color: d ? h.Z.BACKGROUND_ACCENT : h.Z.STATUS_DANGER
                                   })
                               })
                             : null

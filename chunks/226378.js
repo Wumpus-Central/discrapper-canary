@@ -22,7 +22,7 @@ function c(e) {
                         text: l ? s.intl.string(s.t.I0v0Qk) : s.intl.string(s.t.sqe0ho),
                         tooltip: void 0
                     },
-                    u = (0, a.WS)(r);
+                    d = (0, a.WS)(r);
                 if (null != t && null != i && t.launchId === i.launchId)
                     return {
                         ...c,
@@ -33,8 +33,8 @@ function c(e) {
                 if (l)
                     return {
                         ...c,
-                        disabled: !u,
-                        tooltip: u ? void 0 : s.intl.string(s.t.f41E1t)
+                        disabled: !d,
+                        tooltip: d ? void 0 : s.intl.string(s.t.f41E1t)
                     };
                 if (null != n && n !== o.Fw.CAN_JOIN) {
                     let e;

@@ -32,7 +32,7 @@ r.r(n),
     !(function (e) {
         (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps');
     })(i || (i = {}));
-let l = ['servers', 'apps', 'quests'],
+let l = ['apps', 'servers', 'quests'],
     u = ['servers', 'quests'],
     c = 'servers',
     d = 24,

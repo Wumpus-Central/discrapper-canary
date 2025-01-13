@@ -1,9 +1,9 @@
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(512722),
-    s = n.n(r),
+    r = n.n(l),
+    a = n(512722),
+    s = n.n(a),
     o = n(442837),
     c = n(481060),
     u = n(730749),
@@ -11,8 +11,8 @@ var l = n(120356),
     m = n(600164),
     f = n(750154),
     p = n(592125),
-    g = n(594174),
-    h = n(979651),
+    h = n(594174),
+    g = n(979651),
     v = n(374129),
     S = n(639351),
     I = n(503438),
@@ -31,18 +31,18 @@ var l = n(120356),
     P = n(981631),
     R = n(522832);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
-        W = (0, o.e7)([g.default], () => {
-            let e = g.default.getCurrentUser();
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: a, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
+        W = (0, o.e7)([h.default], () => {
+            let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        B = U === x.Y.STREAM_PREVIEW || null != r,
-        G = (0, I.Z)(t),
-        z = G || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        G = U === x.Y.STREAM_PREVIEW || null != a,
+        B = (0, I.Z)(t),
+        z = B || G ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        Y = (0, o.e7)([h.Z, p.Z], () => {
+        Y = (0, o.e7)([g.Z, p.Z], () => {
             var e;
-            return H ? p.Z.getChannel(null === (e = h.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         J = z === m.Z.Direction.VERTICAL;
     return (0, i.jsx)(m.Z, {
@@ -50,7 +50,7 @@ t.Z = (0, u.Z)((e) => {
         align: m.Z.Align.STRETCH,
         direction: z,
         wrap: J ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: a()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
+        className: r()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
         children: (() => {
             if ((0, _.Z)(t))
                 return (0, i.jsx)(
@@ -76,7 +76,7 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if (G) {
+            if (B) {
                 let e = (0, i.jsx)(
                         N.Z,
                         {
@@ -123,14 +123,14 @@ t.Z = (0, u.Z)((e) => {
                           e.channelId
                       );
             }
-            return B
+            return G
                 ? (0, i.jsx)(
                       j.Z,
                       {
                           isCurrentUser: W.id === l.id,
                           color: k,
                           look: D,
-                          applicationStream: r,
+                          applicationStream: a,
                           onAction: V
                       },
                       'watch-button'

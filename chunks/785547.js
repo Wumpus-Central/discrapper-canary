@@ -12,8 +12,8 @@ var i,
     o = n(192379),
     s = n(442837),
     c = n(692547),
-    u = n(481060),
-    d = n(58642),
+    d = n(481060),
+    u = n(58642),
     m = n(2052),
     h = n(710845),
     f = n(703656),
@@ -94,7 +94,7 @@ class P extends (r = o.Component) {
         return null != i ? i : null != t && t.type === S.vxO.UNINSTALLING ? 'uninstalling' : (0, x.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
-        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: r, isPlayShiny: l, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
+        let { libraryApplication: e, fullWidth: t, size: n, color: i, customDisabledColor: r, isPlayShiny: l, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: d } = this.props;
         return (0, a.jsx)(T.Z, {
             applicationId: e.id,
             libraryApplication: e,
@@ -106,7 +106,7 @@ class P extends (r = o.Component) {
             onDropdownOpen: o,
             onDropdownClose: s,
             analyticsListSort: c,
-            analyticsListIndex: u
+            analyticsListIndex: d
         });
     }
     renderDisabledButton(e, t) {
@@ -114,7 +114,7 @@ class P extends (r = o.Component) {
         return (0, a.jsxs)('div', {
             className: b.disabledButtonWrapper,
             children: [
-                (0, a.jsxs)(u.Button, {
+                (0, a.jsxs)(d.Button, {
                     className: n,
                     fullWidth: i,
                     size: r,
@@ -122,7 +122,7 @@ class P extends (r = o.Component) {
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()]
                 }),
-                (0, a.jsx)(u.Tooltip, {
+                (0, a.jsx)(d.Tooltip, {
                     text: t,
                     position: o,
                     children: (e) =>
@@ -139,10 +139,10 @@ class P extends (r = o.Component) {
         if (e) return null;
         let n = I.KJ(t);
         if (null == n) return null;
-        let i = n.type === S.vxO.UNINSTALLING ? u.Progress.INDETERMINATE : I.xI(Number(n.progress), Number(n.total));
-        return (0, a.jsx)(u.Progress, {
+        let i = n.type === S.vxO.UNINSTALLING ? d.Progress.INDETERMINATE : I.xI(Number(n.progress), Number(n.total));
+        return (0, a.jsx)(d.Progress, {
             percent: i,
-            size: u.Progress.Sizes.XSMALL,
+            size: d.Progress.Sizes.XSMALL,
             foregroundColor: n.paused ? c.Z.unsafe_rawColors.PRIMARY_500.css : c.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: c.Z.unsafe_rawColors.TRANSPARENT.css,
             className: b.progress
@@ -150,11 +150,11 @@ class P extends (r = o.Component) {
     }
     renderActionButton(e, t) {
         let { className: n, fullWidth: i, size: r, color: l, isCloudSyncing: o } = this.props;
-        return (0, a.jsxs)(u.Button, {
+        return (0, a.jsxs)(d.Button, {
             className: n,
             fullWidth: i,
             size: r,
-            color: null != l ? l : u.Button.Colors.GREEN,
+            color: null != l ? l : d.Button.Colors.GREEN,
             submitting: 'uninstalling' === e || o,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()]
@@ -183,7 +183,7 @@ class P extends (r = o.Component) {
             j(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
-                    await d.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, f.uL)(S.Z5c.APPLICATION_LIBRARY);
+                    await u.h(e.id, e.branchId, e.getFlags() & ~S.eHb.HIDDEN), (0, f.uL)(S.Z5c.APPLICATION_LIBRARY);
                 } catch (e) {
                     new h.Z('LibraryApplicationButton').error(e);
                 }
@@ -224,7 +224,7 @@ function L(e) {
 }
 j(P, 'defaultProps', {
     fullWidth: !1,
-    size: u.Button.Sizes.LARGE,
+    size: d.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'

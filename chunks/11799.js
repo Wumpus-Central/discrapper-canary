@@ -11,11 +11,11 @@ var i = n(192379),
     o = n(455199),
     s = n(833592),
     c = n(140155),
-    u = n(774807),
-    d = n(490897);
+    d = n(774807),
+    u = n(490897);
 let m = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: f } = e,
-            p = (0, r.e7)([u.Z], () => u.Z.shouldReload()),
+            p = (0, r.e7)([d.Z], () => d.Z.shouldReload()),
             _ = i.useRef(!1),
             [g, E] = i.useState(!1),
             {
@@ -39,7 +39,7 @@ let m = (e) => {
             }));
         i.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             i.useEffect(() => {
-                C && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+                C && t && (0, l.FT)(u.W.NOTIFICATION_CENTER);
             }, [t, C]);
         let b = (0, a.Z)();
         i.useEffect(

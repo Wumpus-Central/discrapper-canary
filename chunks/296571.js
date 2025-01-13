@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,10 +11,10 @@ var r = n(442837),
     o = n(739566),
     s = n(834129),
     c = n(388032),
-    u = n(798168);
-function d(e) {
+    d = n(798168);
+function u(e) {
     var t;
-    let { message: n, compact: d, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
+    let { message: n, compact: u, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
         _ = (0, o.ZP)(n),
         g = m(_),
         E = (0, r.e7)([a.Z], () => {
@@ -35,10 +35,10 @@ function d(e) {
         iconNode: (0, i.jsx)(l.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
-            className: u.icon
+            className: d.icon
         }),
         timestamp: n.timestamp,
-        compact: d,
+        compact: u,
         children: C
     });
 }

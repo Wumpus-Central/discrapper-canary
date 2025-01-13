@@ -47,11 +47,11 @@ let E = (e) => {
         })(t),
         P = (0, d.ZP)(),
         O = (0, o.wj)(P),
-        Z = O ? c.ButtonColors.WHITE : c.ButtonColors.BRAND,
-        B = (0, l.debounce)(() => {
+        M = O ? c.ButtonColors.WHITE : c.ButtonColors.BRAND,
+        Z = (0, l.debounce)(() => {
             g.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
-        M = () => {
+        B = () => {
             null != R.current && !N && ((R.current.currentTime = j.current), R.current.play());
         },
         y = () => {
@@ -83,10 +83,10 @@ let E = (e) => {
                         null != I &&
                         (0, i.jsx)(c.Button, {
                             look: c.ButtonLooks.OUTLINED,
-                            color: Z,
+                            color: M,
                             className: s()(x.whatsNewBoxButton, O ? x.whatsNewBoxButtonWhite : x.whatsNewBoxButtonBrand),
                             onClick: () => {
-                                B(), I();
+                                Z(), I();
                             },
                             children: h
                         })
@@ -128,8 +128,8 @@ let E = (e) => {
             [x.whatsNewBoxContainer]: !T,
             [x.compactBoxContainer]: T
         }),
-        onMouseEnter: M,
-        onFocus: M,
+        onMouseEnter: B,
+        onFocus: B,
         onBlur: y,
         onMouseLeave: y,
         children: L

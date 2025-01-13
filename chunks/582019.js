@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(709014);
-let r = {
+    r = n(709014);
+let a = {
         all: {
             name: 'all',
             start: 0,
@@ -33,11 +33,11 @@ let r = {
             play: t,
             Component: l.useCallback(
                 (t) =>
-                    (0, i.jsx)(a.L, {
+                    (0, i.jsx)(r.L, {
                         ...t,
                         src: () => n.e('66944').then(n.t.bind(n, 166174, 19)),
                         ref: e,
-                        markers: r
+                        markers: a
                     }),
                 []
             )

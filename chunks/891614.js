@@ -12,7 +12,7 @@ function o(e) {
     let { guildId: t, user: n, className: o } = e,
         s = (0, r.e7)([l.Z], () => !l.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, s),
-        u = (0, i.jsx)('foreignObject', {
+        d = (0, i.jsx)('foreignObject', {
             x: '30',
             y: '68',
             width: '56',
@@ -84,7 +84,7 @@ function o(e) {
                     d: 'M61.1485 21.3944C62.4818 21.3286 63.5224 20.5015 63.4728 19.547C63.4231 18.5925 62.302 17.872 60.9686 17.9378C59.6353 18.0035 58.5947 18.8306 58.6444 19.7851C58.694 20.7396 59.8152 21.4601 61.1485 21.3944Z',
                     fill: 'black'
                 }),
-                u
+                d
             ]
         })
     });

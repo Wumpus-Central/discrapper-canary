@@ -7,8 +7,8 @@ t.d(n, {
     }
 }),
     t(411104);
-var l = t(570140),
-    i = t(493683),
+var i = t(570140),
+    l = t(493683),
     r = t(957730),
     o = t(222677),
     a = t(995774),
@@ -22,25 +22,25 @@ let f = (e) => {
         return null == c.Z.getMessageForFile(n.id)
             ? (p.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
             : new Promise((e, t) => {
-                  let i = (r) => {
-                      r.file.id === n.id && (l.Z.unsubscribe('UPLOAD_COMPLETE', i), l.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === r.type ? e(r.messageRecord) : t(Error('Upload failed')));
+                  let l = (r) => {
+                      r.file.id === n.id && (i.Z.unsubscribe('UPLOAD_COMPLETE', l), i.Z.unsubscribe('UPLOAD_FAIL', l), 'UPLOAD_COMPLETE' === r.type ? e(r.messageRecord) : t(Error('Upload failed')));
                   };
-                  l.Z.subscribe('UPLOAD_COMPLETE', i), l.Z.subscribe('UPLOAD_FAIL', i);
+                  i.Z.subscribe('UPLOAD_COMPLETE', l), i.Z.subscribe('UPLOAD_FAIL', l);
               });
     },
     v = async function (e, n) {
-        var l;
-        let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        var i;
+        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             o = arguments.length > 3 ? arguments[3] : void 0,
             a = arguments.length > 4 ? arguments[4] : void 0,
             c = s.Z.getChannel(n);
-        if (((l = u.default.getToken()), r.ZP.parse(c, ''), i));
+        if (((i = u.default.getToken()), r.ZP.parse(c, ''), l));
         else {
             if (null == s.Z.getChannel(n)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(n));
             {
-                let l = t(966390).Z;
+                let i = t(966390).Z;
                 (e.description = o),
-                    await l.uploadFiles({
+                    await i.uploadFiles({
                         channelId: n,
                         uploads: [e],
                         draftType: d.d.ChannelMessage,
@@ -50,8 +50,8 @@ let f = (e) => {
         }
     },
     m = async (e) => {
-        let { file: n, reaction: t, user: l, altText: r, requireConfirmation: u = !1 } = e,
-            s = await i.Z.openPrivateChannel(l.id, !1, !1);
+        let { file: n, reaction: t, user: i, altText: r, requireConfirmation: u = !1 } = e,
+            s = await l.Z.openPrivateChannel(i.id, !1, !1);
         v(n, s, u, r);
         let d = await f(s);
         if (null != d) {
@@ -60,7 +60,7 @@ let f = (e) => {
         }
     },
     h = (e) => {
-        let { file: n, reply: t, channel: l, altText: i, requireConfirmation: o = !1 } = e,
-            a = r.ZP.parse(l, t);
-        return v(n, l.id, o, i, a);
+        let { file: n, reply: t, channel: i, altText: l, requireConfirmation: o = !1 } = e,
+            a = r.ZP.parse(i, t);
+        return v(n, i.id, o, l, a);
     };

@@ -41,8 +41,8 @@ function m(e) {
             [m]
         ),
         { search: p, query: x, results: g } = (0, d.Z)(b),
-        [y, C] = l.useState(h('')),
-        S = l.useCallback((e) => C(h(e)), [C]),
+        [y, S] = l.useState(h('')),
+        C = l.useCallback((e) => S(h(e)), [S]),
         { queryMode: v } = y,
         [E, Z] = l.useState(null != n ? n : []),
         N = l.useRef(n);
@@ -79,6 +79,6 @@ function m(e) {
                 }),
             [g, j, v, t, L, n, E, i, f, _]
         ),
-        updateSearchText: S
+        updateSearchText: C
     };
 }

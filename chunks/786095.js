@@ -14,8 +14,8 @@ var i = t(200651),
     u = t(85960),
     d = t(676317),
     c = t(65912),
-    g = t(556012),
-    m = t(572456),
+    m = t(556012),
+    g = t(572456),
     f = t(434404),
     h = t(981631),
     E = t(273504),
@@ -27,12 +27,12 @@ function p(e, n) {
         { isLoading: p, saveRule: x, errorMessage: Z } = (0, c.w)(),
         { createNewEditingRule: S } = (0, c.V)(),
         [j, T] = l.useState(!1),
-        [b, _] = (0, s.I2)(n),
-        { rulesByTriggerType: N, updateRule: A } = (0, s.pH)(n),
+        [N, _] = (0, s.I2)(n),
+        { rulesByTriggerType: b, updateRule: A } = (0, s.pH)(n),
         P = l.useMemo(() => {
             var e;
-            return null !== (e = N[M]) && void 0 !== e ? e : [];
-        }, [N]),
+            return null !== (e = b[M]) && void 0 !== e ? e : [];
+        }, [b]),
         C = 0 === P.length,
         y = t > P.length && !C;
     if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
@@ -43,7 +43,7 @@ function p(e, n) {
     } catch (e) {
         return null;
     }
-    let R = () => {
+    let O = () => {
             if (null != n)
                 (0, a.Zy)(),
                     f.Z.open(n, h.pNK.GUILD_AUTOMOD),
@@ -57,9 +57,9 @@ function p(e, n) {
                         });
                     }, 400);
         },
-        O = async (n) => {
+        R = async (n) => {
             var t, i;
-            if (((0, a.Zy)(), !(await (0, m.XN)(n.name, e)))) return;
+            if (((0, a.Zy)(), !(await (0, g.XN)(n.name, e)))) return;
             let l = {
                 ...n,
                 triggerMetadata: {
@@ -76,14 +76,14 @@ function p(e, n) {
             })
         });
     return (
-        !b &&
+        !N &&
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
                     C &&
                         (0, i.jsx)(r.MenuItem, {
                             id: 'add-first-rule',
                             label: I.intl.string(I.t.f72Zqa),
-                            action: R,
+                            action: O,
                             disabled: p
                         }),
                     P.map((e) => {
@@ -93,7 +93,7 @@ function p(e, n) {
                                 return t === n;
                             });
                             if (null == i) return n;
-                            let l = (0, g.c)(t, i);
+                            let l = (0, m.c)(t, i);
                             return (n += ', '.concat(null == l ? void 0 : l.headerText));
                         }, '');
                         return (0, i.jsx)(
@@ -110,7 +110,7 @@ function p(e, n) {
                                 group: 'automod-rule-selection',
                                 checked: !1,
                                 disabled: p,
-                                action: () => O(e)
+                                action: () => R(e)
                             },
                             e.id
                         );
@@ -122,7 +122,7 @@ function p(e, n) {
                                 (0, i.jsx)(r.MenuItem, {
                                     id: 'add-another-rule',
                                     label: I.intl.string(I.t['0K5jDA']),
-                                    action: R,
+                                    action: O,
                                     disabled: p
                                 })
                             ]

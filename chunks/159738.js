@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(5148),
     s = n(299608),
     c = n.n(s),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(603263),
     h = n(461745),
     f = n(349033),
@@ -109,15 +109,15 @@ class k extends r.PureComponent {
             o = S.Sq(t).length > 0;
         return null == e
             ? null
-            : (0, i.jsx)(d.Popout, {
+            : (0, i.jsx)(u.Popout, {
                   renderPopout: this.renderPopout,
                   position: 'bottom',
-                  animation: d.Popout.Animation.NONE,
+                  animation: u.Popout.Animation.NONE,
                   shouldShow: l,
                   autoInvert: !1,
                   children: (t, s) => {
                       var c;
-                      let { isShown: u } = s;
+                      let { isShown: d } = s;
                       return (0, i.jsx)('div', {
                           className: r,
                           children: (0, i.jsx)('div', {
@@ -125,7 +125,7 @@ class k extends r.PureComponent {
                                   [L.open]: o || l,
                                   [L.focused]: l
                               }),
-                              children: (0, i.jsx)(d.FocusRing, {
+                              children: (0, i.jsx)(u.FocusRing, {
                                   focusTarget: { current: null === (c = this._editorRef) || void 0 === c ? void 0 : c.editor },
                                   ringTarget: this._searchBarRef,
                                   children: (0, i.jsxs)(
@@ -134,7 +134,7 @@ class k extends r.PureComponent {
                                           className: L.searchBar,
                                           ref: this._searchBarRef,
                                           children: [
-                                              this.renderInput(u),
+                                              this.renderInput(d),
                                               (0, i.jsx)(h.BK, {
                                                   onClear: this.handleClearSearch,
                                                   hasContent: o || n,
@@ -190,7 +190,7 @@ class k extends r.PureComponent {
                         n = A.$G(e);
                     for (let t = 0; t < e.length; t++) !A.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(n).length) return !1;
-                    M(t, n, i, !!r), d.AccessibilityAnnouncer.announce(P.intl.string(P.t.pKCxWF)), this.onBlur();
+                    M(t, n, i, !!r), u.AccessibilityAnnouncer.announce(P.intl.string(P.t.pKCxWF)), this.onBlur();
                 }
                 return !0;
             }),
@@ -323,7 +323,7 @@ class k extends r.PureComponent {
             A.WU();
     }
 }
-t.Z = u.ZP.connectStores([g.Z, N.Z], () => {
+t.Z = d.ZP.connectStores([g.Z, N.Z], () => {
     var e;
     let t = N.Z.getCurrentSearchId(),
         n = N.Z.getSearchType(),

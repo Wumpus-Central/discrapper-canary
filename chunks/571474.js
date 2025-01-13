@@ -5,14 +5,14 @@ var i,
     o = n(442837),
     s = n(570140),
     c = n(70956),
-    u = n(709054),
-    d = n(314897),
+    d = n(709054),
+    u = n(314897),
     m = n(699516);
 let h = 180 * c.Z.Millis.DAY,
     f = !1;
 class p extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, d.default);
+        this.waitFor(m.Z, u.default);
     }
     isEligible() {
         return f;
@@ -29,6 +29,6 @@ class p extends (a = o.ZP.Store) {
         : (i[r] = l),
     (t.Z = new p(s.Z, {
         CONNECTION_OPEN: function () {
-            return f !== (f = m.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - h);
+            return f !== (f = m.Z.getFriendIDs().length >= 10 && d.default.extractTimestamp(u.default.getId()) < Date.now() - h);
         }
     }));

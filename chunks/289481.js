@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(208404),
     s = n(442837),
     c = n(481060),
-    u = n(570140),
-    d = n(45114),
+    d = n(570140),
+    u = n(45114),
     m = n(367907),
     h = n(717680),
     f = n(703656),
@@ -23,14 +23,14 @@ var i = n(200651),
 let T = r.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         l = r.useRef(null),
-        [[a, s], u] = r.useState([0, 0]),
-        d = t.deleted && a > 0;
+        [[a, s], d] = r.useState([0, 0]),
+        u = t.deleted && a > 0;
     if (t.deleted && 0 === a && null != l.current) {
         let e = l.current.offsetHeight,
             t = l.current.offsetTop,
             n = l.current.parentElement.scrollTop,
             i = n > t ? e - (n - t) : e;
-        u([e, e - i]);
+        d([e, e - i]);
     }
     let { opacity: m, size: h } = (0, c.useSpring)(
             {
@@ -39,8 +39,8 @@ let T = r.memo(function (e) {
                     friction: 18,
                     tension: 200
                 },
-                opacity: d ? 0 : 1,
-                size: d ? 0 : 1,
+                opacity: u ? 0 : 1,
+                size: u ? 0 : 1,
                 onRest: () => {
                     n(t.channelId);
                 }
@@ -50,7 +50,7 @@ let T = r.memo(function (e) {
         f = {
             opacity: m,
             height: h.to((e) =>
-                d
+                u
                     ? (function (e, t, n) {
                           return t + (e - t) * n;
                       })(a, s, e)
@@ -75,8 +75,8 @@ let S = r.memo(function (e) {
                 !t.collapsed &&
                 'messages' === t.type &&
                 0 === t.messages.length &&
-                u.Z.wait(() => {
-                    (0, d.In)(t.channelId, !0), l(t.channelId);
+                d.Z.wait(() => {
+                    (0, u.In)(t.channelId, !0), l(t.channelId);
                 });
         }),
         null == o || !t.hasLoadedAnything)

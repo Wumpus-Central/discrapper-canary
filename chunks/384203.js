@@ -13,13 +13,13 @@ var r = n(592125),
     s = n(981631);
 function c(e) {
     let { code: t, messageData: n } = e,
-        [c, u] = t.split('/'),
-        d = r.Z.getChannel(u),
+        [c, d] = t.split('/'),
+        u = r.Z.getChannel(d),
         m = l.Z.getGuild(c);
-    return null != d && d.isGuildVocal() && null != m && a.Z.can(s.Plq.VIEW_CHANNEL, d) && a.Z.can(s.Plq.CONNECT, d)
+    return null != u && u.isGuildVocal() && null != m && a.Z.can(s.Plq.VIEW_CHANNEL, u) && a.Z.can(s.Plq.CONNECT, u)
         ? (0, i.jsx)(o.Z, {
               guild: m,
-              channel: d,
+              channel: u,
               messageData: n
           })
         : null;

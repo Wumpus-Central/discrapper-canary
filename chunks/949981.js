@@ -13,8 +13,8 @@ var r = n(512722),
     o = n(955415),
     s = n(131704),
     c = n(592125),
-    u = n(594174),
-    d = n(823379),
+    d = n(594174),
+    u = n(823379),
     m = n(358595),
     h = n(981631),
     f = n(388032),
@@ -32,10 +32,10 @@ function _(e) {
         (x = (0, s.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
         t = x.recipients.reduce((e, t) => {
-            let n = u.default.getUser(t);
+            let n = d.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = u.default.getCurrentUser();
+        let e = d.default.getCurrentUser();
         N && null != e && t.push(e);
     }
     let v = x.name;
@@ -43,7 +43,7 @@ function _(e) {
         (v =
             t.length > 0
                 ? t
-                      .filter(d.lm)
+                      .filter(u.lm)
                       .map((e) => e.username)
                       .join(', ')
                 : f.intl.string(f.t.LJpTRE));

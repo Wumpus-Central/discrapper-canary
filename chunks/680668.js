@@ -12,8 +12,8 @@ var r = n(533800),
     o = n(955415),
     s = n(131704),
     c = n(630388),
-    u = n(267642),
-    d = n(411198),
+    d = n(267642),
+    u = n(411198),
     m = n(277707),
     h = n(358595),
     f = n(981631),
@@ -37,8 +37,8 @@ function g(e) {
         B = null !== (g = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
     if (null == v) {
         if (null == T.guild) return (0, i.jsx)(h.Z, {});
-        v = d.Qs(T.guild);
-        let e = (0, u.rF)(T.guild.premium_subscription_count, T.guild.id);
+        v = u.Qs(T.guild);
+        let e = (0, d.rF)(T.guild.premium_subscription_count, T.guild.id);
         v.premiumTier = e;
     }
     let U = y ? x : N,

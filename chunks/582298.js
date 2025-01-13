@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,10 +11,10 @@ var r = n(481060),
     o = n(834129),
     s = n(981631),
     c = n(388032),
-    u = n(543170);
-function d(e) {
+    d = n(543170);
+function u(e) {
     let t,
-        { compact: d, isOwner: m, channel: h } = e,
+        { compact: u, isOwner: m, channel: h } = e,
         f = () => {
             let e = l.Z.getGuild(h.getGuildId());
             null != e &&
@@ -34,40 +34,40 @@ function d(e) {
             (0, i.jsx)(
                 r.Anchor,
                 {
-                    className: u.inviteLink,
+                    className: d.inviteLink,
                     onClick: f,
                     children: e
                 },
                 t
             );
     return (
-        (t = d
+        (t = u
             ? (0, i.jsx)('div', {
-                  className: u.inviteContent,
+                  className: d.inviteContent,
                   children: m ? c.intl.format(c.t['9OheEh'], { inviteHook: p }) : c.intl.format(c.t['7hv6yM'], { inviteHook: p })
               })
             : (0, i.jsxs)('div', {
-                  className: u.content,
+                  className: d.content,
                   children: [
                       (0, i.jsx)('div', {
-                          className: u.inviteHeader,
+                          className: d.inviteHeader,
                           children: m ? c.intl.string(c.t['Ry1T//']) : c.intl.string(c.t.ppUFLy)
                       }),
                       (0, i.jsx)('div', {
-                          className: u.inviteContent,
+                          className: d.inviteContent,
                           children: m ? c.intl.string(c.t.kLfkNj) : c.intl.string(c.t.gRHGFB)
                       }),
                       (0, i.jsx)(r.Button, {
                           onClick: f,
                           size: r.Button.Sizes.SMALL,
-                          className: u.inviteButton,
+                          className: d.inviteButton,
                           children: c.intl.string(c.t.K1BAQ0)
                       })
                   ]
               })),
         (0, i.jsx)(o.Z, {
-            className: d ? u.compact : u.inviteContent,
-            iconNode: d
+            className: u ? d.compact : d.inviteContent,
+            iconNode: u
                 ? null
                 : (0, i.jsx)('img', {
                       alt: '',
@@ -75,8 +75,8 @@ function d(e) {
                       width: 40,
                       height: 40
                   }),
-            iconContainerClassName: u.iconContainer,
-            compact: d,
+            iconContainerClassName: d.iconContainer,
+            compact: u,
             children: t
         })
     );

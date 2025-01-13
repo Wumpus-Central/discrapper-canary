@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(846519),
-    r = n(388032);
+    r = n(846519),
+    a = n(388032);
 function s(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
@@ -50,21 +50,21 @@ function o(e) {
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                { hours: l, minutes: a, seconds: s } = this.state,
+                { hours: l, minutes: r, seconds: s } = this.state,
                 o = {
                     hours: this.renderTime(l, !0),
-                    minutes: this.renderTime(a),
+                    minutes: this.renderTime(r),
                     seconds: this.renderTime(s)
                 };
             return null != t.end
                 ? (0, i.jsx)(e, {
                       ...n,
-                      message: r.intl.formatToPlainString(r.t['I/J7vL'], o)
+                      message: a.intl.formatToPlainString(a.t['I/J7vL'], o)
                   })
                 : null != t.start
                   ? (0, i.jsx)(e, {
                         ...n,
-                        message: r.intl.formatToPlainString(r.t.M9Fexc, o)
+                        message: a.intl.formatToPlainString(a.t.M9Fexc, o)
                     })
                   : null;
         }
@@ -81,7 +81,7 @@ function o(e) {
                           writable: !0
                       })
                     : (t[n] = i),
-                (this._interval = new a.Xp()),
+                (this._interval = new r.Xp()),
                 (this.state = { ...this.getUpdatedTime() });
         }
     };

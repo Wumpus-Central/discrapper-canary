@@ -24,7 +24,7 @@ async function g(e, n) {
             type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
             nonce: '',
             applicationId: e,
-            channelId: n,
+            channelId: null != n ? n : null,
             error: new s.Hx(r)
         });
     }
@@ -62,7 +62,7 @@ async function v(e) {
     let { application: n, applicationId: r, channel: i, user: a } = e;
     if (null == a.nsfwAllowed) {
         var s, o;
-        let e = null != n ? n : await g(r, i.id);
+        let e = null != n ? n : await g(r, null == i ? void 0 : i.id);
         if (
             null == e ||
             (null !== (o = null === (s = e.embeddedActivityConfig) || void 0 === s ? void 0 : s.requires_age_gate) &&
@@ -71,7 +71,7 @@ async function v(e) {
                 !(await new Promise((n) => {
                     (0, c.V)({
                         application: e,
-                        channelId: i.id,
+                        channelId: null == i ? void 0 : i.id,
                         onAgree: () => n(!0),
                         onDisagree: () => n(!1)
                     });
@@ -83,7 +83,7 @@ async function v(e) {
 }
 async function I(e) {
     let { application: n, applicationId: r, channel: i } = e,
-        a = null != n ? n : await g(r, i.id);
+        a = null != n ? n : await g(r, null == i ? void 0 : i.id);
     return (
         null != a &&
         (!!((0, l.yE)(a.flags, m.udG.EMBEDDED_RELEASED) || a.isVerified || u.ZP.hasActivityEverBeenLaunched(r)) ||

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,8 +11,8 @@ var r = n(481060),
     o = n(834129),
     s = n(981631),
     c = n(306136);
-function u(e) {
-    let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: u, channel: d } = e;
+function d(e) {
+    let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: d, channel: u } = e;
     return (0, i.jsx)(o.Z, {
         contentClassName: c.messageContentContainer,
         iconContainerClassName: c.iconContainer,
@@ -21,9 +21,9 @@ function u(e) {
             giftIntentType: t,
             premiumGiftIntentCardType: l.U.SYSTEM_MESSAGE,
             recipientUser: n,
-            analyticsPage: (0, a.mE)(d),
+            analyticsPage: (0, a.mE)(u),
             analyticsSection: s.jXE.CHANNEL,
-            giftIntentSecondaryAction: u
+            giftIntentSecondaryAction: d
         })
     });
 }

@@ -5,13 +5,13 @@ var i,
     o = n(442837),
     s = n(570140);
 let c = !1;
-class u extends (a = o.ZP.Store) {
+class d extends (a = o.ZP.Store) {
     get blockedByProxy() {
         return c;
     }
 }
 (l = 'ProxyBlockStore'),
-    (r = 'displayName') in (i = u)
+    (r = 'displayName') in (i = d)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -19,7 +19,7 @@ class u extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new u(s.Z, {
+    (t.Z = new d(s.Z, {
         PROXY_BLOCKED_REQUEST: function (e) {
             c = !0;
         }

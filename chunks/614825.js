@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(873546),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(568836),
     h = n(100527),
     f = n(906732),
@@ -52,7 +52,7 @@ class b extends r.Component {
                 onClick: () => {
                     this.handleStartTrial(r, a);
                 },
-                color: d.Button.Colors.BRAND
+                color: u.Button.Colors.BRAND
             },
             s = l.id !== r.user_id || (0, I.I5)(l) || !l.verified || (0, N.B)(r),
             c = this.renderExpirationDate(e, t, n);
@@ -62,9 +62,9 @@ class b extends r.Component {
                 className: A.buttonContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(d.Button, {
+                        children: (0, i.jsx)(u.Button, {
                             ...o,
-                            size: d.Button.Sizes.SMALL,
+                            size: u.Button.Sizes.SMALL,
                             onClick: () => {
                                 (0, p.Z)({
                                     initialPlanId: null,
@@ -117,7 +117,7 @@ class b extends r.Component {
                 (0, i.jsxs)('div', {
                     className: A.description,
                     children: [
-                        (0, i.jsx)(d.H, {
+                        (0, i.jsx)(u.H, {
                             className: A.title,
                             children: this.renderTitle(n, r, l)
                         }),
@@ -159,7 +159,7 @@ class b extends r.Component {
 }
 function j(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
-        { trialOffer: r, isResolving: l } = (0, u.cj)(
+        { trialOffer: r, isResolving: l } = (0, d.cj)(
             [x.Z],
             () => ({
                 trialOffer: n ? x.Z.getRelevantUserTrialOffer(t) : null,
@@ -168,12 +168,12 @@ function j(e) {
             [n, t]
         ),
         a = _.default.getCurrentUser(),
-        o = (0, u.e7)([_.default], () => null != r && (0, I.I5)(void 0 !== a && r.user_id === a.id ? a : _.default.getUser(r.user_id))),
-        s = (0, u.e7)([g.ZP], () => {
+        o = (0, d.e7)([_.default], () => null != r && (0, I.I5)(void 0 !== a && r.user_id === a.id ? a : _.default.getUser(r.user_id))),
+        s = (0, d.e7)([g.ZP], () => {
             var e;
             return o ? (null === (e = g.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: d } = (0, f.ZP)(h.Z.SHARE_NITRO_EMBED);
+        { analyticsLocations: u } = (0, f.ZP)(h.Z.SHARE_NITRO_EMBED);
     return l
         ? (0, i.jsx)(m.OR, { isHorizontal: !c.tq })
         : n && null != r && void 0 !== a
@@ -182,7 +182,7 @@ function j(e) {
                 currentUser: a,
                 recipientHasNitro: o,
                 trialEndsAt: s,
-                analyticsLocations: d,
+                analyticsLocations: u,
                 ...e
             })
           : (0, i.jsx)('div', {

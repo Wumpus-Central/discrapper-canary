@@ -10,12 +10,12 @@ var i = n(200651),
     o = n(430824),
     s = n(630388),
     c = n(35125),
-    u = n(523361),
-    d = n(981631);
+    d = n(523361),
+    u = n(981631);
 function m(e) {
     var t, n;
     let { channel: m, message: h } = e,
-        f = null !== (n = null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, u.Md)() : (0, u.Q8)(),
+        f = null !== (n = null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, d.Md)() : (0, d.Q8)(),
         p = m.guild_id,
         _ = (0, l.e7)(
             [o.Z],
@@ -25,7 +25,7 @@ function m(e) {
             },
             [p]
         ),
-        g = null != _ && (0, s.yE)(_, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
+        g = null != _ && (0, s.yE)(_, u.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
         E = r.useMemo(() => (0, c._i)(m, h), [m, h]);
     return g
         ? null
@@ -33,8 +33,8 @@ function m(e) {
               channel: m,
               message: h,
               buttonLabels: f,
-              stickers: u.HG,
-              event: d.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
+              stickers: d.HG,
+              event: u.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
               eventProperties: E
           });
 }

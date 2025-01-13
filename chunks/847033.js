@@ -15,8 +15,8 @@ var i = n(200651),
     o = n(399606),
     s = n(704215),
     c = n(367907),
-    u = n(605236),
-    d = n(584825),
+    d = n(605236),
+    u = n(584825),
     m = n(994592),
     h = n(160404),
     f = n(703656),
@@ -43,7 +43,7 @@ function A(e) {
         j = (0, E.RF)(a, 'guild_shop_page'),
         R = (null == S ? void 0 : S.hasFeature(v.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         Z = (0, m.mY)(null == S ? void 0 : S.id),
-        P = null === (t = (0, d.YB)(a)) || void 0 === t ? void 0 : t.server_shop_tab_order,
+        P = null === (t = (0, u.YB)(a)) || void 0 === t ? void 0 : t.server_shop_tab_order,
         L = [],
         y = I.y.GUILD_SHOP_FULL_PREVIEW;
     A || (R && Z) ? (L.push(P === x.a3.PRODUCTS_FIRST ? I.y.GUILD_PRODUCTS : I.y.GUILD_ROLE_SUBSCRIPTIONS), L.push(P === x.a3.PRODUCTS_FIRST ? I.y.GUILD_ROLE_SUBSCRIPTIONS : I.y.GUILD_PRODUCTS), (y = L[0])) : R && !Z ? (L.push(I.y.GUILD_PRODUCTS), (y = I.y.GUILD_PRODUCTS)) : !R && Z && (L.push(I.y.GUILD_ROLE_SUBSCRIPTIONS), (y = I.y.GUILD_ROLE_SUBSCRIPTIONS), b && L.push(I.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : y);
@@ -60,7 +60,7 @@ function A(e) {
                 categoryTabs: L,
                 isPhantomPreview: k,
                 handlePreviewDismiss: (e) => {
-                    (0, u.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW);
+                    (0, d.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW);
                     let t = { ...(0, c.hH)(a) };
                     if (O === I.y.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), M(I.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = N.mz.DISMISS_TAB_PREVIEW);
                     else {

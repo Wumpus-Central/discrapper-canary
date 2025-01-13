@@ -1,8 +1,8 @@
 n(47120), n(724458);
 var i,
     l,
-    a,
     r,
+    a,
     s = n(442837),
     o = n(46973),
     c = n(570140),
@@ -11,8 +11,8 @@ var i,
     m = n(5192),
     f = n(592125),
     p = n(19780),
-    g = n(594174),
-    h = n(979651),
+    h = n(594174),
+    g = n(979651),
     v = n(938475),
     S = n(981631),
     I = n(354459);
@@ -26,7 +26,7 @@ function C(e, t, n) {
         }),
         l = (0, v.PH)(i, null != t ? t : S.ME, e.id);
     _.set(e.id, l);
-    let a = {
+    let r = {
         type: I.fO.USER,
         user: e,
         id: e.id,
@@ -40,7 +40,7 @@ function C(e, t, n) {
         userNick: m.ZP.getName(t, n, e),
         localVideoDisabled: !1
     };
-    x.set(e.id, a);
+    x.set(e.id, r);
 }
 function Z(e) {
     let t = _.delete(e),
@@ -56,11 +56,11 @@ function y() {
         i = !1;
     return (
         E.forEach((e) => {
-            if (null != h.Z.getVoiceStateForChannel(t, e)) {
+            if (null != g.Z.getVoiceStateForChannel(t, e)) {
                 E.delete(e);
                 return;
             }
-            let l = g.default.getUser(e);
+            let l = h.default.getUser(e);
             null != l && ((i = !0), E.delete(e), C(l, n, t));
         }),
         i
@@ -71,7 +71,7 @@ function b() {
 }
 class T extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, g.default, f.Z, p.Z), this.syncWith([g.default], y);
+        this.waitFor(g.Z, h.default, f.Z, p.Z), this.syncWith([h.default], y);
     }
     get desyncedVoiceStatesCount() {
         return _.size();
@@ -86,15 +86,15 @@ class T extends (i = s.ZP.Store) {
         return x.values();
     }
 }
-(r = 'RTCConnectionDesyncStore'),
-    (a = 'displayName') in (l = T)
-        ? Object.defineProperty(l, a, {
-              value: r,
+(a = 'RTCConnectionDesyncStore'),
+    (r = 'displayName') in (l = T)
+        ? Object.defineProperty(l, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = r),
+        : (l[r] = a),
     (t.Z = new T(c.Z, {
         CONNECTION_OPEN: function () {
             b();
@@ -121,8 +121,8 @@ class T extends (i = s.ZP.Store) {
             return (
                 l === o.Yn.DEFAULT &&
                 t.reduce((e, t) => {
-                    if (null != h.Z.getVoiceStateForChannel(i, t)) return e;
-                    let l = g.default.getUser(t);
+                    if (null != g.Z.getVoiceStateForChannel(i, t)) return e;
+                    let l = h.default.getUser(t);
                     return null == l ? (E.add(t), e) : (C(l, n, i), !0);
                 }, !1)
             );

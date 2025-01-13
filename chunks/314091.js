@@ -6,14 +6,14 @@ n.d(t, {
         return p;
     },
     xC: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
 var i = n(866442),
     l = n(503438),
-    a = n(420660),
-    r = n(168631),
+    r = n(420660),
+    a = n(168631),
     s = n(621853),
     o = n(981631),
     c = n(388032);
@@ -47,15 +47,15 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     p = (e, t) => {
         var n;
         let l = s.Z.getUserProfile(e.id),
-            [a, o] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
-            c = (0, r.V3)(a),
+            [r, o] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
+            c = (0, a.V3)(r),
             u = null != o ? (0, i.Rf)(o) : t;
         return {
             color: u,
             theme: u === t ? 'dark' : c
         };
     },
-    g = (e, t) =>
+    h = (e, t) =>
         (0, l.Z)(t)
             ? c.intl.formatToPlainString(c.t.Xuqn4e, {
                   username: e.username,
@@ -77,7 +77,7 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
                         username: e.username,
                         activity: t.name
                     })
-                  : (0, a.Z)(t) || t.type === o.IIU.STREAMING
+                  : (0, r.Z)(t) || t.type === o.IIU.STREAMING
                     ? c.intl.formatToPlainString(c.t.wqU7Wl, {
                           username: e.username,
                           activity: t.name

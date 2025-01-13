@@ -1,8 +1,8 @@
 n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(724458);
 var i,
     l,
-    a,
     r,
+    a,
     s = n(442837),
     o = n(46973),
     c = n(570140),
@@ -11,8 +11,8 @@ var i,
     m = n(19780),
     f = n(959457),
     p = n(630759),
-    g = n(729303),
-    h = n(651941),
+    h = n(729303),
+    g = n(651941),
     v = n(981631);
 let S = new Map(),
     I = new Map(),
@@ -46,11 +46,11 @@ function Z(e) {
             let t = m.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
-                i = h.Z.isKeyVerified(e, n) || g.Z.isKeyVerified(e, n),
+                i = g.Z.isKeyVerified(e, n) || h.Z.isKeyVerified(e, n),
                 l = (0, p.UB)(e, [m.Z, f.Z]),
-                a = i && !l,
-                r = a !== S.get(e);
-            return S.set(e, a), r;
+                r = i && !l,
+                a = r !== S.get(e);
+            return S.set(e, r), a;
         })(t),
         i = E(),
         l = C();
@@ -61,7 +61,7 @@ function y() {
 }
 class b extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, h.Z, m.Z, f.Z);
+        this.waitFor(h.Z, g.Z, m.Z, f.Z);
     }
     isCallVerified() {
         return _;
@@ -73,15 +73,15 @@ class b extends (i = s.ZP.Store) {
         return S.get(e);
     }
 }
-(r = 'SecureFramesVerifiedStore'),
-    (a = 'displayName') in (l = b)
-        ? Object.defineProperty(l, a, {
-              value: r,
+(a = 'SecureFramesVerifiedStore'),
+    (r = 'displayName') in (l = b)
+        ? Object.defineProperty(l, r, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = r),
+        : (l[r] = a),
     (t.Z = new b(c.Z, {
         CONNECTION_OPEN: y,
         VOICE_CHANNEL_SELECT: function (e) {
@@ -105,8 +105,8 @@ class b extends (i = s.ZP.Store) {
                 n = d.default.getId(),
                 i = t.reduce((e, t) => (n === t ? e : !!Z({ userId: t }) || e), !1),
                 l = E(),
-                a = C();
-            return i || l || a;
+                r = C();
+            return i || l || r;
         },
         SECURE_FRAMES_TRANSIENT_KEY_CREATE: Z,
         SECURE_FRAMES_TRANSIENT_KEY_DELETE: Z,
