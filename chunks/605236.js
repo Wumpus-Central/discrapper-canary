@@ -8,6 +8,9 @@ r.d(n, {
     H4: function () {
         return A;
     },
+    Ow: function () {
+        return x;
+    },
     kk: function () {
         return C;
     },
@@ -91,7 +94,7 @@ function N(e, n) {
     };
 }
 function C(e, n, r) {
-    if (!((0, E.cI)(e) || m.Z.hasUserHitDCCap(e) || w(e)) && !r)
+    if (!((0, E.cI)(e) || m.Z.hasUserHitDCCap(e) || P(e)) && !r)
         o.Z.dispatch({
             type: 'DCF_EVENT_LOGGED',
             eventType: _.D.DC_SHOW_REQUEST,
@@ -119,7 +122,7 @@ function C(e, n, r) {
 }
 function R(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((0, E.cI)(e) || n.forceTrack) && x(e, n), (0, p.Vr)(e);
+    ((0, E.cI)(e) || n.forceTrack) && w(e, n), (0, p.Vr)(e);
 }
 function O(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -140,7 +143,11 @@ async function L(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     R(e, r), await (0, u.Bn)(e, n), O(e, r);
 }
-function x(e, n) {
+async function x(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    R(e, n), await (0, u.z2)(e), O(e, n);
+}
+function w(e, n) {
     var r;
     let [i] = (0, E.Aq)(),
         a = m.Z.getRenderedAtTimestamp(e),
@@ -157,7 +164,7 @@ function x(e, n) {
         version: null == n ? void 0 : n.version
     });
 }
-function w(e) {
+function P(e) {
     let n = g.$.has(e),
         { enabled: r } = l.Z.getCurrentConfig({ location: 'isUserSubjectToDCFHoldout' }, { autoTrackExposure: !n });
     return r && !n;

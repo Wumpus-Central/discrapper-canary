@@ -6,9 +6,12 @@ r.d(n, {
         return d;
     },
     Xf: function () {
-        return _;
+        return h;
     },
     ZP: function () {
+        return _;
+    },
+    bf: function () {
         return f;
     }
 });
@@ -31,7 +34,13 @@ function d(e, n, r) {
         [c, d] = (0, l.EM)(e, n, r, a);
     return (0, u.A)(c, d, i), [c, d];
 }
-function f(e) {
+function f(e, n, r) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        a = (0, s.e7)([o.Z], () => !!__OVERLAY__ && o.Z.isInstanceLocked()),
+        [c, d] = (0, l.Tt)(e, n, r, a);
+    return (0, u.A)(c, d, i), [c, d];
+}
+function _(e) {
     let { contentTypes: n, children: r, groupName: i, bypassAutoDismiss: s } = e,
         [o, l] = c(n, i, s);
     return (0, a.jsx)(a.Fragment, {
@@ -41,7 +50,7 @@ function f(e) {
         })
     });
 }
-function _(e) {
+function h(e) {
     let { contentType: n, latestVersion: r, groupName: i, bypassAutoDismiss: s, children: o } = e,
         [c, d] = (0, l.EM)(n, r, i);
     return (

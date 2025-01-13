@@ -10,7 +10,7 @@ var r = n(120356),
     l = n.n(r),
     a = n(704215),
     s = n(927359),
-    o = n(243778),
+    o = n(706140),
     c = n(331595),
     d = n(823188),
     u = n(664358);
@@ -77,15 +77,18 @@ function p(e) {
     });
 }
 function g(e) {
-    let { className: t, endsAt: n, messageStyle: r, upperCase: c, showSparkles: g, currentEntitlementId: f } = e,
-        [_] = (0, o.XR)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(f)),
-        E = (0, s.Z)(n, r);
+    let { className: t, startsAt: n, endsAt: r, messageStyle: c, upperCase: g, showSparkles: f } = e,
+        [_] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
+            showAfterTimestamp: n.valueOf(),
+            cooldownDurationMs: 0
+        }),
+        E = (0, s.Z)(r, c);
     return (
-        c && (E = E.toUpperCase()),
+        g && (E = E.toUpperCase()),
         (0, i.jsxs)('div', {
             className: l()(t, u.countDown),
             children: [
-                g
+                f
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(p, {

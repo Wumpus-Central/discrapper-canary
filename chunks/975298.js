@@ -29,6 +29,7 @@ function b() {
         a = (0, d.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
         [o, u] = s.useState({
             fractionalState: T.a$.NONE,
+            startsAt: c()(0),
             endsAt: c()(0),
             currentEntitlementId: '',
             unactivatedUnits: []
@@ -44,6 +45,7 @@ function b() {
                         ? e
                         : {
                               fractionalState: T.a$.NONE,
+                              startsAt: c()(0),
                               endsAt: c()(0),
                               currentEntitlementId: '',
                               unactivatedUnits: []
@@ -52,13 +54,14 @@ function b() {
                 return;
             }
             let e = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, n) => ((l()(null != e.endsAt && null != n.endsAt, 'endsAt should not be null'), e.endsAt < n.endsAt) ? -1 : e.endsAt > n.endsAt ? 1 : 0));
-            if ((e.reverse(), e.length !== r.length || null == e[0].endsAt)) {
+            if ((e.reverse(), e.length !== r.length || null == e[0].startsAt || null == e[0].endsAt)) {
                 let e = Array.from(r.values()).map((e) => e.id),
                     n = 'fractional redemption entitlements should have startsAt/endsAt';
                 throw ((0, g.g9)(n, { extra: { entitlementIds: e } }), Error(n));
             }
             u({
                 fractionalState: null == a || I.JwP.INACTIVE.has(a.status) || a.isBoostOnly ? T.a$.FP_ONLY : T.a$.FP_SUB_PAUSED,
+                startsAt: c()(e[0].startsAt),
                 endsAt: c()((0, v.N1)(e[0].endsAt, i)),
                 currentEntitlementId: e.length > 0 ? e[0].id : '',
                 unactivatedUnits: i

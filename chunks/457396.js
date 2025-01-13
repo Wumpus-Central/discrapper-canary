@@ -30,8 +30,8 @@ var a = n(91192),
     v = n(650032),
     S = n(767870),
     T = n(104494),
-    b = n(639119),
-    A = n(655525),
+    A = n(639119),
+    b = n(655525),
     Z = n(314684),
     x = n(52188),
     L = n(346497),
@@ -53,7 +53,7 @@ let H = (e) => {
         let { selected: t } = e,
             n = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             i = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
-            r = (0, b.N)(),
+            r = (0, A.N)(),
             l = (0, T.Ng)(),
             a = (0, L.Vi)(),
             o = (0, j.vx)(B),
@@ -76,7 +76,7 @@ let H = (e) => {
             Y = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             K = (0, C.Qo)(W, Y),
             q = (0, a.JA)('nitro'),
-            X = (0, b.N)(),
+            X = (0, A.N)(),
             Q = (0, T.Ng)(),
             J = (0, s.e7)([E.ZP], () => E.ZP.inReverseTrial()),
             $ = (0, s.e7)([_.Z], () => _.Z.isLocalizedPromoEnabled) && null == X,
@@ -87,8 +87,11 @@ let H = (e) => {
             er = (0, j.vx)(B),
             el = (0, j.wG)(B),
             ea = (0, s.e7)([g.Z], () => g.Z.hasLayers()),
-            { fractionalState: es, endsAt: eo, currentEntitlementId: ec } = (0, h.Z)({ forceFetch: !0 }),
-            [ed, eu] = (0, p.XR)(es !== M.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, es !== M.a$.NONE ? Number(ec) : 0),
+            { fractionalState: es, startsAt: eo, endsAt: ec } = (0, h.Z)({ forceFetch: !0 }),
+            [ed, eu] = (0, p.bf)(es !== M.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+                showAfterTimestamp: eo.valueOf(),
+                cooldownDurationMs: 0
+            }),
             { enabled: eh } = v._.useExperiment({ location: B }, { autoTrackExposure: !1 }),
             em = eh && (null == X ? void 0 : X.trial_id) === M.a7,
             [ep, eg] = (0, p.US)(J ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
@@ -97,17 +100,17 @@ let H = (e) => {
             ((r = 9),
             (i = (0, l.jsx)(S.Z, {
                 className: '',
-                endsAt: eo,
+                startsAt: eo,
+                endsAt: ec,
                 messageStyle: u.a.SHORT_TIME,
-                upperCase: !0,
-                currentEntitlementId: ec
+                upperCase: !0
             }))),
             er
                 ? ((t = G.referralIncentive), (r = 7))
                 : el
                   ? ((i = (0, l.jsx)(R.Z, { copy: U.intl.string(U.t.jyYgZ2) })), (r = 8))
                   : ee
-                    ? ((i = (0, l.jsx)(A.Z, {})), (r = 0))
+                    ? ((i = (0, l.jsx)(b.Z, {})), (r = 0))
                     : null != ep && ep === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                       ? ((i = (0, l.jsx)(D.Z, {
                             copy: U.intl.string(U.t.HwUCnp),

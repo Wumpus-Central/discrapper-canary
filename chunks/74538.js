@@ -846,6 +846,7 @@ function eA(e, n) {
                 ? arguments[3]
                 : {
                       fractionalState: U.a$.NONE,
+                      startsAt: h()(0),
                       endsAt: h()(0),
                       currentEntitlementId: '',
                       unactivatedUnits: []

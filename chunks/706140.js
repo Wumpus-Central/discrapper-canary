@@ -2,6 +2,9 @@ r.d(n, {
     EM: function () {
         return m;
     },
+    Tt: function () {
+        return g;
+    },
     cv: function () {
         return p;
     }
@@ -100,6 +103,38 @@ function m(e, n, r, l) {
                     });
             },
             [p, r, c, n]
+        )
+    ];
+}
+function g(e, n, r, l) {
+    let u = (0, a.e7)([s.Z], () => {
+            var n, r, i;
+            return null !== e ? (null === (i = s.Z.settings.userContent) || void 0 === i ? void 0 : null === (r = i.recurringDismissibleContentStates) || void 0 === r ? void 0 : null === (n = r[e]) || void 0 === n ? void 0 : n.lastDismissedAtMs) : void 0;
+        }),
+        c = null != u ? (Number.isNaN(Number(u)) ? void 0 : Number(u)) : void 0,
+        p = (0, a.e7)([o.Z], () => o.Z.getGuildId()),
+        m = null;
+    if (null != e) {
+        let r = !(0, f.B)(e),
+            i = void 0 === c ? 0 : c + n.cooldownDurationMs,
+            a = Date.now(),
+            o = null == n.showAfterTimestamp || (a >= n.showAfterTimestamp && (null != c ? c : 0) <= n.showAfterTimestamp);
+        s.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (m = r && o && (null == c || a >= i) ? e : null) : null != c && (m = r && o && a >= i ? e : null);
+    }
+    let g = h(m, p, r, l);
+    return [
+        g,
+        i.useCallback(
+            (e, n) => {
+                null != m &&
+                    (0, d.Ow)(m, {
+                        dismissAction: e,
+                        groupName: r,
+                        guildId: p,
+                        forceTrack: n
+                    });
+            },
+            [m, r, p]
         )
     ];
 }
