@@ -1,43 +1,45 @@
-s.r(a);
-var t = s(200651);
-s(192379);
-var d = s(120356),
-    c = s.n(d),
-    n = s(793030),
-    i = s(481060),
-    r = s(313201),
-    l = s(976465),
-    o = s(474936),
-    m = s(388032),
-    b = s(353806);
+t.r(a);
+var d = t(200651);
+t(192379);
+var s = t(120356),
+    c = t.n(s),
+    n = t(793030),
+    i = t(481060),
+    r = t(313201),
+    l = t(471309),
+    o = t(976465),
+    b = t(474936),
+    g = t(388032),
+    m = t(353806);
 a.default = (e) => {
-    let { transitionState: a, onClose: s } = e,
-        d = (0, r.Dt)(),
-        x = Object.values(o.VU).map((e) => {
-            let a = (0, l.f9)(e),
-                s = (0, l.g_)(e),
-                d = (0, l.sf)(e);
-            return (0, t.jsxs)(
+    let { transitionState: a, onClose: t } = e,
+        s = (0, r.Dt)(),
+        { version: x } = (0, l.Z)(),
+        u = Object.values(b.VU).map((e) => {
+            let a = (0, o.f9)(e, x),
+                t = (0, o.g_)(e, x),
+                s = (0, o.sf)(e);
+            return (0, d.jsxs)(
                 'div',
                 {
-                    className: b.badge,
+                    className: c()(m.badge, { [m.badgeV2]: 2 === x }),
                     children: [
-                        (0, t.jsx)('img', {
-                            src: s,
+                        (0, d.jsx)('img', {
+                            src: t,
                             alt: a,
-                            className: b.badgeImage
+                            className: m.badgeImage
                         }),
-                        (0, t.jsxs)('div', {
-                            className: b.badgeText,
+                        (0, d.jsxs)('div', {
+                            className: c()(m.badgeText, { [m.badgeTextV2]: 2 === x }),
                             children: [
-                                (0, t.jsx)(n.xv, {
+                                (0, d.jsx)(n.xv, {
                                     variant: 'text-md/semibold',
-                                    className: b.badgeName,
+                                    className: m.badgeName,
                                     children: a
                                 }),
-                                (0, t.jsx)(n.xv, {
+                                (0, d.jsx)(n.xv, {
                                     variant: 'text-xs/normal',
-                                    children: d
+                                    children: s
                                 })
                             ]
                         })
@@ -46,31 +48,31 @@ a.default = (e) => {
                 e
             );
         });
-    return (0, t.jsxs)(i.ModalRoot, {
+    return (0, d.jsxs)(i.ModalRoot, {
         transitionState: a,
-        'aria-labelledby': d,
-        className: c()(b.container, 'theme-dark'),
+        'aria-labelledby': s,
+        className: c()(m.container, 'theme-dark'),
         children: [
-            (0, t.jsx)(i.ModalCloseButton, {
-                onClick: s,
-                className: b.closeButton
+            (0, d.jsx)(i.ModalCloseButton, {
+                onClick: t,
+                className: m.closeButton
             }),
-            (0, t.jsxs)(i.ModalContent, {
-                className: b.content,
+            (0, d.jsxs)(i.ModalContent, {
+                className: m.content,
                 children: [
-                    (0, t.jsx)(n.xv, {
+                    (0, d.jsx)(n.xv, {
                         variant: 'display-md',
-                        className: b.header,
-                        children: m.intl.string(m.t['rmUN7+'])
+                        className: m.header,
+                        children: g.intl.string(g.t['rmUN7+'])
                     }),
-                    (0, t.jsx)(n.xv, {
+                    (0, d.jsx)(n.xv, {
                         variant: 'text-md/medium',
-                        className: b.subHeader,
-                        children: m.intl.string(m.t.OI50am)
+                        className: m.subHeader,
+                        children: g.intl.string(g.t.OI50am)
                     }),
-                    (0, t.jsx)('div', {
-                        className: b.badgeList,
-                        children: x
+                    (0, d.jsx)('div', {
+                        className: m.badgeList,
+                        children: u
                     })
                 ]
             })
