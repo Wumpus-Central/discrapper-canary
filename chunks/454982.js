@@ -91,8 +91,7 @@ t.Z = function (e) {
                                                     value: m,
                                                     buttonColor: r.Button.Colors.BRAND,
                                                     buttonLook: r.Button.Looks.FILLED,
-                                                    delay: 1000,
-                                                    inputClassName: d.textInput
+                                                    delay: 1000
                                                 }),
                                                 (0, i.jsx)(r.Text, {
                                                     variant: 'text-xs/normal',

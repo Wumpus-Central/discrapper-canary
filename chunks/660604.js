@@ -5,7 +5,6 @@ e.exports = {
     formDivider: 'formDivider_df0a38',
     formSection: 'formSection_df0a38',
     confirmationText: 'confirmationText_df0a38',
-    textInput: 'textInput_df0a38',
     headerContainer: 'headerContainer_df0a38',
     art: 'art_df0a38',
     errorHeader: 'errorHeader_df0a38',
