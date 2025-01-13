@@ -5651,6 +5651,7 @@ let oA = Object.freeze({
     (aF.FRACTIONAL_PREMIUM_ABOUT = '26362805097623'),
     (aF.HD_STREAMING_POTION = '27343254089623'),
     (aF.STEALTH_REMEDIATION_FEATURE_GUIDE = '28084948873623'),
+    (aF.CONFETTI_POTION = '29133681590679'),
     ((tn || (tn = {})).INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'),
     ((aX = t_ || (t_ = {}))[(aX.HIDDEN = 1)] = 'HIDDEN'),
     (aX[(aX.PRIVATE = 2)] = 'PRIVATE'),

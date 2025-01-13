@@ -1,13 +1,13 @@
 t.r(n),
     t.d(n, {
         MESSAGE_CONFETTI_POTION_MODAL_KEY: function () {
-            return _;
+            return b;
         },
         default: function () {
-            return A;
+            return P;
         },
         openMessageConfettiModal: function () {
-            return N;
+            return A;
         }
     }),
     t(47120);
@@ -20,23 +20,24 @@ var i,
     u = t(311570),
     d = t(692547),
     c = t(481060),
-    g = t(100527),
-    m = t(906732),
+    m = t(100527),
+    g = t(906732),
     f = t(688465),
     h = t(333867),
     E = t(96848),
-    I = t(937615),
-    v = t(980463),
-    M = t(317951),
-    p = t(84040),
-    x = t(235894),
-    Z = t(576645),
-    S = t(981631),
-    j = t(388032),
-    T = t(694638),
-    b = t(99713);
-let _ = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
-    N = (e, n) => {
+    I = t(63063),
+    v = t(937615),
+    M = t(980463),
+    p = t(317951),
+    x = t(84040),
+    Z = t(235894),
+    S = t(576645),
+    j = t(981631),
+    T = t(388032),
+    N = t(694638),
+    _ = t(99713);
+let b = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    A = (e, n) => {
         (0, c.openModalLazy)(
             async () => {
                 let { default: i } = await Promise.resolve().then(t.bind(t, 135793));
@@ -47,78 +48,78 @@ let _ = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
                         ...t
                     });
             },
-            { modalKey: _ }
+            { modalKey: b }
         );
     };
-function A(e) {
+function P(e) {
     let { transitionState: n, channel: t, message: i } = e;
     return (0, o.jsx)(c.ModalRoot, {
         size: c.ModalSize.DYNAMIC,
         transitionState: n,
-        children: (0, o.jsx)(P, {
+        children: (0, o.jsx)(C, {
             channel: t,
             message: i
         })
     });
 }
-function P(e) {
+function C(e) {
     let { channel: n, message: t } = e,
-        i = (0, p.Z)(t, n),
-        l = (0, x.U)(t),
+        i = (0, x.Z)(t, n),
+        l = (0, Z.U)(t),
         [r, a] = (0, s.useState)(!1),
         [d, f] = (0, s.useState)(),
-        { price: E, fetchingPrice: I, error: j } = (0, Z.R2)(M.D1),
-        { entitlement: T, fetchedEntitlement: b, error: _ } = (0, Z.t6)(M.D1),
-        N = j || _,
-        { analyticsLocations: A } = (0, m.ZP)([g.Z.CONFETTI_POTION_MODAL]),
+        { price: E, fetchingPrice: I, error: v } = (0, S.R2)(p.D1),
+        { entitlement: T, fetchedEntitlement: N, error: _ } = (0, S.t6)(p.D1),
+        b = v || _,
+        { analyticsLocations: A } = (0, g.ZP)([m.Z.CONFETTI_POTION_MODAL]),
         P = null != T && !T.consumed;
     (0, s.useEffect)(
         () => () => {
-            N && (0, v.SN)(M.D1);
+            b && (0, M.SN)(p.D1);
         },
-        [T, n.id, t.id, d, r, N]
+        [T, n.id, t.id, d, r, b]
     );
-    let y = (0, s.useCallback)(() => {
-            null != d && ((0, v.qc)(n.id, t.id, d, M.D1), (0, c.closeAllModals)());
+    let C = (0, s.useCallback)(() => {
+            null != d && ((0, M.qc)(n.id, t.id, d, p.D1), (0, c.closeAllModals)());
         }, [d, n.id, t.id]),
         D = (0, s.useCallback)(() => {
             (0, h.Z)({
-                skuId: M.D1,
+                skuId: p.D1,
                 analyticsLocations: A,
-                onComplete: y,
+                onComplete: C,
                 variantsReturnStyle: u.v.INDIVIDUAL_PRODUCTS
             });
-        }, [y, A]),
-        L = (0, s.useMemo)(() => ((null == T ? void 0 : T.type) === S.qc2.DEVELOPER_GIFT ? 1 : P ? 2 : 0), [null == T ? void 0 : T.type, P]),
-        R = (0, s.useMemo)(() => (l ? 2 : i ? (null == d ? 3 : 0) : 1), [l, i, d]);
-    return (0, o.jsx)(C, {
+        }, [C, A]),
+        L = (0, s.useMemo)(() => ((null == T ? void 0 : T.type) === j.qc2.DEVELOPER_GIFT ? 1 : P ? 2 : 0), [null == T ? void 0 : T.type, P]),
+        O = (0, s.useMemo)(() => (l ? 2 : i ? (null == d ? 3 : 0) : 1), [l, i, d]);
+    return (0, o.jsx)(y, {
         buttonPurchaseState: L,
-        buttonDisabledState: R,
+        buttonDisabledState: O,
         price: E,
         onActionClick: () => {
-            a(!0), (P ? y : D)();
+            a(!0), (P ? C : D)();
         },
-        loading: I || !b,
+        loading: I || !N,
         selectedEmoji: null != d ? d : void 0,
         setSelectedEmoji: f
     });
 }
-let C = (e) => {
+let y = (e) => {
         let { buttonPurchaseState: n, buttonDisabledState: t, price: i, onActionClick: l, loading: r, selectedEmoji: a, setSelectedEmoji: s } = e;
         return r
-            ? (0, o.jsx)(O, {})
+            ? (0, o.jsx)(G, {})
             : null == i
               ? (0, o.jsx)(R, {})
               : (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)('div', {
-                            className: T.modal,
-                            children: (0, o.jsx)(y, {
+                            className: N.modal,
+                            children: (0, o.jsx)(D, {
                                 selectedEmoji: a,
                                 setSelectedEmoji: s
                             })
                         }),
-                        (0, o.jsx)(D, {
+                        (0, o.jsx)(L, {
                             buttonPurchaseState: n,
                             buttonDisabledState: t,
                             price: i,
@@ -127,38 +128,43 @@ let C = (e) => {
                     ]
                 });
     },
-    y = (e) => {
+    D = (e) => {
         let { selectedEmoji: n, setSelectedEmoji: t } = e;
         return (0, o.jsx)(o.Fragment, {
             children: (0, o.jsxs)('div', {
-                className: T.body,
+                className: N.body,
                 children: [
                     (0, o.jsxs)('div', {
-                        className: T.header,
+                        className: N.header,
                         children: [
                             (0, o.jsxs)('div', {
-                                className: T.heading,
+                                className: N.heading,
                                 children: [
                                     (0, o.jsx)(c.Heading, {
                                         variant: 'heading-lg/bold',
-                                        children: j.intl.string(j.t['5/knv7'])
+                                        children: T.intl.string(T.t['5/knv7'])
                                     }),
                                     (0, o.jsx)(f.Z, {})
                                 ]
                             }),
                             (0, o.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
-                                children: j.intl.string(j.t.NFTQoa)
+                                children: T.intl.string(T.t.NFTQoa)
+                            }),
+                            (0, o.jsx)(c.Text, {
+                                color: 'text-link',
+                                variant: 'text-sm/normal',
+                                children: T.intl.format(T.t['jerM9/'], { helpCenterLink: I.Z.getArticleURL(j.BhN.CONFETTI_POTION) })
                             })
                         ]
                     }),
-                    (0, o.jsx)('div', { className: T.divider }),
+                    (0, o.jsx)('div', { className: N.divider }),
                     (0, o.jsxs)('div', {
-                        className: T.select,
+                        className: N.select,
                         children: [
                             (0, o.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                children: j.intl.string(j.t.o8XwoK)
+                                children: T.intl.string(T.t.o8XwoK)
                             }),
                             (0, o.jsx)(E.Z, {
                                 setEmojiConfetti: (e) => {
@@ -173,19 +179,19 @@ let C = (e) => {
         });
     };
 ((r = i || (i = {}))[(r.BUY = 0)] = 'BUY'), (r[(r.REDEEM = 1)] = 'REDEEM'), (r[(r.ACTIVATE = 2)] = 'ACTIVATE'), ((a = l || (l = {}))[(a.ENABLED = 0)] = 'ENABLED'), (a[(a.INELIGIBLE = 1)] = 'INELIGIBLE'), (a[(a.ALREADY_ACTIVE = 2)] = 'ALREADY_ACTIVE'), (a[(a.MISSING_SELECTION = 3)] = 'MISSING_SELECTION');
-let D = (e) => {
+let L = (e) => {
         let { buttonPurchaseState: n, buttonDisabledState: t, price: i, onActionClick: l } = e;
         return (0, o.jsxs)('div', {
-            className: T.footer,
+            className: N.footer,
             children: [
                 (0, o.jsx)(c.Button, {
                     onClick: () => {
-                        (0, c.closeModal)(_);
+                        (0, c.closeModal)(b);
                     },
                     color: c.Button.Colors.PRIMARY,
-                    children: j.intl.string(j.t.w2Qbd3)
+                    children: T.intl.string(T.t.w2Qbd3)
                 }),
-                (0, o.jsx)(L, {
+                (0, o.jsx)(O, {
                     buttonPurchaseState: n,
                     buttonDisabledState: t,
                     price: i,
@@ -194,7 +200,7 @@ let D = (e) => {
             ]
         });
     },
-    L = (e) => {
+    O = (e) => {
         let { buttonPurchaseState: n, buttonDisabledState: t, price: i, onActionClick: l } = e,
             {
                 isDisabled: r,
@@ -202,14 +208,14 @@ let D = (e) => {
                 tooltipCopy: u
             } = (0, s.useMemo)(() => {
                 let e = {
-                        0: j.intl.formatToPlainString(j.t.Wh82U1, { price: (0, I.T4)(i.amount, i.currency) }),
-                        1: j.intl.string(j.t.RrKeDw),
-                        2: j.intl.string(j.t['F/H7u7'])
+                        0: T.intl.formatToPlainString(T.t.Wh82U1, { price: (0, v.T4)(i.amount, i.currency) }),
+                        1: T.intl.string(T.t.RrKeDw),
+                        2: T.intl.string(T.t['F/H7u7'])
                     },
                     l = {
-                        1: j.intl.string(j.t['Cb8/7+']),
-                        2: j.intl.string(j.t.fMkB9P),
-                        3: j.intl.string(j.t['59ElNj'])
+                        1: T.intl.string(T.t['Cb8/7+']),
+                        2: T.intl.string(T.t.fMkB9P),
+                        3: T.intl.string(T.t['59ElNj'])
                     },
                     r = 0 !== t;
                 return {
@@ -219,7 +225,7 @@ let D = (e) => {
                 };
             }, [t, n, i.amount, i.currency]);
         return (0, o.jsx)(c.Tooltip, {
-            tooltipContentClassName: T.tooltip,
+            tooltipContentClassName: N.tooltip,
             text: u,
             shouldShow: !!r,
             children: (e) =>
@@ -228,7 +234,7 @@ let D = (e) => {
                     onClick: l,
                     disabled: r,
                     children: (0, o.jsxs)('div', {
-                        className: T.buttonCopy,
+                        className: N.buttonCopy,
                         children: [
                             (0, o.jsx)(c.PotionIcon, {
                                 color: d.Z.colors.WHITE,
@@ -242,27 +248,27 @@ let D = (e) => {
     },
     R = () =>
         (0, o.jsx)('div', {
-            className: T.anomaly,
+            className: N.anomaly,
             children: (0, o.jsxs)('div', {
-                className: T.error,
+                className: N.error,
                 children: [
                     (0, o.jsx)(c.Image, {
-                        src: b,
+                        src: _,
                         width: 178,
                         height: 190
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-md/normal',
-                        children: j.intl.string(j.t.oKJdSk)
+                        children: T.intl.string(T.t.oKJdSk)
                     })
                 ]
             })
         }),
-    O = () =>
+    G = () =>
         (0, o.jsx)('div', {
-            className: T.anomaly,
+            className: N.anomaly,
             children: (0, o.jsx)('div', {
-                className: T.spinner,
+                className: N.spinner,
                 children: (0, o.jsx)(c.Spinner, {})
             })
         });
