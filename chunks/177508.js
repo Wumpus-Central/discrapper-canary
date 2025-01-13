@@ -44,7 +44,8 @@ function C() {
             (0, i.jsx)(P, {}),
             (0, i.jsx)(R, {}),
             (0, i.jsx)(O, {}),
-            (0, i.jsx)(Z, {})
+            (0, i.jsx)(F, {}),
+            (0, i.jsx)(M, {})
         ]
     });
 }
@@ -930,7 +931,107 @@ function L() {
         ]
     });
 }
-function Z() {
+function Z(e) {
+    let { transitionState: t } = e,
+        [n, r] = s.useState(!1),
+        [l, a] = s.useState(d.ModalSize.SMALL),
+        [o, c] = s.useState(!1),
+        u = n ? x.modalOutlines : '';
+    return (0, i.jsxs)(d.ModalRoot, {
+        transitionState: t,
+        size: l,
+        children: [
+            (0, i.jsx)(d.ModalHeader, {
+                className: u,
+                children: (0, i.jsx)(d.Heading, {
+                    variant: 'heading-xl/semibold',
+                    children: 'Modal'
+                })
+            }),
+            (0, i.jsx)(d.ModalContent, {
+                className: u,
+                children: (0, i.jsxs)(d.Stack, {
+                    gap: 16,
+                    children: [
+                        (0, i.jsx)(d.FormItem, {
+                            title: 'Modal Size',
+                            children: (0, i.jsx)(d.SingleSelect, {
+                                value: l,
+                                onChange: a,
+                                options: Object.entries(d.ModalSize).map((e) => {
+                                    let [t, n] = e;
+                                    return {
+                                        label: t,
+                                        value: n
+                                    };
+                                })
+                            })
+                        }),
+                        (0, i.jsx)(d.FormSection, {
+                            title: 'Options',
+                            children: (0, i.jsxs)(d.Stack, {
+                                gap: 16,
+                                children: [
+                                    (0, i.jsx)(d.Checkbox, {
+                                        value: n,
+                                        onChange: (e, t) => r(t),
+                                        children: (0, i.jsx)(d.Text, {
+                                            variant: 'text-md/medium',
+                                            children: 'Show Section Outlines'
+                                        })
+                                    }),
+                                    (0, i.jsx)(d.Checkbox, {
+                                        value: o,
+                                        onChange: (e, t) => c(t),
+                                        children: (0, i.jsx)(d.Text, {
+                                            variant: 'text-md/medium',
+                                            children: 'Show secondary action in footer'
+                                        })
+                                    })
+                                ]
+                            })
+                        })
+                    ]
+                })
+            }),
+            (0, i.jsx)(d.ModalFooter, {
+                className: u,
+                children: (0, i.jsxs)(d.Stack, {
+                    direction: 'horizontal',
+                    justify: 'end',
+                    gap: 8,
+                    children: [
+                        o &&
+                            (0, i.jsx)(d.Button, {
+                                color: d.Button.Colors.PRIMARY,
+                                look: d.Button.Looks.FILLED,
+                                children: 'Secondary Action'
+                            }),
+                        (0, i.jsx)(d.Button, { children: 'Close' })
+                    ]
+                })
+            })
+        ]
+    });
+}
+function F() {
+    return (0, i.jsxs)('div', {
+        className: x.section,
+        children: [
+            (0, i.jsx)(d.Heading, {
+                variant: 'heading-xl/semibold',
+                children: 'Modals'
+            }),
+            (0, i.jsx)(d.Button, {
+                onClick: () => {
+                    (0, d.openModal)((e) => (0, i.jsx)(Z, { ...e }));
+                },
+                children: 'Open modal'
+            })
+        ]
+    });
+}
+function M() {
     let e = (0, o.e7)([u.Z], () => u.Z.gradientPreset);
     return (0, i.jsx)(d.ThemeProvider, {
         theme: p.BR.DARKER,

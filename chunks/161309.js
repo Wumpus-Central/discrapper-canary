@@ -10,5 +10,6 @@ e.exports = {
     palette: 'palette_ad57ee',
     colors: 'colors_ad57ee',
     color: 'color_ad57ee',
-    heading: 'heading_ad57ee'
+    heading: 'heading_ad57ee',
+    modalOutlines: 'modalOutlines_ad57ee'
 };
