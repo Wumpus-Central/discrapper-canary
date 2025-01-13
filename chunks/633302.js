@@ -171,9 +171,12 @@ function B(e) {
     return m[e];
 }
 function G(e) {
-    return e.replace(N, (e, n) => q(n, e));
+    return O.test(e);
 }
 function F(e) {
+    return e.replace(N, (e, n) => Q(n, e));
+}
+function Z(e) {
     let n = v[e];
     return null != n
         ? {
@@ -186,12 +189,12 @@ function F(e) {
               text: e
           };
 }
-let Z = String.fromCodePoint(917631),
-    V = String.fromCodePoint(127988),
-    j = /^[\u{E0061}-\u{E007A}]$/u;
-function H(e, n) {
+let V = String.fromCodePoint(917631),
+    j = String.fromCodePoint(127988),
+    H = /^[\u{E0061}-\u{E007A}]$/u;
+function Y(e, n) {
     var r;
-    if (!0 !== n && !O.test(e))
+    if (!0 !== n && !G(e))
         return [
             {
                 type: 'text',
@@ -204,16 +207,16 @@ function H(e, n) {
     for (let e = 0; e < s.length; e++) {
         let n = s[e];
         if (null != i && '' !== i) {
-            if (n === Z) (n = i + n), (i = '');
-            else if (j.test(n)) {
+            if (n === V) (n = i + n), (i = '');
+            else if (H.test(n)) {
                 i += n;
                 continue;
-            } else a.push(F(i)), (i = '');
-        } else if (n === V) {
+            } else a.push(Z(i)), (i = '');
+        } else if (n === j) {
             i = n;
             continue;
         }
-        let r = F(n);
+        let r = Z(n);
         if (a.length > 0) {
             let e = a[a.length - 1];
             if ('text' === r.type && 'text' === e.type) {
@@ -223,44 +226,44 @@ function H(e, n) {
         }
         a.push(r);
     }
-    return null != i && '' !== i && a.push(F(i)), a;
+    return null != i && '' !== i && a.push(Z(i)), a;
 }
-function Y(e) {
-    return H(e)
+function W(e) {
+    return Y(e)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
 }
-function W(e) {
-    if (!O.test(e)) return null;
-    let n = H(e, !0)
+function K(e) {
+    if (!G(e)) return null;
+    let n = Y(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
     return n === e ? null : n;
 }
-function K(e) {
+function z(e) {
     return c()
         .toArray(e)
         .some((e) => null != v[e]);
 }
-function z(e) {
+function q(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
         i = r;
     return Object.prototype.hasOwnProperty.call(C, e) && (i = C[e]), n ? ':'.concat(i, ':') : i;
 }
-function q(e) {
+function Q(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     return Object.prototype.hasOwnProperty.call(E, e) ? E[e] : n;
 }
-function Q(e) {
+function X(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
         i = r;
     return Object.prototype.hasOwnProperty.call(v, e) && (i = v[e]), n ? ':'.concat(i, ':') : i;
 }
-function X(e) {
+function J(e) {
     return U(
-        Q(
+        X(
             S.reduce((e, n) => e.replace(n, ''), e),
             !1
         )
@@ -272,14 +275,15 @@ n.ZP = {
     getCategories: k,
     getByName: U,
     getByCategory: B,
-    translateInlineEmojiToSurrogates: G,
-    maybeTranslateSurrogatesToInlineEmoji: W,
-    findInlineEmojisFromSurrogates: H,
-    translateSurrogatesToInlineEmoji: Y,
-    convertNameToSurrogate: q,
-    convertSurrogateToName: Q,
-    convertShortcutToName: z,
-    convertSurrogateToBase: X,
+    contentHasUnicodeOrEmoji: G,
+    translateInlineEmojiToSurrogates: F,
+    maybeTranslateSurrogatesToInlineEmoji: K,
+    findInlineEmojisFromSurrogates: Y,
+    translateSurrogatesToInlineEmoji: W,
+    convertNameToSurrogate: Q,
+    convertSurrogateToName: X,
+    convertShortcutToName: q,
+    convertSurrogateToBase: J,
     forEach: (e) => c().each(I, e),
     all: () => I,
     numDiversitySprites: T,
@@ -287,5 +291,5 @@ n.ZP = {
     EMOJI_NAME_RE: A,
     EMOJI_NAME_AND_DIVERSITY_RE: N,
     EMOJI_SHORTCUT_RE: R,
-    hasSurrogates: K
+    hasSurrogates: z
 };
