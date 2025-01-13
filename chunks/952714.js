@@ -9,7 +9,6 @@ n.r(
         largeReactionBtn: 'largeReactionBtn_ec6b19',
         visible: 'visible_ec6b19',
         forceShow: 'forceShow_ec6b19',
-        forceShowLook: 'forceShowLook_ec6b19',
         hideEmoji: 'hideEmoji_ec6b19',
         reaction: 'reaction_ec6b19',
         shakeReaction: 'shakeReaction_ec6b19',
