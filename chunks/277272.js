@@ -1,25 +1,20 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-function i(e) {
-    let { userId: t, nick: n, guildId: i, avatar: r, avatarDecoration: l, banner: a, bio: s, pronouns: o, colorString: c } = e;
+var i = n(864106);
+function r(e) {
+    let { userId: t, nick: n, guildId: r, avatar: l, avatarDecoration: a, banner: s, bio: o, pronouns: c, colorString: d } = e;
     return {
         user_id: t,
         nick: n,
-        guild_id: i,
-        avatar: r,
-        avatar_decoration_data:
-            null != l
-                ? {
-                      asset: l.asset,
-                      sku_id: l.skuId
-                  }
-                : null,
-        banner: a,
-        bio: s,
-        pronouns: o,
-        color_string: c
+        guild_id: r,
+        avatar: l,
+        avatar_decoration_data: (0, i.FG)(a),
+        banner: s,
+        bio: o,
+        pronouns: c,
+        color_string: d
     };
 }

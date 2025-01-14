@@ -104,7 +104,8 @@ let l = {
                 avatar_decoration_data: e
                     .object({
                         asset: e.string().required(),
-                        skuId: e.string()
+                        skuId: e.string(),
+                        expiresAt: e.number()
                     })
                     .allow(null)
                     .description('Details about avatar decoration'),

@@ -1,26 +1,21 @@
 r.d(n, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = r(789020);
-function a(e) {
-    let { id: n, username: r, discriminator: i, globalName: a, avatar: s, avatarDecoration: o, bot: l, flags: u, premiumType: c } = e;
+var a = r(864106);
+function s(e) {
+    let { id: n, username: r, discriminator: i, globalName: s, avatar: o, avatarDecoration: l, bot: u, flags: c, premiumType: d } = e;
     return {
         id: n,
         username: r,
         discriminator: i,
-        global_name: a,
-        avatar: s,
-        avatar_decoration_data:
-            null != o
-                ? {
-                      asset: o.asset,
-                      sku_id: o.skuId
-                  }
-                : null,
-        bot: l,
-        flags: u,
-        premium_type: null != c ? c : 0
+        global_name: s,
+        avatar: o,
+        avatar_decoration_data: (0, a.FG)(l),
+        bot: u,
+        flags: c,
+        premium_type: null != d ? d : 0
     };
 }
