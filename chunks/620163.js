@@ -100,7 +100,7 @@ var s = n(990547),
 let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eG = ej.Z,
     eY = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eY, impressionSource: eH, numOfPendingFamilyRequests: ez, isOverlaySupported: eW, isClipsBetaTagShowing: eK = !1, shouldMergeGameSettings: eq, isUserSettingsSearchEnabled: eX, isKeywordFilteringEnabled: eQ, isStaff: eJ, isInappropriateConversationWarningEnabled: e$, paymentsBlocked: e0, isEligibleForQuests: e1, showGiftNitro: e2, isStricterMessageRequestsEnabled: e6, hasLibraryApplication: e3, hasTOTPEnabled: e8, developerMode: e4, isSafetySettingsV2Enabled: e7, isAdultUser: e5, hasSecureFramesVerifiedUserIds: e9, hypeSquadRemoved: te, stealthRemediationEnabled: tt, hasIgnoredUsers: tn, hasBlockedUsers: ti, showAppDMsQuickLauncher: ts } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eY, impressionSource: eH, numOfPendingFamilyRequests: ez, isOverlaySupported: eW, isClipsBetaTagShowing: eK = !1, shouldMergeGameSettings: eq, isUserSettingsSearchEnabled: eX, isKeywordFilteringEnabled: eQ, isStaff: eJ, isInappropriateConversationWarningEnabled: e$, paymentsBlocked: e0, isEligibleForQuests: e1, showGiftNitro: e2, isStricterMessageRequestsEnabled: e6, hasLibraryApplication: e3, hasTOTPEnabled: e8, developerMode: e4, isSafetySettingsV2Enabled: e7, isAdultUser: e5, hasSecureFramesVerifiedUserIds: e9, hypeSquadRemoved: te, stealthRemediationEnabled: tt, hasIgnoredUsers: tn, hasBlockedUsers: ti } = e;
         return Object.freeze({
             [eZ.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
@@ -1474,8 +1474,7 @@ let eV = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eZ.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eF.oAB.ADVANCED,
                 searchableTitles: [ew.intl.string(ew.t.qDZryM)],
-                parent: eZ.s6.SETTINGS_ADVANCED,
-                predicate: () => !0 === ts
+                parent: eZ.s6.SETTINGS_ADVANCED
             },
             [eZ.s6.ACTIVITY_PRIVACY]: {
                 section: eF.oAB.ACTIVITY_PRIVACY,
