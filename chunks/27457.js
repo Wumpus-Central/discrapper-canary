@@ -471,7 +471,7 @@ let eg = l.memo((e) => {
                         onClick: (e) => {
                             e.stopPropagation(), null == t || t(), N();
                         },
-                        className: a()(ef.interactive, ef.toggleMute),
+                        className: a()(ef.interactive, ef.toggleMute, ef.status),
                         children: (0, i.jsx)(u.VoiceXIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -487,6 +487,13 @@ let eg = l.memo((e) => {
                 let e = n ? u.HeadphonesSlashIcon : u.MicrophoneSlashIcon;
                 O = (0, i.jsx)(e, { color: 'currentColor' });
             }
+            O =
+                null != O
+                    ? (0, i.jsx)('div', {
+                          className: ef.status,
+                          children: O
+                      })
+                    : null;
         } else
             O = (0, i.jsx)(u.Tooltip, {
                 text: em.intl.string(em.t['w4m94+']),
@@ -497,7 +504,7 @@ let eg = l.memo((e) => {
                         onClick: (e) => {
                             e.stopPropagation(), null == t || t(), N();
                         },
-                        className: a()(ef.interactive, ef.toggleMute),
+                        className: a()(ef.interactive, ef.toggleMute, ef.status),
                         children: (0, i.jsx)(u.VoiceNormalIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -666,11 +673,7 @@ let eg = l.memo((e) => {
                                         className: ef.status,
                                         children: L
                                     }),
-                                null != O &&
-                                    (0, i.jsx)('div', {
-                                        className: ef.status,
-                                        children: O
-                                    }),
+                                O,
                                 k,
                                 D
                             ]
