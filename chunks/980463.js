@@ -1,43 +1,42 @@
 n.d(t, {
     Gq: function () {
-        return d;
+        return c;
     },
     SN: function () {
-        return p;
+        return S;
     },
     Zu: function () {
-        return f;
-    },
-    gA: function () {
         return E;
     },
+    gA: function () {
+        return d;
+    },
     qc: function () {
-        return _;
+        return f;
     },
     x8: function () {
-        return T;
+        return p;
     }
 }),
     n(411104);
 var r = n(544891),
     i = n(343817),
     u = n(570140),
-    l = n(633302),
-    o = n(959546),
-    s = n(317951),
-    a = n(981631);
-let c = {
-        [s.D1]: a.ANM.FETCH_MESSAGE_CONFETTI_ENTITLEMENT,
-        [s.FX]: a.ANM.FETCH_HD_STREAMING_ENTITLEMENT
+    l = n(959546),
+    o = n(317951),
+    s = n(981631);
+let a = {
+        [o.D1]: s.ANM.FETCH_MESSAGE_CONFETTI_ENTITLEMENT,
+        [o.FX]: s.ANM.FETCH_HD_STREAMING_ENTITLEMENT
     },
-    d = async (e) => {
+    c = async (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_PRICE_FETCH_STARTED',
             skuId: e
         });
         try {
             let t = await r.tn.get({
-                url: a.ANM.CONSUMABLE_FETCH_PRICE(e),
+                url: s.ANM.CONSUMABLE_FETCH_PRICE(e),
                 rejectWithError: !1
             });
             if (null == t.body.price)
@@ -71,13 +70,13 @@ let c = {
             );
         }
     },
-    E = async (e) => {
+    d = async (e) => {
         if (
             (u.Z.dispatch({
                 type: 'CONSUMABLES_ENTITLEMENT_FETCH_STARTED',
                 skuId: e
             }),
-            null == c[e])
+            null == a[e])
         )
             throw (
                 (u.Z.dispatch({
@@ -88,10 +87,10 @@ let c = {
             );
         try {
             let t = await r.tn.get({
-                    url: c[e],
+                    url: a[e],
                     rejectWithError: !1
                 }),
-                n = null != t.body.entitlement ? o.Z.createFromServer(t.body.entitlement) : null;
+                n = null != t.body.entitlement ? l.Z.createFromServer(t.body.entitlement) : null;
             return (
                 u.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED',
@@ -110,10 +109,10 @@ let c = {
             );
         }
     },
-    f = async (e, t) => {
+    E = async (e, t) => {
         try {
             await r.tn.post({
-                url: a.ANM.CONSUME_HD_STREAMING_POTION,
+                url: s.ANM.CONSUME_HD_STREAMING_POTION,
                 body: { channel_id: e },
                 rejectWithError: !1
             }),
@@ -125,14 +124,14 @@ let c = {
             throw new i.Hx(e);
         }
     },
-    _ = async (e, t, n, l) => {
+    f = async (e, t, n, l) => {
         try {
             await r.tn.post({
-                url: a.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
+                url: s.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
                 body: {
                     channel_id: e,
                     message_id: t,
-                    emoji_name: S(n)
+                    emoji_name: _(n)
                 },
                 rejectWithError: !1
             }),
@@ -144,14 +143,14 @@ let c = {
             throw new i.Hx(e);
         }
     },
-    S = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : l.ZP.convertNameToSurrogate(e.name)),
-    p = (e) => {
+    _ = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
+    S = (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
-    T = (e) => {
+    p = (e) => {
         u.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e

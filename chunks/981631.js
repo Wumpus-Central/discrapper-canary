@@ -3107,6 +3107,7 @@ let _2 = 'help_center_cta';
     (r4.PROFILE_MODAL = 'Profile Modal'),
     (r4.EMOJI_PICKER_POPOUT = 'Emoji Picker Popout'),
     (r4.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_POPOUT = 'Voice Channel Effect Emoji Picker Popout'),
+    (r4.MESSAGE_CONFETTI_EMOJI_PICKER_POPOUT = 'Message Confetti Emoji Picker Popout'),
     (r4.FILE_UPLOAD_POPOUT = 'File Upload Popout'),
     (r4.GUILD_POPOUT = 'Guild Popout'),
     (r4.BITE_SIZE_PROFILE_POPOUT = 'Bite Size Profile Popout'),
