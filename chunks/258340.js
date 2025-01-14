@@ -1,10 +1,10 @@
 n(653041);
 var r = n(192379),
     i = n(392711),
-    a = n(633302),
-    u = n(960048);
-let s = (e) => Math.round(4 * e) / 4,
-    c = (e) => {
+    u = n(633302),
+    a = n(960048);
+let c = (e) => Math.round(4 * e) / 4,
+    l = (e) => {
         let t = {
             y: 0.9 * e.h,
             x: 0.3 * e.w
@@ -18,19 +18,20 @@ let s = (e) => Math.round(4 * e) / 4,
         };
     };
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: n, DRAG: l, Y_POS: o, MAX_PARTICLES: d } = c(e),
-        f = r.useRef([]);
+    let { SPEED: t, GRAVITY: n, DRAG: s, Y_POS: o, MAX_PARTICLES: d } = l(e),
+        f = r.useRef([]),
+        h = r.useRef(!1);
     return {
         update: (t) => {
             let r = [];
             if (
-                (f.current.forEach((i, a) => {
-                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= l ** t), (i.velocity.y *= l ** t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(a);
+                (f.current.forEach((i, u) => {
+                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= s ** t), (i.velocity.y *= s ** t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(u);
                 }),
                 r.length > 0)
             ) {
                 let e = f.current.filter((e, t) => !r.includes(t));
-                f.current = e;
+                (f.current = e), 0 === f.current.length && (h.current = !1);
             }
         },
         draw: (t) => {
@@ -43,7 +44,7 @@ t.Z = (e) => {
                 f.current.forEach((e) => {
                     var n;
                     let { x: r, y: i } = e.position;
-                    e.scale > 1 && t.setFilter({ blur: s((e.scale - 1) * 3) }),
+                    e.scale > 1 && t.setFilter({ blur: c((e.scale - 1) * 3) }),
                         (null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))
                             ? t.drawImage(
                                   e.key,
@@ -56,7 +57,7 @@ t.Z = (e) => {
                                       h: 32 * e.scale
                                   }
                               )
-                            : null != a.ZP.contentHasUnicodeOrEmoji(e.key)
+                            : null != u.ZP.contentHasUnicodeOrEmoji(e.key)
                               ? (t.setFont({ size: 24 * e.scale }),
                                 t.drawText(e.key, {
                                     x: r,
@@ -67,17 +68,17 @@ t.Z = (e) => {
                                     x: r,
                                     y: i
                                 }),
-                                u.Z.captureMessage("Simple Confetti couldn't trigger explosion for ".concat(e.key, ".  It doesn't have an image and seemingly isn't a valid unicode emoji."))),
+                                a.Z.captureMessage("Simple Confetti couldn't trigger explosion for ".concat(e.key, ".  It doesn't have an image and seemingly isn't a valid unicode emoji."))),
                         t.setFilter({ blur: 0 });
                 });
         },
         emit: (n, r) => {
             if (f.current.length >= d) return;
-            let a = {
+            let u = {
                 min: e.h / 8,
                 max: e.h / 3
             };
-            for (let u = 0; u < r; u++)
+            for (let a = 0; a < r; a++)
                 f.current.push({
                     position: {
                         x: e.w / 2 + (0, i.random)(-50, 50),
@@ -85,12 +86,14 @@ t.Z = (e) => {
                     },
                     velocity: {
                         x: (0, i.random)(-t.x, t.x, !0),
-                        y: t.y + (0, i.random)(-a.min, a.max, !0)
+                        y: t.y + (0, i.random)(-u.min, u.max, !0)
                     },
                     scale: (0, i.random)(0.8, 2),
                     rotation: (0, i.random)(-20, 20),
                     key: n
                 });
-        }
+            h.current = !0;
+        },
+        shouldTick: h
     };
 };
