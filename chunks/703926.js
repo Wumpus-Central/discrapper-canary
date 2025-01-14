@@ -1,6 +1,6 @@
 t.d(n, {
     m: function () {
-        return E;
+        return g;
     }
 });
 var i = t(200651),
@@ -31,7 +31,7 @@ let v = {
         [s.Cj.SEASONAL_STANDARD_BOX]: c,
         [s.Cj.NITROWEEN_STANDARD]: f.Z
     },
-    E = l.forwardRef(function (e, n) {
+    g = l.forwardRef(function (e, n) {
         let { isSelected: t, giftStyle: l, setSelectedGiftStyle: s, onFocus: c, onBlur: o } = e;
         return (0, i.jsx)(r.Clickable, {
             className: a.button,

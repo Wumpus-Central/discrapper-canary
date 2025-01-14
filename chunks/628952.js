@@ -19,11 +19,11 @@ i.Z = (e) => {
     let { skuId: i, isSelected: t, price: a, onSelect: x, shouldDisplayHeader: h = !1, className: v } = e,
         { product: C } = (0, p.T)(i),
         { giftRecipient: I, giftRecipientError: S } = (0, c.wD)(),
-        k = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-        y = (0, _.k)(C);
+        y = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        k = (0, _.k)(C);
     if (null == C) return null;
     let [T] = C.items,
-        B = null != I && I.id !== (null == k ? void 0 : k.id);
+        B = null != I && I.id !== (null == y ? void 0 : y.id);
     return (0, n.jsxs)('div', {
         className: v,
         children: [
@@ -89,7 +89,7 @@ i.Z = (e) => {
                                 children: [
                                     (0, n.jsx)(l.Text, {
                                         variant: 'text-md/semibold',
-                                        children: y
+                                        children: k
                                     }),
                                     (0, n.jsx)(l.Heading, {
                                         variant: 'heading-sm/medium',

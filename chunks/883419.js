@@ -29,7 +29,7 @@ var i = n(200651),
 function k(e) {
     var t, n;
     let { backButtonEligible: o, prevStep: k, handleStepChange: T, trialFooterMessageOverride: y, reviewWarningMessage: B, planGroup: P, openInvoiceId: N, analyticsData: E, analyticsLocation: A, handleClose: I } = e,
-        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: H, currencies: L, paymentSources: w, priceOptions: D, purchaseError: G, purchaseTokenAuthState: W, selectedPlan: R, selectedSku: F, setCurrency: z, setPaymentSourceId: K, setPurchaseState: U, setPurchaseError: V, purchaseState: Y, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+        { activeSubscription: O, application: Z, setUpdatedSubscription: M, contextMetadata: L, currencies: H, paymentSources: w, priceOptions: D, purchaseError: G, purchaseTokenAuthState: W, selectedPlan: R, selectedSku: F, setCurrency: z, setPaymentSourceId: K, setPurchaseState: U, setPurchaseError: V, purchaseState: Y, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
     a()(null != R, 'Expected plan to be selected');
     let J = r.useRef(null),
         [X, $] = (0, s.Z)(!1, 500),
@@ -101,7 +101,7 @@ function k(e) {
                                     paymentSources: w,
                                     onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     priceOptions: D,
-                                    currencies: L,
+                                    currencies: H,
                                     onCurrencyChange: (e) => z(e),
                                     handlePaymentSourceAdd: () => T(b.h8.ADD_PAYMENT_STEPS),
                                     setHasAcceptedTerms: q,
@@ -130,7 +130,7 @@ function k(e) {
                                         ei(e);
                                     },
                                     planGroup: P,
-                                    currencies: L,
+                                    currencies: H,
                                     onCurrencyChange: (e) => z(e),
                                     hasOpenInvoice: null != N,
                                     purchaseState: Y,
@@ -149,7 +149,7 @@ function k(e) {
                           flashLegalTerms: () => $(!0),
                           analyticsLocation: A,
                           baseAnalyticsData: E,
-                          flowStartTime: H.startTime,
+                          flowStartTime: L.startTime,
                           planGroup: P,
                           purchaseTokenAuthState: W,
                           openInvoiceId: N,

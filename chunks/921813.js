@@ -23,13 +23,13 @@ var a = t(120356),
     h = t(228168),
     v = t(154960);
 function C(e) {
-    let { user: i, guild: t, canUsePremiumCustomization: a, onUpsellClick: C, pendingBanner: I, pendingBio: S, pendingPronouns: k, pendingAvatar: y, pendingAvatarDecoration: T, pendingNickname: B, pendingGlobalName: j, pendingThemeColors: P, pendingProfileEffectId: E, avatarClassName: w, containerClassName: N, isTryItOutFlow: A = !1, disabledInputs: O = !1, hideCustomStatus: Z = !1, hideBioSection: R = !1, hideMessageInput: L = !0, hideExampleButton: M = !1 } = e,
+    let { user: i, guild: t, canUsePremiumCustomization: a, onUpsellClick: C, pendingBanner: I, pendingBio: S, pendingPronouns: y, pendingAvatar: k, pendingAvatarDecoration: T, pendingNickname: B, pendingGlobalName: j, pendingThemeColors: P, pendingProfileEffectId: E, avatarClassName: w, containerClassName: N, isTryItOutFlow: A = !1, disabledInputs: O = !1, hideCustomStatus: Z = !1, hideBioSection: R = !1, hideMessageInput: L = !0, hideExampleButton: M = !1 } = e,
         G = (0, l.ZP)(i.id, null == t ? void 0 : t.id),
         { avatarSrc: D, avatarDecorationSrc: U } = (0, d.Z)({
             user: i,
             guildId: null == t ? void 0 : t.id,
             avatarDecorationOverride: T,
-            avatarOverride: y,
+            avatarOverride: k,
             size: o.AvatarSizes.SIZE_80,
             showPending: !0
         }),
@@ -90,11 +90,11 @@ function C(e) {
                 user: i,
                 displayProfile: G,
                 guild: t,
-                pendingAvatar: y,
+                pendingAvatar: k,
                 pendingNickname: B,
                 pendingGlobalName: j,
                 pendingBio: S,
-                pendingPronouns: k,
+                pendingPronouns: y,
                 isTryItOutFlow: A,
                 hideBioSection: R
             }),

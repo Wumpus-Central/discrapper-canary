@@ -20,9 +20,9 @@ var i = t(200651),
     h = t(669079),
     f = t(987209),
     v = t(563132),
-    E = t(409813),
-    S = t(809144),
-    g = t(698708),
+    g = t(409813),
+    E = t(809144),
+    S = t(698708),
     j = t(844068),
     y = t(614223),
     I = t(481595),
@@ -40,10 +40,10 @@ function O(e) {
         { isGift: em, giftMessage: ep, giftRecipient: ex, claimableRewards: eh } = (0, f.wD)();
     s()(null != ei, 'Step should be set');
     let ef = l.useRef(null),
-        [ev, eE] = (0, a.Z)(!1, 500);
+        [ev, eg] = (0, a.Z)(!1, 500);
     (0, x.t)();
-    let eS = null !== (t = null != A ? A : F) && void 0 !== t ? t : null,
-        eg = null != eS && (!er || b.nG[eS].skus.includes(Q)) ? eS : null,
+    let eE = null !== (t = null != A ? A : F) && void 0 !== t ? t : null,
+        eS = null != eE && (!er || b.nG[eE].skus.includes(Q)) ? eE : null,
         ej = (0, d.N)(F),
         ey = (0, u.Ng)(),
         eI = { user_trial_offer_id: null == ej ? void 0 : ej.id };
@@ -54,7 +54,7 @@ function O(e) {
             (e, n) => {
                 H(e),
                     null != n && ec(n),
-                    O(E.h8.CONFIRM, {
+                    O(g.h8.CONFIRM, {
                         fulfillment: {
                             subscription: e,
                             entitlements: n
@@ -83,14 +83,14 @@ function O(e) {
         eF = (0, o.id)(J, em, eh),
         eD = l.useCallback(() => {
             if (eM) {
-                O(E.h8.SKU_SELECT);
+                O(g.h8.SKU_SELECT);
                 return;
             }
             if (eF) {
-                O(E.h8.SELECT_FREE_SKU);
+                O(g.h8.SELECT_FREE_SKU);
                 return;
             }
-            return eL ? O(E.h8.GIFT_CUSTOMIZATION) : O(E.h8.PLAN_SELECT);
+            return eL ? O(g.h8.GIFT_CUSTOMIZATION) : O(g.h8.PLAN_SELECT);
         }, [O, eM, eL, eF]),
         eU = !1;
     return (
@@ -99,7 +99,7 @@ function O(e) {
                   hasLegalTermsFlash: ev,
                   legalTermsNodeRef: eb,
                   onPaymentSourceChange: (e) => ee(null != e ? e.id : null),
-                  handlePaymentSourceAdd: () => O(E.h8.ADD_PAYMENT_STEPS)
+                  handlePaymentSourceAdd: () => O(g.h8.ADD_PAYMENT_STEPS)
               }))
             : ((eU = em ? null == eu : null != eT && ea === C.GZ.SUBSCRIPTION && eO && !eT.canRedeemTrial()),
               null == B || ed || em
@@ -111,11 +111,11 @@ function O(e) {
                         priceOptions: Y,
                         currencies: V,
                         onCurrencyChange: (e) => $(e),
-                        handlePaymentSourceAdd: () => O(E.h8.ADD_PAYMENT_STEPS),
+                        handlePaymentSourceAdd: () => O(g.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: es,
                         legalTermsNodeRef: eb,
                         hasLegalTermsFlash: ev,
-                        trialId: eg,
+                        trialId: eS,
                         trialFooterMessageOverride: Z,
                         reviewWarningMessage: R,
                         purchaseState: el,
@@ -133,7 +133,7 @@ function O(e) {
                             ee(null != e ? e.id : null);
                         },
                         onPaymentSourceAdd: () => {
-                            O(E.h8.ADD_PAYMENT_STEPS);
+                            O(g.h8.ADD_PAYMENT_STEPS);
                         },
                         planId: J.id,
                         setHasAcceptedTerms: es,
@@ -149,10 +149,10 @@ function O(e) {
                     })))),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(S.P, { giftMessage: ep }),
+                (0, i.jsx)(E.P, { giftMessage: ep }),
                 !eR && (0, i.jsx)(P.Z, { isEligibleForTrial: eO }),
                 (0, i.jsxs)(N.C3, {
-                    children: [(0, i.jsx)(j.Z, {}), (0, i.jsx)(g.Z, {}), r]
+                    children: [(0, i.jsx)(j.Z, {}), (0, i.jsx)(S.Z, {}), r]
                 }),
                 (0, i.jsx)(N.O3, {
                     children: (0, i.jsx)(T.Z, {
@@ -162,13 +162,13 @@ function O(e) {
                         onNext: eP,
                         onPurchaseError: (e) => et(e),
                         legalTermsNodeRef: eb,
-                        flashLegalTerms: () => eE(!0),
+                        flashLegalTerms: () => eg(!0),
                         invoiceError: eC,
                         planError: eN,
                         analyticsLocation: k,
                         baseAnalyticsData: L,
                         flowStartTime: W.startTime,
-                        trialId: eg,
+                        trialId: eS,
                         planGroup: w,
                         purchaseTokenAuthState: q,
                         openInvoiceId: M,

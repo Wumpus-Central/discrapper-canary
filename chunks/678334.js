@@ -19,9 +19,9 @@ var i = t(200651),
     h = t(459965),
     f = t(858987),
     v = t(975060),
-    E = t(882712),
-    S = t(855775),
-    g = t(626135),
+    g = t(882712),
+    E = t(855775),
+    S = t(626135),
     j = t(669079),
     y = t(74538),
     I = t(987209),
@@ -40,16 +40,16 @@ function A(e) {
         ef = (0, j.MY)(ep),
         ev = {};
     (ev.gift_style = eo), (ev.reward_sku_ids = eh && (null == ex ? void 0 : ex.skuId) != null ? [null == ex ? void 0 : ex.skuId] : []), ef === j.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != ep, 'Gift recipient must be set at purchase review step for these gift options.'), (ev.recipient_id = ep.id), (ev.custom_message = eu), (ev.emoji_id = null == ed ? void 0 : ed.id), (ev.emoji_name = (null == ed ? void 0 : ed.id) == null ? (null == ed ? void 0 : ed.surrogates) : void 0), (ev.sound_id = null == em ? void 0 : em.soundId));
-    let eE = null == Y ? void 0 : Y.id,
-        eS = (0, b.sE)(D, X.paymentSourceId, eE),
-        eg = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
+    let eg = null == Y ? void 0 : Y.id,
+        eE = (0, b.sE)(D, X.paymentSourceId, eg),
+        eS = (0, a.e7)([v.Z], () => v.Z.popupCallbackCalled),
         { analyticsLocations: ej } = (0, u.ZP)(),
         ey = null != $ ? ee[$] : null,
-        [eI, eP] = l.useState(eS),
+        [eI, eP] = l.useState(eE),
         [eT, eN] = l.useState(!1),
-        { hasEntitlements: eb } = (0, h.H)(eE, ec),
+        { hasEntitlements: eb } = (0, h.H)(eg, ec),
         eC = (0, y.Ap)(X.paymentSourceId),
-        e_ = eb || eS,
+        e_ = eb || eE,
         eO = (0, p.U)(),
         eA = null,
         eZ = null;
@@ -57,7 +57,7 @@ function A(e) {
         var eR;
         s()(null != en, 'SKU must be selected for one-time purchases'), (eA = null !== (eR = et[en]) && void 0 !== eR ? eR : null), s()(null != eA, 'SKU must exist and be fetched.');
         let e = ei[en],
-            n = null != $ ? $ : S.c;
+            n = null != $ ? $ : E.c;
         eZ = null != e ? e[n] : null;
     }
     let ew = async () => {
@@ -110,14 +110,14 @@ function A(e) {
         l.useEffect(() => {
             let { baseAnalyticsData: e, flowStartTime: n, makePurchase: t, onNext: i, onPurchaseError: l, paymentSource: r, paymentSourceId: s, purchaseTokenAuthState: a, setPurchaseState: c } = eL.current;
             (async () => {
-                if (!0 === eg)
+                if (!0 === eS)
                     try {
                         if (null == v.Z.redirectedPaymentId) return;
                         await (0, o.OP)(v.Z.redirectedPaymentId), c(N.A.COMPLETED), i();
                     } catch (t) {
                         c(N.A.FAIL),
                             l(t),
-                            g.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
+                            S.default.track(_.rMx.PAYMENT_FLOW_FAILED, {
                                 ...e,
                                 payment_error_code: null == t ? void 0 : t.code,
                                 payment_source_id: s,
@@ -127,15 +127,15 @@ function A(e) {
                     } finally {
                         eP(!1), (0, o.K2)();
                     }
-                else a === E.I.SUCCESS && (await t());
+                else a === g.I.SUCCESS && (await t());
             })();
-        }, [eg]),
+        }, [eS]),
         l.useEffect(() => {
             let { makePurchase: e } = eL.current;
-            eS && !ec && null == n && e();
-        }, [eS, ec, n]);
+            eE && !ec && null == n && e();
+        }, [eE, ec, n]);
     let ek = null != H || (Q === _.GZQ.ONE_TIME && !ec);
-    return eS
+    return eE
         ? null
         : (0, i.jsxs)(c.ModalFooter, {
               align: d.Z.Align.CENTER,

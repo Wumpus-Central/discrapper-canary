@@ -75,7 +75,7 @@ class c extends a.Z {
         return this.canvas;
     }
     setFilter(t) {
-        this.offscreenCanvas, super.setFilter(t);
+        !1 === this._warnedAboutFilters && this.offscreenCanvas, super.setFilter(t);
     }
     setContextProperties() {
         null != this.context && ((this.context.fillStyle = this.color), (this.context.strokeStyle = this.color), (this.context.font = ''.concat(this.font.style, ' ').concat(this.font.weight, ' ').concat(this.font.size, 'px ').concat(this.font.family.join(', '))));
@@ -386,6 +386,6 @@ class c extends a.Z {
         }
     }
     constructor(t, e) {
-        super(t, e), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'offscreenCanvas', void 0), (this.canvas = t), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
+        super(t, e), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'offscreenCanvas', void 0), l(this, '_warnedAboutFilters', !1), (this.canvas = t), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
     }
 }

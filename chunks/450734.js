@@ -19,8 +19,8 @@ var a = t(120356),
     b = t(776458);
 let m = u.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function g(e) {
-    let { user: i, guild: t, displayProfile: a, canUsePremiumCustomization: u, previewAvatar: g, previewAvatarDecoration: x, previewTheme: h, previewPrimaryColor: v, className: C, disabledInputs: I, isTryItOutFlow: S, onUpsellClick: k } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
+    let { user: i, guild: t, displayProfile: a, canUsePremiumCustomization: u, previewAvatar: g, previewAvatarDecoration: x, previewTheme: h, previewPrimaryColor: v, className: C, disabledInputs: I, isTryItOutFlow: S, onUpsellClick: y } = e,
+        { analyticsLocations: k } = (0, l.ZP)(),
         T = (0, o.e7)([d.Z], () => d.Z.getStatus(i.id)),
         B = null == t || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || u,
         j = (0, n.jsx)(m, {
@@ -49,7 +49,7 @@ function g(e) {
                         onChangeAvatarDecoration: () => {
                             (0, c.ps)({
                                 guild: null == t ? void 0 : t,
-                                analyticsLocations: y,
+                                analyticsLocations: k,
                                 isTryItOutFlow: S
                             });
                         }
@@ -72,7 +72,7 @@ function g(e) {
                     })
             })
           : (0, n.jsxs)(s.Clickable, {
-                onClick: k,
+                onClick: y,
                 className: r()(b.avatar, b.clickable),
                 children: [
                     j,

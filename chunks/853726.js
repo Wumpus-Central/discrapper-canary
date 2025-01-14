@@ -19,8 +19,8 @@ function _(e) {
     var i;
     let { user: t, displayProfile: _, guild: b, pendingAvatar: m, pendingNickname: g, pendingGlobalName: x, pendingBio: h, pendingPronouns: v, isTryItOutFlow: C, hideBioSection: I } = e,
         S = (0, a.e7)([c.ZP], () => (null == b ? null : c.ZP.getMember(b.id, t.id))),
-        k = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        y = null == _ ? void 0 : null === (i = _.getPreviewBio(h)) || void 0 === i ? void 0 : i.value,
+        y = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        k = null == _ ? void 0 : null === (i = _.getPreviewBio(h)) || void 0 === i ? void 0 : i.value,
         T = null != v ? v : null == _ ? void 0 : _.pronouns,
         B = (0, u.Ly)({
             pendingNickname: g,
@@ -52,12 +52,12 @@ function _(e) {
                 })
             }),
             !I &&
-                null != y &&
-                '' !== y &&
+                null != k &&
+                '' !== k &&
                 (0, n.jsx)(s.Z, {
                     user: t,
-                    bio: y,
-                    hidePersonalInformation: k,
+                    bio: k,
+                    hidePersonalInformation: y,
                     viewFullBioDisabled: !0
                 })
         ]

@@ -25,8 +25,8 @@ var n = t(200651),
     C = t(590783),
     I = t(699516),
     S = t(246946),
-    k = t(594174),
-    y = t(572004),
+    y = t(594174),
+    k = t(572004),
     T = t(669079),
     B = t(74538),
     j = t(51144),
@@ -37,7 +37,7 @@ var n = t(200651),
     A = t(431852);
 function O(e) {
     let { giftCode: i, application: t, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: h, isSendingMessage: v } = e,
-        [I, k] = a.useState(d.CopyInput.Modes.DEFAULT),
+        [I, y] = a.useState(d.CopyInput.Modes.DEFAULT),
         O = (0, c.e7)([S.Z], () => S.Z.enabled),
         R = f || (null != l && null != b),
         L = (null == r ? void 0 : r.productLine) === E.POd.COLLECTIBLES,
@@ -69,12 +69,12 @@ function O(e) {
                     r
                 );
             try {
-                (0, y.JG)(e), k(d.CopyInput.Modes.SUCCESS);
+                (0, k.JG)(e), y(d.CopyInput.Modes.SUCCESS);
             } catch (e) {
-                k(d.CopyInput.Modes.ERROR);
+                y(d.CopyInput.Modes.ERROR);
             }
             setTimeout(() => {
-                k(d.CopyInput.Modes.DEFAULT);
+                y(d.CopyInput.Modes.DEFAULT);
             }, 1500);
         },
         q = () => {
@@ -101,7 +101,7 @@ function O(e) {
                             mode: I,
                             text: e,
                             onCopy: (e) => z(e, i),
-                            supportsCopy: y.wS,
+                            supportsCopy: k.wS,
                             className: A.__invalid_copyInput,
                             buttonColor: d.ButtonColors.LINK,
                             buttonLook: d.ButtonLooks.LINK
@@ -212,10 +212,10 @@ let Z = (e) => {
             isLoading: v.Z.getFetching()
         })),
         S = Array.from(x.values()),
-        y = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
-        T = l().difference(y, S),
+        k = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
+        T = l().difference(k, S),
         B = [...S, ...T],
-        P = (0, c.e7)([k.default], () => k.default.filter((e) => B.includes(e.id) && !e.bot), [B]);
+        P = (0, c.e7)([y.default], () => y.default.filter((e) => B.includes(e.id) && !e.bot), [B]);
     if (null == P || 0 === P.length) return null;
     let E = l().sortBy(P, (e) => B.indexOf(e.id));
     return (0, n.jsxs)('div', {
