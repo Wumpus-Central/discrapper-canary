@@ -1,6 +1,6 @@
 i.d(e, {
     Z: function () {
-        return c;
+        return d;
     }
 }),
     i(411104),
@@ -23,13 +23,15 @@ function l(t, e, i) {
         t
     );
 }
-class h {
+let h = 'undefined' != typeof OffscreenCanvas,
+    c = 660;
+class u {
     reset() {
         this.context.clearRect(0, 0, this.MAX_ROW_WIDTH, this.MAX_HEIGHT), this.imageMap.clear(), (this.nextX = 0), (this.nextY = 0), (this.tallestImageHeight = 0), (this.needsReset = !1);
     }
     breakToNewRow() {
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (this.nextX = 0), (this.nextY += this.tallestImageHeight + this.CELL_BUFFER), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (t ? this.reset() : (this.needsReset = !0));
+        (this.nextX = 0), (this.nextY += this.tallestImageHeight + 2), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (t ? this.reset() : (this.needsReset = !0));
     }
     getImage(t, e, i) {
         var s;
@@ -51,22 +53,25 @@ class h {
                 [n]: o
             }),
             e.height > this.tallestImageHeight && (this.tallestImageHeight = e.height),
-            (this.nextX += e.width + this.CELL_BUFFER),
+            (this.nextX += e.width + 2),
             this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(),
             o
         );
     }
     constructor() {
-        l(this, 'CELL_BUFFER', 2), l(this, 'MAX_ROW_WIDTH', 4096), l(this, 'MAX_HEIGHT', 4096), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), (this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT);
-        let t = this.canvas.getContext('2d');
+        l(this, 'MAX_ROW_WIDTH', c), l(this, 'MAX_HEIGHT', c), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), h ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
+        let t = this.canvas.getContext('2d', {
+            alpha: !0,
+            willReadFrequently: !1
+        });
         if (null == t) throw Error("Couldn't construct context for offscreen canvas");
         this.context = t;
     }
 }
-class c extends a.Z {
+class d extends a.Z {
     setupOffscreenCanvas() {
         try {
-            this.offscreenCanvas = new h();
+            this.offscreenCanvas = new u();
         } catch (t) {
             this.offscreenCanvas = void 0;
         }
