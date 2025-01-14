@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return v;
     }
 });
 var i = n(200651),
@@ -13,20 +13,21 @@ var i = n(200651),
     d = n(471445),
     u = n(925329),
     m = n(163400),
-    h = n(466070),
-    p = n(981631),
-    g = n(388032),
-    x = n(926870);
-function f(e) {
+    h = n(63063),
+    p = n(466070),
+    g = n(981631),
+    x = n(388032),
+    f = n(926870);
+function b(e) {
     let { applicationId: t, channels: n } = e,
         l = (0, c.q)(t);
     return 0 === n.length || null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: x.applicationGroup,
+              className: f.applicationGroup,
               children: [
                   (0, i.jsxs)('div', {
-                      className: x.header,
+                      className: f.header,
                       children: [
                           (0, i.jsx)(u.Z, {
                               game: l,
@@ -41,13 +42,13 @@ function f(e) {
                   n.map((e) => {
                       var t;
                       return (0, i.jsx)(
-                          h.t,
+                          p.t,
                           {
                               channel: e,
                               application: l,
                               name: e.name,
                               icon: null !== (t = (0, d.KS)(e)) && void 0 !== t ? t : void 0,
-                              iconWrapperClassName: x.iconwrapper,
+                              iconWrapperClassName: f.iconwrapper,
                               hasNextSection: !0,
                               trailing: (0, i.jsx)(o.PencilIcon, { size: 'xs' })
                           },
@@ -57,7 +58,7 @@ function f(e) {
               ]
           });
 }
-function b(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, m.F)(t.id),
         r = a().groupBy(n, (e) => {
@@ -67,18 +68,18 @@ function b(e) {
         c = Object.keys(r);
     return (
         l.useEffect(() => {
-            0 === n.length && s.Z.setSection(p.b4C.OVERVIEW);
+            0 === n.length && s.Z.setSection(g.b4C.OVERVIEW);
         }, [n]),
         (0, i.jsxs)(o.FormSection, {
             children: [
                 (0, i.jsx)(o.FormText, {
                     type: o.FormTextTypes.DESCRIPTION,
-                    children: g.intl.format(g.t['9gsSLi'], { helpdeskArticle: '#' })
+                    children: x.intl.format(x.t['9gsSLi'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
                 }),
-                (0, i.jsx)(o.FormDivider, { className: x.headerDivider }),
+                (0, i.jsx)(o.FormDivider, { className: f.headerDivider }),
                 c.map((e) =>
                     (0, i.jsx)(
-                        f,
+                        b,
                         {
                             applicationId: e,
                             channels: r[e]
