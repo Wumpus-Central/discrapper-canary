@@ -1956,6 +1956,9 @@ class eg extends M.C {
                 case 25:
                     a.guildsLeaderboardOptOutDefault = e.int32();
                     break;
+                case 26:
+                    a.allowGameFriendDmsInDiscord = k.D5.internalBinaryRead(e, e.uint32(), r, a.allowGameFriendDmsInDiscord);
+                    break;
                 default:
                     let s = r.readUnknownField;
                     if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -1986,7 +1989,7 @@ class eg extends M.C {
             for (let r = 0; r < e.messageRequestRestrictedGuildIds.length; r++) n.fixed64(e.messageRequestRestrictedGuildIds[r]);
             n.join();
         }
-        e.defaultMessageRequestRestricted && k.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, n.tag(17, x.TD.LengthDelimited).fork(), r).join(), e.dropsOptedOut && k.D5.internalBinaryWrite(e.dropsOptedOut, n.tag(18, x.TD.LengthDelimited).fork(), r).join(), e.nonSpamRetrainingOptIn && k.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, n.tag(19, x.TD.LengthDelimited).fork(), r).join(), e.familyCenterEnabled && k.D5.internalBinaryWrite(e.familyCenterEnabled, n.tag(20, x.TD.LengthDelimited).fork(), r).join(), e.familyCenterEnabledV2 && k.D5.internalBinaryWrite(e.familyCenterEnabledV2, n.tag(21, x.TD.LengthDelimited).fork(), r).join(), e.hideLegacyUsername && k.D5.internalBinaryWrite(e.hideLegacyUsername, n.tag(22, x.TD.LengthDelimited).fork(), r).join(), e.inappropriateConversationWarnings && k.D5.internalBinaryWrite(e.inappropriateConversationWarnings, n.tag(23, x.TD.LengthDelimited).fork(), r).join(), e.recentGamesEnabled && k.D5.internalBinaryWrite(e.recentGamesEnabled, n.tag(24, x.TD.LengthDelimited).fork(), r).join(), 0 !== e.guildsLeaderboardOptOutDefault && n.tag(25, x.TD.Varint).int32(e.guildsLeaderboardOptOutDefault);
+        e.defaultMessageRequestRestricted && k.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, n.tag(17, x.TD.LengthDelimited).fork(), r).join(), e.dropsOptedOut && k.D5.internalBinaryWrite(e.dropsOptedOut, n.tag(18, x.TD.LengthDelimited).fork(), r).join(), e.nonSpamRetrainingOptIn && k.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, n.tag(19, x.TD.LengthDelimited).fork(), r).join(), e.familyCenterEnabled && k.D5.internalBinaryWrite(e.familyCenterEnabled, n.tag(20, x.TD.LengthDelimited).fork(), r).join(), e.familyCenterEnabledV2 && k.D5.internalBinaryWrite(e.familyCenterEnabledV2, n.tag(21, x.TD.LengthDelimited).fork(), r).join(), e.hideLegacyUsername && k.D5.internalBinaryWrite(e.hideLegacyUsername, n.tag(22, x.TD.LengthDelimited).fork(), r).join(), e.inappropriateConversationWarnings && k.D5.internalBinaryWrite(e.inappropriateConversationWarnings, n.tag(23, x.TD.LengthDelimited).fork(), r).join(), e.recentGamesEnabled && k.D5.internalBinaryWrite(e.recentGamesEnabled, n.tag(24, x.TD.LengthDelimited).fork(), r).join(), 0 !== e.guildsLeaderboardOptOutDefault && n.tag(25, x.TD.Varint).int32(e.guildsLeaderboardOptOutDefault), e.allowGameFriendDmsInDiscord && k.D5.internalBinaryWrite(e.allowGameFriendDmsInDiscord, n.tag(26, x.TD.LengthDelimited).fork(), r).join();
         let i = r.writeUnknownFields;
         return !1 !== i && (!0 == i ? x.z.onWrite : i)(this.typeName, e, n), n;
     }
@@ -2133,6 +2136,12 @@ class eg extends M.C {
                 name: 'guilds_leaderboard_opt_out_default',
                 kind: 'enum',
                 T: () => ['discord_protos.discord_users.v1.GuildsLeaderboardOptOutDefault', d]
+            },
+            {
+                no: 26,
+                name: 'allow_game_friend_dms_in_discord',
+                kind: 'message',
+                T: () => k.D5
             }
         ]);
     }
