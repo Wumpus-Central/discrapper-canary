@@ -77,15 +77,15 @@ function j(e) {
             source: j,
             fetchesApplication: C
         }),
-        y = s.ButtonColors.BRAND,
-        S = null != a ? a : A.intl.string(A.t.zKX8Nj);
+        S = s.ButtonColors.BRAND,
+        y = null != a ? a : A.intl.string(A.t.zKX8Nj);
     return (
-        I === d.JS.JOIN ? ((y = s.ButtonColors.GREEN), (S = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((y = s.ButtonColors.RED), (S = A.intl.string(A.t['Hi1/aW']))),
+        I === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (y = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((S = s.ButtonColors.RED), (y = A.intl.string(A.t['Hi1/aW']))),
         {
             onActivityItemSelected: P,
             activityAction: I,
-            buttonColor: y,
-            buttonText: S
+            buttonColor: S,
+            buttonText: y
         }
     );
 }

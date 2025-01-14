@@ -22,16 +22,16 @@ var i = n(200651),
     b = n(937427),
     v = n(643886),
     C = n(869157),
-    N = n(454092),
-    I = n(289465),
+    I = n(454092),
+    N = n(289465),
     j = n(981631),
     _ = n(689079),
     T = n(388032),
     S = n(148048);
 function Z(e) {
-    let { applicationId: t, commandId: r, guildId: b, inModal: v, editedTargetPermissions: Z, originalApplicationPermissions: A, originalCommandPermissions: R, selectedPermissionCount: k } = e,
-        L = (0, s.e7)([f.Z], () => (null == r ? null : f.Z.getCommand(r)), [r]),
-        O = (null == L ? void 0 : L.defaultMemberPermissions) != null,
+    let { applicationId: t, commandId: r, guildId: b, inModal: v, editedTargetPermissions: Z, originalApplicationPermissions: A, originalCommandPermissions: R, selectedPermissionCount: L } = e,
+        k = (0, s.e7)([f.Z], () => (null == r ? null : f.Z.getCommand(r)), [r]),
+        O = (null == k ? void 0 : k.defaultMemberPermissions) != null,
         w = (0, s.e7)(
             [p.Z, h.ZP, g.Z],
             () => {
@@ -46,11 +46,11 @@ function Z(e) {
                         selfMember: t,
                         applicationLevelPermissions: A,
                         commandLevelPermissions: R,
-                        defaultMemberPermissions: null == L ? void 0 : L.defaultMemberPermissions
+                        defaultMemberPermissions: null == k ? void 0 : k.defaultMemberPermissions
                     })
                 );
             },
-            [b, L, A, R]
+            [b, k, A, R]
         ),
         M = null != r ? r : t,
         [B, P] = l.useMemo(() => {
@@ -73,7 +73,7 @@ function Z(e) {
                               selfMember: n,
                               applicationLevelPermissions: A,
                               commandLevelPermissions: e,
-                              defaultMemberPermissions: null == L ? void 0 : L.defaultMemberPermissions
+                              defaultMemberPermissions: null == k ? void 0 : k.defaultMemberPermissions
                           })
                         : (0, u.Ft)({
                               PermissionStore: g.Z,
@@ -83,7 +83,7 @@ function Z(e) {
                           }))
                 );
             },
-            [b, L, r, A]
+            [b, k, r, A]
         ),
         U = l.useCallback(
             (e, t) => {
@@ -91,10 +91,10 @@ function Z(e) {
                 let i = null;
                 if (0 !== t.length) {
                     let e = Z[t[0]];
-                    if (e.type === d.Kw.USER) n = N.s.REMOVE_SELF;
+                    if (e.type === d.Kw.USER) n = I.s.REMOVE_SELF;
                     else {
                         let t = e.id;
-                        if (((n = N.s.REMOVE_ROLE), (0, m.pM)(b, t))) i = '@everyone';
+                        if (((n = I.s.REMOVE_ROLE), (0, m.pM)(b, t))) i = '@everyone';
                         else {
                             let e = p.Z.getRole(b, t);
                             i = null != e ? e.name : 'role';
@@ -102,13 +102,13 @@ function Z(e) {
                     }
                 } else {
                     let t = Object.values(e)[0].id;
-                    if (((n = N.s.DENY_ROLE), (0, m.pM)(b, t))) i = '@everyone';
+                    if (((n = I.s.DENY_ROLE), (0, m.pM)(b, t))) i = '@everyone';
                     else {
                         let e = p.Z.getRole(b, t);
                         i = null != e ? e.name : 'role';
                     }
                 }
-                (0, N._)(n, i);
+                (0, I._)(n, i);
             },
             [b, Z]
         ),
@@ -142,11 +142,11 @@ function Z(e) {
                         overwrittenKeys: e,
                         search: E,
                         searchPlaceholderText: T.intl.string(T.t['TLQo/v']),
-                        selectedPermissionCount: k,
+                        selectedPermissionCount: L,
                         ...n
                     });
             });
-        }, [F, B, b, k]),
+        }, [F, B, b, L]),
         H = l.useCallback(() => {
             let e = Object.keys(P);
             return (0, c.openModalLazy)(async () => {
@@ -160,16 +160,16 @@ function Z(e) {
                         overwrittenKeys: e,
                         search: y,
                         searchPlaceholderText: T.intl.string(T.t.wAfO5e),
-                        selectedPermissionCount: k,
+                        selectedPermissionCount: L,
                         ...n
                     });
             });
-        }, [F, b, P, k]),
+        }, [F, b, P, L]),
         G = l.useCallback(
             () =>
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('21897').then(n.bind(n, 303313)),
-                        t = L.defaultMemberPermissions;
+                        t = k.defaultMemberPermissions;
                     return (
                         o.fS(t, u.BO) && (t = j.Plq.ADMINISTRATOR),
                         (n) =>
@@ -179,9 +179,9 @@ function Z(e) {
                             })
                     );
                 }),
-            [L]
+            [k]
         ),
-        z = k - _._n,
+        z = L - _._n,
         V = z >= 0,
         K = [
             {
@@ -245,7 +245,7 @@ function Z(e) {
                 return (
                     w ? V && (l = T.intl.string(T.t.XTwtW1)) : (l = null != r ? T.intl.string(T.t.tybdam) : T.intl.string(T.t.z2hjk5)),
                     (0, i.jsx)(
-                        I.Z,
+                        N.Z,
                         {
                             bar: (0, i.jsx)(c.Tooltip, {
                                 tooltipClassName: S.tooltip,

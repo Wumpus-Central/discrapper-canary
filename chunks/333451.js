@@ -25,40 +25,40 @@ var o = t(200651),
     I = t(937615),
     b = t(981631),
     x = t(474936),
-    y = t(388032),
-    C = t(427930);
+    C = t(388032),
+    y = t(427930);
 function N(e) {
     let { shouldUpsellFromNoneTier: n } = e,
         t = (0, a.e7)([E.default], () => E.default.locale);
     return (0, o.jsxs)('div', {
-        className: C.perksList,
+        className: y.perksList,
         children: [
             (0, o.jsx)(S.Z, {
                 icon: g.Z,
-                iconClassName: C.perkIconGuild,
-                description: y.intl.formatToPlainString(y.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
+                iconClassName: y.perkIconGuild,
+                description: C.intl.formatToPlainString(C.t.sQBgs7, { numFreeGuildSubscriptions: x.cb })
             }),
             (0, o.jsx)(S.Z, {
                 icon: g.Z,
-                iconClassName: C.perkIconGuild,
-                description: y.intl.formatToPlainString(y.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
+                iconClassName: y.perkIconGuild,
+                description: C.intl.formatToPlainString(C.t['1A6vXl'], { percent: (0, P.T3)(t, x.Rr / 100) })
             }),
             n
                 ? (0, o.jsx)(S.Z, {
                       icon: c.ReactionIcon,
-                      iconClassName: C.perkIconChatPerks,
-                      description: y.intl.string(y.t.Z9b2x8)
+                      iconClassName: y.perkIconChatPerks,
+                      description: C.intl.string(C.t.Z9b2x8)
                   })
                 : null,
             (0, o.jsx)(S.Z, {
                 icon: c.ScreenArrowIcon,
-                iconClassName: C.perkIconStream,
-                description: y.intl.string(y.t['8dqG5O'])
+                iconClassName: y.perkIconStream,
+                description: C.intl.string(C.t['8dqG5O'])
             }),
             (0, o.jsx)(S.Z, {
                 icon: c.UploadIcon,
-                iconClassName: C.perkIconUpload,
-                description: y.intl.string(y.t.cBorIy)
+                iconClassName: y.perkIconUpload,
+                description: C.intl.string(C.t.cBorIy)
             })
         ]
     });
@@ -85,17 +85,17 @@ function A(e) {
         (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)(c.ModalContent, {
-                    className: C.content,
+                    className: y.content,
                     children: [
                         (0, o.jsx)(c.ModalCloseButton, {
                             onClick: i,
-                            className: C.closeButton
+                            className: y.closeButton
                         }),
-                        O && (0, o.jsx)(_.dz, { className: C.premiumTrialBadge }),
-                        (0, o.jsx)('div', { className: r()(C.upsellImage, { [C.upsellImageWithTrialOffer]: O }) }),
+                        O && (0, o.jsx)(_.dz, { className: y.premiumTrialBadge }),
+                        (0, o.jsx)('div', { className: r()(y.upsellImage, { [y.upsellImageWithTrialOffer]: O }) }),
                         (0, o.jsx)('div', {
-                            className: C.bodyText,
-                            children: null != Z ? y.intl.string(y.t.AoSzEh) : y.intl.format(y.t['7vePZW'], { monthlyPrice: B })
+                            className: y.bodyText,
+                            children: null != Z ? C.intl.string(C.t.AoSzEh) : C.intl.format(C.t['7vePZW'], { monthlyPrice: B })
                         }),
                         (0, o.jsx)(N, { shouldUpsellFromNoneTier: R })
                     ]
@@ -105,13 +105,13 @@ function A(e) {
                     justify: p.Z.Justify.END,
                     children: [
                         (0, o.jsxs)('div', {
-                            className: C.footerRight,
+                            className: y.footerRight,
                             children: [
                                 (0, o.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
                                     color: L,
                                     onClick: S,
-                                    children: y.intl.string(y.t['SI/adn'])
+                                    children: C.intl.string(C.t['SI/adn'])
                                 }),
                                 (0, o.jsx)(c.Button, {
                                     color: c.Button.Colors.GREEN,
@@ -131,18 +131,18 @@ function A(e) {
                                                 trialId: Z
                                             });
                                     },
-                                    children: null != Z ? y.intl.string(y.t['Gd/XHB']) : y.intl.string(y.t.p2moio)
+                                    children: null != Z ? C.intl.string(C.t['Gd/XHB']) : C.intl.string(C.t.p2moio)
                                 })
                             ]
                         }),
                         (0, o.jsx)('div', {
-                            className: C.backStep,
+                            className: y.backStep,
                             children: (0, o.jsx)(c.Button, {
                                 color: L,
                                 look: c.Button.Looks.LINK,
                                 size: c.Button.Sizes.NONE,
                                 onClick: () => a(),
-                                children: y.intl.string(y.t['13/7kZ'])
+                                children: C.intl.string(C.t['13/7kZ'])
                             })
                         })
                     ]

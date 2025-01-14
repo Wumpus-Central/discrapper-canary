@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     n(653041),
@@ -23,11 +23,11 @@ var i = n(200651),
     b = n(700785),
     v = n(388032),
     C = n(449650);
-function N(e) {
+function I(e) {
     var t;
-    let { guild: n, applicationIntegration: N } = e,
-        I = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        { application: j } = N,
+    let { guild: n, applicationIntegration: I } = e,
+        N = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
+        { application: j } = I,
         _ = null != j.bot ? new p.Z(j.bot) : null,
         T = (0, a.e7)([g.ZP], () => (null != _ ? g.ZP.getMember(n.id, _.id) : null), [_, n]),
         S = null == _ ? void 0 : _.id;
@@ -36,12 +36,12 @@ function N(e) {
     }, [n.id, S]);
     let Z = l.useMemo(() => {
         var e, t, i;
-        let l = I[n.getEveryoneRoleId()],
-            a = null !== (t = null == T ? void 0 : null === (e = T.roles) || void 0 === e ? void 0 : e.map((e) => I[e]).filter(f.lm)) && void 0 !== t ? t : [],
+        let l = N[n.getEveryoneRoleId()],
+            a = null !== (t = null == T ? void 0 : null === (e = T.roles) || void 0 === e ? void 0 : e.map((e) => N[e]).filter(f.lm)) && void 0 !== t ? t : [],
             o = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : b.Hn;
         for (let e of a) o = r.IH(o, e.permissions);
         return o;
-    }, [n, I, T]);
+    }, [n, N, T]);
     return null == _
         ? null
         : (0, i.jsx)(o.Card, {

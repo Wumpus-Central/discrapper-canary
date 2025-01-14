@@ -32,7 +32,7 @@ function x(e) {
                       })
             );
         }, [t]),
-        N = l.useCallback(() => {
+        I = l.useCallback(() => {
             (0, r.openModal)((e) =>
                 (0, i.jsx)(r.ConfirmModal, {
                     ...e,
@@ -54,14 +54,14 @@ function x(e) {
                 })
             );
         }, [t.guild_id, t.id, t.name]),
-        I = [];
+        N = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (I.push({
+        (N.push({
             icon: r.AnnouncementsIcon,
             text: t.source_channel.name
         }),
-        I.push({
+        N.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -127,7 +127,7 @@ function x(e) {
                                 (0, i.jsx)(r.FormDivider, { className: g.bottomDivider }),
                                 (0, i.jsx)(c.Z, {
                                     children: (0, i.jsx)(r.Button, {
-                                        onClick: N,
+                                        onClick: I,
                                         size: r.Button.Sizes.SMALL,
                                         color: r.Button.Colors.RED,
                                         look: r.Button.Looks.LINK,
@@ -157,7 +157,7 @@ function x(e) {
                                     name: t.name,
                                     imageSrc: C,
                                     detailsClassName: g.__invalid_description,
-                                    details: I
+                                    details: N
                                 }),
                                 (0, i.jsx)(d.Z, {
                                     className: g.expandIcon,

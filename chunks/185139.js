@@ -6,8 +6,8 @@ n.d(r, {
     n(47120),
     n(411104);
 var l = n(200651),
-    t = n(192379),
-    o = n(734530),
+    o = n(192379),
+    t = n(734530),
     s = n(120356),
     a = n.n(s),
     c = n(846519),
@@ -32,8 +32,8 @@ function b(e) {
     null != M && M instanceof u.HF && (M.code === p.SM.CARD_DECLINED && B && (R += ' '.concat(N.intl.string(N.t.iWvwQU))), M.code === p.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (R = N.intl.string(N.t.ypuSd3)), M.code === x.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (R = N.intl.string(N.t.mXMmWF)));
     let { stripe: L } = (0, m.usePaymentContext)();
     P = P || null == L;
-    let w = t.useRef(new c.V7());
-    t.useEffect(() => {
+    let w = o.useRef(new c.V7());
+    o.useEffect(() => {
         let e = w.current;
         return (
             null != L || e.isStarted()
@@ -48,7 +48,7 @@ function b(e) {
         );
     }, [L]);
     let U = r.includes(f.h8.PAYMENT_TYPE) ? f.h8.PAYMENT_TYPE : f.h8.ADD_PAYMENT_STEPS;
-    return (0, l.jsxs)(o.Elements, {
+    return (0, l.jsxs)(t.Elements, {
         options: x.OBo,
         stripe: L,
         children: [

@@ -131,7 +131,7 @@ t.Z = l.memo(function (e) {
             location: 'chat_input'
         }),
         d = (0, Z.Z)({ type: n }),
-        u = (0, x.h9)(t.id, 'ChannelAppLauncher'),
+        u = (0, x.h9)(t.id),
         h = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
         { visible: m } = (0, b.xL)();
     return c

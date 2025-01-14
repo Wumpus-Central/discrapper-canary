@@ -1,6 +1,6 @@
 var l,
-    t,
     o,
+    t,
     s,
     a,
     c = n(200651),
@@ -22,7 +22,7 @@ function f(e, r, n) {
         e
     );
 }
-((l = o || (o = {})).PRIMARY = 'primary'), (l.SECONDARY = 'secondary'), (l.WARNING = 'warning'), (l.ERROR = 'error'), ((t = s || (s = {})).SMALL = 'small'), (t.LARGE = 'large'), (t.NONE = 'none');
+((l = t || (t = {})).PRIMARY = 'primary'), (l.SECONDARY = 'secondary'), (l.WARNING = 'warning'), (l.ERROR = 'error'), ((o = s || (s = {})).SMALL = 'small'), (o.LARGE = 'large'), (o.NONE = 'none');
 let h = {
         primary: m.colorPrimary,
         secondary: m.colorSecondary,
@@ -36,13 +36,13 @@ let h = {
     };
 class x extends (a = i.PureComponent) {
     render() {
-        let { icon: e, color: r, children: n, iconSize: l, className: t, iconClassName: o } = this.props;
+        let { icon: e, color: r, children: n, iconSize: l, className: o, iconClassName: t } = this.props;
         return (0, c.jsxs)(p.Z, {
-            className: u()(m.note, h[r], t),
+            className: u()(m.note, h[r], o),
             align: p.Z.Align.CENTER,
             children: [
                 (0, c.jsx)(e, {
-                    className: u()(m.icon, _[l], o),
+                    className: u()(m.icon, _[l], t),
                     color: 'currentColor'
                 }),
                 (0, c.jsx)('div', { children: n })
@@ -50,4 +50,4 @@ class x extends (a = i.PureComponent) {
         });
     }
 }
-f(x, 'Colors', o), f(x, 'Sizes', s), (r.Z = x);
+f(x, 'Colors', t), f(x, 'Sizes', s), (r.Z = x);

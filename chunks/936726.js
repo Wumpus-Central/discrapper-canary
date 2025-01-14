@@ -23,8 +23,8 @@ var i = n(200651),
     b = n(572004),
     v = n(709054),
     C = n(51144),
-    N = n(486199),
-    I = n(981631),
+    I = n(486199),
+    N = n(981631),
     j = n(388032),
     _ = n(475872);
 let T = (e) => {
@@ -38,7 +38,7 @@ function S(e, t) {
         : (0, f.ov)({
               id: e.id,
               avatar: t,
-              discriminator: I.fo$
+              discriminator: N.fo$
           });
 }
 function Z(e) {
@@ -46,9 +46,9 @@ function Z(e) {
         [y, A] = l.useState(!1),
         [R] = l.useState(new s.V7());
     l.useEffect(() => () => R.stop(), [R]);
-    let k = l.useMemo(() => S(n, n.avatar), [n]),
-        L = l.useCallback(() => {
-            let e = ''.concat((0, o.K0)(!1)).concat(I.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+    let L = l.useMemo(() => S(n, n.avatar), [n]),
+        k = l.useCallback(() => {
+            let e = ''.concat((0, o.K0)(!1)).concat(N.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, b.JG)(e);
         }, [n]),
         O = l.useCallback(() => {
@@ -177,7 +177,7 @@ function Z(e) {
                                                         ...s,
                                                         'aria-label': '',
                                                         onClick: () => {
-                                                            null == t || t(), A(!0), c.AccessibilityAnnouncer.announce(j.intl.string(j.t.wwdb3t)), R.start(1000, () => A(!1)), L();
+                                                            null == t || t(), A(!0), c.AccessibilityAnnouncer.announce(j.intl.string(j.t.wwdb3t)), R.start(1000, () => A(!1)), k();
                                                         },
                                                         size: c.Button.Sizes.SMALL,
                                                         color: c.Button.Colors.PRIMARY,
@@ -217,9 +217,9 @@ function Z(e) {
                         children: (0, i.jsxs)(h.Z, {
                             align: h.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(I.Z, {
                                     name: n.name,
-                                    imageSrc: k,
+                                    imageSrc: L,
                                     details: w
                                 }),
                                 (0, i.jsx)(x.Z, {

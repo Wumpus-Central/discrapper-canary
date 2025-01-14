@@ -31,14 +31,14 @@ var i = t(200651),
     j = t(472033);
 function P(e) {
     var n;
-    let { application: t, channel: l, className: P, sectionName: y } = e,
-        S = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
+    let { application: t, channel: l, className: P, sectionName: S } = e,
+        y = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
         T = (0, g.L1)(t),
         L = (0, _.Eb)(T),
         R = {
             location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: t.id,
-            section_name: y,
+            section_name: S,
             source: N.Z.lastShownEntrypoint()
         },
         M = f.default.getCurrentUser(),
@@ -66,7 +66,7 @@ function P(e) {
                     (0, v.JG)(e),
                         C.default.track(b.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
-                            source: S
+                            source: y
                         }),
                         (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['L/PwZW']), r.ToastType.SUCCESS));
                 },

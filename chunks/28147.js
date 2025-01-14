@@ -29,8 +29,8 @@ var i = t(200651),
     I = t(106771),
     j = t(79984),
     P = t(314734),
-    y = t(981631),
-    S = t(388032),
+    S = t(981631),
+    y = t(388032),
     T = t(722029);
 let L = Array(6)
         .fill(0)
@@ -105,7 +105,7 @@ function k(e) {
           ? (0, i.jsx)(E.A, {
                 type: v.LG.SEARCH_EMPTY,
                 searchQuery: t,
-                textContent: a === v._b.TEXT ? S.intl.string(S.t.LSNOYW) : S.intl.string(S.t.Clu7Qk)
+                textContent: a === v._b.TEXT ? y.intl.string(y.t.LSNOYW) : y.intl.string(y.t.Clu7Qk)
             })
           : (0, i.jsxs)('div', {
                 children: [
@@ -149,7 +149,7 @@ function O(e) {
     l.useEffect(() => {
         !A &&
             _ &&
-            (0, c.yw)(y.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: v.L3.SEARCH,
                 source: C.Z.entrypoint(),
                 num: o.length
@@ -161,7 +161,7 @@ function O(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(b.Z, {
-                title: S.intl.string(S.t['0hKkS0']),
+                title: y.intl.string(y.t['0hKkS0']),
                 buttonType: O,
                 onClickViewButton: m ? E : void 0
             }),
@@ -198,7 +198,7 @@ function O(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    h.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+                                    h.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
                             }
                         },
                         t.id
@@ -229,7 +229,7 @@ function B(e) {
     return a
         ? (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(b.Z, { title: S.intl.string(S.t.PHjkRE) }),
+                  (0, i.jsx)(b.Z, { title: y.intl.string(y.t.PHjkRE) }),
                   (0, i.jsxs)('div', {
                       className: T.sectionContentContainer,
                       children: [
@@ -255,7 +255,7 @@ function B(e) {
           })
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(b.Z, { title: S.intl.string(S.t.shUONj) }),
+                  (0, i.jsx)(b.Z, { title: y.intl.string(y.t.shUONj) }),
                   (0, i.jsxs)('div', {
                       className: T.sectionActivitiesContentContainer,
                       children: [
@@ -293,12 +293,12 @@ function w(e) {
 function D() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(b.Z, { title: S.intl.string(S.t['0hKkS0']) }),
+            (0, i.jsx)(b.Z, { title: y.intl.string(y.t['0hKkS0']) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 children: L.map((e) => (0, i.jsx)(j.Z, {}, e))
             }),
-            (0, i.jsx)(b.Z, { title: S.intl.string(S.t.PHjkRE) }),
+            (0, i.jsx)(b.Z, { title: y.intl.string(y.t.PHjkRE) }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 children: R.map((e) => (0, i.jsx)(j.Z, {}, e))

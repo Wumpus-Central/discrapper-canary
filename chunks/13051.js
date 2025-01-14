@@ -27,8 +27,8 @@ var i = n(200651),
     b = n(430824),
     v = n(246946),
     C = n(259580),
-    N = n(531087),
-    I = n(768581),
+    I = n(531087),
+    N = n(768581),
     j = n(709054),
     _ = n(486199),
     T = n(981631),
@@ -37,13 +37,13 @@ var i = n(200651),
     E = n(232186);
 function y(e) {
     let t,
-        { guild: n, integration: r, editedIntegration: o, isExpanded: y, onToggleExpand: A, onDisable: R, onEnable: k } = e,
-        L = (0, d.e7)([b.Z], () => b.Z.getRoles(n.id)),
+        { guild: n, integration: r, editedIntegration: o, isExpanded: y, onToggleExpand: A, onDisable: R, onEnable: L } = e,
+        k = (0, d.e7)([b.Z], () => b.Z.getRoles(n.id)),
         [O, w] = l.useState(!1),
         M = (0, d.e7)([v.Z], () => v.Z.hidePersonalInformation),
         B = l.useCallback(() => {
-            w(!0), k(r);
-        }, [r, k]),
+            w(!0), L(r);
+        }, [r, L]),
         P = l.useCallback(() => {
             !r.syncing &&
                 (0, u.openModal)((e) => {
@@ -110,7 +110,7 @@ function y(e) {
         }, [r.account, r.subscriber_count, r.type]),
         { roleLink: V, syncDescriptionText: K } = l.useMemo(() => {
             let e, t;
-            let n = null != r.role_id ? L[r.role_id] : null;
+            let n = null != r.role_id ? k[r.role_id] : null;
             e =
                 null != n
                     ? (0, i.jsx)(u.Anchor, {
@@ -129,14 +129,14 @@ function y(e) {
                           })
                         : S.intl.formatToPlainString(S.t.unl3AA, { datetime: s()(r.synced_at).calendar() }))
             };
-        }, [L, U, r.revoked, r.role_id, r.synced_at, r.type, r.user]),
+        }, [k, U, r.revoked, r.role_id, r.synced_at, r.type, r.user]),
         q = l.useMemo(() => {
             let e = g.ZP.getGuildEmoji(n.id),
-                t = Object.values(L)
+                t = Object.values(k)
                     .filter((e) => null != e.tags && e.tags.integration_id === r.id)
                     .map((e) => e.id);
             return r.enable_emoticons ? e.sort((e, t) => e.name.localeCompare(t.name)).filter((e) => null != r.role_id && (null == e ? void 0 : e.roles.some((e) => t.includes(e)))) : [];
-        }, [n.id, L, r.enable_emoticons, r.id, r.role_id]);
+        }, [n.id, k, r.enable_emoticons, r.id, r.role_id]);
     if (
         (l.useEffect(() => {
             (null == o ? void 0 : o.id) === r.id && (null == o ? void 0 : o.enabled) === !0 && w(!1);
@@ -194,7 +194,7 @@ function y(e) {
                               onClick: B,
                               disabled: O,
                               children: O
-                                  ? (0, i.jsx)(N.Z, {
+                                  ? (0, i.jsx)(I.Z, {
                                         width: 24,
                                         height: 24
                                     })
@@ -264,7 +264,7 @@ function y(e) {
                                                     disabled: t.syncing || t.revoked,
                                                     onClick: o,
                                                     children: t.syncing
-                                                        ? (0, i.jsx)(N.Z, {
+                                                        ? (0, i.jsx)(I.Z, {
                                                               width: 24,
                                                               height: 24
                                                           })
@@ -378,7 +378,7 @@ function y(e) {
                                                                   alt: S.intl.formatToPlainString(S.t.n6ZZn5, { name: e.name }),
                                                                   draggable: !1,
                                                                   className: a()(Z.emoji, 'emoji', 'jumboable'),
-                                                                  src: I.ZP.getEmojiURL({
+                                                                  src: N.ZP.getEmojiURL({
                                                                       id: e.id,
                                                                       animated: e.animated,
                                                                       size: 28

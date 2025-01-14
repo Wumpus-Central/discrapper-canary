@@ -59,7 +59,7 @@ function C(e, t, n) {
             },
             [n]
         ),
-        N = (0, s.e7)(
+        I = (0, s.e7)(
             [f.Z],
             () => {
                 var e;
@@ -67,15 +67,15 @@ function C(e, t, n) {
             },
             [n]
         ),
-        I = null != n ? n : t,
+        N = null != n ? n : t,
         j = null != n ? C : a,
-        _ = i.useMemo(() => (null != N ? N : { ...(null != j ? j : {}) }), [N, j]),
+        _ = i.useMemo(() => (null != I ? I : { ...(null != j ? j : {}) }), [I, j]),
         T = i.useMemo(() => Object.keys(_).length, [_]),
         S = i.useMemo(() => (null == j || null == _ ? null : !o().isEqual(j, _)), [j, _]);
     return (
         i.useEffect(() => {
-            if (I === t) S ? c.Z.startEditingCommandPermissions(I) : c.Z.stopEditingCommandPermissions(I);
-        }, [t, S, I]),
+            if (N === t) S ? c.Z.startEditingCommandPermissions(N) : c.Z.stopEditingCommandPermissions(N);
+        }, [t, S, N]),
         {
             originalApplicationPermissions: a,
             originalCommandPermissions: C,
@@ -115,7 +115,7 @@ function C(e, t, n) {
                             ),
                         [c]
                     ),
-                    N = (0, s.cj)(
+                    I = (0, s.cj)(
                         [h.Z],
                         () =>
                             Object.fromEntries(
@@ -126,7 +126,7 @@ function C(e, t, n) {
                             ),
                         [f, e]
                     ),
-                    I = (0, s.cj)(
+                    N = (0, s.cj)(
                         [g.default],
                         () =>
                             Object.fromEntries(
@@ -150,10 +150,10 @@ function C(e, t, n) {
                             (t = e || p.Z.can(v.Plq.VIEW_CHANNEL, n)), (c = !0);
                         } else if (s.type === d.Kw.ROLE) {
                             let i = s.id === e,
-                                r = N[s.id];
+                                r = I[s.id];
                             (t = i || null != r), (c = o || i || p.Z.isRoleHigher(n, l, r));
                         } else if (s.type === d.Kw.USER) {
-                            let e = I[s.id];
+                            let e = N[s.id];
                             (t = null != e), (c = null != e && (o || p.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         r[a] = {
@@ -163,7 +163,7 @@ function C(e, t, n) {
                         };
                     }
                     return r;
-                }, [C, n, l, o, t, N, I]);
+                }, [C, n, l, o, t, I, N]);
             })(e, _),
             hasChanges: S,
             selectedPermissionCount: T

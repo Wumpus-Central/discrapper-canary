@@ -1505,8 +1505,8 @@ var nW = r(106351),
     (ra.WEBHOOKS = 'WEBHOOKS'),
     (ra.EDIT_WEBHOOK = 'EDIT_WEBHOOK'),
     (ra.INTEGRATION_PLATFORM = 'INTEGRATION_PLATFORM'),
-    (ra.CHANNELS_SYNCING_TO_GAMES = 'CHANNELS_SYNCING_TO_GAMES'),
-    (ra.EDIT_CHANNEL_SYNCING = 'EDIT_CHANNEL_SYNCING'),
+    (ra.LOBBIES_LINKED = 'LOBBIES_LINKED'),
+    (ra.EDIT_LINKED_LOBBY = 'EDIT_LINKED_LOBBY'),
     (ra.CHANNELS_FOLLOWED = 'CHANNELS_FOLLOWED'),
     (ra.COMMUNITY_INTRO = 'COMMUNITY_INTRO'),
     (ra.ROLE_EDIT_REFRESH = 'ROLE_EDIT_REFRESH'),
@@ -1543,7 +1543,7 @@ var nW = r(106351),
     (r_.PERMISSION_OVERRIDES = 'PERMISSION_OVERRIDES'),
     (r_.CHANGE_CATEGORY = 'CHANGE_CATEGORY'),
     (r_.WEBHOOKS = 'WEBHOOKS'),
-    (r_.EDIT_CHANNEL_SYNCING = 'EDIT_CHANNEL_SYNCING'),
+    (r_.EDIT_LINKED_LOBBY = 'EDIT_LINKED_LOBBY'),
     (r_.CHANNELS_FOLLOWED = 'CHANNELS_FOLLOWED'),
     (r_.EDIT_WEBHOOK = 'EDIT_WEBHOOK'),
     (r_.CHANGE_RTC_REGION = 'CHANGE_RTC_REGION'),
@@ -6050,7 +6050,7 @@ let oS = new Set([nq.pK.USD, nq.pK.CAD, nq.pK.EUR, nq.pK.AUD, nq.pK.GBP, nq.pK.P
 let oC = [];
 ((nd = tx || (tx = {})).CHANNEL_CALL_POPOUT = 'DISCORD_CHANNEL_CALL_POPOUT'), (nd.SOUNDBOARD = 'DISCORD_SOUNDBOARD'), (nd.RTC_DEBUG_POPOUT = 'DISCORD_RTC_DEBUG_POPOUT'), (nd.CHANNEL_POPOUT = 'DISCORD_CHANNEL_POPOUT'), (nd.ACTIVITY_POPOUT = 'DISCORD_ACTIVITY_POPOUT'), (nd.OVERLAY_POPOUT = 'DISCORD_OVERLAY_POPOUT'), ((nf = tK || (tK = {})).LOADED = 'loaded'), (nf.UNLOADED = 'unloaded'), ((nO = tk || (tk = {})).CONNECTING = 'CONNECTING'), (nO.ACTIVE = 'ACTIVE'), (nO.RECONNECTING = 'RECONNECTING'), (nO.ENDED = 'ENDED'), (nO.PAUSED = 'PAUSED'), (nO.FAILED = 'FAILED'), ((nL = tV || (tV = {})).USER_REQUESTED = 'user_requested'), (nL.STREAM_FULL = 'stream_full'), (nL.UNAUTHORIZED = 'unauthorized'), (nL.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), ((np = tF || (tF = {})).SOUND = 'SOUND'), (np.VIDEO = 'VIDEO'), ((nh = tX || (tX = {})).PLAYING = 'playing'), (nh.PAUSED = 'paused'), ((nD = tj || (tj = {})).NONE = 'none'), (nD.WIFI = 'wifi'), (nD.CELLULAR = 'cellular'), (nD.UNKNOWN = 'unknown'), (nD.ETHERNET = 'ethernet'), (nD.BLUETOOTH = 'bluetooth'), (nD.WIMAX = 'wimax'), (nD.OTHER = 'other'), ((nS = t$ || (t$ = {})).UNKNOWN = 'unknown'), (nS.SLOW_TWO_G = 'slow-2g'), (nS.TWO_G = '2g'), (nS.THREE_G = '3g'), (nS.FOUR_G = '4g'), (nS.FIVE_G = '5g');
 let oP = 'discodoEasterEgg';
-((nC = tq || (tq = {})).INITIAL = 'initial'), (nC.ENTER = 'enter'), (nC.UPDATE = 'update'), (nC.LEAVE = 'leave'), ((nP = tJ || (tJ = {})).CHANNEL_SETTINGS = 'Channel Settings'), (nP.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (nP.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((ng = tz || (tz = {}))[(ng.INCOMING = 1)] = 'INCOMING'), (ng[(ng.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((nU = tQ || (tQ = {}))[(nU.APPLICATION = 0)] = 'APPLICATION'), (nU[(nU.OVERVIEW = 1)] = 'OVERVIEW'), (nU[(nU.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (nU[(nU.TWITCH = 3)] = 'TWITCH'), (nU[(nU.YOUTUBE = 4)] = 'YOUTUBE'), (nU[(nU.WEBHOOKS = 5)] = 'WEBHOOKS'), (nU[(nU.CHANNELS_SYNCING = 6)] = 'CHANNELS_SYNCING');
+((nC = tq || (tq = {})).INITIAL = 'initial'), (nC.ENTER = 'enter'), (nC.UPDATE = 'update'), (nC.LEAVE = 'leave'), ((nP = tJ || (tJ = {})).CHANNEL_SETTINGS = 'Channel Settings'), (nP.CHANNEL_NOTIFICATION_SETTINGS = 'Channel Notification Settings'), (nP.GUILD_NOTIFICATION_SETTINGS = 'Guild Notification Settings'), ((ng = tz || (tz = {}))[(ng.INCOMING = 1)] = 'INCOMING'), (ng[(ng.CHANNEL_FOLLOWER = 2)] = 'CHANNEL_FOLLOWER'), ((nU = tQ || (tQ = {}))[(nU.APPLICATION = 0)] = 'APPLICATION'), (nU[(nU.OVERVIEW = 1)] = 'OVERVIEW'), (nU[(nU.CHANNEL_FOLLOWING = 2)] = 'CHANNEL_FOLLOWING'), (nU[(nU.TWITCH = 3)] = 'TWITCH'), (nU[(nU.YOUTUBE = 4)] = 'YOUTUBE'), (nU[(nU.WEBHOOKS = 5)] = 'WEBHOOKS'), (nU[(nU.LOBBIES_LINKED = 6)] = 'LOBBIES_LINKED');
 let og = 2500,
     oU = 0,
     oM = 2592000000;

@@ -361,7 +361,7 @@ function eP(e, n) {
         te = o.useRef(null),
         tt = o.useRef(null);
     null == eJ || eJ(e9.current);
-    let tn = (0, N.h9)(X.id, 'ChannelTextAreaContainer'),
+    let tn = (0, N.h9)(X.id),
         [tr, ti] = o.useState(!tn);
     (0, I.P)(e7, (e) => {
         let { width: n } = e;

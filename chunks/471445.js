@@ -96,7 +96,7 @@ function p(e, n) {
             if (e.isForumPost()) return i.ChatIcon;
             else return i.ThreadIcon;
         case f.d4z.GUILD_TEXT:
-            if (null != e.linkedLobby) return i.RefreshIcon;
+            if (null != e.linkedLobby) return i.TextControllerIcon;
             if (e.isNSFW()) return i.TextWarningIcon;
             if ((0, c.Z)(e)) return i.TextLockIcon;
             return i.TextIcon;

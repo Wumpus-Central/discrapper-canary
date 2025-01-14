@@ -21,8 +21,8 @@ var i = n(200651),
     b = n(592125),
     v = n(271383),
     C = n(430824),
-    N = n(246946),
-    I = n(594174),
+    I = n(246946),
+    N = n(594174),
     j = n(51144),
     _ = n(981631),
     T = n(388032),
@@ -187,7 +187,7 @@ function y(e) {
 }
 function A(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: r, openEntryContextMenu: a } = e,
-        o = (0, d.e7)([I.default], () => I.default.getUser(n)),
+        o = (0, d.e7)([N.default], () => N.default.getUser(n)),
         s = (0, d.e7)(
             [v.ZP],
             () => {
@@ -196,7 +196,7 @@ function A(e) {
             },
             [t.id, n]
         ),
-        c = (0, d.e7)([N.Z], () => N.Z.hidePersonalInformation);
+        c = (0, d.e7)([I.Z], () => I.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)('div', {

@@ -23,26 +23,26 @@ var i = n(200651),
     b = n(125657),
     v = n(725875),
     C = n(981631),
-    N = n(388032),
-    I = n(380813);
+    I = n(388032),
+    N = n(380813);
 function j(e) {
     let { application: t, guild: n, integration: l, ...r } = e;
     return (0, i.jsx)(a.ConfirmModal, {
         ...r,
-        header: N.intl.formatToPlainString(N.t['rL9d//'], { applicationName: t.name }),
-        confirmText: N.intl.string(N.t.ebGf4u),
-        cancelText: N.intl.string(N.t['ETE/oK']),
+        header: I.intl.formatToPlainString(I.t['rL9d//'], { applicationName: t.name }),
+        confirmText: I.intl.string(I.t.ebGf4u),
+        cancelText: I.intl.string(I.t['ETE/oK']),
         onConfirm: () => {
             c.Z.disableIntegration(n.id, l.id).catch(() => {
                 o.Z.show({
-                    title: N.intl.string(N.t.wYqMmJ),
-                    body: N.intl.string(N.t.A4Mnsr)
+                    title: I.intl.string(I.t.wYqMmJ),
+                    body: I.intl.string(I.t.A4Mnsr)
                 });
             });
         },
         children: (0, i.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: N.intl.format(N.t.FGE8yc, { applicationName: t.name })
+            children: I.intl.format(I.t.FGE8yc, { applicationName: t.name })
         })
     });
 }
@@ -51,8 +51,8 @@ function _(e) {
     let { guild: n, applicationIntegration: o, selectableWebhookChannels: c, editedWebhook: _, errors: T, canNavigate: S } = e,
         { application: Z, integration: E, webhooks: y } = o,
         [A, R] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, n), null == Z.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, Z.bot.id, n)], [Z.bot, n]),
-        k = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
-        L = l.useCallback(() => {
+        L = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
+        k = l.useCallback(() => {
             S() &&
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(j, {
@@ -67,14 +67,14 @@ function _(e) {
             let e = [
                 {
                     icon: a.ClockIcon,
-                    text: N.intl.formatToPlainString(N.t.gcdJ8P, { timestamp: p.default.extractTimestamp(E.id) })
+                    text: I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: p.default.extractTimestamp(E.id) })
                 }
             ];
             return (
                 null != E.user &&
                     e.push({
                         icon: a.UserIcon,
-                        text: N.intl.formatToPlainString(N.t.qE7oqq, { user: g.ZP.getUserTag(E.user) })
+                        text: I.intl.formatToPlainString(I.t.qE7oqq, { user: g.ZP.getUserTag(E.user) })
                     }),
                 e
             );
@@ -87,12 +87,12 @@ function _(e) {
                           applicationIntegration: o
                       })
                     : (0, i.jsx)(a.Card, {
-                          className: I.emptyCard,
+                          className: N.emptyCard,
                           editable: !0,
                           children: (0, i.jsx)(a.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: N.intl.string(N.t.pfLnzc)
+                              children: I.intl.string(I.t.pfLnzc)
                           })
                       }),
             [Z.bot, o, n]
@@ -108,7 +108,7 @@ function _(e) {
             (null == Z ? void 0 : Z.description) != null
                 ? (0, i.jsx)(u.Z, {
                       userBio: Z.description,
-                      className: I.headerDescription
+                      className: N.headerDescription
                   })
                 : null,
             A
@@ -118,31 +118,31 @@ function _(e) {
                       guildId: n.id
                   })
                 : null,
-            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
+            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
             null != Z.bot
                 ? (0, i.jsxs)('div', {
-                      className: I.section,
+                      className: N.section,
                       children: [
                           (0, i.jsx)(f.Z, {
                               icon: (0, i.jsx)(a.RobotIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              title: N.intl.string(N.t.AOdOYm)
+                              title: I.intl.string(I.t.AOdOYm)
                           }),
                           w
                       ]
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: I.section,
+                className: N.section,
                 children: [
                     (0, i.jsx)(f.Z, {
                         icon: (0, i.jsx)(a.WebhookIcon, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        title: N.intl.string(N.t['t9ZX/P'])
+                        title: I.intl.string(I.t['t9ZX/P'])
                     }),
                     y.length > 0
                         ? (0, i.jsx)(v.Z, {
@@ -153,26 +153,26 @@ function _(e) {
                               canNavigate: S
                           })
                         : (0, i.jsx)(a.Card, {
-                              className: I.emptyCard,
+                              className: N.emptyCard,
                               editable: !0,
                               children: (0, i.jsx)(a.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: k ? N.intl.string(N.t.ahPd2d) : N.intl.string(N.t.axqYMj)
+                                  children: L ? I.intl.string(I.t.ahPd2d) : I.intl.string(I.t.axqYMj)
                               })
                           })
                 ]
             }),
-            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
+            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
             (0, i.jsxs)(s.Z, {
-                className: I.section,
+                className: N.section,
                 justify: s.Z.Justify.BETWEEN,
                 align: s.Z.Align.CENTER,
                 children: [
                     (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: R ? N.intl.string(N.t.hdneLy) : N.intl.string(N.t.xRCMq6)
+                        children: R ? I.intl.string(I.t.hdneLy) : I.intl.string(I.t.xRCMq6)
                     }),
                     (0, i.jsx)(s.Z.Child, {
                         grow: 0,
@@ -182,8 +182,8 @@ function _(e) {
                             color: a.Button.Colors.RED,
                             look: a.Button.Looks.FILLED,
                             disabled: !R,
-                            onClick: L,
-                            children: N.intl.string(N.t.ebGf4u)
+                            onClick: k,
+                            children: I.intl.string(I.t.ebGf4u)
                         })
                     })
                 ]

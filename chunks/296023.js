@@ -18,10 +18,10 @@ function o(e) {
         if (null == n) return;
         let e = new Date(n);
         return null != o
-            ? a.intl.format(a.t['/ZBO3d'], {
+            ? a.intl.format(a.t['xPrJ+v'], {
                   username: o.username,
                   linkedAtDate: e
               })
-            : a.intl.formatToPlainString(a.t.v6plRE, { linkedAtDate: e });
+            : a.intl.formatToPlainString(a.t.EyygeH, { linkedAtDate: e });
     }, [n, o]);
 }

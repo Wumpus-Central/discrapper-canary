@@ -38,7 +38,7 @@ function x(e) {
         I = l.useRef(null),
         j = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
         P = (0, c.ZP)('number' == typeof x ? '' : x, null != j ? j : ''),
-        y = l.useMemo(() => {
+        S = l.useMemo(() => {
             var e, n;
             let t = (0, a.compact)([d.Z.parseHexString(P), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
             return null !==
@@ -54,7 +54,7 @@ function x(e) {
                 ? n
                 : P;
         }, [P, g]),
-        S = v(A),
+        y = v(A),
         T = v(E),
         L = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
@@ -62,7 +62,7 @@ function x(e) {
                 m = A.current,
                 p = b.current,
                 h = null == I ? void 0 : I.current,
-                f = parseInt(null !== (e = null == S ? void 0 : S.height) && void 0 !== e ? e : ''),
+                f = parseInt(null !== (e = null == y ? void 0 : y.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(f) && !isNaN(C)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
@@ -76,7 +76,7 @@ function x(e) {
                     (m.style.backgroundColor = 'color-mix(in oklab,'
                         .concat(P, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(y, ')')),
+                        .concat(S, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = f / 4) + (0 - c) * N, 'px)')),
                     null != h)
@@ -84,7 +84,7 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [y, P, null == T ? void 0 : T.height, g, _, null == S ? void 0 : S.height]);
+        }, [S, P, null == T ? void 0 : T.height, g, _, null == y ? void 0 : y.height]);
     return (
         l.useEffect(() => {
             L();

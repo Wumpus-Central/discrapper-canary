@@ -17,8 +17,8 @@ var i = n(200651),
     b = n(63063),
     v = n(919196),
     C = n(731072),
-    N = n(494118),
-    I = n(491500),
+    I = n(494118),
+    N = n(37607),
     j = n(351644),
     _ = n(108053),
     T = n(981631),
@@ -39,14 +39,14 @@ function E(e, t) {
             return S.intl.string(S.t.xOg4SE);
         case T.b4C.YOUTUBE:
             return S.intl.string(S.t.aS6cKy);
-        case T.b4C.CHANNELS_SYNCING:
+        case T.b4C.LOBBIES_LINKED:
             return S.intl.string(S.t.tqtDXF);
         default:
             return '';
     }
 }
 t.Z = l.memo(function (e) {
-    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: k, editedWebhook: L, isFetchingWebhooks: O, refToScroller: w, errors: M, hasChanges: B } = e,
+    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: L, editedWebhook: k, isFetchingWebhooks: O, refToScroller: w, errors: M, hasChanges: B } = e,
         P = (0, o.e7)([g.ZP], () => (null != r ? g.ZP.getDefaultChannel(r.id) : null)),
         D = (0, o.cj)([g.ZP], () => g.ZP.getChannels(null == r ? void 0 : r.id)),
         U = (0, o.cj)([x.Z], () =>
@@ -103,7 +103,7 @@ t.Z = l.memo(function (e) {
                                 (null === (r = i.application.bot) || void 0 === r ? void 0 : r.id) !== void 0 && (t[i.application.bot.id] = i.application.id);
                         }
                     } else !(i.type in n) && (n[i.type] = []), n[i.type].push(i);
-            for (let t of k) {
+            for (let t of L) {
                 if (t.channel_id in U || t.channel_id in F) null != t.application_id && t.application_id in e ? e[t.application_id].webhooks.push(t) : t.type === T.ylB.CHANNEL_FOLLOWER ? l.push(t) : i.push(t);
             }
             return {
@@ -113,7 +113,7 @@ t.Z = l.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: l
             };
-        }, [A, U, F, k]);
+        }, [A, U, F, L]);
     l.useEffect(() => {
         if (!O)
             switch (t) {
@@ -181,16 +181,16 @@ t.Z = l.memo(function (e) {
                 ($ = (0, i.jsx)(v.Z, {
                     guild: r,
                     applicationIntegration: et,
-                    editedWebhook: L,
+                    editedWebhook: k,
                     selectableWebhookChannels: U,
                     errors: M,
                     canNavigate: V
                 }));
             break;
         case T.b4C.CHANNEL_FOLLOWING:
-            $ = (0, i.jsx)(N.Z, {
+            $ = (0, i.jsx)(I.Z, {
                 followedChannelWebhooks: Q,
-                editedWebhook: L,
+                editedWebhook: k,
                 selectableWebhookChannels: U,
                 canNavigate: V,
                 errors: M
@@ -201,7 +201,7 @@ t.Z = l.memo(function (e) {
                 guild: r,
                 channel: y,
                 customWebhooks: X,
-                editedWebhook: L,
+                editedWebhook: k,
                 selectableWebhookChannels: {
                     ...U,
                     ...F
@@ -211,8 +211,8 @@ t.Z = l.memo(function (e) {
                 errors: M
             });
             break;
-        case T.b4C.CHANNELS_SYNCING:
-            $ = (0, i.jsx)(I.Z, { guild: r });
+        case T.b4C.LOBBIES_LINKED:
+            $ = (0, i.jsx)(N.Z, { guild: r });
             break;
         default:
             $ = (0, i.jsx)(j.Z, {
@@ -242,8 +242,8 @@ t.Z = l.memo(function (e) {
                             c.Z.setSection(T.b4C.YOUTUBE);
                     }
                 },
-                onManageChannelsSyncing: () => {
-                    c.Z.setSection(T.b4C.CHANNELS_SYNCING);
+                onManageLobbiesLinked: () => {
+                    c.Z.setSection(T.b4C.LOBBIES_LINKED);
                 }
             });
     }

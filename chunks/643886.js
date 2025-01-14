@@ -51,7 +51,7 @@ function g(e) {
             var t;
             return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null;
         },
-        N = i.useMemo(() => {
+        I = i.useMemo(() => {
             let i = [];
             for (let l of b) {
                 if (C(l)) continue;
@@ -65,20 +65,20 @@ function g(e) {
             }
             return i;
         }, [b, e, t, n]),
-        [I, j] = i.useState(''),
+        [N, j] = i.useState(''),
         _ = i.useMemo(() => {
             let t = (function (e) {
                     return e.startsWith('@') ? e.substr(1) : e;
-                })(I),
-                n = I.startsWith('@') ? N.filter((t) => t.id === e) : N,
+                })(N),
+                n = N.startsWith('@') ? I.filter((t) => t.id === e) : I,
                 i = (0, h.B)(v, x, t);
             return {
                 members: i,
                 roles: (0, h.B)(n, f, t)
             };
-        }, [e, v, I, N]);
+        }, [e, v, N, I]);
     return {
-        query: I,
+        query: N,
         results: _,
         setQuery: j,
         unfilteredCount: _.members.length + _.roles.length

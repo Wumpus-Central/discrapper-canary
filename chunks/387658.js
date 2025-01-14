@@ -29,8 +29,8 @@ var i = t(200651),
     I = t(783097),
     j = t(46332),
     P = t(176412),
-    y = t(870205),
-    S = t(981631),
+    S = t(870205),
+    y = t(981631),
     T = t(689079),
     L = t(388032),
     R = t(61474),
@@ -57,7 +57,7 @@ function O(e) {
                     source: e,
                     commandOrigin: C.bB.APPLICATION_LAUNCHER
                 }),
-                x.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+                x.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
         }, [a.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
         h = l.useMemo(() => (0, P.ae)(o.displayDescription, void 0), [o.displayDescription]),
@@ -302,7 +302,7 @@ function D(e) {
                       sectionName: o,
                       children:
                           _ &&
-                          (0, i.jsx)(y.Z, {
+                          (0, i.jsx)(S.Z, {
                               sortOrder: C,
                               onSortOptionClick: v
                           })

@@ -32,11 +32,11 @@ var t = n(200651),
     g = n(929204),
     v = n(981631),
     I = n(388032),
-    y = n(9520);
-let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+    k = n(9520);
+let y = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
     b = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
     j = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-    A = k + 2 * b,
+    A = y + 2 * b,
     T = a()(f.pF, 250),
     M = () => {
         T.cancel();
@@ -60,12 +60,12 @@ let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                 listWidth: n
             });
         return (0, t.jsxs)('div', {
-            className: i()(y.container, { [y.containerWithHeader]: o }),
+            className: i()(k.container, { [k.containerWithHeader]: o }),
             children: [
                 (0, t.jsx)(
                     C.Z,
                     {
-                        className: y.header,
+                        className: k.header,
                         stickerPack: r,
                         withDescription: !0
                     },
@@ -93,7 +93,7 @@ let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                                         rowIndex: r,
                                         stickerDescriptors: m[r],
                                         stickerPadding: b,
-                                        stickerSize: k,
+                                        stickerSize: y,
                                         isDisplayingIndividualStickers: !0,
                                         checkSendability: !1
                                     },
@@ -111,18 +111,18 @@ let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
         (0, N.fP)();
         let l = (0, c.e7)([E.Z], () => E.Z.isPremiumPack(n.id));
         return (0, t.jsxs)(u.ModalFooter, {
-            className: y.footer,
+            className: k.footer,
             children: [
                 (0, t.jsx)(u.Anchor, {
                     onClick: r,
-                    className: y.skuPreviewFooterCloseButton,
+                    className: k.skuPreviewFooterCloseButton,
                     children: I.intl.string(I.t.cpT0Cg)
                 }),
                 l &&
                     (0, t.jsxs)(u.ShinyButton, {
                         color: u.Button.Colors.GREEN,
                         type: 'submit',
-                        innerClassName: y.premiumButtonInner,
+                        innerClassName: k.premiumButtonInner,
                         onClick: () => {
                             r(), (0, g.Z)({ section: v.jXE.STICKER_PACK_VIEW_ALL });
                         },
@@ -130,7 +130,7 @@ let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
                             (0, t.jsx)(u.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: y.premiumButtonNitroWheel
+                                className: k.premiumButtonNitroWheel
                             }),
                             I.intl.string(I.t['w+kuhY'])
                         ]
@@ -144,15 +144,15 @@ let k = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
         return null == l
             ? null
             : (0, t.jsxs)(u.ModalHeader, {
-                  className: y.headerWithImage,
+                  className: k.headerWithImage,
                   children: [
                       (0, t.jsx)('div', {
                           role: 'image',
                           style: { backgroundImage: 'url('.concat(l, ')') },
-                          className: y.backgroundImage
+                          className: k.backgroundImage
                       }),
                       (0, t.jsx)(u.ModalCloseButton, {
-                          className: y.closeButton,
+                          className: k.closeButton,
                           onClick: n
                       })
                   ]

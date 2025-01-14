@@ -30,8 +30,8 @@ var i = t(200651),
     I = t(87005),
     j = t(219066),
     P = t(106066),
-    y = t(783097),
-    S = t(695676),
+    S = t(783097),
+    y = t(695676),
     T = t(98880),
     L = t(804307),
     R = t(888617),
@@ -63,15 +63,15 @@ function F(e) {
     let { channel: n, entrypoint: t, searchQuery: a, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
         h = t === b._b.TEXT && !n.isPrivate(),
-        f = (0, y.Yn)(t),
-        C = !(0, y.Yn)(t),
+        f = (0, S.Yn)(t),
+        C = !(0, S.Yn)(t),
         v = t === b._b.TEXT,
         [x, _] = K(!0),
         [N, g] = K(h),
         [A, E] = K(f),
         [I, j] = K(C),
         P = x && N && A && I,
-        S = (f || h) && !P,
+        y = (f || h) && !P,
         T = C && u;
     l.useEffect(() => {
         (0, p.w1)({
@@ -131,7 +131,7 @@ function F(e) {
                                       type: b.LG.HOME_EMPTY,
                                       textContent: t === b._b.TEXT ? w.intl.string(w.t.iKZctb) : w.intl.string(w.t.RL7Ncn)
                                   }),
-                              S && (0, i.jsx)(k.Z, {})
+                              y && (0, i.jsx)(k.Z, {})
                           ]
                       })
             })
@@ -470,7 +470,7 @@ function J(e) {
                 m = t === r.I.APP_LAUNCHER_VOICE;
             return {
                 fetchState: s,
-                recommendationsSections: l.useMemo(() => (m ? (0, y.pF)(d) : d), [d, m]),
+                recommendationsSections: l.useMemo(() => (m ? (0, S.pF)(d) : d), [d, m]),
                 isInstallOnDemand: o
             };
         })({
@@ -642,7 +642,7 @@ function K(e) {
 }
 function $(e) {
     let { title: n, look: t, items: i, limit: a, sectionName: o, sectionOverallPosition: r } = e,
-        { pushHistory: s } = (0, S.hH)();
+        { pushHistory: s } = (0, y.hH)();
     return l.useMemo(
         () =>
             i.length <= a
@@ -659,7 +659,7 @@ function $(e) {
                               num: i.length
                           }),
                               s({
-                                  type: S.gc.LIST,
+                                  type: y.gc.LIST,
                                   title: n,
                                   look: t,
                                   items: i,

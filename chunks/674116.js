@@ -245,24 +245,24 @@ function U() {
                                             let i = [
                                                 {
                                                     value: L.iA.STANDARD,
-                                                    label: 'Standard'
+                                                    label: Z.intl.string(Z.t.dqb2JS)
                                                 }
                                             ];
                                             return (
                                                 e &&
                                                     i.push({
                                                         value: L.iA.LEGACY,
-                                                        label: 'Legacy'
+                                                        label: Z.intl.string(Z.t['TYfH+/'])
                                                     }),
                                                 t &&
                                                     i.push({
                                                         value: L.iA.EXPERIMENTAL,
-                                                        label: 'Experimental'
+                                                        label: Z.intl.string(Z.t.liQmtr)
                                                     }),
                                                 n &&
                                                     i.push({
                                                         value: L.iA.AUTOMATIC,
-                                                        label: 'Automatic'
+                                                        label: Z.intl.string(Z.t.qNgtOz)
                                                     }),
                                                 i
                                             );

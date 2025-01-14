@@ -41,7 +41,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        N = l.useCallback(
+        I = l.useCallback(
             (e) => {
                 b() && (e === (null == x ? void 0 : x.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
@@ -112,7 +112,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: x,
                 errors: f,
-                toggleWebhookExpand: N
+                toggleWebhookExpand: I
             });
         })
     });

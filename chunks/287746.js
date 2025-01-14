@@ -755,7 +755,7 @@ t.Z = l.memo(function (e) {
             chatInputType: r,
             location: 'ChannelChatMemo'
         }),
-        _ = (0, w.h9)(t.id, 'ChannelChatMemo'),
+        _ = (0, w.h9)(t.id),
         { isInitialLoading: I, primaryEntryPointCommand: b, isProfileFetching: S, wasProfileFetching: j, applicationId: A, channelId: P, commands: M } = (0, Z.Z)({ channel: t });
     (0, N.Z)({
         isProfileFetching: S,

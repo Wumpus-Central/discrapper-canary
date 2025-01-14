@@ -16,7 +16,7 @@ function l(e) {
         case a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case a.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case a.z.GIFTING_PROMOTION_REMINDER:
-            return o.C;
+            return o.C$;
         default:
             return 0;
     }

@@ -30,8 +30,8 @@ var o,
     I = t(15640),
     b = t(89057),
     x = t(600164),
-    y = t(232127),
-    C = t(563132),
+    C = t(232127),
+    y = t(563132),
     N = t(409813),
     A = t(45572),
     M = t(98278),
@@ -74,7 +74,7 @@ async function eo(e) {
 function el(e) {
     let n,
         { transitionState: t, onClose: o, closeGuildPerksModal: r, analyticsLocations: s, analyticsLocation: _, analyticsSourceLocation: el, guildId: ei, onSubscribeComplete: er, totalNumberOfSlotsToAssign: ea = 1, disablePremiumUpsell: es = !1, onSubscriptionConfirmation: ec, applicationId: eu } = e,
-        { activeSubscription: ed, blockedPayments: ep } = (0, C.usePaymentContext)(),
+        { activeSubscription: ed, blockedPayments: ep } = (0, y.usePaymentContext)(),
         ef = (0, d.e7)([w.ZP], () => w.ZP.hasFetchedSubscriptions()),
         em = null != ed ? ed.paymentSourceId : null,
         e_ = (0, d.e7)([U.Z], () => (null != ed ? (0, H.oE)(ed.planId) : null)),
@@ -84,7 +84,7 @@ function el(e) {
         eh = i.useRef((0, W.vx)(D.Z.boostSlots)).current,
         eP = (0, d.e7)([O.Z], () => O.Z.defaultPaymentSourceId),
         eT = (0, L.fL)(null != em ? em : ef ? eP : null),
-        { paymentSources: eI, setPurchaseError: eb, paymentSourceId: ex, setIsSubmittingCurrentStep: ey, paymentAuthenticationState: eC, setPaymentSourceId: eN, isSubmittingCurrentStep: eA, paymentError: eM, purchaseError: ek, purchaseErrorBlockRef: ev } = eT,
+        { paymentSources: eI, setPurchaseError: eb, paymentSourceId: ex, setIsSubmittingCurrentStep: eC, paymentAuthenticationState: ey, setPaymentSourceId: eN, isSubmittingCurrentStep: eA, paymentError: eM, purchaseError: ek, purchaseErrorBlockRef: ev } = eT,
         eL = Object.keys(eI).length > 0,
         [eR, ej] = i.useState(ea - eh.length),
         [eB, eD] = i.useState(!1),
@@ -157,7 +157,7 @@ function el(e) {
             handleStepChange: ez,
             onSubscribeComplete: er,
             paymentSourceId: ex,
-            setIsSubmittingCurrentStep: ey,
+            setIsSubmittingCurrentStep: eC,
             setPurchaseError: eb
         },
         e$ = i.useRef(eX);
@@ -188,7 +188,7 @@ function el(e) {
         }, [eZ]),
         (0, g.Z)(() => {
             !w.ZP.hasFetchedSubscriptions() && (0, m.jg)(),
-                (0, y.U)({
+                (0, C.U)({
                     ...eG,
                     guild_id: ei,
                     application_id: eu
@@ -208,9 +208,9 @@ function el(e) {
         },
         e1 = null != ed && ed.isPurchasedExternally;
     i.useEffect(() => {
-        eC !== v.wr.PENDING && eY !== N.h8.CONFIRM && null != em && (eK !== en && eq(en), !en.includes(eY) && eY !== N.h8.PREMIUM_UPSELL && ez(N.h8.REVIEW)), eY === N.h8.ADD_PAYMENT_STEPS && eK !== et && eq(et), e1 && eY !== N.h8.PLAN_SELECT && eH(N.h8.PLAN_SELECT);
-    }, [eY, ez, e1, eC, ed, em, eK]),
-        (0, v.bp)(eY, eC, ez, eQ),
+        ey !== v.wr.PENDING && eY !== N.h8.CONFIRM && null != em && (eK !== en && eq(en), !en.includes(eY) && eY !== N.h8.PREMIUM_UPSELL && ez(N.h8.REVIEW)), eY === N.h8.ADD_PAYMENT_STEPS && eK !== et && eq(et), e1 && eY !== N.h8.PLAN_SELECT && eH(N.h8.PLAN_SELECT);
+    }, [eY, ez, e1, ey, ed, em, eK]),
+        (0, v.bp)(eY, ey, ez, eQ),
         (0, N.dZ)(eY, eJ, eQ);
     let e7 = i.useRef(null),
         [e9, e3] = (0, h.Z)(!1, 500),
@@ -380,7 +380,7 @@ function el(e) {
                                       try {
                                           if (
                                               (eQ(A.A.PURCHASING),
-                                              ey(!0),
+                                              eC(!0),
                                               c()(null != ex, 'Missing paymentSourceId'),
                                               F.default.track($.rMx.PAYMENT_FLOW_COMPLETED, {
                                                   ...eG,
@@ -423,7 +423,7 @@ function el(e) {
                                                   duration_ms: Date.now() - eF
                                               });
                                       } finally {
-                                          !nn && ey(!1);
+                                          !nn && eC(!1);
                                       }
                                   },
                                   children: J.intl.string(J.t.eUEeCg)
@@ -521,7 +521,7 @@ function ei(e) {
         { analyticsLocations: t } = (0, T.ZP)(P.Z.GUILD_BOOST_PURCHASE_MODAL);
     return (0, l.jsx)(T.Gt, {
         value: t,
-        children: (0, l.jsx)(C.PaymentContextProvider, {
+        children: (0, l.jsx)(y.PaymentContextProvider, {
             activeSubscription: n,
             stepConfigs: [],
             skuIDs: [],

@@ -1,7 +1,7 @@
 n.r(r),
     n.d(r, {
         default: function () {
-            return M;
+            return B;
         }
     });
 var l = n(200651),
@@ -117,7 +117,7 @@ let k = (e) => {
             ]
         });
     };
-function M(e) {
+function B(e) {
     let { onClose: r, ...n } = e,
         t = (0, p.V)(),
         i = (0, s.e7)([C.Z], () => C.Z.hasFetchedPaymentSources),

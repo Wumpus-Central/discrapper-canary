@@ -564,8 +564,8 @@ t.Z = {
             case eN.pNK.WEBHOOKS:
             case eN.pNK.EDIT_WEBHOOK:
             case eN.pNK.INTEGRATION_PLATFORM:
-            case eN.pNK.CHANNELS_SYNCING_TO_GAMES:
-            case eN.pNK.EDIT_CHANNEL_SYNCING:
+            case eN.pNK.LOBBIES_LINKED:
+            case eN.pNK.EDIT_LINKED_LOBBY:
             case eN.pNK.CHANNELS_FOLLOWED:
             case eN.pNK.COMMUNITY_INTRO:
             case eN.pNK.ROLE_EDIT_REFRESH:
