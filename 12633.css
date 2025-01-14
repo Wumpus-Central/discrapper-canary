@@ -26898,8 +26898,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     align-items: center;
     max-height: var(--custom-channel-textarea-text-area-height);
     position: sticky;
-    top: 0;
-    margin-right: var(--space-sm)
+    top: 0
 }
 
 .enable-forced-colors .scrollableContainer_bdf0de {

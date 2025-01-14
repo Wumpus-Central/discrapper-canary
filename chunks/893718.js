@@ -436,7 +436,11 @@ function eP(e, n) {
         t1 = !0 === J.showTypingIndicator,
         t2 = e5 && J.layout === et.gy.INLINE,
         t3 = e5 && J.layout === et.gy.FLUSH,
-        t4 = (0, s.jsx)(eo.Z, {
+        t4 = o.useCallback(() => {
+            var e;
+            null === (e = e9.current) || void 0 === e || e.focus();
+        }, []),
+        t6 = (0, s.jsx)(eo.Z, {
             type: J,
             disabled: tu,
             channel: X,
@@ -445,7 +449,7 @@ function eP(e, n) {
             showAllButtons: tr,
             children: e5 ? (null == ev ? void 0 : ev()) : null
         }),
-        t6 = tK
+        t5 = tK
             ? (0, s.jsx)(eu.Z, {
                   type: J,
                   textValue: G,
@@ -454,9 +458,10 @@ function eP(e, n) {
                   showRemainingCharsAfterCount: eK
               })
             : null,
-        t5 = e5
+        t7 = e5
             ? (0, s.jsxs)('div', {
                   className: ep.accessoryBar,
+                  onClick: t4,
                   children: [
                       (0, s.jsxs)('div', {
                           className: ep.accessoryBarLeft,
@@ -473,7 +478,7 @@ function eP(e, n) {
                       }),
                       (0, s.jsxs)('div', {
                           className: ep.accessoryBarRight,
-                          children: [t6, t4]
+                          children: [t5, t6]
                       })
                   ]
               })
@@ -602,12 +607,12 @@ function eP(e, n) {
                                                           : null
                                                   ]
                                               })
-                                            : t4
+                                            : t6
                                     ]
                                 })
                             ]
                         }),
-                        e5 && !J.hideAccessoryBar ? t5 : null,
+                        e5 && !J.hideAccessoryBar ? t7 : null,
                         tp
                             ? null
                             : (0, s.jsx)(A.Z, {
@@ -642,7 +647,7 @@ function eP(e, n) {
                             editorHeight: tM,
                             channelId: X.id
                         }),
-                        e5 ? null : t6,
+                        e5 ? null : t5,
                         tq
                             ? (0, s.jsx)(P.Z, {
                                   editorRef: e9,
