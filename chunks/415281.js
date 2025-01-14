@@ -12,6 +12,7 @@ e.exports = {
     loader: 'loader_a4d4d9',
     sidebarResizeHandle: 'sidebarResizeHandle_a4d4d9',
     sidebarList: 'sidebarList_a4d4d9',
+    channelListHidden: 'channelListHidden_a4d4d9',
     page: 'page_a4d4d9',
     sidebarListRounded: 'sidebarListRounded_a4d4d9',
     dragging: 'dragging_a4d4d9',

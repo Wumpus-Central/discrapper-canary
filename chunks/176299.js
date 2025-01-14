@@ -373,7 +373,8 @@ function eG(e) {
                 className: a()(ef.sidebar, e, {
                     [ef.hasNotice]: t,
                     [ef.fullWidth]: d.tq,
-                    [ef.hidden]: E
+                    [ef.hidden]: E,
+                    [ef.channelListHidden]: s
                 }),
                 children: [
                     N &&
@@ -384,19 +385,23 @@ function eG(e) {
                             themeOverride: n
                         }),
                     !s &&
-                        (0, i.jsx)(O, {
-                            ...y,
-                            children: (0, i.jsx)(eb, {})
+                        (0, i.jsxs)(i.Fragment, {
+                            children: [
+                                (0, i.jsx)(O, {
+                                    ...y,
+                                    children: (0, i.jsx)(eb, {})
+                                }),
+                                N
+                                    ? (0, i.jsx)(m.Clickable, {
+                                          onClick: P,
+                                          'aria-label': 'Resize Sidebar',
+                                          className: ef.sidebarResizeHandle,
+                                          onMouseDown: L
+                                      })
+                                    : null,
+                                (0, i.jsx)(el.b, {})
+                            ]
                         }),
-                    N
-                        ? (0, i.jsx)(m.Clickable, {
-                              onClick: P,
-                              'aria-label': 'Resize Sidebar',
-                              className: ef.sidebarResizeHandle,
-                              onMouseDown: L
-                          })
-                        : null,
-                    (0, i.jsx)(el.b, {}),
                     !N && (0, i.jsx)(es.Z, {})
                 ]
             })
