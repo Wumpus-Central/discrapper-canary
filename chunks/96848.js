@@ -48,7 +48,7 @@ function p(e) {
         shouldShow: a,
         position: 'bottom',
         align: 'left',
-        autoInvert: !1,
+        nudgeAlignIntoViewport: !0,
         onRequestClose: () => c(!1),
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -63,6 +63,7 @@ function p(e) {
                     headerClassName: u.emojiHeader,
                     className: u.emojiList,
                     listHeaderClassName: u.emojiList,
+                    categoryListClassName: u.categoryList,
                     searchProps: { accessory: (0, i.jsx)(i.Fragment, {}) }
                 })
             });

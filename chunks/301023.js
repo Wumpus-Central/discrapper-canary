@@ -7,5 +7,6 @@ e.exports = {
     emojiIcon: 'emojiIcon_b96147',
     customGiftContent: 'customGiftContent_b96147',
     emojiHeader: 'emojiHeader_b96147',
-    customGiftHeader: 'customGiftHeader_b96147'
+    customGiftHeader: 'customGiftHeader_b96147',
+    categoryList: 'categoryList_b96147'
 };
