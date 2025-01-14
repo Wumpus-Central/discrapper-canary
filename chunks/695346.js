@@ -952,3 +952,9 @@ let eM = (0, u.Zc)(
         (e) => null != e && e,
         (e) => e
     );
+(0, u.Zc)(
+    'appearance',
+    'uiDensity',
+    (e) => (null != e ? e : s.Pi.COMPACT),
+    (e) => e
+);
