@@ -57707,16 +57707,13 @@ html.disable-forced-colors * {
 }
 
 :root {
-    --chat-resize-handle-width: 8px
-}
-
-:root {
-    --modal-horizontal-padding: var(--space-16);
-    --modal-vertical-padding: var(--space-16)
+    --chat-resize-handle-width: 8px;
+    --modal-horizontal-padding: 12px;
+    --modal-vertical-padding: 16px
 }
 
 .visual-refresh {
-    --modal-horizontal-padding: var(--spacing-24)
+    --modal-horizontal-padding: 24px
 }
 
 html,
