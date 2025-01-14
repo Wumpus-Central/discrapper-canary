@@ -30,8 +30,8 @@ var i = n(200651),
     w = n(5192),
     k = n(1226),
     N = n(981631),
-    L = n(388032),
-    y = n(2847);
+    y = n(388032),
+    L = n(2847);
 function S(e) {
     let { participant: t } = e,
         n = t.user.id,
@@ -50,12 +50,12 @@ function S(e) {
             u.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
     return (0, i.jsx)(c.Tooltip, {
-        text: h ? L.intl.string(L.t.YqAjX1) : L.intl.string(L.t['w4m94+']),
+        text: h ? y.intl.string(y.t.YqAjX1) : y.intl.string(y.t['w4m94+']),
         children: (e) => {
             let { onClick: t, ...n } = e;
             return (0, i.jsx)(c.Clickable, {
                 ...n,
-                className: y.controlAction,
+                className: L.controlAction,
                 onClick: (e) => {
                     e.stopPropagation(), null == t || t(), f();
                 },
@@ -84,19 +84,19 @@ function T(e) {
             },
             [u]
         ),
-        m = t ? L.intl.string(L.t.tLxK4u) : L.intl.string(L.t.E5RDnJ);
+        m = t ? y.intl.string(y.t.tLxK4u) : y.intl.string(y.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: o()(y.controlBackground, { [y.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)('div', { className: o()(L.controlBackground, { [L.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)('div', {
-                    className: y.watchActionContainer,
+                    className: L.watchActionContainer,
                     children: (0, i.jsx)(c.Tooltip, {
                         text: m,
                         children: (e) =>
                             (0, i.jsxs)(c.Clickable, {
                                 ...e,
-                                className: y.watchButton,
+                                className: L.watchButton,
                                 onClick: () => {
                                     var t;
                                     null === (t = e.onClick) || void 0 === t || t.call(e),
@@ -110,7 +110,7 @@ function T(e) {
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'always-white',
-                                        children: L.intl.string(L.t['I6JG4+'])
+                                        children: y.intl.string(y.t['I6JG4+'])
                                     }),
                                     (0, i.jsx)(c.EyePlusIcon, {
                                         size: 'sm',
@@ -121,12 +121,12 @@ function T(e) {
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: y.controls,
+                className: L.controls,
                 children: [
                     (0, i.jsx)('div', {
-                        className: y.controlUser,
+                        className: L.controlUser,
                         children: (0, i.jsxs)('div', {
-                            className: y.controlUserContainer,
+                            className: L.controlUserContainer,
                             children: [
                                 (0, i.jsx)(c.ScreenIcon, {
                                     size: 'xs',
@@ -145,19 +145,19 @@ function T(e) {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: y.controlActions,
+                        className: L.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(S, { participant: l }),
                                     (0, i.jsx)(c.Tooltip, {
-                                        text: L.intl.string(L.t['3D5yo6']),
+                                        text: y.intl.string(y.t['3D5yo6']),
                                         children: (e) => {
                                             let { onClick: t, ...r } = e;
                                             return (0, i.jsx)(c.Clickable, {
                                                 ...r,
-                                                className: y.controlAction,
+                                                className: L.controlAction,
                                                 onClick: (e) => {
                                                     e.stopPropagation(),
                                                         null == t || t(),
@@ -198,19 +198,19 @@ let A = new Set([N.jm8.ENDED, N.jm8.FAILED, N.jm8.PAUSED]),
         return (!d && l) || u
             ? null
             : (0, i.jsxs)('div', {
-                  className: y.tile,
+                  className: L.tile,
                   children: [
                       d &&
                           !l &&
                           (0, i.jsx)(v.ZP, {
                               size: v.ZP.Sizes.SMALL,
-                              className: y.liveIndicator
+                              className: L.liveIndicator
                           }),
                       d
                           ? (0, i.jsx)('div', {
-                                className: y.streamTile,
+                                className: L.streamTile,
                                 children: (0, i.jsx)('div', {
-                                    className: y.streamTile,
+                                    className: L.streamTile,
                                     style: { transform: 'scale('.concat(f, ')') },
                                     children: (0, i.jsx)(Z.Z, {
                                         participant: t,
@@ -220,15 +220,16 @@ let A = new Set([N.jm8.ENDED, N.jm8.FAILED, N.jm8.PAUSED]),
                                         focused: !l,
                                         paused: !1,
                                         selected: !1,
-                                        wrapperClassName: l ? y.streamTileWrapper : void 0
+                                        wrapperClassName: l ? L.streamTileWrapper : void 0,
+                                        inOverlayPopout: !0
                                     })
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: y.streamPreview,
+                                className: L.streamPreview,
                                 children: (0, i.jsx)(x.Z, {
                                     noText: !0,
-                                    className: o()(y.absoluteFill),
+                                    className: o()(L.absoluteFill),
                                     stream: t.stream
                                 })
                             }),

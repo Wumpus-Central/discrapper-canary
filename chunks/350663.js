@@ -16,17 +16,20 @@ var i = n(200651),
 let f = 8,
     p = (e) => {
         let { participant: t, width: n, locked: l, widgetId: r, pinned: o } = e;
-        return (0, i.jsx)(
-            u.Z,
-            {
-                participant: t,
-                width: n,
-                locked: l,
-                widgetId: r,
-                pinned: o
-            },
-            t.user.id
-        );
+        return (0, i.jsx)('div', {
+            className: h.tileContainer,
+            children: (0, i.jsx)(
+                u.Z,
+                {
+                    participant: t,
+                    width: n,
+                    locked: l,
+                    widgetId: r,
+                    pinned: o
+                },
+                t.user.id
+            )
+        });
     },
     m = {
         mass: 1,

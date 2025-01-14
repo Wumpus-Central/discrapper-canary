@@ -56,12 +56,14 @@ function E(e) {
         );
     }, [a, c, v]);
     let g = 'boolean' != typeof c.meta.horizontal || c.meta.horizontal;
-    return v
-        ? (0, i.jsx)('div', {
+    return null == u
+        ? null
+        : (0, i.jsx)('div', {
               ref: p,
               className: o()({
                   [I.videoList]: !0,
-                  [I.vertical]: !g
+                  [I.vertical]: !g,
+                  [I.hidden]: !v && a
               }),
               style: { opacity: c.opacity },
               children: r.map((e) =>
@@ -82,13 +84,14 @@ function E(e) {
                           noBorder: !0,
                           onContextMenu: a ? void 0 : m,
                           forceIdle: a,
+                          paused: !v,
+                          inOverlayPopout: !0,
                           context: t
                       },
                       e.id
                   )
               )
-          })
-        : null;
+          });
 }
 function b(e) {
     let t = (0, a.e7)([x.Z, v.Z], () => v.Z.getChannel(x.Z.getVoiceChannelId())),
@@ -96,8 +99,8 @@ function b(e) {
         r = (0, a.Wu)([d.Z], () => (null != t ? d.Z.getVideoParticipants(t.id) : [])),
         o = (0, a.e7)([d.Z], () => (null != t ? d.Z.getParticipantsVersion(t.id) : 0)),
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: f, height: p, ref: g } = (0, u.Z)(),
-        { visibleParticipants: C, participantTileWidth: _ } = (0, m.ZB)(s ? (null != f ? f : e.width) : null != p ? p : e.height, r, {
+        { width: f, height: p, ref: g } = (0, u.Z)(e.locked, e.widget.pinned),
+        { participantTileWidth: C, visibleParticipants: _ } = (0, m.ZB)(s ? (null != f ? f : e.width) : null != p ? p : e.height, r, {
             tileWidth: Z.OVERLAY_TILE_WIDTH,
             tileMinWidth: Z.OVERLAY_TILE_MIN_WIDTH,
             tileMargin: Z.OVERLAY_TILE_MARGIN,
@@ -130,10 +133,10 @@ function b(e) {
             ...e,
             channel: t,
             title: null != n ? n : '',
-            participants: C,
+            participants: _,
             participantsVersion: o,
-            width: s ? _ : null != f ? f : e.width,
-            height: s ? (null != p ? p : e.height) : _,
+            width: s ? C : null != f ? f : e.width,
+            height: s ? (null != p ? p : e.height) : C,
             containerRef: g
         })
     );
