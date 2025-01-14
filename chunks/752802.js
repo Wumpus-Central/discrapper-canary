@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(399606),
     s = n(46973),
     c = n(481060),
@@ -15,38 +15,38 @@ var i = n(200651),
     d = n(239091),
     h = n(765250),
     f = n(872810),
-    m = n(40851),
-    v = n(414910),
-    p = n(194082),
-    x = n(979264),
-    g = n(871118),
+    p = n(40851),
+    m = n(414910),
+    v = n(194082),
+    g = n(979264),
+    x = n(871118),
     C = n(352978),
     Z = n(833519),
-    I = n(839662),
-    _ = n(199902),
+    _ = n(839662),
+    I = n(199902),
     j = n(314897),
     E = n(131951),
     b = n(594174),
     w = n(5192),
-    N = n(1226),
-    k = n(981631),
+    k = n(1226),
+    N = n(981631),
     L = n(388032),
-    S = n(2847);
-function y(e) {
+    y = n(2847);
+function S(e) {
     let { participant: t } = e,
         n = t.user.id,
-        l = (0, a.e7)(
+        r = (0, a.e7)(
             [E.Z],
             () => {
-                let e = (0, v.Z)(t.type);
+                let e = (0, m.Z)(t.type);
                 return E.Z.isLocalMute(t.user.id, e);
             },
             [t]
         ),
         o = (0, a.e7)([j.default], () => j.default.getId()),
-        { hasVideo: d } = (0, I.Z)(t, o),
-        h = l && d,
-        f = r.useCallback(() => {
+        { hasVideo: d } = (0, _.Z)(t, o),
+        h = r && d,
+        f = l.useCallback(() => {
             u.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
     return (0, i.jsx)(c.Tooltip, {
@@ -55,7 +55,7 @@ function y(e) {
             let { onClick: t, ...n } = e;
             return (0, i.jsx)(c.Clickable, {
                 ...n,
-                className: S.controlAction,
+                className: y.controlAction,
                 onClick: (e) => {
                     e.stopPropagation(), null == t || t(), f();
                 },
@@ -73,9 +73,9 @@ function y(e) {
     });
 }
 function T(e) {
-    let { hasActiveStream: t, participant: r, onEnablePin: l } = e,
-        s = (0, m.bp)(),
-        u = r.user,
+    let { hasActiveStream: t, participant: l, onEnablePin: r } = e,
+        s = (0, p.bp)(),
+        u = l.user,
         h = (0, a.e7)(
             [b.default],
             () => {
@@ -84,27 +84,27 @@ function T(e) {
             },
             [u]
         ),
-        v = t ? L.intl.string(L.t.tLxK4u) : L.intl.string(L.t.E5RDnJ);
+        m = t ? L.intl.string(L.t.tLxK4u) : L.intl.string(L.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', { className: o()(S.controlBackground, { [S.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)('div', { className: o()(y.controlBackground, { [y.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)('div', {
-                    className: S.watchActionContainer,
+                    className: y.watchActionContainer,
                     children: (0, i.jsx)(c.Tooltip, {
-                        text: v,
+                        text: m,
                         children: (e) =>
                             (0, i.jsxs)(c.Clickable, {
                                 ...e,
-                                className: S.watchButton,
+                                className: y.watchButton,
                                 onClick: () => {
                                     var t;
                                     null === (t = e.onClick) || void 0 === t || t.call(e),
-                                        (0, f.rn)(r.stream, {
+                                        (0, f.rn)(l.stream, {
                                             forceMultiple: !0,
                                             noFocus: !0
                                         }),
-                                        l();
+                                        r();
                                 },
                                 children: [
                                     (0, i.jsx)(c.Text, {
@@ -121,12 +121,12 @@ function T(e) {
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: S.controls,
+                className: y.controls,
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.controlUser,
+                        className: y.controlUser,
                         children: (0, i.jsxs)('div', {
-                            className: S.controlUserContainer,
+                            className: y.controlUserContainer,
                             children: [
                                 (0, i.jsx)(c.ScreenIcon, {
                                     size: 'xs',
@@ -135,9 +135,9 @@ function T(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    children: w.ZP.getName(r.stream.guildId, r.stream.channelId, u)
+                                    children: w.ZP.getName(l.stream.guildId, l.stream.channelId, u)
                                 }),
-                                (0, i.jsx)(x.ZP, {
+                                (0, i.jsx)(g.ZP, {
                                     primaryGuild: h.primaryGuild,
                                     userId: u.id
                                 })
@@ -145,19 +145,19 @@ function T(e) {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: S.controlActions,
+                        className: y.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(y, { participant: r }),
+                                    (0, i.jsx)(S, { participant: l }),
                                     (0, i.jsx)(c.Tooltip, {
                                         text: L.intl.string(L.t['3D5yo6']),
                                         children: (e) => {
-                                            let { onClick: t, ...l } = e;
+                                            let { onClick: t, ...r } = e;
                                             return (0, i.jsx)(c.Clickable, {
-                                                ...l,
-                                                className: S.controlAction,
+                                                ...r,
+                                                className: y.controlAction,
                                                 onClick: (e) => {
                                                     e.stopPropagation(),
                                                         null == t || t(),
@@ -166,7 +166,7 @@ function T(e) {
                                                             return (t) =>
                                                                 (0, i.jsx)(e, {
                                                                     ...t,
-                                                                    stream: r.stream,
+                                                                    stream: l.stream,
                                                                     exitFullscreen: () => {},
                                                                     appContext: s
                                                                 });
@@ -187,58 +187,58 @@ function T(e) {
         ]
     });
 }
-let A = new Set([k.jm8.ENDED, k.jm8.FAILED, k.jm8.PAUSED]),
-    O = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: s } = e,
-            c = (0, a.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+let A = new Set([N.jm8.ENDED, N.jm8.FAILED, N.jm8.PAUSED]),
+    O = l.memo(function (e) {
+        let { participant: t, width: n, locked: l, widgetId: r, pinned: s } = e,
+            c = (0, a.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = null != c && A.has(c.state),
             d = null != c,
-            f = (0, N.yA)(t.stream),
-            m = (0, N.xN)(t.stream);
-        return (!d && r) || u
+            f = (0, k.yA)(t.stream),
+            p = (0, k.xN)(t.stream);
+        return (!d && l) || u
             ? null
             : (0, i.jsxs)('div', {
-                  className: S.tile,
+                  className: y.tile,
                   children: [
                       d &&
-                          !r &&
-                          (0, i.jsx)(p.ZP, {
-                              size: p.ZP.Sizes.SMALL,
-                              className: S.liveIndicator
+                          !l &&
+                          (0, i.jsx)(v.ZP, {
+                              size: v.ZP.Sizes.SMALL,
+                              className: y.liveIndicator
                           }),
                       d
                           ? (0, i.jsx)('div', {
-                                className: S.streamTile,
+                                className: y.streamTile,
                                 children: (0, i.jsx)('div', {
-                                    className: S.streamTile,
+                                    className: y.streamTile,
                                     style: { transform: 'scale('.concat(f, ')') },
                                     children: (0, i.jsx)(Z.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != m ? m : C.L.CONTAIN,
+                                        fit: null != p ? p : C.L.CONTAIN,
                                         inPopout: !0,
-                                        focused: !r,
+                                        focused: !l,
                                         paused: !1,
                                         selected: !1,
-                                        wrapperClassName: r ? S.streamTileWrapper : void 0
+                                        wrapperClassName: l ? y.streamTileWrapper : void 0
                                     })
                                 })
                             })
                           : (0, i.jsx)('div', {
-                                className: S.streamPreview,
-                                children: (0, i.jsx)(g.Z, {
+                                className: y.streamPreview,
+                                children: (0, i.jsx)(x.Z, {
                                     noText: !0,
-                                    className: o()(S.absoluteFill),
+                                    className: o()(y.absoluteFill),
                                     stream: t.stream
                                 })
                             }),
-                      r
+                      l
                           ? null
                           : (0, i.jsx)(T, {
                                 participant: t,
                                 hasActiveStream: d,
                                 onEnablePin: () => {
-                                    !s && (0, h.xh)(l);
+                                    !s && (0, h.xh)(r);
                                 }
                             })
                   ]

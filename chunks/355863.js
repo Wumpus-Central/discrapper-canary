@@ -201,8 +201,8 @@ let y = 'migrated',
         },
         [T.Odu.QUICK_ACTIONS]: {
             minSize: {
-                width: 500,
-                height: 106
+                width: 216,
+                height: 56
             },
             resizeX: !1,
             resizeY: !1,

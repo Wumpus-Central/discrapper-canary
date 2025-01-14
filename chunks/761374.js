@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     o = n(765250),
     a = n(393238),
     s = n(358221),
@@ -15,78 +15,78 @@ var i = n(200651),
     d = n(314897),
     h = n(592125),
     f = n(355863),
-    m = n(944486),
-    v = n(350663),
-    p = n(340101),
-    x = n(666540);
-let g = [];
+    p = n(944486),
+    m = n(350663),
+    v = n(340101),
+    g = n(666540);
+let x = [];
 function C(e, t, n, i) {
-    let r = (i - 1) * v.z;
-    return e === p.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
+    let l = (i - 1) * m.z;
+    return e === v.C5.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
 }
 function Z(e) {
     var t;
-    let { id: n, size: Z, locked: I, padding: _, borderWidth: j, opacity: E, horizontal: b, pinned: w } = e,
-        N = 2 * _ + 2 * j;
-    let { width: k, height: L } = {
+    let { id: n, size: Z, locked: _, padding: I, borderWidth: j, opacity: E, horizontal: b, pinned: w } = e,
+        k = 2 * I + 2 * j;
+    let { width: N, height: L } = {
             width: 'number' == typeof (t = Z).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
-        S = (0, l.e7)([m.Z], () => m.Z.getVoiceChannelId()),
-        { width: y, height: T, ref: A } = (0, a.Z)(),
-        O = (0, l.e7)(
+        y = (0, r.e7)([p.Z], () => p.Z.getVoiceChannelId()),
+        { width: S, height: T, ref: A } = (0, a.Z)(),
+        O = (0, r.e7)(
             [f.Z],
             () => {
                 var e;
                 let t = f.Z.getWidget(n);
-                return !!(0, p.ZL)(t) && (null === (e = t.meta.showAllStreams) || void 0 === e || e);
+                return !!(0, v.ZL)(t) && (null === (e = t.meta.showAllStreams) || void 0 === e || e);
             },
             [n]
         ),
-        V = (0, l.e7)([h.Z], () => h.Z.getChannel(S)),
-        M = (0, l.e7)([d.default], () => d.default.getId()),
-        { participantsVersion: P, streamParticipants: z } = (0, l.cj)(
+        V = (0, r.e7)([h.Z], () => h.Z.getChannel(y)),
+        P = (0, r.e7)([d.default], () => d.default.getId()),
+        { participantsVersion: M, streamParticipants: R } = (0, r.cj)(
             [u.Z, s.Z],
             () => {
-                if (null == S)
+                if (null == y)
                     return {
-                        streamParticipants: g,
+                        streamParticipants: x,
                         participantsVersion: -1
                     };
-                let e = new Set(u.Z.getAllActiveStreamsForChannel(S).map((e) => (0, c.V9)(e))),
+                let e = new Set(u.Z.getAllActiveStreamsForChannel(y).map((e) => (0, c.V9)(e))),
                     t = (t) => e.has((0, c.V9)(t.stream)),
-                    n = s.Z.getStreamParticipants(S).filter((t) => t.user.id !== M && (!!O || e.has((0, c.V9)(t.stream))));
+                    n = s.Z.getStreamParticipants(y).filter((t) => t.user.id !== P && (!!O || e.has((0, c.V9)(t.stream))));
                 return (
                     n.sort((e, n) => (t(e) && !t(n) ? -1 : !t(e) && t(n) ? 1 : e.user.username.localeCompare(n.user.username))),
                     {
                         streamParticipants: n,
                         activeStreams: e,
-                        participantsVersion: s.Z.getParticipantsVersion(S)
+                        participantsVersion: s.Z.getParticipantsVersion(y)
                     }
                 );
             },
-            [S, M, O]
+            [y, P, O]
         ),
-        R = z.length,
-        D = null == V || 0 === R,
-        { tileWidth: W, layout: U } = (function (e, t, n, i, l) {
+        D = R.length,
+        z = null == V || 0 === D,
+        { tileWidth: W, layout: F } = (function (e, t, n, i, r) {
             let o = (function (e, t, n, i) {
-                    let r = C(p.C5.HORIZONTAL, e, t, n),
-                        l = C(p.C5.VERTICAL, e, t, n);
+                    let l = C(v.C5.HORIZONTAL, e, t, n),
+                        r = C(v.C5.VERTICAL, e, t, n);
                     switch (i) {
-                        case p.C5.VERTICAL:
-                            return l;
-                        case p.C5.HORIZONTAL:
+                        case v.C5.VERTICAL:
                             return r;
+                        case v.C5.HORIZONTAL:
+                            return l;
                     }
-                    let o = ((9 * l) / 16 + v.z) * n - v.z;
-                    return e > (16 * t) / 9 ? r : o <= t ? l : (9 * r) / 16 <= t ? r : l;
-                })(n, i, t, l),
-                a = C(p.C5.VERTICAL, n, i, t),
-                s = null != l ? l : o === a ? p.C5.VERTICAL : p.C5.HORIZONTAL,
-                [c, u] = r.useState(o);
+                    let o = ((9 * r) / 16 + m.z) * n - m.z;
+                    return e > (16 * t) / 9 ? l : o <= t ? r : (9 * l) / 16 <= t ? l : r;
+                })(n, i, t, r),
+                a = C(v.C5.VERTICAL, n, i, t),
+                s = null != r ? r : o === a ? v.C5.VERTICAL : v.C5.HORIZONTAL,
+                [c, u] = l.useState(o);
             return (
-                r.useEffect(() => {
+                l.useEffect(() => {
                     !e && u(o);
                 }, [e, o]),
                 {
@@ -94,22 +94,22 @@ function Z(e) {
                     tileWidth: c
                 }
             );
-        })(!1, R, null != y ? y : k - N, null != T ? T : L - N, b ? p.C5.HORIZONTAL : p.C5.VERTICAL),
-        F = {
+        })(!1, D, null != S ? S : N - k, null != T ? T : L - k, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
+        G = {
             id: n,
-            width: k,
+            width: N,
             height: L,
-            sizeOffset: N,
-            layout: U,
-            padding: _,
-            participants: z.length
+            sizeOffset: k,
+            layout: F,
+            padding: I,
+            participants: R.length
         };
     return (!(function (e) {
-        let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: l } = e,
-            a = r.useRef(l);
-        r.useEffect(() => void (a.current = l)),
-            r.useEffect(() => {
-                let { id: e, width: t, height: i, sizeOffset: r, layout: l, padding: s } = a.current;
+        let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: r } = e,
+            a = l.useRef(r);
+        l.useEffect(() => void (a.current = r)),
+            l.useEffect(() => {
+                let { id: e, width: t, height: i, sizeOffset: l, layout: r, padding: s } = a.current;
                 if (0 === n.length) {
                     (256 !== t || 144 !== i) &&
                         (0, o.nv)({
@@ -122,54 +122,54 @@ function Z(e) {
                         });
                     return;
                 }
-                if (l === p.C5.HORIZONTAL) {
-                    let t = (16 / 9) * (i - r);
+                if (r === v.C5.HORIZONTAL) {
+                    let t = (16 / 9) * (i - l);
                     (0, o.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
                             height: i,
-                            width: t * n.length + s * (n.length - 1) + r
+                            width: t * n.length + s * (n.length - 1) + l
                         }
                     });
                 } else {
-                    let i = (9 / 16) * (t - r);
+                    let i = (9 / 16) * (t - l);
                     (0, o.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
                             width: t,
-                            height: i * n.length + s * (n.length - 1) + r
+                            height: i * n.length + s * (n.length - 1) + l
                         }
                     });
                 }
             }, [n.length]),
-            r.useEffect(() => {
+            l.useEffect(() => {
                 if (a.current.participants <= 1) return;
-                let { id: e, width: t, height: n, sizeOffset: r, padding: l, participants: s } = a.current;
-                if (i === p.C5.HORIZONTAL) {
-                    let n = t - r;
+                let { id: e, width: t, height: n, sizeOffset: l, padding: r, participants: s } = a.current;
+                if (i === v.C5.HORIZONTAL) {
+                    let n = t - l;
                     (0, o.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
-                            width: n * s + l * (s - 1) + r,
-                            height: (9 / 16) * n + r
+                            width: n * s + r * (s - 1) + l,
+                            height: (9 / 16) * n + l
                         }
                     });
                 } else {
-                    let t = n - r;
+                    let t = n - l;
                     (0, o.nv)({
                         widgetId: e,
                         size: {
                             fixed: !0,
-                            width: (16 / 9) * t + r,
-                            height: t * s + l * (s - 1) + r
+                            width: (16 / 9) * t + l,
+                            height: t * s + r * (s - 1) + l
                         }
                     });
                 }
             }, [i]),
-            r.useEffect(
+            l.useEffect(
                 () => () => {
                     (0, o.nv)({
                         widgetId: t,
@@ -184,23 +184,23 @@ function Z(e) {
             );
     })({
         id: n,
-        streamParticipants: z,
-        layout: U,
-        widgetLayoutSpecs: F
+        streamParticipants: R,
+        layout: F,
+        widgetLayoutSpecs: G
     }),
-    D && I)
+    z && _)
         ? null
         : (0, i.jsx)('div', {
-              className: x.goLiveGridContainer,
+              className: g.goLiveGridContainer,
               style: { opacity: E },
               ref: A,
-              children: (0, i.jsx)(v.Z, {
+              children: (0, i.jsx)(m.Z, {
                   widgetId: n,
                   tileWidth: W,
-                  locked: I,
-                  layout: U,
-                  streamParticipants: z,
-                  participantsVersion: P,
+                  locked: _,
+                  layout: F,
+                  streamParticipants: R,
+                  participantsVersion: M,
                   pinned: w
               })
           });

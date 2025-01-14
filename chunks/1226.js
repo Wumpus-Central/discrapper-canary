@@ -16,14 +16,14 @@ n.d(t, {
     }
 });
 var i = n(348327),
-    r = n.n(i),
-    l = n(972959),
+    l = n.n(i),
+    r = n(972959),
     o = n(569545);
-let a = (0, l.H)(() => ({ streams: {} }));
+let a = (0, r.H)(() => ({ streams: {} }));
 function s(e) {
     var t, n;
     let i = (0, o.V9)(e);
-    return null !== (n = null === (t = a.useState((e) => e.streams, r())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
+    return null !== (n = null === (t = a.useState((e) => e.streams, l())[i]) || void 0 === t ? void 0 : t.zoom) && void 0 !== n ? n : 100;
 }
 function c(e) {
     return s(e) / 100;
@@ -63,5 +63,5 @@ function d(e, t) {
 function h(e) {
     var t;
     let n = (0, o.V9)(e);
-    return null === (t = a.useState((e) => e.streams, r())[n]) || void 0 === t ? void 0 : t.fitOverride;
+    return null === (t = a.useState((e) => e.streams, l())[n]) || void 0 === t ? void 0 : t.fitOverride;
 }

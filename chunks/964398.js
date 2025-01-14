@@ -108,7 +108,7 @@ let N = (e, t) => {
     };
 };
 t.Z = r.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: C, itemHeight: f, showDeadZoneIndicator: m, activeItem: p, onItemSelect: E, onItemAction: T, interactive: v = !0, children: I } = e,
+    let { wheelWidth: t, wheelHeight: n, itemWidth: C, itemHeight: f, showDeadZoneIndicator: p, activeItem: m, onItemSelect: E, onItemAction: T, interactive: v = !0, children: I } = e,
         O = r.useRef(null),
         j = r.useRef([]),
         y = r.useRef(!1),
@@ -183,7 +183,7 @@ t.Z = r.memo(function (e) {
                             y: e.clientY
                         };
                     if ((M(o, s, Math.max(t, n)), y.current)) {
-                        null != p && w();
+                        null != m && w();
                         return;
                     }
                     let i = (0, a.ld)(s, o, Math.max(t, n));
@@ -198,9 +198,9 @@ t.Z = r.memo(function (e) {
                     }
                     w();
                 }, 16),
-            [p, M, w, B, S, n, t]
+            [m, M, w, B, S, n, t]
         ),
-        U = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 if (!v) return;
                 let t = S + (e.deltaY > 0 ? 1 : -1);
@@ -208,7 +208,7 @@ t.Z = r.memo(function (e) {
             },
             [v, S, P, B, w]
         ),
-        V = r.useMemo(
+        U = r.useMemo(
             () =>
                 P[S].map((e, r) => {
                     let s = h[r];
@@ -236,7 +236,7 @@ t.Z = r.memo(function (e) {
     return (0, l.jsx)(i.Clickable, {
         className: u.chatWheelMouseInput,
         onMouseMove: G,
-        onWheel: U,
+        onWheel: V,
         onClick: L,
         children: (0, l.jsxs)('div', {
             ref: O,
@@ -293,7 +293,7 @@ t.Z = r.memo(function (e) {
                                     r: '103.68',
                                     strokeWidth: '40.32'
                                 }),
-                                m &&
+                                p &&
                                     (0, l.jsx)('circle', {
                                         className: u.chatWheelDeadZone,
                                         onMouseEnter: () => D(!0),
@@ -311,7 +311,7 @@ t.Z = r.memo(function (e) {
                                     })
                             ]
                         }),
-                        m &&
+                        p &&
                             (0, l.jsx)('circle', {
                                 className: u.chatWheelDeadZone,
                                 onMouseEnter: () => D(!0),
@@ -326,7 +326,7 @@ t.Z = r.memo(function (e) {
                 (0, l.jsxs)('div', {
                     className: u.innerContent,
                     children: [
-                        m && (0, l.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
+                        p && (0, l.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
                         v && P.length > 1
                             ? (0, l.jsx)('div', {
                                   className: u.paginationHint,
@@ -335,7 +335,7 @@ t.Z = r.memo(function (e) {
                             : null
                     ]
                 }),
-                V
+                U
             ]
         })
     });

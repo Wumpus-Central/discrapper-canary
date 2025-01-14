@@ -9,25 +9,25 @@ var r = n(120356),
     u = n(388032),
     d = n(586802);
 t.Z = function (e) {
-    let { className: t, hasVideo: n, text: r, hasConnectedChannel: h } = e,
-        x = (0, a.Q3)('RTCConnectionStatusText'),
-        { enabled: g } = (0, c.S)({ location: 'RTCConnectionStatusText' }),
-        N = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
+    let { className: t, hasVideo: n, text: r, hasConnectedChannel: h, textVariant: x = 'text-md/medium' } = e,
+        g = (0, a.Q3)('RTCConnectionStatusText'),
+        { enabled: N } = (0, c.S)({ location: 'RTCConnectionStatusText' }),
+        C = n ? u.intl.string(u.t.IlHdW1) : u.intl.string(u.t.WsOisr);
     return (0, l.jsx)(i.Z, {
-        className: s()(t, g ? d.hoverableStatus : d.status),
+        className: s()(t, N ? d.hoverableStatus : d.status),
         hoverText:
-            g && h
-                ? x
+            N && h
+                ? g
                     ? (0, l.jsx)(o.Text, {
-                          variant: 'text-md/medium',
+                          variant: x,
                           color: 'currentColor',
-                          children: N
+                          children: C
                       })
-                    : N
+                    : C
                 : null,
-        children: x
+        children: g
             ? (0, l.jsx)(o.Text, {
-                  variant: 'text-md/medium',
+                  variant: x,
                   color: 'currentColor',
                   children: r
               })

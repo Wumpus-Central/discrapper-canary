@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(476183),
     s = n(481060),
     c = n(110924),
@@ -14,47 +14,47 @@ var i = n(200651),
     d = n(340101),
     h = n(228680);
 let f = 8,
-    m = (e) => {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e;
+    p = (e) => {
+        let { participant: t, width: n, locked: l, widgetId: r, pinned: o } = e;
         return (0, i.jsx)(
             u.Z,
             {
                 participant: t,
                 width: n,
-                locked: r,
-                widgetId: l,
+                locked: l,
+                widgetId: r,
                 pinned: o
             },
             t.user.id
         );
     },
-    v = {
+    m = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     };
-t.Z = r.memo(function (e) {
-    let { widgetId: t, tileWidth: n, layout: r, locked: l, streamParticipants: u, participantsVersion: p, pinned: x } = e,
-        g = (9 / 16) * n,
+t.Z = l.memo(function (e) {
+    let { widgetId: t, tileWidth: n, layout: l, locked: r, streamParticipants: u, participantsVersion: v, pinned: g } = e,
+        x = (9 / 16) * n,
         C = u.map((e) => ({
             participant: e,
             key: e.user.id,
             width: n,
-            locked: l,
+            locked: r,
             widgetId: t,
-            height: g,
-            pinned: x
+            height: x,
+            pinned: g
         })),
         Z = (0, c.Z)(n),
-        I = r === d.C5.VERTICAL,
-        _ = 0,
+        _ = l === d.C5.VERTICAL,
+        I = 0,
         j = 0,
         E = (0, s.useTransition)(
-            I
+            _
                 ? C.map((e, t) => ({
                       ...e,
-                      y: (_ += e.height + (t > 0 ? f : 0)) - e.height,
+                      y: (I += e.height + (t > 0 ? f : 0)) - e.height,
                       x: 0
                   }))
                 : C.map((e, t) => ({
@@ -73,25 +73,25 @@ t.Z = r.memo(function (e) {
                     opacity: 0
                 },
                 enter: (e) => {
-                    let { x: t, y: n, width: i, height: r } = e;
+                    let { x: t, y: n, width: i, height: l } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: r,
+                        height: l,
                         opacity: 1
                     };
                 },
                 update: (e) => {
-                    let { x: t, y: n, width: i, height: r } = e;
+                    let { x: t, y: n, width: i, height: l } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: r
+                        height: l
                     };
                 },
-                config: v,
+                config: m,
                 trail: n !== Z ? 0 : 100
             },
             n !== Z ? 'animate-never' : 'respect-motion-settings'
@@ -99,19 +99,19 @@ t.Z = r.memo(function (e) {
     return (0, i.jsx)('div', {
         className: o()({
             [h.gridContainer]: !0,
-            [h.vertical]: I,
-            [h.horizontal]: !I
+            [h.vertical]: _,
+            [h.horizontal]: !_
         }),
-        style: I ? { height: _ } : { width: j },
-        children: E((e, t, r, l) =>
+        style: _ ? { height: I } : { width: j },
+        children: E((e, t, l, r) =>
             (0, i.jsx)(a.animated.div, {
                 className: h.gridItem,
                 style: Object.assign({}, e, {
                     width: n,
-                    height: g,
-                    zIndex: C.length - l
+                    height: x,
+                    zIndex: C.length - r
                 }),
-                children: m(t)
+                children: p(t)
             })
         )
     });

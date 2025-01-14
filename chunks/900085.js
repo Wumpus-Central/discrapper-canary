@@ -295,7 +295,7 @@ class K extends r.PureComponent {
                             case M.d4z.GUILD_VOICE:
                             case M.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
-                                    let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('14280')]).then(n.bind(n, 213202));
+                                    let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,

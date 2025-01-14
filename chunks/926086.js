@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return m;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(348327),
     s = n.n(a),
     c = n(476183),
@@ -15,20 +15,20 @@ var i = n(200651),
     d = n(667142),
     h = n(333031),
     f = n(70491);
-let m = {
+let p = {
     mass: 1,
     tension: 600,
     friction: 60,
     clamp: !0
 };
-function v(e) {
+function m(e) {
     let { locked: t, pinned: n } = e,
-        [l, a] = r.useState(0),
-        [v, p] = r.useState(0),
-        [x, g] = r.useState(0),
-        C = r.useRef(0),
-        [Z, I] = r.useState(0),
-        { timeToLiveMs: _, reappearTimeMs: j } = d.ZP.useState(
+        [r, a] = l.useState(0),
+        [m, v] = l.useState(0),
+        [g, x] = l.useState(0),
+        C = l.useRef(0),
+        [Z, _] = l.useState(0),
+        { timeToLiveMs: I, reappearTimeMs: j } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
@@ -36,22 +36,22 @@ function v(e) {
             s()
         ),
         E = {
-            timeToLiveMs: _,
+            timeToLiveMs: I,
             reappearTimeMs: j
         },
-        b = r.useRef(E);
-    r.useEffect(() => void (b.current = E)),
-        r.useEffect(
+        b = l.useRef(E);
+    l.useEffect(() => void (b.current = E)),
+        l.useEffect(
             () => (
                 (C.current = setInterval(() => {
                     let e = Date.now();
-                    p(e),
-                        g((t) => {
+                    v(e),
+                        x((t) => {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = b.current.timeToLiveMs,
-                                r = i + b.current.reappearTimeMs;
-                            return n > i ? t + r : t;
+                                l = i + b.current.reappearTimeMs;
+                            return n > i ? t + l : t;
                         });
                 }, 100)),
                 () => {
@@ -61,26 +61,26 @@ function v(e) {
             []
         );
     let w = () => {
-            a(Date.now()), I((e) => e + 1);
+            a(Date.now()), _((e) => e + 1);
         },
-        N = l > 0 && v - l < 1000,
-        k = (0, u.useTransition)(x > 0 && x < v && v - x < _, {
+        k = r > 0 && m - r < 1000,
+        N = (0, u.useTransition)(g > 0 && g < m && m - g < I, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: m
+            config: p
         });
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: k(
+              children: N(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(c.animated.div, {
                           style: e,
                           className: f.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: o()(f.clickZone, N && f.clickBackground),
+                              className: o()(f.clickZone, k && f.clickBackground),
                               children: (0, i.jsx)(u.Clickable, {
                                   onClick: w,
                                   className: f.clickable,

@@ -19,8 +19,8 @@ var l = n(200651),
     N = n(586646),
     C = n(760373),
     f = n(388032),
-    m = n(628437);
-function p(e) {
+    p = n(628437);
+function m(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
         o = (0, s.cj)([u.Z], () => ({
             connectionState: u.Z.getConnectionState(t),
@@ -61,7 +61,7 @@ function T(e) {
             ? f.intl.string(f.t['3BogKS'])
             : f.intl.string(f.t.ETIVvr);
     return n
-        ? (0, l.jsx)(p, {
+        ? (0, l.jsx)(m, {
               lobbyId: r,
               closePopout: s,
               connectionTypeText: o
@@ -95,16 +95,16 @@ function v(e) {
             g && a(C.tu.RTC_DEBUG_PANEL);
         }, [g]),
         (0, l.jsxs)('div', {
-            className: m.container,
+            className: p.container,
             children: [
                 (0, l.jsx)(o.Heading, {
-                    className: m.title,
+                    className: p.title,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
                     children: t ? f.intl.string(f.t.IlHdW1) : f.intl.string(f.t.WsOisr)
                 }),
                 (0, l.jsxs)(o.TabBar, {
-                    className: m.tabs,
+                    className: p.tabs,
                     selectedItem: n,
                     type: 'top',
                     look: 'brand',
@@ -112,14 +112,14 @@ function v(e) {
                     children: [
                         (0, l.jsx)(o.TabBar.Item, {
                             id: C.tu.RTC_DEBUG_PANEL,
-                            className: m.tabBarItem,
+                            className: p.tabBarItem,
                             children: f.intl.string(f.t.MBY1Pj)
                         }),
                         g
                             ? null
                             : (0, l.jsx)(o.TabBar.Item, {
                                   id: C.tu.RTC_SECURE_FRAMES,
-                                  className: m.tabBarItem,
+                                  className: p.tabBarItem,
                                   children: f.intl.string(f.t.zC6o3t)
                               })
                     ]
@@ -140,9 +140,9 @@ function I(e) {
     })
         ? (0, l.jsx)(v, { ...e })
         : (0, l.jsx)('div', {
-              className: m.debugPanelStandalone,
+              className: p.debugPanelStandalone,
               children: (0, l.jsx)('section', {
-                  className: m.debugPanelSection,
+                  className: p.debugPanelSection,
                   children: (0, l.jsx)(T, { ...e })
               })
           });

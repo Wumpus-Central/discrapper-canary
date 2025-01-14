@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(512722),
-    o = n.n(l),
+    l = n(192379),
+    r = n(512722),
+    o = n.n(r),
     a = n(442837),
     s = n(481060),
     c = n(872810),
@@ -15,75 +15,75 @@ var i = n(200651),
     d = n(74299),
     h = n(451467),
     f = n(537413),
-    m = n(989941),
-    v = n(567126),
-    p = n(143135),
-    x = n(751571),
-    g = n(361291),
+    p = n(989941),
+    m = n(567126),
+    v = n(143135),
+    g = n(751571),
+    x = n(361291),
     C = n(592125),
     Z = n(430824),
-    I = n(131951),
-    _ = n(944486),
+    _ = n(131951),
+    I = n(944486),
     j = n(594174),
     E = n(449224),
     b = n(358085),
     w = n(981631),
-    N = n(37113),
-    k = n(761274);
+    k = n(37113),
+    N = n(761274);
 function L() {
-    let e = (0, a.e7)([_.Z], () => _.Z.getVoiceChannelId()),
+    let e = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()),
         t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-        l = (0, a.e7)([j.default], () => {
+        r = (0, a.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return o()(null != e, 'useGoLiveImmidateAction: user cannot be undefined'), e;
         }),
         L = null == t ? void 0 : t.getGuildId(),
-        S = (0, a.e7)([I.Z], () => (0, d.Z)(I.Z));
-    async function y() {
+        y = (0, a.e7)([_.Z], () => (0, d.Z)(_.Z));
+    async function S() {
         var e;
-        return null !== (e = (await (0, v._Q)()).sort((e, t) => (0, v.ov)(t) - (0, v.ov)(e))[0]) && void 0 !== e ? e : null;
+        return null !== (e = (await (0, m._Q)()).sort((e, t) => (0, m.ov)(t) - (0, m.ov)(e))[0]) && void 0 !== e ? e : null;
     }
-    let T = r.useCallback(async () => {
+    let T = l.useCallback(async () => {
         var n, i;
         if (null == t || null == e) return !1;
-        let r = await y(),
-            o = (0, b.isWindows)() ? (0, m.Z)(u.ZP, E.Z) : null;
-        if (null == o && null == r) return !1;
+        let l = await S(),
+            o = (0, b.isWindows)() ? (0, p.Z)(u.ZP, E.Z) : null;
+        if (null == o && null == l) return !1;
         let a = null != L ? (null === (n = Z.Z.getGuild(L)) || void 0 === n ? void 0 : n.premiumTier) : null,
-            { preset: s, resolution: d, fps: v, soundshareEnabled: C } = g.Z.getState(),
-            [_, j] = null !== (i = (0, f.Z)(s, l, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
+            { preset: s, resolution: d, fps: m, soundshareEnabled: C } = x.Z.getState(),
+            [I, j] = null !== (i = (0, f.Z)(s, r, a)) && void 0 !== i ? i : [k.LY.RESOLUTION_720, k.ws.FPS_30],
             w = s,
-            S = d,
-            T = v;
-        w !== N.tI.PRESET_CUSTOM && ((S = _), (T = j)),
-            !(0, h.Z)(w, S, T, l, a) && ((S = _), (T = j)),
-            !(0, h.Z)(w, S, T, l, a, t) && ((w = N.tI.PRESET_VIDEO), (S = N.LY.RESOLUTION_720), (T = N.ws.FPS_30)),
+            y = d,
+            T = m;
+        w !== k.tI.PRESET_CUSTOM && ((y = I), (T = j)),
+            !(0, h.Z)(w, y, T, r, a) && ((y = I), (T = j)),
+            !(0, h.Z)(w, y, T, r, a, t) && ((w = k.tI.PRESET_VIDEO), (y = k.LY.RESOLUTION_720), (T = k.ws.FPS_30)),
             (0, c.Rc)({
                 preset: w,
-                resolution: S,
+                resolution: y,
                 frameRate: T,
                 soundshareEnabled: C
             });
-        let A = (0, p.Z)(o, r, u.ZP.getRunningGames()),
-            O = !(0, b.isWindows)() || null == A || (null == r ? void 0 : r.id.startsWith('camera:')) || null == A ? null : A.pid,
+        let A = (0, v.Z)(o, l, u.ZP.getRunningGames()),
+            O = !(0, b.isWindows)() || null == A || (null == l ? void 0 : l.id.startsWith('camera:')) || null == A ? null : A.pid,
             V = null,
-            M = null;
+            P = null;
         return (
-            null == O && null != r && ((V = r.id), (M = r.name)),
-            !!(I.Z.getUseSystemScreensharePicker() || (await x.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
+            null == O && null != l && ((V = l.id), (P = l.name)),
+            !!(_.Z.getUseSystemScreensharePicker() || (await g.Z.hasPermission(N.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
                 ((0, c.WH)(L, e, {
                     pid: O,
                     sourceId: V,
-                    sourceName: M,
+                    sourceName: P,
                     audioSourceId: null,
                     sound: C,
                     previewDisabled: !0
                 }),
                 !0)
         );
-    }, [t, L, l, e]);
-    return r.useCallback(async () => {
-        if (!(!S || null == e || (await T())))
+    }, [t, L, r, e]);
+    return l.useCallback(async () => {
+        if (!(!y || null == e || (await T())))
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('79477'), n.e('73554')]).then(n.bind(n, 60594));
                 return (t) =>
@@ -94,5 +94,5 @@ function L() {
                         analyticsLocation: w.Sbl.UNLOCKED_OVERLAY
                     });
             });
-    }, [S, T, L, e]);
+    }, [y, T, L, e]);
 }
