@@ -39410,6 +39410,48 @@ img.thumbnail_c64476 {
     margin-left: 8px
 }
 
+.content_ecda00 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.streamHidden_ecda00 {
+    background: var(--primary-700);
+    flex-direction: column
+}
+
+.streamHiddenEmptyState_ecda00 {
+    padding: 0;
+    margin: 0
+}
+
+.streamHiddenCTA_ecda00 {
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+
+.largePaddingTop_ecda00 {
+    padding-top: 8px
+}
+
+.addStreamIcon_ecda00 {
+    width: 24px;
+    height: 24px
+}
+
+.addCTA_ecda00 {
+    padding: 8px;
+    margin-left: 8px
+}
+
 .leftTrayIcon_d22933 {
     margin-right: 16px
 }
