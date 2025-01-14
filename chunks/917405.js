@@ -49,6 +49,7 @@ class f extends r.PureComponent {
                 onClick: t,
                 children: (0, l.jsx)(d.Z, {
                     text: s,
+                    textVariant: this.props.connectionStatusTextVariant,
                     hasVideo: this.props.hasVideo,
                     className: N[r],
                     hasConnectedChannel: null != n
@@ -65,7 +66,7 @@ class f extends r.PureComponent {
                     text: t !== h.IE4.UNKNOWN && null != r ? ''.concat(r.toFixed(0), ' ms') : null,
                     color: g[t],
                     children: (e) =>
-                        (0, l.jsx)(m, {
+                        (0, l.jsx)(p, {
                             quality: t,
                             smallPing: n,
                             ...e
@@ -109,7 +110,7 @@ class f extends r.PureComponent {
                 : (t[n] = r);
     }
 }
-function m(e) {
+function p(e) {
     let { quality: t, smallPing: n, ...r } = e;
     if (!(0, i.useRedesignIconContext)().enabled)
         return (0, l.jsx)(a.Z, {
