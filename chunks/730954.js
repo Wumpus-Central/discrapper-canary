@@ -12,7 +12,7 @@ function r(e, n, t) {
         null != n.interactionData && null != r.applicationId && (0, l.d)(n, e, r);
         return;
     }
-    let { content: a, tts: o, messageReference: s, flags: u, nonce: d } = n;
+    let { content: a, tts: o, messageReference: s, flags: u, nonce: c } = n;
     i.Z.sendMessage(
         e.id,
         {
@@ -23,7 +23,7 @@ function r(e, n, t) {
         },
         void 0,
         {
-            nonce: d,
+            nonce: c,
             flags: u,
             messageReference: null != s ? s : void 0,
             ...r

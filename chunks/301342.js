@@ -54,7 +54,7 @@ let E = l.memo(function (e) {
                     let t = v.Z.getGuild(r.getGuildId());
                     null != t &&
                         (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('8965'), n.e('14280')]).then(n.bind(n, 139035));
+                            let { default: e } = await Promise.all([n.e('8965'), n.e('81070')]).then(n.bind(n, 139035));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,

@@ -11,8 +11,8 @@ var l = t(481060),
     o = t(626135),
     s = t(358085),
     u = t(960048),
-    d = t(998502),
-    c = t(36998),
+    c = t(998502),
+    d = t(36998),
     m = t(981631),
     g = t(388032);
 function f(e, n) {
@@ -23,20 +23,20 @@ function h(e, n, t) {
     let u = (0, r.s$)(e),
         h = async () => {
             try {
-                await d.ZP.saveImage(u), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.cqpdJS), l.ToastType.SUCCESS));
+                await c.ZP.saveImage(u), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, d.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.cqpdJS), l.ToastType.SUCCESS));
             } catch (e) {
-                o.default.track(m.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, c.v)() }), f(g.intl.string(g.t['8Ve/S0']), e);
+                o.default.track(m.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, d.v)() }), f(g.intl.string(g.t['8Ve/S0']), e);
             }
         },
         E = async () => {
             try {
-                await d.ZP.copyImage(u), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, c.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.bhUpvL), l.ToastType.SUCCESS));
+                await c.ZP.copyImage(u), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, d.v)() }), (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.bhUpvL), l.ToastType.SUCCESS));
             } catch (e) {
-                f(g.intl.string(g.t.PTPbj4), e), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, c.v)() });
+                f(g.intl.string(g.t.PTPbj4), e), o.default.track(m.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, d.v)() });
             }
         };
     return [
-        d.ZP.canCopyImage() && (0, r.Lz)(e)
+        c.ZP.canCopyImage() && (0, r.Lz)(e)
             ? (0, i.jsx)(
                   l.MenuItem,
                   {

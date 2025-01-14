@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return c;
     }
 });
 var i = t(200651);
@@ -11,7 +11,7 @@ var l = t(852229),
     o = t(572004),
     s = t(981631),
     u = t(388032);
-function d(e, n) {
+function c(e, n) {
     return o.wS && e.type !== s.uaV.GUILD_INVITE_REMINDER
         ? (0, i.jsx)(r.MenuItem, {
               id: 'copy-link',

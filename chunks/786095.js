@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return M;
     }
 }),
     t(47120),
@@ -12,8 +12,8 @@ var i = t(200651),
     o = t(236413),
     s = t(727072),
     u = t(85960),
-    d = t(676317),
-    c = t(65912),
+    c = t(676317),
+    d = t(65912),
     m = t(556012),
     g = t(572456),
     f = t(434404),
@@ -21,21 +21,21 @@ var i = t(200651),
     E = t(273504),
     I = t(388032),
     v = t(986371);
-let M = E.fX.KEYWORD;
-function p(e, n) {
-    let { perGuildMaxCount: t } = u.I6[M],
-        { isLoading: p, saveRule: x, errorMessage: Z } = (0, c.w)(),
-        { createNewEditingRule: S } = (0, c.V)(),
+let p = E.fX.KEYWORD;
+function M(e, n) {
+    let { perGuildMaxCount: t } = u.I6[p],
+        { isLoading: M, saveRule: x, errorMessage: S } = (0, d.w)(),
+        { createNewEditingRule: Z } = (0, d.V)(),
         [j, T] = l.useState(!1),
         [N, _] = (0, s.I2)(n),
         { rulesByTriggerType: b, updateRule: A } = (0, s.pH)(n),
-        P = l.useMemo(() => {
+        C = l.useMemo(() => {
             var e;
-            return null !== (e = b[M]) && void 0 !== e ? e : [];
+            return null !== (e = b[p]) && void 0 !== e ? e : [];
         }, [b]),
-        C = 0 === P.length,
-        y = t > P.length && !C;
-    if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
+        P = 0 === C.length,
+        y = t > C.length && !P;
+    if (!l.useMemo(() => (0, c.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
     let D = e.split(' '),
         L = D.length;
     try {
@@ -48,7 +48,7 @@ function p(e, n) {
                 (0, a.Zy)(),
                     f.Z.open(n, h.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        S(n, M, {
+                        Z(n, p, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -67,7 +67,7 @@ function p(e, n) {
                     keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await x(l, P), A(l), null != Z ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
+            await x(l, C), A(l), null != S ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
         },
         G = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(r.MenuItem, {
@@ -79,15 +79,15 @@ function p(e, n) {
         !N &&
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    C &&
+                    P &&
                         (0, i.jsx)(r.MenuItem, {
                             id: 'add-first-rule',
                             label: I.intl.string(I.t.f72Zqa),
                             action: O,
-                            disabled: p
+                            disabled: M
                         }),
-                    P.map((e) => {
-                        let n = (0, u.V9)(M).reduce((n, t) => {
+                    C.map((e) => {
+                        let n = (0, u.V9)(p).reduce((n, t) => {
                             let i = e.actions.find((e) => {
                                 let { type: n } = e;
                                 return t === n;
@@ -109,7 +109,7 @@ function p(e, n) {
                                 }),
                                 group: 'automod-rule-selection',
                                 checked: !1,
-                                disabled: p,
+                                disabled: M,
                                 action: () => R(e)
                             },
                             e.id
@@ -123,7 +123,7 @@ function p(e, n) {
                                     id: 'add-another-rule',
                                     label: I.intl.string(I.t['0K5jDA']),
                                     action: O,
-                                    disabled: p
+                                    disabled: M
                                 })
                             ]
                         })

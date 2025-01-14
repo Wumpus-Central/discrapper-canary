@@ -5,13 +5,13 @@ var i,
     o = t(442837),
     s = t(570140);
 let u = {};
-class d extends (a = o.ZP.Store) {
+class c extends (a = o.ZP.Store) {
     getOptions(e) {
         return u[e];
     }
 }
 (r = 'SendMessageOptionsStore'),
-    (l = 'displayName') in (i = d)
+    (l = 'displayName') in (i = c)
         ? Object.defineProperty(i, l, {
               value: r,
               enumerable: !0,
@@ -19,7 +19,7 @@ class d extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[l] = r),
-    (n.Z = new d(s.Z, {
+    (n.Z = new c(s.Z, {
         MESSAGE_CREATE: function (e) {
             let { message: n, sendMessageOptions: t } = e;
             null != t && (u[n.id] = t), null != n.nonce && n.nonce in u && delete u[n.nonce];

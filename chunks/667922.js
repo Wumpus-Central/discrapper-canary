@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return p;
     }
 });
 var i = t(200651),
@@ -10,8 +10,8 @@ var i = t(200651),
     o = t(543241),
     s = t(222677),
     u = t(995774),
-    d = t(665906),
-    c = t(695346),
+    c = t(665906),
+    d = t(695346),
     m = t(496675),
     g = t(768581),
     f = t(585483),
@@ -19,13 +19,13 @@ var i = t(200651),
     E = t(981631),
     I = t(185923),
     v = t(388032);
-function M(e, n) {
+function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        g = (0, d.$R)(n),
-        M = (0, r.e7)([m.Z], () => (n.isPrivate() || m.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
+        g = (0, c.$R)(n),
+        p = (0, r.e7)([m.Z], () => (n.isPrivate() || m.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
         x = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !M || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
-    let Z = x
+    if (!d.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
+    let S = x
         .filter(
             (e) =>
                 !h.ZP.isEmojiFilteredOrLocked({
@@ -36,15 +36,15 @@ function M(e, n) {
         )
         .slice(0, 12)
         .map((l, r) => {
-            var o, d;
+            var o, c;
             return (0, i.jsx)(
                 a.MenuItem,
                 {
                     color: 'default',
-                    id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
+                    id: null !== (c = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== c ? c : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(p, {
+                        (0, i.jsx)(M, {
                             ...e,
                             reducedMotionEnabled: t.enabled,
                             emoji: l
@@ -66,7 +66,7 @@ function M(e, n) {
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                Z,
+                S,
                 (0, i.jsx)(a.MenuSeparator, {}),
                 (0, i.jsx)(a.MenuItem, {
                     color: 'default',
@@ -81,7 +81,7 @@ function M(e, n) {
         })
     });
 }
-function p(e) {
+function M(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

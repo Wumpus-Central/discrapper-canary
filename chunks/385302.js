@@ -11,12 +11,12 @@ var l = t(442837),
     o = t(79390),
     s = t(222677),
     u = t(665906),
-    d = t(496675),
-    c = t(981631),
+    c = t(496675),
+    d = t(981631),
     m = t(388032);
 function g(e, n) {
     let t = (0, u.$R)(n),
-        g = (0, l.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
+        g = (0, l.e7)([c.Z], () => c.Z.can(d.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
     return !g || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
         : (0, i.jsx)(r.MenuItem, {

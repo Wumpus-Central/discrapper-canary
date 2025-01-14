@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = t(200651);
@@ -11,15 +11,15 @@ var l = t(442837),
     o = t(665906),
     s = t(314897),
     u = t(418476),
-    d = t(388032);
-function c(e, n) {
+    c = t(388032);
+function d(e, n) {
     let t = (0, l.e7)([s.default], () => s.default.getId()),
-        c = (0, o.$R)(n),
+        d = (0, o.$R)(n),
         m = (0, o.Gu)(n);
-    return (0, u.Z)(e, t) && c && !m
+    return (0, u.Z)(e, t) && d && !m
         ? (0, i.jsx)(r.MenuItem, {
               id: 'edit',
-              label: d.intl.string(d.t.fsBWmZ),
+              label: c.intl.string(c.t.fsBWmZ),
               action: () => a.Z.startEditMessage(n.id, e.id, e.content),
               icon: r.PencilIcon
           })

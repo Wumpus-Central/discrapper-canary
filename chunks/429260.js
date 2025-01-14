@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return d;
     },
     e: function () {
         return m;
@@ -14,12 +14,12 @@ var l = t(442837),
     o = t(726521),
     s = t(594174),
     u = t(970257),
-    d = t(388032);
-function c(e) {
+    c = t(388032);
+function d(e) {
     return (0, u.a4)(e)
         ? (0, i.jsx)(r.MenuItem, {
               id: 'report',
-              label: d.intl.string(d.t.GwbdGR),
+              label: c.intl.string(c.t.GwbdGR),
               action: () => (0, o.ak)(e, 'web_message_context_menu'),
               icon: r.FlagIcon,
               color: 'danger'

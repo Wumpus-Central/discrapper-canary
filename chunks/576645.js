@@ -6,7 +6,7 @@ n.d(t, {
         return F;
     },
     R2: function () {
-        return O;
+        return Z;
     },
     T$: function () {
         return M;
@@ -15,7 +15,7 @@ n.d(t, {
         return R;
     },
     Zm: function () {
-        return Z;
+        return O;
     },
     bK: function () {
         return b;
@@ -46,8 +46,8 @@ var r = n(192379),
     C = n(451478),
     m = n(626135),
     I = n(980463),
-    N = n(823961),
-    h = n(896835),
+    h = n(823961),
+    N = n(896835),
     g = n(981631),
     v = n(37113);
 let A = new l.Yd('HDStreamingConsumableModal'),
@@ -83,18 +83,18 @@ let A = new l.Yd('HDStreamingConsumableModal'),
             C = (null == t ? void 0 : t.premiumTier) === g.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === g.Eu4.TIER_1;
         return C && _ && !u;
     },
-    Z = (e, t) => {
+    O = (e, t) => {
         let n = (0, o.e7)([T.default], () => {
                 var e;
                 return null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
             r = (0, o.Wu)([E.Z], () => (null == e ? [] : E.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
-            i = (0, h.j)(t),
+            i = (0, N.j)(t),
             u = M(e);
         return i && u && r.length > 0;
     };
-function O(e) {
-    let [t, n, i] = (0, o.Wu)([N.Z], () => [N.Z.isFetchingPrice(e), N.Z.getPrice(e), N.Z.getErrored(e)]);
+function Z(e) {
+    let [t, n, i] = (0, o.Wu)([h.Z], () => [h.Z.isFetchingPrice(e), h.Z.getPrice(e), h.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
             !t && null == n && !i && (0, I.Gq)(e);
@@ -107,7 +107,7 @@ function O(e) {
     );
 }
 function L(e) {
-    let [t, n, i, u] = (0, o.Wu)([N.Z], () => [N.Z.isEntitlementFetched(e), N.Z.isEntitlementFetching(e), N.Z.getEntitlement(e), N.Z.getErrored(e)]);
+    let [t, n, i, u] = (0, o.Wu)([h.Z], () => [h.Z.isEntitlementFetched(e), h.Z.isEntitlementFetching(e), h.Z.getEntitlement(e), h.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
             !t && !n && (0, I.gA)(e);
@@ -157,6 +157,6 @@ function U(e) {
 }
 function F(e) {
     let t = (0, o.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        n = (0, h.j)('VoiceEffectsActionBar');
+        n = (0, N.j)('VoiceEffectsActionBar');
     return ((null == t ? void 0 : t.premiumTier) === g.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === g.Eu4.TIER_1) && (null == e ? void 0 : e.type) === g.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
 }
