@@ -51,11 +51,14 @@ let m = R(h.Yn.DEFAULT, _._s_.TRANSPORT, 0),
         frameRateInput: !0,
         frameRateNetwork: !0,
         frameRateRender: !0,
+        keyFramesEncoded: !0,
+        keyFramesDecoded: !0,
         inboundBitrateEstimate: !0,
         packetsLost: !0,
         packetsReceived: !0,
         packetsSent: !0,
-        ping: !0
+        ping: !0,
+        qpSum: !0
     },
     T = 600;
 function b(e, n, r) {
