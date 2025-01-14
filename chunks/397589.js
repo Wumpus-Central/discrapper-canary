@@ -1,30 +1,37 @@
 var i = r(200651),
     a = r(192379),
     s = r(481060),
-    o = r(594174),
-    l = r(111810),
-    u = r(287941),
-    c = r(477931),
-    d = r(235894),
-    f = r(388032),
-    _ = r(814169);
-let h = (e) => {
-    var n, r;
-    let { message: h } = e,
-        p = (0, l.p7)('Message Header') && h.hasPotions(),
-        m = null === (n = h.potions) || void 0 === n ? void 0 : n[0],
-        g = a.useMemo(() => (null == m ? null : o.default.getUser(m.used_by)), [m]),
-        E = a.useCallback(() => {
-            (0, d.U)(h) && (0, u.Z)(h);
-        }, [h]);
-    return p && null != g && (null == m ? void 0 : m.type) === c.B.CONFETTI
+    o = r(592125),
+    l = r(594174),
+    u = r(5192),
+    c = r(111810),
+    d = r(287941),
+    f = r(477931),
+    _ = r(235894),
+    h = r(388032),
+    p = r(814169);
+let m = (e) => {
+    var n;
+    let { message: r } = e,
+        m = (0, c.p7)('Message Header') && r.hasPotions(),
+        g = o.Z.getChannel(r.getChannelId()),
+        E = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
+        v = a.useMemo(() => {
+            if (null == E) return null;
+            let e = l.default.getUser(E.used_by);
+            return (0, u.y)(null == g ? void 0 : g.getGuildId(), null == g ? void 0 : g.id, e);
+        }, [E, g]),
+        I = a.useCallback(() => {
+            (0, _.U)(r) && (0, d.Z)(r);
+        }, [r]);
+    return m && null != v && (null == E ? void 0 : E.type) === f.B.CONFETTI
         ? (0, i.jsx)(s.Clickable, {
-              onFocus: E,
+              onFocus: I,
               children: (0, i.jsx)(s.Tooltip, {
-                  text: f.intl.formatToPlainString(f.t['FE++aG'], { user: null !== (r = g.globalName) && void 0 !== r ? r : g.username }),
+                  text: h.intl.formatToPlainString(h.t['FE++aG'], { user: v }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
-                          className: _.potionBadge,
+                          className: p.potionBadge,
                           ...e,
                           children: [
                               (0, i.jsx)(s.StarShootingIcon, {
@@ -36,7 +43,7 @@ let h = (e) => {
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
-                                  children: f.intl.string(f.t['8Rrro6'])
+                                  children: h.intl.string(h.t['8Rrro6'])
                               })
                           ]
                       })
@@ -44,4 +51,4 @@ let h = (e) => {
           })
         : null;
 };
-n.Z = h;
+n.Z = m;
