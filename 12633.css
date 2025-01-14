@@ -5983,6 +5983,14 @@ div.modalHeader_c5e09c {
     pointer-events: none
 }
 
+.visual-refresh .modalHeader_c5e09c {
+    padding-bottom: 12px
+}
+
+.visual-refresh .modalContent_c5e09c {
+    padding-bottom: 24px
+}
+
 .scrollerBase_c49869 {
     position: relative;
     box-sizing: border-box;
