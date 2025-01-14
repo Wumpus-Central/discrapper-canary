@@ -1,8 +1,8 @@
 n(653041);
 var r = n(192379),
     i = n(392711),
-    u = n(633302),
-    a = n(960048);
+    a = n(633302),
+    u = n(960048);
 let c = (e) => Math.round(4 * e) / 4,
     l = (e) => {
         let t = {
@@ -12,7 +12,7 @@ let c = (e) => Math.round(4 * e) / 4,
         return {
             SPEED: t,
             GRAVITY: 1100,
-            DRAG: 0.92,
+            DRAG: 0.94,
             Y_POS: 110,
             MAX_PARTICLES: 600
         };
@@ -25,8 +25,8 @@ t.Z = (e) => {
         update: (t) => {
             let r = [];
             if (
-                (f.current.forEach((i, u) => {
-                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= s ** t), (i.velocity.y *= s ** t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(u);
+                (f.current.forEach((i, a) => {
+                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= s ** t), (i.velocity.y *= s ** t), (i.rotation += i.angularVelocity * t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(a);
                 }),
                 r.length > 0)
             ) {
@@ -44,54 +44,67 @@ t.Z = (e) => {
                 f.current.forEach((e) => {
                     var n;
                     let { x: r, y: i } = e.position;
-                    e.scale > 1 && t.setFilter({ blur: c((e.scale - 1) * 3) }),
-                        (null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))
-                            ? t.drawImage(
-                                  e.key,
-                                  {
-                                      x: r,
-                                      y: i
-                                  },
-                                  {
-                                      w: 32 * e.scale,
-                                      h: 32 * e.scale
-                                  }
-                              )
-                            : null != u.ZP.contentHasUnicodeOrEmoji(e.key)
-                              ? (t.setFont({ size: 24 * e.scale }),
-                                t.drawText(e.key, {
-                                    x: r,
-                                    y: i
-                                }))
-                              : (t.setFont({ size: 24 * e.scale }),
-                                t.drawText('\uD83C\uDF89', {
-                                    x: r,
-                                    y: i
-                                }),
-                                a.Z.captureMessage("Simple Confetti couldn't trigger explosion for ".concat(e.key, ".  It doesn't have an image and seemingly isn't a valid unicode emoji."))),
-                        t.setFilter({ blur: 0 });
+                    if ((e.scale > 1 && t.setFilter({ blur: c((e.scale - 1) * 2) }), null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))) {
+                        let n = {
+                                w: 32 * e.scale,
+                                h: 32 * e.scale
+                            },
+                            a = {
+                                x: r + n.w / 2,
+                                y: i + n.h / 2
+                            };
+                        t.rotateAroundOriginAndDraw(a, (e.rotation * Math.PI) / 180, () =>
+                            t.drawImage(
+                                e.key,
+                                {
+                                    x: 0,
+                                    y: 0
+                                },
+                                n
+                            )
+                        );
+                    } else
+                        null != a.ZP.contentHasUnicodeOrEmoji(e.key)
+                            ? (t.setFont({ size: 24 * e.scale }),
+                              t.drawText(e.key, {
+                                  x: r,
+                                  y: i
+                              }))
+                            : (t.setFont({ size: 24 * e.scale }),
+                              t.drawText('\uD83C\uDF89', {
+                                  x: r,
+                                  y: i
+                              }),
+                              u.Z.captureMessage("Simple Confetti couldn't trigger explosion for ".concat(e.key, ".  It doesn't have an image and seemingly isn't a valid unicode emoji.")));
+                    t.setFilter({ blur: 0 });
                 });
         },
         emit: (n, r) => {
             if (f.current.length >= d) return;
-            let u = {
+            let a = {
                 min: e.h / 8,
                 max: e.h / 3
             };
-            for (let a = 0; a < r; a++)
+            for (let u = 0; u < r; u++) {
+                let r = {
+                        x: (0, i.random)(-t.x, t.x, !0),
+                        y: t.y + (0, i.random)(-a.min, a.max, !0)
+                    },
+                    u = (0, i.random)(0, 30),
+                    c = Math.atan2(-t.y - (0, i.random)(-a.min, a.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
                 f.current.push({
+                    key: n,
                     position: {
                         x: e.w / 2 + (0, i.random)(-50, 50),
                         y: e.h - o
                     },
-                    velocity: {
-                        x: (0, i.random)(-t.x, t.x, !0),
-                        y: t.y + (0, i.random)(-u.min, u.max, !0)
-                    },
+                    velocity: r,
                     scale: (0, i.random)(0.8, 2),
-                    rotation: (0, i.random)(-20, 20),
-                    key: n
-                });
+                    rotation: u,
+                    angularVelocity: c
+                }),
+                    f.current.sort((e, t) => e.scale - t.scale);
+            }
             h.current = !0;
         },
         shouldTick: h
