@@ -38,20 +38,26 @@ let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                       children: [
                           (0, i.jsx)(u.Z, {
                               section: S.jXE.NAVIGATION,
-                              children: (0, i.jsxs)(E.Z, {
-                                  isAuthenticated: t,
-                                  className: l()(b.headerBar, {
-                                      [b.headerBarV2LightBackground]: m && !(0, c.wj)(N),
-                                      [b.headerBarV2DarkBackground]: m && (0, c.wj)(N)
-                                  }),
-                                  children: [
-                                      (0, i.jsx)(E.Z.Icon, {
-                                          icon: d.NitroWheelIcon,
-                                          'aria-hidden': !0,
-                                          color: m ? s.Z.PREMIUM_TIER_2_PINK : void 0
-                                      }),
-                                      (0, i.jsx)(E.Z.Title, { children: A.intl.string(A.t.Ipxkoq) })
-                                  ]
+                              children: (0, i.jsx)(d.ThemeProvider, {
+                                  theme: N,
+                                  children: (e) =>
+                                      (0, i.jsxs)(E.Z, {
+                                          isAuthenticated: t,
+                                          className: l()(b.headerBar, e, {
+                                              [b.headerBarV2LightBackground]: m && !(0, c.wj)(N),
+                                              [b.headerBarV2DarkBackground]: m && (0, c.wj)(N)
+                                          }),
+                                          role: 'navigation',
+                                          children: [
+                                              (0, i.jsx)(E.Z.Icon, {
+                                                  icon: d.NitroWheelIcon,
+                                                  'aria-hidden': !0,
+                                                  color: m ? s.Z.PREMIUM_TIER_2_PINK : void 0
+                                              }),
+                                              (0, i.jsx)(E.Z.Title, { children: A.intl.string(A.t.Ipxkoq) }),
+                                              (0, i.jsx)(E.Z.Divider, {})
+                                          ]
+                                      })
                               })
                           }),
                           (0, i.jsx)(f.Gt, {
