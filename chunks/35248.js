@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     a: function () {
-        return g;
+        return T;
     }
 }),
     n(315314),
@@ -25,37 +25,48 @@ var a = n(200651),
     m = n(987209),
     h = n(563132),
     A = n(409813),
-    E = n(737143),
-    N = n(926841),
-    f = n(362755),
-    y = n(981631),
+    E = n(620824),
+    y = n(737143),
+    f = n(926841),
+    N = n(362755),
+    P = n(981631),
     _ = n(474936),
-    P = n(388032),
-    b = n(13926);
+    b = n(388032),
+    g = n(13926);
 let C = (e) => {
-        let { step: t, onPurchaseComplete: n, onHandoffFailure: u } = e,
-            { selectedPlan: d, setSelectedPlanId: C, setSelectedSkuId: g, browserCheckoutState: T, browserCheckoutStateLoadId: I, browserCheckoutStateSkuId: S, browserCheckoutStatePlanId: v, contextMetadata: x } = (0, h.usePaymentContext)(),
-            { isGift: R } = (0, m.wD)(),
-            [L, M] = r.useState(!1),
-            O = t === A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? y.i$l.GOOGLE_PAY : void 0,
-            D = t === A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (0, N.a)() : (0, E.q1)();
+        let t,
+            n,
+            { step: u, onPurchaseComplete: d, onHandoffFailure: C } = e,
+            { selectedPlan: T, setSelectedPlanId: I, setSelectedSkuId: S, browserCheckoutState: v, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: x, browserCheckoutStatePlanId: L, contextMetadata: M } = (0, h.usePaymentContext)(),
+            { isGift: O } = (0, m.wD)(),
+            [D, w] = r.useState(!1);
+        switch (u) {
+            case A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+                (t = P.i$l.GOOGLE_PAY), (n = (0, f.a)());
+                break;
+            case A.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+                (t = P.i$l.APPLE_PAY), (n = (0, E.b)());
+                break;
+            default:
+                n = (0, y.q1)();
+        }
         return (
             r.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!L)
-                            M(!0),
-                                (0, o.r5)(x.loadId),
+                        if (!D)
+                            w(!0),
+                                (0, o.r5)(M.loadId),
                                 !(function (e, t, n, a, r) {
-                                    let i = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
-                                        o = new URL(p.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
+                                    let i = P.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
+                                        o = new URL(p.Z.makeUrl(P.Z5c.BILLING_LOGIN_HANDOFF)),
                                         c = (0, l.Z)();
                                     o.searchParams.append('handoff_key', c),
                                         o.searchParams.append('redirect_to', i),
                                         s.tn
                                             .post({
-                                                url: y.ANM.HANDOFF,
+                                                url: P.ANM.HANDOFF,
                                                 body: { key: c },
                                                 oldFormErrors: !0,
                                                 rejectWithError: !1
@@ -68,32 +79,32 @@ let C = (e) => {
                                                     a();
                                                 }
                                             );
-                                })(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : _.Xh.PREMIUM_MONTH_TIER_2, R, x.loadId, u, O);
+                                })(null !== (e = null == T ? void 0 : T.id) && void 0 !== e ? e : _.Xh.PREMIUM_MONTH_TIER_2, O, M.loadId, C, t);
                     },
-                    D.delay ? 1000 : 0
+                    n.delay ? 1000 : 0
                 );
                 return () => clearTimeout(e);
-            }, [d, R, x, u, M, L, O, D.delay]),
+            }, [T, O, M, C, w, D, t, n.delay]),
             r.useEffect(() => {
-                null !== S && (_.YQ.includes(S) && ((0, c.GZ)(S), (0, o.jg)()), g(S)), null !== v && C(v), I === x.loadId && T === f.Y.DONE && n();
-            }, [g, C, T, I, S, v, x, n]),
+                null !== x && (_.YQ.includes(x) && ((0, c.GZ)(x), (0, o.jg)()), S(x)), null !== L && I(L), R === M.loadId && v === N.Y.DONE && d();
+            }, [S, I, v, R, x, L, M, d]),
             (0, a.jsxs)('div', {
-                className: b.body,
+                className: g.body,
                 children: [
                     (0, a.jsx)(i.Heading, {
                         variant: 'heading-xl/bold',
-                        children: P.intl.string(P.t.C4HYf3)
+                        children: b.intl.string(b.t.C4HYf3)
                     }),
                     (0, a.jsx)(i.Text, {
                         variant: 'text-md/normal',
-                        className: b.description,
-                        children: P.intl.string(P.t.xfG7Ji)
+                        className: g.description,
+                        children: b.intl.string(b.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    g = (e) => {
+    T = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, a.jsx)('div', {
             children: (0, a.jsxs)(i.ModalFooter, {
@@ -102,7 +113,7 @@ let C = (e) => {
                 children: [
                     (0, a.jsx)(d.y, {
                         onClick: t,
-                        children: P.intl.string(P.t['4Qvmmp'])
+                        children: b.intl.string(b.t['4Qvmmp'])
                     }),
                     (0, a.jsx)(d.Z, { onClick: n })
                 ]

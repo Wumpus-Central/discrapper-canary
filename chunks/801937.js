@@ -13,10 +13,10 @@ var a = n(200651),
     h = n(985754),
     A = n(351402),
     E = n(981631),
-    N = n(388032),
+    y = n(388032),
     f = n(742415),
-    y = n(652849);
-let _ = {
+    N = n(652849);
+let P = {
         [E.HeQ.CARD]: m.ZP.Types.UNKNOWN,
         [E.HeQ.PAYPAL]: m.ZP.Types.PAYPAL,
         [E.HeQ.SOFORT]: m.ZP.Types.SOFORT,
@@ -34,9 +34,9 @@ let _ = {
         [E.HeQ.IDEAL]: m.ZP.Types.IDEAL,
         [E.HeQ.CASH_APP]: m.ZP.Types.CASH_APP
     },
-    P = [E.HeQ.CARD, E.HeQ.PAYPAL],
+    _ = [E.HeQ.CARD, E.HeQ.PAYPAL],
     b = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    C = new Map([
+    g = new Map([
         [E.HeQ.SOFORT, new Set([])],
         [E.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
         [E.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
@@ -52,7 +52,7 @@ let _ = {
         [E.HeQ.IDEAL, new Set(['ALL', 'NL'])],
         [E.HeQ.CASH_APP, new Set(['ALL', 'US'])]
     ]),
-    g = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
+    C = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
 function T(e) {
     let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: a } = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
         r = null != e ? e : 'ALL';
@@ -60,14 +60,14 @@ function T(e) {
     let l = new Set(),
         s = [];
     return (
-        C.forEach((e, n) => {
+        g.forEach((e, n) => {
             t.includes(n) && (e.has(r) ? l.add(n) : s.push(n));
         }),
-        g.forEach((e, t) => {
+        C.forEach((e, t) => {
             e.has(r) && l.add(t);
         }),
         {
-            countryPaymentMethods: [...P, ...Array.from(l)],
+            countryPaymentMethods: [..._, ...Array.from(l)],
             remainingPaymentMethods: s
         }
     );
@@ -83,7 +83,7 @@ class I extends r.PureComponent {
     createPaymentButtons(e) {
         return e.map((e) => {
             var t;
-            let n = _[e],
+            let n = P[e],
                 r = h.Wo[e](),
                 l = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
             return (0, a.jsx)(
@@ -92,7 +92,7 @@ class I extends r.PureComponent {
                     onClick: () => this.props.onChooseType(e),
                     className: f.button,
                     children: (0, a.jsxs)('div', {
-                        className: s()(y.flex, y.alignCenter),
+                        className: s()(N.flex, N.alignCenter),
                         children: [
                             (0, a.jsx)(m.ZP, {
                                 className: f.buttonIcon,
@@ -101,7 +101,7 @@ class I extends r.PureComponent {
                             r,
                             l &&
                                 (0, a.jsx)(o.TextBadge, {
-                                    text: N.intl.string(N.t.y2b7CA),
+                                    text: y.intl.string(y.t.y2b7CA),
                                     className: f.newPaymentBadge,
                                     disableColor: !0
                                 })
@@ -113,57 +113,61 @@ class I extends r.PureComponent {
         });
     }
     render() {
-        let { showAllPaymentMethods: e } = this.state,
-            { onChooseType: t, className: n, onStripePaymentMethodReceived: r, allowStripeRequestPayments: l, ipCountryCode: i, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
-            m = l
-                ? (0, a.jsx)(p.Tr, {
-                      className: f.button,
-                      iconClassName: f.buttonIcon,
-                      paymentLabel: N.intl.string(N.t.ZURqX1),
-                      onStripePaymentMethodReceived: r,
-                      onChooseType: t
-                  })
-                : null,
-            h = [],
-            A = [],
-            E = void 0 === i;
-        if (c) h.push(...this.createPaymentButtons(T('ALL').countryPaymentMethods));
+        var e;
+        let { showAllPaymentMethods: t } = this.state,
+            { onChooseType: n, className: r, onStripePaymentMethodReceived: l, ipCountryCode: i, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
+            m = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [],
+            h = {
+                className: f.button,
+                iconClassName: f.buttonIcon,
+                paymentLabel: y.intl.string(y.t.ZURqX1),
+                onStripePaymentMethodReceived: l,
+                onChooseType: n
+            },
+            A = m.map((e, t) => {
+                let n = ''.concat(e, '-').concat(t);
+                return 'applePay' === e ? (0, a.jsx)(p.Ch, { ...h }, n) : (0, a.jsx)(p.Tr, { ...h }, n);
+            }),
+            E = [],
+            P = [],
+            _ = void 0 === i;
+        if (c) E.push(...this.createPaymentButtons(T('ALL').countryPaymentMethods));
         else {
             let { countryPaymentMethods: e, remainingPaymentMethods: t } = T(i);
-            h.push(...this.createPaymentButtons(e)), A.push(...this.createPaymentButtons(t));
+            E.push(...this.createPaymentButtons(e)), P.push(...this.createPaymentButtons(t));
         }
-        let _ = (0, a.jsxs)('div', {
+        let b = (0, a.jsxs)('div', {
             children: [
                 (0, a.jsxs)('div', {
-                    className: s()(y.wrap, y.horizontal),
-                    children: [h, m]
+                    className: s()(N.wrap, N.horizontal),
+                    children: [E, A]
                 }),
                 (0, a.jsx)('div', {
-                    className: A.length > 0 ? y.flex : f.hidden,
+                    className: P.length > 0 ? N.flex : f.hidden,
                     children: (0, a.jsxs)(o.Clickable, {
                         onClick: () => this.toggleAllPayments(),
-                        className: s()(y.flex, f.allPaymentsToggleButton),
-                        children: [N.intl.string(N.t['4uiQm5']), (0, a.jsx)(u.Z, { open: e })]
+                        className: s()(N.flex, f.allPaymentsToggleButton),
+                        children: [y.intl.string(y.t['4uiQm5']), (0, a.jsx)(u.Z, { open: t })]
                     })
                 }),
                 (0, a.jsx)('div', {
-                    className: s()(y.wrap, y.horizontal, f.allPaymentsSection, {
-                        [f.hidden]: !e,
-                        [y.flex]: e
+                    className: s()(N.wrap, N.horizontal, f.allPaymentsSection, {
+                        [f.hidden]: !t,
+                        [N.flex]: t
                     }),
-                    children: A
+                    children: P
                 })
             ]
         });
         return (
-            E && !c && (_ = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
+            _ && !c && (b = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
             (0, a.jsxs)('div', {
                 children: [
                     d && (0, a.jsx)('hr', { className: f.SeparatorUpper }),
                     (0, a.jsx)(o.FormSection, {
-                        title: d ? N.intl.string(N.t.tywMsb) : N.intl.string(N.t['8lqkf3']),
-                        className: n,
-                        children: _
+                        title: d ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t['8lqkf3']),
+                        className: r,
+                        children: b
                     }),
                     d && (0, a.jsx)('hr', { className: f.SeparatorLower })
                 ]
