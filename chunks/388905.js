@@ -206,8 +206,9 @@ let C = (e) => {
                           (0, a.jsx)('i', { className: E.pillIconOnline }),
                           (0, a.jsx)(l.Text, {
                               tag: 'span',
-                              className: o()(E.pillMessage, c),
+                              className: c,
                               variant: 'text-sm/normal',
+                              color: 'header-secondary',
                               children: g.intl.format(g.t['LC+S+v'], { membersOnline: r })
                           })
                       ]
@@ -223,8 +224,9 @@ let C = (e) => {
                               (0, a.jsx)('i', { className: E.pillIconTotal }),
                               (0, a.jsx)(l.Text, {
                                   tag: 'span',
-                                  className: o()(E.pillMessage, c),
+                                  className: c,
                                   variant: 'text-sm/normal',
+                                  color: 'header-secondary',
                                   children: g.intl.format(g.t.zRl6XV, { count: i })
                               })
                           ]

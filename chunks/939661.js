@@ -1,7 +1,6 @@
 e.exports = {
     container: 'container_ed5743',
     contentWrapper: 'contentWrapper_ed5743',
-    scroller: 'scroller_ed5743',
     noThanksButton: 'noThanksButton_ed5743',
     stage: 'stage_ed5743',
     inviteContent: 'inviteContent_ed5743',
@@ -15,7 +14,9 @@ e.exports = {
     errorImage: 'errorImage_ed5743',
     errorBody: 'errorBody_ed5743',
     iconContainer: 'iconContainer_ed5743',
+    ctas: 'ctas_ed5743',
     iconSparklePlus: 'iconSparklePlus_ed5743',
     iconLink: 'iconLink_ed5743',
-    iconSparkleStar: 'iconSparkleStar_ed5743'
+    iconSparkleStar: 'iconSparkleStar_ed5743',
+    acceptAs: 'acceptAs_ed5743'
 };

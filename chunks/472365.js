@@ -1,266 +1,281 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
-        return w;
+        return H;
     }
 }),
-    n(411104);
-var s = n(200651),
-    i = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    l = n(399606),
-    a = n(481060),
-    c = n(588705),
-    u = n(100527),
-    d = n(906732),
-    h = n(388905),
-    E = n(792766),
-    p = n(600164),
-    _ = n(436774),
-    m = n(313201),
-    C = n(451603),
-    N = n(885714),
-    g = n(973616),
-    f = n(594174),
-    R = n(855981),
-    b = n(55543),
-    I = n(626135),
-    T = n(768581),
-    S = n(358085),
-    O = n(998502),
-    x = n(379164),
-    A = n(590965),
-    y = n(981631),
-    M = n(474936),
-    P = n(388032),
-    L = n(939661),
-    v = n(232186);
-function D() {
-    let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
+    s(411104);
+var n = s(200651),
+    i = s(192379),
+    r = s(120356),
+    o = s.n(r),
+    a = s(399606),
+    l = s(481060),
+    c = s(588705),
+    d = s(700582),
+    u = s(100527),
+    h = s(906732),
+    E = s(388905),
+    p = s(792766),
+    m = s(600164),
+    _ = s(436774),
+    C = s(313201),
+    g = s(44609),
+    N = s(731971),
+    f = s(451603),
+    b = s(885714),
+    R = s(973616),
+    I = s(594174),
+    S = s(855981),
+    T = s(55543),
+    O = s(626135),
+    x = s(768581),
+    y = s(358085),
+    M = s(998502),
+    A = s(379164),
+    L = s(590965),
+    P = s(981631),
+    v = s(474936),
+    D = s(388032),
+    U = s(939661),
+    Z = s(232186);
+function w() {
+    let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, h.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         i.useEffect(() => {
-            I.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: M.cd.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: y.ZY5.NATIVE_INVITE_MODAL },
+            O.default.track(P.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: v.cd.GUILD_CAP_INLINE_INVITE_MODAL,
+                location: { page: P.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
             });
         }, [t]),
-        (0, s.jsxs)(a.Clickable, {
+        (0, n.jsxs)(l.Clickable, {
             onClick: () =>
-                (0, N.Z)({
-                    analyticsSource: { page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL },
+                (0, b.Z)({
+                    analyticsSource: { page: P.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: y.Sbl.EXTERNAL_INVITE_LINK_MODAL,
-                        section: y.jXE.GUILD_CAP_UPSELL_MODAL
+                        page: P.Sbl.EXTERNAL_INVITE_LINK_MODAL,
+                        section: P.jXE.GUILD_CAP_UPSELL_MODAL
                     },
                     analyticsLocations: e
                 }),
-            className: L.experimentUpsellError,
+            className: U.experimentUpsellError,
             children: [
-                (0, s.jsx)(a.NitroWheelIcon, {
+                (0, n.jsx)(l.NitroWheelIcon, {
                     size: 'md',
-                    className: L.experimentUpsellIcon,
+                    className: U.experimentUpsellIcon,
                     color: _.JX.PREMIUM_TIER_2
                 }),
-                (0, s.jsx)('span', {
-                    className: L.experimentUpsellText,
-                    children: P.intl.string(P.t['4/W4Pz'])
+                (0, n.jsx)('span', {
+                    className: U.experimentUpsellText,
+                    children: D.intl.string(D.t['4/W4Pz'])
                 }),
-                (0, s.jsx)('span', {
-                    className: L.experimentGetNitro,
-                    children: P.intl.string(P.t.b6KOkJ)
+                (0, n.jsx)('span', {
+                    className: U.experimentGetNitro,
+                    children: D.intl.string(D.t.b6KOkJ)
                 })
             ]
         })
     );
 }
-function Z(e) {
+function k(e) {
     let { className: t } = e;
-    return (0, s.jsxs)('div', {
+    return (0, n.jsxs)('div', {
         'aria-hidden': 'true',
-        className: o()(L.iconContainer, t),
+        className: o()(U.iconContainer, t),
         children: [
-            (0, s.jsx)(R.Z, { className: L.iconSparklePlus }),
-            (0, s.jsx)(a.LinkIcon, {
+            (0, n.jsx)(S.Z, { className: U.iconSparklePlus }),
+            (0, n.jsx)(l.LinkIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: L.iconLink,
+                className: U.iconLink,
                 width: 40,
                 height: 40
             }),
-            (0, s.jsx)(b.Z, { className: L.iconSparkleStar })
+            (0, n.jsx)(T.Z, { className: U.iconSparkleStar })
         ]
     });
 }
-function U(e) {
+function j(e) {
     let { transitionState: t } = e,
-        n = (0, m.Dt)(),
-        { analyticsLocations: i } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    return (0, s.jsx)(d.Gt, {
+        s = (0, C.Dt)(),
+        { analyticsLocations: i } = (0, h.ZP)(u.Z.INVITE_MODAL);
+    return (0, n.jsx)(h.Gt, {
         value: i,
-        children: (0, s.jsx)(a.ModalRoot, {
-            size: a.ModalSize.DYNAMIC,
-            'aria-labelledby': n,
+        children: (0, n.jsx)(l.ModalRoot, {
+            'aria-labelledby': s,
             transitionState: t,
-            children: (0, s.jsxs)(a.ModalContent, {
-                className: L.errorContent,
+            children: (0, n.jsxs)(l.ModalContent, {
+                className: U.errorContent,
                 children: [
-                    (0, s.jsx)(Z, { className: L.errorImage }),
-                    (0, s.jsx)(a.Heading, {
-                        id: n,
+                    (0, n.jsx)(k, { className: U.errorImage }),
+                    (0, n.jsx)(l.Heading, {
+                        id: s,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        children: P.intl.string(P.t.u9zxnZ)
+                        children: D.intl.string(D.t.u9zxnZ)
                     }),
-                    (0, s.jsx)('div', {
-                        className: L.errorBody,
-                        children: P.intl.string(P.t.FWkU6O)
+                    (0, n.jsx)('div', {
+                        className: U.errorBody,
+                        children: D.intl.string(D.t.FWkU6O)
                     }),
-                    (0, s.jsx)(h.zx, {
-                        size: h.zx.Sizes.LARGE,
-                        onClick: () => x.Z.close(),
-                        color: h.zx.Colors.BRAND,
-                        children: P.intl.string(P.t.wcqOoK)
+                    (0, n.jsx)(E.zx, {
+                        size: E.zx.Sizes.LARGE,
+                        onClick: () => A.Z.close(),
+                        color: E.zx.Colors.BRAND,
+                        children: D.intl.string(D.t.wcqOoK)
                     })
                 ]
             })
         })
     });
 }
-function w(e) {
+function H(e) {
     let t,
-        n,
-        { transitionState: r } = e;
-    (0, l.e7)([f.default], () => {
+        s,
+        r,
+        { transitionState: o } = e,
+        _ = (0, g.WR)({ location: 'AcceptInviteModal' });
+    (0, a.e7)([I.default], () => {
         var e;
-        return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+        return null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
-    let { invite: _, error: N, submitting: R } = (0, l.cj)([A.Z], () => A.Z.getProps());
+    let b = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
+        { invite: S, error: T, submitting: O } = (0, a.cj)([L.Z], () => L.Z.getProps()),
+        { nickname: v } = (0, N.XW)();
     i.useEffect(() => {
-        !__OVERLAY__ && S.isPlatformEmbedded && ((0, S.isWindows)() ? O.ZP.minimize() : O.ZP.restore(), O.ZP.focus());
+        !__OVERLAY__ && y.isPlatformEmbedded && ((0, y.isWindows)() ? M.ZP.minimize() : M.ZP.restore(), M.ZP.focus());
     }, []);
-    let b = (0, m.Dt)(),
-        { analyticsLocations: I } = (0, d.ZP)(u.Z.INVITE_MODAL);
-    if (null == _) return null;
-    if (_.state === y.r2o.EXPIRED || _.state === y.r2o.BANNED || _.state === y.r2o.ERROR) return (0, s.jsx)(U, { transitionState: r });
-    if (null == _.channel) return null;
-    function M() {
-        null != _ && x.Z.acceptInvite(_);
+    let k = (0, C.Dt)(),
+        { analyticsLocations: H } = (0, h.ZP)(u.Z.INVITE_MODAL);
+    if (null == S || null == b) return null;
+    if (S.state === P.r2o.EXPIRED || S.state === P.r2o.BANNED || S.state === P.r2o.ERROR) return (0, n.jsx)(j, { transitionState: o });
+    if (null == S.channel) return null;
+    function G() {
+        null != S && A.Z.acceptInvite(S);
     }
-    let { guild: Z, channel: w, inviter: k, target_application: j } = _,
-        H = null != Z,
-        V = null != _.stage_instance,
-        G = null == _.guild && null == _.channel && null != _.inviter;
-    if (null != j) (t = null == Z ? void 0 : Z.name), (n = g.ZP.createFromServer(j).getCoverImageURL(1024));
-    else if (null != Z)
-        (t = Z.name),
-            (n = T.ZP.getGuildSplashURL({
-                id: Z.id,
-                splash: Z.splash
+    let { guild: V, channel: K, inviter: W, target_application: Y } = S,
+        F = null != V,
+        z = null != S.stage_instance,
+        X = null == S.guild && null == S.channel && null != S.inviter;
+    if (null != Y) (t = null == V ? void 0 : V.name), (s = R.ZP.createFromServer(Y).getCoverImageURL(1024));
+    else if (null != V)
+        (t = V.name),
+            (s = x.ZP.getGuildSplashURL({
+                id: V.id,
+                splash: V.splash
             }));
-    else if (((null == (t = w.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
-    let K = (0, C.yU)(),
-        W = V ? P.intl.string(P.t['5UKyUl']) : P.intl.format(P.t.QD7BDA, { guildName: t });
+    else if (((null == (t = K.name) || '' === t) && null != W && (t = W.username), null == t)) throw Error('no name for group DM invite');
+    let Q = (0, f.yU)();
     return (
-        G && (W = P.intl.string(P.t['e/6Ogo'])),
-        (0, s.jsx)(d.Gt, {
-            value: I,
-            children: (0, s.jsxs)(a.ModalRoot, {
-                size: a.ModalSize.DYNAMIC,
-                'aria-labelledby': b,
-                transitionState: r,
-                className: L.container,
+        (r = z ? D.intl.string(D.t['5UKyUl']) : _ ? D.intl.format(D.t['9sWQNT'], { usernameHook: () => (0, n.jsx)('span', { children: null != v && '' !== v.trim() ? v : b.globalName }) }) : X ? D.intl.string(D.t['e/6Ogo']) : D.intl.format(D.t.QD7BDA, { guildName: t })),
+        (0, n.jsx)(h.Gt, {
+            value: H,
+            children: (0, n.jsxs)(l.ModalRoot, {
+                size: l.ModalSize.DYNAMIC,
+                'aria-labelledby': k,
+                transitionState: o,
+                className: U.container,
                 children: [
-                    (0, s.jsx)('div', {
-                        className: L.contentWrapper,
-                        children: (0, s.jsx)(a.Scroller, {
-                            className: L.scroller,
-                            children: (0, s.jsxs)(p.Z, {
-                                className: L.inviteContent,
-                                direction: p.Z.Direction.VERTICAL,
-                                justify: p.Z.Justify.BETWEEN,
-                                children: [
-                                    (0, s.jsx)('div', {
-                                        id: b,
-                                        className: v.marginBottom20,
-                                        children: (0, s.jsx)(c.Z, {
-                                            invite: _,
-                                            disableUser: H,
-                                            error: N
-                                        })
-                                    }),
-                                    V && null != Z
-                                        ? (0, s.jsx)('div', {
-                                              className: o()(v.marginBottom20, L.stage),
-                                              children: (0, s.jsx)(E.Z, {
-                                                  isCard: !0,
-                                                  stageInstance: _.stage_instance,
-                                                  guild: Z
-                                              })
-                                          })
-                                        : null,
-                                    (0, s.jsxs)('div', {
-                                        children: [
-                                            K ? (0, s.jsx)(D, {}) : null,
-                                            null == j
-                                                ? (0, s.jsx)(a.Tooltip, {
-                                                      text: K ? P.intl.string(P.t.iLyuDA) : null,
-                                                      position: 'bottom',
-                                                      children: (e) => {
-                                                          let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                          return (0, s.jsx)(h.zx, {
-                                                              size: h.zx.Sizes.LARGE,
-                                                              onClick: M,
-                                                              submitting: R,
-                                                              disabled: K,
-                                                              color: V ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
-                                                              onMouseEnter: t,
-                                                              onMouseLeave: n,
-                                                              children: K ? P.intl.string(P.t.ZNCziI) : W
-                                                          });
-                                                      }
-                                                  })
-                                                : (0, s.jsxs)('div', {
-                                                      className: L.buttonGroup,
-                                                      children: [
-                                                          (0, s.jsx)(h.zx, {
-                                                              size: h.zx.Sizes.LARGE,
-                                                              onClick: M,
-                                                              submitting: R,
-                                                              children: P.intl.string(P.t.RscU7O)
-                                                          }),
-                                                          (0, s.jsx)(h.zx, {
-                                                              color: h.zx.Colors.PRIMARY,
-                                                              size: h.zx.Sizes.LARGE,
-                                                              onClick: M,
-                                                              submitting: R,
-                                                              children: P.intl.string(P.t.eylRaW)
-                                                          })
-                                                      ]
-                                                  }),
-                                            (0, s.jsx)(p.Z, {
-                                                justify: p.Z.Justify.CENTER,
-                                                className: v.marginTop8,
-                                                children: (0, s.jsx)(h.zx, {
-                                                    look: h.zx.Looks.LINK,
-                                                    className: L.noThanksButton,
-                                                    onClick: function () {
-                                                        x.Z.close();
-                                                    },
-                                                    color: h.zx.Colors.TRANSPARENT,
-                                                    children: P.intl.string(P.t.ndsK4e)
-                                                })
-                                            })
-                                        ]
+                    (0, n.jsx)(l.ModalContent, {
+                        className: U.contentWrapper,
+                        children: (0, n.jsxs)(m.Z, {
+                            className: U.inviteContent,
+                            direction: m.Z.Direction.VERTICAL,
+                            justify: m.Z.Justify.BETWEEN,
+                            children: [
+                                (0, n.jsx)('div', {
+                                    id: k,
+                                    children: (0, n.jsx)(c.Z, {
+                                        invite: S,
+                                        disableUser: F,
+                                        error: T
                                     })
-                                ]
-                            })
+                                }),
+                                z && null != V
+                                    ? (0, n.jsx)('div', {
+                                          className: U.stage,
+                                          children: (0, n.jsx)(p.Z, {
+                                              isCard: !0,
+                                              stageInstance: S.stage_instance,
+                                              guild: V
+                                          })
+                                      })
+                                    : null,
+                                (0, n.jsxs)('div', {
+                                    className: U.ctas,
+                                    children: [
+                                        Q ? (0, n.jsx)(w, {}) : null,
+                                        null == Y
+                                            ? (0, n.jsx)(l.Tooltip, {
+                                                  text: Q ? D.intl.string(D.t.iLyuDA) : null,
+                                                  position: 'bottom',
+                                                  children: (e) => {
+                                                      let { onMouseEnter: t, onMouseLeave: s } = e;
+                                                      return (0, n.jsx)(E.zx, {
+                                                          size: E.zx.Sizes.LARGE,
+                                                          onClick: G,
+                                                          submitting: O,
+                                                          disabled: Q,
+                                                          color: z ? E.zx.Colors.GREEN : E.zx.Colors.BRAND,
+                                                          onMouseEnter: t,
+                                                          onMouseLeave: s,
+                                                          children: Q
+                                                              ? D.intl.string(D.t.ZNCziI)
+                                                              : (0, n.jsxs)('div', {
+                                                                    className: U.acceptAs,
+                                                                    children: [
+                                                                        _ &&
+                                                                            (0, n.jsx)(d.Z, {
+                                                                                'aria-hidden': !0,
+                                                                                size: l.AvatarSizes.SIZE_16,
+                                                                                user: b
+                                                                            }),
+                                                                        r
+                                                                    ]
+                                                                })
+                                                      });
+                                                  }
+                                              })
+                                            : (0, n.jsxs)('div', {
+                                                  className: U.buttonGroup,
+                                                  children: [
+                                                      (0, n.jsx)(E.zx, {
+                                                          size: E.zx.Sizes.LARGE,
+                                                          onClick: G,
+                                                          submitting: O,
+                                                          children: D.intl.string(D.t.RscU7O)
+                                                      }),
+                                                      (0, n.jsx)(E.zx, {
+                                                          color: E.zx.Colors.PRIMARY,
+                                                          size: E.zx.Sizes.LARGE,
+                                                          onClick: G,
+                                                          submitting: O,
+                                                          children: D.intl.string(D.t.eylRaW)
+                                                      })
+                                                  ]
+                                              }),
+                                        (0, n.jsx)(m.Z, {
+                                            justify: m.Z.Justify.CENTER,
+                                            className: Z.marginTop8,
+                                            children: (0, n.jsx)(E.zx, {
+                                                look: E.zx.Looks.LINK,
+                                                className: U.noThanksButton,
+                                                onClick: function () {
+                                                    A.Z.close();
+                                                },
+                                                color: E.zx.Colors.TRANSPARENT,
+                                                children: D.intl.string(D.t.ndsK4e)
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
                         })
                     }),
-                    null != n &&
-                        (0, s.jsx)('div', {
-                            className: L.inviteSplash,
-                            style: { backgroundImage: 'url('.concat(n, ')') }
+                    null != s &&
+                        (0, n.jsx)('div', {
+                            className: U.inviteSplash,
+                            style: { backgroundImage: 'url('.concat(s, ')') }
                         })
                 ]
             })

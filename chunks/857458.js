@@ -1,20 +1,18 @@
-n.d(e, {
+n.d(t, {
     M: function () {
-        return o;
+        return c;
     }
 });
-var l = n(200651);
-if ((n(192379), 12633 == n.j)) var r = n(512969);
-var i = n(860911),
-    a = n(981631),
-    u = n(188785);
-function o() {
-    let t = location.pathname + location.search;
-    return u.a ? a.Z5c.REGISTER : (0, i.Ui)(t, !1);
+var a = n(200651);
+n(192379);
+var r = n(512969),
+    o = n(860911),
+    i = n(981631),
+    l = n(188785);
+function c() {
+    let e = location.pathname + location.search;
+    return l.a ? i.Z5c.REGISTER : (0, o.Ui)(e, !1);
 }
-e.Z =
-    12633 == n.j
-        ? function () {
-              return (0, l.jsx)(r.l_, { to: o() });
-          }
-        : null;
+t.Z = function () {
+    return (0, a.jsx)(r.l_, { to: c() });
+};

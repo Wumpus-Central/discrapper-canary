@@ -1,9 +1,12 @@
-e.exports = {
-    eventPromptsContainer: 'eventPromptsContainer_b6e2f9',
-    controlButton: 'controlButton_b6e2f9',
-    wrapper: 'wrapper_b6e2f9',
-    experimentWrapper: 'experimentWrapper_b6e2f9 wrapper_b6e2f9',
-    buttonContainer: 'buttonContainer_b6e2f9',
-    buttonSection: 'buttonSection_b6e2f9',
-    avSpacing: 'avSpacing_b6e2f9'
+n.d(t, {
+    $: function () {
+        return l;
+    }
+});
+var c = n(51596),
+    i = n(819640);
+let l = {
+    binds: ['mod+k', 'mod+t'],
+    comboKeysBindGlobal: !0,
+    action: () => (!i.Z.hasLayers() && (0, c.$Z)(), !1)
 };

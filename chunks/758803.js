@@ -7,7 +7,6 @@ e.exports = {
     subText: 'subText_b83a05',
     pill: 'pill_b83a05',
     pillOnline: 'pillOnline_b83a05',
-    pillMessage: 'pillMessage_b83a05',
     pillIconTotal: 'pillIconTotal_b83a05 pillIcon_b83a05',
     pillIconOnline: 'pillIconOnline_b83a05 pillIcon_b83a05',
     pillFlat: 'pillFlat_b83a05',
