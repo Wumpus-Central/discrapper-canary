@@ -1404,6 +1404,9 @@ r.r(n),
         PremiumBadge: function () {
             return tI.lB;
         },
+        PremiumChannelIcon: function () {
+            return tO.Erw;
+        },
         PrimaryCTANoticeButton: function () {
             return tv.No;
         },
