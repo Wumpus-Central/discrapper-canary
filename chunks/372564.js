@@ -102,9 +102,10 @@ function E(e) {
 class b extends l.Component {
     render() {
         let { channel: e } = this.props;
-        return e.isMultiUserDM() || null == e.topic || 0 === e.topic.length
-            ? null
-            : (0, i.jsxs)(l.Fragment, {
+        if (e.isMultiUserDM()) return null;
+        let t = null != e.topic && e.topic.length > 0;
+        return null != e.linkedLobby || t
+            ? (0, i.jsxs)(l.Fragment, {
                   children: [
                       (0, i.jsx)(g.Z.Divider, {}),
                       (0, i.jsxs)('div', {
@@ -120,14 +121,17 @@ class b extends l.Component {
                                   'aria-label': x.intl.string(x.t.mKwsSk),
                                   className: v.topicClickTarget
                               }),
-                              m.Z.parseTopic(e.topic, !0, {
-                                  channelId: e.id,
-                                  allowLinks: !0
-                              })
+                              null == e.linkedLobby || t
+                                  ? m.Z.parseTopic(e.topic, !0, {
+                                        channelId: e.id,
+                                        allowLinks: !0
+                                    })
+                                  : x.intl.string(x.t.XJVlf3)
                           ]
                       })
                   ]
-              });
+              })
+            : null;
     }
     constructor(...e) {
         super(...e),
