@@ -57773,9 +57773,9 @@ html.disable-forced-colors * {
 }
 
 :root {
+    --chat-resize-handle-width: 8px;
     --modal-horizontal-padding: 12px;
-    --modal-vertical-padding: 16px;
-    --chat-resize-handle-width: 8px
+    --modal-vertical-padding: 16px
 }
 
 .visual-refresh {
