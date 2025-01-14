@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return g;
+        return v;
     }
 });
 var i = r(200651),
@@ -15,12 +15,13 @@ var i = r(200651),
     _ = r(957825),
     h = r(231338),
     p = r(388032),
-    m = r(551049);
-function g(e) {
+    m = r(551049),
+    g = r(512668),
+    E = r(179998);
+function v(e) {
     let { markAsDismissed: n } = e,
-        r = (0, s.e7)([d.Z], () => d.Z.theme) === h.BR.LIGHT ? 'light' : 'dark',
-        g = 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_'.concat(r, '.png'),
-        E = a.useCallback(() => {
+        r = (0, s.e7)([d.Z], () => d.Z.theme) === h.BR.LIGHT ? E.Z : g.Z,
+        v = a.useCallback(() => {
             (0, u.RO)(_.X1.SOUNDBOARD, l.Ie.NORMAL);
         }, []);
     return (0, i.jsx)(c.ZP, {
@@ -30,7 +31,7 @@ function g(e) {
             children: [
                 (0, i.jsx)('img', {
                     className: m.asset,
-                    src: g,
+                    src: r,
                     alt: ''
                 }),
                 (0, i.jsx)(o.Button, {
@@ -52,7 +53,7 @@ function g(e) {
         buttonCTA: p.intl.string(p.t.RzWDqa),
         buttonProps: { color: o.ButtonColors.WHITE },
         caretPosition: c.DF.BOTTOM_RIGHT,
-        onClick: E,
+        onClick: v,
         markAsDismissed: n
     });
 }
