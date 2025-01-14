@@ -147,7 +147,7 @@ function P(e) {
                     G(!1);
                     return;
                 }
-                d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
+                d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0], { openTextInVoiceIfVoiceChannel: !0 }));
                 let p = await E.Z.sendForwards(_, g, {
                         ...y,
                         withMessage: a

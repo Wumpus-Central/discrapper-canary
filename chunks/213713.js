@@ -26,11 +26,11 @@ var r = n(200651),
     T = n(71585),
     _ = n(146282),
     S = n(650613),
-    N = n(789086),
-    y = n(206583),
+    y = n(789086),
+    N = n(206583),
     k = n(298149),
-    I = n(941469);
-let E = [
+    E = n(941469);
+let I = [
     {
         key: 'type',
         cellClassName: i()(k.cell, k.cellType),
@@ -86,7 +86,7 @@ function w(e) {
 }
 function Z() {
     var e, t;
-    let n = (0, u.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
+    let n = (0, u.e7)([_.Z], () => _.Z.getFeed(N.YN.GLOBAL_FEED)),
         l = (0, u.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
         o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
@@ -102,7 +102,7 @@ function Z() {
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
         w = (0, u.e7)([_.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = _.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [Z, O] = a.useState(''),
         B = (0, u.e7)(
@@ -129,7 +129,7 @@ function Z() {
             }),
         A = (0, p.Z)(L).filter(C.lm);
     return (0, r.jsx)('div', {
-        className: i()(I.panel),
+        className: i()(E.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
             className: k.content,
             children: [
@@ -138,17 +138,17 @@ function Z() {
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(b.Z, {
-                                columns: E,
+                                columns: I,
                                 data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(N.Z, {}),
+                        (0, r.jsx)(y.Z, {}),
                         (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: y.YN.GLOBAL_FEED,
+                                    feedId: N.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },

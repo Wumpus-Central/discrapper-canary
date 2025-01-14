@@ -216,7 +216,7 @@ function T(e, n, r) {
             return {
                 type: s.re.THUMBNAIL,
                 id: b(r),
-                image: (0, l.ym)(e.image),
+                media: (0, l.ym)(e.media),
                 description: e.description,
                 spoiler: e.spoiler
             };

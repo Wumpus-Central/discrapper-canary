@@ -66,7 +66,7 @@ function S() {
     let e = (0, h.Fg)(),
         [t, n, l, o, d, u] = (0, g.zn)(),
         { semanticColorOverrides: b, rawColorOverrides: j, tab: T, scales: S } = t,
-        y = a.useMemo(() => {
+        N = a.useMemo(() => {
             let t = Object.entries(b).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
@@ -217,7 +217,7 @@ function S() {
             (0, r.jsx)('div', {
                 className: v.tab,
                 hidden: T !== g.H8.TOKENS,
-                children: (0, r.jsx)(N, {
+                children: (0, r.jsx)(y, {
                     state: t,
                     setState: n
                 })
@@ -233,13 +233,13 @@ function S() {
             (0, r.jsx)(c.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
-                    children: y
+                    children: N
                 })
             })
         ]
     });
 }
-function N(e) {
+function y(e) {
     let { state: t, setState: n } = e,
         l = (0, h.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: o } = t,
@@ -367,7 +367,7 @@ function N(e) {
                         c = i.opacity,
                         d = g.jC[t][l];
                     return (0, r.jsx)(
-                        y,
+                        N,
                         {
                             title: C(t),
                             subtitle: 1 === d.opacity ? T(d.raw) : ''.concat(T(d.raw), ' @ ').concat(100 * d.opacity, '%'),
@@ -482,7 +482,7 @@ function N(e) {
                 children: Object.entries(o).map((e) => {
                     let [t, a] = e;
                     return (0, r.jsxs)(
-                        y,
+                        N,
                         {
                             title: t,
                             subtitle: u.b[t].hex,
@@ -570,7 +570,7 @@ function N(e) {
         ]
     });
 }
-function y(e) {
+function N(e) {
     let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
     return (0, r.jsxs)('li', {
         className: v.override,

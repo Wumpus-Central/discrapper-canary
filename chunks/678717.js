@@ -29,11 +29,11 @@ var v = n(392750),
     T = n(806240),
     _ = n(789654),
     S = n(719672),
-    N = n(691867),
-    y = n(916790),
+    y = n(691867),
+    N = n(916790),
     k = n(645973),
-    I = n(903502),
-    E = n(912072),
+    E = n(903502),
+    I = n(912072),
     w = n(272193),
     Z = n(735959),
     R = n(246992),
@@ -90,7 +90,7 @@ function $() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, r.jsx)(y.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }
             ];
             return (
@@ -124,7 +124,7 @@ function $() {
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        render: () => (0, r.jsx)(I.Z, {})
+                        render: () => (0, r.jsx)(E.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
@@ -144,12 +144,12 @@ function $() {
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(N.Z, {})
+                    render: () => (0, r.jsx)(y.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -159,7 +159,7 @@ function $() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',

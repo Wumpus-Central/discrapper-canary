@@ -14,7 +14,7 @@ var l = t(200651),
     u = t(295435),
     d = t(793400);
 function m(e) {
-    let { image: n, spoiler: t, description: m } = e,
+    let { media: n, spoiler: t, description: m } = e,
         f = (0, o.pU)(n),
         { gifAutoPlay: p } = (0, s.c)(),
         [h, x] = i.useState(t),

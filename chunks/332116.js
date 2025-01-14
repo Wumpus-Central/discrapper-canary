@@ -1,28 +1,28 @@
-o.r(c),
-    o.d(c, {
+a.r(c),
+    a.d(c, {
         default: function () {
             return E;
         }
     });
-var e = o(200651),
-    a = o(192379),
-    _ = o(512969),
-    I = o(608787),
-    n = o(442837),
-    i = o(765717),
-    O = o(353926),
-    l = o(215256),
-    p = o(8991),
-    P = o(981631);
-let R = a.lazy(() =>
-    (0, I.wE)({
-        createPromise: () => Promise.all([o.e('73503'), o.e('72181'), o.e('66711'), o.e('21628'), o.e('77803'), o.e('9005'), o.e('64676'), o.e('31931'), o.e('76810')]).then(o.bind(o, 319443)),
+var e = a(200651),
+    o = a(192379),
+    _ = a(512969),
+    n = a(608787),
+    I = a(442837),
+    i = a(765717),
+    O = a(353926),
+    l = a(215256),
+    p = a(8991),
+    P = a(981631);
+let R = o.lazy(() =>
+    (0, n.wE)({
+        createPromise: () => Promise.all([a.e('73503'), a.e('72181'), a.e('66711'), a.e('21628'), a.e('77803'), a.e('9005'), a.e('64676'), a.e('31931'), a.e('76810')]).then(a.bind(a, 319443)),
         webpackId: 319443
     })
 );
 function E() {
-    let t = (0, n.e7)([O.Z], () => O.Z.hasLoadedExperiments);
-    a.useEffect(() => {
+    let t = (0, I.e7)([O.Z], () => O.Z.hasLoadedExperiments);
+    o.useEffect(() => {
         t && l.f.trackExposure({ location: 'GlobalDiscoveryAppsRoutes' });
     }, [t]);
     let c = (0, l.M)({ location: 'GlobalDiscoveryAppsRoutes' });

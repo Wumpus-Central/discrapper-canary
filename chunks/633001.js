@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return I;
     }
 }),
     n(47120),
@@ -28,8 +28,8 @@ var r = n(200651),
     T = n(981631),
     _ = n(501787),
     S = n(27731),
-    N = n(941469);
-let y = (e) => ({
+    y = n(941469);
+let N = (e) => ({
         type: T.Odu.CLICK_ZONE_DEBUG,
         id: (0, o.Z)(),
         layoutId: e,
@@ -45,7 +45,7 @@ let y = (e) => ({
         pinned: !0
     }),
     k = (e, t) => e.find((e) => e.type === t);
-function I(e) {
+function E(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
         a = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
@@ -125,13 +125,13 @@ function I(e) {
         ]
     });
 }
-function E() {
+function I() {
     let e = (0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(_.OVERLAY_V3_LAYOUT_ID)),
         t = (0, s.e7)([p.Z], () => p.Z.clickZoneDebugMode),
         n = (0, s.e7)([p.Z], () => p.Z.renderDebugMode),
         l = (0, s.e7)([x.Z], () => x.Z.getForcedRenderMode()),
         [o, g] = a.useState({}),
-        [E, w] = a.useState(l),
+        [I, w] = a.useState(l),
         Z = (e) => {
             w(e), u.Z.forceRenderMode(e);
         },
@@ -213,7 +213,7 @@ function E() {
         G = () => {
             if (null != H) (0, d.E9)(H.id);
             else {
-                let e = y(_.OVERLAY_V3_LAYOUT_ID);
+                let e = N(_.OVERLAY_V3_LAYOUT_ID);
                 (0, d.A4)(e);
             }
         },
@@ -249,7 +249,7 @@ function E() {
         Y = B.filter((e) => null == O[e.pid]);
     return (0, r.jsx)(c.ScrollerAuto, {
         children: (0, r.jsxs)('div', {
-            className: i()(N.panel, S.panel),
+            className: i()(y.panel, S.panel),
             children: [
                 (0, r.jsxs)('div', {
                     className: S.panelGroup,
@@ -328,7 +328,7 @@ function E() {
                             className: S.panelGroup,
                             children: (0, r.jsx)(c.Select, {
                                 serialize: (e) => e,
-                                isSelected: (e) => e === E,
+                                isSelected: (e) => e === I,
                                 options: R,
                                 select: Z,
                                 popoutLayerContext: C.O$
@@ -380,7 +380,7 @@ function E() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(O).map((e) => (0, r.jsx)(I, { trackedGame: e }, e.pid))
+                                    Object.values(O).map((e) => (0, r.jsx)(E, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })
