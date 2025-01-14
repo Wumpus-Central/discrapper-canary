@@ -1,32 +1,33 @@
 var i = r(200651),
     a = r(192379),
     s = r(481060),
-    o = r(111810),
-    l = r(287941),
-    u = r(235894),
-    c = r(388032),
-    d = r(814169);
-let f = (e) => {
-    let { message: n } = e,
-        r = (0, o.p7)('Message Header') && n.hasPotions(),
-        f = a.useMemo(() => {
-            var e, r;
-            return null !== (r = null === (e = n.potions) || void 0 === e ? void 0 : e.length) && void 0 !== r ? r : 0;
-        }, [n]),
-        _ = a.useCallback(() => {
-            (0, u.U)(n) && (0, l.Z)(n);
-        }, [n]);
-    return r
+    o = r(594174),
+    l = r(111810),
+    u = r(287941),
+    c = r(477931),
+    d = r(235894),
+    f = r(388032),
+    _ = r(814169);
+let h = (e) => {
+    var n, r;
+    let { message: h } = e,
+        p = (0, l.p7)('Message Header') && h.hasPotions(),
+        m = null === (n = h.potions) || void 0 === n ? void 0 : n[0],
+        g = a.useMemo(() => (null == m ? null : o.default.getUser(m.used_by)), [m]),
+        E = a.useCallback(() => {
+            (0, d.U)(h) && (0, u.Z)(h);
+        }, [h]);
+    return p && null != g && (null == m ? void 0 : m.type) === c.B.CONFETTI
         ? (0, i.jsx)(s.Clickable, {
-              onFocus: _,
+              onFocus: E,
               children: (0, i.jsx)(s.Tooltip, {
-                  text: c.intl.string(f > 1 ? c.t.sNHsqa : c.t.wjLsq6),
+                  text: f.intl.formatToPlainString(f.t['FE++aG'], { user: null !== (r = g.globalName) && void 0 !== r ? r : g.username }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
-                          className: d.potionBadge,
+                          className: _.potionBadge,
                           ...e,
                           children: [
-                              (0, i.jsx)(s.PotionIcon, {
+                              (0, i.jsx)(s.StarShootingIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
@@ -35,7 +36,7 @@ let f = (e) => {
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
-                                  children: c.intl.string(c.t['9rhzMj'])
+                                  children: f.intl.string(f.t['8Rrro6'])
                               })
                           ]
                       })
@@ -43,4 +44,4 @@ let f = (e) => {
           })
         : null;
 };
-n.Z = f;
+n.Z = h;
