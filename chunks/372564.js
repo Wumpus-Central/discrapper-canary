@@ -6,17 +6,12 @@ var i = n(200651),
     s = n(513431),
     o = n(481060),
     c = n(239091),
-    d = n(822951),
-    u = n(835473),
-    h = n(933557),
-    p = n(471445),
-    m = n(454585),
-    f = n(63063),
-    g = n(984370),
-    C = n(981631),
-    x = n(388032),
-    v = n(797323);
-function _(e, t, n) {
+    d = n(454585),
+    u = n(984370),
+    h = n(981631),
+    p = n(388032),
+    m = n(797323);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,77 +24,10 @@ function _(e, t, n) {
         e
     );
 }
-function I(e) {
-    var t;
-    let { channel: n, onClose: l, guild: r, transitionState: a } = e,
-        s = (0, p.KS)(n, r),
-        c = (0, h.ZP)(n, !1),
-        g = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
-    return (0, i.jsx)(o.ModalRoot, {
-        transitionState: a,
-        'aria-label': x.intl.string(x.t.X8jMDg),
-        children: (0, i.jsx)(o.ModalContent, {
-            children: (0, i.jsxs)(d.Z, {
-                selectable: !0,
-                onClose: l,
-                renderHeader: () =>
-                    (0, i.jsxs)('div', {
-                        className: v.header,
-                        children: [
-                            null != s &&
-                                (0, i.jsx)(s, {
-                                    size: 'md',
-                                    color: 'currentColor',
-                                    className: v.channelIcon
-                                }),
-                            (0, i.jsx)(o.Text, {
-                                variant: 'text-md/semibold',
-                                color: 'header-primary',
-                                children: c
-                            })
-                        ]
-                    }),
-                children: [
-                    (0, i.jsx)(o.Text, {
-                        selectable: !0,
-                        variant: 'text-md/normal',
-                        className: v.content,
-                        children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
-                    }),
-                    null != g
-                        ? (0, i.jsxs)('div', {
-                              className: v.linkedLobbyNotice,
-                              children: [
-                                  (0, i.jsx)(o.RefreshIcon, { className: v.linkedLobbyApplicationIcon }),
-                                  (0, i.jsx)(o.Text, {
-                                      variant: 'text-sm/normal',
-                                      color: 'header-secondary',
-                                      children: x.intl.format(x.t.Ud5rys, {
-                                          applicationName: g.name,
-                                          helpdeskArticle: f.Z.getArticleURL(C.BhN.CHANNEL_LINKED_LOBBIES),
-                                          separatorHook: (e, t) =>
-                                              (0, i.jsx)(
-                                                  'span',
-                                                  {
-                                                      className: v.linkedLobbyNoticeSeparator,
-                                                      children: e
-                                                  },
-                                                  t
-                                              )
-                                      })
-                                  })
-                              ]
-                          })
-                        : null
-                ]
-            })
-        })
-    });
-}
-function E(e) {
+function g(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class b extends l.Component {
+class C extends l.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -107,9 +35,9 @@ class b extends l.Component {
         return null != e.linkedLobby || t
             ? (0, i.jsxs)(l.Fragment, {
                   children: [
-                      (0, i.jsx)(g.Z.Divider, {}),
+                      (0, i.jsx)(u.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: a()(v.topic, v.expandable),
+                          className: a()(m.topic, m.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -118,15 +46,15 @@ class b extends l.Component {
                           children: [
                               (0, i.jsx)(o.Clickable, {
                                   onClick: this.handleClick,
-                                  'aria-label': x.intl.string(x.t.mKwsSk),
-                                  className: v.topicClickTarget
+                                  'aria-label': p.intl.string(p.t.mKwsSk),
+                                  className: m.topicClickTarget
                               }),
                               null == e.linkedLobby || t
-                                  ? m.Z.parseTopic(e.topic, !0, {
+                                  ? d.Z.parseTopic(e.topic, !0, {
                                         channelId: e.id,
                                         allowLinks: !0
                                     })
-                                  : x.intl.string(x.t.XJVlf3)
+                                  : p.intl.string(p.t.XJVlf3)
                           ]
                       })
                   ]
@@ -135,32 +63,34 @@ class b extends l.Component {
     }
     constructor(...e) {
         super(...e),
-            _(this, '_mouseDown', !1),
-            _(this, '_mouseUp', !1),
-            _(this, 'handleOpenTopic', (e) => {
+            f(this, '_mouseDown', !1),
+            f(this, '_mouseUp', !1),
+            f(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, s.k)(t)) {
-                    if (E(t)) return;
+                    if (g(t)) return;
                     let e = t.parentNode;
-                    if ((0, s.k)(e) && E(e)) return;
+                    if ((0, s.k)(e) && g(e)) return;
                 }
-                (0, o.openModal)((e) =>
-                    (0, i.jsx)(I, {
-                        ...e,
-                        ...this.props
-                    })
-                );
+                (0, o.openModalLazy)(async () => {
+                    let { default: e } = await n.e('65631').then(n.bind(n, 10722));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            ...t,
+                            ...this.props
+                        });
+                });
             }),
-            _(this, 'onMouseDown', () => {
+            f(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            _(this, 'onMouseMove', () => {
+            f(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            _(this, 'onMouseUp', (e) => {
-                this._mouseDown && e.button !== C.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
+            f(this, 'onMouseUp', (e) => {
+                this._mouseDown && e.button !== h.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
-            _(this, 'handleContextMenu', (e) => {
+            f(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: l } = this.props;
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
@@ -173,7 +103,7 @@ class b extends l.Component {
                         });
                 });
             }),
-            _(this, 'handleClick', (e) => {
+            f(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -182,4 +112,4 @@ class b extends l.Component {
             });
     }
 }
-t.Z = b;
+t.Z = C;
