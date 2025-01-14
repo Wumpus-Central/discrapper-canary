@@ -23,9 +23,9 @@ var d = r(278074),
     p = r(951394),
     m = r(605236),
     g = r(314897),
-    E = r(456644),
-    v = r(837411),
-    I = r(369566),
+    E = r(837411),
+    v = r(369566),
+    I = r(565640),
     T = r(510659),
     b = r(652853),
     y = r(228168),
@@ -84,17 +84,16 @@ let N = 2700,
 function O(e) {
     let { user: n, sourceType: r, isVisible: i, isExpandable: a, interactionSourceId: l, onAction: N, renderMoreButtonPopout: C } = e,
         O = (0, f.e7)([g.default], () => g.default.getId() === n.id),
-        D = (0, v.Z)(n.id),
+        D = (0, E.Z)(n.id),
         { profileType: L } = (0, b.z)(),
         { onInteraction: x } = (0, T.Xo)(),
-        { live: w, recent: P } = (0, I.Z)(n.id),
-        { recentActivityEnabled: M } = (0, E.i)({ location: 'UserProfileInteractionToolbar' }),
+        { live: w, stream: P } = (0, v.Z)(n.id),
+        M = (0, I.Z)(r === y.n_.STATUS ? n.id : null, 'UserProfileInteractionToolbar'),
         k =
-            M &&
             !i &&
             L !== y.y0.FULL_SIZE &&
             (0, d.EQ)(r)
-                .with(y.n_.STATUS, () => 0 === w.length && 0 === P.length)
+                .with(y.n_.STATUS, () => 0 === w.length && null == P && null == M)
                 .with(y.n_.ACTIVITY, () => !0)
                 .with(y.n_.AVATAR, () => !1)
                 .exhaustive(),
