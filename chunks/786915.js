@@ -20,12 +20,12 @@ var l = n(512722),
     g = n(388032);
 function C(e) {
     var t, l;
-    let { applicationId: C, stream: x, channel: v, exitFullScreen: _, appContext: I, analyticsLocation: E, guildScheduledEvent: b, shouldPrioritizeGroupPlusIcon: Z = !1, embeddedActivity: N, ...S } = e,
+    let { applicationId: C, stream: x, channel: v, exitFullScreen: _, appContext: I, analyticsLocation: E, guildScheduledEvent: b, shouldPrioritizeGroupPlusIcon: Z = !1, embeddedActivity: S, ...N } = e,
         T = (0, d.bp)(),
         j = null == v ? void 0 : v.getGuildId(),
         A = (0, s.e7)([u.Z], () => (null != j ? u.Z.getGuild(j) : null), [j]),
         y = (0, s.e7)([h.Z], () => (null != C ? h.Z.getApplicationActivity(C) : void 0));
-    if (null != y && (null == N ? void 0 : N.location.kind) === a.X.CONTEXTLESS)
+    if (null != y && (null == S ? void 0 : S.location.kind) === a.X.CONTEXTLESS)
         return (0, i.jsx)(m.Z, {
             onClick: () => {
                 c.h7(y, !1, T);
@@ -74,7 +74,7 @@ function C(e) {
               },
               iconComponent: null == C || Z ? o.GroupPlusIcon : o.ActivitiesPlusIcon,
               label: null != C ? g.intl.string(g.t['OzOM/v']) : g.intl.string(g.t['6F9ivr']),
-              ...S
+              ...N
           })
         : null;
 }

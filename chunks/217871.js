@@ -133,13 +133,13 @@ t.Z = l.memo(function (e) {
         { ref: h, width: f = 0 } = (0, d.Z)(),
         [g, v] = l.useState(!1),
         I = (0, _.Z)(t),
-        N = a && u && r;
+        S = a && u && r;
     l.useEffect(() => {
-        N && v(!0);
-        let e = setTimeout(() => v(N), 1000);
+        S && v(!0);
+        let e = setTimeout(() => v(S), 1000);
         return () => clearTimeout(e);
-    }, [N]);
-    let S = (0, c.useSpring)({
+    }, [S]);
+    let N = (0, c.useSpring)({
             opacity: g ? 1 : 0,
             transform: g ? 'translateY(0)' : 'translateY(100%)',
             pointerEvents: 'none',
@@ -161,10 +161,10 @@ t.Z = l.memo(function (e) {
     }, [T]);
     let { multiplier: A, value: y } = l.useMemo(
         () => ({
-            value: N ? T.value : j.current.value,
-            multiplier: N ? T.multiplier : j.current.multiplier
+            value: S ? T.value : j.current.value,
+            multiplier: S ? T.multiplier : j.current.multiplier
         }),
-        [N, T, j]
+        [S, T, j]
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -175,7 +175,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(s.animated.div, {
                 ref: h,
                 className: E.combo,
-                style: S,
+                style: N,
                 children: (0, i.jsx)(Z, {
                     value: y,
                     multiplier: A

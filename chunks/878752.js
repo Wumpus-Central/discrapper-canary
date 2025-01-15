@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(997614),
     b = n(159909),
     Z = n(487762);
-function N(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: N, themeable: S = !1 } = e,
+function S(e) {
+    let { channel: t, hasActiveStream: n, showRightDivider: S, themeable: N = !1 } = e,
         { groupedButtons: T } = (0, m.ZP)({ location: 'VoiceEffectsActionBar' }),
         j = (0, u.Ou)(t),
         A = l.useRef(null),
@@ -56,7 +56,7 @@ function N(e) {
                     U &&
                         (0, i.jsx)(E.Z, {
                             channel: t,
-                            themeable: S
+                            themeable: N
                         }),
                     H && (0, i.jsx)(_.Z, { channel: t }),
                     G && (0, i.jsx)(C.Z, { channel: t }),
@@ -77,7 +77,7 @@ function N(e) {
                     F && (0, i.jsx)(b.Z, {})
                 ]
             }),
-            N && (U || H || G || D || j || F) && (0, i.jsx)('div', { className: Z.divider })
+            S && (U || H || G || D || j || F) && (0, i.jsx)('div', { className: Z.divider })
         ]
     });
 }

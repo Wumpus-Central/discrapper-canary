@@ -69,7 +69,7 @@ function _(e) {
         return () => clearTimeout(e);
     });
     let Z = _ ? [o.z.HD_STREAMING_POTION_BANNER] : [],
-        [N, S] = (0, h.US)(Z);
+        [S, N] = (0, h.US)(Z);
     return null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -79,13 +79,13 @@ function _(e) {
                           buyer: r,
                           onEnd: b
                       }),
-                  (p || N === o.z.HD_STREAMING_POTION_BANNER) &&
+                  (p || S === o.z.HD_STREAMING_POTION_BANNER) &&
                       (0, i.jsx)(f.Z, {
                           channel: t,
                           buyer: r,
                           streaming: !0,
                           onClose: () => {
-                              x(!1), _ && S(C.L.DISMISS);
+                              x(!1), _ && N(C.L.DISMISS);
                           }
                       })
               ]

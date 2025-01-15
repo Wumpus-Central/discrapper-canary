@@ -15,8 +15,8 @@ var l = t(513431),
     o = t(911969),
     s = t(299206),
     u = t(26737),
-    c = t(29264),
-    d = t(905041),
+    d = t(29264),
+    c = t(905041),
     m = t(89013),
     g = t(988500),
     f = t(570870),
@@ -30,8 +30,8 @@ var l = t(513431),
     S = t(601184),
     Z = t(6148),
     j = t(519110),
-    T = t(759875),
-    N = t(168405),
+    N = t(759875),
+    T = t(168405),
     _ = t(536639),
     b = t(720904),
     A = t(88791),
@@ -40,8 +40,8 @@ var l = t(513431),
     y = t(134323),
     D = t(429260),
     L = t(1626),
-    O = t(279329),
-    R = t(627938),
+    R = t(279329),
+    O = t(627938),
     G = t(512303),
     w = t(481300),
     U = t(975368),
@@ -52,15 +52,15 @@ function F(e) {
         r,
         o,
         s,
-        { channel: u, message: c, target: d, mediaItem: m, shouldHideMediaOptions: g, onSelect: f, onHeightUpdate: h } = e,
-        E = d,
-        I = d.getAttribute('data-type'),
-        v = d.getAttribute('data-id'),
-        p = d.getAttribute('data-name');
+        { channel: u, message: d, target: c, mediaItem: m, shouldHideMediaOptions: g, onSelect: f, onHeightUpdate: h } = e,
+        E = c,
+        I = c.getAttribute('data-type'),
+        v = c.getAttribute('data-id'),
+        p = c.getAttribute('data-name');
     if (null != m) r = i = o = m.url;
     else for (; (0, l.k)(E); ) (0, l.k)(E, HTMLImageElement) && null != E.src && (r = E.src), (0, l.k)(E, HTMLAnchorElement) && null != E.href && ((i = E.href), (s = E.textContent), null == r && 'img' === E.getAttribute('data-role') && ((r = i), E.hasAttribute('data-safe-src') && '' !== E.getAttribute('data-safe-src') && (o = E.getAttribute('data-safe-src')))), (E = E.parentNode);
     return z({
-        message: c,
+        message: d,
         channel: u,
         mediaItem: m,
         textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
@@ -81,7 +81,7 @@ function F(e) {
     });
 }
 function z(e) {
-    let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: F, favoriteableId: z, favoriteableName: K, itemHref: B, itemSrc: H, itemSafeSrc: X, itemTextContent: V, canReport: q, onHeightUpdate: J, onSelect: W, onClose: Y, navId: $, ariaLabel: Q, shouldHideMediaOptions: ee = !1 } = e,
+    let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: F, favoriteableId: z, favoriteableName: B, itemHref: K, itemSrc: H, itemSafeSrc: V, itemTextContent: X, canReport: q, onHeightUpdate: J, onSelect: W, onClose: Y, navId: $, ariaLabel: Q, shouldHideMediaOptions: ee = !1 } = e,
         en = (0, u.Z)(a),
         et = (0, m.Z)(a),
         ei = (0, b.Z)(n, t),
@@ -91,21 +91,21 @@ function z(e) {
         eo = (0, j.Z)({
             type: F,
             id: z,
-            name: K
+            name: B
         }),
         es = (0, L.Z)(n, t),
-        eu = (0, N.Z)(n, t),
-        ec = (0, A.Z)(n),
-        ed = (0, p.Z)(n, t),
+        eu = (0, T.Z)(n, t),
+        ed = (0, A.Z)(n),
+        ec = (0, p.Z)(n, t),
         em = (0, M.Z)(n, t),
         eg = (0, C.Z)(n, t),
         ef = (0, P.Z)(n, t),
         eh = (0, S.Z)(n, t),
         eE = (0, D.Z)(n),
         eI = (0, D.e)(n),
-        ev = (0, O.Z)(n, t),
-        ep = (0, d.Z)(null != B ? B : H, V, n, { shouldHideMediaOptions: ee }),
-        eM = (0, c.Z)(X, n, { shouldHideMediaOptions: ee }),
+        ev = (0, R.Z)(n, t),
+        ep = (0, c.Z)(null != K ? K : H, X, n, { shouldHideMediaOptions: ee }),
+        eM = (0, d.Z)(V, n, { shouldHideMediaOptions: ee }),
         ex = (0, w.Z)(n, l),
         eS = (0, s.Z)({
             id: n.id,
@@ -113,9 +113,9 @@ function z(e) {
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
         }),
         eZ = (0, y.Z)(n, t),
-        ej = (0, T.Z)(n, t),
-        eT = (0, R.Z)(n, t),
-        eN = (0, h.Z)(a, t.getGuildId()),
+        ej = (0, N.Z)(n, t),
+        eN = (0, O.Z)(n, t),
+        eT = (0, h.Z)(a, t.getGuildId()),
         e_ = (0, E.Z)(n),
         eb = (0, x.Z)(n),
         eA = (0, U.Z)(n),
@@ -138,19 +138,19 @@ function z(e) {
             (0, i.jsx)(r.MenuGroup, { children: en }),
             (0, i.jsx)(r.MenuGroup, { children: et }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: ['' === a ? ei : null, el, ec, eC]
+                children: ['' === a ? ei : null, el, ed, eC]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [er, eZ, ej, eT]
+                children: [er, eZ, ej, eN]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eb, ea, e_, eP, es, eu, ed, em, ev, eD, ey]
+                children: [eb, ea, e_, eP, es, eu, ec, em, ev, eD, ey]
             }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [ef, eg, eh, q && eE, q && eI]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eo, eN, eM, ex, eA]
+                children: [eo, eT, eM, ex, eA]
             }),
             (0, i.jsx)(r.MenuGroup, { children: ep }),
             (0, i.jsx)(r.MenuGroup, { children: eS })

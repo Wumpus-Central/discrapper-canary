@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(127379),
     b = n(388032);
 function Z(e) {
-    let { channel: t, themeable: Z, whichPopoutIsOpen: N, setWhichPopoutIsOpen: S } = e,
+    let { channel: t, themeable: Z, whichPopoutIsOpen: S, setWhichPopoutIsOpen: N } = e,
         {
             Component: T,
             events: { onMouseEnter: j, onMouseLeave: A }
@@ -67,9 +67,9 @@ function Z(e) {
         }),
         (0, i.jsx)(_.Z, {
             ref: F,
-            isPopoutBlocked: null != N && N !== E.D.SOUNDBOARD,
-            onPopoutClose: () => (null == S ? void 0 : S(void 0)),
-            onPopoutOpen: () => (null == S ? void 0 : S(E.D.SOUNDBOARD)),
+            isPopoutBlocked: null != S && S !== E.D.SOUNDBOARD,
+            onPopoutClose: () => (null == N ? void 0 : N(void 0)),
+            onPopoutOpen: () => (null == N ? void 0 : N(E.D.SOUNDBOARD)),
             align: w ? 'center' : 'left',
             renderPopout: (e) => {
                 let { closePopout: n } = e;

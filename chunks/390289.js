@@ -54,20 +54,20 @@ let v = [
     E = { channels: {} },
     b = new Set(),
     Z = null,
-    N = 0,
-    S = 0;
+    S = 0,
+    N = 0;
 function T() {
     if (null == Z || !y(Z)) return !1;
     let e = A(Z);
     if (e.lastActionTime > Date.now() - u.Z.Millis.DAY && e.viewDuration > _) return !1;
     let t = Date.now();
-    (e.lastActionTime = t), (e.viewDuration += t - N), (N = t);
+    (e.lastActionTime = t), (e.viewDuration += t - S), (S = t);
 }
 function j() {
     return (
-        0 !== S && (clearInterval(S), (S = 0)),
+        0 !== N && (clearInterval(N), (N = 0)),
         d.ZP.useNewNotifications &&
-            (S = setInterval(() => {
+            (N = setInterval(() => {
                 T() && R.emitChange();
             }, 15 * u.Z.Millis.SECOND)),
         !1
@@ -131,10 +131,10 @@ x(M, 'displayName', 'UnreadSettingNoticeStore2'), x(M, 'persistKey', 'UnreadSett
 let R = new M(r.Z, {
     CHANNEL_SELECT: function () {
         let e = T();
-        return (Z = c.Z.getChannelId()), (N = Date.now()), e;
+        return (Z = c.Z.getChannelId()), (S = Date.now()), e;
     },
     CONNECTION_OPEN: function () {
-        (Z = c.Z.getChannelId()), (N = Date.now()), j();
+        (Z = c.Z.getChannelId()), (S = Date.now()), j();
         let e = Date.now() - I;
         p.default.forEach(E.channels, (t, n) => {
             let { lastActionTime: i } = t;

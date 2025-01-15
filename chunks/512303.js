@@ -10,8 +10,8 @@ var i = t(200651),
     o = t(481060),
     s = t(232567),
     u = t(700582),
-    c = t(592180),
-    d = t(565138),
+    d = t(592180),
+    c = t(565138),
     m = t(598077),
     g = t(430824),
     f = t(594174),
@@ -29,27 +29,27 @@ function I(e) {
         (l.useEffect(() => {
             null == S && null != p && (0, s.PR)(p);
         }, [S, p]),
-        !(0, c.a)(e))
+        !(0, d.a)(e))
     )
         return null;
     null == j && (j = new m.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
-    let T = null;
+    let N = null;
     return (
         null != Z
-            ? (T = (0, i.jsx)(o.MenuItem, {
+            ? (N = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
-                      (0, i.jsx)(d.Z, {
+                      (0, i.jsx)(c.Z, {
                           guild: Z,
-                          size: d.Z.Sizes.MINI
+                          size: c.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
                   label: Z.name,
                   subtext: h.intl.formatToPlainString(h.t.ShLXXF, { application: e.author.username })
               }))
             : null != S &&
-              (T = (0, i.jsx)(o.MenuItem, {
+              (N = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
@@ -65,7 +65,7 @@ function I(e) {
             id: 'view-interaction-info',
             label: h.intl.string(h.t.Rjezb2),
             children: [
-                T,
+                N,
                 null != j
                     ? (0, i.jsx)(o.MenuItem, {
                           className: E.interactionInfoMenuItem,

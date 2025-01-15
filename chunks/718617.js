@@ -31,17 +31,17 @@ function v(e, t) {
 function _(e) {
     var t, n;
     let { userId: _, guildId: I, onClose: E, analyticsLocation: b, className: Z } = e,
-        N = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
-        S = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
+        S = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+        N = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
         T = (0, c.Z)(_);
-    let j = null == (n = S) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
+    let j = null == (n = N) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
         A = (0, u.Z)(j),
         { reducedMotion: y } = l.useContext(s.S),
         P = l.useCallback(
             (e) => {
-                null != N && (0, p.r)(I, _, N.baseChannelId, { modViewPanel: e });
+                null != S && (0, p.r)(I, _, S.baseChannelId, { modViewPanel: e });
             },
-            [N, I, _]
+            [S, I, _]
         ),
         M = l.useMemo(
             () => ({
@@ -49,16 +49,16 @@ function _(e) {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
-                        if (S === C.k.INFO) return E();
+                        if (N === C.k.INFO) return E();
                         return P(C.k.INFO);
                     }
                 }
             }),
-            [E, S, P]
+            [E, N, P]
         );
     l.useEffect(() => (d.Z.enable(), d.Z.enableTemp(M), () => d.Z.disableTemp()), [M]);
     let R = (0, o.useTransition)(
-        S,
+        N,
         {
             value: 0,
             from: { value: 1 },

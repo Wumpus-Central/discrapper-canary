@@ -11,8 +11,8 @@ var l = t(120356),
     o = t(481060),
     s = t(543241),
     u = t(222677),
-    c = t(995774),
-    d = t(665906),
+    d = t(995774),
+    c = t(665906),
     m = t(695346),
     g = t(496675),
     f = t(768581),
@@ -78,10 +78,10 @@ function S(e, n) {
     });
     t.length > 4 && (t.length = 4);
     let l = m.nc.useSetting(),
-        r = (0, d.$R)(n),
+        r = (0, c.$R)(n),
         f = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
         v = (t) => {
-            (0, u.rU)(n.id, e.id, (0, c.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
+            (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return f && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {

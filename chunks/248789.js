@@ -74,7 +74,7 @@ function g(e) {
         Z = l.useCallback(() => {
             x(), I(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [x, I]),
-        N = l.useCallback(() => {
+        S = l.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
@@ -113,7 +113,7 @@ function g(e) {
                       {
                           text: f.intl.string(f.t['7q0bNT']),
                           color: s.Button.Colors.PRIMARY,
-                          onclick: N
+                          onclick: S
                       }
                   ])
         ]

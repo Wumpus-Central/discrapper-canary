@@ -157,7 +157,7 @@ function Z(e) {
     for (let e in _) _[e].guildId === t && (_[e].rebuild(), (n = !0));
     return n;
 }
-class N extends (i = a.ZP.Store) {
+class S extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, c.ZP, d.Z, u.Z, h.Z, p.default),
             this.syncWith([d.Z], () => {
@@ -187,8 +187,8 @@ class N extends (i = a.ZP.Store) {
         return null !== (l = null == a ? void 0 : a.canViewChannel) && void 0 !== l && l;
     }
 }
-v(N, 'displayName', 'ThreadMemberListStore'),
-    (t.Z = new N(s.Z, {
+v(S, 'displayName', 'ThreadMemberListStore'),
+    (t.Z = new S(s.Z, {
         CONNECTION_OPEN: function () {
             _ = {};
         },

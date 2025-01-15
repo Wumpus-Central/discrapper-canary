@@ -30,8 +30,8 @@ var i = n(200651),
     E = n(63063),
     b = n(358085),
     Z = n(709054),
-    N = n(967128),
-    S = n(981631),
+    S = n(967128),
+    N = n(981631),
     T = n(231873),
     j = n(388032),
     A = n(587330);
@@ -76,7 +76,7 @@ function y(e) {
 function P(e) {
     let { channel: t } = e,
         r = (0, o.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - S._8R,
+        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - N._8R,
         _ = (0, o.e7)([C.default], () => (null == r ? void 0 : r.ownerId) === C.default.getId(), [r]),
         { canInvite: P, canManageGuild: M, canMessage: R } = (0, m.TE)(t, r),
         L = (0, o.e7)([v.default], () => {
@@ -92,7 +92,7 @@ function P(e) {
             handleAddApplication: G
         } = (function (e) {
             let t = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: T.Ft.CHANNEL_WELCOME,
                         action: T.j7.INVITE
                     }),
@@ -103,30 +103,30 @@ function P(e) {
                                     (0, i.jsx)(t, {
                                         ...n,
                                         guild: e,
-                                        source: S.t4x.CHANNEL_WELCOME,
-                                        analyticsLocation: { section: S.jXE.CHANNEL_WELCOME_CTA }
+                                        source: N.t4x.CHANNEL_WELCOME,
+                                        analyticsLocation: { section: N.jXE.CHANNEL_WELCOME_CTA }
                                     });
                             });
                 }, [e]),
                 r = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: T.Ft.CHANNEL_WELCOME,
                         action: T.j7.SEND_MESSAGE
                     }),
-                        I.S.dispatch(S.CkL.TEXTAREA_FOCUS, {
+                        I.S.dispatch(N.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
-                            channelId: S.lds
+                            channelId: N.lds
                         });
                 }, []),
                 a = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: T.Ft.CHANNEL_WELCOME,
                         action: T.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && f.Z.open(e.id, S.pNK.OVERVIEW, { section: S.jXE.CHANNEL_WELCOME_CTA });
+                        null != e && f.Z.open(e.id, N.pNK.OVERVIEW, { section: N.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
                 s = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: T.Ft.CHANNEL_WELCOME,
                         action: T.j7.DOWNLOAD
                     }),
@@ -134,7 +134,7 @@ function P(e) {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
                             return (t) =>
                                 (0, i.jsx)(e, {
-                                    source: S.jXE.CHANNEL_WELCOME_CTA,
+                                    source: N.jXE.CHANNEL_WELCOME_CTA,
                                     ...t
                                 });
                         });
@@ -146,7 +146,7 @@ function P(e) {
                 handleDownload: s,
                 handleAddApplication: l.useCallback(() => {
                     null != e &&
-                        (p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (p.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: T.Ft.CHANNEL_WELCOME,
                             action: T.j7.ADD_APP
                         }),
@@ -227,7 +227,7 @@ function P(e) {
             (async () => {
                 try {
                     var e;
-                    let t = await (0, g.i)(null !== (e = null == r ? void 0 : r.id) && void 0 !== e ? e : S.lds);
+                    let t = await (0, g.i)(null !== (e = null == r ? void 0 : r.id) && void 0 !== e ? e : N.lds);
                     K(t.map((e) => e.id));
                 } catch {}
             })();
@@ -323,8 +323,8 @@ function P(e) {
         ));
     let X = _ ? j.intl.string(j.t['1ach9P']) : j.intl.string(j.t['ezm+/v']);
     h && (X = j.intl.string(j.t['gwyU/P']));
-    let J = ''.concat(E.Z.getArticleURL(S.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
-    return (0, i.jsx)(N.ZP, {
+    let J = ''.concat(E.Z.getArticleURL(N.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    return (0, i.jsx)(S.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {
             className: A.container,

@@ -5,7 +5,7 @@ var i = t(544891),
     o = t(668781),
     s = t(981631),
     u = t(388032);
-let c = {
+let d = {
     async pinMessage(e, n) {
         let { id: t, name: l } = e;
         await r.Z.unarchiveThreadIfNecessary(e.id),
@@ -44,7 +44,7 @@ let c = {
                         body: u.intl.string(u.t['0R/Toa']),
                         confirmText: u.intl.string(u.t['7NqTJi']),
                         cancelText: u.intl.string(u.t['ETE/oK']),
-                        onConfirm: c.unpinMessage.bind(c, e, n)
+                        onConfirm: d.unpinMessage.bind(d, e, n)
                     })
                 );
     },
@@ -86,4 +86,4 @@ let c = {
                     );
     }
 };
-n.Z = c;
+n.Z = d;

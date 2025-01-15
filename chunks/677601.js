@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(410575),
     b = n(393238),
     Z = n(110924),
-    N = n(40851),
-    S = n(636449),
+    S = n(40851),
+    N = n(636449),
     T = n(115130),
     j = n(317381),
     A = n(596040),
@@ -75,8 +75,8 @@ var i = n(200651),
     eE = n(228488),
     eb = n(358221),
     eZ = n(414910),
-    eN = n(887012),
-    eS = n(909820),
+    eS = n(887012),
+    eN = n(909820),
     eT = n(493010),
     ej = n(742603),
     eA = n(71127),
@@ -480,7 +480,7 @@ class eG extends l.PureComponent {
                         let t = e.getGuildId();
                         null != t && (0, z.uL)((0, ex.LY)(t)), G.hP(e);
                     };
-                !t || (0, S.R)() ? n() : (0, y.Z)(n);
+                !t || (0, N.R)() ? n() : (0, y.Z)(n);
             }),
             eB(this, 'handleStayOnTop', (e) => {
                 G.hY(eO.KJ3.CHANNEL_CALL_POPOUT, e);
@@ -643,7 +643,7 @@ class eG extends l.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: l } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && l)
                     ? null
-                    : (0, i.jsx)(eS.ZP, {
+                    : (0, i.jsx)(eN.ZP, {
                           children: (0, i.jsx)(Q.Z, {
                               className: ew.chatToasts,
                               channelId: n.id
@@ -693,7 +693,7 @@ t.Z = function (e) {
         { width: s = 0, ref: o } = (0, b.Z)(),
         { width: c = 0, height: h = 0, ref: p } = (0, b.Z)(),
         { ref: f } = (0, b.Z)(),
-        g = (0, N.bp)(),
+        g = (0, S.bp)(),
         C = (0, w.Z)(),
         x = (0, d.e7)([em.Z], () => {
             var e;
@@ -702,7 +702,7 @@ t.Z = function (e) {
         {
             participants: v,
             filteredParticipants: I,
-            participantsVersion: S,
+            participantsVersion: N,
             mode: y,
             layout: M,
             participantsOpen: L,
@@ -771,7 +771,7 @@ t.Z = function (e) {
         );
     }, [x, y]);
     let eg = (0, B.S)(),
-        eC = (0, eN.Z)(n, !0),
+        eC = (0, eS.Z)(n, !0),
         { hasParticipantsPanel: ex } = (0, eP.Z)({ location: 'ChannelCall' }),
         ev = (0, O.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: e_ } = (0, R.ZP)(P.Z.CHANNEL_CALL),
@@ -781,7 +781,7 @@ t.Z = function (e) {
         value: e_,
         children: (0, i.jsx)(E.Z, {
             page: eO.ZY5.CHANNEL_CALL,
-            children: (0, i.jsx)(eS.B2, {
+            children: (0, i.jsx)(eN.B2, {
                 children: (0, i.jsxs)(eR._A, {
                     children: [
                         (0, i.jsx)(eG, {
@@ -801,7 +801,7 @@ t.Z = function (e) {
                             inCall: x,
                             participants: v,
                             filteredParticipants: I,
-                            participantsVersion: S,
+                            participantsVersion: N,
                             layout: M,
                             chatOpen: U,
                             maxSidebarWidth: s - 550,
@@ -830,7 +830,7 @@ t.Z = function (e) {
                             theme: eZ
                         }),
                         !n.isPrivate() && (0, i.jsx)(eR.YR, {}),
-                        (0, i.jsx)(eS.H_, {})
+                        (0, i.jsx)(eN.H_, {})
                     ]
                 })
             })

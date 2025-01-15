@@ -38,7 +38,7 @@ function d(e) {
         children: (0, i.jsxs)('div', {
             className: u.layoutContainer,
             children: [
-                (0, i.jsx)(a.CircleInformationIcon, {
+                (0, i.jsx)(a.UserPlatformIcon, {
                     size: 'md',
                     className: u.icon
                 }),

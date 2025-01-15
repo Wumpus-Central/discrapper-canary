@@ -13,8 +13,8 @@ var l = t(481060),
 function u(e, n) {
     let t = (0, o.Z)(e, n),
         u = e.hasPotions(),
-        c = (0, a.V1)('Message Context Menu');
-    return t && !u && c
+        d = (0, a.V1)('Message Context Menu');
+    return t && !u && d
         ? (0, i.jsx)(l.MenuItem, {
               id: 'add-confetti-potion',
               label: s.intl.string(s.t.icaJW1),

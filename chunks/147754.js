@@ -1,4 +1,4 @@
-var i = n(818083);
+var i = e(818083);
 t.Z = (0, i.B)({
     kind: 'guild',
     id: '2021-11_hub_events',

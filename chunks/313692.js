@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -26,19 +26,19 @@ var i = n(200651),
     E = n(50493),
     b = n(80560),
     Z = n(696566);
-function N(e) {
+function S(e) {
     var t, n;
-    let { userId: r, guildId: N, location: S, className: T, onNavigate: j } = e,
+    let { userId: r, guildId: S, location: N, className: T, onNavigate: j } = e,
         A = l.useRef(null),
-        y = (0, o.e7)([g.ZP], () => g.ZP.getGuildSidebarState(N), [N]),
+        y = (0, o.e7)([g.ZP], () => g.ZP.getGuildSidebarState(S), [S]),
         P = l.useRef(0),
         [M, R] = l.useState(null !== (t = null == y ? void 0 : y.details.additionalSearchQuery) && void 0 !== t ? t : {}),
-        L = (0, _.z0)(r, N, {
+        L = (0, _.z0)(r, S, {
             addtionalQuery: M,
             shouldDispatch: !0
         }),
         k = (0, o.e7)([x.default], () => x.default.getUser(r), [r]),
-        O = (0, o.e7)([C.ZP], () => C.ZP.getMember(N, r), [N, r]);
+        O = (0, o.e7)([C.ZP], () => C.ZP.getMember(S, r), [S, r]);
     (0, d.N)(() => {
         let e = null == y ? void 0 : y.details.scrollOffset;
         if (null != e) {
@@ -56,13 +56,13 @@ function N(e) {
                 if (null == y) return;
                 let t = e.target.scrollTop;
                 (P.current = t),
-                    (0, v.r)(N, r, y.baseChannelId, {
+                    (0, v.r)(S, r, y.baseChannelId, {
                         modViewPanel: E.k.MESSAGE_HISTORY,
                         additionalSearchQuery: M,
                         scrollOffset: P.current
                     });
             },
-            [N, r, y, M]
+            [S, r, y, M]
         ),
         w = (0, s.throttle)(D, 300),
         B = l.useCallback(
@@ -73,13 +73,13 @@ function N(e) {
                     offset: 25 * e
                 };
                 R(t),
-                    (0, v.r)(N, r, y.baseChannelId, {
+                    (0, v.r)(S, r, y.baseChannelId, {
                         modViewPanel: E.k.MESSAGE_HISTORY,
                         additionalSearchQuery: t,
                         scrollOffset: P.current
                     });
             },
-            [N, r, y, M]
+            [S, r, y, M]
         ),
         U = null !== (n = null == M ? void 0 : M.offset) && void 0 !== n ? n : 0,
         H = (0, o.e7)(
@@ -146,7 +146,7 @@ function N(e) {
               className: a()(b.container, T),
               children: [
                   (0, i.jsx)(I.Z, {
-                      guildId: N,
+                      guildId: S,
                       userId: r,
                       onNavigate: j
                   }),

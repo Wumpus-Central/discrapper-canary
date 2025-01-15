@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(353093),
     b = n(940725),
     Z = n(114487),
-    N = n(979264),
-    S = n(981631),
+    S = n(979264),
+    N = n(981631),
     T = n(921944),
     j = n(388032),
     A = n(498512);
@@ -39,12 +39,12 @@ function y(e) {
         x = (0, v.Cc)(n.id),
         _ = (0, h.ZP)(),
         b = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        S = (0, I.nP)(null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
+        N = (0, I.nP)(null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         T = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: _,
             saturation: 1
         }).hex(),
-        y = (0, I.nj)(S, T, 'top left', 0.3, '30%'),
+        y = (0, I.nj)(N, T, 'top left', 0.3, '30%'),
         P = (0, d.e7)(
             [C.default],
             () => {
@@ -136,7 +136,7 @@ function y(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         className: A.guildTagContainer,
-                                        children: (0, i.jsx)(N.aG, {
+                                        children: (0, i.jsx)(S.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.profile) || void 0 === l ? void 0 : l.tag,
                                             clanBadge: null === (r = n.profile) || void 0 === r ? void 0 : r.badge,
@@ -193,9 +193,9 @@ function P(e) {
             n &&
                 (c.current = window.setTimeout(() => {
                     s(!0),
-                        x.default.track(S.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                        x.default.track(N.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-                            guild_id: null != t ? t : S.lds
+                            guild_id: null != t ? t : N.lds
                         });
                 }, 2500)),
             () => {
@@ -207,7 +207,7 @@ function P(e) {
             if ((s(!1), null != t)) (0, _.SJ)(t);
         }, [, t]),
         p = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : S.lds, !0, T.L.DISMISS);
+            if ((s(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, T.L.DISMISS);
         }, [t]);
     return n && null != t && null != r
         ? (0, i.jsx)(y, {

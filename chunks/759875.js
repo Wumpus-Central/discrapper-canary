@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = t(200651);
@@ -11,10 +11,10 @@ var l = t(481060),
     o = t(245216),
     s = t(996861),
     u = t(388032);
-function c(e, n) {
+function d(e, n) {
     let t = (0, a.a)(e),
-        { canForwardMessages: c } = (0, r.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
-    return t && c
+        { canForwardMessages: d } = (0, r.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
+    return t && d
         ? (0, i.jsx)(l.MenuItem, {
               id: 'forward',
               label: u.intl.string(u.t.I3ltXF),

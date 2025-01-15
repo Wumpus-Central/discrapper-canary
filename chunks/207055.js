@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(131951),
     b = n(496675),
     Z = n(158776),
-    N = n(885110),
-    S = n(797258),
+    S = n(885110),
+    N = n(797258),
     T = n(606304),
     j = n(979651),
     A = n(51144),
@@ -54,11 +54,11 @@ let k = l.memo((e) => {
         ),
         G = (0, h.Z)(null != H ? [H.applicationId] : []),
         F = (0, y.Hr)('voice_users_eligibility_check', !1),
-        V = (0, s.e7)([Z.Z, N.Z], () => (L ? N.Z.getActivities() : Z.Z.getActivities(b, a.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
+        V = (0, s.e7)([Z.Z, S.Z], () => (L ? S.Z.getActivities() : Z.Z.getActivities(b, a.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
         z = (0, s.e7)([u.Z], () => ((null == V ? void 0 : V.application_id) != null ? u.Z.getApplication(null == V ? void 0 : V.application_id) : void 0));
     null != z && y.ZP.trackExposure({ location: 'voice_users' });
     let [W, K] = (0, s.Wu)([v.Z], () => [v.Z.getStreamForUser(b, a.getGuildId()), v.Z.getActiveStreamForUser(b, a.getGuildId())], [a, b]),
-        Y = (0, s.e7)([S.Z], () => S.Z.getSessionById(o)),
+        Y = (0, s.e7)([N.Z], () => N.Z.getSessionById(o)),
         q = A.ZP.useName(r),
         X = (0, s.e7)([j.Z], () => j.Z.getVoicePlatformForChannel(a.id, b), [a.id, b]),
         { enableHangStatus: J } = m.n.useExperiment({
@@ -100,18 +100,18 @@ k.displayName = 'ConnectedVoiceUser';
 let O = [];
 t.Z = function (e) {
     let { allowPreviews: t = !0, allowDragging: n = !0, channel: r, voiceStates: c, collapsed: d, collapsedMax: u = 6, tabIndex: p, location: m, numAudience: f, withGuildIcon: g = !1, className: v, children: I } = e,
-        [E, N] = l.useState(null),
-        [S, T] = l.useState(!1),
+        [E, S] = l.useState(null),
+        [N, T] = l.useState(!1),
         j = l.useRef(null),
         A = (0, C.Es)(r.id, null != c ? c : O),
         y = l.useRef(
             new o.sW(50, () => {
-                N(j.current), (j.current = null);
+                S(j.current), (j.current = null);
             })
         ),
         R = l.useRef(
             new o.sW(175, () => {
-                N(null);
+                S(null);
             })
         ),
         D = l.useCallback(
@@ -163,7 +163,7 @@ t.Z = function (e) {
                     canDrag: n && b.Z.can(M.Plq.MOVE_MEMBERS, r),
                     showPreview: D,
                     hidePreview: w,
-                    previewIsOpen: S,
+                    previewIsOpen: N,
                     shouldShowPreview: E === l.id,
                     tabIndex: p,
                     location: m

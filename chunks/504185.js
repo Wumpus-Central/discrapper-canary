@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(185935),
     b = n(788983),
     Z = n(928518),
-    N = n(703656),
-    S = n(493754),
+    S = n(703656),
+    N = n(493754),
     T = n(880831),
     j = n(73563),
     A = n(800965),
@@ -60,7 +60,7 @@ var i = n(200651),
 let en = 'HasBeenInStageChannel',
     ei = (e, t) => () => {
         let n = e.getGuildId();
-        null != n && null != t && (0, N.XU)(n, t), b.hP(e);
+        null != n && null != t && (0, S.XU)(n, t), b.hP(e);
     },
     el = () => {
         u.Z.wait(() => b.xv(Q.KJ3.CHANNEL_CALL_POPOUT));
@@ -124,7 +124,7 @@ function es(e) {
         a = (0, o.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id)),
         s = l || (null == a ? void 0 : a.invite_code) != null;
     return null != r && s
-        ? (0, i.jsx)(S.Z, {
+        ? (0, i.jsx)(N.Z, {
               channel: t,
               appContext: n,
               className: et.__invalid_leftTrayIcon,
@@ -142,12 +142,12 @@ function eo(e) {
         I = (0, o.e7)([C.Z], () => C.Z.getSelectedParticipant(n.id)),
         E = h && f !== Q.IlC.POPOUT,
         [b, Z] = l.useState(0),
-        { isOnStartStageScreen: N } = (0, F.ZP)();
+        { isOnStartStageScreen: S } = (0, F.ZP)();
     (0, F.MV)(n);
-    let S = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)),
+    let N = (0, o.e7)([R.Z], () => R.Z.getToastsEnabled(n.id)),
         A = (0, J.Z)(n) ? (null != I ? '84px' : '124px') : null != I ? '0px' : '48px';
     return (
-        (t = N
+        (t = S
             ? (0, i.jsx)(q.Z, {
                   channel: n,
                   onContinueClick: () => {
@@ -178,7 +178,7 @@ function eo(e) {
                 g
                     ? (0, i.jsx)(Y.Z, {
                           channel: n,
-                          isOnStartStageScreen: N
+                          isOnStartStageScreen: S
                       })
                     : null,
             renderBottomRight: () =>
@@ -200,7 +200,7 @@ function eo(e) {
                     channel: n
                 }),
             renderChatToasts: () =>
-                !S || p || E
+                !N || p || E
                     ? null
                     : (0, i.jsx)(v.ZP, {
                           children: (0, i.jsx)(T.Z, {
@@ -228,8 +228,8 @@ function ec(e) {
             popoutWindow: Z.Z.getWindow(Q.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: Z.Z.getIsAlwaysOnTop(Q.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        N = null != x && !x.closed,
-        { analyticsLocations: S } = (0, g.ZP)(f.Z.STAGE_CHANNEL_CALL),
+        S = null != x && !x.closed,
+        { analyticsLocations: N } = (0, g.ZP)(f.Z.STAGE_CHANNEL_CALL),
         T = (0, m.bp)(),
         { chatOpen: j, participantsListOpen: A } = (0, o.cj)(
             [C.Z],
@@ -251,9 +251,9 @@ function ec(e) {
     });
     let { width: M = 0, ref: R } = (0, h.Z)(),
         k = M - 550,
-        O = !N || (N && T === Q.IlC.POPOUT);
+        O = !S || (S && T === Q.IlC.POPOUT);
     return (0, i.jsx)(g.Gt, {
-        value: S,
+        value: N,
         children: (0, i.jsxs)(v.B2, {
             children: [
                 (0, i.jsxs)('div', {
@@ -274,7 +274,7 @@ function ec(e) {
                                         showRequestToSpeakSidebar: r,
                                         popoutWindow: x,
                                         popoutWindowAlwaysOnTop: b,
-                                        popoutOpen: N,
+                                        popoutOpen: S,
                                         chatOpen: j
                                     })
                                 })

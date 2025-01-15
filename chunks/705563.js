@@ -38,23 +38,23 @@ function x(e) {
             };
         }),
         Z = (0, l.e7)([o.Z], () => (null != E ? o.Z.getMemberCount(E) : 0)),
-        N = null != b && (null != Z ? Z : 0) >= b,
-        { approveRequest: S, rejectRequest: T, submitting: j } = (0, m.s)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId, null == _ ? void 0 : _.joinRequestId);
+        S = null != b && (null != Z ? Z : 0) >= b,
+        { approveRequest: N, rejectRequest: T, submitting: j } = (0, m.s)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId, null == _ ? void 0 : _.joinRequestId);
     return null != _ && _.applicationStatus === p.wB.SUBMITTED && I
         ? (0, i.jsxs)('div', {
               className: C.buttons,
               children: [
                   (0, i.jsx)(r.Tooltip, {
                       text: g.intl.string(g.t.RbIXi4),
-                      shouldShow: N,
+                      shouldShow: S,
                       children: (e) =>
                           (0, i.jsx)(r.Button, {
                               ...e,
                               color: r.Button.Colors.GREEN,
                               submitting: j,
-                              onClick: S,
+                              onClick: N,
                               size: r.ButtonSizes.SMALL,
-                              disabled: N,
+                              disabled: S,
                               children: g.intl.string(g.t.BzjDQE)
                           })
                   }),

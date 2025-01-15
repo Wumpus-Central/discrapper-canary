@@ -10,8 +10,8 @@ var i = t(200651),
     o = t(543241),
     s = t(222677),
     u = t(995774),
-    c = t(665906),
-    d = t(695346),
+    d = t(665906),
+    c = t(695346),
     m = t(496675),
     g = t(768581),
     f = t(585483),
@@ -21,10 +21,10 @@ var i = t(200651),
     v = t(388032);
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        g = (0, c.$R)(n),
+        g = (0, d.$R)(n),
         p = (0, r.e7)([m.Z], () => (n.isPrivate() || m.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
         x = (0, o.MZ)(n.getGuildId());
-    if (!d.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
     let S = x
         .filter(
             (e) =>
@@ -36,12 +36,12 @@ function p(e, n) {
         )
         .slice(0, 12)
         .map((l, r) => {
-            var o, c;
+            var o, d;
             return (0, i.jsx)(
                 a.MenuItem,
                 {
                     color: 'default',
-                    id: null !== (c = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== c ? c : l.name,
+                    id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
                         (0, i.jsx)(M, {

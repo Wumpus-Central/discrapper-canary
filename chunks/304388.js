@@ -43,10 +43,10 @@ t.Z = l.forwardRef(function (e, t) {
         }),
         [x, g]
     );
-    let N = (C && !h) || f;
+    let S = (C && !h) || f;
     return (0, i.jsx)(r.Popout, {
         animation: r.Popout.Animation.FADE,
-        shouldShow: N,
+        shouldShow: S,
         animationPosition: 'top',
         position: 'top',
         align: u,
@@ -56,7 +56,7 @@ t.Z = l.forwardRef(function (e, t) {
         },
         renderPopout: (e) =>
             (0, i.jsx)(c, {
-                isHovered: N,
+                isHovered: S,
                 onFocus: () => g(!0),
                 onMouseEnter: v,
                 onMouseLeave: b,

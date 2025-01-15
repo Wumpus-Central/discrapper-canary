@@ -11,8 +11,8 @@ var i = t(200651),
     o = t(436774),
     s = t(2818),
     u = t(324701),
-    c = t(575016),
-    d = t(768943),
+    d = t(575016),
+    c = t(768943),
     m = t(175006),
     g = t(742989),
     f = t(898150),
@@ -21,7 +21,7 @@ var i = t(200651),
 function I(e) {
     let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: t } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        I = (0, r.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
+        I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
         v = (function (e) {
             let { message: n, savedMessage: t } = e,
                 [r, o] = l.useState(new Date());
@@ -41,16 +41,16 @@ function I(e) {
                         }),
                     [n.channel_id, n.id]
                 ),
-                d = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
-                { dueInText: m } = (0, c.AT)({
+                c = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
+                { dueInText: m } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
                     now: r,
-                    type: c.hQ.LONG
+                    type: d.hQ.LONG
                 });
             return (null == t ? void 0 : t.saveData.dueAt) == null
                 ? (0, i.jsx)(a.MenuGroup, {
                       label: E.intl.string(E.t.roMu1N),
-                      children: d
+                      children: c
                   })
                 : (0, i.jsxs)(a.MenuGroup, {
                       label: m,
@@ -69,7 +69,7 @@ function I(e) {
                           (0, i.jsx)(a.MenuItem, {
                               id: 'edit-reminder',
                               label: E.intl.string(E.t.vrbqs7),
-                              children: d
+                              children: c
                           })
                       ]
                   });

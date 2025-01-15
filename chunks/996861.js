@@ -1,6 +1,6 @@
 t.d(n, {
     $Z: function () {
-        return N;
+        return T;
     },
     B8: function () {
         return b;
@@ -18,13 +18,13 @@ t.d(n, {
         return C;
     },
     dF: function () {
-        return O;
-    },
-    eM: function () {
         return R;
     },
+    eM: function () {
+        return O;
+    },
     fB: function () {
-        return T;
+        return N;
     },
     gK: function () {
         return D;
@@ -56,8 +56,8 @@ var i = t(332148),
     s = t(434404);
 t(726521);
 var u = t(623292),
-    c = t(324701),
-    d = t(488131),
+    d = t(324701),
+    c = t(488131),
     m = t(314897),
     g = t(592125),
     f = t(626135),
@@ -76,14 +76,14 @@ function Z(e) {
 function j(e, n, t) {
     (0, E.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
 }
-function T(e, n) {
+function N(e, n) {
     f.default.track(S.rMx.MESSAGE_LINK_COPIED, {
         message_id: n.id,
         channel: n.channel_id
     }),
         (0, E.JG)((0, h.wR)(e.guild_id, e.id, n.id));
 }
-function N(e, n, t) {
+function T(e, n, t) {
     n.state === S.yb.SEND_FAILED || t.shiftKey ? l.Z.deleteMessage(e.id, n.id, n.state === S.yb.SEND_FAILED) : r.Z.confirmDelete(e, n);
 }
 function _(e, n) {
@@ -117,20 +117,20 @@ function y(e, n, t) {
         I.S.dispatchToLastSubscribed(S.CkL.TEXTAREA_FOCUS);
 }
 function D(e, n) {
-    (0, d.R6)(e, n, 'Message');
+    (0, c.R6)(e, n, 'Message');
 }
 function L(e, n) {
     let t = g.Z.getChannel(v.default.castMessageIdAsChannelId(n.id));
-    null != t && (0, d.ok)(t);
+    null != t && (0, c.ok)(t);
 }
-function O(e, n) {
-    (0, c.z)({
+function R(e, n) {
+    (0, d.z)({
         channelId: e.id,
         messageId: n.id
     });
 }
-function R(e, n) {
-    (0, c.x)({
+function O(e, n) {
+    (0, d.x)({
         channelId: e.id,
         messageId: n.id
     });

@@ -12,8 +12,8 @@ var i = t(200651),
     o = t(236413),
     s = t(727072),
     u = t(85960),
-    c = t(676317),
-    d = t(65912),
+    d = t(676317),
+    c = t(65912),
     m = t(556012),
     g = t(572456),
     f = t(434404),
@@ -24,10 +24,10 @@ var i = t(200651),
 let p = E.fX.KEYWORD;
 function M(e, n) {
     let { perGuildMaxCount: t } = u.I6[p],
-        { isLoading: M, saveRule: x, errorMessage: S } = (0, d.w)(),
-        { createNewEditingRule: Z } = (0, d.V)(),
-        [j, T] = l.useState(!1),
-        [N, _] = (0, s.I2)(n),
+        { isLoading: M, saveRule: x, errorMessage: S } = (0, c.w)(),
+        { createNewEditingRule: Z } = (0, c.V)(),
+        [j, N] = l.useState(!1),
+        [T, _] = (0, s.I2)(n),
         { rulesByTriggerType: b, updateRule: A } = (0, s.pH)(n),
         C = l.useMemo(() => {
             var e;
@@ -35,7 +35,7 @@ function M(e, n) {
         }, [b]),
         P = 0 === C.length,
         y = t > C.length && !P;
-    if (!l.useMemo(() => (0, c.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
+    if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
     let D = e.split(' '),
         L = D.length;
     try {
@@ -43,7 +43,7 @@ function M(e, n) {
     } catch (e) {
         return null;
     }
-    let O = () => {
+    let R = () => {
             if (null != n)
                 (0, a.Zy)(),
                     f.Z.open(n, h.pNK.GUILD_AUTOMOD),
@@ -57,7 +57,7 @@ function M(e, n) {
                         });
                     }, 400);
         },
-        R = async (n) => {
+        O = async (n) => {
             var t, i;
             if (((0, a.Zy)(), !(await (0, g.XN)(n.name, e)))) return;
             let l = {
@@ -76,14 +76,14 @@ function M(e, n) {
             })
         });
     return (
-        !N &&
+        !T &&
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
                     P &&
                         (0, i.jsx)(r.MenuItem, {
                             id: 'add-first-rule',
                             label: I.intl.string(I.t.f72Zqa),
-                            action: O,
+                            action: R,
                             disabled: M
                         }),
                     C.map((e) => {
@@ -110,7 +110,7 @@ function M(e, n) {
                                 group: 'automod-rule-selection',
                                 checked: !1,
                                 disabled: M,
-                                action: () => R(e)
+                                action: () => O(e)
                             },
                             e.id
                         );
@@ -122,7 +122,7 @@ function M(e, n) {
                                 (0, i.jsx)(r.MenuItem, {
                                     id: 'add-another-rule',
                                     label: I.intl.string(I.t['0K5jDA']),
-                                    action: O,
+                                    action: R,
                                     disabled: M
                                 })
                             ]
@@ -133,7 +133,7 @@ function M(e, n) {
             id: 'guild-automod-add-selection',
             label: I.intl.formatToPlainString(I.t.Kkjv1t, { keywordCount: L }),
             onFocus: () => {
-                if (!j) T(!0), _();
+                if (!j) N(!0), _();
             },
             children: G
         })

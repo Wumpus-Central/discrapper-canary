@@ -6,8 +6,8 @@ var i = t(200651),
     o = t(481060),
     s = t(332148),
     u = t(904245),
-    c = t(933557),
-    d = t(576855),
+    d = t(933557),
+    c = t(576855),
     m = t(372900),
     g = t(726521),
     f = t(294218),
@@ -39,7 +39,7 @@ class Z extends l.PureComponent {
             u = l.type === p.d4z.GUILD_ANNOUNCEMENT && (0, I.yE)(r.flags, p.iLy.CROSSPOSTED);
         return (
             a &&
-                (e = (0, i.jsx)(d.Z, {
+                (e = (0, i.jsx)(c.Z, {
                     className: x.spacingTop,
                     children: M.intl.format(M.t.IxY7Ex, {})
                 })),
@@ -97,7 +97,7 @@ n.Z = {
     confirmPin: function (e, n) {
         (0, o.openModal)((t) => {
             let l;
-            let r = (0, c.F6)(e, E.default, h.Z);
+            let r = (0, d.F6)(e, E.default, h.Z);
             return (
                 (l = e.isPrivate() ? M.intl.string(M.t.hMRngI) : M.intl.formatToPlainString(M.t['3IRluL'], { channelName: r })),
                 (0, i.jsx)(m.Z.Provider, {
@@ -154,7 +154,7 @@ n.Z = {
                                 disableInteraction: !0
                             })
                         }),
-                        (0, i.jsx)(d.Z, { children: M.intl.format(M.t.oCVB3d, {}) })
+                        (0, i.jsx)(c.Z, { children: M.intl.format(M.t.oCVB3d, {}) })
                     ]
                 })
             })
