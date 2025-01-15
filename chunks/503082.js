@@ -98,7 +98,7 @@ class d extends a.Z {
         null != this.context && this.context.restore();
     }
     rotateAroundOriginAndDraw(t, e, i) {
-        null != this.context && (this.context.save(), this.context.translate(t.x, t.y), this.context.rotate(e), i(), this.context.restore());
+        null != this.context && (this.context.save(), this.context.translate(t.x, t.y), this.context.rotate((e * Math.PI) / 180), i(), this.context.restore());
     }
     drawRect(t) {
         let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],

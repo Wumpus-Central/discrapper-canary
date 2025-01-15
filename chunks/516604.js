@@ -3,19 +3,19 @@ var r = n(192379),
     i = n(570140),
     a = n(4646),
     u = n(258340),
-    c = n(768581),
-    l = n(176354);
+    o = n(768581),
+    c = n(176354);
 t.Z = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 30,
-        { update: n, draw: s, emit: o, shouldTick: d } = (0, u.Z)(e),
+        { update: n, draw: l, emit: s, shouldTick: d } = (0, u.Z)(e),
         f = r.useMemo(() => new a.ZP(), []),
         h = r.useCallback(
             (e) => {
-                (e.assetMap = f), s(e);
+                (e.assetMap = f), l(e);
             },
-            [f, s]
+            [f, l]
         ),
-        [m, w] = r.useState(!1),
+        [w, m] = r.useState(!1),
         v = r.useRef();
     return (
         r.useEffect(() => {
@@ -25,20 +25,20 @@ t.Z = function (e) {
                     i = null !== (n = r.id) && void 0 !== n ? n : r.name,
                     a =
                         null == r.id
-                            ? l.ZP.getURL(r.name)
-                            : c.ZP.getEmojiURL({
+                            ? c.ZP.getURL(r.name)
+                            : o.ZP.getEmojiURL({
                                   id: r.id,
                                   animated: !1,
                                   size: 64,
                                   forcePNG: !0
                               });
-                await f.loadRemoteImage(i, a), o(i, t), w(!0);
+                await f.loadRemoteImage(i, a), s(i, t), m(!0);
             }
             return i.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => i.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
         }),
         r.useEffect(() => {
             let e = () => {
-                d.current ? (v.current = setTimeout(e, 1000)) : (w(!1), (v.current = null));
+                d.current ? (v.current = setTimeout(e, 1000)) : (m(!1), (v.current = null));
             };
             return (
                 (v.current = setTimeout(e, 1000)),
@@ -46,11 +46,11 @@ t.Z = function (e) {
                     null != v.current && clearTimeout(v.current);
                 }
             );
-        }, [m, d]),
+        }, [w, d]),
         {
             update: n,
             draw: h,
-            playing: m
+            playing: w
         }
     );
 };

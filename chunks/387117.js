@@ -6,6 +6,7 @@ r.d(n, {
 var i = r(47120);
 let a = {
     Modules: {
+        chat: { RESIZE_HANDLE_WIDTH: { resolve: () => 8 } },
         modal: {
             HORIZONTAL_PADDING: {
                 resolve(e) {
@@ -16,7 +17,6 @@ let a = {
                 }
             },
             VERTICAL_PADDING: { resolve: () => 16 }
-        },
-        chat: { RESIZE_HANDLE_WIDTH: { resolve: () => 8 } }
+        }
     }
 };

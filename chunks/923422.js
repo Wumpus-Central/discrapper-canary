@@ -13,53 +13,53 @@ var r = n(200651),
     h = n(991346),
     m = n(606669),
     x = n(53432),
-    f = n(74869),
-    M = n(45570),
+    M = n(74869),
+    f = n(45570),
     b = n(308512),
     j = n(594791),
     Z = n(393431),
     S = n(69021),
-    I = n(981631),
-    v = n(388032);
+    C = n(981631),
+    I = n(388032);
 t.default = (0, c.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
             [c, s] = i.useState(!1),
-            C = (0, M.Z)(),
-            E = (0, b.Z)(),
+            E = (0, f.Z)(),
+            v = (0, b.Z)(),
             y = (0, x.Z)(),
             k = (0, m.Z)(),
             R = (0, Z.Z)(),
-            D = (0, j.Z)(),
-            O = (0, f.Z)(),
-            T = (0, S.Z)(),
-            { analyticsLocations: A } = (0, d.ZP)(),
-            G = i.useMemo(() => (0, g.j)(), []);
-        async function N() {
+            P = (0, j.Z)(),
+            D = (0, M.Z)(),
+            O = (0, S.Z)(),
+            { analyticsLocations: T } = (0, d.ZP)(),
+            A = i.useMemo(() => (0, g.j)(), []);
+        async function G() {
             try {
                 s(!0), await (0, p.bF)(), window.location.reload(!0);
             } catch (e) {
                 s(!1);
             }
         }
-        let P = (e) => {
+        let N = (e) => {
                 switch (e) {
-                    case I.oAB.GAMES:
-                        return C;
-                    case I.oAB.STREAMER_MODE:
+                    case C.oAB.GAMES:
                         return E;
-                    case I.oAB.APPEARANCE:
+                    case C.oAB.STREAMER_MODE:
+                        return v;
+                    case C.oAB.APPEARANCE:
                         return y;
-                    case I.oAB.ACCESSIBILITY:
+                    case C.oAB.ACCESSIBILITY:
                         return k;
-                    case I.oAB.VOICE:
+                    case C.oAB.VOICE:
                         return R;
-                    case I.oAB.TEXT:
+                    case C.oAB.TEXT:
+                        return P;
+                    case C.oAB.EXPERIMENTS:
                         return D;
-                    case I.oAB.EXPERIMENTS:
+                    case C.oAB.DEVELOPER_OPTIONS:
                         return O;
-                    case I.oAB.DEVELOPER_OPTIONS:
-                        return T;
                     default:
                         return null;
                 }
@@ -71,11 +71,11 @@ t.default = (0, c.Z)(
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, r.jsx)(d.Gt, {
-            value: A,
+            value: T,
             children: (0, r.jsxs)(l.Menu, {
                 navId: 'user-settings-cog',
                 onClose: a.Zy,
-                'aria-label': v.intl.string(v.t.opYYHh),
+                'aria-label': I.intl.string(I.t.opYYHh),
                 onSelect: n,
                 children: [
                     B.map((e) => {
@@ -90,20 +90,20 @@ t.default = (0, c.Z)(
                                     null != i
                                         ? i()
                                         : (function (e, t) {
-                                              let n = Object.values(I.oAB).filter((t) => t === e)[0];
+                                              let n = Object.values(C.oAB).filter((t) => t === e)[0];
                                               null != n && u.Z.open(n, void 0, { analyticsLocations: t });
-                                          })(t, A),
-                                children: P(t)
+                                          })(t, T),
+                                children: N(t)
                             },
                             a
                         );
                     }),
-                    e.user.isStaff() && G.length > 0
+                    e.user.isStaff() && A.length > 0
                         ? (0, r.jsx)(l.MenuItem, {
                               label: 'Build overrides',
                               id: 'build_overrides',
                               children: (0, r.jsx)(l.MenuGroup, {
-                                  children: G.map((e) =>
+                                  children: A.map((e) =>
                                       (0, r.jsx)(
                                           l.MenuRadioItem,
                                           {
@@ -126,8 +126,8 @@ t.default = (0, c.Z)(
                               children: (0, r.jsx)(l.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: c,
-                                  label: v.intl.string(v.t['/Nz9ra']),
-                                  action: N,
+                                  label: I.intl.string(I.t['/Nz9ra']),
+                                  action: G,
                                   color: 'danger'
                               })
                           })

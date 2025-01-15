@@ -1,15 +1,15 @@
 n.d(t, {
     z: function () {
-        return c;
+        return o;
     }
 });
 var r = n(200651),
     i = n(192379),
     a = n(658312),
     u = n(503082);
-let c = (e) => {
-    let { drawCallback: t, size: n, fps: c = 60, useOffscreen: l = !0, playing: s = !0 } = e,
-        o = i.useRef(null),
+let o = (e) => {
+    let { drawCallback: t, size: n, fps: o = 60, useOffscreen: c = !0, playing: l = !0 } = e,
+        s = i.useRef(null),
         d = i.useRef();
     i.useEffect(() => {
         null != d.current && d.current.setSize(n);
@@ -18,15 +18,15 @@ let c = (e) => {
             null != d.current && d.current.setSize(n);
         }, [n]),
         i.useEffect(() => {
-            if (null != o.current) {
-                let e = new u.Z(o.current);
-                (d.current = e), l && e.setupOffscreenCanvas();
+            if (null != s.current) {
+                let e = new u.Z(s.current);
+                (d.current = e), c && e.setupOffscreenCanvas();
             }
-        }, [o, l, n]);
+        }, [s, c, n]);
     let {
         ticking: f,
         stop: h,
-        reset: m
+        reset: w
     } = (0, a.Z)((e) => {
         if (null != d.current) {
             let { width: n, height: r } = d.current.canvas;
@@ -38,11 +38,11 @@ let c = (e) => {
             }),
                 t(d.current, e / 1000);
         }
-    }, 1000 / c);
+    }, 1000 / o);
     return (
         i.useEffect(() => {
-            s && !f.current && m(), !s && h();
-        }, [s, m, h, f]),
-        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: o }) })
+            l && !f.current && w(), !l && h();
+        }, [l, w, h, f]),
+        (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: s }) })
     );
 };
