@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(476183),
-    a = n(442837),
+    a = n(476183),
+    r = n(442837),
     s = n(780384),
     o = n(481060),
     c = n(435064),
@@ -33,9 +33,9 @@ function I(e) {
         _ = (0, l.useRef)(null),
         x = d.n.getState().clipsButtonRef,
         E = (0, m.V9)(t),
-        C = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        Z = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
-        y = (0, l.useRef)();
+        C = (0, r.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        y = (0, r.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
+        Z = (0, l.useRef)();
     l.useEffect(
         () => () => {
             (0, u.Gh)(E);
@@ -56,7 +56,7 @@ function I(e) {
         },
         T = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
-            if (((y.current = t), e.timestamp !== C || null == t || n)) return h;
+            if (((Z.current = t), e.timestamp !== C || null == t || n)) return h;
             let { top: i, left: l } = t;
             return {
                 top: i + 36,
@@ -67,7 +67,7 @@ function I(e) {
         },
         A = (0, l.useRef)(null),
         N = (0, o.useTransition)(
-            Z,
+            y,
             {
                 keys: (e) => e.timestamp,
                 ref: A,
@@ -79,7 +79,7 @@ function I(e) {
         ),
         w = (0, l.useRef)(null),
         j = (0, o.useTransition)(
-            Z,
+            y,
             {
                 ref: w,
                 keys: (e) => e.timestamp,
@@ -102,23 +102,23 @@ function I(e) {
                         height: 0,
                         width: 0,
                         ...(() => {
-                            if (null != y.current)
+                            if (null != Z.current)
                                 return {
-                                    top: y.current.top + 12,
-                                    left: y.current.left + 12
+                                    top: Z.current.top + 12,
+                                    left: Z.current.left + 12
                                 };
                         })()
                     })
                 },
                 config: I.enabled ? S : v,
                 onRest: (e, t) => {
-                    null != t.item && null != Z.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
+                    null != t.item && null != y.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
                 }
             },
             'animate-always'
         );
     return (
-        (0, r.useChain)([A, w], [0, 0.1], 3000),
+        (0, a.useChain)([A, w], [0, 0.1], 3000),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
@@ -128,7 +128,7 @@ function I(e) {
                 N(
                     (e, t) =>
                         null != t &&
-                        (0, i.jsx)(r.animated.div, {
+                        (0, i.jsx)(a.animated.div, {
                             className: p.whiteFlash,
                             style: e
                         })
@@ -139,7 +139,7 @@ function I(e) {
                         children: j(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
-                                (0, i.jsx)(r.animated.img, {
+                                (0, i.jsx)(a.animated.img, {
                                     src: t.thumbnail,
                                     className: p.movingImage,
                                     style: e

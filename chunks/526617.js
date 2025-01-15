@@ -254,7 +254,7 @@ function eh(e) {
                 if (null != v && !A) return v(e);
                 let r = (0, B.Nq)(eC, e, i, !1);
                 if (null != v && A && r) v(e);
-                else if (!x && r) {
+                else if (!x && r && (0, B.C0)(i)) {
                     var a;
                     (0, B.GN)(e, null !== (a = null == i ? void 0 : i.id) && void 0 !== a ? a : q.lds, n),
                         ex &&

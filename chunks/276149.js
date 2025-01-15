@@ -6,15 +6,15 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(287734),
-    a = n(19780),
+    a = n(287734),
+    r = n(19780),
     s = n(626135),
     o = n(915863),
     c = n(981631),
     u = n(388032);
 function d(e) {
     let { className: t, color: n, look: d, hangStatusChannel: m, onAction: f } = e,
-        p = (0, l.e7)([a.Z], () => a.Z.getChannelId() === m.id);
+        p = (0, l.e7)([r.Z], () => r.Z.getChannelId() === m.id);
     return (0, i.jsx)(
         o.Z,
         {
@@ -22,7 +22,7 @@ function d(e) {
             disabled: p,
             onClick: () => {
                 null == f || f(),
-                    r.default.selectVoiceChannel(m.id),
+                    a.default.selectVoiceChannel(m.id),
                     s.default.track(c.rMx.HANG_STATUS_CTA_CLICKED, {
                         source: 'UserProfilePopout',
                         guild_id: m.guild_id,

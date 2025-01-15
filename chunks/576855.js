@@ -3,21 +3,21 @@ var r,
     u,
     l,
     o = n(200651),
-    s = n(192379),
-    a = n(120356),
-    c = n.n(a),
+    a = n(192379),
+    c = n(120356),
+    s = n.n(c),
     d = n(481060),
     E = n(388032),
     f = n(387630);
-let _ = {
+let p = {
     BLOCK: f.block,
     INLINE: f.inline
 };
-class S extends (l = s.PureComponent) {
+class _ extends (l = a.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
+        let { children: e, className: t, textClassName: n, type: r = p.BLOCK, style: i } = this.props;
         return (0, o.jsxs)('div', {
-            className: c()(t, r),
+            className: s()(t, r),
             style: i,
             children: [
                 (0, o.jsxs)(d.Text, {
@@ -28,7 +28,7 @@ class S extends (l = s.PureComponent) {
                     children: [E.intl.string(E.t['8tvIiI']), ':']
                 }),
                 (0, o.jsx)(d.Text, {
-                    className: c()(f.tip, n),
+                    className: s()(f.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -36,9 +36,9 @@ class S extends (l = s.PureComponent) {
         });
     }
 }
-(r = S),
+(r = _),
     (i = 'Types'),
-    (u = _),
+    (u = p),
     i in r
         ? Object.defineProperty(r, i, {
               value: u,
@@ -47,4 +47,4 @@ class S extends (l = s.PureComponent) {
               writable: !0
           })
         : (r[i] = u),
-    (t.Z = S);
+    (t.Z = _);

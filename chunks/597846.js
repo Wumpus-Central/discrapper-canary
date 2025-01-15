@@ -26,7 +26,7 @@ let l = (e) => {
     let {
         ticking: f,
         stop: h,
-        reset: w
+        reset: m
     } = (0, a.Z)((e) => {
         if (null != d.current) {
             let { width: n, height: r } = d.current.canvas;
@@ -41,8 +41,8 @@ let l = (e) => {
     }, 1000 / l);
     return (
         i.useEffect(() => {
-            o && !f.current && w(), !o && h();
-        }, [o, w, h, f]),
+            o && !f.current && m(), !o && h();
+        }, [o, m, h, f]),
         (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: s }) })
     );
 };

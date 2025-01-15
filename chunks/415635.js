@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(772848),
-    a = n(442837),
+    a = n(772848),
+    r = n(442837),
     s = n(570140),
     o = n(607070),
     c = n(367907),
@@ -19,25 +19,25 @@ var i = n(200651),
     h = n(776850);
 function g(e) {
     let { channelId: t, guildId: n, userId: g, containerDimensions: v } = e,
-        S = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        S = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         [I, _] = l.useState([]),
         x = I.length < 50;
     l.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: l, userId: a, emoji: s, animationType: o, animationId: f } = e;
-            if ((null != g && g !== a) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
+            let { channelId: l, userId: r, emoji: s, animationType: o, animationId: f } = e;
+            if ((null != g && g !== r) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
             let h = null != s && null != o && null != f;
             if (l === t && !S && x && h) {
                 let e = (0, m._r)(s),
                     i = null != s.id && !s.animated,
                     l = {
-                        id: (0, r.Z)(),
+                        id: (0, a.Z)(),
                         animationType: o,
                         animationId: f,
                         shouldResize: i,
                         url: e,
-                        userId: a
+                        userId: r
                     };
                 _((e) => [...e, l]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {

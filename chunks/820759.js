@@ -21,7 +21,7 @@ let a = () => (0, i.jsx)('hr', { className: s.sectionDivider }),
                     children: t
                 }),
                 (0, i.jsx)('div', {
-                    style: { display: 'flex' },
+                    className: s.container,
                     children: n
                 })
             ]

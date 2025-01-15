@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(846027),
-    a = n(468026),
+    a = n(846027),
+    r = n(468026),
     s = n(503856),
     o = n(388032);
 function c(e, t, c) {
@@ -20,7 +20,7 @@ function c(e, t, c) {
     }
     if (t) {
         (0, l.openModal)((e) =>
-            (0, i.jsx)(a.default, {
+            (0, i.jsx)(r.default, {
                 ...e,
                 title: o.intl.string(o.t.FJSZVF),
                 body: o.intl.string(o.t.etJjgY)
@@ -30,7 +30,7 @@ function c(e, t, c) {
     }
     if (e) {
         (0, l.openModal)((e) =>
-            (0, i.jsx)(a.default, {
+            (0, i.jsx)(r.default, {
                 ...e,
                 title: o.intl.string(o.t['+JQCa2']),
                 body: o.intl.string(o.t.hsNm7e)
@@ -38,5 +38,5 @@ function c(e, t, c) {
         );
         return;
     }
-    r.Z.toggleSelfMute({ location: c });
+    a.Z.toggleSelfMute({ location: c });
 }

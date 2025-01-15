@@ -1,8 +1,8 @@
 n(47120), n(724458);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(46973),
     c = n(570140),
@@ -26,7 +26,7 @@ function C(e, t, n) {
         }),
         l = (0, v.PH)(i, null != t ? t : S.ME, e.id);
     _.set(e.id, l);
-    let r = {
+    let a = {
         type: I.fO.USER,
         user: e,
         id: e.id,
@@ -40,15 +40,15 @@ function C(e, t, n) {
         userNick: m.ZP.getName(t, n, e),
         localVideoDisabled: !1
     };
-    x.set(e.id, r);
+    x.set(e.id, a);
 }
-function Z(e) {
+function y(e) {
     let t = _.delete(e),
         n = x.delete(e),
         i = E.delete(e);
     return t || n || i;
 }
-function y() {
+function Z() {
     var e;
     let t = p.Z.getChannelId();
     if (null == t) return !1;
@@ -71,7 +71,7 @@ function b() {
 }
 class T extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, h.default, f.Z, p.Z), this.syncWith([h.default], y);
+        this.waitFor(g.Z, h.default, f.Z, p.Z), this.syncWith([h.default], Z);
     }
     get desyncedVoiceStatesCount() {
         return _.size();
@@ -86,15 +86,15 @@ class T extends (i = s.ZP.Store) {
         return x.values();
     }
 }
-(a = 'RTCConnectionDesyncStore'),
-    (r = 'displayName') in (l = T)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'RTCConnectionDesyncStore'),
+    (a = 'displayName') in (l = T)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new T(c.Z, {
         CONNECTION_OPEN: function () {
             b();
@@ -112,7 +112,7 @@ class T extends (i = s.ZP.Store) {
                 null != n &&
                 t.reduce((e, t) => {
                     let { userId: i, channelId: l } = t;
-                    return (l === n && !!Z(i)) || e;
+                    return (l === n && !!y(i)) || e;
                 }, !1)
             );
         },
@@ -129,6 +129,6 @@ class T extends (i = s.ZP.Store) {
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, context: n } = e;
-            return n === o.Yn.DEFAULT && Z(t);
+            return n === o.Yn.DEFAULT && y(t);
         }
     }));

@@ -6,13 +6,13 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(557711),
-    r = n(620662),
-    a = n(503438),
+    a = n(620662),
+    r = n(503438),
     s = n(981631),
     o = n(17169);
 function c(e) {
     let { activity: t, user: n, guildId: c, channelId: u, source: d, look: m, color: f, onAction: p } = e;
-    return null != t && (0, r.Z)(t, s.xjy.SYNC) && (0, a.Z)(t)
+    return null != t && (0, a.Z)(t, s.xjy.SYNC) && (0, r.Z)(t)
         ? (0, i.jsx)(
               l.Z,
               {

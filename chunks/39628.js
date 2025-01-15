@@ -1,9 +1,9 @@
 n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(846519),
     c = n(600164),
     u = n(831074);
@@ -40,10 +40,10 @@ function p(e) {
     let { time: t, padLargestUnit: n } = e,
         i = Math.floor(t) % 60,
         l = Math.floor(t / 60) % 60,
-        r = Math.floor(t / 3600);
-    return 0 === r ? (n ? ''.concat(f(l), ':').concat(f(i)) : ''.concat(l, ':').concat(f(i))) : n ? ''.concat(f(r), ':').concat(f(l), ':').concat(f(i)) : ''.concat(r, ':').concat(f(l), ':').concat(f(i));
+        a = Math.floor(t / 3600);
+    return 0 === a ? (n ? ''.concat(f(l), ':').concat(f(i)) : ''.concat(l, ':').concat(f(i))) : n ? ''.concat(f(a), ':').concat(f(l), ':').concat(f(i)) : ''.concat(a, ':').concat(f(l), ':').concat(f(i));
 }
-class h extends (i = r.PureComponent) {
+class h extends (i = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -53,11 +53,11 @@ class h extends (i = r.PureComponent) {
         this.timer.stop();
     }
     render() {
-        let { start: e, end: t, className: n, themed: i, singleLine: r = !1 } = this.props,
-            { now: a } = this.state,
+        let { start: e, end: t, className: n, themed: i, singleLine: a = !1 } = this.props,
+            { now: r } = this.state,
             o = (t - e) / 1000,
-            d = Math.max(Math.min((a - e) / 1000, o), 0);
-        return r
+            d = Math.max(Math.min((r - e) / 1000, o), 0);
+        return a
             ? (0, l.jsxs)('div', {
                   className: s()(n, { [u.themed]: i }, u.singleLineContainer),
                   children: [

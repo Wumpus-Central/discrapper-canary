@@ -17,9 +17,9 @@ var i = n(990547);
 n(804098);
 var r = n(544891),
     l = n(729345),
-    a = n(210887);
+    o = n(210887);
 n(358085);
-var o = n(573261),
+var a = n(573261),
     s = n(981631),
     u = n(388032);
 async function d() {
@@ -79,7 +79,7 @@ async function h(e, t, n) {
         },
         {
             name: 'theme',
-            value: a.Z.theme
+            value: o.Z.theme
         }
     ];
     '' !== e.description &&
@@ -142,7 +142,7 @@ async function h(e, t, n) {
             })),
         (0, l.E)(s.GU0.WEB_APP);
     try {
-        return await o.Z.post({
+        return await a.Z.post({
             url: s.ANM.BUG_REPORTS,
             attachments: n,
             fields: d,

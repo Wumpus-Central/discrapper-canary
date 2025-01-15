@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(70097),
-    a = n(576645),
+    a = n(70097),
+    r = n(576645),
     s = n(22728);
 function o(e) {
     let { baseTileRef: t, cleanup: n } = e,
-        o = (0, a.bK)(),
+        o = (0, r.bK)(),
         c = (0, l.useRef)(o);
     return null == t || 0 === t.offsetHeight || c.current
         ? null
@@ -20,7 +20,7 @@ function o(e) {
                   height: 1.22 * t.offsetHeight
               },
               className: s.demoEffectOverlay,
-              children: (0, i.jsx)(r.Z, {
+              children: (0, i.jsx)(a.Z, {
                   autoPlay: !0,
                   className: s.demoEffectImg,
                   onEnded: n,

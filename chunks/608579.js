@@ -7,15 +7,15 @@ t.d(n, {
 var i = t(200651),
     l = t(192379),
     s = t(120356),
-    r = t.n(s),
-    a = t(119617),
+    a = t.n(s),
+    r = t(119617),
     o = t(442837),
     d = t(570140),
     c = t(100527),
     u = t(906732),
     h = t(597688),
-    f = t(317951),
-    x = t(987209),
+    x = t(317951),
+    f = t(987209),
     C = t(563132),
     m = t(409813),
     g = t(791785),
@@ -31,16 +31,16 @@ var i = t(200651),
     M = t(123955);
 function y(e) {
     var n;
-    let { onClose: t, onComplete: s, onStepChange: y, transitionState: Z, loadId: A, skuId: O, isGift: P = !1, giftRecipient: k, giftMessage: b, giftingOrigin: L, analyticsLocations: D, returnRef: G } = e,
-        { analyticsLocations: R } = (0, u.ZP)([...D, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        B = l.useRef(new a.qA()),
+    let { onClose: t, onComplete: s, onStepChange: y, transitionState: Z, loadId: A, skuId: O, isGift: P = !1, giftRecipient: k, giftMessage: b, giftingOrigin: L, analyticsLocations: G, returnRef: D } = e,
+        { analyticsLocations: R } = (0, u.ZP)([...G, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        B = l.useRef(new r.qA()),
         [F, w] = l.useState(null),
         [H, W] = l.useState(!1),
         U = l.useMemo(() => (0, N.UY)(O), [O]),
         Y = (0, o.Wu)([h.Z], () => h.Z.recommendedGiftSkuIds, []),
         K = null != O ? [O] : Y,
         V = null !== (n = K[0]) && void 0 !== n ? n : null,
-        q = null != O && f.Rm.has(O),
+        q = null != O && x.Rm.has(O),
         z = l.useCallback(() => {
             W(!0), null == s || s();
         }, [s]),
@@ -82,7 +82,7 @@ function y(e) {
     return (0, i.jsxs)(u.Gt, {
         value: R,
         children: [
-            (0, i.jsx)(a.O_, {
+            (0, i.jsx)(r.O_, {
                 ref: w,
                 className: M.confettiCanvas,
                 environment: B.current
@@ -90,7 +90,7 @@ function y(e) {
             null != U &&
                 (0, i.jsx)('img', {
                     src: U.imageSrc,
-                    className: r()(M.customConfetti, { [M.hidden]: !H }),
+                    className: a()(M.customConfetti, { [M.hidden]: !H }),
                     style: U.style,
                     alt: '',
                     'aria-hidden': !0
@@ -103,7 +103,7 @@ function y(e) {
                 isGift: P,
                 activeSubscription: null,
                 purchaseType: _.GZ.ONE_TIME,
-                children: (0, i.jsx)(x.KB, {
+                children: (0, i.jsx)(f.KB, {
                     isGift: P,
                     giftRecipient: k,
                     giftMessage: b,
@@ -127,7 +127,7 @@ function y(e) {
                                       step: t,
                                       onClose: () => n(!1)
                                   }),
-                        returnRef: G,
+                        returnRef: D,
                         onStepChange: y,
                         skipConfirm: q,
                         hideShadow: !0

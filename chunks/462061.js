@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(475179),
@@ -27,8 +27,8 @@ var i = n(200651),
     x = n(131951),
     E = n(451478),
     C = n(5192),
-    Z = n(44136),
-    y = n(351483),
+    y = n(44136),
+    Z = n(351483),
     b = n(981631),
     T = n(65154),
     A = n(388032),
@@ -52,18 +52,18 @@ function P(e) {
         : null;
 }
 function R(e) {
-    let { participant: t, channel: n, inCall: r, width: o, paused: S, selected: P, fit: R, onVideoResize: M, blocked: O, ignored: L, noVideoRender: k = !1, pulseSpeakingIndicator: D = !1, inOverlayPopout: U = !1 } = e,
+    let { participant: t, channel: n, inCall: a, width: o, paused: S, selected: P, fit: R, onVideoResize: M, blocked: O, ignored: L, noVideoRender: k = !1, pulseSpeakingIndicator: D = !1, inOverlayPopout: U = !1 } = e,
         V = x.Z.getVideoComponent(),
         F = (0, s.e7)([I.default], () => I.default.getId()),
-        { user: W, streamId: G, speaking: B } = t,
+        { user: W, streamId: B, speaking: G } = t,
         z = W.id === F,
-        H = (0, Z.ZP)(t),
+        H = (0, y.ZP)(t),
         Y = (0, s.e7)([E.Z], () => E.Z.isFocused()),
         J = (0, s.e7)([g.Z], () => g.Z.getWindowFocused(b.KJ3.CHANNEL_CALL_POPOUT)),
         q = (0, s.e7)([x.Z], () => null != W.id && x.Z.isLocalVideoDisabled(W.id, (0, m.Z)(t.type)), [W.id, t.type]),
         X = (0, s.e7)([_.ZP], () => _.ZP.isGuestOrLurker(n.guild_id, W.id)),
         K = C.ZP.getName(n.getGuildId(), n.id, W) + (X ? ' '.concat(A.intl.string(A.t['pFO/Pj'])) : ''),
-        Q = B && (J || Y),
+        Q = G && (J || Y),
         $ = o < 124 ? j : w,
         { avatarSrc: ee, avatarDecorationSrc: et } = (0, v.Z)({
             user: W,
@@ -85,10 +85,10 @@ function R(e) {
             let { channel: e, selectedParticipant: t, user: n } = el.current;
             e.isGuildStageVoice() && !H && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
         }, [H]);
-    let er = (0, h.x0)();
-    return r && !q && !k && H && !P && null != V && x.Z.supports(T.AN.VIDEO)
-        ? er && !U
-            ? (0, i.jsx)(y.Z, {
+    let ea = (0, h.x0)();
+    return a && !q && !k && H && !P && null != V && x.Z.supports(T.AN.VIDEO)
+        ? ea && !U
+            ? (0, i.jsx)(Z.Z, {
                   selected: P,
                   width: o
               })
@@ -99,17 +99,17 @@ function R(e) {
                       wrapperClassName: N.videoWrapper,
                       className: N.content,
                       mirror: z,
-                      streamId: G,
+                      streamId: B,
                       videoComponent: V,
                       fit: R,
                       paused: S,
                       videoSpinnerContext: W.id === F ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
                       userId: W.id
                   },
-                  G
+                  B
               )
         : (0, i.jsx)('div', {
-              className: a()(N.content, { [N.blockedAvatar]: O || L }),
+              className: r()(N.content, { [N.blockedAvatar]: O || L }),
               children: (0, i.jsx)(f.Z, {
                   'aria-label': K,
                   src: ee,
@@ -117,7 +117,7 @@ function R(e) {
                   backgroundSrc: W.getAvatarURL(n.guild_id, 80),
                   size: $,
                   pulseSpeakingIndicator: D,
-                  speaking: B,
+                  speaking: G,
                   userId: W.id
               })
           });

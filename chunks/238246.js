@@ -1,9 +1,9 @@
 n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(512722),
     c = n.n(o),
     u = n(568611),
@@ -20,8 +20,8 @@ var i,
     x = n(100527),
     E = n(906732),
     C = n(168551),
-    Z = n(260035),
-    y = n(597952),
+    y = n(260035),
+    Z = n(597952),
     b = n(628123),
     T = n(686546),
     A = n(950796),
@@ -39,8 +39,8 @@ var i,
     V = n(358085),
     F = n(62883),
     W = n(998502),
-    G = n(473159),
-    B = n(928518),
+    B = n(473159),
+    G = n(928518),
     z = n(981631),
     H = n(388032),
     Y = n(58282);
@@ -57,11 +57,11 @@ function J(e, t, n) {
         e
     );
 }
-class q extends (i = r.Component) {
+class q extends (i = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, G.O)(e), e.addEventListener('blur', this.handleBlur), V.isPlatformEmbedded ? t.addEventListener('contextmenu', F.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', F.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, B.O)(e), e.addEventListener('blur', this.handleBlur), V.isPlatformEmbedded ? t.addEventListener('contextmenu', F.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', F.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: i, clientThemesCSS: l } = this.props;
@@ -110,15 +110,15 @@ class q extends (i = r.Component) {
             l.textContent = e;
             return;
         }
-        let r = n.createElement('style');
-        r.setAttribute(C.PQ, 'true'), (r.textContent = e), i.appendChild(r);
+        let a = n.createElement('style');
+        a.setAttribute(C.PQ, 'true'), (a.textContent = e), i.appendChild(a);
     }
     updateForcedColors() {
         let { useForcedColors: e, systemForcedColors: t, guestWindow: n } = this.props;
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: r, windowKey: a, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: S, guestWindow: I, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: S, guestWindow: I, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
             C = (0, V.getPlatform)(),
             N = s()(g, {
                 'mouse-mode': d,
@@ -139,7 +139,7 @@ class q extends (i = r.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, y.Z)(), N, _, E),
+                                    className: s()(e, (0, Z.Z)(), N, _, E),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -149,7 +149,7 @@ class q extends (i = r.Component) {
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: z.IlC.POPOUT,
                                                         renderWindow: I,
-                                                        children: (0, l.jsx)(Z.m, {
+                                                        children: (0, l.jsx)(y.m, {
                                                             children: (0, l.jsxs)(M.yP, {
                                                                 children: [
                                                                     (0, l.jsxs)('div', {
@@ -158,20 +158,20 @@ class q extends (i = r.Component) {
                                                                             o &&
                                                                                 S &&
                                                                                 (0, l.jsx)(A.T, {
-                                                                                    windowKey: a,
+                                                                                    windowKey: r,
                                                                                     short: !0
                                                                                 }),
                                                                             !o && S && null != C
                                                                                 ? (0, l.jsx)(w.Z, {
                                                                                       focused: n,
                                                                                       type: C,
-                                                                                      windowKey: a,
+                                                                                      windowKey: r,
                                                                                       macOSFrame: !0
                                                                                   })
                                                                                 : null,
                                                                             (0, l.jsx)('div', {
                                                                                 className: s()(Y.content, x),
-                                                                                children: r
+                                                                                children: a
                                                                             })
                                                                         ]
                                                                     }),
@@ -196,11 +196,11 @@ class q extends (i = r.Component) {
     }
     constructor(...e) {
         super(...e),
-            J(this, 'rootRef', r.createRef()),
+            J(this, 'rootRef', a.createRef()),
             J(this, '_cleanupWindowActionCreators', void 0),
             J(this, 'beforeUnload', (e) => {
                 let t = () => {
-                    B.Z.unmountWindow(this.props.windowKey), V.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
+                    G.Z.unmountWindow(this.props.windowKey), V.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
                 };
                 if (this.props.connectedToEmbeddedActivity && !D.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (!V.isPlatformEmbedded) return;
@@ -219,14 +219,14 @@ class q extends (i = r.Component) {
     }
 }
 J(q, 'defaultProps', { withTitleBar: !0 });
-let X = r.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: i } = (0, m.cj)([B.Z], () => ({
-        guestWindow: B.Z.getWindow(e.windowKey),
-        focused: B.Z.getWindowFocused(e.windowKey)
+let X = a.forwardRef(function (e, t) {
+    let { guestWindow: n, focused: i } = (0, m.cj)([G.Z], () => ({
+        guestWindow: G.Z.getWindow(e.windowKey),
+        focused: G.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
-    let r = (0, R.Q3)('PopoutWindow'),
-        a = (0, R.R6)('PopoutWindow'),
+    let a = (0, R.Q3)('PopoutWindow'),
+        r = (0, R.R6)('PopoutWindow'),
         s = (0, m.e7)([U.Z], () => U.Z.isFocused()),
         { locale: o, theme: u } = (0, m.cj)([k.Z, L.default], () => ({
             locale: L.default.locale,
@@ -238,7 +238,7 @@ let X = r.forwardRef(function (e, t) {
     (0, j.Z)(n, !1);
     let S = (0, P.Z)(n, i),
         { analyticsLocations: _ } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: Z, clientThemesCSS: y } = (0, C.ZP)();
+        { clientThemesClassName: y, clientThemesCSS: Z } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {
@@ -263,11 +263,11 @@ let X = r.forwardRef(function (e, t) {
                       fontScaleClass: p.fontScaleClass,
                       saturation: p.saturation,
                       alwaysShowLinkDecorations: p.alwaysShowLinkDecorations,
-                      clientThemesClassName: Z,
-                      clientThemesCSS: y,
+                      clientThemesClassName: y,
+                      clientThemesCSS: Z,
                       appWrapperClassName: h,
-                      isRefreshEnabled: r,
-                      isRefreshChatInputEnabled: a
+                      isRefreshEnabled: a,
+                      isRefreshChatInputEnabled: r
                   })
               })
           });

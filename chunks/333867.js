@@ -8,15 +8,15 @@ var i = t(200651);
 t(192379);
 var l = t(772848),
     s = t(481060),
-    r = t(159351),
-    a = t(667),
+    a = t(159351),
+    r = t(667),
     o = t(335131),
     d = t(626135),
     c = t(409813),
     u = t(608579),
     h = t(981631);
-let f = 'payment-modal',
-    x = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
+let x = 'payment-modal',
+    f = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
 function C(e) {
     let n;
     let { skuId: t, isGift: c = !1, giftMessage: C, giftingOrigin: m, onClose: g, onComplete: p, analyticsLocations: S, analyticsObject: j, giftRecipient: v, variantsReturnStyle: E } = e,
@@ -48,7 +48,7 @@ function C(e) {
             });
         },
         {
-            modalKey: f,
+            modalKey: x,
             onCloseCallback: () => {
                 !I &&
                     d.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
@@ -59,8 +59,8 @@ function C(e) {
                         sku_id: t,
                         location_stack: S
                     }),
-                    (0, r.fw)(),
-                    (0, a.p)(),
+                    (0, a.fw)(),
+                    (0, r.p)(),
                     null == g || g(I),
                     I &&
                         (0, o.qg)({
@@ -69,7 +69,7 @@ function C(e) {
                         });
             },
             onCloseRequest: () => {
-                null != n && x.has(n) && (0, s.closeModal)(f);
+                null != n && f.has(n) && (0, s.closeModal)(x);
             }
         }
     );

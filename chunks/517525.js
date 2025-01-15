@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(476183),
     o = n(468194),
     c = n(442837),
@@ -20,8 +20,8 @@ var i = n(200651),
     x = n(475674),
     E = n(981631),
     C = n(474936),
-    Z = n(388032),
-    y = n(837459);
+    y = n(388032),
+    Z = n(837459);
 let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     T = {
         opacity: 0,
@@ -43,7 +43,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     M = (e) => {
         let t,
-            r,
+            a,
             { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: A, premiumIndicator: N } = e,
             w = (0, _.Wc)(s),
             { analyticsLocations: j } = (0, p.ZP)(),
@@ -54,11 +54,11 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             t = !1;
         }
         try {
-            r = (0, _.tR)(w);
+            a = (0, _.tR)(w);
         } catch (e) {
-            r = !1;
+            a = !1;
         }
-        let R = t || r,
+        let R = t || a,
             { location: M } = (0, f.O)(),
             O = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
             L = o && !I.ZP.isPremium(O, C.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, O),
@@ -81,33 +81,33 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     (S.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: C.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
-                        has_premium_stream_resolution: r,
+                        has_premium_stream_resolution: a,
                         location_stack: j
                     }),
                     T(!0));
-            }, [t, r, R, b, T, j]),
+            }, [t, a, R, b, T, j]),
             null == w)
         )
             return null;
         let D = (0, i.jsx)(m.Tooltip, {
-            text: P ? Z.intl.string(Z.t.q8TiVl) : R ? Z.intl.string(Z.t.IHgpEh) : Z.intl.string(Z.t.vLb0VV),
+            text: P ? y.intl.string(y.t.q8TiVl) : R ? y.intl.string(y.t.IHgpEh) : y.intl.string(y.t.vLb0VV),
             position: 'bottom',
             color: m.Tooltip.Colors.GREY,
             children: (e) =>
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: k,
-                    className: a()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
+                    className: r()(Z.qualityIndicator, g, h.eE[d], P ? Z.qualityIndicatorLowQuality : Z.qualityIndicatorFullQuality, { [Z.clickable]: L && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: y.premiumStreamIcon
+                                  className: Z.premiumStreamIcon
                               })
                             : null,
                         (0, i.jsx)('span', {
-                            className: y.qualityResolution,
+                            className: Z.qualityResolution,
                             children: (0, _.ml)(w.maxResolution)
                         }),
                         (0, i.jsx)('span', { children: (0, _.bp)(w.maxFrameRate) })
@@ -116,13 +116,13 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, i.jsx)(m.TextBadge, {
             text: D,
-            className: a()(A, y.qualityIndicatorBadge, { [y.qualityIndicatorBadgePremium]: R && N }),
+            className: r()(A, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && N }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
     };
 t.Z = (e) => {
-    let { participant: t, showQuality: n, isUpsellEnabled: r = !0, size: o, className: c, premiumIndicator: u } = e,
+    let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: c, premiumIndicator: u } = e,
         [d, f] = l.useState(!1),
         p = (0, _.Wc)(t),
         { reducedMotion: v } = l.useContext(m.AccessibilityPreferencesContext),
@@ -152,7 +152,7 @@ t.Z = (e) => {
     return ((e) => {
         let { className: n, popoutProps: l } = e;
         return (0, i.jsxs)('div', {
-            className: a()(y.streamQualityIndicator, n),
+            className: r()(Z.streamQualityIndicator, n),
             ...l,
             children: [
                 I((e, n) =>
@@ -160,11 +160,11 @@ t.Z = (e) => {
                         ? (0, i.jsx)(s.animated.div, {
                               style: e,
                               children: (0, i.jsx)(M, {
-                                  className: y.liveQualityIndicator,
+                                  className: Z.liveQualityIndicator,
                                   participant: t,
                                   size: o,
                                   shape: m.BadgeShapes.ROUND_LEFT,
-                                  isUpsellEnabled: r,
+                                  isUpsellEnabled: a,
                                   didTrackUpsellViewed: d,
                                   setDidTrackUpsellViewed: f,
                                   premiumIndicator: u
@@ -174,7 +174,7 @@ t.Z = (e) => {
                 ),
                 (0, i.jsx)(s.animated.div, {
                     style: x,
-                    className: y.liveIndicator,
+                    className: Z.liveIndicator,
                     children: (0, i.jsx)(h.ZP, {
                         look: h.jZ.RED,
                         size: o,

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i,
     l,
-    r = n(251625),
-    a = n(823379),
+    a = n(251625),
+    r = n(823379),
     s = n(981631),
     o = n(388032);
 function c() {
@@ -22,7 +22,7 @@ function u(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        i = e.slice(-1 * t).filter(a.lm);
+        i = e.slice(-1 * t).filter(r.lm);
     if (0 === i.length)
         return {
             type: 'streamer',
@@ -32,19 +32,19 @@ function u(e, t) {
         (n.packetsSentOrReceived += t > 0 ? i[t].packetsSentOrReceived - i[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? i[t].packetsLost - i[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
     let l = i[0].type,
-        r = i.length;
+        a = i.length;
     return {
         type: l,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
-        frameRate: n.frameRate / r,
-        resolution: n.resolution / r,
-        numDatapoints: r
+        frameRate: n.frameRate / a,
+        resolution: n.resolution / a,
+        numDatapoints: a
     };
 }
 ((i = l || (l = {})).PACKET_LOSS = 'Packet Loss'), (i.FRAME_RATE_INPUT = 'Frame Rate Encode'), (i.FRAME_RATE_NETWORK = 'Frame Rate Decode'), (i.SOUNDSHARE_FAILED = 'Soundshare Failed'), (i.BAD_CONNECTION = 'Bad Connection');
-let d = (0, r.oH)((e, t) => ({
+let d = (0, a.oH)((e, t) => ({
     message: e,
     errorType: t
 }));

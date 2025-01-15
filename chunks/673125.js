@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(570140),
     c = n(633302),
@@ -42,20 +42,20 @@ class x extends (i = s.ZP.Store) {
         return I;
     }
 }
-(a = 'SharedCanvasStore'),
-    (r = 'displayName') in (l = x)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'SharedCanvasStore'),
+    (a = 'displayName') in (l = x)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a);
+        : (l[a] = r);
 let E = new x(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: i, streamerId: l } = e,
-            r = h[l];
-        if (null == r)
+            a = h[l];
+        if (null == a)
             h[l] = [
                 {
                     type: m.W.LINE,
@@ -65,9 +65,9 @@ let E = new x(o.Z, {
                 }
             ];
         else {
-            let e = r.find((e) => e.id === t);
+            let e = a.find((e) => e.id === t);
             null == e
-                ? r.push({
+                ? a.push({
                       type: m.W.LINE,
                       id: t,
                       userId: i,
@@ -79,20 +79,20 @@ let E = new x(o.Z, {
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, i;
-        let { emojiHose: l, streamerId: r, userId: a } = e,
+        let { emojiHose: l, streamerId: a, userId: r } = e,
             s = {
                 ...l,
                 type: m.W.EMOJI_HOSE
             };
-        if (null == h[r]) h[r] = [s];
+        if (null == h[a]) h[a] = [s];
         else {
-            let e = h[r].findIndex((e) => e.id === l.id);
+            let e = h[a].findIndex((e) => e.id === l.id);
             e >= 0
-                ? (h[r][e] = {
-                      ...h[r][e],
+                ? (h[a][e] = {
+                      ...h[a][e],
                       ...s
                   })
-                : h[r].push(s);
+                : h[a].push(s);
         }
         let o = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : '';
         if (null == v[o]) {
@@ -107,7 +107,7 @@ let E = new x(o.Z, {
                     p.qh
                 ));
         }
-        _(a);
+        _(r);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;

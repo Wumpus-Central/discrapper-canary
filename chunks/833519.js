@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(475179),
@@ -28,8 +28,8 @@ var i = n(200651),
     x = n(576645),
     E = n(590076),
     C = n(507675),
-    Z = n(199902),
-    y = n(314897),
+    y = n(199902),
+    Z = n(314897),
     b = n(592125),
     T = n(131951),
     A = n(451478),
@@ -47,11 +47,11 @@ var i = n(200651),
     V = n(354459),
     F = n(65154),
     W = n(388032),
-    G = n(474316);
-let B = new p.Z('StreamTile');
+    B = n(474316);
+let G = new p.Z('StreamTile');
 function z(e) {
-    let { participant: t, selected: n, focused: r, idle: a, width: o, premiumIndicator: c } = e,
-        u = (0, s.e7)([Z.Z], () => Z.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+    let { participant: t, selected: n, focused: a, idle: r, width: o, premiumIndicator: c } = e,
+        u = (0, s.e7)([y.Z], () => y.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, D.K)(o),
         [m, p] = l.useState(!1),
         h = (0, s.e7)([b.Z], () => b.Z.getChannel(null == u ? void 0 : u.channelId));
@@ -70,13 +70,13 @@ function z(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 n ? null : (0, i.jsx)(k.Z, { participant: t }),
-                r || null == u || u.state === U.jm8.ENDED || u.state === U.jm8.FAILED
+                a || null == u || u.state === U.jm8.ENDED || u.state === U.jm8.FAILED
                     ? null
                     : (0, i.jsx)(S.Z, {
                           size: f.ZP.Sizes.SMALL,
-                          className: G.liveIndicator,
+                          className: B.liveIndicator,
                           participant: t,
-                          showQuality: (!d && !a) || m,
+                          showQuality: (!d && !r) || m,
                           isUpsellEnabled: !1,
                           premiumIndicator: c
                       })
@@ -85,24 +85,24 @@ function z(e) {
     );
 }
 function H(e) {
-    let { participant: t, selected: n, onVideoResize: r, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: k, focused: D, wrapperClassName: z } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: k, focused: D, wrapperClassName: z } = e,
         H = T.Z.getVideoComponent(),
-        Y = (0, s.e7)([y.default], () => y.default.getId()),
+        Y = (0, s.e7)([Z.default], () => Z.default.getId()),
         J = (0, h.Z)(),
         { stream: q, user: X, streamId: K } = t,
         Q = (0, s.e7)([b.Z], () => b.Z.getChannel(q.channelId)),
-        $ = (0, s.e7)([Z.Z], () => Z.Z.getActiveStreamForUser(X.id, q.guildId), [X.id, q.guildId]),
-        ee = (0, s.e7)([Z.Z], () => Z.Z.getAllActiveStreams().length > 0),
+        $ = (0, s.e7)([y.Z], () => y.Z.getActiveStreamForUser(X.id, q.guildId), [X.id, q.guildId]),
+        ee = (0, s.e7)([y.Z], () => y.Z.getAllActiveStreams().length > 0),
         et = (0, s.e7)([A.Z], () => A.Z.isFocused()),
         en = (null == $ ? void 0 : $.ownerId) === Y,
         ei = en && !et && !S,
         el = null != $ ? (0, g.Z)($, X, X.id === Y, ei) : null,
-        er = k < 195;
+        ea = k < 195;
     (0, d.Z)(() => {
         !ee && (null == Q ? void 0 : Q.isGuildStageVoice()) && !en && ((0, u.rn)(q), c.Z.updateStageStreamSize(q.channelId, !1));
     }),
         l.useEffect(() => {
-            B.info(
+            G.info(
                 'Stream Tile State - activeStream: '
                     .concat(null != $, ' | selected: ')
                     .concat(n, ' | Video: ')
@@ -110,11 +110,11 @@ function H(e) {
                     .concat(T.Z.supports(F.AN.VIDEO))
             );
         }, [H, $, n]);
-    let ea = (0, _.x0)();
+    let er = (0, _.x0)();
     if (J)
         return (0, i.jsx)(L.Z, {
             stream: t.stream,
-            isSmall: er,
+            isSmall: ea,
             selected: n,
             isSelfStream: X.id === Y
         });
@@ -138,11 +138,11 @@ function H(e) {
         });
     else if (!(null != $ && !n && null != H && T.Z.supports(F.AN.VIDEO)))
         return (0, i.jsxs)('div', {
-            className: a()(G.content, G.streamPreview, { [G.small]: er }),
+            className: r()(B.content, B.streamPreview, { [B.small]: ea }),
             children: [
                 (0, i.jsx)(v.Z, {
                     noText: !0,
-                    className: a()(G.absoluteFill, { [G.streamPreviewOpacity]: null == $ }),
+                    className: r()(B.absoluteFill, { [B.streamPreviewOpacity]: null == $ }),
                     stream: t.stream
                 }),
                 n
@@ -150,25 +150,25 @@ function H(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(N.a, {
-                                  isSmall: er,
+                                  isSmall: ea,
                                   children: (0, i.jsx)(o.Text, {
-                                      variant: er ? 'text-sm/semibold' : 'text-md/semibold',
+                                      variant: ea ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
                                       children: k < 175 ? W.intl.string(W.t['I6JG4+']) : W.intl.string(W.t['7Xq/nZ'])
                                   })
                               }),
                               ee
                                   ? (0, i.jsx)(N.a, {
-                                        className: G.addCTA,
+                                        className: B.addCTA,
                                         tooltip: W.intl.string(W.t.wCrzur),
                                         onClick: (e) => {
                                             e.stopPropagation(), (0, u.rn)(q, { forceMultiple: !0 });
                                         },
-                                        isSmall: er,
+                                        isSmall: ea,
                                         children: (0, i.jsx)(o.EyePlusIcon, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: G.addStreamIcon
+                                            className: B.addStreamIcon
                                         })
                                     })
                                   : null
@@ -177,7 +177,7 @@ function H(e) {
             ]
         });
     else
-        return ea && !x
+        return er && !x
             ? (0, i.jsx)(O.Z, {
                   selected: n,
                   width: k
@@ -197,9 +197,9 @@ function H(e) {
                       (0, i.jsx)(
                           I.Z,
                           {
-                              onResize: r,
-                              wrapperClassName: a()(G.videoWrapper, z),
-                              className: G.content,
+                              onResize: a,
+                              wrapperClassName: r()(B.videoWrapper, z),
+                              className: B.content,
                               streamId: K,
                               videoComponent: H,
                               fit: p,

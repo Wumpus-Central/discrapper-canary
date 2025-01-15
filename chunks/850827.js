@@ -1,9 +1,9 @@
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    a = n.n(l),
+    r = n(512722),
+    s = n.n(r),
     o = n(442837),
     c = n(481060),
     u = n(730749),
@@ -20,8 +20,8 @@ var l = n(120356),
     x = n(387903),
     E = n(606925),
     C = n(719216),
-    Z = n(429589),
-    y = n(276149),
+    y = n(429589),
+    Z = n(276149),
     b = n(636245),
     T = n(697761),
     A = n(611459),
@@ -31,14 +31,14 @@ var l = n(120356),
     P = n(981631),
     R = n(418013);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: a, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
         W = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        G = U === x.Y.STREAM_PREVIEW || null != a,
-        B = (0, I.Z)(t),
-        z = B || G ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        B = U === x.Y.STREAM_PREVIEW || null != r,
+        G = (0, I.Z)(t),
+        z = G || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
         Y = (0, o.e7)([g.Z, p.Z], () => {
             var e;
@@ -50,7 +50,7 @@ t.Z = (0, u.Z)((e) => {
         align: m.Z.Align.STRETCH,
         direction: z,
         wrap: J ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: r()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
+        className: a()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
         children: (() => {
             if ((0, _.Z)(t))
                 return (0, i.jsx)(
@@ -76,7 +76,7 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if (B) {
+            if (G) {
                 let e = (0, i.jsx)(
                         N.Z,
                         {
@@ -123,21 +123,21 @@ t.Z = (0, u.Z)((e) => {
                           e.channelId
                       );
             }
-            return G
+            return B
                 ? (0, i.jsx)(
                       j.Z,
                       {
                           isCurrentUser: W.id === l.id,
                           color: k,
                           look: D,
-                          applicationStream: a,
+                          applicationStream: r,
                           onAction: V
                       },
                       'watch-button'
                   )
                 : H && null != Y
                   ? (0, i.jsx)(
-                        y.Z,
+                        Z.Z,
                         {
                             color: k,
                             look: D,
@@ -159,7 +159,7 @@ t.Z = (0, u.Z)((e) => {
                                 'watch-button'
                             ),
                             (0, i.jsx)(
-                                Z.Z,
+                                y.Z,
                                 {
                                     activity: t,
                                     embeddedActivity: n,

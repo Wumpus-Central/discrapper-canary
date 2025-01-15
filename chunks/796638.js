@@ -13,8 +13,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n(933546),
+    a = n(392711),
+    r = n(933546),
     s = n(314897),
     o = n(70956),
     c = n(823379),
@@ -53,7 +53,7 @@ function v(e, t) {
     let I = l.useRef({}),
         { visibleParticipants: _, participantTileWidth: x } = l.useMemo(() => {
             let n = Date.now(),
-                l = (0, r.sortBy)(t, (e) =>
+                l = (0, a.sortBy)(t, (e) =>
                     (function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
                         switch (e.type) {
@@ -61,7 +61,7 @@ function v(e, t) {
                                 return '\0'.concat(e.sortKey);
                             case d.fO.HIDDEN_STREAM:
                             case d.fO.STREAM:
-                                return '\x01'.concat((0, a.Z)(e.userNick, e.user));
+                                return '\x01'.concat((0, r.Z)(e.userNick, e.user));
                             case d.fO.USER:
                                 var n;
                                 let i = '\x05';
@@ -75,12 +75,12 @@ function v(e, t) {
                                                 return String(8640000000000000 - e).padStart(t, '0');
                                             })(e.lastSpoke)
                                         )
-                                        .concat((0, a.Z)(e.userNick, e.user))
+                                        .concat((0, r.Z)(e.userNick, e.user))
                                 );
                         }
                     })(e, n)
                 ),
-                [f, p] = (0, r.partition)(l, d.Io),
+                [f, p] = (0, a.partition)(l, d.Io),
                 v = f.findIndex(g),
                 S = null;
             -1 !== v && ((S = f[v]), f.splice(v, 1));
@@ -88,12 +88,12 @@ function v(e, t) {
                 x = Math.max(0, Math.min(Math.floor((_ - o) / (s + o)), u, t.length)),
                 E = Math.min((_ - o) / x - o, i),
                 C = Math.max(0, x - p.length),
-                Z = p.slice(0, x),
-                y = f.slice(0, C),
+                y = p.slice(0, x),
+                Z = f.slice(0, C),
                 b = Array(C);
             if (C > 0) {
                 let e = [];
-                for (let t of y) {
+                for (let t of Z) {
                     let n = I.current[t.id];
                     null != n && n < C ? (b[n] = t) : e.push(t);
                 }
@@ -105,9 +105,9 @@ function v(e, t) {
                 }
             }
             let T = b.filter(c.lm),
-                A = (0, r.keyBy)((0, r.range)(T.length), (e) => T[e].id);
+                A = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
             I.current = A;
-            let N = [...Z, ...T];
+            let N = [...y, ...T];
             return (
                 null != S && (m && N.length >= x ? (N[Math.max(0, N.length - 1)] = S) : N.push(S)),
                 {
@@ -122,7 +122,7 @@ function v(e, t) {
     };
 }
 function S(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: r, onContextMenu: a, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: f = !1 } = e,
+    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: a, onContextMenu: r, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: f = !1 } = e,
         h = null != d;
     return (0, i.jsx)('div', {
         className: m.root,
@@ -141,8 +141,8 @@ function S(e) {
                         className: m.tile,
                         fit: u.BP.COVER,
                         onClick: s,
-                        onDoubleClick: r,
-                        onContextMenu: a,
+                        onDoubleClick: a,
+                        onContextMenu: r,
                         width: t ? p : n,
                         inCall: c,
                         paused: f,

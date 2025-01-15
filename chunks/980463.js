@@ -1,9 +1,9 @@
 n.d(t, {
     Gq: function () {
-        return c;
+        return s;
     },
     SN: function () {
-        return S;
+        return _;
     },
     Zu: function () {
         return E;
@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     x8: function () {
-        return p;
+        return m;
     }
 }),
     n(411104);
@@ -24,19 +24,19 @@ var r = n(544891),
     u = n(570140),
     l = n(959546),
     o = n(317951),
-    s = n(981631);
-let a = {
-        [o.D1]: s.ANM.FETCH_MESSAGE_CONFETTI_ENTITLEMENT,
-        [o.FX]: s.ANM.FETCH_HD_STREAMING_ENTITLEMENT
+    a = n(981631);
+let c = {
+        [o.D1]: a.ANM.FETCH_MESSAGE_CONFETTI_ENTITLEMENT,
+        [o.FX]: a.ANM.FETCH_HD_STREAMING_ENTITLEMENT
     },
-    c = async (e) => {
+    s = async (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_PRICE_FETCH_STARTED',
             skuId: e
         });
         try {
             let t = await r.tn.get({
-                url: s.ANM.CONSUMABLE_FETCH_PRICE(e),
+                url: a.ANM.CONSUMABLE_FETCH_PRICE(e),
                 rejectWithError: !1
             });
             if (null == t.body.price)
@@ -76,7 +76,7 @@ let a = {
                 type: 'CONSUMABLES_ENTITLEMENT_FETCH_STARTED',
                 skuId: e
             }),
-            null == a[e])
+            null == c[e])
         )
             throw (
                 (u.Z.dispatch({
@@ -87,7 +87,7 @@ let a = {
             );
         try {
             let t = await r.tn.get({
-                    url: a[e],
+                    url: c[e],
                     rejectWithError: !1
                 }),
                 n = null != t.body.entitlement ? l.Z.createFromServer(t.body.entitlement) : null;
@@ -112,7 +112,7 @@ let a = {
     E = async (e, t) => {
         try {
             await r.tn.post({
-                url: s.ANM.CONSUME_HD_STREAMING_POTION,
+                url: a.ANM.CONSUME_HD_STREAMING_POTION,
                 body: { channel_id: e },
                 rejectWithError: !1
             }),
@@ -127,11 +127,11 @@ let a = {
     f = async (e, t, n, l) => {
         try {
             await r.tn.post({
-                url: s.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
+                url: a.ANM.CONSUME_MESSAGE_CONFETTI_POTION,
                 body: {
                     channel_id: e,
                     message_id: t,
-                    emoji_name: _(n)
+                    emoji_name: p(n)
                 },
                 rejectWithError: !1
             }),
@@ -143,14 +143,14 @@ let a = {
             throw new i.Hx(e);
         }
     },
-    _ = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
-    S = (e) => {
+    p = (e) => (null != e.id ? ''.concat(e.name, ':').concat(e.id) : e.optionallyDiverseSequence),
+    _ = (e) => {
         u.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
-    p = (e) => {
+    m = (e) => {
         u.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e

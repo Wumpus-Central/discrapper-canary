@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(570140),
+    a = n(442837),
+    r = n(570140),
     s = n(519938),
     o = n(928518),
     c = n(585483),
@@ -17,16 +17,16 @@ var i = n(200651),
     p = n(918559),
     h = n(981631);
 let g = (e, t) => {
-    a.Z.wait(() => {
+    r.Z.wait(() => {
         (0, s.Cz)(e, t);
     });
 };
 function v(e) {
     let t,
-        { embedId: n, className: a, style: s } = e,
-        v = (0, r.e7)([o.Z], () => o.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
+        { embedId: n, className: r, style: s } = e,
+        v = (0, a.e7)([o.Z], () => o.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
         S = (0, f.Z)(),
-        I = (0, r.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+        I = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
     if (null != S && !(0, m.Z)((0, d.p)(S.location)) && I === p.Ez.PANEL) t = window;
     else {
         var _;
@@ -71,7 +71,7 @@ function v(e) {
         (0, i.jsx)('div', {
             ref: x,
             style: s,
-            className: a
+            className: r
         })
     );
 }

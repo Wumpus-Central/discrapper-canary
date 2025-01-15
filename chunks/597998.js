@@ -11,9 +11,9 @@ n.d(t, {
     n(47120);
 var i,
     l = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
     o = n(481060),
     c = n(434650),
     u = n(657305),
@@ -30,8 +30,8 @@ var i,
     x = n(981631),
     E = n(354459),
     C = n(927923),
-    Z = n(388032),
-    y = n(41132);
+    y = n(388032),
+    Z = n(41132);
 function b(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function b(e, t, n) {
 let T = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, l.jsx)('div', {
-            className: s()(i, y.list, n ? y.listCollapse : y.listDefault),
+            className: s()(i, Z.list, n ? Z.listCollapse : Z.listDefault),
             role: 'group',
             children: t
         });
@@ -59,79 +59,79 @@ let T = (e) => {
             ? (0, l.jsx)(
                   o.TooltipContainer,
                   {
-                      className: y.iconSpacing,
-                      text: Z.intl.string(Z.t.qstQub),
-                      children: (0, l.jsx)(o.PlusLargeIcon, { className: s()(y.icon, n) })
+                      className: Z.iconSpacing,
+                      text: y.intl.string(y.t.qstQub),
+                      children: (0, l.jsx)(o.PlusLargeIcon, { className: s()(Z.icon, n) })
                   },
                   'add-status'
               )
             : (0, l.jsx)(
                   o.TooltipContainer,
                   {
-                      className: y.iconSpacing,
+                      className: Z.iconSpacing,
                       text: (0, h.O8)(t),
                       children: (0, l.jsx)(g.Z, {
                           hangStatusActivity: t,
-                          className: s()(y.hangStatusIcon, n)
+                          className: s()(Z.hangStatusIcon, n)
                       })
                   },
                   'hang-status'
               );
     };
 function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: r, serverMute: a, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
     if (f || g) return null;
-    let G = [],
-        B = (0, l.jsx)(P, {
+    let B = [],
+        G = (0, l.jsx)(P, {
             iconClassName: b,
             mute: n,
             localMute: i,
-            serverMute: a,
+            serverMute: r,
             deaf: c,
             serverDeaf: d
         });
     p &&
-        (r
-            ? G.push(
+        (a
+            ? B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
-                          className: y.iconSpacing,
-                          text: Z.intl.string(Z.t['PXMZ//']),
+                          className: Z.iconSpacing,
+                          text: y.intl.string(y.t['PXMZ//']),
                           children: (0, l.jsx)(o.VideoSlashIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, b),
-                              colorClass: y.strikethrough
+                              className: s()(Z.icon, b),
+                              colorClass: Z.strikethrough
                           })
                       },
                       'video'
                   )
               )
-            : G.push(
+            : B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
-                          className: y.iconSpacing,
-                          text: Z.intl.string(Z.t.FlNoSU),
+                          className: Z.iconSpacing,
+                          text: y.intl.string(y.t.FlNoSU),
                           children: (0, l.jsx)(o.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, b)
+                              className: s()(Z.icon, b)
                           })
                       },
                       'video'
                   )
               )),
         W &&
-            G.push(
+            B.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
-                        className: y.iconSpacing,
-                        text: Z.intl.string(Z.t.HFwRpq),
+                        className: Z.iconSpacing,
+                        text: y.intl.string(y.t.HFwRpq),
                         children: (0, l.jsx)(o.CircleWarningIcon, {
-                            className: s()(y.icon, b),
+                            className: s()(Z.icon, b),
                             color: o.tokens.colors.STATUS_WARNING_BACKGROUND
                         })
                     },
@@ -139,65 +139,65 @@ function N(e) {
                 )
             ),
         null != T &&
-            G.push(
+            B.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
                         text: (0, u.Z)(T.name),
-                        className: y.iconSpacing,
+                        className: Z.iconSpacing,
                         children: (0, l.jsx)(o.ActivitiesIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: s()(y.icon, b)
+                            className: s()(Z.icon, b)
                         })
                     },
                     'activity'
                 )
             ),
         N === C.YE.XBOX || w === E.wR.XBOX
-            ? G.push(
+            ? B.push(
                   (0, l.jsx)(
                       'div',
                       {
-                          className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(S.Z, { className: s()(y.icon, b) })
+                          className: s()(Z.iconSpacing),
+                          children: (0, l.jsx)(S.Z, { className: s()(Z.icon, b) })
                       },
                       'xbox'
                   )
               )
             : (N === C.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
-              G.push(
+              B.push(
                   (0, l.jsx)(
                       'div',
                       {
-                          className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(v.Z, { className: s()(y.icon, b) })
+                          className: s()(Z.iconSpacing),
+                          children: (0, l.jsx)(v.Z, { className: s()(Z.icon, b) })
                       },
                       'playstation'
                   )
               ),
         h
-            ? G.push(
+            ? B.push(
                   (0, l.jsx)(
                       'div',
                       {
-                          className: s()(y.iconSpacing, y.liveIconSpacing),
+                          className: s()(Z.iconSpacing, Z.liveIconSpacing),
                           children: (0, l.jsx)(m.ZP, { size: m.ZP.Sizes.SMALL })
                       },
                       'stream'
                   )
               )
             : _ &&
-              G.push(
+              B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
-                          className: y.iconSpacing,
-                          text: Z.intl.string(Z.t.JH1SJy),
+                          className: Z.iconSpacing,
+                          text: y.intl.string(y.t.JH1SJy),
                           children: (0, l.jsx)(o.EyeIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()(y.icon, b)
+                              className: s()(Z.icon, b)
                           })
                       },
                       'watch'
@@ -205,19 +205,19 @@ function N(e) {
               );
     let z = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
         H = null == R && z;
-    return 0 !== G.length || null != B || M || H
+    return 0 !== B.length || null != G || M || H
         ? (0, l.jsxs)('div', {
-              className: s()(y.icons, t),
+              className: s()(Z.icons, t),
               children: [
                   (0, l.jsxs)('div', {
-                      className: y.iconGroup,
+                      className: Z.iconGroup,
                       onMouseEnter: () => (null == F ? void 0 : F(!0)),
                       onMouseLeave: () => (null == F ? void 0 : F(!1)),
-                      children: [B, G]
+                      children: [G, B]
                   }),
                   M || H
                       ? (0, l.jsx)('div', {
-                            className: y.iconGroup,
+                            className: Z.iconGroup,
                             onMouseEnter: () => (null == V ? void 0 : V(!0)),
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
                             children: H
@@ -243,44 +243,44 @@ function N(e) {
           })
         : null;
 }
-class w extends (i = r.Component) {
+class w extends (i = a.Component) {
     renderPrioritySpeaker() {
-        let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: r } = this.props;
+        let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: a } = this.props;
         return t && !n
             ? (0, l.jsx)(o.Tooltip, {
-                  text: Z.intl.string(Z.t.BVK71t),
+                  text: y.intl.string(y.t.BVK71t),
                   children: (t) =>
                       (0, l.jsx)('div', {
-                          className: s()(y.iconPriortySpeaker, { [y.iconPriortySpeakerSpeaking]: !i && !r && e }),
+                          className: s()(Z.iconPriortySpeaker, { [Z.iconPriortySpeakerSpeaking]: !i && !a && e }),
                           ...t
                       })
               })
             : null;
     }
     renderAvatar() {
-        let { speaking: e, user: t, size: n, avatarContainerClass: i, guildId: r } = this.props;
+        let { speaking: e, user: t, size: n, avatarContainerClass: i, guildId: a } = this.props;
         return (0, l.jsx)('div', {
-            className: s()(i, y.avatar, {
-                [y.avatarLarge]: n === x.ipw.LARGE,
-                [y.avatarSmall]: n === x.ipw.SMALL,
-                [y.avatarSpeaking]: e
+            className: s()(i, Z.avatar, {
+                [Z.avatarLarge]: n === x.ipw.LARGE,
+                [Z.avatarSmall]: n === x.ipw.SMALL,
+                [Z.avatarSpeaking]: e
             }),
-            style: { backgroundImage: 'url('.concat(t.getAvatarURL(r, n === x.ipw.LARGE ? 38 : 24), ')') }
+            style: { backgroundImage: 'url('.concat(t.getAvatarURL(a, n === x.ipw.LARGE ? 38 : 24), ')') }
         });
     }
     renderName() {
-        let { nick: e, user: t, collapsed: n, speaking: i, userNameClassName: r, mute: a, serverMute: o, isGuest: c, isOverlay: u, guildId: d } = this.props,
+        let { nick: e, user: t, collapsed: n, speaking: i, userNameClassName: a, mute: r, serverMute: o, isGuest: c, isOverlay: u, guildId: d } = this.props,
             m = (0, l.jsxs)('div', {
-                className: s()(r, {
-                    [y.username]: !0,
-                    [y.usernameSpeaking]: !a && !o && i
+                className: s()(a, {
+                    [Z.username]: !0,
+                    [Z.usernameSpeaking]: !r && !o && i
                 }),
                 children: [
                     null != e ? e : _.ZP.getName(t),
                     c
                         ? (0, l.jsxs)('span', {
-                              className: y.guestSuffix,
-                              children: ['\xA0', Z.intl.string(Z.t['pFO/Pj'])]
+                              className: Z.guestSuffix,
+                              children: ['\xA0', y.intl.string(y.t['pFO/Pj'])]
                           })
                         : ''
                 ]
@@ -291,7 +291,7 @@ class w extends (i = r.Component) {
                 contextGuildId: d,
                 isOverlay: u,
                 disableTooltip: !0,
-                className: s()(y.clanTag, u && y.isOverlay),
+                className: s()(Z.clanTag, u && Z.isOverlay),
                 profileViewedAnalytics: { source: u ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL }
             };
         return !n || u
@@ -307,16 +307,16 @@ class w extends (i = r.Component) {
         return (0, l.jsx)(N, { ...this.props });
     }
     render() {
-        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: r, selected: a, disabled: c, overlap: u, 'aria-label': d, tabIndex: m } = this.props;
+        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: a, selected: r, disabled: c, overlap: u, 'aria-label': d, tabIndex: m } = this.props;
         return (0, l.jsx)(o.Clickable, {
-            className: s()(r, {
-                [y.voiceUser]: !0,
-                [y.overlap]: u,
-                [y.selected]: a,
-                [y.clickable]: null != e,
-                [y.userSmall]: i === x.ipw.SMALL,
-                [y.userLarge]: i === x.ipw.LARGE,
-                [y.disabled]: !a && c
+            className: s()(a, {
+                [Z.voiceUser]: !0,
+                [Z.overlap]: u,
+                [Z.selected]: r,
+                [Z.clickable]: null != e,
+                [Z.userSmall]: i === x.ipw.SMALL,
+                [Z.userLarge]: i === x.ipw.LARGE,
+                [Z.disabled]: !r && c
             }),
             onClick: this.handleClick,
             onDoubleClick: this.handleDoubleClick,
@@ -328,7 +328,7 @@ class w extends (i = r.Component) {
             'aria-label': d,
             tabIndex: m,
             children: (0, l.jsxs)('div', {
-                className: s()(y.content, { [y.flipped]: n }),
+                className: s()(Z.content, { [Z.flipped]: n }),
                 children: [this.renderPrioritySpeaker(), this.renderAvatar(), this.renderName(), this.renderIcons()]
             })
         });
@@ -362,31 +362,31 @@ class w extends (i = r.Component) {
     }
 }
 function j(e) {
-    let { application: t, iconClassName: n, guildId: i, channelId: a, userId: u } = e,
-        [m, f] = r.useState(!1),
+    let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
+        [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             m &&
                 d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
-                    channel_id: a,
+                    channel_id: r,
                     guild_id: i,
                     user_id: u
                 });
-        }, [t.id, a, i, u, m]),
+        }, [t.id, r, i, u, m]),
         (0, l.jsx)(o.TooltipContainer, {
-            text: Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
-            'aria-label': Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
-            className: y.iconSpacing,
+            text: y.intl.formatToPlainString(y.t.Sq9xJy, { game: t.name }),
+            'aria-label': y.intl.formatToPlainString(y.t.Sq9xJy, { game: t.name }),
+            className: Z.iconSpacing,
             children: (0, l.jsx)('div', {
                 ref: h,
                 children: (0, l.jsx)(p.Z, {
-                    className: s()(y.icon, n),
+                    className: s()(Z.icon, n),
                     game: t,
                     size: p.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
                         d.ZP.trackWithMetadata(x.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
-                            channel_id: a,
+                            channel_id: r,
                             guild_id: i,
                             game_name: t.name,
                             user_id: u
@@ -398,57 +398,57 @@ function j(e) {
     );
 }
 function P(e) {
-    let { iconClassName: t, mute: n, localMute: i, serverMute: r, deaf: a, serverDeaf: c } = e,
+    let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: r, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];
     if (n) {
         let e;
         if (u) {
             let n;
-            (n = r ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon),
+            (n = a ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon),
                 (e = (0, l.jsx)(n, {
-                    className: s()(y.icon, t, { [y.iconServer]: r }),
+                    className: s()(Z.icon, t, { [Z.iconServer]: a }),
                     color: 'currentColor'
                 }));
         } else
             e = (0, l.jsx)(o.MicrophoneSlashIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(y.icon, t, { [y.iconServer]: r }),
-                colorClass: i ? y.strikethrough : void 0
+                className: s()(Z.icon, t, { [Z.iconServer]: a }),
+                colorClass: i ? Z.strikethrough : void 0
             });
         d.push(
             (0, l.jsx)(
                 o.TooltipContainer,
                 {
-                    text: i ? Z.intl.string(Z.t.Q8Uzoa) : r ? Z.intl.string(Z.t.uLddbW) : Z.intl.string(Z.t.tjtv3N),
-                    className: y.iconSpacing,
+                    text: i ? y.intl.string(y.t.Q8Uzoa) : a ? y.intl.string(y.t.uLddbW) : y.intl.string(y.t.tjtv3N),
+                    className: Z.iconSpacing,
                     children: e
                 },
                 'mute'
             )
         );
     }
-    if (c || a) {
+    if (c || r) {
         let e;
         if (u) {
             let n = c ? o.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
             e = (0, l.jsx)(n, {
-                className: s()(y.icon, t, { [y.iconServer]: c }),
+                className: s()(Z.icon, t, { [Z.iconServer]: c }),
                 color: 'currentColor'
             });
         } else
             e = (0, l.jsx)(o.HeadphonesSlashIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(y.icon, t, { [y.iconServer]: c })
+                className: s()(Z.icon, t, { [Z.iconServer]: c })
             });
         d.push(
             (0, l.jsx)(
                 o.TooltipContainer,
                 {
-                    className: y.iconSpacing,
-                    text: c ? Z.intl.string(Z.t.btxSdH) : Z.intl.string(Z.t.NjmiOD),
+                    className: Z.iconSpacing,
+                    text: c ? y.intl.string(y.t.btxSdH) : y.intl.string(y.t.NjmiOD),
                     children: e
                 },
                 'deaf'
@@ -458,8 +458,8 @@ function P(e) {
     return 0 === d.length ? null : (0, l.jsx)(l.Fragment, { children: d });
 }
 b(w, 'defaultProps', {
-    avatarContainerClass: y.avatarContainer,
-    userNameClassName: y.usernameFont,
+    avatarContainerClass: Z.avatarContainer,
+    userNameClassName: Z.usernameFont,
     size: x.ipw.SMALL,
     selected: !1,
     disabled: !1,

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     s = n(5192),
     o = n(829820),
     c = n(484346);
@@ -17,13 +17,13 @@ function u(e) {
         x = () => {
             null == g || g(), _();
         };
-    return (0, i.jsx)(a.Tooltip, {
+    return (0, i.jsx)(r.Tooltip, {
         text: v,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: l } = e;
-            return (0, i.jsx)(a.Button, {
+            return (0, i.jsx)(r.Button, {
                 size: m,
-                className: r()(c.syncButton, h),
+                className: a()(c.syncButton, h),
                 innerClassName: c.syncButtonInner,
                 look: f,
                 color: p,
@@ -33,7 +33,7 @@ function u(e) {
                 disabled: I,
                 submitting: S,
                 'aria-label': null != v ? v : t.name,
-                children: (0, i.jsx)(a.UserPlayIcon, {
+                children: (0, i.jsx)(r.UserPlayIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 })
