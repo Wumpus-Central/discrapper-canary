@@ -44,6 +44,7 @@ e.exports = {
     floatingBars: 'floatingBars_bdf0de',
     newMemberActionBar: 'newMemberActionBar_bdf0de',
     stackedBars: 'stackedBars_bdf0de',
+    bar: 'bar_bdf0de',
     expressionPickerPositionLayer: 'expressionPickerPositionLayer_bdf0de',
     textAreaMobileThemed: 'textAreaMobileThemed_bdf0de',
     accessoryBarLeft: 'accessoryBarLeft_bdf0de',
