@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return g;
+        return p;
     }
 }),
     n(47120);
@@ -10,34 +10,32 @@ var r = n(704215),
     l = n(481060),
     a = n(230711),
     s = n(243778),
-    o = n(187819),
-    c = n(981631),
-    d = n(921944),
-    u = n(526761),
-    h = n(726985),
-    m = n(388032),
-    p = n(962479);
-function g() {
+    o = n(981631),
+    c = n(921944),
+    d = n(526761),
+    u = n(726985),
+    h = n(388032),
+    m = n(962479);
+function p() {
     let [e, t] = (0, s.US)([r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]),
         n = e === r.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
-        g = (0, o._p)({ location: 'PeopleList' }),
-        f = () => {
-            a.Z.open(g ? c.oAB.CONTENT_AND_SOCIAL : c.oAB.ACCOUNT, h.s6.RESTRICTED_USERS, { scrollPosition: u.FY.RESTRICTED_ACCOUNTS });
+        p = () => {
+            a.Z.open(o.oAB.CONTENT_AND_SOCIAL, u.s6.RESTRICTED_USERS, { scrollPosition: d.FY.RESTRICTED_ACCOUNTS });
         };
     return n
         ? (0, i.jsxs)('div', {
-              className: p.blockedIgnoredSettingsNotice,
+              className: m.blockedIgnoredSettingsNotice,
               children: [
                   (0, i.jsx)(l.CircleInformationIcon, { size: 'md' }),
                   (0, i.jsx)(l.Text, {
                       variant: 'text-sm/medium',
                       color: 'interactive-active',
-                      children: m.intl.format(m.t.zqv4nZ, {
+                      children: h.intl.format(h.t.zqv4nZ, {
                           hook: (e, t) =>
                               (0, i.jsx)(
                                   l.Anchor,
                                   {
-                                      onClick: f,
+                                      onClick: p,
                                       children: e
                                   },
                                   t
@@ -45,8 +43,8 @@ function g() {
                       })
                   }),
                   (0, i.jsx)(l.Clickable, {
-                      className: p.closeButton,
-                      onClick: () => t(d.L.USER_DISMISS),
+                      className: m.closeButton,
+                      onClick: () => t(c.L.USER_DISMISS),
                       children: (0, i.jsx)(l.XSmallIcon, {})
                   })
               ]

@@ -1,5 +1,4 @@
 e.exports = {
-    item: 'item_aade6b',
     row: 'row_aade6b',
     divider: 'divider_aade6b',
     section: 'section_aade6b',

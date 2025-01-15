@@ -1,12 +1,9 @@
 r.d(n, {
     _p: function () {
-        return l;
+        return o;
     },
     hP: function () {
         return s;
-    },
-    sp: function () {
-        return o;
     }
 });
 var i = r(818083),
@@ -26,11 +23,6 @@ let s = (0, i.B)({
     commonTriggerPoint: a.$P.OPEN_USER_SETTINGS
 });
 function o(e) {
-    let { location: n } = e,
-        { enabled: r } = s.getCurrentConfig({ location: n });
-    return r;
-}
-function l(e) {
     let { location: n } = e,
         { enabled: r } = s.useExperiment({ location: n });
     return r;

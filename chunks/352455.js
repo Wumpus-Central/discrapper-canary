@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var i = n(200651);
@@ -11,44 +11,42 @@ var r = n(120356),
     s = n(924628),
     o = n(230711),
     c = n(548816),
-    d = n(187819),
-    u = n(981631),
-    h = n(921944),
-    m = n(388032),
-    p = n(271249);
-function g(e) {
-    let { className: t, markAsDismissed: n } = e,
-        r = (0, d._p)({ location: 'consent-card' });
+    d = n(981631),
+    u = n(921944),
+    h = n(388032),
+    m = n(271249);
+function p(e) {
+    let { className: t, markAsDismissed: n } = e;
     return (0, i.jsxs)(c.Z, {
-        className: l()(p.card, t),
+        className: l()(m.card, t),
         children: [
             (0, i.jsx)(a.Heading, {
                 variant: 'heading-md/semibold',
-                className: p.header,
-                children: m.intl.string(m.t.HcbnMD)
+                className: m.header,
+                children: h.intl.string(h.t.HcbnMD)
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-sm/normal',
-                children: m.intl.format(m.t.NkFrzM, {
+                children: h.intl.format(h.t.NkFrzM, {
                     onPrivacyClick: () => {
-                        r ? o.Z.open(u.oAB.DATA_AND_PRIVACY) : o.Z.open(u.oAB.PRIVACY_AND_SAFETY);
+                        o.Z.open(d.oAB.DATA_AND_PRIVACY);
                     }
                 })
             }),
             (0, i.jsxs)('div', {
-                className: p.buttonContainer,
+                className: m.buttonContainer,
                 children: [
                     (0, i.jsx)(a.Button, {
                         size: a.Button.Sizes.SMALL,
-                        onClick: () => (0, s.g)([u.pjP.PERSONALIZATION], []),
-                        children: m.intl.string(m.t.ebojgI)
+                        onClick: () => (0, s.g)([d.pjP.PERSONALIZATION], []),
+                        children: h.intl.string(h.t.ebojgI)
                     }),
                     (0, i.jsx)(a.Button, {
                         color: a.Button.Colors.PRIMARY,
                         size: a.Button.Sizes.SMALL,
-                        onClick: () => n(h.L.DISMISS),
+                        onClick: () => n(u.L.DISMISS),
                         look: a.Button.Looks.LINK,
-                        children: m.intl.string(m.t.f3Pet7)
+                        children: h.intl.string(h.t.f3Pet7)
                     })
                 ]
             })

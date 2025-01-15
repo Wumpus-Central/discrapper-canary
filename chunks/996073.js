@@ -12,12 +12,9 @@ let d = Object.freeze({
         [u.KQ.AccessibilityScrollPositions.LEGACY_CHAT_INPUT]: c.oAB.ACCESSIBILITY,
         [u.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION]: c.oAB.VOICE,
         [u.KQ.AppearanceScrollPositions.CUSTOM_APP_ICONS]: c.oAB.APPEARANCE,
-        [u.KQ.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS]: c.oAB.PRIVACY_AND_SAFETY,
-        [u.KQ.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [u.KQ.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS]: c.oAB.PRIVACY_AND_SAFETY,
-        [u.KQ.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [u.KQ.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION]: c.oAB.PRIVACY_AND_SAFETY,
-        [u.KQ.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
+        [u.KQ.ContentAndSocialScrollPositions.DM_SAFETY_ALERTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
+        [u.KQ.ContentAndSocialScrollPositions.MESSAGE_REQUESTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
+        [u.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
         [u.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL
     }),
     f = function (e, n, r) {

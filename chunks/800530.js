@@ -20,9 +20,6 @@ n.d(t, {
     RY: function () {
         return d;
     },
-    SU: function () {
-        return S;
-    },
     Sv: function () {
         return m;
     },

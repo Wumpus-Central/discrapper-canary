@@ -1,40 +1,57 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return E;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(63063),
-    a = n(88658),
-    l = n(695346),
-    o = n(639814),
-    c = n(838436),
-    d = n(51331),
-    u = n(726985),
-    m = n(736530),
-    g = n(981631),
-    h = n(388032);
-function p() {
-    let e = (0, o.is)(),
-        t = l.iH.useSetting().includes(e),
-        n = s.useCallback(
-            (t) => {
-                let n = (0, a.rr)();
-                t ? n.delete(e) : n.add(e), l.iH.updateSetting([...n]);
+    r = n(192379),
+    s = n(626135),
+    a = n(63063),
+    l = n(88658),
+    o = n(695346),
+    c = n(639814),
+    d = n(838436),
+    u = n(51331),
+    m = n(703115),
+    g = n(526761),
+    h = n(726985),
+    p = n(736530),
+    x = n(981631),
+    f = n(388032);
+function _(e) {
+    let { ingress: t, guildId: n } = e,
+        c = o.iH.useSetting().includes(n),
+        g = r.useCallback(
+            (e) => {
+                let i = (0, l.rr)();
+                e ? i.delete(n) : i.add(n),
+                    o.iH.updateSetting([...i]),
+                    s.default.track(x.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: m.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                        ingress: t,
+                        guild_id: n
+                    });
             },
-            [e]
+            [t, n]
         );
-    return e === m.T
+    return n === p.T
         ? null
-        : (0, i.jsx)(c.U, {
-              setting: u.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
-              children: (0, i.jsx)(d.Z, {
-                  title: h.intl.string(h.t['T+nevL']),
-                  value: !t,
-                  onChange: n,
-                  note: h.intl.format(h.t.jXKQCg, { helpdeskArticle: r.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS) })
+        : (0, i.jsx)(d.U, {
+              setting: h.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
+              children: (0, i.jsx)(u.Z, {
+                  title: f.intl.string(f.t['T+nevL']),
+                  value: !c,
+                  onChange: g,
+                  note: f.intl.format(f.t.jXKQCg, { helpdeskArticle: a.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
+}
+function E(e) {
+    let { ingress: t = g.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
+        r = (0, c.is)();
+    return (0, i.jsx)(_, {
+        ingress: t,
+        guildId: null != n ? n : r
+    });
 }

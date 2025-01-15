@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(430824),
     l = n(626135),
     o = n(709054),
@@ -16,60 +16,76 @@ var i = n(200651),
     m = n(838436),
     g = n(51331),
     h = n(922628),
-    p = n(726985),
-    x = n(736530),
-    f = n(981631),
-    _ = n(388032);
-function E() {
-    let e = (0, u.is)(),
-        t = (0, u.c_)(),
-        n = d.h2.useSetting().includes(e),
-        E = d.iG.useSetting(),
-        C = s.useCallback(
-            (t) => {
-                let n = (0, c.YK)();
-                t ? n.delete(e) : n.add(e), d.h2.updateSetting(Array.from(n));
+    p = n(703115),
+    x = n(526761),
+    f = n(726985),
+    _ = n(736530),
+    E = n(981631),
+    C = n(388032);
+function T(e) {
+    let { ingress: t, guildId: n } = e,
+        x = (0, u.c_)(),
+        T = d.h2.useSetting().includes(n),
+        S = d.iG.useSetting(),
+        b = r.useCallback(
+            (e) => {
+                let i = (0, c.YK)();
+                e ? i.delete(n) : i.add(n),
+                    d.h2.updateSetting(Array.from(i)),
+                    l.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: p.Y.DIRECT_MESSAGES_TOGGLE,
+                        ingress: t,
+                        guild_id: n
+                    });
             },
-            [e]
+            [n, t]
         );
-    function T(e, t) {
-        l.default.track(f.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+    function I(e, t) {
+        l.default.track(E.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
     }
-    let S = (e) => {
+    let N = (e) => {
         (0, h.V)({
-            header: _.intl.string(_.t['uUr+GR']),
-            body: _.intl.string(_.t.hjGJBg),
-            confirmText: _.intl.string(_.t.gm1Ven),
-            cancelText: _.intl.string(_.t.p89ACg),
-            confirmButtonColor: r.Button.Colors.BRAND,
+            header: C.intl.string(C.t['uUr+GR']),
+            body: C.intl.string(C.t.hjGJBg),
+            confirmText: C.intl.string(C.t.gm1Ven),
+            cancelText: C.intl.string(C.t.p89ACg),
+            confirmButtonColor: s.Button.Colors.BRAND,
             onConfirm: () => {
-                d.iG.updateSetting(e), T(e, !1);
+                d.iG.updateSetting(e), I(e, !1);
             },
             onCancel: () => {
-                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(a.Z.getGuilds()) : []), T(e, !0);
+                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(a.Z.getGuilds()) : []), I(e, !0);
             }
         });
     };
     return (0, i.jsx)(m.U, {
-        setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
+        setting: f.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
-            e === x.T
+            n === _.T
                 ? (0, i.jsx)(g.Z, {
-                      title: _.intl.string(_.t.RAQUSE),
-                      note: _.intl.string(_.t.wbYDfX),
-                      value: !E,
+                      title: C.intl.string(C.t.RAQUSE),
+                      note: C.intl.string(C.t.wbYDfX),
+                      value: !S,
                       onChange: (e) => {
-                          S(!e);
+                          N(!e);
                       }
                   })
                 : (0, i.jsx)(g.Z, {
-                      title: _.intl.string(_.t.RAQUSE),
-                      note: t ? _.intl.string(_.t.V0ka0d) : _.intl.string(_.t.G7c3Xl),
-                      value: !n,
-                      onChange: C
+                      title: C.intl.string(C.t.RAQUSE),
+                      note: x ? C.intl.string(C.t.V0ka0d) : C.intl.string(C.t.G7c3Xl),
+                      value: !T,
+                      onChange: b
                   })
+    });
+}
+function S(e) {
+    let { ingress: t = x.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
+        r = (0, u.is)();
+    return (0, i.jsx)(T, {
+        ingress: t,
+        guildId: null != n ? n : r
     });
 }

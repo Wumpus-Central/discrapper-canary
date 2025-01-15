@@ -3,46 +3,43 @@ r.d(n, {
         return m;
     },
     I5: function () {
-        return y;
+        return b;
     },
     Mn: function () {
         return I;
     },
     P6: function () {
-        return D;
+        return O;
     },
     S2: function () {
         return v;
     },
     UZ: function () {
-        return S;
+        return y;
     },
     V3: function () {
-        return b;
+        return T;
     },
     W3: function () {
-        return O;
+        return R;
     },
     Zy: function () {
         return g;
     },
     b9: function () {
-        return C;
+        return N;
     },
     cV: function () {
-        return A;
-    },
-    ol: function () {
-        return T;
+        return S;
     },
     si: function () {
-        return R;
+        return C;
     },
     ss: function () {
         return E;
     },
     xn: function () {
-        return N;
+        return A;
     }
 });
 var i = r(544891),
@@ -164,14 +161,7 @@ function I(e) {
         )
     );
 }
-function T() {
-    return i.tn.get({
-        url: _.ANM.USER_HARVEST,
-        oldFormErrors: !0,
-        rejectWithError: !1
-    });
-}
-function b(e) {
+function T(e) {
     return i.tn.post({
         url: _.ANM.USER_HARVEST,
         body: { backends: e },
@@ -179,40 +169,40 @@ function b(e) {
         rejectWithError: !1
     });
 }
-function y(e) {
+function b(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
         null == e ? s.uv.announce(p.intl.string(p.t['f1+oNj'])) : s.uv.announce(p.intl.string(p.t.NstziY));
 }
-function S(e) {
+function y(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
-function A(e) {
+function S(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function N(e) {
+function A(e) {
     o.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function C() {
+function N() {
     o.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function R() {
+function C() {
     o.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function O() {
+function R() {
     o.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function D() {
+function O() {
     o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }

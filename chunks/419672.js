@@ -1,69 +1,67 @@
 n(47120);
-var o = n(200651),
-    i = n(192379),
-    s = n(481060),
+var i = n(200651),
+    s = n(192379),
+    o = n(481060),
     l = n(230711),
-    r = n(187819),
-    a = n(63063),
-    c = n(378298),
-    u = n(584656),
+    r = n(63063),
+    a = n(378298),
+    c = n(584656),
     d = n(993750),
-    T = n(981631),
-    S = n(526761),
-    _ = n(388032),
-    x = n(683913);
+    u = n(981631),
+    T = n(526761),
+    S = n(388032),
+    _ = n(683913);
 e.Z = function (t) {
     let { onClose: e, channelId: n } = t,
-        [A, b] = i.useState(!1),
-        p = (0, r._p)({ location: 'safety-tools-about-safety-alerts' }),
-        E = i.useCallback(() => {
-            p ? l.Z.open(T.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: S.to.DM_SAFETY_ALERTS_V2 }) : l.Z.open(T.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: S.to.DM_SAFETY_ALERTS }), e();
-        }, [p, e]),
-        h = i.useCallback(() => {
-            !A &&
+        [x, b] = s.useState(!1),
+        p = s.useCallback(() => {
+            l.Z.open(u.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e();
+        }, [e]),
+        A = s.useCallback(() => {
+            !x &&
                 (b(!0),
-                (0, c.Uj)(n)
+                (0, a.Uj)(n)
                     .then(() => {
                         e(),
-                            (0, u.t)({
-                                text: _.intl.string(_.t.FhgVWl),
+                            (0, c.t)({
+                                text: S.intl.string(S.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
                             });
                     })
                     .catch(() => {
-                        b(!1), (0, s.showToast)((0, s.createToast)(_.intl.string(_.t.R0RpRU), s.ToastType.FAILURE));
+                        b(!1), (0, o.showToast)((0, o.createToast)(S.intl.string(S.t.R0RpRU), o.ToastType.FAILURE));
                     }));
-        }, [n, e, A]);
-    return (0, o.jsxs)(d.Z, {
-        style: x.wrapperStyle,
+        }, [n, e, x]);
+    return (0, i.jsxs)(d.Z, {
+        style: _.wrapperStyle,
         children: [
-            (0, o.jsx)(s.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: _.intl.format(_.t['njJ/Cg'], { learnMoreLink: a.Z.getArticleURL(T.BhN.SAFETY_ALERTS) })
+                children: S.intl.format(S.t['njJ/Cg'], { learnMoreLink: r.Z.getArticleURL(u.BhN.SAFETY_ALERTS) })
             }),
-            (0, o.jsx)(s.Button, {
-                className: x.settingsButton,
-                onClick: E,
+            (0, i.jsx)(o.Button, {
+                className: _.settingsButton,
+                onClick: p,
                 fullWidth: !0,
-                children: _.intl.string(_.t.qpWnyM)
+                children: S.intl.string(S.t.qpWnyM)
             }),
-            (0, o.jsx)('div', {
-                children: (0, o.jsx)(s.Text, {
+            (0, i.jsx)('div', {
+                children: (0, i.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    className: x.reportFalsePositiveText,
-                    children: _.intl.format(_.t['2uYViI'], {
+                    className: _.reportFalsePositiveText,
+                    children: S.intl.format(S.t['2uYViI'], {
                         reportFalsePositiveHook: (t, e) =>
-                            (0, o.jsx)(
-                                s.Button,
+                            (0, i.jsx)(
+                                o.Button,
                                 {
-                                    className: x.reportFalsePositiveButton,
-                                    size: s.Button.Sizes.NONE,
-                                    color: s.Button.Colors.LINK,
-                                    look: s.Button.Looks.LINK,
-                                    disabled: A,
-                                    onClick: h,
+                                    className: _.reportFalsePositiveButton,
+                                    size: o.Button.Sizes.NONE,
+                                    color: o.Button.Colors.LINK,
+                                    look: o.Button.Looks.LINK,
+                                    disabled: x,
+                                    onClick: A,
                                     children: t
                                 },
                                 e
