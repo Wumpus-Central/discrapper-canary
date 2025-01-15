@@ -205,21 +205,16 @@ function en() {
 }
 function ei(e) {
     let { className: t, config: n } = e,
-        r = (0, c.e7)([T.Z], () => T.Z.useReducedMotion);
+        r = (0, c.e7)([T.Z], () => T.Z.useReducedMotion) ? n.getStaticImageUrl() : n.getAnimatedImageUrl();
     return (0, i.jsxs)('div', {
         className: a()(Q.giftCardPromotion, t),
         children: [
-            r
-                ? (0, i.jsx)('img', {
-                      alt: '',
-                      className: Q.giftImagePromotion,
-                      'aria-hidden': !0,
-                      src: n.getStaticImageUrl()
-                  })
-                : (0, i.jsx)(m.LottieAnimation, {
-                      importData: n.getAnimatedImageData,
-                      className: a()(Q.giftImageAnimatedPromotion, Q.giftImagePromotion)
-                  }),
+            (0, i.jsx)('img', {
+                alt: '',
+                className: Q.giftImagePromotion,
+                'aria-hidden': !0,
+                src: r
+            }),
             (0, i.jsxs)('div', {
                 className: Q.giftInfoPromotion,
                 children: [

@@ -10,7 +10,6 @@ e.exports = {
     giftCard: 'giftCard_cf74b3',
     giftCardPromotion: 'giftCardPromotion_cf74b3',
     giftImagePromotion: 'giftImagePromotion_cf74b3',
-    giftImageAnimatedPromotion: 'giftImageAnimatedPromotion_cf74b3',
     giftInfoPromotion: 'giftInfoPromotion_cf74b3',
     giftInfoTitlePromotion: 'giftInfoTitlePromotion_cf74b3',
     giftCardPromotionBannerImage: 'giftCardPromotionBannerImage_cf74b3',
