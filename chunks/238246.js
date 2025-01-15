@@ -118,14 +118,15 @@ class q extends (i = r.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: r, windowKey: a, isRefreshEnabled: o, mouseModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: m, withTitleBar: g, guestWindow: S, clientThemesClassName: I, contentClassName: _, appWrapperClassName: x } = this.props,
-            E = (0, V.getPlatform)(),
-            C = s()(m, {
-                'mouse-mode': c,
-                'reduce-motion': d,
-                'full-motion': !d,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: r, windowKey: a, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: S, guestWindow: I, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
+            C = (0, V.getPlatform)(),
+            N = s()(g, {
+                'mouse-mode': d,
+                'reduce-motion': m,
+                'full-motion': !m,
                 'app-focused': n || i,
-                'visual-refresh': o
+                'visual-refresh': o,
+                'visual-refresh-chat-input': c
             });
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
@@ -138,7 +139,7 @@ class q extends (i = r.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, y.Z)(), C, I, x),
+                                    className: s()(e, (0, y.Z)(), N, _, E),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -147,7 +148,7 @@ class q extends (i = r.Component) {
                                                     (0, l.jsx)(T.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: z.IlC.POPOUT,
-                                                        renderWindow: S,
+                                                        renderWindow: I,
                                                         children: (0, l.jsx)(Z.m, {
                                                             children: (0, l.jsxs)(M.yP, {
                                                                 children: [
@@ -155,21 +156,21 @@ class q extends (i = r.Component) {
                                                                         className: Y.popout,
                                                                         children: [
                                                                             o &&
-                                                                                g &&
+                                                                                S &&
                                                                                 (0, l.jsx)(A.T, {
                                                                                     windowKey: a,
                                                                                     short: !0
                                                                                 }),
-                                                                            !o && g && null != E
+                                                                            !o && S && null != C
                                                                                 ? (0, l.jsx)(w.Z, {
                                                                                       focused: n,
-                                                                                      type: E,
+                                                                                      type: C,
                                                                                       windowKey: a,
                                                                                       macOSFrame: !0
                                                                                   })
                                                                                 : null,
                                                                             (0, l.jsx)('div', {
-                                                                                className: s()(Y.content, _),
+                                                                                className: s()(Y.content, x),
                                                                                 children: r
                                                                             })
                                                                         ]
@@ -225,46 +226,48 @@ let X = r.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let r = (0, R.Q3)('PopoutWindow'),
-        a = (0, m.e7)([U.Z], () => U.Z.isFocused()),
-        { locale: s, theme: o } = (0, m.cj)([k.Z, L.default], () => ({
+        a = (0, R.R6)('PopoutWindow'),
+        s = (0, m.e7)([U.Z], () => U.Z.isFocused()),
+        { locale: o, theme: u } = (0, m.cj)([k.Z, L.default], () => ({
             locale: L.default.locale,
             theme: k.Z.theme
         })),
-        u = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: d, appWrapperClassName: p } = (0, N.I)(),
-        h = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        d = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
+        { accessibilitySettings: p, appWrapperClassName: h } = (0, N.I)(),
+        v = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, j.Z)(n, !1);
-    let v = (0, P.Z)(n, i),
-        { analyticsLocations: S } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: _, clientThemesCSS: Z } = (0, C.ZP)();
+    let S = (0, P.Z)(n, i),
+        { analyticsLocations: _ } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
+        { clientThemesClassName: Z, clientThemesCSS: y } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {
               children: (0, l.jsx)(E.Gt, {
-                  value: S,
+                  value: _,
                   children: (0, l.jsx)(q, {
                       ref: t,
                       ...e,
                       guestWindow: n,
                       focused: i,
-                      appFocused: a,
-                      locale: s,
-                      theme: o,
-                      forcedColors: u,
-                      useForcedColors: d.useForcedColors,
-                      systemForcedColors: d.systemForcedColors,
-                      fontScale: d.fontScale,
-                      keyboardModeEnabled: d.keyboardModeEnabled,
-                      mouseModeEnabled: v,
-                      reducedMotionEnabled: d.useReducedMotion,
-                      connectedToEmbeddedActivity: h,
-                      fontScaleClass: d.fontScaleClass,
-                      saturation: d.saturation,
-                      alwaysShowLinkDecorations: d.alwaysShowLinkDecorations,
-                      clientThemesClassName: _,
-                      clientThemesCSS: Z,
-                      appWrapperClassName: p,
-                      isRefreshEnabled: r
+                      appFocused: s,
+                      locale: o,
+                      theme: u,
+                      forcedColors: d,
+                      useForcedColors: p.useForcedColors,
+                      systemForcedColors: p.systemForcedColors,
+                      fontScale: p.fontScale,
+                      keyboardModeEnabled: p.keyboardModeEnabled,
+                      mouseModeEnabled: S,
+                      reducedMotionEnabled: p.useReducedMotion,
+                      connectedToEmbeddedActivity: v,
+                      fontScaleClass: p.fontScaleClass,
+                      saturation: p.saturation,
+                      alwaysShowLinkDecorations: p.alwaysShowLinkDecorations,
+                      clientThemesClassName: Z,
+                      clientThemesCSS: y,
+                      appWrapperClassName: h,
+                      isRefreshEnabled: r,
+                      isRefreshChatInputEnabled: a
                   })
               })
           });
