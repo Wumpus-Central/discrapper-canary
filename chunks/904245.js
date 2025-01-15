@@ -150,7 +150,7 @@ function eN(e) {
         if (null != d && d.state === em.r2o.RESOLVED && null != d.channel) {
             var c;
             let n = d.channel;
-            (r.invite_channel_id = n.id), (r.invite_guild_id = null === (c = d.guild) || void 0 === c ? void 0 : c.id), (r.invite_channel_type = n.type), null != d.inviter && (r.invite_inviter_id = d.inviter.id);
+            (r.invite_channel_id = n.id), (r.invite_guild_id = null === (c = d.guild) || void 0 === c ? void 0 : c.id), (r.invite_channel_type = n.type), null != d.inviter && (r.invite_inviter_id = d.inviter.id), null != d.target_application && (r.application_id = d.target_application.id);
             let i = X.Z.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 (e = em.dAT.STREAM), (r.destination_user_id = i.ownerId);
@@ -179,6 +179,7 @@ function eN(e) {
             r.state === em.r2o.RESOLVED &&
             null != r.inviter &&
             ((e.invite_inviter_id = r.inviter.id),
+            null != r.target_application && (e.application_id = r.target_application.id),
             (e = {
                 ...e,
                 location: a,

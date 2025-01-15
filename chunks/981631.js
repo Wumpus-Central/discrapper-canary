@@ -4156,6 +4156,7 @@ let oc = Object.freeze({
     (aS.ACTIVITY_HANDSHAKE = 'activity_handshake'),
     (aS.APP_PROFILE_OPEN_APP_BUTTON_CLICKED = 'app_profile_open_app_button_clicked'),
     (aS.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED = 'app_detail_page_entry_point_command_button_clicked'),
+    (aS.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED = 'embedded_application_invite_embed_viewed'),
     (aS.NITRO_TAB_VISITED = 'nitro_tab_visited'),
     (aS.BROWSER_HANDOFF_SUCCEEDED = 'browser_handoff_succeeded'),
     (aS.SHOW_TUTORIAL = 'show_tutorial'),

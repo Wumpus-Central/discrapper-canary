@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return G;
     }
 }),
     n(653041),
@@ -16,31 +16,34 @@ var i = n(200651),
     d = n(477690),
     u = n(481060),
     m = n(447543),
-    h = n(317381),
-    f = n(778569),
-    p = n(182906),
-    _ = n(884338),
-    g = n(100527),
-    E = n(906732),
-    C = n(835473),
-    I = n(471445),
-    x = n(111028),
-    N = n(955415),
-    v = n(601964),
-    T = n(592125),
-    S = n(430824),
-    A = n(496675),
-    b = n(594174),
-    j = n(624138),
-    R = n(358595),
-    Z = n(981631),
-    P = n(245335),
-    L = n(388032),
-    y = n(291133);
-let O = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    M = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    D = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
-function k(e) {
+    h = n(434650),
+    f = n(317381),
+    p = n(778569),
+    _ = n(182906),
+    g = n(884338),
+    E = n(100527),
+    C = n(906732),
+    I = n(835473),
+    x = n(471445),
+    N = n(111028),
+    v = n(955415),
+    T = n(747127),
+    S = n(601964),
+    A = n(592125),
+    b = n(430824),
+    j = n(496675),
+    R = n(594174),
+    Z = n(626135),
+    P = n(624138),
+    L = n(358595),
+    y = n(981631),
+    O = n(245335),
+    M = n(388032),
+    D = n(291133);
+let k = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    U = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    B = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+function w(e) {
     let { members: t, membersOnline: n, isLarge: r, isStacked: l } = e,
         o = [];
     return (
@@ -50,13 +53,13 @@ function k(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: y.statusWrapper,
+                        className: D.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: y.statusOnline }),
+                            (0, i.jsx)('i', { className: D.statusOnline }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: y.count,
-                                children: L.intl.format(L.t['LC+S+v'], { membersOnline: n })
+                                className: D.count,
+                                children: M.intl.format(M.t['LC+S+v'], { membersOnline: n })
                             })
                         ]
                     },
@@ -68,13 +71,13 @@ function k(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: y.statusWrapper,
+                        className: D.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: y.statusOffline }),
+                            (0, i.jsx)('i', { className: D.statusOffline }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/normal',
-                                className: y.count,
-                                children: L.intl.format(L.t.zRl6XV, { count: t })
+                                className: D.count,
+                                children: M.intl.format(M.t.zRl6XV, { count: t })
                             })
                         ]
                     },
@@ -82,35 +85,35 @@ function k(e) {
                 )
             ),
         (0, i.jsx)('div', {
-            className: a()(y.statusCounts, {
-                [y.large]: r,
-                [y.stacked]: l
+            className: a()(D.statusCounts, {
+                [D.large]: r,
+                [D.stacked]: l
             }),
             children: o
         })
     );
 }
-function U(e) {
+function F(e) {
     let { channel: t, guild: n, isStacked: r, hasEnded: l } = e;
     if (null != t && null != n) {
-        let e = (0, I.KS)(t, n);
+        let e = (0, x.KS)(t, n);
         return (0, i.jsxs)('div', {
-            className: a()(y.channel, {
-                [y.stacked]: r,
-                [y.ended]: l
+            className: a()(D.channel, {
+                [D.stacked]: r,
+                [D.ended]: l
             }),
             children: [
                 null != e
                     ? (0, i.jsx)(e, {
-                          className: y.channelIcon,
+                          className: D.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
                     : null,
-                (0, i.jsx)(x.Z, {
+                (0, i.jsx)(N.Z, {
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
-                        children: L.intl.format(L.t['dc+LW1'], {
+                        children: M.intl.format(M.t['dc+LW1'], {
                             channelName: t.name,
                             serverName: n.name
                         })
@@ -121,195 +124,214 @@ function U(e) {
     }
     return null != n
         ? (0, i.jsx)('div', {
-              className: a()(y.channel, {
-                  [y.stacked]: r,
-                  [y.ended]: l
+              className: a()(D.channel, {
+                  [D.stacked]: r,
+                  [D.ended]: l
               }),
-              children: (0, i.jsx)(x.Z, {
+              children: (0, i.jsx)(N.Z, {
                   children: (0, i.jsx)(u.Text, {
                       variant: 'text-xs/normal',
-                      children: L.intl.format(L.t.u0vaDA, { guildName: n.name })
+                      children: M.intl.format(M.t.u0vaDA, { guildName: n.name })
                   })
               })
           })
         : null;
 }
-function B(e) {
-    var t, n;
-    let l,
-        o,
-        { invite: d, getAcceptInviteContext: I } = e,
-        { approximate_member_count: x, approximate_presence_count: j, target_type: B, target_application: w } = d;
-    s()(B === P.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
-    let F = r.useRef(null),
-        [G, V] = r.useState(!1),
-        [H, z] = r.useState(!1);
+function G(e) {
+    var t, n, l;
+    let o,
+        d,
+        { invite: x, getAcceptInviteContext: N } = e,
+        { approximate_member_count: P, approximate_presence_count: G, target_type: V, target_application: H } = x;
+    s()(V === O.Iq.EMBEDDED_APPLICATION && null != H, 'invalid application invite');
+    let z = r.useRef(null),
+        [W, K] = r.useState(!1),
+        [Y, X] = r.useState(!1),
+        [, Q] = r.useState(!1),
+        q = r.useCallback(
+            (e) => {
+                e &&
+                    Q((e) => {
+                        if (!e) {
+                            var t;
+                            Z.default.track(y.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
+                                application_id: H.id,
+                                invite_inviter_id: null === (t = x.inviter) || void 0 === t ? void 0 : t.id
+                            });
+                        }
+                        return !0;
+                    });
+            },
+            [null === (t = x.inviter) || void 0 === t ? void 0 : t.id, H.id]
+        ),
+        J = (0, h.O)(q),
+        $ = (0, T.Z)(z, J);
     r.useEffect(() => {
         let e = new ResizeObserver(() =>
                 (function () {
                     var e;
-                    let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
-                    null != t && (V(t < D + M), z(t <= 2 * O));
+                    let t = null === (e = z.current) || void 0 === e ? void 0 : e.offsetWidth;
+                    null != t && (K(t < B + U), X(t <= 2 * k));
                 })()
             ),
-            t = F.current;
+            t = z.current;
         return (
             null != t && e.observe(t),
             () => {
                 e.disconnect();
             }
         );
-    }, [F, V, z]);
-    let W = (0, c.e7)([S.Z], () => (null != d.guild ? S.Z.getGuild(d.guild.id) : null), [d]),
-        K = (0, C.Z)([w.id])[0],
-        Y = (0, c.e7)([h.ZP], () => {
+    }, [z, K, X]);
+    let ee = (0, c.e7)([b.Z], () => (null != x.guild ? b.Z.getGuild(x.guild.id) : null), [x]),
+        et = (0, I.Z)([H.id])[0],
+        en = (0, c.e7)([f.ZP], () => {
             var e;
-            return (null == d ? void 0 : d.channel) != null && (null === (e = h.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === w.id;
+            return (null == x ? void 0 : x.channel) != null && (null === (e = f.ZP.getSelfEmbeddedActivityForChannel(x.channel.id)) || void 0 === e ? void 0 : e.applicationId) === H.id;
         }),
-        X = (0, c.e7)([h.ZP], () => {
+        ei = (0, c.e7)([f.ZP], () => {
             var e;
-            return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? h.ZP.getEmbeddedActivitiesForChannel(d.channel.id) : []).some((e) => {
+            return ((null === (e = x.channel) || void 0 === e ? void 0 : e.id) != null ? f.ZP.getEmbeddedActivitiesForChannel(x.channel.id) : []).some((e) => {
                 let { applicationId: t } = e;
-                return w.id === t;
+                return H.id === t;
             });
         }),
-        Q = T.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-        q = (0, c.e7)([A.Z], () => null != Q && A.Z.can(Z.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
-        { analyticsLocations: J } = (0, E.ZP)(g.Z.INVITE_EMBED),
-        $ = (0, f.Z)({
-            applicationId: w.id,
-            size: O,
+        er = A.Z.getChannel(null === (n = x.channel) || void 0 === n ? void 0 : n.id),
+        el = (0, c.e7)([j.Z], () => null != er && j.Z.can(y.Plq.USE_EMBEDDED_ACTIVITIES, er), [er]),
+        { analyticsLocations: ea } = (0, C.ZP)(E.Z.INVITE_EMBED),
+        eo = (0, p.Z)({
+            applicationId: H.id,
+            size: k,
             names: ['embedded_cover']
         }),
-        ee = (0, c.Wu)(
-            [h.ZP],
+        es = (0, c.Wu)(
+            [f.ZP],
             () =>
-                null != Q
-                    ? h.ZP.getEmbeddedActivitiesForChannel(Q.id)
-                          .filter((e) => e.applicationId === w.id)
+                null != er
+                    ? f.ZP.getEmbeddedActivitiesForChannel(er.id)
+                          .filter((e) => e.applicationId === H.id)
                           .flatMap((e) => Array.from(e.userIds))
                     : [],
-            [Q, w.id]
+            [er, H.id]
         ),
-        et = (0, c.Wu)([b.default], () => ee.map((e) => b.default.getUser(e)), [ee]),
-        en = d.state === Z.r2o.ACCEPTING,
-        ei = null != W;
-    if (null == W) {
-        if (null == d.guild) return (0, i.jsx)(R.Z, {});
-        W = new v.ZP(d.guild);
+        ec = (0, c.Wu)([R.default], () => es.map((e) => R.default.getUser(e)), [es]),
+        ed = x.state === y.r2o.ACCEPTING,
+        eu = null != ee;
+    if (null == ee) {
+        if (null == x.guild) return (0, i.jsx)(L.Z, {});
+        ee = new S.ZP(x.guild);
     }
-    let er = (ei && !q) || (ei && Y),
-        el = () => {
+    let em = (eu && !el) || (eu && en),
+        eh = () => {
             m.Z.acceptInviteAndTransitionToInviteChannel({
-                inviteKey: d.code,
-                context: I('Invite Button Embed'),
-                analyticsLocations: J
+                inviteKey: x.code,
+                context: N('Invite Button Embed'),
+                analyticsLocations: ea
             });
         };
-    return (ei && Y && (l = L.intl.string(L.t.wJNK8P)), !q && (l = L.intl.string(L.t.hHGrW1)), (o = Y ? L.intl.string(L.t.KC26NT) : X || !ei ? L.intl.string(L.t.VJlc0d) : L.intl.string(L.t.I0v0Qk)), null == d.code || '' === d.code)
+    return (eu && en && (o = M.intl.string(M.t.wJNK8P)), !el && (o = M.intl.string(M.t.hHGrW1)), (d = en ? M.intl.string(M.t.KC26NT) : ei || !eu ? M.intl.string(M.t.VJlc0d) : M.intl.string(M.t.I0v0Qk)), null == x.code || '' === x.code)
         ? null
         : (0, i.jsxs)('div', {
-              className: y.container,
-              ref: F,
+              className: D.container,
+              ref: $,
               children: [
                   (0, i.jsx)('div', {
-                      className: a()(y.imgContainer, {
-                          [y.large]: G,
-                          [y.stacked]: H
+                      className: a()(D.imgContainer, {
+                          [D.large]: W,
+                          [D.stacked]: Y
                       }),
-                      children: (0, i.jsx)(p.Z, {
-                          imageBackground: $,
-                          applicationName: null !== (n = null == K ? void 0 : K.name) && void 0 !== n ? n : '',
-                          imageClassName: a()(y.img, {
-                              [y.large]: G,
-                              [y.stacked]: H
+                      children: (0, i.jsx)(_.Z, {
+                          imageBackground: eo,
+                          applicationName: null !== (l = null == et ? void 0 : et.name) && void 0 !== l ? l : '',
+                          imageClassName: a()(D.img, {
+                              [D.large]: W,
+                              [D.stacked]: Y
                           }),
-                          imageNotFoundClassName: a()(y.brokenImg, {
-                              [y.large]: G,
-                              [y.stacked]: H
+                          imageNotFoundClassName: a()(D.brokenImg, {
+                              [D.large]: W,
+                              [D.stacked]: Y
                           })
                       })
                   }),
-                  (0, i.jsxs)(N.Z, {
-                      className: a()(y.content, {
-                          [y.large]: G,
-                          [y.stacked]: H
+                  (0, i.jsxs)(v.Z, {
+                      className: a()(D.content, {
+                          [D.large]: W,
+                          [D.stacked]: Y
                       }),
                       children: [
                           (0, i.jsxs)('div', {
-                              className: y.info,
+                              className: D.info,
                               children: [
-                                  (0, i.jsx)(u.FormTitle, { children: ei ? L.intl.string(L.t['1ckx+P']) : L.intl.string(L.t.BoQUFR) }),
+                                  (0, i.jsx)(u.FormTitle, { children: eu ? M.intl.string(M.t['1ckx+P']) : M.intl.string(M.t.BoQUFR) }),
                                   (0, i.jsx)(u.Heading, {
-                                      className: y.heading,
+                                      className: D.heading,
                                       variant: 'heading-xl/semibold',
-                                      children: null == K ? void 0 : K.name
+                                      children: null == et ? void 0 : et.name
                                   }),
-                                  (0, i.jsx)(U, {
-                                      channel: Q,
-                                      guild: W,
-                                      isStacked: H,
-                                      hasEnded: !X
+                                  (0, i.jsx)(F, {
+                                      channel: er,
+                                      guild: ee,
+                                      isStacked: Y,
+                                      hasEnded: !ei
                                   })
                               ]
                           }),
                           (0, i.jsxs)('div', {
-                              className: a()(y.currentState, {
-                                  [y.large]: G,
-                                  [y.split]: !X && H
+                              className: a()(D.currentState, {
+                                  [D.large]: W,
+                                  [D.split]: !ei && Y
                               }),
                               children: [
-                                  !X && ei
+                                  !ei && eu
                                       ? (0, i.jsxs)('div', {
-                                            className: a()(y.endedNote, { [y.large]: G }),
+                                            className: a()(D.endedNote, { [D.large]: W }),
                                             children: [
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: L.intl.string(L.t.JBnc7O)
+                                                    children: M.intl.string(M.t.JBnc7O)
                                                 }),
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: L.intl.string(L.t.lEvDDQ)
+                                                    children: M.intl.string(M.t.lEvDDQ)
                                                 })
                                             ]
                                         })
                                       : null,
-                                  ei
+                                  eu
                                       ? null
-                                      : (0, i.jsx)(k, {
-                                            members: x,
-                                            membersOnline: j,
-                                            isLarge: G,
-                                            isStacked: H
+                                      : (0, i.jsx)(w, {
+                                            members: P,
+                                            membersOnline: G,
+                                            isLarge: W,
+                                            isStacked: Y
                                         }),
                                   (0, i.jsxs)('div', {
-                                      className: y.cta,
+                                      className: D.cta,
                                       children: [
-                                          null != W && X
+                                          null != ee && ei
                                               ? (0, i.jsx)('div', {
-                                                    className: y.avatars,
-                                                    children: (0, i.jsx)(_.Z, {
-                                                        guildId: W.id,
-                                                        users: et,
+                                                    className: D.avatars,
+                                                    children: (0, i.jsx)(g.Z, {
+                                                        guildId: ee.id,
+                                                        users: ec,
                                                         max: 4
                                                     })
                                                 })
                                               : null,
                                           (0, i.jsx)(u.Tooltip, {
-                                              text: l,
+                                              text: o,
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
                                                   return (0, i.jsx)(u.Button, {
-                                                      className: y.actionButton,
+                                                      className: D.actionButton,
                                                       onClick: () => {
-                                                          el(), null == t || t();
+                                                          eh(), null == t || t();
                                                       },
-                                                      wrapperClassName: y.tooltipButtonWrapper,
+                                                      wrapperClassName: D.tooltipButtonWrapper,
                                                       ...n,
-                                                      submitting: en,
-                                                      disabled: er,
+                                                      submitting: ed,
+                                                      disabled: em,
                                                       color: u.ButtonColors.GREEN,
-                                                      children: o
+                                                      children: d
                                                   });
                                               }
                                           })

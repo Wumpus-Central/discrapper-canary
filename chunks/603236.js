@@ -36,24 +36,25 @@ let C = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))
         });
     }),
     E = (e) => {
-        let { guild: n, noInvitesAvailable: t, showFriends: r, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: x, inviteFlags: E, setInviteFlags: T, showGuestInviteToggleForCurrentVoiceChannel: S, copyValue: Z, changePage: b, inviteChannel: y, source: _, code: R, guildScheduledEvent: k, disabled: A } = e,
-            { maxAge: D, maxUses: L, networkError: z, showVanityURL: B } = d,
-            M = i.useCallback(() => {
+        let { guild: n, noInvitesAvailable: t, showFriends: r, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: x, inviteFlags: E, setInviteFlags: T, showGuestInviteToggleForCurrentVoiceChannel: S, copyValue: Z, changePage: b, inviteChannel: y, source: _, code: R, guildScheduledEvent: k, disabled: A, application: D } = e,
+            { maxAge: L, maxUses: z, networkError: B, showVanityURL: M } = d,
+            U = i.useCallback(() => {
                 m.default.track(f.rMx.COPY_INSTANT_INVITE, {
                     server: u.Z.getGuildId(),
                     channel: null == y ? void 0 : y.id,
                     channel_type: null == y ? void 0 : y.type,
                     location: _,
                     code: R,
-                    guild_scheduled_event_id: null == k ? void 0 : k.id
+                    guild_scheduled_event_id: null == k ? void 0 : k.id,
+                    application_id: null == D ? void 0 : D.id
                 });
-            }, [y, _, R, k]);
+            }, [null == D ? void 0 : D.id, y, _, R, k]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(C, {
                     value: Z,
                     autoFocus: r,
-                    onCopy: M,
+                    onCopy: U,
                     disabled: A
                 }),
                 x
@@ -70,13 +71,13 @@ let C = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))
                           })
                       })
                     : null,
-                t || B
+                t || M
                     ? null
                     : (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
                           className: a()(p.marginTop8, I.footerText),
                           children: [
-                              (0, g.Vg)(D, L),
+                              (0, g.Vg)(L, z),
                               ' ',
                               r
                                   ? (0, l.jsx)(c.Anchor, {
@@ -86,17 +87,17 @@ let C = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))
                                   : null
                           ]
                       }),
-                !t && r && B
+                !t && r && M
                     ? (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
                           className: a()(p.marginTop8, I.footerText),
                           children: [N.intl.string(N.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != z
+                null != B
                     ? (0, l.jsx)(v.W, {
                           guild: n,
-                          error: z,
+                          error: B,
                           onClose: o
                       })
                     : null
