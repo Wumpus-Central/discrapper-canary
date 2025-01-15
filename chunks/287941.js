@@ -4,16 +4,19 @@ var i = r(570140),
     o = r(477931);
 let l = function (e) {
     var n;
-    let r =
-        arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {
-                  x: 0,
-                  y: 0,
-                  w: 0,
-                  h: 0
-              };
-    s.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti &&
+    let l =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : {
+                      x: 0,
+                      y: 0,
+                      w: 0,
+                      h: 0
+                  },
+        u = s.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti,
+        c = !0;
+    (c = r(451478).Z.isFocused()) &&
+        u &&
         !a.Z.useReducedMotion &&
         (null === (n = e.potions) ||
             void 0 === n ||
@@ -23,7 +26,7 @@ let l = function (e) {
                         i.Z.dispatch({
                             type: 'POTIONS_TRIGGER_MESSAGE_CONFETTI',
                             emoji: e,
-                            boundingRect: r
+                            boundingRect: l
                         });
                     });
             }));
