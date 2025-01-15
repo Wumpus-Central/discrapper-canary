@@ -1,19 +1,18 @@
-n(47120);
-var r = n(485589),
-    i = n(247123);
-let a = new Set(r.roles.keys());
-t.Z = {
-    id: 'aria-valid-roles',
-    selector: '[role]',
-    tags: ['wcag2a', 'wcag412'],
-    metadata: {
-        description: 'ARIA roles used must conform to valid values',
-        help: 'Ensures all elements with a role attribute use a valid value'
-    },
-    check: function (e) {
-        for (let t of e.getAttribute('role').split(' ')) {
-            if (!a.has(t)) return "Role '".concat(t, "' is not a valid ARIA role");
-        }
-        return i.w;
-    }
+e.exports = {
+    header: 'header_d33b18',
+    headerImage: 'headerImage_d33b18',
+    headerImageSimple: 'headerImageSimple_d33b18',
+    headerImageBG: 'headerImageBG_d33b18',
+    searchTitle: 'searchTitle_d33b18',
+    searchSubtitle: 'searchSubtitle_d33b18',
+    headerContentWrapper: 'headerContentWrapper_d33b18',
+    headerContent: 'headerContent_d33b18',
+    headerContentSmall: 'headerContentSmall_d33b18',
+    searchBox: 'searchBox_d33b18',
+    searchBoxInput: 'searchBoxInput_d33b18',
+    closeIcon: 'closeIcon_d33b18',
+    searchIcon: 'searchIcon_d33b18',
+    tabBar: 'tabBar_d33b18',
+    tabBarItem: 'tabBarItem_d33b18',
+    sectionHeader: 'sectionHeader_d33b18'
 };
