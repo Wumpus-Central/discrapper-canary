@@ -12,13 +12,16 @@ r.d(n, {
         return M;
     },
     L1: function () {
+        return F;
+    },
+    Ow: function () {
         return G;
     },
     Wx: function () {
         return S;
     },
     X: function () {
-        return F;
+        return Z;
     },
     XZ: function () {
         return U;
@@ -56,9 +59,9 @@ var a = r(627494);
 var s = r(757143);
 var o = r(653041);
 var l = r(47120);
-var u = r(668781),
-    c = r(904245),
-    d = r(911969),
+var u = r(912370),
+    c = r(668781),
+    d = r(904245),
     f = r(895924),
     _ = r(667204),
     h = r(957730),
@@ -98,10 +101,10 @@ function L(e) {
 }
 function x(e) {
     let { command: n, optionValues: r, context: i, commandTargetId: a, maxSizeCallback: s, sectionName: o, commandOrigin: l = f.bB.APPLICATION_LAUNCHER } = e,
-        { channel: d } = i,
+        { channel: u } = i,
         p = async () => {
             try {
-                let u = await (0, _.Z)({
+                let c = await (0, _.Z)({
                     command: n,
                     optionValues: r,
                     context: i,
@@ -111,14 +114,14 @@ function x(e) {
                     sectionName: o,
                     source: v.Z.entrypoint()
                 });
-                if (n.inputType === f.iw.BUILT_IN_TEXT && null != u) {
+                if (n.inputType === f.iw.BUILT_IN_TEXT && null != c) {
                     var e;
-                    let n = h.ZP.parse(d, u.content);
-                    (n.tts = null !== (e = u.tts) && void 0 !== e && e), c.Z.sendMessage(i.channel.id, n);
+                    let n = h.ZP.parse(u, c.content);
+                    (n.tts = null !== (e = c.tts) && void 0 !== e && e), d.Z.sendMessage(i.channel.id, n);
                 }
             } catch (e) {
                 throw (
-                    (u.Z.show({
+                    (c.Z.show({
                         title: y.intl.string(y.t['aHO//v']),
                         body: y.intl.string(y.t.kuzKHB),
                         confirmText: y.intl.string(y.t['5911LS']),
@@ -165,21 +168,24 @@ function U(e) {
 function B(e) {
     let n = [];
     for (let r of e) {
-        let e = r.items.filter((e) => {
-            var n;
-            let r = e.application,
-                i = null !== (n = e.commands) && void 0 !== n ? n : [];
-            return R(r) && i.some((e) => e.type === d.yU.PRIMARY_ENTRY_POINT);
-        });
+        let e = r.application_directory_collection_items.filter((e) => e.type === u.C.APPLICATION && R(e.application));
         if (0 !== e.length)
             n.push({
                 ...r,
-                items: e
+                application_directory_collection_items: e
             });
     }
     return n;
 }
 function G(e) {
+    return {
+        applicationId: e.id,
+        customInstallUrl: e.customInstallUrl,
+        installParams: e.installParams,
+        integrationTypesConfig: e.integrationTypesConfig
+    };
+}
+function F(e) {
     return e instanceof p.ZP
         ? {
               applicationId: e.id,
@@ -194,6 +200,6 @@ function G(e) {
               integrationTypesConfig: e.integration_types_config
           };
 }
-function F(e) {
+function Z(e) {
     g.S.dispatchToLastSubscribed(T.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

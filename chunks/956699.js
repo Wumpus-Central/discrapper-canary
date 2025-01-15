@@ -1012,10 +1012,11 @@ let et = d.ZP.connectStores([y.default], () => ({
     isSourceMapsEnabled: y.default.sourceMapsEnabled,
     isAnalyticsDebuggerEnabled: y.default.isAnalyticsDebuggerEnabled,
     isIdleStatusIndicatorEnabled: y.default.isIdleStatusIndicatorEnabled,
-    appDirectoryIncludesInactiveCollections: y.default.appDirectoryIncludesInactiveCollections,
+    onlyShowPreviewAppCollections: y.default.onlyShowPreviewAppCollections,
+    disableAppCollectionsCache: y.default.disableAppCollectionsCache,
     preventPopoutClose: y.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: r, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, appDirectoryIncludesInactiveCollections: h, preventPopoutClose: x } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: r, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: h, disableAppCollectionsCache: x, preventPopoutClose: f } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(P.F, {
@@ -1108,7 +1109,7 @@ let et = d.ZP.connectStores([y.default], () => ({
                         (0, i.jsx)(P.F, {
                             setting: k.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
                             children: (0, i.jsx)(m.FormSwitch, {
-                                value: x,
+                                value: f,
                                 note: 'This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.',
                                 onChange: (e) => (0, p.y)({ preventPopoutClose: e }),
                                 children: 'Prevent Popouts From Closing Automatically'
@@ -1118,9 +1119,18 @@ let et = d.ZP.connectStores([y.default], () => ({
                             setting: k.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                             children: (0, i.jsx)(m.FormSwitch, {
                                 value: h,
-                                note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
-                                onChange: (e) => (0, p.y)({ appDirectoryIncludesInactiveCollections: e }),
-                                children: 'Preview Unpublished Collections on App Directory Homepage'
+                                note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
+                                onChange: (e) => (0, p.y)({ onlyShowPreviewAppCollections: e }),
+                                children: 'Preview unpublished application collections'
+                            })
+                        }),
+                        (0, i.jsx)(P.F, {
+                            setting: k.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
+                            children: (0, i.jsx)(m.FormSwitch, {
+                                value: x,
+                                note: 'Disable application collections cache so that you can see updates to collections immediately.',
+                                onChange: (e) => (0, p.y)({ disableAppCollectionsCache: e }),
+                                children: 'Disable application collections cache'
                             })
                         }),
                         (0, i.jsxs)(P.F, {

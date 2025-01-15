@@ -1496,6 +1496,12 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eD.s6.DEVELOPER_OPTIONS_FLAGS,
                 predicate: () => eQ && Z.Z.isDeveloper
             },
+            [eD.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
+                section: eZ.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ['Disable App Collections Cache'],
+                parent: eD.s6.DEVELOPER_OPTIONS_FLAGS,
+                predicate: () => eQ && Z.Z.isDeveloper
+            },
             [eD.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
                 section: eZ.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Override Client Side'],

@@ -22,7 +22,7 @@ function u(e, n, r) {
     );
 }
 !(function (e) {
-    (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING');
+    (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS');
 })(i || (i = {}));
 let c = {
         visual_effect_view_overrides: {
@@ -56,6 +56,14 @@ let c = {
         iar_skip_api_report_submit: {
             label: 'Enable to skip calling the API to skip submitting actual IAR reports',
             category: 3
+        },
+        only_show_preview_app_collections: {
+            label: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
+            category: 4
+        },
+        disable_app_collections_cache: {
+            label: 'Disable application collections cache so that you can see updates to collections immediately.',
+            category: 4
         }
     },
     d = {};

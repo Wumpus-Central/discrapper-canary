@@ -5,17 +5,17 @@ i.d(t, {
 }),
     i(47120);
 var n = i(200651),
-    r = i(192379),
-    a = i(120356),
-    o = i.n(a),
+    a = i(192379),
+    r = i(120356),
+    o = i.n(r),
     l = i(912370),
     c = i(477690),
     s = i(481060),
     d = i(453499),
     u = i(626135),
-    h = i(463571),
-    _ = i(34674),
-    p = i(132871),
+    _ = i(463571),
+    p = i(34674),
+    h = i(132871),
     m = i(147890),
     f = i(409425),
     g = i(57716),
@@ -23,20 +23,20 @@ var n = i(200651),
     C = i(388032),
     b = i(885932);
 function I(e) {
-    let { collectionTitle: t, title: i, description: r, handleClick: a, imageSrc: l, ctaLabel: c, ctaLink: d, applicationId: u } = e,
-        _ = '936929561302675456' === u,
-        p =
+    let { collectionTitle: t, title: i, description: a, handleClick: r, imageSrc: l, ctaLabel: c, ctaLink: d, applicationId: u } = e,
+        p = '936929561302675456' === u,
+        h =
             null == u
                 ? (0, n.jsx)(s.Button, {
                       className: b.applicationCta,
-                      onClick: a,
+                      onClick: r,
                       children: c
                   })
-                : (0, n.jsx)(h.Z, {
+                : (0, n.jsx)(_.Z, {
                       href: x.Z5c.APPLICATION_DIRECTORY_PROFILE(u),
                       children: (0, n.jsx)(s.Button, {
                           className: b.applicationCta,
-                          onClick: a,
+                          onClick: r,
                           children: c
                       })
                   });
@@ -58,18 +58,18 @@ function I(e) {
                         (0, n.jsxs)(s.Heading, {
                             className: b.applicationName,
                             variant: 'heading-xxl/medium',
-                            children: [i, ' ', _ && (0, n.jsx)(f.Z, {})]
+                            children: [i, ' ', p && (0, n.jsx)(f.Z, {})]
                         }),
                         (0, n.jsx)(s.Text, {
                             className: b.applicationDescription,
                             variant: 'text-md/normal',
                             lineClamp: 3,
-                            children: r
+                            children: a
                         }),
                         null == d
-                            ? p
+                            ? h
                             : (0, n.jsx)(s.Anchor, {
-                                  onClick: a,
+                                  onClick: r,
                                   href: d,
                                   className: o()((0, s.getButtonStyle)({ grow: !1 }), b.applicationCta),
                                   children: c
@@ -91,14 +91,14 @@ function I(e) {
 function v(e) {
     let {
             collection: t,
-            collection: { id: i, title: a, application_directory_collection_items: s }
+            collection: { id: i, title: r, application_directory_collection_items: s }
         } = e,
-        h = (0, g.Z)({ collection: t }),
-        [f, v] = r.useState(),
-        N = (0, p.useApplicationDirectoryHistory)((e) => e.guildId);
+        _ = (0, g.Z)({ collection: t }),
+        [f, v] = a.useState(),
+        A = (0, h.useApplicationDirectoryHistory)((e) => e.guildId);
     return (
-        r.useEffect(() => {
-            let e = null == h ? void 0 : h.current;
+        a.useEffect(() => {
+            let e = null == _ ? void 0 : _.current;
             if (null == e) return;
             let t = new ResizeObserver(() => {
                 let t = document.body.offsetWidth < parseFloat(c.Z.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(c.Z.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(c.Z.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
@@ -110,9 +110,9 @@ function v(e) {
                     t.disconnect();
                 }
             );
-        }, [h]),
+        }, [_]),
         (0, n.jsx)('article', {
-            ref: h,
+            ref: _,
             className: o()({ [b.collectionBottomMargin]: s.length <= 1 }),
             children: (0, n.jsx)(d.Z, {
                 aspectRatio: f,
@@ -121,58 +121,56 @@ function v(e) {
                 paginationArrowClassName: b.paginationArrow,
                 items: s,
                 onChangeItem: (e, t, n) => {
-                    let { application: r } = e;
-                    null != r &&
+                    if (e.type === l.C.APPLICATION && null != e.application)
                         u.default.track(x.rMx.APP_DIRECTORY_COLLECTION_SCROLLED, {
                             collection_id: i,
                             offset: n,
-                            results: [r.id],
-                            guild_id: N
+                            results: [e.application.id],
+                            guild_id: A
                         });
                 },
                 renderItem: (e) => {
-                    let { id: t, image_hash: r, application: o, type: c, description: s, title: d, call_to_action_label: h, call_to_action_url: p } = e;
-                    if (null == r) return;
-                    let f = (0, _.$_)({
-                        itemId: t,
-                        hash: r
+                    if (null == e.image_hash) return;
+                    let t = (0, p.$_)({
+                        itemId: e.id,
+                        hash: e.image_hash
                     });
-                    if (c === l.C.APPLICATION && null != o) {
-                        var g, b;
+                    if (e.type === l.C.APPLICATION && null != e.application) {
+                        var a, o;
                         return (0, n.jsx)(I, {
-                            collectionTitle: a,
-                            title: o.name,
-                            description: null !== (b = null === (g = o.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== b ? b : o.description,
+                            collectionTitle: r,
+                            title: e.application.name,
+                            description: null !== (o = null === (a = e.application.directory_entry) || void 0 === a ? void 0 : a.short_description) && void 0 !== o ? o : e.application.description,
                             handleClick: () => {
                                 u.default.track(x.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                     collection_id: i,
-                                    application_id: o.id,
-                                    guild_id: N,
+                                    application_id: e.application.id,
+                                    guild_id: A,
                                     shown_mutual_guilds_count: void 0
                                 }),
-                                    (0, m.goToApplication)({ applicationId: o.id });
+                                    (0, m.goToApplication)({ applicationId: e.application.id });
                             },
-                            imageSrc: f,
+                            imageSrc: t,
                             ctaLabel: C.intl.string(C.t.xKUoVl),
-                            applicationId: o.id
+                            applicationId: e.application.id
                         });
                     }
-                    if (c === l.C.LINK && null != d && null != p && null != h)
+                    if (e.type === l.C.LINK && null != e.title && null != e.call_to_action_url && null != e.call_to_action_label)
                         return (0, n.jsx)(I, {
-                            collectionTitle: a,
-                            title: d,
-                            description: s,
+                            collectionTitle: r,
+                            title: e.title,
+                            description: e.description,
                             handleClick: () => {
                                 u.default.track(x.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                                     collection_id: i,
-                                    link: p,
-                                    guild_id: N,
+                                    link: e.call_to_action_url,
+                                    guild_id: A,
                                     shown_mutual_guilds_count: void 0
                                 });
                             },
-                            imageSrc: f,
-                            ctaLabel: h,
-                            ctaLink: p
+                            imageSrc: t,
+                            ctaLabel: e.call_to_action_label,
+                            ctaLink: e.call_to_action_url
                         });
                 }
             })

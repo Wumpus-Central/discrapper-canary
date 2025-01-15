@@ -41,7 +41,7 @@ function f(e) {
                         [h.rows]: f === u.U4.ROW
                     }),
                     children: C.map((e, t) => {
-                        let { application: l, installOnDemand: a } = e;
+                        let { application: l, installOnDemand: a, showsPromoted: o } = e;
                         return (0, i.jsx)(
                             N,
                             {
@@ -53,7 +53,8 @@ function f(e) {
                                 location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: a,
                                 isOneClickCTA: _,
-                                sectionOverallPosition: x
+                                sectionOverallPosition: x,
+                                showsPromoted: o
                             },
                             l.id
                         );

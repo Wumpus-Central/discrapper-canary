@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return P;
+        return S;
     }
 }),
     t(47120);
@@ -22,13 +22,13 @@ var i = t(200651),
     x = t(973616),
     _ = t(783097),
     N = t(695676),
-    g = t(520315),
+    I = t(520315),
     A = t(29380),
     E = t(783685),
-    b = t(388032),
-    I = t(891402),
-    j = t(426953);
-function P(e) {
+    g = t(388032),
+    b = t(891402),
+    P = t(426953);
+function S(e) {
     let { channel: n, application: t, videoUrl: a, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {
             var e;
@@ -37,24 +37,23 @@ function P(e) {
         h = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
         f = null != a,
         { isSlideReady: v } = (0, N.hH)(),
-        [x, g] = l.useState(!1);
+        [x, I] = l.useState(!1);
     return (
         l.useEffect(() => {
-            v && g(!0);
+            v && I(!0);
         }, [v]),
         (0, i.jsxs)('div', {
-            className: I.container,
+            className: b.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: I.profileAndVideoContainer,
                     children: [
                         f
                             ? (0, i.jsxs)('div', {
-                                  className: I.videoContainer,
+                                  className: b.videoContainer,
                                   children: [
                                       x
                                           ? (0, i.jsx)(C.Z, {
-                                                className: o()(I.videoCover, I.video),
+                                                className: o()(b.videoCover, b.video),
                                                 loop: !0,
                                                 muted: !0,
                                                 autoPlay: !0,
@@ -63,25 +62,25 @@ function P(e) {
                                             })
                                           : null,
                                       (0, i.jsx)('img', {
-                                          className: I.videoCover,
+                                          className: b.videoCover,
                                           src: s,
-                                          'aria-label': b.intl.string(b.t.X4IxWF)
+                                          'aria-label': g.intl.string(g.t.X4IxWF)
                                       })
                                   ]
                               })
                             : null,
                         (0, i.jsxs)('div', {
-                            className: f ? I.overviewContainerWithVideo : I.overviewContainerNoVideo,
+                            className: f ? b.overviewContainerWithVideo : b.overviewContainerNoVideo,
                             children: [
                                 (0, i.jsx)(y, { application: t }),
                                 (0, i.jsx)(T, { application: t }),
                                 p.length > 0 ? (0, i.jsx)(M, { description: p }) : null,
                                 h
                                     ? (0, i.jsx)('div', {
-                                          className: I.developerShelfControlsContainer,
+                                          className: b.developerShelfControlsContainer,
                                           children: (0, i.jsx)(u.W, {
                                               hideSearch: !0,
-                                              className: I.developerShelfControls
+                                              className: b.developerShelfControls
                                           })
                                       })
                                     : null,
@@ -96,22 +95,22 @@ function P(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(S, { application: t })
+                (0, i.jsx)(j, { application: t })
             ]
         })
     );
 }
-function S(e) {
+function j(e) {
     let { application: n } = e,
         t = (0, _.Cb)(n),
         l = (0, _.Hu)(n);
     return t || l
         ? (0, i.jsxs)('div', {
-              className: I.monetizationDisclosureContainerStyle,
+              className: b.monetizationDisclosureContainerStyle,
               children: [
                   t
                       ? (0, i.jsxs)('div', {
-                            className: I.monetizationDisclosureStyle,
+                            className: b.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.ShopIcon, {
                                     size: 'sm',
@@ -120,14 +119,14 @@ function S(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: b.intl.string(b.t['8z5B2d'])
+                                    children: g.intl.string(g.t['8z5B2d'])
                                 })
                             ]
                         })
                       : null,
                   l
                       ? (0, i.jsxs)('div', {
-                            className: I.monetizationDisclosureStyle,
+                            className: b.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(s.BillIcon, {
                                     size: 'sm',
@@ -136,7 +135,7 @@ function S(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: b.intl.string(b.t['5khEk5'])
+                                    children: g.intl.string(g.t['5khEk5'])
                                 })
                             ]
                         })
@@ -151,7 +150,7 @@ function y(e) {
         l = (0, _.BQ)(t) ? t.name : null !== (n = (0, _.$d)(t)) && void 0 !== n ? n : '',
         a = (0, _.vJ)(t);
     return (0, i.jsxs)('div', {
-        className: I.titleContainer,
+        className: b.titleContainer,
         children: [
             (0, i.jsx)(s.Heading, {
                 variant: 'heading-xl/extrabold',
@@ -160,11 +159,11 @@ function y(e) {
             }),
             a
                 ? (0, i.jsx)('div', {
-                      className: I.partnerLabelContainer,
+                      className: b.partnerLabelContainer,
                       children: (0, i.jsx)(s.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: b.intl.string(b.t.LO4f0N)
+                          children: g.intl.string(g.t.LO4f0N)
                       })
                   })
                 : null
@@ -179,14 +178,14 @@ function T(e) {
         }, [n]);
     return (0, _.ye)(n)
         ? (0, i.jsxs)('div', {
-              className: I.tagsContainer,
+              className: b.tagsContainer,
               children: [
                   (0, i.jsx)(L, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
                           {
-                              className: I.tagContainer,
+                              className: b.tagContainer,
                               children: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
@@ -206,7 +205,7 @@ function L(e) {
     if (!(0, _.ye)(t)) return null;
     let l = null !== (n = (0, _.BQ)(t) ? (t instanceof x.ZP ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
-        className: I.tagContainer,
+        className: b.tagContainer,
         children: [
             (0, i.jsx)(s.GroupIcon, {
                 size: 'xs',
@@ -236,10 +235,10 @@ function R(e) {
     let x = s.ButtonSizes.MAX;
     return null != c && null != u
         ? (0, i.jsxs)('div', {
-              className: I.entrypointContainer,
+              className: b.entrypointContainer,
               children: [
                   (0, i.jsx)('div', {
-                      className: I.entryPointContainerFlexChild,
+                      className: b.entryPointContainerFlexChild,
                       children: (0, i.jsx)(A.Z, {
                           channel: t,
                           application: l,
@@ -250,7 +249,7 @@ function R(e) {
                   }),
                   C && null != u
                       ? (0, i.jsx)('div', {
-                            className: I.entryPointContainerFlexChild,
+                            className: b.entryPointContainerFlexChild,
                             children: (0, i.jsx)(E.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
@@ -263,9 +262,9 @@ function R(e) {
           })
         : r && !o && (0, _.ye)(l)
           ? (0, i.jsx)(s.HelpMessage, {
-                className: I.primaryEntryPointWarningMessage,
+                className: b.primaryEntryPointWarningMessage,
                 messageType: s.HelpMessageTypes.WARNING,
-                children: b.intl.format(b.t['s/3hjI'], {})
+                children: g.intl.format(g.t['s/3hjI'], {})
             })
           : null;
 }
@@ -309,21 +308,21 @@ function M(e) {
             ref: m,
             isTransitioning: p,
             onTransitionEnd: h
-        } = (0, g.Z)({
+        } = (0, I.Z)({
             isExpanded: t,
             ...u
         }),
         f = t || p;
     return (0, i.jsxs)('div', {
-        className: I.descriptionContainer,
+        className: b.descriptionContainer,
         children: [
             (0, i.jsx)('div', {
                 ref: m,
-                className: I.overflowHidden,
+                className: b.overflowHidden,
                 onTransitionEnd: h,
                 children: (0, i.jsx)(s.Text, {
                     ref: r,
-                    className: j.markup,
+                    className: P.markup,
                     variant: 'text-sm/medium',
                     lineClamp: f ? void 0 : 1,
                     style: { maxHeight: f ? void 0 : u.minHeightOverride },
@@ -332,13 +331,13 @@ function M(e) {
             }),
             null != d && d > 1
                 ? (0, i.jsxs)(s.Clickable, {
-                      className: I.expandableDescriptionClickable,
+                      className: b.expandableDescriptionClickable,
                       onClick: () => a((e) => !e),
                       children: [
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: f ? b.intl.string(b.t.u4YJ8v) : b.intl.string(b.t['N/tajI'])
+                              children: f ? g.intl.string(g.t.u4YJ8v) : g.intl.string(g.t['N/tajI'])
                           }),
                           f
                               ? (0, i.jsx)(s.ChevronSmallUpIcon, {

@@ -1,9 +1,10 @@
-var n, r;
-i.d(t, {
+r.d(n, {
     C: function () {
-        return n;
+        return i;
     }
-}),
-    i(47120),
-    ((r = n || (n = {}))[(r.APPLICATION = 1)] = 'APPLICATION'),
-    (r[(r.LINK = 2)] = 'LINK');
+});
+var i,
+    a = r(47120);
+!(function (e) {
+    (e[(e.APPLICATION = 1)] = 'APPLICATION'), (e[(e.LINK = 2)] = 'LINK');
+})(i || (i = {}));

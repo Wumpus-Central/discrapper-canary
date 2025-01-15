@@ -75,7 +75,8 @@ let g = (() => {
         analyticsDebuggerEnabled: !1,
         bugReporterEnabled: !0,
         idleStatusIndicatorEnabled: !1,
-        appDirectoryIncludesInactiveCollections: !1,
+        onlyShowPreviewAppCollections: !1,
+        disableAppCollectionsCache: !1,
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1
     },
@@ -147,8 +148,11 @@ class A extends (i = l.ZP.Store) {
     get isIdleStatusIndicatorEnabled() {
         return I.idleStatusIndicatorEnabled;
     }
-    get appDirectoryIncludesInactiveCollections() {
-        return I.appDirectoryIncludesInactiveCollections;
+    get onlyShowPreviewAppCollections() {
+        return I.onlyShowPreviewAppCollections;
+    }
+    get disableAppCollectionsCache() {
+        return I.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
         return I.isStreamInfoOverlayEnabled;

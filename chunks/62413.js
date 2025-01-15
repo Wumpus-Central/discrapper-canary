@@ -1,50 +1,66 @@
 i.d(t, {
     Z: function () {
-        return x;
+        return I;
     }
 }),
     i(411104);
 var n = i(200651),
-    r = i(192379),
-    a = i(120356),
-    o = i.n(a),
-    l = i(873199),
-    c = i(442837),
-    s = i(857192),
-    d = i(674588),
-    u = i(368862),
+    a = i(192379),
+    r = i(120356),
+    o = i.n(r),
+    l = i(535655),
+    c = i(973693),
+    s = i(873199),
+    d = i(442837),
+    u = i(857192),
+    _ = i(674588),
+    p = i(368862),
     h = i(927356),
-    _ = i(125909),
-    p = i(185156),
-    m = i(87528),
-    f = i(57348),
-    g = i(857228);
-function x() {
-    let e = (0, c.e7)([s.default], () => s.default.appDirectoryIncludesInactiveCollections),
-        t = (0, c.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
-        i = (0, c.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
-    return (r.useEffect(() => {
-        d.bG({ includesInactive: e });
+    m = i(125909),
+    f = i(185156),
+    g = i(87528),
+    x = i(57348),
+    C = i(857228);
+let b = c.Y.APPLICATION_DIRECTORY;
+function I() {
+    let e = (0, d.e7)([u.default], () => u.default.onlyShowPreviewAppCollections) ? l.E.PREVIEW : l.E.ACTIVE,
+        t = (0, d.e7)([p.Z], () =>
+            p.Z.getFetchState({
+                surface: b,
+                activeState: e
+            })
+        ),
+        i = (0, d.e7)([p.Z], () =>
+            p.Z.getCollections({
+                surface: b,
+                activeState: e
+            })
+        );
+    return (a.useEffect(() => {
+        _.XK({
+            surface: b,
+            activeState: e
+        });
     }, [e]),
-    t === u.M.ERROR)
+    t === p.M.ERROR)
         ? (0, n.jsx)(h.Z, {})
-        : (0, n.jsx)(_.Z, {
-              loading: t === u.M.FETCHING,
+        : (0, n.jsx)(m.Z, {
+              loading: t === p.M.FETCHING,
               children:
                   null == i
                       ? void 0
                       : i.map((e, t) => {
-                            let r;
-                            let a = t > 0 && i[t - 1].type !== l.o.GALLERY;
+                            let a;
+                            let r = t > 0 && i[t - 1].type !== s.o.GALLERY;
                             switch (e.type) {
-                                case l.o.LIST:
-                                    r = (0, n.jsx)(m.Z, { collection: e });
+                                case s.o.LIST:
+                                    a = (0, n.jsx)(g.Z, { collection: e });
                                     break;
-                                case l.o.LIST_WITH_IMAGE:
-                                    r = (0, n.jsx)(f.Z, { collection: e });
+                                case s.o.LIST_WITH_IMAGE:
+                                    a = (0, n.jsx)(x.Z, { collection: e });
                                     break;
-                                case l.o.GALLERY:
-                                    r = (0, n.jsx)(p.Z, { collection: e });
+                                case s.o.GALLERY:
+                                    a = (0, n.jsx)(f.Z, { collection: e });
                                     break;
                                 default:
                                     return null;
@@ -52,8 +68,8 @@ function x() {
                             return (0, n.jsx)(
                                 'div',
                                 {
-                                    className: o()({ [g.topMargin]: a }),
-                                    children: r
+                                    className: o()({ [C.topMargin]: r }),
+                                    children: a
                                 },
                                 e.id
                             );
