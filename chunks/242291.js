@@ -1,27 +1,30 @@
 r.d(n, {
+    C0: function () {
+        return O;
+    },
     GN: function () {
-        return R;
+        return D;
     },
     M2: function () {
-        return L;
-    },
-    Nq: function () {
-        return C;
-    },
-    SZ: function () {
-        return P;
-    },
-    aC: function () {
         return w;
     },
+    Nq: function () {
+        return R;
+    },
+    SZ: function () {
+        return k;
+    },
+    aC: function () {
+        return M;
+    },
     pI: function () {
-        return A;
+        return N;
     },
     sR: function () {
-        return x;
+        return P;
     },
     tt: function () {
-        return k;
+        return B;
     }
 });
 var i = r(653041);
@@ -31,106 +34,111 @@ var a = r(399606),
     l = r(695346),
     u = r(675478),
     c = r(581883),
-    d = r(401062),
-    f = r(131704),
-    _ = r(496675),
-    h = r(594174),
-    p = r(626135),
-    m = r(74538),
-    g = r(51144),
-    E = r(208049),
-    v = r(763296),
-    I = r(697426),
-    T = r(641015),
-    b = r(893663),
-    y = r(710111),
-    S = r(981631);
-function A() {
+    d = r(294629),
+    f = r(401062),
+    _ = r(131704),
+    h = r(496675),
+    p = r(594174),
+    m = r(626135),
+    g = r(74538),
+    E = r(51144),
+    v = r(208049),
+    I = r(763296),
+    T = r(697426),
+    b = r(641015),
+    y = r(893663),
+    S = r(710111),
+    A = r(981631);
+function N() {
     var e;
     let n = l.kU.getSetting();
     return null !== (e = null == n ? void 0 : n.volume) && void 0 !== e ? e : 100;
 }
-function N(e, n) {
-    return (null == n ? void 0 : n.guild_id) == null || _.Z.can(S.Plq.USE_EXTERNAL_SOUNDS, n) || e.guildId === y.X8 || e.guildId === (null == n ? void 0 : n.guild_id);
-}
-function C(e, n, r) {
-    let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    return (m.ZP.canUseSoundboardEverywhere(e) || n.guildId === (null == r ? void 0 : r.guild_id) || n.guildId === y.X8) && N(n, r) && (!i || n.available);
+function C(e, n) {
+    return (null == n ? void 0 : n.guild_id) == null || h.Z.can(A.Plq.USE_EXTERNAL_SOUNDS, n) || e.guildId === S.X8 || e.guildId === (null == n ? void 0 : n.guild_id);
 }
 function R(e, n, r) {
-    (0, E.XE)(n, e, I.YQ.SOUNDBOARD), (0, d.kq)(n, e, __OVERLAY__, r);
+    let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+    return (g.ZP.canUseSoundboardEverywhere(e) || n.guildId === (null == r ? void 0 : r.guild_id) || n.guildId === S.X8) && C(n, r) && (!i || n.available);
 }
-function O(e, n) {
-    (0, E.XE)(n, e, I.YQ.JOINED_VOICE_CHANNEL), (0, d.vy)(n, e, __OVERLAY__);
+function O(e) {
+    let { mute: n, suppress: r } = (0, d.b)({ channel: e });
+    return !n && !r;
 }
-function D() {
+function D(e, n, r) {
+    (0, v.XE)(n, e, T.YQ.SOUNDBOARD), (0, f.kq)(n, e, __OVERLAY__, r);
+}
+function L(e, n) {
+    (0, v.XE)(n, e, T.YQ.JOINED_VOICE_CHANNEL), (0, f.vy)(n, e, __OVERLAY__);
+}
+function x() {
     var e, n;
     return Object.values(null !== (n = null === (e = c.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : {}).some((e) => null != e.joinSound);
 }
-async function L(e) {
-    let n = h.default.getCurrentUser(),
+async function w(e) {
+    let n = p.default.getCurrentUser(),
         r = (0, o.Z)(),
-        i = (0, b.k9)(e);
-    if (null == r || f.Lr.has(r.type) || null == i || !m.ZP.canUseCustomCallSounds(n) || !(0, T.D)()) return;
-    await (0, E.w)();
-    let a = i.guildId === y.hY ? y.X8 : i.guildId,
-        s = v.Z.getSound(a, i.soundId);
+        i = (0, y.k9)(e);
+    if (null == r || _.Lr.has(r.type) || null == i || !g.ZP.canUseCustomCallSounds(n) || !(0, b.D)()) return;
+    await (0, v.w)();
+    let a = i.guildId === S.hY ? S.X8 : i.guildId,
+        s = I.Z.getSound(a, i.soundId);
     if (null != s) {
-        if (!N(s, r) || !C(n, s, r, !0)) return null;
-        O(s, r.id);
+        if (!C(s, r) || !R(n, s, r, !0) || !O(r)) return null;
+        L(s, r.id);
     }
 }
-function x(e) {
+function P(e) {
     let { isSoundboardButtonDisabled: n = !1 } = e,
-        r = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        r = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
         i = [];
-    if (!n && !D()) {
+    if (!n && !x()) {
         i.push(s.z.CUSTOM_CALL_SOUNDS_SPARKLES);
-        let e = (0, g.Fc)(r);
-        (m.ZP.canUseCustomCallSounds(r) || e) && i.push(s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
+        let e = (0, E.Fc)(r);
+        (g.ZP.canUseCustomCallSounds(r) || e) && i.push(s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);
     }
     return i;
 }
-function w(e, n) {
+function M(e, n) {
     (0, u.PS)(
         e,
         (r) => {
             (r.joinSound = void 0),
-                M({
+                U({
                     guildId: e,
-                    changeType: I.MW.REMOVED,
-                    soundType: I.jy.ENTRY,
+                    changeType: T.MW.REMOVED,
+                    soundType: T.jy.ENTRY,
                     location: n
                 });
         },
         u.fy.INFREQUENT_USER_ACTION
     );
 }
-function P(e, n, r) {
+function k(e, n, r) {
     (0, u.PS)(
         e,
         (i) => {
-            let a = n.guildId === y.X8,
-                s = a ? I.H$.DEFAULT : I.H$.CUSTOM,
-                o = null != i.joinSound ? I.MW.UPDATED : I.MW.ADDED;
+            let a = n.guildId === S.X8,
+                s = a ? T.H$.DEFAULT : T.H$.CUSTOM,
+                o = null != i.joinSound ? T.MW.UPDATED : T.MW.ADDED;
             (i.joinSound = {
                 soundId: n.soundId,
-                guildId: a ? y.hY : n.guildId
+                guildId: a ? S.hY : n.guildId
             }),
-                M({
+                U({
                     guildId: e,
                     changeType: o,
                     soundSource: s,
-                    soundType: I.jy.ENTRY,
+                    soundType: T.jy.ENTRY,
                     location: r
                 });
         },
         u.fy.INFREQUENT_USER_ACTION
     );
 }
-function M(e) {
+function U(e) {
     let { guildId: n, changeType: r, soundType: i, soundSource: a, location: s } = e;
-    p.default.track(S.rMx.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
+    m.default.track(A.rMx.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
         location_stack: s,
         guild_id: '' === n ? 0 : Number(n),
         change_type: r,
@@ -138,7 +146,7 @@ function M(e) {
         sound_source: a
     });
 }
-function k(e) {
+function B(e) {
     let { location: n } = e;
-    p.default.track(S.rMx.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: n });
+    m.default.track(A.rMx.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, { location_stack: n });
 }

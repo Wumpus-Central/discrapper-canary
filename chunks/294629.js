@@ -1,36 +1,40 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return u;
+        return f;
+    },
+    b: function () {
+        return d;
     }
 });
-var i = n(442837),
-    l = n(160404),
-    r = n(314897),
-    a = n(131951),
-    s = n(496675),
-    o = n(979651),
-    c = n(981631);
-function u(e) {
-    return (0, i.cj)([r.default, o.Z, a.Z, s.Z, l.Z], () =>
-        (function (e) {
-            var t;
-            let { channel: n, authenticationStore: i = r.default, voiceStateStore: u = o.Z, mediaEngineStore: d = a.Z, permissionStore: m = s.Z, impersonateStore: f = l.Z } = e,
-                p = null != n ? u.getVoiceState(n.getGuildId(), i.getId()) : null,
-                h = d.isSelfMute() || d.isSelfMutedTemporarily(),
-                g = null == n ? void 0 : n.getGuildId(),
-                v = f.isViewingRoles(g) && !m.can(c.Plq.SPEAK, n);
-            return {
-                selfMute: h,
-                suppress: (null == p ? void 0 : p.suppress) || v,
-                mute: null !== (t = null == p ? void 0 : p.mute) && void 0 !== t && t
-            };
-        })({
+var i = r(442837),
+    a = r(160404),
+    s = r(314897),
+    o = r(131951),
+    l = r(496675),
+    u = r(979651),
+    c = r(981631);
+function d(e) {
+    var n;
+    let { channel: r, authenticationStore: i = s.default, voiceStateStore: d = u.Z, mediaEngineStore: f = o.Z, permissionStore: _ = l.Z, impersonateStore: h = a.Z } = e,
+        p = null != r ? d.getVoiceState(r.getGuildId(), i.getId()) : null,
+        m = f.isSelfMute() || f.isSelfMutedTemporarily(),
+        g = null == r ? void 0 : r.getGuildId(),
+        E = h.isViewingRoles(g) && !_.can(c.Plq.SPEAK, r);
+    return {
+        selfMute: m,
+        suppress: (null == p ? void 0 : p.suppress) || E,
+        mute: null !== (n = null == p ? void 0 : p.mute) && void 0 !== n && n
+    };
+}
+function f(e) {
+    return (0, i.cj)([s.default, u.Z, o.Z, l.Z, a.Z], () =>
+        d({
             channel: e,
-            authenticationStore: r.default,
-            voiceStateStore: o.Z,
-            mediaEngineStore: a.Z,
-            permissionStore: s.Z,
-            impersonateStore: l.Z
+            authenticationStore: s.default,
+            voiceStateStore: u.Z,
+            mediaEngineStore: o.Z,
+            permissionStore: l.Z,
+            impersonateStore: a.Z
         })
     );
 }
