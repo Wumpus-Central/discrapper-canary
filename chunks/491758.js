@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(660216),
@@ -27,20 +27,20 @@ var i = n(200651),
     I = n(37113),
     N = n(526761),
     v = n(388032),
-    A = n(713903),
-    j = n(277253),
-    R = n(232186);
-function O() {
+    A = n(413526),
+    j = n(598603),
+    O = n(275477);
+function R() {
     let e = (0, l.e7)([h.Z], () => h.Z.getHardwareEncoding()),
-        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: O, clipsQuality: P } = (0, l.cj)([f.Z], () => f.Z.getSettings()),
+        { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: R, clipsQuality: P } = (0, l.cj)([f.Z], () => f.Z.getSettings()),
         y = (0, l.e7)([f.Z], () => f.Z.getHardwareClassification()),
-        D = (0, l.e7)([p.Z], () => p.Z.getKeybindForAction(b.kg4.SAVE_CLIP, !0)),
-        B = f.Z.isDecoupledGameClippingEnabled(),
+        B = (0, l.e7)([p.Z], () => p.Z.getKeybindForAction(b.kg4.SAVE_CLIP, !0)),
+        D = f.Z.isDecoupledGameClippingEnabled(),
         Z = (0, E.Z)(h.Z),
         { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    a()(null != D, 'Save clip keybind unset');
+    a()(null != B, 'Save clip keybind unset');
     let M = (0, l.e7)([m.default], () => m.default.locale),
-        k = s.useMemo(
+        k = r.useMemo(
             () => [
                 {
                     value: S.OT.SECONDS_30,
@@ -57,7 +57,7 @@ function O() {
             ],
             [M]
         ),
-        w = s.useMemo(
+        w = r.useMemo(
             () => [
                 {
                     value: I.LY.RESOLUTION_480,
@@ -82,7 +82,7 @@ function O() {
             ],
             [M]
         ),
-        F = s.useMemo(
+        U = r.useMemo(
             () => [
                 {
                     value: I.ws.FPS_15,
@@ -99,14 +99,14 @@ function O() {
             ],
             [M]
         ),
-        U = s.useCallback(
+        F = r.useCallback(
             (e) => {
                 c.Z.setKeybind({
-                    ...D,
+                    ...B,
                     shortcut: e
                 });
             },
-            [D]
+            [B]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -146,19 +146,19 @@ function O() {
                         })
                 ]
             }),
-            B &&
+            D &&
                 Z &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.FormDivider, {}),
                         (0, i.jsx)(o.FormSection, {
-                            className: R.marginTop20,
+                            className: O.marginTop20,
                             disabled: !e,
                             children: (0, i.jsx)(o.FormSwitch, {
                                 hideBorder: !0,
                                 disabled: !e,
                                 className: j.formItem,
-                                value: r,
+                                value: s,
                                 note: v.intl.string(v.t.YP3ujo),
                                 onChange: (e) =>
                                     C._Q({
@@ -175,7 +175,7 @@ function O() {
                     children: [
                         (0, i.jsx)(o.FormDivider, {}),
                         (0, i.jsx)(o.FormSection, {
-                            className: R.marginTop20,
+                            className: O.marginTop20,
                             children: (0, i.jsx)(o.FormSwitch, {
                                 hideBorder: !0,
                                 className: j.formItem,
@@ -189,14 +189,14 @@ function O() {
                 }),
             (0, i.jsx)(o.FormDivider, {}),
             (0, i.jsxs)(o.FormSection, {
-                className: R.marginTop20,
+                className: O.marginTop20,
                 children: [
                     (0, i.jsx)(T.Q, {
                         className: j.formItem,
                         select: C.eU,
                         title: v.intl.string(v.t.OgfUio),
                         note: v.intl.string(v.t.H7j4tb),
-                        value: O,
+                        value: R,
                         options: k
                     }),
                     (0, i.jsx)(T.Q, {
@@ -221,7 +221,7 @@ function O() {
                         title: v.intl.string(v.t['2wScLy']),
                         note: v.intl.string(v.t['Rf9+f3']),
                         value: P.frameRate,
-                        options: F
+                        options: U
                     }),
                     (0, i.jsx)(T.O, {
                         className: j.formItem,
@@ -230,8 +230,8 @@ function O() {
                         children: (0, i.jsx)('div', {
                             className: A.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
-                                defaultValue: D.shortcut,
-                                onChange: U
+                                defaultValue: B.shortcut,
+                                onChange: F
                             })
                         })
                     })

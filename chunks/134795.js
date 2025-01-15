@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
-    u = n(25836);
+    u = n(808872);
 function m(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: g, disabled: h = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: f, withHighlight: _ = !1 } = e,
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: m, className: g, disabled: h = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: f, withHighlight: _ = !1 } = e,
         E = _ ? a.ShinyButton : a.Button;
     return (0, i.jsx)(o.Z, {
         className: g,
@@ -27,7 +27,7 @@ function m(e) {
             className: u.buttonsContainer,
             children: [
                 (0, i.jsx)(E, {
-                    className: r()({ [u.buttonHighlighted]: _ }),
+                    className: s()({ [u.buttonHighlighted]: _ }),
                     size: a.Button.Sizes.SMALL,
                     onClick: () => (0, l.$r)(c.pC.BANNER, m, x, void 0),
                     children: d.intl.string(d.t.N0bC3N)
@@ -38,7 +38,7 @@ function m(e) {
                         color: a.Button.Colors.PRIMARY,
                         look: a.Button.Looks.LINK,
                         size: a.Button.Sizes.SMALL,
-                        onClick: () => s(null),
+                        onClick: () => r(null),
                         children: null != m ? d.intl.string(d.t.jHlJNT) : d.intl.string(d.t.tT9n7O)
                     })
             ]

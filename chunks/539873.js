@@ -24,7 +24,7 @@ var a = r(200651),
     b = r(981631),
     y = r(526761),
     S = r(388032),
-    A = r(337910);
+    A = r(262400);
 function N(e) {
     let { className: n, disabled: i, isEditor: o, renderCTAButtons: N } = e,
         [C, R] = (0, u.Wu)([E.Z], () => [E.Z.getCurrentDesktopIcon(), E.Z.isUpsellPreview]),

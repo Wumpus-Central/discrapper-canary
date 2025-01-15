@@ -5,17 +5,17 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(692547),
+    r = n(192379),
+    s = n(692547),
     a = n(531057),
     l = n(865824),
     o = n(481060),
     c = n(388032),
-    d = n(609173);
+    d = n(283536);
 function u(e) {
     let { children: t, lineClamp: n = 2, ...u } = e,
-        [m, g] = s.useState(!1),
-        [h, p] = s.useState(null),
+        [m, g] = r.useState(!1),
+        [h, p] = r.useState(null),
         x =
             null != h &&
             (0, i.jsx)('button', {
@@ -29,18 +29,18 @@ function u(e) {
                         m ? c.intl.string(c.t['JQX/PT']) : c.intl.string(c.t.Fbrd8P),
                         m
                             ? (0, i.jsx)(l.u, {
-                                  color: r.Z.colors.TEXT_BRAND,
+                                  color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
                             : (0, i.jsx)(a.C, {
-                                  color: r.Z.colors.TEXT_BRAND,
+                                  color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
                               })
                     ]
                 })
             }),
-        [f, _] = s.useState(null),
-        E = s.useCallback(() => {
+        [f, _] = r.useState(null),
+        E = r.useCallback(() => {
             if (null == f) return;
             let { scrollHeight: e, clientHeight: t } = f;
             e > t &&
@@ -49,7 +49,7 @@ function u(e) {
                     expandedHeight: e
                 });
         }, [f]);
-    s.useEffect(() => {
+    r.useEffect(() => {
         requestAnimationFrame(E);
     }, [E, t, n]);
     let C = 'auto';

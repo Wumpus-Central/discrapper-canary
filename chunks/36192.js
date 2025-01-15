@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(544891),
     c = n(704215),
@@ -24,14 +24,14 @@ var i = n(200651),
     C = n(981631),
     T = n(921944),
     S = n(388032),
-    b = n(791474);
+    b = n(575817);
 function I() {
     let e;
     let { currentSession: t, otherSessions: n } = (0, h.h)(),
-        r = (0, l.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        s = (0, l.e7)([x.Z], () => x.Z.hidePersonalInformation),
         a = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        [u, _] = s.useState(!1);
-    s.useEffect(() => {
+        [u, _] = r.useState(!1);
+    r.useEffect(() => {
         (0, p.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: T.L.AUTO }), (0, g.fw)();
         let e = setTimeout(() => _(!0), 500);
         return () => {
@@ -44,8 +44,8 @@ function I() {
                 rejectWithError: !0
             });
         },
-        [I, A] = s.useState(new Set());
-    return r
+        [I, A] = r.useState(new Set());
+    return s
         ? (0, i.jsx)(m.Z, {})
         : ((e =
               null == t && 0 === n.length
@@ -170,10 +170,10 @@ function I() {
           }));
 }
 function N(e) {
-    var t, n, s, r, l;
+    var t, n, r, s, l;
     let { session: o, current: c, setChecked: u, checked: m, useChecks: p } = e,
         x = null !== (l = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== l ? l : null === (n = o.client_info) || void 0 === n ? void 0 : n.ip,
-        f = null === (s = o.client_info) || void 0 === s ? void 0 : s.platform,
+        f = null === (r = o.client_info) || void 0 === r ? void 0 : r.platform,
         { text: _, icon: C } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
@@ -195,7 +195,7 @@ function N(e) {
                         icon: d.ScreenIcon
                     };
             }
-        })(null === (r = o.client_info) || void 0 === r ? void 0 : r.os),
+        })(null === (s = o.client_info) || void 0 === s ? void 0 : s.os),
         T = c ? null : (0, h.p)(o.approx_last_used_time),
         I = [_, f].filter(E.lm),
         N = [x, T].filter(E.lm);

@@ -17,8 +17,8 @@ var i = n(120356),
     d = n(837748),
     o = n(58346),
     C = n(388032),
-    m = n(262484),
-    L = n(232186);
+    m = n(877515),
+    L = n(275477);
 function h() {
     return (0, r.jsx)(c.Z, {
         className: m.verifiedIcon,

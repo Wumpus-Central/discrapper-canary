@@ -1,6 +1,6 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(906732),
     l = n(975298),
     o = n(125529),
@@ -9,13 +9,13 @@ var i = n(200651),
     u = n(267642),
     m = n(981631),
     g = n(388032),
-    h = n(567710);
+    h = n(803973);
 t.Z = function () {
-    let e = s.useRef(null),
+    let e = r.useRef(null),
         { analyticsLocations: t } = (0, a.ZP)(),
         { fractionalState: p } = (0, l.Z)();
     function x(n) {
-        null != e.current && (0, r.closeModal)(e.current),
+        null != e.current && (0, s.closeModal)(e.current),
             (0, c.u)({
                 analyticsLocation: {
                     page: m.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -28,7 +28,7 @@ t.Z = function () {
             });
     }
     async function f() {
-        e.current = await (0, r.openModalLazy)(
+        e.current = await (0, s.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
                 return (t) =>
@@ -39,7 +39,7 @@ t.Z = function () {
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, r.closeModal)(e.current);
+                    null != e.current && (0, s.closeModal)(e.current);
                 }
             }
         );
@@ -53,20 +53,20 @@ t.Z = function () {
                 width: 16,
                 height: 16
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 className: h.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
                 children: g.intl.format(g.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != _,
-                            s = (0, i.jsx)(
-                                r.Button,
+                            r = (0, i.jsx)(
+                                s.Button,
                                 {
                                     className: h.cta,
                                     disabled: n,
-                                    color: r.Button.Colors.LINK,
-                                    look: r.Button.Looks.LINK,
+                                    color: s.Button.Colors.LINK,
+                                    look: s.Button.Looks.LINK,
                                     onClick: n ? void 0 : f,
                                     children: e
                                 },
@@ -81,12 +81,12 @@ t.Z = function () {
                                       children: (e) =>
                                           (0, i.jsx)('span', {
                                               ...e,
-                                              children: s
+                                              children: r
                                           })
                                   },
                                   t
                               )
-                            : s;
+                            : r;
                     }
                 })
             })

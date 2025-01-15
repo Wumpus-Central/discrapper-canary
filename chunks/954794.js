@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(692547),
     l = n(481060),
     o = n(768762),
@@ -14,12 +14,12 @@ var i = n(200651),
     u = n(955204),
     m = n(248998),
     g = n(388032),
-    h = n(986544);
+    h = n(499699);
 function p(e) {
     let { onBackClick: t } = e,
-        n = (0, r.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
-        p = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
-        x = s.useMemo(
+        n = (0, s.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
+        p = r.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
+        x = r.useMemo(
             () =>
                 Object.values(u.LG)
                     .filter(c.lm)

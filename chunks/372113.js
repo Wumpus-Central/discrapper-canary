@@ -24,7 +24,7 @@ var s = n(120356),
     q = n(46140),
     A = n(981631),
     _ = n(388032),
-    R = n(441347);
+    R = n(25731);
 let M = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
 function I(e) {
     let { containerSize: t, onClick: n, children: s, tabIndex: l } = e;

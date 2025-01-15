@@ -11,11 +11,11 @@ n.d(t, {
 }),
     n(653041);
 var i = n(512722),
-    s = n.n(i),
-    r = n(981631),
+    r = n.n(i),
+    s = n(981631),
     a = n(388032);
 let l = () => {
-        let e = Object.keys(r.gkr);
+        let e = Object.keys(s.gkr);
         return e[Math.floor(Math.random() * e.length)];
     },
     o = () => {
@@ -44,22 +44,22 @@ let l = () => {
         [a.intl.string(a.t.gFpEVl), a.intl.string(a.t.oqF1lZ), a.intl.string(a.t['itk+io']), a.intl.string(a.t.WyvPFx)],
         [a.intl.string(a.t['zaKm/f']), a.intl.string(a.t.SES9Zm), a.intl.string(a.t.ebblm5), a.intl.string(a.t.csrWfH)]
     ],
-    u = () => [r.gkr.HOUSE_1, r.gkr.HOUSE_2, r.gkr.HOUSE_3, r.jsM],
+    u = () => [s.gkr.HOUSE_1, s.gkr.HOUSE_2, s.gkr.HOUSE_3, s.jsM],
     m = () => {
         let e = u(),
             t = c(),
             n = d();
         return o().map((i) => {
-            let r = t[i],
+            let s = t[i],
                 a = n[i];
             return (
-                s()(null != r && null != a, 'Invalid HypeSquad quiz question index'),
+                r()(null != s && null != a, 'Invalid HypeSquad quiz question index'),
                 {
-                    prompt: r,
+                    prompt: s,
                     options: a.map((t, n) => {
                         let i = e[n];
                         return (
-                            s()(null !== i, 'Invalid HypeSquad quiz question option index'),
+                            r()(null !== i, 'Invalid HypeSquad quiz question option index'),
                             {
                                 copy: t,
                                 house: i
@@ -72,7 +72,7 @@ let l = () => {
     },
     g = (e) =>
         ({
-            [r.gkr.HOUSE_1]: a.intl.string(a.t.ORKdHR),
-            [r.gkr.HOUSE_2]: a.intl.string(a.t.aKf3dn),
-            [r.gkr.HOUSE_3]: a.intl.string(a.t['21LOa2'])
+            [s.gkr.HOUSE_1]: a.intl.string(a.t.ORKdHR),
+            [s.gkr.HOUSE_2]: a.intl.string(a.t.aKf3dn),
+            [s.gkr.HOUSE_3]: a.intl.string(a.t['21LOa2'])
         })[e];

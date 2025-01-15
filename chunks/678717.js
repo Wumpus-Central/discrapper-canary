@@ -51,9 +51,9 @@ var v = n(392750),
     z = n(771751),
     V = n(596768),
     W = n(621060),
-    Y = n(388032),
-    K = n(771466),
-    X = n(941469);
+    K = n(388032),
+    Y = n(875499),
+    X = n(785269);
 function q(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
@@ -65,7 +65,7 @@ function q(e) {
         });
     return (0, r.jsx)('div', {
         onMouseDown: l,
-        className: K.resizeHandle
+        className: Y.resizeHandle
     });
 }
 function $() {
@@ -247,7 +247,7 @@ function $() {
                     className: X.headerBar,
                     toolbar: (0, r.jsx)(h.ZP.Icon, {
                         icon: c.XSmallIcon,
-                        tooltip: Y.intl.string(Y.t.cpT0Cg),
+                        tooltip: K.intl.string(K.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
@@ -260,7 +260,7 @@ function $() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(R.Br, { className: K.layerContainer })
+                (0, r.jsx)(R.Br, { className: Y.layerContainer })
             ]
         })
     );
@@ -277,7 +277,7 @@ function J() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(K.container),
+              className: i()(Y.container),
               style: {
                   minWidth: b.h,
                   width: n
@@ -290,7 +290,7 @@ function J() {
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
-                      className: K.sidebarContent,
+                      className: Y.sidebarContent,
                       children: (0, r.jsx)($, {})
                   })
               ]
@@ -300,18 +300,18 @@ function Q() {
     let e = (0, s.e7)([b.Z], () => b.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
-              className: i()(K.container, K.mobileContainerExpanded),
+              className: i()(Y.container, Y.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
-                  className: K.sidebarContent,
+                  className: Y.sidebarContent,
                   children: (0, r.jsx)($, {})
               })
           })
         : (0, r.jsx)('div', {
-              className: K.container,
+              className: Y.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(h.ZP, {
-                      className: i()(X.headerBar, K.mobileHeaderCollapsed),
+                      className: i()(X.headerBar, Y.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(h.ZP.Icon, {

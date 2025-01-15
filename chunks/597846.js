@@ -1,14 +1,14 @@
 n.d(t, {
     z: function () {
-        return o;
+        return l;
     }
 });
 var r = n(200651),
     i = n(192379),
     a = n(658312),
     u = n(503082);
-let o = (e) => {
-    let { drawCallback: t, size: n, fps: o = 60, useOffscreen: c = !0, playing: l = !0 } = e,
+let l = (e) => {
+    let { drawCallback: t, size: n, fps: l = 60, useOffscreen: c = !0, playing: o = !0 } = e,
         s = i.useRef(null),
         d = i.useRef();
     i.useEffect(() => {
@@ -38,11 +38,11 @@ let o = (e) => {
             }),
                 t(d.current, e / 1000);
         }
-    }, 1000 / o);
+    }, 1000 / l);
     return (
         i.useEffect(() => {
-            l && !f.current && w(), !l && h();
-        }, [l, w, h, f]),
+            o && !f.current && w(), !o && h();
+        }, [o, w, h, f]),
         (0, r.jsx)('div', { children: (0, r.jsx)('canvas', { ref: s }) })
     );
 };

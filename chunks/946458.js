@@ -9,7 +9,7 @@ var l = n(442837),
     s = n(481060),
     r = n(596454),
     a = n(339085),
-    o = n(501915);
+    o = n(59200);
 function d(e) {
     let { reactionEmoji: t } = e,
         n = (0, l.e7)([a.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null));

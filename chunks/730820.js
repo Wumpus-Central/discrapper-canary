@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(816814),
@@ -30,9 +30,9 @@ var i = n(200651),
     v = n(726985),
     A = n(981631),
     j = n(815660),
-    R = n(388032),
-    O = n(142529),
-    P = n(232186);
+    O = n(388032),
+    R = n(478717),
+    P = n(275477);
 function y(e, t, n) {
     return (
         t in e
@@ -46,61 +46,61 @@ function y(e, t, n) {
         e
     );
 }
-function D(e) {
+function B(e) {
     let {
             code: { code: t, consumed: n }
         } = e,
-        r = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)),
-        a = s.useRef(null),
-        l = s.useCallback(
+        s = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)),
+        a = r.useRef(null),
+        l = r.useCallback(
             (e) => {
                 if ('c' === e.key && e.metaKey && S.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, S.JG)(r), null == a || null === (t = a.current) || void 0 === t || t.focus();
+                    e.preventDefault(), e.stopPropagation(), (0, S.JG)(s), null == a || null === (t = a.current) || void 0 === t || t.focus();
                 }
             },
-            [r]
+            [s]
         );
     return (0, i.jsx)('li', {
         className: P.marginBottom20,
         children: (0, i.jsx)(o.Clickable, {
             innerRef: a,
-            className: O.backupCode,
+            className: R.backupCode,
             onKeyDown: l,
             children: (0, i.jsx)(o.Checkbox, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: O.codeCheckbox,
+                className: R.codeCheckbox,
                 value: n,
                 children: (0, i.jsx)('span', {
-                    className: O.code,
-                    children: r
+                    className: R.code,
+                    children: s
                 })
             })
         })
     });
 }
-class B extends s.PureComponent {
+class D extends r.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
     }
     renderMFASMS() {
         let e, t;
         let { revealed: n } = this.state,
-            { currentUser: s, togglingSMS: r } = this.props,
-            a = null != s.phone,
-            l = s.hasFlag(A.xW$.MFA_SMS);
+            { currentUser: r, togglingSMS: s } = this.props,
+            a = null != r.phone,
+            l = r.hasFlag(A.xW$.MFA_SMS);
         if (a || l) {
-            let e = n ? s.phone : this.maskPhoneNumber(s.phone);
+            let e = n ? r.phone : this.maskPhoneNumber(r.phone);
             t = (0, i.jsxs)(o.FormText, {
                 type: o.FormText.Types.DESCRIPTION,
                 className: P.marginBottom8,
                 children: [
-                    R.intl.format(R.t.PXVoEB, { phoneNumber: e }),
+                    O.intl.format(O.t.PXVoEB, { phoneNumber: e }),
                     (0, i.jsx)(o.Anchor, {
                         onClick: this.togglePhoneNumberVisibility,
-                        className: O.phoneRevealer,
-                        children: n ? R.intl.string(R.t.FfltIC) : R.intl.string(R.t.llArAg)
+                        className: R.phoneRevealer,
+                        children: n ? O.intl.string(O.t.FfltIC) : O.intl.string(O.t.llArAg)
                     })
                 ]
             });
@@ -112,22 +112,22 @@ class B extends s.PureComponent {
                     color: o.Button.Colors.RED,
                     look: o.Button.Looks.OUTLINED,
                     size: o.Button.Sizes.SMALL,
-                    submitting: r,
+                    submitting: s,
                     onClick: this.handleDisableSMS,
-                    children: R.intl.string(R.t.KLWnio)
+                    children: O.intl.string(O.t.KLWnio)
                 })
             });
         else {
-            let t = (0, I.c)(s);
+            let t = (0, I.c)(r);
             e = (0, i.jsxs)(h.Z, {
                 className: a ? '' : P.marginTop8,
                 children: [
                     (0, i.jsx)(o.Button, {
                         onClick: this.handleEnableSMS,
                         size: o.Button.Sizes.SMALL,
-                        submitting: r,
+                        submitting: s,
                         disabled: null != t,
-                        children: null != t ? t : R.intl.string(R.t.DZQe29)
+                        children: null != t ? t : O.intl.string(O.t.DZQe29)
                     }),
                     a
                         ? (0, i.jsx)(o.Button, {
@@ -135,7 +135,7 @@ class B extends s.PureComponent {
                               color: o.Button.Colors.PRIMARY,
                               size: o.Button.Sizes.SMALL,
                               look: o.Button.Looks.LINK,
-                              children: R.intl.string(R.t.Ulqq6O)
+                              children: O.intl.string(O.t.Ulqq6O)
                           })
                         : null
                 ]
@@ -145,11 +145,11 @@ class B extends s.PureComponent {
             setting: v.s6.ACCOUNT_SMS_BACKUP,
             children: (0, i.jsxs)(o.FormSection, {
                 className: P.marginTop40,
-                title: R.intl.string(R.t.uHAJ5u),
+                title: O.intl.string(O.t.uHAJ5u),
                 children: [
                     (0, i.jsx)(o.FormText, {
                         type: o.FormText.Types.DESCRIPTION,
-                        children: R.intl.string(R.t.fspJ4O)
+                        children: O.intl.string(O.t.fspJ4O)
                     }),
                     t,
                     e
@@ -165,7 +165,7 @@ class B extends s.PureComponent {
                 children: (0, i.jsx)(o.Button, {
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
                     size: o.Button.Sizes.SMALL,
-                    children: R.intl.string(R.t.xZEzbm)
+                    children: O.intl.string(O.t.xZEzbm)
                 })
             });
         if (t.length > 0) {
@@ -175,30 +175,30 @@ class B extends s.PureComponent {
                 fileName: 'discord_backup_codes.txt',
                 children: (0, i.jsx)(o.Button, {
                     size: o.Button.Sizes.SMALL,
-                    children: R.intl.string(R.t.qZZUy8)
+                    children: O.intl.string(O.t.qZZUy8)
                 })
             });
-            let s = (e) => e.map((e) => (0, i.jsx)(D, { code: e }, e.code));
+            let r = (e) => e.map((e) => (0, i.jsx)(B, { code: e }, e.code));
             e = (0, i.jsxs)(o.FormSection, {
-                title: R.intl.string(R.t.GfqHPj),
+                title: O.intl.string(O.t.GfqHPj),
                 children: [
                     (0, i.jsx)(o.FormText, {
                         type: o.FormText.Types.DESCRIPTION,
                         className: P.marginBottom20,
-                        children: R.intl.format(R.t.OhmvYm, {})
+                        children: O.intl.format(O.t.OhmvYm, {})
                     }),
                     (0, i.jsxs)(h.Z, {
                         children: [
                             (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
-                                    className: O.checkboxGroup,
-                                    children: s(t.slice(0, t.length / 2))
+                                    className: R.checkboxGroup,
+                                    children: r(t.slice(0, t.length / 2))
                                 })
                             }),
                             (0, i.jsx)(h.Z.Child, {
                                 children: (0, i.jsx)('ul', {
-                                    className: O.checkboxGroup,
-                                    children: s(t.slice(t.length / 2))
+                                    className: R.checkboxGroup,
+                                    children: r(t.slice(t.length / 2))
                                 })
                             })
                         ]
@@ -208,7 +208,7 @@ class B extends s.PureComponent {
                             onClick: this.generateBackupCodes,
                             look: o.ButtonLooks.LINK,
                             size: o.ButtonSizes.MIN,
-                            children: R.intl.string(R.t.RIThUl)
+                            children: O.intl.string(O.t.RIThUl)
                         })
                     }),
                     (0, i.jsx)(o.FormDivider, { className: P.marginTop20 })
@@ -217,11 +217,11 @@ class B extends s.PureComponent {
         }
         return (0, i.jsxs)(o.FormSection, {
             children: [
-                (0, i.jsx)(o.FormTitle, { children: R.intl.string(R.t.EPVq09) }),
+                (0, i.jsx)(o.FormTitle, { children: O.intl.string(O.t.EPVq09) }),
                 (0, i.jsx)(o.FormText, {
                     type: o.FormText.Types.DESCRIPTION,
                     className: P.marginBottom20,
-                    children: R.intl.string(R.t.bQwxiY)
+                    children: O.intl.string(O.t.bQwxiY)
                 }),
                 (0, i.jsxs)(h.Z, {
                     justify: h.Z.Justify.START,
@@ -242,7 +242,7 @@ class B extends s.PureComponent {
                                         size: o.Button.Sizes.SMALL,
                                         color: o.ButtonColors.RED,
                                         look: o.ButtonLooks.OUTLINED,
-                                        children: R.intl.string(R.t['D+aE7u'])
+                                        children: O.intl.string(O.t['D+aE7u'])
                                     })
                                 }),
                                 (0, i.jsx)(x.F, {
@@ -250,7 +250,7 @@ class B extends s.PureComponent {
                                     children: (0, i.jsx)(o.Button, {
                                         onClick: N.ZP.enableMFA,
                                         size: o.ButtonSizes.SMALL,
-                                        children: R.intl.string(R.t.cDgKtb)
+                                        children: O.intl.string(O.t.cDgKtb)
                                     })
                                 })
                             ]
@@ -268,18 +268,18 @@ class B extends s.PureComponent {
     }
     renderDisabled() {
         return (0, i.jsxs)(o.FormSection, {
-            title: R.intl.string(R.t.EPVq09),
+            title: O.intl.string(O.t.EPVq09),
             children: [
                 (0, i.jsx)(o.FormText, {
                     type: o.FormText.Types.DESCRIPTION,
                     className: P.marginBottom20,
-                    children: R.intl.string(R.t['8aDa1t'])
+                    children: O.intl.string(O.t['8aDa1t'])
                 }),
                 (0, i.jsx)(o.FormItem, {
                     children: (0, i.jsx)(o.Button, {
                         onClick: N.ZP.enableMFA,
                         size: o.ButtonSizes.SMALL,
-                        children: R.intl.string(R.t.cDgKtb)
+                        children: O.intl.string(O.t.cDgKtb)
                     })
                 }),
                 (0, i.jsx)(_.Z, {})
@@ -294,17 +294,17 @@ class B extends s.PureComponent {
                     ? this.renderEnabled()
                     : this.renderDisabled()
                 : (0, i.jsx)(o.FormSection, {
-                      title: R.intl.string(R.t.EPVq09),
+                      title: O.intl.string(O.t.EPVq09),
                       children: (0, i.jsx)(o.FormText, {
                           type: o.FormText.Types.DESCRIPTION,
-                          children: R.intl.string(R.t.uggF7u)
+                          children: O.intl.string(O.t.uggF7u)
                       })
                   })
             : (0, i.jsx)(o.FormSection, {
-                  title: R.intl.string(R.t.EPVq09),
+                  title: O.intl.string(O.t.EPVq09),
                   children: (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      children: R.intl.string(R.t.PhHhsr)
+                      children: O.intl.string(O.t.PhHhsr)
                   })
               });
     }
@@ -331,9 +331,9 @@ class B extends s.PureComponent {
             }),
             y(this, 'handleDisableMFA', () => {
                 d.Z.show({
-                    title: R.intl.string(R.t['D+aE7u']),
-                    body: R.intl.string(R.t.EA4ZEh),
-                    cancelText: R.intl.string(R.t['ETE/oK']),
+                    title: O.intl.string(O.t['D+aE7u']),
+                    body: O.intl.string(O.t.EA4ZEh),
+                    cancelText: O.intl.string(O.t['ETE/oK']),
                     onConfirm: () => c.Z.disable()
                 });
             }),
@@ -349,8 +349,8 @@ class B extends s.PureComponent {
                             c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                 this.viewBackupCodes(e);
                             }),
-                        title: R.intl.string(R.t.PsQmzc),
-                        actionText: R.intl.string(R.t.ajkYcH)
+                        title: O.intl.string(O.t.PsQmzc),
+                        actionText: O.intl.string(O.t.ajkYcH)
                     })
                 );
             }),
@@ -360,14 +360,14 @@ class B extends s.PureComponent {
                         ...t,
                         handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                         maxLength: 8,
-                        title: R.intl.string(R.t.mGppp6),
-                        label: R.intl.string(R.t.TjGb4e),
+                        title: O.intl.string(O.t.mGppp6),
+                        label: O.intl.string(O.t.TjGb4e),
                         forceNoPlaceholder: !0,
-                        retryPrompt: R.intl.string(R.t.PZgmxs),
-                        retrySuccessMessage: R.intl.string(R.t.j4qu8v),
+                        retryPrompt: O.intl.string(O.t.PZgmxs),
+                        retrySuccessMessage: O.intl.string(O.t.j4qu8v),
                         onRetry: () => c.Z.sendMFABackupCodesVerificationKeyEmail(e),
-                        actionText: R.intl.string(R.t.piW6YW),
-                        helpMessage: R.intl.string(R.t['37S9yc'])
+                        actionText: O.intl.string(O.t.piW6YW),
+                        helpMessage: O.intl.string(O.t['37S9yc'])
                     })
                 );
             }),
@@ -381,7 +381,7 @@ class B extends s.PureComponent {
                                 .concat(t ? '(used)' : '');
                         })
                         .join('\r\n'),
-                    t = R.intl.formatToPlainString(R.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = O.intl.formatToPlainString(O.t.uYWwh4, { email: this.props.currentUser.email });
                 return ''.concat(t, '\r\n\r\n').concat(e);
             }),
             y(this, 'handleChangePhoneNumber', () => {
@@ -394,7 +394,7 @@ class B extends s.PureComponent {
                             (0, i.jsx)(g.default, {
                                 ...e,
                                 handleSubmit: c.Z.enableSMS,
-                                title: R.intl.string(R.t.DZQe29)
+                                title: O.intl.string(O.t.DZQe29)
                             })
                         );
                     };
@@ -405,8 +405,8 @@ class B extends s.PureComponent {
                     (0, i.jsx)(g.default, {
                         ...e,
                         handleSubmit: c.Z.disableSMS,
-                        title: R.intl.string(R.t.KLWnio),
-                        children: R.intl.string(R.t['W0/Dub'])
+                        title: O.intl.string(O.t.KLWnio),
+                        children: O.intl.string(O.t['W0/Dub'])
                     })
                 );
             });
@@ -419,7 +419,7 @@ function Z(e) {
         togglingSMS: C.Z.togglingSMS,
         hasTOTPEnabled: E.default.hasTOTPEnabled()
     }));
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(D, {
         currentUser: t,
         ...n,
         ...e

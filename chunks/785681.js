@@ -1,7 +1,7 @@
 n.d(t, {
     o: function () {
-        return s;
+        return r;
     }
 });
 var i = n(880257);
-let s = (e, t) => ((0, i.Z)() ? t : e);
+let r = (e, t) => ((0, i.Z)() ? t : e);

@@ -21,7 +21,7 @@ var i,
     E = n(139256),
     C = n(489887),
     I = n(388032),
-    x = n(906636);
+    x = n(825896);
 function N() {
     return (0, l.jsx)('svg', {
         width: '24',

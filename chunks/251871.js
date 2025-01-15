@@ -23,7 +23,7 @@ var i = e(200651),
     C = e(981631),
     Z = e(372897),
     A = e(388032),
-    E = e(295831);
+    E = e(824905);
 function M(t) {
     var n;
     let { onClose: e, transitionState: M, guildId: k } = t,

@@ -13,7 +13,7 @@ var a = r(442837),
     c = r(785717),
     d = r(475413),
     f = r(388032),
-    _ = r(283946);
+    _ = r(483976);
 function h(e) {
     let { user: n, guildId: r, fullWidth: h, onClose: p } = e,
         m = (0, a.e7)([l.default], () => l.default.getId() === n.id),

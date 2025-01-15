@@ -5,10 +5,10 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
-    a = n(574792);
-class l extends s.PureComponent {
+    r = n(192379),
+    s = n(481060),
+    a = n(19246);
+class l extends r.PureComponent {
     componentDidCatch(e, t) {
         console.error('Error rendering component (LocalErrorBoundary): ', e),
             this.setState({
@@ -19,7 +19,7 @@ class l extends s.PureComponent {
     render() {
         return null != this.state.error
             ? (0, i.jsx)('div', {
-                  children: (0, i.jsx)(r.Text, {
+                  children: (0, i.jsx)(s.Text, {
                       color: 'text-danger',
                       variant: 'text-md/normal',
                       className: a.labelSpacing,

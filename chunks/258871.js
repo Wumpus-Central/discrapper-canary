@@ -26,7 +26,7 @@ let g = [
         },
         handler: (e) =>
             (0, a.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
+                let { default: t } = await Promise.all([n.e('22347'), n.e('56236'), n.e('9915')]).then(n.bind(n, 17671));
                 return (n) =>
                     (0, i.jsx)(t, {
                         ...n,
@@ -72,7 +72,7 @@ let g = [
         getName: () => f.intl.string(f.t.MJQOuL),
         handler: (e, t) =>
             (0, a.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
+                let { default: l } = await Promise.all([n.e('7654'), n.e('46949')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,

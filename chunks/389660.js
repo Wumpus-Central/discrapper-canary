@@ -8,7 +8,7 @@ var n = r(763453),
     l = r(668705),
     f = r(765251),
     p = r(638242),
-    h = r(352254);
+    h = r(126034);
 function d(t, e, r) {
     var n = a.replaceWithFragment(t.getCurrentContent(), t.getSelection(), e);
     return s.push(t, n.set('entityMap', r), 'insert-fragment');

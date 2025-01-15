@@ -14,7 +14,7 @@ var l = n(200651),
     o = n(854698),
     u = n(440371),
     c = n(388032),
-    x = n(345939);
+    x = n(566841);
 function h(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: m } = e,
         g = (0, s.Z)(n, t.id),

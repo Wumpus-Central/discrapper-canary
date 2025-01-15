@@ -136,7 +136,7 @@ var w = r(230367),
         (e[(e.NOTIFICATIONS_ENABLED = 0)] = 'NOTIFICATIONS_ENABLED'), (e[(e.ONLY_DMS = 1)] = 'ONLY_DMS'), (e[(e.NOTIFICATIONS_DISABLED = 2)] = 'NOTIFICATIONS_DISABLED');
     })(u || (u = {})),
     !(function (e) {
-        (e[(e.OFF = 0)] = 'OFF'), (e[(e.ON_FOR_LARGE_GUILDS = 1)] = 'ON_FOR_LARGE_GUILDS');
+        (e[(e.OFF = 0)] = 'OFF'), (e[(e.ON_FOR_LARGE_GUILDS = 1)] = 'ON_FOR_LARGE_GUILDS'), (e[(e.ON = 2)] = 'ON');
     })(c || (c = {})),
     !(function (e) {
         (e[(e.OFF_FOR_NEW_GUILDS = 0)] = 'OFF_FOR_NEW_GUILDS'), (e[(e.ON_FOR_NEW_GUILDS = 1)] = 'ON_FOR_NEW_GUILDS');

@@ -11,9 +11,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(194359),
@@ -27,16 +27,16 @@ var i = n(200651),
     f = n(726985),
     _ = n(981631),
     E = n(388032),
-    C = n(599764);
+    C = n(899708);
 function T(e) {
     let { listType: t, numberOfUsers: n } = e,
-        s = 'blocked' === t;
+        r = 'blocked' === t;
     return (0, i.jsxs)('div', {
         className: C.header,
         children: [
             (0, i.jsx)('div', {
                 className: C.iconContainer,
-                children: s ? (0, i.jsx)(o.DenyIcon, {}) : (0, i.jsx)(o.EyeSlashIcon, {})
+                children: r ? (0, i.jsx)(o.DenyIcon, {}) : (0, i.jsx)(o.EyeSlashIcon, {})
             }),
             (0, i.jsxs)('div', {
                 className: C.text,
@@ -44,12 +44,12 @@ function T(e) {
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/semibold',
                         color: 'interactive-active',
-                        children: E.intl.string(s ? E.t.PFOUKS : E.t['93ZDWF'])
+                        children: E.intl.string(r ? E.t.PFOUKS : E.t['93ZDWF'])
                     }),
                     (0, i.jsx)(o.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        children: s ? E.intl.format(E.t['r91W/v'], { numberOfBlockedUsers: n }) : E.intl.format(E.t.rXUeOj, { numberOfIgnoredUsers: n })
+                        children: r ? E.intl.format(E.t['r91W/v'], { numberOfBlockedUsers: n }) : E.intl.format(E.t.rXUeOj, { numberOfIgnoredUsers: n })
                     })
                 ]
             })
@@ -58,11 +58,11 @@ function T(e) {
 }
 function S(e) {
     var t;
-    let { userId: n, last: r } = e,
+    let { userId: n, last: s } = e,
         h = (0, l.e7)([m.Z], () => m.Z.isBlocked(n)),
         p = (0, l.e7)([g.default], () => g.default.getUser(n)),
-        [x, f] = s.useState(!1),
-        _ = s.useCallback(() => {
+        [x, f] = r.useState(!1),
+        _ = r.useCallback(() => {
             f(!0),
                 h
                     ? c.Z.unblockUser(n).catch(() => {
@@ -76,7 +76,7 @@ function S(e) {
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsxs)('div', {
-                  className: a()(C.row, { [C.lastRow]: r }),
+                  className: a()(C.row, { [C.lastRow]: s }),
                   children: [
                       (0, i.jsxs)('div', {
                           className: C.userInfo,
@@ -113,15 +113,15 @@ function S(e) {
           });
 }
 function b(e) {
-    let { setting: t, userIds: n, listType: r } = e,
-        [a, l] = s.useState(5);
+    let { setting: t, userIds: n, listType: s } = e,
+        [a, l] = r.useState(5);
     return (0, i.jsx)(p.U, {
         setting: t,
         children: (0, i.jsxs)('div', {
             className: C.card,
             children: [
                 (0, i.jsx)(T, {
-                    listType: r,
+                    listType: s,
                     numberOfUsers: n.length
                 }),
                 (0, i.jsx)('div', {

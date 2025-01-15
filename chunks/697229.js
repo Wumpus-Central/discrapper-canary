@@ -23,7 +23,7 @@ function o(n) {
               label: s.intl.string(s.t['6uDHk5']),
               action: function () {
                   (0, l.openModalLazy)(async () => {
-                      let { default: e } = await t.e('95257').then(t.bind(t, 178125));
+                      let { default: e } = await t.e('95257').then(t.bind(t, 759701));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,

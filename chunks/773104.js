@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    s = n(78839),
-    r = n(74538),
+    r = n(78839),
+    s = n(74538),
     a = n(104494),
     l = n(639119),
     o = n(474936);
@@ -13,8 +13,8 @@ function c(e) {
     let { defaultResponse: t, onDiscountOffer: n, onNonSubscriber: c, onTier0TrialOffer: d, onTier2TrialOffer: u, onTier0TrialPeriod: m, onTier2TrialPeriod: g, onNonTier2Subscriber: h, onTier2Subscriber: p, onCustomCriteria: x } = e,
         f = (0, l.N)(),
         _ = (0, a.Ng)(),
-        E = (0, i.e7)([s.ZP], () => s.ZP.getPremiumTypeSubscription()),
-        C = r.ZP.getPremiumTypeFromSubscription(E);
+        E = (0, i.e7)([r.ZP], () => r.ZP.getPremiumTypeSubscription()),
+        C = s.ZP.getPremiumTypeFromSubscription(E);
     if (null != x) {
         let e = x();
         if (null != e) return e;

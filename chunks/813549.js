@@ -9,7 +9,7 @@ var a = r(120356),
     s = r.n(a),
     o = r(385499),
     l = r(674563),
-    u = r(485453);
+    u = r(164282);
 let c = (e) => {
     let { name: n, discriminator: r, invertBotTagColor: a, nameColor: l, className: c, botType: d, usernameClass: f, discriminatorClass: _, botClass: h, botVerified: p = !1, style: m, useRemSizes: g = !1, usernameIcon: E } = e;
     return (0, i.jsxs)('div', {

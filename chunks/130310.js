@@ -1,21 +1,21 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(785681),
     o = n(231994),
     c = n(388032),
-    d = n(187640),
-    u = n(232186);
+    d = n(43872),
+    u = n(275477);
 let m = (e) => {
-    let { header: t, description: n, icon: s, inModal: l } = e;
+    let { header: t, description: n, icon: r, inModal: l } = e;
     return (0, i.jsxs)('div', {
-        className: r()(d.row, u.marginBottom8, { [d.inModal]: l }),
+        className: s()(d.row, u.marginBottom8, { [d.inModal]: l }),
         children: [
             (0, i.jsx)('div', {
                 className: d.iconContainer,
-                children: s
+                children: r
             }),
             (0, i.jsxs)('div', {
                 children: [
@@ -38,8 +38,8 @@ let m = (e) => {
 t.Z = (e) => {
     let { inModal: t } = e,
         n = (0, l.o)(c.intl.string(c.t.Sm8Gq6), c.intl.string(c.t.YU7aaW)),
-        s = (0, l.o)(c.intl.string(c.t['TCzk/f']), c.intl.string(c.t['2OqtJC'])),
-        r = (0, l.o)(c.intl.string(c.t.ASf7XF), c.intl.string(c.t['82y87e'])),
+        r = (0, l.o)(c.intl.string(c.t['TCzk/f']), c.intl.string(c.t['2OqtJC'])),
+        s = (0, l.o)(c.intl.string(c.t.ASf7XF), c.intl.string(c.t['82y87e'])),
         u = (0, l.o)(c.intl.string(c.t['0QDVFB']), c.intl.string(c.t['1xBHHR']));
     return (0, i.jsxs)('div', {
         children: [
@@ -85,10 +85,10 @@ t.Z = (e) => {
                 className: d.groupHeader,
                 variant: 'text-xxs/bold',
                 color: 'header-secondary',
-                children: s
+                children: r
             }),
             (0, i.jsx)(m, {
-                header: r,
+                header: s,
                 description: u,
                 icon: (0, i.jsx)(a.XSmallIcon, {
                     size: 'custom',

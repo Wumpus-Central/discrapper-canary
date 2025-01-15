@@ -9,7 +9,7 @@ var i = r(200651),
     o = r.n(s),
     l = r(481060),
     u = r(189798),
-    c = r(878678);
+    c = r(53628);
 function d(e) {
     let { children: n, size: r = 16, className: s, flowerStarClassName: d, ...f } = e,
         _ = a.Children.only(n),

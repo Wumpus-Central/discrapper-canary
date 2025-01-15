@@ -34,7 +34,7 @@ var i = t(200651),
     O = t(844439),
     R = t(981631),
     x = t(388032),
-    U = t(974378);
+    U = t(413956);
 function y(e) {
     let { toggleShowMenu: n, showMenu: t, className: r, channelId: c, imageUrl: u, mimeType: s } = e,
         m = (0, o.e7)([S.Z], () => S.Z.getChannel(c)),

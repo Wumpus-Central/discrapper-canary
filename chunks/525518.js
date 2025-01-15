@@ -10,7 +10,7 @@ var i = n(200651),
     o = n(572004),
     s = n(981631),
     c = n(388032),
-    u = n(898069);
+    u = n(645557);
 function d(e) {
     let { skuId: t } = e,
         n = l.useCallback(() => {

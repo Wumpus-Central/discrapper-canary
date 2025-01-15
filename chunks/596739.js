@@ -7,7 +7,7 @@ var i = n(200651),
     l = n(192379),
     r = n(481060),
     a = n(388032),
-    s = n(985838),
+    s = n(507406),
     o = n(560580);
 function c(e) {
     let { header: t, description: n, onDismiss: c, buttons: d, dismissible: u = !0 } = e,

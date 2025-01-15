@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(544891),
     o = n(780384),
     c = n(481060),
@@ -15,13 +15,13 @@ var i = n(200651),
     x = n(474936),
     f = n(981631),
     _ = n(388032),
-    E = n(546146),
+    E = n(499533),
     C = n(982404),
     T = n(299156);
 t.Z = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: S, userDiscountOffer: b } = e,
-        [I, N] = s.useState(!1),
-        [v, A] = s.useState(!1),
+    let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: S, userDiscountOffer: b } = e,
+        [I, N] = r.useState(!1),
+        [v, A] = r.useState(!1),
         j = async (e) => {
             try {
                 A(!0),
@@ -37,21 +37,21 @@ t.Z = function (e) {
             }
             A(!1);
         },
-        R = (0, d.ZP)(),
-        O = (0, o.wj)(R) ? C : T,
+        O = (0, d.ZP)(),
+        R = (0, o.wj)(O) ? C : T,
         P = (0, h._)(t, x.Xh.PREMIUM_MONTH_TIER_2, b),
         y = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        D = (0, g.T4)(y.amount, y.currency);
+        B = (0, g.T4)(y.amount, y.currency);
     return null == b
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(p.Z, {
                       premiumType: n,
-                      onClose: r
+                      onClose: s
                   }),
                   (0, i.jsx)(c.ModalContent, {
                       className: E.body,
@@ -67,7 +67,7 @@ t.Z = function (e) {
                                   children: [
                                       (0, i.jsx)('img', {
                                           alt: '',
-                                          src: O,
+                                          src: R,
                                           className: E.confirmDiscountIcon
                                       }),
                                       (0, i.jsx)(c.Text, {
@@ -75,7 +75,7 @@ t.Z = function (e) {
                                           children: _.intl.format(_.t.Eq1RHB, {
                                               percent: b.discount.amount,
                                               numMonths: b.discount.user_usage_limit,
-                                              price: D
+                                              price: B
                                           })
                                       })
                                   ]
@@ -89,7 +89,7 @@ t.Z = function (e) {
                                           discountedPrice: P,
                                           billingPeriod: (0, m.JP)(b.discount.user_usage_limit_interval),
                                           numMonths: b.discount.user_usage_limit,
-                                          fullPrice: D,
+                                          fullPrice: B,
                                           helpdeskArticle: u.Z.getArticleURL(f.BhN.PAID_TERMS)
                                       })
                                   })
@@ -111,7 +111,7 @@ t.Z = function (e) {
                                   children: [
                                       (0, i.jsx)(c.Button, {
                                           look: c.ButtonLooks.LINK,
-                                          onClick: () => r(),
+                                          onClick: () => s(),
                                           children: _.intl.string(_.t.zl7LZm)
                                       }),
                                       (0, i.jsx)(c.Button, {

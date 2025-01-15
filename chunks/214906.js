@@ -1,64 +1,64 @@
-n.d(t, {
+e.d(t, {
     Z: function () {
         return h;
     }
 }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var r = n(913527),
-    l = n.n(r),
-    a = n(442837),
-    o = n(481060),
-    s = n(777861),
-    c = n(569471),
-    d = n(346479),
-    u = n(776568),
-    m = n(388032);
-function h(e) {
-    let [t, n, r] = (0, a.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
-        h = (0, s.U)(n);
-    function f(t) {
-        d.Z.setNotificationSettings(e, { muted: t });
+    e(47120);
+var i = e(200651);
+e(192379);
+var l = e(913527),
+    r = e.n(l),
+    u = e(442837),
+    a = e(481060),
+    d = e(777861),
+    o = e(569471),
+    s = e(346479),
+    c = e(776568),
+    f = e(388032);
+function h(n) {
+    let [t, e, l] = (0, u.Wu)([o.Z], () => [o.Z.isMuted(n.id), o.Z.getMuteConfig(n.id), o.Z.hasJoined(n.id)]),
+        h = (0, d.U)(e);
+    function Z(t) {
+        s.Z.setNotificationSettings(n, { muted: t });
     }
-    return r
+    return l
         ? t
-            ? (0, i.jsx)(o.MenuItem, {
+            ? (0, i.jsx)(a.MenuItem, {
                   id: 'unmute-channel',
-                  label: e.isForumPost() ? m.intl.string(m.t['0JQfsL']) : m.intl.string(m.t['Cq/TzM']),
+                  label: n.isForumPost() ? f.intl.string(f.t['0JQfsL']) : f.intl.string(f.t['Cq/TzM']),
                   subtext: h,
-                  action: () => f(!1)
+                  action: () => Z(!1)
               })
-            : (0, i.jsx)(o.MenuItem, {
+            : (0, i.jsx)(a.MenuItem, {
                   id: 'mute-channel',
-                  label: e.isForumPost() ? m.intl.string(m.t['nP+YkZ']) : m.intl.string(m.t.bUUd8v),
-                  action: () => f(!0),
-                  children: (0, u.k)().map((t) => {
-                      let { value: n, label: r } = t;
+                  label: n.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
+                  action: () => Z(!0),
+                  children: (0, c.k)().map((t) => {
+                      let { value: e, label: l } = t;
                       return (0, i.jsx)(
-                          o.MenuItem,
+                          a.MenuItem,
                           {
-                              id: ''.concat(n),
-                              label: r,
+                              id: ''.concat(e),
+                              label: l,
                               action: () =>
                                   (function (t) {
-                                      let n = t > 0 ? l()().add(t, 'second').toISOString() : null;
-                                      d.Z.setNotificationSettings(e, {
+                                      let e = t > 0 ? r()().add(t, 'second').toISOString() : null;
+                                      s.Z.setNotificationSettings(n, {
                                           muted: !0,
                                           mute_config: {
                                               selected_time_window: t,
-                                              end_time: n
+                                              end_time: e
                                           }
                                       });
-                                  })(n)
+                                  })(e)
                           },
-                          n
+                          e
                       );
                   })
               })
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(a.MenuItem, {
               id: 'mute-disabled',
-              label: e.isForumPost() ? m.intl.string(m.t['nP+YkZ']) : m.intl.string(m.t.bUUd8v),
+              label: n.isForumPost() ? f.intl.string(f.t['nP+YkZ']) : f.intl.string(f.t.bUUd8v),
               disabled: !0
           });
 }

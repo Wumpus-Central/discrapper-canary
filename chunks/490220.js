@@ -4,17 +4,17 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(588126),
     o = n(25990),
     c = n(921813),
-    d = n(617630);
+    d = n(667028);
 function u(e) {
     var t;
     let { user: u, disabledInputs: m, containerClassName: g } = e,
-        { reducedMotion: h } = s.useContext(a.AccessibilityPreferencesContext),
+        { reducedMotion: h } = r.useContext(a.AccessibilityPreferencesContext),
         {
             pendingAvatar: p,
             pendingBanner: x,
@@ -26,7 +26,7 @@ function u(e) {
             tryItOutBanner: S,
             tryItOutAvatarDecoration: b,
             tryItOutProfileEffectId: I
-        } = (0, r.cj)([o.Z], () => {
+        } = (0, s.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
                 t = o.Z.getAllTryItOut();
             return {

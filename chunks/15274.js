@@ -18,7 +18,7 @@ var a = r(952265),
 function u(e) {
     let { eventId: n, parentGuildId: s, recurrenceId: o } = e;
     (0, a.ZD)(async () => {
-        let { default: e } = await Promise.all([r.e('18543'), r.e('95393'), r.e('22347'), r.e('3202')]).then(r.bind(r, 697849));
+        let { default: e } = await Promise.all([r.e('18543'), r.e('95393'), r.e('22347'), r.e('68696')]).then(r.bind(r, 697849));
         return (r) =>
             (0, i.jsx)(e, {
                 guildScheduledEventId: n,

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(100527),
     o = n(906732),
@@ -19,12 +19,12 @@ var s = n(120356),
     p = n(726985),
     x = n(981631),
     f = n(388032),
-    _ = n(232186);
+    _ = n(275477);
 function E() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
         n = h.fq.useSetting(),
-        s = h.eR.useSetting(),
+        r = h.eR.useSetting(),
         E = (0, u.V2)({ location: 'UserSettingsTextImages' }),
         C = h.R$.useSetting(),
         T = h.cC.useSetting(),
@@ -35,7 +35,7 @@ function E() {
         v = h.RS.useSetting(),
         A = h.NA.useSetting(),
         j = h.nc.useSetting(),
-        { analyticsLocations: R } = (0, o.ZP)(l.Z.TEXT_AND_IMAGES);
+        { analyticsLocations: O } = (0, o.ZP)(l.Z.TEXT_AND_IMAGES);
     return (0, i.jsxs)(a.FormSection, {
         tag: a.FormTitleTags.H1,
         title: f.intl.string(f.t['/VQax8']),
@@ -50,7 +50,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: r()(_.marginTop8, _.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: v,
                             onChange: h.RS.updateSetting,
                             children: f.intl.string(f.t.U47N1t)
@@ -59,7 +59,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: r()(_.marginTop8, _.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: N,
                             note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
                             onChange: h.x4.updateSetting,
@@ -69,7 +69,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: r()(_.marginTop8, _.marginBottom40),
+                            className: s()(_.marginTop8, _.marginBottom40),
                             value: b,
                             note: f.intl.string(f.t.T0rbtL),
                             onChange: h.H1.updateSetting,
@@ -88,7 +88,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: r()(_.marginTop8, _.marginBottom40),
+                            className: s()(_.marginTop8, _.marginBottom40),
                             value: A,
                             onChange: h.NA.updateSetting,
                             children: f.intl.string(f.t.xX0ZTE)
@@ -106,7 +106,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_EMOJI_REACTIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: r()(_.marginTop8, _.marginBottom20),
+                            className: s()(_.marginTop8, _.marginBottom20),
                             value: j,
                             onChange: h.nc.updateSetting,
                             children: f.intl.string(f.t.Iv24sr)
@@ -138,14 +138,14 @@ function E() {
                             : (0, i.jsx)(m.F, {
                                   setting: p.s6.CHAT_STICKERS_SUGGESTIONS,
                                   children: (0, i.jsx)(a.FormSwitch, {
-                                      className: r()(_.marginTop8, _.marginBottom20),
+                                      className: s()(_.marginTop8, _.marginBottom20),
                                       value: e,
                                       note: f.intl.string(f.t.r3uQUV),
                                       onChange: (t) => {
                                           g.default.track(x.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                               enabled: !e,
                                               location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                              location_stack: R
+                                              location_stack: O
                                           }),
                                               (0, c.AW)(!e);
                                       },
@@ -162,7 +162,7 @@ function E() {
                                     g.default.track(x.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
                                         location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                        location_stack: R
+                                        location_stack: O
                                     }),
                                         h.fq.updateSetting(e);
                                 },
@@ -186,7 +186,7 @@ function E() {
                                 setting: p.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
                                 children: (0, i.jsx)(a.FormSwitch, {
                                     className: _.marginBottom40,
-                                    value: s,
+                                    value: r,
                                     note: f.intl.string(f.t.hrSIhI),
                                     onChange: (e) => {
                                         g.default.track(x.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
@@ -213,7 +213,7 @@ function E() {
                         (0, i.jsx)(m.F, {
                             setting: p.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, i.jsx)(a.FormSwitch, {
-                                className: r()(_.marginTop8, _.marginBottom40),
+                                className: s()(_.marginTop8, _.marginBottom40),
                                 value: C,
                                 onChange: (e) => {
                                     g.default.track(x.rMx.PREVIEW_MARKDOWN_TOGGLED, {

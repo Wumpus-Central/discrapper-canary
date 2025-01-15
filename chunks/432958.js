@@ -28,7 +28,7 @@ var i = n(200651),
     E = n(475413),
     b = n(228168),
     Z = n(388032),
-    N = n(562296),
+    N = n(663017),
     S = n(321975);
 function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,

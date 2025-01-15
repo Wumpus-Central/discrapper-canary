@@ -25,7 +25,7 @@ var r = a(200651),
     _ = a(46140),
     j = a(675654),
     b = a(388032),
-    w = a(934919);
+    w = a(44819);
 function N(e) {
     var n;
     let { transitionState: a, onClose: t, quest: h, location: f, reward: p } = e,

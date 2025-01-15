@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(512722),
-    r = n.n(s),
+var r = n(512722),
+    s = n.n(r),
     a = n(442837),
     l = n(481060),
     o = n(716364),
@@ -17,7 +17,7 @@ var s = n(512722),
 function g() {
     let e = (0, a.e7)([c.Z], () => c.Z.getSoundpack()),
         t = d.Z.useHolidaySoundpack();
-    r()(null != t, 'should not render this without a holiday soundpack');
+    s()(null != t, 'should not render this without a holiday soundpack');
     let n = [
         {
             value: u.YC.CLASSIC,

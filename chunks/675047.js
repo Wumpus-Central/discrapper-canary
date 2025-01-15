@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(924628),
-    r = n(493773),
+var r = n(924628),
+    s = n(493773),
     a = n(977059),
     l = n(630759),
     o = n(398826),
@@ -48,8 +48,8 @@ function S() {
 }
 function b() {
     return (
-        (0, r.Z)(() => {
-            (0, s.I)(), (0, o.A)();
+        (0, s.Z)(() => {
+            (0, r.I)(), (0, o.A)();
         }),
         (0, i.jsxs)(c.N, {
             header: E.intl.string(E.t.OAuOHB),

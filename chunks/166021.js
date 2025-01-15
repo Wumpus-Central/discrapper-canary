@@ -1,19 +1,19 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(476183),
     o = n(481060),
     c = n(320319),
-    d = n(931876);
+    d = n(964856);
 t.Z = (e) => {
-    let { cards: t, className: n, cardType: r } = e,
+    let { cards: t, className: n, cardType: s } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
-        [m, g] = s.useState(0),
-        [h, p] = s.useState(u()),
+        [m, g] = r.useState(0),
+        [h, p] = r.useState(u()),
         x = t.length;
-    s.useEffect(() => {
+    r.useEffect(() => {
         let e = () => {
             p(u());
         };
@@ -24,14 +24,14 @@ t.Z = (e) => {
             }
         );
     }, []),
-        s.useEffect(() => {
+        r.useEffect(() => {
             g((e) => (x > h && e > x - h ? x - h : x <= h ? 0 : e));
         }, [x, h]);
     let f = m > 0,
-        _ = s.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        _ = r.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
         [E, C] = (0, o.useSprings)(t.length, _);
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             C(_);
         }, [C, _]),
         (0, i.jsx)('div', {
@@ -58,17 +58,17 @@ t.Z = (e) => {
                     (0, i.jsx)('div', {
                         className: d.cardInnerContainer,
                         children: E.map((e, n) => {
-                            let { x: s } = e;
+                            let { x: r } = e;
                             return (0, i.jsx)(
                                 l.animated.div,
                                 {
                                     className: d.card,
-                                    style: { transform: null == s ? void 0 : s.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
+                                    style: { transform: null == r ? void 0 : r.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
                                     children: (0, i.jsx)(
                                         c.Z,
                                         {
                                             ...t[n],
-                                            cardType: r
+                                            cardType: s
                                         },
                                         ''.concat(t[n].name, '_').concat(n, '_perks_card')
                                     )

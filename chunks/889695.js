@@ -1,144 +1,144 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return T;
     }
 }),
-    n(47120),
-    n(724458),
-    n(653041);
-var i = n(200651),
-    r = n(192379),
-    l = n(658722),
-    a = n.n(l),
-    o = n(392711),
-    s = n.n(o),
-    c = n(149765),
-    d = n(442837),
-    u = n(481060),
-    m = n(271383),
-    h = n(430824),
-    f = n(594174),
-    p = n(700785),
-    _ = n(709054),
-    g = n(962086),
-    E = n(160404),
-    C = n(225675),
-    I = n(981631),
-    x = n(388032),
-    N = n(22314);
-function v(e) {
-    var t;
+    t(47120),
+    t(724458),
+    t(653041);
+var i = t(200651),
+    o = t(192379),
+    r = t(658722),
+    a = t.n(r),
+    l = t(392711),
+    c = t.n(l),
+    s = t(149765),
+    d = t(442837),
+    u = t(481060),
+    b = t(271383),
+    m = t(430824),
+    g = t(594174),
+    _ = t(700785),
+    p = t(709054),
+    f = t(962086),
+    h = t(160404),
+    C = t(225675),
+    x = t(981631),
+    S = t(388032),
+    I = t(947454);
+function B(e) {
+    var n;
     return (0, i.jsx)('span', {
-        style: { color: null !== (t = e.colorString) && void 0 !== t ? t : 'currentColor' },
+        style: { color: null !== (n = e.colorString) && void 0 !== n ? n : 'currentColor' },
         children: e.name
     });
 }
 function T(e) {
-    let { guildId: t } = e,
-        n = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
-        l = (0, d.e7)([h.Z], () => h.Z.getGuild(t)),
-        o = (0, d.e7)([h.Z], () => h.Z.getRoles(t)),
-        { impersonateType: T, viewingRoles: S } = (0, d.cj)([E.Z], () => ({
-            impersonateType: E.Z.getImpersonateType(t),
-            viewingRoles: E.Z.getViewingRoles(t)
+    let { guildId: n } = e,
+        t = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
+        r = (0, d.e7)([m.Z], () => m.Z.getGuild(n)),
+        l = (0, d.e7)([m.Z], () => m.Z.getRoles(n)),
+        { impersonateType: T, viewingRoles: k } = (0, d.cj)([h.Z], () => ({
+            impersonateType: h.Z.getImpersonateType(n),
+            viewingRoles: h.Z.getViewingRoles(n)
         })),
-        A = T === C.z.SERVER_SHOP,
-        b = (0, d.e7)([m.ZP], () => (null != n ? m.ZP.getTrueMember(t, n.id) : null)),
-        [j, R] = (0, u.useMultiSelect)(null == S ? [] : _.default.keys(S)),
-        Z = r.useRef(l);
-    r.useEffect(() => {
+        v = T === C.z.SERVER_SHOP,
+        w = (0, d.e7)([b.ZP], () => (null != t ? b.ZP.getTrueMember(n, t.id) : null)),
+        [N, R] = (0, u.useMultiSelect)(null == k ? [] : p.default.keys(k)),
+        Z = o.useRef(r);
+    o.useEffect(() => {
         let e = {},
-            t = Z.current;
-        if (null != t && null != T) {
-            for (let t of j) {
-                let n = o[t];
-                null != n && (e[t] = n);
+            n = Z.current;
+        if (null != n && null != T) {
+            for (let n of N) {
+                let t = l[n];
+                null != t && (e[n] = t);
             }
-            (0, g.Zm)(t.id, {
+            (0, f.Zm)(n.id, {
                 type: T,
                 roles: e
             });
         }
-    }, [j, T, o]);
-    let P =
-            null != l && null != n && null != b
-                ? s()(o)
-                      .filter((e) => -1 !== b.roles.indexOf(e.id))
+    }, [N, T, l]);
+    let E =
+            null != r && null != t && null != w
+                ? c()(l)
+                      .filter((e) => -1 !== w.roles.indexOf(e.id))
                       .sortBy((e) => -e.position)
                       .first()
                 : void 0,
-        L = r.useMemo(
+        O = o.useMemo(
             () =>
-                null != l && null != n
-                    ? Object.values(o)
-                          .filter((e) => e.id !== l.id)
+                null != r && null != t
+                    ? Object.values(l)
+                          .filter((e) => e.id !== r.id)
                           .filter((e) => {
-                              var t;
-                              return !A || (null === (t = e.tags) || void 0 === t ? void 0 : t.subscription_listing_id) != null;
+                              var n;
+                              return !v || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == P ? void 0 : P.id) === e.id || p.r6(l, n.id, P, e))
+                          .filter((e) => (null == E ? void 0 : E.id) === e.id || _.r6(r, t.id, E, e))
                     : [],
-            [l, n, A, P, o]
+            [r, t, v, E, l]
         );
-    if (null == n || null == l || null == b) return null;
-    let y = {};
-    return (b.roles.forEach((e) => {
-        let t = o[e];
-        null != t && (y[t.id] = t);
+    if (null == t || null == r || null == w) return null;
+    let P = {};
+    return (w.roles.forEach((e) => {
+        let n = l[e];
+        null != n && (P[n.id] = n);
     }),
-    c.e$(
-        p.I0({
-            forceRoles: y,
-            context: l
+    s.e$(
+        _.I0({
+            forceRoles: P,
+            context: r
         }),
-        c.$e(I.Plq.MANAGE_GUILD, I.Plq.MANAGE_ROLES)
-    ) || l.isOwner(n.id))
+        s.$e(x.Plq.MANAGE_GUILD, x.Plq.MANAGE_ROLES)
+    ) || r.isOwner(t.id))
         ? (0, i.jsx)('div', {
-              className: N.container,
+              className: I.container,
               children: (0, i.jsx)(u.Combobox, {
-                  placeholder: x.intl.string(x.t.Sojqsr),
-                  value: j,
+                  placeholder: S.intl.string(S.t.Sojqsr),
+                  value: N,
                   onChange: R,
                   autoFocus: !0,
                   children: (e) => {
-                      let t = L.reduce(
-                              (t, n) => (
-                                  a()(e.toLowerCase(), n.name.toLowerCase()) &&
-                                      t.push(
+                      let n = O.reduce(
+                              (n, t) => (
+                                  a()(e.toLowerCase(), t.name.toLowerCase()) &&
+                                      n.push(
                                           (0, i.jsxs)(
                                               u.ComboboxItem,
                                               {
-                                                  value: n.id,
-                                                  children: [(0, i.jsx)(u.ComboboxItem.Label, { children: v(n) }), (0, i.jsx)(u.ComboboxItem.Checkbox, {})]
+                                                  value: t.id,
+                                                  children: [(0, i.jsx)(u.ComboboxItem.Label, { children: B(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, {})]
                                               },
-                                              n.id
+                                              t.id
                                           )
                                       ),
-                                  t
+                                  n
                               ),
                               []
                           ),
-                          n = o[l.getEveryoneRoleId()];
+                          t = l[r.getEveryoneRoleId()];
                       return (
-                          null != n &&
-                              t.push(
+                          null != t &&
+                              n.push(
                                   (0, i.jsxs)(
                                       u.ComboboxItem,
                                       {
-                                          value: n.id,
+                                          value: t.id,
                                           disabled: !0,
-                                          children: [(0, i.jsx)(u.ComboboxItem.Label, { children: v(n) }), (0, i.jsx)(u.ComboboxItem.Checkbox, { checked: !0 })]
+                                          children: [(0, i.jsx)(u.ComboboxItem.Label, { children: B(t) }), (0, i.jsx)(u.ComboboxItem.Checkbox, { checked: !0 })]
                                       },
-                                      n.id
+                                      t.id
                                   )
                               ),
-                          t
+                          n
                       );
                   }
               })
           })
         : (0, i.jsx)(u.Text, {
               variant: 'text-md/medium',
-              children: x.intl.string(x.t.MNSTbW)
+              children: S.intl.string(S.t.MNSTbW)
           });
 }

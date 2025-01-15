@@ -5,15 +5,15 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(600164),
     c = n(490529),
     d = n(981631),
     u = n(388032),
-    m = n(187033);
+    m = n(109067);
 let g = {
         [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
@@ -35,7 +35,7 @@ let g = {
             [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
             [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU)
         })[e];
-class f extends s.Component {
+class f extends r.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;
@@ -135,23 +135,23 @@ class f extends s.Component {
         });
     }
     constructor(...e) {
-        var t, s, r;
+        var t, r, s;
         super(...e),
             (t = this),
-            (s = 'handleJoinHypeSquadClick'),
-            (r = () => {
+            (r = 'handleJoinHypeSquadClick'),
+            (s = () => {
                 (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
                     return (t) => (0, i.jsx)(e, { ...t });
                 });
             }),
-            s in t
-                ? Object.defineProperty(t, s, {
-                      value: r,
+            r in t
+                ? Object.defineProperty(t, r, {
+                      value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[s] = r);
+                : (t[r] = s);
     }
 }

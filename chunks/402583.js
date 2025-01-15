@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(924628),
     l = n(480294),
     o = n(63063),
@@ -16,8 +16,8 @@ var i = n(200651),
     g = n(981631),
     h = n(388032);
 function p() {
-    let e = (0, r.e7)([l.Z], () => l.Z.hasConsented(g.pjP.USAGE_STATISTICS)),
-        t = s.useCallback((e) => {
+    let e = (0, s.e7)([l.Z], () => l.Z.hasConsented(g.pjP.USAGE_STATISTICS)),
+        t = r.useCallback((e) => {
             e
                 ? (0, a.g)([g.pjP.USAGE_STATISTICS], []).catch(u.S)
                 : (0, u.V)({

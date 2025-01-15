@@ -1,6 +1,6 @@
 n.d(t, {
     $p: function () {
-        return e6;
+        return e9;
     },
     BB: function () {
         return e2;
@@ -116,8 +116,8 @@ var i,
     eH = n(981631),
     ez = n(474936),
     eW = n(388032),
-    eK = n(46124),
-    eY = n(803205),
+    eK = n(831637),
+    eY = n(165701),
     eX = n(680674);
 function eQ(e, t, n) {
     return (
@@ -890,7 +890,7 @@ eQ(e2, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
-let e6 = (e) => {
+let e9 = (e) => {
     var t;
     let { message: n, channel: i, disableReactionReads: l = !1, renderThreadAccessory: a = !1, disableReactionCreates: o = !0, disableReactionUpdates: s = !0, disableComponentInteractivity: c = !0, isSearchResult: d = !1, ...u } = e,
         m = ec.x4.useSetting(),

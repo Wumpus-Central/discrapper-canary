@@ -7,17 +7,17 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(481060),
-    r = n(574792);
-let a = () => (0, i.jsx)('hr', { className: r.sectionDivider }),
+    r = n(481060),
+    s = n(19246);
+let a = () => (0, i.jsx)('hr', { className: s.sectionDivider }),
     l = (e) => {
         let { label: t, children: n } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a, {}),
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-md/semibold',
-                    className: r.labelSpacing,
+                    className: s.labelSpacing,
                     children: t
                 }),
                 (0, i.jsx)('div', {
@@ -30,7 +30,7 @@ let a = () => (0, i.jsx)('hr', { className: r.sectionDivider }),
     o = (e) => {
         let { children: t } = e;
         return (0, i.jsx)('div', {
-            className: r.section,
+            className: s.section,
             children: t
         });
     };

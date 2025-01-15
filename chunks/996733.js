@@ -1,4 +1,4 @@
-n.d(t, {
+s.d(t, {
     QH: function () {
         return r;
     },
@@ -9,17 +9,17 @@ n.d(t, {
         return i;
     }
 });
-let s = (0, n(972959).H)(() => ({
+let n = (0, s(972959).H)(() => ({
     query: '',
     isActive: !1,
     selected: null
 }));
 function i(e) {
-    s.setState({ query: e });
+    n.setState({ query: e });
 }
 function r(e) {
-    s.setState({ isActive: e });
+    n.setState({ isActive: e });
 }
 function o() {
-    return s.useField('query');
+    return n.useField('query');
 }

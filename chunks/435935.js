@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i,
-    s,
-    r = n(200651),
+    r,
+    s = n(200651),
     a = n(192379),
     l = n(557533),
     o = n.n(l),
-    c = n(640149),
-    d = n(92221);
+    c = n(549674),
+    d = n(875546);
 function u(e, t, n) {
     return (
         t in e
@@ -53,12 +53,12 @@ let m = {
     };
 class f extends (i = a.PureComponent) {
     render() {
-        let { children: e, className: t, shrink: n, grow: i, basis: s, style: l, wrap: c, ...u } = this.props,
+        let { children: e, className: t, shrink: n, grow: i, basis: r, style: l, wrap: c, ...u } = this.props,
             m = {
                 style: {
                     flexGrow: i,
                     flexShrink: n,
-                    flexBasis: s,
+                    flexBasis: r,
                     ...l
                 },
                 className: t === d.flexChild ? t : o()(d.flexChild, t),
@@ -75,7 +75,7 @@ class f extends (i = a.PureComponent) {
                 a.cloneElement(n, m)
             );
         }
-        return (0, r.jsx)('div', {
+        return (0, s.jsx)('div', {
             ...m,
             children: e
         });
@@ -86,18 +86,18 @@ u(f, 'defaultProps', {
     style: {},
     wrap: !1
 });
-class _ extends (s = a.PureComponent) {
+class _ extends (r = a.PureComponent) {
     render() {
-        let { children: e, className: t, direction: n, justify: i, align: s, wrap: a, shrink: l, grow: c, basis: u, style: m, gutter: g, ...h } = this.props,
+        let { children: e, className: t, direction: n, justify: i, align: r, wrap: a, shrink: l, grow: c, basis: u, style: m, gutter: g, ...h } = this.props,
             p = {
                 flexShrink: l,
                 flexGrow: c,
                 flexBasis: u,
                 ...m
             };
-        return (0, r.jsx)('div', {
+        return (0, s.jsx)('div', {
             style: p,
-            className: o()(d.flex, n, i, s, a, g, t),
+            className: o()(d.flex, n, i, r, a, g, t),
             ...h,
             children: e
         });

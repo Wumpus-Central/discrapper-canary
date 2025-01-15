@@ -15,10 +15,10 @@ n.d(t, {
         return M;
     },
     kG: function () {
-        return B;
+        return D;
     },
     sf: function () {
-        return U;
+        return F;
     },
     x$: function () {
         return W;
@@ -27,8 +27,8 @@ n.d(t, {
     n(724458),
     n(47120);
 var i = n(192379),
-    s = n(913527),
-    r = n.n(s),
+    r = n(913527),
+    s = n.n(r),
     a = n(442837),
     l = n(704215),
     o = n(605236),
@@ -52,24 +52,24 @@ var i = n(192379),
     v = n(432119),
     A = n(347493),
     j = n(493776),
-    R = n(205119),
-    O = n(354102),
+    O = n(205119),
+    R = n(354102),
     P = n(145007),
     y = n(252409),
-    D = n(937264);
-let B = () => {
+    B = n(937264);
+let D = () => {
         var e;
         let t;
         let n = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
             i = (0, a.e7)([u.Z], () => (null != n ? u.Z.getUserProfile(n.id) : null)),
-            s = null == i ? void 0 : i.premiumSince;
+            r = null == i ? void 0 : i.premiumSince;
         return (
             null == i ||
                 null === (e = i.badges) ||
                 void 0 === e ||
                 e.forEach((e) => {
                     let n = (0, d.gn)(e.id);
-                    null != n && null != s && (t = n);
+                    null != n && null != r && (t = n);
                 }),
             t
         );
@@ -85,12 +85,12 @@ let B = () => {
         let e = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
             t = (0, a.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription());
         if (!(0, h.M5)(e, x.p9.TIER_2) || null == t || null == t.premiumSince) return null;
-        let n = r()(),
-            i = r()(t.premiumSince).add(1, 'day'),
-            s = n.diff(i, 'months');
+        let n = s()(),
+            i = s()(t.premiumSince).add(1, 'day'),
+            r = n.diff(i, 'months');
         return Object.entries(x.eG).reduce((e, t) => {
             let [n, i] = t;
-            return s >= i ? n : e;
+            return r >= i ? n : e;
         }, null);
     },
     M = (e, t) => {
@@ -99,11 +99,11 @@ let B = () => {
                 case x.VU.PREMIUM_TENURE_1_MONTH:
                     return E;
                 case x.VU.PREMIUM_TENURE_3_MONTH:
-                    return D;
+                    return B;
                 case x.VU.PREMIUM_TENURE_6_MONTH:
                     return v;
                 case x.VU.PREMIUM_TENURE_12_MONTH:
-                    return R;
+                    return O;
                 case x.VU.PREMIUM_TENURE_24_MONTH:
                     return T;
                 case x.VU.PREMIUM_TENURE_36_MONTH:
@@ -129,7 +129,7 @@ let B = () => {
             case x.VU.PREMIUM_TENURE_36_MONTH:
                 return S;
             case x.VU.PREMIUM_TENURE_60_MONTH:
-                return O;
+                return R;
             case x.VU.PREMIUM_TENURE_72_MONTH:
                 return A;
             default:
@@ -137,7 +137,7 @@ let B = () => {
         }
     },
     k = () => {
-        let e = B(),
+        let e = D(),
             { version: t } = (0, p.Z)();
         return M(e, t);
     },
@@ -163,12 +163,12 @@ let B = () => {
                 return '';
         }
     },
-    F = () => {
-        let e = B(),
+    U = () => {
+        let e = D(),
             { version: t } = (0, p.Z)();
         return w(e, t);
     },
-    U = (e) => {
+    F = (e) => {
         switch (e) {
             case x.VU.PREMIUM_TENURE_1_MONTH:
             case x.VU.PREMIUM_TENURE_3_MONTH:
@@ -185,16 +185,16 @@ let B = () => {
                 return '';
         }
     },
-    V = () => U(B()),
+    V = () => F(D()),
     G = () => {
-        let e = B(),
+        let e = D(),
             t = (0, a.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
     },
     H = () => ({
-        badge: B(),
+        badge: D(),
         image: k(),
-        name: F(),
+        name: U(),
         earnedOnDate: G(),
         tenureRequirement: V()
     }),

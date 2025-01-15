@@ -26,7 +26,7 @@ var a = n(200651),
     w = n(356659),
     y = n(710111),
     _ = n(388032),
-    k = n(249861),
+    k = n(2117),
     S = n(413135).Buffer;
 function N(e) {
     let { clip: t, channelId: i, clipName: N, onSetClipName: T, onClose: L } = e,
@@ -47,7 +47,7 @@ function N(e) {
                 voiceAudio: E
             });
             (0, s.openModalLazy)(async () => {
-                let { default: i } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961)),
+                let { default: i } = await Promise.all([n.e('56035'), n.e('97207')]).then(n.bind(n, 758961)),
                     r = (null == l ? void 0 : l.guild_id) != null ? p.Z.getGuild(l.guild_id) : null,
                     o = null != r && (0, c.Gw)(r, v.Z, f.default).canCreateExpressions,
                     s = null == N || '' === N ? (0, w.yl)(b.default.extractTimestamp(t.id)) : N,

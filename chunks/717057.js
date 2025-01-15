@@ -30,7 +30,7 @@ var n = l(200651),
     y = l(308083),
     H = l(981631),
     w = l(388032),
-    b = l(470168);
+    b = l(192958);
 function M(e) {
     var t;
     let { guildId: l, clanInfo: a, signed: r, onSignCharter: c } = e,

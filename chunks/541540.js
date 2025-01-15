@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(411104);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(533307),
     o = n(600164),
@@ -17,7 +17,7 @@ var i = n(200651),
     m = n(669079),
     g = n(981631),
     h = n(388032),
-    p = n(621550);
+    p = n(449986);
 function x(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ function x(e, t, n) {
         e
     );
 }
-class f extends s.Component {
+class f extends r.Component {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e }
@@ -43,7 +43,7 @@ class f extends s.Component {
     }
     render() {
         let { obscureInput: e } = this.props,
-            { codeInput: t, submitting: n, hasError: s, isPromoCode: r } = this.state;
+            { codeInput: t, submitting: n, hasError: r, isPromoCode: s } = this.state;
         return (0, i.jsxs)(a.FormSection, {
             tag: a.FormTitleTags.H1,
             title: h.intl.string(h.t['il+VCg']),
@@ -58,7 +58,7 @@ class f extends s.Component {
                                 value: t,
                                 onChange: this.handleChange,
                                 placeholder: 'WUMP-AAAAA-BBBBB-CCCCC',
-                                error: !r && s ? h.intl.string(h.t.Y11a2t) : null,
+                                error: !s && r ? h.intl.string(h.t.Y11a2t) : null,
                                 className: p.codeRedemptionInput
                             }),
                             (0, i.jsx)(a.Button, {
@@ -69,7 +69,7 @@ class f extends s.Component {
                         ]
                     })
                 }),
-                r
+                s
                     ? (0, i.jsx)(a.Text, {
                           className: p.errorMessage,
                           variant: 'text-sm/normal',
@@ -128,8 +128,8 @@ class f extends s.Component {
     }
 }
 function _() {
-    let e = s.useContext(u.AnalyticsContext),
-        t = (0, r.e7)([d.Z], () => d.Z.enabled);
+    let e = r.useContext(u.AnalyticsContext),
+        t = (0, s.e7)([d.Z], () => d.Z.enabled);
     return (0, i.jsx)(f, {
         analyticsContext: e,
         obscureInput: t

@@ -1,12 +1,12 @@
-var i, s;
+var i, r;
 n.d(t, {
     x: function () {
         return i;
     }
 }),
-    ((s = i || (i = {})).MODAL_UPSELL = 'MODAL_UPSELL'),
-    (s.INIT = 'INIT'),
-    (s.EDIT = 'EDIT'),
-    (s.REGISTER = 'REGISTER'),
-    (s.NAME = 'NAME'),
-    (s.SUCCESS = 'SUCCESS');
+    ((r = i || (i = {})).MODAL_UPSELL = 'MODAL_UPSELL'),
+    (r.INIT = 'INIT'),
+    (r.EDIT = 'EDIT'),
+    (r.REGISTER = 'REGISTER'),
+    (r.NAME = 'NAME'),
+    (r.SUCCESS = 'SUCCESS');

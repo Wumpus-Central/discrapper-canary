@@ -22,7 +22,7 @@ var i = n(200651),
     C = n(906037),
     Z = n(501787),
     _ = n(65154),
-    I = n(827202);
+    I = n(334551);
 function j(e) {
     var t;
     let { participant: n, channel: l, context: r } = e,
@@ -33,7 +33,7 @@ function E(e) {
     let { context: t = _.Yn.DEFAULT, participants: r, locked: a, widget: c, channel: u, width: d, height: h, containerRef: p } = e,
         m = (e, l) => {
             (0, s.jW)(l, async () => {
-                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
+                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('76747')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,

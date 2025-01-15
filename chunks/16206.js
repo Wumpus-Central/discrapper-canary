@@ -1,35 +1,35 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(981631),
-    s = n(388032);
-function r(e) {
+    r = n(388032);
+function s(e) {
     if (null == e) return null;
     switch (e.type) {
         case i.d4z.GUILD_ANNOUNCEMENT:
-            return s.intl.string(s.t.l1dkSE);
+            return r.intl.string(r.t.l1dkSE);
         case i.d4z.GUILD_STORE:
-            return s.intl.string(s.t['P1/Erq']);
+            return r.intl.string(r.t['P1/Erq']);
         case i.d4z.DM:
         case i.d4z.GROUP_DM:
-            return s.intl.string(s.t.jN2DfX);
+            return r.intl.string(r.t.jN2DfX);
         case i.d4z.PRIVATE_THREAD:
-            return s.intl.string(s.t.F1zyvb);
+            return r.intl.string(r.t.F1zyvb);
         case i.d4z.ANNOUNCEMENT_THREAD:
         case i.d4z.PUBLIC_THREAD:
-            return s.intl.string(s.t['7Xm5QE']);
+            return r.intl.string(r.t['7Xm5QE']);
         case i.d4z.GUILD_TEXT:
-            return s.intl.string(s.t.Pnajj4);
+            return r.intl.string(r.t.Pnajj4);
         case i.d4z.GUILD_FORUM:
-            return e.isMediaChannel() ? s.intl.string(s.t.seKITE) : s.intl.string(s.t.GbryDQ);
+            return e.isMediaChannel() ? r.intl.string(r.t.seKITE) : r.intl.string(r.t.GbryDQ);
         case i.d4z.GUILD_MEDIA:
-            return s.intl.string(s.t.seKITE);
+            return r.intl.string(r.t.seKITE);
         case i.d4z.GUILD_STAGE_VOICE:
-            return s.intl.string(s.t.EErMzM);
+            return r.intl.string(r.t.EErMzM);
         case i.d4z.GUILD_VOICE:
-            return s.intl.string(s.t.BVZqJi);
+            return r.intl.string(r.t.BVZqJi);
         case i.d4z.GUILD_CATEGORY:
         default:
             return null;

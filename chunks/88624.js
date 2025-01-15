@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(512722),
-    r = n.n(s),
+var r = n(512722),
+    s = n.n(r),
     a = n(442837),
     l = n(481060),
     o = n(346951),
@@ -16,7 +16,7 @@ var s = n(512722),
     m = n(594174),
     g = n(843200),
     h = n(388032),
-    p = n(906405);
+    p = n(878391);
 function x() {
     let {
         houseMembership: e,
@@ -25,7 +25,7 @@ function x() {
     } = (0, a.cj)([m.default, u.Z], () => {
         let e = m.default.getCurrentUser();
         return (
-            r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
+            s()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
             {
                 houseMembership: u.Z.getHouseMembership(),
                 isClaimed: e.isClaimed(),

@@ -17,7 +17,7 @@ var i = n(200651),
     s = n(951394),
     c = n(407477),
     d = n(388032),
-    u = n(604643);
+    u = n(377212);
 function m(e) {
     let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: _, onTooltipHide: g, disabled: E, dangerous: C, separator: I, sparkle: x, showNewBadge: N, buttonClassName: v, children: T, ...S } = e,
         { canShowReactionsOnMessageHover: A } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });

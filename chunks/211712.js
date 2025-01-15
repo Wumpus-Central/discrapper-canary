@@ -7,8 +7,8 @@ n.d(t, {
     }
 });
 var i,
-    s,
-    r = n(388032),
+    r,
+    s = n(388032),
     a = n(201016),
     l = n(673497),
     o = n(421450),
@@ -19,7 +19,7 @@ var i,
     g = n(265665),
     h = n(181793),
     p = n(338430);
-((i = s || (s = {})).ABOVE_THE_CLOUDS = 'above_the_clouds'), (i.CYBERPUNK = 'cyberpunk'), (i.STARLIT_DREAM = 'starlit_dream'), (i.SHADOW_REALM = 'shadow_realm'), (i.NEON_SPACE = 'neon_space');
+((i = r || (r = {})).ABOVE_THE_CLOUDS = 'above_the_clouds'), (i.CYBERPUNK = 'cyberpunk'), (i.STARLIT_DREAM = 'starlit_dream'), (i.SHADOW_REALM = 'shadow_realm'), (i.NEON_SPACE = 'neon_space');
 let x = [
     {
         presetName: 'above_the_clouds',
@@ -58,14 +58,14 @@ let x = [
 function f(e) {
     switch (e) {
         case 'above_the_clouds':
-            return r.intl.string(r.t['TFc+iI']);
+            return s.intl.string(s.t['TFc+iI']);
         case 'cyberpunk':
-            return r.intl.string(r.t['4g+5bm']);
+            return s.intl.string(s.t['4g+5bm']);
         case 'starlit_dream':
-            return r.intl.string(r.t['9WLHvr']);
+            return s.intl.string(s.t['9WLHvr']);
         case 'shadow_realm':
-            return r.intl.string(r.t.ycg1xs);
+            return s.intl.string(s.t.ycg1xs);
         case 'neon_space':
-            return r.intl.string(r.t.UdNuqq);
+            return s.intl.string(s.t.UdNuqq);
     }
 }

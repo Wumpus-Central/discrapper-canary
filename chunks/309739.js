@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(658722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(658722),
+    a = n.n(s),
     l = n(442837),
     o = n(780384),
     c = n(481060),
@@ -25,13 +25,13 @@ var i = n(200651),
     T = n(726985),
     S = n(981631),
     b = n(388032),
-    I = n(147522),
-    N = n(232186);
+    I = n(594010),
+    N = n(275477);
 function v() {
     let e = C.G6.useSetting(),
         t = C.Wz.useSetting(),
         n = f.isPlatformEmbedded ? b.intl.string(b.t.MznbeH) : b.intl.string(b.t.oKqC4u),
-        s = (e) => {
+        r = (e) => {
             C.Wz.updateSetting(e),
                 !(function (e) {
                     let t = () => {
@@ -72,7 +72,7 @@ function v() {
                 (0, i.jsx)(c.FormSwitch, {
                     value: !t,
                     note: b.intl.format(b.t['+5/xu7'], { helpdeskArticle: x.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                    onChange: (e) => s(!e),
+                    onChange: (e) => r(!e),
                     children: b.intl.string(b.t.D5GXTU)
                 })
             ]
@@ -123,7 +123,7 @@ function j() {
         })
     });
 }
-let R = (e) => {
+let O = (e) => {
     switch (e.type) {
         case S.ABu.SPOTIFY:
             return b.intl.format(b.t['5sYPnp'], { name: e.name });
@@ -133,12 +133,12 @@ let R = (e) => {
             return b.intl.format(b.t.nmMsys, { game: e.name });
     }
 };
-function O(e) {
+function R(e) {
     let { account: t } = e,
-        [n, r] = s.useState(t.showActivity),
+        [n, s] = r.useState(t.showActivity),
         a = (0, u.ZP)();
-    s.useEffect(() => {
-        r(t.showActivity);
+    r.useEffect(() => {
+        s(t.showActivity);
     }, [t]);
     let l = m.Z.get(t.type);
     return (0, i.jsxs)(i.Fragment, {
@@ -148,7 +148,7 @@ function O(e) {
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    r(e), d.Z.setShowActivity(t.type, t.id, e);
+                    s(e), d.Z.setShowActivity(t.type, t.id, e);
                 },
                 children: (0, i.jsxs)('div', {
                     className: I.activitySwitchRow,
@@ -167,7 +167,7 @@ function O(e) {
                                 (0, i.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', R(l), '"']
+                                    children: ['"', O(l), '"']
                                 })
                             ]
                         })
@@ -180,9 +180,9 @@ function O(e) {
 }
 function P() {
     let e = (0, l.e7)([h.Z], () => h.Z.getAccounts()),
-        t = s.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && S.vbS.has(e.type)), [e]),
-        [n, r] = s.useState(''),
-        o = s.useMemo(() => {
+        t = r.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && S.vbS.has(e.type)), [e]),
+        [n, s] = r.useState(''),
+        o = r.useMemo(() => {
             let e = n.trim().toLowerCase();
             return '' === e ? t : t.filter((t) => a()(e, m.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
@@ -201,21 +201,21 @@ function P() {
                       (0, i.jsx)(c.TextInput, {
                           className: I.searchInput,
                           value: n,
-                          onChange: r,
+                          onChange: s,
                           placeholder: b.intl.string(b.t.WPrtoa)
                       }),
-                      o.map((e) => (0, i.jsx)(O, { account: e }, e.id))
+                      o.map((e) => (0, i.jsx)(R, { account: e }, e.id))
                   ]
               })
           });
 }
 function y(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: s } = E.b.useExperiment({ location: 'activity privacy tab' });
+        { showRedesign: r } = E.b.useExperiment({ location: 'activity privacy tab' });
     return (0, i.jsxs)(c.FormSection, {
         className: t,
         tag: c.FormTitleTags.H1,
         title: n ? b.intl.string(b.t.Cq98yM) : null,
-        children: [(0, i.jsx)(v, {}), (0, i.jsx)(A, {}), (0, i.jsx)(j, {}), s && (0, i.jsx)(P, {})]
+        children: [(0, i.jsx)(v, {}), (0, i.jsx)(A, {}), (0, i.jsx)(j, {}), r && (0, i.jsx)(P, {})]
     });
 }

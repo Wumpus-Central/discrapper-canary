@@ -7,7 +7,7 @@ var o = n(442837),
     l = n(418632),
     a = n(594174),
     c = n(388032),
-    d = n(97245);
+    d = n(340282);
 function u(t) {
     let { onClose: e } = t,
         r = (0, o.e7)([a.default], () => a.default.getCurrentUser());
@@ -17,7 +17,7 @@ function u(t) {
     function u() {
         d(),
             (0, s.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e('9343'), n.e('58679')]).then(n.bind(n, 642298));
+                let { default: t } = await Promise.all([n.e('9343'), n.e('77584')]).then(n.bind(n, 642298));
                 return (e) => (0, i.jsx)(t, { ...e });
             });
     }

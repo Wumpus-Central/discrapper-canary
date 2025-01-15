@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(846027),
     o = n(179658),
@@ -23,7 +23,7 @@ var i = n(200651),
     E = n(981631),
     C = n(65154),
     T = n(388032),
-    S = n(232186);
+    S = n(275477);
 async function b() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
@@ -45,15 +45,15 @@ function I(e) {
     );
 }
 function N() {
-    let [e, t] = s.useState(!1),
-        { debugLogging: n, aecDumpEnabled: d } = (0, r.cj)([p.Z], () => ({
+    let [e, t] = r.useState(!1),
+        { debugLogging: n, aecDumpEnabled: d } = (0, s.cj)([p.Z], () => ({
             aecDumpSupported: p.Z.isAecDumpSupported(),
             debugLogging: p.Z.getDebugLogging(),
             aecDumpEnabled: p.Z.getAecDump(),
             supportsConnectionReplay: p.Z.supports(C.AN.CONNECTION_REPLAY)
         })),
-        N = (0, r.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
-        v = (0, r.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
+        N = (0, s.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
+        v = (0, s.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
     async function A() {
         t(!0);
         try {

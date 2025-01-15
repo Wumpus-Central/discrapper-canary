@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
     r = n(450369),
-    a = n(500042);
+    a = n(234357);
 t.Z = l.memo(function (e) {
     let { channel: t, participants: n, tileWidth: l, selectedParticipant: s } = e;
     return (0, i.jsx)('div', {

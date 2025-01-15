@@ -16,8 +16,8 @@ var i = n(200651),
     p = n(626135),
     m = n(981631),
     f = n(388032),
-    g = n(316249),
-    v = n(665162);
+    g = n(545418),
+    v = n(426953);
 function C(e) {
     let { channel: t, connected: n, hovered: r, subtitle: C, onClick: x, enableHangStatus: I, allowChannelTopic: _ } = e,
         Z = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),

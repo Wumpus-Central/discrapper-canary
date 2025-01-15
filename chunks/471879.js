@@ -11,7 +11,7 @@ r(192379);
 var a = r(442837),
     s = r(481060),
     o = r(699516),
-    l = r(142416);
+    l = r(981438);
 function u(e) {
     let { user: n, guildId: r } = e;
     return (0, i.jsx)('div', {

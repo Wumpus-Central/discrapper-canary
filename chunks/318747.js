@@ -1,16 +1,16 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(780384),
     l = n(481060),
     o = n(410030),
     c = n(197115),
     d = n(474936),
     u = n(388032),
-    m = n(923201);
+    m = n(826008);
 t.Z = (e) => {
-    let { className: t, forceWhite: n, giftMessage: s, subscriptionTier: g, ...h } = e,
+    let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: g, ...h } = e,
         p = (0, o.ZP)(),
         x = (0, a.wj)(p) || n,
         f = x ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
@@ -20,8 +20,8 @@ t.Z = (e) => {
         color: f,
         look: l.ButtonLooks.OUTLINED,
         buttonText: _,
-        giftMessage: s,
-        className: r()(t, m.giftButton, x ? m.buttonWhite : m.buttonBrand),
+        giftMessage: r,
+        className: s()(t, m.giftButton, x ? m.buttonWhite : m.buttonBrand),
         subscriptionTier: g,
         ...h
     });

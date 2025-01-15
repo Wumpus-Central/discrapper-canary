@@ -1,15 +1,15 @@
-t.d(e, {
+i.d(e, {
     s: function () {
-        return a;
+        return s;
     }
 });
-var i = t(442837),
-    r = t(314897),
-    l = t(699516);
-function a(n) {
-    return (0, i.e7)([l.Z, r.default], () => {
-        let e = l.Z.isFriend(n.id),
-            t = r.default.getId() === n.id;
-        return e && !t && !n.bot && !n.system && !n.isProvisional;
+var r = i(442837),
+    t = i(314897),
+    a = i(699516);
+function s(n) {
+    return (0, r.e7)([a.Z, t.default], () => {
+        let e = a.Z.isFriend(n.id),
+            i = t.default.getId() === n.id;
+        return e && !i && !n.bot && !n.system && !n.isProvisional;
     });
 }

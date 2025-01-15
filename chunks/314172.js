@@ -16,7 +16,7 @@ var a = r(442837),
     _ = r(475413),
     h = r(981631),
     p = r(388032),
-    m = r(154304);
+    m = r(535369);
 function g(e) {
     let { guild: n, guildMember: r, numRoles: g, highestRole: E, onAddRole: v, buttonRef: I } = e,
         T = (0, a.e7)([c.Z], () => c.Z.roleStyle);

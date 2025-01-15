@@ -6,8 +6,8 @@ n.d(t, {
     n(411104),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(283693),
+    r = n(192379),
+    s = n(283693),
     a = n(481060),
     l = n(816814),
     o = n(200483),
@@ -15,13 +15,13 @@ var i = n(200651),
     d = n(388032);
 function u(e) {
     let { onError: t, onSuccess: n, PasswordConfirm: a, ...o } = e,
-        [u, m] = s.useState('');
+        [u, m] = r.useState('');
     return (0, i.jsx)(a, {
         ...o,
         handleSubmit: (e) => l.Z.enableMFAStart(e),
         onError: (e) => {
             var i;
-            if (('object' == typeof (i = e) && null != i && (0, r.nr)(i, 'code') && 'number' == typeof i.code ? i.code : 0) === c.evJ.MFA_INVALID_SECRET) n(u), o.onClose();
+            if (('object' == typeof (i = e) && null != i && (0, s.nr)(i, 'code') && 'number' == typeof i.code ? i.code : 0) === c.evJ.MFA_INVALID_SECRET) n(u), o.onClose();
             else t(e);
         },
         onPasswordChange: m,
@@ -31,15 +31,15 @@ function u(e) {
     });
 }
 function m(e, t) {
-    return new Promise((s) => {
+    return new Promise((r) => {
         (0, a.openModalLazy)(async () => {
-            let { default: r } = await Promise.all([n.e('57830'), n.e('23746')]).then(n.bind(n, 837651));
+            let { default: s } = await Promise.all([n.e('57830'), n.e('23746')]).then(n.bind(n, 837651));
             return (n) =>
-                (0, i.jsx)(r, {
+                (0, i.jsx)(s, {
                     ...n,
                     password: e,
                     emailToken: t,
-                    handleEnableMFASuccess: s
+                    handleEnableMFASuccess: r
                 });
         });
     });
@@ -49,7 +49,7 @@ function g() {
     return new Promise((t) => {
         (0, a.openModalLazy)(
             async () => {
-                let { default: t } = await Promise.all([n.e('76540'), n.e('30463')]).then(n.bind(n, 628908));
+                let { default: t } = await Promise.all([n.e('76540'), n.e('61663')]).then(n.bind(n, 628908));
                 return (n) =>
                     (0, i.jsx)(t, {
                         ...n,
@@ -66,24 +66,24 @@ function g() {
 async function h() {
     let e = await new Promise((e, t) => {
         (0, a.openModalLazy)(async () => {
-            let { default: s } = await n.e('24642').then(n.bind(n, 279837));
+            let { default: r } = await n.e('24642').then(n.bind(n, 279837));
             return (n) =>
                 (0, i.jsx)(u, {
                     ...n,
                     onSuccess: e,
                     onError: t,
-                    PasswordConfirm: s
+                    PasswordConfirm: r
                 });
         });
     });
     if ((0, o.j)()) {
         var t;
-        let s = await ((t = e),
+        let r = await ((t = e),
         new Promise((e) => {
             (0, a.openModalLazy)(async () => {
-                let { default: s } = await n.e('94566').then(n.bind(n, 965072));
+                let { default: r } = await n.e('94566').then(n.bind(n, 965072));
                 return (n) =>
-                    (0, i.jsx)(s, {
+                    (0, i.jsx)(r, {
                         ...n,
                         onFormSubmit: async (e) => await l.Z.verifyEmailCode(e),
                         onResend: async () => {
@@ -95,7 +95,7 @@ async function h() {
                     });
             });
         }));
-        await m(e, null == s ? void 0 : s.token);
+        await m(e, null == r ? void 0 : r.token);
     } else await m(e);
     await g();
 }

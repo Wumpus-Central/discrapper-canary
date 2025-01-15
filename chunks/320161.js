@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(392711),
+    r = n(192379),
+    s = n(392711),
     a = n(846519),
     l = n(481060),
     o = n(626135),
@@ -20,13 +20,13 @@ let g = d.Z.Millis.SECOND,
     x = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
 function f(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': f, delay: _ = p } = e,
-        [E, C] = s.useState(0),
-        [T, S] = s.useState(!1),
-        [b, I] = s.useState(!1),
-        [N] = s.useState(() => new a.V7()),
-        [v] = s.useState(() => new a.V7());
+        [E, C] = r.useState(0),
+        [T, S] = r.useState(!1),
+        [b, I] = r.useState(!1),
+        [N] = r.useState(() => new a.V7()),
+        [v] = r.useState(() => new a.V7());
     if (
-        (s.useEffect(
+        (r.useEffect(
             () => () => {
                 N.stop(), v.stop();
             },
@@ -37,24 +37,24 @@ function f(e) {
         return (0, i.jsx)(i.Fragment, { children: d({}) });
     let A = E >= x.length - 1,
         j = A ? l.TooltipColors.RED : l.TooltipColors.GREEN,
-        R = T ? j : l.TooltipColors.PRIMARY,
-        O = () => {
+        O = T ? j : l.TooltipColors.PRIMARY,
+        R = () => {
             null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !b && C(E + 1), I(!0), S(!0), N.start(g, () => I(!1)), v.start(h, () => C(0));
         };
     return (0, i.jsx)(l.Tooltip, {
         text: (() => {
             var e;
             if (!T) return t;
-            let n = (0, r.clamp)(E - 1, 0, x.length - 1),
-                s = null !== (e = x[n]) && void 0 !== e ? e : x[0];
+            let n = (0, s.clamp)(E - 1, 0, x.length - 1),
+                r = null !== (e = x[n]) && void 0 !== e ? e : x[0];
             return (0, i.jsx)(l.Shaker, {
                 isShaking: A,
-                children: s()
+                children: r()
             });
         })(),
         delay: _,
         'aria-label': f,
-        color: R,
+        color: O,
         forceOpen: b,
         onAnimationRest: (e, t) => {
             !b && T && t.phase === u.UkZ.LEAVE && S(!1);
@@ -64,7 +64,7 @@ function f(e) {
             return d({
                 ...i,
                 onClick: () => {
-                    null == t || t(), O();
+                    null == t || t(), R();
                 },
                 onMouseEnter: () => {
                     if (!T) {

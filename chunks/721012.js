@@ -11,7 +11,7 @@ var r = t(476183),
     s = t(481060),
     a = t(671533),
     o = t(388032),
-    c = t(957589);
+    c = t(669099);
 function d(e) {
     let { testimonial: n, className: t } = e,
         { message: l, profilePic: r, adminTitle: a, emphasisColor: d = 'interactive-normal' } = n;

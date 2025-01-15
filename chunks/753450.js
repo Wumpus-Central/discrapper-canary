@@ -78,7 +78,7 @@ var i = n(200651),
     ep = n(981631),
     em = n(558921),
     e_ = n(388032),
-    ef = n(669761),
+    ef = n(926258),
     eg = n(902294);
 let eh = d().parserFor(es.Z),
     eI = d().reactFor(d().ruleOutput(es.Z, 'react')),
@@ -369,7 +369,7 @@ function eS(e) {
             (0, R.dL)(t), eW('product_page');
         }
     }, [T, eW]);
-    let e5 = a.useCallback(() => {
+    let e8 = a.useCallback(() => {
             if (null != eO) {
                 if ((u.tq || u.Em) && null == eO.custom_install_url) {
                     let e = (0, G.Er)({
@@ -395,7 +395,7 @@ function eS(e) {
                       (0, X.rf)({ [ex]: 'true' }));
             }
         }, [eO, T, eW, m, g]),
-        e8 = (null == eO ? void 0 : eO.id) === em.g,
+        e5 = (null == eO ? void 0 : eO.id) === em.g,
         [e9, e4] = a.useState(!1),
         [e7, te] = a.useState(!1),
         [tt, tn] = a.useState(!0),
@@ -698,7 +698,7 @@ function eS(e) {
                                                                                   src: n(744050)
                                                                               })
                                                                       }),
-                                                                  e8 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
+                                                                  e5 && (0, i.jsx)(ee.Z, { className: ef.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
@@ -711,7 +711,7 @@ function eS(e) {
                                                                   }),
                                                                   (0, i.jsx)(h.Button, {
                                                                       color: h.Button.Colors.BRAND,
-                                                                      onClick: e5,
+                                                                      onClick: e8,
                                                                       disabled: !eV,
                                                                       children: e_.intl.string(e_.t.NgXl3N)
                                                                   }),

@@ -22,8 +22,8 @@ var l = i(952265),
     v = i(602091),
     g = i(701488),
     S = i(388032),
-    _ = i(176463),
-    Z = i(802334);
+    _ = i(945276),
+    Z = i(585610);
 function C(e) {
     let { game: t } = e,
         i = (0, a.q)(t.id);
@@ -58,7 +58,7 @@ function O(e, t) {
                             s.Z.setInputLocked(!1, (0, c.QF)()),
                             (0, l.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([i.e('93382'), i.e('79477'), i.e('90242')]).then(i.bind(i, 60594));
+                                    let { default: e } = await Promise.all([i.e('93382'), i.e('79477'), i.e('14550')]).then(i.bind(i, 60594));
                                     return (t) =>
                                         (0, n.jsx)(e, {
                                             ...t,

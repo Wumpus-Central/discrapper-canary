@@ -3,14 +3,14 @@ n.d(t, {
         return a;
     },
     p: function () {
-        return s;
+        return r;
     }
 });
 var i,
-    s,
-    r = n(818083);
-((i = s || (s = {}))[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2');
-let a = (0, r.B)({
+    r,
+    s = n(818083);
+((i = r || (r = {}))[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2');
+let a = (0, s.B)({
     kind: 'user',
     id: '2024-03_referral_program_sender',
     label: 'Referral Program Sender Experience',

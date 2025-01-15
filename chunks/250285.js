@@ -1,20 +1,20 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(489948),
     o = n(748780),
     c = n(91192),
     d = n(906732),
     u = n(171368),
     m = n(981631),
-    g = n(197831);
+    g = n(716220);
 t.Z = (e) => {
-    let { userId: t, children: n, isLast: r, className: h } = e,
-        [p, x] = s.useState(!1),
+    let { userId: t, children: n, isLast: s, className: h } = e,
+        [p, x] = r.useState(!1),
         { analyticsLocations: f } = (0, d.ZP)(),
-        _ = s.useCallback(() => {
+        _ = r.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: f,
@@ -38,7 +38,7 @@ t.Z = (e) => {
                 children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
                     className: a()(g.rowItem, h, {
-                        [g.last]: r,
+                        [g.last]: s,
                         [g.active]: p
                     }),
                     onMouseEnter: E,

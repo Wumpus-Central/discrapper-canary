@@ -2,7 +2,7 @@ var i = r(200651);
 r(192379);
 var a = r(120356),
     s = r.n(a),
-    o = r(620827);
+    o = r(568958);
 let l = (e) => {
     let { message: n, className: r, noResultsImageURL: a, forceLightTheme: l, suggestions: u } = e,
         c = null != a ? { backgroundImage: 'url('.concat(a, ')') } : {};

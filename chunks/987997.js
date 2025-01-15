@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(493401);
+var r = n(481060),
+    s = n(277897);
 function a(e) {
     let { children: t, ...n } = e;
-    return (0, i.jsx)(s.Button, {
+    return (0, i.jsx)(r.Button, {
         ...n,
-        size: s.Button.Sizes.SMALL,
-        color: s.Button.Colors.BRAND_INVERTED,
-        className: r.button,
+        size: r.Button.Sizes.SMALL,
+        color: r.Button.Colors.BRAND_INVERTED,
+        className: s.button,
         children: t
     });
 }

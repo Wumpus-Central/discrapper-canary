@@ -11,7 +11,7 @@ var i = r(200651),
     h = r(443603),
     p = r(981631),
     m = r(388032),
-    g = r(553796);
+    g = r(652385);
 function E(e) {
     let { disabled: n, channel: a } = e,
         { analyticsLocations: E } = (0, u.ZP)(l.Z.GIFT_BUTTON),
@@ -24,7 +24,7 @@ function E(e) {
     let N = () => {
         y && A && null != v
             ? (0, o.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([r.e('77298'), r.e('23357'), r.e('12013'), r.e('73503'), r.e('52249'), r.e('68956'), r.e('26182'), r.e('95900'), r.e('32776'), r.e('87624'), r.e('74421'), r.e('57674'), r.e('84570')]).then(r.bind(r, 435626));
+                  let { default: e } = await Promise.all([r.e('77298'), r.e('23357'), r.e('12013'), r.e('73503'), r.e('52249'), r.e('83834'), r.e('26182'), r.e('95900'), r.e('32776'), r.e('87624'), r.e('31134'), r.e('57674'), r.e('39372')]).then(r.bind(r, 435626));
                   return (n) =>
                       (0, i.jsx)(e, {
                           analyticsObject: {

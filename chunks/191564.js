@@ -28,7 +28,7 @@ var r = n(200651),
     _ = n(981631),
     j = n(474936),
     S = n(388032),
-    N = n(390153);
+    N = n(582461);
 function Z(e) {
     let { user: t, product: n, purchase: l, onApply: s, onClose: a, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: x, selectedProfileEffectItem: C, analyticsLocations: I } = e,
         E = i.useCallback(() => {

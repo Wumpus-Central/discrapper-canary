@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var s = n(399606),
-    r = n(481060),
+var r = n(399606),
+    s = n(481060),
     a = n(594174),
     l = n(785681),
     o = n(780985),
@@ -13,15 +13,15 @@ var s = n(399606),
     h = n(456771),
     p = n(292352),
     x = n(388032),
-    f = n(23020);
+    f = n(382095);
 t.Z = () => {
     let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
-        n = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
+        n = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
         _ = (0, l.o)(x.intl.string(x.t['5RZ8Tk']), x.intl.string(x.t.bmhCnJ)),
         E = (0, l.o)(x.intl.string(x.t.XKnFFh), x.intl.string(x.t['68zfxM'])),
         C = (0, l.o)(x.intl.string(x.t['Rm/6a2']), x.intl.string(x.t['1xPTwM'])),
-        T = (0, r.useRedesignIconContext)().enabled;
+        T = (0, s.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
         : (0, i.jsxs)('div', {
@@ -36,17 +36,17 @@ t.Z = () => {
                       children: [
                           (0, i.jsx)(g.Z, {
                               iconClassName: f.chatCheckIcon,
-                              icon: r.ChatCheckIcon,
+                              icon: s.ChatCheckIcon,
                               header: x.intl.string(x.t['001l3t']),
                               description: _
                           }),
                           (0, i.jsx)(g.Z, {
-                              icon: r.EyeIcon,
+                              icon: s.EyeIcon,
                               header: x.intl.string(x.t.yipAeH),
                               description: E
                           }),
                           (0, i.jsx)(g.Z, {
-                              icon: T ? r.QrCodeIcon : (0, r.makeIconCompat)(h.Z),
+                              icon: T ? s.QrCodeIcon : (0, s.makeIconCompat)(h.Z),
                               header: x.intl.string(x.t.hhOuMT),
                               description: C
                           })

@@ -6,7 +6,7 @@ var s = n(442837),
     o = n(594174),
     a = n(113434),
     u = n(182294),
-    c = n(443763);
+    c = n(424347);
 let d = (e) => {
     let { questConfig: t, fallback: n, isFocused: d } = e,
         m = (0, s.e7)([o.default], () => o.default.getCurrentUser()),

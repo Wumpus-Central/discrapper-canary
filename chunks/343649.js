@@ -58,7 +58,7 @@ var o,
     K = t(474936),
     q = t(231338),
     J = t(388032),
-    Q = t(122959);
+    Q = t(240630);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let ee = K.Xh.NONE_MONTH,
     en = [N.h8.PLAN_SELECT, N.h8.REVIEW, N.h8.CONFIRM],
@@ -203,24 +203,24 @@ function el(e) {
     let [eK, eq] = i.useState(en),
         [eJ, eQ] = i.useState(A.A.WAITING),
         [e0, e8] = i.useState(!0),
-        e2 = () => {
+        e1 = () => {
             o(eJ === A.A.COMPLETED);
         },
-        e1 = null != ed && ed.isPurchasedExternally;
+        e2 = null != ed && ed.isPurchasedExternally;
     i.useEffect(() => {
-        ey !== v.wr.PENDING && eY !== N.h8.CONFIRM && null != em && (eK !== en && eq(en), !en.includes(eY) && eY !== N.h8.PREMIUM_UPSELL && ez(N.h8.REVIEW)), eY === N.h8.ADD_PAYMENT_STEPS && eK !== et && eq(et), e1 && eY !== N.h8.PLAN_SELECT && eH(N.h8.PLAN_SELECT);
-    }, [eY, ez, e1, ey, ed, em, eK]),
+        ey !== v.wr.PENDING && eY !== N.h8.CONFIRM && null != em && (eK !== en && eq(en), !en.includes(eY) && eY !== N.h8.PREMIUM_UPSELL && ez(N.h8.REVIEW)), eY === N.h8.ADD_PAYMENT_STEPS && eK !== et && eq(et), e2 && eY !== N.h8.PLAN_SELECT && eH(N.h8.PLAN_SELECT);
+    }, [eY, ez, e2, ey, ed, em, eK]),
         (0, v.bp)(eY, ey, ez, eQ),
         (0, N.dZ)(eY, eJ, eQ);
     let e7 = i.useRef(null),
-        [e9, e3] = (0, h.Z)(!1, 500),
-        [e5, e6] = i.useState(null),
-        [e4, ne] = i.useState([]),
+        [e3, e4] = (0, h.Z)(!1, 500),
+        [e6, e9] = i.useState(null),
+        [e5, ne] = i.useState([]),
         [nn, nt] = i.useState(!1),
-        no = i.useMemo(() => JSON.stringify(e4), [e4]);
+        no = i.useMemo(() => JSON.stringify(e5), [e5]);
     i.useEffect(() => {
         let e;
-        if (!!eO) null != U.Z.get(K.Xh.PREMIUM_MONTH_GUILD) && ne((e = (0, Y.DE)(K.Xh.PREMIUM_MONTH_GUILD, ex, !1))), null == ex && null != ed && null != ed.paymentSourceId ? e6(ed.currency) : null != e && e6(e[0]);
+        if (!!eO) null != U.Z.get(K.Xh.PREMIUM_MONTH_GUILD) && ne((e = (0, Y.DE)(K.Xh.PREMIUM_MONTH_GUILD, ex, !1))), null == ex && null != ed && null != ed.paymentSourceId ? e9(ed.currency) : null != e && e9(e[0]);
     }, [ex, ed, eO, no]);
     let nl = (0, L.vP)({
         paymentModalArgs: eT,
@@ -248,8 +248,8 @@ function el(e) {
             });
         }
     });
-    if (ep) n = (0, l.jsx)(b.Vq, { onClose: e2 });
-    else if (ef && eS && eO && null != e5 && '' !== e5) {
+    if (ep) n = (0, l.jsx)(b.Vq, { onClose: e1 });
+    else if (ef && eS && eO && null != e6 && '' !== e6) {
         if (null == ed ? void 0 : ed.isPausedOrPausePending)
             n = (0, l.jsx)(f.ModalContent, {
                 children: (0, l.jsx)('p', {
@@ -265,19 +265,19 @@ function el(e) {
                 })
             });
         else if (eY === N.h8.PREMIUM_UPSELL) {
-            c()(null != eE, 'Missing nextPremiumSubscriptionPlan'), c()(e5, 'Currency not defined');
+            c()(null != eE, 'Missing nextPremiumSubscriptionPlan'), c()(e6, 'Currency not defined');
             let e =
                 null != ex
                     ? {
                           paymentSourceId: ex,
-                          currency: e5
+                          currency: e6
                       }
-                    : { currency: e5 };
+                    : { currency: e6 };
             n = (0, l.jsx)(X.Z, {
                 premiumSubscriptionPlan: eE,
                 analyticsLocation: _,
                 analyticsSourceLocation: el,
-                onClose: e2,
+                onClose: e1,
                 onBack: () => ez(N.h8.PLAN_SELECT),
                 onSkip: () => ez(null != em || eL ? N.h8.REVIEW : N.h8.ADD_PAYMENT_STEPS),
                 onSubscriptionConfirmation: ec,
@@ -285,14 +285,14 @@ function el(e) {
             });
         } else {
             let e, t, o, i;
-            c()(e5, 'Currency not defined');
+            c()(e6, 'Currency not defined');
             let a =
                 null != ex
                     ? {
                           paymentSourceId: ex,
-                          currency: e5
+                          currency: e6
                       }
-                    : { currency: e5 };
+                    : { currency: e6 };
             switch (eY) {
                 case N.h8.PLAN_SELECT:
                     c()(null != ei, 'Missing guildId'),
@@ -309,12 +309,12 @@ function el(e) {
                                     window.location.href = 'discord://app/settings/nitro';
                                     return;
                                 }
-                                e2(), null != r && r(), (0, M.z)();
+                                e1(), null != r && r(), (0, M.z)();
                             },
                             guildId: ei,
                             priceOptions: a
                         })),
-                        e1 &&
+                        e2 &&
                             null != ed &&
                             null != ed.paymentGateway &&
                             (e = (0, l.jsxs)(l.Fragment, {
@@ -329,12 +329,12 @@ function el(e) {
                         (o = (0, l.jsx)(f.Button, {
                             look: f.Button.Looks.LINK,
                             color: (0, p.ap)(eg) ? f.Button.Colors.PRIMARY : f.Button.Colors.WHITE,
-                            onClick: e2,
+                            onClick: e1,
                             children: J.intl.string(J.t.oEAioK)
                         })),
                         (i = (0, l.jsx)(f.Button, {
                             type: 'submit',
-                            disabled: e0 || 0 === eR || e1,
+                            disabled: e0 || 0 === eR || e2,
                             onClick: () => {
                                 if (!es && (null == e_ || e_.premiumSubscriptionType !== K.p9.TIER_2)) {
                                     ez(N.h8.PREMIUM_UPSELL);
@@ -365,7 +365,7 @@ function el(e) {
                             },
                             onPurchaseTermsChange: eD,
                             legalTermsNodeRef: e7,
-                            hasLegalTermsFlash: e9
+                            hasLegalTermsFlash: e3
                         })),
                         (t = N.h8.PLAN_SELECT),
                         (i = eB
@@ -435,7 +435,7 @@ function el(e) {
                                           ...e,
                                           color: f.Button.Colors.GREEN,
                                           onClick: () => {
-                                              null != e7.current && (e7.current.scrollIntoView({ behavior: 'smooth' }), e3(!0));
+                                              null != e7.current && (e7.current.scrollIntoView({ behavior: 'smooth' }), e4(!0));
                                           },
                                           type: 'submit',
                                           children: J.intl.string(J.t.eUEeCg)
@@ -448,7 +448,7 @@ function el(e) {
                     e = (0, l.jsx)(z.R7, {
                         guild: s,
                         guildBoostQuantity: eR + eh.length,
-                        onClose: e2,
+                        onClose: e1,
                         withAnimation: !1,
                         paymentSourceType: null === (ni = eI[null != ex ? ex : '']) || void 0 === ni ? void 0 : ni.type
                     });
@@ -463,7 +463,7 @@ function el(e) {
                           currentStep: eY,
                           paymentError: u,
                           purchaseErrorBlockRef: ev,
-                          hasCurrencies: e4.length > 1,
+                          hasCurrencies: e5.length > 1,
                           body: e,
                           footer:
                               eY !== N.h8.CONFIRM
@@ -505,7 +505,7 @@ function el(e) {
         !ep &&
             eY !== N.h8.PREMIUM_UPSELL &&
             (nr = (0, l.jsx)(V.Z, {
-                onClose: e2,
+                onClose: e1,
                 currentStep: eY,
                 purchaseState: eJ
             })),

@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(37234),
@@ -21,7 +21,7 @@ var i = n(200651),
     f = n(210887),
     _ = n(981631),
     E = n(388032),
-    C = n(823879);
+    C = n(597562);
 let T = [
     {
         label: 'Latin alphabet',
@@ -53,12 +53,12 @@ let T = [
     }
 ];
 function S() {
-    let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
-        { platformZoom: n, theme: r } = (0, l.cj)([f.Z, g.Z], () => ({
+    let [e, t] = r.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
+        { platformZoom: n, theme: s } = (0, l.cj)([f.Z, g.Z], () => ({
             theme: f.Z.theme,
             platformZoom: g.Z.zoom
         })),
-        [S, b] = s.useState('upright'),
+        [S, b] = r.useState('upright'),
         I = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         N = new Map([
             ['normal', 400],
@@ -67,7 +67,7 @@ function S() {
             ['bold', 700],
             ['extrabold', 800]
         ]);
-    s.useEffect(() => {
+    r.useEffect(() => {
         !x.isPlatformEmbedded &&
             window.addEventListener('resize', () => {
                 t(Math.round((window.outerWidth / window.innerWidth) * 100));
@@ -78,17 +78,17 @@ function S() {
             var e, t;
             return (0, p.fD)() ? (null === (t = h.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        [j, R] = (0, m.R)('playground-overrideText', null),
-        [O, P] = (0, m.R)('playground-defaultText', T[0].value),
-        y = s.useCallback(
+        [j, O] = (0, m.R)('playground-overrideText', null),
+        [R, P] = (0, m.R)('playground-defaultText', T[0].value),
+        y = r.useCallback(
             (e) => {
                 let t = T.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (P(T[0].value), R(null)) : null != t ? P(t.value) : (P('custom'), R(e));
+                '' === e || null == e ? (P(T[0].value), O(null)) : null != t ? P(t.value) : (P('custom'), O(e));
             },
-            [R, P]
+            [O, P]
         );
     return (0, i.jsx)('div', {
         className: C.fullscreen,
@@ -129,7 +129,7 @@ function S() {
                                 className: C.select,
                                 options: T,
                                 onChange: (e) => y(e),
-                                value: O
+                                value: R
                             })
                         }),
                         (0, i.jsx)(o.FormItem, {
@@ -160,7 +160,7 @@ function S() {
                                 onChange: (e) => {
                                     (0, d.ZI)({ theme: e.value });
                                 },
-                                value: r
+                                value: s
                             })
                         }),
                         (0, i.jsx)(o.FormItem, {
@@ -213,7 +213,7 @@ function S() {
                         ),
                         [10, 12, 14, 15, 16, 18, 20, 24].map((e) =>
                             (0, i.jsxs)(
-                                s.Fragment,
+                                r.Fragment,
                                 {
                                     children: [
                                         (0, i.jsxs)(
@@ -238,27 +238,27 @@ function S() {
                                         ),
                                         I.map((t) => {
                                             var n;
-                                            let s = null !== (n = 'custom' === O ? j : O) && void 0 !== n ? n : '';
+                                            let r = null !== (n = 'custom' === R ? j : R) && void 0 !== n ? n : '';
                                             return (0, i.jsx)(
                                                 'div',
                                                 {
                                                     className: C.textSample,
                                                     children: (0, i.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(t),
-                                                        className: a()(C.text, { [C.breakAnywhere]: !s.includes(' ') }),
+                                                        className: a()(C.text, { [C.breakAnywhere]: !r.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: N.get(t)
                                                         },
                                                         children: [
-                                                            (0, i.jsx)('p', { children: s }),
+                                                            (0, i.jsx)('p', { children: r }),
                                                             (0, i.jsx)('p', {
                                                                 style: { textTransform: 'lowercase' },
-                                                                children: s
+                                                                children: r
                                                             }),
                                                             (0, i.jsx)('p', {
                                                                 style: { textTransform: 'uppercase' },
-                                                                children: s
+                                                                children: r
                                                             })
                                                         ]
                                                     })

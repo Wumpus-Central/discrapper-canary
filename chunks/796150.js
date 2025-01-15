@@ -15,7 +15,7 @@ var i = t(120356),
     u = t(691703),
     m = t(953989),
     p = t(388032),
-    _ = t(75655);
+    _ = t(954828);
 function g(e) {
     let { className: n, view: t, application: i } = e,
         g = 'embedded' === t,

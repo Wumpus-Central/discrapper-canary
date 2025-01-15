@@ -5,10 +5,10 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(778825),
+var r = n(442837),
+    s = n(778825),
     a = n(905027),
     l = n(954756);
 function o() {
-    return (0, s.e7)([r.Z], () => r.Z.showNotice()) ? (0, i.jsx)(a.Z, {}) : (0, i.jsx)(l.Z, {});
+    return (0, r.e7)([s.Z], () => s.Z.showNotice()) ? (0, i.jsx)(a.Z, {}) : (0, i.jsx)(l.Z, {});
 }

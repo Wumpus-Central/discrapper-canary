@@ -12,7 +12,7 @@ var i = e(120356),
     u = e(7697),
     c = e(421032),
     a = e(388032),
-    d = e(671933);
+    d = e(707102);
 function h(t) {
     let { guildId: n, recurrenceRule: e, guildEventId: i, onRecurrenceClick: h, hideScroller: m = !1, activeRecurrenceId: C } = t,
         { recurrenceStartTimes: g, canViewMoreRecurrences: x, updateRecurrenceStartTimes: v } = (0, u.Z)(i, n, e);

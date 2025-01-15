@@ -21,7 +21,7 @@ var r = t(120356),
     _ = t(604162),
     C = t(46140),
     v = t(388032),
-    g = t(977174);
+    g = t(993360);
 function m(e) {
     let { quest: n, taskDetails: t } = e;
     return (0, o.jsx)(i.Button, {

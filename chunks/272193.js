@@ -12,8 +12,8 @@ var a = n(120356),
     s = n(570140),
     c = n(441623),
     d = n(246992),
-    u = n(562708),
-    m = n(941469);
+    u = n(991800),
+    m = n(785269);
 function h() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {

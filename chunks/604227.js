@@ -8,29 +8,29 @@ n.d(t, {
     n(653041);
 var i = n(200651);
 n(192379);
-var s = n(525654),
-    r = n.n(s),
+var r = n(525654),
+    s = n.n(r),
     a = n(481060),
     l = n(579806),
     o = n(304761),
     c = n(320161),
     d = n(388032),
-    u = n(244270);
+    u = n(97122);
 function m() {
-    var e, t, n, s, m, g;
+    var e, t, n, r, m, g;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        p = '359266',
-        x = ((e = 'a18c580ad8004a694ceb0080b5ccfcbe08a2c1ac'), e.substring(0, 7)),
+        p = '359319',
+        x = ((e = '016f13759c484fa7501782dd6c9069ffe38732c2'), e.substring(0, 7)),
         f = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
         _ = null === l.Z || void 0 === l.Z ? void 0 : null === (t = (n = l.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
-        E = null === l.Z || void 0 === l.Z ? void 0 : null === (s = (m = l.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
+        E = null === l.Z || void 0 === l.Z ? void 0 : null === (r = (m = l.Z.remoteApp).getAppArch) || void 0 === r ? void 0 : r.call(m),
         C = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
         T = (function () {
             var e;
-            let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
+            let t = null === s() || void 0 === s() ? void 0 : null === (e = s().os) || void 0 === e ? void 0 : e.toString();
             if (null == t || null == l.Z) return null;
             let n = l.Z.os.release,
-                [i, s, a] = n.split('.').map((e) => parseInt(e, 10));
+                [i, r, a] = n.split('.').map((e) => parseInt(e, 10));
             return t.includes('Windows 10') && void 0 !== a && a >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
         S = [h, p, '('.concat(x, ')')];

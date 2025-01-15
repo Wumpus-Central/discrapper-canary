@@ -1,10 +1,10 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(780384),
+    r = n(192379),
+    s = n(780384),
     a = n(410030),
     l = n(119269),
-    o = n(697303);
+    o = n(692592);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
@@ -42,15 +42,15 @@ t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: p, progressCircleStroke: x } = e,
         f = 43 + h / 2,
         _ = 2 * Math.PI * f,
-        [E, C] = s.useState(g);
-    s.useEffect(() => {
+        [E, C] = r.useState(g);
+    r.useEffect(() => {
         let e = setTimeout(() => {
             C(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
     let T = (0, a.ZP)(),
-        S = (0, r.ap)(T),
+        S = (0, s.ap)(T),
         b = u(p),
         I = d(p, S),
         N = null != x ? x : m(S, p);

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
+var r = n(442837),
+    s = n(481060),
     a = n(846027),
     l = n(906732),
     o = n(600164),
@@ -14,12 +14,12 @@ var s = n(442837),
     d = n(131951),
     u = n(36703),
     m = n(388032),
-    g = n(232186);
+    g = n(275477);
 let h = (0, c.hQ)(),
     p = (0, c.hQ)();
 function x() {
     let { analyticsLocations: e } = (0, l.ZP)(),
-        { inputVolume: t, outputVolume: n } = (0, s.cj)([d.Z], () => ({
+        { inputVolume: t, outputVolume: n } = (0, r.cj)([d.Z], () => ({
             inputVolume: d.Z.getInputVolume(),
             outputVolume: d.Z.getOutputVolume()
         }));
@@ -29,13 +29,13 @@ function x() {
             (0, i.jsxs)(o.Z.Child, {
                 basis: '50%',
                 children: [
-                    (0, i.jsx)(r.FormTitle, {
+                    (0, i.jsx)(s.FormTitle, {
                         id: h,
-                        tag: r.FormTitleTags.H5,
+                        tag: s.FormTitleTags.H5,
                         className: g.marginBottom4,
                         children: m.intl.string(m.t.OX2Bnp)
                     }),
-                    (0, i.jsx)(r.Slider, {
+                    (0, i.jsx)(s.Slider, {
                         initialValue: (0, u.P)(t),
                         asValueChanges: (t) => a.Z.setInputVolume((0, u.A)(t), { analyticsLocations: e }),
                         'aria-labelledby': h
@@ -45,13 +45,13 @@ function x() {
             (0, i.jsxs)(o.Z.Child, {
                 basis: '50%',
                 children: [
-                    (0, i.jsx)(r.FormTitle, {
+                    (0, i.jsx)(s.FormTitle, {
                         id: p,
-                        tag: r.FormTitleTags.H5,
+                        tag: s.FormTitleTags.H5,
                         className: g.marginBottom4,
                         children: m.intl.string(m.t.eATD2N)
                     }),
-                    (0, i.jsx)(r.Slider, {
+                    (0, i.jsx)(s.Slider, {
                         initialValue: (0, u.P)(n),
                         maxValue: 200,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),

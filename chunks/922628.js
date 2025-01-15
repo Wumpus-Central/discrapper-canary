@@ -7,17 +7,17 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(481060),
-    r = n(388032);
+    r = n(481060),
+    s = n(388032);
 function a(e) {
-    let { body: t, ...r } = e;
-    (0, s.openModalLazy)(async () => {
+    let { body: t, ...s } = e;
+    (0, r.openModalLazy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,
-                ...r,
-                children: (0, i.jsx)(s.Text, {
+                ...s,
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
@@ -27,8 +27,8 @@ function a(e) {
 function l(e) {
     let { message: t } = e;
     a({
-        header: r.intl.string(r.t.OjbtDg),
-        confirmText: r.intl.string(r.t.BddRzc),
+        header: s.intl.string(s.t.OjbtDg),
+        confirmText: s.intl.string(s.t.BddRzc),
         body: t
     });
 }

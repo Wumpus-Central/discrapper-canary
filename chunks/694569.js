@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(630388),
+    r = n(192379),
+    s = n(630388),
     a = n(88658),
     l = n(695346),
     o = n(546957),
@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(388032);
 function h() {
     let e = l.xq.useSetting(),
-        t = s.useMemo(() => (0, a.bL)(e), [e]);
+        t = r.useMemo(() => (0, a.bL)(e), [e]);
     return (0, i.jsxs)(o.Z, {
         children: [
             (0, i.jsx)(c.U, {
@@ -32,7 +32,7 @@ function h() {
                 children: (0, i.jsx)(d.Z, {
                     title: g.intl.string(g.t.NfeuZ2),
                     value: t.all || t.mutualFriends,
-                    onChange: (t) => l.xq.updateSetting(t ? r.pj(e, m.SOq.MUTUAL_FRIENDS) : r.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
+                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_FRIENDS) : s.M1(e, m.SOq.MUTUAL_FRIENDS, m.SOq.NO_RELATION))
                 })
             }),
             (0, i.jsx)(c.U, {
@@ -40,7 +40,7 @@ function h() {
                 children: (0, i.jsx)(d.Z, {
                     title: g.intl.string(g.t.qsMfsL),
                     value: t.all || t.mutualGuilds,
-                    onChange: (t) => l.xq.updateSetting(t ? r.pj(e, m.SOq.MUTUAL_GUILDS) : r.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
+                    onChange: (t) => l.xq.updateSetting(t ? s.pj(e, m.SOq.MUTUAL_GUILDS) : s.M1(e, m.SOq.MUTUAL_GUILDS, m.SOq.NO_RELATION))
                 })
             })
         ]

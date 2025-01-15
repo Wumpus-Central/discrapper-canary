@@ -5,11 +5,11 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(401190),
     l = n(388032),
-    o = n(255701);
+    o = n(398733);
 function c(e, t, n) {
     return (
         t in e
@@ -23,7 +23,7 @@ function c(e, t, n) {
         e
     );
 }
-class d extends s.PureComponent {
+class d extends r.PureComponent {
     renderErrorMessage() {
         let { hasError: e } = this.state;
         return e
@@ -41,16 +41,16 @@ class d extends s.PureComponent {
                   className: o.leaveActionWrapper,
                   children: [
                       this.renderErrorMessage(),
-                      (0, i.jsxs)(r.Text, {
+                      (0, i.jsxs)(s.Text, {
                           variant: 'text-sm/normal',
                           children: [
                               l.intl.string(l.t.ziWmcH),
-                              (0, i.jsx)(r.Button, {
+                              (0, i.jsx)(s.Button, {
                                   className: o.leaveButton,
-                                  color: r.Button.Colors.LINK,
-                                  look: r.Button.Looks.LINK,
+                                  color: s.Button.Colors.LINK,
+                                  look: s.Button.Looks.LINK,
                                   onClick: this.handleLeaveHypeSquadClick,
-                                  size: r.Button.Sizes.NONE,
+                                  size: s.Button.Sizes.NONE,
                                   submitting: e,
                                   children: l.intl.string(l.t['WH+dho'])
                               })

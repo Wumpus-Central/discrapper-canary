@@ -8,7 +8,7 @@ var o = e(200651),
     i = e(421591),
     r = e(314734),
     d = e(388032),
-    h = e(380165);
+    h = e(918015);
 t.default = s.memo(function (n) {
     let { channel: t, ...e } = n,
         f = (0, l.e7)([a.Z], () => a.Z.shouldShowModal());

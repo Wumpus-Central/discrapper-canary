@@ -12,10 +12,10 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(952639),
-    s = n.n(i);
-let r = /^(\d{4}-\d{1,2})/;
+    r = n.n(i);
+let s = /^(\d{4}-\d{1,2})/;
 function a(e) {
-    let t = r.exec(e);
+    let t = s.exec(e);
     return null != t ? t[1] : null;
 }
 function l(e) {
@@ -32,9 +32,9 @@ function o(e, t) {
         if (null != t[null == e ? void 0 : e.id] && null == t[null == n ? void 0 : n.id]) return -1;
         if (null == t[null == e ? void 0 : e.id] && null != t[null == n ? void 0 : n.id]) return 1;
         let i = a(e.id),
-            s = a(n.id);
-        if (null != i && null != s) {
-            let e = s.localeCompare(i);
+            r = a(n.id);
+        if (null != i && null != r) {
+            let e = r.localeCompare(i);
             if (0 !== e) return e;
         }
         return e.experiment.title.localeCompare(n.experiment.title);
@@ -57,5 +57,5 @@ function c(e, t) {
             })(t, i) && (e += 1);
         0 !== e && (null == i[e] && (i[e] = []), i[e].push(t));
     }
-    return s()(i.filter((e) => void 0 !== e).reverse());
+    return r()(i.filter((e) => void 0 !== e).reverse());
 }

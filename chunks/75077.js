@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Op: function () {
-        return R;
+        return O;
     },
     gx: function () {
         return N;
@@ -21,7 +21,7 @@ n.d(t, {
         return f;
     },
     mN: function () {
-        return O;
+        return R;
     },
     oo: function () {
         return C;
@@ -39,8 +39,8 @@ n.d(t, {
     n(653041),
     n(627341);
 var i = n(278074),
-    s = n(442837),
-    r = n(780384),
+    r = n(442837),
+    s = n(780384),
     a = n(410154),
     l = n(594174),
     o = n(78839),
@@ -146,27 +146,27 @@ function I(e, t) {
             return '';
     }
 }
-let N = (e, t, n) => ((0, r.wj)(e) ? t : n),
+let N = (e, t, n) => ((0, s.wj)(e) ? t : n),
     v = 'getWhatsNewRow',
     A = (e) => {
-        let { cards: t, perksCards: n, isFullScreen: i, showTenureCard: s, shopMarketingVariation: r } = e,
+        let { cards: t, perksCards: n, isFullScreen: i, showTenureCard: r, shopMarketingVariation: s } = e,
             l = i ? 3 : 2,
             o = (e) => {
                 let { card: n } = e;
                 t.length < l && t.push(n);
             },
             c = () => {
-                r !== a.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
+                s !== a.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
             { enabled: g } = m._.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
             { enabled: h } = u.r.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
             { enabled: p } = d.C.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
             x = g && !h && !p,
             f = P();
-        return null != n.tenureRewardCollectible && !0 === s && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === s && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && f ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !f && (x || null != n.shyProject ? x && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+        return null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && f ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !f && (x || null != n.shyProject ? x && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     j = (e) => {
-        let { perksCards: t, variant: n, shopMarketingVariation: s, isFullScreen: r, showTenureCard: a, isPremiumSubscriber: l, fractionalState: o } = e,
+        let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: s, showTenureCard: a, isPremiumSubscriber: l, fractionalState: o } = e,
             c = [];
         switch (n) {
             case g.R0.PERKS_DISCOVERABILITY:
@@ -182,9 +182,9 @@ let N = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 c = A({
                     cards: c,
                     perksCards: t,
-                    isFullScreen: r,
+                    isFullScreen: s,
                     showTenureCard: a,
-                    shopMarketingVariation: s
+                    shopMarketingVariation: r
                 });
                 break;
             case g.R0.CARD_CAROUSEL_FIRST_ROW:
@@ -206,10 +206,10 @@ let N = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     .with({ fractionalState: h.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
         }
-        return !r && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
+        return !s && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    R = (e) => {
-        let t = (0, s.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
+    O = (e) => {
+        let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === h.Si.TIER_2;
         if (e)
@@ -227,8 +227,8 @@ let N = (e, t, n) => ((0, r.wj)(e) ? t : n),
             subtitle: x.intl.string(x.t['5TFEXl'])
         };
     },
-    O = () => {
-        let e = (0, s.e7)([l.default], () => l.default.getCurrentUser());
+    R = () => {
+        let e = (0, r.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
     P = () => {

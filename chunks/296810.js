@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(873546),
     l = n(481060),
     o = n(993413),
     c = n(388032),
-    d = n(953727);
+    d = n(602866);
 function u(e) {
-    let { children: t, className: n, layoutClassName: s, profilePreview: u, previewTitle: m } = e,
+    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m } = e,
         g = () =>
             (0, i.jsx)(o.Z, {
                 title: null != m ? m : c.intl.string(c.t.Zb06yM),
@@ -27,7 +27,7 @@ function u(e) {
             children: [
                 a.tq && g(),
                 (0, i.jsxs)('div', {
-                    className: r()(d.baseLayout, s),
+                    className: s()(d.baseLayout, r),
                     children: [t, !a.tq && g()]
                 })
             ]

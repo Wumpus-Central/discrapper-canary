@@ -9,7 +9,7 @@ n.Z = {
         let u = l.Z.getChannel(n);
         null != u &&
             (0, a.jW)(o, async () => {
-                let { default: n } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('33862'), r.e('92453'), r.e('13125'), r.e('54492')]).then(r.bind(r, 757387));
+                let { default: n } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('33862'), r.e('92453'), r.e('13125'), r.e('84006')]).then(r.bind(r, 757387));
                 return (r) =>
                     (0, i.jsx)(n, {
                         ...r,

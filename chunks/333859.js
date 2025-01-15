@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
+var r = n(442837),
+    s = n(481060),
     a = n(37234),
     l = n(493773),
     o = n(100527),
@@ -20,14 +20,14 @@ var s = n(442837),
     x = n(981631),
     f = n(474936),
     _ = n(388032),
-    E = n(352545),
-    C = n(232186);
+    E = n(312630),
+    C = n(275477);
 let T = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
     S = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
-            t = (0, s.e7)([u.Z], () => u.Z.isUpsellPreview),
+            t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
@@ -52,8 +52,8 @@ let T = () => {
                             (0, i.jsxs)('div', {
                                 className: E.tryItOutButtons,
                                 children: [
-                                    (0, i.jsx)(r.Button, {
-                                        color: !n && t ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
+                                    (0, i.jsx)(s.Button, {
+                                        color: !n && t ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
                                         onClick: () => T(),
                                         children: n ? _.intl.string(_.t.SKNnqq) : _.intl.string(_.t['hb/wEx'])
                                     }),
@@ -67,7 +67,7 @@ let T = () => {
                                 ]
                             })
                     }),
-                    (0, i.jsx)(r.FormDivider, { className: C.marginTop20 })
+                    (0, i.jsx)(s.FormDivider, { className: C.marginTop20 })
                 ]
             })
         );

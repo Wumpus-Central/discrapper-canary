@@ -44,7 +44,7 @@ var a = r(120356),
     Z = r(981631),
     V = r(701488),
     j = r(388032),
-    H = r(249942);
+    H = r(456684);
 function Y(e) {
     let { user: n, currentUser: r, activity: a, application: Y, guild: W, channel: K, className: z, onClose: q } = e,
         { analyticsLocations: Q } = (0, h.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),

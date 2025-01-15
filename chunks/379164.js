@@ -29,7 +29,7 @@ t.Z = {
                         let s = new Set((0, u.YK)());
                         s.add(null === (t = e.guild) || void 0 === t ? void 0 : t.id), l.h2.updateSetting(Array.from(s));
                     }
-                    if (E) {
+                    if (!E) {
                         let t = new Set((0, u._o)());
                         t.add(e.guild.id), l.SE.updateSetting(Array.from(t));
                     }

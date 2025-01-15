@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var a = n(481060),
-    r = n(802766);
+    r = n(465301);
 function o(e) {
     let { activeSection: t, setSection: n, sections: o } = e;
     return (0, i.jsx)(a.TabBar, {

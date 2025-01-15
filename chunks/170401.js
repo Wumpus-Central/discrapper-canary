@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(658722),
-    s = n.n(i);
-function r(e, t, n) {
+    r = n.n(i);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,9 +33,9 @@ class a {
             let t = [];
             return (
                 this.terms.forEach((n) => {
-                    let [i, r] = n;
-                    for (let n of r)
-                        if (s()(e.toLowerCase(), n.toLowerCase())) {
+                    let [i, s] = n;
+                    for (let n of s)
+                        if (r()(e.toLowerCase(), n.toLowerCase())) {
                             t.push(i);
                             break;
                         }
@@ -46,6 +46,6 @@ class a {
         }
     }
     constructor(e) {
-        r(this, 'terms', void 0), r(this, 'cache', void 0), (this.terms = e), (this.cache = {});
+        s(this, 'terms', void 0), s(this, 'cache', void 0), (this.terms = e), (this.cache = {});
     }
 }

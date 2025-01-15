@@ -13,7 +13,7 @@ var r = n(481060),
     c = n(63063),
     d = n(981631),
     u = n(388032),
-    h = n(980037);
+    h = n(461699);
 function m(e) {
     let { guildId: t, markAsDismissed: m } = e,
         p = (0, i.jsxs)(i.Fragment, {
@@ -44,7 +44,7 @@ function m(e) {
         onClick: () => {
             o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
                 (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e('45094'), n.e('5506')]).then(n.bind(n, 218613));
+                    let { default: e } = await Promise.all([n.e('45094'), n.e('50706')]).then(n.bind(n, 218613));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

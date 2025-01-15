@@ -5,23 +5,23 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(388032),
-    c = n(114697);
-let d = s.createContext({
+    c = n(896427);
+let d = r.createContext({
     isOpen: !1,
     toggleOpen: () => {}
 });
 function u(e) {
     let { children: t } = e,
-        [n, r] = s.useReducer((e) => !e, !1),
-        a = s.useMemo(
+        [n, s] = r.useReducer((e) => !e, !1),
+        a = r.useMemo(
             () => ({
                 isOpen: n,
-                toggleOpen: r
+                toggleOpen: s
             }),
             [n]
         );
@@ -32,9 +32,9 @@ function u(e) {
 }
 u.Toggle = function (e) {
     let { className: t, text: n } = e,
-        { isOpen: r, toggleOpen: u } = s.useContext(d),
-        m = r ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon,
-        g = null != n ? n : r ? o.intl.string(o.t.fgq1go) : o.intl.string(o.t.XJuakJ);
+        { isOpen: s, toggleOpen: u } = r.useContext(d),
+        m = s ? l.ChevronSmallUpIcon : l.ChevronSmallDownIcon,
+        g = null != n ? n : s ? o.intl.string(o.t.fgq1go) : o.intl.string(o.t.XJuakJ);
     return (0, i.jsxs)(l.Clickable, {
         className: a()(c.toggle, t),
         onClick: u,

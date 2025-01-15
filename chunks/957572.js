@@ -9,7 +9,7 @@ var i = n(481060),
     s = n(847033),
     o = n(544978),
     l = n(388032),
-    a = n(224430);
+    a = n(488269);
 function c() {
     let { selectedTab: e, isPhantomPreview: t, handlePreviewDismiss: n } = (0, s.m)();
     return t

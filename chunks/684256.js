@@ -14,7 +14,7 @@ var i = t(200651),
     u = t(98880),
     m = t(772606),
     p = t(388032),
-    h = t(661630);
+    h = t(560618);
 function f(e) {
     let { channel: n, entrypoint: t, title: a, look: f, items: C, sectionName: v, sectionOverallPosition: x } = e,
         _ = (0, d.s)('AppLauncherApplicationListViewScreen'),

@@ -4,7 +4,7 @@ var i = n(200651),
     s = n.n(l),
     a = n(481060),
     o = n(308083),
-    c = n(240938);
+    c = n(866262);
 function d(e) {
     let { playstyle: t, onUpdatePlaystyle: n } = e,
         l = (0, a.useToken)(a.tokens.colors.WHITE),

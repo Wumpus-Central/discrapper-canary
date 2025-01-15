@@ -5,7 +5,7 @@ var s = i(200651),
     l = i(481060),
     o = i(450269),
     d = i(388032),
-    c = i(89388);
+    c = i(331592);
 t.Z = (e) => {
     let { headerId: t, guild: i, onAgreedChange: r } = e,
         { rules: u, rulesAccepted: m } = (0, o.V)(i.id);

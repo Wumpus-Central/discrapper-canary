@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(526156),
+var r = n(481060),
+    s = n(526156),
     a = n(229269),
     l = n(450272),
     o = n(726985),
     c = n(981631);
 function d() {
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(s.Z, {
         parentSetting: o.s6.REVENUE_STORYBOOK,
         settingsSection: c.oAB.REVENUE_STORYBOOK_PAGE,
         tabs: [
@@ -26,7 +26,7 @@ function d() {
                 component: () =>
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-md/normal',
                                 color: 'info-help-text',
                                 children: 'Add Orb components here.'

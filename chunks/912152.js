@@ -1,19 +1,19 @@
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(230711),
+var r = n(481060),
+    s = n(230711),
     a = n(63063),
     l = n(74538),
     o = n(937615),
     c = n(981631),
     d = n(474936),
     u = n(388032),
-    m = n(755682);
+    m = n(687423);
 t.Z = function (e) {
     let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: g, subscriptionIsPausedOrPausePending: h } = e,
         { subtitle: p, flavor: x } = (function (e) {
-            let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: s } = e;
-            if (s) return { flavor: u.intl.format(u.t.doslJi, { onClick: () => r.Z.open(c.oAB.SUBSCRIPTIONS) }) };
+            let { hasAppliedGuildBoosts: t, hasBoostPerk: n, hasGuildAffinitiesOrInGuild: i, subscriptionIsPausedOrPausePending: r } = e;
+            if (r) return { flavor: u.intl.format(u.t.doslJi, { onClick: () => s.Z.open(c.oAB.SUBSCRIPTIONS) }) };
             if (!i) return { subtitle: u.intl.string(u.t.oiWYAQ) };
             if (t)
                 return {
@@ -36,13 +36,13 @@ t.Z = function (e) {
     return (0, i.jsxs)('div', {
         className: m.wrapper,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(r.Heading, {
                 variant: 'heading-lg/bold',
                 className: m.subtitle,
                 children: p
             }),
             null != x &&
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(r.Text, {
                     variant: 'text-sm/normal',
                     children: x
                 })

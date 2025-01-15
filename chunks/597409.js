@@ -8,7 +8,7 @@ var l = a(442837),
     c = a(572004),
     s = a(981631),
     d = a(388032),
-    u = a(372819);
+    u = a(163488);
 e.default = function (n) {
     var e;
     let { guild: p, user: I, onSelect: b } = n,

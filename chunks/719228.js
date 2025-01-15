@@ -27,7 +27,7 @@ var t = n(200651),
     C = n(267642),
     h = n(981631),
     g = n(388032),
-    f = n(362333);
+    f = n(426702);
 function p(e) {
     let { isTransfer: l = !1, setQuery: n, query: s } = e;
     return (0, t.jsxs)(a.ModalHeader, {

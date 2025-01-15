@@ -5,21 +5,21 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(114487),
     c = n(219039),
     d = n(979264),
     u = n(308083),
-    m = n(984094);
+    m = n(291551);
 function g(e) {
-    let { className: t, clanTag: n, clanBadge: r, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: f, memberCount: _ } = e,
-        E = s.useRef(null),
-        [C, T] = s.useState(!1);
+    let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: f, memberCount: _ } = e,
+        E = r.useRef(null),
+        [C, T] = r.useState(!1);
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             let e = E.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && T(e.offsetWidth < e.scrollWidth);
         }, []),
@@ -63,7 +63,7 @@ function g(e) {
                         guildId: h,
                         className: m.tag,
                         clanTag: n,
-                        clanBadge: r,
+                        clanBadge: s,
                         onClick: g,
                         badgeSize: u.NC.SIZE_16,
                         textColor: 'interactive-normal',

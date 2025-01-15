@@ -1,15 +1,15 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(388032),
-    o = n(748423),
+    o = n(215301),
     c = n(505944);
 t.Z = (e) => {
     let { className: t, onBackClick: n } = e;
     return (0, i.jsxs)('div', {
-        className: r()(o.container, t),
+        className: s()(o.container, t),
         'data-testid': 'all-perks-hero-header',
         children: [
             (0, i.jsx)('img', {

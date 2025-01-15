@@ -17,7 +17,7 @@ var i = n(200651),
     p = n(466070),
     g = n(981631),
     x = n(388032),
-    f = n(926870);
+    f = n(775617);
 function b(e) {
     let { applicationId: t, channels: n } = e,
         l = (0, d.q)(t);

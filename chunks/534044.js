@@ -13,8 +13,8 @@ var l = t(120356),
     c = t(696375),
     d = t(800530),
     u = t(388032),
-    x = t(866219),
-    m = t(816742),
+    x = t(935072),
+    m = t(321376),
     C = t(160557);
 function h(e) {
     let { className: n, onNext: t, onClose: l } = e,

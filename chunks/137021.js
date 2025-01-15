@@ -21,7 +21,7 @@ var l = n(200651),
     p = n(823379),
     x = n(207003),
     g = n(388032),
-    y = n(409267),
+    y = n(402728),
     S = n(621054);
 function C(e) {
     let { applicationId: t, onClose: n, transitionState: b, message: C, launchParams: E, onShare: Z, ...N } = e,

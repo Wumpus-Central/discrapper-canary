@@ -22,7 +22,7 @@ var n = i(200651),
     p = i(147890),
     m = i(981631),
     f = i(388032),
-    g = i(300739);
+    g = i(231166);
 function x(e) {
     let { className: t } = e,
         i = (0, _.useApplicationDirectoryHistory)((e) => e.guildId),

@@ -11,7 +11,7 @@ var r = n(120356),
     u = n(377171),
     a = n(403910),
     s = n(549631),
-    c = n(989384);
+    c = n(475944);
 function d(t) {
     var e;
     let { guildId: n, emojiId: r, emojiName: d, className: f } = t,

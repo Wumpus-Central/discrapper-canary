@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(481060),
     d = n(239091),
     u = n(687683),
-    h = n(262755);
+    h = n(818406);
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, N] = r.useState(!1),
@@ -25,7 +25,7 @@ t.Z = function (e) {
                     (0, d.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('57375')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,

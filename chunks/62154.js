@@ -21,7 +21,7 @@ var l = t(442837),
     h = t(643518),
     v = t(228168),
     Z = t(981631),
-    g = t(171865);
+    g = t(179575);
 function j(e) {
     var n;
     let { user: t, currentUser: j, channelId: _, displayProfile: b, initialSection: E, initialSubsection: N, friendToken: S, onClose: y } = e,

@@ -25,8 +25,8 @@ var i = n(200651),
     _ = n(682662),
     Z = n(662146),
     b = n(388032),
-    S = n(10448),
-    N = n(284923);
+    S = n(330588),
+    N = n(792640);
 let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {

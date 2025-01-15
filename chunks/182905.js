@@ -5,7 +5,7 @@ var l = n(120356),
     r = n(692547),
     a = n(481060),
     o = n(600164),
-    d = n(283877);
+    d = n(307416);
 t.Z = (e) => {
     let { className: t, icon: n, noticeText: l, buttonText: c, onClick: u, canSync: h } = e;
     return (0, i.jsx)(a.Card, {

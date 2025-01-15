@@ -3,12 +3,12 @@ n.d(t, {
         return Z;
     },
     dm: function () {
-        return s;
+        return r;
     }
 });
 var i,
-    s,
-    r = n(230711),
+    r,
+    s = n(230711),
     a = n(100527),
     l = n(906732),
     o = n(300284),
@@ -32,13 +32,13 @@ var i,
     v = n(904505),
     A = n(712626),
     j = n(386014),
-    R = n(845571),
-    O = n(220046),
+    O = n(845571),
+    R = n(220046),
     P = n(385874),
     y = n(371000),
-    D = n(377679),
-    B = n(825087);
-((i = s || (s = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
+    B = n(377679),
+    D = n(825087);
+((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let Z = () => {
     let e = (0, c.rO)();
     return {
@@ -67,12 +67,12 @@ t.ZP = (e) => {
             analyticsLocations: t
         }),
         i = () => {
-            r.Z.open(u.oAB.APPEARANCE, null, {
+            s.Z.open(u.oAB.APPEARANCE, null, {
                 openWithoutBackstack: !0,
                 analyticsLocations: t
             });
         },
-        s = (0, c.rO)(),
+        r = (0, c.rO)(),
         h = d.Z.getArticleURL(u.BhN.REFERRAL_PROGRAM),
         p = {
             serverProfiles: {
@@ -82,14 +82,14 @@ t.ZP = (e) => {
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: n,
                 previewImage: E,
-                videoUrl: s ? R.Z : O.Z
+                videoUrl: r ? O.Z : R.Z
             },
             referralProgram: {
                 name: 'referralProgram',
                 title: g.intl.string(g.t.tPY4o6),
                 description: g.intl.format(g.t.jRPQUF, { learnMoreLink: h }),
                 previewImage: A.Z,
-                videoUrl: s ? v.Z : j.Z
+                videoUrl: r ? v.Z : j.Z
             },
             newAppStyles: {
                 name: 'newAppStyles',
@@ -98,7 +98,7 @@ t.ZP = (e) => {
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: i,
                 previewImage: _,
-                videoUrl: s ? S.Z : b.Z
+                videoUrl: r ? S.Z : b.Z
             }
         },
         C = {
@@ -109,7 +109,7 @@ t.ZP = (e) => {
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 previewImage: f,
                 onClick: n,
-                videoUrl: s ? P.Z : y.Z
+                videoUrl: r ? P.Z : y.Z
             },
             yourSpace: {
                 name: 'yourSpace',
@@ -118,7 +118,7 @@ t.ZP = (e) => {
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 previewImage: x,
                 onClick: i,
-                videoUrl: s ? D.Z : B.Z
+                videoUrl: r ? B.Z : D.Z
             }
         };
     return e ? C : p;

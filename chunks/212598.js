@@ -17,7 +17,7 @@ var a = n(200651),
     h = n(710845),
     N = n(424071),
     m = n(388032),
-    C = n(38920);
+    C = n(337530);
 let j = new h.Z('TwoWayLink');
 function f(e) {
     let { platformType: t, isWaitingForConnection: n, onWaitingForConnection: l, expectedCallbackState: h, onAuthToken: f, onError: v, onClose: p, img: b, title: E, body: g, redirectDestination: k } = e,

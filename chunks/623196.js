@@ -6,9 +6,9 @@ n.d(t, {
     n(47120),
     n(773603);
 var i = n(200651),
-    s = n(192379),
-    r = n(913527),
-    a = n.n(r),
+    r = n(192379),
+    s = n(913527),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(668781),
@@ -21,7 +21,7 @@ var i = n(200651),
     x = n(726985),
     f = n(981631),
     _ = n(388032),
-    E = n(565696);
+    E = n(483573);
 let C = (e) => {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e('25120').then(n.bind(n, 926281));
@@ -38,7 +38,7 @@ function T() {
             currentHarvestType: h.Z.harvestType,
             awaitingInitialRequest: h.Z.requestingHarvest
         })),
-        [r, T] = s.useState(!1);
+        [s, T] = r.useState(!1);
     if (null == e) return null;
     let S = (0, m.$6)(t, e) || n,
         b = null != t && a()().diff(a()(t.created_at), 'days') < f.eBq,
@@ -73,7 +73,7 @@ function T() {
             });
         };
     return (0, i.jsxs)(p.U, {
-        setting: x.s6.PRIVACY_DATA_REQUEST,
+        setting: x.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
             (0, i.jsx)(p.H, {
                 header: _.intl.string(_.t.XAHCgI),
@@ -92,15 +92,15 @@ function T() {
                       children: (0, i.jsx)(o.Tooltip, {
                           text: e.isStaff() ? _.intl.string(_.t.ZPQLHx) : e.verified ? null : _.intl.string(_.t['c1f88/']),
                           children: (e) => {
-                              let { onMouseEnter: t, onMouseLeave: s } = e;
+                              let { onMouseEnter: t, onMouseLeave: r } = e;
                               return (0, i.jsx)(o.Button, {
                                   disabled: S,
                                   onClick: N,
                                   onMouseEnter: t,
-                                  onMouseLeave: s,
+                                  onMouseLeave: r,
                                   look: o.Button.Looks.FILLED,
                                   color: o.Button.Colors.BRAND,
-                                  submitting: r || n,
+                                  submitting: s || n,
                                   children: _.intl.string(_.t.dmBSKi)
                               });
                           }

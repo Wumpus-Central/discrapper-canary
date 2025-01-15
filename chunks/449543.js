@@ -9,7 +9,7 @@ var n = i(120356),
     c = i(450474),
     u = i(128449),
     m = i(388032),
-    g = i(89388);
+    g = i(331592);
 t.Z = (e) => {
     let { guild: t, guildMetadata: i, headerId: n } = e,
         x = d.Z.getPrimaryCategories().map((e) => {

@@ -1,24 +1,24 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
         return d;
     }
 });
-var s = n(200651),
-    i = n(192379),
-    r = n(442837),
-    o = n(461745),
-    c = n(663389),
-    l = n(5967),
-    a = n(996733),
-    u = n(388032);
+var n = s(200651),
+    i = s(192379),
+    r = s(442837),
+    o = s(461745),
+    c = s(663389),
+    a = s(5967),
+    l = s(996733),
+    u = s(388032);
 function d(e) {
     let { style: t } = e,
-        n = (0, a.Z7)(),
+        s = (0, l.Z7)(),
         d = i.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), (0, a.QH)(e);
+            t.stopPropagation(), t.preventDefault(), (0, l.QH)(e);
         }, []),
         f = i.useCallback(() => {
-            (0, a.QH)(!1), (0, a.yN)('');
+            (0, l.QH)(!1), (0, l.yN)('');
         }, []),
         p = i.useRef(null),
         g = (0, r.e7)([c.Z], () => c.Z.getSection());
@@ -26,19 +26,19 @@ function d(e) {
         i.useEffect(() => {
             let e = (e) => {
                 var t;
-                let n = p.current;
-                (null === (t = (0, l.uB)(e)) || void 0 === t ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
+                let s = p.current;
+                (null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) === document.body && (null == s || s.focus());
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [g]),
-        (0, s.jsx)('div', {
+        (0, n.jsx)('div', {
             style: { marginBottom: '8px' },
-            children: (0, s.jsx)(o.ZP, {
+            children: (0, n.jsx)(o.ZP, {
                 ref: p,
                 size: o.ZP.Sizes.MEDIUM,
-                query: n,
+                query: s,
                 onClear: f,
-                onQueryChange: a.yN,
+                onQueryChange: l.yN,
                 placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,
                 inputProps: {

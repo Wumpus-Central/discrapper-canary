@@ -1,6 +1,6 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(457330),
     o = n(497321),
@@ -8,9 +8,9 @@ var i = n(200651),
     d = n(246946),
     u = n(388032);
 t.Z = () => {
-    let e = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+    let e = (0, s.e7)([d.Z], () => d.Z.hidePersonalInformation),
         t = (0, c.ZP)();
-    return (s.useEffect(() => {
+    return (r.useEffect(() => {
         l.Z.fetch();
     }, []),
     e)

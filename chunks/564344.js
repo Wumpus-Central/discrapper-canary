@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(503089),
     o = n(906732),
@@ -25,18 +25,18 @@ var i = n(200651),
     S = n(526761),
     b = n(726985),
     I = n(388032),
-    N = n(228615);
+    N = n(962723);
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
-    let e = (0, r.e7)([u.Z], () => u.Z.getGuild()),
+    let e = (0, s.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, E.Z)(),
-        n = (0, r.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
+        n = (0, s.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
         v = null != e ? e : t,
-        A = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        { subsection: j, setSubsection: R } = (0, C.Z)(),
-        { analyticsLocations: O } = (0, o.ZP)(),
+        A = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        { subsection: j, setSubsection: O } = (0, C.Z)(),
+        { analyticsLocations: R } = (0, o.ZP)(),
         { hasSearchResults: P, searchResults: y } = (0, p.E)();
-    function D(t) {
+    function B(t) {
         if (j !== t) {
             if (n) {
                 _.S.dispatch(T.CkL.SHAKE_APP, {
@@ -46,18 +46,18 @@ function v() {
                     _.S.dispatch(T.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === S.NB.GUILD && null == e && null != v && (0, d.Fq)(v, O), R(t);
+            t === S.NB.GUILD && null == e && null != v && (0, d.Fq)(v, R), O(t);
         }
     }
-    s.useEffect(() => {
+    r.useEffect(() => {
         null != A && (0, g.Z)(A.id, A.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, A]);
-    let B = !0,
+    let D = !0,
         Z = !0;
     return (
-        P && 1 === y.length && (y.includes(b.s6.PROFILE_SERVER_PROFILES) ? (D(S.NB.GUILD), (Z = !1)) : y.includes(b.s6.PROFILE_USER_PROFILE) && (D(S.NB.USER_PROFILE), (B = !1))),
+        P && 1 === y.length && (y.includes(b.s6.PROFILE_SERVER_PROFILES) ? (B(S.NB.GUILD), (Z = !1)) : y.includes(b.s6.PROFILE_USER_PROFILE) && (B(S.NB.USER_PROFILE), (D = !1))),
         (0, i.jsx)(o.Gt, {
-            value: O,
+            value: R,
             children: (0, i.jsxs)(a.HeadingLevel, {
                 component: (0, i.jsx)(a.Heading, {
                     variant: 'heading-lg/semibold',
@@ -69,7 +69,7 @@ function v() {
                         type: 'top',
                         look: 'brand',
                         selectedItem: j,
-                        onItemSelect: D,
+                        onItemSelect: B,
                         children: [
                             Z
                                 ? (0, i.jsx)(
@@ -82,7 +82,7 @@ function v() {
                                       S.NB.USER_PROFILE
                                   )
                                 : null,
-                            B
+                            D
                                 ? (0, i.jsx)(
                                       a.TabBar.Item,
                                       {

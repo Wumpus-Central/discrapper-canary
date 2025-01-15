@@ -1,6 +1,6 @@
 var i = n(544891),
-    s = n(570140),
-    r = n(881052),
+    r = n(570140),
+    s = n(881052),
     a = n(981631);
 let l = {
     [a.gkr.HOUSE_1]: 1,
@@ -17,13 +17,13 @@ t.Z = {
                 rejectWithError: !1
             })
             .then(() =>
-                s.Z.dispatch({
+                r.Z.dispatch({
                     type: 'HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS',
                     houseID: e.houseID
                 })
             )
             .catch((e) => {
-                throw new r.yZ(e);
+                throw new s.yZ(e);
             }),
     leaveHypeSquadOnline: () =>
         i.tn
@@ -32,8 +32,8 @@ t.Z = {
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
-            .then(() => s.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
+            .then(() => r.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
             .catch((e) => {
-                throw new r.yZ(e);
+                throw new s.yZ(e);
             })
 };

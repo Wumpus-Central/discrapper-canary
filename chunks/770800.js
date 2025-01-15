@@ -19,8 +19,8 @@ var n = r(200651),
     F = r(513547),
     S = r(65154),
     C = r(388032),
-    E = r(378481),
-    Z = r(232186);
+    E = r(14863),
+    Z = r(275477);
 class R extends a.PureComponent {
     render() {
         let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: a } = this.props;

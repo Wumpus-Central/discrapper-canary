@@ -18,7 +18,7 @@ var s = n(704215),
     c = n(987650),
     u = n(921944),
     h = n(388032),
-    p = n(60944);
+    p = n(389981);
 function f() {
     let [e, t] = (0, l.cv)([s.z.OVERLAY_KEYBIND_NOTIFICATION]),
         n = (0, d.Z)({

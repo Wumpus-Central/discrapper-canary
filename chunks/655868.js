@@ -1,7 +1,7 @@
 n(47120), n(757143);
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(218872);
 function l(e, t, n) {
     return (
@@ -17,13 +17,13 @@ function l(e, t, n) {
     );
 }
 let o = /[^0-9]/g;
-class c extends s.PureComponent {
+class c extends r.PureComponent {
     componentDidUpdate(e) {
         let t = this._inputRef;
         e.value !== this.props.value && null != t && t.setSelectionRange(this.selectionStart, this.selectionStart);
     }
     render() {
-        return (0, i.jsx)(r.TextInput, {
+        return (0, i.jsx)(s.TextInput, {
             ...this.props,
             inputMode: 'numeric',
             onChange: this.handleChange,
@@ -40,11 +40,11 @@ class c extends s.PureComponent {
             }),
             l(this, 'handleChange', (e, t) => {
                 let { value: n, onChange: i } = this.props,
-                    s = this._inputRef;
-                if (e === n || null == s || null == n) return;
-                let r = (0, a.M)(e),
-                    l = s.selectionStart;
-                r === n && r.length <= 3 && n.includes('/') && !e.includes('/') ? (r = r.replace(o, '')) : r === n && e.includes('/') && !n.includes('/') && (r += '/'), r.length > e.length && (l += r.length - e.length), (this.selectionStart = l), null != i && i(r, t);
+                    r = this._inputRef;
+                if (e === n || null == r || null == n) return;
+                let s = (0, a.M)(e),
+                    l = r.selectionStart;
+                s === n && s.length <= 3 && n.includes('/') && !e.includes('/') ? (s = s.replace(o, '')) : s === n && e.includes('/') && !n.includes('/') && (s += '/'), s.length > e.length && (l += s.length - e.length), (this.selectionStart = l), null != i && i(s, t);
             });
     }
 }

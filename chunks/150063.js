@@ -1,10 +1,10 @@
 n.d(t, {
     Y: function () {
-        return s;
+        return r;
     }
 });
 var i = n(570140);
-function s(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'APP_VIEW_SET_HOME_LINK',
         link: e

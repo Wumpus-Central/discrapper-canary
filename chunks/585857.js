@@ -18,7 +18,7 @@ var r = n(120356),
     x = n(46140),
     g = n(981631),
     h = n(388032),
-    f = n(387029);
+    f = n(69114);
 function v(e) {
     let { quest: t, isConnected: n, consoleType: r } = e,
         c = (0, u.O5)();

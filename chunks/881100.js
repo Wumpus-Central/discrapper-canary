@@ -1,11 +1,11 @@
 n.d(t, {
     N: function () {
-        return F;
+        return U;
     }
 });
 var i = n(399606),
-    s = n(780384),
-    r = n(230711),
+    r = n(780384),
+    s = n(230711),
     a = n(410030),
     l = n(594174),
     o = n(424218),
@@ -29,25 +29,25 @@ var i = n(399606),
     v = n(1549),
     A = n(13327),
     j = n(59137),
-    R = n(405991),
-    O = n(24615),
+    O = n(405991),
+    R = n(24615),
     P = n(193943),
     y = n(334347),
-    D = n(943734),
-    B = n(603076),
+    B = n(943734),
+    D = n(603076),
     Z = n(472656),
     L = n(912429),
     M = n(772969),
     k = n(926262);
-let w = (e, t, n) => ((0, s.wj)(e) ? t : n),
-    F = (e) => {
+let w = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    U = (e) => {
         let { styles: t } = e,
             n = (0, a.ZP)(),
-            s = (0, i.e7)([l.default], () => {
+            r = (0, i.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
                 return c.ZP.canUsePremiumProfileCustomization(e);
             }),
-            F = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
+            U = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
         return {
             badge: {
                 title: g.intl.string(g.t.SS87ra),
@@ -65,7 +65,7 @@ let w = (e, t, n) => ((0, s.wj)(e) ? t : n),
                 title: g.intl.string(g.t['/xvEMz']),
                 description: g.intl.string(g.t.HKWdjo),
                 className: t.clientThemesCard,
-                imageSource: O,
+                imageSource: R,
                 imageClassName: t.clientThemesImage
             },
             customAppIcons: {
@@ -84,12 +84,12 @@ let w = (e, t, n) => ((0, s.wj)(e) ? t : n),
                 title: g.intl.string(g.t.lKDhhI),
                 description: (e) => {
                     let t = () => {
-                        r.Z.open(u.oAB.PROFILE_CUSTOMIZATION, null, {
+                        s.Z.open(u.oAB.PROFILE_CUSTOMIZATION, null, {
                             scrollPosition: m.Y_.TRY_IT_OUT,
                             analyticsLocations: e
                         });
                     };
-                    return s ? g.intl.format(g.t.aj1pfX, { onCheckItOutClick: t }) : g.intl.format(g.t.d2oYS0, { onTryItOutClick: t });
+                    return r ? g.intl.format(g.t.aj1pfX, { onCheckItOutClick: t }) : g.intl.format(g.t.d2oYS0, { onTryItOutClick: t });
                 },
                 imageSource: _,
                 imageClassName: t.perGuildProfilesImage
@@ -97,7 +97,7 @@ let w = (e, t, n) => ((0, s.wj)(e) ? t : n),
             longerMessages: {
                 title: g.intl.string(g.t.BUSciY),
                 description: g.intl.string(g.t.vN6Xpa),
-                imageSource: w(n, D, B),
+                imageSource: w(n, B, D),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {
@@ -156,15 +156,15 @@ let w = (e, t, n) => ((0, s.wj)(e) ? t : n),
                 imageClassName: t.superReactionsImage
             },
             upload: {
-                title: g.intl.formatToPlainString(g.t.jqhAdH, { premiumMaxSize: F }),
-                description: g.intl.formatToPlainString(g.t['HI+cfn'], { premiumMaxSize: F }),
+                title: g.intl.formatToPlainString(g.t.jqhAdH, { premiumMaxSize: U }),
+                description: g.intl.formatToPlainString(g.t['HI+cfn'], { premiumMaxSize: U }),
                 imageSource: k,
                 imageClassName: t.uploadImage
             },
             videoBackground: {
                 title: g.intl.string(g.t.NaGpTU),
                 description: g.intl.string(g.t['A8O/Q0']),
-                imageSource: w(n, j, R),
+                imageSource: w(n, j, O),
                 imageClassName: t.videoBackgroundImage
             }
         };

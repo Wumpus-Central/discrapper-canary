@@ -13,7 +13,7 @@ var a = n(120356),
     c = n(125988),
     d = n(998502),
     u = n(388032),
-    f = n(638079);
+    f = n(755992);
 let g = d.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
     p = (t) => {
         let { item: e, user: n, isHighlighted: a = !1, isPurchased: d = !1, avatarSize: p = s.AvatarSizes.SIZE_152, avatarPlaceholderSrc: v } = t,

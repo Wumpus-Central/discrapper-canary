@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(789020);
 var i,
-    s,
-    r = n(314877),
+    r,
+    s = n(314877),
     a = n(81825),
     l = n(630388),
     o = n(46141),
@@ -27,7 +27,7 @@ function g(e, t, n) {
         e
     );
 }
-((s = i || (i = {}))[(s.GIFT = 1)] = 'GIFT'), (s[(s.PREORDER = 8)] = 'PREORDER');
+((r = i || (i = {}))[(r.GIFT = 1)] = 'GIFT'), (r[(r.PREORDER = 8)] = 'PREORDER');
 class h extends a.Z {
     static createFromServer(e) {
         let t = null != e.payment_source ? o.ZP.createFromServer(e.payment_source) : null,
@@ -91,7 +91,7 @@ class h extends a.Z {
         return this.isGift && Object.values(m.Si).includes(this.skuId);
     }
     get isGuildProductPurchase() {
-        return null != this.sku && (this.sku.productLine === u.POd.GUILD_PRODUCT || l.yE(this.sku.flags, r.l.GUILD_PRODUCT));
+        return null != this.sku && (this.sku.productLine === u.POd.GUILD_PRODUCT || l.yE(this.sku.flags, s.l.GUILD_PRODUCT));
     }
     get isSoftDeletedProduct() {
         var e;

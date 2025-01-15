@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(570140),
@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(726985),
     I = n(981631),
     N = n(388032),
-    v = n(729061);
-class A extends s.PureComponent {
+    v = n(58095);
+class A extends r.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
             d.tZ(), d.jg();
@@ -37,7 +37,7 @@ class A extends s.PureComponent {
         u.Z.setSection(I.oAB.INVENTORY);
     }
     render() {
-        let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: s, locale: r, premiumSubscription: a, isRemovingPaymentSource: l, isUpdatingPaymentSource: c } = this.props;
+        let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: r, locale: s, premiumSubscription: a, isRemovingPaymentSource: l, isUpdatingPaymentSource: c } = this.props;
         return t
             ? (0, i.jsx)(m.Z, {})
             : (0, i.jsxs)('div', {
@@ -52,9 +52,9 @@ class A extends s.PureComponent {
                                 setting: b.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(h.Z, {
                                     paymentSources: n,
-                                    defaultPaymentSourceId: s,
+                                    defaultPaymentSourceId: r,
                                     premiumSubscriptionPaymentSourceId: null != a && a.status !== I.O0b.CANCELED ? a.paymentSourceId : null,
-                                    locale: r,
+                                    locale: s,
                                     removing: l,
                                     submitting: c
                                 })
@@ -68,7 +68,7 @@ class A extends s.PureComponent {
                                       tag: 'h1',
                                       children: N.intl.string(N.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(g.Z, { locale: r })]
+                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(g.Z, { locale: s })]
                               })
                           })
                       }),

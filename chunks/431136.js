@@ -10,7 +10,7 @@ var a = n(468194),
     s = n(481060),
     c = n(430824),
     o = n(768581),
-    r = n(272416);
+    r = n(126893);
 function d(e) {
     let { guildId: t } = e,
         n = (0, l.e7)([c.Z], () => c.Z.getGuild(t));

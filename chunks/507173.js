@@ -12,7 +12,7 @@ var o = r(120356),
     u = r(392711),
     c = r.n(u),
     d = r(692547),
-    f = r(718217);
+    f = r(101407);
 function _(e) {
     let { className: n, percents: r, size: i = 'small', foregroundColors: a = [d.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: o = 'var(--background-modifier-active)', animate: u = !0 } = e,
         _ = c()

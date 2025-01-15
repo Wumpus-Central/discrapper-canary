@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(518950),
+var r = n(481060),
+    s = n(518950),
     a = n(998502),
     l = n(631885),
     o = n(329242),
-    c = n(766991);
-let d = a.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+    c = n(105452);
+let d = a.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 function u(e) {
     let { otherUser: t, status: n } = e,
         a = (0, l.j_)(t.id, n),
@@ -19,9 +19,9 @@ function u(e) {
             avatarSrc: u,
             avatarDecorationSrc: m,
             eventHandlers: g
-        } = (0, r.Z)({
+        } = (0, s.Z)({
             user: t,
-            size: s.AvatarSizes.SIZE_40,
+            size: r.AvatarSizes.SIZE_40,
             animateOnHover: !0
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -32,7 +32,7 @@ function u(e) {
                     className: c.avatar,
                     src: u,
                     avatarDecoration: m,
-                    size: s.AvatarSizes.SIZE_40,
+                    size: r.AvatarSizes.SIZE_40,
                     'aria-label': t.username
                 })
             }),
@@ -43,7 +43,7 @@ function u(e) {
                         className: c.userContainerWithTimestamp,
                         children: (0, i.jsx)(o.Z, { user: t })
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(r.Text, {
                         className: c.__invalid_timestamp,
                         color: 'text-muted',
                         variant: 'text-xs/normal',

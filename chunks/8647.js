@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(399606),
     l = n(481060),
     o = n(100527),
@@ -16,9 +16,9 @@ var s = n(120356),
     f = n(474936),
     _ = n(981631),
     E = n(388032),
-    C = n(261871);
+    C = n(84390);
 t.Z = function (e) {
-    let { isFullScreen: t, buttonClassName: s } = e,
+    let { isFullScreen: t, buttonClassName: r } = e,
         { promotion: T } = (0, x.mq)(),
         S = (0, a.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
     if (!(0, h.Vi)()) return null;
@@ -26,7 +26,7 @@ t.Z = function (e) {
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
-            className: r()(C.banner, { [C.bannerFullScreen]: t }),
+            className: s()(C.banner, { [C.bannerFullScreen]: t }),
             children: [
                 (0, i.jsx)('div', {
                     className: C.bannerLeftImageContainer,
@@ -63,7 +63,7 @@ t.Z = function (e) {
                             buttonTextClassName: C.subscribeButtonText,
                             subscriptionTier: f.Si.TIER_2,
                             showIcon: !1,
-                            className: null != s ? s : C.subscribeButton,
+                            className: null != r ? r : C.subscribeButton,
                             forceInverted: !0
                         })
                     ]

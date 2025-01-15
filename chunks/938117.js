@@ -21,7 +21,7 @@ var l = t(200651),
     k = t(981631),
     j = t(869783),
     h = t(388032),
-    I = t(858495);
+    I = t(507588);
 function N(e) {
     let { onLearnMore: n, selectedBackgroundOption: N, onSelectBackgroundOption: f, currentDeviceId: v, smallerBackgroundOptions: b } = e,
         T = (0, o.e7)([r.default], () => r.default.getCurrentUser()),

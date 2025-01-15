@@ -1,18 +1,18 @@
-var i = n(200651);
-n(192379);
-var s = n(481060);
-t.Z = (e) => {
-    let { product: t, analyticsLocations: r, title: a, description: l, shouldShowPromotionalExperience: o } = e;
-    (0, s.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('87624'), n.e('64569')]).then(n.bind(n, 331042));
-        return (n) =>
-            (0, i.jsx)(e, {
-                product: t,
-                analyticsLocations: r,
-                title: a,
-                description: l,
-                shouldShowPromotionalExperience: o,
-                ...n
+var i = o(200651);
+o(192379);
+var n = o(481060);
+e.Z = (t) => {
+    let { product: e, analyticsLocations: a, title: l, description: r, shouldShowPromotionalExperience: u } = t;
+    (0, n.openModalLazy)(async () => {
+        let { default: t } = await Promise.all([o.e('87624'), o.e('47859')]).then(o.bind(o, 331042));
+        return (o) =>
+            (0, i.jsx)(t, {
+                product: e,
+                analyticsLocations: a,
+                title: l,
+                description: r,
+                shouldShowPromotionalExperience: u,
+                ...o
             });
     });
 };

@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(392711),
     o = n.n(l),
     c = n(442837),
@@ -30,19 +30,19 @@ var i = n(200651),
     v = n(626135),
     A = n(63063),
     j = n(695346),
-    R = n(263937),
-    O = n(996073),
+    O = n(263937),
+    R = n(996073),
     P = n(526761),
     y = n(726985),
-    D = n(981631),
-    B = n(611480),
+    B = n(981631),
+    D = n(611480),
     Z = n(653477),
     L = n(388032),
-    M = n(871751),
-    k = n(232186),
+    M = n(875538),
+    k = n(275477),
     w = n(328756);
-let F = (0, f.hQ)(),
-    U = (0, f.hQ)(),
+let U = (0, f.hQ)(),
+    F = (0, f.hQ)(),
     V = (0, f.hQ)(),
     G = o().debounce((e) => {
         (0, g.o2)(e);
@@ -107,7 +107,7 @@ function Y(e) {
                         variant: 'text-md/normal',
                         children: L.intl.format(L.t.DHpTjY, {
                             onAppearanceClick() {
-                                u.Z.open(D.oAB.APPEARANCE);
+                                u.Z.open(B.oAB.APPEARANCE);
                             }
                         })
                     })
@@ -118,13 +118,13 @@ function Y(e) {
 }
 function W() {
     let e = j.jU.useSetting(),
-        [t] = s.useState(() => {
+        [t] = r.useState(() => {
             let e = (0, _.e5)({
                 ...(0, E.ZP)({
                     channelId: '1337',
                     content: L.intl.formatToPlainString(L.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),
-                state: D.yb.SENT,
+                state: B.yb.SENT,
                 id: ''.concat(0)
             });
             return (e.colorString = 'green'), e;
@@ -144,7 +144,7 @@ function W() {
                         }),
                         (0, i.jsx)('div', {
                             className: M.previewAvatars,
-                            children: [D.Skl.ONLINE, D.Skl.DND, D.Skl.IDLE].map((e) =>
+                            children: [B.Skl.ONLINE, B.Skl.DND, B.Skl.IDLE].map((e) =>
                                 (0, i.jsx)(
                                     d.AnimatedAvatar,
                                     {
@@ -183,20 +183,20 @@ function z() {
         className: k.marginTop20,
         children: [
             (0, i.jsx)(d.FormTitle, {
-                id: F,
+                id: U,
                 className: k.marginBottom8,
                 children: L.intl.string(L.t['5PWWCQ'])
             }),
             (0, i.jsx)(d.FormText, {
-                id: U,
+                id: F,
                 type: d.FormText.Types.DESCRIPTION,
                 className: k.marginBottom20,
                 children: L.intl.string(L.t['0PbE/P'])
             }),
             (0, i.jsx)(d.Slider, {
-                'aria-labelledby': F,
-                'aria-describedby': U,
-                markers: D.yqN.SATURATION_INCREMENTS,
+                'aria-labelledby': U,
+                'aria-describedby': F,
+                markers: B.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,
                 maxValue: 1,
@@ -289,9 +289,9 @@ function Q() {
 }
 function X() {
     let e = (0, c.e7)([h.Z], () => h.Z.syncProfileThemeWithUserTheme),
-        t = s.useRef(null);
+        t = r.useRef(null);
     return (
-        (0, O.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
+        (0, R.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
         (0, i.jsx)(d.FormItem, {
             ref: t,
             title: L.intl.string(L.t.BT8Bmp),
@@ -301,7 +301,7 @@ function X() {
                 children: (0, i.jsx)(d.FormSwitch, {
                     note: L.intl.format(L.t.u6UjrK, {
                         onThemeClick() {
-                            u.Z.open(D.oAB.APPEARANCE);
+                            u.Z.open(B.oAB.APPEARANCE);
                         }
                     }),
                     className: k.marginTop20,
@@ -315,15 +315,15 @@ function X() {
 }
 function J() {
     let [e] = (0, c.Wu)([h.Z], () => [h.Z.syncForcedColors, h.Z.systemForcedColors]),
-        [t, n] = s.useState(e);
-    s.useEffect(() => {
+        [t, n] = r.useState(e);
+    r.useEffect(() => {
         n(e);
     }, [e]);
-    let r = s.useRef(null);
-    s.useEffect(() => {
-        null != r.current && (clearTimeout(r.current), (r.current = null)), t !== e && (r.current = setTimeout(() => (0, g.qz)(t), 150));
+    let s = r.useRef(null);
+    r.useEffect(() => {
+        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150));
     }, [t, e]);
-    let a = L.intl.format(L.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(D.BhN.FORCED_COLORS) });
+    let a = L.intl.format(L.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(B.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.FormItem, {
         title: L.intl.string(L.t.TYyfOz),
         className: k.marginTop20,
@@ -343,26 +343,26 @@ function $() {
         t = j.Yk.useSetting(),
         {
             useReducedMotion: n,
-            rawPrefersReducedMotion: r,
+            rawPrefersReducedMotion: s,
             systemPrefersReducedMotion: l,
             gifAutoPlayOverrideReason: o,
             animateEmojiOverrideReason: u
-        } = (0, c.cj)([h.Z, R.Z], () => ({
+        } = (0, c.cj)([h.Z, O.Z], () => ({
             systemPrefersReducedMotion: h.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: h.Z.rawPrefersReducedMotion,
             useReducedMotion: h.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: R.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
-            animateEmojiOverrideReason: R.Z.getAppliedOverrideReasonKey('animateEmoji')
+            gifAutoPlayOverrideReason: O.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
+            animateEmojiOverrideReason: O.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
-        m = s.useRef(null);
-    (0, O.Z)(m, P.rP.REDUCED_MOTION);
-    let p = s.useCallback(
+        m = r.useRef(null);
+    (0, R.Z)(m, P.rP.REDUCED_MOTION);
+    let p = r.useCallback(
             (e, t) => {
                 (0, g.Zt)(t ? 'auto' : l);
             },
             [l]
         ),
-        x = s.useCallback((e) => {
+        x = r.useCallback((e) => {
             (0, g.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.FormItem, {
@@ -373,11 +373,11 @@ function $() {
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
                 className: k.marginBottom8,
-                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(D.BhN.REDUCED_MOTION) })
+                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(B.BhN.REDUCED_MOTION) })
             }),
             (0, i.jsx)(d.Checkbox, {
                 className: a()(k.marginTop20, k.marginBottom20),
-                value: 'auto' === r,
+                value: 'auto' === s,
                 shape: d.Checkbox.Shapes.BOX,
                 type: d.Checkbox.Types.INVERTED,
                 onChange: p,
@@ -419,8 +419,8 @@ function $() {
 }
 function ee() {
     let e = j.Wp.useSetting(),
-        t = (0, c.e7)([R.Z], () => R.Z.getAppliedOverrideReasonKey('animateStickers')),
-        n = s.useCallback((e) => {
+        t = (0, c.e7)([O.Z], () => O.Z.getAppliedOverrideReasonKey('animateStickers')),
+        n = r.useCallback((e) => {
             j.Wp.updateSetting(e.value);
         }, []);
     return (0, i.jsxs)(d.FormItem, {
@@ -436,16 +436,16 @@ function ee() {
                 options: [
                     {
                         name: L.intl.string(L.t['Xp+X2d']),
-                        value: B.yr.ALWAYS_ANIMATE
+                        value: D.yr.ALWAYS_ANIMATE
                     },
                     {
                         name: L.intl.string(L.t.IlLT7e),
                         desc: L.intl.string(L.t.bIW9Tk),
-                        value: B.yr.ANIMATE_ON_INTERACTION
+                        value: D.yr.ANIMATE_ON_INTERACTION
                     },
                     {
                         name: L.intl.string(L.t.IGu8x8),
-                        value: B.yr.NEVER_ANIMATE
+                        value: D.yr.NEVER_ANIMATE
                     }
                 ],
                 onChange: n,
@@ -457,9 +457,9 @@ function ee() {
 function et() {
     let e = (0, c.e7)([h.Z], () => h.Z.isSubmitButtonEnabled),
         t = j.dN.useSetting(),
-        n = s.useRef(null);
+        n = r.useRef(null);
     return (
-        (0, O.Z)(n, P.rP.LEGACY_CHAT_INPUT),
+        (0, R.Z)(n, P.rP.LEGACY_CHAT_INPUT),
         (0, i.jsxs)(d.FormItem, {
             ref: n,
             className: k.marginTop20,
@@ -484,9 +484,9 @@ function et() {
                         value: t,
                         note: L.intl.string(L.t.Q7wgHR),
                         onChange: (e) => {
-                            v.default.track(D.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            v.default.track(B.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
-                                location: { section: D.jXE.SETTINGS_ACCESSIBILITY }
+                                location: { section: B.jXE.SETTINGS_ACCESSIBILITY }
                             }),
                                 j.dN.updateSetting(e);
                         },
@@ -500,7 +500,7 @@ function et() {
 function en() {
     let e = j.OW.useSetting(),
         t = (0, c.e7)([N.Z], () => N.Z.speechRate),
-        [n, r] = s.useState(!1);
+        [n, s] = r.useState(!1);
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -541,17 +541,17 @@ function en() {
                                       color: d.ButtonColors.BRAND,
                                       onClick: () => {
                                           if (n) {
-                                              (0, I.NB)(), r(!1);
+                                              (0, I.NB)(), s(!1);
                                               return;
                                           }
                                           (0, I.cP)(
                                               L.intl.string(L.t.PKaNJC),
                                               !0,
                                               void 0,
-                                              () => r(!0),
-                                              () => r(!1)
+                                              () => s(!0),
+                                              () => s(!1)
                                           ),
-                                              r(!0);
+                                              s(!0);
                                       },
                                       children: (0, i.jsxs)(x.Z, {
                                           align: x.Z.Align.CENTER,

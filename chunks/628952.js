@@ -14,7 +14,7 @@ var a = t(120356),
     _ = t(905357),
     b = t(473608),
     m = t(388032),
-    g = t(505069);
+    g = t(651443);
 i.Z = (e) => {
     let { skuId: i, isSelected: t, price: a, onSelect: x, shouldDisplayHeader: h = !1, className: v } = e,
         { product: C } = (0, p.T)(i),

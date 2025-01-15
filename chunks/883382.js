@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(924628),
     l = n(480294),
     o = n(63063),
@@ -17,8 +17,8 @@ var i = n(200651),
     g = n(981631),
     h = n(388032);
 function p() {
-    let e = (0, r.cj)([l.Z], () => l.Z.hasConsented(g.pjP.PERSONALIZATION)),
-        [t, n] = s.useState(e);
+    let e = (0, s.cj)([l.Z], () => l.Z.hasConsented(g.pjP.PERSONALIZATION)),
+        [t, n] = r.useState(e);
     return (0, i.jsx)(c.U, {
         setting: m.s6.PRIVACY_DATA_PERSONALIZE_V2,
         children: (0, i.jsx)(d.Z, {

@@ -34,7 +34,7 @@ var l = n(200651),
     R = n(981631),
     k = n(490897),
     P = n(388032),
-    I = n(409267);
+    I = n(402728);
 function D(e) {
     let { destination: t, icon: n, label: s, subLabel: a, selected: u, disabled: c, onPressDestination: f, 'aria-setsize': h, 'aria-posinset': m } = e,
         b = (0, o.JA)(t.id),

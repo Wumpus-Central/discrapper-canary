@@ -6,8 +6,8 @@ n.d(t, {
     n(47120),
     n(773603);
 var i = n(200651),
-    s = n(192379),
-    r = n(849055),
+    r = n(192379),
+    s = n(849055),
     a = n(442837),
     l = n(481060),
     o = n(239091),
@@ -23,23 +23,23 @@ var i = n(200651),
     _ = n(755733),
     E = n(981631),
     C = n(388032),
-    T = n(421333);
+    T = n(785462);
 function S(e) {
     let { transitionState: t, onClose: a, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
-        [f, S] = s.useState(''),
-        [b, I] = s.useState(!0),
-        [N, v] = s.useState(_.x.INIT),
-        [A, j] = s.useState(''),
-        [R, O] = s.useState(null),
+        [f, S] = r.useState(''),
+        [b, I] = r.useState(!0),
+        [N, v] = r.useState(_.x.INIT),
+        [A, j] = r.useState(''),
+        [O, R] = r.useState(null),
         P = async () => {
             let e;
             v(_.x.REGISTER);
-            let t = g.isPlatformEmbedded && p.ZP.supportsFeature(E.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            let t = g.isPlatformEmbedded && p.ZP.supportsFeature(E.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                h.Z.captureException(e), O(C.intl.string(C.t.xSCvBQ)), v(_.x.INIT);
+                h.Z.captureException(e), R(C.intl.string(C.t.xSCvBQ)), v(_.x.INIT);
                 return;
             }
             j(e), v(_.x.NAME);
@@ -82,11 +82,11 @@ function S(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         children:
-                                            null != R &&
+                                            null != O &&
                                             (0, i.jsx)(l.Text, {
                                                 variant: 'text-md/normal',
                                                 color: 'status-danger',
-                                                children: R
+                                                children: O
                                             })
                                     }),
                                     (0, i.jsx)('div', {
@@ -140,7 +140,7 @@ function S(e) {
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            O(C.intl.string(C.t.fEptJC)), v(_.x.INIT);
+                                            R(C.intl.string(C.t.fEptJC)), v(_.x.INIT);
                                         });
                             },
                             children: [
@@ -200,7 +200,7 @@ function S(e) {
     });
 }
 function b(e) {
-    let { onSelect: t, credential: s } = e;
+    let { onSelect: t, credential: r } = e;
     return (0, i.jsxs)(l.Menu, {
         navId: 'webauthn-credential-actions',
         onClose: o.Zy,
@@ -208,25 +208,25 @@ function b(e) {
         onSelect: t,
         children: [
             (0, i.jsx)(l.MenuItem, {
-                id: 'webauthn-edit-credential-'.concat(s.id),
+                id: 'webauthn-edit-credential-'.concat(r.id),
                 label: C.intl.string(C.t.bt75u7),
                 action: () => {
                     (0, l.openModalLazy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                credential: s,
+                                credential: r,
                                 ...t
                             });
                     });
                 }
             }),
             (0, i.jsx)(l.MenuItem, {
-                id: 'webauthn-delete-credential-'.concat(s.id),
+                id: 'webauthn-delete-credential-'.concat(r.id),
                 label: C.intl.string(C.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
-                    (0, x.cT)(s);
+                    (0, x.cT)(r);
                 }
             })
         ]
@@ -237,10 +237,10 @@ function I() {
         hasFetchedCredentials: f.Z.hasFetchedCredentials(),
         credentials: f.Z.getCredentials()
     }));
-    s.useEffect(() => {
+    r.useEffect(() => {
         !t && (0, x.hL)();
     }, [t]);
-    let [n, r] = s.useState(!1);
+    let [n, s] = r.useState(!1);
     return (0, i.jsxs)(l.FormSection, {
         title: C.intl.string(C.t.y7SXYW),
         className: T.settings,
@@ -298,7 +298,7 @@ function I() {
             (0, i.jsx)('div', {
                 children: (0, i.jsx)(l.Button, {
                     onClick: () => {
-                        r(!0),
+                        s(!0),
                             (0, x.L$)()
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
@@ -314,7 +314,7 @@ function I() {
                                     e.message !== C.intl.string(C.t.N2yb9f) && h.Z.captureException(e);
                                 })
                                 .finally(() => {
-                                    r(!1);
+                                    s(!1);
                                 });
                     },
                     submitting: n,

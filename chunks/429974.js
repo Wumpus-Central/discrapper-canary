@@ -36,7 +36,7 @@ async function v(e) {
         G = x === p.Skl.ONLINE ? B : x;
     (g = await (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([r.e('56630'), r.e('82412'), r.e('3748')]).then(r.bind(r, 533835));
+            let { default: e } = await Promise.all([r.e('56630'), r.e('82412'), r.e('25823')]).then(r.bind(r, 533835));
             return (n) =>
                 (0, i.jsx)(e, {
                     user: O,

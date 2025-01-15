@@ -36,7 +36,7 @@ var i = t(200651),
     y = t(981631),
     b = t(490897),
     G = t(388032),
-    M = t(984226);
+    M = t(927248);
 let L = p.Z;
 function S(n) {
     let { transitionState: e, onClose: r, guildId: p } = n,
@@ -109,7 +109,7 @@ function S(n) {
                                         size: c.Button.Sizes.MIN,
                                         onClick: () => {
                                             (0, c.openModalLazy)(async () => {
-                                                let { default: n } = await Promise.all([t.e('58023'), t.e('54444')]).then(t.bind(t, 779250));
+                                                let { default: n } = await Promise.all([t.e('58023'), t.e('59027')]).then(t.bind(t, 779250));
                                                 return (e) =>
                                                     (0, i.jsx)(n, {
                                                         ...e,

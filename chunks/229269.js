@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(734530),
+    r = n(192379),
+    s = n(734530),
     a = n(120356),
     l = n.n(a),
     o = n(481060),
@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(439021),
     p = n(450272),
     x = n(388032),
-    f = n(713126),
-    _ = n(564952);
+    f = n(333925),
+    _ = n(753794);
 function E() {
     return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
@@ -85,7 +85,7 @@ function C() {
     });
 }
 function T(e) {
-    let t = s.useRef(null),
+    let t = r.useRef(null),
         n = {
             paymentLabel: x.intl.string(x.t.ZURqX1),
             paymentRequestRef: t,
@@ -115,9 +115,9 @@ function T(e) {
             });
 }
 function S(e) {
-    let { children: t, footer: n, className: s } = e;
+    let { children: t, footer: n, className: r } = e;
     return (0, i.jsx)('div', {
-        className: l()(_.root, _.focusLock, _.small, _.rootWithShadow, f.modal, s),
+        className: l()(_.root, _.focusLock, _.small, _.rootWithShadow, f.modal, r),
         'aria-label': x.intl.string(x.t.eQ2bLi),
         children: (0, i.jsxs)('form', {
             className: f.form,
@@ -136,8 +136,8 @@ function S(e) {
 }
 function b(e) {
     let { paymentRequestWallet: t } = e,
-        n = s.useRef(null),
-        [r, a] = s.useState(!1),
+        n = r.useRef(null),
+        [s, a] = r.useState(!1),
         l = () => {
             null != n.current && n.current.show();
         };
@@ -145,7 +145,7 @@ function b(e) {
         footer: (0, i.jsx)(g.Z, {
             primaryCTA: g.Z.CTAType.CONTINUE,
             primaryText: x.intl.string('applePay' === t ? x.t.WoXvJC : x.t.wnVVr6),
-            primaryDisabled: !r,
+            primaryDisabled: !s,
             onPrimary: () => l(),
             onBack: () => {}
         }),
@@ -252,7 +252,7 @@ let v = {
             }
         }
     },
-    R = {
+    O = {
         buttonType: {
             googlePay: 'pay',
             applePay: 'book'
@@ -263,22 +263,22 @@ let v = {
         },
         buttonHeight: 40
     },
-    O = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : 'undefined');
+    R = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : 'undefined');
 function P() {
-    let [e, t] = s.useState(O(j)),
-        [n, a] = s.useState(j),
-        [l, c] = s.useState(O(R)),
-        [d, m] = s.useState(R),
-        [g, h] = s.useState(null),
-        [x, _] = s.useState(
+    let [e, t] = r.useState(R(j)),
+        [n, a] = r.useState(j),
+        [l, c] = r.useState(R(O)),
+        [d, m] = r.useState(O),
+        [g, h] = r.useState(null),
+        [x, _] = r.useState(
             (0, i.jsx)(p.DS, {
                 errorLabel: v.CONFIGURABLE,
                 elementOptions: j,
-                children: (0, i.jsx)(r.ExpressCheckoutElement, {
+                children: (0, i.jsx)(s.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log('ExpressCheckoutElement onConfirm event: ', e);
                     },
-                    options: R
+                    options: O
                 })
             })
         );
@@ -340,7 +340,7 @@ function P() {
                                         (0, i.jsx)(p.DS, {
                                             errorLabel: v.CONFIGURABLE,
                                             elementOptions: t,
-                                            children: (0, i.jsx)(r.ExpressCheckoutElement, {
+                                            children: (0, i.jsx)(s.ExpressCheckoutElement, {
                                                 onConfirm: (e) => {
                                                     console.log('ExpressCheckoutElement onConfirm event: ', e);
                                                 },
@@ -366,7 +366,7 @@ function P() {
             }),
             (0, i.jsx)(u.Z, {
                 className: f.markdown,
-                children: ''.concat('``', ' ').concat(O(n), ' ').concat('``')
+                children: ''.concat('``', ' ').concat(R(n), ' ').concat('``')
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-md/normal',
@@ -375,7 +375,7 @@ function P() {
             }),
             (0, i.jsx)(u.Z, {
                 className: f.markdown,
-                children: ''.concat('``', ' ').concat(O(d), ' ').concat('``')
+                children: ''.concat('``', ' ').concat(R(d), ' ').concat('``')
             }),
             x
         ]
@@ -393,7 +393,7 @@ function y() {
                 children: (0, i.jsx)('div', {
                     children: (0, i.jsx)(p.DS, {
                         errorLabel: v.DEFAULT,
-                        children: (0, i.jsx)(r.ExpressCheckoutElement, {
+                        children: (0, i.jsx)(s.ExpressCheckoutElement, {
                             onConfirm: (e) => {
                                 console.log('ExpressCheckoutElement onConfirm event: ', e);
                             },
@@ -417,11 +417,11 @@ function y() {
                                 }),
                                 (0, i.jsx)(u.Z, {
                                     className: f.markdown,
-                                    children: ''.concat('``').concat(O(A[e]), ' ').concat('``')
+                                    children: ''.concat('``').concat(R(A[e]), ' ').concat('``')
                                 }),
                                 (0, i.jsx)(p.DS, {
                                     errorLabel: t,
-                                    children: (0, i.jsx)(r.ExpressCheckoutElement, {
+                                    children: (0, i.jsx)(s.ExpressCheckoutElement, {
                                         onConfirm: (e) => {
                                             console.log('ExpressCheckoutElement onConfirm event: ', e);
                                         },

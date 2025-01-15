@@ -6,7 +6,7 @@ var i = n(200651),
     a = n(18100),
     o = n(308083),
     c = n(388032),
-    d = n(240938);
+    d = n(866262);
 let u = (e) => {
     let { title: t, icon: n, availableTraits: a, selectedTraits: c, onUpdateTraits: u } = e,
         m = r.useCallback(

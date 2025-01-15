@@ -9,7 +9,7 @@ var a = t(200651),
     l = t.n(r),
     o = t(481060),
     s = t(388032),
-    c = t(928261),
+    c = t(472925),
     d = t(902294);
 function u(e) {
     let { heading: n = s.intl.string(s.t.NGw8v7), body: t = s.intl.string(s.t['1XZRY2']), className: r } = e;

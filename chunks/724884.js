@@ -4,7 +4,7 @@ var a = r(120356),
     s = r.n(a),
     o = r(481060),
     l = r(388032),
-    u = r(523184),
+    u = r(387920),
     c = r(247844);
 function d(e) {
     let { className: n, icon: r, children: a } = e;

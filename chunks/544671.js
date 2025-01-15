@@ -9,7 +9,7 @@ var l = n(557711),
     r = n(620662),
     a = n(503438),
     s = n(981631),
-    o = n(472113);
+    o = n(17169);
 function c(e) {
     let { activity: t, user: n, guildId: c, channelId: u, source: d, look: m, color: f, onAction: p } = e;
     return null != t && (0, r.Z)(t, s.xjy.SYNC) && (0, a.Z)(t)

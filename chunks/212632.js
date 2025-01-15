@@ -1,63 +1,63 @@
 n(47120);
-var i = n(200651),
-    r = n(192379),
+var r = n(200651),
+    a = n(192379),
     l = n(120356),
-    a = n.n(l),
-    s = n(481060),
-    o = n(981631),
-    u = n(388032),
-    d = n(373780),
-    c = n(232186);
-let h = 0,
-    f = () => 'notification-position-selector-'.concat(h++),
-    g = (e) => {
+    i = n.n(l),
+    o = n(481060),
+    s = n(981631),
+    c = n(388032),
+    d = n(610290),
+    u = n(275477);
+let m = 0,
+    h = () => 'notification-position-selector-'.concat(m++),
+    x = (e) => {
         switch (e) {
-            case o._vf.TOP_LEFT:
-                return u.intl.string(u.t.xlchpa);
-            case o._vf.TOP_RIGHT:
-                return u.intl.string(u.t['4uHRHB']);
-            case o._vf.BOTTOM_LEFT:
-                return u.intl.string(u.t.ovWFnJ);
-            case o._vf.BOTTOM_RIGHT:
-                return u.intl.string(u.t['M/9V7+']);
+            case s._vf.TOP_LEFT:
+                return c.intl.string(c.t.xlchpa);
+            case s._vf.TOP_RIGHT:
+                return c.intl.string(c.t['4uHRHB']);
+            case s._vf.BOTTOM_LEFT:
+                return c.intl.string(c.t.ovWFnJ);
+            case s._vf.BOTTOM_RIGHT:
+                return c.intl.string(c.t['M/9V7+']);
             default:
-                return u.intl.string(u.t.AlY4ZW);
+                return c.intl.string(c.t.AlY4ZW);
         }
     },
-    p = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function b(e) {
+    f = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
+function p(e) {
     let { position: t, onChange: n } = e,
-        [l] = r.useState(() => f()),
-        h = t === o._vf.DISABLED ? u.intl.string(u.t.R6LxVV) : u.intl.formatToPlainString(u.t.XXHDMz, { position: g(t) });
-    return (0, i.jsxs)('div', {
+        [l] = a.useState(() => h()),
+        m = t === s._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: x(t) });
+    return (0, r.jsxs)('div', {
         children: [
-            (0, i.jsx)(s.FocusRing, {
+            (0, r.jsx)(o.FocusRing, {
                 within: !0,
                 offset: -2,
-                children: (0, i.jsx)('div', {
-                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: p.map((e) =>
-                        (0, i.jsxs)(
+                children: (0, r.jsx)('div', {
+                    className: i()(d.wrapper, { [d.disabledSelected]: t === s._vf.DISABLED }),
+                    children: f.map((e) =>
+                        (0, r.jsxs)(
                             'label',
                             {
-                                className: a()({
+                                className: i()({
                                     [d.selected]: e === t,
-                                    [d.disabled]: e === o._vf.DISABLED,
-                                    [d.topRight]: e === o._vf.TOP_RIGHT,
-                                    [d.topLeft]: e === o._vf.TOP_LEFT,
-                                    [d.bottomRight]: e === o._vf.BOTTOM_RIGHT,
-                                    [d.bottomLeft]: e === o._vf.BOTTOM_LEFT
+                                    [d.disabled]: e === s._vf.DISABLED,
+                                    [d.topRight]: e === s._vf.TOP_RIGHT,
+                                    [d.topLeft]: e === s._vf.TOP_LEFT,
+                                    [d.bottomRight]: e === s._vf.BOTTOM_RIGHT,
+                                    [d.bottomLeft]: e === s._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    g(e),
-                                    e === o._vf.DISABLED
-                                        ? (0, i.jsx)(s.DenyIcon, {
+                                    x(e),
+                                    e === s._vf.DISABLED
+                                        ? (0, r.jsx)(o.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
                                           })
                                         : null,
-                                    (0, i.jsx)('input', {
+                                    (0, r.jsx)('input', {
                                         type: 'radio',
                                         name: l,
                                         value: e,
@@ -71,12 +71,12 @@ function b(e) {
                     )
                 })
             }),
-            (0, i.jsx)(s.FormText, {
-                type: s.FormTextTypes.DESCRIPTION,
-                className: c.marginTop8,
-                children: h
+            (0, r.jsx)(o.FormText, {
+                type: o.FormTextTypes.DESCRIPTION,
+                className: u.marginTop8,
+                children: m
             })
         ]
     });
 }
-(b.Positions = o._vf), (t.Z = b);
+(p.Positions = s._vf), (t.Z = p);

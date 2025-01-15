@@ -68,7 +68,7 @@ var i = n(200651),
     eu = n(524484),
     ed = n(65154),
     em = n(388032),
-    ef = n(995544);
+    ef = n(474316);
 let ep = l.memo((e) => {
     var t, n, r, c, I;
     let { participant: E, onDoubleClick: C, onContextMenu: X, onClick: K, onMouseDown: er, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eC = !1, selected: eZ = !1, noBorder: ey = !1, noVideoRender: eb = !1, focused: eT = !1, blocked: eA = !1, ignored: eN = !1, fit: ew = b.L.CONTAIN, paused: ej = !1, pulseSpeakingIndicator: eP = !1, forceIdle: eR = !1, inOverlayPopout: eM = !1 } = e,
@@ -142,9 +142,9 @@ let ep = l.memo((e) => {
     let e1 = (0, M.So)(s.q.STREAM_HIGH_QUALITY),
         { hqStreamingState: e2 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e3 = (0, L.Z)(),
-        e9 = e1 && e0 && null != e3,
-        e4 = (0, P.o)(E, eG),
-        e7 = (0, j.lL)('CallTile', !0, eG, e4),
+        e4 = e1 && e0 && null != e3,
+        e9 = (0, P.o)(E, eG),
+        e7 = (0, j.lL)('CallTile', !0, eG, e9),
         e6 = (0, o.e7)([F.Z], () => (E.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
         e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
         { enableHangStatus: e5 } = x.n.useExperiment({
@@ -207,7 +207,7 @@ let ep = l.memo((e) => {
             [X, E]
         ),
         tv = eO;
-    e9 && (tv = !1);
+    e4 && (tv = !1);
     let tS = null,
         tI = null,
         t_ = '';
@@ -230,7 +230,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eT,
                     idle: tv,
-                    premiumIndicator: e9 || e7.enabled
+                    premiumIndicator: e4 || e7.enabled
                 })),
                 (t_ = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: E.user.username }));
             break;
@@ -346,7 +346,7 @@ let ep = l.memo((e) => {
                                           })
                                         : null,
                                     tS,
-                                    e9
+                                    e4
                                         ? (0, i.jsx)(k.W, {
                                               onPlayed: tf,
                                               played: e2.hqStreamingFrameAnimationPlayed

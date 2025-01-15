@@ -24,7 +24,7 @@ var t = d(200651),
     x = d(432496),
     M = d(981631),
     b = d(388032),
-    S = d(314154);
+    S = d(409810);
 function Z(e) {
     let { guild: n, transitionState: r, onClose: Z } = e,
         k = (0, m.Dt)(),
@@ -73,7 +73,7 @@ function Z(e) {
                                             guildId: n.id,
                                             onContextMenu: (e) => {
                                                 (0, u.jW)(e, async () => {
-                                                    let { default: e } = await Promise.all([d.e('79695'), d.e('13125'), d.e('26976'), d.e('84940')]).then(d.bind(d, 415118));
+                                                    let { default: e } = await Promise.all([d.e('79695'), d.e('13125'), d.e('26976'), d.e('38869')]).then(d.bind(d, 415118));
                                                     return (d) =>
                                                         (0, t.jsx)(e, {
                                                             ...d,

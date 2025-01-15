@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(906732),
     c = n(864106),
@@ -16,14 +16,14 @@ var i = n(200651),
     g = n(150039),
     h = n(993413),
     p = n(388032),
-    x = n(887669);
+    x = n(506986);
 function f(e) {
-    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: f = !1, withTutorial: E = !1, isTryItOutFlow: C = !1 } = e,
+    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: f = !1, withTutorial: E = !1, isTryItOutFlow: C = !1 } = e,
         { analyticsLocations: T } = (0, o.ZP)(),
         S = null != n,
         { userAvatarDecoration: b, guildAvatarDecoration: I, pendingAvatarDecoration: N, pendingErrors: v } = (0, g.$U)(t, n),
         A = (0, u.Z)('enable_avatar_decoration_uploads'),
-        j = s.useCallback(
+        j = r.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: T,
@@ -32,10 +32,10 @@ function f(e) {
                 }),
             [T, C, n]
         ),
-        R = C || void 0 !== N ? null != N : (S ? I : b) != null,
-        O = E ? l.ShinyButton : l.Button;
+        O = C || void 0 !== N ? null != N : (S ? I : b) != null,
+        R = E ? l.ShinyButton : l.Button;
     return (0, i.jsxs)(h.Z, {
-        className: r,
+        className: s,
         forcedDivider: f,
         hasBackground: !0,
         title: m,
@@ -44,13 +44,13 @@ function f(e) {
             (0, i.jsxs)('div', {
                 className: x.buttonsContainer,
                 children: [
-                    (0, i.jsx)(O, {
+                    (0, i.jsx)(R, {
                         size: l.Button.Sizes.SMALL,
                         onClick: j,
                         className: a()({ [x.buttonHighlighted]: E }),
                         children: p.intl.string(p.t['Tna/TU'])
                     }),
-                    R &&
+                    O &&
                         (0, i.jsx)(l.Button, {
                             className: x.removeButton,
                             color: l.Button.Colors.PRIMARY,

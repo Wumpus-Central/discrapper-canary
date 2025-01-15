@@ -41,7 +41,7 @@ var o = r(200651),
     k = r(526761),
     U = r(231338),
     B = r(388032),
-    G = r(392971);
+    G = r(627364);
 !(function (e) {
     (e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS');
 })(i || (i = {}));

@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
-    a = n(321065);
+var a = n(120356),
+    r = n.n(a),
+    o = n(650466);
 function l(e) {
-    let { children: t, tag: n, className: s } = e;
+    let { children: t, tag: n, className: a } = e;
     return (
         (n = null != n ? n : 'h3'),
         (0, i.jsx)(n, {
-            className: r()(a.title, s),
+            className: r()(o.title, a),
             children: t
         })
     );

@@ -11,7 +11,7 @@ var s = r(658722),
     _ = r(430824),
     h = r(981631),
     p = r(388032),
-    m = r(286841);
+    m = r(940958);
 function g(e) {
     let { className: n, guild: r, roleStyle: i, roleFilter: s, onSelect: l, onClose: g } = e,
         E = (0, d.e7)([_.Z], () => _.Z.getRoles(r.id)),

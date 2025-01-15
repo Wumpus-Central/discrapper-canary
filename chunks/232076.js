@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    s = n(442837),
-    r = n(594174),
+    r = n(442837),
+    s = n(594174),
     a = n(111361),
     l = n(140465),
     o = n(775412),
@@ -14,7 +14,7 @@ var i = n(192379),
     u = n(474936);
 let m = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, s.e7)([r.default], () => r.default.getCurrentUser()),
+        n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         m = (0, l.t7)(),
         g = (0, o._O)(),
         { eligibleToFetch: h } = (0, d.N)(e),

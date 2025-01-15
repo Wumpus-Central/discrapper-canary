@@ -16524,7 +16524,6 @@ span.clanTag_a31c43 {
     margin-bottom: 8px;
     padding: 0;
     border-radius: 4px;
-    background-color: var(--background-secondary);
     min-height: 64px
 }
 
@@ -16670,7 +16669,6 @@ span.clanTag_a31c43 {
     margin-bottom: 8px;
     padding: 0;
     border-radius: 4px;
-    background-color: var(--background-secondary);
     min-height: 64px
 }
 
@@ -16793,7 +16791,7 @@ span.clanTag_a31c43 {
 }
 
 .headerContainer_e9d805 {
-    padding: 0 16px;
+    padding: 0 24px;
     text-align: center
 }
 

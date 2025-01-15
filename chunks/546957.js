@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var s = n(246736);
-function r(e) {
+var r = n(563125);
+function s(e) {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: s.categorySubGroup,
+        className: r.categorySubGroup,
         children: t
     });
 }

@@ -10,7 +10,7 @@ var o = n(120356),
     l = n(481060),
     a = n(436774),
     c = n(118012),
-    s = n(392842);
+    s = n(319957);
 function d(e) {
     let { text: i, textSize: n = c.Z.Sizes.SIZE_12, textColor: o = c.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: g = !1 } = e;
     return (0, t.jsxs)('div', {

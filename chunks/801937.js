@@ -14,8 +14,8 @@ var a = n(200651),
     A = n(351402),
     E = n(981631),
     y = n(388032),
-    f = n(742415),
-    N = n(652849);
+    f = n(508471),
+    N = n(847854);
 let P = {
         [E.HeQ.CARD]: m.ZP.Types.UNKNOWN,
         [E.HeQ.PAYPAL]: m.ZP.Types.PAYPAL,

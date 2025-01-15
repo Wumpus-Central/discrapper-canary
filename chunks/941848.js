@@ -9,7 +9,7 @@ var e = n(200651),
     s = n(481060),
     r = n(458044),
     o = n(388032),
-    l = n(648125);
+    l = n(294456);
 function c(t) {
     let { user: a, tagId: n, title: i, messageCount: r, reactionCount: c, activeAgo: d, tags: m, attachment: g } = t,
         { name: u, avatarSrc: x } = a;

@@ -5,18 +5,18 @@ n.d(t, {
 }),
     n(411104);
 var i = n(200651),
-    r = n(192379),
-    a = n(442837),
+    a = n(192379),
+    r = n(442837),
     l = n(481060),
     o = n(388905),
     c = n(686546),
     s = n(925329),
     d = n(372769),
     u = n(44609),
-    f = n(47343),
-    _ = n(973616),
-    g = n(131704),
-    m = n(601964),
+    _ = n(47343),
+    f = n(973616),
+    m = n(131704),
+    g = n(601964),
     p = n(598077),
     b = n(594174),
     v = n(51144),
@@ -24,9 +24,9 @@ var i = n(200651),
     T = n(888592),
     S = n(245335),
     I = n(388032),
-    x = n(594193);
+    x = n(200137);
 let C = () =>
-        (0, i.jsxs)(r.Fragment, {
+        (0, i.jsxs)(a.Fragment, {
             children: [
                 (0, i.jsx)(o.qE, {
                     src: null,
@@ -41,18 +41,18 @@ let C = () =>
             ]
         }),
     E = (e) => {
-        let { guild: t, user: n, application: r, compact: a } = e;
-        if (null != r)
+        let { guild: t, user: n, application: a, compact: r } = e;
+        if (null != a)
             return (0, i.jsx)(s.Z, {
                 className: x.appIcon,
-                game: r,
+                game: a,
                 size: x.appIconSize
             });
         if (null != n)
             return (0, i.jsx)(o.qE, {
                 src: null != n ? n.getAvatarURL(void 0, 80) : null,
                 size: l.AvatarSizes.SIZE_80,
-                className: a ? x.compactAvatar : x.avatar
+                className: r ? x.compactAvatar : x.avatar
             });
         if (null != t)
             return (0, i.jsx)(c.ZP, {
@@ -71,15 +71,15 @@ let C = () =>
 t.Z = (e) => {
     var t;
     let n,
-        r,
+        a,
         c,
         { invite: s, disableUser: C = !1, error: N, flatActivityCount: R = !1, isRegister: B = !1 } = e,
         O = (0, u.WR)({ location: 'invite' }),
-        { currentUser: L } = (0, a.cj)([b.default], () => ({ currentUser: b.default.getCurrentUser() }));
+        { currentUser: L } = (0, r.cj)([b.default], () => ({ currentUser: b.default.getCurrentUser() }));
     if (null == s) return null;
-    let P = null != s.guild ? new m.ZP(s.guild) : null,
-        j = null != s.channel ? (0, g.jD)(s.channel) : null,
-        w = null != s.target_application ? new _.ZP(s.target_application) : null,
+    let P = null != s.guild ? new g.ZP(s.guild) : null,
+        j = null != s.channel ? (0, m.jD)(s.channel) : null,
+        w = null != s.target_application ? new f.ZP(s.target_application) : null,
         A = C || null == s.inviter ? null : new p.Z(s.inviter),
         D = !((null != s.approximate_member_count && s.approximate_member_count > 100) || (null != P && P.hasFeature(h.oNc.COMMUNITY))) && null != A,
         k = null,
@@ -95,9 +95,9 @@ t.Z = (e) => {
                     guild: P,
                     size: o.Vj.Sizes.SMALL
                 })),
-            (r = P.name),
+            (a = P.name),
             null != w &&
-                ((r = w.name),
+                ((a = w.name),
                 (c = (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(o.DK, {
@@ -127,16 +127,16 @@ t.Z = (e) => {
         let e = v.ZP.getFormattedName(A);
         null != j.name && '' !== j.name
             ? ((k = I.intl.formatToPlainString(I.t['5u47vb'], { username: e })),
-              (r = j.name),
+              (a = j.name),
               null != j.icon &&
                   (n = (0, i.jsx)(o.MC, {
                       channel: j,
                       size: l.AvatarSizes.SIZE_32
                   })))
-            : ((k = I.intl.string(I.t.OsdY8P)), (r = e));
+            : ((k = I.intl.string(I.t.OsdY8P)), (a = e));
     } else if (null != A) {
         let e = v.ZP.getFormattedName(A, !0);
-        (r = I.intl.formatToPlainString(I.t['4aF92d'], { username: e })),
+        (a = I.intl.formatToPlainString(I.t['4aF92d'], { username: e })),
             (Z = !0),
             (c =
                 null != N
@@ -173,7 +173,7 @@ t.Z = (e) => {
                                         })
                                       : null,
                                   n,
-                                  r
+                                  a
                               ]
                           })
                       ]
@@ -187,7 +187,7 @@ t.Z = (e) => {
                       total: s.approximate_member_count,
                       flat: R
                   }),
-            O ? (0, i.jsx)(f.R, {}) : (0, i.jsx)(o.jQ, { user: L })
+            O ? (0, i.jsx)(_.R, {}) : (0, i.jsx)(o.jQ, { user: L })
         ]
     });
 };

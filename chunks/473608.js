@@ -17,7 +17,7 @@ var i = t(200651),
     m = t(731896),
     p = t(594174),
     x = t(597688),
-    h = t(452049),
+    h = t(28602),
     f = t(223223);
 let v = (e) => {
         let { avatarDecoration: n, fallbackLabel: t } = e,

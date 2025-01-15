@@ -14,7 +14,7 @@ var o = n(442837),
     s = n(944486),
     d = n(554174),
     u = n(710111),
-    p = n(408704);
+    p = n(136098);
 function h() {
     let [e, t] = (0, o.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
         n = (0, o.e7)([s.Z], () => s.Z.getVoiceChannelId()),

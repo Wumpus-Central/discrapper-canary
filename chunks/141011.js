@@ -8,7 +8,7 @@ var r = n(200651),
     d = n(302221),
     u = n(884697),
     f = n(372654),
-    g = n(695935);
+    g = n(896358);
 let p = (t) => null != t && /^http/i.test(t);
 e.Z = (t) => {
     let { asset: e, size: n = f.yV, className: i, style: v, children: h, categoryBannerOverride: m } = t,

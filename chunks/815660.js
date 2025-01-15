@@ -1,10 +1,10 @@
-t.d(n, {
+n.d(t, {
     M: function () {
         return o;
     },
     z: function () {
-        return r;
+        return i;
     }
 });
 let o = 'PHONE_VERIFICATION_MODAL_KEY',
-    r = 6;
+    i = 6;

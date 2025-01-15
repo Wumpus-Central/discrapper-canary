@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(561537),
     o = n(269210),
     c = n(481060),
@@ -16,13 +16,13 @@ var i = n(200651),
     g = n(624138),
     h = n(150414),
     p = n(993553),
-    x = n(525981);
+    x = n(311768);
 function f(e) {
-    let { cta: t, storeListing: n, className: r } = e,
+    let { cta: t, storeListing: n, className: s } = e,
         { applicationId: f, benefits: _, description: E } = n,
-        C = s.useMemo(() => (null == n.thumbnail ? null : (0, h.q)(f, n.thumbnail, 256)), [f, n.thumbnail]),
+        C = r.useMemo(() => (null == n.thumbnail ? null : (0, h.q)(f, n.thumbnail, 256)), [f, n.thumbnail]),
         { data: T } = (0, d.X)(n.skuId),
-        S = s.useMemo(() => {
+        S = r.useMemo(() => {
             if (null == T || 0 === T.length) return null;
             let e = T[0];
             return (0, m.xg)(e);
@@ -30,7 +30,7 @@ function f(e) {
     return null == S
         ? null
         : (0, i.jsxs)(l.l, {
-              className: a()(x.wrapper, r),
+              className: a()(x.wrapper, s),
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)('div', {
@@ -74,13 +74,13 @@ function f(e) {
                       (0, i.jsx)('div', {
                           className: x.benefits,
                           children: _.map((e) => {
-                              let { id: t, name: n, description: s, icon: r } = e;
+                              let { id: t, name: n, description: r, icon: s } = e;
                               return (0, i.jsx)(
                                   o.Gm,
                                   {
                                       header: n,
-                                      icon: (0, u.n)(f, r),
-                                      description: s
+                                      icon: (0, u.n)(f, s),
+                                      description: r
                                   },
                                   t
                               );

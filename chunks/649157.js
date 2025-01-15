@@ -5,18 +5,18 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(153867),
     o = n(706454),
     c = n(388032),
-    d = n(808463),
+    d = n(897506),
     u = n(444675);
 function m() {
-    let e = (0, r.e7)([o.default], () => o.default.locale),
-        [t, m] = s.useState(e),
-        [g] = s.useState(() =>
+    let e = (0, s.e7)([o.default], () => o.default.locale),
+        [t, m] = r.useState(e),
+        [g] = r.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 let t;
                 try {
@@ -51,7 +51,7 @@ function m() {
                 };
             })
         ),
-        h = s.useCallback((e) => {
+        h = r.useCallback((e) => {
             let { value: t } = e;
             m(t), u.nextTick(() => l.ZP.updateLocale(t));
         }, []);

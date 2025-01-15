@@ -32,7 +32,7 @@ var i = n(200651),
     x = n(302800),
     L = n(981631),
     P = n(388032),
-    O = n(335907);
+    O = n(435574);
 let y = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.TextBadge, {

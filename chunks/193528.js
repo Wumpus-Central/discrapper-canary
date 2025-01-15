@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(772848),
     o = n(866442),
     c = n(692547),
@@ -17,29 +17,29 @@ var i = n(200651),
     g = n(654904),
     h = n(981631),
     p = n(388032),
-    x = n(602750);
+    x = n(574476);
 function f(e) {
-    let { onChange: t, onClose: n, color: r, suggestedColors: f, disabled: _, label: E, colorPickerMiddle: C, colorPickerFooter: T, showEyeDropper: S } = e,
-        b = s.useRef(null),
+    let { onChange: t, onClose: n, color: s, suggestedColors: f, disabled: _, label: E, colorPickerMiddle: C, colorPickerFooter: T, showEyeDropper: S } = e,
+        b = r.useRef(null),
         I = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
-        v = (0, g.DP)(r),
-        A = (0, o.Rf)(r),
+        v = (0, g.DP)(s),
+        A = (0, o.Rf)(s),
         j = A === I ? N : A,
-        R = (0, m.Lq)(v ? h.Ilk.WHITE_500 : h.Ilk.PRIMARY_530),
-        O = (0, u.Z)(C),
+        O = (0, m.Lq)(v ? h.Ilk.WHITE_500 : h.Ilk.PRIMARY_530),
+        R = (0, u.Z)(C),
         P = (0, u.Z)(T),
-        [y, D] = s.useState((0, l.Z)());
+        [y, B] = r.useState((0, l.Z)());
     return (
-        s.useEffect(() => {
-            (O !== C || P !== T) && D((0, l.Z)());
-        }, [T, C, P, O]),
+        r.useEffect(() => {
+            (R !== C || P !== T) && B((0, l.Z)());
+        }, [T, C, P, R]),
         (0, i.jsx)(d.Popout, {
             positionKey: y,
             renderPopout: (e) =>
                 (0, i.jsx)(d.CustomColorPicker, {
                     ...e,
-                    value: r,
+                    value: s,
                     onChange: t,
                     suggestedColors: f,
                     middle: C,
@@ -69,7 +69,7 @@ function f(e) {
                                 className: x.editPencilIcon,
                                 width: 14,
                                 height: 14,
-                                color: R
+                                color: O
                             })
                         }),
                         E

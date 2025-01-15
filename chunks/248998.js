@@ -5,21 +5,21 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(913527),
     l = n.n(a),
     o = n(481060),
     c = n(55935),
     d = n(955204),
     u = n(674680),
-    m = n(560285);
+    m = n(924425);
 function g(e) {
     let { achievementId: t, dateUnlocked: n } = e,
-        s = (0, d.oX)(t);
-    if (null == s) return null;
+        r = (0, d.oX)(t);
+    if (null == r) return null;
     let a = null != n,
-        { name: g, description: h, hideDescriptionUntilUnlock: p, onAction: x } = s,
+        { name: g, description: h, hideDescriptionUntilUnlock: p, onAction: x } = r,
         f = p && !a,
         _ = a ? 'header-primary' : 'text-muted',
         E = a ? 'header-secondary' : 'text-muted',
@@ -27,7 +27,7 @@ function g(e) {
         T = null != x && a,
         S = T ? o.Clickable : 'div';
     return (0, i.jsxs)(S, {
-        className: r()(m.container, T && m.actionable),
+        className: s()(m.container, T && m.actionable),
         onClick: () => {
             T && x();
         },

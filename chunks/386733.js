@@ -1,7 +1,7 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(100527),
@@ -19,11 +19,11 @@ var i = n(200651),
     T = n(938736),
     S = n(981631),
     b = n(388032),
-    I = n(102588),
+    I = n(474053),
     N = n(691766);
 let v = (e) => {
-        let { userRecord: t, placement: n, trialStatus: s } = e,
-            { avatarSrc: r, eventHandlers: l } = (0, u.Z)({
+        let { userRecord: t, placement: n, trialStatus: r } = e,
+            { avatarSrc: s, eventHandlers: l } = (0, u.Z)({
                 user: t,
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
@@ -32,7 +32,7 @@ let v = (e) => {
             d = null != t,
             m = d
                 ? (0, i.jsx)(o.Avatar, {
-                      src: r,
+                      src: s,
                       'aria-label': t.username,
                       size: o.AvatarSizes.SIZE_32,
                       ...l
@@ -49,9 +49,9 @@ let v = (e) => {
             children: (e) =>
                 (0, i.jsx)('div', {
                     className: a()({
-                        [I.redeemedCircle]: c && (s === p.Fe.REDEEMED || s === p.Fe.CONVERTED),
-                        [I.convertedCircleGlow]: c && s === p.Fe.CONVERTED,
-                        [I.standardCircle]: c && (s === p.Fe.PENDING || null == s)
+                        [I.redeemedCircle]: c && (r === p.Fe.REDEEMED || r === p.Fe.CONVERTED),
+                        [I.convertedCircleGlow]: c && r === p.Fe.CONVERTED,
+                        [I.standardCircle]: c && (r === p.Fe.PENDING || null == r)
                     }),
                     children: (0, i.jsx)('div', {
                         className: c ? I.content : void 0,
@@ -81,20 +81,20 @@ let v = (e) => {
     },
     j = (e) => {
         let { userRecords: t, recipientStatus: n } = e,
-            s = t.length,
-            r = s < 1 ? null : t[0],
-            a = s < 2 ? null : t[1],
-            l = s < 3 ? null : t[2];
+            r = t.length,
+            s = r < 1 ? null : t[0],
+            a = r < 2 ? null : t[1],
+            l = r < 3 ? null : t[2];
         return (0, i.jsxs)('div', {
             className: I.userAvatarProgressBarContainer,
             children: [
                 (0, i.jsx)(v, {
-                    userRecord: r,
+                    userRecord: s,
                     placement: 1,
-                    trialStatus: (null == r ? void 0 : r.id) != null ? n.get(null == r ? void 0 : r.id) : void 0
+                    trialStatus: (null == s ? void 0 : s.id) != null ? n.get(null == s ? void 0 : s.id) : void 0
                 }),
                 (0, i.jsx)(A, {
-                    numSentReferrals: s,
+                    numSentReferrals: r,
                     placement: 1
                 }),
                 (0, i.jsx)(v, {
@@ -103,7 +103,7 @@ let v = (e) => {
                     trialStatus: (null == a ? void 0 : a.id) != null ? n.get(null == a ? void 0 : a.id) : void 0
                 }),
                 (0, i.jsx)(A, {
-                    numSentReferrals: s,
+                    numSentReferrals: r,
                     placement: 2
                 }),
                 (0, i.jsx)(v, {
@@ -116,16 +116,16 @@ let v = (e) => {
     };
 t.Z = (e) => {
     let t,
-        r,
+        s,
         { isInSettings: u = !1 } = e,
         v = (0, l.e7)([x.Z], () => x.Z.getRecipientStatus()),
         A = (0, T.uv)('ReferralProgramProgressBar'),
-        R = (0, T.TW)('ReferralProgramProgressBar'),
-        { referralSentUsers: O, hasSentAllReferrals: P, refreshAt: y } = (0, _.G)(),
-        D = s.useMemo(() => O.map((e) => new m.Z(e)), [O]),
-        { subscriberHomeVariant: B } = f.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        O = (0, T.TW)('ReferralProgramProgressBar'),
+        { referralSentUsers: R, hasSentAllReferrals: P, refreshAt: y } = (0, _.G)(),
+        B = r.useMemo(() => R.map((e) => new m.Z(e)), [R]),
+        { subscriberHomeVariant: D } = f.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         Z = A === S.g2L.UNAPPLIED || A === S.g2L.QUALIFIED,
-        L = B === f.p.VARIANT_2,
+        L = D === f.p.VARIANT_2,
         M = {
             redeemed: 0,
             converted: 0,
@@ -136,11 +136,11 @@ t.Z = (e) => {
     });
     let k = M.sent === _.Q,
         w = h.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: F } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        U = s.useRef(null),
+        { analyticsLocations: U } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        F = r.useRef(null),
         V = (M.sent / _.Q) * 100,
         G = !1;
-    R && null != y && ((G = 0 < (t = Math.ceil((new Date(y).getTime() - new Date().getTime()) / 86400000)) && t < T.AV), (r = (100 * (T.AV - t)) / T.AV));
+    O && null != y && ((G = 0 < (t = Math.ceil((new Date(y).getTime() - new Date().getTime()) / 86400000)) && t < T.AV), (s = (100 * (T.AV - t)) / T.AV));
     let H = G && null != t,
         Y = (0, i.jsxs)('div', {
             className: I.referralInfoContent,
@@ -171,7 +171,7 @@ t.Z = (e) => {
                                       (0, i.jsx)('div', {
                                           className: I.progressBar,
                                           children: (0, i.jsx)('div', {
-                                              style: { width: ''.concat(r, '%') },
+                                              style: { width: ''.concat(s, '%') },
                                               className: I.fill
                                           })
                                       }),
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                   ]
                               })
                             : (0, i.jsx)(j, {
-                                  userRecords: D,
+                                  userRecords: B,
                                   recipientStatus: v
                               }),
                         (0, i.jsx)(o.Text, {
@@ -212,13 +212,13 @@ t.Z = (e) => {
                                         className: I.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            g.default.track(S.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: F }),
+                                            g.default.track(S.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: U }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: F
+                                                            sourceAnalyticsLocations: U
                                                         });
                                                 });
                                         },
@@ -243,7 +243,7 @@ t.Z = (e) => {
         }),
         W = M.redeemed === _.Q;
     return (0, i.jsx)(d.Gt, {
-        value: F,
+        value: U,
         children: (0, i.jsx)('div', {
             className: a()({
                 [I.containerWithGlowWithoutBanner]: !H && W && !Z,
@@ -254,7 +254,7 @@ t.Z = (e) => {
                 [I.containerWithGlowOnSettingsPage]: !H && W && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: U,
+                ref: F,
                 className: a()({
                     [I.expandedProgressBarContainer]: !u,
                     [I.expandedProgressBarContainerSettingsPage]: u,

@@ -11,7 +11,7 @@ t.Z = (e) => {
         },
         handleRightClick: (e) =>
             (0, a.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('18383')]).then(n.bind(n, 422200));
+                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('79981')]).then(n.bind(n, 422200));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

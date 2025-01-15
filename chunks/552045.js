@@ -1,14 +1,14 @@
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(785681),
+var r = n(481060),
+    s = n(785681),
     a = n(841409),
     l = n(880257),
     o = n(631885),
     c = n(568671),
     d = n(292352),
     u = n(388032),
-    m = n(852402),
+    m = n(708771),
     g = n(633488),
     h = n(361848);
 let p = () => {
@@ -20,9 +20,9 @@ let p = () => {
         : (0, i.jsx)('div', {
               className: m.button,
               children: t
-                  ? (0, i.jsx)(s.Button, {
+                  ? (0, i.jsx)(r.Button, {
                         fullWidth: !1,
-                        size: s.ButtonSizes.LARGE,
+                        size: r.ButtonSizes.LARGE,
                         onClick: () => n(d.dG.REQUESTS),
                         children: u.intl.string(u.t.LhlgY2)
                     })
@@ -31,8 +31,8 @@ let p = () => {
 };
 t.Z = () => {
     let e = (0, l.Z)(),
-        t = (0, r.o)(u.intl.string(u.t.T7GyW1), u.intl.string(u.t.goKE2d)),
-        n = (0, r.o)(u.intl.format(u.t.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), u.intl.format(u.t.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+        t = (0, s.o)(u.intl.string(u.t.T7GyW1), u.intl.string(u.t.goKE2d)),
+        n = (0, s.o)(u.intl.format(u.t.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), u.intl.format(u.t.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -42,11 +42,11 @@ t.Z = () => {
                         children: (0, i.jsxs)('div', {
                             className: m.headerText,
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'heading-xl/medium',
-                                    children: (0, i.jsx)(s.HeadingLevel, { children: t })
+                                    children: (0, i.jsx)(r.HeadingLevel, { children: t })
                                 }),
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-muted',
                                     children: n

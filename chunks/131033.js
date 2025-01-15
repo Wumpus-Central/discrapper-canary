@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(793030),
     a = n(388032),
-    l = n(561526);
+    l = n(458170);
 function o(e) {
     let { detectedGame: t } = e;
     return 0 === t.publishers.length

@@ -1,15 +1,15 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
-    l = n(719878),
-    o = n(232186),
+    l = n(452958),
+    o = n(275477),
     c = n(398008);
 t.Z = (e) => {
     let { text: t, className: n } = e;
     return (0, i.jsxs)('div', {
-        className: r()(n, l.empty),
+        className: s()(n, l.empty),
         children: [
             (0, i.jsx)('img', {
                 className: l.image,

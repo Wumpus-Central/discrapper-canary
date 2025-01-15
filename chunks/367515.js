@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(399606),
     o = n(481060),
     c = n(594174),
@@ -16,13 +16,13 @@ var i = n(200651),
     g = n(340453),
     h = n(292352),
     p = n(388032),
-    x = n(659506);
+    x = n(575729);
 function f(e) {
     let { user: t } = e,
-        r = (0, d.Z)(),
+        s = (0, d.Z)(),
         f = (0, u.VM)(),
         _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        E = s.useCallback(() => {
+        E = r.useCallback(() => {
             a()(void 0 !== _, 'User must be logged in to accept a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
@@ -34,7 +34,7 @@ function f(e) {
                         });
                 });
         }, [_, t]),
-        C = s.useCallback(() => {
+        C = r.useCallback(() => {
             a()(void 0 !== _, 'User must be logged in to decline a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
@@ -46,7 +46,7 @@ function f(e) {
                         });
                 });
         }, [_, t]),
-        T = s.useCallback(() => {
+        T = r.useCallback(() => {
             a()(void 0 !== _, 'User must be logged in to decline a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
@@ -70,7 +70,7 @@ function f(e) {
             }),
             (0, i.jsx)('div', {
                 className: x.actions,
-                children: r
+                children: s
                     ? (0, i.jsx)(m.Z, {
                           icon: o.XSmallIcon,
                           className: x.__invalid_actionDeny,

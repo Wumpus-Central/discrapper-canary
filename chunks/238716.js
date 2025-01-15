@@ -16,7 +16,7 @@ var o = e(200651),
     u = e(853856),
     h = e(117984),
     x = e(388032),
-    m = e(803224);
+    m = e(920298);
 function p(t) {
     let { channelId: n, onClose: e, transitionState: p, heading: f, formTitle: j, allowReset: k = !1 } = t,
         C = (0, c.Dt)(),

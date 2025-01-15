@@ -1,10 +1,10 @@
-var s, i;
-n.d(t, {
+var n, i;
+s.d(t, {
     q: function () {
-        return s;
+        return n;
     }
 }),
-    ((i = s || (s = {})).ACCENT = 'accent'),
+    ((i = n || (n = {})).ACCENT = 'accent'),
     (i.GREEN = 'statusGreen'),
     (i.YELLOW = 'statusYellow'),
     (i.ORANGE = 'statusOrange'),

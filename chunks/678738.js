@@ -10,7 +10,7 @@ var i = r(200651),
     l = r(442837),
     u = r(481060),
     c = r(607070),
-    d = r(721148);
+    d = r(820043);
 function f(e) {
     let { children: n, heading: r, subheading: s, className: f, scrollIntoView: _ = !1, headingColor: h = 'header-secondary' } = e,
         p = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),

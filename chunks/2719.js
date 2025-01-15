@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(512722),
     o = n.n(l),
     c = n(442837),
@@ -30,28 +30,28 @@ var i = n(200651),
     v = n(867176),
     A = n(25990),
     j = n(594174),
-    R = n(572004),
-    O = n(51144),
+    O = n(572004),
+    R = n(51144),
     P = n(998502),
     y = n(695346),
-    D = n(461877),
-    B = n(726985),
+    B = n(461877),
+    D = n(726985),
     Z = n(981631),
     L = n(815660),
     M = n(801461),
     k = n(388032),
-    w = n(205323);
-let F = P.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
-function U(e) {
-    var t, r;
+    w = n(757133);
+let U = P.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
+function F(e) {
+    var t, s;
     let { className: l, user: o } = e,
-        c = s.useRef(null),
+        c = r.useRef(null),
         m = (0, E.o9)(),
         g = (0, C.b)(),
         h = (0, f.gS)(),
-        p = null !== (r = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
-        [x, _] = s.useState(!1);
-    s.useEffect(() => {
+        p = null !== (s = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null,
+        [x, _] = r.useState(!1);
+    r.useEffect(() => {
         _(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let T = !o.isClaimed(),
@@ -135,7 +135,7 @@ function U(e) {
                         onClick: () =>
                             (0, u.openModalLazy)(async () => {
                                 if (g) {
-                                    let { default: e } = await Promise.all([n.e('85342'), n.e('55508')]).then(n.bind(n, 193049));
+                                    let { default: e } = await Promise.all([n.e('85342'), n.e('29002')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             source: M.Kq.USER_SETTINGS_EDIT,
@@ -155,14 +155,14 @@ function U(e) {
 }
 function V(e) {
     var t, n;
-    let { user: r, className: l } = e,
+    let { user: s, className: l } = e,
         o = (0, f.gS)(),
         c = null !== (n = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : null,
-        m = O.ZP.getGlobalName(r),
-        g = s.useRef(null),
-        [h, p] = s.useState(!1);
+        m = R.ZP.getGlobalName(s),
+        g = r.useRef(null),
+        [h, p] = r.useState(!1);
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             p(null != g.current && g.current.scrollWidth > g.current.clientWidth);
         }, [m]),
         (0, i.jsxs)('div', {
@@ -219,8 +219,8 @@ function V(e) {
     );
 }
 function G(e) {
-    let { text: t, censor: n, revealLabel: r, hideLabel: a } = e,
-        [l, o] = s.useState(!1),
+    let { text: t, censor: n, revealLabel: s, hideLabel: a } = e,
+        [l, o] = r.useState(!1),
         c = l ? t : n(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -229,7 +229,7 @@ function G(e) {
                 look: u.Button.Looks.LINK,
                 size: u.Button.Sizes.MIN,
                 color: u.Button.Colors.LINK,
-                'aria-label': l ? a : r,
+                'aria-label': l ? a : s,
                 onClick: () => o(!l),
                 children: l ? k.intl.string(k.t.fgq1go) : k.intl.string(k.t.dcztdX)
             })
@@ -238,9 +238,9 @@ function G(e) {
 }
 function H(e) {
     let t,
-        { className: s, user: r } = e;
-    if (r.isClaimed()) {
-        if (null == r.email)
+        { className: r, user: s } = e;
+    if (s.isClaimed()) {
+        if (null == s.email)
             t = {
                 buttonText: k.intl.string(k.t.OYkgVl),
                 buttonAriaLabel: k.intl.string(k.t['pvBD+f']),
@@ -248,25 +248,25 @@ function H(e) {
                 valueMessage: k.intl.string(k.t['8SfTNz']),
                 handleClick: () =>
                     (0, u.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('23379')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };
         else {
-            let { email: e } = r;
+            let { email: e } = s;
             t = {
                 buttonText: k.intl.string(k.t.bt75u7),
                 buttonAriaLabel: k.intl.string(k.t['8peUT0']),
                 buttonColor: u.Button.Colors.PRIMARY,
                 valueMessage: (0, i.jsx)(G, {
                     text: e,
-                    censor: D.E,
+                    censor: B.E,
                     revealLabel: k.intl.string(k.t['Zvx+yc']),
                     hideLabel: k.intl.string(k.t.nqTD4e)
                 }),
                 handleClick: () =>
                     (0, u.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('23379')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };
@@ -280,7 +280,7 @@ function H(e) {
             handleClick: () => p.Z.openClaimAccountModal()
         };
     return (0, i.jsxs)('div', {
-        className: a()(w.field, s),
+        className: a()(w.field, r),
         children: [
             (0, i.jsx)('div', {
                 className: w.constrainedRow,
@@ -314,21 +314,21 @@ function H(e) {
 }
 function Y(e) {
     let t,
-        { className: s, user: r } = e;
-    if (!r.isClaimed()) return null;
-    let { phone: l, email: o } = r,
+        { className: r, user: s } = e;
+    if (!s.isClaimed()) return null;
+    let { phone: l, email: o } = s,
         c = null != l;
     return (
         (t = c
             ? (0, i.jsx)(G, {
                   text: l,
-                  censor: D.n,
+                  censor: B.n,
                   revealLabel: k.intl.string(k.t.eY3xlZ),
                   hideLabel: k.intl.string(k.t.jllbv7)
               })
             : k.intl.string(k.t.I5kDqq)),
         (0, i.jsxs)('div', {
-            className: a()(w.field, s),
+            className: a()(w.field, r),
             children: [
                 (0, i.jsx)('div', {
                     className: w.constrainedRow,
@@ -364,7 +364,7 @@ function Y(e) {
                                           (0, i.jsx)(h.default, {
                                               ...e,
                                               title: k.intl.string(k.t['3CTiKi']),
-                                              children: r.hasFlag(Z.xW$.MFA_SMS) ? k.intl.string(k.t.jrhJys) : void 0,
+                                              children: s.hasFlag(Z.xW$.MFA_SMS) ? k.intl.string(k.t.jrhJys) : void 0,
                                               actionText: k.intl.string(k.t.N86XcH),
                                               handleSubmit: (e) => _.Z.removePhone(e, _.L.USER_SETTINGS_UPDATE)
                                           })
@@ -405,7 +405,7 @@ function W(e) {
             id: t.id,
             label: k.intl.string(k.t['/AXYnJ'])
         });
-    return y.Sb.useSetting() && R.wS
+    return y.Sb.useSetting() && O.wS
         ? (0, i.jsx)(u.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -441,8 +441,8 @@ function K() {
             return o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
         n = (0, b.ZP)(t.id),
-        s = (0, S.Z)(n),
-        r = y.co.useSetting(),
+        r = (0, S.Z)(n),
+        s = y.co.useSetting(),
         a = (0, c.e7)([A.Z], () => A.Z.getErrors()),
         l = null == a ? void 0 : null === (e = a.avatar) || void 0 === e ? void 0 : e[0],
         { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
@@ -465,11 +465,11 @@ function K() {
             (0, i.jsxs)('div', {
                 className: w.userInfo,
                 children: [
-                    (0, i.jsx)(F, {
+                    (0, i.jsx)(U, {
                         className: w.avatar,
                         src: d,
                         avatarDecoration: m,
-                        status: r,
+                        status: s,
                         size: u.AvatarSizes.SIZE_80,
                         'aria-label': t.username
                     }),
@@ -487,7 +487,7 @@ function K() {
                                 ]
                             }),
                             (0, i.jsx)(N.Z, {
-                                badges: s,
+                                badges: r,
                                 className: w.badgeList,
                                 badgeClassName: w.badge
                             })
@@ -515,25 +515,25 @@ function K() {
                         className: w.fieldList,
                         children: [
                             (0, i.jsx)(T.F, {
-                                setting: B.s6.ACCOUNT_DISPLAY_NAME,
+                                setting: D.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(V, {
                                     className: w.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: B.s6.ACCOUNT_USERNAME,
-                                children: (0, i.jsx)(U, { user: t })
+                                setting: D.s6.ACCOUNT_USERNAME,
+                                children: (0, i.jsx)(F, { user: t })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: B.s6.ACCOUNT_EMAIL,
+                                setting: D.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(H, {
                                     className: w.fieldSpacer,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: B.s6.ACCOUNT_PHONE_NUMBER,
+                                setting: D.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(Y, {
                                     className: w.fieldSpacer,
                                     user: t

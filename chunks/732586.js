@@ -10,7 +10,7 @@ var l = t(200651),
     a = t(911969),
     o = t(970184),
     s = t(293979),
-    c = t(234175);
+    c = t(858919);
 function u(e) {
     let n;
     let { type: t, style: u, label: d, placeholder: m, minLength: f, maxLength: p, required: h, value: x } = e,

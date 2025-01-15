@@ -6,7 +6,7 @@ t.d(n, {
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    a = t(826020);
+    a = t(603163);
 function s(e) {
     let { text: n, tooltipText: t, onClick: s } = e;
     return (0, i.jsx)(l.Tooltip, {

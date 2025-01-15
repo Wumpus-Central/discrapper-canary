@@ -1,6 +1,6 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(937579),
+    r = n(192379),
+    s = n(937579),
     a = n(104494),
     l = n(639119),
     o = n(702328),
@@ -11,8 +11,8 @@ t.Z = (e) => {
         d = (0, a.Ng)(),
         u = t === c.EZ.ApplicationStoreHome;
     return (
-        s.useEffect(() => {
-            (null != n || null != d) && (0, r.a)(n, d);
+        r.useEffect(() => {
+            (null != n || null != d) && (0, s.a)(n, d);
         }, [n, d]),
         (0, i.jsx)(o.Z, {
             isFullscreen: u,

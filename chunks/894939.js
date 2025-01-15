@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(596454),
     o = n(906732),
@@ -26,10 +26,10 @@ var i = n(200651),
     S = n(981631),
     b = n(710111),
     I = n(388032),
-    N = n(518782),
-    v = n(232186);
+    N = n(802713),
+    v = n(275477);
 function A(e) {
-    return (0, r.e7)([g.Z], () => {
+    return (0, s.e7)([g.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
         return g.Z.getSound(t === b.hY ? b.X8 : t, n);
@@ -37,21 +37,21 @@ function A(e) {
 }
 function j() {
     let { analyticsLocations: e } = (0, o.ZP)(),
-        [t, n] = s.useState(b.hY),
+        [t, n] = r.useState(b.hY),
         l = (0, p.tT)(t),
         _ = A(l),
-        j = (0, r.e7)([g.Z], () => g.Z.hasFetchedAllSounds()),
-        O = (null == l ? void 0 : l.type) === p.zx.GLOBAL,
+        j = (0, s.e7)([g.Z], () => g.Z.hasFetchedAllSounds()),
+        R = (null == l ? void 0 : l.type) === p.zx.GLOBAL,
         P = j && null != l && null == _;
-    s.useEffect(() => {
+    r.useEffect(() => {
         P && (0, h.tt)({ location: e });
     }, [P, e]),
-        s.useEffect(() => {
+        r.useEffect(() => {
             (0, m.w)();
         }, []);
-    let y = s.useCallback((e, t) => {
+    let y = r.useCallback((e, t) => {
         let { inDropdown: n } = t;
-        return null == e ? null : n ? (0, i.jsx)(R, { guildId: e.value }) : null;
+        return null == e ? null : n ? (0, i.jsx)(O, { guildId: e.value }) : null;
     }, []);
     return (0, i.jsxs)(a.FormSection, {
         className: N.container,
@@ -103,7 +103,7 @@ function j() {
                         children: [
                             (0, i.jsx)(x.Z, {
                                 sound: _,
-                                isGlobal: O,
+                                isGlobal: R,
                                 onSelect: (n) => {
                                     null == n ? (0, h.aC)(t, e) : (0, h.SZ)(t, n, e);
                                 }
@@ -121,15 +121,15 @@ function j() {
         ]
     });
 }
-function R(e) {
+function O(e) {
     let { guildId: t } = e,
-        n = (0, r.e7)([_.Z], () => {
+        n = (0, s.e7)([_.Z], () => {
             var e, n, i;
             return null === (i = _.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
         }),
-        s = A(n);
-    if (null == n || null == s) return null;
-    let { emojiId: o, emojiName: c } = s,
+        r = A(n);
+    if (null == n || null == r) return null;
+    let { emojiId: o, emojiName: c } = r,
         d = null != o || null != c;
     return (0, i.jsxs)('div', {
         className: N.pill,
@@ -148,7 +148,7 @@ function R(e) {
             (0, i.jsx)(a.Text, {
                 className: N.pillText,
                 variant: 'text-xs/medium',
-                children: s.name
+                children: r.name
             })
         ]
     });

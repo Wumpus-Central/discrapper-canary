@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(392711),
     o = n.n(l),
     c = n(268146),
@@ -25,22 +25,22 @@ var i = n(200651),
     v = n(482215),
     A = n(38618),
     j = n(32300),
-    R = n(371651),
-    O = n(388627),
+    O = n(371651),
+    R = n(388627),
     P = n(921801),
     y = n(857192),
-    D = n(558724),
-    B = n(808506),
+    B = n(558724),
+    D = n(808506),
     Z = n(998502),
     L = n(210887),
     M = n(601948),
     k = n(726985),
     w = n(981631),
-    F = n(908442),
-    U = n(282535),
-    V = n(684309),
-    G = n(232186),
-    H = n(763971);
+    U = n(908442),
+    F = n(222569),
+    V = n(134401),
+    G = n(275477),
+    H = n(584812);
 function Y(e, t, n) {
     return (
         t in e
@@ -68,16 +68,16 @@ let W = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
 function K(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
-class q extends s.Component {
+class q extends r.Component {
     render() {
-        let { project: e, overrideType: t, overrideId: n, disabled: s, error: r } = this.props;
+        let { project: e, overrideType: t, overrideId: n, disabled: r, error: s } = this.props;
         return (0, i.jsxs)(I.Z, {
             direction: I.Z.Direction.VERTICAL,
-            className: a()(U.buildOverrideGroup, G.marginBottom20, V.card, U.row),
+            className: a()(F.buildOverrideGroup, G.marginBottom20, V.card, F.row),
             children: [
                 (0, i.jsx)(f.Z, {
-                    className: a()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: s }),
-                    onClick: s ? void 0 : this.handleRemoveBuildOverride
+                    className: a()(F.removeBuildOverride, { [F.removeBuildOverrideDisabled]: r }),
+                    onClick: r ? void 0 : this.handleRemoveBuildOverride
                 }),
                 (0, i.jsxs)(I.Z, {
                     className: G.marginBottom8,
@@ -86,12 +86,12 @@ class q extends s.Component {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'Override Type',
-                                className: U.item,
+                                className: F.item,
                                 children: (0, i.jsx)(m.SingleSelect, {
                                     options: z,
                                     onChange: this.handleOverrideTypeChanged,
                                     value: t,
-                                    isDisabled: s
+                                    isDisabled: r
                                 })
                             })
                         }),
@@ -99,11 +99,11 @@ class q extends s.Component {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
-                                className: U.item,
+                                className: F.item,
                                 children: (0, i.jsx)(m.TextInput, {
                                     value: n,
                                     onChange: this.handleOverrideIdChanged,
-                                    disabled: s
+                                    disabled: r
                                 })
                             })
                         })
@@ -111,16 +111,16 @@ class q extends s.Component {
                 }),
                 (0, i.jsxs)(I.Z.Child, {
                     children: [
-                        null != r &&
-                            '' !== r &&
+                        null != s &&
+                            '' !== s &&
                             (0, i.jsx)(m.FormText, {
-                                className: U.item,
+                                className: F.item,
                                 style: { color: u.Z.unsafe_rawColors.RED_400.css },
                                 type: m.FormText.Types.DESCRIPTION,
-                                children: r
+                                children: s
                             }),
                         (0, i.jsxs)(m.FormText, {
-                            className: U.item,
+                            className: F.item,
                             type: m.FormText.Types.DESCRIPTION,
                             children: ['This controls the build that will be served for the ', (0, i.jsx)('code', { children: e }), ' project.']
                         })
@@ -145,7 +145,7 @@ class q extends s.Component {
             });
     }
 }
-class Q extends s.Component {
+class Q extends r.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
         let e = await (0, T.Ce)();
@@ -188,19 +188,19 @@ class Q extends s.Component {
         let { buildOverrides: e, saving: t, errors: n } = this.state;
         return null == e
             ? null
-            : o().map(e, (e, s) =>
+            : o().map(e, (e, r) =>
                   (0, i.jsx)(
                       q,
                       {
-                          project: s,
+                          project: r,
                           overrideType: e.type,
                           overrideId: e.id,
                           disabled: t,
-                          error: n[s],
+                          error: n[r],
                           onBuildOverrideUpdated: this.handleBuildOverrideUpdated,
                           onBuildOverrideRemoved: this.handleBuildOverrideRemoved
                       },
-                      s
+                      r
                   )
               );
     }
@@ -268,11 +268,11 @@ class Q extends s.Component {
     }
     render() {
         let e;
-        let { loading: t, saving: n, buildOverrides: s } = this.state;
-        e = t ? (0, i.jsx)(m.Spinner, { className: G.marginTop20 }) : null != s && 0 === Object.keys(s).length ? this.renderEmpty() : this.renderItems();
-        let r = !n && !t && this.getAvailableProjects().length > 0,
+        let { loading: t, saving: n, buildOverrides: r } = this.state;
+        e = t ? (0, i.jsx)(m.Spinner, { className: G.marginTop20 }) : null != r && 0 === Object.keys(r).length ? this.renderEmpty() : this.renderItems();
+        let s = !n && !t && this.getAvailableProjects().length > 0,
             a =
-                K(null != s ? s : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                K(null != r ? r : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, i.jsx)(m.Text, {
                           color: 'text-danger',
                           variant: 'text-md/normal',
@@ -298,7 +298,7 @@ class Q extends s.Component {
                                 children: (0, i.jsx)(m.Button, {
                                     size: m.ButtonSizes.SMALL,
                                     onClick: this.handleAddBuildOverride,
-                                    disabled: !r,
+                                    disabled: !s,
                                     children: 'Add Build Override'
                                 })
                             })
@@ -336,7 +336,7 @@ class Q extends s.Component {
                 let t = await ((e = this.getAvailableProjects()),
                 new Promise((t) => {
                     (0, m.openModal)((n) => {
-                        let s = (e) => {
+                        let r = (e) => {
                             n.onClose(), t(e);
                         };
                         return (0, i.jsxs)(m.ModalRoot, {
@@ -352,14 +352,14 @@ class Q extends s.Component {
                                 }),
                                 (0, i.jsx)(m.ModalContent, {
                                     children: (0, i.jsx)('div', {
-                                        className: U.buildOverrideList,
+                                        className: F.buildOverrideList,
                                         children: e.map((e) =>
                                             (0, i.jsx)(
                                                 m.Button,
                                                 {
                                                     value: e,
                                                     color: m.Button.Colors.GREEN,
-                                                    onClick: () => s(e),
+                                                    onClick: () => r(e),
                                                     children: e
                                                 },
                                                 e
@@ -371,7 +371,7 @@ class Q extends s.Component {
                                     children: (0, i.jsx)(m.Button, {
                                         color: m.Button.Colors.PRIMARY,
                                         look: m.Button.Looks.LINK,
-                                        onClick: () => s(null),
+                                        onClick: () => r(null),
                                         children: 'Nevermind'
                                     })
                                 })
@@ -395,11 +395,11 @@ class Q extends s.Component {
                         ...(null != n ? n[e] : {}),
                         ...t
                     },
-                    s = {
+                    r = {
                         ...this.state.buildOverrides,
                         [e]: i
                     };
-                this.setState({ buildOverrides: s });
+                this.setState({ buildOverrides: r });
             }),
             Y(this, 'handleBuildOverrideRemoved', (e) => {
                 let t = { ...this.state.buildOverrides };
@@ -450,15 +450,15 @@ class Q extends s.Component {
             });
     }
 }
-class X extends s.Component {
+class X extends r.Component {
     isMobile() {
         var e;
         return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
-        let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: s, allowedVersions: r, allowedVersionEntry: a, allowedVersionEntryError: l, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
-            u = F.S6.find((t) => t.value === e),
-            g = r.map((e) => ({
+        let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: r, allowedVersions: s, allowedVersionEntry: a, allowedVersionEntryError: l, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
+            u = U.S6.find((t) => t.value === e),
+            g = s.map((e) => ({
                 label: e,
                 value: e
             }));
@@ -470,7 +470,7 @@ class X extends s.Component {
                     className: G.marginBottom20,
                     children: (0, i.jsx)(m.SingleSelect, {
                         value: null != u ? u.value : null,
-                        options: F.S6,
+                        options: U.S6,
                         onChange: this.handleExpirationChange
                     })
                 }),
@@ -481,7 +481,7 @@ class X extends s.Component {
                           className: G.marginBottom20,
                           children: (0, i.jsx)(m.SingleSelect, {
                               value: t,
-                              options: F.F$,
+                              options: U.F$,
                               onChange: this.handleReleaseChannelChange
                           })
                       }),
@@ -520,7 +520,7 @@ class X extends s.Component {
                                       value: null,
                                       options: g,
                                       onChange: this.handleRemoveAllowedVersion,
-                                      isDisabled: 0 === r.length
+                                      isDisabled: 0 === s.length
                                   })
                               })
                           ]
@@ -540,7 +540,7 @@ class X extends s.Component {
                                           basis: '90%',
                                           children: (0, i.jsx)(m.TextArea, {
                                               value: n,
-                                              error: s,
+                                              error: r,
                                               onBlur: () => this.setUserEntryError(''),
                                               onChange: this.handleUserIDEntry
                                           })
@@ -591,21 +591,21 @@ class X extends s.Component {
     renderPayloadBlock() {
         let e = JSON.stringify(this.generatePayload(), null, 2),
             t = () => e,
-            s = (0, i.jsx)(b.GI, {
+            r = (0, i.jsx)(b.GI, {
                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                 webpackId: 364964,
                 renderFallback: t,
                 render: (n) => {
-                    let s = n.highlight('json', e, !0);
-                    return null == s
+                    let r = n.highlight('json', e, !0);
+                    return null == r
                         ? t()
                         : (0, i.jsx)('code', {
-                              className: 'hljs scroller '.concat(s.language, ' ').concat(H.scrollbarGhost, ' ').concat(U.codebox),
-                              dangerouslySetInnerHTML: { __html: s.value }
+                              className: 'hljs scroller '.concat(r.language, ' ').concat(H.scrollbarGhost, ' ').concat(F.codebox),
+                              dangerouslySetInnerHTML: { __html: r.value }
                           });
                 }
             });
-        return (0, i.jsx)(I.Z.Child, { children: (0, i.jsx)(m.Card, { children: (0, i.jsx)('pre', { children: s }) }) });
+        return (0, i.jsx)(I.Z.Child, { children: (0, i.jsx)(m.Card, { children: (0, i.jsx)('pre', { children: r }) }) });
     }
     renderLinkForm() {
         let { statusTextColor: e, statusText: t, publicLink: n } = this.state;
@@ -782,9 +782,9 @@ class X extends s.Component {
 }
 function J(e) {
     let { layoutDebuggingEnabled: t, cssDebuggingEnabled: n } = e,
-        { horizontalSpacing: r, verticalSpacing: a, maxHorizontalSpacing: l, maxVerticalSpacing: o } = (0, v.i)(),
-        c = s.useMemo(() => Array.from({ length: l + 1 }, (e, t) => t), [l]),
-        d = s.useMemo(() => Array.from({ length: o + 1 }, (e, t) => t), [o]);
+        { horizontalSpacing: s, verticalSpacing: a, maxHorizontalSpacing: l, maxVerticalSpacing: o } = (0, v.i)(),
+        c = r.useMemo(() => Array.from({ length: l + 1 }, (e, t) => t), [l]),
+        d = r.useMemo(() => Array.from({ length: o + 1 }, (e, t) => t), [o]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.FormTitle, {
@@ -826,7 +826,7 @@ function J(e) {
                                 children: 'Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.'
                             }),
                             (0, i.jsx)(m.Slider, {
-                                initialValue: r,
+                                initialValue: s,
                                 minValue: 0,
                                 maxValue: l,
                                 markers: c,
@@ -868,13 +868,13 @@ function $() {
 }
 function ee() {
     let e = (0, j.XE)('developer_settings'),
-        t = (0, d.e7)([R.Z], () => R.Z.getForcedRenderMode()),
-        [n, r] = s.useState(!1),
-        [a, l] = s.useState(''),
+        t = (0, d.e7)([O.Z], () => O.Z.getForcedRenderMode()),
+        [n, s] = r.useState(!1),
+        [a, l] = r.useState(''),
         o = e || t === E.R5.OUT_OF_PROCESS_V2 || t === E.R5.OUT_OF_PROCESS_V3;
-    return (s.useEffect(() => {
+    return (r.useEffect(() => {
         (async () => {
-            l(await (0, B.Y)());
+            l(await (0, D.Y)());
         })();
     }, []),
     n)
@@ -882,13 +882,13 @@ function ee() {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: [U.buttonsContainer, G.marginBottom20].join(' '),
+                      className: [F.buttonsContainer, G.marginBottom20].join(' '),
                       children: [
                           (0, i.jsx)(P.F, {
                               setting: k.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: o
                                   ? (0, i.jsx)(m.Button, {
-                                        onClick: () => (0, O.fK)(),
+                                        onClick: () => (0, R.fK)(),
                                         children: 'Open Overlay'
                                     })
                                   : (0, i.jsx)(m.Button, {
@@ -928,7 +928,7 @@ function ee() {
                           title: 'Crashes',
                           tag: m.FormTitleTags.H1,
                           children: (0, i.jsxs)('div', {
-                              className: U.buttonsContainer,
+                              className: F.buttonsContainer,
                               children: [
                                   (0, i.jsx)(m.SingleSelect, {
                                       value: void 0,
@@ -986,7 +986,7 @@ function ee() {
                                       }
                                   }),
                                   (0, i.jsx)(m.Button, {
-                                      onClick: () => r(!0),
+                                      onClick: () => s(!0),
                                       children: 'React Crash'
                                   }),
                                   (0, i.jsx)(m.Button, {
@@ -1015,7 +1015,7 @@ let et = d.ZP.connectStores([y.default], () => ({
     appDirectoryIncludesInactiveCollections: y.default.appDirectoryIncludesInactiveCollections,
     preventPopoutClose: y.default.preventPopoutClose
 }))((e) => {
-    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: s, isLoggingOverlayEvents: r, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, appDirectoryIncludesInactiveCollections: h, preventPopoutClose: x } = e;
+    let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: r, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, appDirectoryIncludesInactiveCollections: h, preventPopoutClose: x } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(P.F, {
@@ -1045,7 +1045,7 @@ let et = d.ZP.connectStores([y.default], () => ({
                         (0, i.jsx)(P.F, {
                             setting: k.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                             children: (0, i.jsx)(m.FormSwitch, {
-                                value: s,
+                                value: r,
                                 note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
                                 onChange: (e) => (0, p.y)({ logGatewayEvents: e }),
                                 children: 'Enable Logging of Gateway Events to Console'
@@ -1054,7 +1054,7 @@ let et = d.ZP.connectStores([y.default], () => ({
                         (0, i.jsx)(P.F, {
                             setting: k.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                             children: (0, i.jsx)(m.FormSwitch, {
-                                value: r,
+                                value: s,
                                 note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
                                 onChange: (e) => (0, p.y)({ logOverlayEvents: e }),
                                 children: 'Enable Logging of Overlay RPC Events & Commands'
@@ -1127,10 +1127,10 @@ let et = d.ZP.connectStores([y.default], () => ({
                             setting: k.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: [U.buttonsContainer, G.marginBottom20].join(' '),
+                                    className: [F.buttonsContainer, G.marginBottom20].join(' '),
                                     children: (0, i.jsx)(M.S, {})
                                 }),
-                                (0, i.jsx)(m.FormDivider, { className: U.divider })
+                                (0, i.jsx)(m.FormDivider, { className: F.divider })
                             ]
                         })
                     ]
@@ -1144,8 +1144,8 @@ let et = d.ZP.connectStores([y.default], () => ({
     });
 });
 function en() {
-    let e = (0, d.e7)([D.Z], () => D.Z.getSurveyOverride()),
-        [t, n] = s.useState(null != e ? e : '');
+    let e = (0, d.e7)([B.Z], () => B.Z.getSurveyOverride()),
+        [t, n] = r.useState(null != e ? e : '');
     return (0, i.jsx)(P.F, {
         setting: k.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, i.jsxs)(m.FormSection, {
@@ -1155,13 +1155,13 @@ function en() {
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Copy the ID of the Survey you want to test:' }),
                 (0, i.jsxs)('form', {
-                    className: U.surveyOverride,
+                    className: F.surveyOverride,
                     onSubmit: (e) => {
                         e.preventDefault(), t.length > 0 ? x.Xq(t) : x.Xq(null);
                     },
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: U.surveyOverrideInput,
+                            className: F.surveyOverrideInput,
                             value: t,
                             onChange: n
                         }),
@@ -1178,7 +1178,7 @@ function en() {
 function ei() {
     var e;
     let t = (0, d.e7)([S.Z], () => S.Z.overrideId()),
-        [n, r] = s.useState(null !== (e = S.Z.overrideId()) && void 0 !== e ? e : '');
+        [n, s] = r.useState(null !== (e = S.Z.overrideId()) && void 0 !== e ? e : '');
     return (0, i.jsx)(P.F, {
         setting: k.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, i.jsxs)(m.FormSection, {
@@ -1188,12 +1188,12 @@ function ei() {
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Enter the ID of the changelog you want to test' }),
                 (0, i.jsxs)('div', {
-                    className: U.surveyOverride,
+                    className: F.surveyOverride,
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: U.surveyOverrideInput,
+                            className: F.surveyOverrideInput,
                             value: n,
-                            onChange: r
+                            onChange: s
                         }),
                         (0, i.jsx)(m.Button, {
                             onClick: () => {
@@ -1208,11 +1208,11 @@ function ei() {
         })
     });
 }
-class es extends s.PureComponent {
+class er extends r.PureComponent {
     render() {
-        return (0, i.jsxs)(s.Fragment, {
+        return (0, i.jsxs)(r.Fragment, {
             children: [(0, i.jsx)(et, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(en, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(Q, {})]
         });
     }
 }
-t.Z = es;
+t.Z = er;

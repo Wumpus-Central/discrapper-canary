@@ -6,8 +6,8 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(660216),
     o = n(40908),
@@ -19,7 +19,7 @@ var i = n(200651),
     h = n(914010),
     p = n(727785),
     x = n(388032),
-    f = n(198491);
+    f = n(464960);
 function _() {}
 let E = [p.h8.VOICE_CHANNEL];
 function C(e) {
@@ -48,11 +48,11 @@ function I() {
 }
 function N(e) {
     var t, n;
-    let { keybind: r } = e,
-        o = s.useRef(r);
-    s.useEffect(() => void (o.current = r));
-    let [d, u] = s.useState(null !== (n = null === (t = r.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== n ? n : void 0),
-        m = s.useCallback(() => {
+    let { keybind: s } = e,
+        o = r.useRef(s);
+    r.useEffect(() => void (o.current = s));
+    let [d, u] = r.useState(null !== (n = null === (t = s.params) || void 0 === t ? void 0 : t.channelId) && void 0 !== n ? n : void 0),
+        m = r.useCallback(() => {
             (0, a.openModalLazy)(
                 async () => (e) =>
                     (0, i.jsx)(v, {
@@ -91,18 +91,18 @@ function N(e) {
 }
 function v(e) {
     let { transitionState: t, onClose: n, onSelect: l } = e,
-        c = s.useId(),
-        _ = s.useRef(null),
+        c = r.useId(),
+        _ = r.useRef(null),
         {
             mouseFocusEnabled: T,
             enableMouseFocus: N,
             disableMouseFocus: v
         } = (function () {
-            let e = s.useRef(!1),
-                t = s.useCallback(() => {
+            let e = r.useRef(!1),
+                t = r.useCallback(() => {
                     e.current = !0;
                 }, []),
-                n = s.useCallback(() => {
+                n = r.useCallback(() => {
                     e.current = !1;
                 }, []);
             return {
@@ -114,15 +114,15 @@ function v(e) {
         {
             query: A,
             updateQuery: j,
-            queryResults: R
+            queryResults: O
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: E,
             autocompleterBeforeCreateSearchContext: C
         }),
-        O = (function (e) {
+        R = (function (e) {
             let t = '' !== e,
-                n = (0, r.Wu)(
+                n = (0, s.Wu)(
                     [m.ZP, u.Z, h.Z],
                     () => {
                         let e = h.Z.getGuildId();
@@ -139,18 +139,18 @@ function v(e) {
             return t ? null : n;
         })(A),
         { focusedIndex: P, setFocusedIndex: y } = (function (e) {
-            let [t, n] = s.useState(0),
-                i = s.useRef(e);
+            let [t, n] = r.useState(0),
+                i = r.useRef(e);
             return (
                 e !== i.current && 0 !== t && n(0),
-                s.useEffect(() => void (i.current = e)),
+                r.useEffect(() => void (i.current = e)),
                 {
                     focusedIndex: t,
                     setFocusedIndex: n
                 }
             );
         })(A);
-    s.useEffect(() => {
+    r.useEffect(() => {
         let { current: e } = _;
         !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
@@ -158,13 +158,13 @@ function v(e) {
                 row: P
             });
     }, [P]);
-    let D = null != O ? O.length : R.length,
-        B = (() => {
-            if (null != O) {
+    let B = null != R ? R.length : O.length,
+        D = (() => {
+            if (null != R) {
                 var e;
-                return null === (e = O[P]) || void 0 === e ? void 0 : e.id;
+                return null === (e = R[P]) || void 0 === e ? void 0 : e.id;
             }
-            let t = R[P];
+            let t = O[P];
             if ((null == t ? void 0 : t.type) === p.h8.VOICE_CHANNEL) return t.record.id;
         })();
     return (0, i.jsx)('div', {
@@ -190,57 +190,57 @@ function v(e) {
                                         break;
                                     case 'enter': {
                                         let e = (() => {
-                                            if (null != O) return O[P];
-                                            let e = R[P];
+                                            if (null != R) return R[P];
+                                            let e = O[P];
                                             if ((null == e ? void 0 : e.type) === p.h8.VOICE_CHANNEL) return e.record;
                                         })();
                                         null == e ? l(void 0) : l(e.id), n();
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === P ? y(D - 1) : y(P - 1);
+                                        0 === P ? y(B - 1) : y(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        P >= D - 1 ? y(0) : y(P + 1);
+                                        P >= B - 1 ? y(0) : y(P + 1);
                                 }
                         },
                         placeholder: x.intl.string(x.t.tG0r7u),
                         role: 'combobox',
                         'aria-controls': c,
-                        'aria-expanded': D > 0,
-                        'aria-activedescendant': D > 0 && null != B ? B : void 0,
+                        'aria-expanded': B > 0,
+                        'aria-activedescendant': B > 0 && null != D ? D : void 0,
                         'aria-autocomplete': 'list',
                         spellCheck: !1
                     })
                 }),
-                0 === D && '' !== A && (0, i.jsx)(I, {}),
-                (D > 0 || '' === A) &&
+                0 === B && '' !== A && (0, i.jsx)(I, {}),
+                (B > 0 || '' === A) &&
                     (0, i.jsx)(a.ListThin, {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
                         ref: _,
-                        sections: [D],
+                        sections: [B],
                         renderRow: function (e) {
                             let { row: t } = e,
-                                s = (() => {
-                                    if (null != O) return O[t];
-                                    let e = R[t];
+                                r = (() => {
+                                    if (null != R) return R[t];
+                                    let e = O[t];
                                     if ((null == e ? void 0 : e.type) === p.h8.VOICE_CHANNEL) return e.record;
                                 })();
-                            if (null == s) return null;
-                            let r = null != s.parent_id ? u.Z.getChannel(s.parent_id) : void 0,
-                                a = g.Z.getGuild(s.guild_id);
+                            if (null == r) return null;
+                            let s = null != r.parent_id ? u.Z.getChannel(r.parent_id) : void 0,
+                                a = g.Z.getGuild(r.guild_id);
                             return (0, i.jsx)(
                                 d.$W,
                                 {
-                                    id: s.id,
-                                    channel: s,
-                                    category: r,
+                                    id: r.id,
+                                    channel: r,
+                                    category: s,
                                     focused: P === t,
                                     onMouseEnter: () => T.current && y(t),
                                     onClick: () => {
-                                        l(s.id), n();
+                                        l(r.id), n();
                                     },
                                     onFocus: () => y(t),
                                     children:
@@ -251,7 +251,7 @@ function v(e) {
                                               })
                                             : null
                                 },
-                                s.id
+                                r.id
                             );
                         },
                         renderListHeader: b,
@@ -270,9 +270,9 @@ function A(e) {
     let { channelId: t } = e,
         {
             channel: n,
-            category: s,
+            category: r,
             guild: l
-        } = (0, r.cj)([u.Z, g.Z], () => {
+        } = (0, s.cj)([u.Z, g.Z], () => {
             let e = null != t ? u.Z.getChannel(t) : void 0;
             return null != e
                 ? {
@@ -296,7 +296,7 @@ function A(e) {
         : (0, i.jsx)(d.$W, {
               channel: n,
               id: n.id,
-              category: s,
+              category: r,
               onClick: _,
               onFocus: _,
               onMouseEnter: _,

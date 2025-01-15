@@ -20,7 +20,7 @@ var i,
     p = n(347469),
     m = n(740492),
     f = n(36645),
-    g = n(311572);
+    g = n(36982);
 ((l = i || (i = {}))[(l.PostSidebar = 0)] = 'PostSidebar'), (l[(l.ThreadSidebar = 1)] = 'ThreadSidebar'), (l[(l.CallChatSidebar = 2)] = 'CallChatSidebar'), (l[(l.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (l[(l.HomeSidebar = 4)] = 'HomeSidebar'), (l[(l.ParticipantsSidebar = 5)] = 'ParticipantsSidebar');
 function C(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: a } = e,

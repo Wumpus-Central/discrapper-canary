@@ -12,7 +12,7 @@ var o = t(200651),
     f = t(245581),
     x = t(760373),
     m = t(388032),
-    p = t(822466);
+    p = t(96763);
 n.default = function (e) {
     let { transitionState: n, streamKey: t, channelId: v } = e,
         _ = (0, r.e7)([l.Z], () => {

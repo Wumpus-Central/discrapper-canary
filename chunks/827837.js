@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i = n(544891),
-    s = n(570140),
-    r = n(230307),
+    r = n(570140),
+    s = n(230307),
     a = n(70956),
     l = n(981631);
 let o = 6 * a.Z.Millis.HOUR;
 async function c() {
-    let e = r.Z.lastFetched;
+    let e = s.Z.lastFetched;
     if (!(null != e && Date.now() - e < o))
         try {
             let e = await i.tn.get({
@@ -18,7 +18,7 @@ async function c() {
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
-            s.Z.dispatch({
+            r.Z.dispatch({
                 type: 'USER_ACTIVITY_STATISTICS_FETCH_SUCCESS',
                 statistics: e.body
             });

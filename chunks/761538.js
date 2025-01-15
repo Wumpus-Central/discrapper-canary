@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(388032),
-    a = n(873970);
+    a = n(125961);
 function o(e) {
     let { message: t } = e;
     return (0, i.jsxs)(r.Clickable, {

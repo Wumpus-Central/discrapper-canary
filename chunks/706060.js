@@ -6,12 +6,12 @@ n.d(t, {
     n(47120),
     n(653041);
 var i = n(200651),
-    s = n(192379),
-    r = n(772848),
+    r = n(192379),
+    s = n(772848),
     a = n(481060),
     l = n(259580),
     o = n(991346),
-    c = n(377465);
+    c = n(306280);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
     return (0, i.jsx)(a.Text, {
@@ -21,8 +21,8 @@ function d(e) {
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [m, g] = s.useState(1 === o),
-        h = s.useCallback(() => {
+        [m, g] = r.useState(1 === o),
+        h = r.useCallback(() => {
             g(!m);
         }, [m, g]);
     if (0 === n.length)
@@ -36,7 +36,7 @@ function u(e) {
                     hasChildren: !1
                 })
             },
-            (0, r.Z)()
+            (0, s.Z)()
         );
     let p = m
         ? (0, i.jsx)('div', {
@@ -52,7 +52,7 @@ function u(e) {
                               children: e.children,
                               depth: o + 1
                           },
-                          (0, r.Z)()
+                          (0, s.Z)()
                       )
                   )
           })
@@ -80,7 +80,7 @@ function u(e) {
                 p
             ]
         },
-        (0, r.Z)()
+        (0, s.Z)()
     );
 }
 function m() {
@@ -104,9 +104,9 @@ function m() {
             children: []
         });
     });
-    let s = [...t];
-    for (; s.length > 0; ) {
-        let e = s.shift();
+    let r = [...t];
+    for (; r.length > 0; ) {
+        let e = r.shift();
         if (null == e) continue;
         let t = n
             .filter((t) => t.parent === e.setting)
@@ -114,7 +114,7 @@ function m() {
                 setting: e.setting,
                 children: []
             }));
-        (e.children = t), s.push(...t);
+        (e.children = t), r.push(...t);
     }
     return (0, i.jsxs)('div', {
         className: c.root,
@@ -135,7 +135,7 @@ function m() {
                                 children: e.children,
                                 depth: 1
                             },
-                            (0, r.Z)()
+                            (0, s.Z)()
                         )
                     )
             })

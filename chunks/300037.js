@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(399606),
     l = n(481060),
     o = n(975298),
@@ -14,15 +14,15 @@ var s = n(120356),
     p = n(981631),
     x = n(474936),
     f = n(388032),
-    _ = n(719721);
+    _ = n(526423);
 t.Z = function (e) {
-    let { className: t, guildId: n, boostingVariant: s } = e,
+    let { className: t, guildId: n, boostingVariant: r } = e,
         E = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
         { fractionalState: C } = (0, o.Z)(),
         T = C === x.a$.FP_ONLY;
     return null == E
         ? (0, i.jsx)('div', {
-              className: r()(t, _.guildContainer),
+              className: s()(t, _.guildContainer),
               children: (0, i.jsx)('div', {
                   className: _.guildInfoContainer,
                   children: (0, i.jsx)(l.Text, {
@@ -32,7 +32,7 @@ t.Z = function (e) {
               })
           })
         : (0, i.jsxs)('div', {
-              className: r()(t, _.guildContainer),
+              className: s()(t, _.guildContainer),
               children: [
                   (0, i.jsx)(c.Z, {
                       className: _.__invalid_guildIcon,
@@ -69,7 +69,7 @@ t.Z = function (e) {
                           })
                       ]
                   }),
-                  s
+                  r
                       ? (0, i.jsx)(u.Z, {
                             guild: E,
                             analyticsLocation: {

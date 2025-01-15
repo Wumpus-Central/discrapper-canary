@@ -5,33 +5,33 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(299379),
+var r = n(481060),
+    s = n(299379),
     a = n(447293),
     l = n(58839),
     o = n(981631),
-    c = n(274497);
+    c = n(424999);
 let d = { offset: { top: -8 } };
 function u() {
     return (0, i.jsxs)('div', {
         className: c.socialLinks,
         children: [
-            (0, i.jsx)(s.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 target: '_blank',
                 tabIndex: -1,
                 rel: 'author',
                 title: 'Twitter',
-                href: (0, r.Z)(o.RK.TWITTER),
+                href: (0, s.Z)(o.RK.TWITTER),
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(s.XNeutralIcon, {
+                children: (0, i.jsx)(r.XNeutralIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     colorClass: c.foreground,
                     'aria-hidden': !0
                 })
             }),
-            (0, i.jsx)(s.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 target: '_blank',
                 rel: 'author',
                 title: 'Instagram',
@@ -39,14 +39,14 @@ function u() {
                 href: o.fK7.INSTAGRAM_URL,
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(s.InstagramNeutralIcon, {
+                children: (0, i.jsx)(r.InstagramNeutralIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     colorClass: c.foreground,
                     'aria-hidden': !0
                 })
             }),
-            (0, i.jsx)(s.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 target: '_blank',
                 rel: 'author',
                 title: 'Facebook',
@@ -54,14 +54,14 @@ function u() {
                 href: o.fK7.FACEBOOK_URL,
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(s.FacebookNeutralIcon, {
+                children: (0, i.jsx)(r.FacebookNeutralIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     colorClass: c.foreground,
                     'aria-hidden': !0
                 })
             }),
-            (0, i.jsx)(s.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 target: '_blank',
                 rel: 'author',
                 title: 'YouTube',
@@ -76,7 +76,7 @@ function u() {
                     'aria-hidden': !0
                 })
             }),
-            (0, i.jsx)(s.Anchor, {
+            (0, i.jsx)(r.Anchor, {
                 target: '_blank',
                 rel: 'author',
                 title: 'TikTok',

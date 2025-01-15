@@ -1,17 +1,17 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(906732),
     o = n(646476),
     c = n(197115),
     d = n(388032),
-    u = n(587362),
+    u = n(211225),
     m = n(568147),
     g = n(332796);
 t.Z = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: s, location: h, analyticsLocation: p } = e,
+    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: h, analyticsLocation: p } = e,
         { analyticsLocations: x } = (0, l.ZP)(h),
         f = (0, o.rK)(),
         { enabled: _ } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: f }),
@@ -19,11 +19,11 @@ t.Z = (e) => {
     return (0, i.jsx)(l.Gt, {
         value: x,
         children: (0, i.jsxs)('div', {
-            className: r()(u.container, t),
+            className: s()(u.container, t),
             children: [
                 (0, i.jsxs)('div', {
                     className: u.textContainer,
-                    style: s,
+                    style: r,
                     children: [
                         (0, i.jsx)(a.Heading, {
                             variant: 'heading-lg/extrabold',
@@ -47,7 +47,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)('img', {
                     src: E ? g : m,
-                    className: r()(u.bannerImage, n),
+                    className: s()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })
             ]

@@ -1,6 +1,6 @@
 var i,
-    s,
     r,
+    s,
     a,
     l = n(392711),
     o = n.n(l),
@@ -36,15 +36,15 @@ class _ extends (a = d.ZP.Store) {
         return x;
     }
 }
-(r = 'MFAStore'),
-    (s = 'displayName') in (i = _)
-        ? Object.defineProperty(i, s, {
-              value: r,
+(s = 'MFAStore'),
+    (r = 'displayName') in (i = _)
+        ? Object.defineProperty(i, r, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = r),
+        : (i[r] = s),
     (t.Z = new _(u.Z, {
         MFA_ENABLE_SUCCESS: function (e) {
             let { token: t, codes: n } = e;

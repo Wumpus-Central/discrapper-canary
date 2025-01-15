@@ -24,7 +24,7 @@ var i = n(200651),
     I = n(607187),
     E = n(981631),
     b = n(388032),
-    Z = n(414360),
+    Z = n(890107),
     N = n(334732);
 function S(e) {
     let { channel: t, guild: n, width: l, inPopout: r, handleClose: a, userParticipantCount: s } = e;
@@ -151,7 +151,7 @@ function j(e) {
                             onClick: function () {
                                 (0, c.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
+                                        let { default: e } = await Promise.all([n.e('7654'), n.e('46949')]).then(n.bind(n, 560114));
                                         return (n) =>
                                             (0, i.jsx)(e, {
                                                 ...n,

@@ -49,8 +49,8 @@ var l = t(200651),
     q = t(176505),
     J = t(50493),
     H = t(388032),
-    Y = t(998810),
-    Q = t(247627);
+    Y = t(51107),
+    Q = t(302133);
 function K(e) {
     let { guild: n, previousChannel: t, currentTab: r, onTabSelect: a } = e,
         s = (0, b.jS)(n.id, 'Member Safety Page'),

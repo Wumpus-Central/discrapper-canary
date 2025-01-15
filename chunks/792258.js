@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(468194),
     l = n(399606),
     o = n(481060),
@@ -9,13 +9,13 @@ var s = n(120356),
     d = n(914788),
     u = n(981631),
     m = n(388032),
-    g = n(77659);
+    g = n(600368);
 let h = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
     if (void 0 === n) return null;
-    let s = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+    let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
         p = n.toString(),
         x = n.getIconURL(40, !0),
         f = null,
@@ -32,7 +32,7 @@ t.Z = (e) => {
                 children: [
                     null != f
                         ? (0, i.jsx)('div', {
-                              className: r()(g.childWrapper, g.acronym),
+                              className: s()(g.childWrapper, g.acronym),
                               'aria-hidden': !0,
                               children: f
                           })
@@ -52,7 +52,7 @@ t.Z = (e) => {
                     (0, i.jsxs)('div', {
                         className: g.header,
                         children: [
-                            s
+                            r
                                 ? (0, i.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',

@@ -1,4 +1,4 @@
-n.d(t, {
+s.d(t, {
     ah: function () {
         return r;
     },
@@ -6,9 +6,9 @@ n.d(t, {
         return o;
     }
 });
-var s = n(818083),
-    i = n(987338);
-let r = (0, s.B)({
+var n = s(818083),
+    i = s(987338);
+let r = (0, n.B)({
     kind: 'user',
     id: '2024-11_marketing_page_v2_experiment',
     label: 'Marketing Page V2 Experiment',

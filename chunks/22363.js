@@ -8,7 +8,7 @@ var a = r(120356),
     c = r(533432),
     d = r(149203),
     f = r(185923),
-    _ = r(405156);
+    _ = r(180105);
 let h = (e) => {
     let { accessory: n, pickerIntention: r, headerClassName: a, emojiListRef: h, onKeyDown: p, onFocus: m, autoFocus: g, searchBarRef: E, hasTabWrapper: v, diversitySurrogate: I, isBurstReaction: T, onBurstReactionToggle: b, renderHeader: y } = e,
         S = (0, i.jsxs)(i.Fragment, {

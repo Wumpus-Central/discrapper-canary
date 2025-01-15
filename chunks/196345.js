@@ -21,7 +21,7 @@ var r = t(120356),
     o = t(454585),
     a = t(489813),
     s = t(388032),
-    c = t(119866);
+    c = t(376150);
 function d(e) {
     let { terms: n, channelId: t, className: r } = e;
     return (0, i.jsx)('div', {

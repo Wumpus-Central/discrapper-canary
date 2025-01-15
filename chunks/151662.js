@@ -1,6 +1,6 @@
 var i,
-    s,
     r,
+    s,
     a,
     l = n(442837),
     o = n(570140);
@@ -17,15 +17,15 @@ class m extends (a = l.ZP.Store) {
         };
     }
 }
-(r = 'EmailSettingsStore'),
-    (s = 'displayName') in (i = m)
-        ? Object.defineProperty(i, s, {
-              value: r,
+(s = 'EmailSettingsStore'),
+    (r = 'displayName') in (i = m)
+        ? Object.defineProperty(i, r, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[s] = r),
+        : (i[r] = s),
     (t.Z = new m(o.Z, {
         CONNECTION_OPEN: u,
         LOGOUT: u,

@@ -12,7 +12,7 @@ var a = r(120356),
     u = r(436774),
     c = r(197115),
     d = r(474936),
-    f = r(998663);
+    f = r(533474);
 function _(e) {
     let { showUpsell: n, text: r, textVariant: a, button: _, buttonAnalyticsObject: h, className: p, onSubscribeModalClose: m, showShadow: g = !0, position: E = 'floating' } = e,
         v = (0, l.useSpring)({

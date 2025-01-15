@@ -11,7 +11,7 @@ var a = n(200651),
     m = n(260483),
     g = n(314208),
     f = n(124368),
-    x = n(316931);
+    x = n(21250);
 function v(e) {
     let { channel: t } = e,
         n = (0, r.e7)([m.Z], () => {
@@ -48,7 +48,7 @@ t.Z = l.memo(function (e) {
         onClick: (e) => l(c, e.shiftKey),
         onContextMenu: (e) =>
             (0, i.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('75206')]).then(n.bind(n, 422200));
+                let { default: e } = await Promise.all([n.e('38902'), n.e('77564'), n.e('99990')]).then(n.bind(n, 422200));
                 return (t) =>
                     (0, a.jsx)(e, {
                         ...t,

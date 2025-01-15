@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(906732),
     c = n(642619),
@@ -18,14 +18,14 @@ var i = n(200651),
     p = n(981631),
     x = n(474936),
     f = n(388032),
-    _ = n(184057);
+    _ = n(412499);
 function E(e) {
-    let { user: t, guild: n, className: r, sectionTitle: E, forcedDivider: C = !1, withTutorial: T = !1, showBorder: S = !1, isTryItOutFlow: b = !1, initialSelectedEffectId: I } = e,
+    let { user: t, guild: n, className: s, sectionTitle: E, forcedDivider: C = !1, withTutorial: T = !1, showBorder: S = !1, isTryItOutFlow: b = !1, initialSelectedEffectId: I } = e,
         N = (0, m.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: A } = (0, o.ZP)(),
-        { pendingProfileEffectId: j, errors: R } = (0, m.bd)(n),
-        O = s.useCallback(
+        { pendingProfileEffectId: j, errors: O } = (0, m.bd)(n),
+        R = r.useCallback(
             () =>
                 (0, c.H)({
                     analyticsLocations: A,
@@ -34,7 +34,7 @@ function E(e) {
                 }),
             [A, I, n]
         );
-    s.useEffect(() => {
+    r.useEffect(() => {
         v &&
             d.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: x.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
@@ -43,21 +43,21 @@ function E(e) {
     }, [v, A]);
     let P = null != n,
         y = b || void 0 !== j ? null != j : null != N,
-        D = T ? l.ShinyButton : l.Button;
+        B = T ? l.ShinyButton : l.Button;
     return (0, i.jsx)(g.Z, {
         forcedDivider: C,
         borderType: h.Y.PREMIUM,
         hasBackground: !0,
         title: E,
         showBorder: S,
-        errors: R,
-        className: r,
+        errors: O,
+        className: s,
         children: (0, i.jsxs)('div', {
             className: _.buttonsContainer,
             children: [
-                (0, i.jsx)(D, {
+                (0, i.jsx)(B, {
                     size: l.Button.Sizes.SMALL,
-                    onClick: O,
+                    onClick: R,
                     className: a()({ [_.buttonHighlighted]: T }),
                     children: f.intl.string(f.t['0nEVoK'])
                 }),

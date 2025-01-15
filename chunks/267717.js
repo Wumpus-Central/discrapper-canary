@@ -9,22 +9,22 @@ n.r(t),
     });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(490220),
+var r = n(481060),
+    s = n(490220),
     a = n(594174),
     l = n(98278),
     o = n(790527),
     c = n(474936),
     d = n(981631),
     u = n(388032),
-    m = n(761346);
+    m = n(374695);
 function g(e) {
     let t = a.default.getCurrentUser();
     if (null != t)
-        (0, s.openModalLazy)(async () => {
-            let { default: s } = await Promise.resolve().then(n.bind(n, 267717));
+        (0, r.openModalLazy)(async () => {
+            let { default: r } = await Promise.resolve().then(n.bind(n, 267717));
             return (n) =>
-                (0, i.jsx)(s, {
+                (0, i.jsx)(r, {
                     user: t,
                     analyticsSource: d.Sbl.PROFILE_PANEL,
                     analyticsLocation: {
@@ -37,7 +37,7 @@ function g(e) {
         });
 }
 function h(e) {
-    let { user: t, onClose: n, ...s } = e;
+    let { user: t, onClose: n, ...r } = e;
     return (0, i.jsx)(o.Z, {
         modalClassName: m.modal,
         modalContentClassName: m.modalContent,
@@ -55,12 +55,12 @@ function h(e) {
         showEnhancedUpsell: !0,
         LeadingComponent: (0, i.jsx)('div', {
             className: m.previewContainerParent,
-            children: (0, i.jsx)(r.Z, {
+            children: (0, i.jsx)(s.Z, {
                 containerClassName: m.previewContainer,
                 user: t,
                 disabledInputs: !0
             })
         }),
-        ...s
+        ...r
     });
 }

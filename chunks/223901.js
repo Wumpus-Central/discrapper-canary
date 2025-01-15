@@ -10,7 +10,7 @@ var n = t(200651),
     o = t(91159),
     s = t(593130),
     i = t(388032),
-    b = t(826731);
+    b = t(595290);
 function d(e) {
     let { channel: a, onClose: t, transitionState: d } = e;
     return (

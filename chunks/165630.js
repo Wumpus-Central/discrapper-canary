@@ -1,7 +1,7 @@
 n(653041);
 var i,
-    s = n(442837),
-    r = n(570140),
+    r = n(442837),
+    s = n(570140),
     a = n(381496),
     l = n(430824);
 function o(e, t, n) {
@@ -26,7 +26,7 @@ let c = {},
         };
     };
 d();
-class u extends (i = s.ZP.PersistedStore) {
+class u extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         null != e && (c = e), this.waitFor(l.Z);
     }
@@ -45,7 +45,7 @@ class u extends (i = s.ZP.PersistedStore) {
 }
 o(u, 'displayName', 'GuildAffinitiesStore'),
     o(u, 'persistKey', 'GuildAffinitiesStore'),
-    (t.Z = new u(r.Z, {
+    (t.Z = new u(s.Z, {
         CONNECTION_OPEN: function () {
             return Date.now() - c.lastFetched > 86400000 && (0, a.j)(), !1;
         },
@@ -56,12 +56,12 @@ o(u, 'displayName', 'GuildAffinitiesStore'),
                 (c.lastFetched = Date.now()),
                 t.forEach((e, t) => {
                     let { affinity: n, guild_id: i } = e,
-                        s = {
+                        r = {
                             score: n,
                             guildId: i,
                             index: t
                         };
-                    (c.guildAffinitiesByGuildId[i] = s), c.guildAffinities.push(s);
+                    (c.guildAffinitiesByGuildId[i] = r), c.guildAffinities.push(r);
                 });
         },
         LOGOUT: function () {

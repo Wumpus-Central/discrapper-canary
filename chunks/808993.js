@@ -10,7 +10,7 @@ var r = n(120356),
     l = n(481060),
     o = n(388905),
     a = n(388032),
-    c = n(232186);
+    c = n(275477);
 function d(e) {
     let { email: t } = e;
     return (0, i.jsxs)('div', {

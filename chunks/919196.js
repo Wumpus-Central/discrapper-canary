@@ -24,7 +24,7 @@ var i = n(200651),
     v = n(725875),
     C = n(981631),
     N = n(388032),
-    I = n(380813);
+    I = n(972463);
 function j(e) {
     let { application: t, guild: n, integration: l, ...r } = e;
     return (0, i.jsx)(a.ConfirmModal, {

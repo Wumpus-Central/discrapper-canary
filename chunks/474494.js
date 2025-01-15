@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(319147),
-    r = n(306276),
+var r = n(319147),
+    s = n(306276),
     a = n(510236),
     l = n(133398),
     o = n(722283),
@@ -31,16 +31,16 @@ var s = n(319147),
     v = n(55826),
     A = n(218776),
     j = n(414653),
-    R = n(297141),
-    O = n(26517),
+    O = n(297141),
+    R = n(26517),
     P = n(93125),
     y = n(278583),
-    D = n(814437);
-let B = new Map([
+    B = n(814437);
+let D = new Map([
     ['BG', a],
     ['CZ', c],
     ['HU', f],
-    ['RO', O],
+    ['RO', R],
     ['SE', P],
     ['CY', o],
     ['EE', u],
@@ -51,14 +51,14 @@ let B = new Map([
     ['LT', S],
     ['LU', b],
     ['MT', N],
-    ['SK', D],
+    ['SK', B],
     ['SI', y],
     ['GR', p],
     ['FI', g],
-    ['PT', R],
+    ['PT', O],
     ['NO', A],
-    ['BE', r],
-    ['AT', s],
+    ['BE', s],
+    ['AT', r],
     ['CH', l],
     ['FR', h],
     ['DE', d],
@@ -70,12 +70,12 @@ let B = new Map([
 ]);
 function Z(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !B.has(n)) return null;
-    let s = B.get(n);
+    if (null == n || !D.has(n)) return null;
+    let r = D.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',
-        src: s
+        src: r
     });
 }

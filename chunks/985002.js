@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    s = n(881052),
-    r = n(260722),
+    r = n(881052),
+    s = n(260722),
     a = n(914788),
     l = n(292352);
 function o(e) {
@@ -25,9 +25,9 @@ function o(e) {
                 if (!I) {
                     c(!0);
                     try {
-                        await (0, r.Yw)(e.id, l.ne.ACTIVE), null == n || n();
+                        await (0, s.Yw)(e.id, l.ne.ACTIVE), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         c(!1);
@@ -41,9 +41,9 @@ function o(e) {
                 if (!I) {
                     u(!0);
                     try {
-                        await (0, r.Yw)(e.id, l.ne.DECLINED), null == n || n();
+                        await (0, s.Yw)(e.id, l.ne.DECLINED), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         u(!1);
@@ -57,9 +57,9 @@ function o(e) {
                 if (!I) {
                     g(!0);
                     try {
-                        await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
+                        await (0, s.Yw)(e.id, l.ne.INACTIVE), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         g(!1);
@@ -73,9 +73,9 @@ function o(e) {
                 if (!I) {
                     p(!0);
                     try {
-                        await (0, r.fc)(e.id), null == n || n();
+                        await (0, s.fc)(e.id), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         p(!1);
@@ -84,27 +84,27 @@ function o(e) {
             },
             [I, t, n]
         ),
-        R = i.useCallback(async () => {
+        O = i.useCallback(async () => {
             if (!x) {
                 f(!0);
                 try {
-                    await (0, r.qd)(), null == n || n();
+                    await (0, s.qd)(), null == n || n();
                 } catch (n) {
-                    let e = new s.Hx(n);
+                    let e = new r.Hx(n);
                     null == t || t(e);
                 } finally {
                     f(!1);
                 }
             }
         }, [x, t, n]),
-        O = i.useCallback(
+        R = i.useCallback(
             async (e) => {
                 if (!C) {
                     T(!0);
                     try {
-                        await r.ZP.fetchTeenActivity(e), null == n || n();
+                        await s.ZP.fetchTeenActivity(e), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         T(!1);
@@ -118,9 +118,9 @@ function o(e) {
                 if (!_) {
                     E(!0);
                     try {
-                        await r.ZP.requestLink(e, i), null == n || n();
+                        await s.ZP.requestLink(e, i), null == n || n();
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         E(!1);
@@ -134,8 +134,8 @@ function o(e) {
         declineLinkRequest: v,
         disconnectLinkRequest: A,
         cancelLinkRequest: j,
-        selectTeenUser: O,
-        getLinkCode: R,
+        selectTeenUser: R,
+        getLinkCode: O,
         requestLink: P,
         loadMore: i.useCallback(
             async (e) => {
@@ -146,9 +146,9 @@ function o(e) {
                 if (!S && null != l && null != o) {
                     b(!0);
                     try {
-                        await r.ZP.fetchMoreTeenActivity(o, e, l, i.event_id);
+                        await s.ZP.fetchMoreTeenActivity(o, e, l, i.event_id);
                     } catch (n) {
-                        let e = new s.Hx(n);
+                        let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
                         b(!1);

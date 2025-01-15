@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    s = n(442837),
-    r = n(16084),
+    r = n(442837),
+    s = n(16084),
     a = n(624941),
     l = n(388032);
 function o() {
@@ -15,7 +15,7 @@ function o() {
             entitlements: n,
             error: o,
             isSubmitting: c
-        } = (0, s.cj)([a.Z], () => {
+        } = (0, r.cj)([a.Z], () => {
             var e;
             return {
                 entitlements: null !== (e = a.Z.entitlements) && void 0 !== e ? e : [],
@@ -59,7 +59,7 @@ function o() {
             isSubmitting: c,
             responseMessage: e,
             redeemVirtualCurrency: function (e) {
-                return (0, r.df)(e);
+                return (0, s.df)(e);
             }
         }
     );

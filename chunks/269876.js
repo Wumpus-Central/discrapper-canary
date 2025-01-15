@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(46973),
     c = n(846519),
@@ -18,14 +18,14 @@ var i = n(200651),
     h = n(131951),
     p = n(65154),
     x = n(388032),
-    f = n(897237),
-    _ = n(587987),
-    E = n(652849),
-    C = n(232186);
+    f = n(449975),
+    _ = n(404461),
+    E = n(847854),
+    C = n(275477);
 let T = (0, g.hQ)();
 function S() {
-    let [e, t] = s.useState(-100),
-        [n, r] = s.useState(!1),
+    let [e, t] = r.useState(-100),
+        [n, s] = r.useState(!1),
         { threshold: S, autoThreshold: b } = (0, l.cj)([h.Z], () => h.Z.getModeOptions()),
         {
             inputMode: I,
@@ -37,7 +37,7 @@ function S() {
             isEnabled: h.Z.isEnabled()
         }));
     function A(e, n) {
-        t(e), r((n & p.Dg.VOICE) === p.Dg.VOICE);
+        t(e), s((n & p.Dg.VOICE) === p.Dg.VOICE);
     }
     function j(e, t) {
         m.Z.setMode(I, {
@@ -45,7 +45,7 @@ function S() {
             autoThreshold: t
         });
     }
-    s.useEffect(() => {
+    r.useEffect(() => {
         let e = new c.V7();
         return (
             e.start(1000, () => {
@@ -56,7 +56,7 @@ function S() {
             }
         );
     }, []);
-    let R = (0, i.jsx)('section', {
+    let O = (0, i.jsx)('section', {
         className: a()(f.inputSensitivityToggle, f.manual),
         children: (0, i.jsx)(u.Slider, {
             initialValue: S + 100,
@@ -79,7 +79,7 @@ function S() {
     });
     return (
         b &&
-            (R = (0, i.jsxs)('section', {
+            (O = (0, i.jsxs)('section', {
                 className: f.inputSensitivityToggle,
                 children: [
                     (0, i.jsx)('div', {
@@ -126,7 +126,7 @@ function S() {
                                         ]
                                     })
                             }),
-                        R
+                        O
                     ]
                 }),
                 !v &&

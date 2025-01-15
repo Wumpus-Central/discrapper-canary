@@ -16,7 +16,7 @@ var o = n(481060),
     c = n(293979),
     l = n(954654),
     u = n(388032),
-    d = n(517753);
+    d = n(817895);
 function _(e) {
     let { title: t, onClose: n, transitionState: _ } = e,
         { components: p, applicationIconURL: S, applicationName: I, submissionState: f, error: C, validators: T, onSubmit: m } = (0, c.X9)(e, n);

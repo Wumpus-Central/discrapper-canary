@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    s,
     r,
+    s,
     a,
     l = n(442837),
     o = n(570140);
@@ -15,14 +15,14 @@ class u extends (i = l.ZP.Store) {
     }
 }
 (a = 'AuthSessionsStore'),
-    (r = 'displayName') in (s = u)
-        ? Object.defineProperty(s, r, {
+    (s = 'displayName') in (r = u)
+        ? Object.defineProperty(r, s, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = a),
+        : (r[s] = a),
     (t.Z = new u(o.Z, {
         LOGOUT: d,
         LOGIN_SUCCESS: d,

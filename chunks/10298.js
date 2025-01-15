@@ -4,15 +4,15 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(481060),
-    r = n(488931);
+    r = n(481060),
+    s = n(878443);
 let a = (e) => {
     let { children: t, header: n } = e;
     return (0, i.jsxs)('div', {
-        className: r.settingsPage,
+        className: s.settingsPage,
         children: [
-            (0, i.jsx)(s.HeadingLevel, {
-                children: (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(r.HeadingLevel, {
+                children: (0, i.jsx)(r.Heading, {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     children: n

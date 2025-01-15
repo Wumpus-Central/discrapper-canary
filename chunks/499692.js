@@ -15,7 +15,7 @@ var a = t(200651),
     f = t(797908),
     v = t(292191),
     C = t(981631),
-    x = t(318708);
+    x = t(604501);
 function h(e) {
     let { collection: n, index: t, onSelectApplication: r } = e,
         o = (function (e) {

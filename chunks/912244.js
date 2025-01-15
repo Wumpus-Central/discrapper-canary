@@ -1,10 +1,10 @@
 n.d(t, {
     N: function () {
-        return s;
+        return r;
     }
 });
 var i = n(520540);
-function s(e) {
+function r(e) {
     let { enabled: t, eligibleToFetch: n } = i.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
     return {
         enabled: t,

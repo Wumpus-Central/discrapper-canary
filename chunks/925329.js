@@ -7,7 +7,7 @@ var a = r(120356),
     u = r(565138),
     c = r(474936),
     d = r(388032),
-    f = r(613671);
+    f = r(377906);
 let _ = {
     XXSMALL: f.xxsmall,
     XSMALL: f.xsmall,

@@ -37,7 +37,7 @@ class _ extends a.Z {
         let { source: t } = e;
         (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('16764')]).then(n.bind(n, 746882));
+                let { default: e } = await Promise.all([n.e('63288'), n.e('1337'), n.e('10756')]).then(n.bind(n, 746882));
                 return (n) =>
                     (0, i.jsx)(e, {
                         source: t,

@@ -4,14 +4,14 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(230711),
     l = n(267642),
     o = n(981631),
     c = n(474936),
     d = n(388032),
-    u = n(629777);
+    u = n(276657);
 function m(e) {
     let { guildBoostSlot: t, onClose: m, hasCancelableGuildBoostSlot: g, premiumSubscription: h, onSelect: p, fractionalState: x } = e,
         f = {
@@ -40,32 +40,32 @@ function m(e) {
             x === c.a$.NONE && ((f.transfer.disabled = !0), (f.transfer.subtext = d.intl.string(d.t.LiLRRU))), (f.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (f.cancel.disabled = !0), (f.uncancel.disabled = !0);
     }
     x !== c.a$.NONE && ((f.cancel.subtext = d.intl.string(d.t.dq4vq6)), (f.cancel.disabled = !0), (f.uncancel.disabled = !0));
-    let _ = s.useMemo(
+    let _ = r.useMemo(
         () =>
             h.isPausedOrPausePending && x === c.a$.NONE
-                ? (0, i.jsx)(r.MenuItem, {
+                ? (0, i.jsx)(s.MenuItem, {
                       id: 'manage-subscription',
                       label: d.intl.string(d.t.obRG6e),
                       action: () => a.Z.open(o.oAB.SUBSCRIPTIONS),
-                      iconLeft: r.LightbulbIcon,
+                      iconLeft: s.LightbulbIcon,
                       className: u.manageSubscription
                   })
                 : null,
         [x, h]
     );
-    return (0, i.jsxs)(r.Menu, {
+    return (0, i.jsxs)(s.Menu, {
         onSelect: p,
         navId: 'subscription-context',
         variant: 'fixed',
         'aria-label': d.intl.string(d.t.ogxXGh),
         onClose: m,
         children: [
-            (0, i.jsx)(r.MenuItem, {
+            (0, i.jsx)(s.MenuItem, {
                 id: 'apply',
                 label: f.transfer.label,
                 subtext: f.transfer.subtext,
                 action: function () {
-                    (0, r.openModalLazy)(async () => {
+                    (0, s.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -78,12 +78,12 @@ function m(e) {
                 disabled: f.transfer.disabled
             }),
             (0, l.tl)(t)
-                ? (0, i.jsx)(r.MenuItem, {
+                ? (0, i.jsx)(s.MenuItem, {
                       id: 'uncancel',
                       label: f.uncancel.label,
                       subtext: f.uncancel.subtext,
                       action: function () {
-                          (0, r.openModalLazy)(async () => {
+                          (0, s.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -94,12 +94,12 @@ function m(e) {
                       },
                       disabled: f.uncancel.disabled
                   })
-                : (0, i.jsx)(r.MenuItem, {
+                : (0, i.jsx)(s.MenuItem, {
                       id: 'cancel',
                       label: f.cancel.label,
                       subtext: f.cancel.subtext,
                       action: function () {
-                          (0, r.openModalLazy)(async () => {
+                          (0, s.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
                               return (n) =>
                                   (0, i.jsx)(e, {

@@ -12,7 +12,7 @@ var l = t(481060),
     c = t(934861),
     a = t(981631),
     d = t(388032),
-    u = t(997243);
+    u = t(323823);
 function f(e) {
     let { isCurrentUser: n, user: t, relationshipType: f, friendToken: m, onClose: x } = e,
         { newestAnalyticsLocation: I } = (0, r.ZP)();

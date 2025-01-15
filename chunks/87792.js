@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(399606),
     o = n(481060),
     c = n(626135),
@@ -25,21 +25,21 @@ var i = n(200651),
     v = n(292352),
     A = n(981631),
     j = n(388032),
-    R = n(95857);
-function O() {
-    let e = s.useCallback(() => {
+    O = n(758160);
+function R() {
+    let e = r.useCallback(() => {
         (0, o.openModalLazy)(async () => {
             let { default: e } = await n.e('66462').then(n.bind(n, 756226));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }, []);
     return (0, i.jsx)(o.Clickable, {
-        className: R.tooltip,
+        className: O.tooltip,
         onClick: e,
         children: (0, i.jsx)(o.CircleInformationIcon, {
             size: 'custom',
             color: 'currentColor',
-            className: R.icon,
+            className: O.icon,
             width: 15,
             height: 15
         })
@@ -47,22 +47,22 @@ function O() {
 }
 function P(e) {
     let { displayType: t } = e,
-        n = s.useCallback(() => {
+        n = r.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.Wu8BKy), o.ToastType.FAILURE));
         }, []),
-        r = (0, _.Z)(),
+        s = (0, _.Z)(),
         l = (0, x.ws)(t),
         c = (0, x.C7)(t),
         { loadMore: u, isMoreLoading: h } = (0, p.G)({ onError: n }),
         f = v.tx.get(t),
-        [E, C] = s.useState(v.iB),
+        [E, C] = r.useState(v.iB),
         b = (0, g.Xi)({ location: 'family_center_activity_section_web' }),
-        I = s.useCallback(() => {
+        I = r.useCallback(() => {
             C((e) => e + v.iB), u(t);
         }, [t, u]);
     a()(f, 'No text for action type');
     let N = f.sectionHeader(c),
-        A = s.useCallback(
+        A = r.useCallback(
             (e) => {
                 let { row: t } = e,
                     n = l[t];
@@ -82,51 +82,51 @@ function P(e) {
             },
             [l, f.timestampFormatter]
         ),
-        O = s.useCallback(
+        R = r.useCallback(
             () =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.Text, {
-                            className: R.sectionHeader,
+                            className: O.sectionHeader,
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: N
                         }),
                         void 0 !== f.sectionDescription
                             ? (0, i.jsx)(o.Text, {
-                                  className: R.sectionDescription,
+                                  className: O.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: f.sectionDescription(null != r && r, b)
+                                  children: f.sectionDescription(null != s && s, b)
                               })
                             : null
                     ]
                 }),
-            [N, f, r, b]
+            [N, f, s, b]
         );
     if (0 === l.length) return null;
     let P = l.slice(0, E);
     return (0, i.jsxs)('div', {
-        className: R.actionSection,
+        className: O.actionSection,
         children: [
-            O(),
+            R(),
             (0, i.jsx)('div', {
-                className: R.actions,
+                className: O.actions,
                 style: { maxHeight: 65 * P.length },
                 children: P.map((e, t) => A({ row: t }))
             }),
             P.length !== c
                 ? (0, i.jsx)(o.Clickable, {
-                      className: R.loadMoreBar,
+                      className: O.loadMoreBar,
                       onClick: I,
                       role: 'button',
                       children: h
                           ? (0, i.jsx)(o.Spinner, {
                                 type: o.Spinner.Type.PULSING_ELLIPSIS,
-                                className: R.spinner
+                                className: O.spinner
                             })
                           : (0, i.jsx)(o.Text, {
-                                className: R.loadMore,
+                                className: O.loadMore,
                                 variant: 'text-sm/bold',
                                 children: j.intl.format(j.t['7dMmJS'], { pageSize: Math.min(c - P.length, v.iB) })
                             })
@@ -139,12 +139,12 @@ let y = () => {
         let e = (0, _.Z)(),
             t = (0, E.mq)(v.ne.ACTIVE),
             n = (0, h.o)(j.intl.formatToPlainString(j.t['7hqFl5'], { activeLinks: t.length }), j.intl.string(j.t['Q/D/0d'])),
-            s = (0, m.Qr)(!!e),
-            r = (0, E.Rd)(s);
+            r = (0, m.Qr)(!!e),
+            s = (0, E.Rd)(r);
         return e && t.length > 1
             ? (0, i.jsx)(o.Text, {
                   variant: 'eyebrow',
-                  children: r
+                  children: s
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -153,7 +153,7 @@ let y = () => {
                           : (0, i.jsx)(o.EyeIcon, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: R.icon
+                                className: O.icon
                             }),
                       (0, i.jsx)(o.Text, {
                           variant: 'eyebrow',
@@ -162,22 +162,22 @@ let y = () => {
                   ]
               });
     },
-    D = (e) => {
-        let { userId: t, subText: n, avatarSize: s = o.AvatarSizes.SIZE_40 } = e,
-            r = (0, f.I)(t);
-        return void 0 === r
+    B = (e) => {
+        let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
+            s = (0, f.I)(t);
+        return void 0 === s
             ? null
             : (0, i.jsxs)('div', {
-                  className: R.accountRow,
+                  className: O.accountRow,
                   children: [
                       (0, i.jsx)(b.r, {
-                          user: r,
-                          avatarSize: s
+                          user: s,
+                          avatarSize: r
                       }),
                       (0, i.jsxs)('div', {
-                          className: R.headerText,
+                          className: O.headerText,
                           children: [
-                              (0, i.jsx)(I.Z, { user: r }),
+                              (0, i.jsx)(I.Z, { user: s }),
                               void 0 !== n
                                   ? (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/medium',
@@ -190,24 +190,24 @@ let y = () => {
                   ]
               });
     },
-    B = () => {
+    D = () => {
         let e = (0, E.mq)(v.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, p.G)({}),
-            r = e.map((e) => ({
+            s = e.map((e) => ({
                 label: e.id,
                 value: e.id
             })),
-            a = s.useCallback(
+            a = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(D, {
+                    (0, i.jsx)(B, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
                 []
             );
         return (0, i.jsx)(o.Select, {
-            className: R.select,
+            className: O.select,
             renderOptionLabel: a,
             renderOptionValue: (e) => {
                 let [t] = e;
@@ -218,18 +218,18 @@ let y = () => {
                 n(e), c.default.track(A.rMx.FAMILY_CENTER_ACTION, { action: v.YC.SelectTeen });
             },
             isSelected: (e) => e === t,
-            options: r
+            options: s
         });
     },
     Z = (e) => {
         let { userId: t } = e,
             n = (0, _.Z)(),
-            s = (0, E.mq)(v.ne.ACTIVE),
-            r = (0, m.Qr)(!!n),
-            a = (0, E.Rd)(r);
-        return n && 1 !== s.length
-            ? (0, i.jsx)(B, {})
-            : (0, i.jsx)(D, {
+            r = (0, E.mq)(v.ne.ACTIVE),
+            s = (0, m.Qr)(!!n),
+            a = (0, E.Rd)(s);
+        return n && 1 !== r.length
+            ? (0, i.jsx)(D, {})
+            : (0, i.jsx)(B, {
                   userId: t,
                   subText: a
               });
@@ -237,28 +237,28 @@ let y = () => {
 t.Z = (e) => {
     let { user: t } = e,
         n = Array.from(v.tx.entries()),
-        s = (0, x.kE)(),
-        r = (0, m.t3)(),
-        a = (0, E.Rd)(r);
+        r = (0, x.kE)(),
+        s = (0, m.t3)(),
+        a = (0, E.Rd)(s);
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: O.container,
         children: [
             (0, i.jsxs)('div', {
-                className: R.connectedCounter,
-                children: [(0, i.jsx)(y, {}), (0, i.jsx)(O, {})]
+                className: O.connectedCounter,
+                children: [(0, i.jsx)(y, {}), (0, i.jsx)(R, {})]
             }),
             (0, i.jsxs)('div', {
-                className: R.card,
+                className: O.card,
                 children: [
                     (0, i.jsx)('div', {
-                        className: R.header,
+                        className: O.header,
                         children: (0, i.jsx)(Z, { userId: t.id })
                     }),
                     (0, i.jsxs)('div', {
-                        className: R.content,
+                        className: O.content,
                         children: [
                             (0, i.jsx)('div', {
-                                className: R.activityCounterRow,
+                                className: O.activityCounterRow,
                                 children: n.map((e) => {
                                     let [t, n] = e;
                                     return (0, i.jsx)(
@@ -272,14 +272,14 @@ t.Z = (e) => {
                                 })
                             }),
                             (0, i.jsx)('div', {
-                                className: R.activityOverview,
-                                children: s
+                                className: O.activityOverview,
+                                children: r
                                     ? n.map((e) => {
                                           let [t] = e;
                                           return (0, i.jsx)(P, { displayType: t }, ''.concat(t, '-list'));
                                       })
                                     : (0, i.jsx)(N.Z, {
-                                          className: R.emptyActivity,
+                                          className: O.emptyActivity,
                                           text: null != a ? a : ''
                                       })
                             })

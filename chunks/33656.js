@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(724458);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(921801),
@@ -17,28 +17,28 @@ var i = n(200651),
     g = n(930441),
     h = n(726985),
     p = n(388032),
-    x = n(774927),
-    f = n(232186);
+    x = n(599954),
+    f = n(275477);
 function _(e) {
-    let { label: t, onChange: n, enabled: s, subLabel: r } = e;
+    let { label: t, onChange: n, enabled: r, subLabel: s } = e;
     return (0, i.jsx)(o.FormSwitch, {
-        value: !!s,
+        value: !!r,
         onChange: n,
-        note: r,
+        note: s,
         children: t
     });
 }
 function E() {
     let e = (0, l.e7)([d.Z], () => d.Z.getSubsection()),
-        t = s.createRef(),
-        { categories: n, initialized: r } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
-    s.useEffect(() => {
-        if (null == r) (0, u.Y7)();
+        t = r.createRef(),
+        { categories: n, initialized: s } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
+    r.useEffect(() => {
+        if (null == s) (0, u.Y7)();
         else if (e === g.vG.toUpperCase()) {
             var n;
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
-    }, [r, t, e]);
+    }, [s, t, e]);
     let E = g.M0.reduce((e, t) => e || !!n[t], !1),
         C = {
             [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
@@ -47,7 +47,7 @@ function E() {
             [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
             [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
-    return r
+    return s
         ? (0, i.jsxs)(c.F, {
               setting: h.s6.NOTIFICATIONS_EMAILS,
               children: [
@@ -58,20 +58,20 @@ function E() {
                       title: p.intl.string(p.t.TPchzM),
                       children: [
                           g.Od.map((e) => {
-                              let { category: t, label: s, subLabel: r } = e,
+                              let { category: t, label: r, subLabel: s } = e,
                                   a = C[t],
                                   l = (0, i.jsx)(
                                       _,
                                       {
-                                          label: s(),
-                                          subLabel: r(),
+                                          label: r(),
+                                          subLabel: s(),
                                           enabled: n[t],
                                           onChange: (e) => {
                                               var n, i;
                                               return (n = t), (i = e), void (0, u.pR)(n, i);
                                           }
                                       },
-                                      s()
+                                      r()
                                   );
                               return null != a
                                   ? (0, i.jsx)(
@@ -80,7 +80,7 @@ function E() {
                                             setting: a,
                                             children: l
                                         },
-                                        s()
+                                        r()
                                     )
                                   : l;
                           }),

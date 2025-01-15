@@ -20,7 +20,7 @@ var s = o(200651),
     x = o(995390),
     v = o(665578),
     E = o(388032),
-    j = o(416510);
+    j = o(509937);
 function y(e) {
     let { applicationIcon: i, applicationId: o, applicationName: n, command: u, guildId: y, onClose: f, transitionState: C } = e,
         [g, k] = t.useState(null),

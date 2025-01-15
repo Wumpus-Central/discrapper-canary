@@ -1,11 +1,11 @@
 n.d(t, {
     P: function () {
-        return l;
+        return r;
     }
 });
 var i = n(192379),
     a = n(135431);
-function l(e, t) {
+function r(e, t) {
     let n = i.useMemo(
         () =>
             null != e &&

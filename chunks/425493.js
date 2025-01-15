@@ -11,7 +11,7 @@ var s = r(120356),
     l = r(873546),
     u = r(481060),
     c = r(388032),
-    d = r(121139);
+    d = r(196938);
 function f(e) {
     let { closeAction: n, variant: r = '', keybind: i, className: s } = e;
     return (0, a.jsxs)('div', {

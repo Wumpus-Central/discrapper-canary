@@ -19,8 +19,8 @@ var i = l(442837),
     v = l(533159),
     f = l(981631),
     j = l(388032),
-    p = l(671702),
-    S = l(689762);
+    p = l(754014),
+    S = l(554987);
 function N(n) {
     let { appId: e, skuId: l, transitionState: N, onClose: _, onHeaderTitleClick: I, children: R, footer: T } = n,
         C = (0, i.e7)([u.default], () => u.default.isAuthenticated()),

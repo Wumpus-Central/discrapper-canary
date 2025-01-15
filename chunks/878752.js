@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(361057),
     E = n(997614),
     b = n(159909),
-    Z = n(637335);
+    Z = n(487762);
 function N(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: N, themeable: S = !1 } = e,
         { groupedButtons: T } = (0, m.ZP)({ location: 'VoiceEffectsActionBar' }),

@@ -33,7 +33,7 @@ var i = r(200651),
     L = r(666984),
     x = r(386019),
     w = r(228168),
-    P = r(249942);
+    P = r(456684);
 function M(e) {
     var n;
     let { user: r, currentUser: s, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: F } = e,

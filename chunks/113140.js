@@ -11,7 +11,7 @@ var e = o(481060),
     l = o(471253),
     i = o(939863),
     s = o(388032),
-    r = o(868953);
+    r = o(602416);
 function d(n) {
     let { transitionState: t, onClose: o, channel: d } = n,
         h = (0, c.Dt)(),

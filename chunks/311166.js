@@ -8,7 +8,7 @@ t(192379);
 var i = t(481060),
     r = t(195367),
     a = t(388032),
-    s = t(115672);
+    s = t(701961);
 function o(e) {
     let { isSlideReady: n, ...t } = e;
     return (0, l.jsxs)('div', {

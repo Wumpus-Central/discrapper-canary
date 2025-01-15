@@ -2,8 +2,8 @@ var n = i(200651);
 i(192379);
 var a = i(481060),
     l = i(570140),
-    o = i(103879),
-    s = i(800530);
+    s = i(103879),
+    o = i(800530);
 t.Z = {
     open(e) {
         (0, a.openModalLazy)(
@@ -22,6 +22,6 @@ t.Z = {
         l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS' });
     },
     start_verification_check() {
-        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL' }), setTimeout(() => (0, o._w)(), s.TX);
+        l.Z.dispatch({ type: 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL' }), setTimeout(() => (0, s._w)(), o.TX);
     }
 };

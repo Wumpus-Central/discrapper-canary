@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    s = n(276444),
-    r = n(912244),
+    r = n(276444),
+    s = n(912244),
     a = n(232076);
 let l = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { enabled: n, eligibleToFetch: l } = (0, r.N)(e);
+        { enabled: n, eligibleToFetch: l } = (0, s.N)(e);
     (0, a.B)(e, !l || t);
-    let o = (0, i.e7)([s.Z], () => s.Z.getIsEligibleToSendReferrals());
+    let o = (0, i.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
     return n && o;
 };

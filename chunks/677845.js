@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(251564),
     b = n(695492),
     Z = n(981631),
-    N = n(948899);
+    N = n(936229);
 function S(e) {
     let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
         R = (0, c.bp)() === Z.IlC.POPOUT,

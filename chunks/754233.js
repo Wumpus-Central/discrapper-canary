@@ -6,7 +6,7 @@ var o = n(481060),
     d = n(430824),
     s = n(614812),
     i = n(388032),
-    r = n(263924);
+    r = n(254783);
 e.default = (t) => {
     let { onClose: e, guildId: n } = t,
         c = (0, l.Dt)(),

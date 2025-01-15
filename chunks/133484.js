@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(410030),
     l = n(100527),
     o = n(906732),
@@ -15,14 +15,14 @@ var i = n(200651),
     m = n(981631),
     g = n(474936),
     h = n(388032),
-    p = n(304556),
+    p = n(185648),
     x = n(699623),
     f = n(820350);
 function _(e) {
     let { user: t, showOverlay: n, children: _ } = e,
         E = (0, a.ZP)(),
         { analyticsLocations: C } = (0, o.ZP)(l.Z.PREMIUM_UPSELL_OVERLAY);
-    return (s.useEffect(() => {
+    return (r.useEffect(() => {
         n &&
             d.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
                 location_stack: C,
@@ -52,12 +52,12 @@ function _(e) {
                           (0, i.jsxs)('div', {
                               className: p.upsellTextContainer,
                               children: [
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-lg/semibold',
                                       color: 'always-white',
                                       children: h.intl.string(h.t.dMaDFR)
                                   }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'always-white',
                                       children: h.intl.string(h.t.F7sgFB)
@@ -65,8 +65,8 @@ function _(e) {
                               ]
                           }),
                           (0, i.jsx)(c.Z, {
-                              size: r.Button.Sizes.LARGE,
-                              color: r.Button.Colors.GREEN,
+                              size: s.Button.Sizes.LARGE,
+                              color: s.Button.Colors.GREEN,
                               buttonText: u.ZP.isPremium(t) ? h.intl.string(h.t.AfRWIy) : h.intl.string(h.t.nkdUys),
                               subscriptionTier: g.Si.TIER_2
                           })

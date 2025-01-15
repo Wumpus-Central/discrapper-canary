@@ -10,7 +10,7 @@ var r = i(120356),
     a = i(481060),
     s = i(596454),
     o = i(889989),
-    c = i(630480);
+    c = i(980970);
 function d(n) {
     let e,
         { applicationId: i, storeListingBenefits: r, skuBenefits: a, className: s } = n;

@@ -5,18 +5,18 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(969090),
+    r = n(192379),
+    s = n(969090),
     a = n(481060),
-    l = n(619236),
-    o = n(992167),
+    l = n(759136),
+    o = n(507182),
     c = n(388032);
 function d() {
-    s.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
-    let [, e] = s.useState({});
+    r.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
+    let [, e] = r.useState({});
     return (
-        s.useEffect(() => {
-            (0, r.waitForAllDefaultIntlMessagesLoaded)().then(() => {
+        r.useEffect(() => {
+            (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => {
                 e({});
             });
         }, []),

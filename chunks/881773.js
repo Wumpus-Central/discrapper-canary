@@ -24,7 +24,7 @@ var r = n(200651),
     x = n(604162),
     h = n(981631),
     _ = n(388032),
-    T = n(451680);
+    T = n(225624);
 let N = '-:--',
     D = {
         [g.rq.PLAYING]: {
@@ -126,15 +126,15 @@ function j(e) {
     let { videoRef: l, quest: x, playerState: N, animSpring: j, visible: b, seekForwardEnabled: R, hideCaptionBtn: L, handlePlaybackBtnClick: O, handleTranscriptBtnClick: k, handleCaptionBtnClick: M, handleFullScreenBtnClick: P, handleSeekBackBtnClick: y, handleSeekForwardBtnClick: q, handleControlBarPendingInteraction: w } = e,
         B = (0, v.Q3)('ListSectionItem'),
         U = (0, p.km)((e) => e.volume),
-        F = (0, p.km)((e) => e.setVolume),
-        Z = (0, p.km)((e) => e.muted),
+        Z = (0, p.km)((e) => e.setVolume),
+        F = (0, p.km)((e) => e.muted),
         V = (0, p.km)((e) => e.setMuted),
         Y = (0, p.km)((e) => e.transcriptEnabled),
         G = (0, p.km)((e) => e.captionEnabled),
         z = (0, p.km)((e) => e.fullScreenEnabled),
         H = (0, a.e7)([m.Z], () => m.Z.useReducedMotion),
         K = (0, a.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [Q, W] = i.useState(Z ? 0 : U),
+        [Q, W] = i.useState(F ? 0 : U),
         [X, J] = i.useState(!1),
         [$, ee] = i.useState(!1),
         [{ volumeAnimSpring: et }, en] = (0, d.useSpring)(() => ({
@@ -164,8 +164,8 @@ function j(e) {
             [ei]
         ),
         es = i.useCallback(() => {
-            if (null != l.current) 0 === Q ? (el(U), V(!1), eo(x.id, U)) : (F(Q), el(0), V(!0), eo(x.id, 0));
-        }, [l, Q, el, U, V, eo, x.id, F]),
+            if (null != l.current) 0 === Q ? (el(U), V(!1), eo(x.id, U)) : (Z(Q), el(0), V(!0), eo(x.id, 0));
+        }, [l, Q, el, U, V, eo, x.id, Z]),
         ea = () => {
             J(!0);
         },
@@ -335,7 +335,7 @@ function j(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        el(e), F(e), eo(x.id, e), $ && (ee(!1), w(!1)), Z && e > 0 && V(!1);
+                                        el(e), Z(e), eo(x.id, e), $ && (ee(!1), w(!1)), F && e > 0 && V(!1);
                                     },
                                     asValueChanges: (e) => {
                                         el(e), !$ && (ee(!0), w(!0));

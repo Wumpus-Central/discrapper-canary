@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
-    u = n(881483);
+    u = n(84750);
 let m = [
     {
         name: 'gif',
@@ -20,7 +20,7 @@ let m = [
     }
 ];
 function g(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: _ = !1, forcedDivider: E, withHighlight: C = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: r, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: _ = !1, forcedDivider: E, withHighlight: C = !1 } = e,
         T = C ? a.ShinyButton : a.Button;
     return (0, i.jsx)(o.Z, {
         className: x,
@@ -32,7 +32,7 @@ function g(e) {
             className: u.buttonsContainer,
             children: [
                 (0, i.jsx)(T, {
-                    className: r()({ [u.buttonHighlighted]: C }),
+                    className: s()({ [u.buttonHighlighted]: C }),
                     size: a.Button.Sizes.SMALL,
                     onClick: () => (0, l.$r)(c.pC.AVATAR, p, _, _ ? m : void 0),
                     children: null != h ? h : d.intl.string(d.t['4OynCA'])
@@ -43,7 +43,7 @@ function g(e) {
                         color: a.Button.Colors.PRIMARY,
                         look: a.Button.Looks.LINK,
                         size: a.Button.Sizes.SMALL,
-                        onClick: () => s(null),
+                        onClick: () => r(null),
                         children: null != p ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
                     })
             ]

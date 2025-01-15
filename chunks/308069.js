@@ -9,11 +9,11 @@ var o = n(200651),
     u = n(497505),
     p = n(918701),
     m = n(685613),
-    x = n(64141),
+    x = n(670638),
     g = n(341907),
     h = n(303385),
     f = n(388032),
-    v = n(626094);
+    v = n(415240);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: j, useReducedMotion: _, isExpanded: T, isExpansionAnimationComplete: E } = e,
         S = (0, d.aM)(),

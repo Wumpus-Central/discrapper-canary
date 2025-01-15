@@ -1,14 +1,14 @@
 n.d(t, {
     g: function () {
-        return O;
+        return R;
     },
     i: function () {
-        return R;
+        return O;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(704215),
     l = n(481060),
     o = n(37234),
@@ -29,8 +29,8 @@ var i = n(200651),
     b = n(921944),
     I = n(474936),
     N = n(388032),
-    v = n(878088),
-    A = n(232186);
+    v = n(61511),
+    A = n(275477);
 let j = () => {
         (0, h.EW)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: b.L.PRIMARY,
@@ -39,42 +39,42 @@ let j = () => {
             (0, u.Kq)(),
             (0, o.xf)();
     },
-    R = () => {
+    O = () => {
         var e, t;
         let { analyticsLocations: n } = (0, d.ZP)(c.Z.USER_SETTINGS),
-            a = (0, r.e7)([m.Z], () => m.Z.isPreview),
+            a = (0, s.e7)([m.Z], () => m.Z.isPreview),
             o = (null === (t = (0, x.N)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === I.Si.TIER_2,
             u = (0, p.Ng)(),
             h = (0, p.Wp)(u, I.Si.TIER_2),
             b = !a || o,
-            { enabled: R } = f.Z.getCurrentConfig(
+            { enabled: O } = f.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !b,
                     disable: b
                 }
             ),
-            O = () =>
+            R = () =>
                 !a || o
                     ? null
                     : (0, i.jsxs)('div', {
                           className: v.tryItOutButtons,
                           children: [
                               (0, i.jsx)(l.Button, {
-                                  color: R ? l.Button.Colors.BRAND : l.Button.Colors.PRIMARY,
+                                  color: O ? l.Button.Colors.BRAND : l.Button.Colors.PRIMARY,
                                   onClick: () => j(),
-                                  children: R ? N.intl.string(N.t.SKNnqq) : N.intl.string(N.t['E+COuL'])
+                                  children: O ? N.intl.string(N.t.SKNnqq) : N.intl.string(N.t['E+COuL'])
                               }),
                               (0, i.jsx)(E.Z, {
-                                  showGradient: R,
+                                  showGradient: O,
                                   subscriptionTier: I.Si.TIER_2,
-                                  buttonText: R ? N.intl.string(N.t.pj0XBA) : h ? N.intl.formatToPlainString(N.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : N.intl.string(N.t.mr4K7O),
+                                  buttonText: O ? N.intl.string(N.t.pj0XBA) : h ? N.intl.formatToPlainString(N.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : N.intl.string(N.t.mr4K7O),
                                   className: v.premiumCta
                               })
                           ]
                       });
         return (
-            s.useEffect(() => {
+            r.useEffect(() => {
                 a &&
                     T.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: I.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
@@ -85,10 +85,10 @@ let j = () => {
                 children: [
                     (0, i.jsx)(g.ZP, {
                         type: g.yH.SETTINGS,
-                        children: R
+                        children: O
                             ? (0, i.jsx)(g.ZP.BasicAndGradient, {
                                   className: v.basicThemeSelectors,
-                                  renderCTAButtons: O
+                                  renderCTAButtons: R
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
@@ -100,7 +100,7 @@ let j = () => {
                                           children: [
                                               (0, i.jsx)(g.ZP.Gradient, {
                                                   disabled: a,
-                                                  renderCTAButtons: O
+                                                  renderCTAButtons: R
                                               }),
                                               o &&
                                                   a &&
@@ -129,8 +129,8 @@ let j = () => {
             })
         );
     },
-    O = () =>
-        (0, r.e7)([m.Z], () => m.Z.isPreview)
+    R = () =>
+        (0, s.e7)([m.Z], () => m.Z.isPreview)
             ? null
             : (0, i.jsx)(l.Button, {
                   size: l.ButtonSizes.SMALL,

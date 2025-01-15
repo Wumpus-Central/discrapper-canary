@@ -1,6 +1,6 @@
 let i;
-var s,
-    r,
+var r,
+    s,
     a,
     l,
     o = n(442837),
@@ -15,14 +15,14 @@ class u extends (l = o.ZP.Store) {
     }
 }
 (a = 'DataHarvestStore'),
-    (r = 'displayName') in (s = u)
-        ? Object.defineProperty(s, r, {
+    (s = 'displayName') in (r = u)
+        ? Object.defineProperty(r, s, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = a),
+        : (r[s] = a),
     (t.Z = new u(c.Z, {
         CONNECTION_OPEN: function () {
             i = void 0;

@@ -134,7 +134,7 @@ function R(e) {
                   .catch(i),
               !0)
             : 401 === e.statusCode && (null === (s = e.body) || void 0 === s ? void 0 : s.code) === b.evJ.MFA_REQUIRED && (null === (o = e.body) || void 0 === o ? void 0 : o.mfa)
-              ? (Promise.all([r.e('52030'), r.e('85665')])
+              ? (Promise.all([r.e('52030'), r.e('79361')])
                     .then(r.bind(r, 24031))
                     .then((r) => {
                         let { openMFAModal: a } = r;

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return r;
     }
 }),
     n(47120);
 var i = n(192379);
-function l(e) {
+function r(e) {
     let t = i.useRef(e);
     return (
         i.useInsertionEffect(() => {

@@ -1,11 +1,11 @@
 n.d(t, {
     Qo: function () {
-        return s;
+        return r;
     }
 });
 var i,
-    s,
-    r = n(200651),
+    r,
+    s = n(200651),
     a = n(192379),
     l = n(120356),
     o = n.n(l),
@@ -16,16 +16,16 @@ var i,
     g = n(967538),
     h = n(885302),
     p = n(914677),
-    x = n(830164);
-((i = s || (s = {}))[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (i[(i.AVATAR_DECO = 2)] = 'AVATAR_DECO');
+    x = n(480425);
+((i = r || (r = {}))[(i.NITRO_GEM = 0)] = 'NITRO_GEM'), (i[(i.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (i[(i.AVATAR_DECO = 2)] = 'AVATAR_DECO');
 let f = (e) => {
     let { avatarDecoAssetId: t, avatarDecoAssetDescription: n } = e,
         i = a.useMemo(() => (0, m.Z)(t, d.AvatarSizes.SIZE_120, !1), [t]);
-    return (0, r.jsx)('div', {
+    return (0, s.jsx)('div', {
         className: x.avatarDecoContainer,
-        children: (0, r.jsx)('div', {
+        children: (0, s.jsx)('div', {
             className: x.avatarDeco,
-            children: (0, r.jsx)('img', {
+            children: (0, s.jsx)('img', {
                 className: x.avatarDecoImage,
                 alt: n,
                 src: i
@@ -34,12 +34,12 @@ let f = (e) => {
     });
 };
 t.ZP = (e) => {
-    let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: s, progressCircleStrokeSize: a, backgroundCircleSize: l, percentage: d, initialPercentage: m, progressCircleVariation: _ = 0, avatarDecoAssetId: E, avatarDecoAssetDescription: C, ellipseOpacity: T, customAnimationClassName: S, circleColor: b, circleStroke: I } = e,
+    let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: a, backgroundCircleSize: l, percentage: d, initialPercentage: m, progressCircleVariation: _ = 0, avatarDecoAssetId: E, avatarDecoAssetDescription: C, ellipseOpacity: T, customAnimationClassName: S, circleColor: b, circleStroke: I } = e,
         N = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
         v = t && !N;
-    return (0, r.jsx)('div', {
+    return (0, s.jsx)('div', {
         className: o()(x.progressCircle, n),
-        children: (0, r.jsx)(p.Z, {
+        children: (0, s.jsx)(p.Z, {
             animationClassName: o()(x.activeProgressCircle, {
                 [x.activeProgressCircleAnimation]: v,
                 [null != S ? S : '']: v
@@ -52,19 +52,19 @@ t.ZP = (e) => {
             children: (() => {
                 switch (_) {
                     case 0:
-                        return (0, r.jsx)(g.Z, {
+                        return (0, s.jsx)(g.Z, {
                             className: v ? x.nitroGemAnimation : void 0,
-                            backgroundColor: o()(x.gemBackgroundFill, s),
+                            backgroundColor: o()(x.gemBackgroundFill, r),
                             backgroundCircleSize: l
                         });
                     case 1:
-                        return (0, r.jsx)(h.Z, {
+                        return (0, s.jsx)(h.Z, {
                             circleColor: b,
                             ellipseOpacity: T
                         });
                     case 2:
                         if (null != E)
-                            return (0, r.jsx)(f, {
+                            return (0, s.jsx)(f, {
                                 avatarDecoAssetId: E,
                                 avatarDecoAssetDescription: C
                             });

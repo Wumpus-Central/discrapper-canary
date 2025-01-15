@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(442837),
     l = n(481060),
     o = n(223245),
@@ -17,10 +17,10 @@ var s = n(120356),
     g = n(726985),
     h = n(981631),
     p = n(388032),
-    x = n(381578),
-    f = n(232186);
+    x = n(476024),
+    f = n(275477);
 function _() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: _, disableSounds: E, disableNotifications: C, enableContentProtection: T } = (0, a.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+    let { enabled: e, autoToggle: t, hideInstantInvites: r, hidePersonalInformation: _, disableSounds: E, disableNotifications: C, enableContentProtection: T } = (0, a.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
         S = (e, t) => {
             o.Z.update({ [e]: t });
         };
@@ -72,7 +72,7 @@ function _() {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(l.FormTitle, {
-                        className: r()(f.marginTop40, f.marginBottom8, x.sectionLabel),
+                        className: s()(f.marginTop40, f.marginBottom8, x.sectionLabel),
                         children: p.intl.string(p.t['+1H47u'])
                     }),
                     (0, i.jsx)(d.F, {
@@ -87,7 +87,7 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(l.FormSwitch, {
-                            value: s,
+                            value: r,
                             onChange: (e) => S('hideInstantInvites', e),
                             note: p.intl.string(p.t.m7mS2d),
                             children: p.intl.string(p.t.q7WNGh)

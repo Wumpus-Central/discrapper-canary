@@ -1,10 +1,10 @@
 n(47120);
 var i = n(392711),
-    s = n.n(i),
-    r = n(710845),
+    r = n.n(i),
+    s = n(710845),
     a = n(9156),
     l = n(287328);
-let o = new r.Z('ReadStates');
+let o = new s.Z('ReadStates');
 t.Z = new (class e {
     async getAll(e) {
         let t = performance.now(),
@@ -17,7 +17,7 @@ t.Z = new (class e {
         !e.userGuildSettings.partial && l.Z.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
     }
     handleUserGuildSettingsUpdate(e, t) {
-        let n = s().max(
+        let n = r().max(
             e.userGuildSettings.map((e) => {
                 var t;
                 return null !== (t = e.version) && void 0 !== t ? t : -1;
@@ -28,13 +28,13 @@ t.Z = new (class e {
     write(e, t, n) {
         let i = l.Z.userGuildSettingsTransaction(n);
         for (let t of e) {
-            var s;
+            var r;
             let e = {
                 ...(0, a.wL)(t.guild_id),
                 ...t,
                 channel_overrides: (0, a.U2)(t.channel_overrides)
             };
-            i.put(null !== (s = t.guild_id) && void 0 !== s ? s : 'dm-sentinel', e);
+            i.put(null !== (r = t.guild_id) && void 0 !== r ? r : 'dm-sentinel', e);
         }
         l.Z.nonGuildVersionsTransaction(n).put({
             id: 'user_guild_settings_version',

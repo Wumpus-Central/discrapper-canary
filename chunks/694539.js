@@ -1,8 +1,8 @@
 n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(315314), n(610138), n(216116), n(78328), n(815648), n(653041);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(979554),
     o = n(442837),
     c = n(481060),
@@ -13,30 +13,30 @@ var i = n(200651),
     h = n(451593),
     p = n(477146),
     x = n(329156),
-    f = n(658234),
+    f = n(843288),
     _ = n(346537),
     E = n(830318);
 let C = (e) => {
     let [t, n] = e.split(','),
         i = atob(n),
-        s = t.split(';')[0],
-        r = new ArrayBuffer(i.length),
-        a = new Uint8Array(r);
+        r = t.split(';')[0],
+        s = new ArrayBuffer(i.length),
+        a = new Uint8Array(s);
     for (let e = 0; e < i.length; e++) a[e] = i.charCodeAt(e);
-    return new Blob([r], { type: s });
+    return new Blob([s], { type: r });
 };
 t.Z = (e) => {
     let { effect: t, back: n } = e,
-        { upsertConfig: r } = (0, h.E)(),
+        { upsertConfig: s } = (0, h.E)(),
         T = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        [S, b] = s.useState(!0),
-        I = s.useRef(null),
-        [N, v] = s.useState(!1),
-        [A, j] = s.useState(!1),
-        [R, O] = s.useState(!1),
-        [P, y] = s.useState([]),
-        [D, B] = s.useState(t.name);
-    s.useEffect(() => {
+        [S, b] = r.useState(!0),
+        I = r.useRef(null),
+        [N, v] = r.useState(!1),
+        [A, j] = r.useState(!1),
+        [O, R] = r.useState(!1),
+        [P, y] = r.useState([]),
+        [B, D] = r.useState(t.name);
+    r.useEffect(() => {
         let e = t.config.effects;
         e.length > 0 &&
             y(
@@ -49,20 +49,20 @@ t.Z = (e) => {
     }, [t]);
     let Z = {
             effect: t,
-            upsertConfig: r
+            upsertConfig: s
         },
-        L = s.useRef(Z);
-    return (s.useEffect(() => {
+        L = r.useRef(Z);
+    return (r.useEffect(() => {
         L.current = Z;
     }),
-    s.useEffect(() => {
+    r.useEffect(() => {
         let { effect: e, upsertConfig: t } = L.current;
         t({
             id: e.id,
-            name: D,
+            name: B,
             config: { effects: P }
         });
-    }, [P, D]),
+    }, [P, B]),
     null == T)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
@@ -94,7 +94,7 @@ t.Z = (e) => {
                                               description: 'debug',
                                               accessibilityLabel: 'debug',
                                               reducedMotionSrc: '',
-                                              effects: R ? (0, p.Tp)(P) : P,
+                                              effects: O ? (0, p.Tp)(P) : P,
                                               animationType: 0
                                           },
                                           profileEffectId: 'debug'
@@ -113,10 +113,10 @@ t.Z = (e) => {
                                           }),
                                           (0, i.jsx)('input', {
                                               type: 'text',
-                                              value: D,
+                                              value: B,
                                               className: f.input,
                                               onChange: (e) => {
-                                                  B(e.target.value);
+                                                  D(e.target.value);
                                               }
                                           })
                                       ]
@@ -167,10 +167,10 @@ t.Z = (e) => {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: R,
+                                                      checked: O,
                                                       className: f.checkBox,
                                                       onChange: () => {
-                                                          O(!R);
+                                                          R(!O);
                                                       }
                                                   })
                                               ]
@@ -297,7 +297,7 @@ t.Z = (e) => {
                                                           description: 'debug',
                                                           accessibilityLabel: 'debug',
                                                           reducedMotionSrc: '',
-                                                          effects: R ? (0, p.Tp)(P) : P,
+                                                          effects: O ? (0, p.Tp)(P) : P,
                                                           animationType: 0
                                                       },
                                                       profileEffectId: 'debug'
@@ -353,8 +353,8 @@ t.Z = (e) => {
                                                                   onChange: (e) => {
                                                                       y((n) => {
                                                                           let i = [...n],
-                                                                              s = n[t];
-                                                                          return (s.start = +e.target.value), (i[t] = s), i;
+                                                                              r = n[t];
+                                                                          return (r.start = +e.target.value), (i[t] = r), i;
                                                                       });
                                                                   },
                                                                   contentEditable: !0
@@ -375,8 +375,8 @@ t.Z = (e) => {
                                                                   onChange: (e) => {
                                                                       y((n) => {
                                                                           let i = [...n],
-                                                                              s = n[t];
-                                                                          return (s.duration = +e.target.value), (i[t] = s), i;
+                                                                              r = n[t];
+                                                                          return (r.duration = +e.target.value), (i[t] = r), i;
                                                                       });
                                                                   },
                                                                   contentEditable: !0
@@ -402,8 +402,8 @@ t.Z = (e) => {
                                                                   onChange: (e) => {
                                                                       y((n) => {
                                                                           let i = [...n],
-                                                                              s = n[t];
-                                                                          return (s.loop = e.target.checked), (i[t] = s), i;
+                                                                              r = n[t];
+                                                                          return (r.loop = e.target.checked), (i[t] = r), i;
                                                                       });
                                                                   }
                                                               })
@@ -426,8 +426,8 @@ t.Z = (e) => {
                                                                           onChange: (e) => {
                                                                               y((n) => {
                                                                                   let i = [...n],
-                                                                                      s = n[t];
-                                                                                  return (s.loopDelay = +e.target.value), (i[t] = s), i;
+                                                                                      r = n[t];
+                                                                                  return (r.loopDelay = +e.target.value), (i[t] = r), i;
                                                                               });
                                                                           },
                                                                           contentEditable: !0
@@ -454,15 +454,15 @@ t.Z = (e) => {
                                                                       let n = e.currentTarget.files;
                                                                       if (null == n) return;
                                                                       let i = n[0],
-                                                                          s = new FileReader();
-                                                                      (s.onload = (e) => {
+                                                                          r = new FileReader();
+                                                                      (r.onload = (e) => {
                                                                           y((n) => {
                                                                               if (null == e.target || 'string' != typeof e.target.result) return n;
                                                                               let i = [...n];
                                                                               return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), i;
                                                                           });
                                                                       }),
-                                                                          s.readAsDataURL(i);
+                                                                          r.readAsDataURL(i);
                                                                   },
                                                                   multiple: !1
                                                               })

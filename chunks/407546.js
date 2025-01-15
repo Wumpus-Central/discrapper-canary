@@ -10,7 +10,7 @@ var a = r(149765),
     o = r(481060),
     l = r(981631),
     u = r(388032),
-    c = r(804537);
+    c = r(566083);
 let d = 5;
 function f(e) {
     let { error: n, selectedGuildId: r, onGuildChange: f, guilds: _, disabled: h = !1 } = e,

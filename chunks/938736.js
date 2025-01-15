@@ -31,8 +31,8 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    s = n(704215),
-    r = n(605236),
+    r = n(704215),
+    s = n(605236),
     a = n(276444),
     l = n(822070),
     o = n(520540),
@@ -43,17 +43,17 @@ var i = n(442837),
 let g = '40%',
     h = 8,
     p = (e) => {
-        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: s } = e;
+        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e;
         return t
-            ? m.intl.format(m.t['3OYZMT'], { helpdeskArticle: s })
+            ? m.intl.format(m.t['3OYZMT'], { helpdeskArticle: r })
             : n
               ? m.intl.format(m.t.EkWiZm, {
                     numFriends: d.Q - i,
-                    helpdeskArticle: s
+                    helpdeskArticle: r
                 })
               : m.intl.format(m.t.FjrXCg, {
                     numFriends: d.Q,
-                    helpdeskArticle: s
+                    helpdeskArticle: r
                 });
     },
     x = (e) => {
@@ -63,28 +63,28 @@ let g = '40%',
     f = (e) => {
         let t = x(e),
             n = (0, c.b)('PremiumManagementSettings'),
-            s = (0, i.e7)([a.Z], () => a.Z.getRecipientStatus());
+            r = (0, i.e7)([a.Z], () => a.Z.getRecipientStatus());
         if (!t) return !1;
-        if (!n) return !!(s.size > 0) || !1;
+        if (!n) return !!(r.size > 0) || !1;
         return !0;
     },
     _ = (e) => {
         let t = E(e),
-            n = (0, r.wE)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
+            n = (0, s.wE)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
     E = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            s = (0, i.e7)([a.Z], () => a.Z.getIsSenderEligibleForIncentive());
-        return t && n && s;
+            r = (0, i.e7)([a.Z], () => a.Z.getIsSenderEligibleForIncentive());
+        return t && n && r;
     },
     C = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            s = (0, i.e7)([a.Z], () => a.Z.getIsFetchingReferralIncentiveEligibility()),
-            r = (0, i.e7)([a.Z], () => a.Z.getSenderIncentiveState());
-        return s ? u.g2L.NOT_ELIGIBLE : n && t ? r : u.g2L.NOT_ELIGIBLE;
+            r = (0, i.e7)([a.Z], () => a.Z.getIsFetchingReferralIncentiveEligibility()),
+            s = (0, i.e7)([a.Z], () => a.Z.getSenderIncentiveState());
+        return r ? u.g2L.NOT_ELIGIBLE : n && t ? s : u.g2L.NOT_ELIGIBLE;
     },
     T = (e) => {
         let t = C(e);
@@ -92,13 +92,13 @@ let g = '40%',
     },
     S = (e) => {
         let t = T(e),
-            n = (0, r.wE)(s.z.REFERRAL_INCENTIVE_AWARDED_INFO);
+            n = (0, s.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
     b = (e) => {
         let t = x(e),
             n = (0, c.b)(e),
-            i = (0, r.wE)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+            i = (0, s.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !i;
     },
     I = (e) => {
@@ -117,7 +117,7 @@ let g = '40%',
         }
     },
     N = (e) => {
-        let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: i, isWithinCountdownRange: s } = e;
+        let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: i, isWithinCountdownRange: r } = e;
         switch (n) {
             case u.g2L.NOT_ELIGIBLE:
                 return p({
@@ -127,18 +127,18 @@ let g = '40%',
                     helpdeskArticle: t
                 });
             case u.g2L.ELIGIBLE:
-                let r = {
+                let s = {
                     discountRate: g,
                     learnMoreLink: t,
                     subscriptionInterval: m.intl.string(m.t.FPybU1)
                 };
-                if (i.redeemed <= 1) return m.intl.format(m.t.nysttb, r);
-                return m.intl.format(m.t.nHuzUF, r);
+                if (i.redeemed <= 1) return m.intl.format(m.t.nysttb, s);
+                return m.intl.format(m.t.nHuzUF, s);
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
                 if (i.redeemed < d.Q) return m.intl.format(m.t.HGO89v, { learnMoreLink: t });
-                if (!s)
+                if (!r)
                     return m.intl.format(m.t.iGlQKi, {
                         learnMoreLink: t,
                         numberOfTimerPeriods: '',

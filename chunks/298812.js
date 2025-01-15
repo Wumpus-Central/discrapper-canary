@@ -27,7 +27,7 @@ var i = n(200651),
     O = n(569658),
     L = n(981631),
     I = n(388032),
-    M = n(532868);
+    M = n(3836);
 function A(e) {
     let { channel: t, categories: n } = e,
         l = (0, d.useToken)(o.Z.unsafe_rawColors.GREEN_360).hex(),

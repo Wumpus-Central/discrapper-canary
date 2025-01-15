@@ -15,7 +15,7 @@ var l = n(120356),
     g = n(768581),
     v = n(51144),
     C = n(754231),
-    x = n(787308);
+    x = n(576108);
 function I(e) {
     let { guildId: t, member: n, className: l } = e,
         a = null != n.member ? (0, g.CA)(n.member) : null;

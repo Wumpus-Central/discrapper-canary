@@ -21,7 +21,7 @@ var i = n(200651),
     x = n(458879),
     f = n(981631),
     h = n(388032),
-    g = n(732881);
+    g = n(886658);
 function L(e) {
     var t;
     let { guildTemplate: n, onClose: s, onBack: L, onHubGuildInfoSet: p, onGuildCreated: b, isSlideReady: j, hasFooter: _ = !0, isCommunity: I = !1 } = e,

@@ -11,8 +11,8 @@ n.d(t, {
 }),
     n(724458);
 var i = n(990547),
-    s = n(283693),
-    r = n(570140),
+    r = n(283693),
+    s = n(570140),
     a = n(573261),
     l = n(930441),
     o = n(981631);
@@ -25,24 +25,24 @@ async function c() {
                 properties: (e) => {
                     var t;
                     let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
-                    return (0, s.iG)({ initialized: n });
+                    return (0, r.iG)({ initialized: n });
                 }
             },
             rejectWithError: !0
         });
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'EMAIL_SETTINGS_FETCH_SUCCESS',
                 settings: e.body
             }),
             e.body
         );
     } catch {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_FETCH_FAILURE' });
+        s.Z.dispatch({ type: 'EMAIL_SETTINGS_FETCH_FAILURE' });
     }
 }
 async function d(e, t) {
-    r.Z.dispatch({
+    s.Z.dispatch({
         type: 'EMAIL_SETTINGS_UPDATE',
         updates: { [e]: t }
     });
@@ -59,12 +59,12 @@ async function d(e, t) {
             },
             rejectWithError: !0
         });
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
             settings: n.body
         });
     } catch (e) {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        s.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
     }
 }
 async function u() {
@@ -75,7 +75,7 @@ async function u() {
         }),
         {}
     );
-    r.Z.dispatch({
+    s.Z.dispatch({
         type: 'EMAIL_SETTINGS_UPDATE',
         updates: e
     });
@@ -92,11 +92,11 @@ async function u() {
             },
             rejectWithError: !0
         });
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
             settings: t.body
         });
     } catch (e) {
-        r.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
+        s.Z.dispatch({ type: 'EMAIL_SETTINGS_UPDATE_FAILURE' });
     }
 }

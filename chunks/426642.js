@@ -11,7 +11,7 @@ var s = n(692547),
     a = n(481060),
     o = n(752657),
     c = n(388032),
-    d = n(668398);
+    d = n(230258);
 ((i = r || (r = {}))[(i.TOO_BIG = 0)] = 'TOO_BIG'), (i[(i.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (i[(i.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (i[(i.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (i[(i.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (i[(i.RESIZE_GIF = 5)] = 'RESIZE_GIF');
 t.Z = (e) => {
     let { error: t } = e,

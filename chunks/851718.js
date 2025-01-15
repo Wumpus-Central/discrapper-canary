@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(823379),
+    r = n(192379),
+    s = n(823379),
     a = n(106976),
     l = n(270144),
     o = n(301935),
@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(388032);
 function m(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [m, g] = s.useState({ route: c.j.HOME }),
+        [m, g] = r.useState({ route: c.j.HOME }),
         { route: h } = m,
         p = () => {
             g({ route: c.j.HOME });
@@ -27,8 +27,8 @@ function m(e) {
             }),
                 n(u.intl.string(u.t.VFqtkJ), p);
         },
-        [f, _] = s.useState({});
-    s.useEffect(() => {
+        [f, _] = r.useState({});
+    r.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null === (e = n.items[0]) || void 0 === e ? void 0 : e.planId;
@@ -77,6 +77,6 @@ function m(e) {
                 navigateToHome: p
             });
         default:
-            (0, r.vE)(h);
+            (0, s.vE)(h);
     }
 }

@@ -22,7 +22,7 @@ var i = r(200651),
     I = r(858380),
     T = r(981631),
     b = r(388032),
-    y = r(294794);
+    y = r(567657);
 function S(e) {
     let { user: n, onBlock: r, onIgnore: a, location: s, disallowIgnore: u, guildId: f, channelId: S } = e,
         A = (0, E.Do)({ location: 'confirm_block_modal_body' }),

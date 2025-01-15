@@ -80,7 +80,7 @@ var i,
     S = r(371991),
     A = r(206583),
     N = r(388032),
-    C = r(455887);
+    C = r(492478);
 let R = {
     [d.s.TOP_ARTIST]: [V],
     [d.s.PLAYED_GAME]: [P, M, w, H, U, F, j, G, B],

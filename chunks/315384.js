@@ -10,7 +10,7 @@ var r = n(200651),
     i = n(481060),
     o = n(317951),
     s = n(959546),
-    c = n(695063);
+    c = n(836304);
 let d = '/users/@me/debug/consumables/',
     u = {
         [o.FX]: 'HD Streaming Potion',

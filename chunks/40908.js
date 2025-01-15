@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    s = n(304445),
-    r = n(997383);
+    r = n(304445),
+    s = n(997383);
 let a = [];
 function l(e) {
     let { visible: t, autocompleterResultTypes: n, autocompleterOptions: l, autocompleterBeforeCreateSearchContext: o } = e,
@@ -17,12 +17,12 @@ function l(e) {
         }, []);
     i.useEffect(
         () =>
-            s.Z.addRouteChangeListener(() => {
+            r.Z.addRouteChangeListener(() => {
                 d('');
             }),
         []
     );
-    let [h] = i.useState(() => new r.Z(g, n, void 0, l));
+    let [h] = i.useState(() => new s.Z(g, n, void 0, l));
     return (
         i.useEffect(() => {
             t ? (null == o || o(h), h.createSearchContext()) : (h.clean(), d(''));

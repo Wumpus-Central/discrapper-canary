@@ -4,14 +4,14 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(955204),
     c = n(818765),
     d = n(674680),
-    u = n(941253);
+    u = n(76540);
 let m = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
@@ -70,9 +70,9 @@ let m = (e) => {
 };
 function g(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: r, description: g, rarity: h, hideDescriptionUntilUnlock: p, onAction: x } = t,
+        { name: s, description: g, rarity: h, hideDescriptionUntilUnlock: p, onAction: x } = t,
         { color: f } = (0, o.F7)(h);
-    s.useEffect(() => {
+    r.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
         }, 50);
@@ -102,7 +102,7 @@ function g(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: r()
+                        children: s()
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',

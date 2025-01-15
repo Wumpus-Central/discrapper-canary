@@ -15,7 +15,7 @@ var i = n(200651),
     s = n(426563),
     c = n(998502),
     d = n(388032),
-    u = n(657733);
+    u = n(71710);
 let m = c.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

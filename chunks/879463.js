@@ -17,12 +17,12 @@ let i = (0, n(818083).B)({
     ]
 });
 t.ZP = (e) => {
-    let { location: t, autoTrackExposure: n = !0, trackExposureOptions: s = {} } = e;
+    let { location: t, autoTrackExposure: n = !0, trackExposureOptions: r = {} } = e;
     return i.useExperiment(
         { location: t },
         {
             autoTrackExposure: n,
-            trackExposureOptions: s
+            trackExposureOptions: r
         }
     );
 };

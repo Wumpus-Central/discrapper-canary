@@ -1,56 +1,56 @@
-var r,
-    o = n(200651),
-    a = n(192379),
-    s = n(846519),
-    i = n(481060),
-    l = n(572004),
-    d = n(388032);
-function c(e, t, n) {
+var o,
+    a = t(200651),
+    i = t(192379),
+    f = t(846519),
+    d = t(481060),
+    r = t(572004),
+    c = t(388032);
+function s(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-class u extends (r = a.PureComponent) {
+class l extends (o = i.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
         let { text: e } = this.props,
-            { mode: t } = this.state,
-            n = t === i.CopyInput.Modes.SUCCESS ? d.intl.string(d.t['t5VZ8/']) : e;
-        return (0, o.jsx)(i.CopyInput, {
+            { mode: n } = this.state,
+            t = n === d.CopyInput.Modes.SUCCESS ? c.intl.string(c.t['t5VZ8/']) : e;
+        return (0, a.jsx)(d.CopyInput, {
             ...this.props,
             onCopy: this.handleCopy,
-            mode: t,
-            text: n,
-            supportsCopy: l.wS
+            mode: n,
+            text: t,
+            supportsCopy: r.wS
         });
     }
     handleCopy(e) {
-        let { onCopy: t, delay: n = 1000 } = this.props,
-            r = (0, l.JG)(e);
-        this.setState({ mode: r ? i.CopyInput.Modes.SUCCESS : i.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: i.CopyInput.Modes.DEFAULT })), null == t || t(e);
+        let { onCopy: n, delay: t = 1000 } = this.props,
+            o = (0, r.JG)(e);
+        this.setState({ mode: o ? d.CopyInput.Modes.SUCCESS : d.CopyInput.Modes.ERROR }), this._timeout.start(t, () => this.setState({ mode: d.CopyInput.Modes.DEFAULT })), null == n || n(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case i.CopyInput.Modes.SUCCESS:
-                return i.Button.Colors.GREEN;
-            case i.CopyInput.Modes.ERROR:
-                return i.Button.Colors.RED;
+            case d.CopyInput.Modes.SUCCESS:
+                return d.Button.Colors.GREEN;
+            case d.CopyInput.Modes.ERROR:
+                return d.Button.Colors.RED;
             default:
-                return i.Button.Colors.BRAND;
+                return d.Button.Colors.BRAND;
         }
     }
     constructor(e) {
-        super(e), c(this, '_timeout', void 0), (this.state = { mode: i.CopyInput.Modes.DEFAULT }), (this._timeout = new s.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), s(this, '_timeout', void 0), (this.state = { mode: d.CopyInput.Modes.DEFAULT }), (this._timeout = new f.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-c(u, 'defaultProps', { delay: 1000 }), (t.Z = u);
+s(l, 'defaultProps', { delay: 1000 }), (n.Z = l);

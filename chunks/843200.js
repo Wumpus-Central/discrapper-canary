@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(512722),
     l = n.n(a),
     o = n(442837),
@@ -15,9 +15,9 @@ var s = n(120356),
     u = n(594174),
     m = n(418632),
     g = n(388032),
-    h = n(167836);
+    h = n(644363);
 function p(e) {
-    let { unclaimedNotice: t, unverifiedNotice: s, className: a } = e,
+    let { unclaimedNotice: t, unverifiedNotice: r, className: a } = e,
         {
             isClaimed: p,
             isVerified: x,
@@ -41,14 +41,14 @@ function p(e) {
     }
     function E() {
         (0, c.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
+            let { default: e } = await Promise.all([n.e('9343'), n.e('23379')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }
     return p && x
         ? null
         : (0, i.jsx)(c.Card, {
-              className: r()(h.wrapper, a),
+              className: s()(h.wrapper, a),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
@@ -61,7 +61,7 @@ function p(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: p ? (null != s ? s : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
+                                  children: p ? (null != r ? r : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,

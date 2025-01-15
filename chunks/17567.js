@@ -1,7 +1,7 @@
 n(47120);
 var i = n(710845),
-    s = n(314897),
-    r = n(271383),
+    r = n(314897),
+    s = n(271383),
     a = n(430824),
     l = n(411198),
     o = n(625137),
@@ -23,11 +23,11 @@ t.Z = new (class e {
             let e = a.Z.getGuild(n.id);
             if (null != e) {
                 let i = a.Z.getRoles(n.id),
-                    s = 'partial' === n.data_mode ? l.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, o.C5)(n.id, n.roles);
+                    r = 'partial' === n.data_mode ? l.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, o.C5)(n.id, n.roles);
                 this.put(
                     l.rk(l.sp(n, e), {
-                        roles: s,
-                        member: r.ZP.getSelfMember(n.id)
+                        roles: r,
+                        member: s.ZP.getSelfMember(n.id)
                     }),
                     t
                 );
@@ -46,7 +46,7 @@ t.Z = new (class e {
         this.put(
             l.rk(i, {
                 roles: (0, o.C5)(e.guild.id, e.guild.roles),
-                member: r.ZP.getSelfMember(e.guild.id)
+                member: s.ZP.getSelfMember(e.guild.id)
             }),
             t
         );
@@ -64,7 +64,7 @@ t.Z = new (class e {
                         ...i,
                         [e.role.id]: e.role
                     },
-                    member: r.ZP.getSelfMember(e.guildId)
+                    member: s.ZP.getSelfMember(e.guildId)
                 }),
                 t
             );
@@ -74,36 +74,36 @@ t.Z = new (class e {
         if (null != n) {
             let i = { ...a.Z.getRoles(e.guildId) };
             delete i[e.roleId];
-            let s = r.ZP.getSelfMember(e.guildId);
-            null != s &&
-                (s = {
-                    ...s,
-                    roles: s.roles.filter((t) => t !== e.roleId)
+            let r = s.ZP.getSelfMember(e.guildId);
+            null != r &&
+                (r = {
+                    ...r,
+                    roles: r.roles.filter((t) => t !== e.roleId)
                 }),
                 this.put(
                     l.rk(n, {
                         roles: i,
-                        member: s
+                        member: r
                     }),
                     t
                 );
         }
     }
     handleGuildMemberAdd(e, t) {
-        if (null != e.joinedAt && e.user.id === s.default.getId()) {
+        if (null != e.joinedAt && e.user.id === r.default.getId()) {
             let n = a.Z.getGuild(e.guildId);
             null != n &&
                 this.put(
                     l.rk(n.updateJoinedAt(e.joinedAt), {
                         roles: a.Z.getRoles(n.id),
-                        member: r.ZP.getSelfMember(n.id)
+                        member: s.ZP.getSelfMember(n.id)
                     }),
                     t
                 );
         }
     }
     handleGuildMemberUpdate(e, t) {
-        if (e.user.id !== s.default.getId()) return;
+        if (e.user.id !== r.default.getId()) return;
         let n = a.Z.getGuild(e.guildId);
         if (null != n)
             this.put(
@@ -119,9 +119,9 @@ t.Z = new (class e {
     }
     resetInMemoryState() {}
     putOne(e, t) {
-        let n = e.members.find((e) => e.user.id === s.default.getId()),
+        let n = e.members.find((e) => e.user.id === r.default.getId()),
             i = a.Z.getGuild(e.id),
-            r = l.rk(l.wD(e, i), {
+            s = l.rk(l.wD(e, i), {
                 roles: e.roles instanceof Array ? (0, o.C5)(e.id, e.roles) : e.roles,
                 member:
                     null != n
@@ -131,7 +131,7 @@ t.Z = new (class e {
                           }
                         : void 0
             });
-        this.put(r, t);
+        this.put(s, t);
     }
     put(e, t) {
         c.Z.guildsTransaction(t).put(e);

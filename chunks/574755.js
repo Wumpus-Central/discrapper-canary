@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(704215),
     l = n(481060),
     o = n(906732),
@@ -21,19 +21,19 @@ var i = n(200651),
     _ = n(491758),
     E = n(233685),
     C = n(388032),
-    T = n(644517),
-    S = n(277253),
-    b = n(232186);
+    T = n(182401),
+    S = n(598603),
+    b = n(275477);
 function I(e) {
     let { className: t, showHeader: n = !0 } = e,
         I = u.tU.useSetting(),
         { enableViewerClipping: N } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: v } = (0, o.ZP)(),
         A = (0, g.Go)(),
-        { viewerClipsEnabled: j } = (0, r.cj)([h.Z], () => h.Z.getSettings()),
-        R = (0, p.Z)(m.Z);
+        { viewerClipsEnabled: j } = (0, s.cj)([h.Z], () => h.Z.getSettings()),
+        O = (0, p.Z)(m.Z);
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             (0, c.EW)(a.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, i.jsxs)(o.Gt, {
@@ -69,7 +69,7 @@ function I(e) {
                             children: C.intl.string(C.t.AGDDkJ)
                         }),
                         N &&
-                            R &&
+                            O &&
                             (0, i.jsx)(l.FormSwitch, {
                                 hideBorder: !0,
                                 className: S.formItem,

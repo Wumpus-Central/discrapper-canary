@@ -37,7 +37,7 @@ var i = n(200651),
     L = n(981631),
     D = n(710111),
     O = n(388032),
-    M = n(572005);
+    M = n(562186);
 let P = R.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function k() {
     let e = (0, c.e7)([A.Z], () => A.Z.getProps().guild);
@@ -173,7 +173,7 @@ function F(e) {
         ? (0, i.jsx)(u.Button, {
               onClick: function () {
                   (0, u.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('56035'), n.e('48750')]).then(n.bind(n, 758961));
+                      let { default: e } = await Promise.all([n.e('56035'), n.e('91977')]).then(n.bind(n, 758961));
                       return (n) =>
                           (0, i.jsx)(e, {
                               ...n,
@@ -359,7 +359,7 @@ function H(e) {
                               onClick: function (e) {
                                   e.stopPropagation(),
                                       (0, u.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([n.e('56035'), n.e('48750')]).then(n.bind(n, 758961));
+                                          let { default: e } = await Promise.all([n.e('56035'), n.e('91977')]).then(n.bind(n, 758961));
                                           return (n) =>
                                               (0, i.jsx)(e, {
                                                   ...n,

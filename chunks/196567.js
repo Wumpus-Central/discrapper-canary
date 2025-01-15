@@ -8,7 +8,7 @@ t(192379);
 var l = t(120356),
     r = t.n(l),
     s = t(481060),
-    a = t(747642);
+    a = t(26687);
 function c(e) {
     let { className: n, copy: t, bannerImage: l, textColor: c = 'always-white', hideGiftIcon: o = !1 } = e;
     return (0, i.jsxs)('div', {

@@ -1,43 +1,43 @@
-n.d(t, {
+s.d(t, {
     B: function () {
         return u;
     }
 });
-var s = n(200651);
-n(192379);
-var i = n(481060),
-    r = n(313201),
-    o = n(192635),
-    c = n(388032),
-    l = n(139266);
-function a(e) {
-    let { transitionState: t, Icon: n, title: a, body: u, onClose: d } = e,
+var n = s(200651);
+s(192379);
+var i = s(481060),
+    r = s(313201),
+    o = s(192635),
+    c = s(388032),
+    a = s(289070);
+function l(e) {
+    let { transitionState: t, Icon: s, title: l, body: u, onClose: d } = e,
         f = (0, r.Dt)();
-    return (0, s.jsxs)(i.ModalRoot, {
-        className: l.container,
+    return (0, n.jsxs)(i.ModalRoot, {
+        className: a.container,
         transitionState: t,
         'aria-labelledby': f,
         children: [
-            (0, s.jsxs)(i.ModalContent, {
+            (0, n.jsxs)(i.ModalContent, {
                 children: [
-                    (0, s.jsx)(o.Z, { Icon: n }),
-                    (0, s.jsx)(i.Spacer, { size: 24 }),
-                    (0, s.jsx)(i.Heading, {
+                    (0, n.jsx)(o.Z, { Icon: s }),
+                    (0, n.jsx)(i.Spacer, { size: 24 }),
+                    (0, n.jsx)(i.Heading, {
                         id: f,
-                        className: l.__invalid_title,
+                        className: a.__invalid_title,
                         variant: 'heading-xl/semibold',
-                        children: a
+                        children: l
                     }),
-                    (0, s.jsx)(i.Spacer, { size: 8 }),
-                    (0, s.jsx)(i.Text, {
-                        className: l.body,
+                    (0, n.jsx)(i.Spacer, { size: 8 }),
+                    (0, n.jsx)(i.Text, {
+                        className: a.body,
                         variant: 'text-sm/normal',
                         children: u
                     })
                 ]
             }),
-            (0, s.jsx)(i.Spacer, { size: 24 }),
-            (0, s.jsx)(i.Button, {
+            (0, n.jsx)(i.Spacer, { size: 24 }),
+            (0, n.jsx)(i.Button, {
                 size: i.Button.Sizes.MEDIUM,
                 grow: !1,
                 onClick: d,
@@ -48,7 +48,7 @@ function a(e) {
 }
 function u(e) {
     (0, i.openModal)((t) =>
-        (0, s.jsx)(a, {
+        (0, n.jsx)(l, {
             ...t,
             ...e
         })

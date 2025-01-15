@@ -23,7 +23,7 @@ var i = n(200651),
     I = n(999382),
     N = n(981631),
     _ = n(388032),
-    T = n(981004);
+    T = n(10272);
 function j(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
         { days: l, hours: s } = (0, d.Z)(t);

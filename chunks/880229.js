@@ -39,7 +39,7 @@ var i,
     Z = n(686807),
     L = n(981631),
     D = n(388032),
-    O = n(846605);
+    O = n(806001);
 let M = (0, I.hQ)(),
     P = (0, I.hQ)(),
     k = (0, S.Mg)(h.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);

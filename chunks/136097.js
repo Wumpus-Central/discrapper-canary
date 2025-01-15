@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(192379),
-    s = n(913527),
-    r = n.n(s),
+    r = n(913527),
+    s = n.n(r),
     a = n(442837),
     l = n(314897),
     o = n(673096),
@@ -34,5 +34,5 @@ function d() {
     }, [e]);
 }
 function u(e) {
-    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : r()(e).fromNow();
+    return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.intl.string(c.t.TXCmfH) : s()(e).fromNow();
 }

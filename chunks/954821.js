@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(913527),
-    a = n.n(r),
+    r = n(192379),
+    s = n(913527),
+    a = n.n(s),
     l = n(481060),
     o = n(355467),
     c = n(100527),
@@ -18,16 +18,16 @@ var i = n(200651),
     h = n(305342),
     p = n(293810),
     x = n(388032),
-    f = n(196844);
+    f = n(735313);
 let _ = (e) => {
-        let [t, n] = s.useState(!1),
-            [i, r] = s.useState(null);
+        let [t, n] = r.useState(!1),
+            [i, s] = r.useState(null);
         return {
             cancelSubscription: async (t) => {
                 try {
                     return n(!0), await o.EO(t, e), !0;
                 } catch (e) {
-                    r(e);
+                    s(e);
                 } finally {
                     n(!1);
                 }
@@ -38,21 +38,21 @@ let _ = (e) => {
     },
     E = (e) => {
         var t;
-        let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: E, onClose: C } = e,
+        let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: E, onClose: C } = e,
             T = (0, u.Dt)(),
-            S = (0, g.YB)(r),
+            S = (0, g.YB)(s),
             b = (null == S ? void 0 : null === (t = S.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(S.cover_image_asset.application_id, S.cover_image_asset, 440) : void 0,
             { analyticsLocations: I } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: N, error: v, submitting: A } = _(I),
             j = async () => {
                 (await N(E.id)) && C();
             },
-            R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
-            O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
+            O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
+            R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
             P = a()(E.currentPeriodEnd).format('MMMM Do, YYYY'),
             y = x.intl.formatToPlainString(x.t.KsMRPz, {
-                numChannels: R.length,
-                numAdditionalBenefits: O.length,
+                numChannels: O.length,
+                numAdditionalBenefits: R.length,
                 subscriptionEndDate: P
             });
         return (0, i.jsxs)(l.ModalRoot, {
@@ -91,7 +91,7 @@ let _ = (e) => {
                         }),
                         (0, i.jsx)(h.c, {
                             listingId: o.id,
-                            guildId: s.guild_id,
+                            guildId: r.guild_id,
                             className: f.benefits
                         })
                     ]

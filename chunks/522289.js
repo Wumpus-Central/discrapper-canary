@@ -11,7 +11,7 @@ var a = r(120356),
     l = r.n(o),
     u = r(481060),
     c = r(565138),
-    d = r(357498);
+    d = r(504490);
 function f(e) {
     let { className: n, maxGuilds: r, guilds: a, onFocus: o, onClick: f, size: _ = c.Z.Sizes.SMALLER, hideOverflowCount: h = !1, disableGuildNameTooltip: p = !1 } = e;
     function m() {

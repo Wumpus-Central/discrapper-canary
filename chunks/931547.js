@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
-    l = n(378838);
+    l = n(576822);
 function o(e) {
-    let { message: t, error: n, onClick: s, submitting: o, className: c, ctaMessage: d } = e;
+    let { message: t, error: n, onClick: r, submitting: o, className: c, ctaMessage: d } = e;
     return (0, i.jsxs)('div', {
-        className: r()(l.container, c),
+        className: s()(l.container, c),
         children: [
             (0, i.jsxs)('div', {
                 className: l.textContainer,
@@ -38,7 +38,7 @@ function o(e) {
                             }),
                             null != n &&
                                 (0, i.jsx)(a.Text, {
-                                    className: r()(l.info, l.error),
+                                    className: s()(l.info, l.error),
                                     variant: 'text-sm/normal',
                                     children: n
                                 })
@@ -55,7 +55,7 @@ function o(e) {
                 color: a.Button.Colors.LINK,
                 look: a.Button.Looks.LINK,
                 size: a.Button.Sizes.ICON,
-                onClick: s,
+                onClick: r,
                 submitting: o,
                 children: d
             })

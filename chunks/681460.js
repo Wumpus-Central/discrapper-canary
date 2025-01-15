@@ -8,7 +8,7 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     s = n(481060),
-    a = n(538537);
+    a = n(410568);
 function o(e) {
     let { pills: t, pillClassName: n } = e;
     return (0, i.jsx)('div', {

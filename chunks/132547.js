@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(622535),
     o = n(481060),
     c = n(100527),
@@ -21,17 +21,17 @@ var i = n(200651),
     S = n(781800),
     b = n(981631),
     I = n(388032),
-    N = n(368549),
+    N = n(892307),
     v = n(865215);
 let A = 'SubscriberNitroHome';
 t.Z = () => {
     (0, m.z)(u.X);
-    let e = s.useRef(null),
-        [t, n] = s.useState(!1),
-        { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [j, R] = s.useState(!1);
+    let e = r.useRef(null),
+        [t, n] = r.useState(!1),
+        { analyticsLocations: s } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [j, O] = r.useState(!1);
     (0, p.FM)();
-    let O = (0, h.b)(A),
+    let R = (0, h.b)(A),
         P = (0, E.TW)(A);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -41,7 +41,7 @@ t.Z = () => {
                 children: (0, i.jsx)('div', {
                     className: N.container,
                     children: (0, i.jsxs)(d.Gt, {
-                        value: r,
+                        value: s,
                         children: [
                             (0, i.jsx)(_.Z, {
                                 className: N.heroHeading,
@@ -49,7 +49,7 @@ t.Z = () => {
                             }),
                             (0, i.jsx)(x.Z, {
                                 variant: C.R0.WHATS_NEW,
-                                className: a()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(O || P) }),
+                                className: a()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(R || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
@@ -73,7 +73,7 @@ t.Z = () => {
                             (0, i.jsx)('div', { className: N.footerSpacing }),
                             (0, i.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !j && (g.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), R(!0));
+                                    e && !j && (g.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), O(!0));
                                 },
                                 children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                             }),

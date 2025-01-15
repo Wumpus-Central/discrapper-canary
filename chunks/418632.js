@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    s = n(200651),
-    r = n(192379),
+    r = n(200651),
+    s = n(192379),
     a = n(512722),
     l = n.n(a),
     o = n(442837),
@@ -23,10 +23,10 @@ function h(e, t, n) {
         e
     );
 }
-class p extends (i = r.Component) {
+class p extends (i = s.Component) {
     render() {
         let { color: e, look: t, size: n } = this.props;
-        return (0, s.jsx)(c.Button, {
+        return (0, r.jsx)(c.Button, {
             look: t,
             size: n,
             color: e,
@@ -45,12 +45,12 @@ class p extends (i = r.Component) {
                         d.Z.verifyResend()
                             .then(() =>
                                 (0, c.openModal)((t) =>
-                                    (0, s.jsx)(c.ConfirmModal, {
+                                    (0, r.jsx)(c.ConfirmModal, {
                                         header: g.intl.string(g.t.LykQYm),
                                         confirmText: g.intl.string(g.t.BddRzc),
                                         confirmButtonColor: c.Button.Colors.BRAND,
                                         ...t,
-                                        children: (0, s.jsx)(c.Text, {
+                                        children: (0, r.jsx)(c.Text, {
                                             variant: 'text-md/normal',
                                             children: g.intl.format(g.t.azKEPz, { email: e.email })
                                         })
@@ -62,7 +62,7 @@ class p extends (i = r.Component) {
                                     n = g.intl.string(g.t.XcrQNz);
                                 null != t && t.email && (n = t.email),
                                     (0, c.openModal)((e) =>
-                                        (0, s.jsx)(u.default, {
+                                        (0, r.jsx)(u.default, {
                                             title: g.intl.string(g.t.VbTh0N),
                                             body: n,
                                             ...e

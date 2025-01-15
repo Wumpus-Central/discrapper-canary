@@ -20,7 +20,7 @@ var l = e(200651),
     f = e(590433),
     v = e(981631),
     x = e(388032),
-    b = e(923333);
+    b = e(791940);
 function g(t) {
     var n, e;
     let { guildId: g, userId: C, anaylticsLocations: y, transitionState: j, onClose: k } = t,

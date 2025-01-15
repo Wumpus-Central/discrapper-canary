@@ -1,7 +1,7 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(568611),
     o = n(435935),
     c = n(442837),
@@ -13,13 +13,13 @@ var i = n(200651),
     p = n(981631),
     x = n(930441),
     f = n(388032),
-    _ = n(660728),
-    E = n(232186);
+    _ = n(288204),
+    E = n(275477);
 t.Z = () => {
     let e = h.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             null == n && (0, m.Y7)();
         }, [n]),
         (0, i.jsxs)('div', {

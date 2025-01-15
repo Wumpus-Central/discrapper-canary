@@ -1,12 +1,12 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(481060),
     o = n(358085),
     c = n(998502),
     d = n(388032),
-    u = n(232186);
+    u = n(275477);
 function m(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends s.PureComponent {
+class g extends r.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -30,10 +30,10 @@ class g extends s.PureComponent {
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            s = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
+            r = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
         return (0, i.jsxs)(l.FormSection, {
             tag: l.FormTitleTags.H1,
-            title: s,
+            title: r,
             children: [
                 (0, i.jsx)(l.FormTitle, { children: d.intl.string(d.t['w/vU5u']) }),
                 (0, i.jsx)(l.FormSwitch, {

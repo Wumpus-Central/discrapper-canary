@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(481060),
-    s = n(358085),
-    r = n(991346),
+    r = n(358085),
+    s = n(991346),
     a = n(295545),
     l = n(168308),
     o = n(726985),
@@ -13,16 +13,16 @@ var i = n(481060),
     d = n(388032);
 function u() {
     let e = (0, l.bC)(),
-        t = (0, r.Gj)(o.s6.GAMES);
+        t = (0, s.Gj)(o.s6.GAMES);
     return (function (e, t, n) {
-        var r;
-        let a = ((r = e),
+        var s;
+        let a = ((s = e),
         [
             {
                 id: c.Z.MY_GAMES,
                 title: d.intl.string(d.t['5DMgp6']),
                 icon: i.DpadIcon,
-                predicate: () => !s.isPlatformEmbedded,
+                predicate: () => !r.isPlatformEmbedded,
                 setting: o.s6.GAMES_MY_GAMES
             },
             {
@@ -35,7 +35,7 @@ function u() {
                 id: c.Z.OVERLAY,
                 title: d.intl.string(d.t.bNqkDw),
                 icon: i.ScreenSystemRequirementsIcon,
-                predicate: () => !r,
+                predicate: () => !s,
                 setting: o.s6.GAMES_OVERLAY
             },
             {

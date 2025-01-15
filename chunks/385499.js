@@ -6,7 +6,7 @@ var a = r(120356),
     l = r(481060),
     u = r(674563),
     c = r(388032),
-    d = r(63442);
+    d = r(491710);
 let f = (e) => {
     let n,
         { invertColor: r = !1, type: a = u.Hb.BOT, className: f, verified: _, hideIcon: h = !1, useRemSizes: p = !1, children: m = [] } = e,

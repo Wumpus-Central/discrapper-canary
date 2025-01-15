@@ -10,18 +10,18 @@ n.d(t, {
     }
 });
 var i = n(544891),
-    s = n(570140),
-    r = n(981631);
+    r = n(570140),
+    s = n(981631);
 async function a() {
     var e;
     let t = await i.tn.get({
-        url: r.ANM.AUTH_SESSIONS,
+        url: s.ANM.AUTH_SESSIONS,
         rejectWithError: !1
     });
     return (
         (null == t ? void 0 : t.ok) &&
             (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null &&
-            s.Z.dispatch({
+            r.Z.dispatch({
                 type: 'FETCH_AUTH_SESSIONS_SUCCESS',
                 sessions: t.body.user_sessions
             }),
@@ -29,7 +29,7 @@ async function a() {
     );
 }
 function l() {
-    s.Z.dispatch({
+    r.Z.dispatch({
         type: 'FETCH_AUTH_SESSIONS_SUCCESS',
         sessions: []
     });
@@ -39,13 +39,13 @@ async function o(e) {
         if (0 === e.length) return;
     } else e = [e];
     let t = await i.tn.post({
-        url: r.ANM.AUTH_SESSIONS_LOGOUT,
+        url: s.ANM.AUTH_SESSIONS_LOGOUT,
         body: { session_id_hashes: e },
         rejectWithError: !1
     });
     return (
         (null == t ? void 0 : t.ok) &&
-            s.Z.dispatch({
+            r.Z.dispatch({
                 type: 'LOGOUT_AUTH_SESSIONS_SUCCESS',
                 sessionIdHashes: e
             }),

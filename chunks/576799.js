@@ -13,7 +13,7 @@ var i = n(200651),
     d = n(123145),
     u = n(699516),
     m = n(217702),
-    h = n(507304);
+    h = n(163037);
 function f(e) {
     let { message: t, channel: n } = e,
         { isBlocked: f, isIgnored: p } = (0, l.cj)(

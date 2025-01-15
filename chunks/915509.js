@@ -11,7 +11,7 @@ var l = t(200651),
     i = t(481060),
     s = t(313201),
     c = t(388032),
-    d = t(945330);
+    d = t(237384);
 function u(e) {
     let { errorText: n, title: t, description: o, transitionState: u, onCancel: f, onConfirm: m, children: g } = e,
         h = (0, s.Dt)(),

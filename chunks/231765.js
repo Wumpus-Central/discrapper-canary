@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    s,
     r,
+    s,
     a,
     l = n(200651),
     o = n(192379),
@@ -28,19 +28,19 @@ var i,
     I = n(524484),
     N = n(981631),
     v = n(388032),
-    A = n(218768);
+    A = n(705713);
 let j = {
         enabled: !0,
         combosEnabled: !0,
         screenshakeEnabled: !1,
         confettiEnabled: !1
     },
-    R = (0, c.range)(0, 11),
-    O = (0, c.range)(0, 2.25, 0.25),
+    O = (0, c.range)(0, 11),
+    R = (0, c.range)(0, 2.25, 0.25),
     P = (0, c.range)(1, 11),
     y = (0, c.range)(1, 26);
-((r = i || (i = {}))[(r.CONFETTI = 0)] = 'CONFETTI'), (r[(r.SHAKE = 1)] = 'SHAKE'), ((a = s || (s = {}))[(a.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (a[(a.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
-let D = () => [
+((s = i || (i = {}))[(s.CONFETTI = 0)] = 'CONFETTI'), (s[(s.SHAKE = 1)] = 'SHAKE'), ((a = r || (r = {}))[(a.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (a[(a.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
+let B = () => [
         {
             location: I.Hn.CHAT_INPUT,
             title: v.intl.string(v.t.elTty8),
@@ -62,7 +62,7 @@ let D = () => [
             description: v.intl.string(v.t.fiHV7u)
         }
     ],
-    B = () => [
+    D = () => [
         {
             location: I.oZ.CHAT_INPUT,
             title: v.intl.string(v.t.vUcvPD),
@@ -80,8 +80,8 @@ let D = () => [
         }
     ];
 function Z(e) {
-    let { disabled: t, locations: n, settingsLocations: i, onChange: s } = e,
-        r = n.map((e) =>
+    let { disabled: t, locations: n, settingsLocations: i, onChange: r } = e,
+        s = n.map((e) =>
             (0, l.jsx)(
                 m.FormSwitch,
                 {
@@ -89,7 +89,7 @@ function Z(e) {
                     value: i[e.location],
                     note: e.description,
                     onChange: (t) =>
-                        s({
+                        r({
                             ...i,
                             [e.location]: t
                         }),
@@ -99,7 +99,7 @@ function Z(e) {
             )
         );
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(m.FormTitle, { children: v.intl.string(v.t.bWVN1N) }), r]
+        children: [(0, l.jsx)(m.FormTitle, { children: v.intl.string(v.t.bWVN1N) }), s]
     });
 }
 function L(e) {
@@ -116,21 +116,21 @@ function M(e) {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i
         } = e,
-        s = (0, d.e7)([h.Z], () => h.Z.useReducedMotion);
+        r = (0, d.e7)([h.Z], () => h.Z.useReducedMotion);
     return (0, l.jsx)(m.FormSwitch, {
         value: t,
         note: v.intl.string(v.t.KuYbWF),
         onChange: (e) => {
             !e && (0, _.T)(E.hn.DISABLE_POGGERMODE),
-                e && (!n || s)
+                e && (!n || r)
                     ? (0, m.openModal)((e) =>
                           (0, l.jsx)(m.ConfirmModal, {
-                              header: s ? v.intl.string(v.t['FxT+p6']) : v.intl.string(v.t.TAZ4Fx),
+                              header: r ? v.intl.string(v.t['FxT+p6']) : v.intl.string(v.t.TAZ4Fx),
                               confirmText: v.intl.string(v.t.JFfinp),
                               cancelText: v.intl.string(v.t['ETE/oK']),
                               onConfirm: () =>
                                   i(
-                                      s
+                                      r
                                           ? j
                                           : {
                                                 enabled: !0,
@@ -140,7 +140,7 @@ function M(e) {
                               ...e,
                               children: (0, l.jsx)(m.Text, {
                                   variant: 'text-md/normal',
-                                  children: s ? v.intl.string(v.t.gmixr6) : v.intl.string(v.t.jN3t3N)
+                                  children: r ? v.intl.string(v.t.gmixr6) : v.intl.string(v.t.jN3t3N)
                               })
                           })
                       )
@@ -151,7 +151,7 @@ function M(e) {
 }
 function k(e) {
     let {
-            settings: { enabled: t, confettiEnabled: n, confettiCount: i, confettiSize: s, confettiEnabledLocations: r },
+            settings: { enabled: t, confettiEnabled: n, confettiCount: i, confettiSize: r, confettiEnabledLocations: s },
             updateSettings: a
         } = e,
         o = !t || !n;
@@ -196,7 +196,7 @@ function k(e) {
                         stickToMarkers: !0,
                         minValue: y[0],
                         maxValue: y[y.length - 1],
-                        initialValue: s,
+                        initialValue: r,
                         onValueChange: (e) => a({ confettiSize: e }, 0),
                         onValueRender: (e) => ''.concat(e)
                     })
@@ -204,8 +204,8 @@ function k(e) {
             }),
             (0, l.jsx)(Z, {
                 disabled: o,
-                locations: D(),
-                settingsLocations: r,
+                locations: B(),
+                settingsLocations: s,
                 onChange: (e) => a({ confettiEnabledLocations: e }, 0)
             })
         ]
@@ -213,8 +213,8 @@ function k(e) {
 }
 function w(e) {
     let {
-            settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: i, combosRequiredCount: s },
-            updateSettings: r
+            settings: { enabled: t, combosEnabled: n, comboSoundsEnabled: i, combosRequiredCount: r },
+            updateSettings: s
         } = e,
         a = !t || !n;
     return (0, l.jsxs)(m.FormSection, {
@@ -225,14 +225,14 @@ function w(e) {
                 disabled: !t,
                 value: n,
                 note: v.intl.string(v.t['31Z8ER']),
-                onChange: (e) => r({ combosEnabled: e }),
+                onChange: (e) => s({ combosEnabled: e }),
                 children: v.intl.string(v.t.o3iV7O)
             }),
             (0, l.jsx)(m.FormSwitch, {
                 disabled: !t,
                 value: i,
                 note: v.intl.string(v.t['9rgQEh']),
-                onChange: (e) => r({ comboSoundsEnabled: e }),
+                onChange: (e) => s({ comboSoundsEnabled: e }),
                 children: v.intl.string(v.t['Ax+Ioa'])
             }),
             (0, l.jsxs)(m.FormItem, {
@@ -243,12 +243,12 @@ function w(e) {
                     (0, l.jsx)(L, { children: v.intl.string(v.t['/OOFpK']) }),
                     (0, l.jsx)(m.Slider, {
                         disabled: a,
-                        markers: R,
+                        markers: O,
                         stickToMarkers: !0,
-                        minValue: R[0],
-                        maxValue: R[R.length - 1],
-                        initialValue: s,
-                        onValueChange: (e) => r({ combosRequiredCount: e }),
+                        minValue: O[0],
+                        maxValue: O[O.length - 1],
+                        initialValue: r,
+                        onValueChange: (e) => s({ combosRequiredCount: e }),
                         onValueRender: (e) => ''.concat(e)
                     })
                 ]
@@ -257,15 +257,15 @@ function w(e) {
         ]
     });
 }
-function F(e) {
+function U(e) {
     let {
-            settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: s },
-            updateSettings: r
+            settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: r },
+            updateSettings: s
         } = e,
         a = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         o = !t || !n || a,
         c = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > i && (0, _.T)(E.hn.MORE), r(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, _.T)(E.hn.MORE), s(e, t);
         };
     return (0, l.jsxs)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -276,7 +276,7 @@ function F(e) {
                 tooltipNote: a ? v.intl.string(v.t.GckHGx) : null,
                 value: n && !a,
                 note: v.intl.string(v.t.Qq5W3t),
-                onChange: (e) => r({ screenshakeEnabled: e }, 1),
+                onChange: (e) => s({ screenshakeEnabled: e }, 1),
                 children: v.intl.string(v.t.N004zM)
             }),
             (0, l.jsxs)(m.FormItem, {
@@ -287,27 +287,27 @@ function F(e) {
                     (0, l.jsx)(L, { children: v.intl.string(v.t.CEOEOT) }),
                     (0, l.jsx)(m.Slider, {
                         disabled: o,
-                        markers: O,
+                        markers: R,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        minValue: O[0],
-                        maxValue: O[O.length - 1],
+                        minValue: R[0],
+                        maxValue: R[R.length - 1],
                         initialValue: i,
                         onValueChange: (e) => c({ shakeIntensity: e }, 1),
-                        onMarkerRender: (e) => (e === O[O.length - 1] ? v.intl.string(v.t['4rbMWV']) : ''.concat(100 * e, '%'))
+                        onMarkerRender: (e) => (e === R[R.length - 1] ? v.intl.string(v.t['4rbMWV']) : ''.concat(100 * e, '%'))
                     })
                 ]
             }),
             (0, l.jsx)(Z, {
                 disabled: o,
-                locations: B(),
-                settingsLocations: s,
-                onChange: (e) => r({ screenshakeEnabledLocations: e }, 1)
+                locations: D(),
+                settingsLocations: r,
+                onChange: (e) => s({ screenshakeEnabledLocations: e }, 1)
             })
         ]
     });
 }
-function U(e) {
+function F(e) {
     let { updateSettings: t } = e;
     return (0, l.jsx)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -388,7 +388,7 @@ let G = () =>
 function H(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
         i = (0, d.cj)([T.Z], () => T.Z.getState()),
-        [s, r] = o.useState({
+        [r, s] = o.useState({
             x: 0,
             y: 0
         }),
@@ -410,9 +410,9 @@ function H(e) {
         g = (e, t) => {
             if ((u(e), (0, C.AI)(e), null == t)) return;
             let n = c(i.confettiEnabled, e.confettiEnabled, i.enabled, e.enabled);
-            0 === t && n && a.fire(s.x, s.y, { settings: e });
-            let r = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);
-            if (1 === t && r) {
+            0 === t && n && a.fire(r.x, r.y, { settings: e });
+            let s = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);
+            if (1 === t && s) {
                 var l;
                 x.S.dispatch(N.CkL.SHAKE_APP, {
                     duration: 1000,
@@ -421,7 +421,7 @@ function H(e) {
             }
         },
         h = (e) => {
-            r({
+            s({
                 x: e.clientX,
                 y: e.clientY
             });
@@ -444,7 +444,7 @@ function H(e) {
                     settings: i,
                     updateSettings: g
                 }),
-                (0, l.jsx)(F, {
+                (0, l.jsx)(U, {
                     settings: i,
                     updateSettings: g
                 }),
@@ -452,7 +452,7 @@ function H(e) {
                     settings: i,
                     updateSettings: g
                 }),
-                (0, l.jsx)(U, { updateSettings: g })
+                (0, l.jsx)(F, { updateSettings: g })
             ]
         })
     );
@@ -477,9 +477,9 @@ let Y = (e, t, n) => {
 function z() {
     let [e, t] = o.useState(0),
         [n, i] = o.useState(W(e)),
-        [s, r] = o.useState(!1),
+        [r, s] = o.useState(!1),
         a = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        c = s && !a;
+        c = r && !a;
     return (
         o.useEffect(() => {
             let t = setTimeout(() => {
@@ -496,7 +496,7 @@ function z() {
                     className: A.slideAnimator,
                     step: e,
                     direction: n,
-                    children: Y(e, t, r)
+                    children: Y(e, t, s)
                 }),
                 (0, l.jsx)('div', {
                     className: c ? A.enableAnimationOverlayVisible : A.enableAnimationOverlayHidden,
@@ -507,7 +507,7 @@ function z() {
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,
-                        onComplete: () => r(!1)
+                        onComplete: () => s(!1)
                     })
                 })
             ]

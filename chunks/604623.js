@@ -26,7 +26,7 @@ var a = l(200651),
     p = l(46887),
     C = l(981631),
     v = l(388032),
-    _ = l(524796);
+    _ = l(122836);
 let k = (e) => {
     let { className: t, onChange: l, textVariant: i = 'text-md/normal', label: n, value: r, isArchived: o = !1 } = e;
     return (0, a.jsx)(d.Checkbox, {

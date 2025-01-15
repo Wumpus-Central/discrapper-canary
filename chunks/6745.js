@@ -9,7 +9,7 @@ var i = r(200651),
     o = r.n(s),
     l = r(507274),
     u = r(838331),
-    c = r(431989);
+    c = r(897922);
 function d(e) {
     let { children: n, placeholder: r, value: s, onChange: d, onClose: f, showScrollbar: _, className: h, multiSelect: p, ...m } = e,
         g = a.useCallback(

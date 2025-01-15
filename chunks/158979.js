@@ -13,7 +13,7 @@ var s = n(481060),
     d = n(981631),
     c = n(987650),
     u = n(388032),
-    h = n(114057);
+    h = n(522104);
 function p() {
     return (0, i.jsx)('div', {
         className: h.footer,
@@ -47,7 +47,7 @@ function f(e) {
                         r.Z.updateNotificationStatus(t),
                         a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? r.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
+                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('55499')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
@@ -79,7 +79,7 @@ function f(e) {
                         r.Z.updateNotificationStatus(t),
                         a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? r.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
+                            let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('55499')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

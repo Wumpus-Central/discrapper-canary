@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    r = n(192379),
+    s = n(392711),
+    a = n.n(s),
     l = n(442837),
     o = n(46973),
     c = n(846519),
@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(626135),
     x = n(981631),
     f = n(388032),
-    _ = n(621519);
+    _ = n(796568);
 function E(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function E(e, t, n) {
         e
     );
 }
-class C extends s.PureComponent {
+class C extends r.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -41,7 +41,7 @@ class C extends s.PureComponent {
         this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
     }
     _micTestStart() {
-        let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: i, outputVolume: s, inputMode: r, vadAutoThreshold: a, vadThreshold: l, location: o, isDeafened: c } = this.props,
+        let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: i, outputVolume: r, inputMode: s, vadAutoThreshold: a, vadThreshold: l, location: o, isDeafened: c } = this.props,
             d = !1;
         e && !c && (u.Z.toggleSelfDeaf(), (d = !0)),
             u.Z.setLoopback(!0),
@@ -55,8 +55,8 @@ class C extends s.PureComponent {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: i,
-                output_device_volume: s,
-                input_mode: r,
+                output_device_volume: r,
+                input_mode: s,
                 input_sensitivity_is_automatic: a,
                 input_sensitivity_threshold: Math.round(l),
                 location: o
@@ -79,15 +79,15 @@ class C extends s.PureComponent {
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,
-            { isMicTesting: n, isDetectingInput: s } = this.state;
+            { isMicTesting: n, isDetectingInput: r } = this.state;
         return (0, i.jsx)(d.FormText, {
             className: _.micTestCaption,
             type: d.FormText.Types.DESCRIPTION,
-            children: n ? (s ? e : t) : null
+            children: n ? (r ? e : t) : null
         });
     }
     render() {
-        let { isVoiceConnected: e, title: t, description: n, notchBackground: s, buttonTest: r, buttonStop: a, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
+        let { isVoiceConnected: e, title: t, description: n, notchBackground: r, buttonTest: s, buttonStop: a, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
             { isMicTesting: u, volume: g } = this.state,
             h = e && !u ? f.intl.string(f.t['9viE2N']) : null;
         return (
@@ -121,13 +121,13 @@ class C extends s.PureComponent {
                                         size: d.Button.Sizes.SMALL,
                                         className: l,
                                         color: o,
-                                        children: u ? a : r
+                                        children: u ? a : s
                                     });
                                 }
                             }),
                             (0, i.jsx)(m.Z, {
                                 progress: u ? g + 100 : 0,
-                                notchBackground: s
+                                notchBackground: r
                             }),
                             this.renderCaption()
                         ]
@@ -180,8 +180,8 @@ t.Z = l.ZP.connectStores([h.Z, g.Z], () => {
             return n === e;
         }),
         i = g.Z.getOutputDeviceId(),
-        s = g.Z.getOutputDevices(),
-        r = a().find(s, (e) => {
+        r = g.Z.getOutputDevices(),
+        s = a().find(r, (e) => {
             let { id: t } = e;
             return t === i;
         }),
@@ -195,6 +195,6 @@ t.Z = l.ZP.connectStores([h.Z, g.Z], () => {
         isDeafened: g.Z.isSelfDeaf(),
         vadAutoThreshold: l.autoThreshold,
         inputDeviceName: null != n ? n.name : '',
-        outputDeviceName: null != r ? r.name : ''
+        outputDeviceName: null != s ? s.name : ''
     };
 })(C);

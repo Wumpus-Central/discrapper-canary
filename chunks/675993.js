@@ -26,8 +26,8 @@ var i = t(200651),
     A = t(29380),
     E = t(783685),
     b = t(388032),
-    I = t(580062),
-    j = t(665162);
+    I = t(891402),
+    j = t(426953);
 function P(e) {
     let { channel: n, application: t, videoUrl: a, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {

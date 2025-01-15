@@ -1,12 +1,12 @@
 n.d(e, {
     q: function () {
-        return s;
+        return o;
     }
 });
-var o = n(442837),
-    i = n(375954);
-let s = (t) =>
-    (0, o.e7)([i.Z], () => {
+var i = n(442837),
+    s = n(375954);
+let o = (t) =>
+    (0, i.e7)([s.Z], () => {
         var e;
-        return null !== (e = i.Z.getLastNonCurrentUserMessage(t)) && void 0 !== e ? e : i.Z.getLastMessage(t);
+        return null !== (e = s.Z.getLastNonCurrentUserMessage(t)) && void 0 !== e ? e : s.Z.getLastMessage(t);
     });

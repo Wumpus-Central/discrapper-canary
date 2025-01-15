@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return s;
+        return r;
     }
 });
 let i = (0, n(818083).B)({
@@ -21,7 +21,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function s() {
+function r() {
     let { enabled: e } = i.getCurrentConfig({ location: '70b634_1' }, { autoTrackExposure: !1 });
     return i.trackExposure({ location: '70b634_2' }), e;
 }

@@ -5,11 +5,11 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(600164),
-    l = n(136420),
-    o = n(232186);
+    l = n(242652),
+    o = n(275477);
 function c(e) {
     let { features: t } = e;
     return (0, i.jsx)(i.Fragment, {
@@ -18,14 +18,14 @@ function c(e) {
                 a.Z,
                 {
                     align: a.Z.Align.CENTER,
-                    className: r()(o.marginTop20, l.feature, { [l.featureBorder]: 0 !== t }),
+                    className: s()(o.marginTop20, l.feature, { [l.featureBorder]: 0 !== t }),
                     children: [
-                        null != e.icon ? (0, i.jsx)('div', { className: r()(l.icon, e.icon) }) : null,
+                        null != e.icon ? (0, i.jsx)('div', { className: s()(l.icon, e.icon) }) : null,
                         (0, i.jsxs)('div', {
                             children: [
                                 null != e.title
                                     ? (0, i.jsx)('div', {
-                                          className: r()(o.marginBottom8, l.title),
+                                          className: s()(o.marginBottom8, l.title),
                                           children: e.title
                                       })
                                     : null,

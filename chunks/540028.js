@@ -16,7 +16,7 @@ var o = r(442837),
     E = r(981631),
     v = r(354459),
     I = r(388032),
-    T = r(880397);
+    T = r(742210);
 function b(e) {
     let { closePopout: n, idle: r, pipWindows: i, voiceChannelId: a, onSelect: l } = e;
     r && n();

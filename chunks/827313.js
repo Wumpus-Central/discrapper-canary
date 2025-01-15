@@ -10,7 +10,7 @@ var a = r(481060),
     o = r(475413),
     l = r(228168),
     u = r(388032),
-    c = r(734570);
+    c = r(636027);
 function d(e) {
     let { userId: n, isHovering: r, onOpenProfile: d } = e,
         { note: f } = (0, s.Z)(n),

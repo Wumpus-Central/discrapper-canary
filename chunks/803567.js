@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(653041);
 var i,
-    s,
-    r = n(200651);
+    r,
+    s = n(200651);
 n(192379);
 var a = n(120356),
     l = n.n(a),
@@ -25,11 +25,11 @@ var a = n(120356),
     C = n(726985),
     T = n(981631),
     S = n(388032),
-    b = n(232186);
+    b = n(275477);
 let I = n(775322),
     N = n(853453),
     v = (0, g.hQ)();
-((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.STANDARD = 1)] = 'STANDARD'), (s[(s.KRISP = 2)] = 'KRISP');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.STANDARD = 1)] = 'STANDARD'), (r[(r.KRISP = 2)] = 'KRISP');
 let A = {
     page: T.ZY5.USER_SETTINGS,
     section: T.jXE.SETTINGS_VOICE_AND_VIDEO
@@ -45,23 +45,23 @@ function j(e) {
         }
     });
 }
-function R() {
+function O() {
     let e = (0, o.e7)([E.Z], () => E.Z.theme),
         {
             noiseCancellation: t,
             noiseSuppression: n,
             noiseSuppressionSupported: i,
-            noiseCancellationSupported: s
+            noiseCancellationSupported: r
         } = (0, o.cj)([x.Z], () => ({
             noiseCancellation: x.Z.getNoiseCancellation(),
             noiseSuppression: x.Z.getNoiseSuppression(),
             noiseSuppressionSupported: x.Z.isNoiseSuppressionSupported(),
             noiseCancellationSupported: x.Z.isNoiseCancellationSupported()
         }));
-    if (!i && !s) return null;
+    if (!i && !r) return null;
     let a = [];
     return (
-        s &&
+        r &&
             a.push({
                 name: S.intl.string(S.t.rdoNzs),
                 value: 2
@@ -75,29 +75,29 @@ function R() {
             name: S.intl.string(S.t.wkYAl5),
             value: 0
         }),
-        (0, r.jsxs)(d.FormSection, {
+        (0, s.jsxs)(d.FormSection, {
             className: b.marginBottom20,
             children: [
-                (0, r.jsx)(d.FormTitle, {
+                (0, s.jsx)(d.FormTitle, {
                     id: v,
                     tag: d.FormTitleTags.H3,
                     className: b.marginBottom8,
                     children: S.intl.string(S.t.t8QhiY)
                 }),
-                (0, r.jsx)(d.FormText, {
+                (0, s.jsx)(d.FormText, {
                     type: d.FormText.Types.DESCRIPTION,
                     className: b.marginBottom8,
                     children: S.intl.string(S.t.najZCQ)
                 }),
-                (0, r.jsx)(d.RadioGroup, {
+                (0, s.jsx)(d.RadioGroup, {
                     options: a,
                     onChange: (e) => {
                         u.Z.setNoiseCancellation(2 === e.value, A), u.Z.setNoiseSuppression(1 === e.value, A);
                     },
                     value: t ? 2 : n ? 1 : 0
                 }),
-                s &&
-                    (0, r.jsx)(d.FormNotice, {
+                r &&
+                    (0, s.jsx)(d.FormNotice, {
                         className: b.marginBottom8,
                         type: d.FormNoticeTypes.PRIMARY,
                         imageData: {
@@ -106,24 +106,24 @@ function R() {
                             height: 40
                         },
                         align: m.Z.Align.CENTER,
-                        body: (0, r.jsx)(d.Anchor, {
+                        body: (0, s.jsx)(d.Anchor, {
                             href: _.Z.getArticleURL(T.BhN.NOISE_SUPPRESSION),
                             onClick: j,
                             children: S.intl.string(S.t.hvVgAQ)
                         })
                     }),
-                (0, r.jsx)(d.FormDivider, {})
+                (0, s.jsx)(d.FormDivider, {})
             ]
         })
     );
 }
-function O() {
+function R() {
     let {
             inputMode: e,
             inputDeviceId: t,
             echoCancellation: n,
             automaticGainControl: i,
-            vadAutoThreshold: s,
+            vadAutoThreshold: r,
             vadUseKrisp: a
         } = (0, o.cj)([x.Z], () => ({
             inputMode: x.Z.getMode(),
@@ -147,20 +147,20 @@ function O() {
             [t]
         ),
         f = c || m || g,
-        _ = e === T.pM4.VOICE_ACTIVITY && s;
-    return (0, r.jsxs)(d.FormSection, {
+        _ = e === T.pM4.VOICE_ACTIVITY && r;
+    return (0, s.jsxs)(d.FormSection, {
         className: b.marginBottom20,
         title: S.intl.string(S.t['6I6GUl']),
         children: [
             f &&
-                (0, r.jsx)(d.FormText, {
+                (0, s.jsx)(d.FormText, {
                     className: b.marginBottom20,
                     type: d.FormText.Types.DESCRIPTION,
                     children: S.intl.string(S.t['/Whuzs'])
                 }),
-            (0, r.jsx)(h.F, {
+            (0, s.jsx)(h.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
-                children: (0, r.jsx)(d.FormSwitch, {
+                children: (0, s.jsx)(d.FormSwitch, {
                     className: l()(b.marginTop8, b.marginBottom20),
                     value: n,
                     onChange: (e) =>
@@ -172,13 +172,13 @@ function O() {
                     children: S.intl.string(S.t.iWTwu7)
                 })
             }),
-            (0, r.jsx)(h.F, {
+            (0, s.jsx)(h.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
-                children: (0, r.jsx)(R, {})
+                children: (0, s.jsx)(O, {})
             }),
-            (0, r.jsx)(h.F, {
+            (0, s.jsx)(h.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
-                children: (0, r.jsx)(d.FormSwitch, {
+                children: (0, s.jsx)(d.FormSwitch, {
                     value: a,
                     onChange: (t) => u.Z.setMode(e, { vadUseKrisp: t }),
                     note: S.intl.string(S.t.LoOB1N),
@@ -186,9 +186,9 @@ function O() {
                     children: S.intl.string(S.t.BbESsr)
                 })
             }),
-            (0, r.jsx)(h.F, {
+            (0, s.jsx)(h.F, {
                 setting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
-                children: (0, r.jsx)(d.FormSwitch, {
+                children: (0, s.jsx)(d.FormSwitch, {
                     className: '',
                     value: i,
                     onChange: (e) =>

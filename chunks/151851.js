@@ -23,7 +23,7 @@ var a = r(120356),
     I = r(358085),
     T = r(998502),
     b = r(388032),
-    y = r(882165);
+    y = r(973789);
 let S = '#ffffff',
     A = (e) => T.ZP.close(e),
     N = (e) => T.ZP.minimize(e),

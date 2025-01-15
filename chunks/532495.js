@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(512722),
-    r = n.n(s),
+var r = n(512722),
+    s = n.n(r),
     a = n(442837),
     l = n(809206),
     o = n(634894),
@@ -30,21 +30,21 @@ var s = n(512722),
     v = n(25990),
     A = n(594174),
     j = n(74538),
-    R = n(388032),
-    O = n(91768);
+    O = n(388032),
+    R = n(829516);
 function P() {
-    var e, t, n, s, P, y, D, B;
+    var e, t, n, r, P, y, B, D;
     let Z = (0, a.e7)([A.default], () => {
             let e = A.default.getCurrentUser();
-            return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
+            return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
         L = (0, a.e7)([I.Z], () => I.Z.getUserProfile(Z.id)),
         {
             pendingAvatar: M,
             pendingGlobalName: k,
             pendingBanner: w,
-            pendingBio: F,
-            pendingPronouns: U,
+            pendingBio: U,
+            pendingPronouns: F,
             pendingAccentColor: V,
             pendingThemeColors: G,
             errors: H
@@ -71,11 +71,11 @@ function P() {
         });
     let Q = (0, N.ZP)(Z.id),
         X = null == Q ? void 0 : Q.getLegacyUsername(),
-        J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == Y ? void 0 : Y.nick) && void 0 !== s ? s : [],
+        J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (r = null == Y ? void 0 : Y.nick) && void 0 !== r ? r : [],
         $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (y = null == Y ? void 0 : Y.bio) && void 0 !== y ? y : [],
         ee = (0, c.V)();
     return (0, i.jsxs)('div', {
-        className: O.sectionsContainer,
+        className: R.sectionsContainer,
         children: [
             (0, i.jsx)(x.Z, {
                 placeholder: Z.username,
@@ -87,11 +87,11 @@ function P() {
             (0, i.jsx)(
                 S.Z,
                 {
-                    sectionTitle: R.intl.string(R.t['+T3RIy']),
+                    sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: H.pronouns,
                     onPronounsChange: b.ID,
-                    pendingPronouns: U,
-                    currentPronouns: null !== (D = null == L ? void 0 : L.pronouns) && void 0 !== D ? D : ''
+                    pendingPronouns: F,
+                    currentPronouns: null !== (B = null == L ? void 0 : L.pronouns) && void 0 !== B ? B : ''
                 },
                 'pronouns'
             ),
@@ -101,7 +101,7 @@ function P() {
                     onAvatarChange: l.I5,
                     showRemoveAvatarButton: z,
                     errors: H.avatar,
-                    sectionTitle: R.intl.string(R.t.lqaIxM),
+                    sectionTitle: O.intl.string(O.t.lqaIxM),
                     forcedDivider: !0
                 },
                 'avatar'
@@ -110,7 +110,7 @@ function P() {
                 h.Z,
                 {
                     user: Z,
-                    sectionTitle: R.intl.string(R.t['7v0T9P'])
+                    sectionTitle: O.intl.string(O.t['7v0T9P'])
                 },
                 'decoration'
             ),
@@ -118,7 +118,7 @@ function P() {
                 C.Z,
                 {
                     user: Z,
-                    sectionTitle: R.intl.string(R.t.wR5wOj)
+                    sectionTitle: O.intl.string(O.t.wR5wOj)
                 },
                 'effect'
             ),
@@ -157,11 +157,11 @@ function P() {
             (0, i.jsx)(
                 g.Z,
                 {
-                    sectionTitle: R.intl.string(R.t.NepzEx),
+                    sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,
                     onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
-                    pendingBio: F,
-                    currentBio: null !== (B = null == L ? void 0 : L.bio) && void 0 !== B ? B : ''
+                    pendingBio: U,
+                    currentBio: null !== (D = null == L ? void 0 : L.bio) && void 0 !== D ? D : ''
                 },
                 'bio'
             ),

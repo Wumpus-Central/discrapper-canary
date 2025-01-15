@@ -6,7 +6,7 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(57292);
+    s = r(972665);
 function o(e) {
     let { onClick: n } = e;
     return (0, i.jsx)(a.Clickable, {

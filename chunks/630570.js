@@ -13,7 +13,7 @@ var i = t(200651),
     s = t(981631),
     u = t(185923),
     c = t(388032),
-    d = t(918491);
+    d = t(343839);
 let m = {
         section: s.jXE.MESSAGE_CONFETTI_EMOJI_PICKER_POPOUT,
         openPopoutType: 'message_confetti_emoji_picker'

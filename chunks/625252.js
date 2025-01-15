@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(704215),
     o = n(780384),
     c = n(481060),
@@ -20,12 +20,12 @@ var i = n(200651),
     f = n(46140),
     _ = n(981631),
     E = n(388032),
-    C = n(839905),
+    C = n(209008),
     T = n(66094);
 function S() {
     let e = (0, o.wj)((0, u.ZP)()),
-        t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
-        n = s.useCallback(() => {
+        t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
+        n = r.useCallback(() => {
             (0, d.xf)(),
                 (0, x.navigateToQuestHome)(f.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
                 g.default.track(_.rMx.QUEST_CONTENT_CLICKED, {
@@ -34,7 +34,7 @@ function S() {
                 });
         }, []);
     return (
-        s.useCallback(() => {
+        r.useCallback(() => {
             (0, m.EW)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
         }, []),
         (0, m.un)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),

@@ -1,7 +1,7 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(392711),
     o = n(780384),
     c = n(481060),
@@ -13,13 +13,13 @@ var i = n(200651),
     p = n(981631),
     x = n(869783),
     f = n(388032),
-    _ = n(909007);
+    _ = n(516454);
 let E = (e) => {
-    let { name: t, title: n, description: r, descriptionCta: f, previewImage: E, videoUrl: C, shouldLoadVideo: T, index: S, isCompact: b, isReducedMotion: I, onClick: N } = e,
+    let { name: t, title: n, description: s, descriptionCta: f, previewImage: E, videoUrl: C, shouldLoadVideo: T, index: S, isCompact: b, isReducedMotion: I, onClick: N } = e,
         v = (0, g.rO)(),
-        A = s.useRef(null),
-        j = s.useRef(0),
-        R = (function (e) {
+        A = r.useRef(null),
+        j = r.useRef(0),
+        O = (function (e) {
             let t;
             switch (e) {
                 case h.dm.EMOJIS:
@@ -45,13 +45,13 @@ let E = (e) => {
             }
             return t;
         })(t),
-        O = (0, d.ZP)(),
-        P = (0, o.wj)(O),
+        R = (0, d.ZP)(),
+        P = (0, o.wj)(R),
         y = P ? c.ButtonColors.WHITE : c.ButtonColors.BRAND,
-        D = (0, l.debounce)(() => {
+        B = (0, l.debounce)(() => {
             m.default.track(p.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
         }, 800),
-        B = () => {
+        D = () => {
             null != A.current && !I && ((A.current.currentTime = j.current), A.current.play());
         },
         Z = () => {
@@ -77,7 +77,7 @@ let E = (e) => {
                         variant: 'text-md/medium',
                         color: 'text-muted',
                         className: _.whatsNewBoxDescription,
-                        children: r
+                        children: s
                     }),
                     null != f &&
                         null != N &&
@@ -86,7 +86,7 @@ let E = (e) => {
                             color: y,
                             className: a()(_.whatsNewBoxButton, P ? _.whatsNewBoxButtonWhite : _.whatsNewBoxButtonBrand),
                             onClick: () => {
-                                D(), N();
+                                B(), N();
                             },
                             children: f
                         })
@@ -124,12 +124,12 @@ let E = (e) => {
         },
         k = S % 2 == 0;
     return (0, i.jsx)('div', {
-        className: a()(R, {
+        className: a()(O, {
             [_.whatsNewBoxContainer]: !b,
             [_.compactBoxContainer]: b
         }),
-        onMouseEnter: B,
-        onFocus: B,
+        onMouseEnter: D,
+        onFocus: D,
         onBlur: Z,
         onMouseLeave: Z,
         children: k
@@ -141,10 +141,10 @@ let E = (e) => {
               })
     });
 };
-t.Z = s.memo(function (e) {
-    let { className: t, shouldLoadVideo: n, isBestOfNitro: s = !1, isReducedMotion: r } = e,
-        l = Object.values((0, h.ZP)(s)),
-        o = s ? Object.values((0, h.__)()) : null;
+t.Z = r.memo(function (e) {
+    let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1, isReducedMotion: s } = e,
+        l = Object.values((0, h.ZP)(r)),
+        o = r ? Object.values((0, h.__)()) : null;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: a()(_.boxBackdrop, t),
@@ -153,14 +153,14 @@ t.Z = s.memo(function (e) {
                     className: _.whatsNewHeader,
                     variant: 'display-md',
                     color: 'header-primary',
-                    children: s ? f.intl.string(f.t.EnzW2N) : f.intl.string(f.t.LRmNAg)
+                    children: r ? f.intl.string(f.t.EnzW2N) : f.intl.string(f.t.LRmNAg)
                 }),
                 l.map((e, t) =>
                     (0, i.jsx)(
                         E,
                         {
                             shouldLoadVideo: n,
-                            isReducedMotion: r,
+                            isReducedMotion: s,
                             index: t,
                             ...e
                         },
@@ -176,7 +176,7 @@ t.Z = s.memo(function (e) {
                                     E,
                                     {
                                         shouldLoadVideo: n,
-                                        isReducedMotion: r,
+                                        isReducedMotion: s,
                                         index: t,
                                         ...e
                                     },

@@ -11,9 +11,9 @@ n.d(t, {
 }),
     n(724458);
 var i = n(392711),
-    s = n(605387),
-    r = n.n(s);
-let a = (e) => r().decode(e),
+    r = n(605387),
+    s = n.n(r);
+let a = (e) => s().decode(e),
     l = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
     o = async (e, t, n, i) => ({
         src: e,

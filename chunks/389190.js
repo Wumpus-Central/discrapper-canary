@@ -19,7 +19,7 @@ var l = n(442837),
     h = n(171368),
     p = n(981631),
     m = n(388032),
-    f = n(731218);
+    f = n(586070);
 let g = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_40);
 function C(e) {
     let { user: t, status: o, onSelect: d } = e,
@@ -30,7 +30,7 @@ function C(e) {
         onClick: d,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('76747')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

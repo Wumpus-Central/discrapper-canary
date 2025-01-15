@@ -1,8 +1,8 @@
 n(653041);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(780384),
     c = n(481060),
@@ -19,7 +19,7 @@ var i = n(200651),
     C = n(694338),
     T = n(474936),
     S = n(388032),
-    b = n(637444),
+    b = n(600963),
     I = n(102655),
     N = n(768236),
     v = n(314907),
@@ -33,7 +33,7 @@ let j = () =>
                 children: S.intl.string(S.t.TR2B4e)
             })
         }),
-    R = () =>
+    O = () =>
         (0, i.jsx)('div', {
             className: b.comparisonTablePill,
             children: (0, i.jsx)(c.Heading, {
@@ -42,16 +42,16 @@ let j = () =>
                 children: S.intl.string(S.t.IBYG5e)
             })
         }),
-    O = (e) => {
+    R = (e) => {
         let t,
             { premiumType: n } = e,
-            s = (0, u.ZP)();
-        t = n === T.p9.TIER_0 ? ((0, o.wj)(s) ? I : N) : (0, o.wj)(s) ? v : A;
-        let r = (0, x.Px)(n);
+            r = (0, u.ZP)();
+        t = n === T.p9.TIER_0 ? ((0, o.wj)(r) ? I : N) : (0, o.wj)(r) ? v : A;
+        let s = (0, x.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
             className: b.logo,
-            alt: r
+            alt: s
         });
     },
     P = () =>
@@ -71,21 +71,21 @@ let j = () =>
                     (0, i.jsx)('th', {
                         scope: 'col',
                         className: b.headerCell,
-                        children: (0, i.jsx)(O, { premiumType: T.p9.TIER_0 })
+                        children: (0, i.jsx)(R, { premiumType: T.p9.TIER_0 })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
                         className: a()(b.headerCell, b.topBorderRadius),
-                        children: (0, i.jsx)(O, { premiumType: T.p9.TIER_2 })
+                        children: (0, i.jsx)(R, { premiumType: T.p9.TIER_2 })
                     })
                 ]
             })
         }),
     y = (e) => {
-        let { label: t, tier0Column: n, tier2Column: s, withBottomBorder: r = !0, withBottomMargin: l = !1 } = e;
+        let { label: t, tier0Column: n, tier2Column: r, withBottomBorder: s = !0, withBottomMargin: l = !1 } = e;
         return (0, i.jsxs)('tr', {
             className: a()(b.row, {
-                [b.rowBottomBorder]: r,
+                [b.rowBottomBorder]: s,
                 [b.bottomMargin]: l
             }),
             children: [
@@ -100,7 +100,7 @@ let j = () =>
                 }),
                 (0, i.jsx)('td', {
                     className: a()(b.cell),
-                    children: s
+                    children: r
                 })
             ]
         });
@@ -108,7 +108,7 @@ let j = () =>
 t.Z = (e) => {
     var t;
     let n,
-        { className: r, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = T.p9.TIER_2 } = e,
+        { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = T.p9.TIER_2 } = e,
         { analyticsLocations: S } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         I = (0, l.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
         N = (0, h.V)(),
@@ -122,14 +122,14 @@ t.Z = (e) => {
             autoTrackExposure: !1
         });
     let A = (0, _.N)(),
-        O = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        D = (0, f.Ng)(),
-        B = null != D && (0, f.Wp)(D, T.Si.TIER_2),
+        R = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        B = (0, f.Ng)(),
+        D = null != B && (0, f.Wp)(B, T.Si.TIER_2),
         Z = (0, E.A)(T.Xh.PREMIUM_MONTH_TIER_2),
         L = ''.concat(Z, '/').concat((0, x.eP)(T.rV.MONTH)),
         M = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_0),
         k = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_2),
-        w = (0, C.a)(M, k, B, L);
+        w = (0, C.a)(M, k, D, L);
     if (!I || !N) return null;
     w.push({
         label: null,
@@ -137,27 +137,27 @@ t.Z = (e) => {
         tier2Column: null,
         withBottomBorder: !1
     }),
-        (n = o ? null : null != A ? (0, i.jsx)(R, {}) : (0, i.jsx)(j, {}));
-    let F = O === T.Si.TIER_0 || u === T.p9.TIER_0;
+        (n = o ? null : null != A ? (0, i.jsx)(O, {}) : (0, i.jsx)(j, {}));
+    let U = R === T.Si.TIER_0 || u === T.p9.TIER_0;
     return (0, i.jsx)(g.Gt, {
         value: S,
         children: (0, i.jsx)('div', {
-            className: a()(b.root, r),
+            className: a()(b.root, s),
             'data-testid': 'v2-marketing-page-comparison-table',
             children: (0, i.jsxs)('div', {
                 className: b.tableWrapper,
                 children: [
                     (0, i.jsxs)('div', {
                         className: a()(c, {
-                            [b.tier0ColumnPosition]: F,
-                            [b.tier2ColumnPosition]: !F
+                            [b.tier0ColumnPosition]: U,
+                            [b.tier2ColumnPosition]: !U
                         }),
                         children: [
-                            !F && n,
+                            !U && n,
                             (0, i.jsx)('div', {
                                 className: a()({
-                                    [b.tier0ColumnOuter]: F,
-                                    [b.tier2ColumnOuter]: !F
+                                    [b.tier0ColumnOuter]: U,
+                                    [b.tier2ColumnOuter]: !U
                                 })
                             })
                         ]
@@ -168,7 +168,7 @@ t.Z = (e) => {
                             (0, i.jsx)(P, {}),
                             (0, i.jsx)('tbody', {
                                 children: w.map((e, t) =>
-                                    (0, s.createElement)(y, {
+                                    (0, r.createElement)(y, {
                                         ...e,
                                         key: t
                                     })

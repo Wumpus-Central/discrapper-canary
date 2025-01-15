@@ -1,42 +1,42 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
-var s = n(200651);
-n(192379);
-var i = n(120356),
-    r = n.n(i),
-    o = n(481060),
-    c = n(679768),
-    l = n(844812);
-function a(e) {
-    let { copy: t, showStars: n = !0, className: i } = e;
-    return (0, s.jsxs)('div', {
-        className: r()(l.badgeContainer, i),
+var n = s(200651);
+s(192379);
+var i = s(120356),
+    r = s.n(i),
+    o = s(481060),
+    c = s(679768),
+    a = s(901303);
+function l(e) {
+    let { copy: t, showStars: s = !0, className: i } = e;
+    return (0, n.jsxs)('div', {
+        className: r()(a.badgeContainer, i),
         children: [
-            n &&
-                (0, s.jsxs)(s.Fragment, {
+            s &&
+                (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, s.jsx)('span', {
-                            className: r()(l.star, l.starLeft),
-                            children: (0, s.jsx)(c.Z, {
+                        (0, n.jsx)('span', {
+                            className: r()(a.star, a.starLeft),
+                            children: (0, n.jsx)(c.Z, {
                                 width: '10',
                                 height: '10'
                             })
                         }),
-                        (0, s.jsx)('span', {
-                            className: r()(l.star, l.starRight),
-                            children: (0, s.jsx)(c.Z, {
+                        (0, n.jsx)('span', {
+                            className: r()(a.star, a.starRight),
+                            children: (0, n.jsx)(c.Z, {
                                 width: '14',
                                 height: '14'
                             })
                         })
                     ]
                 }),
-            (0, s.jsx)(o.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: 'eyebrow',
-                className: l.newBadge,
+                className: a.newBadge,
                 children: t
             })
         ]

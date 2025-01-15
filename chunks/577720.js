@@ -4,12 +4,12 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(981631),
-    o = n(831968);
-class c extends s.Component {
+    o = n(178125);
+class c extends r.Component {
     render() {
         let { className: e, videoID: t, videoClassName: n } = this.props;
         return (0, i.jsx)('div', {

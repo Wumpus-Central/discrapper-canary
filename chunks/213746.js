@@ -21,7 +21,7 @@ var a = t(200651),
     v = t(979007),
     C = t(981631),
     x = t(388032),
-    h = t(272680);
+    h = t(196064);
 function b(e) {
     let { application: n } = e;
     return (0, a.jsxs)('div', {
@@ -141,7 +141,7 @@ function j(e) {
                         (g = (0, p.KW)(c.flags) ? 'user' : 'guild'),
                         void (0, o.openModalLazy)(
                             async () => {
-                                let { SubscriptionDetailsModal: e } = await Promise.all([t.e('86282'), t.e('23642')]).then(t.bind(t, 519896));
+                                let { SubscriptionDetailsModal: e } = await Promise.all([t.e('86282'), t.e('21510')]).then(t.bind(t, 519896));
                                 return (n) =>
                                     (0, a.jsx)(e, {
                                         appId: m,

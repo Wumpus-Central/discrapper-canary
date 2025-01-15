@@ -1,8 +1,8 @@
 n(627341);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(278074),
     o = n(91192),
     c = n(481060),
@@ -21,11 +21,11 @@ var i = n(200651),
     S = n(292352),
     b = n(134612),
     I = n(388032),
-    N = n(259289),
-    v = n(232186),
+    N = n(545139),
+    v = n(275477),
     A = n(926895);
 function j(e) {
-    let { header: t, description: n, stepNumber: s } = e;
+    let { header: t, description: n, stepNumber: r } = e;
     return (0, i.jsxs)('div', {
         className: N.step,
         children: [
@@ -34,7 +34,7 @@ function j(e) {
                 children: (0, i.jsx)(c.Heading, {
                     variant: 'heading-md/semibold',
                     color: 'text-brand',
-                    children: (0, i.jsx)(c.HeadingLevel, { children: s })
+                    children: (0, i.jsx)(c.HeadingLevel, { children: r })
                 })
             }),
             (0, i.jsxs)('div', {
@@ -53,7 +53,7 @@ function j(e) {
         ]
     });
 }
-function R() {
+function O() {
     return (0, i.jsxs)('div', {
         className: a()(N.box, N.linkingBanner, N.linkingBannerParent),
         children: [
@@ -106,7 +106,7 @@ function R() {
         ]
     });
 }
-function O() {
+function R() {
     let e = (0, x.VM)();
     return (0, i.jsxs)('div', {
         className: a()(N.box, N.linkingBanner),
@@ -136,15 +136,15 @@ function O() {
     });
 }
 function P(e) {
-    let { sectionType: t, sectionTitle: n, requests: r } = e,
-        a = s.useRef(null),
+    let { sectionType: t, sectionTitle: n, requests: s } = e,
+        a = r.useRef(null),
         l = ''.concat(t, '-list'),
         m = (0, d.Z)(l),
-        g = s.useCallback(
+        g = r.useCallback(
             (e) => {
-                let { row: n, listIndex: s } = e,
-                    a = r[n],
-                    l = s === r.length;
+                let { row: n, listIndex: r } = e,
+                    a = s[n],
+                    l = r === s.length;
                 return null == a
                     ? null
                     : (0, i.jsx)(
@@ -157,9 +157,9 @@ function P(e) {
                           a.id
                       );
             },
-            [r, t]
+            [s, t]
         ),
-        h = s.useCallback(
+        h = r.useCallback(
             () =>
                 (0, i.jsx)(
                     u.Z,
@@ -182,12 +182,12 @@ function P(e) {
             navigator: m,
             children: (0, i.jsx)(o.SJ, {
                 children: (e) => {
-                    let { ref: t, role: s, ...o } = e;
+                    let { ref: t, role: r, ...o } = e;
                     return (0, i.jsx)(
                         c.List,
                         {
                             className: N.__invalid_list,
-                            innerRole: s,
+                            innerRole: r,
                             innerAriaLabel: n,
                             ref: (e) => {
                                 var n;
@@ -197,7 +197,7 @@ function P(e) {
                             rowHeight: S.ip,
                             renderSection: h,
                             renderRow: g,
-                            sections: [r.length],
+                            sections: [s.length],
                             chunkSize: 30,
                             fade: !0,
                             ...o
@@ -213,17 +213,17 @@ let y = () => {
         let e = (0, p.Z)(),
             t = (0, x.mq)(S.ne.ACTIVE),
             n = e ? S.AG : S.i0,
-            s = {
+            r = {
                 count: t.length,
                 max: n
             },
-            r = (0, g.o)(I.intl.formatToPlainString(I.t['+tnO39'], s), I.intl.formatToPlainString(I.t['pu6/U1'], s));
+            s = (0, g.o)(I.intl.formatToPlainString(I.t['+tnO39'], r), I.intl.formatToPlainString(I.t['pu6/U1'], r));
         return (0, i.jsx)(i.Fragment, {
             children:
                 t.length > 0
                     ? (0, i.jsx)(P, {
                           sectionType: S.ne.ACTIVE,
-                          sectionTitle: r,
+                          sectionTitle: s,
                           requests: t
                       })
                     : (0, i.jsxs)('div', {
@@ -233,7 +233,7 @@ let y = () => {
                                   className: v.marginBottom8,
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
-                                  children: r
+                                  children: s
                               }),
                               (0, i.jsx)('div', {
                                   className: N.box,
@@ -243,7 +243,7 @@ let y = () => {
                       })
         });
     },
-    D = () => {
+    B = () => {
         let e = (0, x.VM)(),
             t = (0, p.Z)() ? S.AG : S.i0,
             n = (0, g.o)(I.intl.formatToPlainString(I.t['1/PzIi'], { maxConnections: t }), I.intl.formatToPlainString(I.t.RcTgiI, { maxConnections: t }));
@@ -258,7 +258,7 @@ let y = () => {
               })
             : null;
     },
-    B = () => {
+    D = () => {
         let e = (0, h.o)(),
             t = (0, m.zF)('family-center-requests-page-desktop'),
             n = (0, l.EQ)({
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: N.container,
-        children: [e ? (0, i.jsx)(R, {}) : (0, i.jsx)(O, {}), (0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(D, {}), (0, i.jsx)(B, {})]
+        children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(B, {}), (0, i.jsx)(D, {})]
     });
 };

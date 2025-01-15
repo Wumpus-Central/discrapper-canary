@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(846027),
@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(962100),
     _ = n(981631),
     E = n(388032),
-    C = n(973936),
-    T = n(232186);
+    C = n(252535),
+    T = n(275477);
 let S = !x.isPlatformEmbedded,
     b = (0, h.hQ)();
 function I(e) {
@@ -30,7 +30,7 @@ function I(e) {
 function N(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: s, delay: r } = (0, l.cj)([p.Z], () => p.Z.getModeOptions());
+        { shortcut: r, delay: s } = (0, l.cj)([p.Z], () => p.Z.getModeOptions());
     return (
         (t =
             x.isPlatformEmbedded || n !== _.pM4.PUSH_TO_TALK
@@ -54,7 +54,7 @@ function N(e) {
                             children: (0, i.jsx)(o.FormItem, {
                                 title: E.intl.string(E.t.YkDjVF),
                                 children: (0, i.jsx)(u.Z, {
-                                    defaultValue: s,
+                                    defaultValue: r,
                                     onChange: (e) => c.Z.setMode(n, { shortcut: e })
                                 })
                             })
@@ -70,7 +70,7 @@ function N(e) {
                                         children: E.intl.string(E.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.Slider, {
-                                        initialValue: r,
+                                        initialValue: s,
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: I,
                                         maxValue: _.qhL,
@@ -89,7 +89,7 @@ function N(e) {
 function v() {
     let { analyticsLocations: e } = (0, m.ZP)(),
         t = (0, l.e7)([p.Z], () => p.Z.getMode()),
-        r = [
+        s = [
             {
                 value: _.pM4.VOICE_ACTIVITY,
                 name: E.intl.string(E.t.cHCEOD)
@@ -99,10 +99,10 @@ function v() {
                 name: S ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
             }
         ],
-        a = s.useCallback(
+        a = r.useCallback(
             (t) => {
-                let { value: s } = t;
-                s === _.pM4.PUSH_TO_TALK &&
+                let { value: r } = t;
+                r === _.pM4.PUSH_TO_TALK &&
                     S &&
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -116,7 +116,7 @@ function v() {
                                 ...t
                             });
                     }),
-                    c.Z.setMode(s, void 0, void 0, { analyticsLocations: e });
+                    c.Z.setMode(r, void 0, void 0, { analyticsLocations: e });
             },
             [e]
         );
@@ -127,7 +127,7 @@ function v() {
                 className: T.marginBottom20,
                 children: (0, i.jsx)(o.RadioGroup, {
                     onChange: a,
-                    options: r,
+                    options: s,
                     value: t
                 })
             }),

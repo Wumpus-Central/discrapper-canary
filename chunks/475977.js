@@ -1,7 +1,7 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(115434),
     o = n(264181),
     c = n(399606),
@@ -16,11 +16,11 @@ var i = n(200651),
     _ = n(981631),
     E = n(474936),
     C = n(388032),
-    T = n(782376),
+    T = n(960816),
     S = n(786792),
     b = n(161594);
 let I = (e) => {
-    var t, n, s, r, l;
+    var t, n, r, s, l;
     let { displayOptions: o, marketingVariant: c } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -29,7 +29,7 @@ let I = (e) => {
                 'aria-hidden': !0,
                 role: 'presentation',
                 children: (0, i.jsx)('img', {
-                    src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : b,
+                    src: null !== (r = null == o ? void 0 : o.artSrc) && void 0 !== r ? r : b,
                     className: a()(T.art, { [T.tideArt]: null != c && c === x.C5.TIDE }),
                     alt: ''
                 })
@@ -41,7 +41,7 @@ let I = (e) => {
                         variant: 'heading-lg/extrabold',
                         color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
                         className: T.title,
-                        children: null !== (r = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== r ? r : C.intl.string(C.t['4Emkur'])
+                        children: null !== (s = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== s ? s : C.intl.string(C.t['4Emkur'])
                     }),
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
@@ -57,7 +57,7 @@ t.Z = () => {
     var e;
     let t;
     let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
-        r = s.useRef(null),
+        s = r.useRef(null),
         b = (0, x.ZP)('CollectiblesUpsellBanner'),
         N = (0, c.e7)([p.Z], () => p.Z.getMarketingBySurface(l.K.EDIT_PROFILE_SETTINGS));
     return (
@@ -71,7 +71,7 @@ t.Z = () => {
                       revertTextColor: N.revertTextColor
                   }
                 : f.GX[b]),
-        s.useEffect(() => {
+        r.useEffect(() => {
             g.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: E.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: n,
@@ -79,7 +79,7 @@ t.Z = () => {
             });
         }, [n, null == N ? void 0 : N.version]),
         (0, i.jsxs)('div', {
-            ref: r,
+            ref: s,
             className: a()(T.container, { [T.robertContainer]: b === x.C5.ROBERT }),
             style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : S, ')') },
             children: [

@@ -21,7 +21,7 @@ var i = n(200651),
     g = n(576645),
     C = n(921944),
     x = n(388032),
-    v = n(798114);
+    v = n(566590);
 function _(e) {
     let { channel: t } = e,
         r = (0, s.e7)([m.default], () => m.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),

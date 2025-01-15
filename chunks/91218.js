@@ -9,7 +9,7 @@ var a = r(120356),
     s = r.n(a),
     o = r(481060),
     l = r(388032),
-    u = r(990999);
+    u = r(889452);
 function c(e) {
     let { className: n, src: r, unicodeEmoji: a, name: c, size: d = 20, enableTooltip: f = !0, enableHeight: _ = !0, onClick: h } = e;
     if (null == r && null == a) return null;

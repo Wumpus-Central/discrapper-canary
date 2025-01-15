@@ -14,7 +14,7 @@ var a = r(200651),
     f = r(390507),
     _ = r(679400),
     h = r(580747),
-    p = r(189954);
+    p = r(269895);
 function m(e, n) {
     let { color: i, src: o, size: u = 'md', width: m, height: g, className: E, initialAnimation: v, markers: I } = e,
         [T, b] = s.useState(null),

@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(780384),
     l = n(481060),
     o = n(410030),
@@ -18,35 +18,35 @@ var i = n(200651),
     h = n(798769),
     p = n(474936),
     x = n(388032),
-    f = n(783899),
+    f = n(509792),
     _ = n(982404),
     E = n(299156);
 function C(e) {
     let { premiumSubscription: t, premiumType: n, onClose: C, confettiCanvas: T, userWasChurned: S = !1, userDiscountOffer: b } = e,
         I = (0, o.ZP)(),
         N = (0, a.wj)(I) ? _ : E,
-        v = s.useRef(null),
-        [A, j] = s.useState(!1),
-        R = (0, g._)(t, p.Xh.PREMIUM_MONTH_TIER_2, b),
-        O = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+        v = r.useRef(null),
+        [A, j] = r.useState(!1),
+        O = (0, g._)(t, p.Xh.PREMIUM_MONTH_TIER_2, b),
+        R = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        P = (0, m.T4)(O.amount, O.currency),
-        y = (0, r.e7)([c.Z], () => c.Z.useReducedMotion);
+        P = (0, m.T4)(R.amount, R.currency),
+        y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
-        (s.useEffect(() => {
-            null != v.current && null != R && j(!0);
-        }, [v, A, R]),
-        null == b || null == R)
+        (r.useEffect(() => {
+            null != v.current && null != O && j(!0);
+        }, [v, A, O]),
+        null == b || null == O)
     )
         return null;
-    let D = x.intl.format(x.t.gPzMHR, {
+    let B = x.intl.format(x.t.gPzMHR, {
             numMonths: b.discount.user_usage_limit,
-            discountedPrice: R,
+            discountedPrice: O,
             regularPrice: P
         }),
-        B = (0, i.jsx)('div', {
+        D = (0, i.jsx)('div', {
             className: f.whatYouLoseButtonContainer,
             children: (0, i.jsx)(l.Button, {
                 color: l.Button.Colors.BRAND,
@@ -66,7 +66,7 @@ function C(e) {
                 children: (0, i.jsx)(l.ModalContent, {
                     className: f.body,
                     children:
-                        null != R
+                        null != O
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsxs)('div', {
@@ -85,9 +85,9 @@ function C(e) {
                                       }),
                                       (0, i.jsx)('div', {
                                           className: f.bodyString,
-                                          children: D
+                                          children: B
                                       }),
-                                      B
+                                      D
                                   ]
                               })
                             : (0, i.jsx)(l.Spinner, {})

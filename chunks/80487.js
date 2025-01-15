@@ -12,7 +12,7 @@ var i = n(200651),
     f = n(889711),
     x = n(246364),
     b = n(388032),
-    h = n(315651);
+    h = n(954640);
 let p = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
         return (0, i.jsx)(s.Menu, {

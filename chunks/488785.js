@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(570140),
     u = n(596454),
     h = n(607070),
-    p = n(288479);
+    p = n(321048);
 let m = [p.emoji1, p.emoji2, p.emoji3, p.emoji4],
     f = l.memo(function (e) {
         var t;

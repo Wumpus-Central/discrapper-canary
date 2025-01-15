@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    s = n(607070),
-    r = n(391110),
-    a = n(696962);
+    r = n(607070),
+    s = n(391110),
+    a = n(505874);
 let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
@@ -16,10 +16,10 @@ let l = {
         descriptionCta: { onlyShowOnHover: !0 }
     },
     o = (e) => {
-        let t = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
             n = {
-                [r.zW.DEFAULT]: l,
-                [r.zW.REWARD]: {
+                [s.zW.DEFAULT]: l,
+                [s.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: 'text-sm/semibold'
@@ -35,7 +35,7 @@ let l = {
                     },
                     cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover }
                 },
-                [r.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } }
+                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } }
             };
-        return null != e ? n[e] : n[r.zW.DEFAULT];
+        return null != e ? n[e] : n[s.zW.DEFAULT];
     };

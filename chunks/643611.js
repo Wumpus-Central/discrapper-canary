@@ -17,7 +17,7 @@ var l = e(200651),
     j = e(594174),
     A = e(556012),
     h = e(388032),
-    N = e(93660);
+    N = e(207028);
 let C = (t) => {
     let { guildId: n, channel: e, onSelectChannel: r } = t,
         s = (0, i.Wu)(

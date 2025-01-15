@@ -9,7 +9,7 @@ var a = r(481060),
     s = r(946273),
     o = r(441110),
     l = r(388032),
-    u = r(673094);
+    u = r(314253);
 function c(e) {
     let { guild: n, message: r } = e;
     return (0, s.vV)(n.id, r.author.id)

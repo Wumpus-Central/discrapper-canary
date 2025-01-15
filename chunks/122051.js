@@ -19,8 +19,8 @@ var i = t(200651),
     h = t(755340),
     g = t(449226),
     v = t(388032),
-    C = t(232203),
-    j = t(713960);
+    C = t(246691),
+    j = t(912698);
 function p(e) {
     let { guild: n, isExpanded: a, emptyFormFields: s, hasTermsField: r } = e,
         c = (0, x.Dc)(n),
@@ -56,7 +56,7 @@ function p(e) {
         },
         T = () => {
             (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e('99916'), t.e('80026'), t.e('14771')]).then(t.bind(t, 645264));
+                let { default: e } = await Promise.all([t.e('99916'), t.e('80026'), t.e('16739')]).then(t.bind(t, 645264));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

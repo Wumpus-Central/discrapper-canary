@@ -11,7 +11,7 @@ r(192379);
 var a = r(120356),
     s = r.n(a),
     o = r(481060),
-    l = r(925424);
+    l = r(132468);
 function u(e) {
     let { className: n } = e;
     return (0, i.jsx)('div', { className: s()(n, l.separator) });

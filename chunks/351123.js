@@ -34,7 +34,7 @@ var i = n(200651),
     D = n(981631),
     B = n(231338),
     P = n(388032),
-    O = n(388171);
+    O = n(599234);
 function F(e) {
     let { channel: t, roles: n, members: l, disabledReason: s, getRemoveTooltipHint: a } = e;
     return (0, i.jsx)(o.List, {
@@ -266,7 +266,7 @@ function V(e) {
             r = y.default.getCurrentUser();
         if (!s && null != (await (0, v.T)(t.id, l.id))) {
             (0, o.openModalLazy)(async () => {
-                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 794106));
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

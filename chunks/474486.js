@@ -22,7 +22,7 @@ var i = n(200651),
     m = n(981631),
     p = n(921944),
     g = n(388032),
-    f = n(762042);
+    f = n(855219);
 let _ = 'url(#dark-purple-gradient)',
     E = () =>
         (0, i.jsxs)('div', {

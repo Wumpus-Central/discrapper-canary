@@ -25,7 +25,7 @@ var l = t(200651),
     E = t(981631),
     k = t(185923),
     Z = t(388032),
-    I = t(168427);
+    I = t(503332);
 n.default = (e) => {
     var n, t;
     let { guildId: b, welcomeChannel: P, transitionState: H, onSave: L, onClose: M } = e,

@@ -11,7 +11,7 @@ var i,
     o = n.n(a),
     c = n(748780),
     d = n(215569),
-    u = n(400331);
+    u = n(530337);
 ((i = r || (r = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
 let m = {
     friction: 10,

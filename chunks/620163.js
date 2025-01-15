@@ -94,11 +94,11 @@ var r = n(990547),
     eL = n(46140),
     eM = n(65154),
     ek = n(388032),
-    ew = n(503192);
+    ew = n(318585);
 let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eF = ev.Z,
     eV = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e3, developerMode: e6, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e8, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -166,13 +166,13 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ek.intl.string(ek.t.cDgKtb)],
                 section: eZ.oAB.ACCOUNT,
                 parent: eD.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e3
+                predicate: () => !e6
             },
             [eD.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [ek.intl.string(ek.t['D+aE7u'])],
                 section: eZ.oAB.ACCOUNT,
                 parent: eD.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e3
+                predicate: () => e6
             },
             [eD.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [ek.intl.string(ek.t.fZSi1N)],
@@ -406,7 +406,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eZ.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [ek.intl.string(ek.t['5b3FND'])],
                 parent: eD.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e8
+                predicate: () => e7
             },
             [eD.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eZ.oAB.FAMILY_CENTER,
@@ -1309,7 +1309,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eZ.oAB.ADVANCED,
                 searchableTitles: [ek.intl.string(ek.t.erOqlp)],
                 parent: eD.s6.SETTINGS_ADVANCED,
-                predicate: () => e6
+                predicate: () => e3
             },
             [eD.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eZ.oAB.ADVANCED,
@@ -1386,13 +1386,13 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ek.intl.string(ek.t['k0R+4e'])],
                 label: ek.intl.string(ek.t['k0R+4e']),
                 element: eg.Z,
-                predicate: () => !e7
+                predicate: () => !e8
             },
             [eD.s6.TOWNHALL]: {
                 section: eZ.oAB.TOWNHALL,
                 searchableTitles: [ek.intl.string(ek.t.dnZNER)],
                 label: ek.intl.string(ek.t.dnZNER),
-                predicate: () => e7,
+                predicate: () => e8,
                 onClick: () => {
                     (0, p.Z)('https://discord.gg/discord-townhall'), (0, d.xf)();
                 }

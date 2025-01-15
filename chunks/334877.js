@@ -1,13 +1,13 @@
-e.d(t, {
+n.d(t, {
     l: function () {
-        return l;
+        return r;
     }
 });
-var i = e(15729),
-    r = e(731965);
-let l = (0, i.U)((n) => ({
+var i = n(15729),
+    l = n(731965);
+let r = (0, i.U)((e) => ({
     canCloseModal: !0,
     onUpdateCanCloseModal(t) {
-        (0, r.j)(() => n({ canCloseModal: t }));
+        (0, l.j)(() => e({ canCloseModal: t }));
     }
 }));

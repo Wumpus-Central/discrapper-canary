@@ -1,6 +1,6 @@
 var i,
-    s = n(442837),
-    r = n(570140);
+    r = n(442837),
+    s = n(570140);
 function a(e, t, n) {
     return (
         t in e
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-class l extends (i = s.ZP.Store) {
+class l extends (i = r.ZP.Store) {
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
         (this._entitlements = null), (this._redeemingSkuId = t), (this._redeemVirtualCurrencyError = null), (this._isRedeemingVirtualCurrency = !0);
@@ -40,7 +40,7 @@ class l extends (i = s.ZP.Store) {
         return this._entitlements;
     }
     constructor() {
-        super(r.Z, {
+        super(s.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e)

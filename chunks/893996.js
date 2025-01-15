@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(921801),
-    a = n(300530);
+var r = n(481060),
+    s = n(921801),
+    a = n(169203);
 function l(e) {
     let { children: t, title: n, description: l, webSetting: o } = e;
-    return (0, i.jsx)(r.F, {
+    return (0, i.jsx)(s.F, {
         setting: o,
         children: (0, i.jsxs)('div', {
             className: a.category,
@@ -18,13 +18,13 @@ function l(e) {
                 (0, i.jsxs)('div', {
                     className: a.categoryHeader,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(r.Heading, {
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
                             children: n
                         }),
                         null != l
-                            ? (0, i.jsx)(s.Text, {
+                            ? (0, i.jsx)(r.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   children: l
@@ -36,7 +36,7 @@ function l(e) {
                     className: a.categoryContent,
                     children: t
                 }),
-                (0, i.jsx)(s.FormDivider, { className: a.categoryDivider })
+                (0, i.jsx)(r.FormDivider, { className: a.categoryDivider })
             ]
         })
     });

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(692547),
     c = n(481060),
@@ -20,17 +20,17 @@ var i = n(200651),
     T = n(210887),
     S = n(981631),
     b = n(388032),
-    I = n(621360),
-    N = n(616926),
-    v = n(652849),
-    A = n(684309),
-    j = n(232186);
-let R = l.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(c.EmptyState),
-    O = (0, C.isWindows)();
+    I = n(250063),
+    N = n(517877),
+    v = n(847854),
+    A = n(134401),
+    j = n(275477);
+let O = l.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(c.EmptyState),
+    R = (0, C.isWindows)();
 function P(e) {
     let { onClose: t } = e,
         n = (0, l.e7)([g.ZP], () => g.ZP.getCandidateGames()),
-        [r, o] = s.useState(null),
+        [s, o] = r.useState(null),
         u = n.map((e) => ({
             key: e.pid,
             value: e,
@@ -42,7 +42,7 @@ function P(e) {
         children: [
             (0, i.jsx)(c.SearchableSelect, {
                 placeholder: b.intl.string(b.t.XqMe3N),
-                value: r,
+                value: s,
                 options: u,
                 onChange: function (e) {
                     o(e);
@@ -67,9 +67,9 @@ function P(e) {
                         children: b.intl.string(b.t['ETE/oK'])
                     }),
                     (0, i.jsx)(c.Button, {
-                        disabled: null == r,
+                        disabled: null == s,
                         onClick: function () {
-                            if (null != r) d.Z.addGame(r.pid, r.name), t();
+                            if (null != s) d.Z.addGame(s.pid, s.name), t();
                         },
                         children: b.intl.string(b.t.GTCx0t)
                     })
@@ -80,15 +80,15 @@ function P(e) {
 }
 function y(e) {
     var t;
-    let { rawGame: n, nowPlaying: r = !1, isOverride: h } = e,
+    let { rawGame: n, nowPlaying: s = !1, isOverride: h } = e,
         E = (0, l.cj)([x.Z, g.ZP, f.Z], () => (0, g.FZ)(n)),
-        [C, T] = s.useState(!1),
-        [N, j] = s.useState(null !== (t = E.name) && void 0 !== t ? t : '???'),
-        R = a()(v.flexCenter, {
-            [I.game]: !r,
-            [I.activeGame]: r,
-            [A.card]: !r,
-            [I.nowPlaying]: null != E && r
+        [C, T] = r.useState(!1),
+        [N, j] = r.useState(null !== (t = E.name) && void 0 !== t ? t : '???'),
+        O = a()(v.flexCenter, {
+            [I.game]: !s,
+            [I.activeGame]: s,
+            [A.card]: !s,
+            [I.nowPlaying]: null != E && s
         });
     function P() {
         d.Z.deleteEntry(E);
@@ -96,10 +96,10 @@ function y(e) {
     function y() {
         E.name !== N && d.Z.editName(E, N);
     }
-    function D(e) {
+    function B(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
-    function B() {
+    function D() {
         d.Z.toggleDetection(E);
     }
     function Z() {
@@ -113,7 +113,7 @@ function y(e) {
             T(!0);
     }
     return (0, i.jsxs)('div', {
-        className: R,
+        className: O,
         children: [
             (0, i.jsxs)('div', {
                 className: a()(I.gameNameLastPlayed, v.vertical),
@@ -150,14 +150,14 @@ function y(e) {
                               maxLength: 128,
                               value: N,
                               onBlur: y,
-                              onKeyDown: D,
+                              onKeyDown: B,
                               onChange: (e) => j(e.target.value)
                           }),
                     (function () {
                         let e;
                         let { played: t, exePath: n } = E;
                         return (
-                            r ? (e = b.intl.string(b.t.VbV5dn)) : null != t && '' !== t && (e = b.intl.format(b.t.gGeOEx, { when: t })),
+                            s ? (e = b.intl.string(b.t.VbV5dn)) : null != t && '' !== t && (e = b.intl.format(b.t.gGeOEx, { when: t })),
                             (0, i.jsx)('div', {
                                 className: I.lastPlayed,
                                 children: (0, i.jsx)(m.Z, {
@@ -215,13 +215,13 @@ function y(e) {
                     children: (0, i.jsx)(c.Tooltip, {
                         text: b.intl.string(b.t.QmitzM),
                         children: (e) => {
-                            let { onMouseEnter: n, onMouseLeave: s } = e;
+                            let { onMouseEnter: n, onMouseLeave: r } = e;
                             return (0, i.jsx)(c.Clickable, {
                                 'aria-label': b.intl.string(b.t.QmitzM),
                                 className: I.toggleIcon,
-                                onClick: B,
+                                onClick: D,
                                 onMouseEnter: n,
-                                onMouseLeave: s,
+                                onMouseLeave: r,
                                 children: t
                             });
                         }
@@ -229,7 +229,7 @@ function y(e) {
                 });
             })(),
             (function () {
-                if (!O) return null;
+                if (!R) return null;
                 let { overlay: e, overlayWarn: t } = E,
                     n = e
                         ? (0, i.jsx)(c.ScreenIcon, {
@@ -244,7 +244,7 @@ function y(e) {
                               className: I.toggleIconOff,
                               colorClass: I.fill
                           }),
-                    s = t
+                    r = t
                         ? (0, i.jsx)(c.Tooltip, {
                               text: b.intl.string(b.t.Vfw2Ly),
                               children: (e) =>
@@ -257,11 +257,11 @@ function y(e) {
                 return (0, i.jsxs)('div', {
                     className: a()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
                     children: [
-                        s,
+                        r,
                         (0, i.jsx)(c.Tooltip, {
                             text: b.intl.string(b.t['1+O+Tk']),
                             children: (t) => {
-                                let { onMouseEnter: s, onMouseLeave: r } = t;
+                                let { onMouseEnter: r, onMouseLeave: s } = t;
                                 return (0, i.jsx)(c.Clickable, {
                                     'aria-label': b.intl.string(b.t['1+O+Tk']),
                                     className: I.toggleIcon,
@@ -269,8 +269,8 @@ function y(e) {
                                         var t;
                                         return (t = !e), void d.Z.toggleOverlay(E, t);
                                     },
-                                    onMouseEnter: s,
-                                    onMouseLeave: r,
+                                    onMouseEnter: r,
+                                    onMouseLeave: s,
                                     children: n
                                 });
                             }
@@ -278,7 +278,7 @@ function y(e) {
                     ]
                 });
             })(),
-            !r || h
+            !s || h
                 ? (0, i.jsx)(u.Z, {
                       className: I.removeGame,
                       onClick: P
@@ -287,7 +287,7 @@ function y(e) {
         ]
     });
 }
-function D() {
+function B() {
     return (0, i.jsx)('div', {
         className: a()(v.flexCenter, I.notDetected, I.activeGame),
         children: (0, i.jsxs)('div', {
@@ -305,9 +305,9 @@ function D() {
         })
     });
 }
-function B(e) {
+function D(e) {
     let { children: t } = e;
-    return (0, i.jsxs)(R, {
+    return (0, i.jsxs)(O, {
         className: j.marginTop40,
         children: [
             (0, i.jsx)(c.EmptyStateImage, {
@@ -326,13 +326,13 @@ let Z = (0, E.oH)(function () {
 });
 t.Z = function (e) {
     let { className: t, showHeader: n = !0 } = e,
-        r = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
+        s = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
         { runningGame: o, overrideExePaths: d } = (0, l.cj)([g.ZP], () => ({
             runningGame: g.ZP.getVisibleGame(),
             overrideExePaths: Z(...g.ZP.getOverrides())
         }));
     return (
-        s.useEffect(() => ((0, h.Ky)(), h.P7), []),
+        r.useEffect(() => ((0, h.Ky)(), h.P7), []),
         (0, i.jsxs)(c.FormSection, {
             tag: 'h1',
             title: n ? b.intl.string(b.t.AVDyEh) : null,
@@ -348,7 +348,7 @@ t.Z = function (e) {
                           },
                           (0, g.rH)(o)
                       )
-                    : (0, i.jsx)(D, {}),
+                    : (0, i.jsx)(B, {}),
                 (0, i.jsxs)('div', {
                     className: a()(I.nowPlayingAdd, j.marginReset, j.marginTop8, j.marginBottom20),
                     children: [
@@ -371,8 +371,8 @@ t.Z = function (e) {
                         })
                     ]
                 }),
-                0 === r.length
-                    ? (0, i.jsx)(B, { children: (0, i.jsx)(c.EmptyStateText, { children: b.intl.string(b.t['1yiJws']) }) })
+                0 === s.length
+                    ? (0, i.jsx)(D, { children: (0, i.jsx)(c.EmptyStateText, { children: b.intl.string(b.t['1yiJws']) }) })
                     : (0, i.jsxs)(c.FormSection, {
                           className: j.marginTop40,
                           children: [
@@ -384,7 +384,7 @@ t.Z = function (e) {
                                   type: c.FormTextTypes.DESCRIPTION,
                                   children: b.intl.format(b.t.KPA3m5, { igdbLink: 'https://www.igdb.com/about' })
                               }),
-                              r.map((e) =>
+                              s.map((e) =>
                                   (0, i.jsx)(
                                       y,
                                       {

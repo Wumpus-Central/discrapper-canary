@@ -33,7 +33,7 @@ var s = r(200651),
     L = r(921944),
     x = r(474936),
     w = r(388032),
-    P = r(245392);
+    P = r(479699);
 let M = () =>
         (0, s.jsx)('div', {
             className: P.editorHeader,

@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(570140),
@@ -41,21 +41,21 @@ function j(e) {
             });
     });
 }
-function R(e) {
+function O(e) {
     let { selectedGuild: t } = e,
         { analyticsLocations: n } = (0, g.ZP)(u.Z.GUILD_PROFILE),
-        r = (0, l.e7)([_.default], () => {
+        s = (0, l.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        R = (0, l.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
-        O = (0, l.e7)([f.Z], () => f.Z.hidePersonalInformation),
+        O = (0, l.e7)([x.Z], () => !x.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
+        R = (0, l.e7)([f.Z], () => f.Z.hidePersonalInformation),
         { source: P, ...y } = (0, l.cj)([S.Z], () => ({
             ...S.Z.getAllPending(),
             source: S.Z.getSource()
         }));
-    return (s.useEffect(() => () => c.Z.wait(T.W3), []),
-    s.useEffect(() => {
+    return (r.useEffect(() => () => c.Z.wait(T.W3), []),
+    r.useEffect(() => {
         null != P &&
             m.ZP.trackWithMetadata(v.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
@@ -63,9 +63,9 @@ function R(e) {
                 source: P
             });
     }, [P]),
-    O)
+    R)
         ? (0, i.jsx)(d.Z, {})
-        : R
+        : O
           ? (0, i.jsxs)(g.Gt, {
                 value: n,
                 children: [
@@ -85,9 +85,9 @@ function R(e) {
                                   (0, i.jsx)(h.Z, {
                                       previewTitle: A.intl.formatToPlainString(A.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(p.Z, {
-                                          user: r,
+                                          user: s,
                                           guild: t,
-                                          canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(r),
+                                          canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(s),
                                           onUpsellClick: j,
                                           ...y
                                       }),

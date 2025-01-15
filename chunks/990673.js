@@ -10,7 +10,7 @@ var s = n(120356),
     a = n(382790),
     o = n(430036),
     l = n(518084),
-    d = n(176259);
+    d = n(71314);
 function c(e) {
     let { dragStart: t, dragging: n, pinned: s, locked: c, className: u } = e;
     return (0, i.jsxs)(l.ZP, {

@@ -9,7 +9,7 @@ var l = n(120356),
     r = n.n(l),
     a = n(831209),
     o = n(481060),
-    s = n(953498);
+    s = n(162520);
 function c(e) {
     let { mentionsCount: t, isMentionLowImportance: n, className: l } = e;
     return (0, i.jsx)('div', {

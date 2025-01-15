@@ -30,7 +30,7 @@ var a = r(200651),
     C = r(981631),
     R = r(474936),
     O = r(388032),
-    D = r(152597);
+    D = r(636019);
 function L(e) {
     let { user: n, categories: r, purchases: i, analyticsLocations: o, onClose: l, initialSelectedDecoration: d, initialSelectedDecorationId: p, isTryItOutFlow: T, guild: b } = e,
         {

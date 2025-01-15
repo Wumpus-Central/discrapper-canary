@@ -13,7 +13,7 @@ var a,
     m = n(246364),
     x = n(981631),
     g = n(388032),
-    v = n(6131);
+    v = n(196879);
 ((i = a || (a = {})).SPAM = 'spam'), (i.ABUSIVE = 'abusive'), (i.HARM = 'harm'), (i.PII = 'pii'), (i.OTHER = 'other');
 t.default = function (e) {
     let { guild: t, guildJoinRequest: a, user: i, transitionState: C, onClose: f } = e,

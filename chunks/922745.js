@@ -23,7 +23,7 @@ var a = r(120356),
     g = r(507675),
     E = r(273716),
     v = r(388032),
-    I = r(880397);
+    I = r(742210);
 function T(e) {
     let { title: n, onJumpToChannel: r, onHide: a, idle: s, preventIdleComponent: u } = e,
         d = (0, o.e7)([p.Z], () => p.Z.getChannelId()),

@@ -9,7 +9,7 @@ n.d(t, {
         return c;
     }
 });
-let { Layer: i, LayerContainer: s, LayerProvider: r, layerContext: a } = (0, n(481060).createLayer)('DevTools'),
-    l = s,
-    o = r,
+let { Layer: i, LayerContainer: r, LayerProvider: s, layerContext: a } = (0, n(481060).createLayer)('DevTools'),
+    l = r,
+    o = s,
     c = a;

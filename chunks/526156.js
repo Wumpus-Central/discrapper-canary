@@ -1,14 +1,14 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(230711),
     o = n(528084),
-    c = n(243824);
+    c = n(317879);
 t.Z = (e) => {
     var t;
-    let { tabs: n, settingsSection: s, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
+    let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
         { viewableTabs: h, filteredTab: p } = (0, o.a)(n, d),
         x = null != m ? n[m] : null,
         f = null !== (t = null != x ? x : p) && void 0 !== t ? t : h[0];
@@ -18,7 +18,7 @@ t.Z = (e) => {
                 className: c.tabBar,
                 selectedItem: f.setting,
                 onItemSelect: (e) => {
-                    l.Z.setSection(s, e), null == g || g(e);
+                    l.Z.setSection(r, e), null == g || g(e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
@@ -39,7 +39,7 @@ t.Z = (e) => {
             (0, i.jsx)(a.TabBar.Panel, {
                 id: f.setting,
                 'aria-labelledby': f.title,
-                className: r()(c.tabBarPanel, u),
+                className: s()(c.tabBarPanel, u),
                 children: ((e) => {
                     let t = e.component;
                     return 'function' == typeof t ? (0, i.jsx)(t, {}) : t;

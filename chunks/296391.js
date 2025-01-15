@@ -17,8 +17,8 @@ var l = t(442837),
     m = t(228168),
     x = t(981631),
     I = t(388032),
-    p = t(189144),
-    h = t(731218);
+    p = t(842086),
+    h = t(586070);
 function v(e) {
     let { user: n, currentUser: t, profileGuildId: v, subsection: Z, onClose: g } = e,
         { live: j, recent: _, stream: b } = (0, c.Z)(n.id),

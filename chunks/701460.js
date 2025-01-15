@@ -14,7 +14,7 @@ var o = n(200651),
     s = n(823985),
     c = n(202120),
     d = n(388032),
-    u = n(582810);
+    u = n(572211);
 function m(t) {
     var e, n;
     let { onClose: m, transitionState: h, location: x, successRedirect: p, platformType: f } = t,

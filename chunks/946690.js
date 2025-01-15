@@ -1,18 +1,18 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
-    l = n(297247);
+    l = n(419861);
 t.Z = (e) => {
-    let { icon: t, iconClassName: n, header: s, description: o } = e;
+    let { icon: t, iconClassName: n, header: r, description: o } = e;
     return (0, i.jsxs)('div', {
         className: l.container,
         children: [
             (0, i.jsx)('div', {
                 className: l.circle,
                 children: (0, i.jsx)(t, {
-                    className: r()(l.icon, n),
+                    className: s()(l.icon, n),
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -24,7 +24,7 @@ t.Z = (e) => {
                     (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/bold',
                         className: l.header,
-                        children: (0, i.jsx)(a.HeadingLevel, { children: s })
+                        children: (0, i.jsx)(a.HeadingLevel, { children: r })
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-sm/medium',

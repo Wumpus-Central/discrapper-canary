@@ -6,41 +6,41 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
+var r = n(442837),
+    s = n(481060),
     a = n(536442),
-    l = n(377681);
+    l = n(757425);
 function o(e) {
     let { hotspotLocation: t } = e,
-        [n, o] = (0, s.Wu)([a.qc], () => [a.qc.hasHotspot(t, !0), a.qc.getHotspotOverride(t)]);
+        [n, o] = (0, r.Wu)([a.qc], () => [a.qc.hasHotspot(t, !0), a.qc.getHotspotOverride(t)]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(r.FormItem, {
+            (0, i.jsxs)(s.FormItem, {
                 title: t,
                 className: l.hotspotSwitch,
                 children: [
                     n
-                        ? (0, i.jsx)(r.TooltipContainer, {
+                        ? (0, i.jsx)(s.TooltipContainer, {
                               className: l.iconContainer,
                               element: 'span',
                               text: 'Active',
-                              children: (0, i.jsx)(r.CheckmarkLargeIcon, {
+                              children: (0, i.jsx)(s.CheckmarkLargeIcon, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: l.checkmark
                               })
                           })
-                        : (0, i.jsx)(r.TooltipContainer, {
+                        : (0, i.jsx)(s.TooltipContainer, {
                               className: l.iconContainer,
                               element: 'span',
                               text: 'Inactive',
-                              children: (0, i.jsx)(r.XSmallIcon, {
+                              children: (0, i.jsx)(s.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: l.xmark
                               })
                           }),
-                    (0, i.jsx)(r.SingleSelect, {
+                    (0, i.jsx)(s.SingleSelect, {
                         className: l.overrideSelect,
                         value: o,
                         options: [
@@ -61,18 +61,18 @@ function o(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(r.FormDivider, {})
+            (0, i.jsx)(s.FormDivider, {})
         ]
     });
 }
 function c(e) {
     let { className: t } = e;
-    return (0, i.jsxs)(r.FormSection, {
+    return (0, i.jsxs)(s.FormSection, {
         title: 'Hotspots',
-        tag: r.FormTitleTags.H1,
+        tag: s.FormTitleTags.H1,
         className: t,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 className: l.helpText,
                 tag: 'p',
                 variant: 'text-sm/normal',

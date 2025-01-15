@@ -5,9 +5,9 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(793030),
-    r = n(388032),
-    a = n(279411),
+var r = n(793030),
+    s = n(388032),
+    a = n(815752),
     l = n(258720);
 function o() {
     return (0, i.jsxs)('div', {
@@ -18,10 +18,10 @@ function o() {
                 src: l,
                 alt: ''
             }),
-            (0, i.jsx)(s.xv, {
+            (0, i.jsx)(r.xv, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
-                children: r.intl.string(r.t.H217fX)
+                children: s.intl.string(s.t.H217fX)
             })
         ]
     });

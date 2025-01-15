@@ -1,10 +1,10 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(707558),
     l = n(577720),
     o = n(388032),
-    c = n(57916);
+    c = n(766982);
 let d = () => [
     {
         icon: c.perkNewsletter,
@@ -22,7 +22,7 @@ let d = () => [
         description: o.intl.string(o.t.noChoK)
     }
 ];
-class u extends s.Component {
+class u extends r.Component {
     render() {
         return (0, i.jsxs)('div', {
             className: c.features,
@@ -31,7 +31,7 @@ class u extends s.Component {
                     className: c.video,
                     videoID: 'SWzB1mx2o5k'
                 }),
-                (0, i.jsx)(r.Heading, {
+                (0, i.jsx)(s.Heading, {
                     className: c.perksHeading,
                     variant: 'heading-sm/semibold',
                     children: o.intl.string(o.t['ITh5+/'])

@@ -4,15 +4,15 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    s = n(663389),
-    r = n(996733),
+    r = n(663389),
+    s = n(996733),
     a = n(991346),
     l = n(295545);
 function o(e, t) {
     let n = (0, l.eA)({ location: 'settingsTabs' }),
         o = (0, a.Gj)(t),
-        c = (0, r.Z7)(),
-        d = (0, i.e7)([s.Z], () => s.Z.getSubsection()),
+        c = (0, s.Z7)(),
+        d = (0, i.e7)([r.Z], () => r.Z.getSubsection()),
         u = e.filter((e) => null == e.predicate || e.predicate());
     if (n) {
         if (null != o && o.size > 0) {

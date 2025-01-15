@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    s,
-    r = n(200651),
+    r,
+    s = n(200651),
     a = n(192379),
     l = n(442837),
     o = n(481060),
@@ -17,15 +17,15 @@ var i,
     g = n(313201),
     h = n(695103),
     p = n(388032),
-    x = n(840891),
-    f = n(232186);
+    x = n(158802),
+    f = n(275477);
 let _ = /^\d+$|^$/;
-((s = i || (i = {})).LOCALHOST = 'localhost'), (s.PROXY = 'proxy');
+((r = i || (i = {})).LOCALHOST = 'localhost'), (r.PROXY = 'proxy');
 function E(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: i,
-            authorizationError: s,
+            authorizationError: r,
             authorizing: E
         } = (0, l.cj)([h.Z], () => ({
             authorizedApplicationId: h.Z.testModeApplicationId,
@@ -51,56 +51,56 @@ function E(e) {
         null != (await d.Wt(C, e)) && t();
     }
     a.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let R = null != i && i === C,
-        O = R
+    let O = null != i && i === C,
+        R = O
             ? function () {
                   d.mc(), T(''), N(null);
               }
             : j;
-    return (0, r.jsxs)(o.ModalRoot, {
+    return (0, s.jsxs)(o.ModalRoot, {
         'aria-labelledby': v,
         transitionState: n,
         children: [
-            (0, r.jsxs)(o.ModalHeader, {
+            (0, s.jsxs)(o.ModalHeader, {
                 justify: m.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(o.FormTitle, {
+                    (0, s.jsx)(o.FormTitle, {
                         id: v,
                         tag: 'h1',
                         className: f.marginReset,
                         children: p.intl.string(p.t.f8fzk5)
                     }),
-                    (0, r.jsx)(o.ModalCloseButton, { onClick: t })
+                    (0, s.jsx)(o.ModalCloseButton, { onClick: t })
                 ]
             }),
-            (0, r.jsxs)(o.ModalContent, {
+            (0, s.jsxs)(o.ModalContent, {
                 className: x.modalContent,
                 children: [
-                    (0, r.jsx)(o.FormText, {
+                    (0, s.jsx)(o.FormText, {
                         className: f.marginBottom20,
                         type: o.FormText.Types.DESCRIPTION,
                         children: p.intl.string(p.t.a6Vilp)
                     }),
-                    null == s
+                    null == r
                         ? null
-                        : (0, r.jsx)(o.FormErrorBlock, {
+                        : (0, s.jsx)(o.FormErrorBlock, {
                               className: f.marginBottom20,
-                              children: s
+                              children: r
                           }),
-                    (0, r.jsx)('form', {
+                    (0, s.jsx)('form', {
                         onSubmit: (e) => {
-                            e.preventDefault(), O();
+                            e.preventDefault(), R();
                         },
-                        children: (0, r.jsxs)(m.Z, {
+                        children: (0, s.jsxs)(m.Z, {
                             direction: m.Z.Direction.VERTICAL,
                             align: m.Z.Align.START,
                             children: [
-                                (0, r.jsx)(o.FormItem, {
+                                (0, s.jsx)(o.FormItem, {
                                     className: x.inputWrapper,
                                     title: p.intl.string(p.t.P6TzgI),
                                     required: !0,
-                                    children: (0, r.jsx)(o.TextInput, {
+                                    children: (0, s.jsx)(o.TextInput, {
                                         value: C,
                                         maxLength: 19,
                                         error: A ? null : p.intl.string(p.t.gPNgKC),
@@ -110,10 +110,10 @@ function E(e) {
                                         disabled: E
                                     })
                                 }),
-                                (0, r.jsx)(o.FormItem, {
+                                (0, s.jsx)(o.FormItem, {
                                     className: x.inputWrapper,
                                     title: p.intl.string(p.t['/GTqXF']),
-                                    children: (0, r.jsx)(o.SingleSelect, {
+                                    children: (0, s.jsx)(o.SingleSelect, {
                                         isDisabled: !A || '' === C,
                                         value: I,
                                         options: [
@@ -136,23 +136,23 @@ function E(e) {
                                 }),
                                 'localhost' !== I
                                     ? null
-                                    : (0, r.jsx)(o.FormItem, {
+                                    : (0, s.jsx)(o.FormItem, {
                                           className: x.inputWrapper,
                                           title: p.intl.string(p.t.fF4zxs),
                                           required: !0,
-                                          children: (0, r.jsx)(o.TextInput, {
+                                          children: (0, s.jsx)(o.TextInput, {
                                               value: S,
                                               maxLength: 5,
                                               onChange: (e) => b(e),
                                               disabled: E
                                           })
                                       }),
-                                (0, r.jsx)(o.Button, {
+                                (0, s.jsx)(o.Button, {
                                     submitting: E,
                                     type: 'submit',
                                     disabled: !A || 0 === C.length || ('localhost' === I && 0 === S.length),
-                                    color: R ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-                                    children: R ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
+                                    color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,
+                                    children: O ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
                                 })
                             ]
                         })

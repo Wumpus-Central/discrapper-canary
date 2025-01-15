@@ -5,15 +5,15 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    s = n(200651),
-    r = n(192379),
+    r = n(200651),
+    s = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(692547),
     c = n(477690),
     d = n(162168),
     u = n(624138),
-    m = n(261886);
+    m = n(508955);
 function g(e, t, n) {
     return (
         t in e
@@ -32,7 +32,7 @@ let h = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
         BLACK: m.black,
         GRAY: m.gray
     });
-class x extends (i = r.Component) {
+class x extends (i = s.Component) {
     componentDidMount() {
         this.computeBars(), window.addEventListener('resize', this.computeBars);
     }
@@ -60,19 +60,19 @@ class x extends (i = r.Component) {
     render() {
         let { className: e, notchBackground: t } = this.props,
             { barWidth: n } = this.state;
-        return (0, s.jsx)('div', {
+        return (0, r.jsx)('div', {
             className: m.wrapper,
             ref: this.sizerRef,
-            children: (0, s.jsxs)('div', {
+            children: (0, r.jsxs)('div', {
                 className: l()(m.container, e),
                 style: this.getGradientStyles(),
                 children: [
-                    (0, s.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: m.progress,
                         style: this.getProgressStyles()
                     }),
                     0 !== n &&
-                        (0, s.jsx)(d.Z, {
+                        (0, r.jsx)(d.Z, {
                             width: n,
                             className: l()(m.notches, t)
                         })
@@ -83,7 +83,7 @@ class x extends (i = r.Component) {
     constructor(...e) {
         super(...e),
             g(this, 'state', { barWidth: 0 }),
-            g(this, 'sizerRef', r.createRef()),
+            g(this, 'sizerRef', s.createRef()),
             g(this, 'computeBars', () => {
                 let { current: e } = this.sizerRef;
                 this.setState({ barWidth: null != e ? this.roundToNearestStep(e.clientWidth) : 0 });

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(442837),
-    r = n(481060),
+var r = n(442837),
+    s = n(481060),
     a = n(230711),
     l = n(574755),
     o = n(663389),
@@ -17,19 +17,19 @@ var s = n(442837),
     g = n(332325),
     h = n(981631),
     p = n(388032),
-    x = n(16344);
+    x = n(204236);
 function f() {
     let e = (0, m.b)(),
-        t = (0, s.e7)([o.Z], () => o.Z.getSubsection()),
+        t = (0, r.e7)([o.Z], () => o.Z.getSubsection()),
         n = null != t && e.some((e) => e.id === t) ? t : e[0].id;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(s.Heading, {
                 className: x.heading,
                 variant: 'heading-xl/semibold',
                 children: p.intl.string(p.t.URyqtL)
             }),
-            (0, i.jsx)(r.TabBar, {
+            (0, i.jsx)(s.TabBar, {
                 className: x.tabBar,
                 selectedItem: n,
                 onItemSelect: (e) => {
@@ -40,7 +40,7 @@ function f() {
                 look: 'brand',
                 children: e.map((e) =>
                     (0, i.jsxs)(
-                        r.TabBar.Item,
+                        s.TabBar.Item,
                         {
                             className: x.tab,
                             id: e.id,

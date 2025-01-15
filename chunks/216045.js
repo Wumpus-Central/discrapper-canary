@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    r = n(192379),
+    s = n(512722),
+    a = n.n(s),
     l = n(442837),
     o = n(622535),
     c = n(481060),
@@ -30,46 +30,46 @@ var i = n(200651),
     v = n(25990),
     A = n(594174),
     j = n(626135),
-    R = n(74538),
-    O = n(413182),
+    O = n(74538),
+    R = n(413182),
     P = n(695346),
     y = n(265159),
-    D = n(532495),
-    B = n(981631),
+    B = n(532495),
+    D = n(981631),
     Z = n(388032),
-    L = n(676258);
+    L = n(95135);
 function M() {
     let e = (0, l.e7)([A.default], () => {
         let e = A.default.getCurrentUser();
         return a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
-    s.useEffect(() => {
+    r.useEffect(() => {
         (0, u.In)(e.id);
     }, [e.id]);
     let t = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
-        { pendingBio: n, ...r } = (0, l.cj)([v.Z], () => v.Z.getAllPending()),
+        { pendingBio: n, ...s } = (0, l.cj)([v.Z], () => v.Z.getAllPending()),
         M = (0, l.e7)([v.Z], () => v.Z.showNotice()),
         k = P.dN.useSetting() && null != n ? _.ZP.parse(void 0, n).content : n,
-        w = R.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: F } = (0, x.ZP)(p.Z.PROFILE);
-    s.useEffect(() => () => d.Z.wait(m.W3), []);
-    let U = 'UserSettingsProfileCustomization';
+        w = O.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: U } = (0, x.ZP)(p.Z.PROFILE);
+    r.useEffect(() => () => d.Z.wait(m.W3), []);
+    let F = 'UserSettingsProfileCustomization';
     (0, h.j)({
-        location: U + ' auto on',
+        location: F + ' auto on',
         autoTrackExposure: !0
     }),
         (0, h.j)({
-            location: U + ' auto off',
+            location: F + ' auto off',
             autoTrackExposure: !1
         });
-    let [V, G] = s.useState(!1),
-        { showRedesign: H } = O.b.useExperiment({ location: 'profile customization' }),
+    let [V, G] = r.useState(!1),
+        { showRedesign: H } = R.b.useExperiment({ location: 'profile customization' }),
         Y = !w,
-        W = s.useRef(null);
+        W = r.useRef(null);
     return t
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(x.Gt, {
-              value: F,
+              value: U,
               children: [
                   (0, i.jsx)(f.Z, {}),
                   (0, i.jsx)(T.Z, {
@@ -78,9 +78,9 @@ function M() {
                           canUsePremiumCustomization: w,
                           onUpsellClick: y.Z,
                           pendingBio: k,
-                          ...r
+                          ...s
                       }),
-                      children: (0, i.jsx)(D.Z, {})
+                      children: (0, i.jsx)(B.Z, {})
                   }),
                   H && (0, i.jsx)(b.Z, {}),
                   (0, i.jsx)(o.$, {
@@ -108,7 +108,7 @@ function M() {
                               innerClassName: L.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  j.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  j.default.track(D.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: c.Button.Colors.GREEN,
                               size: c.ButtonSizes.MEDIUM,

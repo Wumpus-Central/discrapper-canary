@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(704215),
-    r = n(231757),
+var r = n(704215),
+    s = n(231757),
     a = n(63063),
     l = n(249881),
     o = n(981631),
@@ -23,9 +23,9 @@ let u = () => {
             height: 'auto',
             alt: ''
         }),
-        newIndicatorDismissibleContent: s.z.PS_ONE_WAY_RECONNECT,
+        newIndicatorDismissibleContent: r.z.PS_ONE_WAY_RECONNECT,
         onClick: () =>
-            (0, r.Z)({
+            (0, s.Z)({
                 platformType: o.ABu.PLAYSTATION,
                 location: 'PS two way upsell'
             })

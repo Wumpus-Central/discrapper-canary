@@ -1,71 +1,71 @@
 n(47120), n(177593);
-var i,
-    l = n(392711),
-    o = n.n(l),
-    a = n(525654),
-    u = n.n(a),
-    r = n(579806),
-    s = n(292959),
+var r,
+    a = n(392711),
+    l = n.n(a),
+    i = n(525654),
+    o = n.n(i),
+    s = n(579806),
+    c = n(292959),
     d = n(246946),
-    c = n(626135),
-    f = n(358085),
-    g = n(557177),
-    E = n(998502),
-    _ = n(981631);
-function N(t, e, n) {
+    u = n(626135),
+    m = n(358085),
+    h = n(557177),
+    x = n(998502),
+    f = n(981631);
+function p(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let I = f.isPlatformEmbedded && (0, f.isWindows)(),
-    h = I && 10 > parseFloat(r.Z.os.release),
-    p = !0;
-if (I && !h) {
-    let [t, , e] = r.Z.os.release.split('.');
-    p = parseInt(t) > 10 || parseInt(e) >= 15063;
+let b = m.isPlatformEmbedded && (0, m.isWindows)(),
+    g = b && 10 > parseFloat(s.Z.os.release),
+    v = !0;
+if (b && !g) {
+    let [e, , t] = s.Z.os.release.split('.');
+    v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let T = (I && p) || ('Chrome' === u().name && 47 > parseFloat(u().version)) || ('Firefox' === u().name && 52 > parseFloat(u().version)),
-    S = o().throttle(g.GN, 1000, { leading: !0 });
-function C() {
-    E.ZP.flashFrame(!1);
+let j = (b && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
+    C = l().throttle(h.GN, 1000, { leading: !0 });
+function T() {
+    x.ZP.flashFrame(!1);
 }
-I && (window.addEventListener('focus', C), E.ZP.on('MAIN_WINDOW_FOCUS', C));
-let m = window.Notification;
-h &&
-    (E.ZP.on('NOTIFICATION_CLICK', (t, e) => {
-        let n = null[e];
+b && (window.addEventListener('focus', T), x.ZP.on('MAIN_WINDOW_FOCUS', T));
+let _ = window.Notification;
+g &&
+    (x.ZP.on('NOTIFICATION_CLICK', (e, t) => {
+        let n = null[t];
         null != n && (n.onclick(), n.close());
     }),
-    E.ZP.send('NOTIFICATIONS_CLEAR'),
-    (i = class {
-        static requestPermission(t) {
-            t();
+    x.ZP.send('NOTIFICATIONS_CLEAR'),
+    (r = class {
+        static requestPermission(e) {
+            e();
         }
         close() {
-            null != null[this.id] && (delete null[this.id], E.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
+            null != null[this.id] && (delete null[this.id], x.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
         }
-        constructor(t, { body: e, icon: n }) {
-            N(this, 'id', m._id++),
-                N(this, 'title', void 0),
-                N(this, 'body', void 0),
-                N(this, 'icon', void 0),
-                N(this, 'onshow', function () {}),
-                N(this, 'onclick', function () {}),
-                N(this, 'onclose', function () {}),
-                (this.title = t),
-                (this.body = e),
+        constructor(e, { body: t, icon: n }) {
+            p(this, 'id', _._id++),
+                p(this, 'title', void 0),
+                p(this, 'body', void 0),
+                p(this, 'icon', void 0),
+                p(this, 'onshow', function () {}),
+                p(this, 'onclick', function () {}),
+                p(this, 'onclose', function () {}),
+                (this.title = e),
+                (this.body = t),
                 (this.icon = n),
                 setImmediate(() => this.onshow()),
                 (null[this.id] = this),
-                E.ZP.send('NOTIFICATION_SHOW', {
+                x.ZP.send('NOTIFICATION_SHOW', {
                     id: this.id,
                     title: this.title,
                     body: this.body,
@@ -73,65 +73,65 @@ h &&
                 });
         }
     }),
-    N(i, 'permission', 'granted'),
-    N(i, '_id', 0),
-    (m = i));
-function Z() {
-    return null != m && 'granted' === m.permission;
+    p(r, 'permission', 'granted'),
+    p(r, '_id', 0),
+    (_ = r));
+function S() {
+    return null != _ && 'granted' === _.permission;
 }
-function v(t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+function N(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    t.includes('message') ? S(t, e, void 0, n) : (0, g.GN)(t, e);
+    e.includes('message') ? C(e, t, void 0, n) : (0, h.GN)(e, t);
 }
-function A(t) {
-    return (d.Z.disableNotifications && null == t.overrideStreamerMode) || !Z() || (f.isPlatformEmbedded && !E.ZP.shouldDisplayNotifications());
+function y(e) {
+    return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (m.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
 }
-e.Z = {
-    hasPermission: Z,
-    requestPermission: function (t) {
-        null != m &&
-            m.requestPermission(() => {
-                null != t && t(Z());
+t.Z = {
+    hasPermission: S,
+    requestPermission: function (e) {
+        null != _ &&
+            _.requestPermission(() => {
+                null != e && e(S());
             });
     },
-    showNotification: function (t, e, n, i, l) {
-        var a, u, r, d;
-        let g;
-        if (A(l)) {
-            null != l.sound && !1 !== l.playSoundIfDisabled && v(l.sound, null !== (u = l.volume) && void 0 !== u ? u : 1, l.soundpack);
+    showNotification: function (e, t, n, r, a) {
+        var i, o, s, d;
+        let h;
+        if (y(a)) {
+            null != a.sound && !1 !== a.playSoundIfDisabled && N(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
             return;
         }
-        null != l.sound && v(l.sound, null !== (r = l.volume) && void 0 !== r ? r : 1, l.soundpack);
-        let N = null !== (d = null == l ? void 0 : l.tag) && void 0 !== d ? d : null;
-        (0, f.isLinux)() && (n = o().escape(n));
-        let h = {
-            icon: t,
+        null != a.sound && N(a.sound, null !== (s = a.volume) && void 0 !== s ? s : 1, a.soundpack);
+        let p = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
+        (0, m.isLinux)() && (n = l().escape(n));
+        let g = {
+            icon: e,
             body: n,
-            tag: N,
+            tag: p,
             silent: !0
         };
-        I && s.Z.taskbarFlash && E.ZP.flashFrame(!0);
+        b && c.Z.taskbarFlash && x.ZP.flashFrame(!0);
         try {
-            g = new m(e, h);
-        } catch (t) {
+            h = new _(t, g);
+        } catch (e) {
             return null;
         }
-        return (null === (a = l.onShown) || void 0 === a || a.call(l),
-        !l.omitViewTracking && c.default.track(_.rMx.NOTIFICATION_VIEWED, i),
-        (g.onclick = () => {
-            var t;
-            f.isPlatformEmbedded ? E.ZP.focus() : (window.focus(), g.close()), !l.omitClickTracking && c.default.track(_.rMx.NOTIFICATION_CLICKED, i), null === (t = l.onClick) || void 0 === t || t.call(l);
+        return (null === (i = a.onShown) || void 0 === i || i.call(a),
+        !a.omitViewTracking && u.default.track(f.rMx.NOTIFICATION_VIEWED, r),
+        (h.onclick = () => {
+            var e;
+            m.isPlatformEmbedded ? x.ZP.focus() : (window.focus(), h.close()), !a.omitClickTracking && u.default.track(f.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
         }),
-        T && setTimeout(() => g.close(), 5000),
-        p)
-            ? g
+        j && setTimeout(() => h.close(), 5000),
+        v)
+            ? h
             : {
                   close() {
-                      var t;
-                      null == g || null === (t = g.onclose) || void 0 === t || t.call(g);
+                      var e;
+                      null == h || null === (e = h.onclose) || void 0 === e || e.call(h);
                   }
               };
     },
-    disabled: A
+    disabled: y
 };

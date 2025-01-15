@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(401430),
     o = n(153867),
@@ -20,21 +20,21 @@ var i = n(200651),
     x = n(981631),
     f = n(388032);
 function _() {
-    let [e] = s.useState(() => u.ZP.getEnableHardwareAcceleration()),
+    let [e] = r.useState(() => u.ZP.getEnableHardwareAcceleration()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
-        _ = (0, r.e7)([d.Z], () => d.Z.testModeApplicationId),
-        E = (0, r.e7)([m.ZP], () => m.ZP.showPlayAgain),
-        C = s.useCallback((e) => {
+        _ = (0, s.e7)([d.Z], () => d.Z.testModeApplicationId),
+        E = (0, s.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        C = r.useCallback((e) => {
             g.bm.updateSetting(!e);
         }, []),
-        T = s.useCallback((e) => {
+        T = r.useCallback((e) => {
             e ? (0, a.openModal)((e) => (0, i.jsx)(h.Z, { ...e })) : l.mc();
         }, []),
-        S = s.useCallback((e) => {
+        S = r.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        b = s.useCallback((e) => {
+        b = r.useCallback((e) => {
             (0, a.openModal)((t) =>
                 (0, i.jsx)(a.ConfirmModal, {
                     header: f.intl.string(f.t.aqpAvr),

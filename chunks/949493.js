@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(921801),
-    r = n(10298),
+var r = n(921801),
+    s = n(10298),
     a = n(924356),
     l = n(24400),
     o = n(122897),
@@ -30,7 +30,7 @@ let b = () =>
             webSetting: T.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: (0, i.jsxs)(g.Z, {
                 children: [
-                    (0, i.jsx)(s.F, {
+                    (0, i.jsx)(r.F, {
                         setting: T.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, i.jsx)(m.Z, {})
                     }),
@@ -54,7 +54,7 @@ let b = () =>
             children: [(0, i.jsx)(d.Z, {}), (0, i.jsx)(p.ZP, {})]
         });
 function v() {
-    return (0, i.jsxs)(r.N, {
+    return (0, i.jsxs)(s.N, {
         header: S.intl.string(S.t['+o1pDQ']),
         children: [(0, i.jsx)(I, {}), (0, i.jsx)(b, {}), (0, i.jsx)(N, {})]
     });

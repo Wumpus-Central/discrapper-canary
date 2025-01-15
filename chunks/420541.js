@@ -3,9 +3,9 @@ var r = n(200651),
     i = n(192379),
     a = n(597846),
     u = n(885006),
-    o = n(111810),
+    l = n(111810),
     c = n(516604),
-    l = n(936003);
+    o = n(730123);
 let s = () => {
     let e = (0, u.Z)(),
         t = i.useMemo(
@@ -17,7 +17,7 @@ let s = () => {
         ),
         n = (0, c.Z)(t, 60);
     return (0, r.jsx)('div', {
-        className: l.canvasWrapper,
+        className: o.canvasWrapper,
         id: 'simple-confetti-canvas',
         children: (0, r.jsx)(a.z, {
             playing: n.playing,
@@ -28,4 +28,4 @@ let s = () => {
         })
     });
 };
-t.default = () => ((0, o.kf)('ConfettiCanvasComponent') ? (0, r.jsx)(s, {}) : null);
+t.default = () => ((0, l.kf)('ConfettiCanvasComponent') ? (0, r.jsx)(s, {}) : null);

@@ -12,7 +12,7 @@ var r = n(120356),
     s = n(839963),
     c = n(139256),
     d = n(388032),
-    u = n(590222);
+    u = n(215120);
 function m(e) {
     let { didSelfVote: t, label: n, percentage: r } = e;
     return (0, i.jsxs)('div', {

@@ -1,14 +1,14 @@
-i.d(n, {
+n.d(t, {
     Z: function () {
         return l;
     }
 });
-var t = i(531643),
-    o = i(403182),
-    a = i(388032);
+var A = n(531643),
+    r = n(403182),
+    a = n(388032);
 function l(e) {
-    (0, t.openUploadError)({
+    (0, A.openUploadError)({
         title: a.intl.string(a.t['/tGlcn']),
-        help: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, o.Ng)(e) })
+        help: a.intl.formatToPlainString(a.t.fxEKdX, { maxSize: (0, r.Ng)(e) })
     });
 }

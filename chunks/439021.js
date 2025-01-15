@@ -7,7 +7,7 @@ var a = n(200651),
     r = n(481060),
     l = n(502109),
     s = n(388032),
-    i = n(245590);
+    i = n(779692);
 function o(e) {
     let t,
         { onChooseType: n, onStripePaymentMethodReceived: o, onPaymentRequestFailure: c, onValidPaymentRequest: u, paymentRequestRef: d, paymentRequestWallet: p } = e,

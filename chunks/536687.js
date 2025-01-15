@@ -33,7 +33,7 @@ var r = n(200651),
     j = n(46140),
     b = n(981631),
     R = n(388032),
-    L = n(451680);
+    L = n(225624);
 function O(e) {
     var t, n, l;
     let { transitionState: p, onClose: _, quest: A, autoplay: O, videoSessionId: k, impressionRef: M } = e,
@@ -42,8 +42,8 @@ function O(e) {
         q = (0, a.wj)(y) ? b.BRd.DARK : b.BRd.LIGHT,
         w = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         B = (0, v.aM)(),
-        [U, F] = i.useState(P.progressSeconds),
-        [Z, V] = i.useState(!1),
+        [U, Z] = i.useState(P.progressSeconds),
+        [F, V] = i.useState(!1),
         { completedRatio: Y, completedRatioDisplay: G } = (0, E.I)(A),
         [z, H] = (0, N.G6)(R.intl.string(R.t.RDE0SU), R.intl.string(R.t['+5kSoa']), 1700),
         K = (null === (t = A.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? R.intl.string(R.t.vTgCW1) : R.intl.string(R.t.cfY4PD),
@@ -124,7 +124,7 @@ function O(e) {
                                                 quest: A,
                                                 size: 48,
                                                 percentComplete: Y,
-                                                percentCompleteText: Z ? G : void 0,
+                                                percentCompleteText: F ? G : void 0,
                                                 percentCompleteTextVariant: 'text-sm/medium',
                                                 children: (0, r.jsx)(T.Z, {
                                                     className: L.questProgressRewardTile,
@@ -142,7 +142,7 @@ function O(e) {
                             quest: A,
                             videoSessionId: k,
                             parentTransitionState: p,
-                            onOptimisticProgressUpdate: F,
+                            onOptimisticProgressUpdate: Z,
                             autoplay: O
                         }),
                         (0, r.jsxs)('div', {

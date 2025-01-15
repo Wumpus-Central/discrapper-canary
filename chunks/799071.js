@@ -5,11 +5,11 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(173511),
+    r = n(192379),
+    s = n(173511),
     a = n(481060);
 function l() {
-    let [e, t] = s.useState('');
+    let [e, t] = r.useState('');
     return (0, i.jsxs)(a.FormSection, {
         title: 'Text components',
         tag: a.FormTitleTags.H1,
@@ -19,7 +19,7 @@ function l() {
                 onChange: (e) => t(e)
             }),
             (0, i.jsx)(a.FormDivider, { style: { margin: '10px 0' } }),
-            r.O.map((t) =>
+            s.O.map((t) =>
                 'code' === t
                     ? null
                     : (0, i.jsx)(

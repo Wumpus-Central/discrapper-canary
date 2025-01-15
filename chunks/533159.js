@@ -7,7 +7,7 @@ var t = l(200651);
 l(192379);
 var i = l(794295),
     o = l(388032),
-    r = l(83909);
+    r = l(989627);
 function s(n) {
     let { termsOfServiceUrl: e, privacyPolicyUrl: l } = n;
     return null == e && null == l

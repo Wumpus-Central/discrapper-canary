@@ -9,7 +9,7 @@ var i = r(120356),
     a = r.n(i),
     l = r(481060),
     s = r(422559),
-    o = r(95648);
+    o = r(676267);
 function c(e) {
     let { grantedPermissions: t, disabledPermissions: r, grantedPermissionsHeader: i, disabledPermissionsHeader: c, className: d } = e;
     return (0, n.jsxs)('div', {

@@ -9,7 +9,7 @@ var n = i(120356),
     c = i(259674),
     u = i(981631),
     m = i(388032),
-    g = i(89388);
+    g = i(331592);
 t.Z = (e) => {
     var t;
     let { guild: i, headerId: n } = e,

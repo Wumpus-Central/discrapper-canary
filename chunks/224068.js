@@ -12,7 +12,7 @@ var l = n(120356),
     o = n(979554),
     s = n(481060),
     c = n(388032),
-    u = n(253344);
+    u = n(32432);
 function d(e) {
     var t;
     let { product: n, isDarkText: l = !1 } = e;

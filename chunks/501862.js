@@ -7,7 +7,7 @@ var i = r(200651),
     a = r(120356),
     s = r.n(a),
     o = r(481060),
-    l = r(574804);
+    l = r(254046);
 function u(e) {
     let { countdownText: n, className: r, showInfoIcon: a } = e,
         u = a

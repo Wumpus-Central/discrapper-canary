@@ -22,7 +22,7 @@ var r = n(120356),
     g = n(570961),
     x = n(290511),
     p = n(388032),
-    f = n(439217);
+    f = n(131281);
 function C(e) {
     var t, r, s, c;
     let { guild: u, prompt: C, singleColumn: v, promptIndex: I, option: N, hasError: _, onDragStart: T, onDragComplete: j, onDragReset: b } = e,

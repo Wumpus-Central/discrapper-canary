@@ -27,10 +27,10 @@ n.d(t, {
     n(873817),
     n(757143);
 var i,
-    s,
     r,
+    s,
     a = n(943418);
-let l = null !== (r = null === (i = window) || void 0 === i ? void 0 : i.crypto) && void 0 !== r ? r : null === (s = window) || void 0 === s ? void 0 : s.msCrypto,
+let l = null !== (s = null === (i = window) || void 0 === i ? void 0 : i.crypto) && void 0 !== s ? s : null === (r = window) || void 0 === r ? void 0 : r.msCrypto,
     o = 'Uint8Array' in window,
     c = null != l && 'getRandomValues' in l && o,
     d = 'PublicKeyCredential' in window && o;

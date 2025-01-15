@@ -1,73 +1,73 @@
-n(47120);
-var i,
-    o = n(442837),
-    a = n(570140),
-    r = n(699516),
-    s = n(496232);
-function c(e, t, n) {
+o(47120);
+var r,
+    n = o(442837),
+    i = o(570140),
+    a = o(699516),
+    s = o(496232);
+function l(e, t, o) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: o,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = o),
         e
     );
 }
 let d = new Map(),
-    l = !1,
+    c = !1,
     u = Object.freeze({
         userAffinities: [],
         lastFetched: 0
     }),
-    _ = { ...u };
-function f() {
-    d = new Map(_.userAffinities.filter((e) => !r.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    f = { ...u };
+function _() {
+    d = new Map(f.userAffinities.filter((e) => !a.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
-class h extends (i = o.ZP.PersistedStore) {
+class p extends (r = n.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(r.Z), null != e && ((_.userAffinities = e.userAffinities), (_.lastFetched = e.lastFetched), f()), this.syncWith([r.Z], f);
+        this.waitFor(a.Z), null != e && ((f.userAffinities = e.userAffinities), (f.lastFetched = e.lastFetched), _()), this.syncWith([a.Z], _);
     }
     shouldFetch() {
-        if (!l) return Date.now() - _.lastFetched > s.K;
+        if (!c) return Date.now() - f.lastFetched > s.K;
     }
     isFetching() {
-        return l;
+        return c;
     }
     getUserAffinities() {
-        return _.userAffinities;
+        return f.userAffinities;
     }
     getUserAffinitiesMap() {
         return d;
     }
     compare(e, t) {
-        var n, i, o, a;
-        return (null !== (o = null === (n = d.get(t)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== o ? o : 0) - (null !== (a = null === (i = d.get(e)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0);
+        var o, r, n, i;
+        return (null !== (n = null === (o = d.get(t)) || void 0 === o ? void 0 : o.communicationProbability) && void 0 !== n ? n : 0) - (null !== (i = null === (r = d.get(e)) || void 0 === r ? void 0 : r.communicationProbability) && void 0 !== i ? i : 0);
     }
     getUserAffinity(e) {
         return d.get(e);
     }
     getState() {
-        return _;
+        return f;
     }
 }
-c(h, 'displayName', 'UserAffinitiesStoreV2'),
-    c(h, 'persistKey', 'UserAffinitiesStoreV2'),
-    (t.Z = new h(a.Z, {
+l(p, 'displayName', 'UserAffinitiesStoreV2'),
+    l(p, 'persistKey', 'UserAffinitiesStoreV2'),
+    (t.Z = new p(i.Z, {
         LOAD_USER_AFFINITIES_V2: function () {
-            l = !0;
+            c = !0;
         },
         LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {
             let { affineUsers: t } = e;
-            (_.lastFetched = Date.now()), (l = !1), (_.userAffinities = t), f();
+            (f.lastFetched = Date.now()), (c = !1), (f.userAffinities = t), _();
         },
         LOAD_USER_AFFINITIES_V2_FAILURE: function () {
-            l = !1;
+            c = !1;
         },
         LOGOUT: function () {
-            (_ = { ...u }), (d = new Map()), (l = !1);
+            (f = { ...u }), (d = new Map()), (c = !1);
         }
     }));

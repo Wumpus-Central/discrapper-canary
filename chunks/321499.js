@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(780384),
     c = n(481060),
@@ -19,7 +19,7 @@ var i = n(200651),
     x = n(526761),
     f = n(726985),
     _ = n(388032),
-    E = n(232186);
+    E = n(275477);
 let C = n(651714),
     T = n(297166);
 function S() {
@@ -41,9 +41,9 @@ function b() {
             openH264: g.Z.getOpenH264(),
             hardwareEncoding: g.Z.getHardwareEncoding()
         })),
-        r = s.useRef(null);
+        s = r.useRef(null);
     return (
-        (0, p.Z)(r, x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
+        (0, p.Z)(s, x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(m.F, {
@@ -82,7 +82,7 @@ function b() {
                             }),
                             (0, i.jsx)('div', {
                                 style: { scrollMarginTop: '48px' },
-                                ref: r
+                                ref: s
                             }),
                             (0, i.jsx)(m.F, {
                                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,

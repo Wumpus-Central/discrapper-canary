@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(481060),
+    r = n(192379),
+    s = n(481060),
     a = n(541716),
     l = n(752305),
     o = n(893718),
@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(993413),
     m = n(981631),
     g = n(388032),
-    h = n(341258);
+    h = n(427313);
 let p = (0, c.hQ)(),
     x = (0, d.kt)({
         id: '1',
@@ -24,11 +24,11 @@ let p = (0, c.hQ)(),
     f = (0, c.hQ)();
 function _(e) {
     let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: _, currentBio: E, disabled: C = !1 } = e,
-        [T, S] = s.useState(null != d ? d : E),
-        [b, I] = s.useState((0, l.JM)(T)),
-        N = s.useRef(!1);
+        [T, S] = r.useState(null != d ? d : E),
+        [b, I] = r.useState((0, l.JM)(T)),
+        N = r.useRef(!1);
     return (
-        s.useEffect(() => {
+        r.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, l.JM)(E);
                 S(E), I(e);
@@ -71,7 +71,7 @@ function _(e) {
                         });
                     }
                 }),
-                (0, i.jsx)(r.HiddenVisually, {
+                (0, i.jsx)(s.HiddenVisually, {
                     id: f,
                     children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })

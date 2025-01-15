@@ -5,7 +5,7 @@ var a = r(476183),
     o = r(565138),
     l = r(678558),
     u = r(981631),
-    c = r(509532);
+    c = r(332335);
 function d(e) {
     let { closeLayer: n, guild: r, isVisible: d } = e,
         f = (0, s.useSpring)({

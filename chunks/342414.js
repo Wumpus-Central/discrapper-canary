@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(442837),
     l = n(481060),
     o = n(100527),
@@ -25,26 +25,26 @@ var s = n(120356),
     N = n(474936),
     v = n(981631),
     A = n(388032),
-    j = n(477746),
-    R = n(872905),
-    O = n(578478);
+    j = n(779061),
+    O = n(872905),
+    R = n(578478);
 let P = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: s, headingBottom: a } = Z();
+            { headingText: n, headingTop: r, headingBottom: a } = Z();
         return (0, i.jsx)(i.Fragment, {
             children: (0, i.jsxs)('div', {
-                className: r()(j.container, t),
+                className: s()(j.container, t),
                 'data-testid': 'subscriber-nitro-home-hero-header',
                 children: [
                     (0, i.jsx)('img', {
-                        src: R,
+                        src: O,
                         alt: '',
                         className: j.headerArt
                     }),
                     (0, i.jsxs)('div', {
                         className: j.content,
                         children: [
-                            s,
+                            r,
                             (0, i.jsx)(l.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
@@ -69,12 +69,12 @@ let P = (e) => {
     y = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = f.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-            s = n === f.p.VARIANT_2,
-            { headingText: r, headingTop: a, headingBottom: o } = Z();
+            r = n === f.p.VARIANT_2,
+            { headingText: s, headingTop: a, headingBottom: o } = Z();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    src: O,
+                    src: R,
                     alt: '',
                     className: j.headerArtV2
                 }),
@@ -88,10 +88,10 @@ let P = (e) => {
                             (0, i.jsx)(l.Heading, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: r
+                                children: s
                             }),
                             o,
-                            s &&
+                            r &&
                                 (0, i.jsx)('div', {
                                     className: j.buttonContainer,
                                     children: (0, i.jsx)(C.Z, {
@@ -108,12 +108,12 @@ let P = (e) => {
             ]
         });
     },
-    D = () => {
+    B = () => {
         let { headingText: e } = Z();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    src: O,
+                    src: R,
                     alt: '',
                     className: j.headerArtV2
                 }),
@@ -138,24 +138,24 @@ let P = (e) => {
             ]
         });
     },
-    [B, Z] = (0, h.Z)();
+    [D, Z] = (0, h.Z)();
 t.Z = (e) => {
     let { className: t, location: n } = e,
-        { analyticsLocations: s } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
+        { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         l = (0, a.e7)([g.ZP], () => g.ZP.inReverseTrial()),
         h = (0, x._O)(),
         f = A.intl.string(A.t.qYKftb),
         C = (0, E.b)(n),
         S = (0, b.pn)(n),
         I = (0, i.jsx)(P, { className: t }),
-        R = A.intl.string(A.t.ifwQZW),
-        O = !1,
+        O = A.intl.string(A.t.ifwQZW),
+        R = !1,
         { fractionalState: Z, endsAt: L } = (0, u.Z)(),
         M = (0, d.Z)(L, d.a.ENDS_IN);
-    l ? ((R = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(D, {}))) : (C || S) && ((f = A.intl.string(A.t.qYKftb)), (R = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(y, { location: n })));
+    l ? ((O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(B, {}))) : (C || S) && ((f = A.intl.string(A.t.qYKftb)), (O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(y, { location: n })));
     let k = null;
     if (Z !== N.a$.NONE) {
-        (h = !0), (f = A.intl.string(A.t.vaqFvb)), (O = !0);
+        (h = !0), (f = A.intl.string(A.t.vaqFvb)), (R = !0);
         let e = A.intl.format(A.t['yR+oDA'], { helpCenterLink: p.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) });
         k = (0, i.jsx)(m.Z, {
             text: e,
@@ -174,22 +174,22 @@ t.Z = (e) => {
         });
     }
     let w = {
-            className: r()(j.trialPill, { [j.hidden]: !h }),
+            className: s()(j.trialPill, { [j.hidden]: !h }),
             text: f,
             colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
         },
-        F = O
+        U = R
             ? (0, i.jsx)('div', {
                   className: j.flexCentered,
                   children: (0, i.jsx)(T.mn, { ...w })
               })
             : (0, i.jsx)(T.Cy, { ...w });
     return (0, i.jsx)(c.Gt, {
-        value: s,
-        children: (0, i.jsx)(B.Provider, {
+        value: r,
+        children: (0, i.jsx)(D.Provider, {
             value: {
-                headingText: R,
-                headingTop: F,
+                headingText: O,
+                headingTop: U,
                 headingBottom: k
             },
             children: I

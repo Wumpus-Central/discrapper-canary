@@ -18,7 +18,7 @@ var c = r(468194),
     T = r(490095),
     b = r(981631),
     y = r(388032),
-    S = r(834219);
+    S = r(596581);
 let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
     N = (0, c.Mg)(S.__invalid_stickerPickerPreviewPadding),
     C = 250,
@@ -67,7 +67,7 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                 location: H
                             }),
                             (0, d.openModalLazy)(async () => {
-                                let { default: n } = await Promise.all([r.e('93626'), r.e('28189')]).then(r.bind(r, 136735));
+                                let { default: n } = await Promise.all([r.e('93626'), r.e('62513')]).then(r.bind(r, 136735));
                                 return (r) =>
                                     (0, a.jsx)(n, {
                                         guildId: e.guild_id,

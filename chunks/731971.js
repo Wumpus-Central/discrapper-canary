@@ -12,10 +12,10 @@ n.d(t, {
         return l;
     },
     oE: function () {
-        return r;
+        return a;
     },
     y: function () {
-        return a;
+        return r;
     }
 });
 let i = (0, n(15729).U)((e) => ({
@@ -35,10 +35,10 @@ let i = (0, n(15729).U)((e) => ({
                 receiveNotifications: !1
             })
     })),
-    r = () => {
+    a = () => {
         i.getState().reset();
     },
-    a = () => i.getState().nickname,
+    r = () => i.getState().nickname,
     l = () => i.getState().dmsAllowed,
     o = () => i.getState().showActivity,
     c = () => i.getState().receiveNotifications;

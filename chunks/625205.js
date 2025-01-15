@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var s = n(392711),
-    r = n.n(s),
+var r = n(392711),
+    s = n.n(r),
     a = n(442837),
     l = n(780384),
     o = n(481060),
@@ -22,11 +22,11 @@ var s = n(392711),
     f = n(962100),
     _ = n(65154),
     E = n(388032),
-    C = n(43824),
-    T = n(232186);
+    C = n(481336),
+    T = n(275477);
 function S() {
     let e, t;
-    let { analyticsLocations: s } = (0, d.ZP)(),
+    let { analyticsLocations: r } = (0, d.ZP)(),
         S = (0, a.e7)([x.Z], () => x.Z.theme),
         {
             canSetInputDevice: b,
@@ -53,14 +53,14 @@ function S() {
                 className: T.marginTop8,
                 children: E.intl.format(E.t.Ow0dbG, { onDownloadClick: () => (0, f.y)('Help Text Output Devices') })
             }));
-    let R = r()(A).values().first(),
-        O = null != R ? R.disabled : null != e,
-        P = r()(j).values().first(),
+    let O = s()(A).values().first(),
+        R = null != O ? O.disabled : null != e,
+        P = s()(j).values().first(),
         y = null != P ? P.disabled : null != t;
-    function D(e) {
+    function B(e) {
         let t,
-            { label: s, value: r } = e;
-        if (h.Z.isCertified(r)) {
+            { label: r, value: s } = e;
+        if (h.Z.isCertified(s)) {
             let e = (0, l.ap)(S) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
@@ -75,16 +75,16 @@ function S() {
                 children: [
                     (0, i.jsx)('span', {
                         className: C.deviceOptionLabel,
-                        children: h.Z.getCertifiedDeviceName(r, s)
+                        children: h.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
                 ]
             },
-            r
+            s
         );
     }
-    function B(e) {
-        return D(e[0]);
+    function D(e) {
+        return B(e[0]);
     }
     return (0, i.jsxs)(u.Z, {
         className: T.marginBottom20,
@@ -102,18 +102,18 @@ function S() {
                         onChange: (e) =>
                             c.Z.setInputDevice(e, {
                                 location: 'Settings',
-                                analyticsLocations: s
+                                analyticsLocations: r
                             }),
-                        options: r().map(A, (e) => {
+                        options: s().map(A, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,
                                 label: n
                             };
                         }),
-                        isDisabled: O,
-                        renderOptionValue: B,
-                        renderOptionLabel: D
+                        isDisabled: R,
+                        renderOptionValue: D,
+                        renderOptionLabel: B
                     }),
                     e
                 ]
@@ -131,9 +131,9 @@ function S() {
                         onChange: (e) =>
                             c.Z.setOutputDevice(e, {
                                 location: 'Settings',
-                                analyticsLocations: s
+                                analyticsLocations: r
                             }),
-                        options: r().map(j, (e) => {
+                        options: s().map(j, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,
@@ -141,8 +141,8 @@ function S() {
                             };
                         }),
                         isDisabled: y,
-                        renderOptionValue: B,
-                        renderOptionLabel: D
+                        renderOptionValue: D,
+                        renderOptionLabel: B
                     }),
                     t
                 ]

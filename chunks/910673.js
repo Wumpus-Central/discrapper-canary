@@ -10,7 +10,7 @@ var o = n(200651),
     u = n(981631),
     I = n(526761),
     h = n(388032),
-    m = n(219834),
+    m = n(49969),
     _ = n(444812);
 e.default = (t) => {
     let { channelId: e, messageId: f, transitionState: E, onClose: C } = t,

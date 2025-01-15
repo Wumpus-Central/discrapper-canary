@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(388032),
-    o = n(771039),
-    c = n(112841),
+    o = n(773115),
+    c = n(303164),
     d = n(834300);
 function u(e) {
     let { onClickManageSubscription: t, count: n } = e;
@@ -28,7 +28,7 @@ function u(e) {
             }),
             (0, i.jsx)(a.Spacer, { size: 24 }),
             (0, i.jsxs)('div', {
-                className: r()(c.guildBoostingSubscriptionRow, o.card),
+                className: s()(c.guildBoostingSubscriptionRow, o.card),
                 children: [
                     (0, i.jsx)('img', {
                         src: d,
