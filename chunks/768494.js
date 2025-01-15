@@ -81,6 +81,7 @@ function m(e, n) {
     return {
         ..._(e),
         type: p(e),
+        alt: e.description,
         sourceMetadata: {
             message: n,
             identifier: {
