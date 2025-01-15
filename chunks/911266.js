@@ -30,38 +30,42 @@ t.Z = (e) => {
                 (I.current = setTimeout(() => {
                     let e = _.current;
                     if (0 !== e && !1 !== n) {
-                        if (!(Date.now() - e < 1250)) {
-                            if (
-                                (c.Z.dispatch({
-                                    type: 'POTIONS_SET_CONFETTI_MODE',
-                                    enabled: !0
-                                }),
-                                null != E.current)
-                            ) {
-                                var i;
-                                let { x: e, y: n, width: l, height: r } = null === (i = E.current) || void 0 === i ? void 0 : i.getBoundingClientRect();
-                                (0, f.Z)(t, {
-                                    x: e,
-                                    y: n,
-                                    w: l,
-                                    h: r
-                                });
-                            } else (0, f.Z)(t);
+                        if (!(Date.now() - e < 1000)) {
+                            if (!x) {
+                                if (null != E.current) {
+                                    var i;
+                                    let { x: e, y: n, width: l, height: r } = null === (i = E.current) || void 0 === i ? void 0 : i.getBoundingClientRect();
+                                    (0, f.Z)(
+                                        t,
+                                        {
+                                            x: e,
+                                            y: n - 20,
+                                            w: l,
+                                            h: r
+                                        },
+                                        !0
+                                    );
+                                } else (0, f.Z)(t, void 0, !0);
+                            }
+                            c.Z.dispatch({
+                                type: 'POTIONS_SET_CONFETTI_MODE',
+                                enabled: !0
+                            });
                         }
                     }
-                }, 1350)));
-        }, [n, t, v]),
+                }, 1100)));
+        }, [x, n, t, v]),
         !(0, m.p7)('Message Confetti Peak') || !(0, g.U)(t))
     )
         return null;
     let Z = (0, g.E)(t);
     if (null == Z) return null;
-    let N = Z.emoji[0],
-        S =
-            null == N.id
-                ? h.ZP.getURL(N.name)
+    let S = Z.emoji[0],
+        N =
+            null == S.id
+                ? h.ZP.getURL(S.name)
                 : u.ZP.getEmojiURL({
-                      id: N.id,
+                      id: S.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0
@@ -73,21 +77,21 @@ t.Z = (e) => {
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.left, b && C.shy, x && C.confettiMode]),
                 height: 28,
                 width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.right, b && C.shy, x && C.confettiMode]),
                 height: 26,
                 width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.center, b && C.shy, x && C.confettiMode]),
                 height: 32,
                 width: 32
