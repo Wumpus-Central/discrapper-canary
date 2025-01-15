@@ -2,63 +2,95 @@ var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(768581),
-    o = n(176354),
-    c = n(111810),
-    d = n(235894),
-    u = n(280629);
+    s = n(392711),
+    o = n(442837),
+    c = n(570140),
+    d = n(607070),
+    u = n(768581),
+    h = n(176354),
+    p = n(823961),
+    m = n(111810),
+    f = n(287941),
+    g = n(235894),
+    C = n(280629);
 t.Z = (e) => {
-    let { message: t } = e,
-        n = l.useRef(5 * Math.random() - 2.5).current;
-    if (!(0, c.p7)('Message Confetti Peak') || !(0, d.U)(t)) return null;
-    let r = (0, d.E)(t);
-    if (null == r) return null;
-    let h = r.emoji[0],
-        p =
-            null == h.id
-                ? o.ZP.getURL(h.name)
-                : s.ZP.getEmojiURL({
-                      id: h.id,
+    let { message: t, hovering: n } = e,
+        r = l.useRef((0, s.random)(-6, 24)).current,
+        x = (0, o.e7)([p.Z], () => p.Z.confettiMode),
+        v = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        _ = l.useRef(0),
+        I = l.useRef(null),
+        E = l.useRef(null),
+        b = l.useMemo(() => !n && !x && !v, [x, n, v]);
+    if (
+        (l.useEffect(() => {
+            !v &&
+                (!1 === n && ((_.current = 0), null != I.current && (clearTimeout(I.current), (I.current = null))),
+                (_.current = Date.now()),
+                (I.current = setTimeout(() => {
+                    let e = _.current;
+                    if (0 !== e && !1 !== n) {
+                        if (!(Date.now() - e < 1250)) {
+                            if (
+                                (c.Z.dispatch({
+                                    type: 'POTIONS_SET_CONFETTI_MODE',
+                                    enabled: !0
+                                }),
+                                null != E.current)
+                            ) {
+                                var i;
+                                let { x: e, y: n, width: l, height: r } = null === (i = E.current) || void 0 === i ? void 0 : i.getBoundingClientRect();
+                                (0, f.Z)(t, {
+                                    x: e,
+                                    y: n,
+                                    w: l,
+                                    h: r
+                                });
+                            } else (0, f.Z)(t);
+                        }
+                    }
+                }, 1350)));
+        }, [n, t, v]),
+        !(0, m.p7)('Message Confetti Peak') || !(0, g.U)(t))
+    )
+        return null;
+    let Z = (0, g.E)(t);
+    if (null == Z) return null;
+    let N = Z.emoji[0],
+        S =
+            null == N.id
+                ? h.ZP.getURL(N.name)
+                : u.ZP.getEmojiURL({
+                      id: N.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0
                   });
     return (0, i.jsxs)('div', {
-        className: u.emojiWrapper,
-        style: { right: ''.concat(13 + n, '%') },
+        ref: E,
+        className: a()(C.emojiWrapper),
+        style: { right: ''.concat(256 + r, 'px') },
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: p,
-                className: a()([u.emoji, u.left]),
+                src: S,
+                className: a()([C.emoji, C.left, b && C.shy, x && C.confettiMode]),
                 height: 28,
-                width: 28,
-                style: {
-                    top: 4,
-                    transform: 'rotateZ(11deg)'
-                }
+                width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: p,
-                className: a()([u.emoji, u.right]),
+                src: S,
+                className: a()([C.emoji, C.right, b && C.shy, x && C.confettiMode]),
                 height: 26,
-                width: 26,
-                style: {
-                    left: 68,
-                    top: 8
-                }
+                width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: p,
-                className: a()([u.emoji, u.center]),
+                src: S,
+                className: a()([C.emoji, C.center, b && C.shy, x && C.confettiMode]),
                 height: 32,
-                width: 32,
-                style: {
-                    left: 32,
-                    transform: 'rotateZ(-10deg)'
-                }
+                width: 32
             })
         ]
     });

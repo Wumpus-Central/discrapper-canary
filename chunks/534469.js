@@ -319,7 +319,11 @@ t.ZP = l.memo(function (e) {
                 className: X.messageListItem,
                 'aria-setsize': -1,
                 children: [
-                    (0, x.U)(I) && (0, i.jsx)(g.Z, { message: I }),
+                    (0, x.U)(I) &&
+                        (0, i.jsx)(g.Z, {
+                            message: I,
+                            hovering: ev
+                        }),
                     (0, i.jsx)(M.Z, {
                         ...ea,
                         'aria-setsize': -1,

@@ -25,12 +25,16 @@ let m = (e) => {
         T = a.useCallback(() => {
             if (null != m.current && (0, _.U)(r)) {
                 let { x: e, y: n, width: i, height: a } = m.current.getBoundingClientRect();
-                (0, d.Z)(r, {
-                    x: e,
-                    y: n,
-                    w: i,
-                    h: a
-                });
+                (0, d.Z)(
+                    r,
+                    {
+                        x: e,
+                        y: n,
+                        w: i,
+                        h: a
+                    },
+                    !0
+                );
             }
         }, [r]);
     return g && null != I && (null == v ? void 0 : v.type) === f.B.CONFETTI

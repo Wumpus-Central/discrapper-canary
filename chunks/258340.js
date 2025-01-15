@@ -92,33 +92,39 @@ t.Z = (e) => {
         },
         emit: (n, r, a) => {
             if (f.current.length >= d) return;
-            let u = {
-                min: e.h / 8,
-                max: e.h / 3
-            };
-            for (let e = 0; e < r; e++) {
-                let e;
-                let r = {
+            let u = 0 === a.x && 0 === a.y && 0 === a.w && 0 === a.h,
+                l = {
+                    min: e.h / 8,
+                    max: e.h / 3
+                };
+            for (let c = 0; c < r; c++) {
+                let r;
+                let c = {
                         x: (0, i.random)(-t.x, t.x, !0),
-                        y: t.y + (0, i.random)(-u.min, u.max, !0)
+                        y: t.y + (0, i.random)(-l.min, l.max, !0)
                     },
-                    l = (0, i.random)(0, 30),
-                    c = Math.atan2(-t.y - (0, i.random)(-u.min, u.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
-                {
-                    let t = a.h / 4,
-                        n = a.h / 4;
-                    e = {
-                        x: a.x + a.w / 2 + (0, i.random)(-n, n),
-                        y: a.y + a.h / 2 + (0, i.random)(-t, t)
+                    o = (0, i.random)(0, 30),
+                    d = Math.atan2(-t.y - (0, i.random)(-l.min, l.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
+                if (u)
+                    r = {
+                        x: e.w / 2 + (0, i.random)(-50, 50),
+                        y: e.h - s + (0, i.random)(-50, 50)
+                    };
+                else {
+                    let e = a.h / 4,
+                        t = a.h / 4;
+                    r = {
+                        x: a.x + a.w / 2 + (0, i.random)(-t, t),
+                        y: a.y + a.h / 2 + (0, i.random)(-e, e)
                     };
                 }
                 f.current.push({
                     key: n,
-                    position: e,
-                    velocity: r,
+                    position: r,
+                    velocity: c,
                     scale: (0, i.random)(0.8, 2),
-                    rotation: l,
-                    angularVelocity: c
+                    rotation: o,
+                    angularVelocity: d
                 }),
                     f.current.sort((e, t) => e.scale - t.scale);
             }
