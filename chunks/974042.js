@@ -216,10 +216,6 @@ C(M, 'displayName', 'FriendsStore'),
         LOAD_RELATIONSHIPS_FAILURE: function () {
             (b = !0), (Z = !0);
         },
-        DRAWER_SELECT_TAB: function (e) {
-            let { tab: t } = e;
-            return (P = t !== E.cII.FRIENDS), j(), !P;
-        },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
             (x = e.section), (O = !0);
         }
