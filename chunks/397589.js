@@ -13,24 +13,34 @@ var i = r(200651),
 let m = (e) => {
     var n;
     let { message: r } = e,
-        m = (0, c.p7)('Message Header') && r.hasPotions(),
-        g = o.Z.getChannel(r.getChannelId()),
-        E = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
-        v = a.useMemo(() => {
-            if (null == E) return null;
-            let e = l.default.getUser(E.used_by);
-            return (0, u.y)(null == g ? void 0 : g.getGuildId(), null == g ? void 0 : g.id, e);
-        }, [E, g]),
-        I = a.useCallback(() => {
-            (0, _.U)(r) && (0, d.Z)(r);
+        m = a.useRef(null),
+        g = (0, c.p7)('Message Header') && r.hasPotions(),
+        E = o.Z.getChannel(r.getChannelId()),
+        v = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
+        I = a.useMemo(() => {
+            if (null == v) return null;
+            let e = l.default.getUser(v.used_by);
+            return (0, u.y)(null == E ? void 0 : E.getGuildId(), null == E ? void 0 : E.id, e);
+        }, [v, E]),
+        T = a.useCallback(() => {
+            if (null != m.current && (0, _.U)(r)) {
+                let { x: e, y: n, width: i, height: a } = m.current.getBoundingClientRect();
+                (0, d.Z)(r, {
+                    x: e,
+                    y: n,
+                    w: i,
+                    h: a
+                });
+            }
         }, [r]);
-    return m && null != v && (null == E ? void 0 : E.type) === f.B.CONFETTI
+    return g && null != I && (null == v ? void 0 : v.type) === f.B.CONFETTI
         ? (0, i.jsx)(s.Clickable, {
-              onFocus: I,
+              onFocus: T,
               children: (0, i.jsx)(s.Tooltip, {
-                  text: h.intl.formatToPlainString(h.t['FE++aG'], { user: v }),
+                  text: h.intl.formatToPlainString(h.t['FE++aG'], { user: I }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
+                          ref: m,
                           className: p.potionBadge,
                           ...e,
                           children: [

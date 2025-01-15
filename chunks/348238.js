@@ -227,15 +227,31 @@ function G(e) {
         o = ''.concat(t, ':').concat(a),
         s = r.useRef(i),
         c = (function (e) {
-            return r.useCallback(() => {
-                (0, m.U)(e) && (0, u.Z)(e);
-            }, [e]);
+            return r.useCallback(
+                (t) => {
+                    if (!(t.nativeEvent instanceof MouseEvent)) return;
+                    let n = t.target;
+                    if ((0, m.U)(e)) {
+                        let { x: t, y: i, width: r, height: l } = n.getBoundingClientRect();
+                        (0, u.Z)(e, {
+                            x: t,
+                            y: i,
+                            w: r,
+                            h: l
+                        });
+                    }
+                },
+                [e]
+            );
         })(n),
         [f, p] = r.useState(i);
     s.current = f || s.current;
-    let _ = r.useCallback(() => {
-            l && (0, h.T6)(), !f && (E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, o, !0), c(), p(!0));
-        }, [f, o, l, c]),
+    let _ = r.useCallback(
+            (e) => {
+                l && (0, h.T6)(), !f && (E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, o, !0), c(e), p(!0));
+            },
+            [f, o, l, c]
+        ),
         g = r.useCallback(() => {
             E.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, o, !1), p(!1);
         }, [o]);

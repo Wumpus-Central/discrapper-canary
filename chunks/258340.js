@@ -3,7 +3,7 @@ var r = n(192379),
     i = n(392711),
     a = n(633302),
     u = n(960048);
-let o = (e) => Math.round(4 * e) / 4,
+let l = (e) => Math.round(4 * e) / 4,
     c = (e) => {
         let t = {
             y: 0.9 * e.h,
@@ -18,7 +18,7 @@ let o = (e) => Math.round(4 * e) / 4,
         };
     };
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: n, DRAG: l, Y_POS: s, MAX_PARTICLES: d } = c(e),
+    let { SPEED: t, GRAVITY: n, DRAG: o, Y_POS: s, MAX_PARTICLES: d } = c(e),
         f = r.useRef([]),
         h = r.useRef(!1);
     return {
@@ -26,7 +26,7 @@ t.Z = (e) => {
             let r = [];
             if (
                 (f.current.forEach((i, a) => {
-                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= l ** t), (i.velocity.y *= l ** t), (i.rotation += i.angularVelocity * t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(a);
+                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= o ** t), (i.velocity.y *= o ** t), (i.rotation += i.angularVelocity * t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(a);
                 }),
                 r.length > 0)
             ) {
@@ -44,7 +44,7 @@ t.Z = (e) => {
                 f.current.forEach((e) => {
                     var n;
                     let { x: r, y: i } = e.position;
-                    if ((e.scale > 1 && t.setFilter({ blur: o((e.scale - 1) * 2) }), null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))) {
+                    if ((e.scale > 1 && t.setFilter({ blur: l((e.scale - 1) * 2) }), null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))) {
                         let n = {
                                 w: 32 * e.scale,
                                 h: 32 * e.scale
@@ -65,20 +65,20 @@ t.Z = (e) => {
                         );
                     } else {
                         let n = a.ZP.contentHasUnicodeOrEmoji(e.key),
-                            o = 24 * e.scale,
+                            l = 24 * e.scale,
                             c = {
-                                x: r + o / 2,
-                                y: i + o / 2
+                                x: r + l / 2,
+                                y: i + l / 2
                             };
                         null != n
-                            ? (t.setFont({ size: o }),
+                            ? (t.setFont({ size: l }),
                               t.rotateAroundOriginAndDraw(c, e.rotation, () =>
                                   t.drawText(e.key, {
                                       x: 0,
                                       y: 0
                                   })
                               ))
-                            : (t.setFont({ size: o }),
+                            : (t.setFont({ size: l }),
                               t.rotateAroundOriginAndDraw(c, e.rotation, () =>
                                   t.drawText('\uD83C\uDF89', {
                                       x: 0,
@@ -90,29 +90,35 @@ t.Z = (e) => {
                     t.setFilter({ blur: 0 });
                 });
         },
-        emit: (n, r) => {
+        emit: (n, r, a) => {
             if (f.current.length >= d) return;
-            let a = {
+            let u = {
                 min: e.h / 8,
                 max: e.h / 3
             };
-            for (let u = 0; u < r; u++) {
+            for (let e = 0; e < r; e++) {
+                let e;
                 let r = {
                         x: (0, i.random)(-t.x, t.x, !0),
-                        y: t.y + (0, i.random)(-a.min, a.max, !0)
+                        y: t.y + (0, i.random)(-u.min, u.max, !0)
                     },
-                    u = (0, i.random)(0, 30),
-                    o = Math.atan2(-t.y - (0, i.random)(-a.min, a.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
+                    l = (0, i.random)(0, 30),
+                    c = Math.atan2(-t.y - (0, i.random)(-u.min, u.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
+                {
+                    let t = a.h / 4,
+                        n = a.h / 4;
+                    e = {
+                        x: a.x + a.w / 2 + (0, i.random)(-n, n),
+                        y: a.y + a.h / 2 + (0, i.random)(-t, t)
+                    };
+                }
                 f.current.push({
                     key: n,
-                    position: {
-                        x: e.w / 2 + (0, i.random)(-50, 50),
-                        y: e.h - s
-                    },
+                    position: e,
                     velocity: r,
                     scale: (0, i.random)(0.8, 2),
-                    rotation: u,
-                    angularVelocity: o
+                    rotation: l,
+                    angularVelocity: c
                 }),
                     f.current.sort((e, t) => e.scale - t.scale);
             }
