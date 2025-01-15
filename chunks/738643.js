@@ -10,7 +10,10 @@ var i = n(442837),
     s = n(944486),
     o = n(981631);
 function c(e, t) {
-    let n = (0, i.e7)([a.Z], () => a.Z.getGuild(t)),
-        c = (0, i.e7)([r.Z], () => r.Z.getChannel(e));
-    return e === (0, i.e7)([s.Z], () => s.Z.getChannelId(t)) && null != c && null != n && c.getGuildId() === n.id && (0, l.zi)(c.type) && n.hasFeature(o.oNc.WELCOME_SCREEN_ENABLED) && n.hasFeature(o.oNc.COMMUNITY) && !n.hasFeature(o.oNc.GUILD_SERVER_GUIDE);
+    return (0, i.e7)([r.Z, a.Z, s.Z], () => {
+        let n = a.Z.getGuild(t);
+        if (!((null == n ? void 0 : n.hasFeature(o.oNc.WELCOME_SCREEN_ENABLED)) === !0 && n.hasFeature(o.oNc.COMMUNITY)) || n.hasFeature(o.oNc.GUILD_SERVER_GUIDE)) return !1;
+        let i = r.Z.getChannel(e);
+        return e === s.Z.getChannelId(t) && null != i && i.getGuildId() === n.id && (0, l.zi)(i.type);
+    });
 }
