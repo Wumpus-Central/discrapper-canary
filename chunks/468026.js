@@ -38,7 +38,6 @@ let g = (e) => {
                 color: o.zx.Colors.PRIMARY,
                 onClick: x,
                 className: m.secondaryButton,
-                grow: !D,
                 children: E
             })),
         null != T &&
@@ -49,7 +48,6 @@ let g = (e) => {
                 size: L,
                 className: s()(m.primaryButton, null != n ? m.gutter : null),
                 autoFocus: !0,
-                grow: !D,
                 children: T
             })),
         null != b &&
