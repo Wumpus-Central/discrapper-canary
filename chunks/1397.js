@@ -192,7 +192,7 @@ class V extends l.PureComponent {
             F(this, 'handleVerifyPhone', () => {
                 (0, o.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('76540'), n.e('51501')]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 reason: j.L.GUILD_PHONE_REQUIRED,

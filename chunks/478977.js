@@ -1,34 +1,34 @@
-var i = t(200651);
-t(192379);
-var a = t(866442),
-    n = t(481060),
-    l = t(102787);
-s.Z = function (e) {
-    let { colorKey: s, value: t, onChange: r, title: o } = e;
-    return (0, i.jsxs)(n.FormItem, {
+var o = n(200651);
+n(192379);
+var r = n(866442),
+    s = n(481060),
+    a = n(102787);
+t.Z = function (e) {
+    let { colorKey: t, value: n, onChange: i, title: l } = e;
+    return (0, o.jsxs)(s.FormItem, {
         children: [
-            (0, i.jsx)(n.FormTitle, {
-                tag: n.FormTitleTags.H5,
-                children: o
+            (0, o.jsx)(s.FormTitle, {
+                tag: s.FormTitleTags.H5,
+                children: l
             }),
-            (0, i.jsx)(n.Popout, {
+            (0, o.jsx)(s.Popout, {
                 renderPopout: (e) =>
-                    (0, i.jsx)(n.CustomColorPicker, {
+                    (0, o.jsx)(s.CustomColorPicker, {
                         ...e,
-                        value: t,
-                        onChange: (e) => r(s, (0, a.Rf)(e))
+                        value: n,
+                        onChange: (e) => i(t, (0, r.Rf)(e))
                     }),
                 children: (e) =>
-                    (0, i.jsx)(n.Clickable, {
+                    (0, o.jsx)(s.Clickable, {
                         ...e,
                         tag: 'span',
                         'aria-label': 'Select a color',
-                        className: l.swatchContainer,
-                        style: { backgroundColor: t },
-                        children: (0, i.jsx)(n.EyeDropperIcon, {
+                        className: a.swatchContainer,
+                        style: { backgroundColor: n },
+                        children: (0, o.jsx)(s.EyeDropperIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: l.swatchIcon
+                            className: a.swatchIcon
                         })
                     })
             })

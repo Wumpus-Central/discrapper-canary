@@ -6,8 +6,8 @@ n.d(t, {
 var l = n(200651),
     r = n(192379),
     s = n(442837),
-    o = n(481060),
-    i = n(19780),
+    i = n(481060),
+    o = n(19780),
     a = n(571826),
     c = n(630759),
     u = n(301107),
@@ -18,9 +18,9 @@ var l = n(200651),
     N = n(539992);
 function C(e) {
     let { channelId: t } = e,
-        n = (0, s.e7)([i.Z], () => {
+        n = (0, s.e7)([o.Z], () => {
             var e;
-            return null === (e = i.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null === (e = o.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
         C = (0, u.W)({
             fingerprintBase64: n,
@@ -36,18 +36,18 @@ function C(e) {
             (0, l.jsxs)('div', {
                 className: N.tag,
                 children: [
-                    (0, l.jsx)(o.LockIcon, {
+                    (0, l.jsx)(i.LockIcon, {
                         size: 'xxs',
-                        color: o.tokens.colors.TEXT_POSITIVE
+                        color: i.tokens.colors.TEXT_POSITIVE
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(i.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
                         children: g.intl.string(g.t['3BogKS'])
                     })
                 ]
             }),
-            (0, l.jsx)(o.Text, {
+            (0, l.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 children: g.intl.string(g.t.B9JNsr)
@@ -55,7 +55,7 @@ function C(e) {
             (0, l.jsxs)('div', {
                 className: N.header,
                 children: [
-                    (0, l.jsx)(o.Heading, {
+                    (0, l.jsx)(i.Heading, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
                         children: g.intl.string(g.t.cTQI5u)
@@ -63,7 +63,7 @@ function C(e) {
                     null != C &&
                         (0, l.jsx)(h.H, {
                             chunks: C,
-                            color: o.tokens.colors.INTERACTIVE_NORMAL.css,
+                            color: i.tokens.colors.INTERACTIVE_NORMAL.css,
                             onCopy: f
                         })
                 ]
@@ -73,7 +73,7 @@ function C(e) {
                 chunks: C,
                 columns: x.WK
             }),
-            (0, l.jsx)(o.Text, {
+            (0, l.jsx)(i.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
                 children: g.intl.format(g.t.wKxADQ, { helpArticle: (0, c.uV)() })

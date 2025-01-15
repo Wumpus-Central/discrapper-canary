@@ -7,20 +7,20 @@ n.d(t, {
 var i = n(192379),
     s = n(170401),
     r = n(996733),
-    l = n(991346),
-    a = n(726985);
+    a = n(991346),
+    l = n(726985);
 function o() {
     let e = (0, r.Z7)(),
-        t = (0, l.Pt)(),
-        n = i.useRef(new s.Z((0, l.ji)(t))),
+        t = (0, a.Pt)(),
+        n = i.useRef(new s.Z((0, a.ji)(t))),
         [o, c] = i.useState(!1),
-        [d, u] = i.useState(a.QF),
+        [d, u] = i.useState(l.QF),
         m = i.useCallback(async (e) => {
             u(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
         i.useEffect(() => {
-            '' === e || e.length < 2 ? (u(a.QF), c(!1)) : m(e);
+            '' === e || e.length < 2 ? (u(l.QF), c(!1)) : m(e);
         }, [e, m]),
         {
             hasSearchResults: o,

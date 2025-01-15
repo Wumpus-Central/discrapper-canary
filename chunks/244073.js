@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return w;
     }
 }),
     n(47120);
@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(345243),
     v = n(873596),
     x = n(917405),
-    _ = n(430824),
+    Z = n(430824),
     S = n(131951),
-    Z = n(699516),
+    _ = n(699516),
     E = n(594174),
     C = n(979651),
     I = n(362446),
@@ -50,7 +50,7 @@ class M extends s.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, E.default, Z.Z),
+            n = (0, p.F6)(e, E.default, _.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
             r = null != t ? t.id : N.ME;
         return (0, i.jsx)(o.rU, {
@@ -146,9 +146,9 @@ class M extends s.PureComponent {
             });
     }
 }
-function R(e) {
+function w(e) {
     let { context: t, lobbyId: n, channel: s, ...r } = e,
-        a = (0, l.e7)([_.Z], () => _.Z.getGuild(null == s ? void 0 : s.getGuildId())),
+        a = (0, l.e7)([Z.Z], () => Z.Z.getGuild(null == s ? void 0 : s.getGuildId())),
         o = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
         [d, c] = (0, l.Wu)([S.Z], () => [S.Z.isSelfMute(t) || S.Z.isSelfMutedTemporarily(t), S.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, l.Wu)([I.Z], () => [I.Z.getConnectionState(n), I.Z.getLastPing(n), I.Z.getQuality(n)]);

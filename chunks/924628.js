@@ -8,14 +8,14 @@ n.d(t, {
 }),
     n(411104);
 var i = n(544891),
-    r = n(570140),
-    a = n(981631),
-    s = n(388032);
+    s = n(570140),
+    r = n(981631),
+    a = n(388032);
 function l(e) {
     return (
         null != e &&
             null != e.body &&
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'UPDATE_CONSENTS',
                 consents: { ...e.body }
             }),
@@ -24,12 +24,12 @@ function l(e) {
 }
 function o(e) {
     let t;
-    throw Error((t = e.status >= 500 && e.status <= 599 ? s.intl.string(s.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : s.intl.string(s.t.cvJdtr)));
+    throw Error((t = e.status >= 500 && e.status <= 599 ? a.intl.string(a.t.cvJdtr) : null != e && null != e.body && null != e.body.message ? e.body.message : a.intl.string(a.t.cvJdtr)));
 }
 function c() {
     return i.tn
         .get({
-            url: a.ANM.SETTINGS_CONSENT,
+            url: r.ANM.SETTINGS_CONSENT,
             oldFormErrors: !0,
             rejectWithError: !1
         })
@@ -38,7 +38,7 @@ function c() {
 function d(e, t) {
     return i.tn
         .post({
-            url: a.ANM.SETTINGS_CONSENT,
+            url: r.ANM.SETTINGS_CONSENT,
             body: {
                 grant: e,
                 revoke: t

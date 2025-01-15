@@ -50,11 +50,11 @@ t.Z = l.memo(function (e) {
         k = l.useCallback((e) => {
             (0, a.Os)(e);
         }, []),
-        { id: A, pinned: z, zIndex: M, size: L, anchor: w } = t,
+        { id: z, pinned: A, zIndex: M, size: L, anchor: w } = t,
         D = (0, f.w_)(L, b),
         j = (0, f.KR)(w, b),
         { minSize: P, resizeX: U, resizeY: H, dragAnywhere: V } = N,
-        W = z || !y,
+        W = A || !y,
         F = l.useMemo(
             () => ({
                 minX: 0,
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
             }),
             [b]
         ),
-        Y = l.useCallback(
+        B = l.useCallback(
             (e) =>
                 i({
                     ...e,
@@ -74,7 +74,7 @@ t.Z = l.memo(function (e) {
                 }),
             [t, i, O]
         ),
-        B = l.useCallback(
+        Y = l.useCallback(
             (e) =>
                 null != o || null != Z
                     ? (0, n.jsxs)('div', {
@@ -97,12 +97,12 @@ t.Z = l.memo(function (e) {
         className: s()(
             {
                 [_.debug]: G,
-                [_.debugUnpinned]: G && !z,
-                [_.debugPinned]: G && z
+                [_.debugUnpinned]: G && !A,
+                [_.debugPinned]: G && A
             },
             I
         ),
-        id: A,
+        id: z,
         size: D,
         anchor: j,
         container: F,
@@ -117,8 +117,8 @@ t.Z = l.memo(function (e) {
         onUpdate: R,
         onClick: k,
         targetWindow: T,
-        renderExtras: B,
+        renderExtras: Y,
         resizeValidation: K,
-        children: Y
+        children: B
     });
 });

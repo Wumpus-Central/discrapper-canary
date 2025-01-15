@@ -10,8 +10,8 @@ var l = n(120356),
     d = n(952164),
     h = n(237583),
     p = n(131704),
-    f = n(314897),
-    m = n(594174),
+    m = n(314897),
+    f = n(594174),
     g = n(768581),
     v = n(51144),
     C = n(754231),
@@ -66,11 +66,11 @@ t.Z = (e) => {
     let { channel: t, presenceActivity: n, members: l, embeddedApp: r, onAction: o } = e,
         h = null != r,
         g = h ? Array.from(r.embeddedActivity.userIds) : [],
-        v = (0, a.e7)([m.default, f.default], () => {
-            if (h) return m.default.getUser(g[0]);
+        v = (0, a.e7)([f.default, m.default], () => {
+            if (h) return f.default.getUser(g[0]);
             if (null != l) {
                 var e, t;
-                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== f.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
+                return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== m.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
             }
         });
     if (null == v) return null;

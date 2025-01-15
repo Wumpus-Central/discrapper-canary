@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return d;
+        return c;
     }
 }),
     n(47120),
@@ -12,8 +12,8 @@ var i = n(192379),
     a = n(496675),
     o = n(282923),
     s = n(981631),
-    c = n(388032);
-function d(e) {
+    d = n(388032);
+function c(e) {
     let t = i.useMemo(() => {
             let t = r.ZP.getChannels(e),
                 n = [...t[r.sH]];
@@ -26,13 +26,13 @@ function d(e) {
             return (
                 i.unshift({
                     id: (0, l.bD)(e),
-                    name: c.intl.string(c.t['7YqSGx']),
+                    name: d.intl.string(d.t['7YqSGx']),
                     canManage: !0
                 }),
                 i
             );
         }, [e]),
-        [n, d] = i.useState(''),
+        [n, c] = i.useState(''),
         m = i.useMemo(() => {
             let e = (function (e) {
                 return e.startsWith('#') ? e.substr(1) : e;
@@ -42,7 +42,7 @@ function d(e) {
     return {
         query: n,
         results: m,
-        setQuery: d,
+        setQuery: c,
         unfilteredCount: t.length
     };
 }

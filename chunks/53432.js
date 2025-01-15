@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return b;
     }
 }),
     n(653041);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var o = n(442837),
-    r = n(481060),
+var i = n(442837),
+    l = n(481060),
     a = n(153867),
-    l = n(857595),
-    c = n(607070),
-    u = n(906732),
+    u = n(857595),
+    o = n(607070),
+    c = n(906732),
     s = n(705262),
     d = n(540059),
-    g = n(210887),
-    m = n(740492),
-    b = n(695346),
-    p = n(874893),
-    f = n(981631),
-    h = n(969943),
-    S = n(388032);
-function _() {
-    let e = b.jU.useSetting(),
-        { analyticsLocations: t } = (0, u.ZP)(),
+    p = n(210887),
+    g = n(740492),
+    h = n(695346),
+    m = n(874893),
+    x = n(981631),
+    f = n(969943),
+    M = n(388032);
+function b() {
+    let e = h.jU.useSetting(),
+        { analyticsLocations: t } = (0, c.ZP)(),
         {
             theme: n,
-            useSystemTheme: _,
-            useForcedColors: x
-        } = (0, o.cj)([g.Z, m.ZP, c.Z], () => ({
-            theme: g.Z.theme,
-            useSystemTheme: m.ZP.useSystemTheme,
-            useForcedColors: c.Z.useForcedColors
+            useSystemTheme: b,
+            useForcedColors: j
+        } = (0, i.cj)([p.Z, g.ZP, o.Z], () => ({
+            theme: p.Z.theme,
+            useSystemTheme: g.ZP.useSystemTheme,
+            useForcedColors: o.Z.useForcedColors
         })),
-        C = b.N5.useSetting(),
-        M = (0, d.Q3)('appearance_settings'),
-        Z = (0, d.o9)('appearance_settings'),
-        j = (e, o) =>
-            (0, i.jsx)(r.MenuRadioItem, {
+        Z = h.N5.useSetting(),
+        S = (0, d.Q3)('appearance_settings'),
+        I = (0, d.o9)('appearance_settings'),
+        v = (e, i) =>
+            (0, r.jsx)(l.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
-                label: o,
-                disabled: x,
-                checked: _ === p.K.ON ? 'system' === e : e === n,
+                label: i,
+                disabled: j,
+                checked: b === m.K.ON ? 'system' === e : e === n,
                 action: () => {
                     (0, s.Yk)({
                         isPersisted: !0,
@@ -52,18 +52,18 @@ function _() {
                         (0, a.ZI)({ theme: e });
                 }
             }),
-        k = [
-            (0, i.jsxs)(
-                r.MenuGroup,
+        C = [
+            (0, r.jsxs)(
+                l.MenuGroup,
                 {
                     children: [
-                        j(f.BRd.DARK, S.intl.string(S.t.b8Cei4)),
-                        j(f.BRd.LIGHT, S.intl.string(S.t.K2sFfn)),
-                        M &&
-                            (0, i.jsxs)(i.Fragment, {
-                                children: [j(f.BRd.DARKER, 'Darker'), j(f.BRd.MIDNIGHT, S.intl.string(S.t.pQwSpa))]
+                        v(x.BRd.DARK, M.intl.string(M.t.b8Cei4)),
+                        v(x.BRd.LIGHT, M.intl.string(M.t.K2sFfn)),
+                        S &&
+                            (0, r.jsxs)(r.Fragment, {
+                                children: [v(x.BRd.DARKER, 'Darker'), v(x.BRd.MIDNIGHT, M.intl.string(M.t.pQwSpa))]
                             }),
-                        j('system', S.intl.string(S.t['7rOU6u']))
+                        v('system', M.intl.string(M.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -71,38 +71,38 @@ function _() {
             ,
         ];
     return (
-        Z
-            ? (k.push(
-                  (0, i.jsxs)(
-                      r.MenuGroup,
+        I
+            ? (C.push(
+                  (0, r.jsxs)(
+                      l.MenuGroup,
                       {
                           label: 'UI Density',
                           children: [
-                              (0, i.jsx)(r.MenuRadioItem, {
+                              (0, r.jsx)(l.MenuRadioItem, {
                                   id: 'cozy-ui',
                                   group: 'list-density',
                                   label: 'Cozy',
-                                  checked: C === h.fx.COZY,
+                                  checked: Z === f.fx.COZY,
                                   action: () => {
-                                      b.N5.updateSetting(h.fx.COZY);
+                                      h.N5.updateSetting(f.fx.COZY);
                                   }
                               }),
-                              (0, i.jsx)(r.MenuRadioItem, {
+                              (0, r.jsx)(l.MenuRadioItem, {
                                   id: 'compact-ui',
                                   group: 'list-density',
                                   label: 'Compact',
-                                  checked: C === h.fx.COMPACT,
+                                  checked: Z === f.fx.COMPACT,
                                   action: () => {
-                                      b.N5.updateSetting(h.fx.COMPACT);
+                                      h.N5.updateSetting(f.fx.COMPACT);
                                   }
                               }),
-                              (0, i.jsx)(r.MenuRadioItem, {
+                              (0, r.jsx)(l.MenuRadioItem, {
                                   id: 'auto-ui',
                                   group: 'list-density',
                                   label: 'Auto',
-                                  checked: C === h.fx.AUTO,
+                                  checked: Z === f.fx.AUTO,
                                   action: () => {
-                                      b.N5.updateSetting(h.fx.AUTO);
+                                      h.N5.updateSetting(f.fx.AUTO);
                                   }
                               })
                           ]
@@ -110,28 +110,28 @@ function _() {
                       'list-density'
                   )
               ),
-              k.push(
-                  (0, i.jsxs)(
-                      r.MenuGroup,
+              C.push(
+                  (0, r.jsxs)(
+                      l.MenuGroup,
                       {
                           label: 'Message Display',
                           children: [
-                              (0, i.jsx)(r.MenuRadioItem, {
+                              (0, r.jsx)(l.MenuRadioItem, {
                                   id: 'cozy-chat',
                                   group: 'chat-density',
                                   label: 'Cozy',
                                   checked: !e,
                                   action: () => {
-                                      b.jU.updateSetting(!1), (0, l.ZZ)();
+                                      h.jU.updateSetting(!1), (0, u.ZZ)();
                                   }
                               }),
-                              (0, i.jsx)(r.MenuRadioItem, {
+                              (0, r.jsx)(l.MenuRadioItem, {
                                   id: 'compact-chat',
                                   group: 'chat-density',
                                   label: 'Compact',
                                   checked: e,
                                   action: () => {
-                                      b.jU.updateSetting(!0), (0, l.ZZ)();
+                                      h.jU.updateSetting(!0), (0, u.ZZ)();
                                   }
                               })
                           ]
@@ -139,37 +139,37 @@ function _() {
                       'chat-density'
                   )
               ),
-              k.push(
-                  (0, i.jsx)(
-                      r.MenuGroup,
+              C.push(
+                  (0, r.jsx)(
+                      l.MenuGroup,
                       {
-                          children: (0, i.jsx)(r.MenuCheckboxItem, {
+                          children: (0, r.jsx)(l.MenuCheckboxItem, {
                               id: 'desktop-refresh-override',
                               label: 'Enable Desktop Refresh',
                               action: () => {
-                                  a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: M });
+                                  a.ZP.updatedUnsyncedSettings({ disableVisualRefresh: S });
                               },
-                              checked: M
+                              checked: S
                           })
                       },
                       'refresh-experiment'
                   )
               ))
-            : k.push(
-                  (0, i.jsx)(
-                      r.MenuGroup,
+            : C.push(
+                  (0, r.jsx)(
+                      l.MenuGroup,
                       {
-                          children: (0, i.jsx)(r.MenuItem, {
+                          children: (0, r.jsx)(l.MenuItem, {
                               id: 'compact-mode',
-                              label: e ? S.intl.string(S.t.CTpwDw) : S.intl.string(S.t['J/FISU']),
+                              label: e ? M.intl.string(M.t.CTpwDw) : M.intl.string(M.t['J/FISU']),
                               action: () => {
-                                  b.jU.updateSetting(!e), (0, l.ZZ)();
+                                  h.jU.updateSetting(!e), (0, u.ZZ)();
                               }
                           })
                       },
                       'compact-mode'
                   )
               ),
-        k
+        C
     );
 }

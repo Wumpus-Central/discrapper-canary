@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return f;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    l = n(481060),
     o = n(600164),
     c = n(490529),
     d = n(981631),
     u = n(388032),
     m = n(187033);
-let h = {
+let g = {
         [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
         [d.gkr.HOUSE_3]: m.membershipDialogHouse3
     },
-    g = {
+    h = {
         [d.gkr.HOUSE_1]: m.houseLogoHouse1,
         [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
         [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
@@ -35,14 +35,14 @@ let h = {
             [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
             [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU)
         })[e];
-class S extends s.Component {
+class f extends s.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: l()(m.membershipDialog, h[e]),
+                className: a()(m.membershipDialog, g[e]),
                 children: (0, i.jsxs)('div', {
                     className: m.membershipDialogContent,
                     children: [
@@ -52,17 +52,17 @@ class S extends s.Component {
                                     grow: 1,
                                     shrink: 1,
                                     children: [
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(l.Text, {
                                             className: m.membershipDialogHeading,
                                             variant: 'text-xs/bold',
                                             children: u.intl.string(u.t.KZoEIy)
                                         }),
-                                        (0, i.jsx)(a.Heading, {
+                                        (0, i.jsx)(l.Heading, {
                                             className: m.membershipDialogHouseName,
                                             variant: 'heading-sm/semibold',
                                             children: t
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, i.jsx)(l.Text, {
                                             className: m.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
                                             children: x(e)
@@ -75,19 +75,19 @@ class S extends s.Component {
                                     shrink: 0,
                                     wrap: !0,
                                     children: (0, i.jsx)('img', {
-                                        className: l()(m.houseLogo, g[e]),
+                                        className: a()(m.houseLogo, h[e]),
                                         src: p[e],
                                         alt: t
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(a.Text, {
+                        (0, i.jsxs)(l.Text, {
                             className: m.membershipDialogSwitchHouses,
                             variant: 'text-md/normal',
                             children: [
                                 u.intl.string(u.t.zD3mqK),
-                                (0, i.jsx)(a.Clickable, {
+                                (0, i.jsx)(l.Clickable, {
                                     className: m.membershipDialogSwitchHousesAction,
                                     onClick: this.handleJoinHypeSquadClick,
                                     tag: 'span',
@@ -111,7 +111,7 @@ class S extends s.Component {
                         (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, i.jsx)(a.Text, {
+                            children: (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 children: u.intl.string(u.t.Uq6KRk)
                             })
@@ -119,14 +119,14 @@ class S extends s.Component {
                         (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, i.jsx)(a.Button, {
+                            children: (0, i.jsx)(l.Button, {
                                 onClick: this.handleJoinHypeSquadClick,
                                 children: u.intl.string(u.t['1GWQKi'])
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     className: m.newsletterWarning,
                     variant: 'text-sm/normal',
                     children: u.intl.string(u.t['3kUvgo'])
@@ -140,7 +140,7 @@ class S extends s.Component {
             (t = this),
             (s = 'handleJoinHypeSquadClick'),
             (r = () => {
-                (0, a.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
                     return (t) => (0, i.jsx)(e, { ...t });
                 });

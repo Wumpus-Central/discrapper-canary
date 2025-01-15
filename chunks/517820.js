@@ -36,10 +36,10 @@ var i = n(200651),
     y = n(674563),
     O = n(388032),
     M = n(403498);
-function k() {
+function D() {
     return (0, i.jsx)('div', { className: M.dot });
 }
-function D(e) {
+function k(e) {
     let { message: t, compact: n } = e,
         { notificationType: r } = (0, C.FL)(t);
     switch (r) {
@@ -60,12 +60,12 @@ function D(e) {
                 compact: n
             });
         case d.p.INTERACTION_BLOCKED:
-            return (0, i.jsx)(U, { compact: n });
-        default:
             return (0, i.jsx)(B, { compact: n });
+        default:
+            return (0, i.jsx)(U, { compact: n });
     }
 }
-function B(e) {
+function U(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
@@ -89,7 +89,7 @@ function B(e) {
         })
     });
 }
-function U(e) {
+function B(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
@@ -196,7 +196,7 @@ function w(e) {
                             ]
                         })
                 }),
-                (0, i.jsx)(k, {}),
+                (0, i.jsx)(D, {}),
                 (0, i.jsx)(f.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-normal',
@@ -258,7 +258,7 @@ function F(e) {
                 null != o &&
                     (0, i.jsxs)(r.Fragment, {
                         children: [
-                            (0, i.jsx)(k, {}),
+                            (0, i.jsx)(D, {}),
                             (0, i.jsx)(f.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-normal',
@@ -304,7 +304,7 @@ function F(e) {
                               ]
                           })
                       }),
-                      (0, i.jsx)(k, {}),
+                      (0, i.jsx)(D, {}),
                       (0, i.jsx)(f.Button, {
                           onClick: A,
                           color: f.Button.Colors.LINK,
@@ -384,7 +384,7 @@ function G(e) {
                         })
                     })
                 }),
-                (0, i.jsx)(k, {}),
+                (0, i.jsx)(D, {}),
                 (0, i.jsx)(f.Button, {
                     onClick: function () {
                         null != a && N.Z.open(a, L.pNK.GUILD_AUTOMOD, void 0, L.KsC.AUTOMOD_MENTION_SPAM);
@@ -492,7 +492,7 @@ function H(e) {
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', { className: M.flexLineBreak }),
-                    (0, i.jsx)(D, {
+                    (0, i.jsx)(k, {
                         message: r,
                         compact: n
                     })

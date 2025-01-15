@@ -14,15 +14,15 @@ var i = n(200651),
     d = n(63568),
     h = n(246364),
     p = n(98493),
-    f = n(434479),
-    m = n(496675),
+    m = n(434479),
+    f = n(496675),
     g = n(527379),
     v = n(981631),
     C = n(388032);
 function x(e) {
     let { guild: t, selected: n } = e,
         x = (0, d.jS)(t.id, 'Guild Sidebar'),
-        I = (0, r.e7)([m.Z], () => m.Z.can(v.Plq.KICK_MEMBERS, t)),
+        I = (0, r.e7)([f.Z], () => f.Z.can(v.Plq.KICK_MEMBERS, t)),
         _ = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         Z = x && I && null != _ ? _ : 0;
     l.useEffect(() => {
@@ -40,7 +40,7 @@ function x(e) {
         S = (0, s.XL)(t.id, a.z.MEMBERS_LAUNCH_UPSELL);
     return (0, i.jsx)('div', {
         ref: S,
-        children: (0, i.jsx)(f.m, {
+        children: (0, i.jsx)(m.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
                 (0, i.jsx)(o.GroupIcon, {

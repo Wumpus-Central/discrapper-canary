@@ -9,8 +9,8 @@ var i = n(200651),
     a = n.n(r),
     o = n(481060),
     s = n(139387),
-    c = n(835473),
-    d = n(471445),
+    d = n(835473),
+    c = n(471445),
     u = n(925329),
     m = n(163400),
     h = n(63063),
@@ -20,7 +20,7 @@ var i = n(200651),
     f = n(926870);
 function b(e) {
     let { applicationId: t, channels: n } = e,
-        l = (0, c.q)(t);
+        l = (0, d.q)(t);
     return 0 === n.length || null == l
         ? null
         : (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ function b(e) {
                               channel: e,
                               application: l,
                               name: e.name,
-                              icon: null !== (t = (0, d.KS)(e)) && void 0 !== t ? t : void 0,
+                              icon: null !== (t = (0, c.KS)(e)) && void 0 !== t ? t : void 0,
                               iconWrapperClassName: f.iconwrapper,
                               hasNextSection: !0,
                               trailing: (0, i.jsx)(o.PencilIcon, { size: 'xs' })
@@ -65,7 +65,7 @@ function v(e) {
             var t;
             return null === (t = e.linkedLobby) || void 0 === t ? void 0 : t.application_id;
         }),
-        c = Object.keys(r);
+        d = Object.keys(r);
     return (
         l.useEffect(() => {
             0 === n.length && s.Z.setSection(g.b4C.OVERVIEW);
@@ -77,7 +77,7 @@ function v(e) {
                     children: x.intl.format(x.t['9gsSLi'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.LINKED_LOBBIES) })
                 }),
                 (0, i.jsx)(o.FormDivider, { className: f.headerDivider }),
-                c.map((e) =>
+                d.map((e) =>
                     (0, i.jsx)(
                         b,
                         {

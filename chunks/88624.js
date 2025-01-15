@@ -7,22 +7,22 @@ var i = n(200651);
 n(192379);
 var s = n(512722),
     r = n.n(s),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     o = n(346951),
     c = n(644744),
     d = n(792423),
     u = n(674985),
     m = n(594174),
-    h = n(843200),
-    g = n(388032),
+    g = n(843200),
+    h = n(388032),
     p = n(906405);
 function x() {
     let {
         houseMembership: e,
         isClaimed: t,
         isVerified: n
-    } = (0, l.cj)([m.default, u.Z], () => {
+    } = (0, a.cj)([m.default, u.Z], () => {
         let e = m.default.getCurrentUser();
         return (
             r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
@@ -33,26 +33,26 @@ function x() {
             }
         );
     });
-    return (0, i.jsxs)(a.HeadingLevel, {
+    return (0, i.jsxs)(l.HeadingLevel, {
         component: (0, i.jsxs)('div', {
             className: p.intro,
             children: [
-                (0, i.jsx)(a.Heading, {
+                (0, i.jsx)(l.Heading, {
                     variant: 'heading-xxl/semibold',
                     className: p.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
+                    children: null == e ? h.intl.string(h.t.iZowCQ) : h.intl.string(h.t.e7fL7O)
                 }),
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-lg/normal',
-                    children: g.intl.string(g.t['6FaVFB'])
+                    children: h.intl.string(h.t['6FaVFB'])
                 })
             ]
         }),
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(g.Z, {
                 className: p.verificationNotice,
-                unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB)
+                unclaimedNotice: h.intl.string(h.t.vZU8Ki),
+                unverifiedNotice: h.intl.string(h.t.T7TYEB)
             }),
             (0, i.jsx)(c.Z, {
                 houseMembership: e,

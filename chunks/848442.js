@@ -15,8 +15,8 @@ var l = n(120356),
     d = n(607070),
     h = n(367907),
     p = n(357352),
-    f = n(652515),
-    m = n(550951),
+    m = n(652515),
+    f = n(550951),
     g = n(886176),
     v = n(605236),
     C = n(703656),
@@ -31,9 +31,9 @@ var l = n(120356),
     y = n(273595);
 function j(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
-        u = (0, f.RF)(t, 'guild_shop_channel_row'),
-        m = (0, a.e7)([I.Z], () => I.Z.getGuild(t)),
-        S = (null == m ? void 0 : m.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        u = (0, m.RF)(t, 'guild_shop_channel_row'),
+        f = (0, a.e7)([I.Z], () => I.Z.getGuild(t)),
+        S = (null == f ? void 0 : f.hasFeature(b.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         j = 'false' === s.K.get(N.tM, 'false'),
         T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(Z.m, {
@@ -95,7 +95,7 @@ function j(e) {
 }
 function T(e) {
     let { guild: t, selected: l } = e,
-        r = (0, m.g)(t, 'guild_shop_channel_row'),
+        r = (0, f.g)(t, 'guild_shop_channel_row'),
         a = () => {
             s.K.set(N.tM, 'true'), (0, C.uL)(b.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
         };

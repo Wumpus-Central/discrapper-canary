@@ -39,7 +39,7 @@ var i,
     y = n(388032),
     O = n(981125);
 function M(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: B, giftIntentSecondaryAction: U } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: D, analyticsSection: k, glow: U, giftIntentSecondaryAction: B } = e,
         w = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: F } = (0, _.ZP)(),
         G = (0, d.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
@@ -70,13 +70,13 @@ function M(e) {
         $ = H ? O.buttonTextSecondaryCoachmark : O.buttonTextSecondary;
     return (0, l.jsx)('div', {
         className: s()(O.content, {
-            [O.outerGlow]: B,
+            [O.outerGlow]: U,
             [O.contentCoachmark]: H
         }),
         onMouseEnter: r,
         onMouseLeave: o,
         children: (0, l.jsxs)('div', {
-            className: s()(z, { [O.innerGlow]: B }),
+            className: s()(z, { [O.innerGlow]: U }),
             children: [
                 (0, l.jsxs)('div', {
                     className: O.subContent,
@@ -126,18 +126,18 @@ function M(e) {
                 (0, l.jsxs)('div', {
                     className: O.buttonContainer,
                     children: [
-                        null != U &&
+                        null != B &&
                             (0, l.jsx)(m.Button, {
                                 className: s()(O.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
                                         v.default.track(Z.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
-                                            cta_type: U
+                                            cta_type: B
                                         }),
-                                        U === R.X2.VIEW_ALL
+                                        B === R.X2.VIEW_ALL
                                             ? ((0, x.uL)(Z.Z5c.FRIENDS), f.Z.setSection(Z.pJs.ALL))
-                                            : U === R.X2.SEND_MESSAGE &&
+                                            : B === R.X2.SEND_MESSAGE &&
                                               ((0, A.PV)(i.id),
                                               h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
@@ -157,7 +157,7 @@ function M(e) {
                                         variant: 'text-sm/medium',
                                         className: s()(O.buttonText, $),
                                         children: (() => {
-                                            switch (U) {
+                                            switch (B) {
                                                 case R.X2.VIEW_ALL:
                                                     return y.intl.string(y.t.WkxniI);
                                                 case R.X2.SEND_MESSAGE:
@@ -181,8 +181,8 @@ function M(e) {
                                     analyticsLocation: 'system_message' === n ? r.chat : r.actionButtonCoachmark,
                                     analyticsLocations: F,
                                     analyticsObject: {
-                                        page: k,
-                                        section: D,
+                                        page: D,
+                                        section: k,
                                         object: Z.qAy.BUTTON_CTA,
                                         objectType: Z.Qqv.GIFT
                                     },

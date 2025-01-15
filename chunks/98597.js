@@ -26,8 +26,8 @@ var i,
     d = n(442837),
     h = n(481060),
     p = n(787014),
-    f = n(924301),
-    m = n(159300),
+    m = n(924301),
+    f = n(159300),
     g = n(152376),
     v = n(427679),
     C = n(155409),
@@ -78,8 +78,8 @@ function A(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([v.Z], () => v.Z.getStageInstanceByChannel(t.id), [t.id]),
-        g = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        x = (0, d.e7)([Z.Z], () => (0, m.b)(Z.Z, c, t, p)),
+        g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
+        x = (0, d.e7)([Z.Z], () => (0, f.b)(Z.Z, c, t, p)),
         b = (0, d.e7)([Z.Z], () => (Z.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8)));
     if (l || !x) return null;
     function S() {

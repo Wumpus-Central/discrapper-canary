@@ -29,18 +29,18 @@ var v = n(392750),
     T = n(806240),
     _ = n(789654),
     S = n(719672),
-    y = n(691867),
-    N = n(916790),
+    N = n(691867),
+    y = n(916790),
     k = n(645973),
-    E = n(903502),
-    I = n(912072),
+    I = n(903502),
+    E = n(912072),
     w = n(272193),
     Z = n(735959),
     R = n(246992),
     O = n(496025),
     B = n(442954),
-    P = n(633001),
-    L = n(702904),
+    L = n(633001),
+    P = n(702904),
     A = n(178821),
     D = n(248526),
     F = n(958328),
@@ -51,8 +51,8 @@ var v = n(392750),
     z = n(771751),
     V = n(596768),
     W = n(621060),
-    K = n(388032),
-    Y = n(771466),
+    Y = n(388032),
+    K = n(771466),
     X = n(941469);
 function q(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
@@ -65,7 +65,7 @@ function q(e) {
         });
     return (0, r.jsx)('div', {
         onMouseDown: l,
-        className: Y.resizeHandle
+        className: K.resizeHandle
     });
 }
 function $() {
@@ -90,7 +90,7 @@ function $() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, r.jsx)(N.Z, {})
+                    render: () => (0, r.jsx)(y.Z, {})
                 }
             ];
             return (
@@ -124,12 +124,12 @@ function $() {
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        render: () => (0, r.jsx)(E.Z, {})
+                        render: () => (0, r.jsx)(I.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     })),
                 e.push({
                     id: 'intl',
@@ -144,12 +144,12 @@ function $() {
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, r.jsx)(y.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -159,7 +159,7 @@ function $() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, r.jsx)(E.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -201,7 +201,7 @@ function $() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(L.Z, {})
+                        render: () => (0, r.jsx)(P.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -247,7 +247,7 @@ function $() {
                     className: X.headerBar,
                     toolbar: (0, r.jsx)(h.ZP.Icon, {
                         icon: c.XSmallIcon,
-                        tooltip: K.intl.string(K.t.cpT0Cg),
+                        tooltip: Y.intl.string(Y.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
@@ -260,7 +260,7 @@ function $() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(R.Br, { className: Y.layerContainer })
+                (0, r.jsx)(R.Br, { className: K.layerContainer })
             ]
         })
     );
@@ -277,7 +277,7 @@ function J() {
         ? null
         : (0, r.jsxs)('div', {
               ref: e,
-              className: i()(Y.container),
+              className: i()(K.container),
               style: {
                   minWidth: b.h,
                   width: n
@@ -290,7 +290,7 @@ function J() {
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
-                      className: Y.sidebarContent,
+                      className: K.sidebarContent,
                       children: (0, r.jsx)($, {})
                   })
               ]
@@ -300,18 +300,18 @@ function Q() {
     let e = (0, s.e7)([b.Z], () => b.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
-              className: i()(Y.container, Y.mobileContainerExpanded),
+              className: i()(K.container, K.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
-                  className: Y.sidebarContent,
+                  className: K.sidebarContent,
                   children: (0, r.jsx)($, {})
               })
           })
         : (0, r.jsx)('div', {
-              className: Y.container,
+              className: K.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(h.ZP, {
-                      className: i()(X.headerBar, Y.mobileHeaderCollapsed),
+                      className: i()(X.headerBar, K.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(h.ZP.Icon, {

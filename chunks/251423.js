@@ -1,22 +1,22 @@
 n.d(e, {
     L: function () {
-        return o;
+        return a;
     }
 });
-var l = n(192379),
-    r = n(442837),
-    i = n(570140),
-    a = n(480387),
-    u = n(726745);
-function o() {
-    let t = (0, r.cj)([u.Z], () => ({
-        isLoading: u.Z.getIsValidatingUsers(),
-        multiAccountUsers: u.Z.getUsers()
+var r = n(192379),
+    i = n(442837),
+    l = n(570140),
+    u = n(480387),
+    o = n(726745);
+function a() {
+    let t = (0, i.cj)([o.Z], () => ({
+        isLoading: o.Z.getIsValidatingUsers(),
+        multiAccountUsers: o.Z.getUsers()
     }));
     return (
-        l.useEffect(() => {
-            i.Z.wait(() => {
-                a.HJ();
+        r.useEffect(() => {
+            l.Z.wait(() => {
+                u.HJ();
             });
         }, []),
         t

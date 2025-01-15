@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(139387),
     o = n(933557),
     s = n(699516),
-    c = n(594174),
-    d = n(491302),
+    d = n(594174),
+    c = n(491302),
     u = n(936726),
     m = n(981631),
     h = n(388032),
@@ -23,7 +23,7 @@ function g(e) {
             () =>
                 Object.values(n).map((e) => ({
                     value: e.id,
-                    label: (0, o.F6)(e, c.default, s.Z, !0)
+                    label: (0, o.F6)(e, d.default, s.Z, !0)
                 })),
             [n]
         ),
@@ -41,7 +41,7 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        I = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 b() && (e === (null == x ? void 0 : x.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
@@ -65,7 +65,7 @@ function g(e) {
                                             'span',
                                             {
                                                 className: p.channelName,
-                                                children: (0, o.F6)(t, c.default, s.Z, !0)
+                                                children: (0, o.F6)(t, d.default, s.Z, !0)
                                             },
                                             t.id
                                         )
@@ -75,7 +75,7 @@ function g(e) {
                                 var t;
                                 if (e.type === m.ylB.CHANNEL_FOLLOWER)
                                     return (0, i.jsx)(
-                                        d.Z,
+                                        c.Z,
                                         {
                                             webhook: e,
                                             editedWebhook: g,
@@ -112,7 +112,7 @@ function g(e) {
                 lastCreatedWebhookId: g,
                 editedWebhook: x,
                 errors: f,
-                toggleWebhookExpand: I
+                toggleWebhookExpand: N
             });
         })
     });

@@ -10,10 +10,10 @@ var l = n(481060),
     a = n(313201),
     o = n(63063),
     s = n(453628),
-    c = n(388032),
-    d = n(232186);
+    d = n(388032),
+    c = n(232186);
 function u(e) {
-    let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: p, disabled: g = !1, hideBorder: x = !1, className: f = d.marginBottom20 } = e,
+    let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: p, disabled: g = !1, hideBorder: x = !1, className: f = c.marginBottom20 } = e,
         b = (0, a.Dt)();
     return (0, i.jsxs)(r.Z, {
         style: p,
@@ -25,7 +25,7 @@ function u(e) {
                     (0, i.jsx)(r.Z.Child, {
                         children: (0, i.jsx)(l.FormTitle, {
                             id: b,
-                            className: d.marginReset,
+                            className: c.marginReset,
                             tag: l.FormTitleTags.H3,
                             disabled: g,
                             children: u
@@ -45,7 +45,7 @@ function u(e) {
             }),
             null != m &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: d.marginTop4,
+                    className: c.marginTop4,
                     children: (0, i.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
                         children: m
@@ -53,19 +53,19 @@ function u(e) {
                 }),
             null != h &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: d.marginTop4,
+                    className: c.marginTop4,
                     children: (0, i.jsx)(l.FormText, {
                         disabled: g,
                         type: l.FormTextTypes.DESCRIPTION,
                         children: (0, i.jsx)(l.Anchor, {
                             href: o.Z.getArticleURL(h),
-                            children: c.intl.string(c.t.hvVgAQ)
+                            children: d.intl.string(d.t.hvVgAQ)
                         })
                     })
                 }),
             !x &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: d.marginTop20,
+                    className: c.marginTop20,
                     children: (0, i.jsx)(l.FormDivider, {})
                 })
         ]

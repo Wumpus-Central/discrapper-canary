@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 }),
     n(47120);
@@ -8,63 +8,63 @@ var i = n(200651);
 n(192379);
 var s = n(512722),
     r = n.n(s),
-    l = n(481060),
-    a = n(100527),
+    a = n(481060),
+    l = n(100527),
     o = n(906732),
     c = n(509545),
     d = n(74538),
     u = n(937615),
     m = n(374649),
-    h = n(474936),
-    g = n(981631),
+    g = n(474936),
+    h = n(981631),
     p = n(388032),
     x = n(168910);
-function S(e) {
+function f(e) {
     let t,
         { subscription: n, withOverheadSeparator: s } = e,
-        { analyticsLocations: S } = (0, o.ZP)(),
-        [T] = (0, m.ED)({
+        { analyticsLocations: f } = (0, o.ZP)(),
+        [_] = (0, m.ED)({
             subscriptionId: n.id,
             renewal: !0,
-            analyticsLocations: S,
-            analyticsLocation: a.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
+            analyticsLocations: f,
+            analyticsLocation: l.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == T) return null;
+    if (null == _) return null;
     let E = s ? x.finePrintWithOverheadSeparator : x.finePrint,
-        C = T.invoiceItems.find((e) => {
+        C = _.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, d.uZ)(t);
         });
     if (null == C) return null;
-    let _ = C.subscriptionPlanId,
-        f = c.Z.get(_);
-    r()(null != f, 'Missing plan');
-    let I = (0, u.T4)(T.total, T.currency);
+    let T = C.subscriptionPlanId,
+        S = c.Z.get(T);
+    r()(null != S, 'Missing plan');
+    let b = (0, u.T4)(_.total, _.currency);
     return (
-        f.interval === h.rV.YEAR
+        S.interval === g.rV.YEAR
             ? (t = p.intl.format(p.t['jPz/39'], {
-                  price: I,
-                  termsUrl: g.EYA.TERMS,
-                  paidURL: g.EYA.PAID_TERMS,
-                  privacyUrl: g.EYA.PRIVACY
+                  price: b,
+                  termsUrl: h.EYA.TERMS,
+                  paidURL: h.EYA.PAID_TERMS,
+                  privacyUrl: h.EYA.PRIVACY
               }))
-            : f.interval === h.rV.MONTH &&
+            : S.interval === g.rV.MONTH &&
               (t =
-                  1 === f.intervalCount
+                  1 === S.intervalCount
                       ? p.intl.format(p.t.m27GpK, {
-                            price: I,
-                            termsUrl: g.EYA.TERMS,
-                            paidURL: g.EYA.PAID_TERMS,
-                            privacyUrl: g.EYA.PRIVACY
+                            price: b,
+                            termsUrl: h.EYA.TERMS,
+                            paidURL: h.EYA.PAID_TERMS,
+                            privacyUrl: h.EYA.PRIVACY
                         })
                       : p.intl.format(p.t['9xf5V1'], {
-                            price: I,
-                            termsUrl: g.EYA.TERMS,
-                            paidURL: g.EYA.PAID_TERMS,
-                            privacyUrl: g.EYA.PRIVACY,
-                            intervalCount: f.intervalCount
+                            price: b,
+                            termsUrl: h.EYA.TERMS,
+                            paidURL: h.EYA.PAID_TERMS,
+                            privacyUrl: h.EYA.PRIVACY,
+                            intervalCount: S.intervalCount
                         })),
-        (0, i.jsx)(l.Text, {
+        (0, i.jsx)(a.Text, {
             color: 'text-muted',
             className: E,
             variant: 'text-xs/normal',
@@ -72,11 +72,11 @@ function S(e) {
         })
     );
 }
-function T(e) {
+function _(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
-    return t.status === g.O0b.CANCELED || t.isPurchasedExternally
+    return t.status === h.O0b.CANCELED || t.isPurchasedExternally
         ? null
-        : (0, i.jsx)(S, {
+        : (0, i.jsx)(f, {
               subscription: t,
               withOverheadSeparator: n
           });

@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return d;
     }
@@ -7,27 +7,27 @@ var s = n(200651);
 n(192379);
 var r = n(481060),
     i = n(600164),
-    o = n(7557),
-    l = n(388905),
-    a = n(388032),
+    l = n(7557),
+    a = n(388905),
+    o = n(388032),
     c = n(988750),
     u = n(232186);
-function d(e) {
-    let { title: t, subtitle: n, error: d, onSubmit: h, onCancel: p } = e;
+function d(t) {
+    let { title: e, subtitle: n, error: d, onSubmit: h, onCancel: p } = t;
     return (0, s.jsxs)(i.Z, {
         direction: i.Z.Direction.VERTICAL,
         children: [
-            (0, s.jsx)(l.Dx, {
+            (0, s.jsx)(a.Dx, {
                 className: u.marginBottom8,
-                children: t
+                children: e
             }),
-            (0, s.jsx)(l.DK, {
+            (0, s.jsx)(a.DK, {
                 className: c.subTitle,
                 children: n
             }),
             (0, s.jsxs)('div', {
                 children: [
-                    (0, s.jsx)(o.Z, {
+                    (0, s.jsx)(l.Z, {
                         inputClassName: c.codeInput,
                         onSubmit: h
                     }),
@@ -45,7 +45,7 @@ function d(e) {
                     className: c.button,
                     onClick: p,
                     color: r.Button.Colors.PRIMARY,
-                    children: a.intl.string(a.t['ETE/oK'])
+                    children: o.intl.string(o.t['ETE/oK'])
                 })
         ]
     });

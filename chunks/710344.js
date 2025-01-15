@@ -27,9 +27,9 @@ function l(e, t) {
                 if (null == l || null == r || l === r) return;
                 let o = [...e],
                     s = o.indexOf(l),
-                    c = o.indexOf(r),
-                    d = c - s > 0 ? 1 : 0;
-                o.splice(s, 1), (c = o.indexOf(r)), o.splice(c + d, 0, l), t(o);
+                    d = o.indexOf(r),
+                    c = d - s > 0 ? 1 : 0;
+                o.splice(s, 1), (d = o.indexOf(r)), o.splice(d + c, 0, l), t(o);
             },
             [e, n, a, t]
         );

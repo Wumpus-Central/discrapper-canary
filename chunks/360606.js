@@ -3,9 +3,9 @@ n.r(t), n(653041), n(47120);
 var l,
     T,
     I,
-    o,
-    E = n(392711),
-    u = n.n(E),
+    E,
+    o = n(392711),
+    u = n.n(o),
     N = n(442837),
     a = n(570140),
     _ = n(308063),
@@ -14,8 +14,8 @@ var l,
     d = n(999382),
     s = n(981631);
 let O = [],
-    G = [],
-    p = null,
+    p = [],
+    G = null,
     A = null,
     h = null,
     f = !1,
@@ -29,7 +29,7 @@ function P(e) {
     if (t !== s.pNK.INTEGRATIONS) return !1;
     if (null == i) {
         let e = d.Z.getGuildId();
-        null != e && _.Z.fetchForGuild(e), D(!1);
+        null != e && (_.Z.fetchForGuild(e), (f = !0)), D(!1);
     }
 }
 function D(e) {
@@ -37,7 +37,7 @@ function D(e) {
         let e = d.Z.getProps().integrations;
         null == e && (R = !0), (O = null != e ? e : []);
     } else O = [];
-    if (((G = null != i && S.Z.can(s.Plq.MANAGE_WEBHOOKS, i) ? c.Z.getWebhooksForGuild(i.id) : []), !e && null != A)) {
+    if (((p = null != i && S.Z.can(s.Plq.MANAGE_WEBHOOKS, i) ? c.Z.getWebhooksForGuild(i.id) : []), !e && null != A)) {
         let e = M(A.id);
         null != e && (A = e);
     }
@@ -45,7 +45,7 @@ function D(e) {
         let e = b(h.id);
         null != e && (h = e);
     }
-    (p = null), (Z = s.QZA.OPEN), (y = {}), (g = !1);
+    (G = null), (Z = s.QZA.OPEN), (y = {}), (g = !1);
 }
 let v = u().debounce(() => {
     g && (null != A ? u().isEqual(A, M(A.id)) && (g = !1) : null != h && u().isEqual(h, b(h.id)) && (g = !1), !g && W.emitChange());
@@ -57,7 +57,7 @@ function M(e) {
     });
 }
 function b(e) {
-    return G.find((t) => {
+    return p.find((t) => {
         let { id: n } = t;
         return n === e;
     });
@@ -76,10 +76,10 @@ class m extends (l = N.ZP.Store) {
         return O;
     }
     get webhooks() {
-        return G;
+        return p;
     }
     get editedCommandId() {
-        return p;
+        return G;
     }
     get editedIntegration() {
         return A;
@@ -122,15 +122,15 @@ class m extends (l = N.ZP.Store) {
             : t.application;
     }
 }
-(o = 'GuildSettingsIntegrationsStore'),
+(E = 'GuildSettingsIntegrationsStore'),
     (I = 'displayName') in (T = m)
         ? Object.defineProperty(T, I, {
-              value: o,
+              value: E,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[I] = o);
+        : (T[I] = E);
 let W = new m(
     a.Z,
     __OVERLAY__
@@ -150,18 +150,18 @@ let W = new m(
               },
               INTEGRATION_SETTINGS_START_EDITING_COMMAND: function (e) {
                   let { commandId: t } = e;
-                  (p = t), (A = null), (h = null), (y = {}), (g = !0);
+                  (G = t), (A = null), (h = null), (y = {}), (g = !0);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function (e) {
                   let { commandId: t } = e;
-                  if (null == p || p !== t) return !1;
-                  (p = null), (y = {}), (g = !1);
+                  if (null == G || G !== t) return !1;
+                  (G = null), (y = {}), (g = !1);
               },
               INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function (e) {
                   let { integrationId: t } = e,
                       n = M(t);
                   if (null == n) return !1;
-                  (A = n), (p = null), (h = null), (y = {}), (g = !1);
+                  (A = n), (G = null), (h = null), (y = {}), (g = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function () {
                   (A = null), (y = {}), (g = !1);
@@ -180,13 +180,13 @@ let W = new m(
                   let { webhookId: t } = e,
                       n = b(t);
                   if (null == n) return !1;
-                  (h = n), (p = null), (A = null), (y = {}), (g = !1);
+                  (h = n), (G = null), (A = null), (y = {}), (g = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
                   (h = null), (y = {}), (g = !1);
               },
               GUILD_SETTINGS_CLOSE: function () {
-                  (i = null), (O = []), (G = []), (p = null), (A = null), (h = null), (Z = s.QZA.CLOSED), (g = !1);
+                  (i = null), (O = []), (p = []), (G = null), (A = null), (h = null), (Z = s.QZA.CLOSED), (g = !1);
               },
               GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
                   let { guildId: t, integrations: n } = e;
@@ -220,30 +220,30 @@ let W = new m(
               },
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: t, channelId: n, webhooks: r } = e;
-                  if (null == i || t !== i.id || null == r || Z === s.QZA.SUBMITTING) return !1;
-                  f = !1;
-                  for (let e = G.length - 1; e >= 0; e--) {
-                      let t = G[e];
-                      if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-                      let i = r.find((e) => {
-                          let { id: n } = e;
-                          if (n === t.id) return !0;
-                      });
-                      if (null != i) {
-                          let n = {
-                              ...t,
-                              ...i
-                          };
-                          (G[e] = n), !g && (null == h ? void 0 : h.id) === n.id && (h = n);
-                      } else (null == h ? void 0 : h.id) === t.id && (h = null), G.splice(e, 1);
+                  if (((f = !1), null != i && t === i.id && null != r && Z !== s.QZA.SUBMITTING)) {
+                      for (let e = p.length - 1; e >= 0; e--) {
+                          let t = p[e];
+                          if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
+                          let i = r.find((e) => {
+                              let { id: n } = e;
+                              if (n === t.id) return !0;
+                          });
+                          if (null != i) {
+                              let n = {
+                                  ...t,
+                                  ...i
+                              };
+                              (p[e] = n), !g && (null == h ? void 0 : h.id) === n.id && (h = n);
+                          } else (null == h ? void 0 : h.id) === t.id && (h = null), p.splice(e, 1);
+                      }
+                      for (let e of r)
+                          null ==
+                              p.find((t) => {
+                                  let { id: n } = t;
+                                  if (n === e.id) return !0;
+                              }) && p.push(e);
+                      (p = [...p]), v();
                   }
-                  for (let e of r)
-                      null ==
-                          G.find((t) => {
-                              let { id: n } = t;
-                              if (n === e.id) return !0;
-                          }) && G.push(e);
-                  (G = [...G]), v();
               },
               INTEGRATION_SETTINGS_SUBMITTING: function () {
                   (Z = s.QZA.SUBMITTING), (y = {});

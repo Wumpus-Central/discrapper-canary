@@ -1,22 +1,22 @@
-n.d(t, {
+r.d(t, {
     al: function () {
-        return S;
+        return D;
     },
     ck: function () {
-        return F;
+        return E;
     }
 }),
-    n(47120),
-    n(653041),
-    n(571269),
-    n(298267);
-var r = n(200651),
-    a = n(192379),
-    i = n(112456),
-    o = n.n(i),
-    l = n(226961),
-    s = n(706619),
-    c = n(206314);
+    r(47120),
+    r(653041),
+    r(571269),
+    r(298267);
+var n = r(200651),
+    a = r(192379),
+    i = r(112456),
+    l = r.n(i),
+    s = r(226961),
+    o = r(706619),
+    c = r(206314);
 let d = {
     accelerateRate: 'Accelerate Rate',
     audioDetected: 'Audio Detected',
@@ -141,15 +141,15 @@ function u(e) {
     return ''.concat((e / 1000).toFixed(2), ' Kbps');
 }
 function m(e) {
-    return o().filesize(e);
+    return l().filesize(e);
 }
 function p(e) {
     return e;
 }
-function g(e) {
+function h(e) {
     return ''.concat(e, ' ms');
 }
-function h(e) {
+function g(e) {
     return ''.concat(e.toFixed(0), '%');
 }
 function f(e) {
@@ -158,11 +158,11 @@ function f(e) {
 function y(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
-function b(e) {
+function v(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let S = {
+let D = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -191,13 +191,13 @@ let S = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    C = {
-        accelerateRate: h,
+    F = {
+        accelerateRate: g,
         audioDetected: f,
         audioLevel: y,
         availableOutgoingBitrate: u,
-        averageDecodeTime: g,
-        averageEncodeTime: g,
+        averageDecodeTime: h,
+        averageEncodeTime: h,
         bandwidthLimitedFrameRate: f,
         bandwidthLimitedResolution: f,
         bitrate: u,
@@ -205,51 +205,51 @@ let S = {
         bytesReceived: m,
         bytesSent: m,
         codec: function (e) {
-            let { id: t, name: n } = e;
-            return (n = null != (n = '' === n ? 'unknown' : n) ? n : 'unknown'), ''.concat(n[0].toUpperCase()).concat(n.slice(1), ' (').concat(t, ')');
+            let { id: t, name: r } = e;
+            return (r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')');
         },
         cpuLimitedResolution: f,
-        currentDelay: g,
+        currentDelay: h,
         decoderImplementationName: p,
-        delayEstimate: g,
+        delayEstimate: h,
         encoderImplementationName: p,
         encoderQualityPsnr: y,
         encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
-        encodeUsage: h,
-        expandRate: h,
+        encodeUsage: g,
+        expandRate: g,
         filter: p,
-        fractionLost: h,
+        fractionLost: g,
         inboundBitrateEstimate: u,
-        jitter: g,
-        jitterBuffer: g,
-        jitterBufferPreferred: g,
-        keyFrameInterval: g,
-        minPlayoutDelay: g,
+        jitter: h,
+        jitterBuffer: h,
+        jitterBufferPreferred: h,
+        keyFrameInterval: h,
+        minPlayoutDelay: h,
         outboundBitrateEstimate: u,
-        pacerDelay: g,
-        ping: g,
-        preemptiveExpandRate: h,
+        pacerDelay: h,
+        ping: h,
+        preemptiveExpandRate: g,
         receiverBitrateEstimate: u,
-        relativePlayoutDelay: b,
-        relativeReceptionDelay: b,
-        renderDelay: g,
+        relativePlayoutDelay: v,
+        relativeReceptionDelay: v,
+        renderDelay: h,
         resolution: (e) => {
-            let { width: t, height: n } = e;
-            return ''.concat(t, 'x').concat(n);
+            let { width: t, height: r } = e;
+            return ''.concat(t, 'x').concat(r);
         },
-        secondaryDecodedRate: h,
+        secondaryDecodedRate: g,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
-        speechExpandRate: h,
-        targetDelay: g,
+        speechExpandRate: g,
+        targetDelay: h,
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    v = (e) => e,
-    D = (e) => {
+    S = (e) => e,
+    C = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -257,38 +257,38 @@ let S = {
                 time: Date.now()
             }),
             t.length > 600 && t.shift(),
-            (0, r.jsx)(s.Z, {
+            (0, n.jsx)(o.Z, {
                 dataPoints: t,
                 width: e.width,
                 height: e.height
             })
         );
     };
-function F(e) {
-    var t, n, a, i;
-    let { label: o, value: u, section: m } = e,
-        p = null !== (n = C[o]) && void 0 !== n ? n : v;
-    let g =
-            l.Pz[o] &&
+function E(e) {
+    var t, r, a, i;
+    let { label: l, value: u, section: m } = e,
+        p = null !== (r = F[l]) && void 0 !== r ? r : S;
+    let h =
+            s.Pz[l] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
-                ? (0, r.jsx)(s.Z, {
+                ? (0, n.jsx)(o.Z, {
                       dataPoints: i,
                       width: 300,
                       height: 100
                   })
                 : 'number' == typeof i
-                  ? (0, r.jsx)(D, {
+                  ? (0, n.jsx)(C, {
                         value: i,
                         width: 300,
                         height: 100
                     })
                   : void 0),
-        h = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
-    return (0, r.jsx)(c.Z, {
-        label: o,
-        valueRendered: p(h),
+        g = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
+    return (0, n.jsx)(c.Z, {
+        label: l,
+        valueRendered: p(g),
         section: m,
-        renderGraph: g,
-        children: null !== (a = d[o]) && void 0 !== a ? a : o
+        renderGraph: h,
+        children: null !== (a = d[l]) && void 0 !== a ? a : l
     });
 }

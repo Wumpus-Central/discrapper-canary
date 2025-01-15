@@ -123,7 +123,7 @@ let A = i.memo(function (e) {
                                             color: o.Button.Colors.PRIMARY,
                                             onClick: () =>
                                                 (0, o.openModalLazy)(async () => {
-                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('86004')]).then(l.bind(l, 560114));
+                                                    let { default: e } = await Promise.all([l.e('7654'), l.e('54655')]).then(l.bind(l, 560114));
                                                     return (l) =>
                                                         (0, a.jsx)(e, {
                                                             ...l,

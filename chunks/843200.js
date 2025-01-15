@@ -7,25 +7,25 @@ var i = n(200651);
 n(192379);
 var s = n(120356),
     r = n.n(s),
-    l = n(512722),
-    a = n.n(l),
+    a = n(512722),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     d = n(600164),
     u = n(594174),
     m = n(418632),
-    h = n(388032),
-    g = n(167836);
+    g = n(388032),
+    h = n(167836);
 function p(e) {
-    let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
+    let { unclaimedNotice: t, unverifiedNotice: s, className: a } = e,
         {
             isClaimed: p,
             isVerified: x,
-            hasEmail: S
+            hasEmail: f
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
-                a()(null != e, 'EmailNotice: currentUser cannot be undefined'),
+                l()(null != e, 'EmailNotice: currentUser cannot be undefined'),
                 {
                     isClaimed: e.isClaimed(),
                     isVerified: e.verified,
@@ -33,7 +33,7 @@ function p(e) {
                 }
             );
         });
-    function T() {
+    function _() {
         (0, c.openModalLazy)(async () => {
             let { default: e } = await n.e('60827').then(n.bind(n, 324239));
             return (t) => (0, i.jsx)(e, { ...t });
@@ -48,12 +48,12 @@ function p(e) {
     return p && x
         ? null
         : (0, i.jsx)(c.Card, {
-              className: r()(g.wrapper, l),
+              className: r()(h.wrapper, a),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)(d.Z.Child, {
-                          className: g.image,
+                          className: h.image,
                           grow: 0,
                           shrink: 0
                       }),
@@ -61,14 +61,14 @@ function p(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: p ? (null != s ? s : h.intl.string(h.t.WuyBbG)) : null != t ? t : h.intl.string(h.t['f+Zaoq'])
+                                  children: p ? (null != s ? s : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: g.content,
+                                  className: h.content,
                                   children: [
                                       p
-                                          ? S
+                                          ? f
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
@@ -78,7 +78,7 @@ function p(e) {
                                                     size: c.Button.Sizes.MEDIUM,
                                                     color: c.Button.Colors.BRAND,
                                                     onClick: E,
-                                                    children: h.intl.string(h.t.ydw5nZ)
+                                                    children: g.intl.string(g.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
@@ -86,11 +86,11 @@ function p(e) {
                                                 children: (0, i.jsx)(c.Button, {
                                                     size: c.Button.Sizes.MEDIUM,
                                                     color: c.Button.Colors.BRAND,
-                                                    onClick: T,
-                                                    children: h.intl.string(h.t.fiNVio)
+                                                    onClick: _,
+                                                    children: g.intl.string(g.t.fiNVio)
                                                 })
                                             }),
-                                      p && S
+                                      p && f
                                           ? (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
@@ -98,7 +98,7 @@ function p(e) {
                                                     color: c.Button.Colors.PRIMARY,
                                                     look: c.Button.Looks.LINK,
                                                     onClick: E,
-                                                    children: h.intl.string(h.t.Vm8akJ)
+                                                    children: g.intl.string(g.t.Vm8akJ)
                                                 })
                                             })
                                           : null

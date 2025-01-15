@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(932776),
     o = n(680298),
     s = n(289465),
-    c = n(388032),
-    d = n(352031);
+    d = n(388032),
+    c = n(352031);
 function u(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: u, guildId: m } = e,
         { results: h, query: p, setQuery: g, unfilteredCount: x } = (0, a.O)(),
@@ -24,7 +24,7 @@ function u(e) {
                       onClear: () => g('')
                   }),
                   inModal: !1,
-                  title: c.intl.string(c.t['0hKkS0']),
+                  title: d.intl.string(d.t['0hKkS0']),
                   children: h.map((e, a) =>
                       (0, i.jsxs)(
                           l.Fragment,
@@ -45,12 +45,12 @@ function u(e) {
                   )
               })
             : (0, i.jsx)(r.Card, {
-                  className: d.emptyCard,
+                  className: c.emptyCard,
                   editable: !0,
                   children: (0, i.jsx)(r.Text, {
                       color: 'text-muted',
                       variant: 'text-sm/normal',
-                      children: c.intl.string(c.t['x78c+P'])
+                      children: d.intl.string(d.t['x78c+P'])
                   })
               })
     });

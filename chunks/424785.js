@@ -17,8 +17,8 @@ var l = n(120356),
     d = n(888651),
     h = n(201895),
     p = n(111028),
-    f = n(305325),
-    m = n(281956),
+    m = n(305325),
+    f = n(281956),
     g = n(66999),
     v = n(378844),
     C = n(359110),
@@ -90,7 +90,7 @@ class F extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: I } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: m, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: v, resolvedUnreadSetting: C, mentionCount: x, isFavoriteSuggestion: I } = this.props,
             { shouldShowGuildVerificationPopout: _ } = this.state,
             Z = this.getVoiceStatesCount(),
             b = (0, i.jsxs)('li', {
@@ -110,7 +110,7 @@ class F extends L.ZP {
                                     let { onClick: o, onContextMenu: s, ...c } = a;
                                     return (0, i.jsxs)(D.Z, {
                                         className: O.iconVisibility,
-                                        iconClassName: r()({ [V.iconLive]: null != f }),
+                                        iconClassName: r()({ [V.iconLive]: null != m }),
                                         channel: e,
                                         selected: !I && t,
                                         connected: n,
@@ -132,7 +132,7 @@ class F extends L.ZP {
                                             unread: v,
                                             mentionCount: x,
                                             userCount: Z,
-                                            isSubscriptionGated: m,
+                                            isSubscriptionGated: f,
                                             needSubscriptionToAccess: g
                                         }),
                                         ...c,
@@ -155,7 +155,7 @@ class F extends L.ZP {
             H(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
                     l = e.getGuildId();
-                null != l && (0, m.n)(l) && (0, f.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, x.Cq)(e), !__OVERLAY__ && (0, C.Kh)(e.id);
+                null != l && (0, f.n)(l) && (0, m.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, x.Cq)(e), !__OVERLAY__ && (0, C.Kh)(e.id);
             }),
             H(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
@@ -166,7 +166,7 @@ class F extends L.ZP {
                     l = y.Z.getGuild(t.getGuildId());
                 if (null != l)
                     (0, c.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('14280')]).then(n.bind(n, 213202));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -245,8 +245,8 @@ function z(e) {
         }),
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, S.ZP)(n.id),
-        f = (0, a.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(n.id), [n.id]),
-        m = (0, I.Rk)(n.id, _.pV.AUDIENCE),
+        m = (0, a.e7)([Z.Z], () => Z.Z.getStageInstanceByChannel(n.id), [n.id]),
+        f = (0, I.Rk)(n.id, _.pV.AUDIENCE),
         { isSubscriptionGated: v, needSubscriptionToAccess: C } = (0, g.Z)(n.id),
         x = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         y = (0, b.xJ)(n.id),
@@ -263,8 +263,8 @@ function z(e) {
     return (0, i.jsx)(W, {
         categoryCollapsed: h,
         connectAction: p,
-        numAudience: m,
-        stageInstance: f,
+        numAudience: f,
+        stageInstance: m,
         isSubscriptionGated: v,
         needSubscriptionToAccess: C,
         ...c,

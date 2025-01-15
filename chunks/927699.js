@@ -23,9 +23,9 @@ let v = (0, m.kt)({
     type: x.d4z.DM
 });
 function g(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: E, innerClassName: S, disabled: j = !1, disableThemedBackground: y = !1 } = e,
-        [I, P] = l.useState(null != m ? m : g),
-        [T, N] = l.useState((0, o.JM)(I)),
+    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: E, disabled: j = !1, disableThemedBackground: y = !1 } = e,
+        [P, I] = l.useState(null != m ? m : g),
+        [T, N] = l.useState((0, o.JM)(P)),
         b = l.useRef(!1);
     return (
         l.useEffect(() => {
@@ -34,26 +34,26 @@ function g(e) {
         l.useEffect(() => {
             if (void 0 === m) {
                 let e = (0, o.JM)(g);
-                P(g), N(e);
+                I(g), N(e);
             }
         }, [m, g]),
         (0, i.jsx)('div', {
-            className: s()(f.body, E),
+            className: s()(f.body, S),
             children: (0, i.jsxs)(d.Z, {
                 title: n,
                 errors: t,
                 disabled: j,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, S),
+                        innerClassName: s()(f.textArea, E),
                         editorClassName: f.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: function (e, n, t) {
-                            n !== I && (P(n), N(t), r(n));
+                            n !== P && (I(n), N(t), r(n));
                         },
                         placeholder: x,
                         channel: v,
-                        textValue: I,
+                        textValue: P,
                         richValue: T,
                         type: c.Ie.CUSTOM_GIFT,
                         onBlur: () => {

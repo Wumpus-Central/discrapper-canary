@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(481060),
-    l = n(401190),
-    a = n(388032),
+    a = n(401190),
+    l = n(388032),
     o = n(255701);
 function c(e, t, n) {
     return (
@@ -29,7 +29,7 @@ class d extends s.PureComponent {
         return e
             ? (0, i.jsx)('div', {
                   className: o.error,
-                  children: a.intl.string(a.t.UUcECA)
+                  children: l.intl.string(l.t.UUcECA)
               })
             : null;
     }
@@ -44,7 +44,7 @@ class d extends s.PureComponent {
                       (0, i.jsxs)(r.Text, {
                           variant: 'text-sm/normal',
                           children: [
-                              a.intl.string(a.t.ziWmcH),
+                              l.intl.string(l.t.ziWmcH),
                               (0, i.jsx)(r.Button, {
                                   className: o.leaveButton,
                                   color: r.Button.Colors.LINK,
@@ -52,7 +52,7 @@ class d extends s.PureComponent {
                                   onClick: this.handleLeaveHypeSquadClick,
                                   size: r.Button.Sizes.NONE,
                                   submitting: e,
-                                  children: a.intl.string(a.t['WH+dho'])
+                                  children: l.intl.string(l.t['WH+dho'])
                               })
                           ]
                       })
@@ -71,7 +71,7 @@ class d extends s.PureComponent {
             }),
             c(this, 'handleLeaveHypeSquadClick', () => {
                 this.setState({ isRequestPending: !0 }, () => {
-                    l.Z.leaveHypeSquadOnline()
+                    a.Z.leaveHypeSquadOnline()
                         .then(() => {
                             this.setState({ isRequestPending: !1 });
                         })

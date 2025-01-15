@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(738619),
     v = n(744061),
     x = n(36311),
-    _ = n(655687),
+    Z = n(655687),
     S = n(823748),
-    Z = n(25007),
+    _ = n(25007),
     E = n(199649),
     C = n(1397),
     I = n(541716),
@@ -33,11 +33,11 @@ var i = n(200651),
     O = n(552062),
     j = n(957730),
     M = n(400023),
-    R = n(623292),
+    w = n(623292),
     P = n(807092),
-    w = n(592125),
-    A = n(703558),
-    k = n(731290),
+    R = n(592125),
+    k = n(703558),
+    A = n(731290),
     D = n(430824),
     L = n(375954),
     z = n(944486),
@@ -75,7 +75,7 @@ class ei extends s.Component {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
     }
     componentWillUnmount() {
-        A.Z.removeChangeListener(this.draftDidChange), F.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), F.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
+        k.Z.removeChangeListener(this.draftDidChange), F.S.unsubscribe(q.CkL.TEXTAREA_FOCUS, this.focusInput), F.S.unsubscribe(q.CkL.TEXTAREA_BLUR, this.blurInput);
     }
     render() {
         let { channel: e, placeholder: t, ...n } = this.props,
@@ -139,7 +139,7 @@ class ei extends s.Component {
             et(this, 'draftDidChange', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
-                    i = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
+                    i = k.Z.getDraft(e.channel.id, k.d.ChannelMessage);
                 n !== i && '' === i && t.setState((0, y.eK)(i));
             }),
             et(this, 'handleTextareaKeyDown', (e) => {
@@ -154,7 +154,7 @@ class ei extends s.Component {
                 let {
                     channel: { id: i }
                 } = this.props;
-                h.Z.changeDraft(i, this.state.textValue, A.d.ChannelMessage),
+                h.Z.changeDraft(i, this.state.textValue, k.d.ChannelMessage),
                     '' !== t ? g.Z.startTyping(i) : g.Z.stopTyping(i),
                     this.setState({
                         textValue: t,
@@ -188,7 +188,7 @@ class ei extends s.Component {
                                         shouldRefocus: !1
                                     };
                           let o = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, j.ZP.parse(n, t), !0, o), this.setState((0, y.H2)()), (0, R.A6)(n.id), s)
+                          return (p.Z.sendMessage(n.id, j.ZP.parse(n, t), !0, o), this.setState((0, y.H2)()), (0, w.A6)(n.id), s)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -210,14 +210,14 @@ class ei extends s.Component {
                 (0, i.jsx)(N.Z, {
                     className: t,
                     channel: this.props.channel,
-                    draftType: A.d.ChannelMessage,
+                    draftType: k.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
                     setValue: (e) => this.handleTextareaChange(null, e, (0, y.JM)(e)),
                     canOnlyUseTextCommands: e
                 })
             ),
-            A.Z.addChangeListener(this.draftDidChange);
-        let n = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
+            k.Z.addChangeListener(this.draftDidChange);
+        let n = k.Z.getDraft(e.channel.id, k.d.ChannelMessage);
         (this.state = {
             ...(0, y.eK)(n),
             focused: !1,
@@ -253,7 +253,7 @@ class es extends s.PureComponent {
         if (null == t) return null;
         let g = l || h,
             v = !r && null != t && t.isNSFW(),
-            _ = !g || d;
+            Z = !g || d;
         return (
             (e =
                 v && null != o
@@ -279,7 +279,7 @@ class es extends s.PureComponent {
                     children: [
                         !l &&
                             !h &&
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(_.Z, {
                                 channel: t,
                                 guild: o
                             }),
@@ -296,7 +296,7 @@ class es extends s.PureComponent {
                         v
                             ? null
                             : (0, i.jsx)('div', {
-                                  children: _
+                                  children: Z
                                       ? (0, i.jsx)(Q.ZP.Background, {
                                             opacityOverride: l || h ? null : en,
                                             children: (0, i.jsxs)('div', {
@@ -449,16 +449,16 @@ function er(e) {
     let { contained: t = !1, ...n } = e,
         s = (0, d.e7)([B.Z], () => B.Z.getGuildId()),
         r = (0, d.e7)([z.Z], () => z.Z.getChannelId(s)),
-        a = (0, d.e7)([w.Z], () => w.Z.getChannel(r)),
+        a = (0, d.e7)([R.Z], () => R.Z.getChannel(r)),
         o = (0, d.e7)([W.Z], () => W.Z.getOverlayChatKeybind()),
         l = null != o ? (0, H.BB)(o.shortcut, !0) : ']',
         [c, u, h] = (0, d.Wu)([U.Z], () => [U.Z.getTextWidgetOpacity(), U.Z.getActiveRegions(), !t && U.Z.isPreviewingInGame()]),
         p = (0, d.e7)([D.Z], () => D.Z.getGuild(s)),
-        f = (0, d.e7)([k.Z], () => null != s && k.Z.didAgree(s)),
+        f = (0, d.e7)([A.Z], () => null != s && A.Z.didAgree(s)),
         g = null != a && a.isPrivate() ? a.getRecipientId() : null,
         m = (0, d.e7)([P.Z], () => (null != r ? P.Z.getPendingReply(r) : void 0)),
         v = (0, d.e7)([V.default], () => (null != g ? V.default.getUser(g) : null)),
-        { placeholder: x } = (0, _.Z)({ channel: a });
+        { placeholder: x } = (0, Z.Z)({ channel: a });
     return null != a && null != p && q.TPd.GUILD_THREADS_ONLY.has(a.type)
         ? (0, i.jsx)(S.Z, {})
         : (0, i.jsx)(es, {

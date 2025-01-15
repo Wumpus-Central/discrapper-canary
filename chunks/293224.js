@@ -47,14 +47,14 @@ var i = n(200651),
     w = n(44315),
     k = n(74299),
     N = n(803647),
-    L = n(565138),
-    y = n(917405),
+    y = n(565138),
+    L = n(917405),
     S = n(763296),
     T = n(603074),
     A = n(879815),
     O = n(189771),
-    V = n(294629),
-    P = n(67844),
+    P = n(294629),
+    V = n(67844),
     M = n(544384),
     R = n(892807),
     D = n(560688),
@@ -116,7 +116,7 @@ function et(e) {
 }
 function en(e) {
     let { voiceChannel: t, locked: n } = e,
-        { suppress: o, selfMute: a, mute: s } = (0, V.Z)(t),
+        { suppress: o, selfMute: a, mute: s } = (0, P.Z)(t),
         u = a || s || o,
         d = (0, C.Z)(a, s, o, !1),
         { Component: h, play: p, events: m } = (0, c.O)(u ? 'unmute' : 'mute');
@@ -221,7 +221,7 @@ function el(e) {
         } = (0, h.o)(a ? 'disable' : 'enable'),
         j =
             null != n
-                ? (0, P.X)({
+                ? (0, V.X)({
                       enabled: a,
                       cameraUnavailable: c,
                       hasPermission: d,
@@ -323,7 +323,7 @@ function eo(e) {
     var t;
     let { voiceChannel: l, locked: r } = e,
         a = null !== (t = null == l ? void 0 : l.getGuildId()) && void 0 !== t ? t : null,
-        { mute: s, suppress: c } = (0, V.Z)(l),
+        { mute: s, suppress: c } = (0, P.Z)(l),
         u = (0, o.e7)([U.Z], () => U.Z.isDeaf()),
         h = null == l || s || c || u;
     function p(e) {
@@ -442,9 +442,9 @@ function es(e) {
                     (0, i.jsxs)('div', {
                         className: $.guildIconContainer,
                         children: [
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(y.Z, {
                                 guild: n,
-                                size: L.Z.Sizes.SMOL,
+                                size: y.Z.Sizes.SMOL,
                                 className: $.guildIcon
                             }),
                             (0, i.jsx)(f.Text, {
@@ -506,7 +506,7 @@ function eu(e) {
         null != t &&
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(y.Z, {
+                (0, i.jsx)(L.Z, {
                     ...l,
                     hasVideo: a,
                     connectionStatusTextVariant: 'text-xs/semibold'

@@ -36,15 +36,15 @@ var i = n(200651),
     y = n(348238),
     O = n(38267),
     M = n(83561),
-    k = n(834129),
-    D = n(959517),
-    B = n(981631),
-    U = n(674563),
+    D = n(834129),
+    k = n(959517),
+    U = n(981631),
+    B = n(674563),
     w = n(590433),
     F = n(388032),
     G = n(657733);
 function V(e, t) {
-    let { popouts: n, selected: i, setPopout: l } = (0, O.Z)(e.id, D.d$),
+    let { popouts: n, selected: i, setPopout: l } = (0, O.Z)(e.id, k.d$),
         { usernameProfile: a, avatarProfile: o } = n,
         s = (0, y.wq)(e.author.id, t.id),
         c = (0, y.RN)(e.author.id, t.id, e.id),
@@ -250,8 +250,8 @@ function q(e) {
         } = (0, M.m)(!0),
         { onFocus: A, ...j } = (0, c.JA)(null != n ? n : ''),
         { isFocused: R, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
-        D = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        H = (0, u.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
+        k = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        H = (0, u.e7)([v.Z], () => v.Z.can(U.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, g.ZP)(o),
         eo = r.useMemo(() => (0, b.k$)(ee, J, s.id), [ee, J, s]),
         { selected: es, ...ec } = V(o, s),
@@ -260,7 +260,7 @@ function q(e) {
         }, [o.id, ee, q, s]),
         eu = r.useCallback(
             (e) => {
-                if (null != et && null != Y) e.stopPropagation(), e.preventDefault(), (0, I.Z)(B.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et));
+                if (null != et && null != Y) e.stopPropagation(), e.preventDefault(), (0, I.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et));
             },
             [Y, et]
         ),
@@ -287,7 +287,7 @@ function q(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: T,
         onMouseLeave: S,
-        children: (0, i.jsx)(k.Z, {
+        children: (0, i.jsx)(D.Z, {
             className: a()(G.mainContainer, { [G.compact]: l }),
             iconNode: l ? null : (0, i.jsx)(M.S, { src: N }),
             iconContainerClassName: G.iconContainer,
@@ -310,7 +310,7 @@ function q(e) {
                                     children: F.intl.string(F.t.hG1StL)
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    type: U.Hb.SYSTEM_DM,
+                                    type: B.Hb.SYSTEM_DM,
                                     className: G.systemTag
                                 }),
                                 (0, i.jsx)(Q, {
@@ -337,7 +337,7 @@ function q(e) {
                             hideTimestamp: !0,
                             className: a()(G.embedCard, {
                                 [G.compact]: l,
-                                [G.selected]: es || (D && R),
+                                [G.selected]: es || (k && R),
                                 [G.isClickable]: null != et && null != Y
                             }),
                             childrenAccessories: (0, i.jsxs)(i.Fragment, {

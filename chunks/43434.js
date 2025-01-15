@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(526156),
-    l = n(229269),
-    a = n(450272),
+    a = n(229269),
+    l = n(450272),
     o = n(726985),
     c = n(981631);
 function d() {
@@ -18,7 +18,7 @@ function d() {
         tabs: [
             {
                 title: 'Payment Components',
-                component: () => (0, i.jsx)(l.f, {}),
+                component: () => (0, i.jsx)(a.f, {}),
                 setting: o.s6.PAYMENT_COMPONENTS
             },
             {
@@ -31,7 +31,7 @@ function d() {
                                 color: 'info-help-text',
                                 children: 'Add Orb components here.'
                             }),
-                            (0, i.jsx)(a.$0, { children: 'Orb Components' })
+                            (0, i.jsx)(l.$0, { children: 'Orb Components' })
                         ]
                     }),
                 setting: o.s6.ORB_COMPONENTS

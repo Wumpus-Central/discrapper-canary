@@ -26,8 +26,8 @@ var r = n(200651),
     T = n(621060),
     _ = n(388032),
     S = n(931933),
-    y = n(941469);
-let N = [
+    N = n(941469);
+let y = [
     {
         key: 'event',
         cellClassName: S.eventColumn,
@@ -52,7 +52,7 @@ function k(e) {
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function E(e) {
+function I(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,7 +67,7 @@ function E(e) {
         ]
     });
 }
-let I = [
+let E = [
         {
             id: 'details',
             name: 'Details',
@@ -81,14 +81,14 @@ let I = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(h.ZP, {
-                            className: i()(y.headerBar, S.subPanelHeaderBar),
+                            className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(h.ZP.Icon, {
                                     icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(h.ZP.Title, {
-                                    wrapperClassName: y.headerTitle,
+                                    wrapperClassName: N.headerTitle,
                                     children: t
                                 }),
                                 (0, r.jsx)(h.ZP.Icon, {
@@ -124,7 +124,7 @@ let I = [
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    E,
+                                    I,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -216,12 +216,12 @@ function Z() {
     a.useEffect(() => {
         v(t, s);
     }, [t, v, s]);
-    let [E, Z] = a.useState(void 0),
-        R = k.find((e) => e.key === E),
-        { TabBar: O, renderSelectedTab: B } = (0, T.Z)({ tabs: I }, []);
+    let [I, Z] = a.useState(void 0),
+        R = k.find((e) => e.key === I),
+        { TabBar: O, renderSelectedTab: B } = (0, T.Z)({ tabs: E }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(y.panel, S.panel),
+        className: i()(N.panel, S.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: S.toolbar,
@@ -272,9 +272,9 @@ function Z() {
                 })
             }),
             (0, r.jsx)(C.Z, {
-                columns: N,
+                columns: y,
                 data: k,
-                selectedRowKey: E,
+                selectedRowKey: I,
                 onClickRow: (e) => Z(e.key)
             }),
             null != R &&

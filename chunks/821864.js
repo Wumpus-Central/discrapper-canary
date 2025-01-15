@@ -12,13 +12,13 @@ n.d(t, {
         return _;
     },
     W4: function () {
-        return E;
+        return o;
     },
     gq: function () {
         return N;
     },
     kZ: function () {
-        return o;
+        return E;
     }
 });
 var i = n(544891),
@@ -26,10 +26,10 @@ var i = n(544891),
     l = n(555573),
     T = n(581364),
     I = n(981631);
-function o() {
+function E() {
     r.Z.dispatch({ type: 'INTEGRATION_PERMISSION_SETTINGS_CLEAR' });
 }
-function E(e, t, n) {
+function o(e, t, n) {
     r.Z.dispatch({
         applicationId: e,
         commandId: t,
@@ -101,7 +101,7 @@ function _(e) {
     });
 }
 async function S(e) {
-    let { applicationId: t, commandId: n, defaultEveryoneValue: i, defaultEverywhereValue: I, guildId: o, permissions: E } = e,
+    let { applicationId: t, commandId: n, defaultEveryoneValue: i, defaultEverywhereValue: I, guildId: E, permissions: o } = e,
         u =
             n === t
                 ? (function (e, t, n, i) {
@@ -114,15 +114,15 @@ async function S(e) {
                           let t = r[e.id];
                           return null == t || e.permission !== t;
                       });
-                  })(o, E, i, I)
-                : E,
-        N = await l.dh(t, o, n, u);
+                  })(E, o, i, I)
+                : o,
+        N = await l.dh(t, E, n, u);
     N.ok &&
         r.Z.dispatch({
             type: 'INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE',
             applicationId: t,
             commandId: n,
-            guildId: o,
+            guildId: E,
             permissions: N.body.permissions
         });
 }

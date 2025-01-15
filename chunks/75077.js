@@ -1,36 +1,36 @@
 n.d(t, {
     BS: function () {
-        return C;
+        return T;
     },
     Dp: function () {
-        return x;
+        return _;
     },
     Gw: function () {
-        return v;
+        return S;
     },
     Op: function () {
-        return A;
+        return R;
     },
     gx: function () {
-        return I;
-    },
-    iG: function () {
         return N;
     },
+    iG: function () {
+        return I;
+    },
     k3: function () {
-        return h;
+        return f;
     },
     mN: function () {
-        return P;
+        return O;
     },
     oo: function () {
-        return b;
+        return C;
     },
     sP: function () {
         return j;
     },
     t2: function () {
-        return T;
+        return b;
     },
     vZ: function () {
         return E;
@@ -39,38 +39,38 @@ n.d(t, {
     n(653041),
     n(627341);
 var i = n(278074),
-    r = n(442837),
-    a = n(780384),
-    s = n(410154),
+    s = n(442837),
+    r = n(780384),
+    a = n(410154),
     l = n(594174),
     o = n(78839),
     c = n(74538),
     d = n(331119),
     u = n(575595),
-    g = n(650032),
-    m = n(391110),
-    f = n(474936),
+    m = n(650032),
+    g = n(391110),
+    h = n(474936),
     p = n(735825),
-    _ = n(388032);
-let h = (e) => {
+    x = n(388032);
+let f = (e) => {
         switch (e) {
             case p.EB.PENDING:
-                return _.intl.string(_.t.fhK8ho);
+                return x.intl.string(x.t.fhK8ho);
             case p.EB.REDEEMABLE:
-                return _.intl.string(_.t['084A8/']);
+                return x.intl.string(x.t['084A8/']);
             case p.EB.REDEEMED:
-                return _.intl.string(_.t['5kxiMz']);
+                return x.intl.string(x.t['5kxiMz']);
             default:
                 return '';
         }
     },
-    x = (e) => {
+    _ = (e) => {
         switch (e) {
             case p.EB.PENDING:
-                return _.intl.string(_.t['9o4F4+']);
+                return x.intl.string(x.t['9o4F4+']);
             case p.EB.REDEEMABLE:
             case p.EB.REDEEMED:
-                return _.intl.string(_.t['3R9pPD']);
+                return x.intl.string(x.t['3R9pPD']);
             default:
                 return '';
         }
@@ -78,23 +78,12 @@ let h = (e) => {
     E = (e, t, n) => {
         switch (e) {
             case p.EB.PENDING:
-                return t === p.Ft.FREE_GUILD_BOOST_1_MONTH ? _.intl.string(_.t.hnbagI) : _.intl.string(_.t['73+DnJ']);
+                return t === p.Ft.FREE_GUILD_BOOST_1_MONTH ? x.intl.string(x.t.hnbagI) : x.intl.string(x.t['73+DnJ']);
             case p.EB.REDEEMABLE:
-                if (t === p.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? _.intl.string(_.t.RrwI8f) : _.intl.string(_.t.P1Xqqa);
-                return _.intl.string(_.t.K687hI);
+                if (t === p.Ft.FREE_GUILD_BOOST_1_MONTH) return n ? x.intl.string(x.t.RrwI8f) : x.intl.string(x.t.P1Xqqa);
+                return x.intl.string(x.t.K687hI);
             case p.EB.REDEEMED:
-                return _.intl.string(_.t['QvW/MT']);
-            default:
-                return;
-        }
-    },
-    b = (e) => {
-        switch (e) {
-            case p.EB.PENDING:
-                return _.intl.string(_.t.nlcs6O);
-            case p.EB.REDEEMABLE:
-            case p.EB.REDEEMED:
-                return _.intl.string(_.t.F915ra);
+                return x.intl.string(x.t['QvW/MT']);
             default:
                 return;
         }
@@ -102,136 +91,147 @@ let h = (e) => {
     C = (e) => {
         switch (e) {
             case p.EB.PENDING:
-                return _.intl.string(_.t.tncFsb);
+                return x.intl.string(x.t.nlcs6O);
             case p.EB.REDEEMABLE:
-                return;
             case p.EB.REDEEMED:
-                return _.intl.string(_.t.OcdQND);
+                return x.intl.string(x.t.F915ra);
             default:
                 return;
         }
     },
-    v = (e) => {
+    T = (e) => {
         switch (e) {
             case p.EB.PENDING:
-                return _.intl.string(_.t.LAFMBQ);
+                return x.intl.string(x.t.tncFsb);
+            case p.EB.REDEEMABLE:
+                return;
+            case p.EB.REDEEMED:
+                return x.intl.string(x.t.OcdQND);
+            default:
+                return;
+        }
+    },
+    S = (e) => {
+        switch (e) {
+            case p.EB.PENDING:
+                return x.intl.string(x.t.LAFMBQ);
             case p.EB.REDEEMABLE:
             case p.EB.REDEEMED:
-                return _.intl.string(_.t['4cCWPT']);
+                return x.intl.string(x.t['4cCWPT']);
             default:
                 return;
         }
     };
-function T(e, t) {
+function b(e, t) {
     switch (e) {
         case p.EB.PENDING:
-            return null != t ? _.intl.formatToPlainString(_.t.FULtam, { days: t }) : '';
+            return null != t ? x.intl.formatToPlainString(x.t.FULtam, { days: t }) : '';
         case p.EB.REDEEMABLE:
-            return _.intl.string(_.t['+zx47e']);
+            return x.intl.string(x.t['+zx47e']);
         case p.EB.REDEEMED:
-            return _.intl.string(_.t['5kxiMz']);
+            return x.intl.string(x.t['5kxiMz']);
         default:
             return '';
     }
 }
-function N(e, t) {
+function I(e, t) {
     switch (e) {
         case p.EB.PENDING:
-            return null != t ? _.intl.formatToPlainString(_.t.a1eKDg, { days: t }) : '';
+            return null != t ? x.intl.formatToPlainString(x.t.a1eKDg, { days: t }) : '';
         case p.EB.REDEEMABLE:
-            return _.intl.string(_.t.B9eJyc);
+            return x.intl.string(x.t.B9eJyc);
         case p.EB.REDEEMED:
-            return _.intl.string(_.t.hpy7PD);
+            return x.intl.string(x.t.hpy7PD);
         default:
             return '';
     }
 }
-let I = (e, t, n) => ((0, a.wj)(e) ? t : n),
-    S = 'getWhatsNewRow',
-    R = (e) => {
-        let { cards: t, perksCards: n, isFullScreen: i, showTenureCard: r, shopMarketingVariation: a } = e,
+let N = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    v = 'getWhatsNewRow',
+    A = (e) => {
+        let { cards: t, perksCards: n, isFullScreen: i, showTenureCard: s, shopMarketingVariation: r } = e,
             l = i ? 3 : 2,
             o = (e) => {
                 let { card: n } = e;
                 t.length < l && t.push(n);
             },
             c = () => {
-                a !== s.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
+                r !== a.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: m } = g._.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            { enabled: f } = u.r.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            { enabled: p } = d.C.getCurrentConfig({ location: S }, { autoTrackExposure: !1 }),
-            _ = m && !f && !p,
-            h = O();
-        return null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+            { enabled: g } = m._.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
+            { enabled: h } = u.r.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
+            { enabled: p } = d.C.getCurrentConfig({ location: v }, { autoTrackExposure: !1 }),
+            x = g && !h && !p,
+            f = P();
+        return null != n.tenureRewardCollectible && !0 === s && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === s && o({ card: n.freeBoost }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.shyProject && o({ card: n.shyProject }), i && f ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !f && (x || null != n.shyProject ? x && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     j = (e) => {
-        let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, isPremiumSubscriber: l, fractionalState: o } = e,
+        let { perksCards: t, variant: n, shopMarketingVariation: s, isFullScreen: r, showTenureCard: a, isPremiumSubscriber: l, fractionalState: o } = e,
             c = [];
         switch (n) {
-            case m.R0.PERKS_DISCOVERABILITY:
+            case g.R0.PERKS_DISCOVERABILITY:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
                 })
                     .with({ isPremiumSubscriber: !1 }, () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons])
-                    .with({ fractionalState: f.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => [t.profiles, t.clientThemes, t.hdVideo])
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
-            case m.R0.WHATS_NEW:
-                c = R({
+            case g.R0.WHATS_NEW:
+                c = A({
                     cards: c,
                     perksCards: t,
-                    isFullScreen: a,
-                    showTenureCard: s,
-                    shopMarketingVariation: r
+                    isFullScreen: r,
+                    showTenureCard: a,
+                    shopMarketingVariation: s
                 });
                 break;
-            case m.R0.CARD_CAROUSEL_FIRST_ROW:
+            case g.R0.CARD_CAROUSEL_FIRST_ROW:
                 c = (0, i.EQ)({ isPremiumSubscriber: l })
                     .with({ isPremiumSubscriber: !1 }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks])
                     .otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
                 break;
-            case m.R0.CARD_CAROUSEL_SECOND_ROW:
+            case g.R0.CARD_CAROUSEL_SECOND_ROW:
                 c = (0, i.EQ)({
                     isPremiumSubscriber: l,
                     fractionalState: o
                 })
                     .with({ isPremiumSubscriber: !1 }, () => [t.customSoundsEverywhere, t.specialStickerAccess])
-                    .with({ fractionalState: f.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions])
                     .otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
                 break;
-            case m.R0.CARD_CAROUSEL_THIRD_ROW:
+            case g.R0.CARD_CAROUSEL_THIRD_ROW:
                 c = (0, i.EQ)({ fractionalState: o })
-                    .with({ fractionalState: f.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
+                    .with({ fractionalState: h.a$.FP_ONLY }, () => [t.entranceSoundsSeeAllVariation, t.greyBadge])
                     .otherwise(() => [t.entranceSoundsSeeAllVariation, t.badge]);
         }
-        return !a && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
+        return !r && (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    A = (e) => {
-        let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
+    R = (e) => {
+        let t = (0, s.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
-            i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === f.Si.TIER_2;
+            i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === h.Si.TIER_2;
         if (e)
             return i
                 ? {
-                      title: _.intl.string(_.t.Aw5DRk),
-                      subtitle: _.intl.string(_.t.aHdO6u)
+                      title: x.intl.string(x.t.Aw5DRk),
+                      subtitle: x.intl.string(x.t.aHdO6u)
                   }
                 : {
-                      title: _.intl.string(_.t.N30YEx),
-                      subtitle: _.intl.string(_.t.GTUdNT)
+                      title: x.intl.string(x.t.N30YEx),
+                      subtitle: x.intl.string(x.t.GTUdNT)
                   };
         return {
-            title: _.intl.string(_.t['Uh3+CA']),
-            subtitle: _.intl.string(_.t['5TFEXl'])
+            title: x.intl.string(x.t['Uh3+CA']),
+            subtitle: x.intl.string(x.t['5TFEXl'])
         };
     },
-    P = () => {
-        let e = (0, r.e7)([l.default], () => l.default.getCurrentUser());
+    O = () => {
+        let e = (0, s.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    O = () => {
+    P = () => {
         let e = l.default.getCurrentUser();
-        return (0, c.M5)(e, f.p9.TIER_2);
+        return (0, c.M5)(e, h.p9.TIER_2);
     };

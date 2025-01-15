@@ -1,43 +1,43 @@
-s.d(n, {
+n.d(t, {
     B: function () {
         return u;
     }
 });
-var e = s(200651);
-s(192379);
-var i = s(481060),
-    r = s(313201),
-    o = s(192635),
-    c = s(388032),
-    a = s(139266);
-function l(t) {
-    let { transitionState: n, Icon: s, title: l, body: u, onClose: d } = t,
-        p = (0, r.Dt)();
-    return (0, e.jsxs)(i.ModalRoot, {
-        className: a.container,
-        transitionState: n,
-        'aria-labelledby': p,
+var s = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(313201),
+    o = n(192635),
+    c = n(388032),
+    l = n(139266);
+function a(e) {
+    let { transitionState: t, Icon: n, title: a, body: u, onClose: d } = e,
+        f = (0, r.Dt)();
+    return (0, s.jsxs)(i.ModalRoot, {
+        className: l.container,
+        transitionState: t,
+        'aria-labelledby': f,
         children: [
-            (0, e.jsxs)(i.ModalContent, {
+            (0, s.jsxs)(i.ModalContent, {
                 children: [
-                    (0, e.jsx)(o.Z, { Icon: s }),
-                    (0, e.jsx)(i.Spacer, { size: 24 }),
-                    (0, e.jsx)(i.Heading, {
-                        id: p,
-                        className: a.__invalid_title,
+                    (0, s.jsx)(o.Z, { Icon: n }),
+                    (0, s.jsx)(i.Spacer, { size: 24 }),
+                    (0, s.jsx)(i.Heading, {
+                        id: f,
+                        className: l.__invalid_title,
                         variant: 'heading-xl/semibold',
-                        children: l
+                        children: a
                     }),
-                    (0, e.jsx)(i.Spacer, { size: 8 }),
-                    (0, e.jsx)(i.Text, {
-                        className: a.body,
+                    (0, s.jsx)(i.Spacer, { size: 8 }),
+                    (0, s.jsx)(i.Text, {
+                        className: l.body,
                         variant: 'text-sm/normal',
                         children: u
                     })
                 ]
             }),
-            (0, e.jsx)(i.Spacer, { size: 24 }),
-            (0, e.jsx)(i.Button, {
+            (0, s.jsx)(i.Spacer, { size: 24 }),
+            (0, s.jsx)(i.Button, {
                 size: i.Button.Sizes.MEDIUM,
                 grow: !1,
                 onClick: d,
@@ -46,11 +46,11 @@ function l(t) {
         ]
     });
 }
-function u(t) {
-    (0, i.openModal)((n) =>
-        (0, e.jsx)(l, {
-            ...n,
-            ...t
+function u(e) {
+    (0, i.openModal)((t) =>
+        (0, s.jsx)(a, {
+            ...t,
+            ...e
         })
     );
 }

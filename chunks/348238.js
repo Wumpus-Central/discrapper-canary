@@ -9,7 +9,7 @@ n.d(t, {
         return L;
     },
     NU: function () {
-        return k;
+        return D;
     },
     Nk: function () {
         return P;
@@ -18,7 +18,7 @@ n.d(t, {
         return O;
     },
     RN: function () {
-        return U;
+        return B;
     },
     Wl: function () {
         return Z;
@@ -33,7 +33,7 @@ n.d(t, {
         return V;
     },
     qo: function () {
-        return D;
+        return k;
     },
     rY: function () {
         return M;
@@ -45,7 +45,7 @@ n.d(t, {
         return G;
     },
     wq: function () {
-        return B;
+        return U;
     }
 }),
     n(789020),
@@ -129,10 +129,10 @@ function O(e, t) {
 function M(e, t) {
     return y(b('referencedAvatarProfile', e, t));
 }
-function k(e, t) {
+function D(e, t) {
     return y(b('interactionAvatarProfile', e, t));
 }
-function D(e, t, l, o) {
+function k(e, t, l, o) {
     let { id: s } = t,
         { id: d, flags: u } = e,
         m = (0, I.yE)(u, S.iLy.EPHEMERAL),
@@ -173,7 +173,7 @@ function D(e, t, l, o) {
         [m, s, d, l, h, o]
     );
 }
-function B(e, t) {
+function U(e, t) {
     return r.useCallback(
         (n) => {
             let i = g.default.getUser(e),
@@ -183,7 +183,7 @@ function B(e, t) {
         [e, t]
     );
 }
-function U(e, t, n) {
+function B(e, t, n) {
     return r.useCallback(
         (i) => {
             let r = g.default.getUser(e),

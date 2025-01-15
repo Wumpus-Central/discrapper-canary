@@ -1,4 +1,4 @@
-t.r(n), t(47120);
+t.r(e), t(47120);
 var i = t(200651),
     l = t(192379),
     a = t(512722),
@@ -39,22 +39,22 @@ var i = t(200651),
     k = t(647086),
     B = t(388032),
     F = t(764466);
-function H(e) {
-    (0, d.openModal)((n) =>
+function H(n) {
+    (0, d.openModal)((e) =>
         (0, i.jsx)(M.g, {
-            ...n,
-            guild: e
+            ...e,
+            guild: n
         })
     );
 }
-let z = l.memo(function (e) {
-    let { guild: n, onClose: a, onSelect: M } = e,
+let z = l.memo(function (n) {
+    let { guild: e, onClose: a, onSelect: M } = n,
         z = (0, o.e7)([U.default], () => U.default.getCurrentUser());
     r()(null != z, 'GuildHeaderPopout: user cannot be undefined'),
         l.useEffect(() => {
-            w.default.track(R.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: n.id });
+            w.default.track(R.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: e.id });
         });
-    let V = (0, o.e7)([S.ZP], () => S.ZP.isGuildCollapsed(n.id), [n.id]),
+    let V = (0, o.e7)([S.ZP], () => S.ZP.isGuildCollapsed(e.id), [e.id]),
         {
             canAccessSettings: W,
             canManageChannels: K,
@@ -62,24 +62,24 @@ let z = l.memo(function (e) {
         } = (0, o.cj)(
             [T.Z],
             () => ({
-                canAccessSettings: T.Z.canAccessGuildSettings(n),
-                canManageChannels: T.Z.can(R.Plq.MANAGE_CHANNELS, n),
-                showGuildAnalytics: T.Z.can(R.Plq.VIEW_GUILD_ANALYTICS, n) && n.hasFeature(R.oNc.COMMUNITY)
+                canAccessSettings: T.Z.canAccessGuildSettings(e),
+                canManageChannels: T.Z.can(R.Plq.MANAGE_CHANNELS, e),
+                showGuildAnalytics: T.Z.can(R.Plq.VIEW_GUILD_ANALYTICS, e) && e.hasFeature(R.oNc.COMMUNITY)
             }),
-            [n]
+            [e]
         ),
-        q = (0, G.N8)(n),
-        J = n.isOwner(z),
-        X = (0, o.e7)([y.Z], () => y.Z.isLurking(n.id), [n.id]),
-        Q = (0, o.e7)([P.ZP], () => P.ZP.isCurrentUserGuest(n.id)),
-        $ = (0, v.Z)(n.id, !0),
-        ee = (0, f.ZP)(n),
-        en = (0, Z.Z)({
+        q = (0, G.N8)(e),
+        J = e.isOwner(z),
+        X = (0, o.e7)([y.Z], () => y.Z.isLurking(e.id), [e.id]),
+        Q = (0, o.e7)([P.ZP], () => P.ZP.isCurrentUserGuest(e.id)),
+        $ = (0, v.Z)(e.id, !0),
+        nn = (0, f.ZP)(e),
+        ne = (0, Z.Z)({
             source: R.t4x.GUILD_HEADER,
-            guild: n
+            guild: e
         }),
-        et = (0, m.Z)({
-            guildId: n.id,
+        nt = (0, m.Z)({
+            guildId: e.id,
             userId: z.id,
             analyticsLocation: {
                 page: R.ZY5.GUILD_CHANNEL,
@@ -87,31 +87,31 @@ let z = l.memo(function (e) {
             },
             icon: d.PencilIcon
         }),
-        ei = n.hasFeature(R.oNc.HUB),
-        el = n.id === k._,
-        ea = (0, D.Z)(n.id),
-        er = (0, E.Z)(n),
-        eo = (0, _.Z)(n),
-        eu = (0, b.Z)(n, !0),
-        ed = (0, x.Z)(n),
-        { isFavoritesPerk: ec } = (0, h.z)('GuildHeaderPopout'),
-        { triggerDeadchat: es } = I.Z.useExperiment(
+        ni = e.hasFeature(R.oNc.HUB),
+        nl = e.id === k._,
+        na = (0, D.Z)(e.id),
+        nr = (0, E.Z)(e),
+        no = (0, _.Z)(e),
+        nu = (0, b.Z)(e, !0),
+        nd = (0, x.Z)(e),
+        { isFavoritesPerk: nc } = (0, h.z)('GuildHeaderPopout'),
+        { triggerDeadchat: ns } = I.Z.useExperiment(
             {
-                guildId: n.id,
+                guildId: e.id,
                 location: 'guild header'
             },
             { autoTrackExposure: !1 }
         ),
-        { triggerGamingStats: eg } = g.F.useExperiment(
+        { triggerGamingStats: ng } = g.F.useExperiment(
             {
-                guildId: n.id,
+                guildId: e.id,
                 location: 'guild header'
             },
             { autoTrackExposure: !1 }
         ),
-        eI = L.Y.useExperiment({ location: 'GuildHeaderPopout' }, { autoTrackExposure: !0 }).enabled,
-        [ef] = (0, p.cv)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
-        ep = eI && ef === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+        nI = L.Y.useExperiment({ location: 'GuildHeaderPopout' }, { autoTrackExposure: !0 }).enabled,
+        [nf] = (0, p.cv)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+        np = nI && nf === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
     return X || Q
         ? (0, i.jsx)(d.Menu, {
               onSelect: M,
@@ -124,11 +124,11 @@ let z = l.memo(function (e) {
                   label: B.intl.string(B.t.J2TBi4),
                   icon: d.DoorExitIcon,
                   action: () => {
-                      A.Z.leaveGuild(n.id), !Q && (0, j.uL)(R.Z5c.GUILD_DISCOVERY);
+                      A.Z.leaveGuild(e.id), !Q && (0, j.uL)(R.Z5c.GUILD_DISCOVERY);
                   }
               })
           })
-        : el
+        : nl
           ? (0, i.jsxs)(d.Menu, {
                 onSelect: M,
                 navId: 'favorites-header-popout',
@@ -138,7 +138,7 @@ let z = l.memo(function (e) {
                 children: [
                     (0, i.jsxs)(d.MenuGroup, {
                         children: [
-                            ec &&
+                            nc &&
                                 (0, i.jsx)(d.MenuItem, {
                                     id: 'add-channel',
                                     label: B.intl.string(B.t['6uDHk5']),
@@ -146,8 +146,8 @@ let z = l.memo(function (e) {
                                     icon: d.CirclePlusIcon,
                                     action: () =>
                                         (0, d.openModalLazy)(async () => {
-                                            let { default: e } = await t.e('29608').then(t.bind(t, 178125));
-                                            return (n) => (0, i.jsx)(e, { ...n });
+                                            let { default: n } = await t.e('29608').then(t.bind(t, 178125));
+                                            return (e) => (0, i.jsx)(n, { ...e });
                                         })
                                 }),
                             (0, i.jsx)(d.MenuItem, {
@@ -156,8 +156,8 @@ let z = l.memo(function (e) {
                                 icon: d.FolderPlusIcon,
                                 action: () =>
                                     (0, d.openModalLazy)(async () => {
-                                        let { default: e } = await t.e('33356').then(t.bind(t, 477782));
-                                        return (n) => (0, i.jsx)(e, { ...n });
+                                        let { default: n } = await t.e('33356').then(t.bind(t, 477782));
+                                        return (e) => (0, i.jsx)(n, { ...e });
                                     })
                             })
                         ]
@@ -167,12 +167,12 @@ let z = l.memo(function (e) {
                             id: 'hide-muted-channels',
                             label: B.intl.string(B.t.UwOLJC),
                             checked: V,
-                            action: () => c.Z.toggleCollapseGuild(n.id)
+                            action: () => c.Z.toggleCollapseGuild(e.id)
                         })
                     })
                 ]
             })
-          : ei
+          : ni
             ? (0, i.jsxs)(d.Menu, {
                   onSelect: M,
                   navId: 'guild-header-popout',
@@ -188,26 +188,26 @@ let z = l.memo(function (e) {
                                         label: B.intl.string(B.t['154/bG']),
                                         icon: d.SettingsIcon,
                                         action: () => {
-                                            A.Z.open(n.id, R.pNK.OVERVIEW);
+                                            A.Z.open(e.id, R.pNK.OVERVIEW);
                                         }
                                     })
                                   : null,
-                              en,
+                              ne,
                               (0, i.jsx)(d.MenuItem, {
                                   id: 'privacy',
                                   label: B.intl.string(B.t.BayiAg),
                                   icon: d.ShieldIcon,
                                   action: () =>
                                       (0, d.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('23217'), t.e('33053'), t.e('8016'), t.e('17298'), t.e('76540'), t.e('17938'), t.e('22646'), t.e('3940'), t.e('48923'), t.e('30419'), t.e('8821'), t.e('18824'), t.e('38175'), t.e('52547')]).then(t.bind(t, 241420));
+                                          let { default: n } = await Promise.resolve().then(t.bind(t, 241420));
                                           return (t) =>
-                                              (0, i.jsx)(e, {
+                                              (0, i.jsx)(n, {
                                                   ...t,
-                                                  guild: n
+                                                  guild: e
                                               });
                                       })
                               }),
-                              et
+                              nt
                           ]
                       }),
                       J
@@ -218,7 +218,7 @@ let z = l.memo(function (e) {
                                     label: B.intl.string(B.t.Dv8gFR),
                                     icon: d.DoorExitIcon,
                                     color: 'danger',
-                                    action: () => H(n)
+                                    action: () => H(e)
                                 })
                             })
                   ]
@@ -237,7 +237,7 @@ let z = l.memo(function (e) {
                               icon: (0, d.makeIconCompat)(O.Z),
                               action: () => {
                                   (0, C.f)({
-                                      guildId: n.id,
+                                      guildId: e.id,
                                       location: { section: R.jXE.GUILD_HEADER_POPOUT }
                                   });
                               }
@@ -245,34 +245,34 @@ let z = l.memo(function (e) {
                       }),
                       (0, i.jsxs)(d.MenuGroup, {
                           children: [
-                              J && z.isStaff() && es
+                              J && z.isStaff() && ns
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'create-deadchat',
                                         label: 'Deadchat Ping',
                                         icon: d.ChatCheckIcon,
                                         action: () => {
-                                            (0, s.j8)(n.id, R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT);
+                                            (0, s.j8)(e.id, R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT);
                                         }
                                     })
                                   : null,
-                              J && z.isStaff() && eg
+                              J && z.isStaff() && ng
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'create-gaming-ping',
                                         label: 'Gaming Stats Ping',
                                         icon: d.ChatCheckIcon,
                                         action: () => {
-                                            (0, s.j8)(n.id, R.uaV.GUILD_GAMING_STATS_PROMPT);
+                                            (0, s.j8)(e.id, R.uaV.GUILD_GAMING_STATS_PROMPT);
                                         }
                                     })
                                   : null,
-                              en,
+                              ne,
                               W
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'settings',
                                         label: B.intl.string(B.t['154/bG']),
                                         icon: d.SettingsIcon,
                                         action: () => {
-                                            A.Z.open(n.id, R.pNK.OVERVIEW);
+                                            A.Z.open(e.id, R.pNK.OVERVIEW);
                                         }
                                     })
                                   : null,
@@ -281,7 +281,7 @@ let z = l.memo(function (e) {
                                         id: 'insights',
                                         label: B.intl.string(B.t['0wWfUF']),
                                         icon: d.AnalyticsIcon,
-                                        action: () => A.Z.open(n.id, R.pNK.ANALYTICS)
+                                        action: () => A.Z.open(e.id, R.pNK.ANALYTICS)
                                     })
                                   : null,
                               K
@@ -293,12 +293,12 @@ let z = l.memo(function (e) {
                                                 icon: d.CirclePlusIcon,
                                                 action: () =>
                                                     (0, d.openModalLazy)(async () => {
-                                                        let { default: e } = await Promise.all([t.e('45094'), t.e('5506')]).then(t.bind(t, 218613));
+                                                        let { default: n } = await Promise.all([t.e('45094'), t.e('5506')]).then(t.bind(t, 218613));
                                                         return (t) =>
-                                                            (0, i.jsx)(e, {
+                                                            (0, i.jsx)(n, {
                                                                 ...t,
                                                                 channelType: R.d4z.GUILD_TEXT,
-                                                                guildId: n.id
+                                                                guildId: e.id
                                                             });
                                                     })
                                             }),
@@ -308,12 +308,12 @@ let z = l.memo(function (e) {
                                                 icon: d.FolderPlusIcon,
                                                 action: () =>
                                                     (0, d.openModalLazy)(async () => {
-                                                        let { default: e } = await Promise.all([t.e('45094'), t.e('5506')]).then(t.bind(t, 218613));
+                                                        let { default: n } = await Promise.all([t.e('45094'), t.e('5506')]).then(t.bind(t, 218613));
                                                         return (t) =>
-                                                            (0, i.jsx)(e, {
+                                                            (0, i.jsx)(n, {
                                                                 ...t,
                                                                 channelType: R.d4z.GUILD_CATEGORY,
-                                                                guildId: n.id
+                                                                guildId: e.id
                                                             });
                                                     })
                                             })
@@ -321,36 +321,36 @@ let z = l.memo(function (e) {
                                     })
                                   : null,
                               $,
-                              er,
-                              eo,
-                              ee,
-                              ed
+                              nr,
+                              no,
+                              nn,
+                              nd
                           ]
                       }),
                       (0, i.jsxs)(d.MenuGroup, {
                           children: [
-                              ea,
+                              na,
                               (0, i.jsx)(d.MenuItem, {
                                   id: 'notifications',
                                   label: (0, i.jsxs)('div', {
                                       className: F.newBadgeRow,
                                       children: [
                                           B.intl.string(B.t.h850Sk),
-                                          ep &&
+                                          np &&
                                               (0, i.jsx)(d.TextBadge, {
                                                   className: F.newBadge,
                                                   text: B.intl.string(B.t.y2b7CA)
                                               })
                                       ]
                                   }),
-                                  icon: ep ? void 0 : d.BellIcon,
+                                  icon: np ? void 0 : d.BellIcon,
                                   action: () =>
                                       (0, d.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('5863'), t.e('97984')]).then(t.bind(t, 751212));
+                                          let { default: n } = await Promise.all([t.e('5863'), t.e('48406')]).then(t.bind(t, 751212));
                                           return (t) =>
-                                              (0, i.jsx)(e, {
+                                              (0, i.jsx)(n, {
                                                   ...t,
-                                                  guildId: n.id
+                                                  guildId: e.id
                                               });
                                       })
                               }),
@@ -360,11 +360,11 @@ let z = l.memo(function (e) {
                                   icon: d.ShieldIcon,
                                   action: () =>
                                       (0, d.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([t.e('23217'), t.e('33053'), t.e('8016'), t.e('17298'), t.e('76540'), t.e('17938'), t.e('22646'), t.e('3940'), t.e('48923'), t.e('30419'), t.e('8821'), t.e('18824'), t.e('38175'), t.e('52547')]).then(t.bind(t, 241420));
+                                          let { default: n } = await Promise.resolve().then(t.bind(t, 241420));
                                           return (t) =>
-                                              (0, i.jsx)(e, {
+                                              (0, i.jsx)(n, {
                                                   ...t,
-                                                  guild: n
+                                                  guild: e
                                               });
                                       })
                               })
@@ -372,25 +372,25 @@ let z = l.memo(function (e) {
                       }),
                       (0, i.jsxs)(d.MenuGroup, {
                           children: [
-                              et,
+                              nt,
                               (0, i.jsx)(d.MenuCheckboxItem, {
                                   id: 'hide-muted-channels',
                                   label: B.intl.string(B.t.UwOLJC),
                                   checked: V,
-                                  action: () => c.Z.toggleCollapseGuild(n.id)
+                                  action: () => c.Z.toggleCollapseGuild(e.id)
                               })
                           ]
                       }),
                       (0, i.jsxs)(d.MenuGroup, {
                           children: [
-                              eu,
-                              q && n.isCommunity()
+                              nu,
+                              q && e.isCommunity()
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'report-raid',
                                         label: B.intl.string(B.t.cswId3),
                                         icon: d.ShieldIcon,
                                         color: 'danger',
-                                        action: () => (0, N.J)(n.id)
+                                        action: () => (0, N.J)(e.id)
                                     })
                                   : null,
                               J
@@ -400,11 +400,11 @@ let z = l.memo(function (e) {
                                         label: B.intl.string(B.t.J2TBi4),
                                         icon: d.DoorExitIcon,
                                         color: 'danger',
-                                        action: () => H(n)
+                                        action: () => H(e)
                                     })
                           ]
                       })
                   ]
               });
 });
-n.default = z;
+e.default = z;

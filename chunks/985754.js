@@ -48,40 +48,40 @@ let u = new Set([o.pK.ARS, o.pK.CLP, o.pK.COP]),
     },
     A = (e) => {
         let { localizedPricingPromo: t, subscription: n, forceSingleLine: a = !1, userLocale: h } = e,
-            { countryCode: A, amount: N, currency: f, paymentSourceTypes: y } = t,
-            _ = 0 !== y.length,
-            P = E(A),
-            b = (0, s.T4)(N, f, {
+            { countryCode: A, amount: y, currency: f, paymentSourceTypes: N } = t,
+            P = 0 !== N.length,
+            _ = E(A),
+            b = (0, s.T4)(y, f, {
                 style: 'currency',
                 currency: f,
                 currencyDisplay: 'symbol',
-                localeOverride: P
+                localeOverride: _
             }),
-            C = c.intl.format(c.t['4cHbQ0'], {
+            g = c.intl.format(c.t['4cHbQ0'], {
                 helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                 currencyISOCode: f.toUpperCase(),
                 localizedPriceWithCurrencySymbol: b
             });
         if (
             (d.has(f) &&
-                (C = c.intl.format(c.t['5kvQMz'], {
+                (g = c.intl.format(c.t['5kvQMz'], {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                     localizedPriceWithCurrencySymbol: b
                 })),
             u.has(f) &&
-                (C = c.intl.format(c.t.BrYPGh, {
+                (g = c.intl.format(c.t.BrYPGh, {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                     currencyISOCode: f.toUpperCase(),
                     localizedPriceWithCurrencySymbol: b
                 })),
             null != n &&
                 !n.hasPremiumNitroMonthly &&
-                (C = c.intl.format(c.t.xnD0NT, {
+                (g = c.intl.format(c.t.xnD0NT, {
                     helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                     currencyISOCode: f.toUpperCase()
                 })),
             f === o.pK.EUR &&
-                (C = a
+                (g = a
                     ? c.intl.format(c.t.o60rUF, {
                           country: (0, r.q9)(A),
                           currencyISOCode: f.toUpperCase(),
@@ -91,28 +91,28 @@ let u = new Set([o.pK.ARS, o.pK.CLP, o.pK.COP]),
                           currencyISOCode: f.toUpperCase(),
                           helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING)
                       })),
-            _)
+            P)
         ) {
-            let e = m.filter((e) => y.includes(e)),
-                t = [...e, ...y.filter((e) => !m.includes(e))].slice(0, 2).map((e) => {
+            let e = m.filter((e) => N.includes(e)),
+                t = [...e, ...N.filter((e) => !m.includes(e))].slice(0, 2).map((e) => {
                     var t, n;
                     return null !== (n = null === (t = p[e]) || void 0 === t ? void 0 : t.call(p)) && void 0 !== n ? n : c.intl.string(c.t.jdPblp);
                 });
-            y.length >= 3 && t.push(c.intl.string(c.t.Tp5NkZ));
+            N.length >= 3 && t.push(c.intl.string(c.t.Tp5NkZ));
             let n = new Intl.ListFormat(h, {
                 style: 'short',
                 type: 'conjunction'
             });
-            C = c.intl.format(c.t.QqRQPj, {
+            g = c.intl.format(c.t.QqRQPj, {
                 helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING),
                 paymentMethods: n.format(t)
             });
         }
         return {
             localizedPricingBannerHeader: c.intl.formatToPlainString(c.t.BuFSam, { country: (0, r.q9)(A) }),
-            localizedPricingBannerBody: C,
+            localizedPricingBannerBody: g,
             localizedPricingBannerLinkOnly: c.intl.format(c.t.XufWPj, { helpCenterLink: l.Z.getArticleURL(i.BhN.LOCALIZED_PRICING) }),
-            localizedPricingBannerSubNotif: _ ? void 0 : c.intl.string(c.t.YDdBe3)
+            localizedPricingBannerSubNotif: P ? void 0 : c.intl.string(c.t.YDdBe3)
         };
     },
     E = (e) => {

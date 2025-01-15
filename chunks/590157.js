@@ -9,19 +9,19 @@ var i = n(200651),
     a = n(481060),
     o = n(366598),
     s = n(821864),
-    c = n(905753),
-    d = n(995390),
+    d = n(905753),
+    c = n(995390),
     u = n(469880),
     m = n(665578),
     h = n(388032),
     p = n(859600);
 function g(e) {
-    let { application: t, canNavigate: n, guildId: d } = e,
-        m = (0, r.e7)([c.Z], () => c.Z.isUnavailable());
+    let { application: t, canNavigate: n, guildId: c } = e,
+        m = (0, r.e7)([d.Z], () => d.Z.isUnavailable());
     return (l.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
     l.useEffect(() => {
-        s.gq(t.id, d, t.id), s.Sn(d, t.id);
-    }, [t.id, d]),
+        s.gq(t.id, c, t.id), s.Sn(c, t.id);
+    }, [t.id, c]),
     m)
         ? null
         : (0, i.jsxs)(l.Fragment, {
@@ -39,21 +39,21 @@ function g(e) {
                       children: h.intl.string(h.t.sCkD3d)
                   }),
                   (0, i.jsx)(x, {
-                      guildId: d,
+                      guildId: c,
                       applicationId: t.id
                   }),
                   (0, i.jsx)(u.Z, {
                       applicationIcon: t.icon,
                       applicationName: t.name,
                       canNavigate: n,
-                      guildId: d
+                      guildId: c
                   })
               ]
           });
 }
 function x(e) {
     let { applicationId: t, guildId: n } = e,
-        { originalApplicationPermissions: l, editedTargetPermissions: r, selectedPermissionCount: a } = (0, d.Z)(n, t);
+        { originalApplicationPermissions: l, editedTargetPermissions: r, selectedPermissionCount: a } = (0, c.Z)(n, t);
     return (0, i.jsx)('div', {
         className: p.applicationPermissions,
         children: (0, i.jsx)(m.Z, {

@@ -1,12 +1,12 @@
 n.d(t, {
     Vq: function () {
-        return _;
+        return P;
     },
     c8: function () {
-        return y;
+        return N;
     },
     oQ: function () {
-        return P;
+        return _;
     }
 });
 var a = n(200651);
@@ -24,11 +24,11 @@ var r = n(120356),
     h = n(388032),
     A = n(792776),
     E = n(51125),
-    N = n(47268);
+    y = n(47268);
 function f(e) {
     let { className: t } = e,
         n = (0, c.ZP)(),
-        r = (0, i.wj)(n) ? E : N;
+        r = (0, i.wj)(n) ? E : y;
     return (0, a.jsxs)('div', {
         className: l()(A.container, t),
         children: [
@@ -51,10 +51,10 @@ function f(e) {
         ]
     });
 }
-function y() {
+function N() {
     return (0, a.jsx)(f, { className: A.settings });
 }
-function _(e) {
+function P(e) {
     let { onClose: t } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -70,7 +70,7 @@ function _(e) {
         ]
     });
 }
-function P(e) {
+function _(e) {
     let { className: t } = e;
     return (0, p.Q)()
         ? (0, a.jsxs)(o.Card, {

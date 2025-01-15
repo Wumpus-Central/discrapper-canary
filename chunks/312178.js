@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(990673),
     v = n(906037),
     x = n(430036),
-    _ = n(839434),
+    Z = n(383099),
     S = n(981631);
-function Z(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ let E = {
     },
     [S.Odu.VOICE](e) {
         let { id: t, anchor: n, isPreviewingInGame: s, locked: r, pinned: a } = e;
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(Z.Z, {
             anchor: n,
             id: t,
             locked: r,
@@ -106,8 +106,8 @@ class C extends s.PureComponent {
         let { id: o, pinned: l, zIndex: c, size: u, anchor: h } = e,
             f = (0, p.w_)(u, n),
             g = (0, p.KR)(h, n),
-            { minSize: m, resizeX: x, resizeY: _, dragAnywhere: S } = t,
-            Z = (0, v.eM)({
+            { minSize: m, resizeX: x, resizeY: Z, dragAnywhere: S } = t,
+            _ = (0, v.eM)({
                 locked: s,
                 isPreviewingInGame: r,
                 pinned: l
@@ -127,9 +127,9 @@ class C extends s.PureComponent {
                   anchor: g,
                   container: E,
                   minSize: m,
-                  hidden: !Z,
+                  hidden: !_,
                   resizeX: x,
-                  resizeY: _,
+                  resizeY: Z,
                   style: { zIndex: c },
                   dragAnywhere: S,
                   active: !s || a,
@@ -142,11 +142,11 @@ class C extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'state', {
+            _(this, 'state', {
                 lastLayoutUpdate: null,
                 dragging: !1
             }),
-            Z(this, 'handleUpdate', (e, t, n, i, s) => {
+            _(this, 'handleUpdate', (e, t, n, i, s) => {
                 let {
                     props: { layoutSize: r },
                     state: { lastLayoutUpdate: o }
@@ -176,15 +176,15 @@ class C extends s.PureComponent {
                     }
                 });
             }),
-            Z(this, 'handleFocus', (e) => {
+            _(this, 'handleFocus', (e) => {
                 let { layoutSize: t } = this.props;
                 (0, f.Te)(t) && (0, a.Os)(e);
             }),
-            Z(this, 'handleDragStart', () => {
+            _(this, 'handleDragStart', () => {
                 let { widget: e } = this.props;
                 null != e && (e.pinned && o.Z.setPreviewInGameMode(!0), this.setState({ dragging: !0 }));
             }),
-            Z(this, 'handleDragEnd', () => {
+            _(this, 'handleDragEnd', () => {
                 let { widget: e } = this.props;
                 null != e && (e.pinned && o.Z.setPreviewInGameMode(!1), this.setState({ dragging: !1 }));
             });

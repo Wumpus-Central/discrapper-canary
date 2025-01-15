@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(481060),
     h = n(239091),
     p = n(100527),
-    f = n(367907),
-    m = n(906732),
+    m = n(367907),
+    f = n(906732),
     g = n(540059),
     v = n(434404),
     C = n(496675),
@@ -65,7 +65,7 @@ let T = (0, _.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
         r = (0, g.Q3)('GuildBoostingSidebarDisplay'),
-        { analyticsLocations: u } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { analyticsLocations: u } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: v, id: _ } = t,
         T = (0, I.rF)(v, _),
         A = (0, I.FZ)(T, t.id),
@@ -88,7 +88,7 @@ t.ZP = (e) => {
         },
         [U, O] = (0, d.useSpring)(() => k),
         V = () => {
-            (0, f.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+            (0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: E.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: _,
                 location_stack: u

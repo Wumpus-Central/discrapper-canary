@@ -5,8 +5,8 @@ var i,
     r = n(120356),
     a = n.n(r),
     o = n(442837),
-    c = n(481060),
-    d = n(607070),
+    d = n(481060),
+    c = n(607070),
     u = n(251625),
     h = n(226951),
     m = n(981631),
@@ -41,7 +41,7 @@ class f extends (i = s.Component) {
             n = [];
         if (this.isEmpty()) n.push(1);
         else for (let e of t) n.push(e.length);
-        return (0, l.jsxs)(c.Dialog, {
+        return (0, l.jsxs)(d.Dialog, {
             className: a()(
                 p.container,
                 (function (e) {
@@ -76,7 +76,7 @@ class f extends (i = s.Component) {
                 }),
                 (0, l.jsx)('section', {
                     className: p.sectionTag,
-                    children: (0, l.jsx)(c.List, {
+                    children: (0, l.jsx)(d.List, {
                         className: p.autocompleteScroller,
                         fade: !0,
                         sections: n,
@@ -205,16 +205,16 @@ class f extends (i = s.Component) {
                     );
                 let r = this.getRows(),
                     o = this.getSelectedSection(r),
-                    d = null === (t = r[n]) || void 0 === t ? void 0 : t[i];
+                    c = null === (t = r[n]) || void 0 === t ? void 0 : t[i];
                 return (0, l.jsx)(
-                    c.Clickable,
+                    d.Clickable,
                     {
                         onClick: this.handleClick.bind(this, n, i),
                         onMouseEnter: this.handleMouseEnter.bind(this, n, i),
                         className: a()(p.row, { [p.selected]: o === n && s === i }),
                         children: (0, l.jsx)('div', {
                             className: p.rowInner,
-                            children: this.props.onRenderResult(d, n)
+                            children: this.props.onRenderResult(c, n)
                         })
                     },
                     ''.concat(n, '-').concat(i)
@@ -222,4 +222,4 @@ class f extends (i = s.Component) {
             });
     }
 }
-x(f, 'defaultProps', { sections: [null] }), (t.Z = o.ZP.connectStores([d.Z], () => ({ keyboardModeEnabled: d.Z.keyboardModeEnabled }))(f));
+x(f, 'defaultProps', { sections: [null] }), (t.Z = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(f));

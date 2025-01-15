@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return B;
     }
 }),
     n(653041),
@@ -39,8 +39,8 @@ var i = n(200651),
     y = n(823578);
 let O = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     M = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    k = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
-function D(e) {
+    D = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+function k(e) {
     let { members: t, membersOnline: n, isLarge: r, isStacked: l } = e,
         o = [];
     return (
@@ -90,7 +90,7 @@ function D(e) {
         })
     );
 }
-function B(e) {
+function U(e) {
     let { channel: t, guild: n, isStacked: r, hasEnded: l } = e;
     if (null != t && null != n) {
         let e = (0, I.KS)(t, n);
@@ -134,13 +134,13 @@ function B(e) {
           })
         : null;
 }
-function U(e) {
+function B(e) {
     var t, n;
     let l,
         o,
         { invite: d, getAcceptInviteContext: I } = e,
-        { approximate_member_count: x, approximate_presence_count: j, target_type: U, target_application: w } = d;
-    s()(U === P.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
+        { approximate_member_count: x, approximate_presence_count: j, target_type: B, target_application: w } = d;
+    s()(B === P.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
     let F = r.useRef(null),
         [G, V] = r.useState(!1),
         [H, z] = r.useState(!1);
@@ -149,7 +149,7 @@ function U(e) {
                 (function () {
                     var e;
                     let t = null === (e = F.current) || void 0 === e ? void 0 : e.offsetWidth;
-                    null != t && (V(t < k + M), z(t <= 2 * O));
+                    null != t && (V(t < D + M), z(t <= 2 * O));
                 })()
             ),
             t = F.current;
@@ -245,7 +245,7 @@ function U(e) {
                                       variant: 'heading-xl/semibold',
                                       children: null == K ? void 0 : K.name
                                   }),
-                                  (0, i.jsx)(B, {
+                                  (0, i.jsx)(U, {
                                       channel: Q,
                                       guild: W,
                                       isStacked: H,
@@ -276,7 +276,7 @@ function U(e) {
                                       : null,
                                   ei
                                       ? null
-                                      : (0, i.jsx)(D, {
+                                      : (0, i.jsx)(k, {
                                             members: x,
                                             membersOnline: j,
                                             isLarge: G,

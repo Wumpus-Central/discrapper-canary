@@ -1,15 +1,15 @@
 n.d(t, {
     S: function () {
-        return a;
+        return l;
     },
     V: function () {
-        return l;
+        return a;
     }
 });
 var i = n(200651),
     s = n(481060),
     r = n(388032);
-function l(e) {
+function a(e) {
     let { body: t, ...r } = e;
     (0, s.openModalLazy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
@@ -24,9 +24,9 @@ function l(e) {
             });
     });
 }
-function a(e) {
+function l(e) {
     let { message: t } = e;
-    l({
+    a({
         header: r.intl.string(r.t.OjbtDg),
         confirmText: r.intl.string(r.t.BddRzc),
         body: t

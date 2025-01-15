@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(481060),
-    l = n(484614),
-    a = n(313201),
+    a = n(484614),
+    l = n(313201),
     o = n(518638),
     c = n(388032),
     d = n(660604);
@@ -41,22 +41,22 @@ function u(e) {
     });
 }
 t.Z = function (e) {
-    let { onClose: t, onClaim: n, code: m, outboundPromotion: h, transitionState: g } = e,
+    let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: h } = e,
         [p, x] = s.useState(null),
-        S = (0, a.Dt)();
+        f = (0, l.Dt)();
     return (
         s.useEffect(() => {
             null == m &&
-                (0, o.A2)(h.id)
+                (0, o.A2)(g.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
                         return x(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code);
                     });
-        }, [m, h.id, n]),
+        }, [m, g.id, n]),
         (0, i.jsx)(r.ModalRoot, {
-            transitionState: g,
-            'aria-labelledby': S,
+            transitionState: h,
+            'aria-labelledby': f,
             children:
                 null != p
                     ? (0, i.jsx)(u, { onClose: t })
@@ -80,14 +80,14 @@ t.Z = function (e) {
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
-                                            children: h.outboundRedemptionModalBody
+                                            children: g.outboundRedemptionModalBody
                                         }),
                                         (0, i.jsx)(r.FormDivider, { className: d.formDivider }),
                                         (0, i.jsxs)(r.FormSection, {
                                             title: c.intl.string(c.t.s9LFQk),
                                             className: d.formSection,
                                             children: [
-                                                (0, i.jsx)(l.Z, {
+                                                (0, i.jsx)(a.Z, {
                                                     value: m,
                                                     buttonColor: r.Button.Colors.BRAND,
                                                     buttonLook: r.Button.Looks.FILLED,
@@ -108,7 +108,7 @@ t.Z = function (e) {
                                         (0, i.jsx)(r.Button, {
                                             color: r.Button.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, o.BU)(m, h);
+                                                let e = (0, o.BU)(m, g);
                                                 window.open(e, '_blank');
                                             },
                                             children: c.intl.string(c.t['+zx47e'])

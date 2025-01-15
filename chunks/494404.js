@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return D;
+        return k;
     },
     h4: function () {
         return L;
@@ -147,13 +147,13 @@ let M = d.ZP.connectStores([N.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && N.Z.can(b.Plq.MANAGE_MESSAGES, t) };
 })(O);
-function k(e) {
+function D(e) {
     let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: m, renderHeader: h, renderEmptyState: g, renderItem: E, getProTip: I, scrollerClassName: x, className: N, listName: Z } = e,
         L = r.useRef(null),
         y = (0, f.Z)(Z, L),
         O = (0, d.e7)([v.ZP], () => v.ZP.hasNotice()),
         M = (0, d.e7)([T.Z], () => T.Z.windowSize()),
-        k = (0, _.Q3)('ItemsPopout');
+        D = (0, _.Q3)('ItemsPopout');
     r.useEffect(() => {
         S.default.track(b.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -174,15 +174,15 @@ function k(e) {
                 }
             );
         }, []);
-    let D = r.useCallback(() => {
+    let k = r.useCallback(() => {
             var e;
             let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !o && (null == m || m());
         }, [l, m, o]),
-        B = [],
-        U = !0;
+        U = [],
+        B = !0;
     null == n
-        ? (B = [
+        ? (U = [
               (0, i.jsx)(
                   'div',
                   {
@@ -193,11 +193,11 @@ function k(e) {
               )
           ])
         : 0 === n.length
-          ? B.push((0, i.jsx)(r.Fragment, { children: g(C.Z.theme) }, 'empty-state'))
-          : ((U = !1),
-            (B = []),
+          ? U.push((0, i.jsx)(r.Fragment, { children: g(C.Z.theme) }, 'empty-state'))
+          : ((B = !1),
+            (U = []),
             s().each(n, (e) => {
-                B.push(...E(e));
+                U.push(...E(e));
             }));
     let w = null;
     null != n &&
@@ -229,7 +229,7 @@ function k(e) {
                 }));
     let F = null == I ? void 0 : I(),
         G =
-            U && null != F
+            B && null != F
                 ? (0, i.jsx)('div', {
                       className: R.footer,
                       children: (0, i.jsx)(p.Z, {
@@ -243,7 +243,7 @@ function k(e) {
                   })
                 : null,
         V = { maxHeight: M.height - 43 - 25 };
-    O && (V.maxHeight -= 40), k && (V.maxHeight -= 48);
+    O && (V.maxHeight -= 40), D && (V.maxHeight -= 48);
     let H = null != m && l;
     return (0, i.jsx)('div', {
         className: a()(N, R.messagesPopoutWrap),
@@ -256,7 +256,7 @@ function k(e) {
             children: [
                 (0, i.jsxs)(u.AdvancedScroller, {
                     className: a()(R.messagesPopout, x),
-                    onScroll: H ? D : void 0,
+                    onScroll: H ? k : void 0,
                     ref: L,
                     children: [
                         (0, i.jsx)(c.bG, {
@@ -267,7 +267,7 @@ function k(e) {
                                     return (0, i.jsx)('div', {
                                         ref: t,
                                         ...n,
-                                        children: B
+                                        children: U
                                     });
                                 }
                             })
@@ -280,7 +280,7 @@ function k(e) {
         })
     });
 }
-function D(e) {
+function k(e) {
     let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: u, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: _, renderMessage: C, getProTip: N, scrollerClassName: v, className: T, onCloseMessage: S, listName: A } = e,
         Z = (0, d.e7)([x.Z], () => {
             let e = null != l ? x.Z.getMessages(l.id) : null;
@@ -318,7 +318,7 @@ function D(e) {
                   })),
         [a, l]
     );
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(D, {
         className: T,
         scrollerClassName: v,
         items: L,

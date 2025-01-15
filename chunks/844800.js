@@ -2,17 +2,17 @@ var i,
     r,
     s,
     l,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 let c = !1,
-    u = null,
-    d = null;
-class h extends (l = a.ZP.Store) {
+    d = null,
+    u = null;
+class h extends (l = o.ZP.Store) {
     getState() {
         return {
             verifySuccess: c,
-            verifyErrors: u,
-            redirectGuildId: d
+            verifyErrors: d,
+            redirectGuildId: u
         };
     }
 }
@@ -25,13 +25,13 @@ class h extends (l = a.ZP.Store) {
               writable: !0
           })
         : (i[r] = s),
-    (t.Z = new h(o.Z, {
+    (t.Z = new h(a.Z, {
         HUB_VERIFY_EMAIL_SUCCESS: function (e) {
             let { guildId: t } = e;
-            (c = !0), (u = null), (d = t);
+            (c = !0), (d = null), (u = t);
         },
         HUB_VERIFY_EMAIL_FAILURE: function (e) {
             let { errors: t } = e;
-            (c = !1), (u = t);
+            (c = !1), (d = t);
         }
     }));

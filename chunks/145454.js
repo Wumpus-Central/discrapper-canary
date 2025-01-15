@@ -3,17 +3,17 @@ var s = n(200651),
     i = n(192379),
     o = n(120356),
     l = n.n(o),
-    a = n(772848),
-    r = n(990547),
+    r = n(772848),
+    a = n(990547),
     h = n(481060),
-    u = n(600164),
-    d = n(7557),
-    c = n(200357),
+    c = n(600164),
+    u = n(7557),
+    d = n(200357),
     p = n(388032),
-    m = n(853206),
-    f = n(652849),
-    g = n(232186);
-function C(e, t, n) {
+    E = n(853206),
+    m = n(652849),
+    R = n(232186);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function C(e, t, n) {
         e
     );
 }
-class y extends i.PureComponent {
+class C extends i.PureComponent {
     async componentDidMount() {
         let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this._lottieRef &&
@@ -43,40 +43,40 @@ class y extends i.PureComponent {
     }
     render() {
         let e, t, n;
-        let { error: i, working: o, transitionState: a, validPhone: C } = this.props;
+        let { error: i, working: o, transitionState: r, validPhone: f } = this.props;
         return (
             (e =
                 null != i && '' !== i
                     ? (0, s.jsx)('div', {
-                          className: l()(m.description, m.error, g.marginBottom20),
+                          className: l()(E.description, E.error, R.marginBottom20),
                           children: i
                       })
-                    : C
+                    : f
                       ? (0, s.jsx)('div', {
-                            className: l()(m.description, g.marginBottom20),
+                            className: l()(E.description, R.marginBottom20),
                             children: p.intl.string(p.t['4qMI6O'])
                         })
                       : (0, s.jsxs)(s.Fragment, {
                             children: [
                                 (0, s.jsx)('div', {
-                                    className: l()(m.description, g.marginBottom20),
+                                    className: l()(E.description, R.marginBottom20),
                                     children: p.intl.string(p.t.Vp9je3)
                                 }),
                                 (0, s.jsx)('div', {
-                                    className: l()(m.description, g.marginBottom20),
+                                    className: l()(E.description, R.marginBottom20),
                                     children: p.intl.format(p.t['3BTmqa'], {})
                                 })
                             ]
                         })),
-            (t = C
-                ? (0, s.jsxs)(u.Z, {
-                      className: m.field,
-                      direction: u.Z.Direction.VERTICAL,
-                      align: u.Z.Align.CENTER,
+            (t = f
+                ? (0, s.jsxs)(c.Z, {
+                      className: E.field,
+                      direction: c.Z.Direction.VERTICAL,
+                      align: c.Z.Align.CENTER,
                       children: [
-                          (0, s.jsx)(d.Z, { onSubmit: this.handleVerifyPhone }),
+                          (0, s.jsx)(u.Z, { onSubmit: this.handleVerifyPhone }),
                           (0, s.jsx)(h.Button, {
-                              className: g.marginTop8,
+                              className: R.marginTop8,
                               size: h.ButtonSizes.SMALL,
                               look: h.ButtonLooks.LINK,
                               color: h.ButtonColors.PRIMARY,
@@ -85,24 +85,24 @@ class y extends i.PureComponent {
                           })
                       ]
                   })
-                : (0, s.jsx)(c.Z, {
-                      className: m.field,
+                : (0, s.jsx)(d.Z, {
+                      className: E.field,
                       onSubmit: this.handleAddPhone,
                       submitting: o
                   })),
-            (n = C ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
+            (n = f ? p.intl.string(p.t.Xclkxs) : p.intl.string(p.t.uR76s7)),
             (0, s.jsxs)(h.ModalRoot, {
-                impression: { impressionName: r.ImpressionNames.USER_VERIFY_PHONE },
-                transitionState: a,
-                className: l()(m.phoneVerificationModal, f.vertical, f.alignCenter, f.justifyCenter, g.marginTop60),
+                impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE },
+                transitionState: r,
+                className: l()(E.phoneVerificationModal, m.vertical, m.alignCenter, m.justifyCenter, R.marginTop60),
                 'aria-labelledby': this.headerId,
                 children: [
                     (0, s.jsx)('div', {
-                        className: m.animationContainer,
+                        className: E.animationContainer,
                         ref: this.setLottieRef
                     }),
                     (0, s.jsx)('div', {
-                        className: l()(m.title, g.marginBottom8),
+                        className: l()(E.title, R.marginBottom8),
                         id: this.headerId,
                         children: n
                     }),
@@ -114,13 +114,13 @@ class y extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            C(this, '_animItem', null),
-            C(this, '_lottieRef', void 0),
-            C(this, 'headerId', (0, a.Z)()),
-            C(this, 'setLottieRef', (e) => {
+            f(this, '_animItem', null),
+            f(this, '_lottieRef', void 0),
+            f(this, 'headerId', (0, r.Z)()),
+            f(this, 'setLottieRef', (e) => {
                 this._lottieRef = e;
             }),
-            C(this, 'handleAddPhone', (e) => {
+            f(this, 'handleAddPhone', (e) => {
                 this.state.animated || null == this._animItem
                     ? this.setState({ phone: e })
                     : (this._animItem.play(),
@@ -131,11 +131,11 @@ class y extends i.PureComponent {
                 let { onAddPhone: t } = this.props;
                 null == t || t(e);
             }),
-            C(this, 'handleVerifyPhone', (e) => {
+            f(this, 'handleVerifyPhone', (e) => {
                 let { onVerifyPhone: t } = this.props;
                 null == t || t(e);
             }),
-            C(this, 'handleResendCode', () => {
+            f(this, 'handleResendCode', () => {
                 let { onAddPhone: e } = this.props;
                 null == e || e(this.state.phone);
             }),
@@ -145,4 +145,4 @@ class y extends i.PureComponent {
             });
     }
 }
-t.Z = y;
+t.Z = C;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return U;
     }
 }),
     n(47120);
@@ -37,9 +37,9 @@ var i = n(200651),
     y = n(981631),
     O = n(388032),
     M = n(363637),
-    k = n(413097),
-    D = n(970952);
-function B(e) {
+    D = n(413097),
+    k = n(970952);
+function U(e) {
     let { applicationId: t, embedUrl: n } = e,
         [l, a, s] = (0, o.Wu)([Z.Z], () => [Z.Z.getApplication(t), Z.Z.isFetchingApplication(t), Z.Z.didFetchingApplicationFail(t)], [t]);
     return (r.useEffect(() => {
@@ -51,13 +51,13 @@ function B(e) {
             installParams: l.installParams,
             integrationTypesConfig: l.integrationTypesConfig
         }))
-        ? (0, i.jsx)(U, {
+        ? (0, i.jsx)(B, {
               application: l,
               embedUrl: n
           })
         : null;
 }
-function U(e) {
+function B(e) {
     var t;
     let { application: n, embedUrl: d } = e,
         u = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
@@ -69,16 +69,16 @@ function U(e) {
         {
             iconURL: R,
             name: Z,
-            description: B
+            description: U
         } = r.useMemo(
             () =>
                 (0, _.sl)(n, {
-                    fakeAppIconURL: k,
+                    fakeAppIconURL: D,
                     size: 56
                 }),
             [n]
         ),
-        U = r.useMemo(() => (null != B ? (0, N.parseBioReact)(B) : null), [B]),
+        B = r.useMemo(() => (null != U ? (0, N.parseBioReact)(U) : null), [U]),
         [F, G] = r.useState(!1),
         V = r.useCallback((e) => {
             e && G(!0);
@@ -126,7 +126,7 @@ function U(e) {
                   (0, i.jsx)('img', {
                       className: M.icon,
                       alt: n.name,
-                      src: null != R ? R : D,
+                      src: null != R ? R : k,
                       'aria-hidden': !0,
                       draggable: !1
                   }),
@@ -141,11 +141,11 @@ function U(e) {
                                       color: 'interactive-active',
                                       children: Z
                                   }),
-                                  null != U &&
+                                  null != B &&
                                       (0, i.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: U
+                                          children: B
                                       })
                               ]
                           }),

@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    l = n(981631);
-function s() {
-    (0, i.openModalLazy)(async () => {
+var s = n(481060),
+    r = n(981631);
+function a() {
+    (0, s.openModalLazy)(async () => {
         let { default: e } = await n.e('38047').then(n.bind(n, 975863));
         return (t) =>
-            (0, r.jsx)(e, {
+            (0, i.jsx)(e, {
                 ...t,
                 source: {
-                    page: l.ZY5.USER_SETTINGS,
-                    section: l.jXE.SETTINGS_CUSTOMIZE_PROFILE,
-                    object: l.qAy.BUTTON_CTA,
-                    type: l.Qqv.BUY
+                    page: r.ZY5.USER_SETTINGS,
+                    section: r.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                    object: r.qAy.BUTTON_CTA,
+                    type: r.Qqv.BUY
                 }
             });
     });

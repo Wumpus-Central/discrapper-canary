@@ -8,21 +8,21 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(772848),
+    a = n.n(r),
+    l = n(772848),
     o = n(481060),
     c = n(53281),
     d = n(451593),
     u = n(694539),
     m = n(658234);
-let h = (e) => {
+let g = (e) => {
         var t, n, s;
-        let { effect: r, onClick: a } = e,
+        let { effect: r, onClick: l } = e,
             { deleteConfig: c } = (0, d.E)();
         return (0, i.jsxs)(o.Clickable, {
             className: m.previewCard,
             onClick: () => {
-                a(r);
+                l(r);
             },
             children: [
                 (0, i.jsx)('div', {
@@ -30,7 +30,7 @@ let h = (e) => {
                     style: { backgroundImage: 'url('.concat(null === (s = r.config) || void 0 === s ? void 0 : null === (n = s.effects) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(m.previewCardFooter, m.row),
+                    className: a()(m.previewCardFooter, m.row),
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
@@ -49,8 +49,8 @@ let h = (e) => {
             ]
         });
     },
-    g = () => {
-        let e = (0, a.Z)();
+    h = () => {
+        let e = (0, l.Z)();
         return {
             id: e,
             name: 'New Profile Effect',
@@ -60,7 +60,7 @@ let h = (e) => {
 function p() {
     let { profileEffects: e, upsertConfig: t } = (0, d.E)(),
         [n, r] = s.useState(),
-        a = s.useRef(null),
+        l = s.useRef(null),
         p = (e) => {
             (0, o.showToast)((0, o.createToast)(e, o.ToastType.FAILURE));
         };
@@ -84,7 +84,7 @@ function p() {
                                     className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
-                                            h,
+                                            g,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -98,7 +98,7 @@ function p() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: l()(m.row, m.end, m.section),
+                            className: a()(m.row, m.end, m.section),
                             children: [
                                 (0, i.jsxs)('div', {
                                     className: m.uploadButton,
@@ -109,7 +109,7 @@ function p() {
                                             children: 'Import Shared Config'
                                         }),
                                         (0, i.jsx)(c.Z, {
-                                            ref: a,
+                                            ref: l,
                                             onChange: (e) => {
                                                 let n = e.currentTarget.files;
                                                 if (null == n) return;
@@ -129,7 +129,7 @@ function p() {
                                 }),
                                 (0, i.jsx)(o.Button, {
                                     onClick: () => {
-                                        t(g());
+                                        t(h());
                                     },
                                     children: 'Create New Effect'
                                 })

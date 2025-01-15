@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var o = n(442837),
-    r = n(481060),
+var i = n(442837),
+    l = n(481060),
     a = n(223245),
-    l = n(246946),
-    c = n(388032);
-function u() {
-    let e = (0, o.e7)([l.Z], () => l.Z.enabled, []);
-    return (0, i.jsx)(r.MenuCheckboxItem, {
+    u = n(246946),
+    o = n(388032);
+function c() {
+    let e = (0, i.e7)([u.Z], () => u.Z.enabled, []);
+    return (0, r.jsx)(l.MenuCheckboxItem, {
         id: 'streamer-mode-toggle',
-        label: c.intl.string(c.t.p9ZAJS),
+        label: o.intl.string(o.t.p9ZAJS),
         action: () => {
             a.Z.setEnabled(!e);
         },

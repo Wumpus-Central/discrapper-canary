@@ -10,38 +10,38 @@ var o = n(200651),
     p = n(918701),
     m = n(685613),
     x = n(64141),
-    f = n(341907),
-    g = n(303385),
-    h = n(388032),
-    C = n(626094);
+    g = n(341907),
+    h = n(303385),
+    f = n(388032),
+    v = n(626094);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: v, onCtxMenuClose: j, useReducedMotion: _, isExpanded: b, isExpansionAnimationComplete: E } = e,
-        N = (0, d.aM)(),
-        B = r.useCallback(() => {
-            (0, f.openDisclosureModal)(t, {
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: C, onCtxMenuClose: j, useReducedMotion: _, isExpanded: T, isExpansionAnimationComplete: E } = e,
+        S = (0, d.aM)(),
+        b = r.useCallback(() => {
+            (0, g.openDisclosureModal)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        T = r.useCallback(() => {
+        N = r.useCallback(() => {
             (0, p.FE)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: N
+                impressionId: S
             });
-        }, [N, t]),
-        S = b && E,
+        }, [S, t]),
+        B = T && E,
         y = (0, o.jsx)(l.Clickable, {
-            onClick: T,
-            className: a()(C.clickable, { [C.logo]: S }),
+            onClick: N,
+            className: a()(v.clickable, { [v.logo]: B }),
             children: (0, o.jsx)(m.ZP, {
                 quest: t,
-                logotypeClassName: a()(C.rewardHighlightLogotype),
+                logotypeClassName: a()(v.rewardHighlightLogotype),
                 withGameTile: !1
             })
         });
     return (0, o.jsxs)(i.animated.div, {
-        className: a()(C.wrapper, C.rewardHighlightWrapper, { [C.interactable]: S }),
+        className: a()(v.wrapper, v.rewardHighlightWrapper, { [v.interactable]: B }),
         style: {
             transform: (0, i.to)(
                 [
@@ -55,7 +55,7 @@ t.Z = (e) => {
         },
         children: [
             (0, o.jsx)(i.animated.div, {
-                className: C.opaqueExpandedBackground,
+                className: v.opaqueExpandedBackground,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -64,15 +64,15 @@ t.Z = (e) => {
                     backdropFilter: n.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(h.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: S,
+                isFullyExpanded: B,
                 partnerBranding: y,
                 useReducedMotion: _
             }),
             (0, o.jsxs)(i.animated.div, {
-                className: C.promotedBadgeWrapper,
+                className: v.promotedBadgeWrapper,
                 style: {
                     opacity: n.to({
                         range: [0, 1],
@@ -81,22 +81,22 @@ t.Z = (e) => {
                 },
                 children: [
                     (0, o.jsxs)(l.Clickable, {
-                        className: C.promotedBadge,
-                        onClick: B,
+                        className: v.promotedBadge,
+                        onClick: b,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: h.intl.string(h.t.o6FLcH)
+                                children: f.intl.string(f.t.o6FLcH)
                             }),
                             (0, o.jsx)(l.CircleQuestionIcon, {
                                 color: l.tokens.colors.WHITE,
-                                className: C.promotedBadgeIcon
+                                className: v.promotedBadgeIcon
                             })
                         ]
                     }),
                     (0, o.jsx)(x.r, {
-                        onOpen: v,
+                        onOpen: C,
                         onClose: j,
                         onSelect: s,
                         questContent: u.jn.QUEST_BAR_V2,
@@ -106,12 +106,12 @@ t.Z = (e) => {
                         children: (e) =>
                             (0, o.jsx)(l.Clickable, {
                                 ...e,
-                                className: C.submenuWrapper,
-                                'aria-label': h.intl.string(h.t.DEoVWV),
+                                className: v.submenuWrapper,
+                                'aria-label': f.intl.string(f.t.DEoVWV),
                                 children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()(C.submenuIcon, C.white)
+                                    className: a()(v.submenuIcon, v.white)
                                 })
                             })
                     })

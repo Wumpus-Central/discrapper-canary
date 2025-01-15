@@ -15,8 +15,8 @@ var a = n(442837),
     d = n(144114),
     h = n(607744),
     p = n(594174),
-    f = n(981631),
-    m = n(815660),
+    m = n(981631),
+    f = n(815660),
     g = n(388032),
     v = n(496472);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
@@ -27,7 +27,7 @@ t.Z = (e) => {
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         N = null,
         E = null;
-    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : _ ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : I ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : Z && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
+    return (0 === t && (x ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : _ ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : I ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : b ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : Z && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == S || null == N)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: v.container,
@@ -62,14 +62,14 @@ t.Z = (e) => {
                                                     : _
                                                       ? (0, o.openModalLazy)(
                                                             async () => {
-                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('51501')]).then(n.bind(n, 607018));
+                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
                                                                 return (t) =>
                                                                     (0, r.jsx)(e, {
                                                                         reason: d.L.GUILD_PHONE_REQUIRED,
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: m.M }
+                                                            { modalKey: f.M }
                                                         )
                                                       : I &&
                                                         (s.Z.verifyResend(),

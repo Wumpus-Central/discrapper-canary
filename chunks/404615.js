@@ -4,38 +4,38 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    r = n(607070),
-    a = n(391110),
-    s = n(696962);
+    s = n(607070),
+    r = n(391110),
+    a = n(696962);
 let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: s.cardDescription
+            className: a.cardDescription
         },
         descriptionCta: { onlyShowOnHover: !0 }
     },
     o = (e) => {
-        let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+        let t = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
             n = {
-                [a.zW.DEFAULT]: l,
-                [a.zW.REWARD]: {
+                [r.zW.DEFAULT]: l,
+                [r.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: 'text-sm/semibold'
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: s.cardDescriptionTenureReward
+                        className: a.cardDescriptionTenureReward
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: s.descriptionCTATenureReward
+                        className: a.descriptionCTATenureReward
                     },
-                    cardContainer: { className: t ? void 0 : s.nitroGradientBorderHover }
+                    cardContainer: { className: t ? void 0 : a.nitroGradientBorderHover }
                 },
-                [a.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: s.nitroGradientBorderHover } }
+                [r.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: a.nitroGradientBorderHover } }
             };
-        return null != e ? n[e] : n[a.zW.DEFAULT];
+        return null != e ? n[e] : n[r.zW.DEFAULT];
     };

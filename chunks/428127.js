@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(540059),
     h = n(492162),
     p = n(237583),
-    f = n(451478),
-    m = n(934415),
+    m = n(451478),
+    f = n(934415),
     g = n(968847),
     v = n(388032),
     C = n(706091);
@@ -34,9 +34,9 @@ function I(e) {
             },
             [r]
         ),
-        f = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
-        g = (0, m.c4)({
-            channels: f,
+        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        g = (0, f.c4)({
+            channels: m,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s
@@ -72,9 +72,9 @@ function I(e) {
 function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: h } = e,
         p = (0, d.Q3)('UnreadBar'),
-        { bottomBar: m, topBar: _ } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
-        Z = (0, s.e7)([f.Z], () => f.Z.isFocused()),
-        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? m : _,
+        { bottomBar: f, topBar: _ } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
+        Z = (0, s.e7)([m.Z], () => m.Z.isFocused()),
+        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? f : _,
         E = b === g.x.HIDDEN,
         y = (0, u.useSpring)(
             {

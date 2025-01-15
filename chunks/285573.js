@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(984933),
     h = n(496675),
     p = n(98597),
-    f = n(473403),
-    m = n(981631),
+    m = n(473403),
+    f = n(981631),
     g = n(490897),
     v = n(831746);
 let C = (0, c.B)(function (e) {
@@ -21,7 +21,7 @@ let C = (0, c.B)(function (e) {
         }),
         E = (0, o.e7)([u.Z], () => u.Z.getChannel(null == N ? void 0 : N.parent_id)),
         y = r === (null == N ? void 0 : N.id),
-        j = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(m.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(m.Plq.MANAGE_CHANNELS, t))),
+        j = (0, o.e7)([h.Z], () => (null != E ? h.Z.can(f.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(f.Plq.MANAGE_CHANNELS, t))),
         T = l.useCallback(
             (e) => {
                 null != N &&
@@ -45,7 +45,7 @@ let C = (0, c.B)(function (e) {
                 [v.selected]: y
             }),
             'data-dnd-name': N.name,
-            children: (0, i.jsxs)(f.Z, {
+            children: (0, i.jsxs)(m.Z, {
                 className: v.iconVisibility,
                 channel: N,
                 guild: t,

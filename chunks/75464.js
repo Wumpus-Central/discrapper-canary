@@ -5,8 +5,8 @@ var i,
     r = n(120356),
     a = n.n(r),
     o = n(153066),
-    c = n(914888);
-function d(e, t, n) {
+    d = n(914888);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,10 +20,10 @@ function d(e, t, n) {
     );
 }
 let u = {
-        XSMALL: c.xsmall,
-        SMALL: c.small,
-        MEDIUM: c.medium,
-        LARGE: c.large
+        XSMALL: d.xsmall,
+        SMALL: d.small,
+        MEDIUM: d.medium,
+        LARGE: d.large
     },
     h = {
         DEFAULT: 'default',
@@ -33,9 +33,9 @@ class m extends (i = s.PureComponent) {
     render() {
         let { size: e, src: t, srcHover: n, className: i, ...s } = this.props,
             { hovered: r } = this.state,
-            d = this.getMode();
+            c = this.getMode();
         return (0, l.jsx)('button', {
-            className: a()((0, o.l)(c, 'iconButton', d), i, e),
+            className: a()((0, o.l)(d, 'iconButton', c), i, e),
             style: { backgroundImage: "url('".concat(r && null != n ? n : t, "')") },
             onMouseEnter: this.handleHover,
             onFocus: this.handleHover,
@@ -46,20 +46,20 @@ class m extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'state', { hovered: !1 }),
-            d(this, 'getMode', () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
-            d(this, 'handleHover', (e) => {
+            c(this, 'state', { hovered: !1 }),
+            c(this, 'getMode', () => (null != this.props.srcHover ? h.STATIC : h.DEFAULT)),
+            c(this, 'handleHover', (e) => {
                 let { onMouseEnter: t } = this.props;
                 null == t || t(e), !this.state.hovered && this.setState({ hovered: !0 });
             }),
-            d(this, 'handleBlur', (e) => {
+            c(this, 'handleBlur', (e) => {
                 let { onMouseLeave: t } = this.props;
                 null == t || t(e), this.state.hovered && this.setState({ hovered: !1 });
             });
     }
 }
-d(m, 'Sizes', u),
-    d(m, 'defaultProps', {
+c(m, 'Sizes', u),
+    c(m, 'defaultProps', {
         size: u.MEDIUM,
         disabled: !1
     }),

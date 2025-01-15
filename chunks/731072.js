@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(139387),
     o = n(726542),
     s = n(434404),
-    c = n(486199),
-    d = n(13051),
+    d = n(486199),
+    c = n(13051),
     u = n(36635);
 function m(e) {
     let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: p, descriptionText: g, helpText: x, canNavigate: f } = e,
@@ -27,7 +27,7 @@ function m(e) {
             },
             [f, n, m.id]
         ),
-        I = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 f() && (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
             },
@@ -35,7 +35,7 @@ function m(e) {
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.Z, {
+            (0, i.jsx)(d.Z, {
                 name: p,
                 icon: null == b ? void 0 : b.icon.whiteSVG,
                 iconBackgroundColor: null == b ? void 0 : b.color,
@@ -46,7 +46,7 @@ function m(e) {
             (0, i.jsx)(r.FormDivider, { className: u.headerDivider }),
             t.map((e) =>
                 (0, i.jsx)(
-                    d.Z,
+                    c.Z,
                     {
                         integration: e,
                         editedIntegration: n,
@@ -54,7 +54,7 @@ function m(e) {
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: v,
                         onDisable: C,
-                        onToggleExpand: () => I(e.id)
+                        onToggleExpand: () => N(e.id)
                     },
                     e.id
                 )

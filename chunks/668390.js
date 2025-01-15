@@ -10,19 +10,19 @@ var i = n(200651),
     r = n.n(s),
     a = n(780384),
     o = n(481060),
-    c = n(239091),
-    d = n(741247),
+    d = n(239091),
+    c = n(741247),
     u = n(75464),
     h = n(388032),
     m = n(826080);
 function g(e) {
     let { role: t, guild: s } = e,
         [a, u] = l.useState(!1);
-    return (0, d.useHasGuildRoleItems)(s, t)
+    return (0, c.useHasGuildRoleItems)(s, t)
         ? (0, i.jsx)(o.Clickable, {
               onClick: (e) => {
                   u(!0),
-                      (0, c.jW)(
+                      (0, d.jW)(
                           e,
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
@@ -47,10 +47,10 @@ function g(e) {
         : null;
 }
 function p(e) {
-    let { color: t, id: s, role: r, guild: d, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: C, locked: j, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
+    let { color: t, id: s, role: r, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
         E = l.useCallback(
             (e) => {
-                (0, c.jW)(e, async () => {
+                (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -69,7 +69,7 @@ function p(e) {
               id: s,
               selectedItem: f,
               onItemSelect: v,
-              itemType: C,
+              itemType: j,
               'aria-label': null != b ? ''.concat(Z, ', ').concat(b) : Z,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
@@ -86,7 +86,7 @@ function p(e) {
                                 className: m.roleCircle
                             }),
                       (function () {
-                          if (!j) return null;
+                          if (!C) return null;
                           let e = (0, a.wj)(N) ? n(27377) : n(514811);
                           return (0, i.jsx)(o.Tooltip, {
                               text: b,
@@ -106,7 +106,7 @@ function p(e) {
                       }),
                       T && null != r
                           ? (0, i.jsx)(g, {
-                                guild: d,
+                                guild: c,
                                 role: r
                             })
                           : null

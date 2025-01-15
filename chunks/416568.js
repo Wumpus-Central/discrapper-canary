@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(513431),
     h = n(442837),
     p = n(902704),
-    f = n(846519),
-    m = n(481060),
+    m = n(846519),
+    f = n(481060),
     g = n(925549),
     v = n(493773),
     C = n(209613),
@@ -95,7 +95,7 @@ class en {
             (this.sizes = r),
             (this.scrollerRef = l.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new f.V7()),
+            (this.timeout = new m.V7()),
             (this.setResizeObserver = () => {
                 var e;
                 let t = null === (e = this.scrollerRef.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -171,7 +171,7 @@ class en {
 function ei(e) {
     let { disableAppDownload: t = w.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
         s = (0, Z.Q3)('GuildsBar'),
-        { density: d } = (0, m.useThemeContext)(),
+        { density: d } = (0, f.useThemeContext)(),
         [p] = (0, h.Wu)([A.ZP], () => {
             let e = A.ZP.getGuildsTree();
             return [e, e.version];
@@ -186,11 +186,11 @@ function ei(e) {
         es = l.useCallback(() => eo(!0), []),
         ec = l.useCallback(() => eo(!1), []),
         eu = l.useRef(!1),
-        [ed] = l.useState(() => new f.V7()),
+        [ed] = l.useState(() => new m.V7()),
         eh = l.useRef(null),
         ep = l.useRef(null),
-        { ref: ef, ...em } = (0, u.OP)(),
-        eg = (0, m.useFocusJumpSection)(),
+        { ref: em, ...ef } = (0, u.OP)(),
+        eg = (0, f.useFocusJumpSection)(),
         [ev, eC] = l.useState(!1),
         [ex, eI] = l.useState(!1),
         e_ = l.useMemo(
@@ -314,15 +314,15 @@ function ei(e) {
         );
     return (0, i.jsx)(I.Gt, {
         value: eZ,
-        children: (0, i.jsx)(m.ThemeProvider, {
+        children: (0, i.jsx)(f.ThemeProvider, {
             theme: o,
             children: (e) =>
                 (0, i.jsx)('nav', {
                     className: a()($.wrapper, r, e, { [$.hidden]: el }),
                     'aria-label': X.intl.string(X.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
-                        ref: ef,
-                        ...em,
+                        ref: em,
+                        ...ef,
                         ...eg,
                         role: 'tree',
                         className: $.tree,
@@ -337,7 +337,7 @@ function ei(e) {
                             (0, i.jsxs)('div', {
                                 className: $.itemsContainer,
                                 children: [
-                                    (0, i.jsxs)(m.AdvancedScrollerNone, {
+                                    (0, i.jsxs)(f.AdvancedScrollerNone, {
                                         className: a()({
                                             [$.scroller]: !0,
                                             [$.scrolling]: ev
@@ -356,7 +356,7 @@ function ei(e) {
                                             (0, i.jsx)(Q.Z, { onActivate: eE }),
                                             (0, i.jsx)(W.Z, {}),
                                             s
-                                                ? (0, i.jsx)(m.Stack, {
+                                                ? (0, i.jsx)(f.Stack, {
                                                       gap: 'xs',
                                                       'aria-label': X.intl.string(X.t['7hB4kp']),
                                                       children: ej.map(ey)

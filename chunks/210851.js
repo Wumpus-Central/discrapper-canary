@@ -1,33 +1,33 @@
-t(47120), t(315314), t(610138), t(216116), t(78328), t(815648);
-var i = t(200651),
-    a = t(192379),
-    n = t(481060),
-    l = t(763610),
-    r = t(102787);
-s.Z = function (e) {
-    var s, t;
-    let { assetKey: o, filters: d, initialValue: c, onFileChange: u, title: g } = e,
-        [m, h] = a.useState(null),
-        v = a.useRef(null);
+n(47120), n(315314), n(610138), n(216116), n(78328), n(815648);
+var o = n(200651),
+    r = n(192379),
+    s = n(481060),
+    a = n(763610),
+    i = n(102787);
+t.Z = function (e) {
+    var t, n;
+    let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: p } = e,
+        [m, x] = r.useState(null),
+        g = r.useRef(null);
     return (
-        a.useEffect(
+        r.useEffect(
             () => () => {
-                null != v.current && URL.revokeObjectURL(v.current);
+                null != g.current && URL.revokeObjectURL(g.current);
             },
             []
         ),
-        (0, i.jsxs)(n.FormItem, {
+        (0, o.jsxs)(s.FormItem, {
             children: [
-                (0, i.jsx)(n.FormTitle, {
-                    tag: n.FormTitleTags.H5,
-                    children: (0, i.jsxs)('div', {
-                        className: r.headingWithTooltip,
+                (0, o.jsx)(s.FormTitle, {
+                    tag: s.FormTitleTags.H5,
+                    children: (0, o.jsxs)('div', {
+                        className: i.headingWithTooltip,
                         children: [
-                            g,
-                            (0, i.jsx)(n.Tooltip, {
-                                text: 'Supported asset formats: '.concat(d.join(', ')),
+                            p,
+                            (0, o.jsx)(s.Tooltip, {
+                                text: 'Supported asset formats: '.concat(c.join(', ')),
                                 children: (e) =>
-                                    (0, i.jsx)(n.CircleInformationIcon, {
+                                    (0, o.jsx)(s.CircleInformationIcon, {
                                         size: 'xs',
                                         ...e
                                     })
@@ -35,22 +35,22 @@ s.Z = function (e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(l.Z, {
-                    filename: null !== (t = null !== (s = null == m ? void 0 : m.name) && void 0 !== s ? s : c) && void 0 !== t ? t : '',
+                (0, o.jsx)(a.Z, {
+                    filename: null !== (n = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : d) && void 0 !== n ? n : '',
                     filters: [
                         {
-                            name: g,
-                            extensions: d
+                            name: p,
+                            extensions: c
                         }
                     ],
                     buttonText: 'Browse',
                     placeholder: 'Select an asset',
                     onFileSelect: function (e) {
-                        if ((h(null != e ? e : null), null == e)) return;
-                        let s = URL.createObjectURL(e);
-                        v.current = s;
-                        let t = new URL(s);
-                        t.searchParams.append('mimetype', e.type), t.searchParams.append('name', e.name), u(o, t.toString());
+                        if ((x(null != e ? e : null), null == e)) return;
+                        let t = URL.createObjectURL(e);
+                        g.current = t;
+                        let n = new URL(t);
+                        n.searchParams.append('mimetype', e.type), n.searchParams.append('name', e.name), u(l, n.toString());
                     }
                 })
             ]

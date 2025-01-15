@@ -1,48 +1,48 @@
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    a = n(481060),
-    s = n(100527),
+var s = n(442837),
+    r = n(481060),
+    a = n(100527),
     l = n(906732),
     o = n(963249),
     c = n(78839),
     d = n(74538),
     u = n(823188),
-    g = n(474936),
-    m = n(981631),
-    f = n(388032),
+    m = n(474936),
+    g = n(981631),
+    h = n(388032),
     p = n(536720);
 t.Z = () => {
-    let e = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+    let e = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         t = (0, d.u0)(null == e ? void 0 : e.trialId),
-        n = (0, l.ZP)([s.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
+        n = (0, l.ZP)([a.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
     return (0, i.jsxs)('div', {
         className: p.banner,
         children: [
             (0, i.jsx)(u.Cy, {
-                text: f.intl.string(f.t.qYKftb),
+                text: h.intl.string(h.t.qYKftb),
                 className: p.trialPill,
                 colorOptions: u.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, i.jsx)('div', {
                 className: p.body,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-md/medium',
-                    children: f.intl.format(f.t.uu1WAQ, { weeks: t })
+                    children: h.intl.format(h.t.uu1WAQ, { weeks: t })
                 })
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(r.Button, {
                 onClick: () => {
                     (0, o.Z)({
-                        initialPlanId: g.Xh.PREMIUM_MONTH_TIER_2,
+                        initialPlanId: m.Xh.PREMIUM_MONTH_TIER_2,
                         analyticsLocations: n.analyticsLocations,
-                        analyticsObject: { object: m.qAy.BUTTON_CTA }
+                        analyticsObject: { object: g.qAy.BUTTON_CTA }
                     });
                 },
-                look: a.ButtonLooks.OUTLINED,
-                color: a.ButtonColors.WHITE,
-                children: f.intl.string(f.t['vSfq9/'])
+                look: r.ButtonLooks.OUTLINED,
+                color: r.ButtonColors.WHITE,
+                children: h.intl.string(h.t['vSfq9/'])
             })
         ]
     });

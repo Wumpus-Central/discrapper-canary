@@ -4,37 +4,37 @@ n.d(t, {
     }
 }),
     n(653041);
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var o = n(442837),
-    r = n(481060),
+var i = n(442837),
+    l = n(481060),
     a = n(179658),
-    l = n(482215),
-    c = n(906467),
-    u = n(857192),
+    u = n(482215),
+    o = n(906467),
+    c = n(857192),
     s = n(594174);
 function d() {
     let {
             layoutDebuggingEnabled: e,
             isStaff: t,
             isDeveloper: n
-        } = (0, o.cj)([u.default, s.default, c.Z], () => {
+        } = (0, i.cj)([c.default, s.default, o.Z], () => {
             var e;
             return {
-                layoutDebuggingEnabled: u.default.layoutDebuggingEnabled,
+                layoutDebuggingEnabled: c.default.layoutDebuggingEnabled,
                 isStaff: (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) === !0,
-                isDeveloper: c.Z.isDeveloper
+                isDeveloper: o.Z.isDeveloper
             };
         }),
-        { horizontalSpacing: d, verticalSpacing: g, maxHorizontalSpacing: m, maxVerticalSpacing: b } = (0, l.i)(),
-        { setHorizontalSpacing: p, setVerticalSpacing: f } = l.i.getState(),
-        h = [];
+        { horizontalSpacing: d, verticalSpacing: p, maxHorizontalSpacing: g, maxVerticalSpacing: h } = (0, u.i)(),
+        { setHorizontalSpacing: m, setVerticalSpacing: x } = u.i.getState(),
+        f = [];
     return (
         t &&
             n &&
-            (h.push(
-                (0, i.jsx)(
-                    r.MenuCheckboxItem,
+            (f.push(
+                (0, r.jsx)(
+                    l.MenuCheckboxItem,
                     {
                         id: 'layout-debugging',
                         label: 'Enable Layout Debugging',
@@ -47,20 +47,20 @@ function d() {
                 )
             ),
             e &&
-                (h.push(
-                    (0, i.jsx)(
-                        r.MenuControlItem,
+                (f.push(
+                    (0, r.jsx)(
+                        l.MenuControlItem,
                         {
                             id: 'horizontal-spacing',
                             label: 'Horizontal Spacing',
                             control: (e, t) =>
-                                (0, i.jsx)(r.MenuSliderControl, {
+                                (0, r.jsx)(l.MenuSliderControl, {
                                     ...e,
                                     ref: t,
                                     value: d,
                                     minValue: 0,
-                                    maxValue: m,
-                                    onChange: (e) => p(e),
+                                    maxValue: g,
+                                    onChange: (e) => m(e),
                                     renderValue: (e) => ''.concat(Math.round(e), 'px'),
                                     'aria-label': 'Horizontal Spacing'
                                 })
@@ -68,20 +68,20 @@ function d() {
                         'horizontal-spacing'
                     )
                 ),
-                h.push(
-                    (0, i.jsx)(
-                        r.MenuControlItem,
+                f.push(
+                    (0, r.jsx)(
+                        l.MenuControlItem,
                         {
                             id: 'vertical-spacing',
                             label: 'Vertical Spacing',
                             control: (e, t) =>
-                                (0, i.jsx)(r.MenuSliderControl, {
+                                (0, r.jsx)(l.MenuSliderControl, {
                                     ...e,
                                     ref: t,
-                                    value: g,
+                                    value: p,
                                     minValue: 0,
-                                    maxValue: b,
-                                    onChange: (e) => f(e),
+                                    maxValue: h,
+                                    onChange: (e) => x(e),
                                     'aria-label': 'Horizontal Spacing',
                                     renderValue: (e) => ''.concat(Math.round(e), 'px')
                                 })
@@ -89,6 +89,6 @@ function d() {
                         'vertical-spacing'
                     )
                 ))),
-        0 === h.length ? null : (0, i.jsx)(i.Fragment, { children: h })
+        0 === f.length ? null : (0, r.jsx)(r.Fragment, { children: f })
     );
 }

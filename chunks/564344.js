@@ -1,101 +1,101 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return v;
     }
 });
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(481060),
-    a = n(503089),
+    a = n(481060),
+    l = n(503089),
     o = n(906732),
     c = n(254901),
     d = n(18438),
     u = n(778825),
     m = n(851894),
-    h = n(484459),
-    g = n(216045),
+    g = n(484459),
+    h = n(216045),
     p = n(839469),
     x = n(25990),
-    S = n(594174),
-    T = n(585483),
+    f = n(594174),
+    _ = n(585483),
     E = n(16703),
     C = n(785145),
-    _ = n(981631),
-    f = n(526761),
-    I = n(726985),
-    N = n(388032),
-    A = n(228615);
-function b() {
+    T = n(981631),
+    S = n(526761),
+    b = n(726985),
+    I = n(388032),
+    N = n(228615);
+function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, r.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, E.Z)(),
         n = (0, r.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
-        b = null != e ? e : t,
-        v = (0, r.e7)([S.default], () => S.default.getCurrentUser()),
-        { subsection: j, setSubsection: O } = (0, C.Z)(),
-        { analyticsLocations: R } = (0, o.ZP)(),
-        { hasSearchResults: P, searchResults: D } = (0, p.E)();
-    function y(t) {
+        v = null != e ? e : t,
+        A = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        { subsection: j, setSubsection: R } = (0, C.Z)(),
+        { analyticsLocations: O } = (0, o.ZP)(),
+        { hasSearchResults: P, searchResults: y } = (0, p.E)();
+    function D(t) {
         if (j !== t) {
             if (n) {
-                T.S.dispatch(_.CkL.SHAKE_APP, {
+                _.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 300,
-                    intensity: a.$x
+                    intensity: l.$x
                 }),
-                    T.S.dispatch(_.CkL.EMPHASIZE_NOTICE);
+                    _.S.dispatch(T.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === f.NB.GUILD && null == e && null != b && (0, d.Fq)(b, R), O(t);
+            t === S.NB.GUILD && null == e && null != v && (0, d.Fq)(v, O), R(t);
         }
     }
     s.useEffect(() => {
-        null != v && (0, h.Z)(v.id, v.getAvatarURL(null == b ? void 0 : b.id, 80), { guildId: null == b ? void 0 : b.id });
-    }, [null == b ? void 0 : b.id, v]);
+        null != A && (0, g.Z)(A.id, A.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
+    }, [null == v ? void 0 : v.id, A]);
     let B = !0,
-        L = !0;
+        Z = !0;
     return (
-        P && 1 === D.length && (D.includes(I.s6.PROFILE_SERVER_PROFILES) ? (y(f.NB.GUILD), (L = !1)) : D.includes(I.s6.PROFILE_USER_PROFILE) && (y(f.NB.USER_PROFILE), (B = !1))),
+        P && 1 === y.length && (y.includes(b.s6.PROFILE_SERVER_PROFILES) ? (D(S.NB.GUILD), (Z = !1)) : y.includes(b.s6.PROFILE_USER_PROFILE) && (D(S.NB.USER_PROFILE), (B = !1))),
         (0, i.jsx)(o.Gt, {
-            value: R,
-            children: (0, i.jsxs)(l.HeadingLevel, {
-                component: (0, i.jsx)(l.Heading, {
+            value: O,
+            children: (0, i.jsxs)(a.HeadingLevel, {
+                component: (0, i.jsx)(a.Heading, {
                     variant: 'heading-lg/semibold',
-                    children: N.intl.string(N.t['vi7f+v'])
+                    children: I.intl.string(I.t['vi7f+v'])
                 }),
                 children: [
-                    (0, i.jsxs)(l.TabBar, {
-                        className: A.tabBar,
+                    (0, i.jsxs)(a.TabBar, {
+                        className: N.tabBar,
                         type: 'top',
                         look: 'brand',
                         selectedItem: j,
-                        onItemSelect: y,
+                        onItemSelect: D,
                         children: [
-                            L
+                            Z
                                 ? (0, i.jsx)(
-                                      l.TabBar.Item,
+                                      a.TabBar.Item,
                                       {
-                                          className: A.tabBarItem,
-                                          id: f.NB.USER_PROFILE,
-                                          children: N.intl.string(N.t['OU3/Pj'])
+                                          className: N.tabBarItem,
+                                          id: S.NB.USER_PROFILE,
+                                          children: I.intl.string(I.t['OU3/Pj'])
                                       },
-                                      f.NB.USER_PROFILE
+                                      S.NB.USER_PROFILE
                                   )
                                 : null,
                             B
                                 ? (0, i.jsx)(
-                                      l.TabBar.Item,
+                                      a.TabBar.Item,
                                       {
-                                          className: A.tabBarItem,
-                                          id: f.NB.GUILD,
-                                          children: N.intl.string(N.t.kPHroa)
+                                          className: N.tabBarItem,
+                                          id: S.NB.GUILD,
+                                          children: I.intl.string(I.t.kPHroa)
                                       },
-                                      f.NB.GUILD
+                                      S.NB.GUILD
                                   )
                                 : null
                         ]
                     }),
-                    j === f.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: b }) : (0, i.jsx)(g.Z, {})
+                    j === S.NB.GUILD ? (0, i.jsx)(m.Z, { selectedGuild: v }) : (0, i.jsx)(h.Z, {})
                 ]
             })
         })

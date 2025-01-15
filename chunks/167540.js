@@ -1,24 +1,24 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(481060),
     c = n(921801),
     d = n(131951),
     u = n(962100),
     m = n(445817),
-    h = n(726985),
-    g = n(65154),
+    g = n(726985),
+    h = n(65154),
     p = n(388032),
     x = n(232186);
-function S() {
+function f() {
     return (0, i.jsx)(o.FormNotice, {
         type: o.CardTypes.PRIMARY,
         title: p.intl.string(p.t.XLw6FB),
@@ -31,8 +31,8 @@ function S() {
         })
     });
 }
-function T() {
-    let e = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.VIDEO)),
+function _() {
+    let e = (0, l.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
         [t, n] = s.useState(!1);
     return (0, i.jsxs)('div', {
         children: [
@@ -44,16 +44,16 @@ function T() {
                 }),
                 children: [
                     (0, i.jsx)(c.F, {
-                        setting: h.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                        setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
                         children: (0, i.jsx)(m.Z, {
                             previewEnabled: t,
                             onEnablePreview: () => n(!0)
                         })
                     }),
-                    !e && (0, i.jsx)(S, {})
+                    !e && (0, i.jsx)(f, {})
                 ]
             }),
-            (0, i.jsx)(o.FormDivider, { className: l()(x.marginBottom40, x.marginTop40) })
+            (0, i.jsx)(o.FormDivider, { className: a()(x.marginBottom40, x.marginTop40) })
         ]
     });
 }

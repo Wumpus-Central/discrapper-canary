@@ -31,9 +31,9 @@ var i = n(200651),
     y = n(834129),
     O = n(981631),
     M = n(388032),
-    k = n(447817),
-    D = n(46124);
-function B(e) {
+    D = n(447817),
+    k = n(46124);
+function U(e) {
     let { className: t, count: n, compact: r, collapsedReason: l } = e;
     return (0, i.jsx)(T.Z, {
         className: t,
@@ -41,14 +41,14 @@ function B(e) {
         role: 'group',
         childrenMessageContent: (0, i.jsx)(y.Z, {
             compact: r,
-            className: k.blockedSystemMessage,
+            className: D.blockedSystemMessage,
             iconNode: (0, i.jsx)(s.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: k.blockedIcon
+                className: D.blockedIcon
             }),
             children: (0, i.jsx)('div', {
-                className: k.blockedMessageText,
+                className: D.blockedMessageText,
                 children: M.intl.format(l, { count: n })
             })
         })
@@ -57,7 +57,7 @@ function B(e) {
 t.Z = r.memo(function e(t) {
     var n;
     let r;
-    let { channel: l, message: s, compact: y = !1, className: k, onContextMenu: U, onClick: w, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
+    let { channel: l, message: s, compact: y = !1, className: D, onContextMenu: B, onClick: w, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
         H = O.OBS.has(s.type) ? s.messageReference : void 0,
         z = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(H)),
         W = (0, o.e7)([_.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? _.Z.getChannel(z.message.channel_id) : null)),
@@ -95,18 +95,18 @@ t.Z = r.memo(function e(t) {
               hasThread: !1
           })
         : (g.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : g.Z.isIgnoredForMessage(s) ? (r = M.t.VFWjc3) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
-          ? (0, i.jsx)(B, {
-                className: k,
+          ? (0, i.jsx)(U, {
+                className: D,
                 compact: y,
                 count: 1,
                 collapsedReason: r
             })
           : (0, i.jsx)(T.Z, {
                 compact: y,
-                className: a()(k, {
-                    [D.ephemeral]: (0, C.Pv)(s),
-                    [D.disableInteraction]: F,
-                    [D.groupStart]: t.isGroupStart
+                className: a()(D, {
+                    [k.ephemeral]: (0, C.Pv)(s),
+                    [k.disableInteraction]: F,
+                    [k.groupStart]: t.isGroupStart
                 }),
                 childrenRepliedMessage: (0, L.Z)(s, l, H, z, y),
                 childrenHeader: (0, R.Z)({
@@ -141,7 +141,7 @@ t.Z = r.memo(function e(t) {
                 childrenExecutedCommand: (0, P.Z)(s, l, y),
                 childrenMessageContent: (0, j.Z)(t, ee),
                 childrenSystemMessage: (0, Z.Z)(t),
-                onContextMenu: U,
+                onContextMenu: B,
                 onClick: w,
                 hasThread: !1 !== G && null != ei && s.hasFlag(O.iLy.HAS_THREAD),
                 hasReply: s.type === O.uaV.REPLY,

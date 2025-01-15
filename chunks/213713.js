@@ -26,11 +26,11 @@ var r = n(200651),
     T = n(71585),
     _ = n(146282),
     S = n(650613),
-    y = n(789086),
-    N = n(206583),
+    N = n(789086),
+    y = n(206583),
     k = n(298149),
-    E = n(941469);
-let I = [
+    I = n(941469);
+let E = [
     {
         key: 'type',
         cellClassName: i()(k.cell, k.cellType),
@@ -86,7 +86,7 @@ function w(e) {
 }
 function Z() {
     var e, t;
-    let n = (0, u.e7)([_.Z], () => _.Z.getFeed(N.YN.GLOBAL_FEED)),
+    let n = (0, u.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
         l = (0, u.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
         o = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
@@ -102,7 +102,7 @@ function Z() {
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
         w = (0, u.e7)([_.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = _.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [Z, O] = a.useState(''),
         B = (0, u.e7)(
@@ -113,12 +113,12 @@ function Z() {
             },
             [Z]
         ),
-        P = (0, v.Z)({
+        L = (0, v.Z)({
             applicationId: B,
             location: 'DevToolsContentInventory',
             source: g.m1.DevTools
         }),
-        L = Object.entries(null !== (t = m.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        P = Object.entries(null !== (t = m.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -127,9 +127,9 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        A = (0, p.Z)(L).filter(C.lm);
+        A = (0, p.Z)(P).filter(C.lm);
     return (0, r.jsx)('div', {
-        className: i()(E.panel),
+        className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
             className: k.content,
             children: [
@@ -138,17 +138,17 @@ function Z() {
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(b.Z, {
-                                columns: I,
+                                columns: E,
                                 data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
-                        (0, r.jsx)(y.Z, {}),
+                        (0, r.jsx)(N.Z, {}),
                         (0, r.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: N.YN.GLOBAL_FEED,
+                                    feedId: y.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
@@ -202,10 +202,10 @@ function Z() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && O(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (Z === e.currentTarget.value ? null == P || P(e) : O(e.currentTarget.value));
+                                'Enter' === e.key && (Z === e.currentTarget.value ? null == L || L(e) : O(e.currentTarget.value));
                             },
-                            error: Z.length > 0 && null == P ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
-                            style: null != P ? { border: '1px solid green' } : {}
+                            error: Z.length > 0 && null == L ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
+                            style: null != L ? { border: '1px solid green' } : {}
                         }),
                         (0, r.jsx)('ul', { children: A.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(R, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]

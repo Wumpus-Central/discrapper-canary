@@ -1,18 +1,18 @@
 n.d(t, {
     D: function () {
-        return a;
+        return l;
     }
 });
 var i = n(200651);
 n(192379);
 var s = n(734530),
     r = n(622999),
-    l = n(246652);
-let a = (e) => {
-    let { errorLabel: t, children: n, elementOptions: a } = e,
+    a = n(246652);
+let l = (e) => {
+    let { errorLabel: t, children: n, elementOptions: l } = e,
         o = Date.now();
     return (0, i.jsx)(
-        l.k,
+        a.k,
         {
             label: t,
             children: (0, i.jsx)(s.Elements, {
@@ -21,7 +21,7 @@ let a = (e) => {
                     mode: 'setup',
                     currency: 'usd',
                     setup_future_usage: 'off_session',
-                    ...a
+                    ...l
                 },
                 children: n
             })

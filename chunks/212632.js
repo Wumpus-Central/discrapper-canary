@@ -1,46 +1,46 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    s = n(481060),
     o = n(981631),
-    c = n(388032),
+    u = n(388032),
     d = n(373780),
-    u = n(232186);
-let m = 0,
-    h = () => 'notification-position-selector-'.concat(m++),
+    c = n(232186);
+let h = 0,
+    f = () => 'notification-position-selector-'.concat(h++),
     g = (e) => {
         switch (e) {
             case o._vf.TOP_LEFT:
-                return c.intl.string(c.t.xlchpa);
+                return u.intl.string(u.t.xlchpa);
             case o._vf.TOP_RIGHT:
-                return c.intl.string(c.t['4uHRHB']);
+                return u.intl.string(u.t['4uHRHB']);
             case o._vf.BOTTOM_LEFT:
-                return c.intl.string(c.t.ovWFnJ);
+                return u.intl.string(u.t.ovWFnJ);
             case o._vf.BOTTOM_RIGHT:
-                return c.intl.string(c.t['M/9V7+']);
+                return u.intl.string(u.t['M/9V7+']);
             default:
-                return c.intl.string(c.t.AlY4ZW);
+                return u.intl.string(u.t.AlY4ZW);
         }
     },
     p = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function x(e) {
+function b(e) {
     let { position: t, onChange: n } = e,
-        [r] = s.useState(() => h()),
-        m = t === o._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: g(t) });
+        [l] = r.useState(() => f()),
+        h = t === o._vf.DISABLED ? u.intl.string(u.t.R6LxVV) : u.intl.formatToPlainString(u.t.XXHDMz, { position: g(t) });
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.FocusRing, {
+            (0, i.jsx)(s.FocusRing, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)('div', {
-                    className: l()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
+                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
                     children: p.map((e) =>
                         (0, i.jsxs)(
                             'label',
                             {
-                                className: l()({
+                                className: a()({
                                     [d.selected]: e === t,
                                     [d.disabled]: e === o._vf.DISABLED,
                                     [d.topRight]: e === o._vf.TOP_RIGHT,
@@ -51,7 +51,7 @@ function x(e) {
                                 children: [
                                     g(e),
                                     e === o._vf.DISABLED
-                                        ? (0, i.jsx)(a.DenyIcon, {
+                                        ? (0, i.jsx)(s.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
@@ -59,7 +59,7 @@ function x(e) {
                                         : null,
                                     (0, i.jsx)('input', {
                                         type: 'radio',
-                                        name: r,
+                                        name: l,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: d.hiddenInput
@@ -71,12 +71,12 @@ function x(e) {
                     )
                 })
             }),
-            (0, i.jsx)(a.FormText, {
-                type: a.FormTextTypes.DESCRIPTION,
-                className: u.marginTop8,
-                children: m
+            (0, i.jsx)(s.FormText, {
+                type: s.FormTextTypes.DESCRIPTION,
+                className: c.marginTop8,
+                children: h
             })
         ]
     });
 }
-(x.Positions = o._vf), (t.Z = x);
+(b.Positions = o._vf), (t.Z = b);

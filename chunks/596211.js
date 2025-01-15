@@ -1,20 +1,20 @@
 e.d(n, {
     Z: function () {
-        return o;
+        return r;
     }
 });
 var a = e(200651);
 e(192379);
-var i = e(481060),
-    r = e(406877);
-function o(t) {
-    let { guildId: n, productId: e, attachmentId: o, ...l } = t,
-        { isLoading: c, downloadAttachment: s } = (0, r.Z)(n, e);
-    return (0, a.jsx)(i.Button, {
+var o = e(481060),
+    i = e(406877);
+function r(t) {
+    let { guildId: n, productId: e, attachmentId: r, ...l } = t,
+        { isLoading: s, downloadAttachment: c } = (0, i.Z)(n, e);
+    return (0, a.jsx)(o.Button, {
         ...l,
-        submitting: c,
+        submitting: s,
         onClick: function () {
-            s(o);
+            c(r);
         }
     });
 }

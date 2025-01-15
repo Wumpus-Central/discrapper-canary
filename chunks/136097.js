@@ -10,16 +10,16 @@ n.d(t, {
 var i = n(192379),
     s = n(913527),
     r = n.n(s),
-    l = n(442837),
-    a = n(314897),
+    a = n(442837),
+    l = n(314897),
     o = n(673096),
     c = n(388032);
 function d() {
-    let e = (0, l.cj)([o.Z], () => o.Z.getSessions());
+    let e = (0, a.cj)([o.Z], () => o.Z.getSessions());
     return i.useMemo(() => {
         let t = [...e],
             n = null,
-            i = a.default.getAuthSessionIdHash();
+            i = l.default.getAuthSessionIdHash();
         if (null != i) {
             let e = t.findIndex((e) => e.id_hash === i);
             e >= 0 && (n = t.splice(e, 1)[0]);

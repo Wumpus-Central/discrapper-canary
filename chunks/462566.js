@@ -18,18 +18,18 @@ t.Z = function (e) {
     var t;
     let { onCardInfoChange: n, error: a } = e,
         r = s.useRef(n),
-        [i, N] = s.useState(!1),
-        [f, y] = s.useState({}),
-        [_, P] = s.useState({
+        [i, y] = s.useState(!1),
+        [f, N] = s.useState({}),
+        [P, _] = s.useState({
             name: '',
             country: '',
             postalCode: ''
         }),
-        [b, C] = s.useState({}),
-        [g, T] = s.useState({});
+        [b, g] = s.useState({}),
+        [C, T] = s.useState({});
     function I(e, t) {
         !!f[e] !== t &&
-            y((n) => ({
+            N((n) => ({
                 ...n,
                 [e]: t
             }));
@@ -38,14 +38,14 @@ t.Z = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return (e || b.name) && '' === _.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
+            return (e || b.name) && '' === P.name && (t.name = h.intl.string(h.t.lIkVsr)), t;
         },
-        [b, _]
+        [b, P]
     );
     s.useEffect(() => {
         let e = f.cardNumber && f.cardExpiry && f.cardCvc && 0 === Object.keys(S(!0)).length;
-        r.current({ name: _.name }, !!e);
-    }, [f, _, S]);
+        r.current({ name: P.name }, !!e);
+    }, [f, P, S]);
     let v = {
             name: 'cardNumber',
             title: () => h.intl.string(h.t.cVyJ3t),
@@ -57,7 +57,7 @@ t.Z = function (e) {
                     updateCompleted: (e) => I('cardNumber', e)
                 })
         },
-        x = {
+        R = {
             name: 'cardExpiry',
             title: () => h.intl.string(h.t['CeBa//']),
             getClassNameForLayout: () => E.width50,
@@ -67,7 +67,7 @@ t.Z = function (e) {
                     updateCompleted: (e) => I('cardExpiry', e)
                 })
         },
-        R = {
+        x = {
             name: 'cardCvc',
             title: () => h.intl.string(h.t.Fd3rOz),
             getClassNameForLayout: () => E.width50,
@@ -76,10 +76,10 @@ t.Z = function (e) {
                     stripeType: 'cardCvc',
                     updateCompleted: (e) => I('cardCvc', e),
                     onFocus: () => {
-                        N(!0);
+                        y(!0);
                     },
                     onBlur: () => {
-                        N(!1);
+                        y(!1);
                     }
                 })
         },
@@ -107,19 +107,19 @@ t.Z = function (e) {
                 form: [
                     { fields: [v] },
                     {
-                        fields: [x, R]
+                        fields: [R, x]
                     },
                     { fields: [L] }
                 ],
-                errors: g,
+                errors: C,
                 formError: a,
-                values: _,
+                values: P,
                 onFieldChange: function (e, t) {
                     if ('name' !== t && 'country' !== t && 'postalCode' !== t) return;
-                    let n = { ..._ },
+                    let n = { ...P },
                         a = { ...b },
-                        r = { name: g.name };
-                    !b[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], P(n), C(a), T(r);
+                        r = { name: C.name };
+                    !b[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], _(n), g(a), T(r);
                 },
                 onFieldBlur: function () {
                     T(S());

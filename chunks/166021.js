@@ -1,19 +1,19 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
     l = n(476183),
     o = n(481060),
     c = n(320319),
     d = n(931876);
 t.Z = (e) => {
-    let { cards: t, className: n, cardType: a } = e,
+    let { cards: t, className: n, cardType: r } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
-        [g, m] = r.useState(0),
-        [f, p] = r.useState(u()),
-        _ = t.length;
-    r.useEffect(() => {
+        [m, g] = s.useState(0),
+        [h, p] = s.useState(u()),
+        x = t.length;
+    s.useEffect(() => {
         let e = () => {
             p(u());
         };
@@ -24,31 +24,31 @@ t.Z = (e) => {
             }
         );
     }, []),
-        r.useEffect(() => {
-            m((e) => (_ > f && e > _ - f ? _ - f : _ <= f ? 0 : e));
-        }, [_, f]);
-    let h = g > 0,
-        x = r.useCallback((e) => ({ x: (e - g) * 100 }), [g]),
-        [E, b] = (0, o.useSprings)(t.length, x);
+        s.useEffect(() => {
+            g((e) => (x > h && e > x - h ? x - h : x <= h ? 0 : e));
+        }, [x, h]);
+    let f = m > 0,
+        _ = s.useCallback((e) => ({ x: (e - m) * 100 }), [m]),
+        [E, C] = (0, o.useSprings)(t.length, _);
     return (
-        r.useEffect(() => {
-            b(x);
-        }, [b, x]),
+        s.useEffect(() => {
+            C(_);
+        }, [C, _]),
         (0, i.jsx)('div', {
             className: n,
             children: (0, i.jsxs)('div', {
                 className: d.cardContainer,
                 children: [
-                    _ > f &&
+                    x > h &&
                         (0, i.jsx)(o.Clickable, {
-                            onClick: h
+                            onClick: f
                                 ? () => {
-                                      m((e) => (0 === e ? _ - f : e - 1));
+                                      g((e) => (0 === e ? x - h : e - 1));
                                   }
                                 : void 0,
-                            className: s()({
-                                [d.leftArrow]: h,
-                                [d.inactiveArrow]: !h
+                            className: a()({
+                                [d.leftArrow]: f,
+                                [d.inactiveArrow]: !f
                             }),
                             children: (0, i.jsx)(o.ArrowSmallLeftIcon, {
                                 className: d.arrowIcon,
@@ -58,17 +58,17 @@ t.Z = (e) => {
                     (0, i.jsx)('div', {
                         className: d.cardInnerContainer,
                         children: E.map((e, n) => {
-                            let { x: r } = e;
+                            let { x: s } = e;
                             return (0, i.jsx)(
                                 l.animated.div,
                                 {
                                     className: d.card,
-                                    style: { transform: null == r ? void 0 : r.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
+                                    style: { transform: null == s ? void 0 : s.to((e) => 'translate3d('.concat(e, '%,0,0)')) },
                                     children: (0, i.jsx)(
                                         c.Z,
                                         {
                                             ...t[n],
-                                            cardType: a
+                                            cardType: r
                                         },
                                         ''.concat(t[n].name, '_').concat(n, '_perks_card')
                                     )
@@ -77,10 +77,10 @@ t.Z = (e) => {
                             );
                         })
                     }),
-                    _ > f &&
+                    x > h &&
                         (0, i.jsx)(o.Clickable, {
                             onClick: () => {
-                                m((e) => (e >= _ - f ? 0 : e + 1));
+                                g((e) => (e >= x - h ? 0 : e + 1));
                             },
                             className: d.rightArrow,
                             children: (0, i.jsx)(o.ArrowSmallRightIcon, {
@@ -88,11 +88,11 @@ t.Z = (e) => {
                                 colorClass: d.arrowIcon
                             })
                         }),
-                    _ > f &&
+                    x > h &&
                         (0, i.jsx)('div', {
                             className: d.cardProgressBar,
                             children: t.map((e, t) => {
-                                if (!(t > _ - f)) return (0, i.jsx)('div', { className: t === g ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
+                                if (!(t > x - h)) return (0, i.jsx)('div', { className: t === m ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
                             })
                         })
                 ]

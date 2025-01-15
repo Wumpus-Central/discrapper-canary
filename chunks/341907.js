@@ -58,7 +58,7 @@ let R = 'in-app',
 function D(e) {
     let { questId: n, location: a, questContentPosition: s, preview: o = !1, previewQuest: u = null } = e;
     (0, l.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([r.e('99393'), r.e('48923'), r.e('28044'), r.e('57383')]).then(r.bind(r, 985866));
+        let { default: e } = await Promise.all([r.e('99393'), r.e('48923'), r.e('92059')]).then(r.bind(r, 985866));
         return (r) =>
             (0, i.jsx)(e, {
                 ...r,

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(392711),
-    r = n.n(i),
-    a = n(710845),
-    s = n(581883),
+    s = n.n(i),
+    r = n(710845),
+    a = n(581883),
     l = n(314897),
     o = n(287328),
     c = n(261875);
@@ -19,16 +19,16 @@ function d(e, t, n) {
         e
     );
 }
-let u = new a.Z('UserSettingsProto');
+let u = new r.Z('UserSettingsProto');
 t.Z = new (class e {
     async getAll(e) {
         let t = performance.now(),
             n = await o.Z.userSettings(e).getMany(),
             i = performance.now();
         u.verbose('loaded in '.concat(i - t, 'ms (settings: ').concat(n.length, ')'));
-        let r = {};
-        for (let e of n) r[e.id] = e.value;
-        return r;
+        let s = {};
+        for (let e of n) s[e.id] = e.value;
+        return s;
     }
     resetInMemoryState() {}
     constructor() {
@@ -44,20 +44,20 @@ t.Z = new (class e {
                 null == t ||
                     t.transaction((e) => {
                         var t, n;
-                        let i = s.Z.computeState(),
-                            r = o.Z.userSettingsTransaction(e);
+                        let i = a.Z.computeState(),
+                            s = o.Z.userSettingsTransaction(e);
                         for (let e in i)
-                            r.put({
+                            s.put({
                                 id: Number(e),
                                 value: i[e]
                             });
-                        let a = null !== (n = null === (t = s.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
+                        let r = null !== (n = null === (t = a.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
                         o.Z.nonGuildVersionsTransaction(e).put({
                             id: 'user_settings_version',
-                            version: a
+                            version: r
                         });
                     }, 'handleUserSettingsProtoChange');
             }),
-            d(this, 'throttledOnChange', r().debounce(this.handleUserSettingsProtoChange, 0));
+            d(this, 'throttledOnChange', s().debounce(this.handleUserSettingsProtoChange, 0));
     }
 })();

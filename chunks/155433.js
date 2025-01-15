@@ -1,10 +1,10 @@
-a.d(e, {
+n.d(t, {
     P: function () {
-        return i;
+        return r;
     }
 });
-var o = a(481060),
-    n = a(388032);
-function i() {
-    (0, o.showToast)((0, o.createToast)(n.intl.string(n.t['TGg/2t']), o.ToastType.FAILURE));
+var i = n(481060),
+    s = n(388032);
+function r() {
+    (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['TGg/2t']), i.ToastType.FAILURE));
 }

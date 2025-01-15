@@ -10,14 +10,14 @@ var l = n(120356),
     a = n(91192),
     o = n(589440),
     s = n(481060),
-    c = n(918720),
+    c = n(23202),
     u = n(831746),
     d = n(193877);
 function h(e) {
     var t;
-    let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: m, trailing: g, showUnread: v = !1, ...C } = e,
+    let { id: n, className: l, innerClassName: h, renderIcon: p, text: m, selected: f, trailing: g, showUnread: v = !1, ...C } = e,
         x = (0, a.JA)(n),
-        I = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
+        I = null !== (t = (0, o.q)(m)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(s.ClickableContainer, {
             ...C,
@@ -41,7 +41,7 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: m }, l),
+            className: r()(u.containerDefault, d.wrapper, { [d.modeSelected]: f }, l),
             children: [
                 v ? (0, i.jsx)('div', { className: r()(d.unread, d.unreadImportant) }) : null,
                 (0, i.jsx)('div', {
@@ -56,7 +56,7 @@ function h(e) {
                             (0, i.jsx)('div', {
                                 className: d.name,
                                 'aria-hidden': !0,
-                                children: f
+                                children: m
                             }),
                             g
                         ]

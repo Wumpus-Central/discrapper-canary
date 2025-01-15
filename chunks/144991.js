@@ -5,8 +5,8 @@ var i = n(200651),
     a = n.n(r),
     o = n(149765),
     s = n(481060),
-    c = n(208884),
-    d = n(453628),
+    d = n(208884),
+    c = n(453628),
     u = n(996987),
     m = n(226701),
     h = n(232186);
@@ -14,7 +14,7 @@ class p extends l.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
-        return o.e$(t, e) ? d.y.ALLOW : o.e$(n, e) ? d.y.DENY : d.y.PASSTHROUGH;
+        return o.e$(t, e) ? c.y.ALLOW : o.e$(n, e) ? c.y.DENY : c.y.PASSTHROUGH;
     }
     getPermissionValue(e, t) {
         return o.e$(t, e);
@@ -41,9 +41,9 @@ class p extends l.PureComponent {
     }
     renderComponent(e) {
         let { title: t, description: n, helpdeskArticleId: l, flag: r } = e,
-            { permissions: o, locked: d, permissionRender: h } = this.props,
+            { permissions: o, locked: c, permissionRender: h } = this.props,
             p = null == h ? void 0 : h(r),
-            g = !!(d || p),
+            g = !!(c || p),
             x = 'string' == typeof p ? this.renderDisabledIndicator(p) : null,
             f = a()({ [m.title]: null != x });
         return null == o
@@ -53,7 +53,7 @@ class p extends l.PureComponent {
                       disabled: g,
                       value: this.getOverwriteValue(r),
                       onChange: (e) => this.handleChange(r, e),
-                      note: (0, c._u)(n),
+                      note: (0, d._u)(n),
                       helpdeskArticleId: l,
                       children: [
                           x,
@@ -71,7 +71,7 @@ class p extends l.PureComponent {
                       disabled: g,
                       value: this.getPermissionValue(r, o),
                       onChange: (e) => this.handleChange(r, e),
-                      note: (0, c._u)(n),
+                      note: (0, d._u)(n),
                       children: [
                           x,
                           (0, i.jsx)('span', {

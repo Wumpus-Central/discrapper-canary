@@ -1,16 +1,16 @@
-t.d(n, {
+n.d(t, {
     g: function () {
-        return l;
+        return a;
     },
     p: function () {
         return s;
     }
 });
-var r,
+var i,
     s,
-    i = t(818083);
-((r = s || (s = {}))[(r.VARIANT_1 = 0)] = 'VARIANT_1'), (r[(r.VARIANT_2 = 1)] = 'VARIANT_2');
-let l = (0, i.B)({
+    r = n(818083);
+((i = s || (s = {}))[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2');
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-03_referral_program_sender',
     label: 'Referral Program Sender Experience',

@@ -1,3 +1,3 @@
 let { createLoader: i } = r(969090),
-    a = i(['KUFsLi', 'xi8rEx', 'QkGMPz', 'jM7sUl', '09QGGB', 'yQfLwM', 'ofazSU'], { 'en-US': () => r.e('35633').then(r.bind(r, 435293)) }, 'en-US').getBinds();
+    a = i(['yQfLwM', 'xi8rEx', 'QkGMPz', 'KUFsLi', 'jM7sUl', 'ofazSU', '09QGGB'], { 'en-US': () => r.e('35633').then(r.bind(r, 435293)) }, 'en-US').getBinds();
 n.Z = a;

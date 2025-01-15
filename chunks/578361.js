@@ -1,27 +1,27 @@
 n.d(t, {
     n: function () {
-        return r;
+        return s;
     }
 });
 var i,
-    r,
-    a = n(200651),
-    o = n(192379),
-    s = n(120356),
-    c = n.n(s),
-    l = n(748780),
-    u = n(215569),
-    d = n(383583);
-((i = r || (r = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
-let p = {
+    s,
+    r = n(200651),
+    a = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    c = n(748780),
+    d = n(215569),
+    u = n(383583);
+((i = s || (s = {}))[(i.RIGHT = -1)] = 'RIGHT'), (i[(i.LEFT = 1)] = 'LEFT');
+let m = {
     friction: 7,
     tension: 40,
     clamp: !0
 };
-class f extends o.PureComponent {
+class g extends a.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
-            l.Z.spring(this._animated, {
+            c.Z.spring(this._animated, {
                 toValue: 0,
                 ...this.props.springSettings
             }).start(e);
@@ -30,13 +30,13 @@ class f extends o.PureComponent {
         this._animated.setValue(0);
     }
     componentWillLeave(e) {
-        l.Z.spring(this._animated, {
+        c.Z.spring(this._animated, {
             toValue: this.props.direction,
             ...this.props.springSettings
         }).start(e);
     }
     getStyle() {
-        let e = l.Z.accelerate({
+        let e = c.Z.accelerate({
             transform: [
                 {
                     translateX: this._animated.interpolate({
@@ -56,9 +56,9 @@ class f extends o.PureComponent {
         );
     }
     render() {
-        return (0, a.jsx)(l.Z.div, {
+        return (0, r.jsx)(c.Z.div, {
             style: this.getStyle(),
-            className: d.item,
+            className: u.item,
             children: this.props.children
         });
     }
@@ -75,20 +75,20 @@ class f extends o.PureComponent {
                       writable: !0
                   })
                 : (t[n] = i),
-            (this._animated = new l.Z.Value(-1 * e.direction));
+            (this._animated = new c.Z.Value(-1 * e.direction));
     }
 }
 t.Z = (e) => {
-    let { children: t, step: n, direction: i, className: r, springSettings: o = p, fadeInOut: s = !1 } = e;
-    return (0, a.jsx)(u.W, {
+    let { children: t, step: n, direction: i, className: s, springSettings: a = m, fadeInOut: l = !1 } = e;
+    return (0, r.jsx)(d.W, {
         component: 'div',
-        className: c()(d.animator, r),
-        children: (0, a.jsx)(
-            f,
+        className: o()(u.animator, s),
+        children: (0, r.jsx)(
+            g,
             {
                 direction: i,
-                springSettings: o,
-                fadeInOut: s,
+                springSettings: a,
+                fadeInOut: l,
                 children: t
             },
             n

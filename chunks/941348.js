@@ -9,11 +9,11 @@ var o = n(200651),
     u = n(277636);
 t.Z = function (e) {
     var t;
-    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: f, onCtxMenuClosed: g, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
+    let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: g, onCtxMenuClosed: h, onCtxMenuSelection: f, quest: v, useReducedMotion: C, collapsedHeight: j } = e,
         _ = r.useRef(null),
-        b = r.useRef(null),
-        E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        N = (0, s.Rf)(C);
+        T = r.useRef(null),
+        E = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        S = (0, s.Rf)(v);
     return (0, o.jsxs)(i.p, {
         expandedContentRef: n,
         collapsedContentRef: _,
@@ -25,24 +25,24 @@ t.Z = function (e) {
                 expansionSpring: p,
                 isExpanded: m,
                 isExpansionAnimationComplete: x,
-                quest: C,
-                useReducedMotion: v,
-                taskDetails: N
+                quest: v,
+                useReducedMotion: C,
+                taskDetails: S
             }),
             (0, o.jsx)(c.Z, {
                 expansionSpring: p,
                 className: u.content,
                 collapsedHeight: j,
-                onCtxMenuOpen: f,
-                onCtxMenuClose: g,
-                onCtxMenuSelect: h,
-                overlayRef: b,
+                onCtxMenuOpen: g,
+                onCtxMenuClose: h,
+                onCtxMenuSelect: f,
+                overlayRef: T,
                 isExpanded: m,
                 isExpansionAnimationComplete: x,
-                quest: C,
-                useReducedMotion: v,
+                quest: v,
+                useReducedMotion: C,
                 ref: n,
-                taskDetails: N,
+                taskDetails: S,
                 children: (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)(d.Z, {
@@ -51,20 +51,20 @@ t.Z = function (e) {
                         }),
                         !E &&
                             (0, o.jsx)(a.Z, {
-                                quest: C,
+                                quest: v,
                                 expansionSpring: p,
-                                useReducedMotion: v,
+                                useReducedMotion: C,
                                 isExpanded: m,
                                 isExpansionAnimationComplete: x,
-                                onCtxMenuOpen: f,
-                                onCtxMenuClose: g,
-                                onCtxMenuSelect: h
+                                onCtxMenuOpen: g,
+                                onCtxMenuClose: h,
+                                onCtxMenuSelect: f
                             })
                     ]
                 })
             }),
             (0, o.jsx)('div', {
-                ref: b,
+                ref: T,
                 className: u.overlay
             })
         ]

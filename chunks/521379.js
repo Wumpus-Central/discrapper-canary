@@ -8,22 +8,22 @@ var i,
     r,
     s,
     l,
-    a = n(200651),
-    o = n(192379),
+    o = n(200651),
+    a = n(192379),
     c = n(442837),
-    u = n(388905),
-    d = n(108427),
+    d = n(388905),
+    u = n(108427),
     h = n(559786);
 c.ZP.initialize();
-class g extends (i = o.PureComponent) {
+class g extends (i = a.PureComponent) {
     componentDidMount() {
-        (0, d.e)('account_revert');
+        (0, u.e)('account_revert');
     }
     render() {
         let { token: e } = this.props.match.params;
-        return (0, a.jsx)(u.ZP, {
+        return (0, o.jsx)(d.ZP, {
             style: { padding: 0 },
-            children: (0, a.jsx)(h.Z, {
+            children: (0, o.jsx)(h.Z, {
                 width: 464,
                 token: e,
                 ...this.props

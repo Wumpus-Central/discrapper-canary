@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return c;
+        return d;
     },
     s: function () {
         return l;
@@ -12,7 +12,7 @@ var i,
     a = n(63063),
     o = n(981631),
     s = n(388032);
-function c(e, t) {
+function d(e, t) {
     let n;
     0 === e ? (n = s.intl.format(s.t['/S6f5+'], {})) : 1 === e ? (n = s.intl.format(s.t.EBhv4e, { name: t })) : 2 === e && (n = s.intl.format(s.t['59Dbw8'], { name: t })),
         r.Z.show({

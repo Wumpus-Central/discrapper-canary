@@ -2,27 +2,27 @@ n(47120);
 var i,
     s,
     r,
-    l,
-    a = n(442837),
+    a,
+    l = n(442837),
     o = n(570140);
 let c = [];
 function d() {
     c = [];
 }
-class u extends (i = a.ZP.Store) {
+class u extends (i = l.ZP.Store) {
     getSessions() {
         return c;
     }
 }
-(l = 'AuthSessionsStore'),
+(a = 'AuthSessionsStore'),
     (r = 'displayName') in (s = u)
         ? Object.defineProperty(s, r, {
-              value: l,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = l),
+        : (s[r] = a),
     (t.Z = new u(o.Z, {
         LOGOUT: d,
         LOGIN_SUCCESS: d,

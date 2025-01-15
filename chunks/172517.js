@@ -3,16 +3,16 @@ n.d(t, {
         return g;
     },
     Pk: function () {
-        return o;
+        return a;
     },
     Rq: function () {
-        return p;
+        return f;
     },
     W_: function () {
         return l;
     },
     dK: function () {
-        return a;
+        return o;
     },
     qd: function () {
         return m;
@@ -48,11 +48,11 @@ function l() {
         ['decrypt']
     );
 }
-async function a(e) {
+async function o(e) {
     return r()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
-async function o(e) {
-    return r()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
+async function a(e) {
+    return r()(null != e.publicKey, 'public key cannot be null'), u(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 function c(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
@@ -60,10 +60,10 @@ function c(e) {
         .replace(/\+/g, '-')
         .replace(/={1,2}$/, '');
 }
-function u(e) {
+function d(e) {
     return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
 }
-async function d(e) {
+async function u(e) {
     return c(await window.crypto.subtle.digest({ name: 'SHA-256' }, e));
 }
 function h(e, t) {
@@ -81,21 +81,21 @@ function h(e, t) {
 }
 async function g(e, t) {
     let n = new TextDecoder(),
-        i = await h(e, u(t));
+        i = await h(e, d(t));
     return n.decode(i);
 }
 async function m(e, t) {
-    return c(await h(e, u(t)));
+    return c(await h(e, d(t)));
 }
-async function p(e, t) {
+async function f(e, t) {
     t = await g(e, t);
     let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, i, r, l, a] = n;
+    let [, i, r, l, o] = n;
     return new s.Z({
         id: i,
         discriminator: r,
         avatar: '0' === l ? null : l,
-        username: a
+        username: o
     });
 }

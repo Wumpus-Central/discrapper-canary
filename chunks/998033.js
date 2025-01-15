@@ -20,11 +20,11 @@ var s = n(13245),
     m = n(987650),
     v = n(388032);
 function x(e, t, n, x) {
-    var _;
-    let { icon: S, title: Z, body: E } = (0, d.Xi)(e, t, n),
+    var Z;
+    let { icon: S, title: _, body: E } = (0, d.Xi)(e, t, n),
         { trackView: C, trackClick: I } = (0, f.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
-            notif_user_id: null === (_ = t.author) || void 0 === _ ? void 0 : _.id,
+            notif_user_id: null === (Z = t.author) || void 0 === Z ? void 0 : Z.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -33,7 +33,7 @@ function x(e, t, n, x) {
         });
     return {
         icon: S,
-        title: Z,
+        title: _,
         body: E,
         renderFooter: (e) =>
             e

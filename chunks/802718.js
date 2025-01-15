@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(682662),
     h = n(662146),
     p = n(678513),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     g = n(477090);
 function v(e) {
     let { target: t } = e,
@@ -57,7 +57,7 @@ function v(e) {
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
-                    children: m.intl.string(m.t.IIbwAg)
+                    children: f.intl.string(f.t.IIbwAg)
                 })
             ]
         }),
@@ -65,7 +65,7 @@ function v(e) {
     return (0, i.jsxs)(d.H, {
         children: [
             (0, i.jsx)(a.ThemeContextProvider, {
-                theme: f.BRd.DARK,
+                theme: m.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
                     text: x,
                     tooltipClass: g.tooltip,

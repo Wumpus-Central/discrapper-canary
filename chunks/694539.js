@@ -2,44 +2,44 @@ n(47120), n(642549), n(518263), n(970173), n(520712), n(268111), n(941497), n(32
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(979554),
+    a = n.n(r),
+    l = n(979554),
     o = n(442837),
     c = n(481060),
     d = n(53281),
     u = n(921813),
     m = n(594174),
-    h = n(572004),
-    g = n(451593),
+    g = n(572004),
+    h = n(451593),
     p = n(477146),
     x = n(329156),
-    S = n(658234),
-    T = n(346537),
+    f = n(658234),
+    _ = n(346537),
     E = n(830318);
 let C = (e) => {
     let [t, n] = e.split(','),
         i = atob(n),
         s = t.split(';')[0],
         r = new ArrayBuffer(i.length),
-        l = new Uint8Array(r);
-    for (let e = 0; e < i.length; e++) l[e] = i.charCodeAt(e);
+        a = new Uint8Array(r);
+    for (let e = 0; e < i.length; e++) a[e] = i.charCodeAt(e);
     return new Blob([r], { type: s });
 };
 t.Z = (e) => {
     let { effect: t, back: n } = e,
-        { upsertConfig: r } = (0, g.E)(),
-        _ = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        [f, I] = s.useState(!0),
-        N = s.useRef(null),
-        [A, b] = s.useState(!1),
-        [v, j] = s.useState(!1),
-        [O, R] = s.useState(!1),
-        [P, D] = s.useState([]),
-        [y, B] = s.useState(t.name);
+        { upsertConfig: r } = (0, h.E)(),
+        T = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        [S, b] = s.useState(!0),
+        I = s.useRef(null),
+        [N, v] = s.useState(!1),
+        [A, j] = s.useState(!1),
+        [R, O] = s.useState(!1),
+        [P, y] = s.useState([]),
+        [D, B] = s.useState(t.name);
     s.useEffect(() => {
         let e = t.config.effects;
         e.length > 0 &&
-            D(
+            y(
                 [...e].map((e) => {
                     let t = C(e.base64),
                         n = URL.createObjectURL(t);
@@ -47,54 +47,54 @@ t.Z = (e) => {
                 })
             );
     }, [t]);
-    let L = {
+    let Z = {
             effect: t,
             upsertConfig: r
         },
-        Z = s.useRef(L);
+        L = s.useRef(Z);
     return (s.useEffect(() => {
-        Z.current = L;
+        L.current = Z;
     }),
     s.useEffect(() => {
-        let { effect: e, upsertConfig: t } = Z.current;
+        let { effect: e, upsertConfig: t } = L.current;
         t({
             id: e.id,
-            name: y,
+            name: D,
             config: { effects: P }
         });
-    }, [P, y]),
-    null == _)
+    }, [P, D]),
+    null == T)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
-              className: S.root,
+              className: f.root,
               children: [
                   (0, i.jsx)('div', {
-                      className: l()(S.row, S.end),
+                      className: a()(f.row, f.end),
                       children: (0, i.jsx)(c.Button, {
                           onClick: n,
                           children: 'Back'
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: S.grid,
+                      className: f.grid,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: l()(S.col, S.preview),
+                              className: a()(f.col, f.preview),
                               children: [
                                   (0, i.jsx)('img', {
-                                      src: A ? T : E,
+                                      src: N ? _ : E,
                                       alt: '',
                                       width: 450
                                   }),
-                                  f &&
+                                  S &&
                                       (0, i.jsx)(x.Z, {
                                           config: {
-                                              type: a.Z.PROFILE_EFFECT,
+                                              type: l.Z.PROFILE_EFFECT,
                                               title: 'debug',
                                               description: 'debug',
                                               accessibilityLabel: 'debug',
                                               reducedMotionSrc: '',
-                                              effects: O ? (0, p.Tp)(P) : P,
+                                              effects: R ? (0, p.Tp)(P) : P,
                                               animationType: 0
                                           },
                                           profileEffectId: 'debug'
@@ -102,10 +102,10 @@ t.Z = (e) => {
                               ]
                           }),
                           (0, i.jsxs)('div', {
-                              className: l()(S.col, S.controls),
+                              className: a()(f.col, f.controls),
                               children: [
                                   (0, i.jsxs)('div', {
-                                      className: l()(S.col, S.section),
+                                      className: a()(f.col, f.section),
                                       children: [
                                           (0, i.jsx)(c.Text, {
                                               variant: 'text-md/normal',
@@ -113,8 +113,8 @@ t.Z = (e) => {
                                           }),
                                           (0, i.jsx)('input', {
                                               type: 'text',
-                                              value: y,
-                                              className: S.input,
+                                              value: D,
+                                              className: f.input,
                                               onChange: (e) => {
                                                   B(e.target.value);
                                               }
@@ -122,10 +122,10 @@ t.Z = (e) => {
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: S.grid,
+                                      className: f.grid,
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: f.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -133,16 +133,16 @@ t.Z = (e) => {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: A,
-                                                      className: S.checkBox,
+                                                      checked: N,
+                                                      className: f.checkBox,
                                                       onChange: () => {
-                                                          b(!A);
+                                                          v(!N);
                                                       }
                                                   })
                                               ]
                                           }),
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: f.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -150,16 +150,16 @@ t.Z = (e) => {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: v,
-                                                      className: S.checkBox,
+                                                      checked: A,
+                                                      className: f.checkBox,
                                                       onChange: () => {
-                                                          j(!v);
+                                                          j(!A);
                                                       }
                                                   })
                                               ]
                                           }),
                                           (0, i.jsxs)('div', {
-                                              className: S.row,
+                                              className: f.row,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -167,10 +167,10 @@ t.Z = (e) => {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: O,
-                                                      className: S.checkBox,
+                                                      checked: R,
+                                                      className: f.checkBox,
                                                       onChange: () => {
-                                                          R(!O);
+                                                          O(!R);
                                                       }
                                                   })
                                               ]
@@ -180,7 +180,7 @@ t.Z = (e) => {
                                   (0, i.jsxs)('div', {
                                       children: [
                                           (0, i.jsxs)('div', {
-                                              className: S.uploadButton,
+                                              className: f.uploadButton,
                                               children: [
                                                   (0, i.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
@@ -188,7 +188,7 @@ t.Z = (e) => {
                                                       children: 'Upload Layer'
                                                   }),
                                                   (0, i.jsx)(d.Z, {
-                                                      ref: N,
+                                                      ref: I,
                                                       onChange: (e) => {
                                                           let t = e.currentTarget.files;
                                                           if (null == t) return;
@@ -197,7 +197,7 @@ t.Z = (e) => {
                                                           (i.onload = async (e) => {
                                                               if (null == e.target || 'string' != typeof e.target.result) return;
                                                               let t = await (0, p.Xv)(URL.createObjectURL(n), e.target.result, n, P.length);
-                                                              D((e) => [...e, t]);
+                                                              y((e) => [...e, t]);
                                                           }),
                                                               i.readAsDataURL(n);
                                                       },
@@ -212,34 +212,34 @@ t.Z = (e) => {
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: S.bottomControls,
+                                      className: f.bottomControls,
                                       children: [
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.RED,
                                               look: c.ButtonLooks.LINK,
                                               onClick: () => {
-                                                  D([]);
+                                                  y([]);
                                               },
                                               children: 'Clear Assets'
                                           }),
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  I(!1), setTimeout(() => I(!0), 100);
+                                                  b(!1), setTimeout(() => b(!0), 100);
                                               },
                                               children: 'Replay Animation'
                                           }),
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  (0, h.JG)((0, p.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)((0, p.HV)(P, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Export'
                                           })
                                       ]
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: l()(S.bottomControls, S.shareSection),
+                                      className: a()(f.bottomControls, f.shareSection),
                                       children: [
                                           (0, i.jsxs)(c.Text, {
                                               variant: 'text-sm/semibold',
@@ -247,7 +247,7 @@ t.Z = (e) => {
                                                   'Export the config for sharing in this tool.',
                                                   ' ',
                                                   (0, i.jsx)('span', {
-                                                      className: S.warningText,
+                                                      className: f.warningText,
                                                       children: "WARNING: it's really big"
                                                   })
                                               ]
@@ -255,7 +255,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.GREEN,
                                               onClick: () => {
-                                                  (0, h.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, g.JG)(JSON.stringify(t)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Share'
                                           })
@@ -266,7 +266,7 @@ t.Z = (e) => {
                                       return (null !== (t = e.randomizedSources) && void 0 !== t ? t : []).length > 0;
                                   }) &&
                                       (0, i.jsxs)('div', {
-                                          className: l()(S.section, S.randomizedRules),
+                                          className: a()(f.section, f.randomizedRules),
                                           children: [
                                               (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/bold',
@@ -279,12 +279,12 @@ t.Z = (e) => {
                                       }),
                                   (0, i.jsx)('div', {
                                       children:
-                                          v &&
+                                          A &&
                                           (0, i.jsxs)('div', {
-                                              className: l()(S.userProfilePreview, S.preview),
+                                              className: a()(f.userProfilePreview, f.preview),
                                               children: [
                                                   (0, i.jsx)(u.Z, {
-                                                      user: _,
+                                                      user: T,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
                                                       canUsePremiumCustomization: !0,
@@ -292,12 +292,12 @@ t.Z = (e) => {
                                                   }),
                                                   (0, i.jsx)(x.Z, {
                                                       config: {
-                                                          type: a.Z.PROFILE_EFFECT,
+                                                          type: l.Z.PROFILE_EFFECT,
                                                           title: 'debug',
                                                           description: 'debug',
                                                           accessibilityLabel: 'debug',
                                                           reducedMotionSrc: '',
-                                                          effects: O ? (0, p.Tp)(P) : P,
+                                                          effects: R ? (0, p.Tp)(P) : P,
                                                           animationType: 0
                                                       },
                                                       profileEffectId: 'debug'
@@ -308,13 +308,13 @@ t.Z = (e) => {
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: l()(S.grid, S.layers),
+                              className: a()(f.grid, f.layers),
                               children: P.map((e, t) => {
                                   var n;
                                   return (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: S.layerForm,
+                                          className: f.layerForm,
                                           children: [
                                               (0, i.jsx)(c.Heading, {
                                                   variant: 'heading-md/bold',
@@ -322,7 +322,7 @@ t.Z = (e) => {
                                               }),
                                               (0, i.jsx)('img', {
                                                   src: e.base64,
-                                                  className: S.layerPreview,
+                                                  className: f.layerPreview,
                                                   alt: ''
                                               }),
                                               (null !== (n = e.randomizedSources) && void 0 !== n ? n : []).map((e, t) =>
@@ -330,17 +330,17 @@ t.Z = (e) => {
                                                       'img',
                                                       {
                                                           src: e.src,
-                                                          className: S.layerPreview,
+                                                          className: f.layerPreview,
                                                           alt: ''
                                                       },
                                                       t
                                                   )
                                               ),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.grid, S.section),
+                                                  className: a()(f.grid, f.section),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: f.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -349,9 +349,9 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'number',
                                                                   value: e.start,
-                                                                  className: S.input,
+                                                                  className: f.input,
                                                                   onChange: (e) => {
-                                                                      D((n) => {
+                                                                      y((n) => {
                                                                           let i = [...n],
                                                                               s = n[t];
                                                                           return (s.start = +e.target.value), (i[t] = s), i;
@@ -362,7 +362,7 @@ t.Z = (e) => {
                                                           ]
                                                       }),
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: f.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -371,9 +371,9 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'number',
                                                                   value: e.duration,
-                                                                  className: S.input,
+                                                                  className: f.input,
                                                                   onChange: (e) => {
-                                                                      D((n) => {
+                                                                      y((n) => {
                                                                           let i = [...n],
                                                                               s = n[t];
                                                                           return (s.duration = +e.target.value), (i[t] = s), i;
@@ -386,10 +386,10 @@ t.Z = (e) => {
                                                   ]
                                               }),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.grid, S.section),
+                                                  className: a()(f.grid, f.section),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.col,
+                                                          className: f.col,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
@@ -398,9 +398,9 @@ t.Z = (e) => {
                                                               (0, i.jsx)('input', {
                                                                   type: 'checkbox',
                                                                   checked: e.loop,
-                                                                  className: S.checkBox,
+                                                                  className: f.checkBox,
                                                                   onChange: (e) => {
-                                                                      D((n) => {
+                                                                      y((n) => {
                                                                           let i = [...n],
                                                                               s = n[t];
                                                                           return (s.loop = e.target.checked), (i[t] = s), i;
@@ -410,7 +410,7 @@ t.Z = (e) => {
                                                           ]
                                                       }),
                                                       (0, i.jsx)('div', {
-                                                          className: S.col,
+                                                          className: f.col,
                                                           children:
                                                               e.loop &&
                                                               (0, i.jsxs)(i.Fragment, {
@@ -422,9 +422,9 @@ t.Z = (e) => {
                                                                       (0, i.jsx)('input', {
                                                                           type: 'number',
                                                                           value: e.loopDelay,
-                                                                          className: S.input,
+                                                                          className: f.input,
                                                                           onChange: (e) => {
-                                                                              D((n) => {
+                                                                              y((n) => {
                                                                                   let i = [...n],
                                                                                       s = n[t];
                                                                                   return (s.loopDelay = +e.target.value), (i[t] = s), i;
@@ -438,10 +438,10 @@ t.Z = (e) => {
                                                   ]
                                               }),
                                               (0, i.jsxs)('div', {
-                                                  className: l()(S.row, S.end),
+                                                  className: a()(f.row, f.end),
                                                   children: [
                                                       (0, i.jsxs)('div', {
-                                                          className: S.uploadButton,
+                                                          className: f.uploadButton,
                                                           children: [
                                                               (0, i.jsx)(c.Text, {
                                                                   variant: 'text-sm/normal',
@@ -449,14 +449,14 @@ t.Z = (e) => {
                                                                   children: 'Add Alternative'
                                                               }),
                                                               (0, i.jsx)(d.Z, {
-                                                                  ref: N,
+                                                                  ref: I,
                                                                   onChange: (e) => {
                                                                       let n = e.currentTarget.files;
                                                                       if (null == n) return;
                                                                       let i = n[0],
                                                                           s = new FileReader();
                                                                       (s.onload = (e) => {
-                                                                          D((n) => {
+                                                                          y((n) => {
                                                                               if (null == e.target || 'string' != typeof e.target.result) return n;
                                                                               let i = [...n];
                                                                               return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), i;
@@ -472,7 +472,7 @@ t.Z = (e) => {
                                                           color: c.ButtonColors.RED,
                                                           look: c.ButtonLooks.LINK,
                                                           onClick: () => {
-                                                              D((t) => t.filter((t) => t !== e));
+                                                              y((t) => t.filter((t) => t !== e));
                                                           },
                                                           children: 'Remove Layer'
                                                       })

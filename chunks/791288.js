@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(371991),
     v = n(656709),
     x = n(561308),
-    _ = n(593481),
+    Z = n(593481),
     S = n(371651),
-    Z = n(703656),
+    _ = n(703656),
     E = n(199902),
     C = n(592125),
     I = n(158776),
@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(981631),
     j = n(701488),
     M = n(987650),
-    R = n(388032),
+    w = n(388032),
     P = n(522634);
-function w(e) {
+function R(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
@@ -58,15 +58,15 @@ function w(e) {
         })
     });
 }
-function A(e) {
+function k(e) {
     let { entry: t, idx: n } = e,
         r = (0, o.e7)([y.default], () => y.default.getUser(t.author_id)),
         h = (0, x.kr)(t),
         f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [_, S] = s.useState('unsent'),
+        [Z, S] = s.useState('unsent'),
         [b, T] = s.useState(!1),
         j = (0, o.e7)([E.Z], () => (null != r ? E.Z.getAnyStreamForUser(r.id) : null), [r]),
-        { isMobileOnline: M, status: w } = (0, o.cj)(
+        { isMobileOnline: M, status: R } = (0, o.cj)(
             [I.Z],
             () =>
                 null == r
@@ -81,13 +81,13 @@ function A(e) {
             [r]
         );
     s.useEffect(() => {
-        if ('sent' === _) {
+        if ('sent' === Z) {
             let e = setTimeout(() => T(!0), 2000);
             return () => clearTimeout(e);
         }
-    }, [_]);
-    let A = async (e) => {
-            if (null != r && 'unsent' === _) {
+    }, [Z]);
+    let k = async (e) => {
+            if (null != r && 'unsent' === Z) {
                 e.stopPropagation();
                 try {
                     var i;
@@ -95,10 +95,10 @@ function A(e) {
                     let e = await d.Z.getOrEnsurePrivateChannel(r.id),
                         s = null !== (i = C.Z.getChannel(e)) && void 0 !== i ? i : null;
                     a()(null != s, 'Send channel must be defined'),
-                        (0, Z.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
+                        (0, _.uL)(O.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, v.p)({
                             channel: s,
-                            content: R.intl.string(R.t.DwAcMz),
+                            content: w.intl.string(w.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
@@ -113,12 +113,12 @@ function A(e) {
                 }
             }
         },
-        k = async () => {
+        A = async () => {
             var e;
             if (null == r) return;
             let t = await d.Z.getOrEnsurePrivateChannel(r.id),
                 n = null !== (e = C.Z.getChannel(t)) && void 0 !== e ? e : null;
-            a()(null != n, 'Send channel must be defined'), (0, Z.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
+            a()(null != n, 'Send channel must be defined'), (0, _.uL)(O.Z5c.CHANNEL(n.guild_id, n.id));
         };
     return null == r
         ? null
@@ -129,7 +129,7 @@ function A(e) {
                       className: P.avatarContainer,
                       user: r,
                       isMobile: M,
-                      status: w
+                      status: R
                   }),
                   (0, i.jsxs)('div', {
                       className: P.userInfo,
@@ -164,14 +164,14 @@ function A(e) {
                   (0, i.jsx)('div', {
                       className: P.inviteButtonWrapper,
                       children: (0, i.jsx)(l.Button, {
-                          submitting: 'sending' === _,
-                          onClick: b ? k : A,
+                          submitting: 'sending' === Z,
+                          onClick: b ? A : k,
                           className: P.inviteButton,
                           color: l.ButtonColors.PRIMARY,
-                          look: 'sent' === _ ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
+                          look: 'sent' === Z ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
                           size: l.ButtonSizes.MAX,
                           children:
-                              'sent' === _
+                              'sent' === Z
                                   ? b
                                       ? (0, i.jsx)(l.ChatIcon, { size: 'sm' })
                                       : (0, i.jsx)(l.CheckmarkSmallBoldIcon, {
@@ -184,21 +184,21 @@ function A(e) {
               ]
           });
 }
-function k(e) {
+function A(e) {
     let { entries: t } = e,
         n = t.slice(0, 5);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(_.iz, {}),
+            (0, i.jsx)(Z.iz, {}),
             (0, i.jsxs)(l.Text, {
                 className: P.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), R.intl.string(R.t.y9eo7e)]
+                children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), w.intl.string(w.t.y9eo7e)]
             }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    A,
+                    k,
                     {
                         idx: t,
                         entry: e
@@ -215,8 +215,8 @@ function D(e, t) {
         a()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
-            title: (0, i.jsx)(w, { game: e }),
-            body: (0, i.jsx)(k, { entries: t }),
+            title: (0, i.jsx)(R, { game: e }),
+            body: (0, i.jsx)(A, { entries: t }),
             onNotificationShow: () => {
                 n(),
                     c.Z.track(O.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {

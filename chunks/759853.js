@@ -11,44 +11,44 @@ var o = n(200651),
     p = n(607070),
     m = n(819640),
     x = n(569379),
-    f = n(675654),
-    g = n(211720),
-    h = n(197857);
-let C = ['#51BC9D'];
+    g = n(675654),
+    h = n(211720),
+    f = n(197857);
+let v = ['#51BC9D'];
 t.Z = (e) => {
     var t;
-    let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
-        { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
-        N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        B = r.useRef(!1),
-        T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        S = r.useRef(null),
+    let { expansionSpring: n, overlayRef: s, quest: C, progressBarRef: j, isExpanded: _ } = e,
+        { completionSpring: T, startCompletionAnimation: E } = (0, x.G)(),
+        S = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        b = r.useRef(!1),
+        N = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        B = r.useRef(null),
         y = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
         A = (0, u.Z)(y),
-        [R, w] = r.useState(null),
-        [I, k] = r.useState(null),
-        q = r.useRef(
+        [w, R] = r.useState(null),
+        [I, P] = r.useState(null),
+        k = r.useRef(
             new i.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        P = (0, i.uR)(R, I),
-        M = r.useCallback(() => {
-            if (T) return;
+        O = (0, i.uR)(w, I),
+        q = r.useCallback(() => {
+            if (N) return;
             let e = j.current,
-                t = S.current;
-            if (null != t && null != e && P.isReady) {
+                t = B.current;
+            if (null != t && null != e && O.isReady) {
                 var n, o, r, s;
                 let { x: a, y: i } = e.getBoundingClientRect(),
                     { x: l, y: c } = t.getBoundingClientRect();
-                P.createMultipleConfetti(
+                O.createMultipleConfetti(
                     ((n = a - l),
                     (o = i - c),
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
-                        ...f.We,
+                        ...g.We,
                         position: {
                             type: 'static-random',
                             minValue: {
@@ -89,39 +89,39 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [j, S, P, T]),
-        O = (0, u.Z)(_);
+        }, [j, B, O, N]),
+        M = (0, u.Z)(_);
     return (r.useEffect(() => {
-        N && _ && !O && (E(), M());
-    }, [_, N, E, M, O]),
+        S && _ && !M && (E(), q());
+    }, [_, S, E, q, M]),
     r.useEffect(() => {
-        N &&
+        S &&
             !y &&
             A &&
             setTimeout(() => {
-                E(), M();
+                E(), q();
             }, 200);
-    }, [N, A, y, E, M]),
+    }, [S, A, y, E, q]),
     r.useEffect(() => {
-        if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
-    }, [N, B, M, E, P]),
-    T)
+        if (!!O.isReady) !b.current && S && (E(), q()), (b.current = S);
+    }, [S, b, q, E, O]),
+    N)
         ? null
         : (0, o.jsxs)('div', {
-              className: g.wrapper,
+              className: h.wrapper,
               'aria-hidden': 'true',
-              ref: S,
+              ref: B,
               children: [
                   (0, o.jsx)(c.animated.div, {
-                      className: g.background,
-                      style: { opacity: b }
+                      className: h.background,
+                      style: { opacity: T }
                   }),
                   (0, o.jsx)(c.animated.div, {
-                      className: a()(g.borders, g.bordersTopLeft),
-                      style: { opacity: b }
+                      className: a()(h.borders, h.bordersTopLeft),
+                      style: { opacity: T }
                   }),
                   (0, o.jsxs)(c.animated.div, {
-                      className: g.confettiWrapper,
+                      className: h.confettiWrapper,
                       style: {
                           transform: n
                               .to({
@@ -132,22 +132,22 @@ t.Z = (e) => {
                       },
                       children: [
                           (0, o.jsx)(i.O_, {
-                              ref: w,
-                              className: g.confetti,
-                              environment: q.current
+                              ref: R,
+                              className: h.confetti,
+                              environment: k.current
                           }),
                           (0, o.jsx)(i.Ji, {
-                              ref: k,
-                              sprites: [h],
-                              colors: C,
-                              spriteWidth: f.Ko,
-                              spriteHeight: f.Ko
+                              ref: P,
+                              sprites: [f],
+                              colors: v,
+                              spriteWidth: g.Ko,
+                              spriteHeight: g.Ko
                           }),
                           null != s.current &&
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
-                                      className: a()(g.borders, g.bordersBottom),
-                                      style: { opacity: b }
+                                      className: a()(h.borders, h.bordersBottom),
+                                      style: { opacity: T }
                                   }),
                                   s.current
                               )

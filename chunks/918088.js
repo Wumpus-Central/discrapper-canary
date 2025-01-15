@@ -157,7 +157,7 @@ function Z(e, t) {
         P = g.layout_type,
         L = R(e, t, { formattedExpirationLabel: m });
     if (null == L) return;
-    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: k, expirationLabel: D = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: B, hasVoted: U, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
+    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: D, expirationLabel: k = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: U, hasVoted: B, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
         Y = (0, E.cZ)(V),
         X = T.intl.formatToPlainString(T.t.XRkuoa, { count: Y.toLocaleString() }),
         Q = Math.max(
@@ -175,10 +175,10 @@ function Z(e, t) {
                 m = 0 === Y ? 0 : u / Y,
                 h = H.has(s),
                 _ = u >= Q && 0 !== u,
-                g = U && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
+                g = B && null !== (l = null == d ? void 0 : d.me_vote) && void 0 !== l && l,
                 E = b({
                     didSelfVote: g,
-                    hasVoted: U,
+                    hasVoted: B,
                     isExpired: F,
                     isSelected: h,
                     isLeader: _,
@@ -228,8 +228,8 @@ function Z(e, t) {
         }),
         J = (0, i.EQ)({
             isExpired: F,
-            canSubmitVote: k,
-            hasVoted: U,
+            canSubmitVote: D,
+            hasVoted: B,
             isEditingVote: w,
             canRemoveVote: O,
             isInteractive: G,
@@ -240,7 +240,7 @@ function Z(e, t) {
             .with({ isEditingVote: !0 }, () => ({
                 label: T.intl.string(T.t.JwkNU1),
                 presentation: 'button',
-                enabled: B,
+                enabled: U,
                 type: 'submit'
             }))
             .with({ canRemoveVote: !0 }, () => ({
@@ -264,7 +264,7 @@ function Z(e, t) {
             .otherwise(() => ({
                 label: T.intl.string(T.t.JwkNU1),
                 presentation: 'button',
-                enabled: k,
+                enabled: D,
                 type: 'submit'
             })),
         $ = (0, _.isIOS)() ? T.intl.string(T.t.PVATMz) : T.intl.string(T.t.cHfFqq),
@@ -292,14 +292,14 @@ function Z(e, t) {
             }))
             .otherwise(() => ({
                 label: X,
-                secondaryLabel: D,
+                secondaryLabel: k,
                 accessibilityHint: $,
                 presentation: 'text',
                 enabled: !0,
                 type: 'showVoterDetails'
             })),
         et =
-            !G || F || U || K
+            !G || F || B || K
                 ? void 0
                 : {
                       label: T.intl.string(T.t['/KHAUF']),
@@ -342,9 +342,9 @@ function Z(e, t) {
         isInteractive: G,
         canTapAnswers: y,
         canSelectMultipleAnswers: en,
-        hasSelectedAnswer: B,
+        hasSelectedAnswer: U,
         canShowVoteCounts: M,
-        hasVoted: U,
+        hasVoted: B,
         isExpired: F,
         myAvatarUrl: j,
         secondaryAction: ee,

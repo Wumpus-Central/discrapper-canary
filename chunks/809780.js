@@ -47,10 +47,10 @@ var i,
     y = n(306680),
     O = n(771845),
     M = n(9156),
-    k = n(70956),
-    D = n(823379),
-    B = n(709054),
-    U = n(981631),
+    D = n(70956),
+    k = n(823379),
+    U = n(709054),
+    B = n(981631),
     w = n(124368);
 function F(e, t, n) {
     return (
@@ -104,7 +104,7 @@ class V extends s.EventEmitter {
                 isFullyLoaded: t,
                 hasLoadedAnything: t
             };
-        } else (0, D.vE)(e);
+        } else (0, k.vE)(e);
     }
     clearScrollToChannelIndex() {
         this.setState({ scrollToChannelIndex: null });
@@ -113,7 +113,7 @@ class V extends s.EventEmitter {
         f.Z.clearChannel(e.channelId);
         let t = f.Z.fetchMessages({
             channelId: e.channelId,
-            limit: U.AQB,
+            limit: B.AQB,
             jump: {
                 messageId: e.oldestReadMessageId,
                 flash: !0
@@ -210,7 +210,7 @@ class V extends s.EventEmitter {
             (this.getNumUnreadChannels = () => this.state.channels.length),
             (this.markChannelRead = (e) => {
                 let { channelId: t, newestUnreadMessageId: n } = e;
-                h.Z.wait(() => p.In(t, !0, void 0, n, { section: U.jXE.INBOX }));
+                h.Z.wait(() => p.In(t, !0, void 0, n, { section: B.jXE.INBOX }));
                 let i = this.state.channels.find((e) => e.channelId === t);
                 if ((null != i && this.undoStack.push(i), 1 === this.state.channels.length)) {
                     this.deleteChannel(t);
@@ -229,7 +229,7 @@ class V extends s.EventEmitter {
                 if (0 === this.undoStack.length) return;
                 let e = this.undoStack.pop();
                 if (null == e) return;
-                p.In(e.channelId, !0, void 0, e.oldestReadMessageId, { section: U.jXE.INBOX });
+                p.In(e.channelId, !0, void 0, e.oldestReadMessageId, { section: B.jXE.INBOX });
                 let t = this.state.channels.findIndex((t) => t.order > e.order),
                     n = [...this.state.channels];
                 t < 0 ? n.push(e) : n.splice(t, 0, e),
@@ -239,7 +239,7 @@ class V extends s.EventEmitter {
                     });
             }),
             (this.markGuildRead = (e) => {
-                h.Z.wait(() => (0, E.Z)([e], U.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
+                h.Z.wait(() => (0, E.Z)([e], B.jXE.INBOX)), this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }), this.maybeLoadMore();
             }),
             (this.deleteChannel = (e) => {
                 this.setState({
@@ -312,11 +312,11 @@ function H(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = P.Z.getMessages(e.channelId),
-        l = r.toArray().filter((t) => B.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= B.default.compare(t.id, e.newestUnreadMessageId));
+        l = r.toArray().filter((t) => U.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= U.default.compare(t.id, e.newestUnreadMessageId));
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && i) return e;
     let a = null != r.getAfter(e.oldestReadMessageId) || (null === (n = l[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
         o = l[l.length - 1],
-        s = B.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || l.length >= G;
+        s = U.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || l.length >= G;
     return {
         ...e,
         messages: l,
@@ -357,7 +357,7 @@ function z() {
         })(e),
         n = m()
             .uniq(t.map((e) => e.guildId))
-            .filter(D.lm);
+            .filter(k.lm);
     return (
         h.Z.dispatch({
             type: 'INBOX_OPEN',
@@ -378,18 +378,18 @@ function W(e, t, n, i) {
     if (r.isPrivate()) {
         if (0 === y.ZP.getMentionCount(i)) return;
     } else if (!(0, C.d)(r) && 0 === y.ZP.getMentionCount(i)) return;
-    if (!r.isPrivate() && !L.Z.can(U.Plq.READ_MESSAGE_HISTORY, r)) return;
+    if (!r.isPrivate() && !L.Z.can(B.Plq.READ_MESSAGE_HISTORY, r)) return;
     let l = y.ZP.ackMessageId(i);
     if (null == l) {
         let e = Z.Z.getGuild(r.guild_id);
         if (null == e || null == e.joinedAt) return;
-        l = B.default.fromTimestamp(e.joinedAt.getTime());
+        l = U.default.fromTimestamp(e.joinedAt.getTime());
     }
     let a = y.ZP.getOldestUnreadMessageId(i),
         o = y.ZP.lastMessageId(i),
         s = y.ZP.getMentionCount(i),
         c = s > 0 || r.isPrivate();
-    if (null == o || B.default.compare(l, o) >= 0) return;
+    if (null == o || U.default.compare(l, o) >= 0) return;
     let d = {
         guildId: n,
         channelId: i,
@@ -409,7 +409,7 @@ function W(e, t, n, i) {
             if (i.isPrivate()) return 1;
             if (y.ZP.getMentionCount(t) > 0) return y.ZP.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
-                let e = B.default.extractTimestamp(n);
+                let e = U.default.extractTimestamp(n);
                 if (Date.now() - e > Y) return 8;
                 if (Date.now() - e > K) return 6;
             }
@@ -419,8 +419,8 @@ function W(e, t, n, i) {
             }
             {
                 let n = M.ZP.getChannelMessageNotifications(e, t),
-                    i = n === U.bL.NULL ? M.ZP.getMessageNotifications(e) : n;
-                return i === U.bL.ALL_MESSAGES ? 4 : i === U.bL.NO_MESSAGES ? 7 : 5;
+                    i = n === B.bL.NULL ? M.ZP.getMessageNotifications(e) : n;
+                return i === B.bL.ALL_MESSAGES ? 4 : i === B.bL.NO_MESSAGES ? 7 : 5;
             }
         })(n, i, o),
         order: 0
@@ -441,8 +441,8 @@ function W(e, t, n, i) {
                 messages: []
             });
 }
-let K = 2 * k.Z.Millis.DAY,
-    Y = 10 * k.Z.Millis.DAY;
+let K = 2 * D.Z.Millis.DAY,
+    Y = 10 * D.Z.Millis.DAY;
 function X(e) {
     let [t, n] = o.useState(() => new V(z(), e)),
         [i, r] = o.useState(!1),
@@ -462,7 +462,7 @@ function X(e) {
             if (null == a || a.channels.length > 0 || i) return;
             let t = Date.now(),
                 o = z();
-            0 === o.channels.length || t - l.current < 10 * k.Z.Millis.SECOND ? r(!0) : ((l.current = Date.now()), n(new V(o, e)));
+            0 === o.channels.length || t - l.current < 10 * D.Z.Millis.SECOND ? r(!0) : ((l.current = Date.now()), n(new V(o, e)));
         }, [a, i, e]);
     let c = o.useRef(t);
     return (

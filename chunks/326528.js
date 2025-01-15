@@ -6,17 +6,17 @@ n.d(t, {
 var i = n(481060),
     s = n(358085),
     r = n(991346),
-    l = n(295545),
-    a = n(168308),
+    a = n(295545),
+    l = n(168308),
     o = n(726985),
     c = n(332325),
     d = n(388032);
 function u() {
-    let e = (0, a.bC)(),
+    let e = (0, l.bC)(),
         t = (0, r.Gj)(o.s6.GAMES);
     return (function (e, t, n) {
         var r;
-        let l = ((r = e),
+        let a = ((r = e),
         [
             {
                 id: c.Z.MY_GAMES,
@@ -46,9 +46,9 @@ function u() {
             }
         ]).filter((e) => null == e.predicate || !e.predicate());
         if (t && null != n && n.size > 0) {
-            let e = l.filter((e) => n.has(e.setting));
-            return e.length > 0 ? e : l;
+            let e = a.filter((e) => n.has(e.setting));
+            return e.length > 0 ? e : a;
         }
-        return l;
-    })(e, (0, l.eA)({ location: 'settings' }), t);
+        return a;
+    })(e, (0, a.eA)({ location: 'settings' }), t);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(47120),
@@ -20,7 +20,7 @@ function r(e, t, n) {
         e
     );
 }
-class l {
+class a {
     search(e) {
         return new Promise((t) => {
             t(this.getMatchingSettings(e));

@@ -15,16 +15,16 @@ var l = n(120356),
     d = n(10448);
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
-        f = {},
-        m = {};
-    (f.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (m.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
+        m = {},
+        f = {};
+    (m.transform = 'translate3d(10px, 10px, 0) scale3d(3, 3, 1)'), (f.transform = 'translate3d(0, 0, 0) scale3d(1, 1, 1)');
     let g = (0, s.useToken)(o.Z.unsafe_rawColors.BRAND_500).hex(),
         v = (0, s.useToken)(o.Z.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((f.backgroundColor = g), (m.backgroundColor = v));
+    l && null == t.icon && ((m.backgroundColor = g), (f.backgroundColor = v));
     let C = (0, s.useTransition)(n, {
-        from: f,
-        enter: m,
-        leave: f,
+        from: m,
+        enter: f,
+        leave: m,
         config: { duration: 100 },
         onStart: h,
         onRest: p

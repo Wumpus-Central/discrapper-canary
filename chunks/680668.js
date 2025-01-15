@@ -32,22 +32,22 @@ function g(e) {
         y = null != v,
         O = null != L,
         M = null != L && L.isGuildVocal(),
-        k = null != L && L.isGuildStageVoice(),
-        D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
-        B = null !== (g = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
+        D = null != L && L.isGuildStageVoice(),
+        k = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
+        U = null !== (g = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
     if (null == v) {
         if (null == T.guild) return (0, i.jsx)(h.Z, {});
         v = u.Qs(T.guild);
         let e = (0, d.rF)(T.guild.premium_subscription_count, T.guild.id);
         v.premiumTier = e;
     }
-    let U = y ? x : N,
+    let B = y ? x : N,
         w = (0, m.e)({
             isVoiceChannel: M,
             isOwnInvite: b,
-            isGuest: D,
-            isHubGuild: B,
-            isStage: k,
+            isGuest: k,
+            isHubGuild: U,
+            isStage: D,
             isStream: !1
         });
     return (
@@ -65,7 +65,7 @@ function g(e) {
                 })
             ]
         })),
-        D &&
+        k &&
             (I = (0, i.jsx)(l.TooltipContainer, {
                 className: _.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
@@ -115,16 +115,16 @@ function g(e) {
                                 (0, i.jsx)(o.Z.Icon, { guild: v }),
                                 (0, i.jsx)(o.Z.Info, {
                                     title: C,
-                                    onClick: y ? U : null,
+                                    onClick: y ? B : null,
                                     children: E
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.Z.Button, {
-                            onClick: U,
+                            onClick: B,
                             submitting: P,
                             color: o.Z.Button.Colors.GREEN,
-                            children: M ? (k ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t.gpqgam)) : y ? p.intl.string(p.t.cEnaW1) : p.intl.string(p.t.XpeFYm)
+                            children: M ? (D ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t.gpqgam)) : y ? p.intl.string(p.t.cEnaW1) : p.intl.string(p.t.XpeFYm)
                         })
                     ]
                 }),

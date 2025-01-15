@@ -8,45 +8,45 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(r),
+    l = n(392711),
+    o = n.n(l),
     c = n(442837),
     d = n(524437),
     u = n(481060),
     m = n(668781),
-    h = n(292556),
-    g = n(87051),
+    g = n(292556),
+    h = n(87051),
     p = n(419363),
     x = n(818083),
-    S = n(688465),
-    T = n(487419),
+    f = n(688465),
+    _ = n(487419),
     E = n(197344),
     C = n(476756),
-    _ = n(734934),
-    f = n(223683),
-    I = n(312400),
-    N = n(115345),
-    A = n(392888),
-    b = n(106371),
-    v = n(995774),
+    T = n(734934),
+    S = n(223683),
+    b = n(312400),
+    I = n(115345),
+    N = n(392888),
+    v = n(106371),
+    A = n(995774),
     j = n(921801),
-    O = n(292959),
-    R = n(9156),
+    R = n(292959),
+    O = n(9156),
     P = n(912101),
-    D = n(358085),
-    y = n(709054),
+    y = n(358085),
+    D = n(709054),
     B = n(557177),
-    L = n(695346),
-    Z = n(675478),
-    F = n(33656),
-    M = n(726985),
-    k = n(981631),
-    w = n(468788),
+    Z = n(695346),
+    L = n(675478),
+    M = n(33656),
+    k = n(726985),
+    w = n(981631),
+    F = n(468788),
     U = n(388032),
     V = n(92486),
     G = n(232186);
-function Y(e, t, n) {
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,14 +59,14 @@ function Y(e, t, n) {
         e
     );
 }
-function H(e) {
-    let { label: t, enabled: n, disabled: s, onPreview: r, onChange: l, tooltip: a } = e;
+function Y(e) {
+    let { label: t, enabled: n, disabled: s, onPreview: r, onChange: a, tooltip: l } = e;
     return (0, i.jsx)(u.FormSwitch, {
         className: V.soundRow,
         value: n,
-        onChange: l,
+        onChange: a,
         disabled: s,
-        tooltipNote: a,
+        tooltipNote: l,
         children: (0, i.jsxs)('div', {
             className: V.notificationSound,
             children: [
@@ -89,23 +89,23 @@ function H(e) {
         })
     });
 }
-function z(e) {
+function W(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: r } = e,
-        a = s.useRef(),
-        o = (0, _.p)(),
+        l = s.useRef(),
+        o = (0, T.p)(),
         c = s.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = B.GN(e));
+            t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = B.GN(e));
         }, []),
         d = s.useCallback(
             (e, n) => {
                 let i = t.filter((t) => t !== e);
-                !n && i.push(e), h.default.setDisabledSounds(i);
+                !n && i.push(e), g.default.setDisabledSounds(i);
             },
             [t]
         );
     s.useEffect(() => () => {
         var e;
-        null === (e = a.current) || void 0 === e || e.stop();
+        null === (e = l.current) || void 0 === e || e.stop();
     });
     let m = [
             {
@@ -198,12 +198,12 @@ function z(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != E.Z.useHolidaySoundpack();
+        h = null != E.Z.useHolidaySoundpack();
     return (0, i.jsx)(j.F, {
-        setting: M.s6.NOTIFICATIONS_SOUNDS,
+        setting: k.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.FormSection, {
             children: [
-                g
+                h
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(u.FormTitle, {
@@ -215,32 +215,32 @@ function z(e) {
                       })
                     : null,
                 (0, i.jsx)(u.FormTitle, {
-                    className: l()(G.marginBottom20, G.marginTop20),
+                    className: a()(G.marginBottom20, G.marginTop20),
                     children: U.intl.string(U.t.MKWyKS)
                 }),
                 (0, i.jsx)(u.FormSwitch, {
                     note: U.intl.string(U.t['7oXUio']),
                     value: r,
-                    onChange: h.default.setNotifyMessagesInSelectedChannel,
+                    onChange: g.default.setNotifyMessagesInSelectedChannel,
                     children: U.intl.string(U.t.lF5GGR)
                 }),
                 (0, i.jsx)(u.FormSwitch, {
                     note: U.intl.string(U.t['+B0XLC']),
                     value: n,
-                    onChange: h.default.toggleDisableAllSounds,
+                    onChange: g.default.toggleDisableAllSounds,
                     children: U.intl.string(U.t['2ZhCOT'])
                 }),
                 m.map((e) => {
-                    let { label: s, sound: r, focusModeDisabled: l } = e;
+                    let { label: s, sound: r, focusModeDisabled: a } = e;
                     return (0, i.jsx)(
-                        H,
+                        Y,
                         {
                             label: s,
-                            disabled: n || !0 === l,
-                            tooltip: l ? U.intl.string(U.t.cIRG0t) : void 0,
+                            disabled: n || !0 === a,
+                            tooltip: a ? U.intl.string(U.t.cIRG0t) : void 0,
                             onChange: (e) => d(r, e),
                             onPreview: (e) => c(r, e),
-                            enabled: !n && !t.includes(r) && !0 !== l
+                            enabled: !n && !t.includes(r) && !0 !== a
                         },
                         r
                     );
@@ -249,10 +249,10 @@ function z(e) {
         })
     });
 }
-function W() {
-    let e = (0, c.e7)([T.Z], () => T.Z.getGuildAlertSettings()),
+function z() {
+    let e = (0, c.e7)([_.Z], () => _.Z.getGuildAlertSettings()),
         [t, n] = s.useState(null),
-        r = y.default.keys(e).map((t) => {
+        r = D.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -262,12 +262,12 @@ function W() {
     return 0 === Object.keys(e).length
         ? null
         : (0, i.jsxs)(j.F, {
-              setting: M.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
+              setting: k.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: [
                   (0, i.jsxs)(u.Heading, {
                       variant: 'heading-lg/semibold',
-                      className: l()(V.titleWithBeta, G.marginBottom20),
-                      children: [U.intl.string(U.t.D9yVAA), (0, i.jsx)(S.Z, {})]
+                      className: a()(V.titleWithBeta, G.marginBottom20),
+                      children: [U.intl.string(U.t.D9yVAA), (0, i.jsx)(f.Z, {})]
                   }),
                   (0, i.jsx)(u.FormText, {
                       type: u.FormTextTypes.DESCRIPTION,
@@ -290,53 +290,53 @@ function W() {
                                     className: G.marginTop20,
                                     children: [
                                         (0, i.jsxs)(j.F, {
-                                            setting: M.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
+                                            setting: k.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, i.jsx)(u.FormSwitch, {
-                                                    className: l()(G.marginBottom20),
+                                                    className: a()(G.marginBottom20),
                                                     note: U.intl.string(U.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
-                                                        (0, Z.PS)(
+                                                        (0, L.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                             },
-                                                            Z.fy.INFREQUENT_USER_ACTION
+                                                            L.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
                                                     children: U.intl.string(U.t.u6dc5O)
                                                 }),
-                                                (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop20, G.marginBottom40) })
+                                                (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop20, G.marginBottom40) })
                                             ]
                                         }),
                                         (0, i.jsxs)(j.F, {
-                                            setting: M.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
+                                            setting: k.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, i.jsx)(u.FormSwitch, {
                                                     className: G.marginBottom20,
                                                     note: U.intl.string(U.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
-                                                        (0, Z.PS)(
+                                                        (0, L.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                             },
-                                                            Z.fy.INFREQUENT_USER_ACTION
+                                                            L.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
                                                     children: U.intl.string(U.t.P8MG6u)
                                                 }),
-                                                (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop20, G.marginBottom40) })
+                                                (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop20, G.marginBottom40) })
                                             ]
                                         })
                                     ]
                                 })
                               : null,
-                          null != t ? null : (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop20, G.marginBottom40) })
+                          null != t ? null : (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop20, G.marginBottom40) })
                       ]
                   })
               ]
@@ -344,24 +344,24 @@ function W() {
 }
 class K extends s.PureComponent {
     handleDesktopChange(e) {
-        let t = e ? k.qrD.ALL : k.qrD.NEVER;
-        if (t !== k.qrD.NEVER) {
+        let t = e ? w.qrD.ALL : w.qrD.NEVER;
+        if (t !== w.qrD.NEVER) {
             var n;
             (n = 'UserSettingsModal'),
                 P.Z.requestPermission((e) => {
-                    let t = e ? k.$Ab.ENABLED : k.$Ab.BLOCKED;
-                    h.default.setPermissionsState(t, n);
+                    let t = e ? w.$Ab.ENABLED : w.$Ab.BLOCKED;
+                    g.default.setPermissionsState(t, n);
                 });
-        } else h.default.setDesktopType(t);
+        } else g.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e.value;
-        h.default.setTTSType(t);
+        g.default.setTTSType(t);
     }
     render() {
-        let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = D.isPlatformEmbedded && (0, D.isWindows)(),
-            h = o()
+        let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: s, disabledSounds: r, disableAllSounds: l, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
+            m = y.isPlatformEmbedded && (0, y.isWindows)(),
+            g = o()
                 .range(1, 11)
                 .map((e) => ({
                     value: 60 * e,
@@ -372,10 +372,10 @@ class K extends s.PureComponent {
             title: U.intl.string(U.t.HcoRu7),
             children: [
                 (0, i.jsx)(j.F, {
-                    setting: M.s6.NOTIFICATIONS_ENABLE_DESKTOP,
+                    setting: k.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, i.jsx)(u.FormSwitch, {
                         className: G.marginBottom20,
-                        value: e !== k.qrD.NEVER && !d,
+                        value: e !== w.qrD.NEVER && !d,
                         onChange: this.handleDesktopChange,
                         note: U.intl.string(U.t.wF9ih4),
                         disabled: d,
@@ -383,9 +383,9 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t['/0WClp'])
                     })
                 }),
-                (0, i.jsx)(X, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(j.F, {
-                    setting: M.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
+                    setting: k.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.FormSwitch, {
                         className: m ? G.marginBottom20 : G.marginBottom40,
                         value: !n,
@@ -395,7 +395,7 @@ class K extends s.PureComponent {
                     })
                 }),
                 (0, i.jsx)(j.F, {
-                    setting: M.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
+                    setting: k.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, i.jsx)(u.FormSwitch, {
                         className: G.marginBottom40,
                         value: s,
@@ -404,66 +404,66 @@ class K extends s.PureComponent {
                         children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
-                (0, i.jsx)(Q, {}),
+                (0, i.jsx)(X, {}),
                 (0, i.jsx)(et, {}),
                 (0, i.jsx)(j.F, {
-                    setting: M.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
+                    setting: k.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                     children: (0, i.jsxs)(u.FormItem, {
                         title: U.intl.string(U.t.TTvjd3),
                         children: [
                             (0, i.jsx)(u.SingleSelect, {
                                 value: t,
-                                onChange: L.CM.updateSetting,
-                                options: h
+                                onChange: Z.CM.updateSetting,
+                                options: g
                             }),
                             (0, i.jsx)(u.FormText, {
                                 type: u.FormTextTypes.DESCRIPTION,
                                 className: G.marginTop8,
                                 children: U.intl.string(U.t.Xytv9P)
                             }),
-                            (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop40, G.marginBottom40) })
+                            (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop40, G.marginBottom40) })
                         ]
                     })
                 }),
                 this.renderTTS(),
-                (0, i.jsx)(W, {}),
+                (0, i.jsx)(z, {}),
                 (0, i.jsx)(u.FormItem, {
-                    children: (0, i.jsx)(z, {
+                    children: (0, i.jsx)(W, {
                         disabledSounds: r,
-                        disableAllSounds: a,
+                        disableAllSounds: l,
                         notifyMessagesInSelectedChannel: c
                     })
                 }),
-                (0, i.jsx)(F.Z, {})
+                (0, i.jsx)(M.Z, {})
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            Y(this, 'handleToggleShowUnreadBadge', () => {
-                h.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+            H(this, 'handleToggleShowUnreadBadge', () => {
+                g.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
-            Y(this, 'handleToggleShowFlash', () => {
-                h.default.setTaskbarFlash(!this.props.taskbarFlash);
+            H(this, 'handleToggleShowFlash', () => {
+                g.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
-            Y(this, 'renderTTS', () => {
+            H(this, 'renderTTS', () => {
                 if (!p.Zh) return null;
                 let e = [
                     {
                         name: U.intl.string(U.t.B1AGeH),
-                        value: k.PrB.ALL_CHANNELS
+                        value: w.PrB.ALL_CHANNELS
                     },
                     {
                         name: U.intl.string(U.t.uM2rNj),
-                        value: k.PrB.SELECTED_CHANNEL
+                        value: w.PrB.SELECTED_CHANNEL
                     },
                     {
                         name: U.intl.string(U.t.DYO5Oj),
-                        value: k.PrB.NEVER
+                        value: w.PrB.NEVER
                     }
                 ];
                 return (0, i.jsxs)(j.F, {
-                    setting: M.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
+                    setting: k.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, i.jsxs)(u.FormItem, {
                             title: U.intl.string(U.t.VIm5MD),
@@ -480,7 +480,7 @@ class K extends s.PureComponent {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop40, G.marginBottom40) })
+                        (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop40, G.marginBottom40) })
                     ]
                 });
             });
@@ -499,17 +499,17 @@ let q = (0, x.B)({
         }
     ]
 });
-function X() {
+function Q() {
     let e = q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
-        t = (0, c.e7)([R.ZP], () => R.ZP.mentionOnAllMessages);
+        t = (0, c.e7)([O.ZP], () => O.ZP.mentionOnAllMessages);
     return e
         ? (0, i.jsx)(j.F, {
-              setting: M.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
+              setting: k.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, i.jsx)(u.FormSwitch, {
                   className: G.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      g.Z.setAccountFlag(w.c.MENTION_ON_ALL_MESSAGES, e);
+                      h.Z.setAccountFlag(F.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -517,43 +517,43 @@ function X() {
           })
         : null;
 }
-function Q() {
-    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
-        n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
-        [r, a] = s.useState(!1);
+function X() {
+    let e = b.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = b.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+        n = (0, c.e7)([O.ZP], () => O.ZP.useNewNotifications),
+        [r, l] = s.useState(!1);
     return e && (n || t)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   n
                       ? (0, i.jsx)(j.F, {
-                            setting: M.s6.NOTIFICATIONS_UNREAD_SETTINGS,
+                            setting: k.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, i.jsx)(u.FormSwitch, {
                                 className: G.marginBottom40,
                                 value: n,
                                 disabled: r || !n,
                                 note: U.intl.string(U.t.frbLrK),
-                                onChange: () => J(a),
+                                onChange: () => J(l),
                                 children: U.intl.string(U.t.z21l8P)
                             })
                         })
                       : t
                         ? (0, i.jsx)(j.F, {
-                              setting: M.s6.NOTIFICATIONS_UNREAD_SETTINGS,
+                              setting: k.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, i.jsx)(u.FormSwitch, {
                                   className: G.marginBottom40,
                                   value: n,
                                   disabled: r || n,
                                   note: 'Turns on the new notification system',
                                   onChange: (e) => {
-                                      g.Z.setAccountFlag(w.c.USE_NEW_NOTIFICATIONS, e);
+                                      h.Z.setAccountFlag(F.c.USE_NEW_NOTIFICATIONS, e);
                                   },
                                   children: U.intl.string(U.t.z21l8P)
                               })
                           })
                         : null,
                   (0, i.jsxs)(j.F, {
-                      setting: M.s6.NOTIFICATIONS_NEW_SETTINGS,
+                      setting: k.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
                           (0, i.jsx)(u.FormItem, {
                               title: 'New Notification Settings (Advanced, Staff Only)',
@@ -564,28 +564,28 @@ function Q() {
                                   },
                                   children: [
                                       (0, i.jsx)(j.F, {
-                                          setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
+                                          setting: k.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.Button, {
-                                              onClick: f.KP,
+                                              onClick: S.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
                                       (0, i.jsx)(j.F, {
-                                          setting: M.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
+                                          setting: k.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, i.jsx)(u.Button, {
                                               onClick: () => {
-                                                  (0, A.R)(!0);
+                                                  (0, N.R)(!0);
                                               },
                                               children: 'Launch Migration'
                                           })
                                       }),
                                       (0, i.jsx)(j.F, {
-                                          setting: M.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
+                                          setting: k.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
                                           children: (0, i.jsx)(u.FormSwitch, {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  g.Z.setAccountFlag(w.c.USE_NEW_NOTIFICATIONS, e);
+                                                  h.Z.setAccountFlag(F.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })
@@ -593,7 +593,7 @@ function Q() {
                                   ]
                               })
                           }),
-                          (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop40, G.marginBottom40) })
+                          (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop40, G.marginBottom40) })
                       ]
                   })
               ]
@@ -602,42 +602,42 @@ function Q() {
 }
 async function J(e) {
     e(!0);
-    let t = await (0, f.Tn)();
+    let t = await (0, S.Tn)();
     0 === t.length
-        ? await (0, N.oL)()
+        ? await (0, I.oL)()
         : m.Z.show({
               title: U.intl.string(U.t['cY+Ooa']),
               body: U.intl.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: U.intl.string(U.t['ETE/oK']),
               confirmText: U.intl.string(U.t.Rm96T0),
-              onConfirm: N.oL
+              onConfirm: I.oL
           }),
         e(!1);
 }
 function $(e) {
-    let t = (0, _.p)();
+    let t = (0, T.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t
     });
 }
 function ee() {
-    let e = (0, c.cj)([O.Z], () => ({
-        disableUnreadBadge: O.Z.getDisableUnreadBadge(),
-        taskbarFlash: O.Z.taskbarFlash,
-        disabledSounds: O.Z.getDisabledSounds(),
-        disableAllSounds: O.Z.getDisableAllSounds(),
-        desktopType: O.Z.getDesktopType(),
-        ttsType: O.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: O.Z.getNotifyMessagesInSelectedChannel()
+    let e = (0, c.cj)([R.Z], () => ({
+        disableUnreadBadge: R.Z.getDisableUnreadBadge(),
+        taskbarFlash: R.Z.taskbarFlash,
+        disabledSounds: R.Z.getDisabledSounds(),
+        disableAllSounds: R.Z.getDisableAllSounds(),
+        desktopType: R.Z.getDesktopType(),
+        ttsType: R.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: R.Z.getNotifyMessagesInSelectedChannel()
     }));
     return (0, i.jsx)($, {
         ...e,
-        afkTimeout: L.CM.useSetting()
+        afkTimeout: Z.CM.useSetting()
     });
 }
 function et() {
-    let e = L.fz.useSetting(),
+    let e = Z.fz.useSetting(),
         t = [
             {
                 name: U.intl.string(U.t['9x/Rtb']),
@@ -652,9 +652,9 @@ function et() {
                 value: d.Ns.NOTIFICATIONS_DISABLED
             }
         ];
-    return b.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
+    return v.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
         ? (0, i.jsxs)(j.F, {
-              setting: M.s6.NOTIFICATIONS_REACTIONS,
+              setting: k.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, i.jsxs)(u.FormItem, {
                       title: U.intl.string(U.t.Rq0NFh),
@@ -667,13 +667,13 @@ function et() {
                           (0, i.jsx)(u.RadioGroup, {
                               options: t,
                               onChange: (t) => {
-                                  (0, v.MR)(t.value, e);
+                                  (0, A.MR)(t.value, e);
                               },
                               value: e
                           })
                       ]
                   }),
-                  (0, i.jsx)(u.FormDivider, { className: l()(G.marginTop40, G.marginBottom40) })
+                  (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop40, G.marginBottom40) })
               ]
           })
         : null;

@@ -7,46 +7,46 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(481060),
     c = n(846027),
     d = n(153867),
     u = n(230711),
     m = n(313201),
-    h = n(111672),
-    g = n(921801),
+    g = n(111672),
+    h = n(921801),
     p = n(131951),
     x = n(663389),
-    S = n(63063),
-    T = n(358085),
+    f = n(63063),
+    _ = n(358085),
     E = n(740492),
     C = n(894939),
-    _ = n(321499),
-    f = n(710808),
-    I = n(625205),
-    N = n(325808),
-    A = n(823087),
-    b = n(546997),
-    v = n(520384),
+    T = n(321499),
+    S = n(710808),
+    b = n(625205),
+    I = n(325808),
+    N = n(823087),
+    v = n(546997),
+    A = n(520384),
     j = n(167540),
-    O = n(803567),
-    R = n(269876),
+    R = n(803567),
+    O = n(269876),
     P = n(976758),
-    D = n(526761),
-    y = n(726985),
+    y = n(526761),
+    D = n(726985),
     B = n(981631),
-    L = n(65154),
-    Z = n(388032),
-    F = n(232186);
-let M = (0, m.hQ)(),
-    k = ''.concat(S.Z.getArticleURL(B.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
-function w(e, t, n) {
+    Z = n(65154),
+    L = n(388032),
+    M = n(232186);
+let k = (0, m.hQ)(),
+    w = ''.concat(f.Z.getArticleURL(B.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+function F(e, t, n) {
     (0, o.openModal)((s) =>
         (0, i.jsx)(o.ConfirmModal, {
             header: e,
-            confirmText: Z.intl.string(Z.t.BddRzc),
-            cancelText: Z.intl.string(Z.t['ETE/oK']),
+            confirmText: L.intl.string(L.t.BddRzc),
+            cancelText: L.intl.string(L.t['ETE/oK']),
             onConfirm: n,
             ...s,
             children: (0, i.jsx)(o.Text, {
@@ -63,14 +63,14 @@ function U() {
             attenuation: n,
             attenuateWhileSpeakingSelf: r,
             attenuateWhileSpeakingOthers: m,
-            audioSubsystem: S,
+            audioSubsystem: f,
             silenceWarning: B,
             legacyAudioSubsystemSupported: U,
             experimentalAudioSubsystemSupported: V,
             automaticAudioSubsystemSupported: G,
-            sidechainEnabled: Y,
-            sidechainStrength: H
-        } = (0, a.cj)([p.Z], () => ({
+            sidechainEnabled: H,
+            sidechainStrength: Y
+        } = (0, l.cj)([p.Z], () => ({
             inputMode: p.Z.getMode(),
             qosEnabled: p.Z.getQoS(),
             attenuation: p.Z.getAttenuation(),
@@ -78,222 +78,222 @@ function U() {
             attenuateWhileSpeakingOthers: p.Z.getAttenuateWhileSpeakingOthers(),
             audioSubsystem: p.Z.getAudioSubsystem(),
             silenceWarning: p.Z.getEnableSilenceWarning(),
-            legacyAudioSubsystemSupported: p.Z.supports(L.AN.LEGACY_AUDIO_SUBSYSTEM),
-            experimentalAudioSubsystemSupported: p.Z.supports(L.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-            automaticAudioSubsystemSupported: p.Z.supports(L.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
+            legacyAudioSubsystemSupported: p.Z.supports(Z.AN.LEGACY_AUDIO_SUBSYSTEM),
+            experimentalAudioSubsystemSupported: p.Z.supports(Z.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+            automaticAudioSubsystemSupported: p.Z.supports(Z.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
             sidechainEnabled: p.Z.getSidechainCompression(),
             sidechainStrength: p.Z.getSidechainCompressionStrength()
         })),
-        z = (0, a.e7)([x.Z], () => x.Z.getSubsection()),
-        W = s.createRef();
+        W = (0, l.e7)([x.Z], () => x.Z.getSubsection()),
+        z = s.createRef();
     s.useEffect(() => {
-        if (z === D.GA) {
+        if (W === y.GA) {
             var e;
-            null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView(), u.Z.clearSubsection();
+            null == z || null === (e = z.current) || void 0 === e || e.scrollIntoView(), u.Z.clearSubsection();
         }
-    }, [W, z]);
-    let K = h.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, T.isWeb)(),
-        q = (0, a.e7)([E.ZP], () => E.ZP.disableVoiceChannelChangeAlert);
+    }, [z, W]);
+    let K = g.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, _.isWeb)(),
+        q = (0, l.e7)([E.ZP], () => E.ZP.disableVoiceChannelChangeAlert);
     return (0, i.jsxs)(o.FormSection, {
         tag: o.FormTitleTags.H1,
-        title: Z.intl.string(Z.t.NiTd0d),
+        title: L.intl.string(L.t.NiTd0d),
         children: [
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_DEVICES,
-                children: (0, i.jsx)(I.Z, {})
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_DEVICES,
+                children: (0, i.jsx)(b.Z, {})
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
                 children: (0, i.jsx)(P.Z, {})
             }),
-            (0, i.jsxs)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_MIC_TEST,
+            (0, i.jsxs)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_MIC_TEST,
                 children: [
-                    (0, i.jsx)(A.Z, {}),
+                    (0, i.jsx)(N.Z, {}),
                     (0, i.jsx)(o.FormText, {
-                        className: F.marginBottom20,
+                        className: M.marginBottom20,
                         type: o.FormText.Types.DESCRIPTION,
-                        children: Z.intl.format(Z.t['V+B3FB'], { guideURL: k })
+                        children: L.intl.format(L.t['V+B3FB'], { guideURL: w })
                     }),
-                    (0, i.jsx)(o.FormDivider, { className: l()(F.marginBottom20) })
+                    (0, i.jsx)(o.FormDivider, { className: a()(M.marginBottom20) })
                 ]
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                children: (0, i.jsx)(N.Z, {})
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                children: (0, i.jsx)(I.Z, {})
             }),
-            (0, i.jsxs)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                children: [e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {}), (0, i.jsx)(o.FormDivider, { className: F.marginBottom40 })]
+            (0, i.jsxs)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                children: [e === Z.pM.VOICE_ACTIVITY && (0, i.jsx)(O.Z, {}), (0, i.jsx)(o.FormDivider, { className: M.marginBottom40 })]
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, i.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
-                    ref: W
+                    ref: z
                 })
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_SOUNDS,
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_SOUNDS,
                 children: (0, i.jsx)(C.Z, {})
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_VIDEO,
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_VIDEO,
                 children: (0, i.jsx)(j.Z, {})
             }),
-            (0, i.jsx)(g.F, {
-                setting: y.s6.VOICE_AND_VIDEO_ADVANCED,
+            (0, i.jsx)(h.F, {
+                setting: D.s6.VOICE_AND_VIDEO_ADVANCED,
                 children: (0, i.jsxs)(o.HeadingLevel, {
                     component: (0, i.jsx)(o.FormTitle, {
                         tag: o.FormTitleTags.H1,
-                        className: F.marginBottom20,
-                        children: Z.intl.string(Z.t['8/udY2'])
+                        className: M.marginBottom20,
+                        children: L.intl.string(L.t['8/udY2'])
                     }),
                     children: [
-                        (0, i.jsx)(_.Z, {}),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                            children: (0, i.jsx)(O.Z, {})
+                        (0, i.jsx)(T.Z, {}),
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                            children: (0, i.jsx)(R.Z, {})
                         }),
-                        (0, i.jsx)(v.Z, {}),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
+                        (0, i.jsx)(A.Z, {}),
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
                             children: (0, i.jsx)(o.FormSection, {
-                                className: F.marginBottom20,
-                                title: Z.intl.string(Z.t.uancuL),
+                                className: M.marginBottom20,
+                                title: L.intl.string(L.t.uancuL),
                                 children: (0, i.jsx)(o.FormSwitch, {
                                     value: t,
                                     onChange: (e) => c.Z.setQoS(e),
-                                    note: Z.intl.string(Z.t.I1Eoqq),
-                                    children: Z.intl.string(Z.t['3CqDxs'])
+                                    note: L.intl.string(L.t.I1Eoqq),
+                                    children: L.intl.string(L.t['3CqDxs'])
                                 })
                             })
                         }),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
                             children: (0, i.jsxs)(o.FormSection, {
-                                className: F.marginBottom20,
+                                className: M.marginBottom20,
                                 children: [
                                     (0, i.jsx)(o.FormTitle, {
-                                        id: M,
+                                        id: k,
                                         tag: o.FormTitleTags.H5,
-                                        className: F.marginBottom8,
-                                        children: Z.intl.string(Z.t.oSdBvb)
+                                        className: M.marginBottom8,
+                                        children: L.intl.string(L.t.oSdBvb)
                                     }),
                                     (0, i.jsx)(o.Slider, {
                                         initialValue: n,
                                         onValueChange: (e) => {
                                             c.Z.setAttenuation(e, r, m);
                                         },
-                                        'aria-labelledby': M
+                                        'aria-labelledby': k
                                     }),
                                     (0, i.jsx)(o.FormText, {
-                                        className: F.marginBottom20,
+                                        className: M.marginBottom20,
                                         type: o.FormText.Types.DESCRIPTION,
-                                        children: Z.intl.string(Z.t['0A/8Rk'])
+                                        children: L.intl.string(L.t['0A/8Rk'])
                                     }),
-                                    (0, i.jsx)(o.FormDivider, { className: F.marginBottom20 }),
+                                    (0, i.jsx)(o.FormDivider, { className: M.marginBottom20 }),
                                     (0, i.jsx)(o.FormSwitch, {
                                         value: r,
                                         onChange: (e) => c.Z.setAttenuation(n, e, m),
-                                        children: Z.intl.string(Z.t['9dHxRU'])
+                                        children: L.intl.string(L.t['9dHxRU'])
                                     }),
                                     (0, i.jsx)(o.FormSwitch, {
                                         value: m,
                                         onChange: (e) => c.Z.setAttenuation(n, r, e),
-                                        children: Z.intl.string(Z.t.SMt0Gh)
+                                        children: L.intl.string(L.t.SMt0Gh)
                                     })
                                 ]
                             })
                         }),
                         K &&
-                            (0, i.jsx)(g.F, {
-                                setting: y.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
+                            (0, i.jsx)(h.F, {
+                                setting: D.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION,
                                 children: (0, i.jsxs)(o.FormSection, {
-                                    className: F.marginBottom20,
+                                    className: M.marginBottom20,
                                     children: [
                                         (0, i.jsx)(o.FormSwitch, {
-                                            className: l()(F.marginTop8, F.marginBottom20),
-                                            value: Y,
+                                            className: a()(M.marginTop8, M.marginBottom20),
+                                            value: H,
                                             onChange: (e) => c.Z.setSidechainCompression(e),
-                                            note: Z.intl.string(Z.t.IwZbbG),
-                                            children: Z.intl.string(Z.t['/jwMtr'])
+                                            note: L.intl.string(L.t.IwZbbG),
+                                            children: L.intl.string(L.t['/jwMtr'])
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: o.FormTitleTags.H5,
-                                            className: F.marginBottom8,
-                                            children: Z.intl.string(Z.t.fhEzfn)
+                                            className: M.marginBottom8,
+                                            children: L.intl.string(L.t.fhEzfn)
                                         }),
                                         (0, i.jsx)(o.Slider, {
-                                            initialValue: H,
+                                            initialValue: Y,
                                             minValue: 1,
                                             onValueChange: (e) => c.Z.setSidechainCompressionStrength(e)
                                         })
                                     ]
                                 })
                             }),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
                             children: (0, i.jsxs)(o.FormSection, {
-                                className: F.marginBottom20,
-                                title: Z.intl.string(Z.t.wVBHr6),
+                                className: M.marginBottom20,
+                                title: L.intl.string(L.t.wVBHr6),
                                 children: [
                                     (0, i.jsx)(o.SingleSelect, {
-                                        className: F.marginBottom20,
-                                        value: S,
+                                        className: M.marginBottom20,
+                                        value: f,
                                         options: (function (e, t, n) {
                                             let i = [
                                                 {
-                                                    value: L.iA.STANDARD,
-                                                    label: Z.intl.string(Z.t.dqb2JS)
+                                                    value: Z.iA.STANDARD,
+                                                    label: L.intl.string(L.t.dqb2JS)
                                                 }
                                             ];
                                             return (
                                                 e &&
                                                     i.push({
-                                                        value: L.iA.LEGACY,
-                                                        label: Z.intl.string(Z.t['TYfH+/'])
+                                                        value: Z.iA.LEGACY,
+                                                        label: L.intl.string(L.t['TYfH+/'])
                                                     }),
                                                 t &&
                                                     i.push({
-                                                        value: L.iA.EXPERIMENTAL,
-                                                        label: Z.intl.string(Z.t.liQmtr)
+                                                        value: Z.iA.EXPERIMENTAL,
+                                                        label: L.intl.string(L.t.liQmtr)
                                                     }),
                                                 n &&
                                                     i.push({
-                                                        value: L.iA.AUTOMATIC,
-                                                        label: Z.intl.string(Z.t.qNgtOz)
+                                                        value: Z.iA.AUTOMATIC,
+                                                        label: L.intl.string(L.t.qNgtOz)
                                                     }),
                                                 i
                                             );
                                         })(U, V, G),
                                         onChange: (e) => {
-                                            w(Z.intl.string(Z.t.uY7AcX), Z.intl.string(Z.t.gBqik5), () => c.Z.setAudioSubsystem(e));
+                                            F(L.intl.string(L.t.uY7AcX), L.intl.string(L.t.gBqik5), () => c.Z.setAudioSubsystem(e));
                                         }
                                     }),
-                                    (0, i.jsx)(o.FormDivider, { className: F.marginBottom20 })
+                                    (0, i.jsx)(o.FormDivider, { className: M.marginBottom20 })
                                 ]
                             })
                         }),
-                        (0, i.jsx)(b.Z, {}),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
+                        (0, i.jsx)(v.Z, {}),
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
                             children: (0, i.jsx)(o.FormSection, {
-                                className: F.marginBottom20,
-                                title: Z.intl.string(Z.t['aP1N/v']),
+                                className: M.marginBottom20,
+                                title: L.intl.string(L.t['aP1N/v']),
                                 children: (0, i.jsx)(o.FormSwitch, {
                                     value: B,
                                     onChange: (e) => c.Z.setSilenceWarning(e),
-                                    children: Z.intl.string(Z.t.jtiiCw)
+                                    children: L.intl.string(L.t.jtiiCw)
                                 })
                             })
                         }),
-                        (0, i.jsxs)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT,
+                        (0, i.jsxs)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT,
                             children: [
                                 (0, i.jsx)(o.FormSwitch, {
-                                    className: F.marginBottom20,
-                                    note: Z.intl.string(Z.t.YCCMkJ),
+                                    className: M.marginBottom20,
+                                    note: L.intl.string(L.t.YCCMkJ),
                                     onChange: (e) => {
                                         d.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e });
                                     },
@@ -302,28 +302,28 @@ function U() {
                                     children: (0, i.jsx)(o.Heading, {
                                         variant: 'text-md/medium',
                                         color: 'header-primary',
-                                        className: F.marginBottom8,
-                                        children: Z.intl.string(Z.t.e7LIiY)
+                                        className: M.marginBottom8,
+                                        children: L.intl.string(L.t.e7LIiY)
                                     })
                                 }),
-                                (0, i.jsx)(o.FormDivider, { className: F.marginBottom40 })
+                                (0, i.jsx)(o.FormDivider, { className: M.marginBottom40 })
                             ]
                         }),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, i.jsx)(f.Z, {})
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                            children: (0, i.jsx)(S.Z, {})
                         }),
-                        (0, i.jsx)(g.F, {
-                            setting: y.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
+                        (0, i.jsx)(h.F, {
+                            setting: D.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,
                             children: (0, i.jsx)(o.FormItem, {
                                 children: (0, i.jsx)(o.Button, {
                                     look: o.Button.Looks.OUTLINED,
                                     color: o.Button.Colors.RED,
                                     onClick: () => {
-                                        w(Z.intl.string(Z.t['/RXu6+']), Z.intl.string(Z.t.sQ42iY), c.Z.reset);
+                                        F(L.intl.string(L.t['/RXu6+']), L.intl.string(L.t.sQ42iY), c.Z.reset);
                                     },
                                     size: o.Button.Sizes.SMALL,
-                                    children: Z.intl.string(Z.t['/RXu6+'])
+                                    children: L.intl.string(L.t['/RXu6+'])
                                 })
                             })
                         })

@@ -6,90 +6,90 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(512722),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(355467),
     u = n(230711),
     m = n(497321),
-    h = n(231428),
-    g = n(390954),
+    g = n(231428),
+    h = n(390954),
     p = n(89057),
     x = n(921801),
-    S = n(246946),
-    T = n(594174),
+    f = n(246946),
+    _ = n(594174),
     E = n(351402),
     C = n(853872),
-    _ = n(78839),
-    f = n(706454),
-    I = n(726985),
-    N = n(981631),
-    A = n(388032),
-    b = n(729061);
-class v extends s.PureComponent {
+    T = n(78839),
+    S = n(706454),
+    b = n(726985),
+    I = n(981631),
+    N = n(388032),
+    v = n(729061);
+class A extends s.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
             d.tZ(), d.jg();
         });
     }
     handleRedemptionRedirect() {
-        u.Z.setSection(N.oAB.INVENTORY);
+        u.Z.setSection(I.oAB.INVENTORY);
     }
     render() {
-        let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: s, locale: r, premiumSubscription: l, isRemovingPaymentSource: a, isUpdatingPaymentSource: c } = this.props;
+        let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: s, locale: r, premiumSubscription: a, isRemovingPaymentSource: l, isUpdatingPaymentSource: c } = this.props;
         return t
             ? (0, i.jsx)(m.Z, {})
             : (0, i.jsxs)('div', {
-                  className: b.__invalid_userSettingsBilling,
+                  className: v.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(n).length
                           ? (0, i.jsx)('div', {
-                                className: b.syncing,
+                                className: v.syncing,
                                 children: (0, i.jsx)(o.Spinner, {})
                             })
                           : (0, i.jsx)(x.F, {
-                                setting: I.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, i.jsx)(g.Z, {
+                                setting: b.s6.BILLING_PAYMENT_METHODS,
+                                children: (0, i.jsx)(h.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: s,
-                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== N.O0b.CANCELED ? l.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != a && a.status !== I.O0b.CANCELED ? a.paymentSourceId : null,
                                     locale: r,
-                                    removing: a,
+                                    removing: l,
                                     submitting: c
                                 })
                             }),
                       (0, i.jsx)(x.F, {
-                          setting: I.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: b.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
-                              className: b.paymentHistory,
+                              className: v.paymentHistory,
                               children: (0, i.jsxs)(o.HeadingLevel, {
                                   component: (0, i.jsx)(o.FormTitle, {
                                       tag: 'h1',
-                                      children: A.intl.string(A.t.obLrcH)
+                                      children: N.intl.string(N.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(h.Z, { locale: r })]
+                                  children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(g.Z, { locale: r })]
                               })
                           })
                       }),
                       (0, i.jsx)(o.Card, {
-                          className: b.codeRedemptionRedirect,
+                          className: v.codeRedemptionRedirect,
                           type: o.Card.Types.CUSTOM,
-                          children: A.intl.format(A.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
+                          children: N.intl.format(N.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
                       })
                   ]
               });
     }
 }
 function j() {
-    let e = (0, a.cj)([f.default, E.Z, C.Z, T.default, S.Z, _.ZP], () => {
-        let e = _.ZP.getPremiumTypeSubscription(),
-            t = T.default.getCurrentUser();
+    let e = (0, l.cj)([S.default, E.Z, C.Z, _.default, f.Z, T.ZP], () => {
+        let e = T.ZP.getPremiumTypeSubscription(),
+            t = _.default.getCurrentUser();
         return (
-            l()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
+            a()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: f.default.locale,
-                hide: S.Z.enabled,
+                locale: S.default.locale,
+                hide: f.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,
                 premiumSubscription: e,
@@ -101,5 +101,5 @@ function j() {
             }
         );
     });
-    return (0, i.jsx)(v, { ...e });
+    return (0, i.jsx)(A, { ...e });
 }

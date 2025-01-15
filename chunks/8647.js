@@ -1,79 +1,79 @@
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(399606),
+var s = n(120356),
+    r = n.n(s),
+    a = n(399606),
     l = n(481060),
     o = n(100527),
     c = n(182567),
     d = n(78839),
     u = n(63063),
-    g = n(74538),
-    m = n(276800),
-    f = n(346497),
+    m = n(74538),
+    g = n(276800),
+    h = n(346497),
     p = n(409100),
-    _ = n(725727),
-    h = n(474936),
-    x = n(981631),
+    x = n(725727),
+    f = n(474936),
+    _ = n(981631),
     E = n(388032),
-    b = n(261871);
+    C = n(261871);
 t.Z = function (e) {
-    let { isFullScreen: t, buttonClassName: r } = e,
-        { promotion: C } = (0, _.mq)(),
-        v = (0, s.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
-    if (!(0, f.Vi)()) return null;
-    let T = new Date(C.endDate);
+    let { isFullScreen: t, buttonClassName: s } = e,
+        { promotion: T } = (0, x.mq)(),
+        S = (0, a.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
+    if (!(0, h.Vi)()) return null;
+    let b = new Date(T.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
-            className: a()(b.banner, { [b.bannerFullScreen]: t }),
+            className: r()(C.banner, { [C.bannerFullScreen]: t }),
             children: [
                 (0, i.jsx)('div', {
-                    className: b.bannerLeftImageContainer,
+                    className: C.bannerLeftImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: t ? n(277698) : n(144823),
-                        className: b.image
+                        className: C.image
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: b.bannerContent,
+                    className: C.bannerContent,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == v || null == (0, g.he)(v) ? E.intl.string(E.t.xbzNJC) : E.intl.string(E.t['22WZ9P'])
+                                    children: null == S || null == (0, m.he)(S) ? E.intl.string(E.t.xbzNJC) : E.intl.string(E.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(l.Text, {
-                                    className: b.countdown,
+                                    className: C.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(m.Z, { endDate: T })
+                                    children: (0, i.jsx)(g.Z, { endDate: b })
                                 }),
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: E.intl.format(E.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(x.BhN.SUMMER_BOGO_2024) })
+                                    children: E.intl.format(E.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(_.BhN.SUMMER_BOGO_2024) })
                                 })
                             ]
                         }),
                         (0, i.jsx)(p.Z, {
                             buttonText: E.intl.string(E.t.J61px8),
-                            buttonTextClassName: b.subscribeButtonText,
-                            subscriptionTier: h.Si.TIER_2,
+                            buttonTextClassName: C.subscribeButtonText,
+                            subscriptionTier: f.Si.TIER_2,
                             showIcon: !1,
-                            className: null != r ? r : b.subscribeButton,
+                            className: null != s ? s : C.subscribeButton,
                             forceInverted: !0
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: b.bannerRightImageContainer,
+                    className: C.bannerRightImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: t ? n(10501) : n(485978),
-                        className: b.image
+                        className: C.image
                     })
                 })
             ]

@@ -17,14 +17,14 @@ var i = t(512722),
     x = t(981631),
     h = t(474936);
 function f(e) {
-    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: g, continueSessionToInitialStep: E } = e,
-        { contextMetadata: S, step: j, paymentSources: y, paymentSourceId: I, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: O, previousStepRef: A, setPurchaseState: Z } = (0, u.usePaymentContext)(),
+    let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: g, continueSessionToInitialStep: S } = e,
+        { contextMetadata: E, step: j, paymentSources: y, paymentSourceId: P, setPaymentSourceId: I, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: C, selectedSkuId: _, activeSubscription: Z, previousStepRef: O, setPurchaseState: A } = (0, u.usePaymentContext)(),
         { isGift: R } = (0, o.wD)(),
         w = {
             ...(0, a.fL)(),
             paymentSources: y,
-            paymentSourceId: I,
-            setPaymentSourceId: P,
+            paymentSourceId: P,
+            setPaymentSourceId: I,
             purchaseError: T,
             setPurchaseError: N,
             purchaseErrorBlockRef: b,
@@ -42,7 +42,7 @@ function f(e) {
                   };
     l()(j, 'Step should be set here');
     let F = (0, r.Z)(() => Date.now(), [j]),
-        D = null != E && null == A.current ? E : d.h8.PAYMENT_TYPE;
+        D = null != S && null == O.current ? S : d.h8.PAYMENT_TYPE;
     return (0, a.vP)({
         paymentModalArgs: w,
         initialStep: D,
@@ -53,7 +53,7 @@ function f(e) {
         usePaymentModalStep: !0,
         onReturn: k,
         onComplete: (e) => {
-            e === d.h8.AWAITING_BROWSER_CHECKOUT || e === d.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY ? (Z(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
+            d.Nj.has(e) ? (A(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: t, toStep: i } = e,
@@ -63,10 +63,10 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: l - F,
-                flow_duration_ms: l - S.startTime
+                flow_duration_ms: l - E.startTime
             });
         },
         isEligibleForTrial: L,
-        allowDesktopRedirectPurchase: (0, p.tr)(_, R, O)
+        allowDesktopRedirectPurchase: (0, p.tr)(_, R, Z)
     });
 }

@@ -109,8 +109,8 @@ function j(e) {
         [P, L] = r.useState(1),
         y = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
-        k = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
-        D = Z
+        D = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
+        k = Z
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(R, {
@@ -130,7 +130,7 @@ function j(e) {
             : (0, i.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: M ? k : T.intl.string(T.t['NY/FIS'])
+                  children: M ? D : T.intl.string(T.t['NY/FIS'])
               });
     return (0, i.jsxs)('div', {
         className: S.container,
@@ -183,7 +183,7 @@ function j(e) {
                                         })
                                     }),
                                     (0, i.jsx)(s.Spacer, { size: 9 }),
-                                    D
+                                    k
                                 ]
                             })
                         ]

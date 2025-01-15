@@ -1,8 +1,8 @@
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    l = n(481060),
     o = n(358085),
     c = n(998502),
     d = n(388032),
@@ -20,7 +20,7 @@ function m(e, t, n) {
         e
     );
 }
-class h extends s.PureComponent {
+class g extends s.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -31,12 +31,12 @@ class h extends s.PureComponent {
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
             s = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
-        return (0, i.jsxs)(a.FormSection, {
-            tag: a.FormTitleTags.H1,
+        return (0, i.jsxs)(l.FormSection, {
+            tag: l.FormTitleTags.H1,
             title: s,
             children: [
-                (0, i.jsx)(a.FormTitle, { children: d.intl.string(d.t['w/vU5u']) }),
-                (0, i.jsx)(a.FormSwitch, {
+                (0, i.jsx)(l.FormTitle, { children: d.intl.string(d.t['w/vU5u']) }),
+                (0, i.jsx)(l.FormSwitch, {
                     className: u.marginBottom20,
                     value: e,
                     note: d.intl.string(d.t['s/cQra']),
@@ -44,20 +44,20 @@ class h extends s.PureComponent {
                     children: d.intl.string(d.t.WQm4p6)
                 }),
                 (0, o.isWindows)()
-                    ? (0, i.jsx)(a.FormSwitch, {
+                    ? (0, i.jsx)(l.FormSwitch, {
                           disabled: !e,
-                          className: l()(u.marginTop8, u.marginBottom20),
+                          className: a()(u.marginTop8, u.marginBottom20),
                           value: !!e && t,
                           note: d.intl.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
                           children: d.intl.string(d.t.n7Yjen)
                       })
                     : null,
-                (0, i.jsx)(a.FormTitle, {
-                    className: l()(u.marginTop20, u.marginBottom8),
+                (0, i.jsx)(l.FormTitle, {
+                    className: a()(u.marginTop20, u.marginBottom8),
                     children: d.intl.string(d.t.h0hFx8)
                 }),
-                (0, i.jsx)(a.FormSwitch, {
+                (0, i.jsx)(l.FormSwitch, {
                     className: u.marginBottom20,
                     value: n,
                     note: d.intl.string(d.t['mVuX+v']),
@@ -88,4 +88,4 @@ class h extends s.PureComponent {
             });
     }
 }
-t.Z = h;
+t.Z = g;

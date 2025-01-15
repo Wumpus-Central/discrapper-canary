@@ -44,30 +44,30 @@ function A(e) {
             currentEmbeddedActivity: s.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: s.ZP.getLaunchState(n.id, null != P ? P : void 0)
         })),
-        k = (0, l.Wu)([I.default], () => {
+        D = (0, l.Wu)([I.default], () => {
             var e;
             return Array.from(null !== (e = null == y ? void 0 : y.userIds) && void 0 !== e ? e : [])
                 .map((e) => I.default.getUser(e))
                 .filter(x.lm);
         }),
-        D = (0, l.e7)([C.Z], () => {
+        k = (0, l.e7)([C.Z], () => {
             var e;
             let t = null == y ? void 0 : y.userIds.values().next().value;
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
-        B = r.useMemo(() => {
+        U = r.useMemo(() => {
             let e = new _.ZP(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
         }, [n]),
-        U = (0, u.s5)({
+        B = (0, u.s5)({
             userId: L,
             channelId: A,
-            application: B
+            application: U
         }),
         w = null == y,
         F = (0, N.NL)({
             embeddedActivity: y,
-            joinability: U,
+            joinability: B,
             currentEmbeddedActivity: O,
             channel: Z
         }),
@@ -111,7 +111,7 @@ function A(e) {
                               variant: 'text-md/medium',
                               lineClamp: 1,
                               color: 'text-normal',
-                              children: null != D ? D : T.intl.string(T.t.oQn0h4)
+                              children: null != k ? k : T.intl.string(T.t.oQn0h4)
                           })
                 }),
                 (0, i.jsxs)('div', {
@@ -141,7 +141,7 @@ function A(e) {
                         !w &&
                             (0, i.jsx)(m.Z, {
                                 guildId: b,
-                                users: k,
+                                users: D,
                                 max: 4,
                                 size: m.u.SIZE_32
                             })

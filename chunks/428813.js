@@ -10,10 +10,10 @@ var l = n(442837),
     r = n(388610),
     a = n(430824),
     o = n(496675),
-    c = n(246946),
-    d = n(981631);
+    d = n(246946),
+    c = n(981631);
 function u() {
-    let e = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites),
+    let e = (0, l.e7)([d.Z], () => d.Z.hideInstantInvites),
         { channel: t, guild: n } = (0, l.cj)(
             [r.Z, a.Z],
             () => {
@@ -26,7 +26,7 @@ function u() {
             },
             []
         ),
-        u = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.CREATE_INSTANT_INVITE, t), [t]),
+        u = (0, l.e7)([o.Z], () => null != t && o.Z.can(c.Plq.CREATE_INSTANT_INVITE, t), [t]),
         { invites: h, loading: m } = (0, l.cj)([r.Z], () => r.Z.getInvites(), []);
     return (0, i.jsx)(s.Z, {
         invites: h,

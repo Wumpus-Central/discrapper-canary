@@ -16,7 +16,7 @@ function u(n) {
               label: d.intl.string(d.t['pOul5+']),
               action: () =>
                   (0, a.openModalLazy)(async () => {
-                      let { default: t } = await i.e('66063').then(i.bind(i, 344516));
+                      let { default: t } = await i.e('45406').then(i.bind(i, 344516));
                       return (i) =>
                           (0, e.jsx)(t, {
                               ...i,

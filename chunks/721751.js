@@ -3,26 +3,26 @@ n(47120);
 var r = n(200651),
     s = n(192379),
     l = n(120356),
-    a = n.n(l),
-    o = n(873546),
+    o = n.n(l),
+    a = n(873546),
     c = n(442837),
-    u = n(481060),
-    d = n(980591),
+    d = n(481060),
+    u = n(980591),
     h = n(605782),
     g = n(133853),
     m = n(568154),
-    p = n(353926),
-    f = n(703656),
-    _ = n(981631),
-    x = n(687000);
+    f = n(353926),
+    p = n(703656),
+    x = n(981631),
+    _ = n(687000);
 let E = n(575703),
     I = n(2984),
-    v = [_.Z5c.LOGIN, _.Z5c.LOGIN_HANDOFF, _.Z5c.REGISTER, _.Z5c.INVITE(''), _.Z5c.GIFT_CODE(''), _.Z5c.GUILD_TEMPLATE_LOGIN(''), _.Z5c.GUILD_TEMPLATE(''), _.Z5c.DISABLE_EMAIL_NOTIFICATIONS, _.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Z5c.BILLING_PREMIUM_SUBSCRIBE, _.Z5c.BILLING_PAYMENT_SOURCES_CREATE, _.Z5c.BILLING_PAYMENTS, _.Z5c.BILLING_PREMIUM_SWITCH_PLAN, _.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Z5c.VERIFY, _.Z5c.VERIFY_HUB_EMAIL, _.Z5c.REJECT_IP, _.Z5c.REJECT_MFA, _.Z5c.AUTHORIZE_IP, _.Z5c.AUTHORIZE_PAYMENT, _.Z5c.RESET, _.Z5c.HANDOFF, _.Z5c.REPORT, _.Z5c.REPORT_SECOND_LOOK, _.Z5c.ACCOUNT_REVERT('')];
-function N(e) {
-    return v.some((t) => e.startsWith(t));
+    N = [x.Z5c.LOGIN, x.Z5c.LOGIN_HANDOFF, x.Z5c.REGISTER, x.Z5c.INVITE(''), x.Z5c.GIFT_CODE(''), x.Z5c.GUILD_TEMPLATE_LOGIN(''), x.Z5c.GUILD_TEMPLATE(''), x.Z5c.DISABLE_EMAIL_NOTIFICATIONS, x.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, x.Z5c.BILLING_PREMIUM_SUBSCRIBE, x.Z5c.BILLING_PAYMENT_SOURCES_CREATE, x.Z5c.BILLING_PAYMENTS, x.Z5c.BILLING_PREMIUM_SWITCH_PLAN, x.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, x.Z5c.VERIFY, x.Z5c.VERIFY_HUB_EMAIL, x.Z5c.REJECT_IP, x.Z5c.REJECT_MFA, x.Z5c.AUTHORIZE_IP, x.Z5c.AUTHORIZE_PAYMENT, x.Z5c.RESET, x.Z5c.HANDOFF, x.Z5c.REPORT, x.Z5c.REPORT_SECOND_LOOK, x.Z5c.ACCOUNT_REVERT('')];
+function v(e) {
+    return N.some((t) => e.startsWith(t));
 }
-let b = (e) => ((i = e), e);
-function C(e) {
+let C = (e) => ((i = e), e);
+function b(e) {
     let { children: t } = e;
     switch (
         (function () {
@@ -31,18 +31,18 @@ function C(e) {
                 l = (function () {
                     return null;
                 })(),
-                a = (0, c.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, d.Z)(() => {}, 300), void 0 !== i)
+                o = (0, c.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+            return ((0, u.Z)(() => {}, 300), void 0 !== i)
                 ? i
-                : !n && a
+                : !n && o
                   ? (!e && t(!0),
-                    b(
+                    C(
                         (function (e) {
                             return 'default';
                         })(l)
                     ))
                   : n
-                    ? b('default')
+                    ? C('default')
                     : 'loading';
         })()
     ) {
@@ -50,12 +50,12 @@ function C(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)('img', {
-                        className: x.artwork,
+                        className: _.artwork,
                         src: E,
                         alt: ''
                     }),
                     (0, r.jsx)('img', {
-                        className: x.logoWithText,
+                        className: _.logoWithText,
                         src: I,
                         alt: ''
                     }),
@@ -67,7 +67,7 @@ function C(e) {
             return null;
     }
 }
-class S extends s.Component {
+class Z extends s.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -75,14 +75,14 @@ class S extends s.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (N(e)) (0, f.uL)(e, t);
+        if (v(e)) (0, p.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        N(e) ? (0, f.dL)(e) : (window.location = e);
+        v(e) ? (0, p.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -90,14 +90,14 @@ class S extends s.Component {
                 component: s.Fragment,
                 children: s.Children.map(this.props.children, (e) =>
                     s.cloneElement(e, {
-                        transitionTo: f.uL,
-                        replaceWith: f.dL
+                        transitionTo: p.uL,
+                        replaceWith: p.dL
                     })
                 )
             });
         return (0, r.jsx)('div', {
-            className: x.characterBackground,
-            children: (0, r.jsx)(u.HeadingLevel, {
+            className: _.characterBackground,
+            children: (0, r.jsx)(d.HeadingLevel, {
                 forceLevel: 1,
                 children:
                     null != e
@@ -105,7 +105,7 @@ class S extends s.Component {
                               children: [
                                   (0, r.jsx)(g.Z, {
                                       show: !0,
-                                      className: a()(x.logo)
+                                      className: o()(_.logo)
                                   }),
                                   (0, r.jsx)(m.h, {
                                       splash: e,
@@ -113,7 +113,7 @@ class S extends s.Component {
                                   })
                               ]
                           })
-                        : (0, r.jsx)(C, { children: t })
+                        : (0, r.jsx)(b, { children: t })
             })
         });
     }
@@ -131,7 +131,7 @@ class S extends s.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes('GameLauncher');
-        return e || o.tq || o.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || a.tq || a.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         var t, n, i;
@@ -152,4 +152,4 @@ class S extends s.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-t.Z = S;
+t.Z = Z;

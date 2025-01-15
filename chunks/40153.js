@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(626135),
     h = n(727258),
     p = n(662146),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     g = n(414080);
 function v(e) {
     let t = l.useRef(null),
@@ -45,7 +45,7 @@ function C(e, t) {
             canDrop: (e) => e.nodeId !== t.id && (!i || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) && (e.type !== h.eD.FOLDER || null == t.parentId) && !0,
             drop(e) {
                 let { nodeId: l } = e;
-                i && t.type !== h.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i);
+                i && t.type !== h.eD.FOLDER && d.default.track(m.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i);
             },
             collect: (e) => ({
                 canDrop: e.canDrop(),
@@ -58,15 +58,15 @@ function x(e) {
     let { name: t, targetNode: n, combine: r, below: o } = e,
         s = l.useMemo(() => C([h.eD.GUILD, h.eD.FOLDER], n, o, r), [n, o, r]),
         [{ canDrop: u, isOver: d }, p] = (0, c.L)(s),
-        f = v([
+        m = v([
             [u, g.autoPointerEvents],
             [d, g.dragOver]
         ]);
     return (0, i.jsx)('div', {
         ref: (e) => {
-            (f.current = e), p(e);
+            (m.current = e), p(e);
         },
-        'data-dnd-name': m.intl.formatToPlainString(m.t.A5aDw8, { itemName: t }),
+        'data-dnd-name': f.intl.formatToPlainString(f.t.A5aDw8, { itemName: t }),
         className: a()(g.target)
     });
 }
@@ -90,7 +90,7 @@ function I(e) {
             ref: (e) => {
                 (d.current = e), u(e);
             },
-            'data-dnd-name': m.intl.formatToPlainString(m.t.qiQ0QE, { itemName: t }),
+            'data-dnd-name': f.intl.formatToPlainString(f.t.qiQ0QE, { itemName: t }),
             className: a()(g.centerTarget, {})
         })
     });

@@ -9,7 +9,7 @@ var l = n(481060),
     s = n(600164),
     r = n(72524);
 function a(e) {
-    let { description: t, icon: n, id: a, label: o, onChange: c, value: d } = e;
+    let { description: t, icon: n, id: a, label: o, onChange: d, value: c } = e;
     return (0, i.jsxs)('div', {
         className: r.cardContent,
         children: [
@@ -25,12 +25,12 @@ function a(e) {
                             children: o
                         })
                     }),
-                    null != c &&
-                        null != d &&
+                    null != d &&
+                        null != c &&
                         (0, i.jsx)(l.Switch, {
                             id: a,
-                            checked: d,
-                            onChange: c
+                            checked: c,
+                            onChange: d
                         })
                 ]
             }),

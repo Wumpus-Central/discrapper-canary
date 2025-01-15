@@ -62,7 +62,7 @@ let f = (e) => e.stopPropagation(),
             className: u.hintSubtleText,
             children: t
         });
-class _ extends (i = r.PureComponent) {
+class Z extends (i = r.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -272,9 +272,9 @@ class _ extends (i = r.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(_, 'defaultProps', {
+p(Z, 'defaultProps', {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1
 }),
-    (t.ZP = _);
+    (t.ZP = Z);

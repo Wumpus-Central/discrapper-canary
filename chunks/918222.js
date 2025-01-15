@@ -1,14 +1,14 @@
 n.d(t, {
     R: function () {
-        return l;
+        return a;
     }
 }),
     n(47120);
 var i = n(192379),
     s = n(433517),
     r = n(493773);
-function l(e, t) {
-    let [n, l] = i.useState(() => {
+function a(e, t) {
+    let [n, a] = i.useState(() => {
         let n = s.K.get(e);
         return null != n ? n : t;
     });
@@ -20,7 +20,7 @@ function l(e, t) {
             n,
             i.useCallback(
                 (t) => {
-                    l(t), s.K.set(e, t);
+                    a(t), s.K.set(e, t);
                 },
                 [e]
             )

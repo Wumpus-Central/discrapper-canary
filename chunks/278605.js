@@ -1,19 +1,19 @@
-t.d(s, {
+n.d(t, {
     ah: function () {
         return r;
     },
     xP: function () {
-        return i;
+        return o;
     }
 });
-var n = t(818083),
-    a = t(987338);
-let r = (0, n.B)({
+var s = n(818083),
+    i = n(987338);
+let r = (0, s.B)({
     kind: 'user',
     id: '2024-11_marketing_page_v2_experiment',
     label: 'Marketing Page V2 Experiment',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -27,7 +27,7 @@ let r = (0, n.B)({
         }
     ]
 });
-function i(e) {
-    let { enabled: s } = r.useExperiment({ location: e }, { autoTrackExposure: !1 });
-    return s;
+function o(e) {
+    let { enabled: t } = r.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return t;
 }

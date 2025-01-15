@@ -13,15 +13,15 @@ var l = t(200651),
     d = t(755527);
 function u(e) {
     let { guild: n, error: t, onClose: u } = e,
-        m = n.id,
-        x = i.useCallback(() => {
-            u(), a.Z.open(m, o.pNK.INSTANT_INVITES);
-        }, [m, u]),
+        x = n.id,
+        m = i.useCallback(() => {
+            u(), a.Z.open(x, o.pNK.INSTANT_INVITES);
+        }, [x, u]),
         h = i.useCallback(
             (e) =>
                 (0, l.jsx)(r.Clickable, {
                     className: d.errorLink,
-                    onClick: x,
+                    onClick: m,
                     children: (0, l.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
@@ -29,7 +29,7 @@ function u(e) {
                         children: e
                     })
                 }),
-            [x]
+            [m]
         ),
         g = i.useCallback(
             (e) =>

@@ -2,8 +2,8 @@ n(47120), n(757143);
 var i = n(200651),
     s = n(192379),
     r = n(481060),
-    l = n(218872);
-function a(e, t, n) {
+    a = n(218872);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,19 +32,19 @@ class c extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            a(this, '_inputRef', void 0),
-            a(this, 'selectionStart', 0),
-            a(this, 'setRef', (e) => {
+            l(this, '_inputRef', void 0),
+            l(this, 'selectionStart', 0),
+            l(this, 'setRef', (e) => {
                 let { inputRef: t } = this.props;
                 (this._inputRef = e), null != t && t(e);
             }),
-            a(this, 'handleChange', (e, t) => {
+            l(this, 'handleChange', (e, t) => {
                 let { value: n, onChange: i } = this.props,
                     s = this._inputRef;
                 if (e === n || null == s || null == n) return;
-                let r = (0, l.M)(e),
-                    a = s.selectionStart;
-                r === n && r.length <= 3 && n.includes('/') && !e.includes('/') ? (r = r.replace(o, '')) : r === n && e.includes('/') && !n.includes('/') && (r += '/'), r.length > e.length && (a += r.length - e.length), (this.selectionStart = a), null != i && i(r, t);
+                let r = (0, a.M)(e),
+                    l = s.selectionStart;
+                r === n && r.length <= 3 && n.includes('/') && !e.includes('/') ? (r = r.replace(o, '')) : r === n && e.includes('/') && !n.includes('/') && (r += '/'), r.length > e.length && (l += r.length - e.length), (this.selectionStart = l), null != i && i(r, t);
             });
     }
 }

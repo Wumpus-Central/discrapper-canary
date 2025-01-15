@@ -40,10 +40,10 @@ var i,
     y = n(30684),
     O = n(646476),
     M = n(616106),
-    k = n(995598),
-    D = n(774276),
-    B = n(518638),
-    U = n(1844),
+    D = n(995598),
+    k = n(774276),
+    U = n(518638),
+    B = n(1844),
     w = n(621615),
     F = n(417626),
     G = n(569984),
@@ -123,10 +123,10 @@ let ey = {
         [eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: 'hidePremiumTier2TrialOfferEndingNotice',
         [eb.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: 'hideNagbarBlockUserFeedbackNotice'
     },
-    ek = new Set([eb.kVF.NO_INPUT_DETECTED, eb.kVF.NO_INPUT_DEVICES_DETECTED, eb.kVF.STREAMER_MODE, eb.kVF.VIDEO_UNSUPPORTED_BROWSER, eb.kVF.SPOTIFY_AUTO_PAUSED, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eb.kVF.BLOCKED_BY_PROXY]),
-    eD = {},
-    eB = {},
-    eU = Object.freeze({
+    eD = new Set([eb.kVF.NO_INPUT_DETECTED, eb.kVF.NO_INPUT_DEVICES_DETECTED, eb.kVF.STREAMER_MODE, eb.kVF.VIDEO_UNSUPPORTED_BROWSER, eb.kVF.SPOTIFY_AUTO_PAUSED, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eb.kVF.BLOCKED_BY_PROXY]),
+    ek = {},
+    eU = {},
+    eB = Object.freeze({
         id: null,
         message: null,
         buttonText: null,
@@ -141,7 +141,7 @@ function eG(e, t, n) {
     var i, r, l;
     if (null == e) return;
     let a = eM[e];
-    if ((null != a && !t && m.K.set(a, !0), ek.has(e) && (eD[e] = !0), null != n && null != a)) {
+    if ((null != a && !t && m.K.set(a, !0), eD.has(e) && (ek[e] = !0), null != n && null != a)) {
         (i = e), (r = n), m.K.set(eF(i), r.format('YYYY-MM-DDTHH:mm:ss.SSSZ'));
     } else {
         (l = e), m.K.remove(eF(l));
@@ -152,7 +152,7 @@ function eV(e) {
     let t = eO[e];
     if (null != t) return (0, C.H4)(t).isDismissed;
     let n = (function (e) {
-        let { enabled: t } = D.cI.getCurrentConfig(
+        let { enabled: t } = k.cI.getCurrentConfig(
             { location: 'NoticeStore_isNoticeDismissed' },
             {
                 autoTrackExposure: !0,
@@ -170,8 +170,8 @@ function eV(e) {
         })(e);
         if (null != t) return null == t ? void 0 : t.isAfter(s()());
     }
-    let r = eD[e];
-    return !!r || (null != i && '' !== i ? m.K.get(i) : !!ek.has(e) && r);
+    let r = ek[e];
+    return !!r || (null != i && '' !== i ? m.K.get(i) : !!eD.has(e) && r);
 }
 let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VIEWING_ROLES, eb.kVF.INVITED_TO_SPEAK, eb.kVF.LURKING_GUILD, eb.kVF.VOICE_DISABLED, eb.kVF.NO_INPUT_DEVICES_DETECTED, eb.kVF.NO_INPUT_DETECTED, eb.kVF.HARDWARE_MUTE, eb.kVF.H264_DISABLED, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eb.kVF.SPOTIFY_AUTO_PAUSED, eb.kVF.WIN32_DEPRECATED_MESSAGE, eb.kVF.WIN7_8_DEPRECATED_MESSAGE, eb.kVF.MACOS_17_18_DEPRECATED_MESSAGE, eb.kVF.BLOCKED_BY_PROXY, eb.kVF.VOICE_CONNECTED_LAST_SESSION, eb.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION, eb.kVF.GUILD_RAID_NOTIFICATION, eb.kVF.GIFTING_PROMOTION_REMINDER, eb.kVF.QUESTS_PROGRESS_INTERRUPTION, eb.kVF.UNCLAIMED_ACCOUNT, eb.kVF.POMELO_ELIGIBLE, eb.kVF.PENDING_MEMBER, eb.kVF.CHECKOUT_RECOVERY_NAGBAR, eb.kVF.OUTBOUND_PROMOTION, eb.kVF.CORRUPT_INSTALLATION, eb.kVF.VIDEO_UNSUPPORTED_BROWSER, eb.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eb.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eb.kVF.STREAMER_MODE, eb.kVF.SCHEDULED_MAINTENANCE, eb.kVF.BOUNCED_EMAIL_DETECTED, eb.kVF.UNVERIFIED_ACCOUNT, eb.kVF.PREMIUM_TIER_2_TRIAL_ENDING, eb.kVF.PREMIUM_TIER_0_TRIAL_ENDING, eb.kVF.PREMIUM_UNCANCEL, eb.kVF.PREMIUM_MISSING_PAYMENT, eb.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT, eb.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT, eb.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eb.kVF.PREMIUM_REACTIVATE, eb.kVF.ACTIVATE_SERVER_SUBSCRIPTION, eb.kVF.MFA_SMS_BACKUP, eb.kVF.APPLICATION_TEST_MODE, eb.kVF.LOCALIZED_PRICING, eb.kVF.DOWNLOAD_NAG, eb.kVF.CONNECT_SPOTIFY, eb.kVF.CONNECT_PLAYSTATION, eb.kVF.SURVEY, eb.kVF.SERVER_USAGE_SURVEY, eb.kVF.SAFETY_USER_SENTIMENT_NAGBAR, eb.kVF.UU_MIGRATION, eb.kVF.BLOCK_USER_FEEDBACK_NAGBAR],
     ez = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VIEWING_ROLES, eb.kVF.INVITED_TO_SPEAK, eb.kVF.LURKING_GUILD, eb.kVF.VOICE_DISABLED, eb.kVF.NO_INPUT_DETECTED, eb.kVF.HARDWARE_MUTE, eb.kVF.H264_DISABLED, eb.kVF.DISPATCH_ERROR, eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eb.kVF.SPOTIFY_AUTO_PAUSED, eb.kVF.BLOCKED_BY_PROXY, eb.kVF.VOICE_CONNECTED_LAST_SESSION, eb.kVF.PENDING_MEMBER, eb.kVF.STREAMER_MODE, eb.kVF.SCHEDULED_MAINTENANCE],
@@ -280,7 +280,7 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
                 return null !== (i = null != r && null != l && !(null === (t = en.Z.getGuild(r)) || void 0 === t ? void 0 : t.hasFeature(eb.oNc.GUILD_ONBOARDING)) && (null === (n = et.ZP.getMember(r, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== i && i;
             }
         },
-        [eb.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, B.tq)() },
+        [eb.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, U.tq)() },
         [eb.kVF.CORRUPT_INSTALLATION]: { predicate: () => eN.isPlatformEmbedded && (!d.Z.supported() || eA.Z.isCorruptInstallation()) },
         [eb.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
@@ -545,7 +545,7 @@ let eH = [eb.kVF.QUARANTINED, eb.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eb.kVF.VI
                 var t;
                 let { currentUser: n } = e,
                     i = null !== (t = eg.Z.paymentSources) && void 0 !== t ? t : {};
-                return y.Z.getIsTargeted() && !(0, ev.I5)(n) && 0 !== Object.keys(i).length && (0, k.Y)();
+                return y.Z.getIsTargeted() && !(0, ev.I5)(n) && 0 !== Object.keys(i).length && (0, D.Y)();
             }
         },
         [eb.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -588,7 +588,7 @@ function eK() {
                               selectedGuildId: a
                           });
                 ew = {
-                    ...eU,
+                    ...eB,
                     type: n,
                     metadata: l
                 };
@@ -597,17 +597,17 @@ function eK() {
         }
     }
     if (null != ew) {
-        (null === (n = ew.metadata) || void 0 === n ? void 0 : n.sampleRate) != null && null == eB[ew.type] && (eB[ew.type] = Math.random() <= ew.metadata.sampleRate);
-        let e = !1 === eB[ew.type];
+        (null === (n = ew.metadata) || void 0 === n ? void 0 : n.sampleRate) != null && null == eU[ew.type] && (eU[ew.type] = Math.random() <= ew.metadata.sampleRate);
+        let e = !1 === eU[ew.type];
         (eV(ew.type) || e) && (ew = null);
     }
 }
 function eY() {
-    return !eu.Z.enabled && delete eD[eb.kVF.STREAMER_MODE], eK();
+    return !eu.Z.enabled && delete ek[eb.kVF.STREAMER_MODE], eK();
 }
 class eX extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([em.Z, ea.Z, ee.Z, ec.Z, U.Z, eC.Z, Q.Z, $.Z, K.Z, A.Z, G.Z, Y.Z], eK), this.waitFor(ef.default, ed.Z, en.Z, et.ZP, eo.Z, ei.Z, eu.Z, I.Z, ec.Z, eh.Z, z.Z, x.ZP, ea.Z, eT.Z, eS.Z, ex.Z, er.Z, eE.ZP, eA.Z, ee.Z, eg.Z, el.Z, U.Z, eI.Z, eC.Z, $.Z, Z.Z, E.Z, F.Z, G.Z, Y.Z);
+        this.syncWith([em.Z, ea.Z, ee.Z, ec.Z, B.Z, eC.Z, Q.Z, $.Z, K.Z, A.Z, G.Z, Y.Z], eK), this.waitFor(ef.default, ed.Z, en.Z, et.ZP, eo.Z, ei.Z, eu.Z, I.Z, ec.Z, eh.Z, z.Z, x.ZP, ea.Z, eT.Z, eS.Z, ex.Z, er.Z, eE.ZP, eA.Z, ee.Z, eg.Z, el.Z, B.Z, eI.Z, eC.Z, $.Z, Z.Z, E.Z, F.Z, G.Z, Y.Z);
     }
     hasNotice() {
         return null != ew && null != ew.type;
@@ -682,10 +682,10 @@ class eX extends (i = c.ZP.Store) {
         STREAMER_MODE_UPDATE: eY,
         RUNNING_STREAMER_TOOLS_CHANGE: eY,
         DISPATCH_APPLICATION_ERROR: function () {
-            return delete eD[eb.kVF.DISPATCH_ERROR], eK();
+            return delete ek[eb.kVF.DISPATCH_ERROR], eK();
         },
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
-            return delete eD[eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS], eK();
+            return delete ek[eb.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS], eK();
         },
         DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: function () {
             return eK();
@@ -704,7 +704,7 @@ class eX extends (i = c.ZP.Store) {
             return eG(t), eK();
         },
         LOGOUT: function () {
-            (eD = {}), (eB = {}), (ew = null);
+            (ek = {}), (eU = {}), (ew = null);
         },
         SUBSCRIPTION_PLANS_FETCH_SUCCESS: eK,
         AUTO_MODERATION_MENTION_RAID_DETECTION: eK,

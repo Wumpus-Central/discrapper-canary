@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(969090),
-    l = n(481060),
-    a = n(619236),
+    a = n(481060),
+    l = n(619236),
     o = n(992167),
     c = n(388032);
 function d() {
@@ -22,7 +22,7 @@ function d() {
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.Select, {
+                (0, i.jsx)(a.Select, {
                     options: [
                         {
                             value: 'en-US',
@@ -37,41 +37,41 @@ function d() {
                     select: (e) => c.intl.setLocale(e),
                     serialize: (e) => e
                 }),
-                (0, i.jsx)(l.Spacer, { size: 32 }),
-                (0, i.jsxs)(l.FormSection, {
-                    tag: l.FormTitleTags.H1,
+                (0, i.jsx)(a.Spacer, { size: 32 }),
+                (0, i.jsxs)(a.FormSection, {
+                    tag: a.FormTitleTags.H1,
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'heading-lg/bold',
                             children: c.intl.format(o.Z.JJ0wpK, {})
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.intl.format(a.Z.swfLzc, {})
+                            children: c.intl.format(l.Z.swfLzc, {})
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z['rmps8/'], {})
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.uczI4u, { linkTarget: console.log })
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.rdfRys, {})
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z['Q+eyqq'], { count: 1 })
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.XOdbAw, {

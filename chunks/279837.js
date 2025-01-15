@@ -3,8 +3,8 @@ var s,
     i = n(200651),
     o = n(192379),
     l = n(481060),
-    a = n(388032),
-    r = n(189620);
+    r = n(388032),
+    a = n(189620);
 function h(e, t, n) {
     return (
         t in e
@@ -18,17 +18,17 @@ function h(e, t, n) {
         e
     );
 }
-class u extends (s = o.PureComponent) {
+class c extends (s = o.PureComponent) {
     render() {
         let { title: e, actionText: t, children: n, transitionState: s } = this.props,
-            { error: h, isLoading: u, value: d } = this.state,
-            c =
+            { error: h, isLoading: c, value: u } = this.state,
+            d =
                 o.Children.count(n) > 0
                     ? (0, i.jsx)(l.Card, {
                           type: l.Card.Types.WARNING,
-                          className: r.card,
+                          className: a.card,
                           children: (0, i.jsx)(l.Text, {
-                              className: r.warning,
+                              className: a.warning,
                               variant: 'text-md/normal',
                               children: n
                           })
@@ -48,23 +48,23 @@ class u extends (s = o.PureComponent) {
                     }),
                     (0, i.jsxs)(l.ModalContent, {
                         children: [
-                            c,
+                            d,
                             (0, i.jsxs)(l.FormItem, {
-                                title: a.intl.string(a.t['CIGa+/']),
-                                className: r.spacing,
+                                title: r.intl.string(r.t['CIGa+/']),
+                                className: a.spacing,
                                 children: [
                                     (0, i.jsx)(l.TextInput, {
                                         type: 'password',
                                         autoComplete: 'off',
                                         autoFocus: !0,
-                                        value: d,
+                                        value: u,
                                         onChange: this.handlePasswordChange
                                     }),
                                     null != h && '' !== h
                                         ? (0, i.jsxs)(l.Text, {
                                               variant: 'text-xs/normal',
                                               color: 'text-danger',
-                                              className: r.error,
+                                              className: a.error,
                                               children: [' ', h, ' ']
                                           })
                                         : null
@@ -76,14 +76,14 @@ class u extends (s = o.PureComponent) {
                         children: [
                             (0, i.jsx)(l.Button, {
                                 type: 'submit',
-                                disabled: u || 0 === d.length,
-                                children: null != t ? t : a.intl.string(a.t['cY+Ooa'])
+                                disabled: c || 0 === u.length,
+                                children: null != t ? t : r.intl.string(r.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(l.Button, {
                                 onClick: this.handleCancel,
                                 look: l.Button.Looks.LINK,
                                 color: l.Button.Colors.PRIMARY,
-                                children: a.intl.string(a.t['ETE/oK'])
+                                children: r.intl.string(r.t['ETE/oK'])
                             })
                         ]
                     })
@@ -137,4 +137,4 @@ class u extends (s = o.PureComponent) {
             });
     }
 }
-h(u, 'key', () => 'password-confirm-modal'), (t.default = u);
+h(c, 'key', () => 'password-confirm-modal'), (t.default = c);

@@ -15,73 +15,73 @@ var t =
                 a = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
                 s = e.webkitRequestFileSystem,
                 l = e.requestFileSystem || s || e.mozRequestFileSystem,
-                c = function (t) {
+                d = function (t) {
                     (e.setImmediate || e.setTimeout)(function () {
                         throw t;
                     }, 0);
                 },
-                d = 'application/octet-stream',
+                c = 'application/octet-stream',
                 u = 0,
-                E = function (e) {
+                h = function (e) {
                     setTimeout(function () {
                         'string' == typeof e ? n().revokeObjectURL(e) : e.remove();
                     }, 40000);
                 },
-                h = function (e, t, n) {
+                p = function (e, t, n) {
                     for (var r = (t = [].concat(t)).length; r--; ) {
                         var o = e['on' + t[r]];
                         if ('function' == typeof o)
                             try {
                                 o.call(e, n || e);
                             } catch (e) {
-                                c(e);
+                                d(e);
                             }
                     }
                 },
-                p = function (e) {
+                f = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
                 },
-                f = function (t, c, f) {
-                    !f && (t = p(t));
+                m = function (t, d, m) {
+                    !m && (t = f(t));
                     var _,
-                        R,
-                        I = this,
-                        m = t.type,
-                        N = !1,
-                        b = function () {
-                            h(I, 'writestart progress write writeend'.split(' '));
+                        E,
+                        b = this,
+                        N = t.type,
+                        g = !1,
+                        S = function () {
+                            p(b, 'writestart progress write writeend'.split(' '));
                         },
-                        g = function () {
-                            if (R && a && 'undefined' != typeof FileReader) {
+                        y = function () {
+                            if (E && a && 'undefined' != typeof FileReader) {
                                 var r = new FileReader();
                                 (r.onloadend = function () {
                                     var e = r.result;
-                                    (R.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (I.readyState = I.DONE), b();
+                                    (E.location.href = 'data:attachment/file' + e.slice(e.search(/[,;]/))), (b.readyState = b.DONE), S();
                                 }),
                                     r.readAsDataURL(t),
-                                    (I.readyState = I.INIT);
+                                    (b.readyState = b.INIT);
                                 return;
                             }
-                            (N || !_) && (_ = n().createObjectURL(t)), R ? (R.location.href = _) : void 0 === e.open(_, '_blank') && a && (e.location.href = _), (I.readyState = I.DONE), b(), E(_);
+                            (g || !_) && (_ = n().createObjectURL(t)), E ? (E.location.href = _) : void 0 === e.open(_, '_blank') && a && (e.location.href = _), (b.readyState = b.DONE), S(), h(_);
                         },
                         C = function (e) {
                             return function () {
-                                if (I.readyState !== I.DONE) return e.apply(this, arguments);
+                                if (b.readyState !== b.DONE) return e.apply(this, arguments);
                             };
                         },
-                        y = {
+                        x = {
                             create: !0,
                             exclusive: !1
                         };
-                    if (((I.readyState = I.INIT), !c && (c = 'download'), o)) {
+                    if (((b.readyState = b.INIT), !d && (d = 'download'), o)) {
                         (_ = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (r.href = _), (r.download = c), i(r), b(), E(_), (I.readyState = I.DONE);
+                                (r.href = _), (r.download = d), i(r), S(), h(_), (b.readyState = b.DONE);
                             });
                         return;
                     }
-                    if ((e.chrome && m && m !== d && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)), (N = !0)), s && 'download' !== c && (c += '.download'), (m === d || s) && (R = e), !l)) {
-                        g();
+                    if ((e.chrome && N && N !== c && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, c)), (g = !0)), s && 'download' !== d && (d += '.download'), (N === c || s) && (E = e), !l)) {
+                        y();
                         return;
                     }
                     (u += t.size),
@@ -91,68 +91,68 @@ var t =
                             C(function (e) {
                                 e.root.getDirectory(
                                     'saved',
-                                    y,
+                                    x,
                                     C(function (e) {
                                         var n = function () {
                                             e.getFile(
-                                                c,
-                                                y,
+                                                d,
+                                                x,
                                                 C(function (e) {
                                                     e.createWriter(
                                                         C(function (n) {
                                                             (n.onwriteend = function (t) {
-                                                                (R.location.href = e.toURL()), (I.readyState = I.DONE), h(I, 'writeend', t), E(e);
+                                                                (E.location.href = e.toURL()), (b.readyState = b.DONE), p(b, 'writeend', t), h(e);
                                                             }),
                                                                 (n.onerror = function () {
                                                                     var e = n.error;
-                                                                    e.code !== e.ABORT_ERR && g();
+                                                                    e.code !== e.ABORT_ERR && y();
                                                                 }),
                                                                 'writestart progress write abort'.split(' ').forEach(function (e) {
-                                                                    n['on' + e] = I['on' + e];
+                                                                    n['on' + e] = b['on' + e];
                                                                 }),
                                                                 n.write(t),
-                                                                (I.abort = function () {
-                                                                    n.abort(), (I.readyState = I.DONE);
+                                                                (b.abort = function () {
+                                                                    n.abort(), (b.readyState = b.DONE);
                                                                 }),
-                                                                (I.readyState = I.WRITING);
+                                                                (b.readyState = b.WRITING);
                                                         }),
-                                                        g
+                                                        y
                                                     );
                                                 }),
-                                                g
+                                                y
                                             );
                                         };
                                         e.getFile(
-                                            c,
+                                            d,
                                             { create: !1 },
                                             C(function (e) {
                                                 e.remove(), n();
                                             }),
                                             C(function (e) {
-                                                e.code === e.NOT_FOUND_ERR ? n() : g();
+                                                e.code === e.NOT_FOUND_ERR ? n() : y();
                                             })
                                         );
                                     }),
-                                    g
+                                    y
                                 );
                             }),
-                            g
+                            y
                         );
                 },
-                _ = f.prototype;
+                _ = m.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
                 ? function (e, t, n) {
-                      return !n && (e = p(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
+                      return !n && (e = f(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
                   }
                 : ((_.abort = function () {
-                      (this.readyState = this.DONE), h(this, 'abort');
+                      (this.readyState = this.DONE), p(this, 'abort');
                   }),
                   (_.readyState = _.INIT = 0),
                   (_.WRITING = 1),
                   (_.DONE = 2),
                   (_.error = _.onwritestart = _.onprogress = _.onwrite = _.onabort = _.onerror = _.onwriteend = null),
                   function (e, t, n) {
-                      return new f(e, t, n);
+                      return new m(e, t, n);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);

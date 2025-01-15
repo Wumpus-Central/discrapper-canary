@@ -1,18 +1,18 @@
-n.d(t, {
+s.d(t, {
     Z: function () {
         return r;
     }
 });
-var s = n(200651);
-n(192379);
-var i = n(481060);
+var n = s(200651);
+s(192379);
+var i = s(481060);
 function r(e) {
     (0, i.openModalLazy)(async () => {
-        let { default: t } = await n.e('16554').then(n.bind(n, 917314));
-        return (n) =>
-            (0, s.jsx)(t, {
+        let { default: t } = await s.e('16554').then(s.bind(s, 917314));
+        return (s) =>
+            (0, n.jsx)(t, {
                 guildId: e,
-                ...n
+                ...s
             });
     });
 }

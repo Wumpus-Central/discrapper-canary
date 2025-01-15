@@ -1,16 +1,16 @@
 var s, r;
-n.d(t, {
+n.d(e, {
     Nz: function () {
         return s;
     },
     o9: function () {
-        return l;
+        return a;
     }
 }),
     ((r = s || (s = {})).PHONE = 'phone'),
     (r.EMAIL = 'email');
 let i = /^[-() \d]+$/,
-    o = (e) => e.startsWith('+');
-function l(e, t) {
-    return 'phone' === e ? !o(t) : 'email' !== e && !(t.length < 3) && i.test(t);
+    l = (t) => t.startsWith('+');
+function a(t, e) {
+    return 'phone' === t ? !l(e) : 'email' !== t && !(e.length < 3) && i.test(e);
 }

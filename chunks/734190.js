@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(239091),
     h = n(111028),
     p = n(540059),
-    f = n(569471),
-    m = n(488131),
+    m = n(569471),
+    f = n(488131),
     g = n(592125),
     v = n(306680),
     C = n(979651),
@@ -99,10 +99,10 @@ t.Z = l.memo(function (e) {
             mentionCount: v.ZP.getMentionCount(t.id),
             isMentionLowImportance: v.ZP.getIsMentionLowImportance(t.id)
         })),
-        k = (0, s.e7)([f.Z], () => f.Z.isMuted(t.id)),
+        k = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
         U = l.useCallback(
             (e) => {
-                (0, m.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
+                (0, f.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
             },
             [t]
         ),

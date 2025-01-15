@@ -17,10 +17,10 @@ function c(e) {
         d = !1,
         h = !1,
         p = !1,
-        f = (0, l.e7)([o.Z], () => o.Z.getChannelId()),
-        m = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
-        g = null != m && c.includes(m),
-        v = (0, l.e7)([s.Z], () => null != f && s.Z.hasVideo(f), [f]),
+        m = (0, l.e7)([o.Z], () => o.Z.getChannelId()),
+        f = null === (t = (0, r.Z)()) || void 0 === t ? void 0 : t.guild_id,
+        g = null != f && c.includes(f),
+        v = (0, l.e7)([s.Z], () => null != m && s.Z.hasVideo(m), [m]),
         C = (0, l.e7)([a.Z], () => a.Z.getCurrentUserActiveStream());
     return (
         u && ((d = !v), (h = v), (p = null != C && null != C.guildId && c.includes(C.guildId))),

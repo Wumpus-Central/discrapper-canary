@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(888369),
     h = n(430824),
     p = n(451478),
-    f = n(61634),
-    m = n(325257),
+    m = n(61634),
+    f = n(325257),
     g = n(771557);
 t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
@@ -20,7 +20,7 @@ t.Z = l.memo(function (e) {
         I = (0, r.e7)([p.Z], () => p.Z.isFocused()),
         _ = (0, r.e7)([u.Z], () => u.Z.isUnavailable(v)),
         Z = (0, c.Z)((e) => e.guildId),
-        b = (0, f.Z)(v),
+        b = (0, m.Z)(v),
         {
             badge: S,
             unread: N,
@@ -49,7 +49,7 @@ t.Z = l.memo(function (e) {
                       : null,
             [n, y]
         );
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(f.Z, {
         ...e,
         guild: C,
         unavailable: _,

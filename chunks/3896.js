@@ -20,7 +20,7 @@ function h(e) {
     return (0, i.jsxs)(a.Clickable, {
         onClick: () =>
             (0, a.openModalLazy)(async () => {
-                let { default: e } = await n.e('27933').then(n.bind(n, 694278));
+                let { default: e } = await n.e('72458').then(n.bind(n, 694278));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

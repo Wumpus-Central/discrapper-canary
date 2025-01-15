@@ -34,20 +34,20 @@ function d(e) {
     });
 }
 function m(e) {
-    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: g, hasBackground: E = !1, forcedDivider: S = !1, showPremiumIcon: j = !1 } = e;
+    let { title: n, titleIcon: t, titleId: l, description: a, children: m, className: p, errors: x, disabled: h = !1, hideDivider: f = !1, showBorder: v = !1, borderType: g, hasBackground: S = !1, forcedDivider: E = !1, showPremiumIcon: j = !1 } = e;
     return (0, i.jsx)('div', {
         className: r()(u.customizationSection, p, {
             [u.disabled]: h,
             [u.hideDivider]: f,
             [u.showBorder]: v,
-            [u.withDivider]: S
+            [u.withDivider]: E
         }),
         children: (0, i.jsxs)(o.Z, {
             className: u.customizationSectionBorder,
             backgroundClassName: u.customizationSectionBackground,
             isShown: v,
             type: g,
-            hasBackground: E,
+            hasBackground: S,
             children: [
                 (0, i.jsxs)(s.FormTitle, {
                     className: u.title,

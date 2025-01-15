@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(557533),
-    l = n.n(r),
-    a = n(742493);
+    a = n.n(r),
+    l = n(742493);
 function o(e) {
     let { className: t, header: n, headerClassName: r, children: o } = e,
         c = s.useMemo(() => {
@@ -20,15 +20,15 @@ function o(e) {
             );
         }, [o]);
     return (0, i.jsxs)('div', {
-        className: l()(a.wrapper, t),
+        className: a()(l.wrapper, t),
         children: [
             (0, i.jsx)('div', {
-                className: l()(a.header, r),
+                className: a()(l.header, r),
                 children: n
             }),
             c &&
                 (0, i.jsx)('div', {
-                    className: a.content,
+                    className: l.content,
                     children: o
                 })
         ]

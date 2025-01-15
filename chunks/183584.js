@@ -1,6 +1,6 @@
 n.d(t, {
     IN: function () {
-        return i;
+        return o;
     },
     oZ: function () {
         return a;
@@ -14,7 +14,7 @@ var r = n(237997);
 n(998502), n(487029);
 var s = n(710111);
 n(981631), n(388032);
-let o = {
+let i = {
     width: s.FW.width,
     height: s.FW.height,
     resizable: !1,
@@ -28,7 +28,7 @@ let o = {
     backgroundColor: '#00000000',
     titleBarStyle: null
 };
-function i(e, t) {
+function o(e, t) {
     l.Z.dispatch({
         type: 'OVERLAY_SET_INPUT_LOCKED',
         locked: !1,
@@ -54,4 +54,4 @@ function a(e) {
                 pid: e
             });
 }
-s.FW.padding, o.width, o.height;
+s.FW.padding, i.width, i.height;

@@ -2,42 +2,42 @@ var i = n(200651),
     r = n(192379),
     s = n(512969),
     l = n(215569);
-class a extends r.Component {
+class o extends r.Component {
     render() {
-        let { children: e, location: t, history: n, staticContext: a, match: o, ...c } = this.props,
-            u = null,
-            d = null;
+        let { children: e, location: t, history: n, staticContext: o, match: a, ...c } = this.props,
+            d = null,
+            u = null;
         return (
             r.Children.forEach(e, (e) => {
-                if (null == u && r.isValidElement(e)) {
-                    let { component: i, render: l, ...o } = e.props,
-                        c = o.path || o.from;
+                if (null == d && r.isValidElement(e)) {
+                    let { component: i, render: l, ...a } = e.props,
+                        c = a.path || a.from;
                     if (
                         null !=
-                        (u =
+                        (d =
                             null != c
                                 ? (0, s.LX)(t.pathname, {
-                                      ...o,
+                                      ...a,
                                       path: c
                                   })
                                 : null)
                     )
-                        (o = {
-                            ...o,
+                        (a = {
+                            ...a,
                             key: c,
                             location: t,
-                            match: u,
+                            match: d,
                             history: n,
-                            staticContext: a
+                            staticContext: o
                         }),
-                            null != i ? (d = r.createElement(i, o)) : null != l && (d = l(o));
+                            null != i ? (u = r.createElement(i, a)) : null != l && (u = l(a));
                 }
             }),
             (0, i.jsx)(l.W, {
                 ...c,
-                children: d
+                children: u
             })
         );
     }
 }
-t.Z = (0, s.EN)(a);
+t.Z = (0, s.EN)(o);

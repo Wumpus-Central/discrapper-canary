@@ -1,8 +1,8 @@
 var i = n(544891),
     s = n(570140),
     r = n(325067),
-    l = n(981631);
-function a(e, t) {
+    a = n(981631);
+function l(e, t) {
     return (
         s.Z.dispatch({ type: 'MFA_SMS_TOGGLE' }),
         i.tn
@@ -24,7 +24,7 @@ t.Z = {
     enableMFAStart: async (e) =>
         (
             await i.tn.post({
-                url: l.ANM.MFA_TOTP_ENABLE,
+                url: a.ANM.MFA_TOTP_ENABLE,
                 body: { password: e },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -33,14 +33,14 @@ t.Z = {
     verifyEmailCode: async (e) =>
         (
             await i.tn.post({
-                url: l.ANM.MFA_TOTP_ENABLE_VERIFY,
+                url: a.ANM.MFA_TOTP_ENABLE_VERIFY,
                 body: { code: e },
                 rejectWithError: !1
             })
         ).body,
     resendEmailCode: (e) =>
         i.tn.post({
-            url: l.ANM.MFA_TOTP_ENABLE_RESEND,
+            url: a.ANM.MFA_TOTP_ENABLE_RESEND,
             body: { password: e },
             rejectWithError: !1
         }),
@@ -51,15 +51,15 @@ t.Z = {
         });
     },
     enable(e) {
-        let { password: t, code: n, secret: r, emailToken: a } = e;
+        let { password: t, code: n, secret: r, emailToken: l } = e;
         return i.tn
             .post({
-                url: l.ANM.MFA_TOTP_ENABLE,
+                url: a.ANM.MFA_TOTP_ENABLE,
                 body: {
                     code: n,
                     secret: r,
                     password: t,
-                    email_token: a
+                    email_token: l
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -75,7 +75,7 @@ t.Z = {
     disable() {
         i.tn
             .post({
-                url: l.ANM.MFA_TOTP_DISABLE,
+                url: a.ANM.MFA_TOTP_DISABLE,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
@@ -89,12 +89,12 @@ t.Z = {
                 });
             });
     },
-    enableSMS: (e) => a(l.ANM.MFA_SMS_ENABLE, e),
-    disableSMS: (e) => a(l.ANM.MFA_SMS_DISABLE, e),
+    enableSMS: (e) => l(a.ANM.MFA_SMS_ENABLE, e),
+    disableSMS: (e) => l(a.ANM.MFA_SMS_DISABLE, e),
     sendMFABackupCodesVerificationKeyEmail: (e) =>
         i.tn
             .post({
-                url: l.ANM.MFA_SEND_VERIFICATION_KEY,
+                url: a.ANM.MFA_SEND_VERIFICATION_KEY,
                 body: { password: e },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -113,13 +113,13 @@ t.Z = {
                 }
             ),
     confirmViewBackupCodes(e, t) {
-        let { viewNonce: n, regenerateNonce: a } = r.Z.getNonces();
+        let { viewNonce: n, regenerateNonce: l } = r.Z.getNonces();
         return i.tn
             .post({
-                url: l.ANM.MFA_CODES_VERIFICATION,
+                url: a.ANM.MFA_CODES_VERIFICATION,
                 body: {
                     key: e,
-                    nonce: t ? a : n,
+                    nonce: t ? l : n,
                     regenerate: t
                 },
                 oldFormErrors: !0,

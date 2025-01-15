@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(682662),
     h = n(662146),
     p = n(187643);
-let f = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: f, icon: m, selected: g, tooltip: v, upperBadge: C, lowerBadge: x, lowerBadgeSize: I, showPill: _ = !0, className: Z, 'aria-label': b, children: S, onMouseEnter: N, onMouseLeave: E, onMouseDown: y } = e,
+let m = l.forwardRef(function (e, t) {
+    let { id: n, onClick: r, onContextMenu: m, icon: f, selected: g, tooltip: v, upperBadge: C, lowerBadge: x, lowerBadgeSize: I, showPill: _ = !0, className: Z, 'aria-label': b, children: S, onMouseEnter: N, onMouseLeave: E, onMouseDown: y } = e,
         j = (0, c.Q3)('ButtonListItem'),
         T = (0, o.Ie)(n),
         [P, A] = l.useState(!1),
@@ -47,12 +47,12 @@ let f = l.forwardRef(function (e, t) {
                         className: a()(p.circleIconButton, Z, { [p.selected]: g || P }),
                         onClick: r,
                         'aria-label': w,
-                        onContextMenu: f,
+                        onContextMenu: m,
                         focusProps: { enabled: !1 },
                         ...T,
                         children:
-                            null != m &&
-                            (0, i.jsx)(m, {
+                            null != f &&
+                            (0, i.jsx)(f, {
                                 className: p.circleIcon,
                                 color: 'currentColor'
                             })
@@ -63,4 +63,4 @@ let f = l.forwardRef(function (e, t) {
         ]
     });
 });
-t.Z = f;
+t.Z = m;

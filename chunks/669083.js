@@ -20,9 +20,9 @@ var i,
     m = n(13140),
     v = n(809357),
     x = n(981631),
-    _ = n(388032),
+    Z = n(388032),
     S = n(382595),
-    Z = n(232186);
+    _ = n(232186);
 function E(e, t, n) {
     return (
         t in e
@@ -40,35 +40,35 @@ function E(e, t, n) {
 let C = () => [
         {
             value: x.ipw.LARGE,
-            name: _.intl.string(_.t.YcOxtr)
+            name: Z.intl.string(Z.t.YcOxtr)
         },
         {
             value: x.ipw.SMALL,
-            name: _.intl.string(_.t.BKIKq6)
+            name: Z.intl.string(Z.t.BKIKq6)
         }
     ],
     I = () => [
         {
             value: x.wC$.ALWAYS,
-            name: _.intl.string(_.t.nBmDra)
+            name: Z.intl.string(Z.t.nBmDra)
         },
         {
             value: x.wC$.ONLY_WHILE_SPEAKING,
-            name: _.intl.string(_.t['2OvIZW'])
+            name: Z.intl.string(Z.t['2OvIZW'])
         },
         {
             value: x.wC$.NEVER,
-            name: _.intl.string(_.t.ekjlPD)
+            name: Z.intl.string(Z.t.ekjlPD)
         }
     ],
     y = () => [
         {
             value: x.OYC.ALWAYS,
-            name: _.intl.string(_.t.nBmDra)
+            name: Z.intl.string(Z.t.nBmDra)
         },
         {
             value: x.OYC.ONLY_WHILE_SPEAKING,
-            name: _.intl.string(_.t['2OvIZW'])
+            name: Z.intl.string(Z.t['2OvIZW'])
         }
     ];
 function N() {
@@ -121,7 +121,7 @@ class b extends a.PureComponent {
                         (0, r.jsx)(l.FormTitle, {
                             className: S.headerTitle,
                             tag: 'h1',
-                            children: _.intl.string(_.t['35G2Mj'])
+                            children: Z.intl.string(Z.t['35G2Mj'])
                         }),
                         (0, r.jsx)(l.ModalCloseButton, {
                             className: S.headerClose,
@@ -151,12 +151,12 @@ class b extends a.PureComponent {
                 (0, r.jsx)(l.TabBar.Item, {
                     id: 'GENERAL',
                     className: S.tabBarItem,
-                    children: _.intl.string(_.t['0FYxx8'])
+                    children: Z.intl.string(Z.t['0FYxx8'])
                 }),
                 (0, r.jsx)(l.TabBar.Item, {
                     id: 'VOICE',
                     className: S.tabBarItem,
-                    children: _.intl.string(_.t['3WeSiI'])
+                    children: Z.intl.string(Z.t['3WeSiI'])
                 }),
                 t
             ]
@@ -190,8 +190,8 @@ class b extends a.PureComponent {
         return (0, r.jsxs)(a.Fragment, {
             children: [
                 (0, r.jsx)(l.FormItem, {
-                    title: _.intl.string(_.t.IQv8Eh),
-                    className: Z.marginBottom20,
+                    title: Z.intl.string(Z.t.IQv8Eh),
+                    className: _.marginBottom20,
                     children: (0, r.jsx)(u.Z, {
                         position: t,
                         onChange: this.handleChangeNotificationPositionMode
@@ -202,14 +202,14 @@ class b extends a.PureComponent {
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !s,
                     hideBorder: !0,
-                    children: _.intl.string(_.t.Fy5kPj)
+                    children: Z.intl.string(Z.t.Fy5kPj)
                 }),
                 i &&
                     (0, r.jsx)(l.FormSwitch, {
                         value: n,
                         onChange: (e) => d.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
-                        children: _.intl.string(_.t.XZTl9v)
+                        children: Z.intl.string(Z.t.XZTl9v)
                     })
             ]
         });
@@ -219,8 +219,8 @@ class b extends a.PureComponent {
         return (0, r.jsxs)(a.Fragment, {
             children: [
                 (0, r.jsx)(l.FormItem, {
-                    title: _.intl.string(_.t.dnvZSk),
-                    className: Z.marginBottom20,
+                    title: Z.intl.string(Z.t.dnvZSk),
+                    className: _.marginBottom20,
                     children: (0, r.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
                         options: C(),
@@ -229,8 +229,8 @@ class b extends a.PureComponent {
                     })
                 }),
                 (0, r.jsx)(l.FormItem, {
-                    title: _.intl.string(_.t.J0dpcH),
-                    className: Z.marginBottom20,
+                    title: Z.intl.string(Z.t.J0dpcH),
+                    className: _.marginBottom20,
                     children: (0, r.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
                         options: I(),
@@ -239,8 +239,8 @@ class b extends a.PureComponent {
                     })
                 }),
                 (0, r.jsx)(l.FormItem, {
-                    title: _.intl.string(_.t.swsWWF),
-                    className: Z.marginBottom20,
+                    title: Z.intl.string(Z.t.swsWWF),
+                    className: _.marginBottom20,
                     children: (0, r.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
                         options: y(),
@@ -255,7 +255,7 @@ class b extends a.PureComponent {
         return (0, r.jsx)(a.Fragment, {
             children: (0, r.jsx)(l.FormItem, {
                 title: 'Crashes',
-                className: Z.marginBottom20,
+                className: _.marginBottom20,
                 children: (0, r.jsx)(l.SingleSelect, {
                     value: void 0,
                     options: [
@@ -291,7 +291,7 @@ class b extends a.PureComponent {
     }
     render() {
         return (0, r.jsxs)(l.ModalRoot, {
-            'aria-label': _.intl.string(_.t['35G2Mj']),
+            'aria-label': Z.intl.string(Z.t['35G2Mj']),
             transitionState: l.ModalTransitionState.ENTERED,
             children: [this.renderHeader(), this.renderBody()]
         });

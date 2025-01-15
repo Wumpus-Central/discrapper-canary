@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
     Z: function () {
         return s;
     }
@@ -12,20 +12,20 @@ var l = t(392711),
     u = t(344185),
     d = t(665906),
     c = t(388032);
-function s(e) {
-    let n = (0, d.Xb)(e),
-        l = (0, r.e7)([u.Z], () => !a().isEmpty(u.Z.getThreadsForGuild(e.id)));
-    return n && l
+function s(n) {
+    let e = (0, d.Xb)(n),
+        l = (0, r.e7)([u.Z], () => !a().isEmpty(u.Z.getThreadsForGuild(n.id)));
+    return e && l
         ? (0, i.jsx)(o.MenuItem, {
               id: 'active-threads',
               label: c.intl.string(c.t.TM6erq),
               icon: o.ChatIcon,
               action: () => {
                   (0, o.openModalLazy)(async () => {
-                      let { default: n } = await t.e('22482').then(t.bind(t, 157743));
+                      let { default: e } = await t.e('22482').then(t.bind(t, 157743));
                       return (t) =>
-                          (0, i.jsx)(n, {
-                              guildId: e.id,
+                          (0, i.jsx)(e, {
+                              guildId: n.id,
                               ...t
                           });
                   });

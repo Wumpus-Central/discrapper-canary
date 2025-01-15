@@ -13,30 +13,30 @@ var l = t(200651),
     c = t(813197),
     d = t(930180),
     u = t(46920),
-    m = t(924301),
-    x = t(236373),
+    x = t(924301),
+    m = t(236373),
     h = t(854698),
     g = t(405613),
     v = t(440371),
     j = t(765305),
     f = t(486324),
-    p = t(388032),
+    N = t(388032),
     I = t(378816);
-function N(e) {
+function p(e) {
     let { editBroadcastInfoData: n } = e,
         { broadcastInfo: t, broadcastToDirectoryChannels: i, setBroadcastToDirectoryChannels: r, canEveryoneRoleViewEvent: a } = n;
     return t.can_broadcast
         ? (0, l.jsxs)(s.FormItem, {
-              title: p.intl.string(p.t.BgAW29),
+              title: N.intl.string(N.t.BgAW29),
               className: I.formItem,
               children: [
                   (0, l.jsx)(s.Tooltip, {
                       text: (0, l.jsx)(s.Text, {
                           className: I.broadcastInfoTooltip,
                           variant: 'text-sm/normal',
-                          children: p.intl.string(p.t.gTgUmZ)
+                          children: N.intl.string(N.t.gTgUmZ)
                       }),
-                      'aria-label': p.intl.string(p.t.gTgUmZ),
+                      'aria-label': N.intl.string(N.t.gTgUmZ),
                       shouldShow: !a,
                       children: (e) =>
                           (0, l.jsx)('div', {
@@ -49,7 +49,7 @@ function N(e) {
                                   children: (0, l.jsx)(s.Text, {
                                       variant: 'text-md/normal',
                                       color: 'interactive-active',
-                                      children: p.intl.string(p.t['8GW68/'])
+                                      children: N.intl.string(N.t['8GW68/'])
                                   })
                               })
                           })
@@ -58,23 +58,23 @@ function N(e) {
                       className: I.broadcastInfoDescription,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: p.intl.string(p.t.V8Oq8P)
+                      children: N.intl.string(N.t.V8Oq8P)
                   })
               ]
           })
         : null;
 }
 function C(e) {
-    let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: S, validationErrorMessage: T, onChange: y, canSetFocus: b = !1 } = e,
-        { entityType: Z, channelId: R, description: _, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
-        M = (0, d._d)(R),
-        z = (0, d.K3)(R),
-        U = null != n && (0, m.xt)(n),
+    let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: T, validationErrorMessage: S, onChange: Z, canSetFocus: b = !1 } = e,
+        { entityType: y, channelId: _, description: R, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: z } = n,
+        B = (0, d._d)(_),
+        M = (0, d.K3)(_),
+        U = null != n && (0, x.xt)(n),
         P = i.useMemo(() => {
             let e = (0, h.v1)(n);
             return null != e ? e : { startDate: a()(L) };
         }, [n, L]),
-        [G, V] = i.useState(() => (0, h.zi)(a()(L), B)),
+        [G, V] = i.useState(() => (0, h.zi)(a()(L), z)),
         w = i.useRef(null);
     i.useEffect(() => {
         if (b) {
@@ -83,9 +83,9 @@ function C(e) {
         }
     }, [b]);
     let F = (e) => {
-            y({ image: e });
+            Z({ image: e });
         },
-        O = (e, n) => {
+        X = (e, n) => {
             if (null == e || void 0 === n) {
                 F(null);
                 return;
@@ -107,33 +107,33 @@ function C(e) {
         children: [
             (0, l.jsx)('div', {
                 className: I.blockedUsersContainer,
-                children: null != R && !U && (M > 0 || z > 0) && (0, l.jsx)(u.mv, { channelId: R })
+                children: null != _ && !U && (B > 0 || M > 0) && (0, l.jsx)(u.mv, { channelId: _ })
             }),
             (0, l.jsxs)('div', {
                 className: I.form,
                 children: [
                     (0, l.jsxs)(s.FormItem, {
-                        title: p.intl.string(p.t['0HbEQ0']),
+                        title: N.intl.string(N.t['0HbEQ0']),
                         className: I.topicFormItem,
                         required: !0,
                         children: [
                             (0, l.jsx)(s.TextInput, {
                                 className: I.textInput,
                                 onChange: (e) => {
-                                    y({ name: e });
+                                    Z({ name: e });
                                 },
-                                placeholder: p.intl.string(p.t['6/yarq']),
+                                placeholder: N.intl.string(N.t['6/yarq']),
                                 maxLength: j.p,
                                 value: k,
                                 autoComplete: 'off',
                                 inputRef: w
                             }),
-                            null != S
+                            null != T
                                 ? (0, l.jsx)(s.Text, {
                                       color: 'text-danger',
                                       variant: 'text-xs/normal',
                                       className: I.warning,
-                                      children: S.getAnyErrorMessage()
+                                      children: T.getAnyErrorMessage()
                                   })
                                 : null
                         ]
@@ -146,50 +146,50 @@ function C(e) {
                                     scheduledStartTime: null == n ? void 0 : n.toISOString(),
                                     scheduledEndTime: null == t ? void 0 : t.toISOString()
                                 };
-                            null != n && null != D && (null == t ? void 0 : t.isBefore(n)) && (l.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != G && (l.recurrenceRule = (0, h.mF)(G, n)), y(l);
+                            null != n && null != D && (null == t ? void 0 : t.isBefore(n)) && (l.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != G && (l.recurrenceRule = (0, h.mF)(G, n)), Z(l);
                         },
                         onRecurrenceChange: (e) => {
                             let n = P.startDate;
-                            if (null != n) y({ recurrenceRule: (0, h.mF)(e, n) }), V(e);
+                            if (null != n) Z({ recurrenceRule: (0, h.mF)(e, n) }), V(e);
                         },
                         schedule: P,
-                        recurrenceRule: B,
-                        showEndDate: Z === j.WX.EXTERNAL,
-                        requireEndDate: Z === j.WX.EXTERNAL,
+                        recurrenceRule: z,
+                        showEndDate: y === j.WX.EXTERNAL,
+                        requireEndDate: y === j.WX.EXTERNAL,
                         disableStartDateTime: U,
                         guildId: C
                     }),
-                    null != T
+                    null != S
                         ? (0, l.jsx)(s.Text, {
                               color: 'text-danger',
                               variant: 'text-xs/normal',
                               className: I.warning,
-                              children: T
+                              children: S
                           })
                         : null,
                     (0, l.jsx)(s.FormItem, {
-                        title: p.intl.string(p.t['+gRCCw']),
+                        title: N.intl.string(N.t['+gRCCw']),
                         className: I.formItem,
                         children: (0, l.jsx)(s.TextArea, {
                             className: I.__invalid_descriptionInput,
-                            placeholder: p.intl.string(p.t['kWO/Ex']),
-                            value: _,
+                            placeholder: N.intl.string(N.t['kWO/Ex']),
+                            value: R,
                             onChange: (e) => {
-                                y({ description: e });
+                                Z({ description: e });
                             },
                             maxLength: j.wm,
                             autosize: !0
                         })
                     }),
                     (0, l.jsxs)(s.FormItem, {
-                        title: p.intl.string(p.t.Ly121d),
+                        title: N.intl.string(N.t.Ly121d),
                         className: I.formItem,
                         children: [
                             (0, l.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 className: I.addImageHint,
-                                children: p.intl.string(p.t.B9C9bW)
+                                children: N.intl.string(N.t.B9C9bW)
                             }),
                             null != A
                                 ? (0, l.jsxs)(l.Fragment, {
@@ -202,28 +202,28 @@ function C(e) {
                                                   if (null == e) return null;
                                                   if (null != C) {
                                                       var t;
-                                                      return null !== (t = (0, g.Z)((0, x.Gb)(n, C, r))) && void 0 !== t ? t : null;
+                                                      return null !== (t = (0, g.Z)((0, m.Gb)(n, C, r))) && void 0 !== t ? t : null;
                                                   }
                                               },
-                                              onChange: O,
-                                              hint: p.intl.string(p.t.G44Xmp),
+                                              onChange: X,
+                                              hint: N.intl.string(N.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
                                           }),
                                           (0, l.jsx)(s.Button, {
                                               size: s.Button.Sizes.SMALL,
                                               onClick: () => F(null),
-                                              children: p.intl.string(p.t.gmUvOz)
+                                              children: N.intl.string(N.t.gmUvOz)
                                           })
                                       ]
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [p.intl.string(p.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: O })]
+                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: X })]
                                   })
                         ]
                     }),
-                    (0, l.jsx)(N, { editBroadcastInfoData: E })
+                    (0, l.jsx)(p, { editBroadcastInfoData: E })
                 ]
             })
         ]

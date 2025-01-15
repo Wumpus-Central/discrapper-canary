@@ -1,44 +1,44 @@
-var s,
-    i = n(442837),
-    r = n(570140);
-function o(e, t, n) {
+var n,
+    i = s(442837),
+    r = s(570140);
+function o(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-function l() {
+function a() {
     return { lastTriggered: 0 };
 }
-let a = l();
-class c extends (s = i.ZP.PersistedStore) {
+let l = a();
+class c extends (n = i.ZP.PersistedStore) {
     initialize(e) {
-        a = {
-            ...l(),
+        l = {
+            ...a(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return a;
+        return l;
     }
     cooldownIsActive() {
-        return a.lastTriggered >= Date.now() - 172800000;
+        return l.lastTriggered >= Date.now() - 172800000;
     }
 }
 o(c, 'displayName', 'HDStreamingViewerStore'),
     o(c, 'persistKey', 'HDStreamingViewerStore'),
     (t.Z = new c(r.Z, {
         LOGOUT: function () {
-            a = l();
+            l = a();
         },
         HD_STREAMING_VIEWER_UPDATE_LAST_TRIGGERED: function (e) {
-            a.lastTriggered = Date.now();
+            l.lastTriggered = Date.now();
         }
     }));

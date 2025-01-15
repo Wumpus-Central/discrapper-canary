@@ -1,20 +1,20 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return a;
+            return o;
         }
     });
-var i = t(200651);
-t(192379);
-var r = t(238246),
-    l = t(438162);
-function a(e) {
-    let { withTitleBar: n, windowKey: t } = e;
+var i = n(200651);
+n(192379);
+var r = n(238246),
+    l = n(438162);
+function o(e) {
+    let { withTitleBar: t, windowKey: n } = e;
     return (0, i.jsx)(r.Z, {
-        withTitleBar: n,
-        windowKey: t,
+        withTitleBar: t,
+        windowKey: n,
         title: 'Discord Overlay',
         children: (0, i.jsx)(l.Z, {})
     });
 }
-t(606206), t(371467);
+n(606206), n(371467);

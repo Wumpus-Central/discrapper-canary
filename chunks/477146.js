@@ -13,14 +13,14 @@ n.d(t, {
 var i = n(392711),
     s = n(605387),
     r = n.n(s);
-let l = (e) => r().decode(e),
-    a = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
+let a = (e) => r().decode(e),
+    l = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
     o = async (e, t, n, i) => ({
         src: e,
         base64: t,
         loop: !1,
         loopDelay: 0,
-        duration: a(l(await n.arrayBuffer())),
+        duration: l(a(await n.arrayBuffer())),
         start: 0,
         position: {
             x: 0,

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(481060),
-    a = n(153867),
+    a = n(481060),
+    l = n(153867),
     o = n(706454),
     c = n(388032),
     d = n(808463),
@@ -16,7 +16,7 @@ var i = n(200651),
 function m() {
     let e = (0, r.e7)([o.default], () => o.default.locale),
         [t, m] = s.useState(e),
-        [h] = s.useState(() =>
+        [g] = s.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 let t;
                 try {
@@ -51,19 +51,19 @@ function m() {
                 };
             })
         ),
-        g = s.useCallback((e) => {
+        h = s.useCallback((e) => {
             let { value: t } = e;
-            m(t), u.nextTick(() => a.ZP.updateLocale(t));
+            m(t), u.nextTick(() => l.ZP.updateLocale(t));
         }, []);
-    return (0, i.jsx)(l.FormSection, {
-        tag: l.FormTitleTags.H1,
+    return (0, i.jsx)(a.FormSection, {
+        tag: a.FormTitleTags.H1,
         title: c.intl.string(c.t.IHMsPj),
-        children: (0, i.jsx)(l.FormSection, {
-            children: (0, i.jsx)(l.FormItem, {
+        children: (0, i.jsx)(a.FormSection, {
+            children: (0, i.jsx)(a.FormItem, {
                 title: c.intl.string(c.t['mx+sp6']),
-                children: (0, i.jsx)(l.RadioGroup, {
-                    onChange: g,
-                    options: h,
+                children: (0, i.jsx)(a.RadioGroup, {
+                    onChange: h,
+                    options: g,
                     value: t
                 })
             })

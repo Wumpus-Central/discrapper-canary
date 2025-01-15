@@ -7,19 +7,19 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(481060),
     c = n(921801),
     d = n(663389),
     u = n(960412),
     m = n(151662),
-    h = n(930441),
-    g = n(726985),
+    g = n(930441),
+    h = n(726985),
     p = n(388032),
     x = n(774927),
-    S = n(232186);
-function T(e) {
+    f = n(232186);
+function _(e) {
     let { label: t, onChange: n, enabled: s, subLabel: r } = e;
     return (0, i.jsx)(o.FormSwitch, {
         value: !!s,
@@ -29,39 +29,39 @@ function T(e) {
     });
 }
 function E() {
-    let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
+    let e = (0, l.e7)([d.Z], () => d.Z.getSubsection()),
         t = s.createRef(),
-        { categories: n, initialized: r } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
+        { categories: n, initialized: r } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
     s.useEffect(() => {
         if (null == r) (0, u.Y7)();
-        else if (e === h.vG.toUpperCase()) {
+        else if (e === g.vG.toUpperCase()) {
             var n;
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
     }, [r, t, e]);
-    let E = h.M0.reduce((e, t) => e || !!n[t], !1),
+    let E = g.M0.reduce((e, t) => e || !!n[t], !1),
         C = {
-            [h.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [h.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [h.$Z.UPDATES_AND_ANNOUNCEMENTS]: g.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [h.$Z.TIPS]: g.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [h.$Z.RECOMMENDATIONS_AND_EVENTS]: g.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+            [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: h.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [g.$Z.TIPS]: h.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: h.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
     return r
         ? (0, i.jsxs)(c.F, {
-              setting: g.s6.NOTIFICATIONS_EMAILS,
+              setting: h.s6.NOTIFICATIONS_EMAILS,
               children: [
                   (0, i.jsx)('div', { ref: t }),
                   (0, i.jsxs)(o.FormSection, {
-                      className: l()(S.marginTop40),
+                      className: a()(f.marginTop40),
                       tag: o.FormTitleTags.H1,
                       title: p.intl.string(p.t.TPchzM),
                       children: [
-                          h.Od.map((e) => {
+                          g.Od.map((e) => {
                               let { category: t, label: s, subLabel: r } = e,
-                                  l = C[t],
-                                  a = (0, i.jsx)(
-                                      T,
+                                  a = C[t],
+                                  l = (0, i.jsx)(
+                                      _,
                                       {
                                           label: s(),
                                           subLabel: r(),
@@ -73,19 +73,19 @@ function E() {
                                       },
                                       s()
                                   );
-                              return null != l
+                              return null != a
                                   ? (0, i.jsx)(
                                         c.F,
                                         {
-                                            setting: l,
-                                            children: a
+                                            setting: a,
+                                            children: l
                                         },
                                         s()
                                     )
-                                  : a;
+                                  : l;
                           }),
                           (0, i.jsxs)(c.F, {
-                              setting: g.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+                              setting: h.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
                                   (0, i.jsx)(o.Button, {
                                       className: x.marketingUnsubscribeButton,
@@ -99,7 +99,7 @@ function E() {
                                       type: o.FormTextTypes.DESCRIPTION,
                                       children: p.intl.string(p.t.iYjQ8f)
                                   }),
-                                  (0, i.jsx)(o.FormDivider, { className: l()(S.marginTop40, S.marginBottom40) })
+                                  (0, i.jsx)(o.FormDivider, { className: a()(f.marginTop40, f.marginBottom40) })
                               ]
                           })
                       ]

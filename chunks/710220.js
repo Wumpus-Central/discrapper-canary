@@ -5,18 +5,18 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(518950),
-    s = n(182294),
+var s = n(481060),
+    r = n(518950),
+    a = n(182294),
     l = n(388032),
     o = n(818826),
     c = n(144343);
 function d(e) {
     let { referrer: t, isMarketingPageV2Enabled: n } = e,
         d = (e) => (null != e.globalName ? e.globalName : e.username),
-        { avatarSrc: u, eventHandlers: g } = (0, a.Z)({
+        { avatarSrc: u, eventHandlers: m } = (0, r.Z)({
             user: t,
-            size: s.EF.SIZE_32,
+            size: a.EF.SIZE_32,
             animateOnHover: !0
         });
     return (0, i.jsx)('div', {
@@ -26,21 +26,21 @@ function d(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: n ? o.iconContainerV2 : o.iconContainer,
-                    children: (0, i.jsx)(r.Avatar, {
+                    children: (0, i.jsx)(s.Avatar, {
                         className: o.icon,
                         src: u,
                         'aria-label': t.username,
-                        size: s.EF.SIZE_32,
-                        ...g
+                        size: a.EF.SIZE_32,
+                        ...m
                     })
                 }),
                 n
-                    ? (0, i.jsx)(r.Heading, {
+                    ? (0, i.jsx)(s.Heading, {
                           variant: 'heading-lg/medium',
                           className: o.textContainer,
                           children: l.intl.format(l.t.IqxblZ, { username: d(t) })
                       })
-                    : (0, i.jsx)(r.Text, {
+                    : (0, i.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           className: o.textContainer,
                           children: l.intl.format(l.t.IqxblZ, { username: d(t) })

@@ -1,39 +1,39 @@
-n(47120);
-var s,
-    i = n(200651),
-    r = n(192379),
-    o = n(120356),
-    l = n.n(o),
-    a = n(748780),
-    c = n(846519),
-    u = n(481060),
-    d = n(585483),
-    h = n(981631),
-    E = n(388032),
-    p = n(159381);
-function _(e, t, n) {
+s(47120);
+var n,
+    i = s(200651),
+    r = s(192379),
+    o = s(120356),
+    a = s.n(o),
+    l = s(748780),
+    c = s(846519),
+    d = s(481060),
+    u = s(585483),
+    h = s(981631),
+    E = s(388032),
+    p = s(159381);
+function m(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
-let m = {
+let _ = {
     friction: 15,
     tension: 100
 };
-class C extends (s = r.PureComponent) {
+class C extends (n = r.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), d.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), u.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), d.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), u.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -42,37 +42,37 @@ class C extends (s = r.PureComponent) {
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
-            a.Z.spring(this.state.translateY, {
+            l.Z.spring(this.state.translateY, {
                 toValue: Math.min(e, 250),
-                ...m
+                ..._
             }).start();
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: l()(p.arrowGroup, e),
+            className: a()(p.arrowGroup, e),
             children: [
-                (0, i.jsx)(a.Z.div, {
-                    className: l()(p.arrowContainer, p.horizontal),
+                (0, i.jsx)(l.Z.div, {
+                    className: a()(p.arrowContainer, p.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: n(403756),
+                        src: s(403756),
                         className: p.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: l()(p.arrowContainer, p.diag1),
+                    className: a()(p.arrowContainer, p.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: n(536404),
+                        src: s(536404),
                         className: p.arrowIcon
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: l()(p.arrowContainer, p.diag2),
+                    className: a()(p.arrowContainer, p.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: n(569347),
+                        src: s(569347),
                         className: p.arrowIcon
                     })
                 })
@@ -99,7 +99,7 @@ class C extends (s = r.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: l()(p.tutorial, {
+            className: a()(p.tutorial, {
                 [p.shown]: t,
                 [p.hasQuery]: e
             }),
@@ -125,23 +125,23 @@ class C extends (s = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            m(this, 'state', {
                 shown: !1,
-                translateY: new a.Z.Value(0)
+                translateY: new l.Z.Value(0)
             }),
-            _(this, 'rootRef', r.createRef()),
-            _(this, 'focusTimeout', new c.V7()),
-            _(this, 'handleResultFocus', (e) => {
+            m(this, 'rootRef', r.createRef()),
+            m(this, 'focusTimeout', new c.V7()),
+            m(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
                         let { top: e } = this.rootRef.current.getBoundingClientRect(),
-                            { top: n } = t.getBoundingClientRect(),
-                            s = Math.abs(e - n);
-                        this.springTo(s - 118 + 9);
+                            { top: s } = t.getBoundingClientRect(),
+                            n = Math.abs(e - s);
+                        this.springTo(n - 118 + 9);
                     } else this.springTo(0);
                 });
             });
     }
 }
-_(C, 'contextType', u.AccessibilityPreferencesContext), (t.Z = C);
+m(C, 'contextType', d.AccessibilityPreferencesContext), (t.Z = C);

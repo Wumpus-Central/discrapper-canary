@@ -1,174 +1,174 @@
 n.d(t, {
     n: function () {
-        return x;
+        return _;
     }
 }),
     n(47120),
     n(653041);
 var i,
-    r,
-    a = n(200651);
+    s,
+    r = n(200651);
 n(192379);
-var s = n(481060),
+var a = n(481060),
     l = n(706454),
     o = n(74538),
     c = n(937615),
     d = n(734741),
     u = n(474936),
-    g = n(981631),
-    m = n(388032),
-    f = n(808112);
+    m = n(981631),
+    g = n(388032),
+    h = n(808112);
 let p = (e) => {
         let { text: t, badge: n, variant: i } = e;
-        return (0, a.jsxs)(s.Text, {
+        return (0, r.jsxs)(a.Text, {
             color: 'text-normal',
             variant: null != i ? i : 'text-sm/normal',
             children: [t, ' ', n]
         });
     },
-    _ = (e) => {
+    x = (e) => {
         let { text: t, variant: n } = e;
-        return (0, a.jsx)(s.Text, {
+        return (0, r.jsx)(a.Text, {
             color: 'header-primary',
             variant: null != n ? n : 'text-md/semibold',
             children: t
         });
     },
-    h = (e) => {
+    f = (e) => {
         let { includes: t } = e;
         return t
-            ? (0, a.jsxs)(a.Fragment, {
+            ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, a.jsx)(s.CheckmarkLargeIcon, {
+                      (0, r.jsx)(a.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: f.checkmarkIcon,
+                          className: h.checkmarkIcon,
                           'aria-hidden': !0
                       }),
-                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t['tq+6t7']) })
+                      (0, r.jsx)(a.HiddenVisually, { children: g.intl.string(g.t['tq+6t7']) })
                   ]
               })
-            : (0, a.jsxs)(a.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, a.jsx)(s.XSmallIcon, {
+                      (0, r.jsx)(a.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: f.closeIcon,
+                          className: h.closeIcon,
                           'aria-hidden': !0
                       }),
-                      (0, a.jsx)(s.HiddenVisually, { children: m.intl.string(m.t.l4qZrq) })
+                      (0, r.jsx)(a.HiddenVisually, { children: g.intl.string(g.t.l4qZrq) })
                   ]
               });
     };
-((r = i || (i = {}))[(r.PRICE = 0)] = 'PRICE'), (r[(r.EMOJI = 1)] = 'EMOJI'), (r[(r.STICKER = 2)] = 'STICKER'), (r[(r.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (r[(r.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (r[(r.UPLOAD = 5)] = 'UPLOAD'), (r[(r.STREAMING = 6)] = 'STREAMING'), (r[(r.BOOSTS = 7)] = 'BOOSTS'), (r[(r.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (r[(r.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (r[(r.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (r[(r.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (r[(r.BADGE = 12)] = 'BADGE'), (r[(r.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (r[(r.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (r[(r.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (r[(r.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (r[(r.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (r[(r.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (r[(r.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (r[(r.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (r[(r.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (r[(r.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
-let x = (e, t, n, i, r) => {
-    let x = {
+((s = i || (i = {}))[(s.PRICE = 0)] = 'PRICE'), (s[(s.EMOJI = 1)] = 'EMOJI'), (s[(s.STICKER = 2)] = 'STICKER'), (s[(s.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (s[(s.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (s[(s.UPLOAD = 5)] = 'UPLOAD'), (s[(s.STREAMING = 6)] = 'STREAMING'), (s[(s.BOOSTS = 7)] = 'BOOSTS'), (s[(s.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (s[(s.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (s[(s.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (s[(s.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (s[(s.BADGE = 12)] = 'BADGE'), (s[(s.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (s[(s.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (s[(s.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (s[(s.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (s[(s.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (s[(s.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (s[(s.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (s[(s.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (s[(s.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (s[(s.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
+let _ = (e, t, n, i, s) => {
+    let _ = {
             0: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['09yRKy']) }),
-                column1: (0, a.jsx)(a.Fragment, { children: (0, a.jsx)(_, { text: o.ZP.formatPriceString(e, u.rV.MONTH) }) }),
-                column2: (0, a.jsx)(a.Fragment, { children: (0, a.jsx)(_, { text: n ? i : o.ZP.formatPriceString(t, u.rV.MONTH) }) }),
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['09yRKy']) }),
+                column1: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(x, { text: o.ZP.formatPriceString(e, u.rV.MONTH) }) }),
+                column2: (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(x, { text: n ? i : o.ZP.formatPriceString(t, u.rV.MONTH) }) }),
                 withBottomBorder: !0
             },
             1: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.vaDeDQ) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.vaDeDQ) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             2: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.RIRtn5) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.RIRtn5) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             3: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.OuItFh) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.OuItFh) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             4: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['9kRJS0']) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['9kRJS0']) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             5: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.zAn3dH) }),
-                column1: (0, a.jsx)(_, { text: (0, o.v9)(u.p9.TIER_0) }),
-                column2: (0, a.jsx)(_, { text: (0, o.v9)(u.p9.TIER_2) })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.zAn3dH) }),
+                column1: (0, r.jsx)(x, { text: (0, o.v9)(u.p9.TIER_0) }),
+                column2: (0, r.jsx)(x, { text: (0, o.v9)(u.p9.TIER_2) })
             },
             6: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.VwxlMz) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(_, { text: m.intl.string(m.t.XdN6KS) })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.VwxlMz) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(x, { text: g.intl.string(g.t.XdN6KS) })
             },
             7: {
-                label: (0, a.jsx)(p, {
-                    text: m.intl.formatToPlainString(m.t.nyhDp6, {
+                label: (0, r.jsx)(p, {
+                    text: g.intl.formatToPlainString(g.t.nyhDp6, {
                         numBoosts: u.cb,
                         percentageOff: (0, c.T3)(l.default.locale, u.Rr / 100)
                     })
                 }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             8: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.tFbcuL) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.tFbcuL) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             9: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['aR/zTk']) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['aR/zTk']) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             10: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.IzrZHx) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.IzrZHx) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             11: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['HwNg/f']) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['HwNg/f']) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             12: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['y+HHLy']) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['y+HHLy']) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             13: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.qQxxVV) }),
-                column1: (0, a.jsx)(h, { includes: !0 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.qQxxVV) }),
+                column1: (0, r.jsx)(f, { includes: !0 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             14: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.xi0NBA) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 }),
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.xi0NBA) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 }),
                 withBottomBorder: !0
             },
             15: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t.MfsUHh) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t.MfsUHh) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             21: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['A+0H1d']) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['A+0H1d']) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             16: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['il8+nJ']) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 })
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['il8+nJ']) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 })
             },
             17: {
-                label: (0, a.jsx)(p, { text: m.intl.formatToPlainString(m.t['8crdzM'], { maxChars: g.en1 }) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 }),
+                label: (0, r.jsx)(p, { text: g.intl.formatToPlainString(g.t['8crdzM'], { maxChars: m.en1 }) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 }),
                 withBottomBorder: !0
             },
             18: {
-                label: (0, a.jsx)(s.Heading, {
-                    className: f.__invalid_textColor,
+                label: (0, r.jsx)(a.Heading, {
+                    className: h.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Make Discord Yours'
                 }),
@@ -177,8 +177,8 @@ let x = (e, t, n, i, r) => {
                 withBottomBorder: !1
             },
             19: {
-                label: (0, a.jsx)(s.Heading, {
-                    className: f.__invalid_textColor,
+                label: (0, r.jsx)(a.Heading, {
+                    className: h.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Enjoy an Upgraded Discord'
                 }),
@@ -187,8 +187,8 @@ let x = (e, t, n, i, r) => {
                 withBottomBorder: !1
             },
             20: {
-                label: (0, a.jsx)(s.Heading, {
-                    className: f.__invalid_textColor,
+                label: (0, r.jsx)(a.Heading, {
+                    className: h.__invalid_textColor,
                     variant: 'display-sm',
                     children: 'Show Up the Way You Want'
                 }),
@@ -197,13 +197,13 @@ let x = (e, t, n, i, r) => {
                 withBottomBorder: !1
             },
             22: {
-                label: (0, a.jsx)(p, { text: m.intl.string(m.t['93xPy8']) }),
-                column1: (0, a.jsx)(h, { includes: !1 }),
-                column2: (0, a.jsx)(h, { includes: !0 }),
+                label: (0, r.jsx)(p, { text: g.intl.string(g.t['93xPy8']) }),
+                column1: (0, r.jsx)(f, { includes: !1 }),
+                column2: (0, r.jsx)(f, { includes: !0 }),
                 withBottomBorder: !1
             }
         },
-        E = r === u.a$.FP_ONLY,
-        b = [x[0], x[1], x[2], x[3], x[4], x[5], x[6], ...(E ? [] : [x[7]]), x[8], x[9], x[10], x[11], ...(E ? [] : [x[12]]), x[13], x[14], x[15], x[16], x[17]];
-    return (0, d.V)() && b.push(x[22]), b;
+        E = s === u.a$.FP_ONLY,
+        C = [_[0], _[1], _[2], _[3], _[4], _[5], _[6], ...(E ? [] : [_[7]]), _[8], _[9], _[10], _[11], ...(E ? [] : [_[12]]), _[13], _[14], _[15], _[16], _[17]];
+    return (0, d.V)() && C.push(_[22]), C;
 };

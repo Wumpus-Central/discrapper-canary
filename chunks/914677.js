@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(780384),
-    s = n(410030),
+    s = n(192379),
+    r = n(780384),
+    a = n(410030),
     l = n(119269),
     o = n(697303);
 let c = 'url(#gradient)',
@@ -27,7 +27,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    g = (e, t) => {
+    m = (e, t) => {
         switch (t) {
             case l.Qo.NITRO_GEM:
             case l.Qo.AVATAR_DECO:
@@ -39,21 +39,21 @@ let c = 'url(#gradient)',
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: m = 0, progressCircleStrokeSize: f = 2, progressCircleVariation: p, progressCircleStroke: _ } = e,
-        h = 43 + f / 2,
-        x = 2 * Math.PI * h,
-        [E, b] = r.useState(m);
-    r.useEffect(() => {
+    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: p, progressCircleStroke: x } = e,
+        f = 43 + h / 2,
+        _ = 2 * Math.PI * f,
+        [E, C] = s.useState(g);
+    s.useEffect(() => {
         let e = setTimeout(() => {
-            b(t);
+            C(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
-    let C = (0, s.ZP)(),
-        v = (0, a.ap)(C),
-        T = u(p),
-        N = d(p, v),
-        I = null != _ ? _ : g(v, p);
+    let T = (0, a.ZP)(),
+        S = (0, r.ap)(T),
+        b = u(p),
+        I = d(p, S),
+        N = null != x ? x : m(S, p);
     return (0, i.jsxs)('div', {
         className: o.circleContainer,
         children: [
@@ -64,21 +64,21 @@ t.Z = (e) => {
                     (0, i.jsx)('circle', {
                         className: p === l.Qo.NITRO_GEM || p === l.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
                         fill: 'transparent',
-                        strokeWidth: f,
-                        r: ''.concat(h),
+                        strokeWidth: h,
+                        r: ''.concat(f),
                         cx: '50%',
                         cy: '50%',
-                        stroke: T,
-                        strokeOpacity: N
+                        stroke: b,
+                        strokeOpacity: I
                     }),
                     (0, i.jsx)('circle', {
-                        stroke: I,
-                        strokeWidth: f,
+                        stroke: N,
+                        strokeWidth: h,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(x, ' ').concat(x),
+                        strokeDasharray: ''.concat(_, ' ').concat(_),
                         className: c,
-                        style: { strokeDashoffset: (1 - E / 100) * x },
-                        r: ''.concat(h),
+                        style: { strokeDashoffset: (1 - E / 100) * _ },
+                        r: ''.concat(f),
                         cx: '50%',
                         cy: '50%'
                     })

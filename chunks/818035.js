@@ -2,8 +2,8 @@ n(653041), n(47120);
 var i,
     s,
     r,
-    l,
-    a = n(442837),
+    a,
+    l = n(442837),
     o = n(570140),
     c = n(461655);
 let d = [];
@@ -13,7 +13,7 @@ function u(e) {
         i = d.findIndex((e) => e.id === t.id);
     -1 === i ? (d.push(n), d.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (d[i] = n), (d = [...d]);
 }
-class m extends (i = a.ZP.Store) {
+class m extends (i = l.ZP.Store) {
     getPayment(e) {
         return d.find((t) => t.id === e);
     }
@@ -21,15 +21,15 @@ class m extends (i = a.ZP.Store) {
         return d;
     }
 }
-(l = 'PaymentStore'),
+(a = 'PaymentStore'),
     (r = 'displayName') in (s = m)
         ? Object.defineProperty(s, r, {
-              value: l,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[r] = l),
+        : (s[r] = a),
     (t.Z = new m(o.Z, {
         BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
             let { payments: t } = e;

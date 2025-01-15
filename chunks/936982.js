@@ -1,8 +1,8 @@
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(481060),
-    a = n(457330),
+    a = n(481060),
+    l = n(457330),
     o = n(497321),
     c = n(410030),
     d = n(246946),
@@ -11,23 +11,23 @@ t.Z = () => {
     let e = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
         t = (0, c.ZP)();
     return (s.useEffect(() => {
-        a.Z.fetch();
+        l.Z.fetch();
     }, []),
     e)
         ? (0, i.jsx)(o.Z, {})
-        : (0, i.jsx)(l.FormSection, {
-              tag: l.FormTitleTags.H1,
+        : (0, i.jsx)(a.FormSection, {
+              tag: a.FormTitleTags.H1,
               title: u.intl.string(u.t['Ig/XFR']),
-              children: (0, i.jsxs)(l.EmptyState, {
+              children: (0, i.jsxs)(a.EmptyState, {
                   theme: t,
                   children: [
-                      (0, i.jsx)(l.EmptyStateImage, {
+                      (0, i.jsx)(a.EmptyStateImage, {
                           darkSrc: n(703152),
                           lightSrc: n(548617),
                           width: 230,
                           height: 220
                       }),
-                      (0, i.jsx)(l.EmptyStateText, {
+                      (0, i.jsx)(a.EmptyStateText, {
                           note: u.intl.string(u.t.WenGZ2),
                           children: u.intl.string(u.t['aoLS8/'])
                       })

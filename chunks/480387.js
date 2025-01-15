@@ -1,79 +1,79 @@
 n.d(e, {
     HJ: function () {
-        return _;
+        return E;
     },
     Zd: function () {
-        return p;
+        return f;
     },
     yD: function () {
-        return E;
+        return d;
     }
 });
-var l = n(213919),
-    r = n(544891),
-    i = n(570140),
-    a = n(893776),
-    u = n(710845),
-    o = n(314897),
-    s = n(726745),
-    c = n(981631);
-let d = new u.Z('MultiAccountActionCreators');
-function _() {
-    let t = o.default.getId();
-    s.Z.getUsers().forEach(async (e) => {
+var r = n(213919),
+    i = n(544891),
+    l = n(570140),
+    u = n(893776),
+    o = n(710845),
+    a = n(314897),
+    c = n(726745),
+    s = n(981631);
+let _ = new o.Z('MultiAccountActionCreators');
+function E() {
+    let t = a.default.getId();
+    c.Z.getUsers().forEach(async (e) => {
         let n,
-            { id: a } = e,
-            u = l.getToken(a);
-        if (null == u || '' === u) {
-            i.Z.dispatch({
+            { id: u } = e,
+            o = r.getToken(u);
+        if (null == o || '' === o) {
+            l.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
-                userId: a
+                userId: u
             });
             return;
         }
-        i.Z.dispatch({
+        l.Z.dispatch({
             type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST',
-            userId: a
+            userId: u
         });
         try {
-            n = await r.tn.get({
-                url: c.ANM.ME,
-                headers: { authorization: u },
+            n = await i.tn.get({
+                url: s.ANM.ME,
+                headers: { authorization: o },
                 retries: 3,
                 rejectWithError: !1
             });
         } catch (e) {
             let t = (null == e ? void 0 : e.status) === 401 || (null == e ? void 0 : e.status) === 403;
-            i.Z.dispatch({
+            l.Z.dispatch({
                 type: t ? 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE' : 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: u
             });
             return;
         }
-        i.Z.dispatch({
-            type: t === a ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
+        l.Z.dispatch({
+            type: t === u ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
             user: n.body
         }),
-            i.Z.dispatch({
+            l.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
-                userId: a
+                userId: u
             });
     });
 }
-function E(t, e) {
-    d.log('Switching account to '.concat(t), { switchSynchronously: e });
-    let n = l.getToken(t);
+function d(t, e) {
+    _.log('Switching account to '.concat(t), { switchSynchronously: e });
+    let n = r.getToken(t);
     return null == n
-        ? (d.log('Switching accounts failed because there was no token'),
-          i.Z.dispatch({
+        ? (_.log('Switching accounts failed because there was no token'),
+          l.Z.dispatch({
               type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
               userId: t
           }),
           Promise.resolve())
-        : a.Z.switchAccountToken(n, e);
+        : u.Z.switchAccountToken(n, e);
 }
-function p(t) {
-    i.Z.dispatch({
+function f(t) {
+    l.Z.dispatch({
         type: 'MULTI_ACCOUNT_REMOVE_ACCOUNT',
         userId: t
     });

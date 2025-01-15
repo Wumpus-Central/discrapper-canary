@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 }),
     n(47120),
@@ -8,28 +8,28 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(780384),
-    a = n(481060),
+    a = n(780384),
+    l = n(481060),
     o = n(457330),
     c = n(410030),
     d = n(726542),
     u = n(275759),
     m = n(231757),
-    h = n(888496),
-    g = n(706454),
+    g = n(888496),
+    h = n(706454),
     p = n(553795),
     x = n(63063),
-    S = n(981631),
-    T = n(856651),
+    f = n(981631),
+    _ = n(856651),
     E = n(388032),
     C = n(429779);
-function _(e) {
+function T(e) {
     var t;
-    let { account: n, refreshed: l, handleRefresh: o } = e,
+    let { account: n, refreshed: a, handleRefresh: o } = e,
         [c, d] = s.useState(!1),
         m = null !== (t = n.metadata) && void 0 !== t ? t : {},
-        p = (0, r.e7)([g.default], () => g.default.locale),
-        _ = s.useCallback(async () => {
+        p = (0, r.e7)([h.default], () => h.default.locale),
+        T = s.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -37,78 +37,78 @@ function _(e) {
                 d(!1);
             }
         }, [n, o]),
-        f = null;
+        S = null;
     switch (n.type) {
-        case S.ABu.REDDIT:
-            f = (0, h.oP)(m, C.metadataItem);
+        case f.ABu.REDDIT:
+            S = (0, g.oP)(m, C.metadataItem);
             break;
-        case S.ABu.STEAM:
-            f = (0, h.Dq)(m, C.metadataItem);
+        case f.ABu.STEAM:
+            S = (0, g.Dq)(m, C.metadataItem);
             break;
-        case S.ABu.TWITTER:
-            f = (0, h.rJ)(m, C.metadataItem);
+        case f.ABu.TWITTER:
+            S = (0, g.rJ)(m, C.metadataItem);
             break;
-        case S.ABu.EBAY:
-            f = (0, h.ul)(m, C.metadataItem);
+        case f.ABu.EBAY:
+            S = (0, g.ul)(m, C.metadataItem);
             break;
-        case S.ABu.PAYPAL:
-            f = (0, h.li)(m, C.metadataItem);
+        case f.ABu.PAYPAL:
+            S = (0, g.li)(m, C.metadataItem);
             break;
-        case S.ABu.TIKTOK:
-            f = (0, h.hf)(m, C.metadataItem);
+        case f.ABu.TIKTOK:
+            S = (0, g.hf)(m, C.metadataItem);
     }
-    let I = (0, u.FI)(m[T.PC.CREATED_AT], p),
-        N = null,
-        A = E.intl.string(E.t.wzzjk5);
+    let b = (0, u.FI)(m[_.PC.CREATED_AT], p),
+        I = null,
+        N = E.intl.string(E.t.wzzjk5);
     return (
-        (null == f || 0 === f.length) &&
-            null == I &&
-            ((N = (0, i.jsx)(
-                a.Text,
+        (null == S || 0 === S.length) &&
+            null == b &&
+            ((I = (0, i.jsx)(
+                l.Text,
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: E.intl.format(E.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(S.BhN.CONNECTION_DETAILS) })
+                    children: E.intl.format(E.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(f.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
-            (A = E.intl.string(E.t['LVh3//']))),
-        l && (A = E.intl.string(E.t.i4jeWV)),
+            (N = E.intl.string(E.t['LVh3//']))),
+        a && (N = E.intl.string(E.t.i4jeWV)),
         (0, i.jsxs)('div', {
             className: C.metadataContainer,
             children: [
-                N,
-                null == f
+                I,
+                null == S
                     ? void 0
-                    : f.map((e, t) =>
+                    : S.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < f.length - 1 ? (0, i.jsx)('span', { className: C.dot }) : null]
+                              children: [e, t < S.length - 1 ? (0, i.jsx)('span', { className: C.dot }) : null]
                           })
                       ),
-                null != f && f.length > 0 && null != I ? (0, i.jsx)('div', { className: C.dot }) : null,
-                null != I
+                null != S && S.length > 0 && null != b ? (0, i.jsx)('div', { className: C.dot }) : null,
+                null != b
                     ? (0, i.jsx)(
-                          a.Text,
+                          l.Text,
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: E.intl.format(E.t['9rfonp'], { date: I })
+                              children: E.intl.format(E.t['9rfonp'], { date: b })
                           },
                           'member-since'
                       )
                     : null,
                 (0, i.jsx)(
-                    a.Button,
+                    l.Button,
                     {
                         className: C.metadataRefreshButton,
-                        look: a.Button.Looks.OUTLINED,
-                        color: l ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
-                        size: a.Button.Sizes.MIN,
+                        look: l.Button.Looks.OUTLINED,
+                        color: a ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
+                        size: l.Button.Sizes.MIN,
                         submitting: c,
-                        disabled: l,
+                        disabled: a,
                         'aria-label': E.intl.string(E.t.sCkLYG),
-                        onClick: l ? void 0 : _,
-                        children: A
+                        onClick: a ? void 0 : T,
+                        children: N
                     },
                     'refresh-button'
                 )
@@ -116,30 +116,30 @@ function _(e) {
         })
     );
 }
-function f(e) {
+function S(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: r } = e,
-        [u, h] = s.useState(t.visibility),
-        [g, p] = s.useState(t.metadataVisibility),
+        [u, g] = s.useState(t.visibility),
+        [h, p] = s.useState(t.metadataVisibility),
         x = (0, c.ZP)();
     s.useEffect(() => {
-        h(t.visibility), p(t.metadataVisibility);
+        g(t.visibility), p(t.metadataVisibility);
     }, [t]);
-    let S = d.Z.get(t.type),
-        T = !0 === S.hasMetadata;
+    let f = d.Z.get(t.type),
+        _ = !0 === f.hasMetadata;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
                 className: C.activityRow,
                 children: [
                     (0, i.jsx)('img', {
-                        alt: S.name,
+                        alt: f.name,
                         className: C.connectionIcon,
-                        src: (0, l.wj)(x) ? S.icon.darkSVG : S.icon.lightSVG
+                        src: (0, a.wj)(x) ? f.icon.darkSVG : f.icon.lightSVG
                     }),
                     (0, i.jsxs)('div', {
                         className: C.activitySettings,
                         children: [
-                            (0, i.jsxs)(a.FormSwitch, {
+                            (0, i.jsxs)(l.FormSwitch, {
                                 className: C.visibilitySwitch,
                                 hideBorder: !0,
                                 value: 1 === u,
@@ -147,35 +147,35 @@ function f(e) {
                                     let { verified: n } = t,
                                         i = e ? 1 : 0;
                                     if (e && !n) {
-                                        h(i),
+                                        g(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    h(i), o.Z.setVisibility(t.type, t.id, i);
+                                    g(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: S.name
+                                        children: f.name
                                     }),
-                                    T &&
-                                        (0, i.jsx)(_, {
+                                    _ &&
+                                        (0, i.jsx)(T, {
                                             account: t,
                                             refreshed: r.includes(t.id),
                                             handleRefresh: n
                                         })
                                 ]
                             }),
-                            T &&
-                                (0, i.jsx)(a.FormSwitch, {
+                            _ &&
+                                (0, i.jsx)(l.FormSwitch, {
                                     className: C.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
-                                    value: 1 === g,
+                                    value: 1 === h,
                                     onChange: function (e) {
                                         let { verified: n } = t,
                                             i = e ? 1 : 0;
@@ -189,7 +189,7 @@ function f(e) {
                                         }
                                         p(i), o.Z.setMetadataVisibility(t.type, t.id, i);
                                     },
-                                    children: (0, i.jsx)(a.Text, {
+                                    children: (0, i.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
                                         children: E.intl.string(E.t['3l78ws'])
@@ -203,30 +203,30 @@ function f(e) {
         ]
     });
 }
-function I() {
+function b() {
     let e = (0, r.e7)([p.Z], () => p.Z.getAccounts()),
         t = s.useMemo(() => e.filter((e) => d.Z.isSupported(e.type)), [e]),
-        [n, l] = s.useState([]),
+        [n, a] = s.useState([]),
         c = s.useCallback(
             (e) =>
                 o.Z.refresh(e.type, e.id).finally(() => {
-                    l((t) => [...t, e.id]);
+                    a((t) => [...t, e.id]);
                 }),
             []
         );
     return 0 === t.length
         ? null
-        : (0, i.jsxs)(a.FormSection, {
+        : (0, i.jsxs)(l.FormSection, {
               className: C.container,
               children: [
-                  (0, i.jsx)(a.FormTitle, {
-                      tag: a.FormTitleTags.H5,
+                  (0, i.jsx)(l.FormTitle, {
+                      tag: l.FormTitleTags.H5,
                       className: C.title,
                       children: E.intl.string(E.t.aw0GVV)
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          f,
+                          S,
                           {
                               account: e,
                               handleRefresh: c,

@@ -1,7 +1,7 @@
 var i,
     s = n(442837),
     r = n(570140);
-function l(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function l(e, t, n) {
         e
     );
 }
-class a extends (i = s.ZP.Store) {
+class l extends (i = s.ZP.Store) {
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
         (this._entitlements = null), (this._redeemingSkuId = t), (this._redeemVirtualCurrencyError = null), (this._isRedeemingVirtualCurrency = !0);
@@ -45,10 +45,10 @@ class a extends (i = s.ZP.Store) {
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e)
         }),
-            l(this, '_entitlements', null),
-            l(this, '_redeemingSkuId', null),
-            l(this, '_isRedeemingVirtualCurrency', !1),
-            l(this, '_redeemVirtualCurrencyError', null);
+            a(this, '_entitlements', null),
+            a(this, '_redeemingSkuId', null),
+            a(this, '_isRedeemingVirtualCurrency', !1),
+            a(this, '_redeemVirtualCurrencyError', null);
     }
 }
-l(a, 'displayName', 'VirtualCurrencyStore'), (t.Z = new a());
+a(l, 'displayName', 'VirtualCurrencyStore'), (t.Z = new l());

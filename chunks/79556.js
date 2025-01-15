@@ -16,8 +16,8 @@ var l = n(120356),
     d = n(595519),
     h = n(619915),
     p = n(201895),
-    f = n(873696),
-    m = n(66999),
+    m = n(873696),
+    f = n(66999),
     g = n(22082),
     v = n(665906),
     C = n(592125),
@@ -64,9 +64,9 @@ class M extends N.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: m, canReorderChannel: g, isSubscriptionGated: v, isFavoriteSuggestion: C, subtitle: x, forceTopLevelThread: I, embeddedApps: _, resolvedUnreadSetting: Z, withGuildIcon: b, enableActivities: S } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: v, isFavoriteSuggestion: C, subtitle: x, forceTopLevelThread: I, embeddedApps: _, resolvedUnreadSetting: Z, withGuildIcon: b, enableActivities: S } = this.props,
             N = S && null != _ && _.length > 0,
-            E = (0, f.D)(x),
+            E = (0, m.D)(x),
             j = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
@@ -95,7 +95,7 @@ class M extends N.ZP {
                             subtitleColor: null == E ? void 0 : E.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
-                            connectDragPreview: g ? m : null,
+                            connectDragPreview: g ? f : null,
                             isFavoriteSuggestion: C,
                             channelTypeOverride: I ? T.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: Z,
@@ -213,7 +213,7 @@ function R(e) {
             ackMessageId: _.ZP.ackMessageId(t.id),
             isLowImportanceMention: _.ZP.getIsMentionLowImportance(t.id)
         })),
-        f = (0, a.e7)([Z.ZP], () => Z.ZP.resolveUnreadSetting(t)),
+        m = (0, a.e7)([Z.ZP], () => Z.ZP.resolveUnreadSetting(t)),
         x = (0, a.cj)([C.Z, I.Z], () => {
             let e = C.Z.getChannel(t.parent_id);
             return {
@@ -222,7 +222,7 @@ function R(e) {
             };
         }),
         S = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: N, isSubscriptionGated: y } = (0, m.Z)(t.id),
+        { needSubscriptionToAccess: N, isSubscriptionGated: y } = (0, f.Z)(t.id),
         j = (0, a.e7)([Z.ZP], () => Z.ZP.isFavorite(n.id, t.id)),
         A = (0, a.e7)(
             [b.default],
@@ -242,7 +242,7 @@ function R(e) {
             isNewChannel: S,
             muted: o,
             enableActivities: w,
-            resolvedUnreadSetting: f
+            resolvedUnreadSetting: m
         }),
         R = (0, h.ZP)(t);
     return (0, i.jsx)(L, {
@@ -258,7 +258,7 @@ function R(e) {
         canShowThreadPreviewForUser: A,
         channelInfo: M,
         embeddedApps: R,
-        resolvedUnreadSetting: f,
+        resolvedUnreadSetting: m,
         hasChannelInfo: null != M,
         enableActivities: w
     });

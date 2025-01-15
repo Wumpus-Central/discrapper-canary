@@ -1,23 +1,23 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
 var s = n(442837),
     r = n(481060),
-    l = n(579806),
-    a = n(435064),
+    a = n(579806),
+    l = n(435064),
     o = n(39604),
     c = n(442334),
     d = n(388032),
     u = n(277253),
     m = n(38419);
-function h() {
-    let e = (0, s.e7)([a.Z], () => a.Z.getSettings().storageLocation),
+function g() {
+    let e = (0, s.e7)([l.Z], () => l.Z.getSettings().storageLocation),
         t = async () => {
-            let e = await l.Z.fileManager.showOpenDialog({
+            let e = await a.Z.fileManager.showOpenDialog({
                 properties: ['openDirectory', 'createDirectory']
             });
             e.length > 0 && o.T1(e[0]);

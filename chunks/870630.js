@@ -13,11 +13,11 @@ var a = n(200651),
     h = n(811974),
     A = n(212545),
     E = n(184229),
-    N = n(504309);
+    y = n(504309);
 t.Z = function (e) {
     let t = (0, o.ZP)(),
         n = r.useRef(null),
-        [f, y] = r.useState({});
+        [f, N] = r.useState({});
     switch (
         (r.useLayoutEffect(() => {
             let { current: e } = n;
@@ -28,7 +28,7 @@ t.Z = function (e) {
                 l = t.getPropertyValue('font-weight'),
                 s = t.getPropertyValue('color'),
                 i = t.getPropertyValue('font-size');
-            y({
+            N({
                 base: {
                     fontFamily: r,
                     fontWeight: l,
@@ -43,7 +43,7 @@ t.Z = function (e) {
         e.type)
     ) {
         case c.He.PRZELEWY24: {
-            let r = (0, s.wj)(t) ? E : N,
+            let r = (0, s.wj)(t) ? E : y,
                 { onNameChange: o, onEmailChange: c, onP24BankChange: p, p24BankValue: m, billingAddressInfo: h } = e;
             return (0, a.jsxs)('div', {
                 className: d.body,

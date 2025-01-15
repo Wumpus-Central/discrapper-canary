@@ -10,53 +10,53 @@ var i = n(200651);
 n(192379);
 var s = n(525654),
     r = n.n(s),
-    l = n(481060),
-    a = n(579806),
+    a = n(481060),
+    l = n(579806),
     o = n(304761),
     c = n(320161),
     d = n(388032),
     u = n(244270);
 function m() {
-    var e, t, n, s, m, h;
-    let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        p = '359048',
-        x = ((e = '7d9fd4fd061adc8c800cb05ebe1da6fa5c510da4'), e.substring(0, 7)),
-        S = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
-        T = null === a.Z || void 0 === a.Z ? void 0 : null === (t = (n = a.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
-        E = null === a.Z || void 0 === a.Z ? void 0 : null === (s = (m = a.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
-        C = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
-        _ = (function () {
+    var e, t, n, s, m, g;
+    let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        p = '359201',
+        x = ((e = '59e964f6a016f6cb544f1664293fc105b8c16a42'), e.substring(0, 7)),
+        f = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
+        _ = null === l.Z || void 0 === l.Z ? void 0 : null === (t = (n = l.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
+        E = null === l.Z || void 0 === l.Z ? void 0 : null === (s = (m = l.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
+        C = null === (g = o.C.getCurrentBuildOverride().overrides) || void 0 === g ? void 0 : g.discord_web,
+        T = (function () {
             var e;
             let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
-            if (null == t || null == a.Z) return null;
-            let n = a.Z.os.release,
-                [i, s, l] = n.split('.').map((e) => parseInt(e, 10));
-            return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
+            if (null == t || null == l.Z) return null;
+            let n = l.Z.os.release,
+                [i, s, a] = n.split('.').map((e) => parseInt(e, 10));
+            return t.includes('Windows 10') && void 0 !== a && a >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        f = [g, p, '('.concat(x, ')')];
+        S = [h, p, '('.concat(x, ')')];
     return (
-        null != S && (f.push('Host '.concat(S)), null != E && f.push(E.toLowerCase()), null != T && f.push('('.concat(T, ')'))),
-        f.push('Build Override: '.concat(null != C ? C.id : 'N/A')),
-        null != _ && f.push(_),
+        null != f && (S.push('Host '.concat(f)), null != E && S.push(E.toLowerCase()), null != _ && S.push('('.concat(_, ')'))),
+        S.push('Build Override: '.concat(null != C ? C.id : 'N/A')),
+        null != T && S.push(T),
         (0, i.jsx)(c.Z, {
-            copyValue: f.join(' '),
+            copyValue: S.join(' '),
             text: d.intl.string(d.t['9Al4QU']),
             'aria-label': !1,
             children: (e) =>
-                (0, i.jsx)(l.Clickable, {
+                (0, i.jsx)(a.Clickable, {
                     ...e,
                     'aria-label': d.intl.string(d.t['9Al4QU']),
                     className: u.clickable,
                     children: (0, i.jsxs)('div', {
                         className: u.info,
                         children: [
-                            (0, i.jsxs)(l.Text, {
+                            (0, i.jsxs)(a.Text, {
                                 tag: 'span',
                                 className: u.line,
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 children: [
-                                    g,
+                                    h,
                                     ' ',
                                     p,
                                     ' ',
@@ -68,7 +68,7 @@ function m() {
                             }),
                             ' ',
                             null != C &&
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(a.Text, {
                                     tag: 'span',
                                     className: u.line,
                                     variant: 'text-xs/normal',
@@ -78,17 +78,17 @@ function m() {
                                         children: ['Build Override: ', C.id]
                                     })
                                 }),
-                            null != S
+                            null != f
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsxs)(l.Text, {
+                                          (0, i.jsxs)(a.Text, {
                                               tag: 'span',
                                               className: u.line,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: [
                                                   'Host ',
-                                                  S,
+                                                  f,
                                                   ' ',
                                                   null != E
                                                       ? (0, i.jsxs)('span', {
@@ -96,9 +96,9 @@ function m() {
                                                             children: [E.toLowerCase(), ' ']
                                                         })
                                                       : null,
-                                                  null != T
+                                                  null != _
                                                       ? (0, i.jsxs)('span', {
-                                                            children: ['(', T, ')']
+                                                            children: ['(', _, ')']
                                                         })
                                                       : null
                                               ]
@@ -107,13 +107,13 @@ function m() {
                                       ]
                                   })
                                 : null,
-                            null != _
-                                ? (0, i.jsx)(l.Text, {
+                            null != T
+                                ? (0, i.jsx)(a.Text, {
                                       tag: 'span',
                                       className: u.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: _
+                                      children: T
                                   })
                                 : null
                         ]

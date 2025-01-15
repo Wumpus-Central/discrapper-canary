@@ -26,7 +26,7 @@ var r = n(200651),
     T = n(388032),
     _ = n(931933),
     S = n(941469);
-let y = [
+let N = [
         {
             key: 'id',
             cellClassName: _.eventColumn,
@@ -52,7 +52,7 @@ let y = [
             }
         }
     ],
-    N = [
+    y = [
         {
             id: 'details',
             name: 'Details',
@@ -131,9 +131,9 @@ function k() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: N }, []),
+        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
         k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        E = a.useCallback((e) => {
+        I = a.useCallback((e) => {
             h.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -151,7 +151,7 @@ function k() {
                         className: _.triggersEnable,
                         children: (0, r.jsx)(m.Switch, {
                             checked: k,
-                            onChange: E,
+                            onChange: I,
                             className: _.__invalid_toolbarSwitch
                         })
                     }),
@@ -179,7 +179,7 @@ function k() {
                 ]
             }),
             (0, r.jsx)(j.Z, {
-                columns: y,
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

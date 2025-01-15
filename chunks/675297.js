@@ -39,7 +39,7 @@ function C(e) {
                 guildProductListingId: t.id,
                 analyticsLocation: C
             }),
-        k = (0, i.jsx)(p.m, {
+        D = (0, i.jsx)(p.m, {
             product: t,
             guildId: n,
             showEditProduct: L,
@@ -80,7 +80,7 @@ function C(e) {
             shouldShowFullDescriptionButton: I,
             onShowFullDescription: M,
             onTapCard: M,
-            actionMenu: k,
+            actionMenu: D,
             showOpaqueBackground: b,
             hideRoleTag: x,
             lineClamp: N,

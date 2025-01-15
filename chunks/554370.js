@@ -31,14 +31,14 @@ var i = n(200651),
     w = n(808506),
     k = n(237997),
     N = n(451478),
-    L = n(585483),
-    y = n(358085),
+    y = n(585483),
+    L = n(358085),
     S = n(13140),
     T = n(145597),
     A = n(830917),
     O = n(86071),
-    V = n(681603),
-    P = n(915614),
+    P = n(681603),
+    V = n(915614),
     M = n(690336),
     R = n(333031),
     D = n(371651),
@@ -51,7 +51,7 @@ var i = n(200651),
     Y = n(206583),
     H = n(388032),
     K = n(167566);
-let X = !y.isPlatformEmbedded && !1,
+let X = !L.isPlatformEmbedded && !1,
     Q = X
         ? (0, i.jsx)(v.Z, {
               src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4',
@@ -92,7 +92,7 @@ let ee = l.memo(function (e) {
                 ? null
                 : (0, i.jsx)(R.Z, {
                       className: K.closeContainer,
-                      children: (0, i.jsx)(P.Z, {
+                      children: (0, i.jsx)(V.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: c.XLargeIcon
@@ -105,7 +105,7 @@ let ee = l.memo(function (e) {
         return t && n
             ? (0, i.jsx)(R.Z, {
                   className: K.closeContainer,
-                  children: (0, i.jsx)(P.Z, {
+                  children: (0, i.jsx)(V.Z, {
                       onClick: () => d.Z.setInputLocked(!1, (0, T.QF)()),
                       IconComponent: c.LockUnlockedIcon
                   })
@@ -127,7 +127,7 @@ function el() {
 }
 function er(e) {
     let t = k.Z.isLocked((0, T.QF)());
-    'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? L.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && L.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
+    'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? y.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && y.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function eo(e) {
     var t, n;
@@ -136,9 +136,9 @@ function eo(e) {
         {
             locked: v,
             focused: E,
-            incompatibleApp: L,
-            hasValidResolution: y,
-            hasZeroSizeDimension: P,
+            incompatibleApp: y,
+            hasValidResolution: L,
+            hasZeroSizeDimension: V,
             keybind: R
         } = (0, a.cj)([k.Z, N.Z, b.Z], () => {
             let e = N.Z.windowSize((0, A.ZY)(u)),
@@ -250,7 +250,7 @@ function eo(e) {
             value: U,
             children: (0, i.jsx)(c.RedesignIconContextProvider, {
                 children:
-                    P || L
+                    V || y
                         ? null
                         : (0, i.jsx)(c.ThemeProvider, {
                               theme: B.BRd.DARK,
@@ -264,7 +264,7 @@ function eo(e) {
                                               keybind: R,
                                               onClick: en
                                           }),
-                                          y
+                                          L
                                               ? (0, i.jsx)(M.Z, {
                                                     className: o()({
                                                         [K.layoutLocked]: v,
@@ -287,7 +287,7 @@ function eo(e) {
                                                   locked: v,
                                                   focused: E
                                               }),
-                                          (0, i.jsx)(V.Z, {})
+                                          (0, i.jsx)(P.Z, {})
                                       ]
                                   })
                           })

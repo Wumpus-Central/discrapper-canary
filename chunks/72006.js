@@ -3,19 +3,19 @@ n.d(t, {
         return P;
     },
     Hl: function () {
-        return B;
+        return U;
     },
     NJ: function () {
         return O;
     },
     R8: function () {
-        return k;
+        return D;
     },
     Sq: function () {
         return j;
     },
     Wg: function () {
-        return D;
+        return k;
     },
     Zn: function () {
         return b;
@@ -27,7 +27,7 @@ n.d(t, {
         return M;
     },
     iE: function () {
-        return U;
+        return B;
     },
     iK: function () {
         return y;
@@ -200,16 +200,16 @@ function O(e) {
 function M(e) {
     return y(0, e);
 }
-function k(e) {
+function D(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), i.EditorState.forceSelection(e, t);
 }
-function D(e) {
+function k(e) {
     let t = j(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), i.EditorState.forceSelection(e, n);
 }
-function B(e) {
+function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = j(e);
     if (n.length > t) {
@@ -218,7 +218,7 @@ function B(e) {
     }
     return e;
 }
-function U(e) {
+function B(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
     let n = t.getRangeAt(0);

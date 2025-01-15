@@ -11,7 +11,7 @@ var l = n(120356),
     o = n(686546),
     s = n(32986);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: f, onMouseEnter: m, onMouseLeave: g, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: I, tooltipForceOpen: _, tooltipContentClassName: Z } = e,
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': v, 'aria-checked': C, role: x, tooltipColor: I, tooltipForceOpen: _, tooltipContentClassName: Z } = e,
         b =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
@@ -23,16 +23,16 @@ function c(e) {
                   })
                 : d;
     return (0, i.jsx)(a.Tooltip, {
-        tooltipClassName: f,
+        tooltipClassName: m,
         text: t,
         'aria-label': v,
         color: I,
         tooltipContentClassName: Z,
         forceOpen: _,
         children: (e) => {
-            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...f } = e;
+            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...m } = e;
             return (0, i.jsxs)(a.Button, {
-                ...f,
+                ...m,
                 look: a.Button.Looks.BLANK,
                 size: a.Button.Sizes.NONE,
                 disabled: u,
@@ -46,7 +46,7 @@ function c(e) {
                     null != t && t(), null != c && c(e);
                 },
                 onMouseEnter: () => {
-                    null == d || d(), null == m || m();
+                    null == d || d(), null == f || f();
                 },
                 onMouseLeave: () => {
                     null == h || h(), null == g || g();

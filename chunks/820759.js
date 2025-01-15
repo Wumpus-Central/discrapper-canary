@@ -3,18 +3,18 @@ n.d(t, {
         return o;
     },
     E_: function () {
-        return a;
+        return l;
     }
 });
 var i = n(200651),
     s = n(481060),
     r = n(574792);
-let l = () => (0, i.jsx)('hr', { className: r.sectionDivider }),
-    a = (e) => {
+let a = () => (0, i.jsx)('hr', { className: r.sectionDivider }),
+    l = (e) => {
         let { label: t, children: n } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l, {}),
+                (0, i.jsx)(a, {}),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-md/semibold',
                     className: r.labelSpacing,

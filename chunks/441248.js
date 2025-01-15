@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return f;
+        return m;
     }
 });
 var i = n(200651);
@@ -31,7 +31,7 @@ function p(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     var t, n;
     let { isStreaming: l, application: r, game: s } = e;
     let c = ((t = r), (n = s), null != t ? t.name : null != n ? n.name : d.intl.string(d.t['UQMV/P']));

@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return ef;
+        return em;
     },
     j: function () {
         return ep;
@@ -19,8 +19,8 @@ var i,
     d = n(481060),
     h = n(925549),
     p = n(260300),
-    f = n(410575),
-    m = n(607070),
+    m = n(410575),
+    f = n(607070),
     g = n(100527),
     v = n(906732),
     C = n(313201),
@@ -470,7 +470,7 @@ class ed extends (i = r.PureComponent) {
             }),
             es(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
-                    { guild: i, selectedChannel: a, selectedChannelId: o, selectedVoiceChannel: s, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: f, withGuildIcon: m } = this.props;
+                    { guild: i, selectedChannel: a, selectedChannelId: o, selectedVoiceChannel: s, selectedVoiceChannelId: c, guildChannels: u, voiceStates: d, disableManageChannels: h, stageChannelSpeakerVoiceStates: p, optInEnabled: m, withGuildIcon: f } = this.props;
                 if (t === L.wZ) {
                     let e = u.getGuildActionSection(),
                         t = e.getRow(n);
@@ -600,13 +600,13 @@ class ed extends (i = r.PureComponent) {
                                         muted: C.isMuted,
                                         subtitle: C.subtitle,
                                         disableManageChannels: h,
-                                        canBeNewChannel: f && t === u.recentsSectionNumber,
+                                        canBeNewChannel: m && t === u.recentsSectionNumber,
                                         isFavoriteCategory: x,
-                                        withGuildIcon: m
+                                        withGuildIcon: f
                                     }),
                                     C.threadCount > 0
                                         ? (0, l.jsx)(Y.Z, {
-                                              withGuildIcon: m,
+                                              withGuildIcon: f,
                                               channel: I,
                                               sortedThreadIds: C.threadIds,
                                               selectedChannel: null != a && (a.id === C.id || a.parent_id === I.id) ? a : null,
@@ -650,7 +650,7 @@ class ed extends (i = r.PureComponent) {
                                 disableManageChannels: h,
                                 showTutorial: C.isFirstVoiceChannel,
                                 isFavoriteCategory: x,
-                                withGuildIcon: m
+                                withGuildIcon: f
                             },
                             S
                         );
@@ -732,7 +732,7 @@ class ed extends (i = r.PureComponent) {
 es(ed, 'contextType', s.qB);
 let eh = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
-        a = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+        a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         { analyticsLocations: o } = (0, v.ZP)(g.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([P.Z], () => P.Z.getChannel(n)),
         h = (0, u.e7)([P.Z], () => P.Z.getChannel(i)),
@@ -789,7 +789,7 @@ let eh = (e) => {
         T = (0, x.Q3)('NavigableChannels');
     return (0, l.jsx)(v.Gt, {
         value: o,
-        children: (0, l.jsx)(f.Z, {
+        children: (0, l.jsx)(m.Z, {
             section: el.jXE.GUILD_CHANNEL_LIST,
             children: (0, l.jsx)(s.bG, {
                 navigator: S,
@@ -820,7 +820,7 @@ function ep(e) {
         density: i
     });
 }
-function ef(e) {
+function em(e) {
     let t = (0, G.Z)(e.guild),
         n = (0, u.cj)([R.Z], () => R.Z.getGuild(e.guildId, { guildActionRows: t })),
         i = (0, x.Q3)('GuildChannelList'),

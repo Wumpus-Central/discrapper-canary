@@ -7,14 +7,14 @@ var i = n(200651);
 n(192379);
 var s = n(704215),
     r = n(231757),
-    l = n(63063),
-    a = n(249881),
+    a = n(63063),
+    l = n(249881),
     o = n(981631),
     c = n(388032),
     d = n(359734);
 let u = () => {
-    let e = l.Z.getArticleURL(o.BhN.PS_CONNECTION);
-    return (0, i.jsx)(a.t, {
+    let e = a.Z.getArticleURL(o.BhN.PS_CONNECTION);
+    return (0, i.jsx)(l.t, {
         title: c.intl.string(c.t.v20wws),
         body: c.intl.format(c.t.lTZBio, { help_article: e }),
         img: (0, i.jsx)('img', {

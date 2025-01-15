@@ -1,31 +1,31 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
     l = n(489948),
     o = n(748780),
     c = n(91192),
     d = n(906732),
     u = n(171368),
-    g = n(981631),
-    m = n(197831);
+    m = n(981631),
+    g = n(197831);
 t.Z = (e) => {
-    let { userId: t, children: n, isLast: a, className: f } = e,
-        [p, _] = r.useState(!1),
-        { analyticsLocations: h } = (0, d.ZP)(),
-        x = r.useCallback(() => {
+    let { userId: t, children: n, isLast: r, className: h } = e,
+        [p, x] = s.useState(!1),
+        { analyticsLocations: f } = (0, d.ZP)(),
+        _ = s.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
-                sourceAnalyticsLocations: h,
-                analyticsLocation: { section: g.jXE.FAMILY_CENTER }
+                sourceAnalyticsLocations: f,
+                analyticsLocation: { section: m.jXE.FAMILY_CENTER }
             });
-        }, [t, h]),
+        }, [t, f]),
         E = () => {
-            _(!0);
+            x(!0);
         },
-        b = () => {
-            _(!1);
+        C = () => {
+            x(!1);
         };
     return (0, i.jsx)(c.mh, {
         id: t,
@@ -37,13 +37,13 @@ t.Z = (e) => {
                 },
                 children: (0, i.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: s()(m.rowItem, f, {
-                        [m.last]: a,
-                        [m.active]: p
+                    className: a()(g.rowItem, h, {
+                        [g.last]: r,
+                        [g.active]: p
                     }),
                     onMouseEnter: E,
-                    onMouseLeave: b,
-                    onClick: x,
+                    onMouseLeave: C,
+                    onClick: _,
                     ...e,
                     children: n(p)
                 })

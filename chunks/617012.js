@@ -9,8 +9,8 @@ var i = n(200651),
     a = n.n(r),
     o = n(481060),
     s = n(388032),
-    c = n(301882);
-let d = [!1, !0];
+    d = n(301882);
+let c = [!1, !0];
 function u(e) {
     let { isDisabled: t, currentValue: n, onChange: r } = e,
         s = (0, o.useRadioGroup)({
@@ -24,9 +24,9 @@ function u(e) {
             [t, n, r]
         );
     return (0, i.jsx)('div', {
-        className: a()(c.group, { [c.disabled]: t }),
+        className: a()(d.group, { [d.disabled]: t }),
         ...s,
-        children: d.map((e) =>
+        children: c.map((e) =>
             (0, i.jsx)(
                 m,
                 {
@@ -41,18 +41,18 @@ function u(e) {
 }
 function m(e) {
     let { isSelected: t, itemValue: n, onClick: l } = e,
-        r = n ? c.allow : c.deny,
-        d = n ? o.CheckmarkLargeIcon : o.XSmallIcon,
+        r = n ? d.allow : d.deny,
+        c = n ? o.CheckmarkLargeIcon : o.XSmallIcon,
         u = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t['6639Oz']),
         m = (0, o.useRadioItem)({
             isSelected: t,
             label: u
         });
     return (0, i.jsx)(o.Clickable, {
-        className: a()(c.item, r, { [c.selected]: t }),
+        className: a()(d.item, r, { [d.selected]: t }),
         onClick: l,
         ...m,
-        children: (0, i.jsx)(d, {
+        children: (0, i.jsx)(c, {
             size: 'xs',
             color: 'currentColor'
         })

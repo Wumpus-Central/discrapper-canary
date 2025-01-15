@@ -20,7 +20,7 @@ let u = (0, s.Un)({
         name: 'PopoutWindowStageChannelCall'
     }),
     m = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('33053'), n.e('75714')]).then(n.bind(n, 945778)),
+        createPromise: () => n.e('92006').then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),

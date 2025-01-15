@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(98493),
     h = n(703656),
     p = n(496675),
-    f = n(785195),
-    m = n(434479),
+    m = n(785195),
+    f = n(434479),
     g = n(981631),
     v = n(176505),
     C = n(388032);
@@ -33,10 +33,10 @@ function x(e) {
                     limit: d.p
                 });
         }, [x, t.id]),
-        (0, i.jsx)(m.m, {
+        (0, i.jsx)(f.m, {
             id: 'application-review-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(m.Z, {
                     className: e,
                     width: 24,
                     height: 24

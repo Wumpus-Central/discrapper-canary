@@ -15,27 +15,27 @@ var a = n(200651),
     p = n(388032);
 function m(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: m } = e,
-        { currencies: h, paymentError: A, purchaseError: E, purchasePreviewError: N, setSelectedPlanNotification: f } = (0, c.usePaymentContext)(),
-        y = null;
-    null != N ? (y = N) : null != A && null == (0, u.ly)(A) ? (y = A) : null != E ? (y = E) : null != t && (y = t);
-    let _ = h.length > 1,
-        P = null != y ? y.message : '';
-    if (null != y && y instanceof s.HF && (y.code === i.SM.CARD_DECLINED && _ && (P += ' '.concat(p.intl.string(p.t.iWvwQU))), y.code === i.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (P = p.intl.string(p.t.ypuSd3)), y.code === d.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (P = p.intl.string(p.t.mXMmWF)), y.code === i.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (P = p.intl.string(p.t.mC1Fj4)), y.code === i.SM.INVALID_BILLING_ADDRESS)) {
+        { currencies: h, paymentError: A, purchaseError: E, purchasePreviewError: y, setSelectedPlanNotification: f } = (0, c.usePaymentContext)(),
+        N = null;
+    null != y ? (N = y) : null != A && null == (0, u.ly)(A) ? (N = A) : null != E ? (N = E) : null != t && (N = t);
+    let P = h.length > 1,
+        _ = null != N ? N.message : '';
+    if (null != N && N instanceof s.HF && (N.code === i.SM.CARD_DECLINED && P && (_ += ' '.concat(p.intl.string(p.t.iWvwQU))), N.code === i.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (_ = p.intl.string(p.t.ypuSd3)), N.code === d.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (_ = p.intl.string(p.t.mXMmWF)), N.code === i.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (_ = p.intl.string(p.t.mC1Fj4)), N.code === i.SM.INVALID_BILLING_ADDRESS)) {
         let e = p.intl.format(p.t.BPDKoK, { helpdeskArticle: o.Z.getArticleURL(d.BhN.BILLING).concat(d.Bjg.INVALID_BILLING_ADDRESS) });
-        P = (0, a.jsxs)(a.Fragment, {
+        _ = (0, a.jsxs)(a.Fragment, {
             children: [p.intl.string(p.t['yVIm/P']), ' ', e]
         });
     }
     return (r.useEffect(() => {
-        null != y && f(null);
-    }, [y, f]),
-    null == y)
+        null != N && f(null);
+    }, [N, f]),
+    null == N)
         ? null
         : (0, a.jsx)('div', {
               className: m,
               children: (0, a.jsx)(l.FormErrorBlock, {
                   ref: n,
-                  children: P
+                  children: _
               })
           });
 }

@@ -1,4 +1,4 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return h;
     }
@@ -7,57 +7,57 @@ n.d(t, {
 var s = n(200651),
     r = n(192379),
     i = n(120356),
-    o = n.n(i),
-    l = n(476183),
-    a = n(481060),
+    l = n.n(i),
+    a = n(476183),
+    o = n(481060),
     c = n(144114),
     u = n(317175),
     d = n(149938);
-function h(e) {
-    let { show: t, alpha2: n, countryCode: i } = e,
+function h(t) {
+    let { show: e, alpha2: n, countryCode: i } = t,
         h = r.useRef(null),
         [p, m] = r.useState(0),
-        [f, g] = r.useState(!1);
+        [x, f] = r.useState(!1);
     r.useEffect(() => {
-        function e() {
-            var e, n;
-            m(t && null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : 0);
+        function t() {
+            var t, n;
+            m(e && null !== (n = null === (t = h.current) || void 0 === t ? void 0 : t.getBoundingClientRect().width) && void 0 !== n ? n : 0);
         }
-        return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-    }, [t, n, i]);
-    let x = (0, a.useSpring)({
+        return t(), window.addEventListener('resize', t), () => window.removeEventListener('resize', t);
+    }, [e, n, i]);
+    let g = (0, o.useSpring)({
             width: ''.concat(p, 'px'),
             onStart: () => {
-                g(!0);
+                f(!0);
             },
             onRest: () => {
-                g(!1);
+                f(!1);
             }
         }),
-        C = (e) => {
-            c.Z.setCountryCode(e);
+        C = (t) => {
+            c.Z.setCountryCode(t);
         };
-    return (0, s.jsx)(a.Popout, {
+    return (0, s.jsx)(o.Popout, {
         position: 'top',
-        renderPopout: (e) =>
+        renderPopout: (t) =>
             (0, s.jsx)(u.Z, {
                 className: d.popout,
-                onClick: (t) => {
-                    C(t), e.closePopout();
+                onClick: (e) => {
+                    C(e), t.closePopout();
                 }
             }),
-        children: (e) =>
+        children: (t) =>
             (0, s.jsx)('div', {
-                className: o()(d.outerContainer, { [d.hidden]: !(t || f) }),
-                children: (0, s.jsx)(l.animated.div, {
+                className: l()(d.outerContainer, { [d.hidden]: !(e || x) }),
+                children: (0, s.jsx)(a.animated.div, {
                     className: d.container,
-                    style: x,
+                    style: g,
                     children: (0, s.jsxs)('div', {
                         className: d.innerContainer,
                         ref: h,
                         children: [
-                            (0, s.jsxs)(a.Clickable, {
-                                ...e,
+                            (0, s.jsxs)(o.Clickable, {
+                                ...t,
                                 className: d.countryCode,
                                 children: [n, ' ', i]
                             }),

@@ -1,25 +1,25 @@
-t(47120);
-var i = t(200651),
-    a = t(192379),
-    n = t(481060);
-s.Z = function (e) {
-    let { assetKey: s, initialValue: t, onMessageChange: l, title: r } = e,
-        [o, d] = a.useState('');
+n(47120);
+var o = n(200651),
+    r = n(192379),
+    s = n(481060);
+t.Z = function (e) {
+    let { assetKey: t, initialValue: n, onMessageChange: a, title: i } = e,
+        [l, c] = r.useState('');
     return (
-        a.useEffect(() => {
-            d(null != t ? t : '');
-        }, [t]),
-        (0, i.jsxs)(n.FormItem, {
+        r.useEffect(() => {
+            c(null != n ? n : '');
+        }, [n]),
+        (0, o.jsxs)(s.FormItem, {
             children: [
-                (0, i.jsx)(n.FormTitle, {
-                    tag: n.FormTitleTags.H5,
-                    children: r
+                (0, o.jsx)(s.FormTitle, {
+                    tag: s.FormTitleTags.H5,
+                    children: i
                 }),
-                (0, i.jsx)(n.FormText, {
-                    children: (0, i.jsx)(n.TextInput, {
-                        value: o,
+                (0, o.jsx)(s.FormText, {
+                    children: (0, o.jsx)(s.TextInput, {
+                        value: l,
                         onChange: function (e) {
-                            d(e), l(s, e);
+                            c(e), a(t, e);
                         }
                     })
                 })

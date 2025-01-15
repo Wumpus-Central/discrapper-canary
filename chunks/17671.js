@@ -109,7 +109,7 @@ function S(n) {
                                         size: c.Button.Sizes.MIN,
                                         onClick: () => {
                                             (0, c.openModalLazy)(async () => {
-                                                let { default: n } = await Promise.all([t.e('58023'), t.e('14582')]).then(t.bind(t, 779250));
+                                                let { default: n } = await Promise.all([t.e('58023'), t.e('54444')]).then(t.bind(t, 779250));
                                                 return (e) =>
                                                     (0, i.jsx)(n, {
                                                         ...e,

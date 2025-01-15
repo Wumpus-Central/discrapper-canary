@@ -1,10 +1,10 @@
-s.d(t, {
+a.d(t, {
     L: function () {
-        return n;
+        return s;
     }
 });
-var a = s(330711);
-let n = (e) => {
-    let t = a.Z.getLocale().toLowerCase();
+var n = a(330711);
+let s = (e) => {
+    let t = n.Z.getLocale().toLowerCase();
     return t in e ? e[t] : e.default;
 };

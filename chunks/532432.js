@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
 var s = n(120356),
     r = n.n(s),
-    l = n(481060),
-    a = n(654904),
+    a = n(481060),
+    l = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
@@ -19,30 +19,30 @@ let m = [
         extensions: ['gif']
     }
 ];
-function h(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: p, className: x, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: E, withHighlight: C = !1 } = e,
-        _ = C ? l.ShinyButton : l.Button;
+function g(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: _ = !1, forcedDivider: E, withHighlight: C = !1 } = e,
+        T = C ? a.ShinyButton : a.Button;
     return (0, i.jsx)(o.Z, {
         className: x,
-        title: h,
+        title: g,
         errors: n,
-        disabled: S,
+        disabled: f,
         forcedDivider: E,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(_, {
+                (0, i.jsx)(T, {
                     className: r()({ [u.buttonHighlighted]: C }),
-                    size: l.Button.Sizes.SMALL,
-                    onClick: () => (0, a.$r)(c.pC.AVATAR, p, T, T ? m : void 0),
-                    children: null != g ? g : d.intl.string(d.t['4OynCA'])
+                    size: a.Button.Sizes.SMALL,
+                    onClick: () => (0, l.$r)(c.pC.AVATAR, p, _, _ ? m : void 0),
+                    children: null != h ? h : d.intl.string(d.t['4OynCA'])
                 }),
                 t &&
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(a.Button, {
                         className: u.removeButton,
-                        color: l.Button.Colors.PRIMARY,
-                        look: l.Button.Looks.LINK,
-                        size: l.Button.Sizes.SMALL,
+                        color: a.Button.Colors.PRIMARY,
+                        look: a.Button.Looks.LINK,
+                        size: a.Button.Sizes.SMALL,
                         onClick: () => s(null),
                         children: null != p ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
                     })

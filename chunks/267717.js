@@ -1,25 +1,25 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return g;
+            return h;
         },
         openPremiumTryItOutProfileUpsell: function () {
-            return h;
+            return g;
         }
     });
 var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(490220),
-    l = n(594174),
-    a = n(98278),
+    a = n(594174),
+    l = n(98278),
     o = n(790527),
     c = n(474936),
     d = n(981631),
     u = n(388032),
     m = n(761346);
-function h(e) {
-    let t = l.default.getCurrentUser();
+function g(e) {
+    let t = a.default.getCurrentUser();
     if (null != t)
         (0, s.openModalLazy)(async () => {
             let { default: s } = await Promise.resolve().then(n.bind(n, 267717));
@@ -36,7 +36,7 @@ function h(e) {
                 });
         });
 }
-function g(e) {
+function h(e) {
     let { user: t, onClose: n, ...s } = e;
     return (0, i.jsx)(o.Z, {
         modalClassName: m.modal,
@@ -46,7 +46,7 @@ function g(e) {
         body: u.intl.string(u.t.KckEj4),
         glowUp: u.intl.string(u.t.reVc0N),
         onSecondaryClick: () => {
-            (0, a.$)(n);
+            (0, l.$)(n);
         },
         secondaryCTA: u.intl.string(u.t.PcTCBw),
         onClose: n,

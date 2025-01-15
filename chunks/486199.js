@@ -10,13 +10,13 @@ var l = n(120356),
     a = n(481060),
     o = n(600164),
     s = n(528144),
-    c = n(388032),
-    d = n(747536);
+    d = n(388032),
+    c = n(747536);
 function u(e) {
     let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: p, details: g, detailsClassName: x, isHeader: f, isPremium: b } = e;
     return (0, i.jsxs)(o.Z, {
         justify: o.Z.Justify.CENTER,
-        className: d.wrapper,
+        className: c.wrapper,
         children: [
             null != l || null != u
                 ? (0, i.jsx)(o.Z.Child, {
@@ -27,7 +27,7 @@ function u(e) {
                               return (0, i.jsx)('img', {
                                   alt: '',
                                   src: t,
-                                  className: r()(d.iconWrapper, l)
+                                  className: r()(c.iconWrapper, l)
                               });
                           let s = null;
                           return (
@@ -37,17 +37,17 @@ function u(e) {
                                           ? (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: e,
-                                                className: r()(d.icon, l)
+                                                className: r()(c.icon, l)
                                             })
                                           : (0, i.jsx)(e, {
-                                                className: r()(d.icon, l),
+                                                className: r()(c.icon, l),
                                                 color: 'currentColor'
                                             })),
                               (0, i.jsx)(o.Z, {
                                   align: o.Z.Align.CENTER,
                                   justify: o.Z.Justify.CENTER,
                                   style: { backgroundColor: n },
-                                  className: r()(d.iconWrapper, a),
+                                  className: r()(c.iconWrapper, a),
                                   children: s
                               })
                           );
@@ -64,13 +64,13 @@ function u(e) {
                                   return (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: r()(d.detailsWrapper, m ? d.headerDetailsWrapper : null),
+                                          className: r()(c.detailsWrapper, m ? c.headerDetailsWrapper : null),
                                           children: [
                                               null != n
                                                   ? (0, i.jsx)(n, {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: d.detailsIcon
+                                                        className: c.detailsIcon
                                                     })
                                                   : null,
                                               (0, i.jsx)(a.Text, {
@@ -89,18 +89,18 @@ function u(e) {
                     children: [
                         (0, i.jsxs)(s.Z, {
                             size: m ? s.Z.Sizes.SIZE_24 : s.Z.Sizes.SIZE_16,
-                            className: m ? d.header : d.secondaryHeader,
+                            className: m ? c.header : c.secondaryHeader,
                             children: [
                                 t,
                                 h &&
                                     (0, i.jsx)(a.Tooltip, {
-                                        text: c.intl.string(c.t.VFuFur),
+                                        text: d.intl.string(d.t.VFuFur),
                                         children: (e) =>
                                             (0, i.jsx)(a.TicketIcon, {
                                                 size: 'xs',
                                                 color: 'currentColor',
                                                 ...e,
-                                                className: d.premiumIcon
+                                                className: c.premiumIcon
                                             })
                                     })
                             ]

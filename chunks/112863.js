@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(37234),
-    l = n(703656),
-    a = n(981631),
+    a = n(703656),
+    l = n(981631),
     o = n(388032),
     c = n(770497),
     d = n(286359);
@@ -38,7 +38,7 @@ function u() {
             (0, i.jsx)(s.Button, {
                 color: s.Button.Colors.PRIMARY,
                 onClick: () => {
-                    (0, l.uL)(a.Z5c.GUILD_DISCOVERY), (0, r.xf)();
+                    (0, a.uL)(l.Z5c.GUILD_DISCOVERY), (0, r.xf)();
                 },
                 size: s.Button.Sizes.LARGE,
                 children: o.intl.string(o.t.JFlifn)

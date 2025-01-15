@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(430824),
     h = n(823379),
     p = n(179809),
-    f = n(652376),
-    m = n(981631);
+    m = n(652376),
+    f = n(981631);
 t.Z = l.memo(function (e) {
     let { folderNode: t, ...g } = e,
         { id: v, name: C, color: x, children: I } = t,
@@ -26,12 +26,12 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * m.dYL,
+                n = 2 * f.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        N = (0, f.Z)(t),
+        N = (0, m.Z)(t),
         {
             mentionCount: E,
             isMentionLowImportance: y,

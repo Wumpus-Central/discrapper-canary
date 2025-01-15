@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = n(200651),
@@ -9,7 +9,7 @@ var i = n(200651),
     a = n.n(r),
     o = n(481060),
     s = n(172);
-function c(e) {
+function d(e) {
     let { children: t, icon: n, title: r } = e;
     return (0, i.jsxs)('header', {
         className: s.header,

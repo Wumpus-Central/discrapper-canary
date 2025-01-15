@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return U;
     }
 }),
     n(47120);
@@ -37,14 +37,14 @@ var i = n(200651),
     y = n(981631),
     O = n(959517),
     M = n(388032),
-    k = n(352447),
-    D = n(527455);
-function B(e) {
+    D = n(352447),
+    k = n(527455);
+function U(e) {
     var t, n, l;
-    let { embedUrl: o, message: B, channel: U } = e,
-        w = (0, L.J)(o, B),
-        { setPopout: F } = (0, N.Z)(B.id, O.d$),
-        G = (0, x.qo)(B, U, F, !0),
+    let { embedUrl: o, message: U, channel: B } = e,
+        w = (0, L.J)(o, U),
+        { setPopout: F } = (0, N.Z)(U.id, O.d$),
+        G = (0, x.qo)(U, B, F, !0),
         V = S.QK.useSetting(),
         H = (0, Z.n)(),
         [z, W] = r.useState(!1),
@@ -76,21 +76,21 @@ function B(e) {
             null != w &&
                 ((0, p.yw)(y.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: w.threadId,
-                    channel_id: U.id,
+                    channel_id: B.id,
                     can_access: w.canAccess,
                     is_member: Q
                 }),
                 w.canAccess ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.threadId, w.messageId)) : Q ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.parentChannelId)) : await R.Ub(w.guildId, {}, { channelId: w.parentChannelId }));
-        }, [w, U, Q]),
+        }, [w, B, Q]),
         eo = r.useCallback(
             () => (
                 s()((null == w ? void 0 : w.authorId) != null, 'Author Id cannot be null when loading user profile'),
                 (0, v.Z)(w.authorId, w.avatarUrl, {
                     guildId: w.guildId,
-                    channelId: U.id
+                    channelId: B.id
                 })
             ),
-            [w, U]
+            [w, B]
         );
     if (null == w) return null;
     let es = (e, t) => (
@@ -99,8 +99,8 @@ function B(e) {
                 ...e,
                 userId: w.authorId,
                 guildId: w.guildId,
-                channelId: U.id,
-                messageId: B.id,
+                channelId: B.id,
+                messageId: U.id,
                 roleId: ee,
                 newAnalyticsLocations: t
             })
@@ -117,19 +117,19 @@ function B(e) {
         em = w.coverImage,
         eh = null != em && (0, I.d$)(em);
     return (0, i.jsxs)('div', {
-        className: k.postPreviewContainer,
+        className: D.postPreviewContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: k.thumbnailContainer,
+                className: D.thumbnailContainer,
                 onMouseEnter: er,
                 onMouseLeave: el,
                 children: [
                     !K &&
                         (!0 === w.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
-                                  src: D,
+                                  src: k,
                                   alt: M.intl.string(M.t.rIbh8P),
-                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
+                                  className: a()(D.thumbnail, { [D.spoiler]: w.shouldSpoiler }),
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })
@@ -138,8 +138,8 @@ function B(e) {
                                   backgroundSrc: ''.concat(em, '?format=png'),
                                   alt: M.intl.string(M.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
-                                  imageChildClassName: k.thumbnailImage,
+                                  className: a()(D.thumbnail, { [D.spoiler]: w.shouldSpoiler }),
+                                  imageChildClassName: D.thumbnailImage,
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })),
@@ -147,9 +147,9 @@ function B(e) {
                         (0, i.jsx)(m.Clickable, {
                             onClick: ea,
                             children: (0, i.jsx)('div', {
-                                className: k.thumbnailOverlay,
+                                className: D.thumbnailOverlay,
                                 children: (0, i.jsxs)('div', {
-                                    className: k.thumbnailOverlayCta,
+                                    className: D.thumbnailOverlayCta,
                                     children: [
                                         (0, i.jsx)(P.Z, { color: d.Z.WHITE }),
                                         (0, i.jsx)(m.Text, {
@@ -164,27 +164,27 @@ function B(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: k.descriptionContainer,
+                className: D.descriptionContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: k.descriptionHeader,
+                        className: D.descriptionHeader,
                         children: [
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-normal',
-                                className: k.descriptionHeaderText,
+                                className: D.descriptionHeaderText,
                                 children: w.title
                             }),
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: a()(k.descriptionHeaderText, k.descriptionSubtitle),
+                                className: a()(D.descriptionHeaderText, D.descriptionSubtitle),
                                 children: w.subtitle
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: k.descriptionFooter,
+                        className: D.descriptionFooter,
                         children: [
                             null != ed &&
                                 (0, i.jsx)(m.Popout, {
@@ -206,20 +206,20 @@ function B(e) {
                                         })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: k.descriptionFooterContainer,
+                                className: D.descriptionFooterContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: k.descriptionFooterChannelName,
+                                        className: D.descriptionFooterChannelName,
                                         children: [
                                             null != w.channelName &&
                                                 (0, i.jsx)(m.ImageSparkleIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: k.mediaChannelIcon
+                                                    className: D.mediaChannelIcon
                                                 }),
                                             (0, i.jsx)(m.Clickable, {
                                                 onClick: ea,
-                                                className: k.channelName,
+                                                className: D.channelName,
                                                 children: (0, i.jsx)(m.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
@@ -232,7 +232,7 @@ function B(e) {
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
-                                            className: k.descriptionFooterAuthorContainer,
+                                            className: D.descriptionFooterAuthorContainer,
                                             children: M.intl.format(M.t.voIDKS, {
                                                 authorName: w.authorName,
                                                 authorNameHook: () =>
@@ -247,7 +247,7 @@ function B(e) {
                                                                     ...e,
                                                                     name: w.authorName,
                                                                     color: $,
-                                                                    className: k.authorName
+                                                                    className: D.authorName
                                                                 })
                                                         },
                                                         (0, c.Z)()
@@ -269,7 +269,7 @@ function B(e) {
                                 : (0, i.jsx)(m.ShinyButton, {
                                       pauseAnimation: X,
                                       onClick: ea,
-                                      className: a()(k.__invalid_ctaButtonContent, k.subscribeButton),
+                                      className: a()(D.__invalid_ctaButtonContent, D.subscribeButton),
                                       color: m.Button.Colors.CUSTOM,
                                       children: (0, i.jsx)(m.Text, {
                                           variant: 'text-sm/medium',

@@ -1,4 +1,4 @@
-t.d(n, {
+t.d(e, {
     g: function () {
         return p;
     }
@@ -16,36 +16,36 @@ var l = t(120356),
     g = t(981631),
     I = t(388032),
     f = t(385982);
-let p = (e) => {
-    let { guild: n } = e,
-        l = n.id,
+let p = (n) => {
+    let { guild: e } = n,
+        l = e.id,
         p = async () => {
-            let e = c.Z.isLurking(l);
+            let n = c.Z.isLurking(l);
             await d.Z.leaveGuild(l),
-                e
+                n
                     ? (0, s.uL)(g.Z5c.GUILD_DISCOVERY)
                     : !(0, u.un)(r.z.GUILD_LEAVE_FEEDBACK) &&
                       (0, o.openModalLazy)(async () => {
-                          let { default: e } = await t.e('74920').then(t.bind(t, 131102));
+                          let { default: n } = await t.e('74920').then(t.bind(t, 131102));
                           return (t) =>
-                              (0, i.jsx)(e, {
+                              (0, i.jsx)(n, {
                                   ...t,
                                   guildId: l,
-                                  guildName: n.name
+                                  guildName: e.name
                               });
                       });
         };
     return (0, i.jsx)(o.ConfirmModal, {
         className: a()(f.__invalid_confirmModal),
         bodyClassName: a()(f.__invalid_confirmModalBody),
-        header: I.intl.formatToPlainString(I.t['1GX6Pz'], { name: n.name }),
-        confirmText: n.hasFeature(g.oNc.HUB) ? I.intl.string(I.t.Dv8gFR) : I.intl.string(I.t.J2TBi4),
+        header: I.intl.formatToPlainString(I.t['1GX6Pz'], { name: e.name }),
+        confirmText: e.hasFeature(g.oNc.HUB) ? I.intl.string(I.t.Dv8gFR) : I.intl.string(I.t.J2TBi4),
         cancelText: I.intl.string(I.t['ETE/oK']),
         onConfirm: p,
-        ...e,
+        ...n,
         children: (0, i.jsx)(o.Text, {
             variant: 'text-md/normal',
-            children: n.hasFeature(g.oNc.HUB) ? I.intl.format(I.t.ZHTXVF, { name: n.name }) : I.intl.format(I.t.ZEXC0t, { name: n.name })
+            children: e.hasFeature(g.oNc.HUB) ? I.intl.format(I.t.ZHTXVF, { name: e.name }) : I.intl.format(I.t.ZEXC0t, { name: e.name })
         })
     });
 };

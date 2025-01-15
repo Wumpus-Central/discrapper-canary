@@ -1,46 +1,46 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(46973),
     c = n(846519),
     d = n(692547),
     u = n(481060),
     m = n(846027),
-    h = n(313201),
-    g = n(131951),
+    g = n(313201),
+    h = n(131951),
     p = n(65154),
     x = n(388032),
-    S = n(897237),
-    T = n(587987),
+    f = n(897237),
+    _ = n(587987),
     E = n(652849),
     C = n(232186);
-let _ = (0, h.hQ)();
-function f() {
+let T = (0, g.hQ)();
+function S() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: S, autoThreshold: b } = (0, l.cj)([h.Z], () => h.Z.getModeOptions()),
         {
-            inputMode: N,
-            automaticVADSupported: A,
-            isEnabled: b
-        } = (0, a.cj)([g.Z], () => ({
-            inputMode: g.Z.getMode(),
-            automaticVADSupported: g.Z.supports(p.AN.AUTOMATIC_VAD),
-            isEnabled: g.Z.isEnabled()
+            inputMode: I,
+            automaticVADSupported: N,
+            isEnabled: v
+        } = (0, l.cj)([h.Z], () => ({
+            inputMode: h.Z.getMode(),
+            automaticVADSupported: h.Z.supports(p.AN.AUTOMATIC_VAD),
+            isEnabled: h.Z.isEnabled()
         }));
-    function v(e, n) {
+    function A(e, n) {
         t(e), r((n & p.Dg.VOICE) === p.Dg.VOICE);
     }
     function j(e, t) {
-        m.Z.setMode(N, {
+        m.Z.setMode(I, {
             threshold: e,
             autoThreshold: t
         });
@@ -49,27 +49,27 @@ function f() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                g.Z.getMediaEngine().on(o.aB.VoiceActivity, v), e.stop();
+                h.Z.getMediaEngine().on(o.aB.VoiceActivity, A), e.stop();
             }),
             () => {
-                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, v), e.stop();
+                h.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, A), e.stop();
             }
         );
     }, []);
-    let O = (0, i.jsx)('section', {
-        className: l()(S.inputSensitivityToggle, S.manual),
+    let R = (0, i.jsx)('section', {
+        className: a()(f.inputSensitivityToggle, f.manual),
         children: (0, i.jsx)(u.Slider, {
-            initialValue: f + 100,
+            initialValue: S + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => j(-((100 - e) * 1), I),
+            onValueChange: (e) => j(-((100 - e) * 1), b),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': _,
+            'aria-labelledby': T,
             children: (0, i.jsxs)('div', {
-                className: l()(S.sliderBar, S.microphone, S.inputSensitivityBar, T.bar),
+                className: a()(f.sliderBar, f.microphone, f.inputSensitivityBar, _.bar),
                 children: [
                     (0, i.jsx)('div', {
-                        className: l()(S.fill, S.inputSensitivityBarFill),
+                        className: a()(f.fill, f.inputSensitivityBarFill),
                         style: { width: e + 100 + '%' }
                     }),
                     (0, i.jsx)('div', { className: 'grow' })
@@ -78,13 +78,13 @@ function f() {
         })
     });
     return (
-        I &&
-            (O = (0, i.jsxs)('section', {
-                className: S.inputSensitivityToggle,
+        b &&
+            (R = (0, i.jsxs)('section', {
+                className: f.inputSensitivityToggle,
                 children: [
                     (0, i.jsx)('div', {
-                        className: S.inputSensitivitySlider,
-                        children: (0, i.jsx)('div', { className: l()(S.inputSensitivityBar, S.sliderBar, { [S.speaking]: n }) })
+                        className: f.inputSensitivitySlider,
+                        children: (0, i.jsx)('div', { className: a()(f.inputSensitivityBar, f.sliderBar, { [f.speaking]: n }) })
                     }),
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
@@ -94,21 +94,21 @@ function f() {
                 ]
             })),
         (0, i.jsxs)(u.FormItem, {
-            className: S.sensitivity,
+            className: f.sensitivity,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: _,
+                    id: T,
                     tag: u.FormTitleTags.H5,
                     className: C.marginBottom8,
                     children: x.intl.string(x.t['sqUm+v'])
                 }),
                 (0, i.jsxs)('div', {
                     children: [
-                        A &&
-                            (0, i.jsx)(h.FG, {
+                        N &&
+                            (0, i.jsx)(g.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: l()(E.horizontal, C.marginBottom4),
+                                        className: a()(E.horizontal, C.marginBottom4),
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H3,
@@ -120,19 +120,19 @@ function f() {
                                             }),
                                             (0, i.jsx)(u.Switch, {
                                                 id: e,
-                                                checked: I,
-                                                onChange: (e) => j(f, e)
+                                                checked: b,
+                                                onChange: (e) => j(S, e)
                                             })
                                         ]
                                     })
                             }),
-                        O
+                        R
                     ]
                 }),
-                !b &&
+                !v &&
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
-                        className: l()(S.inputDisabledWarning, C.marginBottom8),
+                        className: a()(f.inputDisabledWarning, C.marginBottom8),
                         children: x.intl.format(x.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]

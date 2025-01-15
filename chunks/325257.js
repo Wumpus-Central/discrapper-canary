@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(846519),
     h = n(481060),
     p = n(493683),
-    f = n(239091),
-    m = n(153867),
+    m = n(239091),
+    f = n(153867),
     g = n(377171),
     v = n(540059),
     C = n(35225),
@@ -38,8 +38,8 @@ let L = {
     }
 };
 function R(e, t) {
-    (0, f.jW)(e, async () => {
-        let { default: e } = await Promise.all([n.e('63288'), n.e('33053'), n.e('17298'), n.e('7654'), n.e('78258'), n.e('98479'), n.e('53967'), n.e('31113'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('85060'), n.e('94107'), n.e('33213'), n.e('90699')]).then(n.bind(n, 545135));
+    (0, m.jW)(e, async () => {
+        let { default: e } = await Promise.all([n.e('63288'), n.e('7654'), n.e('68445'), n.e('98479'), n.e('53967'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('82309'), n.e('94107'), n.e('33213'), n.e('11520')]).then(n.bind(n, 545135));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,
@@ -48,13 +48,13 @@ function R(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, f, D;
+    var t, n, r, m, D;
     let { guildNode: G, setRef: B, onDragStart: k, onDragEnd: U, route: O, guild: V, animatable: H, selected: F = !1, unread: W = !1, mediaState: z, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = R, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
         { id: en, parentId: ei } = G,
         el = (0, v.Q3)('GuildItem'),
         er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, P.Ny)() : null != z ? (0, P.Or)(z) : void 0,
         ea = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-    null == ea && Y > 0 ? (ea = null !== (r = (0, P.Ne)(Y, Q ? g.Z.BACKGROUND_ACCENT : g.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (f = (0, P.jt)({ guildJoinRequestStatus: ee })) && void 0 !== f ? f : void 0);
+    null == ea && Y > 0 ? (ea = null !== (r = (0, P.Ne)(Y, Q ? g.Z.BACKGROUND_ACCENT : g.Z.STATUS_DANGER)) && void 0 !== r ? r : void 0) : null == ea && null != ee && (ea = null !== (m = (0, P.jt)({ guildJoinRequestStatus: ee })) && void 0 !== m ? m : void 0);
     let eo = null !== (D = e.lowerBadgeSize) && void 0 !== D ? D : { width: (0, h.getBadgeWidthForValue)(Y) },
         [{ dragging: es }, ec] = (0, o.c)({
             type: b.eD.GUILD,
@@ -68,14 +68,14 @@ t.Z = l.memo(function (e) {
                 }
             ),
             end() {
-                null == U || U(), (0, m.V1)(Z.ZP.getCompatibleGuildFolders());
+                null == U || U(), (0, f.V1)(Z.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
         eu = (0, c.Ie)(null != en ? en : A.lds),
         [ed, eh] = l.useState(!1),
         ep = !X && ed,
-        [ef, em] = l.useState(!1),
+        [em, ef] = l.useState(!1),
         [eg, ev] = l.useState(!1),
         [eC] = l.useState(() => new d.sW(70, () => ev(!0)));
     l.useEffect(() => () => eC.cancel(), [eC]);
@@ -125,16 +125,16 @@ t.Z = l.memo(function (e) {
         );
     if (null == V) return null;
     let eE =
-            eg || ef
+            eg || em
                 ? (0, i.jsx)(N.Z, {
                       guild: V,
                       show: eg,
                       active: F,
                       onAnimationStart: function () {
-                          em(eg);
+                          ef(eg);
                       },
                       onAnimationRest: function () {
-                          eg || em(!1);
+                          eg || ef(!1);
                       }
                   })
                 : (0, i.jsx)(h.NavItem, {

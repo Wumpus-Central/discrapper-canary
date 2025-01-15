@@ -28,11 +28,11 @@ function Z(e) {
     var t;
     let { id: n, size: Z, locked: _, padding: I, borderWidth: j, opacity: E, horizontal: b, pinned: w } = e,
         k = 2 * I + 2 * j;
-    let { width: N, height: L } = {
+    let { width: N, height: y } = {
             width: 'number' == typeof (t = Z).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
-        y = (0, r.e7)([p.Z], () => p.Z.getVoiceChannelId()),
+        L = (0, r.e7)([p.Z], () => p.Z.getVoiceChannelId()),
         { width: S, height: T, ref: A } = (0, a.Z)(),
         O = (0, r.e7)(
             [f.Z],
@@ -43,32 +43,32 @@ function Z(e) {
             },
             [n]
         ),
-        V = (0, r.e7)([h.Z], () => h.Z.getChannel(y)),
-        P = (0, r.e7)([d.default], () => d.default.getId()),
+        P = (0, r.e7)([h.Z], () => h.Z.getChannel(L)),
+        V = (0, r.e7)([d.default], () => d.default.getId()),
         { participantsVersion: M, streamParticipants: R } = (0, r.cj)(
             [u.Z, s.Z],
             () => {
-                if (null == y)
+                if (null == L)
                     return {
                         streamParticipants: x,
                         participantsVersion: -1
                     };
-                let e = new Set(u.Z.getAllActiveStreamsForChannel(y).map((e) => (0, c.V9)(e))),
+                let e = new Set(u.Z.getAllActiveStreamsForChannel(L).map((e) => (0, c.V9)(e))),
                     t = (t) => e.has((0, c.V9)(t.stream)),
-                    n = s.Z.getStreamParticipants(y).filter((t) => t.user.id !== P && (!!O || e.has((0, c.V9)(t.stream))));
+                    n = s.Z.getStreamParticipants(L).filter((t) => t.user.id !== V && (!!O || e.has((0, c.V9)(t.stream))));
                 return (
                     n.sort((e, n) => (t(e) && !t(n) ? -1 : !t(e) && t(n) ? 1 : e.user.username.localeCompare(n.user.username))),
                     {
                         streamParticipants: n,
                         activeStreams: e,
-                        participantsVersion: s.Z.getParticipantsVersion(y)
+                        participantsVersion: s.Z.getParticipantsVersion(L)
                     }
                 );
             },
-            [y, P, O]
+            [L, V, O]
         ),
         D = R.length,
-        z = null == V || 0 === D,
+        z = null == P || 0 === D,
         { tileWidth: W, layout: F } = (function (e, t, n, i, r) {
             let o = (function (e, t, n, i) {
                     let l = C(v.C5.HORIZONTAL, e, t, n),
@@ -94,11 +94,11 @@ function Z(e) {
                     tileWidth: c
                 }
             );
-        })(!1, D, null != S ? S : N - k, null != T ? T : L - k, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
+        })(!1, D, null != S ? S : N - k, null != T ? T : y - k, b ? v.C5.HORIZONTAL : v.C5.VERTICAL),
         G = {
             id: n,
             width: N,
-            height: L,
+            height: y,
             sizeOffset: k,
             layout: F,
             padding: I,

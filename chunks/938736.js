@@ -1,123 +1,123 @@
 n.d(t, {
     $s: function () {
-        return N;
-    },
-    AV: function () {
-        return f;
-    },
-    Hg: function () {
         return I;
     },
-    Kn: function () {
-        return T;
-    },
-    Nq: function () {
-        return m;
-    },
-    TW: function () {
-        return _;
-    },
-    pn: function () {
+    AV: function () {
         return h;
     },
-    uv: function () {
+    Hg: function () {
+        return N;
+    },
+    Kn: function () {
         return b;
     },
-    vx: function () {
+    Nq: function () {
+        return g;
+    },
+    TW: function () {
         return x;
     },
+    pn: function () {
+        return f;
+    },
+    uv: function () {
+        return C;
+    },
+    vx: function () {
+        return _;
+    },
     wG: function () {
-        return v;
+        return S;
     }
 });
 var i = n(442837),
-    r = n(704215),
-    a = n(605236),
-    s = n(276444),
+    s = n(704215),
+    r = n(605236),
+    a = n(276444),
     l = n(822070),
     o = n(520540),
     c = n(533525),
     d = n(796634),
     u = n(981631),
-    g = n(388032);
-let m = '40%',
-    f = 8,
+    m = n(388032);
+let g = '40%',
+    h = 8,
     p = (e) => {
-        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e;
+        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: s } = e;
         return t
-            ? g.intl.format(g.t['3OYZMT'], { helpdeskArticle: r })
+            ? m.intl.format(m.t['3OYZMT'], { helpdeskArticle: s })
             : n
-              ? g.intl.format(g.t.EkWiZm, {
+              ? m.intl.format(m.t.EkWiZm, {
                     numFriends: d.Q - i,
-                    helpdeskArticle: r
+                    helpdeskArticle: s
                 })
-              : g.intl.format(g.t.FjrXCg, {
+              : m.intl.format(m.t.FjrXCg, {
                     numFriends: d.Q,
-                    helpdeskArticle: r
+                    helpdeskArticle: s
                 });
     },
-    _ = (e) => {
-        let t = b(e);
+    x = (e) => {
+        let t = C(e);
         return null != t && t !== u.g2L.NOT_ELIGIBLE;
     },
-    h = (e) => {
-        let t = _(e),
+    f = (e) => {
+        let t = x(e),
             n = (0, c.b)('PremiumManagementSettings'),
-            r = (0, i.e7)([s.Z], () => s.Z.getRecipientStatus());
+            s = (0, i.e7)([a.Z], () => a.Z.getRecipientStatus());
         if (!t) return !1;
-        if (!n) return !!(r.size > 0) || !1;
+        if (!n) return !!(s.size > 0) || !1;
         return !0;
     },
-    x = (e) => {
+    _ = (e) => {
         let t = E(e),
-            n = (0, a.wE)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
+            n = (0, r.wE)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;
     },
     E = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, i.e7)([s.Z], () => s.Z.getIsSenderEligibleForIncentive());
-        return t && n && r;
-    },
-    b = (e) => {
-        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, i.e7)([s.Z], () => s.Z.getIsFetchingReferralIncentiveEligibility()),
-            a = (0, i.e7)([s.Z], () => s.Z.getSenderIncentiveState());
-        return r ? u.g2L.NOT_ELIGIBLE : n && t ? a : u.g2L.NOT_ELIGIBLE;
+            s = (0, i.e7)([a.Z], () => a.Z.getIsSenderEligibleForIncentive());
+        return t && n && s;
     },
     C = (e) => {
-        let t = b(e);
-        return t === u.g2L.COOLDOWN || t === u.g2L.UNAPPLIED || t === u.g2L.QUALIFIED;
-    },
-    v = (e) => {
-        let t = C(e),
-            n = (0, a.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
-        return t && !n;
+        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+            s = (0, i.e7)([a.Z], () => a.Z.getIsFetchingReferralIncentiveEligibility()),
+            r = (0, i.e7)([a.Z], () => a.Z.getSenderIncentiveState());
+        return s ? u.g2L.NOT_ELIGIBLE : n && t ? r : u.g2L.NOT_ELIGIBLE;
     },
     T = (e) => {
-        let t = _(e),
+        let t = C(e);
+        return t === u.g2L.COOLDOWN || t === u.g2L.UNAPPLIED || t === u.g2L.QUALIFIED;
+    },
+    S = (e) => {
+        let t = T(e),
+            n = (0, r.wE)(s.z.REFERRAL_INCENTIVE_AWARDED_INFO);
+        return t && !n;
+    },
+    b = (e) => {
+        let t = x(e),
             n = (0, c.b)(e),
-            i = (0, a.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+            i = (0, r.wE)(s.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && n && !i;
     },
-    N = (e) => {
+    I = (e) => {
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: i } = e;
         switch (t) {
             case u.g2L.NOT_ELIGIBLE:
-                return n ? g.intl.string(g.t.M47CJS) : g.intl.string(g.t.USo4s7);
+                return n ? m.intl.string(m.t.M47CJS) : m.intl.string(m.t.USo4s7);
             case u.g2L.ELIGIBLE:
-                if (i.sent < 2) return g.intl.formatToPlainString(g.t.md2GU1, { discountRate: m });
-                if (i.redeemed === d.Q) return g.intl.string(g.t.SRJkUV);
-                return g.intl.formatToPlainString(g.t.O8mswM, { discountRate: m });
+                if (i.sent < 2) return m.intl.formatToPlainString(m.t.md2GU1, { discountRate: g });
+                if (i.redeemed === d.Q) return m.intl.string(m.t.SRJkUV);
+                return m.intl.formatToPlainString(m.t.O8mswM, { discountRate: g });
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
-                return i.redeemed === d.Q ? g.intl.string(g.t.SRJkUV) : g.intl.string(g.t.MoKnzc);
+                return i.redeemed === d.Q ? m.intl.string(m.t.SRJkUV) : m.intl.string(m.t.MoKnzc);
         }
     },
-    I = (e) => {
-        let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: i, isWithinCountdownRange: r } = e;
+    N = (e) => {
+        let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: i, isWithinCountdownRange: s } = e;
         switch (n) {
             case u.g2L.NOT_ELIGIBLE:
                 return p({
@@ -127,23 +127,23 @@ let m = '40%',
                     helpdeskArticle: t
                 });
             case u.g2L.ELIGIBLE:
-                let a = {
-                    discountRate: m,
+                let r = {
+                    discountRate: g,
                     learnMoreLink: t,
-                    subscriptionInterval: g.intl.string(g.t.FPybU1)
+                    subscriptionInterval: m.intl.string(m.t.FPybU1)
                 };
-                if (i.redeemed <= 1) return g.intl.format(g.t.nysttb, a);
-                return g.intl.format(g.t.nHuzUF, a);
+                if (i.redeemed <= 1) return m.intl.format(m.t.nysttb, r);
+                return m.intl.format(m.t.nHuzUF, r);
             case u.g2L.QUALIFIED:
             case u.g2L.COOLDOWN:
             case u.g2L.UNAPPLIED:
-                if (i.redeemed < d.Q) return g.intl.format(g.t.HGO89v, { learnMoreLink: t });
-                if (!r)
-                    return g.intl.format(g.t.iGlQKi, {
+                if (i.redeemed < d.Q) return m.intl.format(m.t.HGO89v, { learnMoreLink: t });
+                if (!s)
+                    return m.intl.format(m.t.iGlQKi, {
                         learnMoreLink: t,
                         numberOfTimerPeriods: '',
-                        timePeriodInterval: g.intl.formatToPlainString(g.t['7r7VxM'], { time: 6 })
+                        timePeriodInterval: m.intl.formatToPlainString(m.t['7r7VxM'], { time: 6 })
                     });
-                return g.intl.format(g.t.Kq6hc3, { learnMoreLink: t });
+                return m.intl.format(m.t.Kq6hc3, { learnMoreLink: t });
         }
     };

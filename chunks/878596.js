@@ -3,14 +3,14 @@ n(192379);
 var s = n(481060),
     r = n(545951);
 t.Z = (e) => {
-    let { label: t, onClick: n, submitting: l } = e;
+    let { label: t, onClick: n, submitting: a } = e;
     return (0, i.jsx)(s.Clickable, {
-        onClick: l ? void 0 : n,
+        onClick: a ? void 0 : n,
         className: r.button,
         children: (0, i.jsxs)('div', {
             className: r.contentContainer,
             children: [
-                l
+                a
                     ? (0, i.jsx)(s.Spinner, {
                           type: s.Spinner.Type.PULSING_ELLIPSIS,
                           className: r.__invalid_spinner

@@ -54,7 +54,7 @@ function x(e) {
         }
     );
 }
-function _(e) {
+function Z(e) {
     return 'auto' === e || null == e ? 'auto' : ''.concat(e, 'px');
 }
 function S(e, t) {
@@ -68,7 +68,7 @@ function S(e, t) {
         }
     );
 }
-function Z(e, t) {
+function _(e, t) {
     let { top: n, left: i, bottom: s, right: r } = t;
     switch (e) {
         case 'RESIZE_EAST':
@@ -139,7 +139,7 @@ class E extends (s = o.Component) {
         let { width: g, height: m } = S(n, this.size),
             v = t - p,
             x = e - h,
-            _ = (0, u.ou)(
+            Z = (0, u.ou)(
                 (0, u.PY)(
                     {
                         top: v,
@@ -153,7 +153,7 @@ class E extends (s = o.Component) {
                     m
                 )
             ),
-            E = c ? (0, u.R)(_) : Z('RESIZE_SOUTH_EAST', _);
+            E = c ? (0, u.R)(Z) : _('RESIZE_SOUTH_EAST', Z);
         this.setDOMPositions(E), !f && (null != l && l(), this.setState({ operationStarted: !0 })), null != d && d(i, 'MOVE', this.anchor, this.size);
     }
     handleResizeMove(e, t) {
@@ -215,7 +215,7 @@ class E extends (s = o.Component) {
             }),
             null != r)
         )
-            (r.style.top = _(t)), (r.style.bottom = _(i)), (r.style.left = _(n)), (r.style.right = _(s));
+            (r.style.top = Z(t)), (r.style.bottom = Z(i)), (r.style.left = Z(n)), (r.style.right = Z(s));
     }
     setDOMSize(e) {
         let { width: t, height: n } = e,
@@ -229,7 +229,7 @@ class E extends (s = o.Component) {
             }),
             null != i)
         )
-            (i.style.width = _(t)), (i.style.height = _(n));
+            (i.style.width = Z(t)), (i.style.height = Z(n));
     }
     renderResizeHandles() {
         let { resizeY: e, resizeX: t, active: n } = this.props;
@@ -373,7 +373,7 @@ class E extends (s = o.Component) {
                         offsetY: n - i
                     };
                 } else {
-                    let i = Z(e, c);
+                    let i = _(e, c);
                     this.setDOMPositions(i),
                         (this.dragState = {
                             ...this.dragState,

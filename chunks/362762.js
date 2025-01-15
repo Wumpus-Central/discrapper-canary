@@ -2,17 +2,17 @@ var i,
     r,
     s,
     l,
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     c = n(981631);
-let u = {};
-class d extends (l = a.ZP.Store) {
+let d = {};
+class u extends (l = o.ZP.Store) {
     getState(e) {
-        return u[e];
+        return d[e];
     }
 }
 (s = 'CodedLinkNativeAppStateStore'),
-    (r = 'displayName') in (i = d)
+    (r = 'displayName') in (i = u)
         ? Object.defineProperty(i, r, {
               value: s,
               enumerable: !0,
@@ -20,17 +20,17 @@ class d extends (l = a.ZP.Store) {
               writable: !0
           })
         : (i[r] = s),
-    (t.Z = new d(o.Z, {
+    (t.Z = new u(a.Z, {
         NATIVE_APP_MODAL_OPENING: function (e) {
             let { code: t } = e;
-            u[t] = c.kEZ.OPENING;
+            d[t] = c.kEZ.OPENING;
         },
         NATIVE_APP_MODAL_OPENED: function (e) {
             let { code: t } = e;
-            u[t] = c.kEZ.OPEN;
+            d[t] = c.kEZ.OPEN;
         },
         NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
             let { code: t } = e;
-            u[t] = c.kEZ.OPEN_FAIL;
+            d[t] = c.kEZ.OPEN_FAIL;
         }
     }));

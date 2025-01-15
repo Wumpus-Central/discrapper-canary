@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(884338),
     h = n(528144),
     p = n(424678),
-    f = n(594174),
-    m = n(81063),
+    m = n(594174),
+    f = n(81063),
     g = n(768581),
     v = n(823379),
     C = n(51144),
@@ -48,17 +48,17 @@ function _(e) {
               })(o)
             : null;
     let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
-        f = (0, c.Z)(r),
-        v = f ? x.spotifyLargeImage : x.applicationLargeImage,
+        m = (0, c.Z)(r),
+        v = m ? x.spotifyLargeImage : x.applicationLargeImage,
         C =
             null != p
                 ? (0, i.jsx)('img', {
                       alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
-                      src: (0, m.getAssetImage)(h, p, [128, 128]),
+                      src: (0, f.getAssetImage)(h, p, [128, 128]),
                       className: v
                   })
                 : null;
-    return f && null != u
+    return m && null != u
         ? ((C = (0, i.jsx)(s.Clickable, {
               className: x.clickable,
               onClick: () => {
@@ -153,10 +153,10 @@ function N(e) {
     });
 }
 function E(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
+    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: f } = e,
         g = [];
     null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
-    let E = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(v.lm)),
+    let E = (0, o.Wu)([m.default], () => g.map((e) => m.default.getUser(e)).filter(v.lm)),
         y = null != n || (0, c.Z)(t),
         j = l.useMemo(() => {
             let e = new Map();
@@ -181,7 +181,7 @@ function E(e) {
                               activity: t,
                               user: r,
                               embeddedApp: n,
-                              onOpenSpotifyAlbum: m
+                              onOpenSpotifyAlbum: f
                           }),
                           (0, i.jsxs)('div', {
                               className: x.detailsAndAvatarsContainer,

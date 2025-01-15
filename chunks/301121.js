@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return e_;
+        return eT;
     }
 }),
     n(47120),
@@ -9,52 +9,52 @@ n.d(t, {
 var i,
     s,
     r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    a = n(192379),
+    l = n(120356),
+    o = n.n(l),
     c = n(512722),
     d = n.n(c),
     u = n(913527),
     m = n.n(u),
-    h = n(442837),
-    g = n(524437),
+    g = n(442837),
+    h = n(524437),
     p = n(481060),
     x = n(570140),
-    S = n(668781),
-    T = n(924628),
+    f = n(668781),
+    _ = n(924628),
     E = n(809206),
     C = n(230711),
-    _ = n(241420),
-    f = n(600164),
-    I = n(651530),
-    N = n(247206),
-    A = n(294602),
-    b = n(778825),
-    v = n(856768),
+    T = n(241420),
+    S = n(600164),
+    b = n(651530),
+    I = n(247206),
+    N = n(294602),
+    v = n(778825),
+    A = n(856768),
     j = n(592204),
-    O = n(712950),
-    R = n(880257),
+    R = n(712950),
+    O = n(880257),
     P = n(16703),
-    D = n(977059),
-    y = n(236289),
+    y = n(977059),
+    D = n(236289),
     B = n(518560),
-    L = n(237292),
-    Z = n(604849),
-    F = n(278828),
-    M = n(921801),
-    k = n(480294),
-    w = n(430824),
+    Z = n(237292),
+    L = n(604849),
+    M = n(278828),
+    k = n(921801),
+    w = n(480294),
+    F = n(430824),
     U = n(663389),
     V = n(594174),
     G = n(626135),
-    Y = n(63063),
-    H = n(78451),
-    z = n(358085),
-    W = n(709054),
+    H = n(63063),
+    Y = n(78451),
+    W = n(358085),
+    z = n(709054),
     K = n(88658),
     q = n(695346),
-    X = n(3957),
-    Q = n(279743),
+    Q = n(3957),
+    X = n(279743),
     J = n(526156),
     $ = n(76793),
     ee = n(839469),
@@ -63,8 +63,8 @@ var i,
     ei = n(526761),
     es = n(726985),
     er = n(981631),
-    el = n(800530),
-    ea = n(388032),
+    ea = n(800530),
+    el = n(388032),
     eo = n(770082),
     ec = n(300917),
     ed = n(232186);
@@ -82,13 +82,13 @@ function eu(e, t, n) {
     );
 }
 function em() {
-    let e = (0, h.e7)([b.Z], () => b.Z.getGuild()),
+    let e = (0, g.e7)([v.Z], () => v.Z.getGuild()),
         t = (0, P.Z)(),
         n = null != e ? e : t;
-    l.useEffect(() => {
+    a.useEffect(() => {
         G.default.track(er.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: en.Y.VIEW_SETTINGS_PAGE });
     }, []);
-    let i = l.useCallback((e) => {
+    let i = a.useCallback((e) => {
         null != e &&
             x.Z.dispatch({
                 type: 'GUILD_IDENTITY_SETTINGS_SET_GUILD',
@@ -103,29 +103,29 @@ function em() {
         ? null
         : (0, r.jsxs)(p.FormSection, {
               tag: p.FormTitleTags.H1,
-              title: ea.intl.string(ea.t.sKMrpq),
+              title: el.intl.string(el.t.sKMrpq),
               children: [
-                  (0, r.jsx)(v.Z, {
+                  (0, r.jsx)(A.Z, {
                       className: ec.guildSelector,
                       guildId: n.id,
                       onChange: i
                   }),
-                  (0, r.jsx)(_.ConnectedPrivacySettings, {
+                  (0, r.jsx)(T.ConnectedPrivacySettings, {
                       guild: n,
-                      ingress: _.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                      ingress: T.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
 }
-function eh() {
+function eg() {
     var e;
-    let t = null === (e = (0, R.Z)()) || void 0 === e || e,
-        n = (0, L.y0)({ location: 'user_settings_web' }),
-        i = (0, Z.c)(),
-        s = (0, X.a)(ei.to.DM_SAFETY_ALERTS);
+    let t = null === (e = (0, O.Z)()) || void 0 === e || e,
+        n = (0, Z.y0)({ location: 'user_settings_web' }),
+        i = (0, L.c)(),
+        s = (0, Q.a)(ei.to.DM_SAFETY_ALERTS);
     return t || !n
         ? null
-        : (0, r.jsxs)(M.F, {
+        : (0, r.jsxs)(k.F, {
               setting: es.s6.PRIVACY_SAFETY_ALERTS,
               children: [
                   (0, r.jsx)(p.FormSection, {
@@ -137,16 +137,16 @@ function eh() {
                                   tag: p.FormTitleTags.H5,
                                   faded: !0,
                                   className: ed.marginBottom8,
-                                  children: ea.intl.string(ea.t['J/X8w8'])
+                                  children: el.intl.string(el.t['J/X8w8'])
                               }),
                               (0, r.jsx)(p.FormSwitch, {
                                   value: i,
-                                  note: ea.intl.format(ea.t.lunaRk, { learnMoreLink: Y.Z.getArticleURL(er.BhN.SAFETY_ALERTS) }),
-                                  onChange: F.Q,
+                                  note: el.intl.format(el.t.lunaRk, { learnMoreLink: H.Z.getArticleURL(er.BhN.SAFETY_ALERTS) }),
+                                  onChange: M.Q,
                                   hideBorder: !0,
-                                  children: ea.intl.string(ea.t.qFsx5u)
+                                  children: el.intl.string(el.t.qFsx5u)
                               }),
-                              (0, r.jsx)(Q.Z, {
+                              (0, r.jsx)(X.Z, {
                                   animationDelay: 1000,
                                   scrollPosition: ei.to.DM_SAFETY_ALERTS
                               })
@@ -157,7 +157,7 @@ function eh() {
               ]
           });
 }
-function eg(e, t) {
+function eh(e, t) {
     G.default.track(er.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
         default_guilds_restricted: e,
         applied_to_existing_guilds: t
@@ -166,7 +166,7 @@ function eg(e, t) {
 function ep() {
     let e = q.iG.useSetting(),
         t = q.mX.useSetting(),
-        n = (0, X.a)(ei.to.MESSAGE_REQUESTS);
+        n = (0, Q.a)(ei.to.MESSAGE_REQUESTS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -176,32 +176,32 @@ function ep() {
                         ref: n,
                         children: (0, r.jsx)(p.FormSwitch, {
                             value: !t,
-                            note: ea.intl.format(ea.t.BSdJ7O, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.MESSAGE_REQUESTS) }),
+                            note: el.intl.format(el.t.BSdJ7O, { helpdeskArticle: H.Z.getArticleURL(er.BhN.MESSAGE_REQUESTS) }),
                             disabled: e,
                             onChange: () => {
                                 var e;
                                 return (
                                     (e = !t),
-                                    void eT({
-                                        header: ea.intl.string(ea.t.yAfu1t),
-                                        body: ea.intl.string(ea.t['Ry2z7+']),
-                                        confirmText: ea.intl.string(ea.t.gm1Ven),
-                                        cancelText: ea.intl.string(ea.t.p89ACg),
+                                    void e_({
+                                        header: el.intl.string(el.t.yAfu1t),
+                                        body: el.intl.string(el.t['Ry2z7+']),
+                                        confirmText: el.intl.string(el.t.gm1Ven),
+                                        cancelText: el.intl.string(el.t.p89ACg),
                                         confirmButtonColor: p.Button.Colors.BRAND,
                                         onConfirm: () => {
-                                            q.mX.updateSetting(e), eg(e, !1);
+                                            q.mX.updateSetting(e), eh(e, !1);
                                         },
                                         onCancel: () => {
-                                            q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), eg(e, !0);
+                                            q.mX.updateSetting(e), q.zA.updateSetting(e ? z.default.keys(F.Z.getGuilds()) : []), eh(e, !0);
                                         }
                                     })
                                 );
                             },
                             hideBorder: !0,
-                            children: ea.intl.string(ea.t.kOa6yM)
+                            children: el.intl.string(el.t.kOa6yM)
                         })
                     }),
-                    (0, r.jsx)(Q.Z, {
+                    (0, r.jsx)(X.Z, {
                         animationDelay: 700,
                         scrollPosition: ei.to.MESSAGE_REQUESTS
                     })
@@ -213,31 +213,31 @@ function ep() {
 }
 function ex() {
     var e;
-    let t = null === (e = (0, R.Z)()) || void 0 === e || e,
-        { explicitContentGuilds: n, explicitContentFriendDm: i, explicitContentNonFriendDm: s } = (0, A.B)(),
-        l = (0, X.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
-        a = [
+    let t = null === (e = (0, O.Z)()) || void 0 === e || e,
+        { explicitContentGuilds: n, explicitContentFriendDm: i, explicitContentNonFriendDm: s } = (0, N.B)(),
+        a = (0, Q.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
+        l = [
             {
-                value: g.Q4.BLUR,
-                label: ea.intl.string(ea.t.S49UaW)
+                value: h.Q4.BLUR,
+                label: el.intl.string(el.t.S49UaW)
             },
             {
-                value: g.Q4.BLOCK,
-                label: ea.intl.string(ea.t['D/157e'])
+                value: h.Q4.BLOCK,
+                label: el.intl.string(el.t['D/157e'])
             }
         ],
         o = [
             {
-                value: g.Q4.BLUR,
-                label: ea.intl.string(ea.t.S49UaW)
+                value: h.Q4.BLUR,
+                label: el.intl.string(el.t.S49UaW)
             }
         ],
         c = {
-            value: g.Q4.SHOW,
-            label: ea.intl.string(ea.t['5k5OFh'])
+            value: h.Q4.SHOW,
+            label: el.intl.string(el.t['5k5OFh'])
         };
     return (
-        t && (a.unshift(c), o.unshift(c)),
+        t && (l.unshift(c), o.unshift(c)),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
@@ -247,46 +247,46 @@ function ex() {
                             tag: p.FormTitleTags.H5,
                             faded: !0,
                             className: ed.marginBottom8,
-                            children: ea.intl.string(ea.t.uEz8JC)
+                            children: el.intl.string(el.t.uEz8JC)
                         }),
                         (0, r.jsx)(p.FormText, {
                             type: p.FormTextTypes.DESCRIPTION,
                             className: ed.marginBottom8,
-                            children: ea.intl.format(ea.t['89CimZ'], { learnMoreLink: Y.Z.getArticleURL(er.BhN.EXPLICIT_MEDIA_REDACTION) })
+                            children: el.intl.format(el.t['89CimZ'], { learnMoreLink: H.Z.getArticleURL(er.BhN.EXPLICIT_MEDIA_REDACTION) })
                         }),
                         (0, r.jsx)(p.FormItem, {
-                            ref: l,
+                            ref: a,
                             tag: p.FormTitleTags.H3,
                             className: ed.marginBottom20,
-                            title: ea.intl.string(ea.t.TyjVLC),
+                            title: el.intl.string(el.t.TyjVLC),
                             children: (0, r.jsx)(p.SingleSelect, {
-                                options: a,
+                                options: l,
                                 value: i,
-                                onChange: (e) => (0, N.zj)({ explicitContentFriendDm: e })
+                                onChange: (e) => (0, I.zj)({ explicitContentFriendDm: e })
                             })
                         }),
                         (0, r.jsx)(p.FormItem, {
                             tag: p.FormTitleTags.H3,
                             className: ed.marginBottom20,
-                            title: ea.intl.string(ea.t.T7eD1d),
+                            title: el.intl.string(el.t.T7eD1d),
                             children: (0, r.jsx)(p.SingleSelect, {
-                                options: a,
+                                options: l,
                                 value: s,
-                                onChange: (e) => (0, N.zj)({ explicitContentNonFriendDm: e })
+                                onChange: (e) => (0, I.zj)({ explicitContentNonFriendDm: e })
                             })
                         }),
                         t &&
                             (0, r.jsx)(p.FormItem, {
                                 tag: p.FormTitleTags.H3,
                                 className: ed.marginBottom20,
-                                title: ea.intl.string(ea.t.zqUDl5),
+                                title: el.intl.string(el.t.zqUDl5),
                                 children: (0, r.jsx)(p.SingleSelect, {
                                     options: o,
                                     value: n,
-                                    onChange: (e) => (0, N.zj)({ explicitContentGuilds: e })
+                                    onChange: (e) => (0, I.zj)({ explicitContentGuilds: e })
                                 })
                             }),
-                        (0, r.jsx)(Q.Z, { scrollPosition: ei.to.EXPLICIT_MEDIA_REDACTION })
+                        (0, r.jsx)(X.Z, { scrollPosition: ei.to.EXPLICIT_MEDIA_REDACTION })
                     ]
                 }),
                 (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
@@ -294,45 +294,45 @@ function ex() {
         })
     );
 }
-function eS(e) {
+function ef(e) {
     let {
             modalProps: t,
             settings: { onConfirm: n, ...i }
         } = e,
-        [s, a] = l.useState({
+        [s, l] = a.useState({
             Account: {
                 value: 'Account',
-                label: ea.intl.string(ea.t['rfe/x8']),
+                label: el.intl.string(el.t['rfe/x8']),
                 checked: !1
             },
             Analytics: {
                 value: 'Analytics',
-                label: ea.intl.string(ea.t['j+d6RE']),
+                label: el.intl.string(el.t['j+d6RE']),
                 checked: !1
             },
             Activities: {
                 value: 'Activities',
-                label: ea.intl.string(ea.t.KO88BQ),
+                label: el.intl.string(el.t.KO88BQ),
                 checked: !1
             },
             Messages: {
                 value: 'Messages',
-                label: ea.intl.string(ea.t['0dO1t7']),
+                label: el.intl.string(el.t['0dO1t7']),
                 checked: !1
             },
             Programs: {
                 value: 'Programs',
-                label: ea.intl.string(ea.t.M4ddeX),
+                label: el.intl.string(el.t.M4ddeX),
                 checked: !1
             },
             Servers: {
                 value: 'Servers',
-                label: ea.intl.string(ea.t.JN9c39),
+                label: el.intl.string(el.t.JN9c39),
                 checked: !1
             }
         }),
         o = (e) => (t, n) => {
-            a((t) => ({
+            l((t) => ({
                 ...t,
                 [e]: {
                     ...t[e],
@@ -376,7 +376,7 @@ function eS(e) {
     });
 }
 ((s = i || (i = {})).USERS = 'Account'), (s.MESSAGES = 'Messages'), (s.GUILDS = 'Servers'), (s.ANALYTICS = 'Analytics'), (s.ACTIVITIES = 'Activities'), (s.HUBSPOT = 'Programs');
-function eT(e) {
+function e_(e) {
     let { body: t, ...n } = e;
     (0, p.openModal)((e) =>
         (0, r.jsx)(p.ConfirmModal, {
@@ -391,15 +391,15 @@ function eT(e) {
 }
 function eE(e) {
     let { message: t } = e;
-    eT({
-        header: ea.intl.string(ea.t.OjbtDg),
-        confirmText: ea.intl.string(ea.t.BddRzc),
+    e_({
+        header: el.intl.string(el.t.OjbtDg),
+        confirmText: el.intl.string(el.t.BddRzc),
         body: t
     });
 }
-class eC extends l.PureComponent {
+class eC extends a.PureComponent {
     componentDidMount() {
-        (0, T.I)(),
+        (0, _.I)(),
             (0, E.ol)().then(
                 (e) => {
                     let t = {
@@ -417,17 +417,17 @@ class eC extends l.PureComponent {
         e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted && this.setState({ defaultGuildsRestricted: this.props.defaultGuildsRestricted }), null != this.props.subsection && e.subsection !== this.props.subsection && this.setState({ selectedTab: this.props.subsection });
     }
     showGuildRestrictionModal(e) {
-        eT({
-            header: ea.intl.string(ea.t['uUr+GR']),
-            body: ea.intl.string(ea.t.hjGJBg),
-            confirmText: ea.intl.string(ea.t.gm1Ven),
-            cancelText: ea.intl.string(ea.t.p89ACg),
+        e_({
+            header: el.intl.string(el.t['uUr+GR']),
+            body: el.intl.string(el.t.hjGJBg),
+            confirmText: el.intl.string(el.t.gm1Ven),
+            cancelText: el.intl.string(el.t.p89ACg),
             confirmButtonColor: p.Button.Colors.BRAND,
             onConfirm: () => {
                 q.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
             },
             onCancel: () => {
-                q.iG.updateSetting(e), q.h2.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
+                q.iG.updateSetting(e), q.h2.updateSetting(e ? z.default.keys(F.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
             }
         });
     }
@@ -438,17 +438,17 @@ class eC extends l.PureComponent {
         });
     }
     showMessageRequestRestrictionModal(e) {
-        eT({
-            header: ea.intl.string(ea.t.yAfu1t),
-            body: ea.intl.string(ea.t['Ry2z7+']),
-            confirmText: ea.intl.string(ea.t.gm1Ven),
-            cancelText: ea.intl.string(ea.t.p89ACg),
+        e_({
+            header: el.intl.string(el.t.yAfu1t),
+            body: el.intl.string(el.t['Ry2z7+']),
+            confirmText: el.intl.string(el.t.gm1Ven),
+            cancelText: el.intl.string(el.t.p89ACg),
             confirmButtonColor: p.Button.Colors.BRAND,
             onConfirm: () => {
                 q.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
             },
             onCancel: () => {
-                q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
+                q.mX.updateSetting(e), q.zA.updateSetting(e ? z.default.keys(F.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
             }
         });
     }
@@ -463,19 +463,19 @@ class eC extends l.PureComponent {
             children: (0, r.jsxs)(p.FormItem, {
                 tag: p.FormTitleTags.H3,
                 className: ed.marginBottom20,
-                title: ea.intl.string(ea.t.rQCZQE),
+                title: el.intl.string(el.t.rQCZQE),
                 children: [
                     (0, r.jsx)(p.FormText, {
                         type: p.FormTextTypes.DESCRIPTION,
                         className: ed.marginBottom8,
-                        children: ea.intl.format(ea.t.Qsnai4, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
+                        children: el.intl.format(el.t.Qsnai4, { appealLink: H.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                     }),
                     (0, r.jsx)(p.RadioGroup, {
                         value: this.props.explicitContentFilter,
-                        options: (0, H.X7)(),
+                        options: (0, Y.X7)(),
                         onChange: (t) => {
                             let { value: n } = t;
-                            this.props.dmSpamFilter === g.Xr.DEFAULT_UNSET
+                            this.props.dmSpamFilter === h.Xr.DEFAULT_UNSET
                                 ? q.Xr.updateSetting(e).then(() => {
                                       q.UP.updateSetting(n);
                                   })
@@ -488,7 +488,7 @@ class eC extends l.PureComponent {
     }
     renderDMSafety() {
         var e;
-        let t = this.props.dmSpamFilter !== g.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = et.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : g.Xr.NON_FRIENDS;
+        let t = this.props.dmSpamFilter !== h.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = et.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : h.Xr.NON_FRIENDS;
         return this.props.mediaRedactionIsEnabled
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -496,26 +496,26 @@ class eC extends l.PureComponent {
                           tag: p.FormTitleTags.H3,
                           className: ed.marginBottom20,
                           children: [
-                              (0, r.jsx)(M.F, {
+                              (0, r.jsx)(k.F, {
                                   setting: es.s6.PRIVACY_SENSITIVE_MEDIA,
                                   children: (0, r.jsx)(ex, {})
                               }),
-                              (0, r.jsxs)(M.F, {
+                              (0, r.jsxs)(k.F, {
                                   setting: es.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
                                   children: [
                                       (0, r.jsxs)(p.FormItem, {
                                           tag: p.FormTitleTags.H5,
                                           className: ed.marginBottom4,
-                                          title: ea.intl.string(ea.t.uloYw8),
+                                          title: el.intl.string(el.t.uloYw8),
                                           children: [
                                               (0, r.jsx)(p.FormText, {
                                                   type: p.FormTextTypes.DESCRIPTION,
                                                   className: ed.marginBottom8,
-                                                  children: ea.intl.format(ea.t.ls4omZ, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
+                                                  children: el.intl.format(el.t.ls4omZ, { appealLink: H.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                                               }),
                                               (0, r.jsx)(p.RadioGroup, {
                                                   value: t,
-                                                  options: (0, H.c7)(),
+                                                  options: (0, Y.c7)(),
                                                   onChange: (e) => {
                                                       let { value: t } = e;
                                                       return q.Xr.updateSetting(t);
@@ -528,7 +528,7 @@ class eC extends l.PureComponent {
                               })
                           ]
                       }),
-                      (0, r.jsx)(eh, {})
+                      (0, r.jsx)(eg, {})
                   ]
               })
             : (0, r.jsxs)(r.Fragment, {
@@ -536,22 +536,22 @@ class eC extends l.PureComponent {
                       (0, r.jsxs)(p.FormSection, {
                           tag: p.FormTitleTags.H5,
                           className: ed.marginBottom40,
-                          title: ea.intl.string(ea.t.u3sdlJ),
+                          title: el.intl.string(el.t.u3sdlJ),
                           children: [
                               this.renderLegacyExplicitContentFilter(t),
                               (0, r.jsxs)(p.FormItem, {
                                   tag: p.FormTitleTags.H3,
                                   className: ed.marginBottom4,
-                                  title: ea.intl.string(ea.t.uloYw8),
+                                  title: el.intl.string(el.t.uloYw8),
                                   children: [
                                       (0, r.jsx)(p.FormText, {
                                           type: p.FormTextTypes.DESCRIPTION,
                                           className: ed.marginBottom8,
-                                          children: ea.intl.format(ea.t.ls4omZ, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
+                                          children: el.intl.format(el.t.ls4omZ, { appealLink: H.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                                       }),
                                       (0, r.jsx)(p.RadioGroup, {
                                           value: t,
-                                          options: (0, H.c7)(),
+                                          options: (0, Y.c7)(),
                                           onChange: (e) => {
                                               let { value: t } = e;
                                               return q.Xr.updateSetting(t);
@@ -562,7 +562,7 @@ class eC extends l.PureComponent {
                           ]
                       }),
                       (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 }),
-                      (0, r.jsx)(eh, {})
+                      (0, r.jsx)(eg, {})
                   ]
               });
     }
@@ -574,20 +574,20 @@ class eC extends l.PureComponent {
                 (0, r.jsx)(p.FormTitle, {
                     tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: ea.intl.string(ea.t.lq5Pio)
+                    children: el.intl.string(el.t.lq5Pio)
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_KEYWORD_FILTER,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: this.props.keywordFilter,
-                        note: ea.intl.format(ea.t.wIAqR0, { learnMoreLink: Y.Z.getArticleURL(er.BhN.KEYWORD_FILTERS) }),
+                        note: el.intl.format(el.t.wIAqR0, { learnMoreLink: H.Z.getArticleURL(er.BhN.KEYWORD_FILTERS) }),
                         onChange: (e) =>
                             q.gw.updateSetting({
                                 profanity: e,
                                 slurs: e,
                                 sexualContent: e
                             }),
-                        children: ea.intl.string(ea.t['8QJcoa'])
+                        children: el.intl.string(el.t['8QJcoa'])
                     })
                 })
             ]
@@ -603,39 +603,39 @@ class eC extends l.PureComponent {
                 (0, r.jsx)(p.FormTitle, {
                     tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: ea.intl.string(ea.t.Hq4ApK)
+                    children: el.intl.string(el.t.Hq4ApK)
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: !i,
-                        note: ea.intl.string(ea.t['5+2s+f']),
+                        note: el.intl.string(el.t['5+2s+f']),
                         onChange: this.handleChangeDefaultGuildsRestricted,
-                        children: ea.intl.string(ea.t.eCO6Nz)
+                        children: el.intl.string(el.t.eCO6Nz)
                     })
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: !!s && e,
-                        note: ea.intl.string(ea.t['QZ9+Dw']),
+                        note: el.intl.string(el.t['QZ9+Dw']),
                         disabled: !s,
                         onChange: q.DC.updateSetting,
-                        children: ea.intl.string(ea.t['L+yTsb'])
+                        children: el.intl.string(el.t['L+yTsb'])
                     })
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS,
                     children: (0, r.jsx)(ep, {})
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: !!s && n,
-                        note: ea.intl.string(ea.t.fbBowc),
+                        note: el.intl.string(el.t.fbBowc),
                         disabled: !s,
                         onChange: q.xM.updateSetting,
-                        children: ea.intl.string(ea.t.XahVjo)
+                        children: el.intl.string(el.t.XahVjo)
                     })
                 })
             ]
@@ -649,47 +649,47 @@ class eC extends l.PureComponent {
                 (0, r.jsx)(p.FormTitle, {
                     tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: ea.intl.string(ea.t.e0rLYW)
+                    children: el.intl.string(el.t.e0rLYW)
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_DATA_IMPROVE_DISCORD,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: e,
-                        note: ea.intl.format(ea.t['5R5aSk'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
+                        note: el.intl.format(el.t['5R5aSk'], { helpdeskArticle: H.Z.getArticleURL(er.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
                         onChange: this.handleUsageStatisticsChange,
-                        children: ea.intl.string(ea.t.XuADY2)
+                        children: el.intl.string(el.t.XuADY2)
                     })
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_DATA_PERSONALIZE,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: t,
-                        note: ea.intl.format(ea.t.MWpAhI, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                        note: el.intl.format(el.t.MWpAhI, { helpdeskArticle: H.Z.getArticleURL(er.BhN.DATA_USED_FOR_RECOMMENDED) }),
                         onChange: this.handlePersonalizationChange,
-                        children: ea.intl.string(ea.t.MNKzys)
+                        children: el.intl.string(el.t.MNKzys)
                     })
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_DATA_QUESTS,
                     children: (0, r.jsx)(p.FormSwitch, {
                         value: !n,
-                        note: ea.intl.format(ea.t['7Q2yX1'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.QUESTS_PRIVACY_CONTROLS) }),
+                        note: el.intl.format(el.t['7Q2yX1'], { helpdeskArticle: H.Z.getArticleURL(er.BhN.QUESTS_PRIVACY_CONTROLS) }),
                         onChange: this.handleChangeDropsOptedOut,
-                        children: (0, r.jsx)('div', { children: ea.intl.string(ea.t.VkS7YW) })
+                        children: (0, r.jsx)('div', { children: el.intl.string(el.t.VkS7YW) })
                     })
                 }),
-                (0, r.jsxs)(M.F, {
+                (0, r.jsxs)(k.F, {
                     setting: es.s6.PRIVACY_DATA_BASIC_SERVICE,
                     children: [
                         (0, r.jsx)(p.FormTitle, {
                             tag: p.FormTitleTags.H3,
                             className: o()(ed.marginTop20, ed.marginBottom8),
-                            children: ea.intl.string(ea.t.D60Gfn)
+                            children: el.intl.string(el.t.D60Gfn)
                         }),
                         (0, r.jsx)(p.FormText, {
                             type: p.FormTextTypes.DESCRIPTION,
                             className: ed.marginBottom20,
-                            children: ea.intl.format(ea.t.R5N31N, {
+                            children: el.intl.format(el.t.R5N31N, {
                                 onClick: () => {
                                     C.Z.setSection(er.oAB.ACCOUNT);
                                 }
@@ -698,7 +698,7 @@ class eC extends l.PureComponent {
                         (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
                     ]
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_DATA_REQUEST,
                     children: this.renderHarvestRequest()
                 })
@@ -710,9 +710,9 @@ class eC extends l.PureComponent {
         let { currentUser: t } = this.props,
             { requestingHarvest: n, currentHarvestRequest: i } = this.state,
             s = (0, K.$6)(i, t),
-            a = null != i && m()().diff(m()(i.created_at), 'days') < er.eBq,
+            l = null != i && m()().diff(m()(i.created_at), 'days') < er.eBq,
             o = (0, r.jsx)(p.Tooltip, {
-                text: t.isStaff() ? ea.intl.string(ea.t.ZPQLHx) : t.verified ? null : ea.intl.string(ea.t['c1f88/']),
+                text: t.isStaff() ? el.intl.string(el.t.ZPQLHx) : t.verified ? null : el.intl.string(el.t['c1f88/']),
                 children: (e) => {
                     let { onMouseEnter: t, onMouseLeave: i } = e;
                     return (0, r.jsx)(p.Button, {
@@ -723,32 +723,32 @@ class eC extends l.PureComponent {
                         look: p.Button.Looks.FILLED,
                         color: p.Button.Colors.BRAND,
                         submitting: n,
-                        children: ea.intl.string(ea.t.dmBSKi)
+                        children: el.intl.string(el.t.dmBSKi)
                     });
                 }
             });
         return (
             s &&
-                a &&
+                l &&
                 ((e = (0, r.jsx)(p.Card, {
                     className: ec.card,
                     children: (0, r.jsx)(p.Text, {
                         variant: 'text-md/normal',
-                        children: ea.intl.format(ea.t.RNDlV1, { date: m()(i.created_at).add(er.eBq, 'days').format('MMMM Do YYYY') })
+                        children: el.intl.format(el.t.RNDlV1, { date: m()(i.created_at).add(er.eBq, 'days').format('MMMM Do YYYY') })
                     })
                 })),
                 (o = null)),
-            null != o && (o = (0, r.jsx)(f.Z, { children: o })),
-            (0, r.jsxs)(l.Fragment, {
+            null != o && (o = (0, r.jsx)(S.Z, { children: o })),
+            (0, r.jsxs)(a.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
                         tag: p.FormTitleTags.H3,
-                        children: ea.intl.string(ea.t.XAHCgI)
+                        children: el.intl.string(el.t.XAHCgI)
                     }),
                     (0, r.jsx)(p.FormText, {
                         type: p.FormTextTypes.DESCRIPTION,
                         className: ed.marginBottom20,
-                        children: ea.intl.format(ea.t['3en439'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.GDPR_REQUEST_DATA) })
+                        children: el.intl.format(el.t['3en439'], { helpdeskArticle: H.Z.getArticleURL(er.BhN.GDPR_REQUEST_DATA) })
                     }),
                     e,
                     o
@@ -761,7 +761,7 @@ class eC extends l.PureComponent {
             className: ed.marginBottom40,
             children: (0, r.jsx)(p.FormNotice, {
                 type: p.FormNotice.Types.PRIMARY,
-                body: ea.intl.format(ea.t.xvCsx8, {
+                body: el.intl.format(el.t.xvCsx8, {
                     termsLink: er.EYA.TERMS,
                     privacyLink: er.EYA.PRIVACY
                 })
@@ -779,7 +779,7 @@ class eC extends l.PureComponent {
                         (0, r.jsx)(p.FormTitle, {
                             tag: p.FormTitleTags.H5,
                             className: ed.marginBottom8,
-                            children: ea.intl.string(ea.t.Fwp9SU)
+                            children: el.intl.string(el.t.Fwp9SU)
                         }),
                         (0, r.jsxs)(p.FormItem, {
                             tag: p.FormTitleTags.H5,
@@ -788,7 +788,7 @@ class eC extends l.PureComponent {
                                 (0, r.jsx)(p.FormText, {
                                     type: p.FormTextTypes.DESCRIPTION,
                                     className: ed.marginBottom8,
-                                    children: ea.intl.string(ea.t.toqSSE)
+                                    children: el.intl.string(el.t.toqSSE)
                                 }),
                                 (0, r.jsx)(p.RadioGroup, {
                                     options: (0, K.xH)(),
@@ -809,26 +809,26 @@ class eC extends l.PureComponent {
         let { fetchedConsents: e } = this.props;
         return (0, r.jsxs)(p.FormSection, {
             tag: p.FormTitleTags.H1,
-            title: ea.intl.string(ea.t.sKMrpq),
+            title: el.intl.string(el.t.sKMrpq),
             children: [
                 this.renderDMSafety(),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_KEYWORD_FILTER,
                     children: this.renderKeywordFiltering()
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
                     children: this.renderServerPrivacy()
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_DATA_PRIVACY,
                     children: e ? this.renderDataPrivacy() : null
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_TERMS_POLICY,
                     children: this.renderPrivacyAndTermsNote()
                 }),
-                (0, r.jsx)(M.F, {
+                (0, r.jsx)(k.F, {
                     setting: es.s6.PRIVACY_STAFF_ONLY,
                     children: this.renderStaffOnlySettings()
                 })
@@ -843,25 +843,25 @@ class eC extends l.PureComponent {
             defaultTabIndex: 'ACCOUNT_STANDING' === t ? 2 : void 0,
             tabs: [
                 {
-                    title: ea.intl.string(ea.t.YpEWSk),
+                    title: el.intl.string(el.t.YpEWSk),
                     component: this.renderSettingsBody(),
                     setting: es.s6.PRIVACY_USER_SETTINGS
                 },
                 {
-                    title: ea.intl.string(ea.t['tp/UVF']),
+                    title: el.intl.string(el.t['tp/UVF']),
                     component: (0, r.jsx)(em, {}),
                     setting: es.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
                 },
                 {
-                    title: ea.intl.string(ea.t['00Sfl5']),
+                    title: el.intl.string(el.t['00Sfl5']),
                     component: (0, r.jsx)(B.Z, {}),
                     setting: es.s6.PRIVACY_ACCOUNT_STANDING
                 },
                 {
-                    title: ea.intl.string(ea.t.hWMIiY),
+                    title: el.intl.string(el.t.hWMIiY),
                     component: (0, r.jsx)($.Z, {}),
                     setting: es.s6.PRIVACY_ENCRYPTION,
-                    predicate: () => e && (0, z.isDesktop)()
+                    predicate: () => e && (0, W.isDesktop)()
                 }
             ]
         });
@@ -876,35 +876,35 @@ class eC extends l.PureComponent {
             }),
             eu(this, 'handleUsageStatisticsChange', () => {
                 this.props.usageStatistics
-                    ? eT({
-                          header: ea.intl.string(ea.t.OdPCbG),
-                          body: ea.intl.string(ea.t.MGWabG),
-                          confirmText: ea.intl.string(ea.t['D3+rU1']),
-                          cancelText: ea.intl.string(ea.t.kYpG0t),
-                          onConfirm: () => (0, T.g)([], [er.pjP.USAGE_STATISTICS]).catch(eE)
+                    ? e_({
+                          header: el.intl.string(el.t.OdPCbG),
+                          body: el.intl.string(el.t.MGWabG),
+                          confirmText: el.intl.string(el.t['D3+rU1']),
+                          cancelText: el.intl.string(el.t.kYpG0t),
+                          onConfirm: () => (0, _.g)([], [er.pjP.USAGE_STATISTICS]).catch(eE)
                       })
-                    : (0, T.g)([er.pjP.USAGE_STATISTICS], []).catch(eE);
+                    : (0, _.g)([er.pjP.USAGE_STATISTICS], []).catch(eE);
             }),
             eu(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
-                    ? eT({
-                          header: ea.intl.string(ea.t['9SNpzs']),
-                          confirmText: ea.intl.string(ea.t['9g5UGx']),
-                          cancelText: ea.intl.string(ea.t['+ZLPw8']),
+                    ? e_({
+                          header: el.intl.string(el.t['9SNpzs']),
+                          confirmText: el.intl.string(el.t['9g5UGx']),
+                          cancelText: el.intl.string(el.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, T.g)([], [er.pjP.PERSONALIZATION]).catch(eE);
+                              (0, _.g)([], [er.pjP.PERSONALIZATION]).catch(eE);
                           },
-                          body: ea.intl.string(ea.t.gJvDDg)
+                          body: el.intl.string(el.t.gJvDDg)
                       })
-                    : (0, T.g)([er.pjP.PERSONALIZATION], []).catch(eE);
+                    : (0, _.g)([er.pjP.PERSONALIZATION], []).catch(eE);
             }),
             eu(this, 'handleDataDownloadRequest', () => {
                 var e;
                 (e = {
-                    header: ea.intl.string(ea.t.jxXMEx),
-                    body: ea.intl.format(ea.t.fSv59f, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.GDPR_PACKAGE_CONTENTS) }),
-                    confirmText: ea.intl.string(ea.t.NYgNg4),
-                    cancelText: ea.intl.string(ea.t.jpVjsr),
+                    header: el.intl.string(el.t.jxXMEx),
+                    body: el.intl.format(el.t.fSv59f, { helpdeskArticle: H.Z.getArticleURL(er.BhN.GDPR_PACKAGE_CONTENTS) }),
+                    confirmText: el.intl.string(el.t.NYgNg4),
+                    cancelText: el.intl.string(el.t.jpVjsr),
                     confirmButtonColor: p.Button.Colors.BRAND,
                     onConfirm: (e) => {
                         this.setState({ requestingHarvest: !0 }, () => {
@@ -912,16 +912,16 @@ class eC extends l.PureComponent {
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
-                                            ? (this.setState({ currentHarvestRequest: e.body }), S.Z.show({ body: ea.intl.string(ea.t['6Nmv4u']) }))
-                                            : S.Z.show({
-                                                  title: ea.intl.string(ea.t.OjbtDg),
-                                                  body: ea.intl.string(ea.t['0F5Jys'])
+                                            ? (this.setState({ currentHarvestRequest: e.body }), f.Z.show({ body: el.intl.string(el.t['6Nmv4u']) }))
+                                            : f.Z.show({
+                                                  title: el.intl.string(el.t.OjbtDg),
+                                                  body: el.intl.string(el.t['0F5Jys'])
                                               });
                                     },
                                     () =>
-                                        S.Z.show({
-                                            title: ea.intl.string(ea.t.OjbtDg),
-                                            body: ea.intl.string(ea.t['0F5Jys'])
+                                        f.Z.show({
+                                            title: el.intl.string(el.t.OjbtDg),
+                                            body: el.intl.string(el.t['0F5Jys'])
                                         })
                                 )
                                 .finally(() => this.setState({ requestingHarvest: !1 }));
@@ -929,7 +929,7 @@ class eC extends l.PureComponent {
                     }
                 }),
                     (0, p.openModal)((t) =>
-                        (0, r.jsx)(eS, {
+                        (0, r.jsx)(ef, {
                             modalProps: t,
                             settings: e
                         })
@@ -940,28 +940,28 @@ class eC extends l.PureComponent {
             defaultGuildsRestricted: t,
             currentHarvestRequest: null,
             requestingHarvest: !0,
-            selectedTab: null != n ? n : el.SU.SETTINGS
+            selectedTab: null != n ? n : ea.SU.SETTINGS
         };
     }
 }
-function e_() {
-    let e = (0, h.e7)([V.default], () => {
+function eT() {
+    let e = (0, g.e7)([V.default], () => {
             let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
         }),
-        t = (0, h.cj)([k.Z], () => ({
-            fetchedConsents: k.Z.fetchedConsents,
-            usageStatistics: k.Z.hasConsented(er.pjP.USAGE_STATISTICS),
-            personalization: k.Z.hasConsented(er.pjP.PERSONALIZATION)
+        t = (0, g.cj)([w.Z], () => ({
+            fetchedConsents: w.Z.fetchedConsents,
+            usageStatistics: w.Z.hasConsented(er.pjP.USAGE_STATISTICS),
+            personalization: w.Z.hasConsented(er.pjP.PERSONALIZATION)
         })),
-        n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
-        i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
-        s = (0, I.yh)(),
-        l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
-        { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
-        c = (0, O.p)(),
-        u = (0, R.Z)(),
-        { enabled: m } = (0, D.S)({ location: 'PrivacySafetySettings' });
+        n = (0, g.e7)([D.Z], () => D.Z.getFetchError()),
+        i = (0, g.e7)([U.Z], () => U.Z.getSubsection()),
+        s = (0, b.yh)(),
+        a = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
+        { hasSearchResults: l, searchResults: o } = (0, ee.E)(),
+        c = (0, R.p)(),
+        u = (0, O.Z)(),
+        { enabled: m } = (0, y.S)({ location: 'PrivacySafetySettings' });
     return (0, r.jsx)(eC, {
         currentUser: e,
         defaultGuildsRestricted: q.iG.useSetting(),
@@ -975,10 +975,10 @@ function e_() {
         dropsOptedOut: q.bh.useSetting(),
         safetyHubFetchError: n,
         mediaRedactionIsEnabled: s,
-        keywordFilteringExperimentEnabled: l,
+        keywordFilteringExperimentEnabled: a,
         userIsConsideredAdult: null == u || u,
         subsection: i,
-        searchFilter: a ? o : void 0,
+        searchFilter: l ? o : void 0,
         isSecureFramesEnabled: m,
         ...t
     });

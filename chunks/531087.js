@@ -10,10 +10,10 @@ var l = n(120356),
     a = n(331595),
     o = n(554869);
 function s(e) {
-    let { width: t = 16, height: n = 16, color: l = 'currentColor', foreground: s, className: c, ...d } = e;
+    let { width: t = 16, height: n = 16, color: l = 'currentColor', foreground: s, className: d, ...c } = e;
     return (0, i.jsx)('svg', {
-        className: r()(o.updateAvailable, c),
-        ...(0, a.Z)(d),
+        className: r()(o.updateAvailable, d),
+        ...(0, a.Z)(c),
         width: t,
         height: n,
         viewBox: '0 0 24 24',

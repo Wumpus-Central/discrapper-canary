@@ -39,15 +39,15 @@ function j(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }),
-        k = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
-        D = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
-        B = (0, a.e7)([x.Z], () => {
+        D = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
+        k = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
+        U = (0, a.e7)([x.Z], () => {
             var e;
             return null !== (e = x.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        U = (0, m.PL)(!0, !1),
-        w = (0, m.LD)(B, !1),
-        F = (0, v.TK)(n.id, U),
+        B = (0, m.PL)(!0, !1),
+        w = (0, m.LD)(U, !1),
+        F = (0, v.TK)(n.id, B),
         G = (0, v.TK)(n.id, w),
         V = (0, d.ye)(n),
         H = r.useMemo(() => {
@@ -63,8 +63,8 @@ function j(e) {
                     compactDisplay: 'short'
                 }),
                 r = null !== (t = null === (e = n.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 !== r && k ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
-        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, k, z]),
+            return 0 !== r && D ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
+        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, D, z]),
         K =
             null != L
                 ? (0, N.aN)({
@@ -88,7 +88,7 @@ function j(e) {
             },
             []
         ),
-        q = (F || G || D) && Q,
+        q = (F || G || k) && Q,
         J = y || q,
         $ = r.useCallback(() => {
             if (q) {
@@ -106,10 +106,10 @@ function j(e) {
                 customInstallUrl: n.customInstallUrl,
                 installParams: n.installParams,
                 integrationTypesConfig: n.integrationTypesConfig,
-                guildId: B,
+                guildId: U,
                 source: 'app_message_embed'
             });
-        }, [n.customInstallUrl, n.id, n.installParams, n.integrationTypesConfig, B]),
+        }, [n.customInstallUrl, n.id, n.installParams, n.integrationTypesConfig, U]),
         et = (0, h.ms)({
             applicationId: n.id,
             botUserId: null == L ? void 0 : L.id

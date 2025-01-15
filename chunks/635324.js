@@ -1,44 +1,44 @@
-t(47120);
-var i = t(200651),
-    a = t(149765),
-    o = t(481060),
-    r = t(570140),
-    l = t(700785);
+n(47120);
+var i = n(200651),
+    o = n(149765),
+    r = n(481060),
+    a = n(570140),
+    l = n(700785);
 __OVERLAY__ &&
-    r.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
-                clientId: n,
+                clientId: t,
                 authorizeProps: { authorizations: c, permissions: s, ...d }
             } = e,
-            u = 'OAuth2Authorize_'.concat(n, '_').concat(d.guildId, '_').concat(d.channelId);
+            u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
         function p(e) {
-            let { location: t } = e;
-            r.Z.dispatch({
+            let { location: n } = e;
+            a.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
-                clientId: n,
-                location: t
+                clientId: t,
+                location: n
             });
         }
-        let _ = l.Hn;
+        let h = l.Hn;
         try {
-            _ = a.vB(null != s ? s : 0);
+            h = o.vB(null != s ? s : 0);
         } catch (e) {}
-        (0, o.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
-                let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(t.bind(t, 69580));
-                return (n) =>
+                let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
+                return (t) =>
                     (0, i.jsx)(e, {
-                        ...n,
+                        ...t,
                         ...d,
                         authorizations: new Map(c),
-                        permissions: _,
+                        permissions: h,
                         callback: p
                     });
             },
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, o.closeModal)(u), p({});
+                    (0, r.closeModal)(u), p({});
                 }
             }
         );

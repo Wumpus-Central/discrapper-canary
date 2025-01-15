@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(200651);
 n(192379);
-var r = n(331595);
-function a(e) {
-    let { width: t = 80, height: n = 20, color: a = 'currentColor', foreground: s, ...l } = e;
+var s = n(331595);
+function r(e) {
+    let { width: t = 80, height: n = 20, color: r = 'currentColor', foreground: a, ...l } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, r.Z)(l),
+        ...(0, s.Z)(l),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
@@ -21,8 +21,8 @@ function a(e) {
                 children: (0, i.jsx)('path', {
                     d: 'm0 0h8v20h-8zm4 2c-1.1045695 0-2 .8954305-2 2v12c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-12c0-1.1045695-.8954305-2-2-2z',
                     fillRule: 'evenodd',
-                    fill: a,
-                    className: s
+                    fill: r,
+                    className: a
                 })
             }),
             (0, i.jsx)('rect', {

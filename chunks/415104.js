@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
@@ -16,14 +16,14 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(263740);
-function f(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: f } = e,
-        [g, h] = r.useState(!1),
-        [C, v] = r.useState([]),
+function g(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: g } = e,
+        [h, f] = r.useState(!1),
+        [v, C] = r.useState([]),
         j = (0, l.qb)(t),
         _ = (0, i._F)(),
-        b = r.useCallback(() => {
-            h(!0),
+        T = r.useCallback(() => {
+            f(!0),
                 _({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER,
@@ -31,7 +31,7 @@ function f(e) {
                 });
         }, [_, t.id, s]),
         E = r.useCallback(() => {
-            h(!1),
+            f(!1),
                 _({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER_OFF,
@@ -41,30 +41,30 @@ function f(e) {
     return (0, o.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
-            f.current = e;
+            g.current = e;
         },
         className: a()(x.container, n),
-        onMouseEnter: b,
+        onMouseEnter: T,
         onMouseLeave: E,
         children: [
             (0, o.jsx)(u.Z, {
                 quest: t,
-                isHovering: g,
-                errorHints: C,
+                isHovering: h,
+                errorHints: v,
                 warningHints: j
             }),
             (0, o.jsx)(p.Z, {
                 quest: t,
                 questContent: s,
-                isHovering: g,
+                isHovering: h,
                 contentPosition: c,
                 rowIndex: d,
-                onReceiveErrorHints: v
+                onReceiveErrorHints: C
             })
         ]
     });
 }
-function g(e) {
+function h(e) {
     return (0, o.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -72,7 +72,7 @@ function g(e) {
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
         children: (t) =>
-            (0, o.jsx)(f, {
+            (0, o.jsx)(g, {
                 ...e,
                 impressionRef: t
             })

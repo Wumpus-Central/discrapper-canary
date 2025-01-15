@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
-var r = n(331595);
+var s = n(331595);
 t.Z = (e) => {
-    let { className: t, backgroundColor: n, backgroundCircleSize: a, ...s } = e;
+    let { className: t, backgroundColor: n, backgroundCircleSize: r, ...a } = e;
     return (0, i.jsxs)('svg', {
         width: '100%',
         height: '100%',
@@ -10,10 +10,10 @@ t.Z = (e) => {
         fill: 'none',
         style: { overflow: 'visible' },
         xmlns: 'http://www.w3.org/2000/svg',
-        ...(0, r.Z)({ ...s }),
+        ...(0, s.Z)({ ...a }),
         children: [
             (0, i.jsx)('circle', {
-                r: null != a ? a : '40%',
+                r: null != r ? r : '40%',
                 cx: '50%',
                 cy: '50%',
                 className: n

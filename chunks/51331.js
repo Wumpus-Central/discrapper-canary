@@ -6,30 +6,30 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    l = n(481060),
     o = n(838436),
     c = n(241107);
 function d(e) {
     let { value: t, onChange: n, className: r, note: d, title: u, disabled: m } = e,
-        h = s.useRef(null),
         g = s.useRef(null),
+        h = s.useRef(null),
         p = s.useId(),
-        x = (0, i.jsx)(a.Switch, {
+        x = (0, i.jsx)(l.Switch, {
             id: p,
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: h,
+            innerRef: g,
             disabled: m
         });
     return (0, i.jsx)('div', {
-        className: l()(c.container, r, { [c.disabled]: m }),
-        children: (0, i.jsx)(a.FocusRing, {
+        className: a()(c.container, r, { [c.disabled]: m }),
+        children: (0, i.jsx)(l.FocusRing, {
             within: !0,
             offset: -4,
-            focusTarget: h,
-            ringTarget: g,
+            focusTarget: g,
+            ringTarget: h,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {

@@ -1,97 +1,97 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
     l = n(622535),
     o = n(481060),
     c = n(100527),
     d = n(906732),
-    u = n(464824),
-    g = n(214852),
-    m = n(626135),
-    f = n(533525),
+    u = n(433811),
+    m = n(214852),
+    g = n(626135),
+    h = n(533525),
     p = n(314684),
-    _ = n(794484),
-    h = n(536844),
-    x = n(342414),
+    x = n(794484),
+    f = n(536844),
+    _ = n(342414),
     E = n(938736),
-    b = n(391110),
-    C = n(71363),
-    v = n(781800),
-    T = n(981631),
-    N = n(388032),
-    I = n(368549),
-    S = n(865215);
-let R = 'SubscriberNitroHome';
+    C = n(391110),
+    T = n(71363),
+    S = n(781800),
+    b = n(981631),
+    I = n(388032),
+    N = n(368549),
+    v = n(865215);
+let A = 'SubscriberNitroHome';
 t.Z = () => {
-    (0, g.z)(u.X);
-    let e = r.useRef(null),
-        [t, n] = r.useState(!1),
-        { analyticsLocations: a } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [j, A] = r.useState(!1);
+    (0, m.z)(u.X);
+    let e = s.useRef(null),
+        [t, n] = s.useState(!1),
+        { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [j, R] = s.useState(!1);
     (0, p.FM)();
-    let P = (0, f.b)(R),
-        O = (0, E.TW)(R);
+    let O = (0, h.b)(A),
+        P = (0, E.TW)(A);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.AdvancedScrollerAuto, {
-                className: I.mainPageScroller,
+                className: N.mainPageScroller,
                 ref: e,
                 children: (0, i.jsx)('div', {
-                    className: I.container,
+                    className: N.container,
                     children: (0, i.jsxs)(d.Gt, {
-                        value: a,
+                        value: r,
                         children: [
-                            (0, i.jsx)(x.Z, {
-                                className: I.heroHeading,
-                                location: b.MQ.HOME
-                            }),
                             (0, i.jsx)(_.Z, {
-                                variant: b.R0.WHATS_NEW,
-                                className: s()(I.whatsNew, { [I.whatsNewWithOriginalHeroHeading]: !(P || O) }),
+                                className: N.heroHeading,
+                                location: C.MQ.HOME
+                            }),
+                            (0, i.jsx)(x.Z, {
+                                variant: C.R0.WHATS_NEW,
+                                className: a()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(O || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
-                            (0, i.jsx)(_.Z, {
-                                className: I.perksDiscoverability,
+                            (0, i.jsx)(x.Z, {
+                                className: N.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
-                                showAllPerksButton: (0, i.jsx)(v.Z, {
+                                showAllPerksButton: (0, i.jsx)(S.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: b.MQ.HOME
+                                    previousComponent: C.MQ.HOME
                                 })
                             }),
-                            (0, i.jsx)(h.Z, {
-                                className: I.giftNitro,
+                            (0, i.jsx)(f.Z, {
+                                className: N.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: T.ZY5.NITRO_HOME,
-                                    section: T.jXE.GIFT_BANNER
+                                    page: b.ZY5.NITRO_HOME,
+                                    section: b.jXE.GIFT_BANNER
                                 }
                             }),
-                            (0, i.jsx)('div', { className: I.footerSpacing }),
+                            (0, i.jsx)('div', { className: N.footerSpacing }),
                             (0, i.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !j && (m.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
+                                    e && !j && (g.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), R(!0));
                                 },
-                                children: (0, i.jsx)('div', { className: I.bottomOfPageVisibilitySensor })
+                                children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                             }),
                             (0, i.jsx)('img', {
-                                src: S,
-                                className: I.bottomIllustration,
+                                src: v,
+                                className: N.bottomIllustration,
                                 width: 112,
                                 height: 85,
-                                alt: N.intl.string(N.t.X4IxWF)
+                                alt: I.intl.string(I.t.X4IxWF)
                             })
                         ]
                     })
                 })
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(T.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: b.MQ.HOME
+                previousComponent: C.MQ.HOME
             })
         ]
     });

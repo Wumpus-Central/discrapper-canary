@@ -21,8 +21,8 @@ var l = t(278074),
     f = t(388032),
     v = t(975765),
     g = t(241822);
-let E = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
-function S(e) {
+let S = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+function E(e) {
     let { avatarDecoration: n } = e,
         {
             avatarDecorationSrc: t,
@@ -34,7 +34,7 @@ function S(e) {
         });
     return (0, i.jsx)('div', {
         className: v.giftMainAnimationWrapper,
-        children: (0, i.jsx)(E, {
+        children: (0, i.jsx)(S, {
             ...l,
             avatarDecoration: t,
             src: r,
@@ -66,7 +66,7 @@ function y(e) {
         { product: s } = (0, o.T)(null == n ? void 0 : n.id),
         a = null == s ? void 0 : s.items[0],
         c = (0, l.EQ)(a)
-            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(S, { avatarDecoration: e }))
+            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(E, { avatarDecoration: e }))
             .with({ type: r.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(j, { id: e.id }))
             .otherwise(() => null);
     return null != t && null == c

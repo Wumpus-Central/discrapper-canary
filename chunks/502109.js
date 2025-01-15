@@ -1,9 +1,9 @@
 n.d(t, {
     Ch: function () {
-        return P;
+        return _;
     },
     Tr: function () {
-        return _;
+        return P;
     }
 }),
     n(47120);
@@ -33,30 +33,30 @@ function E(e, t, n) {
         e
     );
 }
-let N = new o.Z('PaymentRequest'),
+let y = new o.Z('PaymentRequest'),
     f = Object.values({
         applePay: 'applePay',
         googlePay: 'googlePay',
         link: 'link',
         browserCard: 'browserCard'
     });
-class y extends r.Component {
+class N extends r.Component {
     validatePaymentRequest() {
         let { paymentRequest: e, canMakePaymentResult: t } = this.state;
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                N.error(e),
+                y.error(e),
                 {
                     available: !1,
                     errorMessage: e
                 }
             );
         }
-        if (null == t || !t.googlePay) {
+        if (null == t) {
             let e = 'Payment request is unavailable or has not been set up in this browser. ';
             return (
-                N.error(e, 'Stripe CanMakePaymentResult: ', t),
+                y.error(e, 'Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e
@@ -196,7 +196,7 @@ class y extends r.Component {
                     });
                 let a = await t.canMakePayment();
                 return (
-                    N.info('PaymentRequest availablity check', a),
+                    y.info('PaymentRequest availablity check', a),
                     this.setState(
                         {
                             submitting: !1,
@@ -213,7 +213,7 @@ class y extends r.Component {
             }),
             E(this, 'attemptPaymentRequest', () => {
                 if ((0, d.isDesktop)()) {
-                    this.props.onChooseType(m.HeQ.PAYMENT_REQUEST);
+                    this.props.onChooseType(m.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet);
                     return;
                 }
                 let { available: e } = this.validatePaymentRequest();
@@ -222,11 +222,11 @@ class y extends r.Component {
                     return;
                 }
                 let { paymentRequest: t } = this.state;
-                e && null != t && (t.show(), this.props.onChooseType(m.HeQ.PAYMENT_REQUEST));
+                e && null != t && (t.show(), this.props.onChooseType(m.HeQ.PAYMENT_REQUEST, this.paymentRequestWallet));
             });
     }
 }
-class _ extends y {
+class P extends N {
     isBrowserCompatible() {
         return (0, u.vu)() >= 61;
     }
@@ -234,7 +234,7 @@ class _ extends y {
         if (!this.isBrowserCompatible()) {
             let e = 'Browser does not support Google Pay';
             return (
-                N.warn(e),
+                y.warn(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -245,7 +245,7 @@ class _ extends y {
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                N.error(e),
+                y.error(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -255,7 +255,7 @@ class _ extends y {
         if (null == t || !t.googlePay) {
             let e = 'Google Pay is unavailable or has not been set up in this browser. ';
             return (
-                N.error(e, 'Stripe CanMakePaymentResult: ', t),
+                y.error(e, 'Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e
@@ -297,7 +297,7 @@ class _ extends y {
         super(...e), E(this, 'state', { ...this.initialState }), E(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class P extends y {
+class _ extends N {
     isBrowserCompatible() {
         return (0, u.G6)();
     }
@@ -305,7 +305,7 @@ class P extends y {
         if (!this.isBrowserCompatible()) {
             let e = 'Browser does not support Apple Pay';
             return (
-                N.warn(e),
+                y.warn(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -316,7 +316,7 @@ class P extends y {
         if (null == e) {
             let e = 'Payment request is not ready';
             return (
-                N.error(e),
+                y.error(e),
                 {
                     available: !1,
                     errorMessage: e
@@ -326,7 +326,7 @@ class P extends y {
         if (null == t || !t.applePay) {
             let e = 'Apple Pay is unavailable or has not been set up in this browser. ';
             return (
-                N.error(e, 'Apple Pay Stripe CanMakePaymentResult: ', t),
+                y.error(e, 'Apple Pay Stripe CanMakePaymentResult: ', t),
                 {
                     available: !1,
                     errorMessage: e

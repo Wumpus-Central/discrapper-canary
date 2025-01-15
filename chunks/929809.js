@@ -1,20 +1,20 @@
 n.d(e, {
     H: function () {
-        return i;
+        return l;
     },
     c: function () {
-        return r;
+        return i;
     }
 });
-var l = n(570140);
-function r(t) {
-    l.Z.wait(() =>
-        l.Z.dispatch({
+var r = n(570140);
+function i(t) {
+    r.Z.wait(() =>
+        r.Z.dispatch({
             type: 'NUF_NEW_USER',
             newUserType: t
         })
     );
 }
-function i() {
-    l.Z.wait(() => l.Z.dispatch({ type: 'NUF_COMPLETE' }));
+function l() {
+    r.Z.wait(() => r.Z.dispatch({ type: 'NUF_COMPLETE' }));
 }

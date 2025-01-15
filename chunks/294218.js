@@ -27,7 +27,7 @@ var i = n(200651),
     R = n(46124);
 t.Z = r.memo(function (e) {
     var t, n;
-    let { message: r, compact: l = !1, className: Z, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
+    let { message: r, compact: l = !1, className: Z, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: D, subscribeToComponentDispatch: k, renderThreadAccessory: U, trackAnnouncementViews: B = !1, ...w } = e,
         F = r.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         G = r.isFirstMessageInForumPost(O),
         V = (0, d.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
@@ -51,7 +51,7 @@ t.Z = r.memo(function (e) {
         $ = (0, x.Z)({
             message: r,
             channel: O,
-            enabled: U
+            enabled: B
         });
     if ((0, _.Z)(r, J)) return null;
     let ee = (0, C.iG)(r),
@@ -79,7 +79,7 @@ t.Z = r.memo(function (e) {
         }),
         onContextMenu: P,
         onClick: L,
-        hasThread: B && null != Q && r.hasFlag(j.iLy.HAS_THREAD),
+        hasThread: U && null != Q && r.hasFlag(j.iLy.HAS_THREAD),
         hasReply: r.type === j.uaV.REPLY,
         'aria-labelledby': ee,
         'aria-describedby': et,

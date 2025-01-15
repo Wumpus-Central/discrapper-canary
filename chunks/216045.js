@@ -1,114 +1,114 @@
 n.d(t, {
     Z: function () {
-        return F;
+        return M;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(512722),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(622535),
     c = n(481060),
     d = n(570140),
     u = n(232567),
     m = n(809206),
-    h = n(497321),
-    g = n(634894),
+    g = n(497321),
+    h = n(634894),
     p = n(100527),
     x = n(906732),
-    S = n(475977),
-    T = n(957730),
+    f = n(475977),
+    _ = n(957730),
     E = n(53691),
     C = n(267717),
-    _ = n(296810),
-    f = n(921813),
-    I = n(610794),
-    N = n(935147),
-    A = n(246946),
-    b = n(25990),
-    v = n(594174),
+    T = n(296810),
+    S = n(921813),
+    b = n(610794),
+    I = n(935147),
+    N = n(246946),
+    v = n(25990),
+    A = n(594174),
     j = n(626135),
-    O = n(74538),
-    R = n(413182),
+    R = n(74538),
+    O = n(413182),
     P = n(695346),
-    D = n(265159),
-    y = n(532495),
+    y = n(265159),
+    D = n(532495),
     B = n(981631),
-    L = n(388032),
-    Z = n(676258);
-function F() {
-    let e = (0, a.e7)([v.default], () => {
-        let e = v.default.getCurrentUser();
-        return l()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
+    Z = n(388032),
+    L = n(676258);
+function M() {
+    let e = (0, l.e7)([A.default], () => {
+        let e = A.default.getCurrentUser();
+        return a()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     s.useEffect(() => {
         (0, u.In)(e.id);
     }, [e.id]);
-    let t = (0, a.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        { pendingBio: n, ...r } = (0, a.cj)([b.Z], () => b.Z.getAllPending()),
-        F = (0, a.e7)([b.Z], () => b.Z.showNotice()),
-        M = P.dN.useSetting() && null != n ? T.ZP.parse(void 0, n).content : n,
-        k = O.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: w } = (0, x.ZP)(p.Z.PROFILE);
+    let t = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        { pendingBio: n, ...r } = (0, l.cj)([v.Z], () => v.Z.getAllPending()),
+        M = (0, l.e7)([v.Z], () => v.Z.showNotice()),
+        k = P.dN.useSetting() && null != n ? _.ZP.parse(void 0, n).content : n,
+        w = R.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: F } = (0, x.ZP)(p.Z.PROFILE);
     s.useEffect(() => () => d.Z.wait(m.W3), []);
     let U = 'UserSettingsProfileCustomization';
-    (0, g.j)({
+    (0, h.j)({
         location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, g.j)({
+        (0, h.j)({
             location: U + ' auto off',
             autoTrackExposure: !1
         });
     let [V, G] = s.useState(!1),
-        { showRedesign: Y } = R.b.useExperiment({ location: 'profile customization' }),
-        H = !k,
-        z = s.useRef(null);
+        { showRedesign: H } = O.b.useExperiment({ location: 'profile customization' }),
+        Y = !w,
+        W = s.useRef(null);
     return t
-        ? (0, i.jsx)(h.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(x.Gt, {
-              value: w,
+              value: F,
               children: [
-                  (0, i.jsx)(S.Z, {}),
-                  (0, i.jsx)(_.Z, {
-                      profilePreview: (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(f.Z, {}),
+                  (0, i.jsx)(T.Z, {
+                      profilePreview: (0, i.jsx)(S.Z, {
                           user: e,
-                          canUsePremiumCustomization: k,
-                          onUpsellClick: D.Z,
-                          pendingBio: M,
+                          canUsePremiumCustomization: w,
+                          onUpsellClick: y.Z,
+                          pendingBio: k,
                           ...r
                       }),
-                      children: (0, i.jsx)(y.Z, {})
+                      children: (0, i.jsx)(D.Z, {})
                   }),
-                  Y && (0, i.jsx)(I.Z, {}),
+                  H && (0, i.jsx)(b.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => G(e),
                       threshold: 0.25,
-                      active: H,
+                      active: Y,
                       children: (0, i.jsx)('div', {
-                          ref: z,
-                          children: (0, i.jsx)(N.Z, {
+                          ref: W,
+                          children: (0, i.jsx)(I.Z, {
                               user: e,
-                              shouldShow: H,
+                              shouldShow: Y,
                               isVisible: V
                           })
                       })
                   }),
-                  H &&
-                      !F &&
+                  Y &&
+                      !M &&
                       (0, i.jsx)(E.p, {
-                          className: Z.floatingNitroUpsell,
-                          showUpsell: H && !V,
-                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, C.openPremiumTryItOutProfileUpsell)() }),
+                          className: L.floatingNitroUpsell,
+                          showUpsell: Y && !V,
+                          text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, C.openPremiumTryItOutProfileUpsell)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(c.ShinyButton, {
-                              className: Z.floatingNitroButton,
-                              innerClassName: Z.floatingNitroButtonInner,
+                              className: L.floatingNitroButton,
+                              innerClassName: L.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  j.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == z || null === (e = z.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  j.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: c.Button.Colors.GREEN,
                               size: c.ButtonSizes.MEDIUM,
@@ -120,7 +120,7 @@ function F() {
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: L.intl.string(L.t.uw9zIy)
+                                      children: Z.intl.string(Z.t.uw9zIy)
                                   })
                               ]
                           })

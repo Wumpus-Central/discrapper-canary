@@ -18,7 +18,7 @@ var o = n(706454),
 let h = (e) => {
     let t,
         { billingAddressInfo: n, billingError: h, onBillingAddressChange: A, paymentSourceType: E } = e,
-        N = null != h && (null == h.code || (0, u.ly)(h) === u.Rg.ADDRESS),
+        y = null != h && (null == h.code || (0, u.ly)(h) === u.Rg.ADDRESS),
         f = (0, l.e7)([o.default], () => o.default.locale);
     switch (E) {
         case d.HeQ.GIROPAY:
@@ -38,12 +38,12 @@ let h = (e) => {
         default:
             t = 'en-US' === f ? i.ZP.Layouts.MODAL_US : i.ZP.Layouts.MODAL_INTL;
     }
-    let y = (0, l.e7)([c.Z], () => c.Z.ipCountryCode);
+    let N = (0, l.e7)([c.Z], () => c.Z.ipCountryCode);
     return (
-        0 === n.country.length && (n.country = null != y ? y : ''),
+        0 === n.country.length && (n.country = null != N ? N : ''),
         (0, a.jsxs)(r.Fragment, {
             children: [
-                N
+                y
                     ? (0, a.jsx)(s.FormErrorBlock, {
                           className: m.errorBlock,
                           children: p.intl.string(p.t.vZ8y7u)

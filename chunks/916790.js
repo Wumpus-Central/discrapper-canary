@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 }),
     n(47120);
@@ -45,7 +45,7 @@ let S = [
         }
     }
 ];
-function y(e) {
+function N(e) {
     let { actionLog: t } = e,
         n = a.useMemo(
             () =>
@@ -62,7 +62,7 @@ function y(e) {
         })
     });
 }
-let N = [
+let y = [
     {
         id: 'action',
         name: 'Action',
@@ -102,7 +102,7 @@ let N = [
         name: 'Store Handlers',
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(y, { actionLog: t });
+            return (0, r.jsx)(N, { actionLog: t });
         }
     }
 ];
@@ -112,7 +112,7 @@ function k(e) {
             () =>
                 t.error
                     ? [
-                          ...N,
+                          ...y,
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
@@ -143,7 +143,7 @@ function k(e) {
                               }
                           }
                       ]
-                    : N,
+                    : y,
             [t]
         ),
         { TabBar: o, renderSelectedTab: s } = (0, j.Z)({ tabs: l }, [l]);
@@ -167,7 +167,7 @@ function k(e) {
         ]
     });
 }
-let E = [
+let I = [
     {
         key: 'action',
         cellClassName: C.actionColumn,
@@ -187,7 +187,7 @@ let E = [
         }
     }
 ];
-function I() {
+function E() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
@@ -244,7 +244,7 @@ function I() {
                 ),
             []
         ),
-        y = a.useCallback(
+        N = a.useCallback(
             (e) => {
                 m(s), b(e);
             },
@@ -260,8 +260,8 @@ function I() {
         a.useEffect(() => {
             _.current = null;
         }, []);
-    let N = t.trim().length > 0,
-        I = a.useMemo(() => (N ? x : p ? c : s), [s, x, N, p, c]);
+    let y = t.trim().length > 0,
+        E = a.useMemo(() => (y ? x : p ? c : s), [s, x, y, p, c]);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(T.panel, C.panel),
@@ -274,7 +274,7 @@ function I() {
                         className: C.pausedEvents,
                         children: (0, r.jsx)(d.Switch, {
                             checked: !p,
-                            onChange: (e) => y(!e)
+                            onChange: (e) => N(!e)
                         })
                     }),
                     (0, r.jsx)(d.SearchBar, {
@@ -287,8 +287,8 @@ function I() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: E,
-                data: I,
+                columns: I,
+                data: E,
                 selectedRowKey: null == g ? void 0 : g.id.toString(),
                 onClickRow: (e) => j(e.actionLog)
             }),

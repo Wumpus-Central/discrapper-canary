@@ -10,8 +10,8 @@ var i,
     d = n(924826),
     h = n(442837),
     p = n(902704),
-    f = n(481060),
-    m = n(925549),
+    m = n(481060),
+    f = n(925549),
     g = n(607070),
     v = n(367907),
     C = n(453542),
@@ -245,9 +245,9 @@ class k extends (l = o.Component) {
         return (0, a.jsx)(u.SJ, {
             children: (i) => {
                 let { ref: l, role: r, ...o } = i;
-                return (0, a.jsx)(f.FocusJumpSection, {
+                return (0, a.jsx)(m.FocusJumpSection, {
                     children: (i) =>
-                        (0, a.jsx)(f.List, {
+                        (0, a.jsx)(m.List, {
                             fade: !0,
                             innerRole: r,
                             innerAriaLabel: R.intl.string(R.t.YUU0RE),
@@ -317,7 +317,7 @@ class k extends (l = o.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && m.Z.updateChannelListScroll(L.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(L.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -371,7 +371,7 @@ class k extends (l = o.Component) {
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
                                       iconClassName: D.privateChannelRecipientsInviteButtonIcon,
-                                      icon: f.PlusSmallIcon,
+                                      icon: m.PlusSmallIcon,
                                       subscribeToGlobalHotkey: !0
                                   })
                               ]
@@ -403,11 +403,11 @@ class k extends (l = o.Component) {
 G(k, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let t = (0, Z.Q3)('ConnectedPrivateChannelsList'),
-        { density: n } = (0, f.useThemeContext)(),
+        { density: n } = (0, m.useThemeContext)(),
         { version: i, theme: l, children: r, showDMHeader: s } = e,
         c = o.Children.count(r),
         p = P.Z.getMutablePrivateChannels(),
-        m = (0, y.k1)(p),
+        f = (0, y.k1)(p),
         v = (0, h.Wu)(
             [w.Z, E.Z, j.Z],
             () => {
@@ -474,7 +474,7 @@ t.Z = (e) => {
         children: (0, a.jsx)(k, {
             density: n,
             isVisualRefreshEnabled: t,
-            channels: m,
+            channels: f,
             privateChannelIds: v,
             listRef: x,
             theme: l,

@@ -32,10 +32,10 @@ var i,
     y = n(768581),
     O = n(358085),
     M = n(804739),
-    k = n(410575),
-    D = n(981631),
-    B = n(701488);
-function U(e, t, n) {
+    D = n(410575),
+    k = n(981631),
+    U = n(701488);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +61,7 @@ class F extends (i = l.PureComponent) {
             : y.ZP.getApplicationIconURL({
                   id: n.id,
                   icon: null != t ? t.coverImage : n.coverImage,
-                  size: B.cc
+                  size: U.cc
               });
     }
     handleOpenSpotifyTrack(e) {
@@ -78,15 +78,15 @@ class F extends (i = l.PureComponent) {
         return null != t && null != t.primarySkuId && !e && O.isPlatformEmbedded;
     }
     render() {
-        return (0, r.jsx)(k.Z, {
-            section: k.Z.Sections.APPLICATION_EMBED,
+        return (0, r.jsx)(D.Z, {
+            section: D.Z.Sections.APPLICATION_EMBED,
             children: this.renderEmbed()
         });
     }
     constructor(...e) {
         super(...e),
-            U(this, 'state', { sending: !1 }),
-            U(this, 'handleJoin', () => {
+            B(this, 'state', { sending: !1 }),
+            B(this, 'handleJoin', () => {
                 let { activity: e, analyticsLocations: t, userId: n, message: i, guildId: r, channelId: l } = this.props;
                 if (null != e && null != n && null != i && null != e.session_id && null != e.application_id) {
                     var a, o;
@@ -96,14 +96,14 @@ class F extends (i = l.PureComponent) {
                         applicationId: e.application_id,
                         channelId: l,
                         messageId: i.id,
-                        source: D.Sbl.MESSAGE_EMBED,
+                        source: k.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
                         partyId: null === (a = e.party) || void 0 === a ? void 0 : a.id,
-                        embedded: (0, h.Z)(e, D.xjy.EMBEDDED)
+                        embedded: (0, h.Z)(e, k.xjy.EMBEDDED)
                     }),
                         (0, p.Z)({
-                            type: D.q5t.JOIN,
-                            source: D.Sbl.MESSAGE_EMBED,
+                            type: k.q5t.JOIN,
+                            source: k.Sbl.MESSAGE_EMBED,
                             userId: n,
                             guildId: r,
                             channelId: l,
@@ -114,26 +114,26 @@ class F extends (i = l.PureComponent) {
                         });
                 }
             }),
-            U(this, 'handleInvite', async () => {
+            B(this, 'handleInvite', async () => {
                 let { activity: e, channelId: t } = this.props;
                 if (null != e && null != t)
                     try {
                         this.setState({ sending: !0 }),
                             await s.Z.sendActivityInvite({
-                                type: D.mFx.JOIN,
+                                type: k.mFx.JOIN,
                                 channelId: t,
                                 activity: e,
-                                location: D.Sbl.MESSAGE_EMBED
+                                location: k.Sbl.MESSAGE_EMBED
                             });
                     } finally {
                         this.setState({ sending: !1 });
                     }
             }),
-            U(this, 'handleSync', () => {
+            B(this, 'handleSync', () => {
                 let { activity: e, userId: t } = this.props;
                 null != e && null != t && d.Z_(e, t);
             }),
-            U(this, 'handleDownloadApp', () => {
+            B(this, 'handleDownloadApp', () => {
                 (0, o.openModal)((e) =>
                     (0, r.jsx)(g.default, {
                         source: 'Game Invite',
@@ -141,7 +141,7 @@ class F extends (i = l.PureComponent) {
                     })
                 );
             }),
-            U(this, 'renderUserPopout', (e, t) => {
+            B(this, 'renderUserPopout', (e, t) => {
                 let { channelId: n, guildId: i, message: l, analyticsLocations: a } = this.props;
                 return null == n
                     ? null
@@ -154,7 +154,7 @@ class F extends (i = l.PureComponent) {
                           newAnalyticsLocations: a
                       });
             }),
-            U(this, 'renderSpotifyJoinButton', (e) => {
+            B(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, r.jsx)(x.Z, {
                     guildId: null != n ? n : void 0,
@@ -163,15 +163,15 @@ class F extends (i = l.PureComponent) {
                     ...e
                 });
             }),
-            U(this, 'renderCustomButton', (e) => {
+            B(this, 'renderCustomButton', (e) => {
                 let { application: t } = this.props;
                 return (0, r.jsx)(u.Z, {
                     ...e,
-                    source: D.Sbl.MESSAGE_EMBED,
+                    source: k.Sbl.MESSAGE_EMBED,
                     application: t
                 });
             }),
-            U(this, 'renderEmbed', () => {
+            B(this, 'renderEmbed', () => {
                 let e;
                 let { activity: t, partyId: n, myPartyId: i, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: d, className: u, channelId: m, message: h, hideParty: f, isSyncable: p, isLaunchable: g, guildId: E } = this.props;
                 if (null != l) e = l.name;
@@ -213,14 +213,14 @@ class F extends (i = l.PureComponent) {
             });
     }
 }
-U(F, 'defaultProps', { isPreview: !1 }),
+B(F, 'defaultProps', { isPreview: !1 }),
     (t.Z = a.ZP.connectStores([I.Z, A.Z, R.Z, S.Z, P.Z, j.Z, E.Z, L.Z, Z.default, b.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: r, userId: l, guildId: a } = e,
             { id: o } = null != i ? i : {},
             s = null != t && null != t.party && t.party.id === r ? A.Z.getParty(t.party.id) : null,
-            c = null != o ? R.Z.getApplicationActivity(o) : R.Z.findActivity((e) => e.type === D.IIU.LISTENING),
+            c = null != o ? R.Z.getApplicationActivity(o) : R.Z.findActivity((e) => e.type === k.IIU.LISTENING),
             d = !1;
-        null != o && (d = P.Z.getState(o, D.mFx.JOIN) === D.OcF.LOADING);
+        null != o && (d = P.Z.getState(o, k.mFx.JOIN) === k.OcF.LOADING);
         let u = Array.from(null != s ? s : []).map((e) => {
                 let t = null != a ? b.ZP.getMember(a, e) : null,
                     n = null != t ? t.nick : null,

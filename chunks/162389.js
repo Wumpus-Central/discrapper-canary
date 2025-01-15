@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 });
 var i = n(200651),
@@ -9,8 +9,8 @@ var i = n(200651),
     r = n.n(s),
     a = n(442837),
     o = n(692547),
-    c = n(481060),
-    d = n(787014),
+    d = n(481060),
+    c = n(787014),
     u = n(603211),
     h = n(710344),
     m = n(496675),
@@ -19,16 +19,16 @@ var i = n(200651),
     x = n(981631),
     f = n(388032),
     v = n(28772);
-function C(e) {
+function j(e) {
     let { channel: t } = e,
         s = (0, a.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         g = t.availableTags.length > 0,
-        C = l.useCallback(() => {
+        j = l.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
             s &&
                 !e &&
-                (0, c.openModalLazy)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: e } = await n.e('21971').then(n.bind(n, 915774));
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -41,7 +41,7 @@ function C(e) {
         b = l.useCallback(
             (e) => {
                 s &&
-                    (0, c.openModalLazy)(async () => {
+                    (0, d.openModalLazy)(async () => {
                         let { default: l } = await n.e('21971').then(n.bind(n, 915774));
                         return (n) =>
                             (0, i.jsx)(l, {
@@ -59,7 +59,7 @@ function C(e) {
             handleDragReset: N,
             handleDragComplete: S
         } = (0, h.Z)(t.availableTags, (e) => {
-            (0, d.pW)({ availableTags: e });
+            (0, c.pW)({ availableTags: e });
         });
     return (0, i.jsxs)('div', {
         className: v.tags,
@@ -67,7 +67,7 @@ function C(e) {
             g
                 ? t.availableTags.map((e) =>
                       (0, i.jsx)(
-                          j,
+                          C,
                           {
                               tag: e,
                               availableTags: t.availableTags,
@@ -82,10 +82,10 @@ function C(e) {
                   )
                 : null,
             g
-                ? (0, i.jsx)(c.Clickable, {
-                      onClick: C,
+                ? (0, i.jsx)(d.Clickable, {
+                      onClick: j,
                       className: r()(v.addTags, { [v.disabled]: !s || u }),
-                      children: (0, i.jsx)(c.PlusSmallIcon, {
+                      children: (0, i.jsx)(d.PlusSmallIcon, {
                           size: 'custom',
                           'aria-label': f.intl.string(f.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
@@ -93,17 +93,17 @@ function C(e) {
                           height: 20
                       })
                   })
-                : (0, i.jsx)(c.Button, {
+                : (0, i.jsx)(d.Button, {
                       disabled: !s,
-                      onClick: C,
+                      onClick: j,
                       children: f.intl.string(f.t['/jubeH'])
                   })
         ]
     });
 }
-function j(e) {
-    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: s, onDragComplete: a, onDragStart: o, onDragReset: c } = e,
-        d = n.findIndex((e) => e.id === t.id),
+function C(e) {
+    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: s, onDragComplete: a, onDragStart: o, onDragReset: d } = e,
+        c = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
             dragSourcePosition: m,
@@ -111,16 +111,16 @@ function j(e) {
             setIsDraggable: x
         } = (0, u.Z)({
             type: 'CHANNEL_SETTINGS_FORUM_TAGS',
-            index: d,
+            index: c,
             optionId: t.id,
             onDragStart: o,
             onDragComplete: a,
-            onDragReset: c
+            onDragReset: d
         });
     return (0, i.jsx)('div', {
         className: r()(v.container, {
-            [v.dropIndicatorBefore]: null != m && d < m,
-            [v.dropIndicatorAfter]: null != m && d > m
+            [v.dropIndicatorBefore]: null != m && c < m,
+            [v.dropIndicatorAfter]: null != m && c > m
         }),
         ref: (e) => h(p(e)),
         onMouseEnter: () => x(l),

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return x;
     }
 });
 var l = t(200651);
@@ -41,7 +41,7 @@ let u = () =>
             })
         ]
     });
-function m(e) {
+function x(e) {
     let { onClick: n } = e;
     return (0, i.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
         ? null

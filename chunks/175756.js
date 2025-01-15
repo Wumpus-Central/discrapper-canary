@@ -2,14 +2,14 @@ n(47120);
 var i = n(192379),
     s = n(597688),
     r = n(884697),
-    l = n(223143);
+    a = n(223143);
 t.Z = (e) => {
     let [t, n] = i.useState(),
-        { categories: a } = (0, l.ZP)({ location: 'useTryItOutProfileEffectId' });
+        { categories: l } = (0, a.ZP)({ location: 'useTryItOutProfileEffectId' });
     return (
         i.useEffect(() => {
-            (null == t || 0 === t.size) && n(a);
-        }, [a, t]),
+            (null == t || 0 === t.size) && n(l);
+        }, [l, t]),
         i.useMemo(() => {
             if (null != e) return e;
             if (null == t) return;

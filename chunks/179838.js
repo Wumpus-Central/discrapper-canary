@@ -1,9 +1,9 @@
 e.d(n, {
     L: function () {
-        return i;
+        return o;
     }
 });
 var a = e(782568);
-function i(t) {
+function o(t) {
     return (0, a.Z)(t);
 }

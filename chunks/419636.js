@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(299379),
-    l = n(447293),
-    a = n(58839),
+    a = n(447293),
+    l = n(58839),
     o = n(981631),
     c = n(274497);
 let d = { offset: { top: -8 } };
@@ -69,7 +69,7 @@ function u() {
                 href: o.fK7.YOUTUBE_URL,
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(a.Z, {
+                children: (0, i.jsx)(l.Z, {
                     width: 16,
                     height: 16,
                     foreground: c.foreground,
@@ -84,7 +84,7 @@ function u() {
                 href: o.fK7.TIKTOK_URL,
                 className: c.link,
                 focusProps: d,
-                children: (0, i.jsx)(l.Z, {
+                children: (0, i.jsx)(a.Z, {
                     width: 16,
                     height: 16,
                     foreground: c.foreground,

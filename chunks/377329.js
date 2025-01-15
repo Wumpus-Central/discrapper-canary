@@ -12,35 +12,35 @@ var l = t(200651),
     c = t(592125),
     d = t(430824),
     u = t(594174),
-    m = t(236373),
-    x = t(230900),
+    x = t(236373),
+    m = t(230900),
     h = t(405613),
     g = t(460838),
     v = t(388032),
     j = t(959320);
 function f(e) {
     var n, t, f;
-    let { guildId: p, guildEvent: I, guildEventId: N, error: C } = e,
-        E = i.useMemo(() => (0, m.Gb)(I, p), [I, p]),
-        { channel_id: S, name: T, image: y, description: b } = E,
-        Z = (0, r.e7)([c.Z], () => c.Z.getChannel(S), [S]),
-        R = (0, r.e7)([d.Z], () => d.Z.getGuild(p), [p]),
-        _ = (0, x.cS)(E),
+    let { guildId: N, guildEvent: I, guildEventId: p, error: C } = e,
+        E = i.useMemo(() => (0, x.Gb)(I, N), [I, N]),
+        { channel_id: T, name: S, image: Z, description: b } = E,
+        y = (0, r.e7)([c.Z], () => c.Z.getChannel(T), [T]),
+        _ = (0, r.e7)([d.Z], () => d.Z.getGuild(N), [N]),
+        R = (0, m.cS)(E),
         k = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
-        A = (0, r.e7)([o.Z], () => o.Z.isLurking(p), [p]),
-        D = (0, s.KS)(Z, R);
+        A = (0, r.e7)([o.Z], () => o.Z.isLurking(N), [N]),
+        D = (0, s.KS)(y, _);
     return (0, l.jsxs)('div', {
         className: j.content,
         children: [
             (0, l.jsx)(g.Z, {
                 className: j.previewCard,
-                guild: R,
-                channel: Z,
-                location: null != _ ? _ : void 0,
+                guild: _,
+                channel: y,
+                location: null != R ? R : void 0,
                 creator: k,
-                name: T,
+                name: S,
                 description: b,
-                imageSource: ((t = (0, m.Gb)(I, p, N)), null == (f = y) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
+                imageSource: ((t = (0, x.Gb)(I, N, p)), null == (f = Z) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
                 isActive: !1,
                 isUserLurking: A,
                 speakers: [],
@@ -64,7 +64,7 @@ function f(e) {
                             null != location
                                 ? v.intl.string(v.t.KDPFi4)
                                 : v.intl.format(v.t.f55NX1, {
-                                      channelName: null !== (n = null == Z ? void 0 : Z.name) && void 0 !== n ? n : '',
+                                      channelName: null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
                                       channelHook: () => {
                                           var e;
                                           return (0, l.jsxs)('div', {
@@ -85,7 +85,7 @@ function f(e) {
                                                             width: 18,
                                                             className: j.locationIcon
                                                         }),
-                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : _
+                                                  null !== (e = null == y ? void 0 : y.name) && void 0 !== e ? e : R
                                               ]
                                           });
                                       }

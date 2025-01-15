@@ -16,8 +16,8 @@ var i = n(200651),
     d = n(937111),
     h = n(914010),
     p = n(289090),
-    f = n(727258),
-    m = n(234383),
+    m = n(727258),
+    f = n(234383),
     g = n(179809),
     v = n(588275),
     C = n(388032),
@@ -97,16 +97,16 @@ function _(e) {
         [_, Z] = l.useState(!1),
         b = (0, r.e7)([h.Z], () => h.Z.getGuildId()),
         S = (0, r.e7)([d.Z], () => d.Z.hasFetchedRequestToJoinGuilds),
-        N = (0, m.Z)(),
+        N = (0, f.Z)(),
         E = (0, o.Z)(b),
         y = l.useMemo(() => {
-            let e = (0, f.qQ)({
+            let e = (0, m.qQ)({
                 folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: C.intl.string(C.t['scsU+v']),
                 expanded: _,
                 guildIds: []
             });
-            for (let t of N) e.children.push((0, f.Mg)(t, e.id));
+            for (let t of N) e.children.push((0, m.Mg)(t, e.id));
             return e;
         }, [N, _]);
     l.useEffect(() => {
@@ -137,7 +137,7 @@ function _(e) {
                       className: x.pendingIcon
                   }),
                   renderChildNode: function (e, t) {
-                      return e.type !== f.eD.GUILD
+                      return e.type !== m.eD.GUILD
                           ? null
                           : (0, i.jsx)(
                                 v.Z,

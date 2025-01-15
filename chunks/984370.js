@@ -40,10 +40,10 @@ async function P() {
     }
 }
 function L(e) {
-    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: d, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: k, hideSearch: D, showDivider: B } = e,
-        U = null == r || (0, R.AB)(r) ? null : r,
-        w = (0, o.e7)([x.Z], () => x.Z.isInChannel(U) || !1),
-        F = (0, o.e7)([m.Z], () => null != U && m.Z.getParticipantsListOpen(U)),
+    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: d, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: D, hideSearch: k, showDivider: U } = e,
+        B = null == r || (0, R.AB)(r) ? null : r,
+        w = (0, o.e7)([x.Z], () => x.Z.isInChannel(B) || !1),
+        F = (0, o.e7)([m.Z], () => null != B && m.Z.getParticipantsListOpen(B)),
         { hasBugReporterAccess: G } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: V, inInbox: H } = g.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: z } = (0, h.Z)({ location: 'HeaderBar' }),
@@ -53,14 +53,14 @@ function L(e) {
         innerClassName: d,
         toolbar: (function () {
             if (null == v) return null;
-            let e = null != r && !D;
+            let e = null != r && !k;
             return a.tq
                 ? L
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           v,
                           e ? (0, i.jsx)(C.Z, { className: Z.search }, null != c ? c : r) : null,
-                          B && (0, i.jsx)(T.ZP.Divider, {}),
+                          U && (0, i.jsx)(T.ZP.Divider, {}),
                           !W && (0, i.jsx)(b.Z, {}),
                           !W && (0, i.jsx)(f.Z, { canShowReminder: !0 }),
                           !W && (0, i.jsx)(_.Z, {}),
@@ -68,12 +68,12 @@ function L(e) {
                           !W && (G ? (0, i.jsx)(A.Z, {}) : (0, i.jsx)(S.Z, {})),
                           z &&
                               w &&
-                              null != U &&
+                              null != B &&
                               !F &&
                               l === j.d4z.GROUP_DM &&
                               (0, i.jsxs)('div', {
                                   className: Z.controlButtonWrapper,
-                                  children: [(0, i.jsx)(T.ZP.Divider, {}), (0, i.jsx)(I.Z, { onClick: () => s.Z.toggleParticipantsList(U, !F) })]
+                                  children: [(0, i.jsx)(T.ZP.Divider, {}), (0, i.jsx)(I.Z, { onClick: () => s.Z.toggleParticipantsList(B, !F) })]
                               })
                       ]
                   });
@@ -82,7 +82,7 @@ function L(e) {
         onDoubleClick: P,
         'aria-label': y,
         'aria-labelledby': O,
-        role: k,
+        role: D,
         scrollable: M,
         children: t
     });

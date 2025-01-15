@@ -10,8 +10,8 @@ var l = n(399606),
     d = n(556296),
     h = n(13140),
     p = n(924557),
-    f = n(435064),
-    m = n(39604),
+    m = n(435064),
+    f = n(39604),
     g = n(981631),
     v = n(388032),
     C = n(703757);
@@ -22,7 +22,7 @@ function x(e) {
     });
 }
 function I() {
-    (0, m.C1)();
+    (0, f.C1)();
 }
 let _ = (e) => {
     let { keybindString: t, children: n } = e,
@@ -82,9 +82,9 @@ let _ = (e) => {
 t.Z = () => {
     let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
         t = (0, p.Go)(),
-        { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([f.Z], () => ({
-            clipsEnabled: f.Z.getSettings().clipsEnabled,
-            isAtMaxSavingClipsOperations: f.Z.getIsAtMaxSaveClipOperations()
+        { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
+            clipsEnabled: m.Z.getSettings().clipsEnabled,
+            isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
         })),
         o = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
     if (!(t && n) || null == o || e) return null;

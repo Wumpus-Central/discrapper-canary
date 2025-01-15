@@ -1,28 +1,28 @@
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    l = n(481060),
     o = n(388032),
     c = n(662362);
 t.Z = s.forwardRef(function (e, t) {
-    let { currentPageIndex: n, numPages: s, onChangePage: r, children: d, className: u, showPageCount: m = !0, ...h } = e,
-        g = n <= 0,
+    let { currentPageIndex: n, numPages: s, onChangePage: r, children: d, className: u, showPageCount: m = !0, ...g } = e,
+        h = n <= 0,
         p = n >= s - 1;
     return (0, i.jsxs)('div', {
-        className: l()(c.__invalid_paginator, u),
+        className: a()(c.__invalid_paginator, u),
         ref: t,
-        ...h,
+        ...g,
         children: [
             d,
             (0, i.jsxs)('div', {
                 className: c.pageActions,
                 children: [
-                    (0, i.jsx)(a.Clickable, {
-                        className: l()(c.pageButtonPrev, { [c.disabled]: g }),
-                        tabIndex: g ? -1 : 0,
-                        onClick: g ? void 0 : () => r(n - 1),
-                        children: (0, i.jsx)(a.ChevronSmallLeftIcon, {
+                    (0, i.jsx)(l.Clickable, {
+                        className: a()(c.pageButtonPrev, { [c.disabled]: h }),
+                        tabIndex: h ? -1 : 0,
+                        onClick: h ? void 0 : () => r(n - 1),
+                        children: (0, i.jsx)(l.ChevronSmallLeftIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: c.pageButtonIcon,
@@ -41,11 +41,11 @@ t.Z = s.forwardRef(function (e, t) {
                               className: c.pageIndicator,
                               children: o.intl.format(o.t.bKI77e, { currentPage: n + 1 })
                           }),
-                    (0, i.jsx)(a.Clickable, {
-                        className: l()(c.pageButtonNext, { [c.disabled]: p }),
+                    (0, i.jsx)(l.Clickable, {
+                        className: a()(c.pageButtonNext, { [c.disabled]: p }),
                         tabIndex: p ? -1 : 0,
                         onClick: p ? void 0 : () => r(n + 1),
-                        children: (0, i.jsx)(a.ChevronSmallRightIcon, {
+                        children: (0, i.jsx)(l.ChevronSmallRightIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: c.pageButtonIcon,

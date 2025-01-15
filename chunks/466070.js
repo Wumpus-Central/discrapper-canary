@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return c;
+        return d;
     }
 });
 var i = n(200651),
@@ -9,10 +9,10 @@ var i = n(200651),
     a = n(296023),
     o = n(768581),
     s = n(585835);
-function c(e) {
+function d(e) {
     var t;
-    let { channel: c, application: d, showApplicationImage: u, ...m } = e,
-        h = (0, a.w)(c),
+    let { channel: d, application: c, showApplicationImage: u, ...m } = e,
+        h = (0, a.w)(d),
         p = l.useCallback(
             () =>
                 (0, r.openModalLazy)(async () => {
@@ -20,13 +20,13 @@ function c(e) {
                     return (t) =>
                         (0, i.jsx)(e, {
                             ...t,
-                            channel: c,
-                            application: d
+                            channel: d,
+                            application: c
                         });
                 }),
-            [d, c]
+            [c, d]
         ),
-        g = u ? (null !== (t = d.getIconURL(48)) && void 0 !== t ? t : o.pK['0']) : void 0;
+        g = u ? (null !== (t = c.getIconURL(48)) && void 0 !== t ? t : o.pK['0']) : void 0;
     return (0, i.jsx)(s.Z, {
         imageSrc: g,
         onButtonClick: p,

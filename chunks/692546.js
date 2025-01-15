@@ -35,17 +35,17 @@ let v = {
         y: 0
     },
     x = !1;
-function _(e) {
+function Z(e) {
     let { clientX: t, clientY: n } = e;
     (x = !0), (v.x = t), (v.y = n);
 }
 let S = new Map();
-function Z(e, t) {
-    if (null == t) S.delete(e), 0 === S.size && (window.removeEventListener('mousemove', _), (x = !1));
+function _(e, t) {
+    if (null == t) S.delete(e), 0 === S.size && (window.removeEventListener('mousemove', Z), (x = !1));
     else {
         let n = S.get(e);
         if (null != n && (0, d.Z)(n.zone, t.zone)) return;
-        0 === S.size && window.addEventListener('mousemove', _), S.set(e, t);
+        0 === S.size && window.addEventListener('mousemove', Z), S.set(e, t);
     }
     f.isPlatformEmbedded &&
         (h.Z.isFocusedPidOutOfProcess()
@@ -83,7 +83,7 @@ class C extends (i = s.PureComponent) {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), Z(this.zone, null);
+        this.interval.stop(), _(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -107,7 +107,7 @@ class C extends (i = s.PureComponent) {
                 let e = (0, o.findDOMNode)(this);
                 if ((0, l.k)(e)) {
                     let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
-                    Z(this.zone, {
+                    _(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,

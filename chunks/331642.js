@@ -7,33 +7,33 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(692547),
-    a = n(481060),
+    a = n(692547),
+    l = n(481060),
     o = n(596454),
     c = n(594174),
     d = n(74538),
     u = n(242291),
     m = n(706667),
-    h = n(792165),
-    g = n(409673),
+    g = n(792165),
+    h = n(409673),
     p = n(603074),
     x = n(388032),
-    S = n(477733);
-function T(e) {
+    f = n(477733);
+function _(e) {
     let { onSelect: t } = e,
-        [n, l] = s.useState(!1),
+        [n, a] = s.useState(!1),
         o = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.canUseCustomCallSounds(o);
     function m(e) {
-        u && (l(!1), null == t || t(e));
+        u && (a(!1), null == t || t(e));
     }
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(l.Popout, {
         shouldShow: n,
         position: 'left',
-        onRequestClose: () => l(!1),
+        onRequestClose: () => a(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(a.Dialog, {
+            return (0, i.jsx)(l.Dialog, {
                 children: (0, i.jsx)(p.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
@@ -41,22 +41,22 @@ function T(e) {
                     channel: null,
                     onClose: t,
                     onSelect: m,
-                    gridNotice: u ? null : (0, i.jsx)(h.o, {}),
+                    gridNotice: u ? null : (0, i.jsx)(g.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
         },
         children: (e) =>
-            (0, i.jsx)(g.hU, {
+            (0, i.jsx)(h.hU, {
                 ...e,
                 onClick: () => {
-                    l(!n);
+                    a(!n);
                 },
                 text: x.intl.string(x.t.uOe0Aw),
-                children: (0, i.jsx)(a.PencilIcon, {
+                children: (0, i.jsx)(l.PencilIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: S.secondaryIcon
+                    className: f.secondaryIcon
                 })
             })
     });
@@ -71,13 +71,13 @@ function E(e) {
                       emojiName: t.emojiName,
                       soundName: t.name
                   });
-    return (0, i.jsx)(g.hU, {
+    return (0, i.jsx)(h.hU, {
         onClick: n,
         text: s,
-        children: (0, i.jsx)(a.VoiceNormalIcon, {
+        children: (0, i.jsx)(l.VoiceNormalIcon, {
             size: 'md',
             color: 'currentColor',
-            className: S.secondaryIconActive
+            className: f.secondaryIconActive
         })
     });
 }
@@ -88,28 +88,28 @@ function C(e) {
         d = null == t ? void 0 : t.emojiName,
         u = r && (null != d || null != c),
         m = (e) =>
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
                 tag: 'span',
                 children: e
             });
     return (0, i.jsxs)('div', {
-        className: S.soundButtonSettingContainer,
+        className: f.soundButtonSettingContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: S.container,
+                className: f.container,
                 children: [
                     u &&
                         (0, i.jsx)(o.Z, {
                             emojiId: c,
                             emojiName: d,
-                            className: S.emoji
+                            className: f.emoji
                         }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-primary',
-                        className: S.soundText,
+                        className: f.soundText,
                         children:
                             null == t
                                 ? x.intl.string(x.t.PoWNfX)
@@ -122,26 +122,26 @@ function C(e) {
                     }),
                     r
                         ? (0, i.jsx)(E, { sound: t })
-                        : (0, i.jsx)(a.VoiceNormalIcon, {
+                        : (0, i.jsx)(l.VoiceNormalIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: S.secondaryIconDisabled
+                              className: f.secondaryIconDisabled
                           })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: S.container,
+                className: f.container,
                 children: [
-                    (0, i.jsx)(T, { onSelect: s }),
+                    (0, i.jsx)(_, { onSelect: s }),
                     r &&
                         !n &&
-                        (0, i.jsx)(g.hU, {
+                        (0, i.jsx)(h.hU, {
                             onClick: () => s(null),
                             text: x.intl.string(x.t.jmtcGB),
-                            children: (0, i.jsx)(a.TrashIcon, {
+                            children: (0, i.jsx)(l.TrashIcon, {
                                 size: 'md',
-                                color: l.Z.unsafe_rawColors.RED_400.css,
-                                className: S.secondaryIcon
+                                color: a.Z.unsafe_rawColors.RED_400.css,
+                                className: f.secondaryIcon
                             })
                         })
                 ]

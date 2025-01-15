@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(864682),
     h = n(540059),
     p = n(899740),
-    f = n(155409),
-    m = n(699516),
+    m = n(155409),
+    f = n(699516),
     g = n(944486),
     v = n(594174),
     C = n(431),
@@ -48,7 +48,7 @@ let L = {
     }
 };
 function R(e) {
-    let { selected: t, user: n, badge: p, link: m, showProgressBadge: g } = e,
+    let { selected: t, user: n, badge: p, link: f, showProgressBadge: g } = e,
         v = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, x] = l.useState(!1),
         [I, _] = l.useState(!1),
@@ -95,7 +95,7 @@ function R(e) {
                 ariaLabel: w.intl.string(w.t.YUU0RE),
                 ...D,
                 to: {
-                    pathname: m,
+                    pathname: f,
                     state: {
                         analyticsSource: {
                             page: T.ZY5.GUILD_CHANNEL,
@@ -109,7 +109,7 @@ function R(e) {
         });
     return (0, i.jsx)('div', {
         className: M.tutorialContainer,
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(m.Z, {
             inlineSpecs: L,
             tutorialId: 'friends-list',
             position: 'right',
@@ -140,7 +140,7 @@ function D() {
                 i = Z.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),
+        n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
         l = Object.keys(P.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
@@ -150,10 +150,10 @@ function D() {
         u = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         d = (0, p.q)(),
         h = n + s + d,
-        f = h === s && s > 0 && n + d === 0,
+        m = h === s && s > 0 && n + d === 0,
         b = x.Z.getHomeLink();
     return (
-        f && (b = T.Z5c.APPLICATION_STORE),
+        m && (b = T.Z5c.APPLICATION_STORE),
         (0, i.jsx)(R, {
             selected: e,
             user: u,

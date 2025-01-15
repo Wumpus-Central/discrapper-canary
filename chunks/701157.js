@@ -2,8 +2,8 @@ n(653041);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(481060),
-    a = n(165630),
+    a = n(481060),
+    l = n(165630),
     o = n(771845),
     c = n(11844),
     d = n(300037),
@@ -11,23 +11,23 @@ var i = n(200651),
     m = n(494897);
 t.Z = function (e) {
     let { canAddBoosts: t, canApplyBoosts: n } = e,
-        h = (0, r.e7)([a.Z], () => a.Z.affinities),
-        g = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
+        g = (0, r.e7)([l.Z], () => l.Z.affinities),
+        h = (0, r.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         p = s.useMemo(() => {
-            let e = h.slice(0, 3).map((e) => e.guildId);
-            for (let t = 0; t < g.length && !(e.length >= 3); t++) {
-                let n = g[t];
+            let e = g.slice(0, 3).map((e) => e.guildId);
+            for (let t = 0; t < h.length && !(e.length >= 3); t++) {
+                let n = h[t];
                 !e.includes(n) && e.push(n);
             }
             return e;
-        }, [h, g]);
+        }, [g, h]);
     return 0 === p.length
         ? null
         : (0, i.jsxs)('div', {
               className: m.wrapper,
               children: [
                   t &&
-                      (0, i.jsx)(l.Heading, {
+                      (0, i.jsx)(a.Heading, {
                           variant: 'heading-lg/semibold',
                           className: m.header,
                           children: u.intl.string(u.t.r90Wgo)
@@ -43,7 +43,7 @@ t.Z = function (e) {
                           e
                       )
                   ),
-                  g.length > 3 && n && (0, i.jsx)(c.Z, {})
+                  h.length > 3 && n && (0, i.jsx)(c.Z, {})
               ]
           });
 };

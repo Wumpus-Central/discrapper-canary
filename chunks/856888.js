@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return h;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
     r = n(442837),
-    l = n(481060),
-    a = n(325997),
+    a = n(481060),
+    l = n(325997),
     o = n(78839),
     c = n(270144),
     d = n(851718),
     u = n(238847),
     m = n(388032),
-    h = n(410507);
-function g(e) {
+    g = n(410507);
+function h(e) {
     let { onGoBack: t } = e,
         n = (0, r.Wu)([o.ZP], () => {
             var e, t;
@@ -30,7 +30,7 @@ function g(e) {
                 ? t
                 : [];
         }),
-        { enabled: l } = a.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
+        { enabled: a } = l.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
         [c, u] = s.useState();
     return (
         null == c &&
@@ -42,8 +42,8 @@ function g(e) {
             children: [
                 c,
                 (0, i.jsx)('div', {
-                    className: h.subscriptionsContainer,
-                    children: l
+                    className: g.subscriptionsContainer,
+                    children: a
                         ? (0, i.jsx)(d.Z, {
                               subscriptions: n,
                               updateHeader: (e, t) => {
@@ -66,15 +66,15 @@ function g(e) {
 function p(e) {
     let { onBack: t, title: n } = e;
     return (0, i.jsxs)('div', {
-        className: h.title,
+        className: g.title,
         children: [
-            (0, i.jsx)(l.Button, {
-                look: l.Button.Looks.BLANK,
+            (0, i.jsx)(a.Button, {
+                look: a.Button.Looks.BLANK,
                 onClick: t,
-                size: l.Button.Sizes.ICON,
-                children: (0, i.jsx)(l.ArrowLargeLeftIcon, { size: 'sm' })
+                size: a.Button.Sizes.ICON,
+                children: (0, i.jsx)(a.ArrowLargeLeftIcon, { size: 'sm' })
             }),
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-lg/semibold',
                 children: n
             })
@@ -85,5 +85,5 @@ function x(e) {
     let { subscriptions: t } = e,
         { loading: n } = (0, c.sp)(t),
         { loadState: s } = (0, c.qz)();
-    return n || s !== c.jd.LOADED ? (0, i.jsx)(l.Spinner, {}) : t.map((e) => (0, i.jsx)(u.Z, { subscription: e }, e.id));
+    return n || s !== c.jd.LOADED ? (0, i.jsx)(a.Spinner, {}) : t.map((e) => (0, i.jsx)(u.Z, { subscription: e }, e.id));
 }

@@ -7,22 +7,22 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(63063),
-    l = n(88658),
-    a = n(695346),
+    a = n(88658),
+    l = n(695346),
     o = n(639814),
     c = n(838436),
     d = n(51331),
     u = n(726985),
     m = n(736530),
-    h = n(981631),
-    g = n(388032);
+    g = n(981631),
+    h = n(388032);
 function p() {
     let e = (0, o.is)(),
-        t = a.iH.useSetting().includes(e),
+        t = l.iH.useSetting().includes(e),
         n = s.useCallback(
             (t) => {
-                let n = (0, l.rr)();
-                t ? n.delete(e) : n.add(e), a.iH.updateSetting([...n]);
+                let n = (0, a.rr)();
+                t ? n.delete(e) : n.add(e), l.iH.updateSetting([...n]);
             },
             [e]
         );
@@ -31,10 +31,10 @@ function p() {
         : (0, i.jsx)(c.U, {
               setting: u.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
               children: (0, i.jsx)(d.Z, {
-                  title: g.intl.string(g.t['T+nevL']),
+                  title: h.intl.string(h.t['T+nevL']),
                   value: !t,
                   onChange: n,
-                  note: g.intl.format(g.t.jXKQCg, { helpdeskArticle: r.Z.getArticleURL(h.BhN.ACTIVITY_STATUS_SETTINGS) })
+                  note: h.intl.format(h.t.jXKQCg, { helpdeskArticle: r.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }

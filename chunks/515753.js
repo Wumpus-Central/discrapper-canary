@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(873546),
     h = n(442837),
     p = n(481060),
-    f = n(493683),
-    m = n(239091),
+    m = n(493683),
+    f = n(239091),
     g = n(420660),
     v = n(385499),
     C = n(570908),
@@ -96,11 +96,11 @@ let q = V.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
             className: z.favoriteIcon
         });
 function $(e) {
-    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: f, onClick: m, className: g, role: v, 'aria-posinset': x, 'aria-setsize': I, ..._ } = e,
+    let { route: t, selected: n, icon: l, iconClassName: r, avatarWithTextClassName: o, interactiveClassName: s, text: u, children: h, locationState: m, onClick: f, className: g, role: v, 'aria-posinset': x, 'aria-setsize': I, ..._ } = e,
         Z = (0, y.Q3)('PrivateChannelLinkButton');
     return (0, i.jsx)(N.Z, {
         className: a()(z.channel, { [z.fullWidth]: d.tq }, g),
-        onClick: m,
+        onClick: f,
         role: v,
         focusProps: {
             within: !0,
@@ -115,7 +115,7 @@ function $(e) {
             children: (0, i.jsxs)(c.rU, {
                 to: {
                     pathname: t,
-                    state: f
+                    state: m
                 },
                 className: z.link,
                 ..._,
@@ -166,12 +166,12 @@ function ee(e) {
         ep = () => {
             ee(!1);
         },
-        ef = function (e) {
+        em = function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), f.Z.closePrivateChannel(r.id, d, t);
+            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(r.id, d, t);
         },
-        em = () => {
-            f.Z.preload(F.ME, r.id);
+        ef = () => {
+            m.Z.preload(F.ME, r.id);
         },
         eg = (e) => {
             e.stopPropagation();
@@ -184,7 +184,7 @@ function ee(e) {
         },
         eC = (e) => {
             r.isMultiUserDM()
-                ? (0, m.jW)(
+                ? (0, f.jW)(
                       e,
                       async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
@@ -197,7 +197,7 @@ function ee(e) {
                       },
                       { noBlurEvent: !0 }
                   )
-                : (0, m.jW)(e, async () => {
+                : (0, f.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
                       return (t) =>
                           (0, i.jsx)(e, {
@@ -219,7 +219,7 @@ function ee(e) {
                         (0, i.jsx)(e, {
                             header: t,
                             body: l,
-                            onSubmit: ef,
+                            onSubmit: em,
                             ...n
                         });
                 });
@@ -329,7 +329,7 @@ function ee(e) {
                 ref: en,
                 onMouseEnter: eh,
                 onMouseLeave: ep,
-                onMouseDown: em,
+                onMouseDown: ef,
                 onContextMenu: eC,
                 'aria-setsize': V,
                 'aria-posinset': O,
@@ -376,7 +376,7 @@ function ee(e) {
                         ej ? (0, i.jsx)(X, {}) : null,
                         (0, i.jsx)(Q, {
                             'aria-label': eZ ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
-                            onClick: eZ ? ex : ef,
+                            onClick: eZ ? ex : em,
                             onMouseDown: eg
                         })
                     ]

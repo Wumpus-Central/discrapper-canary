@@ -1,81 +1,81 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return Z;
     }
 }),
     n(47120);
 var i = n(200651);
 n(192379);
-var r = n(319147),
-    a = n(306276),
-    s = n(510236),
+var s = n(319147),
+    r = n(306276),
+    a = n(510236),
     l = n(133398),
     o = n(722283),
     c = n(298274),
     d = n(569620),
     u = n(16503),
-    g = n(64268),
-    m = n(697720),
-    f = n(578325),
+    m = n(64268),
+    g = n(697720),
+    h = n(578325),
     p = n(56790),
-    _ = n(90718),
-    h = n(897482),
-    x = n(4515),
+    x = n(90718),
+    f = n(897482),
+    _ = n(4515),
     E = n(474472),
-    b = n(156129),
-    C = n(799303),
-    v = n(245630),
-    T = n(842272),
-    N = n(486731),
-    I = n(346943),
-    S = n(55826),
-    R = n(218776),
+    C = n(156129),
+    T = n(799303),
+    S = n(245630),
+    b = n(842272),
+    I = n(486731),
+    N = n(346943),
+    v = n(55826),
+    A = n(218776),
     j = n(414653),
-    A = n(297141),
-    P = n(26517),
-    O = n(93125),
-    M = n(278583),
-    Z = n(814437);
+    R = n(297141),
+    O = n(26517),
+    P = n(93125),
+    y = n(278583),
+    D = n(814437);
 let B = new Map([
-    ['BG', s],
+    ['BG', a],
     ['CZ', c],
-    ['HU', h],
-    ['RO', P],
-    ['SE', O],
+    ['HU', f],
+    ['RO', O],
+    ['SE', P],
     ['CY', o],
     ['EE', u],
     ['IS', E],
-    ['IE', x],
-    ['LV', N],
-    ['LI', C],
-    ['LT', v],
-    ['LU', T],
-    ['MT', I],
-    ['SK', Z],
-    ['SI', M],
+    ['IE', _],
+    ['LV', I],
+    ['LI', T],
+    ['LT', S],
+    ['LU', b],
+    ['MT', N],
+    ['SK', D],
+    ['SI', y],
     ['GR', p],
-    ['FI', m],
-    ['PT', A],
-    ['NO', R],
-    ['BE', a],
-    ['AT', r],
+    ['FI', g],
+    ['PT', R],
+    ['NO', A],
+    ['BE', r],
+    ['AT', s],
     ['CH', l],
-    ['FR', f],
+    ['FR', h],
     ['DE', d],
-    ['ES', g],
-    ['IT', b],
-    ['NL', S],
+    ['ES', m],
+    ['IT', C],
+    ['NL', v],
     ['PL', j],
-    ['HR', _]
+    ['HR', x]
 ]);
-function y(e) {
+function Z(e) {
     let { className: t, countryCode: n } = e;
     if (null == n || !B.has(n)) return null;
-    let r = B.get(n);
+    let s = B.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',
-        src: r
+        src: s
     });
 }

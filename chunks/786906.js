@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(592125),
     v = n(430824),
     x = n(699516),
-    _ = n(944486),
+    Z = n(944486),
     S = n(707878),
-    Z = n(518084),
+    _ = n(518084),
     E = n(388032),
     C = n(970772);
 function I(e, t, n) {
@@ -63,7 +63,7 @@ class y extends s.Component {
         let { className: e, draggableClassName: t, locked: n, channel: s, channelName: r, guild: o, onMouseDown: d, onContextMenu: c, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
             { showOpacitySlider: g } = this.state;
         return g && !n
-            ? (0, i.jsxs)(Z.ZP.Bar, {
+            ? (0, i.jsxs)(_.ZP.Bar, {
                   className: C.opacityHeader,
                   children: [
                       (0, i.jsx)(S.Z, {}),
@@ -74,7 +74,7 @@ class y extends s.Component {
                       })
                   ]
               })
-            : (0, i.jsx)(Z.ZP.Background, {
+            : (0, i.jsx)(_.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
                       className: a()(e, t, C.headerContainer),
@@ -156,8 +156,8 @@ class y extends s.Component {
 }
 function N(e) {
     let { channel: t, ...n } = e,
-        s = (0, o.e7)([_.Z, m.Z], () => {
-            let e = _.Z.getVoiceChannelId();
+        s = (0, o.e7)([Z.Z, m.Z], () => {
+            let e = Z.Z.getVoiceChannelId();
             return m.Z.getChannel(e);
         }),
         r = (0, o.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),

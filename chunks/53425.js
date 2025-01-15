@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(938475),
     h = n(823379),
     p = n(734190),
-    f = n(388032),
-    m = n(329986);
+    m = n(388032),
+    f = n(329986);
 t.Z = l.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: l, sortedThreadIds: r, withGuildIcon: g } = e,
         { density: v } = (0, s.useThemeContext)(),
@@ -23,13 +23,13 @@ t.Z = l.memo(function (e) {
             return null == t || 0 === t.length ? 0 : l !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, i.jsx)('li', {
-        className: m.container,
+        className: f.container,
         children: (0, i.jsxs)('ul', {
             role: 'group',
-            'aria-label': f.intl.formatToPlainString(f.t.EiyIi4, { channelName: t.name }),
+            'aria-label': m.intl.formatToPlainString(m.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(m.spineBorder, { [m.spineBorderWithGuildIcon]: g }),
+                    className: a()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
                     style: { bottom: (C && 'cozy' === v ? 28 : 24) + I }
                 }),
                 x.map((e, t) =>

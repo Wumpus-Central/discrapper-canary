@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return N;
     }
 }),
     n(653041),
@@ -11,8 +11,8 @@ var i = n(200651),
     a = n(442837),
     o = n(481060),
     s = n(749210),
-    c = n(412899),
-    d = n(995648),
+    d = n(412899),
+    c = n(995648),
     u = n(385499),
     m = n(600164),
     h = n(422559),
@@ -23,26 +23,26 @@ var i = n(200651),
     b = n(700785),
     v = n(388032),
     C = n(449650);
-function I(e) {
+function N(e) {
     var t;
-    let { guild: n, applicationIntegration: I } = e,
-        N = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        { application: j } = I,
-        _ = null != j.bot ? new p.Z(j.bot) : null,
-        T = (0, a.e7)([g.ZP], () => (null != _ ? g.ZP.getMember(n.id, _.id) : null), [_, n]),
-        S = null == _ ? void 0 : _.id;
+    let { guild: n, applicationIntegration: N } = e,
+        I = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
+        { application: j } = N,
+        T = null != j.bot ? new p.Z(j.bot) : null,
+        _ = (0, a.e7)([g.ZP], () => (null != T ? g.ZP.getMember(n.id, T.id) : null), [T, n]),
+        Z = null == T ? void 0 : T.id;
     l.useEffect(() => {
-        if (null != S) s.Z.requestMembersById(n.id, S);
-    }, [n.id, S]);
-    let Z = l.useMemo(() => {
+        if (null != Z) s.Z.requestMembersById(n.id, Z);
+    }, [n.id, Z]);
+    let E = l.useMemo(() => {
         var e, t, i;
-        let l = N[n.getEveryoneRoleId()],
-            a = null !== (t = null == T ? void 0 : null === (e = T.roles) || void 0 === e ? void 0 : e.map((e) => N[e]).filter(f.lm)) && void 0 !== t ? t : [],
+        let l = I[n.getEveryoneRoleId()],
+            a = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map((e) => I[e]).filter(f.lm)) && void 0 !== t ? t : [],
             o = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : b.Hn;
         for (let e of a) o = r.IH(o, e.permissions);
         return o;
-    }, [n, N, T]);
-    return null == _
+    }, [n, I, _]);
+    return null == T
         ? null
         : (0, i.jsx)(o.Card, {
               editable: !0,
@@ -55,17 +55,17 @@ function I(e) {
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  src: _.getAvatarURL(n.id, 32),
+                                  src: T.getAvatarURL(n.id, 32),
                                   className: C.iconWrapper
                               }),
                               (0, i.jsx)(o.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t.GyhzGx, { user: _.toString() })
+                                  children: v.intl.format(v.t.GyhzGx, { user: T.toString() })
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: C.tag,
-                                  verified: _.isVerifiedBot()
+                                  verified: T.isVerifiedBot()
                               })
                           ]
                       }),
@@ -83,7 +83,7 @@ function I(e) {
                                                     className: C.permissionHeader,
                                                     children: v.intl.format(v.t.PCs0oq, { numRoles: n.length })
                                                 }),
-                                                (0, i.jsx)(c.ZP, {
+                                                (0, i.jsx)(d.ZP, {
                                                     className: C.rolePills,
                                                     user: e,
                                                     guild: t,
@@ -95,7 +95,7 @@ function I(e) {
                                         })
                                       : null,
                                   a.length > 0 || s.length > 0
-                                      ? (0, i.jsx)(d.Z, {
+                                      ? (0, i.jsx)(c.Z, {
                                             grantedPermissions: a,
                                             grantedPermissionsHeader: v.intl.string(v.t['hA4+sr']),
                                             disabledPermissions: s,
@@ -104,7 +104,7 @@ function I(e) {
                                       : null
                               ]
                           });
-                      })(_, n, null !== (t = null == T ? void 0 : T.roles) && void 0 !== t ? t : [], Z)
+                      })(T, n, null !== (t = null == _ ? void 0 : _.roles) && void 0 !== t ? t : [], E)
                   ]
               })
           });

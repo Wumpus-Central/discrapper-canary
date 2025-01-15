@@ -6,10 +6,10 @@ n.d(t, {
         return p;
     },
     Or: function () {
-        return f;
+        return m;
     },
     jt: function () {
-        return m;
+        return f;
     }
 }),
     n(47120);
@@ -36,7 +36,7 @@ function p() {
         className: d.unavailableBadge
     });
 }
-function f(e) {
+function m(e) {
     let t,
         { audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: o, activeEvent: s, activity: c } = e;
     if (s) t = a.CalendarIcon;
@@ -53,7 +53,7 @@ function f(e) {
         isCurrentUserConnected: r
     });
 }
-function m(e) {
+function f(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {

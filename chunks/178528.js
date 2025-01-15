@@ -20,9 +20,9 @@ var i = n(200651),
     m = n(796974),
     v = n(324067),
     x = n(984933),
-    _ = n(888369),
+    Z = n(888369),
     S = n(430824),
-    Z = n(496675),
+    _ = n(496675),
     E = n(878884),
     C = n(19780),
     I = n(944486),
@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(711553),
     j = n(981631),
     M = n(647086),
-    R = n(388032),
+    w = n(388032),
     P = n(389645);
-function w(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,8 +48,8 @@ function w(e, t, n) {
         e
     );
 }
-let A = 54;
-class k extends s.PureComponent {
+let k = 54;
+class A extends s.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
         return null == t || null == t.banner
@@ -82,7 +82,7 @@ class k extends s.PureComponent {
     }
     setAnimatedValueForBanner(e) {
         let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: s } = this.state;
-        ((e >= A && i) || (e < A && !i)) && (i = !i),
+        ((e >= k && i) || (e < k && !i)) && (i = !i),
             ((e >= 78 && !t) || (e < 78 && t)) && (t = !t),
             (n = i),
             (t !== this.state.renderBanner || i !== this.state.bannerVisible || n !== this.state.communityInfoVisible) &&
@@ -130,7 +130,7 @@ class k extends s.PureComponent {
                     children: (e) =>
                         (0, i.jsx)(b.ZP.Icon, {
                             icon: o.SettingsIcon,
-                            label: R.intl.string(R.t['3D5yo6']),
+                            label: w.intl.string(w.t['3D5yo6']),
                             ...e
                         })
                 })
@@ -147,7 +147,7 @@ class k extends s.PureComponent {
                 }),
                 (0, i.jsx)('section', {
                     className: P.panels,
-                    'aria-label': R.intl.string(R.t.StREWF),
+                    'aria-label': w.intl.string(w.t.StREWF),
                     children: (0, i.jsx)(h.Z, { guildId: n.id })
                 })
             ]
@@ -155,7 +155,7 @@ class k extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'state', {
+            R(this, 'state', {
                 controller: new r.Controller({
                     value: 1,
                     immediate: !0
@@ -164,7 +164,7 @@ class k extends s.PureComponent {
                 bannerVisible: !1,
                 communityInfoVisible: !1
             }),
-            w(this, 'handleScroll', (e) => {
+            R(this, 'handleScroll', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
             });
@@ -188,15 +188,15 @@ function D(e) {
             return t;
         }),
         M = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()),
-        R = (0, a.e7)([Z.Z], () => Z.Z.getGuildVersion(n)),
+        w = (0, a.e7)([_.Z], () => _.Z.getGuildVersion(n)),
         P = (0, a.e7)([f.Z], () => f.Z.version),
-        w = (0, a.e7)([_.default], () => _.default.getGuildChangeSentinel(n)),
-        A = (0, l.QN)(null == s ? void 0 : s.id),
+        R = (0, a.e7)([Z.default], () => Z.default.getGuildChangeSentinel(n)),
+        k = (0, l.QN)(null == s ? void 0 : s.id),
         D = (0, d.gM)(null == s ? void 0 : s.id),
         L = null !== (t = null == s ? void 0 : s.hasFeature(j.oNc.COMMUNITY)) && void 0 !== t && t,
         z = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
         B = (0, a.e7)([E.Z], () => E.Z.desyncedVoiceStatesCount);
-    return (0, i.jsx)(k, {
+    return (0, i.jsx)(A, {
         guildId: n,
         guild: s,
         channels: r,
@@ -210,10 +210,10 @@ function D(e) {
         rtcDesyncedVoiceStatesCount: B,
         collapsedChannels: b,
         collapseMuted: u,
-        guildReadStateSentinel: w,
-        permissionVersion: R,
+        guildReadStateSentinel: R,
+        permissionVersion: w,
         categoryCollapseVersion: P,
-        embeddedAppsByChannel: A,
+        embeddedAppsByChannel: k,
         activeEventsByChannel: D,
         showNewUnreadsBar: L,
         optInEnabled: !1

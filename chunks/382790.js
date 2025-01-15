@@ -15,7 +15,7 @@ var i,
     m = n(711553),
     v = n(388032),
     x = n(433217);
-function _(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function S(e) {
     let { closePopout: t } = e;
     return (0, s.jsx)(f.Z, { onClose: t });
 }
-class Z extends (i = r.PureComponent) {
+class _ extends (i = r.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n, className: i } = this.props,
             r =
@@ -66,10 +66,10 @@ class Z extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'onDragStart', (e) => {
+            Z(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(d.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-_(Z, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));
+Z(_, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(_));

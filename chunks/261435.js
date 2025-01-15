@@ -15,9 +15,9 @@ var i,
     m = n(13245),
     v = n(836932),
     x = n(175553),
-    _ = n(158979),
+    Z = n(158979),
     S = n(181912),
-    Z = n(791288),
+    _ = n(791288),
     E = n(194295),
     C = n(998033),
     I = n(181364),
@@ -28,11 +28,11 @@ var i,
     O = n(371651),
     j = n(695346),
     M = n(314897),
-    R = n(592125),
+    w = n(592125),
     P = n(292959),
-    w = n(158776),
-    A = n(944486),
-    k = n(885110),
+    R = n(158776),
+    k = n(944486),
+    A = n(885110),
     D = n(246946),
     L = n(594174),
     z = n(974180),
@@ -106,8 +106,8 @@ function ea(e) {
         i = es(t);
     if (!n.includes(M.default.getId())) return en(i);
     if (null != i) return !1;
-    let s = R.Z.getChannel(t);
-    if (null == s || !s.isPrivate() || k.Z.getStatus() === Y.Skl.DND || j.QZ.getSetting()) return !1;
+    let s = w.Z.getChannel(t);
+    if (null == s || !s.isPrivate() || A.Z.getStatus() === Y.Skl.DND || j.QZ.getSetting()) return !1;
     let r = ee.find((e) => 1 === e.type && e.channelId === t && e.messageType === Y.uaV.CALL);
     null != r && en(r.id),
         er((0, S.Z)(s), {
@@ -119,7 +119,7 @@ function ea(e) {
 }
 class eo extends (r = f.ZP.Store) {
     initialize() {
-        this.waitFor(R.Z, L.default);
+        this.waitFor(w.Z, L.default);
     }
     getNotifications() {
         return ee;
@@ -147,7 +147,7 @@ class eo extends (r = f.ZP.Store) {
                 switch (e.type) {
                     case K.nc.GO_LIVE_VOICE:
                     case K.nc.GO_LIVE_NON_VOICE:
-                        return (0, _.Z)(e);
+                        return (0, Z.Z)(e);
                     case K.nc.KEYBIND_INDICATORS:
                         return (0, T.Z)(e);
                     case K.nc.NEWS:
@@ -177,7 +177,7 @@ class eo extends (r = f.ZP.Store) {
         MESSAGE_CREATE: function (e) {
             var t, n, i;
             let { channelId: s, message: r } = e,
-                a = R.Z.getChannel(s),
+                a = w.Z.getChannel(s),
                 o = L.default.getUser(null === (t = r.author) || void 0 === t ? void 0 : t.id);
             if (null == a || null == o) return !1;
             if ((null === (n = r.activity) || void 0 === n ? void 0 : n.type) === Y.mFx.JOIN || (null === (i = r.activity) || void 0 === i ? void 0 : i.type) === Y.mFx.JOIN_REQUEST) {
@@ -189,11 +189,11 @@ class eo extends (r = f.ZP.Store) {
                     if (null == r) return !1;
                     switch (t.activity.type) {
                         case Y.mFx.JOIN:
-                            if (null == (i = w.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                            if (null == (i = R.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                             s = (0, v.Z)(e, t, n, r, i);
                             break;
                         case Y.mFx.JOIN_REQUEST:
-                            if (null == (i = k.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                            if (null == (i = A.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                             s = (0, E.Z)(e, n, r, i);
                     }
                     if (null == s) return !1;
@@ -206,7 +206,7 @@ class eo extends (r = f.ZP.Store) {
                 })(a, r, o);
                 if (!1 !== e) return e;
             }
-            if (((!V.Z.isInstanceLocked() || V.Z.isPinned(Y.Odu.TEXT)) && s === A.Z.getChannelId()) || V.Z.getTextChatNotificationMode() === Y.Ypu.DISABLED || D.Z.disableNotifications || !(0, U.eF)(r, s)) return !1;
+            if (((!V.Z.isInstanceLocked() || V.Z.isPinned(Y.Odu.TEXT)) && s === k.Z.getChannelId()) || V.Z.getTextChatNotificationMode() === Y.Ypu.DISABLED || D.Z.disableNotifications || !(0, U.eF)(r, s)) return !1;
             let l = !P.Z.isSoundDisabled(z.Ay);
             er((0, C.Z)(a, r, o, l), {
                 type: 1,
@@ -261,7 +261,7 @@ class eo extends (r = f.ZP.Store) {
             if (null == i) return;
             let { enabled: s } = b.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
             s &&
-                er((0, Z.Z)(i, n), {
+                er((0, _.Z)(i, n), {
                     priority: 2,
                     type: 0,
                     expirationExternallyManaged: !0,

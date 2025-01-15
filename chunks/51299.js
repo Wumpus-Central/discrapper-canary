@@ -1,30 +1,30 @@
-t.r(e),
-    t.d(e, {
+a.r(e),
+    a.d(e, {
         default: function () {
-            return h;
+            return x;
         }
     });
-var a = t(200651);
-t(192379);
-var i = t(120356),
-    l = t.n(i),
-    c = t(512722),
-    o = t.n(c),
-    r = t(481060),
-    s = t(99690),
-    p = t(23551),
-    d = t(122021),
-    u = t(388032),
-    m = t(478588);
+var i = a(200651);
+a(192379);
+var t = a(120356),
+    l = a.n(t),
+    c = a(512722),
+    o = a.n(c),
+    s = a(481060),
+    r = a(99690),
+    p = a(23551),
+    d = a(122021),
+    u = a(388032),
+    m = a(478588);
 function f(n) {
-    let { onComplete: e, excludedPlatformTypes: t, includedPlatformTypes: i } = n,
+    let { onComplete: e, excludedPlatformTypes: a, includedPlatformTypes: t } = n,
         l = (0, d.fq)();
-    return (0, a.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: m.connectionsContainer,
         children: l
-            .filter((n) => !(null == t ? void 0 : t.has(n.type)) && (null == i || i.has(n.type)))
+            .filter((n) => !(null == a ? void 0 : a.has(n.type)) && (null == t || t.has(n.type)))
             .map((n) =>
-                (0, a.jsx)(
+                (0, i.jsx)(
                     p.Z,
                     {
                         type: n.type,
@@ -37,51 +37,51 @@ function f(n) {
             )
     });
 }
-function x(n) {
-    let { integrations: e, onCompleteApplication: t } = n;
-    if (null == e || null == t) return null;
-    let i = e.filter((n) => {
+function h(n) {
+    let { integrations: e, onCompleteApplication: a } = n;
+    if (null == e || null == a) return null;
+    let t = e.filter((n) => {
         var e;
         return (null === (e = n.application) || void 0 === e ? void 0 : e.roleConnectionsVerificationUrl) != null;
     });
-    return 0 === i.length
+    return 0 === t.length
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, a.jsx)(r.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: 'eyebrow',
                       color: 'interactive-normal',
                       className: m.applicationsHeader,
                       children: u.intl.string(u.t.PHjkRE)
                   }),
-                  (0, a.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: m.applicationsContainer,
-                      children: i.map((n) => {
+                      children: t.map((n) => {
                           let e = n.application;
                           o()(null != e, 'application is null');
-                          let i = null == e ? void 0 : e.bot;
+                          let t = null == e ? void 0 : e.bot;
                           return (
-                              o()(null != i, 'bot is null'),
-                              (0, a.jsxs)(
-                                  r.Clickable,
+                              o()(null != t, 'bot is null'),
+                              (0, i.jsxs)(
+                                  s.Clickable,
                                   {
-                                      onClick: () => t(e.id),
+                                      onClick: () => a(e.id),
                                       className: m.application,
                                       children: [
-                                          (0, a.jsx)(s.Z, {
-                                              user: i,
+                                          (0, i.jsx)(r.Z, {
+                                              user: t,
                                               className: m.applicationIcon
                                           }),
-                                          (0, a.jsxs)('div', {
+                                          (0, i.jsxs)('div', {
                                               className: m.applicationNameContainer,
                                               children: [
-                                                  (0, a.jsx)(r.Heading, {
+                                                  (0, i.jsx)(s.Heading, {
                                                       variant: 'heading-sm/semibold',
                                                       className: m.applicationNameText,
                                                       children: e.name
                                                   }),
                                                   null != e.description && e.description.length > 0
-                                                      ? (0, a.jsx)(r.Text, {
+                                                      ? (0, i.jsx)(s.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-secondary',
                                                             className: m.applicationNameText,
@@ -100,40 +100,40 @@ function x(n) {
               ]
           });
 }
-function h(n) {
-    let { transitionState: e, onComplete: t, onClose: i, excludedPlatformTypes: c, includedPlatformTypes: o, integrations: s, onCompleteApplication: p } = n;
-    return (0, a.jsx)(r.ModalRoot, {
+function x(n) {
+    let { transitionState: e, onComplete: a, onClose: t, excludedPlatformTypes: c, includedPlatformTypes: o, integrations: r, onCompleteApplication: p } = n;
+    return (0, i.jsx)(s.ModalRoot, {
         'aria-label': u.intl.string(u.t.syl6HR),
-        size: r.ModalSize.SMALL,
+        size: s.ModalSize.SMALL,
         transitionState: e,
         className: l()(m.container),
         fullscreenOnMobile: !1,
-        children: (0, a.jsxs)(r.ModalContent, {
+        children: (0, i.jsxs)(s.ModalContent, {
             children: [
-                (0, a.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     className: m.header,
                     children: [
-                        (0, a.jsx)(r.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             className: m.title,
                             variant: 'heading-md/bold',
                             children: u.intl.string(u.t.syl6HR)
                         }),
-                        (0, a.jsx)(r.ModalCloseButton, { onClick: i })
+                        (0, i.jsx)(s.ModalCloseButton, { onClick: t })
                     ]
                 }),
-                (0, a.jsx)(f, {
+                (0, i.jsx)(f, {
                     onComplete: function (n) {
-                        t(n), i();
+                        a(n), t();
                     },
                     excludedPlatformTypes: c,
                     includedPlatformTypes: o
                 }),
-                (0, a.jsx)(x, {
-                    integrations: s,
+                (0, i.jsx)(h, {
+                    integrations: r,
                     onCompleteApplication:
                         null != p
                             ? function (n) {
-                                  null == p || p(n), i();
+                                  null == p || p(n), t();
                               }
                             : void 0
                 })

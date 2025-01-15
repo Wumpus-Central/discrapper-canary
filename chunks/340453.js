@@ -5,34 +5,34 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    a = n(518950),
-    s = n(998502),
+var s = n(481060),
+    r = n(518950),
+    a = n(998502),
     l = n(631885),
     o = n(329242),
     c = n(766991);
-let d = s.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+let d = a.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function u(e) {
     let { otherUser: t, status: n } = e,
-        s = (0, l.j_)(t.id, n),
+        a = (0, l.j_)(t.id, n),
         {
             avatarSrc: u,
-            avatarDecorationSrc: g,
-            eventHandlers: m
-        } = (0, a.Z)({
+            avatarDecorationSrc: m,
+            eventHandlers: g
+        } = (0, r.Z)({
             user: t,
-            size: r.AvatarSizes.SIZE_40,
+            size: s.AvatarSizes.SIZE_40,
             animateOnHover: !0
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ...m,
+                ...g,
                 children: (0, i.jsx)(d, {
                     className: c.avatar,
                     src: u,
-                    avatarDecoration: g,
-                    size: r.AvatarSizes.SIZE_40,
+                    avatarDecoration: m,
+                    size: s.AvatarSizes.SIZE_40,
                     'aria-label': t.username
                 })
             }),
@@ -43,11 +43,11 @@ function u(e) {
                         className: c.userContainerWithTimestamp,
                         children: (0, i.jsx)(o.Z, { user: t })
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         className: c.__invalid_timestamp,
                         color: 'text-muted',
                         variant: 'text-xs/normal',
-                        children: s
+                        children: a
                     })
                 ]
             })

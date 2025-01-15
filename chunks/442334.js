@@ -9,18 +9,18 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    l = n(481060),
     o = n(38419);
 function c(e) {
     let { title: t, note: n, children: s, className: r, id: c } = e;
     return (0, i.jsxs)('div', {
-        className: l()(o.inputItem, r),
+        className: a()(o.inputItem, r),
         children: [
             (0, i.jsxs)('div', {
                 className: o.inputItemText,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         tag: 'label',
                         variant: 'text-md/medium',
                         className: o.inputItemTitle,
@@ -28,9 +28,9 @@ function c(e) {
                         children: t
                     }),
                     null != n &&
-                        (0, i.jsx)(a.FormText, {
+                        (0, i.jsx)(l.FormText, {
                             className: o.__invalid_note,
-                            type: a.FormText.Types.DESCRIPTION,
+                            type: l.FormText.Types.DESCRIPTION,
                             children: n
                         })
                 ]
@@ -45,9 +45,9 @@ function d(e) {
     return (0, i.jsx)(c, {
         ...u,
         id: m,
-        children: (0, i.jsx)(a.Select, {
+        children: (0, i.jsx)(l.Select, {
             'aria-labelledby': m,
-            className: l()(o.selectControl, d),
+            className: a()(o.selectControl, d),
             options: t,
             isSelected: (e) => e === n,
             select: r,

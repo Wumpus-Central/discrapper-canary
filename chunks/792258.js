@@ -1,43 +1,43 @@
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(468194),
+var s = n(120356),
+    r = n.n(s),
+    a = n(468194),
     l = n(399606),
     o = n(481060),
     c = n(372769),
     d = n(914788),
     u = n(981631),
-    g = n(388032),
-    m = n(77659);
-let f = [18, 18, 16, 16, 14, 12, 10];
+    m = n(388032),
+    g = n(77659);
+let h = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
     if (void 0 === n) return null;
-    let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
+    let s = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
         p = n.toString(),
-        _ = n.getIconURL(40, !0),
-        h = null,
-        x = f[f.length - 1];
+        x = n.getIconURL(40, !0),
+        f = null,
+        _ = h[h.length - 1];
     if (null == n.icon && null != p) {
         var E;
-        x = null !== (E = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== E ? E : f[f.length - 1];
+        _ = null !== (E = h[(f = (0, a.Zg)(p)).length - 1]) && void 0 !== E ? E : h[h.length - 1];
     }
     return (0, i.jsxs)('div', {
-        className: m.container,
+        className: g.container,
         children: [
             (0, i.jsxs)('div', {
-                style: { fontSize: x },
+                style: { fontSize: _ },
                 children: [
-                    null != h
+                    null != f
                         ? (0, i.jsx)('div', {
-                              className: a()(m.childWrapper, m.acronym),
+                              className: r()(g.childWrapper, g.acronym),
                               'aria-hidden': !0,
-                              children: h
+                              children: f
                           })
                         : null,
-                    null != _
+                    null != x
                         ? (0, i.jsx)(o.Avatar, {
                               src: n.getIconURL(40, !0),
                               size: o.AvatarSizes.SIZE_40,
@@ -47,17 +47,17 @@ t.Z = (e) => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.descriptors,
+                className: g.descriptors,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: m.header,
+                        className: g.header,
                         children: [
-                            r
+                            s
                                 ? (0, i.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',
                                       tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                      className: m.guildBadge
+                                      className: g.guildBadge
                                   })
                                 : null,
                             (0, i.jsx)(o.Text, {
@@ -70,7 +70,7 @@ t.Z = (e) => {
                         ? (0, i.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              children: g.intl.format(g.t['5JmNgo'], { members: n.approximateMemberCount })
+                              children: m.intl.format(m.t['5JmNgo'], { members: n.approximateMemberCount })
                           })
                         : null
                 ]

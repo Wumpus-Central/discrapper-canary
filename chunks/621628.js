@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 }),
     n(47120),
@@ -18,25 +18,25 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    l = n(442837),
     o = n(704215),
     c = n(433517),
     d = n(481060),
     u = n(600164),
     m = n(118012),
-    h = n(675478),
-    g = n(581883),
+    g = n(675478),
+    h = n(581883),
     p = n(883904),
     x = n(68985),
-    S = n(211644),
-    T = n(804501),
+    f = n(211644),
+    _ = n(804501),
     E = n(518378),
     C = n(232186);
-function _(e) {
+function T(e) {
     let { contents: t, content: n, onChange: s } = e,
         r = o.z[n],
-        { isDismissed: l, handleToggleDismissState: a, recurringDismissibleContentInfo: c } = (0, T.x)(r, t),
+        { isDismissed: a, handleToggleDismissState: l, recurringDismissibleContentInfo: c } = (0, _.x)(r, t),
         u = '';
     if (null == c || (void 0 === c.lastDismissedVersion && void 0 === c.lastDismissedAtMs)) u = '';
     else if (void 0 !== c.lastDismissedVersion && 0 !== c.lastDismissedVersion) u = 'last_dismissed_version: '.concat(c.lastDismissedVersion);
@@ -46,9 +46,9 @@ function _(e) {
     }
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(d.FormSwitch, {
-            value: l,
+            value: a,
             onChange: () => {
-                s(n), a();
+                s(n), l();
             },
             children: (0, i.jsx)(d.FormText, {
                 size: m.Z.Sizes.SIZE_16,
@@ -58,14 +58,14 @@ function _(e) {
         })
     });
 }
-function f(e) {
+function S(e) {
     let { items: t, dismissedContents: n, handleChange: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    _,
+                    T,
                     {
                         contents: n,
                         content: e,
@@ -76,28 +76,28 @@ function f(e) {
             )
     });
 }
-function I() {
+function b() {
     var e;
-    let t = (0, S.ZP)((e) => e.recentlyShown),
+    let t = (0, f.ZP)((e) => e.recentlyShown),
         {
             dailyCapReached: n,
             dailyCapOverridden: r,
             newUserMinAgeRequiredOverridden: m
-        } = (0, a.cj)([x.Z], () => ({
+        } = (0, l.cj)([x.Z], () => ({
             dailyCapReached: x.Z.hasUserHitDCCap(),
             dailyCapOverridden: x.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: x.Z.newUserMinAgeRequiredOverridden
         })),
-        [T, _] = s.useState(''),
-        I =
+        [_, T] = s.useState(''),
+        b =
             null !==
-                (e = (0, a.e7)([g.Z], () => {
+                (e = (0, l.e7)([h.Z], () => {
                     var e;
-                    return null === (e = g.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
+                    return null === (e = h.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
                 })) && void 0 !== e
                 ? e
                 : new Uint8Array(),
-        [N, A] = (function (e, t) {
+        [I, N] = (function (e, t) {
             let [n, i] = s.useState(() => {
                 let n = c.K.get(e);
                 return null != n ? n : t;
@@ -109,20 +109,20 @@ function I() {
                 [n, i]
             );
         })('RecentDismissibleOverrides', []),
-        b = (e) => {
-            A((t) => {
+        v = (e) => {
+            N((t) => {
                 let n = new Set(t);
                 n.delete(e);
                 let i = Array.from(n).slice(0, 4);
                 return i.unshift(e), i;
             });
         },
-        v = t.map((e) => o.z[e]),
-        j = N.filter((e) => e.toLowerCase().includes(T.toLowerCase())).filter((e) => !v.includes(e)),
-        O = Object.keys(o.z)
-            .filter((e) => !v.includes(e))
-            .filter((e) => !N.includes(e))
-            .filter((e) => e.toLowerCase().includes(T.toLowerCase()))
+        A = t.map((e) => o.z[e]),
+        j = I.filter((e) => e.toLowerCase().includes(_.toLowerCase())).filter((e) => !A.includes(e)),
+        R = Object.keys(o.z)
+            .filter((e) => !A.includes(e))
+            .filter((e) => !I.includes(e))
+            .filter((e) => e.toLowerCase().includes(_.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -168,19 +168,19 @@ function I() {
                     (0, i.jsx)(d.SearchBar, {
                         className: C.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
-                        query: T,
-                        onChange: _,
-                        onClear: () => _('')
+                        query: _,
+                        onChange: T,
+                        onClear: () => T('')
                     }),
                     (0, i.jsxs)(d.FormItem, {
                         className: E.buttonsContainer,
                         children: [
                             (0, i.jsx)(d.Button, {
-                                onClick: h.sr,
+                                onClick: g.sr,
                                 children: 'Clear All Dismissed Contents'
                             }),
                             (0, i.jsx)(d.Button, {
-                                onClick: h.bE,
+                                onClick: g.bE,
                                 children: 'Check All Dismissed Contents'
                             })
                         ]
@@ -193,10 +193,10 @@ function I() {
                                       className: C.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(f, {
-                                      items: v,
-                                      dismissedContents: I,
-                                      handleChange: b
+                                  (0, i.jsx)(S, {
+                                      items: A,
+                                      dismissedContents: b,
+                                      handleChange: v
                                   })
                               ]
                           })
@@ -208,22 +208,22 @@ function I() {
                                       className: C.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(f, {
+                                  (0, i.jsx)(S, {
                                       items: j,
-                                      dismissedContents: I,
-                                      handleChange: b
+                                      dismissedContents: b,
+                                      handleChange: v
                                   })
                               ]
                           })
                         : null,
                     (0, i.jsx)(u.Z, {
-                        className: l()(C.marginBottom20, C.marginTop20),
+                        className: a()(C.marginBottom20, C.marginTop20),
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(f, {
-                        items: O,
-                        dismissedContents: I,
-                        handleChange: b
+                    (0, i.jsx)(S, {
+                        items: R,
+                        dismissedContents: b,
+                        handleChange: v
                     })
                 ]
             })

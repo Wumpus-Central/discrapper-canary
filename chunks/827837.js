@@ -4,13 +4,13 @@ n.d(t, {
     }
 });
 var i = n(544891),
-    r = n(570140),
-    a = n(230307),
-    s = n(70956),
+    s = n(570140),
+    r = n(230307),
+    a = n(70956),
     l = n(981631);
-let o = 6 * s.Z.Millis.HOUR;
+let o = 6 * a.Z.Millis.HOUR;
 async function c() {
-    let e = a.Z.lastFetched;
+    let e = r.Z.lastFetched;
     if (!(null != e && Date.now() - e < o))
         try {
             let e = await i.tn.get({
@@ -18,7 +18,7 @@ async function c() {
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'USER_ACTIVITY_STATISTICS_FETCH_SUCCESS',
                 statistics: e.body
             });

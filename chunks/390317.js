@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     chatWheelMouseInput: 'chatWheelMouseInput_ba62f2',
     chatWheel: 'chatWheel_ba62f2',
     chatWheelBackground: 'chatWheelBackground_ba62f2',

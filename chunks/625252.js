@@ -1,45 +1,45 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 });
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    l = n.n(r),
-    a = n(704215),
+    a = n.n(r),
+    l = n(704215),
     o = n(780384),
     c = n(481060),
     d = n(37234),
     u = n(410030),
     m = n(605236),
-    h = n(626135),
-    g = n(617136),
+    g = n(626135),
+    h = n(617136),
     p = n(497505),
     x = n(341907),
-    S = n(46140),
-    T = n(981631),
+    f = n(46140),
+    _ = n(981631),
     E = n(388032),
     C = n(839905),
-    _ = n(66094);
-function f() {
+    T = n(66094);
+function S() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {
             (0, d.xf)(),
-                (0, x.navigateToQuestHome)(S.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
-                h.default.track(T.rMx.QUEST_CONTENT_CLICKED, {
-                    cta_name: g.jZ.VIEW_QUESTS,
-                    ...(0, g.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
+                (0, x.navigateToQuestHome)(f.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
+                g.default.track(_.rMx.QUEST_CONTENT_CLICKED, {
+                    cta_name: h.jZ.VIEW_QUESTS,
+                    ...(0, h.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
         }, []);
     return (
         s.useCallback(() => {
-            (0, m.EW)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
+            (0, m.EW)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
         }, []),
-        (0, m.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
+        (0, m.un)(l.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, i.jsxs)('div', {
-            className: l()(C.container),
+            className: a()(C.container),
             style: t,
             children: [
                 !1,
@@ -51,7 +51,7 @@ function f() {
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: _,
+                                    src: T,
                                     className: C.icon
                                 }),
                                 (0, i.jsx)(c.Heading, {

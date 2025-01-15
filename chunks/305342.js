@@ -222,10 +222,10 @@ t.Z = (e) => {
         C = (0, p.jO)(n),
         { openModal: I, canOpenModal: x, cannotOpenReason: v, isCheckingTrialEligibility: T } = (0, b.Z)(C, l, d, h),
         L = (0, o.e7)([m.Z], () => m.Z.isSyncing),
-        { activeSubscription: y, activeSubscriptionListing: k } = (0, g.Z)(d),
-        D = (null == k ? void 0 : k.id) === n,
-        B = (null == y ? void 0 : y.status) === R.O0b.CANCELED,
-        [U, w] = r.useState(!1),
+        { activeSubscription: y, activeSubscriptionListing: D } = (0, g.Z)(d),
+        k = (null == D ? void 0 : D.id) === n,
+        U = (null == y ? void 0 : y.status) === R.O0b.CANCELED,
+        [B, w] = r.useState(!1),
         [F, G] = r.useState(!1),
         V = r.useCallback((e) => {
             let t = !1;
@@ -293,13 +293,13 @@ t.Z = (e) => {
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               Q && (0, i.jsx)('div', { className: P.divider }),
-                                              D
+                                              k
                                                   ? (0, i.jsx)(s.Button, {
                                                         fullWidth: !0,
                                                         look: s.Button.Looks.OUTLINED,
                                                         color: s.Button.Colors.PRIMARY,
                                                         disabled: !0,
-                                                        children: B ? Z.intl.string(Z.t.iKHmu7) : Z.intl.string(Z.t.XvAuMj)
+                                                        children: U ? Z.intl.string(Z.t.iKHmu7) : Z.intl.string(Z.t.XvAuMj)
                                                     })
                                                   : (0, i.jsx)(s.Tooltip, {
                                                         text: x ? null : v,
@@ -319,7 +319,7 @@ t.Z = (e) => {
                                               (0, i.jsx)(s.Text, {
                                                   variant: 'text-sm/normal',
                                                   color: 'text-normal',
-                                                  className: a()((!F || !U) && P.tierDescriptionTruncate),
+                                                  className: a()((!F || !B) && P.tierDescriptionTruncate),
                                                   children: (0, i.jsx)('div', {
                                                       ref: V,
                                                       children: z
@@ -327,7 +327,7 @@ t.Z = (e) => {
                                               }),
                                               F &&
                                                   (0, i.jsx)(M, {
-                                                      isViewAll: U,
+                                                      isViewAll: B,
                                                       onToggle: () => w((e) => !e),
                                                       showMoreText: ei
                                                   })

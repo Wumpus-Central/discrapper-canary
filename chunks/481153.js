@@ -2,41 +2,41 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     l = n.n(s),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     c = n(812206),
-    u = n(388905),
-    d = n(925329),
+    d = n(388905),
+    u = n(925329),
     h = n(479446),
     g = n(981632),
     m = n(594174),
-    p = n(509545),
-    f = n(55563),
-    _ = n(296848),
-    x = n(981631),
+    f = n(509545),
+    p = n(55563),
+    x = n(296848),
+    _ = n(981631),
     E = n(474936),
     I = n(388032),
-    v = n(93008),
-    N = n(652849),
-    b = n(232186);
-t.Z = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
+    N = n(93008),
+    v = n(652849),
+    C = n(232186);
+t.Z = o.ZP.connectStores([p.Z, c.Z, f.Z, m.default], (e) => {
     let { giftCode: t } = e,
-        n = f.Z.get(t.skuId),
+        n = p.Z.get(t.skuId),
         { subscriptionPlanId: i } = t;
     return {
         sku: n,
-        subscriptionPlan: null != i ? (0, _.oE)(i) : null,
+        subscriptionPlan: null != i ? (0, x.oE)(i) : null,
         application: c.Z.getApplication(n.applicationId),
         gifter: m.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: s, sku: a, application: c, subscriptionPlan: m } = e,
-        p = null == s ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: s.username }),
-        f = a.name;
+    let { error: t, giftCode: n, gifter: s, sku: o, application: c, subscriptionPlan: m } = e,
+        f = null == s ? I.intl.string(I.t.lTGZAg) : I.intl.formatToPlainString(I.t.TjWdPT, { username: s.username }),
+        p = o.name;
     return (
         null != m &&
-            (f = I.intl.formatToPlainString(m.interval === E.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
-                skuName: a.name,
+            (p = I.intl.formatToPlainString(m.interval === E.rV.MONTH ? I.t.CTpcCQ : I.t.rgPWGx, {
+                skuName: o.name,
                 intervalCount: m.intervalCount
             })),
         (0, i.jsxs)(r.Fragment, {
@@ -45,31 +45,31 @@ t.Z = a.ZP.connectStores([f.Z, c.Z, p.Z, m.default], (e) => {
                     ? (0, i.jsx)(g.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
-                          className: v.seasonalIcon
+                          className: N.seasonalIcon
                       })
-                    : (0, i.jsx)(u.qE, {
+                    : (0, i.jsx)(d.qE, {
                           src: null != s ? s.getAvatarURL(void 0, 100) : null,
-                          size: o.AvatarSizes.DEPRECATED_SIZE_100,
-                          className: b.marginBottom20
+                          size: a.AvatarSizes.DEPRECATED_SIZE_100,
+                          className: C.marginBottom20
                       }),
                 null != t
                     ? (0, i.jsxs)(r.Fragment, {
-                          children: [(0, i.jsx)(u.DK, { children: I.intl.string(I.t.mDFGFh) }), (0, i.jsx)(u.Dx, { children: t })]
+                          children: [(0, i.jsx)(d.DK, { children: I.intl.string(I.t.mDFGFh) }), (0, i.jsx)(d.Dx, { children: t })]
                       })
                     : (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(u.DK, { children: p }),
-                              (0, i.jsxs)(u.Dx, {
-                                  className: l()(b.marginTop8, N.flexCenter),
+                              (0, i.jsx)(d.DK, { children: f }),
+                              (0, i.jsxs)(d.Dx, {
+                                  className: l()(C.marginTop8, v.flexCenter),
                                   children: [
-                                      a.productLine !== x.POd.COLLECTIBLES &&
-                                          (0, i.jsx)(d.Z, {
-                                              size: d.Z.Sizes.MEDIUM,
-                                              className: v.applicationIcon,
+                                      o.productLine !== _.POd.COLLECTIBLES &&
+                                          (0, i.jsx)(u.Z, {
+                                              size: u.Z.Sizes.MEDIUM,
+                                              className: N.applicationIcon,
                                               game: c,
-                                              skuId: a.id
+                                              skuId: o.id
                                           }),
-                                      f
+                                      p
                                   ]
                               })
                           ]

@@ -1,16 +1,16 @@
-var s = n(200651);
-n(192379);
-var i = n(481060),
-    r = n(570140),
-    o = n(468026),
-    l = n(317770),
-    a = n(981631),
-    c = n(388032);
-let u = 'ActivityInviteManager',
-    d = () => {
+var n = s(200651);
+s(192379);
+var i = s(481060),
+    r = s(570140),
+    o = s(468026),
+    a = s(317770),
+    l = s(981631),
+    c = s(388032);
+let d = 'ActivityInviteManager',
+    u = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class h extends l.Z {
+class h extends a.Z {
     _initialize() {
         r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
@@ -18,37 +18,37 @@ class h extends l.Z {
         r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: r, context: l } = e,
-            h = l === a.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+        let { activity: t, isPrivate: r, context: a } = e,
+            h = a === l.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
         r
             ? (0, i.openModal)(
                   (e) =>
-                      (0, s.jsx)(o.default, {
+                      (0, n.jsx)(o.default, {
                           title: c.intl.formatToPlainString(c.t['2tN7io'], { name: t.name }),
                           body: c.intl.string(c.t.MAxtkp),
                           confirmText: c.intl.string(c.t.BddRzc),
                           ...e
                       }),
                   {
-                      onCloseCallback: d,
-                      modalKey: u
+                      onCloseCallback: u,
+                      modalKey: d
                   },
                   h
               )
             : (0, i.openModalLazy)(
                   async () => {
-                      let { default: e } = await n.e('79921').then(n.bind(n, 699099));
-                      return (t) => (0, s.jsx)(e, { ...t });
+                      let { default: e } = await s.e('79921').then(s.bind(s, 699099));
+                      return (t) => (0, n.jsx)(e, { ...t });
                   },
                   {
-                      onCloseCallback: d,
-                      modalKey: u,
+                      onCloseCallback: u,
+                      modalKey: d,
                       contextKey: h
                   }
               );
     }
     handleModalClose(e) {
-        (0, i.closeModal)(u);
+        (0, i.closeModal)(d);
     }
 }
 t.Z = new h();

@@ -100,7 +100,7 @@ let e_ = (0, c.Un)({
         renderLoader: eE
     }),
     ev = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('60696'), n.e('44400')]).then(n.bind(n, 545918)),
+        createPromise: () => Promise.all([n.e('60696'), n.e('12670')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: eE

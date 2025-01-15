@@ -16,12 +16,12 @@ var r = n(200651),
     d = n(476183),
     u = n(278074),
     f = n(979554),
-    p = n(399606),
-    g = n(481060),
+    g = n(399606),
+    p = n(481060),
     v = n(37234),
     h = n(607070),
-    b = n(100527),
-    m = n(906732),
+    m = n(100527),
+    b = n(906732),
     x = n(1585),
     C = n(125988),
     S = n(286961),
@@ -51,14 +51,14 @@ var r = n(200651),
     Y = n(660097);
 let G = (t) => {
         let { product: e, item: n } = t,
-            a = (0, p.e7)([A.default], () => {
+            a = (0, g.e7)([A.default], () => {
                 let t = A.default.getCurrentUser();
                 return c()(null != t, 'User cannot be undefined'), t;
             }),
             { avatarDecorationSrc: i } = (0, C.Z)({
                 user: a,
                 avatarDecorationOverride: (null == n ? void 0 : n.type) === f.Z.AVATAR_DECORATION ? n : null,
-                size: (0, x.y9)(g.AvatarSizes.SIZE_120)
+                size: (0, x.y9)(p.AvatarSizes.SIZE_120)
             }),
             o = (0, k.k)(e);
         return (0, u.EQ)(e.type)
@@ -75,8 +75,8 @@ let G = (t) => {
                 f.Z.AVATAR_DECORATION,
                 () => (
                     c()(n.type === f.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
-                    (0, r.jsx)(g.Avatar, {
-                        size: g.AvatarSizes.SIZE_120,
+                    (0, r.jsx)(p.Avatar, {
+                        size: p.AvatarSizes.SIZE_120,
                         src: Y,
                         avatarDecoration: i,
                         className: V.avatarDecoration,
@@ -101,7 +101,7 @@ let G = (t) => {
     X = (t) => {
         let { product: e, item: n, reducedMotion: i, displayOptions: o } = t,
             [s, l] = a.useState(!1),
-            c = (0, g.useSpring)({
+            c = (0, p.useSpring)({
                 from: {
                     transform: 'translateX(100%)',
                     right: '-100%'
@@ -113,7 +113,7 @@ let G = (t) => {
                 config: { duration: 1550 },
                 onRest: () => setTimeout(() => l(!0), 100)
             }),
-            u = (0, g.useSpring)({
+            u = (0, p.useSpring)({
                 from: {
                     transform: 'translateX(100%)',
                     right: '-100%'
@@ -125,7 +125,7 @@ let G = (t) => {
                 config: { duration: 1550 },
                 reverse: s
             }),
-            f = (0, g.useSpring)(
+            f = (0, p.useSpring)(
                 {
                     from: {
                         transform: 'translateX(50%)',
@@ -185,7 +185,7 @@ let G = (t) => {
         let { product: i, onClose: s, confettiTarget: l, confettiCanvas: d, hideConfetti: C = !1, analyticsLocations: E, title: A, description: O, selectedVariantIndex: I, shouldShowPromotionalExperience: B } = t,
             H = (0, F.W)(i, I),
             { confettiColors: Y } = (0, _.Z)(H.styles),
-            G = (0, p.e7)([h.Z], () => h.Z.useReducedMotion),
+            G = (0, g.e7)([h.Z], () => h.Z.useReducedMotion),
             X = (0, N.m)('CollectiblesCollectedModal'),
             Q = (0, w.ed)('CollectiblesCollectedModal'),
             K = (0, k.k)(H),
@@ -193,7 +193,7 @@ let G = (t) => {
             J = null == q ? void 0 : null === (e = q.giftPurchaseConfirmation) || void 0 === e ? void 0 : e.rewardCollectedText(),
             [$] = H.items,
             tt = a.useRef(null),
-            { analyticsLocations: te } = (0, m.ZP)([...E, b.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            { analyticsLocations: te } = (0, b.ZP)([...E, m.Z.COLLECTIBLES_COLLECTED_MODAL]),
             tn = (0, T.Z)({ analyticsLocations: te }),
             tr = a.useCallback(() => {
                 if ((s(), (0, v.xf)(), tn(), H.type === f.Z.AVATAR_DECORATION)) {
@@ -220,7 +220,7 @@ let G = (t) => {
             tc = (0, R.x6)(H) || X,
             { category: td, isFetching: tu } = (0, Z.l)(H.skuId),
             tf = null !== (n = null == td ? void 0 : td.successModalBg) && void 0 !== n ? n : H.banner;
-        return (0, r.jsxs)(m.Gt, {
+        return (0, r.jsxs)(b.Gt, {
             value: te,
             children: [
                 (0, r.jsxs)('div', {
@@ -251,11 +251,11 @@ let G = (t) => {
                                 (0, r.jsxs)('div', {
                                     className: V.collectedTextContainer,
                                     children: [
-                                        (0, r.jsx)(g.Heading, {
+                                        (0, r.jsx)(p.Heading, {
                                             variant: 'heading-lg/bold',
                                             children: null != A ? A : Q ? z.intl.string(z.t['1xr2SU']) : z.intl.format(z.t.YNaxMj, { itemName: K })
                                         }),
-                                        (0, r.jsx)(g.Text, {
+                                        (0, r.jsx)(p.Text, {
                                             variant: 'text-sm/normal',
                                             children:
                                                 null != O
@@ -271,13 +271,13 @@ let G = (t) => {
                                     ? (0, r.jsxs)('div', {
                                           className: V.buttons,
                                           children: [
-                                              (0, r.jsx)(g.Button, {
-                                                  color: tl ? g.ButtonColors.PRIMARY : g.ButtonColors.BRAND,
+                                              (0, r.jsx)(p.Button, {
+                                                  color: tl ? p.ButtonColors.PRIMARY : p.ButtonColors.BRAND,
                                                   onClick: tr,
                                                   children: z.intl.string(z.t['2p2aY2'])
                                               }),
                                               tl
-                                                  ? (0, r.jsx)(g.Button, {
+                                                  ? (0, r.jsx)(p.Button, {
                                                         onClick: ta,
                                                         submitting: ti,
                                                         children: z.intl.string(z.t.MAS7uL)
@@ -285,14 +285,14 @@ let G = (t) => {
                                                   : null
                                           ]
                                       })
-                                    : (0, r.jsx)(g.Button, {
+                                    : (0, r.jsx)(p.Button, {
                                           className: o()({ [V.seaonalButtonGradient]: B }),
                                           onClick: tr,
                                           children: z.intl.string(z.t.MAS7uL)
                                       })
                             ]
                         }),
-                        (0, r.jsx)(g.ModalCloseButton, {
+                        (0, r.jsx)(p.ModalCloseButton, {
                             onClick: s,
                             className: V.modalCloseButton,
                             withCircleBackground: !0
@@ -312,23 +312,23 @@ let G = (t) => {
     };
 e.default = (t) => {
     let { transitionState: e, product: n, onClose: i, analyticsLocations: o, title: l, description: c, shouldShowPromotionalExperience: d } = t,
-        u = (0, p.e7)([O.Z], () => O.Z.purchases),
+        u = (0, g.e7)([O.Z], () => O.Z.purchases),
         f = (0, I.o)(n, u),
         v = (0, F.W)(n, f),
         h = a.useRef(new s.qA()),
-        [b, m] = a.useState(null),
+        [m, b] = a.useState(null),
         x = (0, H.UY)(v.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
-                ref: m,
+                ref: b,
                 className: V.confettiCanvas,
                 environment: h.current
             }),
-            (0, r.jsxs)(g.ModalRoot, {
+            (0, r.jsxs)(p.ModalRoot, {
                 hideShadow: !0,
                 transitionState: e,
-                size: g.ModalSize.DYNAMIC,
+                size: p.ModalSize.DYNAMIC,
                 className: V.modalRoot,
                 children: [
                     null != x &&
@@ -339,12 +339,12 @@ e.default = (t) => {
                             alt: '',
                             'aria-hidden': 'true'
                         }),
-                    (0, r.jsx)(g.ModalContent, {
+                    (0, r.jsx)(p.ModalContent, {
                         className: V.modalContent,
                         children: (0, r.jsx)(Q, {
                             product: v,
                             onClose: i,
-                            confettiCanvas: b,
+                            confettiCanvas: m,
                             hideConfetti: null != x,
                             analyticsLocations: o,
                             title: l,

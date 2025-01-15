@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(47120);
 var i = n(442837),
     s = n(687476),
     r = n(293810);
-function l() {
+function a() {
     return (0, i.e7)([s.Z], () =>
         (function () {
             let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.Z],

@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(613060),
     h = n(451478),
     p = n(251625),
-    f = n(981631),
-    m = n(388032);
+    m = n(981631),
+    f = n(388032);
 let g = 'app-download-item',
     v = 'add-server-item';
 function C() {
@@ -20,9 +20,9 @@ function C() {
 function x(e) {
     var t;
     let n = s.default.getMutableGuildStates();
-    return (e === f.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(f.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== g && e !== v && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.highImportanceMentionCount) > 0);
+    return (e === m.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(m.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== g && e !== v && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.highImportanceMentionCount) > 0);
 }
-let I = (0, p.oH)((e, t, n) => ['null', ...t, ...e, v, f.x8Z.E3_SERVER_DISCOVERY_BADGE, g]);
+let I = (0, p.oH)((e, t, n) => ['null', ...t, ...e, v, m.x8Z.E3_SERVER_DISCOVERY_BADGE, g]);
 t.Z = l.forwardRef(function (e, t) {
     let n = (0, r.Wu)([u.ZP, c.Z, s.default], () => I(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), s.default.getStoreChangeSentinel())),
         l = (0, r.e7)([h.Z], () => h.Z.isFocused()),
@@ -32,8 +32,8 @@ t.Z = l.forwardRef(function (e, t) {
         ref: t,
         items: n,
         isUnread: C,
-        textUnread: m.intl.string(m.t.y2b7CA),
-        textMention: m.intl.string(m.t.y2b7CA),
+        textUnread: f.intl.string(f.t.y2b7CA),
+        textMention: f.intl.string(f.t.y2b7CA),
         isMentioned: x,
         animate: l,
         expandedFolders: d

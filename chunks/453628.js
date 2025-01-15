@@ -10,8 +10,8 @@ n(192379);
 var a = n(120356),
     o = n.n(a),
     s = n(481060),
-    c = n(388032),
-    d = n(222569);
+    d = n(388032),
+    c = n(222569);
 ((i = l || (l = {})).DENY = 'DENY'), (i.PASSTHROUGH = 'PASSTHROUGH'), (i.ALLOW = 'ALLOW');
 let u = Object.keys(l);
 function m(e) {
@@ -22,7 +22,7 @@ function m(e) {
             labelledBy: i
         });
     return (0, r.jsx)('div', {
-        className: o()(d.group, { [d.disabled]: l }),
+        className: o()(c.group, { [c.disabled]: l }),
         ...a,
         children: u.map((e) =>
             (0, r.jsx)(
@@ -46,20 +46,20 @@ function h(e) {
         { type: l, onSelect: a, isSelected: u } = e;
     switch (l) {
         case 'DENY':
-            (i = c.intl.string(c.t['6639Oz'])), (t = s.XSmallIcon), (n = d.deny);
+            (i = d.intl.string(d.t['6639Oz'])), (t = s.XSmallIcon), (n = c.deny);
             break;
         case 'ALLOW':
-            (i = c.intl.string(c.t.RzDfSk)), (t = s.CheckmarkLargeIcon), (n = d.allow);
+            (i = d.intl.string(d.t.RzDfSk)), (t = s.CheckmarkLargeIcon), (n = c.allow);
             break;
         default:
-            (i = c.intl.string(c.t.ujC3ZW)), (t = s.SlashIcon), (n = d.passthrough);
+            (i = d.intl.string(d.t.ujC3ZW)), (t = s.SlashIcon), (n = c.passthrough);
     }
     let m = (0, s.useRadioItem)({
         isSelected: u,
         label: i
     });
     return (0, r.jsx)(s.Clickable, {
-        className: o()(d.item, n, { [d.selected]: u }),
+        className: o()(c.item, n, { [c.selected]: u }),
         onClick: () => a(l),
         ...m,
         children: (0, r.jsx)(t, {

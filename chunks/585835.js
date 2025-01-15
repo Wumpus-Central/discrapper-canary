@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     n(653041),
@@ -11,8 +11,8 @@ var i = n(200651),
     a = n.n(r),
     o = n(243814),
     s = n(442837),
-    c = n(481060),
-    d = n(367907),
+    d = n(481060),
+    c = n(367907),
     u = n(213459),
     m = n(600164),
     h = n(488915),
@@ -23,59 +23,59 @@ var i = n(200651),
     b = n(929507),
     v = n(981631),
     C = n(388032),
-    I = n(713594);
-function N(e) {
-    var t, n, r, N, j, _, T;
-    let { name: S, icon: Z, imageSrc: E, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: B, guildId: P, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
+    N = n(713594);
+function I(e) {
+    var t, n, r, I, j, T, _;
+    let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: B, guildId: P, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
         [W, H] = l.useState(!1),
         [G, z] = l.useState(!1);
     let V =
-            ((N = O),
+            ((I = O),
             (j = w),
-            (_ = M),
-            (T = B),
-            null == N || null == T
+            (T = M),
+            (_ = B),
+            null == I || null == _
                 ? null
-                : _
+                : T
                   ? (0, i.jsxs)(m.Z, {
                         align: m.Z.Align.CENTER,
                         children: [
-                            (0, i.jsx)(c.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: N
+                                children: I
                             }),
-                            _
-                                ? (0, i.jsx)(c.ChevronSmallRightIcon, {
+                            T
+                                ? (0, i.jsx)(d.ChevronSmallRightIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 10,
                                       height: 10,
-                                      className: I.caret
+                                      className: N.caret
                                   })
                                 : null
                         ]
                     })
-                  : (0, i.jsx)(c.Button, {
-                        size: c.Button.Sizes.SMALL,
-                        look: _ ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
-                        color: _ ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
+                  : (0, i.jsx)(d.Button, {
+                        size: d.Button.Sizes.SMALL,
+                        look: T ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
+                        color: T ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
                         disabled: j,
-                        onClick: T,
-                        children: N
+                        onClick: _,
+                        children: I
                     })),
         K = U && !D && !G && void 0 !== P && null != k;
     l.useEffect(() => {
         K &&
             x.default.track(v.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-                ...(0, d.hH)(P),
+                ...(0, c.hH)(P),
                 application_id: null == k ? void 0 : k.application.id,
                 location: 'overview'
             });
     }, [P, null == k ? void 0 : k.application.id, K]);
     let q = K
-            ? (0, i.jsx)(c.Popout, {
+            ? (0, i.jsx)(d.Popout, {
                   renderPopout: () =>
-                      (0, i.jsx)(c.Clickable, {
+                      (0, i.jsx)(d.Clickable, {
                           onClick: (e) => {
                               e.stopPropagation(), z(!0), b.Z.dismissOverviewTooltip(P, k.integration);
                           },
@@ -86,7 +86,7 @@ function N(e) {
                       }),
                   position: 'bottom',
                   align: 'center',
-                  animation: c.Popout.Animation.TRANSLATE,
+                  animation: d.Popout.Animation.TRANSLATE,
                   shouldShow: !0,
                   children: () => V
               })
@@ -100,9 +100,9 @@ function N(e) {
         Q = (0, i.jsxs)(m.Z, {
             children: [
                 (0, i.jsx)(f.Z, {
-                    name: S,
-                    icon: Z,
-                    imageSrc: E,
+                    name: Z,
+                    icon: E,
+                    imageSrc: S,
                     iconBackgroundColor: y,
                     iconClassName: A,
                     iconWrapperClassName: R,
@@ -120,37 +120,37 @@ function N(e) {
                                 var l;
                                 if (null == e) return null;
                                 let r = [],
-                                    { application: a, integration: s, webhooks: d } = e;
+                                    { application: a, integration: s, webhooks: c } = e;
                                 return (
                                     null != a.bot &&
                                         r.push(
                                             (0, i.jsx)(
-                                                c.TooltipContainer,
+                                                d.TooltipContainer,
                                                 {
                                                     forceOpen: t,
                                                     text: new g.Z(a.bot).isVerifiedBot() ? C.intl.string(C.t.xxcTGx) : C.intl.string(C.t.AOdOYm),
-                                                    className: I.feature,
-                                                    children: (0, i.jsx)(c.RobotIcon, {
+                                                    className: N.feature,
+                                                    children: (0, i.jsx)(d.RobotIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: I.featureIcon
+                                                        className: N.featureIcon
                                                     })
                                                 },
                                                 'bot'
                                             )
                                         ),
-                                    d.length > 0 &&
+                                    c.length > 0 &&
                                         r.push(
                                             (0, i.jsx)(
-                                                c.TooltipContainer,
+                                                d.TooltipContainer,
                                                 {
                                                     forceOpen: t,
-                                                    text: C.intl.formatToPlainString(C.t['6HqDfX'], { count: d.length }),
-                                                    className: I.feature,
-                                                    children: (0, i.jsx)(c.WebhookIcon, {
+                                                    text: C.intl.formatToPlainString(C.t['6HqDfX'], { count: c.length }),
+                                                    className: N.feature,
+                                                    children: (0, i.jsx)(d.WebhookIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: I.featureIcon
+                                                        className: N.featureIcon
                                                     })
                                                 },
                                                 'webhooks'
@@ -162,11 +162,11 @@ function N(e) {
                                             (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: I.feature,
-                                                    children: (0, i.jsx)(c.SlashBoxIcon, {
+                                                    className: N.feature,
+                                                    children: (0, i.jsx)(d.SlashBoxIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: I.featureIcon
+                                                        className: N.featureIcon
                                                     })
                                                 },
                                                 'commands'
@@ -183,21 +183,21 @@ function N(e) {
             ]
         });
     return M
-        ? (0, i.jsx)(c.Clickable, {
+        ? (0, i.jsx)(d.Clickable, {
               onClick: () => {
                   U && null != P && null != k && b.Z.dismissOverviewTooltip(P, k.integration), null == B || B();
               },
               onFocus: () => H(!0),
               onBlur: () => H(!1),
-              children: (0, i.jsx)(c.Card, {
+              children: (0, i.jsx)(d.Card, {
                   editable: !0,
-                  className: a()(I.card, I.clickable),
+                  className: a()(N.card, N.clickable),
                   children: Q
               })
           })
-        : (0, i.jsx)(c.Card, {
+        : (0, i.jsx)(d.Card, {
               editable: !0,
-              className: I.card,
+              className: N.card,
               children: Q
           });
 }

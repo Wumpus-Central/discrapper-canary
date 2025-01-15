@@ -7,15 +7,15 @@ var i = n(200651);
 n(192379);
 var s = n(331595);
 function r(e) {
-    let { width: t = 106, height: n = 43, color: r = 'currentColor', foreground: l, ...a } = e;
+    let { width: t = 106, height: n = 43, color: r = 'currentColor', foreground: a, ...l } = e;
     return (0, i.jsx)('svg', {
-        ...(0, s.Z)(a),
+        ...(0, s.Z)(l),
         width: t,
         height: n,
         viewBox: '0 0 106 43',
         children: (0, i.jsxs)('g', {
             fill: r,
-            className: l,
+            className: a,
             fillRule: 'evenodd',
             'aria-hidden': !0,
             children: [

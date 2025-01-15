@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return E;
     }
 }),
     n(47120),
@@ -28,8 +28,8 @@ var r = n(200651),
     T = n(981631),
     _ = n(501787),
     S = n(27731),
-    y = n(941469);
-let N = (e) => ({
+    N = n(941469);
+let y = (e) => ({
         type: T.Odu.CLICK_ZONE_DEBUG,
         id: (0, o.Z)(),
         layoutId: e,
@@ -45,7 +45,7 @@ let N = (e) => ({
         pinned: !0
     }),
     k = (e, t) => e.find((e) => e.type === t);
-function E(e) {
+function I(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([h.ZP], () => h.ZP.getGameForPID(t.pid)),
         a = (0, s.e7)([g.Z], () => g.Z.getGameForPID(t.pid));
@@ -125,13 +125,13 @@ function E(e) {
         ]
     });
 }
-function I() {
+function E() {
     let e = (0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(_.OVERLAY_V3_LAYOUT_ID)),
         t = (0, s.e7)([p.Z], () => p.Z.clickZoneDebugMode),
         n = (0, s.e7)([p.Z], () => p.Z.renderDebugMode),
         l = (0, s.e7)([x.Z], () => x.Z.getForcedRenderMode()),
         [o, g] = a.useState({}),
-        [I, w] = a.useState(l),
+        [E, w] = a.useState(l),
         Z = (e) => {
             w(e), u.Z.forceRenderMode(e);
         },
@@ -164,8 +164,8 @@ function I() {
             return e;
         });
     }, [O]);
-    let P = (0, s.cj)([v.Z], () => v.Z.getOverlayPIDStatuses()),
-        [L, A] = a.useState({}),
+    let L = (0, s.cj)([v.Z], () => v.Z.getOverlayPIDStatuses()),
+        [P, A] = a.useState({}),
         D = a.useRef();
     a.useEffect(
         () => (
@@ -213,7 +213,7 @@ function I() {
         G = () => {
             if (null != H) (0, d.E9)(H.id);
             else {
-                let e = N(_.OVERLAY_V3_LAYOUT_ID);
+                let e = y(_.OVERLAY_V3_LAYOUT_ID);
                 (0, d.A4)(e);
             }
         },
@@ -239,17 +239,17 @@ function I() {
             let r = n.moduleTrackingTimestamp - n.screenTypeResolutionTimestamp;
             return ''.concat(r.toFixed(2), 'ms');
         },
-        K = (e) => {
+        Y = (e) => {
             var t;
             let n = null === (t = O[e]) || void 0 === t ? void 0 : t.timer;
             if (null == n || null == n.overlayRenderingTimestamp || null == n.moduleTrackingTimestamp) return '...';
             let r = n.overlayRenderingTimestamp - n.moduleTrackingTimestamp;
             return ''.concat(r.toFixed(2), 'ms');
         },
-        Y = B.filter((e) => null == O[e.pid]);
+        K = B.filter((e) => null == O[e.pid]);
     return (0, r.jsx)(c.ScrollerAuto, {
         children: (0, r.jsxs)('div', {
-            className: i()(y.panel, S.panel),
+            className: i()(N.panel, S.panel),
             children: [
                 (0, r.jsxs)('div', {
                     className: S.panelGroup,
@@ -328,14 +328,14 @@ function I() {
                             className: S.panelGroup,
                             children: (0, r.jsx)(c.Select, {
                                 serialize: (e) => e,
-                                isSelected: (e) => e === I,
+                                isSelected: (e) => e === E,
                                 options: R,
                                 select: Z,
                                 popoutLayerContext: C.O$
                             })
                         })
                 }),
-                Y.length > 0 &&
+                K.length > 0 &&
                     (0, r.jsx)(c.Tooltip, {
                         position: 'left',
                         text: 'Games that are running but not tracked by the overlay',
@@ -350,7 +350,7 @@ function I() {
                                             color: 'text-danger',
                                             children: 'Untracked Running Games'
                                         }),
-                                        Y.map((e) =>
+                                        K.map((e) =>
                                             (0, r.jsx)(
                                                 c.Text,
                                                 {
@@ -380,7 +380,7 @@ function I() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(O).map((e) => (0, r.jsx)(E, { trackedGame: e }, e.pid))
+                                    Object.values(O).map((e) => (0, r.jsx)(I, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })
@@ -417,12 +417,12 @@ function I() {
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-md/normal',
                                             color: 'text-secondary',
-                                            children: 'Rendering: '.concat(K(e.pid))
+                                            children: 'Rendering: '.concat(Y(e.pid))
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-md/medium',
                                             color: 'text-primary',
-                                            children: 'Bridge Status: '.concat(P.get(Number(e.pid)))
+                                            children: 'Bridge Status: '.concat(L.get(Number(e.pid)))
                                         })
                                     ]
                                 },
@@ -462,7 +462,7 @@ function I() {
                                                         color: 'text-secondary',
                                                         children: ['Original Screen Type: ', z(e.pid)]
                                                     }),
-                                                    null === (t = L[e.pid]) || void 0 === t
+                                                    null === (t = P[e.pid]) || void 0 === t
                                                         ? void 0
                                                         : t.reverse().map((t) => {
                                                               let { screenType: n, timestamp: a } = t;

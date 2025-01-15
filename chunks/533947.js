@@ -120,30 +120,30 @@ let O = new P(
               },
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: t, channelId: n, webhooks: l } = e;
-                  if (null == i || t !== i.id || null == r || n !== r.id || null == l || S === I.QZA.SUBMITTING) return !1;
-                  v = !1;
-                  for (let e = C.length - 1; e >= 0; e--) {
-                      let t = C[e];
-                      if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-                      let i = l.find((e) => {
-                          let { id: n } = e;
-                          if (n === t.id) return !0;
-                      });
-                      if (null != i) {
-                          let n = {
-                              ...t,
-                              ...i
-                          };
-                          (C[e] = n), !A && (null == N ? void 0 : N.id) === n.id && (N = n);
-                      } else (null == N ? void 0 : N.id) === t.id && (N = null), C.splice(e, 1);
+                  if (((v = !1), null != i && t === i.id && null != r && n === r.id && null != l && S !== I.QZA.SUBMITTING)) {
+                      for (let e = C.length - 1; e >= 0; e--) {
+                          let t = C[e];
+                          if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
+                          let i = l.find((e) => {
+                              let { id: n } = e;
+                              if (n === t.id) return !0;
+                          });
+                          if (null != i) {
+                              let n = {
+                                  ...t,
+                                  ...i
+                              };
+                              (C[e] = n), !A && (null == N ? void 0 : N.id) === n.id && (N = n);
+                          } else (null == N ? void 0 : N.id) === t.id && (N = null), C.splice(e, 1);
+                      }
+                      for (let e of l)
+                          null ==
+                              C.find((t) => {
+                                  let { id: n } = t;
+                                  if (n === e.id) return !0;
+                              }) && C.push(e);
+                      (C = [...C]), x();
                   }
-                  for (let e of l)
-                      null ==
-                          C.find((t) => {
-                              let { id: n } = t;
-                              if (n === e.id) return !0;
-                          }) && C.push(e);
-                  (C = [...C]), x();
               },
               INTEGRATION_SETTINGS_SUBMITTING: function () {
                   (S = I.QZA.SUBMITTING), (T = {});

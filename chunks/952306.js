@@ -2,7 +2,7 @@ var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(723359),
-    l = n(231338);
+    a = n(231338);
 t.Z = {
     openNewUserAgeGateModal: (e) => {
         (0, s.openModalLazy)(
@@ -12,7 +12,7 @@ t.Z = {
             },
             {
                 modalKey: r.$$,
-                onCloseRequest: l.dG,
+                onCloseRequest: a.dG,
                 onCloseCallback: e
             }
         );
@@ -30,7 +30,7 @@ t.Z = {
                     });
             },
             {
-                onCloseRequest: e ? l.dG : null,
+                onCloseRequest: e ? a.dG : null,
                 onCloseCallback: t
             }
         );

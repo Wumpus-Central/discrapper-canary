@@ -71,7 +71,7 @@ let P = O(function (e) {
                 [O, L]
             );
         if (!m || null == h) return null;
-        let k = () => {
+        let D = () => {
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -96,7 +96,7 @@ let P = O(function (e) {
             },
             iconSrc: S,
             onIconClick: () => {
-                k(),
+                D(),
                     C.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
@@ -104,7 +104,7 @@ let P = O(function (e) {
             },
             children: (0, i.jsx)(a.Button, {
                 onClick: () => {
-                    k(),
+                    D(),
                         C.default.track(A.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
@@ -118,7 +118,7 @@ let P = O(function (e) {
     L = O(function (e) {
         var t, o;
         let { appId: u, skuId: _, message: I } = e,
-            [v, P, L, O, M, k, D, B] = (0, l.Wu)(
+            [v, P, L, O, M, D, k, U] = (0, l.Wu)(
                 [g.Z, E.Z, p.Z, f.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -133,7 +133,7 @@ let P = O(function (e) {
                 },
                 [u, I.channel_id, _]
             ),
-            U = (0, T.R)(null !== (o = null == P ? void 0 : P.id) && void 0 !== o ? o : '');
+            B = (0, T.R)(null !== (o = null == P ? void 0 : P.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
             null == v && !O && !M && (0, s.km)(_);
         }, [M, O, v, _]),
@@ -143,10 +143,10 @@ let P = O(function (e) {
         let w = (0, l.e7)([g.Z], () => (null != _ ? g.Z.getParentSKU(_) : void 0), [_]),
             { openModal: F, subscriptionPurchaseButtonState: G } = (0, h.Z)({
                 skuId: _,
-                initialSubscribeForGuild: D
+                initialSubscribeForGuild: k
             }),
             V = (0, d.YP)({ location: 'AppStorefrontSKUMessageEmbed' });
-        if (!U || null == P || null == v) return null;
+        if (!B || null == P || null == v) return null;
         let H = v.type === A.epS.SUBSCRIPTION,
             z = !!H && (0, m.KW)(v.flags),
             W = () => {
@@ -157,7 +157,7 @@ let P = O(function (e) {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
                             appId: P.id,
-                            guildId: D
+                            guildId: k
                         });
                 });
             },
@@ -174,7 +174,7 @@ let P = O(function (e) {
                                   transitionState: n.transitionState,
                                   appId: P.id,
                                   skuId: v.id,
-                                  guildId: D,
+                                  guildId: k,
                                   subscriptionType: z ? 'user' : 'guild',
                                   onClose: n.onClose,
                                   onHeaderTitleClick: r
@@ -239,7 +239,7 @@ let P = O(function (e) {
             onLinkCopy: () => {
                 (0, N.X)(P.id, N.B.SKU_EMBED, _);
             },
-            iconSrc: B,
+            iconSrc: U,
             onIconClick: () => {
                 W(),
                     C.default.track(A.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
@@ -265,7 +265,7 @@ let P = O(function (e) {
                         children: R.intl.string(R.t.DXYfjI)
                     }),
                     H
-                        ? null != k
+                        ? null != D
                             ? (0, i.jsx)(S.pV, {
                                   onClick: F,
                                   appId: P.id,
@@ -276,7 +276,7 @@ let P = O(function (e) {
                                       color: 'currentcolor'
                                   }),
                                   onHasClicked: X,
-                                  subscriptionPlan: k,
+                                  subscriptionPlan: D,
                                   state: G
                               })
                             : (0, i.jsx)(a.Button, {

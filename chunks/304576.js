@@ -1,32 +1,32 @@
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+var s = n(120356),
+    r = n.n(s),
+    a = n(442837),
     l = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(357355),
     u = n(140465),
-    g = n(775412),
-    m = n(650032),
-    f = n(104494),
+    m = n(775412),
+    g = n(650032),
+    h = n(104494),
     p = n(639119),
-    _ = n(105759),
-    h = n(346497),
-    x = n(422034),
+    x = n(105759),
+    f = n(346497),
+    _ = n(422034),
     E = n(710220),
-    b = n(318747),
-    C = n(635921),
-    v = n(474936),
-    T = n(388032),
-    N = n(337307);
-let I = (e) => {
+    C = n(318747),
+    T = n(635921),
+    S = n(474936),
+    b = n(388032),
+    I = n(337307);
+let N = (e) => {
     let t,
-        { trialOffer: n, discountOffer: r } = e;
-    if ((null != n ? (t = T.intl.string(T.t.IBYG5e)) : null != r && (t = T.intl.formatToPlainString(T.t.iiLbvr, { percent: r.discount.amount })), null != t))
+        { trialOffer: n, discountOffer: s } = e;
+    if ((null != n ? (t = b.intl.string(b.t.IBYG5e)) : null != s && (t = b.intl.formatToPlainString(b.t.iiLbvr, { percent: s.discount.amount })), null != t))
         return (0, i.jsx)('div', {
-            className: N.premiumOfferPill,
+            className: I.premiumOfferPill,
             children: (0, i.jsx)(l.Text, {
                 variant: 'redesign/heading-18/bold',
                 color: 'always-white',
@@ -36,69 +36,69 @@ let I = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { isFullscreen: r, className: S, buttonClassName: R, subscriptionTier: j, entrypoint: A, isDarkMode: P } = e,
-        { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        M = (0, g._O)(),
-        Z = (0, f.Ng)(),
-        B = (0, f.Wp)(Z, v.Si.TIER_2) ? v.Si.TIER_2 : void 0,
-        y = (0, p.N)(),
-        w = (0, u.Nx)(),
-        k = (0, h.Vi)(),
-        L = (0, s.e7)([d.Z], () => d.Z.affinities),
-        U = (0, _.Z)(),
-        { enabled: D } = m._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        G = A === v.EZ.ApplicationStoreHome && null != U && D,
-        H = L.length > 0;
+    let { isFullscreen: s, className: v, buttonClassName: A, subscriptionTier: j, entrypoint: R, isDarkMode: O } = e,
+        { analyticsLocations: P } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
+        y = (0, m._O)(),
+        D = (0, h.Ng)(),
+        B = (0, h.Wp)(D, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
+        Z = (0, p.N)(),
+        L = (0, u.Nx)(),
+        M = (0, f.Vi)(),
+        k = (0, a.e7)([d.Z], () => d.Z.affinities),
+        w = (0, x.Z)(),
+        { enabled: F } = g._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        U = R === S.EZ.ApplicationStoreHome && null != w && F,
+        V = k.length > 0;
     return (0, i.jsx)(c.Gt, {
-        value: O,
+        value: P,
         children: (0, i.jsx)('div', {
-            className: a()(N.container, N.marketingPageV2Container, S),
+            className: r()(I.container, I.marketingPageV2Container, v),
             'data-testid': 'v2-marketing-page-hero-header',
             children: (0, i.jsxs)('div', {
-                className: N.marketingPageV2TextContainer,
+                className: I.marketingPageV2TextContainer,
                 children: [
-                    w &&
-                        (0, i.jsx)(I, {
-                            trialOffer: y,
-                            discountOffer: Z
+                    L &&
+                        (0, i.jsx)(N, {
+                            trialOffer: Z,
+                            discountOffer: D
                         }),
                     (0, i.jsx)(l.Heading, {
-                        className: N.marketingPageV2Heading,
+                        className: I.marketingPageV2Heading,
                         variant: 'display-sm',
                         color: 'header-primary',
-                        children: T.intl.string(T.t.YCZldH)
+                        children: b.intl.string(b.t.YCZldH)
                     }),
-                    G
+                    U
                         ? (0, i.jsx)(E.Z, {
-                              referrer: U,
+                              referrer: w,
                               isMarketingPageV2Enabled: !0
                           })
-                        : H &&
+                        : V &&
                           (0, i.jsx)('div', {
-                              className: a()(N.affinityDescriptionV2),
-                              children: (0, i.jsx)(x.Z, {
+                              className: r()(I.affinityDescriptionV2),
+                              children: (0, i.jsx)(_.Z, {
                                   textColor: 'text-normal',
-                                  smallerText: !r,
+                                  smallerText: !s,
                                   isMarketingPageV2Enabled: !0
                               })
                           }),
-                    k || M
+                    M || y
                         ? (0, i.jsx)('div', {
-                              className: a()(N.buttonContainer, N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(H || G) }),
-                              children: (0, i.jsx)(b.Z, {
-                                  className: a()(N.button, R),
+                              className: r()(I.buttonContainer, I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
+                              children: (0, i.jsx)(C.Z, {
+                                  className: r()(I.button, A),
                                   forceWhite: !0
                               })
                           })
-                        : (0, i.jsx)(C.PK, {
-                              subscriptionTier: null !== (n = null != j ? j : null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : B,
-                              inOfferExperience: w,
-                              containerClassName: a()(N.marketingPageV2CTAContainer, { [N.marketingPageV2CTAMargin]: !(H || G) }),
-                              buttonClassName: R,
+                        : (0, i.jsx)(T.PK, {
+                              subscriptionTier: null !== (n = null != j ? j : null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : B,
+                              inOfferExperience: L,
+                              containerClassName: r()(I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
+                              buttonClassName: A,
                               isMarketingPageV2Enabled: !0,
-                              isDarkMode: P
+                              isDarkMode: O
                           }),
-                    (0, i.jsx)(C._O, {
+                    (0, i.jsx)(T._O, {
                         variant: 'text-md/normal',
                         withBottomMargin: !1,
                         isMarketingPageV2Enabled: !0

@@ -8,23 +8,23 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(772848),
-    l = n(481060),
-    a = n(259580),
+    a = n(481060),
+    l = n(259580),
     o = n(991346),
     c = n(377465);
 function d(e) {
     let { setting: t, hasChildren: n } = e;
-    return (0, i.jsx)(l.Text, {
+    return (0, i.jsx)(a.Text, {
         variant: n ? 'text-md/bold' : 'text-md/normal',
         children: t
     });
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [m, h] = s.useState(1 === o),
-        g = s.useCallback(() => {
-            h(!m);
-        }, [m, h]);
+        [m, g] = s.useState(1 === o),
+        h = s.useCallback(() => {
+            g(!m);
+        }, [m, g]);
     if (0 === n.length)
         return (0, i.jsx)(
             'div',
@@ -63,16 +63,16 @@ function u(e) {
             style: { marginLeft: 8 * o },
             className: c.settingNode,
             children: [
-                (0, i.jsxs)(l.Clickable, {
+                (0, i.jsxs)(a.Clickable, {
                     className: c.headerBar,
-                    onClick: g,
+                    onClick: h,
                     children: [
                         (0, i.jsx)(d, {
                             setting: t,
                             hasChildren: n.length > 0
                         }),
-                        (0, i.jsx)(a.Z, {
-                            direction: m ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
+                        (0, i.jsx)(l.Z, {
+                            direction: m ? l.Z.Directions.DOWN : l.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
@@ -119,7 +119,7 @@ function m() {
     return (0, i.jsxs)('div', {
         className: c.root,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-lg/bold',
                 children: 'Settings Tree'
             }),

@@ -3,18 +3,18 @@ var i,
     r = n(200651),
     s = n(192379),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     c = n(893776),
-    u = n(129293),
-    d = n(388905),
+    d = n(129293),
+    u = n(388905),
     h = n(17894),
     g = n(108427),
     m = n(314897),
-    p = n(626135),
-    f = n(981631),
-    _ = n(388032),
-    x = n(823793),
+    f = n(626135),
+    p = n(981631),
+    x = n(388032),
+    _ = n(823793),
     E = n(232186);
 function I(e, t, n) {
     return (
@@ -29,69 +29,69 @@ function I(e, t, n) {
         e
     );
 }
-o.ZP.initialize();
-class v extends (i = s.PureComponent) {
+a.ZP.initialize();
+class N extends (i = s.PureComponent) {
     componentDidMount() {
         this.handleVerify(), (0, g.e)('verify_email');
     }
     renderVerifyFailed() {
-        return (0, r.jsxs)(d.ZP, {
+        return (0, r.jsxs)(u.ZP, {
             children: [
-                (0, r.jsx)(d.Ee, {
+                (0, r.jsx)(u.Ee, {
                     src: n(375673),
-                    className: a()(x.image, E.marginBottom20)
+                    className: o()(_.image, E.marginBottom20)
                 }),
-                (0, r.jsx)(d.Dx, {
+                (0, r.jsx)(u.Dx, {
                     className: E.marginBottom8,
-                    children: _.intl.string(_.t.PCgG39)
+                    children: x.intl.string(x.t.PCgG39)
                 }),
-                (0, r.jsx)(d.DK, {
+                (0, r.jsx)(u.DK, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.tQpeAw)
+                    children: x.intl.string(x.t.tQpeAw)
                 }),
-                (0, r.jsx)(d.zx, {
+                (0, r.jsx)(u.zx, {
                     onClick: this.handleLogin,
-                    children: _.intl.string(_.t.dKhVQE)
+                    children: x.intl.string(x.t.dKhVQE)
                 })
             ]
         });
     }
     renderVerifySucceeded() {
-        return (0, r.jsxs)(d.ZP, {
+        return (0, r.jsxs)(u.ZP, {
             children: [
-                (0, r.jsx)(d.Ee, {
+                (0, r.jsx)(u.Ee, {
                     src: n(73962),
-                    className: a()(x.image, E.marginBottom20)
+                    className: o()(_.image, E.marginBottom20)
                 }),
-                (0, r.jsx)(d.Dx, {
+                (0, r.jsx)(u.Dx, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.dAfGb2)
+                    children: x.intl.string(x.t.dAfGb2)
                 }),
-                (0, r.jsx)(d.zx, {
+                (0, r.jsx)(u.zx, {
                     onClick: this.handleOpenApp,
-                    children: _.intl.string(_.t.uJWIj4)
+                    children: x.intl.string(x.t.uJWIj4)
                 })
             ]
         });
     }
     renderVerifying() {
-        return (0, r.jsxs)(d.ZP, {
+        return (0, r.jsxs)(u.ZP, {
             children: [
-                (0, r.jsx)(d.Ee, {
+                (0, r.jsx)(u.Ee, {
                     src: n(892235),
-                    className: a()(x.image, E.marginBottom20)
+                    className: o()(_.image, E.marginBottom20)
                 }),
-                (0, r.jsx)(d.Dx, {
+                (0, r.jsx)(u.Dx, {
                     className: E.marginBottom8,
-                    children: _.intl.string(_.t['0c8+5u'])
+                    children: x.intl.string(x.t['0c8+5u'])
                 }),
-                (0, r.jsx)(d.DK, {
+                (0, r.jsx)(u.DK, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.ULTCBA)
+                    children: x.intl.string(x.t.ULTCBA)
                 }),
-                (0, r.jsx)(d.zx, {
+                (0, r.jsx)(u.zx, {
                     submitting: !0,
-                    color: d.zx.Colors.PRIMARY
+                    color: u.zx.Colors.PRIMARY
                 })
             ]
         });
@@ -103,24 +103,24 @@ class v extends (i = s.PureComponent) {
     constructor(...e) {
         super(...e),
             I(this, 'handleVerify', () => {
-                let e = (0, u.Z)(this.props.location);
+                let e = (0, d.Z)(this.props.location);
                 null != e && c.Z.verify(e);
             }),
             I(this, 'handleLogin', () => {
                 let { transitionTo: e } = this.props;
-                e(f.Z5c.LOGIN);
+                e(p.Z5c.LOGIN);
             }),
             I(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                p.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
+                f.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
             });
     }
 }
-I(v, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-    (t.Z = o.ZP.connectStores([m.default], () => ({
+I(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
+    (t.Z = a.ZP.connectStores([m.default], () => ({
         verifyFailed: m.default.didVerifyFail(),
         verifyErrors: m.default.getVerifyErrors(),
         verifySucceeded: m.default.didVerifySucceed(),
         fingerprint: m.default.getFingerprint(),
         verifyingUserId: m.default.getVerifyingUserId()
-    }))(v));
+    }))(N));

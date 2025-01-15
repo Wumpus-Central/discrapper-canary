@@ -11,8 +11,8 @@ var l = n(442837),
     a = n(749210),
     o = n(240872),
     s = n(605436),
-    c = n(228643),
-    d = n(299206),
+    d = n(228643),
+    c = n(299206),
     u = n(496675),
     m = n(867108),
     h = n(388032);
@@ -25,7 +25,7 @@ function p(e, t) {
         g = [],
         x = (0, m.Z)(e, t);
     null != x && g.push(x);
-    let f = (0, d.Z)({
+    let f = (0, c.Z)({
         id: t.id,
         label: h.intl.string(h.t.sMsaLi)
     });
@@ -52,7 +52,7 @@ function p(e, t) {
                                     body: h.intl.format(h.t['9+nrUV'], { name: t.name }),
                                     cancelText: h.intl.string(h.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        b && (await (0, c.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
+                                        b && (await (0, d.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }

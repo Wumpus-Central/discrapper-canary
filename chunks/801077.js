@@ -10,8 +10,8 @@ var i,
     d = n(570140),
     h = n(782769),
     p = n(527805),
-    f = n(841784),
-    m = n(503438),
+    m = n(841784),
+    f = n(503438),
     g = n(802856),
     v = n(420660),
     C = n(728345),
@@ -78,7 +78,7 @@ function et(e) {
     !J.has(e) && Q.add(e);
 }
 function en(e) {
-    if ((0, m.Z)(e)) return E.r9;
+    if ((0, f.Z)(e)) return E.r9;
     let t = null != e.application_id ? x.Z.getApplication(e.application_id) : null;
     return null != t ? t : (0, g.Z)(e) ? $(e.name) : (0, v.Z)(e) && null != e.url ? ee(e.url) : (null != e.application_id && et(e.application_id), t);
 }
@@ -93,7 +93,7 @@ function er(e, t, n) {
     var i, l, r, a, o, c;
     let u;
     let d = B.default.getCurrentUser(),
-        m = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
+        f = null !== (i = null == d ? void 0 : d.nsfwAllowed) && void 0 !== i && i,
         g = t.map((e) => e.id),
         v = t.filter((t) => e.has(t.id)),
         C = !1,
@@ -104,7 +104,7 @@ function er(e, t, n) {
     for (let e of t) {
         let n = T.Z.getAnyStreamForUser(e.id),
             i = P.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == i ? void 0 : i.isNSFW()) && (!m || !M.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
+        if ((null == i ? void 0 : i.isNSFW()) && (!f || !M.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let o = X(e.id);
         if (
             (null != n &&
@@ -124,7 +124,7 @@ function er(e, t, n) {
                 return null != t ? t : 'string' != typeof e ? (new _.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === E.XB ? E.r9 : e.startsWith(j.H) ? $(e.slice(j.H.length)) : e.startsWith(y._) ? ee(e.slice(y._.length)) : (et(e), null);
             })(c),
             g = null === (l = o.timestamps) || void 0 === l ? void 0 : l.start;
-        if ((0, f.Z)(o)) {
+        if ((0, m.Z)(o)) {
             let t = (0, h.a)();
             if (
                 (0, p.ZP)({

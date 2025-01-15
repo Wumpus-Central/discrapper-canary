@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return B;
     }
 });
 var i,
@@ -52,7 +52,7 @@ function M(e) {
     });
 }
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
-function k(e, t, n, i, r) {
+function D(e, t, n, i, r) {
     var a, o, c;
     let { message: d, compact: u, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
     if (u && 1 === n) return null;
@@ -102,7 +102,7 @@ function k(e, t, n, i, r) {
           })
         : T();
 }
-function D(e, t, n, i, r) {
+function k(e, t, n, i, r) {
     let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(R.Z, {
         className: 1 === n ? O.targetUsername : '',
@@ -118,13 +118,13 @@ function D(e, t, n, i, r) {
         onPopoutRequestClose: f
     });
 }
-let B = () =>
+let U = () =>
     (0, l.jsx)(h.ChevronSmallRightIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: O.executedCommandSeparator
     });
-function U(e) {
+function B(e) {
     var t;
     let n;
     let { message: i, channel: r } = e,
@@ -158,15 +158,15 @@ function U(e) {
         S = (0, x.t0)(i),
         R = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != S.target_user ? new T.Z(S.target_user) : null,
         M = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
-        U = (0, j.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, r),
+        B = (0, j.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, r),
         w = (0, j.Sw)(R, r),
         F = a.useMemo(() => (e.compact ? (0, P.Z)((0, b.vc)(m()(), 'LT')) : null), [e.compact]),
         G = (0, p.NX)(r.id),
         V = i.interaction;
-    if (null == V || null == U) return null;
+    if (null == V || null == B) return null;
     let H = () => {
-        let t = k(e, V.user, 0, U, (e) => c(e, V.user, [E.Z.AVATAR])),
-            n = D(e, V.user, 0, U, (e) => c(e, V.user));
+        let t = D(e, V.user, 0, B, (e) => c(e, V.user, [E.Z.AVATAR])),
+            n = k(e, V.user, 0, B, (e) => c(e, V.user));
         return (0, l.jsxs)(
             a.Fragment,
             {
@@ -247,17 +247,17 @@ function U(e) {
         })),
             M && null != e.renderTargetMessage
                 ? (n = (0, l.jsxs)(l.Fragment, {
-                      children: [n, (0, l.jsx)(B, {}), e.renderTargetMessage()]
+                      children: [n, (0, l.jsx)(U, {}), e.renderTargetMessage()]
                   }))
                 : null != R &&
                   (n = (0, l.jsxs)(l.Fragment, {
                       children: [
                           n,
-                          (0, l.jsx)(B, {}),
+                          (0, l.jsx)(U, {}),
                           (0, l.jsx)(() => {
                               if (null == R) return null;
-                              let t = k(e, R, 1, w, (e) => c(e, R, [E.Z.AVATAR])),
-                                  n = D(e, R, 1, w, (e) => c(e, R));
+                              let t = D(e, R, 1, w, (e) => c(e, R, [E.Z.AVATAR])),
+                                  n = k(e, R, 1, w, (e) => c(e, R));
                               return (0, l.jsxs)(
                                   a.Fragment,
                                   {

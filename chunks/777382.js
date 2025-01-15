@@ -1,29 +1,29 @@
-t(653041), t(47120);
-var i = t(200651),
-    r = t(192379),
-    l = t(442837),
-    a = t(481060),
-    o = t(355863),
-    c = t(237997),
-    u = t(451478),
-    s = t(145597),
-    d = t(830917),
-    f = t(312178),
-    _ = t(388627),
-    h = t(892127),
-    p = t(561064),
-    v = t(982572);
+n(653041), n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    o = n(481060),
+    a = n(355863),
+    c = n(237997),
+    s = n(451478),
+    u = n(145597),
+    d = n(830917),
+    f = n(312178),
+    _ = n(388627),
+    h = n(892127),
+    p = n(561064),
+    v = n(982572);
 function m(e) {
     return e.widget.id;
 }
-function Z(e, n, t, r) {
-    return t === a.TransitionStates.YEETED
+function g(e, t, n, r) {
+    return n === o.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
               h.Z,
               {
-                  ...n,
-                  transitionState: t,
+                  ...t,
+                  transitionState: n,
                   cleanUp: r,
                   dragContainerClassName: v.dragContainer,
                   className: v.widget
@@ -31,28 +31,28 @@ function Z(e, n, t, r) {
               e
           );
 }
-let C = [];
-n.Z = r.memo(function (e) {
-    let { className: n } = e,
-        t = (0, p.Z)(),
-        h = (0, l.e7)([u.Z], () => u.Z.windowSize((0, d.ZY)(t))),
+let I = [];
+t.Z = r.memo(function (e) {
+    let { className: t } = e,
+        n = (0, p.Z)(),
+        h = (0, l.e7)([s.Z], () => s.Z.windowSize((0, d.ZY)(n))),
         v = (0, l.e7)([c.Z], () => c.Z.isPreviewingInGame()),
-        I = (0, l.e7)(
-            [o.Z],
+        b = (0, l.e7)(
+            [a.Z],
             () => {
-                let e = o.Z.getLayout(s.qU);
-                if (null == e) return C;
-                let n = [];
-                for (let t of e.widgets) {
-                    let e = o.Z.getWidget(t);
+                let e = a.Z.getLayout(u.qU);
+                if (null == e) return I;
+                let t = [];
+                for (let n of e.widgets) {
+                    let e = a.Z.getWidget(n);
                     if (null == e) continue;
                     let i = f.p[e.type];
                     null != i &&
-                        n.push({
+                        t.push({
                             widget: e,
-                            renderWidget: (n) =>
+                            renderWidget: (t) =>
                                 i({
-                                    ...n,
+                                    ...t,
                                     id: e.id,
                                     pinned: e.pinned,
                                     anchor: e.anchor,
@@ -60,24 +60,24 @@ n.Z = r.memo(function (e) {
                                 })
                         });
                 }
-                return n;
+                return t;
             },
             [v],
             _.HP
         ),
-        g = r.useCallback(
+        E = r.useCallback(
             (e) =>
                 (0, i.jsx)('div', {
-                    className: n,
+                    className: t,
                     style: h,
                     children: e
                 }),
-            [n, h]
+            [t, h]
         );
-    return (0, i.jsx)(a.TransitionGroup, {
-        items: I,
-        renderItem: Z,
+    return (0, i.jsx)(o.TransitionGroup, {
+        items: b,
+        renderItem: g,
         getItemKey: m,
-        wrapChildren: g
+        wrapChildren: E
     });
 });

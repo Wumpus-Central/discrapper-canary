@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    s = n(862167);
+var s = n(120356),
+    r = n.n(s),
+    a = n(862167);
 t.Z = (e) => {
     let { lifted: t = !1 } = e;
     return (0, i.jsxs)('svg', {
@@ -12,7 +12,7 @@ t.Z = (e) => {
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
         preserveAspectRatio: 'none',
-        className: a()(s.root, { [s.lifted]: t }),
+        className: r()(a.root, { [a.lifted]: t }),
         children: [
             (0, i.jsx)('path', {
                 d: 'M1175.02 650.847C567.943 650.847 449.538 793 0 793V0H2338V529.841C1912.54 529.841 1705.84 650.847 1175.02 650.847Z',
@@ -27,22 +27,22 @@ t.Z = (e) => {
                     y2: '975.136',
                     gradientUnits: 'userSpaceOnUse',
                     children: [
-                        (0, i.jsx)('stop', { className: s.stop1 }),
+                        (0, i.jsx)('stop', { className: a.stop1 }),
                         (0, i.jsx)('stop', {
                             offset: '0.339235',
-                            className: s.stop2
+                            className: a.stop2
                         }),
                         (0, i.jsx)('stop', {
                             offset: '0.492065',
-                            className: s.stop3
+                            className: a.stop3
                         }),
                         (0, i.jsx)('stop', {
                             offset: '0.823236',
-                            className: s.stop4
+                            className: a.stop4
                         }),
                         (0, i.jsx)('stop', {
                             offset: '0.899558',
-                            className: s.stop5
+                            className: a.stop5
                         })
                     ]
                 })

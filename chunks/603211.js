@@ -8,8 +8,8 @@ var i = n(192379),
     l = n(999153),
     r = n(584922);
 function a(e) {
-    let { type: t, index: n, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: c } = e,
-        [d, u] = i.useState(!1),
+    let { type: t, index: n, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: d } = e,
+        [c, u] = i.useState(!1),
         [, m] = (0, l.c)({
             type: t,
             item: () => (
@@ -19,12 +19,12 @@ function a(e) {
                     position: n
                 }
             ),
-            canDrag: () => d,
+            canDrag: () => c,
             collect: (e) => ({ isDragging: e.isDragging() }),
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
-                    c();
+                    d();
                     return;
                 }
                 s(n.optionId);

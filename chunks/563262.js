@@ -7,27 +7,27 @@ n.d(t, {
 var i = n(192379),
     s = n(442837),
     r = n(16084),
-    l = n(624941),
-    a = n(388032);
+    a = n(624941),
+    l = n(388032);
 function o() {
     let [e, t] = (0, i.useState)(''),
         {
             entitlements: n,
             error: o,
             isSubmitting: c
-        } = (0, s.cj)([l.Z], () => {
+        } = (0, s.cj)([a.Z], () => {
             var e;
             return {
-                entitlements: null !== (e = l.Z.entitlements) && void 0 !== e ? e : [],
-                error: l.Z.error,
-                isSubmitting: l.Z.isRedeeming
+                entitlements: null !== (e = a.Z.entitlements) && void 0 !== e ? e : [],
+                error: a.Z.error,
+                isSubmitting: a.Z.isRedeeming
             };
         });
     return (
         (0, i.useEffect)(() => {
             if (null != o) {
                 t(
-                    a.intl.format(a.t['7gHWra'], {
+                    l.intl.format(l.t['7gHWra'], {
                         amount: '1 orb',
                         errorMessage: o.message
                     })
@@ -40,7 +40,7 @@ function o() {
                     return null === (t = e.sku) || void 0 === t ? void 0 : t.name;
                 });
                 t(
-                    a.intl.format(a.t.JxNFam, {
+                    l.intl.format(l.t.JxNFam, {
                         amountDescription: '1 orb',
                         redeemedItemDescription: ''
                             .concat(1 === e.length ? 'SKU' : 'SKUs', ': ')

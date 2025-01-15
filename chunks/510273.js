@@ -1,18 +1,18 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 });
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
     l = n(481060),
     o = n(955204),
     c = n(818765),
     d = n(674680),
     u = n(941253);
-let g = (e) => {
+let m = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
         width: '48',
@@ -68,11 +68,11 @@ let g = (e) => {
         ]
     });
 };
-function m(e) {
+function g(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: m, rarity: f, hideDescriptionUntilUnlock: p, onAction: _ } = t,
-        { color: h } = (0, o.F7)(f);
-    r.useEffect(() => {
+        { name: r, description: g, rarity: h, hideDescriptionUntilUnlock: p, onAction: x } = t,
+        { color: f } = (0, o.F7)(h);
+    s.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
         }, 50);
@@ -80,12 +80,12 @@ function m(e) {
             clearTimeout(e);
         };
     }, []);
-    let x = null != _ && n,
-        E = x ? l.Clickable : 'div';
+    let _ = null != x && n,
+        E = _ ? l.Clickable : 'div';
     return (0, i.jsxs)(E, {
-        className: s()(u.container, x && u.actionable),
+        className: a()(u.container, _ && u.actionable),
         onClick: () => {
-            x && _();
+            _ && x();
         },
         children: [
             (0, i.jsx)('div', {
@@ -102,18 +102,18 @@ function m(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: a()
+                        children: r()
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: p && !n ? '?????' : m()
+                        children: p && !n ? '?????' : g()
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: u.flair,
-                children: (0, i.jsx)(g, { color: h })
+                children: (0, i.jsx)(m, { color: f })
             })
         ]
     });

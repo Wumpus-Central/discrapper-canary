@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     RS: function () {
-        return N;
+        return y;
     },
     by: function () {
         return h;
@@ -24,7 +24,7 @@ n.d(t, {
         return d;
     },
     og: function () {
-        return y;
+        return N;
     }
 }),
     n(411104),
@@ -186,13 +186,13 @@ function A(e, t) {
 function E() {
     return A(l.Z.getPayPalClient(), { type: 'BRAINTREE_TEARDOWN_PAYPAL_CLIENT' });
 }
-function N() {
+function y() {
     return A(l.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
 }
 function f() {
     let e = l.Z.getLastURL();
     null == e ? m() : (r.Z.dispatch({ type: 'BRAINTREE_TOKENIZE_PAYPAL_START' }), window.open(e));
 }
-function y() {
+function N() {
     h();
 }

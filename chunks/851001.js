@@ -1,71 +1,71 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
     l = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(70097),
     u = n(526167),
-    g = n(140465),
-    m = n(104494),
-    f = n(639119),
+    m = n(140465),
+    g = n(104494),
+    h = n(639119),
     p = n(635921),
-    _ = n(474936),
-    h = n(869783),
-    x = n(388032),
+    x = n(474936),
+    f = n(869783),
+    _ = n(388032),
     E = n(255346),
-    b = n(839526),
-    C = n(4046),
-    v = n(423741);
+    C = n(839526),
+    T = n(4046),
+    S = n(423741);
 t.Z = (e) => {
     var t, n;
-    let { className: a, isFooterVisible: T, isDarkMode: N, isReducedMotion: I } = e,
-        { analyticsLocations: S } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
-        R = (0, m.Ng)(),
-        j = (0, m.Wp)(R, _.Si.TIER_2) ? _.Si.TIER_2 : void 0,
-        A = (0, f.N)(),
-        P = (0, g.Nx)(),
-        O = (0, u.rO)(),
-        M = r.useRef(null),
-        [Z, B] = r.useState(!1);
+    let { className: r, isFooterVisible: b, isDarkMode: I, isReducedMotion: N } = e,
+        { analyticsLocations: v } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+        A = (0, g.Ng)(),
+        j = (0, g.Wp)(A, x.Si.TIER_2) ? x.Si.TIER_2 : void 0,
+        R = (0, h.N)(),
+        O = (0, m.Nx)(),
+        P = (0, u.rO)(),
+        y = s.useRef(null),
+        [D, B] = s.useState(!1);
     return (
-        r.useEffect(() => {
-            T && !I && !Z && null != M.current && M.current.play();
-        }, [T, I, Z]),
+        s.useEffect(() => {
+            b && !N && !D && null != y.current && y.current.play();
+        }, [b, N, D]),
         (0, i.jsx)(c.Gt, {
-            value: S,
+            value: v,
             children: (0, i.jsxs)('div', {
-                className: s()(E.container, a),
+                className: a()(E.container, r),
                 children: [
                     (0, i.jsx)(l.Heading, {
                         className: E.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: x.intl.string(x.t.lEw32t)
+                        children: _.intl.string(_.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
-                        subscriptionTier: null !== (n = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : j,
-                        inOfferExperience: P,
-                        containerClassName: s()(E.footerCTAContainer),
+                        subscriptionTier: null !== (n = null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : j,
+                        inOfferExperience: O,
+                        containerClassName: a()(E.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,
-                        isDarkMode: N
+                        isDarkMode: I
                     }),
                     (0, i.jsx)('div', {
                         className: E.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
-                            poster: C.Z,
-                            className: s()(E.footerArt),
+                            poster: T.Z,
+                            className: a()(E.footerArt),
                             onEnded: () => {
                                 B(!0);
                             },
-                            ref: M,
+                            ref: y,
                             children: (0, i.jsx)('source', {
-                                src: O ? b.Z : v.Z,
-                                type: O ? h.m.MP4 : h.m.WEBM
+                                src: P ? C.Z : S.Z,
+                                type: P ? f.m.MP4 : f.m.WEBM
                             })
                         })
                     }),

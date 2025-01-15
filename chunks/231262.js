@@ -1,43 +1,43 @@
-s.d(t, {
+a.d(t, {
     h: function () {
-        return N;
+        return h;
     }
 });
-var a = s(200651),
-    n = s(192379),
-    r = s(557533),
-    i = s.n(r),
-    o = s(794010),
-    l = s(653371),
-    c = s(388755),
-    d = s(330711),
-    u = s(24579);
-let p = null;
-class N extends n.PureComponent {
+var n = a(200651),
+    s = a(192379),
+    i = a(557533),
+    r = a.n(i),
+    l = a(794010),
+    o = a(653371),
+    c = a(388755),
+    d = a(330711),
+    u = a(24579);
+let N = null;
+class h extends s.PureComponent {
     render() {
-        let { token: e, className: t, onChangeLocale: s, mainContentId: r, mobileClassName: o, avoidRouter: d, authRedirectTo: N, openNavAriaLabel: h, hideNavAriaLabel: m, skipToContentLabel: f } = this.props;
-        return null == p
+        let { token: e, className: t, onChangeLocale: a, mainContentId: i, mobileClassName: l, avoidRouter: d, authRedirectTo: h, openNavAriaLabel: m, hideNavAriaLabel: p, skipToContentLabel: I } = this.props;
+        return null == N
             ? null
-            : (0, a.jsxs)(n.Fragment, {
+            : (0, n.jsxs)(s.Fragment, {
                   children: [
-                      (0, a.jsx)(l.a, {
-                          className: i()(u.desktopHeader, t),
-                          TrackClick: p,
+                      (0, n.jsx)(o.a, {
+                          className: r()(u.desktopHeader, t),
+                          TrackClick: N,
                           token: e,
                           avoidRouter: d,
-                          authRedirectTo: N,
-                          onChangeLocale: s,
-                          mainContentId: r,
-                          skipToContentLabel: f
+                          authRedirectTo: h,
+                          onChangeLocale: a,
+                          mainContentId: i,
+                          skipToContentLabel: I
                       }),
-                      (0, a.jsx)(c.D, {
-                          className: i()(u.mobileHeader, o),
+                      (0, n.jsx)(c.D, {
+                          className: r()(u.mobileHeader, l),
                           token: e,
                           avoidRouter: d,
-                          TrackClick: p,
-                          onChangeLocale: s,
-                          openNavAriaLabel: h,
-                          hideNavAriaLabel: m
+                          TrackClick: N,
+                          onChangeLocale: a,
+                          openNavAriaLabel: m,
+                          hideNavAriaLabel: p
                       })
                   ]
               });
@@ -45,8 +45,8 @@ class N extends n.PureComponent {
     constructor(e) {
         super(e),
             null != e.locale && d.Z.setLocale(e.locale),
-            (p = (t) =>
-                (0, a.jsx)(o.Z, {
+            (N = (t) =>
+                (0, n.jsx)(l.Z, {
                     track: e.track,
                     trackOutboundLink: e.trackOutboundLink,
                     ...t

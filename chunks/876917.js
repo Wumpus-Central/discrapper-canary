@@ -9,19 +9,19 @@ var r = n(200651),
     d = n(241822);
 e.Z = (t) => {
     let { profileEffectId: e, isHovering: n, forCollectedModal: i = !1, isPurchased: u, removeSetHeight: f = !1 } = t,
-        p = i ? 250 : 0.1,
-        [g, v] = a.useState(!0);
+        g = i ? 250 : 0.1,
+        [p, v] = a.useState(!0);
     return (a.useEffect(() => {
         if (!0 !== i) v(!1);
         else {
             let t = setTimeout(() => {
                 v(!1);
-            }, p);
+            }, g);
             return () => {
                 clearTimeout(t);
             };
         }
-    }, [p, i]),
+    }, [g, i]),
     null != e)
         ? (0, r.jsxs)('div', {
               className: o()(c.previewContainer, {
@@ -35,7 +35,7 @@ e.Z = (t) => {
                       className: i ? c.previewForCollected : c.preview,
                       'aria-hidden': !0
                   }),
-                  !g &&
+                  !p &&
                       (0, r.jsx)('div', {
                           className: u ? c.purchasedEffect : void 0,
                           children: (0, r.jsx)(l.Z, {
@@ -45,7 +45,7 @@ e.Z = (t) => {
                               restartMethod: s.j.FromStart,
                               resetOnHover: !0,
                               isHovering: n,
-                              introDelay: p,
+                              introDelay: g,
                               useOpacityOnHover: !1,
                               shopPreview: !0
                           })

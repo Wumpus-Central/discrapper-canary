@@ -3,8 +3,8 @@ n(47120);
 var a,
     o,
     s,
-    c,
-    d = n(442837),
+    d,
+    c = n(442837),
     u = n(570140),
     m = n(581364),
     h = n(399860);
@@ -14,7 +14,7 @@ let p = {},
 function f() {
     (i = void 0), (p = {}), (g = {}), (l = void 0), (r = void 0), (x = !1);
 }
-class b extends (a = d.ZP.Store) {
+class b extends (a = c.ZP.Store) {
     getApplicationPermissions() {
         return p;
     }
@@ -37,15 +37,15 @@ class b extends (a = d.ZP.Store) {
         return i;
     }
 }
-(c = 'IntegrationPermissionStore'),
+(d = 'IntegrationPermissionStore'),
     (s = 'displayName') in (o = b)
         ? Object.defineProperty(o, s, {
-              value: c,
+              value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[s] = c),
+        : (o[s] = d),
     (t.Z = new b(u.Z, {
         LOGOUT: f,
         INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {

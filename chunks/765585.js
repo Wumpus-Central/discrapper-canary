@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(388032),
     p = n(410842);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: f, headerClassName: m, contentClassName: g, tryItText: v, dismissText: C, onTryFeature: x, onClose: I, className: _, inlineArt: Z = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: P = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: M, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: m, headerClassName: f, contentClassName: g, tryItText: v, dismissText: C, onTryFeature: x, onClose: I, className: _, inlineArt: Z = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: P = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: M, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
         G = S ? o.Button.Sizes.LARGE : o.Button.Sizes.MAX,
         [B, k] = l.useState(!1),
         { ref: U, width: O } = (0, s.Z)();
@@ -32,7 +32,7 @@ t.Z = l.forwardRef(function (e, t) {
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, g, {
-                    [p.contentNoArt]: null == f || Z,
+                    [p.contentNoArt]: null == m || Z,
                     [p.contentPremium]: b || P
                 }),
                 children: [
@@ -43,14 +43,14 @@ t.Z = l.forwardRef(function (e, t) {
                             children: R
                         }),
                     (0, i.jsxs)('div', {
-                        className: a()(f, Z ? p.artInline : p.artAbsolute),
+                        className: a()(m, Z ? p.artInline : p.artAbsolute),
                         children: [N && (0, i.jsx)(u.Z, { className: p.gifTag }), T]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(o.Heading, {
-                                className: a()(b ? p.headerWithPremiumIcon : p.header, m),
+                                className: a()(b ? p.headerWithPremiumIcon : p.header, f),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [

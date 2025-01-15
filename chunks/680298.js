@@ -9,8 +9,8 @@ var i = n(200651),
     a = n(239091),
     o = n(911969),
     s = n(399860),
-    c = n(388032),
-    d = n(19751);
+    d = n(388032),
+    c = n(19751);
 function u(e) {
     let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: p } = e,
         g = l.useMemo(() => {
@@ -41,7 +41,7 @@ function u(e) {
                         (0, i.jsx)(e, {
                             ...t,
                             id: h.id,
-                            label: c.intl.string(c.t.oJ1Mu7)
+                            label: d.intl.string(d.t.oJ1Mu7)
                         });
                 });
             },
@@ -51,14 +51,14 @@ function u(e) {
         v = (0, s.gw)(h.type, h.displayName);
     return (0, i.jsxs)(r.Clickable, {
         onClick: x,
-        className: d.item,
+        className: c.item,
         onContextMenu: f,
         children: [
             (0, i.jsxs)('div', {
-                className: d.identifier,
+                className: c.identifier,
                 children: [
                     (0, i.jsx)(b, {
-                        className: d.icon,
+                        className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
@@ -69,19 +69,19 @@ function u(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: d.statusContainer,
+                className: c.statusContainer,
                 children: g
                     ? (0, i.jsxs)('div', {
-                          className: d.statusLine,
+                          className: c.statusLine,
                           children: [
                               (0, i.jsx)(r.Text, {
                                   variant: 'text-md/normal',
-                                  children: c.intl.string(c.t.jH4B9P)
+                                  children: d.intl.string(d.t.jH4B9P)
                               }),
                               (0, i.jsx)(r.CircleInformationIcon, {
                                   size: 'sm',
                                   color: 'currentColor',
-                                  className: d.statusIcon
+                                  className: c.statusIcon
                               })
                           ]
                       })

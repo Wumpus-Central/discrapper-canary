@@ -1,43 +1,43 @@
-a.d(n, {
+t.d(n, {
     V: function () {
-        return s;
+        return d;
     }
 }),
-    a(399606);
-var t = a(87051),
-    c = a(9156),
-    i = a(621600),
-    o = a(113449),
-    r = a(686660),
-    d = a(981631),
-    l = a(526761);
-function s(e, n) {
-    let a = c.ZP.getGuildFlags(e);
+    t(399606);
+var i = t(87051),
+    a = t(9156),
+    c = t(621600),
+    o = t(113449),
+    r = t(686660),
+    s = t(981631),
+    l = t(526761);
+function d(e, n) {
+    let t = a.ZP.getGuildFlags(e);
     n === r.s8.ALL_MESSAGES
-        ? t.Z.updateGuildNotificationSettings(
+        ? i.Z.updateGuildNotificationSettings(
               e,
               {
-                  message_notifications: d.bL.ALL_MESSAGES,
-                  flags: (0, o.Q4)(a, l.vc.UNREADS_ALL_MESSAGES)
+                  message_notifications: s.bL.ALL_MESSAGES,
+                  flags: (0, o.Q4)(t, l.vc.UNREADS_ALL_MESSAGES)
               },
-              i.ZB.PresetAll
+              c.ZB.PresetAll
           )
         : n === r.s8.MENTIONS
-          ? t.Z.updateGuildNotificationSettings(
+          ? i.Z.updateGuildNotificationSettings(
                 e,
                 {
-                    message_notifications: d.bL.ONLY_MENTIONS,
-                    flags: (0, o.Q4)(a, l.vc.UNREADS_ONLY_MENTIONS)
+                    message_notifications: s.bL.ONLY_MENTIONS,
+                    flags: (0, o.Q4)(t, l.vc.UNREADS_ONLY_MENTIONS)
                 },
-                i.ZB.PresetMentions
+                c.ZB.PresetMentions
             )
           : n === r.s8.NOTHING &&
-            t.Z.updateGuildNotificationSettings(
+            i.Z.updateGuildNotificationSettings(
                 e,
                 {
-                    message_notifications: d.bL.NO_MESSAGES,
-                    flags: (0, o.Q4)(a, l.vc.UNREADS_ONLY_MENTIONS)
+                    message_notifications: s.bL.NO_MESSAGES,
+                    flags: (0, o.Q4)(t, l.vc.UNREADS_ONLY_MENTIONS)
                 },
-                i.ZB.PresetNothing
+                c.ZB.PresetNothing
             );
 }

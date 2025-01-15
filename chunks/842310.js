@@ -47,7 +47,7 @@ function a(e) {
                 onClick: () => {
                     (0, r.openModalLazy)(
                         async () => {
-                            let { default: e } = await Promise.all([t.e('76540'), t.e('98859')]).then(t.bind(t, 607018));
+                            let { default: e } = await Promise.all([t.e('76540'), t.e('47528')]).then(t.bind(t, 607018));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     reason: l.L.GUILD_PHONE_REQUIRED,

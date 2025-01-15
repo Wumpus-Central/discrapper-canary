@@ -10,8 +10,8 @@ var i = n(200651),
     a = n(668781),
     o = n(139387),
     s = n(308063),
-    c = n(600164),
-    d = n(259580),
+    d = n(600164),
+    c = n(259580),
     u = n(768581),
     m = n(486199),
     h = n(981631),
@@ -32,7 +32,7 @@ function x(e) {
                       })
             );
         }, [t]),
-        I = l.useCallback(() => {
+        N = l.useCallback(() => {
             (0, r.openModal)((e) =>
                 (0, i.jsx)(r.ConfirmModal, {
                     ...e,
@@ -54,14 +54,14 @@ function x(e) {
                 })
             );
         }, [t.guild_id, t.id, t.name]),
-        N = [];
+        I = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (N.push({
+        (I.push({
             icon: r.AnnouncementsIcon,
             text: t.source_channel.name
         }),
-        N.push({
+        I.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -89,13 +89,13 @@ function x(e) {
                 className: g.body,
                 children: [
                     (0, i.jsx)(r.FormDivider, { className: g.topDivider }),
-                    (0, i.jsx)(c.Z, {
-                        children: (0, i.jsxs)(c.Z, {
-                            direction: c.Z.Direction.VERTICAL,
+                    (0, i.jsx)(d.Z, {
+                        children: (0, i.jsxs)(d.Z, {
+                            direction: d.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsxs)(c.Z, {
+                                (0, i.jsxs)(d.Z, {
                                     children: [
-                                        (0, i.jsx)(c.Z.Child, {
+                                        (0, i.jsx)(d.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(r.FormItem, {
                                                 title: p.intl.string(p.t.I1o5gY),
@@ -109,7 +109,7 @@ function x(e) {
                                                 })
                                             })
                                         }),
-                                        (0, i.jsx)(c.Z.Child, {
+                                        (0, i.jsx)(d.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(r.FormItem, {
                                                 title: p.intl.string(p.t['4TuWfX']),
@@ -125,9 +125,9 @@ function x(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(r.FormDivider, { className: g.bottomDivider }),
-                                (0, i.jsx)(c.Z, {
+                                (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(r.Button, {
-                                        onClick: I,
+                                        onClick: N,
                                         size: r.Button.Sizes.SMALL,
                                         color: r.Button.Colors.RED,
                                         look: r.Button.Looks.LINK,
@@ -143,23 +143,23 @@ function x(e) {
         (0, i.jsx)(r.Card, {
             editable: !0,
             className: g.card,
-            children: (0, i.jsxs)(c.Z, {
-                direction: c.Z.Direction.VERTICAL,
+            children: (0, i.jsxs)(d.Z, {
+                direction: d.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(r.Clickable, {
                         className: g.header,
                         'aria-expanded': f,
                         onClick: v,
-                        children: (0, i.jsxs)(c.Z, {
-                            align: c.Z.Align.CENTER,
+                        children: (0, i.jsxs)(d.Z, {
+                            align: d.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(m.Z, {
                                     name: t.name,
                                     imageSrc: C,
                                     detailsClassName: g.__invalid_description,
-                                    details: N
+                                    details: I
                                 }),
-                                (0, i.jsx)(d.Z, {
+                                (0, i.jsx)(c.Z, {
                                     className: g.expandIcon,
                                     expanded: f,
                                     'aria-hidden': !0

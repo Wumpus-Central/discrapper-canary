@@ -17,8 +17,8 @@ var i = n(200651),
     d = n(513202),
     h = n(311352),
     p = n(803647),
-    f = n(131704),
-    m = n(626135),
+    m = n(131704),
+    f = n(626135),
     g = n(870569),
     v = n(981631),
     C = n(388032),
@@ -35,7 +35,7 @@ let _ = l.memo(function (e) {
         M = I(A, P, T),
         L = l.useCallback(() => {
             a()(null != P, 'Received null activity'),
-                m.default.track(v.rMx.OPEN_MODAL, {
+                f.default.track(v.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: P.application_id,
                     location: w.location
@@ -56,7 +56,7 @@ let _ = l.memo(function (e) {
             (0, p.Z)(Z);
         }, [Z]),
         G = l.useCallback(() => {
-            let e = null != E && (0, f.vd)(E.type) ? E : null,
+            let e = null != E && (0, m.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
@@ -71,7 +71,7 @@ let _ = l.memo(function (e) {
         }, [E, S]);
     let B =
             (null != j || null == T || (0, c.R)()) && (N || b)
-                ? (N ? ((t = !1), (r = D), (u = o.ScreenXIcon), (_ = C.intl.string(C.t.S5anIS))) : y ? ((t = !1), (r = G), (u = o.ScreenArrowIcon), (_ = null != j ? C.intl.formatToPlainString(C.t.AB5gT0, { game: j.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (_ = null != E && (0, f.vd)(E.type) ? C.intl.string(C.t.uQn9Bw) : null != S ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
+                ? (N ? ((t = !1), (r = D), (u = o.ScreenXIcon), (_ = C.intl.string(C.t.S5anIS))) : y ? ((t = !1), (r = G), (u = o.ScreenArrowIcon), (_ = null != j ? C.intl.formatToPlainString(C.t.AB5gT0, { game: j.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (_ = null != E && (0, m.vd)(E.type) ? C.intl.string(C.t.uQn9Bw) : null != S ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: x.panelButtonContainer,
                       children: (0, i.jsx)(g.Z, {

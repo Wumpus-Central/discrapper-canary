@@ -10,8 +10,8 @@ var l = n(780384),
     a = n(410030),
     o = n(600164),
     s = n(63063),
-    c = n(725875),
-    d = n(981631),
+    d = n(725875),
+    c = n(981631),
     u = n(388032),
     m = n(471199),
     h = n(893916),
@@ -23,11 +23,11 @@ function g(e) {
         children: [
             (0, i.jsx)(r.FormText, {
                 type: r.FormTextTypes.DESCRIPTION,
-                children: u.intl.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) })
+                children: u.intl.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING) })
             }),
             (0, i.jsx)(r.FormDivider, { className: m.headerDivider }),
             t.length > 0
-                ? (0, i.jsx)(c.Z, {
+                ? (0, i.jsx)(d.Z, {
                       webhooks: t,
                       editedWebhook: n,
                       selectableWebhookChannels: g,
@@ -56,7 +56,7 @@ function g(e) {
                               })
                           ]
                       });
-                  })(b, () => open(s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING)))
+                  })(b, () => open(s.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
         ]
     });
 }

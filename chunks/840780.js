@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(570140),
     h = n(475179),
     p = n(925549),
-    f = n(438139),
-    m = n(730749),
+    m = n(438139),
+    f = n(730749),
     g = n(607070),
     v = n(636449),
     C = n(214629),
@@ -52,7 +52,7 @@ var i = n(200651),
     $ = n(981631),
     ee = n(918559),
     et = n(395144);
-let en = (0, f.Z)(function (e) {
+let en = (0, m.Z)(function (e) {
     let { message: t } = e;
     return (0, i.jsx)(Q.Z, { children: t });
 });
@@ -192,7 +192,7 @@ class ei extends l.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = (0, m.Z)(function (e) {
+t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([G.default], () => G.default.getId()),
@@ -202,15 +202,15 @@ t.Z = (0, m.Z)(function (e) {
         u = (0, c.e7)([B.Z], () => B.Z.getChannel(s)),
         d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
         [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
-        f = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
-        m = (0, c.e7)([I.ZP], () => (null != u ? I.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
+        m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
+        f = (0, c.e7)([I.ZP], () => (null != u ? I.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         x = (0, c.e7)([U.Z, V.Z, k.ZP], () => (null != o ? y.JL(o, U.Z, V.Z, !1) : null != n && y.h_(k.ZP.getChannels(n), U.Z, V.Z).length > 0)),
         [b] = (0, _.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
                     if (null != a && null != a.id) return a.id;
-                    if (null != m) return m.applicationId;
+                    if (null != f) return f.applicationId;
                 })()) && void 0 !== t
                 ? t
                 : ''
@@ -227,11 +227,11 @@ t.Z = (0, m.Z)(function (e) {
         guildId: n,
         canGoLive: T || E,
         activity: P,
-        embeddedActivity: m,
+        embeddedActivity: f,
         userId: r,
         runningGame: a,
         application: b,
-        useReducedMotion: f,
+        useReducedMotion: m,
         isStreaming: w,
         channel: u,
         canStream: x,

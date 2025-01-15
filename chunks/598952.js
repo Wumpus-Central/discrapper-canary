@@ -1,47 +1,47 @@
 e.d(n, {
     Z: function () {
-        return o;
+        return r;
     }
 });
 var a = e(200651);
 e(192379);
-var i = e(481060),
-    r = e(746163);
-function o(t) {
+var o = e(481060),
+    i = e(746163);
+function r(t) {
     var n;
     let { attachment: e } = t,
-        o = Math.round(((null !== (n = e.size) && void 0 !== n ? n : 0) / 1024 / 1024) * 100) / 100;
+        r = Math.round(((null !== (n = e.size) && void 0 !== n ? n : 0) / 1024 / 1024) * 100) / 100;
     return (0, a.jsxs)('div', {
-        className: r.container,
+        className: i.container,
         children: [
-            (0, a.jsx)(i.ImageFileIcon, {
+            (0, a.jsx)(o.ImageFileIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: r.fileIcon
+                className: i.fileIcon
             }),
-            (0, a.jsx)(i.Spacer, {
+            (0, a.jsx)(o.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsx)(i.Text, {
+            (0, a.jsx)(o.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                className: r.fileName,
+                className: i.fileName,
                 children: e.filename
             }),
-            (0, a.jsx)(i.Spacer, {
+            (0, a.jsx)(o.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsx)('div', { className: r.dot }),
-            (0, a.jsx)(i.Spacer, {
+            (0, a.jsx)('div', { className: i.dot }),
+            (0, a.jsx)(o.Spacer, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsxs)(i.Text, {
+            (0, a.jsxs)(o.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: [o, 'MB']
+                children: [r, 'MB']
             })
         ]
     });

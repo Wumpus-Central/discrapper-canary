@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 }),
     n(47120),
@@ -17,11 +17,11 @@ var o = n(200651),
     p = n(302221),
     m = n(554804);
 let x = [0, 0.5, 1],
-    f = {
+    g = {
         'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
         'layers[2].shapes[1].g.k.k': [0, 0.714, 0.271, 0.757, 0.5, 0.714, 0.271, 0.757, 1, 0.714, 0.271, 0.757]
     };
-async function g(e, t) {
+async function h(e, t) {
     let o = (await n.e('30166').then(n.t.bind(n, 235630, 19))).default;
     return (
         (function (e, t, n) {
@@ -34,16 +34,16 @@ async function g(e, t) {
                 });
                 l().set(e, o, r);
             }
-        })(o, f, t),
+        })(o, g, t),
         o
     );
 }
-function h(e) {
+function f(e) {
     var t;
     let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
-        f = (0, c.e7)([u.Z], () => u.Z.isFocused()),
-        h = r.useRef(null),
-        [C, v] = r.useState(!1),
+        g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
+        f = r.useRef(null),
+        [v, C] = r.useState(!1),
         j = r.useMemo(() => {
             if (null == i) return null;
             let e = (0, p.oo)(i.config.colors.primary),
@@ -53,16 +53,16 @@ function h(e) {
                     b: e.b / 255
                 },
                 n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-            return g(i.id, n);
+            return h(i.id, n);
         }, [i]),
         _ = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        b = !l && f;
+        T = !l && g;
     r.useEffect(() => {
         var e, t, n, o;
-        f ? b && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
-    }, [b, f]);
+        g ? T && (null === (o = f.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = f.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    }, [T, g]);
     let E = r.useCallback(() => {
-        v(!0);
+        C(!0);
     }, []);
     return null == j || _
         ? (0, o.jsx)('div', {
@@ -74,10 +74,10 @@ function h(e) {
               children: (0, o.jsx)(
                   d.LottieAnimation,
                   {
-                      ref: h,
+                      ref: f,
                       onComplete: E,
                       importData: () => j,
-                      shouldAnimate: !C && b,
+                      shouldAnimate: !v && T,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }

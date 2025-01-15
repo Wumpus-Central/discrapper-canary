@@ -18,21 +18,21 @@ function h(e) {
     let { guildId: n } = e,
         t = (0, r.e7)([u.Z], () => u.Z.getGuild(n)),
         { analyticsLocations: h } = (0, s.ZP)(a.Z.MEMBER_SAFETY_PAGE),
-        C = (0, r.e7)([d.ZP], () => d.ZP.getGuildSidebarState(n), [n]),
-        j = i.useCallback(() => {
+        j = (0, r.e7)([d.ZP], () => d.ZP.getGuildSidebarState(n), [n]),
+        C = i.useCallback(() => {
             c.Z.closeGuildSidebar(n);
         }, [n]),
-        b = null != C;
-    return null != t && b && null != C
+        b = null != j;
+    return null != t && b && null != j
         ? (0, l.jsx)(s.Gt, {
               value: h,
               children: (0, l.jsx)('div', {
                   className: x.__invalid_sidebarContainer,
                   style: { width: m.$Y6 },
                   children: (0, l.jsx)(o.Z, {
-                      userId: C.details.userId,
-                      guildId: C.details.guildId,
-                      onClose: j
+                      userId: j.details.userId,
+                      guildId: j.details.guildId,
+                      onClose: C
                   })
               })
           })

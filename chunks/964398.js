@@ -2,8 +2,8 @@ n(47120), n(411104);
 var l = n(200651),
     r = n(192379),
     s = n(392711),
-    o = n.n(s),
-    i = n(481060),
+    i = n.n(s),
+    o = n(481060),
     a = n(65205),
     c = n(388032),
     u = n(390317);
@@ -114,12 +114,12 @@ t.Z = r.memo(function (e) {
         y = r.useRef(!1),
         b = r.useRef(null),
         [S, R] = r.useState(0),
-        [_, A] = r.useState({
+        [_, Z] = r.useState({
             x: 0,
             y: 0
         }),
-        Z = Math.abs(_.x) + Math.abs(_.y) > 0,
-        P = r.useMemo(() => o().chunk(I, x), [I]),
+        A = Math.abs(_.x) + Math.abs(_.y) > 0,
+        P = r.useMemo(() => i().chunk(I, x), [I]),
         k = r.useCallback(
             (e, t) => {
                 null == j.current[S] ? (j.current[S] = []) : (j.current[S][t] = e);
@@ -143,7 +143,7 @@ t.Z = r.memo(function (e) {
         ),
         M = r.useCallback((e, t, n) => {
             if (y.current) {
-                A({
+                Z({
                     x: 0,
                     y: 0
                 });
@@ -155,11 +155,11 @@ t.Z = r.memo(function (e) {
                 },
                 r = l.x < 0,
                 s = l.y < 0,
-                o = N(n, l),
-                i = r ? Math.max(l.x, -o.x) : Math.min(l.x, o.x);
-            A({
-                x: i / 2,
-                y: (s ? Math.max(l.y, -o.y) : Math.min(l.y, o.y)) / 2
+                i = N(n, l),
+                o = r ? Math.max(l.x, -i.x) : Math.min(l.x, i.x);
+            Z({
+                x: o / 2,
+                y: (s ? Math.max(l.y, -i.y) : Math.min(l.y, i.y)) / 2
             });
         }, []),
         L = r.useCallback(
@@ -178,20 +178,20 @@ t.Z = r.memo(function (e) {
                             x: r,
                             y: l.top + l.height / 2
                         },
-                        o = {
+                        i = {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((M(o, s, Math.max(t, n)), y.current)) {
+                    if ((M(i, s, Math.max(t, n)), y.current)) {
                         null != m && w();
                         return;
                     }
-                    let i = (0, a.ld)(s, o, Math.max(t, n));
+                    let o = (0, a.ld)(s, i, Math.max(t, n));
                     for (let e = 0; e < j.current[S].length; e++) {
                         let t = j.current[S][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
-                        if ((0, a.Vr)(s, i, n)) {
+                        if ((0, a.Vr)(s, o, n)) {
                             B(S, e);
                             return;
                         }
@@ -213,16 +213,16 @@ t.Z = r.memo(function (e) {
                 P[S].map((e, r) => {
                     let s = h[r];
                     if (null == s) throw Error('Too many items supplied '.concat(I.length, ' expected max of ').concat(h.length));
-                    let o = g(s.x, t, C),
-                        i = g(s.y, n, f);
+                    let i = g(s.x, t, C),
+                        o = g(s.y, n, f);
                     return (0, l.jsx)(
                         'div',
                         {
                             ref: (e) => k(e, r),
                             className: u.chatWheelItem,
                             style: {
-                                left: o,
-                                top: i,
+                                left: i,
+                                top: o,
                                 width: C,
                                 height: f
                             },
@@ -233,7 +233,7 @@ t.Z = r.memo(function (e) {
                 }),
             [P, S, t, C, n, f, I.length, k]
         );
-    return (0, l.jsx)(i.Clickable, {
+    return (0, l.jsx)(o.Clickable, {
         className: u.chatWheelMouseInput,
         onMouseMove: G,
         onWheel: V,
@@ -302,7 +302,7 @@ t.Z = r.memo(function (e) {
                                         cy: 144,
                                         r: 28.8
                                     }),
-                                Z &&
+                                A &&
                                     (0, l.jsx)('circle', {
                                         className: u.chatWheelCenter,
                                         cx: 144 + _.x,

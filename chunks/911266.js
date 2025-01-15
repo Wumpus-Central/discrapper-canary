@@ -45,7 +45,7 @@ t.Z = (e) => {
                 height: 26,
                 width: 26,
                 style: {
-                    left: 60,
+                    left: 68,
                     top: 8
                 }
             }),
