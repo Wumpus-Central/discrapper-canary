@@ -22105,6 +22105,15 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     border-color: ButtonText
 }
 
+.visual-refresh .diversitySelectorOptions_cce80d {
+    top: 19px;
+    right: 11px
+}
+
+.visual-refresh .diversitySelectorOptionsHasTabWrapper_cce80d {
+    top: 3px
+}
+
 .wrapper_c6ee36 {
     position: relative;
     border-radius: var(--custom-emoji-picker-border-radius);
