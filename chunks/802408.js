@@ -1,98 +1,89 @@
 r.d(n, {
     Z: function () {
-        return m;
+        return h;
     }
 });
 var i = r(200651);
 r(192379);
-var a = r(120356),
-    s = r.n(a),
-    o = r(442837),
-    l = r(780384),
-    u = r(481060),
-    c = r(410030),
-    d = r(607070),
-    f = r(921944),
-    _ = r(388032),
-    h = r(920706);
-function p(e) {
-    let { onComplete: n, onCheckItOutClick: r, config: a } = e,
-        f = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        p = (0, c.ZP)();
+var a = r(442837),
+    s = r(780384),
+    o = r(481060),
+    l = r(410030),
+    u = r(607070),
+    c = r(921944),
+    d = r(388032),
+    f = r(920706);
+function _(e) {
+    let { onComplete: n, onCheckItOutClick: r, config: c } = e,
+        _ = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        h = (0, l.ZP)();
     return (0, i.jsxs)('div', {
-        className: h.container,
+        className: f.container,
         children: [
-            f &&
-                (0, i.jsx)('img', {
-                    alt: _.intl.string(_.t.X4IxWF),
-                    src: a.getImageUrl((0, l.wj)(p), f),
-                    className: s()(h.coachmark, h.staticImage)
-                }),
-            !f &&
-                null != a.coachmarkAnimationData &&
-                (0, i.jsx)(u.ChainedLottieAnimation, {
-                    className: s()(h.coachmark, h.animation),
-                    animationData: a.coachmarkAnimationData
-                }),
+            (0, i.jsx)('img', {
+                alt: d.intl.string(d.t.X4IxWF),
+                src: c.getImageUrl((0, s.wj)(h), _),
+                className: f.coachmark
+            }),
             (0, i.jsxs)('div', {
-                className: h.body,
+                className: f.body,
                 children: [
-                    (0, i.jsx)(u.Heading, {
-                        className: h.text,
+                    (0, i.jsx)(o.Heading, {
+                        className: f.text,
                         variant: 'heading-sm/semibold',
-                        children: a.title()
+                        children: c.title()
                     }),
-                    (0, i.jsx)(u.Text, {
-                        className: h.text,
+                    (0, i.jsx)(o.Text, {
+                        className: f.text,
                         variant: 'text-sm/normal',
-                        children: a.description()
+                        children: c.description()
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: h.dmButtonContainer,
-                children: (0, i.jsx)(u.Button, {
-                    className: h.dmButton,
-                    color: u.Button.Colors.BRAND_INVERTED,
+                className: f.dmButtonContainer,
+                children: (0, i.jsx)(o.Button, {
+                    className: f.dmButton,
+                    color: o.Button.Colors.BRAND_INVERTED,
                     onClick: () => r(),
-                    children: a.cta()
+                    children: c.cta()
                 })
             }),
-            (0, i.jsx)(u.Clickable, {
+            (0, i.jsx)(o.Clickable, {
                 onClick: n,
-                className: h.closeButton,
-                'aria-label': _.intl.string(_.t.cpT0Cg),
-                children: (0, i.jsx)(u.XSmallIcon, {
+                className: f.closeButton,
+                'aria-label': d.intl.string(d.t.cpT0Cg),
+                children: (0, i.jsx)(o.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: h.closeIcon
+                    className: f.closeIcon
                 })
             }),
-            (0, i.jsx)('div', { className: h.pointer })
+            (0, i.jsx)('div', { className: f.pointer })
         ]
     });
 }
-function m(e) {
+function h(e) {
     let { onComplete: n, onCheckItOutClick: r, markAsDismissed: a, config: s } = e;
-    return (0, i.jsx)(u.Popout, {
+    return (0, i.jsx)(o.Popout, {
         spacing: 0,
         shouldShow: !0,
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
-            (0, i.jsx)(p, {
+            (0, i.jsx)(_, {
                 ...e,
                 onComplete: () => {
-                    n(), a(f.L.USER_DISMISS);
+                    n(), a(c.L.USER_DISMISS);
                 },
                 onCheckItOutClick: () => {
-                    r(), n(), a(f.L.TAKE_ACTION);
+                    r(), n(), a(c.L.TAKE_ACTION);
                 },
                 config: s
             }),
         onRequestClose: () => void 0,
         closeOnScroll: !1,
         ignoreModalClicks: !0,
-        children: () => (0, i.jsx)('div', { className: h.popoutTarget })
+        children: () => (0, i.jsx)('div', { className: f.popoutTarget })
     });
 }
