@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return D;
+        return w;
     }
 }),
     t(47120);
@@ -22,14 +22,14 @@ var i = t(200651),
     x = t(585483),
     _ = t(499254),
     N = t(541099),
-    g = t(827498),
+    I = t(827498),
     A = t(496158),
     E = t(676161),
-    b = t(660090),
-    I = t(783097),
-    j = t(46332),
-    P = t(176412),
-    S = t(870205),
+    g = t(660090),
+    b = t(783097),
+    P = t(46332),
+    S = t(176412),
+    j = t(870205),
     y = t(981631),
     T = t(689079),
     L = t(388032),
@@ -42,7 +42,7 @@ function O(e) {
     let { channel: a, command: o, section: s, sectionName: c } = e,
         u = l.useCallback(() => {
             let e = N.Z.entrypoint();
-            _.yT(g.ti.COMMAND),
+            _.yT(I.ti.COMMAND),
                 (0, v.Mo)({
                     command: o,
                     location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -60,7 +60,7 @@ function O(e) {
                 x.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
         }, [a.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        h = l.useMemo(() => (0, P.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        h = l.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
         f = l.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -160,7 +160,7 @@ function B(e) {
                 e.stopPropagation();
                 let i = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, j.L)({
+                    (await (0, P.L)({
                         applicationId: t.applicationId,
                         channel: n,
                         sectionName: a,
@@ -168,14 +168,14 @@ function B(e) {
                         entrypoint: i,
                         commandIntegrationTypes: t.integration_types
                     })) &&
-                        (await (0, I.Y$)({
+                        (await (0, b.Y$)({
                             command: t,
                             optionValues: {},
                             context: o,
                             sectionName: a,
                             commandOrigin: C.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        _.yT(g.ti.COMMAND));
+                        _.yT(I.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
@@ -204,7 +204,7 @@ function B(e) {
         ]
     });
 }
-function w(e) {
+function D(e) {
     let { channel: n, commands: t, section: l, headerName: a, sectionName: o, children: r } = e;
     return 0 === t.length
         ? null
@@ -241,7 +241,7 @@ function w(e) {
               ]
           });
 }
-function D(e) {
+function w(e) {
     var n;
     let { channel: t, application: a, sectionName: o, installOnDemand: r, setHasCommands: s } = e,
         {
@@ -268,7 +268,7 @@ function D(e) {
             setSortOrder: v,
             commands: x,
             canSort: _
-        } = (0, b.Z)({
+        } = (0, g.Z)({
             sectionId: a.id,
             commandsByActiveSection: d
         });
@@ -287,14 +287,14 @@ function D(e) {
         ? (0, i.jsxs)('ul', {
               className: M.contentContainer,
               children: [
-                  (0, i.jsx)(w, {
+                  (0, i.jsx)(D, {
                       channel: t,
                       section: h,
                       commands: N,
                       headerName: L.intl.string(L.t.acSE0t),
                       sectionName: o
                   }),
-                  (0, i.jsx)(w, {
+                  (0, i.jsx)(D, {
                       channel: t,
                       section: h,
                       commands: p.current ? k : x,
@@ -302,7 +302,7 @@ function D(e) {
                       sectionName: o,
                       children:
                           _ &&
-                          (0, i.jsx)(S.Z, {
+                          (0, i.jsx)(j.Z, {
                               sortOrder: C,
                               onSortOptionClick: v
                           })

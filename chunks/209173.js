@@ -1,9 +1,9 @@
-var i, l;
-t.d(n, {
+var i, r;
+n.d(t, {
     s: function () {
         return i;
     }
 }),
-    ((l = i || (i = {}))[(l.APPLICATION = 1)] = 'APPLICATION'),
-    (l[(l.ACTIVITY_APPLICATION = 2)] = 'ACTIVITY_APPLICATION'),
-    (l[(l.CONNECTION = 3)] = 'CONNECTION');
+    ((r = i || (i = {}))[(r.APPLICATION = 1)] = 'APPLICATION'),
+    (r[(r.ACTIVITY_APPLICATION = 2)] = 'ACTIVITY_APPLICATION'),
+    (r[(r.CONNECTION = 3)] = 'CONNECTION');

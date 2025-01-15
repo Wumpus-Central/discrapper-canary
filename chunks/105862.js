@@ -1,70 +1,70 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return v;
+        return h;
     }
 });
-var i = t(200651),
-    l = t(192379),
-    a = t(780384),
-    o = t(481060),
-    r = t(410030),
-    s = t(782568),
-    c = t(63063),
-    d = t(827498),
-    u = t(888617),
-    m = t(981631),
-    p = t(388032),
-    h = t(150217),
-    f = t(983008),
-    C = t(478408);
-function v(e) {
-    let { showImage: n = !0, padding: t = !1 } = e,
-        v = (0, r.ZP)(),
-        x = (0, a.ap)(v) ? C : f,
-        _ = l.useCallback(() => {
-            (0, s.Z)(c.Z.getAppsSupportURL(m.BhN.APPS_LEARN_MORE));
+var i = n(200651),
+    r = n(192379),
+    a = n(780384),
+    o = n(481060),
+    s = n(410030),
+    c = n(782568),
+    l = n(63063),
+    u = n(827498),
+    d = n(888617),
+    p = n(981631),
+    f = n(388032),
+    _ = n(150217),
+    m = n(983008),
+    I = n(478408);
+function h(e) {
+    let { showImage: t = !0, padding: n = !1 } = e,
+        h = (0, s.ZP)(),
+        S = (0, a.ap)(h) ? I : m,
+        b = r.useCallback(() => {
+            (0, c.Z)(l.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: N } = (0, u.Z)({
-            sectionName: d.L3.NEW_TO_APPS,
+        { trackSectionImpressionRef: g } = (0, d.Z)({
+            sectionName: u.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
     return (0, i.jsx)('div', {
-        className: t ? h.containerPadding : void 0,
+        className: n ? _.containerPadding : void 0,
         children: (0, i.jsxs)('div', {
-            ref: (e) => (N.current = e),
-            className: h.container,
+            ref: (e) => (g.current = e),
+            className: _.container,
             children: [
-                n &&
+                t &&
                     (0, i.jsx)('img', {
-                        className: h.image,
-                        src: x,
+                        className: _.image,
+                        src: S,
                         alt: '',
                         'aria-hidden': !0
                     }),
                 (0, i.jsxs)('div', {
-                    className: h.body,
+                    className: _.body,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
-                            children: p.intl.string(p.t['kw8/ER'])
+                            children: f.intl.string(f.t['kw8/ER'])
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-normal',
-                            children: p.intl.string(p.t.GZoV1N)
+                            children: f.intl.string(f.t.GZoV1N)
                         })
                     ]
                 }),
                 (0, i.jsx)(o.Button, {
                     size: o.Button.Sizes.MEDIUM,
-                    'aria-label': p.intl.formatToPlainString(p.t.xx5Sur, {
-                        sectionTitle: p.intl.string(p.t['kw8/ER']),
-                        sectionBody: p.intl.string(p.t.GZoV1N)
+                    'aria-label': f.intl.formatToPlainString(f.t.xx5Sur, {
+                        sectionTitle: f.intl.string(f.t['kw8/ER']),
+                        sectionBody: f.intl.string(f.t.GZoV1N)
                     }),
-                    onClick: _,
-                    children: p.intl.string(p.t.Ye51oa)
+                    onClick: b,
+                    children: f.intl.string(f.t.Ye51oa)
                 })
             ]
         })

@@ -5,8 +5,8 @@ i.d(t, {
 });
 var n = i(200651);
 i(192379);
-var r = i(120356),
-    a = i.n(r),
+var a = i(120356),
+    r = i.n(a),
     o = i(481060),
     l = i(377171),
     c = i(388032),
@@ -17,6 +17,6 @@ function d(e) {
         ...i,
         text: c.intl.string(c.t.LO4f0N),
         color: l.Z.BACKGROUND_TERTIARY,
-        className: a()(t, s.partnerBadge)
+        className: r()(t, s.partnerBadge)
     });
 }

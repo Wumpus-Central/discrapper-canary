@@ -1,9 +1,9 @@
 n(47120);
 var i,
-    a = n(200651),
-    r = n(192379),
+    r = n(200651),
+    a = n(192379),
     o = n(846519);
-function l(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function l(e, t, n) {
         e
     );
 }
-class s extends (i = r.Component) {
+class c extends (i = a.Component) {
     static getDerivedStateFromProps(e) {
         return e.disable ? { hovered: !1 } : null;
     }
@@ -31,12 +31,12 @@ class s extends (i = r.Component) {
     componentDidUpdate(e, t) {
         let n,
             i,
-            a,
             r,
+            a,
             { props: o } = this;
-        let l = ((n = o), (i = this.state), !n.disable && !(i.hovered && n.pauseOnHover));
-        let s = ((a = e), (r = t), !a.disable && !(r.hovered && a.pauseOnHover));
-        (l && !s) || e.interval !== o.interval ? this.startTimer() : !l && s && this.stopTimer();
+        let s = ((n = o), (i = this.state), !n.disable && !(i.hovered && n.pauseOnHover));
+        let c = ((r = e), (a = t), !r.disable && !(a.hovered && r.pauseOnHover));
+        (s && !c) || e.interval !== o.interval ? this.startTimer() : !s && c && this.stopTimer();
     }
     startTimer() {
         let { interval: e, onInterval: t, disable: n } = this.props;
@@ -58,7 +58,7 @@ class s extends (i = r.Component) {
                       onMouseLeave: this.handleResume,
                       onBlur: this.handleResume
                   };
-        return (0, a.jsx)('div', {
+        return (0, r.jsx)('div', {
             ...i,
             className: t,
             children: e
@@ -66,18 +66,18 @@ class s extends (i = r.Component) {
     }
     constructor(...e) {
         super(...e),
-            l(this, 'timer', new o.Xp()),
-            l(this, 'state', { hovered: !1 }),
-            l(this, 'handlePause', () => {
+            s(this, 'timer', new o.Xp()),
+            s(this, 'state', { hovered: !1 }),
+            s(this, 'handlePause', () => {
                 !this.state.hovered && this.setState({ hovered: !0 });
             }),
-            l(this, 'handleResume', () => {
+            s(this, 'handleResume', () => {
                 this.setState({ hovered: !1 });
             });
     }
 }
-l(s, 'defaultProps', {
+s(c, 'defaultProps', {
     disable: !1,
     pauseOnHover: !1
 }),
-    (t.Z = s);
+    (t.Z = c);

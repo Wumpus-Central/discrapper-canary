@@ -414,7 +414,7 @@ class N extends (l = r.Component) {
                 }
             }),
             m(this, 'state', {
-                lockExtras: !1,
+                lockExtras: !0,
                 operation: null,
                 operationStarted: !1,
                 anchorTopOverride: void 0,

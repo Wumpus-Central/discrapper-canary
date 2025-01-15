@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     ZL: function () {
-        return o;
+        return r;
     },
     js: function () {
         return a;
@@ -11,11 +11,11 @@ n.d(t, {
 });
 var i,
     l,
-    r = n(981631);
-function o(e) {
-    return (null == e ? void 0 : e.type) === r.Odu.GO_LIVE;
+    o = n(981631);
+function r(e) {
+    return (null == e ? void 0 : e.type) === o.Odu.GO_LIVE;
 }
 function a(e) {
-    return e.type === r.Odu.VIDEO;
+    return e.type === o.Odu.VIDEO;
 }
 ((i = l || (l = {})).HORIZONTAL = 'horizontal'), (i.VERTICAL = 'vertical');

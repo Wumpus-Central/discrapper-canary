@@ -492,7 +492,7 @@ class J extends r.Component {
             }),
             H(this, 'handleUIDensityChange', (e) => {
                 let { value: t } = e;
-                D.YC.updateSetting(t);
+                if (t !== c.Pi.UNSET_UI_DENSITY) D.YC.updateSetting(t);
             });
     }
 }

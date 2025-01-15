@@ -5,21 +5,21 @@ i.d(t, {
 }),
     i(47120);
 var n = i(200651),
-    r = i(192379),
-    a = i(481060),
+    a = i(192379),
+    r = i(481060),
     o = i(626135),
     l = i(34674),
     c = i(190733),
     s = i(132871),
     d = i(147890),
     u = i(981631),
-    h = i(388032),
-    _ = i(631409),
-    p = i(943935);
+    _ = i(388032),
+    p = i(631409),
+    h = i(943935);
 function m() {
     let e = (0, s.useApplicationDirectoryHistory)((e) => e.guildId),
-        [t, i] = r.useState(''),
-        m = r.useCallback(() => {
+        [t, i] = a.useState(''),
+        m = a.useCallback(() => {
             let i = (0, l.KQ)();
             o.default.track(u.rMx.APP_DIRECTORY_SEARCH_STARTED, {
                 search_term: t,
@@ -31,18 +31,18 @@ function m() {
                 (0, d.goSearch)({ query: t });
         }, [e, t]);
     return (0, n.jsxs)('div', {
-        className: _.container,
+        className: p.container,
         children: [
             (0, n.jsxs)('div', {
-                className: _.searchBarContainer,
+                className: p.searchBarContainer,
                 children: [
-                    (0, n.jsx)(a.Heading, {
+                    (0, n.jsx)(r.Heading, {
                         variant: 'display-lg',
-                        className: _.heading,
-                        children: h.intl.string(h.t['n61/Q0'])
+                        className: p.heading,
+                        children: _.intl.string(_.t['n61/Q0'])
                     }),
                     (0, n.jsx)(c.Z, {
-                        className: _.searchBar,
+                        className: p.searchBar,
                         query: t,
                         onChange: i,
                         onSubmit: m,
@@ -51,9 +51,9 @@ function m() {
                 ]
             }),
             (0, n.jsx)('img', {
-                src: p,
+                src: h,
                 alt: '',
-                className: _.rightImage
+                className: p.rightImage
             })
         ]
     });

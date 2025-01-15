@@ -1,8 +1,8 @@
 var o = t(200651),
     r = t(192379),
     c = t(120356),
-    i = t.n(c),
-    a = t(476183),
+    a = t.n(c),
+    i = t(476183),
     s = t(481060),
     l = t(569379),
     d = t(642145),
@@ -10,20 +10,20 @@ var o = t(200651),
 n.Z = r.forwardRef((e, n) => {
     let { quest: t, percentComplete: r, size: c = 42, strokeWidth: u = 3, glowBlur: p = 0.4, percentCompleteText: _, percentCompleteTextVariant: C = 'text-lg/medium', children: v } = e,
         g = (0, l.E)(t, r > 0),
-        m = c / 2,
-        B = c / 2 - u / 2,
-        x = 2 * Math.PI * B,
-        b = x - r * x,
-        S = {
-            strokeDasharray: ''.concat(x, ' ').concat(x),
-            strokeDashoffset: b
+        B = c / 2,
+        m = c / 2 - u / 2,
+        S = 2 * Math.PI * m,
+        x = S - r * S,
+        b = {
+            strokeDasharray: ''.concat(S, ' ').concat(S),
+            strokeDashoffset: x
         },
         h = {
-            strokeDasharray: ''.concat(x, ' ').concat(x),
-            strokeDashoffset: -r * x
+            strokeDasharray: ''.concat(S, ' ').concat(S),
+            strokeDashoffset: -r * S
         },
         y = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: k } = (0, s.useSpring)({
+        { progressTextAnimation: T } = (0, s.useSpring)({
             progressTextAnimation: null != _ && 1 !== r ? 1 : 0,
             config: d.Y
         });
@@ -36,11 +36,11 @@ n.Z = r.forwardRef((e, n) => {
                 style: y,
                 children: [
                     v,
-                    (0, o.jsxs)(a.animated.div, {
-                        style: { opacity: k },
-                        className: i()(f.coverContent, f.progressTextWrapper),
+                    (0, o.jsxs)(i.animated.div, {
+                        style: { opacity: T },
+                        className: a()(f.coverContent, f.progressTextWrapper),
                         children: [
-                            (0, o.jsx)('div', { className: i()(f.coverContent, f.progressTextOverlay) }),
+                            (0, o.jsx)('div', { className: a()(f.coverContent, f.progressTextOverlay) }),
                             (0, o.jsx)(s.Text, {
                                 variant: C,
                                 color: 'text-primary',
@@ -93,9 +93,9 @@ n.Z = r.forwardRef((e, n) => {
                         className: f.progress,
                         strokeWidth: u,
                         fill: 'transparent',
-                        r: B,
-                        cx: m,
-                        cy: m,
+                        r: m,
+                        cx: B,
+                        cy: B,
                         stroke: 'url(#linear)',
                         style: h
                     }),
@@ -103,11 +103,11 @@ n.Z = r.forwardRef((e, n) => {
                         className: f.progress,
                         strokeWidth: u,
                         fill: 'transparent',
-                        r: B,
-                        cx: m,
-                        cy: m,
+                        r: m,
+                        cx: B,
+                        cy: B,
                         stroke: g.foreground,
-                        style: S
+                        style: b
                     })
                 ]
             })

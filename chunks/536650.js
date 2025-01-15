@@ -31,16 +31,16 @@ function v(e) {
 }
 function x(e) {
     let { application: n, channel: t, name: C, iconURL: x, scrollerRef: _, sectionName: N } = e,
-        g = (0, o.ap)((0, s.ZP)()),
+        I = (0, o.ap)((0, s.ZP)()),
         A = l.useRef(null),
         E = l.useRef(null),
+        g = l.useRef(null),
         b = l.useRef(null),
-        I = l.useRef(null),
-        j = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        P = (0, c.ZP)('number' == typeof x ? '' : x, null != j ? j : ''),
-        S = l.useMemo(() => {
+        P = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        S = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
+        j = l.useMemo(() => {
             var e, n;
-            let t = (0, a.compact)([d.Z.parseHexString(P), d.Z.parseHexString(g ? '#000000' : '#ffffff')]);
+            let t = (0, a.compact)([d.Z.parseHexString(S), d.Z.parseHexString(I ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -52,16 +52,16 @@ function x(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : P;
-        }, [P, g]),
+                : S;
+        }, [S, I]),
         y = v(A),
         T = v(E),
         L = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
             let u = _.current,
                 m = A.current,
-                p = b.current,
-                h = null == I ? void 0 : I.current,
+                p = g.current,
+                h = null == b ? void 0 : b.current,
                 f = parseInt(null !== (e = null == y ? void 0 : y.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(f) && !isNaN(C)) {
@@ -72,11 +72,11 @@ function x(e) {
                     _ = (0, a.clamp)(n - v, x + 1, C + 20);
                 let N = ((i = e), (l = x) === (o = _) ? 1 : (0, a.clamp)((i - l) / (o - l), 0, 1));
                 if (
-                    ((m.style.filter = 'brightness('.concat(1 + ((g ? 1.4 : 0.6) - (r = 1)) * N, ')')),
+                    ((m.style.filter = 'brightness('.concat(1 + ((I ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(P, ' ')
+                        .concat(S, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(S, ')')),
+                        .concat(j, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = f / 4) + (0 - c) * N, 'px)')),
                     null != h)
@@ -84,11 +84,11 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [S, P, null == T ? void 0 : T.height, g, _, null == y ? void 0 : y.height]);
+        }, [j, S, null == T ? void 0 : T.height, I, _, null == y ? void 0 : y.height]);
     return (
         l.useEffect(() => {
             L();
-        }, [L, g]),
+        }, [L, I]),
         l.useEffect(() => {
             let e = _.current,
                 n = () => {
@@ -120,7 +120,7 @@ function x(e) {
                         (0, i.jsx)('div', {
                             className: f.nameContainer,
                             children: (0, i.jsx)(r.Heading, {
-                                ref: b,
+                                ref: g,
                                 className: f.textApplicationName,
                                 variant: 'heading-lg/extrabold',
                                 children: C
@@ -130,7 +130,7 @@ function x(e) {
                 }),
                 (0, m.BQ)(n)
                     ? (0, i.jsx)('div', {
-                          ref: I,
+                          ref: b,
                           className: f.moreMenuButtonContainer,
                           children: (0, i.jsx)(h.Z, {
                               application: n,
@@ -143,7 +143,7 @@ function x(e) {
                 (0, i.jsx)('div', {
                     ref: E,
                     className: f.bannerBackground,
-                    style: { backgroundColor: P }
+                    style: { backgroundColor: S }
                 })
             ]
         })

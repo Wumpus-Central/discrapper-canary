@@ -39,7 +39,7 @@ let l = 'app-launcher-element',
     s = 'app-launcher-app-dm-entrypoint',
     c = 'app-launcher-app-details-more-menu',
     d = 500,
-    u = 670,
+    u = 680,
     m = 'min(100vh, '.concat(u, 'px)'),
     h = {
         '--custom-app-launcher-width': ''.concat(d, 'px'),

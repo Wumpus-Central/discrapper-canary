@@ -24,8 +24,8 @@ var a = t(200651),
     E = t(388032),
     N = t(150112);
 n.Z = function (e) {
-    let { applicationId: n, onSelectApplication: t, onScroll: y, initialTab: A, onButtonsVisibilityChange: T } = e,
-        P = i.useRef(null),
+    let { applicationId: n, onSelectApplication: t, onScroll: y, initialTab: A, onButtonsVisibilityChange: P } = e,
+        T = i.useRef(null),
         R = (0, r.e7)([o.Z], () => o.Z.getApplication(n)),
         Z = (0, r.e7)([o.Z], () => o.Z.getApplicationFetchState(n));
     i.useEffect(() => {
@@ -37,13 +37,13 @@ n.Z = function (e) {
         i.useEffect(() => {
             l.T4({ applicationId: n });
         }, [n]),
-        i.useEffect(() => () => T(!0), [T]);
+        i.useEffect(() => () => P(!0), [P]);
     let L = null == R ? void 0 : R.storefront_available,
-        [O, D] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
-        k = i.useCallback(
+        [O, k] = i.useState(null != A ? A : j.GlobalDiscoveryAppsSections.ABOUT),
+        D = i.useCallback(
             (e) => {
                 var n;
-                null === (n = P.current) || void 0 === n || n.scrollTo({ to: 0 }), D(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
+                null === (n = T.current) || void 0 === n || n.scrollTo({ to: 0 }), k(j.GlobalDiscoveryAppsSections.ABOUT), t(e);
             },
             [t]
         );
@@ -102,7 +102,7 @@ n.Z = function (e) {
                     application_id: n,
                     tab_name: e
                 }),
-                    D(e),
+                    k(e),
                     e === j.GlobalDiscoveryAppsSections.ABOUT ? (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(n)) : (0, v.Gp)(S.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(n, e));
             },
             [n]
@@ -110,7 +110,7 @@ n.Z = function (e) {
         V = O === j.GlobalDiscoveryAppsSections.ABOUT;
     return (0, a.jsx)(p.Z, {
         onScroll: y,
-        ref: P,
+        ref: T,
         children: (0, a.jsx)(u.Z, {
             children:
                 null == R
@@ -128,7 +128,7 @@ n.Z = function (e) {
                           children: [
                               (0, a.jsx)(x.Z, {
                                   application: R,
-                                  onButtonsVisibilityChange: T
+                                  onButtonsVisibilityChange: P
                               }),
                               (0, a.jsxs)('div', {
                                   className: N.contentContainer,
@@ -150,7 +150,7 @@ n.Z = function (e) {
                                                   applicationId: n,
                                                   fetchState: B,
                                                   similarApplications: w,
-                                                  onSelectApplication: k,
+                                                  onSelectApplication: D,
                                                   similarLoadId: null == G ? void 0 : G.loadId
                                               })
                                           ]

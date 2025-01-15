@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    o = n.n(r),
+    o = n(120356),
+    r = n.n(o),
     a = n(348327),
     s = n.n(a),
     c = n(476183),
@@ -23,9 +23,9 @@ let p = {
 };
 function m(e) {
     let { locked: t, pinned: n } = e,
-        [r, a] = l.useState(0),
+        [o, a] = l.useState(0),
         [m, v] = l.useState(0),
-        [g, x] = l.useState(0),
+        [x, g] = l.useState(0),
         C = l.useRef(0),
         [Z, _] = l.useState(0),
         { timeToLiveMs: I, reappearTimeMs: j } = d.ZP.useState(
@@ -46,7 +46,7 @@ function m(e) {
                 (C.current = setInterval(() => {
                     let e = Date.now();
                     v(e),
-                        x((t) => {
+                        g((t) => {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = b.current.timeToLiveMs,
@@ -63,8 +63,8 @@ function m(e) {
     let w = () => {
             a(Date.now()), _((e) => e + 1);
         },
-        k = r > 0 && m - r < 1000,
-        N = (0, u.useTransition)(g > 0 && g < m && m - g < I, {
+        k = o > 0 && m - o < 1000,
+        N = (0, u.useTransition)(x > 0 && x < m && m - x < I, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -80,7 +80,7 @@ function m(e) {
                           style: e,
                           className: f.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: o()(f.clickZone, k && f.clickBackground),
+                              className: r()(f.clickZone, k && f.clickBackground),
                               children: (0, i.jsx)(u.Clickable, {
                                   onClick: w,
                                   className: f.clickable,

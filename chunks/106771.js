@@ -32,13 +32,13 @@ function f(e) {
             },
             [f]
         ),
-        { iconURL: N, name: g, description: A } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
+        { iconURL: N, name: I, description: A } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
         E = l.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
             return null == n ? null : (0, c.ae)(n, void 0);
         }, [A, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: b } = (0, m.Z)({
+        { trackSearchResultsItemImpressionRef: g } = (0, m.Z)({
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: v,
@@ -46,7 +46,7 @@ function f(e) {
         });
     return (0, i.jsx)(a.Clickable, {
         className: p.clickable,
-        innerRef: (e) => (b.current = e),
+        innerRef: (e) => (g.current = e),
         onClick: C,
         onContextMenu: _,
         children: (0, i.jsxs)(a.FocusBlock, {
@@ -65,7 +65,7 @@ function f(e) {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : g
+                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : I
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
@@ -80,7 +80,7 @@ function f(e) {
                           className: p.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: g
+                          children: I
                       })
                     : null,
                 (0, i.jsx)('div', { className: p.underline })

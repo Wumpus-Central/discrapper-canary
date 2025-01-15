@@ -5,14 +5,14 @@ i.d(t, {
 });
 var n = i(200651);
 i(192379);
-var r = i(120356),
-    a = i.n(r),
+var a = i(120356),
+    r = i.n(a),
     o = i(481060),
     l = i(388032),
     c = i(582613);
 function s(e) {
-    let { className: t, onClick: i, imageSrc: r, iconSrc: s, header: d, headerClassName: u, subheaderVariant: h = 'text-sm/normal', subheader: _, children: p, animatesOnHover: m, ...f } = e,
-        g = null != r,
+    let { className: t, onClick: i, imageSrc: a, iconSrc: s, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: h, animatesOnHover: m, ...f } = e,
+        g = null != a,
         x = (0, n.jsxs)(n.Fragment, {
             children: [
                 g &&
@@ -21,14 +21,14 @@ function s(e) {
                         children: (0, n.jsx)('img', {
                             alt: '',
                             className: c.image,
-                            src: r
+                            src: a
                         })
                     }),
                 (0, n.jsxs)('div', {
                     className: c.textContainer,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: a()(c.topRowContainer),
+                            className: r()(c.topRowContainer),
                             children: [
                                 null != s &&
                                     (0, n.jsx)('img', {
@@ -47,29 +47,29 @@ function s(e) {
                                             className: u,
                                             children: d
                                         }),
-                                        null != _ &&
+                                        null != p &&
                                             (0, n.jsx)(o.Text, {
                                                 className: c.subheader,
                                                 color: 'header-secondary',
-                                                variant: h,
-                                                children: _
+                                                variant: _,
+                                                children: p
                                             })
                                     ]
                                 })
                             ]
                         }),
-                        p
+                        h
                     ]
                 })
             ]
         }),
-        C = a()(t, c.container, { [c.hasImage]: g });
+        C = r()(t, c.container, { [c.hasImage]: g });
     return null != i
         ? (0, n.jsx)(o.ClickableContainer, {
               tag: 'article',
               'aria-label': l.intl.formatToPlainString(l.t['0cVQIC'], { name: d }),
               onClick: i,
-              className: a()(C, c.clickable, { [c.animatesOnHoverContainer]: m }),
+              className: r()(C, c.clickable, { [c.animatesOnHoverContainer]: m }),
               focusProps: { offset: 4 },
               children: x
           })

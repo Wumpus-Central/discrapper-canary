@@ -1,16 +1,16 @@
 i(47120);
 var n,
-    r,
-    a = i(200651),
+    a,
+    r = i(200651),
     o = i(192379),
     l = i(120356),
     c = i.n(l),
     s = i(995295),
     d = i(513431),
     u = i(481060),
-    h = i(112724),
-    _ = i(768762),
-    p = i(490376);
+    _ = i(112724),
+    p = i(768762),
+    h = i(490376);
 function m(e, t, i) {
     return (
         t in e
@@ -24,15 +24,15 @@ function m(e, t, i) {
         e
     );
 }
-((r = n || (n = {}))[(r.LEFT = 0)] = 'LEFT'), (r[(r.RIGHT = 1)] = 'RIGHT');
+((a = n || (n = {}))[(a.LEFT = 0)] = 'LEFT'), (a[(a.RIGHT = 1)] = 'RIGHT');
 let f = (e) => {
     let { onClick: t, className: i, direction: n } = e;
-    return (0, a.jsx)(u.Clickable, {
+    return (0, r.jsx)(u.Clickable, {
         'aria-hidden': !0,
-        className: c()(p.scrollerButton, i),
+        className: c()(h.scrollerButton, i),
         onClick: t,
-        children: (0, a.jsx)(_.Z, {
-            className: p.scrollerButtonArrow,
+        children: (0, r.jsx)(p.Z, {
+            className: h.scrollerButtonArrow,
             direction: n
         })
     });
@@ -71,7 +71,7 @@ class g extends o.Component {
     }
     componentDidUpdate(e, t) {
         if (t.tileIndex !== this.state.tileIndex || t.lastArrowDirection !== this.state.lastArrowDirection) {
-            var i, n, r;
+            var i, n, a;
             let { tileIndex: e } = this.state,
                 t = this.getOffset(this.state.tileIndex, this.state.lastArrowDirection);
             null === (i = this.advancedScrollerRef.current) ||
@@ -80,62 +80,62 @@ class g extends o.Component {
                     to: t,
                     animate: !0
                 }),
-                null === (n = (r = this.props).onScroll) || void 0 === n || n.call(r, { tileIndex: e });
+                null === (n = (a = this.props).onScroll) || void 0 === n || n.call(a, { tileIndex: e });
         }
         e.width !== this.props.width && this.setScrollerWidth();
     }
     render() {
         let { tileIndex: e, lastArrowDirection: t } = this.state,
-            { header: i, headerId: n, subHeader: r, headerContainerClassName: o, scrollContainerClassName: l } = this.props,
+            { header: i, headerId: n, subHeader: a, headerContainerClassName: o, scrollContainerClassName: l } = this.props,
             s = this.getMaxOffset();
-        return (0, a.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             children: [
-                (0, a.jsxs)('div', {
-                    className: c()(p.headerContainer, o),
+                (0, r.jsxs)('div', {
+                    className: c()(h.headerContainer, o),
                     children: [
-                        (0, a.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             children: [
-                                (0, a.jsx)(u.Heading, {
+                                (0, r.jsx)(u.Heading, {
                                     id: n,
                                     variant: 'heading-lg/semibold',
                                     children: i
                                 }),
-                                null == r
+                                null == a
                                     ? null
-                                    : (0, a.jsx)(u.Text, {
+                                    : (0, r.jsx)(u.Text, {
                                           variant: 'text-sm/medium',
-                                          className: p.subheader,
-                                          children: r
+                                          className: h.subheader,
+                                          children: a
                                       })
                             ]
                         }),
                         s > 0
-                            ? (0, a.jsxs)('div', {
-                                  className: p.arrowsContainer,
+                            ? (0, r.jsxs)('div', {
+                                  className: h.arrowsContainer,
                                   children: [
-                                      (0, a.jsx)(f, {
-                                          direction: _.Z.Directions.LEFT,
+                                      (0, r.jsx)(f, {
+                                          direction: p.Z.Directions.LEFT,
                                           onClick: this.prev,
-                                          className: c()(p.arrowLeft, { [p.arrowDisabled]: 0 === e && 0 === t })
+                                          className: c()(h.arrowLeft, { [h.arrowDisabled]: 0 === e && 0 === t })
                                       }),
-                                      (0, a.jsx)(f, {
-                                          direction: _.Z.Directions.RIGHT,
+                                      (0, r.jsx)(f, {
+                                          direction: p.Z.Directions.RIGHT,
                                           onClick: this.next,
-                                          className: c()(p.arrowRight, { [p.arrowDisabled]: e === this.getMaxIndex() && 1 === t })
+                                          className: c()(h.arrowRight, { [h.arrowDisabled]: e === this.getMaxIndex() && 1 === t })
                                       })
                                   ]
                               })
                             : null
                     ]
                 }),
-                (0, a.jsx)('div', {
-                    className: c()(p.scrollerContainer, l),
-                    children: (0, a.jsx)(u.AdvancedScrollerNone, {
+                (0, r.jsx)('div', {
+                    className: c()(h.scrollerContainer, l),
+                    children: (0, r.jsx)(u.AdvancedScrollerNone, {
                         ref: this.advancedScrollerRef,
                         orientation: 'horizontal',
-                        className: p.scroller,
-                        children: (0, a.jsx)('div', {
-                            className: p.scroller,
+                        className: h.scroller,
+                        children: (0, r.jsx)('div', {
+                            className: h.scroller,
                             ref: (e) => {
                                 (this.tileScrollerRef.current = e), this.setScrollerWidth();
                             },
@@ -174,4 +174,4 @@ class g extends o.Component {
             });
     }
 }
-t.Z = (0, h.Z)(g);
+t.Z = (0, _.Z)(g);

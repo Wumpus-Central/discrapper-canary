@@ -4,29 +4,29 @@ i.d(t, {
     }
 });
 var n = i(200651),
-    r = i(192379),
-    a = i(481060),
+    a = i(192379),
+    r = i(481060),
     o = i(768581),
     l = i(924489),
     c = i(950854),
     s = i(824606),
     d = i(124418);
 function u(e) {
-    var t, i, u, h, _;
-    let { application: p, className: m, childrenClassName: f, animatesOnHover: g, onClick: x, ...C } = e,
+    var t, i, u, _, p;
+    let { application: h, className: m, childrenClassName: f, animatesOnHover: g, onClick: x, ...C } = e,
         b = o.ZP.getApplicationIconURL({
-            id: p.id,
-            icon: p.icon,
+            id: h.id,
+            icon: h.icon,
             size: 48
         }),
-        I = (0, s.Z)({ application: p }),
-        v = null === (t = p.categories) || void 0 === t ? void 0 : t[0],
-        N = (null !== (h = null === (i = p.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== h ? h : 0) > 0 || I.length > 0,
-        A = r.useCallback(() => {
+        I = (0, s.Z)({ application: h }),
+        v = null === (t = h.categories) || void 0 === t ? void 0 : t[0],
+        A = (null !== (_ = null === (i = h.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== _ ? _ : 0) > 0 || I.length > 0,
+        N = a.useCallback(() => {
             x({ mutualGuilds: I });
         }, [x, I]),
         L = (0, n.jsx)(l.Z, {
-            application: p,
+            application: h,
             textVariant: 'text-xs/normal',
             mutualGuilds: I,
             mutualGuildShownMax: 3,
@@ -35,12 +35,12 @@ function u(e) {
         });
     return (0, n.jsxs)(c.Z, {
         className: m,
-        onClick: A,
+        onClick: N,
         iconSrc: b,
-        header: p.name,
+        header: h.name,
         subheader:
             null != v &&
-            (0, n.jsx)(a.Text, {
+            (0, n.jsx)(r.Text, {
                 tag: 'span',
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
@@ -49,17 +49,17 @@ function u(e) {
         animatesOnHover: g,
         ...C,
         children: [
-            (null != p.description || null != f) &&
+            (null != h.description || null != f) &&
                 (0, n.jsx)('div', {
                     className: f,
-                    children: (0, n.jsx)(a.Text, {
+                    children: (0, n.jsx)(r.Text, {
                         className: d.listingDescription,
                         variant: 'text-sm/normal',
                         lineClamp: 2,
-                        children: null !== (_ = null === (u = p.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== _ ? _ : p.description
+                        children: null !== (p = null === (u = h.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== p ? p : h.description
                     })
                 }),
-            N &&
+            A &&
                 (0, n.jsx)('div', {
                     className: d.bottomGuildCountContainer,
                     children: L

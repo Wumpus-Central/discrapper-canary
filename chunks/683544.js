@@ -52,9 +52,9 @@ n.Z = function (e) {
             var e;
             return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : h;
         }),
-        T = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : h,
-        { results: P, totalPages: R, loadId: Z } = i.useMemo(() => (y === d.M.FETCHING ? T : A), [y, T, A]),
-        L = i.useMemo(() => (null == P ? void 0 : P.filter((e) => !(e.type !== r.s.APPLICATION))), [P]),
+        P = null !== (n = (0, s.Z)(A)) && void 0 !== n ? n : h,
+        { results: T, totalPages: R, loadId: Z } = i.useMemo(() => (y === d.M.FETCHING ? P : A), [y, P, A]),
+        L = i.useMemo(() => (null == T ? void 0 : T.filter((e) => !(e.type !== r.s.APPLICATION))), [T]),
         O = i.useCallback((e) => {
             let { page: n, activeCategoryId: t, onSuccessCallback: a, guildId: i, fetchCounts: r } = e;
             r &&
@@ -81,7 +81,7 @@ n.Z = function (e) {
                 onSuccessCallback: () => {}
             });
     }, [t, I, O, j]);
-    let D = i.useCallback(
+    let k = i.useCallback(
         (e, n) => {
             (0, p.zZ)(C.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                 current_page: f.m_.SEARCH,
@@ -113,7 +113,7 @@ n.Z = function (e) {
                                             _.Z,
                                             {
                                                 application: t,
-                                                onSelectApplication: (e) => D(e, n)
+                                                onSelectApplication: (e) => k(e, n)
                                             },
                                             t.id
                                         );

@@ -21,22 +21,22 @@ var i = t(200651),
     v = t(152710);
 function x(e) {
     let { channel: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
-        g = l.useId(),
+        I = l.useId(),
         A = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: E, wasSubmitting: b } = (0, p.Z)({
+        { submitting: E, wasSubmitting: g } = (0, p.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: g,
+            launchingComponentId: I,
             onSubmissionComplete: A
         }),
-        [I, j] = l.useState(!1),
-        P = (0, o.Qv)({
+        [b, P] = l.useState(!1),
+        S = (0, o.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        S = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
+        j = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
         {
             onActivityItemSelected: y,
             buttonColor: T,
@@ -46,15 +46,15 @@ function x(e) {
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: x,
-            commandName: S,
-            autoDismissOnClick: P === o.JS.LEAVE,
-            launchingComponentId: g,
-            submitting: null != b ? b : E
+            commandName: j,
+            autoDismissOnClick: S === o.JS.LEAVE,
+            launchingComponentId: I,
+            submitting: null != g ? g : E
         }),
         { disabled: R, reason: M } = (0, u.Z)({
             channelId: n.id,
             application: t,
-            activityAction: P
+            activityAction: S
         });
     return (0, i.jsx)(a.Tooltip, {
         shouldShow: null != M,
@@ -68,9 +68,9 @@ function x(e) {
                 size: N,
                 color: T,
                 disabled: R,
-                submitting: I,
+                submitting: b,
                 onClick: () => {
-                    j(!0),
+                    P(!0),
                         y(),
                         null == n || n(),
                         s.default.track(f.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {

@@ -15,8 +15,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    o = n(692547),
+    o = n.n(l),
+    r = n(692547),
     a = n(481060),
     s = n(765250),
     c = n(388032),
@@ -45,7 +45,7 @@ function h(e) {
                 onClick: t,
                 children: (0, i.jsx)(a.SettingsIcon, {
                     size: 'xxs',
-                    color: o.Z.colors.INTERACTIVE_ACTIVE
+                    color: r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
@@ -62,11 +62,11 @@ function f(e) {
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: r()(u.button, n && u.active),
+                className: o()(u.button, n && u.active),
                 onClick: d,
                 children: (0, i.jsx)(a.ScreenIcon, {
                     size: 'xxs',
-                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
@@ -80,11 +80,11 @@ function p(e) {
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: r()(u.button, n && u.active),
+                className: o()(u.button, n && u.active),
                 onClick: () => (0, s.xh)(t),
                 children: (0, i.jsx)(a.PinUprightIcon, {
                     size: 'xxs',
-                    color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });

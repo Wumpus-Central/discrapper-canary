@@ -955,6 +955,6 @@ let eP = (0, u.Zc)(
     ek = (0, u.Zc)(
         'appearance',
         'uiDensity',
-        (e) => (null != e ? e : s.Pi.COMPACT),
+        (e) => (e === s.Pi.UNSET_UI_DENSITY ? s.Pi.COMPACT : null != e ? e : s.Pi.COMPACT),
         (e) => e
     );
