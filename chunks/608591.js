@@ -4,7 +4,8 @@ function i(e) {
             messages: {
                 videoTitle: e.messages.video_title,
                 videoEndCtaTitle: e.messages.video_end_cta_title,
-                videoEndCtaSubtitle: e.messages.video_end_cta_subtitle
+                videoEndCtaSubtitle: e.messages.video_end_cta_subtitle,
+                videoEndCtaButtonLabel: e.messages.video_end_cta_button_label
             },
             assets: {
                 videoPlayerVideo: e.assets.video_player_video,
