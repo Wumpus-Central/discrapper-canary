@@ -213,6 +213,8 @@ var r;
         (e.MENU_ITEM_DANGER_HOVER_BG = 'var(--menu-item-danger-hover-bg)'),
         (e.MENU_ITEM_DEFAULT_ACTIVE_BG = 'var(--menu-item-default-active-bg)'),
         (e.MENU_ITEM_DEFAULT_HOVER_BG = 'var(--menu-item-default-hover-bg)'),
+        (e.MESSAGE_REACTED_BACKGROUND = 'var(--message-reacted-background)'),
+        (e.MESSAGE_REACTED_TEXT = 'var(--message-reacted-text)'),
         (e.MODAL_BACKGROUND = 'var(--modal-background)'),
         (e.MODAL_FOOTER_BACKGROUND = 'var(--modal-footer-background)'),
         (e.NAVIGATOR_HEADER_TINT = 'var(--navigator-header-tint)'),

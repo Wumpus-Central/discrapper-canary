@@ -4328,6 +4328,44 @@ let { Themes: a } = r(15202).V,
                 opacity: 1
             }
         },
+        MESSAGE_REACTED_BACKGROUND: {
+            category: 'generic',
+            [a.DARK]: {
+                raw: 'BRAND_500',
+                opacity: 0.15
+            },
+            [a.LIGHT]: {
+                raw: 'BRAND_500',
+                opacity: 0.15
+            },
+            [a.MIDNIGHT]: {
+                raw: 'BRAND_500',
+                opacity: 0.15
+            },
+            [a.DARKER]: {
+                raw: 'BRAND_500',
+                opacity: 0.15
+            }
+        },
+        MESSAGE_REACTED_TEXT: {
+            category: 'text',
+            [a.DARK]: {
+                raw: 'BRAND_200',
+                opacity: 1
+            },
+            [a.LIGHT]: {
+                raw: 'BRAND_560',
+                opacity: 1
+            },
+            [a.MIDNIGHT]: {
+                raw: 'BRAND_200',
+                opacity: 1
+            },
+            [a.DARKER]: {
+                raw: 'BRAND_200',
+                opacity: 1
+            }
+        },
         MODAL_BACKGROUND: {
             category: 'generic',
             [a.DARK]: {
@@ -6944,13 +6982,17 @@ let { Themes: a } = r(15202).V,
             BLUE_NEW_49: '#0074e3',
             BLUE_NEW_57: '#0d64be',
             BLURPLE_10: '#c8d2fe',
+            BLURPLE_14: '#bac7fe',
             BLURPLE_19: '#aabafd',
+            BLURPLE_21: '#a3b5fc',
             BLURPLE_25: '#97aafb',
             BLURPLE_26: '#94a7fb',
             BLURPLE_35: '#7a8ef8',
             BLURPLE_41: '#6a7df6',
             BLURPLE_49: '#5865f2',
+            BLURPLE_5: '#d9dfff',
             BLURPLE_71: '#323d82',
+            BLURPLE_75: '#2b366f',
             BRAND_100: '#f7f7fe',
             BRAND_130: '#f0f1fe',
             BRAND_160: '#e7e9fd',

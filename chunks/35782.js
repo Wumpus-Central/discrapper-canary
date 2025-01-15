@@ -1658,6 +1658,46 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            MESSAGE_REACTED_BACKGROUND: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_BLURPLE_24',
+                        opacity: 0.23921568627450981
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_BLURPLE_24',
+                        opacity: 0.23921568627450981
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_BLURPLE_24',
+                        opacity: 0.23921568627450981
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_BLURPLE_24',
+                        opacity: 0.23921568627450981
+                    }
+                }
+            },
+            MESSAGE_REACTED_TEXT: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'BLURPLE_5',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'BLURPLE_75',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'BLURPLE_21',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'BLURPLE_14',
+                        opacity: 1
+                    }
+                }
+            },
             MODAL_BACKGROUND: {
                 'visual-refresh': {
                     [i.DARK]: {
