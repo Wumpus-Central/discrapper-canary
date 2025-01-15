@@ -34,6 +34,7 @@ e.exports = {
     emojiButton: 'emojiButton_bdf0de button_bdf0de',
     stickerButton: 'stickerButton_bdf0de',
     stickerButtonTilted: 'stickerButtonTilted_bdf0de',
+    messageConfettiButton: 'messageConfettiButton_bdf0de',
     fontSize12Padding: 'fontSize12Padding_bdf0de',
     fontSize14Padding: 'fontSize14Padding_bdf0de',
     fontSize15Padding: 'fontSize15Padding_bdf0de',

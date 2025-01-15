@@ -28,6 +28,7 @@ let l = {
             reactions: !0
         },
         commands: { enabled: !0 },
+        confetti: { button: !0 },
         drafts: {
             type: o.d.ChannelMessage,
             commandType: o.d.SlashCommand,
@@ -68,6 +69,7 @@ let l = {
             addReactionShortcut: !0,
             forceChatLayer: !0
         },
+        confetti: { button: !0 },
         drafts: {
             type: o.d.ChannelMessage,
             autoSave: !0
@@ -102,6 +104,7 @@ let l = {
         attachments: !0,
         autocomplete: { addReactionShortcut: !0 },
         commands: { enabled: !0 },
+        confetti: { button: !0 },
         disableAutoFocus: !0,
         drafts: {
             type: o.d.ChannelMessage,
