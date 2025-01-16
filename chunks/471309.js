@@ -1,4 +1,4 @@
-let i = (0, n(818083).B)({
+let s = (0, n(818083).B)({
     kind: 'user',
     id: '2024-08_tiered_tenure_badges',
     label: 'Tiered Tenure Badging',
@@ -24,5 +24,5 @@ let i = (0, n(818083).B)({
 });
 t.Z = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return i.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
+    return s.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
 };
