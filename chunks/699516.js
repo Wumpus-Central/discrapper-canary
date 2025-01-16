@@ -43,6 +43,9 @@ function O(e) {
     (m = {}),
         (g = {}),
         (E = {}),
+        (I = new Set()),
+        (v = new Set()),
+        (T = new Set()),
         e.relationships.forEach((e) => {
             (m[e.id] = e.type), null != e.nickname && (g[e.id] = e.nickname), null != e.since && (E[e.id] = e.since), e.is_spam_request && v.add(e.id), (0, c.JX)({ location: 'relationship_store' }) && e.user_ignored && (I.add(e.id), e.type === h.OGo.PENDING_INCOMING && T.add(e.id));
         }),
