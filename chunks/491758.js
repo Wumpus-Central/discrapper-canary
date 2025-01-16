@@ -82,7 +82,7 @@ function R() {
             ],
             [M]
         ),
-        U = r.useMemo(
+        F = r.useMemo(
             () => [
                 {
                     value: I.ws.FPS_15,
@@ -99,7 +99,7 @@ function R() {
             ],
             [M]
         ),
-        F = r.useCallback(
+        U = r.useCallback(
             (e) => {
                 c.Z.setKeybind({
                     ...B,
@@ -221,7 +221,7 @@ function R() {
                         title: v.intl.string(v.t['2wScLy']),
                         note: v.intl.string(v.t['Rf9+f3']),
                         value: P.frameRate,
-                        options: U
+                        options: F
                     }),
                     (0, i.jsx)(T.O, {
                         className: j.formItem,
@@ -231,7 +231,7 @@ function R() {
                             className: A.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
                                 defaultValue: B.shortcut,
-                                onChange: F
+                                onChange: U
                             })
                         })
                     })

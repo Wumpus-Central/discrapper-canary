@@ -46,8 +46,8 @@ var i,
     M = n(798769),
     k = n(459965),
     w = n(119269),
-    U = n(474936),
-    F = n(735825),
+    F = n(474936),
+    U = n(735825),
     V = n(981631),
     G = n(388032),
     H = n(559742);
@@ -83,7 +83,7 @@ function W(e) {
             break;
         default:
             switch (i) {
-                case U.p9.TIER_0:
+                case F.p9.TIER_0:
                     b = d
                         ? G.intl.format(G.t['l+A50N'], {
                               date: n.currentPeriodEnd,
@@ -91,7 +91,7 @@ function W(e) {
                           })
                         : G.intl.format(G.t.Y6Wfa2, { date: n.currentPeriodEnd });
                     break;
-                case U.p9.TIER_1:
+                case F.p9.TIER_1:
                     b = d
                         ? G.intl.format(G.t.QN7eIi, {
                               date: n.currentPeriodEnd,
@@ -111,14 +111,14 @@ function W(e) {
     let v =
             (n.items.some((e) => {
                 let { planId: t } = e;
-                return !U.dJ.has(t);
+                return !F.dJ.has(t);
             }) &&
                 null == n.renewalMutations) ||
             (null === (t = n.renewalMutations) || void 0 === t
                 ? void 0
                 : t.items.find((e) => {
                       let { planId: t } = e;
-                      return !U.dJ.has(t);
+                      return !F.dJ.has(t);
                   })) != null,
         A = v
             ? (0, s.jsx)(h.Button, {
@@ -305,7 +305,7 @@ function X(e) {
         [E, C] = a.useState(null),
         T = (0, O.yQ)(),
         I = (null == T ? void 0 : T.showCard) === !0,
-        v = (null == T ? void 0 : T.tenureRewardType) === F.nW.AVATAR_DECO,
+        v = (null == T ? void 0 : T.tenureRewardType) === U.nW.AVATAR_DECO,
         A = null === (t = (0, N.Af)(i)) || void 0 === t ? void 0 : t.planId,
         R = null != A ? N.ZP.getPremiumType(A) : null;
     u()(null != R, 'Should not be cancelling Nitro without premiumType');
@@ -313,7 +313,7 @@ function X(e) {
     a.useEffect(() => {
         S.default.track(V.rMx.CANCELLATION_FLOW_STARTED, q(i));
     }, [i]);
-    let L = R === U.p9.TIER_0 || R === U.p9.TIER_1 || R === U.p9.TIER_2;
+    let L = R === F.p9.TIER_0 || R === F.p9.TIER_1 || R === F.p9.TIER_2;
     null == m && (m = L ? 1 : 2);
     let { analyticsLocations: M } = (0, _.ZP)(o, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [Y, z, X, J] = (function (e, t, n) {
@@ -421,7 +421,7 @@ function X(e) {
                             innerCircleClassName: H.innerCircle,
                             progressCircleVariation: v ? w.Qo.AVATAR_DECO : w.Qo.NITRO_GEM,
                             avatarDecoAssetDescription: G.intl.string(G.t['9o4F4+']),
-                            avatarDecoAssetId: v ? F.VA : void 0,
+                            avatarDecoAssetId: v ? U.VA : void 0,
                             progressCircleStrokeSize: 5,
                             backgroundCircleSize: '38%'
                         })

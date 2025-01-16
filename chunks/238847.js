@@ -145,14 +145,14 @@ t.Z = (e) => {
                 D(!1);
             }
         },
-        { isCancelled: k, isDeleted: w, isPastDue: U, subscriptionPlanPrice: F, subscribedSinceDate: V, currentPeriodEndDate: G, currentPeriodEndLabel: H } = C,
+        { isCancelled: k, isDeleted: w, isPastDue: F, subscriptionPlanPrice: U, subscribedSinceDate: V, currentPeriodEndDate: G, currentPeriodEndLabel: H } = C,
         Y = (0, I.KW)(s.skuFlags),
         W = (0, I.KK)(s.skuFlags),
         z = null == T || ((!W || null == d) && !Y),
         K = () =>
             k || w
                 ? (0, i.jsx)(u.TextBadge, { text: j.intl.string(j.t.xSMZub) })
-                : U
+                : F
                   ? (0, i.jsx)(u.Tooltip, {
                         text: j.intl.string(j.t.fvOqBg),
                         children: (e) =>
@@ -262,7 +262,7 @@ t.Z = (e) => {
                                   }),
                                   (0, i.jsx)(R, {
                                       label: j.intl.string(j.t.qgcLBw),
-                                      value: F
+                                      value: U
                                   }),
                                   (0, i.jsx)(R, {
                                       label: j.intl.string(j.t.oFwls7),

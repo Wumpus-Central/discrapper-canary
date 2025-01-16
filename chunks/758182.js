@@ -43,8 +43,8 @@ let D = new b.Z('CacheStore'),
     M = 'initializing',
     k = 0,
     w = !1,
-    U = !1,
-    F = !1;
+    F = !1,
+    U = !1;
 function V(e) {
     D.log('Clearing cache store'), (k = Date.now()), d.K.remove(B.FsG), d.K.remove(B.ihW), d.K.remove(B.O42), (M = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (L = !0);
 }
@@ -246,7 +246,7 @@ async function K(e, t, n, i) {
                 u.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
-        if (U) {
+        if (F) {
             (0, y.Z)('already_connected'), D.log('Skipping lazy cache; already connected.'), u.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
@@ -359,7 +359,7 @@ class Q extends (i = c.ZP.Store) {
         return k;
     }
     canWriteCaches(e) {
-        return (0, O.$8)() ? (L ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!F || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
+        return (0, O.$8)() ? (L ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!U || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, R.h)(t);
@@ -405,11 +405,11 @@ class Q extends (i = c.ZP.Store) {
         Z
             ? {
                   CONNECTION_OPEN: function () {
-                      return (U = !0), (F = !0), !1;
+                      return (F = !0), (U = !0), !1;
                   },
                   LOGOUT: V,
                   CONNECTION_CLOSED: function () {
-                      return (U = !1), (F = !0), !1;
+                      return (F = !1), (U = !0), !1;
                   },
                   CACHE_LOADED: function () {
                       w = !0;

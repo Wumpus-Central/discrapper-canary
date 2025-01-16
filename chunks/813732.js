@@ -35,8 +35,8 @@ var i = n(200651),
     M = n(52164),
     k = n(91430),
     w = n(474936),
-    U = n(981631),
-    F = n(526761),
+    F = n(981631),
+    U = n(526761),
     V = n(726985),
     G = n(388032),
     H = n(345042);
@@ -108,8 +108,8 @@ t.Z = function () {
         K = (0, l.e7)([R.ZP], () => {
             var e;
             return Object.values(null !== (e = R.ZP.getSubscriptions()) && void 0 !== e ? e : {})
-                .filter((e) => e.type === U.NYc.GUILD)
-                .filter((e) => e.status !== U.O0b.ENDED).length;
+                .filter((e) => e.type === F.NYc.GUILD)
+                .filter((e) => e.status !== F.O0b.ENDED).length;
         }),
         q = (0, x.Z)({ forceFetch: !0 }),
         Q = null !== n ? n.currentPeriodEnd : void 0,
@@ -134,8 +134,8 @@ t.Z = function () {
             className: a()(H.container, H.loading),
             children: (0, i.jsx)(o.Spinner, {})
         });
-    if (L === F.cP) return (0, i.jsx)(S.Z, { onGoBack: () => h.Z.clearSubsection() });
-    if (L === F.XZ) return (0, i.jsx)(I.Z, { onGoBack: () => h.Z.clearSubsection() });
+    if (L === U.cP) return (0, i.jsx)(S.Z, { onGoBack: () => h.Z.clearSubsection() });
+    if (L === U.XZ) return (0, i.jsx)(I.Z, { onGoBack: () => h.Z.clearSubsection() });
     return (0, i.jsx)('div', {
         className: H.container,
         children: (0, i.jsxs)('div', {
@@ -163,7 +163,7 @@ t.Z = function () {
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 className: H.accountCreditDescription,
-                                children: G.intl.format(G.t['7Zi06e'], { helpCenterLink: B.Z.getArticleURL(U.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                children: G.intl.format(G.t['7Zi06e'], { helpCenterLink: B.Z.getArticleURL(F.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                             }),
                             (0, i.jsx)(Z.Z, {
                                 className: H.accountCredit,
@@ -182,7 +182,7 @@ t.Z = function () {
                             (0, i.jsx)(z, {}),
                             (0, i.jsx)(T.Z, {
                                 count: K,
-                                onClickManageSubscription: () => h.Z.setSection(U.oAB.SUBSCRIPTIONS, F.cP)
+                                onClickManageSubscription: () => h.Z.setSection(F.oAB.SUBSCRIPTIONS, U.cP)
                             })
                         ]
                     }),
@@ -193,7 +193,7 @@ t.Z = function () {
                             (0, i.jsx)(b.Z, {
                                 count: Y,
                                 onClickManageSubscription: () => {
-                                    h.Z.setSection(U.oAB.SUBSCRIPTIONS, F.XZ), y.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                    h.Z.setSection(F.oAB.SUBSCRIPTIONS, U.XZ), y.default.track(F.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                 }
                             })
                         ]

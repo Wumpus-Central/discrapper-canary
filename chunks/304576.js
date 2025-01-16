@@ -46,8 +46,8 @@ t.Z = (e) => {
         M = (0, f.Vi)(),
         k = (0, a.e7)([d.Z], () => d.Z.affinities),
         w = (0, x.Z)(),
-        { enabled: U } = g._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        F = O === S.EZ.ApplicationStoreHome && null != w && U,
+        { enabled: F } = g._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        U = O === S.EZ.ApplicationStoreHome && null != w && F,
         V = k.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: P,
@@ -68,7 +68,7 @@ t.Z = (e) => {
                         color: 'header-primary',
                         children: b.intl.string(b.t.YCZldH)
                     }),
-                    F
+                    U
                         ? (0, i.jsx)(E.Z, {
                               referrer: w,
                               isMarketingPageV2Enabled: !0
@@ -84,7 +84,7 @@ t.Z = (e) => {
                           }),
                     M || y
                         ? (0, i.jsx)('div', {
-                              className: s()(I.buttonContainer, I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || F) }),
+                              className: s()(I.buttonContainer, I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
                               children: (0, i.jsx)(C.Z, {
                                   className: s()(I.button, A),
                                   forceWhite: !0
@@ -93,7 +93,7 @@ t.Z = (e) => {
                         : (0, i.jsx)(T.PK, {
                               subscriptionTier: null !== (n = null != j ? j : null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : D,
                               inOfferExperience: L,
-                              containerClassName: s()(I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || F) }),
+                              containerClassName: s()(I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
                               buttonClassName: A,
                               isMarketingPageV2Enabled: !0,
                               isDarkMode: R

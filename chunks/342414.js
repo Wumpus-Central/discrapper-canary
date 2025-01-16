@@ -178,7 +178,7 @@ t.Z = (e) => {
             text: f,
             colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
         },
-        U = R
+        F = R
             ? (0, i.jsx)('div', {
                   className: j.flexCentered,
                   children: (0, i.jsx)(T.mn, { ...w })
@@ -189,7 +189,7 @@ t.Z = (e) => {
         children: (0, i.jsx)(D.Provider, {
             value: {
                 headingText: O,
-                headingTop: U,
+                headingTop: F,
                 headingBottom: k
             },
             children: I

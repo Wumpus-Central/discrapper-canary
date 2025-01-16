@@ -41,8 +41,8 @@ var a = n(399606),
     M = n(526761),
     k = n(332325),
     w = n(388032),
-    U = n(736606),
-    F = n(660372),
+    F = n(736606),
+    U = n(660372),
     V = n(926433),
     G = n(302036),
     H = n(994554),
@@ -358,7 +358,7 @@ t.Z = () => {
                 name: 'badge',
                 title: w.intl.string(w.t.dcFfSE),
                 subtitle: w.intl.string(w.t['37MFFh']),
-                perkImage: F,
+                perkImage: U,
                 description: w.intl.string(w.t.T1IS4u)
             },
             greyBadge: {
@@ -445,7 +445,7 @@ t.Z = () => {
     if (null != ev) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: l } = ev,
             o = (0, s.jsx)('div', {
-                className: U.cardComponent,
+                className: F.cardComponent,
                 children: (0, s.jsx)(R.ZP, {
                     progressCircleVariation: R.Qo.AVATAR_DECO,
                     avatarDecoAssetId: Z.VA,
@@ -479,7 +479,7 @@ t.Z = () => {
     if (null != eN) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: l } = eN,
             c = (0, s.jsx)('div', {
-                className: U.cardComponent,
+                className: F.cardComponent,
                 children: (0, s.jsx)(R.ZP, {
                     showAnimations: !0,
                     percentage: eb,

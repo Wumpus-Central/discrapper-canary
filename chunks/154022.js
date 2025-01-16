@@ -41,8 +41,8 @@ var i = n(200651),
     M = n(875538),
     k = n(275477),
     w = n(328756);
-let U = (0, f.hQ)(),
-    F = (0, f.hQ)(),
+let F = (0, f.hQ)(),
+    U = (0, f.hQ)(),
     V = (0, f.hQ)(),
     G = o().debounce((e) => {
         (0, g.o2)(e);
@@ -183,19 +183,19 @@ function z() {
         className: k.marginTop20,
         children: [
             (0, i.jsx)(d.FormTitle, {
-                id: U,
+                id: F,
                 className: k.marginBottom8,
                 children: L.intl.string(L.t['5PWWCQ'])
             }),
             (0, i.jsx)(d.FormText, {
-                id: F,
+                id: U,
                 type: d.FormText.Types.DESCRIPTION,
                 className: k.marginBottom20,
                 children: L.intl.string(L.t['0PbE/P'])
             }),
             (0, i.jsx)(d.Slider, {
-                'aria-labelledby': U,
-                'aria-describedby': F,
+                'aria-labelledby': F,
+                'aria-describedby': U,
                 markers: B.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,

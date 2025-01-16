@@ -15,7 +15,7 @@ n.d(t, {
         return k;
     },
     Kb: function () {
-        return U;
+        return F;
     },
     Vp: function () {
         return B;
@@ -247,14 +247,14 @@ function k() {
 function w() {
     var e;
     let t = (0, S.oY)({ location: 'Home' });
-    k(v.CL), k(j.XAJ, t), U(A.qY);
+    k(v.CL), k(j.XAJ, t), F(A.qY);
     let n = O(),
         r = null !== (e = null == n ? void 0 : n.showCard) && void 0 !== e && e;
     i.useEffect(() => {
         r && b.Z.forceRefreshIfOutdated();
     }, [r]);
 }
-function U(e) {
+function F(e) {
     var t;
     let n = (0, S.oY)({ location: 'Home' }),
         r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),

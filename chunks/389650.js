@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return F;
+        return U;
     }
 }),
     n(47120),
@@ -178,7 +178,7 @@ class w extends r.PureComponent {
             });
     }
 }
-class U extends r.PureComponent {
+class F extends r.PureComponent {
     componentDidMount() {
         m.Z.enableAll(!1);
     }
@@ -468,12 +468,12 @@ class U extends r.PureComponent {
             });
     }
 }
-function F() {
+function U() {
     let e = (0, c.e7)([S.Z], () => S.Z.getState()),
         t = (0, c.e7)([T.Z], () => (0, C.Z)(T.Z)),
         n = (0, c.e7)([b.Z], () => b.Z.isSupported()),
         r = (0, _.Go)();
-    return (0, i.jsx)(U, {
+    return (0, i.jsx)(F, {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,

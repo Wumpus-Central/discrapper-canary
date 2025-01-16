@@ -6,9 +6,9 @@ n.d(t, {
 var o = n(969090);
 let i = function (e) {
     let { intl: t, t: i } = n(388032),
-        l = i[(0, o.runtimeHashMessageKey)(e)],
-        a = t.currentLocale;
+        a = i[(0, o.runtimeHashMessageKey)(e)],
+        l = t.currentLocale;
     t.currentLocale = 'en-US';
-    let s = t.string(l);
-    return (t.currentLocale = a), s;
+    let s = t.string(a);
+    return (t.currentLocale = l), s;
 };

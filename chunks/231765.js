@@ -257,7 +257,7 @@ function w(e) {
         ]
     });
 }
-function U(e) {
+function F(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: r },
             updateSettings: s
@@ -307,7 +307,7 @@ function U(e) {
         ]
     });
 }
-function F(e) {
+function U(e) {
     let { updateSettings: t } = e;
     return (0, l.jsx)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -444,7 +444,7 @@ function H(e) {
                     settings: i,
                     updateSettings: g
                 }),
-                (0, l.jsx)(U, {
+                (0, l.jsx)(F, {
                     settings: i,
                     updateSettings: g
                 }),
@@ -452,7 +452,7 @@ function H(e) {
                     settings: i,
                     updateSettings: g
                 }),
-                (0, l.jsx)(F, { updateSettings: g })
+                (0, l.jsx)(U, { updateSettings: g })
             ]
         })
     );

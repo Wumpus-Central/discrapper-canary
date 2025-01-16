@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
 var o = n(131951),
     i = n(626135),
-    l = n(981631);
-function a(e, t, n, a, s) {
+    a = n(981631);
+function l(e, t, n, l, s) {
     let r = o.Z.getSettings(),
         u = o.Z.getInputDeviceId(),
         c = o.Z.getInputDevices()[u],
         d = o.Z.getOutputDeviceId(),
-        m = o.Z.getOutputDevices()[d],
-        b = o.Z.getVideoDeviceId(),
-        h = o.Z.getVideoDevices()[b],
+        b = o.Z.getOutputDevices()[d],
+        m = o.Z.getVideoDeviceId(),
+        h = o.Z.getVideoDevices()[m],
         _ = o.Z.getNoiseCancellation(),
         g = o.Z.getMediaEngine().getAudioSubsystem(),
         p = o.Z.getMediaEngine().getAudioLayer();
-    i.default.track(l.rMx.CALL_REPORT_PROBLEM, {
+    i.default.track(a.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
         reason_description: n,
-        feedback: a,
+        feedback: l,
         audio_input_mode: r.mode,
         automatic_audio_input_sensitivity_enabled: r.modeOptions.autoThreshold,
         audio_input_sensitivity: r.modeOptions.threshold,
@@ -31,7 +31,7 @@ function a(e, t, n, a, s) {
         voice_output_volume: r.outputVolume,
         noise_cancellation_enabled: _,
         input_device_name: null == c ? void 0 : c.name,
-        output_device_name: null == m ? void 0 : m.name,
+        output_device_name: null == b ? void 0 : b.name,
         video_device_name: null == h ? void 0 : h.name,
         audio_subsystem: g,
         audio_layer: p,

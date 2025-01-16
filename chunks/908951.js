@@ -38,14 +38,14 @@ function O(e) {
         L = (0, f.V)((0, b.yb)(t)),
         { analyticsLocations: M } = (0, x.ZP)(),
         k = r.useMemo(() => Object.values(D).filter((e) => !e.invalid), [D]),
-        [w, U] = r.useState(!1),
-        [F, V] = r.useState(t.currency),
+        [w, F] = r.useState(!1),
+        [U, V] = r.useState(t.currency),
         G = async (e, n) => {
             if (null == t) throw Error('missing subscription and paymentSource');
-            null == e ? await m.fG(t, n, M, O) : await m.tq(t, e, n, M, O), U(!1), V(n);
+            null == e ? await m.fG(t, n, M, O) : await m.tq(t, e, n, M, O), F(!1), V(n);
         },
         H = async (e, n, i) => {
-            U(!0);
+            F(!0);
             let r = await (0, I.hz)({
                 subscriptionId: t.id,
                 paymentSourceId: null == e ? void 0 : e.id,
@@ -61,7 +61,7 @@ function O(e) {
                           i(e, n);
                       },
                       () => {
-                          U(!1);
+                          F(!1);
                       }
                   )
                 : i(e, n);
@@ -157,7 +157,7 @@ function O(e) {
                                   (0, i.jsx)('div', { children: v.intl.string(v.t['0YjaXV']) }),
                                   (0, i.jsx)(h.Z, {
                                       className: A.currencyDropdown,
-                                      selectedCurrency: F,
+                                      selectedCurrency: U,
                                       currencies: n,
                                       onChange: (e) => {
                                           H(void 0, e, G);

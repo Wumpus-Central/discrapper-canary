@@ -40,19 +40,19 @@ t.Z = function (e) {
     (0, T.z)(C.X);
     let n = (0, f.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: w } = (0, x.ZP)(p.Z.PREMIUM_MARKETING),
-        U = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
-        F = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        V = null == F ? void 0 : F.id,
+        F = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
+        U = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        V = null == U ? void 0 : U.id,
         G = (0, B.N)(),
         H = (0, y.Ng)(),
         Y = (0, _.V)(),
         [W, z] = r.useState(!0),
         K = r.useRef(0),
-        q = (0, A.M5)(F, L.p9.TIER_2),
+        q = (0, A.M5)(U, L.p9.TIER_2),
         Q = (0, P.n)(),
         X = null == Q ? void 0 : Q.countryCode,
         { enabled: J } = (0, R.Z)(),
-        $ = (0, l.e7)([S.Z], () => (null != F ? S.Z.getUserProfile(F.id) : null)),
+        $ = (0, l.e7)([S.Z], () => (null != U ? S.Z.getUserProfile(U.id) : null)),
         ee = (0, l.e7)([j.Z], () => j.Z.hasFetched);
     if (
         (r.useEffect(() => {
@@ -88,7 +88,7 @@ t.Z = function (e) {
                   value: w,
                   children: (0, i.jsx)(Z.Z, {})
               });
-    return U && Y && !W
+    return F && Y && !W
         ? (0, i.jsx)(x.Gt, {
               value: w,
               children: (0, i.jsx)(D.Z, { entrypoint: t })

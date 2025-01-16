@@ -117,8 +117,8 @@ let Z = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: s, hideCTAs: P = !1, headingOverride: y, hidePill: B = !1, selectedPlanColumnClassName: D, selectedPlanTier: U = j.p9.TIER_2 } = e,
-        { analyticsLocations: F } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        { className: s, hideCTAs: P = !1, headingOverride: y, hidePill: B = !1, selectedPlanColumnClassName: D, selectedPlanTier: F = j.p9.TIER_2 } = e,
+        { analyticsLocations: U } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         V = (0, l.e7)([f.ZP], () => f.ZP.hasFetchedSubscriptions()),
         G = (0, p.V)(),
         H = 'PlanComparisonTable';
@@ -232,9 +232,9 @@ t.Z = (e) => {
               : ea
                 ? (0, i.jsx)(Z, {})
                 : (0, i.jsx)(L, {}));
-    let eo = Q === j.Si.TIER_0 || X === j.p9.TIER_0 || U === j.p9.TIER_0;
+    let eo = Q === j.Si.TIER_0 || X === j.p9.TIER_0 || F === j.p9.TIER_0;
     return (0, i.jsx)(g.Gt, {
-        value: F,
+        value: U,
         children: (0, i.jsxs)('div', {
             className: a()(R.root, s),
             'data-testid': 'v2-marketing-page-comparison-table',

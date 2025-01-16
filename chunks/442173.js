@@ -5,52 +5,52 @@ n.r(t),
         }
     });
 var l = n(200651),
-    r = n(192379),
-    a = n(481060),
-    o = n(144535),
+    a = n(192379),
+    o = n(481060),
+    r = n(144535),
     i = n(332664),
     s = n(142497),
     c = n(626135),
     u = n(798733),
     d = n(559187),
     b = n(981631),
-    m = n(190378),
-    f = n(388032);
+    f = n(190378),
+    m = n(388032);
 function h(e) {
     let { reportId: t, reportType: h, ...x } = e;
-    r.useEffect(() => {
+    a.useEffect(() => {
         c.default.track(b.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
             report_id: t,
             report_type: h
         });
     }, [t, h]);
-    let g = (0, o.I)('CALL_FEEDBACK_OPTION_OTHER');
+    let g = (0, r.I)('CALL_FEEDBACK_OPTION_OTHER');
     return (0, l.jsx)(i.Z, {
         modalType: 'in_app_report',
-        header: f.intl.string(f.t.MP5lDg),
-        body: f.intl.string(f.t['7Ct0Dg']),
-        problemTitle: f.intl.string(f.t.FJmoxM),
+        header: m.intl.string(m.t.MP5lDg),
+        body: m.intl.string(m.t['7Ct0Dg']),
+        problemTitle: m.intl.string(m.t.FJmoxM),
         problems: (0, u.Z)(),
         feedbackProblems: [g],
         onSubmit: function (e) {
-            let { rating: r, problem: o, dontShowAgain: i, feedback: c } = e;
+            let { rating: a, problem: r, dontShowAgain: i, feedback: c } = e;
             if (
-                (i && (0, s.Kw)(m.v.IN_APP_REPORTS_FEEDBACK),
+                (i && (0, s.Kw)(f.v.IN_APP_REPORTS_FEEDBACK),
                 (0, d.Z)({
-                    rating: r,
-                    problem: o,
+                    rating: a,
+                    problem: r,
                     feedback: c,
                     reportId: t,
                     reportType: h,
                     dontShowAgain: i
                 }),
-                null != r && null != o)
+                null != a && null != r)
             )
-                (0, a.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                     return (t) =>
                         (0, l.jsx)(e, {
-                            body: f.intl.string(f.t['d9+vQ0']),
+                            body: m.intl.string(m.t['d9+vQ0']),
                             ...t
                         });
                 });

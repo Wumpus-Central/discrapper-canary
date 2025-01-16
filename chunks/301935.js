@@ -45,8 +45,8 @@ function D(e) {
         { renewalMutations: j, planId: R } = u,
         {
             appId: D,
-            plan: U,
-            storeListing: F,
+            plan: F,
+            storeListing: U,
             price: V,
             isGuildSubscription: G,
             subscriptionForGuild: H,
@@ -123,7 +123,7 @@ function D(e) {
                                           (0, s.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'header-secondary',
-                                              children: null !== (r = null == U ? void 0 : U.name) && void 0 !== r ? r : y.intl.string(y.t.sqkbMD)
+                                              children: null !== (r = null == F ? void 0 : F.name) && void 0 !== r ? r : y.intl.string(y.t.sqkbMD)
                                           })
                                       ]
                                   })
@@ -133,13 +133,13 @@ function D(e) {
                               className: B.headerButtons,
                               children:
                                   null != K &&
-                                  null != F &&
+                                  null != U &&
                                   null != Y &&
                                   (0, s.jsx)(k, {
                                       subscription: u,
                                       app: K,
                                       sku: Y,
-                                      storeListing: F,
+                                      storeListing: U,
                                       isCancelled: W,
                                       navigateToSwitchPlan: p,
                                       renewalSkuId: null == z ? void 0 : z.skuId
@@ -223,11 +223,11 @@ function D(e) {
                 ]
             }),
             null != K &&
-                (null == F ? void 0 : F.benefits) != null &&
-                F.benefits.length > 0 &&
+                (null == U ? void 0 : U.benefits) != null &&
+                U.benefits.length > 0 &&
                 (0, s.jsx)(w, {
                     appId: K.id,
-                    listingBenefits: F.benefits
+                    listingBenefits: U.benefits
                 })
         ]
     });

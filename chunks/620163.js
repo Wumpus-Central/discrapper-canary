@@ -41,8 +41,8 @@ var r = n(990547),
     M = n(131951),
     k = n(25990),
     w = n(626135),
-    U = n(572004),
-    F = n(49012),
+    F = n(572004),
+    U = n(49012),
     V = n(358085),
     G = n(998502),
     H = n(392735),
@@ -95,8 +95,8 @@ var r = n(990547),
     eM = n(65154),
     ek = n(388032),
     ew = n(318585);
-let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
-    eF = ev.Z,
+let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
+    eU = ev.Z,
     eV = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e8, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te } = e;
         return Object.freeze({
@@ -590,7 +590,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 ariaLabel: ek.intl.string(ek.t['iHH+k5']),
                 element: ei.Z,
                 newIndicator: (0, i.jsx)(l.PremiumBadge, { text: ek.intl.string(ek.t.y2b7CA) }),
-                newIndicatorDismissibleContentTypes: eU()
+                newIndicatorDismissibleContentTypes: eF()
             },
             [eD.s6.APPEARANCE_THEME]: {
                 section: eZ.oAB.APPEARANCE,
@@ -1231,7 +1231,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eZ.oAB.LINUX,
                 searchableTitles: [ek.intl.string(ek.t['7pPjTU'])],
                 label: ek.intl.string(ek.t['7pPjTU']),
-                element: eF,
+                element: eU,
                 predicate: () => V.isPlatformEmbedded && (0, V.isLinux)()
             },
             [eD.s6.STREAMER_MODE]: {
@@ -1291,7 +1291,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eZ.oAB.ADVANCED,
                 searchableTitles: [ek.intl.string(ek.t.ObIb1d)],
                 parent: eD.s6.SETTINGS_ADVANCED,
-                predicate: () => U.wS
+                predicate: () => F.wS
             },
             [eD.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
                 section: eZ.oAB.ADVANCED,
@@ -1369,7 +1369,7 @@ let eU = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 onClick: () => {
                     let e = 'https://discordmerch.com/Dsktopprm';
                     w.default.track(eZ.rMx.USER_SETTINGS_MERCH_LINK_CLICKED),
-                        (0, F.q)({
+                        (0, U.q)({
                             href: e,
                             shouldConfirm: !0,
                             onConfirm: () => {

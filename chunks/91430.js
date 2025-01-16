@@ -157,7 +157,7 @@ function w() {
         })
     );
 }
-function U(e) {
+function F(e) {
     let { daysPastDue: t, subscription: n, openInvoiceId: s } = e,
         { analyticsLocations: a } = (0, x.ZP)(p.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
@@ -192,7 +192,7 @@ function U(e) {
         })
     );
 }
-function F(e) {
+function U(e) {
     let { subscription: t, renewalInvoicePreview: n, className: r, fractionalPremiumInfo: s } = e;
     return (0, i.jsxs)('div', {
         className: a()(L.billingInformation, r),
@@ -297,7 +297,7 @@ function G(e) {
                           children: (0, i.jsxs)('div', {
                               className: L.details,
                               children: [
-                                  (0, i.jsx)(F, {
+                                  (0, i.jsx)(U, {
                                       subscription: t,
                                       renewalInvoicePreview: C,
                                       className: L.detailsBlock,
@@ -410,7 +410,7 @@ function W(e) {
                       v ? (0, i.jsx)(k, {}) : null,
                       A ? (0, i.jsx)(w, {}) : null,
                       P && null != M
-                          ? (0, i.jsx)(U, {
+                          ? (0, i.jsx)(F, {
                                 daysPastDue: y,
                                 subscription: r,
                                 openInvoiceId: M.id

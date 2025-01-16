@@ -59,11 +59,11 @@ function O(e) {
                 guild: b.Z.getGuild()
             };
         }),
-        U = null != R ? R : w;
-    s()(null != U, 'guild should not be null');
-    let F = (0, o.gS)(U.id),
-        V = (0, a.e7)([_.ZP], () => (null == U.id ? null : _.ZP.getMember(U.id, P.id))),
-        G = (0, a.e7)([f.Z], () => f.Z.getGuildMemberProfile(P.id, U.id)),
+        F = null != R ? R : w;
+    s()(null != F, 'guild should not be null');
+    let U = (0, o.gS)(F.id),
+        V = (0, a.e7)([_.ZP], () => (null == F.id ? null : _.ZP.getMember(F.id, P.id))),
+        G = (0, a.e7)([f.Z], () => f.Z.getGuildMemberProfile(P.id, F.id)),
         H = C.ZP.canUsePremiumProfileCustomization(P),
         Y = (0, c.gd)(y, null == V ? void 0 : V.avatar),
         W = (0, c.f$)(D, null == G ? void 0 : G.banner),
@@ -79,11 +79,11 @@ function O(e) {
             (0, i.jsx)(
                 N.Z,
                 {
-                    errors: null !== (r = null == k ? void 0 : k.nick) && void 0 !== r ? r : null == F ? void 0 : F.nick,
+                    errors: null !== (r = null == k ? void 0 : k.nick) && void 0 !== r ? r : null == U ? void 0 : U.nick,
                     username: T.ZP.getName(P),
                     pendingNick: B,
                     currentNick: null == V ? void 0 : V.nick,
-                    guild: U
+                    guild: F
                 },
                 'nick'
             ),
@@ -125,7 +125,7 @@ function O(e) {
                             showRemoveAvatarButton: Y,
                             onAvatarChange: (e) => Q(e, null == V ? void 0 : V.avatar, S.I5),
                             errors: null == k ? void 0 : k.avatar,
-                            guildId: U.id,
+                            guildId: F.id,
                             disabled: !H
                         },
                         'avatar'
@@ -149,7 +149,7 @@ function O(e) {
                                 ]
                             }),
                             user: P,
-                            guild: U
+                            guild: F
                         },
                         'decoration'
                     ),
@@ -172,7 +172,7 @@ function O(e) {
                                 ]
                             }),
                             user: P,
-                            guild: U
+                            guild: F
                         },
                         'effect'
                     ),
@@ -182,7 +182,7 @@ function O(e) {
                             showRemoveBannerButton: W,
                             errors: null == k ? void 0 : k.banner,
                             onBannerChange: (e) => Q(e, null == G ? void 0 : G.banner, S.g_),
-                            guildId: null == U ? void 0 : U.id,
+                            guildId: null == F ? void 0 : F.id,
                             disabled: !H
                         },
                         'banner'
@@ -194,7 +194,7 @@ function O(e) {
                         onThemeColorsChange: (e) => {
                             (0, I.ce)(e, null == G ? void 0 : G.themeColors);
                         },
-                        guildId: null == U ? void 0 : U.id,
+                        guildId: null == F ? void 0 : F.id,
                         showResetThemeButton: z
                     }),
                     (0, i.jsx)(
@@ -217,7 +217,7 @@ function O(e) {
                                 ]
                             }),
                             onBioChange: (e) => (0, I.qN)(e, K),
-                            errors: null !== (O = null == k ? void 0 : k.bio) && void 0 !== O ? O : null == F ? void 0 : F.bio,
+                            errors: null !== (O = null == k ? void 0 : k.bio) && void 0 !== O ? O : null == U ? void 0 : U.bio,
                             pendingBio: Z,
                             currentBio: K,
                             disabled: !H

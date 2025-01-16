@@ -41,8 +41,8 @@ var i = n(200651),
     M = n(801461),
     k = n(388032),
     w = n(757133);
-let U = P.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
-function F(e) {
+let F = P.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
+function U(e) {
     var t, s;
     let { className: l, user: o } = e,
         c = r.useRef(null),
@@ -465,7 +465,7 @@ function K() {
             (0, i.jsxs)('div', {
                 className: w.userInfo,
                 children: [
-                    (0, i.jsx)(U, {
+                    (0, i.jsx)(F, {
                         className: w.avatar,
                         src: d,
                         avatarDecoration: m,
@@ -523,7 +523,7 @@ function K() {
                             }),
                             (0, i.jsx)(T.F, {
                                 setting: D.s6.ACCOUNT_USERNAME,
-                                children: (0, i.jsx)(F, { user: t })
+                                children: (0, i.jsx)(U, { user: t })
                             }),
                             (0, i.jsx)(T.F, {
                                 setting: D.s6.ACCOUNT_EMAIL,

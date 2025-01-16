@@ -43,8 +43,8 @@ function P() {
             pendingAvatar: M,
             pendingGlobalName: k,
             pendingBanner: w,
-            pendingBio: U,
-            pendingPronouns: F,
+            pendingBio: F,
+            pendingPronouns: U,
             pendingAccentColor: V,
             pendingThemeColors: G,
             errors: H
@@ -90,7 +90,7 @@ function P() {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: H.pronouns,
                     onPronounsChange: b.ID,
-                    pendingPronouns: F,
+                    pendingPronouns: U,
                     currentPronouns: null !== (B = null == L ? void 0 : L.pronouns) && void 0 !== B ? B : ''
                 },
                 'pronouns'
@@ -160,7 +160,7 @@ function P() {
                     sectionTitle: O.intl.string(O.t.NepzEx),
                     errors: $,
                     onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
-                    pendingBio: U,
+                    pendingBio: F,
                     currentBio: null !== (D = null == L ? void 0 : L.bio) && void 0 !== D ? D : ''
                 },
                 'bio'

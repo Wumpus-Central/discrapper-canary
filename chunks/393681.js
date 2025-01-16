@@ -36,8 +36,8 @@ var i = n(200651),
     M = n(526156),
     k = n(730820),
     w = n(888256),
-    U = n(2719),
-    F = n(194530),
+    F = n(2719),
+    U = n(194530),
     V = n(726985),
     G = n(981631),
     H = n(801461),
@@ -130,7 +130,7 @@ class K extends r.PureComponent {
     renderAccountSettings() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             t = (0, i.jsxs)(i.Fragment, {
-                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(U.Z, {})]
+                children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, i.jsx)(F.Z, {})]
             });
         return e
             ? (0, i.jsx)(u.FormSection, {
@@ -171,7 +171,7 @@ class K extends r.PureComponent {
                             className: W.changePasswordButton,
                             onClick: () =>
                                 (0, u.openModal)((e) =>
-                                    (0, i.jsx)(F.default, {
+                                    (0, i.jsx)(U.default, {
                                         ...e,
                                         onSuccess: e.onClose
                                     })

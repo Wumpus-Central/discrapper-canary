@@ -39,12 +39,12 @@ let R = {
             [Z, L] = r.useState(!1),
             [M, k] = r.useState(!1),
             w = (0, f.yQ)(),
-            U = (0, f.IB)(),
-            [F, V] = r.useState(!1),
-            [G, H] = r.useState((t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && U && (null == w ? void 0 : w.nitroTenureStatus) === N.EB.REDEEMABLE);
+            F = (0, f.IB)(),
+            [U, V] = r.useState(!1),
+            [G, H] = r.useState((t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && F && (null == w ? void 0 : w.nitroTenureStatus) === N.EB.REDEEMABLE);
         r.useEffect(() => {
-            (t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && U && (null == w ? void 0 : w.nitroTenureStatus) === N.EB.REDEEMABLE && H(!0);
-        }, [U, t, w]);
+            (t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE) && F && (null == w ? void 0 : w.nitroTenureStatus) === N.EB.REDEEMABLE && H(!0);
+        }, [F, t, w]);
         let Y = r.useCallback(() => {
                 V(!0);
             }, []),
@@ -53,13 +53,13 @@ let R = {
             [K, q] = (0, p.cv)((null != s && n) || s === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [s] : []);
         r.useEffect(
             () => () => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && F && (0, h.EW)(K);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && U && (0, h.EW)(K);
             },
-            [K, F]
+            [K, U]
         ),
             r.useEffect(() => {
-                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && F && (0, h.EW)(K);
-            }, [K, F]);
+                K === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && U && (0, h.EW)(K);
+            }, [K, U]);
         let { easterEggLevel: Q, isEasterEggTriggered: X, onHover: J, onUnhover: $ } = (0, C.Z)(5),
             ee = (0, l.debounce)(() => {
                 x.default.track(v.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {

@@ -36,8 +36,8 @@ var i = n(200651),
     M = n(601948),
     k = n(726985),
     w = n(981631),
-    U = n(908442),
-    F = n(222569),
+    F = n(908442),
+    U = n(222569),
     V = n(134401),
     G = n(275477),
     H = n(584812);
@@ -73,10 +73,10 @@ class q extends r.Component {
         let { project: e, overrideType: t, overrideId: n, disabled: r, error: s } = this.props;
         return (0, i.jsxs)(I.Z, {
             direction: I.Z.Direction.VERTICAL,
-            className: a()(F.buildOverrideGroup, G.marginBottom20, V.card, F.row),
+            className: a()(U.buildOverrideGroup, G.marginBottom20, V.card, U.row),
             children: [
                 (0, i.jsx)(f.Z, {
-                    className: a()(F.removeBuildOverride, { [F.removeBuildOverrideDisabled]: r }),
+                    className: a()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: r }),
                     onClick: r ? void 0 : this.handleRemoveBuildOverride
                 }),
                 (0, i.jsxs)(I.Z, {
@@ -86,7 +86,7 @@ class q extends r.Component {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'Override Type',
-                                className: F.item,
+                                className: U.item,
                                 children: (0, i.jsx)(m.SingleSelect, {
                                     options: z,
                                     onChange: this.handleOverrideTypeChanged,
@@ -99,7 +99,7 @@ class q extends r.Component {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
-                                className: F.item,
+                                className: U.item,
                                 children: (0, i.jsx)(m.TextInput, {
                                     value: n,
                                     onChange: this.handleOverrideIdChanged,
@@ -114,13 +114,13 @@ class q extends r.Component {
                         null != s &&
                             '' !== s &&
                             (0, i.jsx)(m.FormText, {
-                                className: F.item,
+                                className: U.item,
                                 style: { color: u.Z.unsafe_rawColors.RED_400.css },
                                 type: m.FormText.Types.DESCRIPTION,
                                 children: s
                             }),
                         (0, i.jsxs)(m.FormText, {
-                            className: F.item,
+                            className: U.item,
                             type: m.FormText.Types.DESCRIPTION,
                             children: ['This controls the build that will be served for the ', (0, i.jsx)('code', { children: e }), ' project.']
                         })
@@ -352,7 +352,7 @@ class Q extends r.Component {
                                 }),
                                 (0, i.jsx)(m.ModalContent, {
                                     children: (0, i.jsx)('div', {
-                                        className: F.buildOverrideList,
+                                        className: U.buildOverrideList,
                                         children: e.map((e) =>
                                             (0, i.jsx)(
                                                 m.Button,
@@ -457,7 +457,7 @@ class X extends r.Component {
     }
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: t, userIdEntry: n, userIdEntryError: r, allowedVersions: s, allowedVersionEntry: a, allowedVersionEntryError: l, allowLoggedOut: o, experiments: c, experimentsError: d } = this.state,
-            u = U.S6.find((t) => t.value === e),
+            u = F.S6.find((t) => t.value === e),
             g = s.map((e) => ({
                 label: e,
                 value: e
@@ -470,7 +470,7 @@ class X extends r.Component {
                     className: G.marginBottom20,
                     children: (0, i.jsx)(m.SingleSelect, {
                         value: null != u ? u.value : null,
-                        options: U.S6,
+                        options: F.S6,
                         onChange: this.handleExpirationChange
                     })
                 }),
@@ -481,7 +481,7 @@ class X extends r.Component {
                           className: G.marginBottom20,
                           children: (0, i.jsx)(m.SingleSelect, {
                               value: t,
-                              options: U.F$,
+                              options: F.F$,
                               onChange: this.handleReleaseChannelChange
                           })
                       }),
@@ -600,7 +600,7 @@ class X extends r.Component {
                     return null == r
                         ? t()
                         : (0, i.jsx)('code', {
-                              className: 'hljs scroller '.concat(r.language, ' ').concat(H.scrollbarGhost, ' ').concat(F.codebox),
+                              className: 'hljs scroller '.concat(r.language, ' ').concat(H.scrollbarGhost, ' ').concat(U.codebox),
                               dangerouslySetInnerHTML: { __html: r.value }
                           });
                 }
@@ -882,7 +882,7 @@ function ee() {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: [F.buttonsContainer, G.marginBottom20].join(' '),
+                      className: [U.buttonsContainer, G.marginBottom20].join(' '),
                       children: [
                           (0, i.jsx)(P.F, {
                               setting: k.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
@@ -928,7 +928,7 @@ function ee() {
                           title: 'Crashes',
                           tag: m.FormTitleTags.H1,
                           children: (0, i.jsxs)('div', {
-                              className: F.buttonsContainer,
+                              className: U.buttonsContainer,
                               children: [
                                   (0, i.jsx)(m.SingleSelect, {
                                       value: void 0,
@@ -1137,10 +1137,10 @@ let et = d.ZP.connectStores([y.default], () => ({
                             setting: k.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: [F.buttonsContainer, G.marginBottom20].join(' '),
+                                    className: [U.buttonsContainer, G.marginBottom20].join(' '),
                                     children: (0, i.jsx)(M.S, {})
                                 }),
-                                (0, i.jsx)(m.FormDivider, { className: F.divider })
+                                (0, i.jsx)(m.FormDivider, { className: U.divider })
                             ]
                         })
                     ]
@@ -1165,13 +1165,13 @@ function en() {
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Copy the ID of the Survey you want to test:' }),
                 (0, i.jsxs)('form', {
-                    className: F.surveyOverride,
+                    className: U.surveyOverride,
                     onSubmit: (e) => {
                         e.preventDefault(), t.length > 0 ? x.Xq(t) : x.Xq(null);
                     },
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: F.surveyOverrideInput,
+                            className: U.surveyOverrideInput,
                             value: t,
                             onChange: n
                         }),
@@ -1198,10 +1198,10 @@ function ei() {
             children: [
                 (0, i.jsx)(m.FormTitle, { children: 'Enter the ID of the changelog you want to test' }),
                 (0, i.jsxs)('div', {
-                    className: F.surveyOverride,
+                    className: U.surveyOverride,
                     children: [
                         (0, i.jsx)(m.TextInput, {
-                            className: F.surveyOverrideInput,
+                            className: U.surveyOverrideInput,
                             value: n,
                             onChange: s
                         }),

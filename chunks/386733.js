@@ -136,8 +136,8 @@ t.Z = (e) => {
     });
     let k = M.sent === _.Q,
         w = h.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: U } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        F = r.useRef(null),
+        { analyticsLocations: F } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        U = r.useRef(null),
         V = (M.sent / _.Q) * 100,
         G = !1;
     O && null != y && ((G = 0 < (t = Math.ceil((new Date(y).getTime() - new Date().getTime()) / 86400000)) && t < T.AV), (s = (100 * (T.AV - t)) / T.AV));
@@ -212,13 +212,13 @@ t.Z = (e) => {
                                         className: I.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            g.default.track(S.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: U }),
+                                            g.default.track(S.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: F }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: U
+                                                            sourceAnalyticsLocations: F
                                                         });
                                                 });
                                         },
@@ -243,7 +243,7 @@ t.Z = (e) => {
         }),
         W = M.redeemed === _.Q;
     return (0, i.jsx)(d.Gt, {
-        value: U,
+        value: F,
         children: (0, i.jsx)('div', {
             className: a()({
                 [I.containerWithGlowWithoutBanner]: !H && W && !Z,
@@ -254,7 +254,7 @@ t.Z = (e) => {
                 [I.containerWithGlowOnSettingsPage]: !H && W && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: F,
+                ref: U,
                 className: a()({
                     [I.expandedProgressBarContainer]: !u,
                     [I.expandedProgressBarContainerSettingsPage]: u,

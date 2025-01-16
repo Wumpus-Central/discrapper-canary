@@ -82,15 +82,15 @@ t.Z = (e) => {
             fractionalState: L
         }),
         k = M.some((e) => null != e.pillText),
-        [w, U] = r.useState(null),
-        F = r.useRef(new l.qA());
+        [w, F] = r.useState(null),
+        U = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
             ((null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === h.u.FREE_BOOST || (null == D ? void 0 : null === (n = D.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === h.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
-                    ref: U,
+                    ref: F,
                     className: _.confettiCanvas,
-                    environment: F.current
+                    environment: U.current
                 }),
             (0, i.jsxs)('div', {
                 ref: v,

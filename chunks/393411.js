@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return F;
+        return U;
     }
 }),
     n(411104);
@@ -123,7 +123,7 @@ function w(e) {
         ]
     });
 }
-function U() {
+function F() {
     return (0, i.jsxs)('div', {
         className: D.wordMark,
         children: [
@@ -135,10 +135,10 @@ function U() {
         ]
     });
 }
-function F() {
+function U() {
     let { analyticsLocations: e } = (0, m.ZP)(u.Z.ACCOUNT_CREDIT_BANNER);
     return (0, i.jsx)(k, {
-        wordMark: (0, i.jsx)(U, {}),
+        wordMark: (0, i.jsx)(F, {}),
         subscriptionInfo: (0, i.jsx)('div', {
             className: D.planInfo,
             children: B.intl.string(B.t.R0GJLy)
@@ -158,7 +158,7 @@ function F() {
 }
 t.Z = function (e) {
     var t;
-    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: R, analyticsLocation: F } = e,
+    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: R, analyticsLocation: U } = e,
         { analyticsLocations: V } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
         { fractionalState: G } = (0, g.Z)({ forceFetch: !1 }),
         H = G === P.a$.FP_SUB_PAUSED,
@@ -185,7 +185,7 @@ t.Z = function (e) {
                     (0, i.jsx)(t, {
                         ...n,
                         premiumSubscription: r,
-                        analyticsLocation: F,
+                        analyticsLocation: U,
                         analyticsLocations: V,
                         initialStep: e
                     });
@@ -207,7 +207,7 @@ t.Z = function (e) {
                         : (0, p.Z)({
                               initialPlanId: r.planIdFromItems,
                               analyticsLocations: V,
-                              analyticsLocation: F,
+                              analyticsLocation: U,
                               analyticsObject: L,
                               subscription: r
                           });
@@ -228,7 +228,7 @@ t.Z = function (e) {
                 ? (0, p.Z)({
                       initialPlanId: r.planIdFromItems,
                       analyticsLocations: V,
-                      analyticsLocation: F,
+                      analyticsLocation: U,
                       analyticsObject: L,
                       subscription: r,
                       skipConfirm: !0
@@ -269,7 +269,7 @@ t.Z = function (e) {
             });
             break;
         case P.p9.TIER_1:
-            ec = (0, i.jsx)(U, {});
+            ec = (0, i.jsx)(F, {});
             break;
         case P.p9.TIER_2:
             ec = (0, i.jsx)(E.Z, {
@@ -349,7 +349,7 @@ t.Z = function (e) {
                                     onClick: () => {
                                         (0, p.Z)({
                                             analyticsLocations: V,
-                                            analyticsLocation: F,
+                                            analyticsLocation: U,
                                             analyticsObject: L,
                                             subscription: r
                                         });

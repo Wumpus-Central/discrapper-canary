@@ -36,8 +36,8 @@ var i = n(200651),
     M = n(498765),
     k = n(635921),
     w = n(177839),
-    U = n(794484),
-    F = n(392521),
+    F = n(794484),
+    U = n(392521),
     V = n(349803),
     G = n(179984),
     H = n(706542),
@@ -74,7 +74,7 @@ let ec = (e) => {
                   className: a()(et.whatsNewSectionBackground, { [et.whatsNewSectionBackgroundV2]: l }),
                   children: [
                       !l &&
-                          (0, i.jsx)(U.Z, {
+                          (0, i.jsx)(F.Z, {
                               variant: K.R0.WHATS_NEW,
                               isFullScreen: t
                           }),
@@ -90,7 +90,7 @@ let ec = (e) => {
                               isReducedMotion: o
                           }),
                       !l &&
-                          (0, i.jsx)(U.Z, {
+                          (0, i.jsx)(F.Z, {
                               isFullScreen: t,
                               showAllPerksButton: t
                                   ? (0, i.jsx)(Q.Z, {
@@ -101,15 +101,15 @@ let ec = (e) => {
                           }),
                       n &&
                           !l &&
-                          (0, i.jsx)(F.ZP, {
+                          (0, i.jsx)(U.ZP, {
                               className: et.pdSparklesTop,
-                              variant: F.u0.TOP
+                              variant: U.u0.TOP
                           }),
                       n &&
                           !l &&
-                          (0, i.jsx)(F.ZP, {
+                          (0, i.jsx)(U.ZP, {
                               className: et.pdSparklesBottom,
-                              variant: F.u0.BOTTOM
+                              variant: U.u0.BOTTOM
                           })
                   ]
               })
@@ -121,8 +121,8 @@ t.Z = (e) => {
     (0, _.z)(f.X);
     let M = Z === X.EZ.ApplicationStoreHome,
         w = r.useRef(null),
-        U = r.useRef(null),
-        F = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
+        F = r.useRef(null),
+        U = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
         Q = (0, m.ZP)(),
         em = (0, c.wj)(Q),
         eg = E.default.getCurrentUser(),
@@ -146,14 +146,14 @@ t.Z = (e) => {
         eM = (0, I.Nx)(),
         ek = (0, y.Vi)(),
         ew = null === (n = (0, v.Z)()) || void 0 === n ? void 0 : n.billingSettingsMarketingBanner,
-        { analyticsLocations: eU } = (0, p.ZP)(h.Z.PREMIUM_MARKETING),
-        eF = 'PremiumMarketingHome';
+        { analyticsLocations: eF } = (0, p.ZP)(h.Z.PREMIUM_MARKETING),
+        eU = 'PremiumMarketingHome';
     (0, u.j)({
-        location: eF + ' auto on',
+        location: eU + ' auto on',
         autoTrackExposure: !0
     }),
         (0, u.j)({
-            location: eF + ' auto off',
+            location: eU + ' auto off',
             autoTrackExposure: !1
         }),
         r.useEffect(() => {
@@ -275,13 +275,13 @@ t.Z = (e) => {
                                   (0, i.jsx)('div', {
                                       className: et.heroHeadingV2ArtContainer,
                                       children: (0, i.jsx)(x.Z, {
-                                          autoPlay: !F,
+                                          autoPlay: !U,
                                           playsInline: !0,
                                           preload: 'auto',
                                           poster: el.Z,
                                           loop: !0,
                                           className: a()(et.heroHeadingV2Art),
-                                          ref: U,
+                                          ref: F,
                                           children: (0, i.jsx)('source', {
                                               src: eI ? ea.Z : eo.Z,
                                               type: eI ? $.m.MP4 : $.m.WEBM
@@ -307,7 +307,7 @@ t.Z = (e) => {
                     setIsAllPerksVisible: eD,
                     hasRenderedOnce: eN,
                     isMarketingPageV2Enabled: ep,
-                    isReducedMotion: F
+                    isReducedMotion: U
                 }),
                 !ep && (0, i.jsx)(ec, { isFullscreen: s }),
                 ep && eV,
@@ -351,7 +351,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsx)(o.$, {
                     onChange: (e) => {
-                        e && !eS && (T.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eU }), eb(!0));
+                        e && !eS && (T.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eF }), eb(!0));
                     },
                     children: (0, i.jsx)('div', { className: et.bottomOfPageVisibilitySensor })
                 }),
@@ -371,7 +371,7 @@ t.Z = (e) => {
                         children: (0, i.jsx)(Y.Z, {
                             isFooterVisible: e_,
                             isDarkMode: em,
-                            isReducedMotion: F
+                            isReducedMotion: U
                         })
                     })
             ]

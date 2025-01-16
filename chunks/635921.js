@@ -83,9 +83,9 @@ t.ZP = (e) => {
         M = (0, m.Nx)(),
         k = (0, _.Vi)(),
         w = (0, a.e7)([u.Z], () => u.Z.affinities),
-        U = (0, f.Z)(),
-        { enabled: F } = h._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        V = R === I.EZ.ApplicationStoreHome && null != U && F,
+        F = (0, f.Z)(),
+        { enabled: U } = h._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        V = R === I.EZ.ApplicationStoreHome && null != F && U,
         G = w.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: y,
@@ -105,7 +105,7 @@ t.ZP = (e) => {
                             children: N.intl.string(N.t.YCZldH)
                         }),
                         V
-                            ? (0, i.jsx)(T.Z, { referrer: U })
+                            ? (0, i.jsx)(T.Z, { referrer: F })
                             : G
                               ? (0, i.jsx)('div', {
                                     className: s()(v.affinityDescription),

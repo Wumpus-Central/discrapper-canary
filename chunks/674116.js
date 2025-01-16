@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return F;
+        return U;
     }
 }),
     n(653041);
@@ -41,7 +41,7 @@ var i = n(200651),
     M = n(275477);
 let k = (0, m.hQ)(),
     w = ''.concat(f.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
-function U(e, t, n) {
+function F(e, t, n) {
     (0, o.openModal)((r) =>
         (0, i.jsx)(o.ConfirmModal, {
             header: e,
@@ -56,7 +56,7 @@ function U(e, t, n) {
         })
     );
 }
-function F() {
+function U() {
     let {
             inputMode: e,
             qosEnabled: t,
@@ -65,7 +65,7 @@ function F() {
             attenuateWhileSpeakingOthers: m,
             audioSubsystem: f,
             silenceWarning: D,
-            legacyAudioSubsystemSupported: F,
+            legacyAudioSubsystemSupported: U,
             experimentalAudioSubsystemSupported: V,
             automaticAudioSubsystemSupported: G,
             sidechainEnabled: H,
@@ -266,9 +266,9 @@ function F() {
                                                     }),
                                                 i
                                             );
-                                        })(F, V, G),
+                                        })(U, V, G),
                                         onChange: (e) => {
-                                            U(L.intl.string(L.t.uY7AcX), L.intl.string(L.t.gBqik5), () => c.Z.setAudioSubsystem(e));
+                                            F(L.intl.string(L.t.uY7AcX), L.intl.string(L.t.gBqik5), () => c.Z.setAudioSubsystem(e));
                                         }
                                     }),
                                     (0, i.jsx)(o.FormDivider, { className: M.marginBottom20 })
@@ -320,7 +320,7 @@ function F() {
                                     look: o.Button.Looks.OUTLINED,
                                     color: o.Button.Colors.RED,
                                     onClick: () => {
-                                        U(L.intl.string(L.t['/RXu6+']), L.intl.string(L.t.sQ42iY), c.Z.reset);
+                                        F(L.intl.string(L.t['/RXu6+']), L.intl.string(L.t.sQ42iY), c.Z.reset);
                                     },
                                     size: o.Button.Sizes.SMALL,
                                     children: L.intl.string(L.t['/RXu6+'])

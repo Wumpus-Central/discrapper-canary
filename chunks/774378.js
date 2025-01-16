@@ -1,46 +1,46 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 }),
     n(653041);
 var o,
     i,
-    l = n(388032);
-function a(e) {
+    a = n(388032);
+function l(e) {
     let t = [
         {
-            label: l.intl.string(l.t['UqD/9f']),
+            label: a.intl.string(a.t['UqD/9f']),
             code: 2,
             value: "I couldn't hear audio at all"
         },
         {
-            label: l.intl.string(l.t.DVEGuL),
+            label: a.intl.string(a.t.DVEGuL),
             code: 3,
             value: 'Nobody could hear me'
         },
         {
-            label: l.intl.string(l.t['2nWcBw']),
+            label: a.intl.string(a.t['2nWcBw']),
             code: 4,
             value: 'Audio had echos or feedback'
         },
         {
-            label: l.intl.string(l.t.K3E4Dw),
+            label: a.intl.string(a.t.K3E4Dw),
             code: 5,
             value: 'Audio was robotic or distorted'
         },
         {
-            label: l.intl.string(l.t.Dpm2U1),
+            label: a.intl.string(a.t.Dpm2U1),
             code: 6,
             value: 'Audio cut in and out'
         },
         {
-            label: l.intl.string(l.t.kuGsi4),
+            label: a.intl.string(a.t.kuGsi4),
             code: 7,
             value: 'Volume was too low or high'
         },
         {
-            label: l.intl.string(l.t.PkiFCQ),
+            label: a.intl.string(a.t.PkiFCQ),
             code: 8,
             value: 'Background noise was too loud'
         }
@@ -48,18 +48,18 @@ function a(e) {
     return (
         e &&
             t.push({
-                label: l.intl.string(l.t.hvIDwc),
+                label: a.intl.string(a.t.hvIDwc),
                 code: 9,
                 value: 'Issues with speakerphone'
             }),
         t.push(
             {
-                label: l.intl.string(l.t['+gUm1t']),
+                label: a.intl.string(a.t['+gUm1t']),
                 code: 10,
                 value: 'Issues with headset/bluetooth'
             },
             {
-                label: l.intl.string(l.t['emlT9/']),
+                label: a.intl.string(a.t['emlT9/']),
                 code: 1,
                 value: 'Other'
             }

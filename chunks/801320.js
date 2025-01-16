@@ -10,8 +10,8 @@ n.r(t),
 var l,
     a,
     i = n(200651),
-    r = n(192379),
-    o = n(481060),
+    o = n(192379),
+    r = n(481060),
     s = n(332664),
     c = n(142497),
     u = n(626135),
@@ -23,7 +23,7 @@ let x = ['OTHER'];
 function f(e) {
     let { analyticsData: t, transitionState: l, onClose: a } = e;
     return (
-        r.useEffect(() => {
+        o.useEffect(() => {
             u.default.track(d.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
         (0, i.jsx)(s.Z, {
@@ -55,21 +55,21 @@ function f(e) {
             ],
             feedbackProblems: x,
             onSubmit: function (e) {
-                var l, a, r, s;
-                let { rating: x, problem: f, dontShowAgain: C, feedback: h } = e;
+                var l, a, o, s;
+                let { rating: x, problem: f, dontShowAgain: C, feedback: N } = e;
                 if ((C && (0, c.Kw)(b.v.VIDEO_BACKGROUND_FEEDBACK), null != x))
                     (l = x),
                         (a = f),
-                        (r = h),
+                        (o = N),
                         (s = t),
                         u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
                             ...s,
                             reason: a,
                             rating: l,
-                            feedback: r
+                            feedback: o
                         }),
                         null != f &&
-                            (0, o.openModalLazy)(async () => {
+                            (0, r.openModalLazy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                 return (t) =>
                                     (0, i.jsx)(e, {

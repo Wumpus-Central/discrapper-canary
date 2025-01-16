@@ -138,9 +138,9 @@ t.Z = function (e) {
         M = (0, _.Vp)(),
         k = v === j.a$.FP_SUB_PAUSED,
         w = v !== j.a$.NONE,
-        U = N && !k,
+        F = N && !k,
         {
-            appliedGuildBoostSlots: F,
+            appliedGuildBoostSlots: U,
             unappliedGuildBoostSlots: V,
             numActiveGuildBoostSlots: G,
             hasCooldownBoosts: H,
@@ -165,7 +165,7 @@ t.Z = function (e) {
             );
         }, [s]),
         W = null != x ? (0, g.G)(x, M) : 0,
-        z = Math.max(0, W - F.length),
+        z = Math.max(0, W - U.length),
         K = G > W,
         q = W === s.length,
         Q = q ? z : 1,
@@ -287,13 +287,13 @@ t.Z = function (e) {
                             (0, i.jsx)('div', {
                                 className: P.headerContentSecondary,
                                 children: (0, i.jsx)(m.Z, {
-                                    shouldShow: null == $ || U,
+                                    shouldShow: null == $ || F,
                                     text: et,
                                     'aria-label': et.toString(),
                                     children: (e) =>
                                         (0, i.jsx)(c.Button, {
                                             ...e,
-                                            disabled: null == $ || U,
+                                            disabled: null == $ || F,
                                             onClick:
                                                 null != $
                                                     ? () => {

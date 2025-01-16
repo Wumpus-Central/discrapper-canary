@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return F;
+        return U;
     }
 }),
     n(47120);
@@ -41,11 +41,11 @@ var i = n(200651),
     M = n(474936),
     k = n(526761),
     w = n(388032),
-    U = n(735400);
-function F(e) {
+    F = n(735400);
+function U(e) {
     var t, n;
-    let { user: F, isVisible: V, shouldShow: G } = e,
-        H = A.ZP.isPremium(F),
+    let { user: U, isVisible: V, shouldShow: G } = e,
+        H = A.ZP.isPremium(U),
         {
             pendingAvatar: Y,
             pendingThemeColors: W,
@@ -85,7 +85,7 @@ function F(e) {
                 location: { page: L.ZY5.USER_SETTINGS },
                 location_stack: et
             });
-    }, [et, F, V]);
+    }, [et, U, V]);
     let es = (null === (n = (0, f.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === M.Si.TIER_2,
         ea = (0, x.Ng)(),
         el = (0, x.Wp)(ea, M.Si.TIER_2),
@@ -103,19 +103,19 @@ function F(e) {
               value: ee,
               children: (0, i.jsxs)(P.Z, {
                   ref: $,
-                  className: U.tryItOutSection,
+                  className: F.tryItOutSection,
                   type: P.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
                       (0, i.jsx)(j.Z, {
-                          layoutClassName: U.tryItOutLayout,
+                          layoutClassName: F.tryItOutLayout,
                           previewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(a.NitroWheelIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: U.premiumIcon
+                                      className: F.premiumIcon
                                   }),
                                   w.intl.string(w.t.gMlDNT)
                               ]
@@ -126,11 +126,11 @@ function F(e) {
                                       selectedIndex: en,
                                       setSelectedIndex: ei
                                   }),
-                                  (0, i.jsx)(Z.Z, { user: F })
+                                  (0, i.jsx)(Z.Z, { user: U })
                               ]
                           }),
                           children: (0, i.jsxs)('div', {
-                              className: U.editor,
+                              className: F.editor,
                               children: [
                                   (0, i.jsxs)('div', {
                                       children: [
@@ -139,15 +139,15 @@ function F(e) {
                                               children: w.intl.string(w.t['2zGdAQ'])
                                           }),
                                           (0, i.jsx)(a.Text, {
-                                              className: U.description,
+                                              className: F.description,
                                               variant: 'text-sm/normal',
                                               children: w.intl.string(w.t.xeEC29)
                                           })
                                       ]
                                   }),
                                   (0, i.jsx)(D.Z, {
-                                      className: U.customizationSection,
-                                      user: F,
+                                      className: F.customizationSection,
+                                      user: U,
                                       pendingAvatar: null != K ? K : Y,
                                       pendingColors: null != z ? z : W,
                                       onThemeColorsChange: b.rf,
@@ -155,14 +155,14 @@ function F(e) {
                                       preventDisabled: !0
                                   }),
                                   (0, i.jsx)(y.Z, {
-                                      className: U.customizationSection,
+                                      className: F.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
                                       onBannerChange: b.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(R.Z, {
-                                      className: U.customizationSection,
+                                      className: F.customizationSection,
                                       isTryItOutFlow: !0,
                                       onAvatarChange: b.c_,
                                       showRemoveAvatarButton: !1,
@@ -173,8 +173,8 @@ function F(e) {
                                       O.Z,
                                       {
                                           isTryItOutFlow: !0,
-                                          className: U.customizationSection,
-                                          user: F,
+                                          className: F.customizationSection,
+                                          user: U,
                                           sectionTitle: w.intl.string(w.t['7v0T9P'])
                                       },
                                       'decoration'
@@ -182,10 +182,10 @@ function F(e) {
                                   (0, i.jsx)(
                                       B.Z,
                                       {
-                                          className: U.customizationSection,
+                                          className: F.customizationSection,
                                           isTryItOutFlow: !0,
                                           initialSelectedEffectId: J,
-                                          user: F,
+                                          user: U,
                                           sectionTitle: w.intl.string(w.t.wR5wOj)
                                       },
                                       'effect'
@@ -201,7 +201,7 @@ function F(e) {
                       !es &&
                           (0, i.jsx)(C.p, {
                               onSubscribeModalClose: er,
-                              className: U.floatingUpsell,
+                              className: F.floatingUpsell,
                               showUpsell: !0,
                               text: w.intl.format(w.t.TmfgIy, { onClick: () => (0, S.openPremiumTryItOutProfileUpsell)(er) }),
                               button: H ? w.intl.string(w.t.AfRWIy) : el ? w.intl.formatToPlainString(w.t.bkQ4bG, { percent: null == ea ? void 0 : ea.discount.amount }) : w.intl.string(w.t.pj0XBA),
@@ -211,7 +211,7 @@ function F(e) {
                       es &&
                           (0, i.jsxs)('div', {
                               children: [
-                                  (0, i.jsx)('div', { className: U.premiumTier2Divider }),
+                                  (0, i.jsx)('div', { className: F.premiumTier2Divider }),
                                   (0, i.jsx)(T.ZP, {
                                       type: M.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: M.Si.TIER_2

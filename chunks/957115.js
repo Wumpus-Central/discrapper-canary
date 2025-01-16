@@ -1,12 +1,12 @@
 n.d(t, {
     B: function () {
-        return l;
+        return a;
     }
 }),
     n(653041);
 var o = n(392711),
     i = n.n(o);
-let l = (e, t) => {
+let a = (e, t) => {
     let n = i().shuffle(e),
         o = n.findIndex((e) => e.value === t);
     if (o > -1) {

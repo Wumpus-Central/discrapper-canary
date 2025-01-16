@@ -131,13 +131,13 @@ function M(e) {
                 premiumGuildPlan: null != e ? N.Z.getForSkuAndInterval((0, j.Wz)(P.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
-        { analyticsLocations: U } = (0, x.ZP)(),
-        [F] = (0, _.ED)({
+        { analyticsLocations: F } = (0, x.ZP)(),
+        [U] = (0, _.ED)({
             subscriptionId: r.id,
             renewal: !0,
             currency: r.currency,
             paymentSourceId: r.paymentSourceId,
-            analyticsLocations: U,
+            analyticsLocations: F,
             analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
         }),
         V = null != w ? (0, j.Zx)(r, null !== (i = null === (t = y[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== i ? i : 0, w.id) : null,
@@ -145,10 +145,10 @@ function M(e) {
             subscriptionId: r.id,
             items: V,
             renewal: !0,
-            analyticsLocations: U,
+            analyticsLocations: F,
             analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
         });
-    if (null == G || null == k || null == w || null == F) return (0, s.jsx)(d.Spinner, {});
+    if (null == G || null == k || null == w || null == U) return (0, s.jsx)(d.Spinner, {});
     let H =
             (r.items.some((e) => {
                 let { planId: t } = e;
@@ -165,7 +165,7 @@ function M(e) {
             let { planId: t } = e;
             return P.Z1.has(t);
         }),
-        W = H || Y ? G.total - F.total : -F.total,
+        W = H || Y ? G.total - U.total : -U.total,
         { interval: z, intervalCount: K } = k;
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -213,7 +213,7 @@ function M(e) {
                         disabled: C,
                         onClick: async () => {
                             try {
-                                I(!0), A(null), await L(r, y, U, l), u();
+                                I(!0), A(null), await L(r, y, F, l), u();
                             } catch (t) {
                                 let e = t instanceof g.HF ? t : new g.HF(t, t.code);
                                 A(B.intl.string(e.code === h.SM.BILLING_PAUSE_INVALID_UPDATE ? B.t.dq4vq6 : B.t['5mlOCQ'])), I(!1);

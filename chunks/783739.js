@@ -43,20 +43,20 @@ function v(e) {
         { fractionalState: M } = (0, a.Z)({ forceFetch: !0 }),
         k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === I.a$.NONE,
         w = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === I.a$.NONE,
-        U = j && M === I.a$.FP_SUB_PAUSED;
+        F = j && M === I.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.oQ, { className: N.blockedPaymentsWarning }),
             (0, i.jsx)(E.Z, {
                 hasGuildBoostSlots: y,
                 hasAppliedGuildBoosts: D,
-                hasBoostPerk: U,
+                hasBoostPerk: F,
                 canAddBoosts: w
             }),
             M === I.a$.NONE &&
                 (0, i.jsx)(S.Z, {
                     hasAppliedGuildBoosts: D,
-                    hasBoostPerk: U,
+                    hasBoostPerk: F,
                     hasGuildAffinitiesOrInGuild: P,
                     subscriptionIsPausedOrPausePending: k
                 }),

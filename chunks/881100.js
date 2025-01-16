@@ -1,6 +1,6 @@
 n.d(t, {
     N: function () {
-        return U;
+        return F;
     }
 });
 var i = n(399606),
@@ -40,14 +40,14 @@ var i = n(399606),
     M = n(772969),
     k = n(926262);
 let w = (e, t, n) => ((0, r.wj)(e) ? t : n),
-    U = (e) => {
+    F = (e) => {
         let { styles: t } = e,
             n = (0, a.ZP)(),
             r = (0, i.e7)([l.default], () => {
                 let e = l.default.getCurrentUser();
                 return c.ZP.canUsePremiumProfileCustomization(e);
             }),
-            U = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
+            F = (0, o.BU)(d.Uq / 1024, { useKibibytes: !0 });
         return {
             badge: {
                 title: g.intl.string(g.t.SS87ra),
@@ -156,8 +156,8 @@ let w = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 imageClassName: t.superReactionsImage
             },
             upload: {
-                title: g.intl.formatToPlainString(g.t.jqhAdH, { premiumMaxSize: U }),
-                description: g.intl.formatToPlainString(g.t['HI+cfn'], { premiumMaxSize: U }),
+                title: g.intl.formatToPlainString(g.t.jqhAdH, { premiumMaxSize: F }),
+                description: g.intl.formatToPlainString(g.t['HI+cfn'], { premiumMaxSize: F }),
                 imageSource: k,
                 imageClassName: t.uploadImage
             },

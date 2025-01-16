@@ -123,8 +123,8 @@ t.Z = (e) => {
         [S, I] = r.useState(!1),
         k = (0, _.Dt)(),
         { analyticsLocations: w } = (0, p.ZP)(),
-        { shouldHideGuildPurchaseEntryPoints: U } = (0, E.uP)(null == o ? void 0 : o.id),
-        F = (null == t ? void 0 : t.paymentGateway) === R.gg$.APPLE_PARTNER;
+        { shouldHideGuildPurchaseEntryPoints: F } = (0, E.uP)(null == o ? void 0 : o.id),
+        U = (null == t ? void 0 : t.paymentGateway) === R.gg$.APPLE_PARTNER;
     if (null == s || null == n || null == T) return null;
     let V = () => {
             null != o && ((0, b.uL)(R.Z5c.CHANNEL(o.id, P.oC.ROLE_SUBSCRIPTIONS)), (0, u.xf)(), m.Z.show(R.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, B.intl.string(B.t.DvbaMz), () => g.Z.open(R.oAB.SUBSCRIPTIONS, y.cP)));
@@ -146,7 +146,7 @@ t.Z = (e) => {
             }
         },
         { isCancelled: Y, isPastDue: W, subscriptionPrice: z, memberSince: K, nextRenewalDate: q, nextRenewalLabel: Q, isTrial: X } = T,
-        J = n.soft_deleted || null == o || F,
+        J = n.soft_deleted || null == o || U,
         $ = () => {
             if (Y) return (0, i.jsx)(c.TextBadge, { text: B.intl.string(B.t['7uFZGh']) });
             if (X)
@@ -170,7 +170,7 @@ t.Z = (e) => {
             else return null;
         },
         ee = () =>
-            F
+            U
                 ? (0, i.jsx)(c.Tooltip, {
                       text: B.intl.string(B.t.nv1IqK),
                       children: (e) =>
@@ -268,7 +268,7 @@ t.Z = (e) => {
                           }),
                           (0, i.jsx)(c.Spacer, { size: 16 }),
                           !Y &&
-                              !F &&
+                              !U &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [(0, i.jsx)(c.FormTitle, { children: B.intl.string(B.t.wmMFvL) }), (0, i.jsx)(L, { subscription: t })]
                               }),
@@ -277,7 +277,7 @@ t.Z = (e) => {
                                   isTrial: X,
                                   isCancelled: Y,
                                   isResubscribing: S,
-                                  shouldHideRoleSubscriptionEntryPoints: U,
+                                  shouldHideRoleSubscriptionEntryPoints: F,
                                   onCancelSubscriptionClick: G,
                                   onChangePlanClick: V,
                                   onResubscribeClick: H

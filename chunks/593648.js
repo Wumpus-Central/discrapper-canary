@@ -42,8 +42,8 @@ var i = n(200651),
     M = n(33656),
     k = n(726985),
     w = n(981631),
-    U = n(468788),
-    F = n(388032),
+    F = n(468788),
+    U = n(388032),
     V = n(866490),
     G = n(275477);
 function H(e, t, n) {
@@ -77,7 +77,7 @@ function Y(e) {
                 (0, i.jsx)(u.Clickable, {
                     className: V.soundIcon,
                     onClick: s,
-                    'aria-label': F.intl.string(F.t.Kd4uxM),
+                    'aria-label': U.intl.string(U.t.Kd4uxM),
                     children: (0, i.jsx)(u.VoiceNormalIcon, {
                         size: 'xs',
                         color: 'currentColor',
@@ -109,92 +109,92 @@ function W(e) {
     });
     let m = [
             {
-                label: F.intl.string(F.t.pz71xM),
+                label: U.intl.string(U.t.pz71xM),
                 sound: 'message1',
                 focusModeDisabled: o
             },
             {
-                label: F.intl.string(F.t.hK51Ym),
+                label: U.intl.string(U.t.hK51Ym),
                 sound: 'deafen'
             },
             {
-                label: F.intl.string(F.t.XiejaG),
+                label: U.intl.string(U.t.XiejaG),
                 sound: 'undeafen'
             },
             {
-                label: F.intl.string(F.t['w4m94+']),
+                label: U.intl.string(U.t['w4m94+']),
                 sound: 'mute'
             },
             {
-                label: F.intl.string(F.t.YqAjX1),
+                label: U.intl.string(U.t.YqAjX1),
                 sound: 'unmute'
             },
             {
-                label: F.intl.string(F.t['juL9/P']),
+                label: U.intl.string(U.t['juL9/P']),
                 sound: 'disconnect'
             },
             {
-                label: F.intl.string(F.t.x98vQk),
+                label: U.intl.string(U.t.x98vQk),
                 sound: 'ptt_start'
             },
             {
-                label: F.intl.string(F.t['1HjRqK']),
+                label: U.intl.string(U.t['1HjRqK']),
                 sound: 'ptt_stop'
             },
             {
-                label: F.intl.string(F.t['9JB1Cg']),
+                label: U.intl.string(U.t['9JB1Cg']),
                 sound: 'user_join'
             },
             {
-                label: F.intl.string(F.t.KUBBNj),
+                label: U.intl.string(U.t.KUBBNj),
                 sound: 'user_leave'
             },
             {
-                label: F.intl.string(F.t.EZjqUV),
+                label: U.intl.string(U.t.EZjqUV),
                 sound: 'user_moved'
             },
             {
-                label: F.intl.string(F.t.LnNlQk),
+                label: U.intl.string(U.t.LnNlQk),
                 sound: 'call_calling'
             },
             {
-                label: F.intl.string(F.t.XBrJT0),
+                label: U.intl.string(U.t.XBrJT0),
                 sound: 'call_ringing'
             },
             {
-                label: F.intl.string(F.t['Nd8P5+']),
+                label: U.intl.string(U.t['Nd8P5+']),
                 sound: 'stream_started'
             },
             {
-                label: F.intl.string(F.t['9bYj+P']),
+                label: U.intl.string(U.t['9bYj+P']),
                 sound: 'stream_ended'
             },
             {
-                label: F.intl.string(F.t.KccUIy),
+                label: U.intl.string(U.t.KccUIy),
                 sound: 'stream_user_joined'
             },
             {
-                label: F.intl.string(F.t.dsjkiI),
+                label: U.intl.string(U.t.dsjkiI),
                 sound: 'stream_user_left'
             },
             {
-                label: F.intl.string(F.t.nFOcf3),
+                label: U.intl.string(U.t.nFOcf3),
                 sound: 'activity_launch'
             },
             {
-                label: F.intl.string(F.t['a6lw/v']),
+                label: U.intl.string(U.t['a6lw/v']),
                 sound: 'activity_end'
             },
             {
-                label: F.intl.string(F.t.KaFxra),
+                label: U.intl.string(U.t.KaFxra),
                 sound: 'activity_user_join'
             },
             {
-                label: F.intl.string(F.t.S14z9v),
+                label: U.intl.string(U.t.S14z9v),
                 sound: 'activity_user_left'
             },
             {
-                label: F.intl.string(F.t.CP3DCw),
+                label: U.intl.string(U.t.CP3DCw),
                 sound: 'reconnect'
             }
         ],
@@ -208,7 +208,7 @@ function W(e) {
                           children: [
                               (0, i.jsx)(u.FormTitle, {
                                   className: G.marginBottom20,
-                                  children: F.intl.string(F.t.fgSHf3)
+                                  children: U.intl.string(U.t.fgSHf3)
                               }),
                               (0, i.jsx)(C.Z, {})
                           ]
@@ -216,19 +216,19 @@ function W(e) {
                     : null,
                 (0, i.jsx)(u.FormTitle, {
                     className: a()(G.marginBottom20, G.marginTop20),
-                    children: F.intl.string(F.t.MKWyKS)
+                    children: U.intl.string(U.t.MKWyKS)
                 }),
                 (0, i.jsx)(u.FormSwitch, {
-                    note: F.intl.string(F.t['7oXUio']),
+                    note: U.intl.string(U.t['7oXUio']),
                     value: s,
                     onChange: g.default.setNotifyMessagesInSelectedChannel,
-                    children: F.intl.string(F.t.lF5GGR)
+                    children: U.intl.string(U.t.lF5GGR)
                 }),
                 (0, i.jsx)(u.FormSwitch, {
-                    note: F.intl.string(F.t['+B0XLC']),
+                    note: U.intl.string(U.t['+B0XLC']),
                     value: n,
                     onChange: g.default.toggleDisableAllSounds,
-                    children: F.intl.string(F.t['2ZhCOT'])
+                    children: U.intl.string(U.t['2ZhCOT'])
                 }),
                 m.map((e) => {
                     let { label: r, sound: s, focusModeDisabled: a } = e;
@@ -237,7 +237,7 @@ function W(e) {
                         {
                             label: r,
                             disabled: n || !0 === a,
-                            tooltip: a ? F.intl.string(F.t.cIRG0t) : void 0,
+                            tooltip: a ? U.intl.string(U.t.cIRG0t) : void 0,
                             onChange: (e) => d(s, e),
                             onPreview: (e) => c(s, e),
                             enabled: !n && !t.includes(s) && !0 !== a
@@ -267,15 +267,15 @@ function z() {
                   (0, i.jsxs)(u.Heading, {
                       variant: 'heading-lg/semibold',
                       className: a()(V.titleWithBeta, G.marginBottom20),
-                      children: [F.intl.string(F.t.D9yVAA), (0, i.jsx)(f.Z, {})]
+                      children: [U.intl.string(U.t.D9yVAA), (0, i.jsx)(f.Z, {})]
                   }),
                   (0, i.jsx)(u.FormText, {
                       type: u.FormTextTypes.DESCRIPTION,
                       className: G.marginBottom20,
-                      children: F.intl.string(F.t['0PhAOD'])
+                      children: U.intl.string(U.t['0PhAOD'])
                   }),
                   (0, i.jsxs)(u.FormItem, {
-                      title: F.intl.string(F.t.Q0PsXV),
+                      title: U.intl.string(U.t.Q0PsXV),
                       children: [
                           (0, i.jsx)(u.SingleSelect, {
                               className: null != t ? G.marginBottom20 : G.marginBottom40,
@@ -294,7 +294,7 @@ function z() {
                                             children: [
                                                 (0, i.jsx)(u.FormSwitch, {
                                                     className: a()(G.marginBottom20),
-                                                    note: F.intl.string(F.t['z8Td4+']),
+                                                    note: U.intl.string(U.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
                                                         (0, L.PS)(
@@ -306,7 +306,7 @@ function z() {
                                                         );
                                                     },
                                                     hideBorder: !0,
-                                                    children: F.intl.string(F.t.u6dc5O)
+                                                    children: U.intl.string(U.t.u6dc5O)
                                                 }),
                                                 (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop20, G.marginBottom40) })
                                             ]
@@ -316,7 +316,7 @@ function z() {
                                             children: [
                                                 (0, i.jsx)(u.FormSwitch, {
                                                     className: G.marginBottom20,
-                                                    note: F.intl.string(F.t.PyxXs7),
+                                                    note: U.intl.string(U.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
                                                         (0, L.PS)(
@@ -328,7 +328,7 @@ function z() {
                                                         );
                                                     },
                                                     hideBorder: !0,
-                                                    children: F.intl.string(F.t.P8MG6u)
+                                                    children: U.intl.string(U.t.P8MG6u)
                                                 }),
                                                 (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop20, G.marginBottom40) })
                                             ]
@@ -365,11 +365,11 @@ class K extends r.PureComponent {
                 .range(1, 11)
                 .map((e) => ({
                     value: 60 * e,
-                    label: F.intl.formatToPlainString(F.t.iXLF9f, { minutes: e })
+                    label: U.intl.formatToPlainString(U.t.iXLF9f, { minutes: e })
                 }));
         return (0, i.jsxs)(u.FormSection, {
             tag: u.FormTitleTags.H1,
-            title: F.intl.string(F.t.HcoRu7),
+            title: U.intl.string(U.t.HcoRu7),
             children: [
                 (0, i.jsx)(j.F, {
                     setting: k.s6.NOTIFICATIONS_ENABLE_DESKTOP,
@@ -377,10 +377,10 @@ class K extends r.PureComponent {
                         className: G.marginBottom20,
                         value: e !== w.qrD.NEVER && !d,
                         onChange: this.handleDesktopChange,
-                        note: F.intl.string(F.t.wF9ih4),
+                        note: U.intl.string(U.t.wF9ih4),
                         disabled: d,
-                        tooltipNote: d ? F.intl.string(F.t.cIRG0t) : void 0,
-                        children: F.intl.string(F.t['/0WClp'])
+                        tooltipNote: d ? U.intl.string(U.t.cIRG0t) : void 0,
+                        children: U.intl.string(U.t['/0WClp'])
                     })
                 }),
                 (0, i.jsx)(Q, {}),
@@ -389,9 +389,9 @@ class K extends r.PureComponent {
                     children: (0, i.jsx)(u.FormSwitch, {
                         className: m ? G.marginBottom20 : G.marginBottom40,
                         value: !n,
-                        note: F.intl.string(F.t['9K4qwc']),
+                        note: U.intl.string(U.t['9K4qwc']),
                         onChange: this.handleToggleShowUnreadBadge,
-                        children: F.intl.string(F.t.VH8AIC)
+                        children: U.intl.string(U.t.VH8AIC)
                     })
                 }),
                 (0, i.jsx)(j.F, {
@@ -399,9 +399,9 @@ class K extends r.PureComponent {
                     children: (0, i.jsx)(u.FormSwitch, {
                         className: G.marginBottom40,
                         value: r,
-                        note: F.intl.string(F.t['bd4j4+']),
+                        note: U.intl.string(U.t['bd4j4+']),
                         onChange: this.handleToggleShowFlash,
-                        children: F.intl.string(F.t.xSmFQE)
+                        children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
                 (0, i.jsx)(X, {}),
@@ -409,7 +409,7 @@ class K extends r.PureComponent {
                 (0, i.jsx)(j.F, {
                     setting: k.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                     children: (0, i.jsxs)(u.FormItem, {
-                        title: F.intl.string(F.t.TTvjd3),
+                        title: U.intl.string(U.t.TTvjd3),
                         children: [
                             (0, i.jsx)(u.SingleSelect, {
                                 value: t,
@@ -419,7 +419,7 @@ class K extends r.PureComponent {
                             (0, i.jsx)(u.FormText, {
                                 type: u.FormTextTypes.DESCRIPTION,
                                 className: G.marginTop8,
-                                children: F.intl.string(F.t.Xytv9P)
+                                children: U.intl.string(U.t.Xytv9P)
                             }),
                             (0, i.jsx)(u.FormDivider, { className: a()(G.marginTop40, G.marginBottom40) })
                         ]
@@ -450,15 +450,15 @@ class K extends r.PureComponent {
                 if (!p.Zh) return null;
                 let e = [
                     {
-                        name: F.intl.string(F.t.B1AGeH),
+                        name: U.intl.string(U.t.B1AGeH),
                         value: w.PrB.ALL_CHANNELS
                     },
                     {
-                        name: F.intl.string(F.t.uM2rNj),
+                        name: U.intl.string(U.t.uM2rNj),
                         value: w.PrB.SELECTED_CHANNEL
                     },
                     {
-                        name: F.intl.string(F.t.DYO5Oj),
+                        name: U.intl.string(U.t.DYO5Oj),
                         value: w.PrB.NEVER
                     }
                 ];
@@ -466,12 +466,12 @@ class K extends r.PureComponent {
                     setting: k.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, i.jsxs)(u.FormItem, {
-                            title: F.intl.string(F.t.VIm5MD),
+                            title: U.intl.string(U.t.VIm5MD),
                             children: [
                                 (0, i.jsx)(u.FormText, {
                                     type: u.FormTextTypes.DESCRIPTION,
                                     className: G.marginBottom8,
-                                    children: F.intl.string(F.t['+4dnAw'])
+                                    children: U.intl.string(U.t['+4dnAw'])
                                 }),
                                 (0, i.jsx)(u.RadioGroup, {
                                     options: e,
@@ -509,7 +509,7 @@ function Q() {
                   className: G.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      h.Z.setAccountFlag(U.c.MENTION_ON_ALL_MESSAGES, e);
+                      h.Z.setAccountFlag(F.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -532,9 +532,9 @@ function X() {
                                 className: G.marginBottom40,
                                 value: n,
                                 disabled: s || !n,
-                                note: F.intl.string(F.t.frbLrK),
+                                note: U.intl.string(U.t.frbLrK),
                                 onChange: () => J(l),
-                                children: F.intl.string(F.t.z21l8P)
+                                children: U.intl.string(U.t.z21l8P)
                             })
                         })
                       : t
@@ -546,9 +546,9 @@ function X() {
                                   disabled: s || n,
                                   note: 'Turns on the new notification system',
                                   onChange: (e) => {
-                                      h.Z.setAccountFlag(U.c.USE_NEW_NOTIFICATIONS, e);
+                                      h.Z.setAccountFlag(F.c.USE_NEW_NOTIFICATIONS, e);
                                   },
-                                  children: F.intl.string(F.t.z21l8P)
+                                  children: U.intl.string(U.t.z21l8P)
                               })
                           })
                         : null,
@@ -585,7 +585,7 @@ function X() {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  h.Z.setAccountFlag(U.c.USE_NEW_NOTIFICATIONS, e);
+                                                  h.Z.setAccountFlag(F.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })
@@ -606,10 +606,10 @@ async function J(e) {
     0 === t.length
         ? await (0, I.oL)()
         : m.Z.show({
-              title: F.intl.string(F.t['cY+Ooa']),
-              body: F.intl.format(F.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
-              cancelText: F.intl.string(F.t['ETE/oK']),
-              confirmText: F.intl.string(F.t.Rm96T0),
+              title: U.intl.string(U.t['cY+Ooa']),
+              body: U.intl.format(U.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
+              cancelText: U.intl.string(U.t['ETE/oK']),
+              confirmText: U.intl.string(U.t.Rm96T0),
               onConfirm: I.oL
           }),
         e(!1);
@@ -640,15 +640,15 @@ function et() {
     let e = Z.fz.useSetting(),
         t = [
             {
-                name: F.intl.string(F.t['9x/Rtb']),
+                name: U.intl.string(U.t['9x/Rtb']),
                 value: d.Ns.NOTIFICATIONS_ENABLED
             },
             {
-                name: F.intl.string(F.t.fJAbQU),
+                name: U.intl.string(U.t.fJAbQU),
                 value: d.Ns.ONLY_DMS
             },
             {
-                name: F.intl.string(F.t['xu+UDQ']),
+                name: U.intl.string(U.t['xu+UDQ']),
                 value: d.Ns.NOTIFICATIONS_DISABLED
             }
         ];
@@ -657,12 +657,12 @@ function et() {
               setting: k.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, i.jsxs)(u.FormItem, {
-                      title: F.intl.string(F.t.Rq0NFh),
+                      title: U.intl.string(U.t.Rq0NFh),
                       children: [
                           (0, i.jsx)(u.FormText, {
                               type: u.FormTextTypes.DESCRIPTION,
                               className: G.marginBottom8,
-                              children: F.intl.string(F.t.oWF6eX)
+                              children: U.intl.string(U.t.oWF6eX)
                           }),
                           (0, i.jsx)(u.RadioGroup, {
                               options: t,

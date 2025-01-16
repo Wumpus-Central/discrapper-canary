@@ -36,8 +36,8 @@ var i = n(200651),
     M = n(981631),
     k = n(856651),
     w = n(921944),
-    U = n(388032),
-    F = n(393872),
+    F = n(388032),
+    U = n(393872),
     V = n(275477);
 let G = (e) => {
     var t, n;
@@ -51,7 +51,7 @@ let G = (e) => {
             [v.Z],
             () => ({
                 isJoining: v.Z.isJoining(s.id),
-                joinErrorMessage: '' === v.Z.joinErrorMessage(s.id) ? U.intl.string(U.t.j2d6Ki) : v.Z.joinErrorMessage(s.id),
+                joinErrorMessage: '' === v.Z.joinErrorMessage(s.id) ? F.intl.string(F.t.j2d6Ki) : v.Z.joinErrorMessage(s.id),
                 showJoinErrorMessage: void 0 !== v.Z.joinErrorMessage(s.id)
             }),
             [s.id]
@@ -65,21 +65,21 @@ let G = (e) => {
                     g.Z.joinServer(s.id, () => {});
                 },
                 disabled: a,
-                children: (0, i.jsx)('span', { children: a ? U.intl.string(U.t.RXvQQk) : U.intl.string(U.t.XpeFYm) })
+                children: (0, i.jsx)('span', { children: a ? F.intl.string(F.t.RXvQQk) : F.intl.string(F.t.XpeFYm) })
             })),
         (0, i.jsxs)('div', {
-            className: F.integrationWrapper,
+            className: U.integrationWrapper,
             children: [
                 (0, i.jsxs)('div', {
-                    className: F.integration,
+                    className: U.integration,
                     children: [
                         (0, i.jsx)(I.Z, {
                             size: I.Z.Sizes.SMALL,
                             guild: s.guild,
-                            className: F.guildIcon
+                            className: U.guildIcon
                         }),
                         (0, i.jsxs)('div', {
-                            className: F.integrationInner,
+                            className: U.integrationInner,
                             children: [
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-md/semibold',
@@ -103,7 +103,7 @@ let G = (e) => {
                     (0, i.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-danger',
-                        className: F.integrationError,
+                        className: U.integrationError,
                         children: o
                     })
             ]
@@ -150,23 +150,23 @@ function H(e) {
     }
     function et() {
         let e = _.Z.get(h.type),
-            t = U.intl.string(U.t.apVJu7);
+            t = F.intl.string(F.t.apVJu7);
         (0, B.Z)(h) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     t,
                     (0, i.jsx)(D.Z, {
-                        className: F.infoBox,
-                        children: U.intl.format(U.t.COW3Xl, { platformName: e.name })
+                        className: U.infoBox,
+                        children: F.intl.format(F.t.COW3Xl, { platformName: e.name })
                     })
                 ]
             })),
             (0, u.openModal)((n) =>
                 (0, i.jsx)(x.default, {
-                    title: U.intl.formatToPlainString(U.t.U5x12d, { name: e.name }),
+                    title: F.intl.formatToPlainString(F.t.U5x12d, { name: e.name }),
                     body: t,
-                    confirmText: U.intl.string(U.t.bsbMV1),
-                    cancelText: U.intl.string(U.t['ETE/oK']),
+                    confirmText: F.intl.string(F.t.bsbMV1),
+                    cancelText: F.intl.string(F.t['ETE/oK']),
                     onConfirm: m,
                     ...n
                 })
@@ -205,7 +205,7 @@ function H(e) {
         y(e), g.Z.setShowActivity(h.type, h.id, e);
     }
     return (0, i.jsxs)('div', {
-        className: F.connection,
+        className: U.connection,
         children: [
             (function (e) {
                 var t;
@@ -217,7 +217,7 @@ function H(e) {
                     n.type === M.ABu.TWITTER &&
                         s &&
                         (a = (0, i.jsx)(u.Tooltip, {
-                            text: U.intl.string(U.t.Jebrw8),
+                            text: F.intl.string(F.t.Jebrw8),
                             children: (e) =>
                                 (0, i.jsx)(N.Z, {
                                     ...e,
@@ -229,27 +229,27 @@ function H(e) {
                                 })
                         })),
                     (0, i.jsxs)('div', {
-                        className: F.connectionHeader,
+                        className: U.connectionHeader,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: r.name,
-                                className: F.connectionIcon,
+                                className: U.connectionIcon,
                                 src: (0, d.wj)(p) ? r.icon.darkSVG : r.icon.lightSVG
                             }),
                             (0, i.jsxs)('div', {
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: F.connectionAccountLabelContainer,
+                                        className: U.connectionAccountLabelContainer,
                                         children: [
                                             (0, i.jsx)(u.Text, {
                                                 color: 'header-primary',
                                                 variant: 'text-md/semibold',
-                                                className: F.connectionAccountValue,
+                                                className: U.connectionAccountValue,
                                                 children: e.name
                                             }),
                                             null != a &&
                                                 (0, i.jsx)('div', {
-                                                    className: F.connectionAccountLabelVerified,
+                                                    className: U.connectionAccountLabelVerified,
                                                     children: a
                                                 })
                                         ]
@@ -257,15 +257,15 @@ function H(e) {
                                     (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
-                                        className: F.connectionAccountLabel,
+                                        className: U.connectionAccountLabel,
                                         children: r.name
                                     })
                                 ]
                             }),
                             (0, i.jsx)(u.Clickable, {
-                                className: F.connectionDelete,
+                                className: U.connectionDelete,
                                 onClick: et,
-                                'aria-label': U.intl.string(U.t.ppppRE),
+                                'aria-label': F.intl.string(F.t.ppppRE),
                                 focusProps: {
                                     offset: {
                                         top: -4,
@@ -286,12 +286,12 @@ function H(e) {
                 ? null
                 : t.type === M.ABu.XBOX
                   ? (0, i.jsx)('div', {
-                        className: F.upsellWrapper,
+                        className: U.upsellWrapper,
                         children: (0, i.jsx)(L.Y, {})
                     })
                   : t.type === M.ABu.PLAYSTATION
                     ? (0, i.jsx)('div', {
-                          className: F.upsellWrapper,
+                          className: U.upsellWrapper,
                           children: (0, i.jsx)(Z.t, {})
                       })
                     : null,
@@ -302,24 +302,24 @@ function H(e) {
                     s = (0, C.FI)(n[k.PC.CREATED_AT], f);
                 switch (e.type) {
                     case M.ABu.REDDIT:
-                        r = (0, S.oP)(n, F.metadataItem);
+                        r = (0, S.oP)(n, U.metadataItem);
                         break;
                     case M.ABu.STEAM:
-                        r = (0, S.Dq)(n, F.metadataItem);
+                        r = (0, S.Dq)(n, U.metadataItem);
                         break;
                     case M.ABu.BLUESKY:
                     case M.ABu.TWITTER:
                     case M.ABu.MASTODON:
-                        r = (0, S.rJ)(n, F.metadataItem);
+                        r = (0, S.rJ)(n, U.metadataItem);
                         break;
                     case M.ABu.EBAY:
-                        r = (0, S.ul)(n, F.metadataItem);
+                        r = (0, S.ul)(n, U.metadataItem);
                         break;
                     case M.ABu.PAYPAL:
-                        r = (0, S.li)(n, F.metadataItem);
+                        r = (0, S.li)(n, U.metadataItem);
                         break;
                     case M.ABu.TIKTOK:
-                        r = (0, S.hf)(n, F.metadataItem);
+                        r = (0, S.hf)(n, U.metadataItem);
                 }
                 null !== s &&
                     (null == r && (r = []),
@@ -330,22 +330,22 @@ function H(e) {
                                 {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-active',
-                                    className: F.connectedAccountVanityMetadataCreatedAt,
-                                    children: U.intl.format(U.t['9rfonp'], { date: s })
+                                    className: U.connectedAccountVanityMetadataCreatedAt,
+                                    children: F.intl.format(F.t['9rfonp'], { date: s })
                                 },
                                 'member-since'
                             )
                         ));
                 let a = K.includes(e.id),
-                    l = U.intl.string(U.t.wzzjk5);
+                    l = F.intl.string(F.t.wzzjk5);
                 if (null == r || 0 === r.length) {
                     if (!0 !== _.Z.get(e.type).hasMetadata) return null;
                     (r = [
                         (0, i.jsx)(
                             u.TextBadge,
                             {
-                                className: F.connectionMetadataUpsellTag,
-                                text: U.intl.string(U.t.y2b7CA)
+                                className: U.connectionMetadataUpsellTag,
+                                text: F.intl.string(F.t.y2b7CA)
                             },
                             'badge'
                         ),
@@ -353,26 +353,26 @@ function H(e) {
                             u.Text,
                             {
                                 variant: 'text-xs/normal',
-                                className: F.connectionMetadataUpsellDescription,
-                                children: U.intl.format(U.t.Up2ni4, { helpdeskUrl: P.Z.getArticleURL(M.BhN.CONNECTION_DETAILS) })
+                                className: U.connectionMetadataUpsellDescription,
+                                children: F.intl.format(F.t.Up2ni4, { helpdeskUrl: P.Z.getArticleURL(M.BhN.CONNECTION_DETAILS) })
                             },
                             'label'
                         )
                     ]),
-                        (l = U.intl.string(U.t['LVh3//']));
+                        (l = F.intl.string(F.t['LVh3//']));
                 }
                 return (
-                    a && (l = U.intl.string(U.t.i4jeWV)),
+                    a && (l = F.intl.string(F.t.i4jeWV)),
                     r.push(
                         (0, i.jsx)(
                             u.Button,
                             {
-                                className: F.metadataRefreshButton,
+                                className: U.metadataRefreshButton,
                                 color: a ? u.Button.Colors.GREEN : u.Button.Colors.BRAND,
                                 size: u.Button.Sizes.SMALL,
                                 submitting: W,
                                 disabled: a,
-                                'aria-label': U.intl.string(U.t.sCkLYG),
+                                'aria-label': F.intl.string(F.t.sCkLYG),
                                 onClick: a
                                     ? void 0
                                     : () => {
@@ -389,7 +389,7 @@ function H(e) {
                         )
                     ),
                     (0, i.jsx)('div', {
-                        className: F.metadataContainer,
+                        className: U.metadataContainer,
                         children: r
                     })
                 );
@@ -397,51 +397,51 @@ function H(e) {
             ((n = X),
             M.BFP.has(h.type) &&
                 (a = (0, i.jsx)(u.FormSwitch, {
-                    className: F.connectionOptionSwitch,
+                    className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: b,
                     onChange: er,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
-                        children: U.intl.string(U.t['+KCMSk'])
+                        children: F.intl.string(F.t['+KCMSk'])
                     })
                 })),
             M.vbS.has(h.type) &&
                 (l = (0, i.jsx)(u.FormSwitch, {
-                    className: F.connectionOptionSwitch,
+                    className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: R,
                     onChange: es,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
-                        children: U.intl.format(U.t['6u6J0t'], { platform: n.name })
+                        children: F.intl.format(F.t['6u6J0t'], { platform: n.name })
                     })
                 })),
             (null === (s = _.Z.get(h.type)) || void 0 === s ? void 0 : s.hasMetadata) === !0 &&
                 (o = (0, i.jsx)(u.FormSwitch, {
-                    className: F.connectionOptionSwitch,
+                    className: U.connectionOptionSwitch,
                     hideBorder: !0,
                     value: 1 === j,
                     onChange: ei,
                     disabled: 1 !== v || null == h.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
-                        children: U.intl.string(U.t.FYKGsL)
+                        children: F.intl.string(F.t.FYKGsL)
                     })
                 })),
             (0, i.jsx)('div', {
-                className: F.connectionOptionsWrapper,
+                className: U.connectionOptionsWrapper,
                 children: (0, i.jsxs)('div', {
-                    className: F.connectionOptions,
+                    className: U.connectionOptions,
                     children: [
                         (0, i.jsx)(u.FormSwitch, {
-                            className: F.connectionOptionSwitch,
+                            className: U.connectionOptionSwitch,
                             hideBorder: !0,
                             value: 1 === v,
                             onChange: en,
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
-                                children: U.intl.string(U.t.f7yOAQ)
+                                children: F.intl.string(F.t.f7yOAQ)
                             })
                         }),
                         o,
@@ -451,25 +451,25 @@ function H(e) {
                 })
             })),
             (function () {
-                if (h.revoked || h.integrations.length > 0) return (0, i.jsx)(u.FormDivider, { className: F.connectedAccountSeparator });
+                if (h.revoked || h.integrations.length > 0) return (0, i.jsx)(u.FormDivider, { className: U.connectedAccountSeparator });
             })(),
             h.revoked
                 ? (0, i.jsx)(u.FormItem, {
-                      className: F.integrationsWrapper,
+                      className: U.integrationsWrapper,
                       children: (0, i.jsx)(u.FormText, {
-                          className: F.integrationRevoked,
-                          children: U.intl.format(U.t['6C4lgI'], { onReconnect: ee })
+                          className: U.integrationRevoked,
+                          children: F.intl.format(F.t['6C4lgI'], { onReconnect: ee })
                       })
                   })
                 : h.integrations.length > 0
                   ? (0, i.jsxs)(u.FormItem, {
-                        className: F.integrationsWrapper,
+                        className: U.integrationsWrapper,
                         children: [
                             (0, i.jsx)(u.FormTitle, {
                                 tag: u.FormTitleTags.H5,
                                 children: (0, i.jsx)(u.Text, {
                                     variant: 'text-xs/semibold',
-                                    children: U.intl.string(U.t.fOe3fX)
+                                    children: F.intl.string(F.t.fOe3fX)
                                 })
                             }),
                             (0, i.jsx)('div', { children: h.integrations.map((e) => (0, i.jsx)(G, { integration: e }, e.id)) })
@@ -488,18 +488,18 @@ function Y() {
             []
         ),
         (0, i.jsxs)('div', {
-            className: F.connectContainer,
+            className: U.connectContainer,
             children: [
                 (0, i.jsx)(u.Heading, {
                     variant: 'heading-md/bold',
                     color: 'interactive-active',
-                    className: F.connectHeader,
-                    children: U.intl.string(U.t.ZeDrUV)
+                    className: U.connectHeader,
+                    children: F.intl.string(F.t.ZeDrUV)
                 }),
                 (0, i.jsx)(u.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: U.intl.format(U.t['oYc+Gx'], { privacyPolicyUrl: M.EYA.PRIVACY })
+                    children: F.intl.format(F.t['oYc+Gx'], { privacyPolicyUrl: M.EYA.PRIVACY })
                 }),
                 (0, i.jsx)(z, {})
             ]
@@ -525,39 +525,39 @@ function z() {
     let t = (0, E.fq)(),
         n = (0, u.useRedesignIconContext)().enabled ? 24 : 18;
     return (0, i.jsxs)('div', {
-        className: F.connectionsContainer,
+        className: U.connectionsContainer,
         children: [
             t.slice(0, 10).map((e) =>
                 (0, i.jsx)(
                     p.Z,
                     {
                         type: e.type,
-                        className: F.__invalid_accountButton,
-                        innerClassName: F.accountButtonInner
+                        className: U.__invalid_accountButton,
+                        innerClassName: U.accountButtonInner
                     },
                     e.type
                 )
             ),
             (0, i.jsx)(u.Tooltip, {
-                text: U.intl.string(U.t.QqTz8f),
+                text: F.intl.string(F.t.QqTz8f),
                 children: (t) => {
                     let { onMouseEnter: r, onMouseLeave: s } = t;
                     return (0, i.jsx)('div', {
-                        className: a()(F.accountAddWrapper, F.__invalid_accountButton),
+                        className: a()(U.accountAddWrapper, U.__invalid_accountButton),
                         children: (0, i.jsx)(u.FocusRing, {
                             children: (0, i.jsx)('button', {
                                 onMouseEnter: r,
                                 onMouseLeave: s,
-                                className: a()(F.accountAddInner, F.accountButtonInner),
+                                className: a()(U.accountAddInner, U.accountButtonInner),
                                 type: 'button',
                                 onClick: e,
-                                'aria-label': U.intl.string(U.t.Zhcj9f),
+                                'aria-label': F.intl.string(F.t.Zhcj9f),
                                 children: (0, i.jsx)(u.ChevronSmallRightIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     height: n,
                                     width: n,
-                                    'aria-label': U.intl.string(U.t.QqTz8f)
+                                    'aria-label': F.intl.string(F.t.QqTz8f)
                                 })
                             })
                         })
@@ -588,8 +588,8 @@ function K(e) {
                             height: 220
                         }),
                         (0, i.jsx)(u.EmptyStateText, {
-                            note: U.intl.string(U.t.WenGZ2),
-                            children: U.intl.string(U.t['aoLS8/'])
+                            note: F.intl.string(F.t.WenGZ2),
+                            children: F.intl.string(F.t['aoLS8/'])
                         })
                     ]
                 })
@@ -612,7 +612,7 @@ function K(e) {
                         )
                     )),
         (0, i.jsx)(u.FormItem, {
-            className: F.connectionList,
+            className: U.connectionList,
             children: t
         })
     );
@@ -630,9 +630,9 @@ t.Z = () => {
     e)
         ? (0, i.jsx)(h.Z, {})
         : (0, i.jsxs)(u.FormSection, {
-              className: F.__invalid_connections,
+              className: U.__invalid_connections,
               tag: u.FormTitleTags.H1,
-              title: U.intl.string(U.t['3fe7U1']),
+              title: F.intl.string(F.t['3fe7U1']),
               children: [
                   (0, i.jsx)(Y, {}),
                   (0, i.jsx)(K, {

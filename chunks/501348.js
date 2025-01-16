@@ -41,8 +41,8 @@ var i = n(200651),
     M = n(726985),
     k = n(981631),
     w = n(921944),
-    U = n(959517),
-    F = n(388032),
+    F = n(959517),
+    U = n(388032),
     V = n(386819),
     G = n(275477);
 function H(e, t, n) {
@@ -72,7 +72,7 @@ let Y = {
             (0, I.e5)({
                 ...(0, N.ZP)({
                     channelId: q,
-                    content: F.intl.string(F.t.oZxkEh)
+                    content: U.intl.string(U.t.oZxkEh)
                 }),
                 state: k.yb.SENT,
                 id: ''.concat(t++)
@@ -80,7 +80,7 @@ let Y = {
             (0, I.e5)({
                 ...(0, N.ZP)({
                     channelId: q,
-                    content: (0, d.wj)(e) ? F.intl.string(F.t['WGb/v7']) : F.intl.string(F.t['62m4m5'])
+                    content: (0, d.wj)(e) ? U.intl.string(U.t['WGb/v7']) : U.intl.string(U.t['62m4m5'])
                 }),
                 state: k.yb.SENT,
                 id: ''.concat(t++)
@@ -88,7 +88,7 @@ let Y = {
             (0, I.e5)({
                 ...(0, N.ZP)({
                     channelId: q,
-                    content: F.intl.string(F.t.a0Byo6)
+                    content: U.intl.string(U.t.a0Byo6)
                 }),
                 state: k.yb.SENT,
                 id: ''.concat(t++)
@@ -96,7 +96,7 @@ let Y = {
             (0, I.e5)({
                 ...(0, N.ZP)({
                     channelId: q,
-                    content: F.intl.string(F.t.bmwEWF)
+                    content: U.intl.string(U.t.bmwEWF)
                 }),
                 state: k.yb.SENT,
                 id: ''.concat(t++)
@@ -104,7 +104,7 @@ let Y = {
             (0, I.e5)({
                 ...(0, N.ZP)({
                     channelId: q,
-                    content: F.intl.string(F.t.hK9QW1)
+                    content: U.intl.string(U.t.hK9QW1)
                 }),
                 state: k.yb.SENT,
                 id: ''.concat(t)
@@ -127,7 +127,7 @@ let Y = {
                   children: [
                       (0, i.jsx)('div', {
                           className: V.title,
-                          children: F.intl.string(F.t.Ksh3io)
+                          children: U.intl.string(U.t.Ksh3io)
                       }),
                       (0, i.jsx)(Z.g, {})
                   ]
@@ -143,7 +143,7 @@ class J extends r.Component {
                           id: W,
                           tag: u.FormTitleTags.H5,
                           className: G.marginBottom8,
-                          children: F.intl.string(F.t.i19n5O)
+                          children: U.intl.string(U.t.i19n5O)
                       }),
                       (0, i.jsx)(u.Slider, {
                           className: a()(G.marginTop20, G.marginBottom4),
@@ -157,7 +157,7 @@ class J extends r.Component {
                       }),
                       (0, i.jsx)(u.FormText, {
                           type: u.FormText.Types.DESCRIPTION,
-                          children: F.intl.format(F.t.OMkSUl, { modKey: p.Z.modKey })
+                          children: U.intl.format(U.t.OMkSUl, { modKey: p.Z.modKey })
                       })
                   ]
               })
@@ -171,7 +171,7 @@ class J extends r.Component {
                     id: z,
                     tag: u.FormTitleTags.H5,
                     className: G.marginBottom8,
-                    children: F.intl.string(F.t.qPOqoK)
+                    children: U.intl.string(U.t.qPOqoK)
                 }),
                 (0, i.jsx)(C.Z, {
                     align: C.Z.Align.CENTER,
@@ -200,13 +200,13 @@ class J extends r.Component {
                     id: K,
                     tag: u.FormTitleTags.H5,
                     className: G.marginBottom8,
-                    children: F.intl.string(F.t.Q6lKkp)
+                    children: U.intl.string(U.t.Q6lKkp)
                 }),
                 (0, i.jsx)(u.Slider, {
                     className: a()(G.marginTop20, G.marginBottom4),
                     initialValue: t,
-                    defaultValue: e ? U.c8 : U.pq,
-                    markers: U.fP,
+                    defaultValue: e ? F.c8 : F.pq,
+                    markers: F.fP,
                     stickToMarkers: !0,
                     onValueChange: this.handleMessageSpacingChange,
                     onValueRender: this.handleSliderRenderPX,
@@ -222,7 +222,7 @@ class J extends r.Component {
             s = (0, d.wj)(t) ? this.darkMessages : this.lightMessages;
         return (0, i.jsx)(u.FocusBlock, {
             children: (0, i.jsx)(u.Card, {
-                className: a()(V.preview, G.marginBottom40, e ? V.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? U.c8 : U.pq)),
+                className: a()(V.preview, G.marginBottom40, e ? V.compactPreview : void 0, 'group-spacing-'.concat(null != n ? n : e ? F.c8 : F.pq)),
                 outline: !0,
                 'aria-hidden': !0,
                 children: s.map((t, n) =>
@@ -251,19 +251,19 @@ class J extends r.Component {
                       className: V.themeTitle,
                       children: (0, i.jsx)('div', {
                           className: V.title,
-                          children: F.intl.string(F.t.Ksh3io)
+                          children: U.intl.string(U.t.Ksh3io)
                       })
                   }),
                   children: (0, i.jsx)(u.FormText, {
                       type: u.FormText.Types.DEFAULT,
                       className: V.forcedColorsWarning,
                       children: (0, _.b)()
-                          ? F.intl.format(F.t.Jae48P, {
+                          ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(k.oAB.ACCESSIBILITY);
                                 }
                             })
-                          : F.intl.string(F.t.AUMSZG)
+                          : U.intl.string(U.t.AUMSZG)
                   })
               })
             : (0, i.jsxs)(u.FormItem, {
@@ -280,24 +280,24 @@ class J extends r.Component {
                           disabled: e !== k.BRd.LIGHT || t || null != r,
                           onChange: this.handleDarkSidebarChecked,
                           className: G.marginTop20,
-                          children: F.intl.string(F.t.yF54Ki)
+                          children: U.intl.string(U.t.yF54Ki)
                       })
                   ]
               });
     }
     renderDisplayMode() {
         return (0, i.jsxs)(u.FormItem, {
-            title: F.intl.string(F.t.ZEoGMT),
+            title: U.intl.string(U.t.ZEoGMT),
             className: G.marginTop8,
             children: [
                 (0, i.jsx)(u.RadioGroup, {
                     options: [
                         {
-                            name: F.intl.string(F.t.KZIadn),
+                            name: U.intl.string(U.t.KZIadn),
                             value: Y.COZY
                         },
                         {
-                            name: F.intl.string(F.t['6+nTjY']),
+                            name: U.intl.string(U.t['6+nTjY']),
                             value: Y.COMPACT
                         }
                     ],
@@ -309,7 +309,7 @@ class J extends r.Component {
                     disabled: !this.props.messageDisplayCompact,
                     onChange: this.handleDisplayCompactAvatarsChanged,
                     className: G.marginTop20,
-                    children: F.intl.string(F.t['7FVjFB'])
+                    children: U.intl.string(U.t['7FVjFB'])
                 })
             ]
         });
@@ -339,12 +339,12 @@ class J extends r.Component {
                               (0, i.jsx)(u.RadioGroup, {
                                   options: [
                                       {
-                                          name: F.intl.string(F.t.T7G4Y2),
+                                          name: U.intl.string(U.t.T7G4Y2),
                                           value: c.Pi.COZY,
                                           desc: 'Comfortable spacing for easier readability'
                                       },
                                       {
-                                          name: F.intl.string(F.t['7iegX1']),
+                                          name: U.intl.string(U.t['7iegX1']),
                                           value: c.Pi.COMPACT,
                                           desc: 'Tighter layout to fit more content'
                                       },
@@ -377,20 +377,20 @@ class J extends r.Component {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(u.FormItem, {
-                    title: F.intl.string(F.t.dyamEB),
+                    title: U.intl.string(U.t.dyamEB),
                     className: G.marginTop20,
                     children: (0, i.jsx)(u.RadioGroup, {
                         options: [
                             {
-                                name: F.intl.string(F.t.FMWYvb),
+                                name: U.intl.string(U.t.FMWYvb),
                                 value: c.hg.AUTO
                             },
                             {
-                                name: F.intl.string(F.t.p8NOws),
+                                name: U.intl.string(U.t.p8NOws),
                                 value: c.hg.H12
                             },
                             {
-                                name: F.intl.string(F.t['+o/sOj']),
+                                name: U.intl.string(U.t['+o/sOj']),
                                 value: c.hg.H23
                             }
                         ],
@@ -419,7 +419,7 @@ class J extends r.Component {
     render() {
         return (0, i.jsxs)(u.FormSection, {
             tag: u.FormTitleTags.H1,
-            title: F.intl.string(F.t['iHH+k5']),
+            title: U.intl.string(U.t['iHH+k5']),
             children: [
                 this.renderVisualRefreshOverride(),
                 (0, i.jsxs)(O.F, {
@@ -442,7 +442,7 @@ class J extends r.Component {
                 (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     className: G.marginTop20,
-                    children: F.intl.format(F.t['5LEQdX'], {
+                    children: U.intl.format(U.t['5LEQdX'], {
                         onAccessibilityClick() {
                             g.Z.open(k.oAB.ACCESSIBILITY);
                         }
@@ -458,7 +458,7 @@ class J extends r.Component {
         return ''.concat(e.toFixed(0), 'px');
     }
     handleSliderValueText(e) {
-        return F.intl.formatToPlainString(F.t['0hpvOT'], { value: e });
+        return U.intl.formatToPlainString(U.t['0hpvOT'], { value: e });
     }
     handleFontSizeChange(e) {
         (0, x.oL)(e);

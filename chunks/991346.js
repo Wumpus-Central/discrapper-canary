@@ -1,6 +1,6 @@
 n.d(t, {
     Gj: function () {
-        return U;
+        return F;
     },
     Pt: function () {
         return w;
@@ -100,16 +100,16 @@ function w() {
         M = (0, B.bC)(),
         k = (0, c.Go)(),
         [w] = (0, d.cv)(k ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
-        U = 'useGenerateUserSettingsSections';
+        F = 'useGenerateUserSettingsSections';
     (0, l.j)({
-        location: U + ' auto on',
+        location: F + ' auto on',
         autoTrackExposure: !0
     }),
         (0, l.j)({
-            location: U + ' auto off',
+            location: F + ' auto off',
             autoTrackExposure: !1
         });
-    let { shouldMergeGameSettings: F } = j.b.useExperiment({ location: 'settings' }),
+    let { shouldMergeGameSettings: U } = j.b.useExperiment({ location: 'settings' }),
         V = (0, y.eA)({ location: 'settings' }),
         G = (0, m.Xo)({ location: 'settings' }),
         H = null !== (n = null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
@@ -136,7 +136,7 @@ function w() {
         numOfPendingFamilyRequests: Z,
         isOverlaySupported: M,
         isClipsBetaTagShowing: w === s.z.CLIPS_SETTINGS_BETA_TAG,
-        shouldMergeGameSettings: F,
+        shouldMergeGameSettings: U,
         isUserSettingsSearchEnabled: V,
         isKeywordFilteringEnabled: G,
         isStaff: H,
@@ -156,7 +156,7 @@ function w() {
         hasBlockedUsers: ei
     });
 }
-function U(e) {
+function F(e) {
     let { searchResults: t } = (0, D.E)(),
         n = w();
     if (!(0, y.eA)({ location: 'settings' })) return new Set();
@@ -209,7 +209,7 @@ function U(e) {
         }
     return a;
 }
-function F(e, t) {
+function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = [],
@@ -265,7 +265,7 @@ function V() {
                 }),
             [t, n]
         );
-    return i.useMemo(() => F(r, e), [r, e]);
+    return i.useMemo(() => U(r, e), [r, e]);
 }
 function G(e) {
     let t = w(),
@@ -295,7 +295,7 @@ function G(e) {
             );
         })(),
         r = (0, y.c3)({ location: 'settings' });
-    return i.useMemo(() => F(n, t, r, new Set(e)), [n, t, r, e]);
+    return i.useMemo(() => U(n, t, r, new Set(e)), [n, t, r, e]);
 }
 function H(e) {
     return new Map(

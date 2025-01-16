@@ -51,15 +51,15 @@ function M() {
         M = (0, l.e7)([v.Z], () => v.Z.showNotice()),
         k = P.dN.useSetting() && null != n ? _.ZP.parse(void 0, n).content : n,
         w = O.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: U } = (0, x.ZP)(p.Z.PROFILE);
+        { analyticsLocations: F } = (0, x.ZP)(p.Z.PROFILE);
     r.useEffect(() => () => d.Z.wait(m.W3), []);
-    let F = 'UserSettingsProfileCustomization';
+    let U = 'UserSettingsProfileCustomization';
     (0, h.j)({
-        location: F + ' auto on',
+        location: U + ' auto on',
         autoTrackExposure: !0
     }),
         (0, h.j)({
-            location: F + ' auto off',
+            location: U + ' auto off',
             autoTrackExposure: !1
         });
     let [V, G] = r.useState(!1),
@@ -69,7 +69,7 @@ function M() {
     return t
         ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(x.Gt, {
-              value: U,
+              value: F,
               children: [
                   (0, i.jsx)(f.Z, {}),
                   (0, i.jsx)(T.Z, {
