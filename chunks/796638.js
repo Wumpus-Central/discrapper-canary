@@ -57,16 +57,18 @@ function v(e, t) {
                     (function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
                         switch (e.type) {
+                            case d.fO.PRESENCE_EMBEDDED_ACTIVITY:
+                                return '\0';
                             case d.fO.ACTIVITY:
-                                return '\0'.concat(e.sortKey);
+                                return '\x01'.concat(e.sortKey);
                             case d.fO.HIDDEN_STREAM:
                             case d.fO.STREAM:
-                                return '\x01'.concat((0, r.Z)(e.userNick, e.user));
+                                return '\x02'.concat((0, r.Z)(e.userNick, e.user));
                             case d.fO.USER:
                                 var n;
-                                let i = '\x05';
+                                let i = '\x06';
                                 return (
-                                    e.speaking ? (i = '\x02') : t - e.lastSpoke < h ? (i = '\x03') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x04'),
+                                    e.speaking ? (i = '\x03') : t - e.lastSpoke < h ? (i = '\x04') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfVideo) && (i = '\x05'),
                                     ''
                                         .concat(i)
                                         .concat(
@@ -105,13 +107,13 @@ function v(e, t) {
                 }
             }
             let T = b.filter(c.lm),
-                A = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
-            I.current = A;
-            let N = [...y, ...T];
+                N = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
+            I.current = N;
+            let A = [...y, ...T];
             return (
-                null != S && (m && N.length >= x ? (N[Math.max(0, N.length - 1)] = S) : N.push(S)),
+                null != S && (m && A.length >= x ? (A[Math.max(0, A.length - 1)] = S) : A.push(S)),
                 {
-                    visibleParticipants: N,
+                    visibleParticipants: A,
                     participantTileWidth: E
                 }
             );

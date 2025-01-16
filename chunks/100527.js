@@ -98,6 +98,7 @@ var r;
         (e.ACTIVITY_CHANNEL_SELECTOR = 'activity channel selector'),
         (e.ACTIVITY_DIRECTORY = 'activity directory'),
         (e.ACTIVITY_TILE = 'activity tile'),
+        (e.PRESENCE_ACTIVITY_TILE = 'presence activity tile'),
         (e.ACTIVITY_UPSELL = 'activity upsell'),
         (e.ACTIVITY_VOICE_CONTROLS_TOGGLE = 'activity voice controls toggle'),
         (e.INSTANT_INVITE_MODAL = 'instant invite modal'),

@@ -1,9 +1,27 @@
 n.d(t, {
-    OV: function () {
+    Ix: function () {
         return k;
     },
-    ZP: function () {
+    OV: function () {
+        return V;
+    },
+    V_: function () {
+        return D;
+    },
+    Ym: function () {
         return U;
+    },
+    ZP: function () {
+        return W;
+    },
+    ac: function () {
+        return F;
+    },
+    bn: function () {
+        return L;
+    },
+    nR: function () {
+        return i;
     }
 }),
     n(47120);
@@ -32,17 +50,24 @@ var i,
     Z = n(906732),
     b = n(890280),
     T = n(835473),
-    A = n(522474),
-    N = n(314897),
-    w = n(819640),
-    j = n(594174),
+    N = n(522474),
+    A = n(314897),
+    j = n(819640),
+    w = n(594174),
     P = n(823379),
     R = n(5192),
     M = n(388032),
     O = n(262745);
 ((l = i || (i = {}))[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE');
-let L = ['embedded_background'];
-function k(e) {
+let L = 1024,
+    k = ['embedded_background'];
+function D(e) {
+    return e > 400 ? 2 : e > 300 ? 1 : 0;
+}
+function U(e) {
+    return e > 400 ? [u.AvatarSizes.SIZE_56, 56] : e > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24];
+}
+function V(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: l } = e,
         r = null != t ? t : u.AvatarSizes.SIZE_32,
         s = (0, u.getAvatarSize)(r);
@@ -74,91 +99,92 @@ function k(e) {
         }
     });
 }
-function D(e) {
-    var t, n, i, l;
-    let { participants: s, application: h, channel: v, width: S } = e;
-    let I = (i = S) > 400 ? 2 : i > 300 ? 1 : 0;
-    let [_] = (l = S) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
-        x = (0, c.Wu)([j.default, N.default], () =>
-            Array.from(s)
-                .map((e) => ((0, p.J)(e, N.default) ? null : j.default.getUser(e.userId)))
+function F(e) {
+    switch (e) {
+        case 2:
+            return u.Button.Sizes.LARGE;
+        case 1:
+            return u.Button.Sizes.MEDIUM;
+        case 0:
+            return u.Button.Sizes.SMALL;
+    }
+}
+function B(e) {
+    var t, n;
+    let { participants: i, application: l, channel: s, width: h } = e,
+        v = D(h),
+        [S] = U(h),
+        I = (0, c.Wu)([w.default, A.default], () =>
+            Array.from(i)
+                .map((e) => ((0, p.J)(e, A.default) ? null : w.default.getUser(e.userId)))
                 .filter(P.lm)
         ),
-        E = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(v.id).find((e) => e.applicationId === h.id)),
-        { analyticsLocations: C } = (0, Z.ZP)(),
-        y = (0, d.O)(),
-        T = R.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
-        A =
+        _ = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(s.id).find((e) => e.applicationId === l.id)),
+        { analyticsLocations: x } = (0, Z.ZP)(),
+        E = (0, d.O)(),
+        C = R.ZP.getName(s.getGuildId(), s.id, null == I ? void 0 : I[0]),
+        y =
             (0, g.s5)({
-                userId: null === (t = j.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-                channelId: v.id,
-                application: h
+                userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
+                channelId: s.id,
+                application: l
             }) === g.Fw.CAN_JOIN,
-        w = null !== (n = v.getGuildId()) && void 0 !== n ? n : void 0,
-        L = r.useId(),
-        D = v.id,
-        U = h.id,
-        { submitting: V } = (0, b.Z)({
-            applicationId: U,
-            channelId: D,
-            launchingComponentId: L
+        T = null !== (n = s.getGuildId()) && void 0 !== n ? n : void 0,
+        N = r.useId(),
+        j = s.id,
+        L = l.id,
+        { submitting: k } = (0, b.Z)({
+            applicationId: L,
+            channelId: j,
+            launchingComponentId: N
         });
     return (0, a.jsxs)('div', {
         className: O.splash,
         children: [
-            (0, a.jsx)(k, {
-                avatarSize: _,
-                guildId: w,
-                channelId: v.id,
-                users: x
+            (0, a.jsx)(V, {
+                avatarSize: S,
+                guildId: T,
+                channelId: s.id,
+                users: I
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(O.subheader, {
-                    [O.small]: 0 === I,
-                    [O.medium]: 1 === I
+                    [O.small]: 0 === v,
+                    [O.medium]: 1 === v
                 }),
                 variant: 'text-sm/normal',
                 children:
-                    x.length > 1
+                    I.length > 1
                         ? M.intl.formatToPlainString(M.t.cpe6CA, {
-                              username: T,
-                              count: x.length - 1
+                              username: C,
+                              count: I.length - 1
                           })
-                        : M.intl.formatToPlainString(M.t['7Uuia2'], { username: T })
+                        : M.intl.formatToPlainString(M.t['7Uuia2'], { username: C })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(O.header, {
-                    [O.small]: 0 === I,
-                    [O.medium]: 1 === I
+                    [O.small]: 0 === v,
+                    [O.medium]: 1 === v
                 }),
                 variant: 'text-sm/normal',
-                children: h.name
+                children: l.name
             }),
             (0, a.jsx)('div', {
                 className: O.buttons,
-                children: A
+                children: y
                     ? (0, a.jsx)(u.Button, {
                           onClick: function (e) {
-                              if ((e.stopPropagation(), null != E))
+                              if ((e.stopPropagation(), null != _))
                                   (0, f.Z)({
-                                      applicationId: E.applicationId,
-                                      activityChannelId: v.id,
-                                      locationObject: y.location,
-                                      analyticsLocations: C,
-                                      componentId: L
+                                      applicationId: _.applicationId,
+                                      activityChannelId: s.id,
+                                      locationObject: E.location,
+                                      analyticsLocations: x,
+                                      componentId: N
                                   });
                           },
-                          submitting: V,
-                          size: (function (e) {
-                              switch (e) {
-                                  case 2:
-                                      return u.Button.Sizes.LARGE;
-                                  case 1:
-                                      return u.Button.Sizes.MEDIUM;
-                                  case 0:
-                                      return u.Button.Sizes.SMALL;
-                              }
-                          })(I),
+                          submitting: k,
+                          size: F(v),
                           className: O.button,
                           color: u.Button.Colors.PRIMARY,
                           children: M.intl.string(M.t['4i2vj4'])
@@ -168,7 +194,7 @@ function D(e) {
         ]
     });
 }
-function U(e) {
+function W(e) {
     let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
         { analyticsLocations: o } = (0, Z.ZP)(y.Z.ACTIVITY_TILE),
         { id: u } = t,
@@ -177,25 +203,25 @@ function U(e) {
         [f] = (0, T.Z)([u]),
         { url: p } = (0, S.Z)({
             applicationId: u,
-            names: L,
-            size: 1024
+            names: k,
+            size: L
         }),
         g = !i && m,
         x = !m,
         b = !m && !i,
-        N = (0, c.e7)([w.Z, A.Z], () =>
+        A = (0, c.e7)([j.Z, N.Z], () =>
             (0, C.Z)({
-                LayerStore: w.Z,
-                PopoutWindowStore: A.Z
+                LayerStore: j.Z,
+                PopoutWindowStore: N.Z
             })
         );
     return (
         r.useEffect(() => {
-            if (g && null != d && !N) {
+            if (g && null != d && !A) {
                 let e = (0, E.Z)(d.location.id, d.applicationId);
                 (0, _.jy)(e);
             }
-        }, [g, d, N]),
+        }, [g, d, A]),
         (0, a.jsx)(Z.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
@@ -217,7 +243,7 @@ function U(e) {
                             : null,
                         b &&
                             null != f &&
-                            (0, a.jsx)(D, {
+                            (0, a.jsx)(B, {
                                 width: n,
                                 channel: s,
                                 participants: t.participants,

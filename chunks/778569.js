@@ -19,13 +19,14 @@ function o(e) {
         }),
         i.useEffect(() => {
             let { current: e } = p;
-            (0, r.getAssets)(t).then((t) => {
-                for (let [n, i] of (u(!1), Object.entries(t)))
-                    if (null != i && '' !== i.id && e.includes(i.name)) {
-                        c(i.id);
-                        return;
-                    }
-            });
+            null != t &&
+                (0, r.getAssets)(t).then((t) => {
+                    for (let [n, i] of (u(!1), Object.entries(t)))
+                        if (null != i && '' !== i.id && e.includes(i.name)) {
+                            c(i.id);
+                            return;
+                        }
+                });
         }, [t]),
         {
             url: d,
