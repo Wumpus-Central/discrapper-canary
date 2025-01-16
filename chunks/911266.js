@@ -79,21 +79,18 @@ t.Z = (e) => {
                 alt: '',
                 src: S,
                 className: a()([C.emoji, C.left, b && C.shy, x && C.confettiMode]),
-                height: 28,
                 width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
                 src: S,
                 className: a()([C.emoji, C.right, b && C.shy, x && C.confettiMode]),
-                height: 26,
                 width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
                 src: S,
                 className: a()([C.emoji, C.center, b && C.shy, x && C.confettiMode]),
-                height: 32,
                 width: 32
             })
         ]
