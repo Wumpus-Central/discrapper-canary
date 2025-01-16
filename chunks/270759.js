@@ -154,13 +154,7 @@ t.Z = function (e) {
                         id: y,
                         className: L.peopleColumn,
                         'aria-labelledby': w,
-                        children:
-                            y === b.pJs.ADD_FRIEND
-                                ? (0, i.jsx)(T.Z, {})
-                                : (0, i.jsx)(A.Z, {
-                                      titleId: w,
-                                      sectionFilter: y
-                                  })
+                        children: y === b.pJs.ADD_FRIEND ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(A.Z, { titleId: w })
                     }),
                     (0, i.jsx)('div', {
                         className: L.nowPlayingColumn,

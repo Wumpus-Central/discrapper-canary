@@ -1,47 +1,58 @@
-var i = n(200651);
-n(192379);
-var r = n(924826),
-    l = n(91192),
-    a = n(442837),
-    s = n(215569),
-    o = n(481060),
-    c = n(607070),
-    d = n(981631),
-    u = n(732144);
+var i = n(200651),
+    r = n(192379),
+    l = n(924826),
+    a = n(91192),
+    s = n(442837),
+    o = n(215569),
+    c = n(481060),
+    d = n(607070),
+    u = n(981631),
+    h = n(732144);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: h, sectionFilter: m, useReducedMotion: p, footer: g } = e,
-        f = (0, a.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        _ = (0, r.ZP)({
+    let { rows: t, renderRow: n, renderSection: m, hasSearchQuery: p, sectionFilter: g, footer: f } = e,
+        _ = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
+        E = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        I = (0, l.ZP)({
             id: 'people',
-            isEnabled: f,
+            isEnabled: _,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        E = m !== d.pJs.ONLINE && m !== d.pJs.ALL,
-        I = p || '' !== h || E,
-        C = t.map((e, t) =>
-            I
-                ? (0, i.jsx)('div', { children: e.map(n) }, t)
-                : (0, i.jsx)(
-                      s.W,
-                      {
-                          transitionAppear: !1,
-                          component: 'div',
-                          children: e.map(n)
-                      },
-                      t
-                  )
+        C = g !== u.pJs.ONLINE && g !== u.pJs.ALL,
+        N = E || p || C,
+        v = r.useMemo(
+            () =>
+                t.map((e, t) =>
+                    N
+                        ? (0, i.jsxs)(
+                              'div',
+                              {
+                                  children: [m(t), e.map(n)]
+                              },
+                              t
+                          )
+                        : (0, i.jsxs)(
+                              o.W,
+                              {
+                                  transitionAppear: !1,
+                                  component: 'div',
+                                  children: [m(t), e.map(n)]
+                              },
+                              t
+                          )
+                ),
+            [n, m, t, N]
         );
-    return (0, i.jsx)(l.bG, {
-        navigator: _,
-        children: (0, i.jsx)(l.SJ, {
+    return (0, i.jsx)(a.bG, {
+        navigator: I,
+        children: (0, i.jsx)(a.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsxs)(o.ScrollerAuto, {
+                return (0, i.jsxs)(c.ScrollerAuto, {
                     ref: t,
-                    className: u.peopleList,
+                    className: h.peopleList,
                     ...n,
-                    children: [C, g]
+                    children: [v, f]
                 });
             }
         })

@@ -8,7 +8,7 @@ var i = n(200651),
     d = n(617015),
     u = n(732144);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: h, footer: m } = e,
+    let { rows: t, renderRow: n, renderSection: h, footer: m } = e,
         p = (e) => {
             let { section: i, row: r } = e,
                 l = t[i];
@@ -16,29 +16,36 @@ t.Z = function (e) {
             let a = l[r];
             return null == a ? null : n(a);
         },
-        g = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        f = r.useRef(null),
-        _ = r.useCallback(
+        g = r.useCallback(
+            (e) => {
+                let { section: t } = e;
+                return h(t);
+            },
+            [h]
+        ),
+        f = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        _ = r.useRef(null),
+        E = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = f.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        E = r.useCallback(
+        I = r.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = f.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        I = r.useCallback((e) => {
+        C = r.useCallback((e) => {
             let t = document.querySelector(e),
-                n = f.current;
+                n = _.current;
             null != t &&
                 null != n &&
                 n.scrollIntoViewNode({
@@ -47,31 +54,33 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        C = (0, l.ZP)({
+        N = (0, l.ZP)({
             id: 'people-list',
-            isEnabled: g,
-            scrollToStart: _,
-            scrollToEnd: E,
-            setFocus: I
-        });
+            isEnabled: f,
+            scrollToStart: E,
+            scrollToEnd: I,
+            setFocus: C
+        }),
+        v = r.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(a.bG, {
-        navigator: C,
+        navigator: N,
         children: (0, i.jsx)(a.SJ, {
             children: (e) => {
-                let { ref: n, ...r } = e;
+                let { ref: t, ...n } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.ListAuto, {
                             ref: (e) => {
-                                var t;
-                                (f.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                                var n;
+                                (_.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            sectionHeight: 0,
                             renderRow: p,
                             rowHeight: d.NV,
-                            sections: t.map((e) => ('' !== h && 0 === e.length ? e.length + 1 : e.length)),
+                            renderSection: g,
+                            sectionHeight: d.aS,
+                            sections: v,
                             className: u.peopleList,
-                            ...r
+                            ...n
                         }),
                         m
                     ]
