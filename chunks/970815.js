@@ -40,3 +40,4 @@ let d = () =>
             ]
         });
     };
+u.BalanceWidgetMode = l.b;

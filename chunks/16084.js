@@ -5,11 +5,8 @@ r.d(n, {
     ZZ: function () {
         return S;
     },
-    df: function () {
-        return A;
-    },
     pB: function () {
-        return C;
+        return N;
     },
     uE: function () {
         return T;
@@ -18,7 +15,7 @@ r.d(n, {
         return b;
     },
     xA: function () {
-        return N;
+        return A;
     }
 });
 var i = r(411104);
@@ -203,38 +200,7 @@ async function S(e, n, r) {
         return (0, E.sk)(a.body, i);
     }
 }
-async function A(e) {
-    o.Z.wait(() => {
-        o.Z.dispatch({
-            type: 'VIRTUAL_CURRENCY_REDEEM_START',
-            skuId: e
-        });
-    });
-    try {
-        let n = (
-            await s.tn.post({
-                url: v.ANM.USER_REDEEM_VIRTUAL_CURRENCY(e),
-                rejectWithError: !1
-            })
-        ).body;
-        return (
-            o.Z.dispatch({
-                type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
-                skuId: e,
-                entitlements: n
-            }),
-            n
-        );
-    } catch (r) {
-        let n = r instanceof l.HF ? r : new l.HF(r);
-        o.Z.dispatch({
-            type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
-            skuId: e,
-            error: n
-        });
-    }
-}
-async function N() {
+async function A() {
     try {
         let e = { purchase_token: (0, m.d)() };
         return {
@@ -251,6 +217,6 @@ async function N() {
         throw e instanceof l.HF ? e : new l.HF(e);
     }
 }
-function C() {
+function N() {
     o.Z.dispatch({ type: 'SKU_PURCHASE_CLEAR_ERROR' });
 }
