@@ -40,7 +40,6 @@ function h(e) {
                 children: m.current(r)
             }),
             (0, a.jsx)('div', {
-                className: _.__invalid_smsInfoContainer,
                 children: (0, a.jsxs)('div', {
                     className: l()(_.smsNumberContainer, { [_.copied]: h }),
                     children: [
