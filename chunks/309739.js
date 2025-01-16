@@ -1,221 +1,261 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return M;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(658722),
+    s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    o = n(780384),
-    c = n(481060),
-    d = n(457330),
-    u = n(410030),
-    m = n(726542),
-    g = n(921801),
-    h = n(553795),
-    p = n(430824),
-    x = n(63063),
-    f = n(358085),
-    _ = n(709054),
-    E = n(413182),
-    C = n(695346),
-    T = n(726985),
-    S = n(981631),
-    b = n(388032),
-    I = n(147522),
-    N = n(232186);
-function v() {
-    let e = C.G6.useSetting(),
-        t = C.Wz.useSetting(),
-        n = f.isPlatformEmbedded ? b.intl.string(b.t.MznbeH) : b.intl.string(b.t.oKqC4u),
-        r = (e) => {
-            C.Wz.updateSetting(e),
-                !(function (e) {
-                    let t = () => {
-                        C.SE.updateSetting(e ? _.default.keys(p.Z.getGuilds()) : []);
-                    };
-                    (0, c.openModal)((e) =>
-                        (0, i.jsx)(c.ConfirmModal, {
-                            header: b.intl.string(b.t['uUr+GR']),
-                            confirmText: b.intl.string(b.t.gm1Ven),
-                            cancelText: b.intl.string(b.t.p89ACg),
-                            onCancel: t,
-                            confirmButtonColor: c.Button.Colors.BRAND,
-                            ...e,
-                            children: (0, i.jsx)(c.Text, {
-                                variant: 'text-md/normal',
-                                children: b.intl.string(b.t.EFu2Ki)
-                            })
-                        })
-                    );
-                })(e);
-        };
-    return (0, i.jsx)(g.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(c.FormSection, {
-            className: N.marginBottom40,
+    l = n(658722),
+    o = n.n(l),
+    c = n(442837),
+    d = n(524437),
+    u = n(780384),
+    m = n(481060),
+    g = n(457330),
+    h = n(410030),
+    p = n(726542),
+    x = n(921801),
+    f = n(553795),
+    _ = n(430824),
+    E = n(63063),
+    C = n(358085),
+    T = n(709054),
+    S = n(362352),
+    b = n(413182),
+    I = n(695346),
+    N = n(726985),
+    v = n(981631),
+    A = n(388032),
+    j = n(147522),
+    O = n(232186);
+function R(e) {
+    let t = () => {
+        I.SE.updateSetting(e ? T.default.keys(_.Z.getGuilds()) : []);
+    };
+    (0, m.openModal)((e) =>
+        (0, i.jsx)(m.ConfirmModal, {
+            header: A.intl.string(A.t['uUr+GR']),
+            confirmText: A.intl.string(A.t.gm1Ven),
+            cancelText: A.intl.string(A.t.p89ACg),
+            onCancel: t,
+            confirmButtonColor: m.Button.Colors.BRAND,
+            ...e,
+            children: (0, i.jsx)(m.Text, {
+                variant: 'text-md/normal',
+                children: A.intl.string(A.t.EFu2Ki)
+            })
+        })
+    );
+}
+function P() {
+    let e = I.G6.useSetting(),
+        t = I.Wz.useSetting(),
+        n = S.l.useExperiment({ location: 'activity privacy tab' }, { autoTrackExposure: !1 }),
+        r = C.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
+        s = (e) => {
+            I.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
+        },
+        l = (e) => {
+            I.Wz.updateSetting(e), R(e !== d.E5.OFF);
+        },
+        o = [
+            {
+                value: d.E5.ON,
+                label: A.intl.string(A.t.UzGMHx)
+            },
+            {
+                value: d.E5.ON_FOR_LARGE_GUILDS,
+                label: A.intl.string(A.t.OFqxQU)
+            },
+            {
+                value: d.E5.OFF,
+                label: A.intl.string(A.t.MIgNPD)
+            }
+        ];
+    return (0, i.jsx)(x.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(m.FormSection, {
             children: [
-                (0, i.jsx)(c.FormTitle, {
-                    tag: c.FormTitleTags.H5,
-                    className: N.marginBottom8,
-                    children: b.intl.string(b.t['8ka8lp'])
+                (0, i.jsx)(m.FormTitle, {
+                    tag: m.FormTitleTags.H5,
+                    className: O.marginBottom8,
+                    children: A.intl.string(A.t['8ka8lp'])
                 }),
-                (0, i.jsx)(c.FormSwitch, {
+                (0, i.jsx)(m.FormSwitch, {
                     value: e,
-                    onChange: (e) => C.G6.updateSetting(e),
-                    note: n,
-                    children: b.intl.string(b.t['4q/Ewc'])
+                    onChange: (e) => I.G6.updateSetting(e),
+                    note: r,
+                    children: A.intl.string(A.t['4q/Ewc'])
                 }),
-                (0, i.jsx)(c.FormSwitch, {
-                    value: !t,
-                    note: b.intl.format(b.t['+5/xu7'], { helpdeskArticle: x.Z.getArticleURL(S.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                    onChange: (e) => r(!e),
-                    children: b.intl.string(b.t.D5GXTU)
-                })
+                n.enabled
+                    ? (0, i.jsxs)(m.FormItem, {
+                          tag: m.FormTitleTags.H3,
+                          title: A.intl.string(A.t.ffGYGx),
+                          children: [
+                              (0, i.jsx)(m.Text, {
+                                  variant: 'text-sm/normal',
+                                  color: 'header-secondary',
+                                  className: O.marginBottom8,
+                                  children: A.intl.format(A.t.aUxRra, { helpdeskArticle: E.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) })
+                              }),
+                              (0, i.jsx)(m.SingleSelect, {
+                                  options: o,
+                                  value: t,
+                                  onChange: (e) => l(e)
+                              })
+                          ]
+                      })
+                    : (0, i.jsx)(m.FormSwitch, {
+                          value: t === d.E5.OFF,
+                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: E.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          onChange: (e) => s(!e),
+                          children: A.intl.string(A.t.D5GXTU)
+                      }),
+                (0, i.jsx)(m.FormDivider, { className: a()(O.marginBottom20, O.marginTop20) })
             ]
         })
     });
 }
-function A() {
-    let e = C.cP.useSetting(),
-        t = C.Ou.useSetting();
-    return (0, i.jsx)(g.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(c.FormSection, {
-            className: N.marginBottom40,
+function y() {
+    let e = I.cP.useSetting(),
+        t = I.Ou.useSetting();
+    return (0, i.jsx)(x.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, i.jsxs)(m.FormSection, {
+            className: O.marginBottom40,
             children: [
-                (0, i.jsx)(c.FormTitle, {
-                    tag: c.FormTitleTags.H5,
-                    className: N.marginBottom8,
-                    children: b.intl.string(b.t.VOszPD)
+                (0, i.jsx)(m.FormTitle, {
+                    tag: m.FormTitleTags.H5,
+                    className: O.marginBottom8,
+                    children: A.intl.string(A.t.VOszPD)
                 }),
-                (0, i.jsx)(c.FormSwitch, {
+                (0, i.jsx)(m.FormSwitch, {
                     value: e,
-                    note: b.intl.string(b.t.Hdh7sb),
-                    onChange: (e) => C.cP.updateSetting(e),
-                    children: b.intl.string(b.t.WEWQQk)
+                    note: A.intl.string(A.t.Hdh7sb),
+                    onChange: (e) => I.cP.updateSetting(e),
+                    children: A.intl.string(A.t.WEWQQk)
                 }),
-                (0, i.jsx)(c.FormSwitch, {
+                (0, i.jsx)(m.FormSwitch, {
                     value: t,
-                    note: b.intl.string(b.t.Czr3Bg),
-                    onChange: (e) => C.Ou.updateSetting(e),
-                    children: b.intl.string(b.t.UUvJVl)
+                    note: A.intl.string(A.t.Czr3Bg),
+                    onChange: (e) => I.Ou.updateSetting(e),
+                    children: A.intl.string(A.t.UUvJVl)
                 })
             ]
         })
     });
 }
-function j() {
-    return (0, i.jsx)(g.F, {
-        setting: T.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(c.FormSection, {
-            className: N.marginBottom40,
-            children: (0, i.jsx)(c.FormNotice, {
-                type: c.FormNotice.Types.PRIMARY,
-                body: b.intl.format(b.t.xvCsx8, {
-                    termsLink: S.EYA.TERMS,
-                    privacyLink: S.EYA.PRIVACY
+function B() {
+    return (0, i.jsx)(x.F, {
+        setting: N.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, i.jsx)(m.FormSection, {
+            className: O.marginBottom40,
+            children: (0, i.jsx)(m.FormNotice, {
+                type: m.FormNotice.Types.PRIMARY,
+                body: A.intl.format(A.t.xvCsx8, {
+                    termsLink: v.EYA.TERMS,
+                    privacyLink: v.EYA.PRIVACY
                 })
             })
         })
     });
 }
-let O = (e) => {
+let D = (e) => {
     switch (e.type) {
-        case S.ABu.SPOTIFY:
-            return b.intl.format(b.t['5sYPnp'], { name: e.name });
-        case S.ABu.CRUNCHYROLL:
-            return b.intl.format(b.t.Ge29Z2, { name: e.name });
+        case v.ABu.SPOTIFY:
+            return A.intl.format(A.t['5sYPnp'], { name: e.name });
+        case v.ABu.CRUNCHYROLL:
+            return A.intl.format(A.t.Ge29Z2, { name: e.name });
         default:
-            return b.intl.format(b.t.nmMsys, { game: e.name });
+            return A.intl.format(A.t.nmMsys, { game: e.name });
     }
 };
-function R(e) {
+function Z(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
-        a = (0, u.ZP)();
+        a = (0, h.ZP)();
     r.useEffect(() => {
         s(t.showActivity);
     }, [t]);
-    let l = m.Z.get(t.type);
+    let l = p.Z.get(t.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(c.FormSwitch, {
-                className: I.switchRowContainer,
+            (0, i.jsx)(m.FormSwitch, {
+                className: j.switchRowContainer,
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    s(e), d.Z.setShowActivity(t.type, t.id, e);
+                    s(e), g.Z.setShowActivity(t.type, t.id, e);
                 },
                 children: (0, i.jsxs)('div', {
-                    className: I.activitySwitchRow,
+                    className: j.activitySwitchRow,
                     children: [
                         (0, i.jsx)('img', {
                             alt: l.name,
-                            className: I.connectionIcon,
-                            src: (0, o.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG
+                            className: j.connectionIcon,
+                            src: (0, u.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG
                         }),
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(m.Text, {
                                     variant: 'text-md/semibold',
                                     children: l.name
                                 }),
-                                (0, i.jsxs)(c.Text, {
+                                (0, i.jsxs)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', O(l), '"']
+                                    children: ['"', D(l), '"']
                                 })
                             ]
                         })
                     ]
                 })
             }),
-            (0, i.jsx)('div', { className: I.divider })
+            (0, i.jsx)('div', { className: j.divider })
         ]
     });
 }
-function P() {
-    let e = (0, l.e7)([h.Z], () => h.Z.getAccounts()),
-        t = r.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && S.vbS.has(e.type)), [e]),
+function L() {
+    let e = (0, c.e7)([f.Z], () => f.Z.getAccounts()),
+        t = r.useMemo(() => e.filter((e) => p.Z.isSupported(e.type) && v.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
-        o = r.useMemo(() => {
+        a = r.useMemo(() => {
             let e = n.trim().toLowerCase();
-            return '' === e ? t : t.filter((t) => a()(e, m.Z.get(t.type).name.toLowerCase()));
+            return '' === e ? t : t.filter((t) => o()(e, p.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
     return 0 === t.length
         ? null
-        : (0, i.jsx)(g.F, {
-              setting: T.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
-              children: (0, i.jsxs)(c.FormSection, {
-                  className: N.marginBottom40,
+        : (0, i.jsx)(x.F, {
+              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              children: (0, i.jsxs)(m.FormSection, {
+                  className: O.marginBottom40,
                   children: [
-                      (0, i.jsx)(c.FormTitle, {
-                          tag: c.FormTitleTags.H5,
-                          className: N.marginBottom8,
-                          children: b.intl.string(b.t['4F2KoK'])
+                      (0, i.jsx)(m.FormTitle, {
+                          tag: m.FormTitleTags.H5,
+                          className: O.marginBottom8,
+                          children: A.intl.string(A.t['4F2KoK'])
                       }),
-                      (0, i.jsx)(c.TextInput, {
-                          className: I.searchInput,
+                      (0, i.jsx)(m.TextInput, {
+                          className: j.searchInput,
                           value: n,
                           onChange: s,
-                          placeholder: b.intl.string(b.t.WPrtoa)
+                          placeholder: A.intl.string(A.t.WPrtoa)
                       }),
-                      o.map((e) => (0, i.jsx)(R, { account: e }, e.id))
+                      a.map((e) => (0, i.jsx)(Z, { account: e }, e.id))
                   ]
               })
           });
 }
-function y(e) {
+function M(e) {
     let { className: t, showHeader: n = !0 } = e,
-        { showRedesign: r } = E.b.useExperiment({ location: 'activity privacy tab' });
-    return (0, i.jsxs)(c.FormSection, {
+        { showRedesign: r } = b.b.useExperiment({ location: 'activity privacy tab' });
+    return (0, i.jsxs)(m.FormSection, {
         className: t,
-        tag: c.FormTitleTags.H1,
-        title: n ? b.intl.string(b.t.Cq98yM) : null,
-        children: [(0, i.jsx)(v, {}), (0, i.jsx)(A, {}), (0, i.jsx)(j, {}), r && (0, i.jsx)(P, {})]
+        tag: m.FormTitleTags.H1,
+        title: n ? A.intl.string(A.t.Cq98yM) : null,
+        children: [(0, i.jsx)(P, {}), (0, i.jsx)(y, {}), (0, i.jsx)(B, {}), r && (0, i.jsx)(L, {})]
     });
 }

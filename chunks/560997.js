@@ -5,6 +5,9 @@ r.d(n, {
     R2: function () {
         return f;
     },
+    TG: function () {
+        return _;
+    },
     Zc: function () {
         return c;
     }
@@ -23,7 +26,7 @@ function c(e, n, r, a) {
         c = () => (0, i.e7)([l.Z], s);
     return {
         getSetting: s,
-        updateSetting: _(s, (r) =>
+        updateSetting: h(s, (r) =>
             o.hW.updateAsync(
                 e,
                 (e) => {
@@ -51,7 +54,7 @@ function d(e, n, r) {
                 });
             return null != o ? o : a;
         },
-        updateSetting: _(o, (i) =>
+        updateSetting: h(o, (i) =>
             s.Z.shouldSync(n)
                 ? e.updateSetting(i)
                 : (a.Z.dispatch({
@@ -74,7 +77,7 @@ function f(e, n, r, i) {
                 r = i();
             return null != r ? r : n;
         },
-        updateSetting: _(
+        updateSetting: h(
             s,
             (r) => (
                 a.Z.dispatch({
@@ -86,7 +89,24 @@ function f(e, n, r, i) {
         )
     };
 }
-function _(e, n) {
+function _(e) {
+    let { baseSetting: n, getExperimentConfig: r, useExperimentConfig: i, eligibleDefault: a, ineligibleDefault: s } = e;
+    return {
+        getSetting: () => {
+            let e = n.getSetting();
+            if (null != e) return e;
+            let i = r();
+            return i.enabled ? a(i) : s();
+        },
+        useSetting: () => {
+            let e = n.useSetting(),
+                r = i();
+            return null != e ? e : r.enabled ? a(r) : s();
+        },
+        updateSetting: n.updateSetting
+    };
+}
+function h(e, n) {
     return function (r) {
         return 'function' == typeof r ? n(r(e())) : n(r);
     };
