@@ -1,9 +1,9 @@
 r.d(n, {
     Z: function () {
-        return q;
+        return Y;
     },
     d: function () {
-        return X;
+        return K;
     }
 });
 var i = r(653041);
@@ -38,49 +38,31 @@ var u = r(512722),
     w = r(823379),
     P = r(861990),
     M = r(555573),
-    k = r(174212),
+    k = r(160062),
     U = r(456007),
     B = r(10718),
     G = r(998698),
     F = r(895924),
     Z = r(581364),
-    V = r(689079),
-    j = r(981631),
-    H = r(959517),
-    Y = r(388032);
-let W = (e, n) => {
-        var r;
-        return null == e ? void 0 : null === (r = e.find((e) => e.displayName === n)) || void 0 === r ? void 0 : r.value;
-    },
-    K = function (e, n, r) {
-        var i, a;
-        let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (e) => e;
-        if (e.name === (null === (i = r.autocomplete) || void 0 === i ? void 0 : i.name)) return r.autocomplete.query;
-        if ('' === n) return null;
-        let o = k.Z.getAutocompleteLastChoices(r.channel.id, e.name);
-        return null != o ? (null !== (a = W(o, n)) && void 0 !== a ? a : s(n)) : s(n);
-    },
-    z = (e) => {
-        let n = e.toLowerCase() === V.WO.toLowerCase(),
-            r = e.toLowerCase() === V.Lu.toLowerCase();
-        return n || r ? n : null;
-    };
-async function q(e) {
+    V = r(981631),
+    j = r(959517),
+    H = r(388032);
+async function Y(e) {
     var n, r, i, a, s, o, l, u, f, h, m, g, I, T, b, y, S;
-    let { command: A, optionValues: N, context: O, commandTargetId: L, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: k = ee, source: B, clientSupportsContextlessActivityLaunch: V } = e,
-        H = null !== (i = G.Z.getSource(O.channel.id)) && void 0 !== i ? i : B,
-        Y = null !== (a = G.Z.getCommandOrigin(O.channel.id)) && void 0 !== a ? a : w;
+    let { command: A, optionValues: N, context: O, commandTargetId: L, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: B = Q, source: j, clientSupportsContextlessActivityLaunch: H } = e,
+        Y = null !== (i = G.Z.getSource(O.channel.id)) && void 0 !== i ? i : j,
+        K = null !== (a = G.Z.getCommandOrigin(O.channel.id)) && void 0 !== a ? a : w;
     null == O.autocomplete &&
         d.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
             context: O,
             command: A,
-            commandOrigin: Y
+            commandOrigin: K
         }),
         await C.Z.unarchiveThreadIfNecessary(O.channel.id);
     let q = [],
-        X = [],
-        $ = (0, Z.D7)(Y);
+        J = [],
+        $ = (0, Z.D7)(K);
     if (null != A.options)
         for (let e of A.options) {
             if (e.type === p.jw.SUB_COMMAND || e.type === p.jw.SUB_COMMAND_GROUP || !(e.name in N)) continue;
@@ -88,7 +70,8 @@ async function q(e) {
                 r = null;
             if (e.type === p.jw.STRING) {
                 let i = null !== (l = null === (o = U.li(N, e.name)) || void 0 === o ? void 0 : o.trim()) && void 0 !== l ? l : '';
-                (r = null != e.choices ? W(e.choices, i) : e.autocomplete ? K(e, i, O) : i),
+                null != e.choices ? (r = (0, k.cT)(e.choices, i)) : e.autocomplete && (r = null != O.autocomplete && n ? O.autocomplete.query : (0, k.Wv)(O.channel.id, e.name, i)),
+                    null == r && (r = i),
                     c()(null != O.autocomplete || null != r, 'Option "'.concat(e.name, '" expects a value')),
                     null != r &&
                         q.push({
@@ -103,8 +86,8 @@ async function q(e) {
                 if (null != O.autocomplete) continue;
                 let r = D.Z.getUpload(O.channel.id, e.name, $);
                 if (null == r) continue;
-                let i = X.length;
-                X.push(r),
+                let i = J.length;
+                J.push(r),
                     q.push({
                         type: e.type,
                         name: e.name,
@@ -166,18 +149,18 @@ async function q(e) {
                     }
                     break;
                 case p.jw.BOOLEAN:
-                    'text' === a.type && (r = z(a.text.trim()));
+                    'text' === a.type && (r = (0, k.Kl)(a.text.trim()));
                     break;
                 case p.jw.INTEGER:
                     if ('text' === a.type) {
-                        let n = a.text.trim();
-                        r = null != e.choices ? Number(W(e.choices, n)) : e.autocomplete ? K(e, n, O, Number) : Number(U.AS(R.default.locale, n));
+                        let i = a.text.trim();
+                        null != e.choices ? (r = (0, k.l1)(e.choices, i)) : e.autocomplete && (r = null != O.autocomplete && n ? O.autocomplete.query : (0, k.xg)(O.channel.id, e.name, i)), null == r && (r = Number(U.AS(R.default.locale, i)));
                     }
                     break;
                 case p.jw.NUMBER:
                     if ('text' === a.type) {
-                        let n = a.text.trim();
-                        r = null != e.choices ? Number(W(e.choices, n)) : e.autocomplete ? K(e, n, O, Number) : Number(U.AS(R.default.locale, n));
+                        let i = a.text.trim();
+                        null != e.choices ? (r = (0, k.l1)(e.choices, i)) : e.autocomplete && (r = null != O.autocomplete && n ? O.autocomplete.query : (0, k.xg)(O.channel.id, e.name, i)), null == r && (r = Number(U.AS(R.default.locale, i)));
                     }
                     break;
                 default:
@@ -206,17 +189,17 @@ async function q(e) {
         }
     if (null != A.execute)
         return (
-            E.ZP.trackWithMetadata(j.rMx.APPLICATION_COMMAND_USED, {
+            E.ZP.trackWithMetadata(V.rMx.APPLICATION_COMMAND_USED, {
                 command_id: A.id,
                 application_id: A.applicationId,
                 command_type: A.type,
-                location: et(Y),
-                source: H
+                location: X(K),
+                source: Y
             }),
             A.execute(q, O)
         );
     if (A.inputType === F.iw.BUILT_IN || A.inputType === F.iw.BUILT_IN_TEXT || A.inputType === F.iw.BUILT_IN_INTEGRATION) return;
-    let en = {
+    let ee = {
             version: A.version,
             id: null !== (y = null === (n = A.rootCommand) || void 0 === n ? void 0 : n.id) && void 0 !== y ? y : A.id,
             guild_id: A.guildId,
@@ -225,28 +208,28 @@ async function q(e) {
             options: q,
             application_command: A.rootCommand
         },
-        er = () => {
-            Q(N);
+        et = () => {
+            W(N);
         };
-    null != L && (en.target_id = L),
-        V && (en.client_supports_contextless_activity_launch = !0),
+    null != L && (ee.target_id = L),
+        H && (ee.client_supports_contextless_activity_launch = !0),
         null != O.autocomplete
-            ? (0, M.GV)(A, O, en)
+            ? (0, M.GV)(A, O, ee)
             : (_.Z.clearAll(O.channel.id, $),
-              J({
+              z({
                   applicationId: A.applicationId,
-                  data: en,
+                  data: ee,
                   context: O,
-                  attachments: X,
+                  attachments: J,
                   maxSizeCallback: x,
-                  onMessageSuccess: er,
-                  analytics_location: et(Y),
+                  onMessageSuccess: et,
+                  analytics_location: X(K),
                   sectionName: P,
-                  source: H,
-                  interactionLifecycleOptions: await k(A, O, en)
+                  source: Y,
+                  interactionLifecycleOptions: await B(A, O, ee)
               }));
 }
-let Q = (e) => {
+let W = (e) => {
         let n = Object.values(e).flatMap((e) =>
             e
                 .map((e) =>
@@ -268,21 +251,21 @@ let Q = (e) => {
                 emojiUsed: n
             });
     },
-    X = async (e, n, r) => {
+    K = async (e, n, r) => {
         if (e.isCommandType() && null != e.interactionData && null != r.command) {
             let i = {
                 channel: n,
                 guild: null != n.guild_id ? O.Z.getGuild(n.guild_id) : null
             };
-            J({
+            z({
                 applicationId: r.command.applicationId,
                 data: e.interactionData,
                 context: i,
-                interactionLifecycleOptions: await ee(r.command, i, e.interactionData)
+                interactionLifecycleOptions: await Q(r.command, i, e.interactionData)
             });
         }
     },
-    J = (e) => {
+    z = (e) => {
         var n;
         let { applicationId: r, data: i, context: a, attachments: s, maxSizeCallback: o, onMessageSuccess: l, analytics_location: u, sectionName: c, source: d, interactionLifecycleOptions: f } = e,
             { channel: _, guild: h } = a,
@@ -311,12 +294,12 @@ let Q = (e) => {
             }
         }),
             null != s
-                ? er(s, E.nonce, g, o).then((e) => {
-                      if (!!e) $(E, l);
+                ? $(s, E.nonce, g, o).then((e) => {
+                      if (!!e) q(E, l);
                   })
-                : $(E, l);
+                : q(E, l);
     };
-function $(e, n) {
+function q(e, n) {
     m.ZP.enqueue(
         {
             type: m.$V.COMMAND,
@@ -328,7 +311,7 @@ function $(e, n) {
         }
     );
 }
-async function ee(e, n, r) {
+async function Q(e, n, r) {
     var i;
     let a = B.Nk(n.channel, r.type, e.applicationId);
     if (null == a) return {};
@@ -341,14 +324,14 @@ async function ee(e, n, r) {
         ...(0, A.ZP)({
             channelId: n.channel.id,
             content: '',
-            type: r.type === p.yU.CHAT ? j.uaV.CHAT_INPUT_COMMAND : j.uaV.CONTEXT_MENU_COMMAND,
+            type: r.type === p.yU.CHAT ? V.uaV.CHAT_INPUT_COMMAND : V.uaV.CONTEXT_MENU_COMMAND,
             author:
                 null != s
                     ? s
                     : {
                           id: a.id,
                           username: a.name,
-                          discriminator: j.fo$,
+                          discriminator: V.fo$,
                           avatar: null,
                           bot: !0
                       }
@@ -393,7 +376,7 @@ async function ee(e, n, r) {
         }
     );
 }
-function et(e) {
+function X(e) {
     switch (e) {
         case F.bB.APPLICATION_LAUNCHER:
             return F.Vh.APP_LAUNCHER;
@@ -417,7 +400,7 @@ function et(e) {
             return F.Vh.SLASH_UI;
     }
 }
-async function en(e, n) {
+async function J(e, n) {
     let r = 0,
         i = 0;
     for (let s of e) {
@@ -430,18 +413,18 @@ async function en(e, n) {
         largestUploadedFileSize: i
     };
 }
-async function er(e, n, r, i) {
+async function $(e, n, r, i) {
     let a = e,
         s = (0, x.dg)(r),
         o = (e) => {
-            null == i || i(s, e), y.yr(n, j.evJ.ENTITY_TOO_LARGE, Y.intl.formatToPlainString(Y.t.fxEKdX, { maxSize: (0, x.Ng)(s) }));
+            null == i || i(s, e), y.yr(n, V.evJ.ENTITY_TOO_LARGE, H.intl.formatToPlainString(H.t.fxEKdX, { maxSize: (0, x.Ng)(s) }));
         },
-        { totalSize: l, largestUploadedFileSize: u } = await en(a, !1);
-    if (u > Math.max(s, H.Y1) || l > P.zz) return o(u), !1;
+        { totalSize: l, largestUploadedFileSize: u } = await J(a, !1);
+    if (u > Math.max(s, j.Y1) || l > P.zz) return o(u), !1;
     try {
         await (0, g.$)(a);
     } catch {
-        y.yr(n, void 0, Y.intl.formatToPlainString(Y.t['9h1/1t'], { count: a.length }));
+        y.yr(n, void 0, H.intl.formatToPlainString(H.t['9h1/1t'], { count: a.length }));
     }
-    return ({ totalSize: l, largestUploadedFileSize: u } = await en(a, !0)), (!a.some((e) => e.error === j.evJ.ENTITY_TOO_LARGE) && !(l > P.zz)) || (o(u), !1);
+    return ({ totalSize: l, largestUploadedFileSize: u } = await J(a, !0)), (!a.some((e) => e.error === V.evJ.ENTITY_TOO_LARGE) && !(l > P.zz)) || (o(u), !1);
 }
