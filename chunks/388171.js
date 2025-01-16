@@ -1,0 +1,21 @@
+e.exports = {
+    settingCard: 'settingCard_dd864e',
+    active: 'active_dd864e',
+    shield: 'shield_dd864e ' + n('864435').desaturateUserColors,
+    cardIcon: 'cardIcon_dd864e',
+    cardFolder: 'cardFolder_dd864e',
+    adminWarning: 'adminWarning_dd864e',
+    folderHeader: 'folderHeader_dd864e',
+    folderTitle: 'folderTitle_dd864e',
+    sectionTitle: 'sectionTitle_dd864e',
+    roleMemberList: 'roleMemberList_dd864e',
+    divider: 'divider_dd864e',
+    memberRow: 'memberRow_dd864e',
+    rowHeight: 'rowHeight_dd864e',
+    rowLabel: 'rowLabel_dd864e',
+    rowBotTag: 'rowBotTag_dd864e',
+    rowLabelSubText: 'rowLabelSubText_dd864e',
+    removeIconContainer: 'removeIconContainer_dd864e',
+    removeIcon: 'removeIcon_dd864e',
+    disabledRemoveIcon: 'disabledRemoveIcon_dd864e'
+};

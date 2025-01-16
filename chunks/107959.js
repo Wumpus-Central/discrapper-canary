@@ -1,0 +1,23 @@
+e.exports = {
+    emptyRoles: 'emptyRoles_a930f1',
+    emptyRolesText: 'emptyRolesText_a930f1',
+    roleRow: 'roleRow_a930f1',
+    roleRowDragging: 'roleRowDragging_a930f1',
+    dragIcon: 'dragIcon_a930f1',
+    roleNameContainer: 'roleNameContainer_a930f1',
+    shield: 'shield_a930f1 ' + n('864435').desaturateUserColors,
+    roleIcon: 'roleIcon_a930f1',
+    lock: 'lock_a930f1',
+    subscriptionRoleIcon: 'subscriptionRoleIcon_a930f1',
+    roleName: 'roleName_a930f1',
+    memberCountContainer: 'memberCountContainer_a930f1',
+    person: 'person_a930f1',
+    buttonsContainer: 'buttonsContainer_a930f1',
+    editButton: 'editButton_a930f1',
+    circleButton: 'circleButton_a930f1',
+    roleRowDisableHover: 'roleRowDisableHover_a930f1',
+    dragIconHidden: 'dragIconHidden_a930f1',
+    containerDragBefore: 'containerDragBefore_a930f1',
+    containerDragAfter: 'containerDragAfter_a930f1',
+    roleFlowerStar: 'roleFlowerStar_a930f1'
+};

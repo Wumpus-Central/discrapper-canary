@@ -1,22 +1,15 @@
-e.exports = {
-    container: 'container_db0691',
-    overviewSidebarWrapper: 'overviewSidebarWrapper_db0691',
-    fullHeight: 'fullHeight_db0691',
-    signatureBlock: 'signatureBlock_db0691',
-    signatureContainer: 'signatureContainer_db0691',
-    signatureText: 'signatureText_db0691',
-    overviewSidebarContent: 'overviewSidebarContent_db0691',
-    scrollContentContainer: 'scrollContentContainer_db0691',
-    signHintAnimationContainer: 'signHintAnimationContainer_db0691',
-    signContainerButton: 'signContainerButton_db0691',
-    signTextLeft: 'signTextLeft_db0691',
-    signButton: 'signButton_db0691',
-    signCarot: 'signCarot_db0691',
-    signCarotCustomColors: 'signCarotCustomColors_db0691',
-    signTextRight: 'signTextRight_db0691',
-    signHintHelperText: 'signHintHelperText_db0691',
-    clickable: 'clickable_db0691',
-    signHintContainer: 'signHintContainer_db0691',
-    noDisplay: 'noDisplay_db0691',
-    signatureBlockContainer: 'signatureBlockContainer_db0691'
-};
+t.d(n, {
+    Z: function () {
+        return l;
+    }
+});
+var a = t(200651),
+    i = t(648113),
+    r = t(358459);
+function l() {
+    let e = (0, i.C)();
+    return (0, a.jsxs)('div', {
+        className: r.gradientBackground,
+        children: [(0, a.jsx)('div', { className: e }), (0, a.jsx)('div', { className: r.gradientOverlay })]
+    });
+}
