@@ -1773,4 +1773,10 @@ H(
             type: 'CONTENT_INVENTORY_INBOX_STALE',
             refreshAfterMs: e.refresh_after_ms
         });
+    }),
+    j(['VIRTUAL_CURRENCY_BALANCE_UPDATE'], (e) => {
+        W({
+            type: 'VIRTUAL_CURRENCY_BALANCE_UPDATE',
+            balance: e.balance
+        });
     });

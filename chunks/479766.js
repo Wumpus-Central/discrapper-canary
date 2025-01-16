@@ -48,6 +48,10 @@ class l extends (i = r.ZP.Store) {
         let { error: t } = e;
         (this._isFetchingBalance = !1), (this._fetchBalanceError = t);
     }
+    handleBalanceUpdate(e) {
+        let { balance: t } = e;
+        this._balance = t;
+    }
     handleRedeemVirtualCurrencyStart(e) {
         let { skuId: t } = e;
         (this._entitlements = null), (this._redeemingSkuId = t), (this._redeemVirtualCurrencyError = null), (this._isRedeemingVirtualCurrency = !0);
@@ -67,7 +71,8 @@ class l extends (i = r.ZP.Store) {
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
             VIRTUAL_CURRENCY_BALANCE_FETCH: (e) => this.handleBalanceFetch(e),
             VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS: (e) => this.handleBalanceFetchSuccess(e),
-            VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL: (e) => this.handleBalanceFetchFail(e)
+            VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL: (e) => this.handleBalanceFetchFail(e),
+            VIRTUAL_CURRENCY_BALANCE_UPDATE: (e) => this.handleBalanceUpdate(e)
         }),
             a(this, '_entitlements', null),
             a(this, '_redeemingSkuId', null),
