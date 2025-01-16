@@ -10,11 +10,11 @@ let o = (e) => Math.round(4 * e) / 4,
                 y: 0.9 * e.h,
                 x: 0.3 * e.w
             }),
-            [a, i] = n.useState(1100),
+            [a, i] = n.useState(1400),
             [u, l] = n.useState(0.94),
             [o, s] = n.useState(110),
             [c, d] = n.useState(60),
-            [f, m] = n.useState(600);
+            [f, h] = n.useState(600);
         return (
             n.useEffect(() => {
                 r({
@@ -29,12 +29,12 @@ let o = (e) => Math.round(4 * e) / 4,
                 Y_POS: o,
                 PARTICLES_PER_EMISSION: c,
                 MAX_PARTICLES: f,
-                improvePerformance: n.useCallback(() => (d((e) => Math.max(3, Math.floor(0.75 * e))), m((e) => Math.max(6, Math.floor(0.8 * e))), !0), [])
+                improvePerformance: n.useCallback(() => (d((e) => Math.max(3, Math.floor(0.75 * e))), h((e) => Math.max(6, Math.floor(0.8 * e))), !0), [])
             }
         );
     };
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: r, DRAG: c, Y_POS: d, PARTICLES_PER_EMISSION: f, MAX_PARTICLES: m, improvePerformance: h } = s(e),
+    let { SPEED: t, GRAVITY: r, DRAG: c, Y_POS: d, PARTICLES_PER_EMISSION: f, MAX_PARTICLES: h, improvePerformance: m } = s(e),
         w = n.useRef([]),
         p = n.useRef(!1);
     return {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                 w.current.forEach((e) => {
                     var r;
                     let { x: n, y: a } = e.position;
-                    if ((e.scale > 1 && t.setFilter({ blur: o((e.scale - 1) * 2) }), null === (r = t.assetMap) || void 0 === r ? void 0 : r.has(e.key))) {
+                    if ((e.scale > 1 && t.setFilter({ blur: o((e.scale - 1) * 1.5) }), null === (r = t.assetMap) || void 0 === r ? void 0 : r.has(e.key))) {
                         let r = {
                                 w: 32 * e.scale,
                                 h: 32 * e.scale
@@ -108,20 +108,22 @@ t.Z = (e) => {
         },
         emit: (r, n) => {
             l.default.isProbablyAValidSnowflake(r);
-            if (w.current.length >= m) return;
+            if (w.current.length >= h) return;
             let i = 0 === n.x && 0 === n.y && 0 === n.w && 0 === n.h,
                 u = {
                     min: e.h / 8,
                     max: e.h / 3
-                };
+                },
+                o = n.y < 0.66 * e.h ? Math.max(0.2, n.y / (0.66 * e.h)) : 1,
+                s = 1 + (1 - o);
             for (let l = 0; l < f; l++) {
                 let l;
-                let o = {
-                        x: (0, a.random)(-t.x, t.x, !0),
-                        y: t.y + (0, a.random)(-u.min, u.max, !0)
+                let c = {
+                        x: (0, a.random)(-t.x * s, t.x * s, !0),
+                        y: t.y * o + (0, a.random)(-u.min, u.max, !0)
                     },
-                    s = (0, a.random)(0, 30),
-                    c = Math.atan2(-t.y - (0, a.random)(-u.min, u.max, !0), (0, a.random)(-t.x, t.x, !0)) * (0, a.random)(-50, 50);
+                    f = (0, a.random)(0, 30),
+                    h = Math.atan2(-t.y - (0, a.random)(-u.min, u.max, !0), (0, a.random)(-t.x, t.x, !0)) * (0, a.random)(-50, 50);
                 if (i)
                     l = {
                         x: e.w / 2 + (0, a.random)(-50, 50),
@@ -138,16 +140,16 @@ t.Z = (e) => {
                 w.current.push({
                     key: r,
                     position: l,
-                    velocity: o,
+                    velocity: c,
                     scale: (0, a.random)(0.8, 2),
-                    rotation: s,
-                    angularVelocity: c
+                    rotation: f,
+                    angularVelocity: h
                 }),
                     w.current.sort((e, t) => e.scale - t.scale);
             }
             p.current = !0;
         },
-        improvePerformance: h,
+        improvePerformance: m,
         shouldTick: p
     };
 };
