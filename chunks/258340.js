@@ -1,37 +1,53 @@
-n(653041);
-var r = n(192379),
-    i = n(392711),
-    a = n(633302),
-    u = n(960048);
-let l = (e) => Math.round(4 * e) / 4,
-    c = (e) => {
-        let t = {
-            y: 0.9 * e.h,
-            x: 0.3 * e.w
-        };
-        return {
-            SPEED: t,
-            GRAVITY: 1100,
-            DRAG: 0.94,
-            Y_POS: 110,
-            MAX_PARTICLES: 600
-        };
+r(47120), r(653041);
+var n = r(192379),
+    a = r(392711),
+    i = r(633302),
+    u = r(960048),
+    l = r(709054);
+let o = (e) => Math.round(4 * e) / 4,
+    s = (e) => {
+        let [t, r] = n.useState({
+                y: 0.9 * e.h,
+                x: 0.3 * e.w
+            }),
+            [a, i] = n.useState(1100),
+            [u, l] = n.useState(0.94),
+            [o, s] = n.useState(110),
+            [c, d] = n.useState(60),
+            [f, m] = n.useState(600);
+        return (
+            n.useEffect(() => {
+                r({
+                    y: 0.9 * e.h,
+                    x: 0.3 * e.w
+                });
+            }, [e.h, e.w]),
+            {
+                SPEED: t,
+                GRAVITY: a,
+                DRAG: u,
+                Y_POS: o,
+                PARTICLES_PER_EMISSION: c,
+                MAX_PARTICLES: f,
+                improvePerformance: n.useCallback(() => (d((e) => Math.max(3, Math.floor(0.75 * e))), m((e) => Math.max(6, Math.floor(0.8 * e))), !0), [])
+            }
+        );
     };
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: n, DRAG: o, Y_POS: s, MAX_PARTICLES: d } = c(e),
-        f = r.useRef([]),
-        h = r.useRef(!1);
+    let { SPEED: t, GRAVITY: r, DRAG: c, Y_POS: d, PARTICLES_PER_EMISSION: f, MAX_PARTICLES: m, improvePerformance: h } = s(e),
+        w = n.useRef([]),
+        p = n.useRef(!1);
     return {
         update: (t) => {
-            let r = [];
+            let n = [];
             if (
-                (f.current.forEach((i, a) => {
-                    (i.position.x -= i.velocity.x * t), (i.position.y -= i.velocity.y * t), (i.velocity.x *= o ** t), (i.velocity.y *= o ** t), (i.rotation += i.angularVelocity * t), (i.velocity.y -= n * t), i.position.y > e.h && r.push(a);
+                (w.current.forEach((a, i) => {
+                    (a.position.x -= a.velocity.x * t), (a.position.y -= a.velocity.y * t), (a.velocity.x *= c ** t), (a.velocity.y *= c ** t), (a.rotation += a.angularVelocity * t), (a.velocity.y -= r * t), a.position.y > e.h && n.push(i);
                 }),
-                r.length > 0)
+                n.length > 0)
             ) {
-                let e = f.current.filter((e, t) => !r.includes(t));
-                (f.current = e), 0 === f.current.length && (h.current = !1);
+                let e = w.current.filter((e, t) => !n.includes(t));
+                (w.current = e), 0 === w.current.length && (p.current = !1);
             }
         },
         draw: (t) => {
@@ -41,45 +57,45 @@ t.Z = (e) => {
                 w: e.w,
                 h: e.h
             }),
-                f.current.forEach((e) => {
-                    var n;
-                    let { x: r, y: i } = e.position;
-                    if ((e.scale > 1 && t.setFilter({ blur: l((e.scale - 1) * 2) }), null === (n = t.assetMap) || void 0 === n ? void 0 : n.has(e.key))) {
-                        let n = {
+                w.current.forEach((e) => {
+                    var r;
+                    let { x: n, y: a } = e.position;
+                    if ((e.scale > 1 && t.setFilter({ blur: o((e.scale - 1) * 2) }), null === (r = t.assetMap) || void 0 === r ? void 0 : r.has(e.key))) {
+                        let r = {
                                 w: 32 * e.scale,
                                 h: 32 * e.scale
                             },
-                            a = {
-                                x: r + n.w / 2,
-                                y: i + n.h / 2
+                            i = {
+                                x: n + r.w / 2,
+                                y: a + r.h / 2
                             };
-                        t.rotateAroundOriginAndDraw(a, e.rotation, () =>
+                        t.rotateAroundOriginAndDraw(i, e.rotation, () =>
                             t.drawImage(
                                 e.key,
                                 {
                                     x: 0,
                                     y: 0
                                 },
-                                n
+                                r
                             )
                         );
                     } else {
-                        let n = a.ZP.contentHasUnicodeOrEmoji(e.key),
+                        let r = i.ZP.contentHasUnicodeOrEmoji(e.key),
                             l = 24 * e.scale,
-                            c = {
-                                x: r + l / 2,
-                                y: i + l / 2
+                            o = {
+                                x: n + l / 2,
+                                y: a + l / 2
                             };
-                        null != n
+                        null != r
                             ? (t.setFont({ size: l }),
-                              t.rotateAroundOriginAndDraw(c, e.rotation, () =>
+                              t.rotateAroundOriginAndDraw(o, e.rotation, () =>
                                   t.drawText(e.key, {
                                       x: 0,
                                       y: 0
                                   })
                               ))
                             : (t.setFont({ size: l }),
-                              t.rotateAroundOriginAndDraw(c, e.rotation, () =>
+                              t.rotateAroundOriginAndDraw(o, e.rotation, () =>
                                   t.drawText('\uD83C\uDF89', {
                                       x: 0,
                                       y: 0
@@ -90,46 +106,48 @@ t.Z = (e) => {
                     t.setFilter({ blur: 0 });
                 });
         },
-        emit: (n, r, a) => {
-            if (f.current.length >= d) return;
-            let u = 0 === a.x && 0 === a.y && 0 === a.w && 0 === a.h,
-                l = {
+        emit: (r, n) => {
+            l.default.isProbablyAValidSnowflake(r);
+            if (w.current.length >= m) return;
+            let i = 0 === n.x && 0 === n.y && 0 === n.w && 0 === n.h,
+                u = {
                     min: e.h / 8,
                     max: e.h / 3
                 };
-            for (let c = 0; c < r; c++) {
-                let r;
-                let c = {
-                        x: (0, i.random)(-t.x, t.x, !0),
-                        y: t.y + (0, i.random)(-l.min, l.max, !0)
+            for (let l = 0; l < f; l++) {
+                let l;
+                let o = {
+                        x: (0, a.random)(-t.x, t.x, !0),
+                        y: t.y + (0, a.random)(-u.min, u.max, !0)
                     },
-                    o = (0, i.random)(0, 30),
-                    d = Math.atan2(-t.y - (0, i.random)(-l.min, l.max, !0), (0, i.random)(-t.x, t.x, !0)) * (0, i.random)(-50, 50);
-                if (u)
-                    r = {
-                        x: e.w / 2 + (0, i.random)(-50, 50),
-                        y: e.h - s + (0, i.random)(-50, 50)
+                    s = (0, a.random)(0, 30),
+                    c = Math.atan2(-t.y - (0, a.random)(-u.min, u.max, !0), (0, a.random)(-t.x, t.x, !0)) * (0, a.random)(-50, 50);
+                if (i)
+                    l = {
+                        x: e.w / 2 + (0, a.random)(-50, 50),
+                        y: e.h - d + (0, a.random)(-50, 50)
                     };
                 else {
-                    let e = a.h / 4,
-                        t = a.h / 4;
-                    r = {
-                        x: a.x + a.w / 2 + (0, i.random)(-t, t),
-                        y: a.y + a.h / 2 + (0, i.random)(-e, e)
+                    let e = n.h / 4,
+                        t = n.h / 4;
+                    l = {
+                        x: n.x + n.w / 2 + (0, a.random)(-t, t),
+                        y: n.y + n.h / 2 + (0, a.random)(-e, e)
                     };
                 }
-                f.current.push({
-                    key: n,
-                    position: r,
-                    velocity: c,
-                    scale: (0, i.random)(0.8, 2),
-                    rotation: o,
-                    angularVelocity: d
+                w.current.push({
+                    key: r,
+                    position: l,
+                    velocity: o,
+                    scale: (0, a.random)(0.8, 2),
+                    rotation: s,
+                    angularVelocity: c
                 }),
-                    f.current.sort((e, t) => e.scale - t.scale);
+                    w.current.sort((e, t) => e.scale - t.scale);
             }
-            h.current = !0;
+            p.current = !0;
         },
-        shouldTick: h
+        improvePerformance: h,
+        shouldTick: p
     };
 };
