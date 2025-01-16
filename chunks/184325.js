@@ -28,21 +28,21 @@ var a = r(200651),
 let N = (e) => {
     if (null != e)
         switch (e) {
-            case y.VU.PREMIUM_TENURE_1_MONTH:
+            case y.JN.PREMIUM_TENURE_1_MONTH:
                 return A.tieredTenureBadgeBronzeGlow;
-            case y.VU.PREMIUM_TENURE_3_MONTH:
+            case y.JN.PREMIUM_TENURE_3_MONTH:
                 return A.tieredTenureBadgeSilverGlow;
-            case y.VU.PREMIUM_TENURE_6_MONTH:
+            case y.JN.PREMIUM_TENURE_6_MONTH:
                 return A.tieredTenureBadgeGoldGlow;
-            case y.VU.PREMIUM_TENURE_12_MONTH:
+            case y.JN.PREMIUM_TENURE_12_MONTH:
                 return A.tieredTenureBadgePlatinumGlow;
-            case y.VU.PREMIUM_TENURE_24_MONTH:
+            case y.JN.PREMIUM_TENURE_24_MONTH:
                 return A.tieredTenureBadgeDiamondGlow;
-            case y.VU.PREMIUM_TENURE_36_MONTH:
+            case y.JN.PREMIUM_TENURE_36_MONTH:
                 return A.tieredTenureBadgeEmeraldGlow;
-            case y.VU.PREMIUM_TENURE_60_MONTH:
+            case y.JN.PREMIUM_TENURE_60_MONTH:
                 return A.tieredTenureBadgeRubyGlow;
-            case y.VU.PREMIUM_TENURE_72_MONTH:
+            case y.JN.PREMIUM_TENURE_72_MONTH:
                 return A.tieredTenureBadgeFireGlow;
             default:
                 return;

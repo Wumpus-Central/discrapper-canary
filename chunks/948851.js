@@ -34,7 +34,7 @@ function h(e) {
 let g = a.ZP.getMaxUsesOptions;
 function m(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: i, maxUses: a, temporary: m, onGenerateNewLink: v, onToggleTemporary: x, onSelectMaxAge: p, onSelectMaxUses: I } = e,
+    let { shouldHideTemporaryInviteToggle: n, maxAge: i, maxUses: a, temporary: m, onGenerateNewLink: v, onToggleTemporary: p, onSelectMaxAge: x, onSelectMaxUses: I } = e,
         S = c.find((e) => e.value === i),
         T = g.find((e) => e.value === a);
     return (0, l.jsx)('div', {
@@ -48,7 +48,7 @@ function m(e) {
                     children: (0, l.jsx)(s.SingleSelect, {
                         value: null !== (t = null == S ? void 0 : S.value) && void 0 !== t ? t : c[0].value,
                         options: c,
-                        onChange: p,
+                        onChange: x,
                         maxVisibleItems: 8
                     })
                 }),
@@ -64,7 +64,7 @@ function m(e) {
                 (0, l.jsx)(h, {
                     temporary: m,
                     shouldHide: n,
-                    onToggleTemporary: x
+                    onToggleTemporary: p
                 })
             ]
         })

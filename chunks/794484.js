@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(410154),
     u = n(314684),
     m = n(687362),
-    g = n(32173),
-    h = n(976465),
+    g = n(119850),
+    h = n(32173),
     p = n(391110),
     x = n(75077),
     f = n(320319),
@@ -54,7 +54,7 @@ t.Z = (e) => {
         O = (0, d.ZP)('perks-discoverability'),
         R = C === p.R0.WHATS_NEW,
         P = (0, u.IY)(),
-        y = (0, h.x$)();
+        y = (0, g.x)();
     r.useEffect(() => {
         R && !j && (P(), y());
     }, [P, y, R, j]),
@@ -69,7 +69,7 @@ t.Z = (e) => {
             };
         }, [v, j, R, P]);
     let B = (0, x.Op)(R),
-        D = (0, g.Z)(),
+        D = (0, h.Z)(),
         Z = (0, x.mN)(),
         { fractionalState: L } = (0, c.Z)(),
         M = (0, x.sP)({
@@ -86,7 +86,7 @@ t.Z = (e) => {
         F = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            ((null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === g.u.FREE_BOOST || (null == D ? void 0 : null === (n = D.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === g.u.TENURE_REWARD_COLLECTIBLE) &&
+            ((null == D ? void 0 : null === (t = D.freeBoost) || void 0 === t ? void 0 : t.name) === h.u.FREE_BOOST || (null == D ? void 0 : null === (n = D.tenureRewardCollectible) || void 0 === n ? void 0 : n.name) === h.u.TENURE_REWARD_COLLECTIBLE) &&
                 (0, i.jsx)(l.O_, {
                     ref: U,
                     className: _.confettiCanvas,
@@ -137,7 +137,7 @@ t.Z = (e) => {
                             (0, i.jsx)(
                                 f.Z,
                                 {
-                                    confettiCanvas: e.name === g.u.FREE_BOOST || e.name === g.u.TENURE_REWARD_COLLECTIBLE ? w : void 0,
+                                    confettiCanvas: e.name === h.u.FREE_BOOST || e.name === h.u.TENURE_REWARD_COLLECTIBLE ? w : void 0,
                                     ...e,
                                     forceShadow: T
                                 },

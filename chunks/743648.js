@@ -2,56 +2,56 @@ t.r(a);
 var d = t(200651);
 t(192379);
 var s = t(120356),
-    c = t.n(s),
-    n = t(793030),
+    n = t.n(s),
+    c = t(793030),
     i = t(481060),
     r = t(313201),
-    l = t(471309),
-    o = t(976465),
-    b = t(474936),
+    l = t(553896),
+    o = t(848572),
+    b = t(787528),
     g = t(388032),
     m = t(526827);
 a.default = (e) => {
     let { transitionState: a, onClose: t } = e,
         s = (0, r.Dt)(),
-        { version: x } = (0, l.Z)(),
-        u = Object.values(b.VU).map((e) => {
-            let a = (0, o.f9)(e, x),
-                t = (0, o.g_)(e, x),
-                s = (0, o.sf)(e);
+        x = (0, o.j_)().map((e) => {
+            let { id: a, badgeVersion: t, nameUnformatted: s, tenureReqNumMonths: i } = e,
+                r = g.intl.string(s),
+                o = (0, b.J)(a),
+                x = (0, l.q)(a, i);
             return (0, d.jsxs)(
                 'div',
                 {
-                    className: c()(m.badge, { [m.badgeV2]: 2 === x }),
+                    className: n()(m.badge, { [m.badgeV2]: 2 === t }),
                     children: [
                         (0, d.jsx)('img', {
-                            src: t,
-                            alt: a,
+                            src: o,
+                            alt: r,
                             className: m.badgeImage
                         }),
                         (0, d.jsxs)('div', {
-                            className: c()(m.badgeText, { [m.badgeTextV2]: 2 === x }),
+                            className: n()(m.badgeText, { [m.badgeTextV2]: 2 === t }),
                             children: [
-                                (0, d.jsx)(n.xv, {
+                                (0, d.jsx)(c.xv, {
                                     variant: 'text-md/semibold',
                                     className: m.badgeName,
-                                    children: a
+                                    children: r
                                 }),
-                                (0, d.jsx)(n.xv, {
+                                (0, d.jsx)(c.xv, {
                                     variant: 'text-xs/normal',
-                                    children: s
+                                    children: x
                                 })
                             ]
                         })
                     ]
                 },
-                e
+                a
             );
         });
     return (0, d.jsxs)(i.ModalRoot, {
         transitionState: a,
         'aria-labelledby': s,
-        className: c()(m.container, 'theme-dark'),
+        className: n()(m.container, 'theme-dark'),
         children: [
             (0, d.jsx)(i.ModalCloseButton, {
                 onClick: t,
@@ -60,19 +60,19 @@ a.default = (e) => {
             (0, d.jsxs)(i.ModalContent, {
                 className: m.content,
                 children: [
-                    (0, d.jsx)(n.xv, {
+                    (0, d.jsx)(c.xv, {
                         variant: 'display-md',
                         className: m.header,
                         children: g.intl.string(g.t['rmUN7+'])
                     }),
-                    (0, d.jsx)(n.xv, {
+                    (0, d.jsx)(c.xv, {
                         variant: 'text-md/medium',
                         className: m.subHeader,
                         children: g.intl.string(g.t.OI50am)
                     }),
                     (0, d.jsx)('div', {
                         className: m.badgeList,
-                        children: u
+                        children: x
                     })
                 ]
             })

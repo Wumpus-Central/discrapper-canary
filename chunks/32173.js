@@ -30,11 +30,11 @@ var a = n(399606),
     v = n(471309),
     A = n(314684),
     j = n(687362),
-    O = n(119269),
-    R = n(467685),
-    P = n(391110),
-    y = n(75077),
-    B = n(976465),
+    O = n(848572),
+    R = n(119269),
+    P = n(467685),
+    y = n(391110),
+    B = n(75077),
     D = n(474936),
     Z = n(735825),
     L = n(981631),
@@ -389,14 +389,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: w.intl.string(w.t.LWsAra),
                 subtitle: w.intl.string(w.t.bTzbVl),
-                perkImage: (0, y.gx)(t, V, G),
+                perkImage: (0, B.gx)(t, V, G),
                 description: w.intl.string(w.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: w.intl.string(w.t.tzdIwM),
                 subtitle: w.intl.string(w.t.FXlU29),
-                perkImage: (0, y.gx)(t, H, ec),
+                perkImage: (0, B.gx)(t, H, ec),
                 description: w.intl.string(w.t.e7FKCg)
             },
             largeUploads: {
@@ -446,8 +446,8 @@ t.Z = () => {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: l } = ev,
             o = (0, s.jsx)('div', {
                 className: U.cardComponent,
-                children: (0, s.jsx)(O.ZP, {
-                    progressCircleVariation: O.Qo.AVATAR_DECO,
+                children: (0, s.jsx)(R.ZP, {
+                    progressCircleVariation: R.Qo.AVATAR_DECO,
                     avatarDecoAssetId: Z.VA,
                     avatarDecoAssetDescription: w.intl.string(w.t['9o4F4+']),
                     showAnimations: !0,
@@ -471,7 +471,7 @@ t.Z = () => {
                         analyticsLocations: e
                     });
             },
-            cardVariant: P.zW.REWARD,
+            cardVariant: y.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
@@ -480,7 +480,7 @@ t.Z = () => {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: a, dismissibleContentType: l } = eN,
             c = (0, s.jsx)('div', {
                 className: U.cardComponent,
-                children: (0, s.jsx)(O.ZP, {
+                children: (0, s.jsx)(R.ZP, {
                     showAnimations: !0,
                     percentage: eb,
                     initialPercentage: eS
@@ -496,12 +496,12 @@ t.Z = () => {
             onCtaClick: () => {
                 o.Z.open(L.oAB.GUILD_BOOSTING, null, { analyticsLocations: e });
             },
-            cardVariant: P.zW.REWARD,
+            cardVariant: y.zW.REWARD,
             pillText: r,
             dismissibleContentType: l
         };
     }
-    let eZ = (0, B.kG)(),
+    let eZ = (0, O.kG)(),
         { enabled: eL } = (0, v.Z)(),
         eM = () => {
             T.default.track(L.rMx.OPEN_MODAL, {
@@ -522,8 +522,8 @@ t.Z = () => {
                 name: 'tenureBadge',
                 title: w.intl.string(w.t.rnsqpa),
                 pillText: w.intl.string(w.t.jyYgZ2).toLocaleUpperCase(),
-                perkComponent: (0, s.jsx)(R.Z, {}),
-                cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
+                perkComponent: (0, s.jsx)(P.Z, {}),
+                cardVariant: y.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => eM()
             }),
         (0, N.ZP)('usePerksDiscoverabilityCard') === N.P0.SUMMER_2024 &&
