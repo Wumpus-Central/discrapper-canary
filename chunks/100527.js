@@ -177,6 +177,7 @@ var r;
         (e.PREMIUM_MARKETING_FOOTER = 'premium marketing footer'),
         (e.PREMIUM_MARKETING_GIFT_SECTION = 'premium marketing gift section'),
         (e.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER = 'premium marketing reverse trial banner'),
+        (e.TIERED_TENURE_BADGES_MODAL = 'tiered tenure badges modal'),
         (e.CHANNEL_CALL_ACTION_BAR = 'channel call action bar'),
         (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'aggregate premium upsell modal emoji'),
         (e.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'aggregate premium upsell modal profile customization'),

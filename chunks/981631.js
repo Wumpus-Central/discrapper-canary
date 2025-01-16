@@ -3091,7 +3091,8 @@ let _U = 128,
     (r6.PREMIUM_TRIAL_TUTORIAL_COACHMARK = 'Premium Tutorial Coachmark'),
     (r6.GUILD_BOOSTING_USER_SETTINGS = 'Guild Boosting User Settings'),
     (r6.COLLECTIBLES_SHOP = 'Collectibles Shop'),
-    (r6.NITRO_HOME = 'Nitro Home');
+    (r6.NITRO_HOME = 'Nitro Home'),
+    (r6.TIERED_TENURE_BADGES_MODAL = 'Tiered Tenure Badges Modal');
 let _2 = 'help_center_cta';
 ((r4 = eT || (eT = {})).HERO = 'Hero'),
     (r4.BODY = 'Body'),
