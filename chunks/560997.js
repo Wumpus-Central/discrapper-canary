@@ -90,20 +90,18 @@ function f(e, n, r, i) {
     };
 }
 function _(e) {
-    let { baseSetting: n, getExperimentConfig: r, useExperimentConfig: i, eligibleDefault: a, ineligibleDefault: s } = e;
+    let { baseSetting: n, isEligible: r, useIsEligible: i, eligibleDefault: a, ineligibleDefault: s } = e;
     return {
         getSetting: () => {
             let e = n.getSetting();
-            if (null != e) return e;
-            let i = r();
-            return i.enabled ? a(i) : s();
+            return null != e ? e : r() ? a() : s;
         },
         useSetting: () => {
             let e = n.useSetting(),
                 r = i();
-            return null != e ? e : r.enabled ? a(r) : s();
+            return null != e ? e : r ? a() : s;
         },
-        updateSetting: n.updateSetting
+        updateSetting: (e) => n.updateSetting(e)
     };
 }
 function h(e, n) {
