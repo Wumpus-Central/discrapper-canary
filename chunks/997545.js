@@ -708,8 +708,7 @@ class k extends E.Z {
             return {
                 'level-asymmetry-allowed': '1',
                 'packetization-mode': '1',
-                'profile-level-id': '42e034',
-                'hardware-h264': this.hardwareH264 && this.useElectronVideo && N.Z.useDirectVideo ? '1' : '0'
+                'profile-level-id': '42e034'
             };
         {
             let e = '4d0033',
@@ -718,7 +717,6 @@ class k extends E.Z {
                 'level-asymmetry-allowed': '1',
                 'packetization-mode': '1',
                 'profile-level-id': 'android' === (0, S.zS)().platform ? n : e,
-                'hardware-h264': this.hardwareH264 && this.useElectronVideo && N.Z.useDirectVideo ? '1' : '0',
                 'software-h264': this.softwareH264 ? '1' : '0'
             };
         }
@@ -759,17 +757,17 @@ class k extends E.Z {
                 rtxType: null !== (o = null == l ? void 0 : l.rtxPayloadType) && void 0 !== o ? o : 0,
                 params: this.getCodecParams(l.name, !0)
             };
-            this.experimentFlags.has(C.V8.RESET_DECODER_ON_ERRORS) && (r.params['reset-on-errors'] = '1'),
-                this.experimentFlags.has(C.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (r.params['fallback-after-errors'] = '3'),
-                this.experimentFlags.has(C.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (r.params['fallback-on-consecutive-errors'] = '1'),
-                this.experimentFlags.has(C.V8.SIGNAL_AV1_HARDWARE_DECODE) && (r.params['hardware-av1-decode'] = '1'),
+            this.experimentFlags.has(C.V8.RESET_DECODER_ON_ERRORS) && (r.params['reset-on-errors'] = '1'), this.experimentFlags.has(C.V8.SOFTWARE_FALLBACK_ON_ERRORS) && (r.params['fallback-after-errors'] = '3'), this.experimentFlags.has(C.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) && (r.params['fallback-on-consecutive-errors'] = '1'), this.experimentFlags.has(C.V8.SIGNAL_AV1_HARDWARE_DECODE) && (r.params['hardware-av1-decode'] = '1');
+            let i = this.hardwareH264 && this.useElectronVideo && N.Z.useDirectVideo ? '1' : '0';
+            (r.params['hardware-h264'] = i),
                 d.push(r),
                 l.name === n &&
                     ((f = {
                         ...r,
                         params: this.getCodecParams(l.name, !1)
                     }),
-                    this.experimentFlags.has(C.V8.VIDEOTOOLBOX_RATE_CONTROL) && (f.params['fixed-rate-presentation-timestamps'] = '1'));
+                    this.experimentFlags.has(C.V8.VIDEOTOOLBOX_RATE_CONTROL) && (f.params['fixed-rate-presentation-timestamps'] = '1'),
+                    (f.params['hardware-h264'] = i));
         }
         return {
             videoEncoder: f,
