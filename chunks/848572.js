@@ -1,87 +1,80 @@
 n.d(t, {
     GG: function () {
-        return p;
+        return f;
     },
     Rw: function () {
-        return _;
-    },
-    j_: function () {
-        return h;
-    },
-    kG: function () {
         return g;
     },
+    j_: function () {
+        return M;
+    },
+    kG: function () {
+        return N;
+    },
     y3: function () {
-        return x;
+        return b;
     }
 }),
     n(724458);
-var i = n(913527),
-    r = n.n(i),
-    s = n(442837),
-    a = n(291175),
+var s = n(913527),
+    a = n.n(s),
+    r = n(442837),
+    i = n(291175),
     l = n(621853),
-    o = n(594174),
+    u = n(594174),
     c = n(78839),
     d = n(111361),
-    u = n(471309),
-    m = n(474936);
-let g = () => {
-        var e;
-        let t;
-        let n = (0, s.e7)([o.default, l.Z], () => {
-            let e = o.default.getCurrentUser();
-            return null != e ? l.Z.getUserProfile(e.id) : null;
-        });
-        if (null == n || null == n.premiumSince) return;
-        let i = null == n ? void 0 : n.premiumSince;
-        return (
-            null == n ||
-                null === (e = n.badges) ||
-                void 0 === e ||
-                e.forEach((e) => {
-                    let n = (0, a.gn)(e.id);
-                    null != n && null != i && (t = n);
-                }),
-            t
-        );
+    _ = n(471309),
+    o = n(494450),
+    E = n(474936);
+let N = () => {
+        let e = (0, r.e7)([u.default], () => u.default.getCurrentUser());
+        return (0, o.l)(null == e ? void 0 : e.id);
     },
-    h = () => {
-        let { version: e } = (0, u.Z)();
-        return 2 === e ? Object.values(m.q4) : Object.values(m.Ph);
+    M = () => {
+        let { version: e } = (0, _.Z)();
+        return 2 === e ? Object.values(E.q4) : Object.values(E.Ph);
     },
-    p = () =>
-        (0, s.e7)([o.default, l.Z], () => {
-            let e = o.default.getCurrentUser();
+    T = (e) =>
+        (0, r.e7)([l.Z], () => {
             if (null == e) return null;
-            let t = l.Z.getUserProfile(e.id);
+            let t = l.Z.getUserProfile(e);
             return null == t ? void 0 : t.premiumSince;
         }),
-    x = () => {
-        let e = h(),
-            t = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-            n = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription());
-        if (!(0, d.M5)(t, m.p9.TIER_2) || null == n || null == n.premiumSince) return null;
-        let i = r()(),
-            a = r()(n.premiumSince).add(1, 'day'),
-            l = i.diff(a, 'months');
+    f = () => {
+        let e = (0, r.e7)([u.default], () => u.default.getCurrentUser());
+        return T(null == e ? void 0 : e.id);
+    },
+    b = () => {
+        let e = M(),
+            t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+            n = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription());
+        if (!(0, d.M5)(t, E.p9.TIER_2) || null == n || null == n.premiumSince) return null;
+        let s = a()(),
+            i = a()(n.premiumSince).add(1, 'day'),
+            l = s.diff(i, 'months');
         return e.reduce((e, t) => {
-            let { id: n, tenureReqNumMonths: i } = t;
-            return l >= i ? n : e;
+            let { id: n, tenureReqNumMonths: s } = t;
+            return l >= s ? n : e;
         }, null);
     },
-    f = () => {
-        let e = g(),
-            t = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription());
-        return null == e || null == t || null == t.premiumSince ? null : (0, a.RZ)(e, t.premiumSince);
+    R = () => {
+        let e = N(),
+            t = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription());
+        return null == e || null == t || null == t.premiumSince ? null : (0, i.RZ)(e, t.premiumSince);
     },
-    _ = () => {
-        let e = g(),
-            t = f();
-        return null == e
+    g = () => {
+        let e = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+            t = m(null == e ? void 0 : e.id),
+            n = R();
+        return null == t
             ? null
             : {
-                  ...m.np[e],
-                  earnedOnDate: t
+                  ...t,
+                  earnedOnDate: n
               };
+    },
+    m = (e) => {
+        let t = (0, o.l)(e);
+        return null == t ? null : E.np[t];
     };
