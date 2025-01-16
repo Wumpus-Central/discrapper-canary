@@ -1,6 +1,6 @@
 r.d(n, {
     a: function () {
-        return E;
+        return g;
     }
 });
 var i = r(47120);
@@ -13,11 +13,10 @@ var l = r(772848),
     d = r(963838),
     f = r(39127),
     _ = r(594174),
-    h = r(74538),
-    p = r(353368),
-    m = r(685596);
-let g = 50;
-function E(e) {
+    h = r(353368),
+    p = r(685596);
+let m = 50;
+function g(e) {
     var n;
     let r = null == e ? void 0 : null === (n = e.parentElement) || void 0 === n ? void 0 : n.getBoundingClientRect();
     return null == r
@@ -32,13 +31,13 @@ function E(e) {
 }
 n.Z = s.forwardRef(function (e, n) {
     let { sound: r, containerDimensions: i } = e,
-        E = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
-        v = (0, u.e7)([c.Z], () => c.Z.useReducedMotion),
-        [I, T] = s.useState([]),
-        b = I.length < g,
-        y = (null == r ? void 0 : r.emojiId) != null || (null == r ? void 0 : r.emojiName) != null,
-        S = s.useCallback(() => {
-            if (!v && b && y && null != E) {
+        g = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
+        E = (0, u.e7)([c.Z], () => c.Z.useReducedMotion),
+        [v, I] = s.useState([]),
+        T = v.length < m,
+        b = (null == r ? void 0 : r.emojiId) != null || (null == r ? void 0 : r.emojiName) != null,
+        y = s.useCallback(() => {
+            if (!E && T && b && null != g) {
                 var e;
                 let n = (0, d._r)({
                         id: r.emojiId,
@@ -46,7 +45,7 @@ n.Z = s.forwardRef(function (e, n) {
                         animated: !1
                     }),
                     i = null != r.emojiId,
-                    a = h.ZP.isPremium(E) ? p.q.PREMIUM : p.q.BASIC,
+                    a = h.q.PREMIUM,
                     s = (0, o.random)(d.Jw[a].length, !1),
                     u = {
                         id: (0, l.Z)(),
@@ -54,34 +53,34 @@ n.Z = s.forwardRef(function (e, n) {
                         animationType: a,
                         shouldResize: i,
                         url: n,
-                        userId: E.id
+                        userId: g.id
                     };
-                T((e) => [...e, u]);
+                I((e) => [...e, u]);
             }
-        }, [v, b, y, E, r]);
-    s.useImperativeHandle(n, () => ({ addAnimation: S }));
-    let A = s.useCallback((e) => {
-        T((n) => {
+        }, [E, T, b, g, r]);
+    s.useImperativeHandle(n, () => ({ addAnimation: y }));
+    let S = s.useCallback((e) => {
+        I((n) => {
             let r = [...n],
                 i = r.findIndex((n) => n.id === e);
             return r.splice(i, 1), r;
         });
     }, []);
-    return v || !y
+    return E || !b
         ? null
         : (0, a.jsx)('div', {
-              className: m.effects,
+              className: p.effects,
               style: {
                   width: i.width,
                   height: i.height
               },
-              children: I.map((e) =>
+              children: v.map((e) =>
                   (0, a.jsx)(
                       f.Z,
                       {
                           containerDimensions: i,
                           effect: e,
-                          onComplete: A
+                          onComplete: S
                       },
                       e.id
                   )
