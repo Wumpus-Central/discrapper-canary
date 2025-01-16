@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     _: function () {
-        return z;
+        return G;
     }
 }),
     n(47120);
@@ -32,10 +32,10 @@ var i = n(200651),
     Z = n(314897),
     b = n(592125),
     T = n(131951),
-    A = n(451478),
-    N = n(685203),
-    w = n(112560),
-    j = n(442168),
+    N = n(451478),
+    A = n(685203),
+    j = n(112560),
+    w = n(442168),
     P = n(822296),
     R = n(916771),
     M = n(792517),
@@ -46,10 +46,10 @@ var i = n(200651),
     U = n(981631),
     V = n(354459),
     F = n(65154),
-    W = n(388032),
-    B = n(995544);
-let G = new p.Z('StreamTile');
-function z(e) {
+    B = n(388032),
+    W = n(995544);
+let z = new p.Z('StreamTile');
+function G(e) {
     let { participant: t, selected: n, focused: a, idle: r, width: o, premiumIndicator: c } = e,
         u = (0, s.e7)([y.Z], () => y.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, D.K)(o),
@@ -74,7 +74,7 @@ function z(e) {
                     ? null
                     : (0, i.jsx)(S.Z, {
                           size: f.ZP.Sizes.SMALL,
-                          className: B.liveIndicator,
+                          className: W.liveIndicator,
                           participant: t,
                           showQuality: (!d && !r) || m,
                           isUpsellEnabled: !1,
@@ -85,7 +85,7 @@ function z(e) {
     );
 }
 function H(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: k, focused: D, wrapperClassName: z } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: k, focused: D, wrapperClassName: G } = e,
         H = T.Z.getVideoComponent(),
         Y = (0, s.e7)([Z.default], () => Z.default.getId()),
         J = (0, h.Z)(),
@@ -93,7 +93,7 @@ function H(e) {
         Q = (0, s.e7)([b.Z], () => b.Z.getChannel(q.channelId)),
         $ = (0, s.e7)([y.Z], () => y.Z.getActiveStreamForUser(X.id, q.guildId), [X.id, q.guildId]),
         ee = (0, s.e7)([y.Z], () => y.Z.getAllActiveStreams().length > 0),
-        et = (0, s.e7)([A.Z], () => A.Z.isFocused()),
+        et = (0, s.e7)([N.Z], () => N.Z.isFocused()),
         en = (null == $ ? void 0 : $.ownerId) === Y,
         ei = en && !et && !S,
         el = null != $ ? (0, g.Z)($, X, X.id === Y, ei) : null,
@@ -102,7 +102,7 @@ function H(e) {
         !ee && (null == Q ? void 0 : Q.isGuildStageVoice()) && !en && ((0, u.rn)(q), c.Z.updateStageStreamSize(q.channelId, !1));
     }),
         l.useEffect(() => {
-            G.info(
+            z.info(
                 'Stream Tile State - activeStream: '
                     .concat(null != $, ' | selected: ')
                     .concat(n, ' | Video: ')
@@ -138,29 +138,29 @@ function H(e) {
         });
     else if (!(null != $ && !n && null != H && T.Z.supports(F.AN.VIDEO)))
         return (0, i.jsxs)('div', {
-            className: r()(B.content, B.streamPreview, { [B.small]: ea }),
+            className: r()(W.content, W.streamPreview, { [W.small]: ea }),
             children: [
                 (0, i.jsx)(v.Z, {
                     noText: !0,
-                    className: r()(B.absoluteFill, { [B.streamPreviewOpacity]: null == $ }),
+                    className: r()(W.absoluteFill, { [W.streamPreviewOpacity]: null == $ }),
                     stream: t.stream
                 }),
                 n
                     ? null
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(N.a, {
+                              (0, i.jsx)(A.a, {
                                   isSmall: ea,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: ea ? 'text-sm/semibold' : 'text-md/semibold',
                                       color: 'none',
-                                      children: k < 175 ? W.intl.string(W.t['I6JG4+']) : W.intl.string(W.t['7Xq/nZ'])
+                                      children: k < 175 ? B.intl.string(B.t['I6JG4+']) : B.intl.string(B.t['7Xq/nZ'])
                                   })
                               }),
                               ee
-                                  ? (0, i.jsx)(N.a, {
-                                        className: B.addCTA,
-                                        tooltip: W.intl.string(W.t.wCrzur),
+                                  ? (0, i.jsx)(A.a, {
+                                        className: W.addCTA,
+                                        tooltip: B.intl.string(B.t.wCrzur),
                                         onClick: (e) => {
                                             e.stopPropagation(), (0, u.rn)(q, { forceMultiple: !0 });
                                         },
@@ -168,7 +168,7 @@ function H(e) {
                                         children: (0, i.jsx)(o.EyePlusIcon, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: B.addStreamIcon
+                                            className: W.addStreamIcon
                                         })
                                     })
                                   : null
@@ -198,8 +198,8 @@ function H(e) {
                           I.Z,
                           {
                               onResize: a,
-                              wrapperClassName: r()(B.videoWrapper, z),
-                              className: B.content,
+                              wrapperClassName: r()(W.videoWrapper, G),
+                              className: W.content,
                               streamId: K,
                               videoComponent: H,
                               fit: p,
@@ -211,11 +211,11 @@ function H(e) {
                       ),
                       null != el
                           ? (0, i.jsx)(C.Z, {
-                                size: (0, w.L)(k),
+                                size: (0, j.L)(k),
                                 ...el
                             })
                           : null,
-                      (0, i.jsx)(j.Z, {
+                      (0, i.jsx)(w.Z, {
                           stream: q,
                           inPopout: S
                       })

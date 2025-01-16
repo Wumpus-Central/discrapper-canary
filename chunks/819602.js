@@ -40,31 +40,31 @@ function j(e) {
         u,
         { connectedAccount: m, theme: E, locale: h, userId: j, className: P, showMetadata: R, showInvisibleIcon: L } = e;
     null == R && (R = !0);
-    let b = null !== (t = m.metadata) && void 0 !== t ? t : {},
-        D = R ? (0, N.FI)(b[I.PC.CREATED_AT], h) : null,
+    let D = null !== (t = m.metadata) && void 0 !== t ? t : {},
+        b = R ? (0, N.FI)(D[I.PC.CREATED_AT], h) : null,
         g = (0, s.useToken)(i.Z.unsafe_rawColors.TWITTER).hex(),
         U = O.intl.string(O.t['6H6h1t']);
     if (R)
         switch (m.type) {
             case C.ABu.REDDIT:
-                l = (0, x.oP)(b);
+                l = (0, x.oP)(D);
                 break;
             case C.ABu.STEAM:
-                l = (0, x.Dq)(b);
+                l = (0, x.Dq)(D);
                 break;
             case C.ABu.BLUESKY:
             case C.ABu.MASTODON:
             case C.ABu.TWITTER:
-                (l = (0, x.rJ)(b)), '1' === b[I.PC.TWITTER_VERIFIED] && ((a = g), (U = O.intl.string(O.t.Jebrw8)));
+                (l = (0, x.rJ)(D)), '1' === D[I.PC.TWITTER_VERIFIED] && ((a = g), (U = O.intl.string(O.t.Jebrw8)));
                 break;
             case C.ABu.PAYPAL:
-                l = (0, x.li)(b);
+                l = (0, x.li)(D);
                 break;
             case C.ABu.EBAY:
-                l = (0, x.ul)(b);
+                l = (0, x.ul)(D);
                 break;
             case C.ABu.TIKTOK:
-                l = (0, x.hf)(b);
+                l = (0, x.hf)(D);
         }
     let y = d.Z.get((0, A.rR)(m.type)),
         M = null == y ? void 0 : null === (n = y.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(y, m);
@@ -110,7 +110,7 @@ function j(e) {
               })
             : null;
     return (0, c.jsxs)('div', {
-        className: o()(f.connectedAccountContainer, (null != l && l.length > 0) || null != D ? f.connectedAccountContainerWithMetadata : null, P),
+        className: o()(f.connectedAccountContainer, (null != l && l.length > 0) || null != b ? f.connectedAccountContainerWithMetadata : null, P),
         children: [
             (0, c.jsxs)('div', {
                 className: f.connectedAccount,
@@ -140,7 +140,7 @@ function j(e) {
                                                 children: (e) =>
                                                     (0, c.jsx)(s.Text, {
                                                         ...e,
-                                                        variant: 'text-md/semibold',
+                                                        variant: 'text-sm/medium',
                                                         color: 'interactive-active',
                                                         className: f.connectedAccountNameText,
                                                         children: m.name
@@ -152,11 +152,11 @@ function j(e) {
                                     u
                                 ]
                             }),
-                            null != D
+                            null != b
                                 ? (0, c.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: O.intl.format(O.t['9rfonp'], { date: D })
+                                      children: O.intl.format(O.t['9rfonp'], { date: b })
                                   })
                                 : null
                         ]
@@ -206,7 +206,7 @@ function P(e) {
                                   children: (0, c.jsx)('div', {
                                       className: f.connectedAccountNameTextContainer,
                                       children: (0, c.jsx)(s.Text, {
-                                          variant: 'text-md/semibold',
+                                          variant: 'text-sm/medium',
                                           color: 'interactive-active',
                                           className: f.connectedAccountNameText,
                                           children: n.platform_username

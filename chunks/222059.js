@@ -56,12 +56,12 @@ function R(e) {
         [P, R] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
-        B = () => {
+        k = () => {
             S(null), R(0), clearTimeout(Z);
         };
     if (null == n) return null;
-    let k = w.intl.string(w.t.YUU0RE);
-    I && (k = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    let B = w.intl.string(w.t.YUU0RE);
+    I && (B = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let U = null;
     !t &&
         g &&
@@ -79,8 +79,8 @@ function R(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(B, 500)), R(P + 1), 15 === P)) {
-                        B();
+                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(k, 500)), R(P + 1), 15 === P)) {
+                        k();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
                             e && o.K.set(A.O5, !0),
@@ -123,7 +123,7 @@ function R(e) {
                     (0, i.jsx)(y.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
-                        text: k,
+                        text: B,
                         selected: t,
                         children: V
                     })

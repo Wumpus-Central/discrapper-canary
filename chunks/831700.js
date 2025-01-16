@@ -41,8 +41,8 @@ var l = n(120356),
     R = n(607744),
     D = n(496675),
     G = n(306680),
-    B = n(9156),
-    k = n(979651),
+    k = n(9156),
+    B = n(979651),
     U = n(934415),
     O = n(63063),
     V = n(98597),
@@ -79,7 +79,7 @@ class $ extends V.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, U.rY)(e, k.Z, L.Z);
+        return (0, U.rY)(e, B.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -366,7 +366,7 @@ function et(e) {
             unread: G.ZP.hasUnread(n.id),
             mentionCount: G.ZP.getMentionCount(n.id)
         })),
-        d = (0, a.e7)([B.ZP], () => B.ZP.resolveUnreadSetting(n)),
+        d = (0, a.e7)([k.ZP], () => k.ZP.resolveUnreadSetting(n)),
         h = (0, a.cj)([M.Z, R.Z, D.Z], () => {
             let e = M.Z.getChannel(n.parent_id),
                 i = R.Z.getCheck(n.guild_id);
@@ -379,13 +379,13 @@ function et(e) {
                 unverifiedAccount: !i.canChat
             };
         }),
-        m = (0, a.e7)([k.Z], () => k.Z.hasVideo(n.id)),
+        m = (0, a.e7)([B.Z], () => B.Z.hasVideo(n.id)),
         f = (0, p.ZP)(n),
         g = (0, v.ZP)(n),
         C = (0, S.qY)(n.id),
         { isSubscriptionGated: x, needSubscriptionToAccess: _ } = (0, b.Z)(n.id),
         Z = (0, I.Z)(),
-        N = (0, a.e7)([B.ZP], () => B.ZP.isFavorite(t.id, n.id)),
+        N = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
         y = e.connected || (null == Z ? void 0 : Z.channelId) === n.id,
         { enableHangStatus: j, allowChannelTopic: T } = E.n.useExperiment(
             {

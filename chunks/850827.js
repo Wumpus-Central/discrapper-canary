@@ -24,31 +24,31 @@ var l = n(120356),
     Z = n(276149),
     b = n(636245),
     T = n(697761),
-    A = n(611459),
-    N = n(544671),
-    w = n(757182),
-    j = n(910424),
+    N = n(611459),
+    A = n(544671),
+    j = n(757182),
+    w = n(910424),
     P = n(981631),
     R = n(522832);
 t.Z = (0, u.Z)((e) => {
     let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
-        W = (0, o.e7)([h.default], () => {
+        B = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        B = U === x.Y.STREAM_PREVIEW || null != r,
-        G = (0, I.Z)(t),
-        z = G || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        W = U === x.Y.STREAM_PREVIEW || null != r,
+        z = (0, I.Z)(t),
+        G = z || W ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
         Y = (0, o.e7)([g.Z, p.Z], () => {
             var e;
             return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        J = z === m.Z.Direction.VERTICAL;
+        J = G === m.Z.Direction.VERTICAL;
     return (0, i.jsx)(m.Z, {
         grow: 0,
         align: m.Z.Align.STRETCH,
-        direction: z,
+        direction: G,
         wrap: J ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
         className: a()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
         children: (() => {
@@ -76,9 +76,9 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if (G) {
+            if (z) {
                 let e = (0, i.jsx)(
-                        N.Z,
+                        A.Z,
                         {
                             activity: t,
                             user: l,
@@ -92,7 +92,7 @@ t.Z = (0, u.Z)((e) => {
                         'spotify-activity-sync-button'
                     ),
                     n = (0, i.jsx)(
-                        A.Z,
+                        N.Z,
                         {
                             activity: t,
                             user: l,
@@ -123,11 +123,11 @@ t.Z = (0, u.Z)((e) => {
                           e.channelId
                       );
             }
-            return B
+            return W
                 ? (0, i.jsx)(
-                      j.Z,
+                      w.Z,
                       {
-                          isCurrentUser: W.id === l.id,
+                          isCurrentUser: B.id === l.id,
                           color: k,
                           look: D,
                           applicationStream: r,
@@ -149,7 +149,7 @@ t.Z = (0, u.Z)((e) => {
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(
-                                w.Z,
+                                j.Z,
                                 {
                                     activity: t,
                                     color: k,

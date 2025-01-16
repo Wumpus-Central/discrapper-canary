@@ -81,7 +81,7 @@ function k(e) {
     return e === f.EO.VIDEO;
 }
 function U(e) {
-    return ((0, I._M)(e) || (0, I.MO)(e)) && e.pathname.toLowerCase().endsWith('.webp');
+    return ((0, I._M)(e) || (0, I.MO)(e)) && (e.pathname.toLowerCase().endsWith('.webp') || e.pathname.toLowerCase().endsWith('.avif'));
 }
 function B(e) {
     if (!v.Z.getCurrentConfig({ location: 'gif_picker' }).enabled) return e;

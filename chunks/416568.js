@@ -34,8 +34,8 @@ var i = n(200651),
     R = n(605951),
     D = n(474109),
     G = n(741616),
-    B = n(187835),
-    k = n(118122),
+    k = n(187835),
+    B = n(118122),
     U = n(193154),
     O = n(602147),
     V = n(416637),
@@ -368,7 +368,7 @@ function ei(e) {
                                             eA,
                                             n
                                                 ? null
-                                                : (0, i.jsx)(k.Z, {
+                                                : (0, i.jsx)(B.Z, {
                                                       disableTooltip: C.length > 0,
                                                       lastTargetNode: ej[ej.length - 1]
                                                   }),
@@ -379,7 +379,7 @@ function ei(e) {
                                                       className: $.discoveryIcon
                                                   })
                                                 : null,
-                                            t ? null : (0, i.jsx)(B.Z, {})
+                                            t ? null : (0, i.jsx)(k.Z, {})
                                         ]
                                     }),
                                     n || s

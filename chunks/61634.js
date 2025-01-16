@@ -112,9 +112,9 @@ function E(e) {
                     }
                     return !1;
                 })(),
-                B = a.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                k = a.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                u ? ((f = !0), (v = (null == i ? void 0 : i.channel_id) === c), (x = M), (_ = D), (Z = L), (N = B)) : ((f = T), (v = null != i), (x = y), (_ = P), (Z = R), (N = G)),
+                u ? ((f = !0), (v = (null == i ? void 0 : i.channel_id) === c), (x = M), (_ = D), (Z = L), (N = k)) : ((f = T), (v = null != i), (x = y), (_ = P), (Z = R), (N = G)),
                 {
                     audio: f,
                     video: _,

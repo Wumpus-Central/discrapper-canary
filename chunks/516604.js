@@ -8,12 +8,12 @@ var n = r(192379),
     s = r(823961);
 t.Z = (e) => {
     let { update: t, draw: r, emit: c, improvePerformance: d, shouldTick: f } = (0, u.Z)(e),
-        m = n.useMemo(() => new i.ZP(), []),
-        h = n.useCallback(
+        h = n.useMemo(() => new i.ZP(), []),
+        m = n.useCallback(
             (e) => {
-                (e.assetMap = m), r(e);
+                (e.assetMap = h), r(e);
             },
-            [m, r]
+            [h, r]
         ),
         [w, p] = n.useState(!1),
         y = n.useRef(),
@@ -33,7 +33,7 @@ t.Z = (e) => {
                                   size: 64,
                                   forcePNG: !0
                               });
-                await m.loadRemoteImage(i, u),
+                await h.loadRemoteImage(i, u),
                     c(i, n),
                     p(!0),
                     null != v.current && clearTimeout(v.current),
@@ -47,7 +47,7 @@ t.Z = (e) => {
                     }, 5000));
             }
             return a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
-        }, [m, c]),
+        }, [h, c]),
         n.useEffect(
             () => () => {
                 null != v.current && clearTimeout(v.current);
@@ -67,7 +67,7 @@ t.Z = (e) => {
         }, [w, f]),
         {
             update: t,
-            draw: h,
+            draw: m,
             improvePerformance: d,
             playing: w
         }

@@ -24,10 +24,10 @@ var i,
     Z = n(597952),
     b = n(628123),
     T = n(686546),
-    A = n(950796),
-    N = n(80006),
-    w = n(151851),
-    j = n(587061),
+    N = n(950796),
+    A = n(80006),
+    j = n(151851),
+    w = n(587061),
     P = n(392358),
     R = n(540059),
     M = n(314910),
@@ -38,10 +38,10 @@ var i,
     U = n(451478),
     V = n(358085),
     F = n(62883),
-    W = n(998502),
-    B = n(473159),
-    G = n(928518),
-    z = n(981631),
+    B = n(998502),
+    W = n(473159),
+    z = n(928518),
+    G = n(981631),
     H = n(388032),
     Y = n(81796);
 function J(e, t, n) {
@@ -61,7 +61,7 @@ class q extends (i = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, B.O)(e), e.addEventListener('blur', this.handleBlur), V.isPlatformEmbedded ? t.addEventListener('contextmenu', F.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', F.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, W.O)(e), e.addEventListener('blur', this.handleBlur), V.isPlatformEmbedded ? t.addEventListener('contextmenu', F.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', F.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: i, clientThemesCSS: l } = this.props;
@@ -120,7 +120,7 @@ class q extends (i = a.Component) {
     render() {
         let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: S, guestWindow: I, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
             C = (0, V.getPlatform)(),
-            N = s()(g, {
+            A = s()(g, {
                 'mouse-mode': d,
                 'reduce-motion': m,
                 'full-motion': !m,
@@ -139,7 +139,7 @@ class q extends (i = a.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, Z.Z)(), N, _, E),
+                                    className: s()(e, (0, Z.Z)(), A, _, E),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
@@ -147,7 +147,7 @@ class q extends (i = a.Component) {
                                                 children: [
                                                     (0, l.jsx)(T.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
-                                                        appContext: z.IlC.POPOUT,
+                                                        appContext: G.IlC.POPOUT,
                                                         renderWindow: I,
                                                         children: (0, l.jsx)(y.m, {
                                                             children: (0, l.jsxs)(M.yP, {
@@ -157,12 +157,12 @@ class q extends (i = a.Component) {
                                                                         children: [
                                                                             o &&
                                                                                 S &&
-                                                                                (0, l.jsx)(A.T, {
+                                                                                (0, l.jsx)(N.T, {
                                                                                     windowKey: r,
                                                                                     short: !0
                                                                                 }),
                                                                             !o && S && null != C
-                                                                                ? (0, l.jsx)(w.Z, {
+                                                                                ? (0, l.jsx)(j.Z, {
                                                                                       focused: n,
                                                                                       type: C,
                                                                                       windowKey: r,
@@ -200,7 +200,7 @@ class q extends (i = a.Component) {
             J(this, '_cleanupWindowActionCreators', void 0),
             J(this, 'beforeUnload', (e) => {
                 let t = () => {
-                    G.Z.unmountWindow(this.props.windowKey), V.isPlatformEmbedded && W.ZP.close(this.props.windowKey);
+                    z.Z.unmountWindow(this.props.windowKey), V.isPlatformEmbedded && B.ZP.close(this.props.windowKey);
                 };
                 if (this.props.connectedToEmbeddedActivity && !D.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (!V.isPlatformEmbedded) return;
@@ -220,9 +220,9 @@ class q extends (i = a.Component) {
 }
 J(q, 'defaultProps', { withTitleBar: !0 });
 let X = a.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: i } = (0, m.cj)([G.Z], () => ({
-        guestWindow: G.Z.getWindow(e.windowKey),
-        focused: G.Z.getWindowFocused(e.windowKey)
+    let { guestWindow: n, focused: i } = (0, m.cj)([z.Z], () => ({
+        guestWindow: z.Z.getWindow(e.windowKey),
+        focused: z.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
     let a = (0, R.Q3)('PopoutWindow'),
@@ -233,9 +233,9 @@ let X = a.forwardRef(function (e, t) {
             theme: k.Z.theme
         })),
         d = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: p, appWrapperClassName: h } = (0, N.I)(),
+        { accessibilitySettings: p, appWrapperClassName: h } = (0, A.I)(),
         v = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
-    (0, j.Z)(n, !1);
+    (0, w.Z)(n, !1);
     let S = (0, P.Z)(n, i),
         { analyticsLocations: _ } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
         { clientThemesClassName: y, clientThemesCSS: Z } = (0, C.ZP)();

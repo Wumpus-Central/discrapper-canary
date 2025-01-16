@@ -1,6 +1,6 @@
 var i, a, s, o, l;
 function u(e) {
-    return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1);
+    return (null == e ? void 0 : e.type) === 0 || (null == e ? void 0 : e.type) === 1;
 }
 function c(e) {
     return (null == e ? void 0 : e.type) === 2;
@@ -47,7 +47,7 @@ r.d(n, {
     }
 }),
     !(function (e) {
-        (e[(e.STREAM = 0)] = 'STREAM'), (e[(e.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'), (e[(e.USER = 2)] = 'USER'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY');
+        (e[(e.STREAM = 0)] = 'STREAM'), (e[(e.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'), (e[(e.USER = 2)] = 'USER'), (e[(e.ACTIVITY = 3)] = 'ACTIVITY'), (e[(e.PRESENCE_EMBEDDED_ACTIVITY = 4)] = 'PRESENCE_EMBEDDED_ACTIVITY');
     })(i || (i = {})),
     !(function (e) {
         (e.STREAM = 'STREAM'), (e.USER = 'USER'), (e.ACTIVITY = 'ACTIVITY');
@@ -57,10 +57,10 @@ r.d(n, {
     })(s || (s = {})),
     !(function (e) {
         (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), (e[(e.XBOX = 2)] = 'XBOX'), (e[(e.PLAYSTATION = 3)] = 'PLAYSTATION');
-    })(o || (o = {})),
-    !(function (e) {
-        (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
-    })(l || (l = {}));
+    })(o || (o = {}));
+!(function (e) {
+    (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
+})(l || (l = {}));
 let f = {
         0: 320,
         1: 160

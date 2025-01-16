@@ -46,7 +46,7 @@ function P() {
 let M = () => !0;
 function k(e) {
     let {} = e;
-    (R = !1), (O = null), (v = !0);
+    (O = null), (v = !0);
 }
 function U(e) {
     let { referrals_remaining: n, sent_user_ids: r, refresh_at: i, recipient_status: a, has_eligible_friends: s, isUserEligibleForIncentive: o, isUserQualifiedForIncentive: l, userReferralIncentiveState: u } = e;

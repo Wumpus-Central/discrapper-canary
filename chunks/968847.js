@@ -154,14 +154,14 @@ function G(e) {
     let i = C.Z.getGuild(t.guild_id);
     return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && L(n.guild_id);
 }
-function B(e) {
+function k(e) {
     let { channelId: t } = e,
         n = v.Z.getChannel(t);
     if (null == n) return !1;
     let i = C.Z.getGuild(n.guild_id);
     return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && I.Z.getGuildId() === n.guild_id && L(n.guild_id);
 }
-function k(e) {
+function B(e) {
     let { guildId: t } = e;
     return null != t && L(t);
 }
@@ -208,18 +208,18 @@ class U extends (l = d.ZP.Store) {
                 n
             );
         },
-        CHANNEL_ACK: B,
+        CHANNEL_ACK: k,
         CHANNEL_DELETE: G,
-        CHANNEL_LOCAL_ACK: B,
-        MESSAGE_ACK: B,
-        MESSAGE_CREATE: B,
-        MESSAGE_DELETE_BULK: B,
-        MESSAGE_DELETE: B,
+        CHANNEL_LOCAL_ACK: k,
+        MESSAGE_ACK: k,
+        MESSAGE_CREATE: k,
+        MESSAGE_DELETE_BULK: k,
+        MESSAGE_DELETE: k,
         PASSIVE_UPDATE_V2: function (e) {
             let t = C.Z.getGuild(e.guildId);
             return !!(e.channels.length > 0 && null != t && t.hasFeature(N.oNc.COMMUNITY)) && L(e.guildId);
         },
-        RESORT_THREADS: B,
+        RESORT_THREADS: k,
         THREAD_CREATE: G,
         THREAD_DELETE: G,
         THREAD_LIST_SYNC: R,
@@ -236,12 +236,12 @@ class U extends (l = d.ZP.Store) {
             let i = j[n];
             return null != i && 'voice-channels' === i.bottomBar.mode && L(n);
         },
-        USER_GUILD_SETTINGS_CHANNEL_UPDATE: k,
-        USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: k,
+        USER_GUILD_SETTINGS_CHANNEL_UPDATE: B,
+        USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: B,
         USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
             let { userGuildSettings: t } = e;
             for (let e of t) null != e.guild_id && L(e.guild_id);
         },
-        USER_GUILD_SETTINGS_GUILD_UPDATE: k,
-        USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: k
+        USER_GUILD_SETTINGS_GUILD_UPDATE: B,
+        USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: B
     }));

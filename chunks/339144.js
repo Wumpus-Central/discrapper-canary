@@ -69,7 +69,7 @@ let _ = l.memo(function (e) {
                     });
             });
         }, [E, S]);
-    let B =
+    let k =
             (null != j || null == T || (0, c.R)()) && (N || b)
                 ? (N ? ((t = !1), (r = D), (u = o.ScreenXIcon), (_ = C.intl.string(C.t.S5anIS))) : y ? ((t = !1), (r = G), (u = o.ScreenArrowIcon), (_ = null != j ? C.intl.formatToPlainString(C.t.AB5gT0, { game: j.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (_ = null != E && (0, m.vd)(E.type) ? C.intl.string(C.t.uQn9Bw) : null != S ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
                   (0, i.jsx)('div', {
@@ -82,7 +82,7 @@ let _ = l.memo(function (e) {
                       })
                   }))
                 : null,
-        k =
+        B =
             M && null == T
                 ? (0, i.jsx)(g.Z, {
                       tooltipText: C.intl.string(C.t['hC/Ze3']),
@@ -99,10 +99,10 @@ let _ = l.memo(function (e) {
                       icon: o.DoorExitIcon
                   }),
         O = null == Z ? null : (0, i.jsx)(h.Z, {});
-    return null == B && null == k && null == U
+    return null == k && null == B && null == U
         ? null
         : (0, i.jsxs)('div', {
               className: x.actions,
-              children: [B, k, null != U ? U : O]
+              children: [k, B, null != U ? U : O]
           });
 });

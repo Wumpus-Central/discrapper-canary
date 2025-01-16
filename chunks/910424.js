@@ -35,13 +35,13 @@ function S(e) {
         [y, Z] = (0, u.wq)(C),
         b = (0, c.Aq)(),
         T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
-        A = (e) => {
+        N = (e) => {
             if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
         };
     if (null == I) return null;
-    let N = (0, u.P9)(Z);
-    t ? (N = g.intl.string(g.t.XvBdeX)) : T && (N = g.intl.string(g.t.JH1SJy));
-    let w = {
+    let A = (0, u.P9)(Z);
+    t ? (A = g.intl.string(g.t.XvBdeX)) : T && (A = g.intl.string(g.t.JH1SJy));
+    let j = {
         color: n,
         look: S
     };
@@ -51,8 +51,8 @@ function S(e) {
                 p.Z,
                 {
                     disabled: t || T || !y,
-                    onClick: () => A(!1),
-                    ...w,
+                    onClick: () => N(!1),
+                    ...j,
                     fullWidth: !0,
                     children: [
                         (0, i.jsx)(a.ScreenArrowIcon, {
@@ -60,7 +60,7 @@ function S(e) {
                             color: 'currentColor',
                             className: v.streamIcon
                         }),
-                        N
+                        A
                     ]
                 },
                 'play'
@@ -73,9 +73,9 @@ function S(e) {
                               ...e,
                               onClick: () => {
                                   var t;
-                                  null === (t = e.onClick) || void 0 === t || t.call(e), A(!0);
+                                  null === (t = e.onClick) || void 0 === t || t.call(e), N(!0);
                               },
-                              ...w,
+                              ...j,
                               className: v.iconButton,
                               size: v.iconButtonSize,
                               children: (0, i.jsx)(a.EyePlusIcon, {

@@ -30,7 +30,7 @@ var i = n(200651),
 let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: B, folderIconContent: k, folderIconContentClassName: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
         { id: O, name: V, children: H } = t,
         F = (0, p.Q3)('FolderItem'),
         [W, z] = l.useState(!1),
@@ -115,7 +115,7 @@ function j(e) {
                                   onKeyDown: $,
                                   treeItemProps: et,
                                   folderIconContentClassName: U,
-                                  folderIconContent: k
+                                  folderIconContent: B
                               })
                     })
                 }),
@@ -156,7 +156,7 @@ function j(e) {
                                 overflow: 'hidden'
                             },
                             role: 'group',
-                            children: H.map((t) => B(t, e.height))
+                            children: H.map((t) => k(t, e.height))
                         },
                         l
                     )

@@ -32,8 +32,8 @@ function S(e) {
         Z = (0, m.Z)(C),
         b = (0, f.Z)(C),
         T = (0, c.Z)(C),
-        A = (0, u.Z)(C),
-        N = (0, d.Z)(C);
+        N = (0, u.Z)(C),
+        A = (0, d.Z)(C);
     return (0, i.jsx)(r.Z, {
         object: h.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(a.Menu, {
@@ -62,7 +62,7 @@ function S(e) {
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [_ ? A : null, x ? N : null, y]
+                    children: [_ ? N : null, x ? A : null, y]
                 })
             ]
         })

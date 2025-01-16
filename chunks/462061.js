@@ -31,21 +31,21 @@ var i = n(200651),
     Z = n(351483),
     b = n(981631),
     T = n(65154),
-    A = n(388032),
-    N = n(995544);
-let w = o.AvatarSizes.SIZE_80,
-    j = o.AvatarSizes.SIZE_40;
+    N = n(388032),
+    A = n(995544);
+let j = o.AvatarSizes.SIZE_80,
+    w = o.AvatarSizes.SIZE_40;
 function P(e) {
     let { channelId: t, userId: n } = e;
     return (0, S.Eu)(t, n)
         ? (0, i.jsx)(o.Tooltip, {
-              text: A.intl.string(A.t.HFwRpq),
+              text: N.intl.string(N.t.HFwRpq),
               position: 'bottom',
               color: o.TooltipColors.GREY,
               children: (e) =>
                   (0, i.jsx)('div', {
                       ...e,
-                      className: N.interactive,
+                      className: A.interactive,
                       children: (0, i.jsx)(o.CircleWarningIcon, { color: o.tokens.colors.STATUS_WARNING_BACKGROUND })
                   })
           })
@@ -55,18 +55,18 @@ function R(e) {
     let { participant: t, channel: n, inCall: a, width: o, paused: S, selected: P, fit: R, onVideoResize: M, blocked: O, ignored: L, noVideoRender: k = !1, pulseSpeakingIndicator: D = !1, inOverlayPopout: U = !1 } = e,
         V = x.Z.getVideoComponent(),
         F = (0, s.e7)([I.default], () => I.default.getId()),
-        { user: W, streamId: B, speaking: G } = t,
-        z = W.id === F,
+        { user: B, streamId: W, speaking: z } = t,
+        G = B.id === F,
         H = (0, y.ZP)(t),
         Y = (0, s.e7)([E.Z], () => E.Z.isFocused()),
         J = (0, s.e7)([g.Z], () => g.Z.getWindowFocused(b.KJ3.CHANNEL_CALL_POPOUT)),
-        q = (0, s.e7)([x.Z], () => null != W.id && x.Z.isLocalVideoDisabled(W.id, (0, m.Z)(t.type)), [W.id, t.type]),
-        X = (0, s.e7)([_.ZP], () => _.ZP.isGuestOrLurker(n.guild_id, W.id)),
-        K = C.ZP.getName(n.getGuildId(), n.id, W) + (X ? ' '.concat(A.intl.string(A.t['pFO/Pj'])) : ''),
-        Q = G && (J || Y),
-        $ = o < 124 ? j : w,
+        q = (0, s.e7)([x.Z], () => null != B.id && x.Z.isLocalVideoDisabled(B.id, (0, m.Z)(t.type)), [B.id, t.type]),
+        X = (0, s.e7)([_.ZP], () => _.ZP.isGuestOrLurker(n.guild_id, B.id)),
+        K = C.ZP.getName(n.getGuildId(), n.id, B) + (X ? ' '.concat(N.intl.string(N.t['pFO/Pj'])) : ''),
+        Q = z && (J || Y),
+        $ = o < 124 ? w : j,
         { avatarSrc: ee, avatarDecorationSrc: et } = (0, v.Z)({
-            user: W,
+            user: B,
             guildId: n.guild_id,
             size: $,
             animateOnHover: !Q
@@ -75,7 +75,7 @@ function R(e) {
         ei = {
             channel: n,
             selectedParticipant: en,
-            user: W
+            user: B
         },
         el = l.useRef(ei);
     l.useEffect(() => {
@@ -96,29 +96,29 @@ function R(e) {
                   p.Z,
                   {
                       onResize: M,
-                      wrapperClassName: N.videoWrapper,
-                      className: N.content,
-                      mirror: z,
-                      streamId: B,
+                      wrapperClassName: A.videoWrapper,
+                      className: A.content,
+                      mirror: G,
+                      streamId: W,
                       videoComponent: V,
                       fit: R,
                       paused: S,
-                      videoSpinnerContext: W.id === F ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
-                      userId: W.id
+                      videoSpinnerContext: B.id === F ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
+                      userId: B.id
                   },
-                  B
+                  W
               )
         : (0, i.jsx)('div', {
-              className: r()(N.content, { [N.blockedAvatar]: O || L }),
+              className: r()(A.content, { [A.blockedAvatar]: O || L }),
               children: (0, i.jsx)(f.Z, {
                   'aria-label': K,
                   src: ee,
                   avatarDecoration: et,
-                  backgroundSrc: W.getAvatarURL(n.guild_id, 80),
+                  backgroundSrc: B.getAvatarURL(n.guild_id, 80),
                   size: $,
                   pulseSpeakingIndicator: D,
-                  speaking: G,
-                  userId: W.id
+                  speaking: z,
+                  userId: B.id
               })
           });
 }

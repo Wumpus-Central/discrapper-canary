@@ -37,7 +37,7 @@ function S(e) {
         [V, z] = l.useState(null),
         [W, K] = l.useState(!0),
         [Y, q] = l.useState(!1),
-        X = R.type === I.fO.ACTIVITY,
+        X = R.type === I.fO.ACTIVITY || R.type === I.fO.PRESENCE_EMBEDDED_ACTIVITY,
         J = (0, d.Z)(R.id),
         Q = !X && null != R.streamId,
         $ = w <= 2 * N + 144,

@@ -30,10 +30,10 @@ let s = (e, n) => {
         let [r, i] = e.split('/');
         return r === n;
     },
-    l = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
+    l = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
     u = (e) => null != e && l.test(e),
     c = (e) => o(e, 'image'),
-    d = /\.(webp|gif)$/i,
+    d = /\.(webp|gif|avif)$/i,
     f = (e) => s(e, d),
     _ = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
     h = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,

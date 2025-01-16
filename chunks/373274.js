@@ -43,8 +43,8 @@ var i,
     R = n(734307),
     D = n(854444),
     G = n(761091),
-    B = n(301342),
-    k = n(906817),
+    k = n(301342),
+    B = n(906817),
     U = n(429122),
     O = n(285573),
     V = n(995993),
@@ -390,7 +390,7 @@ class ed extends (i = r.PureComponent) {
             ),
             es(this, 'getSectionHeight', (e) => {
                 let { guild: t, guildChannels: n, isRefreshEnabled: i } = this.props;
-                return (0, k.EM)(e, t, n, !!i);
+                return (0, B.EM)(e, t, n, !!i);
             }),
             es(this, 'getSectionFooterHeight', (e) => {
                 let { guildChannels: t, voiceStates: n, selectedVoiceChannelId: i, selectedChannelId: l, optInEnabled: r, guildChannelsVersion: a } = this.props;
@@ -456,7 +456,7 @@ class ed extends (i = r.PureComponent) {
                 let { section: t } = e,
                     { guildChannels: n, guildChannelsVersion: i, guild: r, selectedChannelId: a, disableManageChannels: o } = this.props;
                 return (0, l.jsx)(
-                    k.ZP,
+                    B.ZP,
                     {
                         sectionIndex: t,
                         guild: r,
@@ -465,7 +465,7 @@ class ed extends (i = r.PureComponent) {
                         selectedChannelId: a,
                         disableManageChannels: o
                     },
-                    (0, k.WW)(t, n)
+                    (0, B.WW)(t, n)
                 );
             }),
             es(this, 'renderRow', (e) => {
@@ -667,7 +667,7 @@ class ed extends (i = r.PureComponent) {
                         );
                     case el.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, l.jsx)(B.kw, { channel: I }, 'readonly-'.concat(I.id));
+                        return (0, l.jsx)(k.kw, { channel: I }, 'readonly-'.concat(I.id));
                     case el.d4z.PUBLIC_THREAD:
                     case el.d4z.PRIVATE_THREAD:
                         return (0, l.jsx)(

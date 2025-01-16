@@ -9,5 +9,5 @@ n.d(t, {
 var i = n(354459);
 function l(e) {
     var t, n;
-    return e.type !== i.fO.ACTIVITY && ((0, i._5)(e) ? null != e.streamId : null !== (n = null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) && void 0 !== n && n);
+    return e.type !== i.fO.ACTIVITY && e.type !== i.fO.PRESENCE_EMBEDDED_ACTIVITY && ((0, i._5)(e) ? null != e.streamId : null !== (n = null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) && void 0 !== n && n);
 }

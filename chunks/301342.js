@@ -81,7 +81,7 @@ let E = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: G, tabIndex: B, ...k } = (0, o.JA)(r.id),
+        { role: G, tabIndex: k, ...B } = (0, o.JA)(r.id),
         U = l.useRef(null),
         O = l.useRef(null),
         V = (0, i.jsxs)('li', {
@@ -107,8 +107,8 @@ let E = l.memo(function (e) {
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: U,
                                 className: S.mainContent,
-                                tabIndex: B,
-                                ...k,
+                                tabIndex: k,
+                                ...B,
                                 onClick: L,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
                                 'aria-expanded': !w,
@@ -151,7 +151,7 @@ let E = l.memo(function (e) {
                                                       onClick: D,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
-                                                      tabIndex: B,
+                                                      tabIndex: k,
                                                       focusProps: {
                                                           offset: {
                                                               top: -3,
@@ -162,7 +162,7 @@ let E = l.memo(function (e) {
                                                       },
                                                       children: P
                                                           ? (0, i.jsx)(c.PlusMediumIcon, {
-                                                                size: 'refresh_sm',
+                                                                size: 'xs',
                                                                 color: 'currentColor',
                                                                 className: S.addButtonIcon
                                                             })

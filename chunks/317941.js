@@ -142,8 +142,8 @@ class R extends r.PureComponent {
             align: g.Z.Align.CENTER,
             className: A.generateCodeRow,
             children: [
-                (0, i.jsx)('div', {
-                    className: A.codeText,
+                (0, i.jsx)(c.Text, {
+                    variant: 'text-md/normal',
                     children: v.intl.string(v.t.lELyPj)
                 }),
                 (0, i.jsx)(c.Button, {

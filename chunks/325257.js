@@ -49,7 +49,7 @@ function R(e, t) {
 }
 t.Z = l.memo(function (e) {
     var t, n, r, m, D;
-    let { guildNode: G, setRef: B, onDragStart: k, onDragEnd: U, route: O, guild: V, animatable: H, selected: F = !1, unread: W = !1, mediaState: z, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = R, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
+    let { guildNode: G, setRef: k, onDragStart: B, onDragEnd: U, route: O, guild: V, animatable: H, selected: F = !1, unread: W = !1, mediaState: z, unavailable: q = !1, badge: Y = 0, isMentionLowImportance: Q, contextMenu: J = R, draggable: K = !1, sorting: X = !1, preloadOnClick: $ = !0, guildJoinRequestStatus: ee, height: et } = e,
         { id: en, parentId: ei } = G,
         el = (0, v.Q3)('GuildItem'),
         er = null !== (t = e.upperBadge) && void 0 !== t ? t : q ? (0, P.Ny)() : null != z ? (0, P.Or)(z) : void 0,
@@ -60,7 +60,7 @@ t.Z = l.memo(function (e) {
             type: b.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
-                    null == k || k();
+                    null == B || B();
                 }),
                 {
                     type: G.type,
@@ -119,9 +119,9 @@ t.Z = l.memo(function (e) {
         ),
         eN = l.useCallback(
             (e) => {
-                null == B || B(en, e);
+                null == k || k(en, e);
             },
-            [en, B]
+            [en, k]
         );
     if (null == V) return null;
     let eE =

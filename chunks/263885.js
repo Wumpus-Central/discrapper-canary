@@ -1,6 +1,6 @@
 r.d(t, {
     p: function () {
-        return i;
+        return s;
     }
 });
-let i = 10;
+let s = 10;

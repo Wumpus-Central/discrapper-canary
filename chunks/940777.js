@@ -51,8 +51,8 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        B = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(P.I_8)),
-        k = (0, s.e7)([_.Z], () => _.Z.getChannel(B)),
+        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(P.I_8)),
+        B = (0, s.e7)([_.Z], () => _.Z.getChannel(k)),
         U = (0, x.Z)((e) => e.guildId) === P.I_8,
         { badge: O, unread: V } = (0, y.Z)(G),
         H = (function (e) {
@@ -117,14 +117,14 @@ function L() {
                                 mentions: O
                             }),
                             to: {
-                                pathname: P.Z5c.CHANNEL(P.I_8, B),
+                                pathname: P.Z5c.CHANNEL(P.I_8, k),
                                 state: M
                             },
                             selected: U || L,
                             onMouseEnter: () => R(!0),
                             onMouseLeave: () => R(!1),
                             onMouseDown: function () {
-                                if (null != k) u.Z.preload(k.guild_id, k.id);
+                                if (null != B) u.Z.preload(B.guild_id, B.id);
                             },
                             onContextMenu: function (e) {
                                 (0, d.jW)(e, async () => {

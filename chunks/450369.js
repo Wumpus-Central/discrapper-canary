@@ -132,7 +132,7 @@ t.Z = l.memo(function (e) {
     let { user: C } = l,
         x = (0, o.e7)([f.Z], () => f.Z.getParticipant(r.id, l.id), [r.id, l.id]),
         v = (0, o.e7)([T.ZP], () => T.ZP.isModerator(C.id, r.id), [r.id, C.id]);
-    if (null == x || x.type === P.fO.ACTIVITY) return null;
+    if (null == x || x.type === P.fO.ACTIVITY || x.type === P.fO.PRESENCE_EMBEDDED_ACTIVITY) return null;
     let _ = (e) => {
             (0, m.h)({
                 type: s.ImpressionTypes.MENU,

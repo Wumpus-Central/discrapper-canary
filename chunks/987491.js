@@ -1,12 +1,12 @@
 t.d(n, {
     Z: function () {
-        return w;
+        return B;
     }
 });
 var l = t(200651),
-    i = t(192379),
-    r = t(120356),
-    a = t.n(r),
+    r = t(192379),
+    i = t(120356),
+    a = t.n(i),
     s = t(913527),
     o = t.n(s),
     c = t(442837),
@@ -20,12 +20,12 @@ var l = t(200651),
     b = t(98493),
     f = t(328977),
     v = t(412222),
-    N = t(223312),
-    g = t(768762),
+    g = t(223312),
+    N = t(768762),
     I = t(171368),
     _ = t(598077),
-    E = t(430824),
-    T = t(51144),
+    T = t(430824),
+    E = t(51144),
     S = t(388032),
     p = t(174598),
     M = t(676391),
@@ -79,13 +79,13 @@ function k(e) {
                                 children: S.intl.string(S.t.EZ5QWF)
                             }),
                             n === C.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(g.Z, {
+                                ? (0, l.jsx)(N.Z, {
                                       className: p.sortIcon,
-                                      direction: g.Z.Directions.UP
+                                      direction: N.Z.Directions.UP
                                   })
-                                : (0, l.jsx)(g.Z, {
+                                : (0, l.jsx)(N.Z, {
                                       className: p.sortIcon,
-                                      direction: g.Z.Directions.DOWN
+                                      direction: N.Z.Directions.DOWN
                                   })
                         ]
                     })
@@ -102,19 +102,19 @@ function k(e) {
         })
     });
 }
-let L = i.memo(function (e) {
+let L = r.memo(function (e) {
         let { joinRequest: n, user: t } = e,
-            { joinRequestId: r, guildId: a } = n,
-            s = i.useCallback(
+            { joinRequestId: i, guildId: a } = n,
+            s = r.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
                         (0, I.openUserProfileModal)({
                             userId: t.id,
-                            joinRequestId: r
+                            joinRequestId: i
                         });
                 },
-                [t, r]
+                [t, i]
             );
         return (0, l.jsxs)('div', {
             className: A.memberNameContainer,
@@ -152,21 +152,21 @@ let L = i.memo(function (e) {
                         children: (0, l.jsx)(d.Clickable, {
                             onClick: s,
                             tag: 'span',
-                            children: T.ZP.getUserTag(t)
+                            children: E.ZP.getUserTag(t)
                         })
                     })
                 })
             ]
         });
     }),
-    P = i.memo(function (e) {
-        let { joinRequest: n, onSelect: r } = e,
+    w = r.memo(function (e) {
+        let { joinRequest: n, onSelect: i } = e,
             { guildId: s, createdAt: m, applicationStatus: x } = n,
-            h = i.useMemo(() => new _.Z(n.user), [n.user]),
+            h = r.useMemo(() => new _.Z(n.user), [n.user]),
             j = (0, f.L)({ guildId: s }),
-            b = (0, c.e7)([E.Z], () => E.Z.getGuild(s)),
+            b = (0, c.e7)([T.Z], () => T.Z.getGuild(s)),
             v = x === C.wB.SUBMITTED,
-            N = (e) => {
+            g = (e) => {
                 (0, u.jW)(
                     e,
                     async () => {
@@ -187,7 +187,7 @@ let L = i.memo(function (e) {
         return null == h
             ? null
             : (0, l.jsxs)('tr', {
-                  onClick: r,
+                  onClick: i,
                   className: a()(A.roundedRow, A.memberRowContainer, { [A.selected]: (null == j ? void 0 : j.joinRequestId) === n.joinRequestId }),
                   children: [
                       (0, l.jsx)('td', {
@@ -215,7 +215,7 @@ let L = i.memo(function (e) {
                                       return (0, l.jsx)(d.Clickable, {
                                           onMouseEnter: n,
                                           onMouseLeave: t,
-                                          onClick: N,
+                                          onClick: g,
                                           className: a()(A.button),
                                           children: (0, l.jsx)(d.MoreVerticalIcon, {
                                               size: 'custom',
@@ -230,7 +230,7 @@ let L = i.memo(function (e) {
                   ]
               });
     }),
-    B = () => {
+    P = () => {
         let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
             n = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
             t = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
@@ -270,13 +270,13 @@ let L = i.memo(function (e) {
             ]
         });
     };
-function w(e) {
+function B(e) {
     let { guildId: n, currentTab: t } = e,
-        r = i.useRef(null),
-        s = (0, c.e7)([E.Z], () => E.Z.getGuild(n)),
+        i = r.useRef(null),
+        s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)),
         o = (0, v.C)({ guildId: n }),
         u = (0, c.e7)([j.Z], () => j.Z.isFetching()),
-        { guildJoinRequests: m } = (0, N.j)({
+        { guildJoinRequests: m } = (0, g.j)({
             guildId: n,
             applicationStatus: t,
             sortOrder: o
@@ -285,7 +285,7 @@ function w(e) {
             guildId: n,
             guildJoinRequests: m
         }),
-        f = i.useCallback(async () => {
+        f = r.useCallback(async () => {
             let e = o === C.Nw.TIMESTAMP_ASC ? C.Nw.TIMESTAMP_DESC : C.Nw.TIMESTAMP_ASC;
             h.Z.setSelectedSortOrder(n, e), await x(e, t);
         }, [o, n, x, t]);
@@ -295,7 +295,7 @@ function w(e) {
               className: M.mainTableContainer,
               children: (0, l.jsx)(d.AdvancedScroller, {
                   className: M.horizatonalScroller,
-                  ref: r,
+                  ref: i,
                   orientation: 'horizontal',
                   children: (0, l.jsxs)('table', {
                       className: a()(p.table),
@@ -306,7 +306,7 @@ function w(e) {
                           }),
                           (0, l.jsx)('tbody', {
                               children: u
-                                  ? [, , , , ,].fill(0).map((e, n) => (0, l.jsx)(B, {}, 'placeholder-'.concat(n)))
+                                  ? [, , , , ,].fill(0).map((e, n) => (0, l.jsx)(P, {}, 'placeholder-'.concat(n)))
                                   : 0 === m.length
                                     ? (0, l.jsx)('td', {
                                           colSpan: 3,
@@ -314,7 +314,7 @@ function w(e) {
                                       })
                                     : m.map((e) =>
                                           (0, l.jsx)(
-                                              P,
+                                              w,
                                               {
                                                   joinRequest: e,
                                                   onSelect: () => h.Z.setSelectedGuildJoinRequest(n, e)

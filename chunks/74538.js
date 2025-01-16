@@ -511,7 +511,7 @@ function el(e) {
         y = U.GP[_],
         S = tC(W(y.id), y.interval),
         A = eG(f) || (null == f.paymentSourceId && !f.isPurchasedExternally && !(null === (n = b.default.getCurrentUser()) || void 0 === n ? void 0 : n.hasFreePremium())),
-        N = null != p,
+        N = null != p && null == f.paymentGateway,
         C = f.status === M.O0b.UNPAID && null !== f.latestInvoice && (null === (r = f.latestInvoice) || void 0 === r ? void 0 : r.status) === M.hUK.OPEN,
         O = A ? M.O0b.CANCELED : C ? M.O0b.UNPAID : f.status,
         D = null === (s = null !== (a = null == I ? void 0 : I.taxInclusive) && void 0 !== a ? a : null === (i = f.latestInvoice) || void 0 === i ? void 0 : i.taxInclusive) || void 0 === s || s,

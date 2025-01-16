@@ -55,12 +55,12 @@ function I(e) {
                                             children: [
                                                 (0, i.jsx)(a.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: C.intl.string(C.t.fRUGzs)
+                                                    children: C.intl.string(C.t['0YV0YG'])
                                                 }),
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: C.intl.string(C.t.ja0Tg4)
+                                                    children: C.intl.string(C.t['0UQVDA'])
                                                 })
                                             ]
                                         }),
@@ -69,7 +69,7 @@ function I(e) {
                                             size: a.ButtonSizes.SMALL,
                                             color: a.ButtonColors.BRAND,
                                             onClick: c,
-                                            children: C.intl.string(C.t.E0MgHh)
+                                            children: C.intl.string(C.t['4r+amZ'])
                                         })
                                     ]
                                 }),

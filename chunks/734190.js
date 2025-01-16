@@ -93,13 +93,13 @@ t.Z = l.memo(function (e) {
         {
             unread: D,
             mentionCount: G,
-            isMentionLowImportance: B
+            isMentionLowImportance: k
         } = (0, s.cj)([v.ZP], () => ({
             unread: v.ZP.hasUnread(t.id),
             mentionCount: v.ZP.getMentionCount(t.id),
             isMentionLowImportance: v.ZP.getIsMentionLowImportance(t.id)
         })),
-        k = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
+        B = (0, s.e7)([m.Z], () => m.Z.isMuted(t.id)),
         U = l.useCallback(
             (e) => {
                 (0, f.ok)(t, !e.shiftKey, N.on.CHANNEL_LIST);
@@ -160,14 +160,14 @@ t.Z = l.memo(function (e) {
                 children: (0, i.jsxs)('div', {
                     className: a()(y.iconVisibility, j.wrapper, j.typeThread, {
                         [j.modeSelected]: r,
-                        [j.modeMuted]: !r && k,
-                        [j.modeUnreadImportant]: !k && !r && D,
+                        [j.modeMuted]: !r && B,
+                        [j.modeUnreadImportant]: !B && !r && D,
                         [j.withGuildIcon]: M
                     }),
                     onMouseDown: O,
                     onContextMenu: V,
                     children: [
-                        !D || k || r ? null : (0, i.jsx)('div', { className: a()(j.unread, j.unreadImportant) }),
+                        !D || B || r ? null : (0, i.jsx)('div', { className: a()(j.unread, j.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
                             ...W,
                             innerRef: z,
@@ -196,7 +196,7 @@ t.Z = l.memo(function (e) {
                                             (0, I.Z)(G)
                                                 ? (0, i.jsx)(Z.Z, {
                                                       mentionsCount: G,
-                                                      isMentionLowImportance: B
+                                                      isMentionLowImportance: k
                                                   })
                                                 : null
                                         ]

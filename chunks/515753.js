@@ -42,8 +42,8 @@ var i = n(200651),
     R = n(158776),
     D = n(306680),
     G = n(699516),
-    B = n(111583),
-    k = n(9156),
+    k = n(111583),
+    B = n(9156),
     U = n(594174),
     O = n(709054),
     V = n(998502),
@@ -139,7 +139,7 @@ function $(e) {
 }
 function ee(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: y, activities: T, applicationStream: w, entry: L, isTyping: R, status: B, isMobile: U, 'aria-posinset': O, 'aria-setsize': V } = e,
+    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: y, activities: T, applicationStream: w, entry: L, isTyping: R, status: k, isMobile: U, 'aria-posinset': O, 'aria-setsize': V } = e,
         [$, ee] = l.useState(!1),
         et = l.useRef(null),
         en = l.useRef(null),
@@ -152,7 +152,7 @@ function ee(e) {
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(d || $)
         }),
-        ea = (0, h.e7)([k.ZP], () => k.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        ea = (0, h.e7)([B.ZP], () => B.ZP.isChannelMuted(r.getGuildId(), r.id)),
         { ignored: eo, blocked: es } = (0, h.cj)([G.Z], () => ({
             ignored: G.Z.isIgnored(r.getRecipientId()),
             blocked: G.Z.isBlocked(r.getRecipientId())
@@ -240,7 +240,7 @@ function ee(e) {
                         className: z.subtext,
                         children: W.intl.format(W.t.CxSA5O, { members: r.recipients.length + 1 })
                     })
-                  : B !== F.Skl.OFFLINE && B !== F.Skl.INVISIBLE && null != T && T.length > 0
+                  : k !== F.Skl.OFFLINE && k !== F.Skl.INVISIBLE && null != T && T.length > 0
                     ? (0, i.jsx)(H.ZP, {
                           ...e,
                           activities: T,
@@ -265,20 +265,20 @@ function ee(e) {
                           recipients: r.recipients,
                           size: e,
                           isTyping: R,
-                          status: B
+                          status: k
                       })
                     : (0, i.jsx)(q, {
                           ...er,
                           src: (0, _.x)(r),
                           'aria-hidden': !0,
                           size: e,
-                          status: R ? F.Skl.ONLINE : B,
+                          status: R ? F.Skl.ONLINE : k,
                           isTyping: R
                       });
             s()(null != y, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let t = null;
             return (
-                !y.isSystemUser() && (t = (0, g.Z)(T) ? F.Skl.STREAMING : B),
+                !y.isSystemUser() && (t = (0, g.Z)(T) ? F.Skl.STREAMING : k),
                 (0, i.jsx)(q, {
                     ...er,
                     size: p.AvatarSizes.SIZE_32,
@@ -411,17 +411,17 @@ t.ZP = (e) => {
         ),
         d = (0, w.Z)(null == r ? void 0 : r.id, 'PrivateChannel'),
         p = (0, h.e7)(
-            [U.default, B.Z],
+            [U.default, k.Z],
             () => {
                 if (t.isMultiUserDM())
                     return (
                         !!o &&
-                        O.default.keys(B.Z.getTypingUsers(t.id)).some((e) => {
+                        O.default.keys(k.Z.getTypingUsers(t.id)).some((e) => {
                             var t;
                             return e !== (null === (t = U.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })
                     );
-                if (null != r) return B.Z.isTyping(t.id, t.getRecipientId());
+                if (null != r) return k.Z.isTyping(t.id, t.getRecipientId());
                 return !1;
             },
             [t, r, o]

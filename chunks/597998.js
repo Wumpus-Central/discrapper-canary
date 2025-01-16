@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     nm: function () {
-        return N;
+        return A;
     }
 }),
     n(653041),
@@ -53,7 +53,7 @@ let T = (e) => {
             children: t
         });
     },
-    A = (e) => {
+    N = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i } = e;
         return i && null == t
             ? (0, l.jsx)(
@@ -78,11 +78,11 @@ let T = (e) => {
                   'hang-status'
               );
     };
-function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
+function A(e) {
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: A, voicePlatform: j, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: B } = e;
     if (f || g) return null;
-    let B = [],
-        G = (0, l.jsx)(P, {
+    let W = [],
+        z = (0, l.jsx)(P, {
             iconClassName: b,
             mute: n,
             localMute: i,
@@ -92,7 +92,7 @@ function N(e) {
         });
     p &&
         (a
-            ? B.push(
+            ? W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -108,7 +108,7 @@ function N(e) {
                       'video'
                   )
               )
-            : B.push(
+            : W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -123,8 +123,8 @@ function N(e) {
                       'video'
                   )
               )),
-        W &&
-            B.push(
+        B &&
+            W.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
@@ -139,7 +139,7 @@ function N(e) {
                 )
             ),
         null != T &&
-            B.push(
+            W.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
@@ -154,8 +154,8 @@ function N(e) {
                     'activity'
                 )
             ),
-        N === C.YE.XBOX || w === E.wR.XBOX
-            ? B.push(
+        A === C.YE.XBOX || j === E.wR.XBOX
+            ? W.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -165,8 +165,8 @@ function N(e) {
                       'xbox'
                   )
               )
-            : (N === C.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
-              B.push(
+            : (A === C.YE.PLAYSTATION || j === E.wR.PLAYSTATION) &&
+              W.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -177,7 +177,7 @@ function N(e) {
                   )
               ),
         h
-            ? B.push(
+            ? W.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -188,7 +188,7 @@ function N(e) {
                   )
               )
             : _ &&
-              B.push(
+              W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -203,9 +203,9 @@ function N(e) {
                       'watch'
                   )
               );
-    let z = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
-        H = null == R && z;
-    return 0 !== B.length || null != G || M || H
+    let G = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
+        H = null == R && G;
+    return 0 !== W.length || null != z || M || H
         ? (0, l.jsxs)('div', {
               className: s()(Z.icons, t),
               children: [
@@ -213,7 +213,7 @@ function N(e) {
                       className: Z.iconGroup,
                       onMouseEnter: () => (null == F ? void 0 : F(!0)),
                       onMouseLeave: () => (null == F ? void 0 : F(!1)),
-                      children: [G, B]
+                      children: [z, W]
                   }),
                   M || H
                       ? (0, l.jsx)('div', {
@@ -222,7 +222,7 @@ function N(e) {
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
                             children: H
                                 ? (0, l.jsx)(
-                                      j,
+                                      w,
                                       {
                                           application: L,
                                           iconClassName: b,
@@ -232,7 +232,7 @@ function N(e) {
                                       },
                                       ''.concat(U.id, '-game')
                                   )
-                                : (0, l.jsx)(A, {
+                                : (0, l.jsx)(N, {
                                       hangStatusActivity: R,
                                       iconClassName: b,
                                       isSelf: O
@@ -243,7 +243,7 @@ function N(e) {
           })
         : null;
 }
-class w extends (i = a.Component) {
+class j extends (i = a.Component) {
     renderPrioritySpeaker() {
         let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: a } = this.props;
         return t && !n
@@ -304,7 +304,7 @@ class w extends (i = a.Component) {
             : null;
     }
     renderIcons() {
-        return (0, l.jsx)(N, { ...this.props });
+        return (0, l.jsx)(A, { ...this.props });
     }
     render() {
         let { onClick: e, onKeyDown: t, flipped: n, size: i, className: a, selected: r, disabled: c, overlap: u, 'aria-label': d, tabIndex: m } = this.props;
@@ -361,7 +361,7 @@ class w extends (i = a.Component) {
             });
     }
 }
-function j(e) {
+function w(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
@@ -457,7 +457,7 @@ function P(e) {
     }
     return 0 === d.length ? null : (0, l.jsx)(l.Fragment, { children: d });
 }
-b(w, 'defaultProps', {
+b(j, 'defaultProps', {
     avatarContainerClass: Z.avatarContainer,
     userNameClassName: Z.usernameFont,
     size: x.ipw.SMALL,
@@ -465,4 +465,4 @@ b(w, 'defaultProps', {
     disabled: !1,
     isOverlay: !1
 }),
-    (t.ZP = w);
+    (t.ZP = j);

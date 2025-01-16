@@ -13,7 +13,7 @@ var i = n(200651),
 t.Z = l.forwardRef(function (e, t) {
     let { body: n, header: r, artClassName: m, headerClassName: f, contentClassName: g, tryItText: v, dismissText: C, onTryFeature: x, onClose: I, className: _, inlineArt: Z = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: P = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: M, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
         G = S ? o.Button.Sizes.LARGE : o.Button.Sizes.MAX,
-        [B, k] = l.useState(!1),
+        [k, B] = l.useState(!1),
         { ref: U, width: O } = (0, s.Z)();
     function V(e) {
         (0, c.EW)(E, { dismissAction: e });
@@ -22,8 +22,8 @@ t.Z = l.forwardRef(function (e, t) {
         l.useEffect(() => {
             var e, t;
             let n = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-            !B && n > A && k(!0);
-        }, [B, O, U, A]),
+            !k && n > A && B(!0);
+        }, [k, O, U, A]),
         l.useEffect(() => {
             (0, c.kk)(E);
         }, [E]),
@@ -95,7 +95,7 @@ t.Z = l.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         ref: U,
-                        className: B || !S ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                        className: k || !S ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
                             null != x
                                 ? (0, i.jsxs)(i.Fragment, {

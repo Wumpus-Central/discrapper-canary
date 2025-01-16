@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return A;
     }
 }),
     n(47120);
@@ -29,7 +29,7 @@ var i = n(200651),
     Z = n(981631),
     b = n(388032),
     T = n(846450);
-class A extends l.PureComponent {
+class N extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
         _.default.track(Z.rMx.OPEN_POPOUT, {
@@ -117,7 +117,7 @@ class A extends l.PureComponent {
               });
     }
 }
-function N(e) {
+function A(e) {
     let { user: t, channel: n, ...a } = e,
         [r, o] = (0, s.Wu)([I.Z, g.Z, v.Z, f.Z], () => (0, x.p9)(n, I.Z, g.Z, v.Z, f.Z)),
         c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
@@ -128,7 +128,7 @@ function N(e) {
         y = l.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
         (0, u.$)(y),
-        (0, i.jsx)(A, {
+        (0, i.jsx)(N, {
             ...a,
             canWatch: r,
             unavailableReason: o,

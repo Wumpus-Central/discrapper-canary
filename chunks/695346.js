@@ -857,13 +857,13 @@ let eI = (0, c.KM)(
         baseSetting: (0, c.Zc)(
             'privacy',
             'defaultGuildsActivityRestricted',
-            (e) => (null != e ? e : s.E5.OFF),
-            (e) => e
+            (e) => e,
+            (e) => (null != e ? e : s.E5.OFF)
         ),
-        ineligibleDefault: () => s.E5.OFF,
-        eligibleDefault: () => s.E5.ON,
-        getExperimentConfig: () => u.l.getCurrentConfig({ location: 'user_settings' }, { autoTrackExposure: !1 }),
-        useExperimentConfig: () => u.l.useExperiment({ location: 'user_settings' }, { autoTrackExposure: !1 })
+        isEligible: () => u.l.getCurrentConfig({ location: 'user_settings' }, { autoTrackExposure: !1 }).enabled,
+        useIsEligible: () => u.l.useExperiment({ location: 'user_settings' }, { autoTrackExposure: !1 }).enabled,
+        ineligibleDefault: s.E5.OFF,
+        eligibleDefault: () => s.E5.ON
     }),
     eD = (0, c.Zc)(
         'privacy',

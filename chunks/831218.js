@@ -47,7 +47,7 @@ function G(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let B = o.memo(function () {
+let k = o.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
@@ -195,7 +195,7 @@ let B = o.memo(function () {
         ]
     });
 });
-class k extends (l = o.Component) {
+class B extends (l = o.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -351,7 +351,7 @@ class k extends (l = o.Component) {
             G(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(B, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(k, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
             G(this, 'renderSection', (e) => {
                 let { section: t } = e,
@@ -400,7 +400,7 @@ class k extends (l = o.Component) {
             });
     }
 }
-G(k, 'defaultProps', { padding: 8 });
+G(B, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let t = (0, Z.Q3)('ConnectedPrivateChannelsList'),
         { density: n } = (0, m.useThemeContext)(),
@@ -471,7 +471,7 @@ t.Z = (e) => {
         });
     return (0, a.jsx)(u.bG, {
         navigator: R,
-        children: (0, a.jsx)(k, {
+        children: (0, a.jsx)(B, {
             density: n,
             isVisualRefreshEnabled: t,
             channels: f,

@@ -80,13 +80,13 @@ t.ZP = (e) => {
         R !== v && (0, Z.v)(_, v);
     }, [_, R, v]);
     let G = ''.concat(Math.min(100, (v / (0, I.vn)(t.id)[L]) * 100), '%'),
-        { current: B } = l.useRef(G),
-        k = {
-            from: { width: R === v ? B : '0%' },
+        { current: k } = l.useRef(G),
+        B = {
+            from: { width: R === v ? k : '0%' },
             to: { width: G },
             config: M
         },
-        [U, O] = (0, d.useSpring)(() => k),
+        [U, O] = (0, d.useSpring)(() => B),
         V = () => {
             (0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: E.jXE.PREMIUM_GUILD_PROGRESS_BAR },
@@ -134,7 +134,7 @@ t.ZP = (e) => {
                     onClick: V,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), O(k);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), O(B);
                     },
                     className: a()(j.container, { [j.containerWithMargin]: n }),
                     onContextMenu: (e) => {

@@ -54,25 +54,25 @@ function c(e) {
         children: [
             (0, i.jsx)(n, {
                 className: s.requirementIcon,
-                height: 20,
-                width: 20,
+                height: 16,
+                width: 16,
                 size: 'custom',
                 color: 'currentColor'
             }),
             (0, i.jsx)(l.Text, {
                 className: s.requirementText,
-                variant: 'text-md/normal',
+                variant: 'text-sm/medium',
                 children: t
             }),
             o
                 ? (0, i.jsx)(l.CircleCheckIcon, {
-                      size: 'md',
+                      size: 'sm',
                       color: 'currentColor',
                       className: s.requirementSuccess,
                       secondaryColor: r.Z.colors.WHITE.css
                   })
                 : (0, i.jsx)(l.CircleXIcon, {
-                      size: 'md',
+                      size: 'sm',
                       color: 'currentColor',
                       className: s.requirementFailure,
                       secondaryColor: r.Z.colors.WHITE.css

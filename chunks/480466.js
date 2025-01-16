@@ -1,11 +1,11 @@
 r(47120);
-var i = r(192379);
+var s = r(192379);
 t.Z = function (e, t) {
-    let [r, s] = i.useState(e);
+    let [r, i] = s.useState(e);
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             let r = setTimeout(() => {
-                s(e);
+                i(e);
             }, t);
             return () => {
                 clearTimeout(r);

@@ -27,13 +27,13 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
-    A = {
+    N = {
         opacity: 1,
         transform: 'translate3d(0%, 0, 0)'
     },
-    N = { opacity: 0 },
-    w = { opacity: 1 },
-    j = { borderRadius: ''.concat(b, 'px ').concat(b, 'px ').concat(b, 'px ').concat(b, 'px') },
+    A = { opacity: 0 },
+    j = { opacity: 1 },
+    w = { borderRadius: ''.concat(b, 'px ').concat(b, 'px ').concat(b, 'px ').concat(b, 'px') },
     P = { borderRadius: '0px '.concat(b, 'px ').concat(b, 'px 0px') },
     R = {
         mass: 1,
@@ -44,17 +44,17 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             a,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: A, premiumIndicator: N } = e,
-            w = (0, _.Wc)(s),
-            { analyticsLocations: j } = (0, p.ZP)(),
+            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: N, premiumIndicator: A } = e,
+            j = (0, _.Wc)(s),
+            { analyticsLocations: w } = (0, p.ZP)(),
             P = null != (0, x.Z)(s);
         try {
-            t = (0, _.nG)(w);
+            t = (0, _.nG)(j);
         } catch (e) {
             t = !1;
         }
         try {
-            a = (0, _.tR)(w);
+            a = (0, _.tR)(j);
         } catch (e) {
             a = !1;
         }
@@ -82,11 +82,11 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         type: C.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
-                        location_stack: j
+                        location_stack: w
                     }),
                     T(!0));
-            }, [t, a, R, b, T, j]),
-            null == w)
+            }, [t, a, R, b, T, w]),
+            null == j)
         )
             return null;
         let D = (0, i.jsx)(m.Tooltip, {
@@ -108,15 +108,15 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                             : null,
                         (0, i.jsx)('span', {
                             className: Z.qualityResolution,
-                            children: (0, _.ml)(w.maxResolution)
+                            children: (0, _.ml)(j.maxResolution)
                         }),
-                        (0, i.jsx)('span', { children: (0, _.bp)(w.maxFrameRate) })
+                        (0, i.jsx)('span', { children: (0, _.bp)(j.maxFrameRate) })
                     ]
                 })
         });
         return (0, i.jsx)(m.TextBadge, {
             text: D,
-            className: r()(A, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && N }),
+            className: r()(N, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && A }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -134,17 +134,17 @@ t.Z = (e) => {
             S,
             {
                 enter: {
-                    from: v.enabled ? N : T,
-                    to: v.enabled ? w : A
+                    from: v.enabled ? A : T,
+                    to: v.enabled ? j : N
                 },
-                leave: v.enabled ? N : T,
+                leave: v.enabled ? A : T,
                 config: R
             },
             'animate-always'
         ),
         x = (0, m.useSpring)(
             {
-                to: S ? P : j,
+                to: S ? P : w,
                 config: R
             },
             'animate-always'

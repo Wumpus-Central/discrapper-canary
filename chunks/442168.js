@@ -65,23 +65,23 @@ function I(e) {
                 width: 268
             };
         },
-        A = (0, l.useRef)(null),
-        N = (0, o.useTransition)(
+        N = (0, l.useRef)(null),
+        A = (0, o.useTransition)(
             y,
             {
                 keys: (e) => e.timestamp,
-                ref: A,
+                ref: N,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: g
             },
             'animate-always'
         ),
-        w = (0, l.useRef)(null),
-        j = (0, o.useTransition)(
+        j = (0, l.useRef)(null),
+        w = (0, o.useTransition)(
             y,
             {
-                ref: w,
+                ref: j,
                 keys: (e) => e.timestamp,
                 from: (e) => ({
                     position: 'fixed',
@@ -118,14 +118,14 @@ function I(e) {
             'animate-always'
         );
     return (
-        (0, a.useChain)([A, w], [0, 0.1], 3000),
+        (0, a.useChain)([N, j], [0, 0.1], 3000),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', {
                     className: p.hidden,
                     ref: _
                 }),
-                N(
+                A(
                     (e, t) =>
                         null != t &&
                         (0, i.jsx)(a.animated.div, {
@@ -136,7 +136,7 @@ function I(e) {
                 (0, i.jsx)(f.ZP, {
                     children: (0, i.jsx)('div', {
                         className: p.hidden,
-                        children: j(
+                        children: w(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, i.jsx)(a.animated.img, {

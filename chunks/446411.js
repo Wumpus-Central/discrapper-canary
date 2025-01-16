@@ -523,7 +523,7 @@ class O extends (n = r.PureComponent) {
         _ in w && (E.onClick = w[_]);
         let N = null !== (n = null === (e = s.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
         'jpg' === N && (N = 'jpeg');
-        let S = null != s && !v.uo.test(null == s ? void 0 : s.url) && !(s.srcIsAnimated && v.YG.test(null == s ? void 0 : s.url)),
+        let S = null != s && !v.uo.test(null == s ? void 0 : s.url) && !(s.srcIsAnimated && v.YG.test(null == s ? void 0 : s.url)) && !(s.srcIsAnimated && v.FH.test(null == s ? void 0 : s.url)),
             A =
                 !0 !== this.props.isSearchResult &&
                 a &&

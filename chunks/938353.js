@@ -166,7 +166,7 @@ let eJ = 15 * eg.Z.Millis.MINUTE,
     },
     e1 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: l, srcIsAnimated: a } = e;
-        return null != i && null != l && (Y.uo.test(n) || (a && Y.YG.test(n)))
+        return null != i && null != l && (Y.uo.test(n) || (a && (Y.YG.test(n) || Y.FH.test(n))))
             ? (0, r.jsx)(eL.Z, {
                   width: i,
                   height: l,
