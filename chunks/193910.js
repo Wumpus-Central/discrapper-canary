@@ -27,8 +27,8 @@ var i = n(200651),
     E = n(752305),
     b = n(951211),
     Z = n(981631),
-    S = n(921944),
-    N = n(489887),
+    N = n(921944),
+    S = n(489887),
     T = n(388032),
     j = n(308183);
 let A = /(.*)```(\w+)\n(.*)```(.*)/s;
@@ -40,7 +40,7 @@ function y() {
     return (
         l.useEffect(
             () => () => {
-                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: N.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -78,7 +78,7 @@ function P(e) {
         L();
     }
     function B() {
-        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -88,7 +88,7 @@ function P(e) {
                             channel: t
                         });
                 },
-                { modalKey: N.$z }
+                { modalKey: S.$z }
             );
     }
     function U() {

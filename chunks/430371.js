@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -26,11 +26,11 @@ var i = n(200651),
     E = n(288135),
     b = n(290187);
 let Z = 16 / 9,
-    S = 8 + v.cF;
-function N(e) {
+    N = 8 + v.cF;
+function S(e) {
     var t;
     let n,
-        { onSelectParticipant: r, onContextMenuParticipant: N, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: R, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
+        { onSelectParticipant: r, onContextMenuParticipant: S, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: R, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
         H = null != y,
         G = p.Z.getVideoComponent(),
         F = h.default.getId(),
@@ -40,7 +40,7 @@ function N(e) {
         X = R.type === I.fO.ACTIVITY,
         J = (0, d.Z)(R.id),
         Q = !X && null != R.streamId,
-        $ = w <= 2 * S + 144,
+        $ = w <= 2 * N + 144,
         ee = L && !$,
         et = (0, c.Z)(ee),
         en = B === _.AEg.MINIMUM || B === _.AEg.NORMAL,
@@ -48,12 +48,12 @@ function N(e) {
         el = (0, f.Z)(ei, 100),
         er = (null !== (t = (0, c.Z)(R.id)) && void 0 !== t ? t : R.id) !== R.id,
         ea = 0;
-    (X || ee) && (ea += 72), X && !ee && (ei ? (ea += 48) : (ea += 8)), ee && (ea += 0.5 * S + 8);
+    (X || ee) && (ea += 72), X && !ee && (ei ? (ea += 48) : (ea += 8)), ee && (ea += 0.5 * N + 8);
     let es = l.useMemo(() => (X && J ? D / (w - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [Q, V, X, D, w, ea, J]),
         eo = w - 2 * ea,
         ec = X && J ? D : eo * es,
         ed = Math.floor(Math.min(D, ec) / es),
-        eu = w > D / es + 72 + S + 8;
+        eu = w > D / es + 72 + N + 8;
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (w - ed) / 2)),
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -138,7 +138,7 @@ function N(e) {
                 children: [
                     (0, i.jsxs)(s.animated.div, {
                         className: b.videoFrame,
-                        style: { top: ep.value.to((e) => (-e * S) / 2) },
+                        style: { top: ep.value.to((e) => (-e * N) / 2) },
                         children: [
                             (0, i.jsx)(s.animated.div, {
                                 style: { width: em.value },
@@ -165,7 +165,7 @@ function N(e) {
                                                           participant: t,
                                                           onClick: r,
                                                           onDoubleClick: T,
-                                                          onContextMenu: N,
+                                                          onContextMenu: S,
                                                           onVideoResize: eC,
                                                           inCall: P,
                                                           inPopout: H
@@ -193,14 +193,14 @@ function N(e) {
                     (0, i.jsx)(s.animated.div, {
                         className: b.participantsWrapperAnimated,
                         style: {
-                            translateY: eh.value.to((e) => (e * S) / 2),
+                            translateY: eh.value.to((e) => (e * N) / 2),
                             opacity: eh.value,
                             visibility: eh.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
                         children: (0, i.jsx)(v.ZP, {
                             channel: M,
                             onClick: r,
-                            onContextMenu: N,
+                            onContextMenu: S,
                             onDoubleClick: T,
                             participants: ev,
                             participantTileWidth: e_,
@@ -214,7 +214,7 @@ function N(e) {
             }),
             ex.length > 0
                 ? (0, i.jsx)(C.Z, {
-                      onContextMenuParticipant: N,
+                      onContextMenuParticipant: S,
                       width: D,
                       height: w,
                       channel: M,

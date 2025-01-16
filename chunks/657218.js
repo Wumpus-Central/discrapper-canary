@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(967128),
     b = n(665149),
     Z = n(294218),
-    S = n(913663),
-    N = n(268350),
+    N = n(913663),
+    S = n(268350),
     T = n(695346),
     j = n(592125),
     A = n(703558),
@@ -177,7 +177,7 @@ function K(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             };
-                        p(!0), null == e && (e = a.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = S.Z.getStickerPreview(t.id, z.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == r || 0 === r.length) && (r = M.Z.getUploads(t.id, A.d.FirstThreadMessage));
+                        p(!0), null == e && (e = a.textValue), (e = e.trim()), (null == l || 0 === l.length) && (l = null === (s = N.Z.getStickerPreview(t.id, z.drafts.type)) || void 0 === s ? void 0 : s.map((e) => e.id)), (null == r || 0 === r.length) && (r = M.Z.getUploads(t.id, A.d.FirstThreadMessage));
                         let f = null !== (o = i.name) && void 0 !== o ? o : '',
                             g = null == n && 0 === f.length,
                             C = '' === e && (null == l || 0 === l.length) && 0 === r.length;
@@ -219,7 +219,7 @@ function K(e) {
                             );
                         }
                         return (
-                            (0, N.qB)(t.id, z.drafts.type),
+                            (0, S.qB)(t.id, z.drafts.type),
                             p(!1),
                             {
                                 shouldClear: !0,

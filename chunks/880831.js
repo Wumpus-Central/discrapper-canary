@@ -29,8 +29,8 @@ var i = n(200651),
     E = n(699516),
     b = n(768581),
     Z = n(70956),
-    S = n(823379),
-    N = n(981631),
+    N = n(823379),
+    S = n(981631),
     T = n(217702),
     j = n(644921);
 let A = 10 * Z.Z.Millis.SECOND;
@@ -48,8 +48,8 @@ function y(e) {
         o = (0, C.Uj)(n),
         u = l.useContext(m.Z),
         [I, Z] = l.useState(!1),
-        S = (0, f.p)(),
-        N = l.useCallback(
+        N = (0, f.p)(),
+        S = l.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
@@ -65,7 +65,7 @@ function y(e) {
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
                       isInteracting: I,
-                      shouldFilterKeywords: S
+                      shouldFilterKeywords: N
                   }).content
                 : null,
         {
@@ -102,7 +102,7 @@ function y(e) {
         onMouseLeave: () => {
             Z(!1);
         },
-        onClick: N,
+        onClick: S,
         children: [
             (0, i.jsxs)('div', {
                 className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
@@ -139,7 +139,7 @@ function P(e) {
             l.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== N.uaV.STAGE_START && i.type !== N.uaV.STAGE_END && i.type !== N.uaV.STAGE_TOPIC && i.type !== N.uaV.STAGE_SPEAKER && i.type !== N.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== S.uaV.STAGE_START && i.type !== S.uaV.STAGE_END && i.type !== S.uaV.STAGE_TOPIC && i.type !== S.uaV.STAGE_SPEAKER && i.type !== S.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
                 }
                 return (
                     u.Z.subscribe('MESSAGE_CREATE', e),
@@ -165,7 +165,7 @@ function P(e) {
             let g = null !== (t = p.current) && void 0 !== t ? t : s;
             return {
                 toastsHidden: d,
-                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(S.lm)
+                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(N.lm)
             };
         })({
             channelId: t,
@@ -221,7 +221,7 @@ function P(e) {
             }
         });
     return (0, i.jsx)(d.ThemeProvider, {
-        theme: N.BRd.DARK,
+        theme: S.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
                 className: a()(n, e),

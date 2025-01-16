@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(245216),
     b = n(223606),
     Z = n(188597),
-    S = n(41776),
-    N = n(135793),
+    N = n(41776),
+    S = n(135793),
     T = n(111810),
     j = n(222677),
     A = n(995774),
@@ -188,8 +188,8 @@ function ed(e) {
                 ),
                 b = (0, P.U)(t, n),
                 Z = (0, L.NE)(t, n),
-                N = (0, L.Ek)(n),
-                T = (0, c.e7)([S.Z], () => null != t.guild_id && S.Z.isLurking(t.guild_id), [t]),
+                S = (0, L.Ek)(n),
+                T = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 j = (0, c.e7)([w.ZP], () => null != t.guild_id && w.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = o.id === u,
                 y = (v || n.canDeleteOwnMessage(u)) && h && !et.V$x.UNDELETABLE.has(n.type);
@@ -224,7 +224,7 @@ function ed(e) {
                 canReport: D,
                 canReply: b,
                 canStartThread: Z,
-                canViewThread: N,
+                canViewThread: S,
                 canForward: $ && en,
                 canCopy: F.wS,
                 hasDeveloperMode: C,
@@ -397,7 +397,7 @@ function ed(e) {
                                     {
                                         label: el.intl.string(el.t.icaJW1),
                                         icon: u.PotionIcon,
-                                        onClick: () => (0, N.openMessageConfettiModal)(t, n)
+                                        onClick: () => (0, S.openMessageConfettiModal)(t, n)
                                     },
                                     'add-confetti-potion'
                                 )

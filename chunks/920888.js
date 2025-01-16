@@ -41,10 +41,10 @@ class x extends r.PureComponent {
         if (!P && !N) return null;
         let { canShowImprovedReactionButton: L } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             y = N || P,
-            O = L && !C;
+            O = L ? 'reactionLarge' : 'reaction';
         return (0, i.jsxs)(o.W, {
             component: 'div',
-            className: a()(Z.reactions, x, { [Z.largeReactions]: O }),
+            className: a()(Z.reactions, x, { [Z.largeReactions]: L }),
             transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
@@ -62,7 +62,7 @@ class x extends r.PureComponent {
                     isForumToolbar: C,
                     useChatFontScaling: T,
                     className: v,
-                    emojiSize: O ? 'reactionLarge' : 'reaction'
+                    emojiSize: O
                 }),
                 A > 0 &&
                     (0, i.jsx)(s.Clickable, {

@@ -19,8 +19,8 @@ var i = n(200651),
     f = n(546240),
     g = n(952009);
 function C(e) {
-    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: Z, disabled: S } = e,
-        N = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: Z, disabled: N } = e,
+        S = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
         [T, j] = l.useState(!1),
         A = (0, u.ZP)(),
         y = (0, o.wj)(A) || t ? g : f,
@@ -32,7 +32,7 @@ function C(e) {
             tooltipText: r
         }),
         position: 'top',
-        color: null != _ ? _ : S ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
+        color: null != _ ? _ : N ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
         'aria-label': r,
         tooltipClassName: m.tooltip,
         className: m.tooltipContainer,
@@ -49,7 +49,7 @@ function C(e) {
                 },
                 id: E,
                 type: 'checkbox',
-                disabled: S
+                disabled: N
             }),
             (0, i.jsxs)('label', {
                 htmlFor: E,
@@ -63,7 +63,7 @@ function C(e) {
                     t
                         ? (0, i.jsx)(c.Shine, {
                               className: m.shine,
-                              shinePaused: N
+                              shinePaused: S
                           })
                         : null,
                     (0, i.jsx)('img', {

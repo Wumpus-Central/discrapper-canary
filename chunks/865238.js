@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(981631),
     b = n(37113),
     Z = n(388032),
-    S = n(687919),
-    N = n(574169);
+    N = n(687919),
+    S = n(574169);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
     let { channel: t, buyer: r, onClose: s, dismissibleContent: j } = e,
@@ -87,7 +87,7 @@ function j(e) {
         ? null
         : (0, i.jsxs)(c.animated.div, {
               style: D,
-              className: S.banner,
+              className: N.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
@@ -98,8 +98,8 @@ function j(e) {
                               ...B
                           }),
                           (0, i.jsx)('img', {
-                              className: S.potion,
-                              src: N,
+                              className: N.potion,
+                              src: S,
                               alt: ''
                           })
                       ]
@@ -109,7 +109,7 @@ function j(e) {
                       children: V
                   }),
                   (0, i.jsxs)('div', {
-                      className: S.subsection,
+                      className: N.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
@@ -138,12 +138,12 @@ function j(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [S.actionButton]: !0 !== P }),
+                              className: a()({ [N.actionButton]: !0 !== P }),
                               children: z
                           }),
                           !H &&
                               (0, i.jsx)(u.Clickable, {
-                                  className: S.x,
+                                  className: N.x,
                                   onClick: s,
                                   children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                               })

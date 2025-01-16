@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(653041),
@@ -155,7 +155,7 @@ class Z extends l.PureComponent {
         super(...e), v(this, 'scaleAnimation', new s.Z.Value(0)), v(this, 'spriteAnimation', new s.Z.Value(0)), v(this, 'spriteOpacity', new s.Z.Value(0)), v(this, 'widthAnimation', new s.Z.Value(0));
     }
 }
-function S(e) {
+function N(e) {
     var t, n;
     let { participants: l, onContextMenu: r, className: s, onClick: d, width: C, guildId: x } = e,
         v = (0, h.ZP)();

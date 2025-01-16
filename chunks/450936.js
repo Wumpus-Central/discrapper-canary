@@ -58,8 +58,8 @@ function C(e) {
                 allowApplicationState: !0
             }
         ),
-        S = Z.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === b)[0],
-        N = Z.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        N = Z.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === b)[0],
+        S = Z.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         T = Z.loading,
         j =
             null ===
@@ -72,15 +72,15 @@ function C(e) {
         A = i.useMemo(() => (null != j ? p.ZP.createFromServer(j) : void 0), [j]),
         y = (0, d.q)(null == A ? b : void 0),
         P = null !== (n = null != A ? A : y) && void 0 !== n ? n : void 0,
-        M = null == P || (T && 0 === N.length);
+        M = null == P || (T && 0 === S.length);
     return {
         application: P,
         isInitialLoading: M,
-        primaryEntryPointCommand: S,
+        primaryEntryPointCommand: N,
         isProfileFetching: v,
         wasProfileFetching: _,
         applicationId: b,
         channelId: C.id,
-        commands: N
+        commands: S
     };
 }

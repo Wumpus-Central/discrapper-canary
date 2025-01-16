@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(199902),
     b = n(314897),
     Z = n(430824),
-    S = n(496675),
-    N = n(979651),
+    N = n(496675),
+    S = n(979651),
     T = n(88751),
     j = n(252132),
     A = n(248400),
@@ -93,7 +93,7 @@ let R = 16 / 9,
             O = l.useCallback(
                 (e, t) => {
                     if (e.type === P.fO.STREAM && 0 === T.filter((t) => (0, C.V9)(t) === e.id && t.state !== y.jm8.ENDED).length) {
-                        if (!(0, x.p9)(r, N.Z, Z.Z, S.Z, g.Z)[0]) return;
+                        if (!(0, x.p9)(r, S.Z, Z.Z, N.Z, g.Z)[0]) return;
                         (0, h.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == L ? void 0 : L.id) === e.id ? (k ? (d.Z.selectParticipant(r.id, null), d.Z.updateStageStreamSize(r.id, !1)) : d.Z.updateStageStreamSize(r.id, !0)) : (d.Z.updateStageStreamSize(r.id, !1), d.Z.selectParticipant(r.id, e.id));

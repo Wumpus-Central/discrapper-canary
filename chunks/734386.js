@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(430824),
     b = n(496675),
     Z = n(594174),
-    S = n(700785),
-    N = n(51144),
+    N = n(700785),
+    S = n(51144),
     T = n(396769),
     j = n(967128),
     A = n(318374),
@@ -59,7 +59,7 @@ function R(e) {
                 o()(O)
                     .filter((e) => {
                         if (null == R) return !1;
-                        let n = S.I0({
+                        let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
                         });
@@ -80,12 +80,12 @@ function R(e) {
                 return o()(e)
                     .filter((e) => {
                         var n;
-                        let i = S.BT({
+                        let i = N.BT({
                                 permission: y.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
-                            l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : S.Hn,
+                            l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : N.Hn,
                             r = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
                         return i || r;
                     })
@@ -147,7 +147,7 @@ function R(e) {
                                 users: w
                             });
                         let e = w[0],
-                            n = N.ZP.getName(e);
+                            n = S.ZP.getName(e);
                         return (0, i.jsxs)('div', {
                             className: M.avatars,
                             children: [

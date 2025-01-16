@@ -17,10 +17,10 @@ var i = n(200651),
 t.Z = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: r, setWhichPopoutIsOpen: x } = e,
         { isHovered: v, setIsHovered: _, onMouseEnter: I, onMouseLeave: E, cancelTimers: b } = (0, d.Z)(200, 300),
-        [Z, S] = l.useState(!1),
-        N = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
-        T = l.useMemo(() => (null != N ? (N.getTime() - Date.now()) / 1000 : 0), [N]),
-        { seconds: j } = (0, c.Z)(null != N ? N : new Date()),
+        [Z, N] = l.useState(!1),
+        S = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
+        T = l.useMemo(() => (null != S ? (S.getTime() - Date.now()) / 1000 : 0), [S]),
+        { seconds: j } = (0, c.Z)(null != S ? S : new Date()),
         A = j > 0,
         { groupedButtons: y, mode: P } = (0, p.ZP)({ location: 'ActionBarSoundboardButton' }),
         M = P === p.BK.GroupedButtonsRedMic ? 'green' : void 0,
@@ -35,7 +35,7 @@ t.Z = (e) => {
         }, [E, Z]),
         k = l.useCallback(
             (e, t) => {
-                b(), S(!Z), r === f.D.EMOJI ? null == x || x(void 0) : null == x || x(f.D.EMOJI), (!v || Z) && (null == t || t(e));
+                b(), N(!Z), r === f.D.EMOJI ? null == x || x(void 0) : null == x || x(f.D.EMOJI), (!v || Z) && (null == t || t(e));
             },
             [b, Z, v, x, r]
         ),
@@ -48,7 +48,7 @@ t.Z = (e) => {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            _(!1), S(!1), null == x || x(void 0);
+            _(!1), N(!1), null == x || x(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -58,7 +58,7 @@ t.Z = (e) => {
                 closePopout: n,
                 onMouseEnter: I,
                 onMouseLeave: L,
-                onFocus: () => S(!0)
+                onFocus: () => N(!0)
             });
         },
         children: (e) => {

@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(937111),
     b = n(270801),
     Z = n(652730),
-    S = n(41776),
-    N = n(657352),
+    N = n(41776),
+    S = n(657352),
     T = n(33154),
     j = n(144114),
     A = n(703656),
@@ -72,28 +72,28 @@ class V extends l.PureComponent {
     render() {
         let { isFollowable: e, isLurking: t, notClaimed: r, notPhoneVerified: a, notEmailVerified: s, newMember: c, memberDeadline: d, newAccount: u, accountDeadline: h, theme: p, children: m, canSendMessages: f, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: C, showMemberVerificationModal: x, useReducedMotion: v, isStaff: I, guildJoinRequest: E } = this.props,
             { shouldShowLurkerModeUpsellPopout: b, shouldShowLurkerModeSuccessPopout: Z } = this.state,
-            S = {
+            N = {
                 theme: p,
                 useReducedMotion: v
             };
         if (e && !f) {
-            if (((S.message = H.intl.string(H.t.Hl0Mqq)), null != g && g >= 1000)) {
+            if (((N.message = H.intl.string(H.t.Hl0Mqq)), null != g && g >= 1000)) {
                 let e = 1000 * Math.floor(g / 1000);
-                S.subtitle = H.intl.formatToPlainString(H.t.C5bgrK, { count: e.toLocaleString() });
+                N.subtitle = H.intl.formatToPlainString(H.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (S.buttonText = H.intl.string(H.t['3aOv+v'])), (S.onButtonClick = this.handleFollowAnnouncement), (S.imageSrc = n(485195)), t && ((S.onSecondaryButtonClick = this.handleJoinServer), (S.secondaryButtonText = H.intl.string(H.t['RLch7+'])));
-        } else if (r) (S.message = H.intl.string(H.t['Eg3/c3'])), (S.buttonText = H.intl.string(H.t.fiNVio)), (S.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (S.imageSrc = n(102811));
+            (N.buttonText = H.intl.string(H.t['3aOv+v'])), (N.onButtonClick = this.handleFollowAnnouncement), (N.imageSrc = n(485195)), t && ((N.onSecondaryButtonClick = this.handleJoinServer), (N.secondaryButtonText = H.intl.string(H.t['RLch7+'])));
+        } else if (r) (N.message = H.intl.string(H.t['Eg3/c3'])), (N.buttonText = H.intl.string(H.t.fiNVio)), (N.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (N.imageSrc = n(102811));
         else if (x)
             switch (null == E ? void 0 : E.applicationStatus) {
                 case _.wB.SUBMITTED:
-                    (S.message = H.intl.string(H.t['5iLvS0'])), (S.subtitle = H.intl.string(H.t.FdsK4u)), (S.buttonText = H.intl.string(H.t.mqtdmZ)), (S.onButtonClick = this.handleCancelApplication), (S.imageSrc = n(281958));
+                    (N.message = H.intl.string(H.t['5iLvS0'])), (N.subtitle = H.intl.string(H.t.FdsK4u)), (N.buttonText = H.intl.string(H.t.mqtdmZ)), (N.onButtonClick = this.handleCancelApplication), (N.imageSrc = n(281958));
                     break;
                 case _.wB.REJECTED:
-                    (S.message = H.intl.string(H.t.lk30cX)), (S.buttonText = H.intl.string(H.t['8RrsHh'])), (S.onButtonClick = this.handleViewApplicationRejection), (S.imageSrc = n(809844));
+                    (N.message = H.intl.string(H.t.lk30cX)), (N.buttonText = H.intl.string(H.t['8RrsHh'])), (N.onButtonClick = this.handleViewApplicationRejection), (N.imageSrc = n(809844));
                     break;
                 default:
-                    (S.message = H.intl.string(H.t.rEBKvr)), (S.buttonText = H.intl.string(H.t['r8/DT0'])), (S.buttonColor = o.ButtonColors.BRAND), (S.onButtonClick = this.handleShowMemberVerification);
-                    S.animationSrc = () =>
+                    (N.message = H.intl.string(H.t.rEBKvr)), (N.buttonText = H.intl.string(H.t['r8/DT0'])), (N.buttonColor = o.ButtonColors.BRAND), (N.onButtonClick = this.handleShowMemberVerification);
+                    N.animationSrc = () =>
                         n
                             .e('26176')
                             .then(n.t.bind(n, 737848, 19))
@@ -102,7 +102,7 @@ class V extends l.PureComponent {
                                 return t;
                             });
             }
-        else a && !I ? ((S.message = H.intl.string(H.t['2dThMD'])), (S.buttonText = H.intl.string(H.t['50gfOj'])), (S.onButtonClick = this.handleVerifyPhone), (S.imageSrc = n(98063))) : s ? ((S.message = H.intl.string(H.t.FkGPS0)), (S.buttonText = H.intl.string(H.t.lm1UKi)), (S.onButtonClick = this.handleResendVerification), (S.imageSrc = n(102811))) : c ? ((S.message = H.intl.formatToPlainString(H.t.IH7RMD, { min: B.YeM.MEMBER_AGE })), (S.countdown = d)) : u && ((S.message = H.intl.formatToPlainString(H.t['2JA2GB'], { min: B.YeM.ACCOUNT_AGE })), (S.countdown = h));
+        else a && !I ? ((N.message = H.intl.string(H.t['2dThMD'])), (N.buttonText = H.intl.string(H.t['50gfOj'])), (N.onButtonClick = this.handleVerifyPhone), (N.imageSrc = n(98063))) : s ? ((N.message = H.intl.string(H.t.FkGPS0)), (N.buttonText = H.intl.string(H.t.lm1UKi)), (N.onButtonClick = this.handleResendVerification), (N.imageSrc = n(102811))) : c ? ((N.message = H.intl.formatToPlainString(H.t.IH7RMD, { min: B.YeM.MEMBER_AGE })), (N.countdown = d)) : u && ((N.message = H.intl.formatToPlainString(H.t['2JA2GB'], { min: B.YeM.ACCOUNT_AGE })), (N.countdown = h));
         return (0, i.jsx)(o.Popout, {
             position: 'top',
             align: 'left',
@@ -111,7 +111,7 @@ class V extends l.PureComponent {
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, i.jsx)(w.Z, {
-                    ...S,
+                    ...N,
                     children: (0, i.jsxs)(l.Fragment, {
                         children: [
                             this.renderMemberVerificationSuccessModal(),
@@ -146,7 +146,7 @@ class V extends l.PureComponent {
                     { guild: n } = this.props;
                 return (
                     a()(null != n, 'This guildID cannot be null'),
-                    (0, i.jsx)(N.Z, {
+                    (0, i.jsx)(S.Z, {
                         onClose: t,
                         guild: n
                     })
@@ -298,15 +298,15 @@ function z(e) {
         d = (0, s.e7)([L.Z], () => L.Z.getCheck(o)),
         u = r.type === B.d4z.GUILD_ANNOUNCEMENT && null != c && c.hasFeature(B.oNc.NEWS),
         p = (0, s.e7)([P.Z], () => (u ? P.Z.getFollowerStatsForChannel(r.id) : null)),
-        g = (0, s.e7)([S.Z], () => S.Z.isLurking(o)),
+        g = (0, s.e7)([N.Z], () => N.Z.isLurking(o)),
         C = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         v = null !== (t = null == C ? void 0 : C.isStaff()) && void 0 !== t && t,
         b = (0, s.e7)([M.ZP], () => {
             var e, t;
             return null != C && null !== (t = null === (e = M.ZP.getMember(o, C.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
         }),
-        N = !!(0, I.Dc)(c),
-        T = (b || d.notClaimed) && N,
+        S = !!(0, I.Dc)(c),
+        T = (b || d.notClaimed) && S,
         j = (0, s.e7)([Z.Z], () => Z.Z.shouldShowPopout(o)),
         A = (0, s.e7)([k.Z], () => k.Z.can(B.Plq.SEND_MESSAGES, r)),
         w = (0, s.e7)([E.Z], () => E.Z.getRequest(o)),
@@ -330,7 +330,7 @@ function z(e) {
         theme: y.Z.theme,
         canSendMessages: A,
         channelFollowingUsersSeen: null != p ? p.usersSeenEver : null,
-        hasVerificationGate: N,
+        hasVerificationGate: S,
         showMemberVerificationModal: T,
         guildJoinRequestStatus: null !== (n = null == w ? void 0 : w.applicationStatus) && void 0 !== n ? n : _.wB.STARTED,
         guildJoinRequest: w,

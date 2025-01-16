@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(47120);
@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(979651),
     b = n(488131),
     Z = n(388032);
-function S(e) {
+function N(e) {
     let { channel: t } = e,
         [n, r] = l.useState(!1);
     function a() {
@@ -41,7 +41,7 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => r(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(N, {
+            return (0, i.jsx)(S, {
                 ...e,
                 channel: t
             });
@@ -59,12 +59,12 @@ function S(e) {
         }
     });
 }
-function N(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         r = (0, c.Z)(t),
         _ = (0, m.Z)(t),
-        S = (0, C.Z)(t.id),
-        N = (0, g.Z)(t),
+        N = (0, C.Z)(t.id),
+        S = (0, g.Z)(t),
         T = (0, v.Z)({
             id: t.id,
             label: Z.intl.string(Z.t.DQ797u)
@@ -88,9 +88,9 @@ function N(e) {
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [
-                    N,
-                    P,
                     S,
+                    P,
+                    N,
                     L && !k
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',

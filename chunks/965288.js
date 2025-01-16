@@ -25,7 +25,7 @@ var i = n(200651),
     E = n(590415),
     b = n(354459),
     Z = n(253428);
-let S = l.memo(function (e) {
+let N = l.memo(function (e) {
         let { guildId: t, channelId: n, user: l, isPremium: r, isBlocked: a, isIgnored: s } = e;
         return (0, i.jsxs)('div', {
             className: Z.textContainer,
@@ -58,7 +58,7 @@ let S = l.memo(function (e) {
             ]
         });
     }),
-    N = l.memo(function (e) {
+    S = l.memo(function (e) {
         var t;
         let { participant: n, guildId: l, channel: r, isPremium: s } = e,
             { user: o, blocked: c, ignored: d, rtsState: u } = n,
@@ -83,7 +83,7 @@ let S = l.memo(function (e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(N, {
                     guildId: l,
                     channelId: r.id,
                     user: o,
@@ -101,7 +101,7 @@ t.Z = l.memo(function (e) {
         _ = r.getGuildId(),
         I = x.default.getId(),
         E = (0, m.bp)(),
-        S = (0, d.e7)(
+        N = (0, d.e7)(
             [v.ZP],
             () => {
                 var e;
@@ -163,16 +163,16 @@ t.Z = l.memo(function (e) {
         children: (e) =>
             (0, i.jsx)(h.Clickable, {
                 className: a()(Z.tileContainer, {
-                    [Z.singleIcon]: S || u,
-                    [Z.doubleIcon]: S && u
+                    [Z.singleIcon]: N || u,
+                    [Z.doubleIcon]: N && u
                 }),
                 onContextMenu: T,
                 ...e,
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(S, {
                     participant: t,
                     guildId: _,
                     channel: r,
-                    isPremium: S
+                    isPremium: N
                 })
             })
     });

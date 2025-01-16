@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(323873),
     b = n(607744),
     Z = n(375954),
-    S = n(496675),
-    N = n(306680),
+    N = n(496675),
+    S = n(306680),
     T = n(62817),
     j = n(594174),
     A = n(459273),
@@ -39,7 +39,7 @@ var i = n(200651),
 let U = l.memo(
     function (e) {
         var t, n;
-        let { className: r, messageGroupSpacing: u, scrollerClassName: m, channel: f, messages: g, unreadCount: C, showNewMessagesBar: v, messageDisplayCompact: _, channelStream: I, uploads: E, hasUnreads: b, editingMessageId: Z, fontSize: N, keyboardModeEnabled: T, filterAfterTimestamp: j, showingQuarantineBanner: y, hideSummaries: P = !1, jumpBarClassName: R } = e,
+        let { className: r, messageGroupSpacing: u, scrollerClassName: m, channel: f, messages: g, unreadCount: C, showNewMessagesBar: v, messageDisplayCompact: _, channelStream: I, uploads: E, hasUnreads: b, editingMessageId: Z, fontSize: S, keyboardModeEnabled: T, filterAfterTimestamp: j, showingQuarantineBanner: y, hideSummaries: P = !1, jumpBarClassName: R } = e,
             [U, H] = l.useState(!1),
             G = l.useMemo(
                 () =>
@@ -49,7 +49,7 @@ let U = l.memo(
                               messageGroups: 30,
                               groupRange: 4,
                               attachments: 8,
-                              fontSize: N,
+                              fontSize: S,
                               groupSpacing: u
                           })
                         : (0, M.aJ)({
@@ -57,10 +57,10 @@ let U = l.memo(
                               messageGroups: 26,
                               groupRange: 4,
                               attachments: 8,
-                              fontSize: N,
+                              fontSize: S,
                               groupSpacing: u
                           }),
-                [_, N, u]
+                [_, S, u]
             ),
             F = (0, k.ZP)({
                 messages: g,
@@ -79,7 +79,7 @@ let U = l.memo(
                 keyboardModeEnabled: T,
                 hasMoreAfter: g.hasMoreAfter
             });
-        let z = ((n = f), (0, o.e7)([x.Z], () => (S.Z.can(D.Plq.READ_MESSAGE_HISTORY, n) ? null : x.Z.getViewingRolesTimestamp(n.getGuildId())))),
+        let z = ((n = f), (0, o.e7)([x.Z], () => (N.Z.can(D.Plq.READ_MESSAGE_HISTORY, n) ? null : x.Z.getViewingRolesTimestamp(n.getGuildId())))),
             {
                 channelStreamMarkup: W,
                 newMessagesBar: K,
@@ -204,10 +204,10 @@ t.Z = l.memo(function (e) {
             let t = e.getGuildId(),
                 n = (0, o.e7)([b.Z], () => null == t || b.Z.canChatInGuild(t), [t]),
                 { canManageMessages: i, permissionVersion: l } = (0, o.cj)(
-                    [S.Z],
+                    [N.Z],
                     () => ({
-                        canManageMessages: S.Z.can(D.Plq.MANAGE_MESSAGES, e),
-                        permissionVersion: null != t ? S.Z.getGuildVersion(t) : null
+                        canManageMessages: N.Z.can(D.Plq.MANAGE_MESSAGES, e),
+                        permissionVersion: null != t ? N.Z.getGuildVersion(t) : null
                     }),
                     [e, t]
                 );
@@ -255,10 +255,10 @@ t.Z = l.memo(function (e) {
             var t, n;
             let i = (0, o.e7)([Z.Z], () => Z.Z.getMessages(e.id), [e.id]),
                 r = (0, o.e7)(
-                    [N.ZP],
+                    [S.ZP],
                     () => {
                         var t;
-                        return null !== (t = N.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
+                        return null !== (t = S.ZP.getOldestUnreadMessageId(e.id)) && void 0 !== t ? t : null;
                     },
                     [e.id]
                 ),
@@ -322,7 +322,7 @@ t.Z = l.memo(function (e) {
                 channelStream: B,
                 permissionVersion: h,
                 uploads: (0, o.e7)([T.Z], () => T.Z.getFiles(t.id), [t]),
-                unreadCount: (0, o.e7)([N.ZP], () => N.ZP.getUnreadCount(t.id), [t]),
+                unreadCount: (0, o.e7)([S.ZP], () => S.ZP.getUnreadCount(t.id), [t]),
                 hasUnreads: null != H,
                 canChat: x,
                 editingMessageId: G,

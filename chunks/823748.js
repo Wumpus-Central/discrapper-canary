@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(561472),
     b = n(36311),
     Z = n(112724),
-    S = n(902840),
-    N = n(110924),
+    N = n(902840),
+    S = n(110924),
     T = n(317381),
     j = n(82888),
     A = n(917107),
@@ -75,8 +75,8 @@ var i = n(200651),
     eE = n(897473),
     eb = n(922482),
     eZ = n(504185),
-    eS = n(657218),
-    eN = n(66556),
+    eN = n(657218),
+    eS = n(66556),
     eT = n(739830),
     ej = n(377929),
     eA = n(900157),
@@ -351,7 +351,7 @@ class ti extends l.PureComponent {
             switch (l.type) {
                 case eE.tI.CREATE_THREAD:
                     if (null == t ? void 0 : t.isForumLikeChannel()) return null;
-                    e = (0, i.jsx)(eS.Z, {
+                    e = (0, i.jsx)(eN.Z, {
                         parentChannelId: l.parentChannelId,
                         parentMessageId: l.parentMessageId,
                         location: l.location
@@ -574,11 +574,11 @@ class ti extends l.PureComponent {
                     case e3.d4z.ANNOUNCEMENT_THREAD:
                     case e3.d4z.PRIVATE_THREAD:
                     case e3.d4z.PUBLIC_THREAD:
-                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eN.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(ec.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eT.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(ee.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(Q.Z, { channelId: e.id }, 'members')), null != t && (0, S.Lp)(e) && a.push((0, i.jsx)(et.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(ej.Z, { channel: e }, 'threads-overflow'));
+                        null != t && !t.isForumLikeChannel() && a.push((0, i.jsx)(eS.Z, { channel: t }, 'browser')), e.isVocalThread() && a.push((0, i.jsx)(ec.Z, { channel: e }, 'thread-call')), a.push((0, i.jsx)(eT.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(ee.Z, { channel: e }, 'pins')), !e.isArchivedThread() && a.push((0, i.jsx)(Q.Z, { channelId: e.id }, 'members')), null != t && (0, N.Lp)(e) && a.push((0, i.jsx)(et.Z, { channel: e }, 'summaries')), a.push((0, i.jsx)(ej.Z, { channel: e }, 'threads-overflow'));
                         break;
                     case e3.d4z.GUILD_ANNOUNCEMENT:
                     case e3.d4z.GUILD_TEXT:
-                        a.push((0, i.jsx)(U.Z, { channel: e }, 'favorites')), a.push((0, i.jsx)(eN.Z, { channel: e }, 'browser')), !n && a.push((0, i.jsx)($.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(ee.Z, { channel: e }, 'pins')), a.push((0, i.jsx)(Q.Z, { channelId: e.id }, 'members')), (0, S.Lp)(e) && a.push((0, i.jsx)(et.Z, { channel: e }, 'summaries'));
+                        a.push((0, i.jsx)(U.Z, { channel: e }, 'favorites')), a.push((0, i.jsx)(eS.Z, { channel: e }, 'browser')), !n && a.push((0, i.jsx)($.Z, { channel: e }, 'notifications')), a.push((0, i.jsx)(ee.Z, { channel: e }, 'pins')), a.push((0, i.jsx)(Q.Z, { channelId: e.id }, 'members')), (0, N.Lp)(e) && a.push((0, i.jsx)(et.Z, { channel: e }, 'summaries'));
                         break;
                     case e3.d4z.GUILD_FORUM:
                     case e3.d4z.GUILD_MEDIA:
@@ -726,7 +726,7 @@ t.Z = l.memo(function (e) {
         }),
         j = (0, p.e7)([T.ZP], () => (null != c ? T.ZP.getSelfEmbeddedActivityForChannel(c.id) : null), [c]),
         M = (0, p.e7)([eF.Z], () => eF.Z.isConnected()),
-        R = (0, N.Z)(M),
+        R = (0, S.Z)(M),
         L = M && !1 === R;
     l.useEffect(() => {
         Z && L && null != j && null != c && C.Z.selectParticipant(c.id, j.applicationId);
@@ -787,17 +787,17 @@ t.Z = l.memo(function (e) {
             let { channel: e, inCurrentVoiceChannel: t } = ev.current;
             null != r && null != e && eg && e.id === r && !t && ((0, eb.Cq)(e), a(null));
         }, [r, eg]);
-    let e_ = (0, S.ts)(c),
+    let e_ = (0, N.ts)(c),
         eI = null != c && c.isPrivate(),
-        eE = (0, N.Z)(eI),
-        eZ = (0, N.Z)(null == c ? void 0 : c.id);
+        eE = (0, S.Z)(eI),
+        eZ = (0, S.Z)(null == c ? void 0 : c.id);
     l.useEffect(() => {
         let e = eE && !eI,
             t = eE && eI && (null == c ? void 0 : c.id) !== eZ;
         (e || t) && (0, B.EW)(m.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
     }, [null == c ? void 0 : c.id, eZ, eI, eE]);
-    let eS = (0, f.f9)(),
-        eN = (0, D.Q3)('Channel');
+    let eN = (0, f.f9)(),
+        eS = (0, D.Q3)('Channel');
     return (0, i.jsx)(tl, {
         guildId: null == c ? void 0 : c.guild_id,
         channelId: s,
@@ -809,7 +809,7 @@ t.Z = l.memo(function (e) {
         layout: K,
         needSubscriptionToAccess: I,
         isLurking: z,
-        hasModalOpen: eS,
+        hasModalOpen: eN,
         section: $,
         channelSidebarState: ee,
         guildSidebarState: en,
@@ -832,6 +832,6 @@ t.Z = l.memo(function (e) {
         headerGuildBreadcrumbPosition: ei ? 'left' : 'right',
         premiumIndicatorEnabled: el || ea.enabled,
         hasTextActivityInPanelMode: w,
-        isRefreshEnabled: eN
+        isRefreshEnabled: eS
     });
 });

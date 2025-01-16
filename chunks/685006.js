@@ -1,9 +1,9 @@
 n.d(t, {
     ZP: function () {
-        return N;
+        return S;
     },
     xL: function () {
-        return S;
+        return N;
     }
 });
 var i = n(200651),
@@ -32,8 +32,8 @@ let b = (0, s.U)(() => ({ visible: !1 })),
             b.setState({ visible: e });
         });
     },
-    S = b;
-function N(e) {
+    N = b;
+function S(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
         { isInitialLoading: a, application: s, primaryEntryPointCommand: o } = (0, p.Z)({ channel: t }),
         c = null == s ? void 0 : s.id,
@@ -50,17 +50,17 @@ function N(e) {
                   }));
         }, [c, m]),
         b = null != I && I.filter((e) => e.type === d.yU.CHAT || e.type === d.yU.PRIMARY_ENTRY_POINT).length > 0,
-        S = !a && null != s && !0 === b;
+        N = !a && null != s && !0 === b;
     return (l.useEffect(
         () => (
-            Z(S),
+            Z(N),
             () => {
                 Z(!1);
             }
         ),
-        [S]
+        [N]
     ),
-    S)
+    N)
         ? (0, i.jsx)(T, {
               channel: t,
               application: s,

@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(695346),
     b = n(592125),
     Z = n(906467),
-    S = n(323873),
-    N = n(709054),
+    N = n(323873),
+    S = n(709054),
     T = n(786761),
     j = n(534091),
     A = n(901461),
@@ -117,8 +117,8 @@ function $(e) {
             viewingChannelId: b
         } = e,
         Z = s.type === Y.uaV.REPLY ? s.messageReference : void 0,
-        { onFocus: S, ...N } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
-        { isFocused: j, handleFocus: P, handleBlur: w } = (0, L.bb)(S),
+        { onFocus: N, ...S } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
+        { isFocused: j, handleFocus: P, handleBlur: w } = (0, L.bb)(N),
         { popouts: U, selected: H, setPopout: V } = (0, O.Z)(s.id, K.d$),
         J = E.RS.useSetting(),
         Q = E.NA.useSetting(),
@@ -166,7 +166,7 @@ function $(e) {
                 children: q.intl.string(q.t.k5WiPT)
             }),
             (0, i.jsx)(M.Z, {
-                ...N,
+                ...S,
                 id: r,
                 compact: C,
                 className: a()(x, {
@@ -264,17 +264,17 @@ t.ZP = l.memo(function (e) {
             },
             [eE, eg]
         ),
-        eS = l.useCallback(
+        eN = l.useCallback(
             (e) => {
                 eb(e), eC();
             },
             [eb, eC]
         ),
-        eN = (0, d.e7)([S.Z], () => S.Z.isEditing(Q, j), [Q, j]),
+        eS = (0, d.e7)([N.Z], () => N.Z.isEditing(Q, j), [Q, j]),
         eT = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        ej = eh || eN || (eT && e_),
+        ej = eh || eS || (eT && e_),
         eA = ej || ev,
-        ey = (0, d.e7)([b.Z], () => I.hasFlag(Y.iLy.HAS_THREAD) && b.Z.getChannel(N.default.castMessageIdAsChannelId(I.id))),
+        ey = (0, d.e7)([b.Z], () => I.hasFlag(Y.iLy.HAS_THREAD) && b.Z.getChannel(S.default.castMessageIdAsChannelId(I.id))),
         eP = I.isFirstMessageInForumPost(J),
         eM = (0, f.A)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()),
         eR = (0, d.e7)([Z.Z], () => Z.Z.isDeveloper),
@@ -307,7 +307,7 @@ t.ZP = l.memo(function (e) {
             channel: J
         }),
         ez = null != eF;
-    r = I.type === Y.uaV.CUSTOM_GIFT ? '' : !eN && ez ? (0, U.Z)(e, eL) : (0, F.Z)(e, eL, eN);
+    r = I.type === Y.uaV.CUSTOM_GIFT ? '' : !eS && ez ? (0, U.Z)(e, eL) : (0, F.Z)(e, eL, eS);
     let eW = I.id === en,
         eK = (0, i.jsx)(u.FocusRing, {
             offset: {
@@ -331,7 +331,7 @@ t.ZP = l.memo(function (e) {
                         'aria-labelledby': eH,
                         'aria-describedby': eG,
                         onFocus: eZ,
-                        onBlur: eS,
+                        onBlur: eN,
                         onContextMenu: em,
                         onKeyDown: eO,
                         onClick: ef,
@@ -351,7 +351,7 @@ t.ZP = l.memo(function (e) {
                             [X.automodMessage]: ez,
                             [X.potioned]: (0, x.U)(I) && es
                         }),
-                        zalgo: !eN,
+                        zalgo: !eS,
                         childrenRepliedMessage:
                             ei || I.type !== Y.uaV.REPLY
                                 ? void 0

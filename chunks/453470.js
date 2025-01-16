@@ -54,10 +54,10 @@ function I(e) {
 function E(e) {
     let { channelId: t, warningId: E, senderId: b } = e,
         Z = (0, g.E4)(),
-        S = l.useCallback(() => {
+        N = l.useCallback(() => {
             (0, d.T)(t, [E]);
         }, [t, E]),
-        N = (0, f.t)({ location: x.zr }),
+        S = (0, f.t)({ location: x.zr }),
         T = (e) => {
             s.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, m.ZB.Muted),
                 c.Z.showMuteSuccessToast(b, t),
@@ -68,7 +68,7 @@ function E(e) {
                     warningType: u.pj.LIKELY_ATO,
                     cta: e
                 }),
-                S();
+                N();
         },
         j = () => {
             (0, a.openModalLazy)(async () => {
@@ -135,7 +135,7 @@ function E(e) {
             });
         };
     return (l.useEffect(() => {
-        N &&
+        S &&
             ((0, h.MC)(C.rMx.SAFETY_WARNING_VIEWED, {
                 channelId: t,
                 warningId: E,
@@ -143,8 +143,8 @@ function E(e) {
                 warningType: u.pj.LIKELY_ATO
             }),
             o.Z.increment({ name: r.V.SAFETY_WARNING_VIEW }));
-    }, [t, E, b, N]),
-    N)
+    }, [t, E, b, S]),
+    S)
         ? (0, i.jsx)(p.Q, {
               channelId: t,
               warningId: E,
@@ -152,7 +152,7 @@ function E(e) {
               warningType: u.pj.LIKELY_ATO,
               header: v.intl.string(v.t.R8UsiI),
               description: v.intl.string(v.t.lI8nQk),
-              onDismiss: S,
+              onDismiss: N,
               buttons: [
                   {
                       text: v.intl.string(v.t.tC1pvL),

@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(981631),
     b = n(388032),
     Z = n(414360),
-    S = n(334732);
-function N(e) {
+    N = n(334732);
+function S(e) {
     let { channel: t, guild: n, width: l, inPopout: r, handleClose: a, userParticipantCount: s } = e;
     return l < 250
         ? (0, i.jsx)(T, {
@@ -129,7 +129,7 @@ function j(e) {
             children: [
                 s > 400
                     ? (0, i.jsx)('img', {
-                          src: S,
+                          src: N,
                           className: Z.art,
                           alt: b.intl.string(b.t['3Y9xdH'])
                       })
@@ -217,7 +217,7 @@ function A(e) {
                 r > 480
                     ? (0, i.jsx)('img', {
                           className: Z.art,
-                          src: S,
+                          src: N,
                           alt: b.intl.string(b.t['3Y9xdH'])
                       })
                     : null,

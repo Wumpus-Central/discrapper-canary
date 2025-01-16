@@ -27,19 +27,19 @@ var i = n(200651),
     E = n(738672),
     b = n(981631),
     Z = n(37113),
-    S = n(388032),
-    N = n(235726);
+    N = n(388032),
+    S = n(235726);
 function T(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(u.Button, {
         className: t,
-        'aria-label': S.intl.string(S.t.cpT0Cg),
+        'aria-label': N.intl.string(N.t.cpT0Cg),
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
         onClick: n,
         children: (0, i.jsx)(u.XSmallIcon, {
             size: 'xs',
-            className: N.closeIcon,
+            className: S.closeIcon,
             color: 'white'
         })
     });
@@ -101,36 +101,36 @@ function y(e) {
         pauseAnimation: n,
         color: u.Button.Colors.GREEN,
         size: u.Button.Sizes.SMALL,
-        className: N.optInButton,
+        className: S.optInButton,
         onClick: I,
         submitting: r,
-        children: S.intl.string(S.t['Rpn/09'])
+        children: N.intl.string(N.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
         r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: a()(N.optInPopout, N.variant2OptInPopout, { [N.hidden]: n }),
+        className: a()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: N.image,
+                className: S.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
             (0, i.jsx)(T, {
-                className: N.variant2CloseButton,
+                className: S.variant2CloseButton,
                 onDismiss: l
             }),
             (0, i.jsx)('div', {
-                className: N.variant2InfoContainerParent,
+                className: S.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: N.variant2InfoContainer,
+                    className: S.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.xv, {
-                            className: N.variant2Text,
+                            className: S.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? S.intl.string(S.t.ZYQ2zc) : S.intl.string(S.t.kr8AEx)
+                            children: r ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]

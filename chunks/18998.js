@@ -70,7 +70,7 @@ class g extends r.Component {
     render() {
         let { className: e, text: t, hide: n, onClick: i } = this.props;
         return (0, l.jsx)(u.Z.div, {
-            className: o()(p.bar, e),
+            className: o()(p.bar, e, { [p.hidden]: n }),
             onClick: i,
             style: this.getAnimatedStyle(),
             'aria-hidden': n,

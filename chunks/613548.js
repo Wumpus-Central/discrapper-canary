@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(933843),
     b = n(141321),
     Z = n(2818),
-    S = n(954551),
-    N = n(44136),
+    N = n(954551),
+    S = n(44136),
     T = n(651183),
     j = n(618158),
     A = n(390322),
@@ -55,7 +55,7 @@ function Y(e) {
             let e = Date.now();
             return o()(D.Z.getSpeakers())
                 .map((e) => B.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === V.fO.USER && e.speaking && !(0, N.ZP)(e))
+                .filter((e) => null != e && e.type === V.fO.USER && e.speaking && !(0, S.ZP)(e))
                 .sortBy((t) => -D.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -86,7 +86,7 @@ function Y(e) {
           });
 }
 function q(e) {
-    let { inPopout: t, channel: n, appContext: r, inCall: s, isChatOpen: o, exitFullScreen: N } = e,
+    let { inPopout: t, channel: n, appContext: r, inCall: s, isChatOpen: o, exitFullScreen: S } = e,
         O = n.id,
         {
             voiceParticipantsHidden: D,
@@ -126,7 +126,7 @@ function q(e) {
                     channel: n,
                     applicationId: t,
                     stream: e,
-                    exitFullScreen: N,
+                    exitFullScreen: S,
                     analyticsLocation: n.type === z.d4z.GUILD_VOICE ? z.ZY5.GUILD_CHANNEL : z.ZY5.DM_CHANNEL
                 },
                 'invite-button'
@@ -235,7 +235,7 @@ function q(e) {
                     'recents'
                 )
             )),
-        er && !ea && ed.push((0, i.jsx)(S.Z, { className: K.button }, 'for-later')),
+        er && !ea && ed.push((0, i.jsx)(N.Z, { className: K.button }, 'for-later')),
         ed.push(
             (0, i.jsx)(
                 u.Popout,
@@ -248,7 +248,7 @@ function q(e) {
                                 channelId: O,
                                 onClose: t,
                                 appContext: r,
-                                exitFullScreen: N
+                                exitFullScreen: S
                             })
                         });
                     },
