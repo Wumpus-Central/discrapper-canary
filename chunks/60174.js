@@ -56,11 +56,10 @@ class R extends r.Component {
         !p && h && (_ = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
         let T = l ? b : A,
             { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
-            R = j && !this.props.isForumToolbar,
-            Z = {
+            R = {
                 size: 'sm',
                 color: 'currentColor',
-                className: a()(T.icon, { [T.largeIcon]: R })
+                className: a()(T.icon, { [T.largeIcon]: j })
             };
         return (0, i.jsx)(d.Popout, {
             shouldShow: s,
@@ -86,11 +85,11 @@ class R extends r.Component {
                             T.reactionBtn,
                             {
                                 [T.active]: l,
-                                [T.largeReactionBtn]: R
+                                [T.largeReactionBtn]: j
                             },
                             n
                         ),
-                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...Z }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...Z }) }), r]
+                        children: [h ? (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.SuperReactionIcon, { ...R }) }) : (0, i.jsx)(i.Fragment, { children: (0, i.jsx)(d.ReactionIcon, { ...R }) }), r]
                     })
                 });
             }
