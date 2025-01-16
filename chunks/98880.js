@@ -175,55 +175,51 @@ function W(e) {
         y = (0, c.e7)([h.Z, g.Z], () => h.Z.inDevModeForApplication(n.id) || g.Z.inTestModeForApplication(n.id), [n.id]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsxs)('div', {
-                onMouseEnter: E,
-                onFocus: E,
-                onMouseLeave: S,
-                onBlur: S,
-                className: s()(U.bannerImageContainer, {
-                    [U.mediumBanner]: 'medium_banner' === t,
-                    [U.largeBanner]: 'large_banner' === t
-                }),
-                children: [
-                    (0, a.jsx)('span', {
-                        className: i,
-                        children: (0, a.jsx)(z, {
-                            application: n,
-                            fallbackColor: _,
-                            showVideo: N,
-                            disableFadeIn: r,
-                            overrideImageUrl: m
-                        })
-                    }),
-                    P
-                        ? (0, a.jsxs)(a.Fragment, {
-                              children: [
-                                  y || b
-                                      ? (0, a.jsxs)('div', {
-                                            className: U.bannerUpperRightContainer,
-                                            children: [
-                                                b &&
-                                                    (0, a.jsx)('div', {
-                                                        className: U.promotedLabelWrapperBanner,
-                                                        children: (0, a.jsx)(d.Heading, {
-                                                            variant: 'text-xxs/medium',
-                                                            color: 'header-primary',
-                                                            children: O.intl.string(O.t['/eVltr'])
-                                                        })
-                                                    }),
-                                                y && (0, a.jsx)(F, {})
-                                            ]
-                                        })
-                                      : null,
-                                  (0, a.jsx)('div', {
-                                      className: U.bannerImageChildContainer,
-                                      children: u
-                                  })
-                              ]
+            P
+                ? (0, a.jsxs)('div', {
+                      onMouseEnter: E,
+                      onFocus: E,
+                      onMouseLeave: S,
+                      onBlur: S,
+                      className: s()(U.bannerImageContainer, {
+                          [U.mediumBanner]: 'medium_banner' === t,
+                          [U.largeBanner]: 'large_banner' === t
+                      }),
+                      children: [
+                          (0, a.jsx)('span', {
+                              className: i,
+                              children: (0, a.jsx)(z, {
+                                  application: n,
+                                  fallbackColor: _,
+                                  showVideo: N,
+                                  disableFadeIn: r,
+                                  overrideImageUrl: m
+                              })
+                          }),
+                          y || b
+                              ? (0, a.jsxs)('div', {
+                                    className: U.bannerUpperRightContainer,
+                                    children: [
+                                        b &&
+                                            (0, a.jsx)('div', {
+                                                className: U.promotedLabelWrapperBanner,
+                                                children: (0, a.jsx)(d.Heading, {
+                                                    variant: 'text-xxs/medium',
+                                                    color: 'header-primary',
+                                                    children: O.intl.string(O.t['/eVltr'])
+                                                })
+                                            }),
+                                        y && (0, a.jsx)(F, {})
+                                    ]
+                                })
+                              : null,
+                          (0, a.jsx)('div', {
+                              className: U.bannerImageChildContainer,
+                              children: u
                           })
-                        : null
-                ]
-            }),
+                      ]
+                  })
+                : null,
             (0, a.jsxs)('div', {
                 className: s()(U.appDetailsContainer, { [U.appDetailsRowContainer]: 'row' === t }),
                 children: [
