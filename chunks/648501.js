@@ -32,8 +32,8 @@ function y(e) {
     var t;
     let { channel: n, isChannelSelected: y, isChannelCollapsed: j, voiceStates: T, enableConnectedUserLimit: P, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: M, isNewChannel: L, muted: R, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        B = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
-        k = (0, o.ZP)(n),
+        k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
+        B = (0, o.ZP)(n),
         U = (0, l.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, n)),
         O = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
         V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
@@ -52,8 +52,7 @@ function y(e) {
     if ((0, C.Z)(G))
         return (0, i.jsx)(Z.Z, {
             mentionsCount: G,
-            isMentionLowImportance: B,
-            className: E.channelMentionBadge
+            isMentionLowImportance: k
         });
     if ((0, c.O)(w)) return (0, i.jsx)(c.Z, { locked: M });
     if (L)
@@ -86,9 +85,9 @@ function y(e) {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != A && A && (0, v.u)(k)
+          : null != A && A && (0, v.u)(B)
             ? (0, i.jsx)(I.Z, {
-                  embeddedApps: k,
+                  embeddedApps: B,
                   muted: R
               })
             : null;
