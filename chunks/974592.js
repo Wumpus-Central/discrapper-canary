@@ -28,6 +28,12 @@ let d = 2,
             getImageUrl: () => o.Z,
             getBackgroundImageUrl: () => u.Z
         },
+        chatGiftIcon: {
+            trinketsAnimation: {
+                getAnimationData: () => r(357470),
+                getGlowAnimationData: () => r(803050)
+            }
+        },
         firstTimeNotice: {
             getImageUrl: (e, n) => (n ? o.Z : c.Z),
             title: () => s.intl.string(s.t.hFzI4u),
