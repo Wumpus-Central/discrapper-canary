@@ -391,91 +391,94 @@ function eh(e) {
     return L(e.relationship.user);
 }
 function ep(e) {
+    return L(e.gameRelationship.user);
+}
+function em(e) {
     let { relationships: n } = e;
     return n.reduce((e, n) => L(n.user) || e, !1);
 }
-function em(e) {
+function eg(e) {
     return L(e.suggestion.suggested_user);
 }
-function eg(e) {
+function eE(e) {
     let { suggestions: n } = e;
     return n.reduce((e, n) => L(n.suggested_user) || e, !1);
 }
-function eE(e) {
+function ev(e) {
     let { users: n } = e;
     n.forEach((e) => {
         null == y[e.id] && (y[e.id] = new h.Z(e));
     });
 }
-function ev(e) {
+function eI(e) {
     let { giftCode: n } = e;
     return null != n.user && L(n.user);
 }
-function eI(e) {
+function eT(e) {
     let { appliedBoosts: n } = e;
     n.forEach((e) => {
         let { user: n } = e;
         if (null != n) L(n);
     });
 }
-function eT(e) {
+function eb(e) {
     let { request: n } = e,
         { user: r, actioned_by_user: i } = n,
         a = !1;
     return null != r && (a = a || L(r)), null != i && (a = a || L(i)), a;
 }
-function eb(e) {
+function ey(e) {
     let { users: n, familyCenterTeenActivity: r } = e,
         { users: i } = r;
     return [...n, ...i].reduce((e, n) => L(n) || e, !1);
-}
-function ey(e) {
-    let { users: n } = e;
-    return n.reduce((e, n) => L(n) || e, !1);
 }
 function eS(e) {
     let { users: n } = e;
     return n.reduce((e, n) => L(n) || e, !1);
 }
 function eA(e) {
+    let { users: n } = e;
+    return n.reduce((e, n) => L(n) || e, !1);
+}
+function eN(e) {
     let { familyCenterTeenActivity: n } = e;
     if (void 0 === n) return;
     let { users: r } = n;
     return r.reduce((e, n) => L(n) || e, !1);
 }
-function eN(e) {
+function eC(e) {
     let { familyCenterTeenActivity: n } = e,
         { users: r } = n;
     return r.reduce((e, n) => L(n) || e, !1);
 }
-function eC(e) {
+function eR(e) {
     let { members: n } = e,
         r = g.default.getId();
     return n.reduce((e, n) => (n.member.user.id === r ? e : L(n.member.user) || e), !1);
 }
-function eR(e) {
+function eO(e) {
     let { messageItems: n } = e;
     n.forEach((e) => {
         null != e.message && P(e.message, !0);
     }, !1);
 }
-function eO(e) {
+function eD(e) {
     let { participants: n } = e;
     return n.reduce((e, n) => ((0, c.Z)(n) && L(n.member.user)) || e, !1);
 }
-class eD extends E.Z {
+class eL extends E.Z {
     initialize() {
         this.waitFor(g.default, f.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eD.LATEST_SNAPSHOT_VERSION,
+            version: eL.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(m.lm) }
         };
     }
     handleLoadCache(e) {
-        let n = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
+        let n = this.readSnapshot(eL.LATEST_SNAPSHOT_VERSION);
         if (null != n) for (let e of n.users) y[e.id] = new h.Z(e);
         if (null != e.users)
             for (let n of e.users) {
@@ -544,8 +547,8 @@ class eD extends E.Z {
             GUILD_BAN_REMOVE: ei,
             CHANNEL_RECIPIENT_ADD: ea,
             CHANNEL_RECIPIENT_REMOVE: ea,
-            GUILD_JOIN_REQUEST_CREATE: eT,
-            GUILD_JOIN_REQUEST_UPDATE: eT,
+            GUILD_JOIN_REQUEST_CREATE: eb,
+            GUILD_JOIN_REQUEST_UPDATE: eb,
             GUILD_MEMBER_ADD: es,
             GUILD_MEMBER_UPDATE: es,
             GUILD_MEMBERS_CHUNK_BATCH: el,
@@ -555,13 +558,14 @@ class eD extends E.Z {
             CHANNEL_CREATE: J,
             CHANNEL_UPDATES: $,
             RELATIONSHIP_ADD: eh,
-            LOAD_RELATIONSHIPS_SUCCESS: ep,
-            FRIEND_SUGGESTION_CREATE: em,
-            LOAD_FRIEND_SUGGESTIONS_SUCCESS: eg,
-            AUDIT_LOG_FETCH_SUCCESS: eE,
-            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eE,
-            GIFT_CODE_RESOLVE_SUCCESS: ev,
-            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eI,
+            GAME_RELATIONSHIP_ADD: ep,
+            LOAD_RELATIONSHIPS_SUCCESS: em,
+            FRIEND_SUGGESTION_CREATE: eg,
+            LOAD_FRIEND_SUGGESTIONS_SUCCESS: eE,
+            AUDIT_LOG_FETCH_SUCCESS: ev,
+            AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: ev,
+            GIFT_CODE_RESOLVE_SUCCESS: eI,
+            GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eT,
             LOAD_THREADS_SUCCESS: Y,
             LOAD_ARCHIVED_THREADS_SUCCESS: Y,
             LOAD_FORUM_POSTS: W,
@@ -571,15 +575,15 @@ class eD extends E.Z {
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: K,
             PASSIVE_UPDATE_V2: eu,
             LOCAL_MESSAGES_LOADED: ec,
-            FAMILY_CENTER_INITIAL_LOAD: eb,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ey,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eA,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eN,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eS,
-            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eC,
-            LOAD_GRAVITY_HYDRATED: eR,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eO
+            FAMILY_CENTER_INITIAL_LOAD: ey,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eS,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eN,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eC,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
+            MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eR,
+            LOAD_GRAVITY_HYDRATED: eO,
+            EMBEDDED_ACTIVITY_UPDATE_V2: eD
         });
     }
 }
-b(eD, 'displayName', 'UserStore'), b(eD, 'LATEST_SNAPSHOT_VERSION', 1), (n.default = new eD());
+b(eL, 'displayName', 'UserStore'), b(eL, 'LATEST_SNAPSHOT_VERSION', 1), (n.default = new eL());

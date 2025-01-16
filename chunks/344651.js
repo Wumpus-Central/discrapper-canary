@@ -898,7 +898,8 @@ H(
                 applicationId: e.application_id,
                 type: e.type,
                 since: e.since,
-                dmAccessType: e.dm_access_type
+                dmAccessType: e.dm_access_type,
+                user: e.user
             }
         });
     }),
