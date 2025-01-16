@@ -6,7 +6,7 @@ var i = n(200651),
     o = n(693546),
     c = n(937111),
     d = n(388032),
-    u = n(537416),
+    u = n(832311),
     h = n(364632);
 t.Z = (e) => {
     let { headerId: t, reapplyText: n, onReapply: m, confirmText: p, onWithdrawApplication: g, rejectionReason: f = null, guild: _ = null } = e,

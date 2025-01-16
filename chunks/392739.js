@@ -6,7 +6,7 @@ n.d(t, {
 var a = n(200651);
 n(192379);
 var r = n(481060),
-    i = n(310619);
+    i = n(925467);
 function s(e) {
     let { children: t, label: n } = e;
     return (0, a.jsxs)('li', {

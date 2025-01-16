@@ -9,7 +9,7 @@ var i = r(200651),
     o = r(442550),
     l = r(297781),
     u = r(443487),
-    c = r(595549);
+    c = r(830677);
 let d = [l.Yl, l.Rg],
     f = (e) => {
         let { entry: n, channel: r, selected: a } = e,

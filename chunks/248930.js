@@ -19,7 +19,7 @@ var a = r(120356),
     m = r(382405),
     g = r(386019),
     E = r(228168),
-    v = r(456684);
+    v = r(249942);
 function I(e) {
     let { user: n, entry: r, profileGuildId: a, className: I, onClose: T, hideContextMenu: b = !1 } = e,
         { analyticsLocations: y } = (0, l.ZP)(o.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),

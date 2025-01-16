@@ -8,7 +8,7 @@ var i = n(200651),
     o = n(120356),
     r = n.n(o),
     a = n(481060),
-    s = n(921555);
+    s = n(892196);
 let c = l.memo(function (e) {
     let { emptyText: t, icon: n, absolute: l = !1 } = e;
     return (0, i.jsx)('div', {

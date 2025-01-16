@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(600164),
     o = n(424071),
     s = n(388032),
-    c = n(337530),
+    c = n(38920),
     i = n(387852);
 function d(e) {
     let { onContinue: t, onClose: n, title: d, body: u } = e;

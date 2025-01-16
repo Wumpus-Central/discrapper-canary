@@ -95,7 +95,7 @@ var i = n(200651),
     eV = n(944486),
     eH = n(914010),
     eF = n(695103),
-    ez = n(887604),
+    ez = n(241890),
     eW = n(897607),
     eY = n(417363),
     eK = n(900974),
@@ -161,8 +161,8 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, A.e)(Z.Z, null, { passProps: !1 }),
-    e7 = (0, A.e)(T.default, null, { passProps: !1 }),
-    e5 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e5 = (0, A.e)(T.default, null, { passProps: !1 }),
+    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e6(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -293,7 +293,7 @@ let e9 = [
             return (
                 (0, z.h)(() => {
                     (0, o.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('5863'), n.e('32822')]).then(n.bind(n, 751212));
+                        let { default: e } = await Promise.all([n.e('5863'), n.e('48406')]).then(n.bind(n, 751212));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e7,
+        render: e5,
         isSessionRequired: !0
     }
 ];
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e5.some((e) => {
+                        !e7.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

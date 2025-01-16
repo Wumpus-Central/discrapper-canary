@@ -22,7 +22,7 @@ var a = r(200651),
     A = r(149203),
     N = r(981631),
     C = r(388032),
-    R = r(858400);
+    R = r(538891);
 let O = (e) => {
     let { emojiDescriptors: n, emojiSize: i, onSelect: o, onSelectSoundmoji: O, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: w, isScrolling: P, isUsingKeyboardNavigation: M, rowIndex: k, allowAnimatedEmoji: U, showEmojiFavoriteTooltip: B, channelGuildId: G, category: F, selectedItemClassName: Z, channelId: V, messageId: j, isBurstReaction: H, inNitroLockedSection: Y, handleScrollUpOnSectionCollapse: W } = e,
         { enabled: K } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),

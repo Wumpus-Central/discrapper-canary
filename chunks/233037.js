@@ -16,7 +16,7 @@ var i = t(442837),
     m = t(499596),
     g = t(148381),
     h = t(388032),
-    x = t(622563);
+    x = t(838332);
 function S(e) {
     let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: S } = e,
         v = (0, i.e7)([u.default], () => u.default.getCurrentUser()),

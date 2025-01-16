@@ -9,7 +9,7 @@ var a = t(200651),
     l = t.n(r),
     o = t(481060),
     s = t(49898),
-    c = t(201241);
+    c = t(149025);
 function d(e) {
     let { state: n, query: t, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: p, onSubmit: _ } = e,
         g = i.useRef(null),

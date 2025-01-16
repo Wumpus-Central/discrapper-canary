@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(92373),
     u = n(308083),
     m = n(388032),
-    h = n(804077),
-    g = n(866262);
+    h = n(489364),
+    g = n(240938);
 function x(e) {
     let { gameApplicationIds: t, preventGameRemoval: n, onUpdateGames: l, minGames: o = 1, error: x } = e,
         { options: p, matchSorterOptions: f } = (0, c.P)(),

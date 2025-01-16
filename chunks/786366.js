@@ -12,7 +12,7 @@ var l = t(597312),
     s = t(860719),
     c = t(621853),
     a = t(388032),
-    d = t(506007);
+    d = t(220613);
 function u(e) {
     let { icon: n, title: t, description: l } = e;
     return (0, i.jsxs)('div', {

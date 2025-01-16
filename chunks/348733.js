@@ -7,7 +7,7 @@ var i = n(200651),
     d = n(237997),
     c = n(438015),
     u = n(981631),
-    h = n(478952);
+    h = n(544690);
 class p extends s.Component {
     render() {
         let { keybind: e, notifications: t, position: n, locked: s } = this.props;

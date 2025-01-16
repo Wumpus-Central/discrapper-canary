@@ -22,7 +22,7 @@ var a = r(200651),
     g = r(981631),
     E = r(185923),
     v = r(474936),
-    I = r(178294);
+    I = r(782317);
 let T = (e) => {
         var n;
         let { node: r, tooltipPosition: i = m.b_.position, enableClick: o = !0, channelId: u, messageId: f } = e,

@@ -35,8 +35,8 @@ var i = n(200651),
     x = n(812206),
     L = n(981631),
     P = n(388032),
-    O = n(536255),
-    y = n(331304);
+    O = n(914333),
+    y = n(312565);
 async function R(e, t, n) {
     t(e.id);
     let i = e.bot;

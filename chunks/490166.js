@@ -11,7 +11,7 @@ var i = e(481060),
     l = e(13140),
     a = e(487029),
     d = e(388032),
-    c = e(772166);
+    c = e(167818);
 function r(t) {
     let { guildId: n, channel: r, keybind: u, transitionState: h, onClose: k } = t;
     function b() {

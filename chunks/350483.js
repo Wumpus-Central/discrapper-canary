@@ -54,7 +54,7 @@ t.Z = r().throttle(function (n, t) {
                     return (
                         L !== a.Z.getGuildId() && (0, b.K)(L, null === (r = u.ZP.getDefaultChannel(L)) || void 0 === r ? void 0 : r.id),
                         (0, l.openModalLazy)(async () => {
-                            let { default: n } = await Promise.all([e.e('18543'), e.e('22347'), e.e('56236'), e.e('89789')]).then(e.bind(e, 17671));
+                            let { default: n } = await Promise.all([e.e('18543'), e.e('22347'), e.e('56236'), e.e('98515')]).then(e.bind(e, 17671));
                             return (t) =>
                                 (0, i.jsx)(n, {
                                     ...t,

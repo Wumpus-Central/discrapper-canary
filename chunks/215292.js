@@ -19,7 +19,7 @@ var i = e(200651),
     C = e(984933),
     m = e(430824),
     p = e(388032),
-    g = e(378969);
+    g = e(217540);
 function _(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: _, onChannelPromptCompleted: L, isSlideReady: T } = t,
         [x, E] = l.useState(''),

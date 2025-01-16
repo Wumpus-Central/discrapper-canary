@@ -1,31 +1,31 @@
 n.d(t, {
     y: function () {
-        return o;
+        return r;
     }
 });
-var r = n(192379),
-    i = n(237617),
-    l = n(889711);
-function o(e) {
+var i = n(192379),
+    l = n(237617),
+    a = n(889711);
+function r(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, r.useRef)(null),
-        o = (0, r.useRef)(null),
-        s = (0, i.Z)(() => e(n.current));
+        n = (0, i.useRef)(null),
+        r = (0, i.useRef)(null),
+        s = (0, l.Z)(() => e(n.current));
     return (
-        (0, r.useLayoutEffect)(() => {
+        (0, i.useLayoutEffect)(() => {
             if (!t) return;
-            null == o.current && (o.current = (0, l.pP)(s.current));
+            null == r.current && (r.current = (0, a.pP)(s.current));
             let e = n.current,
-                r = o.current;
-            if (null != e && null != r) (0, l.YP)(r, e);
+                i = r.current;
+            if (null != e && null != i) (0, a.YP)(i, e);
         }, [t, e, s]),
-        (0, r.useEffect)(() => {
+        (0, i.useEffect)(() => {
             if (!t) return;
             let e = n.current,
-                r = o.current;
-            if (null != e && null != r)
+                i = r.current;
+            if (null != e && null != i)
                 return () => {
-                    (0, l.UC)(r, e);
+                    (0, a.UC)(i, e);
                 };
         }, [t]),
         n

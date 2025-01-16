@@ -26,8 +26,8 @@ var l,
     Z = n(572720),
     k = n(981631),
     T = n(388032),
-    y = n(82836),
-    M = n(574042);
+    y = n(272964),
+    M = n(770151);
 ((a = l || (l = {})).DELETE = 'delete'), (a.EDIT = 'edit'), (a.SHARE = 'share');
 function B(e) {
     let { clip: t, isNew: n, videoRef: l } = e,

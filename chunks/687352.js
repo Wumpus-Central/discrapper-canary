@@ -9,7 +9,7 @@ var a = n(120356),
     l = n.n(a),
     s = n(481060),
     c = n(925329),
-    o = n(621164);
+    o = n(520202);
 function r(e) {
     let { className: t, embeddedApps: n, muted: a } = e;
     if (n.length <= 0) return null;

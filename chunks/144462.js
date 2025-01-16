@@ -11,7 +11,7 @@ var o = n(200651),
     s = n(313201),
     i = n(273504),
     l = n(388032),
-    c = n(800624);
+    c = n(246805);
 function d(t) {
     let { initialCustomMessage: e, onSubmit: n, onClose: d, transitionState: u } = t,
         h = (0, s.Dt)(),

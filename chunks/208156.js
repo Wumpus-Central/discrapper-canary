@@ -22,7 +22,7 @@ var u = r(200651),
     I = r(953101),
     T = r(701488),
     b = r(981631),
-    y = r(530595);
+    y = r(37796);
 function S(e) {
     let { url: n, className: r, style: i, onLoad: a, shouldRefocus: s, queryParams: o, allowPopups: l = !1, referrerPolicy: d = 'origin' } = e,
         f = (0, E.sU)({}),

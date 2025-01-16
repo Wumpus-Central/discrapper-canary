@@ -13,7 +13,7 @@ var l = t(200651),
     u = t(811654),
     d = t(344991),
     m = t(981631),
-    f = t(659030);
+    f = t(826987);
 function p(e) {
     var n;
     let { channelTypes: t } = e,

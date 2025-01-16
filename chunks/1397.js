@@ -43,7 +43,7 @@ var i = n(200651),
     B = n(981631),
     U = n(815660),
     H = n(388032),
-    G = n(328041);
+    G = n(145532);
 function F(e, t, n) {
     return (
         t in e
@@ -192,7 +192,7 @@ class V extends l.PureComponent {
             F(this, 'handleVerifyPhone', () => {
                 (0, o.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('76540'), n.e('17613')]).then(n.bind(n, 607018));
+                        let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 reason: j.L.GUILD_PHONE_REQUIRED,

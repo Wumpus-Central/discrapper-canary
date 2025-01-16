@@ -18,7 +18,7 @@ var a = t(200651),
     x = t(797908),
     h = t(292191),
     b = t(981631),
-    I = t(604501);
+    I = t(318708);
 let j = s.Y.APPLICATION_DIRECTORY;
 function S(e) {
     let { collection: n, index: t, onSelectApplication: r } = e,

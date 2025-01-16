@@ -3,7 +3,7 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(481060),
-    i = n(280400);
+    i = n(102787);
 t.Z = function (e) {
     let { allowClicks: t = !1, children: n, withBorder: r = !1 } = e;
     return (0, o.jsx)(a.FocusBlock, {

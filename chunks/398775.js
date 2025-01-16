@@ -24,7 +24,7 @@ var i = n(200651),
     x = n(798769),
     f = n(981631),
     _ = n(388032),
-    E = n(794815);
+    E = n(612711);
 async function C(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: s, analyticsLocations: a, analyticsLocation: l } = e;
     try {

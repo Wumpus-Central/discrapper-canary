@@ -19,7 +19,7 @@ var n = i(200651),
     A = i(800530),
     T = i(981631),
     j = i(388032),
-    C = i(528959);
+    C = i(729779);
 let y = (e) => {
         let { classificationTypeText: t, guildMetadata: i } = e,
             l = a.useMemo(() => {

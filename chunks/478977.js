@@ -2,7 +2,7 @@ var o = n(200651);
 n(192379);
 var r = n(866442),
     s = n(481060),
-    a = n(280400);
+    a = n(102787);
 t.Z = function (e) {
     let { colorKey: t, value: n, onChange: i, title: l } = e;
     return (0, o.jsxs)(s.FormItem, {

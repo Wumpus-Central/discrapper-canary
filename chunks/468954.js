@@ -9,7 +9,7 @@ var i = r(200651),
     o = r(98528),
     l = r(429155),
     u = r(810462),
-    c = r(934402);
+    c = r(252084);
 function d(e) {
     let { categories: n, collapsedCategories: r, containerWidth: d, store: f, onSelectItem: _, onSearchExpressions: h, hasSearchResults: p, defaultSearchPlaceholder: m, emptySearchPlaceholder: g, renderEmptyState: E, renderRow: v, renderSection: I, renderSectionHeader: T, renderSectionFooter: b, renderInspector: y, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: O, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: x, listPadding: w, gridNavigatorId: P, gridNotice: M, renderHeader: k, renderUpsell: U, setShowUpsell: B } = e,
         G = a.useRef(null),

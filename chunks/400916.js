@@ -14,7 +14,7 @@ var r = n(512722),
     d = n(613810),
     u = n(596211),
     m = n(388032),
-    h = n(574127);
+    h = n(916060);
 function f(e) {
     var t, n, r, f;
     let { guildId: p, productId: _ } = e,

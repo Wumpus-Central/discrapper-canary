@@ -5,7 +5,7 @@ var r = n(788307),
     a = n(565640),
     s = n(51144),
     o = n(388032),
-    c = n(525506);
+    c = n(542745);
 t.Z = function (e) {
     let { hovered: t, activities: n, applicationStream: d, status: u, user: h, userIgnored: m } = e,
         p = (0, a.Z)(null == h ? void 0 : h.id, 'StatusText');

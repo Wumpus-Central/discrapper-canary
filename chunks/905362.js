@@ -37,7 +37,7 @@ function d(e, n, a, o, l) {
         ...a
     }),
         (0, s.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([r.e('53967'), r.e('99916'), r.e('80026'), r.e('76131')]).then(r.bind(r, 723795));
+            let { default: e } = await Promise.all([r.e('53967'), r.e('99916'), r.e('80026'), r.e('44126')]).then(r.bind(r, 723795));
             return (r) =>
                 (0, i.jsx)(e, {
                     ...r,
@@ -49,7 +49,7 @@ function d(e, n, a, o, l) {
 }
 function f(e, n) {
     (0, s.openModalLazy)(async () => {
-        let { default: a } = await Promise.all([r.e('82158'), r.e('24786')]).then(r.bind(r, 717057));
+        let { default: a } = await Promise.all([r.e('82158'), r.e('54907')]).then(r.bind(r, 717057));
         return (r) => {
             let s = () => {
                 null != n && l.Z.ackUserGuildJoinRequest(e, n), r.onClose();

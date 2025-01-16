@@ -14,7 +14,7 @@ var a = n(481060),
     d = n(474936),
     u = n(981631),
     m = n(388032),
-    g = n(600963);
+    g = n(637444);
 let h = (e) => {
         let { text: t, badge: n, variant: i } = e;
         return (0, s.jsxs)(a.Text, {

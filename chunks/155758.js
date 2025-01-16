@@ -20,7 +20,7 @@ var i = n(200651),
     g = n(157018),
     x = n(828656),
     p = n(388032),
-    f = n(240666);
+    f = n(290803);
 function C(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: v = !1 } = e,
         I = r.useRef(null),

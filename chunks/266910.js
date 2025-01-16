@@ -9,7 +9,7 @@ var i = r(200651),
     f = r(484459),
     _ = r(695346),
     h = r(981631),
-    p = r(590544);
+    p = r(972753);
 function m(e) {
     let { style: n, src: r, backgroundSrc: m, userId: g, pulseSpeakingIndicator: E = !1, speaking: v = !1, ...I } = e,
         T = null != m ? m : r,

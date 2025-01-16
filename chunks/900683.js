@@ -12,7 +12,7 @@ var l = t(120356),
     r = t.n(l),
     a = t(481060),
     s = t(388032),
-    o = t(402635),
+    o = t(66294),
     c = t(531599);
 function u() {
     return (0, i.jsxs)('div', {

@@ -3,7 +3,7 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(481060),
-    l = n(419861);
+    l = n(297247);
 t.Z = (e) => {
     let { icon: t, iconClassName: n, header: r, description: o } = e;
     return (0, i.jsxs)('div', {

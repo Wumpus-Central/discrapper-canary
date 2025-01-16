@@ -12,7 +12,7 @@ var a = n(200651),
     i = n(424071),
     d = n(239358),
     u = n(388032),
-    x = n(337530);
+    x = n(38920);
 function h(e) {
     let { platformType: t, onContinue: n, onClose: h, img: N, headerConnect: m, headerReconnect: C, body: j, learnMoreLink: f, valueProps: v } = e,
         p = (0, l.e7)([c.Z], () => {

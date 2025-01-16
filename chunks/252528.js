@@ -9,7 +9,7 @@ i(192379);
 var s = i(481060),
     o = i(986035),
     a = i(388032),
-    r = i(345441);
+    r = i(966474);
 function c(t) {
     let { application: e, onAgree: i, onClose: c, onDisagree: l, ...d } = t;
     return (0, n.jsx)(s.ModalRoot, {

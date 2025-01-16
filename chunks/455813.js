@@ -10,7 +10,7 @@ var i = r(200651),
     l = r(481060),
     u = r(249458),
     c = r(388032),
-    d = r(374134);
+    d = r(267954);
 function f(e) {
     let { onPlay: n, className: r, inactive: s } = e,
         f = a.useRef(null),

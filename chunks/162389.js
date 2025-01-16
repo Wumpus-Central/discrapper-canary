@@ -18,7 +18,7 @@ var i = n(200651),
     p = n(710352),
     x = n(981631),
     f = n(388032),
-    v = n(359930);
+    v = n(28772);
 function j(e) {
     let { channel: t } = e,
         s = (0, a.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),

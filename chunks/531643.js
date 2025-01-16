@@ -20,7 +20,7 @@ var a = r(120356),
     c = r(355314),
     d = r(310752),
     f = r(731994),
-    _ = r(792003);
+    _ = r(55720);
 function h(e) {
     let { title: n, help: r, showPremiumUpsell: a, transitionState: o, icons: h, fileSize: p, onClose: m } = e,
         g = (0, u.Dt)(),

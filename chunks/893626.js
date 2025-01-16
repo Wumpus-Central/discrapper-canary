@@ -19,7 +19,7 @@ var l = n(200651),
     h = n(903518),
     f = n(580357),
     v = n(388032),
-    x = n(419265);
+    x = n(147177);
 function p(e) {
     var t, n, a;
     let { transitionState: p, onClose: b, guildId: I, welcomeMessage: j, onSave: k } = e,

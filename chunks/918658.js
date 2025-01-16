@@ -1,177 +1,177 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return E;
+        return P;
     },
     d: function () {
-        return O;
+        return L;
     }
 });
-var i = t(200651);
-t(192379);
-var o = t(120356),
-    r = t.n(o),
-    a = t(442837),
-    l = t(692547),
-    c = t(481060),
-    s = t(549817),
-    d = t(819553),
-    u = t(17181),
-    b = t(303737),
-    m = t(434404),
-    g = t(703656),
-    _ = t(944486),
-    p = t(914010),
-    f = t(671533),
-    h = t(259580),
-    C = t(358085),
-    x = t(962086),
-    S = t(160404),
-    I = t(889695),
-    B = t(981631),
-    T = t(176505),
-    k = t(302463),
-    v = t(293810),
-    w = t(388032),
-    N = t(781705);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    l = n.n(r),
+    a = n(442837),
+    o = n(692547),
+    s = n(481060),
+    c = n(549817),
+    d = n(819553),
+    u = n(17181),
+    m = n(303737),
+    h = n(434404),
+    f = n(703656),
+    p = n(944486),
+    _ = n(914010),
+    g = n(671533),
+    E = n(259580),
+    C = n(358085),
+    I = n(962086),
+    x = n(160404),
+    N = n(889695),
+    v = n(981631),
+    T = n(176505),
+    S = n(302463),
+    A = n(293810),
+    b = n(388032),
+    j = n(646217);
 function R(e) {
-    let { className: n, onClick: t, children: o } = e;
-    return (0, i.jsx)(c.Button, {
-        className: r()(N.button, n),
-        innerClassName: N.buttonInner,
-        look: c.Button.Looks.OUTLINED,
-        color: c.Button.Colors.WHITE,
-        size: c.Button.Sizes.NONE,
-        onClick: t,
-        children: o
+    let { className: t, onClick: n, children: r } = e;
+    return (0, i.jsx)(s.Button, {
+        className: l()(j.button, t),
+        innerClassName: j.buttonInner,
+        look: s.Button.Looks.OUTLINED,
+        color: s.Button.Colors.WHITE,
+        size: s.Button.Sizes.NONE,
+        onClick: n,
+        children: r
     });
 }
 function Z(e) {
-    let { onClick: n } = e;
+    let { onClick: t } = e;
     return (0, i.jsx)(R, {
-        onClick: n,
-        children: w.intl.string(w.t.R9GHyc)
+        onClick: t,
+        children: b.intl.string(b.t.R9GHyc)
     });
 }
-function E() {
-    let e = (0, a.e7)([p.Z], () => p.Z.getGuildId()),
-        n = (0, a.e7)([_.Z], () => _.Z.getChannelId(e)),
+function P() {
+    let e = (0, a.e7)([_.Z], () => _.Z.getGuildId()),
+        t = (0, a.e7)([p.Z], () => p.Z.getChannelId(e)),
         {
-            viewingRoles: t,
-            backNavigationSection: o,
-            isFullServerPreview: r,
+            viewingRoles: n,
+            backNavigationSection: r,
+            isFullServerPreview: l,
             isServerShopPreview: C
-        } = (0, a.cj)([S.Z], () => ({
-            viewingRoles: null != e ? S.Z.getViewingRoles(e) : null,
-            backNavigationSection: S.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && S.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && S.Z.isViewingServerShop(e)
+        } = (0, a.cj)([x.Z], () => ({
+            viewingRoles: null != e ? x.Z.getViewingRoles(e) : null,
+            backNavigationSection: x.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && x.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && x.Z.isViewingServerShop(e)
         }));
-    if (null == t || null == e) return null;
-    let E = (function (e) {
+    if (null == n || null == e) return null;
+    let P = (function (e) {
             switch (e) {
-                case B.pNK.INTEGRATIONS:
-                    return w.intl.string(w.t.k7LGdn);
-                case B.pNK.ROLE_SUBSCRIPTIONS:
-                    return w.intl.string(w.t.bRqiqa);
-                case B.pNK.ONBOARDING:
-                    return w.intl.string(w.t.qZpU3d);
+                case v.pNK.INTEGRATIONS:
+                    return b.intl.string(b.t.k7LGdn);
+                case v.pNK.ROLE_SUBSCRIPTIONS:
+                    return b.intl.string(b.t.bRqiqa);
+                case v.pNK.ONBOARDING:
+                    return b.intl.string(b.t.qZpU3d);
                 default:
-                    return w.intl.string(w.t.MTIXho);
+                    return b.intl.string(b.t.MTIXho);
             }
-        })(o),
-        O = o === B.pNK.ROLE_SUBSCRIPTIONS ? w.intl.string(w.t.hZUCzc) : w.intl.string(w.t['/djIh4']),
-        P = n === T.oC.GUILD_ONBOARDING,
-        j = (n) => {
-            let { backToSettings: t } = n;
-            null != e && (S.Z.isFullServerPreview(e) && (0, g.uL)(B.Z5c.CHANNEL(e)), d.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, u.discardOnboardingPromise)(e)), (0, x.mL)(e), t && m.Z.open(e, o), o === B.pNK.ROLE_SUBSCRIPTIONS && (0, b.GN)(e));
+        })(r),
+        L = r === v.pNK.ROLE_SUBSCRIPTIONS ? b.intl.string(b.t.hZUCzc) : b.intl.string(b.t['/djIh4']),
+        y = t === T.oC.GUILD_ONBOARDING,
+        O = (t) => {
+            let { backToSettings: n } = t;
+            null != e && (x.Z.isFullServerPreview(e) && (0, f.uL)(v.Z5c.CHANNEL(e)), d.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, u.discardOnboardingPromise)(e)), (0, I.mL)(e), n && h.Z.open(e, r), r === v.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(e));
         };
-    return (0, i.jsxs)(c.Notice, {
-        color: c.NoticeColors.BRAND,
-        className: N.notice,
+    return (0, i.jsxs)(s.Notice, {
+        color: s.NoticeColors.BRAND,
+        className: j.notice,
         children: [
             (0, i.jsxs)(R, {
-                onClick: () => j({ backToSettings: !0 }),
-                className: N.backButton,
+                onClick: () => O({ backToSettings: !0 }),
+                className: j.backButton,
                 children: [
-                    (0, i.jsx)(f.Z, {
+                    (0, i.jsx)(g.Z, {
                         width: 16,
                         height: 16,
-                        direction: f.Z.Directions.LEFT,
-                        className: N.backArrow
+                        direction: g.Z.Directions.LEFT,
+                        className: j.backArrow
                     }),
-                    E
+                    P
                 ]
             }),
-            P && r
+            y && l
                 ? (0, i.jsx)('div', {
-                      className: N.noticeContents,
+                      className: j.noticeContents,
                       children: (0, i.jsx)('div', {
-                          className: N.noticeText,
-                          children: w.intl.string(w.t.PxbiAQ)
+                          className: j.noticeText,
+                          children: b.intl.string(b.t.PxbiAQ)
                       })
                   })
                 : (0, i.jsxs)('div', {
-                      className: N.noticeContents,
+                      className: j.noticeContents,
                       children: [
                           (0, i.jsx)('div', {
-                              className: N.noticeText,
-                              children: r ? w.intl.formatToPlainString(w.t['0PHahI'], { numRoles: Object.keys(t).length }) : w.intl.formatToPlainString(w.t.vMlK8v, { numRoles: Object.keys(t).length })
+                              className: j.noticeText,
+                              children: l ? b.intl.formatToPlainString(b.t['0PHahI'], { numRoles: Object.keys(n).length }) : b.intl.formatToPlainString(b.t.vMlK8v, { numRoles: Object.keys(n).length })
                           }),
-                          (0, i.jsx)(c.Popout, {
+                          (0, i.jsx)(s.Popout, {
                               position: 'bottom',
-                              renderPopout: () => (0, i.jsx)(I.Z, { guildId: e }),
+                              renderPopout: () => (0, i.jsx)(N.Z, { guildId: e }),
                               children: (e) => {
-                                  let { onClick: n } = e;
+                                  let { onClick: t } = e;
                                   return (0, i.jsxs)(R, {
-                                      onClick: n,
+                                      onClick: t,
                                       children: [
-                                          O,
-                                          (0, i.jsx)(h.Z, {
+                                          L,
+                                          (0, i.jsx)(E.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: h.Z.Directions.DOWN,
-                                              className: N.selectCaret
+                                              direction: E.Z.Directions.DOWN,
+                                              className: j.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
-                          r &&
-                              (0, i.jsx)(c.TooltipContainer, {
-                                  className: N.previewWarning,
-                                  text: w.intl.string(w.t.mW4DUF),
-                                  children: (0, i.jsx)(c.CircleWarningIcon, {
+                          l &&
+                              (0, i.jsx)(s.TooltipContainer, {
+                                  className: j.previewWarning,
+                                  text: b.intl.string(b.t.mW4DUF),
+                                  children: (0, i.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
-                                      color: l.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: o.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
                           C &&
-                              (0, i.jsx)(c.TooltipContainer, {
-                                  className: N.previewWarning,
-                                  text: w.intl.formatToPlainString(w.t.eummvb, {
-                                      maxTiers: v.fF,
-                                      maxProducts: k.dD
+                              (0, i.jsx)(s.TooltipContainer, {
+                                  className: j.previewWarning,
+                                  text: b.intl.formatToPlainString(b.t.eummvb, {
+                                      maxTiers: A.fF,
+                                      maxProducts: S.dD
                                   }),
-                                  children: (0, i.jsx)(c.CircleWarningIcon, {
+                                  children: (0, i.jsx)(s.CircleWarningIcon, {
                                       size: 'xs',
-                                      color: l.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: o.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            r || o === B.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(Z, { onClick: () => j({ backToSettings: !1 }) })
+            l || r === v.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(Z, { onClick: () => O({ backToSettings: !1 }) })
         ]
     });
 }
-function O(e) {
-    let { guildId: n } = e;
-    return (0, a.e7)([S.Z], () => S.Z.isViewingRoles(n))
+function L(e) {
+    let { guildId: t } = e;
+    return (0, a.e7)([x.Z], () => x.Z.isViewingRoles(t))
         ? (0, i.jsx)('div', {
-              className: r()(N.settingsWrapper, {
-                  [N.windows]: (0, C.isWindows)(),
-                  [N.osx]: (0, C.isMac)()
+              className: l()(j.settingsWrapper, {
+                  [j.windows]: (0, C.isWindows)(),
+                  [j.osx]: (0, C.isMac)()
               }),
-              children: (0, i.jsx)(E, {})
+              children: (0, i.jsx)(P, {})
           })
         : null;
 }

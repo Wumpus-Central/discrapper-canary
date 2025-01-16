@@ -12,7 +12,7 @@ var i = t(442837),
     o = t(499596),
     u = t(537135),
     c = t(388032),
-    d = t(795331);
+    d = t(456963);
 function m(e) {
     let { channel: n } = e,
         t = (0, i.e7)([r.default], () => r.default.getId()),

@@ -12,7 +12,7 @@ var i = e(200651),
     r = e(313201),
     a = e(51144),
     d = e(388032),
-    u = e(606163);
+    u = e(154210);
 function c(t) {
     let { user: n, nickname: e, transitionState: c, onClose: p } = t,
         h = (0, r.Dt)(),

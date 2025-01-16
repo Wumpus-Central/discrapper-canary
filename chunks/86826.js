@@ -7,7 +7,7 @@ var r = n(120356),
     o = n(120998),
     c = n(353042),
     d = n(388032),
-    u = n(774877);
+    u = n(717242);
 t.Z = function (e) {
     var t;
     let { title: n, className: r, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,

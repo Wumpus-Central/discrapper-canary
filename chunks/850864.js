@@ -45,7 +45,7 @@ var i = n(200651),
     w = n(486324),
     B = n(200299),
     U = n(388032),
-    G = n(593487),
+    G = n(934842),
     F = n(91716),
     H = n(470264),
     z = n(710043),
@@ -426,7 +426,7 @@ function J(e) {
                         return;
                     }
                     (0, c.openModalLazy)(async () => {
-                        let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('36343')]).then(n.bind(n, 850085));
+                        let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('19557')]).then(n.bind(n, 850085));
                         return (n) =>
                             (0, i.jsx)(r, {
                                 imgURI: e,

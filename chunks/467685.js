@@ -8,7 +8,7 @@ var r = n(120356),
     c = n(787528),
     d = n(474936),
     u = n(388032),
-    m = n(386738);
+    m = n(713994);
 let g = (e) => {
     switch (e) {
         case d.JN.PREMIUM_TENURE_1_MONTH:

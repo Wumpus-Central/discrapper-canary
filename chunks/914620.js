@@ -11,7 +11,7 @@ var i = t(200651),
     c = t(934269),
     o = t(722300),
     u = t(910200),
-    d = t(969601);
+    d = t(37633);
 function h(e) {
     let { guildId: n, name: t, setPopoutRef: r } = e,
         { guildProfile: h, fetchGuildProfile: m, isFetching: f } = (0, c.u)(n),

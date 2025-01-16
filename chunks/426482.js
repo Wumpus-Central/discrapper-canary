@@ -15,7 +15,7 @@ var r,
     s = n.n(o),
     c = n(793030),
     d = n(388032),
-    u = n(415069);
+    u = n(605910);
 function m(e) {
     var t;
     let { game: n, application: r, size: i, className: o } = e,

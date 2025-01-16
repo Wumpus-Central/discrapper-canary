@@ -1,12 +1,12 @@
-t.d(n, {
+o.d(n, {
     M: function () {
-        return o;
+        return a;
     },
     f: function () {
-        return l;
+        return t;
     }
 });
-let l = (0, t(818083).B)({
+let t = (0, o(818083).B)({
     kind: 'user',
     id: '2024-12_global_discovery_apps_logged_out',
     label: 'Global Discovery Apps - Logged Out',
@@ -19,7 +19,7 @@ let l = (0, t(818083).B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { location: n } = e;
-    return l.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
+    return t.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
 }

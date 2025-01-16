@@ -29,8 +29,8 @@ var a = r(120356),
     N = r(430824),
     C = r(594174),
     R = r(388032),
-    O = r(426953),
-    D = r(655061);
+    O = r(665162),
+    D = r(822944);
 let L = (0, v.B)({
     kind: 'user',
     id: '2021-07_role_popout',
@@ -125,7 +125,7 @@ function x(e) {
                                                       guildId: s.id,
                                                       onContextMenu: (e) => {
                                                           (0, f.jW)(e, async () => {
-                                                              let { default: e } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('33862'), r.e('92453'), r.e('13125'), r.e('84006')]).then(r.bind(r, 757387));
+                                                              let { default: e } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('33862'), r.e('92453'), r.e('13125'), r.e('54492')]).then(r.bind(r, 757387));
                                                               return (r) =>
                                                                   (0, i.jsx)(e, {
                                                                       ...r,

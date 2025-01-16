@@ -12,7 +12,7 @@ var a = t(200651),
     s = t(481060),
     c = t(706454),
     d = t(388032),
-    u = t(423197);
+    u = t(181169);
 let m = (0, d.getAvailableLocales)();
 function p(e) {
     let { application: n, className: t } = e,

@@ -25,7 +25,7 @@ var i = n(200651),
     E = n(228168),
     b = n(981631),
     Z = n(388032),
-    S = n(763248);
+    S = n(866669);
 function N(e) {
     let { user: t, currentUser: n, displayProfile: N, channel: T, isHovering: j, onOpenProfile: A } = e,
         y = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),

@@ -7,7 +7,7 @@ var i = t(200651),
     c = t(246364),
     d = t(700833),
     u = t(388032),
-    m = t(4969);
+    m = t(31619);
 function x(e) {
     let { onClick: n, text: t, icon: l } = e;
     return (0, i.jsx)('div', {

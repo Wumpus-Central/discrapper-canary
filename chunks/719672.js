@@ -18,7 +18,7 @@ var i = n(913527),
     h = n(211644),
     x = n(675478),
     f = n(681619),
-    p = n(787232);
+    p = n(388958);
 ((a = r || (r = {})).EVENT = 'events'), (a.CANDIDATES = 'candidates');
 let b = (e) => {
         switch (e) {

@@ -7,7 +7,7 @@ var r = n(481060),
     l = n(613087),
     c = n(472144),
     d = n(46140),
-    u = n(236311);
+    u = n(952529);
 t.Z = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, taskDetails: x, activeScreen: g } = e,
         { percentComplete: h } = x,

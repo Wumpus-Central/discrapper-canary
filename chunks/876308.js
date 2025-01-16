@@ -27,7 +27,7 @@ e.default = (0, d.Z)(
                         c = o.useCallback(() => {
                             if ((null == e ? void 0 : e.id) == null) return null;
                             (0, u.openModalLazy)(async () => {
-                                let { default: o } = await Promise.all([n.e('56035'), n.e('97207')]).then(n.bind(n, 758961));
+                                let { default: o } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
                                 return (n) =>
                                     (0, r.jsx)(o, {
                                         ...n,

@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(981631),
     b = n(37113),
     Z = n(388032),
-    S = n(410223),
+    S = n(687919),
     N = n(574169);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
@@ -129,7 +129,7 @@ function j(e) {
                                       return;
                                   }
                                   (0, u.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('35449')]).then(n.bind(n, 60594));
+                                      let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('57252')]).then(n.bind(n, 60594));
                                       return (t) =>
                                           (0, i.jsx)(e, {
                                               analyticsLocation: 'HDStreamingPotionBanner',

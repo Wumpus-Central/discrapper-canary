@@ -1,25 +1,25 @@
-var a = t(200651);
+var n = t(200651);
 t(192379);
-var i = t(481060),
-    c = t(388032);
-n.Z = (e) => {
-    let { onChangeAvatar: n, onChangeAvatarDecoration: t, onClose: o, className: s } = e;
-    return (0, a.jsxs)(i.Menu, {
+var a = t(481060),
+    r = t(388032);
+i.Z = (e) => {
+    let { onChangeAvatar: i, onChangeAvatarDecoration: t, onClose: o, className: s } = e;
+    return (0, n.jsxs)(a.Menu, {
         className: s,
         onClose: o,
         onSelect: void 0,
         navId: 'user-settings-change-avatar',
-        'aria-label': c.intl.string(c.t.ldIeAQ),
+        'aria-label': r.intl.string(r.t.ldIeAQ),
         children: [
-            (0, a.jsx)(i.MenuItem, {
+            (0, n.jsx)(a.MenuItem, {
                 id: 'change-avatar',
-                action: n,
-                label: c.intl.string(c.t['4OynCA'])
+                action: i,
+                label: r.intl.string(r.t['4OynCA'])
             }),
-            (0, a.jsx)(i.MenuItem, {
+            (0, n.jsx)(a.MenuItem, {
                 id: 'change-avatar-decoration',
                 action: t,
-                label: c.intl.string(c.t['Tna/TU'])
+                label: r.intl.string(r.t['Tna/TU'])
             })
         ]
     });

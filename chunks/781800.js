@@ -5,7 +5,7 @@ var r = n(481060),
     a = n(391110),
     l = n(981631),
     o = n(388032),
-    c = n(892307);
+    c = n(368549);
 t.Z = (e) => {
     let { setIsAllPerksVisible: t, previousComponent: n } = e;
     return (0, i.jsx)(r.ShinyButton, {

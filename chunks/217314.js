@@ -14,7 +14,7 @@ var l = n(399606),
     d = n(51144),
     u = n(984370),
     h = n(388032),
-    p = n(302133);
+    p = n(247627);
 function m(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),

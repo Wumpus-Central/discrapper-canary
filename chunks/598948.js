@@ -21,7 +21,7 @@ var l = n(200651),
     v = n(66747),
     N = n(852479),
     L = n(420212),
-    I = n(690974);
+    I = n(264241);
 let _ = {
         transform: 'translate3d(15%, 0, 0)',
         opacity: 0.3

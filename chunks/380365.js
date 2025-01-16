@@ -10,7 +10,7 @@ var i = n(200651),
     m = n(979264),
     v = n(308083),
     x = n(388032),
-    g = n(896177);
+    g = n(175189);
 l.Z = a.memo(function (e) {
     var l, n, a, h, f, C;
     let { guildId: N, isTagAdopted: j, onChangeUseTag: S } = e,

@@ -21,7 +21,7 @@ var r = n(512722),
     j = n(409110),
     p = n(226060),
     g = n(388032),
-    _ = n(772835);
+    _ = n(294877);
 function v(e) {
     var t, n;
     let { transitionState: r, guildProductListingId: v, analyticsLocation: b, guildId: N, onClose: I } = e,

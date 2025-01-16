@@ -1,44 +1,44 @@
 n.d(t, {
     Ld: function () {
-        return c;
-    },
-    R_: function () {
-        return o;
-    },
-    aw: function () {
         return u;
     },
-    pU: function () {
+    R_: function () {
+        return r;
+    },
+    aw: function () {
         return d;
+    },
+    pU: function () {
+        return m;
     }
 }),
     n(789020);
-var l = n(630388),
-    i = n(406432),
-    a = n(828061),
-    r = n(981631);
-let s = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
-    o = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
-    c = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
-function u(e, t) {
-    let { filename: n, width: o, height: c } = e;
-    if (t && null != o && o > 0 && null != c && c > 0) {
-        if ((0, i.CO)(n)) return 'IMAGE';
-        if (!(0, i.NU)(n) || null == e.proxy_url) return 'INVALID';
+var i = n(630388),
+    l = n(406432),
+    o = n(828061),
+    s = n(981631);
+let a = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
+    r = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
+    u = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
+function d(e, t) {
+    let { filename: n, width: r, height: u } = e;
+    if (t && null != r && r > 0 && null != u && u > 0) {
+        if ((0, l.CO)(n)) return 'IMAGE';
+        if (!(0, l.NU)(n) || null == e.proxy_url) return 'INVALID';
         else {
-            var u;
-            return (0, l.yE)(null !== (u = e.flags) && void 0 !== u ? u : 0, r.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
+            var d;
+            return (0, i.yE)(null !== (d = e.flags) && void 0 !== d ? d : 0, s.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
         }
     }
-    if (null != t && s.test(n) && null != e.url) return 'AUDIO';
-    if (null != e.url && (0, a.O)(n)) return 'PLAINTEXT_PREVIEW';
+    if (null != t && a.test(n) && null != e.url) return 'AUDIO';
+    if (null != e.url && (0, o.O)(n)) return 'PLAINTEXT_PREVIEW';
     return 'OTHER';
 }
-function d(e) {
-    let { contentType: t, width: n, height: l } = e;
-    if (null != n && n > 0 && null != l && l > 0) {
-        if ((0, i.tw)(t)) return 'IMAGE';
-        if ((0, i.X2)(t)) return 'VIDEO';
+function m(e) {
+    let { contentType: t, width: n, height: i } = e;
+    if (null != n && n > 0 && null != i && i > 0) {
+        if ((0, l.tw)(t)) return 'IMAGE';
+        if ((0, l.X2)(t)) return 'VIDEO';
     }
     return 'VISUAL_PLACEHOLDER';
 }

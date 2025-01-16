@@ -12,7 +12,7 @@ var l = n(200651),
     r = n(479531),
     a = n(213609),
     u = n(388032),
-    d = n(288341);
+    d = n(846370);
 let c = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
 function h(t) {
     let { transitionState: e, onFormSubmit: n, onSuccess: h, onClose: p, headerText: m, confirmButtonText: f, confirmButtonColor: x, impressionName: C } = t,

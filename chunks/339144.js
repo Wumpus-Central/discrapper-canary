@@ -22,7 +22,7 @@ var i = n(200651),
     g = n(870569),
     v = n(981631),
     C = n(388032),
-    x = n(899901);
+    x = n(272371);
 function I(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === v.IIU.PLAYING && (0, u.Z)(t, v.xjy.JOIN));
 }
@@ -59,7 +59,7 @@ let _ = l.memo(function (e) {
             let e = null != E && (0, m.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
             (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('55499')]).then(n.bind(n, 60594));
+                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

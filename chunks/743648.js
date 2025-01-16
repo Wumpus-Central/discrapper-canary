@@ -10,7 +10,7 @@ var s = t(120356),
     o = t(848572),
     b = t(787528),
     g = t(388032),
-    m = t(526827);
+    m = t(353806);
 a.default = (e) => {
     let { transitionState: a, onClose: t } = e,
         s = (0, r.Dt)(),

@@ -7,7 +7,7 @@ var a = r(120356),
     u = r(819758),
     c = r(149203),
     d = r(388032),
-    f = r(232744);
+    f = r(803700);
 let _ = (e) => {
         let { className: n, graphicPrimary: r, graphicSecondary: a, titlePrimary: l, titleSecondary: u, isFavorite: _ = !1, emojiSubCategory: p = c.t0.NONE } = e;
         return (0, i.jsxs)('div', {

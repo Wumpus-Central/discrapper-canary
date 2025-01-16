@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(727963);
+    l = n(265054);
 function s() {
     return (0, i.jsx)('div', {
         className: l.centerContainer,

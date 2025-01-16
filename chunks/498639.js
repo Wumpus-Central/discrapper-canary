@@ -26,7 +26,7 @@ var i = n(200651),
     A = n(78839),
     j = n(981631),
     O = n(474936),
-    R = n(761732);
+    R = n(506920);
 function P(e) {
     let { selectedGuildForGuildSub: t } = e,
         n = (0, f.GG)(null == t ? void 0 : t.id)[0];

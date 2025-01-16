@@ -8,7 +8,7 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(481060),
-    l = n(769562);
+    l = n(510047);
 function o(e) {
     let { icon: t, tooltip: n, onClick: r, className: o } = e,
         c = (e) => {

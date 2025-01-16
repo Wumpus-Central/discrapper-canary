@@ -49,7 +49,7 @@ var i,
     U = n(765305),
     G = n(981631),
     B = n(388032),
-    V = n(353293);
+    V = n(832019);
 let H = a.memo(function (e) {
     let { heading: t, location: n, locationIcon: i, details: r, detailsIcon: a, topic: s, onClickCloseIcon: c, children: u } = e,
         h = (0, g.Q3)('GuildNoticeBody');

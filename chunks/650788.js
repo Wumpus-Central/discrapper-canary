@@ -35,8 +35,8 @@ var r = n(200651),
     M = n(176505),
     D = n(20281),
     P = n(388032),
-    U = n(408985),
-    k = n(302133);
+    U = n(850166),
+    k = n(247627);
 function B(e) {
     var t;
     let { guildId: n, productId: i } = e,

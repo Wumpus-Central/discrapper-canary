@@ -18,7 +18,7 @@ var r = n(533800),
     h = n(358595),
     f = n(981631),
     p = n(388032),
-    _ = n(253715);
+    _ = n(658412);
 function g(e) {
     var t, g;
     let E,
@@ -138,7 +138,7 @@ function g(e) {
                                 children: p.intl.format(p.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, l.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([n.e('95468'), n.e('42283')]).then(n.bind(n, 650233));
+                                            let { default: e } = await Promise.all([n.e('95468'), n.e('15256')]).then(n.bind(n, 650233));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         })
                                 })

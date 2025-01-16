@@ -14,7 +14,7 @@ var i = t(913527),
     c = t(63063),
     d = t(981631),
     m = t(388032),
-    g = t(637464);
+    g = t(417859);
 function h(e) {
     var n;
     let { streamingUntil: t, user: i, channel: h } = e,

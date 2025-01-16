@@ -30,7 +30,7 @@ var i = n(200651),
     P = n(981631),
     _ = n(420212),
     L = n(388032),
-    S = n(480705);
+    S = n(260346);
 let O = x.Z.getAppsSupportURL(P.BhN.APPS_LEARN_MORE);
 function I(e) {
     let { onClose: t } = e,

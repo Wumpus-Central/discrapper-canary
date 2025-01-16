@@ -4,7 +4,7 @@ var i = n(200651),
     a = n.n(s),
     l = n(481060),
     o = n(388032),
-    c = n(347916);
+    c = n(662362);
 t.Z = r.forwardRef(function (e, t) {
     let { currentPageIndex: n, numPages: r, onChangePage: s, children: d, className: u, showPageCount: m = !0, ...g } = e,
         h = n <= 0,

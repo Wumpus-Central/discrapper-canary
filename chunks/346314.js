@@ -14,7 +14,7 @@ var a = r(120356),
     l = r(756715),
     u = r(607070),
     c = r(109161),
-    d = r(531101);
+    d = r(213275);
 function f(e) {
     let { roleStyle: n, name: r, color: a, roleName: o, dotAlignment: l = 'left', className: u } = e,
         f = 'username' === n,

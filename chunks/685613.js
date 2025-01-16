@@ -21,7 +21,7 @@ var a = n(120356),
     h = n(475595),
     C = n(78826),
     p = n(981631),
-    g = n(749108);
+    g = n(806145);
 ((i = l || (l = {}))[(i.SMALL = 24)] = 'SMALL'), (i[(i.MEDIUM = 32)] = 'MEDIUM'), ((s = r || (r = {}))[(s.SMALL = 2)] = 'SMALL'), (s[(s.MEDIUM = 8)] = 'MEDIUM');
 t.ZP = function (e) {
     let { className: t, logotypeClassName: n, gameTileSize: i = 24, quest: s, separatorSpacing: l = 2, theme: r = p.BRd.DARK, withCosponsor: a = !0, withGameTile: E = !0 } = e,

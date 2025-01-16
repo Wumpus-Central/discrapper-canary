@@ -14,7 +14,7 @@ var l = t(442837),
     u = t(496675),
     d = t(981631),
     g = t(388032),
-    h = t(276923);
+    h = t(198394);
 function v(n) {
     let { guildId: e, onClose: t } = n,
         { showHubEventsList: v } = o.Z.useExperiment(

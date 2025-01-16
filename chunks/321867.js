@@ -19,7 +19,7 @@ var t = n(200651),
     h = n(486324),
     N = n(474936),
     T = n(388032),
-    m = n(367422);
+    m = n(639907);
 function x(e) {
     let { analyticsSection: i, type: n } = e,
         x = (0, r.e7)([g.default], () => g.default.getCurrentUser()),

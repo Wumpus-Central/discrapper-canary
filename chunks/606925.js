@@ -10,7 +10,7 @@ var l = n(442837),
     r = n(553795),
     s = n(915863),
     o = n(388032),
-    c = n(680628);
+    c = n(542471);
 function u(e) {
     let { platform: t, color: n, look: u, onAction: d, Icon: m } = e;
     if ((0, l.e7)([r.Z], () => r.Z.getAccounts().some((e) => e.type === t.type))) return null;

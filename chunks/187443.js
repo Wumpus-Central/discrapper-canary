@@ -8,7 +8,7 @@ e(192379);
 var i = e(481060),
     o = e(285784),
     s = e(388032),
-    r = e(566027);
+    r = e(935602);
 function u(t) {
     let { isActive: n, isUserLurking: e, rsvped: u, onContextMenu: c, onRsvpClick: a, onGoToGuildClick: d, isDetailsView: h = !1, isMember: m, onJoinGuildClick: C, guildName: g, onInviteClick: x, canInvite: v, isChannelPublic: k } = t;
     return (0, l.jsxs)('div', {

@@ -34,7 +34,7 @@ var a = r(200651),
     O = r(217702),
     D = r(981631),
     L = r(388032),
-    x = r(163037);
+    x = r(507304);
 function w(e) {
     let { width: n = 12, height: r = 8, color: i = 'currentColor', className: s, foreground: o } = e;
     return (0, a.jsx)('svg', {

@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(731971),
     _ = n(981631),
     f = n(388032),
-    m = n(123136);
+    m = n(671149);
 let g = () => {
     var e;
     let { nickname: t, dmsAllowed: n, showActivity: r, receiveNotifications: g, setNickname: p, setDmsAllowed: b, setShowActivity: v, setReceiveNotifications: h } = (0, u.XW)(),

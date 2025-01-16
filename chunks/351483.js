@@ -9,7 +9,7 @@ var a = r(120356),
     s = r.n(a),
     o = r(112560),
     l = r(388032),
-    u = r(664341);
+    u = r(452679);
 let c = r(978538);
 function d(e) {
     let { width: n, noArt: r = !1, selected: a = !1 } = e;

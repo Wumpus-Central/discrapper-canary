@@ -5,7 +5,7 @@ var r = n(120356),
     a = n(481060),
     l = n(230711),
     o = n(528084),
-    c = n(317879);
+    c = n(243824);
 t.Z = (e) => {
     var t;
     let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,

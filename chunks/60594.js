@@ -61,7 +61,7 @@ var l,
     en = t(921944),
     et = t(761274),
     el = t(388032),
-    ei = t(795331);
+    ei = t(456963);
 ((i = l || (l = {}))[(i.GUILD = 0)] = 'GUILD'), (i[(i.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'), (i[(i.SOURCE = 2)] = 'SOURCE'), (i[(i.CONFIRM = 3)] = 'CONFIRM');
 let es = (e) => {
     let { visibleContent: n, markAsDismissed: t } = e;
@@ -134,7 +134,7 @@ function er(e) {
         [eQ, e$] = r.useState(null !== (i = M.I0.getSetting()) && void 0 !== i && i),
         [e0, e1] = r.useState(null != eo ? eo : null),
         e3 = null !== (a = null == eS ? void 0 : eS.id) && void 0 !== a ? a : eB;
-    async function e7() {
+    async function e4() {
         var e, n;
         o()(null != ev || null != ey || (null != eZ && null != ef), 'got nothing to stream');
         let t = null !== (e = null == eS ? void 0 : eS.id) && void 0 !== e ? e : eB;
@@ -176,7 +176,7 @@ function er(e) {
                 })();
     }
     function e2() {
-        e7(), ec();
+        e4(), ec();
     }
     r.useEffect(() => {
         let e = (0, F.isWindows)() ? (0, Y.Z)(R.ZP, B.Z) : null,
@@ -190,7 +190,7 @@ function er(e) {
         }),
             P.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eu]);
-    let e4 = r.useCallback(
+    let e7 = r.useCallback(
             (e, n, t) => {
                 var l;
                 let i = (0, V.Z)(e, ep, eI),
@@ -207,17 +207,17 @@ function er(e) {
             },
             [eS, eB, ep, eI, eK, eH, eV]
         ),
-        [e5, e9] = r.useState(eA ? '' : void 0),
+        [e9, e5] = r.useState(eA ? '' : void 0),
         e8 = r.useCallback(
             (e) => {
-                (0, W.t)(), (0, W.T)(null != e ? e : e5);
+                (0, W.t)(), (0, W.T)(null != e ? e : e9);
             },
-            [e5]
+            [e9]
         );
     function e6(e) {
         if ((e.preventDefault(), 1 === eL)) return e8();
         if (2 === eL) return eD(3);
-        if (null != e5) return eD(1);
+        if (null != e9) return eD(1);
         let n = (0, q.Z)(ev, ey, R.ZP.getRunningGames());
         O.ZP.supportsFeature(ee.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated)
             ? !(function () {
@@ -237,7 +237,7 @@ function er(e) {
     }
     let ne = r.useCallback(
             (e) => {
-                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e9(e.id.split(':')[1]) : e9(void 0), eD(3), ew(!0));
+                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e5(e.id.split(':')[1]) : e5(void 0), eD(3), ew(!0));
             },
             [eP]
         ),
@@ -350,9 +350,9 @@ function er(e) {
                                 previewDisabled: eQ,
                                 sourceChanged: eU,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e4(eV, eH, e),
-                                onChangeSelectedResolution: (e) => e4(eV, e, eK),
-                                onChangeSelectedPreset: (e) => e4(e, eH, eK),
+                                onChangeSelectedFPS: (e) => e7(eV, eH, e),
+                                onChangeSelectedResolution: (e) => e7(eV, e, eK),
+                                onChangeSelectedPreset: (e) => e7(e, eH, eK),
                                 onChangeSelectedChannelId: eG,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
@@ -374,14 +374,14 @@ function er(e) {
                             children: (0, s.jsx)(J.Hu, {
                                 onSourceSelect: e2,
                                 onCancel: no,
-                                pickerType: e5
+                                pickerType: e9
                             })
                         })
                     })
                 ]
             })
         }),
-        nc = 1 === eL || (eA && 3 === eL) ? el.intl.string(el.t.FiBjwc) : eP && (3 !== eL || null != e5) ? el.intl.string(el.t.PDTjLC) : el.intl.string(el.t['UE/rPz']),
+        nc = 1 === eL || (eA && 3 === eL) ? el.intl.string(el.t.FiBjwc) : eP && (3 !== eL || null != e9) ? el.intl.string(el.t.PDTjLC) : el.intl.string(el.t['UE/rPz']),
         nd = (0, s.jsxs)(h.ModalFooter, {
             justify: null == nr ? I.Z.Justify.START : I.Z.Justify.BETWEEN,
             children: [

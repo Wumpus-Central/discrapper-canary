@@ -12,7 +12,7 @@ var a = r(442837),
     h = r(463031),
     p = r(981631),
     m = r(388032),
-    g = r(734859);
+    g = r(804665);
 function E(e) {
     let { guildId: n, leaderboardId: E } = e,
         { leaderboardsDisabled: v } = (0, f.O)(n, E),

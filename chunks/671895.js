@@ -5,7 +5,7 @@ var l = t(200651),
     s = t(586826),
     o = t(507419),
     u = t(388032),
-    c = t(947554);
+    c = t(663588);
 n.Z = a.memo(function (e) {
     let { sound: n, volume: t, disabled: a = !1, onChange: d } = e,
         { file: f } = (0, s.p)();

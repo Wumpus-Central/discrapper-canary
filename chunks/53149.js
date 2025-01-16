@@ -7,7 +7,7 @@ var o = e(442837),
     a = e(9156),
     r = e(621600),
     d = e(388032),
-    c = e(702152);
+    c = e(514629);
 n.default = (t) => {
     let { onClose: n, channelId: e, transitionState: u } = t,
         h = (0, o.e7)([a.ZP], () => a.ZP.isChannelMuted(null, e));

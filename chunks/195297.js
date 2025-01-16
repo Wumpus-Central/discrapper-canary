@@ -22,7 +22,7 @@ var t = n(200651),
     N = n(981631),
     T = n(486324),
     m = n(388032),
-    x = n(696451);
+    x = n(415617);
 function E(e) {
     let { transitionState: i, onClose: r, onComplete: E, uploadType: b, showUpsellHeader: I, analyticsPage: B } = e,
         [C, j] = o.useState(!1),
@@ -39,7 +39,7 @@ function E(e) {
         r(),
             (0, a.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('48017'), n.e('71587')]).then(n.bind(n, 850085));
+                    let { default: e } = await Promise.all([n.e('48017'), n.e('27371')]).then(n.bind(n, 850085));
                     return (i) =>
                         (0, t.jsx)(e, {
                             imgURI: o,

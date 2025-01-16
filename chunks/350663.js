@@ -12,7 +12,7 @@ var i = n(200651),
     c = n(110924),
     u = n(752802),
     d = n(340101),
-    h = n(113812);
+    h = n(228680);
 let f = 8,
     p = (e) => {
         let { participant: t, width: n, locked: l, widgetId: o, pinned: r } = e;

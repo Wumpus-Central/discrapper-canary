@@ -1,10 +1,10 @@
-i.d(t, {
+e.d(t, {
     Z: function () {
         return r;
     }
 });
-var n = i(399606),
-    a = i(314897);
+var i = e(399606),
+    l = e(314897);
 function r() {
-    return (0, n.e7)([a.default], () => a.default.isAuthenticated());
+    return (0, i.e7)([l.default], () => l.default.isAuthenticated());
 }

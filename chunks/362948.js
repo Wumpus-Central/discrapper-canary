@@ -11,7 +11,7 @@ var a = r(200651),
     h = r(981631),
     p = r(474936),
     m = r(388032),
-    g = r(564437);
+    g = r(711458);
 let E = [
     {
         getPerkHeading: () => m.intl.string(m.t.tIiwur),

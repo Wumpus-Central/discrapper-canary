@@ -8,7 +8,7 @@ r(192379);
 var a = r(837411),
     s = r(705556),
     o = r(955418),
-    l = r(977011);
+    l = r(591156);
 function u(e) {
     let { user: n, guildId: r, channelId: u, onClose: c } = e,
         d = (0, a.Z)(n.id, r);

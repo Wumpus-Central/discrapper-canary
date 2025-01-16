@@ -16,7 +16,7 @@ var a = r(120356),
     _ = r(528567),
     h = r(371583),
     p = r(388032),
-    m = r(286900);
+    m = r(828980);
 function g(e) {
     switch (e) {
         case o.q.DAILY:

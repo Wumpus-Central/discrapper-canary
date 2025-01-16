@@ -14,7 +14,7 @@ var t,
     i = r(192379),
     c = r(481060),
     s = r(388032),
-    l = r(789650);
+    l = r(331832);
 ((o = t || (t = {})).DANGER = 'danger'), (o.WARNING = 'warning');
 function d(n) {
     let { transitionState: e, onClose: r, title: t, body: o, cta: d, closeLabel: u, onConfirm: h, iconVariant: g = 'warning' } = n,

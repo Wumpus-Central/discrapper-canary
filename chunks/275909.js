@@ -3,7 +3,7 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(283029),
-    l = n(39165);
+    l = n(197584);
 t.Z = function (e) {
     let { className: t, hasCooldown: r, isCanceled: o, useReducedMotion: c } = e;
     return (0, i.jsxs)('div', {

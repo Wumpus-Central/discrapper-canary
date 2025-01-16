@@ -11,7 +11,7 @@ var i = e(481060),
     o = e(39604),
     r = e(981631),
     s = e(388032),
-    d = e(947019);
+    d = e(233850);
 function c(t) {
     let { transitionState: n, onClose: e, onBeforeDelete: c, onAfterDelete: u, clip: h } = t;
     return (0, a.jsxs)(i.ModalRoot, {

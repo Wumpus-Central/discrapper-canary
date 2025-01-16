@@ -14,7 +14,7 @@ var a = r(120356),
     d = r(979264),
     f = r(228168),
     _ = r(388032),
-    h = r(491074);
+    h = r(961347);
 function p(e) {
     let { user: n, profileType: r, usernameIcon: a, tags: p, nickname: m, nicknameIcons: g, pronouns: E, className: v, isTryItOut: I, onOpenProfile: T, nicknameVariant: b = 'heading-lg/bold', pronounsVariant: y = 'text-sm/medium' } = e,
         S = {

@@ -15,7 +15,7 @@ var r = n(120356),
     d = n(553385),
     u = n(981631),
     m = n(388032),
-    h = n(787186);
+    h = n(188312);
 function f(e) {
     let { message: t, channel: r, compact: o } = e,
         s = null != t.embeds && t.embeds.length > 0;

@@ -14,7 +14,7 @@ var o = l(105671);
 l(532490), l(979264), l(570938), l(550271), l(116175);
 var c = l(308083),
     d = l(388032),
-    u = l(360578);
+    u = l(869650);
 function x(e) {
     let { applicationIds: t, playstyle: l, className: a } = e,
         x = i.useMemo(() => Array.from(t), [t]),

@@ -17,7 +17,7 @@ var i,
     _ = n(970648),
     E = n(981631),
     I = n(388032),
-    N = n(943925);
+    N = n(924469);
 let v = 'mweb_handoff_nonce',
     C = 'mweb_handoff_nonce_expiration',
     b = 1 * x.Z.Millis.MINUTE;

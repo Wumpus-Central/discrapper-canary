@@ -34,7 +34,7 @@ var n = t(200651),
     E = t(981631),
     w = t(474936),
     N = t(388032),
-    A = t(524061);
+    A = t(431852);
 function O(e) {
     let { giftCode: i, application: t, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: h, isSendingMessage: v } = e,
         [I, y] = a.useState(d.CopyInput.Modes.DEFAULT),

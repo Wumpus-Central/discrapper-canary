@@ -17,7 +17,7 @@ var i = n(200651),
     g = n(726985),
     h = n(65154),
     p = n(388032),
-    x = n(275477);
+    x = n(232186);
 function f() {
     return (0, i.jsx)(o.FormNotice, {
         type: o.CardTypes.PRIMARY,

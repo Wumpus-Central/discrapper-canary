@@ -19,7 +19,7 @@ var a = r(200651),
     l = r.n(o),
     u = r(481060),
     c = r(388032),
-    d = r(977198);
+    d = r(799489);
 function f(e) {
     let { items: n, maxLines: r, itemWidths: i, itemGapPx: a, containerWidth: s, overflowWidth: o } = e,
         l = 0,

@@ -15,7 +15,7 @@ var n,
     N = a(982905),
     h = a(66037),
     m = a(231338),
-    p = a(48798);
+    p = a(294419);
 let I = m.j_.MAIN_NAVIGATION_MENU;
 class _ extends (r = o.PureComponent) {
     render() {

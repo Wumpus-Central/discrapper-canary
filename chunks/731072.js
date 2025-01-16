@@ -11,7 +11,7 @@ var i = n(200651),
     s = n(434404),
     d = n(486199),
     c = n(13051),
-    u = n(125929);
+    u = n(36635);
 function m(e) {
     let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: p, descriptionText: g, helpText: x, canNavigate: f } = e,
         b = o.Z.get(h),

@@ -17,7 +17,7 @@ var s = i(200651),
     f = i(981631),
     N = i(128449),
     I = i(388032),
-    S = i(331592),
+    S = i(89388),
     j = i(438825);
 t.default = (e) => {
     let { transitionState: t, onClose: C } = e,

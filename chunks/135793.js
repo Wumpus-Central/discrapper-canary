@@ -36,7 +36,7 @@ var i,
     j = t(576645),
     N = t(981631),
     T = t(388032),
-    _ = t(855797),
+    _ = t(694638),
     b = t(99713);
 let A = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     C = (e, n) => {

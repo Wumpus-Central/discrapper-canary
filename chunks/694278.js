@@ -14,7 +14,7 @@ var e = n(200651),
     s = n(915509),
     c = n(981631),
     u = n(388032),
-    f = n(275477);
+    f = n(232186);
 function m(t) {
     let { guild: a, onClose: n, hideColors: m } = t,
         [p, x] = o.useState(a.verificationLevel),

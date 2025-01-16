@@ -1,9 +1,9 @@
-t.d(n, {
+t.d(e, {
     H: function () {
         return i;
     }
 });
-let i = (e) => {
-    let { guildId: n, guildEventId: t } = e;
-    return 'https://discord.com/events/'.concat(n, '/').concat(t);
+let i = (n) => {
+    let { guildId: e, guildEventId: t } = n;
+    return 'https://discord.com/events/'.concat(e, '/').concat(t);
 };

@@ -6,7 +6,7 @@ t(192379);
 var o = t(120356),
     i = t.n(o),
     r = t(331595),
-    s = t(2980);
+    s = t(485270);
 ((l = c || (c = {})).LEFT = 'LEFT'), (l.RIGHT = 'RIGHT'), (l.UP = 'UP'), (l.DOWN = 'DOWN'), (l.UP_LEFT = 'UP_LEFT'), (l.DOWN_RIGHT = 'DOWN_RIGHT');
 let u = (e) => {
     let { width: n = 24, height: t = 24, color: c = 'currentColor', direction: l, foreground: o, className: u, title: d, ...T } = e;

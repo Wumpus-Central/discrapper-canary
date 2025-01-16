@@ -16,7 +16,7 @@ var l = n(200651),
     f = n(981631),
     p = n(65154),
     m = n(388032),
-    E = n(188115);
+    E = n(51100);
 let T = () => {
     h.Z.getMediaEngine().once(o.aB.ConnectionStats, (e) => {
         let t = Object.values(p.Yn)

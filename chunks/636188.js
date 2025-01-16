@@ -29,7 +29,7 @@ var l = t(200651),
     T = t(486324),
     _ = t(474936),
     C = t(388032),
-    E = t(343896);
+    E = t(821492);
 function B(e) {
     let { icon: n, onClick: t, text: s, children: o, className: a, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: g } = e;
     return (0, l.jsxs)(r.Clickable, {
@@ -255,7 +255,7 @@ function Z(e) {
         onClick: function () {
             (0, r.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([t.e('70687'), t.e('19890')]).then(t.bind(t, 28130));
+                    let { default: e } = await Promise.all([t.e('70687'), t.e('83332')]).then(t.bind(t, 28130));
                     return (t) =>
                         (0, l.jsx)(e, {
                             maxFileSizeBytes: f.SJ,

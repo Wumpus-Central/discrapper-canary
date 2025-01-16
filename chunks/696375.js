@@ -7,7 +7,7 @@ var i = t(200651);
 t(192379);
 var l = t(481060),
     a = t(259580),
-    s = t(769383);
+    s = t(847273);
 function o(e) {
     let { url: n, text: t, onClick: o } = e;
     return (0, i.jsx)(l.Anchor, {

@@ -40,7 +40,7 @@ var r = n(200651),
     b = n(944613),
     P = n(981631),
     x = n(388032),
-    G = n(767343);
+    G = n(20381);
 let F = () => Promise.resolve();
 function j(e) {
     let { userRoles: t, position: n, ...l } = e,

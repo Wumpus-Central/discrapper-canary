@@ -16,7 +16,7 @@ var i = t(200651),
     m = t(592125),
     h = t(369171),
     p = t(388032),
-    g = t(669801);
+    g = t(795938);
 let _ = l.memo(function (e) {
     let { message: n } = e,
         t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));

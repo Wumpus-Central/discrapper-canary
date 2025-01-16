@@ -2,14 +2,14 @@ var a = t(200651),
     i = t(192379),
     r = t(442837),
     l = t(894653),
-    o = t(636669),
+    o = t(322665),
     s = t(17845),
     c = t(374939),
     d = t(283293),
     u = t(493646),
     m = t(292191),
     p = t(683544),
-    _ = t(520279);
+    _ = t(863375);
 n.Z = function (e) {
     var n;
     let { tabId: t, onSelectApplication: g, onScroll: f } = e,

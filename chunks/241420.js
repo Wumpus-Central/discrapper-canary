@@ -1,42 +1,42 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         PrivacySettings: function () {
-            return b;
+            return h;
         },
         default: function () {
-            return _;
+            return m;
         }
     });
-var i = t(200651);
-t(192379);
-var o = t(481060),
-    a = t(546957),
-    r = t(190014),
-    l = t(301812),
-    c = t(988043),
-    s = t(919539),
-    d = t(526761),
-    u = t(388032),
-    f = t(857064);
-function b(e) {
-    let { guildId: n } = e;
+var i = n(200651);
+n(192379);
+var o = n(481060),
+    a = n(546957),
+    r = n(190014),
+    c = n(301812),
+    l = n(988043),
+    s = n(919539),
+    d = n(526761),
+    u = n(388032),
+    g = n(916442);
+function h(e) {
+    let { guildId: t } = e;
     return (0, i.jsxs)(a.Z, {
         children: [
-            (0, i.jsx)(c.Z, {
+            (0, i.jsx)(l.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: t
             }),
             (0, i.jsx)(s.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: t
             }),
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(c.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: t
             }),
             (0, i.jsx)(r.Z, {
                 ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: n
+                guildId: t
             }),
             (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
@@ -46,11 +46,11 @@ function b(e) {
         ]
     });
 }
-function _(e) {
-    let { guild: n, transitionState: t, onClose: a } = e,
-        r = ''.concat(u.intl.string(u.t.BayiAg), '\u2014').concat(null != n ? n.toString() : '??');
+function m(e) {
+    let { guild: t, transitionState: n, onClose: a } = e,
+        r = ''.concat(u.intl.string(u.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: t,
+        transitionState: n,
         size: o.ModalSize.SMALL,
         'aria-label': r,
         children: [
@@ -61,8 +61,8 @@ function _(e) {
                 })
             }),
             (0, i.jsx)(o.ModalContent, {
-                className: f.content,
-                children: (0, i.jsx)(b, { guildId: n.id })
+                className: g.content,
+                children: (0, i.jsx)(h, { guildId: t.id })
             }),
             (0, i.jsx)(o.ModalFooter, {
                 children: (0, i.jsx)(o.Button, {

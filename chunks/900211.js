@@ -7,7 +7,7 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(347469),
-    a = n(941660);
+    a = n(956224);
 function s(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: s, minHeight: o, maxHeight: c } = e,
         [d, u] = l.useState(null);

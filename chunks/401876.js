@@ -9,7 +9,7 @@ var l = t(200651),
     r = t(377171),
     o = t(854698),
     s = t(388032),
-    c = t(560883);
+    c = t(195197);
 function d(e) {
     let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
         u = i.useMemo(() => (0, o.zi)(n, t), [t, n]),

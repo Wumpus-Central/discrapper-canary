@@ -14,7 +14,7 @@ function o(e) {
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
                 { PaymentModal: r } = await Promise.resolve().then(n.bind(n, 791785)),
-                { STEPS: a } = await Promise.all([n.e('8016'), n.e('17938'), n.e('54433'), n.e('88043')]).then(n.bind(n, 7305));
+                { STEPS: a } = await Promise.all([n.e('8016'), n.e('17938'), n.e('54433'), n.e('31259')]).then(n.bind(n, 7305));
             return (n) => {
                 let { onClose: I, ...x } = n;
                 return (0, i.jsx)(e, {

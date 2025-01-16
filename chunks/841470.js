@@ -4,7 +4,7 @@ var r = n(692547),
     l = n(481060),
     s = n(355011),
     a = n(388032),
-    o = n(633691);
+    o = n(530130);
 t.Z = (e) => {
     let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
         h = 'string' == typeof m ? m : t,

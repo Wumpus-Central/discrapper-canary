@@ -15,7 +15,7 @@ var a = r(120356),
     f = r(626135),
     _ = r(981631),
     h = r(388032),
-    p = r(356241);
+    p = r(45348);
 function m(e) {
     var n;
     let { shopLink: r, skuId: a, onClick: l } = e,

@@ -17,7 +17,7 @@ var i = n(200651),
     m = n(496675),
     U = n(981631),
     C = n(388032),
-    D = n(590629);
+    D = n(43986);
 e.default = (t) => {
     let { channel: e, onClose: n, onConfirm: G, transitionState: L } = t,
         f = (0, a.ZP)(e, !0),

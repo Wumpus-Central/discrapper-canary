@@ -18,7 +18,7 @@ var a = t(200651),
     x = t(258971),
     h = t(981631),
     b = t(388032),
-    I = t(247342);
+    I = t(914045);
 let j = 'start_application_install';
 function S(e) {
     let { renderDropdown: n, size: t } = e;

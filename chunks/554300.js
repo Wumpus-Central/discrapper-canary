@@ -4,7 +4,7 @@ var i = r(200651),
     o = r.n(s),
     l = r(568611),
     u = r(481060),
-    c = r(22049);
+    c = r(317767);
 let d = a.forwardRef(function (e, n) {
     var r;
     let { avatar: a, name: s, children: d, subText: f, decorators: _, onClick: h, selected: p, muted: m, to: g, avatarClassName: E, selectedClassName: v, innerClassName: I, wrapContent: T, highlighted: b, focusProps: y, ...S } = e;

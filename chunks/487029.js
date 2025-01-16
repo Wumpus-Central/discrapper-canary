@@ -23,7 +23,7 @@ var l = n(200651),
     p = n(964398),
     m = n(409673),
     E = n(710111),
-    T = n(456367);
+    T = n(6609);
 function v(e) {
     let { guildId: t, channel: n, width: v, height: I, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: b } = e,
         S = (function (e) {

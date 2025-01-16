@@ -11,7 +11,7 @@ var a = r(200651),
     u = r(686546),
     c = r(768581),
     d = r(895924),
-    f = r(919074),
+    f = r(131754),
     _ = r(970952);
 function h(e) {
     let { section: n, isSelected: r, width: i, height: o, className: h, selectable: p = !1, isSquircle: m, onFocus: g, onBlur: E, onMouseOver: v, onMouseLeave: I, ...T } = e,

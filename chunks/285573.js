@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(473403),
     f = n(981631),
     g = n(490897),
-    v = n(203871);
+    v = n(831746);
 let C = (0, c.B)(function (e) {
     let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: x, sortingType: I, sortingPosition: _, connectChannelDragSource: Z, connectChannelDropTarget: b, tabIndex: S } = e,
         N = (0, o.e7)([u.Z, d.ZP], () => {

@@ -23,7 +23,7 @@ var a = l(200651),
     p = l(594174),
     Z = l(5192),
     j = l(51144),
-    N = l(451384);
+    N = l(240249);
 function _(e) {
     var n;
     let { guildId: l, welcomeMessage: t, className: _ } = e,

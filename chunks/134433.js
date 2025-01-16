@@ -13,7 +13,7 @@ var s = r(120356),
     c = r(692547),
     d = r(481060),
     f = r(607070),
-    _ = r(609832);
+    _ = r(932504);
 function h(e) {
     let n,
         { color: r, size: i, forcedIconColor: s, className: h, iconClassName: p } = e,

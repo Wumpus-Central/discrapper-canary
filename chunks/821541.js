@@ -11,7 +11,7 @@ var s = r(200651),
     u = r.n(l),
     c = r(530892),
     d = r.n(c),
-    f = r(578249);
+    f = r(943361);
 let _ = o.forwardRef(function (e, n) {
         let { as: r = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: d, className: _, children: m, ...g } = e;
         return (0, s.jsx)(r, {

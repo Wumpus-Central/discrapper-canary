@@ -11,7 +11,7 @@ var i = n(200651),
     s = n(481060),
     o = n(497505),
     c = n(415104),
-    d = n(916376);
+    d = n(86675);
 function u(e) {
     var t;
     let { quests: n, isFetching: l } = e,

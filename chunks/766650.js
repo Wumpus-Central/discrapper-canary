@@ -12,7 +12,7 @@ var s = n(200651),
     o = n(481060),
     c = n(144114),
     u = n(317175),
-    d = n(306287);
+    d = n(149938);
 function h(t) {
     let { show: e, alpha2: n, countryCode: i } = t,
         h = r.useRef(null),

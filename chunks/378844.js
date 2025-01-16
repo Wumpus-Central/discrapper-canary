@@ -18,7 +18,7 @@ var a = n(442837),
     m = n(981631),
     f = n(815660),
     g = n(388032),
-    v = n(932328);
+    v = n(496472);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
@@ -62,7 +62,7 @@ t.Z = (e) => {
                                                     : _
                                                       ? (0, o.openModalLazy)(
                                                             async () => {
-                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('17613')]).then(n.bind(n, 607018));
+                                                                let { default: e } = await Promise.all([n.e('76540'), n.e('93399')]).then(n.bind(n, 607018));
                                                                 return (t) =>
                                                                     (0, r.jsx)(e, {
                                                                         reason: d.L.GUILD_PHONE_REQUIRED,

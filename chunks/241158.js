@@ -13,7 +13,7 @@ var i = n(200651),
     p = n(981631),
     x = n(869783),
     f = n(388032),
-    _ = n(516454);
+    _ = n(909007);
 let E = (e) => {
     let { name: t, title: n, description: s, descriptionCta: f, previewImage: E, videoUrl: C, shouldLoadVideo: T, index: S, isCompact: b, isReducedMotion: I, onClick: N } = e,
         v = (0, g.rO)(),

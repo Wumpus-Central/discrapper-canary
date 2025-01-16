@@ -19,7 +19,7 @@ var a = r(200651),
     h = r(70956),
     p = r(506071),
     m = r(561308),
-    g = r(657818);
+    g = r(687371);
 let E = (e) => {
     let { entry: n, textColor: r, hovered: i = !1, bold: s = !1, scaleFontToUserSetting: o = !1 } = e,
         l = (0, m.Jg)(n),

@@ -32,7 +32,7 @@ var i,
     j = n(618896),
     A = n(231338),
     y = n(388032),
-    P = n(524188);
+    P = n(875440);
 let M = a.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, r.jsx)(C.ZP.Icon, {
@@ -79,7 +79,7 @@ let M = a.memo(function (e) {
         }
         let L = (e) => {
             (0, p.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('20342')]).then(n.bind(n, 757387));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('64899')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, r.jsx)(e, {
                         ...n,

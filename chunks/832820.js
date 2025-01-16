@@ -12,7 +12,7 @@ var s = r(200651),
     p = r(883998),
     m = r(981631),
     g = r(388032),
-    E = r(76094);
+    E = r(648624);
 function v(e) {
     let { channel: n } = e,
         r = o.useCallback(() => {}, []),

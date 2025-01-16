@@ -21,8 +21,8 @@ var r = n(200651),
     x = n(426482),
     _ = n(644941),
     E = n(388032),
-    I = n(458170),
-    v = n(332634);
+    I = n(561526),
+    v = n(230707);
 let C = (e) => {
     let { game: t, onClose: n, trackClick: i } = e,
         a = (0, c.e7)([m.Z], () => m.Z.getApplication(t.applicationId));

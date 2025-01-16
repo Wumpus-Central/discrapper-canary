@@ -28,7 +28,7 @@ var a = n(200651),
     f = n(847004),
     v = n(981631),
     b = n(388032),
-    R = n(171708);
+    R = n(729070);
 function S(e) {
     let { name: t, imageUrl: n, selected: l, onTap: i } = e;
     return (0, a.jsxs)(d.Clickable, {

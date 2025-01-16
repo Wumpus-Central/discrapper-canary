@@ -8,7 +8,7 @@ r(192379);
 var a = r(385499),
     s = r(245315),
     o = r(368859),
-    l = r(163037);
+    l = r(507304);
 function u(e) {
     let n,
         { message: r, channel: u, user: c, compact: d, isRepliedMessage: f, hideIcon: _ = !1, children: h } = e;

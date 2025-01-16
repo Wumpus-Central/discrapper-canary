@@ -26,7 +26,7 @@ var i = n(200651),
     v = n(981631),
     S = n(921944),
     T = n(388032),
-    A = n(591318);
+    A = n(382290);
 function b(e) {
     let { channel: t, iconClassName: l, className: b, innerClassName: Z, ...x } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),

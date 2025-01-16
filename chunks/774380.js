@@ -8,7 +8,7 @@ var r = n(442837),
     c = n(74538),
     d = n(474936),
     u = n(388032),
-    m = n(956523);
+    m = n(952218);
 let h = (e) => {
     let { onOpenPremiumClick: t } = e,
         n = (0, i.jsx)(l.Button, {

@@ -36,8 +36,8 @@ var c = r(481060),
     P = r(311739),
     M = r(981631),
     k = r(176505),
-    U = r(426953),
-    B = r(584812);
+    U = r(665162),
+    B = r(763971);
 function G(e) {
     let { emojiTooltipPosition: n = 'top', enableEmojiClick: r = !0 } = e;
     return {
@@ -149,7 +149,7 @@ function V(e) {
               })
     });
 }
-r(338099);
+r(896715);
 let j = {
     blockQuote: {
         react: (e, n, r) =>

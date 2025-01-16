@@ -10,7 +10,7 @@ var r = n(481060),
     a = n(528027),
     o = n(686807),
     s = n(113318),
-    c = n(711993);
+    c = n(868202);
 function d(e) {
     let { benefit: t, guildId: n, onClick: d } = e,
         u = (0, s.Z)(n, t.ref_id),

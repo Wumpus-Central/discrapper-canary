@@ -22,7 +22,7 @@ var i = n(200651),
     j = n(501801),
     b = n(981631),
     E = n(388032),
-    S = n(384461);
+    S = n(52330);
 class R extends r.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;

@@ -8,7 +8,7 @@ t(192379);
 var i = t(911969),
     r = t(861529),
     a = t(568248),
-    o = t(146890);
+    o = t(510368);
 function s(e) {
     let { components: n, accessory: t } = e;
     return (0, l.jsx)('div', {

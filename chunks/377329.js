@@ -17,7 +17,7 @@ var l = t(200651),
     h = t(405613),
     g = t(460838),
     v = t(388032),
-    j = t(363819);
+    j = t(959320);
 function f(e) {
     var n, t, f;
     let { guildId: N, guildEvent: I, guildEventId: p, error: C } = e,

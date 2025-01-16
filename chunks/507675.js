@@ -7,7 +7,7 @@ var i = r(200651);
 r(192379);
 var a = r(600164),
     s = r(112560),
-    o = r(480273);
+    o = r(322430);
 function l(e) {
     let { mainText: n, supportingText: r, children: l, size: u } = e;
     return (0, i.jsxs)(a.Z, {

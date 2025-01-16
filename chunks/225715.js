@@ -25,7 +25,7 @@ var r = i(120356),
     a = i(481060),
     s = i(41959),
     o = i(245561),
-    c = i(715309);
+    c = i(76962);
 let d = (n) => {
         let { application: e, asset: i, className: r, ...l } = n;
         return (0, t.jsx)(s.Z, {

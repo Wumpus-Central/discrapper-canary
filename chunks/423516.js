@@ -7,7 +7,7 @@ var r = n(120356),
     a = n(540059),
     c = n(977059),
     u = n(388032),
-    d = n(172192);
+    d = n(586802);
 t.Z = function (e) {
     let { className: t, hasVideo: n, text: r, hasConnectedChannel: h, textVariant: x = 'text-md/medium' } = e,
         g = (0, a.Q3)('RTCConnectionStatusText'),

@@ -5,7 +5,7 @@ var i = n(200651),
     s = n.n(l),
     a = n(481060),
     o = n(981631),
-    c = n(431156);
+    c = n(524910);
 t.Z = (e) => {
     let { className: t, tags: n, value: l, onRemoveTag: d, onAddTag: u, maxTaxLength: m, maxTags: h, disabled: g, placeholder: x, ...p } = e,
         [f, C] = r.useState(null != l ? l : ''),

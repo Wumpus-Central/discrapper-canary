@@ -23,7 +23,7 @@ var i = n(200651),
     b = n(929507),
     v = n(981631),
     C = n(388032),
-    N = n(970242);
+    N = n(713594);
 function I(e) {
     var t, n, r, I, j, T, _;
     let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: B, guildId: P, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,

@@ -23,7 +23,7 @@ var l = n(200651),
     f = n(981631),
     I = n(701488),
     j = n(388032),
-    Z = n(991971);
+    Z = n(51130);
 function P(e) {
     let { application: t } = e,
         n = t.getIconURL(I.Si.LARGE),

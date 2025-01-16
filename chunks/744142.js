@@ -10,7 +10,7 @@ var n = i(200651),
     l = i(924489),
     c = i(950854),
     s = i(824606),
-    d = i(124418);
+    d = i(295519);
 function u(e) {
     var t, i, u, _, p;
     let { application: h, className: m, childrenClassName: f, animatesOnHover: g, onClick: x, ...C } = e,

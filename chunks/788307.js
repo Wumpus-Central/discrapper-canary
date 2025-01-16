@@ -31,7 +31,7 @@ var a = r(200651),
     N = r(6074),
     C = r(626135),
     R = r(981631),
-    O = r(920107);
+    O = r(299334);
 let D = '14px';
 function L(e) {
     let { emoji: n, className: r, animate: i = !0, hideTooltip: s, tooltipDelay: o } = e,

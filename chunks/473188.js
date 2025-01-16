@@ -8,7 +8,7 @@ r(192379);
 var a = r(120356),
     s = r.n(a),
     o = r(481060),
-    l = r(673066);
+    l = r(744877);
 function u(e) {
     let { rank: n, hideInnerBorder: r = !1 } = e,
         a = n <= 3 ? 'text-xs/semibold' : 'text-xs/medium';

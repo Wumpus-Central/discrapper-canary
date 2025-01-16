@@ -36,7 +36,7 @@ function c(e) {
                           label: o.intl.string(o.t['fUYU+v']),
                           action: () =>
                               (0, i.openModalLazy)(async () => {
-                                  let { default: n } = await Promise.all([t.e('7590'), t.e('45094'), t.e('89025')]).then(t.bind(t, 218613));
+                                  let { default: n } = await Promise.all([t.e('7590'), t.e('45094'), t.e('74100')]).then(t.bind(t, 218613));
                                   return (t) =>
                                       (0, l.jsx)(n, {
                                           ...t,
@@ -54,7 +54,7 @@ function c(e) {
                           label: o.intl.string(o.t['ISN+ND']),
                           action: () =>
                               (0, i.openModalLazy)(async () => {
-                                  let { default: n } = await Promise.all([t.e('7590'), t.e('45094'), t.e('89025')]).then(t.bind(t, 218613));
+                                  let { default: n } = await Promise.all([t.e('7590'), t.e('45094'), t.e('74100')]).then(t.bind(t, 218613));
                                   return (t) =>
                                       (0, l.jsx)(n, {
                                           ...t,

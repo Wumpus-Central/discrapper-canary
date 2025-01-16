@@ -11,7 +11,7 @@ var o = t(200651),
     l = t(481060),
     s = t(572004),
     a = t(388032),
-    d = t(96014);
+    d = t(66050);
 function u(e) {
     let { chunks: n, className: t, onCopy: r, ...u } = e,
         h = i.useMemo(() => (null == n ? void 0 : n.join(' ')), [n]),

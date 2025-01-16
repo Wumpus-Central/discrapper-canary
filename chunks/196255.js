@@ -6,7 +6,7 @@ var o = n(120356),
     l = n(942951),
     r = n(456269),
     c = n(388032),
-    d = n(701526);
+    d = n(25999);
 t.Z = (e) => {
     var t, n;
     let { message: o, channel: u, renderColon: h, hasUnreads: m } = e,

@@ -8,8 +8,8 @@ var i = n(200651),
     d = n(208884),
     c = n(453628),
     u = n(996987),
-    m = n(527942),
-    h = n(275477);
+    m = n(226701),
+    h = n(232186);
 class p extends l.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;

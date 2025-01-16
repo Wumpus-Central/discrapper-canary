@@ -5,7 +5,7 @@ var a = r(481060),
     o = r(592125),
     l = r(430824),
     u = r(388032),
-    c = r(542111);
+    c = r(411773);
 let d = (e) => {
     let { entry: n } = e,
         r = o.Z.getChannel(n.channelId);

@@ -10,7 +10,7 @@ var o = r(500923),
     l = r.n(o),
     u = r(963838),
     c = r(353368),
-    d = r(352254);
+    d = r(114250);
 let f = async (e) => {
     var n;
     let { animationType: r, animationId: i, url: a, shouldResize: o } = e,

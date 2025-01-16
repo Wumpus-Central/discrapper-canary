@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(206295),
     a = n(572004),
     o = n(388032),
-    s = n(702249);
+    s = n(210550);
 function c(e) {
     let { title: t, info: n, bannerSrc: c, iconSrc: d, embedUrl: u, actions: m = [] } = e,
         { primaryColor: h, secondaryColor: f } = (0, l.Z)(null != d ? d : c),

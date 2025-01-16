@@ -12,7 +12,7 @@ var s = t(481060),
     c = t(930180),
     l = t(46920),
     i = t(388032),
-    a = t(606918);
+    a = t(48);
 function d(e) {
     let { blockedUsersCount: n, ignoredUsersCount: t } = e;
     return n > 0 && t > 0 ? i.intl.format(i.t.Uzdyho, { number: n + t }) : t > 0 ? i.intl.format(i.t.wvygk5, { number: t }) : i.intl.format(i.t.HviVAw, { number: n });

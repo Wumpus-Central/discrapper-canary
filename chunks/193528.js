@@ -17,7 +17,7 @@ var i = n(200651),
     g = n(654904),
     h = n(981631),
     p = n(388032),
-    x = n(574476);
+    x = n(602750);
 function f(e) {
     let { onChange: t, onClose: n, color: s, suggestedColors: f, disabled: _, label: E, colorPickerMiddle: C, colorPickerFooter: T, showEyeDropper: S } = e,
         b = r.useRef(null),

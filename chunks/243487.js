@@ -40,7 +40,7 @@ var i = n(200651),
     P = n(981631),
     M = n(65154),
     R = n(388032),
-    W = n(540422);
+    W = n(882110);
 function D(e) {
     let { avatarSize: t, userId: n, channelId: l, guildId: o } = e,
         r = 2 * t,
@@ -174,7 +174,7 @@ function F(e) {
         [C, Z] = l.useState(null),
         _ = (e, t) => {
             (0, c.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('76747')]).then(n.bind(n, 881351));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

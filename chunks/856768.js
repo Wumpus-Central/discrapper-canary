@@ -20,7 +20,7 @@ var i = t(200651),
     h = t(823379),
     f = t(778825),
     g = t(388032),
-    v = t(112023);
+    v = t(317486);
 function x(e) {
     let { guildId: n, className: t, globalOption: r, hideDivider: o = !1, onChange: a, renderOptionSuffix: d } = e;
     return (0, i.jsx)(u.Z, {

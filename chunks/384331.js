@@ -29,7 +29,7 @@ var a = i(200651),
     E = i(51144),
     f = i(912332),
     h = i(388032),
-    g = i(252898);
+    g = i(917858);
 function p(e) {
     let { icon: t, label: i } = e;
     return (0, a.jsxs)('div', {

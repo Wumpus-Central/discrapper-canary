@@ -12,7 +12,7 @@ var a = r(120356),
     s = r.n(a),
     o = r(481060),
     l = r(600164),
-    u = r(862136);
+    u = r(432811);
 function c(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }

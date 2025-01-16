@@ -10,7 +10,7 @@ var r = n(481060),
     a = n(998502),
     l = n(631885),
     o = n(329242),
-    c = n(105452);
+    c = n(766991);
 let d = a.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 function u(e) {
     let { otherUser: t, status: n } = e,

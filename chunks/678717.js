@@ -52,8 +52,8 @@ var v = n(392750),
     V = n(596768),
     W = n(621060),
     K = n(388032),
-    Y = n(875499),
-    X = n(785269);
+    Y = n(771466),
+    X = n(941469);
 function q(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({

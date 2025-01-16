@@ -9,7 +9,7 @@ var r = n(120356),
     l = n.n(r),
     s = n(481060),
     i = n(388032),
-    o = n(505627);
+    o = n(912626);
 let c = (e) => {
     let { className: t, onClick: n, children: r } = e;
     return (0, a.jsx)(s.Anchor, {

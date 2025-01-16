@@ -17,7 +17,7 @@ var l = n(442837),
     h = n(854698),
     p = n(688641),
     m = n(388032),
-    f = n(920392);
+    f = n(622246);
 function g(e) {
     let { channelId: t } = e,
         g = (0, l.e7)([o.Z], () => o.Z.getChannel(t), [t]),
@@ -45,7 +45,7 @@ function g(e) {
                               var t;
                               v((t = e))
                                   ? (0, a.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e('22347'), n.e('84722'), n.e('41953')]).then(n.bind(n, 296864));
+                                        let { default: e } = await Promise.all([n.e('22347'), n.e('84722'), n.e('21775')]).then(n.bind(n, 296864));
                                         return (n) =>
                                             (0, i.jsx)(e, {
                                                 ...n,

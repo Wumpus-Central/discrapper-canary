@@ -16,7 +16,7 @@ var i = n(200651),
     g = n(150039),
     h = n(993413),
     p = n(388032),
-    x = n(506986);
+    x = n(887669);
 function f(e) {
     let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: f = !1, withTutorial: E = !1, isTryItOutFlow: C = !1 } = e,
         { analyticsLocations: T } = (0, o.ZP)(),

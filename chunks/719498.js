@@ -6,7 +6,7 @@ var n = e(200651),
     s = e(925329),
     d = e(296023),
     l = e(388032),
-    c = e(884517);
+    c = e(165998);
 t.default = (a) => {
     let { channel: t, application: x, onClose: h, transitionState: m } = a,
         u = (0, d.w)(t),

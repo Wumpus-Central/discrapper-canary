@@ -6,7 +6,7 @@ e.d(n, {
 var r = e(200651);
 e(192379);
 var o = e(481060),
-    i = e(503533);
+    i = e(461247);
 function s(t) {
     let { heroImageSrc: n, heroImageAlt: e, children: s, header: a, description: c } = t;
     return (0, r.jsxs)(r.Fragment, {

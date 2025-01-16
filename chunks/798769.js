@@ -14,7 +14,7 @@ var l = n(442837),
     c = n(616030),
     d = n(474936),
     f = n(388032),
-    C = n(5190);
+    C = n(622694);
 function _(e) {
     let { currentStep: t, className: n, purchaseState: _, premiumType: m, useWinterTheme: L = !1, onClose: S, hideCloseButton: p, showTrialBadge: T, showDiscountBadge: E, isGift: N, giftRecipient: h } = e,
         g = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),

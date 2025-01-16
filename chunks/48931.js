@@ -1,29 +1,29 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    o = n(267097),
-    a = n(752053),
-    l = n(476090);
-function c(e) {
+var o = n(481060),
+    a = n(267097),
+    r = n(752053),
+    c = n(814335);
+function d(e) {
     let { onClose: t } = e,
-        { refreshCategories: n } = (0, o.Z)();
+        { refreshCategories: n } = (0, a.Z)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.ModalHeader, {
-                className: l.header,
-                children: (0, i.jsx)(r.ModalCloseButton, {
-                    className: l.closeButton,
+            (0, i.jsx)(o.ModalHeader, {
+                className: c.header,
+                children: (0, i.jsx)(o.ModalCloseButton, {
+                    className: c.closeButton,
                     onClick: t
                 })
             }),
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(r.Z, {
                 onRetry: n,
-                errorOrigin: a.i.GIFT_MODAL
+                errorOrigin: r.i.GIFT_MODAL
             })
         ]
     });

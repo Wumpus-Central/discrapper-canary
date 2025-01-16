@@ -11,7 +11,7 @@ var i = r(200651),
     u = r(475179),
     c = r(871499),
     d = r(388032),
-    f = r(338429);
+    f = r(89554);
 function _(e) {
     let { className: n, isVertical: r } = e;
     return (0, i.jsxs)('div', {

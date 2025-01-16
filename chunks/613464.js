@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(189357),
     E = n(718617),
     b = n(327250),
-    Z = n(630585);
+    Z = n(764948);
 function S(e) {
     let { userId: t, guildId: n, onClose: r, className: S, infoPanelClassName: N, style: T } = e,
         j = (0, I.ms)(n),

@@ -68,7 +68,7 @@ var i = n(200651),
     eu = n(524484),
     ed = n(65154),
     em = n(388032),
-    ef = n(474316);
+    ef = n(995544);
 let ep = l.memo((e) => {
     var t, n, a, c, I;
     let { participant: E, onDoubleClick: C, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eC = !1, selected: ey = !1, noBorder: eZ = !1, noVideoRender: eb = !1, focused: eT = !1, blocked: eA = !1, ignored: eN = !1, fit: ew = b.L.CONTAIN, paused: ej = !1, pulseSpeakingIndicator: eP = !1, forceIdle: eR = !1, inOverlayPopout: eM = !1 } = e,
@@ -142,11 +142,11 @@ let ep = l.memo((e) => {
     let e1 = (0, M.So)(s.q.STREAM_HIGH_QUALITY),
         { hqStreamingState: e2 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e3 = (0, L.Z)(),
-        e4 = e1 && e0 && null != e3,
-        e7 = (0, P.o)(E, eB),
-        e9 = (0, j.lL)('CallTile', !0, eB, e7),
-        e8 = (0, o.e7)([F.Z], () => (E.type === eo.fO.USER && null != eG ? F.Z.getEffectForUserId(eG) : null)),
-        e6 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eG ? eG : es.lds)),
+        e9 = e1 && e0 && null != e3,
+        e4 = (0, P.o)(E, eB),
+        e7 = (0, j.lL)('CallTile', !0, eB, e4),
+        e6 = (0, o.e7)([F.Z], () => (E.type === eo.fO.USER && null != eG ? F.Z.getEffectForUserId(eG) : null)),
+        e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eG ? eG : es.lds)),
         { enableHangStatus: e5 } = x.n.useExperiment({
             guildId: eI.guild_id,
             location: 'VoiceUsers'
@@ -207,7 +207,7 @@ let ep = l.memo((e) => {
             [X, E]
         ),
         tv = eO;
-    e4 && (tv = !1);
+    e9 && (tv = !1);
     let tS = null,
         tI = null,
         t_ = '';
@@ -230,7 +230,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eT,
                     idle: tv,
-                    premiumIndicator: e4 || e9.enabled
+                    premiumIndicator: e9 || e7.enabled
                 })),
                 (t_ = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: E.user.username }));
             break;
@@ -324,9 +324,9 @@ let ep = l.memo((e) => {
                                 onKeyDown: ep,
                                 focusProps: { offset: 1 },
                                 children: [
-                                    null != e8 && null != eG
+                                    null != e6 && null != eG
                                         ? (0, i.jsx)(W.Z, {
-                                              voiceChannelEffect: e8,
+                                              voiceChannelEffect: e6,
                                               onComplete: () => (0, F.H)(eG),
                                               userId: eG
                                           })
@@ -346,7 +346,7 @@ let ep = l.memo((e) => {
                                           })
                                         : null,
                                     tS,
-                                    e4
+                                    e9
                                         ? (0, i.jsx)(k.W, {
                                               onPlayed: tf,
                                               played: e2.hqStreamingFrameAnimationPlayed
@@ -377,7 +377,7 @@ let ep = l.memo((e) => {
                                               hasVideo: null != eQ && eQ,
                                               ...e$,
                                               idle: eO,
-                                              platform: e6,
+                                              platform: e8,
                                               title: (0, $.Z)(eI, E),
                                               blocked: eA,
                                               ignored: eN,
@@ -402,7 +402,7 @@ let ep = l.memo((e) => {
                                     eC && !eZ
                                         ? (0, i.jsx)('div', {
                                               className: r()(ef.border, {
-                                                  [ef.voiceChannelEffect]: !eT && null != e8,
+                                                  [ef.voiceChannelEffect]: !eT && null != e6,
                                                   [ef.speaking]: eX && !eT
                                               })
                                           })

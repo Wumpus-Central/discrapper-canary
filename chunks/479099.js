@@ -23,7 +23,7 @@ var i,
     p = l(695346),
     x = l(572004),
     _ = l(388032),
-    b = l(282568);
+    b = l(680475);
 function v(e) {
     let { tag: t, size: i = 1, disabled: n, className: o, onClick: v, onRemove: E, selected: I, ariaLabel: j } = e,
         { name: M, emojiId: C, emojiName: P } = t,

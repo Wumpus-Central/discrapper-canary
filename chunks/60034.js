@@ -9,7 +9,7 @@ var l = t(120356),
     r = t.n(l),
     a = t(686546),
     s = t(624138),
-    c = t(727406);
+    c = t(404677);
 function o(e) {
     let { guildName: n, iconSize: t, className: l } = e,
         o = (0, s.Zg)(n);

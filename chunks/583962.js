@@ -32,7 +32,7 @@ var i = n(200651),
     N = n(30513),
     E = n(981631),
     y = n(388032),
-    j = n(638790);
+    j = n(976019);
 let T = (0, _.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     P = (e) => {
         let { guild: t, onSelect: n } = e,

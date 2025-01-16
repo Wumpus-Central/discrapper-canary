@@ -11,7 +11,7 @@ var a = r(442837),
     l = r(314897),
     u = r(131951),
     c = r(388032),
-    d = r(669608);
+    d = r(756890);
 function f(e) {
     let n = (0, s.useModalContext)(),
         f = (0, a.e7)([u.Z], () => u.Z.isVideoEnabled()),
@@ -20,7 +20,7 @@ function f(e) {
     function p() {
         (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([r.e('8821'), r.e('99073')]).then(r.bind(r, 601572));
+                let { default: e } = await Promise.all([r.e('8821'), r.e('39607')]).then(r.bind(r, 601572));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

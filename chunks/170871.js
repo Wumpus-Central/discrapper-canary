@@ -13,7 +13,7 @@ var i = n(200651),
     c = n(219039),
     d = n(979264),
     u = n(308083),
-    m = n(291551);
+    m = n(984094);
 function g(e) {
     let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: f, memberCount: _ } = e,
         E = r.useRef(null),

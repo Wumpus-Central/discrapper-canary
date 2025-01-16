@@ -17,8 +17,8 @@ var i = n(200651),
     g = n(930441),
     h = n(726985),
     p = n(388032),
-    x = n(599954),
-    f = n(275477);
+    x = n(774927),
+    f = n(232186);
 function _(e) {
     let { label: t, onChange: n, enabled: r, subLabel: s } = e;
     return (0, i.jsx)(o.FormSwitch, {

@@ -19,7 +19,7 @@ function o(n, e) {
               label: c.intl.string(c.t.dEaPc3),
               action: () =>
                   (0, i.openModalLazy)(async () => {
-                      let { default: a } = await Promise.all([t.e('7590'), t.e('45094'), t.e('89025')]).then(t.bind(t, 218613));
+                      let { default: a } = await Promise.all([t.e('7590'), t.e('45094'), t.e('74100')]).then(t.bind(t, 218613));
                       return (t) =>
                           (0, l.jsx)(a, {
                               ...t,

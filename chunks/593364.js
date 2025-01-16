@@ -9,4 +9,4 @@ var l = n(481060);
 function r(e) {
     return (0, i.jsx)(l.NumberBadge, { count: e });
 }
-n(460562), n(856838);
+n(460562), n(572488);

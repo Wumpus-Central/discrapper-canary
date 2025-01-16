@@ -18,7 +18,7 @@ var r = t(120356),
     u = t(857395),
     m = t(131154),
     x = t(38981),
-    h = t(934615);
+    h = t(820331);
 function f(e) {
     let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: f, speakers: g, speakerCount: v, audienceCount: _, channelName: I } = e,
         j = n.id;

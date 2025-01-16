@@ -14,7 +14,7 @@ var a = r(120356),
     d = r(660579),
     f = r(64621),
     _ = r(228168),
-    h = r(151589);
+    h = r(882636);
 function p(e) {
     let { user: n, profileType: r, animateOnHover: a, onOpenProfile: p, ...m } = e,
         g = _.n_.AVATAR,

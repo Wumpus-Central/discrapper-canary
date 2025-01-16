@@ -52,7 +52,7 @@ t.Z = {
                         : null != d
                           ? (0, s.WH)(h.guild_id, h.id, { pid: d.pid })
                           : (0, l.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('95876')]).then(n.bind(n, 60594));
+                                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('38454')]).then(n.bind(n, 60594));
                                 return (t) =>
                                     (0, i.jsx)(e, {
                                         ...t,

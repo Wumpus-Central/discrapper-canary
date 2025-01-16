@@ -1,7 +1,7 @@
 var i = r(200651);
 r(192379);
 var a = r(293335),
-    s = r(883342);
+    s = r(264275);
 let o = (e) => {
     let { profileEffectConfig: n, onReady: r } = e,
         { pendingRef: o, setPending: l } = (0, a.Z)(n.effects, r);

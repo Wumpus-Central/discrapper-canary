@@ -3,7 +3,7 @@ n(192379);
 var i = n(481060),
     r = n(600164),
     s = n(388032),
-    o = n(618851);
+    o = n(452091);
 t.Z = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;

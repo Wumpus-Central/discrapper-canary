@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(622484);
+    a = n(743483);
 function o(e) {
     let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: o = !1, avatar: s, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
     return (0, i.jsxs)('div', {

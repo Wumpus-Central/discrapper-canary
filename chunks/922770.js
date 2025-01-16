@@ -13,7 +13,7 @@ var i,
     l = r.n(o),
     u = r(186325),
     c = r(388032),
-    d = r(791509);
+    d = r(595252);
 function f(e) {
     switch (e) {
         case 'wanderingCubes':

@@ -8,7 +8,7 @@ n(192379);
 var a = n(120356),
     r = n.n(a),
     o = n(481060),
-    l = n(194731);
+    l = n(403339);
 function s(e) {
     let { supportedLanguages: t } = e;
     return (0, i.jsx)('ul', {

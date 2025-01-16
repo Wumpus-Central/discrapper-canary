@@ -10,7 +10,7 @@ var i = r(200651),
     l = r(436774),
     u = r(981631),
     c = r(388032),
-    d = r(585570);
+    d = r(339506);
 function f(e) {
     let { product: n, onSecondaryClick: f } = e,
         _ = a.useCallback(() => {

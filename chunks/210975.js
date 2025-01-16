@@ -1,53 +1,53 @@
 n.d(t, {
     m$: function () {
-        return f;
+        return m;
     },
     wV: function () {
-        return c;
+        return u;
     },
     zU: function () {
         return d;
     }
 });
-var r = n(442837),
+var i = n(442837),
     l = n(569545),
-    i = n(314897),
-    u = n(19780),
+    a = n(314897),
+    r = n(19780),
     s = n(98369),
     o = n(277642),
-    a = n(441894);
-function c(e) {
+    c = n(441894);
+function u(e) {
     let { userId: t, channelId: n, location: l } = e,
-        o = (0, a.J)({
+        o = (0, c.J)({
             channelId: n,
             location: l
         });
-    return (0, r.e7)([s.Z, i.default, u.Z], () => null != t && o && u.Z.isUserConnected(t) && i.default.getId() !== t && s.Z.isUserVerified(t), [o, t]);
+    return (0, i.e7)([s.Z, a.default, r.Z], () => null != t && o && r.Z.isUserConnected(t) && a.default.getId() !== t && s.Z.isUserVerified(t), [o, t]);
 }
 function d(e) {
-    let { streamKey: t, channelId: n, location: u } = e,
-        c = (0, a.J)({
+    let { streamKey: t, channelId: n, location: r } = e,
+        u = (0, c.J)({
             channelId: n,
-            location: u
+            location: r
         }),
         d = (0, o.t)(t);
-    return (0, r.e7)(
-        [s.Z, i.default],
+    return (0, i.e7)(
+        [s.Z, a.default],
         () => {
-            if (!c || d || null == t) return !1;
-            let e = i.default.getId(),
+            if (!u || d || null == t) return !1;
+            let e = a.default.getId(),
                 { ownerId: n } = (0, l.my)(t);
             return n !== e && s.Z.isStreamVerified(t);
         },
-        [d, c, t]
+        [d, u, t]
     );
 }
-function f(e) {
+function m(e) {
     let { channelId: t, location: n } = e,
-        l = (0, a.J)({
+        l = (0, c.J)({
             channelId: t,
             location: n
         }),
-        i = (0, o.r)();
-    return (0, r.e7)([s.Z], () => !!l && !i && s.Z.isCallVerified(), [i, l]);
+        a = (0, o.r)();
+    return (0, i.e7)([s.Z], () => !!l && !a && s.Z.isCallVerified(), [a, l]);
 }

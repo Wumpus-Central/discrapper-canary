@@ -14,7 +14,7 @@ var a = n(120356),
     s = n.n(a),
     o = n(600164),
     c = n(507675),
-    d = n(25554);
+    d = n(576976);
 function u(e) {
     let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: l, renderBottomRight: a, renderCenter: s } = e;
     return (0, r.jsxs)('div', {

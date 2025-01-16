@@ -1,50 +1,50 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = t(200651),
-    a = t(192379),
-    l = t(481060),
-    r = t(725436),
-    d = t(11868),
-    o = t(217804),
-    c = t(765305),
-    s = t(186062);
+var i = n(200651),
+    r = n(192379),
+    s = n(481060),
+    l = n(725436),
+    o = n(997321),
+    a = n(217804),
+    c = n(765305),
+    d = n(295267);
 function u(e) {
-    let { guildScheduledEvent: n, channel: t, onClose: u } = e,
-        _ = n.entity_type === c.WX.EXTERNAL,
-        g = a.useCallback((e) => (0, d.Qt)(n, u)(e), [n, u]),
-        p = (0, o.u)(n, t);
-    if (null == p) return null;
-    let { IconComponent: m, locationName: I } = p,
-        v = (0, i.jsxs)(i.Fragment, {
+    let { guildScheduledEvent: t, channel: n, onClose: u } = e,
+        h = t.entity_type === c.WX.EXTERNAL,
+        g = r.useCallback((e) => (0, o.Qt)(t, u)(e), [t, u]),
+        m = (0, a.u)(t, n);
+    if (null == m) return null;
+    let { IconComponent: f, locationName: p } = m,
+        x = (0, i.jsxs)(i.Fragment, {
             children: [
-                null != m &&
-                    (0, i.jsx)(m, {
+                null != f &&
+                    (0, i.jsx)(f, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
                         height: 20,
-                        className: s.channelIcon
+                        className: d.channelIcon
                     }),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(s.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: s.locationText,
-                    children: (0, r.m)(I, !0)
+                    className: d.locationText,
+                    children: (0, l.m)(p, !0)
                 })
             ]
         });
     return (0, i.jsx)('div', {
-        className: s.row,
+        className: d.row,
         children:
             null != g
-                ? (0, i.jsx)(l.Clickable, {
-                      className: _ ? s.externalLocation : s.channelLocation,
+                ? (0, i.jsx)(s.Clickable, {
+                      className: h ? d.externalLocation : d.channelLocation,
                       onClick: g,
-                      children: v
+                      children: x
                   })
-                : v
+                : x
     });
 }

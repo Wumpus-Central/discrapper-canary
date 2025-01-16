@@ -9,7 +9,7 @@ var n = i(200651),
     o = i(924489),
     l = i(950854),
     c = i(824606),
-    s = i(551308);
+    s = i(722261);
 function d(e) {
     var t, i, d, u, _;
     let { application: p, onClick: h, imageSrc: m, className: f, animatesOnHover: g } = e,

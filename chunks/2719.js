@@ -40,7 +40,7 @@ var i = n(200651),
     L = n(815660),
     M = n(801461),
     k = n(388032),
-    w = n(757133);
+    w = n(205323);
 let F = P.ZP.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar;
 function U(e) {
     var t, s;
@@ -135,7 +135,7 @@ function U(e) {
                         onClick: () =>
                             (0, u.openModalLazy)(async () => {
                                 if (g) {
-                                    let { default: e } = await Promise.all([n.e('85342'), n.e('29002')]).then(n.bind(n, 193049));
+                                    let { default: e } = await Promise.all([n.e('85342'), n.e('55508')]).then(n.bind(n, 193049));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             source: M.Kq.USER_SETTINGS_EDIT,
@@ -248,7 +248,7 @@ function H(e) {
                 valueMessage: k.intl.string(k.t['8SfTNz']),
                 handleClick: () =>
                     (0, u.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('23379')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };
@@ -266,7 +266,7 @@ function H(e) {
                 }),
                 handleClick: () =>
                     (0, u.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('9343'), n.e('23379')]).then(n.bind(n, 642298));
+                        let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
                         return (t) => (0, i.jsx)(e, { ...t });
                     })
             };

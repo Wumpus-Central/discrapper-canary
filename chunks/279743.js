@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(442837),
     u = n(607070),
     m = n(663389),
-    g = n(158044);
+    g = n(770082);
 function h(e) {
     let { children: t, className: n, onFlashEnd: s, animationDelay: d = 500 } = e,
         m = c.tokens.colors.TEXT_LINK,

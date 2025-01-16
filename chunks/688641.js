@@ -9,7 +9,7 @@ var l = n(120356),
     r = n.n(l),
     a = n(481060),
     s = n(388032),
-    o = n(389514);
+    o = n(819588);
 function c(e) {
     let { className: t, iconContainerClassName: n, icon: l, color: c, title: d, description: u, userCount: h, onClick: p, highlight: m } = e;
     return (0, i.jsxs)(a.Clickable, {

@@ -12,7 +12,7 @@ var r = n(120356),
     o = n(993413),
     c = n(486324),
     d = n(388032),
-    u = n(808872);
+    u = n(25836);
 function m(e) {
     let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: m, className: g, disabled: h = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: f, withHighlight: _ = !1 } = e,
         E = _ ? a.ShinyButton : a.Button;

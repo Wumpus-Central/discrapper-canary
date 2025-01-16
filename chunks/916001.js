@@ -8,7 +8,7 @@ n(192379);
 var r = n(866442),
     a = n(481060),
     l = n(388032),
-    i = n(423703);
+    i = n(399178);
 function o(e) {
     let { locked: t, role: n, textVariant: o = 'text-xs/medium' } = e,
         s = (0, a.useToken)(a.tokens.colors.INTERACTIVE_NORMAL).hex();

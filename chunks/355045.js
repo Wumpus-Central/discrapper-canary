@@ -18,7 +18,7 @@ var i = r(200651),
     T = r(981631),
     b = r(474936),
     y = r(388032),
-    S = r(593504);
+    S = r(892804);
 function A(e) {
     let { closeLayer: n, guild: r, onCtaVisibilityChange: s } = e,
         A = (0, l.e7)([p.default], () => p.default.getCurrentUser()),

@@ -16,13 +16,13 @@ var i = n(200651),
     p = n(678513),
     m = n(981631),
     f = n(388032),
-    g = n(186315);
+    g = n(477090);
 function v(e) {
     let { target: t } = e,
         o = (0, r.Ie)('fakedoor'),
         p = l.useCallback(() => {
             (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('22862'), n.e('34044')]).then(n.bind(n, 646202));
+                let { default: e } = await Promise.all([n.e('22862'), n.e('96252')]).then(n.bind(n, 646202));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

@@ -18,7 +18,7 @@ var a = r(200651),
     m = r(70956),
     g = r(981631),
     E = r(388032),
-    v = r(533254);
+    v = r(200263);
 function I(e) {
     let n,
         { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: o, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: f } = e,

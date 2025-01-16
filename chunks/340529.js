@@ -23,7 +23,7 @@ var i = n(120356),
     v = n(981631),
     _ = n(176505),
     j = n(388032),
-    I = n(584699);
+    I = n(895997);
 function w(e) {
     let { icon: t, title: n, body: i, selected: o, disabled: l = !1, onClick: c, onPreviewDismiss: d, isNew: C = !1 } = e;
     return (0, r.jsxs)(a.ClickableContainer, {

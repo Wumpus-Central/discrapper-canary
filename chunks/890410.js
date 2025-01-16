@@ -11,7 +11,7 @@ var r = n(120356),
     o = n(492593),
     s = n(930282),
     c = n(464891),
-    d = n(626000);
+    d = n(987998);
 function u(e) {
     let { message: t, channel: n, content: r, className: u, compact: m, popoutProps: h, hideTimestamp: f = !1, withFooter: p = !1, ..._ } = e,
         g = (0, a.ZP)(t);

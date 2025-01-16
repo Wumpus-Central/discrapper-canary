@@ -14,7 +14,7 @@ var r = n(120356),
     p = n(981631),
     x = n(474936),
     f = n(388032),
-    _ = n(526423);
+    _ = n(719721);
 t.Z = function (e) {
     let { className: t, guildId: n, boostingVariant: r } = e,
         E = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),

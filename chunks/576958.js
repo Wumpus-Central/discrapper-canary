@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(132871),
     u = n(981631),
     p = n(388032),
-    m = n(966232);
+    m = n(535040);
 function _(e) {
     let { applicationId: t, applications: n, className: c, listingClassName: _, title: g, showViewAll: h, onViewOne: I, onViewAll: b } = e,
         v = (function (e) {

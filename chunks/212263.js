@@ -27,7 +27,7 @@ var a = r(200651),
     D = r(185923),
     L = r(474936),
     x = r(388032),
-    w = r(940953);
+    w = r(940675);
 let P = (e) => {
     let n,
         { onLearnMore: i, onClose: o, channel: P, emojiDescriptor: M, pickerIntention: k, analyticsLocation: U, containerContext: B } = e,

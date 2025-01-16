@@ -30,7 +30,7 @@ var r = n(120356),
     b = n(409100),
     I = n(474936),
     N = n(388032),
-    v = n(618001);
+    v = n(337307);
 let A = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: a, isMarketingPageV2Enabled: l, isDarkMode: o } = e,
             c = (0, i.jsx)(b.Z, {

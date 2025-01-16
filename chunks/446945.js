@@ -7,7 +7,7 @@ var l = t(481060),
     o = t(540457),
     c = t(700833),
     d = t(388032),
-    u = t(831826);
+    u = t(117225);
 function m(e) {
     let { addFormField: n, onSelect: t, guild: o, allowTerms: m } = e;
     return (0, i.jsx)(l.Menu, {

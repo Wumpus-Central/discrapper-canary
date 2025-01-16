@@ -12,7 +12,7 @@ var l = n(120356),
     p = n(435064),
     m = n(354459),
     f = n(388032),
-    g = n(9967);
+    g = n(669189);
 t.Z = (e) => {
     let { className: t, channelId: n } = e,
         l = (0, h.Go)(),
