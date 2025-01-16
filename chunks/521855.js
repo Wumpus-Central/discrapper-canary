@@ -2,6 +2,7 @@ e.exports = {
     premiumCards: 'premiumCards_c87d73',
     card: 'card_c87d73',
     withCardHover: 'withCardHover_c87d73',
+    cardContent: 'cardContent_c87d73',
     wumpusImageContainer: 'wumpusImageContainer_c87d73',
     wumpusImage: 'wumpusImage_c87d73',
     tier0: 'tier0_c87d73',
@@ -45,5 +46,6 @@ e.exports = {
     rimGlowTier2: 'rimGlowTier2_c87d73',
     trialHeader: 'trialHeader_c87d73',
     withPromotionalGradientBanner: 'withPromotionalGradientBanner_c87d73',
+    promotionalBackgroundImage: 'promotionalBackgroundImage_c87d73',
     tier2SideGradient: 'tier2SideGradient_c87d73'
 };
