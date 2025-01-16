@@ -98,7 +98,7 @@ var r = n(990547),
 let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eU = ev.Z,
     eV = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e3, developerMode: e6, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e3, developerMode: e6, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -305,10 +305,22 @@ let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ek.intl.string(ek.t.fyA119)],
                 parent: eD.s6.CONTENT_SOCIAL
             },
+            [eD.s6.PRIVACY_AND_SAFETY_GAME_FRIENDS_CATEGORY]: {
+                section: eZ.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [ek.intl.string(ek.t.oPyABA)],
+                parent: eD.s6.CONTENT_SOCIAL,
+                predicate: () => tt
+            },
             [eD.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS]: {
                 section: eZ.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ek.intl.string(ek.t.fyA119)],
                 parent: eD.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY
+            },
+            [eD.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS]: {
+                section: eZ.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [ek.intl.string(ek.t['/U8Iwc'])],
+                parent: eD.s6.PRIVACY_AND_SAFETY_GAME_FRIENDS_CATEGORY,
+                predicate: () => tt
             },
             [eD.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY]: {
                 section: eZ.oAB.CONTENT_AND_SOCIAL,

@@ -60,7 +60,7 @@ r.d(n, {
         return eL;
     },
     Rt: function () {
-        return ek;
+        return eU;
     },
     SE: function () {
         return eN;
@@ -69,7 +69,7 @@ r.d(n, {
         return eI;
     },
     Sh: function () {
-        return ex;
+        return ew;
     },
     T4: function () {
         return O;
@@ -93,13 +93,16 @@ r.d(n, {
         return es;
     },
     YC: function () {
-        return eU;
+        return eB;
     },
     Yk: function () {
         return ey;
     },
     _O: function () {
         return R;
+    },
+    _j: function () {
+        return ex;
     },
     bh: function () {
         return $;
@@ -144,13 +147,13 @@ r.d(n, {
         return y;
     },
     gw: function () {
-        return ew;
+        return eP;
     },
     h2: function () {
         return W;
     },
     hg: function () {
-        return eP;
+        return eM;
     },
     iG: function () {
         return Y;
@@ -168,7 +171,7 @@ r.d(n, {
         return X;
     },
     l4: function () {
-        return eM;
+        return ek;
     },
     mX: function () {
         return j;
@@ -878,6 +881,15 @@ let eI = (0, c.KM)(
         (e) => o.D5.create({ value: e })
     ),
     ex = (0, c.Zc)(
+        'privacy',
+        'allowGameFriendDmsInDiscord',
+        (e) => {
+            var n;
+            return null === (n = null == e ? void 0 : e.value) || void 0 === n || n;
+        },
+        (e) => o.D5.create({ value: e })
+    ),
+    ew = (0, c.Zc)(
         'textAndImages',
         'explicitContentSettings',
         (e) => {
@@ -897,7 +909,7 @@ let eI = (0, c.KM)(
             };
         }
     ),
-    ew = (0, c.Zc)(
+    eP = (0, c.Zc)(
         'textAndImages',
         'keywordFilterSettings',
         (e) => {
@@ -935,7 +947,7 @@ let eI = (0, c.KM)(
         },
         (e) => o.D5.create({ value: e })
     );
-let eP = (0, c.Zc)(
+let eM = (0, c.Zc)(
     'appearance',
     'timestampHourCycle',
     (e) => (null != e ? e : s.hg.AUTO),
@@ -947,19 +959,19 @@ let eP = (0, c.Zc)(
     (e) => (null != e ? e : s.l1.LAUNCH_PAD_DISABLED),
     (e) => e
 );
-let eM = (0, c.Zc)(
+let ek = (0, c.Zc)(
         'userContent',
         'lastReceivedChangelogId',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    ek = (0, c.Zc)(
+    eU = (0, c.Zc)(
         'safetySettings',
         'ignoreProfileSpeedbumpDisabled',
         (e) => null != e && e,
         (e) => e
     ),
-    eU = (0, c.Zc)(
+    eB = (0, c.Zc)(
         'appearance',
         'uiDensity',
         (e) => (e === s.Pi.UNSET_UI_DENSITY ? s.Pi.COMPACT : null != e ? e : s.Pi.COMPACT),
