@@ -1,9 +1,9 @@
 t.d(n, {
     Gt: function () {
-        return f;
+        return p;
     },
     ZP: function () {
-        return p;
+        return h;
     }
 }),
     t(47120);
@@ -13,31 +13,36 @@ var l = t(200651),
     a = t.n(r),
     o = t(95398),
     s = t(169525),
-    c = t(541964);
-let u = { isInContainer: !0 },
-    d = i.createContext({ isInContainer: !1 });
-function m(e) {
+    c = t(197653),
+    u = t(541964);
+let d = { isInContainer: !0 },
+    m = i.createContext({ isInContainer: !1 });
+function f(e) {
     let { children: n } = e;
-    return (0, l.jsx)(d.Provider, {
-        value: u,
+    return (0, l.jsx)(m.Provider, {
+        value: d,
         children: n
     });
 }
-function f() {
-    let { isInContainer: e } = i.useContext(d);
+function p() {
+    let { isInContainer: e } = i.useContext(m);
     return e;
 }
-function p(e) {
-    let { components: n, accentColor: t, spoiler: r, renderComponents: u } = e,
-        [d, f] = i.useState(r),
-        p = (e) =>
-            (0, l.jsx)('div', {
-                className: a()(c.container, {
-                    [c.isHidden]: e,
-                    [c.withAccentColor]: null != t
-                }),
-                style: { '--__accent-color': t },
-                children: (0, l.jsx)(m, { children: u(n) })
+function h(e) {
+    let { components: n, accentColor: t, spoiler: r, renderComponents: d } = e,
+        [m, p] = i.useState(r),
+        h = (e) =>
+            (0, l.jsx)(c.am.AutoMeasuredNestedContainer, {
+                children: (i) =>
+                    (0, l.jsx)('div', {
+                        ref: i,
+                        className: a()(u.container, {
+                            [u.isHidden]: e,
+                            [u.withAccentColor]: null != t
+                        }),
+                        style: { '--__accent-color': t },
+                        children: (0, l.jsx)(f, { children: d(n) })
+                    })
             });
     return null == n || 0 === n.length
         ? null
@@ -45,9 +50,9 @@ function p(e) {
           ? (0, l.jsx)(o.Z, {
                 type: o.Z.Types.ATTACHMENT,
                 reason: s.wk.SPOILER,
-                obscured: d,
-                onToggleObscurity: () => f((e) => !e),
-                children: (e) => p(e)
+                obscured: m,
+                onToggleObscurity: () => p((e) => !e),
+                children: (e) => h(e)
             })
-          : p(!1);
+          : h(!1);
 }
