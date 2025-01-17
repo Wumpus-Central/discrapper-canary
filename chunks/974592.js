@@ -1,32 +1,35 @@
 r.d(n, {
     C$: function () {
-        return d;
+        return _;
     },
     Se: function () {
-        return f;
+        return h;
     }
 });
 var i = r(100527),
-    a = r(981631),
-    s = r(388032),
-    o = r(36128),
-    l = r(501536),
-    u = r(210055),
-    c = r(142755);
-let d = 2,
-    f = {
-        rewards: [
-            {
-                skuId: '1326347611069874277',
-                assetId: 'a_89b499793e86bf459a8dd4f02ad416f4'
-            }
-        ],
-        dismissibleContentVersion: 2,
+    a = r(717401),
+    s = r(981631),
+    o = r(388032),
+    l = r(36128),
+    u = r(501536),
+    c = r(210055),
+    d = r(142755);
+let f = [
+        {
+            skuId: '1326347611069874277',
+            assetId: 'a_89b499793e86bf459a8dd4f02ad416f4'
+        }
+    ],
+    _ = 2,
+    h = {
+        rewards: f,
+        rewardAssetIdMap: (0, a.YV)(f),
+        dismissibleContentVersion: _,
         planSelection: {
-            heading: () => s.intl.string(s.t['o2XB4+']),
-            gradient: ['#FF9090', '#F30ED8'],
-            getImageUrl: () => o.Z,
-            getBackgroundImageUrl: () => u.Z
+            heading: () => o.intl.string(o.t['o2XB4+']),
+            gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)'],
+            getImageUrl: () => l.Z,
+            getBackgroundImageUrl: () => c.Z
         },
         chatGiftIcon: {
             trinketsAnimation: {
@@ -35,18 +38,24 @@ let d = 2,
             }
         },
         firstTimeNotice: {
-            getImageUrl: (e, n) => (n ? o.Z : c.Z),
-            title: () => s.intl.string(s.t.hFzI4u),
-            description: () => s.intl.string(s.t.B7R16u),
-            cta: () => s.intl.string(s.t.RzWDqa),
+            getImageUrl: (e, n) => (n ? l.Z : d.Z),
+            title: () => o.intl.string(o.t.hFzI4u),
+            description: () => o.intl.string(o.t.B7R16u),
+            cta: () => o.intl.string(o.t.RzWDqa),
             analyticsLocation: i.Z.VALENTINES_GIFTING_COACHMARK,
-            analyticsPage: a.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
+            analyticsPage: s.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
+        },
+        planSelectionBanner: {
+            desktopBannerText: () => o.intl.string(o.t['wxgA+v']),
+            mobileBannerText: () => o.intl.string(o.t.d4uO8v),
+            getImageUrl: () => '',
+            gradient: () => ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
         },
         billingSettingsMarketingBanner: {
-            getAnimatedImageUrl: () => c.Z,
-            getStaticImageUrl: () => o.Z,
-            getBackgroundImageUrl: () => l.Z,
-            title: () => s.intl.string(s.t.hFzI4u),
-            body: () => s.intl.string(s.t.rbWKaW)
+            getAnimatedImageUrl: () => d.Z,
+            getStaticImageUrl: () => l.Z,
+            getBackgroundImageUrl: () => u.Z,
+            title: () => o.intl.string(o.t.hFzI4u),
+            body: () => o.intl.string(o.t.rbWKaW)
         }
     };
