@@ -24,7 +24,7 @@ var a = r(200651),
     C = r(388032),
     R = r(538891);
 let O = (e) => {
-    let { emojiDescriptors: n, emojiSize: i, onSelect: o, onSelectSoundmoji: O, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: w, isScrolling: P, isUsingKeyboardNavigation: M, rowIndex: k, allowAnimatedEmoji: U, showEmojiFavoriteTooltip: B, channelGuildId: G, category: F, selectedItemClassName: Z, channelId: V, messageId: j, isBurstReaction: H, inNitroLockedSection: Y, handleScrollUpOnSectionCollapse: W } = e,
+    let { emojiDescriptors: n, emojiSize: i, onSelect: o, onSelectSoundmoji: O, onInspect: D, surrogateCodePoint: L, getEmojiItemProps: x, getEmojiRowProps: w, isScrolling: P, isUsingKeyboardNavigation: M, rowIndex: k, allowAnimatedEmoji: U, showEmojiFavoriteTooltip: B, channelGuildId: G, category: Z, selectedItemClassName: F, channelId: V, messageId: j, isBurstReaction: H, inNitroLockedSection: Y, handleScrollUpOnSectionCollapse: W } = e,
         { enabled: K } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         z = r(187119),
         q = r(39874),
@@ -77,7 +77,7 @@ let O = (e) => {
                                     [R.emojiItemLarge]: eu,
                                     [R.emojiItemMedium]: ec,
                                     [R.emojiItemSelected]: I && !_,
-                                    [null != Z ? Z : '']: I,
+                                    [null != F ? F : '']: I,
                                     [R.showPulse]: es === n
                                 }),
                                 onFocus: null != E ? E : T,
@@ -162,7 +162,7 @@ let O = (e) => {
                             isUsingKeyboardNavigation: M,
                             surrogateCodePoint: L,
                             allowAnimatedEmoji: U,
-                            selectedItemClassName: Z,
+                            selectedItemClassName: F,
                             onSelect: o,
                             onInspect: D,
                             channelGuildId: G,
@@ -194,17 +194,16 @@ let O = (e) => {
                 ref: el,
                 children: e.map(ed)
             });
-    if (F === A.UX.SOUNDMOJI)
+    if (Z === A.UX.SOUNDMOJI)
         return (0, a.jsx)('ul', {
             className: l()(R.emojiListRow),
             ref: el,
             children: (0, a.jsx)(E.Z, {
-                channelGuildId: G,
                 channelId: V,
                 onSelectSoundmoji: O
             })
         });
-    if (F !== A.En.TOP_GUILD_EMOJI) return ef(n);
+    if (Z !== A.En.TOP_GUILD_EMOJI) return ef(n);
     let e_ = n.filter((e) => {
             if (K && e.type === y.ld.CREATE_EMOJI) return !0;
             let n = e;
