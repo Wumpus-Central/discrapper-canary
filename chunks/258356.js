@@ -1,9 +1,9 @@
 n.d(t, {
     X: function () {
-        return m;
+        return g;
     },
     Z: function () {
-        return f;
+        return m;
     }
 });
 var i = n(200651);
@@ -17,7 +17,7 @@ var r = n(481060),
     d = n(230224),
     u = n(388032),
     h = n(161669);
-function g(e) {
+function f(e) {
     var t;
     let { guildScheduledEvent: n, channel: s, onAcceptInvite: l, isSubmitting: c } = e;
     return (0, i.jsxs)('div', {
@@ -50,7 +50,7 @@ function g(e) {
         ]
     });
 }
-function m(e) {
+function g(e) {
     var t;
     let { invite: n } = e,
         o = null != n.guild ? new c.ZP(n.guild) : null;
@@ -110,11 +110,11 @@ function m(e) {
         ]
     });
 }
-function f(e) {
+function m(e) {
     let { invite: t, channel: n, isSubmitting: r, onAcceptInvite: s } = e,
         { guild_scheduled_event: l } = t;
     return null != l
-        ? (0, i.jsx)(g, {
+        ? (0, i.jsx)(f, {
               guildScheduledEvent: l,
               channel: n,
               isSubmitting: r,

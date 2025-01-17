@@ -9,8 +9,8 @@ var i,
     d = n(857458),
     u = n(388905),
     h = n(703656),
-    g = n(388032),
-    m = n(232186);
+    f = n(388032),
+    g = n(232186);
 ((r = i || (i = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
 t.Z = function (e) {
     let { match: t, location: n, attemptDeepLink: i } = e,
@@ -29,7 +29,7 @@ t.Z = function (e) {
             let e = setTimeout(() => (0, h.uL)((0, d.M)()), 3000);
             return () => clearTimeout(e);
         }, [r]);
-    let f = l.useCallback(
+    let m = l.useCallback(
         async (e, t) => {
             try {
                 o(2), await i(e, t), o(3);
@@ -45,37 +45,37 @@ t.Z = function (e) {
             return (0, s.jsxs)(u.ZP, {
                 children: [
                     (0, s.jsx)(u.Dx, {
-                        className: m.marginBottom8,
-                        children: g.intl.string(g.t.qllnGh)
+                        className: g.marginBottom8,
+                        children: f.intl.string(f.t.qllnGh)
                     }),
-                    (0, s.jsx)(u.DK, { children: g.intl.string(g.t.SXCxyc) }),
+                    (0, s.jsx)(u.DK, { children: f.intl.string(f.t.SXCxyc) }),
                     (0, s.jsx)(u.zx, {
-                        className: m.marginTop40,
-                        onClick: () => f(t, n),
-                        children: g.intl.string(g.t.UQvCf3)
+                        className: g.marginTop40,
+                        onClick: () => m(t, n),
+                        children: f.intl.string(f.t.UQvCf3)
                     }),
                     (0, s.jsx)(u.zx, {
-                        className: a()(m.marginTop8, m.marginCenterHorz),
+                        className: a()(g.marginTop8, g.marginCenterHorz),
                         color: u.zx.Colors.LINK,
                         look: u.zx.Looks.LINK,
                         onClick: () => (0, h.uL)((0, d.M)()),
-                        children: g.intl.string(g.t['2ixEBg'])
+                        children: f.intl.string(f.t['2ixEBg'])
                     })
                 ]
             });
         case 0:
         case 2:
             return (0, s.jsxs)(u.ZP, {
-                children: [(0, s.jsx)(u.Dx, { children: g.intl.string(g.t['Z+hCVV']) }), (0, s.jsx)(u.Hh, {})]
+                children: [(0, s.jsx)(u.Dx, { children: f.intl.string(f.t['Z+hCVV']) }), (0, s.jsx)(u.Hh, {})]
             });
         case 3:
             return (0, s.jsxs)(u.ZP, {
                 children: [
                     (0, s.jsx)(u.Dx, {
-                        className: m.marginBottom8,
-                        children: g.intl.string(g.t.csrAMD)
+                        className: g.marginBottom8,
+                        children: f.intl.string(f.t.csrAMD)
                     }),
-                    (0, s.jsx)(u.DK, { children: g.intl.string(g.t.ghBJz8) })
+                    (0, s.jsx)(u.DK, { children: f.intl.string(f.t.ghBJz8) })
                 ]
             });
     }

@@ -14,14 +14,14 @@ var i = n(200651),
 function u(e) {
     let { guildScheduledEvent: t, channel: n, onClose: u } = e,
         h = t.entity_type === c.WX.EXTERNAL,
-        g = r.useCallback((e) => (0, o.Qt)(t, u)(e), [t, u]),
-        m = (0, a.u)(t, n);
-    if (null == m) return null;
-    let { IconComponent: f, locationName: p } = m,
+        f = r.useCallback((e) => (0, o.Qt)(t, u)(e), [t, u]),
+        g = (0, a.u)(t, n);
+    if (null == g) return null;
+    let { IconComponent: m, locationName: p } = g,
         x = (0, i.jsxs)(i.Fragment, {
             children: [
-                null != f &&
-                    (0, i.jsx)(f, {
+                null != m &&
+                    (0, i.jsx)(m, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 20,
@@ -39,10 +39,10 @@ function u(e) {
     return (0, i.jsx)('div', {
         className: d.row,
         children:
-            null != g
+            null != f
                 ? (0, i.jsx)(s.Clickable, {
                       className: h ? d.externalLocation : d.channelLocation,
-                      onClick: g,
+                      onClick: f,
                       children: x
                   })
                 : x

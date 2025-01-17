@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return m;
     }
 });
 var i = n(200651);
@@ -14,8 +14,8 @@ var r = n(481060),
     d = n(258356),
     u = n(981631),
     h = n(388032),
-    g = n(461342);
-let m = (e) => {
+    f = n(461342);
+let g = (e) => {
     let { state: t } = e;
     switch (t) {
         case u.r2o.ACCEPTING:
@@ -25,16 +25,16 @@ let m = (e) => {
             return !1;
     }
 };
-function f(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: f = !1 } = e;
+function m(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
     if (null == t) return null;
     let p = null != t.guild ? new o.ZP(t.guild) : null,
         x = null != t.channel ? (0, l.jD)(t.channel) : null,
         _ = null != t.target_application ? new s.ZP(t.target_application) : null,
-        E = f || null == t.inviter ? null : new a.Z(t.inviter),
+        E = m || null == t.inviter ? null : new a.Z(t.inviter),
         I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(u.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
-        N = m(t),
-        v = {
+        v = g(t),
+        N = {
             invite: t,
             user: E,
             guild: p,
@@ -45,11 +45,11 @@ function f(e) {
         ? (0, i.jsx)(d.Z, {
               invite: t,
               channel: x,
-              isSubmitting: N,
+              isSubmitting: v,
               onAcceptInvite: n
           })
         : (0, i.jsxs)('div', {
-              className: g.container,
+              className: f.container,
               children: [
                   (0, i.jsx)(c.GB, {
                       application: _,
@@ -59,18 +59,18 @@ function f(e) {
                   (0, c.X7)(t)
                       ? null
                       : (0, i.jsx)(c.jq, {
-                            ...v,
+                            ...N,
                             showBigUserIcon: I
                         }),
                   (0, i.jsx)(c.UM, {
-                      ...v,
+                      ...N,
                       showBigUserIcon: I
                   }),
-                  (0, i.jsx)(c.V6, { ...v }),
+                  (0, i.jsx)(c.V6, { ...N }),
                   (0, i.jsx)(r.Button, {
                       onClick: n,
-                      submitting: N,
-                      className: g.acceptButton,
+                      submitting: v,
+                      className: f.acceptButton,
                       children: h.intl.string(h.t.ohMvm5)
                   })
               ]

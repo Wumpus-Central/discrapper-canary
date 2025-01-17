@@ -13,7 +13,7 @@ var l,
     a = t(512722),
     o = t.n(a),
     u = t(476183),
-    c = t(553813),
+    c = t(209739),
     d = t.n(c),
     m = t(442837),
     g = t(704215),
@@ -207,15 +207,15 @@ function er(e) {
             },
             [eS, eB, ep, eI, eK, eH, eV]
         ),
-        [e9, e5] = r.useState(eA ? '' : void 0),
-        e8 = r.useCallback(
+        [e9, e6] = r.useState(eA ? '' : void 0),
+        e5 = r.useCallback(
             (e) => {
                 (0, W.t)(), (0, W.T)(null != e ? e : e9);
             },
             [e9]
         );
-    function e6(e) {
-        if ((e.preventDefault(), 1 === eL)) return e8();
+    function e8(e) {
+        if ((e.preventDefault(), 1 === eL)) return e5();
         if (2 === eL) return eD(3);
         if (null != e9) return eD(1);
         let n = (0, q.Z)(ev, ey, R.ZP.getRunningGames());
@@ -237,7 +237,7 @@ function er(e) {
     }
     let ne = r.useCallback(
             (e) => {
-                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e5(e.id.split(':')[1]) : e5(void 0), eD(3), ew(!0));
+                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e6(e.id.split(':')[1]) : e6(void 0), eD(3), ew(!0));
             },
             [eP]
         ),
@@ -434,7 +434,7 @@ function er(e) {
                         }),
                     children: () =>
                         (0, s.jsxs)('form', {
-                            onSubmit: e6,
+                            onSubmit: e8,
                             children: [ni, nu, nd]
                         })
                 })

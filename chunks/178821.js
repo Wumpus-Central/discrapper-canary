@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return T;
     }
 }),
     n(47120);
@@ -13,11 +13,11 @@ var r = n(200651),
     c = n(493773),
     d = n(38618),
     u = n(719967),
-    m = n(941469);
-let h = 1000 / 60,
+    h = n(941469);
+let m = 1000 / 60,
     x = 1000 / 45,
-    f = 3 * h,
-    p = Math.ceil(3000 / h);
+    f = 3 * m,
+    p = Math.ceil(3000 / m);
 function b(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
@@ -35,7 +35,7 @@ function b(e) {
         {
             currentFPS: o,
             averageFrameTime: d,
-            timeSinceLastDrop: m,
+            timeSinceLastDrop: h,
             onResetFrameData: x,
             droppedFramesRef: b,
             renderedFrameCount: g,
@@ -53,35 +53,35 @@ function b(e) {
                 u = a.useCallback(() => {
                     n.current.fill(0), (l.current = 0), (i.current = 0), (s.current = 0), (c.current = 0), (r.current = performance.now()), (o.current = 0);
                 }, []),
-                m = a.useCallback(
+                h = a.useCallback(
                     function () {
                         let a = performance.now(),
                             u = a - r.current;
                         if (((r.current = a), t.current)) return;
                         if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < p && (s.current += 1), (c.current = (c.current + 1) % p), u > f)) {
-                            let t = 0 === s.current ? h : i.current / s.current,
-                                n = Math.min(2 * h, t),
-                                r = Math.floor(u / (e ? n : h));
+                            let t = 0 === s.current ? m : i.current / s.current,
+                                n = Math.min(2 * m, t),
+                                r = Math.floor(u / (e ? n : m));
                             r > 0 && (d.current = performance.now()), (l.current += r);
                         }
-                        let m = 0 === s.current ? h : i.current / s.current;
-                        o.current += u / m;
+                        let h = 0 === s.current ? m : i.current / s.current;
+                        o.current += u / h;
                     },
                     [e, t]
                 ),
                 x = 0 === s.current ? 0 : i.current / s.current;
             return {
-                currentFPS: 0 === x ? 0 : (h / x) * 60,
+                currentFPS: 0 === x ? 0 : (m / x) * 60,
                 averageFrameTime: x,
                 timeSinceLastDrop: (performance.now() - d.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: s,
                 renderedFrameCount: o,
-                frameCheckerEffect: m,
+                frameCheckerEffect: h,
                 onResetFrameData: u
             };
         })(n, l),
-        [C, T, _] = (function (e) {
+        [T, C, _] = (function (e) {
             let t = a.useRef(Array(p).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -133,9 +133,9 @@ function b(e) {
                 }, [i, o]),
                 i
             ];
-        })(C, j),
+        })(T, j),
         y = performance.now() - i.current < 5000,
-        k = T(d, v.current);
+        I = C(d, v.current);
     (0, c.Z)(
         () => (
             S(),
@@ -144,7 +144,7 @@ function b(e) {
             }
         )
     );
-    let I = a.useCallback(() => {
+    let k = a.useCallback(() => {
         x(), _(), S();
     }, [x, _, S]);
     return (0, r.jsxs)('div', {
@@ -173,7 +173,7 @@ function b(e) {
                     (0, r.jsx)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
-                        color: m < 2 ? 'text-danger' : m < 5 ? 'text-warning' : 'text-primary',
+                        color: h < 2 ? 'text-danger' : h < 5 ? 'text-warning' : 'text-primary',
                         children: b.current
                     }),
                     (0, r.jsxs)(s.Text, {
@@ -224,7 +224,7 @@ function b(e) {
                     (0, r.jsxs)(s.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
-                        color: d > 1.1 * h ? 'text-warning' : 'text-secondary',
+                        color: d > 1.1 * m ? 'text-warning' : 'text-secondary',
                         children: [d.toFixed(2), 'ms']
                     })
                 ]
@@ -244,8 +244,8 @@ function b(e) {
                                 (0, r.jsxs)(s.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: k > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [k.toFixed(2), 'ms']
+                                    color: I > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [I.toFixed(2), 'ms']
                                 }),
                                 y &&
                                     (0, r.jsx)(s.Tooltip, {
@@ -271,7 +271,7 @@ function b(e) {
                 className: u.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
-                    onClick: I,
+                    onClick: k,
                     children: 'Reset Frame Data'
                 })
             })
@@ -415,7 +415,7 @@ function j(e) {
         n = t.dispatcher.getSchedulerTelemetry(),
         [l, o] = a.useState(n.isTelemetryEnabled),
         [c, d] = a.useState(n.isTelemetryEnabled),
-        m = (e) => {
+        h = (e) => {
             d(e), n.toggleTelemetry(e);
         };
     return (0, r.jsxs)('div', {
@@ -423,7 +423,7 @@ function j(e) {
         children: [
             (0, r.jsx)(s.Checkbox, {
                 value: c,
-                onChange: () => m(!c),
+                onChange: () => h(!c),
                 size: 18,
                 type: s.Checkbox.Types.INVERTED,
                 shape: s.Checkbox.Shapes.BOX,
@@ -441,7 +441,7 @@ function j(e) {
                     onChange: () => {
                         o((e) => {
                             let t = !e;
-                            return t && m(!0), t;
+                            return t && h(!0), t;
                         });
                     },
                     size: 18,
@@ -508,7 +508,7 @@ function j(e) {
         ]
     });
 }
-function C() {
+function T() {
     let e = (0, o.e7)([d.Z], () => d.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
@@ -524,7 +524,7 @@ function C() {
             }, []);
         })(),
         (0, r.jsx)('div', {
-            className: i()(m.panel, u.panel),
+            className: i()(h.panel, u.panel),
             children: (0, r.jsxs)(s.ScrollerThin, {
                 className: u.panel,
                 children: [

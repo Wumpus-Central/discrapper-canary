@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 }),
     n(47120);
@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(98357),
     d = n(432877),
     u = n(725754),
-    m = n(941469);
-function h(e) {
+    h = n(941469);
+function m(e) {
     let { devSettingsCategory: t } = e,
         n = (0, o.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], o.pF),
         l = a.useMemo(
@@ -36,7 +36,7 @@ function h(e) {
             [n]
         );
     return (0, r.jsx)('div', {
-        className: i()(m.panel, u.panel),
+        className: i()(h.panel, u.panel),
         children: l
     });
 }

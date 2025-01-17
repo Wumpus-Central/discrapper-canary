@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(388905),
     u = n(353926),
     h = n(185625),
-    g = n(551549),
-    m = n(108427),
-    f = n(314897),
+    f = n(551549),
+    g = n(108427),
+    m = n(314897),
     p = n(981631),
     x = n(388032),
     _ = n(232186);
 s.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
-        n = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
+        n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, s.e7)([u.Z], () => u.Z.hasLoadedExperiments),
-        I = (0, g.oK)('RSL - Landing Page'),
-        [N, v] = r.useState(!1),
+        I = (0, f.oK)('RSL - Landing Page'),
+        [v, N] = r.useState(!1),
         [C, b] = r.useState(x.intl.string(x.t['9exy+f'])),
-        [Z, j] = r.useState(!0),
-        T = (e) => {
+        [T, Z] = r.useState(!0),
+        S = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ t.Z = (e) => {
     return (
         r.useEffect(() => {
             n
-                ? (j(!0),
+                ? (Z(!0),
                   a
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => j(!1))
-                      .catch(() => j(!1)))
-                : j(!1);
+                      .then(() => Z(!1))
+                      .catch(() => Z(!1)))
+                : Z(!1);
         }, [n]),
         r.useEffect(() => {
             !E && !I && o.Z.getExperiments();
@@ -61,24 +61,24 @@ t.Z = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? b(x.intl.string(x.t.e6mZMj)) : T(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? b(x.intl.string(x.t.e6mZMj)) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    T(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
-                    v(!1);
+                    N(!1);
                 }
             };
-            v(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
+            N(!0), e((0, c.Z)(t)), (0, g.e)('report_second_look');
         }, [t]),
         I &&
-            !Z &&
+            !T &&
             (0, i.jsxs)(d.ZP, {
                 children: [
                     (0, i.jsx)(d.Dx, {
                         className: _.marginBottom8,
                         children: C
                     }),
-                    N && (0, i.jsx)(l.Spinner, {})
+                    v && (0, i.jsx)(l.Spinner, {})
                 ]
             })
     );

@@ -14,7 +14,7 @@ function h(e, t) {
         handoff_source: t
     });
 }
-class g extends d.Z {
+class f extends d.Z {
     _initialize() {
         r.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -79,4 +79,4 @@ class g extends d.Z {
                 : (t[n] = i);
     }
 }
-t.Z = new g();
+t.Z = new f();

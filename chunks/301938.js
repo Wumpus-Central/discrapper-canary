@@ -16,23 +16,23 @@ var i = n(200651),
     d = n(388905),
     u = n(585483),
     h = n(573261),
-    g = n(720196),
-    m = n(981631),
-    f = n(388032),
+    f = n(720196),
+    g = n(981631),
+    m = n(388032),
     p = n(114969),
     x = n(232186);
 function _(e) {
     let { setOriginalEmail: t, setSlide: s, ready: _, token: E } = e,
-        [I, N] = r.useState(!1),
-        [v, C] = r.useState(null),
-        [b, Z] = r.useState(null),
-        [j, T] = r.useState(''),
-        S = r.useRef(null);
+        [I, v] = r.useState(!1),
+        [N, C] = r.useState(null),
+        [b, T] = r.useState(null),
+        [Z, S] = r.useState(''),
+        A = r.useRef(null);
     return (
         r.useEffect(() => {
             if (_) {
                 var e;
-                null === (e = S.current) || void 0 === e || e.focus();
+                null === (e = A.current) || void 0 === e || e.focus();
             }
         }, [_]),
         (0, i.jsxs)('div', {
@@ -41,7 +41,7 @@ function _(e) {
                     src: null == b ? n(26230) : n(935227),
                     className: l()(x.marginBottom20, x.marginTop8)
                 }),
-                (0, i.jsx)(d.Dx, { children: f.intl.string(f.t['IfBQ5+']) }),
+                (0, i.jsx)(d.Dx, { children: m.intl.string(m.t['IfBQ5+']) }),
                 null != b && '' !== b
                     ? (0, i.jsx)(a.Text, {
                           variant: 'text-sm/normal',
@@ -55,34 +55,34 @@ function _(e) {
                         (0, i.jsx)(d.II, {
                             name: 'password',
                             type: 'password',
-                            label: f.intl.string(f.t['8dM4FB']),
-                            setRef: S,
+                            label: m.intl.string(m.t['8dM4FB']),
+                            setRef: A,
                             className: x.marginBottom20,
-                            value: j,
-                            onChange: T,
-                            error: v,
+                            value: Z,
+                            onChange: S,
+                            error: N,
                             autoComplete: 'new-password',
                             maxLength: 72,
-                            placeholder: f.intl.string(f.t['yY/PXV'])
+                            placeholder: m.intl.string(m.t['yY/PXV'])
                         }),
                         (0, i.jsx)(d.zx, {
                             className: x.marginTop8,
                             onClick: () => {
                                 if (!I) {
-                                    if (0 === j.length) {
-                                        C(f.intl.string(f.t.R98xDw)), u.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                    if (0 === Z.length) {
+                                        C(m.intl.string(m.t.R98xDw)), u.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
-                                        null != b && Z(null),
-                                        null != v && C(null),
+                                        null != b && T(null),
+                                        null != N && C(null),
                                         t(''),
-                                        N(!0),
+                                        v(!0),
                                         h.Z.post({
-                                            url: m.ANM.ACCOUNT_REVERT,
+                                            url: g.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: E,
-                                                password: j
+                                                password: Z
                                             },
                                             trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
@@ -91,40 +91,40 @@ function _(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                T(''), t(n), s(g.n.SUCCESS);
+                                                S(''), t(n), s(f.n.SUCCESS);
                                             })
                                             .catch((e) => {
-                                                if (e instanceof Error) Z(f.intl.formatToPlainString(f.t.aTVNen, { statusPageURL: m.yXt.STATUS }));
+                                                if (e instanceof Error) T(m.intl.formatToPlainString(m.t.aTVNen, { statusPageURL: g.yXt.STATUS }));
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
                                                         ? C(t.getAnyErrorMessage())
-                                                        : Z(
+                                                        : T(
                                                               (function (e) {
                                                                   switch (e) {
-                                                                      case m.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                          return f.intl.string(f.t['11zzGR']);
-                                                                      case m.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                          return f.intl.string(f.t['6qmgaG']);
-                                                                      case m.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                          return f.intl.string(f.t.bChnKi);
+                                                                      case g.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
+                                                                          return m.intl.string(m.t['11zzGR']);
+                                                                      case g.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
+                                                                          return m.intl.string(m.t['6qmgaG']);
+                                                                      case g.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
+                                                                          return m.intl.string(m.t.bChnKi);
                                                                       default:
-                                                                          return f.intl.format(f.t.aTVNen, { statusPageURL: m.yXt.STATUS });
+                                                                          return m.intl.format(m.t.aTVNen, { statusPageURL: g.yXt.STATUS });
                                                                   }
                                                               })(t.code).toString()
                                                           );
                                                 }
-                                                u.S.dispatch(m.CkL.WAVE_EMPHASIZE);
+                                                u.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                             })
                                             .finally(() => {
-                                                N(!1);
+                                                v(!1);
                                             })
                                     );
                                 }
                             },
                             submitting: I,
                             disabled: I,
-                            children: f.intl.string(f.t.ezv91d)
+                            children: m.intl.string(m.t.ezv91d)
                         })
                     ]
                 }),
@@ -133,9 +133,9 @@ function _(e) {
                     children: (0, i.jsx)(d.zx, {
                         color: d.zx.Colors.PRIMARY,
                         onClick: () => {
-                            T(''), s(g.n.START);
+                            S(''), s(f.n.START);
                         },
-                        children: f.intl.string(f.t.rzxnQ0)
+                        children: m.intl.string(m.t.rzxnQ0)
                     })
                 })
             ]

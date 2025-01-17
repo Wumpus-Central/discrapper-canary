@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return h;
     }
 }),
     n(47120);
@@ -16,10 +16,10 @@ let d = '/users/@me/debug/consumables/',
         [o.FX]: 'HD Streaming Potion',
         [o.D1]: 'Confetti Potion'
     };
-function m() {
+function h() {
     let e,
         [t, n] = (0, a.useState)([]),
-        [m, h] = (0, a.useState)(null),
+        [h, m] = (0, a.useState)(null),
         [x, f] = (0, a.useState)(!1);
     (0, a.useEffect)(
         () => (
@@ -28,11 +28,11 @@ function m() {
                     let e = (await l.tn.get(d)).body.entitlements.map((e) => s.Z.createFromServer(e));
                     n(e);
                 } catch (e) {
-                    h('Failed to fetch entitlements');
+                    m('Failed to fetch entitlements');
                 }
             })(),
             () => {
-                n([]), h(null);
+                n([]), m(null);
             }
         ),
         []
@@ -40,10 +40,10 @@ function m() {
     return (0, r.jsx)('div', {
         className: c.panel,
         children:
-            null != m
+            null != h
                 ? (0, r.jsx)(i.Text, {
                       variant: 'text-md/normal',
-                      children: m
+                      children: h
                   })
                 : (0, r.jsx)(r.Fragment, {
                       children:
@@ -68,7 +68,7 @@ function m() {
                                                             a = new s.Z(r.body.entitlement);
                                                         n([...t, a]);
                                                     } catch (e) {
-                                                        h('Failed to create entitlement');
+                                                        m('Failed to create entitlement');
                                                     } finally {
                                                         f(!1);
                                                     }

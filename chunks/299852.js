@@ -9,9 +9,9 @@ var i,
     d = n(129293),
     u = n(388905),
     h = n(108427),
-    g = n(598077),
-    m = n(896797),
-    f = n(981631),
+    f = n(598077),
+    g = n(896797),
+    m = n(981631),
     p = n(930441),
     x = n(388032),
     _ = n(232186);
@@ -35,7 +35,7 @@ class I extends (i = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         a.tn
             .post({
-                url: f.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -50,7 +50,7 @@ class I extends (i = s.PureComponent) {
                     let {
                             body: { user: n }
                         } = e,
-                        i = new g.Z(n);
+                        i = new f.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -88,7 +88,7 @@ class I extends (i = s.PureComponent) {
                     className: _.marginTop8,
                     color: u.zx.Colors.LINK,
                     look: u.zx.Looks.LINK,
-                    onClick: () => i(f.Z5c.SETTINGS('notifications', p.vG)),
+                    onClick: () => i(m.Z5c.SETTINGS('notifications', p.vG)),
                     children: x.intl.string(x.t.YYTira)
                 })
             ]
@@ -156,4 +156,4 @@ class I extends (i = s.PureComponent) {
             });
     }
 }
-E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(I));
+E(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = o.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(I));

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return y;
     }
 }),
     n(47120);
@@ -14,28 +14,28 @@ var i,
     d = n(447543),
     u = n(587444),
     h = n(393238),
-    g = n(388905),
-    m = n(108427),
-    f = n(314897),
+    f = n(388905),
+    g = n(108427),
+    m = n(314897),
     p = n(701190),
     x = n(626135),
     _ = n(768581),
     E = n(823379),
     I = n(264229),
-    N = n(230224),
-    v = n(617730),
+    v = n(230224),
+    N = n(617730),
     C = n(258356),
     b = n(981631),
-    Z = n(388032),
-    j = n(357070);
-function T() {
+    T = n(388032),
+    Z = n(357070);
+function S() {
     return (0, s.jsx)('div', {
-        className: j.centerFlex,
+        className: Z.centerFlex,
         children: (0, s.jsx)(c.Spinner, {})
     });
 }
 ((r = i || (i = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.DETAILS = 1)] = 'DETAILS'), (r[(r.ERROR = 2)] = 'ERROR');
-let S = (e) => {
+let A = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -57,43 +57,43 @@ let S = (e) => {
             (0, E.vE)(n);
     }
 };
-function A(e) {
+function j(e) {
     let { invite: t, onAcceptInvite: n } = e;
     if ((null == t ? void 0 : t.state) === b.r2o.BANNED)
         return (0, s.jsx)(u.u, {
-            text: Z.intl.string(Z.t['5AkWAQ']),
-            buttonCta: Z.intl.string(Z.t['8osdkp']),
+            text: T.intl.string(T.t['5AkWAQ']),
+            buttonCta: T.intl.string(T.t['8osdkp']),
             onClick: n
         });
     return (0, s.jsx)(u.u, {
-        text: Z.intl.string(Z.t['usP+MT']),
-        buttonCta: Z.intl.string(Z.t['8osdkp']),
+        text: T.intl.string(T.t['usP+MT']),
+        buttonCta: T.intl.string(T.t['8osdkp']),
         onClick: n
     });
 }
 function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, innerStyle: r, ...a } = e,
         { invite: d } = a,
-        [u, g] = l.useState(S(d)),
-        { ref: m, height: f } = (0, h.Z)(),
+        [u, f] = l.useState(A(d)),
+        { ref: g, height: m } = (0, h.Z)(),
         p = (0, c.useSpring)({
-            height: null != f && 0 !== f ? ''.concat(f, 'px') : ''.concat(i, 'px'),
+            height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(i, 'px'),
             config: o.config.stiff
         });
     return (
         l.useEffect(() => {
-            let e = S(d);
-            e !== u && g(e);
+            let e = A(d);
+            e !== u && f(e);
         }, [d, u]),
         (0, s.jsxs)(o.animated.div, {
-            className: j.inviteCard,
+            className: Z.inviteCard,
             style: p,
             children: [
                 (0, s.jsx)(o.animated.div, {
-                    className: j.inviteChildContainer,
+                    className: Z.inviteChildContainer,
                     style: p,
                     children: (0, s.jsx)('section', {
-                        ref: m,
+                        ref: g,
                         className: null == r ? void 0 : r(u),
                         children: t(u)
                     })
@@ -105,7 +105,7 @@ function R(e) {
 }
 function P(e) {
     let { invite: t } = e;
-    if (null == t || !(0, N.JI)(t)) return null;
+    if (null == t || !(0, v.JI)(t)) return null;
     let n = (e) => {
         if (null == t) return null;
         if (1 === e) return (0, s.jsx)(C.X, { invite: t });
@@ -113,7 +113,7 @@ function P(e) {
     };
     return (0, s.jsx)(R, {
         startAnimHeightPx: 0,
-        innerStyle: () => j.guildInfoInner,
+        innerStyle: () => Z.guildInfoInner,
         ...e,
         children: (e) => n(e)
     });
@@ -121,26 +121,26 @@ function P(e) {
 function L(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, s.jsx)(T, {});
+            if (null == t) return (0, s.jsx)(S, {});
             switch (n) {
                 case 1:
-                    return (0, s.jsx)(v.Z, {
+                    return (0, s.jsx)(N.Z, {
                         ...e,
                         invite: t
                     });
                 case 2:
-                    return (0, s.jsx)(A, {
+                    return (0, s.jsx)(j, {
                         ...e,
                         invite: t
                     });
                 default:
-                    return (0, s.jsx)(T, {});
+                    return (0, s.jsx)(S, {});
             }
         },
         i = {
-            1: j.inviteCardInner,
-            2: j.inviteCardInnerError,
-            0: j.inviteCardInnerLoading
+            1: Z.inviteCardInner,
+            2: Z.inviteCardInnerError,
+            0: Z.inviteCardInnerLoading
         };
     return (0, s.jsx)(R, {
         startAnimHeightPx: 200,
@@ -149,7 +149,7 @@ function L(e) {
         children: (e) => n(e)
     });
 }
-function y(e) {
+function O(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: i } = null != t ? t : {},
         r = {};
@@ -160,11 +160,11 @@ function y(e) {
         });
         null != e && ((r.backgroundImage = 'url('.concat(e, ')')), (r.backgroundSize = 'cover'));
     }
-    return (0, s.jsxs)(g.ZP, {
+    return (0, s.jsxs)(f.ZP, {
         theme: b.BRd.DARK,
-        className: j.splashBackground,
+        className: Z.splashBackground,
         style: r,
-        contentClassName: j.centerAuthBoxContent,
+        contentClassName: Z.centerAuthBoxContent,
         children: [
             (0, s.jsx)(L, {
                 ...e,
@@ -174,12 +174,12 @@ function y(e) {
         ]
     });
 }
-function O(e) {
+function y(e) {
     let { inviteKey: t, transitionTo: n } = e,
         i = (0, a.e7)([p.Z], () => p.Z.getInvite(t));
     return (
         l.useEffect(() => {
-            (0, m.e)('invite_mobile');
+            (0, g.e)('invite_mobile');
         }, []),
         l.useEffect(() => {
             null != i &&
@@ -193,7 +193,7 @@ function O(e) {
                     { flush: !0 }
                 );
         }, [i, t]),
-        (0, s.jsx)(y, {
+        (0, s.jsx)(O, {
             invite: i,
             onAcceptInvite: (e) => {
                 !(function (e, t, n) {
@@ -206,8 +206,8 @@ function O(e) {
                             inviter_id: null == n ? void 0 : null === (s = n.inviter) || void 0 === s ? void 0 : s.id
                         });
                     let l = null != n && n.state !== b.r2o.EXPIRED && n.state !== b.r2o.BANNED ? t : void 0,
-                        o = f.default.getFingerprint(),
-                        a = null != o ? o : f.default.getId(),
+                        o = m.default.getFingerprint(),
+                        a = null != o ? o : m.default.getId(),
                         c = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
                     d.Z.openApp(l, void 0, a, void 0, c);
                 })(e, t, i);

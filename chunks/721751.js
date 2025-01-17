@@ -9,17 +9,17 @@ var r = n(200651),
     d = n(481060),
     u = n(980591),
     h = n(605782),
-    g = n(133853),
-    m = n(568154),
-    f = n(353926),
+    f = n(133853),
+    g = n(568154),
+    m = n(353926),
     p = n(703656),
     x = n(981631),
     _ = n(687000);
 let E = n(575703),
     I = n(2984),
-    N = [x.Z5c.LOGIN, x.Z5c.LOGIN_HANDOFF, x.Z5c.REGISTER, x.Z5c.INVITE(''), x.Z5c.GIFT_CODE(''), x.Z5c.GUILD_TEMPLATE_LOGIN(''), x.Z5c.GUILD_TEMPLATE(''), x.Z5c.DISABLE_EMAIL_NOTIFICATIONS, x.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, x.Z5c.BILLING_PREMIUM_SUBSCRIBE, x.Z5c.BILLING_PAYMENT_SOURCES_CREATE, x.Z5c.BILLING_PAYMENTS, x.Z5c.BILLING_PREMIUM_SWITCH_PLAN, x.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, x.Z5c.VERIFY, x.Z5c.VERIFY_HUB_EMAIL, x.Z5c.REJECT_IP, x.Z5c.REJECT_MFA, x.Z5c.AUTHORIZE_IP, x.Z5c.AUTHORIZE_PAYMENT, x.Z5c.RESET, x.Z5c.HANDOFF, x.Z5c.REPORT, x.Z5c.REPORT_SECOND_LOOK, x.Z5c.ACCOUNT_REVERT('')];
-function v(e) {
-    return N.some((t) => e.startsWith(t));
+    v = [x.Z5c.LOGIN, x.Z5c.LOGIN_HANDOFF, x.Z5c.REGISTER, x.Z5c.INVITE(''), x.Z5c.GIFT_CODE(''), x.Z5c.GUILD_TEMPLATE_LOGIN(''), x.Z5c.GUILD_TEMPLATE(''), x.Z5c.DISABLE_EMAIL_NOTIFICATIONS, x.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, x.Z5c.BILLING_PREMIUM_SUBSCRIBE, x.Z5c.BILLING_PAYMENT_SOURCES_CREATE, x.Z5c.BILLING_PAYMENTS, x.Z5c.BILLING_PREMIUM_SWITCH_PLAN, x.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, x.Z5c.VERIFY, x.Z5c.VERIFY_HUB_EMAIL, x.Z5c.REJECT_IP, x.Z5c.REJECT_MFA, x.Z5c.AUTHORIZE_IP, x.Z5c.AUTHORIZE_PAYMENT, x.Z5c.RESET, x.Z5c.HANDOFF, x.Z5c.REPORT, x.Z5c.REPORT_SECOND_LOOK, x.Z5c.ACCOUNT_REVERT('')];
+function N(e) {
+    return v.some((t) => e.startsWith(t));
 }
 let C = (e) => ((i = e), e);
 function b(e) {
@@ -31,7 +31,7 @@ function b(e) {
                 l = (function () {
                     return null;
                 })(),
-                o = (0, c.e7)([f.Z], () => f.Z.hasLoadedExperiments);
+                o = (0, c.e7)([m.Z], () => m.Z.hasLoadedExperiments);
             return ((0, u.Z)(() => {}, 300), void 0 !== i)
                 ? i
                 : !n && o
@@ -67,7 +67,7 @@ function b(e) {
             return null;
     }
 }
-class Z extends s.Component {
+class T extends s.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -75,14 +75,14 @@ class Z extends s.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (v(e)) (0, p.uL)(e, t);
+        if (N(e)) (0, p.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        v(e) ? (0, p.dL)(e) : (window.location = e);
+        N(e) ? (0, p.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -103,11 +103,11 @@ class Z extends s.Component {
                     null != e
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(g.Z, {
+                                  (0, r.jsx)(f.Z, {
                                       show: !0,
                                       className: o()(_.logo)
                                   }),
-                                  (0, r.jsx)(m.h, {
+                                  (0, r.jsx)(g.h, {
                                       splash: e,
                                       children: t
                                   })
@@ -152,4 +152,4 @@ class Z extends s.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-t.Z = Z;
+t.Z = T;

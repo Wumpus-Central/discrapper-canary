@@ -10,8 +10,8 @@ var r = n(200651),
     o = n(481060),
     s = n(941469);
 function c(e) {
-    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        h = a.useMemo(
+    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
+        m = a.useMemo(
             () =>
                 t.map((e) => ({
                     renderHeader: () =>
@@ -38,7 +38,7 @@ function c(e) {
                     'div',
                     {
                         className: a,
-                        children: h.map((e) => {
+                        children: m.map((e) => {
                             var a, l;
                             let o = i()(e.cellClassName),
                                 s = { width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)') };
@@ -56,7 +56,7 @@ function c(e) {
                     'dev-tools-header-'.concat(t)
                 );
             },
-            rowHeight: m,
+            rowHeight: h,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
                     a = n[t],
@@ -70,12 +70,12 @@ function c(e) {
                     {
                         className: x,
                         onClick: () => (null == d ? void 0 : d(a)),
-                        children: h.map((e) => {
+                        children: m.map((e) => {
                             var n, l;
                             let o = i()(e.cellClassName),
                                 s = {
                                     width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)'),
-                                    height: 'calc('.concat(m, 'px - ').concat(16, 'px)')
+                                    height: 'calc('.concat(h, 'px - ').concat(16, 'px)')
                                 };
                             return (0, r.jsx)(
                                 'div',

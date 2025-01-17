@@ -78,8 +78,8 @@ var r,
     c = n(764160),
     d = n(808131),
     u = n(757028),
-    m = n(694626),
-    h = n(855930),
+    h = n(694626),
+    m = n(855930),
     x = n(385787),
     f = n(566162),
     p = n(567027),
@@ -87,22 +87,22 @@ var r,
     g = n(857702),
     v = n(20450),
     j = n(312976),
-    C = n(147591),
-    T = n(135164),
+    T = n(147591),
+    C = n(135164),
     _ = n(940172),
     S = n(81011),
     N = n(981613),
     y = n(762399),
-    k = n(232112),
-    I = n(53796),
+    I = n(232112),
+    k = n(53796),
     E = n(402332),
     w = n(375924),
     Z = n(596136),
     R = n(341901),
     O = n(856308),
     B = n(665352),
-    L = n(394900),
-    P = n(661105),
+    P = n(394900),
+    L = n(661105),
     A = n(525169),
     D = n(433517),
     F = n(190558),
@@ -112,8 +112,8 @@ let H = {
         A98RGB: c.Z,
         ACEScc: d.Z,
         ACEScg: u.Z,
-        HPLuv: m.Z,
-        HSL: h.Z,
+        HPLuv: h.Z,
+        HSL: m.Z,
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
@@ -121,14 +121,14 @@ let H = {
         JzCzHz: g.Z,
         Jzazbz: v.Z,
         LCH: j.Z,
-        LCHuv: C.Z,
-        Lab: T.Z,
+        LCHuv: T.Z,
+        Lab: C.Z,
         Lab_D65: _.Z,
         Luv: S.Z,
         OKLCH: N.Z,
         OKLab: y.Z,
-        P3: k.Z,
-        ProPhoto: I.Z,
+        P3: I.Z,
+        ProPhoto: k.Z,
         REC_2020: E.Z,
         REC_2100_HLG: w.Z,
         REC_2100_PQ: Z.Z,
@@ -188,7 +188,7 @@ function X(e) {
     };
 }
 function q(e) {
-    return (0, L.Z)((0, P.Z)(e, s.Z), { format: 'hex' });
+    return (0, P.Z)((0, L.Z)(e, s.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -239,7 +239,7 @@ function et(e, t) {
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
         o = H[e.colorSpace],
-        c = (0, P.Z)(n, o),
+        c = (0, L.Z)(n, o),
         d = (0, A.CD)(c, 'white', 1 - a, {
             space: o,
             outputSpace: s.Z
@@ -248,28 +248,28 @@ function en(e) {
             space: o,
             outputSpace: s.Z
         }),
-        m = Math.floor(r / 2),
-        h = r - m,
+        h = Math.floor(r / 2),
+        m = r - h,
         x = (0, A.w6)(d, c, {
-            steps: m,
-            outputSpace: o,
-            space: o,
-            progression: (e) => e ** i
-        }),
-        f = (0, A.w6)(u, c, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
+        f = (0, A.w6)(u, c, {
+            steps: m,
+            outputSpace: o,
+            space: o,
+            progression: (e) => e ** i
+        }),
         p = [];
-    for (let e = 0; e < m; e++) {
-        let t = x(e / m);
+    for (let e = 0; e < h; e++) {
+        let t = x(e / h);
         p.push(t);
     }
     p.push(c);
-    for (let e = 1; e < h; e++) {
-        let t = f(1 - e / h);
+    for (let e = 1; e < m; e++) {
+        let t = f(1 - e / m);
         p.push(t);
     }
     return Object.fromEntries(p.map((e, n) => [''.concat(t, '-').concat(n), e]));

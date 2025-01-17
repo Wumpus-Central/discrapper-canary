@@ -14,9 +14,9 @@ var i = n(200651),
     d = n(108427),
     u = n(844800),
     h = n(580497),
-    g = n(981631),
-    m = n(388032),
-    f = n(841094);
+    f = n(981631),
+    g = n(388032),
+    m = n(841094);
 function p(e) {
     let { location: t } = e,
         [p, x] = r.useState(!1),
@@ -25,24 +25,24 @@ function p(e) {
         let e = (0, o.Z)(t);
         l.Z.verify(e), (0, d.e)('verify_hub_email');
     }, [t]);
-    let N = () => {
+    let v = () => {
         (0, h.Z)(I), x(!0);
     };
     return p
         ? (0, i.jsxs)(a.ZP, {
               children: [
                   (0, i.jsx)(a.Dx, {
-                      className: f.title,
-                      children: m.intl.string(m.t.csrAMD)
+                      className: m.title,
+                      children: g.intl.string(g.t.csrAMD)
                   }),
                   (0, i.jsx)(a.DK, {
-                      className: f.subtitle,
-                      children: m.intl.string(m.t['m1+IBg'])
+                      className: m.subtitle,
+                      children: g.intl.string(g.t['m1+IBg'])
                   }),
                   (0, i.jsx)(a.zx, {
-                      className: f.spacedButton,
-                      onClick: () => (0, c.uL)(g.Z5c.CHANNEL(I)),
-                      children: m.intl.string(m.t.fIv16O)
+                      className: m.spacedButton,
+                      onClick: () => (0, c.uL)(f.Z5c.CHANNEL(I)),
+                      children: g.intl.string(g.t.fIv16O)
                   })
               ]
           })
@@ -50,16 +50,16 @@ function p(e) {
           ? (0, i.jsxs)(a.ZP, {
                 children: [
                     (0, i.jsx)(a.Ee, {
-                        className: f.image,
+                        className: m.image,
                         src: n(73962)
                     }),
                     (0, i.jsx)(a.Dx, {
-                        className: f.title,
-                        children: m.intl.string(m.t.dAfGb2)
+                        className: m.title,
+                        children: g.intl.string(g.t.dAfGb2)
                     }),
                     (0, i.jsx)(a.zx, {
-                        onClick: N,
-                        children: m.intl.string(m.t.uJWIj4)
+                        onClick: v,
+                        children: g.intl.string(g.t.uJWIj4)
                     })
                 ]
             })
@@ -67,36 +67,36 @@ function p(e) {
             ? (0, i.jsxs)(a.ZP, {
                   children: [
                       (0, i.jsx)(a.Ee, {
-                          className: f.image,
+                          className: m.image,
                           src: n(375673)
                       }),
                       (0, i.jsx)(a.Dx, {
-                          className: f.title,
-                          children: m.intl.string(m.t.PCgG39)
+                          className: m.title,
+                          children: g.intl.string(g.t.PCgG39)
                       }),
                       (0, i.jsx)(a.DK, {
-                          className: f.subtitle,
-                          children: m.intl.string(m.t.tQpeAw)
+                          className: m.subtitle,
+                          children: g.intl.string(g.t.tQpeAw)
                       }),
                       (0, i.jsx)(a.zx, {
-                          onClick: N,
-                          children: m.intl.string(m.t.uJWIj4)
+                          onClick: v,
+                          children: g.intl.string(g.t.uJWIj4)
                       })
                   ]
               })
             : (0, i.jsxs)(a.ZP, {
                   children: [
                       (0, i.jsx)(a.Ee, {
-                          className: f.image,
+                          className: m.image,
                           src: n(892235)
                       }),
                       (0, i.jsx)(a.Dx, {
-                          className: f.title,
-                          children: m.intl.string(m.t['0c8+5u'])
+                          className: m.title,
+                          children: g.intl.string(g.t['0c8+5u'])
                       }),
                       (0, i.jsx)(a.DK, {
-                          className: f.subtitle,
-                          children: m.intl.string(m.t.ULTCBA)
+                          className: m.subtitle,
+                          children: g.intl.string(g.t.ULTCBA)
                       }),
                       (0, i.jsx)(a.zx, {
                           submitting: !0,

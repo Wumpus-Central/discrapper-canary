@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return I;
     }
 }),
     n(47120);
@@ -13,8 +13,8 @@ var r = n(200651),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    m = n(481060),
-    h = n(570140),
+    h = n(481060),
+    m = n(570140),
     x = n(665149),
     f = n(55935),
     p = n(120816),
@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(257785),
     v = n(484036),
     j = n(681619),
-    C = n(621060),
-    T = n(388032),
+    T = n(621060),
+    C = n(388032),
     _ = n(931933),
     S = n(941469);
 let N = [
@@ -67,7 +67,7 @@ let N = [
                             className: i()(S.headerBar, _.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
-                                    icon: m.AnalyticsIcon,
+                                    icon: h.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(x.ZP.Title, { children: t })
@@ -124,17 +124,17 @@ let N = [
             }
         }
     ];
-function k() {
+function I() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, u.Wu)([p.Z], () => p.Z.loggedTriggers),
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
-        k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        I = a.useCallback((e) => {
-            h.Z.dispatch({
+        { TabBar: f, renderSelectedTab: g } = (0, T.Z)({ tabs: y }, []),
+        I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
+        k = a.useCallback((e) => {
+            m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
@@ -149,27 +149,27 @@ function k() {
                     (0, r.jsx)('div', {
                         title: 'Enables tracking of all triggers',
                         className: _.triggersEnable,
-                        children: (0, r.jsx)(m.Switch, {
-                            checked: k,
-                            onChange: I,
+                        children: (0, r.jsx)(h.Switch, {
+                            checked: I,
+                            onChange: k,
                             className: _.__invalid_toolbarSwitch
                         })
                     }),
-                    (0, r.jsx)(m.Button, {
+                    (0, r.jsx)(h.Button, {
                         className: _.toolbarButton,
-                        look: m.Button.Looks.BLANK,
-                        size: m.Button.Sizes.ICON,
+                        look: h.Button.Looks.BLANK,
+                        size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: T.intl.string(T.t.VkKicX),
-                            children: (0, r.jsx)(m.TrashIcon, {
+                            title: C.intl.string(C.t.VkKicX),
+                            children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': T.intl.string(T.t.VkKicX)
+                                'aria-label': C.intl.string(C.t.VkKicX)
                             })
                         })
                     }),
-                    (0, r.jsx)(m.SearchBar, {
+                    (0, r.jsx)(h.SearchBar, {
                         className: _.searchBar,
                         query: e,
                         onChange: t,

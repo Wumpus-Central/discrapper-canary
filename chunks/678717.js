@@ -15,8 +15,8 @@ var r = n(200651),
     c = n(481060),
     d = n(347469),
     u = n(213609),
-    m = n(213713),
-    h = n(665149),
+    h = n(213713),
+    m = n(665149),
     x = n(906467),
     f = n(259580),
     p = n(31336),
@@ -25,22 +25,22 @@ var r = n(200651),
 n(381996);
 var v = n(392750),
     j = n(926976),
-    C = n(592197),
-    T = n(806240),
+    T = n(592197),
+    C = n(806240),
     _ = n(789654),
     S = n(719672),
     N = n(691867),
     y = n(916790),
-    k = n(645973),
-    I = n(903502),
+    I = n(645973),
+    k = n(903502),
     E = n(912072),
     w = n(272193),
     Z = n(735959),
     R = n(246992),
     O = n(496025),
     B = n(442954),
-    L = n(633001),
-    P = n(702904),
+    P = n(633001),
+    L = n(702904),
     A = n(178821),
     D = n(248526),
     F = n(958328),
@@ -109,12 +109,12 @@ function $() {
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, r.jsx)(k.Z, {})
+                        render: () => (0, r.jsx)(I.Z, {})
                     }),
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(T.Z, {})
+                        render: () => (0, r.jsx)(C.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -124,12 +124,12 @@ function $() {
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        render: () => (0, r.jsx)(I.Z, {})
+                        render: () => (0, r.jsx)(k.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
-                        render: () => (0, r.jsx)(L.Z, {})
+                        render: () => (0, r.jsx)(P.Z, {})
                     })),
                 e.push({
                     id: 'intl',
@@ -180,7 +180,7 @@ function $() {
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, r.jsx)(m.Z, {})
+                        render: () => (0, r.jsx)(h.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
@@ -201,7 +201,7 @@ function $() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -211,7 +211,7 @@ function $() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(C.Z, {})
+                        render: () => (0, r.jsx)(T.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
@@ -243,19 +243,19 @@ function $() {
         }),
         (0, r.jsxs)(R.Gk, {
             children: [
-                (0, r.jsxs)(h.ZP, {
+                (0, r.jsxs)(m.ZP, {
                     className: X.headerBar,
-                    toolbar: (0, r.jsx)(h.ZP.Icon, {
+                    toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: c.XSmallIcon,
                         tooltip: K.intl.string(K.t.cpT0Cg),
                         onClick: p.SO
                     }),
                     children: [
-                        (0, r.jsx)(h.ZP.Icon, {
+                        (0, r.jsx)(m.ZP.Icon, {
                             icon: c.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, r.jsx)(n, {}),
@@ -310,15 +310,15 @@ function Q() {
               className: Y.container,
               children: (0, r.jsx)(c.Clickable, {
                   onClick: p.SO,
-                  children: (0, r.jsxs)(h.ZP, {
+                  children: (0, r.jsxs)(m.ZP, {
                       className: i()(X.headerBar, Y.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, r.jsx)(h.ZP.Icon, {
+                          (0, r.jsx)(m.ZP.Icon, {
                               icon: c.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, r.jsx)(h.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

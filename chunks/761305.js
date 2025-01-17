@@ -9,9 +9,9 @@ var i,
     d = n(601964),
     u = n(896797),
     h = n(129293),
-    g = n(388905),
-    m = n(981631),
-    f = n(388032),
+    f = n(388905),
+    g = n(981631),
+    m = n(388032),
     p = n(232186);
 function x(e, t, n) {
     return (
@@ -33,7 +33,7 @@ class _ extends (i = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         a.tn
             .post({
-                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: g.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -63,52 +63,52 @@ class _ extends (i = s.PureComponent) {
             (0, c.e)('disable_server_highlight_notifications');
     }
     renderBusy() {
-        return (0, r.jsx)(g.ZP, { children: (0, r.jsx)(g.Hh, {}) });
+        return (0, r.jsx)(f.ZP, { children: (0, r.jsx)(f.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
-                (0, r.jsx)(g.Dx, {
+                (0, r.jsx)(f.Dx, {
                     className: p.marginBottom8,
-                    children: f.intl.string(f.t.Z33eiI)
+                    children: m.intl.string(m.t.Z33eiI)
                 }),
-                (0, r.jsx)(g.DK, { children: f.intl.format(f.t.NRWtfH, { guildName: n.name }) }),
-                (0, r.jsx)(g.zx, {
+                (0, r.jsx)(f.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
+                (0, r.jsx)(f.zx, {
                     className: p.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O)
+                    children: m.intl.string(m.t.fIv16O)
                 }),
-                (0, r.jsx)(g.zx, {
+                (0, r.jsx)(f.zx, {
                     className: p.marginTop8,
-                    color: g.zx.Colors.LINK,
-                    look: g.zx.Looks.LINK,
+                    color: f.zx.Colors.LINK,
+                    look: f.zx.Looks.LINK,
                     onClick: () => {
-                        t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(g.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: f.intl.string(f.t['cGmT/P'])
+                    children: m.intl.string(m.t['cGmT/P'])
                 })
             ]
         });
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(g.ZP, {
+        return (0, r.jsxs)(f.ZP, {
             children: [
-                (0, r.jsx)(g.Ee, {
+                (0, r.jsx)(f.Ee, {
                     src: n(105020),
                     className: p.marginBottom20
                 }),
-                (0, r.jsx)(g.Dx, {
+                (0, r.jsx)(f.Dx, {
                     className: p.marginBottom8,
-                    children: f.intl.string(f.t.ox9hIS)
+                    children: m.intl.string(m.t.ox9hIS)
                 }),
-                (0, r.jsx)(g.DK, { children: f.intl.string(f.t['/dcuR0']) }),
-                (0, r.jsx)(g.zx, {
+                (0, r.jsx)(f.DK, { children: m.intl.string(m.t['/dcuR0']) }),
+                (0, r.jsx)(f.zx, {
                     className: p.marginTop40,
                     onClick: () => t(e),
-                    children: f.intl.string(f.t.fIv16O)
+                    children: m.intl.string(m.t.fIv16O)
                 })
             ]
         });

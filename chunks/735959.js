@@ -13,25 +13,25 @@ var r = n(200651),
     c = n(442837),
     d = n(481060),
     u = n(424395),
-    m = n(665149),
-    h = n(706454),
+    h = n(665149),
+    m = n(706454),
     x = n(428530),
     f = n(257785),
     p = n(388032);
 function b() {
-    let e = (0, c.e7)([h.default], () => h.default.locale),
+    let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
         b = a.useMemo(() => p.t[i], [i]);
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsxs)(m.ZP, {
+            (0, r.jsxs)(h.ZP, {
                 children: [
-                    (0, r.jsx)(m.ZP.Icon, {
+                    (0, r.jsx)(h.ZP.Icon, {
                         icon: d.LanguageIcon,
                         tooltip: 'Locale'
                     }),
-                    (0, r.jsx)(m.ZP.Title, { children: 'Locale' })
+                    (0, r.jsx)(h.ZP.Title, { children: 'Locale' })
                 ]
             }),
             (0, r.jsxs)(f.E, {
@@ -58,13 +58,13 @@ function b() {
                     })
                 ]
             }),
-            (0, r.jsxs)(m.ZP, {
+            (0, r.jsxs)(h.ZP, {
                 children: [
-                    (0, r.jsx)(m.ZP.Icon, {
+                    (0, r.jsx)(h.ZP.Icon, {
                         icon: d.LanguageIcon,
                         tooltip: 'Messages'
                     }),
-                    (0, r.jsx)(m.ZP.Title, { children: 'New System Messages' })
+                    (0, r.jsx)(h.ZP.Title, { children: 'New System Messages' })
                 ]
             }),
             (0, r.jsx)(d.TextInput, {

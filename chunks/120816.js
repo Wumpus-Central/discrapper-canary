@@ -8,15 +8,15 @@ var r,
     c = n(442837),
     d = n(570140),
     u = n(314897),
-    m = n(906467);
-let h = 0,
+    h = n(906467);
+let m = 0,
     x = [],
     f = 0,
     p = [],
     b = !1;
 class g extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z);
+        this.waitFor(h.Z);
     }
     get loggedEvents() {
         return x;
@@ -43,10 +43,10 @@ class g extends (r = c.ZP.Store) {
     (t.Z = new g(d.Z, {
         TRACK: function (e) {
             let { event: t, properties: n, fingerprint: r } = e;
-            if (m.Z.isDeveloper) {
+            if (h.Z.isDeveloper) {
                 var a;
                 x.push({
-                    key: (h++).toString(),
+                    key: (m++).toString(),
                     event: t,
                     properties: n,
                     fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
@@ -58,7 +58,7 @@ class g extends (r = c.ZP.Store) {
         },
         TRACK_TRIGGER: function (e) {
             let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
-            if (!!m.Z.isDeveloper)
+            if (!!h.Z.isDeveloper)
                 b &&
                     (p = [
                         ...p,

@@ -124,8 +124,8 @@ let e4 = !1;
     s.ZP.initialize(),
     eE.Z.loadServer(),
     eq.isPlatformEmbedded &&
-        (eX.ZP.on('USER_SETTINGS_OPEN', () => {
-            !eG.Z.getLayers().includes(eJ.S9g.USER_SETTINGS) && p.Z.open(eJ.oAB.ACCOUNT);
+        (eX.ZP.on('USER_SETTINGS_OPEN', (e, t) => {
+            !eG.Z.getLayers().includes(eJ.S9g.USER_SETTINGS) && p.Z.open(null != t ? t : eJ.oAB.ACCOUNT);
         }),
         eX.ZP.on('LAUNCH_APPLICATION', (e, t) => {
             let n = eB.Z.getActiveLibraryApplication(t);

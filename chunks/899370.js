@@ -8,17 +8,17 @@ var i,
     d = n(358085),
     u = n(723359);
 let h = null,
-    g = 'underage';
-class m extends (l = a.ZP.Store) {
+    f = 'underage';
+class g extends (l = a.ZP.Store) {
     isUnderageAnonymous() {
         if (d.isPlatformEmbedded) {
             if (null != h && h + u.k0 > Date.now()) return !0;
-        } else return null != o.parse(document.cookie)[g];
+        } else return null != o.parse(document.cookie)[f];
         return !1;
     }
 }
 (s = 'AgeGateStore'),
-    (r = 'displayName') in (i = m)
+    (r = 'displayName') in (i = g)
         ? Object.defineProperty(i, r, {
               value: s,
               enumerable: !0,
@@ -26,13 +26,13 @@ class m extends (l = a.ZP.Store) {
               writable: !0
           })
         : (i[r] = s),
-    (t.Z = new m(c.Z, {
+    (t.Z = new g(c.Z, {
         AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
             h = Date.now();
-            document.cookie = ''.concat(g, '=1;path=/');
+            document.cookie = ''.concat(f, '=1;path=/');
         },
         LOGIN_SUCCESS: function () {
             h = null;
-            document.cookie = ''.concat(g, '=1;path=/;max-age=0');
+            document.cookie = ''.concat(f, '=1;path=/;max-age=0');
         }
     }));
