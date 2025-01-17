@@ -80,11 +80,11 @@ function B(e) {
 function G() {
     N = 1;
 }
-function F(e) {
+function Z(e) {
     let { soundboardSounds: n } = e;
     y.set(v.X8, n), (N = 2);
 }
-function Z(e) {
+function F(e) {
     var n, r, i;
     let { soundId: a, userId: s } = e,
         o = (null !== (r = S.get(a)) && void 0 !== r ? r : 0) + 1,
@@ -198,13 +198,13 @@ b(q, 'displayName', 'SoundboardStore'),
         GUILD_SOUNDBOARD_SOUND_CREATE: k,
         GUILD_SOUNDBOARD_SOUND_UPDATE: k,
         GUILD_SOUNDBOARD_SOUND_DELETE: B,
-        GUILD_SOUNDBOARD_SOUND_PLAY_START: Z,
+        GUILD_SOUNDBOARD_SOUND_PLAY_START: F,
         GUILD_SOUNDBOARD_SOUND_PLAY_END: V,
         USER_SOUNDBOARD_SET_VOLUME: H,
         VOICE_CHANNEL_SELECT: x,
         USER_SETTINGS_PROTO_UPDATE: W,
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: G,
-        SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: F,
+        SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: Z,
         SOUNDBOARD_SOUNDS_RECEIVED: P,
         GUILD_DELETE: M,
         AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: K,

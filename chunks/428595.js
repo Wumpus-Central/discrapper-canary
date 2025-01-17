@@ -5,7 +5,7 @@ var o = r(392711),
     l = r.n(o),
     u = r(477660),
     c = r.n(u),
-    d = r(797610),
+    d = r(927723),
     f = r(633302),
     _ = r(11637),
     h = r(592125),
@@ -34,7 +34,7 @@ let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     U = /^ *>>> ?/,
     B = /^ *> ?/gm,
     G = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-function F(e) {
+function Z(e) {
     let n = (0, b.yw)(e[1]);
     if (null == n)
         return {
@@ -54,11 +54,11 @@ function F(e) {
         title: void 0
     };
 }
-let Z = (e) => {
+let F = (e) => {
         let n = h.Z.getChannel(e);
         return null == n ? void 0 : n.getGuildId();
     },
-    V = (e) => (null != e.guildId ? p.Z.getGuild(e.guildId) : null != e.channelId ? p.Z.getGuild(Z(e.channelId)) : null),
+    V = (e) => (null != e.guildId ? p.Z.getGuild(e.guildId) : null != e.channelId ? p.Z.getGuild(F(e.channelId)) : null),
     j = {
         newline: c().defaultRules.newline,
         paragraph: c().defaultRules.paragraph,
@@ -103,7 +103,7 @@ let Z = (e) => {
         link: b.ZP,
         autolink: {
             ...c().defaultRules.autolink,
-            parse: F
+            parse: Z
         },
         url: {
             ...c().defaultRules.url,
@@ -126,7 +126,7 @@ let Z = (e) => {
                 }
                 return r;
             },
-            parse: F
+            parse: Z
         },
         strong: c().defaultRules.strong,
         em: c().defaultRules.em,
@@ -375,7 +375,7 @@ let Z = (e) => {
                     itemContent: u(l),
                     itemId: s,
                     id: a,
-                    guildId: Z(r.channelId),
+                    guildId: F(r.channelId),
                     channelId: a
                 };
             }

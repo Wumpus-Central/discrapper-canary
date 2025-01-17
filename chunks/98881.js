@@ -39,8 +39,8 @@ var i = r(288377),
     U = r(788654),
     B = r(770003),
     G = r(192379),
-    F = r(661763),
-    Z = r(649859);
+    Z = r(661763),
+    F = r(649859);
 function V(e) {
     return e && e.__esModule ? e.default : e;
 }
@@ -48,7 +48,7 @@ var j = {};
 function H(e) {
     let n = (0, G.useRef)(),
         { value: r, textValue: i, minValue: a, maxValue: s, isDisabled: o, isReadOnly: l, isRequired: u, onIncrement: c, onIncrementPage: d, onDecrement: f, onDecrementPage: _, onDecrementToMin: h, onIncrementToMax: p } = e,
-        m = (0, Z.qb)(V(j), '@react-aria/spinbutton'),
+        m = (0, F.qb)(V(j), '@react-aria/spinbutton'),
         g = () => clearTimeout(n.current);
     (0, G.useEffect)(() => () => g(), []);
     let E = (e) => {
@@ -90,14 +90,14 @@ function H(e) {
         (0, G.useEffect)(() => {
             v.current && ((0, B.gb)('assertive'), (0, B.xQ)(i, 'assertive'));
         }, [i]);
-    let b = (0, F.iW)((e) => {
+    let b = (0, Z.iW)((e) => {
             g(),
                 c(),
                 (n.current = window.setTimeout(() => {
                     (isNaN(s) || isNaN(r) || r < s) && b(60);
                 }, e));
         }),
-        y = (0, F.iW)((e) => {
+        y = (0, Z.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
@@ -107,7 +107,7 @@ function H(e) {
         S = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: A, removeAllGlobalListeners: N } = (0, F.xi)();
+        { addGlobalListener: A, removeAllGlobalListeners: N } = (0, Z.xi)();
     return {
         spinButtonProps: {
             role: 'spinbutton',

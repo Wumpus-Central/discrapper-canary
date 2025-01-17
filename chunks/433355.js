@@ -129,7 +129,7 @@ function G(e) {
     if (null == r || r.type !== l.tI.VIEW_THREAD || r.channelId !== n.id) return !1;
     delete N[n.parent_id];
 }
-function F(e) {
+function Z(e) {
     var n;
     let { channel: r } = e;
     if (r.ownerId === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
@@ -142,7 +142,7 @@ function F(e) {
             channelId: r.id
         });
 }
-function Z() {
+function F() {
     let e = !1;
     for (let n in N) {
         let r = N[n];
@@ -171,7 +171,7 @@ class Y extends (i = s.ZP.PersistedStore) {
             var n, r, i, a, s;
             (b = null !== (n = e.isMembersOpen) && void 0 !== n && n), (y = null !== (r = e.isSummariesOpen) && void 0 !== r && r), (S = null === (i = e.isProfileOpen) || void 0 === i || i), (N = null !== (a = e.sidebars) && void 0 !== a ? a : {}), (C = null !== (s = e.guildSidebars) && void 0 !== s ? s : {});
         }
-        this.syncWith([_.Z], j), this.syncWith([f.Z], Z);
+        this.syncWith([_.Z], j), this.syncWith([f.Z], F);
     }
     getState() {
         return {
@@ -221,6 +221,6 @@ I(Y, 'displayName', 'ChannelSectionStore'),
         SIDEBAR_CLOSE_GUILD: M,
         CHANNEL_DELETE: B,
         CHANNEL_SELECT: H,
-        THREAD_CREATE: F,
+        THREAD_CREATE: Z,
         THREAD_DELETE: G
     }));

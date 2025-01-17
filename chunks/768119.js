@@ -185,11 +185,11 @@ function G(e) {
         e
     );
 }
-function F(e) {
+function Z(e) {
     let { searchId: n, showBlocked: r } = e;
     v(n).showBlockedResults = r;
 }
-function Z() {
+function F() {
     Object.keys(E).forEach((e) => {
         null != E[e] && (E[e].searchType = I(e));
     });
@@ -297,7 +297,7 @@ m(H, 'displayName', 'SearchStore'),
         SEARCH_EDITOR_STATE_CLEAR: w,
         SEARCH_ENSURE_SEARCH_STATE: R,
         SEARCH_EDITOR_STATE_CHANGE: C,
-        SEARCH_SET_SHOW_BLOCKED_RESULTS: F,
+        SEARCH_SET_SHOW_BLOCKED_RESULTS: Z,
         SEARCH_SCREEN_OPEN: k,
         CHANNEL_SELECT: M,
         CHANNEL_TOGGLE_MEMBERS_SECTION: j,
@@ -305,5 +305,5 @@ m(H, 'displayName', 'SearchStore'),
         SEARCH_REMOVE_HISTORY: B,
         SEARCH_ADD_HISTORY: D,
         LOGOUT: V,
-        CONNECTION_OPEN: Z
+        CONNECTION_OPEN: F
     }));

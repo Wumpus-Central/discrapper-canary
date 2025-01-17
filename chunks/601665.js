@@ -41,12 +41,12 @@ function O(e) {
         }),
         B = (0, m.ZP)(n.id, i),
         G = (0, o.e7)([_.Z], () => (null != i ? _.Z.getGuild(i) : null)),
-        F = (0, o.e7)([f.ZP], () => (null != i ? f.ZP.getMember(i, n.id) : null)),
-        Z = s.useRef(null),
-        V = (0, u.Z)(Z);
+        Z = (0, o.e7)([f.ZP], () => (null != i ? f.ZP.getMember(i, n.id) : null)),
+        F = s.useRef(null),
+        V = (0, u.Z)(F);
     s.useEffect(() => {
-        null == w || w(null == Z ? void 0 : Z.current);
-    }, [Z, w]);
+        null == w || w(null == F ? void 0 : F.current);
+    }, [F, w]);
     let j = (e) => {
             null == x || x(),
                 (0, y.openUserProfileModal)({
@@ -74,9 +74,9 @@ function O(e) {
         value: k,
         children: (0, a.jsx)(h.Mt, {
             value: U,
-            shouldTrackViewOnMount: null == F || null != F.fullProfileLoadedTimestamp,
+            shouldTrackViewOnMount: null == Z || null != Z.fullProfileLoadedTimestamp,
             children: (0, a.jsx)(l.Dialog, {
-                ref: Z,
+                ref: F,
                 'aria-label': n.username,
                 children: (0, a.jsxs)(v.Z, {
                     user: n,

@@ -310,10 +310,10 @@ function m(e) {
                 'touch' === e.pointerType && (T(e), n.setSelectionBehavior('toggle'));
             }
         }),
-        F = (e) => {
+        Z = (e) => {
             'touch' === D.current && x.current && e.preventDefault();
         },
-        Z = n.isLink(r)
+        F = n.isLink(r)
             ? (e) => {
                   !o.nG.isOpening && e.preventDefault();
               }
@@ -321,8 +321,8 @@ function m(e) {
     return {
         itemProps: (0, o.dG)(b, A || C ? k : {}, L ? G : {}, {
             onDoubleClick: B,
-            onDragStartCapture: F,
-            onClick: Z
+            onDragStartCapture: Z,
+            onClick: F
         }),
         isPressed: U,
         isSelected: n.isSelected(r),

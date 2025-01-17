@@ -522,7 +522,7 @@ function B(e, n) {
 function G(e, n) {
     return B(e, n);
 }
-function F(e, n, r) {
+function Z(e, n, r) {
     if (void 0 !== r) {
         var r = new e_(eg(r)),
             i = r.localeMatcher;
@@ -539,7 +539,7 @@ function F(e, n, r) {
             });
     return d(a, 'length', { writable: !1 }), a;
 }
-function Z(e, n, r, i, a) {
+function F(e, n, r, i, a) {
     var s = e[n];
     if (void 0 !== s) {
         if (((s = 'boolean' === r ? !!s : 'string' === r ? String(s) : s), void 0 !== i && -1 === f.call(i, s))) throw RangeError("'" + s + "' is not an allowed value for `" + n + '`');
@@ -573,22 +573,22 @@ function H(e, n, r) {
     var s = w(n);
     r = void 0 === r ? {} : eg(r);
     var o = new e_(),
-        l = Z(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit');
+        l = F(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit');
     o['[[localeMatcher]]'] = l;
     var c = I.NumberFormat['[[localeData]]'],
         f = U(I.NumberFormat['[[availableLocales]]'], s, o, I.NumberFormat['[[relevantExtensionKeys]]'], c);
     (i['[[locale]]'] = f['[[locale]]']), (i['[[numberingSystem]]'] = f['[[nu]]']), (i['[[dataLocale]]'] = f['[[dataLocale]]']);
     var _ = f['[[dataLocale]]'],
-        h = Z(r, 'style', 'string', new eh('decimal', 'percent', 'currency'), 'decimal');
+        h = F(r, 'style', 'string', new eh('decimal', 'percent', 'currency'), 'decimal');
     i['[[style]]'] = h;
-    var p = Z(r, 'currency', 'string');
+    var p = F(r, 'currency', 'string');
     if (void 0 !== p && !x(p)) throw RangeError("'" + p + "' is not a valid currency code");
     if ('currency' === h && void 0 === p) throw TypeError('Currency code is required when style is currency');
     if ('currency' === h) {
         (p = p.toUpperCase()), (i['[[currency]]'] = p);
         var m = Y(p);
     }
-    var g = Z(r, 'currencyDisplay', 'string', new eh('code', 'symbol', 'name'), 'symbol');
+    var g = F(r, 'currencyDisplay', 'string', new eh('code', 'symbol', 'name'), 'symbol');
     'currency' === h && (i['[[currencyDisplay]]'] = g);
     var E = V(r, 'minimumIntegerDigits', 1, 21, 1);
     i['[[minimumIntegerDigits]]'] = E;
@@ -600,7 +600,7 @@ function H(e, n, r) {
     var S = r.minimumSignificantDigits,
         A = r.maximumSignificantDigits;
     (void 0 !== S || void 0 !== A) && ((S = V(r, 'minimumSignificantDigits', 1, 21, 1)), (A = V(r, 'maximumSignificantDigits', S, 21, 21)), (i['[[minimumSignificantDigits]]'] = S), (i['[[maximumSignificantDigits]]'] = A));
-    var N = Z(r, 'useGrouping', 'boolean', void 0, !0);
+    var N = F(r, 'useGrouping', 'boolean', void 0, !0);
     i['[[useGrouping]]'] = N;
     var C = c[_].patterns[h];
     return (i['[[positivePattern]]'] = C.positivePattern), (i['[[negativePattern]]'] = C.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), u && (e.format = W.call(e)), a.exp.test(a.input), e;
@@ -754,7 +754,7 @@ function J(e, n, r) {
     var s = w(n),
         r = et(r, 'any', 'date'),
         o = new e_();
-    (y = Z(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = y);
+    (y = F(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = y);
     var l = I.DateTimeFormat,
         f = l['[[localeData]]'],
         _ = U(l['[[availableLocales]]'], s, o, l['[[relevantExtensionKeys]]'], f);
@@ -764,20 +764,20 @@ function J(e, n, r) {
     if (void 0 !== p && 'UTC' !== (p = em(p))) throw RangeError('timeZone is not supported.');
     for (var m in ((i['[[timeZone]]'] = p), (o = new e_()), $))
         if (c.call($, m)) {
-            var g = Z(r, m, 'string', $[m]);
+            var g = F(r, m, 'string', $[m]);
             o['[[' + m + ']]'] = g;
         }
     var E,
         v = f[h],
         b = ee(v.formats),
-        y = Z(r, 'formatMatcher', 'string', new eh('basic', 'best fit'), 'best fit');
+        y = F(r, 'formatMatcher', 'string', new eh('basic', 'best fit'), 'best fit');
     for (var m in ((v.formats = b), (E = 'basic' === y ? en(o, b) : ei(o, b)), $))
         if (c.call($, m) && c.call(E, m)) {
             var S = E[m];
             i['[[' + m + ']]'] = S;
         }
     var A,
-        N = Z(r, 'hour12', 'boolean');
+        N = F(r, 'hour12', 'boolean');
     if (i['[[hour]]']) {
         if (((N = void 0 === N ? v.hour12 : N), (i['[[hour12]]'] = N), !0 === N)) {
             var C = v.hourNo0;
@@ -993,7 +993,7 @@ function ed(e) {
         r = arguments[1],
         i = this['[[availableLocales]]'],
         a = w(e);
-    return n.exp.test(n.input), F(i, a, r);
+    return n.exp.test(n.input), Z(i, a, r);
 }
 function ef(e, n, r, i, a) {
     var s = e[n] && e[n][r] ? e[n][r] : e.gregory[r],

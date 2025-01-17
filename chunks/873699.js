@@ -26,7 +26,7 @@ function E(e, n) {
             var t;
             return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
         }, []),
-        I = (t, i) => {
+        v = (t, i) => {
             t.shiftKey
                 ? (0, u.$E)(n.id, e.id, i)
                 : o.Z.show({
@@ -52,9 +52,9 @@ function E(e, n) {
                       {
                           id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
                           label: null == e.id ? e.name : ':'.concat(e.name, ':'),
-                          action: (n) => I(n, e),
+                          action: (n) => v(n, e),
                           icon: (n) =>
-                              (0, i.jsx)(v, {
+                              (0, i.jsx)(I, {
                                   ...n,
                                   reducedMotionEnabled: t.enabled,
                                   emoji: e
@@ -66,7 +66,7 @@ function E(e, n) {
               })
           });
 }
-function v(e) {
+function I(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

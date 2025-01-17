@@ -94,13 +94,13 @@ function B() {
 function G() {
     k();
 }
-function F(e) {
+function Z(e) {
     var n;
     let { user: r } = e;
     if (r.id !== (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
     k();
 }
-function Z(e) {
+function F(e) {
     let {
             channel: { id: n }
         } = e,
@@ -301,10 +301,10 @@ C($, 'displayName', 'PermissionStore'),
         GUILD_CREATE: G,
         GUILD_UPDATE: G,
         GUILD_DELETE: G,
-        GUILD_MEMBER_ADD: F,
-        GUILD_MEMBER_UPDATE: F,
-        CURRENT_USER_UPDATE: F,
-        CHANNEL_CREATE: Z,
+        GUILD_MEMBER_ADD: Z,
+        GUILD_MEMBER_UPDATE: Z,
+        CURRENT_USER_UPDATE: Z,
+        CHANNEL_CREATE: F,
         THREAD_CREATE: j,
         THREAD_UPDATE: j,
         THREAD_LIST_SYNC: j,

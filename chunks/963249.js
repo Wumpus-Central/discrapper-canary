@@ -22,7 +22,7 @@ var a = r(97613),
     v = r(981631),
     I = r(474936);
 function T(e) {
-    let { initialPlanId: n, followupSKUInfo: a, onClose: T, onComplete: b, onSubscriptionConfirmation: y, analyticsLocations: S, analyticsObject: A, analyticsLocation: N, analyticsSourceLocation: C, isGift: R = !1, giftMessage: O, giftStyle: D, giftingOrigin: L, subscriptionTier: x, trialId: w, postSuccessGuild: P, openInvoiceId: M, applicationId: k, referralTrialOfferId: U, giftRecipient: B, returnRef: G, subscription: F, skipConfirm: Z, repeatPurchase: V } = null != e ? e : {},
+    let { initialPlanId: n, followupSKUInfo: a, onClose: T, onComplete: b, onSubscriptionConfirmation: y, analyticsLocations: S, analyticsObject: A, analyticsLocation: N, analyticsSourceLocation: C, isGift: R = !1, giftMessage: O, giftStyle: D, giftingOrigin: L, subscriptionTier: x, trialId: w, postSuccessGuild: P, openInvoiceId: M, applicationId: k, referralTrialOfferId: U, giftRecipient: B, returnRef: G, subscription: Z, skipConfirm: F, repeatPurchase: V } = null != e ? e : {},
         j = !1,
         H = (0, o.Z)(),
         Y = p.default.getCurrentUser(),
@@ -70,8 +70,8 @@ function T(e) {
                     applicationId: k,
                     referralTrialOfferId: U,
                     returnRef: G,
-                    subscription: F,
-                    skipConfirm: !!Z,
+                    subscription: Z,
+                    skipConfirm: !!F,
                     repeatPurchase: V
                 });
             };

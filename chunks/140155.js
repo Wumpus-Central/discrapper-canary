@@ -190,14 +190,14 @@ function G(e) {
                 : n
         );
 }
-function F(e) {
+function Z(e) {
     let { newBuild: n } = e;
     if (null !== n) {
         let e = (0, m.hn)(n);
         void 0 === v.notifCenterLocalItems.find((n) => n.local_id === e.local_id) && (v.notifCenterLocalItems = [...v.notifCenterLocalItems.filter((n) => n.kind !== e.kind), e]);
     }
 }
-class Z extends (i = o.ZP.PersistedStore) {
+class F extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(_.default), null != e)) {
             let n = (e) => ({
@@ -254,8 +254,8 @@ class Z extends (i = o.ZP.PersistedStore) {
         return v.notifCenterTabFocused;
     }
 }
-E(Z, 'displayName', 'NotificationCenterItemsStore'), E(Z, 'persistKey', 'NotificationCenterItemsStore_v2');
-let V = new Z(l.Z, {
+E(F, 'displayName', 'NotificationCenterItemsStore'), E(F, 'persistKey', 'NotificationCenterItemsStore_v2');
+let V = new F(l.Z, {
     CONNECTION_OPEN: A,
     LOGOUT: T,
     NOTIFICATION_CENTER_ITEMS_ACK: D,
@@ -275,6 +275,6 @@ let V = new Z(l.Z, {
     RELATIONSHIP_REMOVE: k,
     NOTIFICATION_CENTER_ITEM_COMPLETED: U,
     SET_RECENT_MENTIONS_FILTER: T,
-    MOBILE_NATIVE_UPDATE_CHECK_FINISHED: F
+    MOBILE_NATIVE_UPDATE_CHECK_FINISHED: Z
 });
 n.Z = V;

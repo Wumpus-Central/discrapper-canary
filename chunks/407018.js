@@ -188,9 +188,9 @@ function h(e, n) {
             var r, i;
             (null !== (i = e.pointerId) && void 0 !== i ? i : null === (r = e.changedTouches) || void 0 === r ? void 0 : r[0].identifier) === U.current && (D(), n.setThumbDragging(_, !1), A(window, 'mouseup', G, !1), A(window, 'touchend', G, !1), A(window, 'pointerup', G, !1));
         },
-        F = n.getThumbPercent(_);
-    (b || 'rtl' === y) && (F = 1 - F);
-    let Z = T
+        Z = n.getThumbPercent(_);
+    (b || 'rtl' === y) && (Z = 1 - Z);
+    let F = T
         ? {}
         : (0, i.dG)(P, M, {
               onMouseDown: (e) => {
@@ -229,10 +229,10 @@ function h(e, n) {
                 }
             }),
             thumbProps: {
-                ...Z,
+                ...F,
                 style: {
                     position: 'absolute',
-                    [b ? 'top' : 'left']: `${100 * F}%`,
+                    [b ? 'top' : 'left']: `${100 * Z}%`,
                     transform: 'translate(-50%, -50%)',
                     touchAction: 'none'
                 }

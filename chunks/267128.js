@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return F;
+        return Z;
     },
     f: function () {
         return G;
@@ -294,7 +294,7 @@ function G(e, n, r, i, s, o) {
         }
     );
 }
-function F(e) {
+function Z(e) {
     let n;
     let { repliedAuthor: r, baseAuthor: i, baseMessage: o, referencedMessage: u, renderPopout: f, isReplySpineClickable: _, showReplySpine: p } = e,
         { canShowReactionsOnMessageHover: m } = h.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),

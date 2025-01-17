@@ -40,8 +40,8 @@ var a = r(120356),
     U = r(103479),
     B = r(670451),
     G = r(553375),
-    F = r(228168),
-    Z = r(981631),
+    Z = r(228168),
+    F = r(981631),
     V = r(701488),
     j = r(388032),
     H = r(249942);
@@ -49,7 +49,7 @@ function Y(e) {
     let { user: n, currentUser: r, activity: a, application: Y, guild: W, channel: K, className: z, onClose: q } = e,
         { analyticsLocations: Q } = (0, h.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: X } = (0, O.z)(),
-        J = { [H.fullSize]: X === F.y0.FULL_SIZE },
+        J = { [H.fullSize]: X === Z.y0.FULL_SIZE },
         $ = (0, I.Z)({
             activity: a,
             user: n
@@ -115,7 +115,7 @@ function Y(e) {
         },
         eu = () => {
             var e;
-            return a.type === Z.IIU.HANG_STATUS
+            return a.type === F.IIU.HANG_STATUS
                 ? (0, i.jsx)(P.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, y.O8)(a)
@@ -146,7 +146,7 @@ function Y(e) {
                       });
         },
         ec = () =>
-            a.type === Z.IIU.HANG_STATUS
+            a.type === F.IIU.HANG_STATUS
                 ? null
                 : (0, f.Z)(a) && null != W
                   ? (0, i.jsx)(P.Z, {
@@ -167,7 +167,7 @@ function Y(e) {
                       }),
         ed = () => {
             var e;
-            return a.type === Z.IIU.WATCHING
+            return a.type === F.IIU.WATCHING
                 ? null
                 : (0, d.Z)(a)
                   ? ef()
@@ -300,13 +300,13 @@ function Y(e) {
                                         e_()
                                     ]
                                 }),
-                                X === F.y0.FULL_SIZE && em()
+                                X === Z.y0.FULL_SIZE && em()
                             ]
                         }),
                         ep()
                     ]
                 }),
-                X !== F.y0.FULL_SIZE && em()
+                X !== Z.y0.FULL_SIZE && em()
             ]
         })
     });

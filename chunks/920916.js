@@ -57,7 +57,7 @@ function G(e) {
         a = () => (null == i ? (N.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, h.cV)(i), B()));
     return [i, a];
 }
-function F(e) {
+function Z(e) {
     var n;
     let { transitionState: r, onClose: i, quest: a, location: l, reward: d, decoration: h, onUseNow: m, preview: g } = e,
         E = o.useRef(null),
@@ -81,7 +81,7 @@ function F(e) {
         k = !0 === g && null === h && (null == d ? void 0 : d.skuId) !== '',
         B = null == h && !0 !== g,
         G = null == S || B || k || 'loading' === D,
-        F = !y && !R && 'claimed' === D;
+        Z = !y && !R && 'claimed' === D;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(c.O_, {
@@ -115,7 +115,7 @@ function F(e) {
                                 })
                 })
             }),
-            F &&
+            Z &&
                 (0, s.jsx)(v.Z, {
                     confettiTarget: E.current,
                     confettiCanvas: I,
@@ -125,7 +125,7 @@ function F(e) {
         ]
     });
 }
-function Z(e) {
+function F(e) {
     let { quest: n } = e,
         r = o.useMemo(() => (0, L.fh)(n, L.eC.LOGO_TYPE, 'dark'), [n]),
         i = x.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM];
@@ -206,7 +206,7 @@ function V(e) {
                             onClick: u,
                             children: k.intl.string(k.t.MAS7uL)
                         }),
-                        (0, D.zK)(n, P.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, s.jsx)(Z, { quest: n })
+                        (0, D.zK)(n, P.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, s.jsx)(F, { quest: n })
                     ]
                 })
             })
@@ -228,7 +228,7 @@ function j(e) {
                 analyticsLocations: [],
                 initialSelectedDecoration: f
             })
-          : (0, s.jsx)(F, {
+          : (0, s.jsx)(Z, {
                 onClose: l,
                 transitionState: u,
                 quest: i,

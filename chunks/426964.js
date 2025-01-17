@@ -35,8 +35,8 @@ n.Z = s.memo(function (e) {
     let { clan: i, isLoading: P, onClose: M, profileViewedAnalytics: k, userId: U } = e,
         B = null == i ? void 0 : i.identityGuildId,
         G = (0, y.Cc)(null != B ? B : null),
-        F = null == i ? void 0 : i.tag,
-        Z = (0, b.i)('clan_guild_profile'),
+        Z = null == i ? void 0 : i.tag,
+        F = (0, b.i)('clan_guild_profile'),
         { enabled: V } = (0, d.I)(),
         { enabled: j } = N.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [H, Y] = s.useState(!1),
@@ -162,13 +162,13 @@ n.Z = s.memo(function (e) {
             }),
             []
         );
-    if (null == F || null == G || null == B || P)
+    if (null == Z || null == G || null == B || P)
         return (0, a.jsx)('div', {
             ...eh,
             children: (0, a.jsx)(o.Spinner, {})
         });
-    let ep = !en && !Z && null != z && !ei && j && !H,
-        em = null != e_ || (Z && V) || ep,
+    let ep = !en && !F && null != z && !ei && j && !H,
+        em = null != e_ || (F && V) || ep,
         eg = null !== (r = I.ZP.getName(z)) && void 0 !== r ? r : '';
     return (0, a.jsxs)(a.Fragment, {
         children: [

@@ -748,7 +748,7 @@ function G(e) {
         ]
     });
 }
-function F(e) {
+function Z(e) {
     let n = 8;
     return (0, a.jsxs)('mask', {
         id: e,
@@ -774,7 +774,7 @@ function F(e) {
         ]
     });
 }
-function Z(e) {
+function F(e) {
     let n = 8;
     return (0, a.jsx)('mask', {
         id: e,
@@ -1164,8 +1164,8 @@ let en = s.memo(
                 U('svg-mask-status-idle'),
                 B('svg-mask-status-dnd'),
                 G('svg-mask-status-offline'),
-                F('svg-mask-status-streaming'),
-                Z('svg-mask-status-typing'),
+                Z('svg-mask-status-streaming'),
+                F('svg-mask-status-typing'),
                 V('svg-mask-status-screenshare'),
                 p('svg-mask-avatar-voice-call-80'),
                 m('svg-mask-avatar-call-icon', u.EF.SIZE_56, 1),

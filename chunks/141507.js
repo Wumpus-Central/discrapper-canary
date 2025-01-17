@@ -43,21 +43,21 @@ let L = (e) => {
             w,
             { className: P, emojiGrid: M, guildId: k, pickerIntention: U, channel: B } = e,
             { enabled: G } = T.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-            F = h.kJ.useStore((e) => e.inspectedExpressionPosition),
-            Z = a.useMemo(() => {
+            Z = h.kJ.useStore((e) => e.inspectedExpressionPosition),
+            F = a.useMemo(() => {
                 var e;
-                let { rowIndex: n, columnIndex: r } = F;
+                let { rowIndex: n, columnIndex: r } = Z;
                 return null === (e = M[n]) || void 0 === e ? void 0 : e[r];
-            }, [M, F]);
-        switch (null == Z ? void 0 : Z.type) {
+            }, [M, Z]);
+        switch (null == F ? void 0 : F.type) {
             case A.ld.EMOJI:
-                n = null == Z ? void 0 : Z.emoji;
+                n = null == F ? void 0 : F.emoji;
                 break;
             case A.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 n = {
                     type: 'EXPAND_OR_COLLAPSE_EMOJI',
-                    guildId: null == Z ? void 0 : Z.guildId,
-                    allNamesString: null == Z ? void 0 : Z.name
+                    guildId: null == F ? void 0 : F.guildId,
+                    allNamesString: null == F ? void 0 : F.name
                 };
                 break;
             case A.ld.SOUNDMOJI:
@@ -67,8 +67,8 @@ let L = (e) => {
             default:
                 n = {
                     type: 'CREATE_EMOJI',
-                    guildId: null == Z ? void 0 : Z.guildId,
-                    allNamesString: null == Z ? void 0 : Z.name
+                    guildId: null == F ? void 0 : F.guildId,
+                    allNamesString: null == F ? void 0 : F.name
                 };
         }
         let V = (0, s.e7)([E.Z], () => (null !== n && n.type === d.B.GUILD ? E.Z.getGuild(n.guildId) : null), [n]),
@@ -78,7 +78,7 @@ let L = (e) => {
             W = (0, b.C1)(k, D(n) ? n : null),
             K = (0, s.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, y.Z)(k, U),
-            q = (null == Z ? void 0 : Z.type) === A.ld.EMOJI ? Z.subCategory : N.t0.NONE;
+            q = (null == F ? void 0 : F.type) === A.ld.EMOJI ? F.subCategory : N.t0.NONE;
         if (
             (a.useEffect(() => {
                 let e = Date.now();
@@ -87,11 +87,11 @@ let L = (e) => {
                         D(n) &&
                         q !== N.t0.NONE &&
                         (q === N.t0.NEWLY_ADDED_EMOJI && null !== n && n.type === d.B.GUILD && (0, _.Zg)(n.guildId, z[0].id),
-                        null != F.source &&
+                        null != Z.source &&
                             (0, b.Gn)({
                                 emoji: n,
                                 subCategory: q,
-                                position: Z.columnIndex + 1,
+                                position: F.columnIndex + 1,
                                 newlyAddedHighlight: q === N.t0.NEWLY_ADDED_EMOJI && f.Z.isNewerThanLastSeen(k, n.id)
                             }));
                 };

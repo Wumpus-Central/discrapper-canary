@@ -38,23 +38,23 @@ n.Z = s.forwardRef(function (e, n) {
             },
             [P.guild_id]
         ),
-        F = s.useRef(),
-        [Z, V, j] = (0, S.Z)(
+        Z = s.useRef(),
+        [F, V, j] = (0, S.Z)(
             {
                 ...e,
                 guild: G
             },
             n,
-            F
+            Z
         ),
         H = (null === (r = M.autocomplete) || void 0 === r ? void 0 : r.forceChatLayer) ? v.ZP : E.ZP,
-        Y = (0, p.DJ)(Z.selectedIndex);
-    (0, m.KR)(B, Z.isVisible, Y), T.Z.trackExposure({ location: '6e9811_1' });
+        Y = (0, p.DJ)(F.selectedIndex);
+    (0, m.KR)(B, F.isVisible, Y), T.Z.trackExposure({ location: '6e9811_1' });
     let { usePopoutAutocomplete: W } = T.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
         K = (0, y.Z)({
             editorHeight: k,
             type: M,
-            state: Z,
+            state: F,
             isInPopoutExperiment: W
         }),
         z = (0, c.e7)(
@@ -69,20 +69,20 @@ n.Z = s.forwardRef(function (e, n) {
         q = s.useMemo(() => ((null == K ? void 0 : K.top) == null && (null == K ? void 0 : K.left) == null && (null == K ? void 0 : K.bottom) == null && (null == K ? void 0 : K.right) == null ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
     if (
         (s.useEffect(() => {
-            U(Z.isVisible);
-        }, [U, Z.isVisible]),
-        !Z.isVisible || null == Z.query || void 0 === K)
+            U(F.isVisible);
+        }, [U, F.isVisible]),
+        !F.isVisible || null == F.query || void 0 === K)
     )
         return null;
     let Q =
         null !==
-            (i = Z.query.typeInfo.renderResults({
-                results: Z.query.results,
-                selectedIndex: Z.selectedIndex,
+            (i = F.query.typeInfo.renderResults({
+                results: F.query.results,
+                selectedIndex: F.selectedIndex,
                 channel: P,
                 guild: G,
-                query: Z.query.queryText,
-                options: Z.query.options,
+                query: F.query.queryText,
+                options: F.query.options,
                 onHover: (e) => V.onResultHover(e),
                 onClick: (e) => V.onResultClick(e)
             })) && void 0 !== i
@@ -96,7 +96,7 @@ n.Z = s.forwardRef(function (e, n) {
             [N.autocompleteTop]: z
         },
         J = C;
-    null != K && (J = (null === (o = M.autocomplete) || void 0 === o ? void 0 : o.small) ? D : (null === (x = Z.query) || void 0 === x ? void 0 : x.type) === b.eq.EMOJIS_AND_STICKERS ? R : O), (J = Math.min(window.innerHeight - L, J));
+    null != K && (J = (null === (o = M.autocomplete) || void 0 === o ? void 0 : o.small) ? D : (null === (x = F.query) || void 0 === x ? void 0 : x.type) === b.eq.EMOJIS_AND_STICKERS ? R : O), (J = Math.min(window.innerHeight - L, J));
     let $ = (0, a.jsx)(p.ZP, {
         id: B,
         className: l()(N.autocomplete, X),
@@ -111,7 +111,7 @@ n.Z = s.forwardRef(function (e, n) {
                         id: B,
                         ref: (e) => {
                             var r;
-                            (n.current = null !== (r = null == e ? void 0 : e.getScrollerNode()) && void 0 !== r ? r : null), (F.current = e);
+                            (n.current = null !== (r = null == e ? void 0 : e.getScrollerNode()) && void 0 !== r ? r : null), (Z.current = e);
                         },
                         ...r,
                         className: N.scroller,

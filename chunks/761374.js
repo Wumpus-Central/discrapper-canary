@@ -50,8 +50,8 @@ function w(e) {
             [n]
         ),
         z = (0, o.e7)([m.Z], () => m.Z.getChannel(M)),
-        G = (0, o.e7)([p.default], () => p.default.getId()),
-        { participantsVersion: F, streamParticipants: U } = (0, o.cj)(
+        F = (0, o.e7)([p.default], () => p.default.getId()),
+        { participantsVersion: G, streamParticipants: U } = (0, o.cj)(
             [f.Z, d.Z],
             () => {
                 if (null == M)
@@ -61,7 +61,7 @@ function w(e) {
                     };
                 let e = new Set(f.Z.getAllActiveStreamsForChannel(M).map((e) => (0, h.V9)(e))),
                     t = (t) => e.has((0, h.V9)(t.stream)),
-                    n = d.Z.getStreamParticipants(M).filter((t) => t.user.id !== G && (!!W || e.has((0, h.V9)(t.stream))));
+                    n = d.Z.getStreamParticipants(M).filter((t) => t.user.id !== F && (!!W || e.has((0, h.V9)(t.stream))));
                 return (
                     n.sort((e, n) => (t(e) && !t(n) ? -1 : !t(e) && t(n) ? 1 : e.user.username.localeCompare(n.user.username))),
                     {
@@ -71,7 +71,7 @@ function w(e) {
                     }
                 );
             },
-            [M, G, W]
+            [M, F, W]
         ),
         B = U.length,
         Y = null == z || 0 === B,
@@ -220,7 +220,7 @@ function w(e) {
                     locked: N,
                     layout: X,
                     streamParticipants: U,
-                    participantsVersion: F,
+                    participantsVersion: G,
                     pinned: T
                 })
             });

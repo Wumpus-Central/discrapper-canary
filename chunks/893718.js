@@ -34,8 +34,8 @@ var d = r(512722),
     U = r(849522),
     B = r(780291),
     G = r(111810),
-    F = r(913663),
-    Z = r(268350),
+    Z = r(913663),
+    F = r(268350),
     V = r(378233),
     j = r(665906),
     H = r(695346),
@@ -81,7 +81,7 @@ function eT(e, n, i, a) {
                 var p, m, v;
                 if (l) return;
                 u(!0);
-                let I = null !== (m = null === (p = F.Z.getStickerPreview(a, n.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== m ? m : [],
+                let I = null !== (m = null === (p = Z.Z.getStickerPreview(a, n.drafts.type)) || void 0 === p ? void 0 : p.map((e) => e.id)) && void 0 !== m ? m : [],
                     T = null !== (v = q.Z.getUploads(a, n.drafts.type)) && void 0 !== v ? v : [];
                 if (null == d && !_ && !h && (0, M.CB)(T, a)) {
                     u(!1),
@@ -155,10 +155,10 @@ function eS(e) {
                     ? ((0, es._H)({
                           sticker: e,
                           stickerSelectLocation: o,
-                          isReplacement: null != F.Z.getStickerPreview(a, s.drafts.type),
+                          isReplacement: null != Z.Z.getStickerPreview(a, s.drafts.type),
                           analyticsLocations: u
                       }),
-                      (0, Z.eu)(a, e, s.drafts.type))
+                      (0, F.eu)(a, e, s.drafts.type))
                     : (l({
                           value: '',
                           uploads: void 0,
@@ -346,13 +346,13 @@ function ew(e, n, r) {
 function eP(e, n, r, i) {
     var a, s;
     let o = (0, w.pR)(),
-        l = (0, m.e7)([F.Z], () => F.Z.getStickerPreview(e.id, n.drafts.type)),
+        l = (0, m.e7)([Z.Z], () => Z.Z.getStickerPreview(e.id, n.drafts.type)),
         u = null != l && l.length > 0;
     return o && (null === (a = n.stickers) || void 0 === a ? void 0 : a.autoSuggest) && !u && (null === (s = i.current) || void 0 === s ? void 0 : s.isVisible()) !== !0 && !__OVERLAY__ && null != r;
 }
 function eM(e, n) {
-    var r, i, a, l, c, d, _, p, E, L, w, M, k, F, Z, V;
-    let { textValue: j, richValue: Y, className: W, innerClassName: K, editorClassName: q, id: Q, required: X, disabled: J, placeholder: $, accessibilityLabel: es, channel: ep, type: ev, focused: eI, renderAttachButton: eM, renderApplicationCommandIcon: ek, renderAppLauncherButton: eU, renderAppCommandButton: eB, renderLeftAccessories: eG, pendingReply: eF, onChange: eZ, onResize: eV, onBlur: ej, onFocus: eH, onKeyDown: eY, onSubmit: eW, promptToUpload: eK, highlighted: ez, canMentionRoles: eq, canMentionChannels: eQ, maxCharacterCount: eX, showRemainingCharsAfterCount: eJ, allowNewLines: e$ = !0, characterCountClassName: e0, 'aria-describedby': e1, 'aria-labelledby': e2, setEditorRef: e3, autoCompletePosition: e4, children: e6, disableThemedBackground: e5 = !1, emojiPickerCloseOnModalOuterClick: e7, parentModalKey: e8, onCommandSentinelTyped: e9 } = e;
+    var r, i, a, l, c, d, _, p, E, L, w, M, k, Z, F, V;
+    let { textValue: j, richValue: Y, className: W, innerClassName: K, editorClassName: q, id: Q, required: X, disabled: J, placeholder: $, accessibilityLabel: es, channel: ep, type: ev, focused: eI, renderAttachButton: eM, renderApplicationCommandIcon: ek, renderAppLauncherButton: eU, renderAppCommandButton: eB, renderLeftAccessories: eG, pendingReply: eZ, onChange: eF, onResize: eV, onBlur: ej, onFocus: eH, onKeyDown: eY, onSubmit: eW, promptToUpload: eK, highlighted: ez, canMentionRoles: eq, canMentionChannels: eQ, maxCharacterCount: eX, showRemainingCharsAfterCount: eJ, allowNewLines: e$ = !0, characterCountClassName: e0, 'aria-describedby': e1, 'aria-labelledby': e2, setEditorRef: e3, autoCompletePosition: e4, children: e6, disableThemedBackground: e5 = !1, emojiPickerCloseOnModalOuterClick: e7, parentModalKey: e8, onCommandSentinelTyped: e9 } = e;
     f()(null != ev, 'chat input type must be set');
     let { analyticsLocations: te } = (0, y.ZP)(b.Z.CHANNEL_TEXT_AREA),
         tt = (0, D.R6)('ChannelTextAreaContainer'),
@@ -391,9 +391,9 @@ function eM(e, n) {
     let tC = o.useCallback(
         (e, n, r) => {
             var i;
-            n === eh.GI && '' === tN.current && (null === (i = ev.commands) || void 0 === i ? void 0 : i.enabled) && (null == e9 || e9()), null == eZ || eZ(e, n, r);
+            n === eh.GI && '' === tN.current && (null === (i = ev.commands) || void 0 === i ? void 0 : i.enabled) && (null == e9 || e9()), null == eF || eF(e, n, r);
         },
-        [eZ, e9, null === (i = ev.commands) || void 0 === i ? void 0 : i.enabled]
+        [eF, e9, null === (i = ev.commands) || void 0 === i ? void 0 : i.enabled]
     );
     eN(ev, tp);
     let { eventEmitter: tR, handleEditorSelectionChanged: tO } = eC(ti, j, Y),
@@ -410,15 +410,15 @@ function eM(e, n) {
             submit: eW
         }),
         tG = eA(ti, ep),
-        tF = o.useCallback(() => {
+        tZ = o.useCallback(() => {
             var e;
             return null == ts ? void 0 : null === (e = ts.current) || void 0 === e ? void 0 : e.hide();
         }, []),
-        { editorHeight: tZ, handleResize: tV } = eD(eV),
+        { editorHeight: tF, handleResize: tV } = eD(eV),
         { handleTab: tj, handleEnter: tH, handleMoveSelection: tY } = ew(tw, tr, tT),
         { expressionPickerView: tW, shouldHideExpressionPicker: tK, handleAutocompleteVisibilityChange: tz, handleOuterClick: tq } = ex(ev, tR, ti);
     (0, et.S)(tR, ep.guild_id, ep.id);
-    let tQ = null != eF,
+    let tQ = null != eZ,
         tX = (tp && !((t_ || th) && tE)) || (tD && (null === (a = ev.submit) || void 0 === a ? void 0 : a.useDisabledStylesOnSubmit)),
         tJ = null;
     null != td ? (tJ = null == ek ? void 0 : ek(td, tf, em.attachButton)) : (!tp || tg) && (tJ = null == eM ? void 0 : eM(tQ, em.attachButton));
@@ -429,9 +429,9 @@ function eM(e, n) {
             channel: ep,
             type: ev,
             activeCommand: td,
-            pendingReply: eF
+            pendingReply: eZ
         }),
-        t3 = !!(null === (l = ev.emojis) || void 0 === l ? void 0 : l.button) && tZ <= eg,
+        t3 = !!(null === (l = ev.emojis) || void 0 === l ? void 0 : l.button) && tF <= eg,
         t4 = 0 === j.trim().length,
         t6 = (0, el.G)(ep.id, ev, t4),
         t5 = !0 === ev.showSlowmodeIndicator,
@@ -522,7 +522,7 @@ function eM(e, n) {
                         t8 || t9 ? null : (0, s.jsx)(eo.Z, { bars: t2 }),
                         (0, s.jsxs)('div', {
                             ref: ta,
-                            onScroll: tF,
+                            onScroll: tZ,
                             className: u()(K, {
                                 [em.scrollableContainer]: !0,
                                 [em.themedBackground]: !e5,
@@ -645,13 +645,13 @@ function eM(e, n) {
                             onSendMessage: tL,
                             onSendSticker: tB,
                             onVisibilityChange: tz,
-                            editorHeight: tZ,
+                            editorHeight: tF,
                             setValue: (e, n) => (null == tC ? void 0 : tC(null, e, n)),
                             position: e4
                         }),
                         (0, s.jsx)(B.Z, {
                             textValue: j,
-                            editorHeight: tZ,
+                            editorHeight: tF,
                             channelId: ep.id
                         }),
                         tt ? null : nr,
@@ -661,8 +661,8 @@ function eM(e, n) {
                                   channel: ep,
                                   isEditorFocused: eI,
                                   onSelectSticker: tB,
-                                  submitButtonVisible: (null === (E = ev.submit) || void 0 === E ? void 0 : E.button) && (null !== (F = null === (L = ev.submit) || void 0 === L ? void 0 : L.ignorePreference) && void 0 !== F ? F : ty),
-                                  stickerIconVisible: null !== (Z = null === (w = ev.stickers) || void 0 === w ? void 0 : w.button) && void 0 !== Z && Z && !(to && null !== (V = null === (M = ev.confetti) || void 0 === M ? void 0 : M.button) && void 0 !== V && V)
+                                  submitButtonVisible: (null === (E = ev.submit) || void 0 === E ? void 0 : E.button) && (null !== (Z = null === (L = ev.submit) || void 0 === L ? void 0 : L.ignorePreference) && void 0 !== Z ? Z : ty),
+                                  stickerIconVisible: null !== (F = null === (w = ev.stickers) || void 0 === w ? void 0 : w.button) && void 0 !== F && F && !(to && null !== (V = null === (M = ev.confetti) || void 0 === M ? void 0 : M.button) && void 0 !== V && V)
                               })
                             : null,
                         e6

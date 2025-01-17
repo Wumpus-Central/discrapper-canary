@@ -159,7 +159,7 @@ r.d(n, {
         return ec;
     },
     zV: function () {
-        return eF;
+        return eZ;
     }
 });
 var i,
@@ -199,12 +199,12 @@ var m = r(782568),
     U = r(474936),
     B = r(231338),
     G = r(388032);
-let F = {
+let Z = {
         PAYMENT_SOURCE_MANAGEMENT: 'https://support.apple.com/HT201266',
         BILLING_HISTORY: 'https://support.apple.com/HT201266',
         SUBSCRIPTION_MANAGEMENT: 'https://support.apple.com/HT202039'
     },
-    Z = {
+    F = {
         SUBSCRIPTION_MANAGEMENT: 'https://play.google.com/store/account/subscriptions',
         PAYMENT_SOURCE_MANAGEMENT: 'https://play.google.com/store/paymentmethods',
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
@@ -622,11 +622,11 @@ function el(e) {
                 case M.O0b.UNPAID:
                     return G.intl.format(G.t['0HopYW'], { num: L });
                 case M.O0b.PAUSE_PENDING:
-                    let F = null != f.pauseEndsAt ? h()(f.pauseEndsAt).diff(f.currentPeriodEnd, 'days') : null;
-                    return null != F
+                    let Z = null != f.pauseEndsAt ? h()(f.pauseEndsAt).diff(f.currentPeriodEnd, 'days') : null;
+                    return null != Z
                         ? G.intl.format(G.t.WUfODw, {
                               pauseDate: f.currentPeriodEnd,
-                              pauseDuration: F
+                              pauseDuration: Z
                           })
                         : G.intl.format(G.t.VlWufn, { pauseDate: f.currentPeriodEnd });
                 case M.O0b.PAUSED:
@@ -673,7 +673,7 @@ function eu(e) {
         el({
             subscription: r,
             planId: u.id,
-            price: eZ(n, r, u),
+            price: eF(n, r, u),
             includePremiumGuilds: a,
             hasDiscountApplied: s,
             activeDiscountInfo: o,
@@ -1078,10 +1078,10 @@ function eG(e) {
     let { status: n, renewalMutations: r } = e;
     return n === M.O0b.CANCELED || (null != r && (0, T.Q0)(r.planId) && !e.isPurchasedExternally);
 }
-function eF(e) {
+function eZ(e) {
     return e === M.O0b.PAST_DUE || e === M.O0b.ACCOUNT_HOLD || e === M.O0b.BILLING_RETRY;
 }
-function eZ(e, n, r) {
+function eF(e, n, r) {
     let i = e.invoiceItems.find((e) => {
             let { subscriptionPlanId: n } = e;
             return n === r.id;
@@ -1241,14 +1241,14 @@ function eQ(e, n) {
     switch (e) {
         case M.gg$.APPLE_PARTNER:
         case M.gg$.APPLE:
-            return F[n];
-        case M.gg$.GOOGLE:
             return Z[n];
+        case M.gg$.GOOGLE:
+            return F[n];
     }
     throw Error('Invalid external payment gateway '.concat(e));
 }
 function eX(e, n) {
-    return (0, w.I5)(e) || eF(null == n ? void 0 : n.status);
+    return (0, w.I5)(e) || eZ(null == n ? void 0 : n.status);
 }
 function eJ(e, n) {
     var r, i;

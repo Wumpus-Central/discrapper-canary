@@ -44,8 +44,8 @@ function G(e, n, r) {
         e
     );
 }
-let F = b.Z.get(B.ABu.SPOTIFY),
-    Z = 'wss://dealer.spotify.com/?access_token=',
+let Z = b.Z.get(B.ABu.SPOTIFY),
+    F = 'wss://dealer.spotify.com/?access_token=',
     V = 'hm://pusher/v1/connections/',
     j = 30 * P.Z.Millis.SECOND,
     H = 30 * P.Z.Millis.SECOND,
@@ -122,9 +122,9 @@ class eE {
             (en.info('WS Connecting'),
             (this._requestedDisconnect = !1),
             (this._requestedConnect = !0),
-            eZ(this.accountId, this.accessToken)
+            eF(this.accountId, this.accessToken)
                 .then(() => {
-                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(Z).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
+                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(F).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
                 })
                 .catch((e) => {
                     en.error(e), (this._requestedConnect = !1), this.handleClose();
@@ -170,7 +170,7 @@ class eE {
         let { type: n, event: r } = e;
         switch (n) {
             case 'PLAYER_STATE_CHANGED':
-                null != r && null != r.state && eF(this.accountId, this.accessToken, r.state);
+                null != r && null != r.state && eZ(this.accountId, this.accessToken, r.state);
                 break;
             case 'DEVICE_STATE_CHANGED':
                 this.handleDeviceStateChange();
@@ -190,7 +190,7 @@ class eE {
                 this,
                 'handleDeviceStateChange',
                 p().throttle(() => {
-                    (0, k.PW)(this.accountId, this.accessToken), eZ(this.accountId, this.accessToken);
+                    (0, k.PW)(this.accountId, this.accessToken), eF(this.accountId, this.accessToken);
                 }, J)
             ),
             (this.accountId = e),
@@ -448,10 +448,10 @@ function eG(e) {
     if ((null == n ? void 0 : n.desktopSettings) != null) {
         null == ef || ef.stop();
         let { sourceId: e, sound: r } = null == n ? void 0 : n.desktopSettings;
-        null != e && A.ZP.getObservedAppNameForWindow(e) === F.name && r ? (ef = new v.Xp()).start(H, eP) : (null == ef || ef.stop(), (ef = null));
+        null != e && A.ZP.getObservedAppNameForWindow(e) === Z.name && r ? (ef = new v.Xp()).start(H, eP) : (null == ef || ef.stop(), (ef = null));
     } else null == n && (null == ef || ef.stop(), (ef = null));
 }
-function eF(e, n, r) {
+function eZ(e, n, r) {
     var i, a, s, o, l, u, c, d, f, _, h, p, m, g;
     let E,
         v,
@@ -531,7 +531,7 @@ function eF(e, n, r) {
             });
     });
 }
-function eZ(e, n) {
+function eF(e, n) {
     return k.rC
         .get(e, n, {
             url: U.C7.PLAYER,
@@ -540,7 +540,7 @@ function eZ(e, n) {
         })
         .then((r) => {
             let i = r.body;
-            null != i ? eF(e, n, i).then(() => r) : ep(e);
+            null != i ? eZ(e, n, i).then(() => r) : ep(e);
         })
         .catch(() => ep(e));
 }
@@ -621,7 +621,7 @@ class eV extends (l = g.ZP.Store) {
                 button_urls: []
             },
             I = {
-                name: F.name,
+                name: Z.name,
                 assets: m,
                 details: E,
                 state: e,

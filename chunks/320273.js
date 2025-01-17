@@ -39,10 +39,10 @@ var i = r(147018),
         return n && n.value;
     },
     G = B('fetch'),
-    F = B('Request'),
-    Z = B('Headers'),
-    V = F && F.prototype,
-    j = Z && Z.prototype,
+    Z = B('Request'),
+    F = B('Headers'),
+    V = Z && Z.prototype,
+    j = F && F.prototype,
     H = a.RegExp,
     Y = a.TypeError,
     W = a.decodeURIComponent,
@@ -275,7 +275,7 @@ if (
         },
         { URLSearchParams: e_ }
     ),
-    !u && g(Z))
+    !u && g(F))
 ) {
     var ep = o(j.has),
         em = o(j.set),
@@ -285,7 +285,7 @@ if (
                     r = e.body;
                 if (I(r) === x)
                     return (
-                        !ep((n = e.headers ? new Z(e.headers) : new Z()), 'content-type') && em(n, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        !ep((n = e.headers ? new F(e.headers) : new F()), 'content-type') && em(n, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         S(e, {
                             body: A(0, y(r)),
                             headers: A(0, n)
@@ -309,10 +309,10 @@ if (
                     }
                 }
             ),
-        g(F))
+        g(Z))
     ) {
         var eE = function (e) {
-            return m(this, V), new F(e, arguments.length > 1 ? eg(arguments[1]) : {});
+            return m(this, V), new Z(e, arguments.length > 1 ? eg(arguments[1]) : {});
         };
         (V.constructor = eE),
             (eE.prototype = V),

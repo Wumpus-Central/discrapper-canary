@@ -72,12 +72,12 @@ let x = (0, g.Un)({
         webpackId: 924339,
         name: 'LinkAuthorize'
     }),
-    F = (0, g.Un)({
+    Z = (0, g.Un)({
         createPromise: () => Promise.all([r.e('62729'), r.e('49277')]).then(r.bind(r, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
-    Z = (0, g.Un)({
+    F = (0, g.Un)({
         createPromise: () => Promise.all([r.e('77298'), r.e('23357'), r.e('50506'), r.e('96211'), r.e('23217'), r.e('48835'), r.e('99152'), r.e('35535'), r.e('34981'), r.e('12013'), r.e('73503'), r.e('52249'), r.e('68956'), r.e('6380'), r.e('72181'), r.e('8016'), r.e('56630'), r.e('26182'), r.e('95900'), r.e('51269'), r.e('32776'), r.e('66711'), r.e('90508'), r.e('13351'), r.e('86282'), r.e('65840'), r.e('21628'), r.e('18543'), r.e('17938'), r.e('87624'), r.e('74421'), r.e('18101'), r.e('24207'), r.e('46097'), r.e('76540'), r.e('8739'), r.e('58059'), r.e('18895'), r.e('68445'), r.e('24391'), r.e('57674'), r.e('99393'), r.e('99008'), r.e('37229'), r.e('22646'), r.e('95393'), r.e('33862'), r.e('57661'), r.e('3940'), r.e('25183'), r.e('80284'), r.e('38902'), r.e('27289'), r.e('48923'), r.e('20561'), r.e('30419'), r.e('69174'), r.e('8821'), r.e('18824'), r.e('84308'), r.e('7590'), r.e('53967'), r.e('70205'), r.e('78447'), r.e('86778'), r.e('93375'), r.e('64679'), r.e('69057'), r.e('77564'), r.e('91803'), r.e('92421'), r.e('90225'), r.e('84804'), r.e('94107'), r.e('37220'), r.e('61447'), r.e('82158'), r.e('99916'), r.e('91315'), r.e('77803'), r.e('13305'), r.e('20011'), r.e('20115'), r.e('52205'), r.e('9005'), r.e('80026'), r.e('84656'), r.e('64676'), r.e('4775'), r.e('31931'), r.e('55590'), r.e('95468'), r.e('55774'), r.e('50050')]).then(r.bind(r, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
@@ -134,7 +134,7 @@ let x = (0, g.Un)({
         webpackId: 332116,
         name: 'ApplicationDirectoryGlobalDiscoveryRoutes'
     }),
-    J = () => (0, a.jsx)(Z, {}),
+    J = () => (0, a.jsx)(F, {}),
     $ = new Set([O.Z5c.LOGIN, O.Z5c.LOGIN_HANDOFF, O.Z5c.INVITE_LOGIN(':inviteCode'), O.Z5c.GIFT_CODE_LOGIN(':giftCode'), O.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
 function ee(e, n) {
     return n ? e.filter((e) => !$.has(e)) : e;
@@ -254,11 +254,11 @@ class et extends s.Component {
                                     }),
                                     (0, a.jsx)(m.Z, {
                                         path: O.Z5c.ACTIVATE,
-                                        component: F
+                                        component: Z
                                     }),
                                     (0, a.jsx)(m.Z, {
                                         path: O.Z5c.ACTIVATE_HANDOFF,
-                                        component: F
+                                        component: Z
                                     }),
                                     (0, a.jsx)(m.Z, {
                                         path: O.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),

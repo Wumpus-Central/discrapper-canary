@@ -244,11 +244,11 @@ function x(e) {
                       })
               });
     }
-    let { IconComponent: F, backgroundDarkColor: Z, backgroundLightColor: V, foregroundDarkColor: j, foregroundLightColor: H, premiumBackgroundColor: Y, premiumForegroundColor: W, sizeAdjustment: K } = O[U];
-    if (null == F) return null;
+    let { IconComponent: Z, backgroundDarkColor: F, backgroundLightColor: V, foregroundDarkColor: j, foregroundLightColor: H, premiumBackgroundColor: Y, premiumForegroundColor: W, sizeAdjustment: K } = O[U];
+    if (null == Z) return null;
     k.premium && ((n = W), (r = Y));
     let z = (0, c.wj)(M) ? j : H,
-        q = (0, c.wj)(M) ? Z : V;
+        q = (0, c.wj)(M) ? F : V;
     (n = null != n ? n : z), (r = null != r ? r : q);
     let Q = Math.floor(0.75 * D) - (null != K ? K : 0);
     return (0, i.jsx)(d.Tooltip, {
@@ -271,7 +271,7 @@ function x(e) {
                     color: null != r ? r : R,
                     stroke: N,
                     size: D,
-                    children: (0, i.jsx)(F, {
+                    children: (0, i.jsx)(Z, {
                         size: 'custom',
                         width: Q,
                         height: Q,

@@ -135,8 +135,8 @@ var c = r(192379),
     U = r(585500),
     B = r(475595),
     G = r(566078),
-    F = r(46140),
-    Z = r(981631),
+    Z = r(46140),
+    F = r(981631),
     V = r(474936),
     j = r(388032);
 let H = -1,
@@ -149,10 +149,10 @@ function W() {
             isFetchingCurrentQuests: L.Z.isFetchingCurrentQuests,
             lastFetchedCurrentQuests: L.Z.lastFetchedCurrentQuests
         })),
-        o = (0, P.cB)({ location: F.dr.USE_QUESTS });
+        o = (0, P.cB)({ location: Z.dr.USE_QUESTS });
     return (
         c.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === s)) && o && !n && !a && (r(!0), (0, D.xw)(), (0, k.Z)({ location: F.dr.USE_QUESTS }) && (0, D.w)(x.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === s)) && o && !n && !a && (r(!0), (0, D.xw)(), (0, k.Z)({ location: Z.dr.USE_QUESTS }) && (0, D.w)(x.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, o, n, a, s]),
         {
             quests: i,
@@ -447,8 +447,8 @@ function ep() {
             xboxAndPlaystationAccounts: a
         } = c.useMemo(() => {
             let e = n.filter((e) => !1 === e.revoked),
-                r = e.filter((e) => e.type === Z.ABu.XBOX),
-                i = e.filter((e) => e.type === Z.ABu.PLAYSTATION),
+                r = e.filter((e) => e.type === F.ABu.XBOX),
+                i = e.filter((e) => e.type === F.ABu.PLAYSTATION),
                 a = r.concat(i);
             return {
                 xboxAccounts: r,
@@ -501,8 +501,8 @@ let em = (e) => {
             r = e.length > 0,
             i = n.length > 0,
             a = (r && !i) || (!r && i),
-            s = S.Z.getArticleURL(Z.BhN.QUEST_HOW_TO_PLAYSTATION),
-            o = S.Z.getArticleURL(Z.BhN.QUEST_HOW_TO_XBOX),
+            s = S.Z.getArticleURL(F.BhN.QUEST_HOW_TO_PLAYSTATION),
+            o = S.Z.getArticleURL(F.BhN.QUEST_HOW_TO_XBOX),
             l = j.intl.format(j.t.beN4DA, {
                 psHelpdeskArticle: s,
                 xboxHelpdeskArticle: o
@@ -546,7 +546,7 @@ function eT(e) {
         s = (0, U.D)({
             quest: e,
             taskDetails: i,
-            location: F.dr.QUEST_HOME_DESKTOP,
+            location: Z.dr.QUEST_HOME_DESKTOP,
             questContent: x.jn.QUEST_HOME_DESKTOP
         }),
         o = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
@@ -563,26 +563,26 @@ function eb(e) {
 function ey(e, n) {
     let [r, i] = eb(e.id),
         a = c.useMemo(() => (0, w.yH)(e), [e]),
-        s = a.includes(F.cd.DESKTOP),
-        o = a.includes(F.cd.CONSOLE),
+        s = a.includes(Z.cd.DESKTOP),
+        o = a.includes(Z.cd.CONSOLE),
         l = en(e),
         u = er(e),
-        _ = (0, M.pF)({ location: F.dr.QUESTS_BAR }),
+        _ = (0, M.pF)({ location: Z.dr.QUESTS_BAR }),
         h = c.useMemo(
             () =>
                 (0, d.EQ)(n)
                     .with({ percentComplete: 0 }, () => null)
-                    .with({ taskType: f.X.PLAY_ON_DESKTOP }, () => F.cd.DESKTOP)
-                    .with({ taskType: f.X.PLAY_ON_DESKTOP_V2 }, () => F.cd.DESKTOP)
-                    .with({ taskType: f.X.PLAY_ACTIVITY }, () => F.cd.DESKTOP)
-                    .with({ taskType: f.X.WATCH_VIDEO }, () => F.cd.DESKTOP)
-                    .with({ taskType: f.X.STREAM_ON_DESKTOP }, () => F.cd.DESKTOP)
-                    .with({ taskType: f.X.PLAY_ON_XBOX }, () => F.cd.CONSOLE)
-                    .with({ taskType: f.X.PLAY_ON_PLAYSTATION }, () => F.cd.CONSOLE)
+                    .with({ taskType: f.X.PLAY_ON_DESKTOP }, () => Z.cd.DESKTOP)
+                    .with({ taskType: f.X.PLAY_ON_DESKTOP_V2 }, () => Z.cd.DESKTOP)
+                    .with({ taskType: f.X.PLAY_ACTIVITY }, () => Z.cd.DESKTOP)
+                    .with({ taskType: f.X.WATCH_VIDEO }, () => Z.cd.DESKTOP)
+                    .with({ taskType: f.X.STREAM_ON_DESKTOP }, () => Z.cd.DESKTOP)
+                    .with({ taskType: f.X.PLAY_ON_XBOX }, () => Z.cd.CONSOLE)
+                    .with({ taskType: f.X.PLAY_ON_PLAYSTATION }, () => Z.cd.CONSOLE)
                     .exhaustive(),
             [n]
         ),
-        p = l ? F.cd.DESKTOP : u ? F.cd.CONSOLE : null;
+        p = l ? Z.cd.DESKTOP : u ? Z.cd.CONSOLE : null;
     return [
         c.useMemo(
             () =>
@@ -591,19 +591,19 @@ function ey(e, n) {
                     currentProgressingPlatform: p,
                     selectedPlatform: r
                 })
-                    .with({ currentProgressingPlatform: F.cd.CONSOLE }, () => x.LI.CONSOLE)
-                    .with({ currentProgressingPlatform: F.cd.DESKTOP }, () => x.LI.DESKTOP)
+                    .with({ currentProgressingPlatform: Z.cd.CONSOLE }, () => x.LI.CONSOLE)
+                    .with({ currentProgressingPlatform: Z.cd.DESKTOP }, () => x.LI.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
-                            lastPlatformProgress: F.cd.CONSOLE
+                            lastPlatformProgress: Z.cd.CONSOLE
                         },
                         () => x.LI.CONSOLE
                     )
                     .with(
                         {
                             currentProgressingPlatform: null,
-                            lastPlatformProgress: F.cd.DESKTOP
+                            lastPlatformProgress: Z.cd.DESKTOP
                         },
                         () => x.LI.DESKTOP
                     )
@@ -611,7 +611,7 @@ function ey(e, n) {
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
-                            selectedPlatform: F.cd.CONSOLE
+                            selectedPlatform: Z.cd.CONSOLE
                         },
                         () => x.LI.CONSOLE
                     )
@@ -619,7 +619,7 @@ function ey(e, n) {
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
-                            selectedPlatform: F.cd.DESKTOP
+                            selectedPlatform: Z.cd.DESKTOP
                         },
                         () => x.LI.DESKTOP
                     )
@@ -698,7 +698,7 @@ function eR(e) {
     let i = (0, m.e7)([v.default], () => v.default.locale),
         a = eo(e),
         [s] = ey(e, a),
-        o = (0, M.pF)({ location: F.dr.QUESTS_BAR });
+        o = (0, M.pF)({ location: Z.dr.QUESTS_BAR });
     if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null) return j.intl.string(j.t['ij5E//']);
     if ((null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null && a.percentComplete > 0) {
         let e = (0, A.T3)(i, a.percentComplete, { roundingMode: 'floor' });
@@ -714,7 +714,7 @@ function eO(e, n, r) {
         l = ea(e),
         u = (0, U.D)({
             quest: e,
-            location: F.dr.QUESTS_BAR,
+            location: Z.dr.QUESTS_BAR,
             questContent: x.jn.QUEST_BAR_V2,
             taskDetails: s
         });
@@ -733,13 +733,13 @@ function eO(e, n, r) {
 function eD(e, n) {
     let r = (0, m.e7)([L.Z], () => L.Z.getQuest(e), [e]),
         i = (0, g.ZP)(),
-        a = c.useMemo(() => (null == r ? void 0 : r.config.features.includes(F.S7.QUESTS_CDN)) === !0, [r]);
+        a = c.useMemo(() => (null == r ? void 0 : r.config.features.includes(Z.S7.QUESTS_CDN)) === !0, [r]);
     return c.useMemo(
         () =>
             (null == r ? void 0 : r.config.cosponsorMetadata) == null
                 ? null
                 : (0, B.Rt)(e, r.config.cosponsorMetadata.logotype, {
-                      theme: null != n ? n : (0, p.wj)(i) ? Z.BRd.DARK : Z.BRd.LIGHT,
+                      theme: null != n ? n : (0, p.wj)(i) ? F.BRd.DARK : F.BRd.LIGHT,
                       newCdn: a
                   }),
         [i, n, e, null == r ? void 0 : r.config.cosponsorMetadata, a]

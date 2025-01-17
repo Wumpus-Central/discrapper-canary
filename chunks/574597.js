@@ -26,10 +26,10 @@ function I(e) {
     var n;
     let t = (0, x.CJ)(),
         I = null == t ? void 0 : null === (n = t.message) || void 0 === n ? void 0 : n.getChannelId(),
-        S = m.Z.getChannel(I),
-        j = f.Z.getGuild(null == S ? void 0 : S.getGuildId()),
-        y = (0, d.Z)(null == j ? void 0 : j.id, C.HI),
-        T = i.useMemo(() => (0, C.tx)(e.defaultValues, null == j ? void 0 : j.id), [e.defaultValues, j]);
+        j = m.Z.getChannel(I),
+        S = f.Z.getGuild(null == j ? void 0 : j.getGuildId()),
+        y = (0, d.Z)(null == S ? void 0 : S.id, C.HI),
+        T = i.useMemo(() => (0, C.tx)(e.defaultValues, null == S ? void 0 : S.id), [e.defaultValues, S]);
     return (0, l.jsx)(g.ZP, {
         selectActionComponent: e,
         queryOptions: (n) => (0, C._H)(e.type, n, I),
@@ -40,16 +40,16 @@ function I(e) {
                 if (null == i) return;
                 return (0, l.jsx)(a.Avatar, {
                     size: t ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
-                    src: i.getAvatarURL(null == j ? void 0 : j.id, n),
+                    src: i.getAvatarURL(null == S ? void 0 : S.id, n),
                     status: t ? null : p.Z.getStatus(i.id),
                     'aria-hidden': !0
                 });
             }
             if ((null == e ? void 0 : e.type) === v.tM.ROLE) {
                 var i;
-                let t = null != j ? f.Z.getRole(j.id, e.value) : void 0;
-                if (null == t || null == j) return;
-                let o = (0, c._b)(j, t) ? (0, u.Kz)(t, n) : null;
+                let t = null != S ? f.Z.getRole(S.id, e.value) : void 0;
+                if (null == t || null == S) return;
+                let o = (0, c._b)(S, t) ? (0, u.Kz)(t, n) : null;
                 return null != o
                     ? (0, l.jsx)(s.Z, { ...o })
                     : (0, l.jsx)(a.ShieldUserIcon, {
@@ -74,7 +74,7 @@ function I(e) {
                         forceUsername: !0
                     }));
             } else if (e.type === v.tM.ROLE) {
-                let t = null != j ? f.Z.getRole(j.id, e.value) : void 0,
+                let t = null != S ? f.Z.getRole(S.id, e.value) : void 0,
                     i = null == t ? null : null == y ? void 0 : y[t.id];
                 null != i &&
                     (n = (0, l.jsxs)('div', {

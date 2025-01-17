@@ -96,11 +96,11 @@ function G(e) {
         }),
         U(n, r);
 }
-function F(e) {
+function Z(e) {
     let { branchId: n } = e;
     y.delete(n), A.add(n);
 }
-function Z(e) {
+function F(e) {
     let { buildId: n } = e;
     !N.hasOwnProperty(n) && (N[n] = null);
 }
@@ -174,8 +174,8 @@ b(z, 'displayName', 'ApplicationBuildStore'),
         GAMES_DATABASE_UPDATE: k,
         APPLICATION_BUILD_FETCH_START: B,
         APPLICATION_BUILD_FETCH_SUCCESS: G,
-        APPLICATION_BUILD_NOT_FOUND: F,
-        APPLICATION_BUILD_SIZE_FETCH_START: Z,
+        APPLICATION_BUILD_NOT_FOUND: Z,
+        APPLICATION_BUILD_SIZE_FETCH_START: F,
         APPLICATION_BUILD_SIZE_FETCH_SUCCESS: V,
         APPLICATION_BUILD_SIZE_FETCH_FAIL: j,
         APPLICATION_BRANCHES_FETCH_SUCCESS: H,

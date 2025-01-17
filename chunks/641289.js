@@ -112,19 +112,19 @@ function A(e) {
             begin: i(/\\/, e, /\(/),
             end: /\)/
         }),
-        F = (e = '') => ({
+        Z = (e = '') => ({
             begin: i(e, /"""/),
             end: i(/"""/, e),
             contains: [U(e), B(e), G(e)]
         }),
-        Z = (e = '') => ({
+        F = (e = '') => ({
             begin: i(e, /"/),
             end: i(/"/, e),
             contains: [U(e), G(e)]
         }),
         V = {
             className: 'string',
-            variants: [F(), F('#'), F('##'), F('###'), Z(), Z('#'), Z('##'), Z('###')]
+            variants: [Z(), Z('#'), Z('##'), Z('###'), F(), F('#'), F('##'), F('###')]
         },
         j = [
             e.BACKSLASH_ESCAPE,

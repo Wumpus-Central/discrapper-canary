@@ -40,7 +40,7 @@ function C(e) {
             isMobileOnline: p.Z.isMobileOnline(n.id)
         })),
         G = g === b.y0.FULL_SIZE ? c.AvatarSizes.SIZE_120 : c.AvatarSizes.SIZE_80,
-        F = l()(
+        Z = l()(
             A.avatar,
             {
                 [A.biteSize]: g === b.y0.BITE_SIZE,
@@ -50,7 +50,7 @@ function C(e) {
             O
         ),
         {
-            avatarDecorationSrc: Z,
+            avatarDecorationSrc: F,
             avatarSrc: V,
             eventHandlers: j
         } = (0, I.Z)({
@@ -61,7 +61,7 @@ function C(e) {
         }),
         H = (0, a.jsx)(N, {
             src: V,
-            avatarDecoration: Z,
+            avatarDecoration: F,
             size: G,
             'aria-label': n.username,
             imageClassName: null != R ? A.overlay : void 0,
@@ -74,12 +74,12 @@ function C(e) {
     return null == R
         ? (0, a.jsx)('div', {
               ...j,
-              className: F,
+              className: Z,
               children: H
           })
         : (0, a.jsx)(c.Clickable, {
               ...j,
-              className: l()(F, A.clickable),
+              className: l()(Z, A.clickable),
               focusProps: { ringClassName: A.focusRing },
               onClick: () => {
                   x({

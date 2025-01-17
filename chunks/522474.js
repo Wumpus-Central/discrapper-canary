@@ -57,7 +57,7 @@ function G(e, n) {
         i.appendChild(n);
     }
 }
-function F(e) {
+function Z(e) {
     let n = L[e];
     null != n &&
         !n.closed &&
@@ -69,7 +69,7 @@ function F(e) {
             alwaysOnTop: !!b.isPlatformEmbedded && D[e]
         });
 }
-function Z(e) {
+function F(e) {
     let n = L[e];
     h()(null != n, 'Popout window was null during unmount'), n.removeEventListener('focus', k), n.removeEventListener('blur', k), n.removeEventListener('resize', U);
     let r = x[e];
@@ -133,7 +133,7 @@ function W(e) {
 }
 function K(e) {
     let n = L[e];
-    null != n && (!n.closed && F(e), setTimeout(() => n.close(), 100), Z(e), ee.emitChange());
+    null != n && (!n.closed && Z(e), setTimeout(() => n.close(), 100), F(e), ee.emitChange());
 }
 function z(e) {
     let { data: n } = e;
@@ -150,7 +150,7 @@ function z(e) {
 function q(e) {
     let { key: n } = e,
         r = L[n];
-    null != r && !r.closed && (F(n), !T.default.preventPopoutClose && r.close());
+    null != r && !r.closed && (Z(n), !T.default.preventPopoutClose && r.close());
 }
 function Q() {
     for (let e of Object.keys(L)) {

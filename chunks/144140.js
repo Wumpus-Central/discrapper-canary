@@ -130,11 +130,11 @@ function G(e) {
     let { channel: n } = e;
     S(n.id);
 }
-function F(e) {
+function Z(e) {
     let { channel: n } = e;
     delete T[n.id];
 }
-function Z(e) {
+function F(e) {
     let { message: n, optimistic: r, isPushNotification: i, sendMessageOptions: a } = e;
     if (r || i || null != a) return !1;
     let s = h.Z.getChannel(n.channel_id);
@@ -245,9 +245,9 @@ v(z, 'displayName', 'ThreadMessageStore'),
         RELATIONSHIP_REMOVE: K,
         SEARCH_FINISH: B,
         MOD_VIEW_SEARCH_FINISH: B,
-        THREAD_DELETE: F,
+        THREAD_DELETE: Z,
         CHANNEL_DELETE: G,
-        MESSAGE_CREATE: Z,
+        MESSAGE_CREATE: F,
         MESSAGE_UPDATE: j,
         MESSAGE_DELETE: H,
         MESSAGE_DELETE_BULK: Y,

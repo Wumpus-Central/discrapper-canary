@@ -70,9 +70,9 @@ function D(e) {
             }
             x(r.length === L.length ? L : r), P(i), G.current++;
         }, [d, L, M]);
-    let F = o.useMemo(() => 'roles-'.concat((0, l.Z)()), []),
-        Z = (0, u.ZP)({
-            id: F,
+    let Z = o.useMemo(() => 'roles-'.concat((0, l.Z)()), []),
+        F = (0, u.ZP)({
+            id: Z,
             isEnabled: !0,
             scrollToStart: y.Cyb,
             scrollToEnd: y.Cyb,
@@ -104,7 +104,7 @@ function D(e) {
             k(!1), Y({ action: 'COLLAPSE_ROLES' });
         }, [Y]);
     return (0, s.jsx)(c.bG, {
-        navigator: Z,
+        navigator: F,
         children: (0, s.jsx)(c.SJ, {
             children: (e) => {
                 let { ref: n, ...r } = e;

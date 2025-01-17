@@ -177,8 +177,8 @@ function C(e) {
             tag: k,
             badge: U,
             branding: { primaryColor: B, secondaryColor: G },
-            bannerHash: F,
-            gameActivity: Z
+            bannerHash: Z,
+            gameActivity: F
         } = r,
         V = (0, c.Z)(r.games),
         j = (0, _.i)('clan_discovery_card'),
@@ -192,7 +192,7 @@ function C(e) {
             Y(!1);
         }, []),
         X = T.intl.formatToPlainString(T.t['0WHArK'], { count: r.memberCount }),
-        J = null != L ? L : (0, p.pY)(r.id, F),
+        J = null != L ? L : (0, p.pY)(r.id, Z),
         $ = null == i && null == J ? { background: 'linear-gradient(90deg, '.concat(B, ', ').concat(G, ')') } : void 0,
         ee =
             null != i
@@ -364,7 +364,7 @@ function C(e) {
                         children: (0, a.jsx)(m.Z, {
                             games: V,
                             prioritizedGameIds: C,
-                            gameActivity: Z,
+                            gameActivity: F,
                             onInteraction: en('games')
                         })
                     })

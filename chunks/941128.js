@@ -61,7 +61,7 @@ function B() {
 function G(e, n) {
     return (null != x && x.applicationId === e && x.branchId === n) || (null != w && w.applicationId === e && w.branchId === n) || !1;
 }
-function F() {
+function Z() {
     let e = O[0];
     if (null != e) {
         let { comboId: n, action: r } = e,
@@ -74,7 +74,7 @@ function F() {
         }
     }
 }
-function Z(e, n) {
+function F(e, n) {
     let r = (0, I.Tu)(e, n);
     return O.findIndex((e) => e.comboId === r);
 }
@@ -86,15 +86,15 @@ function V(e, n, r, i) {
         },
         o = D.indexOf(a);
     -1 !== o && D.splice(o, 1);
-    let l = Z(e, n);
-    0 !== l && (r ? -1 === l && (O.push(s), F()) : (l > 0 && O.splice(l, 1), O.unshift(s), F())), !r && L && T.Z.resume(), B();
+    let l = F(e, n);
+    0 !== l && (r ? -1 === l && (O.push(s), Z()) : (l > 0 && O.splice(l, 1), O.unshift(s), Z())), !r && L && T.Z.resume(), B();
 }
 function j(e, n) {
     let r = (0, I.Tu)(e, n),
         i = D.indexOf(r);
     -1 !== i && D.splice(i, 1);
-    let a = Z(e, n);
-    -1 !== a && (O.splice(a, 1), B()), F();
+    let a = F(e, n);
+    -1 !== a && (O.splice(a, 1), B()), Z();
 }
 function H(e) {
     let { applicationId: n, branchId: r } = e;
@@ -117,9 +117,9 @@ function z(e) {
 }
 function q(e) {
     let { applicationId: n, branchId: r } = e,
-        i = Z(n, r);
+        i = F(n, r);
     if (i < 1) return !1;
-    O.splice(0, 0, O.splice(i, 1)[0]), F(), L && T.Z.resume(), B();
+    O.splice(0, 0, O.splice(i, 1)[0]), Z(), L && T.Z.resume(), B();
 }
 function Q(e) {
     let { applicationId: n, branchId: r } = e,
@@ -129,7 +129,7 @@ function Q(e) {
 }
 function X(e) {
     let { state: n } = e;
-    !P && ((P = !0), F(), !L && T.Z.resume());
+    !P && ((P = !0), Z(), !L && T.Z.resume());
     let r = L;
     (L = n.paused), (x = n.currentTask), (w = n.nextTask);
     let i = !1;
@@ -154,7 +154,7 @@ function X(e) {
         }
         return !0;
     })),
-        F(),
+        Z(),
         (i || r !== L) && B();
 }
 function J() {
@@ -223,7 +223,7 @@ class ei extends (s = _.ZP.Store) {
         return L;
     }
     getQueuePosition(e, n) {
-        return Z(e, n);
+        return F(e, n);
     }
     isCorruptInstallation() {
         return k;

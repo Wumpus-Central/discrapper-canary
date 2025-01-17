@@ -34,8 +34,8 @@ var i,
     U = 258,
     B = 262,
     G = 32,
-    F = 42,
-    Z = 69,
+    Z = 42,
+    F = 69,
     V = 73,
     j = 91,
     H = 103,
@@ -197,7 +197,7 @@ function eh() {
 }
 function ep(e) {
     var n;
-    return e && e.state ? ((e.total_in = e.total_out = 0), (e.data_type = N), ((n = e.state).pending = 0), (n.pending_out = 0), n.wrap < 0 && (n.wrap = -n.wrap), (n.status = n.wrap ? F : Y), (e.adler = 2 === n.wrap ? 0 : 1), (n.last_flush = c), s._tr_init(n), p) : J(e, g);
+    return e && e.state ? ((e.total_in = e.total_out = 0), (e.data_type = N), ((n = e.state).pending = 0), (n.pending_out = 0), n.wrap < 0 && (n.wrap = -n.wrap), (n.status = n.wrap ? Z : Y), (e.adler = 2 === n.wrap ? 0 : 1), (n.last_flush = c), s._tr_init(n), p) : J(e, g);
 }
 function em(e) {
     var n = ep(e);
@@ -220,8 +220,8 @@ function ev(e, n) {
 function eI(e, n) {
     if (!e || !e.state || n > h || n < 0) return e ? J(e, g) : g;
     if (((a = e.state), !e.output || (!e.input && 0 !== e.avail_in) || (a.status === W && n !== _))) return J(e, 0 === e.avail_out ? v : g);
-    if (((a.strm = e), (r = a.last_flush), (a.last_flush = n), a.status === F)) {
-        if (2 === a.wrap) (e.adler = 0), er(a, 31), er(a, 139), er(a, 8), a.gzhead ? (er(a, (a.gzhead.text ? 1 : 0) + (a.gzhead.hcrc ? 2 : 0) + (a.gzhead.extra ? 4 : 0) + (a.gzhead.name ? 8 : 0) + (a.gzhead.comment ? 16 : 0)), er(a, 255 & a.gzhead.time), er(a, (a.gzhead.time >> 8) & 255), er(a, (a.gzhead.time >> 16) & 255), er(a, (a.gzhead.time >> 24) & 255), er(a, 9 === a.level ? 2 : a.strategy >= b || a.level < 2 ? 4 : 0), er(a, 255 & a.gzhead.os), a.gzhead.extra && a.gzhead.extra.length && (er(a, 255 & a.gzhead.extra.length), er(a, (a.gzhead.extra.length >> 8) & 255)), a.gzhead.hcrc && (e.adler = l(e.adler, a.pending_buf, a.pending, 0)), (a.gzindex = 0), (a.status = Z)) : (er(a, 0), er(a, 0), er(a, 0), er(a, 0), er(a, 0), er(a, 9 === a.level ? 2 : a.strategy >= b || a.level < 2 ? 4 : 0), er(a, X), (a.status = Y));
+    if (((a.strm = e), (r = a.last_flush), (a.last_flush = n), a.status === Z)) {
+        if (2 === a.wrap) (e.adler = 0), er(a, 31), er(a, 139), er(a, 8), a.gzhead ? (er(a, (a.gzhead.text ? 1 : 0) + (a.gzhead.hcrc ? 2 : 0) + (a.gzhead.extra ? 4 : 0) + (a.gzhead.name ? 8 : 0) + (a.gzhead.comment ? 16 : 0)), er(a, 255 & a.gzhead.time), er(a, (a.gzhead.time >> 8) & 255), er(a, (a.gzhead.time >> 16) & 255), er(a, (a.gzhead.time >> 24) & 255), er(a, 9 === a.level ? 2 : a.strategy >= b || a.level < 2 ? 4 : 0), er(a, 255 & a.gzhead.os), a.gzhead.extra && a.gzhead.extra.length && (er(a, 255 & a.gzhead.extra.length), er(a, (a.gzhead.extra.length >> 8) & 255)), a.gzhead.hcrc && (e.adler = l(e.adler, a.pending_buf, a.pending, 0)), (a.gzindex = 0), (a.status = F)) : (er(a, 0), er(a, 0), er(a, 0), er(a, 0), er(a, 0), er(a, 9 === a.level ? 2 : a.strategy >= b || a.level < 2 ? 4 : 0), er(a, X), (a.status = Y));
         else {
             var r,
                 a,
@@ -232,7 +232,7 @@ function eI(e, n) {
             (E |= (I = a.strategy >= b || a.level < 2 ? 0 : a.level < 6 ? 1 : 6 === a.level ? 2 : 3) << 6), 0 !== a.strstart && (E |= G), (E += 31 - (E % 31)), (a.status = Y), ei(a, E), 0 !== a.strstart && (ei(a, e.adler >>> 16), ei(a, 65535 & e.adler)), (e.adler = 1);
         }
     }
-    if (a.status === Z) {
+    if (a.status === F) {
         if (a.gzhead.extra) {
             for (o = a.pending; a.gzindex < (65535 & a.gzhead.extra.length) && (a.pending !== a.pending_buf_size || (a.gzhead.hcrc && a.pending > o && (e.adler = l(e.adler, a.pending_buf, a.pending - o, o)), et(e), (o = a.pending), a.pending !== a.pending_buf_size)); ) {
                 er(a, 255 & a.gzhead.extra[a.gzindex]), a.gzindex++;
@@ -279,7 +279,7 @@ function eI(e, n) {
 }
 function eT(e) {
     var n;
-    return e && e.state ? ((n = e.state.status) !== F && n !== Z && n !== V && n !== j && n !== H && n !== Y && n !== W ? J(e, g) : ((e.state = null), n === Y ? J(e, E) : p)) : g;
+    return e && e.state ? ((n = e.state.status) !== Z && n !== F && n !== V && n !== j && n !== H && n !== Y && n !== W ? J(e, g) : ((e.state = null), n === Y ? J(e, E) : p)) : g;
 }
 function eb(e, n) {
     var r,
@@ -291,7 +291,7 @@ function eb(e, n) {
         d,
         f,
         _ = n.length;
-    if (!e || !e.state || 2 === (l = (r = e.state).wrap) || (1 === l && r.status !== F) || r.lookahead) return g;
+    if (!e || !e.state || 2 === (l = (r = e.state).wrap) || (1 === l && r.status !== Z) || r.lookahead) return g;
     for (1 === l && (e.adler = o(e.adler, n, _, 0)), r.wrap = 0, _ >= r.w_size && (0 === l && (ee(r.head), (r.strstart = 0), (r.block_start = 0), (r.insert = 0)), (f = new a.Buf8(r.w_size)), a.arraySet(f, n, _ - r.w_size, r.w_size, 0), (n = f), (_ = r.w_size)), u = e.avail_in, c = e.next_in, d = e.input, e.avail_in = _, e.next_in = 0, e.input = n, eo(r); r.lookahead >= k; ) {
         (i = r.strstart), (s = r.lookahead - (k - 1));
         do (r.ins_h = ((r.ins_h << r.hash_shift) ^ r.window[i + k - 1]) & r.hash_mask), (r.prev[i & r.w_mask] = r.head[r.ins_h]), (r.head[r.ins_h] = i), i++;

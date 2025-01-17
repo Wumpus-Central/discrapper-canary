@@ -52,8 +52,8 @@ function L(e) {
         U = y.ZP.canUseCollectibles(n),
         B = s.useRef(null),
         G = (0, m.Z)(o),
-        F = (0, S.sr)(w, void 0 === C ? x : C),
-        Z = (e) => {
+        Z = (0, S.sr)(w, void 0 === C ? x : C),
+        F = (e) => {
             P(e), null != e && G(e);
         },
         V = () => {
@@ -75,7 +75,7 @@ function L(e) {
             (null != k && (!(0, _.qS)(k) || U)) || null === w
                 ? (0, a.jsx)(u.Button, {
                       onClick: V,
-                      disabled: F,
+                      disabled: Z,
                       children: O.intl.string(O.t.d6sv6u)
                   })
                 : null == k && (U || !(0, _.G1)(M))
@@ -114,7 +114,7 @@ function L(e) {
                         guild: b,
                         pendingAvatarDecoration: w,
                         selectedAvatarDecorationRef: B,
-                        onSelect: Z,
+                        onSelect: F,
                         onOpenShop: j
                     }),
                     (0, a.jsx)(A.Z, {

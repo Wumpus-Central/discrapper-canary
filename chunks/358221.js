@@ -46,8 +46,8 @@ let x = new p.Z('ChannelRTCStore'),
     U = {},
     B = {},
     G = {},
-    F = {},
     Z = {},
+    F = {},
     V = {},
     j = {},
     H = {},
@@ -208,11 +208,11 @@ function ep(e) {
 }
 function em(e) {
     let { channelId: n, participantsOpen: r } = e;
-    F[n] = r;
+    Z[n] = r;
 }
 function eg(e) {
     let { channelId: n, voiceParticipantsHidden: r } = e;
-    Z[n] = r;
+    F[n] = r;
 }
 function eE(e) {
     let { channelId: n, selfStreamHidden: r } = e,
@@ -254,7 +254,7 @@ function ey(e) {
         } catch (e) {
             x.warn('INVALID STREAM KEY FORMAT '.concat(r), e);
         }
-        !et(i) && (F[n] = !1);
+        !et(i) && (Z[n] = !1);
     }
 }
 function eS(e) {
@@ -313,10 +313,10 @@ function ew(e) {
 }
 class eP extends (i = f.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(E.Z, v.default, I.Z, T.Z, h.ZP, b.Z, y.Z, S.Z, A.default, N.Z, C.Z), this.syncWith([h.ZP], eu), this.syncWith([b.Z], ec), this.syncWith([m.Z], ea), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(Z, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(E.Z, v.default, I.Z, T.Z, h.ZP, b.Z, y.Z, S.Z, A.default, N.Z, C.Z), this.syncWith([h.ZP], eu), this.syncWith([b.Z], ec), this.syncWith([m.Z], ea), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(F, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
-        return { voiceParticipantsHidden: Z };
+        return { voiceParticipantsHidden: F };
     }
     getParticipantsVersion(e) {
         return W(e).version;
@@ -330,7 +330,7 @@ class eP extends (i = f.ZP.PersistedStore) {
         return null !== (n = W(e).toArray(R.sI.SPEAKING)) && void 0 !== n ? n : w;
     }
     getFilteredParticipants(e) {
-        return Z[e] ? W(e).toArray(R.sI.FILTERED) : W(e).toArray();
+        return F[e] ? W(e).toArray(R.sI.FILTERED) : W(e).toArray();
     }
     getVideoParticipants(e) {
         var n;
@@ -353,11 +353,11 @@ class eP extends (i = f.ZP.PersistedStore) {
     }
     getParticipantsOpen(e) {
         var n;
-        return null === (n = F[e]) || void 0 === n || n;
+        return null === (n = Z[e]) || void 0 === n || n;
     }
     getVoiceParticipantsHidden(e) {
         var n;
-        return null !== (n = Z[e]) && void 0 !== n && n;
+        return null !== (n = F[e]) && void 0 !== n && n;
     }
     getSelectedParticipantId(e) {
         let [n, r] = X(e);

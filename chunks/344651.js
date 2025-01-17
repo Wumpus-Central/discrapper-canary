@@ -89,7 +89,7 @@ let U = new m.Z('ConnectionStore'),
         ),
         (e) => 'SOUNDBOARD_SOUNDS' !== e
     ),
-    F = new M.Z(
+    Z = new M.Z(
         k.Wb,
         (e, n) => (
             (e =
@@ -103,7 +103,7 @@ let U = new m.Z('ConnectionStore'),
         ),
         (e) => 'GUILD_MEMBERS_CHUNK' !== e
     ),
-    Z = new M.Z(
+    F = new M.Z(
         k.Wb,
         (e, n) => (
             (e =
@@ -187,7 +187,7 @@ function q(e) {
 }
 function Q(e) {
     let { guildId: n, user: r, status: i, activities: a, clientStatus: s } = e;
-    Z.add({
+    F.add({
         guildId: n,
         user: r,
         status: i,
@@ -690,7 +690,7 @@ H(
     }),
     j(['GUILD_MEMBERS_CHUNK'], (e) => {
         c.ZP.Emitter.batched(() => {
-            F.add({
+            Z.add({
                 guildId: e.guild_id,
                 members: e.members,
                 notFound: e.not_found

@@ -215,12 +215,12 @@ function c(e) {
     function G(e) {
         return c.concat('(?!', e.join('|'), ')');
     }
-    let F = {
+    let Z = {
             match: c.concat(/\b/, G([...o, 'super', 'import'].map((e) => `${e}\\s*\\(`)), f, c.lookahead(/\s*\(/)),
             className: 'title.function',
             relevance: 0
         },
-        Z = {
+        F = {
             begin: c.concat(/\./, c.lookahead(c.concat(f, /(?![0-9A-Za-z$_(])/))),
             end: f,
             excludeBegin: !0,
@@ -366,7 +366,7 @@ function c(e) {
                 match: /\.\.\./,
                 relevance: 0
             },
-            Z,
+            F,
             {
                 match: '\\$' + f,
                 relevance: 0
@@ -376,7 +376,7 @@ function c(e) {
                 className: { 1: 'title.function' },
                 contains: [w]
             },
-            F,
+            Z,
             B,
             P,
             V,

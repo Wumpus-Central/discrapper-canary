@@ -82,10 +82,10 @@ function B() {
 function G() {
     T = {};
 }
-function F() {
+function Z() {
     k(), y();
 }
-class Z extends (p = m.ZP.Store) {
+class F extends (p = m.ZP.Store) {
     getFormState() {
         return I;
     }
@@ -147,10 +147,10 @@ class Z extends (p = m.ZP.Store) {
         return h;
     }
 }
-v(Z, 'displayName', 'GuildIdentitySettingsStore'),
-    (n.Z = new Z(g.Z, {
+v(F, 'displayName', 'GuildIdentitySettingsStore'),
+    (n.Z = new F(g.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: b,
-        GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: F,
+        GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: Z,
         GUILD_IDENTITY_SETTINGS_SET_GUILD: A,
         GUILD_IDENTITY_SETTINGS_SUBMIT: S,
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: N,

@@ -23,7 +23,7 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
     N = (0, c.Mg)(S.__invalid_stickerPickerPreviewPadding),
     C = 250,
     R = s.memo(function (e) {
-        let { isDisplayingIndividualStickers: n = !1, preferAnimation: i = !0, getStickerItemProps: o, getStickerRowProps: c, gutterWidth: R, inspectedStickerPosition: O, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: w, rowIndex: P, stickerClassName: M, stickerDescriptors: k, stickerPadding: U = N, stickerSize: B = A, ownedStickerPacks: G, enlargeOnInteraction: F = !1, channel: Z, currentUser: V, checkSendability: j = !0 } = e,
+        let { isDisplayingIndividualStickers: n = !1, preferAnimation: i = !0, getStickerItemProps: o, getStickerRowProps: c, gutterWidth: R, inspectedStickerPosition: O, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: w, rowIndex: P, stickerClassName: M, stickerDescriptors: k, stickerPadding: U = N, stickerSize: B = A, ownedStickerPacks: G, enlargeOnInteraction: Z = !1, channel: F, currentUser: V, checkSendability: j = !0 } = e,
             { location: H } = (0, _.O)(),
             Y = B + 2 * U,
             W = s.useMemo(
@@ -51,7 +51,7 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
             children: k.map((e) => {
                 var c;
                 let _ = e.visibleRowIndex === (null == O ? void 0 : O.rowIndex) && e.columnIndex === (null == O ? void 0 : O.columnIndex),
-                    h = e.type === E.al.STICKER && F && _,
+                    h = e.type === E.al.STICKER && Z && _,
                     A = (n) => {
                         if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0) return;
                         let r = n.altKey;
@@ -92,7 +92,7 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                     onClick: R,
                                     style: K,
                                     children: [
-                                        !F && (0, a.jsx)('div', { className: S.inspectedIndicator }),
+                                        !Z && (0, a.jsx)('div', { className: S.inspectedIndicator }),
                                         (0, a.jsx)('div', {
                                             className: S.iconWrapper,
                                             children: (0, a.jsx)(d.PlusSmallIcon, {
@@ -144,15 +144,15 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                     (0, a.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
-                                            !F && (0, a.jsx)('div', { className: S.inspectedIndicator }),
+                                            !Z && (0, a.jsx)('div', { className: S.inspectedIndicator }),
                                             (0, a.jsx)(I.ZP, {
                                                 className: l()(S.stickerNode, {
-                                                    [S.stickerNodeDimmed]: F && !_ && null != O && -1 !== O.rowIndex && -1 !== O.columnIndex,
+                                                    [S.stickerNodeDimmed]: Z && !_ && null != O && -1 !== O.rowIndex && -1 !== O.columnIndex,
                                                     [S.stickerNodeHidden]: h,
-                                                    [S.stickerUnsendable]: j && !(0, g.kl)(e.sticker, V, Z)
+                                                    [S.stickerUnsendable]: j && !(0, g.kl)(e.sticker, V, F)
                                                 }),
                                                 disableAnimation: !_ && !i,
-                                                enlargeOnInteraction: F,
+                                                enlargeOnInteraction: Z,
                                                 isInteracting: _,
                                                 maskAsset: _,
                                                 sticker: e.sticker,

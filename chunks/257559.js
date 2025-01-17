@@ -13,8 +13,8 @@ var i = t(200651),
     f = t(294218),
     h = t(699516),
     E = t(594174),
-    v = t(630388),
-    I = t(970257),
+    I = t(630388),
+    v = t(970257),
     p = t(981631),
     x = t(388032),
     M = t(463096);
@@ -36,14 +36,14 @@ class Z extends l.PureComponent {
         let e, n;
         let { report: t } = this.state,
             { channel: l, message: r, showContextMenuHint: a, ...s } = this.props,
-            u = l.type === p.d4z.GUILD_ANNOUNCEMENT && (0, v.yE)(r.flags, p.iLy.CROSSPOSTED);
+            u = l.type === p.d4z.GUILD_ANNOUNCEMENT && (0, I.yE)(r.flags, p.iLy.CROSSPOSTED);
         return (
             a &&
                 (e = (0, i.jsx)(c.Z, {
                     className: M.spacingTop,
                     children: x.intl.format(x.t.IxY7Ex, {})
                 })),
-            (0, I.vc)(r) &&
+            (0, v.vc)(r) &&
                 (n = (0, i.jsx)(o.FormSwitch, {
                     value: t,
                     onChange: this.handleToggleReport,

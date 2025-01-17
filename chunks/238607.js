@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return F;
+        return Z;
     }
 });
 var i = r(47120);
@@ -39,8 +39,8 @@ var a = r(200651),
     U = r(981631),
     B = r(701488),
     G = r(388032);
-function F(e) {
-    let { user: n, currentUser: r, activity: i, onAction: F, onClose: Z } = e,
+function Z(e) {
+    let { user: n, currentUser: r, activity: i, onAction: Z, onClose: F } = e,
         { analyticsLocations: V, newestAnalyticsLocation: j } = (0, I.ZP)(),
         [H] = (0, T.Z)([null == i ? void 0 : i.application_id]),
         Y = (0, E.Z)(i),
@@ -100,7 +100,7 @@ function F(e) {
                     joinSessionId: K
                 }))
             ) {
-                null == Z || Z();
+                null == F || F();
                 return;
             }
             if (J && null != W && null != K) {
@@ -161,7 +161,7 @@ function F(e) {
                       submitting: X,
                       fullWidth: !0,
                       onClick: (e) => {
-                          e.stopPropagation(), null == F || F({ action: 'PRESS_JOIN_BUTTON' }), en();
+                          e.stopPropagation(), null == Z || Z({ action: 'PRESS_JOIN_BUTTON' }), en();
                       }
                   })
           })
@@ -176,7 +176,7 @@ function F(e) {
                       submitting: X,
                       fullWidth: !0,
                       onClick: (e) => {
-                          e.stopPropagation(), null == F || F({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), en();
+                          e.stopPropagation(), null == Z || Z({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), en();
                       }
                   })
           });

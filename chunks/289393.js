@@ -105,11 +105,11 @@ function G(e) {
     let { listing: n, groupListing: r } = e;
     O(n), R(r);
 }
-function F(e) {
+function Z(e) {
     let { listing: n } = e;
     O(n);
 }
-function Z(e) {
+function F(e) {
     let { listingId: n } = e;
     return v.delete(n);
 }
@@ -193,8 +193,8 @@ _(z, 'displayName', 'GuildRoleSubscriptionsStore'),
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: U,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: B,
         GUILD_ROLE_SUBSCRIPTIONS_CREATE_LISTING: G,
-        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: F,
-        GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: Z,
+        GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING: Z,
+        GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING: F,
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL: V,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: j,
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: H,

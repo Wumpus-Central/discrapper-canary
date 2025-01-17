@@ -153,12 +153,12 @@ function G(e) {
             force: !0
         });
 }
-function F(e) {
+function Z(e) {
     let { refreshAfterMs: n } = e,
         r = E.Z.getFeed(S);
     if ((null == r ? void 0 : r.refresh_stale_inbox_after_ms) != null) (O = new Date(Date.now() + (null != n ? n : r.refresh_stale_inbox_after_ms)).toUTCString()), P();
 }
-function Z(e) {
+function F(e) {
     var n;
     let { connectionId: r, track: i } = e;
     if (null != r) (null === (n = f.Z.getAccount(r, I.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && D(r, i);
@@ -179,8 +179,8 @@ class j extends l.Z {
                 IDLE: k,
                 CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: k,
                 CONTENT_INVENTORY_MANUAL_REFRESH: G,
-                CONTENT_INVENTORY_INBOX_STALE: F,
-                SPOTIFY_NEW_TRACK: Z,
+                CONTENT_INVENTORY_INBOX_STALE: Z,
+                SPOTIFY_NEW_TRACK: F,
                 GAME_PROFILE_OPEN: V,
                 OVERLAY_READY: V
             });

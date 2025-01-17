@@ -60,11 +60,11 @@ function G(e) {
     let { recipientId: n } = e;
     E.add(n);
 }
-function F(e) {
+function Z(e) {
     let { recipientId: n, is_eligible: r } = e;
     p.set(n, r), E.delete(n);
 }
-function Z(e) {
+function F(e) {
     let { recipientId: n } = e;
     p.set(n, !1), E.delete(n);
 }
@@ -196,8 +196,8 @@ f(er, 'displayName', 'ReferralTrialStore'),
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_SUCCESS: ee,
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_FAIL: et,
         BILLING_GET_REFERRAL_INCENTIVE_STATUS_START: en,
-        BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: F,
-        BILLING_CREATE_REFERRAL_PREVIEW_FAIL: Z,
+        BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: Z,
+        BILLING_CREATE_REFERRAL_PREVIEW_FAIL: F,
         BILLING_CREATE_REFERRAL_SUCCESS: V,
         CREATE_REFERRALS_SUCCESS: j,
         BILLING_REFERRAL_RESOLVE_SUCCESS: Y,

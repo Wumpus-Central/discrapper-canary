@@ -17,8 +17,8 @@ var i = t(200651),
     f = t(585483),
     h = t(176354),
     E = t(981631),
-    v = t(185923),
-    I = t(388032);
+    I = t(185923),
+    v = t(388032);
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         g = (0, d.$R)(n),
@@ -30,7 +30,7 @@ function p(e, n) {
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
                 channel: n,
-                intention: v.Hz.REACTION
+                intention: I.Hz.REACTION
             })
     )
         .slice(0, 12)
@@ -58,7 +58,7 @@ function p(e, n) {
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'add-reaction',
-        label: I.intl.string(I.t.lfIHs7),
+        label: v.intl.string(v.t.lfIHs7),
         action: () => {
             f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
@@ -70,7 +70,7 @@ function p(e, n) {
                 (0, i.jsx)(a.MenuItem, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: I.intl.string(I.t['OBCR+v']),
+                    label: v.intl.string(v.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
                         f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });

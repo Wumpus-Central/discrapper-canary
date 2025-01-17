@@ -39,8 +39,8 @@ var a = r(200651),
     U = r(660579),
     B = r(652853),
     G = r(64621),
-    F = r(336383),
-    Z = r(194811),
+    Z = r(336383),
+    F = r(194811),
     V = r(373826),
     j = r(315324),
     H = r(599864),
@@ -273,13 +273,13 @@ function $(e) {
                                 onClose: $,
                                 children: e
                             }),
-                        children: (0, a.jsxs)(F.Z, {
+                        children: (0, a.jsxs)(Z.Z, {
                             ref: ec,
                             className: l()(o, { [q.hoisted]: eR }),
                             onAction: eu,
                             onClose: $,
                             children: [
-                                (0, a.jsx)(Z.Z, {
+                                (0, a.jsx)(F.Z, {
                                     text: eO,
                                     tags: (0, a.jsx)(v.ZP, { size: v.OH.SMALL })
                                 }),

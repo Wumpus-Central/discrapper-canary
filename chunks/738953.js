@@ -38,7 +38,7 @@ var a = r(200651),
     k = r(388032),
     U = r(591156);
 function B(e) {
-    let { user: n, currentUser: r, guildId: i, channelId: B, messageId: G, roleId: F, closePopout: Z, setPopoutRef: V, disableUserProfileLink: j = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
+    let { user: n, currentUser: r, guildId: i, channelId: B, messageId: G, roleId: Z, closePopout: F, setPopoutRef: V, disableUserProfileLink: j = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
         { analyticsLocations: Y } = (0, _.ZP)([...H, f.Z.BITE_SIZE_PROFILE_POPOUT]),
         W = (0, I.Z)({
             user: n,
@@ -51,7 +51,7 @@ function B(e) {
             guildId: i,
             channelId: B,
             messageId: G,
-            roleId: F
+            roleId: Z
         }),
         z = (0, l.e7)([m.Z], () => (null != i ? m.Z.getGuild(i) : null)),
         q = (0, l.e7)([p.ZP], () => (null != i ? p.ZP.getMember(i, n.id) : null)),
@@ -69,7 +69,7 @@ function B(e) {
         null == V || V(null == X ? void 0 : X.current);
     }, [X, V]);
     let en = (e) => {
-            null == Z || Z(),
+            null == F || F(),
                 (0, L.openUserProfileModal)({
                     sourceAnalyticsLocations: Y,
                     ...K,
@@ -120,7 +120,7 @@ function B(e) {
                                             user: n,
                                             guildId: i,
                                             channelId: B,
-                                            onClose: Z
+                                            onClose: F
                                         }),
                                         (0, a.jsx)(C.Z, {
                                             shouldShowTooltip: null === ee.interactionType,
@@ -147,7 +147,7 @@ function B(e) {
                                         (0, a.jsx)(S.Z, {
                                             userId: n.id,
                                             className: U.toast,
-                                            onClose: Z
+                                            onClose: F
                                         }),
                                         (0, a.jsx)(b.Z, {
                                             location: 'UserProfilePopout',
@@ -164,7 +164,7 @@ function B(e) {
                                             guildId: i,
                                             channelId: B,
                                             profileType: P.y0.BITE_SIZE,
-                                            onCloseProfile: Z
+                                            onCloseProfile: F
                                         })
                                     ]
                                 }),
@@ -176,13 +176,13 @@ function B(e) {
                                     isHovering: null == ee.interactionType && $,
                                     onOpenProfile: j ? void 0 : en,
                                     channelId: B,
-                                    onClose: Z
+                                    onClose: F
                                 }),
                                 (0, a.jsx)(w.Z, {
                                     user: n,
                                     guildId: i,
                                     channelId: B,
-                                    onClose: Z
+                                    onClose: F
                                 })
                             ]
                         }),

@@ -35,36 +35,36 @@ function v(e) {
 function C(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
         { type: C, placeholder: g, maxValues: _, disabled: b } = n,
-        [I, S] = a.useState(!1),
-        [j, y] = a.useState(!1),
+        [I, j] = a.useState(!1),
+        [S, y] = a.useState(!1),
         [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [E, Z] = a.useState(new Set(T.keys())),
-        [k, L] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [O, A] = a.useState(0);
+        [L, k] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
+        [O, M] = a.useState(0);
     a.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
-        if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
-        L(e);
+        if (e.every((e) => L.includes(e)) && L.every((n) => e.includes(n))) return;
+        k(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        N(n), Z(new Set(n.keys())), A((e) => e + 1);
-    }, [o, k]);
+        N(n), Z(new Set(n.keys())), M((e) => e + 1);
+    }, [o, L]);
     let {
-            state: M,
+            state: R,
             executeStateUpdate: P,
-            visualState: R,
+            visualState: A,
             isDisabled: w,
             error: B
         } = (0, m.Ee)(n, {
             type: C,
             selectedOptions: Array.from(T.values())
         }),
-        U = R === f.gH.LOADING;
+        U = A === f.gH.LOADING;
     a.useEffect(() => {
-        if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
+        if ((null == R ? void 0 : R.type) === u.re.USER_SELECT || (null == R ? void 0 : R.type) === u.re.ROLE_SELECT || (null == R ? void 0 : R.type) === u.re.MENTIONABLE_SELECT || (null == R ? void 0 : R.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(R.selectedOptions.map((e) => [e.value, e]));
             N(e), Z(new Set(e.keys()));
         }
-    }, [M]);
+    }, [R]);
     let G = a.useCallback(() => {
         P({
             type: C,
@@ -72,8 +72,8 @@ function C(e) {
         }) && Z(new Set(T.keys()));
     }, [P, C, T]);
     a.useEffect(() => {
-        if (!(I || j || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
-    }, [I, j, E, T, G]);
+        if (!(I || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
+    }, [I, S, E, T, G]);
     let H = 0 === T.size || I,
         D = {
             isDisabled: b || w,
@@ -83,8 +83,8 @@ function C(e) {
                     n(t(e));
                 }),
             placeholder: H ? (null != g ? g : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => S(!1),
-            onOpen: () => S(!0),
+            onClose: () => j(!1),
+            onOpen: () => j(!0),
             onBlur: () => y(!1),
             maxVisibleItems: 5,
             optionClassName: h.__invalid_selectOption,

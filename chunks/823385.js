@@ -46,8 +46,8 @@ let k = 'seenQSTutorial',
     U = 5,
     B = 100,
     G = [p.h8.USER, p.h8.GROUP_DM, p.h8.TEXT_CHANNEL, p.h8.GUILD, p.h8.APPLICATION, p.h8.LINK, p.h8.IN_APP_NAVIGATION],
-    F = 0,
-    Z = !1,
+    Z = 0,
+    F = !1,
     V = !1,
     j = null,
     H = [],
@@ -171,10 +171,10 @@ function $(e, n) {
         default:
             H = e;
     }
-    if (n !== Y) (Y = n), (W = Math.max(n.length, W)), (F = (0, p.gJ)(p.a8.DOWN, -1, H));
+    if (n !== Y) (Y = n), (W = Math.max(n.length, W)), (Z = (0, p.gJ)(p.a8.DOWN, -1, H));
     else {
-        let e = H[F];
-        null != e && e.type === p.h8.HEADER && (F = (0, p.gJ)(p.a8.DOWN, F, H));
+        let e = H[Z];
+        null != e && e.type === p.h8.HEADER && (Z = (0, p.gJ)(p.a8.DOWN, Z, H));
     }
     eu.emitChange();
 }
@@ -247,16 +247,16 @@ function ea(e) {
     (j = s), i.search(a, j === p.h8.USER ? o : void 0);
 }
 function es(e) {
-    F = e.selectedIndex;
+    Z = e.selectedIndex;
 }
 function eo() {
-    if (Z) return !1;
-    (Z = !0), _.K.set(k, !0);
+    if (F) return !1;
+    (F = !0), _.K.set(k, !0);
 }
 class el extends (a = f.ZP.PersistedStore) {
     initialize(e) {
         var n;
-        this.waitFor(S.ZP, A.Z, T.Z), this.syncWith([v.Z], () => !0), (Z = _.K.get(k) || !1), (z = null !== (n = null == e ? void 0 : e.channelHistory) && void 0 !== n ? n : []);
+        this.waitFor(S.ZP, A.Z, T.Z), this.syncWith([v.Z], () => !0), (F = _.K.get(k) || !1), (z = null !== (n = null == e ? void 0 : e.channelHistory) && void 0 !== n ? n : []);
     }
     getState() {
         return { channelHistory: z };
@@ -286,8 +286,8 @@ class el extends (a = f.ZP.PersistedStore) {
             query: null != i ? i.query : '',
             queryMode: j,
             results: H,
-            selectedIndex: F,
-            seenTutorial: Z,
+            selectedIndex: Z,
+            seenTutorial: F,
             maxQueryLength: W
         };
     }

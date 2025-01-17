@@ -125,16 +125,16 @@ function B(e) {
     a('emitReadable_', n.destroyed, n.length, n.ended), !n.destroyed && (n.length || n.ended) && (e.emit('readable'), (n.emittedReadable = !1)), (n.needReadable = !n.flowing && !n.ended && n.length <= n.highWaterMark), W(e);
 }
 function G(e, n) {
-    !n.readingMore && ((n.readingMore = !0), u.nextTick(F, e, n));
+    !n.readingMore && ((n.readingMore = !0), u.nextTick(Z, e, n));
 }
-function F(e, n) {
+function Z(e, n) {
     for (; !n.reading && !n.ended && (n.length < n.highWaterMark || (n.flowing && 0 === n.length)); ) {
         var r = n.length;
         if ((a('maybeReadMore read 0'), e.read(0), r === n.length)) break;
     }
     n.readingMore = !1;
 }
-function Z(e) {
+function F(e) {
     return function () {
         var n = e._readableState;
         a('pipeOnDrain', n.awaitDrain), n.awaitDrain && n.awaitDrain--, 0 === n.awaitDrain && c(e, 'data') && ((n.flowing = !0), W(e));
@@ -210,7 +210,7 @@ function Q(e, n) {
             a('onend'), e.end();
         }
         i.endEmitted ? u.nextTick(s) : r.once('end', s), e.on('unpipe', o);
-        var d = Z(r);
+        var d = F(r);
         e.on('drain', d);
         var f = !1;
         function _() {

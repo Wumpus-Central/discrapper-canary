@@ -39,8 +39,8 @@ var i = r(513394),
     U = r(373141),
     B = r(770003),
     G = r(726983),
-    F = r(46670),
-    Z = r(661763),
+    Z = r(46670),
+    F = r(661763),
     V = r(192379),
     j = r(989103),
     H = r(766203),
@@ -64,7 +64,7 @@ function X(e, n) {
             n,
             a
         );
-    (0, F.Oj).set(n, { id: p.id });
+    (0, Z.Oj).set(n, { id: p.id });
     let m = (0, V.useMemo)(() => u || new H.dp(n.collection, n.disabledKeys, l), [u, n.collection, n.disabledKeys, l]),
         { collectionProps: g } = (0, H.gq)({
             selectionManager: n.selectionManager,
@@ -75,7 +75,7 @@ function X(e, n) {
             ref: o,
             isVirtualized: !0
         }),
-        E = (0, Z.tv)(),
+        E = (0, F.tv)(),
         v = (r) => {
             switch (r.key) {
                 case 'Enter':
@@ -119,7 +119,7 @@ function X(e, n) {
             {
                 ...e,
                 onChange: n.setInputValue,
-                onKeyDown: d ? e.onKeyDown : (0, Z.tS)(n.isOpen && g.onKeyDown, v, e.onKeyDown),
+                onKeyDown: d ? e.onKeyDown : (0, F.tS)(n.isOpen && g.onKeyDown, v, e.onKeyDown),
                 onBlur: I,
                 value: n.inputValue,
                 onFocus: T,
@@ -135,12 +135,12 @@ function X(e, n) {
         D = (e) => {
             'touch' !== e.pointerType && (o.current.focus(), n.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
         },
-        L = (0, Z.bE)({
+        L = (0, F.bE)({
             id: h.id,
             'aria-label': _.format('buttonLabel'),
             'aria-labelledby': e['aria-labelledby'] || A.id
         }),
-        x = (0, Z.bE)({
+        x = (0, F.bE)({
             id: p.id,
             'aria-label': _.format('listboxLabel'),
             'aria-labelledby': e['aria-labelledby'] || A.id
@@ -164,7 +164,7 @@ function X(e, n) {
         X = (0, V.useRef)(k),
         J = (0, V.useRef)(U);
     (0, V.useEffect)(() => {
-        if ((0, Z.ad)() && null != M && U !== J.current) {
+        if ((0, F.ad)() && null != M && U !== J.current) {
             let e = n.selectionManager.isSelected(U),
                 r = null != k ? n.collection.getItem(k) : null,
                 i = (null == r ? void 0 : r['aria-label']) || ('string' == typeof (null == r ? void 0 : r.rendered) ? r.rendered : '') || '',
@@ -183,7 +183,7 @@ function X(e, n) {
         ee = (0, V.useRef)($),
         et = (0, V.useRef)(n.isOpen);
     (0, V.useEffect)(() => {
-        let e = n.isOpen !== et.current && (null == n.selectionManager.focusedKey || (0, Z.ad)());
+        let e = n.isOpen !== et.current && (null == n.selectionManager.focusedKey || (0, F.ad)());
         if (n.isOpen && (e || $ !== ee.current)) {
             let e = _.format('countAnnouncement', { optionCount: $ });
             (0, B.xQ)(e);
@@ -193,7 +193,7 @@ function X(e, n) {
     let en = (0, V.useRef)(n.selectedKey);
     return (
         (0, V.useEffect)(() => {
-            if ((0, Z.ad)() && n.isFocused && n.selectedItem && n.selectedKey !== en.current) {
+            if ((0, F.ad)() && n.isFocused && n.selectedItem && n.selectedKey !== en.current) {
                 let e = n.selectedItem['aria-label'] || n.selectedItem.textValue || '',
                     r = _.format('selectedAnnouncement', { optionText: e });
                 (0, B.xQ)(r);
@@ -213,17 +213,17 @@ function X(e, n) {
                 onPressStart: D,
                 isDisabled: f || d
             },
-            inputProps: (0, Z.dG)(N, {
+            inputProps: (0, F.dG)(N, {
                 role: 'combobox',
                 'aria-expanded': h['aria-expanded'],
                 'aria-controls': n.isOpen ? p.id : void 0,
                 'aria-autocomplete': 'list',
-                'aria-activedescendant': M ? (0, F.x3)(n, M.key) : void 0,
+                'aria-activedescendant': M ? (0, Z.x3)(n, M.key) : void 0,
                 onTouchEnd: P,
                 autoCorrect: 'off',
                 spellCheck: 'false'
             }),
-            listBoxProps: (0, Z.dG)(p, x, {
+            listBoxProps: (0, F.dG)(p, x, {
                 autoFocus: n.focusStrategy,
                 shouldUseVirtualFocus: !0,
                 shouldSelectOnPressUp: !0,

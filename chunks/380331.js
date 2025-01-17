@@ -34,9 +34,9 @@ let x = (0, b.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     U = (0, b.Mg)(L.__invalid_unicodeCategoryShortcutHeight),
     B = (0, b.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     G = (0, b.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = P + w + 2 * k,
-    Z = x + w,
-    V = Z + (B + 2 * G),
+    Z = P + w + 2 * k,
+    F = x + w,
+    V = F + (B + 2 * G),
     j = P + M + 2 * k,
     H = 7;
 function Y(e) {
@@ -136,10 +136,10 @@ let W = (e) => {
         k = s.useCallback(
             (e, n) => {
                 let r = b[n];
-                if (r.type === C.En.RECENT) return F;
+                if (r.type === C.En.RECENT) return Z;
                 if (r.type === C.En.GUILD) {
                     let e = b[n + 1];
-                    return null != e && e.type !== C.En.GUILD ? V : Z;
+                    return null != e && e.type !== C.En.GUILD ? V : F;
                 }
                 return j;
             },
@@ -158,7 +158,7 @@ let W = (e) => {
             b.forEach((a) => {
                 a.type === C.En.GUILD ? ((n += 1), (r += 1)) : a.type === C.En.UNICODE ? (i += 1) : ((e += 1), (n += 1));
             });
-            let a = F + n * Z + V;
+            let a = Z + n * F + V;
             return {
                 nonUnicodeCategoryCount: n,
                 firstUnicodeCategoryIndex: n,

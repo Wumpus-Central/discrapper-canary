@@ -189,7 +189,7 @@ function f(e) {
             },
             [U, B, n, T, _, f, L, v]
         ),
-        F = a.useCallback(
+        Z = a.useCallback(
             (e) => {
                 let r = null != e ? (0, c.jb)(n, e) : null;
                 (y.current = r), (0, o.h)(n, e, E);
@@ -205,7 +205,7 @@ function f(e) {
                 tabIndex: w && E ? -1 : 0
             },
             orientation: T,
-            setFocus: F,
+            setFocus: Z,
             async focusLastVisibleItem() {
                 var e;
                 let r = await (0, l.jo)(null !== (e = A.current) && void 0 !== e ? e : document.body, d(n, A));
@@ -223,6 +223,6 @@ function f(e) {
                 return e ? (0, c.x3)(e) : null;
             }
         }),
-        [n, G, T, w, E, F, B, U, L]
+        [n, G, T, w, E, Z, B, U, L]
     );
 }

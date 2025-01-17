@@ -78,7 +78,7 @@ r.d(n, {
         return em;
     },
     i6: function () {
-        return F;
+        return Z;
     },
     jg: function () {
         return X;
@@ -90,7 +90,7 @@ r.d(n, {
         return z;
     },
     lP: function () {
-        return Z;
+        return F;
     },
     ou: function () {
         return ee;
@@ -508,11 +508,11 @@ async function G(e, n, r, i) {
         })
     );
 }
-function F(e, n, r) {
+function Z(e, n, r) {
     let { token: i, billingAddressInfo: a } = v.az(e);
     return L(I.gg$.STRIPE, i, null != n ? n : a, { analyticsLocation: r });
 }
-function Z(e, n, r) {
+function F(e, n, r) {
     return L(I.gg$.BRAINTREE, e, n, { analyticsLocation: r });
 }
 async function V(e, n, r, i) {

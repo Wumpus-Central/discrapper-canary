@@ -34,8 +34,8 @@ let M = 512,
     U = 56,
     B = 16,
     G = 32,
-    F = 20,
-    Z = 420,
+    Z = 20,
+    F = 420,
     V = [8, 8, 0, 8],
     j = d().debounce(() => {
         (0, h.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
@@ -88,13 +88,13 @@ n.Z = o.forwardRef(function (e, n) {
                     v.Xn.setActiveCategoryIndex(e);
                 }
             },
-            scrollOffset: F,
+            scrollOffset: Z,
             searchQuery: ''
         }),
         ei = (e) => {
             let n = Q.length,
                 r = n * (G + B) + (X.reduce((e, n) => e + n.data.length, 0) - (J ? k : 0)) * U - M;
-            J && e + Z > r && et(), er(e), j(), (l.current = e);
+            J && e + F > r && et(), er(e), j(), (l.current = e);
         },
         ea = o.useRef(ei);
     o.useEffect(() => {

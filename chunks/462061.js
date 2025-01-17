@@ -85,7 +85,7 @@ function R(e) {
             let { channel: e, selectedParticipant: t, user: n } = el.current;
             e.isGuildStageVoice() && !H && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
         }, [H]);
-    let ea = (0, h.x0)();
+    let ea = (0, h.uO)();
     return a && !q && !k && H && !P && null != V && x.Z.supports(T.AN.VIDEO)
         ? ea && !U
             ? (0, i.jsx)(Z.Z, {

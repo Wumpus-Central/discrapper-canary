@@ -55,8 +55,8 @@ var f = r(200651),
     U = r(388905),
     B = r(560067),
     G = r(353926),
-    F = r(341298),
-    Z = r(703656),
+    Z = r(341298),
+    F = r(703656),
     V = r(973616),
     j = r(598077),
     H = r(314897),
@@ -191,7 +191,7 @@ function ev(e) {
         c,
         d,
         h,
-        { clientId: g, responseType: S, redirectUri: A, codeChallenge: w, codeChallengeMethod: P, state: U, nonce: B, prompt: F, authorizations: Y, scopes: el, permissions: e_, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eI = !1, showLogout: eT = !1, cancelCompletesFlow: eb = !0, isTrustedName: ey = !1, isEmbeddedFlow: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
+        { clientId: g, responseType: S, redirectUri: A, codeChallenge: w, codeChallengeMethod: P, state: U, nonce: B, prompt: Z, authorizations: Y, scopes: el, permissions: e_, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eI = !1, showLogout: eT = !1, cancelCompletesFlow: eb = !0, isTrustedName: ey = !1, isEmbeddedFlow: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
         eO = null != ev ? (null == Y ? void 0 : Y.get(ev)) : void 0,
         eD = (0, m.TH)(),
         eL = (0, T.e7)([G.Z], () => G.Z.hasLoadedExperiments);
@@ -202,7 +202,7 @@ function ev(e) {
         [eP, eM] = _.useState(null),
         [ek, eU] = _.useState(null),
         [eB, eG] = _.useState(!1),
-        [eF, eZ] = _.useState(!1),
+        [eZ, eF] = _.useState(!1),
         eV = null == ex ? void 0 : ex.guilds,
         [ej, eH] = _.useState(null != eg ? eg : null),
         [eY, eW] = _.useState(null != eE ? eE : null),
@@ -319,7 +319,7 @@ function ev(e) {
                         var n;
                         let e = null === (n = z.Z.toURLSafe(r.location)) || void 0 === n ? void 0 : n.pathname;
                         z.Z.isDiscordUrl(r.location) && e === ef.Z5c.OAUTH2_AUTHORIZED
-                            ? (0, Z.uL)(ef.Z5c.OAUTH2_AUTHORIZED, {
+                            ? (0, F.uL)(ef.Z5c.OAUTH2_AUTHORIZED, {
                                   state: {
                                       application: null == ex ? void 0 : ex.application,
                                       guild: eQ
@@ -358,7 +358,7 @@ function ev(e) {
                                       nonce: B,
                                       integrationType: null != eX ? eX : void 0
                                   });
-                        ew((0, X.d)(e)), F === ee.s.NONE && e.authorized && !e9 && tt(!0), (0, x.yw)(ef.rMx.OAUTH2_AUTHORIZE_VIEWED, { application_id: e.application.id });
+                        ew((0, X.d)(e)), Z === ee.s.NONE && e.authorized && !e9 && tt(!0), (0, x.yw)(ef.rMx.OAUTH2_AUTHORIZE_VIEWED, { application_id: e.application.id });
                     } catch (r) {
                         let { status: e, body: n } = r;
                         if (401 === e) {
@@ -371,7 +371,7 @@ function ev(e) {
                     }
                 }
             }
-        }, [eD, eO, g, e3, S, A, w, P, U, B, eX, F, tt, e9]),
+        }, [eD, eO, g, e3, S, A, w, P, U, B, eX, Z, tt, e9]),
         ti = _.useMemo(() => {
             var e;
             return null != e0 && e$
@@ -412,7 +412,7 @@ function ev(e) {
             0 === e3.length ? eU(Error('No scopes were provided.')) : e.length > 0 ? eU(Error('Invalid scope: '.concat(e[0]))) : (0, J._$)(e6) ? eU(Error('Invalid permission(s) provided.')) : tr();
         }, [e9, tr, e3, e6, eX, ex, ek]);
     let ts = _.useCallback((e) => {
-            e && eZ(!0);
+            e && eF(!0);
         }, []),
         to = (0, L.O)(ts);
     if (ek instanceof Error) return { body: (0, f.jsx)(eu.Lk, { message: ek.message }) };
@@ -550,7 +550,7 @@ function ev(e) {
                               children: eh.intl.string(eh.t['ETE/oK'])
                           }),
                     'SELECT_INSTALL_TYPE' !== eP
-                        ? eF
+                        ? eZ
                             ? (0, f.jsx)('div', {
                                   className: ep.action,
                                   children: (0, f.jsx)(y.zx, {
@@ -648,7 +648,7 @@ function eI(e, n) {
             : null === (i = window.open(n.location, '_blank')) || void 0 === i || i.focus();
 }
 function eT(e, n) {
-    if ((0, F.g)('create-guild-and-oauth2-modal')) {
+    if ((0, Z.g)('create-guild-and-oauth2-modal')) {
         B.Z.openCreateGuildModal({
             onSuccess: (r) =>
                 eb(

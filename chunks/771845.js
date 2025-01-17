@@ -160,22 +160,22 @@ function U(e) {
         r = N.getNode(n),
         i = E.Z.isFolderExpanded(n);
     if (null == r || r.type !== _.eD.FOLDER || r.expanded === i) return !1;
-    F(r, i);
+    Z(r, i);
 }
 function B(e) {
     let { folderId: n, expanded: r } = e,
         i = N.getNode(n);
     if (null == i || i.type !== _.eD.FOLDER || i.expanded === r) return !1;
-    F(i, r);
+    Z(i, r);
 }
 function G() {
-    for (let e of N.allNodes()) e.type === _.eD.FOLDER && e.expanded && F(e, !1);
+    for (let e of N.allNodes()) e.type === _.eD.FOLDER && e.expanded && Z(e, !1);
 }
-function F(e, n) {
+function Z(e, n) {
     let r = N.cloneNode(e);
     d()(r.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (r.expanded = n), N.replaceNode(e, r);
 }
-let Z = (0, m.oH)((e, n) => e.sortedGuildNodes().map((e) => e.id)),
+let F = (0, m.oH)((e, n) => e.sortedGuildNodes().map((e) => e.id)),
     V = (0, m.oH)((e, n) => e.getRoots().map(R)),
     j = (0, m.oH)((e, n) => {
         let r = [];
@@ -204,7 +204,7 @@ class Y extends b.Z {
         return this.getGuildFolders().find((n) => n.folderId === e);
     }
     getFlattenedGuildIds() {
-        return Z(N, N.version);
+        return F(N, N.version);
     }
     getFlattenedGuildFolderList() {
         return j(N, N.version);

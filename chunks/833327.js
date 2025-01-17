@@ -113,7 +113,7 @@ function k(e, n) {
     if ('function' != typeof a) throw new v();
     if ((M(r), n)) P(e, r, i, n, a);
     else {
-        var o = F(r) || e.destroyed;
+        var o = Z(r) || e.destroyed;
         !o && !r.corked && !r.bufferProcessing && r.bufferedRequest && G(e, r), i ? s.nextTick(U, e, r, o, a) : U(e, r, o, a);
     }
 }
@@ -144,19 +144,19 @@ function G(e, n) {
     }
     (n.bufferedRequest = r), (n.bufferProcessing = !1);
 }
-function F(e) {
+function Z(e) {
     return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished && !e.writing;
 }
-function Z(e, n) {
+function F(e, n) {
     e._final(function (r) {
         n.pendingcb--, r && A(e, r), (n.prefinished = !0), e.emit('prefinish'), j(e, n);
     });
 }
 function V(e, n) {
-    !n.prefinished && !n.finalCalled && ('function' != typeof e._final || n.destroyed ? ((n.prefinished = !0), e.emit('prefinish')) : (n.pendingcb++, (n.finalCalled = !0), s.nextTick(Z, e, n)));
+    !n.prefinished && !n.finalCalled && ('function' != typeof e._final || n.destroyed ? ((n.prefinished = !0), e.emit('prefinish')) : (n.pendingcb++, (n.finalCalled = !0), s.nextTick(F, e, n)));
 }
 function j(e, n) {
-    var r = F(n);
+    var r = Z(n);
     if (r && (V(e, n), 0 === n.pendingcb && ((n.finished = !0), e.emit('finish'), n.autoDestroy))) {
         var i = e._readableState;
         (!i || (i.autoDestroy && i.endEmitted)) && e.destroy();

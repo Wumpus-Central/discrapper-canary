@@ -34,8 +34,8 @@ var l = r(278074),
     U = r(48854),
     B = r(785359),
     G = r(646504),
-    F = r(64078),
-    Z = r(351780),
+    Z = r(64078),
+    F = r(351780),
     V = r(79390),
     j = r(643266),
     H = r(617136),
@@ -846,7 +846,7 @@ let eO = {
                     nonce: D,
                     poll: (0, V.x9)(T)
                 });
-                (0, F.EL)(e, n.id), null != g && (n.sticker_items = g.map((e) => K.Z.getStickerById(e)).filter((e) => null != e)), eD.receiveMessage(e, n, !0, r);
+                (0, Z.EL)(e, n.id), null != g && (n.sticker_items = g.map((e) => K.Z.getStickerById(e)).filter((e) => null != e)), eD.receiveMessage(e, n, !0, r);
             }
             if (!ey && null != u && u.length > 0) {
                 let n, r;
@@ -881,7 +881,7 @@ let eO = {
             return (
                 null != T && (x.message.poll = T),
                 null != g && (x.message.sticker_ids = g),
-                Z.Z.isEnabled() && (x.message.has_poggermode_enabled = !0),
+                F.Z.isEnabled() && (x.message.has_poggermode_enabled = !0),
                 null != b && (x.message.content_inventory_entry = b),
                 new Promise((n, i) => {
                     let a = Date.now(),

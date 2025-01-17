@@ -38,8 +38,8 @@ var N = r(807864),
     U = r(490029),
     B = r(710845),
     G = r(594190),
-    F = r(454991),
-    Z = r(633565),
+    Z = r(454991),
+    F = r(633565),
     V = r(371651),
     j = r(829907),
     H = r(610394),
@@ -272,7 +272,7 @@ let eO = (() => {
     })(),
     eD = eT('setOverlayEnabled', async (e, n, r) => {
         if (!et.iP) return;
-        let i = F.v.global;
+        let i = Z.v.global;
         if (eo === e && el === n && i === r) {
             eE.verbose('setOverlayEnabled: no change', {
                 newOverlayEnabled: e,
@@ -283,7 +283,7 @@ let eO = (() => {
         }
         (eo = e),
             (el = n),
-            F.v.update({
+            Z.v.update({
                 enabled: e,
                 legacyEnabled: n,
                 global: r
@@ -374,7 +374,7 @@ function eB(e) {
             let n = W.default.getToken();
             if (null == n) break;
             (0, L.te)($.qU, z.Z.getDefaultLayout($.qU), 0),
-                Promise.all([(0, Z.Z)(n, e.pid), C.ZP.PersistedStore.getAllStates()]).then((n) => {
+                Promise.all([(0, F.Z)(n, e.pid), C.ZP.PersistedStore.getAllStates()]).then((n) => {
                     let [r, i] = n,
                         { pid: a, token: s } = e;
                     U.lW({
@@ -409,33 +409,33 @@ async function eG(e) {
             intercept: !e
         });
 }
-function eF(e) {
+function eZ(e) {
     e ? setTimeout(() => eG(e), 200) : eG(e);
 }
-let eZ = null;
+let eF = null;
 function eV(e) {
     let { locked: n, pid: r } = e,
         i = ei.get(r);
     if ((ed.has(r) && eC(void 0), !n && !('READY' === i || 'CRASHED' === i))) return;
-    if ((n ? e_.delete(r) : e_.add(r), em.clear(), null == eZ || (clearTimeout(eZ), (eZ = null), !n)))
+    if ((n ? e_.delete(r) : e_.add(r), em.clear(), null == eF || (clearTimeout(eF), (eF = null), !n)))
         n
-            ? eF(n)
-            : (eZ = setTimeout(() => {
-                  eF(n), (eZ = null);
+            ? eZ(n)
+            : (eF = setTimeout(() => {
+                  eZ(n), (eF = null);
               }, 100));
 }
 function ej(e) {
     let { region: n } = e;
-    em.add(n), eF(!1);
+    em.add(n), eZ(!1);
 }
 function eH() {
-    em.clear(), eF(!0);
+    em.clear(), eZ(!0);
 }
 function eY(e) {
     let { port: n } = e;
     ef = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', 'caf4d7fab34a73fe4a23b1630d7d394da7fa0c5c'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', 'e5c7fbd36cc3ac1a1f1ffca4f8ce9e6f568b4544'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function eW(e) {
     let { channelId: n, ring: r } = e;
@@ -522,7 +522,7 @@ function e3(e) {
 }
 class e4 extends (o = C.ZP.Store) {
     initialize() {
-        if (!(!et.iP || __OVERLAY__)) this.waitFor(G.ZP, W.default, H.ZP, V.Z), U.sr(eB, eU), W.default.addChangeListener(ew), eD(F.v.enabled, F.v.legacyEnabled, F.v.global), R.Z.addInterceptor(eM);
+        if (!(!et.iP || __OVERLAY__)) this.waitFor(G.ZP, W.default, H.ZP, V.Z), U.sr(eB, eU), W.default.addChangeListener(ew), eD(Z.v.enabled, Z.v.legacyEnabled, Z.v.global), R.Z.addInterceptor(eM);
     }
     isInputLocked(e) {
         return H.ZP.isOverlayV3EnabledForPID(e) ? H.ZP.isInputLocked(e) : !e_.has(e);

@@ -34,8 +34,8 @@ var i = r(687249),
     U = '[object Object]',
     B = '[object RegExp]',
     G = '[object Set]',
-    F = '[object String]',
-    Z = '[object Symbol]',
+    Z = '[object String]',
+    F = '[object Symbol]',
     V = '[object WeakMap]',
     j = '[object ArrayBuffer]',
     H = '[object DataView]',
@@ -60,14 +60,14 @@ function et(e, n, r, O, D, L) {
     if (G) {
         if (((x = m(e)), !M)) return c(e, x);
     } else {
-        var F = p(e),
-            Z = F == w || F == P;
+        var Z = p(e),
+            F = Z == w || Z == P;
         if (I(e)) return u(e, M);
-        if (F == U || F == R || (Z && !D)) {
-            if (((x = k || Z ? {} : E(e)), !M)) return k ? f(e, l(x, e)) : d(e, o(x, e));
+        if (Z == U || Z == R || (F && !D)) {
+            if (((x = k || F ? {} : E(e)), !M)) return k ? f(e, l(x, e)) : d(e, o(x, e));
         } else {
-            if (!ee[F]) return D ? e : {};
-            x = g(e, F, M);
+            if (!ee[Z]) return D ? e : {};
+            x = g(e, Z, M);
         }
     }
     L || (L = new i());
@@ -91,4 +91,4 @@ function et(e, n, r, O, D, L) {
         x
     );
 }
-(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[B] = ee[G] = ee[F] = ee[Z] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[w] = ee[V] = !1), (e.exports = et);
+(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[B] = ee[G] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[w] = ee[V] = !1), (e.exports = et);

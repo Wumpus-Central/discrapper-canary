@@ -72,8 +72,8 @@ var s = r(990547),
     U = r(573261),
     B = r(595519),
     G = r(774226),
-    F = r(317381),
-    Z = r(882347),
+    Z = r(317381),
+    F = r(882347),
     V = r(16609),
     j = r(224189),
     H = r(374065),
@@ -87,7 +87,7 @@ var q = r(981631),
     X = r(245335),
     J = r(388032);
 function $(e) {
-    let n = F.ZP.getSelfEmbeddedActivityForLocation(e);
+    let n = Z.ZP.getSelfEmbeddedActivityForLocation(e);
     null != n &&
         ei({
             location: n.location,
@@ -295,12 +295,12 @@ async function er(e) {
                   }),
             !1
         );
-    let b = F.ZP.getCurrentEmbeddedActivity();
+    let b = Z.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == b ? void 0 : b.applicationId) != null && (n = T.Z.getApplication(null == b ? void 0 : b.applicationId)),
         !(
             !o ||
-            (await (0, Z.p)({
+            (await (0, F.p)({
                 applicationId: r,
                 application: E,
                 channel: v,
@@ -364,7 +364,7 @@ async function er(e) {
 }
 function ei(e) {
     let { location: n, applicationId: r, showFeedback: i = !0 } = e,
-        a = F.ZP.getSelfEmbeddedActivityForLocation(n);
+        a = Z.ZP.getSelfEmbeddedActivityForLocation(n);
     l.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_CLOSE',
         applicationId: r,
@@ -377,7 +377,7 @@ function ei(e) {
         var o;
         let e = b.Z.getSelectedParticipantId(s),
             n = null === (o = x.default.getCurrentUser()) || void 0 === o ? void 0 : o.id;
-        if (null == F.ZP.getEmbeddedActivitiesForChannel(s).find((e) => e.applicationId === r) || null == n || '' === n) return;
+        if (null == Z.ZP.getEmbeddedActivitiesForChannel(s).find((e) => e.applicationId === r) || null == n || '' === n) return;
         e === r && f.Z.selectParticipant(s, null);
     }
 }
@@ -437,10 +437,10 @@ let eo = (e, n, r) => {
 async function el(e) {
     var n, r, i, a;
     let { guildId: o, force: u = !1 } = e,
-        c = F.ZP.getShelfActivities(o),
+        c = Z.ZP.getShelfActivities(o),
         d = c.map((e) => T.Z.getApplication(e.application_id)).filter(k.lm);
-    if (!u && !F.ZP.shouldFetchShelf(o)) {
-        if (null === (n = F.ZP.getShelfFetchStatus(o)) || void 0 === n ? void 0 : n.isFetching) {
+    if (!u && !Z.ZP.shouldFetchShelf(o)) {
+        if (null === (n = Z.ZP.getShelfFetchStatus(o)) || void 0 === n ? void 0 : n.isFetching) {
             let e, n;
             let r = new Promise((n) => {
                     (e = eo.bind(null, o, n)), l.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);

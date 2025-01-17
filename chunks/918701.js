@@ -60,7 +60,7 @@ r.d(n, {
         return e_;
     },
     Qe: function () {
-        return Z;
+        return F;
     },
     Rs: function () {
         return ef;
@@ -218,8 +218,8 @@ var b = r(572004),
     U = r(701488),
     B = r(388032);
 let G = 2592000000,
-    F = new Set([p.n.PREMIUM_EXTENSION, p.n.PREMIUM_PERMANENT]);
-function Z(e) {
+    Z = new Set([p.n.PREMIUM_EXTENSION, p.n.PREMIUM_PERMANENT]);
+function F(e) {
     try {
         return (0, f.EQ)(e.config)
             .with({ config_version: 2 }, () => !0)
@@ -586,11 +586,11 @@ let eB = (e, n) => {
             (0, b.JG)(ef(e));
     },
     eG = (e, n) => (e > 0 ? (0, d.floor)(Math.min(n / e, 1), 4) : 0),
-    eF = (e) => e2(e) || D.Z.isProgressingOnDesktop(e.id),
-    eZ = (e, n) => {
+    eZ = (e) => e2(e) || D.Z.isProgressingOnDesktop(e.id),
+    eF = (e, n) => {
         var r, i, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (i = a[n.eventName]) || void 0 === i ? void 0 : null === (r = i.heartbeat) || void 0 === r ? void 0 : r.lastBeatAt;
-        if (null == o || !eF(e)) return 0;
+        if (null == o || !eZ(e)) return 0;
         let l = Date.now() - new Date(o).valueOf();
         return (0, d.floor)(l / y.Z.Millis.SECOND, 2);
     },
@@ -602,7 +602,7 @@ let eB = (e, n) => {
             let r = D.Z.getOptimisticProgress(e.id, n.eventName);
             return null == r || r < u ? u : r;
         }
-        return u + eZ(e, n);
+        return u + eF(e, n);
     },
     ej = 0.99,
     eH = (e, n) => {
@@ -827,7 +827,7 @@ function tr(e) {
 function ti(e) {
     var n;
     let r = null === (n = eE(e)) || void 0 === n ? void 0 : n.expirationMode;
-    return !!(0, x.U)() && !!r && F.has(r);
+    return !!(0, x.U)() && !!r && Z.has(r);
 }
 function ta(e) {
     let n = Object.keys(e.config.taskConfig.tasks),

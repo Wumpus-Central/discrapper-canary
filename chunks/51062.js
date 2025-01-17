@@ -10,7 +10,7 @@ var a = r(192379),
     l = r(456007),
     u = r(998698),
     c = r(541716),
-    d = r(797610),
+    d = r(927723),
     f = r(271383),
     _ = r(496675),
     h = r(246946),
@@ -56,8 +56,8 @@ function T(e, n, r) {
             state: O,
             onFocus: (e) => V.setSelectedIndex(e)
         }),
-        F = null === (i = e.editorRef.current) || void 0 === i ? void 0 : i.getCurrentWord(),
-        Z = {
+        Z = null === (i = e.editorRef.current) || void 0 === i ? void 0 : i.getCurrentWord(),
+        F = {
             ...e,
             navigator: G,
             activeCommand: U,
@@ -68,14 +68,14 @@ function T(e, n, r) {
             hidePersonalInformation: k,
             hideMentionDescription: R === c.Ie.RULES_INPUT,
             emojiIntention: R === c.Ie.RULES_INPUT ? I.Hz.COMMUNITY_CONTENT : I.Hz.CHAT,
-            currentWord: null !== (A = null == F ? void 0 : F.word) && void 0 !== A ? A : '',
-            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+            currentWord: null !== (A = null == Z ? void 0 : Z.word) && void 0 !== A ? A : '',
+            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
             optionText: null != B ? (0, l.KF)({ [B.name]: null !== (N = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== N ? N : [] }, B.name) : ''
         },
-        [V] = a.useState(() => new m.Z(Z));
+        [V] = a.useState(() => new m.Z(F));
     return (
         a.useEffect(() => {
-            V.updateProps(Z);
+            V.updateProps(F);
         }),
         a.useImperativeHandle(n, () => V, [V]),
         a.useEffect(() => {

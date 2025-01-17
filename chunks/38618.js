@@ -51,10 +51,10 @@ function B() {
 function G(e) {
     e.isSwitchingAccount && A.RR.handleAccountSwitch(), x.verbose('Closing socket because of logout'), A.Wb.close();
 }
-function F() {
+function Z() {
     return x.verbose('session refresh dispatched', { isEstablished: A.Wb.isSessionEstablished() }), !!A.Wb.isSessionEstablished() && (A.Wb.close(), A.Wb.connect());
 }
-async function Z(e) {
+async function F(e) {
     (P = Date.now()), (M = e.sessionId), A.RR.handleConnectionOpen();
     let n = {},
         r = I.Z.getVoiceChannelId();
@@ -269,11 +269,11 @@ class eE extends (i = l.ZP.Store) {
 D(eE, 'displayName', 'GatewayConnectionStore'),
     (n.Z = new eE(u.Z, {
         START_SESSION: B,
-        LOGIN_SUCCESS: F,
+        LOGIN_SUCCESS: Z,
         LOGOUT: G,
         CLEAR_CACHES: j,
         CONNECTION_OPEN: (e) => {
-            Z(e);
+            F(e);
         },
         CONNECTION_CLOSED: V,
         RTC_CONNECTION_STATE: X,

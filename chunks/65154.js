@@ -24,7 +24,7 @@ r.d(n, {
         return V;
     },
     Gs: function () {
-        return F;
+        return Z;
     },
     H3: function () {
         return b;
@@ -36,7 +36,7 @@ r.d(n, {
         return H;
     },
     P8: function () {
-        return Z;
+        return F;
     },
     QO: function () {
         return w;
@@ -210,8 +210,8 @@ let S = 100,
     U = 10000000,
     B = 5000,
     G = 15000,
-    F = 30,
-    Z = 20,
+    Z = 30,
+    F = 20,
     V = 12,
     j = 100,
     H = 50,

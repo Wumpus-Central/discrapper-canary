@@ -13,8 +13,8 @@ var i = r(200651),
     d = r(239091),
     f = r(100527),
     _ = r(906732),
-    h = r(797610),
-    p = r(927723),
+    h = r(927723),
+    p = r(645727),
     m = r(124072),
     g = r(184301),
     E = r(347475),
@@ -85,7 +85,7 @@ function R(e) {
             className: n,
             children: R
         });
-    let F = (e) =>
+    let Z = (e) =>
         (0, i.jsx)(m.Z, {
             className: n,
             onContextMenu: M,
@@ -96,7 +96,7 @@ function R(e) {
     return O
         ? (0, i.jsx)(_.Gt, {
               value: L,
-              children: F()
+              children: Z()
           })
         : (0, i.jsx)(_.Gt, {
               value: L,
@@ -119,7 +119,7 @@ function R(e) {
                       })
                   ),
                   position: l.tq ? 'top' : 'right',
-                  children: (e) => F(e)
+                  children: (e) => Z(e)
               })
           });
 }

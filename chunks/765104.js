@@ -50,8 +50,8 @@ let w = {},
         lastResponse: null
     },
     G = [],
-    F = [],
-    Z = 75,
+    Z = [],
+    F = 75,
     V = 25;
 function j() {
     G = T.Z.getProps()
@@ -77,7 +77,7 @@ class H extends (u = m.ZP.PersistedStore) {
     }
     summaries(e) {
         var n;
-        return null !== (n = w[e]) && void 0 !== n ? n : F;
+        return null !== (n = w[e]) && void 0 !== n ? n : Z;
     }
     shouldShowTopicsBar() {
         return i;
@@ -318,7 +318,7 @@ let W = new H(g.Z, {
                         a = p()
                             .chain(i.map((e) => (0, D.b)(e, r)))
                             .sortBy((e) => O.default.extractTimestamp(e.startId))
-                            .takeRight(Z)
+                            .takeRight(F)
                             .reverse()
                             .filter((e) => Object.keys(e).length > 0)
                             .value();
@@ -370,7 +370,7 @@ let W = new H(g.Z, {
                 .chain(u)
                 .concat(c)
                 .sortBy((e) => O.default.extractTimestamp(e.startId))
-                .takeRight(Z)
+                .takeRight(F)
                 .uniqBy('id')
                 .reverse()
                 .value();

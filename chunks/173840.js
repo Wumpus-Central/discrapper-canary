@@ -263,7 +263,7 @@ let S = /\b\B/,
     U = k('//', '$'),
     B = k('/\\*', '\\*/'),
     G = k('#', '$'),
-    F = {
+    Z = {
         scope: 'regexp',
         begin: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
@@ -277,7 +277,7 @@ let S = /\b\B/,
             }
         ]
     },
-    Z = {
+    F = {
         scope: 'title',
         begin: A,
         relevance: 0
@@ -331,10 +331,10 @@ var j = Object.freeze({
     NUMBER_RE: C,
     PHRASAL_WORDS_MODE: M,
     QUOTE_STRING_MODE: P,
-    REGEXP_MODE: F,
+    REGEXP_MODE: Z,
     RE_STARTERS_RE: D,
     SHEBANG: L,
-    TITLE_MODE: Z,
+    TITLE_MODE: F,
     UNDERSCORE_IDENT_RE: N,
     UNDERSCORE_TITLE_MODE: V
 });

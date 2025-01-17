@@ -41,14 +41,14 @@ let _ = o.memo(
                 },
                 [T]
             ),
-            F = o.useCallback(
+            Z = o.useCallback(
                 (e) => {
                     let n = 'function' == typeof b ? b(e) : b;
                     return null == n ? 0 : n;
                 },
                 [b]
             ),
-            Z = o.useCallback(
+            F = o.useCallback(
                 (e) => {
                     let n = 'function' == typeof I ? I(e) : I;
                     return null == n ? 0 : n;
@@ -93,14 +93,14 @@ let _ = o.memo(
                             (i = r),
                             e++;
                     }
-                    (i += F(a) + Z(a)), (o[a].offset.bottom = i);
+                    (i += Z(a) + F(a)), (o[a].offset.bottom = i);
                 }
                 return {
                     totalHeight: (i += a[2]),
                     rowDescriptors: s,
                     sectionDescriptors: o
                 };
-            }, [B, F, G, Z, a, g, E, U]);
+            }, [B, Z, G, F, a, g, E, U]);
         (V.current = W), (j.current = Y);
         let K = o.useCallback(() => {
             var e;
@@ -237,8 +237,8 @@ let _ = o.memo(
                         d = c - u;
                     if (0 === d) continue;
                     let f = G(a),
-                        m = F(a),
-                        g = Z(a);
+                        m = Z(a),
+                        g = F(a);
                     if (c <= e) i = c;
                     else if (c > e && u < n) {
                         r = o;
@@ -271,7 +271,7 @@ let _ = o.memo(
                     visibleItems: s,
                     listOffset: i
                 };
-            }, [B, F, G, Z, a, l, _, p, h, D, W, S, m, U, x]),
+            }, [B, Z, G, F, a, l, _, p, h, D, W, S, m, U, x]),
             X = o.useMemo(() => {
                 var e, n, r;
                 return {

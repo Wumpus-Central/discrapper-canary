@@ -456,11 +456,11 @@ function G(e, n, r) {
     for (var i = e.slice(n, r), a = '', s = 0; s < i.length; s += 2) a += String.fromCharCode(i[s] + 256 * i[s + 1]);
     return a;
 }
-function F(e, n, r) {
+function Z(e, n, r) {
     if (e % 1 != 0 || e < 0) throw RangeError('offset is not uint');
     if (e + n > r) throw RangeError('Trying to access beyond buffer length');
 }
-function Z(e, n, r, i, a, s) {
+function F(e, n, r, i, a, s) {
     if (!c.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
     if (n > a || n < s) throw RangeError('"value" argument is out of bounds');
     if (r + i > e.length) throw RangeError('Index out of range');
@@ -481,75 +481,75 @@ function H(e, n, r, i, s) {
     return Object.setPrototypeOf(i, c.prototype), i;
 }),
     (c.prototype.readUIntLE = function (e, n, r) {
-        (e >>>= 0), (n >>>= 0), !r && F(e, n, this.length);
+        (e >>>= 0), (n >>>= 0), !r && Z(e, n, this.length);
         for (var i = this[e], a = 1, s = 0; ++s < n && (a *= 256); ) i += this[e + s] * a;
         return i;
     }),
     (c.prototype.readUIntBE = function (e, n, r) {
-        (e >>>= 0), (n >>>= 0), !r && F(e, n, this.length);
+        (e >>>= 0), (n >>>= 0), !r && Z(e, n, this.length);
         for (var i = this[e + --n], a = 1; n > 0 && (a *= 256); ) i += this[e + --n] * a;
         return i;
     }),
     (c.prototype.readUInt8 = function (e, n) {
-        return (e >>>= 0), !n && F(e, 1, this.length), this[e];
+        return (e >>>= 0), !n && Z(e, 1, this.length), this[e];
     }),
     (c.prototype.readUInt16LE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 2, this.length), this[e] | (this[e + 1] << 8);
+        return (e >>>= 0), !n && Z(e, 2, this.length), this[e] | (this[e + 1] << 8);
     }),
     (c.prototype.readUInt16BE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 2, this.length), (this[e] << 8) | this[e + 1];
+        return (e >>>= 0), !n && Z(e, 2, this.length), (this[e] << 8) | this[e + 1];
     }),
     (c.prototype.readUInt32LE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
+        return (e >>>= 0), !n && Z(e, 4, this.length), (this[e] | (this[e + 1] << 8) | (this[e + 2] << 16)) + 16777216 * this[e + 3];
     }),
     (c.prototype.readUInt32BE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
+        return (e >>>= 0), !n && Z(e, 4, this.length), 16777216 * this[e] + ((this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3]);
     }),
     (c.prototype.readIntLE = function (e, n, r) {
-        (e >>>= 0), (n >>>= 0), !r && F(e, n, this.length);
+        (e >>>= 0), (n >>>= 0), !r && Z(e, n, this.length);
         for (var i = this[e], a = 1, s = 0; ++s < n && (a *= 256); ) i += this[e + s] * a;
         return i >= (a *= 128) && (i -= Math.pow(2, 8 * n)), i;
     }),
     (c.prototype.readIntBE = function (e, n, r) {
-        (e >>>= 0), (n >>>= 0), !r && F(e, n, this.length);
+        (e >>>= 0), (n >>>= 0), !r && Z(e, n, this.length);
         for (var i = n, a = 1, s = this[e + --i]; i > 0 && (a *= 256); ) s += this[e + --i] * a;
         return s >= (a *= 128) && (s -= Math.pow(2, 8 * n)), s;
     }),
     (c.prototype.readInt8 = function (e, n) {
-        return ((e >>>= 0), !n && F(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
+        return ((e >>>= 0), !n && Z(e, 1, this.length), 128 & this[e]) ? -((255 - this[e] + 1) * 1) : this[e];
     }),
     (c.prototype.readInt16LE = function (e, n) {
-        (e >>>= 0), !n && F(e, 2, this.length);
+        (e >>>= 0), !n && Z(e, 2, this.length);
         var r = this[e] | (this[e + 1] << 8);
         return 32768 & r ? 4294901760 | r : r;
     }),
     (c.prototype.readInt16BE = function (e, n) {
-        (e >>>= 0), !n && F(e, 2, this.length);
+        (e >>>= 0), !n && Z(e, 2, this.length);
         var r = this[e + 1] | (this[e] << 8);
         return 32768 & r ? 4294901760 | r : r;
     }),
     (c.prototype.readInt32LE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
+        return (e >>>= 0), !n && Z(e, 4, this.length), this[e] | (this[e + 1] << 8) | (this[e + 2] << 16) | (this[e + 3] << 24);
     }),
     (c.prototype.readInt32BE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
+        return (e >>>= 0), !n && Z(e, 4, this.length), (this[e] << 24) | (this[e + 1] << 16) | (this[e + 2] << 8) | this[e + 3];
     }),
     (c.prototype.readFloatLE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), a.read(this, e, !0, 23, 4);
+        return (e >>>= 0), !n && Z(e, 4, this.length), a.read(this, e, !0, 23, 4);
     }),
     (c.prototype.readFloatBE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 4, this.length), a.read(this, e, !1, 23, 4);
+        return (e >>>= 0), !n && Z(e, 4, this.length), a.read(this, e, !1, 23, 4);
     }),
     (c.prototype.readDoubleLE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 8, this.length), a.read(this, e, !0, 52, 8);
+        return (e >>>= 0), !n && Z(e, 8, this.length), a.read(this, e, !0, 52, 8);
     }),
     (c.prototype.readDoubleBE = function (e, n) {
-        return (e >>>= 0), !n && F(e, 8, this.length), a.read(this, e, !1, 52, 8);
+        return (e >>>= 0), !n && Z(e, 8, this.length), a.read(this, e, !1, 52, 8);
     }),
     (c.prototype.writeUIntLE = function (e, n, r, i) {
         if (((e = +e), (n >>>= 0), (r >>>= 0), !i)) {
             var a = Math.pow(2, 8 * r) - 1;
-            Z(this, e, n, r, a, 0);
+            F(this, e, n, r, a, 0);
         }
         var s = 1,
             o = 0;
@@ -559,7 +559,7 @@ function H(e, n, r, i, s) {
     (c.prototype.writeUIntBE = function (e, n, r, i) {
         if (((e = +e), (n >>>= 0), (r >>>= 0), !i)) {
             var a = Math.pow(2, 8 * r) - 1;
-            Z(this, e, n, r, a, 0);
+            F(this, e, n, r, a, 0);
         }
         var s = r - 1,
             o = 1;
@@ -567,24 +567,24 @@ function H(e, n, r, i, s) {
         return n + r;
     }),
     (c.prototype.writeUInt8 = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 1, 255, 0), (this[n] = 255 & e), n + 1;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 1, 255, 0), (this[n] = 255 & e), n + 1;
     }),
     (c.prototype.writeUInt16LE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 2, 65535, 0), (this[n] = 255 & e), (this[n + 1] = e >>> 8), n + 2;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 2, 65535, 0), (this[n] = 255 & e), (this[n + 1] = e >>> 8), n + 2;
     }),
     (c.prototype.writeUInt16BE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 2, 65535, 0), (this[n] = e >>> 8), (this[n + 1] = 255 & e), n + 2;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 2, 65535, 0), (this[n] = e >>> 8), (this[n + 1] = 255 & e), n + 2;
     }),
     (c.prototype.writeUInt32LE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 4, 4294967295, 0), (this[n + 3] = e >>> 24), (this[n + 2] = e >>> 16), (this[n + 1] = e >>> 8), (this[n] = 255 & e), n + 4;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 4, 4294967295, 0), (this[n + 3] = e >>> 24), (this[n + 2] = e >>> 16), (this[n + 1] = e >>> 8), (this[n] = 255 & e), n + 4;
     }),
     (c.prototype.writeUInt32BE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 4, 4294967295, 0), (this[n] = e >>> 24), (this[n + 1] = e >>> 16), (this[n + 2] = e >>> 8), (this[n + 3] = 255 & e), n + 4;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 4, 4294967295, 0), (this[n] = e >>> 24), (this[n + 1] = e >>> 16), (this[n + 2] = e >>> 8), (this[n + 3] = 255 & e), n + 4;
     }),
     (c.prototype.writeIntLE = function (e, n, r, i) {
         if (((e = +e), (n >>>= 0), !i)) {
             var a = Math.pow(2, 8 * r - 1);
-            Z(this, e, n, r, a - 1, -a);
+            F(this, e, n, r, a - 1, -a);
         }
         var s = 0,
             o = 1,
@@ -595,7 +595,7 @@ function H(e, n, r, i, s) {
     (c.prototype.writeIntBE = function (e, n, r, i) {
         if (((e = +e), (n >>>= 0), !i)) {
             var a = Math.pow(2, 8 * r - 1);
-            Z(this, e, n, r, a - 1, -a);
+            F(this, e, n, r, a - 1, -a);
         }
         var s = r - 1,
             o = 1,
@@ -604,19 +604,19 @@ function H(e, n, r, i, s) {
         return n + r;
     }),
     (c.prototype.writeInt8 = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[n] = 255 & e), n + 1;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[n] = 255 & e), n + 1;
     }),
     (c.prototype.writeInt16LE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 2, 32767, -32768), (this[n] = 255 & e), (this[n + 1] = e >>> 8), n + 2;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 2, 32767, -32768), (this[n] = 255 & e), (this[n + 1] = e >>> 8), n + 2;
     }),
     (c.prototype.writeInt16BE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 2, 32767, -32768), (this[n] = e >>> 8), (this[n + 1] = 255 & e), n + 2;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 2, 32767, -32768), (this[n] = e >>> 8), (this[n + 1] = 255 & e), n + 2;
     }),
     (c.prototype.writeInt32LE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 4, 2147483647, -2147483648), (this[n] = 255 & e), (this[n + 1] = e >>> 8), (this[n + 2] = e >>> 16), (this[n + 3] = e >>> 24), n + 4;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 4, 2147483647, -2147483648), (this[n] = 255 & e), (this[n + 1] = e >>> 8), (this[n + 2] = e >>> 16), (this[n + 3] = e >>> 24), n + 4;
     }),
     (c.prototype.writeInt32BE = function (e, n, r) {
-        return (e = +e), (n >>>= 0), !r && Z(this, e, n, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[n] = e >>> 24), (this[n + 1] = e >>> 16), (this[n + 2] = e >>> 8), (this[n + 3] = 255 & e), n + 4;
+        return (e = +e), (n >>>= 0), !r && F(this, e, n, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[n] = e >>> 24), (this[n + 1] = e >>> 16), (this[n + 2] = e >>> 8), (this[n + 3] = 255 & e), n + 4;
     }),
     (c.prototype.writeFloatLE = function (e, n, r) {
         return j(this, e, n, !0, r);

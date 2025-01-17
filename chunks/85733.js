@@ -86,11 +86,11 @@ var i = r(478497),
             var B = C[U],
                 G = 'object' == typeof B && void 0 !== B.value ? B.value : R[B];
             if (!f || null !== G) {
-                var F = I && _ ? B.replace(/\./g, '%2E') : B,
-                    Z = u(R) ? ('function' == typeof s ? s(k, F) : k) : k + (I ? '.' + F : '[' + F + ']');
+                var Z = I && _ ? B.replace(/\./g, '%2E') : B,
+                    F = u(R) ? ('function' == typeof s ? s(k, Z) : k) : k + (I ? '.' + Z : '[' + Z + ']');
                 N.set(n, D);
                 var V = i();
-                V.set(m, N), d(w, e(G, Z, s, o, l, c, f, _, 'comma' === s && S && u(R) ? null : g, E, v, I, T, b, y, S, A, V));
+                V.set(m, N), d(w, e(G, F, s, o, l, c, f, _, 'comma' === s && S && u(R) ? null : g, E, v, I, T, b, y, S, A, V));
             }
         }
         return w;

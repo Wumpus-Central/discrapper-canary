@@ -60,8 +60,8 @@ var i = n(200651),
     D = n(560688),
     W = n(871499),
     z = n(199902),
-    G = n(314897),
-    F = n(430824),
+    F = n(314897),
+    G = n(430824),
     U = n(131951),
     B = n(19780),
     Y = n(944486),
@@ -342,7 +342,7 @@ function er(e) {
             events: { onClick: x, onMouseEnter: g, onMouseLeave: C }
         } = (0, d.j)(),
         Z = ee(o),
-        _ = (0, r.e7)([S.Z, G.default], () => S.Z.isUserPlayingSounds(G.default.getId()), []);
+        _ = (0, r.e7)([S.Z, F.default], () => S.Z.isUserPlayingSounds(F.default.getId()), []);
     return (0, i.jsx)(f.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -430,7 +430,7 @@ function ea(e) {
 }
 function es(e) {
     let { voiceChannel: t } = e,
-        n = (0, r.e7)([F.Z], () => F.Z.getGuild(t.getGuildId()), [t]);
+        n = (0, r.e7)([G.Z], () => G.Z.getGuild(t.getGuildId()), [t]);
     switch (!0) {
         case t.isGroupDM() || t.isDM():
         case t.isDM():

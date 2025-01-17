@@ -1,12 +1,12 @@
 r.d(n, {
     En: function () {
-        return Z;
+        return F;
     },
     dY: function () {
         return k;
     },
     eC: function () {
-        return F;
+        return Z;
     },
     jz: function () {
         return B;
@@ -199,9 +199,9 @@ function G(e, n, r) {
                 maxMediaHeight: 300
             };
 }
-function F(e, n) {
+function Z(e, n) {
     return e.isPrivate() ? !e.isManaged() : n.can(T.Plq.EMBED_LINKS, e);
 }
-function Z(e) {
+function F(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

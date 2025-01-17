@@ -58,20 +58,20 @@ let P = new T.Z('KeybindsStore'),
     U = {},
     B = 0,
     G = !0,
-    F = {},
-    Z = !1,
+    Z = {},
+    F = !1,
     V = [O.kg4.PUSH_TO_TALK, O.kg4.TOGGLE_OVERLAY_INPUT_LOCK, O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 function j(e, n) {
     let r = e === M.id ? M : U[e];
-    null != r && F[r.action].onTrigger(n, r);
+    null != r && Z[r.action].onTrigger(n, r);
 }
 function H() {
     let { showKeybindIndicators: e } = b.Z.getCurrentConfig({ location: 'KeybindsStore' });
-    null == g().find(U, (e) => M.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !Z && G && e && (q(M), (Z = !0));
+    null == g().find(U, (e) => M.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !F && G && e && (q(M), (F = !0));
 }
 function Y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    (Z || e) && (z(M.id), (Z = !1));
+    (F || e) && (z(M.id), (F = !1));
 }
 function W(e) {
     let { showKeybindIndicators: n } = e;
@@ -89,7 +89,7 @@ function z(e) {
     if (A.isPlatformEmbedded) N.ZP.inputEventUnregister(parseInt(e, 10));
     else if (k[e]) {
         let n = U[e],
-            r = F[n.action];
+            r = Z[n.action];
         (null == r ? void 0 : r.isPressed) === !0 && x.nextTick(() => r.onTrigger(!1, n)), k[e].reset(), (k[e] = null);
     }
 }
@@ -97,12 +97,12 @@ function q(e) {
     if (!G || __OVERLAY__) return;
     let { shortcut: n, action: r, enabled: i } = e;
     if ('' === n || null == n || r === O.kg4.UNASSIGNED || !i) return;
-    if (null == F[r]) {
+    if (null == Z[r]) {
         P.error('[kb store] KeybindStore: Looking for callback action '.concat(r, " but it doesn't exist in this version. Skipping"));
         return;
     }
     let a = e.id,
-        s = F[r].keyEvents;
+        s = Z[r].keyEvents;
     e.action === O.kg4.TOGGLE_MUTE && Y(),
         K(a, n, (e) => j(a, e), {
             focused: !0,
@@ -171,7 +171,7 @@ function et(e) {
 }
 function en(e) {
     let { keybinds: n } = e;
-    (F = n),
+    (Z = n),
         (k = {}),
         (B = 0),
         Object.values(U).filter((e) => V.includes(e.action) && e.managed).length !== V.length && ea(),

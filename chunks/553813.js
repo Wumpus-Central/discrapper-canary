@@ -241,10 +241,10 @@ function B(e, n, r) {
 function G(e, n, r) {
     return 0 !== D(e, n, r);
 }
-function F(e, n, r) {
+function Z(e, n, r) {
     return D(e, n, r) >= 0;
 }
-function Z(e, n, r) {
+function F(e, n, r) {
     return 0 >= D(e, n, r);
 }
 function V(e, n, r, i) {
@@ -262,11 +262,11 @@ function V(e, n, r, i) {
         case '>':
             return k(e, r, i);
         case '>=':
-            return F(e, r, i);
+            return Z(e, r, i);
         case '<':
             return U(e, r, i);
         case '<=':
-            return Z(e, r, i);
+            return F(e, r, i);
         default:
             throw TypeError('Invalid operator: ' + n);
     }
@@ -286,7 +286,7 @@ function j(e, n) {
     if (!(this instanceof j)) return new j(e, n);
     i('comparator', e, n), (this.options = n), (this.loose = !!n.loose), this.parse(e), this.semver === H ? (this.value = '') : (this.value = this.operator + this.semver.version), i('comp', this);
 }
-(n.rcompareIdentifiers = N), (n.major = C), (n.minor = R), (n.patch = O), (n.compare = D), (n.compareLoose = L), (n.compareBuild = x), (n.rcompare = w), (n.sort = P), (n.rsort = M), (n.gt = k), (n.lt = U), (n.eq = B), (n.neq = G), (n.gte = F), (n.lte = Z), (n.cmp = V), (n.Comparator = j);
+(n.rcompareIdentifiers = N), (n.major = C), (n.minor = R), (n.patch = O), (n.compare = D), (n.compareLoose = L), (n.compareBuild = x), (n.rcompare = w), (n.sort = P), (n.rsort = M), (n.gt = k), (n.lt = U), (n.eq = B), (n.neq = G), (n.gte = Z), (n.lte = F), (n.cmp = V), (n.Comparator = j);
 var H = {};
 function Y(e, n) {
     if (
@@ -499,10 +499,10 @@ function ed(e, n, r) {
 function ef(e, n, r, i) {
     switch (((e = new T(e, i)), (n = new Y(n, i)), r)) {
         case '>':
-            (a = k), (s = Z), (o = U), (l = '>'), (u = '>=');
+            (a = k), (s = F), (o = U), (l = '>'), (u = '>=');
             break;
         case '<':
-            (a = U), (s = F), (o = k), (l = '<'), (u = '<=');
+            (a = U), (s = Z), (o = k), (l = '<'), (u = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

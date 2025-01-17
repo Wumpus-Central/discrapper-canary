@@ -94,7 +94,7 @@ function G(e, n, r) {
         [i, s]
     );
 }
-function F(e, n) {
+function Z(e, n) {
     let r = (0, d.useToken)(c.Z.colors.INTERACTIVE_MUTED).hex(),
         i = (0, d.useToken)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
         a = (0, d.useToken)(c.Z.colors.INTERACTIVE_ACTIVE).hex(),
@@ -113,7 +113,7 @@ function F(e, n) {
         inactiveFillColor: m
     };
 }
-function Z(e, n, r, i) {
+function F(e, n, r, i) {
     if (null == i) return [n, !1];
     let a = Math.min((r - i) / D, 1);
     return 1 === a ? [n, !1] : [(0, h.BM)(e, n, a), !0];
@@ -128,7 +128,7 @@ function V(e) {
         S = o.useRef(c),
         A = o.useRef(null),
         C = window.devicePixelRatio,
-        { lastBackgroundFillColor: O, backgroundFillColor: L, lastActiveFillColor: x, activeFillColor: P, lastInactiveFillColor: M, inactiveFillColor: G } = F(l, c),
+        { lastBackgroundFillColor: O, backgroundFillColor: L, lastActiveFillColor: x, activeFillColor: P, lastInactiveFillColor: M, inactiveFillColor: G } = Z(l, c),
         V = {
             currentTime: i,
             duration: a,
@@ -177,7 +177,7 @@ function V(e) {
                 (y.current !== l || S.current !== c) && ((y.current = l), (S.current = c), (A.current = r)), null != A.current && r > A.current + D && (A.current = null);
                 let u = i.height / C;
                 a.clearRect(0, 0, i.width, i.height), a.beginPath();
-                let [d, f] = Z(O, L, r, A.current);
+                let [d, f] = F(O, L, r, A.current);
                 (o = o || f), (a.fillStyle = d);
                 for (let e = 0; e < b.length; e++)
                     U({
@@ -189,9 +189,9 @@ function V(e) {
                         constrainMin: !0
                     });
                 a.fill();
-                let [_, h] = Z(M, G, r, A.current);
+                let [_, h] = F(M, G, r, A.current);
                 o = o || h;
-                let [p, m] = Z(x, P, r, A.current);
+                let [p, m] = F(x, P, r, A.current);
                 o = o || m;
                 for (let e = 0; e < s.length; e++) {
                     let n = s[e],

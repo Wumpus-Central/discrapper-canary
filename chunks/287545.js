@@ -42,8 +42,8 @@ var o = r(772848),
     U = r(782769),
     B = r(16609),
     G = r(761122),
-    F = r(983695),
-    Z = r(917107),
+    Z = r(983695),
+    F = r(917107),
     V = r(981631),
     j = r(388032);
 function H(e, n, r) {
@@ -150,12 +150,12 @@ function X(e) {
     if (null == I || null == k) return;
     let U = w.ZP.getShelfActivities(M),
         G = D.Z.getState().shelfOrder,
-        F = (0, P.Z)({
+        Z = (0, P.Z)({
             applicationId: a,
             activityConfigs: U
         }),
-        Z = 1 + G.findIndex((e) => e === a),
-        { releasePhase: j } = z(F),
+        F = 1 + G.findIndex((e) => e === a),
+        { releasePhase: j } = z(Z),
         H = p.Z.getRawThermalState(),
         Y = null != S ? [S] : [],
         q = {
@@ -180,9 +180,9 @@ function X(e) {
             n_participants: h.Z.getUserParticipantCount(I.id),
             is_activity_start: l,
             release_phase: j,
-            activity_premium_tier_requirement: null == F ? void 0 : null === (n = F.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
-            shelf_rank: null == F ? void 0 : null === (r = F.activity) || void 0 === r ? void 0 : r.shelf_rank,
-            shelf_sorted_rank: Z > 0 ? Z : null,
+            activity_premium_tier_requirement: null == Z ? void 0 : null === (n = Z.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
+            shelf_rank: null == Z ? void 0 : null === (r = Z.activity) || void 0 === r ? void 0 : r.shelf_rank,
+            shelf_sorted_rank: F > 0 ? F : null,
             activity_user_session_id: L,
             channel_type: I.type,
             source: null == Q ? void 0 : Q.source,
@@ -200,8 +200,8 @@ function X(e) {
             activity_user_session_id: L,
             raw_thermal_state: H,
             is_activity_start: l,
-            shelf_rank: null == F ? void 0 : null === (i = F.activity) || void 0 === i ? void 0 : i.shelf_rank,
-            shelf_sorted_rank: Z > 0 ? Z : null,
+            shelf_rank: null == Z ? void 0 : null === (i = Z.activity) || void 0 === i ? void 0 : i.shelf_rank,
+            shelf_sorted_rank: F > 0 ? F : null,
             activities_infra_version: x
         });
 }
@@ -222,7 +222,7 @@ class $ extends d.Z {
                 for (let { location: n, applicationId: r } of w.ZP.getSelfEmbeddedActivities().values()) {
                     let i = (0, B.p)(n);
                     null != i &&
-                        (0, Z.Z)(i) &&
+                        (0, F.Z)(i) &&
                         i !== e &&
                         this.leaveActivity({
                             location: n,
@@ -370,7 +370,7 @@ class $ extends d.Z {
                     this.showLaunchErrorModal(j.intl.string(j.t.UXoQTk));
                     return;
                 }
-                if (!(0, F.Z)(null == f ? void 0 : null === (n = f.embedded_activity_config) || void 0 === n ? void 0 : n.supported_platforms)) {
+                if (!(0, Z.Z)(null == f ? void 0 : null === (n = f.embedded_activity_config) || void 0 === n ? void 0 : n.supported_platforms)) {
                     this.showLaunchErrorModal(j.intl.string(j.t.uGDCc3));
                     return;
                 }

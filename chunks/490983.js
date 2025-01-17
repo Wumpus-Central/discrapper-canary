@@ -46,19 +46,19 @@ let k = 5,
     U = d()().subtract(1, 'week'),
     B = [],
     G = '',
-    F = !1;
-function Z(e, n) {
+    Z = !1;
+function F(e, n) {
     return e.application.name.localeCompare(n.application.name, g.default.locale, { sensitivity: 'base' });
 }
 function V(e, n) {
     return null != e && d()(e.createdAt).isAfter(U) && 0 === n;
 }
 let j = {
-        [P.iEv.NAME]: Z,
+        [P.iEv.NAME]: F,
         [P.iEv.PLATFORM]: (e, n, r) => {
             let i = e.libraryApplication.getDistributor(),
                 a = n.libraryApplication.getDistributor();
-            return i === a ? (r === P.sHY.DESCENDING ? -1 : 1) * Z(e, n) : null == i ? 1 : null == a ? -1 : i.localeCompare(a);
+            return i === a ? (r === P.sHY.DESCENDING ? -1 : 1) * F(e, n) : null == i ? 1 : null == a ? -1 : i.localeCompare(a);
         },
         [P.iEv.LAST_PLAYED]: (e, n) => (e.isNew && !n.isNew ? -1 : !e.isNew && n.isNew ? 1 : e.lastPlayed === n.lastPlayed ? 0 : e.lastPlayed > n.lastPlayed ? -1 : 1),
         [P.iEv.ACTIONS]: null
@@ -154,7 +154,7 @@ function $() {
             .filter(R.lm),
         s = [...i.map((i) => J(i, r, n, e)).filter(R.lm), ...a].sort((e, n) => (e.lastPlayed === n.lastPlayed ? 0 : e.lastPlayed > n.lastPlayed ? -1 : 1));
     return (
-        (F = null != v.Z.lastFetched && I.Z.fetched),
+        (Z = null != v.Z.lastFetched && I.Z.fetched),
         !u().isEqual(s, B) &&
             ((B = s),
             D.isPlatformEmbedded &&
@@ -192,7 +192,7 @@ class ee extends (i = f.ZP.Store) {
         return z(B);
     }
     get hasFetchedApplications() {
-        return F;
+        return Z;
     }
 }
 M(ee, 'displayName', 'ApplicationViewStore'), (n.Z = new ee(_.Z, { LIBRARY_APPLICATION_FILTER_UPDATE: Q }));

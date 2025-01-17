@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return F;
+        return G;
     }
 }),
     n(47120);
@@ -76,8 +76,8 @@ function z(e) {
         }),
         R = (0, a.e7)([j.Z], () => j.Z.getStreamForUser(c.id, _)),
         z = null != R,
-        G = l.useMemo(() => null != O && O.ownerId !== c.id && V.includes(c.id), [O, c.id, V]),
-        F = l.useCallback(() => k(null), [k]),
+        F = l.useMemo(() => null != O && O.ownerId !== c.id && V.includes(c.id), [O, c.id, V]),
+        G = l.useCallback(() => k(null), [k]),
         U = l.useCallback(
             () =>
                 (0, i.jsx)(g.Z, {
@@ -88,7 +88,7 @@ function z(e) {
                             forceMultiple: !0,
                             noFocus: !0
                         }),
-                            F(),
+                            G(),
                             y();
                     },
                     onAction: y,
@@ -96,7 +96,7 @@ function z(e) {
                     location: M.Sbl.UNLOCKED_OVERLAY,
                     hideTip: !0
                 }),
-            [c, t, R, w, F, y]
+            [c, t, R, w, G, y]
         );
     if (p === M.OYC.ONLY_WHILE_SPEAKING && o && !P) return null;
     let { mute: B, suppress: Y, deaf: H } = b,
@@ -110,7 +110,7 @@ function z(e) {
         onClick: o ? void 0 : (e) => (null == v ? void 0 : v(e, c)),
         onContextMenu: o ? void 0 : (e) => (null == C ? void 0 : C(e, c)),
         onMouseEnter: () => k(c.id),
-        onMouseLeave: F,
+        onMouseLeave: G,
         children: [
             (0, i.jsx)(s.Avatar, {
                 className: D.avatar,
@@ -130,7 +130,7 @@ function z(e) {
                       position: 'right',
                       renderPopout: U,
                       shouldShow: w,
-                      onRequestClose: F,
+                      onRequestClose: G,
                       spacing: 0,
                       children: () =>
                           (0, i.jsxs)(s.Clickable, {
@@ -154,7 +154,7 @@ function z(e) {
                                       isStreaming: z,
                                       className: D.voiceIcons,
                                       iconClassName: D.voiceIcon,
-                                      isWatching: G,
+                                      isWatching: F,
                                       localMute: S && !L,
                                       localVideoDisabled: A,
                                       mute: B || S,
@@ -169,7 +169,7 @@ function z(e) {
         ]
     });
 }
-function G(e) {
+function F(e) {
     let { id: t, context: o = P.Yn.DEFAULT, channel: r, sortedVoiceStates: a, displayNameMode: h, displayUserMode: f, locked: p, pinned: m, isPreviewingInGame: v, anchorLeft: x, avatarSizeMode: g } = e,
         [C, Z] = l.useState(null),
         _ = (e, t) => {
@@ -238,7 +238,7 @@ function G(e) {
                 icon: s.VoiceNormalIcon
             });
 }
-function F(e) {
+function G(e) {
     var t;
     let n = (0, a.e7)([k.Z, b.Z], () => b.Z.getChannel(k.Z.getVoiceChannelId())),
         l = (0, v.ZP)(n),
@@ -267,7 +267,7 @@ function F(e) {
                 stream: e
             };
         });
-    return (0, i.jsx)(G, {
+    return (0, i.jsx)(F, {
         ...u,
         application: c,
         ...e,

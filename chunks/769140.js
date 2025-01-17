@@ -39,8 +39,8 @@ var a = r(200651),
     U = r(194811),
     B = r(373826),
     G = r(315324),
-    F = r(599864),
-    Z = r(670451),
+    Z = r(599864),
+    F = r(670451),
     V = r(228168),
     j = r(981631),
     H = r(388032),
@@ -231,7 +231,7 @@ function q(e) {
                 ? null
                 : (0, a.jsx)('div', {
                       className: l()(Y.actions, J),
-                      children: (0, a.jsx)(F.Z, {
+                      children: (0, a.jsx)(Z.Z, {
                           channel: ea,
                           onAction: en,
                           onClose: q
@@ -248,7 +248,7 @@ function q(e) {
                 (0, a.jsx)(U.Z, {
                     text: null != eo ? H.intl.formatToPlainString(H.t['4CQq9f'], { name: eo.name }) : H.intl.string(H.t['Jpkr/v']),
                     tags: (0, a.jsx)(v.ZP, { size: v.OH.SMALL }),
-                    contextMenu: (0, a.jsx)(Z.Z, {
+                    contextMenu: (0, a.jsx)(F.Z, {
                         display: 'live',
                         user: n,
                         onClose: q

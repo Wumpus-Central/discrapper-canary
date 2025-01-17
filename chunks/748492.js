@@ -59,12 +59,12 @@ function P(e) {
         U = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         B = !1 === (null === (n = null == U ? void 0 : U.disabled) || void 0 === n || n),
         G = (0, d.Z)([s])[0],
-        F = (0, p.Z)(a),
-        Z = (e) => {
+        Z = (0, p.Z)(a),
+        F = (e) => {
             u.Z.setVideoEnabled(e);
         },
         V = () => {
-            B ? Z(!0) : (0, m.Z)();
+            B ? F(!0) : (0, m.Z)();
         },
         j = () => {
             (0, C.Z)(() => h.hP(a));
@@ -97,8 +97,8 @@ function P(e) {
                                 className: L.leftPipIcon,
                                 enabled: k,
                                 cameraUnavailable: !B,
-                                hasPermission: F,
-                                onChange: Z,
+                                hasPermission: Z,
+                                onChange: F,
                                 onCameraUnavailable: V
                             }),
                             (0, i.jsx)(g.Z, {

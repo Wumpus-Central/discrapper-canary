@@ -202,11 +202,11 @@ function G(e) {
     let { user: n } = e;
     n.id !== g.default.getId() && L(n);
 }
-function F(e) {
+function Z(e) {
     let { user: n } = e;
     L(n);
 }
-function Z(e) {
+function F(e) {
     let { user: n } = e;
     L(n);
 }
@@ -525,11 +525,11 @@ class eL extends E.Z {
         super({
             CONNECTION_OPEN: M,
             CONNECTION_OPEN_SUPPLEMENTAL: k,
-            UPDATE_CLIENT_PREMIUM_TYPE: Z,
+            UPDATE_CLIENT_PREMIUM_TYPE: F,
             OVERLAY_INITIALIZE: B,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
             USER_UPDATE: G,
-            CURRENT_USER_UPDATE: F,
+            CURRENT_USER_UPDATE: Z,
             PRESENCE_UPDATES: et,
             SEARCH_FINISH: H,
             MOD_VIEW_SEARCH_FINISH: H,

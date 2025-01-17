@@ -54,13 +54,13 @@ function p(e) {
                       U
                   ),
         G = n.modifiersData.offset ? n.modifiersData.offset[n.placement] : null,
-        F = {
+        Z = {
             x: 0,
             y: 0
         };
     if (!!P) {
         if (g) {
-            var Z,
+            var F,
                 V = 'y' === x ? i.we : i.t$,
                 j = 'y' === x ? i.I : i.F2,
                 H = 'y' === x ? 'height' : 'width',
@@ -86,11 +86,11 @@ function p(e) {
                 ei = L ? -M[H] / 2 + z + en + et + B.mainAxis : Q + en + et + B.mainAxis,
                 ea = n.elements.arrow && (0, c.Z)(n.elements.arrow),
                 es = ea ? ('y' === x ? ea.clientTop || 0 : ea.clientLeft || 0) : 0,
-                eo = null != (Z = null == G ? void 0 : G[x]) ? Z : 0,
+                eo = null != (F = null == G ? void 0 : G[x]) ? F : 0,
                 el = Y + er - eo - es,
                 eu = Y + ei - eo,
                 ec = (0, l.u)(A ? (0, h.VV)(W, el) : W, Y, A ? (0, h.Fp)(K, eu) : K);
-            (P[x] = ec), (F[x] = ec - Y);
+            (P[x] = ec), (Z[x] = ec - Y);
         }
         if (v) {
             var ed,
@@ -105,9 +105,9 @@ function p(e) {
                 eI = eE ? em : eh - M[ep] - k[ep] - ev + B.altAxis,
                 eT = eE ? eh + M[ep] + k[ep] - ev - B.altAxis : eg,
                 eb = A && eE ? (0, l.q)(eI, eh, eT) : (0, l.u)(A ? eI : em, eh, A ? eT : eg);
-            (P[w] = eb), (F[w] = eb - eh);
+            (P[w] = eb), (Z[w] = eb - eh);
         }
-        n.modifiersData[p] = F;
+        n.modifiersData[p] = Z;
     }
 }
 n.Z = {

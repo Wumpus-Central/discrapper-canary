@@ -69,7 +69,7 @@ r.d(n, {
         return eU;
     },
     kt: function () {
-        return eF;
+        return eZ;
     },
     mn: function () {
         return eL;
@@ -102,7 +102,7 @@ r.d(n, {
         return V;
     },
     vd: function () {
-        return F;
+        return Z;
     },
     vg: function () {
         return et;
@@ -180,12 +180,12 @@ function B(e) {
     return U.has(e);
 }
 let G = new Set([v.d4z.DM, v.d4z.GROUP_DM, v.d4z.GUILD_VOICE, v.d4z.GUILD_STAGE_VOICE, v.d4z.PUBLIC_THREAD, v.d4z.PRIVATE_THREAD]);
-function F(e) {
+function Z(e) {
     return G.has(e);
 }
-let Z = new Set([v.d4z.GUILD_TEXT, v.d4z.GUILD_ANNOUNCEMENT, v.d4z.ANNOUNCEMENT_THREAD, v.d4z.PUBLIC_THREAD, v.d4z.PRIVATE_THREAD, v.d4z.GUILD_DIRECTORY, v.d4z.GUILD_FORUM, v.d4z.GUILD_MEDIA, v.d4z.DM, v.d4z.GROUP_DM]);
+let F = new Set([v.d4z.GUILD_TEXT, v.d4z.GUILD_ANNOUNCEMENT, v.d4z.ANNOUNCEMENT_THREAD, v.d4z.PUBLIC_THREAD, v.d4z.PRIVATE_THREAD, v.d4z.GUILD_DIRECTORY, v.d4z.GUILD_FORUM, v.d4z.GUILD_MEDIA, v.d4z.DM, v.d4z.GROUP_DM]);
 function V(e) {
-    return Z.has(e);
+    return F.has(e);
 }
 let j = new Set([v.d4z.ANNOUNCEMENT_THREAD, v.d4z.PUBLIC_THREAD, v.d4z.PRIVATE_THREAD]),
     H = new Set([v.d4z.GUILD_TEXT, v.d4z.GUILD_ANNOUNCEMENT, v.d4z.GUILD_FORUM, v.d4z.GUILD_MEDIA]);
@@ -356,7 +356,7 @@ class em extends e_ {
         return this.type === v.d4z.GUILD_CATEGORY;
     }
     isVocal() {
-        return F(this.type);
+        return Z(this.type);
     }
     isGuildVocal() {
         return L(this.type);
@@ -794,7 +794,7 @@ function ek(e, n) {
     return (null !== (i = eM[null !== (r = e.type) && void 0 !== r ? r : v.d4z.GUILD_TEXT]) && void 0 !== i ? i : eg.fromServer)(e, n);
 }
 function eU(e) {
-    return eF(e);
+    return eZ(e);
 }
 let eB = {
     [v.d4z.DM]: ex,
@@ -817,7 +817,7 @@ function eG(e) {
     let i = null !== (r = eB[null !== (n = e.type) && void 0 !== n ? n : v.d4z.GUILD_TEXT]) && void 0 !== r ? r : eg;
     return (0, h.gh)(e, i);
 }
-function eF(e) {
+function eZ(e) {
     var n, r;
     return new (null !== (r = eB[null !== (n = e.type) && void 0 !== n ? n : v.d4z.GUILD_TEXT]) && void 0 !== r ? r : eg)(eh(e));
 }

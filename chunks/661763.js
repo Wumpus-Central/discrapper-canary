@@ -295,15 +295,15 @@ function B() {
 function G() {
     return D(/Android/i);
 }
-function F() {
+function Z() {
     return D(/Firefox/i);
 }
-let Z = (0, i.createContext)({
+let F = (0, i.createContext)({
     isNative: !0,
     open: W
 });
 function V() {
-    return (0, i.useContext)(Z);
+    return (0, i.useContext)(F);
 }
 function j(e, n) {
     let r = e.getAttribute('target');
@@ -312,7 +312,7 @@ function j(e, n) {
 function H(e, n, r = !0) {
     var i, a;
     let { metaKey: s, ctrlKey: o, altKey: l, shiftKey: u } = n;
-    F() && (null === (a = window.event) || void 0 === a ? void 0 : null === (i = a.type) || void 0 === i ? void 0 : i.startsWith('key')) && '_blank' === e.target && (x() ? (s = !0) : (o = !0));
+    Z() && (null === (a = window.event) || void 0 === a ? void 0 : null === (i = a.type) || void 0 === i ? void 0 : i.startsWith('key')) && '_blank' === e.target && (x() ? (s = !0) : (o = !0));
     let c =
         U() && x() && !P()
             ? new KeyboardEvent('keydown', {

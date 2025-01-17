@@ -130,11 +130,11 @@ function G(e) {
         }, []);
     return a.updateMembersByMemberIds(s);
 }
-function F(e) {
+function Z(e) {
     let { guildId: n, guildMember: r } = e;
     return S(n).updateMembersByMemberIds([r.user.id]);
 }
-function Z(e) {
+function F(e) {
     let n = !1;
     return (
         e.guilds.forEach((e) => {
@@ -166,7 +166,7 @@ function V(e) {
     );
 }
 function j(e) {
-    return b ? (b = !1) : N(!0), Z(e);
+    return b ? (b = !1) : N(!0), F(e);
 }
 function H(e) {
     return V(e);
@@ -341,7 +341,7 @@ let en = new et(u.Z, {
     GUILD_MEMBER_REMOVE: w,
     GUILD_ROLE_UPDATE: P,
     GUILD_ROLE_DELETE: P,
-    GUILD_MEMBER_PROFILE_UPDATE: F,
+    GUILD_MEMBER_PROFILE_UPDATE: Z,
     GUILD_ROLE_MEMBER_REMOVE: M,
     GUILD_ROLE_MEMBER_ADD: M,
     THREAD_MEMBER_LIST_UPDATE: k,

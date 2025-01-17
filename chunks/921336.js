@@ -491,8 +491,8 @@ function k(e) {
 let U = null,
     B = new Set(),
     G = !1,
-    F = !1,
     Z = !1,
+    F = !1,
     V = {
         Tab: !0,
         Escape: !0
@@ -504,25 +504,25 @@ function H(e) {
     return !(e.metaKey || (!(0, i.V5)() && e.altKey) || e.ctrlKey || 'Control' === e.key || 'Shift' === e.key || 'Meta' === e.key);
 }
 function Y(e) {
-    (F = !0), H(e) && ((U = 'keyboard'), j('keyboard', e));
+    (Z = !0), H(e) && ((U = 'keyboard'), j('keyboard', e));
 }
 function W(e) {
-    (U = 'pointer'), ('mousedown' === e.type || 'pointerdown' === e.type) && ((F = !0), j('pointer', e));
+    (U = 'pointer'), ('mousedown' === e.type || 'pointerdown' === e.type) && ((Z = !0), j('pointer', e));
 }
 function K(e) {
-    (0, i.Zj)(e) && ((F = !0), (U = 'virtual'));
+    (0, i.Zj)(e) && ((Z = !0), (U = 'virtual'));
 }
 function z(e) {
-    e.target !== window && e.target !== document && (!F && !Z && ((U = 'virtual'), j('virtual', e)), (F = !1), (Z = !1));
+    e.target !== window && e.target !== document && (!Z && !F && ((U = 'virtual'), j('virtual', e)), (Z = !1), (F = !1));
 }
 function q() {
-    (F = !1), (Z = !0);
+    (Z = !1), (F = !0);
 }
 function Q() {
     if ('undefined' == typeof window || G) return;
     let e = HTMLElement.prototype.focus;
     (HTMLElement.prototype.focus = function () {
-        (F = !0), e.apply(this, arguments);
+        (Z = !0), e.apply(this, arguments);
     }),
         document.addEventListener('keydown', Y, !0),
         document.addEventListener('keyup', Y, !0),

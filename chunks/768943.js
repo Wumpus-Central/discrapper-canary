@@ -152,13 +152,13 @@ function G(e) {
     if (0 === T.size || E || !y(n.id)) return !1;
     E = !0;
 }
-function F(e) {
+function Z(e) {
     var n;
     let { user: r } = e;
     if (0 === T.size || E || r.id !== (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
     E = !0;
 }
-function Z(e) {
+function F(e) {
     let { savedMessage: n } = e;
     I.add(n.saveData.messageId);
 }
@@ -231,9 +231,9 @@ _(V, 'displayName', 'SavedMessagesStore'),
         CHANNEL_CREATE: U,
         CHANNEL_UPDATES: B,
         CHANNEL_DELETE: G,
-        GUILD_MEMBER_UPDATE: F,
+        GUILD_MEMBER_UPDATE: Z,
         GUILD_ROLE_CREATE: k,
         GUILD_ROLE_UPDATE: k,
         GUILD_ROLE_DELETE: k,
-        MESSAGE_REMINDER_DUE: Z
+        MESSAGE_REMINDER_DUE: F
     }));

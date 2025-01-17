@@ -308,10 +308,10 @@
             });
         };
     }
-    function F(e) {
+    function Z(e) {
         return 'number' == typeof e && isFinite(e);
     }
-    function Z(e) {
+    function F(e) {
         return V(e) ? e2(e) : [(e[0][0] + e[e.length - 1][0]) / 2, (e[0][1] + e[e.length - 1][1]) / 2];
     }
     function V(e) {
@@ -373,7 +373,7 @@
             s = [],
             o = 3;
         if (!a) throw TypeError(tI);
-        (r = (i = Q(a)).getTotalLength()), n && F(n) && n > 0 && (o = Math.max(o, Math.ceil(r / n)));
+        (r = (i = Q(a)).getTotalLength()), n && Z(n) && n > 0 && (o = Math.max(o, Math.ceil(r / n)));
         for (var l = 0; l < o; l++) {
             var u = i.getPointAtLength((r * l) / o);
             s.push([u.x, u.y]);
@@ -410,11 +410,11 @@
             (e = a.ring), (i = a.skipBisect);
         } else if (!Array.isArray(e)) throw TypeError(tI);
         if (!ee((r = e.slice(0)))) throw TypeError(tI);
-        return r.length > 1 && U(r[0], r[r.length - 1]) && r.pop(), e1(r) > 0 && r.reverse(), !i && n && F(n) && n > 0 && J(r, n), r;
+        return r.length > 1 && U(r[0], r[r.length - 1]) && r.pop(), e1(r) > 0 && r.reverse(), !i && n && Z(n) && n > 0 && J(r, n), r;
     }
     function ee(e) {
         return e.every(function (e) {
-            return Array.isArray(e) && e.length >= 2 && F(e[0]) && F(e[1]);
+            return Array.isArray(e) && e.length >= 2 && Z(e[0]) && Z(e[1]);
         });
     }
     function et(e, n, r) {
@@ -925,11 +925,11 @@
             });
         return i(s), s;
     }
-    function eF(e, n) {
-        var r = M(Z(e), Z(n));
+    function eZ(e, n) {
+        var r = M(F(e), F(n));
         return r * r;
     }
-    function eZ(e, n, r) {
+    function eF(e, n, r) {
         void 0 === r && (r = {});
         var i = r.maxSegmentLength;
         void 0 === i && (i = 10);
@@ -968,7 +968,7 @@
         void 0 === a && (a = !0);
         var s = r.single;
         void 0 === s && (s = !1);
-        var o = eZ(n, e, {
+        var o = eF(n, e, {
             maxSegmentLength: i,
             string: a,
             single: s
@@ -1106,7 +1106,7 @@
         var l,
             u = $(n, s);
         return (
-            F(i) && u.length < i / s && X(u, Math.ceil(i / s - u.length)),
+            Z(i) && u.length < i / s && X(u, Math.ceil(i / s - u.length)),
             (l = B(e(u), u, o)),
             o
                 ? function (e) {
@@ -1117,7 +1117,7 @@
     }
     function eQ(e, n, r) {
         return function (i) {
-            var a = Z(i),
+            var a = F(i),
                 s = e3(i.concat([i[0]])),
                 o = Math.atan2(i[0][1] - a[1], i[0][0] - a[0]),
                 l = 0;
@@ -1129,7 +1129,7 @@
     }
     function eX(e, n, r, i) {
         return function (a) {
-            var s = Z(a),
+            var s = F(a),
                 o = e3(a.concat([a[0]])),
                 l = Math.atan2(a[0][1] - s[1], a[0][0] - s[0]),
                 u = 0;
@@ -2077,10 +2077,10 @@
                 });
             var r = e.map(function (e) {
                 return n.map(function (n) {
-                    return eF(e, n);
+                    return eZ(e, n);
                 });
             });
             return eG(e, n, r);
         };
-    (e.interpolate = ty), (e.separate = eZ), (e.combine = eV), (e.interpolateAll = ej), (e.splitPathString = W), (e.toPathString = Y), (e.fromCircle = eY), (e.toCircle = eW), (e.fromRect = eK), (e.toRect = ez), Object.defineProperty(e, '__esModule', { value: !0 });
+    (e.interpolate = ty), (e.separate = eF), (e.combine = eV), (e.interpolateAll = ej), (e.splitPathString = W), (e.toPathString = Y), (e.fromCircle = eY), (e.toCircle = eW), (e.fromRect = eK), (e.toRect = ez), Object.defineProperty(e, '__esModule', { value: !0 });
 });

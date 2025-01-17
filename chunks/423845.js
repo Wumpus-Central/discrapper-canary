@@ -34,8 +34,8 @@ var i = r(620014),
     U = '[object Number]',
     B = '[object Object]',
     G = '[object RegExp]',
-    F = '[object Set]',
-    Z = '[object String]',
+    Z = '[object Set]',
+    F = '[object String]',
     V = '[object Symbol]',
     j = '[object WeakMap]',
     H = '[object ArrayBuffer]',
@@ -57,18 +57,18 @@ function en(e, n, r, D, L, x) {
         G = n & R;
     if ((r && (w = L ? r(e, D, L, x) : r(e)), void 0 !== w)) return w;
     if (!b(e)) return e;
-    var F = v(e);
-    if (F) {
+    var Z = v(e);
+    if (Z) {
         if (((w = m(e)), !k)) return c(e, w);
     } else {
-        var Z = p(e),
-            V = Z == P || Z == M;
+        var F = p(e),
+            V = F == P || F == M;
         if (I(e)) return u(e, k);
-        if (Z == B || Z == O || (V && !L)) {
+        if (F == B || F == O || (V && !L)) {
             if (((w = U || V ? {} : E(e)), !k)) return U ? f(e, l(w, e)) : d(e, o(w, e));
         } else {
-            if (!et[Z]) return L ? e : {};
-            w = g(e, Z, k);
+            if (!et[F]) return L ? e : {};
+            w = g(e, F, k);
         }
     }
     x || (x = new i());
@@ -84,7 +84,7 @@ function en(e, n, r, D, L, x) {
                   w.set(a, en(i, n, r, a, e, x));
               });
     var H = G ? (U ? h : _) : U ? A : S,
-        Y = F ? void 0 : H(e);
+        Y = Z ? void 0 : H(e);
     return (
         a(Y || e, function (i, a) {
             Y && (i = e[(a = i)]), s(w, a, en(i, n, r, a, e, x));
@@ -92,4 +92,4 @@ function en(e, n, r, D, L, x) {
         w
     );
 }
-(et[O] = et[D] = et[H] = et[Y] = et[L] = et[x] = et[W] = et[K] = et[z] = et[q] = et[Q] = et[k] = et[U] = et[B] = et[G] = et[F] = et[Z] = et[V] = et[X] = et[J] = et[$] = et[ee] = !0), (et[w] = et[P] = et[j] = !1), (e.exports = en);
+(et[O] = et[D] = et[H] = et[Y] = et[L] = et[x] = et[W] = et[K] = et[z] = et[q] = et[Q] = et[k] = et[U] = et[B] = et[G] = et[Z] = et[F] = et[V] = et[X] = et[J] = et[$] = et[ee] = !0), (et[w] = et[P] = et[j] = !1), (e.exports = en);

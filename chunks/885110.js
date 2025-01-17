@@ -96,14 +96,14 @@ function B() {
 function G(e) {
     return (A = e.invisible), B();
 }
-function F() {
+function Z() {
     return (A = !1), B();
 }
-function Z() {
+function F() {
     (L = !1), (C = y.Skl.UNKNOWN), B(), T.Z.setCurrentUserOnConnectionOpen(N, w);
 }
 function V() {
-    Z();
+    F();
 }
 class j extends (i = c.ZP.Store) {
     initialize() {
@@ -141,8 +141,8 @@ S(j, 'displayName', 'SelfPresenceStore'),
     (n.Z = new j(d.Z, {
         START_SESSION: B,
         CONNECTION_OPEN: V,
-        CONNECTION_OPEN_SUPPLEMENTAL: Z,
-        OVERLAY_INITIALIZE: Z,
+        CONNECTION_OPEN_SUPPLEMENTAL: F,
+        OVERLAY_INITIALIZE: F,
         CONNECTION_CLOSED: B,
         IDLE: B,
         AFK: B,
@@ -159,5 +159,5 @@ S(j, 'displayName', 'SelfPresenceStore'),
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: B,
         LOGOUT: U,
         FORCE_INVISIBLE: G,
-        WINDOW_FOCUS: F
+        WINDOW_FOCUS: Z
     }));

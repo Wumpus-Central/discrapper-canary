@@ -9,7 +9,7 @@ var i = r(727429),
     o = r(592125),
     l = r(754688),
     u = r(849027),
-    c = r(927723),
+    c = r(645727),
     d = r(981631);
 function f(e) {
     if (null == e.channelId) return e;

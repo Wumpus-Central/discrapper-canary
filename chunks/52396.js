@@ -50,12 +50,12 @@ function v(e) {
                 ...i
             });
         case o.s.WATCHED_MEDIA:
-            return (0, l.jsx)(S, {
+            return (0, l.jsx)(j, {
                 entry: n,
                 ...i
             });
         case o.s.LISTENED_SESSION:
-            return (0, l.jsx)(j, {
+            return (0, l.jsx)(S, {
                 entry: n,
                 ...i
             });
@@ -131,7 +131,7 @@ function I(e) {
         children: t
     });
 }
-function S(e) {
+function j(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, p.Z)({
             entry: n,
@@ -145,7 +145,7 @@ function S(e) {
         children: t
     });
 }
-function j(e) {
+function S(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, m.Z)({
             entry: n,

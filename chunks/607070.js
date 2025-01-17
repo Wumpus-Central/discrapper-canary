@@ -158,14 +158,14 @@ function G() {
         keyboardNavigationExplainerModalSeen: !0
     };
 }
-function F(e) {
+function Z(e) {
     let { messageGroupSpacing: n } = e;
     m = {
         ...m,
         messageGroupSpacing: n
     };
 }
-function Z(e) {
+function F(e) {
     let { contrast: n } = e;
     m = {
         ...m,
@@ -398,10 +398,10 @@ let H = new j(l.Z, {
     ACCESSIBILITY_SET_ROLE_STYLE: O,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: B,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: G,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: F,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: Z,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: D,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: L,
-    ACCESSIBILITY_SET_CONTRAST: Z,
+    ACCESSIBILITY_SET_CONTRAST: F,
     ACCESSIBILITY_SET_HIDE_TAGS: V
 });
 n.Z = H;

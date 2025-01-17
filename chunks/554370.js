@@ -44,8 +44,8 @@ var i = n(200651),
     D = n(371651),
     W = n(388627),
     z = n(319414),
-    G = n(561064),
-    F = n(987650),
+    F = n(561064),
+    G = n(987650),
     U = n(501787),
     B = n(981631),
     Y = n(206583),
@@ -132,7 +132,7 @@ function eo(e) {
 function er(e) {
     var t, n;
     let { isEmbeddedActivity: o } = e,
-        u = (0, G.Z)(),
+        u = (0, F.Z)(),
         {
             locked: v,
             focused: E,
@@ -206,18 +206,18 @@ function er(e) {
                     });
                 let l = null !== (i = w.Z.getFocusedPID()) && void 0 !== i ? i : (0, T.QF)();
                 if (D.Z.hasChangedRenderMode(l)) return;
-                let r = [{ type: F.nc.WELCOME }];
+                let r = [{ type: G.nc.WELCOME }];
                 if (
                     (c && u
                         ? r.push({
-                              type: F.nc.GO_LIVE_VOICE,
+                              type: G.nc.GO_LIVE_VOICE,
                               game: t,
                               voiceChannelId: n,
                               voiceGuild: o
                           })
                         : c &&
                           r.push({
-                              type: F.nc.GO_LIVE_NON_VOICE,
+                              type: G.nc.GO_LIVE_NON_VOICE,
                               game: t
                           }),
                     f.length > 0)
@@ -225,7 +225,7 @@ function er(e) {
                     let { enabled: e } = O.Z.getCurrentConfig({ location: 'Overlay' }, { autoTrackExposure: !0 });
                     e &&
                         r.push({
-                            type: F.nc.CONTENT_INVENTORY,
+                            type: G.nc.CONTENT_INVENTORY,
                             entries: f
                         });
                 }

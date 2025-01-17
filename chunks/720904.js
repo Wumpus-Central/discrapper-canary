@@ -18,8 +18,8 @@ var l = t(120356),
     f = t(768581),
     h = t(176354),
     E = t(981631),
-    v = t(185923),
-    I = t(388032),
+    I = t(185923),
+    v = t(388032),
     p = t(953568);
 let x = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function M(e) {
@@ -43,7 +43,7 @@ function M(e) {
                 forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': I.intl.formatToPlainString(I.t['/iYSo6'], { emojiName: t.name }),
+                        'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
                         className: r()(p.button, { [p.focused]: l }),
                         ...e,
                         children:
@@ -72,7 +72,7 @@ function S(e, n) {
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: v.Hz.REACTION
+                intention: I.Hz.REACTION
             })
         );
     });
@@ -80,7 +80,7 @@ function S(e, n) {
     let l = m.nc.useSetting(),
         r = (0, c.$R)(n),
         f = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
-        I = (t) => {
+        v = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return f && t.length > 0
@@ -99,7 +99,7 @@ function S(e, n) {
                                   isFocused: t
                               });
                           },
-                          action: () => I(e),
+                          action: () => v(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       n

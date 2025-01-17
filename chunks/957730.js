@@ -101,8 +101,8 @@ function B(e) {
     };
 }
 let G = p.Z.RULES,
-    F = m.ZP,
-    Z = /^<@!?(\d+)>/,
+    Z = m.ZP,
+    F = /^<@!?(\d+)>/,
     V = /^<@&(\d+)>/,
     j = /^<#(\d+)>/,
     H = /^<a?:(\w+):(\d+)>/,
@@ -113,7 +113,7 @@ let G = p.Z.RULES,
         url: U(d().defaultRules.url),
         inlineCode: U(G.inlineCode),
         codeBlock: U(G.codeBlock),
-        rawUserMention: B(Z),
+        rawUserMention: B(F),
         rawRoleMention: B(V),
         rawChannelMention: B(j),
         rawEmoji: B(H),
@@ -223,15 +223,15 @@ let G = p.Z.RULES,
             }
         },
         text: {
-            ...F,
-            match: (e, n) => ('string' == typeof n.textExclusions && '' !== n.textExclusions ? (0, m.T9)(n.textExclusions).exec(e) : null != F.match ? F.match(e, n, '') : null)
+            ...Z,
+            match: (e, n) => ('string' == typeof n.textExclusions && '' !== n.textExclusions ? (0, m.T9)(n.textExclusions).exec(e) : null != Z.match ? Z.match(e, n, '') : null)
         }
     },
     K = {
         inlineCode: U(G.inlineCode),
         codeBlock: U(G.codeBlock),
         mention: {
-            match: d().anyScopeRegex(Z),
+            match: d().anyScopeRegex(F),
             parse(e, n, r) {
                 let { isNotification: i } = r,
                     a = R.default.getUser(e[1]);
@@ -295,7 +295,7 @@ let G = p.Z.RULES,
                 return 'text' === i.type ? { content: i.content } : { content: i.formatted };
             }
         },
-        text: { ...F }
+        text: { ...Z }
     };
 [W, K].forEach((e) => {
     Object.keys(e).forEach((n, r) => {

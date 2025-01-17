@@ -19,7 +19,7 @@ r.r(n),
             return V;
         },
         expandEventProperties: function () {
-            return Z;
+            return F;
         },
         expandLocation: function () {
             return M;
@@ -31,7 +31,7 @@ r.r(n),
             return $;
         },
         setUTMContext: function () {
-            return F;
+            return Z;
         },
         startRecordingAnalyticsEvents: function () {
             return Y;
@@ -315,10 +315,10 @@ let G = (0, l.trackMaker)({
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function F(e) {
+function Z(e) {
     return (b = e);
 }
-function Z(e) {
+function F(e) {
     var n, r, i, a;
     let s = e;
     if ((!s && (s = {}), null != s.location)) {
@@ -377,7 +377,7 @@ function Q(e, n) {
         null != r.throttlePercent && Math.random() > r.throttlePercent)
     )
         return Promise.resolve();
-    let a = Z(n);
+    let a = F(n);
     return (
         V(i, a, r.logEventProperties),
         G(e, a, {
@@ -392,7 +392,7 @@ let X = (0, l.trackMaker)({
     TRACK_ACTION_NAME: 'TRACK'
 });
 function J(e, n) {
-    let r = Z({
+    let r = F({
         location: (0, c.k$)(),
         ...n
     });
@@ -410,6 +410,6 @@ n.default = {
     ...l,
     getCampaignParams: l.getCampaignParams,
     setSystemAccessibilityFeatures: B,
-    expandEventProperties: Z,
+    expandEventProperties: F,
     track: Q
 };

@@ -54,11 +54,11 @@ let O = new g.Z('GuildMemberStore'),
     U = 0,
     B = {},
     G = {},
-    F = {
+    Z = {
         added: [],
         removed: []
     };
-function Z(e, n) {
+function F(e, n) {
     if (null == n.communicationDisabledUntil || !(0, E.b)(n)) return V(e, n.userId);
     let r = Y(e, n.userId);
     P[r] !== n.communicationDisabledUntil && (0, E.b)(n) && ((P[r] = n.communicationDisabledUntil), j(r));
@@ -240,7 +240,7 @@ function ei(e) {
         fullProfileLoadedTimestamp: null === (n = p[i.id]) || void 0 === n ? void 0 : n.fullProfileLoadedTimestamp,
         flags: h
     })),
-        Z(r, p[i.id]);
+        F(r, p[i.id]);
 }
 function ea(e) {
     let { guildId: n, userId: r, roleId: i } = e,
@@ -300,7 +300,7 @@ function eo(e) {
         flags: n.flags,
         fullProfileLoadedTimestamp: Date.now()
     })),
-        Z(r, i[n.user.id]);
+        F(r, i[n.user.id]);
 }
 function el(e) {
     let n = !1;
@@ -356,7 +356,7 @@ function eh(e, n) {
                   fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp,
                   unusualDMActivityUntil: null !== (a = n.unusual_dm_activity_until) && void 0 !== a ? a : null == s ? void 0 : s.unusualDMActivityUntil
               })),
-                  Z(e, r[n.user.id]);
+                  F(e, r[n.user.id]);
           }),
           U++,
           !0);
@@ -416,7 +416,7 @@ function eI(e) {
                 flags: s.flags,
                 unusualDMActivityUntil: null !== (a = s.unusual_dm_activity_until) && void 0 !== a ? a : null == l ? void 0 : l.unusualDMActivityUntil
             });
-        (i[o] = u), Z(n, u);
+        (i[o] = u), F(n, u);
     }
     return !0;
 }
@@ -448,7 +448,7 @@ function eb(e) {
                 flags: s.flags,
                 fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp
             })),
-                Z(e.guildId, n[a]);
+                F(e.guildId, n[a]);
         }
     }
 }
@@ -669,7 +669,7 @@ class eL extends (a = f.ZP.Store) {
     }
     getPendingRoleUpdates(e) {
         var n;
-        return null !== (n = G[e]) && void 0 !== n ? n : F;
+        return null !== (n = G[e]) && void 0 !== n ? n : Z;
     }
     getMemberRoleWithPendingUpdates(e, n) {
         var r, i;

@@ -40,17 +40,17 @@ function C(e) {
 function g(e) {
     let n;
     let { label: t, style: i, disabled: m, emoji: x, url: g, skuId: _ } = e,
-        { executeStateUpdate: b, visualState: I, isDisabled: S } = (0, p.Ee)(e),
-        j = (0, d.s)(_),
+        { executeStateUpdate: b, visualState: I, isDisabled: j } = (0, p.Ee)(e),
+        S = (0, d.s)(_),
         y = null != _ && i === u.ZJ.PREMIUM,
-        T = y && (null == j ? void 0 : j.disabled),
-        N = y ? (null == j ? void 0 : j.label) : t,
+        T = y && (null == S ? void 0 : S.disabled),
+        N = y ? (null == S ? void 0 : S.label) : t,
         E = null != x,
         Z = null != N && N.length > 0,
-        k = i === u.ZJ.LINK && null != g && g.length > 0,
-        L = I === h.gH.LOADING || (y && null == j);
+        L = i === u.ZJ.LINK && null != g && g.length > 0,
+        k = I === h.gH.LOADING || (y && null == S);
     return (
-        (n = k
+        (n = L
             ? () => {
                   (0, f.q)({
                       href: null != g ? g : '',
@@ -58,8 +58,8 @@ function g(e) {
                   });
               }
             : y
-              ? null != j && !1 === j.disabled
-                  ? j.onClick
+              ? null != S && !1 === S.disabled
+                  ? S.onClick
                   : a.noop
               : () => b()),
         (0, l.jsxs)(o.Button, {
@@ -77,10 +77,10 @@ function g(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || I === h.gH.DISABLED || S || T,
+            disabled: m || I === h.gH.DISABLED || j || T,
             onClick: n,
             onContextMenu: (e) => {
-                k &&
+                L &&
                     (0, s.vq)(e, (e) =>
                         (0, l.jsx)(C, {
                             ...e,
@@ -88,14 +88,14 @@ function g(e) {
                         })
                     );
             },
-            role: k ? 'link' : 'button',
+            role: L ? 'link' : 'button',
             children: [
                 (0, l.jsxs)('div', {
                     className: r()(v.content, {
-                        [v.hidden]: L,
+                        [v.hidden]: k,
                         [v.premium]: y
                     }),
-                    'aria-hidden': L,
+                    'aria-hidden': k,
                     children: [
                         y
                             ? (0, l.jsx)('div', {
@@ -121,7 +121,7 @@ function g(e) {
                                   children: N
                               })
                             : null,
-                        k
+                        L
                             ? (0, l.jsx)(o.WindowLaunchIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
@@ -130,7 +130,7 @@ function g(e) {
                             : null
                     ]
                 }),
-                L
+                k
                     ? (0, l.jsx)('div', {
                           className: v.loading,
                           children: (0, l.jsx)(o.Dots, {

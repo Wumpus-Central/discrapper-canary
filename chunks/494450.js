@@ -1,26 +1,26 @@
-n.d(t, {
+r.d(n, {
     l: function () {
-        return i;
+        return o;
     }
 });
-var s = n(442837),
-    a = n(291175),
-    r = n(621853);
-function i(e) {
-    return (0, s.e7)([r.Z], () => {
-        var t;
-        let n;
-        let s = null != e ? r.Z.getUserProfile(e) : null,
-            i = null == s ? void 0 : s.premiumSince;
-        return null == s || null == i
+var i = r(442837),
+    a = r(291175),
+    s = r(621853);
+function o(e) {
+    return (0, i.e7)([s.Z], () => {
+        var n;
+        let r;
+        let i = null != e ? s.Z.getUserProfile(e) : null,
+            o = null == i ? void 0 : i.premiumSince;
+        return null == i || null == o
             ? null
-            : (null == s ||
-                  null === (t = s.badges) ||
-                  void 0 === t ||
-                  t.forEach((e) => {
-                      let t = (0, a.gn)(e.id);
-                      null != t && (n = t);
+            : (null == i ||
+                  null === (n = i.badges) ||
+                  void 0 === n ||
+                  n.forEach((e) => {
+                      let n = (0, a.gn)(e.id);
+                      null != n && (r = n);
                   }),
-              n);
+              r);
     });
 }

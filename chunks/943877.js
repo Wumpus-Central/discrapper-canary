@@ -549,7 +549,7 @@ function C(e) {
         [k, U] = (0, d.useState)(() => v(e.placeholderValue, T, x, b)),
         B = M || k,
         G = 'gregory' === x.identifier && 'BC' === B.era,
-        F = (0, d.useMemo)(
+        Z = (0, d.useMemo)(
             () => ({
                 granularity: T,
                 maxGranularity: null !== (n = e.maxGranularity) && void 0 !== n ? n : 'year',
@@ -561,8 +561,8 @@ function C(e) {
             }),
             [e.maxGranularity, T, e.hourCycle, e.shouldForceLeadingZeros, b, u, G]
         ),
-        Z = (0, d.useMemo)(() => m({}, F), [F]),
-        V = (0, d.useMemo)(() => new o.C(i, Z), [i, Z]),
+        F = (0, d.useMemo)(() => m({}, Z), [Z]),
+        V = (0, d.useMemo)(() => new o.C(i, F), [i, F]),
         j = (0, d.useMemo)(() => V.resolvedOptions(), [V]),
         H = (0, d.useMemo)(
             () =>
@@ -667,7 +667,7 @@ function C(e) {
         },
         formatValue(e) {
             if (!M) return '';
-            let n = m(e, F);
+            let n = m(e, Z);
             return new o.C(i, n).format(X);
         }
     };

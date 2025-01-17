@@ -68,10 +68,10 @@ function g(e) {
             let e = { ...I };
             return e.days ? e.days-- : (e.days = -1), M.add(e);
         }, [M, I]),
-        [F, Z] = (0, u.useState)(N.identifier);
-    if (N.identifier !== F) {
+        [Z, F] = (0, u.useState)(N.identifier);
+    if (N.identifier !== Z) {
         let e = (0, a.Mw)(w, N);
-        k(d(e, I, g, T, b)), P(e), Z(N.identifier);
+        k(d(e, I, g, T, b)), P(e), F(N.identifier);
     }
     function V(e) {
         P((e = p(e, T, b)));
@@ -243,7 +243,7 @@ function v(e) {
                 }
             }
         },
-        [F, Z] = (0, u.useState)(!1),
+        [Z, F] = (0, u.useState)(!1),
         { isDateUnavailable: V } = e,
         j = (0, u.useMemo)(() => !!y && !A && (!!(V && (V(y.start) || V(y.end))) || c(y.start, h, E) || c(y.end, h, E)), [V, y, A, h, E]),
         H = e.isInvalid || 'invalid' === e.validationState || j,
@@ -269,8 +269,8 @@ function v(e) {
             var n, r;
             return w.isInvalid(e) || c(e, null === (n = R.current) || void 0 === n ? void 0 : n.start, null === (r = R.current) || void 0 === r ? void 0 : r.end);
         },
-        isDragging: F,
-        setDragging: Z
+        isDragging: Z,
+        setDragging: F
     };
 }
 function I(e, n) {

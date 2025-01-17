@@ -12,7 +12,7 @@ r.d(n, {
         return M;
     },
     L1: function () {
-        return F;
+        return Z;
     },
     Ow: function () {
         return G;
@@ -21,7 +21,7 @@ r.d(n, {
         return S;
     },
     X: function () {
-        return Z;
+        return F;
     },
     XZ: function () {
         return U;
@@ -185,7 +185,7 @@ function G(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function F(e) {
+function Z(e) {
     return e instanceof p.ZP
         ? {
               applicationId: e.id,
@@ -200,6 +200,6 @@ function F(e) {
               integrationTypesConfig: e.integration_types_config
           };
 }
-function Z(e) {
+function F(e) {
     g.S.dispatchToLastSubscribed(T.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

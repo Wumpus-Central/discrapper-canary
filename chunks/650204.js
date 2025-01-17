@@ -35,8 +35,8 @@ var E = r(616254),
     U = r(473159),
     B = r(846519),
     G = r(579806),
-    F = r(896361),
-    Z = r(892254);
+    Z = r(896361),
+    F = r(892254);
 r(390524);
 var V = r(857192),
     j = r(395188),
@@ -54,7 +54,7 @@ function X(e, n, r) {
     let a = null != r ? new URLSearchParams(r) : null;
     if (null === (i = Q[n]) || void 0 === i ? !void 0 : !i.call(Q, a)) (0, M.uL)(n);
 }
-let J = (e) => q.render((0, g.jsx)(Z.Z, { children: (0, g.jsx)(F.Z, { children: (0, g.jsx)(e, {}) }) }));
+let J = (e) => q.render((0, g.jsx)(F.Z, { children: (0, g.jsx)(Z.Z, { children: (0, g.jsx)(e, {}) }) }));
 if (null != G.Z) {
     null === (i = G.Z.setUncaughtExceptionHandler) ||
         void 0 === i ||

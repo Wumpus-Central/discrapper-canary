@@ -142,7 +142,7 @@ class L extends (a = l.Component) {
             U = this.getRatio(),
             B = (0, u.clamp)(Math.round(m * U), null != E ? E : 0, null != I ? I : 1 / 0),
             G = (0, u.clamp)(Math.round(g * U), null != v ? v : 0, null != T ? T : 1 / 0),
-            F = {
+            Z = {
                 alt: e,
                 readyState: w,
                 onContextMenu: null != a ? a : void 0,
@@ -179,18 +179,18 @@ class L extends (a = l.Component) {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur
             };
-        if (1 === F.width && 1 === F.height) return null;
-        switch (((k || null != y) && (F.onClick = this.onClick), i && (F.original = null != l && '' !== l ? l : F.src), w)) {
+        if (1 === Z.width && 1 === Z.height) return null;
+        switch (((k || null != y) && (Z.onClick = this.onClick), i && (Z.original = null != l && '' !== l ? l : Z.src), w)) {
             case b.zo9.LOADING:
-                null != n && (F.src = n);
+                null != n && (Z.src = n);
                 break;
             case b.zo9.READY:
                 if (L.isAnimated(this.props)) {
-                    F.onMouseLeave = this.onMouseLeave;
+                    Z.onMouseLeave = this.onMouseLeave;
                     let e = (s || P || M) && (null == p || p) && L.visibilityObserver.isVisible(this);
-                    e ? ((F.src = this.getSrc(U)), (F.renderAccessory = S)) : ((F.src = this.getSrc(U, !h || !s)), (F.renderAccessory = this.renderAccessory)),
+                    e ? ((Z.src = this.getSrc(U)), (Z.renderAccessory = S)) : ((Z.src = this.getSrc(U, !h || !s)), (Z.renderAccessory = this.renderAccessory)),
                         null != _ &&
-                            (F.children = (n) => {
+                            (Z.children = (n) => {
                                 let { src: r, size: i, alt: a, mediaLayoutType: s } = n;
                                 return _({
                                     src: r,
@@ -200,9 +200,9 @@ class L extends (a = l.Component) {
                                     mediaLayoutType: s
                                 });
                             });
-                } else F.src = this.getSrc(U);
+                } else Z.src = this.getSrc(U);
         }
-        return (0, o.jsx)(f.E, { ...F });
+        return (0, o.jsx)(f.E, { ...Z });
     }
     async trackLoadingCompleted(e, n, r) {
         var i;

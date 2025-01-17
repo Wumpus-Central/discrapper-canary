@@ -62,13 +62,13 @@ var l = function (e, n) {
             U = P.top,
             B = P.right,
             G = P.bottom,
-            F = P.left;
-        if ('if-needed' === a && A >= 0 && R >= 0 && C <= v && N <= E && A >= U && C <= G && R >= F && N <= B) break;
-        var Z = getComputedStyle(w),
-            V = parseInt(Z.borderLeftWidth, 10),
-            j = parseInt(Z.borderTopWidth, 10),
-            H = parseInt(Z.borderRightWidth, 10),
-            Y = parseInt(Z.borderBottomWidth, 10),
+            Z = P.left;
+        if ('if-needed' === a && A >= 0 && R >= 0 && C <= v && N <= E && A >= U && C <= G && R >= Z && N <= B) break;
+        var F = getComputedStyle(w),
+            V = parseInt(F.borderLeftWidth, 10),
+            j = parseInt(F.borderTopWidth, 10),
+            H = parseInt(F.borderRightWidth, 10),
+            Y = parseInt(F.borderBottomWidth, 10),
             W = 0,
             K = 0,
             z = 'offsetWidth' in w ? w.offsetWidth - w.clientWidth - V - H : 0,
@@ -77,7 +77,7 @@ var l = function (e, n) {
             X = 'offsetHeight' in w ? (0 === w.offsetHeight ? 0 : M / w.offsetHeight) : 0;
         if (p === w) (W = 'start' === l ? O : 'end' === l ? O - v : 'nearest' === l ? o(T, T + v, v, j, Y, T + O, T + O + y, y) : O - v / 2), (K = 'start' === u ? D : 'center' === u ? D - E / 2 : 'end' === u ? D - E : o(I, I + E, E, V, H, I + D, I + D + S, S)), (W = Math.max(0, W + T)), (K = Math.max(0, K + I));
         else {
-            (W = 'start' === l ? O - U - j : 'end' === l ? O - G + Y + q : 'nearest' === l ? o(U, G, M, j, Y + q, O, O + y, y) : O - (U + M / 2) + q / 2), (K = 'start' === u ? D - F - V : 'center' === u ? D - (F + k / 2) + z / 2 : 'end' === u ? D - B + H + z : o(F, B, k, V, H + z, D, D + S, S));
+            (W = 'start' === l ? O - U - j : 'end' === l ? O - G + Y + q : 'nearest' === l ? o(U, G, M, j, Y + q, O, O + y, y) : O - (U + M / 2) + q / 2), (K = 'start' === u ? D - Z - V : 'center' === u ? D - (Z + k / 2) + z / 2 : 'end' === u ? D - B + H + z : o(Z, B, k, V, H + z, D, D + S, S));
             var J = w.scrollLeft,
                 $ = w.scrollTop;
             (O += $ - (W = Math.max(0, Math.min($ + W / X, w.scrollHeight - M / X + q)))), (D += J - (K = Math.max(0, Math.min(J + K / Q, w.scrollWidth - k / Q + z))));

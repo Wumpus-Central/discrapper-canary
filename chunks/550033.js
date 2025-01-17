@@ -171,7 +171,7 @@ var k = function (e, n) {
     G = function (e, n) {
         return !0 === e.default ? e[n] : e.default ? e.default[n] : void 0;
     },
-    F = function (e, n, r) {
+    Z = function (e, n, r) {
         void 0 === n && (n = []), void 0 === r && (r = {});
         var i = V;
         e.default && !0 !== e.default && (i = Object.keys((e = e.default)));
@@ -182,8 +182,8 @@ var k = function (e, n) {
         }
         return r;
     },
-    Z = function (e, n, r) {
-        return F(n, r, e);
+    F = function (e, n, r) {
+        return Z(n, r, e);
     },
     V = ['pause', 'cancel', 'config', 'immediate', 'onDelayEnd', 'onProps', 'onStart', 'onChange', 'onRest'],
     j = {
@@ -413,7 +413,7 @@ function en() {
                                                             return (
                                                                 (i.asyncId = l),
                                                                 (i.asyncTo = n),
-                                                                (m = F(r, ['onRest'])),
+                                                                (m = Z(r, ['onRest'])),
                                                                 (v = new Promise(function (e, n) {
                                                                     return (g = e), (E = n);
                                                                 })),
@@ -906,7 +906,7 @@ var ei = (function (e) {
                         return s.is.und(n[e]) ? o[e] : n[e];
                     },
                     d = ep(c('onDelayEnd'), i);
-                d && d(n, this), n.default && Z(o, n, ['pause', 'cancel']);
+                d && d(n, this), n.default && F(o, n, ['pause', 'cancel']);
                 var f = a.to,
                     p = a.from,
                     m = e.to,
@@ -944,17 +944,17 @@ var ei = (function (e) {
                     }
                 }
                 var G = D.constructor,
-                    F = !!y,
+                    Z = !!y,
                     V = !1;
-                if (!F) {
+                if (!Z) {
                     var j = L || (this.is(el) && T);
-                    (b || j) && (F = !(V = s.isEqual(W(x), w))), (!s.isEqual(N.decay, R) || !s.isEqual(N.velocity, O)) && (F = !0);
+                    (b || j) && (Z = !(V = s.isEqual(W(x), w))), (!s.isEqual(N.decay, R) || !s.isEqual(N.velocity, O)) && (Z = !0);
                 }
-                if ((V && this.is(ec) && (a.changed && !L ? (F = !0) : !F && this._stop()), !A)) {
-                    (F || s.getFluidConfig(f)) && ((a.values = D.getPayload()), (a.toValues = y ? null : G == _.AnimatedString ? [1] : s.toArray(w))), (a.immediate = U), (a.onStart = ep(c('onStart'), i)), (a.onChange = ep(c('onChange'), i));
+                if ((V && this.is(ec) && (a.changed && !L ? (Z = !0) : !Z && this._stop()), !A)) {
+                    (Z || s.getFluidConfig(f)) && ((a.values = D.getPayload()), (a.toValues = y ? null : G == _.AnimatedString ? [1] : s.toArray(w))), (a.immediate = U), (a.onStart = ep(c('onStart'), i)), (a.onChange = ep(c('onChange'), i));
                     var H = a.onRest,
                         Y = L && !n.onRest ? H[0] || s.noop : em(ep(c('onRest'), i), this);
-                    if (F) {
+                    if (Z) {
                         a.onRest = [Y, em(r, this)];
                         var K = L ? 0 : 1;
                         K < H.length &&
@@ -965,7 +965,7 @@ var ei = (function (e) {
                 }
                 var z = ep(c('onProps'), i);
                 if ((z && z(n, this), L && D.setValue(x), A)) r(et(n.to, n, this._state, this));
-                else if (F) L && (this._phase = eu), this._reset(), this._start();
+                else if (Z) L && (this._phase = eu), this._reset(), this._start();
                 else if (this.is(ec) && !b) a.onRest.push(em(r, this));
                 else {
                     let e = q(this, x),
@@ -1102,7 +1102,7 @@ function eE(e) {
 }
 function ev(e) {
     var n = eE(e);
-    return s.is.und(n.default) && (n.default = F(n, [!0 === n.immediate && 'immediate'])), n;
+    return s.is.und(n.default) && (n.default = Z(n, [!0 === n.immediate && 'immediate'])), n;
 }
 function eI(e, n) {
     s.each(e, function (e, r) {
@@ -1580,8 +1580,8 @@ function eU(e, n, r) {
 }
 var eB = 'mount',
     eG = 'enter',
-    eF = 'update',
-    eZ = 'leave';
+    eZ = 'update',
+    eF = 'leave';
 function eV(e, n, r) {
     var i = n.ref,
         u = n.reset,
@@ -1634,7 +1634,7 @@ function eV(e, n, r) {
         });
     var b = -f,
         y = s.useForceUpdate(),
-        S = F(n),
+        S = Z(n),
         A = new Map();
     s.each(m, function (e, r) {
         var i,
@@ -1644,11 +1644,11 @@ function eV(e, n, r) {
         if (u == eB) (i = n.enter), (a = eG);
         else {
             var c = 0 > g.indexOf(l);
-            if (u != eZ) {
-                if (c) (i = n.leave), (a = eZ);
+            if (u != eF) {
+                if (c) (i = n.leave), (a = eF);
                 else {
                     if (!(i = n.update)) return;
-                    a = eF;
+                    a = eZ;
                 }
             } else {
                 if (c) return;
@@ -1679,7 +1679,7 @@ function eV(e, n, r) {
                     return e.key === l;
                 });
             if (r) {
-                if ((s.is.fun(m) && !0 !== e.noop && m(e, r), e.cancelled && r.phase != eF)) {
+                if ((s.is.fun(m) && !0 !== e.noop && m(e, r), e.cancelled && r.phase != eZ)) {
                     r.phase = u;
                     return;
                 }
@@ -1687,7 +1687,7 @@ function eV(e, n, r) {
                     var i = n.every(function (e) {
                         return e.ctrl.idle;
                     });
-                    if (r.phase == eZ) {
+                    if (r.phase == eF) {
                         var a = M(h, r.item);
                         if (!1 !== a) {
                             var o = !0 === a ? 0 : a;

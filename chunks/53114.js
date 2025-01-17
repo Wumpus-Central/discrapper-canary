@@ -372,7 +372,7 @@ class I extends u.Z {
                 duration_decoder_unknown: g(e.decoderBuckets[p.gr.UNKNOWN]),
                 ...h
             },
-            { bytes: E, framesDropped: v, framesCodecError: I, framesCodec: T, framesNetwork: b, packets: y, packetsLost: S, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: O, totalPausesDuration: D, totalFreezesDuration: L, totalFramesDuration: x, keyframes: w, passthroughCount: P, cryptorSuccessCount: M, cryptorFailureCount: k, cryptorDuration: U, cryptorAttempts: B, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: F, qualityDecodeErrors: Z, qualityDecoderReboots: V, qualityScoreErrors: j, qualityFrameDrops: H, qualitySizeMismatches: Y } = e.aggregatedProperties;
+            { bytes: E, framesDropped: v, framesCodecError: I, framesCodec: T, framesNetwork: b, packets: y, packetsLost: S, nackCount: A, pliCount: N, qpSum: C, pauseCount: R, freezeCount: O, totalPausesDuration: D, totalFreezesDuration: L, totalFramesDuration: x, keyframes: w, passthroughCount: P, cryptorSuccessCount: M, cryptorFailureCount: k, cryptorDuration: U, cryptorAttempts: B, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: Z, qualityDecodeErrors: F, qualityDecoderReboots: V, qualityScoreErrors: j, qualityFrameDrops: H, qualitySizeMismatches: Y } = e.aggregatedProperties;
         return (
             e instanceof p.nt ? ((m.sender_freeze_count = O), (m.sender_total_freezes_duration = L), (m.sender_total_frames_duration = x)) : ((m.receiver_freeze_count = O), (m.receiver_total_freezes_duration = L), (m.receiver_total_frames_duration = x), (m.receiver_pause_count = R), (m.receiver_total_pauses_duration = D)),
             {
@@ -396,8 +396,8 @@ class I extends u.Z {
                 cryptor_duration: U,
                 cryptor_attempts: B,
                 cryptor_missing_key_count: G,
-                cryptor_invalid_nonce_count: F,
-                encoder_quality_decode_errors: Z,
+                cryptor_invalid_nonce_count: Z,
+                encoder_quality_decode_errors: F,
                 encoder_quality_decoder_reboots: V,
                 encoder_quality_score_errors: j,
                 encoder_quality_frame_drops: H,

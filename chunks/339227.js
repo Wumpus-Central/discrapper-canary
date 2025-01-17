@@ -293,7 +293,7 @@ function G(e, n, r, i, a) {
         case 'paragraph':
         case 'text':
         case 'emoticon':
-            return Z(e, n, s || '', i, a);
+            return F(e, n, s || '', i, a);
         case 'emoji':
         case 'customEmoji': {
             let a = n.substring(i);
@@ -371,7 +371,7 @@ function G(e, n, r, i, a) {
                     attributes: [o],
                     data: r
                 });
-            return Z(e, n, l[0], i, a);
+            return F(e, n, l[0], i, a);
         case 'em':
         case 'autolink':
         case 'strong':
@@ -386,14 +386,14 @@ function G(e, n, r, i, a) {
         case 'link':
         case 'subtext': {
             i = H(n, i);
-            let { before: r, after: u } = F(n, o, i, l);
-            return (i = V(e, n, r, i, 'syntaxBefore')), a.push(o), (i = Z(e, n, null != s ? s : '', i, a)), a.pop(), (i = V(e, n, u, i, 'syntaxAfter')), H(n, i);
+            let { before: r, after: u } = Z(n, o, i, l);
+            return (i = V(e, n, r, i, 'syntaxBefore')), a.push(o), (i = F(e, n, null != s ? s : '', i, a)), a.pop(), (i = V(e, n, u, i, 'syntaxAfter')), H(n, i);
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(o));
     }
 }
-function F(e, n, r, i) {
+function Z(e, n, r, i) {
     if ('inlineCode' === n)
         return {
             before: i[1],
@@ -413,7 +413,7 @@ function F(e, n, r, i) {
     if ('inlineStyle' === a.type) return a;
     throw Error('Slate: rule must be an inlineStyle');
 }
-function Z(e, n, r, i, a) {
+function F(e, n, r, i, a) {
     return (
         'string' == typeof r
             ? (i = j({

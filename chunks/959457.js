@@ -78,10 +78,10 @@ function G(e) {
                 });
             });
 }
-function F(e) {
+function Z(e) {
     (i = e.sessionId), (a = null), B();
 }
-function Z() {
+function F() {
     (i = null), (a = null), B();
 }
 function V(e) {
@@ -309,8 +309,8 @@ R(er, 'displayName', 'StreamRTCConnectionStore'),
         !y.Z.isSupported() || __OVERLAY__
             ? {}
             : {
-                  CONNECTION_OPEN: F,
-                  CONNECTION_CLOSED: Z,
+                  CONNECTION_OPEN: Z,
+                  CONNECTION_CLOSED: F,
                   RTC_CONNECTION_STATE: Q,
                   RTC_CONNECTION_PING: Q,
                   RTC_CONNECTION_LOSS_RATE: Q,

@@ -34,8 +34,8 @@ var a = r(200651),
     U = r(15350),
     B = r(611480),
     G = r(981631),
-    F = r(974939);
-let Z = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    Z = r(974939);
+let F = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     V = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     j = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     H = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -86,7 +86,7 @@ let Z = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 },
                 [d, ei, ev]
             ),
-            eT = null != eu && eu > Z,
+            eT = null != eu && eu > F,
             {
                 rowCount: eb,
                 rowCountBySection: ey,
@@ -180,7 +180,7 @@ let Z = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             children: [
                 !(z && el) &&
                     (0, a.jsx)('div', {
-                        className: F.header,
+                        className: Z.header,
                         children: (0, a.jsx)(M.Z, {
                             ref: en,
                             onKeyDown: eL,
@@ -190,14 +190,14 @@ let Z = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     }),
                 el
                     ? (0, a.jsx)(w.Z, {
-                          className: F.emptyState,
+                          className: Z.emptyState,
                           onClose: S
                       })
                     : (0, a.jsxs)(a.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
                                   ref: J,
-                                  className: F.listWrapper,
+                                  className: Z.listWrapper,
                                   id: B.Vr,
                                   ...eD,
                                   children:
@@ -233,12 +233,12 @@ let Z = (0, S.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     en = (e, n) => (
         (0, R.fP)(),
         (0, a.jsx)('div', {
-            className: F.wrapper,
+            className: Z.wrapper,
             id: B.nZ,
             'aria-labelledby': B.ED,
             role: 'tabpanel',
             children: e.isLoading
-                ? (0, a.jsx)(f.Spinner, { className: F.loadingIndicator })
+                ? (0, a.jsx)(f.Spinner, { className: Z.loadingIndicator })
                 : (0, a.jsx)(et, {
                       ...e,
                       ref: n

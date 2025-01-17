@@ -36,7 +36,7 @@ r.d(n, {
         return G;
     },
     t0: function () {
-        return F;
+        return Z;
     },
     tI: function () {
         return k;
@@ -354,7 +354,7 @@ function G(e) {
         source: d
     });
 }
-function F(e) {
+function Z(e) {
     let n = e.interactionMetadata;
     return null == n ? null : 'triggering_interaction_metadata' in n ? n.triggering_interaction_metadata : n;
 }

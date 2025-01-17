@@ -433,8 +433,8 @@ function U(e) {
     let { fromIsMobile: n = !0, fromStatus: r, fromColor: i, isMobile: a = !1, isTyping: l = !1, typingIndicatorRef: d, isSpeaking: m = !1, size: v, src: I, status: T, statusColor: N, statusTooltip: C = !1, statusTooltipDelay: R, statusBackdropColor: O, 'aria-hidden': D = !1, 'aria-label': M, imageClassName: U } = e,
         B = (0, _.vj)(T, N),
         G = o.useId(),
-        F = o.useId(),
-        [Z] = o.useState(() => ({
+        Z = o.useId(),
+        [F] = o.useState(() => ({
             fill: i,
             ...x({
                 size: v,
@@ -466,7 +466,7 @@ function U(e) {
         } = (0, p.useSpring)(
             {
                 config: y,
-                from: Z,
+                from: F,
                 to: V
             },
             S() ? 'animate-always' : 'animate-never'
@@ -545,12 +545,12 @@ function U(e) {
                                     viewBox: '0 0 '.concat(J, ' ').concat($),
                                     className: C ? b.cursorDefault : void 0,
                                     children: [
-                                        (0, _.vP)(q, X.status, F),
+                                        (0, _.vP)(q, X.status, Z),
                                         (0, s.jsx)(c.animated.rect, {
                                             fill: z,
                                             width: J,
                                             height: $,
-                                            mask: 'url(#'.concat(F, ')')
+                                            mask: 'url(#'.concat(Z, ')')
                                         }),
                                         (0, s.jsx)(f.b, {
                                             ref: d,

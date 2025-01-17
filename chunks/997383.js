@@ -51,8 +51,8 @@ let M = 100,
     U = 0.2,
     B = 0.1,
     G = Object.freeze({}),
-    F = 300;
-function Z() {
+    Z = 300;
+function F() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         n = arguments.length > 1 ? arguments[1] : void 0;
     return k * e * (null != n ? n : 1);
@@ -137,7 +137,7 @@ class j {
         }
         (this.options.frecencyBoosters ? E.DZ.loadIfNecessary() : Promise.resolve()).finally(() => {
             this.queryUsers(e, n, this._limit), (this._groupDMResults = this.queryGroupDMs(e, this._limit)), (this._textChannelResults = this.queryTextChannels(e, this._limit)), (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)), (this._guildResults = this.queryGuilds(e, this._limit)), (this._applicationResults = this.queryApplications(e, this._limit));
-            (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, F))) : this.updateAllResults();
+            (this._linkResults = this.queryLink(e, this._limit)), (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, Z))) : this.updateAllResults();
         });
     }
     clear() {
@@ -284,7 +284,7 @@ class j {
                             this._userResults.push({
                                 type: x.h8.USER,
                                 record: n,
-                                score: Z(r),
+                                score: F(r),
                                 comparator: null != i ? i : void 0
                             });
                     }

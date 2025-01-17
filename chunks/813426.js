@@ -55,10 +55,10 @@ function G(e, n, r) {
     var i = 'double' === (r.quoteStyle || n) ? '"' : "'";
     return i + e + i;
 }
-function F(e) {
+function Z(e) {
     return I.call(String(e), /"/g, '&quot;');
 }
-function Z(e) {
+function F(e) {
     return '[object Array]' === J(e) && (!x || !('object' == typeof e && x in e));
 }
 function V(e) {
@@ -118,7 +118,7 @@ e.exports = function e(n, i, a, l) {
         return _ ? M(n, m) : m;
     }
     var g = void 0 === u.depth ? 5 : u.depth;
-    if ((void 0 === a && (a = 0), a >= g && g > 0 && 'object' == typeof n)) return Z(n) ? '[Array]' : '[Object]';
+    if ((void 0 === a && (a = 0), a >= g && g > 0 && 'object' == typeof n)) return F(n) ? '[Array]' : '[Object]';
     var E = e_(u, a);
     if (void 0 === l) l = [];
     else if (ee(l, n) >= 0) return '[Circular]';
@@ -139,10 +139,10 @@ e.exports = function e(n, i, a, l) {
         return 'object' != typeof n || L ? O : eu(O);
     }
     if (es(n)) {
-        for (var U = '<' + b.call(String(n.nodeName)), Q = n.attributes || [], el = 0; el < Q.length; el++) U += ' ' + Q[el].name + '=' + G(F(Q[el].value), 'double', u);
+        for (var U = '<' + b.call(String(n.nodeName)), Q = n.attributes || [], el = 0; el < Q.length; el++) U += ' ' + Q[el].name + '=' + G(Z(Q[el].value), 'double', u);
         return (U += '>'), n.childNodes && n.childNodes.length && (U += '...'), (U += '</' + b.call(String(n.nodeName)) + '>');
     }
-    if (Z(n)) {
+    if (F(n)) {
         if (0 === n.length) return '[]';
         var em = ep(n, T);
         return E && !ef(em) ? '[' + eh(em, E) + ']' : '[ ' + A.call(em, ', ') + ' ]';
@@ -328,7 +328,7 @@ function eh(e, n) {
 }
 function ep(e, n) {
     var r,
-        i = Z(e),
+        i = F(e),
         a = [];
     if (i) {
         a.length = e.length;

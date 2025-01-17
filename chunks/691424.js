@@ -59,7 +59,7 @@ function G(e) {
         }
     };
 }
-function F(e) {
+function Z(e) {
     let { emojiTooltipPosition: n = 'top', enableEmojiClick: r = !0 } = e;
     return {
         react(e, i, s) {
@@ -87,7 +87,7 @@ function F(e) {
         }
     };
 }
-function Z(e, n, r) {
+function F(e, n, r) {
     let i = A.Z.getGuild(e);
     if (null == e || null == i) return;
     let a = (n) => {
@@ -255,7 +255,7 @@ let j = {
     staticRouteLink: {
         react(e, n, r) {
             let i = () => {
-                Z(e.guildId, e.id, e.itemId);
+                F(e.guildId, e.id, e.itemId);
             };
             return (0, C.k)(e.id)
                 ? (0, a.jsxs)(
@@ -339,7 +339,7 @@ function H(e) {
         link: (0, w.Z)(e),
         devLink: (0, x.Z)(e),
         emoji: G(e),
-        customEmoji: F(e),
+        customEmoji: Z(e),
         channelMention: (0, D.Z)(e),
         commandMention: (0, L.ZP)(e),
         attachmentLink: (0, O.Z)(e),

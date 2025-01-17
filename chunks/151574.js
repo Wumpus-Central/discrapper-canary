@@ -34,7 +34,7 @@ let M = 4,
     U = (0, _.Mg)(h.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     B = 2 * U + (0, _.Mg)(h.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * k,
     G = () => Promise.resolve();
-function F(e) {
+function Z(e) {
     let { isFocused: n, isHidden: r, sendability: i, listIndex: a, sticker: o, onMouseOver: l, onSelectSticker: d } = e,
         { tabIndex: f, ..._ } = (0, c.JA)(''.concat(a));
     return (0, s.jsxs)(p.Clickable, {
@@ -62,7 +62,7 @@ function F(e) {
         ]
     });
 }
-function Z(e) {
+function F(e) {
     let { editorRef: n, hasStickerResults: r, shouldRenderSuggestions: i, focusedSuggestionType: a, setFocusedStickerListItem: s, setFocusedSuggestionType: l, setHasDismissed: u, setTextInputValue: c } = e,
         _ = o.useCallback(
             (e, n) => {
@@ -158,7 +158,7 @@ function Z(e) {
         }, [a]);
         let en = Q.length > 0,
             er = ee && !U && !W && !A && !z && en,
-            { stickersNavigator: ei } = Z({
+            { stickersNavigator: ei } = F({
                 editorRef: r,
                 hasStickerResults: en,
                 shouldRenderSuggestions: er,
@@ -233,7 +233,7 @@ function Z(e) {
                                             children: eu.map((e, n) => {
                                                 let { sticker: r, sendability: i } = e;
                                                 return (0, s.jsx)(
-                                                    F,
+                                                    Z,
                                                     {
                                                         isFocused: M === ''.concat(n),
                                                         isHidden: el,

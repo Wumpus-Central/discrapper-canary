@@ -119,7 +119,7 @@ function U(e, n) {
     return null == n ? [] : (Array.isArray(n) ? n : [n]).map((n) => ('object' == typeof n && (null == n || 'value' in n) ? n : e.find((e) => e.value === n))).filter(Boolean);
 }
 let B = s.forwardRef(function (e, n) {
-    let { options: r, value: i, onChange: o, clearable: c = !1, multi: _ = !1, closeOnSelect: h = !0, onOpen: p, onClose: v, placeholder: I = L.intl.string(L.t.XqMe3N), wrapperClassName: b, className: y, isDisabled: C = !1, maxVisibleItems: O = 7, look: w = D.q.FILLED, autoFocus: B = !1, popoutPosition: F = 'bottom', filter: j = !0, debounceTime: H, renderOptionLabel: K = M, onSearchChange: z, renderOptionPrefix: q = () => null, renderOptionSuffix: Q = () => null, 'aria-describedby': X, 'aria-invalid': J, 'aria-labelledby': $, 'aria-required': ee, inputClassNames: et, centerCaret: en = !1, onBlur: er, matchSorterOptions: ei, clearQueryOnSelect: ea = !1, hidePills: es, renderCustomPill: eo, customPillContainerClassName: el, ...eu } = e,
+    let { options: r, value: i, onChange: o, clearable: c = !1, multi: _ = !1, closeOnSelect: h = !0, onOpen: p, onClose: v, placeholder: I = L.intl.string(L.t.XqMe3N), wrapperClassName: b, className: y, isDisabled: C = !1, maxVisibleItems: O = 7, look: w = D.q.FILLED, autoFocus: B = !1, popoutPosition: Z = 'bottom', filter: j = !0, debounceTime: H, renderOptionLabel: K = M, onSearchChange: z, renderOptionPrefix: q = () => null, renderOptionSuffix: Q = () => null, 'aria-describedby': X, 'aria-invalid': J, 'aria-labelledby': $, 'aria-required': ee, inputClassNames: et, centerCaret: en = !1, onBlur: er, matchSorterOptions: ei, clearQueryOnSelect: ea = !1, hidePills: es, renderCustomPill: eo, customPillContainerClassName: el, ...eu } = e,
         { ref: ec, width: ed } = (0, A.Z)(),
         { titleId: ef, errorId: e_, error: eh } = (0, E.Gc)(),
         { ref: ep, width: em } = (0, A.Z)(),
@@ -158,13 +158,13 @@ let B = s.forwardRef(function (e, n) {
             },
             [eB, eI]
         ),
-        eF = (0, N.O)(eG);
+        eZ = (0, N.O)(eG);
     s.useImperativeHandle(n, () => ({
         close() {
             eB(!1);
         }
     }));
-    let eZ = s.useCallback((e, n) => {
+    let eF = s.useCallback((e, n) => {
             let r = document.querySelector(e),
                 i = eN.current;
             ev(n), null != i && null != r && i.scrollIntoViewNode({ node: r });
@@ -195,7 +195,7 @@ let B = s.forwardRef(function (e, n) {
             isEnabled: eI,
             wrap: !0,
             useVirtualFocus: !0,
-            setFocus: eZ,
+            setFocus: eF,
             disableClickOnSpace: !0
         }),
         eY = (0, R.Z)(eH),
@@ -292,7 +292,7 @@ let B = s.forwardRef(function (e, n) {
         }, [eO, eS, eb, eH]);
     let eX = _ ? W : Y,
         eJ = s.useRef(null),
-        { focusPreviousItem: e$, focusNextItem: e0 } = Z(eJ, eg, eL);
+        { focusPreviousItem: e$, focusNextItem: e0 } = F(eJ, eg, eL);
     return (0, a.jsxs)(f.bG, {
         navigator: eH,
         children: [
@@ -324,7 +324,7 @@ let B = s.forwardRef(function (e, n) {
                         renderOptionSuffix: Q
                     });
                 },
-                position: F,
+                position: Z,
                 children: (e, n) => {
                     let { 'aria-expanded': r, 'aria-controls': i } = e,
                         { isShown: s, position: o } = n,
@@ -357,7 +357,7 @@ let B = s.forwardRef(function (e, n) {
                                         e.preventDefault();
                                     },
                                     ref: (e) => {
-                                        (ep.current = e), (eF.current = e);
+                                        (ep.current = e), (eZ.current = e);
                                     },
                                     className: l()(x.select, x.searchable, y, {
                                         [x.open]: s,
@@ -549,12 +549,12 @@ function G(e) {
                 }
             });
 }
-function F(e, n) {
+function Z(e, n) {
     if (null == e || null == n) return !1;
     let r = Node.DOCUMENT_POSITION_CONTAINED_BY | Node.DOCUMENT_POSITION_FOLLOWING;
     return (e.compareDocumentPosition(n) & r) === r;
 }
-function Z(e, n, r) {
+function F(e, n, r) {
     let i = s.useMemo(
             () =>
                 (0, c.E)({
@@ -631,11 +631,11 @@ function V(e) {
         onKeyDown: h,
         onFocus: (e) => {
             let n = e.target;
-            null != i.current && F(i.current, n) && m(n.getAttribute('data-option-pill-value'));
+            null != i.current && Z(i.current, n) && m(n.getAttribute('data-option-pill-value'));
         },
         onBlur: (e) => {
             let n = e.relatedTarget;
-            !F(i.current, n) && m(null);
+            !Z(i.current, n) && m(null);
         },
         children: n.map((e, n) => {
             var i;
@@ -790,7 +790,7 @@ function W(e) {
     let { query: n, placeholder: r, selectedOptions: i, selectValue: o, onKeyDown: u, isEditing: c, isDisabled: d, inputRef: f, renderOptionPrefix: _, renderOptionSuffix: h, inputClassNames: p, hidePills: m, ...g } = e,
         E = Math.max(r.length, (null != n ? n : '').length),
         v = s.useRef(null),
-        { focusPreviousItem: I, focusNextItem: T, focusLastItem: b } = Z(v, f, i);
+        { focusPreviousItem: I, focusNextItem: T, focusLastItem: b } = F(v, f, i);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             i.length > 0 &&

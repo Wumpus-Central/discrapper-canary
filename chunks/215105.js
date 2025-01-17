@@ -66,16 +66,16 @@ function O(e) {
         [M, k] = s.useState(''),
         [U, B] = s.useState((0, f.JM)(M)),
         G = s.useRef(!1),
-        F = s.useRef(null),
-        Z = s.useCallback(
+        Z = s.useRef(null),
+        F = s.useCallback(
             (e) => {
                 e.key === y.vn.ESCAPE && (e.stopPropagation(), x());
             },
             [x]
         );
     s.useEffect(() => {
-        null == p || p(null == F ? void 0 : F.current);
-    }, [F, p]);
+        null == p || p(null == Z ? void 0 : Z.current);
+    }, [Z, p]);
     let V = async (e) => {
             if (null == e) return;
             u === b.n_.AVATAR ? O({ action: 'SEND_REPLY_AVATAR' }) : u === b.n_.STATUS ? O({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : O({ action: 'SEND_REPLY_ACTIVITY' });
@@ -109,8 +109,8 @@ function O(e) {
             [A.activity]: u === b.n_.ACTIVITY
         };
     return (0, a.jsx)(c.V, {
-        ref: F,
-        onKeyDown: Z,
+        ref: Z,
+        onKeyDown: F,
         children: (0, a.jsx)('div', {
             className: l()(A.container, j, H, { [A.customProfileTheme]: null != P }),
             children: (0, a.jsx)(_.Z, {

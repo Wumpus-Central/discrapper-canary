@@ -69,11 +69,11 @@ function C(e) {
     });
 }
 function g(e) {
-    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: g, titleClickable: _, subtitleClickable: b, thumbnailClickable: I, providerIconProps: S, style: j = {} } = e,
+    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: g, titleClickable: _, subtitleClickable: b, thumbnailClickable: I, providerIconProps: j, style: S = {} } = e,
         y = (0, m.Dt)(),
         { primaryColor: T, secondaryColor: N } = (0, u.Z)(g);
     return (
-        null != g && (j.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(N, ')')),
+        null != g && (S.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(N, ')')),
         (0, l.jsx)(a.ThemeProvider, {
             theme: f.BR.DARK,
             children: (e) =>
@@ -82,7 +82,7 @@ function g(e) {
                     'aria-labelledby': y,
                     'data-disable-adaptive-theme': !0,
                     className: r()(h.container, e),
-                    style: j,
+                    style: S,
                     children: [
                         (0, l.jsx)(v, {
                             className: h.thumbnailContainer,
@@ -143,7 +143,7 @@ function g(e) {
                         }),
                         (0, l.jsx)('div', {
                             className: h.headerIcons,
-                            children: null != S ? (0, l.jsx)(c.Z, { ...S }) : null
+                            children: null != j ? (0, l.jsx)(c.Z, { ...j }) : null
                         })
                     ]
                 })

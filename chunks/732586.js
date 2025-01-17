@@ -32,7 +32,7 @@ function u(e) {
     i.useEffect(() => {
         (null == g ? void 0 : g.type) === t && C(g.value);
     }, [t, g]);
-    let S = {
+    let j = {
         name: d,
         value: v,
         placeholder: m,
@@ -50,12 +50,12 @@ function u(e) {
     };
     switch (u) {
         case a.PT.SMALL:
-            n = (0, l.jsx)(r.TextInput, { ...S });
+            n = (0, l.jsx)(r.TextInput, { ...j });
             break;
         case a.PT.PARAGRAPH:
             n = (0, l.jsx)(r.TextArea, {
                 autosize: !0,
-                ...S
+                ...j
             });
     }
     return (0, l.jsx)(r.FormItem, {

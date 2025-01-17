@@ -3,7 +3,7 @@ t.d(n, {
         return T;
     },
     B8: function () {
-        return _;
+        return b;
     },
     F4: function () {
         return j;
@@ -12,16 +12,16 @@ t.d(n, {
         return y;
     },
     Hd: function () {
-        return b;
+        return _;
     },
     Xl: function () {
         return C;
     },
     dF: function () {
-        return R;
+        return O;
     },
     eM: function () {
-        return O;
+        return R;
     },
     fB: function () {
         return N;
@@ -63,8 +63,8 @@ var u = t(623292),
     f = t(626135),
     h = t(934415),
     E = t(572004),
-    v = t(585483),
-    I = t(709054),
+    I = t(585483),
+    v = t(709054),
     p = t(111618),
     x = t(50284),
     M = t(730954),
@@ -86,10 +86,10 @@ function N(e, n) {
 function T(e, n, t) {
     n.state === S.yb.SEND_FAILED || t.shiftKey ? l.Z.deleteMessage(e.id, n.id, n.state === S.yb.SEND_FAILED) : r.Z.confirmDelete(e, n);
 }
-function b(e, n) {
+function _(e, n) {
     l.Z.startEditMessage(e.id, n.id, n.content);
 }
-function _(e, n) {
+function b(e, n) {
     (0, x.Z)(e.id, n.id);
 }
 function A(e, n, t) {
@@ -114,22 +114,22 @@ function y(e, n, t) {
         shouldMention: !t.shiftKey && !l,
         showMentionToggle: !i && !l
     }),
-        v.S.dispatchToLastSubscribed(S.CkL.TEXTAREA_FOCUS);
+        I.S.dispatchToLastSubscribed(S.CkL.TEXTAREA_FOCUS);
 }
 function D(e, n) {
     (0, c.R6)(e, n, 'Message');
 }
 function L(e, n) {
-    let t = g.Z.getChannel(I.default.castMessageIdAsChannelId(n.id));
+    let t = g.Z.getChannel(v.default.castMessageIdAsChannelId(n.id));
     null != t && (0, c.ok)(t);
 }
-function R(e, n) {
+function O(e, n) {
     (0, d.z)({
         channelId: e.id,
         messageId: n.id
     });
 }
-function O(e, n) {
+function R(e, n) {
     (0, d.x)({
         channelId: e.id,
         messageId: n.id

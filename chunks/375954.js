@@ -46,8 +46,8 @@ function G(e, n, r) {
         e
     );
 }
-let F = new Set(),
-    Z = new m.Z('MessageStore'),
+let Z = new Set(),
+    F = new m.Z('MessageStore'),
     V = !1;
 function j() {
     h.Z.forEach((e) => {
@@ -58,7 +58,7 @@ function j() {
             })
         );
     }),
-        F.clear();
+        Z.clear();
 }
 function H(e) {
     let { changesByChannelId: n } = e;
@@ -67,7 +67,7 @@ function H(e) {
         if (null == r) continue;
         let i = !1;
         if (!(r.cached || !i)) {
-            Z.log('Skipping background message sync for '.concat(e, ' cached:').concat(r.cached, ' ') + 'ready:'.concat(r.ready, ' hasMoreAfter:').concat(r.hasMoreAfter, ' ') + 'isConnected:'.concat(i));
+            F.log('Skipping background message sync for '.concat(e, ' cached:').concat(r.cached, ' ') + 'ready:'.concat(r.ready, ' hasMoreAfter:').concat(r.hasMoreAfter, ' ') + 'isConnected:'.concat(i));
             continue;
         }
         r.mergeDelta(n[e].new_messages, n[e].modified_messages, n[e].deleted_message_ids);
@@ -78,13 +78,13 @@ function Y() {
 }
 function W(e) {
     let { channelId: n, truncateBottom: r, truncateTop: i } = e;
-    Z.log('Truncating messages for '.concat(n, ' bottom:').concat(r, ' top:').concat(i));
+    F.log('Truncating messages for '.concat(n, ' bottom:').concat(r, ' top:').concat(i));
     let a = h.Z.getOrCreate(n);
     (a = a.truncate(r, i)), h.Z.commit(a);
 }
 function K(e) {
     let { channelId: n } = e;
-    Z.log('Clearing messages for '.concat(n)), h.Z.clear(n), F.clear();
+    F.log('Clearing messages for '.concat(n)), h.Z.clear(n), Z.clear();
 }
 function z(e) {
     let { channelId: n, jump: r, focus: i, before: a, after: s, limit: o, truncate: l } = e,
@@ -119,27 +119,27 @@ function Q(e) {
 }
 function X(e) {
     let { message: n } = e;
-    null != n.nonce && F.add(n.nonce);
+    null != n.nonce && Z.add(n.nonce);
 }
 function J(e) {
     let { channelId: n, messageRecord: r } = e,
         i = null == r ? void 0 : r.nonce;
-    if (null != i && F.has(i)) {
+    if (null != i && Z.has(i)) {
         let e = h.Z.getOrCreate(n),
             r = e.get(i);
         if (null == r) return;
-        (e = (e = e.remove(i)).merge([r])), F.delete(i), h.Z.commit(e);
+        (e = (e = e.remove(i)).merge([r])), Z.delete(i), h.Z.commit(e);
     }
 }
 function $(e) {
     let { channelId: n, message: r, isPushNotification: i } = e,
         a = h.Z.getOrCreate(n);
     if (i) {
-        Z.log('Inserting message tapped on from a push notification', r.id, r.channel_id), h.Z.commit(a.receivePushNotification(r));
+        F.log('Inserting message tapped on from a push notification', r.id, r.channel_id), h.Z.commit(a.receivePushNotification(r));
         return;
     }
     if (!a.ready) return !1;
-    null != r.nonce && r.state !== B.yb.SENDING && F.has(r.nonce) && ((a = a.remove(r.nonce)), F.delete(r.nonce)), (a = a.receiveMessage(r, !0 === O.Z.isAtBottom(n))), h.Z.commit(a);
+    null != r.nonce && r.state !== B.yb.SENDING && Z.has(r.nonce) && ((a = a.remove(r.nonce)), Z.delete(r.nonce)), (a = a.receiveMessage(r, !0 === O.Z.isAtBottom(n))), h.Z.commit(a);
 }
 function ee(e) {
     let { channelId: n, messageId: r, reason: i } = e,
@@ -156,7 +156,7 @@ function et(e) {
         let e = i.getAfter(n);
         i = null != e && e.blocked ? i.mutate({ revealedMessageId: e.id }) : i.mutate({ revealedMessageId: null });
     }
-    (i = i.remove(n)), h.Z.commit(i), F.delete(n);
+    (i = i.remove(n)), h.Z.commit(i), Z.delete(n);
 }
 function en(e) {
     let { ids: n, channelId: r } = e,
@@ -170,7 +170,7 @@ function en(e) {
     }
     h.Z.commit(a),
         n.forEach((e) => {
-            F.delete(e);
+            Z.delete(e);
         });
 }
 function er(e) {
@@ -267,7 +267,7 @@ function eg() {
     h.Z.forEach((e) => {
         h.Z.clear(e.channelId);
     }),
-        F.clear();
+        Z.clear();
 }
 function eE(e) {
     for (let [n, r] of N.default.entries(e.messages)) {

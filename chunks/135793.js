@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         MESSAGE_CONFETTI_POTION_MODAL_KEY: function () {
-            return _;
+            return b;
         },
         default: function () {
             return C;
@@ -26,8 +26,8 @@ var i,
     f = t(688465),
     h = t(333867),
     E = t(63063),
-    v = t(937615),
-    I = t(980463),
+    I = t(937615),
+    v = t(980463),
     p = t(317951),
     x = t(84040),
     M = t(235894),
@@ -36,8 +36,8 @@ var i,
     j = t(981631),
     N = t(388032),
     T = t(694638),
-    b = t(99713);
-let _ = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
+    _ = t(99713);
+let b = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     A = (e, n) => {
         (0, d.openModalLazy)(
             async () => {
@@ -49,7 +49,7 @@ let _ = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
                         ...t
                     });
             },
-            { modalKey: _ }
+            { modalKey: b }
         );
     };
 function C(e) {
@@ -69,19 +69,19 @@ function P(e) {
         l = (0, M.U)(t),
         [r, a] = (0, s.useState)(!1),
         [c, f] = (0, s.useState)(),
-        { price: E, fetchingPrice: v, error: S } = (0, Z.R2)(p.D1),
-        { entitlement: N, fetchedEntitlement: T, error: b } = (0, Z.t6)(p.D1),
-        _ = S || b,
+        { price: E, fetchingPrice: I, error: S } = (0, Z.R2)(p.D1),
+        { entitlement: N, fetchedEntitlement: T, error: _ } = (0, Z.t6)(p.D1),
+        b = S || _,
         { analyticsLocations: A } = (0, g.ZP)([m.Z.CONFETTI_POTION_MODAL]),
         C = null != N && !N.consumed;
     (0, s.useEffect)(
         () => () => {
-            _ && (0, I.SN)(p.D1);
+            b && (0, v.SN)(p.D1);
         },
-        [N, n.id, t.id, c, r, _]
+        [N, n.id, t.id, c, r, b]
     );
     let P = (0, s.useCallback)(() => {
-            null != c && ((0, I.qc)(n.id, t.id, c, p.D1), (0, d.closeAllModals)());
+            null != c && ((0, v.qc)(n.id, t.id, c, p.D1), (0, d.closeAllModals)());
         }, [c, n.id, t.id]),
         D = (0, s.useCallback)(() => {
             (0, h.Z)({
@@ -92,16 +92,16 @@ function P(e) {
             });
         }, [P, A]),
         L = (0, s.useMemo)(() => ((null == N ? void 0 : N.type) === j.qc2.DEVELOPER_GIFT ? 1 : C ? 2 : 0), [null == N ? void 0 : N.type, C]),
-        R = (0, s.useMemo)(() => (l ? 2 : i ? (null == c ? 3 : 0) : 1), [l, i, c]);
+        O = (0, s.useMemo)(() => (l ? 2 : i ? (null == c ? 3 : 0) : 1), [l, i, c]);
     return (0, o.jsx)(y, {
         channel: n,
         buttonPurchaseState: L,
-        buttonDisabledState: R,
+        buttonDisabledState: O,
         price: E,
         onActionClick: () => {
             a(!0), (C ? P : D)();
         },
-        loading: v || !T,
+        loading: I || !T,
         selectedEmoji: null != c ? c : void 0,
         setSelectedEmoji: f
     });
@@ -122,7 +122,7 @@ let y = (e) => {
                                 setSelectedEmoji: u
                             })
                         }),
-                        (0, o.jsx)(R, {
+                        (0, o.jsx)(O, {
                             buttonPurchaseState: t,
                             buttonDisabledState: i,
                             price: l,
@@ -255,14 +255,14 @@ let y = (e) => {
         });
     };
 ((r = i || (i = {}))[(r.BUY = 0)] = 'BUY'), (r[(r.REDEEM = 1)] = 'REDEEM'), (r[(r.ACTIVATE = 2)] = 'ACTIVATE'), ((a = l || (l = {}))[(a.ENABLED = 0)] = 'ENABLED'), (a[(a.INELIGIBLE = 1)] = 'INELIGIBLE'), (a[(a.ALREADY_ACTIVE = 2)] = 'ALREADY_ACTIVE'), (a[(a.MISSING_SELECTION = 3)] = 'MISSING_SELECTION');
-let R = (e) => {
+let O = (e) => {
         let { buttonPurchaseState: n, buttonDisabledState: t, price: i, onActionClick: l } = e;
         return (0, o.jsxs)('div', {
             className: T.footer,
             children: [
                 (0, o.jsx)(d.Button, {
                     onClick: () => {
-                        (0, d.closeModal)(_);
+                        (0, d.closeModal)(b);
                     },
                     color: d.Button.Colors.PRIMARY,
                     children: N.intl.string(N.t.w2Qbd3)
@@ -270,7 +270,7 @@ let R = (e) => {
                 (0, o.jsxs)('div', {
                     className: T.footerRight,
                     children: [
-                        (0, o.jsx)(O, {}),
+                        (0, o.jsx)(R, {}),
                         (0, o.jsx)(G, {
                             buttonPurchaseState: n,
                             buttonDisabledState: t,
@@ -282,7 +282,7 @@ let R = (e) => {
             ]
         });
     },
-    O = () => {
+    R = () => {
         let { entitlement: e, numPotions: n } = (0, Z.t6)(p.D1);
         if (null == n || 0 === n) return null;
         let t = (null == e ? void 0 : e.type) === j.qc2.DEVELOPER_GIFT ? N.t['b+P6ra'] : N.t.RiQ4cn;
@@ -305,7 +305,7 @@ let R = (e) => {
                 tooltipCopy: u
             } = (0, s.useMemo)(() => {
                 let e = {
-                        0: N.intl.formatToPlainString(N.t.Wh82U1, { price: (0, v.T4)(i.amount, i.currency) }),
+                        0: N.intl.formatToPlainString(N.t.Wh82U1, { price: (0, I.T4)(i.amount, i.currency) }),
                         1: N.intl.string(N.t.RrKeDw),
                         2: N.intl.string(N.t.WOXaWF)
                     },
@@ -344,7 +344,7 @@ let R = (e) => {
                 className: T.error,
                 children: [
                     (0, o.jsx)(d.Image, {
-                        src: b,
+                        src: _,
                         width: 178,
                         height: 190
                     }),

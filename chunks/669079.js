@@ -1,6 +1,6 @@
 r.d(n, {
     Bg: function () {
-        return Z;
+        return F;
     },
     E5: function () {
         return er;
@@ -45,7 +45,7 @@ r.d(n, {
         return $;
     },
     pO: function () {
-        return F;
+        return Z;
     },
     xr: function () {
         return i;
@@ -97,8 +97,8 @@ let y = ['discordapp.com/gifts', 'discord.com/gifts'],
     (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD');
 })(i || (i = {}));
 let G = (e, n) => (u.tq || u.Em ? 0 : null != e || n ? 2 : 1),
-    F = (e) => 0 !== G(e);
-function Z(e) {
+    Z = (e) => 0 !== G(e);
+function F(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         r = arguments.length > 2 ? arguments[2] : void 0;
     return ''

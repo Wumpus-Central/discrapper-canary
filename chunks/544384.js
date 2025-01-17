@@ -54,11 +54,11 @@ function N(e) {
         U = A(m, E, v),
         B = (0, _.Z)(k, L),
         G = (0, f.Z)(k, L, b.VqG),
-        F = (0, s.e7)([g.Z], () => g.Z.supports(y.AN.SOUNDSHARE)),
-        Z = (0, s.e7)([g.Z], () => g.Z.supportsScreenSoundshare()),
+        Z = (0, s.e7)([g.Z], () => g.Z.supports(y.AN.SOUNDSHARE)),
+        F = (0, s.e7)([g.Z], () => g.Z.supportsScreenSoundshare()),
         V = (null == w ? void 0 : w.desktopSource) != null,
         j = null == w ? void 0 : null === (r = w.desktopSource) || void 0 === r ? void 0 : null === (n = r.id) || void 0 === n ? void 0 : n.startsWith('screen'),
-        H = V && F && (!j || Z),
+        H = V && Z && (!j || F),
         Y = T.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {

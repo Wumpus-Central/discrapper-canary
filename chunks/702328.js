@@ -177,7 +177,7 @@ t.Z = (e) => {
                               showIcon: !1,
                               subscriptionTier: X.Si.TIER_0,
                               className: et.marginTopForButtons,
-                              buttonTextClassName: et.subButtonText,
+                              buttonTextClassName: ep ? et.v2SubButtonText : et.subButtonText,
                               buttonShineClassName: et.buttonShine
                           })
                         : (0, i.jsx)(z.Z, {
@@ -192,12 +192,12 @@ t.Z = (e) => {
                     tier2CTAButton:
                         eL !== X.Si.TIER_0 || ep
                             ? (0, i.jsx)(z.Z, {
-                                  forceInverted: em && !ep,
+                                  forceInverted: !ep,
                                   showIcon: !1,
                                   subscriptionTier: X.Si.TIER_2,
                                   className: et.marginTopForButtons,
                                   isEligibleForBogoPromotion: ek,
-                                  buttonTextClassName: et.subButtonText,
+                                  buttonTextClassName: ep ? et.v2SubButtonText : et.subButtonText,
                                   buttonShineClassName: et.buttonShine
                               })
                             : (0, i.jsx)(z.Z, {

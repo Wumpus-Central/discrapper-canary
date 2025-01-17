@@ -42,7 +42,7 @@ function A(e) {
         U = null !== (n = null == p ? void 0 : p.guild_id) && void 0 !== n ? n : k,
         { analyticsLocations: B } = (0, h.ZP)(_.Z.USERNAME),
         G = C ? '@' : '',
-        { nick: F, colorString: Z, colorRoleName: V } = i,
+        { nick: Z, colorString: F, colorRoleName: V } = i,
         j = null != o.messageReference && null != o.webhookId && o.hasFlag(b.iLy.IS_CROSSPOST),
         H = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         Y = 'username' === H,
@@ -58,10 +58,10 @@ function A(e) {
         ),
         q = {
             className: y.username,
-            style: Y && null != Z ? { color: Z } : void 0,
+            style: Y && null != F ? { color: F } : void 0,
             onClick: D,
             onContextMenu: L,
-            children: (0, a.jsx)(a.Fragment, { children: G + F })
+            children: (0, a.jsx)(a.Fragment, { children: G + Z })
         };
     function Q() {
         let e = null != A ? A : o.author;
@@ -138,7 +138,7 @@ function A(e) {
                 : null,
             W
                 ? (0, a.jsx)(d.RoleDot, {
-                      color: Z,
+                      color: F,
                       name: V,
                       className: y.roleDot
                   })

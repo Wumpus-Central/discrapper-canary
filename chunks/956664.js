@@ -1,6 +1,6 @@
 r.d(n, {
     Bo: function () {
-        return F;
+        return Z;
     },
     Dc: function () {
         return O;
@@ -24,7 +24,7 @@ r.d(n, {
         return B;
     },
     kD: function () {
-        return Z;
+        return F;
     },
     rn: function () {
         return D;
@@ -160,11 +160,11 @@ function G(e) {
     let n = e.split(';base64,');
     return E()(2 === n.length, 'Input data is not a valid image.'), atob(n[1]).length;
 }
-async function F(e, n, r) {
-    let i = Z(e);
+async function Z(e, n, r) {
+    let i = F(e);
     return new File([await i.arrayBuffer()], n, { type: r });
 }
-function Z(e) {
+function F(e) {
     let n;
     n = e.split(',')[0].indexOf('base64') >= 0 ? atob(e.split(',')[1]) : btoa(e.split(',')[1]);
     let r = e.split(',')[0].split(':')[1].split(';')[0],

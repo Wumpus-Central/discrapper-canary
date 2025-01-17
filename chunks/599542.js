@@ -268,17 +268,17 @@ function G(e) {
     var n;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (n = window.navigator.userAgentData) || void 0 === n ? void 0 : n.platform) || window.navigator.platform);
 }
-function F() {
+function Z() {
     return G(/^Mac/i);
 }
-function Z() {
+function F() {
     return G(/^iPhone/i);
 }
 function V() {
-    return G(/^iPad/i) || (F() && navigator.maxTouchPoints > 1);
+    return G(/^iPad/i) || (Z() && navigator.maxTouchPoints > 1);
 }
 function j() {
-    return Z() || V();
+    return F() || V();
 }
 function H() {
     return B(/AppleWebKit/i) && !Y();

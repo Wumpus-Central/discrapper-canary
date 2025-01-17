@@ -218,7 +218,7 @@ function G(e) {
         return null != n && y(n);
     });
 }
-class F extends (a = c.ZP.Store) {
+class Z extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z);
     }
@@ -235,8 +235,8 @@ class F extends (a = c.ZP.Store) {
         return null != e && (n = b.getCachedMessageIdsForChannel(e)), null != n ? n : v;
     }
 }
-g(F, 'displayName', 'ReferencedMessageStore'),
-    (n.Z = new F(d.Z, {
+g(Z, 'displayName', 'ReferencedMessageStore'),
+    (n.Z = new Z(d.Z, {
         CACHE_LOADED: N,
         LOCAL_MESSAGES_LOADED: A,
         LOAD_MESSAGES_SUCCESS: A,

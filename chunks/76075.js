@@ -7,8 +7,8 @@ var i = t(442837),
     r = t(970606),
     s = t(313201),
     c = t(271383),
-    u = t(430824),
-    d = t(594174),
+    d = t(430824),
+    u = t(594174),
     f = t(693546),
     m = t(305325),
     b = t(937111),
@@ -20,13 +20,13 @@ o.default = function (n) {
     let { guildId: o, transitionState: t, ...h } = n,
         j = (0, s.Dt)(),
         v = (0, i.e7)([b.Z], () => b.Z.getRequest(o), [o]),
-        B = (0, i.e7)([u.Z], () => u.Z.getGuild(o), [o]),
-        R = (0, i.e7)([d.default], () => {
+        B = (0, i.e7)([d.Z], () => d.Z.getGuild(o), [o]),
+        R = (0, i.e7)([u.default], () => {
             var n;
-            return null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+            return null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
         }),
         x = (0, i.e7)([c.ZP], () => (null != R ? c.ZP.getMember(o, R) : null), [R, o]),
-        N = async () => {
+        I = async () => {
             var n;
             if (
                 (null !== (n = null == B ? void 0 : B.hasFeature(g.oNc.CLAN)) &&
@@ -36,7 +36,7 @@ o.default = function (n) {
                         guildId: o,
                         source: l.Z.CLAN_REAPPLY
                     }),
-                null == B ? void 0 : B.hasFeature(g.oNc.PREVIEW_ENABLED))
+                null == x ? void 0 : x.isPending)
             ) {
                 try {
                     await f.Z.removeGuildJoinRequest(o);
@@ -54,7 +54,7 @@ o.default = function (n) {
             ...h,
             headerId: j,
             reapplyText: C.intl.string(C.t.I1LYVl),
-            onReapply: N,
+            onReapply: I,
             confirmText: C.intl.string(C.t.BddRzc),
             onWithdrawApplication: () => {
                 h.onClose(), null == x && (0, _.Z)();

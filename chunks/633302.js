@@ -173,10 +173,10 @@ function B(e) {
 function G(e) {
     return O.test(e);
 }
-function F(e) {
+function Z(e) {
     return e.replace(N, (e, n) => Q(n, e));
 }
-function Z(e) {
+function F(e) {
     let n = v[e];
     return null != n
         ? {
@@ -211,12 +211,12 @@ function Y(e, n) {
             else if (H.test(n)) {
                 i += n;
                 continue;
-            } else a.push(Z(i)), (i = '');
+            } else a.push(F(i)), (i = '');
         } else if (n === j) {
             i = n;
             continue;
         }
-        let r = Z(n);
+        let r = F(n);
         if (a.length > 0) {
             let e = a[a.length - 1];
             if ('text' === r.type && 'text' === e.type) {
@@ -226,7 +226,7 @@ function Y(e, n) {
         }
         a.push(r);
     }
-    return null != i && '' !== i && a.push(Z(i)), a;
+    return null != i && '' !== i && a.push(F(i)), a;
 }
 function W(e) {
     return Y(e)
@@ -276,7 +276,7 @@ n.ZP = {
     getByName: U,
     getByCategory: B,
     contentHasUnicodeOrEmoji: G,
-    translateInlineEmojiToSurrogates: F,
+    translateInlineEmojiToSurrogates: Z,
     maybeTranslateSurrogatesToInlineEmoji: K,
     findInlineEmojisFromSurrogates: Y,
     translateSurrogatesToInlineEmoji: W,

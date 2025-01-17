@@ -205,10 +205,10 @@ function B(e) {
 function G(e) {
     return e.state === g.$7l.ACTIVE && null != i && i.resetBackoff('App state is active'), !1;
 }
-function F(e) {
+function Z(e) {
     return e.state === g.hes.RTC_CONNECTED && (N = !0), !0;
 }
-function Z() {
+function F() {
     return !0;
 }
 function V(e) {
@@ -315,13 +315,13 @@ let W = new Y(
         : {
               CONNECTION_OPEN: O,
               CONNECTION_CLOSED: D,
-              RTC_CONNECTION_STATE: F,
-              RTC_CONNECTION_PING: Z,
-              RTC_CONNECTION_LOSS_RATE: Z,
+              RTC_CONNECTION_STATE: Z,
+              RTC_CONNECTION_PING: F,
+              RTC_CONNECTION_LOSS_RATE: F,
               RTC_CONNECTION_UPDATE_ID: V,
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: Z,
-              RTC_CONNECTION_CLIENT_CONNECT: Z,
-              RTC_CONNECTION_CLIENT_DISCONNECT: Z,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: F,
+              RTC_CONNECTION_CLIENT_CONNECT: F,
+              RTC_CONNECTION_CLIENT_DISCONNECT: F,
               VIDEO_SIZE_UPDATE: H,
               VOICE_STATE_UPDATES: L,
               VOICE_CHANNEL_SELECT: B,

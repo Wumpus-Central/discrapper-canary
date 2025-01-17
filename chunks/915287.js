@@ -88,7 +88,7 @@ function v(e, n, r, i) {
             });
         });
     return o.forwardRef(function (i, d) {
-        let { className: v, onScroll: I, onResize: T = null, onContentResize: b = null, dir: y = 'ltr', sections: S, sectionHeight: A, rowHeight: N, footerHeight: C = 0, sidebarHeight: R, listHeaderHeight: O = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: w, renderListHeader: P, stickyListHeader: M, wrapSection: k, getAnchorId: U, paddingTop: B, paddingBottom: G, fade: F = !1, customTheme: Z = !1, chunkSize: V, style: j, innerId: H, innerRole: Y, innerAriaLabel: W, innerAriaMultiselectable: K, innerAriaOrientation: z, innerClassName: q, innerTag: Q = 'div', ...X } = i,
+        let { className: v, onScroll: I, onResize: T = null, onContentResize: b = null, dir: y = 'ltr', sections: S, sectionHeight: A, rowHeight: N, footerHeight: C = 0, sidebarHeight: R, listHeaderHeight: O = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: w, renderListHeader: P, stickyListHeader: M, wrapSection: k, getAnchorId: U, paddingTop: B, paddingBottom: G, fade: Z = !1, customTheme: F = !1, chunkSize: V, style: j, innerId: H, innerRole: Y, innerAriaLabel: W, innerAriaMultiselectable: K, innerAriaOrientation: z, innerClassName: q, innerTag: Q = 'div', ...X } = i,
             J = o.useRef(null),
             $ = o.useRef(null),
             [ee, et] = o.useState(!1),
@@ -197,8 +197,8 @@ function v(e, n, r, i) {
                 onScroll: ev,
                 className: u()(v, {
                     [e]: !0,
-                    [n]: F,
-                    [r]: Z,
+                    [n]: Z,
+                    [r]: F,
                     [h.scrolling]: ee
                 }),
                 style: (0, _.uT)(j),

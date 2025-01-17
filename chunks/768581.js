@@ -178,7 +178,7 @@ function G(e) {
         c = v.ANM.GUILD_MEMBER_BANNER(i, r, a, u);
     return (n = (null != l ? ''.concat(location.protocol, '//').concat(l).concat(c) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) + '?size='.concat((0, p.oO)(o * (0, p.x_)())));
 }
-function F(e) {
+function Z(e) {
     let n,
         { id: r, splash: i, size: a } = e;
     if (null == i) return null;
@@ -186,8 +186,8 @@ function F(e) {
     let s = window.GLOBAL_ENV.CDN_HOST;
     return (n = (null != s ? ''.concat(location.protocol, '//').concat(s, '/splashes/').concat(r, '/').concat(i, '.jpg') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + v.ANM.GUILD_SPLASH(r, i)) + '?size='.concat(a));
 }
-function Z(e) {
-    return es(F(e));
+function F(e) {
+    return es(Z(e));
 }
 function V(e) {
     let n,
@@ -376,8 +376,8 @@ n.ZP = {
     isAnimatedIconHash: en,
     getUserAvatarSource: (e, n, r) => es(w(e, n, r)),
     getGuildIconURL: z,
-    getGuildSplashURL: F,
-    getGuildSplashSource: Z,
+    getGuildSplashURL: Z,
+    getGuildSplashSource: F,
     getGuildDiscoverySplashURL: W,
     getGuildDiscoverySplashSource: K,
     getGuildBannerURL: V,

@@ -97,7 +97,7 @@ class G extends o.PureComponent {
             });
     }
 }
-function F(e) {
+function Z(e) {
     let { channel: n, guild: r } = e,
         i = [];
     return (0, s.jsx)(I.ZP, {
@@ -108,7 +108,7 @@ function F(e) {
         }
     });
 }
-function Z(e) {
+function F(e) {
     let { guildId: n, activity: r, showInviteEducation: i, isFocused: a, typingUsers: o, className: l, channel: c, isThreadCreation: f, renderDots: _, poggermodeEnabled: p, isComboing: m } = e,
         { rateLimitPerUser: g } = c,
         I = O.default.getCurrentUser(),
@@ -131,7 +131,7 @@ function Z(e) {
                   activity: r,
                   isFocused: a
               })
-            : (0, s.jsx)(F, {
+            : (0, s.jsx)(Z, {
                   channel: c,
                   guild: T
               });
@@ -209,5 +209,5 @@ function V(e) {
             channel: n,
             isThreadCreation: r
         };
-    return (0, s.jsx)(Z, { ...u });
+    return (0, s.jsx)(F, { ...u });
 }

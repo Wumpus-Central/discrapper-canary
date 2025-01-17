@@ -82,11 +82,11 @@ let P = '([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})',
     U = '([^\\d\\s]+)',
     B = RegExp('(?:\\s*('.concat(P, '|').concat(k, '|').concat(M, '|').concat(U, '))'), 'i'),
     G = RegExp('\\s*(true|false)', 'i');
-function F(e) {
+function Z(e) {
     return ''.concat(e, ':');
 }
-function Z(e) {
-    return RegExp(F(e), 'i');
+function F(e) {
+    return RegExp(Z(e), 'i');
 }
 function V(e) {
     let n;
@@ -219,9 +219,9 @@ function ee() {
         r = [N.intl.string(N.t.ZNR2fn), N.intl.string(N.t['20uQR0']), N.intl.string(N.t.L4lxyM), N.intl.string(N.t['AV/v6u']), N.intl.string(N.t.XM9XGB), N.intl.string(N.t.TNLcp6), N.intl.string(N.t.F8Wf0d), N.intl.string(N.t.PJgX2t), ...n];
     return {
         [A.dCx.FILTER_FROM]: {
-            regex: Z(N.intl.string(N.t['1TUdFh'])),
+            regex: F(N.intl.string(N.t['1TUdFh'])),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t['1TUdFh'])),
+            key: Z(N.intl.string(N.t['1TUdFh'])),
             plainText: N.intl.string(N.t['1TUdFh']),
             validator: J,
             getAutocompletions: Q
@@ -235,9 +235,9 @@ function ee() {
             queryKey: 'author_id'
         },
         [A.dCx.FILTER_MENTIONS]: {
-            regex: Z(N.intl.string(N.t.i96lOz)),
+            regex: F(N.intl.string(N.t.i96lOz)),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t.i96lOz)),
+            key: Z(N.intl.string(N.t.i96lOz)),
             plainText: N.intl.string(N.t.i96lOz),
             validator: J,
             getAutocompletions: Q
@@ -251,9 +251,9 @@ function ee() {
             queryKey: 'mentions'
         },
         [A.dCx.FILTER_HAS]: {
-            regex: Z(N.intl.string(N.t.CqCvio)),
+            regex: F(N.intl.string(N.t.CqCvio)),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t.CqCvio)),
+            key: Z(N.intl.string(N.t.CqCvio)),
             plainText: N.intl.string(N.t.CqCvio),
             getAutocompletions: (e, n, i) => q(e, i, r)
         },
@@ -265,8 +265,8 @@ function ee() {
             queryKey: 'has'
         },
         [A.dCx.FILTER_FILE_TYPE]: {
-            regex: Z(N.intl.string(N.t.TMNjFh)),
-            key: F(N.intl.string(N.t.TMNjFh)),
+            regex: F(N.intl.string(N.t.TMNjFh)),
+            key: Z(N.intl.string(N.t.TMNjFh)),
             plainText: N.intl.string(N.t.TMNjFh),
             componentType: 'FILTER'
         },
@@ -278,8 +278,8 @@ function ee() {
             queryKey: 'attachment_extensions'
         },
         [A.dCx.FILTER_FILE_NAME]: {
-            regex: Z(N.intl.string(N.t['5xtLRE'])),
-            key: F(N.intl.string(N.t['5xtLRE'])),
+            regex: F(N.intl.string(N.t['5xtLRE'])),
+            key: Z(N.intl.string(N.t['5xtLRE'])),
             plainText: N.intl.string(N.t['5xtLRE']),
             componentType: 'FILTER'
         },
@@ -291,23 +291,23 @@ function ee() {
             queryKey: 'attachment_filename'
         },
         [A.dCx.FILTER_BEFORE]: {
-            regex: Z(N.intl.string(N.t['qZ+7BA'])),
+            regex: F(N.intl.string(N.t['qZ+7BA'])),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t['qZ+7BA'])),
+            key: Z(N.intl.string(N.t['qZ+7BA'])),
             plainText: N.intl.string(N.t['qZ+7BA']),
             getAutocompletions: (e, n, r) => z(e, r, A.dCx.FILTER_BEFORE)
         },
         [A.dCx.FILTER_ON]: {
-            regex: Z('('.concat(N.intl.string(N.t.tIxkOj), '|').concat(N.intl.string(N.t.h2NzSU), ')')),
+            regex: F('('.concat(N.intl.string(N.t.tIxkOj), '|').concat(N.intl.string(N.t.h2NzSU), ')')),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t.h2NzSU)),
+            key: Z(N.intl.string(N.t.h2NzSU)),
             plainText: N.intl.string(N.t.h2NzSU),
             getAutocompletions: (e, n, r) => z(e, r, A.dCx.FILTER_ON)
         },
         [A.dCx.FILTER_AFTER]: {
-            regex: Z(N.intl.string(N.t.KSDx7O)),
+            regex: F(N.intl.string(N.t.KSDx7O)),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t.KSDx7O)),
+            key: Z(N.intl.string(N.t.KSDx7O)),
             plainText: N.intl.string(N.t.KSDx7O),
             getAutocompletions: (e, n, r) => z(e, r, A.dCx.FILTER_AFTER)
         },
@@ -333,9 +333,9 @@ function ee() {
             validator: (e) => j(e, 'after')
         },
         [A.dCx.FILTER_IN]: {
-            regex: Z(N.intl.string(N.t.WNpFHR)),
+            regex: F(N.intl.string(N.t.WNpFHR)),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t.WNpFHR)),
+            key: Z(N.intl.string(N.t.WNpFHR)),
             plainText: N.intl.string(N.t.WNpFHR),
             validator: X,
             getAutocompletions(e, n, r) {
@@ -386,9 +386,9 @@ function ee() {
             queryKey: 'channel_id'
         },
         [A.dCx.FILTER_PINNED]: {
-            regex: Z(N.intl.string(N.t['0B74eX'])),
+            regex: F(N.intl.string(N.t['0B74eX'])),
             componentType: 'FILTER',
-            key: F(N.intl.string(N.t['0B74eX'])),
+            key: Z(N.intl.string(N.t['0B74eX'])),
             plainText: N.intl.string(N.t['0B74eX']),
             getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
         },
