@@ -91,12 +91,14 @@ let s = {
                     url: s[e],
                     rejectWithError: !1
                 }),
-                n = null != t.body.entitlement ? l.Z.createFromServer(t.body.entitlement) : null;
+                n = null != t.body.entitlement ? l.Z.createFromServer(t.body.entitlement) : null,
+                i = t.body.num_potions;
             return (
                 u.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED',
                     skuId: e,
-                    entitlement: n
+                    entitlement: n,
+                    numPotions: i
                 }),
                 t.body.entitlement
             );

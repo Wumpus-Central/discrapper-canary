@@ -23,52 +23,53 @@ let f = new Map(),
     h = new Set(),
     p = new Set(),
     m = new Map(),
-    g = null,
-    E = !1;
-let v = (e) => {
+    g = new Map(),
+    E = null,
+    v = !1;
+let I = (e) => {
         _.add(e.skuId);
     },
-    I = (e) => {
+    T = (e) => {
         f.set(e.skuId, e.price), _.delete(e.skuId);
     },
-    T = (e) => {
+    b = (e) => {
         _.delete(e.skuId), p.add(e.skuId);
     },
-    b = (e) => {
+    y = (e) => {
         p.delete(e.skuId);
     },
-    y = (e) => {
+    S = (e) => {
         if (1 !== e.entitlements.length) return;
         let n = e.entitlements[0];
         if (!!c.Rm.has(n.sku_id)) m.set(e.skuId, u.Z.createFromServer(n));
     },
-    S = (e) => {
-        h.delete(e.skuId), m.set(e.skuId, e.entitlement);
-    },
     A = (e) => {
-        p.add(e.skuId), h.delete(e.skuId);
+        h.delete(e.skuId), m.set(e.skuId, e.entitlement), null != e.numPotions && g.set(e.skuId, e.numPotions);
     },
     N = (e) => {
-        h.add(e.skuId);
+        p.add(e.skuId), h.delete(e.skuId);
     },
     C = (e) => {
-        g = e.previousGoLiveSettings;
+        h.add(e.skuId);
     },
     R = (e) => {
+        E = e.previousGoLiveSettings;
+    },
+    O = (e) => {
         m.delete(e.skuId);
     },
-    O = () => {
+    D = () => {
         i = Date.now();
     },
-    D = (e) => {
-        E = e.enabled;
+    L = (e) => {
+        v = e.enabled;
     };
-class L extends (a = o.ZP.Store) {
+class x extends (a = o.ZP.Store) {
     get lastConfettiTrigger() {
         return i;
     }
     get confettiMode() {
-        return E;
+        return v;
     }
     getPrice(e) {
         return f.get(e);
@@ -82,6 +83,9 @@ class L extends (a = o.ZP.Store) {
     getEntitlement(e) {
         return m.get(e);
     }
+    fetchPotionCount(e) {
+        return g.get(e);
+    }
     isEntitlementFetched(e) {
         return m.has(e);
     }
@@ -89,21 +93,21 @@ class L extends (a = o.ZP.Store) {
         return h.has(e);
     }
     getPreviousGoLiveSettings() {
-        return g;
+        return E;
     }
 }
-d(L, 'displayName', 'ConsumablesStore'),
-    (n.Z = new L(l.Z, {
-        CONSUMABLES_PRICE_FETCH_STARTED: v,
-        CONSUMABLES_PRICE_FETCH_SUCCEEDED: I,
-        CONSUMABLES_PRICE_FETCH_FAILED: T,
-        CONSUMABLES_CLEAR_ERROR: b,
-        CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: S,
-        SKU_PURCHASE_SUCCESS: y,
-        CONSUMABLES_ENTITLEMENT_FETCH_FAILED: A,
-        CONSUMABLES_ENTITLEMENT_FETCH_STARTED: N,
-        SET_PREVIOUS_GO_LIVE_SETTINGS: C,
-        CLEAR_CONSUMED_ENTITLEMENT: R,
-        POTIONS_TRIGGER_MESSAGE_CONFETTI: O,
-        POTIONS_SET_CONFETTI_MODE: D
+d(x, 'displayName', 'ConsumablesStore'),
+    (n.Z = new x(l.Z, {
+        CONSUMABLES_PRICE_FETCH_STARTED: I,
+        CONSUMABLES_PRICE_FETCH_SUCCEEDED: T,
+        CONSUMABLES_PRICE_FETCH_FAILED: b,
+        CONSUMABLES_CLEAR_ERROR: y,
+        CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: A,
+        SKU_PURCHASE_SUCCESS: S,
+        CONSUMABLES_ENTITLEMENT_FETCH_FAILED: N,
+        CONSUMABLES_ENTITLEMENT_FETCH_STARTED: C,
+        SET_PREVIOUS_GO_LIVE_SETTINGS: R,
+        CLEAR_CONSUMED_ENTITLEMENT: O,
+        POTIONS_TRIGGER_MESSAGE_CONFETTI: D,
+        POTIONS_SET_CONFETTI_MODE: L
     }));

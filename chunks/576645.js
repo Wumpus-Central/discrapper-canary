@@ -43,8 +43,8 @@ var r = n(192379),
     _ = n(158776),
     m = n(959457),
     S = n(594174),
-    T = n(451478),
-    C = n(626135),
+    C = n(451478),
+    T = n(626135),
     h = n(980463),
     v = n(823961),
     N = n(896835),
@@ -80,8 +80,8 @@ let Z = new l.Yd('HDStreamingConsumableModal'),
             [l, i]
         );
         let p = (0, r.useMemo)(() => 0 === c.length || (!c.some((e) => null == e || e < 3500000) && !0), [c]),
-            T = (null == t ? void 0 : t.premiumTier) === g.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === g.Eu4.TIER_1;
-        return T && p && !u;
+            C = (null == t ? void 0 : t.premiumTier) === g.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === g.Eu4.TIER_1;
+        return C && p && !u;
     },
     A = (e, t) => {
         let n = (0, o.e7)([S.default], () => {
@@ -107,15 +107,16 @@ function b(e) {
     );
 }
 function M(e) {
-    let [t, n, i, u] = (0, o.Wu)([v.Z], () => [v.Z.isEntitlementFetched(e), v.Z.isEntitlementFetching(e), v.Z.getEntitlement(e), v.Z.getErrored(e)]);
+    let [t, n, i, u, l] = (0, o.Wu)([v.Z], () => [v.Z.isEntitlementFetched(e), v.Z.fetchPotionCount(e), v.Z.isEntitlementFetching(e), v.Z.getEntitlement(e), v.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            !t && !n && (0, h.gA)(e);
-        }, [t, n, e]),
+            !t && !i && (0, h.gA)(e);
+        }, [t, i, e]),
         {
-            entitlement: i,
+            entitlement: u,
+            numPotions: n,
             fetchedEntitlement: t,
-            error: u
+            error: l
         }
     );
 }
@@ -148,12 +149,12 @@ function R(e) {
 function L() {
     var e;
     let t = (null !== (e = u().name) && void 0 !== e ? e : 'unknown').toLowerCase(),
-        n = (0, o.e7)([T.Z], () => T.Z.isFocused()),
+        n = (0, o.e7)([C.Z], () => C.Z.isFocused()),
         r = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
     return 'safari' === t || !n || r;
 }
 function D(e) {
-    C.default.track(g.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
+    T.default.track(g.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
 }
 function w(e) {
     let t = (0, o.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.guild_id)),

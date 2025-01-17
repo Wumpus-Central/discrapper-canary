@@ -16,5 +16,8 @@ e.exports = {
     error: 'error_b551cf',
     spinner: 'spinner_b551cf',
     buttonCopy: 'buttonCopy_b551cf',
-    tooltip: 'tooltip_b551cf'
+    tooltip: 'tooltip_b551cf',
+    footerRight: 'footerRight_b551cf',
+    remaining: 'remaining_b551cf',
+    shootingStar: 'shootingStar_b551cf'
 };
