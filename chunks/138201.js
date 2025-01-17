@@ -1,6 +1,9 @@
 r.d(n, {
-    Z: function () {
-        return u;
+    ZP: function () {
+        return d;
+    },
+    rT: function () {
+        return c;
     }
 });
 var i = r(200651);
@@ -10,6 +13,35 @@ var a = r(120356),
     o = r(481060),
     l = r(829820);
 function u(e) {
+    let { title: n } = e;
+    return (0, i.jsx)(o.Text, {
+        variant: 'text-sm/semibold',
+        color: 'header-secondary',
+        children: n
+    });
+}
+function c(e) {
+    let { children: n, title: r, description: a, accessibilityRole: s = 'none', accessibilityLabel: c } = e;
+    return (0, i.jsxs)('div', {
+        className: l.tableRowGroup,
+        children: [
+            null != r && (0, i.jsx)(u, { title: r }),
+            null != a &&
+                (0, i.jsx)(o.Text, {
+                    variant: 'text-sm/normal',
+                    color: 'text-secondary',
+                    children: a
+                }),
+            (0, i.jsx)('div', {
+                className: l.content,
+                role: s,
+                'aria-label': c,
+                children: n
+            })
+        ]
+    });
+}
+function d(e) {
     let { icon: n, title: r, titleVariant: a = 'text-md/semibold', description: u, descriptionVariant: c = 'text-xs/medium', iconClassName: d, color: f, buttonText: _, buttonColor: h = o.Button.Colors.PRIMARY, buttonSize: p = o.Button.Sizes.SMALL, buttonLook: m = o.Button.Looks.FILLED, buttonDisabled: g, onButtonPress: E, listType: v = 'icon', index: I } = e,
         T =
             null != _

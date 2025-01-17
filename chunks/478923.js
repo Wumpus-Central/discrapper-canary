@@ -70,14 +70,9 @@ function S(e) {
                       : (0, i.jsxs)('div', {
                             className: y.otherOptions,
                             children: [
-                                (0, i.jsx)(l.Text, {
-                                    variant: 'text-sm/semibold',
-                                    color: 'header-secondary',
-                                    children: b.intl.string(b.t['+BJTcH'])
-                                }),
-                                (0, i.jsx)('div', {
-                                    className: y.row,
-                                    children: (0, i.jsx)(_.Z, {
+                                (0, i.jsx)(_.rT, {
+                                    title: b.intl.string(b.t['+BJTcH']),
+                                    children: (0, i.jsx)(_.ZP, {
                                         title: b.intl.string(b.t.hC8tcX),
                                         description: b.intl.string(b.t.If89rK),
                                         titleVariant: 'text-md/medium',

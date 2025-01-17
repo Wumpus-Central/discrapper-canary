@@ -18,22 +18,21 @@ var i = r(200651),
     m = r(388032),
     g = r(294794);
 function E() {
-    return (0, i.jsxs)('div', {
-        className: g.row,
+    return (0, i.jsxs)(u.rT, {
         children: [
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(u.ZP, {
                 title: m.intl.string(m.t.ruhGkp),
                 titleVariant: 'text-md/medium',
                 description: m.intl.string(m.t['/FWKKC']),
                 icon: o.CircleCheckIcon
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(u.ZP, {
                 title: m.intl.string(m.t.N9v3en),
                 titleVariant: 'text-md/medium',
                 description: m.intl.string(m.t.ddpuJi),
                 icon: o.CircleCheckIcon
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(u.ZP, {
                 title: m.intl.string(m.t['4ycGEx']),
                 titleVariant: 'text-md/medium',
                 description: m.intl.string(m.t['5yfN+v']),
@@ -110,14 +109,9 @@ function v(e) {
                     (0, i.jsxs)('div', {
                         className: g.otherOptions,
                         children: [
-                            (0, i.jsx)(o.Text, {
-                                variant: 'text-sm/semibold',
-                                color: 'header-secondary',
-                                children: m.intl.string(m.t['1v01go'])
-                            }),
-                            (0, i.jsx)('div', {
-                                className: g.row,
-                                children: (0, i.jsx)(u.Z, {
+                            (0, i.jsx)(u.rT, {
+                                title: m.intl.string(m.t['1v01go']),
+                                children: (0, i.jsx)(u.ZP, {
                                     title: m.intl.string(m.t.bwxY39),
                                     description: m.intl.string(m.t.NTnf1d),
                                     titleVariant: 'text-md/medium',
