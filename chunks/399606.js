@@ -25,32 +25,35 @@ function c(e, n) {
 }
 function d(e, n, r) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : u,
-        { current: a } = (0, s.useRef)({
+        a = (0, s.useRef)(null);
+    null == a.current &&
+        (a.current = {
             stores: e,
             areStatesEqual: i,
             getStateFromStores: n,
             prevDeps: void 0,
             state: void 0
-        }),
-        c = a.state;
-    if (null == r || !(0, o.E)(r, a.prevDeps)) {
+        });
+    let c = a.current,
+        d = c.state;
+    if (null == r || !(0, o.E)(r, c.prevDeps)) {
         let e = n();
-        (null == c || !i(c, e)) && (c = e);
+        (null == d || !i(d, e)) && (d = e);
     }
     (0, s.useInsertionEffect)(() => {
-        (a.getStateFromStores = n), (a.prevDeps = r), (a.state = c);
+        (c.getStateFromStores = n), (c.prevDeps = r), (c.state = d);
     });
-    let [, d] = (0, s.useState)(null);
+    let [, f] = (0, s.useState)(null);
     return (
         (0, s.useInsertionEffect)(() => {
             let n = () => {
-                    let e = a.getStateFromStores();
-                    !i(a.state, e) && ((a.state = e), d({}));
+                    let e = c.getStateFromStores();
+                    !i(c.state, e) && ((c.state = e), f({}));
                 },
                 r = new l.F(e, n);
             return r.attach('useStateFromStores'), () => r.detach();
         }, []),
-        c
+        d
     );
 }
 function f(e, n, r) {
