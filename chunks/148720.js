@@ -59,39 +59,40 @@ function E(e) {
     }
 }
 async function v(e) {
-    let { channelId: n, applicationId: r, launchId: i, inputApplication: s, analyticsLocations: g, launchingComponentId: v, sectionName: I } = e,
-        T = _.ZP.getEmbeddedActivitiesForChannel(n).find((e) => e.applicationId === r && (null == i || e.launchId === i)),
-        b = s;
-    if (null == b) {
+    let { channelId: n, applicationId: r, launchId: i, inputApplication: s, analyticsLocations: g, launchingComponentId: v, sectionName: I, inviterUserId: T } = e,
+        b = _.ZP.getEmbeddedActivitiesForChannel(n).find((e) => e.applicationId === r && (null == i || e.launchId === i)),
+        y = s;
+    if (null == y) {
         let e = await a.ZP.fetchApplication(r);
-        b = o.ZP.createFromServer(e);
+        y = o.ZP.createFromServer(e);
     }
-    if (null == T || null == b) return;
-    let y = d.default.getCurrentUser(),
-        S = l.Z.getChannel(n);
-    async function A() {
-        if (null != T)
+    if (null == b || null == y) return;
+    let S = d.default.getCurrentUser(),
+        A = l.Z.getChannel(n);
+    async function N() {
+        if (null != b)
             await (0, h.Z)({
-                applicationId: T.applicationId,
+                applicationId: b.applicationId,
                 activityChannelId: n,
                 locationObject: {},
                 analyticsLocations: g,
                 componentId: v,
-                sectionName: I
+                sectionName: I,
+                inviterUserId: T
             });
     }
     E({
         embeddedActivityJoinability: (0, m.ZP)({
-            userId: null == y ? void 0 : y.id,
-            application: b,
+            userId: null == S ? void 0 : S.id,
+            application: y,
             channelId: n,
-            currentUser: y,
-            isActivitiesEnabledForCurrentPlatform: (0, p.a)(S),
+            currentUser: S,
+            isActivitiesEnabledForCurrentPlatform: (0, p.a)(A),
             ChannelStore: l.Z,
             VoiceStateStore: f.Z,
             PermissionStore: c.Z,
             GuildStore: u.Z
         }),
-        handleCanJoin: A
+        handleCanJoin: N
     });
 }

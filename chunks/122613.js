@@ -16,22 +16,22 @@ function _(e) {
     return (0, o.C)(() => h(e));
 }
 async function h(e) {
-    let { targetApplicationId: n, locationObject: r, channelId: o, analyticsLocations: _, componentId: h, commandOrigin: p, sectionName: m, source: g, onExecutedCallback: E, referrerId: v, customId: I } = e,
-        T = (0, d.Z)(),
-        b = a.default.getCurrentUser();
+    let { targetApplicationId: n, locationObject: r, channelId: o, analyticsLocations: _, componentId: h, commandOrigin: p, sectionName: m, source: g, onExecutedCallback: E, referrerId: v, customId: I, inviterUserId: T } = e,
+        b = (0, d.Z)(),
+        y = a.default.getCurrentUser();
     if (null == n) return !1;
-    let y = await (0, c.Z)(n, o);
+    let S = await (0, c.Z)(n, o);
     return null == o
         ? (s.S.dispatch(f.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1)
         : null != i.Z.getChannel(o) &&
-              null != b &&
               null != y &&
-              (l.tZ(y.id),
+              null != S &&
+              (l.tZ(S.id),
               await (0, u.af)({
                   channelId: o,
-                  applicationId: y.id,
+                  applicationId: S.id,
                   isStart: !0,
-                  embeddedActivitiesManager: T,
+                  embeddedActivitiesManager: b,
                   componentId: h,
                   commandOrigin: p,
                   sectionName: m,
@@ -40,6 +40,7 @@ async function h(e) {
                   source: g,
                   onExecutedCallback: E,
                   referrerId: v,
-                  customId: I
+                  customId: I,
+                  inviterUserId: T
               }));
 }

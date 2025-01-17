@@ -27,51 +27,51 @@ function y(e) {
 }
 async function S(e) {
     let n,
-        { applicationId: r, activityChannelId: c, locationObject: y, analyticsLocations: S, componentId: A, sectionName: N, source: C, partyId: R, joinUserId: O, joinSessionId: D, joinSecret: L } = e,
-        x = (0, E.Z)(),
-        w = s.Z.getChannel(c),
-        P = null == w ? void 0 : w.getGuildId(),
-        M = null == P || '' === P,
-        k = l.default.getCurrentUser();
-    if (null == k) return !1;
-    let U = (0, d.s)();
-    if (!U && (null == w || (M && !w.isPrivate()) || null == c)) return Promise.resolve(!1);
-    let B = _.ZP.getCurrentEmbeddedActivity();
-    (null == B ? void 0 : B.applicationId) != null && (n = a.Z.getApplication(null == B ? void 0 : B.applicationId));
-    let G = (null == B ? void 0 : B.location.kind) === i.X.CONTEXTLESS;
-    if ((G || o.Z.getVoiceChannelId() === c) && null != B && B.applicationId === r && (G || (0, m.p)(B.location) === o.Z.getVoiceChannelId())) return (0, T.Z)(P, B.location), Promise.resolve(!0);
+        { applicationId: r, activityChannelId: c, locationObject: y, analyticsLocations: S, componentId: A, sectionName: N, source: C, partyId: R, joinUserId: O, joinSessionId: D, joinSecret: L, inviterUserId: x } = e,
+        w = (0, E.Z)(),
+        P = s.Z.getChannel(c),
+        M = null == P ? void 0 : P.getGuildId(),
+        k = null == M || '' === M,
+        U = l.default.getCurrentUser();
+    if (null == U) return !1;
+    let B = (0, d.s)();
+    if (!B && (null == P || (k && !P.isPrivate()) || null == c)) return Promise.resolve(!1);
+    let G = _.ZP.getCurrentEmbeddedActivity();
+    (null == G ? void 0 : G.applicationId) != null && (n = a.Z.getApplication(null == G ? void 0 : G.applicationId));
+    let F = (null == G ? void 0 : G.location.kind) === i.X.CONTEXTLESS;
+    if ((F || o.Z.getVoiceChannelId() === c) && null != G && G.applicationId === r && (F || (0, m.p)(G.location) === o.Z.getVoiceChannelId())) return (0, T.Z)(M, G.location), Promise.resolve(!0);
     if (
         !(await (0, p.p)({
             applicationId: r,
             application: await (0, g.Z)(r, c),
-            channel: w,
+            channel: P,
             currentEmbeddedApplication: n,
-            embeddedActivitiesManager: x,
-            user: k
+            embeddedActivitiesManager: w,
+            user: U
         }))
     )
         return !1;
-    if (null != w) {
-        let e = (0, v.Z)(w.id),
-            r = b.wP.includes(w.type);
+    if (null != P) {
+        let e = (0, v.Z)(P.id),
+            r = b.wP.includes(P.type);
         if (e) {
             if (
                 !(await (0, I.Z)({
-                    channelId: w.id,
+                    channelId: P.id,
                     bypassChangeModal: null != n
                 }))
             )
                 return !1;
-        } else if (!(0, u.WS)(w) || !r) return !1;
-    } else if (null == w && !U) return !1;
+        } else if (!(0, u.WS)(P) || !r) return !1;
+    } else if (null == P && !B) return !1;
     return (
         null != c && (0, h.Z)(c),
-        null != B && (0, f.cG)(B.location),
+        null != G && (0, f.cG)(G.location),
         await (0, f.af)({
             channelId: c,
             applicationId: r,
             isStart: !1,
-            embeddedActivitiesManager: x,
+            embeddedActivitiesManager: w,
             analyticsLocations: S,
             locationObject: y,
             componentId: A,
@@ -80,7 +80,8 @@ async function S(e) {
             partyId: R,
             joinUserId: O,
             joinSessionId: D,
-            joinSecret: L
+            joinSecret: L,
+            inviterUserId: x
         })
     );
 }

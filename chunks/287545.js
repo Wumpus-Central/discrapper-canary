@@ -133,75 +133,76 @@ async function Q(e) {
 }
 function X(e) {
     var n, r, i;
-    let { applicationId: a, isFirstActivityInChannel: s, isStart: l, participants: u, embeddedActivity: d, location: _ } = e,
-        m = T.default.getId(),
-        g = u.find((e) => e.userId === m),
-        E = (0, B.p)(_),
-        v = b.Z.getChannel(E);
-    if ((l && null != v && v.isPrivate() && s && null == g && c.Z.selectParticipant(v.id, null), null == g)) return;
-    let I = y.Z.getMediaSessionId(),
-        S = d.compositeInstanceId,
-        C = null == I && (null == v ? void 0 : v.isVocal()) === !0 && (null == v ? void 0 : v.isPrivate()) === !1;
-    if (null == S || C) return;
-    let R = (0, o.Z)(),
-        L = 'location' in d ? 2 : 1,
-        x = null == v ? void 0 : v.getGuildId(),
-        M = A.default.getCurrentUser();
-    if (null == v || null == M) return;
-    let k = w.ZP.getShelfActivities(x),
-        U = D.Z.getState().shelfOrder,
-        G = (0, P.Z)({
+    let { applicationId: a, isFirstActivityInChannel: s, isStart: l, participants: u, embeddedActivity: d, location: _, inviterUserId: m } = e,
+        g = T.default.getId(),
+        E = u.find((e) => e.userId === g),
+        v = (0, B.p)(_),
+        I = b.Z.getChannel(v);
+    if ((l && null != I && I.isPrivate() && s && null == E && c.Z.selectParticipant(I.id, null), null == E)) return;
+    let S = y.Z.getMediaSessionId(),
+        C = d.compositeInstanceId,
+        R = null == S && (null == I ? void 0 : I.isVocal()) === !0 && (null == I ? void 0 : I.isPrivate()) === !1;
+    if (null == C || R) return;
+    let L = (0, o.Z)(),
+        x = 'location' in d ? 2 : 1,
+        M = null == I ? void 0 : I.getGuildId(),
+        k = A.default.getCurrentUser();
+    if (null == I || null == k) return;
+    let U = w.ZP.getShelfActivities(M),
+        G = D.Z.getState().shelfOrder,
+        F = (0, P.Z)({
             applicationId: a,
-            activityConfigs: k
+            activityConfigs: U
         }),
-        F = 1 + U.findIndex((e) => e === a),
-        { releasePhase: Z } = z(G),
-        j = p.Z.getRawThermalState(),
-        H = null != I ? [I] : [],
-        Y = {
-            activitySessionId: S,
-            activityUserSessionId: R,
+        Z = 1 + G.findIndex((e) => e === a),
+        { releasePhase: j } = z(F),
+        H = p.Z.getRawThermalState(),
+        Y = null != S ? [S] : [],
+        q = {
+            activitySessionId: C,
+            activityUserSessionId: L,
             launchId: d.launchId,
-            mediaSessionIds: H,
-            activitiesInfraVersion: L
+            mediaSessionIds: Y,
+            activitiesInfraVersion: x
         };
-    W[a] = Y;
-    let q = K[a];
-    !(0, O.Ew)(g.nonce) && g.nonce !== (null == q ? void 0 : q.nonce) && (q = void 0),
+    W[a] = q;
+    let Q = K[a];
+    !(0, O.Ew)(E.nonce) && E.nonce !== (null == Q ? void 0 : Q.nonce) && (Q = void 0),
         N.default.track(V.rMx.ACTIVITY_SESSION_JOINED, {
-            channel_id: v.id,
-            guild_id: v.getGuildId(),
-            media_session_id: H[0],
-            activity_session_id: S,
+            channel_id: I.id,
+            guild_id: I.getGuildId(),
+            media_session_id: Y[0],
+            activity_session_id: C,
             application_id: a,
-            location_stack: null == q ? void 0 : q.locations,
-            user_premium_tier: M.premiumType,
-            raw_thermal_state: j,
-            n_participants: h.Z.getUserParticipantCount(v.id),
+            location_stack: null == Q ? void 0 : Q.locations,
+            user_premium_tier: k.premiumType,
+            raw_thermal_state: H,
+            n_participants: h.Z.getUserParticipantCount(I.id),
             is_activity_start: l,
-            release_phase: Z,
-            activity_premium_tier_requirement: null == G ? void 0 : null === (n = G.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
-            shelf_rank: null == G ? void 0 : null === (r = G.activity) || void 0 === r ? void 0 : r.shelf_rank,
-            shelf_sorted_rank: F > 0 ? F : null,
-            activity_user_session_id: R,
-            channel_type: v.type,
-            source: null == q ? void 0 : q.source,
-            command_context_type: (0, f.Vh)(v, a)
+            release_phase: j,
+            activity_premium_tier_requirement: null == F ? void 0 : null === (n = F.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
+            shelf_rank: null == F ? void 0 : null === (r = F.activity) || void 0 === r ? void 0 : r.shelf_rank,
+            shelf_sorted_rank: Z > 0 ? Z : null,
+            activity_user_session_id: L,
+            channel_type: I.type,
+            source: null == Q ? void 0 : Q.source,
+            command_context_type: (0, f.Vh)(I, a),
+            invite_inviter_id: m
         }),
         N.default.track(V.rMx.ACTIVITY_IFRAME_MOUNT, {
-            location_stack: null == q ? void 0 : q.locations,
-            channel_id: v.id,
-            channel_type: v.type,
-            guild_id: v.getGuildId(),
+            location_stack: null == Q ? void 0 : Q.locations,
+            channel_id: I.id,
+            channel_type: I.type,
+            guild_id: I.getGuildId(),
             application_id: a,
             instance_id: d.launchId,
-            initial_media_session_id: H[0],
-            activity_user_session_id: R,
-            raw_thermal_state: j,
+            initial_media_session_id: Y[0],
+            activity_user_session_id: L,
+            raw_thermal_state: H,
             is_activity_start: l,
-            shelf_rank: null == G ? void 0 : null === (i = G.activity) || void 0 === i ? void 0 : i.shelf_rank,
-            shelf_sorted_rank: F > 0 ? F : null,
-            activities_infra_version: L
+            shelf_rank: null == F ? void 0 : null === (i = F.activity) || void 0 === i ? void 0 : i.shelf_rank,
+            shelf_sorted_rank: Z > 0 ? Z : null,
+            activities_infra_version: x
         });
 }
 function J(e) {
@@ -359,32 +360,32 @@ class $ extends d.Z {
             }),
             H(this, 'handleDeferredOpen', async (e) => {
                 var n, r, i;
-                let { channelId: a, applicationId: s, analyticsLocations: o, commandOrigin: l } = e,
-                    u = b.Z.getChannel(a);
-                if (void 0 === u || (I.tx.has(null == u ? void 0 : u.type) && S.Z.getVoiceChannelId() !== a)) return;
-                let c = w.ZP.getSelfEmbeddedActivityForChannel(a);
-                if ((null == c ? void 0 : c.applicationId) === s) return;
-                let d = await _.ZP.fetchApplication(s);
-                if (!(0, U.a)(u)) {
+                let { channelId: a, applicationId: s, analyticsLocations: o, commandOrigin: l, inviterUserId: u } = e,
+                    c = b.Z.getChannel(a);
+                if (void 0 === c || (I.tx.has(null == c ? void 0 : c.type) && S.Z.getVoiceChannelId() !== a)) return;
+                let d = w.ZP.getSelfEmbeddedActivityForChannel(a);
+                if ((null == d ? void 0 : d.applicationId) === s) return;
+                let f = await _.ZP.fetchApplication(s);
+                if (!(0, U.a)(c)) {
                     this.showLaunchErrorModal(j.intl.string(j.t.UXoQTk));
                     return;
                 }
-                if (!(0, F.Z)(null == d ? void 0 : null === (n = d.embedded_activity_config) || void 0 === n ? void 0 : n.supported_platforms)) {
+                if (!(0, F.Z)(null == f ? void 0 : null === (n = f.embedded_activity_config) || void 0 === n ? void 0 : n.supported_platforms)) {
                     this.showLaunchErrorModal(j.intl.string(j.t.uGDCc3));
                     return;
                 }
-                let f = null !== (r = null == u ? void 0 : u.getGuildId()) && void 0 !== r ? r : void 0,
-                    { activityConfigs: h, applications: p } = await (0, x.w1)({ guildId: f });
+                let h = null !== (r = null == c ? void 0 : c.getGuildId()) && void 0 !== r ? r : void 0,
+                    { activityConfigs: p, applications: m } = await (0, x.w1)({ guildId: h });
                 if (
                     null ==
                     (0, P.Z)({
                         applicationId: s,
-                        activityConfigs: h,
-                        applications: p
+                        activityConfigs: p,
+                        applications: m
                     })
                 ) {
                     let e = await (0, x.w1)({
-                        guildId: f,
+                        guildId: h,
                         force: !0
                     });
                     (0, P.Z)({
@@ -393,20 +394,22 @@ class $ extends d.Z {
                         applications: e.applications
                     });
                 }
-                let m = w.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === s);
-                (null !== (i = null == m ? void 0 : m.userIds.size) && void 0 !== i ? i : 0) > 0
+                let g = w.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === s);
+                (null !== (i = null == g ? void 0 : g.userIds.size) && void 0 !== i ? i : 0) > 0
                     ? await (0, M.k)({
                           channelId: a,
                           applicationId: s,
-                          launchId: null == m ? void 0 : m.launchId,
+                          launchId: null == g ? void 0 : g.launchId,
                           inputApplication: null,
-                          analyticsLocations: o
+                          analyticsLocations: o,
+                          inviterUserId: u
                       })
                     : await (0, k.Z)({
                           targetApplicationId: s,
                           channelId: a,
                           analyticsLocations: o,
-                          commandOrigin: l
+                          commandOrigin: l,
+                          inviterUserId: u
                       });
             }),
             H(this, 'handleGuildDelete', (e) => {

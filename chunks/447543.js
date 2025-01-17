@@ -61,19 +61,19 @@ var s = r(525654),
 let ea = 'invite',
     es = null;
 function eo(e) {
-    var n, r, i, a;
-    let s = {};
+    var n, r, i, a, s;
+    let o = {};
     switch (e.target_type) {
         case er.Iq.STREAM:
-            (s.targetType = e.target_type), (s.targetUserId = null === (r = e.target_user) || void 0 === r ? void 0 : r.id);
+            (o.targetType = e.target_type), (o.targetUserId = null === (i = e.target_user) || void 0 === i ? void 0 : i.id);
             break;
         case er.Iq.EMBEDDED_APPLICATION:
-            (s.targetType = e.target_type), (s.targetApplicationId = null === (i = e.target_application) || void 0 === i ? void 0 : i.id);
+            (o.targetType = e.target_type), (o.targetApplicationId = null === (a = e.target_application) || void 0 === a ? void 0 : a.id);
             break;
         case er.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
-            s.targetType = e.target_type;
+            o.targetType = e.target_type;
     }
-    return (!(null != Z.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (s.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (s.guildScheduledEvent = e.guild_scheduled_event), (s.isGuestInvite = (0, q.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, u.$.IS_GUEST_INVITE)), s;
+    return (!(null != Z.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (o.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (o.guildScheduledEvent = e.guild_scheduled_event), (o.isGuestInvite = (0, q.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.$.IS_GUEST_INVITE)), (o.inviterUserId = null === (r = e.inviter) || void 0 === r ? void 0 : r.id), o;
 }
 function el(e, n) {
     return {
@@ -129,12 +129,33 @@ function ed(e) {
                                           guildId: n,
                                           channelId: p
                                       }),
-                                  c === er.Iq.EMBEDDED_APPLICATION && null != d && ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)), (0, E.Z)(p, d, s, null == a ? void 0 : a.intent, v.bB.CHAT));
+                                  c === er.Iq.EMBEDDED_APPLICATION &&
+                                      null != d &&
+                                      ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)),
+                                      (0, E.Z)({
+                                          channelId: p,
+                                          applicationId: d,
+                                          intent: null == a ? void 0 : a.intent,
+                                          inviterUserId: null == a ? void 0 : a.inviterUserId,
+                                          analyticsLocations: s,
+                                          commandOrigin: v.bB.CHAT
+                                      }));
                           };
                       !f && (0, S.n)(n, [Z.Z, V.Z, W.default, F.ZP]) ? (0, b.hk)(n, o) : o();
                   });
           })
-        : (0, g.l5)(h) && c === er.Iq.EMBEDDED_APPLICATION && null != d && ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)), (0, E.Z)(p, d, s, null == a ? void 0 : a.intent, v.bB.CHAT)),
+        : (0, g.l5)(h) &&
+          c === er.Iq.EMBEDDED_APPLICATION &&
+          null != d &&
+          ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)),
+          (0, E.Z)({
+              channelId: p,
+              applicationId: d,
+              intent: null == a ? void 0 : a.intent,
+              inviterUserId: null == a ? void 0 : a.inviterUserId,
+              analyticsLocations: s,
+              commandOrigin: v.bB.CHAT
+          })),
         ec(i, a)(I);
 }
 function ef(e) {

@@ -97,22 +97,23 @@ function $(e) {
 }
 async function ee(e) {
     var n, r;
-    let { channelId: i, applicationId: a, isStart: s, analyticsLocations: o, locationObject: u, embeddedActivitiesManager: c, componentId: d, commandOrigin: f, sectionName: _, source: h, partyId: m, onExecutedCallback: g, referrerId: E, customId: v, joinUserId: I, joinSessionId: T, joinSecret: b } = e,
-        N = O.Z.getChannel(i),
-        C = null !== (n = null == N ? void 0 : N.getGuildId()) && void 0 !== n ? n : void 0,
-        R = (0, G.s)();
-    if (!R && null == C && !(null !== (r = null == N ? void 0 : N.isPrivate()) && void 0 !== r && r)) return !1;
-    let D = (0, A.r)();
+    let { channelId: i, applicationId: a, isStart: s, analyticsLocations: o, locationObject: u, embeddedActivitiesManager: c, componentId: d, commandOrigin: f, sectionName: _, source: h, partyId: m, onExecutedCallback: g, referrerId: E, customId: v, joinUserId: I, joinSessionId: T, joinSecret: b, inviterUserId: N } = e,
+        C = O.Z.getChannel(i),
+        R = null !== (n = null == C ? void 0 : C.getGuildId()) && void 0 !== n ? n : void 0,
+        D = (0, G.s)();
+    if (!D && null == R && !(null !== (r = null == C ? void 0 : C.isPrivate()) && void 0 !== r && r)) return !1;
+    let L = (0, A.r)();
     try {
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: D,
+            nonce: L,
             applicationId: a,
             channelId: null != i ? i : null,
             componentId: d,
             analyticsLocations: o,
             source: h,
             commandOrigin: f,
+            inviterUserId: N,
             launchParams: {
                 customId: v,
                 referrerId: E
@@ -124,30 +125,31 @@ async function ee(e) {
                 (0, K.Z)({
                     type: s ? q.q5t.LAUNCH : q.q5t.JOIN,
                     userId: null == e ? void 0 : e.id,
-                    guildId: C,
+                    guildId: R,
                     channelId: i,
-                    channelType: null == N ? void 0 : N.type,
+                    channelType: null == C ? void 0 : C.type,
                     applicationId: a,
                     locationObject: u,
                     analyticsLocations: null != o ? o : [],
                     source: h,
                     partyId: m,
-                    referrerId: E
+                    referrerId: E,
+                    inviterUserId: N
                 }),
             s && null != i)
         ) {
-            if (!et(a, N)) throw new y.Z(y.Z.Reasons.INVALID_CHANNEL);
+            if (!et(a, C)) throw new y.Z(y.Z.Reasons.INVALID_CHANNEL);
             if (
                 !(await en({
                     applicationId: a,
-                    nonce: D,
+                    nonce: L,
                     channelId: i,
-                    guildId: C,
+                    guildId: R,
                     commandOrigin: f,
                     sectionName: _,
                     source: h,
                     onExecutedCallback: g,
-                    clientSupportsContextlessActivityLaunch: R
+                    clientSupportsContextlessActivityLaunch: D
                 }))
             )
                 throw new y.Z(y.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
@@ -157,7 +159,7 @@ async function ee(e) {
                 channelId: i,
                 embeddedActivitiesManager: c,
                 isStart: s,
-                guildId: C,
+                guildId: R,
                 joinUserId: I,
                 joinSessionId: T,
                 joinSecret: b
@@ -166,7 +168,7 @@ async function ee(e) {
         }
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: D,
+            nonce: L,
             applicationId: a,
             channelId: null != i ? i : null
         });
@@ -174,7 +176,7 @@ async function ee(e) {
         return (
             l.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: D,
+                nonce: L,
                 applicationId: a,
                 channelId: null != i ? i : null,
                 isStart: s,

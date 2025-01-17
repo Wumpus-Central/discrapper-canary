@@ -73,62 +73,64 @@ function X(e) {
     return null != e ? e : w;
 }
 function J(e) {
-    var n, r, i, a, s, o, l, u;
-    let { location: c, applicationId: d, launchId: f, compositeInstanceId: h, participants: p } = e,
-        m = (0, T.Z)(d);
-    if (null == m) return;
-    let E = (0, y.p)(c),
-        v = null != E && null !== (i = k.get(E)) && void 0 !== i ? i : L,
-        I = null != v && 0 === v.length,
-        S = null !== (a = U.get(c.id)) && void 0 !== a ? a : L,
-        A = S.find((e) => e.applicationId === d),
-        N = p.map((e) => e.userId),
-        C = _.default.getId(),
-        O = N.some((e) => e === C),
-        D = null === (n = p.find((e) => e.userId === C)) || void 0 === n ? void 0 : n.sessionId,
-        x = p.some((e) => (0, b.J)(e)),
-        w = P.get(d),
-        F = null === (r = G.get(B(null != E ? E : null, d))) || void 0 === r ? void 0 : r.launchParams,
+    var n, r, i, a, s, o, l;
+    let { location: u, applicationId: c, launchId: d, compositeInstanceId: f, participants: h } = e,
+        p = (0, T.Z)(c);
+    if (null == p) return;
+    let m = (0, y.p)(u),
+        E = null != m && null !== (r = k.get(m)) && void 0 !== r ? r : L,
+        v = null != E && 0 === E.length,
+        I = null !== (i = U.get(u.id)) && void 0 !== i ? i : L,
+        S = I.find((e) => e.applicationId === c),
+        A = h.map((e) => e.userId),
+        N = _.default.getId(),
+        C = A.some((e) => e === N),
+        O = null === (n = h.find((e) => e.userId === N)) || void 0 === n ? void 0 : n.sessionId,
+        D = h.some((e) => (0, b.J)(e)),
+        x = P.get(c),
+        w = G.get(B(null != m ? m : null, c)),
+        F = null == w ? void 0 : w.launchParams,
         Z = {
-            applicationId: d,
-            location: c,
-            launchId: f,
-            compositeInstanceId: h,
-            url: m,
-            userIds: new Set(N),
-            participants: p,
-            referrerId: null !== (s = null == w ? void 0 : w.referrerId) && void 0 !== s ? s : null == F ? void 0 : F.referrerId,
-            customId: null !== (o = null == w ? void 0 : w.customId) && void 0 !== o ? o : null == F ? void 0 : F.customId
+            applicationId: c,
+            location: u,
+            launchId: d,
+            compositeInstanceId: f,
+            url: p,
+            userIds: new Set(A),
+            participants: h,
+            referrerId: null !== (a = null == x ? void 0 : x.referrerId) && void 0 !== a ? a : null == F ? void 0 : F.referrerId,
+            customId: null !== (s = null == x ? void 0 : x.customId) && void 0 !== s ? s : null == F ? void 0 : F.customId
         };
-    O &&
-        null != w &&
-        P.set(w.applicationId, {
-            ...w,
+    C &&
+        null != x &&
+        P.set(x.applicationId, {
+            ...x,
             ...Z
         });
-    let V = !x;
-    null != w && c.id === w.location.id && d === (null == w ? void 0 : w.applicationId) && ((!O && Array.from(w.userIds).some((e) => e === C)) || V)
-        ? (P.delete(d), g.S.dispatch(R.CkL.RELEASE_ACTIVITY_WEB_VIEW))
-        : O &&
-          (null == w || w.applicationId !== d || w.location.id !== c.id) &&
-          D === _.default.getSessionId() &&
+    let V = !D;
+    null != x && u.id === x.location.id && c === (null == x ? void 0 : x.applicationId) && ((!C && Array.from(x.userIds).some((e) => e === N)) || V)
+        ? (P.delete(c), g.S.dispatch(R.CkL.RELEASE_ACTIVITY_WEB_VIEW))
+        : C &&
+          (null == x || x.applicationId !== c || x.location.id !== u.id) &&
+          O === _.default.getSessionId() &&
           ei({
-              applicationId: d,
-              launchId: f,
-              compositeInstanceId: h,
-              location: c,
-              participants: p,
-              isFirstActivityInChannel: I,
-              isStart: null == A,
+              applicationId: c,
+              launchId: d,
+              compositeInstanceId: f,
+              location: u,
+              participants: h,
+              isFirstActivityInChannel: v,
+              isStart: null == S,
               referrerId: Z.referrerId,
-              customId: Z.customId
+              customId: Z.customId,
+              inviterUserId: null == w ? void 0 : w.inviterUserId
           });
-    let j = S.filter((e) => e.applicationId !== d);
-    if ((N.length > 0 && j.push(Z), U.set(c.id, j), null != E)) {
-        let e = (null !== (l = k.get(E)) && void 0 !== l ? l : []).filter((e) => e.applicationId !== d),
-            n = X((0, y.j)(c)),
-            r = (null !== (u = M.get(n)) && void 0 !== u ? u : []).filter((e) => !(e.applicationId === d && e.location.id === c.id));
-        N.length > 0 && (e.push(Z), r.push(Z)), k.set(E, e), M.set(n, r);
+    let j = I.filter((e) => e.applicationId !== c);
+    if ((A.length > 0 && j.push(Z), U.set(u.id, j), null != m)) {
+        let e = (null !== (o = k.get(m)) && void 0 !== o ? o : []).filter((e) => e.applicationId !== c),
+            n = X((0, y.j)(u)),
+            r = (null !== (l = M.get(n)) && void 0 !== l ? l : []).filter((e) => !(e.applicationId === c && e.location.id === u.id));
+        A.length > 0 && (e.push(Z), r.push(Z)), k.set(m, e), M.set(n, r);
     }
 }
 function $(e) {
@@ -185,18 +187,18 @@ function er(e) {
 }
 function ei(e) {
     var n, r;
-    let { applicationId: a, launchId: s, compositeInstanceId: o, location: l, participants: u, isFirstActivityInChannel: d, isStart: f, referrerId: E, customId: b } = e,
-        S = (0, T.Z)(a),
-        N = _.default.getSessionId();
-    if (null == S || null == N || (null === (n = P.get(a)) || void 0 === n ? void 0 : n.location.id) === l.id) return !1;
-    let O = (0, y.p)(l),
-        D = h.Z.getChannel(O),
-        L = null == D ? void 0 : D.getGuildId();
-    if (null == m.default.getCurrentUser() || (!(0, I.s)() && null == L && !(null !== (r = null == D ? void 0 : D.isPrivate()) && void 0 !== r && r))) return !1;
+    let { applicationId: a, launchId: s, compositeInstanceId: o, location: l, participants: u, isFirstActivityInChannel: d, isStart: f, referrerId: E, customId: b, inviterUserId: S } = e,
+        N = (0, T.Z)(a),
+        O = _.default.getSessionId();
+    if (null == N || null == O || (null === (n = P.get(a)) || void 0 === n ? void 0 : n.location.id) === l.id) return !1;
+    let D = (0, y.p)(l),
+        L = h.Z.getChannel(D),
+        x = null == L ? void 0 : L.getGuildId();
+    if (null == m.default.getCurrentUser() || (!(0, I.s)() && null == x && !(null !== (r = null == L ? void 0 : L.isPrivate()) && void 0 !== r && r))) return !1;
     i = l;
-    let x = {
+    let w = {
         applicationId: a,
-        url: S,
+        url: N,
         userIds: new Set(u.map((e) => e.userId)),
         participants: u,
         connectedSince: Date.now(),
@@ -206,21 +208,22 @@ function ei(e) {
         referrerId: E,
         customId: b
     };
-    P.set(a, x),
+    P.set(a, w),
         g.S.dispatch(R.CkL.OPEN_EMBEDDED_ACTIVITY, {
             location: l,
             applicationId: a,
             isFirstActivityInChannel: d,
             isStart: f,
             participants: u,
-            embeddedActivity: x
+            embeddedActivity: w,
+            inviterUserId: S
         }),
         (0, v.R)()
             ? ((z = C.Ez.ACTIVITY_POPOUT_WINDOW),
               c.Z.wait(() => {
                   c.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
               }))
-            : (z = O !== p.Z.getChannelId() || (0, A.Z)(O) ? C.Ez.PIP : C.Ez.PANEL),
+            : (z = D !== p.Z.getChannelId() || (0, A.Z)(D) ? C.Ez.PIP : C.Ez.PANEL),
         K.set(ey(l.id, a), Date.now());
 }
 function ea(e) {
@@ -303,10 +306,11 @@ let e_ = () => {
     D.shouldShowNewActivityIndicator = !1;
 };
 function eh(e) {
-    let { applicationId: n, componentId: r, commandOrigin: i, launchParams: a, channelId: s } = e;
+    let { applicationId: n, componentId: r, commandOrigin: i, launchParams: a, channelId: s, inviterUserId: o } = e;
     G.set(B(s, n), {
         isLaunching: !0,
         componentId: r,
+        inviterUserId: o,
         launchParams: a
     }),
         (q = i === f.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? C.MI.NO_CHAT : C.MI.RESIZABLE);

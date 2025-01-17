@@ -4,13 +4,15 @@ r.d(n, {
     }
 });
 var i = r(570140);
-function a(e, n, r, a, s) {
+function a(e) {
+    let { channelId: n, applicationId: r, intent: a, inviterUserId: s, analyticsLocations: o, commandOrigin: l } = e;
     i.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_DEFERRED_OPEN',
-        channelId: e,
-        applicationId: n,
+        channelId: n,
+        applicationId: r,
         intent: a,
-        analyticsLocations: r,
-        commandOrigin: s
+        inviterUserId: s,
+        analyticsLocations: o,
+        commandOrigin: l
     });
 }
