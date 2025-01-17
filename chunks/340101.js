@@ -1,21 +1,22 @@
-n.d(t, {
+r.d(n, {
     C5: function () {
-        return l;
+        return i;
     },
     ZL: function () {
-        return r;
+        return s;
     },
     js: function () {
-        return a;
+        return o;
     }
 });
 var i,
-    l,
-    o = n(981631);
-function r(e) {
-    return (null == e ? void 0 : e.type) === o.Odu.GO_LIVE;
+    a = r(981631);
+function s(e) {
+    return (null == e ? void 0 : e.type) === a.Odu.GO_LIVE;
 }
-function a(e) {
-    return e.type === o.Odu.VIDEO;
+function o(e) {
+    return e.type === a.Odu.VIDEO;
 }
-((i = l || (l = {})).HORIZONTAL = 'horizontal'), (i.VERTICAL = 'vertical');
+!(function (e) {
+    (e.HORIZONTAL = 'horizontal'), (e.VERTICAL = 'vertical');
+})(i || (i = {}));
