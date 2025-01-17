@@ -337,6 +337,13 @@ let m = {
             type: 'OVERLAY_CONTENT_INVENTORY_READY',
             contentInventoryEntries: e
         });
+    },
+    setGpuBoostRequested(e, n) {
+        o.Z.dispatch({
+            type: 'OVERLAY_SET_GPU_BOOST_REQUESTED',
+            reason: e,
+            enabled: n
+        });
     }
 };
 n.Z = m;

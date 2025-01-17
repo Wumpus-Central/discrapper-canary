@@ -535,6 +535,10 @@ function M(e) {
             let { getWindowFullscreenTypeExtraByPid: r } = this.getDiscordUtils();
             return null == r || null == n ? { quns: v.Ng.QUNS_UNKNOWN } : r(e, n);
         },
+        SetGPUBoostEnabledByPid(e, n) {
+            let { setGPUBoostEnabledByPid: r } = this.getDiscordUtils();
+            return null !== r && r(e, n);
+        },
         isModuleVersionAtLeast(e, n) {
             var r, i, a;
             let s = [...(null != C ? C : [0, 0, 0])];
