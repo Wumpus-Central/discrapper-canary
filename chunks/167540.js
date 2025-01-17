@@ -47,7 +47,8 @@ function _() {
                         setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
                         children: (0, i.jsx)(m.Z, {
                             previewEnabled: t,
-                            onEnablePreview: () => n(!0)
+                            onEnablePreview: () => n(!0),
+                            onCancelPreview: () => n(!1)
                         })
                     }),
                     !e && (0, i.jsx)(f, {})

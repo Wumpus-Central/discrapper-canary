@@ -22,25 +22,26 @@ var i = n(200651),
 let _ = 387,
     E = 218;
 function C(e) {
-    let { previewEnabled: t, onEnablePreview: n } = e,
-        C = g.Z.getCameraComponent(),
-        [T, S] = r.useState((0, c.P)(h.default.getCurrentUser())),
-        b = r.useRef(!1),
-        I = r.useRef(T),
-        N = (0, o.O)(),
-        v = (0, s.e7)([g.Z], () => Object.values(g.Z.getVideoDevices()).length > 0);
+    let { previewEnabled: t, onEnablePreview: n, onCancelPreview: C } = e,
+        T = g.Z.getCameraComponent(),
+        [S, b] = r.useState((0, c.P)(h.default.getCurrentUser())),
+        I = r.useRef(!1),
+        N = r.useRef(S),
+        v = (0, o.O)(),
+        A = (0, s.e7)([g.Z], () => Object.values(g.Z.getVideoDevices()).length > 0);
     return (
         r.useEffect(
             () => () => {
-                b.current && l.Z.wait(() => (0, d.Up)(I.current));
+                I.current && l.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: T,
+            selectedBackgroundOption: S,
             onSelectBackgroundOption: (e) => {
-                (b.current = !0), (I.current = e), S(e), (0, u.wG)(e, { location: N.location }).catch(p.dG4);
+                (I.current = !0), (N.current = e), b(e), (0, u.wG)(e, { location: v.location }).catch(p.dG4);
             },
+            onCancelPreview: C,
             renderCamera: (e) =>
                 t
                     ? (0, i.jsx)('div', {
@@ -48,7 +49,7 @@ function C(e) {
                           children: (0, i.jsxs)('div', {
                               className: f.camera,
                               children: [
-                                  (0, i.jsx)(C, {
+                                  (0, i.jsx)(T, {
                                       deviceId: e,
                                       width: _,
                                       height: E,
@@ -63,12 +64,12 @@ function C(e) {
                           children: [
                               (0, i.jsx)('div', { className: f.previewImage }),
                               (0, i.jsx)(a.Tooltip, {
-                                  text: v ? null : x.intl.string(x.t['8jSzSU']),
+                                  text: A ? null : x.intl.string(x.t['8jSzSU']),
                                   children: (e) =>
                                       (0, i.jsx)(a.Button, {
                                           ...e,
                                           onClick: n,
-                                          disabled: !v,
+                                          disabled: !A,
                                           children: x.intl.string(x.t.JIf4v7)
                                       })
                               })
