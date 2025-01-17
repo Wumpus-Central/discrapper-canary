@@ -95,14 +95,13 @@ let T = (e) => {
                 type: 'COLLECTIBLES_CATEGORIES_FETCH_SUCCESS',
                 categories: e.body.map(_.Z.fromServer)
             });
-        } catch (e) {
-            throw (
-                (l.Z.dispatch({
+        } catch (n) {
+            let e = new c.Hx(n);
+            (0, v.G)(e),
+                l.Z.dispatch({
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_FAILURE',
-                    error: new c.Hx(e)
-                }),
-                new c.Hx(e))
-            );
+                    error: e
+                });
         }
     },
     R = async (e) => {
@@ -119,13 +118,14 @@ let T = (e) => {
                     type: 'COLLECTIBLES_PURCHASES_FETCH_SUCCESS',
                     purchases: r.body.map(m.Z.fromServer)
                 });
-            } catch (e) {
+            } catch (n) {
+                let e = new c.Hx(n);
                 throw (
                     (l.Z.dispatch({
                         type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
-                        error: new c.Hx(e)
+                        error: e
                     }),
-                    new c.Hx(e))
+                    e)
                 );
             }
         }
@@ -148,15 +148,14 @@ let T = (e) => {
                 skuId: e,
                 product: p.Z.fromServer(i.body)
             });
-        } catch (n) {
-            throw (
-                (l.Z.dispatch({
+        } catch (r) {
+            let n = new c.Hx(r);
+            (0, v.G)(n),
+                l.Z.dispatch({
                     type: 'COLLECTIBLES_PRODUCT_FETCH_FAILURE',
                     skuId: e,
-                    error: new c.Hx(n)
-                }),
-                new c.Hx(n))
-            );
+                    error: n
+                });
         }
     },
     D = async (e) => {
@@ -176,14 +175,15 @@ let T = (e) => {
                 skuId: e,
                 purchases: null === (n = r.body) || void 0 === n ? void 0 : n.map(m.Z.fromServer)
             });
-        } catch (n) {
+        } catch (r) {
+            let n = new c.Hx(r);
             throw (
                 (l.Z.dispatch({
                     type: 'COLLECTIBLES_CLAIM_FAILURE',
                     skuId: e,
                     error: n
                 }),
-                new c.Hx(n))
+                n)
             );
         }
     },
@@ -200,7 +200,7 @@ let T = (e) => {
                 })
             ).body.valid;
         } catch (e) {
-            throw new c.Hx(e);
+            return (0, v.G)(new c.Hx(e)), !1;
         }
     },
     x = (e) => {
@@ -225,7 +225,7 @@ let T = (e) => {
                 marketings: h.s.fromServer(e.body)
             });
         } catch (e) {
-            throw (l.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' }), new c.Hx(e));
+            (0, v.G)(new c.Hx(e)), l.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
         }
     },
     P = async (e) => {
@@ -244,11 +244,12 @@ let T = (e) => {
                 type: 'COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS',
                 shopHome: g.Y.fromServer(e.body)
             });
-        } catch (e) {
-            l.Z.dispatch({
-                type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
-                error: new c.Hx(e)
-            }),
-                (0, v.X)(new c.Hx(e));
+        } catch (n) {
+            let e = new c.Hx(n);
+            (0, v.G)(e),
+                l.Z.dispatch({
+                    type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
+                    error: e
+                });
         }
     };

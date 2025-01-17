@@ -24,11 +24,8 @@ async function h(e) {
                     await a.ZP.fetchApplication(i.application_id);
                 } catch (e) {}
         }
-        if (i.application_id === u.XAJ)
-            try {
-                await (0, c.jr)(i.sku_id);
-            } catch (e) {}
         return (
+            i.application_id === u.XAJ && (await (0, c.jr)(i.sku_id)),
             l.Z.dispatch({
                 type: 'GIFT_CODE_RESOLVE_SUCCESS',
                 giftCode: i

@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(881052),
+    s = r(479531),
     o = r(439170),
     l = r(25251),
     u = r(981631);
@@ -35,12 +35,13 @@ let c = (e) => {
                         type: 'USER_PROFILE_EFFECTS_FETCH_SUCCESS',
                         profileEffects: n
                     });
-                } catch (e) {
-                    a.Z.dispatch({
-                        type: 'USER_PROFILE_EFFECTS_FETCH_FAILURE',
-                        error: e
-                    }),
-                        (0, o.X)(new s.Hx(e));
+                } catch (n) {
+                    let e = new s.Z(n);
+                    (0, o.G)(e),
+                        a.Z.dispatch({
+                            type: 'USER_PROFILE_EFFECTS_FETCH_FAILURE',
+                            error: e
+                        });
                 }
             }
         }
