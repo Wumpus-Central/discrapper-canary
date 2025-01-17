@@ -47,7 +47,7 @@ let N = new d.Z('CloudUpload.tsx'),
 })(i || (i = {}));
 class R {
     constructor() {
-        A(this, 'numChunks', void 0), A(this, 'totalRequestCount', void 0), A(this, 'timing', {}), A(this, 'compressAndExtractDisabled', void 0), A(this, 'fileAlreadyPrepped', void 0), A(this, 'imageCompressionQuality', void 0), A(this, 'videoCompressionQuality', void 0), A(this, 'convertedMimeType', void 0), A(this, 'sourceMediaWidth', void 0), A(this, 'sourceMediaHeight', void 0), A(this, 'sourceMediaFormat', void 0), A(this, 'sourceVideoBitrate', void 0), A(this, 'sourceVideoFramerate', void 0), A(this, 'videoDurationMs', void 0), A(this, 'sourceVideoProfile', void 0), A(this, 'sourceVideoLevel', void 0), A(this, 'targetVideoWidth', void 0), A(this, 'targetVideoHeight', void 0), A(this, 'targetVideoBitrate', void 0);
+        A(this, 'numChunks', void 0), A(this, 'totalRequestCount', void 0), A(this, 'timing', {}), A(this, 'compressAndExtractDisabled', void 0), A(this, 'fileAlreadyPrepped', void 0), A(this, 'imageCompressionQuality', void 0), A(this, 'videoCompressionQuality', void 0), A(this, 'convertedMimeType', void 0), A(this, 'sourceMediaWidth', void 0), A(this, 'sourceMediaHeight', void 0), A(this, 'sourceMediaFormat', void 0), A(this, 'sourceVideoBitrate', void 0), A(this, 'sourceVideoFramerate', void 0), A(this, 'videoDurationMs', void 0), A(this, 'sourceVideoProfile', void 0), A(this, 'sourceVideoLevel', void 0), A(this, 'targetVideoWidth', void 0), A(this, 'targetVideoHeight', void 0), A(this, 'targetVideoBitrate', void 0), A(this, 'targetVideoCodec', void 0), A(this, 'targetVideoFramerate', void 0), A(this, 'targetVideoIsHdr', void 0), A(this, 'hevcIsSupported', void 0);
     }
 }
 class O extends b.ZP {
@@ -306,7 +306,7 @@ class O extends b.ZP {
         let r = n.uri,
             i = n.file.name,
             a = n.file.type;
-        if (((0, b.rG)(n.file) && ((this.uploadAnalytics.imageCompressionQuality = n.file.imageCompressionQuality), (this.uploadAnalytics.videoCompressionQuality = n.file.videoCompressionQuality), (this.uploadAnalytics.convertedMimeType = n.file.type), void 0 !== n.file.videoMetadata && ((this.uploadAnalytics.sourceMediaWidth = n.file.videoMetadata.width), (this.uploadAnalytics.sourceMediaHeight = n.file.videoMetadata.height), (this.uploadAnalytics.sourceMediaFormat = n.file.videoMetadata.format), (this.uploadAnalytics.sourceVideoBitrate = n.file.videoMetadata.bitRate), (this.uploadAnalytics.sourceVideoFramerate = n.file.videoMetadata.frameRate), (this.uploadAnalytics.videoDurationMs = n.file.videoMetadata.durationMs), (this.uploadAnalytics.sourceVideoProfile = n.file.videoMetadata.sourceProfile), (this.uploadAnalytics.sourceVideoLevel = n.file.videoMetadata.sourceLevel)), void 0 !== n.file.encodingConfig && ((this.uploadAnalytics.targetVideoWidth = n.file.encodingConfig.targetWidth), (this.uploadAnalytics.targetVideoHeight = n.file.encodingConfig.targetHeight), (this.uploadAnalytics.targetVideoBitrate = n.file.encodingConfig.targetBitrate))), (this.filename = i), null == i || null == r || null == a))
+        if (((0, b.rG)(n.file) && ((this.uploadAnalytics.imageCompressionQuality = n.file.imageCompressionQuality), (this.uploadAnalytics.videoCompressionQuality = n.file.videoCompressionQuality), (this.uploadAnalytics.convertedMimeType = n.file.type), void 0 !== n.file.videoMetadata && ((this.uploadAnalytics.sourceMediaWidth = n.file.videoMetadata.width), (this.uploadAnalytics.sourceMediaHeight = n.file.videoMetadata.height), (this.uploadAnalytics.sourceMediaFormat = n.file.videoMetadata.format), (this.uploadAnalytics.sourceVideoBitrate = n.file.videoMetadata.bitRate), (this.uploadAnalytics.sourceVideoFramerate = n.file.videoMetadata.frameRate), (this.uploadAnalytics.videoDurationMs = n.file.videoMetadata.durationMs), (this.uploadAnalytics.sourceVideoProfile = n.file.videoMetadata.sourceProfile), (this.uploadAnalytics.sourceVideoLevel = n.file.videoMetadata.sourceLevel)), void 0 !== n.file.encodingConfig && ((this.uploadAnalytics.targetVideoWidth = n.file.encodingConfig.targetWidth), (this.uploadAnalytics.targetVideoHeight = n.file.encodingConfig.targetHeight), (this.uploadAnalytics.targetVideoBitrate = n.file.encodingConfig.targetBitrate), (this.uploadAnalytics.targetVideoCodec = n.file.encodingConfig.useHEVC ? 'hvc1' : 'avc1'), (this.uploadAnalytics.targetVideoFramerate = n.file.encodingConfig.frameRate), (this.uploadAnalytics.targetVideoIsHdr = n.file.encodingConfig.createHDR), (this.uploadAnalytics.hevcIsSupported = n.file.encodingConfig.hevcIsSupported))), (this.filename = i), null == i || null == r || null == a))
             throw (
                 (N.error(
                     'Insufficient file data: '
@@ -427,6 +427,10 @@ class O extends b.ZP {
             target_video_width: this.uploadAnalytics.targetVideoWidth,
             target_video_height: this.uploadAnalytics.targetVideoHeight,
             target_video_bitrate: this.uploadAnalytics.targetVideoBitrate,
+            target_video_codec: this.uploadAnalytics.targetVideoCodec,
+            target_video_framerate: this.uploadAnalytics.targetVideoFramerate,
+            target_video_is_hdr: this.uploadAnalytics.targetVideoIsHdr,
+            hevc_is_supported: this.uploadAnalytics.hevcIsSupported,
             source_video_framerate: this.uploadAnalytics.sourceVideoFramerate,
             channel_id: this.channelId,
             connection_type: m.Z.getType(),
