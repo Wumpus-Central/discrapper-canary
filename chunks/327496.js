@@ -1,6 +1,6 @@
 r.d(n, {
     L: function () {
-        return E;
+        return m;
     }
 });
 var i = r(653041);
@@ -10,75 +10,70 @@ var a = r(200651),
     l = r.n(o),
     u = r(512969),
     c = r(481060),
-    d = r(540059),
-    f = r(624138),
-    _ = r(369455);
-let h = [18, 18, 16, 16, 14, 12, 10];
-function p(e) {
+    d = r(624138),
+    f = r(369455);
+let _ = [18, 18, 16, 16, 14, 12, 10];
+function h(e) {
     var n;
-    return null !== (n = h[e.length - 1]) && void 0 !== n ? n : h[h.length - 1];
+    return null !== (n = _[e.length - 1]) && void 0 !== n ? n : _[_.length - 1];
 }
-function m(e, n) {
+function p(e, n) {
     return l()({
-        [_.childWrapper]: !0,
-        [_.childWrapperNoHoverBg]: 'always' === e,
-        [_.childWrapperHoverScale]: 'on-hover' === e && n
+        [f.childWrapper]: !0,
+        [f.childWrapperNoHoverBg]: 'always' === e,
+        [f.childWrapperHoverScale]: 'on-hover' === e && n
     });
 }
-function g(e) {
-    return e ? 44 : 48;
-}
-let E = (e) => {
+let m = (e) => {
     let n,
         r,
-        { backgroundStyle: i = 'always', children: o, icon: h, name: E, ariaLabel: v, className: I, style: T, to: b, onClick: y, selected: S = !1, ...A } = e,
-        N = (0, u.k6)(),
-        C = (0, d.Q3)('NavItem');
-    null == h && null != E && (r = p((n = (0, f.Zg)(E))));
-    let R = s.useCallback(
+        { backgroundStyle: i = 'always', children: o, icon: _, name: m, ariaLabel: g, className: E, style: v, to: I, onClick: T, selected: b = !1, ...y } = e,
+        S = (0, u.k6)();
+    null == _ && null != m && (r = h((n = (0, d.Zg)(m))));
+    let A = s.useCallback(
             (e) => {
-                if (null == b);
-                else if ('string' == typeof b) N.push(b);
+                if (null == I);
+                else if ('string' == typeof I) S.push(I);
                 else {
-                    let { pathname: e = '', state: n } = b;
-                    N.push(e, n);
+                    let { pathname: e = '', state: n } = I;
+                    S.push(e, n);
                 }
-                null != y && y(e);
+                null != T && T(e);
             },
-            [N, b, y]
+            [S, I, T]
         ),
-        O = g(C);
+        N = (0, c.useToken)(c.tokens.modules.guildbar.AVATAR_SIZE);
     return (0, a.jsxs)(c.Clickable, {
-        ...A,
-        onClick: R,
-        className: l()(I, _.wrapper, { [_.selected]: S }),
-        'aria-label': null != v && '' !== v ? v : null != E ? E : '',
+        ...y,
+        onClick: A,
+        className: l()(E, f.wrapper, { [f.selected]: b }),
+        'aria-label': null != g && '' !== g ? g : null != m ? m : '',
         style: {
-            ...T,
+            ...v,
             fontSize: r
         },
         focusProps: { enabled: !1 },
         children: [
             null != n
                 ? (0, a.jsx)('div', {
-                      className: l()(m(i, !1), _.acronym),
+                      className: l()(p(i, !1), f.acronym),
                       'aria-hidden': !0,
                       children: n
                   })
                 : null,
-            null != h
+            null != _
                 ? (0, a.jsx)('img', {
-                      className: _.icon,
-                      src: h,
+                      className: f.icon,
+                      src: _,
                       alt: ' ',
-                      width: O,
-                      height: O,
+                      width: N,
+                      height: N,
                       'aria-hidden': !0
                   })
                 : null,
             null != o
                 ? (0, a.jsx)('div', {
-                      className: m(i, !0),
+                      className: p(i, !0),
                       children: o
                   })
                 : null

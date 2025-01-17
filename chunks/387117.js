@@ -6,6 +6,17 @@ r.d(n, {
 var i = r(47120);
 let a = {
     Modules: {
+        guildbar: {
+            AVATAR_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: n } = e;
+                    if (0 === n.length) return 48;
+                    for (let e of n) if ('visual-refresh' === e) return 40;
+                    return 48;
+                }
+            },
+            FOLDER_SIZE: { resolve: () => 48 }
+        },
         chat: { RESIZE_HANDLE_WIDTH: { resolve: () => 8 } },
         modal: {
             HORIZONTAL_PADDING: {

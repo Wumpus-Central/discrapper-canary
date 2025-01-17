@@ -108,7 +108,8 @@ function eR(e) {
         u = (0, eg.NZ)({
             avatarDecoration: d,
             size: (0, A.y9)(m.AvatarSizes.SIZE_32)
-        });
+        }),
+        h = (0, m.useToken)(m.tokens.modules.guildbar.AVATAR_SIZE);
     return null == r
         ? null
         : (0, i.jsx)(_.Z, {
@@ -145,8 +146,8 @@ function eR(e) {
                           className: ex.avatarWrapper,
                           children: [
                               (0, i.jsx)(eP, {
-                                  size: c ? m.AvatarSizes.SIZE_44 : m.AvatarSizes.SIZE_32,
-                                  src: r.getAvatarURL(void 0, c ? 44 : 32, !1),
+                                  size: c ? m.AvatarSizes['SIZE_'.concat(h)] : m.AvatarSizes.SIZE_32,
+                                  src: r.getAvatarURL(void 0, c ? h - 4 : 32, !1),
                                   avatarDecoration: u,
                                   'aria-label': r.username,
                                   status: n ? eA.Skl.STREAMING : l,

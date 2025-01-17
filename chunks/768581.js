@@ -67,14 +67,14 @@ let S = i.canUseWebp(),
     R = (0, g.isAndroid)();
 function O(e) {
     let n,
-        { endpoint: r, path: i, id: a, hash: s, size: o, canAnimate: l = !1, keepAspectRatio: u, format: c = null } = e;
+        { endpoint: r, path: i, id: a, hash: s, size: o, lossless: l = !1, canAnimate: u = !1, keepAspectRatio: c, format: d = null } = e;
     if (null == a || null == s) return;
-    let d = null != c ? c : l && en(s) ? 'gif' : 'jpg';
-    l && er(s) && (d = 'mp4');
-    let f = window.GLOBAL_ENV.CDN_HOST;
-    if ((null != f ? ('jpg' === d && (d = S ? 'webp' : 'png'), (n = ''.concat(location.protocol, '//').concat(f, '/').concat(i, '/').concat(a, '/').concat(s, '.').concat(d))) : (n = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r(a, s, d)), 'mp4' === d)) return n;
-    let h = {};
-    return null != o && (h.size = (0, p.oO)(o * (0, p.x_)())), null != u && (h.keep_aspect_ratio = u), n + '?'.concat(_.stringify(h));
+    let f = null != d ? d : u && en(s) ? 'gif' : 'jpg';
+    u && er(s) && (f = 'mp4');
+    let h = window.GLOBAL_ENV.CDN_HOST;
+    if ((null != h ? ('jpg' === f && (f = S ? 'webp' : 'png'), (n = ''.concat(location.protocol, '//').concat(h, '/').concat(i, '/').concat(a, '/').concat(s, '.').concat(f))) : (n = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r(a, s, f)), 'mp4' === f)) return n;
+    let m = {};
+    return null != o && (m.size = (0, p.oO)(o * (0, p.x_)())), null != c && (m.keep_aspect_ratio = c), l && (m.quality = 'lossless'), n + '?'.concat(_.stringify(m));
 }
 function D(e) {
     let { id: n, animated: r, size: i, forcePNG: a = !1 } = e,
@@ -246,14 +246,15 @@ function K(e) {
     return es(W(e));
 }
 function z(e) {
-    let { id: n, icon: r, size: i, canAnimate: a = !1 } = e;
+    let { id: n, icon: r, size: i, canAnimate: a = !1, lossless: s = !1 } = e;
     return O({
         endpoint: v.ANM.GUILD_ICON,
         path: 'icons',
         id: n,
         hash: r,
         size: i,
-        canAnimate: a
+        canAnimate: a,
+        lossless: s
     });
 }
 function q(e) {

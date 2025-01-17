@@ -451,6 +451,7 @@ class eF extends r.PureComponent {
                             children: this.props.isVisualRefreshEnabled
                                 ? (0, i.jsx)(f.Text, {
                                       variant: 'text-sm/medium',
+                                      color: 'text-secondary',
                                       children: o
                                   })
                                 : o

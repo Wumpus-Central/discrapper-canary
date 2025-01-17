@@ -50,12 +50,14 @@ class h extends a.Z {
         return null !== (e = this.safetyAlertsChannelId) && void 0 !== e ? e : this.publicUpdatesChannelId;
     }
     getIconURL(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return s.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
-            canAnimate: n
+            canAnimate: n,
+            lossless: r
         });
     }
     getIconSource(e) {

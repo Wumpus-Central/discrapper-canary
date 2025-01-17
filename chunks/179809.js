@@ -9,7 +9,7 @@ var i = n(200651),
     r = n(120356),
     a = n.n(r),
     o = n(999153),
-    s = n(476183),
+    s = n(642128),
     c = n(91192),
     u = n(477690),
     d = n(481060),
@@ -30,7 +30,7 @@ var i = n(200651),
 let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
         { id: O, name: V, children: H } = t,
         F = (0, p.Q3)('FolderItem'),
         [W, z] = l.useState(!1),
@@ -62,15 +62,16 @@ function j(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != P && '' !== P ? P : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(O)),
         en = 'folder-items-'.concat(O),
         ei = (function (e) {
-            let t = (0, p.Q3)('FolderItem.useHeight'),
-                { density: n } = (0, d.useThemeContext)();
-            if (!t) return 56 * e;
-            let i = e * (44 + ('cozy' === n ? 8 : 4));
-            return 'cozy' === n ? i - 4 : i;
+            let t = (0, d.useToken)(d.tokens.modules.guildbar.AVATAR_SIZE),
+                n = (0, p.Q3)('FolderItem.useHeight'),
+                { density: i } = (0, d.useThemeContext)();
+            if (!n) return e * (t + 8);
+            let l = e * (t + ('cozy' === i ? 8 : 4));
+            return 'cozy' === i ? l - 4 : l;
         })(H.length),
         el = (0, d.useTransition)(!J && s, {
             from: { height: 0 },
@@ -102,7 +103,7 @@ function j(e) {
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: A,
+                                  forceCircular: P,
                                   sorting: M,
                                   mediaState: u,
                                   mentionCount: f,
