@@ -69,7 +69,7 @@ r.d(n, {
         return eH;
     },
     Wz: function () {
-        return tR;
+        return tO;
     },
     XK: function () {
         return e1;
@@ -81,7 +81,7 @@ r.d(n, {
         return e2;
     },
     _O: function () {
-        return tO;
+        return tD;
     },
     a5: function () {
         return eW;
@@ -135,7 +135,7 @@ r.d(n, {
         return eu;
     },
     u0: function () {
-        return tD;
+        return tL;
     },
     uV: function () {
         return eg;
@@ -150,7 +150,7 @@ r.d(n, {
         return e4;
     },
     xG: function () {
-        return tP;
+        return tM;
     },
     yd: function () {
         return w.yd;
@@ -509,7 +509,7 @@ function el(e) {
     var n, r, i, a, s, o, l, u, c, d;
     let { subscription: f, planId: _, price: p, includePremiumGuilds: g, hasDiscountApplied: E, activeDiscountInfo: v, renewalInvoicePreview: I, hasFractionalPremiumWithSub: T } = e,
         y = U.GP[_],
-        S = tC(W(y.id), y.interval),
+        S = tR(W(y.id), y.interval),
         A = eG(f) || (null == f.paymentSourceId && !f.isPurchasedExternally && !(null === (n = b.default.getCurrentUser()) || void 0 === n ? void 0 : n.hasFreePremium())),
         N = null != p && null == f.paymentGateway,
         C = f.status === M.O0b.UNPAID && null !== f.latestInvoice && (null === (r = f.latestInvoice) || void 0 === r ? void 0 : r.status) === M.hUK.OPEN,
@@ -776,7 +776,7 @@ function em(e) {
     return null;
 }
 function eg(e) {
-    let n = A.Z.getPlanIdsForSkus([tR(U.Si.GUILD)]);
+    let n = A.Z.getPlanIdsForSkus([tO(U.Si.GUILD)]);
     f()(null != n, 'Missing guildSubscriptionPlanIds');
     let r = e.find((e) => {
         let { planId: r } = e;
@@ -944,13 +944,13 @@ function eA(e, n) {
 function eN(e, n) {
     let r = h()(e);
     if (n.length > 0) {
-        let e = tw(n);
+        let e = tP(n);
         r = r.add(e, 'hours');
     }
     return r.toDate();
 }
 function eC(e) {
-    let n = tw(e.unactivatedUnits);
+    let n = tP(e.unactivatedUnits);
     if (!(n > 0 && e.fractionalState === U.a$.NONE)) return '';
     let r = {
             days: G.t.fYmir6,
@@ -1111,7 +1111,7 @@ function eV(e, n, r, i) {
         let n = Error('Unsupported plan');
         throw ((0, C.q2)(n, { tags: { planId: e } }), n);
     }
-    let o = A.Z.getForSkuAndInterval(tR(U.Si.GUILD), s.interval, s.intervalCount);
+    let o = A.Z.getForSkuAndInterval(tO(U.Si.GUILD), s.interval, s.intervalCount);
     if (null == o) {
         let n = Error('Unsupported plan');
         throw ((0, C.q2)(n, { tags: { planId: e } }), n);
@@ -1439,32 +1439,35 @@ function tA(e) {
 function tN(e) {
     return (0, v.ks)(v.qH, e);
 }
-function tC(e, n) {
+function tC(e) {
+    return (0, v.ks)(v.hs, e);
+}
+function tR(e, n) {
     let r = (0, P.T4)(e.amount, e.currency),
         i = ee(n);
     return ''.concat(r, '/').concat(i);
 }
-function tR(e) {
+function tO(e) {
     return e;
 }
-function tO(e) {
+function tD(e) {
     return 'isNitroLocked' in e;
 }
-function tD(e) {
+function tL(e) {
     return null != e && U.OT.includes(e) ? 1 : 2;
 }
-function tL(e) {
+function tx(e) {
     if (e === U.rV.YEAR) return G.intl.string(G.t.tfqrho);
     if (e === U.rV.MONTH) return G.intl.string(G.t.FPybU1);
     throw Error('Invalid interval type: '.concat(e));
 }
-function tx(e) {
+function tw(e) {
     return null != e && !e.isProvisional && !e.bot;
 }
-function tw(e) {
-    return tP(e.map((e) => e.skuId));
-}
 function tP(e) {
+    return tM(e.map((e) => e.skuId));
+}
+function tM(e) {
     return e.reduce((e, n) => {
         let [r, i] = U.Cx[n],
             a = 1;
@@ -1483,7 +1486,7 @@ n.ZP = Object.freeze({
     isPremiumAtLeast: w.yd,
     isPremium: w.I5,
     isPremiumExactly: w.M5,
-    isPremiumEligible: tx,
+    isPremiumEligible: tw,
     getPrice: K,
     getDefaultPrice: W,
     getInterval: X,
@@ -1494,8 +1497,8 @@ n.ZP = Object.freeze({
     getDisplayPremiumType: es,
     getPremiumPlanOptions: ef,
     getUpgradeEligibilities: ep,
-    getReverseTrialWeeks: tD,
-    formatInterval: tL,
+    getReverseTrialWeeks: tL,
+    formatInterval: tx,
     getPlanDescription: el,
     isPremiumSku: ed,
     getClosestUpgrade: em,
@@ -1524,8 +1527,8 @@ n.ZP = Object.freeze({
     getPremiumTypeFromSubscription: e8,
     getPremiumTypeFromSubscriptionRenewalMutations: e9,
     getPremiumGradientColor: te,
-    getUnactivatedFractionalPremiumHours: tw,
-    castPremiumSubscriptionAsSkuId: tR,
+    getUnactivatedFractionalPremiumHours: tP,
+    castPremiumSubscriptionAsSkuId: tO,
     canUseAnimatedEmojis: tn,
     canUseEmojisEverywhere: tr,
     canUseSoundboardEverywhere: ti,
@@ -1551,6 +1554,7 @@ n.ZP = Object.freeze({
     canUseCustomBackgrounds: tS,
     canUseCollectibles: tA,
     canUseCustomNotificationSounds: tN,
-    formatPriceString: tC,
+    canUsePremiumVoiceFilters: tC,
+    formatPriceString: tR,
     StreamQuality: a
 });
