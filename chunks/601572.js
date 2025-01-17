@@ -1,92 +1,93 @@
-n.r(o),
-    n.d(o, {
+o.r(n),
+    o.d(n, {
         default: function () {
             return w;
         }
     }),
-    n(47120);
-var a = n(200651),
-    d = n(192379),
-    t = n(481060),
-    r = n(846027),
-    i = n(410575),
-    c = n(2052),
-    l = n(100527),
-    s = n(906732),
-    u = n(600164),
-    g = n(313201),
-    p = n(695346),
-    k = n(932724),
-    b = n(716161),
-    _ = n(672339),
-    m = n(898531),
-    O = n(131951),
-    h = n(594174),
-    I = n(626135),
-    f = n(747545),
-    C = n(981631),
-    x = n(388032),
-    B = n(845569);
+    o(47120);
+var a = o(200651),
+    d = o(192379),
+    t = o(481060),
+    r = o(846027),
+    i = o(410575),
+    c = o(2052),
+    l = o(100527),
+    s = o(906732),
+    u = o(600164),
+    g = o(313201),
+    p = o(695346),
+    k = o(932724),
+    b = o(716161),
+    _ = o(672339),
+    m = o(898531),
+    O = o(131951),
+    h = o(594174),
+    f = o(626135),
+    C = o(747545),
+    I = o(981631),
+    x = o(388032),
+    B = o(845569);
 let T = 368,
     v = 207;
 function w(e) {
-    let { transitionState: o, videoEnabled: n, onEnable: w, onClose: E } = e,
+    let { transitionState: n, videoEnabled: o, onEnable: w, onClose: E } = e,
         S = O.Z.getCameraComponent(),
         M = (0, g.Dt)(),
         j = (0, m.Z)(),
         R = p.qF.useSetting(),
-        [P, A] = d.useState((0, k.P)(h.default.getCurrentUser())),
-        N = (0, c.O)(),
-        { analyticsLocations: D } = (0, s.ZP)(l.Z.CAMERA_PREVIEW),
-        L = d.useRef(null);
+        [D, P] = d.useState((0, k.P)(h.default.getCurrentUser())),
+        A = (0, c.O)(),
+        { analyticsLocations: L } = (0, s.ZP)(l.Z.CAMERA_PREVIEW),
+        N = d.useRef(null);
     d.useEffect(() => {
-        I.default.track(C.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
+        f.default.track(I.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         d.useEffect(() => {
             var e;
-            null === (e = L.current) || void 0 === e || e.scrollToTop();
+            null === (e = N.current) || void 0 === e || e.scrollToTop();
         }, []);
     let y = async () => {
             await U(), r.Z.setVideoEnabled(!0), null == w || w();
         },
         U = async () => {
             try {
-                await (0, _.wG)(P, {
+                await (0, _.wG)(D, {
                     location: {
-                        page: C.ZY5.PREVIEW_CAMERA_MODAL,
-                        ...N.location
+                        page: I.ZY5.PREVIEW_CAMERA_MODAL,
+                        ...A.location
                     }
                 });
             } catch (e) {}
-            await E(), (0, b.Up)(P);
+            await E(), (0, b.Up)(D);
         };
     return (0, a.jsx)(s.Gt, {
-        value: D,
+        value: L,
         children: (0, a.jsx)(i.Z, {
-            page: C.ZY5.PREVIEW_CAMERA_MODAL,
+            page: I.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, a.jsxs)(t.ModalRoot, {
                 className: B.modalRoot,
                 size: t.ModalSize.DYNAMIC,
                 'aria-labelledby': M,
-                transitionState: o,
+                transitionState: n,
                 children: [
                     (0, a.jsxs)(t.ModalContent, {
                         className: j ? B.contentWithVideoBackgrounds : B.content,
-                        scrollerRef: L,
+                        scrollerRef: N,
                         children: [
                             (0, a.jsx)(t.Heading, {
                                 id: M,
                                 className: B.header,
                                 variant: 'heading-xl/semibold',
-                                children: n ? x.intl.string(x.t.LAwwbW) : x.intl.string(x.t['/HITVF'])
+                                children: o ? x.intl.string(x.t.LAwwbW) : x.intl.string(x.t['/HITVF'])
                             }),
-                            (0, a.jsx)(f.Z, {
+                            (0, a.jsx)(C.Z, {
                                 hidePreviewToggle: !0,
                                 showSmallBackgroundOptions: !0,
                                 hideDeviceHeader: !0,
-                                selectedBackgroundOption: P,
-                                onSelectBackgroundOption: A,
-                                hideDeviceSelector: n,
+                                hideCameraSettingsLink: !0,
+                                selectedBackgroundOption: D,
+                                onSelectBackgroundOption: P,
+                                hideDeviceSelector: o,
                                 renderCamera: (e) =>
                                     (0, a.jsxs)('div', {
                                         className: B.cameraPreview,
@@ -100,7 +101,7 @@ function w(e) {
                                                     height: v
                                                 })
                                             }),
-                                            (0, a.jsx)(f.S, {})
+                                            (0, a.jsx)(C.S, {})
                                         ]
                                     }),
                                 onLearnMore: E
@@ -111,11 +112,11 @@ function w(e) {
                         justify: u.Z.Justify.BETWEEN,
                         children: [
                             (() => {
-                                let e = n ? x.intl.string(x.t.KQENho) : x.intl.string(x.t.kgIe9f);
+                                let e = o ? x.intl.string(x.t.KQENho) : x.intl.string(x.t.kgIe9f);
                                 return (0, a.jsx)(t.Button, {
-                                    onClick: n ? U : y,
+                                    onClick: o ? U : y,
                                     size: t.Button.Sizes.SMALL,
-                                    autoFocus: !n,
+                                    autoFocus: !o,
                                     children: e
                                 });
                             })(),
@@ -124,7 +125,7 @@ function w(e) {
                                 type: t.Checkbox.Types.INVERTED,
                                 value: R,
                                 onChange: () => {
-                                    p.qF.updateSetting(!R), I.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !R });
+                                    p.qF.updateSetting(!R), f.default.track(I.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !R });
                                 },
                                 children: (0, a.jsx)(t.Text, {
                                     variant: 'text-sm/normal',

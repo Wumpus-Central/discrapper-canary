@@ -242,6 +242,10 @@ function M(e) {
         get moduleVersions() {
             return O;
         },
+        get parsedOSRelease() {
+            if (!T.isPlatformEmbedded) return [];
+            return A.os.release.split('.').map((e) => parseInt(e, 10));
+        },
         copy(e) {
             T.isPlatformEmbedded && A.clipboard.copy(e);
         },

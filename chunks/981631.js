@@ -4681,6 +4681,7 @@ let oi = Object.freeze({
     (aS.MESSAGE_POPOUT_MENU_OPENED_DESKTOP = 'message_popout_menu_opened_desktop'),
     (aS.VOICE_CODEC_DETECTED = 'voice_codec_detected'),
     (aS.VOICE_SETTINGS_CHANGED = 'voice_settings_changed'),
+    (aS.SYSTEM_CAMERA_SETTINGS_OPENED = 'system_camera_settings_opened'),
     (aS.CLIP_SAVE_KEYBIND_PRESSED = 'clip_save_keybind_pressed'),
     (aS.CLIP_SAVED = 'clip_saved'),
     (aS.CLIP_SAVE_FAILURE = 'clip_save_failure'),
