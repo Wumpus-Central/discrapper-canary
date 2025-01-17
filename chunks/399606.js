@@ -37,8 +37,8 @@ function d(e, n, r) {
     let c = a.current,
         d = c.state;
     if (null == r || !(0, o.E)(r, c.prevDeps)) {
-        let e = n();
-        (null == d || !i(d, e)) && (d = e);
+        let e;
+        (e = n()), (null == d || !i(d, e)) && (d = e);
     }
     (0, s.useInsertionEffect)(() => {
         (c.getStateFromStores = n), (c.prevDeps = r), (c.state = d);
@@ -47,8 +47,8 @@ function d(e, n, r) {
     return (
         (0, s.useInsertionEffect)(() => {
             let n = () => {
-                    let e = c.getStateFromStores();
-                    !i(c.state, e) && ((c.state = e), f({}));
+                    let e;
+                    (e = c.getStateFromStores()), !i(c.state, e) && ((c.state = e), f({}));
                 },
                 r = new l.F(e, n);
             return r.attach('useStateFromStores'), () => r.detach();
@@ -62,3 +62,4 @@ function f(e, n, r) {
 function _(e, n, r) {
     return d(e, n, r, o.E);
 }
+r(706678);
