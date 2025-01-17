@@ -54,10 +54,11 @@ class R {
             }),
             C(this, 'shouldBoostGPU', () => this.gpuBoostRequests.size > 0),
             C(this, 'flushGPUBoostRequests', async () => {
-                let e = this.shouldBoostGPU();
-                if (this.isGPUBoosted === e) return;
-                let n = await f.Z.processUtils.getGpuProcessId();
-                if (null != n) v.ZP.SetGPUBoostEnabledByPid(n, e) && (this.isGPUBoosted = e);
+                var e, n;
+                let r = this.shouldBoostGPU();
+                if (this.isGPUBoosted === r) return;
+                let i = await (null === f.Z || void 0 === f.Z ? void 0 : null === (n = f.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getGpuProcessId) || void 0 === e ? void 0 : e.call(n));
+                if (null != i) v.ZP.SetGPUBoostEnabledByPid(i, r) && (this.isGPUBoosted = r);
             });
     }
 }
@@ -72,8 +73,8 @@ let O = new _.Z('OverlayStoreV3'),
     U = null,
     B = !1,
     G = !1,
-    F = null;
-class Z {
+    Z = null;
+class F {
     setClickZones(e) {
         if (!!M)
             (this.clickZones = e),
@@ -98,7 +99,7 @@ class Z {
         C(this, 'clickZones', []);
     }
 }
-let V = new Z();
+let V = new F();
 function j(e) {
     var n;
     return null !== (n = x[e]) && void 0 !== n ? n : {};
@@ -291,11 +292,11 @@ function em(e) {
 function eg(e) {
     let { locked: n, pid: r } = e;
     if (!n && !D.has(r)) return;
-    if ((n ? L.delete(r) : L.add(r), null == F || (clearTimeout(F), (F = null), !n)))
+    if ((n ? L.delete(r) : L.add(r), null == Z || (clearTimeout(Z), (Z = null), !n)))
         n
             ? X(n)
-            : (F = setTimeout(() => {
-                  X(n), (F = null);
+            : (Z = setTimeout(() => {
+                  X(n), (Z = null);
               }, 100));
 }
 function eE(e) {
