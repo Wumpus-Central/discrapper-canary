@@ -435,7 +435,7 @@ function eY(e) {
     let { port: n } = e;
     ef = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', 'b0d2f09af985282d47f17c5ce79d6a5aa1cd1689'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', '64b5971ff2d61fa9a059f7d74a0ee0c5b0072fc2'), r.append('rpc', String(n)), r.append('rpc_auth_token', ef), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function eW(e) {
     let { channelId: n, ring: r } = e;
@@ -522,33 +522,33 @@ function e3(e) {
 }
 class e4 extends (o = C.ZP.Store) {
     initialize() {
-        if (!(!et.iP || __OVERLAY__)) this.waitFor(G.ZP, W.default, H.Z, V.Z), U.sr(eB, eU), W.default.addChangeListener(ew), eD(F.v.enabled, F.v.legacyEnabled, F.v.global), R.Z.addInterceptor(eM);
+        if (!(!et.iP || __OVERLAY__)) this.waitFor(G.ZP, W.default, H.ZP, V.Z), U.sr(eB, eU), W.default.addChangeListener(ew), eD(F.v.enabled, F.v.legacyEnabled, F.v.global), R.Z.addInterceptor(eM);
     }
     isInputLocked(e) {
-        return H.Z.isOverlayV3EnabledForPID(e) ? H.Z.isInputLocked(e) : !e_.has(e);
+        return H.ZP.isOverlayV3EnabledForPID(e) ? H.ZP.isInputLocked(e) : !e_.has(e);
     }
     isSupported() {
-        return !!H.Z.isOverlayV3Enabled() || et.iP;
+        return !!H.ZP.isOverlayV3Enabled() || et.iP;
     }
     get enabled() {
-        return H.Z.isOverlayV3Enabled() ? H.Z.enabled : eo;
+        return H.ZP.isOverlayV3Enabled() ? H.ZP.enabled : eo;
     }
     get legacyEnabled() {
-        return !H.Z.isOverlayV3Enabled() && el;
+        return !H.ZP.isOverlayV3Enabled() && el;
     }
     getFocusedPID() {
-        let e = H.Z.getFocusedPID();
-        return null != e ? (H.Z.isOverlayV3EnabledForPID(e) ? e : ec) : ec;
+        let e = H.ZP.getFocusedPID();
+        return null != e ? (H.ZP.isOverlayV3EnabledForPID(e) ? e : ec) : ec;
     }
     isFocusedPidOutOfProcess() {
         let e = this.getFocusedPID();
         return null != e && V.Z.isOverlayOOPEnabledForPid(e);
     }
     isReady(e) {
-        return H.Z.isOverlayV3EnabledForPID(e) ? H.Z.isReady(e) : 'READY' === ei.get(e);
+        return H.ZP.isOverlayV3EnabledForPID(e) ? H.ZP.isReady(e) : 'READY' === ei.get(e);
     }
     isCrashed(e) {
-        return !H.Z.isOverlayV3EnabledForPID(e) && 'CRASHED' === ei.get(e);
+        return !H.ZP.isOverlayV3EnabledForPID(e) && 'CRASHED' === ei.get(e);
     }
     getOverlayPIDStatuses() {
         return ei;

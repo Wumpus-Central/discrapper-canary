@@ -127,8 +127,8 @@ function k(e) {
 }
 function E() {
     let e = (0, s.Wu)([b.Z], () => b.Z.getWidgetsForLayout(_.OVERLAY_V3_LAYOUT_ID)),
-        t = (0, s.e7)([p.Z], () => p.Z.clickZoneDebugMode),
-        n = (0, s.e7)([p.Z], () => p.Z.renderDebugMode),
+        t = (0, s.e7)([p.ZP], () => p.ZP.clickZoneDebugMode),
+        n = (0, s.e7)([p.ZP], () => p.ZP.renderDebugMode),
         l = (0, s.e7)([x.Z], () => x.Z.getForcedRenderMode()),
         [o, g] = a.useState({}),
         [E, w] = a.useState(l),
@@ -204,10 +204,10 @@ function E() {
         []
     );
     let F = () => {
-            u.Z.setClickZoneDebugMode(!p.Z.clickZoneDebugMode);
+            u.Z.setClickZoneDebugMode(!p.ZP.clickZoneDebugMode);
         },
         M = () => {
-            u.Z.setRenderDebugMode(!p.Z.renderDebugMode);
+            u.Z.setRenderDebugMode(!p.ZP.renderDebugMode);
         },
         H = I(Object.values(e), C.Odu.CLICK_ZONE_DEBUG),
         G = () => {

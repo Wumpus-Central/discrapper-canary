@@ -29,8 +29,8 @@ var i = n(200651),
     E = n(574254),
     b = n(556296),
     w = n(808506),
-    k = n(237997),
-    N = n(451478),
+    N = n(237997),
+    k = n(451478),
     y = n(585483),
     L = n(358085),
     S = n(13140),
@@ -38,14 +38,14 @@ var i = n(200651),
     A = n(830917),
     O = n(86071),
     V = n(681603),
-    P = n(915614),
-    M = n(690336),
+    M = n(915614),
+    P = n(690336),
     R = n(333031),
-    W = n(371651),
-    D = n(388627),
+    D = n(371651),
+    W = n(388627),
     z = n(319414),
-    F = n(561064),
-    G = n(987650),
+    G = n(561064),
+    F = n(987650),
     U = n(501787),
     B = n(981631),
     Y = n(206583),
@@ -92,7 +92,7 @@ let ee = l.memo(function (e) {
                 ? null
                 : (0, i.jsx)(R.Z, {
                       className: X.closeContainer,
-                      children: (0, i.jsx)(P.Z, {
+                      children: (0, i.jsx)(M.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: c.XLargeIcon
@@ -105,7 +105,7 @@ let ee = l.memo(function (e) {
         return t && n
             ? (0, i.jsx)(R.Z, {
                   className: X.closeContainer,
-                  children: (0, i.jsx)(P.Z, {
+                  children: (0, i.jsx)(M.Z, {
                       onClick: () => d.Z.setInputLocked(!1, (0, T.QF)()),
                       IconComponent: c.LockUnlockedIcon
                   })
@@ -126,27 +126,27 @@ function el() {
     d.Z.setFocusedPID(null);
 }
 function eo(e) {
-    let t = k.Z.isLocked((0, T.QF)());
+    let t = N.Z.isLocked((0, T.QF)());
     'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? y.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }) : 'keydown' === e.type.toLowerCase() && y.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
 }
 function er(e) {
     var t, n;
     let { isEmbeddedActivity: o } = e,
-        u = (0, F.Z)(),
+        u = (0, G.Z)(),
         {
             locked: v,
             focused: E,
             incompatibleApp: y,
             hasValidResolution: L,
-            hasZeroSizeDimension: P,
+            hasZeroSizeDimension: M,
             keybind: R
-        } = (0, a.cj)([k.Z, N.Z, b.Z], () => {
-            let e = N.Z.windowSize((0, A.ZY)(u)),
+        } = (0, a.cj)([N.Z, k.Z, b.Z], () => {
+            let e = k.Z.windowSize((0, A.ZY)(u)),
                 t = b.Z.getOverlayKeybind();
             return {
-                locked: k.Z.isLocked((0, T.QF)()),
-                focused: k.Z.isFocused((0, T.QF)()),
-                incompatibleApp: k.Z.incompatibleApp,
+                locked: N.Z.isLocked((0, T.QF)()),
+                focused: N.Z.isFocused((0, T.QF)()),
+                incompatibleApp: N.Z.incompatibleApp,
                 hasValidResolution: (0, T.Te)(e),
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                 keybind: null != t ? (0, S.BB)(t.shortcut, !0) : '???'
@@ -185,7 +185,7 @@ function er(e) {
         ),
         !(function () {
             let e = l.useRef(!1),
-                t = (0, D.pL)(),
+                t = (0, W.pL)(),
                 n = j.Z.getVoiceChannelId(),
                 i = Z.Z.getChannel(n),
                 o = null != i ? _.Z.getGuild(i.guild_id) : null,
@@ -205,19 +205,19 @@ function er(e) {
                         overlay_render_method: h.gl[h.gl.OutOfProcess]
                     });
                 let l = null !== (i = w.Z.getFocusedPID()) && void 0 !== i ? i : (0, T.QF)();
-                if (W.Z.hasChangedRenderMode(l)) return;
-                let r = [{ type: G.nc.WELCOME }];
+                if (D.Z.hasChangedRenderMode(l)) return;
+                let r = [{ type: F.nc.WELCOME }];
                 if (
                     (c && u
                         ? r.push({
-                              type: G.nc.GO_LIVE_VOICE,
+                              type: F.nc.GO_LIVE_VOICE,
                               game: t,
                               voiceChannelId: n,
                               voiceGuild: o
                           })
                         : c &&
                           r.push({
-                              type: G.nc.GO_LIVE_NON_VOICE,
+                              type: F.nc.GO_LIVE_NON_VOICE,
                               game: t
                           }),
                     f.length > 0)
@@ -225,7 +225,7 @@ function er(e) {
                     let { enabled: e } = O.Z.getCurrentConfig({ location: 'Overlay' }, { autoTrackExposure: !0 });
                     e &&
                         r.push({
-                            type: G.nc.CONTENT_INVENTORY,
+                            type: F.nc.CONTENT_INVENTORY,
                             entries: f
                         });
                 }
@@ -250,7 +250,7 @@ function er(e) {
             value: U,
             children: (0, i.jsx)(c.RedesignIconContextProvider, {
                 children:
-                    P || y
+                    M || y
                         ? null
                         : (0, i.jsx)(c.ThemeProvider, {
                               theme: B.BRd.DARK,
@@ -265,7 +265,7 @@ function er(e) {
                                               onClick: en
                                           }),
                                           L
-                                              ? (0, i.jsx)(M.Z, {
+                                              ? (0, i.jsx)(P.Z, {
                                                     className: r()({
                                                         [X.layoutLocked]: v,
                                                         [X.layoutUnlocked]: !v

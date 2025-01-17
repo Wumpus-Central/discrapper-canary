@@ -315,7 +315,7 @@ function eu(e) {
 }
 class ec extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(_.ZP, h.default, f.Z, T.Z), en(g.v.enabled, g.v.legacyEnabled, g.v.global);
+        this.waitFor(_.ZP, h.default, f.Z, T.ZP), en(g.v.enabled, g.v.legacyEnabled, g.v.global);
     }
     getForcedRenderMode() {
         return A;

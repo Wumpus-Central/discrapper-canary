@@ -1,14 +1,14 @@
 n.d(e, {
     F: function () {
-        return l;
+        return s;
     },
     s: function () {
-        return s;
+        return l;
     }
 });
 let a = 3600000,
-    s = 128,
-    l = Object.freeze({
+    l = 128,
+    s = Object.freeze({
         MINUTES_30: 1800000,
         HOURS_1: 3600000,
         HOURS_4: 14400000,

@@ -63,8 +63,8 @@ function m(e) {
     let w = () => {
             a(Date.now()), _((e) => e + 1);
         },
-        k = o > 0 && m - o < 1000,
-        N = (0, u.useTransition)(x > 0 && x < m && m - x < I, {
+        N = o > 0 && m - o < 1000,
+        k = (0, u.useTransition)(x > 0 && x < m && m - x < I, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -73,14 +73,14 @@ function m(e) {
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: N(
+              children: k(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(c.animated.div, {
                           style: e,
                           className: f.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: r()(f.clickZone, k && f.clickBackground),
+                              className: r()(f.clickZone, N && f.clickBackground),
                               children: (0, i.jsx)(u.Clickable, {
                                   onClick: w,
                                   className: f.clickable,

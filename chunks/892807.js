@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return k;
     }
 }),
     n(724458),
@@ -67,7 +67,7 @@ function w(e) {
               })
           });
 }
-function k(e) {
+function N(e) {
     let { channel: t } = e,
         n = (0, a.Wu)(
             [Z.Z, C.default, p.Z],
@@ -94,7 +94,7 @@ function k(e) {
               disableUserPopout: !0
           });
 }
-function N(e) {
+function k(e) {
     let { currentVoiceChannel: t, onClose: n, onSelect: o } = e,
         r = (0, a.Wu)([g.Z, p.Z], () =>
             g.Z.getFriendIDs().sort((e, t) => {
@@ -161,7 +161,7 @@ function N(e) {
                             }),
                             icon: (0, i.jsx)('div', {
                                 className: E.icon,
-                                children: (0, i.jsx)(k, {
+                                children: (0, i.jsx)(N, {
                                     channel: e,
                                     currentVoiceChannel: t
                                 })

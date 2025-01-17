@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(449224),
     b = n(358085),
     w = n(981631),
-    k = n(37113),
-    N = n(761274);
+    N = n(37113),
+    k = n(761274);
 function y() {
     let e = (0, a.e7)([I.Z], () => I.Z.getVoiceChannelId()),
         t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
@@ -51,13 +51,13 @@ function y() {
         if (null == r && null == l) return !1;
         let a = null != y ? (null === (n = Z.Z.getGuild(y)) || void 0 === n ? void 0 : n.premiumTier) : null,
             { preset: s, resolution: d, fps: m, soundshareEnabled: C } = g.Z.getState(),
-            [I, j] = null !== (i = (0, f.Z)(s, o, a)) && void 0 !== i ? i : [k.LY.RESOLUTION_720, k.ws.FPS_30],
+            [I, j] = null !== (i = (0, f.Z)(s, o, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
             w = s,
             L = d,
             T = m;
-        w !== k.tI.PRESET_CUSTOM && ((L = I), (T = j)),
+        w !== N.tI.PRESET_CUSTOM && ((L = I), (T = j)),
             !(0, h.Z)(w, L, T, o, a) && ((L = I), (T = j)),
-            !(0, h.Z)(w, L, T, o, a, t) && ((w = k.tI.PRESET_VIDEO), (L = k.LY.RESOLUTION_720), (T = k.ws.FPS_30)),
+            !(0, h.Z)(w, L, T, o, a, t) && ((w = N.tI.PRESET_VIDEO), (L = N.LY.RESOLUTION_720), (T = N.ws.FPS_30)),
             (0, c.Rc)({
                 preset: w,
                 resolution: L,
@@ -67,14 +67,14 @@ function y() {
         let A = (0, v.Z)(r, l, u.ZP.getRunningGames()),
             O = !(0, b.isWindows)() || null == A || (null == l ? void 0 : l.id.startsWith('camera:')) || null == A ? null : A.pid,
             V = null,
-            P = null;
+            M = null;
         return (
-            null == O && null != l && ((V = l.id), (P = l.name)),
-            !!(_.Z.getUseSystemScreensharePicker() || (await x.Z.hasPermission(N.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
+            null == O && null != l && ((V = l.id), (M = l.name)),
+            !!(_.Z.getUseSystemScreensharePicker() || (await x.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
                 ((0, c.WH)(y, e, {
                     pid: O,
                     sourceId: V,
-                    sourceName: P,
+                    sourceName: M,
                     audioSourceId: null,
                     sound: C,
                     previewDisabled: !0

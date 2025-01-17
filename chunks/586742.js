@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return k;
     }
 });
 var i = n(200651),
@@ -32,7 +32,7 @@ function w(e) {
         r = null === (t = n.user) || void 0 === t ? void 0 : t.id;
     return (0, a.e7)([g.Z], () => null != n.user && null != o && null != l && g.Z.isLocalVideoDisabled(r, o), [r, n.user, o, l]) ? null : (0, i.jsx)(m.ZP, { ...e });
 }
-function k(e) {
+function N(e) {
     let { context: t = j.Yn.DEFAULT, participants: o, locked: a, widget: u, channel: d, width: h, height: f, containerRef: m } = e,
         v = (e, l) => {
             (0, c.jW)(l, async () => {
@@ -104,7 +104,7 @@ function k(e) {
                 absolute: !0
             });
 }
-function N(e) {
+function k(e) {
     let t = (0, a.e7)([C.Z, x.Z], () => x.Z.getChannel(C.Z.getVoiceChannelId())),
         n = (0, f.ZP)(t),
         o = (0, a.Wu)([h.Z], () => (null != t ? h.Z.getVideoParticipants(t.id) : [])),
@@ -140,7 +140,7 @@ function N(e) {
                     }
                 });
         }, [s]),
-        (0, i.jsx)(k, {
+        (0, i.jsx)(N, {
             ...e,
             channel: t,
             title: null != n ? n : '',

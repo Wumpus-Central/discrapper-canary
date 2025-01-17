@@ -25,17 +25,17 @@ var i = t(200651),
     C = t(51144),
     j = t(145597),
     g = t(214629),
-    A = t(317381),
-    P = t(884338),
+    P = t(317381),
+    A = t(884338),
     S = t(473179),
     b = t(981631),
     N = t(388032),
     y = t(124062);
-let T = P.u.SIZE_24;
+let T = A.u.SIZE_24;
 function k(e) {
     let { applicationId: n, channelId: t } = e,
         a = (0, l.e7)([s.Z], () => s.Z.getApplication(n)),
-        k = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(n)),
+        k = (0, l.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivities().get(n)),
         w = (0, l.e7)([Z.Z], () => Z.Z.getChannel(t)),
         E = (0, l.Wu)(
             [_.ZP],
@@ -92,7 +92,7 @@ function k(e) {
         M = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         U = r.useCallback(() => {
             let e = (0, j.QF)();
-            d.Z.setInputLocked(!m.Z.isInputLocked(e), e);
+            d.Z.setInputLocked(!m.ZP.isInputLocked(e), e);
         }, []),
         z = (0, g.PR)();
     return null == a || null == k
@@ -124,7 +124,7 @@ function k(e) {
                                           children: '.'
                                       })
                                   }),
-                                  (0, i.jsx)(P.Z, {
+                                  (0, i.jsx)(A.Z, {
                                       renderIcon: !1,
                                       users: B,
                                       size: T,

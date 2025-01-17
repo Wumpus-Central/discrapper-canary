@@ -59,7 +59,7 @@ function _(e, t, i, _) {
         },
         onNotificationClick: () => {
             let i = (0, h.QF)();
-            f.Z.isInputLocked(i) ? (y('unlock'), l.Z.setInputLocked(!1, i)) : (y('jump'), (0, s.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), u.isPlatformEmbedded && c.ZP.focus());
+            f.ZP.isInputLocked(i) ? (y('unlock'), l.Z.setInputLocked(!1, i)) : (y('jump'), (0, s.uL)(g.Z5c.CHANNEL(e.guild_id, e.id, t.id)), u.isPlatformEmbedded && c.ZP.focus());
         },
         onDismissClick: () => {
             y('dismiss');

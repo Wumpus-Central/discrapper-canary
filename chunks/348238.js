@@ -229,7 +229,7 @@ function G(e) {
         c = (function (e) {
             return r.useCallback(
                 (t) => {
-                    if (!(t.nativeEvent instanceof MouseEvent)) return;
+                    if (null == t || !(t.nativeEvent instanceof MouseEvent)) return;
                     let n = t.target;
                     if ((0, m.U)(e)) {
                         let { x: t, y: i, width: r, height: l } = n.getBoundingClientRect();

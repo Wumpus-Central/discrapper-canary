@@ -45,8 +45,8 @@ var i = n(200651),
     E = n(933557),
     b = n(471445),
     w = n(44315),
-    k = n(74299),
-    N = n(803647),
+    N = n(74299),
+    k = n(803647),
     y = n(565138),
     L = n(917405),
     S = n(763296),
@@ -54,14 +54,14 @@ var i = n(200651),
     A = n(879815),
     O = n(189771),
     V = n(294629),
-    P = n(67844),
-    M = n(544384),
+    M = n(67844),
+    P = n(544384),
     R = n(892807),
-    W = n(560688),
-    D = n(871499),
+    D = n(560688),
+    W = n(871499),
     z = n(199902),
-    F = n(314897),
-    G = n(430824),
+    G = n(314897),
+    F = n(430824),
     U = n(131951),
     B = n(19780),
     Y = n(944486),
@@ -91,7 +91,7 @@ function et(e) {
         'aria-label': !1,
         children: (e) => {
             let { onMouseEnter: r, onMouseLeave: f, ...v } = e;
-            return (0, i.jsx)(D.d, {
+            return (0, i.jsx)(W.d, {
                 ...v,
                 onClick: null != u ? u : () => {},
                 color: t ? s : a,
@@ -211,7 +211,7 @@ function el(e) {
             p.Z.setVideoEnabled(e);
         },
         v = () => {
-            u ? m(!0) : (0, W.Z)();
+            u ? m(!0) : (0, D.Z)();
         },
         x = c ? () => v() : () => m(!a),
         {
@@ -221,7 +221,7 @@ function el(e) {
         } = (0, h.o)(a ? 'disable' : 'enable'),
         j =
             null != n
-                ? (0, P.X)({
+                ? (0, M.X)({
                       enabled: a,
                       cameraUnavailable: c,
                       hasPermission: d,
@@ -262,7 +262,7 @@ function eo(e) {
         { voiceChannel: n, locked: o } = e,
         a = (0, r.e7)([H.default], () => H.default.getCurrentUser()),
         s = (0, O.Z)(n),
-        c = (0, r.cj)([U.Z], () => (0, k.Z)(U.Z)),
+        c = (0, r.cj)([U.Z], () => (0, N.Z)(U.Z)),
         d = (0, r.e7)([z.Z], () => z.Z.getCurrentUserActiveStream()),
         h = (0, x.bp)(),
         p = (0, Q.B)(),
@@ -273,7 +273,7 @@ function eo(e) {
         t = s ? (null != e ? J.intl.format(J.t.AB5gT0, { game: e.name }) : J.intl.string(J.t.FeUKeH)) : J.intl.string(J.t.uQn9Bw);
     }
     let v = () => {
-            if (m) return (0, N.Z)(d, !1);
+            if (m) return (0, k.Z)(d, !1);
             p();
         },
         {
@@ -287,7 +287,7 @@ function eo(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return null != n
-                ? (0, i.jsx)(M.Z, {
+                ? (0, i.jsx)(P.Z, {
                       channel: n,
                       currentUser: a,
                       activeStreams: null != d ? [d] : [],
@@ -342,7 +342,7 @@ function er(e) {
             events: { onClick: x, onMouseEnter: g, onMouseLeave: C }
         } = (0, d.j)(),
         Z = ee(o),
-        _ = (0, r.e7)([S.Z, F.default], () => S.Z.isUserPlayingSounds(F.default.getId()), []);
+        _ = (0, r.e7)([S.Z, G.default], () => S.Z.isUserPlayingSounds(G.default.getId()), []);
     return (0, i.jsx)(f.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -430,7 +430,7 @@ function ea(e) {
 }
 function es(e) {
     let { voiceChannel: t } = e,
-        n = (0, r.e7)([G.Z], () => G.Z.getGuild(t.getGuildId()), [t]);
+        n = (0, r.e7)([F.Z], () => F.Z.getGuild(t.getGuildId()), [t]);
     switch (!0) {
         case t.isGroupDM() || t.isDM():
         case t.isDM():

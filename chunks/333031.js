@@ -136,7 +136,7 @@ let Z = l.createContext(
 function C(e) {
     let { observe: t = !0, className: i, children: o } = e,
         r = l.useContext(Z),
-        a = (0, d.e7)([E.Z], () => E.Z.clickZoneDebugMode),
+        a = (0, d.e7)([E.ZP], () => E.ZP.clickZoneDebugMode),
         [{ refHandler: u, setObserve: c }] = l.useState(() => {
             let e = null;
             return {
