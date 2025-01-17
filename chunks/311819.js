@@ -1,23 +1,25 @@
 r.d(n, {
     H: function () {
-        return c;
+        return d;
     },
     J: function () {
-        return d;
+        return f;
     }
 });
-var i = r(610138);
-var a = r(216116);
-var s = r(78328);
-var o = r(815648);
-var l = r(47120);
-var u = r(981631);
-function c(e) {
-    let { applicationId: n, customId: r, referrerId: i } = e,
-        a = new URLSearchParams();
-    return null != i && a.set('referrer_id', i), null != r && a.set('custom_id', r), ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.ACTIVITY_DETAILS(n), '?').concat(a.toString());
-}
+var i = r(315314);
+var a = r(610138);
+var s = r(216116);
+var o = r(78328);
+var l = r(815648);
+var u = r(47120);
+var c = r(981631);
 function d(e) {
+    let { applicationId: n, customId: r, referrerId: i } = e,
+        a = new URL(c.Z5c.ACTIVITY_DETAILS(n), ''.concat(location.protocol, '//').concat(location.host)),
+        s = a.searchParams;
+    return null != i && s.set('referrer_id', i), null != r && s.set('custom_id', r), a.toString();
+}
+function f(e) {
     let { id: n, customInstallUrl: r, installParams: i, integrationTypesConfig: a } = e;
     if (null != r) return r;
     let s = new URLSearchParams();
@@ -27,5 +29,5 @@ function d(e) {
         let { permissions: e, scopes: n } = i;
         null != e && s.set('permissions', e), null != n && s.set('scope', n.join(' '));
     }
-    return ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.OAUTH2_AUTHORIZE, '?').concat(s.toString());
+    return ''.concat(location.protocol, '//').concat(location.host).concat(c.Z5c.OAUTH2_AUTHORIZE, '?').concat(s.toString());
 }
