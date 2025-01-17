@@ -11,5 +11,9 @@ e.exports = {
     tieredTenureBadgeFireGlow: 'tieredTenureBadgeFireGlow_b64375',
     starContainer: 'starContainer_b64375',
     topLeftStar: 'topLeftStar_b64375',
-    bottomRightStar: 'bottomRightStar_b64375'
+    bottomRightStar: 'bottomRightStar_b64375',
+    tieredTenureBadgeTooltip: 'tieredTenureBadgeTooltip_b64375',
+    tieredTenureBadgeTooltipDescription: 'tieredTenureBadgeTooltipDescription_b64375',
+    tieredTenureBadgeTooltipWordmarkContainer: 'tieredTenureBadgeTooltipWordmarkContainer_b64375',
+    tieredTenureBadgeTooltipWordmark: 'tieredTenureBadgeTooltipWordmark_b64375'
 };
