@@ -2,317 +2,319 @@ n.r(e), n(47120), n(411104);
 var r = n(200651),
     i = n(192379),
     a = n(392711),
-    s = n(36793),
-    l = n(481060),
+    l = n(36793),
+    s = n(481060),
     u = n(100527),
     o = n(906732),
-    c = n(488499),
-    h = n(222062),
-    d = n(530329),
-    p = n(626135),
+    c = n(540059),
+    h = n(488499),
+    d = n(222062),
+    p = n(530329),
+    g = n(626135),
     A = n(197712),
     E = n(511004),
-    g = n(486324),
-    C = n(981631),
-    m = n(678916),
-    w = n(388032),
-    f = n(63059);
+    C = n(486324),
+    m = n(981631),
+    w = n(678916),
+    f = n(388032),
+    R = n(63059);
 e.default = (t) => {
-    let { file: e, imgURI: n, transitionState: R, allowSkip: M = !1, onCrop: N, onClose: v, uploadType: x = g.pC.AVATAR, showUpsellHeader: _ = !1, analyticsPage: y } = t,
-        [I, D] = i.useState({
+    let { file: e, imgURI: n, transitionState: M, allowSkip: N = !1, onCrop: x, onClose: _, uploadType: v = C.pC.AVATAR, showUpsellHeader: y = !1, analyticsPage: I } = t,
+        [D, L] = i.useState({
             width: 0,
             height: 0
         }),
-        [L, B] = i.useState({
+        [B, S] = i.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
         [O, b] = i.useState(!1),
-        [S, T] = i.useState(1),
-        [j, G] = i.useState({
+        [T, j] = i.useState(1),
+        [G, k] = i.useState({
             x: 0,
             y: 0
         }),
-        [k, V] = i.useState(null),
-        [U, P] = i.useState(!1),
-        { analyticsLocations: H } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
-        F = i.useRef({
+        [U, V] = i.useState(null),
+        [P, H] = i.useState(!1),
+        { analyticsLocations: F } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
+        z = (0, c.Q3)('ImageCroppingNModal'),
+        Y = i.useRef({
             x: 0,
             y: 0
         }),
-        z = i.useRef(null),
-        Y = i.useRef(null),
-        J = 'image/gif' === e.type;
+        K = i.useRef(null),
+        X = i.useRef(null),
+        Z = 'image/gif' === e.type;
     i.useEffect(() => {
         (0, E.Z)();
     }, []),
         i.useEffect(() => {
-            J &&
-                _ &&
-                p.default.track(C.rMx.OPEN_MODAL, {
-                    type: C.jXE.CROP_GIF_MODAL,
-                    location: { page: y }
+            Z &&
+                y &&
+                g.default.track(m.rMx.OPEN_MODAL, {
+                    type: m.jXE.CROP_GIF_MODAL,
+                    location: { page: I }
                 });
-        }, [_, y, J]);
-    let K = () => {
-            switch (x) {
-                case g.pC.BANNER:
+        }, [y, I, Z]);
+    let W = () => {
+            switch (v) {
+                case C.pC.BANNER:
                     return {
-                        height: g.f,
-                        width: g.L0
+                        height: C.f,
+                        width: C.L0
                     };
-                case g.pC.VIDEO_BACKGROUND:
-                    return m.HE;
-                case g.pC.AVATAR:
-                case g.pC.AVATAR_DECORATION:
+                case C.pC.VIDEO_BACKGROUND:
+                    return w.HE;
+                case C.pC.AVATAR:
+                case C.pC.AVATAR_DECORATION:
                     return {
-                        height: C.dGM,
-                        width: C.dGM
+                        height: m.dGM,
+                        width: m.dGM
                     };
-                case g.pC.GUILD_BANNER:
+                case C.pC.GUILD_BANNER:
                     return {
-                        height: g._T,
-                        width: g.X_
+                        height: C._T,
+                        width: C.X_
                     };
-                case g.pC.SCHEDULED_EVENT_IMAGE:
+                case C.pC.SCHEDULED_EVENT_IMAGE:
                     return {
-                        height: g.xT,
-                        width: g.d6
+                        height: C.xT,
+                        width: C.d6
                     };
-                case g.pC.HOME_HEADER:
+                case C.pC.HOME_HEADER:
                     return {
-                        height: g.Uo,
-                        width: g.N8
+                        height: C.Uo,
+                        width: C.N8
                     };
             }
         },
-        X = i.useCallback(
+        $ = i.useCallback(
             (t, e, n) => {
-                (F.current = (0, A.U$)(t, e, n)), null != z.current && (z.current.style.transform = 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0)'));
+                (Y.current = (0, A.U$)(t, e, n)), null != K.current && (K.current.style.transform = 'translate3d('.concat(Y.current.x, 'px, ').concat(Y.current.y, 'px, 0)'));
             },
-            [z]
+            [K]
         ),
-        Z = i.useCallback(() => {
-            if (null == z.current || S > 1) return;
-            let { width: t, height: e } = z.current.getBoundingClientRect(),
-                { width: n, height: r } = (0, A.Es)(x, t, e),
-                i = (0, A.AK)(x, n, r, e);
+        q = i.useCallback(() => {
+            if (null == K.current || T > 1) return;
+            let { width: t, height: e } = K.current.getBoundingClientRect(),
+                { width: n, height: r } = (0, A.Es)(v, t, e, z),
+                i = (0, A.AK)(v, n, r, e, z);
             V({
                 width: n,
                 height: r
             }),
-                D(i),
-                B((0, A.kH)(n, r, i));
-        }, [x, S]),
-        W = i.useCallback(
+                L(i),
+                S((0, A.kH)(n, r, i));
+        }, [z, v, T]),
+        J = i.useCallback(
             (t) => {
-                let { x: e, y: n } = F.current;
+                let { x: e, y: n } = Y.current;
                 if (!O || (t.clientX === e && t.clientY === n)) return;
-                let r = t.clientX - j.x;
-                X(r, t.clientY - j.y, L);
+                let r = t.clientX - G.x;
+                $(r, t.clientY - G.y, B);
             },
-            [L, O, j, X]
+            [B, O, G, $]
         ),
-        $ = () => {
+        Q = () => {
             b(!1);
         },
-        q = () => {
-            let t = K();
+        tt = () => {
+            let t = W();
             return t.width !== t.height;
         },
-        Q = async () => {
+        te = async () => {
             let t;
-            if (null == z.current) return;
-            P(!0);
-            let n = z.current,
-                r = K();
-            if (J)
+            if (null == K.current) return;
+            H(!0);
+            let n = K.current,
+                r = W();
+            if (Z)
                 try {
-                    let { result: i, cancelFn: a } = await (0, A.$p)(e, n, I, F.current, r);
-                    (Y.current = a), (t = await i), (Y.current = null);
+                    let { result: i, cancelFn: a } = await (0, A.$p)(e, n, D, Y.current, r);
+                    (X.current = a), (t = await i), (X.current = null);
                 } catch (t) {
                     var i;
-                    throw (null === (i = Y.current) || void 0 === i || i.call(Y), (Y.current = null), Error('Error cropping GIF'));
+                    throw (null === (i = X.current) || void 0 === i || i.call(X), (X.current = null), Error('Error cropping GIF'));
                 }
-            else t = (0, s.PT)(n, I, F.current, r);
-            await N(t, e), P(!1), v();
+            else t = (0, l.PT)(n, D, Y.current, r);
+            await x(t, e), H(!1), _();
         };
     i.useEffect(
         () => (
-            window.addEventListener('mouseup', $),
-            window.addEventListener('resize', Z),
+            window.addEventListener('mouseup', Q),
+            window.addEventListener('resize', q),
             () => {
-                window.removeEventListener('mouseup', $), window.removeEventListener('resize', Z);
+                window.removeEventListener('mouseup', Q), window.removeEventListener('resize', q);
             }
         ),
-        [Z]
+        [q]
     ),
         i.useEffect(
             () => () => {
-                null != Y.current && Y.current();
+                null != X.current && X.current();
             },
             []
         ),
         i.useEffect(() => {
-            if (O) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
-        }, [W, O]);
-    let tt = x === g.pC.AVATAR || x === g.pC.BANNER,
-        te = (0, h.M)(!tt);
+            if (O) return window.addEventListener('mousemove', J), () => window.removeEventListener('mousemove', J);
+        }, [J, O]);
+    let tn = v === C.pC.AVATAR || v === C.pC.BANNER,
+        tr = (0, d.M)(!tn);
     return (0, r.jsx)(o.Gt, {
-        value: H,
-        children: (0, r.jsxs)(l.ModalRoot, {
-            onAnimationEnd: Z,
-            transitionState: R,
-            size: l.ModalSize.MEDIUM,
+        value: F,
+        children: (0, r.jsxs)(s.ModalRoot, {
+            onAnimationEnd: q,
+            transitionState: M,
+            size: s.ModalSize.MEDIUM,
             children: [
-                _ &&
-                    !te &&
-                    (0, r.jsx)(c.Z, {
-                        type: x,
-                        analyticsPage: y,
-                        analyticsSection: C.jXE.CROP_GIF_MODAL,
-                        isGIF: J,
+                y &&
+                    !tr &&
+                    (0, r.jsx)(h.Z, {
+                        type: v,
+                        analyticsPage: I,
+                        analyticsSection: m.jXE.CROP_GIF_MODAL,
+                        isGIF: Z,
                         banner: n
                     }),
-                (0, r.jsx)(l.ModalHeader, {
+                (0, r.jsx)(s.ModalHeader, {
                     separator: !1,
-                    children: (0, r.jsx)(l.FormTitle, {
-                        className: f.titleCase,
-                        tag: l.FormTitleTags.H1,
-                        children: w.intl.string(w.t.DxAYCA)
+                    children: (0, r.jsx)(s.FormTitle, {
+                        className: R.titleCase,
+                        tag: s.FormTitleTags.H1,
+                        children: f.intl.string(f.t.DxAYCA)
                     })
                 }),
-                (0, r.jsxs)(l.ModalContent, {
-                    className: f.modalContent,
+                (0, r.jsxs)(s.ModalContent, {
+                    className: R.modalContent,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: f.editingContainer,
+                            className: R.editingContainer,
                             children: [
                                 (0, r.jsx)('img', {
                                     style: {
-                                        opacity: null == k ? 0 : 1,
-                                        transform: 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0px)'),
+                                        opacity: null == U ? 0 : 1,
+                                        transform: 'translate3d('.concat(Y.current.x, 'px, ').concat(Y.current.y, 'px, 0px)'),
                                         ...(() => {
-                                            if (null == k) return {};
-                                            let t = k.width / k.height,
-                                                e = q() && t > g.MY ? I.height / k.height : 1;
+                                            if (null == U) return {};
+                                            let t = U.width / U.height,
+                                                e = tt() && t > C.MY ? D.height / U.height : 1;
                                             return {
-                                                width: k.width * S * e,
-                                                minWidth: k.width * S * e,
-                                                height: k.height * S * e
+                                                width: U.width * T * e,
+                                                minWidth: U.width * T * e,
+                                                height: U.height * T * e
                                             };
                                         })()
                                     },
-                                    className: U ? f.imageDisabled : f.imageEnabled,
+                                    className: P ? R.imageDisabled : R.imageEnabled,
                                     src: n,
                                     alt: 'avatar',
-                                    ref: z,
+                                    ref: K,
                                     onMouseDown: (t) => {
-                                        let e = t.clientX - F.current.x;
-                                        G({
+                                        let e = t.clientX - Y.current.x;
+                                        k({
                                             x: e,
-                                            y: t.clientY - F.current.y
+                                            y: t.clientY - Y.current.y
                                         }),
                                             b(!0);
                                     },
                                     draggable: !1
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: x === g.pC.AVATAR ? f.overlayAvatar : f.overlayBanner,
+                                    className: v === C.pC.AVATAR ? R.overlayAvatar : R.overlayBanner,
                                     style: {
-                                        opacity: null == k ? 0 : 1,
-                                        width: I.width,
-                                        height: I.height
+                                        opacity: null == U ? 0 : 1,
+                                        width: D.width,
+                                        height: D.height
                                     }
                                 })
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: f.sliderContainer,
+                            className: R.sliderContainer,
                             children: [
-                                (0, r.jsx)(l.ImageIcon, {
+                                (0, r.jsx)(s.ImageIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: f.icon
+                                    className: R.icon
                                 }),
-                                (0, r.jsx)(l.Slider, {
+                                (0, r.jsx)(s.Slider, {
                                     initialValue: 1,
                                     minValue: 1,
                                     maxValue: 2,
                                     keyboardStep: 0.025,
                                     asValueChanges: (t) => {
-                                        if (null == k) return;
-                                        let { width: e, height: n } = k,
-                                            r = (0, A.kH)(e * t, n * t, I),
-                                            { x: i, y: s } = F.current;
-                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), T(t), B(r);
+                                        if (null == U) return;
+                                        let { width: e, height: n } = U,
+                                            r = (0, A.kH)(e * t, n * t, D),
+                                            { x: i, y: l } = Y.current;
+                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(l, r.top, r.bottom)) && $(i, l, r), j(t), S(r);
                                     },
-                                    disabled: U,
+                                    disabled: P,
                                     equidistant: !0,
                                     hideBubble: !0,
-                                    'aria-label': w.intl.string(w.t.dnvZSk)
+                                    'aria-label': f.intl.string(f.t.dnvZSk)
                                 }),
-                                (0, r.jsx)(l.ImageIcon, {
+                                (0, r.jsx)(s.ImageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: f.icon,
+                                    className: R.icon,
                                     width: 48,
                                     height: 48
                                 })
                             ]
                         }),
-                        _ &&
-                            te &&
+                        y &&
+                            tr &&
                             (0, r.jsx)('div', {
-                                children: (0, r.jsx)(d.Z, {
-                                    uploadType: x,
+                                children: (0, r.jsx)(p.Z, {
+                                    uploadType: v,
                                     showUpsell: !0,
                                     position: 'inline',
-                                    className: f.nitroUpsell,
+                                    className: R.nitroUpsell,
                                     showShadow: !1
                                 })
                             })
                     ]
                 }),
-                (0, r.jsxs)(l.ModalFooter, {
-                    className: f.modalFooter,
+                (0, r.jsxs)(s.ModalFooter, {
+                    className: R.modalFooter,
                     children: [
-                        M
-                            ? (0, r.jsx)(l.Button, {
-                                  className: f.cancelButton,
-                                  look: l.Button.Looks.LINK,
-                                  color: l.Button.Colors.PRIMARY,
-                                  size: l.ButtonSizes.SMALL,
+                        N
+                            ? (0, r.jsx)(s.Button, {
+                                  className: R.cancelButton,
+                                  look: s.Button.Looks.LINK,
+                                  color: s.Button.Colors.PRIMARY,
+                                  size: s.ButtonSizes.SMALL,
                                   onClick: () => {
-                                      M && (N(n, e), v());
+                                      N && (x(n, e), _());
                                   },
-                                  children: w.intl.string(w.t.B944ys)
+                                  children: f.intl.string(f.t.B944ys)
                               })
                             : null,
                         (0, r.jsxs)('div', {
-                            className: f.buttonsRight,
+                            className: R.buttonsRight,
                             children: [
-                                (0, r.jsx)(l.Button, {
-                                    className: f.cancelButton,
-                                    look: l.Button.Looks.LINK,
-                                    color: l.Button.Colors.PRIMARY,
-                                    size: l.ButtonSizes.SMALL,
+                                (0, r.jsx)(s.Button, {
+                                    className: R.cancelButton,
+                                    look: s.Button.Looks.LINK,
+                                    color: s.Button.Colors.PRIMARY,
+                                    size: s.ButtonSizes.SMALL,
                                     onClick: () => {
-                                        if (null != Y.current) {
-                                            Y.current(), (Y.current = null), P(!1);
+                                        if (null != X.current) {
+                                            X.current(), (X.current = null), H(!1);
                                             return;
                                         }
-                                        v();
+                                        _();
                                     },
-                                    children: w.intl.string(w.t['9TG40t'])
+                                    children: f.intl.string(f.t['9TG40t'])
                                 }),
-                                (0, r.jsx)(l.Button, {
-                                    submitting: U,
-                                    size: l.ButtonSizes.SMALL,
-                                    onClick: Q,
-                                    children: w.intl.string(w.t.ZSHmKC)
+                                (0, r.jsx)(s.Button, {
+                                    submitting: P,
+                                    size: s.ButtonSizes.SMALL,
+                                    onClick: te,
+                                    children: f.intl.string(f.t.ZSHmKC)
                                 })
                             ]
                         })
