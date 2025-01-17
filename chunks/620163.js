@@ -98,7 +98,7 @@ var r = n(990547),
 let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eU = ev.Z,
     eV = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e3, developerMode: e6, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eH, isOverlaySupported: eY, isClipsBetaTagShowing: eW = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -166,13 +166,13 @@ let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [ek.intl.string(ek.t.cDgKtb)],
                 section: eZ.oAB.ACCOUNT,
                 parent: eD.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e3
+                predicate: () => !e6
             },
             [eD.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [ek.intl.string(ek.t['D+aE7u'])],
                 section: eZ.oAB.ACCOUNT,
                 parent: eD.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e3
+                predicate: () => e6
             },
             [eD.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [ek.intl.string(ek.t.fZSi1N)],
@@ -1321,7 +1321,7 @@ let eF = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eZ.oAB.ADVANCED,
                 searchableTitles: [ek.intl.string(ek.t.erOqlp)],
                 parent: eD.s6.SETTINGS_ADVANCED,
-                predicate: () => e6
+                predicate: () => e3
             },
             [eD.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: eZ.oAB.ADVANCED,
