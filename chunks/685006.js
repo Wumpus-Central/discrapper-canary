@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return S;
+        return T;
     },
     xL: function () {
         return N;
@@ -22,46 +22,47 @@ var i = n(200651),
     g = n(827498),
     C = n(213459),
     x = n(541716),
-    v = n(61356),
-    _ = n(981631),
-    I = n(314734),
-    E = n(700559);
-let b = (0, s.U)(() => ({ visible: !1 })),
-    Z = (e) => {
+    v = n(540059),
+    _ = n(61356),
+    I = n(981631),
+    E = n(314734),
+    b = n(700559);
+let Z = (0, s.U)(() => ({ visible: !1 })),
+    S = (e) => {
         (0, o.j)(() => {
-            b.setState({ visible: e });
+            Z.setState({ visible: e });
         });
     },
-    N = b;
-function S(e) {
+    N = Z;
+function T(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
         { isInitialLoading: a, application: s, primaryEntryPointCommand: o } = (0, p.Z)({ channel: t }),
         c = null == s ? void 0 : s.id,
-        m = (0, v.Z)({ type: r }),
-        { sectionCommands: I } = (0, C.If)(t, null != c ? c : ''),
+        m = (0, _.Z)({ type: r }),
+        { sectionCommands: v } = (0, C.If)(t, null != c ? c : ''),
         E = l.useCallback(() => {
             m
                 ? f.yT(g.ti.DISMISSED)
                 : (f.__(g._b.TEXT, x.Ie.NORMAL, { applicationId: c }),
-                  (0, h.yw)(_.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                  (0, h.yw)(I.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                       application_id: c,
                       location: u.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
                       source: g._b.TEXT
                   }));
         }, [c, m]),
-        b = null != I && I.filter((e) => e.type === d.yU.CHAT || e.type === d.yU.PRIMARY_ENTRY_POINT).length > 0,
-        N = !a && null != s && !0 === b;
+        b = null != v && v.filter((e) => e.type === d.yU.CHAT || e.type === d.yU.PRIMARY_ENTRY_POINT).length > 0,
+        Z = !a && null != s && !0 === b;
     return (l.useEffect(
         () => (
-            Z(N),
+            S(Z),
             () => {
-                Z(!1);
+                S(!1);
             }
         ),
-        [N]
+        [Z]
     ),
-    N)
-        ? (0, i.jsx)(T, {
+    Z)
+        ? (0, i.jsx)(j, {
               channel: t,
               application: s,
               primaryEntryPointCommand: o,
@@ -71,9 +72,9 @@ function S(e) {
           })
         : null;
 }
-function T(e) {
+function j(e) {
     let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: r, entryPointCommandButtonRef: s, type: o } = e,
-        d = (0, v.Z)({ type: o }),
+        d = (0, _.Z)({ type: o }),
         {
             isExecutingLaunchInteraction: u,
             buttonText: h,
@@ -82,14 +83,14 @@ function T(e) {
             currentEmbeddedActivity: g,
             channelRecipientUserId: C,
             setIsExecutingLaunchInteraction: x,
-            analyticsLocations: _
+            analyticsLocations: I
         } = (0, m.Z)({
             channel: t,
             primaryEntryPointCommand: l,
             application: n,
             showAppLauncherPopup: d
         }),
-        b = (0, m.J)({
+        Z = (0, m.J)({
             channel: t,
             application: n,
             isEmbeddedApp: f,
@@ -98,15 +99,16 @@ function T(e) {
             onOpenButtonPress: r,
             channelRecipientUserId: C,
             setIsExecutingLaunchInteraction: x,
-            analyticsLocations: _
+            analyticsLocations: I
         }),
-        Z = p ? c.Button.Colors.RED : c.Button.Colors.BRAND;
+        S = p ? c.Button.Colors.RED : c.Button.Colors.BRAND,
+        N = (0, v.R6)('LoadedEntryPointCommandButton');
     return (0, i.jsx)(c.Button, {
-        className: a()(E.entryPointAppCommandButton, I.Id),
-        size: c.Button.Sizes.LARGE,
-        color: Z,
+        className: a()(b.entryPointAppCommandButton, E.Id),
+        size: N ? c.Button.Sizes.SMALL : c.Button.Sizes.LARGE,
+        color: S,
         submitting: u,
-        onClick: b,
+        onClick: Z,
         buttonRef: s,
         children: h
     });
