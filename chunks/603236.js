@@ -3,9 +3,10 @@ t.d(n, {
         return E;
     },
     S: function () {
-        return C;
+        return p;
     }
-});
+}),
+    t(789020);
 var l = t(200651),
     i = t(192379),
     r = t(120356),
@@ -24,8 +25,8 @@ var l = t(200651),
     f = t(981631),
     N = t(388032),
     I = t(755527),
-    p = t(232186);
-let C = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))((e) => {
+    C = t(232186);
+let p = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))((e) => {
         let { value: n, autoFocus: t, hideValue: i, onCopy: r, disabled: a } = e;
         return (0, l.jsx)(d.Z, {
             value: i ? N.intl.string(N.t['6HzNgY']) : n,
@@ -36,68 +37,85 @@ let C = o.ZP.connectStores([x.Z], () => ({ hideValue: x.Z.hideInstantInvites }))
         });
     }),
     E = (e) => {
-        let { guild: n, noInvitesAvailable: t, showFriends: r, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: x, inviteFlags: E, setInviteFlags: T, showGuestInviteToggleForCurrentVoiceChannel: S, copyValue: Z, changePage: b, inviteChannel: y, source: _, code: R, guildScheduledEvent: k, disabled: A, application: D } = e,
-            { maxAge: L, maxUses: z, networkError: B, showVanityURL: M } = d,
-            U = i.useCallback(() => {
+        let { guild: n, noInvitesAvailable: t, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: x, setInviteFlags: E, copyValue: T, changePage: S, inviteChannel: Z, source: b, code: y, guildScheduledEvent: _, disabled: R, application: k } = e,
+            { maxAge: A, maxUses: D, networkError: L, showVanityURL: z, flags: B } = d,
+            P = i.useCallback(() => {
                 m.default.track(f.rMx.COPY_INSTANT_INVITE, {
                     server: u.Z.getGuildId(),
-                    channel: null == y ? void 0 : y.id,
-                    channel_type: null == y ? void 0 : y.type,
-                    location: _,
-                    code: R,
-                    guild_scheduled_event_id: null == k ? void 0 : k.id,
-                    application_id: null == D ? void 0 : D.id
+                    channel: null == Z ? void 0 : Z.id,
+                    channel_type: null == Z ? void 0 : Z.type,
+                    location: b,
+                    code: y,
+                    guild_scheduled_event_id: null == _ ? void 0 : _.id,
+                    application_id: null == k ? void 0 : k.id
                 });
-            }, [null == D ? void 0 : D.id, y, _, R, k]);
+            }, [null == k ? void 0 : k.id, Z, b, y, _]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(C, {
-                    value: Z,
+                (0, l.jsx)(p, {
+                    value: T,
                     autoFocus: r,
-                    onCopy: U,
-                    disabled: A
+                    onCopy: P,
+                    disabled: R
                 }),
-                x
-                    ? (0, l.jsx)('div', {
-                          className: I.temporaryMembershipContainerBackground,
-                          children: (0, l.jsx)(c.FormSwitch, {
-                              className: I.temporaryMembershipContainer,
-                              value: (0, h.yE)(E, s.$.IS_GUEST_INVITE),
-                              onChange: (e) => T((0, h.mB)(E, s.$.IS_GUEST_INVITE, e)),
-                              note: N.intl.string(N.t['/FeTKy']),
-                              disabled: A,
-                              hideBorder: !0,
-                              children: S ? N.intl.string(N.t.BPL98f) : N.intl.string(N.t['2snqsL'])
-                          })
-                      })
-                    : null,
-                t || M
+                x &&
+                    (0, l.jsxs)(l.Fragment, {
+                        children: [
+                            (0, l.jsx)('div', { className: I.divider }),
+                            (0, l.jsx)(c.FormSwitch, {
+                                className: I.toggle,
+                                value: (0, h.yE)(B, s.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => E((0, h.mB)(B, s.$.IS_APPLICATION_BYPASS, e)),
+                                disabled: R,
+                                hideBorder: !0,
+                                children: (0, l.jsxs)('div', {
+                                    className: I.formText,
+                                    children: [
+                                        (0, l.jsx)(c.Text, {
+                                            variant: 'text-md/semibold',
+                                            children: N.intl.string(N.t['1i1bUl'])
+                                        }),
+                                        (0, l.jsx)(c.Tooltip, {
+                                            text: N.intl.string(N.t['jvd/LC']),
+                                            children: (e) =>
+                                                (0, l.jsx)(c.CircleInformationIcon, {
+                                                    size: 'xs',
+                                                    color: 'currentColor',
+                                                    ...e
+                                                })
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
+                    }),
+                t || z
                     ? null
                     : (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: a()(p.marginTop8, I.footerText),
+                          className: a()(C.marginTop8, I.footerText),
                           children: [
-                              (0, g.Vg)(L, z),
+                              (0, g.Vg)(A, D),
                               ' ',
                               r
                                   ? (0, l.jsx)(c.Anchor, {
-                                        onClick: () => b(j.RV.SETTINGS),
+                                        onClick: () => S(j.RV.SETTINGS),
                                         children: N.intl.string(N.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !t && r && M
+                !t && r && z
                     ? (0, l.jsxs)(c.Text, {
                           variant: 'text-xs/normal',
-                          className: a()(p.marginTop8, I.footerText),
+                          className: a()(C.marginTop8, I.footerText),
                           children: [N.intl.string(N.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != B
+                null != L
                     ? (0, l.jsx)(v.W, {
                           guild: n,
-                          error: B,
+                          error: L,
                           onClose: o
                       })
                     : null

@@ -1,71 +1,74 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return h;
     }
 });
 var l = n(200651);
 n(192379);
-var i = n(120356),
-    r = n.n(i),
+var i = n(533800),
     s = n(481060),
+    r = n(630388),
     a = n(971130),
     o = n(388032),
-    d = n(24182),
-    u = n(232186);
-let c = a.ZP.getMaxAgeOptions;
+    d = n(24182);
+let u = a.ZP.getMaxAgeOptions,
+    c = a.ZP.getMaxUsesOptions;
 function h(e) {
-    let { temporary: t, shouldHide: n, onToggleTemporary: i } = e;
-    return n
-        ? (0, l.jsx)('div', { className: u.marginTop20 })
-        : (0, l.jsx)(s.FormItem, {
-              className: r()(u.marginTop20, d.switch),
-              children: (0, l.jsx)(s.FormSwitch, {
-                  value: t,
-                  onChange: (e) => i(e),
-                  note: o.intl.string(o.t.UN5IRU),
-                  hideBorder: !0,
-                  children: (0, l.jsx)(s.Text, {
-                      variant: 'text-sm/normal',
-                      children: o.intl.string(o.t['wE+9dn'])
-                  })
-              })
-          });
-}
-let g = a.ZP.getMaxUsesOptions;
-function m(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: i, maxUses: a, temporary: m, onGenerateNewLink: v, onToggleTemporary: p, onSelectMaxAge: x, onSelectMaxUses: I } = e,
-        S = c.find((e) => e.value === i),
-        T = g.find((e) => e.value === a);
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: I, isGuestInviteCreationToggleEnabled: p, inviteFlags: S, onSetInviteFlags: N } = e,
+        C = u.find((e) => e.value === a),
+        f = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: d.settingsContent,
         children: (0, l.jsxs)('form', {
-            onSubmit: v,
+            onSubmit: m,
+            className: d.settingsForm,
             children: [
                 (0, l.jsx)(s.FormItem, {
                     title: o.intl.string(o.t['60qw29']),
-                    className: u.marginTop20,
                     children: (0, l.jsx)(s.SingleSelect, {
-                        value: null !== (t = null == S ? void 0 : S.value) && void 0 !== t ? t : c[0].value,
-                        options: c,
+                        value: null !== (t = null == C ? void 0 : C.value) && void 0 !== t ? t : u[0].value,
+                        options: u,
                         onChange: x,
                         maxVisibleItems: 8
                     })
                 }),
                 (0, l.jsx)(s.FormItem, {
                     title: o.intl.string(o.t.jDqWHR),
-                    className: r()(u.marginTop20, u.marginBottom4),
                     children: (0, l.jsx)(s.SingleSelect, {
-                        value: null == T ? void 0 : T.value,
-                        options: g,
+                        value: null == f ? void 0 : f.value,
+                        options: c,
                         onChange: I
                     })
                 }),
-                (0, l.jsx)(h, {
-                    temporary: m,
-                    shouldHide: n,
-                    onToggleTemporary: p
-                })
+                !n &&
+                    (0, l.jsx)(s.FormItem, {
+                        children: (0, l.jsx)(s.FormSwitch, {
+                            className: d.switch,
+                            value: g,
+                            onChange: (e) => v(e),
+                            note: o.intl.string(o.t.UN5IRU),
+                            hideBorder: !0,
+                            children: (0, l.jsx)(s.Text, {
+                                variant: 'text-sm/normal',
+                                children: o.intl.string(o.t['wE+9dn'])
+                            })
+                        })
+                    }),
+                p &&
+                    (0, l.jsx)(s.FormItem, {
+                        children: (0, l.jsx)(s.FormSwitch, {
+                            className: d.switch,
+                            value: (0, r.yE)(S, i.$.IS_GUEST_INVITE),
+                            onChange: (e) => N((0, r.mB)(S, i.$.IS_GUEST_INVITE, e)),
+                            note: o.intl.string(o.t['/FeTKy']),
+                            hideBorder: !0,
+                            children: (0, l.jsx)(s.Text, {
+                                variant: 'text-sm/normal',
+                                children: o.intl.string(o.t.siexRU)
+                            })
+                        })
+                    })
             ]
         })
     });

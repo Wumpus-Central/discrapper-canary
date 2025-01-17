@@ -23,8 +23,8 @@ e.exports = {
     noPadding: 'noPadding_cedfaf',
     content: 'content_cedfaf',
     subText: 'subText_cedfaf',
-    temporaryMembershipContainerBackground: 'temporaryMembershipContainerBackground_cedfaf',
-    temporaryMembershipContainer: 'temporaryMembershipContainer_cedfaf',
+    formText: 'formText_cedfaf',
+    toggle: 'toggle_cedfaf',
     noScroll: 'noScroll_cedfaf',
     settingsFooter: 'settingsFooter_cedfaf',
     footer: 'footer_cedfaf',
@@ -36,7 +36,5 @@ e.exports = {
     errorMessage: 'errorMessage_cedfaf',
     errorLink: 'errorLink_cedfaf',
     acronym: 'acronym_cedfaf',
-    guestBody: 'guestBody_cedfaf',
-    guestSendInviteLinkHeader: 'guestSendInviteLinkHeader_cedfaf',
-    guestSelectChannelHeader: 'guestSelectChannelHeader_cedfaf'
+    divider: 'divider_cedfaf'
 };

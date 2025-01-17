@@ -61,19 +61,19 @@ var s = r(525654),
 let ea = 'invite',
     es = null;
 function eo(e) {
-    var n, r, i, a, s;
-    let o = {};
+    var n, r, i, a, s, o;
+    let l = {};
     switch (e.target_type) {
         case er.Iq.STREAM:
-            (o.targetType = e.target_type), (o.targetUserId = null === (i = e.target_user) || void 0 === i ? void 0 : i.id);
+            (l.targetType = e.target_type), (l.targetUserId = null === (i = e.target_user) || void 0 === i ? void 0 : i.id);
             break;
         case er.Iq.EMBEDDED_APPLICATION:
-            (o.targetType = e.target_type), (o.targetApplicationId = null === (a = e.target_application) || void 0 === a ? void 0 : a.id);
+            (l.targetType = e.target_type), (l.targetApplicationId = null === (a = e.target_application) || void 0 === a ? void 0 : a.id);
             break;
         case er.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
-            o.targetType = e.target_type;
+            l.targetType = e.target_type;
     }
-    return (!(null != Z.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (o.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (o.guildScheduledEvent = e.guild_scheduled_event), (o.isGuestInvite = (0, q.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.$.IS_GUEST_INVITE)), (o.inviterUserId = null === (r = e.inviter) || void 0 === r ? void 0 : r.id), o;
+    return (!(null != Z.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, q.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, q.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, u.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (r = e.inviter) || void 0 === r ? void 0 : r.id), l;
 }
 function el(e, n) {
     return {
@@ -102,38 +102,38 @@ function ed(e) {
     let { guildId: n, channel: i, options: a, analyticsLocations: s = [] } = e,
         o = Z.Z.getGuild(n),
         l = (0, y.K2)(n, 'invite') ? (null == o ? void 0 : o.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == o ? void 0 : o.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && !(null == o ? void 0 : o.hasFeature(ee.oNc.PREVIEW_ENABLED)),
-        { targetUserId: u, targetType: c, targetApplicationId: d, isGuestInvite: f } = null != a ? a : {};
-    if (!f && l && Y.Z.getGuildId() !== n) return;
-    let { type: _ } = i,
-        h = B.Z.getChannel(i.id),
-        p = eu(n, i, a),
-        m = _ === ee.d4z.GUILD_STAGE_VOICE,
-        I = ee.Z5c.CHANNEL(n, p);
-    k.tx.has(_)
+        { targetUserId: u, targetType: c, targetApplicationId: d, isGuestInvite: f, isApplicationBypassInvite: _ } = null != a ? a : {};
+    if (!f && !_ && l && Y.Z.getGuildId() !== n) return;
+    let { type: h } = i,
+        p = B.Z.getChannel(i.id),
+        m = eu(n, i, a),
+        I = h === ee.d4z.GUILD_STAGE_VOICE,
+        A = ee.Z5c.CHANNEL(n, m);
+    k.tx.has(h)
         ? (0, T.h)(() => {
               Promise.resolve()
                   .then(r.bind(r, 287734))
                   .then((e) => {
                       let { default: r } = e,
                           o = () => {
-                              if (m) {
-                                  (0, M.Cq)(i instanceof k.Sf ? i : (0, k.kt)(i)), (0, P.uL)(I);
+                              if (I) {
+                                  (0, M.Cq)(i instanceof k.Sf ? i : (0, k.kt)(i)), (0, P.uL)(A);
                                   return;
                               }
-                              r.selectVoiceChannel(p),
+                              r.selectVoiceChannel(m),
                                   c === er.Iq.STREAM &&
                                       null != u &&
                                       $.iV({
                                           streamType: en.lo.GUILD,
                                           ownerId: u,
                                           guildId: n,
-                                          channelId: p
+                                          channelId: m
                                       }),
                                   c === er.Iq.EMBEDDED_APPLICATION &&
                                       null != d &&
-                                      ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)),
+                                      ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, m)),
                                       (0, E.Z)({
-                                          channelId: p,
+                                          channelId: m,
                                           applicationId: d,
                                           intent: null == a ? void 0 : a.intent,
                                           inviterUserId: null == a ? void 0 : a.inviterUserId,
@@ -144,19 +144,19 @@ function ed(e) {
                       !f && (0, S.n)(n, [Z.Z, V.Z, W.default, F.ZP]) ? (0, b.hk)(n, o) : o();
                   });
           })
-        : (0, g.l5)(h) &&
+        : (0, g.l5)(p) &&
           c === er.Iq.EMBEDDED_APPLICATION &&
           null != d &&
-          ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, p)),
+          ((0, P.uL)(ee.Z5c.CHANNEL(null != n ? n : ee.ME, m)),
           (0, E.Z)({
-              channelId: p,
+              channelId: m,
               applicationId: d,
               intent: null == a ? void 0 : a.intent,
               inviterUserId: null == a ? void 0 : a.inviterUserId,
               analyticsLocations: s,
               commandOrigin: v.bB.CHAT
           })),
-        ec(i, a)(I);
+        ec(i, a)(A);
 }
 function ef(e) {
     let { guildScheduledEvent: n, welcomeModalChannelId: r } = e;
@@ -440,23 +440,24 @@ n.Z = {
         });
     },
     transitionToInvite(e, n) {
-        var r;
-        let { channel: i, guild: a } = e;
-        if (null != a && (null === (r = a.features) || void 0 === r ? void 0 : r.includes(ee.oNc.HUB))) {
+        var r, i;
+        let { channel: a, guild: s } = e;
+        if (null != s && (null === (r = s.features) || void 0 === r ? void 0 : r.includes(ee.oNc.HUB))) {
             O.Z.onOpenHubInvite(e);
             return;
         }
-        if (null != a && (0, R.u)(a)) {
-            (0, b.hk)(a.id);
+        let o = (0, q.yE)(null !== (i = e.flags) && void 0 !== i ? i : 0, u.$.IS_APPLICATION_BYPASS);
+        if (null != s && !o && (0, R.u)(s)) {
+            (0, b.hk)(s.id);
             return;
         }
-        if (null == i) return;
-        let s = eo(e);
-        null != n && (s.transitionTo = n),
+        if (null == a) return;
+        let l = eo(e);
+        null != n && (l.transitionTo = n),
             ed({
-                guildId: null != a ? a.id : ee.ME,
-                channel: i,
-                options: s
+                guildId: null != s ? s.id : ee.ME,
+                channel: a,
+                options: l
             });
     },
     transitionToInviteSync(e, n, r) {

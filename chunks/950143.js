@@ -21,13 +21,14 @@ function _(e, n, r) {
     );
 }
 function h(e) {
-    var n;
-    let { guild: r, flags: i } = e.invite;
-    if (null != r && (null == r ? void 0 : null === (n = r.features) || void 0 === n ? void 0 : n.includes(f.oNc.HUB))) {
+    var n, r;
+    let { guild: i } = e.invite,
+        a = null !== (r = e.invite.flags) && void 0 !== r ? r : 0;
+    if (null != i && (null == i ? void 0 : null === (n = i.features) || void 0 === n ? void 0 : n.includes(f.oNc.HUB))) {
         u.Z.onOpenHubInvite(e.invite);
         return;
     }
-    !(0, c.yE)(null != i ? i : 0, s.$.IS_GUEST_INVITE) && null != r && (0, d.u)(r) && (0, l.hk)(r.id);
+    !((0, c.yE)(a, s.$.IS_GUEST_INVITE) || (0, c.yE)(a, s.$.IS_APPLICATION_BYPASS)) && null != i && (0, d.u)(i) && (0, l.hk)(i.id);
 }
 class p extends o.Z {
     constructor(...e) {
