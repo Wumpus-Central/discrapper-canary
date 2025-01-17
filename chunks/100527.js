@@ -366,6 +366,7 @@ var r;
         (e.HOLIDAY_COACHMARK = 'holiday coachmark'),
         (e.USER_SETTINGS_COACHMARK = 'user settings coachmark'),
         (e.CONNECTED_ACCOUNT_RELINK_BUTTON = 'connected account relink button'),
-        (e.APP_MESSAGE_EMBED = 'app message embed');
+        (e.APP_MESSAGE_EMBED = 'app message embed'),
+        (e.USER_SETTINGS_SESSIONS = 'user settings sessions');
 })(r || (r = {})),
     (n.Z = r);

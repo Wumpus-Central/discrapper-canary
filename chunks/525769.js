@@ -202,6 +202,7 @@ r.d(n, {
             (e.USER_REGISTER_IDENTITY = 'impression_user_register_identity'),
             (e.USER_REGISTRATION = 'impression_user_registration'),
             (e.USER_SETTINGS_CONNECTIONS = 'impression_user_settings_connections'),
+            (e.USER_SETTINGS_SESSIONS = 'impression_user_settings_sessions'),
             (e.USER_VERIFICATION_MODAL = 'impression_user_verification_modal'),
             (e.USER_VERIFY_PASSWORD = 'impression_user_verify_password'),
             (e.USER_VERIFY_PHONE = 'impression_user_verify_phone'),
