@@ -20,9 +20,7 @@ var i = r(200651),
     p = r(565923);
 let m = (e) => _.ZP.close(e),
     g = (e) => _.ZP.minimize(e),
-    E = (e, n) => {
-        (0, f.isMac)() && !n.altKey ? _.ZP.fullscreen(e) : _.ZP.maximize(e);
-    };
+    E = (e) => _.ZP.maximize(e);
 function v(e) {
     e.stopPropagation();
 }
@@ -37,7 +35,7 @@ function I(e) {
         }),
         s = (0, i.jsx)(l.Clickable, {
             className: o()(p.winButton, p.winButtonMinMax),
-            onClick: (e) => E(n, e),
+            onClick: () => E(n),
             'aria-label': h.intl.string(h.t.G1u0hI),
             tabIndex: -1,
             children: (0, i.jsx)(c.Z, {})
@@ -57,7 +55,7 @@ function I(e) {
 function T(e) {
     let { leading: n, title: r, trailing: s, windowKey: l, short: u } = e,
         c = (0, f.getPlatform)(),
-        d = a.useCallback((e) => E(l, e), [l]);
+        d = a.useCallback(() => E(l), [l]);
     return (0, i.jsxs)('div', {
         className: o()(p.bar, { [p.shortBar]: u }),
         onDoubleClick: d,
@@ -89,7 +87,7 @@ function T(e) {
 function b(e) {
     let { fixed: n = !1, show: r, windowKey: s } = e,
         l = (0, f.getPlatform)(),
-        u = a.useCallback((e) => E(s, e), [s]);
+        u = a.useCallback(() => E(s), [s]);
     return l === f.PlatformTypes.WEB
         ? null
         : (0, i.jsx)('div', {
