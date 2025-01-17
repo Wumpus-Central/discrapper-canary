@@ -95,23 +95,21 @@ class y extends l.Z {
                 (null == i ? void 0 : i[n]) !== !0 && null != a && a.actionType === g.oi.CHAT && (0, p.Oh)(e, n);
             }),
             b(this, '_getOrLoadOnboardingMemberActions', async (e) => {
-                var n, r;
-                let i = (0, v.s)(e),
-                    a = u.Z.isFullServerPreview(e);
-                if (!i && !a) return {};
-                let s = f.ZP.getSelfMember(e);
-                if (null == s || !(0, I.m)(null !== (n = s.joinedAt) && void 0 !== n ? n : void 0, null !== (r = s.flags) && void 0 !== r ? r : void 0)) return {};
-                let [o, l] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, s), this._getOrLoadMemberActions(e, s)]);
+                let n = (0, v.s)(e),
+                    r = u.Z.isFullServerPreview(e);
+                if (!n && !r) return {};
+                let i = f.ZP.getSelfMember(e);
+                if (null == i || !(0, I.m)(e)) return {};
+                let [a, s] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e), this._getOrLoadMemberActions(e, i)]);
                 return {
-                    memberActions: o,
-                    completedActions: l
+                    memberActions: a,
+                    completedActions: s
                 };
             }),
-            b(this, '_getOrLoadOnboardingHomeSettings', async (e, n) => {
-                var r, i;
-                let a = m.Z.getNewMemberActions(e),
-                    s = m.Z.getIsLoading(e);
-                if (!(null == a && !s && (0, I.m)(null !== (r = n.joinedAt) && void 0 !== r ? r : void 0, null !== (i = n.flags) && void 0 !== i ? i : void 0))) return a;
+            b(this, '_getOrLoadOnboardingHomeSettings', async (e) => {
+                let n = m.Z.getNewMemberActions(e),
+                    r = m.Z.getIsLoading(e);
+                if (!(null == n && !r && (0, I.m)(e))) return n;
                 {
                     let n = await (0, p.cP)(e);
                     return null == n ? void 0 : n.newMemberActions;
