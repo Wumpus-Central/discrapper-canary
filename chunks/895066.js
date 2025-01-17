@@ -172,11 +172,14 @@ class p {
         };
     }
     getAudioDeviceStats() {
+        var e, n, r, i;
         return {
-            input_device_restart_count: this.inputDeviceStats.restartCount,
-            output_device_restart_count: this.outputDeviceStats.restartCount,
+            input_device_restart_count: null === (e = this.inputDeviceStats.restartCount) || void 0 === e ? void 0 : e.accumulated,
+            output_device_restart_count: null === (n = this.outputDeviceStats.restartCount) || void 0 === n ? void 0 : n.accumulated,
             input_device_time_to_first_audio: this.inputDeviceStats.timeToFirstCallbackMs,
-            output_device_time_to_first_audio: this.outputDeviceStats.timeToFirstCallbackMs
+            output_device_time_to_first_audio: this.outputDeviceStats.timeToFirstCallbackMs,
+            output_device_buffer_underrun_count: null === (r = this.outputDeviceStats.bufferViolations) || void 0 === r ? void 0 : r.accumulated,
+            input_device_buffer_overfull_count: null === (i = this.inputDeviceStats.bufferViolations) || void 0 === i ? void 0 : i.accumulated
         };
     }
     getPeriodicStats() {
@@ -231,8 +234,8 @@ class p {
             _(this, 'sampleStats', void 0),
             (this.connection = e),
             (this.sampleAudioDevice = (e, n) => {
-                var r, i, a;
-                if (void 0 !== e) void 0 !== e.restartCount && ((n.lastRestartCount = null !== (r = n.lastRestartCount) && void 0 !== r ? r : 0), (n.restartCount = null !== (i = n.restartCount) && void 0 !== i ? i : 0), n.lastRestartCount > e.restartCount ? (n.restartCount += e.restartCount) : (n.restartCount += e.restartCount - n.lastRestartCount), (n.lastRestartCount = e.restartCount)), (null !== (a = e.timeToFirstCallbackMs) && void 0 !== a ? a : 0) !== 0 && void 0 === n.timeToFirstCallbackMs && (n.timeToFirstCallbackMs = e.timeToFirstCallbackMs);
+                var r;
+                if (void 0 !== e) void 0 !== e.restartCount && (n.restartCount = m(e.restartCount, n.restartCount)), void 0 !== e.bufferViolations && (n.bufferViolations = m(e.bufferViolations, n.bufferViolations)), (null !== (r = e.timeToFirstCallbackMs) && void 0 !== r ? r : 0) !== 0 && void 0 === n.timeToFirstCallbackMs && (n.timeToFirstCallbackMs = e.timeToFirstCallbackMs);
             }),
             (this.sampleStats = (e) => {
                 if (null == e) return;
@@ -383,3 +386,16 @@ class p {
             (this.outputDeviceStats = {});
     }
 }
+let m = (e, n) => {
+    let { accumulated: r, lastValue: i } =
+        null != n
+            ? n
+            : {
+                  accumulated: 0,
+                  lastValue: 0
+              };
+    return {
+        accumulated: i > e ? r + e : r + (e - i),
+        lastValue: e
+    };
+};
