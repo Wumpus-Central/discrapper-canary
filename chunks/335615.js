@@ -27,8 +27,8 @@ var i = n(200651),
     E = n(367907),
     b = n(906732),
     Z = n(493324),
-    N = n(611064),
-    S = n(677432),
+    S = n(611064),
+    N = n(677432),
     T = n(178762),
     j = n(868671),
     A = n(82295),
@@ -337,8 +337,8 @@ class ei extends l.Component {
                 let { section: t } = e,
                     { groups: n, channel: r } = this.props,
                     a = n[t];
-                return (0, N.R)(a)
-                    ? (0, l.createElement)(N.Z, {
+                return (0, S.R)(a)
+                    ? (0, l.createElement)(S.Z, {
                           ...a,
                           key: 'section-'.concat(t)
                       })
@@ -410,7 +410,7 @@ class ei extends l.Component {
                         );
                         return a.entry.content_type === h.s.LEADERBOARD ? (0, i.jsx)(L.N, { children: t }, e) : t;
                     }
-                    if (a.type === w.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(S.Z, {}, 'content-inventory-hidden-entry');
+                    if (a.type === w.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(N.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, i.jsx)(en, { index: l }, 'placeholder-'.concat(t, ':').concat(n));
             }),
@@ -429,7 +429,7 @@ class ei extends l.Component {
             ),
             q(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[j.T];
-                if ((0, N.R)(e)) return e;
+                if ((0, S.R)(e)) return e;
             }),
             q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             q(this, 'getRowHeightComputer', () => {

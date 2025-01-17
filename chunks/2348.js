@@ -204,7 +204,7 @@ let _ = r.memo(function () {
                                               value: b,
                                               type: o.Checkbox.Types.INVERTED,
                                               disabled: E,
-                                              color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                              color: A ? a.Z.colors.BG_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                               innerClassName: I.checkboxInner,
                                               displayOnly: !0
                                           })

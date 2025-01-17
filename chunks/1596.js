@@ -18,21 +18,21 @@ function d() {
         className: c.infoGroup,
         children:
             e || n
-                ? (0, i.jsxs)(i.Fragment, {
+                ? (0, i.jsxs)(o.rT, {
                       children: [
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.fjFJFR),
                               titleVariant: 'text-md/medium',
                               description: u.intl.string(u.t['8SIMPz']),
                               icon: a.CircleCheckIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.QCrmqa),
                               titleVariant: 'text-md/medium',
                               description: u.intl.string(u.t.TKDMoK),
                               icon: a.CircleCheckIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t['lkm/a2']),
                               titleVariant: 'text-md/medium',
                               description: u.intl.string(u.t['8j3qaG']),
@@ -42,27 +42,27 @@ function d() {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t['WBxi8/']),
                               icon: a.ChatXIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.frCwaW),
                               icon: a.ChatEyeIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.D0pstr),
                               icon: a.BellSlashIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t['66d4UF']),
                               icon: a.UserCircleIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.uAYpiY),
                               icon: a.GameControllerIcon
                           }),
-                          (0, i.jsx)(o.Z, {
+                          (0, i.jsx)(o.ZP, {
                               title: u.intl.string(u.t.lR4Mc3),
                               icon: a.UserMinusIcon
                           })

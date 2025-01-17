@@ -48,7 +48,7 @@ class f extends (l = r.PureComponent) {
     render() {
         var e;
         let n, t, l, r;
-        let { image: a, hint: o, name: c, makeURL: v, disabled: f, onChange: N, showIcon: I, showIconDisabled: p, className: C, imageClassName: E, iconClassName: T, iconWrapperClassName: S, icon: Z, hideSize: b, imageStyle: y, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': D } = this.props;
+        let { image: a, hint: o, name: c, makeURL: v, disabled: f, onChange: N, showIcon: I, showIconDisabled: C, className: p, imageClassName: E, iconClassName: T, iconWrapperClassName: S, icon: Z, hideSize: b, imageStyle: y, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': D } = this.props;
         if (
             (null != (n = null != a && /^data:/.test(a) ? a : v(a))
                 ? (t = 'url("'.concat(n, '")'))
@@ -62,7 +62,7 @@ class f extends (l = r.PureComponent) {
             f)
         )
             return (0, i.jsx)('div', {
-                className: s()(g.imageUploader, g.disabled, C),
+                className: s()(g.imageUploader, g.disabled, p),
                 children: (0, i.jsxs)('div', {
                     className: s()(g.imageUploaderInner, E),
                     style: {
@@ -71,7 +71,7 @@ class f extends (l = r.PureComponent) {
                     },
                     children: [
                         l,
-                        p &&
+                        C &&
                             (0, i.jsx)('div', {
                                 className: s()(g.imageUploaderIcon, g.imageUploaderIconDisabled, T),
                                 children: Z
@@ -92,7 +92,7 @@ class f extends (l = r.PureComponent) {
               }));
         let L = null !== (e = null != D ? D : o) && void 0 !== e ? e : h.intl.string(h.t['Ge+94+']);
         return (0, i.jsxs)('div', {
-            className: s()(g.imageUploader, C),
+            className: s()(g.imageUploader, p),
             children: [
                 (0, i.jsx)(d.FocusRing, {
                     within: !0,

@@ -26,8 +26,8 @@ var i,
     E = n(158776),
     b = n(471253),
     Z = n(431328),
-    N = n(145834),
-    S = n(590415),
+    S = n(145834),
+    N = n(590415),
     T = n(614173),
     j = n(618896),
     A = n(231338),
@@ -70,7 +70,7 @@ let M = a.memo(function (e) {
             T = (0, u.e7)([_.ZP], () => _.ZP.getMember(C, i.user.id)),
             j = a.useMemo(() => ({ [C]: [i.user.id] }), [C, i.user.id]);
         (0, g.$)(j);
-        let A = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let A = i.rtsState === N.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function M() {
             (0, b.DT)(t, i.user.id, !1);
         }
@@ -133,7 +133,7 @@ let M = a.memo(function (e) {
                                         (0, r.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, N.$)(i)
+                                            children: (0, S.$)(i)
                                         })
                                     ]
                                 })

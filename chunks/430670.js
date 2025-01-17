@@ -41,28 +41,28 @@ function v(e) {
             isIgnored: u.Z.isIgnored(_.id)
         })),
         Z = (0, c.Do)({ location: 'UserProfilePanelWrapper' }),
-        [N, S] = l.useState(E || (Z && (b || E))),
+        [S, N] = l.useState(E || (Z && (b || E))),
         T = (0, p.sS)({ location: 'UserProfilePopoutWrapper' });
     l.useEffect(() => {
-        S(E || (Z && (b || E)));
+        N(E || (Z && (b || E)));
     }, [E, b, Z]);
     let j = d.Rt.useSetting();
     return r
         ? null
-        : N && T && !Z
+        : S && T && !Z
           ? (0, i.jsx)(g.Z, {
                 user: _,
                 currentUser: I,
                 channel: t,
-                onViewBlockedProfileClick: () => S(!1),
+                onViewBlockedProfileClick: () => N(!1),
                 ...n
             })
-          : Z && N && !(b && j)
+          : Z && S && !(b && j)
             ? (0, i.jsx)(g.A, {
                   user: _,
                   currentUser: I,
                   channel: t,
-                  onViewBlockedProfileClick: () => S(!1),
+                  onViewBlockedProfileClick: () => N(!1),
                   ...n
               })
             : _.isNonUserBot()

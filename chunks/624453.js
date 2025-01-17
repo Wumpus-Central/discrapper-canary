@@ -13,11 +13,11 @@ var i,
     f = t(592125),
     h = t(271383),
     E = t(430824),
-    I = t(375954),
-    v = t(699516),
+    v = t(375954),
+    I = t(699516),
     p = t(594174);
-let M = {};
-function x(e) {
+let x = {};
+function M(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -33,23 +33,23 @@ function x(e) {
 }
 function S(e) {
     let { channel: n } = e;
-    delete M[n.id];
+    delete x[n.id];
 }
 function Z() {
-    s().forEach(M, (e) => {
-        e.messages = e.messages.map((e) => e.set('blocked', v.Z.isBlockedForMessage(e)).set('ignored', v.Z.isIgnoredForMessage(e)));
+    s().forEach(x, (e) => {
+        e.messages = e.messages.map((e) => e.set('blocked', I.Z.isBlockedForMessage(e)).set('ignored', I.Z.isIgnoredForMessage(e)));
     });
 }
 class j extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, E.Z, h.ZP, I.Z, p.default, g.default);
+        this.waitFor(f.Z, E.Z, h.ZP, v.Z, p.default, g.default);
     }
     getPinnedMessages(e) {
         var n;
-        return null !== (n = M[e]) && void 0 !== n ? n : void 0;
+        return null !== (n = x[e]) && void 0 !== n ? n : void 0;
     }
     loaded(e) {
-        return null != M[e] && M[e].loaded;
+        return null != x[e] && x[e].loaded;
     }
 }
 (a = 'ChannelPinsStore'),
@@ -63,11 +63,11 @@ class j extends (i = u.ZP.Store) {
         : (l[r] = a),
     (n.Z = new j(d.Z, {
         CONNECTION_OPEN: function () {
-            M = {};
+            x = {};
         },
         GUILD_DELETE: function (e) {
             let { guild: n } = e;
-            M = s()(M)
+            x = s()(x)
                 .filter((e) => e.guildId !== n.id)
                 .keyBy('id')
                 .value();
@@ -76,7 +76,7 @@ class j extends (i = u.ZP.Store) {
             let n = e.message.id,
                 t = e.message.channel_id;
             if (null == t) return !1;
-            let i = M[t];
+            let i = x[t];
             if (null == i && !e.message.pinned) return !1;
             if (null == e.message.author) {
                 if (null != i) {
@@ -86,7 +86,7 @@ class j extends (i = u.ZP.Store) {
                             r = (0, m.wi)(n, e.message);
                         if (r !== n) {
                             let e = i.messages.slice();
-                            (e[l] = r), (M[t].messages = e);
+                            (e[l] = r), (x[t].messages = e);
                         }
                     }
                 }
@@ -94,41 +94,41 @@ class j extends (i = u.ZP.Store) {
             }
             if (e.message.pinned) {
                 if (null == i) {
-                    (i = x(t, [e.message], !1)), (M[t] = i);
+                    (i = M(t, [e.message], !1)), (x[t] = i);
                     return;
                 }
                 i.messages = i.messages.slice();
                 let l = s().findIndex(i.messages, (e) => e.id === n);
-                -1 === l ? i.messages.unshift((0, m.e5)(e.message)) : (i.messages[l] = (0, m.wi)(i.messages[l], e.message)), (M[t] = i);
+                -1 === l ? i.messages.unshift((0, m.e5)(e.message)) : (i.messages[l] = (0, m.wi)(i.messages[l], e.message)), (x[t] = i);
             } else {
                 if (null == i) return;
                 let e = s().findIndex(i.messages, (e) => e.id === n);
                 if (-1 === e) return;
-                (i.messages = i.messages.slice()), i.messages.splice(e, 1), (M[t] = i);
+                (i.messages = i.messages.slice()), i.messages.splice(e, 1), (x[t] = i);
             }
         },
         MESSAGE_DELETE: function (e) {
             let { id: n, channelId: t } = e,
-                i = M[t];
+                i = x[t];
             if (null == i || 0 === s().remove(i.messages, (e) => e.id === n).length) return !1;
-            (i.messages = i.messages.slice()), (M[t] = i);
+            (i.messages = i.messages.slice()), (x[t] = i);
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: n, channelId: t } = e,
-                i = M[t];
+                i = x[t];
             if (null != i) i.messages = i.messages.filter((e) => -1 === n.indexOf(e.id));
         },
         LOAD_PINNED_MESSAGES: function (e) {
             let { channelId: n } = e;
-            M[n] = x(n, [], !1, !0);
+            x[n] = M(n, [], !1, !0);
         },
         LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
             let { channelId: n, messages: t } = e;
-            M[n] = x(n, t, !0);
+            x[n] = M(n, t, !0);
         },
         LOAD_PINNED_MESSAGES_FAILURE: function (e) {
             let { channelId: n } = e;
-            delete M[n];
+            delete x[n];
         },
         CHANNEL_DELETE: S,
         THREAD_DELETE: S,
@@ -137,9 +137,9 @@ class j extends (i = u.ZP.Store) {
         RELATIONSHIP_UPDATE: Z,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: n, channelId: t } = e,
-                i = M[t];
+                i = x[t];
             if (null == i) return;
             let l = s().findIndex(i.messages, (e) => e.id === n);
-            if (-1 !== l) (i.messages = i.messages.slice()), (i.messages[l] = (0, c.Cm)(i.messages[l])), (M[t] = i);
+            if (-1 !== l) (i.messages = i.messages.slice()), (i.messages[l] = (0, c.Cm)(i.messages[l])), (x[t] = i);
         }
     }));

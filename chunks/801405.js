@@ -43,11 +43,11 @@ function _(e) {
             },
             [t, n]
         ),
-        N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+        S = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     l.useEffect(() => {
         E.current = Z;
     });
-    let S = l.useRef(b),
+    let N = l.useRef(b),
         { currentDocument: T, rootNode: j } = l.useMemo(() => {
             let e = null != d && I ? d.document : document,
                 t = _.document.getElementById('app-mount');
@@ -58,7 +58,7 @@ function _(e) {
             };
         }, [d, I, _]),
         A = a && !I,
-        y = Z === C.WtW.VIDEO && N && !A,
+        y = Z === C.WtW.VIDEO && S && !A,
         P = l.useCallback(
             (e, i) => {
                 i !== e && (s.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(C.CkL.TEXTAREA_BLUR));
@@ -69,16 +69,16 @@ function _(e) {
             (e) => {
                 if (null != j)
                     e === C.AEg.FULL_SCREEN &&
-                        (P(e, S.current),
+                        (P(e, N.current),
                         (0, g.Pr)((e) => {
-                            S.current = e;
+                            N.current = e;
                         }, T));
             },
             [T, P, j]
         ),
         R = l.useCallback(
             (e) => () => {
-                null != j && (e !== C.AEg.FULL_SCREEN ? ((S.current = e), P(e, C.AEg.FULL_SCREEN), (0, g.Dj)(j)) : M(e));
+                null != j && (e !== C.AEg.FULL_SCREEN ? ((N.current = e), P(e, C.AEg.FULL_SCREEN), (0, g.Dj)(j)) : M(e));
             },
             [P, M, j]
         );
@@ -117,8 +117,8 @@ function _(e) {
         null != j && E.current === C.WtW.VIDEO && Z === C.WtW.VOICE && (0, g.Pr)(j, T);
     }, [T, Z, E, j]),
     l.useEffect(() => {
-        !N && I && v();
-    }, [N, I]),
+        !S && I && v();
+    }, [S, I]),
     y)
         ? (0, i.jsx)(u.Z, {
               themeable: !1,

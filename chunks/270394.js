@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return P;
     }
 });
 var i = n(200651),
@@ -131,7 +131,7 @@ function M(e) {
         })
     );
 }
-function B(e) {
+function P(e) {
     let { invites: t, guild: r, hide: a, channel: o = null, showChannel: d = !1, loading: p = !1, canCreateInvites: g = !1 } = e;
     s()(null != r, 'guild is required');
     let x = (0, y.M)(r),

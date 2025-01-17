@@ -18,11 +18,11 @@ var l = t(120356),
     f = t(768581),
     h = t(176354),
     E = t(981631),
-    I = t(185923),
-    v = t(388032),
+    v = t(185923),
+    I = t(388032),
     p = t(953568);
-let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function x(e) {
+let x = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+function M(e) {
     var n;
     let { emoji: t, isFocused: l } = e,
         { animated: a, src: s, surrogates: u } = t;
@@ -43,7 +43,7 @@ function x(e) {
                 forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
+                        'aria-label': I.intl.formatToPlainString(I.t['/iYSo6'], { emojiName: t.name }),
                         className: r()(p.button, { [p.focused]: l }),
                         ...e,
                         children:
@@ -68,11 +68,11 @@ function S(e, n) {
     let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && x.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: I.Hz.REACTION
+                intention: v.Hz.REACTION
             })
         );
     });
@@ -80,7 +80,7 @@ function S(e, n) {
     let l = m.nc.useSetting(),
         r = (0, c.$R)(n),
         f = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
-        v = (t) => {
+        I = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return f && t.length > 0
@@ -94,12 +94,12 @@ function S(e, n) {
                           id: 'quickreact-'.concat(null !== (t = e.id) && void 0 !== t ? t : n),
                           render: (n) => {
                               let { isFocused: t } = n;
-                              return (0, i.jsx)(x, {
+                              return (0, i.jsx)(M, {
                                   emoji: e,
                                   isFocused: t
                               });
                           },
-                          action: () => v(e),
+                          action: () => I(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
                       n

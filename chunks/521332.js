@@ -25,7 +25,7 @@ function v(e) {
         (0, c.Z)(() => {
             o(p.M4.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, a.jsx)(f.Z, {
+        (0, a.jsx)(f.ZP, {
             title: n,
             description: r,
             buttonText: l ? g.intl.string(g.t['h+WsPT']) : g.intl.string(g.t.A8t4NT),

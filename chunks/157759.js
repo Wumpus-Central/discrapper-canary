@@ -71,7 +71,7 @@ let I = (e) => {
             return r && i;
         });
     return null != n && null != y && i && C
-        ? (0, a.jsx)(_.Z, {
+        ? (0, a.jsx)(_.ZP, {
               title: v.intl.string(v.t['WV/CsL']),
               description: v.intl.string(v.t['FlcC+/']),
               buttonText: T ? v.intl.string(v.t.aCJlq6) : v.intl.string(v.t['6I1F3t']),

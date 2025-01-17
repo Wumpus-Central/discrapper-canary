@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return v;
     }
 }),
     t(47120);
@@ -18,11 +18,11 @@ var i = t(200651),
     f = t(898150),
     h = t(70956),
     E = t(388032);
-function I(e) {
+function v(e) {
     let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: t } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
-        v = (function (e) {
+        v = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
+        I = (function (e) {
             let { message: n, savedMessage: t } = e,
                 [r, o] = l.useState(new Date());
             l.useEffect(() => {
@@ -75,15 +75,15 @@ function I(e) {
                   });
         })({
             message: e,
-            savedMessage: I
+            savedMessage: v
         });
     return n || t
-        ? null != I || (0, m.Z)()
+        ? null != v || (0, m.Z)()
             ? (0, i.jsxs)(a.MenuItem, {
                   id: 'save-for-later',
                   label: E.intl.string(E.t.tpxJtr),
                   action: () =>
-                      null == I
+                      null == v
                           ? (0, u.z)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
@@ -92,11 +92,11 @@ function I(e) {
                           : (0, u.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
-                                dueAt: I.saveData.dueAt,
+                                dueAt: v.saveData.dueAt,
                                 displayToast: !0
                             }),
                   children: [
-                      null != I
+                      null != v
                           ? (0, i.jsx)(a.MenuItem, {
                                 id: 'remove-from-for-later',
                                 label: E.intl.string(E.t.SvXS1d),
@@ -105,7 +105,7 @@ function I(e) {
                                     (0, u.x)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
-                                        dueAt: I.saveData.dueAt,
+                                        dueAt: v.saveData.dueAt,
                                         displayToast: !0
                                     })
                             })
@@ -121,7 +121,7 @@ function I(e) {
                                     })
                             }),
                       (0, i.jsx)(a.MenuSeparator, {}),
-                      v
+                      I
                   ]
               })
             : (0, i.jsx)(a.MenuItem, {

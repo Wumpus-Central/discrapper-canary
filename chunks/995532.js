@@ -23,7 +23,7 @@ function I(e) {
     let { welcomeScreen: t, guildId: n } = e;
     u[n] = null != t ? t : E;
 }
-class g extends (s = a.ZP.Store) {
+class N extends (s = a.ZP.Store) {
     get(e) {
         if (null != e) return u[e];
     }
@@ -44,7 +44,7 @@ class g extends (s = a.ZP.Store) {
     }
 }
 (i = 'WelcomeScreenStore'),
-    (l = 'displayName') in (r = g)
+    (l = 'displayName') in (r = N)
         ? Object.defineProperty(r, l, {
               value: i,
               enumerable: !0,
@@ -52,7 +52,7 @@ class g extends (s = a.ZP.Store) {
               writable: !0
           })
         : (r[l] = i),
-    (t.Z = new g(o.Z, {
+    (t.Z = new N(o.Z, {
         INVITE_RESOLVE_SUCCESS: T,
         INVITE_ACCEPT_SUCCESS: T,
         WELCOME_SCREEN_SUBMIT_SUCCESS: I,

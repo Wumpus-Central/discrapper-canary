@@ -19,7 +19,7 @@ function u(e) {
             let e = l.Z.getGuild(h.getGuildId());
             null != e &&
                 ((0, r.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e('7654'), n.e('1187'), n.e('20577')]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e('7654'), n.e('92124')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,

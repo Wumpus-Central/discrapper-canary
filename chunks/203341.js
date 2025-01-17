@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     },
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120),
@@ -44,19 +44,19 @@ function Z() {
         t = (0, f.Z)();
     return null != e || t.length > 0;
 }
-function N(e) {
+function S(e) {
     let { channel: t, ...n } = e,
         x = (0, m.Z)(),
         Z = (0, r.e7)([p.Z], () => {
             var e, t;
             return null === (e = p.Z.getSessionById(null !== (t = null == x ? void 0 : x.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
-        N = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
-        [S, T] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
+        S = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
+        [N, T] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         j = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
         A = (0, f.Z)().filter((e) => e.twoWayLink),
         [y, P] = l.useState(!1),
-        M = _.WtW.VOICE !== S && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(T) ? 'top' : 'bottom',
+        M = _.WtW.VOICE !== N && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(T) ? 'top' : 'bottom',
         R = [];
     return (
         A.length > 0 && R.push(a.z.DONUT_DESKTOP_NUX),
@@ -68,9 +68,9 @@ function N(e) {
                 return (0, i.jsx)(s.Popout, {
                     position: M,
                     spacing: o ? 16 : void 0,
-                    positionKey: ''.concat(S, ':').concat(T),
+                    positionKey: ''.concat(N, ':').concat(T),
                     onRequestClose: () => P(!1),
-                    shouldShow: (o || y) && !N && !j,
+                    shouldShow: (o || y) && !S && !j,
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
                         return (0, i.jsx)(d.Z, {

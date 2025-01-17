@@ -21,33 +21,33 @@ function m(e) {
     let { id: t, channel: i, onSend: m } = e,
         v = (0, h.Z)(),
         { placeholder: g, accessibilityLabel: S } = (0, r.Z)({ channel: i }),
-        [_, Z] = l.useState(() => (0, u.H2)()),
-        { textValue: C, richValue: O } = _,
+        [_, C] = l.useState(() => (0, u.H2)()),
+        { textValue: Z, richValue: O } = _,
         [I, N] = l.useState(!1),
         y = l.useCallback(() => N(!0), []),
         x = l.useCallback(() => N(!1), []),
         b = l.useCallback((e, t, i) => {
-            Z({
+            C({
                 textValue: t,
                 richValue: i
             });
         }, []),
         T = l.useCallback(
             () =>
-                C.length > v
+                Z.length > v
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (o.Z.sendMessage(i.id, c.ZP.parse(i, C), !1),
+                    : (o.Z.sendMessage(i.id, c.ZP.parse(i, Z), !1),
                       s.Z.setInputLocked(!0, (0, f.QF)()),
                       s.Z.updateNotificationStatus(t, p._1z.DISMISSED),
-                      null == m || m(C),
+                      null == m || m(Z),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [C, v, i, t, m]
+            [Z, v, i, t, m]
         );
     return (0, n.jsx)(d.Z, {
         innerClassName: E.textArea,
@@ -55,7 +55,7 @@ function m(e) {
         placeholder: g,
         accessibilityLabel: S,
         channel: i,
-        textValue: C,
+        textValue: Z,
         richValue: O,
         type: a.Ie.OVERLAY_INLINE_REPLY,
         onBlur: x,

@@ -26,14 +26,14 @@ var i = n(200651),
     N = n(713594);
 function I(e) {
     var t, n, r, I, j, T, _;
-    let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: B, guildId: P, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
+    let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: P, guildId: B, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
         [W, H] = l.useState(!1),
         [G, z] = l.useState(!1);
     let V =
             ((I = O),
             (j = w),
             (T = M),
-            (_ = B),
+            (_ = P),
             null == I || null == _
                 ? null
                 : T
@@ -63,21 +63,21 @@ function I(e) {
                         onClick: _,
                         children: I
                     })),
-        K = U && !D && !G && void 0 !== P && null != k;
+        K = U && !D && !G && void 0 !== B && null != k;
     l.useEffect(() => {
         K &&
             x.default.track(v.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-                ...(0, c.hH)(P),
+                ...(0, c.hH)(B),
                 application_id: null == k ? void 0 : k.application.id,
                 location: 'overview'
             });
-    }, [P, null == k ? void 0 : k.application.id, K]);
+    }, [B, null == k ? void 0 : k.application.id, K]);
     let q = K
             ? (0, i.jsx)(d.Popout, {
                   renderPopout: () =>
                       (0, i.jsx)(d.Clickable, {
                           onClick: (e) => {
-                              e.stopPropagation(), z(!0), b.Z.dismissOverviewTooltip(P, k.integration);
+                              e.stopPropagation(), z(!0), b.Z.dismissOverviewTooltip(B, k.integration);
                           },
                           children: (0, i.jsx)(p.ZP, {
                               content: C.intl.string(C.t.TyMJwM),
@@ -93,9 +93,9 @@ function I(e) {
             : V,
         Y = (0, s.Wu)([h.Z], () => {
             var e;
-            return null != k && null != P && null !== (e = h.Z.getApplicationEntitlementsForGuild(k.application.id, P)) && void 0 !== e ? e : [];
+            return null != k && null != B && null !== (e = h.Z.getApplicationEntitlementsForGuild(k.application.id, B)) && void 0 !== e ? e : [];
         }),
-        J = (0, u.LD)(P, !0),
+        J = (0, u.LD)(B, !0),
         X = (null == k ? void 0 : k.application) != null && Object.keys(null !== (r = null === (n = J.result) || void 0 === n ? void 0 : null === (t = n.sections[k.application.id]) || void 0 === t ? void 0 : t.commands) && void 0 !== r ? r : {}).length > 0,
         Q = (0, i.jsxs)(m.Z, {
             children: [
@@ -185,7 +185,7 @@ function I(e) {
     return M
         ? (0, i.jsx)(d.Clickable, {
               onClick: () => {
-                  U && null != P && null != k && b.Z.dismissOverviewTooltip(P, k.integration), null == B || B();
+                  U && null != B && null != k && b.Z.dismissOverviewTooltip(B, k.integration), null == P || P();
               },
               onFocus: () => H(!0),
               onBlur: () => H(!1),

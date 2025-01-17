@@ -28,7 +28,7 @@ let g = (e) => {
                 }),
                 c.Z.showBlockSuccessToast(n.id, r);
         }, [n, g, r]);
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(d.ZP, {
         title: m.intl.formatToPlainString(m.t['Q1o/f3'], { username: T }),
         description: m.intl.string(m.t.G08MKi),
         buttonText: v ? m.intl.string(m.t.ot2tSk) : m.intl.string(m.t['l+7PZW']),

@@ -27,12 +27,12 @@ function x(e) {
         { mutualFriends: _, isFetching: I } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: E, isFetching: b } = (0, c.Z)(t.id, !0),
         Z = !t.bot && null != _ && _.length > 0,
-        N = null != E && E.length > 0;
-    return Z || N
+        S = null != E && E.length > 0;
+    return Z || S
         ? (0, i.jsxs)(u.Z.Overlay, {
               className: C.overlay,
               children: [
-                  N &&
+                  S &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: g.intl.string(g.t['4lTDZm']),
@@ -53,7 +53,7 @@ function x(e) {
                               );
                           })
                       }),
-                  N && Z && (0, i.jsx)(d.Z, { className: C.divider }),
+                  S && Z && (0, i.jsx)(d.Z, { className: C.divider }),
                   Z &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_FRIENDS',

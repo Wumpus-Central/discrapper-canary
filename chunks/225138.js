@@ -22,18 +22,18 @@ var l = t(513431),
     f = t(570870),
     h = t(786095),
     E = t(268623),
-    I = t(986240),
-    v = t(667922),
+    v = t(986240),
+    I = t(667922),
     p = t(941389),
-    M = t(449751),
-    x = t(749339),
+    x = t(449751),
+    M = t(749339),
     S = t(601184),
     Z = t(6148),
     j = t(519110),
     N = t(759875),
     T = t(168405),
-    _ = t(536639),
-    b = t(720904),
+    b = t(536639),
+    _ = t(720904),
     A = t(88791),
     C = t(385302),
     P = t(873699),
@@ -54,8 +54,8 @@ function F(e) {
         s,
         { channel: u, message: d, target: c, mediaItem: m, shouldHideMediaOptions: g, onSelect: f, onHeightUpdate: h } = e,
         E = c,
-        I = c.getAttribute('data-type'),
-        v = c.getAttribute('data-id'),
+        v = c.getAttribute('data-type'),
+        I = c.getAttribute('data-id'),
         p = c.getAttribute('data-name');
     if (null != m) r = i = o = m.url;
     else for (; (0, l.k)(E); ) (0, l.k)(E, HTMLImageElement) && null != E.src && (r = E.src), (0, l.k)(E, HTMLAnchorElement) && null != E.href && ((i = E.href), (s = E.textContent), null == r && 'img' === E.getAttribute('data-role') && ((r = i), E.hasAttribute('data-safe-src') && '' !== E.getAttribute('data-safe-src') && (o = E.getAttribute('data-safe-src')))), (E = E.parentNode);
@@ -64,8 +64,8 @@ function F(e) {
         channel: u,
         mediaItem: m,
         textSelection: null !== (t = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString()) && void 0 !== t ? t : '',
-        favoriteableType: I,
-        favoriteableId: v,
+        favoriteableType: v,
+        favoriteableId: I,
         favoriteableName: p,
         itemHref: i,
         itemSrc: r,
@@ -84,10 +84,10 @@ function z(e) {
     let { message: n, channel: t, mediaItem: l, textSelection: a, favoriteableType: F, favoriteableId: z, favoriteableName: B, itemHref: K, itemSrc: H, itemSafeSrc: V, itemTextContent: X, canReport: q, onHeightUpdate: J, onSelect: W, onClose: Y, navId: $, ariaLabel: Q, shouldHideMediaOptions: ee = !1 } = e,
         en = (0, u.Z)(a),
         et = (0, m.Z)(a),
-        ei = (0, b.Z)(n, t),
-        el = (0, v.Z)(n, t),
+        ei = (0, _.Z)(n, t),
+        el = (0, I.Z)(n, t),
         er = (0, Z.Z)(n, t),
-        ea = (0, _.Z)(n, t),
+        ea = (0, b.Z)(n, t),
         eo = (0, j.Z)({
             type: F,
             id: z,
@@ -97,16 +97,16 @@ function z(e) {
         eu = (0, T.Z)(n, t),
         ed = (0, A.Z)(n),
         ec = (0, p.Z)(n, t),
-        em = (0, M.Z)(n, t),
+        em = (0, x.Z)(n, t),
         eg = (0, C.Z)(n, t),
         ef = (0, P.Z)(n, t),
         eh = (0, S.Z)(n, t),
         eE = (0, D.Z)(n),
-        eI = (0, D.e)(n),
-        ev = (0, R.Z)(n, t),
+        ev = (0, D.e)(n),
+        eI = (0, R.Z)(n, t),
         ep = (0, c.Z)(null != K ? K : H, X, n, { shouldHideMediaOptions: ee }),
-        eM = (0, d.Z)(V, n, { shouldHideMediaOptions: ee }),
-        ex = (0, w.Z)(n, l),
+        ex = (0, d.Z)(V, n, { shouldHideMediaOptions: ee }),
+        eM = (0, w.Z)(n, l),
         eS = (0, s.Z)({
             id: n.id,
             label: k.intl.string(k.t.zBoHlZ),
@@ -116,10 +116,10 @@ function z(e) {
         ej = (0, N.Z)(n, t),
         eN = (0, O.Z)(n, t),
         eT = (0, h.Z)(a, t.getGuildId()),
-        e_ = (0, E.Z)(n),
-        eb = (0, x.Z)(n),
+        eb = (0, E.Z)(n),
+        e_ = (0, M.Z)(n),
         eA = (0, U.Z)(n),
-        eC = (0, I.Z)(n, t),
+        eC = (0, v.Z)(n, t),
         eP = (0, f.Z)({
             commandType: o.yU.MESSAGE,
             commandTargetId: n.id,
@@ -144,13 +144,13 @@ function z(e) {
                 children: [er, eZ, ej, eN]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eb, ea, e_, eP, es, eu, ec, em, ev, eD, ey]
+                children: [e_, ea, eb, eP, es, eu, ec, em, eI, eD, ey]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [ef, eg, eh, q && eE, q && eI]
+                children: [ef, eg, eh, q && eE, q && ev]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eo, eT, eM, ex, eA]
+                children: [eo, eT, ex, eM, eA]
             }),
             (0, i.jsx)(r.MenuGroup, { children: ep }),
             (0, i.jsx)(r.MenuGroup, { children: eS })

@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(476183),
+    r = n(642128),
     a = n(597312),
     s = n(481060),
     o = n(727637),
@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(502762),
     b = n(952124),
     Z = n(544989),
-    N = n(481932),
-    S = n(272510),
+    S = n(481932),
+    N = n(272510),
     T = n(4517),
     j = n(171368),
     A = n(348540),
@@ -88,11 +88,11 @@ function k(e) {
                                 (0, i.jsxs)(Z.Z, {
                                     profileType: P.y0.PANEL,
                                     children: [
-                                        (0, i.jsx)(N.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             user: t,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(S.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(b.Z, { user: t }) : (0, i.jsx)(N.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {

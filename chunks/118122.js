@@ -49,7 +49,7 @@ function S(e) {
         y = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, x.PU)),
         { analyticsLocations: j } = (0, s.ZP)(),
         T = (0, u.Q3)('CreateJoinGuildButton'),
-        P = (0, i.jsx)(v.Z, {
+        A = (0, i.jsx)(v.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -70,7 +70,7 @@ function S(e) {
             icon: T ? a.CirclePlusIcon : a.PlusMediumIcon
         });
     return t
-        ? P
+        ? A
         : (0, i.jsx)('div', {
               className: _.tutorialContainer,
               children: (0, i.jsxs)(p.Z, {
@@ -78,7 +78,7 @@ function S(e) {
                   inlineSpecs: Z,
                   position: 'right',
                   children: [
-                      P,
+                      A,
                       null != n &&
                           (0, i.jsx)(g.ZP, {
                               name: I.intl.string(I.t['45xjMz']),

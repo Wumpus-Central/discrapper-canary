@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(540059),
     j = n(853856),
     T = n(93687),
-    P = n(785232),
-    A = n(878857),
+    A = n(785232),
+    P = n(878857),
     w = n(565640),
     M = n(518950),
     L = n(199902),
@@ -260,7 +260,7 @@ function ee(e) {
             let e = p.AvatarSizes.SIZE_32;
             if (r.isMultiUserDM())
                 return r.recipients.length >= 2 && o && null == r.icon
-                    ? (0, i.jsx)(P.Z, {
+                    ? (0, i.jsx)(A.Z, {
                           'aria-hidden': !0,
                           recipients: r.recipients,
                           size: e,
@@ -294,7 +294,7 @@ function ee(e) {
         },
         eZ = r.isMultiUserDM(),
         eb = r.isSystemDM(),
-        eS = (0, A.Q)(),
+        eS = (0, P.Q)(),
         eN = !eZ && !eb && r.type === F.d4z.DM,
         eE = eN && (null == y ? void 0 : y.primaryGuild) != null,
         ey = eN && eo,
@@ -313,7 +313,7 @@ function ee(e) {
                   ]
               })
             : eu,
-        eP = null !== (t = ea || ey || ej) && void 0 !== t && t;
+        eA = null !== (t = ea || ey || ej) && void 0 !== t && t;
     return (0, i.jsx)(u.mh, {
         id: r.id,
         children: (e) => {
@@ -340,7 +340,7 @@ function ee(e) {
                     }),
                     as: 'div',
                     onClick: ev,
-                    muted: eP,
+                    muted: eA,
                     selected: d,
                     children: [
                         (0, i.jsx)(c.rU, {
@@ -356,7 +356,7 @@ function ee(e) {
                                 avatar: e_(),
                                 selected: d,
                                 highlighted: ec,
-                                muted: eP,
+                                muted: eA,
                                 subText: eI(),
                                 name: (0, i.jsx)(E.Z, {
                                     tooltipClassName: z.overflowTooltip,

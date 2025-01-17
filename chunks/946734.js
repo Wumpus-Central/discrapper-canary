@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(228168),
     b = n(388032),
     Z = n(25161);
-function N(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function N(e, t, n) {
         e
     );
 }
-class S {
+class N {
     updateData(e) {
         let { userId: t, user: n, channelId: i, analyticsLocations: l } = e;
         (this.userId = t), (this.user = n), (this.channelId = i), (this.analyticsLocations = l);
@@ -74,11 +74,11 @@ class S {
         });
     }
     constructor({ userId: e, user: t, channelId: n, analyticsLocations: l }) {
-        N(this, 'userId', void 0),
-            N(this, 'user', void 0),
-            N(this, 'channelId', void 0),
-            N(this, 'analyticsLocations', void 0),
-            N(
+        S(this, 'userId', void 0),
+            S(this, 'user', void 0),
+            S(this, 'channelId', void 0),
+            S(this, 'analyticsLocations', void 0),
+            S(
                 this,
                 'generateNicknameGuildPairs',
                 (0, x.oH)((e) => {
@@ -100,7 +100,7 @@ class S {
                         .value();
                 })
             ),
-            N(this, 'renderMoreAvatars', () =>
+            S(this, 'renderMoreAvatars', () =>
                 (0, i.jsx)(
                     o.TooltipContainer,
                     {
@@ -119,7 +119,7 @@ class S {
                     'more-avatars'
                 )
             ),
-            N(this, 'handleClick', () => {
+            S(this, 'handleClick', () => {
                 (0, m.openUserProfileModal)({
                     userId: this.userId,
                     channelId: this.channelId,
@@ -145,7 +145,7 @@ function T(e) {
                 r = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
                 [a] = l.useState(
                     () =>
-                        new S({
+                        new N({
                             user: r,
                             userId: t,
                             channelId: n,

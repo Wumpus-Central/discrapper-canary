@@ -40,7 +40,7 @@ let h = (e) => {
             })
         );
     };
-    return (0, a.jsx)(c.Z, {
+    return (0, a.jsx)(c.ZP, {
         title: _.intl.string(_.t.cU96io),
         description: _.intl.formatToPlainString(_.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
         buttonText: i ? _.intl.string(_.t['9Ak99v']) : _.intl.string(_.t.F3qExs),

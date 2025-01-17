@@ -71,7 +71,7 @@ e.default = function (t) {
                                 children: g.map((t, e) => {
                                     let { title: n, description: o } = t;
                                     return (0, i.jsx)(
-                                        a.Z,
+                                        a.ZP,
                                         {
                                             title: n,
                                             description: o,
@@ -95,7 +95,7 @@ e.default = function (t) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: x.table,
-                                    children: (0, i.jsx)(a.Z, {
+                                    children: (0, i.jsx)(a.ZP, {
                                         title: m.intl.string(m.t.N9WJMD),
                                         description: m.intl.string(m.t['NHq38/']),
                                         buttonText: m.intl.string(m.t['9iy4lJ']),

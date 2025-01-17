@@ -29,7 +29,7 @@ let p = (e) => {
                 o.Z.ignoreUser(n.id, 'web_iar_ignore_user_element', r);
         }, [n, p, r]),
         T = a.useMemo(() => m || g, [m, g]);
-    return (0, i.jsx)(u.Z, {
+    return (0, i.jsx)(u.ZP, {
         title: h.intl.formatToPlainString(h.t.U3yyFh, { username: v }),
         description: h.intl.string(h.t.naWE6e),
         buttonText: T ? h.intl.string(h.t.nDdxOD) : h.intl.string(h.t.ICYEfX),

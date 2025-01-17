@@ -10,7 +10,7 @@ var i,
     a = n(192379),
     s = n(120356),
     o = n.n(s),
-    c = n(476183),
+    c = n(642128),
     d = n(481060),
     u = n(542094),
     h = n(182906),
@@ -31,7 +31,7 @@ function _(e) {
             onActivityItemSelected: E,
             imageBackground: b,
             activityAction: Z,
-            labelType: N
+            labelType: S
         } = (0, u.ZP)({
             channel: n,
             activityItem: i,
@@ -42,7 +42,7 @@ function _(e) {
             assetNames: x,
             commandOrigin: I
         }),
-        [S, T] = a.useState(!1),
+        [N, T] = a.useState(!1),
         j = a.useCallback(() => {
             T(!0);
         }, [T]),
@@ -57,11 +57,11 @@ function _(e) {
                         className: C.badgeContainer,
                         children: (0, r.jsx)(p.Z, {
                             name: i.application.name,
-                            labelType: N
+                            labelType: S
                         })
                     })
                 }),
-            [i.application.name, N]
+            [i.application.name, S]
         ),
         P = a.useMemo(() => {
             switch (Z) {
@@ -107,7 +107,7 @@ function _(e) {
         children: (0, r.jsx)(d.Spring, {
             config: v,
             from: { value: 0 },
-            to: { value: S ? 1 : 0 },
+            to: { value: N ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
                 return (0, r.jsx)(d.ThemeProvider, {

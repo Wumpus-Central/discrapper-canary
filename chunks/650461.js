@@ -42,7 +42,7 @@ let _ = new Map(),
         furthestStep: c.Wy.GAMES,
         requiredGameId: void 0
     });
-function g(e) {
+function N(e) {
     var t;
     return null !== (t = _.get(e)) && void 0 !== t
         ? t
@@ -52,7 +52,7 @@ function g(e) {
           })();
 }
 function f(e, t) {
-    let n = g(e);
+    let n = N(e);
     _.set(e, {
         ...n,
         ...t
@@ -66,7 +66,7 @@ function f(e, t) {
             A.set(e, n);
     }
 }
-class N extends (r = s.ZP.PersistedStore) {
+class g extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         null != e &&
             E.default.keys(e.progressByGuild).forEach((t) => {
@@ -129,9 +129,9 @@ class N extends (r = s.ZP.PersistedStore) {
         return [..._.keys()];
     }
 }
-d(N, 'displayName', 'ClanSetupStore'),
-    d(N, 'persistKey', 'ClanSetupStore'),
-    (t.ZP = new N(a.Z, {
+d(g, 'displayName', 'ClanSetupStore'),
+    d(g, 'persistKey', 'ClanSetupStore'),
+    (t.ZP = new g(a.Z, {
         CLAN_SETUP_RESET: function () {
             _.clear(), A.clear();
         },
@@ -168,7 +168,7 @@ d(N, 'displayName', 'ClanSetupStore'),
                     null == n
                         ? o.t
                         : {
-                              ...g(r).verificationForm,
+                              ...N(r).verificationForm,
                               ...n
                           }),
                 f(r, { verificationForm: t }));

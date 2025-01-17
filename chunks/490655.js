@@ -46,8 +46,8 @@ function S(e, t) {
     }
 }
 t.Z = l.memo(function (e) {
-    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: L, editedWebhook: k, isFetchingWebhooks: O, refToScroller: w, errors: M, hasChanges: B } = e,
-        P = (0, o.e7)([g.ZP], () => (null != r ? g.ZP.getDefaultChannel(r.id) : null)),
+    let { section: t, sectionId: n, guild: r, channel: y, integrations: A, editedIntegration: R, webhooks: L, editedWebhook: k, isFetchingWebhooks: O, refToScroller: w, errors: M, hasChanges: P } = e,
+        B = (0, o.e7)([g.ZP], () => (null != r ? g.ZP.getDefaultChannel(r.id) : null)),
         D = (0, o.cj)([g.ZP], () => g.ZP.getChannels(null == r ? void 0 : r.id)),
         U = (0, o.cj)([x.Z], () =>
             a().keyBy(
@@ -61,12 +61,12 @@ t.Z = l.memo(function (e) {
                 'id'
             )
         ),
-        W = null != y ? y : P,
+        W = null != y ? y : B,
         H = t === _.b4C.APPLICATION ? n : null,
         [G, z] = l.useState(c.$x),
         V = l.useCallback(
             () =>
-                B()
+                P()
                     ? (f.S.dispatch(_.CkL.SHAKE_APP, {
                           duration: 300,
                           intensity: G
@@ -75,7 +75,7 @@ t.Z = l.memo(function (e) {
                       f.S.dispatch(_.CkL.EMPHASIZE_NOTICE),
                       !1)
                     : (z(c.$x), !0),
-            [B, G]
+            [P, G]
         ),
         K = l.useCallback((e) => !!V() && (d.Z.setSection(e), !0), [V]),
         {

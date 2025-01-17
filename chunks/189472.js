@@ -29,7 +29,7 @@ let E = (e) => {
                 l.Z.updateChannelOverrideSettings(null, E, { muted: !0 }, p.ZB.Muted),
                 c.Z.showMuteSuccessToast(n.id, r));
         }, [E, r, n, i]);
-    return (0, a.jsx)(d.Z, {
+    return (0, a.jsx)(d.ZP, {
         title: g.intl.formatToPlainString(g.t.TRp5wc, { username: I }),
         description: g.intl.string(g.t['yM/+AA']),
         buttonText: b ? g.intl.string(g.t.E8x4Nj) : g.intl.string(g.t.HITUcX),

@@ -31,8 +31,8 @@ var i = n(200651),
     y = n(662146),
     j = n(674552),
     T = n(981631),
-    P = n(474936),
-    A = n(871465),
+    A = n(474936),
+    P = n(871465),
     w = n(388032),
     M = n(491708);
 let L = {
@@ -53,7 +53,7 @@ function R(e) {
         [C, x] = l.useState(!1),
         [I, _] = l.useState(!1),
         [Z, S] = l.useState(null),
-        [P, R] = l.useState(0),
+        [A, R] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
@@ -79,11 +79,11 @@ function R(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(k, 500)), R(P + 1), 15 === P)) {
+                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(k, 500)), R(A + 1), 15 === A)) {
                         k();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
-                            e && o.K.set(A.O5, !0),
+                            e && o.K.set(P.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             _(!0),
                             setTimeout(() => {
@@ -141,7 +141,7 @@ function D() {
             return i > 0 && i < 100;
         }),
         n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
-        l = Object.keys(P.nG),
+        l = Object.keys(A.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length

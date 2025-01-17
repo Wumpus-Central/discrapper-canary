@@ -1,63 +1,63 @@
-i.d(t, {
+n.d(t, {
     E: function () {
-        return a;
+        return r;
     }
 });
-var a,
-    n = i(200651),
-    l = i(120356),
-    s = i.n(l),
-    r = i(468194),
-    c = i(471445),
-    d = i(686546),
-    o = i(311533);
-(a || (a = {})).SMALL_32 = 'SMALL_32';
-let u = { SMALL_32: 24 },
-    A = {
+var r,
+    l = n(200651),
+    i = n(120356),
+    s = n.n(i),
+    a = n(468194),
+    o = n(471445),
+    E = n(686546),
+    u = n(311533);
+(r || (r = {})).SMALL_32 = 'SMALL_32';
+let c = { SMALL_32: 24 },
+    d = {
         SMALL_32: [13, 11, 10, 10, 10, 10, 10]
     };
 t.Z = function (e) {
-    var t, i, a;
-    let { className: l, iconClassName: I, size: S, channel: _, guild: E, locked: f, hasActiveThreads: h } = e;
-    if (null == E) return null;
-    let g = E.getIconURL(48),
-        p = A[S],
-        L = u[S],
-        N = (0, c.KS)(_, E, {
-            locked: f,
-            hasActiveThreads: h
+    var t, n, r;
+    let { className: i, iconClassName: _, size: A, channel: T, guild: I, locked: N, hasActiveThreads: f } = e;
+    if (null == I) return null;
+    let g = I.getIconURL(48),
+        O = d[A],
+        R = c[A],
+        S = (0, o.KS)(T, I, {
+            locked: N,
+            hasActiveThreads: f
         });
-    if (null == N) return null;
-    let b = (0, r.Zg)(null !== (t = null == E ? void 0 : E.toString()) && void 0 !== t ? t : null);
-    return (0, n.jsxs)('div', {
+    if (null == S) return null;
+    let D = (0, a.Zg)(null !== (t = null == I ? void 0 : I.toString()) && void 0 !== t ? t : null);
+    return (0, l.jsxs)('div', {
         role: 'img',
-        className: l,
+        className: i,
         children: [
-            (0, n.jsx)(d.ZP, {
-                mask: d.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
+            (0, l.jsx)(E.ZP, {
+                mask: E.QS.GUILD_ICON_WITH_CHANNEL_TYPE,
                 children:
                     null != g
-                        ? (0, n.jsx)('img', {
+                        ? (0, l.jsx)('img', {
                               alt: '',
                               src: g,
-                              className: o.channelGuildIcon,
+                              className: u.channelGuildIcon,
                               style: {
-                                  width: L,
-                                  height: L
+                                  width: R,
+                                  height: R
                               }
                           })
-                        : (0, n.jsx)('div', {
-                              className: s()(o.channelGuildIcon, o.acronym),
+                        : (0, l.jsx)('div', {
+                              className: s()(u.channelGuildIcon, u.acronym),
                               style: {
-                                  fontSize: ((i = p), (a = b).length - 1 > i.length ? i[i.length - 1] : i[a.length - 1]),
-                                  width: L,
-                                  height: L
+                                  fontSize: ((n = O), (r = D).length - 1 > n.length ? n[n.length - 1] : n[r.length - 1]),
+                                  width: R,
+                                  height: R
                               },
-                              children: b
+                              children: D
                           })
             }),
-            (0, n.jsx)(N, {
-                className: s()(o.icon, o.iconWithGuildIcon, I),
+            (0, l.jsx)(S, {
+                className: s()(u.icon, u.iconWithGuildIcon, _),
                 color: 'currentColor'
             })
         ]

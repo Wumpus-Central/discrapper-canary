@@ -26,8 +26,8 @@ var n = i(200651),
     g = i(656709),
     S = i(567409),
     _ = i(703656),
-    Z = i(409057),
-    C = i(199902),
+    C = i(409057),
+    Z = i(199902),
     O = i(592125),
     I = i(293273),
     N = i(158776),
@@ -52,7 +52,7 @@ function L(e) {
         }
     }, [f]);
     let S = null != i && (0, p.Z)(i, z.xjy.JOIN),
-        Z = async (e) => {
+        C = async (e) => {
             if (null != d && 'unsent' === f) {
                 e.stopPropagation();
                 try {
@@ -87,7 +87,7 @@ function L(e) {
                 }
             }
         },
-        C = async () => {
+        Z = async () => {
             var e;
             if (null == d) return;
             let t = await c.Z.getOrEnsurePrivateChannel(d.id),
@@ -111,7 +111,7 @@ function L(e) {
             (0, n.jsx)(a.Button, {
                 ...e,
                 submitting: 'sending' === f,
-                onClick: m ? C : Z,
+                onClick: m ? Z : C,
                 className: M.inviteButton,
                 wrapperClassName: M.inviteButtonWrapper,
                 innerClassName: M.inviteButtonInner,
@@ -191,7 +191,7 @@ function w(e) {
 function D(e) {
     let { entry: t, currentUserActivity: i, idx: l } = e,
         o = (0, r.e7)([y.default], () => y.default.getUser(t.author_id)),
-        s = (0, r.e7)([C.Z], () => (null != o ? C.Z.getAnyStreamForUser(o.id) : null), [o]),
+        s = (0, r.e7)([Z.Z], () => (null != o ? Z.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: u, status: d } = (0, r.cj)(
             [N.Z],
             () =>
@@ -285,7 +285,7 @@ function P() {
               className: M.container,
               children: [
                   null != s && null != o
-                      ? (0, n.jsx)(Z.Z, {
+                      ? (0, n.jsx)(C.Z, {
                             className: M.activityCard,
                             activity: s,
                             user: o,

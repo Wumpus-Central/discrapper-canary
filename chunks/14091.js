@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(619753),
     b = n(981631),
     Z = n(388032),
-    N = n(893665);
-function S(e, t, n) {
+    S = n(893665);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ class T extends l.Component {
         var t;
         super(...e),
             (t = this),
-            S(this, 'autoAnalytics', function () {
+            N(this, 'autoAnalytics', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
                 if (null == t.props.searchAnalyticsId) return;
                 let n = 0,
@@ -90,9 +90,9 @@ class T extends l.Component {
 let j = (e) => {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: N.emptyResultsWrap,
+        className: S.emptyResultsWrap,
         children: (0, i.jsx)('div', {
-            className: N.emptyResultsContent,
+            className: S.emptyResultsContent,
             children: t
         })
     });
@@ -128,13 +128,13 @@ class A extends l.PureComponent {
         let { searchAnalyticsId: e, searchType: t, searchResults: n } = this.props,
             { offset: l, hasError: r, totalResults: a, isHistoricalIndexing: s } = this.props.search;
         return (0, i.jsxs)('section', {
-            className: N.searchResultsWrap,
+            className: S.searchResultsWrap,
             'aria-label': Z.intl.string(Z.t.zkoeq6),
             children: [
                 this.renderHeader(),
                 (0, i.jsx)(d.AdvancedScroller, {
                     ref: this.scrollerRef,
-                    className: N.scroller,
+                    className: S.scroller,
                     children: this.renderContent()
                 }),
                 (0, i.jsx)(T, {
@@ -152,12 +152,12 @@ class A extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', {
+            N(this, 'state', {
                 searchMode: b.QIO.NEWEST,
                 searchQuery: null
             }),
-            S(this, 'scrollerRef', l.createRef()),
-            S(this, 'scrollTo', (e, t, n) => {
+            N(this, 'scrollerRef', l.createRef()),
+            N(this, 'scrollTo', (e, t, n) => {
                 let i = this.scrollerRef.current;
                 if (null == i) return;
                 let l = i.getScrollerState().scrollTop - e;
@@ -167,28 +167,28 @@ class A extends l.PureComponent {
                     callback: n
                 });
             }),
-            S(this, 'selectChannel', (e) => {
+            N(this, 'selectChannel', (e) => {
                 e !== C.Z.getChannelId() && u.Z.transitionToInviteChannelSync(e);
             }),
-            S(this, 'searchPrevious', () => {
+            N(this, 'searchPrevious', () => {
                 let {
                     searchId: e,
                     search: { isSearching: t }
                 } = this.props;
                 !t && h.jn(e);
             }),
-            S(this, 'searchNext', () => {
+            N(this, 'searchNext', () => {
                 let {
                     searchId: e,
                     search: { isSearching: t }
                 } = this.props;
                 !t && h.m$(e);
             }),
-            S(this, 'handleSearchResultsClose', () => {
+            N(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
                 h.qt(e);
             }),
-            S(this, 'searchByMode', (e) => {
+            N(this, 'searchByMode', (e) => {
                 let {
                         searchId: t,
                         search: { isSearching: n }
@@ -203,14 +203,14 @@ class A extends l.PureComponent {
                     h.Nz(t, e),
                     this.setState({ searchMode: e }));
             }),
-            S(this, 'toggleShowBlockedMessages', () => {
+            N(this, 'toggleShowBlockedMessages', () => {
                 let {
                     searchId: e,
                     search: { showBlockedResults: t }
                 } = this.props;
                 h.QY(e, !t);
             }),
-            S(this, 'renderHeader', () => {
+            N(this, 'renderHeader', () => {
                 let { searchMode: e } = this.state,
                     { totalResults: t, isSearching: n, isHistoricalIndexing: l, documentsIndexed: r } = this.props.search;
                 return (0, i.jsx)(_.Z, {
@@ -222,43 +222,43 @@ class A extends l.PureComponent {
                     documentsIndexed: r
                 });
             }),
-            S(this, 'renderIndexing', () => {
+            N(this, 'renderIndexing', () => {
                 let e = g.Z.getSearchType(this.props.searchId) === b.aib.GUILD ? Z.intl.string(Z.t.AXPbZm) : Z.intl.string(Z.t.Q0JJjo);
                 return (0, i.jsxs)(j, {
                     children: [
                         (0, i.jsx)(I.Z, {}),
                         (0, i.jsx)('div', {
-                            className: (N.emptyResultsText, N.stillIndexing),
+                            className: (S.emptyResultsText, S.stillIndexing),
                             children: e
                         })
                     ]
                 });
             }),
-            S(this, 'renderNoResults', () => {
+            N(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
                     t = e ? Z.intl.string(Z.t['VrK/2d']) : Z.intl.string(Z.t.V6nAfH);
                 return (0, i.jsxs)(j, {
                     children: [
-                        (0, i.jsx)('div', { className: a()(N.noResultsImage, { [N.alt]: e }) }),
+                        (0, i.jsx)('div', { className: a()(S.noResultsImage, { [S.alt]: e }) }),
                         (0, i.jsx)('div', {
-                            className: a()(N.emptyResultsText, N.noResults, { [N.alt]: e }),
+                            className: a()(S.emptyResultsText, S.noResults, { [S.alt]: e }),
                             children: t
                         })
                     ]
                 });
             }),
-            S(this, 'renderError', () =>
+            N(this, 'renderError', () =>
                 (0, i.jsxs)(j, {
                     children: [
-                        (0, i.jsx)('div', { className: N.errorImage }),
+                        (0, i.jsx)('div', { className: S.errorImage }),
                         (0, i.jsx)('div', {
-                            className: a()(N.emptyResultsText, N.errorMessage),
+                            className: a()(S.emptyResultsText, S.errorMessage),
                             children: Z.intl.string(Z.t.uvDZBQ)
                         })
                     ]
                 })
             ),
-            S(this, 'renderContent', () => {
+            N(this, 'renderContent', () => {
                 let { searchResults: e, blockCount: t, ignoreCount: n } = this.props,
                     { totalResults: l, isSearching: r, isIndexing: a, hasError: s } = this.props.search;
                 return s

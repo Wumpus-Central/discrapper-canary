@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return p;
     }
 });
 var l = t(200651);
@@ -21,9 +21,9 @@ var i = t(442837),
     j = t(981631),
     f = t(388032),
     N = t(880083);
-let { INVITE_OPTIONS_7_DAYS: I, INVITE_OPTIONS_UNLIMITED: p } = g.ZP;
-function C(e) {
-    var n, t, C;
+let { INVITE_OPTIONS_7_DAYS: I, INVITE_OPTIONS_UNLIMITED: C } = g.ZP;
+function p(e) {
+    var n, t, p;
     let { onClose: E, event: T } = e,
         S = null == T ? void 0 : T.guild_id,
         Z = (0, i.e7)(
@@ -56,7 +56,7 @@ function C(e) {
         D = null == A || null == R,
         L = (0, s.Z)(null != A ? A : ''),
         z = null !== (t = null == R ? void 0 : R.maxAge) && void 0 !== t ? t : I.value,
-        B = null !== (C = null == R ? void 0 : R.maxUses) && void 0 !== C ? C : p.value;
+        B = null !== (p = null == R ? void 0 : R.maxUses) && void 0 !== p ? p : C.value;
     return (0, l.jsxs)('div', {
         className: N.container,
         children: [

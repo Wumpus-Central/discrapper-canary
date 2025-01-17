@@ -24,7 +24,7 @@ function u(e) {
         I = null;
     return (
         p.forEach((e) => {
-            var l, E, b, Z, N, S, T, j;
+            var l, E, b, Z, S, N, T, j;
             if (null != g && g.length > 0) {
                 let t = a.default.extractTimestamp(e.id);
                 for (let e = 0; (l = e < (null == g ? void 0 : g.length)), l; e++) {
@@ -69,28 +69,28 @@ function u(e) {
                     ((E = x),
                     (b = e),
                     (Z = R),
-                    (n = N = y),
-                    null == N || N.type !== Z
+                    (n = S = y),
+                    null == S || S.type !== Z
                         ? ((t = {
                               type: Z,
                               content: [],
                               key: b.id
                           }),
                           E.push(t))
-                        : (n = (t = N).content[t.content.length - 1]),
+                        : (n = (t = S).content[t.content.length - 1]),
                     [t, n]);
             }
             if (m === e.id && null != _) {
                 if (null != y && y.type === d.ys_.DIVIDER) (y.unreadId = e.id), (_ = null);
                 else if (null !== P) {
-                    (S = P),
+                    (N = P),
                         (T = h),
                         (j = e).isFirstMessageInForumPost(T) ||
-                            S.content.push({
+                            N.content.push({
                                 type: d.ys_.DIVIDER,
                                 unreadId: j.id
                             }),
-                        (S.hasUnread = !0),
+                        (N.hasUnread = !0),
                         (_ = null);
                 } else
                     !e.isFirstMessageInForumPost(h) &&

@@ -131,11 +131,11 @@ class y extends s.PureComponent {
     }
 }
 let S = c.ZP.connectStores([p.Z], (e) => {
-    let { guild: n, animate: r, iconSrc: i, style: a, size: s } = e;
+    let { guild: n, animate: r, iconSrc: i, style: a, size: s, iconSize: o, lossless: l } = e;
     return {
         style: {
             ...a,
-            backgroundImage: (0, m.rv)(null != i ? i : n.getIconURL(T[s], r && p.Z.isFocused()))
+            backgroundImage: (0, m.rv)(null != i ? i : n.getIconURL(null != o ? o : T[s], r && p.Z.isFocused(), l))
         }
     };
 })((0, _.N)((e) => (0, a.jsx)(y, { ...e })));

@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(102172),
     j = n(74299),
     T = n(914923),
-    P = n(165393),
-    A = n(989941),
+    A = n(165393),
+    P = n(989941),
     w = n(690221),
     M = n(231664),
     L = n(759198),
@@ -90,7 +90,7 @@ class ei extends l.PureComponent {
             className: et.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(P.Z, { title: r })
+                    ? (0, i.jsx)(A.Z, { title: r })
                     : (0, i.jsx)(b.ZP, {
                           look: b.ZP.Looks.GRAY,
                           size: b.ZP.Sizes.SMALL,
@@ -196,7 +196,7 @@ t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([G.default], () => G.default.getId()),
-        a = (0, c.e7)([N.ZP, q.Z], () => (0, A.Z)(N.ZP, q.Z)),
+        a = (0, c.e7)([N.ZP, q.Z], () => (0, P.Z)(N.ZP, q.Z)),
         o = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
         s = (0, c.e7)([I.ZP], () => I.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
@@ -218,7 +218,7 @@ t.Z = (0, f.Z)(function (e) {
         S = (0, c.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
         E = (0, C.Z0)() && null != S && (0, v.R)(),
         T = (0, c.e7)([O.Z], () => (0, j.Z)(O.Z) && (0, Y.isWindows)()),
-        P = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
+        A = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         w = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
         L = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, Z.F6)(u, z.default, F.Z) : void 0)),
         R = (0, M.Z)();
@@ -226,7 +226,7 @@ t.Z = (0, f.Z)(function (e) {
         ...l,
         guildId: n,
         canGoLive: T || E,
-        activity: P,
+        activity: A,
         embeddedActivity: f,
         userId: r,
         runningGame: a,

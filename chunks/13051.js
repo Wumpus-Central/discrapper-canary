@@ -41,10 +41,10 @@ function y(e) {
         k = (0, c.e7)([b.Z], () => b.Z.getRoles(n.id)),
         [O, w] = l.useState(!1),
         M = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation),
-        B = l.useCallback(() => {
+        P = l.useCallback(() => {
             w(!0), L(r);
         }, [r, L]),
-        P = l.useCallback(() => {
+        B = l.useCallback(() => {
             !r.syncing &&
                 (0, u.openModal)((e) => {
                     let t = 0 === r.expire_behavior ? Z.intl.string(Z.t['6kpw4u']) : Z.intl.string(Z.t.fQUQIC);
@@ -191,7 +191,7 @@ function y(e) {
                           children: (0, i.jsx)(u.Button, {
                               size: u.Button.Sizes.SMALL,
                               color: u.Button.Colors.PRIMARY,
-                              onClick: B,
+                              onClick: P,
                               disabled: O,
                               children: O
                                   ? (0, i.jsx)(N.Z, {
@@ -409,7 +409,7 @@ function y(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.RED,
                             look: u.Button.Looks.LINK,
-                            onClick: P,
+                            onClick: B,
                             children: Z.intl.string(Z.t.M6q6eX)
                         })
                     })

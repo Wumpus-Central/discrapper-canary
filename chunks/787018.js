@@ -104,7 +104,7 @@ function y(e) {
                                         children: C.map((e, n) => {
                                             let { icon: t, description: l } = e;
                                             return (0, i.jsx)(
-                                                u.Z,
+                                                u.ZP,
                                                 {
                                                     icon: t,
                                                     title: l,
@@ -214,7 +214,7 @@ function T(e) {
                                         children: U.map((e, n) => {
                                             let { icon: t, description: l } = e;
                                             return (0, i.jsx)(
-                                                u.Z,
+                                                u.ZP,
                                                 {
                                                     icon: t,
                                                     title: l,

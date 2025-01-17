@@ -5,8 +5,8 @@ n.d(t, {
 });
 var l,
     i,
-    r = n(493683),
-    s = n(904245),
+    s = n(493683),
+    r = n(904245),
     a = n(710845),
     o = n(592125),
     d = n(70956),
@@ -15,7 +15,7 @@ let c = 1 * d.Z.Millis.SECOND + 10;
 ((l = i || (i = {}))[(l.GROUP_DM = 0)] = 'GROUP_DM'), (l[(l.USER = 1)] = 'USER'), (l[(l.CHANNEL = 2)] = 'CHANNEL');
 class h extends u.Z {
     _sendInvite(e, t, n, l, i) {
-        s.Z.sendInvite(e.id, t, n, l).then(
+        r.Z.sendInvite(e.id, t, n, l).then(
             () => i(null, !0),
             () => i(null, !1)
         );
@@ -28,10 +28,10 @@ class h extends u.Z {
                 this._sendInvite(e.channel, e.inviteKey, n, l, t);
                 break;
             case 1:
-                r.Z.ensurePrivateChannel(e.user.id).then(
+                s.Z.ensurePrivateChannel(e.user.id).then(
                     (i) => {
-                        let r = o.Z.getChannel(i);
-                        null != r && this._sendInvite(r, e.inviteKey, n, l, t);
+                        let s = o.Z.getChannel(i);
+                        null != s && this._sendInvite(s, e.inviteKey, n, l, t);
                     },
                     () => t(null, !1)
                 );

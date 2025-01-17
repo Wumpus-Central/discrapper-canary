@@ -27,8 +27,8 @@ var i = n(200651),
     E = n(233870),
     b = n(51144),
     Z = n(998502),
-    N = n(276264),
-    S = n(981631),
+    S = n(276264),
+    N = n(981631),
     T = n(388032),
     j = n(973249);
 let A = [],
@@ -63,7 +63,7 @@ function P(e) {
         onShiftClick: () => {
             let e = '@'.concat(b.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            I.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            I.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -71,7 +71,7 @@ function P(e) {
         },
         children: (e) =>
             (0, i.jsx)(
-                N.Z,
+                S.Z,
                 {
                     user: t,
                     currentUser: p,
@@ -117,11 +117,11 @@ function R(e) {
                     var i, l, r;
                     C.Z.isFriend(t.id) || t.id === (null === (i = v.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                         ? (n[t.id] = {
-                              status: null !== (l = g.Z.getStatus(t.id)) && void 0 !== l ? l : S.Skl.OFFLINE,
+                              status: null !== (l = g.Z.getStatus(t.id)) && void 0 !== l ? l : N.Skl.OFFLINE,
                               activities: null !== (r = g.Z.getActivities(t.id)) && void 0 !== r ? r : A
                           })
                         : (n[t.id] = {
-                              status: S.Skl.OFFLINE,
+                              status: N.Skl.OFFLINE,
                               activities: A
                           });
                 }
@@ -140,7 +140,7 @@ function R(e) {
             M
         ));
     l.useEffect(() => {
-        _.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        _.default.track(N.rMx.MEMBER_LIST_VIEWED, {
             channel_id: n.id,
             channel_type: n.type,
             guild_id: n.guild_id

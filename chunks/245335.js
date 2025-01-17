@@ -28,5 +28,5 @@ let u = new Set([0, 1]);
     (e[(e.STREAM = 1)] = 'STREAM'), (e[(e.EMBEDDED_APPLICATION = 2)] = 'EMBEDDED_APPLICATION'), (e[(e.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = 'ROLE_SUBSCRIPTIONS_PURCHASE');
 })(s || (s = {})),
     !(function (e) {
-        (e.MAIN = 'main'), (e.SETTINGS = 'settings'), (e.GUEST = 'guest');
+        (e.MAIN = 'main'), (e.SETTINGS = 'settings');
     })(o || (o = {}));

@@ -22,11 +22,11 @@ var i,
     f = t(725436),
     g = t(274311),
     C = t(854698),
-    b = t(285784),
-    v = t(95291),
-    h = t(742593),
-    T = t(810561),
-    U = t(187443),
+    v = t(285784),
+    T = t(95291),
+    b = t(742593),
+    U = t(810561),
+    h = t(187443),
     E = t(131154),
     L = t(765305),
     x = t(981631),
@@ -121,7 +121,7 @@ function y(e) {
           });
 }
 function A(e) {
-    let { className: n, guild: t, channel: i, creator: a, name: c, entityType: o, description: l, imageLocation: _ = 0, imageSource: u, isActive: p, isUserLurking: m, isJoined: I = !1, isMember: f = !1, isHub: x = !1, speakers: D, speakerCount: S, rsvped: A, canInvite: N, location: z, truncate: O, onContextMenu: B, onJoinClick: H, onJoinGuildClick: R, onGoToGuildClick: k, onRsvpClick: w, onStartClick: M, onInviteClick: j, onEndClick: P, onClick: Z, isNew: X, guildEvent: V, eventPreview: Y, recurrenceRule: q, recurrenceId: F } = e,
+    let { className: n, guild: t, channel: i, creator: a, name: c, entityType: o, description: l, imageLocation: _ = 0, imageSource: u, isActive: p, isUserLurking: m, isJoined: I = !1, isMember: f = !1, isHub: x = !1, speakers: D, speakerCount: S, rsvped: A, canInvite: N, location: z, truncate: O, onContextMenu: B, onJoinClick: R, onJoinGuildClick: H, onGoToGuildClick: k, onRsvpClick: w, onStartClick: j, onInviteClick: M, onEndClick: P, onClick: Z, isNew: X, guildEvent: V, eventPreview: Y, recurrenceRule: q, recurrenceId: F } = e,
         W = (0, g.Q)(i, o),
         K = o === L.WX.EXTERNAL,
         J = K ? (e) => e.stopPropagation() : void 0,
@@ -147,8 +147,8 @@ function A(e) {
             (0, r.jsxs)('div', {
                 className: d()(G.padding, { [G.isRecurring]: $ }),
                 children: [
-                    0 === _ && (0, r.jsx)(v.Z, { source: u }),
-                    (0, r.jsx)(h.ZP, {
+                    0 === _ && (0, r.jsx)(T.Z, { source: u }),
+                    (0, r.jsx)(b.ZP, {
                         creator: a,
                         name: c,
                         description: l,
@@ -178,27 +178,27 @@ function A(e) {
                             (0, r.jsx)(y, {
                                 guild: t,
                                 channel: i,
-                                onJoinClick: H,
+                                onJoinClick: R,
                                 handleLocationClick: J,
                                 location: z,
                                 isExternal: K,
                                 isHub: x
                             }),
                             x
-                                ? (0, r.jsx)(U.Z, {
+                                ? (0, r.jsx)(h.Z, {
                                       isActive: p,
                                       isUserLurking: m,
                                       isMember: f,
                                       rsvped: A,
                                       onRsvpClick: w,
-                                      onJoinGuildClick: R,
+                                      onJoinGuildClick: H,
                                       onGoToGuildClick: k,
                                       guildName: null == t ? void 0 : t.name,
                                       canInvite: N,
                                       isChannelPublic: W,
-                                      onInviteClick: j
+                                      onInviteClick: M
                                   })
-                                : (0, r.jsx)(b.ZP, {
+                                : (0, r.jsx)(v.ZP, {
                                       entityType: o,
                                       isJoined: I,
                                       isActive: p,
@@ -207,10 +207,10 @@ function A(e) {
                                       canInvite: N,
                                       isChannelPublic: W,
                                       onContextMenu: B,
-                                      onJoinClick: H,
+                                      onJoinClick: R,
                                       onRsvpClick: w,
-                                      onStartClick: M,
-                                      onInviteClick: j,
+                                      onStartClick: j,
+                                      onInviteClick: M,
                                       onEndClick: P
                                   })
                         ]
@@ -219,7 +219,7 @@ function A(e) {
                 ]
             }),
             $ &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(U.Z, {
                     guildId: null == t ? void 0 : t.id,
                     recurrenceRule: q,
                     guildEventId: V.id,

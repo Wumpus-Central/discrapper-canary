@@ -39,8 +39,8 @@ var i = n(200651),
     O = n(341701),
     w = n(509399),
     M = n(790904),
-    B = n(609182);
-function P(e, t) {
+    P = n(609182);
+function B(e, t) {
     return t.includes(e);
 }
 function D(e) {
@@ -117,7 +117,7 @@ function U(e) {
         }, [ea, ed, G, eo, eh, ep]),
         ev = Object.values(V).length,
         eC = l.useMemo(() => {
-            let e = ev > 100 ? P : s();
+            let e = ev > 100 ? B : s();
             return Object.values(V).filter((t) => {
                 var n, i, l;
                 let { application: r } = t;
@@ -192,7 +192,7 @@ function U(e) {
     0 === eS.length &&
         ed &&
         ((eS = (function (e, t, n) {
-            let l = (0, c.wj)(e) ? M : B,
+            let l = (0, c.wj)(e) ? M : P,
                 r = (0, i.jsxs)(v.Z, {
                     direction: v.Z.Direction.VERTICAL,
                     align: v.Z.Align.CENTER,

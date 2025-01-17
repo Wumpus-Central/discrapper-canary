@@ -142,10 +142,10 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                 return () => clearTimeout(e);
             }
         });
-        let e7 = (0, O.So)(s.q.STREAM_HIGH_QUALITY),
-            { hqStreamingState: e9 } = (0, M.k)(s.q.STREAM_HIGH_QUALITY),
+        let e9 = (0, O.So)(s.q.STREAM_HIGH_QUALITY),
+            { hqStreamingState: e7 } = (0, M.k)(s.q.STREAM_HIGH_QUALITY),
             e8 = (0, k.Z)(),
-            e6 = e7 && e4 && null != e8,
+            e6 = e9 && e4 && null != e8,
             e5 = (0, R.o)(C, eY),
             te = (0, P.lL)('CallTile', !0, eY, e5),
             tt = (0, o.e7)([B.Z], () => (C.type === eu.fO.USER && null != eJ ? B.Z.getEffectForUserId(eJ) : null)),
@@ -361,7 +361,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                                         e6
                                             ? (0, i.jsx)(D.W, {
                                                   onPlayed: tS,
-                                                  played: e9.hqStreamingFrameAnimationPlayed
+                                                  played: e7.hqStreamingFrameAnimationPlayed
                                               })
                                             : null,
                                         eA

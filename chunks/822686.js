@@ -20,7 +20,7 @@ let p = (e) => {
             return null != e && e.type !== _.d4z.DM && e.type !== _.d4z.GROUP_DM && f.Z.canWithPartialContext(_.Plq.MANAGE_MESSAGES, { channelId: e.id });
         }, [n]);
     return null != n && g
-        ? (0, a.jsx)(c.Z, {
+        ? (0, a.jsx)(c.ZP, {
               title: h.intl.string(h.t.c9BHLy),
               description: h.intl.string(h.t.dK8S09),
               buttonText: i ? h.intl.string(h.t.f3pnLC) : h.intl.string(h.t.ch2xbm),

@@ -17,8 +17,8 @@ var n,
     g = i(786761),
     S = i(695346),
     _ = i(314897),
-    Z = i(592125),
-    C = i(375954),
+    C = i(592125),
+    Z = i(375954),
     O = i(292959),
     I = i(158776),
     N = i(885110),
@@ -149,7 +149,7 @@ function es(e) {
         n = el(t);
     if (!i.includes(_.default.getId())) return ei(n);
     if (null != n) return !1;
-    let l = Z.Z.getChannel(t);
+    let l = C.Z.getChannel(t);
     if (null == l || !l.isPrivate() || N.Z.getStatus() === F.Skl.DND || S.QZ.getSetting()) return !1;
     let o = X.find((e) => 1 === e.type && e.channelId === t && e.messageType === F.uaV.CALL);
     null != o && ei(o.id),
@@ -162,7 +162,7 @@ function es(e) {
 }
 class er extends (o = p.ZP.Store) {
     initialize() {
-        this.waitFor(Z.Z, x.default);
+        this.waitFor(C.Z, x.default);
     }
     getNotifications() {
         return X;
@@ -211,7 +211,7 @@ let ea = new er(E.Z, {
     MESSAGE_CREATE: function (e) {
         var t, i, n, l;
         let { channelId: o, message: s } = e,
-            r = Z.Z.getChannel(o),
+            r = C.Z.getChannel(o),
             a = x.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
         if (null == r || null == a) return !1;
         if ((null === (i = s.activity) || void 0 === i ? void 0 : i.type) === F.mFx.JOIN || (null === (n = s.activity) || void 0 === n ? void 0 : n.type) === F.mFx.JOIN_REQUEST) {
@@ -247,7 +247,7 @@ let ea = new er(E.Z, {
         }
         if (T.Z.getTextChatNotificationMode() === F.Ypu.DISABLED || y.Z.disableNotifications || !(0, k.eF)(s, o)) return !1;
         let u = !O.Z.isSoundDisabled(b.Ay),
-            d = null !== (l = C.Z.getMessage(o, s.id)) && void 0 !== l ? l : (0, g.e5)(s);
+            d = null !== (l = Z.Z.getMessage(o, s.id)) && void 0 !== l ? l : (0, g.e5)(s);
         eo((0, V.Z)(r, d, a, u), {
             type: 1,
             channelId: r.id,

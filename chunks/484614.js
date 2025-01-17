@@ -1,11 +1,11 @@
-var r,
-    o = n(200651),
-    a = n(192379),
-    s = n(846519),
-    i = n(481060),
-    l = n(572004),
-    d = n(388032);
-function c(e, t, n) {
+var i,
+    r = n(200651),
+    o = n(192379),
+    a = n(846519),
+    u = n(481060),
+    I = n(572004),
+    l = n(388032);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,39 +18,39 @@ function c(e, t, n) {
         e
     );
 }
-class u extends (r = a.PureComponent) {
+class _ extends (i = o.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === i.CopyInput.Modes.SUCCESS ? d.intl.string(d.t['t5VZ8/']) : e;
-        return (0, o.jsx)(i.CopyInput, {
+            n = t === u.CopyInput.Modes.SUCCESS ? l.intl.string(l.t['t5VZ8/']) : e;
+        return (0, r.jsx)(u.CopyInput, {
             ...this.props,
             onCopy: this.handleCopy,
             mode: t,
             text: n,
-            supportsCopy: l.wS
+            supportsCopy: I.wS
         });
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1000 } = this.props,
-            r = (0, l.JG)(e);
-        this.setState({ mode: r ? i.CopyInput.Modes.SUCCESS : i.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: i.CopyInput.Modes.DEFAULT })), null == t || t(e);
+            i = (0, I.JG)(e);
+        this.setState({ mode: i ? u.CopyInput.Modes.SUCCESS : u.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: u.CopyInput.Modes.DEFAULT })), null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case i.CopyInput.Modes.SUCCESS:
-                return i.Button.Colors.GREEN;
-            case i.CopyInput.Modes.ERROR:
-                return i.Button.Colors.RED;
+            case u.CopyInput.Modes.SUCCESS:
+                return u.Button.Colors.GREEN;
+            case u.CopyInput.Modes.ERROR:
+                return u.Button.Colors.RED;
             default:
-                return i.Button.Colors.BRAND;
+                return u.Button.Colors.BRAND;
         }
     }
     constructor(e) {
-        super(e), c(this, '_timeout', void 0), (this.state = { mode: i.CopyInput.Modes.DEFAULT }), (this._timeout = new s.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), s(this, '_timeout', void 0), (this.state = { mode: u.CopyInput.Modes.DEFAULT }), (this._timeout = new a.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-c(u, 'defaultProps', { delay: 1000 }), (t.Z = u);
+s(_, 'defaultProps', { delay: 1000 }), (t.Z = _);

@@ -22,12 +22,12 @@ var l = t(200651),
     f = t(77810),
     N = t(274311),
     I = t(230900),
-    p = t(366815),
-    C = t(765305),
+    C = t(366815),
+    p = t(765305),
     E = t(981631),
     T = t(388032),
     S = t(601335);
-let Z = (e) => e === C.WX.EXTERNAL,
+let Z = (e) => e === p.WX.EXTERNAL,
     b = (e, n) => {
         let t = d.Z.getChannel(e);
         if (null == t) return null;
@@ -82,7 +82,7 @@ function _(e, n, t, l) {
               tooltipText: T.intl.string(T.t.yutP5e)
           }
         : t
-          ? 0 === l && e !== C.WX.EXTERNAL
+          ? 0 === l && e !== p.WX.EXTERNAL
               ? {
                     disabled: !0,
                     tooltipText: T.intl.string(T.t['DkY+cH'])
@@ -132,7 +132,7 @@ function D(e) {
         j = (0, I.xV)(t),
         f = (0, I.xC)(c),
         N = (0, g.xt)(t);
-    return null == c || c === C.WX.NONE
+    return null == c || c === p.WX.NONE
         ? null
         : Z(c)
           ? (0, l.jsx)(o.FormItem, {
@@ -143,7 +143,7 @@ function D(e) {
                     className: S.__invalid_textInput,
                     onChange: h,
                     placeholder: T.intl.string(T.t.mkCMiY),
-                    maxLength: C.gG,
+                    maxLength: p.gG,
                     value: null != j ? j : '',
                     inputRef: m
                 })
@@ -169,32 +169,32 @@ function L(e) {
         h = (0, f.q)(a),
         N = null == a ? void 0 : a.hasFeature(E.oNc.COMMUNITY),
         I = (0, g.xt)(t),
-        p = A(r, t),
+        C = A(r, t),
         Z = i.useMemo(() => {
             let e = [
                 {
                     name: T.intl.string(T.t.BVZqJi),
-                    value: C.WX.VOICE,
+                    value: p.WX.VOICE,
                     desc: T.intl.string(T.t['EV//4e']),
                     icon: o.VoiceNormalIcon,
-                    ..._(C.WX.VOICE, I, d, m.length)
+                    ..._(p.WX.VOICE, I, d, m.length)
                 },
                 {
                     name: T.intl.string(T.t.w7ipb2),
-                    value: C.WX.EXTERNAL,
+                    value: p.WX.EXTERNAL,
                     desc: T.intl.string(T.t.DYxrHh),
                     icon: o.LocationIcon,
-                    ..._(C.WX.EXTERNAL, I, c, 0)
+                    ..._(p.WX.EXTERNAL, I, c, 0)
                 }
             ];
             return N
                 ? [
                       {
                           name: T.intl.string(T.t.EErMzM),
-                          value: C.WX.STAGE_INSTANCE,
+                          value: p.WX.STAGE_INSTANCE,
                           desc: T.intl.string(T.t.LgALpq),
                           icon: o.StageIcon,
-                          ..._(C.WX.STAGE_INSTANCE, I, x, h.length)
+                          ..._(p.WX.STAGE_INSTANCE, I, x, h.length)
                       },
                       ...e
                   ]
@@ -203,7 +203,7 @@ function L(e) {
     return (0, l.jsx)(o.RadioGroup, {
         value: t.entityType,
         options: Z,
-        onChange: p,
+        onChange: C,
         className: S.options
     });
 }
@@ -242,10 +242,10 @@ function z(e) {
                 onChange: a
             }),
             N
-                ? (0, l.jsx)(p.Z, {
+                ? (0, l.jsx)(C.Z, {
                       onClick: () => {
                           j({
-                              value: C.WX.STAGE_INSTANCE,
+                              value: p.WX.STAGE_INSTANCE,
                               name: T.intl.string(T.t.EErMzM)
                           }),
                               (0, o.openModalLazy)(async () => {

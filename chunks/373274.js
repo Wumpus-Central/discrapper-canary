@@ -35,8 +35,8 @@ var i,
     y = n(31022),
     j = n(10401),
     T = n(131704),
-    P = n(592125),
-    A = n(796974),
+    A = n(592125),
+    P = n(796974),
     w = n(984933),
     M = n(914010),
     L = n(540126),
@@ -96,7 +96,7 @@ class ed extends (i = r.PureComponent) {
     componentDidUpdate(e, t) {
         let { scrollToChannel: n, guildId: i, selectedChannelId: l } = this.props,
             { initialized: r } = this.state,
-            { scrollTop: a } = A.Z.getGuildDimensions(i);
+            { scrollTop: a } = P.Z.getGuildDimensions(i);
         null != n ? (this.scrollToChannel(n), h.Z.clearChannelListScrollTo(i)) : i !== e.guildId ? null != a && this.scrollTo(a) : l !== e.selectedChannelId ? this.scrollToChannel(l) : !t.initialized && r && (null == a && null != l ? this.scrollToChannel(l, !1, ei.yE, this.handleListScroll) : this.scrollTo(null != a ? a : 0, this.handleListScroll)), this.testShouldSkipTutorial();
     }
     getSectionRowsFromChannel(e) {
@@ -734,8 +734,8 @@ let eh = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
         a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         { analyticsLocations: o } = (0, v.ZP)(g.Z.GUILD_CHANNEL_LIST),
-        d = (0, u.e7)([P.Z], () => P.Z.getChannel(n)),
-        h = (0, u.e7)([P.Z], () => P.Z.getChannel(i)),
+        d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)),
+        h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)),
         p = (0, u.e7)([M.Z], () => M.Z.getGuildId()),
         C = (0, N.DM)(t),
         I = r.useRef(null),

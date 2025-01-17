@@ -11,7 +11,7 @@ var n = i(200651),
     l = i(192379),
     o = i(120356),
     s = i.n(o),
-    r = i(476183),
+    r = i(642128),
     a = i(481060),
     u = i(13245),
     d = i(809357),
@@ -44,8 +44,8 @@ function S(e) {
 function _(e) {
     e.currentTarget.scrollTo(0, 0);
 }
-let Z = l.memo(function (e) {
-    let { maxBodyLines: t, expand: i = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: p, cancelText: g, confirmText: S, icon: Z, body: C, title: O, renderFooter: I, contentOpacity: N, status: y, containerRef: x } = e,
+let C = l.memo(function (e) {
+    let { maxBodyLines: t, expand: i = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: p, cancelText: g, confirmText: S, icon: C, body: Z, title: O, renderFooter: I, contentOpacity: N, status: y, containerRef: x } = e,
         [b, T] = l.useState(!1),
         R = i || b || y === E._1z.FOCUSED;
     l.useEffect(() => {
@@ -95,18 +95,18 @@ let Z = l.memo(function (e) {
                                     className: v.iconAndDetails,
                                     style: { opacity: N },
                                     children: [
-                                        null == Z
+                                        null == C
                                             ? null
-                                            : 'string' == typeof Z
+                                            : 'string' == typeof C
                                               ? (0, n.jsx)(a.Avatar, {
-                                                    src: Z,
+                                                    src: C,
                                                     size: a.AvatarSizes.SIZE_40,
                                                     className: v.avatar,
                                                     'aria-hidden': !0
                                                 })
                                               : (0, n.jsx)('div', {
                                                     className: v.avatar,
-                                                    children: Z
+                                                    children: C
                                                 }),
                                         (0, n.jsxs)('div', {
                                             className: v.details,
@@ -117,12 +117,12 @@ let Z = l.memo(function (e) {
                                                     lineClamp: 2,
                                                     children: O
                                                 }),
-                                                null != C
+                                                null != Z
                                                     ? (0, n.jsx)(a.Text, {
                                                           color: 'interactive-normal',
                                                           variant: 'text-sm/normal',
                                                           lineClamp: null != t ? t * (R ? 2 : 1) : void 0,
-                                                          children: C
+                                                          children: Z
                                                       })
                                                     : null,
                                                 (function () {
@@ -186,7 +186,7 @@ let Z = l.memo(function (e) {
         ]
     });
 });
-function C(e) {
+function Z(e) {
     let {
         springs: { opacity: t, scale: i, transform: l, height: o },
         index: s,
@@ -245,7 +245,7 @@ function O(e) {
             status: M
         } = t,
         { ref: L, springs: w } = (0, p.X4)(t.id, s, r);
-    return (0, n.jsx)(C, {
+    return (0, n.jsx)(Z, {
         transitionState: s,
         springs: w,
         index: i,
@@ -253,7 +253,7 @@ function O(e) {
         children: (0, n.jsx)(f.Z, {
             observe: 0 === i,
             className: v.clickZone,
-            children: (0, n.jsx)(Z, {
+            children: (0, n.jsx)(C, {
                 ...A,
                 containerRef: L,
                 notificationId: t.id,

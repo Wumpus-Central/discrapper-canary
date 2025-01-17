@@ -60,12 +60,12 @@ t.Z = (e) => {
         return null;
     let Z = (0, g.E)(t);
     if (null == Z) return null;
-    let N = Z.emoji[0],
-        S =
-            null == N.id
-                ? h.ZP.getURL(N.name)
+    let S = Z.emoji[0],
+        N =
+            null == S.id
+                ? h.ZP.getURL(S.name)
                 : u.ZP.getEmojiURL({
-                      id: N.id,
+                      id: S.id,
                       animated: !1,
                       size: 32,
                       forcePNG: !0
@@ -77,19 +77,19 @@ t.Z = (e) => {
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.left, b && C.shy, x && C.confettiMode]),
                 width: 28
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.right, b && C.shy, x && C.confettiMode]),
                 width: 26
             }),
             (0, i.jsx)('img', {
                 alt: '',
-                src: S,
+                src: N,
                 className: a()([C.emoji, C.center, b && C.shy, x && C.confettiMode]),
                 width: 32
             })

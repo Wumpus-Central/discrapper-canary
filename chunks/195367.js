@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return p;
     }
 }),
     t(47120);
@@ -22,7 +22,7 @@ var l = t(200651),
     f = t(486324),
     N = t(388032),
     I = t(378816);
-function p(e) {
+function C(e) {
     let { editBroadcastInfoData: n } = e,
         { broadcastInfo: t, broadcastToDirectoryChannels: i, setBroadcastToDirectoryChannels: r, canEveryoneRoleViewEvent: a } = n;
     return t.can_broadcast
@@ -64,13 +64,13 @@ function p(e) {
           })
         : null;
 }
-function C(e) {
-    let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: T, validationErrorMessage: S, onChange: Z, canSetFocus: b = !1 } = e,
+function p(e) {
+    let { guildEvent: n, guildEventId: r, guildId: p, editBroadcastInfoData: E, error: T, validationErrorMessage: S, onChange: Z, canSetFocus: b = !1 } = e,
         { entityType: y, channelId: _, description: R, name: k, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: z } = n,
         B = (0, d._d)(_),
-        M = (0, d.K3)(_),
-        U = null != n && (0, x.xt)(n),
-        P = i.useMemo(() => {
+        P = (0, d.K3)(_),
+        M = null != n && (0, x.xt)(n),
+        U = i.useMemo(() => {
             let e = (0, h.v1)(n);
             return null != e ? e : { startDate: a()(L) };
         }, [n, L]),
@@ -85,7 +85,7 @@ function C(e) {
     let F = (e) => {
             Z({ image: e });
         },
-        X = (e, n) => {
+        O = (e, n) => {
             if (null == e || void 0 === n) {
                 F(null);
                 return;
@@ -107,7 +107,7 @@ function C(e) {
         children: [
             (0, l.jsx)('div', {
                 className: I.blockedUsersContainer,
-                children: null != _ && !U && (B > 0 || M > 0) && (0, l.jsx)(u.mv, { channelId: _ })
+                children: null != _ && !M && (B > 0 || P > 0) && (0, l.jsx)(u.mv, { channelId: _ })
             }),
             (0, l.jsxs)('div', {
                 className: I.form,
@@ -149,15 +149,15 @@ function C(e) {
                             null != n && null != D && (null == t ? void 0 : t.isBefore(n)) && (l.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != G && (l.recurrenceRule = (0, h.mF)(G, n)), Z(l);
                         },
                         onRecurrenceChange: (e) => {
-                            let n = P.startDate;
+                            let n = U.startDate;
                             if (null != n) Z({ recurrenceRule: (0, h.mF)(e, n) }), V(e);
                         },
-                        schedule: P,
+                        schedule: U,
                         recurrenceRule: z,
                         showEndDate: y === j.WX.EXTERNAL,
                         requireEndDate: y === j.WX.EXTERNAL,
-                        disableStartDateTime: U,
-                        guildId: C
+                        disableStartDateTime: M,
+                        guildId: p
                     }),
                     null != S
                         ? (0, l.jsx)(s.Text, {
@@ -200,12 +200,12 @@ function C(e) {
                                               image: A,
                                               makeURL: (e) => {
                                                   if (null == e) return null;
-                                                  if (null != C) {
+                                                  if (null != p) {
                                                       var t;
-                                                      return null !== (t = (0, g.Z)((0, m.Gb)(n, C, r))) && void 0 !== t ? t : null;
+                                                      return null !== (t = (0, g.Z)((0, m.Gb)(n, p, r))) && void 0 !== t ? t : null;
                                                   }
                                               },
-                                              onChange: X,
+                                              onChange: O,
                                               hint: N.intl.string(N.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
@@ -219,11 +219,11 @@ function C(e) {
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: X })]
+                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: O })]
                                   })
                         ]
                     }),
-                    (0, l.jsx)(p, { editBroadcastInfoData: E })
+                    (0, l.jsx)(C, { editBroadcastInfoData: E })
                 ]
             })
         ]

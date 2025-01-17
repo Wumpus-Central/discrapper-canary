@@ -12,6 +12,7 @@ e.exports = {
     channelBottomBarArea: 'channelBottomBarArea_a7d72e',
     channelTextArea: 'channelTextArea_a7d72e',
     title: 'title_a7d72e',
+    entryPointButtonContainer: 'entryPointButtonContainer_a7d72e',
     avatar: 'avatar_a7d72e',
     parentChannelName: 'parentChannelName_a7d72e',
     followButton: 'followButton_a7d72e',
@@ -29,6 +30,5 @@ e.exports = {
     linkedLobbyEducationTooltipWrapper: 'linkedLobbyEducationTooltipWrapper_a7d72e',
     linkedLobbyEducationTooltip: 'linkedLobbyEducationTooltip_a7d72e',
     linkedLobbyEducationTooltipCloseClickContainer: 'linkedLobbyEducationTooltipCloseClickContainer_a7d72e',
-    linkedLobbyEducationTooltipCloseIcon: 'linkedLobbyEducationTooltipCloseIcon_a7d72e',
-    entryPointButtonContainer: 'entryPointButtonContainer_a7d72e'
+    linkedLobbyEducationTooltipCloseIcon: 'linkedLobbyEducationTooltipCloseIcon_a7d72e'
 };

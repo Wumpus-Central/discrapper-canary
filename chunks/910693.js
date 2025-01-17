@@ -18,7 +18,7 @@ n.d(t, {
         return s;
     },
     sE: function () {
-        return g;
+        return N;
     }
 });
 var r,
@@ -84,7 +84,7 @@ function I(e) {
         [e]
     );
 }
-function g(e, t) {
+function N(e, t) {
     let { location: n, targetUserId: r, targets: l, locations: i } = t;
     return a.useCallback(
         (t) => {

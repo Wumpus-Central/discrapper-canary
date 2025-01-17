@@ -1,6 +1,6 @@
 n.d(t, {
     Bq: function () {
-        return Y;
+        return q;
     },
     C0: function () {
         return er;
@@ -18,7 +18,7 @@ n.d(t, {
         return H;
     },
     HN: function () {
-        return Z;
+        return K;
     },
     Iv: function () {
         return es;
@@ -30,10 +30,10 @@ n.d(t, {
         return X;
     },
     ML: function () {
-        return z;
+        return B;
     },
     N$: function () {
-        return q;
+        return Y;
     },
     N5: function () {
         return e_;
@@ -45,7 +45,7 @@ n.d(t, {
         return ea;
     },
     _$: function () {
-        return eg;
+        return eN;
     },
     cT: function () {
         return eT;
@@ -57,25 +57,25 @@ n.d(t, {
         return eI;
     },
     hx: function () {
-        return K;
+        return Z;
     },
     lR: function () {
         return W;
     },
     lU: function () {
-        return k;
+        return z;
     },
     nm: function () {
         return eE;
     },
     oD: function () {
-        return V;
+        return k;
     },
     pA: function () {
         return ee;
     },
     pY: function () {
-        return y;
+        return V;
     },
     pi: function () {
         return $;
@@ -109,15 +109,15 @@ var r = n(654861),
     A = n(710845),
     T = n(339085),
     I = n(236413),
-    g = n(45966),
+    N = n(45966),
     f = n(563534),
-    N = n(427679),
-    R = n(926491),
-    O = n(387667),
+    g = n(427679),
+    O = n(926491),
+    R = n(387667),
     S = n(592125),
-    p = n(430824),
-    D = n(699516),
-    h = n(594174),
+    D = n(430824),
+    h = n(699516),
+    p = n(594174),
     U = n(55935),
     C = n(630388),
     L = n(971130),
@@ -129,29 +129,29 @@ var r = n(654861),
     x = n(765305),
     G = n(388032);
 let F = new A.Z('AuditLogUtils'),
-    j = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
-    B = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
-    y = () => ({
+    y = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
+    j = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
+    V = () => ({
         [v.zUn.NAME]: () => G.t.CkDiND,
-        [v.zUn.DESCRIPTION]: eD(G.t.RP3Ey8, G.t.QAVj1d),
+        [v.zUn.DESCRIPTION]: eh(G.t.RP3Ey8, G.t.QAVj1d),
         [v.zUn.ICON_HASH]: () => G.t.iLZ8Q0,
         [v.zUn.SPLASH_HASH]: () => G.t['4VV6dn'],
         [v.zUn.DISCOVERY_SPLASH_HASH]: () => G.t['2pds6u'],
-        [v.zUn.BANNER_HASH]: eD(G.t.Cxq4zM, G.t['H7eE//']),
+        [v.zUn.BANNER_HASH]: eh(G.t.Cxq4zM, G.t['H7eE//']),
         [v.zUn.OWNER_ID]: () => G.t['8ltsLS'],
         [v.zUn.REGION]: () => G.t.X9r5KS,
         [v.zUn.PREFERRED_LOCALE]: () => G.t.UnXuDQ,
-        [v.zUn.AFK_CHANNEL_ID]: eD(G.t.ClBuAw, G.t['ms+xtL']),
+        [v.zUn.AFK_CHANNEL_ID]: eh(G.t.ClBuAw, G.t['ms+xtL']),
         [v.zUn.AFK_TIMEOUT]: () => G.t.q21fHR,
-        [v.zUn.SYSTEM_CHANNEL_ID]: eD(G.t.H1VXaW, G.t.XhtmxM),
-        [v.zUn.RULES_CHANNEL_ID]: eD(G.t.OI6MGx, G.t.lik3tL),
-        [v.zUn.PUBLIC_UPDATES_CHANNEL_ID]: eD(G.t.YxBKra, G.t.Ehsnio),
+        [v.zUn.SYSTEM_CHANNEL_ID]: eh(G.t.H1VXaW, G.t.XhtmxM),
+        [v.zUn.RULES_CHANNEL_ID]: eh(G.t.OI6MGx, G.t.lik3tL),
+        [v.zUn.PUBLIC_UPDATES_CHANNEL_ID]: eh(G.t.YxBKra, G.t.Ehsnio),
         [v.zUn.MFA_LEVEL]: eC({
             [v.BpS.NONE]: G.t.voaCCQ,
             [v.BpS.ELEVATED]: G.t.pRNVw8
         }),
         [v.zUn.WIDGET_ENABLED]: eU(G.t.ADIty8, G.t.nf58VV),
-        [v.zUn.WIDGET_CHANNEL_ID]: eD(G.t['6SBsDQ'], G.t.deQ5wM),
+        [v.zUn.WIDGET_CHANNEL_ID]: eh(G.t['6SBsDQ'], G.t.deQ5wM),
         [v.zUn.VERIFICATION_LEVEL]: eC({
             [v.sFg.NONE]: G.t.W27rsb,
             [v.sFg.LOW]: G.t['V8P+Pz'],
@@ -163,7 +163,7 @@ let F = new A.Z('AuditLogUtils'),
             [v.bL.ALL_MESSAGES]: G.t.LDi76O,
             [v.bL.ONLY_MENTIONS]: G.t['6K83bW']
         }),
-        [v.zUn.VANITY_URL_CODE]: eD(G.t.Zplsoq, G.t.u6cArq),
+        [v.zUn.VANITY_URL_CODE]: eh(G.t.Zplsoq, G.t.u6cArq),
         [v.zUn.EXPLICIT_CONTENT_FILTER]: eC({
             [v.lxg.DISABLED]: G.t.fmOeLy,
             [v.lxg.MEMBERS_WITHOUT_ROLES]: G.t['4FghY2'],
@@ -175,45 +175,45 @@ let F = new A.Z('AuditLogUtils'),
         [v.zUn.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: () => G.t['+fQAen'],
         [v.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: () => G.t.E1fc4u,
         [v.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: () => G.t.XbwtSE,
-        ...B()
+        ...j()
     }),
-    z = () => ({
-        [v.zUn.NAME]: ep(G.t.f8Rh0d, G.t.ebD4Qk),
-        [v.zUn.POSITION]: ep(G.t.isS8tb, G.t.t5uBio),
-        [v.zUn.TOPIC]: eh(G.t.esQcxs, G.t['m+veAg'], G.t['ws/1FB']),
-        [v.zUn.BITRATE]: ep(G.t.fw81am, G.t.MFNlgY),
-        [v.zUn.RTC_REGION_OVERRIDE]: eh(G.t['6kajx8'], G.t.eGOlmZ, G.t['0JMZd3']),
-        [v.zUn.USER_LIMIT]: ep(G.t.wk5t7u, G.t.XgjCEh),
-        [v.zUn.RATE_LIMIT_PER_USER]: ep(G.t['7lirhI'], G.t.j4CCJS),
+    B = () => ({
+        [v.zUn.NAME]: eD(G.t.f8Rh0d, G.t.ebD4Qk),
+        [v.zUn.POSITION]: eD(G.t.isS8tb, G.t.t5uBio),
+        [v.zUn.TOPIC]: ep(G.t.esQcxs, G.t['m+veAg'], G.t['ws/1FB']),
+        [v.zUn.BITRATE]: eD(G.t.fw81am, G.t.MFNlgY),
+        [v.zUn.RTC_REGION_OVERRIDE]: ep(G.t['6kajx8'], G.t.eGOlmZ, G.t['0JMZd3']),
+        [v.zUn.USER_LIMIT]: eD(G.t.wk5t7u, G.t.XgjCEh),
+        [v.zUn.RATE_LIMIT_PER_USER]: eD(G.t['7lirhI'], G.t.j4CCJS),
         [v.zUn.PERMISSIONS_RESET]: () => G.t['+vSBFR'],
         [v.zUn.PERMISSIONS_GRANTED]: () => G.t.EKLJv7,
         [v.zUn.PERMISSIONS_DENIED]: () => G.t.U3rO5e,
         [v.zUn.REASON]: () => G.t['2IW3Cw'],
         [v.zUn.NSFW]: eU(G.t.H8Ri2d, G.t.WW6cJy),
-        [v.zUn.TYPE]: ep(G.t.Vn5zn5, G.t.aq4uWF),
-        [v.zUn.VIDEO_QUALITY_MODE]: ep(G.t.e68fAQ, G.t.djbES0),
-        [v.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: ep(G.t.nYz2mp, G.t.oczvRE),
+        [v.zUn.TYPE]: eD(G.t.Vn5zn5, G.t.aq4uWF),
+        [v.zUn.VIDEO_QUALITY_MODE]: eD(G.t.e68fAQ, G.t.djbES0),
+        [v.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: eD(G.t.nYz2mp, G.t.oczvRE),
         [v.zUn.FLAGS]: () => G.t.ImCQkp,
         [v.zUn.AVAILABLE_TAG_ADD]: () => G.t.H86QQU,
         [v.zUn.AVAILABLE_TAG_EDIT]: () => G.t.YtUzlp,
         [v.zUn.AVAILABLE_TAG_DELETE]: () => G.t['8QOsen'],
-        [v.zUn.LINKED_LOBBY]: eD(G.t['+/3TkJ'], G.t['5kDYS0'])
+        [v.zUn.LINKED_LOBBY]: eh(G.t['+/3TkJ'], G.t['5kDYS0'])
     }),
-    k = () => ({
-        [v.zUn.NICK]: eh(G.t.qXDsHh, G.t['m+qur6'], G.t.DvLvjI),
+    z = () => ({
+        [v.zUn.NICK]: ep(G.t.qXDsHh, G.t['m+qur6'], G.t.DvLvjI),
         [v.zUn.DEAF]: eU(G.t.mArLlZ, G.t.ddvVYG),
         [v.zUn.MUTE]: eU(G.t['bxs/lZ'], G.t.FjecQE),
         [v.zUn.ROLES_REMOVE]: () => G.t['+2SDWV'],
         [v.zUn.ROLES_ADD]: () => G.t['B3/3IC'],
         [v.zUn.PRUNE_DELETE_DAYS]: () => G.t['+Cvc+P'],
-        [v.zUn.COMMUNICATION_DISABLED_UNTIL]: eh(G.t.LXTQr6, G.t.LXTQr6, G.t.ULSdnJ),
+        [v.zUn.COMMUNICATION_DISABLED_UNTIL]: ep(G.t.LXTQr6, G.t.LXTQr6, G.t.ULSdnJ),
         [v.zUn.BYPASSES_VERIFICATION]: eU(G.t.NBPBur, G.t.zATosr),
         [v.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => G.t.YbouFB,
-        ...B()
+        ...j()
     }),
     H = () => ({
-        [v.zUn.NAME]: ep(G.t.QBmlaG, G.t.Lfs4r6),
-        [v.zUn.DESCRIPTION]: ep(G.t.XeYKWF, G.t.PSfeIi),
+        [v.zUn.NAME]: eD(G.t.QBmlaG, G.t.Lfs4r6),
+        [v.zUn.DESCRIPTION]: eD(G.t.XeYKWF, G.t.PSfeIi),
         [v.zUn.PERMISSIONS_GRANTED]: () => G.t['9i/DvL'],
         [v.zUn.PERMISSIONS_DENIED]: () => G.t.pa1ZVl,
         [v.zUn.COLOR]: eL({ '#000000': G.t.TK6E1N }, G.t['2FQFi4']),
@@ -221,53 +221,53 @@ let F = new A.Z('AuditLogUtils'),
         [v.zUn.MENTIONABLE]: eU(G.t.LL8VFB, G.t.Z7xzmJ),
         [v.zUn.ICON_HASH]: () => G.t['iEE79/'],
         [v.zUn.UNICODE_EMOJI]: () => G.t.KiLMMz,
-        ...B()
+        ...j()
     }),
-    V = () => ({
-        ...B(),
-        [v.zUn.TITLE]: ep(G.t.sNpuy8, G.t['3Ukc/v']),
-        [v.zUn.DESCRIPTION]: ep(G.t.PP1q09, G.t.z7pYLi),
+    k = () => ({
+        ...j(),
+        [v.zUn.TITLE]: eD(G.t.sNpuy8, G.t['3Ukc/v']),
+        [v.zUn.DESCRIPTION]: eD(G.t.PP1q09, G.t.z7pYLi),
         [v.zUn.OPTIONS]: () => G.t['3G5C9/'],
         [v.zUn.SINGLE_SELECT]: eU(G.t.v4WnR0, G.t['6Qg3uL']),
         [v.zUn.REQUIRED]: eU(G.t['0MPAMz'], G.t.pwsXio)
     }),
     w = () => ({
-        ...B(),
+        ...j(),
         [v.zUn.DEFAULT_CHANNEL_IDS]: () => G.t['8M+D2t'],
         [v.zUn.ENABLE_DEFAULT_CHANNELS]: eU(G.t['EYd/lp'], G.t['36OZeX']),
         [v.zUn.ENABLE_ONBOARDING_PROMPTS]: eU(G.t.V3u8PT, G.t.r66lc3),
         [v.zUn.ENABLED]: eU(G.t.SODVIi, G.t.u8HY5e)
     }),
-    K = () => ({
-        ...B(),
+    Z = () => ({
+        ...j(),
         [v.zUn.WELCOME_MESSAGE]: () => G.t.dKQ1xc,
         [v.zUn.NEW_MEMBER_ACTIONS]: () => G.t.jDUInp,
         [v.zUn.RESOURCE_CHANNELS]: () => G.t.SIX0mp
     }),
-    Z = () => ({
+    K = () => ({
         [v.zUn.CODE]: () => G.t.rrRHgY,
         [v.zUn.CHANNEL_ID]: () => G.t.Q1vd5u,
         [v.zUn.MAX_USES]: eL({ 0: G.t.Yx8LNj }, G.t['3ygnwc']),
         [v.zUn.MAX_AGE]: eL({ [G.intl.string(G.t.PqEzn5)]: G.t.uWrLv7 }, G.t['Q+5kcH']),
         [v.zUn.TEMPORARY]: eU(G.t.MWp6Hx, G.t.omiqTE),
         [v.zUn.FLAGS]: eC({ [o.$.IS_GUEST_INVITE]: G.t.XYZMbG }),
-        ...B()
+        ...j()
     }),
     W = () => ({
-        [v.zUn.CHANNEL_ID]: ep(G.t.jhPpra, G.t.ar4qYG),
-        [v.zUn.NAME]: ep(G.t.ZVGrzc, G.t.tywdZW),
+        [v.zUn.CHANNEL_ID]: eD(G.t.jhPpra, G.t.ar4qYG),
+        [v.zUn.NAME]: eD(G.t.ZVGrzc, G.t.tywdZW),
         [v.zUn.AVATAR_HASH]: () => G.t.KB52Ul,
         [v.zUn.REASON]: () => G.t['2IW3Cw']
     }),
-    q = () => ({
-        [v.zUn.NAME]: ep(G.t.ahU1o6, G.t['wxs+vb']),
-        ...B()
-    }),
     Y = () => ({
-        [v.zUn.NAME]: ep(G.t.cdl0Ym, G.t.o3W2l5),
-        [v.zUn.TAGS]: ep(G.t['zwL+S0'], G.t.VYfKAw),
-        [v.zUn.DESCRIPTION]: ep(G.t.XeYKWF, G.t.PSfeIi),
-        ...B()
+        [v.zUn.NAME]: eD(G.t.ahU1o6, G.t['wxs+vb']),
+        ...j()
+    }),
+    q = () => ({
+        [v.zUn.NAME]: eD(G.t.cdl0Ym, G.t.o3W2l5),
+        [v.zUn.TAGS]: eD(G.t['zwL+S0'], G.t.VYfKAw),
+        [v.zUn.DESCRIPTION]: eD(G.t.XeYKWF, G.t.PSfeIi),
+        ...j()
     }),
     X = () => ({
         [v.zUn.ENABLE_EMOTICONS]: eU(G.t['FI0m5+'], G.t.olpKCw),
@@ -276,15 +276,15 @@ let F = new A.Z('AuditLogUtils'),
             1: G.t.vjlW6u
         }),
         [v.zUn.EXPIRE_GRACE_PERIOD]: () => G.t.iovXMT,
-        ...B()
+        ...j()
     }),
     J = () => ({
-        [v.zUn.TOPIC]: ep(G.t['m+veAg'], G.t.esQcxs),
+        [v.zUn.TOPIC]: eD(G.t['m+veAg'], G.t.esQcxs),
         [v.zUn.PRIVACY_LEVEL]: eC({
             [x.j8.GUILD_ONLY]: G.t['EC+CDg'],
             [x.j8.PUBLIC]: G.t['pK/WGx']
         }),
-        ...B()
+        ...j()
     }),
     Q = () => ({
         [v.zUn.NAME]: () => G.t['21EXHR'],
@@ -305,34 +305,34 @@ let F = new A.Z('AuditLogUtils'),
             [x.WX.VOICE]: G.t.XCVaIC,
             [x.WX.EXTERNAL]: G.t.IvhAj4
         }),
-        [v.zUn.CHANNEL_ID]: eD(G.t.yJBIcX, G.t['+PqSsr']),
-        [v.zUn.LOCATION]: eD(G.t.GaMBHx, G.t.PsICk5),
-        [v.zUn.IMAGE_HASH]: eD(G.t.S3vcRE, G.t.KQu47O),
-        ...B()
+        [v.zUn.CHANNEL_ID]: eh(G.t.yJBIcX, G.t['+PqSsr']),
+        [v.zUn.LOCATION]: eh(G.t.GaMBHx, G.t.PsICk5),
+        [v.zUn.IMAGE_HASH]: eh(G.t.S3vcRE, G.t.KQu47O),
+        ...j()
     }),
     $ = () => ({
-        [v.zUn.SCHEDULED_START_TIME]: eD(G.t.zMIYVl, G.t.fzF8GR),
-        [v.zUn.SCHEDULED_END_TIME]: eD(G.t.vONSQE, G.t.IlIti4),
+        [v.zUn.SCHEDULED_START_TIME]: eh(G.t.zMIYVl, G.t.fzF8GR),
+        [v.zUn.SCHEDULED_END_TIME]: eh(G.t.vONSQE, G.t.IlIti4),
         [v.zUn.IS_CANCELED]: (e) => {
             if (null != e.oldValue || !0 === e.newValue) {
                 if (!e.oldValue && e.newValue) return G.t['7RkicX'];
                 if (e.oldValue && !e.newValue) return G.t.dRNTWV;
             }
         },
-        ...B()
+        ...j()
     }),
     ee = () => ({
-        [v.zUn.NAME]: ep(G.t.tUKRzc, G.t.kPCHOD),
+        [v.zUn.NAME]: eD(G.t.tUKRzc, G.t.kPCHOD),
         [v.zUn.ARCHIVED]: eU(G.t.jDi9FB, G.t.F6dvbW),
         [v.zUn.LOCKED]: eU(G.t.JSy1QU, G.t.C7Jgo6),
         [v.zUn.INVITABLE]: eU(G.t.dxNUs7, G.t.biJvYG),
-        [v.zUn.AUTO_ARCHIVE_DURATION]: ep(G.t.LuaG39, G.t['18d9qq']),
-        [v.zUn.RATE_LIMIT_PER_USER]: ep(G.t['7lirhI'], G.t.j4CCJS),
+        [v.zUn.AUTO_ARCHIVE_DURATION]: eD(G.t.LuaG39, G.t['18d9qq']),
+        [v.zUn.RATE_LIMIT_PER_USER]: eD(G.t['7lirhI'], G.t.j4CCJS),
         [v.zUn.FLAGS]: () => G.t.sSAQtr,
-        ...B()
+        ...j()
     }),
     et = (e) => {
-        let t = { ...B() };
+        let t = { ...j() };
         return (
             null == e ||
                 e.forEach((e) => {
@@ -359,18 +359,18 @@ let F = new A.Z('AuditLogUtils'),
         [v.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: () => G.t.OQDadX,
         [v.zUn.AUTO_MODERATION_ADD_ALLOW_LIST]: () => G.t['FvvR+P'],
         [v.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST]: () => G.t.p5nSv7,
-        ...B()
+        ...j()
     }),
     er = () => ({
-        [v.zUn.NAME]: ep(G.t.VOtRSE, G.t.OK7B8P),
-        [v.zUn.VOLUME]: ep(G.t.igrDBw, G.t.L5lDFB),
-        [v.zUn.EMOJI_NAME]: eh(G.t.IIanaW, G.t.z4w4U1, G.t.V8Tfyc),
-        [v.zUn.EMOJI_ID]: eh(G.t.ainxMD, G.t['2NPsYm'], G.t['8crtnp']),
-        ...B()
+        [v.zUn.NAME]: eD(G.t.VOtRSE, G.t.OK7B8P),
+        [v.zUn.VOLUME]: eD(G.t.igrDBw, G.t.L5lDFB),
+        [v.zUn.EMOJI_NAME]: ep(G.t.IIanaW, G.t.z4w4U1, G.t.V8Tfyc),
+        [v.zUn.EMOJI_ID]: ep(G.t.ainxMD, G.t['2NPsYm'], G.t['8crtnp']),
+        ...j()
     }),
     el = () => ({
         [v.zUn.STATUS]: () => G.t.HyCSnJ,
-        ...B()
+        ...j()
     }),
     ei = {
         [v.KFR.CHANNEL]: {
@@ -707,7 +707,7 @@ function ec(e) {
             let n = new Date(null == t ? void 0 : t.newValue).getTime(),
                 r = n - M.default.extractTimestamp(e.id),
                 l = Math.round(r / 1000 / 60),
-                i = (0, c.CI)(l, j);
+                i = (0, c.CI)(l, y);
             if (null == i.unit || null == i.time) return null;
             if (i.unit in eu) {
                 let e = i.unit,
@@ -1072,7 +1072,7 @@ function eI(e, t) {
     }
     return null;
 }
-function eg(e, t) {
+function eN(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
@@ -1083,86 +1083,86 @@ function eg(e, t) {
                             return t;
                         case v.KFR.CHANNEL:
                         case v.KFR.CHANNEL_OVERWRITE:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => S.Z.getChannel(e),
-                                (e) => (0, _.F6)(e, h.default, D.Z, !0)
+                                (e) => (0, _.F6)(e, p.default, h.Z, !0)
                             );
                         case v.KFR.USER:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NICK,
-                                (e) => h.default.getUser(e),
+                                (e) => p.default.getUser(e),
                                 (e) => e
                             );
                         case v.KFR.ROLE:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
-                                (e) => p.Z.getRole(t.id, e),
+                                (e) => D.Z.getRole(t.id, e),
                                 (e) => e.name
                             );
                         case v.KFR.ONBOARDING_PROMPT:
-                            let n = eO(
+                            let n = eR(
                                 e,
                                 v.zUn.ID,
-                                (e) => g.Z.getOnboardingPrompt(e),
+                                (e) => N.Z.getOnboardingPrompt(e),
                                 (e) => e.title
                             );
                             return null == n || '' === n ? G.intl.string(G.t.ZNQyiY) : n;
                         case v.KFR.GUILD_ONBOARDING:
                             return t;
                         case v.KFR.INVITE:
-                            return eO(e, v.zUn.CODE, v.VqG);
+                            return eR(e, v.zUn.CODE, v.VqG);
                         case v.KFR.INTEGRATION:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.TYPE,
                                 (e) => m.Z.integrations.find((t) => t.id === e),
                                 (e) => e.name
                             );
                         case v.KFR.WEBHOOK:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => m.Z.webhooks.find((t) => t.id === e),
                                 (e) => e.name
                             );
                         case v.KFR.EMOJI:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => T.ZP.getGuildEmoji(t.id).find((t) => t.id === e),
                                 (e) => e.name
                             );
                         case v.KFR.STICKER:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
-                                (e) => R.Z.getStickerById(e),
+                                (e) => O.Z.getStickerById(e),
                                 (e) => e.name
                             );
                         case v.KFR.STAGE_INSTANCE:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.TOPIC,
                                 (e) => {
                                     var n;
-                                    return null === (n = Object.values(N.Z.getStageInstancesByGuild(t.id))) || void 0 === n ? void 0 : n.find((t) => t.id === e);
+                                    return null === (n = Object.values(g.Z.getStageInstancesByGuild(t.id))) || void 0 === n ? void 0 : n.find((t) => t.id === e);
                                 },
                                 (e) => e.topic
                             );
                         case v.KFR.GUILD_SCHEDULED_EVENT:
                         case v.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => m.Z.guildScheduledEvents.find((t) => t.id === e),
                                 (e) => e.name
                             );
                         case v.KFR.THREAD:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => m.Z.threads.find((t) => t.id === e),
@@ -1177,7 +1177,7 @@ function eg(e, t) {
                                 if (null != t) return t.name;
                                 return e.targetId;
                             }
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => m.Z.applicationCommands.find((t) => t.id === e),
@@ -1187,16 +1187,16 @@ function eg(e, t) {
                                 }
                             );
                         case v.KFR.AUTO_MODERATION_RULE:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.NAME,
                                 (e) => m.Z.automodRules.find((t) => t.id === e),
                                 (e) => e.name
                             );
                         case v.KFR.GUILD_SOUNDBOARD:
-                            return eO(e, v.zUn.NAME, v.VqG);
+                            return eR(e, v.zUn.NAME, v.VqG);
                         case v.KFR.HOME_SETTINGS:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.GUILD_ID,
                                 (e) => f.Z.getSettings(e),
@@ -1204,17 +1204,17 @@ function eg(e, t) {
                                 t.id
                             );
                         case v.KFR.VOICE_CHANNEL_STATUS:
-                            return eO(
+                            return eR(
                                 e,
                                 v.zUn.STATUS,
                                 (e) => S.Z.getChannel(e),
-                                (e) => (0, _.F6)(e, h.default, D.Z, !0)
+                                (e) => (0, _.F6)(e, p.default, h.Z, !0)
                             );
                         default:
                             return F.warn('Unknown targetType for log', e), null;
                     }
                 })(e, t),
-                i = h.default.getUser(e.userId);
+                i = p.default.getUser(e.userId);
             if (null != r || !![v.rsA.MEMBER_PRUNE, v.rsA.MEMBER_DISCONNECT, v.rsA.MEMBER_MOVE, v.rsA.CREATOR_MONETIZATION_REQUEST_CREATED, v.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED].includes(e.action)) {
                 if (
                     null !=
@@ -1227,7 +1227,7 @@ function eg(e, t) {
                                     case v.jwA.USER:
                                         n.subtarget = eS(
                                             e.options.id,
-                                            (e) => h.default.getUser(e),
+                                            (e) => p.default.getUser(e),
                                             (e) => e.tag
                                         );
                                         break;
@@ -1236,7 +1236,7 @@ function eg(e, t) {
                                 }
                                 if (
                                     (null != e.options.channel_id &&
-                                        (n.channel = eO(
+                                        (n.channel = eR(
                                             e,
                                             '',
                                             (e) => S.Z.getChannel(e),
@@ -1266,14 +1266,14 @@ function eg(e, t) {
                                     case v.ecB.ROLE:
                                         e.subtarget = eS(
                                             t.id,
-                                            (e) => p.Z.getRole(n.id, e),
+                                            (e) => D.Z.getRole(n.id, e),
                                             (e) => e.name
                                         );
                                         break;
                                     case v.ecB.USER:
                                         e.subtarget = eS(
                                             t.id,
-                                            (e) => h.default.getUser(e),
+                                            (e) => p.default.getUser(e),
                                             (e) => e.tag
                                         );
                                         break;
@@ -1283,34 +1283,34 @@ function eg(e, t) {
                                             : (e.subtarget = eS(
                                                   t.id,
                                                   (e) => S.Z.getChannel(e),
-                                                  (e) => (0, _.F6)(e, h.default, D.Z, !0)
+                                                  (e) => (0, _.F6)(e, p.default, h.Z, !0)
                                               ));
                                 }
                                 return e;
                             }
                             switch (e.key) {
                                 case v.zUn.OWNER_ID:
-                                    return eR(e, (e) => h.default.getUser(e));
+                                    return eO(e, (e) => p.default.getUser(e));
                                 case v.zUn.CHANNEL_ID:
                                 case v.zUn.AFK_CHANNEL_ID:
                                 case v.zUn.SYSTEM_CHANNEL_ID:
                                 case v.zUn.RULES_CHANNEL_ID:
                                 case v.zUn.PUBLIC_UPDATES_CHANNEL_ID:
-                                    return eR(
+                                    return eO(
                                         e,
                                         (e) => S.Z.getChannel(e),
-                                        (e) => (0, _.F6)(e, h.default, D.Z, !0)
+                                        (e) => (0, _.F6)(e, p.default, h.Z, !0)
                                     );
                                 case v.zUn.AFK_TIMEOUT:
-                                    return eR(e, (e) => e / 60);
+                                    return eO(e, (e) => e / 60);
                                 case v.zUn.BITRATE:
-                                    return eR(e, (e) => e / 1000);
+                                    return eO(e, (e) => e / 1000);
                                 case v.zUn.COLOR:
-                                    return eR(e, (e) => (0, u.Rf)(e).toUpperCase());
+                                    return eO(e, (e) => (0, u.Rf)(e).toUpperCase());
                                 case v.zUn.THEME_COLORS:
-                                    return eR(e, (e) => ''.concat((0, u.Rf)(e[0]).toUpperCase(), ', ').concat((0, u.Rf)(e[1]).toUpperCase()));
+                                    return eO(e, (e) => ''.concat((0, u.Rf)(e[0]).toUpperCase(), ', ').concat((0, u.Rf)(e[1]).toUpperCase()));
                                 case v.zUn.MAX_AGE:
-                                    return eR(e, (e) => {
+                                    return eO(e, (e) => {
                                         let t = L.ZP.getMaxAgeOptions.find((t) => {
                                             let { value: n } = t;
                                             return e === n;
@@ -1321,11 +1321,11 @@ function eg(e, t) {
                                     let t = [],
                                         { added: n, removed: r } = ef(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let e = new O.ms(v.zUn.PERMISSIONS_GRANTED, null, n);
+                                        let e = new R.ms(v.zUn.PERMISSIONS_GRANTED, null, n);
                                         t.push(e);
                                     }
                                     if (r.length > 0) {
-                                        let e = new O.ms(v.zUn.PERMISSIONS_DENIED, null, r);
+                                        let e = new R.ms(v.zUn.PERMISSIONS_DENIED, null, r);
                                         t.push(e);
                                     }
                                     return t;
@@ -1335,11 +1335,11 @@ function eg(e, t) {
                                     let t = [],
                                         { added: n, removed: r } = ef(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let r = new O.ms(e.key, null, n);
+                                        let r = new R.ms(e.key, null, n);
                                         t.push(r);
                                     }
                                     if (r.length > 0) {
-                                        let e = new O.ms(v.zUn.PERMISSIONS_RESET, r, r);
+                                        let e = new R.ms(v.zUn.PERMISSIONS_RESET, r, r);
                                         t.push(e);
                                     }
                                     return t;
@@ -1363,22 +1363,22 @@ function eg(e, t) {
                                             };
                                         })(e.oldValue, e.newValue);
                                     if (n.length > 0) {
-                                        let r = new O.ms(e.key, null, n);
+                                        let r = new R.ms(e.key, null, n);
                                         t.push(r);
                                     }
                                     if (r.length > 0) {
-                                        let n = new O.ms(e.key, r, null);
+                                        let n = new R.ms(e.key, r, null);
                                         t.push(n);
                                     }
                                     return t;
                                 }
                                 case v.zUn.PREFERRED_LOCALE:
-                                    return eR(e, (e) => {
+                                    return eO(e, (e) => {
                                         let t = (0, G.getAvailableLocales)().find((t) => t.value === e);
                                         return null != t ? t.name : null;
                                     });
                                 case v.zUn.VIDEO_QUALITY_MODE:
-                                    return eR(e, (e) => (e === v.Ucd.FULL ? G.intl.string(G.t['7jOoJC']) : G.intl.string(G.t.jjKYpq)));
+                                    return eO(e, (e) => (e === v.Ucd.FULL ? G.intl.string(G.t['7jOoJC']) : G.intl.string(G.t.jjKYpq)));
                                 case v.zUn.SYSTEM_CHANNEL_FLAGS:
                                     return (function (e) {
                                         let t = {
@@ -1393,7 +1393,7 @@ function eg(e, t) {
                                                 let l = (e.oldValue & r) === r,
                                                     i = (e.newValue & r) === r;
                                                 if (l === i) return;
-                                                let s = new O.ms(t[r], !l, !i);
+                                                let s = new R.ms(t[r], !l, !i);
                                                 n.push(s);
                                             }),
                                             n
@@ -1401,21 +1401,21 @@ function eg(e, t) {
                                     })(e);
                                 case v.zUn.AUTO_MODERATION_ACTIONS:
                                     if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
-                                        return eR(
+                                        return eO(
                                             e,
                                             (e) => e.map((e) => e.type),
                                             (e) => e.map(I.ZF).join(', ')
                                         );
                                     break;
                                 case v.zUn.AUTO_MODERATION_EVENT_TYPE:
-                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, I.YN);
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eO(e, I.YN);
                                     break;
                                 case v.zUn.AUTO_MODERATION_TRIGGER_TYPE:
-                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, I.Ar);
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eO(e, I.Ar);
                                     break;
                                 case v.zUn.AUTO_MODERATION_TRIGGER_METADATA:
                                     if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
-                                        return eR(e, (e) => {
+                                        return eO(e, (e) => {
                                             if (null != e && 'object' == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? G.intl.formatToMarkdownString(G.t.y91UXV, { newValue: e.keyword_filter.map((e) => "'".concat(e, "'")).join(', ') }) : JSON.stringify(e);
                                             return e;
                                         });
@@ -1426,27 +1426,27 @@ function eg(e, t) {
                                 case v.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
                                 case v.zUn.AUTO_MODERATION_ADD_ALLOW_LIST:
                                 case v.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST:
-                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, (e) => (null != e && Array.isArray(e) ? e.map((e) => "'".concat(e, "'")).join(', ') : JSON.stringify(e)));
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eO(e, (e) => (null != e && Array.isArray(e) ? e.map((e) => "'".concat(e, "'")).join(', ') : JSON.stringify(e)));
                                     break;
                                 case v.zUn.AUTO_MODERATION_EXEMPT_CHANNELS:
                                     if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
-                                        return eR(
+                                        return eO(
                                             e,
                                             (e) =>
                                                 e
                                                     .map(S.Z.getChannel)
                                                     .filter((e) => null != e)
-                                                    .map((e) => (0, _.F6)(e, h.default, D.Z, !0)),
+                                                    .map((e) => (0, _.F6)(e, p.default, h.Z, !0)),
                                             (e) => (null != e && e.length > 0 ? e.join(', ') : G.intl.string(G.t['K/EdV1']))
                                         );
                                     break;
                                 case v.zUn.AUTO_MODERATION_EXEMPT_ROLES:
                                     if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
-                                        return eR(
+                                        return eO(
                                             e,
                                             (e) =>
                                                 e
-                                                    .map((e) => p.Z.getRole(n.id, e))
+                                                    .map((e) => D.Z.getRole(n.id, e))
                                                     .filter((e) => null != e)
                                                     .map((e) => e.name),
                                             (e) => (null != e && e.length > 0 ? e.join(', ') : G.intl.string(G.t['K/EdV1']))
@@ -1469,21 +1469,21 @@ function eg(e, t) {
                                             }),
                                             r.length < l.length)
                                         ) {
-                                            for (let e in s) if (null == i[e]) return new O.ms(v.zUn.AVAILABLE_TAG_ADD, null, eN(s[e]));
+                                            for (let e in s) if (null == i[e]) return new R.ms(v.zUn.AVAILABLE_TAG_ADD, null, eg(s[e]));
                                         }
                                         if (r.length > l.length) {
-                                            for (let e in i) if (null == s[e]) return new O.ms(v.zUn.AVAILABLE_TAG_DELETE, null, eN(i[e]));
+                                            for (let e in i) if (null == s[e]) return new R.ms(v.zUn.AVAILABLE_TAG_DELETE, null, eg(i[e]));
                                         }
                                         for (let e in i) {
                                             let t = i[e],
                                                 n = s[e];
-                                            if ((null == n ? void 0 : n.name) !== t.name || (null == n ? void 0 : n.emoji_id) !== t.emoji_id || (null == n ? void 0 : n.emoji_name) !== t.emoji_name) return new O.ms(v.zUn.AVAILABLE_TAG_EDIT, eN(t), eN(n));
+                                            if ((null == n ? void 0 : n.name) !== t.name || (null == n ? void 0 : n.emoji_id) !== t.emoji_id || (null == n ? void 0 : n.emoji_name) !== t.emoji_name) return new R.ms(v.zUn.AVAILABLE_TAG_EDIT, eg(t), eg(n));
                                         }
                                         return e;
                                     })(e);
                                 case v.zUn.SCHEDULED_START_TIME:
                                 case v.zUn.SCHEDULED_END_TIME:
-                                    return eR(e, (e) => (0, U.vc)(s()(new Date(e)), 'LLLL'));
+                                    return eO(e, (e) => (0, U.vc)(s()(new Date(e)), 'LLLL'));
                             }
                             return e;
                         })(r, e, t);
@@ -1513,7 +1513,7 @@ function ef(e, t) {
         removed: a
     };
 }
-function eN(e) {
+function eg(e) {
     return null == e
         ? null
         : {
@@ -1524,12 +1524,12 @@ function eN(e) {
               moderated: e.moderated
           };
 }
-function eR(e, t, n) {
+function eO(e, t, n) {
     let r = e.newValue,
         l = e.oldValue;
-    return null != e.newValue && ((r = t(e.newValue)), null != n && null != r && (r = n(r))), null != e.oldValue && ((l = t(e.oldValue)), null != n && null != l && (l = n(l))), new O.ms(e.key, l || e.oldValue, r || e.newValue);
+    return null != e.newValue && ((r = t(e.newValue)), null != n && null != r && (r = n(r))), null != e.oldValue && ((l = t(e.oldValue)), null != n && null != l && (l = n(l))), new R.ms(e.key, l || e.oldValue, r || e.newValue);
 }
-function eO(e, t, n, r, l) {
+function eR(e, t, n, r, l) {
     let i = null,
         s = n((l = null != l ? l : e.targetId));
     if ((null != s && null != r && (i = r(s)), null == i)) {
@@ -1547,13 +1547,13 @@ function eS(e, t, n) {
         l = t(e);
     return null != l && null != n && (r = n(l)), r;
 }
-function ep(e, t) {
+function eD(e, t) {
     return (n) => (null == n.oldValue ? e : t);
 }
-function eD(e, t) {
+function eh(e, t) {
     return (n) => (null == n.newValue ? e : t);
 }
-function eh(e, t, n, r) {
+function ep(e, t, n, r) {
     return (l) => {
         if (null != l.newValue && null != l.oldValue) return e;
         if (null != l.newValue) return t;

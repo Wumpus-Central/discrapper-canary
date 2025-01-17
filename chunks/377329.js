@@ -20,7 +20,7 @@ var l = t(200651),
     j = t(959320);
 function f(e) {
     var n, t, f;
-    let { guildId: N, guildEvent: I, guildEventId: p, error: C } = e,
+    let { guildId: N, guildEvent: I, guildEventId: C, error: p } = e,
         E = i.useMemo(() => (0, x.Gb)(I, N), [I, N]),
         { channel_id: T, name: S, image: Z, description: b } = E,
         y = (0, r.e7)([c.Z], () => c.Z.getChannel(T), [T]),
@@ -40,7 +40,7 @@ function f(e) {
                 creator: k,
                 name: S,
                 description: b,
-                imageSource: ((t = (0, x.Gb)(I, N, p)), null == (f = Z) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
+                imageSource: ((t = (0, x.Gb)(I, N, C)), null == (f = Z) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
                 isActive: !1,
                 isUserLurking: A,
                 speakers: [],
@@ -91,12 +91,12 @@ function f(e) {
                                       }
                                   })
                     }),
-                    null != C &&
+                    null != p &&
                         (0, l.jsx)(a.Text, {
                             color: 'text-danger',
                             variant: 'text-xs/normal',
                             className: j.subheader,
-                            children: C.getAnyErrorMessage()
+                            children: p.getAnyErrorMessage()
                         })
                 ]
             })

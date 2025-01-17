@@ -21,9 +21,9 @@ function f(e) {
         E = t || n || f,
         b = g ? p.d : p.Z,
         Z = (0, d.Z)(t, n, f, C, I === h.BK.GroupedButtonsRedMic),
-        { Component: N, play: S, events: T } = (0, o.O)(E ? 'unmute' : 'mute');
-    l.useEffect(() => () => S(), [S, E]);
-    let j = (0, c.bp)() === m.IlC.POPOUT ? (E ? s.n : a.S) : N,
+        { Component: S, play: N, events: T } = (0, o.O)(E ? 'unmute' : 'mute');
+    l.useEffect(() => () => N(), [N, E]);
+    let j = (0, c.bp)() === m.IlC.POPOUT ? (E ? s.n : a.S) : S,
         A = I === h.BK.GroupedButtonsRedMic && E ? (0, u.Lq)(r.I.RED_400) : void 0,
         y = I !== h.BK.GroupedButtonsRedMic;
     return (0, i.jsx)(b, {

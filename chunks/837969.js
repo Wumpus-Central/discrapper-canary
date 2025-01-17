@@ -33,7 +33,7 @@ function u(e) {
             itemCount: n
         }),
         { itemCount: b, focusedIndex: Z } = I,
-        [N] = i.useState(() => (0, a.P2)(E, 16));
+        [S] = i.useState(() => (0, a.P2)(E, 16));
     return (
         i.useEffect(() => {
             E({
@@ -50,7 +50,7 @@ function u(e) {
             i.useEffect(() => {
                 Z.current = v;
             }, [v]);
-            let [N, S] = i.useState(!1),
+            let [S, N] = i.useState(!1),
                 [T] = i.useState(
                     () =>
                         new a.$o((e) => () => {
@@ -134,11 +134,11 @@ function u(e) {
                     [_, t, f, u, P, h]
                 ),
                 R = i.useCallback(() => {
-                    N || S(!0);
-                }, [N]),
+                    S || N(!0);
+                }, [S]),
                 L = i.useCallback(() => {
-                    if (!N) g ? j(_(t, u), u) : P(!0);
-                }, [_, t, j, g, N, u, P]),
+                    if (!S) g ? j(_(t, u), u) : P(!0);
+                }, [_, t, j, g, S, u, P]),
                 k = i.useCallback(
                     (e) => {
                         if (!e.currentTarget.contains(e.relatedTarget))
@@ -147,7 +147,7 @@ function u(e) {
                                     j(t);
                                     return;
                                 }
-                                S(!1);
+                                N(!1);
                             });
                     },
                     [_, t, u, j]
@@ -168,12 +168,12 @@ function u(e) {
             let D = i.useCallback(
                     () => ({
                         role: 'list',
-                        tabIndex: N && g ? -1 : 0,
+                        tabIndex: S && g ? -1 : 0,
                         id: t,
                         onKeyDown: M,
                         ref: O
                     }),
-                    [t, N, M, g]
+                    [t, S, M, g]
                 ),
                 w = i.useCallback(
                     (e) => {
@@ -201,7 +201,7 @@ function u(e) {
             navId: t,
             itemCount: b,
             focusedIndex: Z,
-            dispatch: N,
+            dispatch: S,
             onSelect: h,
             setFocus: p,
             getNewFocusIndex: m,

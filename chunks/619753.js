@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(695346),
     b = n(131704),
     Z = n(592125),
-    N = n(430824),
-    S = n(496675),
+    S = n(430824),
+    N = n(496675),
     T = n(699516),
     j = n(768119),
     A = n(944486),
@@ -43,7 +43,7 @@ function O(e) {
     var t;
     let { search: n, searchId: r, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: g, ignoreCount: C, onChangePage: x } = e,
         { offset: v, totalResults: I, isSearching: E, showBlockedResults: b } = n,
-        N = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 if (E) return;
                 let t = e - 1;
@@ -51,7 +51,7 @@ function O(e) {
             },
             [r, E, x]
         ),
-        S = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 if (e.blocked)
                     c.Z.show({
@@ -140,7 +140,7 @@ function O(e) {
                     searchId: r,
                     renderEmbeds: a,
                     offset: v,
-                    jumpToMessage: S,
+                    jumpToMessage: N,
                     listNavigator: B,
                     favoriteSearch: H
                 },
@@ -180,7 +180,7 @@ function O(e) {
             !E &&
                 !H &&
                 (0, i.jsx)(P.Z, {
-                    changePage: N,
+                    changePage: S,
                     offset: v,
                     totalResults: I,
                     pageLength: R.vpv
@@ -229,14 +229,14 @@ function w(e) {
         U = l.useCallback((e) => {
             if (e === A.Z.getChannelId()) return;
             let t = Z.Z.getChannel(e);
-            if (null != t && !!S.Z.can(R.Plq.VIEW_CHANNEL, t)) (0, I.Kh)(t.id);
+            if (null != t && !!N.Z.can(R.Plq.VIEW_CHANNEL, t)) (0, I.Kh)(t.id);
         }, []),
         H = null != a ? (0, m.F6)(a, y.default, T.Z, !1) : '???',
-        G = O && null != a.guild_id ? (null === (t = N.Z.getGuild(a.guild_id)) || void 0 === t ? void 0 : t.name) : null,
+        G = O && null != a.guild_id ? (null === (t = S.Z.getGuild(a.guild_id)) || void 0 === t ? void 0 : t.name) : null,
         F = (null == a ? void 0 : a.parent_id) != null ? Z.Z.getChannel(a.parent_id) : null,
         V = null !== (n = null == F ? void 0 : F.name) && void 0 !== n ? n : null,
         z = null !== (r = (0, f.KS)(a)) && void 0 !== r ? r : o.TextIcon,
-        W = S.Z.can(R.Plq.MANAGE_MESSAGES, a),
+        W = N.Z.can(R.Plq.MANAGE_MESSAGES, a),
         { content: K } = (0, v.ZP)(
             {
                 content: H,

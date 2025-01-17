@@ -22,11 +22,11 @@ var l = i(13245),
     g = i(981631),
     S = i(388032);
 function _(e, t, i, _) {
-    var Z;
-    let { icon: C, title: O, body: I } = (0, a.Xi)(e, t, i),
+    var C;
+    let { icon: Z, title: O, body: I } = (0, a.Xi)(e, t, i),
         { trackView: N, trackClick: y } = (0, m.R)(v.n0.TextChat, {
             notif_type: v.n0.TextChat,
-            notif_user_id: null === (Z = t.author) || void 0 === Z ? void 0 : Z.id,
+            notif_user_id: null === (C = t.author) || void 0 === C ? void 0 : C.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -34,7 +34,7 @@ function _(e, t, i, _) {
             channel_type: e.type
         });
     return {
-        icon: C,
+        icon: Z,
         title: O,
         body:
             t.content.length > 0

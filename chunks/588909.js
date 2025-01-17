@@ -23,8 +23,8 @@ var l = i(952265),
     g = i(701488),
     S = i(388032),
     _ = i(176463),
-    Z = i(802334);
-function C(e) {
+    C = i(802334);
+function Z(e) {
     let { game: t } = e,
         i = (0, a.q)(t.id);
     return null == i
@@ -75,7 +75,7 @@ function O(e, t) {
             case E.nc.CONTENT_INVENTORY:
                 (g.renderFooter = () =>
                     (0, n.jsx)('div', {
-                        className: Z.container,
+                        className: C.container,
                         children: (0, n.jsx)(h.i, { entries: a.entries })
                     })),
                     (g.onNotificationShow = () => {
@@ -88,7 +88,7 @@ function O(e, t) {
     return {
         icon:
             null != e
-                ? (0, n.jsx)(C, { game: e })
+                ? (0, n.jsx)(Z, { game: e })
                 : (0, n.jsx)('img', {
                       src: i(328756),
                       className: _.icon,

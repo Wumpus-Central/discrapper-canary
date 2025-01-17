@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return v;
     }
 });
 var i = t(200651),
@@ -17,14 +17,14 @@ var i = t(200651),
     f = t(594174),
     h = t(388032),
     E = t(500054);
-function I(e) {
-    var n, t, I, v;
+function v(e) {
+    var n, t, v, I;
     let p = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
-        M = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
-        x = null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user.id,
+        x = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
+        M = null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user.id,
         S = (0, a.e7)([f.default], () => f.default.getUser(p)),
-        Z = (0, a.e7)([g.Z], () => g.Z.getGuild(M)),
-        j = (0, a.e7)([f.default], () => f.default.getUser(x));
+        Z = (0, a.e7)([g.Z], () => g.Z.getGuild(x)),
+        j = (0, a.e7)([f.default], () => f.default.getUser(M));
     if (
         (l.useEffect(() => {
             null == S && null != p && (0, s.PR)(p);
@@ -32,7 +32,7 @@ function I(e) {
         !(0, d.a)(e))
     )
         return null;
-    null == j && (j = new m.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
+    null == j && (j = new m.Z(null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user));
     let N = null;
     return (
         null != Z

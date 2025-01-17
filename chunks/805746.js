@@ -48,7 +48,7 @@ let E = (e) => {
         }, [n.id, v, T, r]);
     return null == n
         ? null
-        : (0, a.jsx)(_.Z, {
+        : (0, a.jsx)(_.ZP, {
               title: g.intl.string(g.t.ygG62N),
               description: g.intl.string(g.t.S51EKi),
               buttonText: i ? g.intl.string(g.t.xXpoGR) : g.intl.string(g.t.JsiUnJ),

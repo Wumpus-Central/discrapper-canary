@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return C;
+        return Z;
     }
 }),
     i(47120);
@@ -42,7 +42,7 @@ function _(e, t) {
         bottom: Math.ceil(t.bottom)
     };
 }
-let Z = l.createContext(
+let C = l.createContext(
     new (class e {
         observe(e) {
             var t;
@@ -133,9 +133,9 @@ let Z = l.createContext(
         }
     })((0, m.i)())
 );
-function C(e) {
+function Z(e) {
     let { observe: t = !0, className: i, children: o } = e,
-        r = l.useContext(Z),
+        r = l.useContext(C),
         a = (0, d.e7)([E.ZP], () => E.ZP.clickZoneDebugMode),
         [{ refHandler: u, setObserve: c }] = l.useState(() => {
             let e = null;

@@ -53,7 +53,7 @@ function E(e) {
             [b, k, A, R]
         ),
         M = null != r ? r : t,
-        [B, P] = l.useMemo(() => {
+        [P, B] = l.useMemo(() => {
             let e = {},
                 t = {};
             for (let [n, i] of Object.entries(E)) i.type === c.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
@@ -130,7 +130,7 @@ function E(e) {
             [t, E, M, D, U]
         ),
         W = l.useCallback(() => {
-            let e = Object.keys(B);
+            let e = Object.keys(P);
             return (0, d.openModalLazy)(async () => {
                 let { default: t } = await n.e('64908').then(n.bind(n, 557944));
                 return (n) =>
@@ -146,9 +146,9 @@ function E(e) {
                         ...n
                     });
             });
-        }, [F, B, b, L]),
+        }, [F, P, b, L]),
         H = l.useCallback(() => {
-            let e = Object.keys(P);
+            let e = Object.keys(B);
             return (0, d.openModalLazy)(async () => {
                 let { default: t } = await n.e('64908').then(n.bind(n, 557944));
                 return (n) =>
@@ -164,7 +164,7 @@ function E(e) {
                         ...n
                     });
             });
-        }, [F, b, P, L]),
+        }, [F, b, B, L]),
         G = l.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
@@ -188,14 +188,14 @@ function E(e) {
                 buttonClick: H,
                 buttonText: _.intl.string(_.t['56jRn5']),
                 noneSelectedText: _.intl.string(_.t.C0rYfn),
-                overwrites: P,
+                overwrites: B,
                 title: null == r ? _.intl.string(_.t['vPWe+/']) : _.intl.string(_.t['1jLVGB'])
             },
             {
                 buttonClick: W,
                 buttonText: _.intl.string(_.t['i1c+kZ']),
                 noneSelectedText: _.intl.string(_.t.UBJhCw),
-                overwrites: B,
+                overwrites: P,
                 title: null == r ? _.intl.string(_.t.OGiMXF) : _.intl.string(_.t.Ujbaqq)
             }
         ];

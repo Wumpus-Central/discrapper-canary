@@ -16,7 +16,7 @@ var n = i(192379),
     g = i(237997),
     S = i(145597),
     _ = i(981631);
-class Z extends n.Component {
+class C extends n.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
         let { selectedGuild: t, selectedChannel: i, isMemberPending: n, hasPreviewEnabled: l, postableChannelCount: o } = this.props;
@@ -70,4 +70,4 @@ t.Z = o.ZP.connectStores([m.Z, E.Z, f.Z, v.default, g.Z, c.ZP, p.Z, h.ZP], () =>
         isMemberPending: d,
         postableChannelCount: u
     };
-})(Z);
+})(C);

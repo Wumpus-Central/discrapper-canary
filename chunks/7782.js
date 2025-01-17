@@ -20,8 +20,8 @@ var i = n(200651),
     E = n(525541),
     b = n(981631),
     Z = n(377668),
-    N = n(228168),
-    S = n(388032),
+    S = n(228168),
+    N = n(388032),
     T = n(108720);
 let j = (e) => {
         let { userId: t, channelId: n } = e,
@@ -74,7 +74,7 @@ let j = (e) => {
             ? (0, i.jsx)(s.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
-                  children: S.intl.string(S.t.zjVh8v)
+                  children: N.intl.string(N.t.zjVh8v)
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -87,14 +87,14 @@ let j = (e) => {
                               (0, C.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: N.oh.MUTUAL_GUILDS,
+                                  section: S.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: b.jXE.DIRECT_MESSAGE }
                               });
                           },
                           children: (0, i.jsx)(s.Text, {
                               className: T.mutualGuilds,
                               variant: 'text-sm/normal',
-                              children: S.intl.format(S.t.eE3oen, { count: r.length })
+                              children: N.intl.format(N.t.eE3oen, { count: r.length })
                           })
                       })
                   ]
@@ -122,7 +122,7 @@ let j = (e) => {
                         type: b.OGo.BLOCKED
                     });
                 },
-                children: S.intl.string(S.t.l4EmaW)
+                children: N.intl.string(N.t.l4EmaW)
             });
         switch (n) {
             case b.OGo.NONE:
@@ -134,7 +134,7 @@ let j = (e) => {
                                 className: T.action,
                                 size: s.Button.Sizes.TINY,
                                 onClick: d,
-                                children: S.intl.string(S.t.w5uwoK)
+                                children: N.intl.string(N.t.w5uwoK)
                             }),
                         u
                     ]
@@ -149,7 +149,7 @@ let j = (e) => {
                                 o.Z.removeFriend(l, { location: b.ZY5.DM_CHANNEL });
                             },
                             color: s.Button.Colors.PRIMARY,
-                            children: S.intl.string(S.t.cvSt1N)
+                            children: N.intl.string(N.t.cvSt1N)
                         }),
                         u
                     ]
@@ -162,7 +162,7 @@ let j = (e) => {
                         o.Z.unblockUser(l, { location: b.ZY5.DM_CHANNEL });
                     },
                     color: s.Button.Colors.PRIMARY,
-                    children: S.intl.string(S.t.XyHpKC)
+                    children: N.intl.string(N.t.XyHpKC)
                 });
             case b.OGo.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
@@ -171,13 +171,13 @@ let j = (e) => {
                             className: T.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: S.intl.string(S.t.c2v5nJ)
+                            children: N.intl.string(N.t.c2v5nJ)
                         }),
                         (0, i.jsx)(s.Button, {
                             className: T.action,
                             size: s.Button.Sizes.TINY,
                             onClick: d,
-                            children: S.intl.string(c ? S.t['+WbSn5'] : S.t.ZcibdX)
+                            children: N.intl.string(c ? N.t['+WbSn5'] : N.t.ZcibdX)
                         }),
                         (0, i.jsx)(s.Button, {
                             className: T.action,
@@ -186,7 +186,7 @@ let j = (e) => {
                             onClick: () => {
                                 o.Z.cancelFriendRequest(l, { location: b.ZY5.DM_CHANNEL });
                             },
-                            children: S.intl.string(c ? S.t.rQSndn : S.t.xuio0N)
+                            children: N.intl.string(c ? N.t.rQSndn : N.t.xuio0N)
                         }),
                         u
                     ]
@@ -198,7 +198,7 @@ let j = (e) => {
                             className: T.action,
                             size: s.Button.Sizes.TINY,
                             disabled: !0,
-                            children: S.intl.string(S.t.xMH6vL)
+                            children: N.intl.string(N.t.xMH6vL)
                         }),
                         u
                     ]
@@ -210,7 +210,7 @@ let j = (e) => {
     y = (e) => {
         let { channelId: t, otherUserId: n } = e,
             r = l.useCallback(() => {
-                (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.a2j0ho), s.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.a2j0ho), s.ToastType.FAILURE));
             }, []),
             a = l.useCallback(() => {
                 f.Z.closeChannelSidebar(x.uZ);
@@ -240,7 +240,7 @@ let j = (e) => {
                     onClick: () => c(t),
                     disabled: C,
                     submitting: h,
-                    children: S.intl.string(S.t.Kz8Pws)
+                    children: N.intl.string(N.t.Kz8Pws)
                 }),
                 (0, i.jsx)(s.Button, {
                     className: T.action,
@@ -249,7 +249,7 @@ let j = (e) => {
                     color: s.Button.Colors.PRIMARY,
                     disabled: C,
                     submitting: p,
-                    children: S.intl.string(S.t.B2nygY)
+                    children: N.intl.string(N.t.B2nygY)
                 })
             ]
         });

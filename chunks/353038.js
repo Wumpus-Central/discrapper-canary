@@ -15,7 +15,7 @@ var n,
     r = i(192379),
     a = i(120356),
     u = i.n(a),
-    d = i(476183),
+    d = i(642128),
     c = i(902704),
     h = i(585483),
     f = i(434529),
@@ -59,10 +59,10 @@ function _(e) {
         }
     );
 }
-function Z(e) {
+function C(e) {
     return 'auto' === e || null == e ? 'auto' : ''.concat(e, 'px');
 }
-function C(e, t) {
+function Z(e, t) {
     let i = 0,
         n = 0;
     return (
@@ -148,7 +148,7 @@ class N extends (l = r.Component) {
         } = this;
         if (null == i) return null;
         (e = Math.max(Math.min(l, e), s)), (t = Math.max(Math.min(o, t), r));
-        let { width: E, height: m } = C(i, this.size),
+        let { width: E, height: m } = Z(i, this.size),
             v = t - h,
             g = e - c,
             S = (0, f.ou)(
@@ -246,7 +246,7 @@ class N extends (l = r.Component) {
             }),
             null != o)
         )
-            (o.style.top = Z(t)), (o.style.bottom = Z(n)), (o.style.left = Z(i)), (o.style.right = Z(l));
+            (o.style.top = C(t)), (o.style.bottom = C(n)), (o.style.left = C(i)), (o.style.right = C(l));
     }
     setDOMSize(e) {
         let { width: t, height: i } = e,
@@ -261,7 +261,7 @@ class N extends (l = r.Component) {
             }),
             null != l)
         )
-            (l.style.width = Z(t)), (l.style.height = Z(i));
+            (l.style.width = C(t)), (l.style.height = C(i));
     }
     renderResizeHandles() {
         let { resizeY: e, resizeX: t, active: i } = this.props;
@@ -449,7 +449,7 @@ class N extends (l = r.Component) {
                     }
                 } = this;
                 if (null == n || !o) return;
-                let { width: a, height: u } = C(n, this.size),
+                let { width: a, height: u } = Z(n, this.size),
                     d = (0, f.PY)(this.anchor, s, r, a, u);
                 if ('MOVE' === e) {
                     let { x: e, y: n } = (function (e) {
@@ -495,12 +495,12 @@ class N extends (l = r.Component) {
                 let l = t
                     ? () => {
                           let { onUpdate: t, id: i } = this.props;
-                          t(e, i, this.anchor, this.size, C(this.ref.current, this.size));
+                          t(e, i, this.anchor, this.size, Z(this.ref.current, this.size));
                       }
                     : void 0;
                 if (t) {
                     let { maxX: e, maxY: t } = this.props.container,
-                        { width: i, height: l } = C(this.ref.current, this.size),
+                        { width: i, height: l } = Z(this.ref.current, this.size),
                         o = (0, f.PY)(this.anchor, e, t, i, l),
                         s = (0, f.R)(o);
                     this.setDOMPositions(s),

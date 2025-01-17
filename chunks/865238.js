@@ -10,7 +10,7 @@ var i = n(200651),
     a = n.n(r),
     s = n(913527),
     o = n.n(s),
-    c = n(476183),
+    c = n(642128),
     d = n(442837),
     u = n(481060),
     h = n(846027),
@@ -26,8 +26,8 @@ var i = n(200651),
     E = n(981631),
     b = n(37113),
     Z = n(388032),
-    N = n(687919),
-    S = n(574169);
+    S = n(687919),
+    N = n(574169);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
     let { channel: t, buyer: r, onClose: s, dismissibleContent: j } = e,
@@ -87,7 +87,7 @@ function j(e) {
         ? null
         : (0, i.jsxs)(c.animated.div, {
               style: D,
-              className: N.banner,
+              className: S.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
@@ -98,8 +98,8 @@ function j(e) {
                               ...B
                           }),
                           (0, i.jsx)('img', {
-                              className: N.potion,
-                              src: S,
+                              className: S.potion,
+                              src: N,
                               alt: ''
                           })
                       ]
@@ -109,7 +109,7 @@ function j(e) {
                       children: V
                   }),
                   (0, i.jsxs)('div', {
-                      className: N.subsection,
+                      className: S.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
@@ -138,12 +138,12 @@ function j(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [N.actionButton]: !0 !== P }),
+                              className: a()({ [S.actionButton]: !0 !== P }),
                               children: z
                           }),
                           !H &&
                               (0, i.jsx)(u.Clickable, {
-                                  className: N.x,
+                                  className: S.x,
                                   onClick: s,
                                   children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                               })

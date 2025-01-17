@@ -26,8 +26,8 @@ var i,
     y = n(869404),
     j = n(333984),
     T = n(210887),
-    P = n(592125),
-    A = n(158776),
+    A = n(592125),
+    P = n(158776),
     w = n(55589),
     M = n(515753),
     L = n(981631),
@@ -297,7 +297,7 @@ class B extends (l = o.Component) {
                     c = n.some((e) => (0, x.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && P.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     v.ZP.trackWithMetadata(L.rMx.DM_LIST_VIEWED, {
@@ -406,7 +406,7 @@ t.Z = (e) => {
         { density: n } = (0, m.useThemeContext)(),
         { version: i, theme: l, children: r, showDMHeader: s } = e,
         c = o.Children.count(r),
-        p = P.Z.getMutablePrivateChannels(),
+        p = A.Z.getMutablePrivateChannels(),
         f = (0, y.k1)(p),
         v = (0, h.Wu)(
             [w.Z, E.Z, j.Z],
@@ -417,10 +417,10 @@ t.Z = (e) => {
             []
         );
     (0, S.z)(b.R);
-    let C = (0, h.cj)([g.Z, T.Z, P.Z], () => ({
+    let C = (0, h.cj)([g.Z, T.Z, A.Z], () => ({
             theme: T.Z.darkSidebar ? L.BRd.DARK : l,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != i ? ''.concat(i, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
+            version: null != i ? ''.concat(i, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
         })),
         x = o.useRef(null),
         I = o.useCallback((e) => {
@@ -447,7 +447,7 @@ t.Z = (e) => {
                 }),
             []
         ),
-        A = o.useCallback(
+        P = o.useCallback(
             () =>
                 new Promise((e) => {
                     let t = x.current;
@@ -465,7 +465,7 @@ t.Z = (e) => {
             id: 'private-channels-'.concat(M),
             isEnabled: C.keyboardModeEnabled,
             scrollToStart: N,
-            scrollToEnd: A,
+            scrollToEnd: P,
             defaultFocused: (c + (s ? 1 : 0)).toString(),
             setFocus: I
         });

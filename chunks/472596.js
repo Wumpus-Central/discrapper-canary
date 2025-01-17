@@ -12,7 +12,7 @@ n.d(t, {
         return A;
     },
     xb: function () {
-        return g;
+        return N;
     },
     zq: function () {
         return I;
@@ -91,7 +91,7 @@ function I(e) {
         [e]
     );
 }
-function g(e, t, n) {
+function N(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }
 ((r = l || (l = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');
