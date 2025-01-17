@@ -152,16 +152,18 @@ function j(e) {
         info: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
-                    variant: 'text-sm/medium',
+                    variant: 'text-xs/medium',
                     className: b.description,
-                    color: 'always-white',
+                    color: 'none',
+                    lineClamp: null != W ? 1 : 2,
                     children: H
                 }),
                 null != W &&
                     (0, i.jsxs)(o.Text, {
                         variant: 'text-xs/normal',
                         className: b.tagline,
-                        color: 'always-white',
+                        color: 'none',
+                        lineClamp: 1,
                         children: [
                             (0, i.jsx)(o.CompassIcon, {
                                 size: 'xxs',

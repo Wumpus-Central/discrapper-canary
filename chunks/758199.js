@@ -26,7 +26,7 @@ function c(e) {
                       },
                       children: (0, i.jsx)(r.LinkIcon, {
                           size: 'xs',
-                          color: '#fff'
+                          color: 'currentColor'
                       })
                   })
                 : null;
@@ -48,7 +48,7 @@ function c(e) {
                             children: [
                                 (0, i.jsx)(r.Text, {
                                     variant: 'eyebrow',
-                                    color: 'always-white',
+                                    color: 'none',
                                     children: n
                                 }),
                                 g
@@ -66,8 +66,8 @@ function c(e) {
                                 className: s.content,
                                 children: [
                                     (0, i.jsx)(r.Text, {
-                                        variant: 'text-md/bold',
-                                        color: 'always-white',
+                                        variant: 'text-md/semibold',
+                                        color: 'none',
                                         lineClamp: 1,
                                         children: t
                                     }),
@@ -85,15 +85,17 @@ function c(e) {
                             className: s.actionWrapper,
                             children: h.map((e, t) => {
                                 let { label: n, onClick: l, disabledReason: a, submitting: o } = e,
-                                    s = null != a,
-                                    c = {
-                                        color: 0 === t ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
+                                    c = null != a,
+                                    d = 0 === t,
+                                    u = {
+                                        color: d ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
+                                        className: d ? void 0 : s.alwaysWhiteText,
                                         onClick: l,
-                                        disabled: s,
+                                        disabled: c,
                                         submitting: o,
                                         children: n
                                     };
-                                return s
+                                return c
                                     ? (0, i.jsx)(
                                           r.Tooltip,
                                           {
@@ -101,14 +103,14 @@ function c(e) {
                                               children: (e) => {
                                                   let { ...t } = e;
                                                   return (0, i.jsx)(r.Button, {
-                                                      ...c,
+                                                      ...u,
                                                       ...t
                                                   });
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(r.Button, { ...c }, n);
+                                    : (0, i.jsx)(r.Button, { ...u }, n);
                             })
                         })
                 ]

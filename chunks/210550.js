@@ -8,5 +8,6 @@ e.exports = {
     content: 'content_f51a8b',
     contentInfo: 'contentInfo_f51a8b',
     linkIcon: 'linkIcon_f51a8b',
-    actionWrapper: 'actionWrapper_f51a8b'
+    actionWrapper: 'actionWrapper_f51a8b',
+    alwaysWhiteText: 'alwaysWhiteText_f51a8b'
 };
