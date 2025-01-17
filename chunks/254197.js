@@ -134,6 +134,7 @@ function V(e) {
                                 (0, o.jsx)(Z, { quest: t }),
                                 (0, o.jsx)(u.Heading, {
                                     className: L.title,
+                                    color: 'header-primary',
                                     variant: 'heading-md/medium',
                                     children: M.intl.format(M.t.EQa7oq, { questName: t.config.messages.questName })
                                 }),
