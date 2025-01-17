@@ -16,13 +16,13 @@ var i,
     c = n.n(d),
     u = n(995295),
     h = n(513431),
-    g = n(442837),
-    m = n(692547),
+    m = n(442837),
+    g = n(692547),
     x = n(481060),
     S = n(87051),
     p = n(798140),
-    v = n(740504),
-    N = n(933557),
+    N = n(740504),
+    v = n(933557),
     j = n(471445),
     C = n(600164),
     f = n(423589),
@@ -45,8 +45,8 @@ var i,
     y = n(981631),
     D = n(969943),
     F = n(388032),
-    B = n(777138);
-function H(e, t, n) {
+    H = n(777138);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -107,6 +107,7 @@ class Y extends r.PureComponent {
         return null == e
             ? null
             : (0, l.jsxs)(x.ModalHeader, {
+                  className: H.modalHeader,
                   children: [
                       (0, l.jsxs)(C.Z.Child, {
                           children: [
@@ -116,7 +117,7 @@ class Y extends r.PureComponent {
                               }),
                               (0, l.jsx)(x.Text, {
                                   variant: 'text-md/normal',
-                                  className: B.guildName,
+                                  className: H.guildName,
                                   children: e.name
                               })
                           ]
@@ -143,7 +144,7 @@ class Y extends r.PureComponent {
         return null == i
             ? null
             : (0, l.jsxs)(x.FormItem, {
-                  className: B.largeSpacing,
+                  className: H.largeSpacing,
                   children: [
                       (0, l.jsx)(x.FormSwitch, {
                           hideBorder: !0,
@@ -154,26 +155,26 @@ class Y extends r.PureComponent {
                       }),
                       t
                           ? (0, l.jsxs)(C.Z, {
-                                className: B.spacing,
+                                className: H.spacing,
                                 align: C.Z.Align.CENTER,
                                 children: [
                                     (0, l.jsxs)(C.Z, {
                                         direction: C.Z.Direction.VERTICAL,
-                                        className: B.__invalid_muteUntilTextWrapper,
+                                        className: H.__invalid_muteUntilTextWrapper,
                                         children: [
                                             (0, l.jsx)(x.FormTitle, {
                                                 tag: 'h3',
-                                                className: B.muteUntilTitle,
+                                                className: H.muteUntilTitle,
                                                 children: F.intl.string(F.t.Ztu2Ym)
                                             }),
                                             (0, l.jsx)(Z.Z, {
-                                                className: B.muteUntilText,
+                                                className: H.muteUntilText,
                                                 muteConfig: n
                                             })
                                         ]
                                     }),
                                     (0, l.jsx)(x.SingleSelect, {
-                                        className: B.muteTimeSelector,
+                                        className: H.muteTimeSelector,
                                         options: (0, f.W9)(),
                                         value: s,
                                         onChange: this.handleSelectMuteTime
@@ -189,11 +190,11 @@ class Y extends r.PureComponent {
         var e;
         let { messageNotifications: t, muted: n, memberCount: i } = this.props;
         return (0, l.jsxs)('div', {
-            className: B.spacing,
+            className: H.spacing,
             children: [
                 (0, l.jsx)(x.FormItem, {
                     title: F.intl.string(F.t.lprV7e),
-                    className: B.largeSpacing,
+                    className: H.largeSpacing,
                     children: (0, l.jsx)(x.RadioGroup, {
                         disabled: n,
                         value: t,
@@ -224,7 +225,7 @@ class Y extends r.PureComponent {
     renderNotificationOptions() {
         let { suppressEveryone: e, suppressRoles: t, mobilePush: n, muted: i, muteEvents: s, notifyHighlights: r, guildId: a } = this.props;
         return (0, l.jsxs)(x.FormItem, {
-            className: B.largeSpacing,
+            className: H.largeSpacing,
             children: [
                 (0, l.jsx)(x.FormSwitch, {
                     onChange: (e) => this.handleCheckboxChange('suppress_everyone', e, w.UE.suppressEveryone(e)),
@@ -249,7 +250,7 @@ class Y extends r.PureComponent {
                                 children: F.intl.string(F.t['Vw/Xn5'])
                             }),
                             (0, l.jsx)('div', {
-                                className: B.highlightsLink,
+                                className: H.highlightsLink,
                                 children: (0, l.jsx)(x.Anchor, {
                                     href: k.Z.getArticleURL(y.BhN.HIGHLIGHTS),
                                     children: F.intl.string(F.t.PRBn9P)
@@ -282,7 +283,7 @@ class Y extends r.PureComponent {
                         guildId: t,
                         onClose: n
                     }),
-                    (0, l.jsx)(x.FormDivider, { className: B.customNotificationSoundsDivider })
+                    (0, l.jsx)(x.FormDivider, { className: H.customNotificationSoundsDivider })
                 ]
             });
     }
@@ -297,17 +298,17 @@ class Y extends r.PureComponent {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, N.F6)(t, G.default, R.Z)
+                        label: (0, v.F6)(t, G.default, R.Z)
                     };
                 })
                 .value();
         return (0, l.jsxs)(x.FormItem, {
             title: F.intl.string(F.t.O4TIvr),
-            className: B.largeSpacing,
+            className: H.largeSpacing,
             children: [
                 (0, l.jsx)(x.FormText, {
                     type: x.FormText.Types.DESCRIPTION,
-                    className: B.smallSpacing,
+                    className: H.smallSpacing,
                     children: F.intl.string(F.t['2Y9ZfH'])
                 }),
                 (0, l.jsx)(x.SearchableSelect, {
@@ -352,9 +353,9 @@ class Y extends r.PureComponent {
                     (0, l.jsx)(
                         'div',
                         {
-                            className: B.overridePlaceholder,
+                            className: H.overridePlaceholder,
                             children: (0, l.jsx)(x.Text, {
-                                className: B.overrideHeader,
+                                className: H.overrideHeader,
                                 variant: 'text-sm/semibold',
                                 children: F.intl.string(F.t['2Y9ZfH'])
                             })
@@ -363,33 +364,33 @@ class Y extends r.PureComponent {
                     )
                 ),
             (0, l.jsxs)('div', {
-                className: B.overrideList,
+                className: H.overrideList,
                 children: [
                     (0, l.jsxs)(C.Z, {
                         children: [
                             (0, l.jsx)(x.Heading, {
                                 variant: 'eyebrow',
-                                className: B.headerName,
+                                className: H.headerName,
                                 children: F.intl.string(F.t.uShwWl)
                             }),
                             (0, l.jsx)(x.Heading, {
                                 variant: 'eyebrow',
-                                className: B.headerOption,
+                                className: H.headerOption,
                                 children: F.intl.string(F.t.e29Z19)
                             }),
                             (0, l.jsx)(x.Heading, {
                                 variant: 'eyebrow',
-                                className: B.headerOption,
+                                className: H.headerOption,
                                 children: F.intl.string(F.t.DD6gNT)
                             }),
                             (0, l.jsx)(x.Heading, {
                                 variant: 'eyebrow',
-                                className: B.headerOption,
+                                className: H.headerOption,
                                 children: F.intl.string(F.t.CtVGyc)
                             }),
                             (0, l.jsx)(x.Heading, {
                                 variant: 'eyebrow',
-                                className: B.headerOption,
+                                className: H.headerOption,
                                 children: (0, l.jsx)(x.Tooltip, {
                                     text: F.intl.string(F.t['8wbTQ0']),
                                     position: 'bottom',
@@ -424,17 +425,17 @@ class Y extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            H(this, '_scroller', null),
-            H(this, '_channelRefs', {}),
-            H(this, 'state', {
+            B(this, '_scroller', null),
+            B(this, '_channelRefs', {}),
+            B(this, 'state', {
                 overrides: new Set((0, f.OD)(this.props.channelOverrides)),
                 channelOverridesProp: this.props.channelOverrides,
                 lastSelected: null
             }),
-            H(this, 'setScrollerRef', (e) => {
+            B(this, 'setScrollerRef', (e) => {
                 this._scroller = e;
             }),
-            H(this, 'handleSelectChange', (e) => {
+            B(this, 'handleSelectChange', (e) => {
                 if (null == e) return;
                 let { overrides: t } = this.state;
                 (t = new Set(t)).add(e),
@@ -443,7 +444,7 @@ class Y extends r.PureComponent {
                         lastSelected: e
                     });
             }),
-            H(this, 'handleSelectMuteTime', (e) => {
+            B(this, 'handleSelectMuteTime', (e) => {
                 let t = e > 0 ? c()().add(e, 'second').toISOString() : null;
                 S.Z.updateGuildNotificationSettings(
                     this.props.guildId,
@@ -457,11 +458,11 @@ class Y extends r.PureComponent {
                     w.ZB.Muted
                 );
             }),
-            H(this, 'handleDeleteOverride', (e) => {
+            B(this, 'handleDeleteOverride', (e) => {
                 let { overrides: t } = this.state;
                 (t = new Set(t)).delete(e), this.setState({ overrides: t });
             }),
-            H(this, 'renderOptionLabel', (e) => {
+            B(this, 'renderOptionLabel', (e) => {
                 let t = L.Z.getChannel(e.value);
                 if (null == t) return e.label;
                 let n = L.Z.getChannel(t.parent_id),
@@ -476,7 +477,7 @@ class Y extends r.PureComponent {
 }
 function W(e) {
     let { guildId: t, ...n } = e,
-        i = (0, g.cj)([I.Z, A.Z, M.Z, P.ZP], () => {
+        i = (0, m.cj)([I.Z, A.Z, M.Z, P.ZP], () => {
             let e = I.Z.getCategories(t);
             return {
                 guildId: t,
@@ -494,14 +495,14 @@ function W(e) {
                 notifyHighlights: P.ZP.getNotifyHighlights(t)
             };
         }),
-        s = (0, v.Z)(i.categories._categories, i.categories, (e) => {
+        s = (0, N.Z)(i.categories._categories, i.categories, (e) => {
             let {
                 channel: { type: t }
             } = e;
             return (0, O.r8)(t) || t === y.d4z.GUILD_CATEGORY;
         }),
         r = _.Y.useExperiment({ location: 'connected_notification_settings' }, { autoTrackExposure: !0 }).enabled,
-        a = (0, x.useToken)(m.Z.unsafe_rawColors.GREEN_360).hex();
+        a = (0, x.useToken)(g.Z.unsafe_rawColors.GREEN_360).hex();
     return (0, l.jsx)(Y, {
         ...i,
         channels: s,
