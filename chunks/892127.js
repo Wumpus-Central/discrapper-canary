@@ -17,13 +17,12 @@ var n = i(200651),
     S = i(981631),
     _ = i(152397);
 t.Z = l.memo(function (e) {
-    let { widget: t, renderWidget: i, renderTitle: o, renderButtons: Z, resizeValidation: C, className: O, dragContainerClassName: I } = e,
+    let { widget: t, renderWidget: i, renderTitle: o, renderButtons: C, resizeValidation: Z, className: O, dragContainerClassName: I } = e,
         N = d.Z.getWidgetConfig(t.type),
         y = (0, r.e7)([c.Z], () => c.Z.isLocked((0, p.QF)())),
         x = (0, g.Z)(),
         b = (0, r.e7)([h.Z], () => h.Z.windowSize((0, E.ZY)(x))),
-        T = (0, g.Z)(),
-        R = l.useCallback((e, t, i, n, l) => {
+        T = l.useCallback((e, t, i, n, l) => {
             let o = h.Z.windowSize((0, E.ZY)((0, g.i)())),
                 s = (0, f.jL)(i, o),
                 r = (0, f.Ox)(n, o);
@@ -47,15 +46,15 @@ t.Z = l.memo(function (e) {
                 widget_top: p.top
             });
         }, []),
-        k = l.useCallback((e) => {
+        R = l.useCallback((e) => {
             (0, a.Os)(e);
         }, []),
-        { id: z, pinned: A, zIndex: M, size: L, anchor: w } = t,
-        D = (0, f.w_)(L, b),
-        j = (0, f.KR)(w, b),
-        { minSize: P, resizeX: U, resizeY: H, dragAnywhere: V } = N,
-        W = A || !y,
-        F = l.useMemo(
+        { id: k, pinned: z, zIndex: A, size: M, anchor: L } = t,
+        w = (0, f.w_)(M, b),
+        D = (0, f.KR)(L, b),
+        { minSize: j, resizeX: P, resizeY: U, dragAnywhere: H } = N,
+        V = z || !y,
+        W = l.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
@@ -64,7 +63,7 @@ t.Z = l.memo(function (e) {
             }),
             [b]
         ),
-        B = l.useCallback(
+        F = l.useCallback(
             (e) =>
                 i({
                     ...e,
@@ -74,51 +73,51 @@ t.Z = l.memo(function (e) {
                 }),
             [t, i, O]
         ),
-        Y = l.useCallback(
+        B = l.useCallback(
             (e) =>
-                null != o || null != Z
+                null != o || null != C
                     ? (0, n.jsxs)('div', {
                           className: _.extrasContainer,
-                          children: [null == o ? void 0 : o(t), null == Z ? void 0 : Z(t, e)]
+                          children: [null == o ? void 0 : o(t), null == C ? void 0 : C(t, e)]
                       })
                     : null,
-            [t, o, Z]
+            [t, o, C]
         ),
-        G = (0, r.e7)([v.ZP], () => v.ZP.renderDebugMode),
-        K = l.useMemo(() => {
-            if (null != C)
+        Y = (0, r.e7)([v.ZP], () => v.ZP.renderDebugMode),
+        G = l.useMemo(() => {
+            if (null != Z)
                 return (e) =>
-                    C({
+                    Z({
                         ...e,
                         widget: t
                     });
-        }, [C, t]);
+        }, [Z, t]);
     return (0, n.jsx)(m.Z, {
         className: s()(
             {
-                [_.debug]: G,
-                [_.debugUnpinned]: G && !A,
-                [_.debugPinned]: G && A
+                [_.debug]: Y,
+                [_.debugUnpinned]: Y && !z,
+                [_.debugPinned]: Y && z
             },
             I
         ),
-        id: z,
-        size: D,
-        anchor: j,
-        container: F,
-        minSize: P,
-        hidden: !W,
+        id: k,
+        size: w,
+        anchor: D,
+        container: W,
+        minSize: j,
+        hidden: !V,
         locked: y,
-        resizeX: U,
-        resizeY: H,
-        style: { zIndex: M },
-        dragAnywhere: V,
+        resizeX: P,
+        resizeY: U,
+        style: { zIndex: A },
+        dragAnywhere: H,
         active: !y,
-        onUpdate: R,
-        onClick: k,
-        targetWindow: T,
-        renderExtras: Y,
-        resizeValidation: K,
-        children: B
+        onUpdate: T,
+        onClick: R,
+        targetWindow: x,
+        renderExtras: B,
+        resizeValidation: G,
+        children: F
     });
 });
