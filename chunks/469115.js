@@ -1,15 +1,15 @@
 r.d(n, {
     Qf: function () {
-        return h;
-    },
-    XV: function () {
-        return _;
-    },
-    bV: function () {
         return p;
     },
-    qt: function () {
+    XV: function () {
+        return h;
+    },
+    bV: function () {
         return m;
+    },
+    qt: function () {
+        return g;
     }
 });
 var i,
@@ -484,33 +484,29 @@ let c = [
         getName: () => u.intl.string(u.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = [
-        ...c,
-        ...d,
-        f,
-        {
-            id: o.Us.EASTER_EGG,
-            theme: l.BR.LIGHT,
-            colors: [
-                {
-                    token: l.Il.BG_GRADIENT_EASTER_EGG_1,
-                    stop: 4
-                },
-                {
-                    token: l.Il.BG_GRADIENT_EASTER_EGG_2,
-                    stop: 96
-                }
-            ],
-            angle: 180,
-            getName: () => u.intl.string(u.t.mFinbW),
-            midpointPercentage: 50
-        }
-    ],
-    h = [f, ...d, ...c];
+    _ = {
+        id: o.Us.EASTER_EGG,
+        theme: l.BR.LIGHT,
+        colors: [
+            {
+                token: l.Il.BG_GRADIENT_EASTER_EGG_1,
+                stop: 4
+            },
+            {
+                token: l.Il.BG_GRADIENT_EASTER_EGG_2,
+                stop: 96
+            }
+        ],
+        angle: 180,
+        getName: () => u.intl.string(u.t.mFinbW),
+        midpointPercentage: 50
+    },
+    h = [...c, ...d, f, _],
+    p = [f, ...d, ...c, _];
 !(function (e) {
     (e[(e.DARK = 0)] = 'DARK'), (e[(e.LIGHT = 1)] = 'LIGHT'), (e[(e.SYSTEM = 2)] = 'SYSTEM');
 })(i || (i = {}));
-let p = [
+let m = [
         {
             theme: l.BR.DARKER,
             getName: () => u.intl.string(u.t.b8Cei4)
@@ -528,4 +524,4 @@ let p = [
             getName: () => u.intl.string(u.t.zlvNOj)
         }
     ],
-    m = (0, s.keyBy)(_, 'id');
+    g = (0, s.keyBy)(h, 'id');
