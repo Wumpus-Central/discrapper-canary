@@ -3,8 +3,8 @@ var n = s(200651),
     i = s(192379),
     r = s(120356),
     o = s.n(r),
-    a = s(392711),
-    l = s.n(a),
+    l = s(392711),
+    a = s.n(l),
     c = s(714338),
     d = s(585483),
     u = s(981631),
@@ -156,9 +156,9 @@ class _ extends i.PureComponent {
     }
     render() {
         let { renderSecondary: e, offsetX: t, offsetY: s, animating: i, scale: r } = this.state,
-            a = [this.renderPrimary()];
+            l = [this.renderPrimary()];
         return (
-            e && a.push(this.renderSecondary(t, s)),
+            e && l.push(this.renderSecondary(t, s)),
             (0, n.jsx)('div', {
                 className: o()(h.container, { [h.animate]: i }),
                 style: {
@@ -166,7 +166,7 @@ class _ extends i.PureComponent {
                     left: this.props.left,
                     transform: 'scale('.concat(r, ')')
                 },
-                children: a
+                children: l
             })
         );
     }
@@ -177,17 +177,17 @@ class _ extends i.PureComponent {
             E(this, 'state', {
                 animating: !1,
                 renderSecondary: !1,
-                scale: l().random(0.6, 1, !0),
-                offsetX: l().random(0, 140, !1) - 70,
-                offsetY: l().random(0, 140, !1) - 70
+                scale: a().random(0.6, 1, !0),
+                offsetX: a().random(0, 140, !1) - 70,
+                offsetY: a().random(0, 140, !1) - 70
             }),
             E(this, 'done', () => {
                 this.props.onAnimationComplete(this.props.componentId);
             });
     }
 }
-let C = 240;
-class g extends i.PureComponent {
+let g = 240;
+class C extends i.PureComponent {
     componentDidMount() {
         this.setTimeout(() => {
             this.setState({ visible: !0 }), d.S.dispatch(u.CkL.SHAKE_APP, { duration: 2400 });
@@ -235,14 +235,14 @@ class g extends i.PureComponent {
                             _,
                             {
                                 componentId: i,
-                                top: l().random(s - 100, s + 100, !1),
-                                left: l().random(t - 200, t + 200, !1),
+                                top: a().random(s - 100, s + 100, !1),
+                                left: a().random(t - 200, t + 200, !1),
                                 onAnimationComplete: this.removeExplosion
                             },
                             i
                         )
                     ),
-                        this.setTimeout(this.createExplosion, C),
+                        this.setTimeout(this.createExplosion, g),
                         this.setState({ explosions: this.state.explosions + 1 });
                 } else this.setTimeout(this.addSymbol, 750);
             }),
@@ -254,4 +254,4 @@ class g extends i.PureComponent {
             });
     }
 }
-t.Z = g;
+t.Z = C;

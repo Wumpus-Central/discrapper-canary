@@ -15,31 +15,31 @@ var i = n(200651),
     c = n(9156),
     u = n(621600),
     h = n(113449),
-    g = n(748756),
-    m = n(732760),
+    m = n(748756),
+    g = n(732760),
     x = n(686660),
     S = n(981631),
     p = n(490897),
-    v = n(526761),
-    N = n(388032),
+    N = n(526761),
+    v = n(388032),
     j = n(249704),
     C = n(650455);
 let f = () => [
     {
         value: x.s8.ALL_MESSAGES,
-        name: N.intl.string(N.t.hZrr6u)
+        name: v.intl.string(v.t.hZrr6u)
     },
     {
         value: x.s8.MENTIONS,
-        name: N.intl.string(N.t.y59NJi)
+        name: v.intl.string(v.t.y59NJi)
     },
     {
         value: x.s8.NOTHING,
-        name: N.intl.string(N.t['pGn/bG'])
+        name: v.intl.string(v.t['pGn/bG'])
     },
     {
         value: x.s8.CUSTOM,
-        name: N.intl.string(N.t['32yow8'])
+        name: v.intl.string(v.t['32yow8'])
     }
 ];
 function E(e) {
@@ -58,7 +58,7 @@ function E(e) {
                 E(!0);
                 return;
             }
-            E(!1), (0, g.V)(t, e);
+            E(!1), (0, m.V)(t, e);
         };
     return (0, i.jsxs)('div', {
         children: [
@@ -91,12 +91,12 @@ function E(e) {
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'header-primary',
-                                        children: N.intl.string(N.t.Tqd1AQ)
+                                        children: v.intl.string(v.t.Tqd1AQ)
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
-                                        children: N.intl.string(N.t.RpQgm5)
+                                        children: v.intl.string(v.t.RpQgm5)
                                     })
                                 ]
                             }),
@@ -105,12 +105,12 @@ function E(e) {
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'header-primary',
-                                        children: N.intl.string(N.t['1m22ZG'])
+                                        children: v.intl.string(v.t['1m22ZG'])
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
-                                        children: N.intl.string(N.t['4bP2ZW'])
+                                        children: v.intl.string(v.t['4bP2ZW'])
                                     })
                                 ]
                             })
@@ -123,9 +123,9 @@ function E(e) {
                                 value: l,
                                 className: j.input,
                                 onChange: (e) => {
-                                    E(!1), d.Z.updateGuildNotificationSettings(t, { flags: (0, h.Q4)(n, e === p.i.ALL_MESSAGES ? v.vc.UNREADS_ALL_MESSAGES : v.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e));
+                                    E(!1), d.Z.updateGuildNotificationSettings(t, { flags: (0, h.Q4)(n, e === p.i.ALL_MESSAGES ? N.vc.UNREADS_ALL_MESSAGES : N.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e));
                                 },
-                                options: (0, m.y)({ notificationSetting: r }),
+                                options: (0, g.y)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
                                     let t = e.disabled && e.value === p.i.ONLY_MENTIONS && l !== p.i.ONLY_MENTIONS;
                                     return (0, i.jsxs)(i.Fragment, {
@@ -139,7 +139,7 @@ function E(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.Tooltip, {
-                                                    text: N.intl.string(N.t.eP8yWV),
+                                                    text: v.intl.string(v.t.eP8yWV),
                                                     children: (e) =>
                                                         (0, i.jsx)(o.DenyIcon, {
                                                             size: 'custom',
@@ -159,9 +159,9 @@ function E(e) {
                                 onChange: (e) => {
                                     E(!1);
                                     let n = { message_notifications: e };
-                                    e === S.bL.ALL_MESSAGES && l !== p.i.ALL_MESSAGES && (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), v.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e));
+                                    e === S.bL.ALL_MESSAGES && l !== p.i.ALL_MESSAGES && (n.flags = (0, h.Q4)(c.ZP.getGuildFlags(t), N.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(t, n, u.UE.notifications(e));
                                 },
-                                options: (0, m.d)({ notificationSetting: r }),
+                                options: (0, g.d)({ notificationSetting: r }),
                                 renderOptionLabel: (e) => {
                                     let t = e.value === S.bL.ALL_MESSAGES && l !== p.i.ALL_MESSAGES && r !== S.bL.ALL_MESSAGES;
                                     return (0, i.jsxs)(i.Fragment, {
@@ -172,7 +172,7 @@ function E(e) {
                                             }),
                                             t &&
                                                 (0, i.jsx)(o.Tooltip, {
-                                                    text: N.intl.string(N.t.idXSbG),
+                                                    text: v.intl.string(v.t.idXSbG),
                                                     children: (e) =>
                                                         (0, i.jsx)(o.CircleInformationIcon, {
                                                             size: 'custom',
@@ -200,19 +200,19 @@ function b(e) {
                 badged: !0,
                 unread: !0,
                 muted: !1,
-                name: N.intl.string(N.t.EjLobG)
+                name: v.intl.string(v.t.EjLobG)
             },
             {
                 badged: !1,
                 unread: !0,
                 muted: !0,
-                name: N.intl.string(N.t.Wgpwpq)
+                name: v.intl.string(v.t.Wgpwpq)
             },
             {
                 badged: !1,
                 unread: !1,
                 muted: !0,
-                name: N.intl.string(N.t.g9VImp)
+                name: v.intl.string(v.t.g9VImp)
             }
         ];
     return (
@@ -274,13 +274,13 @@ function _(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/medium',
-                        children: N.intl.string(N.t.qSq0tL)
+                        children: v.intl.string(v.t.qSq0tL)
                     }),
                     e.notificationSetting === S.bL.ALL_MESSAGES &&
                         (0, i.jsx)(o.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: N.intl.string(N.t.WYyzIy)
+                            children: v.intl.string(v.t.WYyzIy)
                         }),
                     e.notificationSetting !== S.bL.ALL_MESSAGES &&
                         (0, i.jsxs)(i.Fragment, {
@@ -295,7 +295,7 @@ function _(e) {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     tag: 'span',
-                                    children: N.intl.string(N.t.WYyzIy)
+                                    children: v.intl.string(v.t.WYyzIy)
                                 })
                             ]
                         })

@@ -36,7 +36,7 @@ function p() {
                   (0, i.jsx)(r.Text, {
                       variant: 'text-md/normal',
                       className: c.bannerText,
-                      children: x.body(h.length)
+                      children: x.desktopBannerText(h.length)
                   })
               ]
           });

@@ -23,10 +23,10 @@ let h = { NITRO_BASIC: u.nitroBasic },
     _ = l.memo(function (e) {
         let { message: t, handleClick: n, handleClose: s, buttonText: _, useInitialGlow: f, useGlowOnHover: j, handleImageClick: m, className: L, analyticsLocations: S, upsellType: E, themeOverride: g = h.NITRO_BASIC } = e,
             [I, M] = l.useState(f),
-            [v, y] = l.useState(p);
+            [v, T] = l.useState(p);
         return (
             l.useEffect(() => {
-                y(c);
+                T(c);
             }, [g]),
             l.useEffect(() => {
                 setTimeout(() => M(!1), 3000);

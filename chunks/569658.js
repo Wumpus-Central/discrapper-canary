@@ -14,13 +14,13 @@ var s = n(392711),
     c = n(471445),
     u = n(131704),
     h = n(592125),
-    g = n(324067),
-    m = n(699516),
+    m = n(324067),
+    g = n(699516),
     x = n(594174),
     S = n(981631),
     p = n(388032),
-    v = n(539673);
-let N = (e) => {
+    N = n(539673);
+let v = (e) => {
     let {
         channel: { type: t }
     } = e;
@@ -31,10 +31,10 @@ function j(e) {
     let { guildId: n, onSelected: s } = e;
     let { channels: u, categories: j } =
             ((t = n),
-            (0, r.cj)([g.Z], () => {
-                let e = g.Z.getCategories(t);
+            (0, r.cj)([m.Z], () => {
+                let e = m.Z.getCategories(t);
                 return {
-                    channels: (0, o.Z)(e._categories, e, N),
+                    channels: (0, o.Z)(e._categories, e, v),
                     categories: e
                 };
             })),
@@ -47,7 +47,7 @@ function j(e) {
                 let { channel: t } = e;
                 return {
                     value: t.id,
-                    label: (0, d.F6)(t, x.default, m.Z)
+                    label: (0, d.F6)(t, x.default, g.Z)
                 };
             })
             .value();
@@ -58,7 +58,7 @@ function j(e) {
                 children: p.intl.string(p.t['2Y9ZfH'])
             }),
             (0, i.jsx)('div', {
-                className: v.input,
+                className: N.input,
                 children: (0, i.jsx)(a.SearchableSelect, {
                     value: S.lds,
                     onChange: s,

@@ -24,8 +24,8 @@ var i = n(200651),
 function S(e) {
     var t, n;
     let s,
-        { handleClose: S, planGroup: E, onSubscriptionConfirmation: g, renderPurchaseConfirmation: I, postSuccessGuild: M, followupSKUInfo: v, continueSessionToInitialStep: y } = e,
-        { activeSubscription: T, paymentSources: N, paymentSourceId: P, selectedPlan: Z, selectedSkuId: A, step: U, updatedSubscription: O, startingPremiumSubscriptionPlanIdRef: k } = (0, _.usePaymentContext)(),
+        { handleClose: S, planGroup: E, onSubscriptionConfirmation: g, renderPurchaseConfirmation: I, postSuccessGuild: M, followupSKUInfo: v, continueSessionToInitialStep: T } = e,
+        { activeSubscription: y, paymentSources: N, paymentSourceId: P, selectedPlan: Z, selectedSkuId: A, step: U, updatedSubscription: O, startingPremiumSubscriptionPlanIdRef: k } = (0, _.usePaymentContext)(),
         { isGift: R, giftRecipient: b, giftCode: w, hasSentMessage: B, isSendingMessage: H, sendGiftMessage: F, claimableRewards: G, selectedGiftingPromotionReward: D } = (0, h.wD)(),
         W = (0, d.id)(Z, R, G),
         Y = (0, u.Z)(),
@@ -46,7 +46,7 @@ function S(e) {
         (s =
             null != I
                 ? I(Z, Q, O)
-                : null != y
+                : null != T
                   ? (0, i.jsx)(c.VY, {})
                   : R
                     ? (0, i.jsx)(c.TB, {
@@ -65,7 +65,7 @@ function S(e) {
                             startingPremiumSubscriptionPlanId: k.current,
                             planId: Z.id,
                             onClose: Q,
-                            isDowngrade: null != T && (0, x.GY)(T, Z.id, E),
+                            isDowngrade: null != y && (0, x.GY)(y, Z.id, E),
                             paymentSourceType: null === (n = N[null != P ? P : '']) || void 0 === n ? void 0 : n.type
                         })),
         (0, i.jsxs)(i.Fragment, {

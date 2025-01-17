@@ -14,8 +14,8 @@ var s = n(913527),
     c = n(9156),
     u = n(621600),
     h = n(423589),
-    g = n(969943),
-    m = n(388032),
+    m = n(969943),
+    g = n(388032),
     x = n(401387);
 function S(e) {
     var t;
@@ -34,8 +34,8 @@ function S(e) {
                           o.Z.updateGuildNotificationSettings(n, { muted: e }, u.UE.muted(e));
                       },
                       style: { marginBottom: 0 },
-                      note: m.intl.string(m.t.IngcUl),
-                      children: m.intl.format(m.t['J+7D9P'], { name: s.name })
+                      note: g.intl.string(g.t.IngcUl),
+                      children: g.intl.format(g.t['J+7D9P'], { name: s.name })
                   }),
                   S &&
                       (0, i.jsxs)('div', {
@@ -45,7 +45,7 @@ function S(e) {
                                   children: [
                                       (0, i.jsx)(a.FormTitle, {
                                           tag: 'h3',
-                                          children: m.intl.string(m.t.Ztu2Ym)
+                                          children: g.intl.string(g.t.Ztu2Ym)
                                       }),
                                       (0, i.jsx)(a.Text, {
                                           variant: 'text-xs/normal',
@@ -53,8 +53,8 @@ function S(e) {
                                           children: (function (e) {
                                               return null == e || null == e.end_time
                                                   ? null
-                                                  : m.intl.formatToPlainString(m.t.j7h4AA, {
-                                                        endTime: new Date(e.end_time).toLocaleString(m.intl.currentLocale, {
+                                                  : g.intl.formatToPlainString(g.t.j7h4AA, {
+                                                        endTime: new Date(e.end_time).toLocaleString(g.intl.currentLocale, {
                                                             month: 'numeric',
                                                             day: 'numeric',
                                                             hour: 'numeric',
@@ -81,7 +81,7 @@ function S(e) {
                                       );
                                   },
                                   options: (0, h.W9)(),
-                                  value: null !== (t = null == p ? void 0 : p.selected_time_window) && void 0 !== t ? t : g.Oe.ALWAYS
+                                  value: null !== (t = null == p ? void 0 : p.selected_time_window) && void 0 !== t ? t : m.Oe.ALWAYS
                               })
                           ]
                       })

@@ -25,17 +25,17 @@ function h(e) {
         h = r.Z.updateGuildNotificationSettings;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 value: n.suppressEveryone,
                 title: c.intl.format(c.t.OWiWAg, {}),
                 onChange: (e) => h(t, { suppress_everyone: e }, o.UE.suppressEveryone(e))
             }),
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 value: n.suppressRoles,
                 title: c.intl.string(c.t['O/QdoK']),
                 onChange: (e) => h(t, { suppress_roles: e }, o.UE.suppressRoles(e))
             }),
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 title: (0, i.jsxs)('div', {
                     className: u.advanceSettingTitle,
                     children: [
@@ -60,12 +60,12 @@ function h(e) {
                 value: n.highligths === d.gLR.ENABLED,
                 onChange: (e) => h(t, { notify_highlights: e ? d.gLR.ENABLED : d.gLR.DISABLED }, o.UE.highlights(e))
             }),
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 value: n.muteScheduledEvents,
                 title: c.intl.string(c.t.ONG3Y2),
                 onChange: (e) => h(t, { mute_scheduled_events: e }, o.UE.mutedEvents(e))
             }),
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 value: n.mobilePush,
                 title: c.intl.string(c.t['h1DL6+']),
                 onChange: (e) => h(t, { mobile_push: e }, o.UE.mobilePush(e))
@@ -73,7 +73,7 @@ function h(e) {
         ]
     });
 }
-function g(e) {
+function m(e) {
     return (0, i.jsx)(l.FormSwitch, {
         hideBorder: !0,
         className: u.advanceSetting,

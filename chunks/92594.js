@@ -25,7 +25,7 @@ var i = n(200651),
 function S() {
     let { activeSubscription: e, purchaseError: t, paymentError: n, setPurchaseError: s, selectedSkuId: S, selectedPlan: E, setSelectedSkuId: g, setSelectedPlanId: I, setSelectedPlanNotification: M } = (0, _.usePaymentContext)(),
         { isGift: v } = (0, h.wD)(),
-        [y, T] = l.useState(!1),
+        [T, y] = l.useState(!1),
         [N, P] = l.useState(!1),
         [Z, A] = l.useState(!1);
     return (
@@ -49,9 +49,9 @@ function S() {
                                     'span',
                                     {
                                         onMouseEnter: () => {
-                                            x.default.track(f.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), T(!0);
+                                            x.default.track(f.rMx.NITRO_BASIC_UPSELL_PERK_HOVERED), y(!0);
                                         },
-                                        onMouseLeave: () => T(!1),
+                                        onMouseLeave: () => y(!1),
                                         children: e
                                     },
                                     'post-failure-nitro-basic-upsell-perk-hover'
@@ -72,7 +72,7 @@ function S() {
                         analyticsLocations: f.Sbl.NITRO_BASIC_UPSELL
                     })
                 }),
-                y &&
+                T &&
                     (0, i.jsxs)('div', {
                         className: L.tooltip,
                         children: [

@@ -83,22 +83,22 @@ function E(e) {
     let t,
         n,
         { planId: s, enableNoPaymentTrial: d, startingPremiumSubscriptionPlanId: u, onClose: c, followupSKUInfo: E, isDowngrade: g, hideClose: I, postSuccessGuild: M, paymentSourceType: v } = e,
-        { theme: y } = (0, o.useThemeContext)(),
-        T = (0, a.e7)([x.Z], () => (null != E ? x.Z.get(E.id) : null));
+        { theme: T } = (0, o.useThemeContext)(),
+        y = (0, a.e7)([x.Z], () => (null != E ? x.Z.get(E.id) : null));
     l.useEffect(() => {
-        if (null == E || null != T) return;
+        if (null == E || null != y) return;
         let { applicationId: e, id: t } = E;
         (0, C.$N)(e, t).catch(j.VqG);
-    }, [E, T]);
+    }, [E, y]);
     let N = (e) => {
         if (e.skuId === f.Si.TIER_0) return j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? m.intl.format(m.t.o6hBiY, {}) : m.intl.string(m.t['AGf/yc']);
         if (e.skuId === f.Si.TIER_1) return j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? m.intl.format(m.t.o6hBiY, {}) : m.intl.string(m.t.knvOV1);
         return j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? m.intl.format(m.t.A4THYm, {}) : d ? m.intl.string(m.t['g52y/v']) : m.intl.string(m.t.aTUr3d);
     };
-    if (null != T)
+    if (null != y)
         t = (0, i.jsx)('div', {
             className: L.text,
-            children: m.intl.format(m.t.tsQOs7, { skuName: T.name })
+            children: m.intl.format(m.t.tsQOs7, { skuName: y.name })
         });
     else if (null != u)
         t = (0, i.jsx)(S, {
@@ -131,13 +131,13 @@ function E(e) {
     let P = h.ZP.getPremiumType(s);
     return (
         r()(null != P, 'premium type should not be null in purchase confirmation'),
-        (n = null != T ? m.intl.formatToPlainString(m.t['1qGgm5'], { skuName: T.name }) : g ? m.intl.string(m.t.QJ9EyM) : null != M ? m.intl.string(m.t.ta3cXV) : m.intl.string(m.t.TkTvBw)),
+        (n = null != y ? m.intl.formatToPlainString(m.t['1qGgm5'], { skuName: y.name }) : g ? m.intl.string(m.t.QJ9EyM) : null != M ? m.intl.string(m.t.ta3cXV) : m.intl.string(m.t.TkTvBw)),
         (0, i.jsxs)('div', {
             className: L.confirmation,
             children: [
                 (0, i.jsx)(_.C, {
                     className: L.banner,
-                    theme: y,
+                    theme: T,
                     premiumType: P,
                     type: j.X7u.has(null != v ? v : j.HeQ.UNKNOWN) ? _.C.Types.PREMIUM_PAYMENT_STARTED : null != u ? _.C.Types.PREMIUM_UPDATED : _.C.Types.PREMIUM_ACTIVATED
                 }),

@@ -3,8 +3,8 @@ s(192379);
 var i = s(481060),
     r = s(570140),
     o = s(317770),
-    a = s(731971),
-    l = s(472365),
+    l = s(731971),
+    a = s(472365),
     c = s(590965);
 let d = 'INVITE_MODAL_KEY';
 class u extends o.Z {
@@ -17,10 +17,10 @@ class u extends o.Z {
     handleOpenModal() {
         c.Z.isOpen() &&
             !(0, i.hasModalOpen)(d) &&
-            (0, i.openModal)((e) => (0, n.jsx)(l.Z, { ...e }), {
+            (0, i.openModal)((e) => (0, n.jsx)(a.Z, { ...e }), {
                 modalKey: d,
                 onCloseRequest: () => {
-                    (0, a.oE)(), r.Z.dispatch({ type: 'INVITE_MODAL_CLOSE' });
+                    (0, l.oE)(), r.Z.dispatch({ type: 'INVITE_MODAL_CLOSE' });
                 }
             });
     }

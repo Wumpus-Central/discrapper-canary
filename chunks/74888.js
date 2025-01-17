@@ -13,8 +13,8 @@ var i = n(200651),
     c = n(610617),
     u = n(413684),
     h = n(298812),
-    g = n(200115),
-    m = n(406205),
+    m = n(200115),
+    g = n(406205),
     x = n(388032),
     S = n(752863);
 function p(e) {
@@ -28,7 +28,7 @@ function p(e) {
         })
     });
 }
-function v(e) {
+function N(e) {
     return (0, i.jsxs)('div', {
         children: [
             null != e.title && (0, i.jsx)(p, { title: e.title }),
@@ -39,7 +39,7 @@ function v(e) {
         ]
     });
 }
-function N(e) {
+function v(e) {
     let { onClose: t } = e;
     return (0, i.jsxs)(a.ModalHeader, {
         className: S.header,
@@ -85,26 +85,26 @@ function j(e) {
             transitionState: e.transitionState,
             'aria-label': x.intl.string(x.t.h850Sk),
             children: [
-                (0, i.jsx)(N, { onClose: e.onClose }),
+                (0, i.jsx)(v, { onClose: e.onClose }),
                 (0, i.jsxs)(a.ModalContent, {
                     className: S.content,
                     scrollerRef: t,
                     children: [
-                        (0, i.jsx)(v, { children: (0, i.jsx)(g.Z, { guildId: e.guildId }) }),
-                        (0, i.jsx)(v, {
+                        (0, i.jsx)(N, { children: (0, i.jsx)(m.Z, { guildId: e.guildId }) }),
+                        (0, i.jsx)(N, {
                             title: x.intl.string(x.t['R9Ej9/']),
                             noPadding: !0,
-                            children: (0, i.jsx)(m.Z, { guildId: e.guildId })
+                            children: (0, i.jsx)(g.Z, { guildId: e.guildId })
                         }),
                         n &&
-                            (0, i.jsx)(v, {
+                            (0, i.jsx)(N, {
                                 children: (0, i.jsx)(c.Z, {
                                     onClose: e.onClose,
                                     guildId: e.guildId,
                                     isRedesign: !0
                                 })
                             }),
-                        (0, i.jsx)(v, {
+                        (0, i.jsx)(N, {
                             title: x.intl.string(x.t['31DySk']),
                             children: (0, i.jsx)(u.Z, { guildId: e.guildId })
                         }),

@@ -36,8 +36,8 @@ var i = n(200651),
     I = n(293858),
     M = n(183813),
     v = n(614223),
-    y = n(174827),
-    T = n(846464),
+    T = n(174827),
+    y = n(846464),
     N = n(184160),
     P = n(48175),
     Z = n(981631),
@@ -46,7 +46,7 @@ var i = n(200651),
     O = n(809186);
 let k = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
 function R(e) {
-    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: S, reviewWarningMessage: E, openInvoiceId: g, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: v, followupSKUInfo: y, renderHeader: T, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: O, returnRef: k, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
+    let { analyticsLocation: t, analyticsObject: n, analyticsSourceLocation: s, onComplete: o, transitionState: d, initialPlanId: c, subscriptionTier: j, onClose: m, trialId: L, trialFooterMessageOverride: S, reviewWarningMessage: E, openInvoiceId: g, onSubscriptionConfirmation: I, renderPurchaseConfirmation: M, postSuccessGuild: v, followupSKUInfo: T, renderHeader: y, applicationId: N, guildId: P, referralTrialOfferId: U, skuId: O, returnRef: k, skipConfirm: R = !1, continueSessionToInitialStep: b } = e,
         { analyticsLocations: w } = (0, C.ZP)();
     l.useEffect(() => {
         !u.Z.isLoadedForPremiumSKUs() && r.Z.wait(() => (0, a.Y2)());
@@ -75,8 +75,8 @@ function R(e) {
         onSubscriptionConfirmation: I,
         renderPurchaseConfirmation: M,
         postSuccessGuild: v,
-        followupSKUInfo: y,
-        renderHeader: T,
+        followupSKUInfo: T,
+        renderHeader: y,
         applicationId: N,
         guildId: P,
         referralTrialOfferId: U,
@@ -129,7 +129,7 @@ let B = [
     },
     {
         key: _.h8.SKU_SELECT,
-        renderStep: (e) => (0, i.jsx)(T.q, { ...e }),
+        renderStep: (e) => (0, i.jsx)(y.q, { ...e }),
         options: {
             renderHeader: !1,
             hideSlider: !0
@@ -145,7 +145,7 @@ let B = [
     },
     {
         key: _.h8.PLAN_SELECT,
-        renderStep: (e) => (0, i.jsx)(y.x, { ...e }),
+        renderStep: (e) => (0, i.jsx)(T.x, { ...e }),
         options: {
             renderHeader: !0,
             useBreadcrumbLabel: (e) => (b(e) ? null : U.intl.string(U.t['r+SebW']))

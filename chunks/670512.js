@@ -3,8 +3,8 @@ var n,
     i = s(200651),
     r = s(192379),
     o = s(120356),
-    a = s.n(o),
-    l = s(748780),
+    l = s.n(o),
+    a = s(748780),
     c = s(846519),
     d = s(481060),
     u = s(585483),
@@ -28,7 +28,7 @@ let _ = {
     friction: 15,
     tension: 100
 };
-class C extends (n = r.PureComponent) {
+class g extends (n = r.PureComponent) {
     componentDidMount() {
         this.setState({ shown: !0 }), u.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
@@ -42,17 +42,17 @@ class C extends (n = r.PureComponent) {
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
-            l.Z.spring(this.state.translateY, {
+            a.Z.spring(this.state.translateY, {
                 toValue: Math.min(e, 250),
                 ..._
             }).start();
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)('div', {
-            className: a()(p.arrowGroup, e),
+            className: l()(p.arrowGroup, e),
             children: [
-                (0, i.jsx)(l.Z.div, {
-                    className: a()(p.arrowContainer, p.horizontal),
+                (0, i.jsx)(a.Z.div, {
+                    className: l()(p.arrowContainer, p.horizontal),
                     style: this.getStyle(),
                     children: (0, i.jsx)('img', {
                         alt: '',
@@ -61,7 +61,7 @@ class C extends (n = r.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: a()(p.arrowContainer, p.diag1),
+                    className: l()(p.arrowContainer, p.diag1),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: s(536404),
@@ -69,7 +69,7 @@ class C extends (n = r.PureComponent) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: a()(p.arrowContainer, p.diag2),
+                    className: l()(p.arrowContainer, p.diag2),
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: s(569347),
@@ -99,7 +99,7 @@ class C extends (n = r.PureComponent) {
             { shown: t } = this.state;
         return (0, i.jsxs)('div', {
             ref: this.rootRef,
-            className: a()(p.tutorial, {
+            className: l()(p.tutorial, {
                 [p.shown]: t,
                 [p.hasQuery]: e
             }),
@@ -127,7 +127,7 @@ class C extends (n = r.PureComponent) {
         super(...e),
             m(this, 'state', {
                 shown: !1,
-                translateY: new l.Z.Value(0)
+                translateY: new a.Z.Value(0)
             }),
             m(this, 'rootRef', r.createRef()),
             m(this, 'focusTimeout', new c.V7()),
@@ -144,4 +144,4 @@ class C extends (n = r.PureComponent) {
             });
     }
 }
-m(C, 'contextType', d.AccessibilityPreferencesContext), (t.Z = C);
+m(g, 'contextType', d.AccessibilityPreferencesContext), (t.Z = g);

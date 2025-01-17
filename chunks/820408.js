@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 }),
     n(47120);
@@ -14,27 +14,27 @@ var i = n(200651),
     c = n(436774),
     u = n(690221),
     h = n(626135),
-    g = n(197115),
-    m = n(474936),
+    m = n(197115),
+    g = n(474936),
     x = n(981631),
     S = n(388032),
     p = n(205459);
-function v(e) {
+function N(e) {
     let { onClose: t } = e,
         n = (0, a.O)(),
-        { analyticsLocations: v } = (0, d.ZP)(),
-        [N, j] = s.useState(!1),
+        { analyticsLocations: N } = (0, d.ZP)(),
+        [v, j] = s.useState(!1),
         C = s.useCallback(
             (e) => {
-                if (!N && !!e)
+                if (!v && !!e)
                     h.default.track(x.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: m.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
+                        type: g.cd.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL,
                         location: n.location,
-                        location_stack: v
+                        location_stack: N
                     }),
                         j(!0);
             },
-            [n.location, v, N]
+            [n.location, N, v]
         ),
         f = (0, o.O)(C, 0.8, !0);
     return (0, i.jsxs)('div', {
@@ -62,12 +62,12 @@ function v(e) {
             }),
             (0, i.jsx)('div', {
                 className: p.nitroButton,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(m.Z, {
                     showGradient: !0,
                     buttonText: S.intl.string(S.t.pj0XBA),
                     size: l.Button.Sizes.SMALL,
                     shinyButtonClassName: p.nitroButton,
-                    subscriptionTier: m.Si.TIER_2,
+                    subscriptionTier: g.Si.TIER_2,
                     premiumModalAnalyticsLocation: { section: x.jXE.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL }
                 })
             })

@@ -28,8 +28,8 @@ var i = n(200651),
     I = n(509545),
     M = n(669079),
     v = n(63063),
-    y = n(74538),
-    T = n(987209),
+    T = n(74538),
+    y = n(987209),
     N = n(563132),
     P = n(409813),
     Z = n(51499),
@@ -46,7 +46,7 @@ function F(e) {
     var t, n, s, F;
     let { handleStepChange: G, initialPlanId: D, subscriptionTier: W, trialId: Y, referralTrialOfferId: K, handleClose: V } = e,
         { activeSubscription: X, hasFetchedSubscriptions: Q, paymentSourceId: z, paymentSources: q, selectedSkuId: J, selectedPlan: $, step: ee, defaultPlanId: et, priceOptions: en, isPremium: ei } = (0, N.usePaymentContext)(),
-        { isGift: el, giftRecipient: es, giftMessage: er, claimableRewards: ea } = (0, T.wD)(),
+        { isGift: el, giftRecipient: es, giftMessage: er, claimableRewards: ea } = (0, y.wD)(),
         eo = (0, h.a5)($),
         eC = (null === (t = (0, _.Z)()) || void 0 === t ? void 0 : t.planSelectionBanner) != null,
         ed = el && eo && null != ea && ea.length > 0 && eC,
@@ -63,7 +63,7 @@ function F(e) {
         { defaultToMonthlyPlan: eS } = x.k.useExperiment({ location: 'd17fd6_4' }, { autoTrackExposure: !1 }),
         eE = l.useMemo(
             () =>
-                (0, y.V7)({
+                (0, T.V7)({
                     skuId: J,
                     isPremium: ei,
                     multiMonthPlans: ex ? ec : [],
@@ -83,8 +83,8 @@ function F(e) {
                 quantity: 1
             }
         ],
-        [ev, ey] = l.useState(eL),
-        [eT, eN] = (0, c.ED)({
+        [ev, eT] = l.useState(eL),
+        [ey, eN] = (0, c.ED)({
             items: eM,
             renewal: !1,
             preventFetch: !eL,
@@ -94,14 +94,14 @@ function F(e) {
             currency: en.currency
         });
     l.useEffect(() => {
-        eL && ey((null == eT ? void 0 : eT.subscriptionPeriodEnd) == null);
-    }, [eT, eL]),
+        eL && eT((null == ey ? void 0 : ey.subscriptionPeriodEnd) == null);
+    }, [ey, eL]),
         (0, C.Z)(
             'Payment Modal Plan Select Step',
             ev,
             5,
             {
-                proratedInvoicePreview: eT,
+                proratedInvoicePreview: ey,
                 proratedInvoiceError: eN,
                 isEligibleForOffer: eL
             },
@@ -110,7 +110,7 @@ function F(e) {
     let eP = null !== (F = null == eN ? void 0 : eN.message) && void 0 !== F ? F : B.intl.string(B.t.R0RpRU),
         eZ = eL && null == eN,
         eA = eL && null != eN,
-        eU = eZ && null == X && !!eL && (null == eT ? void 0 : eT.subscriptionPeriodEnd) == null,
+        eU = eZ && null == X && !!eL && (null == ey ? void 0 : ey.subscriptionPeriodEnd) == null,
         { enabled: eO } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
         ek = !el && (null == eI ? void 0 : eI.skuId) === w.Si.TIER_2 && (null == eh ? void 0 : eh.referrer_id) != null && eO,
         eR = null;
@@ -135,8 +135,8 @@ function F(e) {
                                     eligibleForMultiMonthPlans: ex,
                                     referralTrialOfferId: K,
                                     selectedPlanId: null == $ ? void 0 : $.id,
-                                    subscriptionPeriodEnd: null == eT ? void 0 : eT.subscriptionPeriodEnd,
-                                    discountInvoiceItems: em ? (null == eT ? void 0 : eT.invoiceItems) : void 0,
+                                    subscriptionPeriodEnd: null == ey ? void 0 : ey.subscriptionPeriodEnd,
+                                    discountInvoiceItems: em ? (null == ey ? void 0 : ey.invoiceItems) : void 0,
                                     useCompactGiftComponents: ed,
                                     handleClose: V
                                 }),

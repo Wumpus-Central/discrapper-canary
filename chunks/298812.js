@@ -9,13 +9,13 @@ var i = n(200651),
     c = n(239091),
     u = n(87051),
     h = n(225433),
-    g = n(933557),
-    m = n(775666),
+    m = n(933557),
+    g = n(775666),
     x = n(471445),
     S = n(592125),
     p = n(324067),
-    v = n(699516),
-    N = n(9156),
+    N = n(699516),
+    v = n(9156),
     j = n(594174),
     C = n(823379),
     f = n(621600),
@@ -33,12 +33,12 @@ function A(e) {
         l = (0, d.useToken)(o.Z.unsafe_rawColors.GREEN_360).hex(),
         u = (0, a.e7)([S.Z], () => S.Z.getChannel(null == t ? void 0 : t.parent_id)),
         p = (0, b.ZA)(t),
-        [N, C] = s.useState(!1);
+        [v, C] = s.useState(!1);
     if (null == t) return null;
     let f = I.intl.string(I.t.uIzfCA),
         E = (0, x.KS)(t);
-    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (f = I.intl.formatToPlainString(I.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (f = I.intl.formatToPlainString(I.t.L1zJgY, { categoryName: (0, g.F6)(u, j.default, v.Z) }));
-    let _ = N ? T.s8.CUSTOM : p.preset;
+    t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (f = I.intl.formatToPlainString(I.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (f = I.intl.formatToPlainString(I.t.L1zJgY, { categoryName: (0, m.F6)(u, j.default, N.Z) }));
+    let _ = v ? T.s8.CUSTOM : p.preset;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(M.row, M.channel),
@@ -60,7 +60,7 @@ function A(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/semibold',
                                     className: M.modColor,
-                                    children: (0, g.F6)(t, j.default, v.Z)
+                                    children: (0, m.F6)(t, j.default, N.Z)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/medium',
@@ -118,7 +118,7 @@ function A(e) {
                                         'aria-label': I.intl.string(I.t.kMdneX),
                                         onClose: () => {},
                                         onSelect: () => {},
-                                        children: (0, m.T5)(t, () => C(!1))
+                                        children: (0, g.T5)(t, () => C(!1))
                                     })
                                 );
                             },
@@ -140,8 +140,8 @@ function A(e) {
 }
 t.Z = s.forwardRef(function (e, t) {
     let { guildId: n, requestScrollToBottom: s } = e,
-        l = (0, a.Wu)([S.Z, N.ZP], () =>
-            (0, E.OD)(N.ZP.getChannelOverrides(n), {
+        l = (0, a.Wu)([S.Z, v.ZP], () =>
+            (0, E.OD)(v.ZP.getChannelOverrides(n), {
                 ignoreMute: !0,
                 ignoreUnreadSetting: !1,
                 ignoreNotificationSetting: !1
@@ -185,8 +185,8 @@ t.Z = s.forwardRef(function (e, t) {
                             e,
                             {
                                 muted: !1,
-                                message_notifications: N.ZP.resolvedMessageNotifications(t),
-                                flags: (0, _.pq)(N.ZP.getChannelIdFlags(t.guild_id, t.id), N.ZP.resolveUnreadSetting(t))
+                                message_notifications: v.ZP.resolvedMessageNotifications(t),
+                                flags: (0, _.pq)(v.ZP.getChannelIdFlags(t.guild_id, t.id), v.ZP.resolveUnreadSetting(t))
                             },
                             f.ZB.OverrideCreated
                         );

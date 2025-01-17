@@ -3,14 +3,14 @@ s(192379);
 var i = s(481060),
     r = s(570140),
     o = s(468026),
-    a = s(317770),
-    l = s(981631),
+    l = s(317770),
+    a = s(981631),
     c = s(388032);
 let d = 'ActivityInviteManager',
     u = () => {
         r.Z.dispatch({ type: 'ACTIVITY_INVITE_MODAL_CLOSE' });
     };
-class h extends a.Z {
+class h extends l.Z {
     _initialize() {
         r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
@@ -18,8 +18,8 @@ class h extends a.Z {
         r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: r, context: a } = e,
-            h = a === l.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+        let { activity: t, isPrivate: r, context: l } = e,
+            h = l === a.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
         r
             ? (0, i.openModal)(
                   (e) =>
