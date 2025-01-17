@@ -25,12 +25,13 @@ function y(e) {
         let a = [];
         if (n) {
             let e = i.flatMap((e) => {
-                var n;
-                return null !== (n = h.Z.getSoundsForGuild(e)) && void 0 !== n ? n : [];
+                var n, r;
+                return null !== (r = null === (n = h.Z.getSoundsForGuild(e)) || void 0 === n ? void 0 : n.filter((e) => e.available)) && void 0 !== r ? r : [];
             });
             a.push(...c().sampleSize(e, b));
         } else if (null != e) {
-            let n = h.Z.getSoundsForGuild(e);
+            var s;
+            let n = null === (s = h.Z.getSoundsForGuild(e)) || void 0 === s ? void 0 : s.filter((e) => e.available);
             a.push(...c().sampleSize(n, b));
         }
         return a.length < b && a.push(...c().sampleSize(null != r ? r : [], b - a.length)), a;
