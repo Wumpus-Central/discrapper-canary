@@ -624,6 +624,9 @@ r.r(n),
         ExpandGifIcon: function () {
             return tO.alO;
         },
+        ExperimentalConfettiIcon: function () {
+            return tO.l22;
+        },
         ExperimentalImageBrokenIcon: function () {
             return tO.svv;
         },
