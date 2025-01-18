@@ -77,20 +77,24 @@ function B() {
     R && (i = void 0), (O = !1), (C = !1);
 }
 let G = () => {
-        R = !T.ZP.canUseClientThemes(I.default.getCurrentUser());
+        let e = !T.ZP.canUseClientThemes(I.default.getCurrentUser());
+        if (e === R) return !1;
+        R = e;
     },
     Z = () => {
+        if (!f.Z.shouldSync('appearance')) return !1;
         let e = m.L1.getSetting().backgroundGradientPresetId;
-        if (f.Z.shouldSync('appearance')) {
-            if (null == e) {
-                null != i && (i = void 0);
-                return;
-            }
-            i = S.qt[e];
+        if (null == e) {
+            if (null == i) return !1;
+            i = void 0;
+        } else {
+            let n = S.qt[e];
+            if (n === i) return !1;
+            i = n;
         }
     },
     F = () => {
-        if (!f.Z.shouldSync('appearance')) return;
+        if (!f.Z.shouldSync('appearance')) return !1;
         let e = m.L1.getSetting().backgroundGradientPresetId;
         if ((p.ZP.useSystemTheme === A.K.ON && null != e && (0, _.hi)(A.K.OFF), null == e)) {
             null != i && (i = void 0);
