@@ -72,44 +72,38 @@ function D() {
             });
         },
         login(e) {
-            var n;
-            let { login: r, password: i, loginCode: a, undelete: s, source: o, giftCodeSKUId: l, invite: c, isMultiAccount: d } = e;
-            _.Z.dispatch({
-                type: 'LOGIN',
-                login: r,
-                loginMethod: null != a && '' !== a ? S.nnr.LOGIN_CODE : S.nnr.PASSWORD
-            }),
-                this.setLoginCredentials(r, null !== (n = null != i ? i : a) && void 0 !== n ? n : void 0),
+            let { login: n, password: r, undelete: i, source: a, giftCodeSKUId: s, invite: o, isMultiAccount: l } = e;
+            _.Z.dispatch({ type: 'LOGIN' }),
+                this.setLoginCredentials(n, r),
                 b.Z.post({
                     url: S.ANM.LOGIN,
                     body: {
-                        login: r,
-                        password: i,
-                        undelete: s,
-                        login_code: a,
-                        login_source: o,
-                        gift_code_sku_id: l
+                        login: n,
+                        password: r,
+                        undelete: i,
+                        login_source: a,
+                        gift_code_sku_id: s
                     },
                     retries: 2,
                     oldFormErrors: !0,
                     trackedActionData: {
                         event: u.NetworkActionNames.USER_LOGIN,
                         properties: {
-                            invite_code: null == c ? void 0 : c.code,
-                            is_multi_account: d
+                            invite_code: null == o ? void 0 : o.code,
+                            is_multi_account: l
                         }
                     },
-                    ...(d ? { headers: { authorization: '' } } : {}),
+                    ...(l ? { headers: { authorization: '' } } : {}),
                     rejectWithError: !1
                 }).then(
                     (e) => {
                         let {
-                            body: { mfa: n, sms: r, webauthn: i, ticket: a, token: s, backup: o, user_id: l, required_actions: u, totp: c }
+                            body: { mfa: n, sms: r, webauthn: i, ticket: a, token: s, backup: o, user_id: u, required_actions: c, totp: d }
                         } = e;
                         _.Z.dispatch({
                             type: 'LOGIN_ATTEMPTED',
-                            user_id: l,
-                            required_actions: u
+                            user_id: u,
+                            required_actions: c
                         }),
                             n
                                 ? _.Z.dispatch({
@@ -117,10 +111,10 @@ function D() {
                                       ticket: a,
                                       sms: r,
                                       webauthn: i,
-                                      totp: c,
+                                      totp: d,
                                       backup: o
                                   })
-                                : d
+                                : l
                                   ? this.switchAccountToken(s)
                                   : _.Z.dispatch({
                                         type: 'LOGIN_SUCCESS',
@@ -128,8 +122,8 @@ function D() {
                                     });
                     },
                     (e) => {
-                        var n, a, s;
-                        if (null != e.body && (null === (n = e.body) || void 0 === n ? void 0 : n.suspended_user_token) != null) {
+                        var i, a, s;
+                        if (null != e.body && (null === (i = e.body) || void 0 === i ? void 0 : i.suspended_user_token) != null) {
                             _.Z.dispatch({
                                 type: 'LOGIN_SUSPENDED_USER',
                                 suspendedUserToken: null === (s = e.body) || void 0 === s ? void 0 : s.suspended_user_token
@@ -137,20 +131,20 @@ function D() {
                             return;
                         }
                         let o = null === (a = e.body) || void 0 === a ? void 0 : a.code;
-                        o === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != i && '' !== i
+                        o === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
                             ? _.Z.dispatch({
                                   type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                   credentials: {
-                                      login: r,
-                                      password: i
+                                      login: n,
+                                      password: r
                                   }
                               })
-                            : o === S.evJ.ACCOUNT_DISABLED && null != i && '' !== i
+                            : o === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
                               ? _.Z.dispatch({
                                     type: 'LOGIN_ACCOUNT_DISABLED',
                                     credentials: {
-                                        login: r,
-                                        password: i
+                                        login: n,
+                                        password: r
                                     }
                                 })
                               : o === S.evJ.PHONE_VERIFICATION_REQUIRED
