@@ -294,6 +294,29 @@ let y = 'migrated',
                 pinned: !0
             },
             version: 1
+        },
+        [T.Odu.PERFORMANCE_DEBUG]: {
+            minSize: {
+                width: 120,
+                height: 300
+            },
+            resizeX: !1,
+            resizeY: !1,
+            dragAnywhere: !0,
+            layoutPolicy: 'DEBUG',
+            defaultSettings: {
+                anchor: {
+                    left: void 0,
+                    top: 0.1,
+                    bottom: void 0,
+                    right: 0.1
+                },
+                size: {
+                    height: 'auto',
+                    width: 'auto'
+                },
+                pinned: !0
+            }
         }
     };
 function A(e) {

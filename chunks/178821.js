@@ -1,213 +1,231 @@
-n.d(t, {
-    Z: function () {
+r.d(t, {
+    MC: function () {
+        return p;
+    },
+    Y5: function () {
+        return b;
+    },
+    ZF: function () {
+        return j;
+    },
+    ZP: function () {
+        return S;
+    },
+    d6: function () {
         return T;
+    },
+    m8: function () {
+        return k;
+    },
+    nU: function () {
+        return R;
+    },
+    tO: function () {
+        return h;
     }
 }),
-    n(47120);
-var r = n(200651),
-    a = n(192379),
-    l = n(120356),
-    i = n.n(l),
-    o = n(442837),
-    s = n(481060),
-    c = n(493773),
-    d = n(38618),
-    u = n(719967),
-    h = n(941469);
-let m = 1000 / 60,
-    x = 1000 / 45,
-    f = 3 * m,
-    p = Math.ceil(3000 / m);
-function b(e) {
-    let { socket: t, isAverageFrameTime: n } = e,
-        [l, i] = (function (e) {
-            let t = e.dispatcher.getIsSchedulerBackgrounded(),
-                n = a.useRef(t);
-            n.current = t;
-            let r = a.useRef(t ? performance.now() : 0);
-            return (
-                a.useEffect(() => {
-                    e.dispatcher.getIsSchedulerBackgrounded() && (r.current = performance.now());
-                }),
-                [n, r]
-            );
-        })(t),
-        {
-            currentFPS: o,
-            averageFrameTime: d,
-            timeSinceLastDrop: h,
-            onResetFrameData: x,
-            droppedFramesRef: b,
-            renderedFrameCount: g,
-            bufferFramecountRef: v,
-            frameCheckerEffect: j
-        } = (function (e, t) {
-            let n = a.useRef(Array(p).fill(0)),
-                r = a.useRef(performance.now()),
-                l = a.useRef(0),
-                i = a.useRef(0),
-                o = a.useRef(0),
-                s = a.useRef(0),
-                c = a.useRef(0),
-                d = a.useRef(0),
-                u = a.useCallback(() => {
-                    n.current.fill(0), (l.current = 0), (i.current = 0), (s.current = 0), (c.current = 0), (r.current = performance.now()), (o.current = 0);
-                }, []),
-                h = a.useCallback(
-                    function () {
-                        let a = performance.now(),
-                            u = a - r.current;
-                        if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[c.current]), (n.current[c.current] = u), (i.current += u), s.current < p && (s.current += 1), (c.current = (c.current + 1) % p), u > f)) {
-                            let t = 0 === s.current ? m : i.current / s.current,
-                                n = Math.min(2 * m, t),
-                                r = Math.floor(u / (e ? n : m));
-                            r > 0 && (d.current = performance.now()), (l.current += r);
-                        }
-                        let h = 0 === s.current ? m : i.current / s.current;
-                        o.current += u / h;
-                    },
-                    [e, t]
-                ),
-                x = 0 === s.current ? 0 : i.current / s.current;
-            return {
-                currentFPS: 0 === x ? 0 : (m / x) * 60,
-                averageFrameTime: x,
-                timeSinceLastDrop: (performance.now() - d.current) / 1000,
-                droppedFramesRef: l,
-                bufferFramecountRef: s,
-                renderedFrameCount: o,
-                frameCheckerEffect: h,
-                onResetFrameData: u
-            };
-        })(n, l),
-        [T, C, _] = (function (e) {
-            let t = a.useRef(Array(p).fill(0)),
-                n = a.useRef(performance.now()),
-                r = a.useRef(0),
-                l = a.useRef(0),
-                i = a.useRef(0),
-                o = e.dispatcher.getIsSchedulerBackgrounded(),
-                s = a.useRef(o);
-            s.current = o;
-            let c = a.useRef(o ? performance.now() : 0);
-            a.useEffect(() => {
-                e.dispatcher.getIsSchedulerBackgrounded() && (c.current = performance.now());
-            });
-            let d = a.useCallback(function () {
-                let e = performance.now(),
-                    a = e - n.current;
-                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < p && (l.current += 1), (i.current = (i.current + 1) % p);
-            }, []);
-            return [
-                d,
-                (e, t) => {
-                    var n;
-                    let a = null !== (n = l.current) && void 0 !== n ? n : 1,
-                        i = r.current / a;
-                    return Math.abs(e * t - i * a) / t;
-                },
-                () => {
-                    (r.current = 0), (l.current = 0), t.current.fill(0), (n.current = performance.now()), (i.current = 0);
+    r(47120);
+var n = r(200651),
+    a = r(192379),
+    c = r(120356),
+    s = r.n(c),
+    l = r(442837),
+    o = r(481060),
+    i = r(493773),
+    u = r(38618),
+    d = r(719967),
+    x = r(941469);
+let h = 1000 / 60,
+    m = 1000 / 30,
+    p = 5000,
+    f = (1000 / 60) * 3,
+    g = Math.ceil(3000 / h);
+function b(e, t) {
+    let r = a.useRef(null),
+        n = a.useRef(null),
+        c = a.useRef(null),
+        s = a.useCallback(() => {
+            null != r.current && clearInterval(r.current), null != n.current && cancelIdleCallback(n.current), null != c.current && cancelAnimationFrame(c.current);
+        }, []),
+        l = a.useCallback(() => {
+            r.current = setTimeout(() => {
+                (n.current = requestIdleCallback(e)),
+                    (c.current = requestAnimationFrame(() => {
+                        t(), l();
+                    }));
+            }, 12);
+        }, [e, t]);
+    return [
+        a.useCallback(() => {
+            s(), l();
+        }, [s, l]),
+        s
+    ];
+}
+function j(e) {
+    let t = a.useRef(Array(g).fill(0)),
+        r = a.useRef(performance.now()),
+        n = a.useRef(0),
+        c = a.useRef(0),
+        s = a.useRef(0),
+        l = e.dispatcher.getIsSchedulerBackgrounded(),
+        o = a.useRef(l);
+    o.current = l;
+    let i = a.useRef(l ? performance.now() : 0);
+    a.useEffect(() => {
+        e.dispatcher.getIsSchedulerBackgrounded() && (i.current = performance.now());
+    });
+    let u = a.useCallback(function () {
+        let e = performance.now(),
+            a = e - r.current;
+        if (((r.current = e), !o.current)) (n.current -= t.current[s.current]), (t.current[s.current] = a), (n.current += a), c.current < g && (c.current += 1), (s.current = (s.current + 1) % g);
+    }, []);
+    return [
+        u,
+        (e, t) => {
+            var r;
+            let a = null !== (r = c.current) && void 0 !== r ? r : 1,
+                s = n.current / a;
+            return Math.abs(e * t - s * a) / t;
+        },
+        () => {
+            (n.current = 0), (c.current = 0), t.current.fill(0), (r.current = performance.now()), (s.current = 0);
+        }
+    ];
+}
+function T(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        n = a.useRef(Array(g).fill(0)),
+        c = a.useRef(performance.now()),
+        s = a.useRef(0),
+        l = a.useRef(0),
+        o = a.useRef(0),
+        i = a.useRef(0),
+        u = a.useRef(0),
+        d = a.useRef(0),
+        x = a.useCallback(() => {
+            n.current.fill(0), (s.current = 0), (l.current = 0), (i.current = 0), (u.current = 0), (c.current = performance.now()), (o.current = 0);
+        }, []),
+        m = a.useCallback(
+            function () {
+                let a = performance.now(),
+                    x = a - c.current;
+                if (((c.current = a), t.current && !r)) return;
+                if (((l.current -= n.current[u.current]), (n.current[u.current] = x), (l.current += x), i.current < g && (i.current += 1), (u.current = (u.current + 1) % g), x > f)) {
+                    let t = 0 === i.current ? h : l.current / i.current,
+                        r = Math.min(2 * h, t),
+                        n = Math.floor(x / (e ? r : h));
+                    n > 0 && (d.current = performance.now()), (s.current += n);
                 }
-            ];
-        })(t),
-        [S, N] = (function (e, t) {
-            let n = a.useRef(null),
-                r = a.useRef(null),
-                l = a.useRef(null),
-                i = a.useCallback(() => {
-                    null != n.current && clearInterval(n.current), null != r.current && cancelIdleCallback(r.current), null != l.current && cancelAnimationFrame(l.current);
-                }, []),
-                o = a.useCallback(() => {
-                    n.current = setTimeout(() => {
-                        (r.current = requestIdleCallback(e)),
-                            (l.current = requestAnimationFrame(() => {
-                                t(), o();
-                            }));
-                    }, 12);
-                }, [e, t]);
-            return [
-                a.useCallback(() => {
-                    i(), o();
-                }, [i, o]),
-                i
-            ];
-        })(T, j),
-        y = performance.now() - i.current < 5000,
-        I = C(d, v.current);
-    (0, c.Z)(
+                let m = 0 === i.current ? h : l.current / i.current;
+                o.current += x / m;
+            },
+            [e, t, r]
+        ),
+        p = 0 === i.current ? 0 : l.current / i.current;
+    return {
+        currentFPS: 0 === p ? 0 : (h / p) * 60,
+        averageFrameTime: p,
+        timeSinceLastDrop: (performance.now() - d.current) / 1000,
+        droppedFramesRef: s,
+        bufferFramecountRef: i,
+        renderedFrameCount: o,
+        frameCheckerEffect: m,
+        onResetFrameData: x
+    };
+}
+function k(e) {
+    let t = e.dispatcher.getIsSchedulerBackgrounded(),
+        r = a.useRef(t);
+    r.current = t;
+    let n = a.useRef(t ? performance.now() : 0);
+    return (
+        a.useEffect(() => {
+            e.dispatcher.getIsSchedulerBackgrounded() && (n.current = performance.now());
+        }),
+        [r, n]
+    );
+}
+function v(e) {
+    let { socket: t, isAverageFrameTime: r } = e,
+        [c, s] = k(t),
+        { currentFPS: l, averageFrameTime: u, timeSinceLastDrop: x, onResetFrameData: m, droppedFramesRef: f, renderedFrameCount: g, bufferFramecountRef: v, frameCheckerEffect: C } = T(r, c),
+        [y, w, R] = j(t),
+        [S, I] = b(y, C),
+        F = performance.now() - s.current < p,
+        E = w(u, v.current);
+    (0, i.Z)(
         () => (
             S(),
             () => {
-                N();
+                I();
             }
         )
     );
-    let k = a.useCallback(() => {
-        x(), _(), S();
-    }, [x, _, S]);
-    return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+    let N = a.useCallback(() => {
+        m(), R(), S();
+    }, [m, R, S]);
+    return (0, n.jsxs)('div', {
+        className: d.panelGroup,
         children: [
-            (0, r.jsxs)(s.Text, {
+            (0, n.jsxs)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'FPS (~3sec):',
                     ' ',
-                    (0, r.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
-                        color: o < 30 ? 'text-danger' : o < 45 ? 'text-warning' : 'text-primary',
-                        children: o.toFixed(2)
+                        color: l < 30 ? 'text-danger' : l < 45 ? 'text-warning' : 'text-primary',
+                        children: l.toFixed(2)
                     })
                 ]
             }),
-            (0, r.jsxs)(s.Text, {
+            (0, n.jsxs)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Dropped Frames:',
                     ' ',
-                    (0, r.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/bold',
-                        color: h < 2 ? 'text-danger' : h < 5 ? 'text-warning' : 'text-primary',
-                        children: b.current
+                        color: x < 2 ? 'text-danger' : x < 5 ? 'text-warning' : 'text-primary',
+                        children: f.current
                     }),
-                    (0, r.jsxs)(s.Text, {
+                    (0, n.jsxs)(o.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        className: u.secondaryInfoText,
-                        children: ['(Dropped: ', ((b.current / g.current) * 100).toFixed(4), '%)']
+                        className: d.secondaryInfoText,
+                        children: ['(Dropped: ', ((f.current / g.current) * 100).toFixed(4), '%)']
                     }),
-                    y &&
-                        (0, r.jsx)(s.Tooltip, {
+                    F &&
+                        (0, n.jsx)(o.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                             children: (e) =>
-                                (0, r.jsx)('span', {
+                                (0, n.jsx)('span', {
                                     ...e,
-                                    children: (0, r.jsx)(s.Text, {
+                                    children: (0, n.jsx)(o.Text, {
                                         tag: 'span',
                                         variant: 'text-xs/bold',
                                         color: 'text-danger',
-                                        className: u.secondaryInfoText,
+                                        className: d.secondaryInfoText,
                                         children: '(Backgrounded)'
                                     })
                                 })
                         })
                 ]
             }),
-            (0, r.jsxs)(s.Text, {
+            (0, n.jsxs)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Rendered Frames:',
                     ' ',
-                    (0, r.jsx)(s.Text, {
+                    (0, n.jsx)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
@@ -215,50 +233,50 @@ function b(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)(s.Text, {
+            (0, n.jsxs)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: [
                     'Frame Times (~3sec):',
                     ' ',
-                    (0, r.jsxs)(s.Text, {
+                    (0, n.jsxs)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/semibold',
-                        color: d > 1.1 * m ? 'text-warning' : 'text-secondary',
-                        children: [d.toFixed(2), 'ms']
+                        color: u > 1.1 * h ? 'text-warning' : 'text-secondary',
+                        children: [u.toFixed(2), 'ms']
                     })
                 ]
             }),
-            (0, r.jsx)(s.Tooltip, {
+            (0, n.jsx)(o.Tooltip, {
                 position: 'left',
                 text: "The average amount of 'lag' between us rendering a frame and being able to process background tasks. Values constantly above 1-2ms means our main thread is being burried by work and is taking all of its time in animation frames, most likely producing user interaciton blocking jank. (This doesn't work when the app is backgrounded though)",
                 children: (e) =>
-                    (0, r.jsx)('div', {
+                    (0, n.jsx)('div', {
                         ...e,
-                        children: (0, r.jsxs)(s.Text, {
+                        children: (0, n.jsxs)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: [
                                 'Idle Frame Delta (~3sec):',
                                 ' ',
-                                (0, r.jsxs)(s.Text, {
+                                (0, n.jsxs)(o.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: I > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [I.toFixed(2), 'ms']
+                                    color: E > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [E.toFixed(2), 'ms']
                                 }),
-                                y &&
-                                    (0, r.jsx)(s.Tooltip, {
+                                F &&
+                                    (0, n.jsx)(o.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                                         children: (e) =>
-                                            (0, r.jsx)('span', {
+                                            (0, n.jsx)('span', {
                                                 ...e,
-                                                children: (0, r.jsx)(s.Text, {
+                                                children: (0, n.jsx)(o.Text, {
                                                     tag: 'span',
                                                     variant: 'text-xs/bold',
                                                     color: 'text-danger',
-                                                    className: u.secondaryInfoText,
+                                                    className: d.secondaryInfoText,
                                                     children: '(Backgrounded)'
                                                 })
                                             })
@@ -267,51 +285,51 @@ function b(e) {
                         })
                     })
             }),
-            (0, r.jsx)('div', {
-                className: u.bottomPanelButton,
-                children: (0, r.jsx)(s.Button, {
-                    size: s.Button.Sizes.SMALL,
-                    onClick: k,
+            (0, n.jsx)('div', {
+                className: d.bottomPanelButton,
+                children: (0, n.jsx)(o.Button, {
+                    size: o.Button.Sizes.SMALL,
+                    onClick: N,
                     children: 'Reset Frame Data'
                 })
             })
         ]
     });
 }
-function g(e) {
-    let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
-        [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
-        c = a.useRef(null);
+function C(e) {
+    let { socket: t, isAverageFrameTime: r, onToggleAverageFrameTime: c } = e,
+        [s, l] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
+        i = a.useRef(null);
     a.useEffect(() => {
         let e = setInterval(() => {
-            o(t.dispatcher.getIsRequestIdleCallbackEnabled());
-        }, x);
+            l(t.dispatcher.getIsRequestIdleCallbackEnabled());
+        }, m);
         return (
-            (c.current = e),
+            (i.current = e),
             () => {
-                null != c.current && clearInterval(c.current);
+                null != i.current && clearInterval(i.current);
             }
         );
     }, [t.dispatcher]);
-    let d = (e) => {
-        t.dispatcher.toggleRequestIdleCallback(e), o(e);
+    let u = (e) => {
+        t.dispatcher.toggleRequestIdleCallback(e), l(e);
     };
-    return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+    return (0, n.jsxs)('div', {
+        className: d.panelGroup,
         children: [
-            (0, r.jsx)(s.Tooltip, {
+            (0, n.jsx)(o.Tooltip, {
                 position: 'left',
                 text: 'Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.',
                 children: (e) =>
-                    (0, r.jsx)('div', {
+                    (0, n.jsx)('div', {
                         ...e,
-                        children: (0, r.jsx)(s.Checkbox, {
-                            value: n,
-                            onChange: () => l(!n),
+                        children: (0, n.jsx)(o.Checkbox, {
+                            value: r,
+                            onChange: () => c(!r),
                             size: 18,
-                            type: s.Checkbox.Types.INVERTED,
-                            shape: s.Checkbox.Shapes.BOX,
-                            children: (0, r.jsx)(s.Text, {
+                            type: o.Checkbox.Types.INVERTED,
+                            shape: o.Checkbox.Shapes.BOX,
+                            children: (0, n.jsx)(o.Text, {
                                 tag: 'span',
                                 variant: 'text-md/normal',
                                 color: 'text-muted',
@@ -320,13 +338,13 @@ function g(e) {
                         })
                     })
             }),
-            (0, r.jsx)(s.Checkbox, {
-                value: i,
-                onChange: () => d(!i),
+            (0, n.jsx)(o.Checkbox, {
+                value: s,
+                onChange: () => u(!s),
                 size: 18,
-                type: s.Checkbox.Types.INVERTED,
-                shape: s.Checkbox.Shapes.BOX,
-                children: (0, r.jsx)(s.Text, {
+                type: o.Checkbox.Types.INVERTED,
+                shape: o.Checkbox.Shapes.BOX,
+                children: (0, n.jsx)(o.Text, {
                     tag: 'span',
                     variant: 'text-md/normal',
                     color: 'text-muted',
@@ -336,22 +354,22 @@ function g(e) {
         ]
     });
 }
-function v(e) {
+function y(e) {
     let { socket: t } = e,
-        n = t.dispatcher.getDispatchTimings(),
-        [l, o] = a.useState(!1);
-    return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+        r = t.dispatcher.getDispatchTimings(),
+        [c, l] = a.useState(!1);
+    return (0, n.jsxs)('div', {
+        className: d.panelGroup,
         children: [
-            (0, r.jsx)('div', {
-                className: i()(l && u.topPanelToggle),
-                children: (0, r.jsx)(s.Checkbox, {
-                    value: l,
-                    onChange: () => o((e) => !e),
+            (0, n.jsx)('div', {
+                className: s()(c && d.topPanelToggle),
+                children: (0, n.jsx)(o.Checkbox, {
+                    value: c,
+                    onChange: () => l((e) => !e),
                     size: 18,
-                    type: s.Checkbox.Types.INVERTED,
-                    shape: s.Checkbox.Shapes.BOX,
-                    children: (0, r.jsx)(s.Text, {
+                    type: o.Checkbox.Types.INVERTED,
+                    shape: o.Checkbox.Shapes.BOX,
+                    children: (0, n.jsx)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/normal',
                         color: 'text-muted',
@@ -359,39 +377,39 @@ function v(e) {
                     })
                 })
             }),
-            l
-                ? (0, r.jsxs)(r.Fragment, {
+            c
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(o.Text, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: 'Gateway Dispatch Timings:'
                           }),
-                          (0, r.jsx)('table', {
+                          (0, n.jsx)('table', {
                               cellPadding: 4,
-                              children: Object.entries(n).map((e) => {
-                                  let [t, [n, a]] = e;
-                                  return (0, r.jsxs)(
+                              children: Object.entries(r).map((e) => {
+                                  let [t, [r, a]] = e;
+                                  return (0, n.jsxs)(
                                       'tr',
                                       {
                                           children: [
-                                              (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(s.Text, {
+                                              (0, n.jsx)('td', {
+                                                  children: (0, n.jsx)(o.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
                                                       children: t
                                                   })
                                               }),
-                                              (0, r.jsx)('td', {
-                                                  children: (0, r.jsxs)(s.Text, {
+                                              (0, n.jsx)('td', {
+                                                  children: (0, n.jsxs)(o.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/bold',
                                                       color: 'text-normal',
-                                                      children: [n.toFixed(2), 'ms']
+                                                      children: [r.toFixed(2), 'ms']
                                                   })
                                               }),
-                                              (0, r.jsx)('td', {
-                                                  children: (0, r.jsxs)(s.Text, {
+                                              (0, n.jsx)('td', {
+                                                  children: (0, n.jsxs)(o.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/normal',
                                                       color: 'text-muted',
@@ -410,44 +428,44 @@ function v(e) {
         ]
     });
 }
-function j(e) {
+function w(e) {
     let { socket: t } = e,
-        n = t.dispatcher.getSchedulerTelemetry(),
-        [l, o] = a.useState(n.isTelemetryEnabled),
-        [c, d] = a.useState(n.isTelemetryEnabled),
-        h = (e) => {
-            d(e), n.toggleTelemetry(e);
+        r = t.dispatcher.getSchedulerTelemetry(),
+        [c, l] = a.useState(r.isTelemetryEnabled),
+        [i, u] = a.useState(r.isTelemetryEnabled),
+        x = (e) => {
+            u(e), r.toggleTelemetry(e);
         };
-    return (0, r.jsxs)('div', {
-        className: u.panelGroup,
+    return (0, n.jsxs)('div', {
+        className: d.panelGroup,
         children: [
-            (0, r.jsx)(s.Checkbox, {
-                value: c,
-                onChange: () => h(!c),
+            (0, n.jsx)(o.Checkbox, {
+                value: i,
+                onChange: () => x(!i),
                 size: 18,
-                type: s.Checkbox.Types.INVERTED,
-                shape: s.Checkbox.Shapes.BOX,
-                children: (0, r.jsx)(s.Text, {
+                type: o.Checkbox.Types.INVERTED,
+                shape: o.Checkbox.Shapes.BOX,
+                children: (0, n.jsx)(o.Text, {
                     tag: 'span',
                     variant: 'text-md/normal',
                     color: 'text-muted',
                     children: 'Enable Dispatch Telemetry'
                 })
             }),
-            (0, r.jsx)('div', {
-                className: i()(l && u.topPanelToggle),
-                children: (0, r.jsx)(s.Checkbox, {
-                    value: l,
+            (0, n.jsx)('div', {
+                className: s()(c && d.topPanelToggle),
+                children: (0, n.jsx)(o.Checkbox, {
+                    value: c,
                     onChange: () => {
-                        o((e) => {
+                        l((e) => {
                             let t = !e;
-                            return t && h(!0), t;
+                            return t && x(!0), t;
                         });
                     },
                     size: 18,
-                    type: s.Checkbox.Types.INVERTED,
-                    shape: s.Checkbox.Shapes.BOX,
-                    children: (0, r.jsx)(s.Text, {
+                    type: o.Checkbox.Types.INVERTED,
+                    shape: o.Checkbox.Shapes.BOX,
+                    children: (0, n.jsx)(o.Text, {
                         tag: 'span',
                         variant: 'text-md/normal',
                         color: 'text-muted',
@@ -455,35 +473,35 @@ function j(e) {
                     })
                 })
             }),
-            l
-                ? (0, r.jsxs)(r.Fragment, {
+            c
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(o.Text, {
                               variant: 'text-md/medium',
                               color: 'text-muted',
                               children: 'Dispatch Scheduler Telemetry:'
                           }),
-                          (0, r.jsx)('table', {
+                          (0, n.jsx)('table', {
                               cellPadding: 4,
-                              children: Object.entries(n.generateTelemetry()).map((e) => {
-                                  let [t, n] = e;
-                                  return (0, r.jsxs)(
+                              children: Object.entries(r.generateTelemetry()).map((e) => {
+                                  let [t, r] = e;
+                                  return (0, n.jsxs)(
                                       'tr',
                                       {
                                           children: [
-                                              (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(s.Text, {
+                                              (0, n.jsx)('td', {
+                                                  children: (0, n.jsx)(o.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
                                                       children: t
                                                   })
                                               }),
-                                              (0, r.jsx)('td', {
-                                                  children: (0, r.jsx)(s.Text, {
+                                              (0, n.jsx)('td', {
+                                                  children: (0, n.jsx)(o.Text, {
                                                       tag: 'span',
                                                       variant: 'text-xs/bold',
                                                       color: 'text-normal',
-                                                      children: n
+                                                      children: r
                                                   })
                                               })
                                           ]
@@ -492,12 +510,12 @@ function j(e) {
                                   );
                               })
                           }),
-                          (0, r.jsx)('div', {
-                              className: u.bottomPanelButton,
-                              children: (0, r.jsx)(s.Button, {
-                                  size: s.Button.Sizes.SMALL,
+                          (0, n.jsx)('div', {
+                              className: d.bottomPanelButton,
+                              children: (0, n.jsx)(o.Button, {
+                                  size: o.Button.Sizes.SMALL,
                                   onClick: () => {
-                                      n.reset();
+                                      r.reset();
                                   },
                                   children: 'Reset Scheduler Telemetry'
                               })
@@ -508,37 +526,38 @@ function j(e) {
         ]
     });
 }
-function T() {
-    let e = (0, o.e7)([d.Z], () => d.Z.getSocket()),
-        [t, n] = a.useState(!1);
+function R() {
+    let [, e] = a.useState({});
+    a.useEffect(() => {
+        let t = setInterval(() => {
+            e({});
+        }, m);
+        return () => {
+            clearInterval(t);
+        };
+    }, []);
+}
+function S() {
+    let e = (0, l.e7)([u.Z], () => u.Z.getSocket()),
+        [t, r] = a.useState(!1);
     return (
-        !(function () {
-            let [, e] = a.useState({});
-            a.useEffect(() => {
-                let t = setInterval(() => {
-                    e({});
-                }, x);
-                return () => {
-                    clearInterval(t);
-                };
-            }, []);
-        })(),
-        (0, r.jsx)('div', {
-            className: i()(h.panel, u.panel),
-            children: (0, r.jsxs)(s.ScrollerThin, {
-                className: u.panel,
+        R(),
+        (0, n.jsx)('div', {
+            className: s()(x.panel, d.panel),
+            children: (0, n.jsxs)(o.ScrollerThin, {
+                className: d.panel,
                 children: [
-                    (0, r.jsx)(b, {
+                    (0, n.jsx)(v, {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, r.jsx)(g, {
+                    (0, n.jsx)(C, {
                         socket: e,
                         isAverageFrameTime: t,
-                        onToggleAverageFrameTime: n
+                        onToggleAverageFrameTime: r
                     }),
-                    (0, r.jsx)(v, { socket: e }),
-                    (0, r.jsx)(j, { socket: e })
+                    (0, n.jsx)(y, { socket: e }),
+                    (0, n.jsx)(w, { socket: e })
                 ]
             })
         })

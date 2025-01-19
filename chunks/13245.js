@@ -42,16 +42,11 @@ let m = {
             pid: n
         });
     },
-    setClickZoneDebugMode(e) {
-        o.Z.dispatch({
-            type: 'OVERLAY_CLICK_ZONE_DEBUG_MODE',
-            enabled: e
-        });
-    },
-    setRenderDebugMode(e) {
+    setRenderDebugMode(e, n) {
         o.Z.dispatch({
             type: 'OVERLAY_RENDER_DEBUG_MODE',
-            enabled: e
+            enabled: e,
+            mode: n
         });
     },
     setInstanceLocked(e) {

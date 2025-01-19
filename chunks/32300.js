@@ -1,22 +1,26 @@
 r.d(n, {
     NW: function () {
-        return d;
-    },
-    Rb: function () {
-        return o;
-    },
-    XE: function () {
         return f;
     },
+    Rb: function () {
+        return l;
+    },
+    XE: function () {
+        return _;
+    },
     b4: function () {
-        return u;
+        return c;
     },
     o4: function () {
-        return s;
+        return o;
+    },
+    zu: function () {
+        return u;
     }
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = r(818083),
+    a = r(987338);
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-10_overlay_v3',
     label: 'Overlay V3 Shared Context OOP',
@@ -29,18 +33,19 @@ let a = (0, i.B)({
         }
     ]
 });
-function s(e) {
-    return a.useExperiment({ location: e }).useOverlayV3;
-}
 function o(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return a.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3;
+    return s.useExperiment({ location: e }).useOverlayV3;
 }
-let l = (0, i.B)({
+function l(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return s.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3;
+}
+let u = (0, i.B)({
     kind: 'user',
     id: '2024-12_overlay_v3_tech',
     label: 'Overlay V3 Shared Tech Experiment',
     defaultConfig: { useOverlayV3Tech: !1 },
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -49,19 +54,19 @@ let l = (0, i.B)({
         }
     ]
 });
-function u(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return l.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3Tech;
-}
 function c(e) {
-    return l.useExperiment({ location: e }).useOverlayV3Tech;
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return u.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3Tech;
 }
 function d(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return o(e, n) || u(e, n);
+    return u.useExperiment({ location: e }).useOverlayV3Tech;
 }
 function f(e) {
-    let n = s(e),
-        r = c(e);
+    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return l(e, n) || c(e, n);
+}
+function _(e) {
+    let n = o(e),
+        r = d(e);
     return n || r;
 }

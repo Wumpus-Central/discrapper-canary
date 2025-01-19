@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return Z;
+        return O;
     }
 }),
     i(47120);
@@ -16,11 +16,12 @@ var n = i(200651),
     h = i(13245),
     f = i(928518),
     p = i(358085),
-    E = i(610394),
-    m = i(561064),
-    v = i(501787),
-    g = i(608631);
-function S(e, t, i) {
+    E = i(306381),
+    m = i(610394),
+    v = i(561064),
+    g = i(501787),
+    S = i(608631);
+function _(e, t, i) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function S(e, t, i) {
         e
     );
 }
-function _(e, t) {
+function C(e, t) {
     return {
         name: e,
         left: Math.ceil(t.left),
@@ -42,13 +43,13 @@ function _(e, t) {
         bottom: Math.ceil(t.bottom)
     };
 }
-let C = l.createContext(
+let Z = l.createContext(
     new (class e {
         observe(e) {
             var t;
             if ((null == this.resizeObserver && (this.resizeObserver = new this.window.ResizeObserver(this.handleResize)), null == this.mutationObserver)) {
                 this.mutationObserver = new MutationObserver(this.handleMutations);
-                let e = f.Z.getWindow(v.OVERLAY_V3_KEY);
+                let e = f.Z.getWindow(g.OVERLAY_V3_KEY);
                 null != e &&
                     this.mutationObserver.observe(null == e ? void 0 : e.document.body, {
                         subtree: !0,
@@ -60,7 +61,7 @@ let C = l.createContext(
             let n = e.getBoundingClientRect();
             this.zones.set(e, {
                 element: e,
-                zone: _(null !== (t = null == i ? void 0 : i.zone.name) && void 0 !== t ? t : (0, u.Z)(), n)
+                zone: C(null !== (t = null == i ? void 0 : i.zone.name) && void 0 !== t ? t : (0, u.Z)(), n)
             }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
@@ -72,7 +73,7 @@ let C = l.createContext(
         }
         updateZones() {
             if (!p.isPlatformEmbedded) return;
-            let e = f.Z.getWindow(v.OVERLAY_V3_KEY);
+            let e = f.Z.getWindow(g.OVERLAY_V3_KEY);
             null != e &&
                 h.Z.setClickZones(
                     Array.from(this.zones.values()).map((t) => {
@@ -92,18 +93,18 @@ let C = l.createContext(
             this.globalUpdate.cancel(), this.zones.clear(), this.elements.clear(), null === (e = this.resizeObserver) || void 0 === e || e.disconnect(), null === (t = this.mutationObserver) || void 0 === t || t.disconnect(), this.updateZones();
         }
         constructor(e) {
-            S(this, 'resizeObserver', void 0),
-                S(this, 'mutationObserver', void 0),
-                S(this, 'zones', new Map()),
-                S(this, 'elements', new Set()),
-                S(this, 'window', void 0),
-                S(this, 'handleResize', () => {
+            _(this, 'resizeObserver', void 0),
+                _(this, 'mutationObserver', void 0),
+                _(this, 'zones', new Map()),
+                _(this, 'elements', new Set()),
+                _(this, 'window', void 0),
+                _(this, 'handleResize', () => {
                     this.globalUpdate();
                 }),
-                S(this, 'handleMutations', () => {
+                _(this, 'handleMutations', () => {
                     this.globalUpdate();
                 }),
-                S(
+                _(
                     this,
                     'globalUpdate',
                     a()(
@@ -111,7 +112,7 @@ let C = l.createContext(
                             let e = !1;
                             for (let [t, i] of this.zones) {
                                 let n = t.getBoundingClientRect(),
-                                    l = _(i.zone.name, n);
+                                    l = C(i.zone.name, n);
                                 if (!(0, c.Z)(l, i.zone))
                                     (e = !0),
                                         (i = {
@@ -131,12 +132,12 @@ let C = l.createContext(
                 ),
                 (this.window = e);
         }
-    })((0, m.i)())
+    })((0, v.i)())
 );
-function Z(e) {
+function O(e) {
     let { observe: t = !0, className: i, children: o } = e,
-        r = l.useContext(C),
-        a = (0, d.e7)([E.ZP], () => E.ZP.clickZoneDebugMode),
+        r = l.useContext(Z),
+        a = (0, d.e7)([m.ZP], () => m.ZP.hasRenderDebugMode(E.G.ClickZones)),
         [{ refHandler: u, setObserve: c }] = l.useState(() => {
             let e = null;
             return {
@@ -154,7 +155,7 @@ function Z(e) {
         }, [t, c]),
         (0, n.jsx)('div', {
             ref: u,
-            className: s()(i, g.clickable, a && g.debugMode),
+            className: s()(i, S.clickable, a && S.debugMode),
             'data-click-zone': !0,
             children: o
         })
