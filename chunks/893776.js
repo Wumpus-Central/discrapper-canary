@@ -73,7 +73,10 @@ function D() {
         },
         login(e) {
             let { login: n, password: r, undelete: i, source: a, giftCodeSKUId: s, invite: o, isMultiAccount: l } = e;
-            _.Z.dispatch({ type: 'LOGIN' }),
+            _.Z.dispatch({
+                type: 'LOGIN',
+                isPasswordAttempt: !0
+            }),
                 this.setLoginCredentials(n, r),
                 b.Z.post({
                     url: S.ANM.LOGIN,

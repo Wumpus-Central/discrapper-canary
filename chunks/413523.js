@@ -86,6 +86,7 @@ class M {
         let n = new Set(e.isGuildVocalOrThread() ? Object.keys(A.Z.getVoiceStatesForChannel(e.id)) : e.recipients);
         return (
             n.add(g.default.getId()),
+            this.guildRingingUsers.size > 0 && (n = new Set([...n, ...this.guildRingingUsers])),
             m.Z.getAllActiveStreamsForChannel(this.channelId).forEach((e) => {
                 let { ownerId: r } = e;
                 return n.add(r);
@@ -177,6 +178,9 @@ class M {
             a
         );
     }
+    updateGuildRingingUsers(e, n) {
+        n ? this.guildRingingUsers.add(e) : this.guildRingingUsers.delete(e);
+    }
     _getEmbeddedActivities() {
         let e = h.ZP.getEmbeddedActivitiesForChannel(this.channelId),
             n = h.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
@@ -211,7 +215,7 @@ class M {
         let w = A.Z.getVoiceStateForChannel(this.channelId, e),
             P = A.Z.getVoicePlatformForChannel(this.channelId, e),
             M = v.Z.getChannel(this.channelId),
-            k = null !== (i = null === (r = this.call) || void 0 === r ? void 0 : null === (n = r.ringing) || void 0 === n ? void 0 : n.includes(e)) && void 0 !== i && i;
+            k = null !== (i = (null === (r = this.call) || void 0 === r ? void 0 : null === (n = r.ringing) || void 0 === n ? void 0 : n.includes(e)) || this.guildRingingUsers.has(e)) && void 0 !== i && i;
         (null != w || k) &&
             ((c = {
                 type: O.fO.USER,
@@ -276,6 +280,7 @@ class M {
             x(this, 'call', void 0),
             x(this, 'participants', {}),
             x(this, 'lastSpoke', {}),
+            x(this, 'guildRingingUsers', new Set()),
             x(
                 this,
                 'participantByIndex',

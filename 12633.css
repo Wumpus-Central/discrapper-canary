@@ -8508,8 +8508,8 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     color: var(--white-500)
 }
 
-.colorable_ef18ee.experimentDark_ef18ee.active_ef18ee,
-.colorable_ef18ee.experimentDark_ef18ee:hover {
+.colorable_ef18ee.experimentDark_ef18ee.active_ef18ee:not(.disabled_ef18ee),
+.colorable_ef18ee.experimentDark_ef18ee:hover:not(.disabled_ef18ee) {
     background: rgba(255, 255, 255, .1)
 }
 
@@ -8522,8 +8522,8 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     color: var(--primary-860)
 }
 
-.colorable_ef18ee.experimentActiveLight_ef18ee.active_ef18ee,
-.colorable_ef18ee.experimentActiveLight_ef18ee:hover {
+.colorable_ef18ee.experimentActiveLight_ef18ee.active_ef18ee:not(.disabled_ef18ee),
+.colorable_ef18ee.experimentActiveLight_ef18ee:hover:not(.disabled_ef18ee) {
     background: var(--primary-230)
 }
 
@@ -8631,6 +8631,17 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     gap: 1px
 }
 
+.caretButtonContainer_ef18ee.disabled_ef18ee {
+    color: var(--interactive-muted) !important;
+    background-color: transparent !important;
+    cursor: not-allowed !important;
+    pointer-events: none
+}
+
+.caretButtonContainer_ef18ee.disabled_ef18ee:hover {
+    background-color: transparent !important
+}
+
 .contextMenuNubExperiment_ef18ee {
     cursor: pointer;
     padding: 10px 2px;
@@ -8641,6 +8652,10 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     align-items: center;
     justify-content: center;
     transition: background.15s ease-in-out, color.15s ease-in-out
+}
+
+.contextMenuNubExperiment_ef18ee.disabled_ef18ee {
+    cursor: not-allowed
 }
 
 .contextMenuCaret_ef18ee {
@@ -8659,6 +8674,11 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     height: 16px;
     cursor: pointer;
     transition: none
+}
+
+.contextMenuCaretExperiment_ef18ee.disabled_ef18ee {
+    color: var(--interactive-normal) !important;
+    cursor: not-allowed
 }
 
 .contextMenuCaretExperiment_ef18ee.open_ef18ee {

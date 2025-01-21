@@ -47,7 +47,8 @@ let S = new l.Z('GuildSettingsActionCreators'),
             var r;
             let i = I.Z.getGuildId();
             null != i &&
-                ((null === (r = g.Z.getGuild(i)) || void 0 === r ? void 0 : r.hasFeature(T.oNc.COMMUNITY)) && (e === T.pNK.GUILD_AUTOMOD && ((e = T.pNK.SAFETY), (n = T.KsC.SAFETY_AUTOMOD)), e === T.pNK.MEMBER_VERIFICATION && ((e = T.pNK.SAFETY), (n = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
+                (e === T.pNK.DISCOVERY && (0, u.K2)(i, 'GuildSettignsActionCreators.setSection') && (e = T.pNK.ACCESS),
+                (null === (r = g.Z.getGuild(i)) || void 0 === r ? void 0 : r.hasFeature(T.oNc.COMMUNITY)) && (e === T.pNK.GUILD_AUTOMOD && ((e = T.pNK.SAFETY), (n = T.KsC.SAFETY_AUTOMOD)), e === T.pNK.MEMBER_VERIFICATION && ((e = T.pNK.SAFETY), (n = T.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
                 s.Z.dispatch({
                     type: 'GUILD_SETTINGS_SET_SECTION',
                     section: e,

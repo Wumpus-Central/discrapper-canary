@@ -46,8 +46,8 @@ let P = new y.Z('AuthenticationStore'),
     U = null,
     B = null,
     G = null,
-    Z = null,
     F = null,
+    Z = null,
     V = null,
     j = null,
     H = L.u34.NONE,
@@ -92,8 +92,8 @@ function ed(e) {
 }
 function ef() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((F = g.K.get(M)), null != ea)) return ea;
-    let n = null != F ? F : _.getToken();
+    if (((Z = g.K.get(M)), null != ea)) return ea;
+    let n = null != Z ? Z : _.getToken();
     if (!(!(0, S.m1)() || (!e && null != n) || O.Z.isHandoffAvailable())) e_({ withGuildExperiments: !0 });
 }
 function e_(e) {
@@ -101,7 +101,7 @@ function e_(e) {
         r = {},
         i = N.default.getSuperPropertiesBase64();
     null != i && (r['X-Super-Properties'] = i),
-        null != F && (r['X-Fingerprint'] = F),
+        null != Z && (r['X-Fingerprint'] = Z),
         (ea = m.tn
             .get({
                 url: L.ANM.EXPERIMENTS,
@@ -135,7 +135,7 @@ function e_(e) {
             ));
 }
 function eh() {
-    (V = F), (F = null), g.K.remove(M);
+    (V = Z), (Z = null), g.K.remove(M);
 }
 function ep(e, n) {
     ed('setAuthToken called.'), _.setToken(e, n);
@@ -144,7 +144,8 @@ function em() {
     return ed('removeAuthToken called.'), _.removeToken();
 }
 function eg(e) {
-    (er = {}), (H = L.u34.LOGGING_IN), ($ = ''), (a = null), el || (el = e.loginMethod === L.nnr.PASSWORD);
+    let { isPasswordAttempt: n } = e;
+    (er = {}), (H = L.u34.LOGGING_IN), ($ = ''), (a = null), (el = el || !0 === n);
 }
 function eE(e) {
     let { isMultiAccount: n } = e;
@@ -211,20 +212,20 @@ function eP() {
 }
 function eM(e) {
     let n = e.fingerprint;
-    null == F
+    null == Z
         ? null != n
             ? (N.default.track(L.rMx.USER_FINGERPRINT_CHANGED, {
                   old_fingerprint: null != V ? (0, h.s)(V) : null,
                   new_fingerprint: (0, h.s)(n)
               }),
-              (F = n),
+              (Z = n),
               (V = n),
-              g.K.set(M, F))
+              g.K.set(M, Z))
             : ef()
         : null != n &&
-          F !== n &&
+          Z !== n &&
           N.default.track(L.rMx.EXTERNAL_FINGERPRINT_DROPPED, {
-              fingerprint: (0, h.s)(F),
+              fingerprint: (0, h.s)(Z),
               dropped_fingerprint: (0, h.s)(n)
           });
 }
@@ -251,14 +252,14 @@ function eG(e) {
     let { error: n } = e;
     (er = eu(n)), (Y = null != n.getFieldErrors('date_of_birth') ? L.$ib.REGISTER_AGE_GATE : L.$ib.REGISTER_WITH_ERROR);
 }
-function eZ() {
+function eF() {
     if (0 === Object.keys(er).length) return !1;
     er = {};
 }
-function eF(e) {
+function eZ(e) {
     var n;
     let { user: r, sessionId: i, authSessionIdHash: a, analyticsToken: s, auth: o, staticAuthSessionId: l } = e;
-    ed('handleConnectionOpen called'), R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (B = i), (G = a), (Z = l), (j = s), (U = r.id), void 0 !== o && (K = o.authenticator_types), g.K.set(k, r.id);
+    ed('handleConnectionOpen called'), R.Z.setUser(r.id, r.username, null !== (n = r.email) && void 0 !== n ? n : void 0, (0, A.Z)(r)), (B = i), (G = a), (F = l), (j = s), (U = r.id), void 0 !== o && (K = o.authenticator_types), g.K.set(k, r.id);
 }
 function eV(e) {
     var n;
@@ -360,7 +361,7 @@ class e2 extends (s = p.ZP.Store) {
         return G;
     }
     getStaticAuthSessionId() {
-        return Z;
+        return F;
     }
     getToken() {
         return (0, C.LP)();
@@ -369,7 +370,7 @@ class e2 extends (s = p.ZP.Store) {
         return (0, C.$8)();
     }
     getFingerprint() {
-        return F;
+        return Z;
     }
     getAnalyticsToken() {
         return j;
@@ -452,7 +453,7 @@ w(e2, 'displayName', 'AuthenticationStore'),
     (n.default = new e2(
         E.Z,
         {
-            CONNECTION_OPEN: eF,
+            CONNECTION_OPEN: eZ,
             OVERLAY_INITIALIZE: eV,
             CONNECTION_CLOSED: ej,
             AUTH_SESSION_CHANGE: eY,
@@ -481,7 +482,7 @@ w(e2, 'displayName', 'AuthenticationStore'),
             REGISTER_FAILURE: eG,
             VERIFY_FAILURE: ez,
             VERIFY_SUCCESS: eq,
-            START_SESSION: eZ,
+            START_SESSION: eF,
             FORGOT_PASSWORD_REQUEST: eQ,
             FORGOT_PASSWORD_SENT: eX,
             UPDATE_TOKEN: eH,

@@ -28,11 +28,12 @@ var i = r(200651),
     y = r(65154),
     S = r(388032);
 function A(e, n, r) {
-    let i = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipantId(e.id)),
+    let i = (0, s.e7)([d.Z], () => (null != e ? d.Z.getSelectedParticipantId(e.id) : null)),
         a = (0, s.e7)([m.Z], () => (null != i ? m.Z.getActiveStreamForStreamKey(i) : null), [i]);
     return (0, s.Wu)(
         [E.default],
         () => {
+            if (null == e) return [];
             let i = r
                 .filter((e) => e.ownerId !== (null == n ? void 0 : n.id))
                 .map((n) => ({
@@ -54,11 +55,11 @@ function N(e) {
         U = A(m, E, v),
         B = (0, _.Z)(k, L),
         G = (0, f.Z)(k, L, b.VqG),
-        Z = (0, s.e7)([g.Z], () => g.Z.supports(y.AN.SOUNDSHARE)),
-        F = (0, s.e7)([g.Z], () => g.Z.supportsScreenSoundshare()),
+        F = (0, s.e7)([g.Z], () => g.Z.supports(y.AN.SOUNDSHARE)),
+        Z = (0, s.e7)([g.Z], () => g.Z.supportsScreenSoundshare()),
         V = (null == w ? void 0 : w.desktopSource) != null,
         j = null == w ? void 0 : null === (r = w.desktopSource) || void 0 === r ? void 0 : null === (n = r.id) || void 0 === n ? void 0 : n.startsWith('screen'),
-        H = V && Z && (!j || F),
+        H = V && F && (!j || Z),
         Y = T.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {
