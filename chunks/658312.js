@@ -7,36 +7,41 @@ let l = 1000 / 24,
     c = 3000,
     d = function (e) {
         let { minInterval: n = l, allowableMinInterval: r, droppedFramesCallbackThreshold: a, droppedFramesCallback: d, droppedFramesResetTime: f = c } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            p = i.useRef(0),
-            h = i.useRef(),
+            p = i.useRef(n),
+            h = i.useRef(0),
             _ = i.useRef(),
-            m = i.useRef(!0),
-            g = i.useRef(0),
-            E = i.useRef(),
-            v = i.useCallback(() => {
-                (g.current = 0), null != E.current && (clearTimeout(E.current), (E.current = void 0));
-            }, []),
+            m = i.useRef(),
+            g = i.useRef(!0),
+            E = i.useRef(0),
+            v = i.useRef(),
             y = i.useCallback(() => {
-                (m.current = !1), cancelAnimationFrame(p.current), clearTimeout(E.current);
+                (E.current = 0), null != v.current && (clearTimeout(v.current), (v.current = void 0));
             }, []),
-            b = i.useCallback(
-                (i) => {
-                    if (!m.current) return;
-                    null == h.current && (h.current = i), null == _.current && (_.current = i);
-                    let s = i - _.current;
-                    i - h.current > (null != r ? r : n) * 1.5 && ((g.current += 1), null != E.current && clearTimeout(E.current), (E.current = setTimeout(v, f)), null != a && g.current > a && (o()(null != d, 'useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit'), d() && (g.current = 0))), (h.current = i), s >= n - u && ((_.current = i), e(s)), (p.current = requestAnimationFrame(b));
+            b = i.useCallback(() => {
+                (g.current = !1), cancelAnimationFrame(h.current), clearTimeout(v.current);
+            }, []),
+            I = i.useCallback(
+                (n) => {
+                    if (!g.current) return;
+                    null == _.current && (_.current = n), null == m.current && (m.current = n);
+                    let i = n - m.current,
+                        s = n - _.current;
+                    s > 1.5 * Math.min(null != r ? r : 120, p.current) && ((E.current += 1), null != v.current && clearTimeout(v.current), (v.current = setTimeout(y, f)), null != a && E.current > a && (o()(null != d, 'useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit'), d() && (E.current = 0))), (_.current = n), i >= p.current - u && ((m.current = n), e(i)), (h.current = requestAnimationFrame(I));
                 },
-                [n, r, v, f, a, d, e]
+                [r, y, f, a, d, e]
             ),
-            I = i.useCallback(() => {
-                (m.current = !0), (_.current = void 0), (p.current = requestAnimationFrame(b));
-            }, [b]);
+            T = i.useCallback(() => {
+                (g.current = !0), (m.current = void 0), (h.current = requestAnimationFrame(I));
+            }, [I]);
         return (
-            (0, s.Z)(() => ((p.current = requestAnimationFrame(b)), () => y())),
+            i.useEffect(() => {
+                p.current = n;
+            }, [n]),
+            (0, s.Z)(() => ((h.current = requestAnimationFrame(I)), () => b())),
             {
-                stop: y,
-                reset: I,
-                ticking: m
+                stop: b,
+                reset: T,
+                ticking: g
             }
         );
     };
