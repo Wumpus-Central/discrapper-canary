@@ -11280,8 +11280,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .soundButtonRefresh_f40049:active:not(:focus-within) .secondaryButtonRefresh_f40049 {
-    opacity: 0;
-    pointer-events: none
+    opacity: 0
 }
 
 .animated_f40049:active:not(:focus-within) {
