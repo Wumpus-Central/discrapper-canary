@@ -67,6 +67,113 @@ class x extends (a = l.Component) {
         let { src: n } = e;
         return N.test(n);
     }
+    static getFormatQuality(e) {
+        let { src: n, original: r, animated: i, srcIsAnimated: a, freeze: o = !1 } = e,
+            s = null,
+            l = null;
+        return (
+            y.$k &&
+            (o ||
+                !x.isAnimated({
+                    src: n,
+                    original: r,
+                    animated: i,
+                    srcIsAnimated: a
+                }))
+                ? ((s = 'webp'), (x.isSrcPNG({ src: n }) || x.isSrcAVIF({ src: n })) && (l = 'lossless'))
+                : o && (s = 'png'),
+            {
+                format: s,
+                quality: l
+            }
+        );
+    }
+    static preloadImage(e) {
+        let {
+            src: n,
+            dimensions: { maxWidth: r, maxHeight: i, imageWidth: a, imageHeight: o },
+            options: { srcIsAnimated: s, original: l, animated: u, sourceMetadata: c, freeze: d },
+            callback: f
+        } = e;
+        if (1 === a && 1 === o) return;
+        let { format: p, quality: h } = x.getFormatQuality({
+                src: n,
+                original: l,
+                animated: u,
+                srcIsAnimated: s,
+                freeze: d
+            }),
+            m = (0, _.Q4)({
+                src: n,
+                width: a,
+                height: o,
+                maxWidth: r,
+                maxHeight: i,
+                srcIsAnimated: s,
+                format: p,
+                quality: h
+            }),
+            g = Date.now();
+        return (0, _.po)(m, (e, r) => {
+            x.trackLoadingCompleted({
+                error: e,
+                imageData: r,
+                trigger: 'PRELOAD',
+                startLoadingTime: g,
+                readyState: I.zo9.READY,
+                format: p,
+                quality: h,
+                imageProps: {
+                    src: n,
+                    width: a,
+                    height: o,
+                    sourceMetadata: c,
+                    original: l
+                }
+            }),
+                null == f || f(e, r);
+        });
+    }
+    static async trackLoadingCompleted(e) {
+        var n, r, i;
+        let {
+            error: a,
+            imageData: o,
+            trigger: s,
+            startLoadingTime: l,
+            readyState: u,
+            format: d,
+            quality: f,
+            imageProps: { src: p, height: h, width: _, original: y, sourceMetadata: b }
+        } = e;
+        if ((a && m.Z.increment({ name: c.V.IMAGE_LOAD_ERROR }), !L.getCurrentConfig({ location: 'lazy_image' }).enabled)) return;
+        let T = await fetch(o.url).catch(() => void 0),
+            S = null == T ? void 0 : null === (n = T.headers) || void 0 === n ? void 0 : n.get('content-length'),
+            A = null != S ? Number(S) : null,
+            C = Date.now() - l;
+        v.default.track(I.rMx.IMAGE_LOADING_COMPLETED, {
+            duration_ms: C,
+            requested_height: o.height,
+            requested_width: o.width,
+            height: h,
+            width: _,
+            original_url: y,
+            url: p,
+            requested_url: o.url,
+            format: d,
+            quality: f,
+            state: a ? I.zo9.ERROR : u,
+            data_saving_mode: g.ZP.dataSavingMode,
+            low_quality_image_mode: g.ZP.dataSavingMode,
+            trigger: s,
+            size: A,
+            message_id: null == b ? void 0 : null === (r = b.message) || void 0 === r ? void 0 : r.id,
+            message_sent_timestamp: null == b ? void 0 : null === (i = b.message) || void 0 === i ? void 0 : i.timestamp.getTime(),
+            connection_type: E.Z.getType(),
+            effective_connection_speed: E.Z.getEffectiveConnectionSpeed(),
+            service_provider: E.Z.getServiceProvider()
+        });
+    }
     componentDidMount() {
         let { readyState: e } = this.state;
         e === I.zo9.LOADING && this.loadImage(this.getSrc(this.getRatio(), x.isAnimated(this.props)), this.handleImageLoad), x.isAnimated(this.props) && this.observeVisibility();
@@ -81,7 +188,10 @@ class x extends (a = l.Component) {
     getSrc(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { src: r, width: i, height: a, maxWidth: o, maxHeight: s, mediaLayoutType: l } = this.props,
-            { format: u, quality: c } = this.getFormatQuality(n);
+            { format: u, quality: c } = x.getFormatQuality({
+                ...this.props,
+                freeze: n
+            });
         return (0, _.Q4)({
             src: r,
             width: i,
@@ -94,18 +204,6 @@ class x extends (a = l.Component) {
             animated: !n,
             srcIsAnimated: this.props.srcIsAnimated
         });
-    }
-    getFormatQuality() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            n = null,
-            r = null;
-        return (
-            y.$k && (e || !x.isAnimated(this.props)) ? ((n = 'webp'), (x.isSrcPNG(this.props) || x.isSrcAVIF(this.props)) && (r = 'lossless')) : e && (n = 'png'),
-            {
-                format: n,
-                quality: r
-            }
-        );
     }
     getRatio() {
         let { width: e, height: n, maxWidth: r = O, maxHeight: i = D, mediaLayoutType: a, useFullWidth: o } = this.props;
@@ -204,40 +302,8 @@ class x extends (a = l.Component) {
         }
         return (0, s.jsx)(f.E, { ...Z });
     }
-    async trackLoadingCompleted(e, n, r) {
-        var i, a, o, s, l;
-        if ((e && m.Z.increment({ name: c.V.IMAGE_LOAD_ERROR }), !this.imageLoadAnalyticsEnabled)) return;
-        let u = await fetch(n.url).catch(() => void 0),
-            d = null == u ? void 0 : null === (i = u.headers) || void 0 === i ? void 0 : i.get('content-length'),
-            f = null != d ? Number(d) : null,
-            p = Date.now() - this.startLoadingTime,
-            { format: h, quality: _ } = this.getFormatQuality();
-        v.default.track(I.rMx.IMAGE_LOADING_COMPLETED, {
-            duration_ms: p,
-            requested_height: n.height,
-            requested_width: n.width,
-            height: this.props.height,
-            width: this.props.width,
-            original_url: this.props.original,
-            url: this.props.src,
-            requested_url: n.url,
-            format: h,
-            quality: _,
-            state: e ? I.zo9.ERROR : this.state.readyState,
-            data_saving_mode: g.ZP.dataSavingMode,
-            low_quality_image_mode: g.ZP.dataSavingMode,
-            trigger: r,
-            size: f,
-            message_id: null === (o = this.props.sourceMetadata) || void 0 === o ? void 0 : null === (a = o.message) || void 0 === a ? void 0 : a.id,
-            message_sent_timestamp: null === (l = this.props.sourceMetadata) || void 0 === l ? void 0 : null === (s = l.message) || void 0 === s ? void 0 : s.timestamp.getTime(),
-            connection_type: E.Z.getType(),
-            effective_connection_speed: E.Z.getEffectiveConnectionSpeed(),
-            service_provider: E.Z.getServiceProvider()
-        });
-    }
     constructor(e) {
         super(e),
-            S(this, 'imageLoadAnalyticsEnabled', !1),
             S(this, 'state', {
                 readyState: I.zo9.LOADING,
                 hasMouseOver: !1,
@@ -254,31 +320,23 @@ class x extends (a = l.Component) {
             S(this, 'handleImageLoad', (e, n) => {
                 this.setState({ readyState: e ? I.zo9.ERROR : I.zo9.READY }, () => {
                     var r;
-                    return this.trackLoadingCompleted(e, n, null !== (r = this.props.trigger) && void 0 !== r ? r : 'LOAD');
+                    let { format: i, quality: a } = x.getFormatQuality(this.props);
+                    x.trackLoadingCompleted({
+                        error: e,
+                        imageData: n,
+                        trigger: null !== (r = this.props.trigger) && void 0 !== r ? r : 'LOAD',
+                        startLoadingTime: this.startLoadingTime,
+                        readyState: this.state.readyState,
+                        format: i,
+                        quality: a,
+                        imageProps: this.props
+                    });
                 });
-            }),
-            S(this, 'preloadImage', (e, n) => {
-                let { width: r, height: i } = e,
-                    { width: a, height: o } = this.props;
-                (1 !== a || 1 !== o) &&
-                    this.loadImage(
-                        this.getSrc(
-                            (0, b.Dc)({
-                                width: a,
-                                height: o,
-                                maxWidth: r,
-                                maxHeight: i
-                            })
-                        ),
-                        (e, r) => {
-                            this.trackLoadingCompleted(e, r, 'PRELOAD'), null == n || n(e, r);
-                        }
-                    );
             }),
             S(this, 'onMouseEnter', (e) => {
                 x.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
                 let { onMouseEnter: n } = this.props;
-                null == n || n(e, { preloadImage: this.preloadImage });
+                null == n || n(e);
             }),
             S(this, 'onMouseLeave', (e) => {
                 x.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
@@ -309,8 +367,7 @@ class x extends (a = l.Component) {
                     i = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
                 return this.props.shouldRenderAccessory ? (r ? i : (0, s.jsx)(h.Z, {})) : null;
             }),
-            (0, _.Vv)(this.getSrc(this.getRatio(), x.isAnimated(this.props))) && (this.state.readyState = I.zo9.READY),
-            (this.imageLoadAnalyticsEnabled = L.getCurrentConfig({ location: 'lazy_image' }).enabled);
+            (0, _.Vv)(this.getSrc(this.getRatio(), x.isAnimated(this.props))) && (this.state.readyState = I.zo9.READY);
     }
 }
 S(x, 'visibilityObserver', new d.Z({ threshold: 0.7 })),

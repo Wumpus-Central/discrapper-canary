@@ -1,55 +1,56 @@
-e.d(n, {
+r.d(n, {
     Jj: function () {
-        return h;
+        return m;
     },
     Lz: function () {
-        return v;
+        return E;
     },
     gS: function () {
-        return p;
+        return g;
     },
     rV: function () {
-        return f;
+        return _;
     },
     s$: function () {
-        return m;
+        return v;
     }
-}),
-    e(47120);
-var r = e(829883),
-    l = e(378233),
-    i = e(591759);
-let a = /^.*\.discordapp\.net$/,
-    u = 'cdn.discordapp.com',
-    o = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    s = new Set(['jpg', 'jpeg', 'png']),
-    d = (t) => {
-        var n, e, r, l;
-        return null === (l = i.Z.toURLSafe(t)) || void 0 === l ? void 0 : null === (r = l.pathname) || void 0 === r ? void 0 : null === (e = r.split('.')) || void 0 === e ? void 0 : null === (n = e.pop()) || void 0 === n ? void 0 : n.toLowerCase();
+});
+var i = r(47120);
+var a = r(829883),
+    o = r(378233),
+    s = r(591759);
+let l = 'https://media.discordapp.net',
+    u = /^.*\.discordapp\.net$/,
+    c = 'cdn.discordapp.com',
+    d = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
+    f = new Set(['jpg', 'jpeg', 'png']),
+    p = (e) => {
+        var n, r, i, a;
+        return null === (a = s.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (r = i.split('.')) || void 0 === r ? void 0 : null === (n = r.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function c(t) {
-    return t.host === u || a.test(t.hostname);
+function h(e) {
+    return e.host === c || u.test(e.hostname);
 }
-function f(t) {
-    let n = i.Z.toURLSafe(t);
-    return null != n && c(n);
+function _(e) {
+    let n = s.Z.toURLSafe(e);
+    return null != n && h(n);
 }
-function h(t) {
-    return !((0, l.B0)(t) || (0, r.zt)(t)) && !0;
+function m(e) {
+    return !((0, o.B0)(e) || (0, a.zt)(e)) && !0;
 }
-function p(t) {
-    let n = i.Z.toURLSafe(t);
+function g(e) {
+    let n = s.Z.toURLSafe(e);
     if (null == n) return !1;
-    let e = d(t);
-    return null != e && o.has(e) && c(n) && h(t);
+    let r = p(e);
+    return null != r && d.has(r) && h(n) && m(e);
 }
-function v(t) {
-    let n = i.Z.toURLSafe(t);
+function E(e) {
+    let n = s.Z.toURLSafe(e);
     if (null == n) return !1;
-    let e = d(t);
-    return null != e && s.has(e) && c(n) && h(t);
+    let r = p(e);
+    return null != r && f.has(r) && h(n) && m(e);
 }
-function m(t) {
-    let n = i.Z.toURLSafe(t);
-    return null == n || n.host === u ? t : 'https://media.discordapp.net' === n.origin ? ((n.host = u), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.searchParams.delete('format'), n.toString());
+function v(e) {
+    let n = s.Z.toURLSafe(e);
+    return null == n || n.host === c ? e : n.origin === l ? ((n.host = c), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.searchParams.delete('format'), n.toString());
 }

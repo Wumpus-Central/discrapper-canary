@@ -1,84 +1,91 @@
-t.d(n, {
+r.d(n, {
     Z: function () {
-        return _;
+        return b;
     }
 });
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(481060),
-    s = t(607070),
-    u = t(124347),
-    c = t(52824),
-    d = t(549635),
-    f = t(217702),
-    m = t(388032),
-    h = t(52131);
-function p(e) {
+var i = r(200651),
+    a = r(192379),
+    o = r(120356),
+    s = r.n(o),
+    l = r(481060),
+    u = r(607070),
+    c = r(124347),
+    d = r(52824),
+    f = r(549635),
+    p = r(217702),
+    h = r(388032),
+    _ = r(52131);
+let m = 48;
+function g(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
-let g = l.memo(function (e) {
-    var n;
-    let { item: t } = e;
-    let l =
-        'IMAGE' === (n = t).type
-            ? (0, c.q)({
-                  proxyURL: n.proxyUrl,
-                  url: n.url
-              })
-            : 'VIDEO' === n.type && null != n.proxyUrl
-              ? (0, d.D)(n.proxyUrl)
-              : null;
-    return null == l
+function E(e) {
+    return 'IMAGE' === e.type
+        ? (0, d.q)({
+              proxyURL: e.proxyUrl,
+              url: e.url
+          })
+        : 'VIDEO' === e.type && null != e.proxyUrl
+          ? (0, f.D)(e.proxyUrl)
+          : null;
+}
+function v(e) {
+    var n, r;
+    let { item: a } = e,
+        o = E(a);
+    return null == o
         ? null
-        : (0, i.jsx)(u.ZP, {
-              width: 48,
-              height: 48,
-              src: l,
+        : (0, i.jsx)(c.ZP, {
+              width: null !== (n = a.width) && void 0 !== n ? n : m,
+              height: null !== (r = a.height) && void 0 !== r ? r : m,
+              maxWidth: m,
+              maxHeight: m,
+              useFullWidth: !0,
+              src: o,
               shouldAnimate: !1,
-              srcIsAnimated: t.srcIsAnimated,
-              alt: t.alt,
-              mediaLayoutType: f.hV.MOSAIC
+              srcIsAnimated: a.srcIsAnimated,
+              alt: a.alt,
+              mediaLayoutType: p.hV.MOSAIC
           });
-});
-function _(e) {
-    let { items: n, currentIndex: t, onGalleryItemClick: r, className: u } = e,
-        c = l.useRef(null);
+}
+let y = a.memo(v);
+function b(e) {
+    let { items: n, currentIndex: r, onGalleryItemClick: o, className: c } = e,
+        d = a.useRef(null);
     return (
-        l.useLayoutEffect(() => {
-            let e = document.getElementById(p(t));
-            null != c.current &&
+        a.useLayoutEffect(() => {
+            let e = document.getElementById(g(r));
+            null != d.current &&
                 null != e &&
-                c.current.scrollIntoViewNode({
+                d.current.scrollIntoViewNode({
                     node: e,
-                    animate: !s.Z.useReducedMotion,
-                    padding: 24
+                    animate: !u.Z.useReducedMotion,
+                    padding: m / 2
                 });
-        }, [t]),
+        }, [r]),
         (0, i.jsx)('div', {
-            className: a()(h.galleryContainer, u),
-            children: (0, i.jsx)(o.AdvancedScrollerThin, {
+            className: s()(_.galleryContainer, c),
+            children: (0, i.jsx)(l.AdvancedScrollerThin, {
                 orientation: 'horizontal',
-                className: h.gallery,
-                ref: c,
+                className: _.gallery,
+                ref: d,
                 onMouseDown: (e) => e.stopPropagation(),
-                children: n.map((e, l) => {
-                    let s = l === t,
-                        u = s ? m.t['qv/U5e'] : m.t.zviMAA;
+                children: n.map((e, a) => {
+                    let u = a === r,
+                        c = u ? h.t['qv/U5e'] : h.t.zviMAA;
                     return (0, i.jsxs)(
-                        o.Clickable,
+                        l.Clickable,
                         {
-                            id: p(l),
-                            className: h.galleryItem,
-                            'aria-label': m.intl.formatToPlainString(u, {
-                                pageNumber: l + 1,
+                            id: g(a),
+                            className: _.galleryItem,
+                            'aria-label': h.intl.formatToPlainString(c, {
+                                pageNumber: a + 1,
                                 totalPages: n.length
                             }),
-                            onClick: () => r(l),
-                            children: [(0, i.jsx)('div', { className: a()(h.galleryItemOverlay, { [h.selected]: s }) }), (0, i.jsx)(g, { item: e })]
+                            onClick: () => o(a),
+                            children: [(0, i.jsx)('div', { className: s()(_.galleryItemOverlay, { [_.selected]: u }) }), (0, i.jsx)(y, { item: e })]
                         },
-                        l
+                        a
                     );
                 })
             })

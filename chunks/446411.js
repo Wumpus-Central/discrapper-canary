@@ -3,7 +3,7 @@ t.d(l, {
         return G;
     },
     ZP: function () {
-        return O;
+        return D;
     }
 }),
     t(47120),
@@ -62,16 +62,16 @@ function G(e) {
     var l, t;
     let { className: n, iframeWrapperClassName: a, maxWidth: s, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: y, volume: _, onPlay: w, onPause: T, onEnded: N, onControlsHide: S, onControlsShow: M, onVolumeChange: H, onMute: k, href: L, placeholder: B, placeholderVersion: R, sourceMetadata: P } = e,
         [W, G] = r.useState(I),
-        D = null != m && null == m.proxyURL,
-        O = r.useCallback(() => G(!1), [G]),
+        O = null != m && null == m.proxyURL,
+        D = r.useCallback(() => G(!1), [G]),
         U = (e) => {
-            e.preventDefault(), e.stopPropagation(), null == w || w(!1), G(!0), D && (E.S.dispatch(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED), E.S.subscribeOnce(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, O));
+            e.preventDefault(), e.stopPropagation(), null == w || w(!1), G(!0), O && (E.S.dispatch(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED), E.S.subscribeOnce(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, D));
         };
     r.useEffect(
         () => () => {
-            D && E.S.unsubscribe(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, O);
+            O && E.S.unsubscribe(F.CkL.VIDEO_EMBED_PLAYBACK_STARTED, D);
         },
-        [D, O]
+        [O, D]
     );
     let { width: Z, height: z } = u;
     null != m && ((Z = m.width), (z = m.height));
@@ -201,7 +201,7 @@ function G(e) {
         ]
     });
 }
-function D(e) {
+function O(e) {
     let { className: l, href: t, autoPlay: n, maxWidth: r, maxHeight: a, thumbnail: s, video: d, renderImageComponent: u, responsive: m, alt: h, disableAltTextDisplay: c = !1, playable: p = !0, hiddenSpoilers: b, placeholder: v, placeholderVersion: f, sourceMetadata: x } = e;
     return (0, i.jsx)(g.Z, {
         className: o()(V.embedVideo, l),
@@ -226,7 +226,7 @@ function D(e) {
         sourceMetadata: x
     });
 }
-class O extends (n = r.PureComponent) {
+class D extends (n = r.PureComponent) {
     renderProvider() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             {
@@ -478,10 +478,13 @@ class O extends (n = r.PureComponent) {
             { maxMediaWidth: f, maxMediaHeight: x, sourceMetadata: y } = this.state;
         if (null == s) return null;
         let _ = (0, C.q)(s),
-            w =
+            { srcToOnClickOverride: w, srcToHandlePreloadImage: T } =
                 null == m
-                    ? {}
-                    : (0, I._)(
+                    ? {
+                          srcToOnClickOverride: {},
+                          srcToHandlePreloadImage: {}
+                      }
+                    : (0, I.J)(
                           m.map((e) => ({
                               ...(0, p.Hv)(e, y, 'IMAGE'),
                               original: e.url,
@@ -490,13 +493,13 @@ class O extends (n = r.PureComponent) {
                           {},
                           'Embed'
                       ),
-            T = v.ZP.isAnimated({
+            E = v.ZP.isAnimated({
                 src: (0, C.q)(s),
                 original: s.url,
                 animated: !1,
                 srcIsAnimated: s.srcIsAnimated
             }),
-            E = {
+            N = {
                 containerClassName: o()(b, {
                     [V.embedMedia]: !d,
                     [V.embedImage]: !d,
@@ -519,21 +522,20 @@ class O extends (n = r.PureComponent) {
                 placeholder: s.placeholder,
                 placeholderVersion: s.placeholderVersion,
                 srcIsAnimated: s.srcIsAnimated
-            };
-        _ in w && (E.onClick = w[_]);
-        let N = null !== (n = null === (e = s.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
-        'jpg' === N && (N = 'jpeg');
-        let S = null != s && !v.uo.test(null == s ? void 0 : s.url) && !(s.srcIsAnimated && v.YG.test(null == s ? void 0 : s.url)) && !(s.srcIsAnimated && v.FH.test(null == s ? void 0 : s.url)),
-            A =
+            },
+            S = null !== (n = null === (e = s.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
+        'jpg' === S && (S = 'jpeg');
+        let A = null != s && !v.uo.test(null == s ? void 0 : s.url) && !(s.srcIsAnimated && v.YG.test(null == s ? void 0 : s.url)) && !(s.srcIsAnimated && v.FH.test(null == s ? void 0 : s.url)),
+            j =
                 !0 !== this.props.isSearchResult &&
                 a &&
                 (null === (l = this.props.message) || void 0 === l ? void 0 : l.channel_id) != null &&
                 (null === (t = this.props.message) || void 0 === t ? void 0 : t.channel_id) !== void 0 &&
-                S &&
+                A &&
                 !(function (e) {
                     return null != e && (e.width <= k.OF || e.height <= k.OF);
                 })(s) &&
-                null != N;
+                null != S;
         return (0, i.jsx)(c.h.Consumer, {
             children: (e) =>
                 (0, i.jsx)(
@@ -542,16 +544,18 @@ class O extends (n = r.PureComponent) {
                         children: (l) => {
                             let { disableAnimations: t } = l;
                             return h({
-                                ...E,
+                                ...N,
                                 autoPlay: g && !t && !r,
-                                renderAccessory: T ? e : null,
-                                onMouseEnter: () => this.handleImageHover(!0, s, A),
-                                onMouseLeave: () => this.handleImageHover(!1, s, A),
+                                renderAccessory: E ? e : null,
+                                handlePreloadImage: T[_],
+                                onClick: w[_],
+                                onMouseEnter: () => this.handleImageHover(!0, s, j),
+                                onMouseLeave: () => this.handleImageHover(!1, s, j),
                                 renderAdjacentContent: () => {
                                     var e, l;
-                                    return !0 === this.props.showImageRecs && A
+                                    return !0 === this.props.showImageRecs && j
                                         ? this.renderImageHoverButtons({
-                                              mimeType: ['image', N],
+                                              mimeType: ['image', S],
                                               downloadURL: null !== (l = s.proxyURL) && void 0 !== l ? l : s.url,
                                               isVisualMediaType: null != s,
                                               channelId: null === (e = this.props.message) || void 0 === e ? void 0 : e.channel_id
@@ -586,7 +590,7 @@ class O extends (n = r.PureComponent) {
                 : (0, i.jsx)(H.G.Consumer, {
                       children: (e) => {
                           let { disableAnimations: o } = e;
-                          return (0, i.jsx)(D, {
+                          return (0, i.jsx)(O, {
                               className: V.embedMedia,
                               href: n,
                               thumbnail: r,
@@ -935,7 +939,7 @@ class O extends (n = r.PureComponent) {
             });
     }
 }
-W(O, 'defaultProps', {
+W(D, 'defaultProps', {
     hideMedia: !1,
     allowFullScreen: !0,
     maxThumbnailWidth: 80,

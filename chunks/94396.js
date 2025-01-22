@@ -1,35 +1,41 @@
 e.d(n, {
-    _: function () {
-        return l;
+    J: function () {
+        return a;
     }
 }),
     e(47120),
     e(192379);
 var i = e(513431),
-    o = e(312097),
-    r = e(52824),
-    s = e(230569);
-function l(t, n, e) {
-    let l = {};
-    for (let [a, c] of t.entries())
-        l[
-            (0, r.q)({
-                proxyURL: c.proxyUrl,
-                url: c.url
-            })
-        ] = (r) =>
+    o = e(730606),
+    r = e(312097),
+    s = e(52824),
+    l = e(230569);
+function a(t, n, e) {
+    let a = {},
+        c = {};
+    for (let [u, d] of t.entries()) {
+        let p = (0, s.q)({
+            proxyURL: d.proxyUrl,
+            url: d.url
+        });
+        (a[p] = (o) =>
             (function (t, n, e) {
-                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    l = arguments.length > 4 ? arguments[4] : void 0;
+                let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    s = arguments.length > 4 ? arguments[4] : void 0;
                 t.preventDefault(),
                     (0, i.k)(t.currentTarget) && t.currentTarget.blur(),
-                    (0, o.K)({
-                        ...r,
-                        className: s.forcedTransparency,
+                    (0, r.K)({
+                        ...o,
+                        className: l.forcedTransparency,
                         items: n,
                         startingIndex: e,
-                        location: null != l ? l : 'zoomedMediaModalHelper'
+                        location: null != s ? s : 'zoomedMediaModalHelper'
                     });
-            })(r, t, a, n, e);
-    return l;
+            })(o, t, u, n, e)),
+            (c[p] = () => (0, o.WG)(d, t.length > 1));
+    }
+    return {
+        srcToOnClickOverride: a,
+        srcToHandlePreloadImage: c
+    };
 }

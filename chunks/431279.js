@@ -11,8 +11,8 @@ var o = r(200651),
     u = r(481060),
     c = r(40851),
     d = r(124347),
-    f = r(312097),
-    p = r(956664),
+    f = r(730606),
+    p = r(312097),
     h = r(506071),
     _ = r(701865),
     m = r(765568);
@@ -41,10 +41,19 @@ class E extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'onMouseEnter', (e, n) => {
-                let { preloadImage: r } = n,
-                    { width: i, height: a, onMouseEnter: o } = this.props;
-                null == o || o(e, { preloadImage: r }), r((0, p.zp)(i, a));
+            g(this, 'onMouseEnter', (e) => {
+                let { src: n, width: r, height: i, onMouseEnter: a, handlePreloadImage: o } = this.props;
+                if ((null == a || a(e), null != o)) {
+                    o();
+                    return;
+                }
+                (0, f.Qk)({
+                    src: n,
+                    width: r,
+                    height: i,
+                    options: this.props,
+                    hasMultiple: !1
+                });
             }),
             g(this, 'modalContext', (0, u.modalContextFromAppContext)(this.props.appContext)),
             g(this, 'onCloseImage', () => {
@@ -53,7 +62,7 @@ class E extends (i = s.PureComponent) {
             g(this, 'onZoom', (e, n) => {
                 let { zoomThumbnailPlaceholder: r, trigger: i } = n;
                 e.preventDefault();
-                let { alt: a, src: o, original: s, width: u, height: c, animated: d, srcIsAnimated: p, children: h, shouldHideMediaOptions: _ = !1, sourceMetadata: g, analyticsSource: E } = this.props,
+                let { alt: a, src: o, original: s, width: u, height: c, animated: d, srcIsAnimated: f, children: h, shouldHideMediaOptions: _ = !1, sourceMetadata: g, analyticsSource: E } = this.props,
                     v = {
                         url: o,
                         width: u,
@@ -62,14 +71,14 @@ class E extends (i = s.PureComponent) {
                         alt: a,
                         zoomThumbnailPlaceholder: r,
                         animated: d,
-                        srcIsAnimated: p,
+                        srcIsAnimated: f,
                         children: h,
                         trigger: i,
                         sourceMetadata: g,
                         original: null != s ? s : o
                     };
                 (0, l.k)(e.currentTarget) && e.currentTarget.blur(),
-                    (0, f.K)({
+                    (0, p.K)({
                         className: m.modal,
                         onClose: this.onCloseImage,
                         items: [v],

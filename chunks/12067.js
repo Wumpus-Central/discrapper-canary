@@ -29,9 +29,9 @@ function x(e) {
                 srcIsAnimated: e.media.srcIsAnimated
             }))
             .filter((e) => 'INVALID' !== e.type),
-        I =
+        { srcToOnClickOverride: I, srcToHandlePreloadImage: j } =
             b.length > 1
-                ? (0, d._)(
+                ? (0, d.J)(
                       b,
                       {
                           shouldHideMediaOptions: x,
@@ -39,12 +39,15 @@ function x(e) {
                       },
                       'Media Mosaic'
                   )
-                : {};
-    function j(e, n) {
+                : {
+                      srcToOnClickOverride: {},
+                      srcToHandlePreloadImage: {}
+                  };
+    function S(e, n) {
         let t = e.originalItem;
         return (0, a.lK)(t.media, n, t.spoiler);
     }
-    let S = e.items.map((e, t) => {
+    let y = e.items.map((e, t) => {
         let l = e.media,
             i = null == _ ? void 0 : _(l),
             r = {
@@ -62,7 +65,7 @@ function x(e) {
                 },
                 onContextMenu: i,
                 autoPlayGif: C,
-                getObscureReason: j,
+                getObscureReason: S,
                 renderImageComponent: s.aB,
                 renderVideoComponent: s.rJ,
                 renderVisualPlaceholderComponent: s.yF,
@@ -79,7 +82,7 @@ function x(e) {
                 proxyURL: l.proxyUrl,
                 url: l.url
             });
-        return a in I && (r.onClick = I[a]), r;
+        return a in I && ((r.onClick = I[a]), (r.handlePreloadImage = j[a])), r;
     });
-    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: S }) });
+    return (0, l.jsx)('div', { children: (0, l.jsx)(u.Z, { items: y }) });
 }

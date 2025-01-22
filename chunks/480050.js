@@ -1,108 +1,110 @@
-t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(956664),
-    s = t(981656);
-n.Z = l.memo(function (e) {
-    let { children: n, active: t, onClick: r, className: u, style: c, width: d, height: f, maxWidth: m, maxHeight: h, panPadding: p } = e,
-        g = (0, l.useRef)(null),
-        [_, E] = (0, l.useState)(!1),
-        [S, x] = (0, l.useState)({
+var i = r(47120);
+var a = r(200651),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
+    u = r(956664),
+    c = r(981656);
+let d = 400;
+function f(e) {
+    let { children: n, active: r, onClick: i, className: s, style: f, width: p, height: h, maxWidth: _, maxHeight: m, panPadding: g } = e,
+        E = (0, o.useRef)(null),
+        [v, y] = (0, o.useState)(!1),
+        [b, I] = (0, o.useState)({
             x: 0,
             y: 0
         }),
-        [C, v] = (0, l.useState)({
+        [T, S] = (0, o.useState)({
             x: 0,
             y: 0
         }),
-        [y, I] = (0, l.useState)({
+        [A, C] = (0, o.useState)({
             x: 0,
             y: 0
         });
-    (0, l.useEffect)(() => {
-        !t &&
-            (I({
+    (0, o.useEffect)(() => {
+        !r &&
+            (C({
                 x: 0,
                 y: 0
             }),
-            v({
+            S({
                 x: 0,
                 y: 0
             }));
-    }, [t]);
-    let b = (0, l.useCallback)(
+    }, [r]);
+    let N = (0, o.useCallback)(
             (e) => {
-                if (!t || 0 !== e.button) return;
+                if (!r || 0 !== e.button) return;
                 e.preventDefault();
                 let { clientX: n, clientY: i } = e;
-                E(!0),
-                    x({
+                y(!0),
+                    I({
                         x: n,
                         y: i
                     }),
-                    v({
-                        x: n - y.x,
-                        y: i - y.y
+                    S({
+                        x: n - A.x,
+                        y: i - A.y
                     });
             },
-            [t, y]
+            [r, A]
         ),
-        M = (0, l.useCallback)(
+        R = (0, o.useCallback)(
             (e) => {
-                if (!t) {
-                    0 === e.button && (null == r || r(e));
+                if (!r) {
+                    0 === e.button && (null == i || i(e));
                     return;
                 }
-                (e.clientX - S.x) ** 2 + (e.clientY - S.y) ** 2 < 400 && (null == r || r(e)), E(!1);
+                (e.clientX - b.x) ** 2 + (e.clientY - b.y) ** 2 < d && (null == i || i(e)), y(!1);
             },
-            [t, r, S]
+            [r, i, b]
         ),
-        O = (0, l.useCallback)(
+        O = (0, o.useCallback)(
             (e) => {
                 var n;
-                if (!_) return;
-                let t = null === (n = g.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
-                if (null == t) return;
-                let [i, l, r, a] = [null == p ? void 0 : p.top, null == p ? void 0 : p.right, null == p ? void 0 : p.bottom, null == p ? void 0 : p.left].map((e) => (null != e ? e : 0)),
-                    [o, s] = [t.width + a + l > window.innerWidth, t.height + i + r > window.innerHeight];
-                if (!o && !s) return;
-                let [u, c] = [o ? e.clientX - C.x : 0, s ? e.clientY - C.y : 0],
-                    [d, f] = [u - y.x, c - y.y];
-                o && d + t.x - a >= 0 && (u = y.x - t.x + a), s && f + t.y - i >= 0 && (c = y.y - t.y + i);
-                let [m, h] = [t.x + t.width, t.y + t.height];
-                o && d + m + l <= window.innerWidth && (u = window.innerWidth + y.x - m - l),
-                    s && f + h + r <= window.innerHeight && (c = window.innerHeight + y.y - h - r),
-                    I({
-                        x: u,
-                        y: c
+                if (!v) return;
+                let r = null === (n = E.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                if (null == r) return;
+                let [i, a, o, s] = [null == g ? void 0 : g.top, null == g ? void 0 : g.right, null == g ? void 0 : g.bottom, null == g ? void 0 : g.left].map((e) => (null != e ? e : 0)),
+                    [l, u] = [r.width + s + a > window.innerWidth, r.height + i + o > window.innerHeight];
+                if (!l && !u) return;
+                let [c, d] = [l ? e.clientX - T.x : 0, u ? e.clientY - T.y : 0],
+                    [f, p] = [c - A.x, d - A.y];
+                l && f + r.x - s >= 0 && (c = A.x - r.x + s), u && p + r.y - i >= 0 && (d = A.y - r.y + i);
+                let [h, _] = [r.x + r.width, r.y + r.height];
+                l && f + h + a <= window.innerWidth && (c = window.innerWidth + A.x - h - a),
+                    u && p + _ + o <= window.innerHeight && (d = window.innerHeight + A.y - _ - o),
+                    C({
+                        x: c,
+                        y: d
                     });
             },
-            [_, y, C.x, C.y, p]
+            [v, A, T.x, T.y, g]
         ),
-        L = t ? (0, o.vV)(d, f, m, h) : 1,
-        T = (0, l.useCallback)(() => {
-            let e = g.current;
+        D = r ? (0, u.vV)(p, h, _, m) : 1,
+        x = (0, o.useCallback)(() => {
+            let e = E.current;
             if (null == e) return !1;
-            let n = null != L ? L : 1;
+            let n = null != D ? D : 1;
             return e.offsetWidth * n > window.innerWidth || e.offsetHeight * n > window.innerHeight;
-        }, [L]);
-    return (0, i.jsx)('div', {
-        ref: g,
-        onMouseDown: b,
-        onMouseUp: M,
+        }, [D]);
+    return (0, a.jsx)('div', {
+        ref: E,
+        onMouseDown: N,
+        onMouseUp: R,
         onMouseMove: O,
-        onMouseLeave: () => E(!1),
-        className: a()(u, s.wrapper, {
-            [s.panning]: t && _,
-            [s.pannable]: t && T()
+        onMouseLeave: () => y(!1),
+        className: l()(s, c.wrapper, {
+            [c.panning]: r && v,
+            [c.pannable]: r && x()
         }),
         style: {
-            ...(null != c ? c : {}),
-            translate: ''.concat(y.x, 'px ').concat(y.y, 'px'),
-            scale: ''.concat(null != L ? L : 1)
+            ...(null != f ? f : {}),
+            translate: ''.concat(A.x, 'px ').concat(A.y, 'px'),
+            scale: ''.concat(null != D ? D : 1)
         },
         children: n
     });
-});
+}
+n.Z = o.memo(f);

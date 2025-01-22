@@ -157,74 +157,74 @@ let S = (e) => {
 };
 function F(e) {
     var t;
-    let { message: n, item: o, autoPlayGif: u, canRemoveItem: c, onRemoveItem: h, onViewItem: I, onClick: x, onContextMenu: g, onPlay: f, renderImageComponent: v, renderVideoComponent: T, renderAudioComponent: w, renderPlaintextFilePreview: P, renderGenericFileComponent: V, renderVisualPlaceholderComponent: F, className: b, imgContainerClassName: k, imgClassName: H, focusable: D, hiddenSpoilers: R, mediaLayoutType: B, maxWidth: G, maxHeight: W, hasFooter: Z, useFullWidth: U, isVisualMediaType: z, onVideoControlsShow: X, onVideoControlsHide: q, isSearchResult: J } = e,
-        { width: Y, height: Q, spoiler: K, type: $, contentType: ee } = o,
-        [et, en] = l.useState(!1),
-        [ei, el] = l.useState(!1),
-        eo = n.getChannelId(),
-        es = y.Z.getChannel(eo),
-        ea = (0, j.Z)(eo),
-        er = m.P.useExperiment({ location: 'MediaMosaicItem' }, { autoTrackExposure: !0 }).imageRecsEnabled,
-        eu = l.useMemo(() => (null != ee && -1 !== ee.indexOf('/') ? ee.split('/') : ['unknown', 'unknown']), [ee]),
-        ed = o.originalItem,
-        em = 'IMAGE' === $ && !C.uo.test(o.downloadUrl) && !((C.YG.test(o.downloadUrl) || C.FH.test(o.downloadUrl)) && (0, M.yE)(null !== (t = ed.flags) && void 0 !== t ? t : 0, A.J0y.IS_ANIMATED)),
-        ec = !1;
-    if (z) {
-        (null == Y || null == Q) && (ec = !0);
+    let { message: n, item: o, autoPlayGif: u, canRemoveItem: c, onRemoveItem: h, onViewItem: I, onClick: x, handlePreloadImage: g, onContextMenu: f, onPlay: v, renderImageComponent: T, renderVideoComponent: w, renderAudioComponent: P, renderPlaintextFilePreview: V, renderGenericFileComponent: F, renderVisualPlaceholderComponent: b, className: k, imgContainerClassName: H, imgClassName: D, focusable: R, hiddenSpoilers: B, mediaLayoutType: G, maxWidth: W, maxHeight: Z, hasFooter: U, useFullWidth: z, isVisualMediaType: X, onVideoControlsShow: q, onVideoControlsHide: J, isSearchResult: Y } = e,
+        { width: Q, height: K, spoiler: $, type: ee, contentType: et } = o,
+        [en, ei] = l.useState(!1),
+        [el, eo] = l.useState(!1),
+        es = n.getChannelId(),
+        ea = y.Z.getChannel(es),
+        er = (0, j.Z)(es),
+        eu = m.P.useExperiment({ location: 'MediaMosaicItem' }, { autoTrackExposure: !0 }).imageRecsEnabled,
+        ed = l.useMemo(() => (null != et && -1 !== et.indexOf('/') ? et.split('/') : ['unknown', 'unknown']), [et]),
+        em = o.originalItem,
+        ec = 'IMAGE' === ee && !C.uo.test(o.downloadUrl) && !((C.YG.test(o.downloadUrl) || C.FH.test(o.downloadUrl)) && (0, M.yE)(null !== (t = em.flags) && void 0 !== t ? t : 0, A.J0y.IS_ANIMATED)),
+        eh = !1;
+    if (X) {
+        (null == Q || null == K) && (eh = !0);
         let e = (0, N.Dc)({
-            width: null != Y ? Y : 0,
-            height: null != Q ? Q : 0,
+            width: null != Q ? Q : 0,
+            height: null != K ? K : 0,
             maxWidth: O.mT,
             maxHeight: O.Jj
         });
-        !U && (e * (null != Y ? Y : 0) < O.OF || e * (null != Q ? Q : 0) < O.OF) && (ec = !0);
+        !z && (e * (null != Q ? Q : 0) < O.OF || e * (null != K ? K : 0) < O.OF) && (eh = !0);
     }
-    let eh = l.useCallback(() => {
+    let eI = l.useCallback(() => {
             h(o);
         }, [o, h]),
-        eI = l.useCallback(
+        ex = l.useCallback(
             (e) => {
-                if (em && !ec && !0 !== J) {
-                    if (e && !ei) {
-                        if ((el(!0), er)) {
+                if (ec && !eh && !0 !== Y) {
+                    if (e && !el) {
+                        if ((eo(!0), eu)) {
                             var t;
                             (0, d.a)({
-                                channelId: null !== (t = null == es ? void 0 : es.id) && void 0 !== t ? t : '',
+                                channelId: null !== (t = null == ea ? void 0 : ea.id) && void 0 !== t ? t : '',
                                 location: a.I.CONTEXTUAL_IMAGE,
                                 withCommands: !0
                             });
                         }
                         E.default.track(A.rMx.IMAGE_HOVERED, {
-                            guild_id: null == es ? void 0 : es.guild_id,
-                            channel_id: null == es ? void 0 : es.id,
-                            image_recommendations_shown: er
+                            guild_id: null == ea ? void 0 : ea.guild_id,
+                            channel_id: null == ea ? void 0 : ea.id,
+                            image_recommendations_shown: eu
                         });
-                    } else !e && ei && el(!1);
+                    } else !e && el && eo(!1);
                 }
             },
-            [ei, es, er, em, ec, J]
+            [el, ea, eu, ec, eh, Y]
         ),
-        ex = l.useCallback(() => {
-            if (B === O.hV.MOSAIC) {
-                let e = (!ea && ['VIDEO', 'CLIP', 'AUDIO'].includes($)) || 'OTHER' === $;
-                return ec
+        eg = l.useCallback(() => {
+            if (G === O.hV.MOSAIC) {
+                let e = (!er && ['VIDEO', 'CLIP', 'AUDIO'].includes(ee)) || 'OTHER' === ee;
+                return eh
                     ? null
-                    : !et &&
+                    : !en &&
                           (0, i.jsx)(S, {
-                              mimeType: eu,
+                              mimeType: ed,
                               downloadURL: o.downloadUrl,
                               showDownload: e,
-                              showImageAppPicker: em && er && !0 !== J,
-                              onRemoveItem: c ? eh : void 0,
+                              showImageAppPicker: ec && eu && !0 !== Y,
+                              onRemoveItem: c ? eI : void 0,
                               onViewItem: I,
-                              isVisualMediaType: z,
-                              channelId: eo
+                              isVisualMediaType: X,
+                              channelId: es
                           });
             }
             return (
                 c &&
                 (0, i.jsx)(r.Clickable, {
-                    className: K ? _.spoilerRemoveMosaicItemButton : _.removeMosaicItemButton,
+                    className: $ ? _.spoilerRemoveMosaicItemButton : _.removeMosaicItemButton,
                     focusProps: { offset: { bottom: 4 } },
                     onClick: () => h(o),
                     'aria-label': L.intl.string(L.t['0+xZHx']),
@@ -234,102 +234,103 @@ function F(e) {
                     })
                 })
             );
-        }, [B, c, K, ea, $, ec, et, eu, o, em, er, J, eh, I, z, eo, h]);
-    switch ($) {
+        }, [G, c, $, er, ee, eh, en, ed, o, ec, eu, Y, eI, I, X, es, h]);
+    switch (ee) {
         case 'IMAGE':
             return (0, i.jsx)(p.h.Consumer, {
                 children: (e) =>
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(T, {
                         item: o,
                         message: n,
-                        width: Y,
-                        height: Q,
-                        autoPlay: u && !R,
+                        width: Q,
+                        height: K,
+                        autoPlay: u && !B,
                         onClick: x,
-                        onContextMenu: g,
-                        shouldHideMediaOptions: ea,
+                        onContextMenu: f,
+                        shouldHideMediaOptions: er,
                         renderAccessory: e,
-                        renderAdjacentContent: ex,
-                        containerClassName: b,
-                        className: k,
-                        imageClassName: H,
-                        shouldLink: D,
-                        hiddenSpoilers: R,
+                        renderAdjacentContent: eg,
+                        containerClassName: k,
+                        className: H,
+                        imageClassName: D,
+                        shouldLink: R,
+                        hiddenSpoilers: B,
                         responsive: !0,
-                        mediaLayoutType: B,
-                        maxWidth: G,
-                        maxHeight: W,
-                        useFullWidth: U,
-                        onMouseEnter: () => eI(!0),
-                        onMouseLeave: () => eI(!1)
+                        mediaLayoutType: G,
+                        maxWidth: W,
+                        maxHeight: Z,
+                        useFullWidth: z,
+                        handlePreloadImage: g,
+                        onMouseEnter: () => ex(!0),
+                        onMouseLeave: () => ex(!1)
                     })
             });
         case 'VIDEO':
         case 'CLIP':
-            return (0, i.jsx)(T, {
+            return (0, i.jsx)(w, {
                 item: o,
                 message: n,
-                width: Y,
-                height: Q,
+                width: Q,
+                height: K,
                 onClick: x,
-                onContextMenu: g,
-                renderAdjacentContent: ex,
-                naturalWidth: Y,
-                naturalHeight: Q,
-                className: s()(b, { [_.hasFooter]: Z }),
-                playable: D,
+                onContextMenu: f,
+                renderAdjacentContent: eg,
+                naturalWidth: Q,
+                naturalHeight: K,
+                className: s()(k, { [_.hasFooter]: U }),
+                playable: R,
                 responsive: !0,
-                mediaLayoutType: B,
-                maxWidth: G,
-                maxHeight: W,
-                useFullWidth: U,
-                mimeType: eu,
-                onControlsShow: X,
-                onControlsHide: q,
-                downloadable: !ea,
-                mediaPlayerClassName: Z ? _.hasFooter : void 0
+                mediaLayoutType: G,
+                maxWidth: W,
+                maxHeight: Z,
+                useFullWidth: z,
+                mimeType: ed,
+                onControlsShow: q,
+                onControlsHide: J,
+                downloadable: !er,
+                mediaPlayerClassName: U ? _.hasFooter : void 0
             });
         case 'VISUAL_PLACEHOLDER':
-            if (null == F) return null;
+            if (null == b) return null;
+            return (0, i.jsx)(b, {
+                item: o,
+                message: n,
+                className: H,
+                imageClassName: D,
+                maxWidth: W,
+                maxHeight: Z,
+                mediaLayoutType: G,
+                useFullWidth: z
+            });
+        case 'AUDIO':
+            return (0, i.jsx)(P, {
+                item: o,
+                message: n,
+                className: k,
+                playable: R,
+                mimeType: ed,
+                renderAdjacentContent: eg,
+                onVolumeShow: () => ei(!0),
+                onVolumeHide: () => ei(!1),
+                onPlay: v
+            });
+        case 'PLAINTEXT_PREVIEW':
+            return (0, i.jsx)(V, {
+                item: o,
+                message: n,
+                className: k,
+                onClick: x,
+                onContextMenu: f,
+                renderAdjacentContent: eg
+            });
+        case 'OTHER':
             return (0, i.jsx)(F, {
                 item: o,
                 message: n,
                 className: k,
-                imageClassName: H,
-                maxWidth: G,
-                maxHeight: W,
-                mediaLayoutType: B,
-                useFullWidth: U
-            });
-        case 'AUDIO':
-            return (0, i.jsx)(w, {
-                item: o,
-                message: n,
-                className: b,
-                playable: D,
-                mimeType: eu,
-                renderAdjacentContent: ex,
-                onVolumeShow: () => en(!0),
-                onVolumeHide: () => en(!1),
-                onPlay: f
-            });
-        case 'PLAINTEXT_PREVIEW':
-            return (0, i.jsx)(P, {
-                item: o,
-                message: n,
-                className: b,
                 onClick: x,
-                onContextMenu: g,
-                renderAdjacentContent: ex
-            });
-        case 'OTHER':
-            return (0, i.jsx)(V, {
-                item: o,
-                message: n,
-                className: b,
-                onClick: x,
-                onContextMenu: g,
-                renderAdjacentContent: ex
+                onContextMenu: f,
+                renderAdjacentContent: eg
             });
         case 'INVALID':
             return null;
