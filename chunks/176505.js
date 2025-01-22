@@ -17,9 +17,6 @@ r.d(n, {
     Qk: function () {
         return u;
     },
-    V: function () {
-        return _;
-    },
     Vg: function () {
         return s;
     },
@@ -71,5 +68,4 @@ let d = Object.freeze({
 !(function (e) {
     (e.GUILD_HOME = 'home'), (e.SERVER_GUIDE = 'guide'), (e.CHANNEL_BROWSER = 'browse'), (e.CUSTOMIZE_COMMUNITY = 'customize'), (e.LINKED_ROLES = 'linked-roles');
 })(a || (a = {}));
-let h = new Set(Object.values(a)),
-    _ = '131';
+let h = new Set(Object.values(a));
